@@ -27,21 +27,19 @@ This guide requires a working understanding of XDM System. Refer to the [XDM ove
 
 In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner.
 
-<!-- Update image below: -->
-
 ![The Schemas workspace with [!UICONTROL Create Schema] highlighted.](../../images/ui/resources/schemas/create-schema.png)
 
 The [!UICONTROL Create schema] workflow appears.
 
-<!-- Provide correct image below: -->
+![The [!UICONTROL Create schema] workflow with the three class options highlighted.](../../images/ui/resources/schemas/schema-class-options.png)
 
-![The [!UICONTROL Create schema] workflow with the three class options highlighted.](../../images/ui/resources/schemas/create-schema.png)
+You can choose a base class for the schema by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice. See the [XDM individual profile](../../classes/individual-profile.md) and [XDM ExperienceEvent](../../classes/experienceevent.md) documentation for more information on these classes.
 
-You can choose a base class for the schema by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**. See the [XDM individual profile)(../../classes/individual-profile.md) and [XDM ExperienceEvent](../../classes/experienceevent.md) documentation for more information on these classes.
+After you select a class, the [!UICONTROL Name and review] section appears. In this section, you provide a name and description to identify your schema. ​The schema's base structure (provided by the class) is shown in the canvas for you to review and verify your selected class and schema structure.
 
-<!-- confirm workflow below -->
+Enter a human-friendly [!UICONTROL Schema display name] in the text field. Next, enter a suitable description to help identify your schema. When you have reviewed your schema structure and are happy with your settings, select **[!UICONTROL Finish]** to create your schema. The [!UICONTROL Schema] [!UICONTROL Browse] tab appears.
 
-Once you select a class, the [!DNL Schema Editor] appears and the schema's base structure (provided by the class) is shown in the canvas. From here, you can use the right rail to add a **[!UICONTROL Display name]** and **[!UICONTROL Description]** for the schema.
+<!-- [!DNL Schema Editor] appears and The schema's base structure (provided by the class) is shown in the canvas. From here, you can use the right rail to add a **[!UICONTROL Display name]** and **[!UICONTROL Description]** for the schema. -->
 
 ![](../../images/ui/resources/schemas/schema-details.png)
 
