@@ -17,13 +17,38 @@ Improve configuration accuracy across sandboxes and seamlessly export and import
 
 You can use sandbox tooling to select different objects and export them into a package. A package can consist of a single object, multiple objects, or an entire sandbox.
 
+## Objects  supported for sandbox tooling
+
+The table below lists objects that are currently supported for sandbox tooling:
+
+| Platform | Object |
+| --- | --- |
+| [!DNL Adobe Journey Optimizer]| Journeys |
+| Customer Data Platform | Sources |
+| Customer Data Platform | Segments |
+| Customer Data Platform | Identities |
+| Customer Data Platform | Policies |
+| Customer Data Platform | Schemas |
+| Customer Data Platform | Datasets |
+
+The following objects will be imported but will be in draft or disabled status:
+
+| Feature | Object | Status |
+| --- | --- | --- |
+| Import status | Source dataflow | Draft |
+| Import status |  Journey | Draft |
+| Unified profile | Schema | Disabled |
+| Unified profile | Dataset | Disabled |
+| Policies | Consent policies | Disabled |
+| Policies | Data governance policies | Disabled |
+
 ## Import objects into a package
 
 >[!NOTE]
 >
 >You can only import a package if you have permission to access the objects. 
 
-This example documents the process of importing a schema that has been created and adding it to a package. You can use the same process to import other objects, for example, datasets, journey, and many more.
+This example documents the process of importing a schema that has been created and adding it to a package. You can use the same process to import other objects, for example, schemas, datasets, journeys, and many more.
 
 ### Add object to a new package
 
