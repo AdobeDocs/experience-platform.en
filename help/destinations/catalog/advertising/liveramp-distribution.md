@@ -22,7 +22,6 @@ Use the [!DNL LiveRamp - Distribution] connection to activate audiences previous
 * [!DNL Cardlytics]
 * [!DNL DAX]
 * [[!DNL Disney]](#disney)
-* [!DNL Hulu]
 * [!DNL Ibotta]
 * [!DNL iHeartMedia]
 * [!DNL Index Exchange]
@@ -84,7 +83,7 @@ See the sections below for detailed guidance on how to configure each destinatio
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-### [!DNL 4C Insights] {#4cinsights}
+### [!DNL 4C Insights] {#insights}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_4cinsights_profile_id"
@@ -98,7 +97,7 @@ To configure details for the destination, fill in the required and optional fiel
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_acast_client"
 >title="Client name"
->abstract="Enter the name of the client distributing data. Do not use spaces in the client name."
+>abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
@@ -108,7 +107,17 @@ To configure details for the destination, fill in the required and optional fiel
 
 ### [!DNL Captify] {#captify}
 
-### [!DNL Cardlytics] {#aardlytics}
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_captify_client"
+>title="Client name"
+>abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
+
+### [!DNL Cardlytics] {#cardlytics}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_cardlytics_client"
+>title="Client name"
+>abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
 ### [!DNL DAX] {#dax}
 
@@ -122,8 +131,8 @@ To configure details for the destination, fill in the required and optional fiel
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_client"
->title="Distribution account"
->abstract="The name of your company/distribution account as you would like it to appear to the partner. Use your company name by default, but please contact your partner account representative if unsure. Do not use whitespace or special characters."
+>title="Client name"
+>abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_email"
@@ -138,11 +147,14 @@ To configure details for the destination, fill in the required and optional fiel
 
 ![Platform UI image showing the destination connection screen]()
 
-### [!DNL Hulu] {#hulu}
-
 ### [!DNL Ibotta] {#Ibotta}
 
 ### [!DNL iHeartMedia] {#iheartmedia}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_iheartmedia_client"
+>title="Client name"
+>abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
 ### [!DNL Index Exchange] {#index-exchange}
 
@@ -152,7 +164,37 @@ To configure details for the destination, fill in the required and optional fiel
 
 ### [!DNL Pandora] {#pandora}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_pandora_data_provider_name"
+>title="Data provider name"
+>abstract="The name of your company as you would like it to be shown to Pandora. The name can include a maximum of 40 lowercase and alphanumeric characters (e.g. My_Company)."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_pandora_rep_email"
+>title="Account representative email address"
+>abstract="The email address of your Pandora account representative. This address is used to send taxonomy updates. To enter multiple addresses, separate them by commas."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_email"
+>title="Email address"
+>abstract="This address is used to send taxonomy updates. To enter multiple addresses, separate them by commas."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_pandora_account_name"
+>title="Account name"
+>abstract="The name of your Pandora account. Contact your Pandora account representative if you are not sure what your account name is. Do not use spaces or special characters."
+
 ### [!DNL Reddit] {#reddit}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_reddit_advertiser_id"
+>title="Reddit advertiser ID"
+>abstract="Your Reddit advertiser ID. Must begin with "t2_" or "a2_". Contact your Reddit representative if you do not know your advertiser ID."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_reddit_advertiser_name"
+>title="Reddit advertiser name"
+>abstract="Your Reddit advertiser name. Do not use spaces or special characters."
 
 ### [!DNL Rhythm One (Unruly)] {#rhythm-one}
 
@@ -177,13 +219,38 @@ To configure details for the destination, fill in the required and optional fiel
 
 ### [!DNL Spotify] {#spotify}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_spotify_client"
+>title="Client name"
+>abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_spotify_account_token"
+>title="Account token"
+>abstract="An alphanumeric identifier that informs Spotify where to port the data and that you are verified to use this workflow. Contact your Spotify account manager to obtain this token."
+
 ### [!DNL Taboola] {#taboola}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_taboola_rep_email"
+>title="Account manager email address"
+>abstract="The email address of your Taboola account manager."
+
 ### [!DNL TargetSpot] {#targetspot}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_targetspot_client"
+>title="Client name"
+>abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
 ### [!DNL Teads] {#teads}
 
 ### [!DNL WB Discovery] {#wb-discovery}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_wb_client"
+>title="Client name"
+>abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
 ## Configure identifier settings {#identifier-settings}
 
