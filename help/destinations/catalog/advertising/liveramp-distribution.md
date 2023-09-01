@@ -12,7 +12,7 @@ The [!DNL LiveRamp - Distribution] enables you to activate audiences from Experi
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by LiveRamp. For any inquiries or update requests, please contact LiveRamp directly [here](mailto:).
+>This destination connector and documentation page are created and maintained by LiveRamp. For any inquiries or update requests, please contact LiveRamp directly [here](mailto:example@email.com).
 
 ## Supported destinations {#supported-destinations}
 
