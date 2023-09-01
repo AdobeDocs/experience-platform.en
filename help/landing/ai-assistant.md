@@ -148,12 +148,12 @@ You can also ask the AI Assistant questions about your data usage in the followi
 
 * Attributes
 * Datasets
-* Destinations
-* Schemas
+* Destinations (Questions regarding accounts and some questions about dataflow cannot be answered at this time.)
+* Schemas (Questions regarding field groups cannot be answered at this time.)
 * Segments
-* Sources
+* Sources (Questions regarding accounts cannot be answered at this time.)
 
-For usage data queries, answers may not reflect the current state of the UI. The data backing these questions is updated every 12 to 24 hours. You may need to format your questions like: "When was the segment with the title {TITLE} created?" instead of, "When was the {TITLE} segment created?"
+For usage data queries, answers may not reflect the current state of the UI. The data backing these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You may need to format your questions as: "When was the segment with the title {TITLE} created?" instead of, "When was the {TITLE} segment created?"
 
 You will need to log into a sandbox to inquire about specific data related to objects like schemas, datasets, attributes, destinations and segments.
 
@@ -168,7 +168,6 @@ The following is a list of currently supported data usage questions grouped by d
 * What is the profile count for {SEGMENT_NAME} segment?
 * List all duplicate segments. 
 * Show me segments created or updated in last 7 days.
-* Which segments have been modified more than three times in the last month?
 * What is the distribution of the number of profiles across segments?
 * How many fields are used in segmentation?
 * What is the total count of activated segments?
