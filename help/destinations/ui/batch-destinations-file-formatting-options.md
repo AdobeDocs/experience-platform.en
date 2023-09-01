@@ -1,9 +1,9 @@
 ---
 description: Learn how to configure file formatting options when activating data to file-based destinations
-title: (Beta) Configure file formatting options for file-based destinations
+title: Configure file formatting options for file-based destinations
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 ---
-# (Beta) Configure file formatting options for file-based destinations
+# Configure file formatting options for file-based destinations
 
 >[!IMPORTANT]
 > 
