@@ -53,12 +53,12 @@ The edge cases listed below are not included in the package:
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_exit_package"
 >title="Save and exit package"
->abstract="To exit the package and save, users can simply use the back option. (See interaction in journeys in AJO)."
+>abstract="To exit the package and save, users can simply use the back option."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="Remove an object"
->abstract="The user needs to select the row and then use the delete option (made available upon selection) to remove the row."
+>abstract="The user must select the row and then use the delete option (made available upon selection) to remove the row."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
@@ -124,7 +124,7 @@ Using the dropdown menu, select the **[!UICONTROL Package name]** you want to im
 
 ![The import details page showing the [!UICONTROL Package name] dropdown selection](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-The [!UICONTROL Package object and dependencies] page shows a list of all assets included in this package. The system automatically detects dependent objects that are required for successfully importing selected parent objects.
+The [!UICONTROL Package object and dependencies] page provides a list of all assets included in this package. The system automatically detects dependent objects that are required for successfully importing selected parent objects.
 
 ![The [!UICONTROL Package object and dependencies] page shows a list of assets included in the package.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
 
