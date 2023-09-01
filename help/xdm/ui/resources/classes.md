@@ -21,31 +21,45 @@ While not required for this guide, it is recommended that you also follow the tu
 
 ## Create a new class {#create}
 
-In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**, then select ...
+In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**. The [!UICONTROL Create schema] workflow appears. From the Schema details section, select **[!UICONTROL Other]**. A list of available classes appears. 
 
- <!-- **[!UICONTROL Browse]** from the dropdown. -->
+<!-- followed by **[!UICONTROL Next]**. -->
 
-<!-- ![](../../images/ui/resources/classes/browse-classes.png) -->
+![The [!UICONTROL Create schema] workflow with [!UICONTROL Other] highlighted in the [!UICONTROL Schema details] section.](../../images/ui/resources/classes/other-schema-details.png)
 
-<!-- Below is probably obsolete: -->
+Select a radio button to filter the classes based on whether they are custom or standard classes. You can also filter the available results based on their industry, or search for a specific class using the search field.  
 
-A dialog appears that allows you select from a list of available classes. At the top of the dialog, select **[!UICONTROL Create new class]**. You can then give your new class a display name (a short, descriptive, unique, and user-friendly name for the class), a description, and a behavior for the data that the schema will define (**[!UICONTROL Record]** or **[!UICONTROL Time-series]**).
+![The [!UICONTROL Create schema] workflow with [!UICONTROL Other] highlighted in the [!UICONTROL Schema details] section.](../../images/ui/resources/classes/other-schema-details.png)
 
-When finished, select **[!UICONTROL Assign class]**.
+To help you decide on the appropriate class, there are info (![An info icon.](../../images/ui/resources/classes/info.png)) and preview (![An preview icon.](../../images/ui/resources/classes/preview.png)) icons for each class. The info icon opens a dialog that provides a description of the class and the industry that it is associated with. The preview icon opens a preview dialog for the class that contains a schema diagram and its properties.
 
-![](../../images/ui/resources/classes/class-details.png)
+![A preview of the selected class with the schema diagram and class properties highlighted.](../../images/ui/resources/classes/class-preview.png)
 
-<!-- Hopefully below is still accurate -->
+Select any row to choose a class, then select **[!UICONTROL Next]** to confirm your choice.
+
+![The [!UICONTROL Create schema] workflow with a class selected from the table of available classes and [!UICONTROL Next] highlighted.](../../images/ui/resources/classes/select-class.png)
+
+The [!UICONTROL Name and describe] section appears. 
+
+In this section, you provide a name and description to identify your schema. ​The schema's base structure (provided by the class) is shown in the canvas for you to review and verify your selected class and schema structure.
+
+Enter a short, descriptive, unique, and user-friendly name for the class in the [!UICONTROL Schema display name] text field. Next, enter a suitable description to identify the behavior of the data that the schema defines. When you have reviewed your schema structure and are happy with your settings, select **[!UICONTROL Finish]** to create your schema. 
+
+![The [!UICONTROL Name and review] section of the [!UICONTROL Create schema] workflow with the [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/classes/name-and-review-class.png)
+
+
+<!-- Commented out the section below as i do not believe that you can create a custom class through the UI with the new workflow. To be confirmed:
 
 The [!DNL Schema Editor] appears, showing a new schema in the canvas that is based on the custom class you just created. Since no fields have been added to the class yet, the schema only contains an `_id` field, which represents the system-generated unique identifier that is automatically applied to all resources in the [!DNL Schema Registry].
 
-![](../../images/ui/resources/classes/schema.png)
+![](../../images/ui/resources/classes/schema.png) 
 
 >[!IMPORTANT]
 >
 >When building a schema that implements a class defined by your organization, remember that schema field groups are available for use only with compatible classes. Since the class you defined is new, there are no compatible field groups listed in the **[!UICONTROL Add field group]** dialog. Instead, you will need to [create new field groups](./field-groups.md#create) for use with that class. The next time you compose a schema that implements the new class, the field groups that you defined will be listed and available for use.
+-->
 
-You can now start [adding fields to the class](#add-fields), which will be shared by all schemas that employ the class.
+You are returned to the [!UICONTROL Schema] workspace [!UICONTROL Browse] tab. You can now start [adding fields to the class](#add-fields), which will be shared by all schemas that employ the class.
 
 ## Edit an existing class {#edit}
 
