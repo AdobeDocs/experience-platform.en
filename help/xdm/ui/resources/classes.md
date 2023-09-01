@@ -21,9 +21,7 @@ While not required for this guide, it is recommended that you also follow the tu
 
 ## Create a new class {#create}
 
-In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**. The [!UICONTROL Create schema] workflow appears. From the Schema details section, select **[!UICONTROL Other]**. A list of available classes appears. 
-
-<!-- followed by **[!UICONTROL Next]**. -->
+In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**. The [!UICONTROL Create schema] workflow appears. In the [!UICONTROL Schema details] section, select **[!UICONTROL Other]**. A list of available classes appears. 
 
 ![The [!UICONTROL Create schema] workflow with [!UICONTROL Other] highlighted in the [!UICONTROL Schema details] section.](../../images/ui/resources/classes/other-schema-details.png)
 
