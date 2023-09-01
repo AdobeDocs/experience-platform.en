@@ -148,12 +148,12 @@ You can also ask the AI Assistant questions about your data usage in the followi
 
 * Attributes
 * Datasets
-* Destinations
-* Schemas
+* Destinations (Questions regarding accounts and some questions about dataflow cannot be answered at this time.)
+* Schemas (Questions regarding field groups cannot be answered at this time.)
 * Segments
-* Sources
+* Sources (Questions regarding accounts cannot be answered at this time.)
 
-For usage data queries, answers may not reflect the current state of the UI. The data backing these questions is updated every 12 to 24 hours. You may need to format your questions like: "When was the segment with the title {TITLE} created?" instead of, "When was the {TITLE} segment created?"
+For usage data queries, answers may not reflect the current state of the UI. The data backing these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You may need to format your questions as: "When was the segment with the title {TITLE} created?" instead of, "When was the {TITLE} segment created?"
 
 You will need to log into a sandbox to inquire about specific data related to objects like schemas, datasets, attributes, destinations and segments.
 
@@ -161,99 +161,40 @@ You will need to log into a sandbox to inquire about specific data related to ob
 
 The following is a list of currently supported data usage questions grouped by domain. 
 
->[!BEGINTABS]
-
->[!TAB Segments]
-
-* Are there duplicate segments?
-* Show me all streaming segments.
-* Is Segment named {SEGMENT_ID} evaluated in Batch OR Stream?
-* Which Segments are duplicates?
+* List the attributes used for this segment?
 * How many segments are there in total?
-* Are there any segments with the same names but different IDs?
-* What is the distribution of evaluation methods (batch, edge, streaming) across segments? 
-* Show me a list of segments that were last modified in the last month.  
-* Which segments have been modified in the last week?  
-* Are there any segments that haven't been modified in the last six months?
-* List segments that were created in the last year.
-* Show me segments that were last modified before today.  
-* Are there any patterns or trends in segment creation dates over the past year?
-* Can you identify segments that have not been modified since their creation?  
-* Are there any segments that have not been modified since their creation?  
-* What is the trend in segment creation over time? 
-* What is the distribution of segment creation dates?
-* What is the distribution of segment modification dates?
-* Which segments have the most user profiles?
-* Which segments hve the fewest user profiles?
-* List all batch segments.
-* List all edge segments.
-* What segments are activated?
-* What segments are forwarded to Facebook?
-* Is the Segment named "APAC Customers" batch or streaming?
-* How many profiles does the Active Work segment have?
-* Do any of my segments have 0 profiles?
-* What datasets are impacting the bronze loyalty segment?
-* Which Segment definitions use XDM fields that contain "gender"?
-* Which populated XDM fields occur in Streaming Segments?
-* How many XDM fields are there across all Segment Definitions?
-* What segments do the "Professional Users" dataset impact?
-* Which segments are forwarded to HTTP API?
-* Of the Segments that are activated, which are activated to the most number of Destination types?
+* Show me a list of segments that were last modified in the last month.
+* Which segments have been modified in the last week?
+* What is the profile count for {SEGMENT_NAME} segment?
+* List all duplicate segments. 
+* Show me segments created or updated in last 7 days.
+* What is the distribution of the number of profiles across segments?
+* How many fields are used in segmentation?
 * What is the total count of activated segments?
-* How many Segments are activated?
-* How many duplicate Segments are activated?
+* Which segments are activated?
+* How many duplicate segments are activated?
+* List segments that were created in the last year.
+* Show me segments that were last modified before {DATE}.
+* How many unique segment names are associated with the {SCHEMA_NAME} schema?
+* Which schemas are most commonly used across segments?
+* How many schemas do I have?
+* Which dataset(s) use {SCHEMA_NAME} schema?
+* List all schemas modified in the last week.
+* How many schemas are profile enabled?
+* List all the experience event class schemas?
+* Which datasets are ingested into the {SCHEMA_NAME} schema?
+* How many datasets have been ingested using the same schema?
+* How many datasets do I have?
+* Which datasets are used in each segment?
+* Which segments use {ATTRIBUTE_NAME} attribute? 
+* Which schemas have {ATTRIBUTE_NAME} attribute in them?
+* How many XDM schema attributes are not used in any segments?
+* In which dataset(s) is/are {ATTRIBUTE_NAME} XDM fields populated?
+* Which datasets have data for {ATTRIBUTE_NAME} attribute?
 * How many segments are activated for each destination?
-* Which segments are activated to 0, 1 or multiple destinations? Show the distribution.
-* Which Segments are activated to the most number of Destinations?
-* What duplicate segments are activated?
-* What segments are activated to Adobe Target?
-* Across all Segments, how many times is each Merge Policy used?
-
->[!TAB Schemas]
-
-* How many XDM schemas are defined?
-* What are the most recently created schemas?
-* How many Schemas for each XDM class?
-* What schema does the "Segment Ingestion" dataset use?
-* Which schemas are not used by any datasets?
-
->[!TAB Destinations]
-
-* How many Destinations are present?
-* What are the most recently created Destinations?
-* What destinations are associated with each segment?
-
->[!TAB Sources]
-
-* How many Sources have been created?
-* What are the most recently created Sources?
-* How many Sources are available, broken down by category?
-* Can I create a source connection from S3?
-* What sources contributed to the Mutual365 dataset?
-
->[!TAB Datasets]
-
-* How many datasets are there?
-* What are the most recently created datasets?
-* What datasets are enabled for unified profile?
-* Is there a TTL set for the Segment Ingestion dataset?
-* What is the TTL for the Professional users dataset?
-* What datasets use the Professional Users schema?
-
->[!TAB Attributes]
-
-* What XDM fields are most commonly populated across all DataSets?
-* What XDM fields and Attributes are most commonly used across schemas?
-* What XDM fields and Attributes are used in the Professional Users schema?
-* List the Attributes used for this segment with id {SEGMENT_ID}.
-* How many XDM fields are used in 2+ Segments?
-* Which fields are most commonly used across segments?
-* Are there any fields that are used in only one segment?
-* What Attributes are used for the Bronze loyalty segment?
-* What Attributes are not used in any segment?
-* What Attributes are most commonly used in segments?  
-
->[!ENDTABS]
+* Which segments are activated to the most number of destinations?
+* Do any of my segments have 0 profiles? 
+* How many dataflows do I have?
 
 +++
 
@@ -337,3 +278,5 @@ Read the table below for examples:
 | What is my biggest segment? | What is my biggest segment? Using data. | Explicitly tell the AI Assistant that you want the answer to be based on data. |
 | What is my biggest segment? | List my biggest segment. | There are instances where a "what..." question can be mistaken for a documentation-based question. Using a command like "list" is a stronger indicator that you are asking a question with data in context. |
 | How many datasets do I have? | Count my datasets. | The original question works for segments, but it may not work with datasets. |
+
+
