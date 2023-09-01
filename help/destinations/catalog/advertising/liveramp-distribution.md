@@ -8,7 +8,11 @@ hidefromtoc: yes
 
 # [!DNL LiveRamp - Distribution] connection {#liveramp-onboarding}
 
-Use the [!DNL LiveRamp - Distribution] connection to activate audiences previously onboarded into LiveRamp through the [LiveRamp - Onboarding](liveramp-onboarding.md) connection, to destinations which use the [!DNL Ramp ID] identifier.
+The [!DNL LiveRamp - Distribution] enables you to activate audiences from Experience Platform to premium publishers across mobile, web, display, and connected TV mediums.
+
+>[!IMPORTANT]
+>
+>This destination connector and documentation page are created and maintained by LiveRamp. For any inquiries or update requests, please contact LiveRamp directly [here](mailto:).
 
 ## Supported destinations {#supported-destinations}
 
@@ -20,16 +24,14 @@ Use the [!DNL LiveRamp - Distribution] connection to activate audiences previous
 * [!DNL Ampersand.tv]
 * [!DNL Captify]
 * [!DNL Cardlytics]
-* [!DNL DAX]
-* [[!DNL Disney]](#disney)
-* [!DNL Ibotta]
+* [[!DNL Disney (Hulu/ESPN/ABC)]](#disney)
 * [!DNL iHeartMedia]
 * [!DNL Index Exchange]
-* [!DNL Magnite]
+* [!DNL Magnite CTV Platform]
+* [!DNL Magnite DV+ (Rubicon Project)]
 * [!DNL One Fox]
 * [!DNL Pandora]
 * [!DNL Reddit]
-* [!DNL Rhythm One (Unruly)]
 * [[!DNL Roku]](#roku)
 * [!DNL Spotify]
 * [!DNL Taboola]
@@ -45,13 +47,18 @@ The marketing team of a sports apparel retailer used the [LiveRamp - Onboarding]
 
 Through the [!DNL LiveRamp - Distribution] connection they can now trigger the activation of the onboarded audiences to the destinations mentioned at the top of this page, so that they can target users on mobile, open web, social, and [!DNL CTV] platforms.
 
-## Prerequisites {#prerequisites}
+## Onboard audiences to LiveRamp {#onboarding}
 
-The [!DNL LiveRamp - Distribution] connection requires you to have already onboarded audiences from Experience Platform into LiveRamp. To do that, see the [LiveRamp - Onboarding](liveramp-onboarding.md) documentation.
+Before activating audiences through the [!DNL LiveRamp - Distribution] connection, use the [LiveRamp - Onboarding](liveramp-onboarding.md) connection to export your Experience Platform audiences to LiveRamp.
 
-Before you can send data from Experience Platform to [!DNL LiveRamp - Onboarding], you need your [!DNL LiveRamp] credentials. Please reach out to your [!DNL LiveRamp] representative to obtain your credentials, if you don't already have them.
+After you have onboarded your audiences to LiveRamp, continue the activation workflow from the [connect to the destination](#connect) step.
 
 ## Connect to the destination {#connect}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_identifier_settings"
+>title="Identifier Settings"
+>abstract="Select the identifiers supported by your destination. See the documentation for the complete list of supported identifiers for each destination."
 
 >[!IMPORTANT]
 > 
@@ -63,10 +70,10 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL Username]**: Your LiveRamp account username.
-* **[!UICONTROL Password]**: Your LiveRamp account password.
 * **[!UICONTROL Token URL]**: Your LiveRamp token URL.
 * **[!UICONTROL LiveRamp organization ID]**: The organization ID assigned to your LiveRamp account.
+* **[!UICONTROL Username]**: Your LiveRamp account username.
+* **[!UICONTROL Password]**: Your LiveRamp account password.
 
 ## Destination-specific settings {#destination-settings}
 
@@ -119,9 +126,7 @@ To configure details for the destination, fill in the required and optional fiel
 >title="Client name"
 >abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
-### [!DNL DAX] {#dax}
-
-### [!DNL Disney] {#disney}
+### [!DNL Disney (Hulu/ESPN/ABC)] {#disney}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_agreement"
@@ -136,7 +141,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_email"
->title="Email address"
+>title="Your email address"
 >abstract="Enter an email address tied to an individual. This email address serves as a signature to the advertiser data terms agreement. This email address will also be used to contact you if needed."
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
@@ -147,7 +152,13 @@ To configure details for the destination, fill in the required and optional fiel
 
 ![Platform UI image showing the destination connection screen]()
 
-### [!DNL Ibotta] {#Ibotta}
+**Supported identifiers**
+
+When configuring your destination, select the identifiers you want to use in the activation process, from the list of supported identifiers below.
+
+This destination supports the activation of audiences based on the following identifiers:
+
+* [!DNL Ramp ID]
 
 ### [!DNL iHeartMedia] {#iheartmedia}
 
@@ -158,9 +169,11 @@ To configure details for the destination, fill in the required and optional fiel
 
 ### [!DNL Index Exchange] {#index-exchange}
 
-### [!DNL Magnite] {#magnite}
+### [!DNL Magnite CTV Platform] {#magnite}
 
-### [!DNL One Fox] {#one-fox}
+### [!DNL Magnite DV+ (Rubicon Project)] {#magnite-dv}
+
+### [!DNL One Fox] {#fox}
 
 ### [!DNL Pandora] {#pandora}
 
@@ -196,8 +209,6 @@ To configure details for the destination, fill in the required and optional fiel
 >title="Reddit advertiser name"
 >abstract="Your Reddit advertiser name. Do not use spaces or special characters."
 
-### [!DNL Rhythm One (Unruly)] {#rhythm-one}
-
 ### Roku {#roku}
 
 >[!CONTEXTUALHELP]
@@ -206,7 +217,7 @@ To configure details for the destination, fill in the required and optional fiel
 >abstract="Enter the email address tied to your Roku account."
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_liveramp_distribution_roku_representative-email"
+>id="platform_destinations_liveramp_distribution_roku_representative_email"
 >title="Roku account representative email address"
 >abstract="Enter the email address of your Roku account representative. This address is used to send taxonomy updates. To enter multiple addresses, separate them by commas."
 
@@ -216,6 +227,14 @@ To configure details for the destination, fill in the required and optional fiel
 * **[!UICONTROL Roku account representative email address]**: Enter the email address of your Roku account representative. To enter multiple addresses, separate them by commas.
 
 ![Platform UI image showing the destination connection screen]()
+
+**Supported identifiers**
+
+When configuring your destination, select the identifiers you want to use in the activation process, from the list of supported identifiers below.
+
+This destination supports the activation of audiences based on the following identifiers:
+
+* [!DNL Platform ID]
 
 ### [!DNL Spotify] {#spotify}
 
@@ -252,26 +271,6 @@ To configure details for the destination, fill in the required and optional fiel
 >title="Client name"
 >abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
-## Configure identifier settings {#identifier-settings}
-
-Each of the destinations [supported](#supported-destinations) by [!DNL LiveRamp - Onboarding] supports specific identifiers.
-
-Before you can connect to the destination, select the identifiers supported by your destination, from the list below.
-
-|Destination|Supported identifiers|
-|---|---|
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|Roku|<ul><li>[!UICONTROL [Platform ID]]</li></ul>|
-
 ### Enable alerts {#enable-alerts}
 
 You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, read the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
@@ -294,9 +293,9 @@ To successfully activate your audiences, in this step, you must select the same 
 
 ## Exported data / Validate data export {#exported-data}
 
-The [!DNL LiveRamp - Distribution] connection does not transfer any data between Experience Platform and [!DNL LiveRamp].
+To verify and monitor the activation of your audiences, log in to your LiveRamp account and check the activation metrics.
 
-This destination is only used to activate audiences that you have sent to LiveRamp through the [LiveRamp - Onboarding](liveramp-onboarding.md) connection.
+If you have questions about the audience activation, please contact your LiveRamp account representative.
 
 ## Data usage and governance {#data-usage-governance}
 
