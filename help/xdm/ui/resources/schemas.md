@@ -37,7 +37,7 @@ After you have selected a class, the [!UICONTROL Name and review] section appear
 
 Enter a human-friendly [!UICONTROL Schema display name] in the text field. Next, enter a suitable description to help identify your schema. When you have reviewed your schema structure and are happy with your settings, select **[!UICONTROL Finish]** to create your schema. 
 
-![The [!UICONTROL Name and review] section of the Create schema workflow with the [!UICONTROL Schema display name], [!UICONTROL Description] and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/name-and-review.png)
+![The [!UICONTROL Name and review] section of the [!UICONTROL Create schema] workflow with the [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/name-and-review.png)
 
 The [!UICONTROL Schema] [!UICONTROL Browse] tab appears. Your recently created schema is now available to edit in the the [!DNL Schema Editor] and appears in the list of available schemas.
 
