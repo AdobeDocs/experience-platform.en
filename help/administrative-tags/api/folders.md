@@ -13,6 +13,96 @@ This guide provides information to help you better understand folders and includ
 
 The endpoints used in this guide are part of the Adobe Experience Platform APIs. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
+## Retrieve a list of folders {#list}
+
+You can retrieve a list of folders that belong to your organization by making a GET request to the `/folder` endpoint and specifying the folder type and the parent folder ID.
+
+**API format**
+
+```http
+GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
+```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segments` and `datasets`. |
+| `{FOLDER_ID}` | The ID of the parent folder that you're retrieving the list of folders from. To view a list of all the parent folders, use the folder ID `root`. |
+
+**Request**
+
++++A sample request to list all top-level dataset folders
+
+```shell
+curl -X GET https://platform.adobe.io/??????
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**Response**
+
+A successful response returns HTTP status ??? with a list of all top-level folders for datasets in your organization.
+
++++A sample response that contains a list of all top-level folders for datasets in your organization.
+
+```json
+{
+    "id": "c626b4f7-223b-4486-8900-00c266e31dd1",
+    "name": "ParentFolder",
+    "noun": "Dataset",
+    "parentId": "{ORG_ID}/{SANDBOX_ID}/Dataset",
+    "tags": null,
+    "imsOrg": "{ORG_ID}",
+    "sandboxId": "{SANDBOX_ID}",
+    "sandboxName": "prod",
+    "createdBy": null,
+    "createdAt": "2023-01-12T03:31:00.118+00:00",
+    "modifiedBy": null,
+    "modifiedAt": "2023-01-13T05:47:06.718+00:00",
+    "_links": null,
+    "children": [
+        {
+            "id": "09d86b23-4819-471b-8a2a-05774ed268de",
+            "name": "ChildFolder.1",
+            "noun": null,
+            "parentId": "c626b4f7-223b-4486-8900-00c266e31dd1",
+            "tags": null,
+            "imsOrg": "{ORG_ID}",
+            "sandboxId": "{SANDBOX_ID}",
+            "sandboxName": null,
+            "createdBy": "{USER_ID}",
+            "createdAt": "2023-01-12T12:51:39.284+00:00",
+            "modifiedBy": "{USER_ID}",
+            "modifiedAt": "2023-01-12T12:51:39.284+00:00",
+            "_links": null,
+            "children": []
+        },
+        {
+            "id": "fd2f6a68-ef65-470d-ab31-b02b7b2241ca",
+            "name": "ChildFolder.2",
+            "noun": null,
+            "parentId": "c626b4f7-223b-4486-8900-00c266e31dd1",
+            "tags": null,
+            "imsOrg": "{ORG_ID}",
+            "sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
+            "sandboxName": null,
+            "createdBy": "{USER_ID}",
+            "createdAt": "2023-01-13T03:38:40.006+00:00",
+            "modifiedBy": "{USER_ID}",
+            "modifiedAt": "2023-01-13T03:38:40.006+00:00",
+            "_links": null,
+            "children": []
+        }
+    ]
+}
+```
+
++++
+
 ## Create a new folder {#create}
 
-You can create a new folder by making a POST request to the `/folder/{NOUN}` endpoint.
+You can create a new folder by making a POST request to the `/folder` endpoint.
