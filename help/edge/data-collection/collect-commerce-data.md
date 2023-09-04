@@ -1,20 +1,26 @@
 ---
 title: Collect commerce, product, and order information using the Adobe Experience Platform Web SDK
 description: Learn how to add data related to products or a shopping cart using the Adobe Experience Platform Web SDK.
-keywords: products;commerce;measures;measure;order;cartAbandons;checkouts;productListAdds;productListOpens;productListRemovals;productListReopens;productListViews;productViews;purchases;saveForLaters;currencyCode;payments;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
-exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
 ---
+
 # Collect commerce, product, and order information
 
-If your organization sells products or services, you can use this page as a guide around how to track those products and services. This document uses the XDM [Commerce Schema](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md) field group. This field group consists of two main parts: the `commerce` object, and the `productListItems` array. The `commerce` object lets you indicate which actions happen to the `productListItems` array.
+If your organization sells products or services, you can use this page as a guide on how to track those products and services.
+
+This page uses the XDM [Commerce Schema](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md) field group.
+
+This field group consists of two main parts:
+
+* The `commerce` object. This object lets you indicate which actions happen to the `productListItems` array.
+* The `productListItems` array.
 
 >[!TIP]
 >
->If you are familiar with Adobe Analytics, the `commerce` object contains data similar to commerce events the `events` variable. The `productListItems` object array contains data similar to the `products` variable.
+>If you are familiar with Adobe Analytics, the `commerce` object contains data similar to commerce events in the `events` variable. The `productListItems` object array contains data similar to the `products` variable.
 
-## Commerce object
+## The `commerce` object {#commerce-object}
 
-Fields available in the `commerce` object.
+This section describes the fields available in the `commerce` object.
 
 >[!TIP]
 >
@@ -25,7 +31,7 @@ Fields available in the `commerce` object.
 |[`cartAbandons`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmcartabandons)|Optional|A cart is no longer accessible or purchasable by the user.|
 |[`checkouts`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmcheckouts)|Highly recommended|A user is no longer browsing for products but is in the process of purchasing a product.|
 |[`productListAdds`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistadds)|Highly recommended|A product is added to a list. Be sure to set the product in the `productListItems` at the same time.|
-|[`productListOpens`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistopens)|Optional|A new product list is created. (For example, a new shopping cart is created.)|
+|[`productListOpens`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistopens)|Optional|A new product list is created. For example, a new shopping cart is created.|
 |[`productListRemovals`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistremovals)|Highly recommended|A product is removed from a product list.|
 |[`productListReopens`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistreopens)|Optional|A product list is reactivated by the user. This action often happens in remarketing campaigns.|
 |[`productListViews`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md#xdmproductlistviews)|Highly recommended|A list of products is viewed.|
@@ -35,9 +41,11 @@ Fields available in the `commerce` object.
 
 {style="table-layout:auto"}
 
-### Commerce object examples
+### `Commerce` object examples
 
-+++**`productViews`**
+Expand the section below to see an example of a Web SDK command using a field from the `commerce` object.
+
++++`productViews`
 
 A basic Web SDK `sendEvent` call setting the `productViews` field to `1`:
 
@@ -55,11 +63,13 @@ alloy("sendEvent", {
 
 +++
 
-## Order object
+## The `order` object {#order-object}
 
-The commerce object contains a dedicated object for collecting order details.
+The `commerce` object contains a dedicated object for collecting order details. This is called the `order` object.
 
-| Order | Option | Recommendation | Description |
+This section describes all the fields supported by the `order` object.
+
+| Field | Option | Recommendation | Description |
 |---|---|---|---|
 |[`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmcurrencycode)|||The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency for the order total.|
 |[`payments[]`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/order.schema.md#xdmpayments)|||The list of payments on an order. A [paymentItem](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/paymentitem.schema.md) includes the following.|
@@ -73,7 +83,9 @@ The commerce object contains a dedicated object for collecting order details.
 
 ### Order object examples
 
-+++**`order`**
+Expand the section below to see an example of a Web SDK command using the `commerce` object.
+
++++`Order` object example
 
 A Web SDK `sendEvent` call setting the `order` object that applies to multiple products in the `productListItems` array:
 
@@ -115,7 +127,7 @@ alloy("sendEvent",{
 
 +++
 
-## Product list object
+## The product list object {#product-list-object}
 
 The product list indicates which products are related to the corresponding action. It is a list of [productListItems](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md). Each product has several optional fields.
 
@@ -131,7 +143,9 @@ The product list indicates which products are related to the corresponding actio
 
 ### Product list examples
 
-+++**`productListItems`**
+Expand the sections below to see examples of Web SDK commands using the `productListItems` object.
+
++++`productListItems` example
 
 A Web SDK `sendEvent` call setting the `productViews` for multiple products in the `productListItems` array:
 
@@ -159,7 +173,7 @@ alloy("sendEvent",{
 
 +++
 
-+++**`productListAdds`**
++++`productListAdds` examplae
 
 A Web SDK `sendEvent` call setting the `productListAdds` event for multiple products in the `productListItems` array:
 
@@ -193,7 +207,7 @@ alloy("sendEvent",{
 
 +++
 
-+++**`checkouts`**
++++`checkouts` example
 
 A Web SDK `sendEvent` call setting the `checkouts` event for multiple products in the `productListItems` array:
 
