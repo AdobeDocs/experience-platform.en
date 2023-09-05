@@ -69,6 +69,14 @@ This section describes all the audiences that you can export to this destination
 
 This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
 
+This destination also supports the activation of the audiences described in the table below.
+
+| Audience type | Description | 
+---------|----------|
+| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
