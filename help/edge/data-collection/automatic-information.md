@@ -1,12 +1,12 @@
 ---
 title: Automatically collected information
 description: An overview of the data that the Adobe Experience Platform Web SDK collects automatically.
-keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
-exl-id: 901df786-df36-4986-9c74-a32d29c11b71
 ---
 # Automatically collected information
 
-The Adobe Experience Platform Web SDK automatically collects some information out of the box. If your organization does not want to automatically collect this data, you can use the `context` option in the [`configure` command](../fundamentals/configuring-the-sdk.md). Keywords excluded from the `context` array are not included in data collection. If the `context` array does not exist in the `configure` command, all the data in the table below is automatically collected.
+Adobe Experience Platform Web SDK automatically collects some information out of the box. If your organization does not want to automatically collect this data, you can use the `context` option in the [`configure` command](../fundamentals/configuring-the-sdk.md).
+
+Keywords excluded from the `context` array are not included in data collection. If the `context` array does not exist in the `configure` command, all the data in the table below is automatically collected.
 
 | Name | Description | `context` array keyword | XDM path | Example value |
 | --- | --- | --- | --- | --- |
