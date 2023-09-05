@@ -15,6 +15,10 @@ When [viewing alert rules in the Platform UI](./ui.md), you can subscribe to eac
 
 The following alert rules are specific to [Data Ingestion](../../ingestion/home.md) and  [sources](../../sources/home.md):
 
+>[!NOTE]
+>
+>Streaming sources are currently not supported by alerts. You can only subscribe to alert notifications for batch sources.
+
 | I/O Event subscription | Alert rule | Description |
 | --- | --- | --- |
 | Source Flow Run Info | Sources Flow Run Start | This alert triggers when a source connection starts processing data. |

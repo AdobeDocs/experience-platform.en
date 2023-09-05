@@ -114,7 +114,7 @@ For more information, please read the [Data Prep overview](../../data-prep/home.
 
 **New or updated functionality** {#destinations-new-updated-functionality}
 
-- You can now [activate prospect audiences](../../destinations/ui/activate-prospect-audiences.md) to file-based destinations.
+- You can now [activate prospect audiences](../../destinations/ui/activate-prospect-audiences.md) to cloud storage destinations.
 - The general [activation guardrail](../../destinations/guardrails.md#general-activation-guardrails) of maximum 100 destinations per sandbox has been updated to be a _hard limit_.
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
