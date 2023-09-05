@@ -39,7 +39,7 @@ solution: Data Collection
   * [Libraries](./ui/publishing/libraries.md)
   * [Self-hosting libraries](./ui/publishing/hosts/self-hosting-libraries.md)
   * [Republish a library](./ui/publishing/republish.md)
-  * [Premium CDN support (Beta)](./ui/publishing/premium-cdn.md)
+  * [Experience Platform Tags (China)](./ui/publishing/premium-cdn.md)
 * Client-side information {#client-side}
   * [Overview](./ui/client-side/overview.md)
   * [Asynchronous deployment](./ui/client-side/asynchronous-deployment.md)

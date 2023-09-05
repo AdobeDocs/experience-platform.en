@@ -18,6 +18,10 @@ This document covers essential concepts related to processing privacy requests f
 >
 >For steps on how to make privacy requests for other Adobe Experience Cloud applications, refer to the [Privacy Service documentation](../privacy-service/experience-cloud-apps.md).
 
+>[!IMPORTANT]
+>
+>The privacy request in this guide does **not** cover B2B non-person entities.
+
 ## Getting started
 
 This guide requires a working understanding of the following [!DNL Platform] components:
@@ -207,7 +211,7 @@ To remove the profile and all identity associations for a given customer, make s
 ### Merge policy limitations {#merge-policy-limitations}
 
 Privacy Service is only able to process [!DNL Profile] data using a merge policy that does not perform identity stitching. If you are using the UI to confirm whether your privacy requests are being processed, ensure that you are using a policy with **[!DNL None]** as its [!UICONTROL ID stitching] type. In other words, you cannot use a merge policy where [!UICONTROL ID stitching] is set to [!UICONTROL Private graph].
->
+
 >![The ID stitching of the merge policy is set to None](./images/privacy/no-id-stitch.png)
 
 ## Next steps
