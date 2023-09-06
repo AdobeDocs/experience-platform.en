@@ -1,14 +1,13 @@
 ---
 title: LiveRamp - Distribution connection
 description: Learn how to use the LiveRamp - Distribution connector to activate audiences previously onboarded into LiveRamp, to other advertising destinations.
-last-substantial-update: 2023-07-26
 hide: yes
 hidefromtoc: yes
 ---
 
 # [!DNL LiveRamp - Distribution] connection {#liveramp-onboarding}
 
-The [!DNL LiveRamp - Distribution] enables you to activate audiences from Experience Platform to premium publishers across mobile, web, display, and connected TV mediums.
+The [!DNL LiveRamp - Distribution] connection enables you to activate audiences from Experience Platform to premium publishers across mobile, web, display, and connected TV mediums.
 
 >[!IMPORTANT]
 >
@@ -71,7 +70,6 @@ To connect to this destination, follow the steps described in the [destination c
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
 ![Platform UI image showing the destination connection screen.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
-
 
 * **[!UICONTROL Token URL]**: Your LiveRamp token URL.
 * **[!UICONTROL LiveRamp Organization ID]**: The organization ID of your LiveRamp account.
@@ -139,11 +137,7 @@ To configure details for the destination, fill in the required and optional fiel
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="Advertiser data destination terms agreement"
 >abstract="Type in `I AGREE` to confirm the acknowledgement and agreement to the Disney advertiser data terms."
-
-<!-- Commenting out this line for validation error reasons. Will uncomment it.
-
- >additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement" -->
-
+>additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_client"
@@ -159,7 +153,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 ![Platform UI image showing the customer data fields for the Disney destination.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-disney-fields.png)
 
-* **[!UICONTROL Advertiser data destination terms agreement. Enter "I AGREE".]**: Type in `I AGREE` to confirm the acknowledgement and agreement to the Disney advertiser data terms.
+* **[!UICONTROL Advertiser data destination terms agreement]**: Type in `I AGREE` to confirm the acknowledgement and agreement to the Disney advertiser data terms.
 * **[!UICONTROL Distribution account]**: Select your Disney distribution account from the list.
 * **[!UICONTROL Email address]**: Enter an email address tied to an individual. This email address serves as a signature to the advertiser data terms agreement.
 
@@ -300,7 +294,7 @@ When you are finished providing details for your destination connection, select 
 
 The [!DNL LiveRamp - Distribution] connection activates audiences which have already been onboarded to your LiveRamp account through the [LiveRamp - Onboarding](liveramp-onboarding.md) connection.
 
-To successfully activate your audiences, in this step, you must select the same audiences that you have previously onboarded to LiveRamp.
+To successfully activate your audiences, in this step, you must select the **same audiences** that you have previously onboarded to LiveRamp.
 
 >[!IMPORTANT]
 >
