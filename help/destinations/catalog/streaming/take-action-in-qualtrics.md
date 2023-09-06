@@ -1,0 +1,175 @@
+---
+title: Take action in Qualtrics
+description: Synchronize experience and operational customer data to unlock personalization at scale. 
+
+Use the aggregation of multiple sources of operational data in Adobe Experience platform as an input in XiD to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers.
+---
+
+# Take action in Qualtrics {#your-destination}
+
+## Overview {#overview}
+
+Synchronize experience and operational customer data to unlock personalization at scale. 
+
+Use the aggregation of multiple sources of operational data in Adobe Experience platform as an input in XiD to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers.
+
+>[!IMPORTANT]
+>
+>The destination connector and documentation page are created and maintained by the Qualtrics team. For any inquiries or update requests, please contact them directly at `integrations@qualtrics.com`.
+
+## Use cases {#use-cases}
+
+To help you better understand how and when you should use the *Take action in Qualtrics* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+
+### Use case #1 {#use-case-1}
+
+**Scenario**: A company wants to measure customer satisfaction across various digital touchpoints, such as their website and mobile app. They use Adobe Experience Platform to trigger Qualtrics surveys based on user interactions, such as completing a purchase or visiting a specific webpage.
+
+**Outcome**: By collecting real-time feedback, the company can make data-driven improvements to their customer experience, leading to increased satisfaction and loyalty.
+
+### Use case #2 {#use-case-2}
+
+**Scenario**: An organization aims to enhance its employee onboarding process. They utilize Adobe Experience Platform to gather feedback from new hires through Qualtrics surveys. Surveys are automatically triggered after a predefined onboarding period.
+
+**Outcome**: Continuous feedback enables the organization to adapt and improve the onboarding process, resulting in better engagement and productivity among new employees.
+
+## Prerequisites
+Before setting up the Qualtrics destination in the Adobe Experience Platform, please ensure the following prerequisites:
+
+- You have a Qualtrics account.
+- You have obtained the necessary API token from Qualtrics.
+
+### Obtaining an API Token
+
+Below are the necessary steps for obtaining an API token from Qualtrics.
+
+1. Sign in to your Qualtrics account.
+2. Go to **Account Settings**.
+3. Select **Qualtrics IDs**.
+4. On this page, look for the **API** section, it contains a **Token** field. This is the API Token, and will be required during destination setup.
+
+For detailed information on setting up the Qualtrics integration, refer to the [Qualtrics Integration Guide](https://www.qualtrics.com/support/integrations/api-integration/adobe-experience-platform-integration/).
+
+## Supported identities {#supported-identities}
+
+*Take action in Qualtrics* supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+
+|Target Identity|Description|Considerations|
+|---|---|---|
+|Email|Plain text email addresses|Only plain text email addresses are supported by Qualtrics.|
+
+{style="table-layout:auto"}
+
+## Export type and frequency {#export-type-frequency}
+
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the *Take action in Qualtrics* destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+
+{style="table-layout:auto"}
+
+## Connect to the destination {#connect}
+
+>[!IMPORTANT]
+> 
+>To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
+
+### Authenticate to destination {#authenticate}
+
+As part of authentication you will need to provide an API token, as noted earlier in the **Prerequisites** section.
+
+### Fill in destination details {#destination-details}
+
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+
+*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+*  **[!UICONTROL URL]**: The URL found in the JSON Event that triggers your workflow in Qualtrics. See below screenshot for an example.
+
+![URL](/help/destinations/assets/catalog/streaming/take-action-in-qualtrics/json-event-url.png)
+
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
+
+## Activate audiences to this destination {#activate}
+
+>[!IMPORTANT]
+> 
+>To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
+Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+
+### Map attributes and identities {#map}
+
+This destination has an open schema so you may send any properties to Qualtrics.
+
+#### Map attributes
+
+To add an attribute to your mapping, simply select **custom attributes** when adding a new mapping. You may enter any name for your attribute. Qualtrics encourages the *camelCase* naming convention for attribute names (see below screenshot for an example).
+
+![Custom attribute](/help/destinations/assets/catalog/streaming/take-action-in-qualtrics/custom-attribute.png)
+
+See below screenshot for an example of possible attribute mappings.
+
+![Example mappings](/help/destinations/assets/catalog/streaming/take-action-in-qualtrics/example-mappings.png)
+
+#### Map identities
+
+It's mandatory to select an identity namespace for this destination. The two possible source field to target field mappings are:
+
+| Source Field       | Target Field          |
+|--------------------|-----------------------|
+| IdentityMap: Email | Identity: email       |
+| IdentityMap: ECID  | Identity: external_id |
+
+See below screenshot for an example.
+
+![Identity namespace](/help/destinations/assets/catalog/streaming/take-action-in-qualtrics/identity-namespace.png)
+
+## Exported data / Validate data export {#exported-data}
+
+As previously mentioned, this destination uses an open schema, so any properties may be sent to Qualtrics. Nonetheless, the data sent to Qualtrics will follow the below structure:
+
+```json
+{
+  "person": {
+    "name": {
+      "firstName": "Dave"
+    }
+  },
+  "mobilePhone": {
+    "number": "0123456789"
+  },
+  "identityMap": {
+    "Email": [
+      {
+        "id": "Email-2Sf6C"
+      }
+    ]
+  },
+  "segmentMembership": {
+    "ups": {
+      "046456e3b-18e1-48a6-9bda-d68547861283": {
+        "lastQualificationTime": "2023-09-05T10:43:55.602687Z",
+        "status": "realized"
+      },
+      "007844dd1-9e5d-4531-a4ee-05470doe759dd": {
+        "lastQualificationTime": "2023-09-05T10:43:55.602689Z",
+        "status": "realized"
+      }
+    }
+  }
+}
+```
+
+## Data usage and governance {#data-usage-governance}
+
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
