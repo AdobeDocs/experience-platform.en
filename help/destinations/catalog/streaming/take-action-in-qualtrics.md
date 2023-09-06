@@ -1,8 +1,8 @@
 ---
+keywords: streaming, qualtrics destination
 title: Take action in Qualtrics
-description: Synchronize experience and operational customer data to unlock personalization at scale. 
-
-Use the aggregation of multiple sources of operational data in Adobe Experience platform as an input in XiD to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers.
+description: Synchronize experience and operational customer data to unlock personalization at scale. Use the aggregation of multiple sources of operational data in Adobe Experience platform as an input in XiD to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers.
+exl-id: --
 ---
 
 # Take action in Qualtrics {#your-destination}
@@ -81,7 +81,9 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authenticate to destination {#authenticate}
 
-As part of authentication you will need to provide an API token, as noted earlier in the **Prerequisites** section.
+As part of authentication you will need to provide a **Username** and **Password**. The username is your Qualtrics username, and the password is your Qualtrics account's API token. To retrieve the API token follow the instructions from the **Prerequisites** section above.
+
+![Authentication](/help/destinations/assets/catalog/streaming/take-action-in-qualtrics/authentication.png)
 
 ### Fill in destination details {#destination-details}
 
