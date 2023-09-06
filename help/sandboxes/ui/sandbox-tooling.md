@@ -1,8 +1,6 @@
 ---
 title: Sandboxes Tooling
 description: Seamlessly export and import Sandbox configurations between sandboxes.
-hide: true
-hidefromtoc: true
 ---
 
 # [!BADGE Beta] Sandbox tooling
