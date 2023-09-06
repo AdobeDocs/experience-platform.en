@@ -1,14 +1,9 @@
 ---
 title: Computed Attributes Frequently Asked Questions
 description: Find out answers to frequently asked questions about using computed attributes.
-badge: "Beta"
 ---
 
 # Frequently asked questions
-
->[!IMPORTANT]
->
->Computed attributes is currently in **beta** and is **not** available to all users.
 
 In Adobe Experience Platform, computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. The following is a list of frequently asked questions regarding computed attributes.
 
@@ -38,7 +33,7 @@ Since computed attributes are created using Experience Event fields and resides 
 
 ## Are there any limits to the number of computed attributes I can create?
 
-The current maximum number of **published** computed attributes is 25.
+Yes, there is a limit on the number of computed attributes you can create. Please contact your Adobe representative for more information.
 
 ## Are there any downstream implications for disabling a computed attribute?
 
@@ -51,3 +46,7 @@ When a computed attribute is disabled or made inactive, it is no longer updated.
 ## How do computed attributes help drive engagement?
 
 Computed attributes drive Profile enrichment by aggregating your event attributes at a merged profile level. For example, you can personalize marketing emails with the latest viewed product.
+
+## How often are computed attributes evaluated?
+
+Computed attributes are evaluated independently of the segmentation schedule. This means that regardless of the segmentation type (batch segmentation or streaming segmentation), the computed attribute will be evaluated using the latest computed attribute value.

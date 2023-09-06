@@ -1,14 +1,9 @@
 ---
 title: Computed Attributes UI guide
 description: Learn how to create, view, and update computed attributes using the Adobe Experience Platform UI.
-badge: "Beta"
 ---
 
 # Computed attributes UI guide
-
->[!IMPORTANT]
->
->Computed attributes is currently in **beta** and is **not** available to all users.
 
 In Adobe Experience Platform, computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 

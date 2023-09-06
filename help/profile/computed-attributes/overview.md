@@ -1,13 +1,9 @@
 ---
 title: Computed Attributes overview
 description: Computed attributes are functions to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
-badge: "Beta"
 ---
-# Computed attributes overview
 
->[!IMPORTANT]
->
->Computed attributes is currently in **beta** and is **not** available to all users.
+# Computed attributes overview
 
 Personalization based on user behavior is a key requirement for marketers to maximize the impact of personalization. For instance, personalizing marketing email with the most recently viewed product to drive conversion, or personalizing webpage based on total purchases made by users to drive retention. 
 
