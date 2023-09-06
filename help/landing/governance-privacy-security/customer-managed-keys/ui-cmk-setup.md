@@ -15,7 +15,7 @@ In order to enable CMK, your [!DNL Azure] Key Vault must be configured with the 
 * [Configure access using [!DNL Azure] role-based access control](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 * [Configure an [!DNL Azure] Key Vault](./azure-key-vault-config.md)
 
-To view and visit the [!UICONTORL Encryption] section in Adobe Experience Platform, you must have created a role and assigned the [!UICONTORL Manage Customer Managed Key] permission to that role. It is best practice to create a CMK admin role and then provide the [!UICONTORL Manage Customer Managed Key] permission to that role. As there is only one action provided by this permission, any user assigned this role can act as the CMK admin.
+To view and visit the [!UICONTROL Encryption] section in Adobe Experience Platform, you must have created a role and assigned the [!UICONTROL Manage Customer Managed Key] permission to that role. It is best practice to create a CMK admin role and then provide the [!UICONTROL Manage Customer Managed Key] permission to that role. As there is only one action provided by this permission, any user assigned this role can act as the CMK admin.
 
 In the permissions workspace, make sure to grant your [!UICONTROL User] the CMK admin role before continuing with the guide. 
 
@@ -31,25 +31,25 @@ After you have your key vault configured, the next step is to register for the C
 
 <!-- Registering the CMK app requires you to ... -->
 
-To view the [!UICONTORL Encryption configurations] dashboard, select **[!UICONTORL Encryption]** under the [!UICONTORL Administration] heading of the left navigation sidebar.
+To view the [!UICONTROL Encryption configurations] dashboard, select **[!UICONTROL Encryption]** under the [!UICONTROL Administration] heading of the left navigation sidebar.
 
 ![The Encryption configuration dashboard with Encryption and the Customer Managed Keys card highlighted.](../../images/governance-privacy-security/customer-managed-keys/encryption-configraion.png)
 
-Select **[!UICONTORL Configure]** to open the [!UICONTORL Customer Managed Keys configuration] view. This workspace contains all the necessary values to complete the steps described below and set up your CMK app.
+Select **[!UICONTROL Configure]** to open the [!UICONTROL Customer Managed Keys configuration] view. This workspace contains all the necessary values to complete the steps described below and set up your CMK app.
 
 <!-- .. performing the integration with your Azure Key vault. -->
 
 ### Copy authentication URL {#copy-authentication-url}
 
-To start the registration process, copy the application authentication URL for your organization from the [!UICONTORL Customer Managed Keys configuration] view and paste it into your [!DNL Azure] environment **[!DNL Key Vault Crypto Service Encryption User]**. Details on how to do this are provided in the [next section](#assign-to-role). 
+To start the registration process, copy the application authentication URL for your organization from the [!UICONTROL Customer Managed Keys configuration] view and paste it into your [!DNL Azure] environment **[!DNL Key Vault Crypto Service Encryption User]**. Details on how to do this are provided in the [next section](#assign-to-role). 
 
-Select the copy icon (![The copy icon.](../../images/governance-privacy-security/customer-managed-keys/copy-icon.png)) by the [!UICONTORL Application authentication url].
+Select the copy icon (![The copy icon.](../../images/governance-privacy-security/customer-managed-keys/copy-icon.png)) by the [!UICONTROL Application authentication url].
 
-![The [!UICONTORL Customer Managed Keys configuration] view with the Application authentication url section highlighted.](../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
+![The [!UICONTROL Customer Managed Keys configuration] view with the Application authentication url section highlighted.](../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 
-Copy and paste the [!UICONTORL Application authentication url] into a browser to open an authentication dialog. Select **[!DNL Accept]** to add the CMK app service principal to your [!DNL Azure] tenant. This redirects to the Experience Cloud landing page.
+Copy and paste the [!UICONTROL Application authentication url] into a browser to open an authentication dialog. Select **[!DNL Accept]** to add the CMK app service principal to your [!DNL Azure] tenant. This redirects to the Experience Cloud landing page.
 
-![A Microsoft permission request dialog with [!UICONTORL Accept] highlighted.](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
+![A Microsoft permission request dialog with [!UICONTROL Accept] highlighted.](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 >[!IMPORTANT]
 >
