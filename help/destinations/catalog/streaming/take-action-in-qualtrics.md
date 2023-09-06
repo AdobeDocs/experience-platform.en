@@ -5,7 +5,7 @@ description: Synchronize experience and operational customer data to unlock pers
 exl-id: --
 ---
 
-# Take action in Qualtrics {#your-destination}
+# Take action in Qualtrics
 
 ## Overview {#overview}
 
