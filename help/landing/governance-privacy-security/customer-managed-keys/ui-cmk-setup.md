@@ -15,6 +15,12 @@ In order to enable CMK, your [!DNL Azure] Key Vault must be configured with the 
 * [Configure access using [!DNL Azure] role-based access control](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 * [Configure an [!DNL Azure] Key Vault](./azure-key-vault-config.md)
 
+To view and visit the [!UICONTORL Encryption] section in Adobe Experience Platform, you must have created a role and assigned the [!UICONTORL Manage Customer Managed Key] permission to that role. It is best practice to create a CMK admin role and then provide the [!UICONTORL Manage Customer Managed Key] permission to that role. As there is only one action provided by this permission, any user assigned this role can act as the CMK admin.
+
+In the permissions workspace, make sure to grant your [!UICONTROL User] the CMK admin role before continuing with the guide. 
+
+For more information on assigning roles and permissions in Experience Platform, refer to the [configure permissions documentation](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+
 ## Set up the CMK app {#register-app}
 
 After you have your key vault configured, the next step is to register for the CMK application that will link to your [!DNL Azure] tenant.
@@ -23,41 +29,41 @@ After you have your key vault configured, the next step is to register for the C
 
 ### Getting started
 
-Registering the CMK app requires you to ...
+<!-- Registering the CMK app requires you to ... -->
 
-### Fetch an authentication URL
+To view the [!UICONTORL Encryption configurations] dashboard, select **[!UICONTORL Encryption]** under the [!UICONTORL Administration] heading of the left navigation sidebar.
 
-To start the registration process, acquire the required authentication URL for your organization from ...
+![The Encryption configuration dashboard with Encryption and the Customer Managed Keys card highlighted.](../../images/governance-privacy-security/customer-managed-keys/encryption-configraion.png)
 
-Copy and paste the `applicationRedirectUrl` address into a browser to open an authentication dialog. Select **[!DNL Accept]** to add the CMK app service principal to your [!DNL Azure] tenant.
+Select **[!UICONTORL Configure]** to open the [!UICONTORL Customer Managed Keys configuration] view. This workspace contains all the necessary values to complete the steps described below and set up your CMK app.
 
-![Accept permission request](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
+<!-- .. performing the integration with your Azure Key vault. -->
 
-### Assign the CMK app to a role {#assign-to-role}
+### Copy authentication URL {#copy-authentication-url}
 
-After completing the authentication process, navigate back to your [!DNL Azure] Key Vault and select **[!DNL Access control]** in the left navigation. From here, select **[!DNL Add]** followed by **[!DNL Add role assignment]**.
+To start the registration process, copy the application authentication URL for your organization from the [!UICONTORL Customer Managed Keys configuration] view and paste it into your [!DNL Azure] environment **[!DNL Key Vault Crypto Service Encryption User]**. Details on how to do this are provided in the [next section](#assign-to-role). 
 
-![Add role assignment](../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
+Select the copy icon (![The copy icon.](../../images/governance-privacy-security/customer-managed-keys/copy-icon.png)) by the [!UICONTORL Application authentication url].
 
-The next screen prompts you to choose a role for this assignment. Select **[!DNL Key Vault Crypto Service Encryption User]** before selecting **[!DNL Next]** to continue.
+![The [!UICONTORL Customer Managed Keys configuration] view with the Application authentication url section highlighted.](../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 
-![Select role](../images/governance-privacy-security/customer-managed-keys/select-role.png)
+Copy and paste the [!UICONTORL Application authentication url] into a browser to open an authentication dialog. Select **[!DNL Accept]** to add the CMK app service principal to your [!DNL Azure] tenant. This redirects to the Experience Cloud landing page.
 
-On the next screen, choose **[!DNL Select members]** to open a dialog in the right rail. Use the search bar to locate the service principal for the CMK application and select it from the list. When finished, select **[!DNL Save]**.
+![A Microsoft permission request dialog with [!UICONTORL Accept] highlighted.](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->If you cannot find your application in the list, then your service principal has not been accepted into your tenant. Please work with your [!DNL Azure] administrator or representative to ensure that you have correct privileges.
+>If you have multiple Microsoft Azure subscriptions then your  potential for them to run into the same problem. In this situation you must swap the `common` section of the application authentication URL name for the CMK directory ID.<br>Copy the CMK directory ID from the Portal settings, Directories and Subscriptions page of the Microsoft Azure application<br>![The Microsoft Azure application Portal settings, Directories and Subscriptions page with the Directory ID highlighted.]()<br>Next, paste it into your browser address bar.<br>![A Google browser page with the 'common' section of the Application authentication url highlighted.]()
 
 ### Assign the CMK app to a role {#assign-to-role}
 
 After completing the authentication process, navigate back to your [!DNL Azure] Key Vault and select **[!DNL Access control]** in the left navigation. From here, select **[!DNL Add]** followed by **[!DNL Add role assignment]**.
 
-![Add role assignment](../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
+![The Microsoft Azure dashboard with Add and Add role assignment highlighted.](../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 The next screen prompts you to choose a role for this assignment. Select **[!DNL Key Vault Crypto Service Encryption User]** before selecting **[!DNL Next]** to continue.
 
-![Select role](../images/governance-privacy-security/customer-managed-keys/select-role.png)
+![The Microsoft Azure dashboard with the Key Vault Crypto Service Encryption User highlighted.](../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
 On the next screen, choose **[!DNL Select members]** to open a dialog in the right rail. Use the search bar to locate the service principal for the CMK application and select it from the list. When finished, select **[!DNL Save]**.
 
@@ -69,13 +75,13 @@ On the next screen, choose **[!DNL Select members]** to open a dialog in the rig
 
 After installing the CMK app on [!DNL Azure], you can send your encryption key identifier to Adobe. Select **[!DNL Keys]** in the left navigation, followed by the name of the key you want to send.
 
-![Select key](../images/governance-privacy-security/customer-managed-keys/select-key.png)
+![The Microsoft Azure dashboard with the Keys object and the key name highlighted.](../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
 Select the latest version of the key and its details page appears. From here you can optionally configure the permitted operations for the key. At a minimum, the key must be granted the **[!DNL Wrap Key]** and **[!DNL Unwrap Key]** permissions.
 
 The **[!UICONTROL Key Identifier]** field displays the URI identifier for the key. Copy this URI value for use in the next step.
 
-![Copy key URL](../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
+![The Microsoft Azure dashboard Key details with the Permitted operations and the copy key URL sections highlighted.](../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
 Once you have obtained the key vault URI, you ... {unknown}
 
