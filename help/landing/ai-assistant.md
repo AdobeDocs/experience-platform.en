@@ -157,7 +157,7 @@ For usage data queries, answers may not reflect the current state of the UI. The
 
 You will need to log into a sandbox to inquire about specific data related to objects like schemas, datasets, attributes, destinations and segments.
 
-#### Supported data usage questions
+### Supported data usage questions
 
 +++Select to view a list of supported data usage questions
 
