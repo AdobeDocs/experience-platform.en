@@ -1,11 +1,11 @@
 ---
-keywords: streaming, Qualtrics destination
+keywords: streaming, qualtrics destination
 title: Take action in Qualtrics
 description: Synchronize experience and operational customer data to unlock personalization at scale. Use the aggregation of multiple sources of operational data in Adobe Experience platform as an input in XiD to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers.
 exl-id: --
 ---
 
-# Take action in Qualtrics
+# Take action in Qualtrics {#your-destination}
 
 ## Overview {#overview}
 
@@ -56,7 +56,8 @@ For detailed information on setting up the Qualtrics integration, refer to the [
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|Email|Plain text email addresses|Only plain text email addresses are supported by Qualtrics.|
+|email|Plain text email addresses|Only plain text email addresses are supported by Qualtrics.|
+|external_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
 
 {style="table-layout:auto"}
 
