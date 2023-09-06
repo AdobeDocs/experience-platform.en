@@ -102,7 +102,7 @@ Note that the schema is not yet enabled for profile. Toggle the profile button t
 
 #### Add the third-party data governance label to all fields in the schema
 
-Consider adding third-party data governance labels to all of the fields that make up the schema. This is important in order to ensure responsible use of third-party data and minimize the risk of data leakage. Find more information about third-party data governance labels (add link to docs by Jordan)
+Consider adding third-party data governance labels to all of the fields that make up the schema. This is important in order to ensure responsible use of third-party data and minimize the risk of data leakage. Find more information about [third-party data governance labels](../../data-governance/labels/reference.md#partner-ecosystem-labels).
 
 To do this, follow the steps below: 
 
