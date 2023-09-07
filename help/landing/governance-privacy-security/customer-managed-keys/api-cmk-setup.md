@@ -1,10 +1,10 @@
 ---
-title: Setup and Configure Customer-Managed Keys using the API
+title: Set up and Configure Customer-Managed Keys using the API
 description: Learn how to set up your CMK app with your Azure tenant and send your encryption key ID to Adobe Experience Platform.
 ---
 # Setup and configure customer-managed keys using the API
 
-This document covers the process for enabling the customer-managed keys (CMK) feature in Platform using the API. For instructions on how to complete this process using the UI, refer to the [UI CMK setup document](./ui-cmk-setup.md).
+This document covers the process for enabling the customer-managed keys (CMK) feature in Adobe Experience Platform using the API. For instructions on how to complete this process using the UI, refer to the [UI CMK setup document](./ui-cmk-setup.md).
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ In the permissions workspace, make sure to grant your [!UICONTROL User] the CMK 
 
 For more information on assigning roles and permissions in Experience Platform, refer to the [configure permissions documentation](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
-In order to enable CMK, your [!DNL Azure] Key Vault must be configured with the following settings:
+To enable CMK, your [!DNL Azure] Key Vault must be configured with the following settings:
 
 * [Enable purge protection](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Enable soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
@@ -31,7 +31,7 @@ Registering the CMK app requires you to make calls to Platform APIs. For details
 
 While the authentication guide provides instructions on how to generate your own unique value for the required `x-api-key` request header, all API operations in this guide use the static value `acp_provisioning` instead. You must still provide your own values for `{ACCESS_TOKEN}` and `{ORG_ID}`, however.
 
-In all API calls shown in this guide, `platform.adobe.io` is used as the root path, which defaults to the VA7 region. If your organization uses a different region, `platform` must be followed by a dash and the region code assigned to your organization: `nld2` for NLD2 or `aus5` for AUS5 (for example: `platform-aus5.adobe.io`). If you do not know your organization's region, please contact your system administrator.
+In all API calls shown in this guide, `platform.adobe.io` is used as the root path, which defaults to the VA7 region. If your organization uses a different region, `platform` must be followed by a dash and the region code assigned to your organization: `nld2` for NLD2 or `aus5` for AUS5 (for example: `platform-aus5.adobe.io`). If you do not know your organization's region, contact your system administrator.
 
 ### Fetch an authentication URL {#fetch-authentication-url}
 
@@ -79,7 +79,7 @@ On the next screen, choose **[!DNL Select members]** to open a dialog in the rig
 
 >[!NOTE]
 >
->If you cannot find your application in the list, then your service principal has not been accepted into your tenant. Please work with your [!DNL Azure] administrator or representative to ensure that you have correct privileges.
+>If you cannot find your application in the list, then your service principal has not been accepted into your tenant. To ensure that you have correct privileges, work with your [!DNL Azure] administrator or representative.
 
 ## Enable the encryption key configuration on Experience Platform {#send-to-adobe}
 
@@ -87,11 +87,11 @@ After installing the CMK app on [!DNL Azure], you can send your encryption key i
 
 ![The Microsoft Azure dashboard with the [!DNL Keys] object and the key name highlighted.](../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
-Select the latest version of the key and its details page appears. From here you can optionally configure the permitted operations for the key.
+Select the latest version of the key and its details page appears. From here, you can optionally configure the permitted operations for the key.
 
 >[!IMPORTANT]
 >
->The minimum required operations to be permitted for the key are the **[!DNL Wrap Key]** and **[!DNL Unwrap Key]** permissions. You have the option to include [!DNL Encrypt], [!DNL Decrypt], [!DNL Sign], and [!DNL Verify] should you want.
+>The minimum required operations to be permitted for the key are the **[!DNL Wrap Key]** and **[!DNL Unwrap Key]** permissions. You can include [!DNL Encrypt], [!DNL Decrypt], [!DNL Sign], and [!DNL Verify] should you want.
 
 The **[!UICONTROL Key Identifier]** field displays the URI identifier for the key. Copy this URI value for use in the next step.
 
@@ -124,10 +124,10 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `name` | A name for the configuration. Ensure that you remember this value as it will be required to check the configuration's status at a [later step](#check-status). The value is case-sensitive. |
+| `name` | A name for the configuration. Ensure that you remember this value as it is required to check the configuration's status at a [later step](#check-status). The value is case-sensitive. |
 | `type` | The configuration type. Must be set to `BYOK_CONFIG`. |
-| `imsOrgId` | Your organization ID. This must be the same value as provided under the `x-gw-ims-org-id` header. |
-| `configData` | Contains the following details about the configuration:<ul><li>`providerType`: Must be set to `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`: The key vault URI that you copied [earlier](#send-to-adobe).</li></ul> |
+| `imsOrgId` | Your organization ID. This ID must be the same value as provided under the `x-gw-ims-org-id` header. |
+| `configData` | This property contains the following details about the configuration:<ul><li>`providerType`: Must be set to `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`: The key vault URI that you copied [earlier](#send-to-adobe).</li></ul> |
 
 **Response**
 
@@ -153,7 +153,7 @@ A successful response returns the details of the configuration job.
 }
 ```
 
-The job should should complete processing within a few minutes.
+The job should complete processing within a few minutes.
 
 ## Verify the configuration's status {#check-status}
 
@@ -196,7 +196,7 @@ A successful response returns the status of the job.
 
 The `status` attribute can have one of four values with the following meanings:
 
-1. `RUNNING`: Validates that Platform has the ability to access the key and key vault.
+1. `RUNNING`: Validates that Platform can access the key and key vault.
 1. `UPDATE_EXISTING_RESOURCES`: The system is adding the key vault and key name to the datastores across all sandboxes in your organization.
 1. `COMPLETED`: The key vault and key name have been added to the datastores.
 1. `FAILED`: A problem occurred, primarily related to the key, key vault, or multi-tenant app setup.
