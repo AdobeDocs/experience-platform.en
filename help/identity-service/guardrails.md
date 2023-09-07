@@ -64,7 +64,8 @@ The following section contains additional information on guardrails for Identity
 >
 > * A custom namespace where the person identifiers (such as CRM IDs) are configured as cookie/device identity type.
 > * A custom namespace where cookie/device identifiers are configured as cross-device identity type.
-
+>
+>Once this feature is available, graphs that exceed the limit of 50 identities will be reduced down to up to 50 identities. For Real-time CDP B2C Edition, this could result in a minimal increase in the number of profiles qualifying for an audience, as these profiles were previously ignored from Segmentation and Activation.
 
 When a full identity graph is updated, Identity Service deletes the oldest identity in the graph before adding the latest identity. This is to maintain accuracy and relevance of identity data. This process of deletion follows two primary rules:
 
@@ -102,3 +103,8 @@ In this example, before the graph on the left can be updated with a new identity
 * In the rare case that there are two identities with the same timestamp and identity type, Identity Service will sort the IDs based on [XID](./api/list-native-id.md) and conduct deletion.
 
 >[!ENDSHADEBOX]
+
+Deletion only happens to data in the Identity Service and not Real-Time Customer Profile.
+
+* This behavior could consequently create more profiles with a single ECID, because the ECID is no longer part of the identity graph.
+* In order for you stay within your addressable audience entitlement numbers, it is recommended to enable [pseudonymous profile data expiration](../profile/pseudonymous-profiles.md) to delete your old profiles.

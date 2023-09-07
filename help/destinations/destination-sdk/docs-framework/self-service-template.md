@@ -68,19 +68,14 @@ To help you better understand how and when you should use the *YourDestination* 
 
 ## Supported audiences {#supported-audiences}
 
-*Add information in this section about the audiences supported by your destination. We have prefilled the table with some standard values. Delete the values that don't apply to your destination and any values that are not prefilled.*
+*Add information in this section about the audiences supported by your destination. We have prefilled the table with some standard values. Use the `✓` and `X` characters to mark whether your audience type is supported by this destination.*
 
-This section describes all the audiences that you can export to this destination.
+This section describes which type of audiences you can export to this destination.
 
-This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
-
-*If your destination does not support the activation of any external audience, remove the phrase below along with the table.*
-
-*Additionally*, this destination also supports the activation of the audiences described in the table below.
-
-| Audience type | Description | 
----------|----------|
-| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | X | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
