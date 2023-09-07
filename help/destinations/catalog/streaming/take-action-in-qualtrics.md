@@ -1,11 +1,11 @@
 ---
-keywords: streaming, Qualtrics destination
+keywords: streaming, qualtrics destination
 title: Take action in Qualtrics
 description: Synchronize experience and operational customer data to unlock personalization at scale. Use the aggregation of multiple sources of operational data in Adobe Experience platform as an input in XiD to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers.
 exl-id: --
 ---
 
-# Take action in Qualtrics
+# Take action in Qualtrics {#your-destination}
 
 ## Overview {#overview}
 
@@ -15,7 +15,7 @@ Use the aggregation of multiple sources of operational data in Adobe Experience 
 
 >[!IMPORTANT]
 >
->The destination connector and documentation page are created and maintained by the Qualtrics team. For any inquiries or update requests, please contact them directly at `integrations@qualtrics.com`.
+>The destination connector and documentation page are created and maintained by the Qualtrics team. For any inquiries or update requests, please contact them directly at `support@qualtrics.com`.
 
 ## Use cases {#use-cases}
 
@@ -47,8 +47,6 @@ Below are the necessary steps for obtaining an API token from Qualtrics.
 2. Go to **Account Settings**.
 3. Select **Qualtrics IDs**.
 4. On this page, look for the **API** section, it contains a **Token** field. This is the API Token, and will be required during destination setup.
-
-For detailed information on setting up the Qualtrics integration, refer to the [Qualtrics Integration Guide](https://www.qualtrics.com/support/integrations/api-integration/adobe-experience-platform-integration/).
 
 ## Supported identities {#supported-identities}
 
