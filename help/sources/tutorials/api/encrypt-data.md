@@ -330,3 +330,40 @@ A successful response returns the ID (`id`) of the newly created dataflow for yo
 ## Next steps
 
 By following this tutorial, you have created an encryption key pair for your cloud storage data, and a dataflow to ingested your encrypted data using the [!DNL Flow Service API]. For status updates on your dataflow's completeness, errors, and metrics, read the guide on [monitoring your dataflow using the [!DNL Flow Service] API](./monitor.md).
+
+>[!BEGINSHADEBOX]
+
+**Restrictions on recurring ingestion**
+
+Encrypted data ingestion does not support ingestion of recurring or multi-level folders in sources. All encrypted files must be contained within a single folder. Wildcards with multiple folders in a single source path are also not supported.
+
+For example:
+
+**Supported Folder structure** - SourcePath = /FolderA/*.csv.gpg
+
+Files in bold will be ingested - FolderA
+
+* **File1.csv.gpg**
+* File2.json.gpg
+* **File3.csv.gpg**
+* File4.json
+* **File5.csv.gpg**
+
+**Unsupported Folder structure** - SourcePath = /FolderA/*
+
+Flow run will fail with message "Unable copy data from source" 
+
+FolderA
+
+* File1.csv.gpg
+* File2.json.gpg
+* Subfolder1
+  * File3.csv.gpg
+  * File4.json.gpg
+  * File5.csv.gpg
+
+FolderB
+
+  * File6.csv.gpg
+
+>[!ENDSHADEBOX]
