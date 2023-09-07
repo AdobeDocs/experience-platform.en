@@ -25,19 +25,13 @@ For more information on assigning roles and permissions in Experience Platform, 
 
 After you have your key vault configured, the next step is to register for the CMK application that will link to your [!DNL Azure] tenant.
 
-<!-- Not idea if the stuff below is accurate. Fact check -->
-
 ### Getting started
-
-<!-- Registering the CMK app requires you to ... -->
 
 To view the [!UICONTROL Encryption configurations] dashboard, select **[!UICONTROL Encryption]** under the [!UICONTROL Administration] heading of the left navigation sidebar.
 
 ![The Encryption configuration dashboard with Encryption and the Customer Managed Keys card highlighted.](../../images/governance-privacy-security/customer-managed-keys/encryption-configraion.png)
 
-Select **[!UICONTROL Configure]** to open the [!UICONTROL Customer Managed Keys configuration] view. This workspace contains all the necessary values to complete the steps described below and set up your CMK app.
-
-<!-- .. performing the integration with your Azure Key vault. -->
+Select **[!UICONTROL Configure]** to open the [!UICONTROL Customer Managed Keys configuration] view. This workspace contains all the necessary values to complete the steps described below and perform the integration with your Azure Key vault.
 
 ### Copy authentication URL {#copy-authentication-url}
 
@@ -71,22 +65,44 @@ On the next screen, choose **[!DNL Select members]** to open a dialog in the rig
 >
 >If you cannot find your application in the list, then your service principal has not been accepted into your tenant. Please work with your [!DNL Azure] administrator or representative to ensure that you have correct privileges.
 
+You can verify the application by comparing the [!UICONTROL Application ID] provided on the [!UICONTROL Customer Managed Keys configuration] view with the [!DNL Application ID] provided on the [!DNL Microsoft Azure] application overview.
+
+![The [!UICONTROL Customer Managed Keys configuration] view with the [!UICONTROL Application ID] highlighted.](../../images/governance-privacy-security/customer-managed-keys/application-id.png)
+
+All the details necessary for verifying Azure tools are included the Platform UI. This level of granularity is provided as many users wish to utilize other Azure tooling to enhance their ability to monitor and log these applications access to their key vault. Understanding these identifiers is critical for that purpose and to help Adobe services to access the key.
+
 ## Enable the encryption key configuration on Experience Platform {#send-to-adobe}
 
 After installing the CMK app on [!DNL Azure], you can send your encryption key identifier to Adobe. Select **[!DNL Keys]** in the left navigation, followed by the name of the key you want to send.
 
 ![The Microsoft Azure dashboard with the Keys object and the key name highlighted.](../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
-Select the latest version of the key and its details page appears. From here you can optionally configure the permitted operations for the key. At a minimum, the key must be granted the **[!DNL Wrap Key]** and **[!DNL Unwrap Key]** permissions.
+Select the latest version of the key and its details page appears. From here you can optionally configure the permitted operations for the key. 
+
+>[!IMPORTANT]
+>
+>The minimum required operations to be permitted for the key are the **[!DNL Wrap Key]** and **[!DNL Unwrap Key]** permissions. You have the option to include [!DNL Encrypt], [!DNL Decrypt], [!DNL Sign], and [!DNL Verify] should you want.
 
 The **[!UICONTROL Key Identifier]** field displays the URI identifier for the key. Copy this URI value for use in the next step.
 
 ![The Microsoft Azure dashboard Key details with the Permitted operations and the copy key URL sections highlighted.](../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
-Once you have obtained the key vault URI, you ... {unknown}
+Once you have obtained the [!DNL Key vault URI], return to the [!UICONTROL Customer Managed Keys configuration] view and enter a descriptive **[!UICONTROL Configuration name]**. Next, add the [!DNL Key Identifier] taken from the Azure Key details page into the **[!UICONTROL Key vault key identifier]** and select **[!UICONTROL  Save]**. 
+
+![The [!UICONTROL Customer Managed Keys configuration] view with the [!UICONTROL Configuration name] and the [!UICONTROL Key vault key identifier] sections highlighted.](../../images/governance-privacy-security/customer-managed-keys/configuration-name.png)
+
+You are returned to the [!UICONTROL Encryption configurations dashboard]. The status of the [!UICONTROL Customer Managed Keys] configuration displays as [!UICONTROL Processing]. 
+
+![The [!UICONTROL Encryption configurations] dashboard with [!UICONTROL Processing] highlighted on the [!UICONTROL Customer Managed Keys] card.](../../images/governance-privacy-security/customer-managed-keys/processing.png)
 
 ## Verify the configuration's status {#check-status}
 
-<!-- unconfirmed -->
+Please allow a significant amount of time for processing. To check the status of the configuration, return to the [!UICONTROL Customer Managed Keys configuration] view and scroll down to the [!UICONTROL Configuration status]. The progress bar has advanced to step one of three and explains that the system is validating that Platform has access to the key and key vault.
 
-To check the status of the configuration request, refer to the progress bar at the bottom of the screen.
+There are four potential statuses of the CMK configuration. They are as follows:
+
+* Step 1: Validates that Platform has the ability to access the key and key vault.
+* Step 2: Adding the key vault and key name to all datastores across your organization.
+* Step 3: The key vault and key name have been added to the datastores.
+* `FAILED`: A problem occurred, primarily related to the key, key vault, or multi-tenant app setup.
+
