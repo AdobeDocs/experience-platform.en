@@ -8,18 +8,18 @@ This document covers the process for enabling the customer-managed keys (CMK) fe
 
 ## Prerequisites
 
+To view and visit the [!UICONTROL Encryption] section in Adobe Experience Platform, you must have created a role and assigned the [!UICONTROL Manage Customer Managed Key] permission to that role. It is best practice to create a CMK admin role and then provide the [!UICONTROL Manage Customer Managed Key] permission to that role. As there is only one action provided by this permission, any user assigned this role can act as the CMK admin.
+
+In the permissions workspace, make sure to grant your [!UICONTROL User] the CMK admin role before continuing with the guide. 
+
+For more information on assigning roles and permissions in Experience Platform, refer to the [configure permissions documentation](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+
 In order to enable CMK, your [!DNL Azure] Key Vault must be configured with the following settings:
 
 * [Enable purge protection](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Enable soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
 * [Configure access using [!DNL Azure] role-based access control](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 * [Configure an [!DNL Azure] Key Vault](./azure-key-vault-config.md)
-
-To view and visit the [!UICONTROL Encryption] section in Adobe Experience Platform, you must have created a role and assigned the [!UICONTROL Manage Customer Managed Key] permission to that role. It is best practice to create a CMK admin role and then provide the [!UICONTROL Manage Customer Managed Key] permission to that role. As there is only one action provided by this permission, any user assigned this role can act as the CMK admin.
-
-In the permissions workspace, make sure to grant your [!UICONTROL User] the CMK admin role before continuing with the guide. 
-
-For more information on assigning roles and permissions in Experience Platform, refer to the [configure permissions documentation](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
 ## Set up the CMK app {#register-app}
 
@@ -47,17 +47,17 @@ Copy and paste the [!UICONTROL Application authentication url] into a browser to
 
 >[!IMPORTANT]
 >
->If you have multiple Microsoft Azure subscriptions then your  potential for them to run into the same problem. In this situation you must swap the `common` section of the application authentication URL name for the CMK directory ID.<br>Copy the CMK directory ID from the Portal settings, Directories and Subscriptions page of the Microsoft Azure application<br>![The Microsoft Azure application Portal settings, Directories and Subscriptions page with the Directory ID highlighted.]()<br>Next, paste it into your browser address bar.<br>![A Google browser page with the 'common' section of the Application authentication url highlighted.]()
+>If you have multiple Microsoft Azure subscriptions then you could potentially connect your Platform instance to the wrong key vault. In this situation you must swap the `common` section of the application authentication URL name for the CMK directory ID.<br>Copy the CMK directory ID from the Portal settings, Directories and Subscriptions page of the Microsoft Azure application<br>![The Microsoft Azure application Portal settings, Directories and Subscriptions page with the Directory ID highlighted.]()<br>Next, paste it into your browser address bar.<br>![A Google browser page with the 'common' section of the Application authentication url highlighted.]()
 
 ### Assign the CMK app to a role {#assign-to-role}
 
 After completing the authentication process, navigate back to your [!DNL Azure] Key Vault and select **[!DNL Access control]** in the left navigation. From here, select **[!DNL Add]** followed by **[!DNL Add role assignment]**.
 
-![The Microsoft Azure dashboard with Add and Add role assignment highlighted.](../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
+![The Microsoft Azure dashboard with [!DNL Add] and [!DNL Add role assignment] highlighted.](../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 The next screen prompts you to choose a role for this assignment. Select **[!DNL Key Vault Crypto Service Encryption User]** before selecting **[!DNL Next]** to continue.
 
-![The Microsoft Azure dashboard with the Key Vault Crypto Service Encryption User highlighted.](../images/governance-privacy-security/customer-managed-keys/select-role.png)
+![The Microsoft Azure dashboard with the [!DNL Key Vault Crypto Service Encryption User] highlighted.](../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
 On the next screen, choose **[!DNL Select members]** to open a dialog in the right rail. Use the search bar to locate the service principal for the CMK application and select it from the list. When finished, select **[!DNL Save]**.
 
@@ -75,7 +75,7 @@ All the details necessary for verifying Azure tools are included the Platform UI
 
 After installing the CMK app on [!DNL Azure], you can send your encryption key identifier to Adobe. Select **[!DNL Keys]** in the left navigation, followed by the name of the key you want to send.
 
-![The Microsoft Azure dashboard with the Keys object and the key name highlighted.](../images/governance-privacy-security/customer-managed-keys/select-key.png)
+![The Microsoft Azure dashboard with the [!DNL Keys] object and the key name highlighted.](../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
 Select the latest version of the key and its details page appears. From here you can optionally configure the permitted operations for the key. 
 
@@ -85,7 +85,7 @@ Select the latest version of the key and its details page appears. From here you
 
 The **[!UICONTROL Key Identifier]** field displays the URI identifier for the key. Copy this URI value for use in the next step.
 
-![The Microsoft Azure dashboard Key details with the Permitted operations and the copy key URL sections highlighted.](../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
+![The Microsoft Azure dashboard Key details with the [!DNL Permitted operations] and the copy key URL sections highlighted.](../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
 Once you have obtained the [!DNL Key vault URI], return to the [!UICONTROL Customer Managed Keys configuration] view and enter a descriptive **[!UICONTROL Configuration name]**. Next, add the [!DNL Key Identifier] taken from the Azure Key details page into the **[!UICONTROL Key vault key identifier]** and select **[!UICONTROL  Save]**. 
 
