@@ -2,9 +2,7 @@
 title: Configure an Azure Key Vault
 description: Learn how to create a new enterprise account with Azure, or use an existing enterprise account and create the Key Vault.
 ---
-# Configure an Azure Key Vault
-
-## Configure an [!DNL Azure] Key Vault {#create-key-vault}
+# Configure an [!DNL Azure] Key Vault
 
 Customer-managed keys (CMK) only supports keys from a [!DNL Microsoft Azure] Key Vault. To get started, you must work with [!DNL Azure] to create a new enterprise account, or use an existing enterprise account  and follow the steps below to create the Key Vault.
 

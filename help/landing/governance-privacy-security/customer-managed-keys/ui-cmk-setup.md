@@ -47,7 +47,7 @@ Copy and paste the [!UICONTROL Application authentication url] into a browser to
 
 >[!IMPORTANT]
 >
->If you have multiple [!DNL Microsoft Azure] subscriptions, then you could potentially connect your Platform instance to the wrong key vault. In this situation, you must swap the `common` section of the application authentication URL name for the CMK directory ID.<br>Copy the CMK directory ID from the Portal settings, Directories, and Subscriptions page of the [!DNL Microsoft Azure] application<br>![The [!DNL Microsoft Azure] application Portal settings, Directories, and Subscriptions page with the Directory ID highlighted.]()<br>Next, paste it into your browser address bar.<br>![A Google browser page with the 'common' section of the Application authentication url highlighted.]()
+>If you have multiple [!DNL Microsoft Azure] subscriptions, then you could potentially connect your Platform instance to the wrong key vault. In this situation, you must swap the `common` section of the application authentication URL name for the CMK directory ID.<br>Copy the CMK directory ID from the Portal settings, Directories, and Subscriptions page of the [!DNL Microsoft Azure] application<br>![The [!DNL Microsoft Azure] application Portal settings, Directories and Subscriptions page with the Directory ID highlighted.](../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>Next, paste it into your browser address bar.<br>![A Google browser page with the 'common' section of the Application authentication url highlighted.]()
 
 ### Assign the CMK app to a role {#assign-to-role}
 
@@ -106,3 +106,6 @@ There are four potential statuses of the CMK configuration. They are as follows:
 * Step 3: The key vault and key name have been added to the datastores.
 * `FAILED`: A problem occurred, primarily related to the key, key vault, or multi-tenant app setup.
 
+## Next steps
+
+By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. 

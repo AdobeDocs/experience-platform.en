@@ -11,7 +11,7 @@ Data stored on Adobe Experience Platform is encrypted at rest using system-level
 >
 >Data in Adobe Experience Platform data lake and Profile Store are encrypted using CMK. These are regarded as your primary data stores.
 
-This document provides a high level overview of the process for enabling the customer-managed keys (CMK) feature in Platform.
+This document provides a high level overview of the process for enabling the customer-managed keys (CMK) feature in Platform, and the prerequisite information required to complete these steps.
 
 ## Prerequisites
 
@@ -21,7 +21,9 @@ In order to enable CMK, your [!DNL Azure] Key Vault must be configured with the 
 * [Enable soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
 * [Configure access using [!DNL Azure] role-based access control](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 
-## Process summary
+Please read the linked documentation to better understand the process.
+
+## Process summary {#process-summary}
 
 CMK is included in the Healthcare Shield and the Privacy and Security Shield offerings from Adobe. After your organization purchases a license for one of these offerings, you can begin a one-time process for setting up the feature.
 
@@ -31,10 +33,10 @@ CMK is included in the Healthcare Shield and the Privacy and Security Shield off
 
 The process is as follows:
 
-1. [Configure an [!DNL Azure] Key Vault](#create-key-vault) based on your organization's policies, then [generate an encryption key](#generate-a-key) that will ultimately be shared with Adobe.
-1. Use API calls to [set up the CMK app](#register-app) with your [!DNL Azure] tenant. 
-1. Use API calls to [send your encryption key ID to Adobe](#send-to-adobe) and start the enablement process for the feature.
-1. [Check the status of the configuration](#check-status) to verify whether CMK has been enabled.
+1. [Configure an [!DNL Azure] Key Vault](./azure-key-vault-config.md) based on your organization's policies, then [generate an encryption key](./azure-key-vault-config.md#generate-a-key) that will ultimately be shared with Adobe.
+1. Set up the CMK app with your [!DNL Azure] tenant through either [API calls](./api-cmk-setup.md#register-app) or the [UI](./ui-cmk-setup.md#register-app). 
+1. Send your encryption key ID to Adobe and start the enablement process for the feature either [in the UI](./ui-cmk-setup.md#send-to-adobe) or with an [API call](./api-cmk-setup.md#send-to-adobe).
+1. Check the status of the configuration to verify whether CMK has been enabled either [in the UI](./ui-cmk-setup.md#check-status) or with an [API call](./api-cmk-setup.md#check-status).
 
 Once the setup process is complete, all data onboarded into Platform across all sandboxes will be encrypted using your [!DNL Azure] key setup. To use CMK, you will leverage [!DNL Microsoft Azure] functionality that may be part of their [public preview program](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
@@ -53,6 +55,9 @@ After removing key access or disabling/deleting the key from your [!DNL Azure] k
 >There are two use-case-specific exceptions to the seven day dataset expiration on non-primary (cached/transient) data. See their respective documentation for more information on these features.<ul><li>[Adobe Journey Optimizer URL Shortener](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html#message-preset-sms)</li><li>[Edge Projections](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
 
 ## Next steps
+
+To begin the process, start by [configuring an [!DNL Azure] Key Vault]()  [generate an encryption key](#generate-a-key) that will ultimately be shared with Adobe.
+ 
 
 By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. 
 

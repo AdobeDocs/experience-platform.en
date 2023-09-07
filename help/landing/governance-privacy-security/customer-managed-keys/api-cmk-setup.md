@@ -201,4 +201,6 @@ The `status` attribute can have one of four values with the following meanings:
 1. `COMPLETED`: The key vault and key name have been added to the datastores.
 1. `FAILED`: A problem occurred, primarily related to the key, key vault, or multi-tenant app setup.
 
+## Next steps
 
+By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. 
