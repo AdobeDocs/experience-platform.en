@@ -90,7 +90,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL URL]**: The URL found in the JSON Event that triggers your workflow in Qualtrics. See below screenshot for an example.
+*  **[!UICONTROL URL]**: The URL found in the [JSON Event](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About) that triggers your [workflow in Qualtrics](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About). See below screenshot for an example.
 
 ![URL](/help/destinations/assets/catalog/streaming/take-action-in-qualtrics/json-event-url.png)
 
