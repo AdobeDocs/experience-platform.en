@@ -56,8 +56,4 @@ After removing key access or disabling/deleting the key from your [!DNL Azure] k
 
 ## Next steps
 
-To begin the process, start by [configuring an [!DNL Azure] Key Vault]()  [generate an encryption key](#generate-a-key) that will ultimately be shared with Adobe.
- 
-
-By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. 
-
+To begin the process, start by [configuring an [!DNL Azure] Key Vault](./azure-key-vault-config.md) and [generate an encryption key](./azure-key-vault-config.md#generate-a-key) to share with Adobe.
