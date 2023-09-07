@@ -1,11 +1,11 @@
 ---
-keywords: streaming, qualtrics destination
+keywords: streaming, Qualtrics destination
 title: Take action in Qualtrics
 description: Synchronize experience and operational customer data to unlock personalization at scale. Use the aggregation of multiple sources of operational data in Adobe Experience platform as an input in XiD to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers.
 exl-id: --
 ---
 
-# Take action in Qualtrics {#your-destination}
+# Take action in Qualtrics
 
 ## Overview {#overview}
 
