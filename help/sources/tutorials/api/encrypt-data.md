@@ -361,16 +361,6 @@ In this scenario, the flow run will fail and will return an error message indica
 
 >[!ENDSHADEBOX]
 
-* Sources
-  * {your_source}
-    * Artifacts
-      * {your_source}-category.txt
-      * {your_source}-description.txt
-      * {your_source}-icon.svg
-      * {your_source}-label.txt
-      * {your_source}-connectionSpec.json
-
-
 ## Next steps
 
 By following this tutorial, you have created an encryption key pair for your cloud storage data, and a dataflow to ingested your encrypted data using the [!DNL Flow Service API]. For status updates on your dataflow's completeness, errors, and metrics, read the guide on [monitoring your dataflow using the [!DNL Flow Service] API](./monitor.md).
