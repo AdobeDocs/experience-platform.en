@@ -1,14 +1,13 @@
 ---
 title: LiveRamp - Distribution connection
 description: Learn how to use the LiveRamp - Distribution connector to activate audiences previously onboarded into LiveRamp, to other advertising destinations.
-last-substantial-update: 2023-07-26
 hide: yes
 hidefromtoc: yes
 ---
 
 # [!DNL LiveRamp - Distribution] connection {#liveramp-onboarding}
 
-The [!DNL LiveRamp - Distribution] enables you to activate audiences from Experience Platform to premium publishers across mobile, web, display, and connected TV mediums.
+The [!DNL LiveRamp - Distribution] connection enables you to activate audiences from Experience Platform to premium publishers across mobile, web, display, and connected TV mediums.
 
 >[!IMPORTANT]
 >
@@ -66,29 +65,34 @@ After you have onboarded your audiences to LiveRamp, continue the activation wor
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-### Authenticate to destination {#authenticate}
+### Authenticate to LiveRamp {#authenticate}
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
+![Platform UI image showing the destination connection screen.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
+
 * **[!UICONTROL Token URL]**: Your LiveRamp token URL.
-* **[!UICONTROL LiveRamp organization ID]**: The organization ID assigned to your LiveRamp account.
+* **[!UICONTROL LiveRamp Organization ID]**: The organization ID of your LiveRamp account.
 * **[!UICONTROL Username]**: Your LiveRamp account username.
 * **[!UICONTROL Password]**: Your LiveRamp account password.
+
+### Configure destination details {#destination-details}
+
+After you have successfully connected to your LiveRamp account, enter the required information to connect to the destination that you want to activate audiences to.
+
+![Platform UI image showing the destination details screen.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)
+
+* **[!UICONTROL Name]**: Fill in the preferred name for your destination connection.
+* **[!UICONTROL Description]**: Enter a description for your destination. Use a description which will help you easily identify the purpose of this destination.
+* **[!UICONTROL Destination]**: Use the drop-down menu to select the destination you want to activate audiences to. The destination you select here directly affects what you see in the [destination-specific settings](#destination-settings) screen.
+* **[!UICONTROL Integration]**: Select the integration account that you want to use for your destination.
+* **[!UICONTROL Identifier]**: Select the identifiers supported by your destination. Currently, all the destinations have their supported identifiers prefilled in the drop-down menu.
 
 ## Destination-specific settings {#destination-settings}
 
 Each of the destinations [supported](#supported-destinations) by [!DNL LiveRamp - Onboarding] requires you to fill in specific configuration options.
 
 See the sections below for detailed guidance on how to configure each destination.
-
-### DESTINATION NAME {#destination-name}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_liveramp_distribution_<DESTINATION_NAME>_<FIELD_NAME>"
->title="POPOVER TITLE. VISIBLE IN THE UI. USE THE FIELD NAME."
->abstract="ENTER FIELD DESCRIPTION"
-
-To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
 ### [!DNL 4C Insights] {#insights}
 
@@ -105,8 +109,6 @@ To configure details for the destination, fill in the required and optional fiel
 >id="platform_destinations_liveramp_distribution_acast_client"
 >title="Client name"
 >abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
-
-To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
 ### [!DNL Amobee] {#amobee}
 
@@ -144,21 +146,13 @@ To configure details for the destination, fill in the required and optional fiel
 >title="Your email address"
 >abstract="Enter an email address tied to an individual. This email address serves as a signature to the advertiser data terms agreement. This email address will also be used to contact you if needed."
 
-To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the customer data fields for the Disney destination.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-disney-fields.png)
 
 * **[!UICONTROL Advertiser data destination terms agreement]**: Type in `I AGREE` to confirm the acknowledgement and agreement to the Disney advertiser data terms.
-* **[!UICONTROL Distribution account]**: Select your Disney distribution account from the list.
+* **[!UICONTROL Client name]**: Enter your company name as you want it to be shown to the destination partner.
 * **[!UICONTROL Email address]**: Enter an email address tied to an individual. This email address serves as a signature to the advertiser data terms agreement.
-
-![Platform UI image showing the destination connection screen]()
-
-**Supported identifiers**
-
-When configuring your destination, select the identifiers you want to use in the activation process, from the list of supported identifiers below.
-
-This destination supports the activation of audiences based on the following identifiers:
-
-* [!DNL Ramp ID]
 
 ### [!DNL iHeartMedia] {#iheartmedia}
 
@@ -221,20 +215,12 @@ This destination supports the activation of audiences based on the following ide
 >title="Roku account representative email address"
 >abstract="Enter the email address of your Roku account representative. This address is used to send taxonomy updates. To enter multiple addresses, separate them by commas."
 
-To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the supported identifiers for the Roku destination.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-roku-fields.png)
 
 * **[!UICONTROL Roku account email address]**: Enter the email address tied to your Roku account.
 * **[!UICONTROL Roku account representative email address]**: Enter the email address of your Roku account representative. To enter multiple addresses, separate them by commas.
-
-![Platform UI image showing the destination connection screen]()
-
-**Supported identifiers**
-
-When configuring your destination, select the identifiers you want to use in the activation process, from the list of supported identifiers below.
-
-This destination supports the activation of audiences based on the following identifiers:
-
-* [!DNL Platform ID]
 
 ### [!DNL Spotify] {#spotify}
 
@@ -285,7 +271,7 @@ When you are finished providing details for your destination connection, select 
 
 The [!DNL LiveRamp - Distribution] connection activates audiences which have already been onboarded to your LiveRamp account through the [LiveRamp - Onboarding](liveramp-onboarding.md) connection.
 
-To successfully activate your audiences, in this step, you must select the same audiences that you have previously onboarded to LiveRamp.
+To successfully activate your audiences, in this step, you must select the **same audiences** that you have previously onboarded to LiveRamp.
 
 >[!IMPORTANT]
 >
