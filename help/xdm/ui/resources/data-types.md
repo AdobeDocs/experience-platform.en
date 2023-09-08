@@ -6,11 +6,11 @@ type: Tutorial
 description: Learn how to create and edit data types in the Experience Platform user interface.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 ---
-# Create and edit data types using the UI
+# Create and edit data types using the UI {#ui-create-and-edit}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_datatype_filter"
->title="Standard or Custom data type filter"
+>title="Standard or custom data type filter"
 >abstract="The list of available data types is pre-filtered based on how they were created. Select the radio button to choose between the Standard and Custom options. The Standard option shows entities created by Adobe and the Custom option displays entities created within your organization. See the documentation to learn more about creating and editing data types."
 
 In Experience Data Model (XDM), data types are reusable fields that contain multiple sub-fields. While similar to schema field groups in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas field groups can only be added at the root level.
