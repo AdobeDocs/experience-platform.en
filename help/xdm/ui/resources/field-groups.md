@@ -8,7 +8,7 @@ exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
 # Create and edit schema field groups in the UI
 
 >[!CONTEXTUALHELP]
->id="platform_schemas_fieldgroup_create"
+>id="platform_schemas_fieldgroup_filter"
 >title="Standard or Custom field group filter"
 >abstract="The list of available field groups are pre-filtered based on how they were created. Select the radio button to choose between the Standard and Custom options. The Standard option shows entities created by Adobe and the Custom option displays entities created within your organization. See the documentation to learn more about creating and editing field groups."
 
