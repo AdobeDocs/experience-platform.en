@@ -53,4 +53,4 @@ Computed attributes are evaluated independently of the segmentation schedule. Th
 
 ## How do computed attributes interact with audiences evaluated using streaming segmentation?
 
-If an streaming-segmentation-evaluated audience is using a computed attribute, it will take the **latest value** of the computed attribute while the audience is being evaluated. For example, if the audience is looking for purchase events, the audience will refer to the last evaluated computed attribute value when the purchase event comes.
+If a streaming-segmentation-evaluated audience is using a computed attribute, it will take the **latest value** of the computed attribute while the audience is being evaluated. For example, if the audience is looking for purchase events, the audience will refer to the last evaluated computed attribute value when the purchase event comes.
