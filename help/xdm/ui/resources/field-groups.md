@@ -7,6 +7,11 @@ exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
 ---
 # Create and edit schema field groups in the UI
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup_create"
+>title="Standard or Custom field group filter"
+>abstract="The list of available field groups are pre-filtered based on how they were created. Select the radio button to choose between the Standard and Custom options. The Standard option shows entities created by Adobe and the Custom option displays entities created within your organization. See the documentation to learn more about creating and editing field groups."
+
 In Experience Data Model (XDM), schema field groups are reusable components that define one or more fields that implement certain functions such as personal details, hotel preferences, or address. Field groups are intended to be included as part of a schema that implements a compatible class. 
 
 A field group defines which class(es) it is compatible with, based on the behavior of the data that the field group represents (record or time series). This means that not all field groups are available for use with all classes.
