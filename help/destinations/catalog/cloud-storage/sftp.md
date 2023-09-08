@@ -107,7 +107,12 @@ After establishing the authentication connection to the SFTP location, provide t
 * **[!UICONTROL Folder path]**: enter the path to the folder in your SFTP location where the files will be exported.
 * **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files.
-* **[!UICONTROL Include manifest file]**: toggle this option on if you'd like the exports to include a manifest JSON file that contains information abut the export location, export size, and more.
+* **[!UICONTROL Include manifest file]**: toggle this option on if you'd like the exports to include a manifest JSON file that contains information about the export location, export size, and more. The manifest is named using the format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. View a [sample manifest file](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). The manifest file includes the following fields:
+  * `flowRunId`: The [dataflow run](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) which generated the exported file. 
+  * `scheduledTime`: The time in UTC when the file was exported. 
+  * `exportResults.sinkPath`: The path in your storage location where the exported file is deposited. 
+  * `exportResults.name`: The name of the exported file.
+  * `size`: The size of the exported file, in bytes.
 
 ## Activate audiences to this destination {#activate}
 
