@@ -10,7 +10,7 @@ exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class_filter"
 >title="Standard or Custom class filter"
->abstract="The list of available classes are pre-filtered based on how they were created. Select the radio button to choose between the Standard and Custom options. The Standard option shows entities created by Adobe and includes both XDM Individual Profile and XDM Experience Event classes. The Custom option displays entities created within your organization. See the documentation to learn more about creating and editing classes."
+>abstract="The list of available classes is pre-filtered based on how they were created. Select the radio button to choose between the Standard and Custom options. The Standard option shows entities created by Adobe and includes both XDM Individual Profile and XDM Experience Event classes. The Custom option displays entities created within your organization. See the documentation to learn more about creating and editing classes."
 
 In Adobe Experience Platform, a schema's class defines the behavioral aspects of the data that the schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged.
 
