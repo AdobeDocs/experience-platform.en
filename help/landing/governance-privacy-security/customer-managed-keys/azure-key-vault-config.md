@@ -4,7 +4,7 @@ description: Learn how to create a new enterprise account with Azure, or use an 
 ---
 # Configure an [!DNL Azure] Key Vault
 
-Customer-managed keys (CMK) only supports keys from a [!DNL Microsoft Azure] Key Vault. To get started, you must work with [!DNL Azure] to create a new enterprise account, or use an existing enterprise account  and follow the steps below to create the Key Vault.
+Customer-managed keys (CMK) only supports keys from a [!DNL Microsoft Azure] Key Vault. To get started, you must work with [!DNL Azure] to create a new enterprise account, or use an existing enterprise account and follow the steps below to create the Key Vault.
 
 >[!IMPORTANT]
 >
@@ -12,7 +12,7 @@ Customer-managed keys (CMK) only supports keys from a [!DNL Microsoft Azure] Key
 
 >[!NOTE]
 >
->The documentation below only covers the basic steps to create the key vault. Outside of this guidance, you should configure the key vault as per your organization's policies.
+>The documentation below only covers the basic steps to create the Key Vault. Outside of this guidance, you should configure the Key Vault as per your organization's policies.
 
 Log in to the [!DNL Azure] portal and use the search bar to locate **[!DNL Key vaults]** under the list of services.
 
@@ -22,31 +22,31 @@ The **[!DNL Key vaults]** page appears after selecting the service. From here, s
 
 ![The [!DNL Key vaults] dashboard in [!DNL Microsoft Azure] with [!DNL Create] highlighted.](../images/governance-privacy-security/customer-managed-keys/create-key-vault.png)
 
-Using the provided form, fill in the basic details for the key vault, including a name and an assigned resource group.
+Using the provided form, fill in the basic details for the Key Vault, including a name and an assigned resource group.
 
 >[!WARNING]
 >
->While most options can be left as their default values, **make sure that you enable the soft-delete and purge protection options**. If you do not turn on these features, you could risk losing access to your data if the key vault is deleted.
+>While most options can be left as their default values, **make sure that you enable the soft-delete and purge protection options**. If you do not turn on these features, you could risk losing access to your data if the Key Vault is deleted.
 >
->![The [!DNL Microsoft Azure] [!DNL Create a key vault] workflow with soft delete and purge protection highlighted.](../images/governance-privacy-security/customer-managed-keys/basic-config.png)
+>![The [!DNL Microsoft Azure] [!DNL Create a Key Vault] workflow with soft delete and purge protection highlighted.](../images/governance-privacy-security/customer-managed-keys/basic-config.png)
 
-From here, continue going through the key vault creation workflow and configure the different options according to your organization's policies.
+From here, continue going through the Key Vault creation workflow and configure the different options according to your organization's policies.
 
-Once you arrive at the **[!DNL Review + create]** step, you can review the details of the key vault while it goes through validation. Once validation passes, select **[!DNL Create]** to complete the process.
+Once you arrive at the **[!DNL Review + create]** step, you can review the details of the Key Vault while it goes through validation. Once validation passes, select **[!DNL Create]** to complete the process.
 
 ![The [!DNL Microsoft Azure Key vaults Review and create] page with [!DNL Create] highlighted.](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
 ## Configure networking options {#configure-network-options}
 
-If your key vault is configured to restrict public access to certain virtual networks or disable public access entirely, you must grant [!DNL Microsoft] a firewall exception.
+If your Key Vault is configured to restrict public access to certain virtual networks or disable public access entirely, you must grant [!DNL Microsoft] a firewall exception.
 
 Select **[!DNL Networking]** in the left navigation. Under **[!DNL Firewalls and virtual networks]**, select the checkbox **[!DNL Allow trusted Microsoft services to bypass this firewall]**, then select **[!DNL Apply]**.
 
-![The [!DNL Networking] tab of [!DNL Microsoft Azure] with [!DNL  Networking] and [!DNL Allow trusted Microsoft surfaces to bypass this firewall] exception highlighted.](../images/governance-privacy-security/customer-managed-keys/networking.png)
+![The [!DNL Networking] tab of [!DNL Microsoft Azure] with [!DNL Networking] and [!DNL Allow trusted Microsoft surfaces to bypass this firewall] exception highlighted.](../images/governance-privacy-security/customer-managed-keys/networking.png)
 
 ### Generate a key {#generate-a-key}
 
-Once you have created a key vault, you can generate a new key. Navigate to the **[!DNL Keys]** tab and select **[!DNL Generate/Import]**.
+Once you have created a Key Vault, you can generate a new key. Navigate to the **[!DNL Keys]** tab and select **[!DNL Generate/Import]**.
 
 ![The [!DNL Keys] tab of [!DNL Azure] with [!DNL Generate import] highlighted.](../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
