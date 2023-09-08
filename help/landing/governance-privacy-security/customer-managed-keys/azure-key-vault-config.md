@@ -26,7 +26,7 @@ Using the provided form, fill in the basic details for the key vault, including 
 
 >[!WARNING]
 >
->While most options can be left as their default values, **make sure that you enable the soft-delete and purge protection options**. If you do not turn these features on, you could risk losing access to your data if the key vault is deleted.
+>While most options can be left as their default values, **make sure that you enable the soft-delete and purge protection options**. If you do not turn on these features, you could risk losing access to your data if the key vault is deleted.
 >
 >![The [!DNL Microsoft Azure] [!DNL Create a key vault] workflow with soft delete and purge protection highlighted.](../images/governance-privacy-security/customer-managed-keys/basic-config.png)
 
@@ -54,7 +54,7 @@ Use the provided form to provide a name for the key, and select **RSA** for the 
 
 >[!NOTE]
 >
->Remember the name you provide for the key, as it will be used in later step when [sending the key to Adobe](#send-to-adobe).
+>Remember the name that you provide for the key, as it is required to send the key to Adobe.
 
 Use the remaining controls to configure the key you want to generate or import as desired. When finished, select **[!DNL Create]**.
 
@@ -66,4 +66,4 @@ The configured key appears in the list of keys for the vault.
 
 ## Next steps
 
-To continue the one-time process for setting up the customer managed keys feature, continue with either the [API](./api-cmk-setup) or [UI](./ui-cmk-setup) customer-managed keys setup guides.
+To continue the one-time process for setting up the customer-managed keys feature, continue with either the [API](./api-cmk-setup) or [UI](./ui-cmk-setup) customer-managed keys setup guides.
