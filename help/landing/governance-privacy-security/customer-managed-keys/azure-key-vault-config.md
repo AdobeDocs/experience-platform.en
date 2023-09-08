@@ -34,7 +34,7 @@ From here, continue going through the key vault creation workflow and configure 
 
 Once you arrive at the **[!DNL Review + create]** step, you can review the details of the key vault while it goes through validation. Once validation passes, select **[!DNL Create]** to complete the process.
 
-![The [!DNL Microsoft Azure] [!DNL Key vaults] [!DNL Review and create] page with [!DNL Create] highlighted.](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
+![The [!DNL Microsoft Azure Key vaults Review and create] page with [!DNL Create] highlighted.](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
 ## Configure networking options {#configure-network-options}
 
