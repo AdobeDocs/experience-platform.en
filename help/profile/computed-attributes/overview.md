@@ -37,7 +37,7 @@ Computed attributes let you define event aggregates in a self-serve manner by le
 | COUNT | A function that **counts** the number of events that have occurred for the given rule. | N/A | Count of purchases in the last 3 months |
 | MIN | A function that finds the **minimum** value for the qualified events. | Integers, Numbers, Longs, Timestamps | First purchase data in the last 7 days<br/>Minimum order amount in the last 4 weeks |
 | MAX | A function that finds the **maximum** value for the qualified events. | Integers, Numbers, Longs, Timestamps | Last purchase data in the last 7 days<br/>Maximum order amount in the last 4 weeks |
-| MOST_RECENT | A function the finds the specified attribute value from the latest qualified event. | All primitive values, Arrays of primitive values | Latest product viewed in the last 7 days |
+| MOST_RECENT | A function the finds the specified attribute value from the latest qualified event. This function gives **both** the value as well as the timestamp of the attribute. | All primitive values, Arrays of primitive values | Latest product viewed in the last 7 days |
 
 ### Lookback periods
 
@@ -58,21 +58,7 @@ For example, if your computed attribute has a lookback period of the last 7 days
 
 >[!NOTE]
 >
->Both weeks and months are considered as **calendar weeks** and **calendar months** when used in event lookbacks.
-
-**Fast refresh**
-
->[!IMPORTANT]
->
->A maximum of **five** attributes, per sandbox, can have fast refresh enabled. 
-
-Fast refresh allows you to keep your attributes up-to-date. Enabling this option lets you refresh your computed attributes on a daily basis, even for longer lookback periods. This allows you to react in near real-time to user activities. This value is only applicable for computed attributes with a lookback period greater than a weekly basis. 
-
->[!NOTE]
->
->Enabling fast refresh will vary your event lookback durations, since the lookback period rolls on a weekly or monthly basis respectively.
->
->For example, if you create a computed attribute with a two week lookback period with fast refresh enabled, this means that the initial lookback period will be two weeks. However, with each daily refresh, the lookback period will include events from the additional day. This addition of days will continue until the next calendar week starts, in which the lookback window will roll over and return to two weeks.
+>Both weeks and months are considered as **calendar weeks** and **calendar months** when used in event lookbacks. The calendar week starts on the **Sunday** and ends on the **Saturday** of the week.
 
 ## Next steps
 
