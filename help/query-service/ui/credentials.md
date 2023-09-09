@@ -11,11 +11,7 @@ Adobe Experience Platform Query Service allows you to connect with external clie
 
 >[!NOTE]
 >
->The credentials panel is not automatically available to all users. Ss the credentials panel allows for a connection to a third-party open client, it can present a security risk in certain situations. Please contact your Adobe account team to request the [!UICONTROL Credentials] tab to be included in the Query Service workspace should you require it. If requested, this change is organization wide and is conducted by Adobe's engineering team. It is not a setting controlled by users.
-
->[!NOTE]
->
->You can contact your Adobe account team to request the removal of the [!UICONTROL Credentials] tab from the Query Service workspace. For users in the Financial Service Industry, this removal of the [!UICONTROL Credentials] tab can eliminate the risk of financial data leak as it blocks access to queries via third-party open-source clients.<br>If requested, this change is organization wide and is conducted by Adobe's engineering team. It is not a setting controlled by users.
+>The credentials panel is not automatically available to all users. As the credentials panel allows for a connection to a third-party open client, it can present a security risk in certain situations. Please contact your Adobe account team to request the [!UICONTROL Credentials] tab to be included in the Query Service workspace should you require it. If requested, this change is organization wide and is conducted by Adobe's engineering team. It is not a setting controlled by users.
 
 ## Expiring credentials {#expiring-credentials} 
 
