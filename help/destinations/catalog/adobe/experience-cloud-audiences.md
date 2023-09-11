@@ -1,7 +1,7 @@
 ---
 title: Experience Cloud Audiences
 description: Learn how to share audiences from Real-Time Customer Data Platform to various Experience Cloud solutions.
-last-substantial-update: 2023-01-25
+last-substantial-update: 2023-09-28
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
 ---
 
@@ -101,15 +101,12 @@ The profiles that are exported to the [!UICONTROL Experience Cloud Audiences] de
 
 ## Supported audiences {#supported-audiences}
 
-This section describes all the audiences that you can export to this destination.
+This section describes which type of audiences you can export to this destination.
 
-This destination supports the activation of all audiences generated through the Real-Time CDP [Segmentation Service](../../../segmentation/home.md).
-
-*Additionally*, this destination also supports the activation of the audiences described in the table below.
-
-| Audience type | Description | 
----------|----------|
-| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Real-Time CDP from CSV files. |
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
