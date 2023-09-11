@@ -65,7 +65,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Advertiser ID]**: Your Pinterest advertiser ID.
+*  **[!UICONTROL Ad Account ID]**: Your Pinterest advertiser ID.
 
 ### Enable alerts {#enable-alerts}
 
@@ -88,3 +88,21 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Additional resources {#additional-resources}
 
 Please refer to the [Pinterest Help Center page](https://help.pinterest.com/en/business/article/audience-targeting) for additional information.
+
++++ View changelog
+
+ 
+
+|Release month|Update type|Description|
+
+|---|---|---|
+
+|September 2023|Functionality and documentation update|<<Upgrade destination endpoints to the Pinterest v5>>.|
+
+ 
+
+{style="table-layout:auto"}
+
+ 
+
++++
