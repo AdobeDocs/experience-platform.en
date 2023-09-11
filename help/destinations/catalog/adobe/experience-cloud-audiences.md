@@ -136,13 +136,13 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, select **[!UICONTROL Set up]** in the destination card view in the catalog and select **[!UICONTROL Connect to destination]**.
 
-![View of the Connect to destination option for the Experience Cloud Audiences destination.](/help/destinations/assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-authenticate-to-destination.png)
+![View of the Connect to destination option for the Experience Cloud Audiences destination.](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-authenticate-to-destination.png)
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Configure new destination screen showing the required and optional settings to connect to the Experience Cloud Audiences destination.](/help/destinations/assets/catalog/adobe/experience-cloud-audiences/connect-to-destination.png)
+![Configure new destination screen showing the required and optional settings to connect to the Experience Cloud Audiences destination.](../..//assets/catalog/adobe/experience-cloud-audiences/connect-to-destination.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
