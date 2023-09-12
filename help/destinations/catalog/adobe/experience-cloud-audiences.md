@@ -1,6 +1,6 @@
 ---
 title: Experience Cloud Audiences
-description: Learn how to share audiences from Real-Time Customer Data Platform to various Experience Cloud solutions.
+description: Learn how to share audiences from Real-Time Customer Data Platform to various Experience Cloud apps.
 last-substantial-update: 2023-09-28
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
 ---
@@ -11,7 +11,7 @@ exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
 >
 > This destination is available to [Adobe Real-Time Customer Data Platform Prime and Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
-This destination allows you to share audiences from Real-Time CDP to various Experience Cloud solutions, like Audience Manager, Analytics, Advertising Cloud, Campaign, Target, or Marketo.
+Use the [!UICONTROL Experience Cloud Audiences] destination to share audiences from Real-Time CDP to various Experience Cloud solutions, like Audience Manager, Analytics, Advertising Cloud, Campaign, Target, or Marketo.
 
 >[!IMPORTANT]
 >
