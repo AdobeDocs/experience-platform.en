@@ -10,7 +10,7 @@ exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 
 Use the [!DNL Microsoft Bing] destination to send profile data to the entire [!DNL Microsoft Advertising Network], including [!DNL Display Advertising], [!DNL Search], and [!DNL Native]. 
 
-The [!DNL Microsoft Bing] destination creates what *[!DNL Custom Audiences]* in Microsoft. Those are available both in the [!DNL Microsoft Search Network] and [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]) as listed in the [Microsoft Advertising documentation](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
+The [!DNL Microsoft Bing] destination creates *[!DNL Custom Audiences]* in Microsoft. Those are available both in the [!DNL Microsoft Search Network] and [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]) as listed in the [Microsoft Advertising documentation](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 To send profile data to [!DNL Microsoft Bing], you must first connect to the destination.
 
