@@ -332,7 +332,7 @@ A successful response returns the ID (`id`) of the newly created dataflow for yo
 
 **Restrictions on recurring ingestion**
 
-Encrypted data ingestion does not support ingestion of recurring or multi-level folders in sources. All encrypted files must be contained within a single folder. Wildcards with multiple folders in a single source path are also not supported.
+Encrypted data ingestion does not support ingestion of recurring or multi-level folders in sources. All encrypted files must be contained in a single folder. Wildcards with multiple folders in a single source path are also not supported.
 
 The following is an example of a supported folder structure, where the source path is `/ACME-customers/*.csv.gpg`.
 
@@ -347,7 +347,7 @@ In this scenario, the files in bold are ingested into Experience Platform.
 
 The following is an example of an unsupported folder structure where the source path is `/ACME-customers/*`.
 
-In this scenario, the flow run will fail and will return an error message indicating that data cannot be copied from the source.
+In this scenario, the flow run will fail and return an error message indicating that data cannot be copied from the source.
 
 * ACME-customers
   * File1.csv.gpg
