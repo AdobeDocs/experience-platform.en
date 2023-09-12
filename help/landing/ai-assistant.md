@@ -9,7 +9,7 @@ hidefromtoc: true
 
 >[!NOTE]
 >
->The AI Assistant for Adobe Experience Platform is currently in Alpha. The feature and documentation are subject to change.
+>AI Assistant for Adobe Experience Platform is currently in Alpha. The feature and documentation are subject to change.
 
 The AI Assistant for Adobe Experience Platform is a UI feature that you can use to navigate and understand Experience Platform and Real-Time Customer Data Platform concepts, and usage information about your objects.
 
