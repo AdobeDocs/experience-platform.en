@@ -87,7 +87,7 @@ Once you have configured your CMP to listen for consent-change events on your we
 
 If customer consent preferences are required in your mobile application, you can integrate the Experience Platform Mobile SDK to retrieve and update consent settings, sending them to Platform whenever the Consent API is called.
 
-See the Mobile SDK documentation for [configuring the Consent mobile extension](https://aep-sdks.gitbook.io/docs/foundation-extensions/consent-for-edge-network) and [using the Consent API](https://aep-sdks.gitbook.io/docs/foundation-extensions/consent-for-edge-network/api-reference). For more details on how to handle privacy concerns using the Mobile SDK, please refer to the section [Privacy and GDPR](https://aep-sdks.gitbook.io/docs/resources/privacy-and-gdpr).
+See the Mobile SDK documentation for [configuring the Consent mobile extension](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) and [using the Consent API](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). For more details on how to handle privacy concerns using the Mobile SDK, please refer to the section [Privacy and GDPR](https://developer.adobe.com/client-sdks/documentation/resources/privacy-and-gdpr/).
 
 ### Ingest XDM-compliant consent data directly {#batch}
 
