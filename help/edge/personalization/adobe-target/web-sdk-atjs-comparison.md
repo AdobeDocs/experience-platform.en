@@ -1232,7 +1232,7 @@ Note: All these debugging features are available with enhanced capabilities in [
 
 You have multiple debugging capabilities when using Web SDK:
 
-* Using [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* Using [Assurance](../../../assurance/home.md)
 * [Web SDK debug enabled](../../../edge/fundamentals/debugging.md)
 * Use [Web SDK monitoring hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Use [Adobe Experience Platform Debugger](../../../debugger/home.md)
