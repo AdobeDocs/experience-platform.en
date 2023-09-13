@@ -109,7 +109,7 @@ IMAGE
 
 The **Review** page appears. On this page, you can review the details of your audience activation. If you're satisfied with the provided details, select **Finish**.
 
-## Other uses cases
+## Other use cases
 
 You can explore further use cases enabled through partner data support in Real-Time CDP:
 
