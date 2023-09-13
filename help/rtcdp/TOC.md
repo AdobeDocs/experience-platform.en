@@ -63,6 +63,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
     * [Intelligently re-engage your customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
   * Partner data use cases {#partner-data}
     * [Engage and acquire new customers through prospecting support](/help/rtcdp/partner-data/prospecting.md)  
+    * [Offsite retargeting of unknown users](./partner-data/offsite-retargeting.md)
     * [Supplement first-party profiles with partner-provided attributes](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
     * [Use partner-aided visitor recognition to personalize onsite experiences](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Experience Platform Release notes](https://www.adobe.com/go/platform-release-notes-en)
