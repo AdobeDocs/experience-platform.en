@@ -1,8 +1,6 @@
 ---
-title: LiveRamp - Distribution connection test
-description: Learn how to use the LiveRamp - Distribution connector to activate audiences previously onboarded into LiveRamp, to other advertising destinations.
-hide: yes
-hidefromtoc: yes
+title: LiveRamp - Distribution Connection
+description: Learn how to use the LiveRamp - Distribution connector to orchestration of audiences previously onboarded into LiveRamp into downstream advertising destinations.
 ---
 
 # [!DNL LiveRamp - Distribution] connection {#liveramp-onboarding}
@@ -11,7 +9,7 @@ The [!DNL LiveRamp - Distribution] connection enables you to activate audiences 
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by LiveRamp. For any inquiries or update requests, please contact LiveRamp directly [here](mailto:example@email.com).
+>This destination connector and documentation page are created and maintained by LiveRamp. For any inquiries or update requests, please contact LiveRamp directly [here](mailto:adobertcdp@liveramp.com).
 
 ## Supported destinations {#supported-destinations}
 
@@ -19,7 +17,7 @@ The [!DNL LiveRamp - Distribution] connection enables you to activate audiences 
 
 * [!DNL 4C Insights]
 * [!DNL Acast]
-* [!DNL Amobee]
+* [!DNL Nexxen (fka Amobee]
 * [!DNL Ampersand.tv]
 * [!DNL Captify]
 * [!DNL Cardlytics]
@@ -44,13 +42,13 @@ To help you better understand how and when you should use the [!DNL LiveRamp - D
 
 The marketing team of a sports apparel retailer used the [LiveRamp - Onboarding](liveramp-onboarding.md) connection to send audiences from Experience Platform to their LiveRamp account.
 
-Through the [!DNL LiveRamp - Distribution] connection they can now trigger the activation of the onboarded audiences to the destinations mentioned at the top of this page, so that they can target users on mobile, open web, social, and [!DNL CTV] platforms.
+Through the [!DNL LiveRamp - Distribution] connection they can now trigger the activation of the onboarded audiences to the destinations mentioned at the top of this page directly within Adobe Real Time CDP, so that they can target users on mobile, open web, social, and [!DNL CTV] platforms.
 
 ## Onboard audiences to LiveRamp {#onboarding}
 
 Before activating audiences through the [!DNL LiveRamp - Distribution] connection, use the [LiveRamp - Onboarding](liveramp-onboarding.md) connection to export your Experience Platform audiences to LiveRamp.
 
-After you have onboarded your audiences to LiveRamp, continue the activation workflow from the [connect to the destination](#connect) step.
+After you have onboarded your audiences to LiveRamp, continue the activation workflow from the [connect to the destination](#connect) step to select and configure your target destination platforms for data activation.
 
 ## Connect to the destination {#connect}
 
@@ -67,14 +65,16 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authenticate to LiveRamp {#authenticate}
 
-To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
+To authenticate to the destination, fill in the required fields (to be provided by LiveRamp) and select **[!UICONTROL Connect to destination]**.
 
-![Platform UI image showing the destination connection screen.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
+![Platform UI image showing the destination connection screen.l](../../assets/catalog/advertising/liveramp-distribution/lr_connection_auth.png)
 
+* **[!UICONTROL LiveRamp Organization ID]**: The organization ID of your LiveRamp account (listed as _owner_org_ in your LiveRamp-provided credentials).
+* **[!UICONTROL Password]**: Your LiveRamp account password (listed as _secret_key_ in your LiveRamp-provided credentials).
+* **[!UICONTROL Client ID]**: Your LiveRamp Client ID. 
 * **[!UICONTROL Token URL]**: Your LiveRamp token URL.
-* **[!UICONTROL LiveRamp Organization ID]**: The organization ID of your LiveRamp account.
-* **[!UICONTROL Username]**: Your LiveRamp account username.
-* **[!UICONTROL Password]**: Your LiveRamp account password.
+* **[!UICONTROL Username]**: Your LiveRamp account username (listed as _account_id_ in your LiveRamp-provided credentials).
+
 
 ### Configure destination details {#destination-details}
 
