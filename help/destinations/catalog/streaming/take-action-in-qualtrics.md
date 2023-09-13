@@ -1,8 +1,7 @@
 ---
 keywords: streaming, Qualtrics destination
 title: Take action in Qualtrics
-description: Synchronize experience and operational customer data to unlock personalization at scale. Use the aggregation of multiple sources of operational data in Adobe Experience platform as an input in XiD to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers.
-exl-id: --
+description: Synchronize experience and operational customer data to unlock personalization at scale. Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience iD to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers.
 ---
 
 # Take action in Qualtrics
@@ -11,7 +10,7 @@ exl-id: --
 
 Synchronize experience and operational customer data to unlock personalization at scale. 
 
-Use the aggregation of multiple sources of operational data in Adobe Experience platform as an input in XiD to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers.
+Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience iD to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers.
 
 >[!IMPORTANT]
 >
@@ -34,7 +33,8 @@ To help you better understand how and when you should use the *Take action in Qu
 **Outcome**: Continuous feedback enables the organization to adapt and improve the onboarding process, resulting in better engagement and productivity among new employees.
 
 ## Prerequisites
-Before setting up the Qualtrics destination in the Adobe Experience Platform, please ensure the following prerequisites:
+
+Before setting up the Qualtrics destination in Adobe Experience Platform, please ensure the following prerequisites have been met:
 
 - You have a Qualtrics account.
 - You have obtained the necessary API token from Qualtrics.
@@ -170,6 +170,10 @@ As previously mentioned, this destination uses an open schema, so any properties
   }
 }
 ```
+
+To verify data has been ingested in Qualtrics, head over to the workflow containing your **JSON Event**, from there, go to **Run history** where you should see the executions of your workflow. Each workflow has a status of either **Succeeded** or **Failed**. Selecting a particular execution will reveal more information about it, allowing you to troubleshoot should you run into any issues.
+
+If there are no executions visible in **Run history**, it means the workflow hasn't been triggered yet, indicating that there may be an issue. Ensure the workflow is enabled, and that the **URL** in the destination in Adobe Experience Platform is correct. Workflow executions aren't instant, so you may have to wait a short while before it completes.
 
 ## Data usage and governance {#data-usage-governance}
 
