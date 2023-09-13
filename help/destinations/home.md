@@ -1,5 +1,4 @@
 ---
-keywords: destinations;adobe experience platform;platform;destinations overview;activate data;activate;
 title: Destinations overview
 description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
@@ -58,6 +57,7 @@ The following table outlines the permissions and permission combinations require
 | **[!UICONTROL Manage Destinations]** | To connect to destinations, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). |
 | **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** | To activate audiences to destinations and enable the [mapping step](ui/activate-batch-profile-destinations.md#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). |
 | **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** | To activate audiences to destinations and hide the [mapping step](ui/activate-batch-profile-destinations.md#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Identity Graph]** | To export *identities* to destinations, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
