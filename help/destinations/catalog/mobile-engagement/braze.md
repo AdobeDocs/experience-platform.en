@@ -40,13 +40,12 @@ As a marketer, I want to target users in a mobile engagement destination, with a
 
 ## Supported audiences {#supported-audiences}
 
-This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+This section describes which type of audiences you can export to this destination.
 
-*Additionally*, this destination also supports the activation of the audiences described in the table below.
-
-| External audience type | Description | 
----------|----------|
-| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. | 
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -158,6 +157,14 @@ The correct mapping would look like this:
 ## Exported data {#exported-data}
 
 To verify if data has been exported successfully to the [!DNL Braze] destination, check your [!DNL Braze] account. [!DNL Adobe Experience Platform] audiences are exported to [!DNL Braze] under the `AdobeExperiencePlatformSegments` attribute.
+
+## Troubleshooting {#troubleshooting}
+
+**I received a timeout error while activating my audiences to this destination. What should I do?**
+
+Occasionally, audience activation to this destination may result in a timeout error. This error does not alywas indicate an activation issue. 
+
+If you receive a timeout error, check the audience size in the destination platform. If the audience size is correct, then the integration is working as expected.
 
 ## Data usage and governance {#data-usage-governance}
 

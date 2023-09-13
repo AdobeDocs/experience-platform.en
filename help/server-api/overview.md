@@ -5,6 +5,7 @@ seo-description: Learn what the Edge Network Server API is and how you can use i
 keywords: data collection;collection;Adobe Experience Platform Edge Network;server api;
 exl-id: 46bd8798-d7f9-405b-9ca8-856ad4aa688c
 ---
+
 # Edge Network Server API overview {#overview}
 
 The Adobe Experience Platform Edge Network provides an optimized way for customers to interact with any Adobe Experience Cloud or Adobe Experience Platform Edge services.
@@ -30,7 +31,7 @@ The [!DNL Server API] supports the following type of requests:
 * Authenticated requests via [Adobe I/O](https://developer.adobe.com/), using the new `server.adobedc.net` endpoint.
 * Unauthenticated requests via the `edge.adobedc.net` endpoint.
 
-This enables use cases that allow for secure, authenticated collection of sensitive data, according to your organization’s privacy policies. In addition to authentication, the Server API supports marking datastreams to accept only authenticated communication via the API.
+This enables use cases that allow for secure, authenticated collection of sensitive data, according to your organization's privacy policies. In addition to authentication, the Server API supports marking datastreams to accept only authenticated communication via the API.
 
 Watch the video below for a streamlined overview of the Server API.
 

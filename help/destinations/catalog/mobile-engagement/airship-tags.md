@@ -32,13 +32,12 @@ Before you can send your Adobe Experience Platform audiences to [!DNL Airship], 
 
 ## Supported audiences {#supported-audiences}
 
-This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+This section describes which type of audiences you can export to this destination.
 
-*Additionally*, this destination also supports the activation of the audiences described in the table below.
-
-| External audience type | Description | 
----------|----------|
-| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. | 
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
