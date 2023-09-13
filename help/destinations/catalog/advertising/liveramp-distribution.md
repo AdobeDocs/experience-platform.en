@@ -17,7 +17,6 @@ The [!DNL LiveRamp - Distribution] connection enables you to activate audiences 
 
 * [!DNL 4C Insights]
 * [!DNL Acast]
-* [!DNL Nexxen (fka Amobee]
 * [!DNL Ampersand.tv]
 * [!DNL Captify]
 * [!DNL Cardlytics]
@@ -26,6 +25,7 @@ The [!DNL LiveRamp - Distribution] connection enables you to activate audiences 
 * [!DNL Index Exchange]
 * [!DNL Magnite CTV Platform]
 * [!DNL Magnite DV+ (Rubicon Project)]
+* [!DNL Nexxen (fka Amobee]
 * [!DNL One Fox]
 * [!DNL Pandora]
 * [!DNL Reddit]
@@ -83,10 +83,10 @@ After you have successfully connected to your LiveRamp account, enter the requir
 ![Platform UI image showing the destination details screen.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)
 
 * **[!UICONTROL Name]**: Fill in the preferred name for your destination connection.
-* **[!UICONTROL Description]**: Enter a description for your destination. Use a description which will help you easily identify the purpose of this destination.
+* **[!UICONTROL Description]**: Enter an optional description for your destination. Use a description which will help you easily identify the purpose of this destination.
 * **[!UICONTROL Destination]**: Use the drop-down menu to select the destination you want to activate audiences to. The destination you select here directly affects what you see in the [destination-specific settings](#destination-settings) screen.
-* **[!UICONTROL Integration]**: Select the integration account that you want to use for your destination.
-* **[!UICONTROL Identifier]**: Select the identifiers supported by your destination. Currently, all the destinations have their supported identifiers prefilled in the drop-down menu.
+* **[!UICONTROL Integration]**: Select the integration type that you want to use for your destination.
+* **[!UICONTROL Identifier]**: Select the identifiers you'd like to send to your destination. Currently, all the destinations have their supported identifiers prefilled in the drop-down menu.
 
 ## Destination-specific settings {#destination-settings}
 
@@ -101,8 +101,6 @@ See the sections below for detailed guidance on how to configure each destinatio
 >title="4C Brand Profile ID"
 >abstract="Enter the numeric ID associated with your 4C Brand Profile. If you do not have this ID, please contact your 4C client services representative."
 
-To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
-
 ### [!DNL Acast] {#acast}
 
 >[!CONTEXTUALHELP]
@@ -110,9 +108,12 @@ To configure details for the destination, fill in the required and optional fiel
 >title="Client name"
 >abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
-### [!DNL Amobee] {#amobee}
-
 ### [!DNL Ampersand.tv] {#ampersand-tv}
+
+>[!CONTEXTUALHELP]
+>id="company_name"
+>title="Your Company Name"
+>abstract="Your Company Name, as you would like it to be shown to the destination partner. Do not use spaces or special characters."
 
 ### [!DNL Captify] {#captify}
 
@@ -158,16 +159,63 @@ To configure details for the destination, fill in the fields below.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_iheartmedia_client"
->title="Client name"
+>title="Client Name"
 >abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
 ### [!DNL Index Exchange] {#index-exchange}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_index_advertiseraccountname"
+>title="Account Name"
+>abstract="Your Index Exchange client account name. Do not use spaces or special characters."
+
 ### [!DNL Magnite CTV Platform] {#magnite}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_magnitectv_client"
+>title="Client"
+>abstract="Your Client name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
 ### [!DNL Magnite DV+ (Rubicon Project)] {#magnite-dv}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_magnitedv+_partnerid"
+>title="PartnerId"
+>abstract="The Rubicon Project Partner ID associated with the publisher who owns the segment/data. Please contact your Rubicon Project account representative if unsure of the value you should use."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_magnitedv+_seatid"
+>title="SeatId"
+>abstract="Magnite DV+ "seatId" provided by your Magnite account manager"
+
+### [!DNL Nexxen (fka Amobee)] {#nexxen}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_nexxen_ratetype"
+>title="Rate Type"
+>abstract="Rate type represents the way data usage should be billed. All $0.00 rates should be flat fee. Please confirm with your Amobee representative if you're not sure which rate type to use."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_nexxen_marketid"
+>title="Market ID"
+>abstract="Enter the Market ID where the Amobee data contract should be created. It should be completely numeric. If you are doing "AlwaysOn" syndication across every single market in the Amobee platform, enter -1."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_nexxen_advertiserid"
+>title="Advertiser ID"
+>abstract="If you're sending data to a single advertiser in the Amobee platform, enter the Amobee Advertiser ID. It should be completely numeric. If you want to make the data available to all advertisers in a market or if these segments are "AlwaysOn", please enter -1."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_nexxen_contactemail"
+>title="Contact Email"
+>abstract="Enter the best email(s) for Amobee to send data contract details. Most likely this is your own email address, but it can also be an email alias. For multiple recipients, separate using commas (i.e. email1@domain.com,email2@domain.com,etc)."
+
 ### [!DNL One Fox] {#fox}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_fox_client"
+>title="Client"
+>abstract="The name of your company/distribution account as you would like it to appear to the partner. Use your company name by default, but please contact your partner account rep if unsure. No whitespace or other special characters, please (e.g. Company_Name)."
 
 ### [!DNL Pandora] {#pandora}
 
@@ -249,6 +297,11 @@ To configure details for the destination, fill in the fields below.
 >abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
 ### [!DNL Teads] {#teads}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_teads_teadsid"
+>title="Teads ID"
+>abstract="Your Teads ID"
 
 ### [!DNL WB Discovery] {#wb-discovery}
 
