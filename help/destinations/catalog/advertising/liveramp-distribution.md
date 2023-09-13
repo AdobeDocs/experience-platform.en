@@ -1,5 +1,5 @@
 ---
-title: LiveRamp - Distribution connection
+title: LiveRamp - Distribution connection test
 description: Learn how to use the LiveRamp - Distribution connector to activate audiences previously onboarded into LiveRamp, to other advertising destinations.
 hide: yes
 hidefromtoc: yes
