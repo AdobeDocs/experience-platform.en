@@ -128,30 +128,26 @@ You can also use the pre-set prompts that the AI Assistant provides to get start
 
 ![The provided prompts in the AI Assistant panel.](./images/ai-assistant/ideas.png)
 
-## Additional information 
+## Scope
 
-Refer to this section for additional information on the AI Assistant for Experience Platform.
+AI Assistant can answer queries based on the documentation and your data usage. AI Assistant can also infer context based on the UI page that you are in. It can identify the user account that you are using, the organization that you belong to, and the page that you are viewing on your screen. Furthermore, AI Assistant can recognize the resource (including type and ID) that you are viewing on your screen, as well as your intent, given that you are in the middle of a workflow.
 
-### Scope
-
-The AI Assistant can answer queries based on the documentation and your data usage.
-
-#### Documentation
+### Documentation
 
 You can ask documentation questions based on Real-Time Customer Data Platform and Audiences. Currently, the documentation index covers Adobe Experience Platform (Real-Time CDP and Audiences). The index is updated periodically.
 
 The documentation retrieval model is trained on Experience Platform (Real-Time CDP and Audiences). Questions outside the scope of Adobe Experience Platform such as, questions about other Adobe products like Adobe Target and the Creative Cloud suite cannot be answered.
 
-#### Data usage
+### Data usage
 
-You can also ask the AI Assistant questions about your data usage in the following domains: 
+You can also ask AI Assistant questions about your data usage in the following domains: 
 
 * Attributes
 * Datasets
-* Destinations (Questions regarding accounts and some questions about dataflow cannot be answered at this time.)
-* Schemas (Questions regarding field groups cannot be answered at this time.)
+* Destinations _(Questions regarding accounts and some questions about dataflow cannot be answered at this time.)_
+* Schemas _(Questions regarding field groups cannot be answered at this time.)_
 * Segments
-* Sources (Questions regarding accounts cannot be answered at this time.)
+* Sources _(Questions regarding accounts cannot be answered at this time.)_
 
 For usage data queries, answers may not reflect the current state of the UI. The data backing these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You may need to format your questions as: "When was the segment with the title {TITLE} created?" instead of, "When was the {TITLE} segment created?"
 
@@ -200,7 +196,25 @@ The following is a list of currently supported data usage questions grouped by d
 
 +++
 
-### Conversational experience
+## Verify the response
+
+### Citations for documentation
+
+### Usage query (source query)
+
+### "This is how I got this"
+
+## Provide feedback
+
+## Chat management
+
+## Additional information 
+
+Refer to this section for additional information on the AI Assistant for Experience Platform.
+
+### Caveats and limitations
+
+#### Conversational experience
 
 You must consider several nuances regarding the conversational experience when querying the AI Assistant.
 
@@ -250,11 +264,11 @@ You must phrase your questions clearly and scope them within a product, applicat
 
 >[!ENDTABS]
 
-### Limited small talk
+#### Limited small talk
 
 You can engage in small talk with the AI Assistant, but this capacity is currently limited.
 
-### Capability questions
+#### Capability questions
 
 The AI Assistant may give an inaccurate impression of what it can do. It may answer the following types of questions incorrectly:
 
