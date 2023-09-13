@@ -1,20 +1,22 @@
 ---
 keywords: advertising; bing; 
 title: Microsoft Bing connection
-description: With the Microsoft Bing connection destination, you can execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
+description: With the Microsoft Bing connection destination, you can execute retargeting and audience targeted digital campaigns across the entire Microsoft Advertising Network, including Display advertising, Search, and Native.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 ---
 # [!DNL Microsoft Bing] connection {#bing-destination}
 
 ## Overview {#overview}
 
-The [!DNL Microsoft Bing] destination helps you send profile data to [!DNL Microsoft Display Advertising].
+Use the [!DNL Microsoft Bing] destination to send profile data to the entire [!DNL Microsoft Advertising Network], including [!DNL Display Advertising], [!DNL Search], and [!DNL Native]. 
+
+The [!DNL Microsoft Bing] destination creates *[!DNL Custom Audiences]* in Microsoft. Those are available both in the [!DNL Microsoft Search Network] and [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]) as listed in the [Microsoft Advertising documentation](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 To send profile data to [!DNL Microsoft Bing], you must first connect to the destination.
 
 ## Use cases {#use-cases}
 
-As a marketer, I want to be able to use audiences built off of [!DNL Microsoft Advertising IDs] to target users via display advertising across [!DNL Microsoft Advertising] channels.
+As a marketer, I want to be able to use audiences built off of [!DNL Microsoft Advertising IDs] to target users via display or search advertising across [!DNL Microsoft Advertising] channels.
 
 ## Supported identities {#supported-identities}
 
@@ -28,15 +30,12 @@ As a marketer, I want to be able to use audiences built off of [!DNL Microsoft A
 
 ## Supported audiences {#supported-audiences}
 
-This section describes all the audiences that you can export to this destination.
+This section describes which type of audiences you can export to this destination.
 
-This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
-
-*Additionally*, this destination also supports the activation of the audiences described in the table below.
-
-| Audience type | Description | 
----------|----------|
-| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -71,7 +70,7 @@ When configuring the destination, you must provide the following information:
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
-### Connection parameters {#parameters}
+### Fill in destination details {#parameters}
 
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 

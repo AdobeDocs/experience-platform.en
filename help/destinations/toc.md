@@ -45,7 +45,7 @@ feature: Destinations
     * [Edit activation dataflows](./ui/edit-activation.md)
     * [Delete destinations](./ui/delete-destinations.md)
     * [Monitor dataflows](./ui/monitor-dataflows.md)
-    * [(Beta) Configure file formatting options for file-based destinations](./ui/batch-destinations-file-formatting-options.md)
+    * [Configure file formatting options for file-based destinations](./ui/batch-destinations-file-formatting-options.md)
     * [Subscribe to in-context destination alerts](ui/alerts.md)
 * Destinations catalog {#catalog}
     * [Destinations catalog overview](./catalog/overview.md)
@@ -77,6 +77,7 @@ feature: Destinations
         * [Google gtag extension](./catalog/advertising/gtag-advertising.md)
         * [LinkedIn Insight Tag extension](./catalog/advertising/linkedin.md)
         * [LiveRamp - Onboarding connection](./catalog/advertising/liveramp-onboarding.md)
+        * [LiveRamp - Distribution connection](./catalog/advertising/liveramp-distribution.md)
         * [Microsoft Bing connection](./catalog/advertising/bing.md)
         * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)

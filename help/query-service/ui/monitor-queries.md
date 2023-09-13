@@ -13,7 +13,7 @@ The [!UICONTROL Scheduled Queries] tab provides an overview of all your schedule
 
 To navigate to the [!UICONTROL Scheduled Queries] tab, select **[!UICONTROL Queries]** from the left navigation bar followed by **[!UICONTROL Scheduled Queries]**
 
-![The Scheduled Queries tab in the Queries workspace.](../images/ui/monitor-queries/scheduled-queries.png)
+![The Scheduled Queries tab in the Queries workspace with Scheduled Queries and Queries highlighted.](../images/ui/monitor-queries/scheduled-queries.png)
 
 The table below describes each available column.
 

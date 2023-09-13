@@ -86,3 +86,7 @@ These fields are not marked as identities. Instead, the same identities are copi
 * `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
 In the identity map, if ECID is present, it is marked as the primary identity for the event. In this case, AAID may be based on ECID due to the [Identity Service grace period](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Otherwise, AAID is marked as the primary identity for the event. AACUSTOMID is never marked as the Primary ID for the event. However, if AACUSTOMID is present, then AAID is based on AACUSTOMID due to the Experience Cloud order of operations.
+
+>[!NOTE]
+>
+>You can use Data Prep to filter out secondary identities coming from Analytics, such as AAID and AACUSTOMID. If filtered out, these identities will not be ingested into Profile if they are available in the incoming Analytics data. Unfiltered data will continue to be loaded into the data lake.
