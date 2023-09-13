@@ -1,20 +1,59 @@
 ---
-title: (Beta) Export Datasets to Cloud Storage Destinations
+title: Export Datasets to Cloud Storage Destinations
 type: Tutorial
 description: Learn how to export datasets from Adobe Experience Platform to your preferred cloud storage location.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 ---
-# (Beta) Export datasets to cloud storage destinations
+# Export datasets to cloud storage destinations
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->* The functionality to export datasets is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
->* This beta functionality supports the export of first generation data, as defined in the Real-Time Customer Data Platform [product description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
->* This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Contact your Adobe representative for more information. 
+>* This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package, Adobe Journey Optimizer, or Customer Journey Analytics. Contact your Adobe representative for more information.
 
 This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage] by using the Experience Platform UI. 
 
 You can also use the Experience Platform APIs to export datasets. Read the [export datasets API tutorial](/help/destinations/api/export-datasets.md) for more information.  
+
+## Datasets available for exporting {#datasets-to-export}
+
+The datasets that you can export depend on the Experience Platform application (Real-Time CDP, Adobe Journey Optimizer),the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller).
+
+See in the table below which dataset types you can export depending on your app, product tier, and add-ons:
+
+<table>
+<thead>
+  <tr>
+    <th>Application/Add-on</th>
+    <th>Tier</th>
+    <th>Datasets</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Real-Time CDP</td>
+    <td>Prime</td>
+    <td>Datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</td>
+  </tr>
+  <tr>
+    <td>Ultimate</td>
+    <td><ul><li>Datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</li><li> System-generated datasets such as the <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">Profile Snapshot Dataset</a>.</li></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Adobe Journey Optimizer</td>
+    <td>Prime</td>
+    <td>See the Adobe Journey Optimizer documentation.</td>
+  </tr>
+  <tr>
+    <td>Ultimate</td>
+    <td>See the Adobe Journey Optimizer documentation.</td>
+  </tr>
+  <tr>
+    <td>Data Distiller</td>
+    <td>Data Distiller (Add-on)</td>
+    <td>Derived datasets created through Query Service.</td>
+  </tr>
+</tbody>
+</table>
 
 ## Supported destinations {#supported-destinations}
 
@@ -165,9 +204,8 @@ To remove a dataset from an existing dataflow, follow the steps below:
 
 ## Known limitations {#known-limitations}
 
-Keep in mind the following limitations for the beta release of dataset exports:
+Keep in mind the following limitations for the general availability release of dataset exports:
 
-* There is currently a single permission (**[!UICONTROL Manage and Activate Dataset Destinations]**) that includes manage and activate permissions on dataset destinations. These controls will be split up in the future into more granular permissions. Review the [required permissions](#permissions) section for a complete list of permissions that you need to export datasets.
 * Currently, you can only export incremental files and an end date cannot be selected for your dataset exports. 
 * Exported filenames are currently not customizable.
 * The UI does not currently block you from deleting a dataset that is being exported to a destination. Do not delete any datasets that are being exported to destinations. [Remove the dataset](#remove-dataset) from a destination dataflow before deleting it.

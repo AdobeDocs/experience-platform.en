@@ -21,7 +21,7 @@ You can use [!DNL Query Service] to query raw datasets for profile, audience, an
 
 ![The Dataset Browse dashboard with the Datasets tab highlighted in the left navigation.](./images/query/browse-datasets.png)
 
-### System-generated datasets
+### System-generated datasets {#system-generated-datasets}
 
 >[!IMPORTANT]
 >
@@ -35,7 +35,7 @@ A sidebar appears containing two toggles, [!UICONTROL Included in Profile] and [
 
 ![The Datasets Browse tab with the Show system datasets toggle highlighted.](./images/query/show-system-datasets.png)
 
-### Profile attribute datasets
+### Profile attribute datasets {#profile-attribute-datasets}
 
 Profile dashboard insights are tied to merge policies that have been defined by your organization. For every active merge policy, there is a profile attribute dataset available in the data lake. 
 
