@@ -17,7 +17,7 @@ Use the [!UICONTROL Experience Cloud Audiences] destination to share audiences f
 >
 >This destination replaces the [legacy audience sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam) from Real-Time Customer Data Platform to various Experience Cloud solutions.
 > 
->The [legacy audience sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) will no longer be supported after February 2024. 
+>If you are already sharing audiences from Real-Time CDP to Audience Manager and other Experience Cloud solutions via the [legacy audience sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), you must contact Customer Care to disable the legacy integration before using this destination.
 
 ![The Experience Cloud Audiences destination, highlighted in the destinations catalog.](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
 
