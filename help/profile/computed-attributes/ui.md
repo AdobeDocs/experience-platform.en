@@ -41,9 +41,9 @@ You can also filter the displayed computed attributes based on the lifecycle sta
 
 ![The filter icon is highlighted.](./images/ui/select-filter.png)
 
-You can now choose which computed attributes you want to filter by.
+You can now choose to filter the computed attributes by status ([!UICONTROL Draft], [!UICONTROL Published], and [!UICONTROL Inactive]).
 
-![The options tht you can filter the computed attributes by are highlighted.](./images/ui/view-filters.png)
+![The options tht you can filter the computed attributes by are highlighted. These options include [!UICONTROL Draft], [!UICONTROL Published], and [!UICONTROL Inactive].](./images/ui/view-filters.png)
 
 Additionally, you can select a computed attribute to see more detailed information about it. For more information on the computed attributes details page, please read the [view a computed attribute's details section](#view-details).
 

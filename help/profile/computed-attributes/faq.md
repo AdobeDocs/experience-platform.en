@@ -47,10 +47,24 @@ When a computed attribute is disabled or made inactive, it is no longer updated.
 
 Computed attributes drive Profile enrichment by aggregating your event attributes at a merged profile level. For example, you can personalize marketing emails with the latest viewed product.
 
-## How often are computed attributes evaluated?
+## How often are computed attributes evaluated? Is this related to the audience evaluation schedule?
 
-Computed attributes are evaluated independently of the segmentation schedule. This means that regardless of the segmentation type (batch segmentation or streaming segmentation), the computed attribute will be evaluated using the latest computed attribute value.
+Computed attributes are evaluated in batches independently of the segmentation schedule. This means that regardless of the segmentation type (batch segmentation or streaming segmentation), the computed attribute will be evaluated on its own schedule (hourly, daily, weekly, or monthly). 
+
+When the audience is evaluated, it will use the **latest** value of the computed attribute available.
 
 ## How do computed attributes interact with audiences evaluated using streaming segmentation?
 
 If a streaming-segmentation-evaluated audience is using a computed attribute, it will take the **latest value** of the computed attribute while the audience is being evaluated. For example, if the audience is looking for purchase events, the audience will refer to the last evaluated computed attribute value when the purchase event comes.
+
+## Can I use computed attributes on Edge?
+
+Like any other profile attribute, computed attributes are available and can be used on edges. Please note that computed attributes are **not** computed on edge.
+
+## How are data usage labels applied on computed attributes?
+
+Computed attributes automatically derives data usage labels from the source fields and datasets that were used to define the computed attributes. This ensures that your behavioral data is appropriately used.
+
+## How do I access computed attributes?
+
+To access computed attributes, you'll need to have the appropriate permissions. For more information on the permissions required, please read the [access control documentation](../../access-control/home.md).

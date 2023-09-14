@@ -9,13 +9,22 @@ Personalization based on user behavior is a key requirement for marketers to max
 
 Computed attributes help quickly convert profile behavioral data into aggregated values at the profile level without dependence on engineering resources for:
 
-- Enabling targeted personalization with activation of behavioral aggregates to Real-Time Customer Data Platform destinations, usage in Adobe Journey Optimizer, or in segmentation
+- Enabling targeted one-to-one or batch personalization with activation of behavioral aggregates to Real-Time Customer Data Platform destinations and usage in Adobe Journey Optimizer
+- Simplified audience segmentation with storage of behavioral aggregates as profile attributes
 - Standardization of aggregated profile behavioral data for usage across platforms and apps
 - Better data management with consolidation of old profile events data into meaningful behavioral insights
 
-These aggregates are computed based on Profile-enabled Experience Event datasets ingested into Adobe Experience Platform. Each computed attribute is a profile attribute created on your profile union schema, and is grouped under "Computed Attribute" field group in your union schema.
+These aggregates are computed based on Profile-enabled Experience Event datasets ingested into Adobe Experience Platform. Each computed attribute is a profile attribute created on your profile union schema, and is grouped under the "SystemComputedAttribute" field group in your union schema.
 
-Sample use cases include personalizing ads with the name of the last viewed product for people with no purchases in the last 7 days, personalizing marketing emails with total reward points won to congratulate users on being promoted to a premium tier, or calculating the lifetime value of each customer to drive better targeting.
+Sample use cases include:
+
+- Personalizing marketing emails with total reward points to congratulate users on being promoted to a premium tier
+- Personalizing communications to users based on purchase counts and frequency
+- Personalizing retention emails based on subscription expiry dates
+- Re-targeting users who viewed but did not purchase a product with the last viewed product
+- Activating event aggregates through computed attributes to a downstream system using Real-Time CDP Destinations
+- Collapsing multiple event-based audiences into a more condensed group of computed attributes
+- Re-targeting unauthenticated users offsite using recent partner IDs from events
 
 This guide will help you to better understand the role of computed attributes within Platform, in addition to explaining the basics of computed attributes.
 
@@ -59,6 +68,18 @@ For example, if your computed attribute has a lookback period of the last 7 days
 >[!NOTE]
 >
 >Both weeks and months are considered as **calendar weeks** and **calendar months** when used in event lookbacks. The calendar week starts on the **Sunday** and ends on the **Saturday** of the week.
+
+**Fast refresh** {#fast-refresh}
+
+Fast refresh allows you to keep your attributes up-to-date. Enabling this option lets you refresh your computed attributes on a daily basis, even for longer lookback periods, allowing you to rapidly react to user activities.
+
+>[!NOTE]
+>
+>Enabling fast refresh will vary your event lookback durations, since the lookback period rolls on a weekly or monthly basis respectively.
+>
+>If you create a computed attribute with a two week lookback period with fast refresh enabled, this means that the initial lookback period will be two weeks. However, with each daily refresh, the lookback period will include events from the additional day. This addition of days will continue until the next calendar week starts, in which the lookback window will roll over and return to two weeks.
+>
+>For example, if there was a two week lookback period starting on March 15th (Sunday) with fast refresh enabled, with daily refresh, the lookback period will keep inclusively expanding until March 22nd, where it will reset back to two weeks. In short, the computed attribute is **refreshed** daily, with the lookback period increasing from **two** weeks to **three** weeks during the week, and then subsequently returning back to **two** weeks.
 
 ## Next steps
 
