@@ -15,6 +15,10 @@ This document covers the process for enabling the customer-managed keys (CMK) fe
 
 ## Prerequisites
 
+To access the CMK APIs, you must assign the [!UICONTROL Manage Customer Managed Key] permission and access to a production sandbox to a new or existing role associated with the API credential. If you want to provide this API credential with only CMK access, you are recommended to create a new CMK Admin role with the necessary permissions mentioned earlier.
+
+For more information on assigning roles and permissions in Experience Platform, refer to the [configure permissions documentation](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+
 In order to enable CMK, your [!DNL Azure] Key Vault must be configured with the following settings:
 
 * [Enable purge protection](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
