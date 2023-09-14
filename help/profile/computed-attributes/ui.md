@@ -104,13 +104,7 @@ While applying the aggregation function, you can enable fast refresh if the look
 
 Fast refresh allows you to keep your attributes up-to-date. Enabling this option lets you refresh your computed attributes on a daily basis, even for longer lookback periods, allowing you to rapidly react to user activities.
 
->[!NOTE]
->
->Enabling fast refresh will vary your event lookback durations, since the lookback period rolls on a weekly or monthly basis respectively.
->
->If you create a computed attribute with a two week lookback period with fast refresh enabled, this means that the initial lookback period will be two weeks. However, with each daily refresh, the lookback period will include events from the additional day. This addition of days will continue until the next calendar week starts, in which the lookback window will roll over and return to two weeks.
->
->For example, if there was a two week lookback period starting on March 15th (Sunday) with fast refresh enabled, with daily refresh, the lookback period will keep inclusively expanding until March 22nd, where it will reset back to two weeks.
+For more information on fast refresh, please read the [fast refresh section](./overview.md#fast-refresh) of the computed attributes overview.
 
 With these steps completed, you can now either choose to save this computed attribute as a draft or to immediately publish it.
 
