@@ -158,6 +158,14 @@ The correct mapping would look like this:
 
 To verify if data has been exported successfully to the [!DNL Braze] destination, check your [!DNL Braze] account. [!DNL Adobe Experience Platform] audiences are exported to [!DNL Braze] under the `AdobeExperiencePlatformSegments` attribute.
 
+## Troubleshooting {#troubleshooting}
+
+**I received a timeout error while activating my audiences to this destination. What should I do?**
+
+Occasionally, audience activation to this destination may result in a timeout error. This error does not alywas indicate an activation issue. 
+
+If you receive a timeout error, check the audience size in the destination platform. If the audience size is correct, then the integration is working as expected.
+
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see [Data Governance overview](../../../data-governance/home.md).
