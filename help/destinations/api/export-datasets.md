@@ -19,7 +19,9 @@ This article explains the workflow required to use the [!DNL Flow Service API] t
 
 ## Datasets available for exporting {#datasets-to-export}
 
-The datasets that you can export depend on the Experience Platform application (Real-Time CDP, Adobe Journey Optimizer),the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller). See the [table in the UI tutorial page](/help/destinations/ui/export-datasets.md#datasets-to-export) to understand which datasets you can export.
+The datasets that you can export depend on the Experience Platform application (Real-Time CDP, Adobe Journey Optimizer), the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller). 
+
+Refer to the [table on the UI tutorial page](/help/destinations/ui/export-datasets.md#datasets-to-export) to understand which datasets you can export.
 
 ## Supported destinations {#supported-destinations}
 

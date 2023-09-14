@@ -16,9 +16,9 @@ You can also use the Experience Platform APIs to export datasets. Read the [expo
 
 ## Datasets available for exporting {#datasets-to-export}
 
-The datasets that you can export depend on the Experience Platform application (Real-Time CDP, Adobe Journey Optimizer),the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller).
+The datasets that you can export depend on the Experience Platform application (Real-Time CDP, Adobe Journey Optimizer), the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller).
 
-See in the table below which dataset types you can export depending on your app, product tier, and add-ons:
+Understand from the table below which dataset types you can export depending on your application, product tier, and any add-ons purchased:
 
 <table>
 <thead>
@@ -41,11 +41,11 @@ See in the table below which dataset types you can export depending on your app,
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>See the Adobe Journey Optimizer documentation.</td>
+    <td>Refer to the Adobe Journey Optimizer documentation.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>See the Adobe Journey Optimizer documentation.</td>
+    <td>Refer to the Adobe Journey Optimizer documentation.</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
@@ -75,7 +75,7 @@ Some file-based destinations in the Experience Platform catalog support both aud
 * Consider activating audiences when you want your data structured into profiles grouped by audience interests or qualifications. 
 * Alternatively, consider dataset exports when you are looking to export raw datasets, which are not grouped or structured by audience interests or qualifications. You could use this data for reporting, data science workflows, to satisfy compliance requirements, and many other use cases.
 
-This document contains all the information necessary to export datasets. If you want to activate audiences to cloud storage or email marketing destinations, read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md).
+This document contains all the information necessary to export datasets. If you want to activate *audiences* to cloud storage or email marketing destinations, read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Prerequisites {#prerequisites}
 
@@ -139,7 +139,7 @@ The **[!UICONTROL Export incremental files]** option is automatically selected. 
 
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
-3. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. Note that in the beta version of the feature, it is not possible to set an end date for the exports. For more information, view the [known limitations](#known-limitations) section. 
+3. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. Note that you currently cannot set an end date for the exports. For more information, view the [known limitations](#known-limitations) section. 
 
 4. Select **[!UICONTROL Next]** to save the schedule and proceed to the **[!UICONTROL Review]** step.
 
@@ -201,6 +201,17 @@ To remove a dataset from an existing dataflow, follow the steps below:
 1. In the confirmation dialog, select **[!UICONTROL Remove]** to immediately remove the dataset from exports to the destination. 
 
     ![Dialog showing the Confirm dataset removal option from the dataflow.](../assets/ui/export-datasets/remove-dataset-confirm.png)
+
+
+## Dataset export entitlements {#known-limitations}
+
+Refer to the product description documents to understand how many profiles you are entitled to export, per year. View the Real-Time CDP Product Description [here](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+
+Note that the entitlements for different applications are not additive. This means that if you purchase Real-Time CDP Ultimate and Adobe Journey Optimizer Ultimate, the profile export entitlement will be the larger of the two entitlements. 
+
+Conversely, if you purchase add-ons such as Data Distiller, the profile export limits that you are entitled to are the sum of the product tier and the add-on. 
+
+You can view and track your profile exports against your contractual limits in the licensing dashboard. 
 
 ## Known limitations {#known-limitations}
 
