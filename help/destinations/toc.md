@@ -25,7 +25,7 @@ feature: Destinations
     * [Delete destination accounts](./api/delete-destination-account.md)
     * [Delete destination dataflows](./api/delete-destination-dataflow.md)
     * [(Beta) Activate data to file-based destinations by using the Flow Service API](/help/destinations/api/activate-segments-file-based-destinations.md)
-    * [(Beta) Export datasets](/help/destinations/api/export-datasets.md)
+    * [Export datasets](/help/destinations/api/export-datasets.md)
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
     * [Create a new destination connection](./ui/connect-destination.md)
@@ -37,7 +37,7 @@ feature: Destinations
         * [Activate audiences to edge personalization destinations](./ui/activate-edge-personalization-destinations.md)
         * [Activate prospect audiences to destinations](./ui/activate-prospect-audiences.md)
         * [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
-        * [(Beta) Export datasets using the Experience Platform UI](./ui/export-datasets.md)
+        * [Export datasets using the Experience Platform UI](./ui/export-datasets.md)
         * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Update destination accounts](./ui/update-accounts.md)
