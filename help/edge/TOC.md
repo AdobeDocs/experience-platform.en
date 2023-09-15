@@ -21,7 +21,7 @@ feature: Web SDK
   * [Debugging](fundamentals/debugging.md)
   * [Configure a CSP](fundamentals/configuring-a-csp.md)
   * [Interact with multiple properties](fundamentals/interacting-with-multiple-properties.md)
-  * [User-Agent Client Hints](fundamentals/user-agent-client-hints.md)
+  * [User agent client hints](fundamentals/user-agent-client-hints.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
   * [First-party device IDs](identity/first-party-device-ids.md)
