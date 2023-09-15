@@ -16,7 +16,7 @@ You can also use the Experience Platform APIs to export datasets. Read the [expo
 
 ## Datasets available for exporting {#datasets-to-export}
 
-The datasets that you can export depend on the Experience Platform application (Real-Time CDP, Adobe Journey Optimizer), the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller).
+The datasets that you can export vary based on the Experience Platform application (Real-Time CDP, Adobe Journey Optimizer), the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller).
 
 Understand from the table below which dataset types you can export depending on your application, product tier, and any add-ons purchased:
 
@@ -41,11 +41,11 @@ Understand from the table below which dataset types you can export depending on 
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Refer to the Adobe Journey Optimizer documentation.</td>
+    <td>Refer to the <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=en"> Adobe Journey Optimizer</a> documentation. (update to deep-link to the AJO table or section for supported datasets)</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Refer to the Adobe Journey Optimizer documentation.</td>
+    <td>Refer to the <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=en"> Adobe Journey Optimizer</a> documentation. (update to deep-link to the AJO table or section for supported datasets)</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
