@@ -76,6 +76,7 @@ The turnaround time to resolve the deprovisioning ticket is six business days or
 
 Note the following known limitations and important callouts while using the Experience Cloud Audiences card:
 
+* When connecting to the destination, you can see an option to [enable dataflow alerts](../../ui/alerts.md). Though visible in the UI, the **enable alerts option is not currently supported**.
 * **Audience backfill support**: The first export to Audience Manager or other Experience Cloud solutions includes a historical population of the audiences. Users of the [legacy audience sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) who are configuring this destination should expect a backfill difference of approximately 6 hours.
 
 ### Latency when activating audiences {#audience-activation-latency}
@@ -141,14 +142,8 @@ To configure details for the destination, fill in the required and optional fiel
 
 ![Configure new destination screen showing the required and optional settings to connect to the Experience Cloud Audiences destination.](../..//assets/catalog/adobe/experience-cloud-audiences/connect-to-destination.png)
 
-*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
-*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-
-### Enable alerts {#enable-alerts}
-
-You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
-
-When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
+* **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 
 ## Activate audiences to this destination {#activate}
 
