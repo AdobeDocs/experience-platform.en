@@ -7,11 +7,11 @@ description: This article explains how to use top and bottom of page events in W
 
 When you want to deliver personalized experiences to your customers, a web page's loading time is essential.
 
-To optimize the loading times, reduce flicker, and deliver personalization as quickly as possible, Web SDK supports the configuration of top and bottom of page events.
+To optimize the loading times and deliver personalization as quickly as possible, Web SDK supports the configuration of top and bottom of page events.
 
-Top and bottom of page events describe a method of asynchronously loading various elements in the page, while keeping the page load time at a minimum and eliminating flicker.
+Top and bottom of page events describe a method of asynchronously loading various elements in the page, while keeping the page load time at a minimum.
 
-This configuration ensures that visitors receive a personalized experience without running into a blanks screen until the personalization is loaded on the page. Data can be loaded asynchronously and recorded later.
+This configuration ensures that visitors receive a personalized experience without running into a blank screen until the personalization is loaded on the page. Data can be loaded asynchronously and recorded later.
 
 In terms of metrics accuracy, Adobe Analytics can ignore top of page events, which leads to more accurate metrics recording, since only one page hit is recorded (the bottom of page event).  
 
@@ -24,6 +24,11 @@ By using top and bottom of page events in Web SDK, the marketing team can config
 * Web SDK sends a personalization request which is loaded as soon as the page begins to load. This is a top of page event.
 * When the page finishes loading, a page view event is recorded. This happens later in the page loading process. This is a bottom of page event.
 
+## Prerequisites {#prerequisites}
+
+### Adobe Target prerequisites {#target}
+
+For top and bottom of page events to work with Adobe Target, your Experience Cloud organization needs to be set to **prefetch mode**. Contact Customer Support to make sure your Adobe Target organization is set to **prefetch**.
 
 ## Top of page event example {#top-of-page}
 
@@ -35,7 +40,7 @@ The code sample below exemplifies a top of page event configuration which reques
 
 ```js
 alloy("sendEvent", {
-  eventType: "decisioning.propositionFetch",
+  type: "decisioning.propositionFetch",
   renderDecisions: true,
   personalization: {
     sendDisplayNotifications: false
@@ -45,8 +50,8 @@ alloy("sendEvent", {
 
 |Paramter| Required/Optional |Description|
 |---|---|---|
-|`eventType`|Required|Set this parameter to `decisioning.propositionFetch`.|
-|`renderDecisions`|Required|Set this parameter to `true`.|
+|`type`|Required|Set this parameter to `decisioning.propositionFetch`. This special event type tells Adobe Analytics to drop this event. When using Customer Journey Analytics, you can also set up a filter to drop these events.|
+|`renderDecisions`|Required|Set this parameter to `true`. This parameter tells Web SDK to render decisions returned by the Edge Network.|
 |`personalization.sendDisplayNotifications`|Required| Set this parameter to `false`. This stops display notifications from being sent.|
 
 >[!ENDTABS]
@@ -75,6 +80,7 @@ alloy("sendEvent", {
 |Paramter| Required/Optional |Description|
 |---|---|---|
 |`personalization.includePendingDisplayNotifications`|Required|Set this parameter to `true`. This enables the sending of display notifications which were suppressed in the top of page event.|
+|`xdm`| Optional | Use this section to include all the data you need for the bottom of page event. |
 
 >[!TAB Manually rendered propositions]
 
@@ -82,11 +88,12 @@ The code sample below exemplifies a bottom of page event configuration which ren
 
 >[!NOTE]
 >
->In this scenario, the bottom of page event must wait until the top of page event has completed, to render the propositions.
+>In this scenario, the bottom of page event must wait until the top of page event has completed, to render the propositions and record the bottom of page event.
 
 ```js
 alloy("sendEvent", {
-  xdm: { ...
+  xdm: { 
+    ... // Optional bottom of page event data
     _experience: {
       decisioning: {
         propositions: propositions.map(function(p) {
@@ -105,10 +112,13 @@ alloy("sendEvent", {
 });
 ```
 
+
+
 |Paramter| Required/Optional |Description|
 |---|---|---|
-|`xdm._experience.decisioning.propositions`|Required| This section defines the manually rendered propositions. You must include the proposition `ID`, `scope`, and `scopeDetails`.|
-|`xdm._experience.decisioning.propositionEventType`|Required|Set this parameter to `display: 1`.|
+|`xdm._experience.decisioning.propositions`| Required | This section defines the manually rendered propositions. You must include the proposition `ID`, `scope`, and `scopeDetails`. See the documentation on how to [manually render personalization](help/edge/personalization/rendering-personalization-content.md#manually) for more information on how to record display notifications for manually rendered content. Manually rendered personalization content must be included in the bottom of page hit. |
+|`xdm._experience.decisioning.propositionEventType`| Required | Set this parameter to `display: 1`. |
+|`xdm`| Optional | Use this section to include all the data you need for the bottom of page event. |
 
 >[!ENDTABS]
 
@@ -120,10 +130,12 @@ alloy("sendEvent", {
 
 >[!TAB First page view]
 
+The example below includes the addition of the required `xdm.web.webPageDetails.viewName` parameter. This is what makes it a single-page application. The `viewName` in this example is the view which is loaded on the page load.
+
 ```js
 // Top of page, render decisions for the "home" view.
 alloy("sendEvent", {
-    eventType: "decisioning.propositionFetch",
+    type: "decisioning.propositionFetch",
     renderDecisions: true,
     personalization: {
         sendDisplayNotifications: false
