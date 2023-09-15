@@ -28,7 +28,7 @@ Refer to the following documentation for more information on identities in Platf
 * [Experience Data Model (XDM)](../../xdm/home.md): Provides standard definitions and structures for Platform data through the use of schemas. All Platform datasets conform to a specific XDM schema, and the schema defines which fields are identities.
   * [Identity fields](../../xdm/ui/fields/identity.md): Learn how an identity field is defined in an XDM schema.
 
-## Create a new request
+## Create a new request {#create-request}
 
 To start the process, select **[!UICONTROL Create request]** from the main page in the workspace.
 
@@ -38,7 +38,7 @@ The request creation dialog appears. By default, the **[!UICONTROL Delete consum
 
 ![Image showing the delete consumer option selected in the creation dialog](../images/ui/record-delete/consumer-action.png)
 
-## Select datasets
+## Select datasets {#select-datasets}
 
 Under the **[!UICONTROL Consumer Details]** section, the next step is to determine whether you want to delete records from a single dataset or all datasets.
 
