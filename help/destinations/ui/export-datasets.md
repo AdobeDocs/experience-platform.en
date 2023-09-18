@@ -8,7 +8,7 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 
 >[!AVAILABILITY]
 >
->* This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package, Adobe Journey Optimizer, or Customer Journey Analytics. Contact your Adobe representative for more information.
+>* This functionality is available to customers who have purchased the Real-Time CDP Prime or Ultimate package, Adobe Journey Optimizer, or Customer Journey Analytics. Contact your Adobe representative for more information.
 
 This article explains the workflow required to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage] by using the Experience Platform UI. 
 
@@ -32,11 +32,11 @@ Understand from the table below which dataset types you can export depending on 
   <tr>
     <td rowspan="2">Real-Time CDP</td>
     <td>Prime</td>
-    <td>Datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</td>
+    <td>(Profile and Experience Event?) DatasetsDatasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</li><li> System-generated datasets such as the <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">Profile Snapshot Dataset</a>.</li></td>
+    <td><ul><li>(Profile and Experience Event?) Datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</li><li> System-generated datasets such as the <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">Profile Snapshot Dataset</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
@@ -209,7 +209,7 @@ Refer to the product description documents to understand how many profiles you a
 
 Note that the entitlements for different applications are not additive. This means that if you purchase Real-Time CDP Ultimate and Adobe Journey Optimizer Ultimate, the profile export entitlement will be the larger of the two entitlements. 
 
-Conversely, if you purchase add-ons such as Data Distiller, the profile export limits that you are entitled to are the sum of the product tier and the add-on. 
+On the other hand, if you purchase add-ons such as Data Distiller, the profile export limits that you are entitled to are the sum of the product tier and the add-on. 
 
 You can view and track your profile exports against your contractual limits in the licensing dashboard. 
 
