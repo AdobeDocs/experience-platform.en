@@ -203,7 +203,7 @@ To remove a dataset from an existing dataflow, follow the steps below:
     ![Dialog showing the Confirm dataset removal option from the dataflow.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
 
-## Dataset export entitlements {#known-limitations}
+## Dataset export entitlements {#licensing-entitlement}
 
 Refer to the product description documents to understand how many profiles you are entitled to export, per year. View the Real-Time CDP Product Description [here](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
