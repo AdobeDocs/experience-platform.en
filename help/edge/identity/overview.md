@@ -29,7 +29,7 @@ As explained in the sections below, the data collection method that you choose t
 
 Third-party data collection involves sending data directly to the Edge Network domain `adobedc.net`.
 
-In recent years, web browsers have becoming increasingly restrictive in their handling of cookies set by third parties. Some browsers block third-party cookies by default. If you use third-party cookies to identify site visitors, the lifetime of those cookies is almost always shorter than what would be otherwise available using first-party cookies instead. In some cases, a third-party cookie will expire in as little as seven days.
+In recent years, web browsers have become increasingly restrictive in their handling of cookies set by third parties. Some browsers block third-party cookies by default. If you use third-party cookies to identify site visitors, the lifetime of those cookies is almost always shorter than what would otherwise be available using first-party cookies instead. In some cases, a third-party cookie will expire in as little as seven days.
 
 Additionally, when third-party data collection is used, some ad blockers restrict traffic to Adobe data collection endpoints altogether. 
 
