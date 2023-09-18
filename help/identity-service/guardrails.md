@@ -26,7 +26,7 @@ The following table outlines static limits applied to identity data.
 | Guardrail | Limit | Notes |
 | --- | --- | --- |
 | (Current behavior) Number of identities in a graph | 150 | The limit is applied at the sandbox level. Once the number of identities reaches 150 or more, no new identities will be added, and the identity graph will not be updated. Graphs may show identities greater than 150 as a result of linking one or more graphs with less than 150 identities. **Note**: The maximum number of identities in an identity graph **for an individual merged profile** is 50. Merged profiles that are based off identity graphs with more than 50 identities are excluded from Real-Time Customer Profile. For more information, read the guide on [guardrails for Profile data](../profile/guardrails.md). |
-| (Upcoming behavior) Number of identities in a graph [!BADGE Beta]{type=Informative} | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity. Deletion is based on identity type and timestamp. The limit is applied at the sandbox level. For more information, read the section on [Understanding the deletion logic](#deletion-logic). |
+| (Upcoming behavior) Number of identities in a graph [!BADGE Beta]{type=Informative} | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity. Deletion is based on identity type and timestamp. The limit is applied at the sandbox level. For more information, read the section on [understanding the deletion logic](#deletion-logic). |
 | Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
 | Number of custom namespaces | None | There are no limits to the number of custom namespaces you can create. |
 | Number of characters for a namespace display name or identity symbol | None | There are no limits to the number of characters of a namespace display name or identity symbol. |
@@ -89,7 +89,7 @@ The following sections outline the implications that the deletion logic has to I
 
 #### Identity Service: Custom namespace identity type changes
 
-The following deletion logic is an upcoming behavior of Identity Service. Please contact your Adobe account team to request a change in identity type if your production sandbox contains:
+Please contact your Adobe account team to request a change in identity type if your production sandbox contains:
 
 * A custom namespace where the person identifiers (such as CRM IDs) are configured as cookie/device identity type.
 * A custom namespace where cookie/device identifiers are configured as cross-device identity type.
