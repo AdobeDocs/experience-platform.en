@@ -116,7 +116,7 @@ alloy("sendEvent", {
 
 |Paramter| Required/Optional |Description|
 |---|---|---|
-|`xdm._experience.decisioning.propositions`| Required | This section defines the manually rendered propositions. You must include the proposition `ID`, `scope`, and `scopeDetails`. See the documentation on how to [manually render personalization](help/edge/personalization/rendering-personalization-content.md#manually) for more information on how to record display notifications for manually rendered content. Manually rendered personalization content must be included in the bottom of page hit. |
+|`xdm._experience.decisioning.propositions`| Required | This section defines the manually rendered propositions. You must include the proposition `ID`, `scope`, and `scopeDetails`. See the documentation on how to [manually render personalization](../personalization/rendering-personalization-content.md#manually) for more information on how to record display notifications for manually rendered content. Manually rendered personalization content must be included in the bottom of page hit. |
 |`xdm._experience.decisioning.propositionEventType`| Required | Set this parameter to `display: 1`. |
 |`xdm`| Optional | Use this section to include all the data you need for the bottom of page event. |
 
