@@ -101,12 +101,24 @@ See the sections below for detailed guidance on how to configure each destinatio
 >title="4C Brand Profile ID"
 >abstract="Enter the numeric ID associated with your 4C Brand Profile. If you do not have this ID, please contact your 4C client services representative."
 
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the customer data fields for the 4C Insights destination.](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
+
+* **[!UICONTROL 4C Brand Profile ID]**: Enter the numeric ID associated with your 4C Brand Profile. If you do not have this ID, please contact your 4C client services representative.
+
 ### [!DNL Acast] {#acast}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_acast_client"
 >title="Client name"
 >abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
+
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the customer data fields for the Acast destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Acast_DestSpecific.png)
+
+* **[!UICONTROL Client name]**: Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters.
 
 ### [!DNL Ampersand.tv] {#ampersand-tv}
 
@@ -115,6 +127,12 @@ See the sections below for detailed guidance on how to configure each destinatio
 >title="Your Company Name"
 >abstract="Your Company Name, as you would like it to be shown to the destination partner. Do not use spaces or special characters."
 
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the customer data fields for the Ampersand destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Ampersand_DestSpecific.png)
+
+* **[!UICONTROL Your Company Name]**: Your Company Name, as you would like it to be shown to the destination partner. Do not use spaces or special characters.
+  
 ### [!DNL Captify] {#captify}
 
 >[!CONTEXTUALHELP]
@@ -122,12 +140,24 @@ See the sections below for detailed guidance on how to configure each destinatio
 >title="Client name"
 >abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the customer data fields for the Captify destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Captify_DestSpecific.png)
+
+* **[!UICONTROL Client name]**: Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters.
+
 ### [!DNL Cardlytics] {#cardlytics}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_cardlytics_client"
 >title="Client name"
 >abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
+
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the customer data fields for the Cardlytics destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Cardlytics_DestSpecific.png)
+
+* **[!UICONTROL Client name]**: Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters.
 
 ### [!DNL Disney (Hulu/ESPN/ABC)] {#disney}
 
@@ -162,6 +192,12 @@ To configure details for the destination, fill in the fields below.
 >title="Client Name"
 >abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the customer data fields for the iHeartMedia destination.](../../assets/catalog/advertising/liveramp-distribution/LR_iHeart_DestSpecific.png)
+
+* **[!UICONTROL Client Name]**: Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters.
+
 ### [!DNL Index Exchange] {#index-exchange}
 
 >[!CONTEXTUALHELP]
@@ -169,12 +205,24 @@ To configure details for the destination, fill in the fields below.
 >title="Account Name"
 >abstract="Your Index Exchange client account name. Do not use spaces or special characters."
 
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the customer data fields for the Index Exchange destination.](../../assets/catalog/advertising/liveramp-distribution/LR_IndexExchange_DestSpecific.png)
+
+* **[!UICONTROL Account Name]**: Your Index Exchange client account name. Do not use spaces or special characters.
+
 ### [!DNL Magnite CTV Platform] {#magnite}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitectv_client"
 >title="Client"
 >abstract="Your Client name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
+
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the customer data fields for the Magnite CTV destination.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteCTV_DestSpecific.png)
+
+* **[!UICONTROL Client]**: Your Client name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters.
 
 ### [!DNL Magnite DV+ (Rubicon Project)] {#magnite-dv}
 
@@ -187,6 +235,13 @@ To configure details for the destination, fill in the fields below.
 >id="platform_destinations_liveramp_distribution_magnitedv+_seatid"
 >title="SeatId"
 >abstract="Magnite DV+ "seatId" provided by your Magnite account manager"
+
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the customer data fields for the Magnite DV+ destination.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
+
+* **[!UICONTROL PartnerId]**: The Rubicon Project Partner ID associated with the publisher who owns the segment/data. Please contact your Rubicon Project account representative if unsure of the value you should use.
+* **[!UICONTROL SeatId]**: Magnite DV+ "seatId" provided by your Magnite account manager
 
 ### [!DNL Nexxen (fka Amobee)] {#nexxen}
 
@@ -210,12 +265,27 @@ To configure details for the destination, fill in the fields below.
 >title="Contact Email"
 >abstract="Enter the best email(s) for Amobee to send data contract details. Most likely this is your own email address, but it can also be an email alias. For multiple recipients, separate using commas (i.e. email1@domain.com,email2@domain.com,etc)."
 
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the customer data fields for the Nexxen destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
+
+* **[!UICONTROL Rate Type]**: Rate type represents the way data usage should be billed. All $0.00 rates should be flat fee. Please confirm with your Amobee representative if you're not sure which rate type to use.
+* **[!UICONTROL Market ID]**: Enter the Market ID where the Amobee data contract should be created. It should be completely numeric. If you are doing "AlwaysOn" syndication across every single market in the Amobee platform, enter -1.
+* **[!UICONTROL Advertiser ID]**: If you're sending data to a single advertiser in the Amobee platform, enter the Amobee Advertiser ID. It should be completely numeric. If you want to make the data available to all advertisers in a market or if these segments are "AlwaysOn", please enter -1.
+* **[!UICONTROL Contact Email]**: Enter the best email(s) for Amobee to send data contract details. Most likely this is your own email address, but it can also be an email alias. For multiple recipients, separate using commas (i.e. email1@domain.com,email2@domain.com,etc).
+
 ### [!DNL One Fox] {#fox}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_fox_client"
 >title="Client"
 >abstract="The name of your company/distribution account as you would like it to appear to the partner. Use your company name by default, but please contact your partner account rep if unsure. No whitespace or other special characters, please (e.g. Company_Name)."
+
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the customer data fields for the One Fox destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
+
+* **[!UICONTROL Client]**: The name of your company/distribution account as you would like it to appear to the partner. Use your company name by default, but please contact your partner account rep if unsure. No whitespace or other special characters, please (e.g. Company_Name).
 
 ### [!DNL Pandora] {#pandora}
 
@@ -239,6 +309,15 @@ To configure details for the destination, fill in the fields below.
 >title="Account name"
 >abstract="The name of your Pandora account. Contact your Pandora account representative if you are not sure what your account name is. Do not use spaces or special characters."
 
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the customer data fields for the Pandora destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Pandora_DestSpecific.png)
+
+* **[!UICONTROL Data provider name]**: The name of your company as you would like it to be shown to Pandora. The name can include a maximum of 40 lowercase and alphanumeric characters (e.g. My_Company).
+* **[!UICONTROL Account representative email address]**: The email address of your Pandora account representative. This address is used to send taxonomy updates. To enter multiple addresses, separate them by commas.
+* **[!UICONTROL Email address]**: This address is used to send taxonomy updates. To enter multiple addresses, separate them by commas.
+* **[!UICONTROL Account name]**: The name of your Pandora account. Contact your Pandora account representative if you are not sure what your account name is. Do not use spaces or special characters.
+
 ### [!DNL Reddit] {#reddit}
 
 >[!CONTEXTUALHELP]
@@ -251,7 +330,14 @@ To configure details for the destination, fill in the fields below.
 >title="Reddit advertiser name"
 >abstract="Your Reddit advertiser name. Do not use spaces or special characters."
 
-### Roku {#roku}
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the customer data fields for the Reddit destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Reddit_DestSpecific.png)
+
+* **[!UICONTROL Reddit advertiser ID]**: Your Reddit advertiser ID. Must begin with "t2_" or "a2_". Contact your Reddit representative if you do not know your advertiser ID.
+* **[!UICONTROL Reddit advertiser name]**: Your Reddit advertiser name. Do not use spaces or special characters.
+
+### [!DNL Roku] {#roku}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_roku_email"
@@ -282,12 +368,25 @@ To configure details for the destination, fill in the fields below.
 >title="Account token"
 >abstract="An alphanumeric identifier that informs Spotify where to port the data and that you are verified to use this workflow. Contact your Spotify account manager to obtain this token."
 
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the supported identifiers for the Spotify destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Spotify_DestSpecific.png)
+
+* **[!UICONTROL Client name]**: Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters.
+* **[!UICONTROL Account token]**: An alphanumeric identifier that informs Spotify where to port the data and that you are verified to use this workflow. Contact your Spotify account manager to obtain this token.
+
 ### [!DNL Taboola] {#taboola}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_taboola_rep_email"
 >title="Account manager email address"
 >abstract="The email address of your Taboola account manager."
+
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the supported identifiers for the Taboola destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
+
+* **[!UICONTROL Account manager email address]**: The email address of your Taboola account manager.
 
 ### [!DNL TargetSpot] {#targetspot}
 
@@ -296,6 +395,12 @@ To configure details for the destination, fill in the fields below.
 >title="Client name"
 >abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the supported identifiers for the TargetSpot destination.](../../assets/catalog/advertising/liveramp-distribution/LR_TargetSpot_DestSpecific.png)
+
+* **[!UICONTROL Client name]**: Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters.
+
 ### [!DNL Teads] {#teads}
 
 >[!CONTEXTUALHELP]
@@ -303,12 +408,24 @@ To configure details for the destination, fill in the fields below.
 >title="Teads ID"
 >abstract="Your Teads ID"
 
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the supported identifiers for the TargetSpot destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Teads_DestSpecific.png)
+
+* **[!UICONTROL Teads ID]**: Your Teads ID
+
 ### [!DNL WB Discovery] {#wb-discovery}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_wb_client"
 >title="Client name"
 >abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
+
+To configure details for the destination, fill in the fields below.
+
+![Platform UI image showing the supported identifiers for the WB Discovery destination.](../../assets/catalog/advertising/liveramp-distribution/LR_WBD_DestSpecific.png)
+
+* **[!UICONTROL Client name]**: Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters.
 
 ### Enable alerts {#enable-alerts}
 
