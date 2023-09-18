@@ -130,11 +130,17 @@ You can also use the pre-set prompts that the AI Assistant provides to get start
 
 ## Scope
 
-AI Assistant can answer queries based on the documentation and your data usage. AI Assistant can also infer context based on the UI page that you are in. It can identify the user account that you are using, the organization that you belong to, and the page that you are viewing on your screen. Furthermore, AI Assistant can recognize the resource (including type and ID) that you are viewing on your screen, as well as your intent, given that you are in the middle of a workflow.
+AI Assistant can answer questions regarding Real-Time CDP and Experience Platform concepts, as well as data usage specific to your user account. AI Assistant can also infer context based on the UI page that you are in. It can identify:
+
+ * The user account that you are using.
+ * The organization that you belong to. 
+ * The page that you are viewing on your screen.
+ * The resource (including type and ID) that you are viewing on your screen.
+ * Given that you are in the process of a particular Experience Platform or Real-Time CDP workflow, AI Assistant can deduce your intent.
 
 ### Documentation
 
-You can ask documentation questions based on Real-Time Customer Data Platform and Audiences. Currently, the documentation index covers Adobe Experience Platform (Real-Time CDP and Audiences). The index is updated periodically.
+Currently, the documentation index covers Adobe Experience Platform (Real-Time CDP and Audiences). The index is updated periodically.
 
 The documentation retrieval model is trained on Experience Platform (Real-Time CDP and Audiences). Questions outside the scope of Adobe Experience Platform such as, questions about other Adobe products like Adobe Target and the Creative Cloud suite cannot be answered.
 
