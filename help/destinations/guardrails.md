@@ -88,9 +88,11 @@ The guardrails below apply to activation through [edge personalization destinati
 
 {style="table-layout:auto"}
 
-### [!BADGE Beta]{type=Informative} Dataset exports {#dataset-exports}
+### Dataset exports {#dataset-exports}
 
 Dataset exports are currently supported in a **[!UICONTROL First Full and then Incremental]** [pattern](/help/destinations/ui/export-datasets.md#scheduling). The guardrails described in this section apply to the first full export that occurs after a dataset export workflow is set up.
+
+<!--
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
@@ -98,7 +100,7 @@ Dataset exports are currently supported in a **[!UICONTROL First Full and then I
 
 {style="table-layout:auto"}
 
-<!--
+-->
 
 ### Dataset Types {#dataset-types}
 
@@ -112,14 +114,14 @@ The dataset schema includes a top level *timestamp* column. Data is ingested in 
 Record datasets are also known as *XDM Individual Profile* datasets in Experience Platform terminology.
 The dataset schema does not include a top level *timestamp* column. Data is ingested in upsert fashion.
 
-The guardrails below are grouped by the format of the exported file, and then further by dataset type.
+The guardrails below are grouped by the format of the exported file (JSON or parquet), and then further by dataset type (timeseries or record).
 
 **Parquet output**
 
 |Dataset type | Compression | Guardrail | Description |
 |---------|----------|---------|-----------|
-| Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
-| Record | N/A | Five billion records per file | Only the data from the last seven days is exported. |
+| Timeseries | N/A | Last 365 days per file | The data from the last calendar year is exported. |
+| Record | N/A | Ten billion records per file | Dataflows for data exports for files with more than ten billion records per file will fail. |
 
 {style="table-layout:auto"}
 
@@ -127,12 +129,12 @@ The guardrails below are grouped by the format of the exported file, and then fu
 
 |Dataset type | Compression | Guardrail | Description |
 |---------|----------|---------|-----------|
-| Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
-| <p>Record</p> | <p><ul><li>Yes</li><li>No</li></ul></p> | <p><ul><li>Five billion records per compressed file</li><li>One million records per uncompressed file</li></ul></p> | <p>The record count of the dataset must be less than five billion for compressed files and one million for uncompressed files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</p> |
+| Timeseries | N/A | Last 365 days per file | The data from the last calendar year is exported. |
+| <p>Record</p> | <p><ul><li>Yes</li><li>No</li></ul></p> | <p><ul><li>Ten billion records per compressed file</li><li>One million records per uncompressed file</li></ul></p> | <p>The record count of the dataset must be less than ten billion for compressed files and one million for uncompressed files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</p> |
 
 {style="table-layout:auto"}
 
--->
+Read more about [exporting datasets](/help/destinations/ui/export-datasets.md).
 
 <!--
 
