@@ -25,7 +25,13 @@ The refresh frequency is automatically determined based on the lookback period o
 
 ## How are computations affected by Experience Event data expirations?
 
-Computed attribute calculations are based on the defined lookback period and the Experience Events falling within that period of time. As a result, these calculations are **not** affected by the Experience Event data expirations. However, to ensure the accuracy of your computed attributes, your lookback period should remain **within** the bounds of your data expirations.
+Computed attribute calculations are backfilled for the defined lookback duration in the first time evaluation and updated based on incremental events for subsequent updates. As a result, these calculations are **not** affected by the Experience Event data expirations of the old data after the first evaluation. 
+
+For example, if you create a computed attribute that's evaluated monthly with a three month lookback period, for the first evaluation, the computed attribute will compute for all events within that three month lookback period. Even if the Experience Event dataset has a data expiry of one month, this data expiration will **not** affect the monthly computed attribute refresh, since the next month's evaluation run will incrementally aggregate events and update the computation.
+
+>[!NOTE]
+>
+>Expired data **cannot** be backfilled later by a computed attribute. Event dataset data expiry **may** limited the ability to validate the computed attribute's value at a later point in time. To validate the computed attribute value, your lookback period should remain **within** the bounds of the data expirations.
 
 ## Can I create a computed attribute based on another computed attribute?
 
@@ -33,7 +39,7 @@ Since computed attributes are created using Experience Event fields and resides 
 
 ## Are there any limits to the number of computed attributes I can create?
 
-Yes, there is a limit on the number of computed attributes you can create. Please contact your Adobe representative for more information.
+Yes, there is a limit on the number of computed attributes you can create. Please refer to the product description or contact the Adobe Account Team for more information.
 
 ## Are there any downstream implications for disabling a computed attribute?
 
@@ -65,6 +71,10 @@ Like any other profile attribute, computed attributes are available and can be u
 
 Computed attributes automatically derives data usage labels from the source fields and datasets that were used to define the computed attributes. This ensures that your behavioral data is appropriately used.
 
-## How do I access computed attributes?
+## How do I get access computed attributes?
 
-To access computed attributes, you'll need to have the appropriate permissions. For more information on the permissions required, please read the [access control documentation](../../access-control/home.md).
+To get access computed attributes, you'll need to have the appropriate permissions. For more information on the permissions required, please read the [access control documentation](../../access-control/home.md).
+
+## How do I use computed attributes with Adobe Journey Optimizer?
+
+To use computed attributes in journeys, you'll need to add the `SystemComputedAttributes` field group to the Experience Platform data source. For more information on configuring the Experience Platform data source, please read the [Adobe Experience Platform data source guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=en).
