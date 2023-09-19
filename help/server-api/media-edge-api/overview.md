@@ -21,7 +21,7 @@ Both [Media Collection APIs](https://experienceleague.adobe.com/docs/media-analy
 
 * It is the easiest way to incorporate XDM schemas into your data flow. 
 
-* Calls are directed from a media player directly to the [Experience Edge Platform Network](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=en).
+* Calls are directed from a media player directly to the [Experience Platform Edge Network](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=en).
 
 * It tracks media events efficiently with a minimum of cross-server calls. 
 
