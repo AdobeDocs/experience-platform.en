@@ -1,6 +1,6 @@
 ---
 title: Google Cloud Platform Event Forwarding Extension
-description: This Adobe Experience Platform event forwarding extension sends Adobe Experience Edge Network events to Google Cloud Platform.
+description: This Adobe Experience Platform event forwarding extension sends Edge Network events to Google Cloud Platform.
 last-substantial-update: 2023-06-21
 ---
 # [!DNL Google Cloud Platform] event forwarding extension
