@@ -25,18 +25,18 @@ Understand from the table below which dataset types you can export depending on 
   <tr>
     <th>Application/Add-on</th>
     <th>Tier</th>
-    <th>Datasets</th>
+    <th>Datasets available for export</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td rowspan="2">Real-Time CDP</td>
     <td>Prime</td>
-    <td>(Profile and Experience Event?) DatasetsDatasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</td>
+    <td>Profile and Experience Event datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>(Profile and Experience Event?) Datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</li><li> System-generated datasets such as the <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">Profile Snapshot Dataset</a>.</li></td>
+    <td><ul><li>Profile and Experience Event datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</li><li> System-generated datasets such as the <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">Profile Snapshot Dataset</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
@@ -205,11 +205,11 @@ To remove a dataset from an existing dataflow, follow the steps below:
 
 ## Dataset export entitlements {#licensing-entitlement}
 
-Refer to the product description documents to understand how many profiles you are entitled to export, per year. View the Real-Time CDP Product Description [here](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Refer to the product description documents to understand how many profiles you are entitled to export for each Experience Platform application, per year. For example, you can view the Real-Time CDP Product Description [here](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
-Note that the entitlements for different applications are not additive. This means that if you purchase Real-Time CDP Ultimate and Adobe Journey Optimizer Ultimate, the profile export entitlement will be the larger of the two entitlements. 
+Note that the data export entitlements for different applications are not additive. For example, this means that if you purchase Real-Time CDP Ultimate and Adobe Journey Optimizer Ultimate, the profile export entitlement will be the larger of the two entitlements, as per the product descriptions. 
 
-On the other hand, if you purchase add-ons such as Data Distiller, the profile export limits that you are entitled to are the sum of the product tier and the add-on. 
+On the other hand, if you purchase add-ons such as Data Distiller, the data export limit that you are entitled to represents the sum of the product tier and the add-on. 
 
 You can view and track your profile exports against your contractual limits in the licensing dashboard. 
 
