@@ -1,6 +1,6 @@
 ---
 title: LiveRamp - Distribution Connection
-description: Learn how to use the LiveRamp - Distribution connector to orchestration of audiences previously onboarded into LiveRamp into downstream advertising destinations.
+description: Learn how to use the LiveRamp - Distribution connector to orchestrate and activate audiences previously onboarded into LiveRamp, to downstream advertising destinations.
 ---
 
 # [!DNL LiveRamp - Distribution] connection {#liveramp-onboarding}
