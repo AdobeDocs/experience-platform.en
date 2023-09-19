@@ -16,7 +16,7 @@ To help troubleshoot unsuccessful responses, errors are accompanied by a respons
 ## Validating session starts
 
 Most problems with Session Start requests result in a 207 Multi-Status response.
-The payload is similar to Experience Edge Network Server API's non-fatal errors. All
+The payload is similar to [Server API](../error-handling.md)'s non-fatal errors. All
 Media Analytics errors have the following type:  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. The numbers displayed in the response correspond to the error status.
 
 The following example shows a response body for a Session Start request that both lacks a mandatory field and has an invalid one.
@@ -59,7 +59,7 @@ In the example above, both problems are noted by `name` and `reason` under `deta
 
 ## Validating events 
 
-Most invalid event requests result in a 400 Bad Request response. In these cases, the payload is similar to Experience Edge Network Server API fatal errors. 
+Most invalid event requests result in a 400 Bad Request response. In these cases, the payload is similar to Server API fatal errors. 
 
 For event requests, the Media Edge API service includes additional checks that are not captured in the XDM model itself. This includes a check that the path `eventType` matches the request payload `eventType`.
 
