@@ -1,8 +1,6 @@
 ---
-title: LiveRamp - Distribution connection
-description: Learn how to use the LiveRamp - Distribution connector to activate audiences previously onboarded into LiveRamp, to other advertising destinations.
-hide: yes
-hidefromtoc: yes
+title: LiveRamp - Distribution Connection
+description: Learn how to use the LiveRamp - Distribution connector to orchestration of audiences previously onboarded into LiveRamp into downstream advertising destinations.
 ---
 
 # [!DNL LiveRamp - Distribution] connection {#liveramp-onboarding}
@@ -11,7 +9,7 @@ The [!DNL LiveRamp - Distribution] connection enables you to activate audiences 
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by LiveRamp. For any inquiries or update requests, please contact LiveRamp directly [here](mailto:example@email.com).
+>This destination connector and documentation page are created and maintained by LiveRamp. For any inquiries or update requests, please contact LiveRamp directly [here](mailto:adobertcdp@liveramp.com).
 
 ## Supported destinations {#supported-destinations}
 
