@@ -290,21 +290,6 @@ To configure details for the destination, fill in the fields below.
 ### [!DNL Pandora] {#pandora}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_liveramp_distribution_pandora_data_provider_name"
->title="Data provider name"
->abstract="The name of your company as you would like it to be shown to Pandora. The name can include a maximum of 40 lowercase and alphanumeric characters (e.g. My_Company)."
-
->[!CONTEXTUALHELP]
->id="platform_destinations_liveramp_distribution_pandora_rep_email"
->title="Account representative email address"
->abstract="The email address of your Pandora account representative. This address is used to send taxonomy updates. To enter multiple addresses, separate them by commas."
-
->[!CONTEXTUALHELP]
->id="platform_destinations_liveramp_distribution_email"
->title="Email address"
->abstract="This address is used to send taxonomy updates. To enter multiple addresses, separate them by commas."
-
->[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_pandora_account_name"
 >title="Account name"
 >abstract="The name of your Pandora account. Contact your Pandora account representative if you are not sure what your account name is. Do not use spaces or special characters."
