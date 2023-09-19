@@ -90,7 +90,7 @@ After you have successfully connected to your LiveRamp account, enter the requir
 
 ## Destination-specific settings {#destination-settings}
 
-Each of the destinations [supported](#supported-destinations) by [!DNL LiveRamp - Onboarding] requires you to fill in specific configuration options.
+Each of the destinations [supported](#supported-destinations) by [!DNL LiveRamp - Distribution] requires you to fill in specific configuration options.
 
 See the sections below for detailed guidance on how to configure each destination.
 
