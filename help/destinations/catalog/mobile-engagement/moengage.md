@@ -1,43 +1,39 @@
 ---
 keywords: mobile;mobile engagement destinations;moengage;moengage mobile engagement destination
 title: Moengage connection
-description: Adobe’s Real Time Customer Data Platform helps companies bring together known and anonymous data from multiple enterprise sources to create customer profiles. These profiles can then be used to provide personalized experiences across all channels and devices in real-time.
+description: [!DNL Moengage]  is a customer engagement platform that powers customer-centric interactions between consumers and brands in real time.
 ---
 
 # [!DNL Moengage] connection
 
 ## Overview {#overview}
 
-[!DNL Moengage]’s Real Time Customer Data Platform helps companies bring together known and anonymous data from multiple enterprise sources to create customer profiles. These profiles can then be used to provide personalized experiences across all channels and devices in real-time.
+[!DNL Moengage] destination allows you to connect and map your Adobe data (user attributes, segments and events) to MoEngage in real-time. Customers can then act on this data, delivering personalized, targeted experience.
+With Adobe, the integration is very simple and intuitive. Simply take any Adobe user profile, and map it to a MoEngage user attribute.
 
 ## Use cases {#use-cases}
 
-[!DNL Moengage] and Adobe RT CDP integration allows you  to connect and map their Adobe data to MoEngage. Customers can then act on this data, delivering personalized, targeted experience
+A marketer wants to target a user segment (built in Adobe Experience Platform) via [!DNL Moengage] campaigns. Also, he wants to personalize campaign content based on attributes from the Adobe Experience Platform profiles. With this integration, users and attributes are updated in MoEngage as soon as segments and profiles are updated in Adobe Experience Platform
 
 ## Prerequisites {#prerequisites}
 
 Before you can send your Adobe Experience Platform data to [!DNL Moengage], you must:
 
-* Access to your [!DNL Moengage] and Adobe Experience Platform.
-* [!DNL Moengage] data API ID - This can be accessed within the MoEngage Dashboard > Settings >> APIs >> General Settings.
-* [!DNL Moengage]  data App Key - This can be created within the MoEngage Dashboard > Settings >> APIs >> General Settings.
-* MoEngage data cluster.
+* To use the MoEngage destination with Adobe Experience Platform, users must first have access to their [!DNL Moengage] Account. Visit the following page to sign up or login to your MoEngage account: https://app.moengage.com
 
 
 ## Supported identities {#supported-identities}
 
 [!DNL Moengage] supports the activation of identities described in the table below.
 
-|Target Identity| Description                                                                                                                                                            | Considerations                                                                         |
-|---|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-|user_id| Custom [!DNL Moengage] id for known profile. Map registered profile attribute of adobe to this identifier, which is useful for tracking profiles in [!DNL Moengage]    | This identifier supports string type. Either one of user_id or anonymous_id is required |
-|anonymous_id| Custom [!DNL Moengage] id for unknown (anonymous) profile. Map anonymous profile attribute of adobe to this identifier | This identifier supports string type. Either one of user_id or anonymous_id is required |
+|Target Identity| Description                                                                              | Considerations                                                                         |
+|---|------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+|user_id| Unique identifier that uniquely identifies a user profile in the [!DNL Moengage] system. | This identifier supports string type. Either one of user_id or anonymous_id is required |
+|anonymous_id| Another identifier for an unknown user profile - meaning a profile that does not exist in the system. | This identifier supports string type. Either one of user_id or anonymous_id is required  |
 
 {style="table-layout:auto"}
 
 ## Export type and frequency {#export-type-frequency}
-
-*In the table, keep only the lines that correspond to your destination. You should have one line for Export type and one line for Export frequency. Delete the values that don't apply to your destination.*
 
 Refer to the table below for information about the destination export type and frequency.
 
@@ -65,12 +61,15 @@ To authenticate to the destination, fill in the required fields and select **[!U
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
+![Moengage Destination Authentication](../../assets/catalog/mobile-engagement/moengage/settings.png)
+*  **[!UICONTROL USERNAME]**: DATA APP ID of  settings page of [!DNL Moengage] dashboard.
+*  **[!UICONTROL PASSWORD]**: DATA APP KEY from settings page of [!DNL Moengage] dashboard.
 
 ![Moengage Destination Authentication](../../assets/catalog/mobile-engagement/moengage/destination_details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Account ID]**: Your app *data center*.
+*  **[!UICONTROL Region]**: Your app *data center*.
 
 ### Enable alerts {#enable-alerts}
 
@@ -92,7 +91,7 @@ To correctly send your audience data from [!DNL Adobe Experience Platform] to th
 
 Mapping consists of creating a link between your [!DNL Experience Data Model] (XDM) schema fields in your [!DNL Platform] account, and their corresponding equivalents from the target destination.
 
-To correctly map your XDM fields to the [!DNL Braze] destination fields, follow these steps:
+To correctly map your XDM fields to the [!DNL Moengage] destination fields, follow these steps:
 
 In the [!UICONTROL Mapping] step, click **[!UICONTROL Checkbox]**.
 
@@ -102,7 +101,7 @@ In the [!UICONTROL Mapping] step, click **[!UICONTROL Add new mapping]**.
 
 ![Moengage Destination Add Mapping](../../assets/catalog/mobile-engagement/moengage/mapping.png)
 
-In the [!UICONTROL Source Field] section, click the arrow button next to the empty field.
+In the [!UICONTROL Source Field] section, select the arrow button next to the empty field.
    
 ![Moengage Destination Source Mapping](../../assets/catalog/mobile-engagement/moengage/mapping-source.png)
 
@@ -118,8 +117,8 @@ In the [!UICONTROL Target Field] section, click the mapping icon to the right of
 ![Moengage Destination Target Mapping](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
 In the [!UICONTROL Select target field] window, you can choose between two categories of target fields:
-* [!UICONTROL Select identity namespace]: Use this option to map [!DNL Platform] identity namespaces to [!DNL Braze] identity namespaces.
-* [!UICONTROL Select custom attributes]: Use this option to map XDM attributes to custom [!DNL Braze] attributes that you defined in your [!DNL Braze] account. <br> You can also use this option to rename existing XDM attributes into [!DNL Braze]. For instance, mapping a `lastName` XDM attribute to a custom `Last_Name` attribute in [!DNL Braze], will create the `Last_Name` attribute in [!DNL Braze], if it doesn't already exist, and map the `lastName` XDM attribute to it.
+* [!UICONTROL Select identity namespace]: Use this option to map [!DNL Platform] identity namespaces to [!DNL Moengage] identity namespaces.
+* [!UICONTROL Select custom attributes]: Use this option to map XDM attributes to custom [!DNL Moengage] attributes that you defined in your [!DNL Moengage] account. <br> You can also use this option to rename existing XDM attributes into [!DNL Moengage]. For instance, mapping a `lastName` XDM attribute to a custom `Last_Name` attribute in [!DNL Moengage], will create the `Last_Name` attribute in [!DNL Moengage], if it doesn't already exist, and map the `lastName` XDM attribute to it.
   
 ![Moengage Destination Target Mapping Fields](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)
 
@@ -133,7 +132,9 @@ To add more mappings, repeat the previous steps.
 
 ## Exported data / Validate data export {#exported-data}
 
-To verify if data has been exported successfully to the [!DNL Moengage] destination, check your [!DNL Moengage] account. [!DNL Adobe Experience Platform] segments are exported to [!DNL Moengage].
+To verify if data has been exported successfully to the [!DNL Moengage] destination, go to the user profile on your [!DNL Moengage] account. You will see a user attribute called AEP Segment. 
+
+![Moengage Destination Mapping Complete](../../assets/catalog/mobile-engagement/moengage/validation.png)
 
 ## Data usage and governance {#data-usage-governance}
 
