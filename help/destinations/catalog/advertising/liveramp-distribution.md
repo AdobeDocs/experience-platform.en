@@ -345,17 +345,11 @@ To configure details for the destination, fill in the fields below.
 >title="Client name"
 >abstract="Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
->[!CONTEXTUALHELP]
->id="platform_destinations_liveramp_distribution_spotify_account_token"
->title="Account token"
->abstract="An alphanumeric identifier that informs Spotify where to port the data and that you are verified to use this workflow. Contact your Spotify account manager to obtain this token."
-
 To configure details for the destination, fill in the fields below.
 
 ![Platform UI image showing the supported identifiers for the Spotify destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Spotify_DestSpecific.png)
 
 * **[!UICONTROL Client name]**: Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters.
-* **[!UICONTROL Account token]**: An alphanumeric identifier that informs Spotify where to port the data and that you are verified to use this workflow. Contact your Spotify account manager to obtain this token.
 
 ### [!DNL Taboola] {#taboola}
 
