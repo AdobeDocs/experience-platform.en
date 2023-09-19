@@ -26,7 +26,7 @@ feature: Profiles
   * [[!DNL Profile] UI guide](ui/user-guide.md)
   * [[!DNL Profile] detail customization](ui/profile-customization.md)
   * [Prospect profiles](ui/prospect-profile.md)
-* (Beta) Computed attributes {#computed-attributes}
+* Computed attributes {#computed-attributes}
   * [Overview](computed-attributes/overview.md)
   * [Computed attributes API guide](computed-attributes/api.md)
   * [Computed attributes UI guide](computed-attributes/ui.md)
