@@ -21,7 +21,7 @@ In other terms, data is routed to an edge by a projection, with the **projection
 
 ## Available regions {#regions}
 
-The following regions are available for usage with Edge:
+The following regions are available for usage with edge:
 
 - VA6
 - OR2
@@ -35,7 +35,7 @@ All of these regions are valid options for profiles to land in.
 
 ## Available services {#services}
 
-The following services are enabled for Profile lookup on Edge:
+The following services are enabled for Profile lookup on edge:
 
 - [Edge Profile Configuration Service](#edge-profile-configuration-service)
 - [Projection Worker Service](#mepw)
