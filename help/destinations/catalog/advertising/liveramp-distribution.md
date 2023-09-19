@@ -358,11 +358,16 @@ To configure details for the destination, fill in the fields below.
 >title="Account manager email address"
 >abstract="The email address of your Taboola account manager."
 
+>id="platform_destinations_liveramp_distribution_taboola_seg_type"
+>title="Segment Type"
+>abstract="The segment type (1st Party only available at this time)."
+
 To configure details for the destination, fill in the fields below.
 
 ![Platform UI image showing the supported identifiers for the Taboola destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
 
 * **[!UICONTROL Account manager email address]**: The email address of your Taboola account manager.
+* **[!UICONTROL Segment Type]**: The segment type (1st Party only available at this time).
 
 ### [!DNL TargetSpot] {#targetspot}
 
