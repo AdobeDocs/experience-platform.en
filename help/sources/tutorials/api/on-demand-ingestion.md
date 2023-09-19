@@ -73,9 +73,9 @@ curl -X POST \
 | Parameter | Description |
 | --- | --- |
 | `flowId` | The ID of the flow in which your flow run will be created against.  |
-| `params.startTime` | An integer that defines the start time of the run. The value is represented in unix epoch time. |
-| `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
-| `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.startTime` | The scheduled time of when the on-demand flow run will begin. This value is represented in unix time. |
+| `params.windowStartTime` | The earliest date and time that data will be retrieved from. This value is represented in unix time. |
+| `params.windowEndTime` | The date and time that data will be retrieved up to. This value is represented in unix time. |
 | `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
 | `params.deltaColumn.name` | The name of the delta column. |
 
@@ -155,9 +155,9 @@ curl -X POST \
 | Parameter | Description |
 | --- | --- |
 | `flowId` | The ID of the flow in which your flow run will be created against.  |
-| `params.startTime` | The scheduled start time in UTC of when the on-demand dataflow will start. |
-| `params.windowStartTime` | The starting date and time from which data will be pulled from. |
-| `params.windowEndTime` | The ending date and time from which data will be pulled until. |
+| `params.startTime` | The scheduled time of when the on-demand flow run will begin. This value is represented in unix time. |
+| `params.windowStartTime` | The earliest date and time that data will be retrieved from. This value is represented in unix time. |
+| `params.windowEndTime` | The date and time that data will be retrieved up to. This value is represented in unix time. |
 
 **Response**
 
