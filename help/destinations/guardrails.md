@@ -140,7 +140,19 @@ The guardrails below are grouped by the format of the exported file (JSON or par
 
 Exporting datasets in an-hoc manner is currently supported via API only.
 
-The guardrails below are grouped by the format of the exported file (JSON or parquet), and then further by dataset type (timeseries or record).
+The guardrails below are the same whether you are exporting parquet of JSON files ad-hoc. 
+
+**Timeseries** 
+
+TABLE UPCOMING
+
+**Record** 
+
+|Compression| Guardrail | Description |
+---------|----------|---------|
+| Yes | Ten billion records per file | Same guardrails and comments as for scheduled dataset exports. |
+| No | One million records per file | Same guardrails and comments as for scheduled dataset exports. |
+
 
 Read more about [exporting datasets](/help/destinations/ui/export-datasets.md).
 
