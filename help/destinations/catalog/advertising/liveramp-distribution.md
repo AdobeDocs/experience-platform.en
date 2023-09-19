@@ -298,9 +298,6 @@ To configure details for the destination, fill in the fields below.
 
 ![Platform UI image showing the customer data fields for the Pandora destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Pandora_DestSpecific.png)
 
-* **[!UICONTROL Data provider name]**: The name of your company as you would like it to be shown to Pandora. The name can include a maximum of 40 lowercase and alphanumeric characters (e.g. My_Company).
-* **[!UICONTROL Account representative email address]**: The email address of your Pandora account representative. This address is used to send taxonomy updates. To enter multiple addresses, separate them by commas.
-* **[!UICONTROL Email address]**: This address is used to send taxonomy updates. To enter multiple addresses, separate them by commas.
 * **[!UICONTROL Account name]**: The name of your Pandora account. Contact your Pandora account representative if you are not sure what your account name is. Do not use spaces or special characters.
 
 ### [!DNL Reddit] {#reddit}
