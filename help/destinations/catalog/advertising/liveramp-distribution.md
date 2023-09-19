@@ -17,7 +17,7 @@ The [!DNL LiveRamp - Distribution] connection enables you to activate audiences 
 
 * [[!DNL 4C Insights]](#insights)
 * [[!DNL Acast]](#acast)
-* [[!DNL Nexxen]](#amobee)
+* [[!DNL Nexxen]](#nexxen)
 * [[!DNL Ampersand.tv]](#ampersand-tv)
 * [[!DNL Captify]](#captify)
 * [[!DNL Cardlytics]](#cardlytics)
