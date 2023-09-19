@@ -114,6 +114,8 @@ The dataset schema includes a top level *timestamp* column. Data is ingested in 
 Record datasets are also known as *XDM Individual Profile* datasets in Experience Platform terminology.
 The dataset schema does not include a top level *timestamp* column. Data is ingested in upsert fashion.
 
+#### Scheduled dataset exports
+
 The guardrails below are grouped by the format of the exported file (JSON or parquet), and then further by dataset type (timeseries or record).
 
 **Parquet output**
@@ -133,6 +135,12 @@ The guardrails below are grouped by the format of the exported file (JSON or par
 | <p>Record</p> | <p><ul><li>Yes</li><li>No</li></ul></p> | <p><ul><li>Ten billion records per compressed file</li><li>One million records per uncompressed file</li></ul></p> | <p>The record count of the dataset must be less than ten billion for compressed files and one million for uncompressed files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</p> |
 
 {style="table-layout:auto"}
+
+#### Ad-hoc dataset exports
+
+Exporting datasets in an-hoc manner is currently supported via API only.
+
+The guardrails below are grouped by the format of the exported file (JSON or parquet), and then further by dataset type (timeseries or record).
 
 Read more about [exporting datasets](/help/destinations/ui/export-datasets.md).
 
