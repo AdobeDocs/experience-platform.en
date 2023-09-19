@@ -17,26 +17,26 @@ The [!DNL LiveRamp - Distribution] connection enables you to activate audiences 
 
 [!DNL LiveRamp - Distribution] currently supports audience activation to the following platforms:
 
-* [!DNL 4C Insights]
-* [!DNL Acast]
-* [!DNL Amobee]
-* [!DNL Ampersand.tv]
-* [!DNL Captify]
-* [!DNL Cardlytics]
+* [!DNL 4C Insights] (#insights)
+* [!DNL Acast] (#acast)
+* [!DNL Nexxen] (#amobee)
+* [!DNL Ampersand.tv] (#ampersand-tv)
+* [!DNL Captify] (#captify)
+* [!DNL Cardlytics] (#cardlytics)
 * [[!DNL Disney (Hulu/ESPN/ABC)]](#disney)
-* [!DNL iHeartMedia]
-* [!DNL Index Exchange]
-* [!DNL Magnite CTV Platform]
-* [!DNL Magnite DV+ (Rubicon Project)]
-* [!DNL One Fox]
-* [!DNL Pandora]
-* [!DNL Reddit]
+* [!DNL iHeartMedia] (#iheartmedia)
+* [!DNL Index Exchange] (#index-exchange)
+* [!DNL Magnite CTV Platform] (#magnite)
+* [!DNL Magnite DV+ (Rubicon Project)] (#magnite-dv)
+* [!DNL One Fox] (#fox)
+* [!DNL Pandora] (#pandora)
+* [!DNL Reddit] (#reddit)
 * [[!DNL Roku]](#roku)
-* [!DNL Spotify]
-* [!DNL Taboola]
-* [!DNL TargetSpot]
-* [!DNL Teads]
-* [!DNL WB Discovery]
+* [!DNL Spotify]v(#spotify)
+* [!DNL Taboola] (#taboola)
+* [!DNL TargetSpot] (#targetspot)
+* [!DNL Teads] (#teads)
+* [!DNL WB Discovery] (#wb-discovery)
 
 ## Use cases {#use-cases}
 
