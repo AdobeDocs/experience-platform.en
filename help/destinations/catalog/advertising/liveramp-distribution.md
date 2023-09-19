@@ -134,7 +134,9 @@ To configure details for the destination, fill in the required and optional fiel
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="Advertiser data destination terms agreement"
 >abstract="Type in `I AGREE` to confirm the acknowledgement and agreement to the Disney advertiser data terms."
->additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement"
+
+<!-- 
+>additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement" -->
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_client"
