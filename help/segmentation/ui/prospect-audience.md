@@ -2,8 +2,6 @@
 title: Prospect Audiences
 description: Learn how to create and use prospect audiences to target unknown customers using third-party information. 
 type: Documentation
-hide: true
-hidefromtoc: true
 ---
 
 # Prospect audiences
