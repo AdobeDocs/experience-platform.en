@@ -72,7 +72,7 @@ When finished, select **[!UICONTROL Save]**.
 
 Once all your data elements are set up, you can start creating event forwarding rules that determine when and how your events will be sent to [!DNL Twitter].
 
-Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Twitter]**. To send Adobe Experience Edge Network events to [!DNL Twitter], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send Web Conversion].**
+Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Twitter]**. To send Edge Network events to [!DNL Twitter], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send Web Conversion].**
 
 After selection, additional controls appear to further configure the event. You need to map the [!DNL Twitter] event properties to the data elements that you previously created. For more information, refer to the [[!DNL Twitter] Web Conversions API](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 
