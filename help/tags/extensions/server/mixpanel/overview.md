@@ -1,7 +1,7 @@
 ---
 keywords: event forwarding extension;mixpanel;mixpanel event forwarding extension
 title: Mixpanel Track Events API Event Forwarding Extension
-description: This Adobe Experience Platform event forwarding extension sends Adobe Experience Edge Network events to Mixpanel.
+description: This Adobe Experience Platform event forwarding extension sends Edge Network events to Mixpanel.
 last-substantial-update: 2023-03-29
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
 ---
@@ -25,7 +25,7 @@ The analytics teams can then leverage [!DNL Mixpanel's] capabilities to process 
 
 For more information on use cases specific to [!DNL Mixpanel], refer to the following documentation:
 
-* [New to [!DNL Mixpanel]](https://help.mixpanel.com/hc/en-us/sections/360008533532-New-to-Mixpanel)
+* [New to [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
 * [What is [!DNL Mixpanel]?](https://developer.mixpanel.com/docs)
 * [12 must-try [!DNL Mixpanel] features](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
@@ -68,7 +68,7 @@ Select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL 
 
 ## Create a [!DNL Send Event] rule
 
-Start creating a new rule in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Mixpanel]**. Next, set the action type to **[!UICONTROL Track Event]** to send Adobe Experience Edge Network events to [!DNL Mixpanel].
+Start creating a new rule in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Mixpanel]**. Next, set the action type to **[!UICONTROL Track Event]** to send Edge Network events to [!DNL Mixpanel].
 
 | Input | Description | Required |
 | --- | --- | --- |

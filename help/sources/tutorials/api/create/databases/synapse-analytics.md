@@ -1,12 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Synapse;synapse;Azure Synapse Analytics
-solution: Experience Platform
 title: Create an Azure Synapse Analytics Base Connection Using the Flow Service API
-type: Tutorial
 description: Learn how to connect Azure Synapse Analytics to Adobe Experience Platform using the Flow Service API.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
 ---
 # Create an [!DNL Azure Synapse Analytics] base connection using the [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>The [!DNL Azure Synapse Analytics] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
@@ -54,26 +56,26 @@ The following request creates a base connection for [!DNL Synapse]:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Connection for Azure Synapse Analytics",
-        "description": "Connection for Azure Synapse Analytics",
-        "auth": {
-            "specName": "Connection String Based Authentication",
-            "params": {
-                "connectionString": "Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30"
-            }
-        },
-        "connectionSpec": {
-            "id": "a49bcc7d-8038-43af-b1e4-5a7a089a7d79",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Connection for Azure Synapse Analytics",
+      "description": "Connection for Azure Synapse Analytics",
+      "auth": {
+          "specName": "Connection String Based Authentication",
+          "params": {
+              "connectionString": "Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30"
+          }
+      },
+      "connectionSpec": {
+          "id": "a49bcc7d-8038-43af-b1e4-5a7a089a7d79",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Parameter | Description |

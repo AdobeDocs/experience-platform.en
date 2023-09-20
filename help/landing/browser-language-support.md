@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
 solution: Experience Platform
 title: Browser and Language Support for the Experience Platform UI
 description: Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
@@ -32,7 +31,13 @@ The Platform UI is currently available in the following languages:
 * English
 * French
 * German
+* Spanish
 * Japanese
+* Italian
+* Korean
+* Chinese (Simplified)
+* Chinese (Traditional)
+* Brazilian Portuguese
 
 ### Change default language
 
@@ -40,9 +45,11 @@ Your default UI language is determined by the region specified in your user prof
 
 To change your language:
 
-1. Select the current language in the footer of the [!DNL Experience Platform] user interface.
-2. In your profile settings, select **[!UICONTROL Change Region]**.
-3. Select your region. 
+1. Log in to your Experience Platform account.
+1. Press `Ctrl + i` to bring up the account information menu.
+1. Go to **[!UICONTROL Preferred Languages]**.
+1. Select your first and second language preferences.
+1. Select **[!UICONTROL Save]** and close the window.
 
 >[!NOTE]
 >

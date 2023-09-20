@@ -5,6 +5,10 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 ---
 # Release notes for tags and event forwarding
 
+>[!IMPORTANT]
+>
+>Moving forward the tags and event forwarding release notes will no longer be provided on this page. Please refer to the latest [Adobe Experience Platform release notes](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en#data-collection) for detailed tags and event forwarding updates.
+
 ## April 26, 2023
 
 * **OAuth JWT Secret**: The [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) allows customers to use Adobe and Google Service tokens to support server-to-server interactions in Event Forwarding.
@@ -44,7 +48,7 @@ New extensions have been released:
 
 ## October 26, 2022
 
-* **Sensitive data handling for datastreams**: Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../edge/datastreams/overview.md#sensitive) for more information.
+* **Sensitive data handling for datastreams**: Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../datastreams/overview.md#sensitive) for more information.
 * **[!DNL Splunk] extension for event forwarding**: You can now send data to [!DNL Splunk] using an [event forwarding](../ui/event-forwarding/overview.md) extension. See the [[!DNL Splunk] extension overview](../extensions/server/splunk/overview.md) for more information.
 * **[!DNL Zendesk] extension for event forwarding**: You can now send data to [!DNL Zendesk] using an [event forwarding](../ui/event-forwarding/overview.md) extension. See the [[!DNL Zendesk] extension overview](../extensions/server/zendesk/overview.md) for more information.
 

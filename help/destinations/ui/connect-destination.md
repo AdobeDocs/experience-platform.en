@@ -14,7 +14,7 @@ exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 
 ## Overview {#overview}
 
-Before you can send audience data to a destination, you must set up a connection to your destination platform. This article shows you how to set up a new destination connection, to which you can then activate segments or export datasets using the Adobe Experience Platform user interface.
+Before you can send audience data to a destination, you must set up a connection to your destination platform. This article shows you how to set up a new destination connection, to which you can then activate audiences or export datasets using the Adobe Experience Platform user interface.
 
 ## Find the desired destination in the catalog {#setup}
 
@@ -22,23 +22,23 @@ Before you can send audience data to a destination, you must set up a connection
 
    ![Screenshot of the Experience Platform UI, showing the destinations catalog page.](../assets/ui/connect-destinations/catalog.png)
 
-2. Destination cards in the catalog might have different action controls, depending on whether you have an existing connection to the destination and whether the destinations support activating segments, exporting datasets, or both. You might see any of the following controls for destination cards: 
+2. Destination cards in the catalog might have different action controls, depending on whether you have an existing connection to the destination and whether the destinations support activating audiences, exporting datasets, or both. You might see any of the following controls for destination cards: 
 
-   * **[!UICONTROL Set up]**. A connection first needs to be set up to this destination before you can activate segments or export datasets.
-   * **[!UICONTROL Activate]**. A connection has already been set up to this destination. This destination supports segment activation and dataset exports.
-   * **[!UICONTROL Activate segments]**. A connection has already been set up to this destination. This destination supports segment activation only.
+   * **[!UICONTROL Set up]**. A connection first needs to be set up to this destination before you can activate audiences or export datasets.
+   * **[!UICONTROL Activate]**. A connection has already been set up to this destination. This destination supports audience activation and dataset exports.
+   * **[!UICONTROL Activate audiences]**. A connection has already been set up to this destination. This destination supports audience activation only.
    
    For more information about the difference between these controls, you can also refer to the [Catalog](../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.
 
-   Select either **[!UICONTROL Set up]**, **[!UICONTROL Activate]**, or **[!UICONTROL Activate segments]**, depending on which control is available to you.
+   Select either **[!UICONTROL Set up]**, **[!UICONTROL Activate]**, or **[!UICONTROL Activate audiences]**, depending on which control is available to you.
 
    ![Screenshot of the Experience Platform UI, showing the destinations catalog page with the Set up control highlighted.](../assets/ui/connect-destinations/set-up.png)
 
-   ![Screenshot of the Experience Platform UI, showing the destinations catalog page with the Activate segments control highlighted.](../assets/ui/connect-destinations/activate-segments.png)
+   ![Screenshot of the Experience Platform UI, showing the destinations catalog page with the Activate audiences control highlighted.](../assets/ui/connect-destinations/activate-segments.png)
 
 3. If you selected **[!UICONTROL Set up]**, skip to the next step, to [authenticate](#authenticate) to the destination. 
    
-   If you selected **[!UICONTROL Activate]**, **[!UICONTROL Activate segments]**, or **[!UICONTROL Export datasets]**, you can now see a list of existing destination connections. 
+   If you selected **[!UICONTROL Activate]**, **[!UICONTROL Activate audiences]**, or **[!UICONTROL Export datasets]**, you can now see a list of existing destination connections. 
 
    Select **[!UICONTROL Configure new destination]** to establish a new connection to the destination.
 
@@ -78,11 +78,11 @@ For file-based destinations, you can configure various settings related to how t
 
 ![Image showing the file type selection and various options for CSV files.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Set up destination connection for segment activation or dataset exports {#segment-activation-or-dataset-exports}
+### Set up destination connection for audience activation or dataset exports {#segment-activation-or-dataset-exports}
 
-Some file-based destinations support segment activation as well as dataset exports. For those destinations, you can choose whether to create a connection that enables you to activate segments or export datasets.
+Some file-based destinations support audience activation as well as dataset exports. For those destinations, you can choose whether to create a connection that enables you to activate audiences or export datasets.
 
-![Image showing the data type selection control which allows users to select between segment activation and dataset exports.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
+![Image showing the data type selection control which allows users to select between audience activation and dataset exports.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
 ### Enable destination alerts {#enable-alerts}
 
@@ -106,4 +106,4 @@ Some file-based destinations support segment activation as well as dataset expor
 
 By reading this document, you have learned how to use the Experience Platform UI to establish a connection to a destination. As a reminder, the available and required connection parameters vary from destination to destination. You should also consult the destination documentation page in the [destinations catalog](/help/destinations/catalog/overview.md) for specific information about the required inputs and available options per destination type. 
 
-Next, you can proceed to [activating segments](/help/destinations/ui/activation-overview.md) or [exporting datasets](/help/destinations/ui/export-datasets.md) to your destination.
+Next, you can proceed to [activating audiences](/help/destinations/ui/activation-overview.md) or [exporting datasets](/help/destinations/ui/export-datasets.md) to your destination.
