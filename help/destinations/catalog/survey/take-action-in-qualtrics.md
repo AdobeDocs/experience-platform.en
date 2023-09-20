@@ -14,7 +14,7 @@ Use the aggregation of multiple sources of operational data in Adobe Experience 
 
 >[!IMPORTANT]
 >
->The destination connector and documentation page are created and maintained by the Qualtrics team. For any inquiries or update requests, please contact them directly at `support@qualtrics.com`.
+>The destination connector and documentation page are created and maintained by the Qualtrics team. For any inquiries or update requests, please contact them directly by logging into the [Customer Success Hub](https://support-portal.qualtrics.com/).
 
 ## Use cases {#use-cases}
 
