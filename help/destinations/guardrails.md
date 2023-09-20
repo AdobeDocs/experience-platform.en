@@ -102,7 +102,7 @@ Dataset exports are currently supported in a **[!UICONTROL First Full and then I
 
 -->
 
-### Dataset Types {#dataset-types}
+#### Dataset Types {#dataset-types}
 
 Datasets exported from Experience Platform can be of two types, as described below:
 
