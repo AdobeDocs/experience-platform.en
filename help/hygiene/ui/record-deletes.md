@@ -1,22 +1,19 @@
 ---
 title: Delete Records
 description: Learn how to delete records in the Adobe Experience Platform UI.
-exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-hide: true
-hidefromtoc: true
 ---
-# Delete records
+# Delete records (limited release) {#record-delete}
 
 The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience Platform UI allows you to delete records that are participating in Identity Service and Real-Time Customer Profile. These records can be tied to individual consumers or any other entity that is included in the identity graph.
 
 >[!IMPORTANT]
 >
->Record delete requests are only available for organizations that have purchased **Adobe Healthcare Shield**.
+>The Record Delete feature is currently available in a **limited release only** and is not available to all customers.
 >
 >
->Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
+>Record deletions are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 Deleting records requires a working understanding of how identity fields function in Experience Platform. Specifically, you must know the primary identity values of the entities whose records you want to delete, depending on the dataset (or datasets) you are deleting them from.
 
@@ -28,17 +25,17 @@ Refer to the following documentation for more information on identities in Platf
 * [Experience Data Model (XDM)](../../xdm/home.md): Provides standard definitions and structures for Platform data through the use of schemas. All Platform datasets conform to a specific XDM schema, and the schema defines which fields are identities.
   * [Identity fields](../../xdm/ui/fields/identity.md): Learn how an identity field is defined in an XDM schema.
 
-## Create a new request
+## Create a new request {#create-request}
 
-To start the process, select **[!UICONTROL Create request]** from the main page in the workspace.
+To start the process, select **[!UICONTROL Data Lifecycle]** in the left navigation of the Platform UI. The [!UICONTROL Data lifecycle requests] workspace appears. Next, select **[!UICONTROL Create request]** from the main page in the workspace.
 
-![Image showing the [!UICONTROL Create request] button being selected](../images/ui/record-delete/create-request-button.png)
+![The [!UICONTROL Data lifecycle requests] workspace with the [!UICONTROL Create request] button being selected](../images/ui/record-delete/create-request-button.png)
 
 The request creation dialog appears. By default, the **[!UICONTROL Delete consumer]** option is selected under the **[!UICONTROL Requested Action]** section. Leave this option selected.
 
 ![Image showing the delete consumer option selected in the creation dialog](../images/ui/record-delete/consumer-action.png)
 
-## Select datasets
+## Select datasets {#select-dataset}
 
 Under the **[!UICONTROL Consumer Details]** section, the next step is to determine whether you want to delete records from a single dataset or all datasets.
 
