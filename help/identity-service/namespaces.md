@@ -82,19 +82,17 @@ The following standard namespaces are provided for use by all organizations with
 
 To view identity namespaces in the UI, select **[!UICONTROL Identities]** in the left navigation and then select **[!UICONTROL Browse]**.
 
-![browse](./images/browse.png)
-
 A list of identity namespaces appears in the main interface of the page, displaying information on their names, identity symbols, last updated date, and whether they are a standard or a custom namespace. The right rail contains information on [!UICONTROL Identity graph strength].
 
-![identities](./images/identities.png)
+![browse](./images/namespace/browse.png)
 
-Platform also provides namespaces for integration purposes. These namespaces are hidden by default as they are used to connect with other systems, and not used to stitch identities. To view integration namespaces, select **[!UICONTROL View integration identities]**.
+<!-- Platform also provides namespaces for integration purposes. These namespaces are hidden by default as they are used to connect with other systems, and not used to stitch identities. To view integration namespaces, select **[!UICONTROL View integration identities]**.
 
 ![view-integration-identities](./images/view-integration-identities.png)
 
 Select an identity namespace from the list to view information on a specific namespace. Selecting an identity namespace updates the display on the right rail to show metadata regarding the identity namespace that you selected, including the number of identities ingested and the number of records failed and skipped.
 
-![select-namespace](./images/select-namespace.png)
+![select-namespace](./images/select-namespace.png) -->
 
 ## Manage custom namespaces {#manage-namespaces}
 
@@ -102,9 +100,13 @@ Depending on your organizational data and use cases, you may require custom name
 
 To create a custom namespace using the UI, navigate to the **[!UICONTROL Identities]** workspace, select **[!UICONTROL Browse]**, and then select **[!UICONTROL Create identity namespace]**.
 
-![select-create](./images/select-create.png)
+![select-create](./images/namespace/create-identity-namespace.png)
 
 The **[!UICONTROL Create identity namespace]** dialog box appears. Provide a unique **[!UICONTROL Display name]** and **[!UICONTROL Identity symbol]** and then select the identity type you would like to create. You can also add an optional description to add further information about the namespace. All the identity types except **Non-people identifier** follows the same behavior of stitching. If you select **Non-people identifier** as identity type when creating a namespace, stitching does not occur. For specific information regarding each identity type, refer to the table on [identity types](#identity-types).
+
+![](./images/namespace/name-and-symbol.png)
+
+![](./images/namespace/select-identity-type.png)
 
 When finished, select **[!UICONTROL Create]**.
 
