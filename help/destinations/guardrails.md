@@ -104,35 +104,34 @@ Dataset exports are currently supported in a **[!UICONTROL First Full and then I
 
 #### Dataset Types {#dataset-types}
 
-Datasets exported from Experience Platform can be of two types, as described below:
+The dataset export guardrails apply to two types of datasets exported from Experience Platform, as described below:
 
-**Timeseries**
-Timeseries datasets are also known as *XDM Experience Events* datasets in Experience Platform terminology.
-The dataset schema includes a top level *timestamp* column. Data is ingested in an append-only fashion.
+**Datasets based on the XDM Experience Events schema**
+In the case of datasets based on the XDM Experience Events schema, the dataset schema includes a top level *timestamp* column. Data is ingested in an append-only fashion.
 
-**Record** 
-Record datasets are also known as *XDM Individual Profile* datasets in Experience Platform terminology.
-The dataset schema does not include a top level *timestamp* column. Data is ingested in upsert fashion.
+**Datasets based on the XDM Individual Profile schema**
+In the case of datasets based on the XDM Individual Profile schema, the dataset schema does not include a top level *timestamp* column. Data is ingested in an upsert fashion.
 
-#### Scheduled dataset exports
-
-The guardrails below are grouped by the format of the exported file (JSON or parquet), and then further by dataset type (timeseries or record).
-
-**Parquet output**
-
-|Dataset type | Compression | Guardrail | Description |
-|---------|----------|---------|-----------|
-| Timeseries | N/A | Last 365 days per file | The data from the last calendar year is exported. |
-| Record | N/A | Ten billion records per file | Dataflows for data exports for files with more than ten billion records per file will fail. |
+| Guardrail | Limit | Limit Type | Description |
+| --- | --- | --- | --- |
+| Size of exported datasets | 5 billion records | Soft | The limit described here for dataset exports is a *soft guardrail*. For example, while the user interface will not block you from exporting datasets larger than 5 billion records, the behavior is unpredictable and exports might either fail or have very long export latency. |
 
 {style="table-layout:auto"}
 
-**JSON output**
+#### Scheduled dataset exports
 
-|Dataset type | Compression | Guardrail | Description |
-|---------|----------|---------|-----------|
-| Timeseries | N/A | Last 365 days per file | The data from the last calendar year is exported. |
-| <p>Record</p> | <p><ul><li>Yes</li><li>No</li></ul></p> | <p><ul><li>Ten billion records per compressed file</li><li>One million records per uncompressed file</li></ul></p> | <p>The record count of the dataset must be less than ten billion for compressed files and one million for uncompressed files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</p> |
+The guardrails below are identical for the two formats of the exported file (JSON or parquet), and are grouped by dataset type (timeseries or record).
+
+>[!WARNING]
+>
+>Exports to JSON files are supported in a compressed mode only.
+
+**Parquet and JSON output**
+
+|Dataset type | Compression | Guardrail | Guardrail type | Description |
+|---------|----------|---------|-----------|------------|
+| Datasets based on the **XDM Experience Events schema** | N/A | Last 365 days for all files exported in a dataflow | Hard | The data from the last calendar year is exported. |
+| <p>Datasets based on the **XDM Individual Profile schema**</p> | <p><ul><li>Yes</li><li>No</li></ul></p> | <p><ul><li>Ten billion records per compressed file</li><li>One million records per uncompressed file</li></ul></p> | Hard | <p>The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</p> |
 
 {style="table-layout:auto"}
 
