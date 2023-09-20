@@ -69,3 +69,9 @@ Finally, you must create a dataset for your schemas. For detailed instructions o
 Now that you have accessed your data logs in the Campaign client console, created a schema, and a dataset, you can now proceed to create a source connection to bring your Campaign Managed Services data to Platform.
 
 For detailed instructions on how to bring your Campaign v8 delivery logs and tracking logs data to Experience Platfrom, read the guide on [creating a Campaigned Managed Services source connection in the UI](../../tutorials/ui/create/adobe-applications/campaign.md).
+
+>[!IMPORTANT]
+>
+>There is an edge-case where the interaction of a recently removed email recipient with an email could re-ingest personal information into Experience Platform. In some cases, this could re-enable marketing to that user.
+>
+>* This scenario is only active between the time a privacy request has been executed in Experience Platform and the time it has been executed in Adobe Campaign Classic. After the request is executed in Campaign, there is a check to ensure the record is not exported to Campaign. Please re-issue a GDPR request after 72 hours of the execution, to resolve this.

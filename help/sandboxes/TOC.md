@@ -12,6 +12,7 @@ feature: Sandboxes
 * Sandbox UI {#ui}
   * [Sandbox UI overview](ui/overview.md)
   * [Sandbox user guide](ui/user-guide.md)
+  * [Sandbox tooling](ui/sandbox-tooling.md)
 * Sandbox API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)

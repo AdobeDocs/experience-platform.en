@@ -327,6 +327,40 @@ A successful response returns the ID (`id`) of the newly created dataflow for yo
 }
 ```
 
+
+>[!BEGINSHADEBOX]
+
+**Restrictions on recurring ingestion**
+
+Encrypted data ingestion does not support ingestion of recurring or multi-level folders in sources. All encrypted files must be contained in a single folder. Wildcards with multiple folders in a single source path are also not supported.
+
+The following is an example of a supported folder structure, where the source path is `/ACME-customers/*.csv.gpg`.
+
+In this scenario, the files in bold are ingested into Experience Platform.
+
+* ACME-customers
+  * **File1.csv.gpg**
+  * File2.json.gpg
+  * **File3.csv.gpg**
+  * File4.json
+  * **File5.csv.gpg**
+
+The following is an example of an unsupported folder structure where the source path is `/ACME-customers/*`.
+
+In this scenario, the flow run will fail and return an error message indicating that data cannot be copied from the source.
+
+* ACME-customers
+  * File1.csv.gpg
+  * File2.json.gpg
+  * Subfolder1
+    * File3.csv.gpg
+    * File4.json.gpg
+    * File5.csv.gpg
+* ACME-loyalty
+  * File6.csv.gpg
+
+>[!ENDSHADEBOX]
+
 ## Next steps
 
 By following this tutorial, you have created an encryption key pair for your cloud storage data, and a dataflow to ingested your encrypted data using the [!DNL Flow Service API]. For status updates on your dataflow's completeness, errors, and metrics, read the guide on [monitoring your dataflow using the [!DNL Flow Service] API](./monitor.md).
