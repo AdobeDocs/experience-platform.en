@@ -1,7 +1,7 @@
 ---
 keywords: event forwarding extension;braze;braze event forwarding extension
 title: Braze Event Forwarding Extension
-description: This Adobe Experience Platform event forwarding extension sends Adobe Experience Edge Network events to Braze.
+description: This Adobe Experience Platform event forwarding extension sends Edge Network events to Braze.
 last-substantial-update: 2023-03-29
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
 ---

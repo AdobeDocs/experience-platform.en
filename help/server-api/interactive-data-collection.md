@@ -7,7 +7,7 @@ exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
 
 ## Overview {#overview}
 
-Interactive data collection endpoints receive a single event and are used when the client expects a response to be returned by the Adobe Experience Platform Edge Network server. These endpoints can also return content from other Experience Edge services, while performing data collection.
+Interactive data collection endpoints receive a single event and are used when the client expects a response to be returned by the Adobe Experience Platform Edge Network server. These endpoints can also return content from other Edge Network services, while performing data collection.
 
 The server response includes one or more `Handle` objects, as shown below.
 
