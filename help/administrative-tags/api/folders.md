@@ -5,6 +5,10 @@ description: Learn how to create, update, manage, and delete folders using the A
 
 # Folders endpoint
 
+>[!IMPORTANT]
+>
+>The endpoint URL for this set of endpoints is `https://experience.adobe.io`.
+
 Blurb
 
 This guide provides information to help you better understand folders and includes sample API calls for performing basic actions using the API.
@@ -20,20 +24,20 @@ You can retrieve a list of folders that belong to your organization by making a 
 **API format**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
+GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
 | `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segments` and `datasets`. |
-| `{FOLDER_ID}` | The ID of the parent folder that you're retrieving the list of folders from. To view a list of all the parent folders, use the folder ID `root`. |
+| `{PARENT_FOLDER_ID}` | The ID of the parent folder that you're retrieving the list of folders from. To view a list of all the parent folders, use the folder ID `root`. |
 
 **Request**
 
 +++A sample request to list all top-level dataset folders
 
 ```shell
-curl -X GET https://platform.adobe.io/??????
+curl -X GET https://experience.adobe.io/unifiedFolders/datasets/root
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -105,4 +109,168 @@ A successful response returns HTTP status ??? with a list of all top-level folde
 
 ## Create a new folder {#create}
 
-You can create a new folder by making a POST request to the `/folder` endpoint.
+You can create a new folder by making a POST request to the `/folder` endpoint and specifying the folder type.
+
+**API format**
+
+```http
+POST /folder/{FOLDER_TYPE}
+```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segments` and `datasets`. |
+
+**Request**
+
++++A sample request to create a new folder.
+
+```shell
+curl -X POST https://experience.adobe.io/unifiedFolders/datasets
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+    "name": "SampleFolder",
+    "tags": ["SampleTag1"],
+    "parentId": "{ORG_ID}/{SANDBOX_ID}/datasets"
+ }'
+```
+
+| Property | Description | 
+| -------- | ----------- |
+| `name` | The name of the folder you want to create. |
+| `tags` | An optional parameter that lets you add tags to the folder. |
+| `parentId` | The ID of the parent structure for the folder. |
+
++++
+
+**Response**
+
+A successful response returns HTTP status ??? with details of your newly created folder.
+
++++A sample response that contains details of your newly created folder.
+
+```json
+{
+    "id": "83f8287c-767b-4106-b271-257282fd170e",
+    "name": "SampleFolder",
+    "noun": "datasets",
+    "parentId": "{ORG_ID}/{SANDBOX_ID}/datasets",
+    "tags": [
+        "SampleTag1"
+    ],
+    "imsOrg": "{ORG_ID}",
+    "sandboxId": "{SANDBOX_ID}",
+    "sandboxName": "prod",
+    "createdBy": "{USER_ID}",
+    "createdAt": "2023-10-01T08:47:06.192+00:00",
+    "modifiedBy": "{USER_ID}",
+    "modifiedAt": "2023-10-01T08:47:06.192+00:00",
+    "_links": null
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `id` | The ID of the newly created folder. |
+| `createdBy` | The ID of the user who created the folder. |
+| `createdAt` | The timestamp of when the folder was created. |
+
++++
+
+## Retrieve a specific folder {#get}
+
+You can retrieve a specific folder that belongs to your organization by making a GET request to the `/folder` endpoint and specifying the folder type and the folder's ID.
+
+**API format**
+
+```http
+GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
+```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segments` and `datasets`. |
+| `{FOLDER_ID}` | The ID of the folder that you're retrieving. |
+
+**Request**
+
++++A sample request to retrieve a specific folder
+
+```shell
+curl -X GET https://experience.adobe.io/unifiedFolders/datasets/83f8287c-767b-4106-b271-257282fd170e
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**Response**
+
+A successful response returns HTTP status ??? with details of the requested folder.
+
++++A sample response that contains details of the requested folder.
+
+```json
+{
+    "id": "83f8287c-767b-4106-b271-257282fd170e",
+    "name": "SampleFolder",
+    "noun": "datasets",
+    "parentId": "{ORG_ID}/{SANDBOX_ID}/datasets",
+    "tags": [
+        "SampleTag1"
+    ],
+    "imsOrg": "{ORG_ID}",
+    "sandboxId": "{SANDBOX_ID}",
+    "sandboxName": "prod",
+    "createdBy": "{USER_ID}",
+    "createdAt": "2023-10-01T08:47:06.192+00:00",
+    "modifiedBy": "{USER_ID}",
+    "modifiedAt": "2023-10-01T08:47:06.192+00:00",
+    "_links": null
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `id` | The ID of the requested folder. |
+| `name` | The name of the requested folder. |
+| `parentId` | The ID of the parent folder. |
+| `tags` | An array that lists the IDs of the associated tags for the folder. |
+| `createdBy` | The ID of the user who created the folder. |
+| `createdAt` | The timestamp of when the folder was created. |
+| `modifiedBy` | The ID of the user who last updated the folder. |
+| `modifiedAt` | The timestamp of when the folder was last updated. |
+
++++
+
+## Validate a specified folder {#validate}
+
+You can validate if a folder exists by making a GET request to the `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` endpoint, and provide both the folder type and ID.
+
+**API format**
+
+```http
+GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
+```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segments` and `datasets`. |
+| `{FOLDER_ID}` | The ID of the folder that you're validating. |
+
+**Request**
+
+++A sample request to validate a specific folder
+
+```shell
+
+```
+
++++
