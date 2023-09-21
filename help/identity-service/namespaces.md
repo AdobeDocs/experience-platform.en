@@ -5,7 +5,9 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 ---
 # Identity namespace overview
 
-Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID. 
+Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that provide context to a given identity. A fully qualified identity includes a namespace and an identity value. If an identity value corresponds with `scott@acme.com`, then a namespace serves to distinguish this value as an email address. Similarly, a namespace can distinguish `555-123-456` as a phone number, and `3126ABC` as a CRM ID.
+
+Read the following document to learn more about what you can do with identity namespaces when using Adobe Experience Platform Identity Service.
 
 ## Getting started
 
@@ -17,7 +19,7 @@ Working with identity namespaces requires an understanding of the various Adobe 
 
 ## Understanding identity namespaces
 
-A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments, as when [!DNL Real-Time Customer Profile] merges profile data, both the identity value and the namespace must match.
+A fully qualified identity includes a namespace and an identity value. When matching record data across profile fragments, as when [!DNL Real-Time Customer Profile] merges profile data, both the identity value and the namespace must match.
 
 For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore Experience Platform is able to see that these fragments are actually the same individual and brings the data together in the identity graph for the individual.
 
@@ -28,7 +30,7 @@ For example, two profile fragments may contain different primary IDs but they sh
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="Specify identity type"
->abstract="The identity type controls whether or not data is stored to the identity graph. Non-people identifiers will not be stored, and all other identity types will."
+>abstract="The identity type controls whether or not data is stored to the identity graph. Non-people identifiers and partner ID will not be stored, and all other identity types will."
 >text="Learn more in documentation"
 
 One element of an identity namespace is the **identity type**. The identity type determines:
