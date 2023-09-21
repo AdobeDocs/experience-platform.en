@@ -258,50 +258,49 @@ The [!UICONTROL Review] step appears, allowing you to review your new Analytics 
 
 ![review](../../../../images/tutorials/create/analytics/review.png)
 
-## Monitor your dataflow
+## Monitor your dataflow {#monitor-your-dataflow}
 
-You can monitor the activity of your dataflow once it has been created. In the sources catalog, select **[!UICONTROL Dataflows]** to see a list of existing dataflows in your organization.
+Once your dataflow is complete, select **[!UICONTROL Dataflows]** in the sources catalog to monitor the activity and status of your data.
 
-![select-dataflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
+![The sources catalog with the dataflows tab selected.](../../../../images/tutorials/create/analytics/select-dataflows.png)
+
+A list of existing Analytics dataflows in your organization appears. From here, select a target dataset to view its respective ingestion activity.
+
+![A list of existing Adobe Analytics dataflows in your organization.](../../../../images/tutorials/create/analytics/select-dataflows.png)
+
+The [!UICONTROL Dataset activity] page provides information on the progress oof data that is being sent from Analytics to Experience Platform. The interface displays metrics such as the number of ingested records, number of ingested batches, and number of failed batches.
+
+The source instantiates two dataset flows. One flow represents backfill data and the other is for live data. Backfill data is not configured for Profile but is sent to the data lake for analytical and data-science use-cases.
+
+For more information on backfill, live data, and their respective latencies, read the [Analytics source overview](../../../../connectors/adobe-applications/analytics.md).
+
+>[!NOTE]
+>
+>The dataset activity page does not display a list of individual batches because batches are defined internally by Analytics.
+
+![The dataset activity page for a given target dataset for Adobe Analytics data.](../../../../images/tutorials/create/analytics/dataset-activity.png)
+
++++View batch IDs using the legacy monitoring interface
 
 To view the activity of specific batch IDs and datasets associated with your Analytics data, select **[!UICONTROL Monitoring]** in the left-navigation and then select **[!UICONTROL Batch end-to-end]**.
 
-![]
+![The legacy monitoring page for batch data.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
 
 | Metrics | Description |
 | --- | --- |
-| Batch ID |
-| Dataset name |
+| Batch ID | The ID of a given batch. This value is generated internally. |
+| Dataset name | The name of a given dataset used for Analytics data. |
 | Source | The source of the ingested data. |
 | Updated | The date of the most recent flow run iteration. |
-| Records in dataset |
-| New profile fragments |
-| Existing profile fragments |
-| Identity records stitched |
-| Records in Profile |
+| Records in dataset | The total count of records in the dataset. **Note**: This parameter will occasionally display a status of `in-progress`. This status indicates that the record ingestion process is not yet complete. |
+| New profile fragments | The total count of new profile fragments that were ingested. |
+| Existing profile fragments | The total count of existing profile fragments. |
+| Identity records stitched | The total count of identity records that were stitched together after ingestion. |
+| Records in Profile | The total count of records that were ingested to Real-Time Customer Profile. |
 
-<!-- 
-The **Dataflows** screen appears. On this page is a pair of dataset flows, including information about their name, source data, creation time, and status.
+{style="table-layout:auto"}
 
-The connector instantiates two dataset flows. One flow represents backfill data and the other is for live data. Backfill data is not configured for Profile but is sent to the data lake for analytical and data-science use-cases.
-
-For more information on backfill, live data, and their respective latencies, see the [Analytics Data Connector overview](../../../../connectors/adobe-applications/analytics.md).
-
-Select the dataset flow you wish to view from the list.
-
-![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
-
-The **[!UICONTROL Dataset activity]** page appears. This page displays the rate of messages being consumed in the form of a graph. Select **[!UICONTROL Data governance]** from the top header to access the labelling fields.
-
-![dataset-activity](../../../../images/tutorials/create/analytics/dataset-activity.png)
-
-You can view a dataset flow's inherited labels from the [!UICONTROL Data governance] screen. For more information on how to label data coming from Analytics, visit the [data usage labels guide](../../../../../data-governance/labels/user-guide.md).
-
-![data-gov](../../../../images/tutorials/create/analytics/data-gov.png)
-
-To delete a dataflow, head to the [!UICONTROL Dataflows] page and then select the ellipses (`...`) beside the dataflow name and then select [!UICONTROL Delete].
-
-![delete](../../../../images/tutorials/create/analytics/delete.png) -->
++++
 
 ## Next steps and additional resources
 
