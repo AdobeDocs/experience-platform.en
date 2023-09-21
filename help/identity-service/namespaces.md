@@ -5,8 +5,6 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 ---
 # Identity namespace overview
 
-Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that provide context to a given identity. A fully qualified identity includes a namespace and an identity value. If an identity value corresponds with `scott@acme.com`, then a namespace serves to distinguish this value as an email address. Similarly, a namespace can distinguish `555-123-456` as a phone number, and `3126ABC` as a CRM ID.
-
 Read the following document to learn more about what you can do with identity namespaces when using Adobe Experience Platform Identity Service.
 
 ## Getting started
@@ -19,11 +17,20 @@ Working with identity namespaces requires an understanding of the various Adobe 
 
 ## Understanding identity namespaces
 
-A fully qualified identity includes a namespace and an identity value. When matching record data across profile fragments, as when [!DNL Real-Time Customer Profile] merges profile data, both the identity value and the namespace must match.
+Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that provide context to a given identity. A fully qualified identity includes a namespace and an identity value. If an identity value corresponds with `scott@acme.com`, then a namespace serves to distinguish this value as an email address. Similarly, a namespace can distinguish `555-123-456` as a phone number, and `3126ABC` as a CRM ID. When matching record data across profile fragments, as when [!DNL Real-Time Customer Profile] merges profile data, both the identity value and the namespace must match.
 
 For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore Experience Platform is able to see that these fragments are actually the same individual and brings the data together in the identity graph for the individual.
 
 ![](images/identity-service-stitching.png)
+
+### Components of a namespace
+
+A namespace consists of the following components:
+
+* Display name: The user-friendly name for a given namespace.
+* Identity symbol: A code used internally by Identity Service to represent a namespace.
+* Identity type: The classification of a given namespace.
+* Description: (Optional) Any supplemental information that you can provide regarding a given namespace.
 
 ### Identity types {#identity-types}
 
@@ -93,7 +100,7 @@ A directory of namespaces in your organization appears, displaying information o
 
 ![A directory of custom identity namespaces in your organization.](./images/namespace/browse.png)
 
-## Manage custom namespaces {#manage-namespaces}
+## Create custom namespaces {#create-namespaces}
 
 Depending on your organizational data and use cases, you may require custom namespaces. Custom namespaces can be created using the [[!DNL Identity Service]](./api/create-custom-namespace.md) API or through the UI.
 
