@@ -29,23 +29,23 @@ Refer to the following documentation for more information on identities in Platf
   
 To start the process, select **[!UICONTROL Data Lifecycle]** in the left navigation of the Platform UI. The [!UICONTROL Data lifecycle requests] workspace appears. Next, select **[!UICONTROL Create request]** from the main page in the workspace.  
   
-![The [!UICONTROL Data lifecycle requests] workspace with the [!UICONTROL Create request] button being selected](../images/ui/record-delete/create-request-button.png)  
+![The [!UICONTROL Data lifecycle requests] workspace with [!UICONTROL Create request] selected.](../images/ui/record-delete/create-request-button.png)  
   
-The request creation dialog appears. By default, the **[!UICONTROL Delete consumer]** option is selected under the **[!UICONTROL Requested Action]** section. Leave this option selected.  
-  
-![Image showing the delete consumer option selected in the creation dialog](../images/ui/record-delete/consumer-action.png)  
+The request creation workflow appears. By default, the **[!UICONTROL Delete consumer]** option is selected under the **[!UICONTROL Requested Action]** section. Leave this option selected.  
+
+![The request creation workflow with the [!UICONTROL Delete record] option selected and highlighted.](../images/ui/record-delete/delete-record.png)  
   
 ## Select datasets {#select-dataset}  
   
-Under the **[!UICONTROL Consumer Details]** section, the next step is to determine whether you want to delete records from a single dataset or all datasets.  
-  
-If you choose **[!UICONTROL Select dataset]**, select the database icon (![Image of the database icon](../images/ui/record-delete/database-icon.png)) and a dialog appears that allows you to select the desired dataset from the list.  
-  
-![Image showing the dataset selection dialog](../images/ui/record-delete/select-dataset.png)  
+The next step is to determine whether you want to delete records from a single dataset or all datasets. Under the **[!UICONTROL Record Details]** section, use the radio button to select between a specific dataset and all datasets.
+
+If you choose **[!UICONTROL Select dataset]**, proceed to select the database icon (![The database icon](../images/ui/record-delete/database-icon.png)) to open a dialog that provides a list of available datasets. Select the desired dataset from the list followed by **[!UICONTROL Done]**.  
+<!-- Image below is fine -->
+![The [!UICONTROL Select dataset] dialog with a dataset selected and [!UICONTROL Done] highlighted.](../images/ui/record-delete/select-dataset.png)  
   
 If you want to delete records from all datasets, select **[!UICONTROL All datasets]**.  
   
-![Image showing the [!UICONTROL All datasets] option selected](../images/ui/record-delete/all-datasets.png)  
+![The [!UICONTROL Select dataset] dialog with the [!UICONTROL All datasets] option selected.](../images/ui/record-delete/all-datasets.png)  
   
 >[!NOTE]  
 >  
@@ -63,8 +63,8 @@ If you want to delete records from all datasets, select **[!UICONTROL All datase
 >title="Identity value"
 >abstract="In this column, you must provide the value for the record's primary identity, which must correspond with the identity type provided in the left column. If the primary identity type is `email`, the value should be the record's email address. To learn more, see the data hygiene UI guide."
   
-When deleting records, you must provide identity information so the system can determine which records must be deleted. For any dataset in Platform, records are deleted based on the **primary identity** field that is defined by the dataset's schema.  
-  
+When deleting records, you must provide identity information so the system can determine which records are to be deleted. For any dataset in Platform, records are deleted based on the **primary identity** field that is defined by the dataset's schema.  
+<!-- is identity namespace obsolete? -->
 Like all identity fields in Platform, a primary identity is composed of two things: a **type** (sometimes referred to as an identity namespace) and a **value**. The identity type provides context as to how the field identifies a record (such as an email address), and the value represents a record's specific identity for that type (for example, `jdoe@example.com` for the `email` identity type). Common fields used as identities include account information, device IDs, and cookie IDs.  
   
 >[!TIP]  
