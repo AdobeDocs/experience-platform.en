@@ -129,7 +129,7 @@ To configure details for the destination, fill in the fields below.
 
 ![Platform UI image showing the customer data fields for the Ampersand destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Ampersand_DestSpecific.png)
 
-* **[!UICONTROL Your Company Name]**: Your Company Name, as you would like it to be shown to the destination partner. Do not use spaces or special characters.
+* **[!UICONTROL Your Company Name]**: Your company name, as you would like it to be shown to the destination partner. Do not use spaces or special characters.
   
 ### [!DNL Captify] {#captify}
 
@@ -222,7 +222,7 @@ To configure details for the destination, fill in the fields below.
 
 ![Platform UI image showing the customer data fields for the Magnite CTV destination.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteCTV_DestSpecific.png)
 
-* **[!UICONTROL Client]**: Your Client name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters.
+* **[!UICONTROL Client]**: Your client name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters.
 
 ### [!DNL Magnite DV+ (Rubicon Project)] {#magnite-dv}
 
