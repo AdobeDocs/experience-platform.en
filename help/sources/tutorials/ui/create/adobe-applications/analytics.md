@@ -258,12 +258,29 @@ The [!UICONTROL Review] step appears, allowing you to review your new Analytics 
 
 ![review](../../../../images/tutorials/create/analytics/review.png)
 
-### Monitor your dataflow
+## Monitor your dataflow
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it. From the [!UICONTROL Catalog] screen, select **[!UICONTROL Dataflows]** to view a list of established flows associated with your Analytics account.
+You can monitor the activity of your dataflow once it has been created. In the sources catalog, select **[!UICONTROL Dataflows]** to see a list of existing dataflows in your organization.
 
 ![select-dataflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
 
+To view the activity of specific batch IDs and datasets associated with your Analytics data, select **[!UICONTROL Monitoring]** in the left-navigation and then select **[!UICONTROL Batch end-to-end]**.
+
+![]
+
+| Metrics | Description |
+| --- | --- |
+| Batch ID |
+| Dataset name |
+| Source | The source of the ingested data. |
+| Updated | The date of the most recent flow run iteration. |
+| Records in dataset |
+| New profile fragments |
+| Existing profile fragments |
+| Identity records stitched |
+| Records in Profile |
+
+<!-- 
 The **Dataflows** screen appears. On this page is a pair of dataset flows, including information about their name, source data, creation time, and status.
 
 The connector instantiates two dataset flows. One flow represents backfill data and the other is for live data. Backfill data is not configured for Profile but is sent to the data lake for analytical and data-science use-cases.
@@ -284,7 +301,7 @@ You can view a dataset flow's inherited labels from the [!UICONTROL Data governa
 
 To delete a dataflow, head to the [!UICONTROL Dataflows] page and then select the ellipses (`...`) beside the dataflow name and then select [!UICONTROL Delete].
 
-![delete](../../../../images/tutorials/create/analytics/delete.png)
+![delete](../../../../images/tutorials/create/analytics/delete.png) -->
 
 ## Next steps and additional resources
 
