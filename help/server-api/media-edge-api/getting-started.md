@@ -278,7 +278,7 @@ The following table shows the possible response codes resulting from Media Edge 
 | Status | Description |
 | ---------- | --------- |
 | 200 | Session was successfully created |
-| 207 | Problem with one of the services that connect to Experience Edge Network (see more in the [troubleshooting guide](troubleshooting.md)) |
+| 207 | Problem with one of the services that connect to Edge Network (see more in the [troubleshooting guide](troubleshooting.md)) |
 | 400-level | Bad request |
 | 500-level | Server error |
 
