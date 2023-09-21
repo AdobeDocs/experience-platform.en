@@ -3,7 +3,7 @@ title: LiveRamp - Distribution Connection
 description: Learn how to use the LiveRamp - Distribution connector to orchestrate and activate audiences previously onboarded into LiveRamp, to downstream advertising destinations.
 ---
 
-# [!DNL LiveRamp - Distribution] connection {#liveramp-onboarding}
+# [!DNL LiveRamp - Distribution] connection
 
 The [!DNL LiveRamp - Distribution] connection enables you to activate audiences from Experience Platform to premium publishers across mobile, web, display, and connected TV mediums.
 
@@ -29,7 +29,7 @@ The [!DNL LiveRamp - Distribution] connection enables you to activate audiences 
 * [[!DNL One Fox]](#fox)
 * [[!DNL Pandora]](#pandora)
 * [[!DNL Reddit]](#reddit)
-* [[[!DNL Roku]](#roku)
+* [[!DNL Roku]](#roku)
 * [[!DNL Spotify]](#spotify)
 * [[!DNL Taboola]](#taboola)
 * [[!DNL TargetSpot]](#targetspot)
@@ -121,9 +121,9 @@ To configure details for the destination, fill in the fields below.
 ### [!DNL Ampersand.tv] {#ampersand-tv}
 
 >[!CONTEXTUALHELP]
->id="company_name"
->title="Your Company Name"
->abstract="Your Company Name, as you would like it to be shown to the destination partner. Do not use spaces or special characters."
+>id="platform_destinations_liveramp_distribution_ampersand_company_name"
+>title="Your company name"
+>abstract="Your company name, as you would like it to be shown to the destination partner. Do not use spaces or special characters."
 
 To configure details for the destination, fill in the fields below.
 
@@ -216,7 +216,7 @@ To configure details for the destination, fill in the fields below.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitectv_client"
 >title="Client"
->abstract="Your Client name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
+>abstract="Your client name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters."
 
 To configure details for the destination, fill in the fields below.
 
@@ -228,20 +228,20 @@ To configure details for the destination, fill in the fields below.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_partnerid"
->title="PartnerId"
+>title="Partner ID"
 >abstract="The Rubicon Project Partner ID associated with the publisher who owns the segment/data. Please contact your Rubicon Project account representative if unsure of the value you should use."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_seatid"
->title="SeatId"
->abstract="Magnite DV+ "seatId" provided by your Magnite account manager"
+>title="Seat ID"
+>abstract="Magnite DV+ Seat ID provided by your Magnite account manager"
 
 To configure details for the destination, fill in the fields below.
 
 ![Platform UI image showing the customer data fields for the Magnite DV+ destination.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
 
 * **[!UICONTROL PartnerId]**: The Rubicon Project Partner ID associated with the publisher who owns the segment/data. Please contact your Rubicon Project account representative if unsure of the value you should use.
-* **[!UICONTROL SeatId]**: Magnite DV+ "seatId" provided by your Magnite account manager
+* **[!UICONTROL SeatId]**: Magnite DV+ Seat ID provided by your Magnite account manager
 
 ### [!DNL Nexxen (fka Amobee)] {#nexxen}
 
@@ -285,7 +285,7 @@ To configure details for the destination, fill in the fields below.
 
 ![Platform UI image showing the customer data fields for the One Fox destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
 
-* **[!UICONTROL Client]**: The name of your company/distribution account as you would like it to appear to the partner. Use your company name by default, but please contact your partner account rep if unsure. No whitespace or other special characters, please (e.g. Company_Name).
+* **[!UICONTROL Client]**: The name of your company/distribution account as you would like it to appear to the partner. Use your company name by default. If unsure, please contact your partner account representative. Do not use spaces or special characters (e.g. Company_Name).
 
 ### [!DNL Pandora] {#pandora}
 
@@ -359,15 +359,15 @@ To configure details for the destination, fill in the fields below.
 >abstract="The email address of your Taboola account manager."
 
 >id="platform_destinations_liveramp_distribution_taboola_seg_type"
->title="Segment Type"
->abstract="The segment type (1st Party only available at this time)."
+>title="Segment type"
+>abstract="The Segment type (1st Party only available at this time)."
 
 To configure details for the destination, fill in the fields below.
 
 ![Platform UI image showing the supported identifiers for the Taboola destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
 
 * **[!UICONTROL Account manager email address]**: The email address of your Taboola account manager.
-* **[!UICONTROL Segment Type]**: The segment type (1st Party only available at this time).
+* **[!UICONTROL Segment Type]**: The Segment type (1st Party only available at this time).
 
 ### [!DNL TargetSpot] {#targetspot}
 
