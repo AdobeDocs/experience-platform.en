@@ -76,6 +76,7 @@ The turnaround time to resolve the deprovisioning ticket is six business days or
 
 Note the following known limitations and important callouts while using the Experience Cloud Audiences card:
 
+* Currently, a single Experience Cloud Audiences destination is supported. Attempting to configure a second destination connection will result in an error.
 * When connecting to the destination, you can see an option to [enable dataflow alerts](../../ui/alerts.md). Though visible in the UI, the **enable alerts option is not currently supported**.
 * **Audience backfill support**: The first export to Audience Manager or other Experience Cloud solutions includes a historical population of the audiences. Users of the [legacy audience sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) who are configuring this destination should expect a backfill difference of approximately 6 hours.
 
@@ -161,12 +162,20 @@ To validate successful data export, you can check that your audiences have succe
 
 Your Real-Time CDP audiences appear in Audience Manager as [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits), and [segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). You can verify in Audience Manager if the data has appeared as described in the documentation links above. 
 
+Segment names begin populating in Audience Manager 15 minutes after the audiences have been sent from Real-Time CDP.
+
+Segment population begins flowing into Audience Manager within 6 hours from being sent from Real-Time CDP, and will be updated every 24 hours in Audience Manager.
+
+The full population will be visible in Audience Manager after 72 hours, and populations will continue to flow to Audience Manager unless the audience is removed from the destination in Real-Time CDP.
+
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Real-Time CDP] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
 Data governance in Real-Time CDP is enforced by both [data usage labels](/help/data-governance/labels/reference.md) and marketing actions.
 Data usage labels will transfer to applications but marketing actions will not. This means that once they land in Audience Manager, audiences from Real-Time CDP can be exported to any available destinations. In Audience Manager, you can use [data export controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=en) to block audiences from being exported to certain destinations.
+
+Audiences marked with the [!DNL HIPAA] marketing action will not be sent from Real-Time CDP to Audience Manager.
 
 ### Permissions management in Audience Manager
 
