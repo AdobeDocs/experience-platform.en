@@ -10,11 +10,7 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 >title="Delete unwanted or expired customer records and datasets"
 >abstract="<h2>Description</h2><p>To manage the lifecycle of your Experience Platform data unrelated to regulatory compliance, you can delete consumer records and schedule expiration dates for datasets. To create or manage data subject requests, please see the 'Honor data subject privacy requests' use case block.</p>"
 
->[!IMPORTANT]
->
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**. These capabilities are due for general release in the near future. For more information on their upcoming availability, please speak to your Adobe service representative. You can, however, immediately [delete datasets through the [!UICONTROL Datasets] UI](../../catalog/datasets/user-guide.md#delete).
-
-The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience Platform UI allows you to schedule expirations for datasets. When a dataset reaches its expiration date, the data lake, Identity Service, and Real-Time Customer Profile begin separate processes to remove the dataset's contents from their respective services. Once the data is deleted from all three services, the expiration is marked as complete.
+The [[!UICONTROL Data Lifecycle] workspace](./overview.md) in the Adobe Experience Platform UI allows you to schedule expirations for datasets. When a dataset reaches its expiration date, the data lake, Identity Service, and Real-Time Customer Profile begin separate processes to remove the dataset's contents from their respective services. Once the data is deleted from all three services, the expiration is marked as complete.
 
 >[!WARNING]
 >
@@ -31,17 +27,17 @@ This document covers how to schedule and manage dataset expirations in the Platf
 
 To create a new request, select **[!UICONTROL Create request]** from the main page in the workspace.
 
-![Image showing the [!UICONTROL Create request] button being selected](../images/ui/ttl/create-request-button.png)
+![The [!UICONTROL Data Lifecycle] workspace with [!UICONTROL Create request] highlighted.](../images/ui/ttl/create-request-button.png)
 
-The request creation dialog appears. Under the **[!UICONTROL Requested Action]** section, select **[!UICONTROL Delete Dataset]** to update the available controls for dataset expiration scheduling.
+The request creation workflow appears. Under the [!UICONTROL Requested Action] section, select **[!UICONTROL Delete Dataset]** to update the controls for dataset expiration scheduling.
 
-![Image showing the [!UICONTROL Create request] button being selected](../images/ui/ttl/dataset-selected.png)
+![The request creation workflow with the [!UICONTROL Delete dataset] option highlighted.](../images/ui/ttl/dataset-selected.png)
 
 ### Select a date and a dataset
 
-The request creation dialog appears. Under the **[!UICONTROL Requested Action]** section, select a date that you want the dataset to be deleted by. You can enter the date manually (in the format `mm/dd/yyyy`) or select the calendar icon (![Image of the calendar icon](../images/ui/ttl/calendar-icon.png)) to select the date from a dialog.
-
-![Image showing an expiration date being set for the dataset](../images/ui/ttl/select-date.png)
+Under the **[!UICONTROL Requested Action]** section, select a date that you want the dataset to be deleted by. You can enter the date manually (in the format `mm/dd/yyyy`) or select the calendar icon (![A calendar icon.](../images/ui/ttl/calendar-icon.png)) to select the date from a dialog.
+<!-- update image below -->
+![A calendar dialog with an expiration date selected and highlighted for the dataset.](../images/ui/ttl/select-date.png)
 
 Next, under **[!UICONTROL Dataset Details]**, select the database icon (![Image of the database icon](../images/ui/ttl/database-icon.png)) to open a dataset selection dialog. Choose a dataset from the list to apply the expiration to, then select **[!UICONTROL Done]**.
 
