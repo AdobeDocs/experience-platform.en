@@ -4,11 +4,15 @@ description: Learn how to delete records in the Adobe Experience Platform UI.
 ---
 # Delete records (limited release) {#record-delete} 
  
-The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience Platform UI allows you to delete records that are participating in Identity Service and Real-Time Customer Profile. These records can be tied to individual consumers or any other entity that is included in the identity graph. 
+The [[!UICONTROL Data Lifecycle] workspace](./overview.md) in the Adobe Experience Platform UI allows you to delete records that are participating in Identity Service and Real-Time Customer Profile. These records can be tied to individual consumers or any other entity that is included in the identity graph.
+
+Depending on you entitlement, some users can also delete data from the data lake. In this case, the available options change. ...
+
+<!-- Information is deleted But (1) Those who are delta migrated can deleted from UIS, UPS, and Data Lake. Are we noting they can delete from lake? We need to be clear where the data is being deleted based on their entitlement. Is that found in different documentation? (2) The screenshots show selection between one/all, but that is not a choice that non-delta migrated customers get. How do you plan to incorporate that scenario? -->
  
 >[!IMPORTANT] 
 > 
->The Record Delete feature is currently available in a **limited release only** and is not available to all customers. 
+>The Record Delete feature is currently available in a **limited release only** and is not available to all customers. Record delete requests are only available for organizations in the limited release.
 > 
 > 
 >Record deletions are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
@@ -21,11 +25,11 @@ Refer to the following documentation for more information on identities in Platf
 
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md): Bridges identities across devices and systems, linking datasets together based on the identity fields defined by the XDM schemas they conform to.
 * [Identity namespaces](../../identity-service/namespaces.md): Identity namespaces define the different types of identity information that can relate to a single person, and are a required component for each identity field.
-* [Real-Time Customer Profile](../../profile/home.md): Leverages identity graphs to provide unified consumer profiles based on aggregated data from multiple sources, updated in near-real-time.
+* [Real-Time Customer Profile](../../profile/home.md): Uses identity graphs to provide unified consumer profiles based on aggregated data from multiple sources, updated in near-real-time.
 * [Experience Data Model (XDM)](../../xdm/home.md): Provides standard definitions and structures for Platform data through the use of schemas. All Platform datasets conform to a specific XDM schema, and the schema defines which fields are identities.
 * [Identity fields](../../xdm/ui/fields/identity.md): Learn how an identity field is defined in an XDM schema.
 
-## Create a new request {#create-request}
+## Create a request {#create-request}
 
 To start the process, select **[!UICONTROL Data Lifecycle]** in the left navigation of the Platform UI. The [!UICONTROL Data lifecycle requests] workspace appears. Next, select **[!UICONTROL Create request]** from the main page in the workspace.
 
@@ -86,7 +90,7 @@ To upload a JSON file, you can drag and drop the file into the provide area, or 
 
 ![The request creation workflow with the choose files and drag and drop interface for uploading JSON files highlighted.](../images/ui/record-delete/upload-json.png)
 
-The JSON file must be formatted as an array of objects, each object representing an identity.  
+The JSON file must be formatted as an array of objects, each object representing an identity.
 
 ```json
 [
@@ -142,6 +146,6 @@ After the request is submitted, a work order is created and appears on the [!UIC
 
 ## Next steps
 
-This document covered how to delete records in the Experience Platform UI. For information on how to perform other data hygiene tasks in the UI, refer to the [data hygiene UI overview](./overview.md).
+This document covered how to delete records in the Experience Platform UI. For information on how to perform other data hygiene tasks in the UI, refer to the [Data Hygiene UI overview](./overview.md).
 
 To learn how to delete records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
