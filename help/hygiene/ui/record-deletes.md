@@ -40,7 +40,7 @@ The request creation workflow appears. By default, the **[!UICONTROL Delete cons
 The next step is to determine whether you want to delete records from a single dataset or all datasets. Under the **[!UICONTROL Record Details]** section, use the radio button to select between a specific dataset and all datasets.
 
 If you choose **[!UICONTROL Select dataset]**, proceed to select the database icon (![The database icon](../images/ui/record-delete/database-icon.png)) to open a dialog that provides a list of available datasets. Select the desired dataset from the list followed by **[!UICONTROL Done]**.  
-<!-- Image below is fine -->
+
 ![The [!UICONTROL Select dataset] dialog with a dataset selected and [!UICONTROL Done] highlighted.](../images/ui/record-delete/select-dataset.png)  
   
 If you want to delete records from all datasets, select **[!UICONTROL All datasets]**.  
@@ -64,14 +64,14 @@ If you want to delete records from all datasets, select **[!UICONTROL All datase
 >abstract="In this column, you must provide the value for the record's primary identity, which must correspond with the identity type provided in the left column. If the primary identity type is `email`, the value should be the record's email address. To learn more, see the data hygiene UI guide."
   
 When deleting records, you must provide identity information so the system can determine which records are to be deleted. For any dataset in Platform, records are deleted based on the **primary identity** field that is defined by the dataset's schema.  
-<!-- is identity namespace obsolete? -->
+
 Like all identity fields in Platform, a primary identity is composed of two things: a **type** (sometimes referred to as an identity namespace) and a **value**. The identity type provides context as to how the field identifies a record (such as an email address), and the value represents a record's specific identity for that type (for example, `jdoe@example.com` for the `email` identity type). Common fields used as identities include account information, device IDs, and cookie IDs.  
   
 >[!TIP]  
 >  
 >If you don't know the primary identity for a particular dataset, you can find it in the Platform UI. In the **[!UICONTROL Datasets]** workspace, select the dataset in question from the list. On the details page for the dataset, hover over the name of the dataset's schema in the right rail. The primary identity is displayed along with the schema name and description.  
 >  
->![Image showing the primary identity of a dataset highlighted in the UI](../images/ui/record-delete/dataset-primary-identity.png)  
+>![The Datasets dashboard with a dataset selected, and a schema dialog opened from the dataset details panel. The primary ID of the dataset is highlighted.](../images/ui/record-delete/dataset-primary-identity.png)  
   
 If you are deleting records from a single dataset, all the identities you provide must have the same type, since a dataset can only have one primary identity. If you are deleting from all datasets, you can include multiple identity types since different datasets may have different primary identities.  
   
@@ -112,14 +112,14 @@ Once the file is uploaded, you can continue to [submit the request](#submit).
 
 To enter identities manually, select **[!UICONTROL Add identity]**.
 
-![Image showing the [!UICONTROL Add identity] button being selected](../images/ui/record-delete/add-identity.png)
+![The request creation workflow with the [!UICONTROL Add identity] option highlighted.](../images/ui/record-delete/add-identity.png)
 
 Controls appear that allow you to enter identities one at a time. Under **[!UICONTROL Primary Identity]**, use the dropdown menu to select the identity type. Under **[!UICONTROL Identity Value]**, provide the primary identity value for the record.
 
-![Image showing a manually added identity field](../images/ui/record-delete/identity-added.png)
+![The request creation workflow with an identity field manually added.](../images/ui/record-delete/identity-added.png)
 
-To add more identities, select the plus icon (![Image of the plus icon](../images/ui/record-delete/plus-icon.png)) next to one of the rows, or select **[!UICONTROL Add identity]**.
-
+To add more identities, select the plus icon (![A plus icon.](../images/ui/record-delete/plus-icon.png)) next to one of the rows, or select **[!UICONTROL Add identity]**.
+<!-- up to here -->
 ![Image showing how to add more identities to the request](../images/ui/record-delete/more-identities.png)
 
 ## Submit the request (#submit)
