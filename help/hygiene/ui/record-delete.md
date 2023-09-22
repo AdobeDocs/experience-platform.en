@@ -35,7 +35,7 @@ The request creation workflow appears. By default, the **[!UICONTROL Delete reco
 
 >[!IMPORTANT] 
 > 
->As part of ongoing changes to improve efficiency and make dataset operations less expensive, organizations who have been moved to the Delta format can also delete data from the data lake. This type of user is referred to as delta-migrated. Users form organizations who have been non delta-migrated cannot update datasets, nor can they chose to delete records from either a single or all datasets as seen in the image below. In this case, please continue to the [provide identities](#provide-identities) section of the guide.
+>As part of ongoing changes to improve efficiency and make dataset operations less expensive, organizations who have been moved to the Delta format can also delete data from the data lake. This type of user is referred to as delta-migrated. Users from organizations who have not been delta-migrated cannot update datasets, nor can they chose to delete records from either a single or all datasets as seen in the image below. In this case, please continue to the [provide identities](#provide-identities) section of the guide.
 
 ![The request creation workflow with the [!UICONTROL Delete record] option selected and highlighted.](../images/ui/record-delete/delete-record.png)
 
@@ -112,7 +112,7 @@ The JSON file must be formatted as an array of objects, each object representing
 
 Once the file is uploaded, you can continue to [submit the request](#submit).
 
-### Enter identities manually {#manual-identity}
+### Manually enter identities {#manual-identity}
 
 To enter identities manually, select **[!UICONTROL Add identity]**.
 
@@ -132,11 +132,11 @@ Once you have finished adding identities to the request, under **[!UICONTROL Req
 
 >[!IMPORTANT] 
 > 
->There are different limits for the total number of deletion requests that can be submitted each month. These limits are based on your licence agreement. Organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600K requests each month. Organizations for all editions of Customer Data Platform and Adobe Journey Optimizer can submit up to 100k requests each month.
+>There are different limits for the total number of deletion requests that can be submitted each month. These limits are based on your license agreement. Organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600 thousand requests each month. Organizations for all editions of Customer Data Platform and Adobe Journey Optimizer can submit up to 100 thousand requests each month.
 
 ![The request setting's [!UICONTROL Name] and [!UICONTROL Description] fields with [!UICONTROL Submit] highlighted.](../images/ui/record-delete/submit.png)
 
-A [!UICONTROL Confirm request] dialog appears to indicate that the identities cannot be recovered once deleted. You must confirm the list of identities whose data you want to delete. Select **[!UICONTROL Submit]** to confirm your selection.
+A [!UICONTROL Confirm request] dialog appears to indicate that the identities cannot be recovered once deleted. Select **[!UICONTROL Submit]** to confirm the list of identities whose data you want to delete.
 
 ![The [!UICONTROL Confirm request] dialog.](../images/ui/record-delete/confirm-request.png)
 
