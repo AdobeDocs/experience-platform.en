@@ -35,7 +35,7 @@ The request creation workflow appears. By default, the **[!UICONTROL Delete reco
 
 >[!IMPORTANT] 
 > 
->As part of ongoing changes to improve efficiency and make dataset operations less expensive, organizations who have been moved to the Delta format can also delete data from the data lake. This type of user is referred to as delta-migrated. Users from organizations who have not been delta-migrated cannot update datasets, nor can they chose to delete records from either a single or all datasets as seen in the image below. In this case, please continue to the [provide identities](#provide-identities) section of the guide.
+>As part of ongoing changes to improve efficiency and make dataset operations less expensive, organizations who have been moved to the Delta format can also delete data from the data lake. This type of user is referred to as delta-migrated. Users from organizations who have not been delta-migrated cannot update datasets, nor can they choose to delete records from either a single or all datasets as seen in the image below. In this case, please continue to the [provide identities](#provide-identities) section of the guide.
 
 ![The request creation workflow with the [!UICONTROL Delete record] option selected and highlighted.](../images/ui/record-delete/delete-record.png)
 
@@ -86,7 +86,7 @@ There are two options to provide identities when deleting records:
 
 ### Upload a JSON file {#upload-json}
 
-To upload a JSON file, you can drag and drop the file into the provide area, or select **[!UICONTROL Choose files]** to browse and select from your local directory.
+To upload a JSON file, you can drag and drop the file into the provided area, or select **[!UICONTROL Choose files]** to browse and select from your local directory.
 
 ![The request creation workflow with the choose files and drag and drop interface for uploading JSON files highlighted.](../images/ui/record-delete/upload-json.png)
 
