@@ -8,12 +8,12 @@ description: [!DNL Moengage]  is a customer engagement platform that powers cust
 
 ## Overview {#overview}
 
-[!DNL Moengage] destination allows you to connect and map your Adobe data (user attributes, segments and events) to MoEngage in real-time. Customers can then act on this data, delivering personalized, targeted experience.
+Use the [!DNL Moengage] destination to connect and map your Adobe data (user attributes, segments and events) to MoEngage in real-time. Customers can then act on this data, delivering personalized, targeted experience.
 With Adobe, the integration is very simple and intuitive. Simply take any Adobe user profile, and map it to a MoEngage user attribute.
 
 ## Use cases {#use-cases}
 
-A marketer wants to target a user segment (built in Adobe Experience Platform) via [!DNL Moengage] campaigns. Also, he wants to personalize campaign content based on attributes from the Adobe Experience Platform profiles. With this integration, users and attributes are updated in MoEngage as soon as segments and profiles are updated in Adobe Experience Platform
+A marketer wants to target a user segment (built in Adobe Experience Platform) via [!DNL Moengage] campaigns. Also, they wants to personalize campaign content based on attributes from the Adobe Experience Platform profiles. With this integration, users and attributes are updated in MoEngage as soon as segments and profiles are updated in Adobe Experience Platform
 
 ## Prerequisites {#prerequisites}
 
@@ -93,11 +93,11 @@ Mapping consists of creating a link between your [!DNL Experience Data Model] (X
 
 To correctly map your XDM fields to the [!DNL Moengage] destination fields, follow these steps:
 
-In the [!UICONTROL Mapping] step, click **[!UICONTROL Checkbox]**.
+In the [!UICONTROL Mapping] step, select **[!UICONTROL Checkbox]**.
 
 ![Moengage Destination Add Mapping](../../assets/catalog/mobile-engagement/moengage/segments.png)
 
-In the [!UICONTROL Mapping] step, click **[!UICONTROL Add new mapping]**.
+In the [!UICONTROL Mapping] step, select **[!UICONTROL Add new mapping]**.
 
 ![Moengage Destination Add Mapping](../../assets/catalog/mobile-engagement/moengage/mapping.png)
 
@@ -110,9 +110,9 @@ In the [!UICONTROL Select source field] window, you can choose between two categ
 
 ![Moengage Destination Mapping Source Attribute](../../assets/catalog/mobile-engagement/moengage/mapping-attributes.png)
 
-Choose your source field, then click **[!UICONTROL Select]**.
+Choose your source field, then select **[!UICONTROL Select]**.
 
-In the [!UICONTROL Target Field] section, click the mapping icon to the right of the field.
+In the [!UICONTROL Target Field] section, select the mapping icon to the right of the field.
    
 ![Moengage Destination Target Mapping](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
@@ -122,7 +122,7 @@ In the [!UICONTROL Select target field] window, you can choose between two categ
   
 ![Moengage Destination Target Mapping Fields](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)
 
-Choose your target field, then click **[!UICONTROL Select]**.
+Choose your target field, then select **[!UICONTROL Select]**.
 
 You should now see your field mapping in the list.
 
