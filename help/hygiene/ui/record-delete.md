@@ -130,6 +130,10 @@ To add more identities, select the plus icon (![A plus icon.](../images/ui/recor
 
 Once you have finished adding identities to the request, under **[!UICONTROL Request settings]**, provide a name and optional description for the request before selecting **[!UICONTROL Submit]**.
 
+>[!IMPORTANT] 
+> 
+>There are different limits for the total number of deletion requests that can be submitted each month. These limits are based on your licence agreement. Organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600K requests each month. Organizations for all editions of Customer Data Platform and Adobe Journey Optimizer can submit up to 100k requests each month.
+
 ![The request setting's [!UICONTROL Name] and [!UICONTROL Description] fields with [!UICONTROL Submit] highlighted.](../images/ui/record-delete/submit.png)
 
 A [!UICONTROL Confirm request] dialog appears to indicate that the identities cannot be recovered once deleted. You must confirm the list of identities whose data you want to delete. Select **[!UICONTROL Submit]** to confirm your selection.
