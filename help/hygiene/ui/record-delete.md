@@ -5,10 +5,6 @@ description: Learn how to delete records in the Adobe Experience Platform UI.
 # Delete records (limited release) {#record-delete} 
  
 The [[!UICONTROL Data Lifecycle] workspace](./overview.md) in the Adobe Experience Platform UI allows you to delete records that are participating in Identity Service and Real-Time Customer Profile. These records can be tied to individual consumers or any other entity that is included in the identity graph.
-
-Depending on you entitlement, some users can also delete data from the data lake. In this case, the available options change. ...
-
-<!-- Information is deleted But (1) Those who are delta migrated can deleted from UIS, UPS, and Data Lake. Are we noting they can delete from lake? We need to be clear where the data is being deleted based on their entitlement. Is that found in different documentation? (2) The screenshots show selection between one/all, but that is not a choice that non-delta migrated customers get. How do you plan to incorporate that scenario? -->
  
 >[!IMPORTANT] 
 > 
@@ -35,7 +31,11 @@ To start the process, select **[!UICONTROL Data Lifecycle]** in the left navigat
 
 ![The [!UICONTROL Data lifecycle requests] workspace with [!UICONTROL Create request] selected.](../images/ui/record-delete/create-request-button.png)
 
-The request creation workflow appears. By default, the **[!UICONTROL Delete consumer]** option is selected under the **[!UICONTROL Requested Action]** section. Leave this option selected.
+The request creation workflow appears. By default, the **[!UICONTROL Delete record]** option is selected under the **[!UICONTROL Requested Action]** section. Leave this option selected.
+
+>[!IMPORTANT] 
+> 
+>As part of ongoing changes to improve efficiency and make dataset operations less expensive, organizations who have been moved to the Delta format can also delete data from the data lake. This type of user is referred to as delta-migrated. Users form organizations who have been non delta-migrated cannot update datasets, nor can they chose to delete records from either a single or all datasets as seen in the image below. In this case, please continue to the [provide identities](#provide-identities) section of the guide.
 
 ![The request creation workflow with the [!UICONTROL Delete record] option selected and highlighted.](../images/ui/record-delete/delete-record.png)
 
