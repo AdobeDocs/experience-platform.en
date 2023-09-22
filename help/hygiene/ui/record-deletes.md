@@ -84,7 +84,7 @@ There are two options to provide identities when deleting records:
   
 To upload a JSON file, you can drag and drop the file into the provide area, or select **[!UICONTROL Choose files]** to browse and select from your local directory.  
   
-![Image showing the methods for uploading JSON in the UI](../images/ui/record-delete/upload-json.png)  
+![The request creation workflow with the choose files and drag and drop interface for uploading JSON files highlighted.](../images/ui/record-delete/upload-json.png)
   
 The JSON file must be formatted as an array of objects, each object representing an identity.  
 
@@ -119,24 +119,26 @@ Controls appear that allow you to enter identities one at a time. Under **[!UICO
 ![The request creation workflow with an identity field manually added.](../images/ui/record-delete/identity-added.png)
 
 To add more identities, select the plus icon (![A plus icon.](../images/ui/record-delete/plus-icon.png)) next to one of the rows, or select **[!UICONTROL Add identity]**.
-<!-- up to here -->
-![Image showing how to add more identities to the request](../images/ui/record-delete/more-identities.png)
+
+![The request creation workflow with the plus icon and the add identity icon highlighted.](../images/ui/record-delete/more-identities.png)
 
 ## Submit the request (#submit)
 
 Once you have finished adding identities to the request, under **[!UICONTROL Request settings]**, provide a name and optional description for the request before selecting **[!UICONTROL Submit]**.
 
-![Image showing the [!UICONTROL Submit] button being selected](../images/ui/record-delete/submit.png)
+![The request setting's [!UICONTROL Name] and [!UICONTROL Description] fields with [!UICONTROL Submit] highlighted.](../images/ui/record-delete/submit.png)
 
-You are asked to confirm the list of identities whose data you want to delete. Select **[!UICONTROL Submit]** to confirm your selection.
+A [!UICONTROL Confirm request] dialog appears to indicate that the identities cannot be recovered once deleted. You must confirm the list of identities whose data you want to delete. Select **[!UICONTROL Submit]** to confirm your selection.
 
-![Image showing the confirmation dialog](../images/ui/record-delete/confirm-request.png)
+![The [!UICONTROL Confirm request] dialog.](../images/ui/record-delete/confirm-request.png)
 
-After the request is submitted, a work order is created and appears on the [!UICONTROL Consumer] tab of the [!UICONTROL Data Hygiene] workspace. From here, you can monitor the work order's status as it processes the request.
+After the request is submitted, a work order is created and appears on the [!UICONTROL Record] tab of the [!UICONTROL Data Lifecycle] workspace. From here, you can monitor the work order's status as it processes the request.
 
 >[!NOTE]
 >
 >Refer to the overview section on [timelines and transparency](../home.md#record-delete-transparency) for details on how record deletes are processed once they are executed.
+
+![The [!UICONTROL Record] tab of the [!UICONTROL Data Lifecycle] workspace with the new request highlighted.](../images/ui/record-delete/request-log.png)
 
 ## Next steps
 
