@@ -23,7 +23,7 @@ Note that not all functions listed above are supported *when exporting fields to
 
 This is a beta program. Contact your Adobe representative to get access to the functionality. 
 
-Go through the activation steps for cloud storage destinations and get to the Mapping step. 
+Progress through the activation steps for cloud storage destinations and get to the Mapping step. 
 
 # How to export calculated fields
 
@@ -31,13 +31,18 @@ In the mapping step, select **[!UICONTROL Add calculated field]**.
 
 ![Add calculated field to export](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
-This opens a modal window where you can 
+This opens a modal window where you can select functions, fields, and operators that you can use:
+
+![Modal window 1](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
+
+![Modal window 2](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
 ## Supported functions {#supported-functions}
 
 Note that only the following functions are supported in the beta release of calculated fields and array support for destinations: 
 
-### Examples
+
+### `join` function to export arrays
 
 Here are some examples of how you could use calculated fields in the destinations UI to access and export arrays and other fields:
 
