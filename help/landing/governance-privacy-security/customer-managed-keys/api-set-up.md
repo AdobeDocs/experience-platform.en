@@ -105,6 +105,8 @@ Once you have obtained the key vault URI, you can send it using a POST request t
 
 **Request**
 
++++ A sample request to send key vault URI to the CMK configuration endpoint.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/infrastructure/manager/customer/config \ 
@@ -129,9 +131,11 @@ curl -X POST \
 | `imsOrgId` | Your organization ID. This ID must be the same value as provided under the `x-gw-ims-org-id` header. |
 | `configData` | This property contains the following details about the configuration:<ul><li>`providerType`: Must be set to `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`: The key vault URI that you copied [earlier](#send-to-adobe).</li></ul> |
 
++++
+
 **Response**
 
-A successful response returns the details of the configuration job.
++++ The successful response returns the details of the configuration job.
 
 ```json
 {
@@ -146,12 +150,14 @@ A successful response returns the details of the configuration job.
     },
     "name": "acpcf978863Aaepcmkmultitenantapp",
     "type": "BYOK_CONFIG",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "status": "NEW"
   },
   "status": "CREATED"
 }
 ```
+
++++
 
 The job should complete processing within a few minutes.
 
@@ -163,6 +169,8 @@ To check the status of the configuration request, you can make a GET request.
 
 You must append the `name` of the configuration you want to check to the path (`config1` in the example below) and include a `configType` query parameter set to `BYOK_CONFIG`.
 
++++ A sample request to check the status of the configuration request. 
+
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/infrastructure/manager/customer/config/config1?configType=BYOK_CONFIG \ 
@@ -171,9 +179,11 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
++++
+
 **Response**
 
-A successful response returns the status of the job.
++++ The successful response returns the status of the job.
 
 ```json
 {
@@ -187,12 +197,14 @@ A successful response returns the status of the job.
     "keyName": "Config1",
     "providerType": "AZURE_KEYVAULT"
   },
-  "imsOrgId": "{IMS_ORG}",
+  "imsOrgId": "{ORG_ID}",
   "subscriptionId": "cf978863-7325-47b1-8fd9-554b9fdb6c36",
   "id": "4df7886b-a122-4391-880b-47888d5c5b92",
   "rowType": "BYOK_KEY"
 }
 ```
+
++++
 
 The `status` attribute can have one of four values with the following meanings:
 
@@ -203,4 +215,4 @@ The `status` attribute can have one of four values with the following meanings:
 
 ## Next steps
 
-By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. 
+By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. To learn more about data encryption in Adobe Experience Platform, see the [encryption documentation](../encryption.md).
