@@ -11,81 +11,81 @@ The [[!UICONTROL Data Hygiene] workspace](./overview.md) in the Adobe Experience
 >The Record Delete feature is currently available in a **limited release only** and is not available to all customers. 
 > 
 > 
->Record deletions are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.  
-  
-## Prerequisites {#prerequisites}  
-  
-Deleting records requires a working understanding of how identity fields function in Experience Platform. Specifically, you must know the primary identity values of the entities whose records you want to delete, depending on the dataset (or datasets) you are deleting them from.  
-  
-Refer to the following documentation for more information on identities in Platform:  
-  
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Bridges identities across devices and systems, linking datasets together based on the identity fields defined by the XDM schemas they conform to.  
-  * [Identity namespaces](../../identity-service/namespaces.md): Identity namespaces define the different types of identity information that can relate to a single person, and are a required component for each identity field.  
-* [Real-Time Customer Profile](../../profile/home.md): Leverages identity graphs to provide unified consumer profiles based on aggregated data from multiple sources, updated in near-real-time.  
-* [Experience Data Model (XDM)](../../xdm/home.md): Provides standard definitions and structures for Platform data through the use of schemas. All Platform datasets conform to a specific XDM schema, and the schema defines which fields are identities.  
-  * [Identity fields](../../xdm/ui/fields/identity.md): Learn how an identity field is defined in an XDM schema.  
-  
-## Create a new request {#create-request}  
-  
-To start the process, select **[!UICONTROL Data Lifecycle]** in the left navigation of the Platform UI. The [!UICONTROL Data lifecycle requests] workspace appears. Next, select **[!UICONTROL Create request]** from the main page in the workspace.  
-  
-![The [!UICONTROL Data lifecycle requests] workspace with [!UICONTROL Create request] selected.](../images/ui/record-delete/create-request-button.png)  
-  
-The request creation workflow appears. By default, the **[!UICONTROL Delete consumer]** option is selected under the **[!UICONTROL Requested Action]** section. Leave this option selected.  
+>Record deletions are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
-![The request creation workflow with the [!UICONTROL Delete record] option selected and highlighted.](../images/ui/record-delete/delete-record.png)  
-  
-## Select datasets {#select-dataset}  
-  
+## Prerequisites {#prerequisites}
+
+Deleting records requires a working understanding of how identity fields function in Experience Platform. Specifically, you must know the primary identity values of the entities whose records you want to delete, depending on the dataset (or datasets) you are deleting them from.
+
+Refer to the following documentation for more information on identities in Platform:
+
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Bridges identities across devices and systems, linking datasets together based on the identity fields defined by the XDM schemas they conform to.
+* [Identity namespaces](../../identity-service/namespaces.md): Identity namespaces define the different types of identity information that can relate to a single person, and are a required component for each identity field.
+* [Real-Time Customer Profile](../../profile/home.md): Leverages identity graphs to provide unified consumer profiles based on aggregated data from multiple sources, updated in near-real-time.
+* [Experience Data Model (XDM)](../../xdm/home.md): Provides standard definitions and structures for Platform data through the use of schemas. All Platform datasets conform to a specific XDM schema, and the schema defines which fields are identities.
+* [Identity fields](../../xdm/ui/fields/identity.md): Learn how an identity field is defined in an XDM schema.
+
+## Create a new request {#create-request}
+
+To start the process, select **[!UICONTROL Data Lifecycle]** in the left navigation of the Platform UI. The [!UICONTROL Data lifecycle requests] workspace appears. Next, select **[!UICONTROL Create request]** from the main page in the workspace.
+
+![The [!UICONTROL Data lifecycle requests] workspace with [!UICONTROL Create request] selected.](../images/ui/record-delete/create-request-button.png)
+
+The request creation workflow appears. By default, the **[!UICONTROL Delete consumer]** option is selected under the **[!UICONTROL Requested Action]** section. Leave this option selected.
+
+![The request creation workflow with the [!UICONTROL Delete record] option selected and highlighted.](../images/ui/record-delete/delete-record.png)
+
+## Select datasets {#select-dataset}
+
 The next step is to determine whether you want to delete records from a single dataset or all datasets. Under the **[!UICONTROL Record Details]** section, use the radio button to select between a specific dataset and all datasets.
 
 If you choose **[!UICONTROL Select dataset]**, proceed to select the database icon (![The database icon](../images/ui/record-delete/database-icon.png)) to open a dialog that provides a list of available datasets. Select the desired dataset from the list followed by **[!UICONTROL Done]**.  
 
 ![The [!UICONTROL Select dataset] dialog with a dataset selected and [!UICONTROL Done] highlighted.](../images/ui/record-delete/select-dataset.png)  
-  
-If you want to delete records from all datasets, select **[!UICONTROL All datasets]**.  
-  
-![The [!UICONTROL Select dataset] dialog with the [!UICONTROL All datasets] option selected.](../images/ui/record-delete/all-datasets.png)  
-  
->[!NOTE]  
->  
->Selecting the **[!UICONTROL All datasets]** option can cause the delete operation to take longer and may not result in accurate record deletion.  
-  
-## Provide identities {#provide-identities}  
-  
+
+If you want to delete records from all datasets, select **[!UICONTROL All datasets]**.
+
+![The [!UICONTROL Select dataset] dialog with the [!UICONTROL All datasets] option selected.](../images/ui/record-delete/all-datasets.png)
+
+>[!NOTE]
+>
+>Selecting the **[!UICONTROL All datasets]** option can cause the delete operation to take longer and may not result in accurate record deletion.
+
+## Provide identities {#provide-identities}
+
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Primary identity"
 >abstract="A primary identity is an attribute that ties a record to a consumer's profile in Experience Platform. The primary identity field for a dataset is defined by the schema that the dataset is based on. In this column, you must provide the type (or namespace) for the record's primary identity, such as `email` for email addresses and `ecid` for Experience Cloud IDs. To learn more, see the Data Hygiene UI guide."
-  
+
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Identity value"
 >abstract="In this column, you must provide the value for the record's primary identity, which must correspond with the identity type provided in the left column. If the primary identity type is `email`, the value should be the record's email address. To learn more, see the data hygiene UI guide."
-  
-When deleting records, you must provide identity information so the system can determine which records are to be deleted. For any dataset in Platform, records are deleted based on the **primary identity** field that is defined by the dataset's schema.  
 
-Like all identity fields in Platform, a primary identity is composed of two things: a **type** (sometimes referred to as an identity namespace) and a **value**. The identity type provides context as to how the field identifies a record (such as an email address), and the value represents a record's specific identity for that type (for example, `jdoe@example.com` for the `email` identity type). Common fields used as identities include account information, device IDs, and cookie IDs.  
-  
->[!TIP]  
->  
->If you don't know the primary identity for a particular dataset, you can find it in the Platform UI. In the **[!UICONTROL Datasets]** workspace, select the dataset in question from the list. On the details page for the dataset, hover over the name of the dataset's schema in the right rail. The primary identity is displayed along with the schema name and description.  
->  
->![The Datasets dashboard with a dataset selected, and a schema dialog opened from the dataset details panel. The primary ID of the dataset is highlighted.](../images/ui/record-delete/dataset-primary-identity.png)  
-  
-If you are deleting records from a single dataset, all the identities you provide must have the same type, since a dataset can only have one primary identity. If you are deleting from all datasets, you can include multiple identity types since different datasets may have different primary identities.  
-  
-There are two options to provide identities when deleting records:  
-  
-* [Upload a JSON file](#upload-json)  
-* [Enter identity values manually](#manual-identity)  
-  
-### Upload a JSON file {#upload-json}  
-  
-To upload a JSON file, you can drag and drop the file into the provide area, or select **[!UICONTROL Choose files]** to browse and select from your local directory.  
-  
+When deleting records, you must provide identity information so the system can determine which records are to be deleted. For any dataset in Platform, records are deleted based on the **primary identity** field that is defined by the dataset's schema.
+
+Like all identity fields in Platform, a primary identity is composed of two things: a **type** (sometimes referred to as an identity namespace) and a **value**. The identity type provides context as to how the field identifies a record (such as an email address), and the value represents a record's specific identity for that type (for example, `jdoe@example.com` for the `email` identity type). Common fields used as identities include account information, device IDs, and cookie IDs.
+
+>[!TIP]
+>
+>If you don't know the primary identity for a particular dataset, you can find it in the Platform UI. In the **[!UICONTROL Datasets]** workspace, select the dataset in question from the list. On the details page for the dataset, hover over the name of the dataset's schema in the right rail. The primary identity is displayed along with the schema name and description.
+>
+>![The Datasets dashboard with a dataset selected, and a schema dialog opened from the dataset details panel. The primary ID of the dataset is highlighted.](../images/ui/record-delete/dataset-primary-identity.png)
+
+If you are deleting records from a single dataset, all the identities you provide must have the same type, since a dataset can only have one primary identity. If you are deleting from all datasets, you can include multiple identity types since different datasets may have different primary identities.
+
+There are two options to provide identities when deleting records:
+
+* [Upload a JSON file](#upload-json)
+* [Enter identity values manually](#manual-identity)
+
+### Upload a JSON file {#upload-json}
+
+To upload a JSON file, you can drag and drop the file into the provide area, or select **[!UICONTROL Choose files]** to browse and select from your local directory.
+
 ![The request creation workflow with the choose files and drag and drop interface for uploading JSON files highlighted.](../images/ui/record-delete/upload-json.png)
-  
+
 The JSON file must be formatted as an array of objects, each object representing an identity.  
 
 ```json
