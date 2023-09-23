@@ -18,6 +18,10 @@ The [[!UICONTROL Data Lifecycle] workspace](./overview.md) in the Adobe Experien
 
 This document covers how to schedule and manage dataset expirations in the Platform UI.
 
+>[!NOTE]
+>
+>Dataset Expiration does not currently delete data from the Adobe Experience Platform Edge Network. However, as the 14-day service license agreement for Dataset Expiration coincides with the 14-day period where data exists inside the Edge Network before being discarded, there is no possibility that data stays in the edge even after the dataset is set to be expired.
+
 ## Schedule a dataset expiration {#schedule-dataset-expiration}
 
 >[!CONTEXTUALHELP]
@@ -36,12 +40,12 @@ The request creation workflow appears. Under the [!UICONTROL Requested Action] s
 ### Select a date and a dataset
 
 Under the **[!UICONTROL Requested Action]** section, select a date that you want the dataset to be deleted by. You can enter the date manually (in the format `mm/dd/yyyy`) or select the calendar icon (![A calendar icon.](../images/ui/ttl/calendar-icon.png)) to select the date from a dialog.
-<!-- update image below -->
+
 ![A calendar dialog with an expiration date selected and highlighted for the dataset.](../images/ui/ttl/select-date.png)
 
-Next, under **[!UICONTROL Dataset Details]**, select the database icon (![Image of the database icon](../images/ui/ttl/database-icon.png)) to open a dataset selection dialog. Choose a dataset from the list to apply the expiration to, then select **[!UICONTROL Done]**.
+Next, under **[!UICONTROL Dataset Details]**, select the database icon (![The database icon.](../images/ui/ttl/database-icon.png)) to open a dataset selection dialog. Choose a dataset from the list to apply the expiration to, then select **[!UICONTROL Done]**.
 
-![Image showing a dataset being selected](../images/ui/ttl/select-dataset.png)
+![The [!UICONTROL Select dataset] dialog with a dataset selected and [!UICONTROL Done] highlighted.](../images/ui/ttl/select-dataset.png)
 
 >[!NOTE]
 >
@@ -51,11 +55,11 @@ Next, under **[!UICONTROL Dataset Details]**, select the database icon (![Image 
 
 The [!UICONTROL Dataset Details] section populates to include the primary identity and schema for the selected dataset. Under **[!UICONTROL Request settings]**, enter a name and optional description for the request, followed by **[!UICONTROL Submit]**.
 
-![Image showing the [!UICONTROL Submit] button being selected](../images/ui/ttl/submit.png)
+![A completed dataset expiration request with the [!UICONTROL Request settings] and [!UICONTROL Submit] button highlighted.](../images/ui/ttl/submit.png)
 
-You are asked to confirm the date that the dataset will be deleted by. Select **[!UICONTROL Submit]** to continue.
+A [!UICONTROL Confirm request] dialog appears. You are asked to confirm the dataset name and the date that the dataset will be deleted by. Select **[!UICONTROL Submit]** to continue.
 
-After the request is submitted, a work order is created and appears on the main tab of the [!UICONTROL Data Hygiene] workspace. From here, you can monitor the work order's status as it processes the request.
+After the request is submitted, a work order is created and appears on the main tab of the [!UICONTROL Data Lifecycle] workspace. From here, you can monitor the work order's status as it processes the request.
 
 >[!NOTE]
 >
