@@ -2,7 +2,7 @@
 title: Delete Records
 description: Learn how to delete records in the Adobe Experience Platform UI.
 ---
-# Delete records (limited release) {#record-delete} 
+# [!BADGE Limited Release]{type=Informative} Delete records (limited release) {#record-delete} 
  
 The [[!UICONTROL Data Lifecycle] workspace](./overview.md) in the Adobe Experience Platform UI allows you to delete records that are participating in Identity Service and Real-Time Customer Profile. These records can be tied to individual consumers or any other entity that is included in the identity graph.
  
@@ -132,7 +132,7 @@ Once you have finished adding identities to the request, under **[!UICONTROL Req
 
 >[!IMPORTANT] 
 > 
->There are different limits for the total number of deletion requests that can be submitted each month. These limits are based on your license agreement. Organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600 thousand requests each month. Organizations for all editions of Customer Data Platform and Adobe Journey Optimizer can submit up to 100 thousand requests each month.
+>There are different limits for the total number of deletion requests that can be submitted each month. These limits are based on your license agreement. Organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600,000 requests each month. Organizations for all editions of Customer Data Platform and Adobe Journey Optimizer can submit up to 100,000 requests each month.
 
 ![The request setting's [!UICONTROL Name] and [!UICONTROL Description] fields with [!UICONTROL Submit] highlighted.](../images/ui/record-delete/submit.png)
 
