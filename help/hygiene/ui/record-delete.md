@@ -2,7 +2,7 @@
 title: Delete Records
 description: Learn how to delete records in the Adobe Experience Platform UI.
 ---
-# [!BADGE Limited Release]{type=Informative} Delete records (limited release) {#record-delete} 
+# Delete records (limited release) {#record-delete} 
  
 The [[!UICONTROL Data Lifecycle] workspace](./overview.md) in the Adobe Experience Platform UI allows you to delete records that are participating in Identity Service and Real-Time Customer Profile. These records can be tied to individual consumers or any other entity that is included in the identity graph.
  
@@ -35,7 +35,7 @@ The request creation workflow appears. By default, the **[!UICONTROL Delete reco
 
 >[!IMPORTANT] 
 > 
->As part of ongoing changes to improve efficiency and make dataset operations less expensive, organizations who have been moved to the Delta format can also delete data from the data lake. This type of user is referred to as delta-migrated. Users from organizations who have not been delta-migrated cannot update datasets, nor can they choose to delete records from either a single or all datasets as seen in the image below. In this case, please continue to the [provide identities](#provide-identities) section of the guide.
+>As part of ongoing changes to improve efficiency and make dataset operations less expensive, organizations who have been moved to the Delta format can also delete data from the data lake. This type of user is referred to as delta-migrated. Users from organizations who have been delta-migrated can update datasets, and choose to delete records from either a single or all datasets. Users from organizations who have not been delta-migrated cannot update datasets, nor can they choose to delete records from either a single or all datasets as seen in the image below. In this case, please continue to the [provide identities](#provide-identities) section of the guide.
 
 ![The request creation workflow with the [!UICONTROL Delete record] option selected and highlighted.](../images/ui/record-delete/delete-record.png)
 
