@@ -20,7 +20,7 @@ This document covers how to schedule and manage dataset expirations in the Platf
 
 >[!NOTE]
 >
->Dataset Expiration does not currently delete data from the Adobe Experience Platform Edge Network. However, as the 14-day service license agreement for Dataset Expiration coincides with the 14-day period where data exists inside the Edge Network before being discarded, there is no possibility that data stays in the edge even after the dataset is set to be expired.
+>Dataset Expiration does not currently delete data from the Adobe Experience Platform Edge Network. However, there is no possibility that data stays inside the Edge Network after the dataset is set to expire. This is because the 14-day service license agreement for Dataset Expiration coincides with the 14-day period where data exists inside the Edge Network before being discarded.
 
 ## Schedule a dataset expiration {#schedule-dataset-expiration}
 
@@ -29,7 +29,7 @@ This document covers how to schedule and manage dataset expirations in the Platf
 >title="Instructions"
 >abstract="<ul><li>Select <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html">Data Hygiene</a> in the left navigation, then select <b>Create request</b>.</li><li>If you want to delete records:</li>&nbsp;&nbsp;&nbsp;<li>Select <b>Record</b>.</li>&nbsp;&nbsp;&nbsp;<li>Select a specific dataset to delete records from or choose the option to delete them from all datasets.</li>&nbsp;&nbsp;&nbsp;<li>Provide the identities of the consumers whose records are to be deleted. Select <b>Add identity</b> to provide the identities one at a time or select <b>Choose files</b> to upload a JSON file of identities instead.</li>&nbsp;&nbsp;&nbsp;<li>If needed, select <b>Template</b> to view the expected format of the JSON file.</li><li>See the documentation for instructions if you want to <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">schedule expiration dates for datasets</a>.</li></ul>"
 
-To create a new request, select **[!UICONTROL Create request]** from the main page in the workspace.
+To create a request, select **[!UICONTROL Create request]** from the main page in the workspace.
 
 ![The [!UICONTROL Data Lifecycle] workspace with [!UICONTROL Create request] highlighted.](../images/ui/ttl/create-request-button.png)
 
@@ -37,7 +37,7 @@ The request creation workflow appears. Under the [!UICONTROL Requested Action] s
 
 ![The request creation workflow with the [!UICONTROL Delete dataset] option highlighted.](../images/ui/ttl/dataset-selected.png)
 
-### Select a date and a dataset
+### Select a date and a dataset {#select-date-and-dataset}
 
 Under the **[!UICONTROL Requested Action]** section, select a date that you want the dataset to be deleted by. You can enter the date manually (in the format `mm/dd/yyyy`) or select the calendar icon (![A calendar icon.](../images/ui/ttl/calendar-icon.png)) to select the date from a dialog.
 
@@ -51,7 +51,7 @@ Next, under **[!UICONTROL Dataset Details]**, select the database icon (![The da
 >
 >Only datasets belonging to the current sandbox are shown.
 
-### Submit the request
+### Submit the request {#submit-request}
 
 The [!UICONTROL Dataset Details] section populates to include the primary identity and schema for the selected dataset. Under **[!UICONTROL Request settings]**, enter a name and optional description for the request, followed by **[!UICONTROL Submit]**.
 
@@ -65,7 +65,7 @@ After the request is submitted, a work order is created and appears on the main 
 >
 >Refer to the overview section on [timelines and transparency](../home.md#dataset-expiration-transparency) for details on how dataset expirations are processed once they are executed.
 
-## Edit or cancel a dataset expiration
+## Edit or cancel a dataset expiration {#edit-or-cancel}
 
 To edit or cancel a dataset expiration, select **[!UICONTROL Dataset]** on the main page of the workspace, and select the dataset expiration from the list.
 
