@@ -51,9 +51,17 @@ You can also select a query template name from the [!UICONTROL Name] column to n
 
 ![The Query log details view.](../images/ui/query-log/query-log-details.png)
 
+## Edit logs {#edit-logs}
+
 Next to each row's template name or SQL snippet is a pencil icon (![A pencil icon.](../images/ui/query-log/edit-icon.png)) that you can use to navigate to the Query Editor. The query is then pre-populated in the editor for editing.
 
 ![The Queries Log workspace with a pencil icon highlighted.](../images/ui/query-log/edit-query.png)
+
+## Filter logs {#filter-logs}
+
+
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-166409 -->
 
 ## Next steps
 
