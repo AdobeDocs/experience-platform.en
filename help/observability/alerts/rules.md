@@ -11,7 +11,7 @@ Adobe Experience Platform provides several predefined alert rules that you can e
 
 When [viewing alert rules in the Platform UI](./ui.md), you can subscribe to each rule individually. When subscribing to alerts through [I/O Event notifications](./subscribe.md), however, alert rules are organized into different subscription packages. In the tables below, each rule is shown with its corresponding I/O Event subscription name.
 
-## Data Ingestion
+## Sources
 
 The following alert rules are specific to [Data Ingestion](../../ingestion/home.md) and  [sources](../../sources/home.md):
 
@@ -19,13 +19,13 @@ The following alert rules are specific to [Data Ingestion](../../ingestion/home.
 >
 >Streaming sources are currently not supported by alerts. You can only subscribe to alert notifications for batch sources.
 
-| I/O Event subscription | Alert rule | Description |
-| --- | --- | --- |
-| Source Flow Run Info | Sources Flow Run Start | This alert triggers when a source connection starts processing data. |
-| Source Flow Run Info | Sources Flow Run Success | This alert triggers when data is successfully ingested from a source connection. |
-| Source Flow Run Delays, Failures and Errors | Sources Flow Run Failure | This alert triggers when an error occurs while ingesting data from a source connection. |
-| Source Flow Run Delays, Failures and Errors | Ingestion Delay | This alert triggers when a batch ingestion flow run takes longer than 150 minutes to process. |
-| Source Flow Run Delays, Failures and Errors | Ingestion Failure | This alert triggers when the ratio of failed records to all records exceed a threshold of 0.5%. |
+| I/O Event subscription | Alert rule | Description | Schema payload |
+| --- | --- | --- | --- |
+| Source Flow Run Start | Sources Flow Run Start | This alert triggers when a source connection starts processing data. | <pre>{<br>   "id": "66643b20-dc76-4b04-bacf-93bee162683c",<br>   "createdAt": 1693339079768,<br>   "updatedAt": 1693339079768,<br>   "createdBy": "acp_foundation_connectors@AdobeID",<br>   "updatedBy": "acp_foundation_connectors@AdobeID",<br>   "createdClient": "acp_foundation_connectors",<br>   "updatedClient": "acp_foundation_connectors",<br>   "sandboxId": "e2c261a4-ae36-430c-8261-a4ae36130c21",<br>   "sandboxName": "dev",<br>   "imsOrgId": "A565899B544AA2E80A4C98BC@AdobeOrg",<br>   "flowId": "05222685-e2b7-4367-a5a2-db4d7acda43d",<br>   "providerRefId":<br>   "M-05222685-e2b7-4367-a5a2-db4d7acda43d-incremental-0:2d304546-3817-42a6-b836-1a85fee51987",<br>   "etag": "\"0e0158eb-0000-0d00-0000-64ee4dc70000\"",<br>   "metrics": {<br>      "statusSummary": {<br>         "status": "inProgress"<br>      }<br>   },<br>   "activities": [],<br>   "flowName": "Sales plan- weekly_plan.csv",<br>   "header": {<br>      "_adobeio": {<br>         "imsOrgId": "A565899B544AA2E80A4C98BC@AdobeOrg",<br>         "providerMetadata": "aep_observability_catalog_events",<br>         "eventCode": "source_flow_run_info"<br>      }<br>   }<br>}</pre> |
+| Source Flow Run Info | Sources Flow Run Success | This alert triggers when data is successfully ingested from a source connection. | |
+| Source Flow Run Delays, Failures and Errors | Sources Flow Run Failure | This alert triggers when an error occurs while ingesting data from a source connection. | |
+| Source Flow Run Delays, Failures and Errors | Ingestion Delay | This alert triggers when a batch ingestion flow run takes longer than 150 minutes to process. | |
+| Source Flow Run Delays, Failures and Errors | Ingestion Failure | This alert triggers when the ratio of failed records to all records exceed a threshold of 0.5%. | |
 
 {style="table-layout:auto"}
 
