@@ -93,6 +93,11 @@ Here are some examples of how you could use the `join` function to access and ex
 
 Here are some examples of how you could use the `coalesce` function to access and export arrays and other fields:
 
+|Input value| Function | Output |
+|---------|----------|---------|
+| `"loyalty":{... "loyaltyID":["1110001", "1110002", "1110003", "1110004"] ...}` | `coalesce(loyalty.loyaltyID)` | `"1110001"` |
+| another object with arrays | display function | output | 
+| yet object with arrays  | display function | output | 
 
 ### `iif` function to export arrays {#iif-function-export-arrays}
 
