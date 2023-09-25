@@ -286,7 +286,7 @@ You are taken to the Monitoring dashboard. Next, select **[!UICONTROL ONLY INGES
 
 ![The monitoring dashboard with the failure filter selected.](../../../../images/tutorials/create/analytics/clear-filter.png)
 
-The interface updates to a list of individual batches, including their respective metrics. 
+The interface updates to a list of individual batches, including information on their respective metrics. 
 
 ![The legacy monitoring page for batch data.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
 
