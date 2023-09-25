@@ -2,49 +2,73 @@
 title: (Beta) Export arrays and calculated fields
 type: Tutorial
 description: Learn how to export arrays and calculated fields from Real-Time CDP to batch profile-based destinations.
+badge: "Beta"
 ---
 
-# (Beta) Export arrays and calculated fields
+# (Beta) Export arrays through calculated fields
 
 >[!AVAILABILITY]
 >
->* The functionality to export arrays and calculated fields is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
+>* The functionality to export arrays through calculated fields is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
 
-Learn how to export arrays and calculated fields from Real-Time CDP to cloud storage destinations.
+Learn how export arrays through calculated fields from Real-Time CDP to cloud storage destinations.
 
-Get extensive information about calculated fields - what these are and why they matter. Read the pages linked below for more information about all the supported functions: 
+Get extensive information about calculated fields - what these are and why they matter. Read the pages linked below for an introduction to calculated fields and more information about all the supported functions: 
 
-* [UI guide and overview](help/data-prep/ui/mapping.md#calculated-fields) .
+* [UI guide and overview](help/data-prep/ui/mapping.md#calculated-fields)
 * [Supported functions](/help/data-prep/functions.md)
 
-Note that not all functions listed above are supported *when exporting fields to cloud storage destinations*. See the [supported functions section](#supported-functions) further below for more information.
+>[!IMPORTANT]
+>
+>Not all functions listed above are supported *when exporting fields to cloud storage destinations*. See the [supported functions section](#supported-functions) further below for more information.
 
 ## Prerequisites {#prerequisites}
 
 This is a beta program. Contact your Adobe representative to get access to the functionality. 
 
-Progress through the activation steps for cloud storage destinations and get to the Mapping step. 
+Progress through the [activation steps for cloud storage destinations](/help/destinations/ui/activate-batch-profile-destinations.md) and get to the [mapping](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) step. 
 
-# How to export calculated fields
+# How to export calculated fields {#how-to-export-calculated-fields}
 
 In the mapping step, select **[!UICONTROL Add calculated field]**.
 
 ![Add calculated field to export](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
-This opens a modal window where you can select functions, fields, and operators that you can use:
+This opens a modal window where you can select functions, fields, and operators that you can use to export fields and objects out of Experience Platform.
 
 ![Modal window 1](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
+For example, use the `join` function on the `loyaltyID` field as shown below to export an array of loyalty IDs as a string concatenated with an underscore in a CSV file. View [more information about this example further below](#join-function-export-arrays). 
+
 ![Modal window 2](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+
+Select **[!UICONTROL Save]** to keep the calculated field and return to the mapping step.
+
+![Modal window 3](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+
+Back in the mapping step of the workflow, fill in the **[!UICONTROL Target field ]** with a value of how you want to export this field in the files.
+
+![Select target field 1](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+
+![Select target field 2](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
+
+When ready, select **[!UICONTROL Next]** to proceed to the next step of the activation workflow.
+
+![Select next to proceed](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
 ## Supported functions {#supported-functions}
 
 Note that only the following functions are supported in the beta release of calculated fields and array support for destinations: 
 
-
-### `join` function to export arrays
+### `join` function to export arrays {#join-function-export-arrays}
 
 Here are some examples of how you could use calculated fields in the destinations UI to access and export arrays and other fields:
 
+
+|Input value| Function | Output |
+|---------|----------|---------|
+| `"loyalty":{... "loyaltyID":["1110001", "1110002", "1110003", "1110004"] ...}` | `join('_',loyalty.loyaltyID)` | `"1110001_1110002_1110003_1110004"` |
+| another object with arrays | display function | output | 
+| yet object with arrays  | display function | output | 
 
 
