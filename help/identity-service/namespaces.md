@@ -32,7 +32,7 @@ A namespace consists of the following components:
 * **Identity type**: The classification of a given namespace.
 * **Description**: (Optional) Any supplemental information that you can provide regarding a given namespace.
 
-### Identity types {#identity-types}
+### Identity type {#identity-type}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
