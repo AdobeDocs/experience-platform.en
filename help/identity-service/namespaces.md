@@ -1,15 +1,15 @@
 ---
 title: Identity Namespace Overview
-description: Identity namespaces are a component of Identity Service that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name@email.com" as an email address or "443522" as a numeric CRM ID.
+description: Learn about identity namespaces in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 ---
 # Identity namespace overview
 
-Read the following document to learn more about what you can do with identity namespaces when using Adobe Experience Platform Identity Service.
+Read the following document to learn more about what you can do with identity namespaces in Adobe Experience Platform Identity Service.
 
 ## Getting started
 
-Working with identity namespaces requires an understanding of the various Adobe Experience Platform services involved. Before beginning to work with namespaces, please review the documentation for the following services:
+Identity namespaces requires an understanding of various Adobe Experience Platform services. Before beginning to work with namespaces, please review the documentation for the following services:
 
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
 * [[!DNL Identity Service]](./home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
