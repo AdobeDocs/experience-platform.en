@@ -128,7 +128,7 @@ If breakdown is selected, the display shows a bar graph outlining the percentage
 | [!UICONTROL Existing] | The count of profiles which **remained** in the segment in the last 24 hours since the last batch segment job ran. |
 | [!UICONTROL Exiting] | The count of profiles which **exited** the segment in the last 24 hours since the last batch segment job ran. |
 
-After you selected the fields you want to display, you can also re-size the width of the displayed columns. You can either do this by dragging the area between the columns or by choosing the column you want to re-size and selecting **[!UICONTROL Resize column]**.
+After you selected the fields you want to display, you can also re-size the width of the displayed columns. You can either do this by dragging the area between the columns or by selecting the ![arrow icon](../images/ui/overview/arrow-icon.png) of the column you want to re-size, followed by **[!UICONTROL Resize column]**.
 
 ![The Resize column button is highlighted.](../images/ui/overview/browse-audience-resize-column.png)
 
