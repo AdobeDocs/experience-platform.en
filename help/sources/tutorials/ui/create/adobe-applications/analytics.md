@@ -266,23 +266,27 @@ Once your dataflow is complete, select **[!UICONTROL Dataflows]** in the sources
 
 A list of existing Analytics dataflows in your organization appears. From here, select a target dataset to view its respective ingestion activity.
 
-![A list of existing Adobe Analytics dataflows in your organization.](../../../../images/tutorials/create/analytics/select-dataflows.png)
+![A list of existing Adobe Analytics dataflows in your organization.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-The [!UICONTROL Dataset activity] page provides information on the progress oof data that is being sent from Analytics to Experience Platform. The interface displays metrics such as the number of ingested records, number of ingested batches, and number of failed batches.
+The [!UICONTROL Dataset activity] page provides information on the progress of data that is being sent from Analytics to Experience Platform. The interface displays metrics such as the number of ingested records, number of ingested batches, and number of failed batches.
 
-The source instantiates two dataset flows. One flow represents backfill data and the other is for live data. Backfill data is not configured for Profile but is sent to the data lake for analytical and data-science use-cases.
+The source instantiates two dataset flows. One flow represents backfill data and the other is for live data. Backfill data is not configured for ingestion into Real-Time Customer Profile but is sent to the data lake for analytical and data-science use-cases.
 
 For more information on backfill, live data, and their respective latencies, read the [Analytics source overview](../../../../connectors/adobe-applications/analytics.md).
 
->[!NOTE]
->
->The dataset activity page does not display a list of individual batches because batches are defined internally by Analytics.
-
 ![The dataset activity page for a given target dataset for Adobe Analytics data.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-+++View batch IDs using the legacy monitoring interface
++++View individual batches using the legacy monitoring interface
 
-To view the activity of specific batch IDs and datasets associated with your Analytics data, select **[!UICONTROL Monitoring]** in the left-navigation and then select **[!UICONTROL Batch end-to-end]**.
+The dataset activity page does not display a list of individual batches. To view a list of individual batches, select a chart in the dataset activity interface.
+
+![The dataset activity page with a chart selected.](../../../../images/tutorials/create/analytics/select-chart.png)
+
+You are taken to the Monitoring dashboard. Next, select **[!UICONTROL ONLY INGEST FAILURES: YES]** to clear the filter and view a list of individual batches.
+
+![The monitoring dashboard with the failure filter selected.](../../../../images/tutorials/create/analytics/clear-filter.png)
+
+The interface updates to a list of individual batches, including their respective metrics. 
 
 ![The legacy monitoring page for batch data.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
 
