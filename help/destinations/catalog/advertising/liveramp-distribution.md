@@ -240,8 +240,8 @@ To configure details for the destination, fill in the fields below.
 
 ![Platform UI image showing the customer data fields for the Magnite DV+ destination.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
 
-* **[!UICONTROL PartnerId]**: The Rubicon Project Partner ID associated with the publisher who owns the segment/data. Please contact your Rubicon Project account representative if unsure of the value you should use.
-* **[!UICONTROL SeatId]**: Magnite DV+ Seat ID provided by your Magnite account manager
+* **[!UICONTROL Partner ID]**: The Rubicon Project Partner ID associated with the publisher who owns the segment/data. Please contact your Rubicon Project account representative if unsure of the value you should use.
+* **[!UICONTROL Seat ID]**: Magnite DV+ Seat ID provided by your Magnite account manager
 
 ### [!DNL Nexxen (fka Amobee)] {#nexxen}
 
@@ -360,14 +360,14 @@ To configure details for the destination, fill in the fields below.
 
 >id="platform_destinations_liveramp_distribution_taboola_seg_type"
 >title="Segment type"
->abstract="The Segment type (1st Party only available at this time)."
+>abstract="The Segment type (1st party only available at this time)."
 
 To configure details for the destination, fill in the fields below.
 
 ![Platform UI image showing the supported identifiers for the Taboola destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
 
 * **[!UICONTROL Account manager email address]**: The email address of your Taboola account manager.
-* **[!UICONTROL Segment Type]**: The Segment type (1st Party only available at this time).
+* **[!UICONTROL Segment type]**: The segment type (1st party only available at this time).
 
 ### [!DNL TargetSpot] {#targetspot}
 
