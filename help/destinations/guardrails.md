@@ -128,12 +128,23 @@ For scheduled, or recurring dataset exports, the guardrails below are identical 
 >
 >Exports to JSON files are supported in a compressed mode only.
 
+<!--
+
 **Parquet and JSON output**
 
 |Dataset type | Compression | Guardrail | Guardrail type | Description |
 |---------|----------|---------|-----------|------------|
 | Datasets based on the **XDM Experience Events schema** | N/A | Last 365 days for all files exported in a dataflow | Hard | The data from the last calendar year is exported. |
 | <p>Datasets based on the **XDM Individual Profile schema**</p> | <p><ul><li>Yes</li><li>No</li></ul></p> | <p><ul><li>Ten billion records per compressed file</li><li>One million records per uncompressed file</li></ul></p> | Hard | <p>The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</p> |
+
+{style="table-layout:auto"}
+
+-->
+
+|Dataset type | Guardrail | Guardrail type | Description |
+---------|----------|---------|-------|
+| Datasets based on the **XDM Experience Events schema** | Last 365 days for all files exported in a dataflow  | Hard | The data from the last calendar year is exported. |
+| Datasets based on the **XDM Individual Profile schema** | Ten billion records across all exported files in a dataflow | Hard | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
 
 {style="table-layout:auto"}
 
@@ -145,11 +156,21 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 **Parquet and JSON output**
 
+<!--
+
 |Dataset type | Compression | Backfill parameter provided | Guardrail | Guardrail type | Description |
 |---------|----------|---------|-----------|-----------|------------|
 | <p>Datasets based on the **XDM Experience Events schema**</p> | - | <p><ul><li>Both start and end date provided in `backfill` parameter in API call</li><li>Incomplete `backfill` parameter provided in API call</li></ul></p> | <p><ul><li>Last 30 days</li><li>Last 365 days</li></ul></p> | Hard | <p><ul><li>The export fails if the `startDate - endDate` interval is over 30 days</li><li>Either the `startDate` or `endDate` are missing or  incorrectly formatted in the API call. Expected format: `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`</li></ul></p> |
 | <p>Datasets based on the **XDM Individual Profile schema**</p> | <p><ul><li>Yes</li><li>No</li></ul></p> | - | <p><ul><li>Ten billion records per compressed file</li><li>One million records per uncompressed file</li></ul></p> | Hard | <p>The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</p> |
 
+-->
+
+|Dataset type | Backfill parameter provided | Guardrail | Guardrail type | Description |
+|---------|---------|-----------|-----------|------------|
+| Datasets based on the **XDM Experience Events schema** |  <p><ul><li>Both start and end date provided in `backfill` parameter in API call</li><li>Incomplete `backfill` parameter provided in API call</li></ul></p> | <p><ul><li>Last 30 days</li><li>Last 365 days</li></ul></p> | Hard | <p><ul><li>The export fails if the `startDate - endDate` interval is over 30 days</li><li>Either the `startDate` or `endDate` are missing or  incorrectly formatted in the API call. Expected format: `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`</li></ul></p> |
+| Datasets based on the **XDM Individual Profile schema** |  - | Ten billion records across all files exported in a dataflow | Hard | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
+
+{style="table-layout:auto"}
 
 Read more about [exporting datasets](/help/destinations/ui/export-datasets.md).
 
