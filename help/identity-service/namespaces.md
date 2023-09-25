@@ -27,10 +27,10 @@ For example, two profile fragments may contain different primary IDs but they sh
 
 A namespace consists of the following components:
 
-* Display name: The user-friendly name for a given namespace.
-* Identity symbol: A code used internally by Identity Service to represent a namespace.
-* Identity type: The classification of a given namespace.
-* Description: (Optional) Any supplemental information that you can provide regarding a given namespace.
+* **Display name**: The user-friendly name for a given namespace.
+* **Identity symbo**l: A code used internally by Identity Service to represent a namespace.
+* **Identity type**: The classification of a given namespace.
+* **Description**: (Optional) Any supplemental information that you can provide regarding a given namespace.
 
 ### Identity types {#identity-types}
 
