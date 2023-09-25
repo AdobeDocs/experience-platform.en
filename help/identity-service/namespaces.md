@@ -17,7 +17,7 @@ Identity namespaces requires an understanding of various Adobe Experience Platfo
 
 ## Understanding identity namespaces
 
-Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that provide context to a given identity. A fully qualified identity includes a namespace and an identity value. If an identity value corresponds with `scott@acme.com`, then a namespace serves to distinguish this value as an email address. Similarly, a namespace can distinguish `555-123-456` as a phone number, and `3126ABC` as a CRM ID. When matching record data across profile fragments, as when [!DNL Real-Time Customer Profile] merges profile data, both the identity value and the namespace must match.
+A fully qualified identity includes two components: an **identity value** and an **identity namespace**. For example, if the value of an identity is `scott@acme.com`, then a namespace provides context to this value by distinguishing it as an email address. Similarly, a namespace can distinguish `555-123-456` as a phone number, and `3126ABC` as a CRM ID. Essentially, **a namespace provides context to a given identity**. When matching record data across profile fragments, as when [!DNL Real-Time Customer Profile] merges profile data, both the identity value and the namespace must match.
 
 For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore Experience Platform is able to see that these fragments are actually the same individual and brings the data together in the identity graph for the individual.
 
