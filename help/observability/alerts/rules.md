@@ -50,16 +50,17 @@ The following alert rules are specific to [Identity Service](../../identity-serv
 
 {style="table-layout:auto"}
 
-## Real-Time Customer Profile
+## Profile
 
 The following alert rules are specific to [Real-Time Customer Profile](../../profile/home.md):
 
-| I/O Event subscription | Alert rule | Description |
-| --- | --- | --- |
-| Profile Ingestion Info | Profile Flow Run Start | This alert triggers when a Profile flow run starts processing data. |
-| Profile Ingestion Info | Profile Flow Run Success | This alert triggers when data is successfully loaded into Profile from the Data Lake. |
-| Profile Ingestion Delays, Failures and Errors | Profile Flow Run Delay | This alert triggers when loading data from the Data Lake into Profile takes longer than 150 minutes to process. |
-| Profile Ingestion Delays, Failures and Errors | Profile Flow Run Failure | This alert triggers when an error occurs while ingesting data into Profile. |
+| I/O Event subscription | Alert rule | Description | Payload schema |
+| --- | --- | --- | --- |
+| Profile Flow Run Start | Profile Flow Run Start | This alert triggers when a Profile flow run starts processing data. | <pre>{<br>   "id": "a2f085ec-61f9-4f2e-8814-60a8f64332bb",<br>   "createdAt": 1693950380140,<br>   "updatedAt": 1693950380140,<br>   "createdBy": "acp_foundation_connectors@AdobeID",<br>   "updatedBy": "acp_foundation_connectors@AdobeID",<br>   "createdClient": "acp_foundation_connectors",<br>   "updatedClient": "acp_foundation_connectors",<br>   "sandboxId": "9cebe76b-8741-439a-abe7-6b8741139ad3",<br>   "sandboxName": "uis-2-e2e-test",<br>   "imsOrgId": "912F21086373E95A0A495C2E@AdobeOrg",<br>   "flowId": "5d5256dc-d222-449c-b3e8-cef6ff77f997",<br>   "providerRefId": "64f7a1ab344c1728672d58a1",<br>   "etag": "\"000045a2-0000-0a00-0000-64f7a1ac0000\"",<br>   "metrics": {<br>      "statusSummary": {<br>         "status": "inProgress"<br>      }<br>   },<br>   "activities": [],<br>   "flowName": "Datalake to UPS Flow",<br>   "header": {<br>      "_adobeio": {<br>         "imsOrgId": "912F21086373E95A0A495C2E@AdobeOrg",<br>         "providerMetadata": "aep_observability_catalog_events",<br>         "eventCode": "profile_ingestion_info"<br>      }<br>   }<br>}</pre> |
+
+| Profile Ingestion Info | Profile Flow Run Success | This alert triggers when data is successfully loaded into Profile from the Data Lake. |  |
+| Profile Ingestion Delays, Failures and Errors | Profile Flow Run Delay | This alert triggers when loading data from the Data Lake into Profile takes longer than 150 minutes to process. |  |
+| Profile Ingestion Delays, Failures and Errors | Profile Flow Run Failure | This alert triggers when an error occurs while ingesting data into Profile. |  |
 
 {style="table-layout:auto"}
 
