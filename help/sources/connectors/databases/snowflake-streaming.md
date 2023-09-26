@@ -68,7 +68,7 @@ For more information on role and privilege management, refer to the [[!DNL Snowf
     * You can enable a `backfill` boolean flag for your [!DNL Snowflake] source when creating a source connection.
         * If backfill is set to true, then the value for timestamp.initial is set to 0. This means that data with a timestamp column greater than 0 epoch time are fetched.
         * If backfill is set to false, then the value for timestamp.initial is set to -1. This means that data with a timestamp column greater than the current time (the time in which the source begins ingesting) are fetched.
-    * The timestamp column should be formatted as type: `TIMESTAMP_LTZ` or `TIMESTAMP_NTZ`. If the timestamp column is set to `TIMESTAMP_NTZ`, then the types should be stored in UTC time in the database.
+    * The timestamp column should be formatted as type: `TIMESTAMP_LTZ` or `TIMESTAMP_NTZ`. If the timestamp column is set to `TIMESTAMP_NTZ`, then the corresponding timezone in which the values are stored should be passed via the `timezoneValue` parameter. If unprovided, the value will default to UTC.
       * `TIMESTAMP_TZ` cannot be used a timestamp column or in a mapping.
 
 ## Next steps
