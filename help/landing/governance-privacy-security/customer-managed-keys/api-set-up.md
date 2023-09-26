@@ -8,13 +8,11 @@ This document covers the process for enabling the customer-managed keys (CMK) fe
 
 ## Prerequisites
 
-To view and visit the [!UICONTROL Encryption] section in Adobe Experience Platform, you must have created a role and assigned the [!UICONTROL Manage Customer Managed Key] permission to that role. It is best practice to create a CMK admin role and then provide the [!UICONTROL Manage Customer Managed Key] permission to that role. As there is only one action provided by this permission, any user assigned this role can act as the CMK admin.
-
-In the permissions workspace, make sure to grant your [!UICONTROL User] the CMK admin role before continuing with the guide. 
+To view and visit the [!UICONTROL Encryption] section in Adobe Experience Platform, you must have created a role and assigned the [!UICONTROL Manage Customer Managed Key] permission to that role. Any user that has the [!UICONTROL Manage Customer Managed Key] permission can enable CMK for their organization.
 
 For more information on assigning roles and permissions in Experience Platform, refer to the [configure permissions documentation](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
-To enable CMK, your [!DNL Azure] Key Vault must be configured with the following settings:
+To enable CMK, your [[!DNL Azure] Key Vault must be configured](./azure-key-vault-config.md) with the following settings:
 
 * [Enable purge protection](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Enable soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
@@ -210,7 +208,7 @@ The `status` attribute can have one of four values with the following meanings:
 
 1. `RUNNING`: Validates that Platform can access the key and key vault.
 1. `UPDATE_EXISTING_RESOURCES`: The system is adding the key vault and key name to the datastores across all sandboxes in your organization.
-1. `COMPLETED`: The key vault and key name have been added to the datastores.
+1. `COMPLETED`: The key vault and key name have successfully been added to the datastores.
 1. `FAILED`: A problem occurred, primarily related to the key, key vault, or multi-tenant app setup.
 
 ## Next steps
