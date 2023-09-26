@@ -29,7 +29,7 @@ The following Experience Platform services are involved with modeling Real-Time 
 
 There are two types of default limits within this document:
 
-* **Soft limit:** Going beyond a soft limit is **strongly not recommended** as you **will** encounter performance issues.
+* **Soft limit:** It is possible to go beyond a soft limit, however soft limits provide a recommended guideline for system performance.
 
 * **Hard limit:** A hard limit provides an absolute maximum.
 
