@@ -4,12 +4,9 @@ description: Learn how to delete records in the Adobe Experience Platform UI.
 hide: true
 hidefromtoc: true
 ---
-# [!BADGE Beta]{type=Informative} Delete records (limited release) {#record-delete} 
+# [!BADGE Beta]{type=Informative} Delete records {#record-delete} 
  
 Use the [[!UICONTROL Data Lifecycle] workspace](./overview.md) to delete records in Adobe Experience Platform based on their primary identities. These records can be tied to individual consumers or any other entity that is included in the identity graph.
-
-<!-- that are participating in Identity Service and Real-Time Customer Profile.  -->
-
  
 >[!IMPORTANT] 
 > 
