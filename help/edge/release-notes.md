@@ -112,7 +112,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 * Optimized the view-change events for single page applications. The display notification is now included with the view-change event when personalized experiences are rendered.
 * Removed console warning when no `eventType` is present.
 * Fixed an issue where the `propositions` property was only returned from a `sendEvent` command when experiences were requested or retrieved from the cache. The `propositions` property will now always be defined as an array.
-* Fixed an issue where hidden containers were not shown when there was an error returned from the Adobe Experience Edge.
+* Fixed an issue where hidden containers were not shown when there was an error returned from the Edge Network.
 * Fixed an issue where the interact events were not being counted in Adobe Target. This was fixed by adding the view name to the XDM at web.webPageDetails.viewName.
 * Fix broken documentation links in console messages.
 
@@ -124,7 +124,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.7.0 - October 26, 2021
 
-* Expose additional information from Experience Edge in the return value from `sendEvent`, including `inferences` and `destinations`. The format of these properties may change as these features are currently rolling out as part of a Beta. For more information, see [Tracking Events.](fundamentals/tracking-events.md)
+* Expose additional information from the Edge Network in the return value from `sendEvent`, including `inferences` and `destinations`. The format of these properties may change as these features are currently rolling out as part of a Beta. For more information, see [Tracking Events.](fundamentals/tracking-events.md)
 
 ## Version 2.6.4 - September 7, 2021
 
