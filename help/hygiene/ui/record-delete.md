@@ -1,14 +1,19 @@
 ---
 title: Delete Records
 description: Learn how to delete records in the Adobe Experience Platform UI.
+hide: true
+hidefromtoc: true
 ---
-# Delete records (limited release) {#record-delete} 
+# [!BADGE Beta]{type=Informative} Delete records (limited release) {#record-delete} 
  
-The [[!UICONTROL Data Lifecycle] workspace](./overview.md) in the Adobe Experience Platform UI allows you to delete records that are participating in Identity Service and Real-Time Customer Profile. These records can be tied to individual consumers or any other entity that is included in the identity graph.
+Use the [[!UICONTROL Data Lifecycle] workspace](./overview.md) to delete records in Adobe Experience Platform based on their primary identities. These records can be tied to individual consumers or any other entity that is included in the identity graph.
+
+<!-- that are participating in Identity Service and Real-Time Customer Profile.  -->
+
  
 >[!IMPORTANT] 
 > 
->The Record Delete feature is currently available in a **limited release only** and is not available to all customers. Record delete requests are only available for organizations in the limited release.
+>The Record Delete feature is currently in Beta and available only in a **limited release**. It is not available to all customers. Record delete requests are only available for organizations in the limited release.
 > 
 > 
 >Record deletions are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
@@ -35,7 +40,7 @@ The request creation workflow appears. By default, the **[!UICONTROL Delete reco
 
 >[!IMPORTANT] 
 > 
->As part of ongoing changes to improve efficiency and make dataset operations less expensive, organizations who have been moved to the Delta format can also delete data from the data lake. This type of user is referred to as delta-migrated. Users from organizations who have been delta-migrated can update datasets, and choose to delete records from either a single or all datasets. Users from organizations who have not been delta-migrated cannot update datasets, nor can they choose to delete records from either a single or all datasets as seen in the image below. In this case, please continue to the [provide identities](#provide-identities) section of the guide.
+>As part of ongoing changes to improve efficiency and make dataset operations less expensive, organizations who have been moved to the Delta format can delete data from the Identity Service, Real-Time Customer Profile, and the data lake. This type of user is referred to as delta-migrated. Users from organizations who have been delta-migrated can choose to delete records from either a single or all datasets. Users from organizations who have not been delta-migrated cannot choose to delete records from either a single or all datasets as seen in the image below. In this case, please continue to the [provide identities](#provide-identities) section of the guide.
 
 ![The request creation workflow with the [!UICONTROL Delete record] option selected and highlighted.](../images/ui/record-delete/delete-record.png)
 
@@ -132,7 +137,7 @@ Once you have finished adding identities to the request, under **[!UICONTROL Req
 
 >[!IMPORTANT] 
 > 
->There are different limits for the total number of deletion requests that can be submitted each month. These limits are based on your license agreement. Organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600,000 requests each month. Organizations for all editions of Customer Data Platform and Adobe Journey Optimizer can submit up to 100,000 requests each month.
+>There are different limits for the total number of unique identity record deletes that can be submitted each month. These limits are based on your license agreement. Organizations who have purchased all editions of Adobe Real-Time Customer Data Platform and Adobe Journey Optimizer can submit up to 100,000 identity record deletes each month. Organizations who have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600,000 identity record deletes each month.
 
 ![The request setting's [!UICONTROL Name] and [!UICONTROL Description] fields with [!UICONTROL Submit] highlighted.](../images/ui/record-delete/submit.png)
 
@@ -150,6 +155,6 @@ After the request is submitted, a work order is created and appears on the [!UIC
 
 ## Next steps
 
-This document covered how to delete records in the Experience Platform UI. For information on how to perform other data hygiene tasks in the UI, refer to the [Data Hygiene UI overview](./overview.md).
+This document covered how to delete records in the Experience Platform UI. For information on how to perform other data lifecycle management tasks in the UI, refer to the [Data Lifecycle UI overview](./overview.md).
 
 To learn how to delete records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
