@@ -24,15 +24,9 @@ By using top and bottom of page events in Web SDK, the marketing team can config
 * Web SDK sends a personalization request which is loaded as soon as the page begins to load. This is a top of page event.
 * When the page finishes loading, a page view event is recorded. This happens later in the page loading process. This is a bottom of page event.
 
-## Prerequisites {#prerequisites}
-
-### Adobe Target prerequisites {#target}
-
-For top and bottom of page events to work with Adobe Target, your Experience Cloud organization needs to be set to **prefetch mode**. Contact Customer Support to make sure your Adobe Target organization is set to **prefetch**.
-
 ## Top of page event example {#top-of-page}
 
-The code sample below exemplifies a top of page event configuration which requests personalization and does not send display notifications.
+The code sample below exemplifies a top of page event configuration which requests personalization but does not send display notifications for automatically rendered propositions. The display notifications will be sent as part of the bottom-of-page event.
 
 >[!BEGINTABS]
 
@@ -62,7 +56,7 @@ alloy("sendEvent", {
 
 >[!TAB Auto-rendered propositions]
 
-The code sample below exemplifies a bottom of page event configuration which automatically renders personalization events. Additionally, it triggers the sending of the display notifications which were suppressed in the [top of page](#top-of-page) event.
+The code sample below exemplifies a bottom of page event configuration which sends display notifications for propositions which were automatically rendered on the page but for which display notifications were suppressed in [top of page](#top-of-page) event.
 
 >[!NOTE]
 >
@@ -84,7 +78,7 @@ alloy("sendEvent", {
 
 >[!TAB Manually rendered propositions]
 
-The code sample below exemplifies a bottom of page event configuration which renders personalization events defined manually in the configuration.
+The code sample below exemplifies a bottom of page event configuration which sends display notifications for propositions which were manually rendered on the page (i.e. for custom decision scopes or surfaces).
 
 >[!NOTE]
 >
