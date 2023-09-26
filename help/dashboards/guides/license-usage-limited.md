@@ -11,7 +11,7 @@ hidefromtoc: true
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="License usage dashboard"
->abstract="The License usage dashboard provides visibility into your purchased Adobe Experience Platform products. The dashboard overview displays the primary metrics for your products, your usage for each of the primary metrics, and your contracted license amount. The details workspace displays the usage of individual metrics for each product within specific sandboxes."
+>abstract="The License usage dashboard offers insight into the Adobe Experience Platform products you've purchased. The dashboard overview displays the primary metrics for your products including your usage for each of the primary metrics, as well as your contracted license amount. The details workspace displays a breakdown of your metrics for each product within specific sandboxes."
 
 >[!IMPORTANT]
 >
