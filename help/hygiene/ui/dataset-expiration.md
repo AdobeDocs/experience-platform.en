@@ -31,6 +31,10 @@ This document covers how to schedule and manage dataset expirations in the Platf
 
 To create a request, select **[!UICONTROL Create request]** from the main page in the workspace.
 
+>[!IMPORTANT]
+>
+>You may have up to 20 concurrently scheduled dataset expirations. This means that you can have 20 datasets scheduled to be deleted at any one time. There is no restrictions on what time or year these expirations are set for. For example, if you have 20 scheduled dataset expirations and one dataset is set to be deleted tomorrow, you cannot set any more expirations until after that that dataset has been deleted.  
+
 ![The [!UICONTROL Data Lifecycle] workspace with [!UICONTROL Create request] highlighted.](../images/ui/ttl/create-request-button.png)
 
 The request creation workflow appears. Under the [!UICONTROL Requested Action] section, select **[!UICONTROL Delete Dataset]** to update the controls for dataset expiration scheduling.
