@@ -28,7 +28,7 @@ For example, two profile fragments may contain different primary IDs but they sh
 A namespace consists of the following components:
 
 * **Display name**: The user-friendly name for a given namespace.
-* **Identity symbo**l: A code used internally by Identity Service to represent a namespace.
+* **Identity symbol**: A code used internally by Identity Service to represent a namespace.
 * **Identity type**: The classification of a given namespace.
 * **Description**: (Optional) Any supplemental information that you can provide regarding a given namespace.
 
@@ -43,7 +43,7 @@ A namespace consists of the following components:
 One element of an identity namespace is the **identity type**. The identity type determines:
 
 * Whether an identity graph will be generated:
-  * Identity graphs are not generated for non-people identifier and partner ID identity types.
+  * Identity graphs are not generated for the following identity types: non-person identifiers and partner ID.
   * Identity graphs are generated for all other identity types.
 * Which identities are removed from the identity graph when system limits are reached. For more information, read the [guardrails for identity data](guardrails.md).
 
