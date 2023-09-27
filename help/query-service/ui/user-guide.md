@@ -33,9 +33,9 @@ The Query Editor takes a few seconds to initialize and connect to Query Service 
 
 ### How queries are run from [!DNL Query Editor] {#run-a-query}
 
-Queries executed from [!DNL Query Editor] run interactively which means that if you close the browser or navigate away, the query is canceled. The same is true for queries made to generate datasets from query outputs.
+Queries executed from [!DNL Query Editor] run interactively which means that if you close the browser or navigate away, the query is cancelled. The same is true for queries made to generate datasets from query outputs.
 
-The Enhanced edition of the Query Editor allows you to write more than one query in the Query Editor and execute all queries in a sequential manner. See the section on [executing multiple sequential queries](#execute-multiple-sequential-queries) for more information.
+The Enhanced edition of the Query Editor allows you to write more than one query in the Query Editor and execute all queries sequentially. See the section on [executing multiple sequential queries](#execute-multiple-sequential-queries) for more information.
 
 ## Query authoring using [!DNL Query Editor] {#query-authoring}
 
@@ -66,7 +66,7 @@ To enable dark or light themes, select the settings icon (![A settings icon.](..
 
 The Enhanced edition of the Query Editor allows you to write more than one query in the Query Editor and execute all queries in a sequential manner.
 
-The execution of multiple queries in a sequence each generate a log entry. However, only the results of the first query display in the Query Editor console. Check the query log if you need to troubleshoot or confirm the queries that were executed. See the [logs documentation](./query-logs.md) for more information. 
+The execution of multiple queries in a sequence each generate a log entry. However, only the results of the first query display in the Query Editor console. Check the query log if you need to troubleshoot or confirm the queries that were executed. See the [query logs documentation](./query-logs.md) for more information. 
 
 >[!NOTE]
 > 

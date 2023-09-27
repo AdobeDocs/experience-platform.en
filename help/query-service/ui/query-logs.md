@@ -61,11 +61,11 @@ Next to each row's template name or SQL snippet is a pencil icon (![A pencil ico
 
 You can filter the list of query logs based on a variety of settings. Select the filter icon (![The filter icon.](../images/ui/query-log/filter-icon.png)) at the top left of the workspace to open a set of filter options in the left rail. 
 
-![The Queries Log workspace with the filter icon highlighted.]()
+![The Queries Log workspace with the filter icon highlighted.](../images/ui/query-log/log-filter.png)
 
-The list of available filters are displayed.
+The list of available filters is displayed.
 
-![The Queries Log workspace with the filter options displayed and highlighted.]()
+![The Queries Log workspace with the filter options displayed and highlighted.](../images/ui/query-log/log-filter-settings.png)
 
 The following table proved a description of each filter.
 
@@ -75,15 +75,13 @@ The following table proved a description of each filter.
 | [!UICONTROL Start date] | To filter the logs for queries that were created during a specific period, set the [!UICONTROL Start] and [!UICONTROL End] dates in the [!UICONTROL Start date] section. |
 | [!UICONTROL Completed date] | To filter the logs for queries that were completed during a specific period, set the [!UICONTROL Start] and [!UICONTROL End] dates in the [!UICONTROL Completed date] section. |
 | [!UICONTROL Status] | To filter logs based on the [!UICONTROL Status] of the query, select the appropriate radio button. The available options include [!UICONTROL Submitted], [!UICONTROL In progress], [!UICONTROL Success], and [!UICONTROL Failed]. You can only filter logs based on one status condition at a time. |
-| [!UICONTROL Client] | To filter logs based on the query client used, enter one of the following accepted values into the the free text field: `API`, `Adobe Query Service UI`, or `QsAccel`. |
+| [!UICONTROL Client] | To filter logs based on the query client used, enter one of the following accepted values into the free text field: `API`, `Adobe Query Service UI`, or `QsAccel`. |
 | [!UICONTROL My queries] | Use the [!UICONTROL My queries] toggle to filter the logs for queries executed by you. |
 | [!UICONTROL query log ID] | To filter based on the unique log ID of a query, enter the log ID into the free text field. This information can be found in the [!UICONTROL Log details]. |
 
 Any applied filters are displayed above the filtered log results.
 
-![The Log tab of the Queries workspace with the list of applied filters highlighted.]()
-
-<!-- https://jira.corp.adobe.com/browse/PLAT-166409 -->
+![The Log tab of the Queries workspace, with the list of applied filters highlighted.](../images/ui/query-log/applied-log-filters.png)
 
 ## Next steps
 
