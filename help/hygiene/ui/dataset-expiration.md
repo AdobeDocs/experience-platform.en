@@ -8,7 +8,7 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
 >title="Delete unwanted or expired customer records and datasets"
->abstract="<h2>Description</h2><p>To manage the lifecycle of your Experience Platform data unrelated to regulatory compliance, you can delete consumer records and schedule expiration dates for datasets. To create or manage data subject requests, please see the 'Honor data subject privacy requests' use case block.</p>"
+>abstract="<h2>Description</h2><p>To manage the lifecycle of your Experience Platform data unrelated to regulatory compliance, you can delete consumer records and schedule expiration dates for datasets. To create or manage data subject requests, see the 'Honor data subject privacy requests' use case block.</p>"
 
 The [[!UICONTROL Data Lifecycle] workspace](./overview.md) in the Adobe Experience Platform UI allows you to schedule expirations for datasets. When a dataset reaches its expiration date, the data lake, Identity Service, and Real-Time Customer Profile begin separate processes to remove the dataset's contents from their respective services. Once the data is deleted from all three services, the expiration is marked as complete.
 
@@ -33,7 +33,7 @@ To create a request, select **[!UICONTROL Create request]** from the main page i
 
 >[!IMPORTANT]
 >
->You may have up to 20 concurrently scheduled dataset expirations. This means that you can have 20 datasets scheduled to be deleted at any one time. There is no restrictions on what time or year these expirations are set for. For example, if you have 20 scheduled dataset expirations and one dataset is set to be deleted tomorrow, you cannot set any more expirations until after that that dataset has been deleted.  
+>You may have up to 20 concurrently scheduled dataset expirations. This means that you can have 20 datasets scheduled to be deleted at any one time. There are no restrictions on what time or year that these expirations are set for. For example, if you have 20 scheduled dataset expirations and one dataset is due to be deleted tomorrow, you cannot set any more expirations until after that that dataset has been deleted.  
 
 ![The [!UICONTROL Data Lifecycle] workspace with [!UICONTROL Create request] highlighted.](../images/ui/ttl/create-request-button.png)
 
