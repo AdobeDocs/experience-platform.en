@@ -27,7 +27,7 @@ This document covers how to schedule and manage dataset expirations in the Platf
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="Instructions"
->abstract="<ul><li>Select <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html">Data Hygiene</a> in the left navigation, then select <b>Create request</b>.</li><li>If you want to delete records:</li>&nbsp;&nbsp;&nbsp;<li>Select <b>Record</b>.</li>&nbsp;&nbsp;&nbsp;<li>Select a specific dataset to delete records from or choose the option to delete them from all datasets.</li>&nbsp;&nbsp;&nbsp;<li>Provide the identities of the consumers whose records are to be deleted. Select <b>Add identity</b> to provide the identities one at a time or select <b>Choose files</b> to upload a JSON file of identities instead.</li>&nbsp;&nbsp;&nbsp;<li>If needed, select <b>Template</b> to view the expected format of the JSON file.</li><li>See the documentation for instructions if you want to <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">schedule expiration dates for datasets</a>.</li></ul>"
+>abstract="<ul><li>Select <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html">Data Lifecycle</a> in the left navigation, then select <b>Create request</b>.</li><li>If you want to delete records:</li>&nbsp;&nbsp;&nbsp;<li>Select <b>Record</b>.</li>&nbsp;&nbsp;&nbsp;<li>Select a specific dataset to delete records from or choose the option to delete them from all datasets.</li>&nbsp;&nbsp;&nbsp;<li>Provide the identities of the consumers whose records are to be deleted. Select <b>Add identity</b> to provide the identities one at a time or select <b>Choose files</b> to upload a JSON file of identities instead.</li>&nbsp;&nbsp;&nbsp;<li>If needed, select <b>Template</b> to view the expected format of the JSON file.</li><li>See the documentation for instructions if you want to <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">schedule expiration dates for datasets</a>.</li></ul>"
 
 To create a request, select **[!UICONTROL Create request]** from the main page in the workspace.
 
@@ -77,6 +77,6 @@ On the details page of the dataset expiration, the right rail shows controls to 
 
 ## Next steps
 
-This document covered how to schedule dataset expirations in the Experience Platform UI. For information on how to perform other data hygiene tasks in the UI, refer to the [data hygiene UI overview](./overview.md).
+This document covered how to schedule dataset expirations in the Experience Platform UI. For information on how to perform other data minimization tasks in the UI, refer to the [data lifecycle UI overview](./overview.md).
 
-To learn how to schedule dataset expirations using the Data Hygiene API, refer to the [dataset expiration endpoint guide](../api/dataset-expiration.md).
+To learn how to schedule dataset expirations using the data hygiene API, refer to the [dataset expiration endpoint guide](../api/dataset-expiration.md).
