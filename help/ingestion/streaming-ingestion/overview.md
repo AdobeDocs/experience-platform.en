@@ -33,7 +33,7 @@ For more information on enabling a dataset for [!DNL Profile] and [!DNL Identity
 
 | Destination | Expected latency | 
 | --------- | ---------------- |
-| Real-Time Customer Profile | < 1 minute |
+| Real-Time Customer Profile | < 15 minutes |
 | Data lake | < 60 minutes |
 
 ## Request per seconds (RPS) guidance on streaming ingestion
