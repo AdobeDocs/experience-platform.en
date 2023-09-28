@@ -22,6 +22,11 @@ This article explains the workflow required to activate audiences in Adobe Exper
 
 ## Prerequisites {#prerequisites}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_flat_files"
+>title="(Beta) Export arrays support"
+>abstract="(Beta) Export arrays of primitive values from Experience Platform to you desired cloud storage destination. This text will be updated more info. <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/license-usage-limited.html?lang=en#available-metrics">Learn more</a>. "
+
 To activate audiences to destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 
 ## Select your destination {#select-destination}
