@@ -37,7 +37,7 @@ A namespace consists of the following components:
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="Specify identity type"
->abstract="The identity type controls whether or not data is stored to the identity graph. Non-people identifiers and partner ID will not be stored, and all other identity types will."
+>abstract="The identity type controls whether or not data is stored to the identity graph. Identity graphs are not generated for the following identity types: non-person identifiers and partner ID."
 >text="Learn more in documentation"
 
 One element of an identity namespace is the **identity type**. The identity type determines:
@@ -121,6 +121,8 @@ Next, select the the identity type that you want to assign to the custom namespa
 >* Namespaces that you define are private to your organization and require a unique identity symbol in order to be created successfully.
 >
 >* Once a namespace has been created, it cannot be deleted and its identity symbol and type cannot be changed.
+>
+>* Duplicate namespaces are not supported. You cannot use an existing display name and identity symbol when creating a new namespace. 
 
 ## Namespaces in identity data
 
