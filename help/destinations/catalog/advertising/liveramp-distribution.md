@@ -421,7 +421,7 @@ When you are finished providing details for your destination connection, select 
 
 The [!DNL LiveRamp - Distribution] connection activates audiences which have already been onboarded to your LiveRamp account through the [LiveRamp - Onboarding](liveramp-onboarding.md) connection.
 
-To successfully activate your audiences, you must select the **same audiences** that you have [previously onboarded](liveramp-onboarding) to LiveRamp.
+To successfully activate your audiences, you must select the **same audiences** that you have [previously onboarded](liveramp-onboarding.md) to LiveRamp.
 
 >[!IMPORTANT]
 >
