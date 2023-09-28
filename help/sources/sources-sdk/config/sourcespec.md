@@ -399,9 +399,28 @@ This pagination type allows you to parse through results by specifying an index 
 | `limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. |
 | `limitValue` | The number of records to be fetched in a page. | 
 | `offSetName` | The offset attribute name. This is required if pagination type is set to `offset`. |
-| `endConditionName` | A user-defined value that indicates the condition that will end the pagination loop in the next HTTP request. You must provide the attribute name of where you want to put the end condition. |
-| `endConditionValue` | The attribute value where you want to put the end condition. |
+| `endConditionName` | A user-defined value that indicates the condition that will end the pagination loop in the next HTTP request. You must provide the attribute name on which you want to put the end condition. |
+| `endConditionValue` | The attribute value on which you want to put the end condition. |
 
+>[!TAB Pointer]
+
+ This pagination type allows you to use a `pointer` variable to point to a particular item that needs to be sent with a request. The pointer type pagination requires path in payload that point to next page. For example:
+
+```json
+{
+ "type": "POINTER",
+ "limitName": "limit",
+ "limitValue": 1,
+ "pointerPath": "paging.next"
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `type` | The type of pagination used to return data. |
+| `limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. |
+| `limitValue` | The number of records to be fetched in a page. | 
+| `pointerPath` | The pointer attribute name. This requires json path to the attribute that will point to next page. |
 
 >[!TAB Continuation token]
 
