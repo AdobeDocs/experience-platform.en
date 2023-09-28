@@ -37,7 +37,7 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}
 +++A sample request to list all top-level dataset folders
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedFolders/datasets/root
+curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/root
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -72,7 +72,7 @@ A successful response returns HTTP status ??? with a list of all top-level folde
         {
             "id": "09d86b23-4819-471b-8a2a-05774ed268de",
             "name": "ChildFolder.1",
-            "noun": null,
+            "noun": "dataset",
             "parentId": "c626b4f7-223b-4486-8900-00c266e31dd1",
             "tags": null,
             "imsOrg": "{ORG_ID}",
@@ -88,7 +88,7 @@ A successful response returns HTTP status ??? with a list of all top-level folde
         {
             "id": "fd2f6a68-ef65-470d-ab31-b02b7b2241ca",
             "name": "ChildFolder.2",
-            "noun": null,
+            "noun": "dataset",
             "parentId": "c626b4f7-223b-4486-8900-00c266e31dd1",
             "tags": null,
             "imsOrg": "{ORG_ID}",
@@ -126,7 +126,7 @@ POST /folder/{FOLDER_TYPE}
 +++A sample request to create a new folder.
 
 ```shell
-curl -X POST https://experience.adobe.io/unifiedFolders/datasets
+curl -X POST https://experience.adobe.io/unifiedFolders/folder/datasets
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -201,7 +201,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++A sample request to retrieve a specific folder
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedFolders/datasets/83f8287c-767b-4106-b271-257282fd170e
+curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -267,10 +267,192 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
 
 **Request**
 
-++A sample request to validate a specific folder
++++A sample request to validate a specific folder
 
 ```shell
-
+curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/83f8287c-767b-4106-b271-257282fd170e/validate
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 +++
+
+**Response**
+
+A successful status returns HTTP status ??? with details of the folder you are validating.
+
++++A sample response contains details of the validated folder
+
+```json
+{
+    "id": "83f8287c-767b-4106-b271-257282fd170e",
+    "name": "SampleFolder",
+    "noun": "datasets",
+    "parentId": "{ORG_ID}/{SANDBOX_ID}/datasets",
+    "tags": [
+        "SampleTag1"
+    ],
+    "imsOrg": "{ORG_ID}",
+    "sandboxId": "{SANDBOX_ID}",
+    "sandboxName": "prod",
+    "createdBy": "{USER_ID}",
+    "createdAt": "2023-10-01T08:47:06.192+00:00",
+    "modifiedBy": "{USER_ID}",
+    "modifiedAt": "2023-10-01T08:47:06.192+00:00",
+    "_links": null
+}
+```
+
++++
+
+## Update a specific folder {#update}
+
+You can update the details of a specific folder that belongs to your organization by making a PATCH request to the `/folder` endpoint and specifying the folder type and the folder's ID.
+
+**API format**
+
+```http
+PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
+```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segments` and `datasets`. |
+| `{FOLDER_ID}` | The ID of the folder that you're updating. |
+
+**Request**
+
++++A sample request to update a specific folder
+
+```shell
+curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/83f8287c-767b-4106-b271-257282fd170e
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+    "op": "replace",
+    "path": "/name1",
+    "value": "RenamedSampleFolder"
+ }'
+```
+
++++
+
+**Response**
+
+A successful response returns HTTP status ??? with information about your newly updated folder.
+
+??????????????????????
+
+## Retrieve a specific folder's subfolders {#get-subfolders}
+
+You can retrieve the subfolders for a specific folder that belongs to your organization by making a GET request to the `/folder/{FOLDER_TYPE}/{FOLDER_ID}/subfolders` endpoint, and provide both the folder type and ID.
+
+**API format**
+
+```http
+GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/subfolders
+```
+
+**Request**
+
++++A sample request to retrieve the subfolders for a specific folder
+
+```shell
+curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/83f8287c-767b-4106-b271-257282fd170e/subfolders
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**Response**
+
+A successful response returns HTTP status ??? with details of the requested folder's subfolders.
+
++++A sample response that contains details of the requested folder's subfolders.
+
+```json
+[
+    {
+        "id": "09d86b23-4819-471b-8a2a-05774ed268de",
+        "name": "ABCD.1",
+        "noun": "datasets",
+        "parentId": "83f8287c-767b-4106-b271-257282fd170e",
+        "tags": null,
+        "imsOrg": "{ORG_ID}",
+        "sandboxId": "{SANDBOX_ID}",
+        "sandboxName": "prod",
+        "createdBy": "{USER_ID}",
+        "createdAt": "2023-01-12T12:51:39.284+00:00",
+        "modifiedBy": "{USER_ID}",
+        "modifiedAt": "2023-01-12T12:51:39.284+00:00",
+        "_links": null
+    },
+    {
+        "id": "fd2f6a68-ef65-470d-ab31-b02b7b2241ca",
+        "name": "ABCD.2",
+        "noun": "datasets",
+        "parentId": "83f8287c-767b-4106-b271-257282fd170e",
+        "tags": null,
+        "imsOrg": "{ORG_ID}",
+        "sandboxId": "{SANDBOX_ID}",
+        "sandboxName": "prod",
+        "createdBy": "{USER_ID}",
+        "createdAt": "2023-01-13T03:38:40.006+00:00",
+        "modifiedBy": "{USER_ID}",
+        "modifiedAt": "2023-01-13T03:38:40.006+00:00",
+        "_links": null
+    }
+]
+```
+
++++
+
+## Delete a specific folder {#delete}
+
+You can delete a specific folder that belongs to your organization by making a DELETE request to the `/folder` and specifying the folder type and folder's ID.
+
+***API format**
+
+```http
+DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
+```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segments` and `datasets`. |
+| `{FOLDER_ID}` | The ID of the folder that you're deleting. |
+
+**Request**
+
++++A sample request to delete a specific folder
+
+```shell
+curl -X DELETE https://experience.adobe.io/unifiedFolders/folder/datasets/83f8287c-767b-4106-b271-257282fd170e
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**Response**
+
+A successful response returns HTTP status ??? with ????????
+
+Response??????????
+
+## Next steps
+
+After reading this guide, you now have a better understanding of how to create, manage, and delete folders using the Adobe Experience Platform API.
