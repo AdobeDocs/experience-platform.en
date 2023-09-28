@@ -1,11 +1,11 @@
 ---
-title: (Beta) Export arrays and calculated fields
+title: (Beta) Use calculated fields to export arrays in flat files 
 type: Tutorial
 description: Learn how to export arrays and calculated fields from Real-Time CDP to batch profile-based destinations.
 badge: "Beta"
 ---
 
-# (Beta) Use calculated fields to export arrays to flat files 
+# (Beta) Use calculated fields to export arrays in flat files 
 
 >[!AVAILABILITY]
 >
@@ -28,9 +28,9 @@ Get extensive information about calculated fields - what these are and why they 
 
 ## Arrays and other object types in Platform {#arrays-strings-other-objects}
 
-You can use XDM schemas to manage different object types in Platform. Previously, you were able to export simple key-value pair type objects out of Experience Platform to your desired destinations. An example of such a field that was supported for export previously is `personalEmail.address`:`johndoe@acme.org`.
+In Experience Platform, you can use [XDM schemas](/help/xdm/home.md) to manage different field types. Previously, you were able to export simple key-value pair type fields such as strings out of Experience Platform to your desired destinations. An example of such a field that was supported for export previously is `personalEmail.address`:`johndoe@acme.org`.
 
-In addition to that, you can now export array objects, such as for example: `organization:[marketing, sales, engineering]`. See further below [extensive examples](#examples) of how you can use various functions to access elements of arrays, join array elements into a string, and more.  
+Other field types in Experience Platform include array fields. Read more about [managing array fields in the Experience Platform UI](/help/xdm/ui/fields/array.md). In addition to the previously supported field types, you can now export array objects such as for example: `organizations:[marketing, sales, engineering]`. See further below [extensive examples](#examples) of how you can use various functions to access elements of arrays, join array elements into a string, and more.  
 
 ## Prerequisites {#prerequisites}
 
@@ -38,7 +38,7 @@ Progress through the [activation steps for cloud storage destinations](/help/des
 
 ## How to export calculated fields {#how-to-export-calculated-fields}
 
-In the mapping step, select **[!UICONTROL Add calculated field]**.
+In the mapping step of the activation workflow for cloud storage destinations, select **[!UICONTROL (Beta) Add calculated field]**.
 
 ![Add calculated field to export](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
@@ -78,9 +78,9 @@ Note that only the following functions are supported in the beta release of calc
 * iif
 * index-based array access
 * sha256
+* md5
 * add_to_array
 * first
-* md5
 * last
 
 ## Examples of functions used to export arrays {#examples}
@@ -93,14 +93,14 @@ Use the `join` function to concatenate the elements of an array into a string, u
 
 For example, you can combine the following XDM fields below as shown in the mapping screenshot by using a `join('_',loyalty.loyaltyID)` syntax:
 
-* `"organization": ["Marketing","Sales,"Finance"]` array 
+* `"organizations": ["Marketing","Sales,"Finance"]` array 
 * `person.name.firstName` string 
 * `person.name.lastName` string
 * `personalEmail.address` string
 
 ![Mapping screenshot](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
 
-In this case, your output file looks like:
+In this case, your output file looks like below. Notice how the three elements of the array are concatenated into a single string using the `_` character.
 
 ```
 `First_Name,Last_Name,Organization
@@ -110,15 +110,16 @@ John,Doe,"Marketing_Sales_Finance"
 
 ### `size_of` function to export arrays {#sizeof-function-export-arrays}
 
-Use the `size_of` function to indicate how many elements exist in an array. For example if you have an `purchaseTime` array object with multiple timestamps, you can use the `size_of` function to indicate how many separate purchases were made by a person. 
+Use the `size_of` function to indicate how many elements exist in an array. For example, if you have a `purchaseTime` array object with multiple timestamps, you can use the `size_of` function to indicate how many separate purchases were made by a person. 
 
-For example, you can combine the following XDM fields below as shown in the mapping screenshot
-* `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` array 
+For example, you can combine the following XDM fields below as shown in the mapping screenshot.
+
+* `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` array indicating five separate purchase times by the customer
 * `personalEmail.address` string
 
 ![Mapping screenshot for size_of function](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
 
-In this case, your output file looks like:
+In this case, your output file looks like below. Notice how the second column indicates the number of elements in the array, corresponding with the number of separate purchases made by the customer.
 
 ```
 `Personal_Email,Times_Purchased
@@ -151,7 +152,7 @@ Here are some examples of how you could use the `coalesce` function to access an
 
 ### Index-based array access {#index-based-array-access}
 
-You can access an index of an array to export a single item from the array. For example, similar to the example above for the `size_of` function, if you are looking to indicate and export only the first time that a customer has purchased a certain product, you can use `purchaseTime[0]` to access the first element of the timestamp.
+You can access an index of an array to export a single item from the array. For example, similar to the example above for the `size_of` function, if you are looking to access and export only the first time that a customer has purchased a certain product, you can use `purchaseTime[0]` to export the first element of the timestamp, `purchaseTime[1]` to export the second element of the timestamp, `purchaseTime[2]` to export the third element of the timestamp, and so on.
 
 ![Mapping screenshot for accessing index](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
 
@@ -162,6 +163,19 @@ In this case, your output file looks like:
 johndoe@acme.org,"1538097126"
 ```
 
+### `first` and `last` functions to export arrays {#first-and-last-functions-export-arrays}
+
+Use the `first` and `last` functions to export the first or last element in an array. For example, continuing with the `purchaseTime` array object with multiple timestamps from the previous examples, you can use these to functions to export the first or the last purchase time made by a person. 
+
+![Mapping screenshot for the first and last functions](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
+
+In this case, your output file looks like:
+
+```
+`Personal_Email,First_Purchase, Last_Purchase
+johndoe@acme.org,"1538097126","1664327526"
+```
+
 ### `iif` function to export arrays {#iif-function-export-arrays}
 
 Here are some examples of how you could use the `iif` function to access and export arrays and other fields:
@@ -170,6 +184,6 @@ Here are some examples of how you could use the `iif` function to access and exp
 
 Note the following known limitations for the beta release of this functionality:
 
-Export to JSON files is not supported at this time. You can export arrays to flat CSV files only.
+* Export to JSON files is not supported at this time. You can export arrays to flat CSV files only.
 TODO: Add other limitations.
 
