@@ -163,9 +163,7 @@ To configure details for the destination, fill in the fields below.
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="Advertiser data destination terms agreement"
 >abstract="Type in `I AGREE` to confirm the acknowledgement and agreement to the Disney advertiser data terms."
-
-<!-- 
->additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement" -->
+>additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_client"
@@ -263,7 +261,7 @@ To configure details for the destination, fill in the fields below.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_contactemail"
 >title="Contact Email"
->abstract="Enter the best email(s) for Amobee to send data contract details. Most likely this is your own email address, but it can also be an email alias. For multiple recipients, separate using commas (i.e. email1@domain.com,email2@domain.com,etc)."
+>abstract="Enter the best email(s) for Amobee to send data contract details. Most likely this is your own email address, but it can also be an email alias. For multiple recipients, separate using commas (i.e `email1@domain.com`,`email2@domain.com`,etc)."
 
 To configure details for the destination, fill in the fields below.
 
@@ -439,4 +437,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-For more details on how to configure your [!DNL LiveRamp - Onboarding] storage, see the [official documentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
+For more details on how to configure your [!DNL LiveRamp - Onboarding] destination, see the [Liveramp - Onboarding documentation](liveramp-onboarding.md).
