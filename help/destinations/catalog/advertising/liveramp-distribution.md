@@ -9,7 +9,7 @@ The [!DNL LiveRamp - Distribution] connection enables you to activate audiences 
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by LiveRamp. For any inquiries or update requests, please contact LiveRamp directly [here](mailto:adobertcdp@liveramp.com).
+>This destination connector and documentation page are created and maintained by LiveRamp. For any inquiries or update requests, contact LiveRamp directly [here](mailto:adobertcdp@liveramp.com).
 
 ## Supported destinations {#supported-destinations}
 
@@ -42,7 +42,7 @@ To help you better understand how and when you should use the [!DNL LiveRamp - D
 
 The marketing team of a sports apparel retailer used the [LiveRamp - Onboarding](liveramp-onboarding.md) connection to send audiences from Experience Platform to their LiveRamp account.
 
-Through the [!DNL LiveRamp - Distribution] connection they can now trigger the activation of the onboarded audiences to the destinations mentioned at the top of this page, so that they can target users on mobile, open web, social, and [!DNL CTV] platforms.
+Through the [!DNL LiveRamp - Distribution] connection they can now trigger the activation of the onboarded audiences to the [supported destinations](#supported-destinations). Then, they can target users on mobile, open web, social, and [!DNL CTV] platforms.
 
 ## Onboard audiences to LiveRamp {#onboarding}
 
@@ -81,8 +81,8 @@ After you have successfully connected to your LiveRamp account, enter the requir
 ![Platform UI image showing the destination details screen.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)
 
 * **[!UICONTROL Name]**: Fill in the preferred name for your destination connection.
-* **[!UICONTROL Description]**: Enter a description for your destination. Use a description which will help you easily identify the purpose of this destination.
-* **[!UICONTROL Destination]**: Use the drop-down menu to select the destination you want to activate audiences to. The destination you select here directly affects what you see in the [destination-specific settings](#destination-settings) screen.
+* **[!UICONTROL Description]**: Enter a description for your destination. Use a description which helps you easily identify the purpose of this destination.
+* **[!UICONTROL Destination]**: Use the drop-down menu to select the destination to which you want to activate audiences. The destination you select here directly affects what you see in the [destination-specific settings](#destination-settings) screen.
 * **[!UICONTROL Integration]**: Select the integration account that you want to use for your destination.
 * **[!UICONTROL Identifier]**: Select the identifiers supported by your destination. Currently, all the destinations have their supported identifiers prefilled in the drop-down menu.
 
@@ -97,13 +97,13 @@ See the sections below for detailed guidance on how to configure each destinatio
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_4cinsights_profile_id"
 >title="4C Brand Profile ID"
->abstract="Enter the numeric ID associated with your 4C Brand Profile. If you do not have this ID, please contact your 4C client services representative."
+>abstract="Enter the numeric ID associated with your 4C Brand Profile. If you do not have this ID, contact your 4C client services representative."
 
 To configure details for the destination, fill in the fields below.
 
 ![Platform UI image showing the customer data fields for the 4C Insights destination.](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
 
-* **[!UICONTROL 4C Brand Profile ID]**: Enter the numeric ID associated with your 4C Brand Profile. If you do not have this ID, please contact your 4C client services representative.
+* **[!UICONTROL 4C Brand Profile ID]**: Enter the numeric ID associated with your 4C Brand Profile. If you do not have this ID, contact your 4C client services representative.
 
 ### [!DNL Acast] {#acast}
 
@@ -162,7 +162,7 @@ To configure details for the destination, fill in the fields below.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="Advertiser data destination terms agreement"
->abstract="Type in `I AGREE` to confirm the acknowledgement and agreement to the Disney advertiser data terms."
+>abstract="Type in `I AGREE` to confirm the acknowledgment and agreement to the Disney advertiser data terms."
 >additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement"
 
 >[!CONTEXTUALHELP]
@@ -173,13 +173,13 @@ To configure details for the destination, fill in the fields below.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_email"
 >title="Your email address"
->abstract="Enter an email address tied to an individual. This email address serves as a signature to the advertiser data terms agreement. This email address will also be used to contact you if needed."
+>abstract="Enter an email address tied to an individual. This email address serves as a signature to the advertiser data terms agreement. This email address is also used to contact you if needed."
 
 To configure details for the destination, fill in the fields below.
 
 ![Platform UI image showing the customer data fields for the Disney destination.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-disney-fields.png)
 
-* **[!UICONTROL Advertiser data destination terms agreement]**: Type in `I AGREE` to confirm the acknowledgement and agreement to the Disney advertiser data terms.
+* **[!UICONTROL Advertiser data destination terms agreement]**: Type in `I AGREE` to confirm the acknowledgment and agreement to the Disney advertiser data terms.
 * **[!UICONTROL Client name]**: Enter your company name as you want it to be shown to the destination partner.
 * **[!UICONTROL Email address]**: Enter an email address tied to an individual. This email address serves as a signature to the advertiser data terms agreement.
 
@@ -227,7 +227,7 @@ To configure details for the destination, fill in the fields below.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_partnerid"
 >title="Partner ID"
->abstract="The Rubicon Project Partner ID associated with the publisher who owns the segment/data. Please contact your Rubicon Project account representative if unsure of the value you should use."
+>abstract="The Rubicon Project Partner ID associated with the publisher who owns the segment/data. Contact your Rubicon Project account representative if unsure of the value you should use."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_seatid"
@@ -238,52 +238,52 @@ To configure details for the destination, fill in the fields below.
 
 ![Platform UI image showing the customer data fields for the Magnite DV+ destination.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
 
-* **[!UICONTROL Partner ID]**: The Rubicon Project Partner ID associated with the publisher who owns the segment/data. Please contact your Rubicon Project account representative if unsure of the value you should use.
+* **[!UICONTROL Partner ID]**: The Rubicon Project Partner ID associated with the publisher who owns the segment/data. Contact your Rubicon Project account representative if unsure of the value you should use.
 * **[!UICONTROL Seat ID]**: Magnite DV+ Seat ID provided by your Magnite account manager
 
-### [!DNL Nexxen (fka Amobee)] {#nexxen}
+### [!DNL Nexxen (formerly known as [!DNL Amobee])] {#nexxen}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_ratetype"
 >title="Rate Type"
->abstract="Rate type represents the way data usage should be billed. All $0.00 rates should be flat fee. Please confirm with your Amobee representative if you're not sure which rate type to use."
+>abstract="Rate type represents the way data usage should be billed. All $0.00 rates should be flat fee. Confirm with your Nexxen representative if you're not sure which rate type to use."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_marketid"
 >title="Market ID"
->abstract="Enter the Market ID where the Amobee data contract should be created. It should be completely numeric. If you are doing "AlwaysOn" syndication across every single market in the Amobee platform, enter -1."
+>abstract="Enter the numeric Market ID where the Nexxen data contract should be created. If you are doing "AlwaysOn" syndication across every market in the Nexxen platform, enter -1."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_advertiserid"
 >title="Advertiser ID"
->abstract="If you're sending data to a single advertiser in the Amobee platform, enter the Amobee Advertiser ID. It should be completely numeric. If you want to make the data available to all advertisers in a market or if these segments are "AlwaysOn", please enter -1."
+>abstract="If you're sending data to a single advertiser in the Nexxen platform, enter the numeric Amobee Advertiser ID. If you want to make the data available to all advertisers in a market or if these segments are "AlwaysOn", please enter -1."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_contactemail"
 >title="Contact Email"
->abstract="Enter the best email(s) for Amobee to send data contract details. Most likely this is your own email address, but it can also be an email alias. For multiple recipients, separate using commas (i.e `email1@domain.com`,`email2@domain.com`,etc)."
+>abstract="Enter the email address which Nexxen should use to send data contract details. Most likely this is your own email address, but it can also be an email alias. For multiple recipients, separate using commas (`email1@domain.com`,`email2@domain.com`, and so on.)."
 
 To configure details for the destination, fill in the fields below.
 
 ![Platform UI image showing the customer data fields for the Nexxen destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
 
-* **[!UICONTROL Rate Type]**: Rate type represents the way data usage should be billed. All $0.00 rates should be flat fee. Please confirm with your Amobee representative if you're not sure which rate type to use.
-* **[!UICONTROL Market ID]**: Enter the Market ID where the Amobee data contract should be created. It should be completely numeric. If you are doing "AlwaysOn" syndication across every single market in the Amobee platform, enter -1.
-* **[!UICONTROL Advertiser ID]**: If you're sending data to a single advertiser in the Amobee platform, enter the Amobee Advertiser ID. It should be completely numeric. If you want to make the data available to all advertisers in a market or if these segments are "AlwaysOn", please enter -1.
-* **[!UICONTROL Contact Email]**: Enter the best email(s) for Amobee to send data contract details. Most likely this is your own email address, but it can also be an email alias. For multiple recipients, separate using commas (i.e. email1@domain.com,email2@domain.com,etc).
+* **[!UICONTROL Rate Type]**: Rate type represents the way data usage should be billed. All $0.00 rates should be flat fee. Confirm with your Nexxen representative if you're not sure which rate type to use.
+* **[!UICONTROL Market ID]**: Enter the numeric Market ID where the Nexxen data contract should be created. If you are doing "AlwaysOn" syndication across every market in the Nexxen platform, enter -1.
+* **[!UICONTROL Advertiser ID]**: If you're sending data to a single advertiser in the Nexxen platform, enter the numeric Nexxen Advertiser ID. If you want to make the data available to all advertisers in a market or if these segments are "AlwaysOn", enter -1.
+* **[!UICONTROL Contact Email]**: Enter the email address which Nexxen should use to send data contract details. Most likely this is your own email address, but it can also be an email alias. For multiple recipients, separate using commas ( `email1@domain.com`, `email2@domain.com`).
 
 ### [!DNL One Fox] {#fox}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_fox_client"
 >title="Client"
->abstract="The name of your company/distribution account as you would like it to appear to the partner. Use your company name by default, but please contact your partner account rep if unsure. No whitespace or other special characters, please (e.g. Company_Name)."
+>abstract="The name of your company/distribution account as you would like it to appear to the partner. Contact your partner account representative if unsure what name to use. Do not use spaces or special characters."
 
 To configure details for the destination, fill in the fields below.
 
 ![Platform UI image showing the customer data fields for the One Fox destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
 
-* **[!UICONTROL Client]**: The name of your company/distribution account as you would like it to appear to the partner. Use your company name by default. If unsure, please contact your partner account representative. Do not use spaces or special characters (e.g. Company_Name).
+* **[!UICONTROL Client]**: The name of your company/distribution account as you would like it to appear to the partner. Use your company name by default. Contact your partner account representative if unsure what name to use. Do not use spaces or special characters.
 
 ### [!DNL Pandora] {#pandora}
 
@@ -359,14 +359,14 @@ To configure details for the destination, fill in the fields below.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_taboola_seg_type"
 >title="Segment type"
->abstract="The Segment type (1st party only available at this time)."
+>abstract="The segment type. Only first party segments are currently supported."
 
 To configure details for the destination, fill in the fields below.
 
 ![Platform UI image showing the supported identifiers for the Taboola destination.](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
 
 * **[!UICONTROL Account manager email address]**: The email address of your Taboola account manager.
-* **[!UICONTROL Segment type]**: The segment type (1st party only available at this time).
+* **[!UICONTROL Segment type]**: The segment type. Only first party segments are currently supported.
 
 ### [!DNL TargetSpot] {#targetspot}
 
@@ -409,7 +409,7 @@ To configure details for the destination, fill in the fields below.
 
 ### Enable alerts {#enable-alerts}
 
-You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, read the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+You can enable alerts to receive notifications on the status of the dataflow to your destination. To receive notifications on the status of your dataflow, select an alert from the list. For more information on alerts, read the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
@@ -421,17 +421,17 @@ When you are finished providing details for your destination connection, select 
 
 The [!DNL LiveRamp - Distribution] connection activates audiences which have already been onboarded to your LiveRamp account through the [LiveRamp - Onboarding](liveramp-onboarding.md) connection.
 
-To successfully activate your audiences, in this step, you must select the **same audiences** that you have previously onboarded to LiveRamp.
+To successfully activate your audiences, you must select the **same audiences** that you have [previously onboarded](liveramp-onboarding) to LiveRamp.
 
 >[!IMPORTANT]
 >
->Selecting audiences which have not been previously onboarded to LiveRamp will not trigger the onboarding of the new audiences.
+>Selecting audiences which have not been previously onboarded through the [LiveRamp - Onboarding](liveramp-onboarding.md) connection does not trigger the onboarding of the new audiences.
 
 ## Exported data / Validate data export {#exported-data}
 
 To verify and monitor the activation of your audiences, log in to your LiveRamp account and check the activation metrics.
 
-If you have questions about the audience activation, please contact your LiveRamp account representative.
+If you have questions about the audience activation, contact your LiveRamp account representative.
 
 ## Data usage and governance {#data-usage-governance}
 
@@ -439,4 +439,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-For more details on how to configure your [!DNL LiveRamp - Onboarding] destination, see the [Liveramp - Onboarding documentation](liveramp-onboarding.md).
+For more details on how to configure your [!DNL LiveRamp - Onboarding] destination, see the [LiveRamp - Onboarding documentation](liveramp-onboarding.md).
