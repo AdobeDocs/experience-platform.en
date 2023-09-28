@@ -356,6 +356,7 @@ To configure details for the destination, fill in the fields below.
 >title="Account manager email address"
 >abstract="The email address of your Taboola account manager."
 
+>[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_taboola_seg_type"
 >title="Segment type"
 >abstract="The Segment type (1st party only available at this time)."
@@ -405,6 +406,7 @@ To configure details for the destination, fill in the fields below.
 ![Platform UI image showing the supported identifiers for the WB Discovery destination.](../../assets/catalog/advertising/liveramp-distribution/LR_WBD_DestSpecific.png)
 
 * **[!UICONTROL Client name]**: Your advertiser account name, as you would like it to be shown to the destination partner. Use your company name. Do not use spaces or special characters.
+
 ### Enable alerts {#enable-alerts}
 
 You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, read the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
