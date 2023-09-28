@@ -28,7 +28,7 @@ In order to connect [!DNL PubSub] to Platform, you must provide a valid value fo
 | Credential | Description |
 | ---------- | ----------- |
 | Project ID | The project ID required to authenticate [!DNL PubSub]. |
-| Credentials | The credential or private key ID required to authenticate [!DNL PubSub]. |
+| Credentials | The credential required to authenticate [!DNL PubSub]. You must ensure that you put the complete JSON file after removing the white spaces from your credentials.|
 | Topic name | The name of your [!DNL PubSub] subscription. In [!DNL PubSub], subscriptions allow you to receive messages, by subscribing to the topic in which messages have been published to. **Note**: A single [!DNL PubSub] subscription can only be used for one dataflow. In order to make multiple dataflows, you must have multiple subscriptions. |
 | Subscription name | The name of your [!DNL PubSub] subscription. In [!DNL PubSub], subscriptions allow you to receive messages, by subscribing to the topic in which messages have been published to. |
 

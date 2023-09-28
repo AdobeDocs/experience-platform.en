@@ -32,9 +32,42 @@ If you are configuring this datastream for use in Experience Platform and are us
 
 ![Basic configuration for a datastream](assets/configure/configure.png)
 
-Select **[!UICONTROL Advanced Options]** to reveal additional controls to configure the datastream.
+### Configure geolocation and network lookup {#geolocation-network-lookup}
 
-![Advanced configuration options](assets/configure/advanced-options.png) {#advanced-options}
+Geolocation and network lookup settings help you define the level of granularity of the geographical and network-level data that you want to collect.
+
+Expand the **[!UICONTROL Geolocation and network lookup]** section to configure the settings described below.
+
+![Platform UI screenshot showing the datastream configuration screen with the geolocation and network lookup settings highlighted.](assets/configure/geolookup.png)
+
+| Setting | Description |
+| --- | --- |
+| [!UICONTROL Geo Lookup] | Enables geolocation lookups for the selected options, based on the visitor IP address. Geolocation lookup requires you to include the [`placeContext`](../edge/data-collection/automatic-information.md#place-context) field group in your Web SDK configuration. <br> Available options: <ul><li>Country</li><li>Postal Code</li><li>State/Province</li><li>DMA</li><li>City</li><li>Latitude </li><li>Longitude</li></ul>Selecting **[!UICONTROL City]**, **[!UICONTROL Latitude]**, or **[!UICONTROL Longitude]** provides coordinates up to two decimal points, regardless of what other options are selected. This is considered city-level granularity. <br> <br>Not selecting any option disables any geolocation lookups. Geolocation occurs before [!UICONTROL IP Obfuscation] and is not impacted by the  [!UICONTROL IP Obfuscation] setting.|
+| [!UICONTROL Network Lookup] | Enables network lookups for the selected options, based on the visitor IP address. Network lookup requires you to include the [`Environment`](../edge/data-collection/automatic-information.md#environment) field group in your Web SDK configuration. <br> Available options: <ul><li>Carrier</li><li>Domain</li><li>ISP</li></ul>Use these options to provide more information to other services about the specific network where the requests originated.|
+
+### Configure device lookup {#geolocation-device-lookup}
+
+The **[!UICONTROL Device Lookup]** settings allow you to select the granularity level of the device-specific information that you want to collect.
+
+Expand the **[!UICONTROL Device Lookup]** section to configure the settings described below.
+
+![Platform UI screenshot showing the datastream configuration screen with the device lookup settings highlighted.](assets/configure/device-lookup.png)
+
+>[!IMPORTANT]
+>
+>The settings described in the table below are mutually exclusive. You cannot select both user agent information and device lookup data at the same time.
+
+| Setting | Description |
+| --- | --- |
+| **[!UICONTROL Keep user agent and client hints headers]** | Select this option to only collect the information stored in the user agent string. This is the default setting. |
+| **[!UICONTROL Use device lookup to collect the following information]** | Select this option if you want to collect one or more of the following device-specific information: <ul><li>**[!UICONTROL Device]** information:<ul><li>Device manufacturer</li><li>Device model</li><li>Marketing name</li></ul></li><li>**[!UICONTROL Hardware]** information: <ul><li>Device type</li><li>Display height</li><li>Display width</li><li>Display color depth</li></ul></li><li>**[!UICONTROL Browser]** information: <ul><li>Browser vendor</li><li>Browser name</li><li>Browser version</li></ul></li><li>**[!UICONTROL Operating system]** information: <ul><li>OS vendor</li><li>OS name</li><li>OS version</li></ul></li></ul> <br>  Device lookup information cannot be collected along with user agent and client hints. Choosing to collect device information will disable the collection of user agent and client hints, and vice versa. All device lookup information is stored in the `xdm:device` field group. |
+| **[!UICONTROL Do not collect any device information]** | Select this option if you do not want to collect any kind of lookup information. No device, hardware, browser or operating system information will be collected, including no user agent or client hints headers. |
+
+### Configure advanced options {#@advanced-options}
+
+Select **[!UICONTROL Advanced Options]** to reveal additional controls to configure the datastream, such as IP obfuscation, First Party ID cookies, and more.
+
+![Advanced configuration options](assets/configure/advanced-settings.png) 
 
 >[!IMPORTANT]
 >
@@ -44,14 +77,13 @@ Select **[!UICONTROL Advanced Options]** to reveal additional controls to config
 
 | Setting | Description |
 | --- | --- |
-| [!UICONTROL Geo Lookup] | Enables geolocation lookups for the selected options, based on the visitor IP address. Geolocation lookup requires you to include the [`placeContext`](../edge/data-collection/automatic-information.md#place-context) field group in your Web SDK configuration. <br> Available options: <ul><li>Country</li><li>Postal Code</li><li>State/Province</li><li>DMA</li><li>City</li><li>Latitude </li><li>Longitude</li></ul>Selecting **[!UICONTROL City]**, **[!UICONTROL Latitude]**, or **[!UICONTROL Longitude]** provides coordinates up to two decimal points, regardless of what other options are selected. This is considered city-level granularity. <br> <br>Not selecting any option disables any geolocation lookups. Geolocation occurs before [!UICONTROL IP Obfuscation] and is not impacted by the  [!UICONTROL IP Obfuscation] setting.|
-| [!UICONTROL Network Lookup] | Enables network lookups for the selected options, based on the visitor IP address. Network lookup requires you to include the [`Environment`](../edge/data-collection/automatic-information.md#environment) field group in your Web SDK configuration. <br> Available options: <ul><li>Carrier</li><li>Domain</li><li>ISP</li></ul>Use these options to provide more information to other services about the specific network where the requests originated.|
 | [!UICONTROL IP Obfuscation]| Indicates the type of IP obfuscation to be applied to the datastream. Any processing based on customer IP will be impacted by the IP obfuscation setting. This includes all Experience Cloud services which receive data from your datastream. <p>Available options:</p> <ul><li>**[!UICONTROL None]**: Disables IP obfuscation. The full user IP address will be sent via the datastream.</li><li>**[!UICONTROL Partial]**: For IPv4 addresses, obfuscates the last octet of the user IP address. For IPv6 addresses, obfuscates the last 80 bits of the address. <p>Examples:</p> <ul><li>IPv4: `1.2.3.4` -> `1.2.3.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL Full]**: Obfuscates the entire IP address. <p>Examples:</p> <ul><li>IPv4: `1.2.3.4` -> `0.0.0.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> IP obfuscation impact on other Adobe products: <ul><li>**Adobe Target**: The datastream-level [!UICONTROL IP obfuscation] setting takes precedence over any IP obfuscation option set in Adobe Target. For example, if the datastream-level [!UICONTROL IP obfuscation] option is set to **[!UICONTROL Full]** and the Adobe Target IP obfuscation option is set to **[!UICONTROL Last octet obfuscation]**, Adobe Target will receive a fully obfuscated IP. See the Adobe Target documentation on [IP obfuscation](https://developer.adobe.com/target/before-implement/privacy/privacy/) and [geolocation](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=en) for more details.</li><li>**Audience Manager**: The datastream-level IP obfuscation setting takes precedence over any IP obfuscation option set in Audience Manager, and it is applied to all IP addresses. Any geolocation lookup done by Audience Manager is impacted by the datastream-level [!UICONTROL IP obfuscation] option. A geolocation lookup in Audience Manager, based on a fully obfuscated IP, will result in an unknown region, and any segments based on the resulted geolocation data will not be realized. See the Audience Manager documentation on [IP obfuscation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=en) for more details.</li><li>**Adobe Analytics**: Adobe Analytics currently receives the partially obfuscated IP addresses if any IP obfuscation option is selected, other than NONE. For Analytics to receive fully obfuscated IP addresses, you must configure IP obfuscation separately, in Adobe Analytics. This behavior will be updated in future releases. See the Adobe Analytics [documentation](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html) for details on how to enable IP obfuscation in Analytics.</li></ul>  |
 | [!UICONTROL First Party ID Cookie] | When enabled, this setting tells the Edge Network to refer to a specified cookie when looking up a [first-party device ID](../edge/identity/first-party-device-ids.md), rather than looking up this value in the Identity Map.<br><br>When enabling this setting, you must provide the name of the cookie where the ID is expected to be stored.|
 | [!UICONTROL Third Party ID Sync] | ID syncs can be grouped into containers to allow different ID syncs to be run at different times. When enabled, this setting lets you specify which container of ID syncs is run for this datastream.|
 | [!UICONTROL Third Party ID Sync Container ID] | The numeric ID of the container to be used for third party ID sync.|
 | [!UICONTROL Container ID Overrides] | In this section you can define additional third party ID sync container IDs which you can use to override the default one. |
-| [!UICONTROL Access Type] | Defines the authentication type that the Edge Network accepts for the datastream. <ul><li>**[!UICONTROL Mixed Authentication]**: When this option is selected, the Edge Network accepts both authenticated and unauthenticated requests. Select this option when you plan to use the Web SDK or [Mobile SDK](https://aep-sdks.gitbook.io/docs/), along with the [Server API](../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: When this option is selected, the Edge Network only accepts authenticated requests. Select this option when you plan to use only the Server API and want to prevent any unauthenticated requests from being processed by the Edge Network.</li></ul>|
+| [!UICONTROL Access Type] | Defines the authentication type that the Edge Network accepts for the datastream. <ul><li>**[!UICONTROL Mixed Authentication]**: When this option is selected, the Edge Network accepts both authenticated and unauthenticated requests. Select this option when you plan to use the Web SDK or [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/), along with the [Server API](../server-api/overview.md). </li><li>**[!UICONTROL Authenticated Only]**: When this option is selected, the Edge Network only accepts authenticated requests. Select this option when you plan to use only the Server API and want to prevent any unauthenticated requests from being processed by the Edge Network.</li></ul>|
+[!UICONTROL Media Analytics] | Select this option to enable processing of streaming tracking data for Edge Network integration via Experience Platform SDKs or Media Edge API. Learn about Media Analytics from the [documentation](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en). |
 
 From here, if you are configuring your datastream for Experience Platform, follow the tutorial on [Data Prep for Data Collection](./data-prep.md) to map your data to a Platform event schema before returning to this guide. Otherwise, select **[!UICONTROL Save]** and continue to the next section.
 

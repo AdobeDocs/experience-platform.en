@@ -2,7 +2,7 @@
 keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;
 solution: Experience Platform
 title: Real-time Machine Learning Overview
-description: Real-time Machine Learning can dramatically enhance the relevance of your digital experience content for your end-users. This is made possible by leveraging real-time inferencing and continuous learning on the Experience Edge.
+description: Real-time Machine Learning can dramatically enhance the relevance of your digital experience content for your end-users. This is made possible by leveraging real-time inferencing and continuous learning on the Experience Platform Edge Network.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 ---
 # Real-time Machine Learning overview (Alpha)
@@ -11,7 +11,7 @@ exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 >
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
 
-Real-time Machine Learning can dramatically enhance the relevance of your digital experience content for your end-users. This is made possible by leveraging real-time inferencing and continuous learning on the [!DNL Experience Edge].
+Real-time Machine Learning can dramatically enhance the relevance of your digital experience content for your end-users. This is made possible by leveraging real-time inferencing and continuous learning on the [!DNL Experience Platform Edge Network].
 
 A combination of seamless computation on both the Hub and the [!DNL Edge] dramatically reduces the latency that is traditionally involved in powering hyper-personalized experiences that are both relevant and responsive. Hence, Real-time Machine Learning provides inferences with incredibly low latency for synchronous decision-making. Examples include rendering personalized web page content or surfacing of an offer or discount to reduce churn and increase conversions on a web store.
 
@@ -37,7 +37,7 @@ Create a Real-time Machine Learning model by authoring it from scratch or bringi
 
 ### Deployment
 
-Deploy your model to [!DNL Experience Edge] to create a Real-time Machine Learning service in the [!UICONTROL Service Gallery] using the Prediction API endpoint.
+Deploy your model to the [!DNL Edge Network] to create a Real-time Machine Learning service in the [!UICONTROL Service Gallery] using the Prediction API endpoint.
 
 ### Inference
 

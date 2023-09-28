@@ -16,6 +16,10 @@ This functionality allows you to label Experience Data Model (XDM) schema fields
 
 Through attribute-based access control, administrators of your organization can control users' access to sensitive personal data (SPD), personally identifiable information (PII) and customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
+The following video is intended to support your understanding of attribute-based access control, and outlines how to configure roles, resources, and policies.
+
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
+
 ## Attribute-based access control terminology
 
 Attribute-based access control involves the following components:

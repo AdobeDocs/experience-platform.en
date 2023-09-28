@@ -6,7 +6,12 @@ type: Tutorial
 description: Learn how to create and edit data types in the Experience Platform user interface.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 ---
-# Create and edit data types using the UI
+# Create and edit data types using the UI {#ui-create-and-edit}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_datatype_filter"
+>title="Standard or custom data type filter"
+>abstract="The list of available data types is pre-filtered based on how they were created. Select the radio button to choose between the Standard and Custom options. The Standard option shows entities created by Adobe and the Custom option displays entities created within your organization. See the documentation to learn more about creating and editing data types."
 
 In Experience Data Model (XDM), data types are reusable fields that contain multiple sub-fields. While similar to schema field groups in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas field groups can only be added at the root level.
 
@@ -20,7 +25,7 @@ This guide requires a working understanding of XDM System. Refer to the [XDM ove
 
 While not required for this guide, it is recommended that you also follow the tutorial on [composing a schema in the UI](../../tutorials/create-schema-ui.md) to familiarize yourself with the various capabilities of the [!DNL Schema Editor].
 
-## Open the [!DNL Schema Editor] for a data type
+## Open the [!DNL Schema Editor] for a data type {#data-type}
 
 In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace, then select the **[!UICONTROL Data types]** tab. A list of available data types is displayed. The list of data types is automatically filtered based on how they were created. The default setting displays the data types defined by Adobe. You can also filter the list to show those created by your organization. 
 
@@ -52,7 +57,7 @@ The list of available data types is pre-filtered based on how they were created.
 
 ![The [!UICONTROL Data types] tab of the [!UICONTROL Schemas] workspace with [!UICONTROL Standard] and [!UICONTROL Custom] highlighted.](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
 
-### Edit an existing data type
+### Edit an existing data type {#edit}
 
 >[!NOTE]
 >

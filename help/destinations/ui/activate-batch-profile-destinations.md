@@ -10,12 +10,9 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 
 >[!IMPORTANT]
 > 
-> The functionality described on the page is not yet generally available to customers. This page is currently meant for Adobe-internal teams as a pre-read about the coming functionality. Please do not share outside of Adobe until this note is removed.
-
->[!IMPORTANT]
-> 
 > * To activate audiences and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 > * To activate audiences without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
@@ -24,6 +21,11 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 This article explains the workflow required to activate audiences in Adobe Experience Platform batch profile-based destinations, such as cloud storage and email marketing destinations.
 
 ## Prerequisites {#prerequisites}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_flat_files"
+>title="(Beta) Export arrays support"
+>abstract="(Beta) Export arrays of primitive values from Experience Platform to you desired cloud storage destination. This text will be updated more info. <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/license-usage-limited.html?lang=en#available-metrics">Learn more</a>. "
 
 To activate audiences to destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 
