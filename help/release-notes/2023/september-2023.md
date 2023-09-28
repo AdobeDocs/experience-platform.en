@@ -20,7 +20,7 @@ Updates to existing features in Experience Platform:
 
 ## Computed attributes {#computed-attributes}
 
-Computed attributes enable capability to easily summarize event data into profile attributes via an intuitive UI for enhanced behavior-based segmentation, personalization, and activation. With this feature, you can create computed attributes in a self serve manner, manage them, and use them in segmentation, Real-Time CDP destinations, or Adobe Journey Optimizer. Additionally, computed attributes simplify segmentation and journey workflows to help you seamlessly deliver relevant experiences. To learn more about computed attributes, please read the [computed attributes overview](../profile/computed-attributes/overview.md).
+Computed attributes enable capability to easily summarize event data into profile attributes via an intuitive UI for enhanced behavior-based segmentation, personalization, and activation. With this feature, you can create computed attributes in a self serve manner, manage them, and use them in segmentation, Real-Time CDP destinations, or Adobe Journey Optimizer. Additionally, computed attributes simplify segmentation and journey workflows to help you seamlessly deliver relevant experiences. To learn more about computed attributes, please read the [computed attributes overview](../../profile/computed-attributes/overview.md).
 
 ## Alerts {#alerts}
 
@@ -74,8 +74,8 @@ To learn more about Identity Service, please read the [Identity Service overview
 
 | Feature | Description |
 | ------- | ----------- |
-| Customizable columns | You can now customize the layout of Audience Portal with re-sizable columns. For more information on this feature, please read the [segmentation UI guide](../segmentation/ui/overview.md#customize). |
-| Update frequency breakdown | You can now view a breakdown of the update frequencies of the audiences in your organization. For more information on this feature, please read the [segmentation UI guide](../segmentation/ui/overview.md#browse). |
+| Customizable columns | You can now customize the layout of Audience Portal with re-sizable columns. For more information on this feature, please read the [segmentation UI guide](../../segmentation/ui/overview.md#customize). |
+| Update frequency breakdown | You can now view a breakdown of the update frequencies of the audiences in your organization. For more information on this feature, please read the [segmentation UI guide](../../segmentation/ui/overview.md#browse). |
 
 To learn more about sources, please read the [sources overview](../../sources/home.md).
 
