@@ -81,7 +81,7 @@ If you have written multiple queries but need to execute only one query, you can
 
 ### Result count {#result-count}
 
-The Query Editor has a maximum 50,000 row output. However, only 50 rows are displayed at one time in the Query Editor console. To change the number of rows displayed in the console, select the **[!UICONTROL Result count]** dropdown and choose from either 50, 100, or 150 values.
+The Query Editor has a maximum 50,000 row output. However, only 50 rows are displayed at one time in the Query Editor console. To change the number of rows displayed in the console, select the **[!UICONTROL Result count]** dropdown and choose from either 50, 100, 150, 300, and 500 values.
 
 ![The Query Editor with the Result count dropdown highlighted.](../images/ui/query-editor/result-count.png)
 
