@@ -45,7 +45,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 | Type | Feature | Description |
 | --- | --- | --- |
 | Datastreams | Device lookup support | When configuring a datastream, you can now select the level of device lookup information to be collected. Device lookup information includes data about the device, hardware, operating system, and browser used to interact with your page. <br>  Device lookup information cannot be collected along with user agent and client hints. Choosing to collect device information will disable the collection of user agent and client hints, and vice versa. All device lookup information is stored in the `xdm:device` field group. Learn more from the documentation on [configuring datastreams](../../datastreams/configure.md#geolocation-device-lookup). |
-| Extension | [!DNL TikTok] web events API extension | The [[!DNL TikTok] Web Events API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL TikTok] in the form of server-side events using the [!DNL TikTok] Web Events API. |
+| Extensions | [!DNL TikTok] web events API extension | The [[!DNL TikTok] Web Events API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL TikTok] in the form of server-side events using the [!DNL TikTok] Web Events API. |
 
 {style="table-layout:auto"}
 
@@ -76,6 +76,8 @@ To learn more about Identity Service, please read the [Identity Service overview
 | ------- | ----------- |
 | Customizable columns | You can now customize the layout of Audience Portal with re-sizable columns. For more information on this feature, please read the [segmentation UI guide](../segmentation/ui/overview.md#customize). |
 | Update frequency breakdown | You can now view a breakdown of the update frequencies of the audiences in your organization. For more information on this feature, please read the [segmentation UI guide](../segmentation/ui/overview.md#browse). |
+
+To learn more about sources, please read the [sources overview](../../sources/home.md).
 
 To learn more about Segmentation Service, please read the [Segmentation Service overview](../../segmentation/home.md).
 
