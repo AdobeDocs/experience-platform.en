@@ -118,7 +118,7 @@ In this case, your output file looks like below. Notice how the three elements o
 John,Doe,"Marketing_Sales_Finance"
 ```
 
-### `coalesce` function to export arrays {#join-function-export-arrays}
+### `coalesce` function to export arrays {#coalesce-function-export-arrays}
 
 Use the `coalesce` function to access and export the first non-null element of an array into a string.
 
