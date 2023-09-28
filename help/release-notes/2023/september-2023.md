@@ -12,6 +12,7 @@ New features in Adobe Experience Platform:
 
 Updates to existing features in Experience Platform:
 
+- [Alerts](#alerts)
 - [Data collection](#data-collection)
 - [Identity Service](#identity-service)
 - [Segmentation Service](#segmentation)
@@ -20,6 +21,20 @@ Updates to existing features in Experience Platform:
 ## Computed attributes {#computed-attributes}
 
 Computed attributes enable capability to easily summarize event data into profile attributes via an intuitive UI for enhanced behavior-based segmentation, personalization, and activation. With this feature, you can create computed attributes in a self serve manner, manage them, and use them in segmentation, Real-Time CDP destinations, or Adobe Journey Optimizer. Additionally, computed attributes simplify segmentation and journey workflows to help you seamlessly deliver relevant experiences. To learn more about computed attributes, please read the [computed attributes overview](../profile/computed-attributes/overview.md).
+
+## Alerts {#alerts}
+
+Experience Platform allows you to subscribe to event-based alerts for various Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+
+**Updated features**
+
+| Feature | Alert rule | Description |
+| --- | --- | --- |
+| Alerts history tab | The Alerts [!UICONTROL History] tab will now include all events including delays, starts, success, and failures. See the [alerts UI documentation](../../observability/alerts/ui.md) for more information about the history tab. |
+
+{style="table-layout:auto"}
+
+To learn more about alerts, read the [[!DNL Observability Insights] overview](../../observability/home.md).
 
 ## Data collection {#data-collection}
 
@@ -30,6 +45,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 | Feature | Description |
 | --- | --- |
 | Device lookup support for datastreams | When configuring a datastream, you can now select the level of device lookup information to be collected. Device lookup information includes data about the device, hardware, operating system, and browser used to interact with your page. <br>  Device lookup information cannot be collected along with user agent and client hints. Choosing to collect device information will disable the collection of user agent and client hints, and vice versa. All device lookup information is stored in the `xdm:device` field group. Learn more from the documentation on [configuring datastreams](../../datastreams/configure.md#geolocation-device-lookup). |
+| Extension | [!DNL TikTok] web events API extension | The [[!DNL TikTok] Web Events API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL TikTok] in the form of server-side events using the [!DNL TikTok] Web Events API. |
 
 {style="table-layout:auto"}
 
