@@ -43,7 +43,7 @@ You re-activate the updated audience to the same destination, but since there is
 To ensure all the profiles are sent to your destination, you must create a new audience with the new configuration, and then activate it to your destination.
 
 +++
-
+<!--
 ## [!DNL Experience Cloud Audiences] {#eca-faq}
 
 ### What are the differences between the Experience Cloud Audiences and Adobe Target destinations?
@@ -67,7 +67,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 | **Supported audiences** | All types of audiences  | Edge merge policy required for activation.|
 
 +++
-
+  -->
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 ### What do I need to do before I can activate audiences in [!DNL Facebook Custom Audiences]?

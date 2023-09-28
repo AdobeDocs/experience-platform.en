@@ -11,7 +11,9 @@ exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
 >
 > This destination is available to [Adobe Real-Time Customer Data Platform Prime and Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
-Use the [!UICONTROL Experience Cloud Audiences] destination to share audiences from Real-Time CDP to various Experience Cloud solutions, like Audience Manager, Analytics, Advertising Cloud, Campaign, Target, or Marketo.
+Use this destination to activate audiences from Real-Time CDP to Audience Manager and Adobe Analytics. You need an Audience Manager license to send audiences to Adobe Analytics.
+
+To send audiences to other Adobe solutions, use the direct connections from Real-Time CDP to [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) and [Marketo Engage](../adobe/marketo-engage.md).
 
 >[!IMPORTANT]
 >
