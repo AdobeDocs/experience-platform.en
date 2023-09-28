@@ -917,7 +917,7 @@ Analytics Server Side Logging is enabled when Analytics is enabled for that Data
 ![](assets/analytics-enabled-datastream-config.png)
 
 When Server Side Analytics Logging is enabled the A4T payload that needs to be shared with Analytics so that the Analytics reporting show 
-correct impressions and conversions is shared at the Experience Edge level, so that the customer doesn't have to do any additional processing.
+correct impressions and conversions is shared at the Edge Network level, so that the customer doesn't have to do any additional processing.
 
 Here is how data flows into our systems when Server Side Analytics Logging is enabled:
 
@@ -1232,7 +1232,7 @@ Note: All these debugging features are available with enhanced capabilities in [
 
 You have multiple debugging capabilities when using Web SDK:
 
-* Using [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* Using [Assurance](../../../assurance/home.md)
 * [Web SDK debug enabled](../../../edge/fundamentals/debugging.md)
 * Use [Web SDK monitoring hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Use [Adobe Experience Platform Debugger](../../../debugger/home.md)

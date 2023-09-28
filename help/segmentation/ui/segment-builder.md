@@ -93,6 +93,10 @@ Once the report suites have been mapped, you can use these newly mapped fields w
  
 ### Audiences
 
+>[!NOTE]
+>
+>For audiences created within Platform, only audiences that have the **same** merge policy will be displayed.
+
 The **[!UICONTROL Audiences]** tab lists all audiences imported from external sources, such as Adobe Audience Manager, as well as audiences created within [!DNL Experience Platform].
 
 On the **[!UICONTROL Audiences]** tab, you can see all of the available sources as a group of folders. As you select the folders, available sub-folders and audiences can be seen. Additionally, you can select the folder icon (as shown in the far-right image) in order to view the folder structure (a check mark denotes the folder you are currently in) and easily navigate back through folders by selecting the name of a folder in the tree.

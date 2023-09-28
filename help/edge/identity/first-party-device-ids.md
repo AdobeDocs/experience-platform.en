@@ -170,7 +170,7 @@ The following `identityMap` would result in an error response from the Edge Netw
 }
 ```
 
-The error response returned by Experience Edge in this case would be similar to the following:
+The error response returned by the Edge Network in this case would be similar to the following:
 
 ```json
 {

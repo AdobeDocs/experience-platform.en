@@ -9,9 +9,8 @@ feature: Data Collection
 
 # Edge Network Server API Documentation {#edge-network-server-api}
 
-
-* [Edge Network Server API overview](overview.md)
-* [Performance guardrails for Edge Network Server API](guardrails.md)
+* [Overview](overview.md)
+* [Performance guardrails](guardrails.md)
 * [Authentication](authentication.md)
 * Data collection {#data-collection}
   * [Single-event data collection](interactive-data-collection.md)
