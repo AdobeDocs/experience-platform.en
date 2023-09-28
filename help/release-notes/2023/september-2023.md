@@ -6,10 +6,34 @@ description: The September 2023 release notes for Adobe Experience Platform.
 
 **Release date: September 28, 2023**
 
-Updates to existing features in Adobe Experience Platform:
+New features in Adobe Experience Platform:
 
+- [Computed attributes](#computed-attributes)
+
+Updates to existing features in Experience Platform:
+
+- [Data collection](#data-collection)
 - [Identity Service](#identity-service)
+- [Segmentation Service](#segmentation)
 - [Sources](#sources)
+
+## Computed attributes {#computed-attributes}
+
+Computed attributes enable capability to easily summarize event data into profile attributes via an intuitive UI for enhanced behavior-based segmentation, personalization, and activation. With this feature, you can create computed attributes in a self serve manner, manage them, and use them in segmentation, Real-Time CDP destinations, or Adobe Journey Optimizer. Additionally, computed attributes simplify segmentation and journey workflows to help you seamlessly deliver relevant experiences. To learn more about computed attributes, please read the [computed attributes overview](../profile/computed-attributes/overview.md).
+
+## Data collection {#data-collection}
+
+Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Device lookup support for datastreams | When configuring a datastream, you can now select the level of device lookup information to be collected. Device lookup information includes data about the device, hardware, operating system, and browser used to interact with your page. <br>  Device lookup information cannot be collected along with user agent and client hints. Choosing to collect device information will disable the collection of user agent and client hints, and vice versa. All device lookup information is stored in the `xdm:device` field group. Learn more from the documentation on [configuring datastreams](../../datastreams/configure.md#geolocation-device-lookup). |
+
+{style="table-layout:auto"}
+
+To learn more about data collection, read the [data collection overview](../../tags/home.md).
 
 ## Identity Service {#identity-service}
 
@@ -18,6 +42,24 @@ Adobe Experience Platform Identity Service provides you with a comprehensive vie
 | Feature | Description |
 | --- | --- |
 | Improved UI experience when creating custom identity namespaces | Use the improved custom namespace creation tool in the Experience Platform UI to better manage your custom namespaces and their corresponding identity types. For more information, read the guide on [creating custom namespaces](../../identity-service/namespaces.md#create-namespaces). |
+| Changes to identity graph limits | By the end of September, the identity graph will change to 50 identities per graph, and the latest identity will be ingested. As a consequence, the oldest identity will be deleted based on the ingestion timestamp and identity type, with cookie identity types being deleted first. Please contact your account representative to request a change in identity type if your production sandbox contains: <ul><li>a custom namespace where the person identifiers (such as CRM IDs) are configured as cookie/device identity type.</li><li>a custom namespace where cookie/device identifiers are configured as cross-device identity type.</li></ul> Adobe engineering will manually process these requests. For more information, read the [guardrails for Identity Service data](../../identity-service/guardrails.md). |
+
+The identity graph limit has changed from 150 identities to 50 identities. When a new identity is ingested into a full identity graph, the oldest identity based on the ingestion timestamp and identity type will be deleted. 
+
+To learn more about Identity Service, read the [Identity Service overview](../../identity-service/home.md).
+
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Customizable columns | You can now customize the layout of Audience Portal with re-sizable columns. For more information on this feature, please read the [segmentation UI guide](../segmentation/ui/overview.md#customize). |
+| Update frequency breakdown | You can now view a breakdown of the update frequencies of the audiences in your organization. For more information on this feature, please read the [segmentation UI guide](../segmentation/ui/overview.md#browse). |
+
+To learn more about Segmentation Service, read the [Segmentation Service overview](../../segmentation/home.md).
 
 ## Sources {#sources}
 
@@ -25,4 +67,4 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | --- | --- |
-| 
+| New parameters for `offset` pagination in Self-Serve Sources (Batch SDK) |
