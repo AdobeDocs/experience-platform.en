@@ -178,7 +178,11 @@ johndoe@acme.org,"1538097126","1664327526"
 
 ### `iif` function to export arrays {#iif-function-export-arrays}
 
-Here are some examples of how you could use the `iif` function to access and export arrays and other fields:
+Here are some examples of how you could use the `iif` function to access and export arrays and other fields: (STILL TO DO)
+
+### `md5` and `sha256` hashing functions {#hashing-functions}
+
+In addition to the functions specific for exporting arrays or elements from an array, you can use hashing functions to hash any desired fields when exporting them.
 
 ## Known limitations
 
