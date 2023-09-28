@@ -844,7 +844,9 @@ A successful response returns HTTP status 200 with details of your newly created
 
 ### Create dynamic dropdown destination servers {#dynamic-dropdown-servers}
 
-[Dynamic dropdowns](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) allow you to dynamically retrieve and populate dropdown customer data fields, based on your own API. You need to configure a destination server for dynamic dropdowns before you can configure the dyamic dropwdown customer data field.
+Use [dynamic dropdowns](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) to dynamically retrieve and populate dropdown customer data fields, based on your own API. For example, you could retrieve a list of existing user accounts which you want to use for a destination connection.
+
+You need to configure a destination server for dynamic dropdowns before you can configure the dyamic dropwdown customer data field.
 
 See in the tab below an example of a destination server used to dynamically retrieve the values to be displayed in a dropdown selector, from an API.
 

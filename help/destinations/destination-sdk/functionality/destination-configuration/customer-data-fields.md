@@ -332,6 +332,8 @@ To create a dynamic dropdown selector, you must configure two components:
 ]
 ```
 
+Set the `destinationServerId` parameter to the ID of the destination server that you created at step 1. You can see the destination server ID in the response of the [retrieve a destination server configuration](../../authoring-api/destination-server/retrieve-destination-server.md) API call.
+
 ## Create conditional customer data fields {#conditional-options}
 
 You can create conditional customer data fields, which are displayed in the activation workflow only when users select a certain option.
