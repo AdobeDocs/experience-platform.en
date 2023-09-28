@@ -29,7 +29,7 @@ Learn how to export arrays through calculated fields from Real-Time CDP in flat 
 
 Get extensive information about calculated fields - what these are and why they matter. Read the pages linked below for an introduction to calculated fields in Data Prep and more information about all the available functions: 
 
-* [UI guide and overview](help/data-prep/ui/mapping.md#calculated-fields)
+* [UI guide and overview](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Data prep functions](/help/data-prep/functions.md)
 
 >[!IMPORTANT]
