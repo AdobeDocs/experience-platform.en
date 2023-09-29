@@ -136,11 +136,6 @@ The license usage dashboard reports on several unique metrics that are applicabl
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
-<!-- | [!UICONTROL Core hours] | MISSING  |
-| [!UICONTROL Data scanned per segmentation ratio] | MISSING |
-| [!UICONTROL Total consumed storage] | MISSING |
-| [!UICONTROL Total storage] | MISSING  | -->
-
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased. For detailed definitions of each metric, refer to the appropriate Product Description documentation:
 
 |License|Product Description|
