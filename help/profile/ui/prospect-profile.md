@@ -2,8 +2,6 @@
 title: Prospect Profiles
 description: Learn how to create and use prospect profiles to gather information about unknown customers using third-party information. 
 type: Documentation
-hide: true
-hidefromtoc: true
 ---
 
 # Prospect profiles
