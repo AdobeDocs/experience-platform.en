@@ -9,11 +9,11 @@ type: Documentation
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="License usage dashboard"
->abstract="The License usage dashboard offers insight into the Adobe Experience Platform products you've purchased. The dashboard overview displays the primary metrics for your products including your usage for each of the primary metrics, as well as your contracted license amount. The details workspace displays a breakdown of your metrics for each product within specific sandboxes."
+>abstract="The License usage dashboard offers insight into the Adobe Experience Platform products that you've purchased. The dashboard overview displays the primary metrics for your products including your usage for each of the primary metrics, and your contracted license amount. The details workspace displays a breakdown of your metrics for each product within specific sandboxes."
 
 You can view important information about your organization's license usage through the Adobe Experience Platform [!UICONTROL License usage] dashboard. Information displayed here is captured during a daily snapshot of your Platform instance. 
 
-License usage reports provide a high degree of granularity over your licence usage metrics. The dashboard provides usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metric from a specific sandbox. The following Experience Platform applications can be tracked with usage metrics: Real-Time Customer Data Profile, Adobe Journey Optimizer, and Customer Journey Analytics.
+License usage reports provide a high degree of granularity over your license usage metrics. The dashboard provides usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metric from a specific sandbox. The following Experience Platform applications can be tracked with usage metrics: Real-Time Customer Data Profile, Adobe Journey Optimizer, and Customer Journey Analytics.
 
 This guide outlines how to access and work with the license usage dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.  
 
@@ -47,13 +47,13 @@ This dashboard displays all of your licensed Adobe Experience Platform products,
 |---|---|
 | **[!UICONTROL Product]**  | The Adobe solution licensed by your organization. |
 | **[!UICONTROL Primary Metric]**  | The primary metric used for tracking within for that product.   |
-| **[!UICONTROL Licence Amount]**  | The contracted value for the maximum amount of the Primary Metric as agreed in your product license agreement.  |
+| **[!UICONTROL License Amount]**  | The contracted value for the maximum amount of the Primary Metric as agreed in your product license agreement.  |
 | **[!UICONTROL Usage]**  | The amount of your primary metric used. This value provides the total usage of that metric across all sandboxes, either production or development. |
 | **[!UICONTROL Usage %]**  | The percentage of your primary metric used according to your license amount. |
 
 >[!NOTE]
 >
->Additions to the [!UICONTROL Licence Amount] as a result of add-ons, are added on top of the [!UICONTROL Licence Amount] for the base products such as Real-Time Customer Data Profile, Adobe Journey Optimizer, and Customer Journey Analytics. The usage of that licensed amount (after the add-ons) is tracked through the base products. For example, if you buy one pack of five sandboxes, the quantity of five is added to that of the base product's. In this case, the add-on shows a [!UICONTROL Licence Amount] of one, and the usage for that add-on is "blank" as the usage is tracked through the base product.
+>Additions to the [!UICONTROL License Amount] as a result of add-ons, are added on top of the [!UICONTROL License Amount] for the base products such as Real-Time Customer Data Profile, Adobe Journey Optimizer, and Customer Journey Analytics. The usage of that licensed amount (after the add-ons) is tracked through the base products. For example, if you buy one pack of five sandboxes, the quantity of five is added to that of the base product's. In this case, the add-on shows a [!UICONTROL License Amount] of one, and the usage for that add-on is "blank" as the usage is tracked through the base product.
 
 The table indicates the primary metric for each product, as each product can track numerous metrics. To view more metrics and detailed insights on your product license usage, select a product name from the list. The [!UICONTROL Summary] view for that product appears.
 
@@ -75,7 +75,7 @@ Consumption reporting for sandboxes is cumulative for all sandboxes of the same 
 
 >[!WARNING]
 >
->Permission to view the license usage dashboard must be specified at a sandbox level. You must add permissions to each individual sandbox to view them within the dashboard. This limitation will be addressed in a future release. In the meantime, the following workaround is available:
+>Permission to view the license usage dashboard must be specified at a sandbox level. Add permissions to each individual sandbox to view them within the dashboard. This limitation will be addressed in a future release. In the meantime, the following workaround is available:
 >
 >1. Create a product profile in the Adobe Admin Console.
 >2. Under Permission in the Sandbox category, add all sandboxes you wish to view in the license usage dashboard.
@@ -129,7 +129,7 @@ The license usage dashboard reports on several unique metrics that are applicabl
 | [!UICONTROL Streaming Segmentation No of Packs] | The packs update segment membership for a person profile as new data enters the Segmentation Service through a streaming flow. Segment membership is evaluated based on the current person profile attributes and the value of the current event, without taking historical behavior into account. Streaming Segmentation is a shared feature. |
 | [!UICONTROL Consumer Audience] | The number of person profiles identified as "Consumer Audience" on the sales order. |
 | [!UICONTROL CJA Rows Available] | The daily average rows of data available for analysis within Customer Journey Analytics.  |
-| [!UICONTROL Profile Richness No of Packs] | An increase in your authorized Average Profile Richness by 25 kilobytes per profile for each Additional Profile Richness pack. |
+| [!UICONTROL Profile Richness No of Packs] | An increase in your authorized Average Profile Richness by 25 KB per profile for each Additional Profile Richness pack. |
 | [!UICONTROL Adhoc Query Service Users Packs]  | An add-on to increase your authorized concurrent Query Service Users entitlement by five additional concurrent Query Service users and one additional concurrently running ad hoc query per pack. Multiple additional Ad Hoc Query User packs may be licensed. |
 | [!UICONTROL Engageable audience] | This metric refers to the audience of engageable profiles. An engageable profile is a record of information representing an individual and is represented in the Profile Service. These records are profiles that you have attempted to engage with using Journey Optimizer's authoring, decisioning, delivery, experimentation, or orchestration capabilities during the past 12 months. |
 | [!UICONTROL Query Service Compute Hours] | A measure of the amount of time taken by the Query Service engines to read, process, and write data back into the data lake when a batch query is executed.  |
@@ -146,7 +146,7 @@ The availability of these metrics and the specific definition of each of these m
 |License|Product Description|
 |---|---|
 |<ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul>|[Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html)|
-|<ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul>|[Experience Platform, App Services and Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html)|
+|<ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul>|[Experience Platform, App Services, and Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html)|
 |<ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL TO 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL TO 50M</li></ul>|[Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html)|
 |<ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL TO 10M</li><li>AEP:OD ACTIVATION PRFL UP TO 50M</li></ul>|[Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html)|
 |<ul><li>AEP:OD INTELLIGENCE</li></ul>|[Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html)|
