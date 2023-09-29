@@ -81,6 +81,13 @@ After you have successfully connected to your LiveRamp account, enter the requir
 ![Platform UI image showing the destination details screen.l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)
 
 * **[!UICONTROL Name]**: Fill in the preferred name for your destination connection.
+
+>[!NOTE]
+>
+>When naming your destination, Adobe recommends to follow this format: `LiveRamp - Downstream Destination Name`. This naming pattern helps you quickly identify your destinations in the [Browse](../../ui/destinations-workspace.md#browse) tab of the destinations workspace.
+><br>
+>Example: `LiveRamp - Roku`.
+
 * **[!UICONTROL Description]**: Enter a description for your destination. Use a description which helps you easily identify the purpose of this destination.
 * **[!UICONTROL Destination]**: Use the drop-down menu to select the destination to which you want to activate audiences. The destination you select here directly affects what you see in the [destination-specific settings](#destination-settings) screen.
 * **[!UICONTROL Integration]**: Select the integration account that you want to use for your destination.
@@ -163,7 +170,7 @@ To configure details for the destination, fill in the fields below.
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="Advertiser data destination terms agreement"
 >abstract="Type in `I AGREE` to confirm the acknowledgment and agreement to the Disney advertiser data terms."
->additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement"
+>additional-url="<https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/>" text="Read the agreement"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_client"
