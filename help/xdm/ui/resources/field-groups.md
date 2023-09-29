@@ -40,6 +40,12 @@ The [!DNL Schema Editor] reappears, with the new field group listed in the left 
 
 ![](../../images/ui/resources/field-groups/field-group-added.png)
 
+## Filter field groups {#filter}
+
+The list of available field groups is pre-filtered based on how they were created. The default setting displays the field groups defined by Adobe. However, you can also filter the list to show those created by your organization. Select the radio button to choose between the [!UICONTROL Standard] and [!UICONTROL Custom] options. The [!UICONTROL Standard] option shows entities created by Adobe and the [!UICONTROL Custom] option displays entities created within your organization.
+
+![The [!UICONTROL Field groups] tab of the [!UICONTROL Schemas] workspace with [!UICONTROL Standard] and [!UICONTROL Custom] highlighted.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
+
 ## Edit an existing field group {#edit}
 
 >[!NOTE]
