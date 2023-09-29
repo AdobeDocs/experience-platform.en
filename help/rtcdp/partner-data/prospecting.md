@@ -35,6 +35,12 @@ Before you expand Real-Time CDP to engage and acquire new customers, make sure t
 5. As a **customer**, you activate prospect audiences to destinations which are accepting of the identities available in your prospect list.
 6. If needed, work with the **data partner** for last-mile activation of audiences to desired paid-media destinations.
  
+## Video walkthrough {#video-walkthrough}
+
+View the video tutorial below for a walkthrough of how to reach and engage prospect audiences:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
+
 ## How to achieve the use case: Step-by-step instructions {#step-by-step-instructions}
 
 Read through the sections below which include links to further documentation, to complete each of the steps in the high-level overview above.

@@ -118,6 +118,19 @@ In this case, your output file looks like below. Notice how the three elements o
 John,Doe,"Marketing_Sales_Finance"
 ```
 
+### `iif` function to export arrays {#iif-function-export-arrays}
+
+Use the `iif` function to export elements of an array under certain conditions. For example, continuing with the `organzations` array object from above, you can write a simple conditional function like `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
+
+![Mapping screenshot for the first and last functions](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+
+In this case, your output file looks like below. In this case, the first element of the array is Marketing, so the person is a member of the marketing department. 
+
+```
+`First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
+John,Doe, johndoe@acme.org, "isMarketing"
+```
+
 ### `coalesce` function to export arrays {#coalesce-function-export-arrays}
 
 Use the `coalesce` function to access and export the first non-null element of an array into a string.
@@ -182,14 +195,6 @@ In this case, your output file looks like:
 `Personal_Email,First_Purchase, Last_Purchase
 johndoe@acme.org,"1538097126","1664327526"
 ```
-
-<!--
-
-### `iif` function to export arrays {#iif-function-export-arrays}
-
-Here are some examples of how you could use the `iif` function to access and export arrays and other fields: (STILL TO DO)
-
--->
 
 ### `md5` and `sha256` hashing functions {#hashing-functions}
 
