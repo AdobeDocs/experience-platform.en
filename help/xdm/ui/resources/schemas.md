@@ -25,15 +25,25 @@ This guide requires a working understanding of XDM System. Refer to the [XDM ove
 >
 >This section covers how to manually create a new schema in the UI. If you are ingesting CSV data into Platform, you can opt to [map that data to an XDM schema created by AI-generated recommendations](../../../ingestion/tutorials/map-csv/recommendations.md) (currently in beta) without having to manually create the schema yourself.
 
-In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner. In the dropdown that appears, you can choose between **[!UICONTROL XDM Individual Profile]** and **[!UICONTROL XDM ExperienceEvent]** as the base class for the schema. Alternatively, you can select **[!UICONTROL Browse]** to select from the full list of available classes, or [create a new custom class](./classes.md#create) instead.
+In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in the top-right corner.
 
-![](../../images/ui/resources/schemas/create-schema.png)
+![The Schemas workspace with [!UICONTROL Create Schema] highlighted.](../../images/ui/resources/schemas/create-schema.png)
 
-Once you select a class, the [!DNL Schema Editor] appears and the schema's base structure (provided by the class) is shown in the canvas. From here, you can use the right rail to add a **[!UICONTROL Display name]** and **[!UICONTROL Description]** for the schema.
+The [!UICONTROL Create schema] workflow appears. You can choose a base class for the schema by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice. See the [XDM individual profile](../../classes/individual-profile.md) and [XDM ExperienceEvent](../../classes/experienceevent.md) documentation for more information on these classes.
 
-![](../../images/ui/resources/schemas/schema-details.png)
+![The [!UICONTROL Create schema] workflow with the three class options and [!UICONTROL Next] highlighted.](../../images/ui/resources/schemas/schema-class-options.png)
 
-You can now start building the structure of the schema by [adding schema field groups](#add-field-groups).
+After you have selected a class, the [!UICONTROL Name and review] section appears. In this section, you provide a name and description to identify your schema. ​The schema's base structure (provided by the class) is shown in the canvas for you to review and verify your selected class and schema structure.
+
+Enter a human-friendly [!UICONTROL Schema display name] in the text field. Next, enter a suitable description to help identify your schema. When you have reviewed your schema structure and are happy with your settings, select **[!UICONTROL Finish]** to create your schema. 
+
+![The [!UICONTROL Name and review] section of the [!UICONTROL Create schema] workflow with the [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/name-and-review.png)
+
+The [!UICONTROL Schema] [!UICONTROL Browse] tab appears. Your recently created schema is now available to edit in the the [!DNL Schema Editor] and appears in the list of available schemas.
+
+![The Schema Editor displaying your recently created schema.](../../images/ui/resources/schemas/schema-details.png)
+
+You can now start building the structure of the schema by [adding schema field groups](#add-field-groups) in the [!DNL Schema Editor].
 
 ## Edit an existing schema {#edit}
 
@@ -41,9 +51,9 @@ You can now start building the structure of the schema by [adding schema field g
 >
 >Once a schema has been saved and used in data ingestion, only additive changes can be made to it. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
 
-To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then select the name of the schema you want to edit.
+To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then select the name of the schema you want to edit. You can also use the search bar to narrow the list of available options.
 
-![](../../images/ui/resources/schemas/edit-schema.png)
+![The Schema workspace with a schema highlighted.](../../images/ui/resources/schemas/edit-schema.png)
 
 >[!TIP]
 >
@@ -75,11 +85,11 @@ Once you have opened a schema within the [!DNL Schema Editor], you can add field
 
 A dialog appears, showing a list of field groups that you can select for the schema. Since field groups are only compatible with one class, only those field groups that are associated with the schema's selected class will be listed. By default, listed field groups are sorted based on their usage popularity within your organization.
 
-![](../../images/ui/resources/schemas/field-group-popularity.png)
+![The [!UICONTROL Add field groups] dialog highlighted with the [!UICONTROL Popularity] column highlighted.](../../images/ui/resources/schemas/field-group-popularity.png)
 
 If you know the general activity or business area of the fields you want to add, select one or more of the industry-vertical categories in the left rail to filter the displayed list of field groups.
 
-![](../../images/ui/resources/schemas/industry-filter.png)
+![The [!UICONTROL Add field groups] dialog highlighted with the [!UICONTROL Industry] filters and the [!UICONTROL Industry] column highlighted.](../../images/ui/resources/schemas/industry-filter.png)
 
 >[!NOTE]
 >
@@ -87,11 +97,11 @@ If you know the general activity or business area of the fields you want to add,
 
 You can also use the search bar to help locate your desired field group. Field groups whose name matches the query appear at the top of the list. Under **[!UICONTROL Standard Fields]**, field groups containing fields that describe desired data attributes are displayed.
 
-![](../../images/ui/resources/schemas/field-group-search.png)
+![The [!UICONTROL Add field groups] dialog with the [!UICONTROL Standard fields] search function highlighted.](../../images/ui/resources/schemas/field-group-search.png)
 
 Select the checkbox next to the name of the field group that you wish to add to the schema. You can select multiple field groups from the list, with each selected field group appearing in the right rail.
 
-![](../../images/ui/resources/schemas/add-field-group.png)
+![The [!UICONTROL Add field groups] dialog with the checkbox selection feature highlighted.](../../images/ui/resources/schemas/add-field-group.png)
 
 >[!TIP]
 >
@@ -99,11 +109,11 @@ Select the checkbox next to the name of the field group that you wish to add to 
 
 Once you have chosen your field groups, select **[!UICONTROL Add field groups]** to add them to the schema.
 
-![](../../images/ui/resources/schemas/add-field-group-finish.png)
+![The [!UICONTROL Add field groups] dialog with field groups selected and [!UICONTROL Add field groups] highlighted.](../../images/ui/resources/schemas/add-field-group-finish.png)
 
 The [!DNL Schema Editor] reappears with the field-group-provided fields represented in the canvas.
 
-![](../../images/ui/resources/schemas/field-groups-added.png)
+![The [!DNL Schema Editor] with an example schema displayed.](../../images/ui/resources/schemas/field-groups-added.png)
 
 After adding a field group to a schema, you can optionally [remove existing fields](#remove-fields) or [add new custom fields](#add-fields) to those groups, depending on your needs.
 
@@ -117,15 +127,15 @@ After you have added a field group to a schema, you can remove any fields that y
 
 In the following example, the standard field group **[!UICONTROL Demographic Details]** has been added to a schema. To remove a single field such as `taxId`, select the field in the canvas and then select **[!UICONTROL Remove]** in the right rail.
 
-![Remove single field](../../images/ui/resources/schemas/remove-single-field.png)
+![The [!DNL Schema Editor] with [!UICONTROL Remove] highlighted. This action removes a single field.](../../images/ui/resources/schemas/remove-single-field.png)
 
 If there are multiple fields you wish to remove, you can manage the field group as a whole. Select a field belonging to the group in the canvas, then select **[!UICONTROL Manage related fields]** in the right rail.
 
-![Manage related fields](../../images/ui/resources/schemas/manage-related-fields.png)
+![The [!DNL Schema Editor] with [!UICONTROL Manage related fields] highlighted.](../../images/ui/resources/schemas/manage-related-fields.png)
 
 A dialog appears showing the structure of the field group in question. From here you can use the provided checkboxes to select or deselect the fields that you require. When you are satisfied, select **[!UICONTROL Confirm]**.
 
-![Select fields from field group](../../images/ui/resources/schemas/select-fields.png)
+![The [!UICONTROL Manage related fields] dialog with selected fields and [!UICONTROL Confirm] highlighted.](../../images/ui/resources/schemas/select-fields.png)
 
 The canvas reappears with only the selected fields present in the schema structure.
 

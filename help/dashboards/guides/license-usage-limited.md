@@ -8,6 +8,11 @@ hidefromtoc: true
 ---
 # License usage dashboard (limited release) {#license-usage-dashboard-limited-release}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage"
+>title="License usage dashboard"
+>abstract="The License usage dashboard offers insight into the Adobe Experience Platform products you've purchased. The dashboard overview displays the primary metrics for your products including your usage for each of the primary metrics, as well as your contracted license amount. The details workspace displays a breakdown of your metrics for each product within specific sandboxes."
+
 >[!IMPORTANT]
 >
 >The updated [!UICONTROL License usage] dashboard is currently available in a **limited release only** and is not available to all customers.
