@@ -63,7 +63,7 @@ The video below runs you through the particularities of the two types of destina
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
-## (Beta) Dataset export destinations {#dataset-export-destinations}
+## Dataset export destinations {#dataset-export-destinations}
 
 Some cloud storage destinations in the destinations catalog support dataset exports. Use these destinations to export raw datasets to cloud storage locations. 
 

@@ -38,9 +38,9 @@ Configure the schedule of your on-demand ingestion. Select the **[!UICONTROL Ing
 
 | Scheduling configuration | Description |
 | --- | --- |
-| [!UICONTROL Ingestion start time] | The scheduled start time in UTC of when the on-demand dataflow will start. |
-| [!UICONTROL Date range start time] | The starting date and time from which data will be pulled from. |
-| [!UICONTROL Date range end time] | The ending date and time from which data will be pulled until. |
+| [!UICONTROL Ingestion start time] | The scheduled time of when the on-demand flow run will begin. |
+| [!UICONTROL Date range start time] | The earliest date and time that data will be retrieved from. |
+| [!UICONTROL Date range end time] | The date and time that data will be retrieved up to. |
 
 Select **[!UICONTROL Schedule]** and allow a few moments for your on-demand dataflow to trigger.
 
