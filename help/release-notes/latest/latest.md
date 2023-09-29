@@ -49,11 +49,11 @@ Adobe Experience Platform provides multiple [!DNL dashboards] through which you 
 
 | Feature | Description |
 | --- | --- |
-| [Licence usage dashboard improvement](../../dashboards/guides/license-usage.md)  | Maintain control of your license agreements with improved reporting and key metric visualizations regarding your organization's license usage. These improvements provide a high degree of granularity over your license usage metrics for all the Experience Platform products that you have purchased. |
+| [License usage dashboard improvement](../../dashboards/guides/license-usage.md)  | Maintain control of your license agreements with improved reporting and key metric visualizations regarding your organization's license usage. These improvements provide a high degree of granularity over your license usage metrics for all the Experience Platform products that you have purchased. |
 
 {style="table-layout:auto"}
 
-To learn more about the license usage dashboard, see the [the license usage dashboard overview](../../dashboards/guides/destinations.md).
+To learn more about the license usage dashboard, see the [license usage dashboard overview](../../dashboards/guides/destinations.md).
 
 ## Data collection {#data-collection}
 
@@ -86,7 +86,7 @@ To learn more about data governance, read the [data governance overview](../../d
 
 ## Data hygiene {#hygiene}
 
-Experience Platform provides a suite of data hygiene capabilities that allow you manage your stored data through programmatic deletions of consumer records and datasets. Using either the [!UICONTROL Data Lifecycle] workspace in the UI or through calls to the Data Hygiene API, you can manage your data stores to ensure that information is used as expected, is updated when incorrect data needs fixing, and is deleted when organizational policies deem it necessary.
+Experience Platform provides a suite of data hygiene capabilities that allow you manage your stored data through programmatic deletions of consumer records and datasets. Using either the [!UICONTROL Data Lifecycle] workspace in the UI or through calls to the Data Hygiene API, you can effectively manage your data stores. Use these capabilities to ensure that information is used as expected, is updated when incorrect data needs fixing, and is deleted when organizational policies deem it necessary.
 
 **New features**
 
@@ -147,7 +147,7 @@ XDM is an open-source specification that provides common structures and definiti
 | Feature | Description |
 | --- | --- |
 | Quick actions added to Schema Editor  | New quick actions have been added to the canvas of the Schema editor. You can now copy the JSON structure or delete the schema directly from the editor.<br>![The quick actions in the Schema Editor.](../2023/assets/schema-editor-copy-json.png "The Schemas Editor with More and Copy to JSON highlighted."){width="100" zoomable="yes"}   |
-| Filter XDM resources by custom or standard creator | The lists of available schemas, field groups, data types and classes are now pre filtered based on their method of creation. This allows you to filter resources based on whether they were custom built or created by Adobe.<br>![The Standard and Custom filters in the Schemas workspace.](../2023/assets/standard-and-custom-classes.png "The Schemas workspace with the Standard and Custom filters highlighted."){width="100" zoomable="yes"} <br> See the [create and edit resources documentation](../../xdm/ui/resources/classes.md#filter.md) for more information. |
+| Filter XDM resources by custom or standard creator | The lists of available schemas, field groups, data types and classes are now pre-filtered based on their method of creation. This allows you to filter resources based on whether they were custom built or created by Adobe.<br>![The Standard and Custom filters in the Schemas workspace.](../2023/assets/standard-and-custom-classes.png "The Schemas workspace with the Standard and Custom filters highlighted."){width="100" zoomable="yes"} <br> See the [create and edit resources documentation](../../xdm/ui/resources/classes.md#filter.md) for more information. |
 
 **Updated features**
 
@@ -178,7 +178,7 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 
 | Feature | Description |
 | --- | --- |
-| Log filtering UI updates  | Improved query log filtering improves visibility for user generated logs for monitoring, administering and troubleshooting. You can filter the list of query logs based on a variety of settings. <br> ![The query log filter settings.](../2023/assets/log-filter-settings.png "New query log filters highlighted."){width="100" zoomable="yes"}  <br> See the [query logs documentation](../../query-service/ui/query-logs.md#filter-logs) for more information. |
+| Log filtering UI updates  | Improved query log filtering improves visibility for user-generated logs for monitoring, administering, and troubleshooting. You can filter the list of query logs based on a variety of settings. <br> ![The query log filter settings.](../2023/assets/log-filter-settings.png "New query log filters are highlighted."){width="100" zoomable="yes"}  <br> See the [query logs documentation](../../query-service/ui/query-logs.md#filter-logs) for more information. |
 | Multiple Query Editor UI updates  | You can now Execute multiple sequential queries in the Query Editor or write more than one query and execute all queries in a sequential manner. To add more flexibility to your query execution, you can highlight your chosen query and select that specific query to run independently from the others. See the [Query Editor UI guide](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries) for more information. |
 
 {style="table-layout:auto"}
