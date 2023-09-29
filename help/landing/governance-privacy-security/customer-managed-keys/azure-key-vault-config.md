@@ -66,4 +66,4 @@ The configured key appears in the list of keys for the vault.
 
 ## Next steps
 
-To continue the one-time process for setting up the customer-managed keys feature, continue with either the [API](./api-cmk-setup) or [UI](./ui-cmk-setup) customer-managed keys setup guides.
+To continue the one-time process for setting up the customer-managed keys feature, continue with either the [API](./api-set-up.md) or [UI](./ui-set-up.md) customer-managed keys setup guides.

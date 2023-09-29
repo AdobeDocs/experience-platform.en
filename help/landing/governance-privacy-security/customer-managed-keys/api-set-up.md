@@ -4,7 +4,7 @@ description: Learn how to set up your CMK app with your Azure tenant and send yo
 ---
 # Setup and configure customer-managed keys using the API
 
-This document covers the process for enabling the customer-managed keys (CMK) feature in Adobe Experience Platform using the API. For instructions on how to complete this process using the UI, refer to the [UI CMK setup document](./ui-cmk-setup.md).
+This document covers the process for enabling the customer-managed keys (CMK) feature in Adobe Experience Platform using the API. For instructions on how to complete this process using the UI, refer to the [UI CMK setup document](./ui-set-up.md).
 
 ## Prerequisites
 

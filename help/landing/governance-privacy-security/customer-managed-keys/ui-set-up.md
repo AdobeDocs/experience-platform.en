@@ -4,7 +4,7 @@ description: Learn how to set up your CMK app with your Azure tenant and send yo
 ---
 # Setup and configure customer-managed keys using the Platform UI
 
-This document covers the process for enabling the customer-managed keys (CMK) feature in Platform using the UI. For instructions on how to complete this process using the API, refer to the [API CMK setup document](./ui-cmk-setup.md).
+This document covers the process for enabling the customer-managed keys (CMK) feature in Platform using the UI. For instructions on how to complete this process using the API, refer to the [API CMK setup document](./api-set-up.md).
 
 ## Prerequisites
 

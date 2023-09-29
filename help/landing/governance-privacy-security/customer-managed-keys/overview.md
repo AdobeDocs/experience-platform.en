@@ -38,9 +38,9 @@ CMK is included in the Healthcare Shield and the Privacy and Security Shield off
 The process is as follows:
 
 1. [Configure an [!DNL Azure] Key Vault](./azure-key-vault-config.md) based on your organization's policies, then [generate an encryption key](./azure-key-vault-config.md#generate-a-key) that will ultimately be shared with Adobe.
-1. Set up the CMK app with your [!DNL Azure] tenant through either [API calls](./api-cmk-setup.md#register-app) or the [UI](./ui-cmk-setup.md#register-app). 
-1. Send your encryption key ID to Adobe and start the enablement process for the feature either [in the UI](./ui-cmk-setup.md#send-to-adobe) or with an [API call](./api-cmk-setup.md#send-to-adobe).
-1. Check the status of the configuration to verify whether CMK has been enabled either [in the UI](./ui-cmk-setup.md#check-status) or with an [API call](./api-cmk-setup.md#check-status).
+1. Set up the CMK app with your [!DNL Azure] tenant through either [API calls](./api-set-up.md#register-app) or the [UI](./ui-set-up.md#register-app). 
+1. Send your encryption key ID to Adobe and start the enablement process for the feature either [in the UI](./ui-set-up.md#send-to-adobe) or with an [API call](./api-set-up.md#send-to-adobe).
+1. Check the status of the configuration to verify whether CMK has been enabled either [in the UI](./ui-set-up.md#check-status) or with an [API call](./api-set-up.md#check-status).
 
 Once the setup process is complete, all data onboarded into Platform across all sandboxes will be encrypted using your [!DNL Azure] key setup. To use CMK, you will leverage [!DNL Microsoft Azure] functionality that may be part of their [public preview program](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
