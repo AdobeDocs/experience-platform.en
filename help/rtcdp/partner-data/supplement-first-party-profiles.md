@@ -25,6 +25,12 @@ As you consider supplementing your own first-party profiles with attributes from
 >
 >The additional partner-provided attributes ingested into Real-Time CDP impact your *average profile richness*. Read the [Real-Time Customer Data Platform Product Description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) for more information about profile richness.
 
+## Video walkthrough {#video-walkthrough}
+
+View the video tutorial below for a walkthrough of how to supplement first-party audiences with partner-provided attributes:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
+
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
 ![Enrich profiles with partner-provided attributes use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)

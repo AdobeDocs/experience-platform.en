@@ -44,6 +44,12 @@ To successfully implement this use case, you must use multiple areas of Real-Tim
   * [Edge Personalization destinations](/help/destinations/destination-types.md#edge-personalization-destinations)
   * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (or a personalization platform of your choice. This use case tutorial highlights Adobe Target as personalization engine)
 
+## Video walkthrough {#video-walkthrough}
+
+View the video tutorial below for a walkthrough of how personalize onsite experiences for unknown visitors:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
+
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
 ![An infographic that describes how to use partner-provided attributes to deliver personalized experiences to your visitors.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
