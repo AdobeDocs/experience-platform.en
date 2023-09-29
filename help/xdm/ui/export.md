@@ -197,7 +197,7 @@ This copies a JSON payload to your clipboard, generated based on the schema stru
 ]
 ```
 
-The Payload can also be copied by selecting [!UICONTROL More] in the top right of the Schema Editor. A dropdown menu provides two options, Copy to JSON and Delete.
+The Payload can also be copied by selecting [!UICONTROL More] in the top right of the Schema Editor. A dropdown menu provides two options, [!UICONTROL Copy JSON structure] and [!UICONTROL Delete schema].
 
 >[!NOTE]
 >
