@@ -21,7 +21,9 @@ While the Platform UI allows you export XDM resources, you must use the Schema R
 
 ## Generate an export payload {#generate-export-payload}
 
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. Within the [!UICONTROL Schemas] workspace, select the row for the schema you want to export to display schema details in the right sidebar.
+Export payloads can be generated in the Platform UI from the details panel in the [!UICONTROL Browse] tab or directly from the canvas of the schema in the Schema Editor. 
+
+To generate an export payload, select **[!UICONTROL Schemas]** in the left navigation. Within the [!UICONTROL Schemas] workspace, select the row for the schema you want to export to display schema details in the right sidebar.
 
 >[!TIP]
 >
@@ -194,6 +196,14 @@ This copies a JSON payload to your clipboard, generated based on the schema stru
   }
 ]
 ```
+
+The Payload can also be copied by selecting [!UICONTROL More] in the top right of the Schema Editor. A dropdown menu provides two options, [!UICONTROL Copy JSON structure] and [!UICONTROL Delete schema].
+
+>[!NOTE]
+>
+>A schema cannot be deleted when it is enabled for Profile or has associated datasets.
+
+![The Schemas Editor with [!UICONTROL More] and [!UICONTROL Copy to JSON] highlighted.](../images/ui/export/schema-editor-copy-json.png)
 
 The payload takes the form of an array, with each array item being an object that represents a custom XDM resource to be exported. In the example above, the "[!DNL Loyalty details]" custom field group and the "[!DNL Loyalty Members]" schema are included. Any core resources employed by the schema are not included in the export, as these resources are available in all sandboxes and organizations.
 
