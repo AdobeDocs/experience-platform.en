@@ -35,7 +35,7 @@ To navigate to the license usage dashboard within the Platform UI, select **[!UI
 
 >[!NOTE]
 >
->The license usage dashboard is not enabled by default. Users must be granted "[!UICONTROL View License Usage Dashboard]" permission to be able to view the dashboard. For steps on granting access permissions for viewing the license usage dashboard, refer to the [dashboard permissions guide](../permissions.md).
+>The license usage dashboard is not enabled by default. Users must be granted "View License Usage Dashboard" permission to be able to view the dashboard. For steps on granting access permissions for viewing the license usage dashboard, refer to the [dashboard permissions guide](../permissions.md).
 
 ![The License usage dashboard Overview tab, with License usage highlighted in the left navigation sidebar.](../images/license-usage/dashboard-overview.png)
 
@@ -53,13 +53,13 @@ This dashboard displays all of your licensed Adobe Experience Platform products,
 
 >[!NOTE]
 >
->Additions to the [!UICONTROL License Amount] as a result of add-ons, are added on top of the [!UICONTROL License Amount] for the base products such as Real-Time Customer Data Profile, Adobe Journey Optimizer, and Customer Journey Analytics. The usage of that licensed amount (after the add-ons) is tracked through the base products. For example, if you buy one pack of five sandboxes, the quantity of five is added to that of the base product's. In this case, the add-on shows a [!UICONTROL License Amount] of one, and the usage for that add-on is "blank" as the usage is tracked through the base product.
+>Additions to the [!UICONTROL License Amount] as a result of add-ons are added on top of the [!UICONTROL License Amount] for the base products such as Real-Time Customer Data Profile, Adobe Journey Optimizer, and Customer Journey Analytics. The usage of that licensed amount (after the add-ons) is tracked through the base products. For example, if you buy one pack of five sandboxes, the quantity of five is added to that of the base product's. In this case, the add-on shows a [!UICONTROL License Amount] of one, and the usage for that add-on is "blank" as the usage is tracked through the base product.
 
-The table indicates the primary metric for each product, as each product can track numerous metrics. To view more metrics and detailed insights on your product license usage, select a product name from the list. The [!UICONTROL Summary] view for that product appears.
+The table indicates the primary metric for each product, as each product can track numerous metrics.
 
 ## [!UICONTROL Summary] tab {#summary-tab}
 
-All available metrics are displayed on the [!UICONTROL Summary] tab. The metrics available depend on the licensed product. This view provides **a consolidated view of all metrics across all production or development sandboxes**. The same level of analysis is provided for both production and development sandboxes. 
+To view more metrics and detailed insights on your product license usage, select a product name from the list. The [!UICONTROL Summary] view for that product appears. All available metrics are displayed on the [!UICONTROL Summary] tab. The metrics available depend on the licensed product. This view provides **a consolidated view of all metrics across all production or development sandboxes**. The same level of analysis is provided for both production and development sandboxes. 
 
 ![The summary view of a Platform Product that displays all available metrics for that product.](../images/license-usage/summary-tab.png)
 
