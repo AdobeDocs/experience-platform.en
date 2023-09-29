@@ -38,6 +38,7 @@ feature: Destinations
         * [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
         * [(Beta) Export datasets using the Experience Platform UI](./ui/export-datasets.md)
         * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
+        * [Export array fields to cloud storage destinations](/help/destinations/ui/export-arrays-calculated-fields.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Delete destination accounts](./ui/delete-destination-account.md)
@@ -118,6 +119,7 @@ feature: Destinations
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
         * [IP address allowlist for SFTP destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Customer Relationship Management (CRM) destinations {#crm}
+        * [Hubspot connection](./catalog/crm/hubspot.md)
         * [Salesforce CRM connection](./catalog/crm/salesforce.md)
         * [Microsoft Dynamics 365 connection](./catalog/crm/microsoft-dynamics-365.md)
         * [Outreach connection](catalog/crm/outreach.md)
