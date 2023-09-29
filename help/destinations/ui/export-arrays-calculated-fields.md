@@ -1,7 +1,7 @@
 ---
-title: (Beta) Use calculated fields to export arrays in flat files 
+title: (Beta) Use calculated fields to export arrays in flat schema files 
 type: Tutorial
-description: Learn how to export arrays and calculated fields from Real-Time CDP to batch profile-based destinations.
+description: Learn how to use calculated fields to export arrays in flat schema files from Real-Time CDP to cloud storage destinations.
 badge: "Beta"
 ---
 
@@ -11,15 +11,8 @@ badge: "Beta"
 >id="platform_destinations_export_arrays_flat_files"
 >title="(Beta) Export arrays support"
 >abstract="Export simple arrays of int, string, or boolean values from Experience Platform to your desired cloud storage destination. Some limitations apply. View the documentation for extensive examples and supported functions."
-
-<!--
-
-additional links for contextualhelp:
-
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Examples"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Known limitations"
-
--->
 
 >[!AVAILABILITY]
 >
