@@ -25,7 +25,7 @@ After you have your key vault configured, the next step is to register for the C
 
 ### Getting started
 
-Registering the CMK app requires you to make calls to Platform APIs. For details on how to gather the required authentication headers to make these calls, see the [Platform API authentication guide](../../landing/api-authentication.md).
+Registering the CMK app requires you to make calls to Platform APIs. For details on how to gather the required authentication headers to make these calls, see the [Platform API authentication guide](../../api-authentication.md).
 
 While the authentication guide provides instructions on how to generate your own unique value for the required `x-api-key` request header, all API operations in this guide use the static value `acp_provisioning` instead. You must still provide your own values for `{ACCESS_TOKEN}` and `{ORG_ID}`, however.
 
@@ -61,17 +61,17 @@ A successful response returns an `applicationRedirectUrl` property, containing t
 
 Copy and paste the `applicationRedirectUrl` address into a browser to open an authentication dialog. Select **[!DNL Accept]** to add the CMK app service principal to your [!DNL Azure] tenant.
 
-![A Microsoft permission request dialog with [!UICONTROL Accept] highlighted.](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
+![A Microsoft permission request dialog with [!UICONTROL Accept] highlighted.](../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 ### Assign the CMK app to a role {#assign-to-role}
 
 After completing the authentication process, navigate back to your [!DNL Azure] Key Vault and select **[!DNL Access control]** in the left navigation. From here, select **[!DNL Add]** followed by **[!DNL Add role assignment]**.
 
-![The Microsoft Azure dashboard with [!DNL Add] and [!DNL Add role assignment] highlighted.](../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
+![The Microsoft Azure dashboard with [!DNL Add] and [!DNL Add role assignment] highlighted.](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 The next screen prompts you to choose a role for this assignment. Select **[!DNL Key Vault Crypto Service Encryption User]** before selecting **[!DNL Next]** to continue.
 
-![The Microsoft Azure dashboard with the [!DNL Key Vault Crypto Service Encryption User] highlighted.](../images/governance-privacy-security/customer-managed-keys/select-role.png)
+![The Microsoft Azure dashboard with the [!DNL Key Vault Crypto Service Encryption User] highlighted.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
 On the next screen, choose **[!DNL Select members]** to open a dialog in the right rail. Use the search bar to locate the service principal for the CMK application and select it from the list. When finished, select **[!DNL Save]**.
 
@@ -83,7 +83,7 @@ On the next screen, choose **[!DNL Select members]** to open a dialog in the rig
 
 After installing the CMK app on [!DNL Azure], you can send your encryption key identifier to Adobe. Select **[!DNL Keys]** in the left navigation, followed by the name of the key you want to send.
 
-![The Microsoft Azure dashboard with the [!DNL Keys] object and the key name highlighted.](../images/governance-privacy-security/customer-managed-keys/select-key.png)
+![The Microsoft Azure dashboard with the [!DNL Keys] object and the key name highlighted.](../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
 Select the latest version of the key and its details page appears. From here, you can optionally configure the permitted operations for the key.
 
@@ -93,7 +93,7 @@ Select the latest version of the key and its details page appears. From here, yo
 
 The **[!UICONTROL Key Identifier]** field displays the URI identifier for the key. Copy this URI value for use in the next step.
 
-![The Microsoft Azure dashboard Key details with the [!DNL Permitted operations] and the copy key URL sections highlighted.](../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
+![The Microsoft Azure dashboard Key details with the [!DNL Permitted operations] and the copy key URL sections highlighted.](../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
 Once you have obtained the key vault URI, you can send it using a POST request to the CMK configuration endpoint.
 
