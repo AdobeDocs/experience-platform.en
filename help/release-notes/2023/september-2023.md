@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The September 2023 release notes for Adobe Experience Platform.
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
@@ -13,11 +14,16 @@ New features in Adobe Experience Platform:
 Updates to existing features in Experience Platform:
 
 - [Alerts](#alerts)
+- [Dashboards](#dashboards)
 - [Data collection](#data-collection)
+- [Data governance](#data-governance)
+- [Data hygiene](#hygiene) 
 - [Destinations](#destinations)
+- [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
+- [Query Service](#query-service)
 - [Segmentation Service](#segmentation)
-- [Sources](#sources)
+- [Sources](#sources) 
 
 ## Computed attributes {#computed-attributes}
 
@@ -37,6 +43,18 @@ Experience Platform allows you to subscribe to event-based alerts for various Pl
 
 To learn more about alerts, please read the [[!DNL Observability Insights] overview](../../observability/home.md).
 
+## Dashboards {#dashboards}
+
+Adobe Experience Platform provides multiple [!DNL dashboards] through which you can view important information about your organization's data, as captured during daily snapshots.
+
+| Feature | Description |
+| --- | --- |
+| [Licence usage dashboard improvement](../../dashboards/guides/license-usage.md)  | Maintain control of your license agreements with improved reporting and key metric visualizations regarding your organization's license usage. These improvements provide a high degree of granularity over your license usage metrics for all the Experience Platform products that you have purchased. |
+
+{style="table-layout:auto"}
+
+To learn more about the license usage dashboard, see the [the license usage dashboard overview](../../dashboards/guides/destinations.md).
+
 ## Data collection {#data-collection}
 
 Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
@@ -51,6 +69,35 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 {style="table-layout:auto"}
 
 To learn more about data collection, please read the [data collection overview](../../tags/home.md).
+
+## Data Governance {#data-governance}
+
+Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
+
+**New features**
+
+| Feature | Description | 
+| --- | --- |
+| New Partner Ecosystem labels for third-party data | New data usage labels for third-party enrichment and prospecting are available. See the [documentation on Partner Ecosystem labels](../../data-governance/labels/reference.md#partner) for more information. |
+
+{style="table-layout:auto"}
+
+To learn more about data governance, read the [data governance overview](../../data-governance/home.md).
+
+## Data hygiene {#hygiene}
+
+Experience Platform provides a suite of data hygiene capabilities that allow you manage your stored data through programmatic deletions of consumer records and datasets. Using either the [!UICONTROL Data Lifecycle] workspace in the UI or through calls to the Data Hygiene API, you can manage your data stores to ensure that information is used as expected, is updated when incorrect data needs fixing, and is deleted when organizational policies deem it necessary.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} Record Delete (limited release) | Manage your data lifecycle across all data stores to meet customer commitments and license agreements with advanced data lifecycle management features in Adobe Experience Platform: Automated Dataset Expiration & Record Delete.<br>With automated dataset expiration, you can delete entire datasets and set a date and time for the dataset to be deleted.<br>Record Delete allows you to delete individual consumer profiles by targeting their primary identities. You can provide the primary identities individually through the UI or via CSV/JSON file upload. See the [Record Delete documentation](../../hygiene/ui/record-delete.md) for more information  |
+| Dataset expirations | Minimize your data and stay in control of your license agreements with Automated Dataset Expiration. Reduce data volumes by deleting entire datasets and set a date and time for the dataset to be deleted. See the [dataset expirations documentation](../../hygiene/ui/dataset-expiration.md) for more information. |
+
+{style="table-layout:auto"}
+
+For more information on Platform's data hygiene capabilities, refer to the [data hygiene overview](../../hygiene/home.md).
 
 ## Destinations {#destinations}
 
@@ -69,10 +116,10 @@ To learn more about data collection, please read the [data collection overview](
 
 <!-- 
 
+
 Add these to release notes as they go out
 
 | [[!DNL Qualtrics]] | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. | 
-
 
 -->
 
@@ -91,6 +138,23 @@ Add these to release notes as they go out
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
+## Experience Data Model (XDM) {#xdm}
+
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Quick actions added to Schema Editor  | New quick actions have been added to the canvas of the Schema editor. You can now copy the JSON structure or delete the schema directly from the editor.<br>![The quick actions in the Schema Editor.](../2023/assets/schema-editor-copy-json.png "The Schemas Editor with More and Copy to JSON highlighted."){width="100" zoomable="yes"}   |
+| Filter XDM resources by custom or standard creator | The lists of available schemas, field groups, data types and classes are now pre filtered based on their method of creation. This allows you to filter resources based on whether they were custom built or created by Adobe.<br>![The Standard and Custom filters in the Schemas workspace.](../2023/assets/standard-and-custom-classes.png "The Schemas workspace with the Standard and Custom filters highlighted."){width="100" zoomable="yes"} <br> See the [create and edit resources documentation](../../xdm/ui/resources/classes.md#filter.md) for more information. |
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+|  Updated schema creation workflow  | A new schema creation workflow has been implemented to streamline the process. <br> ![The new schema creation UI.](../2023/assets/schema-class-options.png "New schema details selector highlighted."){width="100" zoomable="yes"} <br> See the [schema creation documentation](../../xdm/ui/resources/schemas.md#create) for more information.  |
+
 ## Identity Service {#identity-service}
 
 Adobe Experience Platform Identity Service provides you with a comprehensive view of your customers and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
@@ -105,6 +169,21 @@ Adobe Experience Platform Identity Service provides you with a comprehensive vie
 {style="table-layout:auto"}
 
 To learn more about Identity Service, please read the [Identity Service overview](../../identity-service/home.md).
+
+## Query Service {#query-service}
+
+Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-Time Customer Profile.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| Log filtering UI updates  | Improved query log filtering improves visibility for user generated logs for monitoring, administering and troubleshooting. You can filter the list of query logs based on a variety of settings. <br> ![The query log filter settings.](../2023/assets/log-filter-settings.png "New query log filters highlighted."){width="100" zoomable="yes"}  <br> See the [query logs documentation](../../query-service/ui/query-logs.md#filter-logs) for more information. |
+| Multiple Query Editor UI updates  | You can now Execute multiple sequential queries in the Query Editor or write more than one query and execute all queries in a sequential manner. To add more flexibility to your query execution, you can highlight your chosen query and select that specific query to run independently from the others. See the [Query Editor UI guide](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries) for more information. |
+
+{style="table-layout:auto"}
+
+For more information on Query Services, refer to the [Query Service overview](../../query-service/home.md).
 
 ## Segmentation Service {#segmentation}
 
