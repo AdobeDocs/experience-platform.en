@@ -5,6 +5,10 @@ description: Learn how to create, view, and update computed attributes using the
 
 # Computed attributes UI guide
 
+>[!NOTE]
+>
+>To get access to computed attributes, you'll need to have the appropriate permissions (**View Computed attributes** and **Manage Computed attributes**). For more information on the permissions required, please read the [access control documentation](../../access-control/home.md). To learn how to apply these permissions, please read the [managing permissions guide](../../access-control/ui/permissions.md).
+
 In Adobe Experience Platform, computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 
 This document provides a guide on how to create and update computed attributes using the Adobe Experience Platform UI.

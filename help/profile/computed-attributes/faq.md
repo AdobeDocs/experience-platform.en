@@ -7,6 +7,10 @@ description: Find out answers to frequently asked questions about using computed
 
 In Adobe Experience Platform, computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. The following is a list of frequently asked questions regarding computed attributes.
 
+## How do I get access to computed attributes?
+
+To get access to computed attributes, you'll need to have the appropriate permissions (**View Computed attributes** and **Manage Computed attributes**). For more information on the permissions required, please read the [access control documentation](../../access-control/home.md). To learn how to apply these permissions, please read the [managing permissions guide](../../access-control/ui/permissions.md).
+
 ## Which datasets contribute towards computed attribute calculations?
 
 Computed attributes considers Real-Time Customer Profile-enabled Experience Event datasets for calculating computed attributes.
@@ -70,10 +74,6 @@ Like any other profile attribute, computed attributes are available and can be u
 ## How are data usage labels applied on computed attributes?
 
 Computed attributes automatically derives data usage labels from the source fields and datasets that were used to define the computed attributes. This ensures that your behavioral data is appropriately used.
-
-## How do I get access computed attributes?
-
-To get access computed attributes, you'll need to have the appropriate permissions. For more information on the permissions required, please read the [access control documentation](../../access-control/home.md).
 
 ## How do I use computed attributes with Adobe Journey Optimizer?
 
