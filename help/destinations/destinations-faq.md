@@ -67,7 +67,9 @@ See the table below for a feature comparison between the Experience Cloud Audien
 | **Supported audiences** | All types of audiences  | Edge merge policy required for activation.|
 
 +++
-  -->
+
+-->
+
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 ### What do I need to do before I can activate audiences in [!DNL Facebook Custom Audiences]?
@@ -77,6 +79,7 @@ Before you can send your audiences to [!DNL Facebook], make sure you meet the fo
 
 * Your [!DNL Facebook] user account must have the **[!DNL Manage campaigns]** permission enabled for the Ad account that you plan to use.
 * The **Adobe Experience Cloud** business account must be added as an advertising partner in your [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. See [Add Partners to Your Business Manager](https://www.facebook.com/business/help/1717412048538897) in the Facebook documentation for details.
+    
     >[!IMPORTANT]
     >
     > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. This is required for the [!DNL Adobe Experience Platform] integration.
