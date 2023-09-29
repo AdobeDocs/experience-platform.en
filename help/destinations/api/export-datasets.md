@@ -1,23 +1,27 @@
 ---
 solution: Experience Platform
-title: (Beta) Export datasets by using the Flow Service API
+title: Export datasets by using the Flow Service API
 description: Learn how to use the Flow Service API to export datasets to select destinations.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 ---
-# (Beta) Export datasets by using the [!DNL Flow Service API]
+# Export datasets by using the [!DNL Flow Service API]
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->* The functionality to export datasets is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
->* This beta functionality supports the export of first generation data, as defined in the Real-Time Customer Data Platform [product description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
->* This functionality is available to customers who have purchased the Real-Time CDP Prime or Ultimate package. Contact your Adobe representative for more information. 
+>* This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package, Adobe Journey Optimizer, or Customer Journey Analytics. Contact your Adobe representative for more information.
 
 This article explains the workflow required to use the [!DNL Flow Service API] to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage].
 
 >[!TIP]
 >
 >You can also use the Experience Platform user interface to export datasets. Read the [export datasets UI tutorial](/help/destinations/ui/export-datasets.md) for more information.
+
+## Datasets available for exporting {#datasets-to-export}
+
+The datasets that you can export depend on the Experience Platform application (Real-Time CDP, Adobe Journey Optimizer), the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller). 
+
+Refer to the [table on the UI tutorial page](/help/destinations/ui/export-datasets.md#datasets-to-export) to understand which datasets you can export.
 
 ## Supported destinations {#supported-destinations}
 
@@ -1603,7 +1607,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Amazon S3 Beta Target Connection",
+    "name": "Amazon S3 Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -1657,7 +1661,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Azure Blob Storage Beta Target Connection",
+    "name": "Azure Blob Storage Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
