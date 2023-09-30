@@ -1,6 +1,7 @@
 ---
 title: XDM Individual Prospect Profile Class
 description: This document provides an overview of the XDM Individual Prospect Profile class in Experience Data Model (XDM).
+exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
 ---
 # [!UICONTROL XDM Individual Prospect Profile] class 
 

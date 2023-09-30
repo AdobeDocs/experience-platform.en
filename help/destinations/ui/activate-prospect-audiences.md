@@ -1,10 +1,9 @@
 ---
-
 title: Activate prospect audiences to destinations
 type: Tutorial
 description: Learn how to activate prospect audiences to destinations
+exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
 ---
-
 # Activate prospect audiences
 
 >[!AVAILABILITY]

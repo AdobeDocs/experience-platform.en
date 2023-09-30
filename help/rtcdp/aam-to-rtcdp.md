@@ -1,8 +1,8 @@
 ---
 title: Evolution from Audience Manager to Real-Time CDP
 description: Understand the considerations before planning your migration from Audience Manager to Real-Time CDP.
+exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
 ---
-
 # Evolution from Audience Manager to Real-Time CDP
 
 As your organization evolves to use Adobe Real-Time CDP, explore these considerations to prepare your data and to become aware of critical differences between the two technologies. This article is aimed at a practitioner audience.
@@ -45,4 +45,4 @@ Real-Time CDP currently supports more than 60 destinations natively in the [cata
 
 ## Next steps
 
-After reading this page, you now have a first set of considerations to work through as you start your evolution from Audience Manager to Real-Time CDP. 
+After reading this page, you now have a first set of considerations to work through as you start your evolution from Audience Manager to Real-Time CDP.

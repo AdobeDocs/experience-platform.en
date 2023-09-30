@@ -3,8 +3,8 @@ solution: Experience Platform
 title: Discover the right playbook
 description: Learn how to discover the right playbook for your use case enable playbooks.
 badgeBeta: label="Beta" type="Informative"
+exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 ---
-
 # (Beta) Discover the right playbook
 
 >[!AVAILABILITY]

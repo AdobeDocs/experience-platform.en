@@ -3,6 +3,7 @@ title: Delete Records
 description: Learn how to delete records in the Adobe Experience Platform UI.
 hide: true
 hidefromtoc: true
+exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 ---
 # [!BADGE Beta]{type=Informative} Delete records {#record-delete} 
  

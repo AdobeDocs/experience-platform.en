@@ -1,6 +1,7 @@
 ---
 title: Set up and Configure Customer-Managed Keys using the Platform UI
 description: Learn how to set up your CMK app with your Azure tenant and send your encryption key ID to Adobe Experience Platform.
+exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
 ---
 # Setup and configure customer-managed keys using the Platform UI
 
@@ -106,4 +107,4 @@ There are four potential statuses of the CMK configuration. They are as follows:
 
 ## Next steps
 
-By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault. 
+By completing the above steps, you have successfully enabled CMK for your organization. Data that is ingested into primary data stores will now be encrypted and decrypted using the key(s) in your [!DNL Azure] Key Vault.

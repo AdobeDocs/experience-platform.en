@@ -2,6 +2,7 @@
 title: Adobe Commerce Source Connector
 description: Learn how to use the Adobe Commerce source to bring your commerce data to Experience Platform.
 last-substantial-update: 2023-06-21
+exl-id: 8313e3d5-5c3d-448c-883c-b9386dbbb2f5
 ---
 # Adobe Commerce
 

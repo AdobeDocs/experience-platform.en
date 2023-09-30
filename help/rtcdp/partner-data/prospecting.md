@@ -1,6 +1,7 @@
 ---
 title: Engage and acquire new customers through prospecting use cases
 description: Learn how to engage and acquire new customers through prospecting use cases, enabled by the partner data support in Real-Time CDP.
+exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 ---
 # Engage and acquire new customers through prospecting use cases
 

@@ -1,9 +1,9 @@
 ---
 title: Prospect Profiles
-description: Learn how to create and use prospect profiles to gather information about unknown customers using third-party information. 
+description: Learn how to create and use prospect profiles to gather information about unknown customers using third-party information.
 type: Documentation
+exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
 ---
-
 # Prospect profiles
 
 Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. 

@@ -4,6 +4,7 @@ description: Learn how to create a source connection and dataflow to ingest stre
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25
+exl-id: ed937689-e844-487e-85fb-e3536c851fe5
 ---
 # [!DNL Snowflake] streaming source
 
@@ -76,4 +77,3 @@ For more information on role and privilege management, refer to the [[!DNL Snowf
 The following tutorial provides steps on how to connect your [!DNL Snowflake] streaming source to Experience Platform using the API:
 
 * [Stream data from a [!DNL Snowflake] database to Experience Platform using the Flow Service API](../../tutorials/api/create/databases/snowflake-streaming.md)
-

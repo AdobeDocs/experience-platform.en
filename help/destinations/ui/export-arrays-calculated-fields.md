@@ -1,10 +1,10 @@
 ---
-title: (Beta) Use calculated fields to export arrays in flat schema files 
+title: (Beta) Use calculated fields to export arrays in flat schema files
 type: Tutorial
 description: Learn how to use calculated fields to export arrays in flat schema files from Real-Time CDP to cloud storage destinations.
-badge: "Beta"
+badge: Beta
+exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 ---
-
 # (Beta) Use calculated fields to export arrays in flat schema files {#use-calculated-fields-to-export-arrays-in-flat-schema-files} 
 
 >[!CONTEXTUALHELP]
@@ -201,6 +201,3 @@ johndoe@acme.org,"1538097126","1664327526"
 In addition to the functions specific for exporting arrays or elements from an array, you can use hashing functions to hash attributes. For example, if you have any personally identifiable information in attributes, you can hash those fields when exporting them. 
 
 You can hash string values directly, for example `md5(personalEmail.address)`. If desired, you can also hash individual elements of array fields, like this: `md5(purchaseTime[0])`
-
-
-

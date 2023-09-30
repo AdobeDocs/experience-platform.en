@@ -1,6 +1,7 @@
 ---
 title: Configure an Azure Key Vault
 description: Learn how to create a new enterprise account with Azure, or use an existing enterprise account and create the Key Vault.
+exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
 ---
 # Configure an [!DNL Azure] Key Vault
 

@@ -1,8 +1,8 @@
 ---
 title: LiveRamp - Distribution Connection
 description: Learn how to use the LiveRamp - Distribution connector to orchestrate and activate audiences previously onboarded into LiveRamp, to downstream advertising destinations.
+exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
 ---
-
 # [!DNL LiveRamp - Distribution] connection
 
 The [!DNL LiveRamp - Distribution] connection enables you to activate audiences from Experience Platform to premium publishers across mobile, web, display, and connected TV mediums.

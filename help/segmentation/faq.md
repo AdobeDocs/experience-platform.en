@@ -1,8 +1,8 @@
 ---
 title: Audiences Frequently Asked Questions
 description: Find out answers to frequently asked questions about audiences and other segmentation related concepts.
+exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
 ---
-
 # Frequently asked questions
 
 Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on Platform, and are readily accessible by any Adobe solution. The following is a list of frequently asked questions regarding audiences and segmentation.

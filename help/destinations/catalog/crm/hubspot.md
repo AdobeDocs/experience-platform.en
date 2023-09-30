@@ -2,8 +2,8 @@
 title: HubSpot connection
 description: The HubSpot destination allows you to manage contact records in your HubSpot account.
 last-substantial-update: 2023-09-28
+exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
 ---
-
 # [!DNL HubSpot] connection
 
 [[!DNL HubSpot]](https://www.hubspot.com) is a CRM platform with all the software, integrations, and resources you need to connect marketing, sales, content management, and customer service. It allows you to connect your data, teams, and customers on one CRM platform.

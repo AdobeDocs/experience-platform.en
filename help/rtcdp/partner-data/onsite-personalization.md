@@ -1,6 +1,7 @@
 ---
 title: Use Partner-Aided Visitor Recognition to Personalize Onsite Experiences
 description: Learn how to use partner-aided visitor recognition to deliver personalized onsite experiences to your visitors.
+exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
 ---
 # Use partner-aided visitor recognition to personalize onsite experiences
 
