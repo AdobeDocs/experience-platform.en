@@ -134,7 +134,7 @@ At this point in time, no. However, this capability should be available in the n
 
 ### Can I send audiences from Audience Composition to all downstream destinations and channels?
 
-At this point in time, no. Currently, you can use audiences from Audience Composition in Adobe Journey Optimizer Campaigns and Real-time CDP destinations. Adobe Journey Optimizer Journeys will be supported in a future release.
+At this point in time, no. Currently, you can use audiences from Audience Composition in Adobe Journey Optimizer Campaigns and Real-Time CDP destinations. Adobe Journey Optimizer Journeys will be supported in a future release.
 
 ### Are there any guardrails on the number of compositions?
 

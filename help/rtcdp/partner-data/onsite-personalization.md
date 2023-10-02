@@ -7,7 +7,7 @@ exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
 
 >[!AVAILABILITY]
 >
->This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
+>This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
 
 Learn how to use partner-aided recognition to deliver personalized experiences to your web property visitors. Use this tutorial to understand the implementation sequence of various elements in Experience Platform and other Experience Cloud solutions to display a personalized experience to authenticated and unauthenticated visitors.
 
