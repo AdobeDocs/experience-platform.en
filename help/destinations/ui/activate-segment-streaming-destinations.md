@@ -87,9 +87,9 @@ Some audience streaming destinations require you to select source attributes or 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Apply transformation"
->abstract="Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
+>abstract="Select this option when mapping unhashed source fields such as attributes to target attributes that the destination expects to be hashed, to have Adobe Experience Platform automatically hash them on activation."
 
-When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have Adobe Experience Platform automatically hash the source attributes on activation.
+When you map unhashed source attributes (for example `personalEmail.address`) to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **[!UICONTROL Apply transformation]** option to have Adobe Experience Platform automatically hash the source attributes on activation. The **[!UICONTROL Apply transformation]** option is not displayed when you choose identity namespaces as source fields, as these are hashed by default.
 
 ![Identity mapping](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
