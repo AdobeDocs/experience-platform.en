@@ -10,7 +10,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="(Beta) Export arrays support"
->abstract="Export simple arrays of int, string, or boolean values from Experience Platform to your desired cloud storage destination. Some limitations apply. View the documentation for extensive examples and supported functions."
+>abstract="Use the **Add calculated field** control to export simple arrays of int, string, or boolean values from Experience Platform to your desired cloud storage destination. Some limitations apply. View the documentation for extensive examples and supported functions."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Examples"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Known limitations"
 
@@ -18,12 +18,12 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 >
 >* The functionality to export arrays through calculated fields is currently in Beta. The documentation and the functionality are subject to change.
 
-Learn how to export arrays through calculated fields from Real-Time CDP in flat schema files to cloud storage destinations. Read this document to understand the use cases enabled by this functionality.
+Learn how to export arrays through calculated fields from Real-Time CDP in flat schema files to [cloud storage destinations](/help/destinations/catalog/cloud-storage/overview.md). Read this document to understand the use cases enabled by this functionality.
 
 Get extensive information about calculated fields - what these are and why they matter. Read the pages linked below for an introduction to calculated fields in Data Prep and more information about all the available functions: 
 
 * [UI guide and overview](/help/data-prep/ui/mapping.md#calculated-fields)
-* [Data prep functions](/help/data-prep/functions.md)
+* [Data Prep functions](/help/data-prep/functions.md)
 
 >[!IMPORTANT]
 >
@@ -44,13 +44,13 @@ Note the following known limitations for the beta release of this functionality:
 
 ## Prerequisites {#prerequisites}
 
-Progress through the [activation steps for cloud storage destinations](/help/destinations/ui/activate-batch-profile-destinations.md) and get to the [mapping](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) step. 
+[Connect](/help/destinations/ui/connect-destination.md) to a desired cloud storage destination, progress through the [activation steps for cloud storage destinations](/help/destinations/ui/activate-batch-profile-destinations.md) and get to the [mapping](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) step. 
 
 ## How to export calculated fields {#how-to-export-calculated-fields}
 
 In the mapping step of the activation workflow for cloud storage destinations, select **[!UICONTROL (Beta) Add calculated field]**.
 
-![Add calculated field to export](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
+![Add calculated field highlighted in the mapping step of the batch activation workflow.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
 This opens a modal window where you can select attributes that you can use to export attributes out of Experience Platform.
 
@@ -58,25 +58,25 @@ This opens a modal window where you can select attributes that you can use to ex
 >
 >Only some of the fields from your XDM schema are available in the **[!UICONTROL Field]** view. You can see string values and arrays of string, int, and boolean values. For example, the `segmentMembership` array is not displayed, as it includes other array values.
 
-![Modal window 1](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
+![Modal window of the calculated field functionality with no function selected yet.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
 For example, use the `join` function on the `loyaltyID` field as shown below to export an array of loyalty IDs as a string concatenated with an underscore in a CSV file. View [more information about this and other examples further below](#join-function-export-arrays). 
 
-![Modal window 2](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+![Modal window of the calculated field functionality with the join function selected.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
 Select **[!UICONTROL Save]** to keep the calculated field and return to the mapping step.
 
-![Modal window 3](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+![Modal window of the calculated field functionality with the join function selected and the Save control highlighted.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
 Back in the mapping step of the workflow, fill in the **[!UICONTROL Target field]** with a value of the column header you want for this field in the exported files.
 
-![Select target field 1](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+![Mapping step with the target field highlighted.](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
 ![Select target field 2](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
 When ready, select **[!UICONTROL Next]** to proceed to the next step of the activation workflow.
 
-![Select next to proceed](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
+![Mapping step with the target field highlighted and a target value filled in.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
 ## Supported functions {#supported-functions}
 
@@ -109,20 +109,20 @@ For example, you can combine the following XDM fields below as shown in the mapp
 * `person.name.lastName` string
 * `personalEmail.address` string
 
-![Mapping screenshot](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
+![Mapping example including the join function.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
 
 In this case, your output file looks like below. Notice how the three elements of the array are concatenated into a single string using the `_` character.
 
 ```
-`First_Name,Last_Name,Organization
-John,Doe,"Marketing_Sales_Finance"
+`First_Name,Last_Name,Personal_Email,Organization
+John,Doe,johndoe@acme.org, "Marketing_Sales_Finance"
 ```
 
 ### `iif` function to export arrays {#iif-function-export-arrays}
 
-Use the `iif` function to export elements of an array under certain conditions. For example, continuing with the `organzations` array object from above, you can write a simple conditional function like `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
+Use the `iif` function to export elements of an array under certain conditions. For example, continuing with the `organizations` array object from above, you can write a simple conditional function like `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
 
-![Mapping screenshot for the first and last functions](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+![Mapping example including the iif function.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
 
 In this case, your output file looks like below. In this case, the first element of the array is Marketing, so the person is a member of the marketing department. 
 
@@ -131,18 +131,33 @@ In this case, your output file looks like below. In this case, the first element
 John,Doe, johndoe@acme.org, "isMarketing"
 ```
 
+### `add_to_array` function to export arrays {#add-to-array-function-export-arrays}
+
+Use the `add_to_array` function to add elements to an exported array. You can combine this function with the `join` function described further above.
+
+Continuing with the `organizations` array object from above, you can write a function like `source: join('_', add_to_array(organizations,"2023"))`, returning the organizations that a person is a member of in the year 2023.
+
+![Mapping example including the add_to_array function.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
+
+In this case, your output file looks like below. Notice how the three elements of the array are concatenated into a single string using the `_` character and 2023 is also appended at the end of the string.
+
+```
+`First_Name,Last_Name,Personal_Email,Organization_Member_2023
+John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
+```
+
 ### `coalesce` function to export arrays {#coalesce-function-export-arrays}
 
 Use the `coalesce` function to access and export the first non-null element of an array into a string.
 
-For example, you can combine the following XDM fields below as shown in the mapping screenshot by using a `coalesce(subscriptions.hasPromotion)` syntax to return the first true of false value in the array:
+For example, you can combine the following XDM fields below as shown in the mapping screenshot by using a `coalesce(subscriptions.hasPromotion)` syntax to return the first `true` of `false` value in the array:
 
 * `"subscriptions.hasPromotion": [null, true, null, false, true]` array 
 * `person.name.firstName` string 
 * `person.name.lastName` string
 * `personalEmail.address` string
 
-![Mapping screenshot for coalesce function](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
+![Mapping example including the coalesce function.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
 
 In this case, your output file looks like below. Notice how the first non-null `true` value in the array is exported in the file.
 
@@ -150,7 +165,6 @@ In this case, your output file looks like below. Notice how the first non-null `
 First_Name,Last_Name,hasPromotion
 John,Doe,true
 ```
-
 
 ### `size_of` function to export arrays {#sizeof-function-export-arrays}
 
@@ -161,7 +175,7 @@ For example, you can combine the following XDM fields below as shown in the mapp
 * `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` array indicating five separate purchase times by the customer
 * `personalEmail.address` string
 
-![Mapping screenshot for size_of function](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
+![Mapping example including the size_of function.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
 
 In this case, your output file looks like below. Notice how the second column indicates the number of elements in the array, corresponding with the number of separate purchases made by the customer.
 
@@ -174,9 +188,9 @@ johndoe@acme.org,"5"
 
 You can access an index of an array to export a single item from the array. For example, similar to the example above for the `size_of` function, if you are looking to access and export only the first time that a customer has purchased a certain product, you can use `purchaseTime[0]` to export the first element of the timestamp, `purchaseTime[1]` to export the second element of the timestamp, `purchaseTime[2]` to export the third element of the timestamp, and so on.
 
-![Mapping screenshot for accessing index](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
+![Mapping example showing how an element of an array can be accessed.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
 
-In this case, your output file looks like:
+In this case, your output file looks like below, exporting the first time that the customer has made a purchase:
 
 ```
 `Personal_Email,First_Purchase
@@ -187,9 +201,9 @@ johndoe@acme.org,"1538097126"
 
 Use the `first` and `last` functions to export the first or last element in an array. For example, continuing with the `purchaseTime` array object with multiple timestamps from the previous examples, you can use these to functions to export the first or the last purchase time made by a person. 
 
-![Mapping screenshot for the first and last functions](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
+![Mapping example including the first and last functions.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
 
-In this case, your output file looks like:
+In this case, your output file looks like below, exporting the first and the last time that the customer has made a purchase:
 
 ```
 `Personal_Email,First_Purchase, Last_Purchase

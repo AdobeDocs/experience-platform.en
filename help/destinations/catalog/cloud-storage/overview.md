@@ -61,7 +61,7 @@ Folder path in your storage location: `acme/campaigns/2021/Luxury Audience/25768
 
 Cloud storage destinations support the following export types: 
 * **Profile-based export**. This means that you are exporting details about the individuals in the audience. These details are needed for personalization and can include attributes, events, audience memberships, and more.
-* [!BADGE Beta]{type=Informative} **Dataset export**. This functionality allows you to export entire datasets to cloud storage destinations. [Read more](/help/destinations/ui/export-datasets.md) about the functionality. 
+* **Dataset export**. This functionality allows you to export entire datasets to cloud storage destinations. [Read more](/help/destinations/ui/export-datasets.md) about the functionality. 
 
 ## Next steps {#next-steps}
 
