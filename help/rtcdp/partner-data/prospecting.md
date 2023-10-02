@@ -206,7 +206,7 @@ Make use of the prospect audiences by exporting them to destinations. Currently,
 
 ![Destinations which support prospect audiences.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
-[Read more](//help/destinations/ui/activate-prospect-audiences.md) about activating prospects to cloud storage destinations.
+[Read more](/help/destinations/ui/activate-prospect-audiences.md) about activating prospects to cloud storage destinations.
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 
