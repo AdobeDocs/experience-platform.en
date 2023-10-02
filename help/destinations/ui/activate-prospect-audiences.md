@@ -16,7 +16,7 @@ This article explains the workflow required to export [prospect audiences](/help
 
 Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab. Use the **[!UICONTROL Data types]** filter and select **[!UICONTROL Prospects]** to see the destinations which support the activation of prospect audiences. Currently, exporting prospect audiences is available only to cloud storage destinations.  
 
-![Destinations which support dataset exports](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![Destinations which support prospect audiences.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
 ## Prerequisites {#prerequisites}
 
