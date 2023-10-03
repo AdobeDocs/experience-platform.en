@@ -7,7 +7,7 @@ exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 
 >[!AVAILABILITY]
 >
->* This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
+>* This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
 
 Use third party data support in Real-Time CDP to expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers.
 
