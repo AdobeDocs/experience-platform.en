@@ -255,15 +255,11 @@ Data types allow for the consistent use of multi-field structures and provide mo
 
 To convert the `loyaltyTier` object to a data type, select the `loyaltyTier` field in the canvas, then select **[!UICONTROL Convert to new data type]** on the right side of the editor under **[!UICONTROL Field properties]**. 
 
-<!-- Could not update image below. Confirm that 'Convert to new data type' Is still an option. -->
-
-![](../images/tutorials/create-schema/convert-data-type.png)
+![The Schema Editor with the loyaltyTier object and [!UICONTROL Convert to new data type] highlighted.](../images/tutorials/create-schema/convert-data-type.png)
 
 A notification appears, confirming that the object has been successfully converted. In the canvas you can now see that the `loyaltyTier` field now has a link icon, and the right rail indicates it has a data type of "[!DNL Loyalty Tier]".
 
-<!-- Could not update image below -->
-
-![](../images/tutorials/create-schema/loyalty-tier-data-type.png)
+![The Schema Editor with the loyaltyTier object and the new display name highlighted.](../images/tutorials/create-schema/loyalty-tier-data-type.png)
 
 In a future schema, you could now assign a field as a "[!DNL Loyalty Tier]" type and it would automatically include fields for ID, tier class, point thresholds, and effective date.
 
