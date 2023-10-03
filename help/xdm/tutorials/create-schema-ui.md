@@ -247,8 +247,6 @@ When you have completed all field properties, select **[!UICONTROL Apply]** to a
 
 ![The enum and suggest values field properties completed with [!UICONTROL Apply] highlighted.](../images/tutorials/create-schema/tier-class-enum.png)
 
-<!-- Up to here completed -->
-
 ## Convert a multi-field object into a data type {#datatype}
 
 The `loyaltyTier` object now contains several fields and represents a common data structure that could be useful in other schemas. The [!DNL Schema Editor] allows you to readily apply reusable multi-field objects by converting the structure of those objects into data types. 
@@ -257,9 +255,13 @@ Data types allow for the consistent use of multi-field structures and provide mo
 
 To convert the `loyaltyTier` object to a data type, select the `loyaltyTier` field in the canvas, then select **[!UICONTROL Convert to new data type]** on the right side of the editor under **[!UICONTROL Field properties]**. 
 
+<!-- Could not update image below. Confirm that 'Convert to new data type' Is still an option. -->
+
 ![](../images/tutorials/create-schema/convert-data-type.png)
 
 A notification appears, confirming that the object has been successfully converted. In the canvas you can now see that the `loyaltyTier` field now has a link icon, and the right rail indicates it has a data type of "[!DNL Loyalty Tier]".
+
+<!-- Could not update image below -->
 
 ![](../images/tutorials/create-schema/loyalty-tier-data-type.png)
 
@@ -273,11 +275,11 @@ In a future schema, you could now assign a field as a "[!DNL Loyalty Tier]" type
 
 Your schema now contains several field groups in addition to the fields provided by its base class. When working with larger schemas, you can select the checkboxes next to field group names in the left rail to filter the displayed fields to only those provided by the field groups you are interested in.
 
-![](../images/tutorials/create-schema/filter-by-field-group.png)
+![Some checkboxes selected in the Field Groups section of the Schema Editor to reduce the size of the schema diagram.](../images/tutorials/create-schema/filter-by-field-group.png)
 
 If you are looking for a specific field in your schema, you can also use the search bar to filter displayed fields by name, regardless of which field group they are provided under.
 
-![](../images/tutorials/create-schema/search.png)
+![The search field of the Schema editor with the relevant results highlighted on the canvas.](../images/tutorials/create-schema/search.png)
 
 >[!IMPORTANT]
 >
@@ -305,7 +307,7 @@ Select the `personalEmail.address` field in the canvas, and the **[!UICONTROL Id
 
 Next, you must provide an **[!UICONTROL Identity namespace]** from the list of pre-defined namespaces in the dropdown. Since this field is the customer's email address, select "[!UICONTROL Email]" from the dropdown. Select **[!UICONTROL Apply]** to confirm the updates to the `personalEmail.address` field.
 
-![](../images/tutorials/create-schema/primary-identity.png)
+![The Schema Editor with the email address highlighted and the Primary identity checkbox enabled.](../images/tutorials/create-schema/primary-identity.png)
 
 >[!NOTE]
 >
@@ -313,7 +315,7 @@ Next, you must provide an **[!UICONTROL Identity namespace]** from the list of p
 
 After applying the change, the icon for `personalEmail.address` shows a fingerprint symbol, indicating that it is now an identity field. The field is also listed in the left rail under **[!UICONTROL Identities]**.
 
-![](../images/tutorials/create-schema/identity-applied.png)
+![The Schema Editor with the email address highlighted and the identity field highlighted in the schema composition sidebar.](../images/tutorials/create-schema/identity-applied.png)
 
 Now all data ingested into the `personalEmail.address` field will be used to help identify that individual and stitch together a single view of that customer. To learn more about working with identities in [!DNL Experience Platform], please review the [[!DNL Identity Service]](../../identity-service/home.md) documentation.
 
@@ -323,17 +325,17 @@ Now all data ingested into the `personalEmail.address` field will be used to hel
 
 In order for a schema to be enabled for use with [!DNL Real-Time Customer Profile], it must have a primary identity defined. You will receive an error message if you attempt to enable a schema without first defining a primary identity.
 
-![](../images/tutorials/create-schema/missing-primary-identity.png)
+![The Missing primary identity dialog.](../images/tutorials/create-schema/missing-primary-identity.png)
 
 To enable the "Loyalty Members" schema for use in [!DNL Profile], begin by selecting the schema title in the canvas.
 
 On the right side of the editor, information is shown about the schema including its display name, description, and type. In addition to this information, there is a **[!UICONTROL Profile]** toggle button.
 
-![](../images/tutorials/create-schema/profile-toggle.png)
+![The Schema Editor with the schema root and the Enable for Profile toggle highlighted.](../images/tutorials/create-schema/profile-toggle.png)
 
 Select **[!UICONTROL Profile]** and a popover appears, asking you to confirm that you wish to enable the schema for [!DNL Profile]. 
 
-![](../images/tutorials/create-schema/enable-profile.png)
+![The Enable for Profile confirmation dialog.](../images/tutorials/create-schema/enable-profile.png)
 
 >[!WARNING]
 >
@@ -343,11 +345,9 @@ Select **[!UICONTROL Enable]** to confirm your choice. You can select the **[!UI
 
 ## More actions
 
-Within the Schema Editor you can also conduct quick actions to Copy the JSON structure of teh Schema or delete the schema if it has not been enabled for Real-Time Customer Profile or has associated datasets. Select [!UICONTROL More] at the top of the view to display a drop down with quick actions. 
+Within the Schema Editor you can also conduct quick actions to copy the JSON structure of the schema or delete the schema if it has not been enabled for Real-Time Customer Profile or has associated datasets. Select [!UICONTROL More] at the top of the view to display a drop down with quick actions. 
 
-The Copy JSON structure feature allows you to copy the structure of your schema to your clipboard and ensure that your data is suitably shaped.
-
-<!-- Above sounds like nonsense -->
+The copy JSON structure feature allows you to copy the structure of your schema to your clipboard and ensure that your data is suitably shaped.
 
 ![The Schema Editor with the More button highlighted and the drop down options displayed.](../images/tutorials/create-schema/more-actions.png)
 
