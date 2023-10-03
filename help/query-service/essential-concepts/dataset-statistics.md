@@ -1,6 +1,7 @@
 ---
-title: Dataset Statistics Computation 
+title: Dataset Statistics Computation
 description: This document describes how to compute column-level statistics on Azure Data Lake Storage (ADLS) datasets with SQL commands.
+exl-id: 66f11cd4-b115-40b8-ba8a-c4bb3606bbbf
 ---
 # Dataset statistics computation
 

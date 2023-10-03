@@ -1,8 +1,8 @@
 ---
 description: Learn about the historical profile qualifications supported by destinations built with Destination SDK.
 title: Historical profile qualifications
+exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
 ---
-
 # Historical profile qualifications
 
 All destinations created through Destination SDK support historical profile qualifications by default. This means that when users first set up an activation dataflow to your destinations, the first export contains all members of the audience that have ever qualified for that segment.

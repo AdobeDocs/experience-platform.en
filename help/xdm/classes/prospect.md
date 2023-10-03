@@ -1,6 +1,7 @@
 ---
 title: XDM Individual Prospect Profile Class
 description: This document provides an overview of the XDM Individual Prospect Profile class in Experience Data Model (XDM).
+exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
 ---
 # [!UICONTROL XDM Individual Prospect Profile] class 
 
@@ -16,7 +17,7 @@ In Experience Data Model (XDM), the [!UICONTROL XDM Individual Prospect Profile]
 | `_id` | [!UICONTROL String] | A unique, system-generated string identifier for the record. This field is used to track the uniqueness of an individual record, prevent duplication of data, and to look up that record in downstream services.<br><br>Since this field is system-generated, it does not supply an explicit value during data ingestion. However, you can opt to supply your own unique ID values if you wish. |
 | `createdByBatchID` | [!UICONTROL String] | The ID of the ingested batch that caused the record to be created. |
 | `modifiedByBatchID` | [!UICONTROL String] | The ID of the last ingested batch that caused the record to be updated. |
-| `partnerID` | [!UICONTROL String] | Typically, a unique pseudonymous identifier which identifies an individual prospect. See the documentation on [identity types](../../identity-service/namespaces.md#identity-types) to learn more about the Partner ID and the other identity types that are available within Adobe Experience Platform. |
+| `partnerID` | [!UICONTROL String] | Typically, a unique pseudonymous identifier which identifies an individual prospect. See the documentation on [identity types](../../identity-service/namespaces.md#identity-type) to learn more about the Partner ID and the other identity types that are available within Adobe Experience Platform. |
 | `repositoryCreatedBy` | [!UICONTROL String] | The ID of the user who created the record. |
 | `repositoryLastModifiedBy` | [!UICONTROL String] | The ID of the user who last modified the record. When the record is created, the `modifiedByUser` value is set as the `createdByUser` value. |
 

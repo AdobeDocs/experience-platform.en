@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to retrieve a credential configuration through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to retrieve a credential configuration through Adobe Experience Platform Destination SDK.
 title: Retrieve a credential configuration
+exl-id: cec55073-6e2f-4412-a9dd-1aeb445279c0
 ---
-
 # Retrieve a credential configuration
 
 >[!IMPORTANT]
