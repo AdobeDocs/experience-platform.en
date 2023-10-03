@@ -343,7 +343,7 @@ Select **[!UICONTROL Enable]** to confirm your choice. You can select the **[!UI
 
 Within the Schema Editor you can also conduct quick actions to copy the JSON structure of the schema or delete the schema if it has not been enabled for Real-Time Customer Profile or has associated datasets. Select [!UICONTROL More] at the top of the view to display a drop down with quick actions. 
 
-The copy JSON structure feature allows you to copy the structure of your schema to your clipboard and ensure that your data is suitably shaped.
+The Copy JSON structure functionality allows you to see what a sample payload would look like while you are still building the schema and your data pipelines. It is especially helpful for situations where there are complex object map structures in the schema such as an identity map.
 
 ![The Schema Editor with the More button highlighted and the drop down options displayed.](../images/tutorials/create-schema/more-actions.png)
 
