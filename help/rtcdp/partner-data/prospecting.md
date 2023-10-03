@@ -202,7 +202,11 @@ Read more about [prospect audiences](/help/segmentation/ui/prospect-audience.md)
 
 ### Activate prospect profiles to destinations {#activate-to-destinations}
 
-Make use of the prospect audiences by exporting them to destinations. Currently, only certain destinations such as [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) or the [!BADGE Alpha]{type=Informative} [LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) destination support activation of prospect profiles. 
+Make use of the prospect audiences by exporting them to destinations. Currently, only certain cloud storage destinations support activation of prospect profiles. 
+
+![Destinations which support prospect audiences.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+
+[Read more](/help/destinations/ui/activate-prospect-audiences.md) about activating prospects to cloud storage destinations.
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 
