@@ -341,6 +341,16 @@ Select **[!UICONTROL Profile]** and a popover appears, asking you to confirm tha
 
 Select **[!UICONTROL Enable]** to confirm your choice. You can select the **[!UICONTROL Profile]** toggle again to disable the schema if you wish, but once the schema has been saved while [!DNL Profile] is enabled, it can no longer be disabled.
 
+## More actions
+
+Within the Schema Editor you can also conduct quick actions to Copy the JSON structure of teh Schema or delete the schema if it has not been enabled for Real-Time Customer Profile or has associated datasets. Select [!UICONTROL More] at the top of the view to display a drop down with quick actions. 
+
+The Copy JSON structure feature allows you to copy the structure of your schema to your clipboard and ensure that your data is suitably shaped.
+
+<!-- Above sounds like nonsense -->
+
+![The Schema Editor with the More button highlighted and the drop down options displayed.](../images/tutorials/create-schema/more-actions.png)
+
 ## Next steps and additional resources
 
 Now that you have finished composing the schema, you can see the complete schema in the canvas. Select **[!UICONTROL Save]** and the schema will be saved to the [!DNL Schema Library], making it accessible by the [!DNL Schema Registry].
