@@ -112,7 +112,7 @@ If you have previously created schemas that employ this class, the newly added f
 
 ## Change the class of a schema {#schema}
 
-You can change the class of the schema at any point during the initial creation process before it has been saved. This should be done with caution however, as field groups are only compatible with certain classes. Changing the class will reset the canvas and any fields you have added.
+You can change the class of the schema at any point during the initial creation process before it has been saved. This should be done with caution however, as field groups are only compatible with certain classes. Changing the class resets the canvas and any fields you have added.
 See the guide on [creating and editing schemas](./schemas.md#change-class) for more information.
 
 ## Next steps
