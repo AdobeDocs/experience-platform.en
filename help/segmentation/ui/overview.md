@@ -56,37 +56,9 @@ To learn more, visit the [audiences dashboard guide](../../dashboards/guides/aud
 >title="Add all audiences to schedule"
 >abstract="Enable to include all audiences evaluated using batch segmentation in the daily scheduled update. Disable to remove all audiences from the scheduled update."
 
-Select the **[!UICONTROL Browse]** tab to see a list of all the audiences for your organization. 
+Select the **[!UICONTROL Browse]** tab to see a list of all the audiences for your organization. This view lists information about the audiences including the profile count, origin, created date, last modified date, tags, and breakdown. 
 
 ![The browse screen is displayed. A list of all the audiences belonging to the organization is shown.](../images/ui/overview/audience-browse.png)
-
-This view lists information about the audiences including the profile count, origin, created date, last modified date, tags, and breakdown. 
-
-You can add additional fields to this display by selecting ![the filter attribute icon](../images/ui/overview/filter-attribute.png). These additional fields include lifecycle status, update frequency, last updated by, description, created by, and access labels.
-
-| Field | Description | 
-| ----- | ----------- |
-| [!UICONTROL Name] | The name of the audience. |
-| [!UICONTROL Profile count] | The total number of profiles that qualify for the audience. | 
-| [!UICONTROL Origin] | The origin of the audience. This states where the audience comes from. Possible values include Segmentation Service, Custom upload, Audience composition, and Audience Manager. |
-| [!UICONTROL Created] | The date and time, in UTC, that the audience was created. |
-| [!UICONTROL Last updated] | The date and time, in UTC, that the audience was last updated. |
-| [!UICONTROL Tags] | The user-defined tags that belong to the audience. More information about these tags can be found in the [section on tags](#tags). |
-| [!UICONTROL Breakdown] | The profile status breakdown for the audience. A more detailed description of this profile status breakdown can be found below. |
-| [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Published`, and `Archived`. |
-| [!UICONTROL Update frequency] | A value that states how often the audience's data is updated. Possible values for this field include `On Demand` (Batch), `Scheduled` (Streaming), and `Continuous` (Edge). |
-| [!UICONTROL Last updated by] | The name of the person who last updated the audience. |
-| [!UICONTROL Description] | The description of the audience. |
-| [!UICONTROL Created by] | The name of the person who created the audience. |
-| [!UICONTROL Access labels] | The access labels for the audience. Access labels allow you to categorize datasets and fields according to usage policies that apply to that data. These labels can be applied at any time, providing flexibility in how you choose to govern data. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
-
-If breakdown is selected, the display shows a bar graph outlining the percentage of profiles that belong to each of the following calculated profile statuses: [!UICONTROL Realized], [!UICONTROL Existing], and [!UICONTROL Exiting]. Additionally, the breakdown shown on the [!UICONTROL Browse] tab is the most accurate breakdown of the segment definition status. If this number differs with what is stated on the [!UICONTROL Overview] tab, you should use the numbers on the [!UICONTROL Browse] tab as the correct source of information, since the [!UICONTROL Overview] tab numbers only update once per day.
-
-| Status | Description |
-| ------ | ----------- |
-| [!UICONTROL Realized] | The count of profiles that **qualified** for the segment in the last 24 hours since the last batch segment job ran. |
-| [!UICONTROL Existing] | The count of profiles which **remained** in the segment in the last 24 hours since the last batch segment job ran. |
-| [!UICONTROL Exiting] | The count of profiles which **exited** the segment in the last 24 hours since the last batch segment job ran. |
 
 Next to each audience is an ellipsis icon. Selecting this displays a list of available quick actions for the audience. This list of actions differs, based on the audience's origin.
 
@@ -104,8 +76,13 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 | Apply access labels | Audience composition, Custom upload, Segmentation Service |  Lets you manage the access labels that belong to the audience. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
 | Archive | Custom upload | Archives the selected audience. |
 | Delete | Audience composition, Custom upload, Segmentation Service |  Deletes the selected audience. |
+| Add to package | Audience composition, Custom upload, Segmentation Service | Lets you move the audience between sandboxes. For more information on this feature, please read the [sandbox tooling guide](../../sandboxes/ui/sandbox-tooling.md). |
 
-On the top of the page are options to add all audiences to a schedule, import an audience, and create a new audience. 
+>[!NOTE]
+>
+> You will **not** be able to delete an audience that is used in a destination activation.
+
+On the top of the page are options to add all audiences to a schedule, import an audience, create a new audience, and view a breakdown of the update frequency. 
 
 Toggling **[!UICONTROL Schedule all audiences]** will enable scheduled segmentation. More information on scheduled segmentation can be found in the [scheduled segmentation section of this user guide](#scheduled-segmentation).
 
@@ -115,9 +92,45 @@ Selecting **[!UICONTROL Create audience]** will let you create an audience. To l
 
 ![The top navigation bar on the audience browse page is highlighted. This bar contains a button to create an audience and a button to import an audience.](../images/ui/overview/browse-audiences-top.png)
 
->[!NOTE]
->
-> You will **not** be able to delete an audience that is used in a destination activation.
+You can select **[!UICONTROL Update frequency summary]** to display a pie chart that shows the update frequency.
+
+![The Update frequency summary button is highlighted.](../images/ui/overview/browse-audience-update-frequency-summary.png)
+
+The pie chart appears, displaying a breakdown of the audiences by update frequency. The chart displays the total number of audiences in the middle. If you hover over the different parts of the audience, it will display the number of audiences that belong to each update frequency type.
+
+![The update frequency pie chart is displayed.](../images/ui/overview/update-frequency-chart.png)
+
+### Customize {#customize}
+
+You can add additional fields to the [!UICONTROL Browse] page by selecting ![the filter attribute icon](../images/ui/overview/filter-attribute.png). These additional fields include lifecycle status, update frequency, last updated by, description, created by, and access labels.
+
+| Field | Description | 
+| ----- | ----------- |
+| [!UICONTROL Name] | The name of the audience. |
+| [!UICONTROL Profile count] | The total number of profiles that qualify for the audience. | 
+| [!UICONTROL Origin] | The origin of the audience. This states where the audience comes from. Possible values include Segmentation Service, Custom upload, Audience composition, and Audience Manager. |
+| [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Published`, and `Archived`. |
+| [!UICONTROL Update frequency] | A value that states how often the audience's data is updated. Possible values for this field include [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge], and [!UICONTROL Not Scheduled]. |
+| [!UICONTROL Last updated by] | The name of the person who last updated the audience. |
+| [!UICONTROL Created] | The date and time, in UTC, that the audience was created. |
+| [!UICONTROL Last updated] | The date and time, in UTC, that the audience was last updated. |
+| [!UICONTROL Tags] | The user-defined tags that belong to the audience. More information about these tags can be found in the [section on tags](#tags). |
+| [!UICONTROL Description] | The description of the audience. |
+| [!UICONTROL Created by] | The name of the person who created the audience. |
+| [!UICONTROL Access labels] | The access labels for the audience. Access labels allow you to categorize datasets and fields according to usage policies that apply to that data. These labels can be applied at any time, providing flexibility in how you choose to govern data. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Breakdown] | The profile status breakdown for the audience. A more detailed description of this profile status breakdown can be found below. |
+
+If breakdown is selected, the display shows a bar graph outlining the percentage of profiles that belong to each of the following calculated profile statuses: [!UICONTROL Realized], [!UICONTROL Existing], and [!UICONTROL Exiting]. Additionally, the breakdown shown on the [!UICONTROL Browse] tab is the most accurate breakdown of the segment definition status. If this number differs with what is stated on the [!UICONTROL Overview] tab, you should use the numbers on the [!UICONTROL Browse] tab as the correct source of information, since the [!UICONTROL Overview] tab numbers only update once per day.
+
+| Status | Description |
+| ------ | ----------- |
+| [!UICONTROL Realized] | The count of profiles that **qualified** for the segment in the last 24 hours since the last batch segment job ran. |
+| [!UICONTROL Existing] | The count of profiles which **remained** in the segment in the last 24 hours since the last batch segment job ran. |
+| [!UICONTROL Exiting] | The count of profiles which **exited** the segment in the last 24 hours since the last batch segment job ran. |
+
+After you selected the fields you want to display, you can also re-size the width of the displayed columns. You can either do this by dragging the area between the columns or by selecting the ![arrow icon](../images/ui/overview/arrow-icon.png) of the column you want to re-size, followed by **[!UICONTROL Resize column]**.
+
+![The Resize column button is highlighted.](../images/ui/overview/browse-audience-resize-column.png)
 
 ### Filtering, folders, and tagging {#manage-audiences}
 

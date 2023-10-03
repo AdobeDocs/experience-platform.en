@@ -1,8 +1,8 @@
 ---
 title: Computed Attributes Frequently Asked Questions
 description: Find out answers to frequently asked questions about using computed attributes.
+exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
 ---
-
 # Frequently asked questions
 
 In Adobe Experience Platform, computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. The following is a list of frequently asked questions regarding computed attributes.

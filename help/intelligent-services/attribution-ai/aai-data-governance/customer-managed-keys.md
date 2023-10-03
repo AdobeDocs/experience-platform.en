@@ -6,7 +6,7 @@ exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
 ---
 # Customer Managed Keys
 
-Attribution AI provides the option for [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) and Privacy & Security Shield customers to utilize Azure Customer Managed Keys (CMK) to be applied to your Attribution AI data. The setup process is the same as [Adobe Experience Platform CMK setup](../../../landing/governance-privacy-security/customer-managed-keys.md) and you can follow the steps outlined in there.
+Attribution AI provides the option for [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) and Privacy & Security Shield customers to utilize Azure Customer Managed Keys (CMK) to be applied to your Attribution AI data. The setup process is the same as [Adobe Experience Platform CMK setup](../../../landing/governance-privacy-security/customer-managed-keys/overview.md) and you can follow the steps outlined in there.
 
 You can read the documentation on [Customer Managed Keys in Adobe Experience Platform](../../../landing/governance-privacy-security/encryption.md) and follow the steps outlined to go through the setup process.
 

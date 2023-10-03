@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure your destination for the supported identity and attribute mapping configurations.
 title: Supported mapping configurations
+exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
 ---
-
 # Supported mapping configurations
 
 Destinations built with Destination SDK support specific identity namespace and attribute mapping configurations, based on the destination type.

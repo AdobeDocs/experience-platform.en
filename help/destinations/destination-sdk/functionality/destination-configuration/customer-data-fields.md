@@ -1,8 +1,8 @@
 ---
 description: Learn how to create input fields in the Experience Platform UI that allow your users to specify various information relevant to how to connect and export data to your destination.
 title: Customer data fields
+exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
 ---
-
 # Configure user input through customer data fields
 
 When connecting to your destination in the Experience Platform UI, you might need your users to provide specific configuration details or select specific options that you make available to them. In Destination SDK, these options are called customer data fields.

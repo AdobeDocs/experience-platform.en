@@ -3,8 +3,8 @@ solution: Experience Platform
 title: Use case playbooks overview
 description: Learn how to use the Use Case Playbooks feature in Experience Platform to get started with various marketing use cases
 badgeBeta: label="Beta" type="Informative"
+exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
 ---
-
 # (Beta) Use case playbooks overview
 
 >[!BEGINSHADEBOX]
@@ -35,11 +35,11 @@ If you select a Real-Time CDP playbook, your objective might be to generate audi
 
 If you select an Adobe Journey Optimizer playbook, your objective might be to construct a customer journey within your product, and send relevant messaging to your customers.  
 
-Create an instance of a playbook to generate specific assets like schemas, segments, or journeys that are tailored to your use case and are reusable in Experience Platform. The purpose of these objects is to help you understand all the resources that are required to implement your specific use case. They do not contain any data and are created on development sandboxes. Start using these assets or make edits to them before using them and sharing them with your team in Real-time CDP or Journey Optimizer. 
+Create an instance of a playbook to generate specific assets like schemas, segments, or journeys that are tailored to your use case and are reusable in Experience Platform. The purpose of these objects is to help you understand all the resources that are required to implement your specific use case. They do not contain any data and are created on development sandboxes. Start using these assets or make edits to them before using them and sharing them with your team in Real-Time CDP or Journey Optimizer. 
 
 ## Availability
 
-Some [!UICONTROL Use Case Playbooks] are tailored to Real-time CDP use cases while others are best suited for customers using Journey Optimizer. Browse the catalog to find the playbooks best suited to your product and use case.
+Some [!UICONTROL Use Case Playbooks] are tailored to Real-Time CDP use cases while others are best suited for customers using Journey Optimizer. Browse the catalog to find the playbooks best suited to your product and use case.
 
 ## UI guides
 

@@ -1,6 +1,7 @@
 ---
 title: Inline Templates
 description: Learn how to reuse multiple conditions in numerous queries with inline templates.
+exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
 ---
 # Inline templates
 

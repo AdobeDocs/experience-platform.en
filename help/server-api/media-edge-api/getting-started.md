@@ -2,8 +2,8 @@
 solution: Experience Platform
 title: Getting started with Media Edge APIs
 description: Getting started with Media Edge APIs
+exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
 ---
-
 # Media Edge API getting started
 
 This guide provides instructions for making successful initial interactions with the Media Edge API service. This includes starting a media session and then tracking events that are sent to an Adobe Experience Platform solution such as Customer Journey Analytics (CJA). The Media Edge API service is initiated with the Session Start endpoint. Once the session is started, one or more of the following events can be tracked:
@@ -286,5 +286,3 @@ The following table shows the possible response codes resulting from Media Edge 
 
 * [Media Edge Troubleshooting guide](troubleshooting.md)
 * [Media Edge API overview](overview.md)
-
-

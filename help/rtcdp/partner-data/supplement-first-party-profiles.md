@@ -1,12 +1,13 @@
 ---
 title: Supplement First-party Profiles with Partner-provided Attributes
 description: Learn how to supplement first-party profiles with attributes from trusted data partners to improve your data foundation, gain new insights into your customer base, and better audience optimization.
+exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
 ---
 # Supplement First-party Profiles with Partner-provided Attributes
 
 >[!AVAILABILITY]
 >
->* This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
+>* This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
 
 Supplement first-party profiles with attributes from trusted data partners to improve your data foundation and gain new insights into your customer base and gain better audience optimization.
 
@@ -18,12 +19,18 @@ As you consider supplementing your own first-party profiles with attributes from
 
 * Think about the location where the audience list will be exported out of Real-Time CDP, to be shared with the data vendor. This location needs to support file export.
 * What are the identifiers that are expected by the data vendor so they can layer on additional attributes?
-* How will the file containing partner-provided attributes be ingested back into Real-time CDP? For example, the files can be ingested through cloud storage source connectors such as [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) or [SFTP](/help/sources/connectors/cloud-storage/sftp.md). 
+* How will the file containing partner-provided attributes be ingested back into Real-Time CDP? For example, the files can be ingested through cloud storage source connectors such as [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) or [SFTP](/help/sources/connectors/cloud-storage/sftp.md). 
 * What is the cadence with which you expect partner-provided attributes to be brought back into Real-Time CDP and refreshed?
 
 >[!WARNING]
 >
 >The additional partner-provided attributes ingested into Real-Time CDP impact your *average profile richness*. Read the [Real-Time Customer Data Platform Product Description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) for more information about profile richness.
+
+## Video walkthrough {#video-walkthrough}
+
+View the video tutorial below for a walkthrough of how to supplement first-party audiences with partner-provided attributes:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
@@ -82,7 +89,7 @@ Also in this step, think about how your data governance model changes as you exp
 
 ### Export audiences that you want to be enriched when keyed off Personal Identifiable Information (PII) or hashed-PII {#export-audiences}
 
-Export the audiences that you want the partner to enrich. Use the cloud storage destinations provided by Real-time CDP, such as Amazon S3 or SFTP. Read the following documentation pages to complete this step: 
+Export the audiences that you want the partner to enrich. Use the cloud storage destinations provided by Real-Time CDP, such as Amazon S3 or SFTP. Read the following documentation pages to complete this step: 
 
 * [Amazon S3 destination](/help/destinations/catalog/cloud-storage/amazon-s3.md) documentation page
 * [SFTP destination](/help/destinations/catalog/cloud-storage/sftp.md) documentation page
