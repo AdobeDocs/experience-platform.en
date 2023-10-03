@@ -36,7 +36,7 @@ The list of classes are automatically filtered based on how they were created. T
 
 >[!TIP]
 >
->You can use the workspace's search capabilities to help find the schema easier. See the guide on [exploring XDM resources](../explore.md) for more information.
+>Use the search capabilities to filter or find a class based on its name. See the guide on [exploring XDM resources](../explore.md) for more information.
 
 ## Create a new class {#create}
 
@@ -48,7 +48,7 @@ If you select **[!UICONTROL Create class]**, the [!UICONTROL Create class] dialo
 
 ![The [!UICONTROL Create class] dialog with [!UICONTROL Create] highlighted.](../../images/ui/resources/classes/create-class-dialog.png)
 
-The class you have created is available and listed in the Classes view.
+The class you have created is available and listed in the [!UICONTROL Classes] view.
 
 ![The [!UICONTROL Classes] tab of the [!UICONTROL Schemas] workspace with the recently created class highlighted.](../../images/ui/resources/classes/new-class-listing.png)
 
@@ -112,7 +112,8 @@ If you have previously created schemas that employ this class, the newly added f
 
 ## Change the class of a schema {#schema}
 
-You can change the class of the schema at any point during the initial creation process before it has been saved. See the guide on [creating and editing schemas](./schemas.md#change-class) for more information.
+You can change the class of the schema at any point during the initial creation process before it has been saved. This should be done with caution however, as field groups are only compatible with certain classes. Changing the class will reset the canvas and any fields you have added.
+See the guide on [creating and editing schemas](./schemas.md#change-class) for more information.
 
 ## Next steps
 
