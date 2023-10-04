@@ -59,6 +59,14 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 
 Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add field groups](#add-field-groups) to the schema (or [add individual fields](#add-individual-fields) from those groups), [edit field display names](#display-names), or [edit existing custom field groups](./field-groups.md#edit) if the schema employs any.
 
+## More actions {#more}
+
+Within the Schema Editor you can also conduct quick actions to copy the JSON structure of the schema or delete the schema if it has not been enabled for Real-Time Customer Profile or has associated datasets. Select [!UICONTROL More] at the top of the view to display a drop down with quick actions. 
+
+The Copy JSON structure functionality allows you to see what a sample payload would look like while you are still building the schema and your data pipelines. It is especially helpful for situations where there are complex object map structures in the schema such as an identity map.
+
+![The Schema Editor with the More button highlighted and the drop down options displayed.](../images/tutorials/create-schema/more-actions.png)
+
 ## Display name toggle {#display-name-toggle}
 
 For your convenience, the Schema Editor provides a toggle to change between the original field names and the more human-readable display names. This flexibility allows for improved field discoverability and editing of your schemas. The toggle is found at the top right of the Schema Editor view.
@@ -66,6 +74,8 @@ For your convenience, the Schema Editor provides a toggle to change between the 
 >[!NOTE]
 >
 >The change from field names to display names is purely cosmetic and does not change any downstream resources. 
+
+<!-- ... -->
 
 ![The Schema Editor with [!UICONTROL Show display names for fields] highlighted.](../../images/ui/resources/schemas/display-name-toggle.png)
 
