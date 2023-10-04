@@ -1,6 +1,7 @@
 ---
 title: Intelligent Re-engagement
 description: Deliver compelling and connected experiences during the key conversion moments to intelligently re-engage infrequent customers.
+exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
 ---
 # Intelligently re-engage your customers to return
 

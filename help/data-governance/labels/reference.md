@@ -67,6 +67,8 @@ This label is used to govern the use of prospect data.
 | Label | Definition |
 | --- | --- |
 | **Third-Party** | Third-party data is data provided to you by a third-party data vendor. A third-party data vendor is an entity that has entered into an agreement with your organization authorizing you to access, use, display, and transmit the third party's data in conjunction with Platform.  |
+| **Third-Party-Enrichment**  | Data collected by a third-party organization that is not directly related to the data subject. The label should be applied to third-party data that is used for enriching first-party profiles. |
+| **Third-Party-Prospecting** | Data collected by a third-party organization that is not directly related to the data subject. The label should be applied to third-party data used for top of the funnel prospecting to net-new customers. |
 
 ## Appendix
 

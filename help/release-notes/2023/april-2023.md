@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes April 2023
 description: The April 2023 release notes for Adobe Experience Platform.
-exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
+exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
 ---
 # Adobe Experience Platform release notes 
 
@@ -85,7 +85,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 | ----------- | ----------- |
 | Dataflow monitoring for [!DNL Custom Personalization] and [!DNL Adobe Commerce] destinations | <p> You can now see activation metrics for the [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Custom Personalization](../../destinations/catalog/personalization/custom-personalization.md) and the [Custom Personalization With Attributes](../../destinations/catalog/personalization/custom-personalization.md) connections. </p> <p>![Adobe Commerce image](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce metrics"){width="100" zoomable="yes"}</p>  See [Monitor dataflows in the Destinations workspace](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) for more details. |
 | New **[!UICONTROL Append segment ID to segment name]** field for the [!DNL Google Ad Manager] and [!DNL Google Ad Manager 360] destinations | <p>You can now have the segment name in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) and [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`.</p><p>![Append segment ID image](/help/destinations/assets/common/append-segment-id-to-segment-name.png "New Append segment ID to segment name field "){width="100" zoomable="yes"}</p> |
-| Scheduled audience backfills | <p>For the [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) destination, the activation of audience backfills to the destination is scheduled to occur 24-48 hours after a segment is first mapped to a destination connection. This update is in response to Google's policy to wait 24 hours until ingesting data and will improve match rates between Real-time CDP and [!DNL Google Display & Video 360].</p> <p>Note that this is a backend configuration applicable to this destination only and that is unrelated to any customer-configurable scheduling options in the UI.</p> |
+| Scheduled audience backfills | <p>For the [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) destination, the activation of audience backfills to the destination is scheduled to occur 24-48 hours after a segment is first mapped to a destination connection. This update is in response to Google's policy to wait 24 hours until ingesting data and will improve match rates between Real-Time CDP and [!DNL Google Display & Video 360].</p> <p>Note that this is a backend configuration applicable to this destination only and that is unrelated to any customer-configurable scheduling options in the UI.</p> |
 
 {style="table-layout:auto"}
 

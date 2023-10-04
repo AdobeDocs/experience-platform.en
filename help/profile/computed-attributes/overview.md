@@ -1,8 +1,8 @@
 ---
 title: Computed Attributes overview
 description: Computed attributes are functions to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
+exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
 ---
-
 # Computed attributes overview
 
 Personalization based on user behavior is a key requirement for marketers to maximize the impact of personalization. For instance, personalizing marketing email with the most recently viewed product to drive conversion, or personalizing webpage based on total purchases made by users to drive retention. 
@@ -83,4 +83,4 @@ Fast refresh allows you to keep your attributes up-to-date. Enabling this option
 
 ## Next steps
 
-To learn more about creating and managing computed attributes, please read the [computed attributes API guide](./api.md) or the [computed attributes UI guide](./ui.md). 
+To learn more about creating and managing computed attributes, please read the [computed attributes API guide](./api.md) or the [computed attributes UI guide](./ui.md).

@@ -2,6 +2,7 @@
 title: Mailchimp Interest Categories
 description: Mailchimp (also known as Intuit Mailchimp) is a popular marketing automation platform and email marketing service used by businesses to manage and talk to contacts (clients, customers, or other interested parties) using mailing lists and email marketing campaigns. Use this connector to sort your contacts based on their interests and preferences.
 last-substantial-update: 2023-05-24
+exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
 ---
 # [!DNL Mailchimp Interest Categories] connection
 
