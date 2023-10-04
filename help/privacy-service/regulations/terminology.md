@@ -146,6 +146,8 @@ agree on the adoption of a compromise text more quickly.
 
 ## U
 
+**UCPA**: The [!DNL Utah Consumer Privacy Act] creates the right for a consumer to know what personal data a business collects, how the business uses their personal data, and whether the business sells their personal data. Consumers can require the business to delete or stop selling their personal data.
+
 **Unambiguous consent**: Unambiguous consent is also known as implicit consent. Unambiguous consent refers to consent that was not explicitly given by the data subject, but is nonetheless unambiguous in nature. For example, during the sign-up process for a company website, a notice is given that by providing an email address, the data subject consents to receiving emails on special offers. If the data subject reads the notice, the affirmative action of entering their email is enough to be considered unambiguous consent.
 
 ## V
