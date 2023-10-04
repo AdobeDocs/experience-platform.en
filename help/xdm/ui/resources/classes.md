@@ -14,7 +14,7 @@ exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 
 In Adobe Experience Platform, a schema's class defines the behavioral aspects of the data that the schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged.
 
-Adobe provides several standard ("core") Experience Data Model (XDM) classes, including [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent]. In addition to these core classes, you can also create your own custom classes to describe more specific use cases for your organization.
+Adobe provides several standard ("core") Experience Data Model (XDM) classes, including XDM Individual Profile and XDM ExperienceEvent. In addition to these core classes, you can also create your own custom classes to describe more specific use cases for your organization.
 
 This document provides an overview of how to create, edit, and manage custom classes in the Experience Platform UI.
 
@@ -22,7 +22,7 @@ This document provides an overview of how to create, edit, and manage custom cla
 
 This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) to learn how classes contribute to XDM schemas.
 
-While not required for this guide, it is recommended that you also follow the tutorial on [composing a schema in the UI](../../tutorials/create-schema-ui.md) to familiarize yourself with the various capabilities of the [!DNL Schema Editor].
+While not required for this guide, it is recommended that you also follow the tutorial on [composing a schema in the UI](../../tutorials/create-schema-ui.md) to familiarize yourself with the various capabilities of the Schema Editor.
 
 ## Getting started
 
@@ -36,29 +36,25 @@ The list of classes are automatically filtered based on how they were created. T
 
 >[!TIP]
 >
->You can use the workspace's search capabilities to help find the schema easier. See the guide on [exploring XDM resources](../explore.md) for more information.
+>Use the search capabilities to filter or find a class based on its name. See the guide on [exploring XDM resources](../explore.md) for more information.
 
 ## Create a new class {#create}
 
-There are two methods to create a class in the Platform UI. From any tab in the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**, or from the [!UICONTROL Classes] tab select **[!UICONTROL Create class]**. 
+There are two methods to create a class in the Platform UI. From any tab in the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]**, or from the [!UICONTROL Classes] tab select **[!UICONTROL Create class]**. 
 
 ![The [!UICONTROL Classes] tab of the [!UICONTROL Schemas] workspace with [!UICONTROL Create schema] and [!UICONTROL Create class] highlighted](../../images/ui/resources/classes/create-class-methods.png)
 
-If you select **[!UICONTROL Create class]**, the [!UICONTROL Create class] dialog appears. Enter a [!UICONTROL Name] and [!UICONTROL Description] for your class and choose the intended behavior of your class with the radio buttons. Classes can be record series or time series. Select **[!UICONTROL Create]** to confirm your choices.
+If you select **[!UICONTROL Create class]**, the [!UICONTROL Create class] dialog appears. Enter a [!UICONTROL Display name] and [!UICONTROL Description] for your class and choose the intended behavior of your class with the radio buttons. Classes can be of the type, record series, or time series. Select **[!UICONTROL Create]** to confirm your choices and return to the [!UICONTROL Classes] tab.
 
 ![The [!UICONTROL Create class] dialog with [!UICONTROL Create] highlighted.](../../images/ui/resources/classes/create-class-dialog.png)
 
-The [!DNL Schema Editor] appears, showing a new schema in the canvas that is based on the custom class you just created. Since no fields have been added to the class yet, the schema only contains an `_id` field, which represents the system-generated unique identifier that is automatically applied to all resources in the [!DNL Schema Registry].
+The class you have created is available and listed in the [!UICONTROL Classes] view.
 
-![](../../images/ui/resources/classes/schema.png) 
-
->[!IMPORTANT]
->
->When building a schema that implements a class defined by your organization, remember that schema field groups are available for use only with compatible classes. Since the class you defined is new, there are no compatible field groups listed in the **[!UICONTROL Add field group]** dialog. Instead, you will need to [create new field groups](./field-groups.md#create) for use with that class. The next time you compose a schema that implements the new class, the field groups that you defined will be listed and available for use.
+![The [!UICONTROL Classes] tab of the [!UICONTROL Schemas] workspace with the recently created class highlighted.](../../images/ui/resources/classes/new-class-listing.png)
 
 ### Create or edit a class {#create-or-edit}
 
-If you select **[!UICONTROL Create schema]**, the [!UICONTROL Create schema] workflow appears. In the [!UICONTROL Schema details] section, select **[!UICONTROL Other]**. A list of available classes appears. From here you can browse and filter pre-existing classes on which to base your new class.
+Alternatively, if you select **[!UICONTROL Create schema]**, the [!UICONTROL Create schema] workflow appears. In the [!UICONTROL Schema details] section, select **[!UICONTROL Other]**. A list of available classes appears. From here you can browse and filter pre-existing classes on which to base your new class.
 
 >[!NOTE]
 >
@@ -80,21 +76,25 @@ Select any row to choose a class, then select **[!UICONTROL Next]** to confirm y
 
 ![The [!UICONTROL Create schema] workflow with a class selected from the table of available classes and [!UICONTROL Next] highlighted.](../../images/ui/resources/classes/select-class.png)
 
-The [!UICONTROL Name and describe] section appears. In this section, provide a name and description to identify your schema. ​The schema's base structure (provided by the class) is shown in the canvas for you to review and verify your selected class and schema structure.
+The [!UICONTROL Name and review] section of the workflow appears. In this section, provide a name and description to identify your schema. ​The schema's base structure (provided by the class) is shown in the canvas for you to review and verify your selected class and schema structure.
 
 Enter a short, descriptive, unique, and user-friendly name for the class in the [!UICONTROL Schema display name] text field. Next, enter a suitable description to identify the behavior of the data that the schema defines. When you have reviewed your schema structure and are happy with your settings, select **[!UICONTROL Finish]** to create your schema. 
 
 ![The [!UICONTROL Name and review] section of the [!UICONTROL Create schema] workflow with the [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/classes/name-and-review-class.png)
 
-The [!DNL Schema Editor] appears, with the schema's structure shown in the canvas. You can now start [adding fields to the class](#add-fields).
+The Schema Editor appears, with the schema's structure shown in the canvas. You can now start [adding fields to the class](#add-fields).
 
-![](../../images/ui/resources/classes/edit.png)
+![The Schema Editor with the schema's structure shown in the canvas.](../../images/ui/resources/classes/edit.png)
 
 ## Add fields to a class {#add-fields}
 
 Once you have a schema that employs a custom class open in the [!UICONTROL Schema Editor], you can start adding fields to the class. To add a new field, select the **plus (+)** icon next to the schema's name.
 
-![](../../images/ui/resources/classes/add-field.png)
+>[!IMPORTANT]
+>
+>When building a schema that implements a class defined by your organization, remember that schema field groups are available for use only with compatible classes. Since the class you defined is new, there are no compatible field groups listed in the **[!UICONTROL Add field group]** dialog. Instead, you will need to [create new field groups](./field-groups.md#create) for use with that class. The next time you compose a schema that implements the new class, the field groups that you defined will be listed and available for use.
+
+![The Schema Editor with the add button highlighted.](../../images/ui/resources/classes/add-field.png)
 
 >[!IMPORTANT]
 >
@@ -102,22 +102,21 @@ Once you have a schema that employs a custom class open in the [!UICONTROL Schem
 
 An **[!UICONTROL Untitled Field]** placeholder appears in in the canvas, and the right rail updates to show controls to configure the field's properties. Under **[!UICONTROL Assign to]**, select **[!UICONTROL Class]**.
 
-![](../../images/ui/resources/classes/assign-to-class.png)
-
-![](../../images/ui/resources/classes/assign-to-class.png)
+![An untitled field in the canvas of the schema editor with the Assign to Class field property selected and highlighted.](../../images/ui/resources/classes/assign-to-class.png)
 
 See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure and add the field to the class. Continue to add as many fields as required to the class. When finished, select **[!UICONTROL Save]** to save both the schema and the class.
 
-![](../../images/ui/resources/classes/save.png)
+![The newly created schema on the canvas of the Schema Editor, with [!UICONTROL Save] highlighted.](../../images/ui/resources/classes/save.png)
 
 If you have previously created schemas that employ this class, the newly added fields will automatically appear in those schemas.
 
 ## Change the class of a schema {#schema}
 
-You can change the class of the schema at any point during the initial creation process before it has been saved. See the guide on [creating and editing schemas](./schemas.md#change-class) for more information.
+You can change the class of the schema at any point during the initial creation process before it has been saved. This should be done with caution however, as field groups are only compatible with certain classes. Changing the class resets the canvas and any fields you have added.
+See the guide on [creating and editing schemas](./schemas.md#change-class) for more information.
 
 ## Next steps
 
 This document covered how to create and edit classes using the Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
 
-To learn how to manage classes using the [!DNL Schema Registry] API, see the [classes endpoint guide](../../api/classes.md).
+To learn how to manage classes using the Schema Registry API, see the [classes endpoint guide](../../api/classes.md).
