@@ -155,6 +155,27 @@ XDM is an open-source specification that provides common structures and definiti
 | --- | --- |
 |  Updated schema creation workflow  | A new schema creation workflow has been implemented to streamline the process. <br> ![The new schema creation UI.](../2023/assets/schema-class-options.png "New schema details selector highlighted."){width="100" zoomable="yes"} <br> See the [schema creation documentation](../../xdm/ui/resources/schemas.md#create) for more information.  |
 
+**New XDM components**
+
+| Component type | Name | Description |
+| --- | --- | --- |
+|  Data type  |  [[!UICONTROL Return]](https://github.com/adobe/xdm/pull/1773/files)  |  The RMA (Return Merchandise Authorization) issued. |
+| Data type  | [[!UICONTROL Return Item]](https://github.com/adobe/xdm/pull/1773/files)   |   The returned item's information within the RMA (Return Merchandise Authorization).  |
+
+{style="table-layout:auto"}
+
+**Updated XDM components**
+
+| Component type | Name | Update description |
+| --- | --- | --- |
+| Extension  | [!UICONTROL AJO Entity Fields] | The [[!UICONTROL flag for multi-variant]](https://github.com/adobe/xdm/pull/1774/files) was added to [!UICONTROL AJO Entity Fields] to identify if the variant is a multi-variant or not.  |
+|  Data type  |  [!UICONTROL Product list item]  | [[!UICONTROL Return Item]](https://github.com/adobe/xdm/pull/1773/files) was added to include the Return Merchandise Authorization information.  |
+|  Data type  |  Order   |  [[!UICONTROL Return Info]](https://github.com/adobe/xdm/pull/1773/files) was added to include the RMA (Return Merchandise Authorization) issued.|
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md)
+
 ## Identity Service {#identity-service}
 
 Adobe Experience Platform Identity Service provides you with a comprehensive view of your customers and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
