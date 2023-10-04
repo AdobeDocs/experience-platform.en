@@ -1,0 +1,41 @@
+---
+title: Real-Time CDP Guardrails
+description: Learn about the data guardrails across the various services and areas of Real-Time CDP.
+---
+# Real-Time CDP Guardrails
+
+Guardrails are thresholds that provide guidance for data and system usage, performance optimization, and avoidance of errors or unexpected results in Real-Time CDP. Guardrails can refer to your usage or consumption of data and processing in relation to your licensing entitlements.
+
+Start here and follow the links below to understand all guardrails across the various services and areas of Real-Time CDP:
+
+* [Guardrails for data ingestion](/help/ingestion/guardrails.md)
+* [Guardrails for the [!DNL Edge Network Server API]](/help/server-api/guardrails.md)
+* [Guardrails for [!DNL Real-Time Customer Profile] data and segmentation](/help/profile/guardrails.md)
+* [Guardrails for [!DNL Identity Service] data](/help/identity-service/guardrails.md)
+* [Guardrails for [!DNL Query Service]](/help/query-service/guardrails.md)
+* [Guardrails for data activation through destinations](/help/destinations/guardrails.md)
+
+## Guardrail types
+
+Note that the two guardrail types across all Real-Time CDP areas and services are: 
+
+| Guardrail type | Description|
+|----------|---------|
+| **Performance Guardrail (Soft limit)** | Performance Guardrail (soft limit) means usage limits that relate to the scoping of Customer's proposed use cases. Should Customer exceed a Performance Guardrail, Customer may experience performance degradation and latency; Adobe will not be responsible for such performance degradation. Customers who consistently exceed a Performance Guardrail may elect to license additional capacity to avoid performance degradation.|
+| **System-enforced guardrails (Hard limit)** | System-enforced guardrails are enforced by the Real-Time CDP UI or API. These are limits that you cannot exceed as the UI and API will block you from doing so or will return an error.|
+
+{style="table-layout:auto"}
+
+## Real-Time CDP licensing and entitlement information
+
+Additionally, refer to the product description links below for licensing and entitlement information based on the Real-Time CDP edition and tier you purchased
+
+* [All Adobe product descriptions](https://helpx.adobe.com/legal/product-descriptions.html)
+* [Real-Time Customer Data Platform (B2C Edition - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+
+
+## Next steps
+
+After understanding the guardrails that apply to various areas and services of Real-Time CDP, you can follow along a [sample use case of a Real-Time CDP implementation](/help/rtcdp/get-started.md).

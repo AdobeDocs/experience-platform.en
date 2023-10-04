@@ -31,6 +31,8 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Destinations {#destinations}
   * [Destinations overview](destinations/overview.md)
   * [Destinations in Real-Time CDP B2B Edition](destinations/b2b.md)
+* Guardrails {#guardrails}
+  * [Real-Time CDP guardrails](/help/rtcdp/guardrails/guardrails.md)
 * Identities {#identity}  
   * [Identities & identity namespaces](profile/identities-overview.md)
 * Merge policies {#merge-policies}
