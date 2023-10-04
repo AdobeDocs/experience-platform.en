@@ -41,11 +41,11 @@ Understand from the table below which dataset types you can export depending on 
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Refer to the <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=en"> Adobe Journey Optimizer</a> documentation. (update to deep-link to the AJO table or section for supported datasets)</td>
+    <td>Refer to the <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> documentation.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Refer to the <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=en"> Adobe Journey Optimizer</a> documentation. (update to deep-link to the AJO table or section for supported datasets)</td>
+    <td>Refer to the <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> documentation.</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
