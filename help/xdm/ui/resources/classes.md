@@ -14,7 +14,7 @@ exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 
 In Adobe Experience Platform, a schema's class defines the behavioral aspects of the data that the schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged.
 
-Adobe provides several standard ("core") Experience Data Model (XDM) classes, including [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent]. In addition to these core classes, you can also create your own custom classes to describe more specific use cases for your organization.
+Adobe provides several standard ("core") Experience Data Model (XDM) classes, including XDM Individual Profile and XDM ExperienceEvent. In addition to these core classes, you can also create your own custom classes to describe more specific use cases for your organization.
 
 This document provides an overview of how to create, edit, and manage custom classes in the Experience Platform UI.
 
@@ -22,7 +22,7 @@ This document provides an overview of how to create, edit, and manage custom cla
 
 This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) to learn how classes contribute to XDM schemas.
 
-While not required for this guide, it is recommended that you also follow the tutorial on [composing a schema in the UI](../../tutorials/create-schema-ui.md) to familiarize yourself with the various capabilities of the [!DNL Schema Editor].
+While not required for this guide, it is recommended that you also follow the tutorial on [composing a schema in the UI](../../tutorials/create-schema-ui.md) to familiarize yourself with the various capabilities of the Schema Editor.
 
 ## Getting started
 
@@ -40,7 +40,7 @@ The list of classes are automatically filtered based on how they were created. T
 
 ## Create a new class {#create}
 
-There are two methods to create a class in the Platform UI. From any tab in the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**, or from the [!UICONTROL Classes] tab select **[!UICONTROL Create class]**. 
+There are two methods to create a class in the Platform UI. From any tab in the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]**, or from the [!UICONTROL Classes] tab select **[!UICONTROL Create class]**. 
 
 ![The [!UICONTROL Classes] tab of the [!UICONTROL Schemas] workspace with [!UICONTROL Create schema] and [!UICONTROL Create class] highlighted](../../images/ui/resources/classes/create-class-methods.png)
 
@@ -82,7 +82,7 @@ Enter a short, descriptive, unique, and user-friendly name for the class in the 
 
 ![The [!UICONTROL Name and review] section of the [!UICONTROL Create schema] workflow with the [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/classes/name-and-review-class.png)
 
-The [!DNL Schema Editor] appears, with the schema's structure shown in the canvas. You can now start [adding fields to the class](#add-fields).
+The Schema Editor appears, with the schema's structure shown in the canvas. You can now start [adding fields to the class](#add-fields).
 
 ![The Schema Editor with the schema's structure shown in the canvas.](../../images/ui/resources/classes/edit.png)
 
@@ -119,4 +119,4 @@ See the guide on [creating and editing schemas](./schemas.md#change-class) for m
 
 This document covered how to create and edit classes using the Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
 
-To learn how to manage classes using the [!DNL Schema Registry] API, see the [classes endpoint guide](../../api/classes.md).
+To learn how to manage classes using the Schema Registry API, see the [classes endpoint guide](../../api/classes.md).
