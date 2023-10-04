@@ -17,7 +17,7 @@ With Adobe Experience Platform Identity Service and Real-Time Customer Profile, 
 
 **Identity Settings objectives**
 
-With Identity Settings (feature name?) you can:
+With Identity Settings you can:
 
 * Configure limits to prevent two person identifiers from merging into one identity graph, so that a single identity graph only represents a single person.
   * The limits that you configure are then enforced by identity optimization algorithm.
@@ -25,3 +25,12 @@ With Identity Settings (feature name?) you can:
 
 **Limits**
 
+* Namespace lim
+
+**Identity optimization algorithm**
+
+The identity optimization algorithm is a rule that ensures that the limits are honored. The algorithm honors the most recent links and remove the oldest to make sure that a given identity graph stays within the limits that a user has defined.
+
+**Priority**
+
+Namespace priority defines which namespaces are more important than others. This information is used to define primary identities to store profile fragments
