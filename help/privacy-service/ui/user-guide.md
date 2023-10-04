@@ -32,17 +32,18 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 | UI label | Regulation |
 | --- | --- |
+| [!UICONTROL APA_AUS] | The [!DNL Australia Privacy Act (Privacy Act)] |
 | [!UICONTROL CPA] | The [!DNL Colorado Privacy Act] |
 | [!UICONTROL CCPA] | The [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPRA_USA] | The [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA] | The [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL GDPR] | The European Union's [!DNL General Data Protection Regulation] |
-| [!UICONTROL PDPA_THA] | Thailand's [!DNL Personal Data Protection Act] |
+| [!UICONTROL HIPAA_AUS] | The [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | Brazil's [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL NZPA_NZL] | The New Zealand [!DNL Privacy Act] |
+| [!UICONTROL PDPA_THA] | Thailand's [!DNL Personal Data Protection Act] |
+| [!UICONTROL UCPA]  | The [!DNL Utah Consumer Privacy Act] |
 | [!UICONTROL VCDPA_USA] | The [!DNL Virginia Consumer Data Protection Act] |
-| [!UICONTROL CPRA_USA] | The [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL APA_AUS] | The [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL HIPAA_AUS] | The [!DNL Health Insurance Portability and Accountability Act] |
 
 {style="table-layout:auto"}
 
