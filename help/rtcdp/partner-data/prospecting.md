@@ -7,7 +7,7 @@ exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 
 >[!AVAILABILITY]
 >
->* This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
+>* This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
 
 Use third party data support in Real-Time CDP to expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers.
 
@@ -202,7 +202,11 @@ Read more about [prospect audiences](/help/segmentation/ui/prospect-audience.md)
 
 ### Activate prospect profiles to destinations {#activate-to-destinations}
 
-Make use of the prospect audiences by exporting them to destinations. Currently, only certain destinations such as [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) or the [!BADGE Alpha]{type=Informative} [LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) destination support activation of prospect profiles. 
+Make use of the prospect audiences by exporting them to destinations. Currently, only certain cloud storage destinations support activation of prospect profiles. 
+
+![Destinations which support prospect audiences.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+
+[Read more](/help/destinations/ui/activate-prospect-audiences.md) about activating prospects to cloud storage destinations.
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 

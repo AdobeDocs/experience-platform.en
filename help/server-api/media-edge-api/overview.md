@@ -30,7 +30,7 @@ The following table shows a possible Adobe API service for various media analyti
 | Use case | API service |
 | -------- | ----------- |
 | Adobe Experience Platform solution | Media Edge |
-| Real-time CDP + Customer Journey Analytics | Media Edge |
+| Real-Time CDP + Customer Journey Analytics | Media Edge |
 | Adobe Analytics + Adobe Experience Platform solution | Media Edge |
 | Adobe Analytics only (already tracking) | Media Collection |
 
