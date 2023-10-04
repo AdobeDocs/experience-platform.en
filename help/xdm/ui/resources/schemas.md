@@ -39,11 +39,9 @@ Enter a human-friendly [!UICONTROL Schema display name] in the text field. Next,
 
 ![The [!UICONTROL Name and review] section of the [!UICONTROL Create schema] workflow with the [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/name-and-review.png)
 
-The [!UICONTROL Schema] [!UICONTROL Browse] tab appears. Your recently created schema is now available to edit in the the [!DNL Schema Editor] and appears in the list of available schemas.
+The [!UICONTROL Schema] [!UICONTROL Browse] tab appears. Your recently created schema is now listed in the Schema Library and available to edit in the the [!DNL Schema Editor].
 
-![The Schema Editor displaying your recently created schema.](../../images/ui/resources/schemas/schema-details.png)
-
-You can now start building the structure of the schema by [adding schema field groups](#add-field-groups) in the [!DNL Schema Editor].
+![The Schemas workspace Browse tab displaying your recently created schema.](../../images/ui/resources/schemas/example-schema.png)
 
 ## Edit an existing schema {#edit}
 
