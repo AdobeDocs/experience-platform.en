@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure the audience metadata settings for destinations built with Destination SDK.
 title: Audience metadata configuration
+exl-id: ae71df4f-b753-4084-835f-03559b4986cb
 ---
-
 # Audience metadata configuration
 
 When exporting data from Experience Platform to your destination, you might need specific audience metadata, like audience names or audience IDs, to be shared between Experience Platform and your destination.

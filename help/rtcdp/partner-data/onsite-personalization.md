@@ -1,12 +1,13 @@
 ---
 title: Use Partner-Aided Visitor Recognition to Personalize Onsite Experiences
 description: Learn how to use partner-aided visitor recognition to deliver personalized onsite experiences to your visitors.
+exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
 ---
 # Use partner-aided visitor recognition to personalize onsite experiences
 
 >[!AVAILABILITY]
 >
->This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
+>This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
 
 Learn how to use partner-aided recognition to deliver personalized experiences to your web property visitors. Use this tutorial to understand the implementation sequence of various elements in Experience Platform and other Experience Cloud solutions to display a personalized experience to authenticated and unauthenticated visitors.
 
@@ -43,6 +44,12 @@ To successfully implement this use case, you must use multiple areas of Real-Tim
   * [Edge segmentation](/help/segmentation/ui/edge-segmentation.md)
   * [Edge Personalization destinations](/help/destinations/destination-types.md#edge-personalization-destinations)
   * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (or a personalization platform of your choice. This use case tutorial highlights Adobe Target as personalization engine)
+
+## Video walkthrough {#video-walkthrough}
+
+View the video tutorial below for a walkthrough of how personalize onsite experiences for unknown visitors:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 

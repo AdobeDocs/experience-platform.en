@@ -375,7 +375,54 @@ The following is a completed source specification using [!DNL MailChimp Members]
 
 The following are examples of other pagination types supported by Self-Serve Sources (Batch SDK):
 
-#### `CONTINUATION_TOKEN`
+>[!BEGINTABS]
+
+>[!TAB Offset]
+
+This pagination type allows you to parse through results by specifying an index from where to start the resulting array, and a limit on how many results are returned. For example:
+
+```json
+
+"paginationParams": {
+        "type": "OFFSET",
+        "limitName": "limit",
+        "limitValue": "4",
+        "offSetName": "offset",
+        "endConditionName": "$.hasMore",
+        "endConditionValue": "Const:false"
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `type` | The type of pagination used to return data. |
+| `limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. |
+| `limitValue` | The number of records to be fetched in a page. | 
+| `offSetName` | The offset attribute name. This is required if pagination type is set to `offset`. |
+| `endConditionName` | A user-defined value that indicates the condition that will end the pagination loop in the next HTTP request. You must provide the attribute name on which you want to put the end condition. |
+| `endConditionValue` | The attribute value on which you want to put the end condition. |
+
+>[!TAB Pointer]
+
+ This pagination type allows you to use a `pointer` variable to point to a particular item that needs to be sent with a request. The pointer type pagination requires path in payload that point to next page. For example:
+
+```json
+{
+ "type": "POINTER",
+ "limitName": "limit",
+ "limitValue": 1,
+ "pointerPath": "paging.next"
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `type` | The type of pagination used to return data. |
+| `limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. |
+| `limitValue` | The number of records to be fetched in a page. | 
+| `pointerPath` | The pointer attribute name. This requires json path to the attribute that will point to next page. |
+
+>[!TAB Continuation token]
 
 A continuation token type of pagination returns a string token that signifies the existence of more items that could not be returned, due to a pre-determined maximum number of items that can be returned in a single response.
 
@@ -426,7 +473,7 @@ The following is an example of a response returned using continuation token type
 }
 ```
 
-#### `PAGE`
+>[!TAB Page]
 
 The `PAGE` type of pagination allows you to traverse through return data by number of pages starting from zero. When using `PAGE` type pagination, you must provide the number of records given in a single page.
 
@@ -455,7 +502,7 @@ The `PAGE` type of pagination allows you to traverse through return data by numb
 {style="table-layout:auto"}
 
 
-#### `NONE`
+>[!TAB None]
 
 The `NONE` pagination type can be used for sources that don't support any of the available pagination types. Sources that use the pagination type of `NONE` simply return all retrievable records when a GET request is made.
 
@@ -464,6 +511,8 @@ The `NONE` pagination type can be used for sources that don't support any of the
   "type": "NONE"
 }
 ```
+
+>[!ENDTABS]
 
 ### Advanced scheduling for Self-Serve Sources (Batch SDK)
 

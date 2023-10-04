@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure file formatting options for file-based destinations built with Adobe Experience Platform Destination SDK, via the `/destination-servers` endpoint.
 title: File formatting configuration
+exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
 ---
-
 # File formatting configuration
 
 Destination SDK supports a flexible set of features which you can configure according to your integration needs. Among these features is the support for [!DNL CSV] file formatting.

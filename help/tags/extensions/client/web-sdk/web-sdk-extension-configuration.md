@@ -1,8 +1,8 @@
 ---
 title: Configure the Web SDK tag Extension
 description: Learn how to configure the Experience Platform Web SDK tag extension in the Tags UI.
+exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
 ---
-
 # Configure the Web SDK tag extension
 
 The [!DNL Web SDK] tag extension sends data to Adobe Experience Cloud from web properties through the Experience Platform Edge Network.

@@ -15,7 +15,7 @@ exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
 Note the following details that are specific to [!DNL Google Display & Video 360] destinations:
 
 * Activated audiences are created programmatically in the Google platform.
-* The activation of audience backfills to the [!DNL Google Display & Video 360] destination is scheduled to occur 24-48 hours after an audience is first mapped to a destination connection. This update is in response to Google's policy to wait 24 hours until ingesting data and is meant to improve match rates between Real-time CDP and [!DNL Google Display & Video 360]. Note that this is a backend configuration applicable to this destination only and that is unrelated to any customer-configurable scheduling options in the UI.
+* The activation of audience backfills to the [!DNL Google Display & Video 360] destination is scheduled to occur 24-48 hours after an audience is first mapped to a destination connection. This update is in response to Google's policy to wait 24 hours until ingesting data and is meant to improve match rates between Real-Time CDP and [!DNL Google Display & Video 360]. Note that this is a backend configuration applicable to this destination only and that is unrelated to any customer-configurable scheduling options in the UI.
 
 >[!IMPORTANT]
 >

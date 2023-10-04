@@ -2,6 +2,7 @@
 title: Create a SAP Commerce source connection in the UI
 description: Learn how to create a SAP Commerce source connection using the Adobe Experience Platform UI.
 badge: Beta
+exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
 ---
 # Create a [!DNL SAP Commerce] source connection in the UI
 
@@ -243,4 +244,3 @@ The following is an example of mapping configurations for [!DNL SAP Commerce] da
 ![The mapping step of the sources workflow.](../../../../images/tutorials/create/ecommerce/sap-commerce/mapping-contacts.png)
 
 >[!ENDTABS]
-
