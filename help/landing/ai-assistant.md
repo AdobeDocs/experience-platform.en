@@ -159,46 +159,15 @@ For usage data queries, answers may not reflect the current state of the UI. The
 
 You will need to log into a sandbox to inquire about specific data related to objects like schemas, datasets, attributes, destinations and segments.
 
-### Supported data usage questions
+### Example data usage questions
 
-+++Select to view a list of supported data usage questions
++++
 
-The following is a list of currently supported data usage questions grouped by domain. 
-
-* List the attributes used for this segment?
-* How many segments are there in total?
-* Show me a list of segments that were last modified in the last month.
-* Which segments have been modified in the last week?
-* What is the profile count for {SEGMENT_NAME} segment?
-* List all duplicate segments. 
-* Show me segments created or updated in last 7 days.
-* What is the distribution of the number of profiles across segments?
-* How many fields are used in segmentation?
-* What is the total count of activated segments?
-* Which segments are activated?
-* How many duplicate segments are activated?
-* List segments that were created in the last year.
-* Show me segments that were last modified before {DATE}.
-* How many unique segment names are associated with the {SCHEMA_NAME} schema?
-* Which schemas are most commonly used across segments?
-* How many schemas do I have?
-* Which dataset(s) use {SCHEMA_NAME} schema?
-* List all schemas modified in the last week.
-* How many schemas are profile enabled?
-* List all the experience event class schemas?
-* Which datasets are ingested into the {SCHEMA_NAME} schema?
-* How many datasets have been ingested using the same schema?
-* How many datasets do I have?
-* Which datasets are used in each segment?
-* Which segments use {ATTRIBUTE_NAME} attribute? 
-* Which schemas have {ATTRIBUTE_NAME} attribute in them?
-* How many XDM schema attributes are not used in any segments?
-* In which dataset(s) is/are {ATTRIBUTE_NAME} XDM fields populated?
-* Which datasets have data for {ATTRIBUTE_NAME} attribute?
-* How many segments are activated for each destination?
-* Which segments are activated to the most number of destinations?
-* Do any of my segments have 0 profiles? 
-* How many dataflows do I have?
+| Question type | Description | Examples |
+| --- | --- | --- | 
+| Data lineage | Track usage of one or multiple objects across other Experience Platform objects | <ul><li>Which dataset(s) use {SCHEMA_NAME} schema?</li><li>How many datasets have been ingested using the same schema?</li><li>Which datasets have been used in activated segments?</li><li>List the schemas which have attributes used in activated segments.</li><li>Show me the segments which are activated to {DESTINATION_ACCOUNT_NAME} and have more than 1000 profiles.</li><li>Show me the attributes which are used in the activated segments which have been modified after Jan 2023.</li><li>List the schemas that are related to activated segments and were created in last 1 year.</li></ul> |
+| Distribution and aggregations | Summary-based questions about Experience Platform object usage | <ul><li>What is the percentage of activated segments?</li><li>How many fields are used in segmentation?</li><li>Which segments are activated to the most number of destinations?</li><li>List duplicate segments.</li><li>Show me the segments activated to {DESTINATION_ACCOUNT_NAME} and rank them by profile size.</li><li>What is the percentage of the segments which have not been activated but have more than 100 profiles. Show me their names.</li><li>List me the top 5 attributes used in activated segments based on their occurrence.</li></ul> |
+| Object lookup | Retrieve or access an Experience Platform object or it's properties. | <ul><li>Which datasets do not have any schema associated with them</li><li>List the attributes used for {SEGMENT_NAME}?</li><li>Give me the list of schemas which are profile enabled but have not been modified since their creation.</li><li>Which segments have been modified in the last week?</li><li>List me the segments which have the same segment definitions along with their creation date.</li><li>Which datasets are profile enabled and also include how many segments have been created from each dataset.</li><li>Show me the segment definition and modification date of {SEGMENT_NAME}.</li></ul>|
 
 +++
 
