@@ -15,7 +15,7 @@ Start here and follow the links below to understand all guardrails across the va
 * [Guardrails for [!DNL Query Service]](/help/query-service/guardrails.md)
 * [Guardrails for data activation through destinations](/help/destinations/guardrails.md)
 
-## Guardrail types
+## Guardrail types {#guardrail-types}
 
 Note that the two guardrail types across all Real-Time CDP areas and services are: 
 
@@ -26,7 +26,7 @@ Note that the two guardrail types across all Real-Time CDP areas and services ar
 
 {style="table-layout:auto"}
 
-## Real-Time CDP licensing and entitlement information
+## Real-Time CDP licensing and entitlement information {#product-descriptions}
 
 Additionally, refer to the product description links below for licensing and entitlement information based on the Real-Time CDP edition and tier you purchased
 
