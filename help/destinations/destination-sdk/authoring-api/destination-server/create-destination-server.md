@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to create a destination server through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to create a destination server through Adobe Experience Platform Destination SDK.
 title: Create a destination server configuration
+exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
 ---
-
 # Create a destination server configuration
 
 Creating a destination server is the first step in creating your own destination with Destination SDK. The destination server includes configuration options for the [server](../../functionality/destination-server/server-specs.md) and [templating](../../functionality/destination-server/templating-specs.md) specs, the [message format](../../functionality/destination-server/message-format.md), and the [file formatting](../../functionality/destination-server/file-formatting.md) options (for file-based destinations).

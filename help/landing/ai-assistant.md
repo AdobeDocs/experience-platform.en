@@ -4,6 +4,7 @@ description: Learn how to use Assistant to navigate and understand Experience Pl
 badge: Alpha
 hide: true
 hidefromtoc: true
+exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
 ---
 # Assistant for Adobe Experience Platform
 

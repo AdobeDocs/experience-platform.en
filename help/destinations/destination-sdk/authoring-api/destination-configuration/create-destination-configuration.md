@@ -1,8 +1,8 @@
 ---
 description: Learn how to structure an API call to create a destination configuration through Adobe Experience Platform Destination SDK.
 title: Create a destination configuration
+exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
 ---
-
 # Create a destination configuration
 
 This page exemplifies the API request and payload that you can use to create your own destination configuration, using the `/authoring/destinations` API endpoint.

@@ -533,6 +533,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 ## U
 
+**UCPA**: The [[!DNL Utah Consumer Privacy Act]](https://le.utah.gov/~2022/bills/static/SB0227.html) creates the right for a consumer to know what personal data a business collects, how the business uses their personal data, and whether the business sells their personal data. Consumers can require the business to delete or stop selling their personal data.
+
 **Union schema**: A union schema is a consolidation of schemas that share the same class and have been enabled for [!DNL Real-Time Customer Profile]. Multiple union schemas can exist for an organization, but there can only be one union schema per class.
 
 ## V

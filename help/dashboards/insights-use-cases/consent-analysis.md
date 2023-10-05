@@ -1,6 +1,7 @@
 ---
 title: Consent Analysis and Tracking
-description: Learn how to build a consent analysis dashboard to track how user consent has trended over time. 
+description: Learn how to build a consent analysis dashboard to track how user consent has trended over time.
+exl-id: 34accae5-8b4f-4281-8333-187a91db8199
 ---
 # Consent analysis and tracking
 

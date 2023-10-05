@@ -256,7 +256,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 ## CREATE DATABASE
 
-The `CREATE DATABASE` command creates an ADLS database.
+The `CREATE DATABASE` command creates an Azure Data Lake Storage (ADLS) database.
 
 ```sql
 CREATE DATABASE [IF NOT EXISTS] db_name
@@ -290,7 +290,7 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 ## CREATE VIEW
 
-The following syntax defines a `CREATE VIEW` query:
+The following syntax defines a `CREATE VIEW` query for a dataset. This dataset can be an ADLS or accelerated store dataset.
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -309,6 +309,46 @@ CREATE VIEW V1 AS SELECT color, type FROM Inventory
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
 
+The following syntax defines a `CREATE VIEW` query which creates a view in the context of a database and schema.
+
+**Example**
+
+```sql
+CREATE VIEW db_name.schema_name.view_name AS select_query
+CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
+```
+
+| Parameters | Description|
+| ------ | ------ |
+| `db_name`  | The name of the database. |
+| `schema_name` | The name of the schema. |
+| `view_name` | The name of the view to be created. |
+| `select_query` | A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries). |
+
+**Example**
+
+```sql
+CREATE VIEW <dbV1 AS SELECT color, type FROM Inventory;
+
+CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory;
+```
+
+## SHOW VIEWS
+
+The following query shows the list of views.
+
+```sql
+SHOW VIEWS;
+```
+
+```console
+ Db Name  | Schema Name | Name  | Id       |  Dataset Dependencies | Views Dependencies | TYPE
+----------------------------------------------------------------------------------------------
+ qsaccel  | profile_agg | view1 | view_id1 | dwh_dataset1          |                    | DWH
+          |             | view2 | view_id2 | adls_dataset          | adls_views         | ADLS
+(2 rows)
+```
+
 ## DROP VIEW
 
 The following syntax defines a `DROP VIEW` query:
@@ -320,7 +360,7 @@ DROP VIEW [IF EXISTS] view_name
 | Parameters | Description|
 | ------ | ------ |
 | `IF EXISTS` | If this is specified, no exception is thrown if the view does **not** exist. |
-| `view_name` | The name of view to be deleted. |
+| `view_name` | The name of the view to be deleted. |
 
 **Example**
 
