@@ -577,4 +577,4 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 **Response**
 
-A successful response returns your newly added API credential.
+A successful response returns HTTP status 204 (No Content) and a blank body.
