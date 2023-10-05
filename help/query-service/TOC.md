@@ -23,6 +23,8 @@ feature: Queries
         - [Overview](data-distiller/derived-attributes/overview.md)
         - [Seamless SQL flow](data-distiller/derived-attributes/seamless-sql-flow.md)
         - [Create decile-based derived attributes](data-distiller/derived-attributes/decile-based-derived-attributes.md)
+    - Machine learning pipelines {#ml-pipelines}
+        - [AI/ML Data pipeline enrichment](data-distiller/ml-pipelines/ai-ml-data-pipeline-enrichment.md)
 - Use cases {#use-cases}
     - [Abandoned browse](use-cases/abandoned-browse.md)
     - [Attribution analysis](use-cases/attribution-analysis.md)
