@@ -207,15 +207,13 @@ Select the flag icon to provide further reports on your experience using the Ass
 
 +++
 
-
-
-## Chat management
-
 ## Additional information 
 
 Refer to this section for additional information on the Assistant for Experience Platform.
 
 ### Caveats and limitations
+
+The following section outlines current caveats and limitations to considers when using Assistant.
 
 #### Conversational experience
 
@@ -282,6 +280,8 @@ The Assistant may give an inaccurate impression of what it can do. It may answer
 | "Can you do...?" | The Assistant may answer yes, even though it cannot. |
 
 ### Tips
+
+The following section outlines some tips and workarounds to consider when using Assistant.
 
 #### Questions may be answered with the wrong information source
 
