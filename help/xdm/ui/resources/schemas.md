@@ -65,7 +65,7 @@ Within the Schema Editor you can also conduct quick actions to copy the JSON str
 
 The Copy JSON structure functionality allows you to see what a sample payload would look like while you are still building the schema and your data pipelines. It is especially helpful for situations where there are complex object map structures in the schema such as an identity map.
 
-![The Schema Editor with the More button highlighted and the drop down options displayed.](../images/tutorials/create-schema/more-actions.png)
+![The Schema Editor with the More button highlighted and the drop down options displayed.](../../images/tutorials/create-schema/more-actions.png)
 
 ## Display name toggle {#display-name-toggle}
 
