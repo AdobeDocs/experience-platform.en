@@ -20,7 +20,7 @@ This document covers how to schedule and automate dataset expirations in the Pla
 
 >[!NOTE]
 >
->Dataset Expiration does not currently delete data from the Adobe Experience Platform Edge Network. However, there is no possibility that data stays inside the Edge Network after the dataset is set to expire. This is because the 14-day service license agreement for Dataset Expiration coincides with the 14-day period where data exists inside the Edge Network before being discarded.
+>Dataset Expiration does not currently delete data from the Adobe Experience Platform Edge Network. However, there is no possibility that data stays inside the Edge Network after the dataset is set to expire. This is because the 15-day service license agreement for Dataset Expiration overlaps with the 14-day period where data exists inside the Edge Network before being discarded.
 
 ## Schedule a dataset expiration {#schedule-dataset-expiration}
 
