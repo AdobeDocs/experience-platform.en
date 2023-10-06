@@ -5,10 +5,6 @@ exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 ---
 # Data hygiene in Adobe Experience Platform
 
->[!IMPORTANT]
->
->Data hygiene is currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**. These capabilities are due for general release in the near future. For more information on their upcoming availability, please speak to your Adobe service representative. You can, however, immediately [delete datasets through the [!UICONTROL Datasets] UI](../catalog/datasets/user-guide.md#delete).
-
 Adobe Experience Platform provides a robust set of tools to manage large, complicated data operations in order to orchestrate consumer experiences. As data is ingested into the system over time, it becomes increasingly important to manage your data stores so that data is used as expected, is updated when incorrect data needs correcting, and is deleted when organizational policies deem it necessary.
 
 <!-- Platform's data hygiene capabilities allow you to manage your stored data through the following:
