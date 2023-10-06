@@ -1,4 +1,15 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/hygiene/home.html,https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/home.html
+https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html,https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/overview.html
+https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/browse.html,https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/browse.html
+https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/record-delete.html,https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/record-delete.html
+https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html,https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html
+https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/overview.html,https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/api/overview.html
+https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/dataset-expiration.html,https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/api/dataset-expiration.html
+https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/jobs.html,https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/api/jobs.html
+https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/quota.html,https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/api/quota.html
+https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/workorder.html,https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/api/workorder.html
+
 https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/customer-managed-keys.html,https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/customer-managed-keys/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/customer-ai-profiles.html,https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html
 https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/customer-ai-audiences.html,https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/audiences.html
