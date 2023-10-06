@@ -19,17 +19,20 @@ You can use the sandbox tooling feature to select different objects and export t
 
 ## Objects supported for sandbox tooling {#supported-objects}
 
+>[!NOTE]
+>
+>The full sandbox package only contains the supported object types. It does not contain all of the sandbox's objects.
+
 The table below lists objects that are currently supported for sandbox tooling:
 
-| Platform | Object |
-| --- | --- |
-| [!DNL Adobe Journey Optimizer]| Journeys |
-| Customer Data Platform | Sources |
-| Customer Data Platform | Segments |
-| Customer Data Platform | Identities |
-| Customer Data Platform | Policies |
-| Customer Data Platform | Schemas |
-| Customer Data Platform | Datasets |
+| Platform | Object | Description |
+| --- | --- | --- |
+| [!DNL Adobe Journey Optimizer]| Journeys | The **[!UICONTROL Surface object]** is not included in the package and will need to be created and added manually to the journey in the target sandbox. Customer `events` and `actions` are also not recorded. |
+| Customer Data Platform | Sources | The source account credentials are not replicated in the target sandbox for security reasons. These will require manual updating. |
+| Customer Data Platform | Audiences | Currently, only the audience type **[!UICONTROL Segmentation service]** is supported. Existing labels for consent and governance will be copied over in the same import job. |
+| Customer Data Platform | Identities |  |
+| Customer Data Platform | Schemas | Existing labels for consent and governance will be copied over in the same import job. |
+| Customer Data Platform | Datasets |  |
 
 The following objects are imported but are in draft or disabled status:
 
@@ -47,6 +50,10 @@ The edge cases listed below are not included in the package:
 * Schema relationships
 
 ## Export objects into a package {#export-objects}
+
+>[!NOTE]
+>
+>All export actions are recorded in the audit logs.
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_exit_package"
@@ -114,6 +121,10 @@ You are returned to the **[!UICONTROL Packages]** tab in the [!UICONTROL Sandbox
 
 ## Import a package to a target sandbox {#import-package-to-target-sandbox}
 
+>[!NOTE]
+>
+>All import actions are recorded in the audit logs.
+
 To import the package into a target sandbox, navigate to the Sandboxes **[!UICONTROL Browse]** tab and select the plus (+) option beside the sandbox name.
 
 ![The sandboxes **[!UICONTROL Browse]** tab highlighting the import package selection.](../images/ui/sandbox-tooling/browse-sandboxes.png)
@@ -143,6 +154,10 @@ You are returned to the [!UICONTROL Package object and dependencies] page. From 
 ![The [!UICONTROL Package object and dependencies] page shows a list of assets included in the package, highlighting [!UICONTROL Finish].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
 ## Export and import an entire sandbox 
+
+>[!NOTE]
+>
+>All export and import actions are recorded in the audit logs.
 
 ### Export an entire sandbox {#export-entire-sandbox}
 
