@@ -21,7 +21,7 @@ You can use the sandbox tooling feature to select different objects and export t
 
 >[!NOTE]
 >
->The full sandbox package only contains the supported object types. It does not contain all of the sandbox's objects.
+>The full sandbox package only contains the supported object types and does not contain all of the sandbox's objects.
 
 The table below lists objects that are currently supported for sandbox tooling:
 
