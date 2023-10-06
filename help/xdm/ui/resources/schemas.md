@@ -39,11 +39,9 @@ Enter a human-friendly [!UICONTROL Schema display name] in the text field. Next,
 
 ![The [!UICONTROL Name and review] section of the [!UICONTROL Create schema] workflow with the [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../../images/ui/resources/schemas/name-and-review.png)
 
-The [!UICONTROL Schema] [!UICONTROL Browse] tab appears. Your recently created schema is now available to edit in the the [!DNL Schema Editor] and appears in the list of available schemas.
+The [!UICONTROL Schema] [!UICONTROL Browse] tab appears. Your recently created schema is now listed in the Schema Library and available to edit in the the [!DNL Schema Editor].
 
-![The Schema Editor displaying your recently created schema.](../../images/ui/resources/schemas/schema-details.png)
-
-You can now start building the structure of the schema by [adding schema field groups](#add-field-groups) in the [!DNL Schema Editor].
+![The Schemas workspace Browse tab displaying your recently created schema.](../../images/ui/resources/schemas/example-schema.png)
 
 ## Edit an existing schema {#edit}
 
@@ -60,6 +58,14 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 >You can use the workspace's search and filtering capabilities to help find the schema easier. See the guide on [exploring XDM resources](../explore.md) for more information.
 
 Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add field groups](#add-field-groups) to the schema (or [add individual fields](#add-individual-fields) from those groups), [edit field display names](#display-names), or [edit existing custom field groups](./field-groups.md#edit) if the schema employs any.
+
+## More actions {#more}
+
+Within the Schema Editor you can also conduct quick actions to copy the JSON structure of the schema or delete the schema if it has not been enabled for Real-Time Customer Profile or has associated datasets. Select [!UICONTROL More] at the top of the view to display a drop down with quick actions. 
+
+The Copy JSON structure functionality allows you to see what a sample payload would look like while you are still building the schema and your data pipelines. It is especially helpful for situations where there are complex object map structures in the schema such as an identity map.
+
+![The Schema Editor with the More button highlighted and the drop down options displayed.](../../images/tutorials/create-schema/more-actions.png)
 
 ## Display name toggle {#display-name-toggle}
 
