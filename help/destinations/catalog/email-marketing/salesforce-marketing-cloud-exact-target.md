@@ -52,9 +52,9 @@ When activating audiences to the [!DNL (API) Salesforce Marketing Cloud] destina
 
 For each audience that you activate from Platform to [!DNL Salesforce], you must have an attribute of type `Text` linked to the [!DNL Email Demographics] data extension within [!DNL Salesforce Marketing Cloud]. Use the [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] to create attributes. Refer to the [!DNL Salesforce Marketing Cloud] documentation to [create attributes](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) if you need guidance on creating attributes.
 
->[!NOTE]
+>[!WARNING]
 >
-> You can use the same attribute name for multiple audiences, with a caveat, if an identity aka `contactKey` is present across audiences, for that identity the status of the older executions will be overwritten by the audience status from the most recent execution.
+> Do not use the same attribute for the audience status across multiple audiences within a single execution. The request will be formed incorrectly with the **[!UICONTROL Mapping ID]** attribute value and audience status from each audience being included and execution will result in an Error.
 
 The attribute field names are used for the [!DNL (API) Salesforce Marketing Cloud] target field during the **[!UICONTROL Mapping]** step. You can define the field character with a maximum of 4000 characters, according to your business requirement. See the [!DNL Salesforce Marketing Cloud] [Data Extensions Data Types](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&type=5) documentation page for additional information on attribute types.
 
@@ -236,11 +236,15 @@ As shown the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]**
 
 Repeat this section for each activated Platform segment.
 
-Depending on your use case all activated audiences can be mapped to the same [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** or to different **[!UICONTROL FIELD NAME]** in [!DNL (API) Salesforce Marketing Cloud]. A typical example based on the image shown above could be.
+A typical example based on the image shown above could be.
 | [!DNL (API) Salesforce Marketing Cloud] segment name | [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** | 
 | --- | --- | --- |
 | salesforce mc audience 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | salesforce mc audience 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
+
+>[!WARNING]
+>
+> Do not use the same attribute for the audience status across multiple audiences within a single execution. The request will be formed incorrectly with the **[!UICONTROL Mapping ID]** attribute value and audience status from each audience being included and execution will result in an Error.
 
 ## Validate data export {#exported-data}
 
@@ -293,7 +297,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
-|October 2023|Documentation update|<ul><li>We updated the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section and in general removed unnecessary references to attribute groups across the document.</li> <li>We added a note to indicate that multiple audiences can be mapped to a single attribute within the [!DNL Salesforce Marketing Cloud] [!DNL Email Demographics] data extension, with appropriate caveats.</li> <li>We updated the mapping table within the [Mapping considerations and example](#mapping-considerations-example) section, the mapping for `Email Address` attribute within the `Email Addresses` data extension is marked mandatory, this requirement was mentioned in the callout marked IMPORTANT but was not omitted from the table.</li></ul>|
+|October 2023|Documentation update|<ul><li>We updated the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section and in general removed unnecessary references to attribute groups across the document.</li> <li>Updated documentation to indicate that attributes for the audiences statuses should be created within [!DNL Salesforce Marketing Cloud] inside the [!DNL Email Demographics] data extension only.</li> <li>We updated the mapping table within the [Mapping considerations and example](#mapping-considerations-example) section, the mapping for `Email Address` attribute within the `Email Addresses` data extension is marked mandatory, this requirement was mentioned in the callout marked IMPORTANT but was not omitted from the table.</li></ul>|
 |April 2023|Documentation update|<ul><li>We corrected a statement and reference link in the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section to call out that [!DNL Salesforce Marketing Cloud Engagement] is a mandatory subscription to use this destination. The section previously called out erroneously that users need a subscription to the Marketing Cloud **Account** Engagement to proceed.</li> <li>We added a section under [prerequisites](#prerequisites) for [roles and permissions](#prerequisites-roles-permissions) to be assigned to the [!DNL Salesforce] user for this destination to work. (PLATIR-26299)</li></ul>|
 |February 2023|Documentation update|We updated the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section to include a reference link calling out that [!DNL Salesforce Marketing Cloud Engagement] is a mandatory subscription to use this destination.|
 |February 2023|Functionality update|We fixed an issue where an incorrect configuration in the destination was causing a malformed JSON to be sent to Salesforce. This resulted in some users seeing high numbers of identities failed on activation. (PLATIR-26299)|
