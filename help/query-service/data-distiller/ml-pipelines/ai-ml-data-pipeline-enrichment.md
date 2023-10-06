@@ -1,10 +1,29 @@
 ---
 title: AI/ML Data Pipeline Enrichment
-description: The Adobe Experience Platform UI provides a dashboard through which you can view important information about your organization's Data Distiller license usage.
+description: Learn how to create a training and scoring a propensity model to predict subscription conversions from Adobe Experience Platform data.  
 ---
 # AI/ML data pipeline enrichment
 
-Data Distiller enables data scientists and engineers to enrich their machine learning pipelines with high-value customer experience data that has been collected and curated in Adobe Experience Platform. From Python notebooks in their machine learning environments, data scientists can leverage Data Distiller capabilities to explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance their AI/ML models.
+Use Data Distiller to enrich your machine learning pipelines with high-value customer experience data that has been collected and curated in Adobe Experience Platform. 
+
+From Python notebooks in their machine learning environments, data scientists can leverage Data Distiller capabilities to explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance their AI/ML models.
+
+This guide illustrates how to use your preferred machine learning tools to build custom models that support your marketing use cases in Adobe Experience Platform. The document provides instructions for getting started with certain [!DNL Python] notebooks that illustrate data pipeline enrichment.
+
+## Prerequisites 
+
+## Getting started
+
+This tutorial requires a working understanding of the various aspects of Adobe Experience Platform. Before beginning this tutorial, please review the documentation for the following concepts:
+
+- How to [Authenticate and access Experience Platform APIs](../../../landing/api-authentication.md)
+- Sandboxes: [Attribute-based access control permissions](../../../access-control/abac/overview.md) and how to create and manage roles, as well as assign the desired resource permissions for these roles.
+- Data Governance: How to [apply data usage labels to datasets and fields, categorizing each](../../../data-governance/labels/overview.md) according to related data governance policies and access control policies.
+
+<!-- ABAC uses (notes):
+label Experience Data Model (XDM) schema fields with labels that define organizational or data usage scopes.
+use the user and role administration interface to define access policies surrounding XDM schema fields
+manage access to specific segments -->
 
 Data Distiller Story:
 
@@ -56,9 +75,9 @@ README contents:
 - [Troubleshooting](#troubleshooting)
 - [Helpful resources](#helpful-resources)
 
-## Intended use
+## Intended use {#intended-use}
 
-The sample notebooks in this repository provide a stylized example of training and scoring a propensity model to predict subscription conversions from AEP data. The first notebook will generate synthetic datasets in an AEP sandbox that will be used in subsequent notebooks to illustrate an end-to-end flow that includes:
+The sample notebooks in this repository provide a stylized **example of training and scoring a propensity model to predict subscription conversions from AEP data**. The first notebook will generate synthetic datasets in an AEP sandbox that will be used in subsequent notebooks to illustrate an end-to-end flow that includes:
 
 - Exploring and featurizing data from AEP
 - Making the prepared training data available in your machine learning environment (we use Databricks ML as an example, but you can modify the sample notebooks to use your own ML environment)
@@ -82,30 +101,32 @@ The sample notebooks are intended to be used in one of two ways:
 >   
 > Experience Platform provides data governance tools for you to manage your data usage obligations and help minimize this risk. You are responsible ensuring that data in the Experience Platform is properly labeled before querying or exporting that data. This includes manually re-applying labels to derived datasets created from query output.  Derived datasets from queries do not support the processing of sensitive personal data. You are responsible for understanding the limitations and obligations of your data and how you use that data in Experience Platform and the destination platform, which may have its own rules and obligations for incoming and outgoing data.  Learn more about [data governance tools](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=en) in Experience Platform.
 
-## Overview of CMLE notebooks
+## Overview of CMLE notebooks {#overview-of-cmle-notebooks}
 
 ![CMLE workflow and notebooks](<img/CMLE Notebooks.png>)
 
-The end-to-end workflow can be divided into 3 broad phases based on the services being used to implement the steps in the workflow. Initial exploration and preparation of AEP data relies on AEP services. Model training and scoring leverages tooling in the user's cloud-based ML environment (typically a ML platform such as Databricks ML, AWS Sagemaker, DataRobot, etc). Ingesting scores back into AEP and any code-based audience creation and activation based on those scores would again rely on AEP services. However, all of these phases can be executed in one or more notebooks from the user's ML environment without the user needing to switch contexts between AEP and their cloud-based ML tools.
+The end-to-end workflow can be divided into 3 broad phases based on the services used to implement the workflow. Initial exploration and preparation of AEP data relies on AEP services. Model training and scoring leverages tooling in the user's cloud-based ML environment (typically a ML platform such as Databricks ML, AWS Sagemaker, DataRobot, etc). Ingesting scores back into AEP and any code-based audience creation and activation based on those scores would again rely on AEP services. However, all of these phases can be executed in one or more notebooks from the user's ML environment without the user needing to switch contexts between AEP and their cloud-based ML tools.
 
 We have divided the typical steps of this end-to-end flow into a set of modular notebooks which together demonstrate the steps involved in typical machine learning project involving AEP data. This makes it easier to use the notebooks as a reference for implementing specific activities, and to select and adapt code from the relevant notebooks to implement a real-world use case. In practice, a data scientist may prepare a single notebook the implements the end-to-end pipeline for their ML project. Alternatively, a data scientist may simply adapt the sample code for querying AEP data and making it available in their ML environment before continuing the project use UI-based features in their ML platform.
 
 The sample notebooks included in this repository are briefly described below. Detailed documentation for each notebook is interspersed with the code in the notebooks themselves
 
 
-### [Generate synthetic data](</notebooks/SyntheticData.ipynb>)
+### Generate synthetic data {#generate-synthetic-data}
+
+<!-- Need access to the notebook: https://adobe-my.sharepoint.com/notebooks/SyntheticData.ipynb is restricted.  -->
 
 This notebook provides code for generating datsets of synthetic profiles and experience events in your AEP that will be used to illustrate the CMLE workflow.
 
-### EDA and Featurization with Query Service
+### EDA and Featurization with Query Service {#eda-and-featurization-with-query-service}
 
 This notebook includes examples of exploratory analysis on AEP datasets using interactive queries via AEP Query Service. These are followed with examples of featurization queries to create a training dataset for the example propensity model.
 
-### Export training data
+### Export training data {#export-training-data}
 
 This notebook illustrates exporting the training dataset to cloud storage that can be read by the user's ML tools.
 
-### Train a propensity model
+### Train a propensity model {#train-a-propensity-model}
 
 This notebook illustrates training a propensity model. It assumes Databricks ML as the user's ML environment, but is written generically (i.e. without heavy use of Databricks-specific features/APIs) so that it can be adapted to other platforms.
 
