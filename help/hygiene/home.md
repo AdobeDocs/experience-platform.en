@@ -43,7 +43,7 @@ The following takes place when a [dataset expiration request](./ui/dataset-expir
 | Profile count updated | 30 hours | Depending on the contents of the dataset being deleted, some profiles may be removed from the system if all of their component attributes are tied to that dataset. 30 hours after the dataset is deleted, any resulting changes in overall profile counts are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
 | Audiences updated | 48 hours | Once all affected profiles are updated, all related [audiences](../segmentation/home.md) are updated to reflect their new size. Depending on the dataset that was removed and the attributes that you are segmenting on, the size of each audience could increase or decrease as a result of the deletion. |
 | Journeys and destinations updated | 50 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
-| Hard deletion complete | 14 days | All data related to the dataset is hard deleted from the data lake. The [status of the data lifecycle job](./ui/browse.md#view-details) that deleted the dataset is updated to reflect this. |
+| Hard deletion complete | 15 days | All data related to the dataset is hard deleted from the data lake. The [status of the data lifecycle job](./ui/browse.md#view-details) that deleted the dataset is updated to reflect this. |
 
 {style="table-layout:auto"}
 
