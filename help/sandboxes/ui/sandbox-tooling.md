@@ -25,7 +25,7 @@ You can use the sandbox tooling feature to select different objects and export t
 
 The table below lists objects that are currently supported for sandbox tooling:
 
-| Platform | Object | Description |
+| Platform | Object | Details |
 | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer]| Journeys | The **[!UICONTROL Surface object]** is not included in the package and will need to be created and added manually to the journey in the target sandbox. Customer `events` and `actions` are also not recorded. |
 | Customer Data Platform | Sources | The source account credentials are not replicated in the target sandbox for security reasons. These will require manual updating. |
