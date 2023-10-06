@@ -103,6 +103,10 @@ This document provides definitions for key terms related to privacy regulations 
 
 **PDPA**: The [!DNL Personal Data Protection Act] of Thailand (PDPA) was introduced to safeguard Thai data owners from the illegal collection, use, or disclosure of their personal data. Inspired by the European Union's GDPR, the regulation grants Thai citizens the right to request access to, or the deletion of, their stored personal data.
 
+<!-- Not yet released:
+**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
+-->
+
 **Personal data**: Any information related to a natural person or 'Data Subject', that can be used to directly or indirectly identify the person.
 
 **Personal data breach**: A breach of security leading to the accidental or unlawful access to, destruction, misuse, and so on, of personal data.
