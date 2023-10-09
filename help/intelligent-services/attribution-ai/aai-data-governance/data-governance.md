@@ -4,6 +4,7 @@ solution: Experience Platform
 feature: Attribution AI
 title: Data Governance in Attribution AI
 description: Adobe Experience Platform provides several services and tools that allow you to confidently control your collected experience data in order to comply with your business practices, legal obligations, and development process.
+exl-id: 70b04061-0cb0-4b3e-9dfa-d49cc0ef1be0
 ---
 # Attribution AI and Data Governance
 

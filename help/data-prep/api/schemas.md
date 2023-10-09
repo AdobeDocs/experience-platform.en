@@ -16,7 +16,7 @@ Schemas can be used with Mapper to ensure the data you've ingested into Adobe Ex
 
 ## Get all schemas
 
-You can retrieve a list of all available Mapper schemas for your IMS Organization by making a GET request to the `/schemas` endpoint.
+You can retrieve a list of all available Mapper schemas for your organization by making a GET request to the `/schemas` endpoint.
 
 **API format**
 
@@ -37,7 +37,7 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 
 **Request**
 
-The following request retrieves the last two created schemas for your IMS Organization.
+The following request retrieves the last two created schemas for your organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0&limit=2 \

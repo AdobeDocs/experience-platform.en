@@ -3,11 +3,7 @@ title: Google Data Layer Extension
 description: Learn about the Google Client Data Layer tag extension in Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
 ---
-# Google Data Layer extension (Beta)
-
->[!IMPORTANT]
->
->This extension is currently in beta and has not been fully tested in production.
+# Google Data Layer extension
 
 The Google Data Layer extension allows you to use a Google data layer in your tags implementation. The extension can be used independently or simultaneously with Google solutions and with Google's open source [Data Layer Helper Library](https://github.com/google/data-layer-helper).
 
@@ -15,45 +11,49 @@ The Helper Library provides similar event-driven functionality to the Adobe Clie
 
 ## Maturity
 
-Version 1.0.x of the extension is a beta. This extension has not been fully tested in production.  
+Version 1.2.x is a late beta which is in production use.
 
 ## Installation
 
-To install the extension, navigate to the extension catalog in the Experience Platform UI or Data Collection UI and select **Google Data Layer**. 
+To install the extension, navigate to the extension catalog in the Data Collection UI and select **[!UICONTROL Google Data Layer]**.
 
-Once installed, the extension creates or accesses a data layer every time the tag library loads on your website.      
+Once installed, the extension creates or accesses a data layer on every load of the Adobe Experience Platform Tags library.     
 
 ## Extension view
 
-When configuring the extension (either while installing the extension or by selecting **[!UICONTROL Configure]** from the extension catalog) you must define the name of the data layer that the extension consumes. If no data layer with the configured name is present when the library is loaded, the extension creates one instead.
+The extension configuration can be used to define the name of the data layer that the extension consumes. If no data layer with the configured name is present when Adobe Experience Platform Tags is loaded, the extension creates one.
+
+The data layer name default is the Google default name `dataLayer`.
 
 >[!NOTE]
 >
->It does not matter whether Google or Adobe code loads first and creates the data layer. Both systems will create the data layer if not present, or use the existing data layer.
-
-By default, the data layer uses the Google default name `dataLayer`.
+>It does not matter whether Google or Adobe code loads first and creates the data layer. Both systems behave the same - create the data layer if it is not present or use the existing data layer. 
 
 ## Events
 
-The extension allows you to listen for changes (events) within the data layer. An event can be any of the following:
+>[!NOTE]
+>
+>The word _event_ is overloaded when an event-driven data layer is used in Adobe Experience Platform Tags. _Events_ can be:
+> - Adobe Experience Platform Tags events (Library Loaded and so on).
+> - JavaScript events.
+> - Data pushed to the data layer with the _event_ keyword.
 
-* Tag events (such as a library being loaded)
-* JavaScript events
-* Data pushed to the data layer with the `event` keyword.
+The extension provides you with the possibility to listen for changes on the data layer. 
 
-It is important to understand the use of the [`event` keyword](https://developers.google.com/tag-platform/devguides/datalayer#use_a_data_layer_with_event_handlers) when data is pushed to a Google data layer, similarly to the Adobe Client Data Layer. The `event` keyword changes the behavior of the Google data layer, and therefore the extension's behavior updates accordingly.
-
-The sections below outline the different event types that the extension can listen for.
+>[!NOTE]
+>
+>It is important to understand the use of the _event_ keyword when data is pushed to a Google data layer, similarly to the Adobe Client Data Layer. The _event_ keyword changes the behavior of the Google data layer and therefore this extension.  
+> Please read the Google documentation or do research if you are unsure on this point.
 
 ### Listen for all pushes to the data layer
 
-If you select this option, the extension listens for any change made to the data layer.
+If you select this option, your event listener listens to any change made to the data layer.
 
 ### Listen for pushes excluding events
 
-If you select this option, the extension listens for anything being pushed to the data layer, excluding events.
+If you select this option, your event listener listens to any push of data to the data layer, excluding events.
 
-The following example push event would be tracked by the listener:
+The following example push events would be tracked by the listener:
 
 ```js
 dataLayer.push({"data":"something"})
@@ -68,7 +68,7 @@ dataLayer.push({"event":"myevent","data":"something"})
 
 ### Listen for all events
 
-If you select this option, the extension listens for any event pushed to the data layer.
+If you select this option, your event listener listens to any event pushed to the data layer.
 
 The following example push events would be tracked by the listener:
 
@@ -85,7 +85,7 @@ dataLayer.push({"data":"something"})
 
 ### Listen for specific event
 
-If you want to listen for a specific event, select this option so the event listener tracks any events that match a specific string.
+In the case that you specify an event, then the event listener tracks any events that match a specific string.
 
 For example, setting `myEvent` when using this configuration results in the listener only tracking the following push event:
 
@@ -93,7 +93,9 @@ For example, setting `myEvent` when using this configuration results in the list
 dataLayer.push({"event":"myEvent"})
 ```
 
-You can also use a regex string to match event names. For example, setting `myEvent\d` would track events starting with `myEvent` followed by a digit:
+A (ECMAScript / JavaScript) regex can be used to match event names.  
+
+For example, setting 'myEvent\d' would track `myEvent` with a digit (\d):
 
 ```js
 dataLayer.push({"event":"myEvent1"})
@@ -102,11 +104,13 @@ dataLayer.push({"event":"myEvent2"})
 
 ## Actions
 
-The sections below outline the different actions that the extension can perform when included in a [rule](../../../ui/managing-resources/rules.md).
-
 ### Push to Data Layer {#push-to-data-layer}
 
-This action pushes JSON content to the data layer itself, making it possible to use data elements directly in JSON payloads. Within the provided JSON editor, you can reference data elements using percent notation (for example, `%dataElementName%`).
+The extension provides you with two actions to push JSON to the data layer; a free text field to manually create the JSON to be pushed, and from version 1.2.0, a key-value multifield dialog.
+
+#### Free text JSON
+
+The free text action makes it possible to use data elements directly in the JSON. Within the JSON editor, data elements should be referenced using percent notation. For example, `%dataElementName%`.
 
 ```json
 {
@@ -118,27 +122,27 @@ This action pushes JSON content to the data layer itself, making it possible to 
 }
 ```
 
+#### Key-Value multifield
+
+The newer key-value multifield dialog is a more user-friendly interface that allows a push to be configured without manually writing JSON.   
+
 ### Google DL Reset to Computed State
 
->[!NOTE]
->
->This action is available from v1.0.5 onward.
-
-This action resets the data layer. If used in a rule which processes a Google data layer change, the data layer is reset to the computed state of the data layer at the time the rule was triggered. If the action is used in a rule which does not process a Google data layer change, the action empties the data layer.
+The extension provides you with an action to reset the data layer. If used in a rule which processes a Google data layer change, the data layer is reset to the computed state of the data layer at the time the rule was triggered. If the action is used in a rule which does not process a Google data layer change, the action empties the data layer.
 
 ## Data elements
 
-The extension provides a unique data element that accesses the data layer using a key (for example, `page.url` in the [snippet above](#push-to-data-layer)).
+The provided data element can be used during the execution of a rule triggered by a Google data layer change (push event) or in an unrelated rule such as Library Loaded. In the former case, the data element returns a value taken from the computed state at the time of the data layer change. In the latter case, the computed state at the time of rule execution is used.  
 
-The data element can provide any of the following:
+A toggle switch allows you to select whether the data element should return values from the entire computed state, or only from event information (if used in a rule triggered by a data layer change).
 
-* A specific value from the data layer (for example, `page.url`)
-* The entire data layer array (empty key field)
-* Values from a data layer event by using the key (if the `event` keyword was used)
-* The entire event object (empty key field)
+The data element can therefore return:
 
-The extension always gives priority to event information. If a data layer `event` is being processed, values are always read from that event. If an `event` is not present, values are read from the directly data layer instead.
+- Empty field: data layer computed state.
+- Field with key (such as page.previous_url in the example above): value of the key in the event object or computed state.
 
 ## Additional Information
 
-Additional information is available in the [project README](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md) and in the extension's data element and event dialogs.
+The extension's data element and event dialogs contain detailed usage information and examples.
+
+Additional general information is in the [project README](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)

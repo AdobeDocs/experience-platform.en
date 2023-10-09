@@ -2,6 +2,7 @@
 keywords: Experience Platform;managing tags;tags;
 title: Managing Unified Tags
 description: This document provides information on managing unified tags in Adobe Experience Cloud
+exl-id: 179b0618-3bd3-435c-9d17-63681177ca47
 ---
 # Managing Tags guide
 

@@ -3,6 +3,7 @@ title: Documentation Self-Service Template for Streaming SDK UI
 description: Learn how to bring streaming data from a source to Adobe Experience Platform using the UI.
 hide: true
 hidefromtoc: true
+exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
 ---
 # Create a source connection and dataflow to stream *YOURSOURCE* data using the UI
 
@@ -18,7 +19,7 @@ This tutorial provides steps for creating a *YOURSOURCE* source connector using 
 
 >[!IMPORTANT]
 >
->This documentation page was created by the *YOURSOURCE* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*.
+>This source connector and documentation page are created and maintained by the *YOURSOURCE* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*.
 
 ## Prerequisites
 

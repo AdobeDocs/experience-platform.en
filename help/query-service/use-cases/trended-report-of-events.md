@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceevent query;Experience Event query;
 title: Create a Trended Report of Events
 description: Learn how to write queries that use Experience Events to create a trended report of events over a specified date range, grouped by date.
+exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
 ---
 # Create a trended report of events
 

@@ -11,7 +11,7 @@ Activate profiles for targeted Medallia surveys and feedback collection to bette
 
 >[!IMPORTANT]
 >
->This documentation page was created by the Medallia team. For any inquiries or update requests, please contact them directly at adobe-integrations@medallia.com.
+>This destination connector and documentation page are created and maintained by the Medallia team. For any inquiries or update requests, please contact them directly at adobe-integrations@medallia.com.
 
 ## Use cases {#use-cases}
 
@@ -54,7 +54,7 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes |
 ---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all newly qualified members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
@@ -83,7 +83,7 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL API Gateway URL]**: Obtain from your Medallia delivery team. Typically takes the form of https://instance-tenant.apis.medallia.com.
-*  **[!UICONTROL Import API Name]**: Obtain from your Medallia delivery team. Name of the Medallia Import API (also known as Web Feed) to be used in this connection. You can activate different segments to different Import APIs to trigger different survey programs.
+*  **[!UICONTROL Import API Name]**: Obtain from your Medallia delivery team. Name of the Medallia Import API (also known as Web Feed) to be used in this connection. You can activate different audiences to different Import APIs to trigger different survey programs.
 
 ![Image showing the destination details screen for this destination.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
 
@@ -93,13 +93,14 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ### Map attributes and identities {#map}
 
@@ -134,8 +135,8 @@ A sample JSON of the exported data is provided below, which uses the example map
         "aep_segments_new": ["c1c3edcc-07cb-4f66-b5dd-aff485148aba"],
         "aep_segments_existing": [],
         "aep_segments_removed": [],
-        "firstname":  “John” ,
-        "lastname":  “Smith”,
+        "firstname":  "John" ,
+        "lastname":  "Smith",
         "contactId": "jsmith120002",
     }
 ]

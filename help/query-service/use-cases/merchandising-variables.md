@@ -1,6 +1,7 @@
 ---
 title: Return and Use Merchandising variables from analytics data
 description: Learn how to provide XDM fields and sample queries to access the merchandising variables in your Analytics datasets.
+exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
 ---
 # Return and use merchandising variables from analytics data
 

@@ -1,5 +1,4 @@
 ---
-keywords: destinations;adobe experience platform;platform;destinations overview;activate data;activate;
 title: Destinations overview
 description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
@@ -24,7 +23,7 @@ One of the core functionalities of Platform is ingesting your first-party data a
 ## Destinations steps {#steps}
 
 * Choose from a [self-service catalog](./catalog/overview.md) of all the destinations available in Platform.
-* Use destinations to send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
+* Use destinations to send profiles or audiences to marketing automation platforms, digital advertising platforms, and more.
 * Schedule data exports to your preferred destinations at regular times.
 
 ## Controls {#controls}
@@ -34,12 +33,18 @@ The controls in the [destinations workspace](./ui/destinations-workspace.md) all
 * Browse the catalog of destination platforms where you can activate your data;
 * Create, edit, activate, and disable data flows to the destinations in the catalog;
 * Create an account in a storage location or link Platform to the account in the destination platform;
-* Select which segments should be activated to destinations;
-* Select which [Experience Data Model (XDM) fields](../xdm/home.md) to export when activating segments to email marketing destinations.
+* Select which audiences should be activated to destinations;
+* Select which [Experience Data Model (XDM) fields](../xdm/home.md) to export when activating audiences to email marketing destinations.
 
 ## Destination types and categories {#types-and-categories}
 
 With Experience Platform, you can activate data to various types of destinations, to satisfy your activation use cases. Destinations range from API-based integrations, to integrations with file reception systems, profile lookup destinations, and more. For detailed information about all available destinations, see the [destination types and categories overview](./destination-types.md).
+
+## Adobe-built and partner-built destinations {#adobe-and-partner-built-destinations}
+
+Some of the connectors in the Experience Platform destinations catalog are built and maintained by Adobe, while others are built and maintained by partner companies using [Destination SDK](/help/destinations/destination-sdk/overview.md). A note at the top of the documentation page for each partner-built connector calls out if a destination is created and maintained by the partner. For example, the [Amazon S3 connector](/help/destinations/catalog/cloud-storage/amazon-s3.md) is created by Adobe, while the [TikTok connector](/help/destinations/catalog/social/tiktok.md) is created and maintained by the TikTok team. 
+
+For partner-authored and maintained connectors, this means that issues with the connector might need to be resolved by the partner team (contact method provided in the note in the documentation page). For issues with Adobe-authored and maintained connectors, contact your Adobe representative or Customer Care.
 
 ## Destinations and access controls {#access-controls}
 
@@ -48,10 +53,11 @@ The destinations functionality in Platform works with Adobe Experience Platform 
 The following table outlines the permissions and permission combinations required to perform certain actions on destinations:
 
 | Permission level | Description |
-| ---- | ----|
+| ---- | ---- |
 | **[!UICONTROL Manage Destinations]** | To connect to destinations, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** | To activate segments to destinations and enable the [mapping step](ui/activate-batch-profile-destinations.md#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** | To activate segments to destinations and hide the [mapping step](ui/activate-batch-profile-destinations.md#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** | To activate audiences to destinations and enable the [mapping step](ui/activate-batch-profile-destinations.md#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** | To activate audiences to destinations and hide the [mapping step](ui/activate-batch-profile-destinations.md#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Identity Graph]** | To export *identities* to destinations, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -89,8 +95,8 @@ For more information about selecting marketing actions in the create destination
 * [Email marketing destinations](./catalog/email-marketing/overview.md)
 * [Social destinations](./catalog/social/overview.md)
 
-For more information about data policy violations in the segment activation workflow, see the **[!UICONTROL Review]** step in the following guides:
+For more information about data policy violations in the audience activation workflow, see the **[!UICONTROL Review]** step in the following guides:
 
-* [Activate audience data to streaming segment export destinations](./ui/activate-segment-streaming-destinations.md#review)
+* [Activate audience data to streaming audiences export destinations](./ui/activate-segment-streaming-destinations.md#review)
 * [Activate audience data to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md#review)
 * [Activate audience data to batch profile export destinations](./ui/activate-batch-profile-destinations.md#review)

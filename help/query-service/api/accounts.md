@@ -25,7 +25,7 @@ POST /accounts
 
 **Request**
 
-The following request will create a new Query Service integration account for your IMS Organization. 
+The following request will create a new Query Service integration account for your organization. 
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \

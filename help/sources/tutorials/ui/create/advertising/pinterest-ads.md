@@ -2,15 +2,16 @@
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 title: Create a Pinterest Ads source connection in the UI
 description: Learn how to create a Pinterest Ads source connection using the Adobe Experience Platform UI.
-badge: "Beta"
+badge: Beta
 hide: true
 hidefromtoc: true
+exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
 ---
 # Create a [!DNL Pinterest Ads] source connection in the UI
 
 >[!NOTE]
 >
->The [!DNL Pinterest Ads] source is in beta. Read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Pinterest Ads] source is in beta. Read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps for creating a [!DNL Pinterest Ads] source connector using the Adobe Experience Platform user interface.
 

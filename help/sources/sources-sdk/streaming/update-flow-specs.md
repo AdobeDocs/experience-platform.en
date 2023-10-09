@@ -3,6 +3,7 @@ title: Update flow specifications for Streaming SDK using the Flow Service API
 description: The following document provides steps on how to retrieve and update flow specifications using the Flow Service API for Self-Serve Sources (Streaming SDK).
 hide: true
 hidefromtoc: true
+exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
 ---
 # Update flow specifications using the [!DNL Flow Service] API
 

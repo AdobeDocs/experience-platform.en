@@ -2,8 +2,7 @@
 title: Using Adobe Journey Optimizer with the Platform Web SDK
 description: Learn how to render personalized content with the Experience Platform Web SDK using Adobe Journey Optimizer
 keywords: ajo;ajo web;adobe journey optimizer;renderDecisions;surfaces;decisions;propositions;scope;schema
-exl-id: e608952c-9598-11ed-b382-d72064651cac
-
+exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
 ---
 # Using [!DNL Adobe Journey Optimizer] with the [!DNL Platform Web SDK]
 
@@ -25,7 +24,7 @@ To start using [!DNL Adobe Journey Optimizer], follow the steps below.
 
 1. Go through the [prerequisites](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) from the [!DNL Adobe Journey Optimizer] [Web Experiences Guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), specifically:
    * Set up [!DNL Adobe Experience Cloud Visual Editing Helper].
-   * Enable [!DNL Adobe Journey Optimizer] in your [datastream](../../datastreams/overview.md).
+   * Enable [!DNL Adobe Journey Optimizer] in your [datastream](../../../datastreams/overview.md).
    * Enable the [!UICONTROL Active-On-Edge Merge Policy] option.
 
 2. Add the `renderDecisions` option to your events. Set `renderDecisions` to `true` for automatic rendering of delivered Journey Optimizer content propositions on your web page surfaces.
@@ -37,7 +36,7 @@ To start using [!DNL Adobe Journey Optimizer], follow the steps below.
     })
     ```
 
-3. Optionally, specify additional surfaces in your events. By default, the Web SDK will automatically generate the web surface for the current web page and include it in the request to the Edge Network. If required, additional surfaces can be included in the request by specifying these in the `personalization.surfaces` option of the `sendEvent` command, or in the corresponding **[!UICONTROL Surfaces]** [[!UICONTROL Send event] action](../../extension/action-types.md#send-event) configuration of the Web SDK Extension.
+3. Optionally, specify additional surfaces in your events. By default, the Web SDK will automatically generate the web surface for the current web page and include it in the request to the Edge Network. If required, additional surfaces can be included in the request by specifying these in the `personalization.surfaces` option of the `sendEvent` command, or in the corresponding **[!UICONTROL Surfaces]** [[!UICONTROL Send event] action](../../../tags/extensions/client/web-sdk/action-types.md#send-event) configuration of the Web SDK Extension.
 
     ```javascript
     alloy("sendEvent", {
@@ -144,5 +143,3 @@ Sample Journey Optimizer content proposition:
 To debug Adobe Journey Optimizer personalization implementations, use [[!DNL Web SDK] debugging](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html). [!DNL Adobe Journey Optimizer] debug traces are available when troubleshooting using [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). Check for events with the `AJO:` prefix.
 
 ![assurance-ajo-trace](./assets/assurance-ajo-trace.png)
-
-

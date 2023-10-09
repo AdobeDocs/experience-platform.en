@@ -17,7 +17,7 @@ This tutorial walks through the steps to configure training and scoring schedule
 
 ## Getting started
 
-In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
 This tutorial requires an existing service. If you do not have an accessible service to work with, you can create one by following the tutorial for [publishing a model as a service](./publish-model-service-ui.md).
 

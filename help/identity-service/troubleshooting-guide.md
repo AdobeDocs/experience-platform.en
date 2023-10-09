@@ -198,7 +198,7 @@ This error message displays when a `graph-type` query parameter is given an inva
 }
 ```
 
-This error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
+This error message displays when your organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
 
 ### Gateway service token is not valid
 
@@ -258,7 +258,7 @@ When [!DNL Identity Service] persists an identity, the identity's ID and associa
 }
 ```
 
-This error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
+This error message displays when your organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
 
 ### Internal Server Error
 
@@ -324,7 +324,7 @@ This error displays when the first 100 rows of a batch presented no identities. 
 }
 ```
 
-This error displays when an ingested record presents an identity whose associated namespace does not exist or is inaccessible by your IMS Organization.
+This error displays when an ingested record presents an identity whose associated namespace does not exist or is inaccessible by your organization.
 
 ### Skipping batch ingestion as IMS Org is not provisioned for Private Identity Graph
 
@@ -336,7 +336,7 @@ This error displays when an ingested record presents an identity whose associate
 }
 ```
 
-When ingesting batch data, this error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
+When ingesting batch data, this error message displays when your organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
 
 ### Internal Error
 

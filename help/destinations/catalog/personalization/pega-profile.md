@@ -1,9 +1,9 @@
 ---
 title: Pega Profile Connector
-description: Use the Pega Profile Connector for Amazon S3 in Adobe Experience Platform to export full or incremental, or both, profile data to Amazon S3 cloud storage. In Pega Customer Decision Hub, data jobs can be scheduled in Customer Profile Designer to import profile data periodically from Amazon S3 storage. 
+description: Use the Pega Profile Connector for Amazon S3 in Adobe Experience Platform to export full or incremental, or both, profile data to Amazon S3 cloud storage. In Pega Customer Decision Hub, data jobs can be scheduled in Customer Profile Designer to import profile data periodically from Amazon S3 storage.
 last-substantial-update: 2023-01-25
+exl-id: f422f21b-174a-4b93-b05d-084b42623314
 ---
-
 # Pega Profile Connector
 
 ## Overview {#overview}
@@ -14,7 +14,7 @@ This connector helps set up the initial export of profile data and also helps sy
 
 >[!IMPORTANT]
 >
->This documentation page was created by Pegasystems. For any inquiries or update requests, please contact Pega directly [here](mailto:support@pega.com).
+>This destination connector and documentation page are created and maintained by Pegasystems. For any inquiries or update requests, please contact Pega directly [here](mailto:support@pega.com).
 
 ## Use cases 
 
@@ -88,7 +88,7 @@ To configure details for the destination, fill in the required fields and select
 
 >[!TIP]
 >
->In the connect destination workflow, you can create a custom folder in your Amazon S3 storage per exported segment file. Read [Use macros to create a folder in your storage location](/help/destinations/catalog/cloud-storage/overview.md#use-macros) for instructions.
+>In the connect destination workflow, you can create a custom folder in your Amazon S3 storage per exported audience file. Read [Use macros to create a folder in your storage location](/help/destinations/catalog/cloud-storage/overview.md#use-macros) for instructions.
 
 ### Enable alerts {#enable-alerts}
 
@@ -96,13 +96,14 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
 ### Map attributes and identities {#map}
 
@@ -110,7 +111,7 @@ In the **[!UICONTROL Mapping]** step, you can select which attribute and identit
 
 ## Validate data export {#exported-data}
 
-For [!DNL Pega Profile Connector] destinations, [!DNL Platform] creates a `.csv` file in Amazon S3 storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
+For [!DNL Pega Profile Connector] destinations, [!DNL Platform] creates a `.csv` file in Amazon S3 storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the audience activation tutorial.
 
 A successful import of profile data from S3 inserts data in the [!DNL Pega Customer] profile datastore. The imported customer profile data can be validated in [!DNL Pega Customer Profile Designer] , as shown in the following figure.
 ![Image of the UI screen where you can validate Adobe profile data in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
@@ -125,6 +126,3 @@ See [Import data jobs](https://academy.pega.com/topic/import-data-jobs/v1) in [!
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [Data Governance overview](/help/data-governance/home.md).
-
-
-

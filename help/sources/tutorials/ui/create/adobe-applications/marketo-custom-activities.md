@@ -1,6 +1,7 @@
 ---
 title: Create a Marketo Engage Source Connection and Dataflow for Custom Activity data in the UI
 description: This tutorial provides steps for creating a Marketo Engage source connection and dataflow in the UI to bring custom activities data into Adobe Experience Platform.
+exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
 ---
 # Create a [!DNL Marketo Engage] source connection and dataflow for custom activity data in the UI
 
@@ -120,7 +121,7 @@ Navigate through the source data structure and find the custom activity field th
 
 ![The source data structure.](../../../../images/tutorials/create/marketo-custom-activities/select-new-mapping-field.png)
 
-To add a target field, select the schema icon ![schema icon](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png) and then select the the custom activity fields from the target schema.
+To add a target field, select the schema icon ![schema icon](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png) and then select the custom activity fields from the target schema.
 
 ![The target schema structure.](../../../../images/tutorials/create/marketo-custom-activities/add-target-mapping-field.png)
 

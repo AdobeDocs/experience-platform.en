@@ -11,7 +11,7 @@ Sample data can be used when creating a schema for your mapping set. You can use
 
 ## List sample data
 
-You can retrieve a list of all the mapping sample data for your IMS Organization by making a GET request to the `/samples` endpoint.
+You can retrieve a list of all the mapping sample data for your organization by making a GET request to the `/samples` endpoint.
 
 **API format**
 
@@ -28,7 +28,7 @@ GET /samples?limit={LIMIT}&start={START}
 
 **Request**
 
-The following request will retrieve the last two mapping sample data within your IMS Organization.
+The following request will retrieve the last two mapping sample data within your organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \

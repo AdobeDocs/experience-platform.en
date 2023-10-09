@@ -72,7 +72,7 @@ The main drawback of using `identityMap` is that identities become embedded in t
 >
 >A schema that uses `identityMap` can be used as a source schema in a relationship, but cannot be used as a reference schema. This is because all reference schemas must have a visible identity that can be mapped in a reference field within the source schema. Refer to the UI guide on [relationships](../tutorials/relationship-ui.md) for more information on the requirements of source and reference schemas.
 
-However, identity maps can be particularly useful if you are bringing in data from sources that store identities together (such as [!DNL Airship] or Adobe Audience Manager), or when there are a variable number of identities for a schema. In addition, identity maps are required if you are using the [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
+However, identity maps can be particularly useful if you are bringing in data from sources that store identities together (such as [!DNL Airship] or Adobe Audience Manager), or when there are a variable number of identities for a schema. In addition, identity maps are required if you are using the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 An example of a simple identity map would look like the following:
 
@@ -279,12 +279,12 @@ For more information on working with [!DNL Profile], see the [Real-Time Customer
 
 All datafiles that are ingested into [!DNL Experience Platform] must conform to the structure of an XDM schema. For more information on how to format datafiles to comply with XDM hierarchies (including sample files), see the document on [sample ETL transformations](../../etl/transformations.md). For general information about ingesting datafiles into [!DNL Experience Platform], see the [batch ingestion overview](../../ingestion/batch-ingestion/overview.md).
 
-## Schemas for external segments
+## Schemas for external audiences
 
-If you are bringing segments from external systems into Platform, you must use the following components to capture them in your schemas:
+If you are bringing audiences from external systems into Platform, you must use the following components to capture them in your schemas:
 
 * [[!UICONTROL Segment definition] class](../classes/segment-definition.md): Use this standard class to capture key attributes of an external segment definition.
-* [[!UICONTROL Segment Membership Details] field group](../field-groups/profile/segmentation.md): Add this field group to your [!UICONTROL XDM Individual Profile] schema in order to associate customer profiles with specific segments.
+* [[!UICONTROL Segment Membership Details] field group](../field-groups/profile/segmentation.md): Add this field group to your [!UICONTROL XDM Individual Profile] schema in order to associate customer profiles with specific audiences.
 
 ## Next steps
 

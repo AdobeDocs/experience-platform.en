@@ -15,7 +15,7 @@ exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
 Note the following details that are specific to [!DNL Google Display & Video 360] destinations:
 
 * Activated audiences are created programmatically in the Google platform.
-* [!DNL Platform] does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
+* The activation of audience backfills to the [!DNL Google Display & Video 360] destination is scheduled to occur 24-48 hours after an audience is first mapped to a destination connection. This update is in response to Google's policy to wait 24 hours until ingesting data and is meant to improve match rates between Real-Time CDP and [!DNL Google Display & Video 360]. Note that this is a backend configuration applicable to this destination only and that is unrelated to any customer-configurable scheduling options in the UI.
 
 >[!IMPORTANT]
 >
@@ -35,14 +35,25 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 |MAID|Microsoft Advertising ID. This ID uniquely identifies devices running Windows 10.||
 |Amazon Fire TV ID|This ID uniquely identifies Amazon Fire TVs.||
 
+## Supported audiences {#supported-audiences}
+
+This section describes which type of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) to the Google destination.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience to the Google destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 ## Prerequisites {#prerequisites}
 
@@ -55,8 +66,8 @@ Refer to the table below for information about the destination export type and f
 
 Before creating the [!DNL Google Display & Video 360] destination in Platform, you must contact Google asking for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact Google and provide the following information:
 
-* **Account ID**: Adobe’s account ID with Google. Account ID: 87933855.
-* **Customer ID**: Adobe’s customer account ID with Google. Customer ID: 89690775.
+* **Account ID**: Adobe's account ID with Google. Account ID: 87933855.
+* **Customer ID**: Adobe's customer account ID with Google. Customer ID: 89690775.
 * **Your account type**: use **[!DNL Invite advertiser]** to allow audiences to be shared only to a specific brand in your Display & Video 360 account or use **[!DNL Invite partner]** to allow audiences to be shared to all brands in your Display & Video 360 account.
 
 ## Connect to the destination {#connect}
@@ -88,13 +99,13 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ## Exported data 
 

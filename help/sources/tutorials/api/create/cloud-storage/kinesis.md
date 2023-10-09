@@ -1,12 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Kinesis;kinesis;Amazon Kinesis;amazon kinesis
-solution: Experience Platform
 title: Create an Amazon Kinesis Source Connection Using the Flow Service API
-type: Tutorial
 description: Learn how to connect Adobe Experience Platform to an Amazon Kinesis source using the Flow Service API.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 ---
 # Create an [!DNL Amazon Kinesis] source connection using the Flow Service API
+
+>[!IMPORTANT]
+>
+>The [!DNL Amazon Kinesis] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
 This tutorial walks you through the steps to connect [!DNL Amazon Kinesis] (hereinafter referred to as "[!DNL Kinesis]") to Experience Platform, using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -97,7 +99,7 @@ A successful response returns details of the newly created base connection, incl
 
 ## Create a source connection {#source}
 
-A source connection creates and manages the connection to the external source from where data is ingested. A source connection consists of information like data source, data format, and the source connection ID needed to create a dataflow. A source connection instance is specific to a tenant and IMS Organization.
+A source connection creates and manages the connection to the external source from where data is ingested. A source connection consists of information like data source, data format, and the source connection ID needed to create a dataflow. A source connection instance is specific to a tenant and organization.
 
 To create a source connection, make a POST request to the `/sourceConnections` endpoint of the [!DNL Flow Service] API.
 

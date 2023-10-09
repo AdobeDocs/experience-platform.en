@@ -35,7 +35,7 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 | Feature | Description |
 | ------- | ----------- |
-| Profile preview API additions | The Profile preview API (`/previewsamplestatus`) now includes the ability to view a breakdown of total profile fragments across your IMS Organization, as well as to view the distribution of profile fragments across identity namespaces. |
+| Profile preview API additions | The Profile preview API (`/previewsamplestatus`) now includes the ability to view a breakdown of total profile fragments across your organization, as well as to view the distribution of profile fragments across identity namespaces. |
 | Union schema view updates | In the Experience Platform UI, users can more easily find information regarding all schemas and datasets contributing to the union schema, as well as surface key attributes such as identity and relationship fields. These updates improve the ability to troubleshoot and validate that profiles are correctly configured, identities are correctly stitched, and data has been successfully ingested. |
 
 For more information on [!DNL Real-Time Customer Profile], including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-Time Customer Profile overview](../../profile/home.md).

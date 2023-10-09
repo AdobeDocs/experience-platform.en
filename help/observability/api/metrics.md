@@ -217,9 +217,9 @@ The following table outlines metrics for Adobe Experience Platform [!DNL Identit
 | timeseries.identity.dataset.recordfailed.count | Number of records failed by [!DNL Identity Service], for one dataset or for all datasets. | Dataset ID |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | Number of Identity records failed by a namespace. | Namespace ID (**Required**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | Number of Identity records skipped by a namespace. | Namespace ID (**Required**) |
-| timeseries.identity.graph.imsorg.uniqueidentities.count | Number of unique identities stored in the identity graph for your IMS Organization. | N/A |
+| timeseries.identity.graph.imsorg.uniqueidentities.count | Number of unique identities stored in the identity graph for your organization. | N/A |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Number of unique identities stored in the identity graph for a namespace. | Namespace ID (**Required**) |
-| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Number of unique identities stored in the identity graph for your IMS Organization for a particular graph strength ("unknown", "weak", or "strong"). | Graph strength (**Required**) |
+| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Number of unique identities stored in the identity graph for your organization for a particular graph strength ("unknown", "weak", or "strong"). | Graph strength (**Required**) |
 
 {style="table-layout:auto"}
 
@@ -266,7 +266,7 @@ Responses from the `/metrics` endpoint may return error messages under certain c
 | Property | Description |
 | --- | --- |
 | `title` | A string containing the error message and the potential reason why it may have occurred. |
-| `report` | Contains contextual information about the error, including the sandbox and IMS Org being used in the operation that triggered it. |
+| `report` | Contains contextual information about the error, including the sandbox and organization being used in the operation that triggered it. |
 
 {style="table-layout:auto"}
 
@@ -278,6 +278,6 @@ The following table lists the different error codes that can be returned by the 
 | `INSGHT-1001-400` | Metrics query failed | There was an error when attempting to query the metrics database, due to a bad request or the query itself being unparsable. Ensure that your request is properly formatted before trying again. |
 | `INSGHT-1001-500` | Metrics query failed | There was an error when attempting to query the metrics database, due to a server error. Try the request again, and if the problem persists, contact Adobe support. |
 | `INSGHT-1002-500` | Service error | The request could not be processed due to an internal error. Try the request again, and if the problem persists, contact Adobe support. |
-| `INSGHT-1003-401` | Sandbox validation error | The request could not be processed due to a sandbox validation error. Ensure that the sandbox name you provided in the `x-sandbox-name` header represents a valid, enabled sandbox for your IMS Organization before trying the request again. |
+| `INSGHT-1003-401` | Sandbox validation error | The request could not be processed due to a sandbox validation error. Ensure that the sandbox name you provided in the `x-sandbox-name` header represents a valid, enabled sandbox for your organization before trying the request again. |
 
 {style="table-layout:auto"}

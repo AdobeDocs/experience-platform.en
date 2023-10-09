@@ -104,7 +104,7 @@ Using at.js 2.x, if you enable the setting `pageLoadEnabled`, the library will t
 
 Content created within Adobe Target's [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) can be retrieved and rendered automatically by the SDK.
 
-To request and automatically render Target offers, use the `sendEvent` command and set the `renderDecisions` option to `true`. Doing so forces the SDK to automatically render any personalized content that’s eligible for automatic rendering. 
+To request and automatically render Target offers, use the `sendEvent` command and set the `renderDecisions` option to `true`. Doing so forces the SDK to automatically render any personalized content that's eligible for automatic rendering. 
 
 Example:
 
@@ -593,7 +593,7 @@ alloy("sendEvent", {
     // Find the discount proposition, if it exists.
     for (var i = 0; i < propositions.length; i++) {
       var proposition = propositions[i];
-      for (var j = 0; j < proposition.items; j++) {
+      for (var j = 0; j < proposition.items.length; j++) {
         var item = proposition.items[j];
 
         if (item.schema === "https://ns.adobe.com/personalization/measurement") {
@@ -917,7 +917,7 @@ Analytics Server Side Logging is enabled when Analytics is enabled for that Data
 ![](assets/analytics-enabled-datastream-config.png)
 
 When Server Side Analytics Logging is enabled the A4T payload that needs to be shared with Analytics so that the Analytics reporting show 
-correct impressions and conversions is shared at the Experience Edge level, so that the customer doesn't have to do any additional processing.
+correct impressions and conversions is shared at the Edge Network level, so that the customer doesn't have to do any additional processing.
 
 Here is how data flows into our systems when Server Side Analytics Logging is enabled:
 
@@ -1232,7 +1232,7 @@ Note: All these debugging features are available with enhanced capabilities in [
 
 You have multiple debugging capabilities when using Web SDK:
 
-* Using [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* Using [Assurance](../../../assurance/home.md)
 * [Web SDK debug enabled](../../../edge/fundamentals/debugging.md)
 * Use [Web SDK monitoring hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Use [Adobe Experience Platform Debugger](../../../debugger/home.md)

@@ -12,7 +12,7 @@ The results of this sample job can be viewed using the `/previewsamplestatus` en
 
 >[!NOTE]
 >
->There are estimate and preview endpoints available as part of the Adobe Experience Platform Segmentation Service API that allow you to view summary-level information regarding segment definitions to help ensure you are isolating the expected audience. To find detailed steps for working with segment preview and estimate endpoints, please visit the [previews and estimates endpoints guide](../../segmentation/api/previews-and-estimates.md), part of the [!DNL Segmentation] API developer guide.
+>There are estimate and preview endpoints available as part of the Adobe Experience Platform Segmentation Service API that allow you to view summary-level information regarding segment definitions to help ensure you are isolating the expected audience. To find detailed steps for working with preview and estimate endpoints, please visit the [previews and estimates endpoints guide](../../segmentation/api/previews-and-estimates.md), part of the [!DNL Segmentation] API developer guide.
 
 ## Getting started
 
@@ -39,7 +39,7 @@ The profile count and profiles by namespace metrics are also available within th
 
 ## View last sample status {#view-last-sample-status}
 
-You can perform a GET request to the `/previewsamplestatus` endpoint to view the details for the last successful sample job that was run for your IMS Organization. This includes the total number of profiles in the sample, as well as the profile count metric, or total number of profiles your organization has within Experience Platform. 
+You can perform a GET request to the `/previewsamplestatus` endpoint to view the details for the last successful sample job that was run for your organization. This includes the total number of profiles in the sample, as well as the profile count metric, or total number of profiles your organization has within Experience Platform. 
 
 The profile count is generated after merging together profile fragments to form a single profile for each individual customer. In other words, when profile fragments are merged together they return a count of "1" profile because they are all related to the same individual.
 
@@ -586,5 +586,5 @@ This report provides the following information:
 
 ## Next steps
 
-Now that you know how to preview sample data in the Profile Store and run multiple reports on the data, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating the expected audience in your segment. To learn more about working with segment previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
+Now that you know how to preview sample data in the Profile Store and run multiple reports on the data, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating your expected audience. To learn more about working with previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
 

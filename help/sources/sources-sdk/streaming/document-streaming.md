@@ -3,6 +3,7 @@ title: Document Your Source (Streaming SDK)
 description: The final step before your new source can be made live in Adobe Experience Platform is to document your new source.
 hide: true
 hidefromtoc: true
+exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
 ---
 # Document your source (Streaming SDK)
 

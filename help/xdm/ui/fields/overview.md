@@ -19,7 +19,7 @@ While not required for this guide, it is recommended that you also follow the tu
 
 To define new XDM fields in the UI, you must first open a schema within the [!DNL Schema Editor]. Depending on what schemas are currently available to you in the [!DNL Schema Library], you can choose to [create a new schema](../resources/schemas.md#create) or [select an existing schema to edit](../resources/schemas.md#edit).
 
-Once you have the [!DNL Schema Editor] open, controls to add or edit fields appear in the canvas. These controls appear next to the name of the schema, as well as any object-type fields that have been defined under the selected class or field group.
+Once you have the [!DNL Schema Editor] open, controls to add fields appear in the canvas. These controls appear next to the name of the schema, as well as any object-type fields that have been defined under the selected class or field group.
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
@@ -47,7 +47,7 @@ In the right rail under **[!UICONTROL Field properties]**, you can configure the
 | Field property | Description |
 | --- | --- |
 | [!UICONTROL Field name] | A unique, descriptive name for the field. Note that the field's name cannot be changed once the schema has been saved. This value is used to identify and reference the field in code and in other downstream applications<br><br>The name should ideally be written in camelCase. It may contain alphanumeric, dash, or underscore characters, but it **may not** start with an underscore.<ul><li>**Correct**: `fieldName`</li><li>**Acceptable:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrect**: `_fieldName`</li></ul> |
-| [!UICONTROL Display name] | A display name for the field. This is the name that will be used to represent the field within the Schema Editor canvas. |
+| [!UICONTROL Display name] | A display name for the field. This is the name that will be used to represent the field within the Schema Editor canvas. The field name can be changed to the display name using the [display name toggle](../resources/schemas.md#display-name-toggle). |
 | [!UICONTROL Type] | The type of data the field will contain. From this dropdown menu, you can select one of the [standard scalar types](../../schema/field-constraints.md) supported by XDM, or one of the multi-field [data types](../resources/data-types.md) that have been previously defined in the [!DNL Schema Registry].<br><br>You can also select **[!UICONTROL Advanced type search]** to search and filter existing data types and locate the desired type easier. |
 
 {style="table-layout:auto"}
@@ -80,7 +80,7 @@ When defining a new field, additional configuration options may appear in the ri
 
 | Field property | Compatible types | Description |
 | --- | --- | --- |
-| [!UICONTROL Default value] | [!UICONTROL String], [!UICONTROL Double], [!UICONTROL Long], [!UICONTROL Integer], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Boolean] | A default value that will be assigned to this field if no other value is provided during ingestion. This value must conform to the field's selected type. |
+| [!UICONTROL Default value] | [!UICONTROL String], [!UICONTROL Double], [!UICONTROL Long], [!UICONTROL Integer], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Boolean] | A default value that is assigned to this field if no other value is provided during ingestion. This value must conform to the field's selected type.<br><br>The default values are not saved in the dataset at the time of ingestion, as they can change over time. The default values set in the schema are inferred by downstream Platform services and applications when they read the data from the dataset. For example, when querying the data using Query Service, if the attribute has a NULL value, but the default is set to `5` at the schema level, it is expected that Query Service will return `5` instead of NULL. Please note, this behavior is not currently uniform across all AEP services.|
 | [!UICONTROL Pattern] | [!UICONTROL String] | A [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) that the value for this field must conform to in order to be accepted during ingestion. |
 | [!UICONTROL Format] | [!UICONTROL String] | Select from a list of pre-defined formats for strings that the value must conform to. Available formats include: <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Minimum length] | [!UICONTROL String] | The minimum number of characters the string must contain for the value to be accepted during ingestion. |

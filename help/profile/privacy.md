@@ -18,6 +18,10 @@ This document covers essential concepts related to processing privacy requests f
 >
 >For steps on how to make privacy requests for other Adobe Experience Cloud applications, refer to the [Privacy Service documentation](../privacy-service/experience-cloud-apps.md).
 
+>[!IMPORTANT]
+>
+>The privacy request in this guide does **not** cover B2B non-person entities.
+
 ## Getting started
 
 This guide requires a working understanding of the following [!DNL Platform] components:
@@ -181,6 +185,10 @@ To ensure that your privacy requests process all relevant customer attributes, y
 
 When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed once the privacy job has completed.
 
+>[!IMPORTANT]
+>
+>Privacy deletion requests are not instantaneous and can vary depending on the services involved and other impacting factors such as geographical location. The timeframe for the completion of privacy jobs can range from 15 to 45 days but is not guaranteed.
+
 Depending on whether you also included Identity Service (`identity`) and the data lake (`aepDataLake`) as products in your privacy request for Profile (`ProfileService`), different sets of data related to the profile are removed from the system at potentially different times:
 
 | Products included | Effects |
@@ -203,7 +211,7 @@ To remove the profile and all identity associations for a given customer, make s
 ### Merge policy limitations {#merge-policy-limitations}
 
 Privacy Service is only able to process [!DNL Profile] data using a merge policy that does not perform identity stitching. If you are using the UI to confirm whether your privacy requests are being processed, ensure that you are using a policy with **[!DNL None]** as its [!UICONTROL ID stitching] type. In other words, you cannot use a merge policy where [!UICONTROL ID stitching] is set to [!UICONTROL Private graph].
->
+
 >![The ID stitching of the merge policy is set to None](./images/privacy/no-id-stitch.png)
 
 ## Next steps

@@ -6,9 +6,8 @@ exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
 ---
 # Track links
 
-Links can be set manually or tracked [automatically](#automaticLinkTracking). Manual tracking is done by adding the details under the `web.webInteraction` part of the schema. There are three required variables: 
+Links can be set manually or tracked [automatically](#automaticLinkTracking). Manual tracking is done by adding the details under the `web.webInteraction` part of the schema. There are two required variables: 
 
-* `web.webInteraction.name`
 * `web.webInteraction.type`
 * `web.webInteraction.linkClicks.value`
 
@@ -28,6 +27,8 @@ alloy("sendEvent", {
   }
 });
 ```
+
+Starting with version 2.15.0, Web SDK captures the `region` of the clicked HTML element. This enables the [Activity Map](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html) reporting features in Adobe Analytics.
 
 The link type can be one of three values: 
 
@@ -84,3 +85,23 @@ alloy("configure", {
 });
 ```
 
+Starting with Web SDK version 2.15.0, the data collected with automatic link tracking can be inspected, augmented or filtered by providing an [onBeforeLinkClickSend callback function](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend).
+
+This callback function is executed only when an automatic link click event occurs.
+
+```javascript
+alloy("configure", {
+  onBeforeLinkClickSend: function(options) {
+    if (options.xdm.web.webInteraction.type === "download") {
+      options.xdm.web.webInteraction.name = undefined;
+    }
+  }
+});
+```
+
+When filtering the link tracking events using the `onBeforeLinkClickSend` command, Adobe recommends returning `false` for the link clicks that should not be tracked. Any other response will make Web SDK send the data to the Edge Network.
+
+
+>[!NOTE]
+>
+>** When both the `onBeforeEventSend` and `onBeforeLinkClickSend` callback functions are set, the Web SDK runs the `onBeforeLinkClickSend` callback function to filter and augment the link click interaction event, followed by the `onBeforeEventSend` callback function.

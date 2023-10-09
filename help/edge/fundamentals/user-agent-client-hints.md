@@ -1,20 +1,20 @@
 ---
-title: User-Agent Client Hints
-description: Learn how User-Agent Client Hints work in Web SDK. Client hints allow website owners to access much of the same information available in the User-Agent string, but in a more privacy-preserving way.
+title: User agent client hints
+description: Learn how user agent client hints work in Web SDK. Client hints allow website owners to access much of the same information available in the user agent string, but in a more privacy-preserving way.
 keywords: user-agent;client hints; string; user-agent string; low entropy; high entropy
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
 ---
-# User-Agent Client Hints
+# User agent client hints
 
 ## Overview {#overview}
 
-Every time a web browser makes a request to a web server, the header of the request includes information about the browser and the environment on which the browser is running. All this data is aggregated into a string, called the [!DNL User-Agent] string.
+Every time a web browser makes a request to a web server, the header of the request includes information about the browser and the environment on which the browser is running. All this data is aggregated into a string, called the user agent string.
 
-Here is an example of what a [!DNL User-Agent] string looks like on a request coming from a Chrome browser running on a [!DNL Mac OS] device.
+Here is an example of what a user agent string looks like on a request coming from a Chrome browser running on a [!DNL Mac OS] device.
 
 >[!NOTE]
 >
->Over the years, the amount of browser and device information included in the [!DNL User-Agent] string has grown and modified multiple times. The example below shows a selection of the most common [!DNL User-Agent] information.
+>Over the years, the amount of browser and device information included in the user agent string has grown and modified multiple times. The example below shows a selection of the most common user agent information.
 
 ```shell
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36`
@@ -33,32 +33,32 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 
 ## Use cases {#use-cases}
 
-[!DNL User-Agent] strings have long been used to provide marketing and development teams with important insights into how browsers, operating systems and devices display site content, as well as how users interact with websites.
+User agent strings have long been used to provide marketing and development teams with important insights into how browsers, operating systems and devices display site content, as well as how users interact with websites.
 
-[!DNL User-Agent] strings are also used to block spam and filter bots that crawl sites for a variety of additional purposes.
+User agent strings are also used to block spam and filter bots that crawl sites for a variety of additional purposes.
 
-## [!DNL User-Agent] strings in Adobe Experience Cloud {#user-agent-in-adobe}
+## User agent strings in Adobe Experience Cloud {#user-agent-in-adobe}
 
-Adobe Experience Cloud solutions utilize the [!DNL User-Agent] strings in various ways.
+Adobe Experience Cloud solutions utilize the user agent strings in various ways.
 
-* Adobe Analytics utilizes the [!DNL User-Agent] string to augment and derive additional information related to operating systems, browsers, and devices used to visit a website.
-* Adobe Audience Manager and Adobe Target qualify end-users for segmentation and personalization campaigns, based on the information provided by the [!DNL User-Agent] string.
+* Adobe Analytics utilizes the user agent string to augment and derive additional information related to operating systems, browsers, and devices used to visit a website.
+* Adobe Audience Manager and Adobe Target qualify end-users for segmentation and personalization campaigns, based on the information provided by the user agent string.
 
-## Introducing User-Agent Client Hints {#ua-ch}
+## Introducing user agent client hints {#ua-ch}
 
-In recent years, site owners and marketing vendors have used [!DNL User-Agent] strings along with other information included in request headers to create digital fingerprints. These fingerprints can be used as a means of identifying users without their knowledge.
+In recent years, site owners and marketing vendors have used user agent strings along with other information included in request headers to create digital fingerprints. These fingerprints can be used as a means of identifying users without their knowledge.
 
-Despite the important purpose that [!DNL User-Agent] strings serve for site owners, browser developers have decided to change how [!DNL User-Agent] strings operate, to limit potential privacy issues for end-users.
+Despite the important purpose that user agent strings serve for site owners, browser developers have decided to change how user agent strings operate, to limit potential privacy issues for end-users.
 
-The solution they developed is called [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Client hints still allow websites to collect necessary browser, operating system and device information, while also providing increased protection against covert tracking methods, such as fingerprinting.
+The solution they developed is called [user agent client hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Client hints still allow websites to collect necessary browser, operating system and device information, while also providing increased protection against covert tracking methods, such as fingerprinting.
 
-Client hints allow website owners to access much of the same information available in the [!DNL User-Agent] string, but in a more privacy-preserving way.
+Client hints allow website owners to access much of the same information available in the user agent string, but in a more privacy-preserving way.
 
-When modern browsers send a user to a web server, the entire [!DNL User-Agent] string is sent on every request, regardless of whether it is required. Client hints, on the other hand, enforce a model where the server must ask the browser for the additional information it wants to know about the client. Upon receiving this request, the browser can apply its own policies or user configuration to determine what data is returned. Instead of exposing the entire [!DNL User-Agent] string by default on all requests, access is now managed in an explicit and auditable way.
+When modern browsers send a user to a web server, the entire user agent string is sent on every request, regardless of whether it is required. Client hints, on the other hand, enforce a model where the server must ask the browser for the additional information it wants to know about the client. Upon receiving this request, the browser can apply its own policies or user configuration to determine what data is returned. Instead of exposing the entire user agent string by default on all requests, access is now managed in an explicit and auditable way.
 
 ## Browser support {#browser-support}
 
-[User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) were introduced with [!DNL Google Chrome ]version 89.
+[User agent client hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) were introduced with [!DNL Google Chrome ]version 89.
 
 Additional Chromium-based browsers support the Client Hints API, such as:
 
@@ -71,7 +71,7 @@ Additional Chromium-based browsers support the Client Hints API, such as:
 
 ## Categories {#categories}
 
-There are two categories of User-Agent Client Hints:
+There are two categories of user agent client hints:
 
 * [Low entropy client hints](#low-entropy)
 * [High entropy client hints](#high-entropy)
@@ -92,7 +92,7 @@ Low entropy client hints are enabled by default in Web SDK, and are passed on ev
 
 High entropy client hints are more detailed information about the client device, such as platform version, architecture, model, bitness (64 bit or 32 bit platforms), or full operating system version. This information could potentially be used in fingerprinting.
 
-|HTTP header|JavaScript|Included in User-Agent by default| Included in Client Hints by default|
+|HTTP header|JavaScript|Included in user agent by default| Included in client hints by default|
 |---|---|---|---|
 |`Sec-CH-UA-Platform-Version`|`platformVersion`|Yes|No|
 |`Sec-CH-UA-Arc`|`architecture`|Yes|No|
@@ -128,7 +128,7 @@ For example, to retrieve high entropy client hints from web properties, your con
 
 ## Example {#example}
 
-Client hints contained in the headers of the first request made by the browser to a web server will contain the browser brand, the major version of the browser, and an indicator of whether the client is a mobile device. Each piece of data will have its own header value rather than being grouped into a single [!DNL User-Agent] string, as shown below:
+Client hints contained in the headers of the first request made by the browser to a web server will contain the browser brand, the major version of the browser, and an indicator of whether the client is a mobile device. Each piece of data will have its own header value rather than being grouped into a single user agent string, as shown below:
 
 ```shell
 Sec-CH-UA: "Chromium";v="101", "Google Chrome";v="101", " Not;A Brand";v="99"
@@ -144,7 +144,7 @@ The equivalent [!DNL User-Agent] header for the same browser would look like thi
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
 ```
 
-While the information is similar, the first request to the server contains client hints. These only include a subset of what is available in the [!DNL User-Agent] string. Missing from the request is the operating system architecture, full operating system version, layout engine name, layout engine version, and the full browser version.
+While the information is similar, the first request to the server contains client hints. These only include a subset of what is available in the user agent string. Missing from the request is the operating system architecture, full operating system version, layout engine name, layout engine version, and the full browser version.
 
 However, on subsequent requests, the [!DNL Client Hints API] allows web servers to ask for additional details about the device. When these values are requested, depending on browser policy or user settings, the browser response may include that information.
 

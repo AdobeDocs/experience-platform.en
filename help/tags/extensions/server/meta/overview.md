@@ -19,6 +19,10 @@ It is strongly recommended to use [!DNL Meta Pixel] and the [!DNL Conversions AP
 
 In order to use the [!DNL Conversions API] extension, you must have access to event forwarding and have a valid [!DNL Meta] account with access to [!DNL Ad Manager] and [!DNL Event Manager]. Specifically, you must copy the ID of an existing [[!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755?id=1205376682832142) (or [create a new [!DNL Pixel]](https://www.facebook.com/business/help/952192354843755) instead) so the extension can be configured to your account.
 
+>[!INFO]
+>
+>If you're planning to use this extension with mobile app data, or if you also work with offline event data in your [!DNL Meta] campaigns, you'll need to create your dataset through an existing app and select **Create from a pixel ID** when prompted. See the article [Decide which dataset creation option is right for your business](https://www.facebook.com/business/help/5270377362999582?id=490360542427371) for details. Refer to the [Conversions API for App Events](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events) document for all the required and optional app tracking parameters.
+
 ## Install the extension
 
 To install the [!DNL Meta Conversions API] extension, navigate to the Data Collection UI or Experience Platform UI and select **[!UICONTROL Event Forwarding]** from the left navigation. From here, select a property to add the extension to, or create a new property instead.
@@ -39,7 +43,7 @@ The extension is installed and you can now employ its capabilities in your event
 
 ## Configure an event forwarding rule {#rule}
 
-This section covers how to use the [!DNL Conversions API] extension in a generic event forwarding rule. In practice, you should configure several rules in order to send all accepted [standard events](https://developers.facebook.com/docs/meta-pixel/reference) via [!DNL Meta Pixel] and [!DNL Conversions API].
+This section covers how to use the [!DNL Conversions API] extension in a generic event forwarding rule. In practice, you should configure several rules in order to send all accepted [standard events](https://developers.facebook.com/docs/meta-pixel/reference) via [!DNL Meta Pixel] and [!DNL Conversions API]. For mobile app data, please see the required fields, app data fields, customer information parameters, and custom data details [here](https://developers.facebook.com/docs/marketing-api/conversions-api/app-events).
 
 >[!NOTE]
 >
@@ -83,7 +87,7 @@ When sending shared events, make sure that you are including an event ID and nam
 
 The quick start feature helps you get set up with ease and efficiency with the Meta Conversions API and the Meta Pixel extensions. This tool automates multiple steps that are performed in Adobe tags and event forwarding, significantly reducing the set up time.
 
-This feature automatically installs and configures both the Meta Conversions API and the Meta Pixel extensions on a newly auto-generated tags and event forwarding property with the necessary rules and data elements. Additionally, it also auto installs and configures the Experience Platform Web SDK and Datastream. Lastly, the quick start feature auto-publishes the library to the designated URL in a development environment, which enables client side data collection and server side event forwarding in real-time via Event Forwarding and Experience Edge.
+This feature automatically installs and configures both the Meta Conversions API and the Meta Pixel extensions on a newly auto-generated tags and event forwarding property with the necessary rules and data elements. Additionally, it also auto installs and configures the Experience Platform Web SDK and Datastream. Lastly, the quick start feature auto-publishes the library to the designated URL in a development environment, which enables client side data collection and server side event forwarding in real-time via Event Forwarding and Experience Platform Edge Network.
 
 The following video provides an introduction to the quick start feature.
 
@@ -158,7 +162,7 @@ Next select the dropdown beside **[!UICONTROL Save to Library]** and select **[!
 
 Repeat these steps for any other meta conversion event you would like to configure.
 
-#### Data Layer Configuration
+#### Data Layer Configuration {#configuration}
 
 >[!IMPORTANT]
 >

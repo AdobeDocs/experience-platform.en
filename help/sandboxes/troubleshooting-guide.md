@@ -39,7 +39,7 @@ Sandboxes are isolated partitions of a single Platform instance, with each sandb
 
 ## What is the default production sandbox?
 
-The default production sandbox is the first production sandbox that is created when an IMS Organization is first provisioned. The default production sandbox allows you to ingest or consume data from Platform, as well as accept requests that do not include values for a sandbox name or a sandbox ID. The default production sandbox can be reset but not deleted.
+The default production sandbox is the first production sandbox that is created when an organization is first provisioned. The default production sandbox allows you to ingest or consume data from Platform, as well as accept requests that do not include values for a sandbox name or a sandbox ID. The default production sandbox can be reset but not deleted.
 
 ## How many production sandboxes can I have?
 
@@ -57,7 +57,7 @@ You can update the title of a production sandbox. However, a production sandbox 
 
 ## How many development sandboxes can I have?
 
-Experience Platform currently allows a maximum of 75 total sandboxes (production and development) to be active within a single IMS Organization.
+Experience Platform currently allows a maximum of 75 total sandboxes (production and development) to be active within a single organization.
 
 Development sandboxes support both reset and delete functionalities.
 

@@ -11,7 +11,7 @@ The [!DNL Policy Service] API allows you to create and manage various resources 
 
 ## Prerequisites
 
-Using the developer guide requires a working understanding of the the various [!DNL Experience Platform] services involved in working with Data Governance capabilities. Before beginning to work with the [!DNL Policy Service API], please review the documentation for the following services:
+Using the developer guide requires a working understanding of the various [!DNL Experience Platform] services involved in working with Data Governance capabilities. Before beginning to work with the [!DNL Policy Service API], please review the documentation for the following services:
 
 * [Data Governance](../home.md): The framework by which [!DNL Experience Platform] enforces data usage compliance.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
@@ -46,7 +46,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 Within the [!DNL Policy Service] API, all policies and marketing actions are referred to as either `core` or `custom` resources. 
 
-`core` resources are those defined and maintained by Adobe, whereas `custom` resources are those created and maintained by your organization, and are therefore unique and visible solely to your IMS Organization. As such, listing and lookup operations (`GET`) are the only operations permitted on `core` resources, whereas listing, lookup and update operations (`POST`, `PUT`, `PATCH`, and `DELETE`) are available for `custom` resources.
+`core` resources are those defined and maintained by Adobe, whereas `custom` resources are those created and maintained by your organization, and are therefore unique and visible solely to your organization. As such, listing and lookup operations (`GET`) are the only operations permitted on `core` resources, whereas listing, lookup and update operations (`POST`, `PUT`, `PATCH`, and `DELETE`) are available for `custom` resources.
 
 ## Next steps
 

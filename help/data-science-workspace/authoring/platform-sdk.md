@@ -15,7 +15,7 @@ This tutorial provides you with information on converting `data_access_sdk_pytho
 
 ## Build authentication {#build-authentication}
 
-Authentication is required to make calls to [!DNL Adobe Experience Platform], and is comprised of API Key, IMS Org ID, a user token, and a service token.
+Authentication is required to make calls to [!DNL Adobe Experience Platform], and is comprised of API Key, organization ID, a user token, and a service token.
 
 ### Python
 
@@ -25,7 +25,7 @@ If you are using Jupyter Notebook, please use the below code to build the `clien
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-If you are not using Jupyter Notebook or you need to change the IMS Org, please use the below code sample:
+If you are not using Jupyter Notebook or you need to change the organization, please use the below code sample:
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -48,7 +48,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-If you are not using Jupyter Notebook or you need to change the IMS Org, please use the below code sample:
+If you are not using Jupyter Notebook or you need to change organization, please use the below code sample:
 
 ```r
 library(reticulate)
@@ -73,7 +73,7 @@ If your read time is taking too long, you can try using one of the following fil
 
 >[!NOTE]
 >
->The IMS Org is set within the `client_context`. 
+>The organization is set within the `client_context`. 
 
 ### Python
 
@@ -189,7 +189,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->The IMS Org is set within the `client_context`. 
+>The organization is set within the `client_context`. 
 
 To write data in Python and R, use one of the following examples below:
 

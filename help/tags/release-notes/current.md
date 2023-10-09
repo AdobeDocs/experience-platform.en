@@ -5,6 +5,18 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 ---
 # Release notes for tags and event forwarding
 
+>[!IMPORTANT]
+>
+>Moving forward the tags and event forwarding release notes will no longer be provided on this page. Please refer to the latest [Adobe Experience Platform release notes](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en#data-collection) for detailed tags and event forwarding updates.
+
+## April 26, 2023
+
+* **OAuth JWT Secret**: The [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) allows customers to use Adobe and Google Service tokens to support server-to-server interactions in Event Forwarding.
+
+The following new extension has been released:
+
+* **[!DNL Pinterest Conversions API] extension**: The [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) event forwarding extension allows you to leverage data captured in Adobe Experience Platform Edge Network and send it to [!DNL Pinterest] in the form of server-side events using the [!DNL Pinterest Conversions API].
+
 ## March 29, 2023
 
 **Quick Stark Workflows (Beta)**
@@ -16,7 +28,8 @@ Access new quick start workflows under "Getting Started" from the Data Collectio
 New extensions have been released:
 
 * **[!DNL Braze] event forwarding extension**: The [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) event forwarding extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL Braze] in the form of server-side events using the [!DNL Braze] User Track APIs.
-* **[!DNL Mixpanel] event forwarding extension**: The [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) extension allows you to leverage event forwarding to capture event information in the Adobe Experience Platform Edge Network and send it to Mixpanel using the Track Events API.
+* **[Epsilon Events API] event forwarding extension**: The [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) extension allows you to leverage event forwarding to capture event information in the Adobe Experience Platform Edge Network and send it to [!DNL Epsilon] using the [!DNL Epsilon] Event API.
+* **[!DNL Mixpanel] event forwarding extension**: The [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) extension allows you to leverage event forwarding to capture event information in the Adobe Experience Platform Edge Network and send it to [!DNL Mixpanel] using the Track Events API.
 
 ## January 25, 2023
 
@@ -35,7 +48,7 @@ New extensions have been released:
 
 ## October 26, 2022
 
-* **Sensitive data handling for datastreams**: Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../edge/datastreams/overview.md#sensitive) for more information.
+* **Sensitive data handling for datastreams**: Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../datastreams/overview.md#sensitive) for more information.
 * **[!DNL Splunk] extension for event forwarding**: You can now send data to [!DNL Splunk] using an [event forwarding](../ui/event-forwarding/overview.md) extension. See the [[!DNL Splunk] extension overview](../extensions/server/splunk/overview.md) for more information.
 * **[!DNL Zendesk] extension for event forwarding**: You can now send data to [!DNL Zendesk] using an [event forwarding](../ui/event-forwarding/overview.md) extension. See the [[!DNL Zendesk] extension overview](../extensions/server/zendesk/overview.md) for more information.
 

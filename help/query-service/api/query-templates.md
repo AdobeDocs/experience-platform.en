@@ -15,7 +15,7 @@ See the [UI query templates documentation](../ui/query-templates.md) for informa
 
 ### Retrieve a list of query templates
 
-You can retrieve a list of all query templates for your IMS Organization by making a GET request to the `/query-templates` endpoint. 
+You can retrieve a list of all query templates for your organization by making a GET request to the `/query-templates` endpoint. 
 
 **API format**
 
@@ -41,7 +41,7 @@ The following is a list of available query parameters for listing query template
 
 **Request**
 
-The following request retrieves the latest query template created for your IMS organization.
+The following request retrieves the latest query template created for your organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limit=1
@@ -53,7 +53,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of query templates for the specified IMS Organization. The following response returns the latest query template created for your IMS organization.
+A successful response returns HTTP status 200 with a list of query templates for the specified organization. The following response returns the latest query template created for your organization.
 
 ```json
 {

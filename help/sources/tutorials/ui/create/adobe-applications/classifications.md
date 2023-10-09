@@ -18,13 +18,13 @@ This tutorial requires a working understanding of the following components of Ad
 *   [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 *   [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The Analytics Classifications Data Connector requires your data to have been migrated to the new [!DNL Classifications] infrastructure of Adobe Analytics prior to use. To confirm the migration status of your data, please contact your Adobe Customer Success Manager.
+The Analytics Classifications Data Connector requires your data to have been migrated to the new [!DNL Classifications] infrastructure of Adobe Analytics prior to use. To confirm the migration status of your data, please contact your Adobe account team.
 
 ## Select your classifications
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the sources workspace. The **[!UICONTROL Catalog]** screen displays available sources to create inbound connections with. Each source card shows an option to either configure a new account or add data to an existing account.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source that you want to work with using the search option.
 
 Under the **[!UICONTROL Adobe applications]** category, select the **[!UICONTROL Adobe Analytics]** card and then select **[!UICONTROL Add data]** to start working with Analytics Classifications Data.
 
@@ -66,12 +66,7 @@ Select the **[!UICONTROL Target dataset]** you wish to access.
 
 The **[!UICONTROL Dataset activity]** page displays information about the target dataset you selected, including details about its batch status, dataset ID, and schema.
 
->[!IMPORTANT]
->
->While deleting datasets is possible for other source connectors, it is currently not supported for Analytics Classifications Data connector. If you do delete a dataset by mistake, please contact Adobe Customer Care.
-
 ![](../../../../images/tutorials/create/classifications/dataset.png)
-
 
 ## Next steps
 

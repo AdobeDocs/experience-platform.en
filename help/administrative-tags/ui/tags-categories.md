@@ -2,6 +2,7 @@
 keywords: Experience Platform;tags categories;tags;
 title: Tags Categories
 description: This document provides information on managing unified tags categories in Adobe Experience Cloud
+exl-id: 0369d4e1-c091-4702-890a-3882a4916217
 ---
 # Tag categories guide
 

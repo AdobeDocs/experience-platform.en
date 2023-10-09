@@ -65,7 +65,7 @@ See the [CSV to schema conversion endpoint guide](./export.md) for more informat
 
 ## Export {#export}
 
-The Schema Registry API allows you to transfer and share XDM resources between sandboxes and IMS Organizations. For any schema, field group, or data type, you can generate an export payload containing the structure of the resource and any dependent resources. This payload can then be used to import the resource into a destination sandbox and IMS Org.
+The Schema Registry API allows you to transfer and share XDM resources between sandboxes and organizations. For any schema, field group, or data type, you can generate an export payload containing the structure of the resource and any dependent resources. This payload can then be used to import the resource into a destination sandbox and organization.
 
 See the [export endpoint guide](./export.md) for more information on how to create an export payload for an existing XDM resource.
 

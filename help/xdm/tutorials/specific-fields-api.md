@@ -1,6 +1,7 @@
 ---
 title: Add Specific Fields to a Schema Using the Schema Registry API
 description: Learn how to add individual fields from pre-existing field groups to an Experience Data Model (XDM) schema using the Schema Registry API.
+exl-id: 696cce2b-bbde-416a-9f52-12ab4da9c2c6
 ---
 # Add specific fields to a schema using the Schema Registry API
 

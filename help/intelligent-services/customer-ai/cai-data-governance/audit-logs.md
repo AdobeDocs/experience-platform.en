@@ -2,6 +2,7 @@
 keywords: insights;customer ai;customer ai insights;CAI query service;customer ai queries;customer ai scores
 title: Audit Logs Overview in Customer AI
 description: Learn how to view and manage audit logs in Customer AI.
+exl-id: f5b2d0b0-b6ae-4ccc-b4c9-ac9cc6078d81
 ---
 # Audit logs
 
@@ -15,4 +16,4 @@ In a basic sense, an audit log tells who performed what action, and when. Each a
 
 When the feature is enabled for your organization, audit logs are automatically collected as activity occurs. You do not need to manually enable log collection.
 
-In order to view and export audit logs, you must have been granted the Audit Logs Access access control permission in Adobe Console. To learn how to manage individual permissions for Customer AI features, please refer to the [access control documentation](../cai-data-governance/access-controls.md). 
+In order to view and export audit logs, you must have been granted the Audit Logs Access access control permission in Adobe Console. To learn how to manage individual permissions for Customer AI features, please refer to the [access control documentation](../cai-data-governance/access-controls.md).

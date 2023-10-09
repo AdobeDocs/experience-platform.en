@@ -2,8 +2,8 @@
 title: Marketo Measure Ultimate destination
 description: Learn how to connect and activate data to the Marketo Measure Ultimate destination.
 last-substantial-update: 2023-03-07
+exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
 ---
-
 # Marketo Measure Ultimate Destination {#mmu-destination}
 
 ## Overview {#overview}
@@ -77,5 +77,3 @@ To validate a successful dataset export, you can check that your dataset has suc
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
-
-

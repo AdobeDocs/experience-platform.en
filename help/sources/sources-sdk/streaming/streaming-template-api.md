@@ -3,6 +3,7 @@ title: Documentation Self-Service Template for Streaming SDK API
 description: Learn how to bring streaming data from a source to Adobe Experience Platform using the Flow Service API.
 hide: true
 hidefromtoc: true
+exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
 ---
 # Create a source connection and dataflow to stream *YOURSOURCE* data using the [!DNL Flow Service] API
 
@@ -16,7 +17,7 @@ hidefromtoc: true
 
 >[!IMPORTANT]
 >
->This documentation page was created by the *YOURSOURCE* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*.
+>This source connector and documentation page are created and maintained by the *YOURSOURCE* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*.
 
 ## Prerequisites
 

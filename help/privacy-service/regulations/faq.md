@@ -74,7 +74,11 @@ Many privacy regulations stipulate that if a data subject is below a certain age
 
 Assuming that the business has collected personal information and that it can authenticate or verify the identity of a particular consumer, privacy regulations allow a specific time window for a consumer request to be fulfilled. The following table breaks down the applicable time windows for each regulation, with notes on some exceptions:
 
-| Regulation | Compliance window | Notes |
+>[!NOTE]
+>
+>The timeframe to respond in 'days' are reflective of each regulatory law's mandated timelines to complete a consumers request.
+
+| Regulation | Timeframe to respond | Notes |
 | --- | --- | --- |
 | CCPA (California) | 45 days | |
 | GDPR (European Union) | 30 days | If the request is complex, or numerous requests have been made by the same data subject, then the request can be extended to 60 days. |
@@ -134,7 +138,7 @@ The following questions relate specifically to the GDPR.
 
 A **regulation** is a binding legislative act and must be applied in its entirety across the EU. A **directive** is a legislative act that sets out a goal that all EU countries must achieve, but it is up to the individual countries to decide how.
 
-It is important to note that the GDPR is a regulation, in contrast the the previous legislation (the Data Protection Directive), which is a directive.
+It is important to note that the GDPR is a regulation, in contrast the previous legislation (the Data Protection Directive), which is a directive.
 
 ### How does GDPR affect policy surrounding data breaches?
 

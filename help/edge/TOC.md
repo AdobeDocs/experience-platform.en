@@ -20,14 +20,7 @@ feature: Web SDK
   * [Debugging](fundamentals/debugging.md)
   * [Configure a CSP](fundamentals/configuring-a-csp.md)
   * [Interact with multiple properties](fundamentals/interacting-with-multiple-properties.md)
-  * [User-Agent Client Hints](fundamentals/user-agent-client-hints.md)
-* Datastreams {#datastreams}
-  * [Overview](./datastreams/overview.md)
-  * [Configure a datastream](./datastreams/configure.md)
-  * [Data Prep for Data Collection](./datastreams/data-prep.md)
-  * Data Enrichment {#data-enrichment}
-    * [Weather Data by The Weather Channel](./datastreams/data-enrichment/weather.md)
-    * [Weather data field mappings](./datastreams/data-enrichment/weather-reference.md)
+  * [User agent client hints](fundamentals/user-agent-client-hints.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
   * [First-party device IDs](identity/first-party-device-ids.md)
@@ -35,7 +28,7 @@ feature: Web SDK
 * Data collection {#data-collection}
   * [Automatically collected information](data-collection/automatic-information.md)
   * [Track links](data-collection/track-links.md)
-  * [Collect commerce and products data](data-collection/collect-commerce-data.md)
+  * [Collect commerce, product, and order data](data-collection/collect-commerce-data.md)
   * Adobe Analytics {#adobe-analytics}
     * [Using Adobe Analytics with Platform Web SDK](data-collection/adobe-analytics/analytics-overview.md)
     * [Mapping Analytics variables](data-collection/adobe-analytics/manually-mapping-variables.md)
@@ -65,13 +58,7 @@ feature: Web SDK
     * [Overview](consent/iab-tcf/overview.md)
     * [Integrate with tags](consent/iab-tcf/with-launch.md)
     * [Integrate without tags](consent/iab-tcf/without-launch.md)
-* Web SDK tag extension {#extension}
-  * [Web SDK extension](extension/web-sdk-extension-configuration.md)
-  * [Event types](extension/event-types.md)
-  * [Action types](extension/action-types.md)
-  * [Data element types](extension/data-element-types.md)
-  * [Accessing the ECID](extension/accessing-the-ecid.md)
-  * [Web SDK extension release notes](extension/web-sdk-ext-release-notes.md)
+* [Web SDK tag extension](web-sdk-tag-extension-overview.md)
 * [Release notes](release-notes.md)
 * [Frequently Asked Questions](web-sdk-faq.md)
 * [Resources](resources.md)

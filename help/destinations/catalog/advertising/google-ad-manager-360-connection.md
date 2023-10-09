@@ -13,7 +13,7 @@ For more details on how publisher provided identifiers work in Google Ad Manager
 
 >[!IMPORTANT]
 >
->This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Google Ad Manager 360] connection, contact your Adobe representative and provide your [!DNL IMS Organization ID].
+>This destination is currently in Beta and is only available to a limited number of customers. To request access to the [!DNL Google Ad Manager 360] connection, contact your Adobe representative and provide your [!DNL organization ID].
 
 The [!DNL Google Ad Manager 360] destination exports [!DNL CSV] files to your [!DNL Google Cloud Storage] bucket. Once you've exported the [!DNL CSV] files, you must import them into your [!DNL Google Ad Manager 360] account.
 
@@ -30,6 +30,17 @@ Note the following details that are specific to [!DNL Google Ad Manager 360] des
 |Target Identity|Description|Considerations|
 |---|---|---|
 |PPID|[!DNL Publisher provided ID]|Select this target identity to send audiences to [!DNL Google Ad Manager 360]|
+
+{style="table-layout:auto"}
+
+## Supported audiences {#supported-audiences}
+
+This section describes which type of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -77,6 +88,11 @@ For more information about these values, see the [Google Cloud Storage HMAC keys
 
 ### Fill in destination details {#destination-details}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_gam360_appendSegmentID"
+>title="Append audience ID to audience name"
+>abstract="Select this option to have the audience name in Google Ad Manager 360 include the audience ID from Experience Platform, like this: `Audience Name (Audience ID)`"
+
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
@@ -87,6 +103,7 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Account Type]**: Select an option, depending on your [!DNL Google] account:
    * Use `AdX buyer` for [!DNL Google AdX]
    * Use `DFP by Google` for [!DNL DoubleClick] for Publishers
+*  **[!UICONTROL Append audience ID to audience name]**: Select this option to have the audience name in Google Ad Manager 360 include the audience ID from Experience Platform, like this: `Audience Name (Audience ID)`.
 
 ### Enable alerts {#enable-alerts}
 
@@ -94,20 +111,21 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
 In the identity mapping step, you can see the following pre-populated mappings:
 
 |Pre-populated mapping | Description |
 |---------|----------|
 | `ECID` -> `ppid` | This is the only user-editable pre-populated mapping. You can select any of your attributes or identity namespaces from Platform and map them to `ppid`. |
-| `metadata.segment.alias` -> `list_id` | Maps Experience Platform segment names to segment IDs in the Google platform. |
+| `metadata.segment.alias` -> `list_id` | Maps Experience Platform audience names to audience IDs in the Google platform. |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | Tells the Google platform when to remove disqualified users from segments. |
 
 These mappings are required by [!DNL Google Ad Manager 360] and are automatically created by Adobe Experience Platform for all [!DNL Google Ad Manager 360] connections.

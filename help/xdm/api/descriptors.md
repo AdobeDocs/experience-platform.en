@@ -9,7 +9,7 @@ exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
 
 Schemas define a static view of data entities, but do not provide specific details on how data based on these schemas (datasets, for example) may relate to one another. Adobe Experience Platform allows you to describe these relationships and other interpretive metadata about a schema using descriptors. 
 
-Schema descriptors are tenant-level metadata, meaning they are unique to your IMS Organization and all descriptor operations take place in the tenant container. 
+Schema descriptors are tenant-level metadata, meaning they are unique to your organization and all descriptor operations take place in the tenant container. 
 
 Each schema can have one or more schema descriptor entities applied to it. Each schema descriptor entity includes a descriptor `@type` and the `sourceSchema` to which it applies. Once applied, these descriptors will apply to all datasets created using the schema.
 

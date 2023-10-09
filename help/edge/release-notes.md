@@ -8,13 +8,46 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 # Release notes
 
 This document covers the release notes for the Adobe Experience Platform Web SDK.
-For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](extension/web-sdk-ext-release-notes.md).
+For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
-## Version 2.14.0 - January 25, 2023
+## Version 2.18.0 - July 31, 2023
 
 **New features**
 
-* (Beta) Added support for AJO surfaces and propositions.
+* Added support for [per-command overrides of the datastream ID](../datastreams/overrides.md).
+
+**Fixes and improvements**
+
+* Fixed issue where exit links failed to qualify due to domain being part of query.
+* Deprecated `edgeConfigId` in favor of `datastreamId` in the Web SDK configuration.
+
+## Version 2.17.0 - May 17, 2023
+
+**Fixes and improvements**
+
+* The Web SDK now encodes the Audience Manager cookie destination values, similar to the [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en).
+
+## Version 2.16.0 - April 25, 2023
+
+**New features**
+
+* Added support for [datastream configuration overrides](../datastreams/overrides.md).
+
+## Version 2.15.0 - March 30, 2023
+
+**New features**
+
+* Added support for [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) link click callback.
+* Added support for Adobe Journey Optimizer click tracking.
+
+**Fixes and improvements**
+
+* Link collection now includes link name and visitor region.
+* Removed console error for failed URL destinations.
+
+## Version 2.14.0 - January 25, 2023
+
+* (Beta) Added support for Adobe Journey Optimizer surfaces and propositions.
 
 **Fixes and improvements**
 
@@ -79,7 +112,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 * Optimized the view-change events for single page applications. The display notification is now included with the view-change event when personalized experiences are rendered.
 * Removed console warning when no `eventType` is present.
 * Fixed an issue where the `propositions` property was only returned from a `sendEvent` command when experiences were requested or retrieved from the cache. The `propositions` property will now always be defined as an array.
-* Fixed an issue where hidden containers were not shown when there was an error returned from the Adobe Experience Edge.
+* Fixed an issue where hidden containers were not shown when there was an error returned from the Edge Network.
 * Fixed an issue where the interact events were not being counted in Adobe Target. This was fixed by adding the view name to the XDM at web.webPageDetails.viewName.
 * Fix broken documentation links in console messages.
 
@@ -91,7 +124,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.7.0 - October 26, 2021
 
-* Expose additional information from Experience Edge in the return value from `sendEvent`, including `inferences` and `destinations`. The format of these properties may change as these features are currently rolling out as part of a Beta. For more information, see [Tracking Events.](fundamentals/tracking-events.md)
+* Expose additional information from the Edge Network in the return value from `sendEvent`, including `inferences` and `destinations`. The format of these properties may change as these features are currently rolling out as part of a Beta. For more information, see [Tracking Events.](fundamentals/tracking-events.md)
 
 ## Version 2.6.4 - September 7, 2021
 

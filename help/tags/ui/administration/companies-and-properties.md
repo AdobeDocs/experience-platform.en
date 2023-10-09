@@ -19,7 +19,7 @@ A mobile property type can contain multiple applications. For example, in a mobi
 
 ## Best practices for planning properties {#best-practices-for-planning-properties}
 
-Each tag implementation in Adobe Experience Platform can be very different. They have a wide variety of data-collection needs, variable usage, extensions, third-party tags, other systems and technologies, people, teams, geographic regions, and so on. You should structure your properties in a way that matches your IMS Organization's workflow, and processes.
+Each tag implementation in Adobe Experience Platform can be very different. They have a wide variety of data-collection needs, variable usage, extensions, third-party tags, other systems and technologies, people, teams, geographic regions, and so on. You should structure your properties in a way that matches your organization's workflow, and processes.
 
 Considering the following when planning properties:
 
@@ -61,7 +61,7 @@ For example, If you are deploying [!DNL Adobe Analytics], [!DNL Target], and the
 
 For the individuals, teams, and organizations that are working in Adobe Experience Platform, will they need access to all of your websites and applications, some of them, or just one?
 
-The User Management features allow you to assign different roles to different people for all of your properties, or on a per-property basis. If someone has sufficient rights, that person can perform administrative actions across all the properties in that Platform IMS Organization. All the other roles can be assigned on a per-property basis. You can even hide a property from certain users (non-admins) by not giving them any role in that property.
+The User Management features allow you to assign different roles to different people for all of your properties, or on a per-property basis. If someone has sufficient rights, that person can perform administrative actions across all the properties in that Platform organization. All the other roles can be assigned on a per-property basis. You can even hide a property from certain users (non-admins) by not giving them any role in that property.
 
 ## Properties page
 

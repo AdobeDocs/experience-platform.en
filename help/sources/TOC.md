@@ -15,9 +15,9 @@ feature: Sources
     - [Analytics source](connectors/adobe-applications/analytics.md)
     - [Audience Manager source](connectors/adobe-applications/audience-manager.md)
     - [Adobe Campaign Managed Cloud Services source](connectors/adobe-applications/campaign.md)
+    - [Adobe Commerce source](connectors/adobe-applications/commerce.md)
     - [Customer attributes source](connectors/adobe-applications/customer-attributes.md)
     - [Data Collection source](connectors/adobe-applications/data-collection.md)
-    - [Workfront source](connectors/adobe-applications/workfront.md)
     - Field mappings {#mapping}
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
@@ -35,6 +35,7 @@ feature: Sources
   - Analytics {#analytics}
     - [Mixpanel connector](connectors/analytics/mixpanel.md)
     - [Pendo](connectors/analytics/pendo-webhook.md)
+    - [RainFocus](connectors/analytics/rainfocus.md)
   - Cloud storage {#cloud-storage}
     - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
     - [Amazon S3 connector](connectors/cloud-storage/s3.md)
@@ -81,10 +82,13 @@ feature: Sources
     - [Oracle connector](connectors/databases/oracle.md)
     - [Phoenix connector](connectors/databases/phoenix.md)
     - [PostgreSQL connector](connectors/databases/postgres.md)
+    - [Snowflake Streaming connector](connectors/databases/snowflake-streaming.md)
     - [Snowflake connector](connectors/databases/snowflake.md)
     - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
   - eCommerce {#ecommerce}
-    - [Shopify connector](connectors/ecommerce/shopify.md)
+    - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
+    - [Shopify](connectors/ecommerce/shopify.md)
+    - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
   - Local system {#local-system}
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Marketing automation {#marketing-automation}
@@ -156,11 +160,14 @@ feature: Sources
       - [Oracle](tutorials/api/create/databases/oracle.md)
       - [Phoenix](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+      - [Snowflake Streaming](tutorials/api/create/databases/snowflake-streaming.md)
       - [Snowflake](tutorials/api/create/databases/snowflake.md)
       - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
       - [SQL Server](tutorials/api/create/databases/sql-server.md)
     - eCommerce {#ecommerce}
+      - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
+      - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
     - Marketing automation {#marketing-automation}
       - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
       - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -220,13 +227,13 @@ feature: Sources
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - [Marketo Custom Activities](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-      - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
       - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
     - Analytics {#analytics}
       - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
+      - [RainFocus](tutorials/ui/create/analytics/rainfocus.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
       - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
@@ -277,7 +284,9 @@ feature: Sources
       - [Snowflake](tutorials/ui/create/databases/snowflake.md)
       - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
     - eCommerce {#ecommerce}
+      - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+      - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
     - Local system {#local-system}
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Marketing automation {#marketing-automation}
@@ -310,6 +319,7 @@ feature: Sources
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
   - [Create a sources dataflow using templates in the UI](tutorials/ui/templates.md)
+  - [On-demand ingestion](tutorials/ui/on-demand-ingestion.md)
   - [Monitor batch dataflows](tutorials/ui/monitor.md)
   - [Monitor streaming dataflows](tutorials/ui/monitor-streaming.md)
   - [Update accounts](tutorials/ui/update.md)
@@ -317,6 +327,7 @@ feature: Sources
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
   - [Subscribe to sources alerts](tutorials/ui/alerts.md)
+  - [Save a dataflow as a draft](tutorials/ui/draft.md)
 - Self-Serve Sources (Batch SDK) {#sdk}
   - [Overview](sources-sdk/overview.md)
   - Configure your connection specification {#config}
@@ -346,6 +357,9 @@ feature: Sources
     - [Document your source (Streaming SDK)](sources-sdk/streaming/document-streaming.md)
     - [Documentation self-service API streaming template](sources-sdk/streaming/streaming-template-api.md)
     - [Documentation self-service UI streaming template](sources-sdk/streaming/streaming-template-ui.md)
+- Error messages {#errors}
+  - [Error messages in sources](./errors/sources-errors.md)
+  - [Error messages in Flow Service](./errors/flow-service-errors.md)
 - [Flow run notifications](notifications.md)
 - [IP address allow list](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)

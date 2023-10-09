@@ -13,7 +13,7 @@ This document provides answers to frequently asked questions about access contro
 
 ## Where can I find my current access permissions?
 
-If you are a system administrator, product administrator, or product-profile administrator for your IMS Organization, you can view your assigned product profile and the permissions it provides within the Adobe Admin Console. See the [access control user guide](./ui/overview.md) for instructions on how to navigate the [!DNL Admin Console] to view a product profile's permissions.
+If you are a system administrator, product administrator, or product-profile administrator for your organization, you can view your assigned product profile and the permissions it provides within the Adobe Admin Console. See the [access control user guide](./ui/overview.md) for instructions on how to navigate the [!DNL Admin Console] to view a product profile's permissions.
 
 If you are not an administrator, you can still view your current access permissions by sending a request to the `/acl/effective-policies` endpoint in the Access Control API. See the "View effective policies" section in [access control developer guide](./api/effective-policies.md) for more information.
 

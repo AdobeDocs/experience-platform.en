@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;guardrails;guidelines;limit;entity;primary entity;dimension entity;
 title: Default Guardrails for Real-Time Customer Profile Data
 solution: Experience Platform
 product: experience platform
@@ -24,13 +23,13 @@ The following Experience Platform services are involved with modeling Real-Time 
 * [[!DNL Real-Time Customer Profile]](home.md): Create unified consumer profiles using data from multiple sources.
 * [Identities](../identity-service/home.md): Bridge identities from disparate data sources as they are ingested into Platform.
 * [Schemas](../xdm/home.md): Experience Data Model (XDM) schemas are the standardized framework by which Platform organizes customer experience data.
-* [Segments](../segmentation/home.md): The segmentation engine within Platform is used to create segments from your customer profiles based on customer behaviors and attributes.
+* [Audiences](../segmentation/home.md): The segmentation engine within Platform is used to create audiences from your customer profiles based on customer behaviors and attributes.
 
 ## Limit types
 
 There are two types of default limits within this document:
 
-* **Soft limit:** It is possible to go beyond a soft limit, however soft limits provide a recommended guideline for system performance. 
+* **Soft limit:** It is possible to go beyond a soft limit, however soft limits provide a recommended guideline for system performance.
 
 * **Hard limit:** A hard limit provides an absolute maximum.
 
@@ -42,18 +41,20 @@ There are two types of default limits within this document:
 
 The following guardrails provide recommended limits when modeling Real-Time Customer Profile data. To learn more about primary entities and dimension entities, see the section on [entity types](#entity-types) in the Appendix.
 
+![A diagram showing the different guardrails for Profile data in Adobe Experience Platform.](./images/guardrails/profile-guardrails.png)
+
 ### Primary entity guardrails
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-|XDM Individual Profile class datasets | 20 | Soft| A maximum of 20 datasets that leverage the XDM Individual Profile class is recommended.|
-|XDM ExperienceEvent class datasets | 20 | Soft| A maximum of 20 datasets that leverage the XDM ExperienceEvent class is recommended.|
-|Adobe Analytics report suite datasets enabled for Profile| 1 | Soft | A maximum of one (1) Analytics report suite dataset should be enabled for Profile. Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix.|
-| Multi-entity relationships| 5 | Soft | A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
+| XDM Individual Profile class datasets | 20 | Soft | A maximum of 20 datasets that leverage the XDM Individual Profile class is recommended. |
+| XDM ExperienceEvent class datasets | 20 | Soft | A maximum of 20 datasets that leverage the XDM ExperienceEvent class is recommended. |
+| Adobe Analytics report suite datasets enabled for Profile | 1 | Soft | A maximum of one (1) Analytics report suite dataset should be enabled for Profile. Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix. |
+| Multi-entity relationships | 5 | Soft | A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
 | JSON depth for ID field used in multi-entity relationship| 4 | Soft | The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4. This means that in a highly nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
-|Array cardinality in a profile fragment|<=500|Soft|The optimal array cardinality in a profile fragment (time-independent data) is <=500.|
-|Array cardinality in ExperienceEvent|<=10|Soft|The optimal array cardinality in an ExperienceEvent (time series data) is <=10.|
-|Identity count for individual profile Identity Graph | 50 | Hard | **The maximum number of identities in an Identity Graph for an individual profile is 50.** Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups.| 
+| Array cardinality in a profile fragment|<=500|Soft|The optimal array cardinality in a profile fragment (time-independent data) is <=500. |
+| Array cardinality in ExperienceEvent | <=10 | Soft | The optimal array cardinality in an ExperienceEvent (time series data) is <=10. |
+| Identity count for individual profile Identity Graph | 50 | Hard | **The maximum number of identities in an Identity Graph for an individual profile is 50.** Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups. | 
 
 {style="table-layout:auto"}
 
@@ -61,9 +62,9 @@ The following guardrails provide recommended limits when modeling Real-Time Cust
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| No time-series data permitted for non-[!DNL XDM Individual Profile] entities| 0 | Hard | **Time-series data is not permitted for non-[!DNL XDM Individual Profile] entities in Profile Service.** If a time-series dataset is associated with a non-[!DNL XDM Individual Profile] ID, the dataset should not be enabled for [!DNL Profile]. |
+| No time-series data permitted for non-[!DNL XDM Individual Profile] entities | 0 | Hard | **Time-series data is not permitted for non-[!DNL XDM Individual Profile] entities in Profile Service.** If a time-series dataset is associated with a non-[!DNL XDM Individual Profile] ID, the dataset should not be enabled for [!DNL Profile]. |
 | No nested relationships | 0 | Soft | You should not create a relationship between two non-[!DNL XDM Individual Profile] schemas. The ability to create relationships is not recommended for any schemas which are not part of the [!DNL Profile] union schema.|
-| JSON depth for primary ID field | 4 | Soft | The recommended maximum JSON depth for the primary ID field is 4. This means that in a highly nested schema, you should not select a field as a primary ID if it is nested more than 4 levels deep. A field that is on the 4th nested level can be used as a primary ID.|
+| JSON depth for primary ID field | 4 | Soft | The recommended maximum JSON depth for the primary ID field is 4. This means that in a highly nested schema, you should not select a field as a primary ID if it is nested more than 4 levels deep. A field that is on the 4th nested level can be used as a primary ID. |
 
 {style="table-layout:auto"}
 
@@ -94,20 +95,20 @@ The following guardrails refer to data size and provide recommended limits for d
 | --- | --- | --- | --- |
 | Total size for all dimensional entities | 5GB | Soft | The recommended total size for all dimensional entities is 5GB. Ingesting large dimension entities may affect system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended.|
 | Datasets per dimensional entity schema | 5 | Soft | A maximum of 5 datasets associated with each dimensional entity schema is recommended. For example, if you create a schema for "products" and add five contributing datasets, you should not create a sixth dataset tied to the products schema.|
-|Dimension entity batches ingested per day |4 per entity|Soft|The recommended maximum number of dimension entity batches ingested per day is 4 per entity. For example, you could ingest updates to a product catalog up to 4 times per day. Ingesting additional dimension entity batches for the same entity may affect system performance.|
+| Dimension entity batches ingested per day | 4 per entity | Soft | The recommended maximum number of dimension entity batches ingested per day is 4 per entity. For example, you could ingest updates to a product catalog up to 4 times per day. Ingesting additional dimension entity batches for the same entity may affect system performance. |
 
 {style="table-layout:auto"}
 
 ## Segmentation guardrails
 
-The guardrails outlined in this section refer to the number and nature of segments an organization can create within Experience Platform, as well as mapping and activating segments to destinations.
+The guardrails outlined in this section refer to the number and nature of audiences an organization can create within Experience Platform, as well as mapping and activating audiences to destinations.
 
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
-| Segments per sandbox | 4000 | Soft | An organization can have more than 4000 segments in total, as long as there are less than 4000 segments in each individual sandbox. Attempting to create additional segments may affect system performance.|
-| Edge segments per sandbox | 150 | Soft | An organization can have more than 150 edge segments in total, as long as there are less than 150 edge segments in each individual sandbox. Attempting to create additional edge segments may affect system performance. | 
-| Streaming segments per sandbox | 500 | Soft | An organization can have more than 500 streaming segments in total, as long as there are less than 500 streaming segments in each individual sandbox. Attempting to create additional streaming segments may affect system performance.|
-| Batch segments per sandbox | 4000 | Soft | An organization can have more than 4000 batch segments in total, as long as there are less than 4000 batch segments in each individual sandbox. Attempting to create additional batch segments may affect system performance.|
+| Audiences per sandbox | 4000 | Soft | An organization can have more than 4000 audiences in total, as long as there are less than 4000 audiences in each individual sandbox. Attempting to create additional audiences may affect system performance.|
+| Edge audiences per sandbox | 150 | Soft | An organization can have more than 150 edge audiences in total, as long as there are less than 150 edge audiences in each individual sandbox. Attempting to create additional edge audiences may affect system performance. | 
+| Streaming audiences per sandbox | 500 | Soft | An organization can have more than 500 streaming audiences in total, as long as there are less than 500 streaming audiences in each individual sandbox. Attempting to create additional streaming audiences may affect system performance.|
+| Batch audiences per sandbox | 4000 | Soft | An organization can have more than 4000 batch audiences in total, as long as there are less than 4000 batch audiences in each individual sandbox. Attempting to create additional batch audiences may affect system performance.|
 
 {style="table-layout:auto"}
 
@@ -129,7 +130,7 @@ Time-independent attributes, also known as "record data" are modeled using [!DNL
 
 #### Dimension entity
 
-While the Profile data store maintaining profile data is not a relational store, Profile permits integration with small dimension entities in order to create segments in a simplified and intuitive manner. This integration is known as [multi-entity segmentation](../segmentation/multi-entity-segmentation.md).
+While the Profile data store maintaining profile data is not a relational store, Profile permits integration with small dimension entities in order to create audiences in a simplified and intuitive manner. This integration is known as [multi-entity segmentation](../segmentation/multi-entity-segmentation.md).
 
 Your organization may also define XDM classes to describe things other than individuals, such as stores, products, or properties. These non-[!DNL XDM Individual Profile] schemas are called "dimension entities" (also known as "lookup entities") and do not contain time-series data. Schemas that represent dimension entities are linked to profile entities through the use of [schema relationships](../xdm/tutorials/relationship-ui.md).
 

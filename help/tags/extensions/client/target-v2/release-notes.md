@@ -9,6 +9,12 @@ exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
+## v0.19.3 (September 18, 2023)
+
+- Updated to support at.js v2.10.3.
+- Fixed an issue that incorrectly triggered the at-content-rendering-succeeded custom event when no offers are rendered. The correct event, at-content-rendering-no-offers, is now triggered.
+- Added eventToken and responseTokens to error object for the at-content-rendering-failed custom event.
+
 ## v0.19.2 (February 14, 2023)
 
 - Fixed an issue with allowing timeout to be set to a data element.

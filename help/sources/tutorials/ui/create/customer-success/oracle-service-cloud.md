@@ -4,11 +4,7 @@ title: Create an Oracle Service Cloud Source Connection in the UI
 description: Learn how to create an Oracle Service Cloud source connection using the Adobe Experience Platform UI.
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
 ---
-# (Beta) Create an Oracle Service Cloud source connection in the UI
-
->[!NOTE]
->
->The Oracle Service Cloud source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+# Create an Oracle Service Cloud source connection in the UI
 
 This tutorial provides steps for creating an Oracle Service Cloud source connection using the Adobe Experience Platform user interface.
 

@@ -17,7 +17,7 @@ This guide requires you to already have access to [!DNL Aqua Data Studio] and be
 >
 >There are [!DNL Windows] and [!DNL macOS] versions of [!DNL Aqua Data Studio]. Screenshots in this guide were taken using the [!DNL macOS] desktop app. There may be minor discrepancies in the UI between the versions.
 
-To acquire the necessary credentials for connecting [!DNL Aqua Data Studio] to Experience Platform, you must have access to the [!UICONTROL Queries] workspace in the Platform UI. Please contact your IMS Organization administrator if you do not currently have access to the [!UICONTROL Queries] workspace. 
+To acquire the necessary credentials for connecting [!DNL Aqua Data Studio] to Experience Platform, you must have access to the [!UICONTROL Queries] workspace in the Platform UI. Please contact your organization administrator if you do not currently have access to the [!UICONTROL Queries] workspace. 
 
 ## Register the server {#register-server}
 

@@ -11,7 +11,7 @@ Self-Serve Sources (Batch SDK) allows you to integrate your own REST-based sourc
 
 ## Prerequisites
 
-To use Self-Serve Sources (Batch SDK), you must ensure that you have access to an IMS Organization Sandbox provisioned with Adobe Experience Platform Sources.
+To use Self-Serve Sources (Batch SDK), you must ensure that you have access to an organization Sandbox provisioned with Adobe Experience Platform Sources.
 
 This guide also requires a working understanding of the following components of Adobe Experience Platform:
 

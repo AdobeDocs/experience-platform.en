@@ -1,13 +1,14 @@
 ---
-title: Create a Customer.io Source Connection and Dataflow in the UI 
+title: Create a Customer.io Source Connection and Dataflow in the UI
 description: Learn how to create a Customer.io source connection using the Adobe Experience Platform UI.
-badge: "Beta"
+badge: Beta
+exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
 ---
 # Create a [!DNL Customer.io] source connection and dataflow in the UI
 
 >[!NOTE]
 >
->The [!DNL Customer.io] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Customer.io] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps for creating a [!DNL Customer.io] source connection and dataflow using the Adobe Experience Platform user interface.
 
@@ -149,7 +150,7 @@ In the [!DNL Customer.io] user interface, input your [webhook URL](#get-streamin
 
 >[!TIP]
 >
->You can subscribe to a variety of different events for your reporting webhook. Each events' message will be ingested to Platform when a [!DNL Customer.io] action event trigger criteria is met. For more information on the different events, please refer to the the [[!DNL Customer.io] events documentation](https://customer.io/docs/webhooks/#events).
+>You can subscribe to a variety of different events for your reporting webhook. Each events' message will be ingested to Platform when a [!DNL Customer.io] action event trigger criteria is met. For more information on the different events, please refer to the [[!DNL Customer.io] events documentation](https://customer.io/docs/webhooks/#events).
 
 ## Next steps {#next-steps}
 

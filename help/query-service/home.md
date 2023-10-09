@@ -15,7 +15,7 @@ Adobe Experience Platform ingests data from a wide variety of sources. A major c
 
 ## Using [!DNL Query Service]
 
-[!DNL Query Service] provides a user interface and a RESTful API from which you can create SQL queries to better analyze your data. With the user interface, you can write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization. The user interface is intended to be used as a sandbox to test out your queries before executing them on your wider dataset. More information on using the interactive service within [!DNL Platform] can be found in the [Query Service user interface guide](ui/overview.md). The RESTful API provides a similar experience, allowing you to programatically write and execute queries, schedule queries for future use and repetition, as well as create templates for queries you wish to write. More information on using the [!DNL Query Service] API can be found in the [Query Service developer guide](api/getting-started.md).
+[!DNL Query Service] provides a user interface and a RESTful API from which you can create SQL queries to better analyze your data. With the user interface, you can write and execute queries, view previously executed queries, and access queries saved by users within your organization. The user interface is intended to be used as a sandbox to test out your queries before executing them on your wider dataset. More information on using the interactive service within [!DNL Platform] can be found in the [Query Service user interface guide](ui/overview.md). The RESTful API provides a similar experience, allowing you to programatically write and execute queries, schedule queries for future use and repetition, as well as create templates for queries you wish to write. More information on using the [!DNL Query Service] API can be found in the [Query Service developer guide](api/getting-started.md).
 
 ## [!DNL Query Service] and [!DNL Experience Platform] services
 
@@ -27,7 +27,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning an
 
 ### [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] allows users to divide their customers into smaller groups that share similar traits. These segments can subsequently be evaluated to provide better analysis on your [!DNL Real-Time Customer Profile] data. [!DNL Query Service] can be used to provide this analysis by running queries on this segment data within the [!DNL Data Lake]. Please read the [!DNL Segmentation Service] overview for more information about segmentation, and the [!DNL Profile Query Language] (PQL) guide for more information on how to analyze segments.
+Adobe Experience Platform [!DNL Segmentation Service] allows users to divide their customers into smaller groups that share similar traits. These audiences can subsequently be evaluated to provide better analysis on your [!DNL Real-Time Customer Profile] data. [!DNL Query Service] can be used to provide this analysis by running queries on this audience data within the [!DNL Data Lake]. Please read the [!DNL Segmentation Service] overview for more information about segmentation, and the [!DNL Profile Query Language] (PQL) guide for more information on how to analyze audiences.
 
 ## Use cases
 
@@ -35,7 +35,7 @@ Adobe Experience Platform [!DNL Segmentation Service] allows users to divide the
 
 ### Adobe Analytics browse abandonment
 
-This [browse abandonment example centers on using Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) data to create a particular actionable audience. [!DNL Query Service] accommodates complex logic for segmentation to calculate various personalized attributes for use downstream, or to greatly simplify how you build out your segments. 
+This [browse abandonment example centers on using Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) data to create a particular actionable audience. [!DNL Query Service] accommodates complex logic for segmentation to calculate various personalized attributes for use downstream, or to greatly simplify how you build out your audiences. 
 
 ### Looker BI dashboards
 
