@@ -8,6 +8,8 @@ description: The Mailchimp Tags destination allows you to export your account da
 
 [!DNL Mailchimp Tags] uses [audiences](https://mailchimp.com/help/getting-started-audience/) and [tags](https://mailchimp.com/help/getting-started-tags/) to manage your contact information. Tags are labels using which you can organize your contacts and label them for your internal categorization within [!DNL Mailchimp].
 
+Compared to [!DNL Mailchimp Interest Categories] which you would use to sort your contacts based on their interests and preferences, [!DNL Mailchimp Tags] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Interest Categories], you can check it out on the [[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md) page.*
+
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) endpoint. You can **add new contacts** or **update tags of existing [!DNL Mailchimp] contacts** within an existing [!DNL Mailchimp] audience after activating them within a new segment. [!DNL Mailchimp Tags] uses the selected segment names from Platform as the tag names within [!DNL Mailchimp].
 
 ## Use cases {#use-cases}
