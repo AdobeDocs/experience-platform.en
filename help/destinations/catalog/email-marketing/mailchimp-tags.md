@@ -10,8 +10,6 @@ description: The Mailchimp Tags destination allows you to export your account da
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) endpoint. You can **add new contacts** or **update tags of existing [!DNL Mailchimp] contacts** within an existing [!DNL Mailchimp] audience after activating them within a new segment. [!DNL Mailchimp Tags] uses the selected segment names from Platform as the tag names within [!DNL Mailchimp].
 
-[!DNL Mailchimp Tags] uses [OAuth 2 with Authorization Code](/help/destinations/destination-sdk/functionality/authentication/oauth2-authentication.md#authorization-code) to communicate with the [!DNL Account Engagement] API. Instructions to authenticate to your [!DNL Mailchimp Tags] instance are further below, in the [Authenticate to destination](#authenticate) section.
-
 ## Use cases {#use-cases}
 
 To help you better understand how and when you should use the [!DNL Mailchimp Tags] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
@@ -36,22 +34,29 @@ Note the following prerequisites in order to export data from Platform to your [
 
 Before you can create a [!DNL Mailchimp Tags] destination, you must first ensure that you have a [!DNL Mailchimp] account. If you do not have one already visit the [[!DNL Mailchimp] signup page](https://login.mailchimp.com/signup/) to register and create your account.
 
-#### Gather [!DNL Mailchimp] credentials {#gather-credentials}
+#### Gather [!DNL Mailchimp] API key {#gather-credentials}
 
-Note down the items below before you authenticate to the [!DNL Mailchimp Tags] destination.
+You need your [!DNL Mailchimp] **API key** to authenticate the [!DNL Mailchimp Interest Categories] destination against your [!DNL Mailchimp] account. The **API key** serves as the **Password** when you [authenticate the destination](#authenticate).
 
-| Credential | Description |
-| --- | --- |
-| `Username` | Your [!DNL Mailchimp] account username. |
-| `Password` | Your [!DNL Mailchimp] account password. |
+If you do not have your **API key**, Sign in to your account and refer to the [[!DNL Mailchimp] Generate your API key](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) documentation to create one. 
 
-{style="table-layout:auto"}
+An example of an API key is `0123456789abcdef0123456789abcde-us14`. 
+
+>[!IMPORTANT]
+>
+>If you generate the **API key**, write it down as you will not be able to access it after generation.
 
 #### Identify [!DNL Mailchimp] data center {#identify-data-center}
 
-Next you need to identify your Mailchimp domain. To do this, log in to your [!DNL Mailchimp] account and check the URL in your browser.
-You’ll notice a value similar to *`us19`.admin.mailchimp.com*, Write down the prefix (`us19` in this example). You will need this prefix when connecting to the destination. 
-If you require guidance, refer to the [Mailchimp documentation](https://mailchimp.com/developer/marketing/guides/quick-start/#make-your-first-api-call).
+Next, you must identify your [!DNL Mailchimp] data center. To do this, log in to your [!DNL Mailchimp] account and navigate to the **API keys section** of your account. 
+
+The value is the first part of the URL you see in your browser. If the URL is *https://`us14`.mailchimp.com/account/api/*, then the data center is `us14`. 
+
+It's also appended to your API key in the form *key-dc*; if your API key is `0123456789abcdef0123456789abcde-us14`, then the data center is `us14`. 
+
+Write down the data center value *(`us14` in this example)*, you need this value when you [fill in destination details](#destination-details).
+
+If you require further guidance, refer to the [[!DNL Mailchimp] Fundamentals documentation](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
 
 ### Guardrails {#guardrails}
 
@@ -64,6 +69,16 @@ Refer to the [!DNL Mailchimp] [rate limits](https://mailchimp.com/developer/mark
 | Target Identity | Description | Considerations |
 |---|---|---|
 | Email | Contact email Address | Mandatory |
+
+{style="table-layout:auto"}
+
+## Supported audiences {#supported-audiences}
+
+This section describes which type of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 
 {style="table-layout:auto"}
 
@@ -90,19 +105,18 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, search for [!DN
 
 ### Authenticate to destination {#authenticate}
 
-To authenticate to the destination, select **[!UICONTROL Connect to destination]**. You will be redirected to the [!DNL Mailchimp] authorization page.
+To authenticate to the destination, fill in the required fields below and select **[!UICONTROL Connect to destination]**.
 
-![Platform UI screenshot showing how to authenticate to Mailchimp.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
+| Field | Description |
+| --- | --- |
+| **[!UICONTROL Username]** | Your [!DNL Mailchimp Interest Categories] username. |
+| **[!UICONTROL Password]** | Your [!DNL Mailchimp] **API key**, which you had noted down in the [Gather [!DNL Mailchimp] credentials](#gather-credentials) section.<br> Your API key takes the form of `{KEY}-{DC}`, where the `{KEY}` portion refers to the value noted down in the [[!DNL Mailchimp] API key](#gather-credentials) section and the `{DC}` portion refers to the [[!DNL Mailchimp] data center](#identify-data-center). <br>You can provide either the `{KEY}` portion or the entire form.<br> For example, if your API key is <br>*`0123456789abcdef0123456789abcde-us14`*,<br> you could provide either *`0123456789abcdef0123456789abcde`* or *`0123456789abcdef0123456789abcde-us14`* as the value. |
 
-Enter your [!DNL Mailchimp] account credentials and select [!DNL Log In].
+{style="table-layout:auto"}
 
-![Platform UI screenshot showing the Mailchimp authorization page.](../../assets/catalog/email-marketing/mailchimp-tags/mailchimp-authorization.png)
+![Platform UI screenshot showing how to authenticate.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
 
-Next, Select [!UICONTROL Allow] in the subsequent window to give permissions to the **Adobe Experience Platform** app to access your [!DNL Mailchimp] account. *You will need to do this only once*.
-
-![Mailchimp App screenshot confirmation popup to give permissions to the Experience Platform app access to Mailchimp.](../../assets/catalog/email-marketing/mailchimp-tags/allow-app.png)
-
-If the details provided are valid, the Platform UI displays the following message along with a **[!UICONTROL Connected]** status with a green check mark: *[!DNL You successfully connected to Mailchimp Tags account]*. You can then proceed to the next step.
+If the details provided are valid, the UI displays a **[!UICONTROL Connected]** status with a green check mark. You can then proceed to the next step.
 
 ### Fill in destination details {#destination-details}
 
@@ -114,8 +128,8 @@ To configure details for the destination, fill in the required and optional fiel
 | --- | --- |
 | **[!UICONTROL Name]** | A name by which you will recognize this destination in the future. |
 | **[!UICONTROL Description]** | A description that will help you identify this destination in the future. |
-| **[!UICONTROL Data Center]** | Your [!DNL Mailchimp] account `Data Center`. Refer to the [Identify [!DNL Mailchimp] data center](#identify-data-center) section for any guidance. |
-| **[!UICONTROL Audience List ID]** | After you select your **[!UICONTROL Data Center]**, this dropdown is automatically populated with the audience names from your account. Select the audience that you want to update with data from Platform. |
+| **[!UICONTROL Data center]** | Your [!DNL Mailchimp] account `data center`. Refer to the [Identify [!DNL Mailchimp] data center](#identify-data-center) section for any guidance. |
+| **[!UICONTROL Audience Name (Please select Data center first)]** | After you select your **[!UICONTROL Data center]**, this dropdown is automatically populated with the audience names from your [!DNL Mailchimp] account. Select the audience that you want to update with data from Platform. |
 
 {style="table-layout:auto"}
 
@@ -151,7 +165,7 @@ To correctly map your XDM fields to the [!DNL Mailchimp Tags] destination fields
     The mappings between your XDM profile schema and [!DNL Mailchimp Tags] will be as below:
     | Source Field | Target Field | Mandatory |
     | --- | --- | --- |
-    |`IdentityMap: Email`|`Identity: email`| Yes |
+    |`IdentityMap: Email`|`Identity: Email`| Yes |
 
     An example with the completed mappings is shown below:
     ![Platform UI screenshot example showing field mappings.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
