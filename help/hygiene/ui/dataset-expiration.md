@@ -1,9 +1,9 @@
 ---
-title: Manage Dataset Expirations
+title: Automated Dataset Expirations
 description: Learn how to schedule a dataset expiration in the Adobe Experience Platform UI.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 ---
-# Manage dataset expirations {#dataset-expiration}
+# Automated dataset expirations {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
@@ -16,11 +16,11 @@ The [[!UICONTROL Data Lifecycle] workspace](./overview.md) in the Adobe Experien
 >
 >If a dataset is set to expire, you must manually change any dataflows that may be ingesting data into that dataset so that your downstream workflows are not negatively affected.
 
-This document covers how to schedule and manage dataset expirations in the Platform UI.
+This document covers how to schedule and automate dataset expirations in the Platform UI.
 
 >[!NOTE]
 >
->Dataset Expiration does not currently delete data from the Adobe Experience Platform Edge Network. However, there is no possibility that data stays inside the Edge Network after the dataset is set to expire. This is because the 14-day service license agreement for Dataset Expiration coincides with the 14-day period where data exists inside the Edge Network before being discarded.
+>Dataset Expiration does not currently delete data from the Adobe Experience Platform Edge Network. However, there is no possibility that data stays inside the Edge Network after the dataset is set to expire. This is because the 15-day service license agreement for Dataset Expiration overlaps with the 14-day period where data exists inside the Edge Network before being discarded.
 
 ## Schedule a dataset expiration {#schedule-dataset-expiration}
 
@@ -33,7 +33,7 @@ To create a request, select **[!UICONTROL Create request]** from the main page i
 
 >[!IMPORTANT]
 >
->You may have up to 20 concurrently scheduled dataset expirations. This means that you can have 20 datasets scheduled to be deleted at any one time. There are no restrictions on what time or year that these expirations are set for. For example, if you have 20 scheduled dataset expirations and one dataset is due to be deleted tomorrow, you cannot set any more expirations until after that that dataset has been deleted.  
+>Real-Time CDP, Adobe Journey Optimizer, and Customer Journey Analytics users have 20 pending scheduled dataset expiration work orders. Healthcare Shield and Privacy and Security Shield users have 50 pending scheduled dataset expiration work orders. This means that you can have 20 or 50 datasets scheduled to be deleted at any one time.<br>For example, if you have 20 scheduled dataset expirations and one dataset is due to be deleted tomorrow, you cannot set any more expirations until after that that dataset has been deleted.
 
 ![The [!UICONTROL Data Lifecycle] workspace with [!UICONTROL Create request] highlighted.](../images/ui/ttl/create-request-button.png)
 
