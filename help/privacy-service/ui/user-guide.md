@@ -47,6 +47,10 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 {style="table-layout:auto"}
 
+<!--Not released yet:
+| [!UICONTROL PDPA_VNM] | Vietnam's [!DNL Personal Data Protection Decree] |
+ -->
+
 >[!NOTE]
 >
 >See the overview on [supported privacy regulations](../regulations/overview.md) for more information on the legal context of each regulation.
