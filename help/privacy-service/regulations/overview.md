@@ -28,6 +28,10 @@ Through the use of [Adobe Experience Platform Privacy Service](../home.md), Expe
 
 {style="table-layout:auto"}
 
+<!-- Not yet released:
+ | PDPD (Vietnam) | The [[!DNL Personal Data Protection Decree (PDPD)]]() .... | 
+ -->
+
 ## Next steps
 
 For more information on supported regulations, refer to the following documents:
