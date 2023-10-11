@@ -28,6 +28,8 @@ With Identity graph linking rules you can:
 * Configure limits to prevent two person identifiers from merging into one identity graph, so that a single identity graph only represents a single person.
   * The limits that you configure are then enforced by identity optimization algorithm.
 * Configure priorities to associate online events conducted by the authenticated individual to a given user.
+
+
 **Terminology**
 
 | Terms | Definition |
@@ -53,6 +55,7 @@ The following is a list of implications of the algorithm on associating anonymou
   * The ECID will be associated to the last authenticated user if the following conditions are met:
     * If CRM IDs are merged by ECID (shared device).
     * If limits are configured to just one CRM ID.
+    
 
 **Priority** (not available for alpha)
 

@@ -24,7 +24,7 @@ In these cases, from a graph standpoint, with no limits enabled, a single ECID w
 
 With identity graph linking rules, you can:
 
-* Configure the ID used for login as unique identifier. For example, you can limit a graph to store just one CRM ID, and thus define that CRM ID as the unique identifier of a shared device.
+* Configure the ID used for login as unique identifier. For example, you can limit a graph to store just one identity with a CRM ID namespace, and thus define that CRM ID as the unique identifier of a shared device.
   * By doing this, you can ensure that CRM IDs do not get merged by the ECID.
 
 ## Invalid email/phone scenarios
@@ -35,6 +35,6 @@ There are also instances of users who provide fake values as phone numbers and/o
 
 With identity graph linking rules, you can:
 
-* Configure either the CRM ID, phone number, or email address as unique identifier and thus limit one person to just one CRM ID, phone number, and/or email address associated with their account.
+* Configure either the CRM ID, phone number, or email address as the unique identifier and thus limit one person to just one CRM ID, phone number, and/or email address associated with their account.
 
 ## Bad data
