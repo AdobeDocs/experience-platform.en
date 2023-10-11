@@ -36,7 +36,7 @@ The following is a list of available query parameters for listing query template
 | --------- | ----------- |
 | `orderby` | Specifies the field by which to order results. The supported fields are `created` and `updated`. For example, `orderby=created` will sort results by created in ascending order. Adding a `-` before created (`orderby=-created`) will sort items by created in descending order. | 
 | `limit` | Specifies the page size limit to control the number of results that are included in a page. (*Default value: 20*) |
-| `start` | Offsets the response list, using zero-based numbering. For example, `start=2` will return a list starting from the third listed query. (*Default value: 0*) |
+| `start` | Specify an ISO format timestamp to order the results.<br> ISO timestamps allow for different levels of granularity in the date and time. The basic ISO timestamps take the format of: "20190907" to express the date September 7, 2019. A more complex example would be written as "2022-11-05T08:15:30-05:00" and corresponds to November 5, 2022, 8:15:30 am, US Eastern Standard Time. |
 | `property` | Filter results based on fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The supported fields are `name` and `userId`. The only supported operator is `==` (equal to). For example, `name==my_template` will return all query templates with the name `my_template`. |
 
 **Request**
