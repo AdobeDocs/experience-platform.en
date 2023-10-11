@@ -77,5 +77,5 @@ For a typical use case, you can set your Experience Event data expiry based on t
 
 ### How does Pseudonymous profiles data expiration interact with guardrails for Identity Service data?
 
-- The Identity Service ["first-in, first-out" deletion system](../identity-service/guardrails.md) could delete ECIDs from Identity Service.
-- If this deletion behavior results in an ECID-only profile being stored in the Profile Store, then Pseudonymous profile data expiration will delete this profile from the Profile store.
+- The Identity Service ["first-in, first-out" deletion system](../identity-service/guardrails.md) could delete ECIDs from the identity graph, which are stored in Identity Service.
+- If this deletion behavior results in an ECID-only profile being stored in the Real-Time Customer Profile (Profile Store), then Pseudonymous profile data expiration will delete this profile from the Profile Store.
