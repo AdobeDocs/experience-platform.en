@@ -2,14 +2,14 @@
 title: Work Order API Endpoint
 description: The /workorder endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for identities.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-hide: true
-hidefromtoc: true
 ---
-# Work order endpoint
+# [!BADGE Beta]{type=Informative} Work order endpoint {#work-order-endpoint}
 
 The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage record delete requests in Adobe Experience Platform.
 
->[!IMPORTANT]
+>[!IMPORTANT] 
+> 
+>The Record Delete feature is currently in Beta and available only in a **limited release**. It is not available to all customers. Record delete requests are only available for organizations in the limited release.
 >
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
