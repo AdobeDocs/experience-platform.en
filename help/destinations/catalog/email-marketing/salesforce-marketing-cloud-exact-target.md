@@ -130,6 +130,17 @@ Note down the items below before you authenticate to the [!DNL (API) Salesforce 
 |---|---|---|
 | contactKey |[!DNL Salesforce Marketing Cloud] Contact Key. Refer to the [!DNL Salesforce Marketing Cloud] [documentation](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&type=5) if you need additional guidance.|Mandatory|
 
+## Supported audiences {#supported-audiences}
+
+This section describes which type of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | X | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
