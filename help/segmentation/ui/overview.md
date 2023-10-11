@@ -86,7 +86,7 @@ On the top of the page are options to add all audiences to a schedule, import an
 
 Toggling **[!UICONTROL Schedule all audiences]** will enable scheduled segmentation. More information on scheduled segmentation can be found in the [scheduled segmentation section of this user guide](#scheduled-segmentation).
 
-Selecting **[!UICONTROL Import audience]** will let you import an externally generate audience. To learn more importing audiences, please read the section on [importing an audience in the user guide](#import-audience).
+Selecting **[!UICONTROL Import audience]** will let you import an externally generated audience. To learn more about importing audiences, please read the section on [importing an audience in the user guide](#import-audience).
 
 Selecting **[!UICONTROL Create audience]** will let you create an audience. To learn more about creating audiences, please read the section on [creating an audience in the user guide](#create-audience).
 
