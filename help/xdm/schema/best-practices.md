@@ -223,6 +223,24 @@ For Adobe Analytics, ECID is the default primary identity. If an ECID value is n
 >
 >When using Adobe application field groups, no other fields should be marked as the primary identity. If there are additional properties that need to be marked as identities, these fields need to be assigned as secondary identities instead.
 
+## Data validation fields {#data-validation-fields}
+
+To prevent unnecessary data being ingested into Platform, you are recommended to define the criteria for field level validation when creating your schemas. To set constraints on a particular field, select the field from the Schema Editor to open the [!UICONTROL Field properties] sidebar. See the documentation on [type-specific field properties](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) for exact descriptions of the available fields.
+
+![The Schema Editor with the constraint fields highlighted in the [!UICONTROL Field properties] sidebar.](../images/best-practices/data-validation-fields.png)
+
+>[!TIP]
+>
+>The following are a collection of tips for data modelling when creating a schema:<br>
+<ul>
+<li>Experience event schemas for Adobe products such as web SDK, mobile SDK, Adobe Analytics, and Adobe Journey Optimizer usually have a primary identity in the `identityMap` field. In this case, no additional fields should be marked as the primary identity for that schema.</li>
+<li>Do not mark the `_id` field  on Experience Event schemas as an identity. This is field is used exclusively as a record uniqueness field, not an identity.</li>
+<li>It is best practice to set minimum and maximum lengths on fields marked as identities.</li>
+<li>If your identity values are expected to have a certain pattern, you should enforce the constraint on that field by using the [!UICONTROL Pattern] setting. Examples of commonly enforced rules are: only digits, uppercase only, and lowercase only. Regular expressions can be used to match character combinations in strings.</li>
+<li>It is typical for an Analytics schema to only have one eVar labelled as an identity. If you intend to more than one you should confirm that the data structure cannot be optimized.</li>
+<li>Your selected field should be unique compared to the primary identity in this schema. If it is not, do not mark it as an identity. For example, if more than one customer can supply the same email address, then the email address is not a valid identity. This also applies for phone numbers and other identity namespaces.</li>
+</ul>
+
 ## Next steps
 
 This document covered the general guidelines and best practices for designing your data model for Experience Platform. To summarize:
