@@ -131,7 +131,7 @@ To configure details for the destination, fill in the required and optional fiel
 | **[!UICONTROL Name]** | A name by which you will recognize this destination in the future. |
 | **[!UICONTROL Description]** | A description that will help you identify this destination in the future. |
 | **[!UICONTROL Data center]** | Your [!DNL Mailchimp] account `data center`. Refer to the [Identify [!DNL Mailchimp] data center](#identify-data-center) section for any guidance. |
-| **[!UICONTROL Audience Name (Please select Data center first)]** | After you select your **[!UICONTROL Data center]**, this dropdown is automatically populated with the audience names from your [!DNL Mailchimp] account. Select the audience that you want to update with data from Platform. |
+| **[!UICONTROL Audience Name (Please enter Data center first)]** | After you enter your **[!UICONTROL Data center]**, this dropdown is automatically populated with the audience names from your [!DNL Mailchimp] account. Select the audience that you want to update with data from Platform. |
 
 {style="table-layout:auto"}
 
