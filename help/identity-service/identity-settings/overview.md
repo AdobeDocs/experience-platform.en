@@ -29,15 +29,6 @@ With Identity graph linking rules you can:
   * The limits that you configure are then enforced by identity optimization algorithm.
 * Configure priorities to associate online events conducted by the authenticated individual to a given user.
 
-
-**Terminology**
-
-| Terms | Definition |
-| --- | --- |
-| Namespace limit ("limit") |
-| Namespace priority ("priority") |
-| Identity graph system guardrails |
-
 **Limits**
 
 Namespace limits define the maximum number of identities that can exist in a graph from a given namespace. For example, a given graph can only store one identity with a CRM ID namespace.
@@ -55,7 +46,7 @@ The following is a list of implications of the algorithm on associating anonymou
   * The ECID will be associated to the last authenticated user if the following conditions are met:
     * If CRM IDs are merged by ECID (shared device).
     * If limits are configured to just one CRM ID.
-    
+
 
 **Priority** (not available for alpha)
 
