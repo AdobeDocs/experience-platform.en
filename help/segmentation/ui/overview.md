@@ -345,6 +345,10 @@ The **[!UICONTROL Review]** page is displayed. You can review the details of you
 
 After confirming the details are correct, select **[!UICONTROL Finish]** to import your externally generated audience into Adobe Experience Platform.
 
+>[!IMPORTANT]
+>
+>If your externally generated audience contains sensitive and/or healthcare-related information, you **must** apply the necessary data usage labels before activating it to any destination. For more information on applying data usage labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md).
+
 ## Scheduled segmentation {#scheduled-segmentation}
 
 Once audiences have been created, you can then evaluate them through on-demand or scheduled (continuous) evaluation. Evaluation means moving [!DNL Real-Time Customer Profile] data through segment jobs in order to produce corresponding audiences. Once created, the audiences are saved and stored so that they can be exported using [!DNL Experience Platform] APIs. 
