@@ -1,22 +1,28 @@
 ---
 title: Moengage connection
 description: Moengage is a customer engagement platform that powers customer-centric interactions between consumers and brands in real time.
+last-substantial-update: 2023-10-11
 ---
 
 # [!DNL Moengage] connection
 
 ## Overview {#overview}
 
-Use the [!DNL Moengage] destination to connect and map your Adobe data (user attributes, segments and events) to MoEngage in real-time. Customers can then act on this data, delivering personalized, targeted experience.
+Use the [!DNL Moengage] destination to connect and map your Adobe data (user attributes, segments and events) to MoEngage in real-time. Customers can then act on this data, delivering personalized, targeted experiences.
+
 With Adobe, the integration is very simple and intuitive. Simply take any Adobe user profile, and map it to a MoEngage user attribute.
+
+>[!IMPORTANT]
+>
+>This destination connector and documentation page are created and maintained by the *Moengage* team. For any inquiries or update requests, please contact them directly at *`[amc-support@amazon.com](https://help.moengage.com/hc/en-us)`.*
 
 ## Use cases {#use-cases}
 
-A marketer wants to target a user segment (built in Adobe Experience Platform) via [!DNL Moengage] campaigns. Also, they wants to personalize campaign content based on attributes from the Adobe Experience Platform profiles. With this integration, users and attributes are updated in MoEngage as soon as segments and profiles are updated in Adobe Experience Platform
+A marketer wants to target a user segment (built in Adobe Experience Platform) via [!DNL Moengage] campaigns. Also, they want to personalize campaign content based on attributes from Adobe Experience Platform profiles. With this integration, users and attributes are updated in MoEngage as soon as segments and profiles are updated in Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
-Before you can send your Adobe Experience Platform data to [!DNL Moengage], you must:
+Before you can send your Adobe Experience Platform data to [!DNL Moengage], note the following prerequisites:
 
 * To use the MoEngage destination with Adobe Experience Platform, users must first have access to their [!DNL Moengage] Account. Visit the following page to sign up or login to your MoEngage account: https://app.moengage.com
 
