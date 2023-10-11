@@ -22,7 +22,7 @@ To help you better understand how and when you should use the [!DNL Mailchimp In
 
 ### Send emails to contacts for marketing campaigns {#use-case-send-emails}
 
-The sales department of a sport goods website wants to broadcast an email-based marketing campaign to a list of contacts who have self-identified themselves as being interested in soccer. The lists of contacts are segregated as batches in the data export received from the development team of the website and therefore need to be tracked. The team identifies an existing [!DNL Mailchimp] audience and starts building the Experience Platform audiences into which the contacts from each list are added. After sending these audiences to [!DNL Mailchimp Interest Categories], if any contacts do not exist in the selected [!DNL Mailchimp] audience they get added to a group with the audience name that the contact belongs to. If any contacts already exist in the [!DNL Mailchimp] audience or group, then their information is updated. Once the data is sent over to [!DNL Mailchimp Interest Categories], the Sales team can select and send the marketing campaign email to the soccer interest group within the [!DNL Mailchimp] audience.
+The sales department of a sport goods website wants to broadcast an email-based marketing campaign to a list of contacts who have self-identified themselves as being interested in soccer. The lists of contacts are segregated as batches in the data export received from the development team of the website and therefore need to be tracked. The team identifies an existing [!DNL Mailchimp] audience and starts building the Experience Platform audiences into which the contacts from each list are added. After sending these audiences to [!DNL Mailchimp Interest Categories], if any contacts do not exist in the selected [!DNL Mailchimp] audience they get added to a group with the audience name that the contact belongs to. If any contacts already exist in the selected [!DNL Mailchimp] audience or group, then their information is updated. Once the data is sent over to [!DNL Mailchimp Interest Categories], the Sales team can select and send the marketing campaign email to the soccer interest group within the [!DNL Mailchimp] audience.
 
 ## Prerequisites {#prerequisites}
 
@@ -44,7 +44,7 @@ Before you can create a [!DNL Mailchimp Interest Categories] destination, you mu
 
 You need your [!DNL Mailchimp] **API key** to authenticate the [!DNL Mailchimp Interest Categories] destination against your [!DNL Mailchimp] account. The **API key** serves as the **Password** when you [authenticate the destination](#authenticate).
 
-If you do not have your **API key**, Sign in to your account and refer to the [[!DNL Mailchimp] Generate your API key](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) documentation to create one. 
+If you do not have your **API key**, sign in to your [!DNL Mailchimp] account and refer to the [!DNL Mailchimp] documentation on [how to generate your API key](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key). 
 
 An example of an API key is `0123456789abcdef0123456789abcde-us14`. 
 
@@ -52,15 +52,15 @@ An example of an API key is `0123456789abcdef0123456789abcde-us14`.
 >
 >If you generate the **API key**, write it down as you will not be able to access it after generation.
 
-#### Identify [!DNL Mailchimp] data center {#identify-data-center}
+#### Identify your [!DNL Mailchimp] data center {#identify-data-center}
 
 Next, you must identify your [!DNL Mailchimp] data center. To do this, log in to your [!DNL Mailchimp] account and navigate to the **API keys section** of your account. 
 
-The value is the first part of the URL you see in your browser. If the URL is *https://`us14`.mailchimp.com/account/api/*, then the data center is `us14`. 
+The data center ID is the first section of the URL you see in your browser. If the URL is *https://`us14`.mailchimp.com/account/api/*, then the data center is `us14`. 
 
-It's also appended to your API key in the form *key-dc*; if your API key is `0123456789abcdef0123456789abcde-us14`, then the data center is `us14`. 
+The data center ID is also appended to your API key in the form *key-dc*. For example, if your API key is `0123456789abcdef0123456789abcde-us14`, then the data center is `us14`. 
 
-Write down the data center value *(`us14` in this example)*, you need this value when you [fill in destination details](#destination-details).
+Write down the data center value *(`us14` in this example)*. You will need this value when you [fill in the destination details](#destination-details).
 
 If you require further guidance, refer to the [[!DNL Mailchimp] Fundamentals documentation](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
 
@@ -76,7 +76,18 @@ Additionally, refer to the [!DNL Mailchimp] [rate limits](https://mailchimp.com/
 
 | Target Identity | Description | Considerations |
 |---|---|---|
-| Email | Contact email Address | Mandatory |
+| Email | The email address of the contact. | Mandatory |
+
+{style="table-layout:auto"}
+
+## Supported audiences {#supported-audiences}
+
+This section describes which type of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | X | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -86,7 +97,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each selected audience in Platform, the corresponding [!DNL Mailchimp Interest Categories] segment status gets updated with its audience status from Platform.</li></ul>|
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of an audience, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> For each selected audience in Platform, the corresponding [!DNL Mailchimp Interest Categories] segment status gets updated with the audience status from Platform.</li></ul>|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. When a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
@@ -237,3 +248,17 @@ Additional useful information from the [!DNL Mailchimp] documentation is below:
 * [Create a new Audience Group](https://mailchimp.com/help/create-new-audience-group/)
 * [Interest Categories](https://mailchimp.com/developer/marketing/api/interest-categories/)
 * [Marketing API](https://mailchimp.com/developer/marketing/api/)
+
+### Changelog
+
+This section captures the functionality and significant documentation updates made to this destination connector.
+
++++ View changelog
+
+|Release month|Update type|Description|
+|---|---|---|
+|May 2023|Initial release|Initial destination release and documentation publish.|
+
+{style="table-layout:auto"}
+
++++
