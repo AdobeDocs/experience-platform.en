@@ -9,14 +9,7 @@ badge: Alpha
 
 >[!IMPORTANT]
 >
->The following feature and documentation are in Alpha.
-
-**Terminology**
-
-| Terms | Definition |
-| --- | --- |
-| Limit |
-| Priority |
+>Identity graph linking rules are currently in Alpha. The feature and documentation are subject to change.
 
 **Problem statement**
 
@@ -24,7 +17,7 @@ With Adobe Experience Platform Identity Service and Real-Time Customer Profile, 
 
 **Supported scenarios**
 
-* Shared device
+* Shared device: Shared device refers to devices that are used by more than one individual. Examples of a shared device include tablets, library computers, and kiosks.
 * Bad email / phone numbers
 * Implementation errors (bad data)
 
@@ -35,6 +28,13 @@ With Identity graph linking rules you can:
 * Configure limits to prevent two person identifiers from merging into one identity graph, so that a single identity graph only represents a single person.
   * The limits that you configure are then enforced by identity optimization algorithm.
 * Configure priorities to associate online events conducted by the authenticated individual to a given user.
+**Terminology**
+
+| Terms | Definition |
+| --- | --- |
+| Namespace limit ("limit") |
+| Namespace priority ("priority") |
+| Identity graph system guardrails |
 
 **Limits**
 
@@ -46,11 +46,13 @@ Namespace limits define the maximum number of identities that can exist in a gra
 **Identity optimization algorithm**
 
 * The identity optimization algorithm is a rule that ensures that the limits are honored. 
-* The algorithm honors the most recent links and remove the oldest to make sure that a given identity graph stays within the limits that a user has defined.
-* Implications of the algorithm on associating anonymous events to known identifiers.
+* The algorithm honors the most recent links and removes the oldest links to make sure that a given identity graph stays within the limits that you have defined.
+
+The following is a list of implications of the algorithm on associating anonymous events to known identifiers:
+
   * The ECID will be associated to the last authenticated user if the following conditions are met:
-    * If CRM IDs are merged by ECID (shared device)
-    * If limits are configured to just one CRM ID
+    * If CRM IDs are merged by ECID (shared device).
+    * If limits are configured to just one CRM ID.
 
 **Priority** (not available for alpha)
 
