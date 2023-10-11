@@ -1,7 +1,6 @@
 ---
-keywords: mobile;mobile engagement destinations;moengage;moengage mobile engagement destination
 title: Moengage connection
-description: [!DNL Moengage]  is a customer engagement platform that powers customer-centric interactions between consumers and brands in real time.
+description: Moengage is a customer engagement platform that powers customer-centric interactions between consumers and brands in real time.
 ---
 
 # [!DNL Moengage] connection
