@@ -231,14 +231,14 @@ To prevent unnecessary data being ingested into Platform, you are recommended to
 
 >[!TIP]
 >
->The following are a collection of tips for data modelling when creating a schema:<br>
+>The following are a collection of suggestions for data modelling when creating a schema:<br>
 <ul>
-<li>Experience event schemas for Adobe products such as web SDK, mobile SDK, Adobe Analytics, and Adobe Journey Optimizer usually have a primary identity in the `identityMap` field. In this case, no additional fields should be marked as the primary identity for that schema.</li>
-<li>Do not mark the `_id` field  on Experience Event schemas as an identity. This is field is used exclusively as a record uniqueness field, not an identity.</li>
-<li>It is best practice to set minimum and maximum lengths on fields marked as identities.</li>
-<li>If your identity values are expected to have a certain pattern, you should enforce the constraint on that field by using the [!UICONTROL Pattern] setting. Examples of commonly enforced rules are: only digits, uppercase only, and lowercase only. Regular expressions can be used to match character combinations in strings.</li>
-<li>It is typical for an Analytics schema to only have one eVar labelled as an identity. If you intend to more than one you should confirm that the data structure cannot be optimized.</li>
-<li>Your selected field should be unique compared to the primary identity in this schema. If it is not, do not mark it as an identity. For example, if more than one customer can supply the same email address, then the email address is not a valid identity. This also applies for phone numbers and other identity namespaces.</li>
+<li>**Consider primary identities**: For Adobe products like web SDK, mobile SDK, Adobe Analytics, and Adobe Journey Optimizer, the `identityMap` field often serves as the primary identity. Avoid designating additional fields as primary identities for that schema.</li>
+<li>**Avoid using `_id` as an identity**: Avoid using the `_id` field in Experience Event schemas as an identity. It is meant for record uniqueness, not for use as an identity.</li>
+<li>**Set length constraints**: It is best practice to set minimum and maximum lengths on fields marked as identities. These limitations helps maintain consistency and data quality.</li>
+<li>**Apply patterns for consistent values**: If your identity values follow a specific pattern, you should use the [!UICONTROL Pattern] setting to enforce this constraint. This setting can include rules like digits only, uppercase or lowercase, or specific character combinations. Use regular expressions to match patterns in your strings.</li>
+<li>**Limit eVars in Analytics Schema**: Typically, an Analytics schema should have only one eVar designated as an identity. If you intend to use more than one eVar as an identity, you should double-check whether the data structure can be optimized.</li>
+<li>**Ensure uniqueness of a selected field**: Your chosen field should be unique compared to the primary identity in the schema. If it is not, do not mark it as an identity. For instance, if multiple customers can provide the same email address, then that namespace is not a suitable identity. This principle also applies to other identity namespaces like phone numbers.</li>
 </ul>
 
 ## Next steps
