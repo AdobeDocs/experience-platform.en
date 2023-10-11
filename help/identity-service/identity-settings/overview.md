@@ -1,11 +1,11 @@
 ---
-title: Configure Identity Graph Linking Rules in Identity Service
-description: Learn how to configure Identity Graph Linking Rules in Identity Service.
+title: Identity graph linking rules overview
+description: Learn about Identity Graph Linking Rules in Identity Service.
 hide: true
 hidefromtoc: true
 badge: Alpha
 ---
-# Configure identity graph linking rules in Identity Service
+# Identity graph linking rules overview
 
 >[!IMPORTANT]
 >
