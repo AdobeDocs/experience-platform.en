@@ -11,17 +11,15 @@ badge: Alpha
 >
 >Identity graph linking rules are currently in Alpha. The feature and documentation are subject to change.
 
-**Problem statement**
-
 With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly. However, there are possible scenarios where certain data could try to merge multiple profiles.
 
-**Supported scenarios**
+## Example scenarios
 
 * Shared device: Shared device refers to devices that are used by more than one individual. Examples of a shared device include tablets, library computers, and kiosks.
 * Bad email / phone numbers
 * Implementation errors (bad data)
 
-**Identity graph linking rules objectives**
+## Identity graph linking rules objectives
 
 With Identity graph linking rules you can:
 
@@ -29,14 +27,14 @@ With Identity graph linking rules you can:
   * The limits that you configure are then enforced by identity optimization algorithm.
 * Configure priorities to associate online events conducted by the authenticated individual to a given user.
 
-**Limits**
+### Limits
 
 Namespace limits define the maximum number of identities that can exist in a graph from a given namespace. For example, a given graph can only store one identity with a CRM ID namespace.
 
 * As long as the graph is within the guardrails, the graph can add as many namespaces as needed.
   * ECIDs do not have a limit, so the number of ECIDs can continue to grow as long as you are within the guardrails.
 
-**Identity optimization algorithm**
+### Identity optimization algorithm
 
 * The identity optimization algorithm is a rule that ensures that the limits are honored. 
 * The algorithm honors the most recent links and removes the oldest links to make sure that a given identity graph stays within the limits that you have defined.
