@@ -54,7 +54,7 @@ For each audience that you activate from Platform to [!DNL Salesforce], you must
 
 >[!WARNING]
 >
-> Do not use the same attribute for the audience status across multiple audiences within a single execution. The request will be formed incorrectly with the **[!UICONTROL Mapping ID]** attribute value and audience status from each audience being included and execution will result in an Error.
+> Do not use the same attribute for the audience status across multiple audiences within a single execution. When Platform creates the request it includes the **[!UICONTROL Mapping ID]** attribute value and status for each selected audience. Because the same attribute is mapped more than once across the selected audiences, the request also includes duplicate occurrences of the same attribute for each record. This will cause the execution to result in an error.
 
 The attribute field names are used for the [!DNL (API) Salesforce Marketing Cloud] target field during the **[!UICONTROL Mapping]** step. You can define the field character with a maximum of 4000 characters, according to your business requirement. See the [!DNL Salesforce Marketing Cloud] [Data Extensions Data Types](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&type=5) documentation page for additional information on attribute types.
 
@@ -224,10 +224,14 @@ When performing the [Schedule audience export](/help/destinations/ui/activate-se
 
 To do this, select each segment, then enter name of the attribute from [!DNL Salesforce Marketing Cloud] in the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** field. Refer to the [Create attribute within [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field) section for guidance and best practices on creating attributes in [!DNL Salesforce Marketing Cloud].
 
+>[!WARNING]
+>
+> Do not use the same attribute for the audience status across multiple audiences within a single execution. When Platform creates the request it includes the **[!UICONTROL Mapping ID]** attribute value and status for each selected audience. Because the same attribute is mapped more than once across the selected audiences, the request also includes duplicate occurrences of the same attribute for each record. This will cause the execution to result in an error.
+
 For example, if your [!DNL Salesforce Marketing Cloud] attribute is `salesforce_mc_segment_1`, specify this value in the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** to populate audience audiences from Experience Platform into this attribute.
 
 An example attribute from [!DNL Salesforce Marketing Cloud] is shown below:
-![Salesforce Marketing Cloud UI screenshot showing a attribute.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
+![Salesforce Marketing Cloud UI screenshot showing an attribute.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
 An example indicating the location of the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** is shown below:
 ![Platform UI screenshot example showing Schedule audience export.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
@@ -241,10 +245,6 @@ A typical example based on the image shown above could be.
 | --- | --- | --- |
 | salesforce mc audience 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | salesforce mc audience 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
-
->[!WARNING]
->
-> Do not use the same attribute for the audience status across multiple audiences within a single execution. The request will be formed incorrectly with the **[!UICONTROL Mapping ID]** attribute value and audience status from each audience being included and execution will result in an Error.
 
 ## Validate data export {#exported-data}
 
