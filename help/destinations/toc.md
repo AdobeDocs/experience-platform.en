@@ -152,6 +152,7 @@ feature: Destinations
         * [Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
         * [Braze connection](./catalog/mobile-engagement/braze.md)
         * [Line connection](./catalog/mobile-engagement/line.md)
+        * [Moengage connection](./catalog/mobile-engagement/moengage.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
         * [Adobe Commerce connection](./catalog/personalization/adobe-commerce.md)
