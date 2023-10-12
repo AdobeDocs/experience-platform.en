@@ -23,7 +23,7 @@ You can use the sandbox tooling feature to select different objects and export t
 >
 >The full sandbox package only contains the supported object types and does not contain all of the sandbox's objects.
 
-### Real-time Customer Data Platform objects {real-time-cdp-objects}
+### Real-time Customer Data Platform objects {#real-time-cdp-objects}
 
 The table below lists [!DNL Adobe Real-Time Customer Data Platform] objects that are currently supported for sandbox tooling:
 
@@ -46,7 +46,7 @@ The following objects are imported but are in a draft or disabled status:
 | Policies | Consent policies | Disabled |
 | Policies | Data governance policies | Disabled |
 
-### Adobe Journey Optimizer objects {abobe-journey-optimizer-objects}
+### Adobe Journey Optimizer objects {#abobe-journey-optimizer-objects}
 
 The table below lists [!DNL Adobe Journey Optimizer] objects that are currently supported for sandbox tooling:
 
@@ -172,6 +172,7 @@ The **[!UICONTROL Field group]** dialog shows a list of field groups available f
 You are returned to the [!UICONTROL Package object and dependencies] page. From here, select **[!UICONTROL Finish]** to complete the package import.
 
 ![The [!UICONTROL Package object and dependencies] page shows a list of assets included in the package, highlighting [!UICONTROL Finish].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
+
 <!--
 ## Export and import an entire sandbox 
 
@@ -213,6 +214,7 @@ You are taken to the [!UICONTROL Package object and dependencies] page where you
 
  ![The [!UICONTROL Package object and dependencies] page shows the inline message of object types not supported, highlighting [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 -->
+
 ## Monitor import jobs and view import objects details 
 
 To view the imported objects and imported details, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Imports]** tab and select the package from the list. Alternatively, use the search bar to search for the package.
