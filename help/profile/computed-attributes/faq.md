@@ -75,8 +75,6 @@ Both the **weekly** and **monthly** refreshes take place on the beginning of the
 >
 >The computed attribute value is **not** immediately refreshed in profile after each evaluation run. In order to ensure the updated value is in your profiles, you should have consider a buffer of a few hours between evaluation time and computed attribute usage. The computed attribute refresh schedule is **system-determined** and **cannot** be modified. For more information, please contact Adobe Customer Care.
 
-When the audience is evaluated, it will use the **latest** value of the computed attribute available.
-
 ## How do computed attributes interact with audiences evaluated using streaming segmentation?
 
 If a streaming-segmentation-evaluated audience is using a computed attribute, it will take the **latest value** of the computed attribute while the audience is being evaluated. For example, if the audience is looking for purchase events, the audience will refer to the last evaluated computed attribute value when the purchase event comes.
