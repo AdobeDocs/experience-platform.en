@@ -15,9 +15,9 @@ Employ real-time considerations, take into account all consumer qualities and be
 
 You will construct schemas, datasets, and audiences as you work through examples of re-engagement journeys. You will also discover the features needed to set up the example journeys in [!DNL Adobe Journey Optimizer] and those needed to create paid media advertisements in destinations. This guide uses examples of re-engaging customers in the use case journeys outlined below:
 
-* **Re-engagement journey** - Targets customers who have abandoned product browsing on both the website and mobile app.
-* **Abandoned cart journey** - Targets customers who have placed products in the cart but have not yet been purchased on both the website and mobile app.
-* **Order confirmation journey** - Focuses on product purchases made through the website and mobile app.
+* **Re-engagement journey** - Target customers who have abandoned product browsing on both the website and mobile app.
+* **Abandoned cart journey** - Target customers who have placed products in the cart but have not yet been purchased on both the website and mobile app.
+* **Order confirmation journey** - Focus on product purchases made through the website and mobile app.
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -96,7 +96,7 @@ There are four schema designs that are used for the re-engagement use case. Each
 
 This schema is used to structure and reference the profile data that makes up your customer information. This data is typically ingested into [!DNL Adobe Experience Platform] via your CRM or similar system and is necessary to reference customer details that are used for personalization, marketing consent, and enhanced segmentation capabilities.
 
-The customer attributes schema is represented by an [!UICONTROL XDM Individual Profile] class, which includes the following field groups:
+The customer attributes schema is represented by an [[!UICONTROL XDM Individual Profile]](/help/xdm/classes/individual-profile.md) class, which includes the following field groups:
 
 +++Personal Contact Details (Field Group)
 
@@ -151,7 +151,7 @@ This field group is used for best practice.
 
 This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via Web SDK and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced segmentation capabilities.
 
-The customer digital transactions schema is represented by an [!UICONTROL XDM ExperienceEvent] class, which includes the following field groups:
+The customer digital transactions schema is represented by an [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class, which includes the following field groups:
 
 +++Adobe Experience Platform Web SDK ExperienceEvent (Field Group)
 
@@ -370,7 +370,7 @@ When creating a re-engagement path, the following [Data Governance labels](/help
 
 #### Marketing policies
 
-There are no [marketing policies](/help/data-governance/policies/overview.md) required for the re-engagement journeys however, the following should be considered as desired:
+There are no [marketing policies](/help/data-governance/policies/overview.md) required for the re-engagement journeys. However, you should consider the following::
 
 * Restrict Sensitive Data
 * Restrict Onsite Advertising
