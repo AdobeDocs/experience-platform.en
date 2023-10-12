@@ -23,9 +23,9 @@ As a marketer, you can deliver personalized experiences to your users, based on 
 
 ### Experience Platform prerequisites {#prerequisites-in-experience-platform}
 
-Before activating data to the [!DNL Dynamics 365] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
+Before activating data to the [!DNL Dynamics 365] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=en) created in [!DNL Experience Platform].
 
-Refer to Adobe's documentation for [Segment Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on audience statuses.
+Refer to Adobe's documentation for [Audience Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on audience statuses.
 
 ### [!DNL Microsoft Dynamics 365] prerequisites {#prerequisites-destination}
 
@@ -38,7 +38,11 @@ Go to the [!DNL Dynamics 365] [trial](https://dynamics.microsoft.com/en-us/dynam
 #### Create field within [!DNL Dynamics 365] {#prerequisites-custom-field}
 
 Create the custom field of type `Simple` with field data type as `Single Line of Text` which Experience Platform will use to update the audience status within [!DNL Dynamics 365].
-Refer to the [!DNL Dynamics 365] documentation to [create a field (attribute)](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) if you need additional guidance.
+
+Refer to the [!DNL Dynamics 365] [Create or edit a field (attribute)](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) documentation if you need additional guidance.
+
+Write down the **[!UICONTROL Customization prefix]** of the custom field that you create in [!DNL Dynamics 365]. You will need this prefix during the [Fill in destination details](#destination-details) step. Refer to the [Create and edit fields](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) section of the [!DNL Dynamics 365] documentation for further details.
+![Dynamics 365 UI screenshot showing the customization prefix.](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-customization-prefix.png)
 
 An example setup within [!DNL Dynamics 365] is shown below:
 ![Dynamics 365 UI screenshot showing the custom fields.](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-fields.png)
@@ -80,13 +84,19 @@ The [Requests limits and allocations](https://docs.microsoft.com/en-us/power-pla
 
 {style="table-layout:auto"}
 
+## Supported audiences {#supported-audiences}
+
+This section describes all the audiences that you can export to this destination.
+
+This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each audience status in [!DNL Dynamics 365] gets updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-segment-export-example) step.</li></ul> |
+| Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of an audience, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each audience status in [!DNL Dynamics 365] gets updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-audience-export-example) step.</li></ul> |
 | Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
 {style="table-layout:auto"}
@@ -122,6 +132,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+* **[!UICONTROL Customization Prefix]**: The `Customization prefix` of the custom field that you created in [!DNL Dynamics 365]. Refer to the [Create and edit fields](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) section of the [!DNL Dynamics 365] documentation for further details.
 
 ### Enable alerts {#enable-alerts}
 
@@ -132,8 +143,9 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
->
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+> 
+>* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
@@ -173,11 +185,11 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
     * An example using these mappings is shown below:
     ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
-### Schedule audience export and example {#schedule-segment-export-example}
+### Schedule audience export and example {#schedule-audience-export-example}
 
 In the [[!UICONTROL Schedule audience export]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step of the activation workflow, you must manually map Platform audiences to the custom field attribute in [!DNL Dynamics 365].
 
-To do this, select each segment, then enter the corresponding custom field attribute from [!DNL Dynamics 365] in the **[!UICONTROL Mapping ID]** field.
+To do this, select each audience, then enter the corresponding custom field attribute from [!DNL Dynamics 365] in the **[!UICONTROL Mapping ID]** field.
 
 >[!IMPORTANT]
 >
@@ -199,10 +211,10 @@ To validate that you have correctly set up the destination, follow the steps bel
 1. Switch to the **[!DNL Activation data]** tab, then select an audience name.
 ![Platform UI screenshot example showing Destinations Activation Data.](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
 
-1. Monitor the audience summary and ensure that the count of profiles corresponds to the count created within the segment.
-![Platform UI screenshot example showing Segment.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
+1. Monitor the audience summary and ensure that the count of profiles corresponds to the count created within the audience.
+![Platform UI screenshot example showing audience.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
 
-1. Log in to the [!DNL Dynamics 365] website, then navigate to the [!DNL Customers] > [!DNL Contacts] page and check if the profiles from the audience have been added. You can see that each audience status in [!DNL Dynamics 365] was updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-segment-export-example) step.
+1. Log in to the [!DNL Dynamics 365] website, then navigate to the [!DNL Customers] > [!DNL Contacts] page and check if the profiles from the audience have been added. You can see that each audience status in [!DNL Dynamics 365] was updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-audience-export-example) step.
 ![Dynamics 365 UI screenshot showing the Contacts page with updated audience statuses.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
 
 ## Data usage and governance {#data-usage-governance}
@@ -224,3 +236,18 @@ To fix this error, verify that the **[!UICONTROL Mapping ID]** you provided in [
 Additional useful information from the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/) is below:
 * [IOrganizationService.Update(Entity) Method](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update?view=dataverse-sdk-latest)
 * [Update and delete table rows using the Web API](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)
+
+### Changelog
+
+This section captures the functionality and significant documentation updates made to this destination connector.
+
++++ View changelog
+
+|Release month|Update type|Description|
+|---|---|---|
+|August 2023|Functionality and documentation update| Added support for [!DNL Dynamics 365] custom field prefixes for custom fields which were not created within the default solution in [!DNL Dynamics 365]. A new input field, **[!UICONTROL Customization Prefix]**, has been added in the [Fill in destination details](#destination-details) step. (PLATIR-31602). |
+|Nov 2022|Initial release|Initial destination release and documentation publish.|
+
+{style="table-layout:auto"}
+
++++

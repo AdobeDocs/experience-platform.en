@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to update an existing destination server configuration through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to update an existing destination server configuration through Adobe Experience Platform Destination SDK.
 title: Update a destination server configuration
+exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
 ---
-
 # Update a destination server configuration
 
 This page exemplifies the API request and payload that you can use to update an existing destination server configuration, using the `/authoring/destination-servers` API endpoint.
@@ -228,7 +228,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 {
    "name":"File-based SFTP destination server",
    "destinationServerType":"FILE_BASED_SFTP",
-   "fileBasedSftpDestination":{
+   "fileBasedSFTPDestination":{
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
@@ -303,10 +303,10 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 |---|---|---|
 |`name`|String|The name of your destination connection.|
 |`destinationServerType`|String|Set this value according to your destination platform. For [!DNL SFTP] destinations, set this to `FILE_BASED_SFTP`.|
-|`fileBasedSftpDestination.rootDirectory.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
-|`fileBasedSftpDestination.rootDirectory.value`|String|The root directory of the destination storage.|
-|`fileBasedSftpDestination.hostName.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
-|`fileBasedSftpDestination.hostName.value`|String|The host name of the destination storage.|
+|`fileBasedSFTPDestination.rootDirectory.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
+|`fileBasedSFTPDestination.rootDirectory.value`|String|The root directory of the destination storage.|
+|`fileBasedSFTPDestination.hostName.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
+|`fileBasedSFTPDestination.hostName.value`|String|The host name of the destination storage.|
 |`port`|Integer|The SFTP file server port.|
 |`encryptionMode`|String|Indicates whether to use file encryption. Supported values: <ul><li>PGP</li><li>None</li></ul>|
 |`fileConfigurations`|N/A|See [file formatting configuration](../../functionality/destination-server/file-formatting.md) for detailed information on how to configure these settings.|

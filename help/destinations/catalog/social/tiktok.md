@@ -24,7 +24,9 @@ An athletic apparel brand wants to reach existing customers through their social
 
 ## Prerequisites {#prerequisites}
 
-Before sending data to your [!DNL TikTok Ads Manager] account, you will need to give Adobe Experience Platform permission to access your Ad Account for `Audience Management`. This permission can be provided by entering your advertiser ID in Experience Platform and following the redirect to grant the permission. You can find more instructions can be found in the [TikTok API documentation](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378).
+You need to have [!DNL Admin] or [!DNL Operator] access to the TikTok Ads Manager account you want to send audiences to. More instructions can be found on the [TikTok Help Center](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+
+Before sending data to your TikTok Ads Manager account, you will need to give Adobe Experience Platform permission to access your Ad Account for `Audience Management`. This permission can be provided by [entering your Ads Manager ID](#authenticate) in the Experience Platform UI and granting the permission after being redirected to your TikTok Ads Manager Account. 
 
 ## Supported identities {#supported-identities}
 
@@ -86,7 +88,8 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 

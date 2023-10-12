@@ -10,12 +10,9 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 
 >[!IMPORTANT]
 > 
-> The functionality described on the page is not yet generally available to customers. This page is currently meant for Adobe-internal teams as a pre-read about the coming functionality. Please do not share outside of Adobe until this note is removed.
-
->[!IMPORTANT]
-> 
 > * To activate audiences and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 > * To activate audiences without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
@@ -394,6 +391,10 @@ Adobe recommends selecting an identity namespace such as a [!DNL CRM ID] or emai
 >* The fields are configured as projected attributes for the target destination.
 >
 > For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+
+### [!BADGE Beta]{type=Informative} Export arrays through calculated fields {#export-arrays-calculated-fields}
+
+Select beta customers can export array objects from Experience Platform to cloud storage destinations. Read more about [exporting arrays and calculated fields](/help/destinations/ui/export-arrays-calculated-fields.md) and contact your Adobe representative to get access to the functionality. 
 
 ### Known limitations {#known-limitations}
 

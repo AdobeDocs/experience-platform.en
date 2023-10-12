@@ -22,9 +22,9 @@ The filter icon (![Filter Icon Image](../images/ui/explore/icon.png)) reveals co
 
 For example, to filter the list to only show standard data types provided by Adobe, select **[!UICONTROL Datatype]** and **[!UICONTROL Adobe]** under the **[!UICONTROL Type]** and **[!UICONTROL Owner]** sections, respectively.
 
-The **[!UICONTROL Included in Profile]** toggle allows you to filter results to show only resources that are used in schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md).
+The **[!UICONTROL Included in Profile]** toggle allows you to filter results to show only resources that are used in schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md). The **[!UICONTROL Show adhoc schemas]** toggle filters the list of schemas that were created with fields that are namespaced for use only by a single dataset.
 
-![](../images/ui/explore/filter.png)
+![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with the filters panel highlighted.](../images/ui/explore/filter.png)
 
 When listing resources on the **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, or **[!UICONTROL Data types]** tabs, you can select **[!UICONTROL Adobe]** to only show standard resources or **[!UICONTROL Customer]** to only show resources created by your organization.
 

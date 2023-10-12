@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure the supported target identities for destinations built with Destination SDK.
 title: Identity namespace configuration
+exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
 ---
-
 # Identity namespace configuration
 
 Experience Platform uses identity namespaces to describe the type of specific identities. For example, an identity namespace called `Email` identifies a value like `name@email.com` as an email address.
@@ -19,7 +19,7 @@ When configuring identity namespaces for your destination, you can fine tune the
 * Allowing users to map [standard identity namespaces](../../../../identity-service/namespaces.md#standard) to your own identity namespaces.
 * Allowing users to map [custom identity namespaces](../../../../identity-service/namespaces.md#manage-namespaces) to your own identity namespaces.
 
-To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 You can configure your supported identity namespaces via the `/authoring/destinations` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
 

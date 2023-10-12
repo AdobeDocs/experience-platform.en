@@ -15,7 +15,7 @@ exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
 Note the following details that are specific to [!DNL Google Display & Video 360] destinations:
 
 * Activated audiences are created programmatically in the Google platform.
-* The activation of audience backfills to the [!DNL Google Display & Video 360] destination is scheduled to occur 24-48 hours after an audience is first mapped to a destination connection. This update is in response to Google's policy to wait 24 hours until ingesting data and is meant to improve match rates between Real-time CDP and [!DNL Google Display & Video 360]. Note that this is a backend configuration applicable to this destination only and that is unrelated to any customer-configurable scheduling options in the UI.
+* The activation of audience backfills to the [!DNL Google Display & Video 360] destination is scheduled to occur 24-48 hours after an audience is first mapped to a destination connection. This update is in response to Google's policy to wait 24 hours until ingesting data and is meant to improve match rates between Real-Time CDP and [!DNL Google Display & Video 360]. Note that this is a backend configuration applicable to this destination only and that is unrelated to any customer-configurable scheduling options in the UI.
 
 >[!IMPORTANT]
 >
@@ -37,15 +37,12 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 
 ## Supported audiences {#supported-audiences}
 
-This section describes all the audiences that you can export to this destination.
+This section describes which type of audiences you can export to this destination.
 
-This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
-
-*Additionally*, this destination also supports the activation of the audiences described in the table below.
-
-| Audience type | Description | 
----------|----------|
-| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 

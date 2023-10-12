@@ -72,7 +72,7 @@ The main drawback of using `identityMap` is that identities become embedded in t
 >
 >A schema that uses `identityMap` can be used as a source schema in a relationship, but cannot be used as a reference schema. This is because all reference schemas must have a visible identity that can be mapped in a reference field within the source schema. Refer to the UI guide on [relationships](../tutorials/relationship-ui.md) for more information on the requirements of source and reference schemas.
 
-However, identity maps can be particularly useful if you are bringing in data from sources that store identities together (such as [!DNL Airship] or Adobe Audience Manager), or when there are a variable number of identities for a schema. In addition, identity maps are required if you are using the [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
+However, identity maps can be particularly useful if you are bringing in data from sources that store identities together (such as [!DNL Airship] or Adobe Audience Manager), or when there are a variable number of identities for a schema. In addition, identity maps are required if you are using the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 An example of a simple identity map would look like the following:
 

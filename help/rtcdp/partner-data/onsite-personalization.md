@@ -1,10 +1,13 @@
 ---
 title: Use Partner-Aided Visitor Recognition to Personalize Onsite Experiences
 description: Learn how to use partner-aided visitor recognition to deliver personalized onsite experiences to your visitors.
-hide: yes
-hidefromtoc: yes
+exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
 ---
 # Use partner-aided visitor recognition to personalize onsite experiences
+
+>[!AVAILABILITY]
+>
+>This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
 
 Learn how to use partner-aided recognition to deliver personalized experiences to your web property visitors. Use this tutorial to understand the implementation sequence of various elements in Experience Platform and other Experience Cloud solutions to display a personalized experience to authenticated and unauthenticated visitors.
 
@@ -41,6 +44,12 @@ To successfully implement this use case, you must use multiple areas of Real-Tim
   * [Edge segmentation](/help/segmentation/ui/edge-segmentation.md)
   * [Edge Personalization destinations](/help/destinations/destination-types.md#edge-personalization-destinations)
   * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (or a personalization platform of your choice. This use case tutorial highlights Adobe Target as personalization engine)
+
+## Video walkthrough {#video-walkthrough}
+
+View the video tutorial below for a walkthrough of how personalize onsite experiences for unknown visitors:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
@@ -185,7 +194,7 @@ Name the data element `partnerData`, leave the [!UICONTROL extension] value as [
 
 To set up the second data element, name the new variable `pageVisit`, set the **[!UICONTROL Extension]** to **[!UICONTROL Adobe Experience Platform]** and choose **[!UICONTROL XDM Object]** as the data type. 
 
-![Highlighted selections to correctly configure the the pageVisit data element.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
+![Highlighted selections to correctly configure the pageVisit data element.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
 
 From the schema, select the third-party attributes that correspond to the values that you are expecting from the data partner. Then, select the radio button titled **[!UICONTROL Provide entire object]**. Select the icon that looks like a database and choose the `partnerData` data element that you created previously.
 
@@ -259,4 +268,4 @@ Explore further use cases enabled through partner data support in Real-Time CDP:
 
 * [Supplement first-party profiles with attributes from trusted data partners](/help/rtcdp/partner-data/supplement-first-party-profiles.md) to improve your data foundation and gain new insights into your customer base and gain better audience optimization.
 * Use third-party data support in Real-Time CDP to [expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers](/help/rtcdp/partner-data/prospecting.md).
-* (**Coming soon**) [!BADGE Beta]{type=Informative} **Expanded activation** using Partner IDs to publishing ecosystems that do not accept PII or hashed PII.
+* [Expanded activation of prospect profiles and prospect audiences](/help/destinations/ui/activate-prospect-audiences.md) to select destinations.

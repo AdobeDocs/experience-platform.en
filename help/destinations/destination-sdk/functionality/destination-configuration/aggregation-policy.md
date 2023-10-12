@@ -1,8 +1,8 @@
 ---
 description: Learn how to set up an aggregation policy to determine how HTTP requests to your destination should be grouped and batched.
 title: Aggregation policy
+exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
 ---
-
 # Aggregation policy
 
 To ensure maximum efficiency when exporting data to your API endpoint, you can use various settings to aggregate exported profiles into larger or smaller batches, group them by identity, and other use cases. This also allows you to tailor data exports to any downstream limitations on your API endpoint (rate limiting, number of identities per API call, etc.).
@@ -11,7 +11,7 @@ Use configurable aggregation to dive deep into the settings provided by Destinat
 
 When building a real-time (streaming) destination with Destination SDK, you can configure how the exported profiles should be combined in the resulting exports. This behavior is determined by the aggregation policy settings.
 
-To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the the guide on how to [use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration).
+To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
 You can configure the aggregation policy settings via the `/authoring/destinations` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
 
