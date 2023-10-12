@@ -39,6 +39,15 @@ feature: Queries
     - [Return and use merchandising variables from analytics data](use-cases/merchandising-variables.md)
     - [View the roll-up report for a visitor](use-cases/roll-up-report-of-a-visitor.md)
     - [Web and mobile analytics insights](use-cases/analytics-insights.md)
+- Key concepts {#key-concepts}
+    - [Working with nested data structures](key-concepts/nested-data-structures.md)
+    - [Flatten nested data structures](key-concepts/flatten-nested-data.md)
+    - [Anonymous block](key-concepts/anonymous-block.md)
+    - [Inline template](key-concepts/inline-templates.md)
+    - [Incremental loading](key-concepts/incremental-load.md)
+    - [Data deduplication](key-concepts/deduplication.md)
+    - [Dataset samples](key-concepts/dataset-samples.md)
+    - [Dataset statistics computation](key-concepts/dataset-statistics.md)
 - Connect clients to Query Service {#clients}
     - [Client connections overview](clients/overview.md)
     - [SSL modes](./clients/ssl-modes.md)
@@ -78,15 +87,6 @@ feature: Queries
 - Best practices {#best-practices}
     - [Query execution](best-practices/writing-queries.md)
     - [Data asset organization](./best-practices/organize-data-assets.md)
-- Essential concepts {#key-concepts}
-    - [Working with nested data structures](key-concepts/nested-data-structures.md)
-    - [Flatten nested data structures](key-concepts/flatten-nested-data.md)
-    - [Anonymous block](key-concepts/anonymous-block.md)
-    - [Inline template](key-concepts/inline-templates.md)
-    - [Incremental loading](key-concepts/incremental-load.md)
-    - [Data deduplication](key-concepts/deduplication.md)
-    - [Dataset samples](key-concepts/dataset-samples.md)
-    - [Dataset statistics computation](key-concepts/dataset-statistics.md)
 - SQL reference {#sql}
     - [SQL overview](sql/overview.md)
     - [SQL syntax](sql/syntax.md)
