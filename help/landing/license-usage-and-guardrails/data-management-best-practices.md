@@ -90,12 +90,9 @@ There are a number of tools that you can leverage to stay within your license us
 
 ### Identity Service and addressable audience {#identity-service}
 
-Identity graphs do not count towards addressable audiences, as this is count of profiles. However, graph limits could affect addressable audiences because splitting nodes... see here (guardrails page) for details
-solution: pseudonymous profile TTL. Click here to learn more
-
 Identity graphs do not count towards your total addressable audience entitlement because addressable audience refers to your total count of customer profiles.
 
-However, graph limits can affect your addressable audience due to splitting nodes. It is recommended to set [pseudonymous profile data expirations](../../profile/pseudonymous-profiles.md) to circumvent this behavior. For more information, read the [guardrails for Identity Service data](../../identity-service/guardrails.md).
+However, graph limits can affect your addressable audience due to splitting nodes. You can set [Pseudonymous profile data expirations](../../profile/pseudonymous-profiles.md) to circumvent this behavior. For more information, read the [guardrails for Identity Service data](../../identity-service/guardrails.md).
 
 ### Ingestion filters {#ingestion-filters}
 
