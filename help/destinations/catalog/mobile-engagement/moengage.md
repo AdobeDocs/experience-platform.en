@@ -14,7 +14,7 @@ With Adobe, the integration is very simple and intuitive. Simply take any Adobe 
 
 >[!IMPORTANT]
 >
->This destination connector and documentation page are created and maintained by the *Moengage* team. For any inquiries or update requests, please contact them directly at *`[amc-support@amazon.com](https://help.moengage.com/hc/en-us)`.*
+>This destination connector and documentation page are created and maintained by the *Moengage* team. For any inquiries or update requests, please contact them directly at *`https://help.moengage.com/hc/en-us`.*
 
 ## Use cases {#use-cases}
 
