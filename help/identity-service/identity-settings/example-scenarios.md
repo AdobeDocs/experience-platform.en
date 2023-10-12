@@ -1,10 +1,10 @@
 ---
-title: Supported Scenarios For Configuring Identity Settings
-description: Learn about supported scenarios for configuring Identity Settings.
+title: Example Scenarios For Configuring Identity Settings
+description: Learn about example scenarios for configuring Identity Settings.
 hide: true
 hidefromtoc: true
 ---
-# Supported scenarios for configuring identity graph linking rules
+# Example scenarios for configuring identity graph linking rules
 
 This document outlines example scenarios that you may consider when configuring identity graph linking rules
 
