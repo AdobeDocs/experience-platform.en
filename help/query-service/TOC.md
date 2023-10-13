@@ -23,10 +23,10 @@ feature: Queries
         - [Overview](data-distiller/derived-attributes/overview.md)
         - [Seamless SQL flow](data-distiller/derived-attributes/seamless-sql-flow.md)
         - [Create decile-based derived attributes](data-distiller/derived-attributes/decile-based-derived-attributes.md)
-    - Machine learning pipelines {#ml-pipelines}
-        - [Cloud machine learning environment Notebooks](data-distiller/ml-pipelines/overview.md)
-        - [Establish connection to Jupyter Notebooks](data-distiller/ml-pipelines/establish-connection.md)
-        - [AI/ML Data pipeline enrichment](data-distiller/ml-pipelines/ai-ml-data-pipeline-enrichment.md)
+    - AI/ML feature pipelines {#ml-feature-pipelines}
+        - [AI/ML feature pipelines](data-distiller/ml-feature-pipelines/overview.md)
+        - [Establish connection to Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
+        - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Use cases {#use-cases}
     - [Abandoned browse](use-cases/abandoned-browse.md)
     - [Attribution analysis](use-cases/attribution-analysis.md)
