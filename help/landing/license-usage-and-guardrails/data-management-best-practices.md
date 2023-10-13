@@ -92,7 +92,7 @@ There are a number of tools that you can leverage to stay within your license us
 
 Identity graphs do not count towards your total addressable audience entitlement because addressable audience refers to your total count of customer profiles.
 
-However, graph limits can affect your addressable audience due to splitting nodes. You can set [Pseudonymous profile data expirations](../../profile/pseudonymous-profiles.md) to circumvent this behavior. For more information, read the [guardrails for Identity Service data](../../identity-service/guardrails.md).
+However, identity graph limits can affect your addressable audience due to splitting identities. For example, if the oldest ECID is removed from the graph, ECID will continue to exist in Real-Time Customer Profile as a pseudonymous profile. You can set [Pseudonymous profile data expirations](../../profile/pseudonymous-profiles.md) to circumvent this behavior. For more information, read the [guardrails for Identity Service data](../../identity-service/guardrails.md).
 
 ### Ingestion filters {#ingestion-filters}
 
