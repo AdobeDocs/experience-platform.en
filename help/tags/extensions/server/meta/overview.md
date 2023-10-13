@@ -47,7 +47,7 @@ The integration with Meta Business Extensions (MBE) enhancement allows you to qu
 
 A dialogue prompt to authenticate in MBE appears when installing the [!UICONTROL Meta Conversions API] extension.
 
-![The [!UICONTROL Meta Conversions API Extension] install highlighting [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
+![The [!UICONTROL Meta Conversions API Extension] installation page highlighting [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
 
 A dialogue prompt to authenticate in MBE also appears in the quick start workflow UI within event forwarding. 
 
