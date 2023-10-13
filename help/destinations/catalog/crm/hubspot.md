@@ -52,20 +52,6 @@ If you do not have a private app, follow the documentation to [Create a private 
 | --- | --- | --- |
 | `Bearer token` | The `Access token` of your [!DNL HubSpot] private app. <br>To obtain your [!DNL HubSpot] `Access token` follow the [!DNL HubSpot] documentation to [make API calls with your app's access token](https://developers.hubspot.com/docs/api/private-apps#make-api-calls-with-your-app-s-access-token). | `pat-na1-11223344-abcde-12345-9876-1234a1b23456` |
 
-#### Audience names should in be in lowercase {#prerequisites-audience-names}
-
->[!IMPORTANT]
->
-> You need to ensure the audiences names that you select are in `lowercase` as [!DNL HubSpot] only supports creation of fields with `lowercase` names only.
-
-The following error message will be shown if you use uppercase in the audiences selected.
-```json
-{"message":"HubSpot Audience Error: (I"status)": "error'", "message)": "Property name must be lowercase, but given: Hubsp Audience_16966154338631", "correlationid\";:)"fd4b7ff1-4cf6-4c1d-9a13- 1d47a7e7921b|", "propertiesError Code ". "PROPERTY INVALID\"'""code":"400 BAD REQUEST")
-```
-
-A screengrab of the associated error is shown below:
-![Error message when selected audience uses uppercase characters.](../../assets/catalog/crm/hubspot/audience-name-error.png)
-
 ## Guardrails {#guardrails}
 
 [!DNL HubSpot] private apps are subject to [Rate Limits](https://developers.hubspot.com/docs/api/usage-details). The number of calls your private app can make is based on your [!DNL HubSpot] account subscription and whether you've purchased the API add-on. Additionally also refer to the [Other Limits](https://developers.hubspot.com/docs/api/usage-details#other-limits).
@@ -218,9 +204,11 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
-|October 2023|Documentation update|<ul><li>We added missing guidance to indicate selected audience names should be in lowercase, in the Prerequisites, [Audience names should in be in lowercase](#prerequisites-audience-names) section. (PLATIR-33437)</li><li>We also corrected the target identity mapping in the [mapping considerations and example](#mapping-considerations-example) section. During identity mapping we erroneously called out mapping to an attribute instead of the `Email` identity.</li></ul>|
+|October 2023|Functionality update|We now automatically convert audience names into `lowercase` to overcome a limitation where [!DNL HubSpot] expects field names to be sent in lowercase only. This solves the issue where executions could result in an error message `Property name must be lowercase, but given:....` with the associated error code `PROPERTY INVALID`. (PLATIR-33437)|
+|October 2023|Documentation update|We corrected the target identity mapping in the [mapping considerations and example](#mapping-considerations-example) section. During identity mapping we had erroneously called out mapping to an attribute instead of the `Email` identity.|
 |September 2023| Initial release |Initial destination release and documentation publish. |
 
 {style="table-layout:auto"}
 
 +++
+
