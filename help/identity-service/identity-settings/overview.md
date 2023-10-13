@@ -11,6 +11,14 @@ badge: Alpha
 >
 >Identity graph linking rules are currently in Alpha. The feature and documentation are subject to change.
 
+## Table of contents
+
+* [Overview](./overview.md)
+* [Example scenarios](./example-scenarios.md)
+* [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
+* [Identity linking logic](./identity-linking-logic.md)
+
+
 With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly, resulting in all merged profiles representing a single individual person (represented by a person identifier, such as CRM ID). However, there are possible scenarios where certain data could try to merge multiple profiles into a single profile ("profile collapse"). This feature is designed to prevent these unwanted merges, which could prevent accurate personalization to users.
 
 ## Example scenarios where profile collapse could happen

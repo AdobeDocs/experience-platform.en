@@ -6,7 +6,14 @@ hidefromtoc: true
 ---
 # Example scenarios for configuring identity graph linking rules
 
-This document outlines example scenarios that you may consider when configuring identity graph linking rules
+This document outlines example scenarios that you may consider when configuring identity graph linking rules.
+
+## Table of contents
+
+* [Overview](./overview.md)
+* [Example scenarios](./example-scenarios.md)
+* [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
+* [Identity linking logic](./identity-linking-logic.md)
 
 ## Shared device
 
@@ -20,7 +27,7 @@ There are instances where multiple logins can occur on a single device:
 
 ![shared-devices](../images/identity-settings/shared-devices.png)
 
-In these cases, from a graph standpoint, with no limits enabled, a single ECID will be linked to multiple CRM IDs 
+In these cases, from a graph standpoint, with no limits enabled, a single ECID will be linked to multiple CRM IDs. 
 
 With identity graph linking rules, you can:
 
@@ -41,3 +48,13 @@ With identity graph linking rules, you can:
 
 There are cases where non-unique, erroneous identity values are ingested in the system. Examples include:
 
+* IDFA namespace with the identity value of "user_null".
+  * IDFA identity values should have 36 characters: 32 alphanumeric characters and four hyphens.
+* Phone number namespace with the identity value of "not-specified".
+  * Phone numbers should not have any alphabet characters.
+
+These identities could result in the following graphs, where multiple CRM IDs are merged together with the 'bad' identity:
+
+![bad-data](../images/identity-settings/bad-data.png)
+
+With identity graph linking rules you can configure the CRM ID as the unique identifier to prevent unwanted profile collapsing due to this type of data.
