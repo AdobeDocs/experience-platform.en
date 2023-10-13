@@ -1,8 +1,8 @@
 ---
 description: Learn how to create input fields in the Experience Platform UI that allow your users to specify various information relevant to how to connect and export data to your destination.
 title: Customer data fields
+exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
 ---
-
 # Configure user input through customer data fields
 
 When connecting to your destination in the Experience Platform UI, you might need your users to provide specific configuration details or select specific options that you make available to them. In Destination SDK, these options are called customer data fields.
@@ -246,6 +246,93 @@ To do this, use the `namedEnum` object as shown below and configure a `default` 
 ```
 
 ![Screen recording showing an example of dropdown selectors created with the configuration shown above.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
+
+## Create dynamic dropdown selectors for customer data fields {#dynamic-dropdown-selectors}
+
+For situations where you want to dynamically call an API and use the response to dynamically populate the options in a dropdown menu, you can use a dynamic dropdown selector. 
+
+The dynamic dropdown selectors look identical to the [regular dropdown selectors](#dropdown-selectors) in the UI. The only difference is the values are dynamically retrieved from an API.
+
+To create a dynamic dropdown selector, you must configure two components:
+
+**Step 1.** [Create a destination server](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) with a `responseFields` template for the dynamic API call, as shown below.
+
+```json
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":" <--YOUR-API-ENDPOINT-PATH--> "
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+**Step 2.** Use the `dynamicEnum` object as shown below. In the example below, the `User` dropdown is retrieved using the dynamic server.
+
+
+```json {line-numbers="true" highlight="13-21"}
+"customerDataFields": [
+  {
+    "name": "integrationId",
+    "title": "Integration ID",
+    "type": "string",
+    "isRequired": true
+  },
+  {
+    "name": "userId",
+    "title": "User",
+    "type": "string",
+    "isRequired": true,
+    "dynamicEnum": {
+      "queryParams": [
+        "integrationId"
+      ],
+      "destinationServerId": "<~dynamic-field-server-id~>",
+      "authenticationRule": "CUSTOMER_AUTHENTICATION",
+      "value": "$.list",
+      "responseFormat": "NAME_VALUE"
+    }
+  }
+]
+```
+
+Set the `destinationServerId` parameter to the ID of the destination server that you created at step 1. You can see the destination server ID in the response of the [retrieve a destination server configuration](../../authoring-api/destination-server/retrieve-destination-server.md) API call.
 
 ## Create conditional customer data fields {#conditional-options}
 

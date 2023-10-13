@@ -1,11 +1,9 @@
 ---
 title: Prospect Audiences
-description: Learn how to create and use prospect audiences to target unknown customers using third-party information. 
+description: Learn how to create and use prospect audiences to target unknown customers using third-party information.
 type: Documentation
-hide: true
-hidefromtoc: true
+exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
 ---
-
 # Prospect audiences
 
 Adobe Experience Platform allows you to bring the full ease and sophistication of the marketer-friendly segmentation experience to [prospect profiles](../../profile/ui/prospect-profile.md). You can drastically reduce the time spent assembling audiences by creating your own prospect audiences while responsibly using partner data.

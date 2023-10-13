@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;guardrails;guidelines;limit;entity;primary entity;dimension entity;
 title: Default Guardrails for Real-Time Customer Profile Data
 solution: Experience Platform
 product: experience platform
@@ -30,7 +29,7 @@ The following Experience Platform services are involved with modeling Real-Time 
 
 There are two types of default limits within this document:
 
-* **Soft limit:** It is possible to go beyond a soft limit, however soft limits provide a recommended guideline for system performance. 
+* **Soft limit:** It is possible to go beyond a soft limit, however soft limits provide a recommended guideline for system performance.
 
 * **Hard limit:** A hard limit provides an absolute maximum.
 
@@ -48,12 +47,12 @@ The following guardrails provide recommended limits when modeling Real-Time Cust
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| XDM Individual Profile class datasets | 20 | Soft| A maximum of 20 datasets that leverage the XDM Individual Profile class is recommended.|
-| XDM ExperienceEvent class datasets | 20 | Soft| A maximum of 20 datasets that leverage the XDM ExperienceEvent class is recommended.|
-| Adobe Analytics report suite datasets enabled for Profile| 1 | Soft | A maximum of one (1) Analytics report suite dataset should be enabled for Profile. Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix.|
-| Multi-entity relationships| 5 | Soft | A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
+| XDM Individual Profile class datasets | 20 | Soft | A maximum of 20 datasets that leverage the XDM Individual Profile class is recommended. |
+| XDM ExperienceEvent class datasets | 20 | Soft | A maximum of 20 datasets that leverage the XDM ExperienceEvent class is recommended. |
+| Adobe Analytics report suite datasets enabled for Profile | 1 | Soft | A maximum of one (1) Analytics report suite dataset should be enabled for Profile. Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix. |
+| Multi-entity relationships | 5 | Soft | A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
 | JSON depth for ID field used in multi-entity relationship| 4 | Soft | The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4. This means that in a highly nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
-| Array cardinality in a profile fragment|<=500|Soft|The optimal array cardinality in a profile fragment (time-independent data) is <=500.|
+| Array cardinality in a profile fragment|<=500|Soft|The optimal array cardinality in a profile fragment (time-independent data) is <=500. |
 | Array cardinality in ExperienceEvent | <=10 | Soft | The optimal array cardinality in an ExperienceEvent (time series data) is <=10. |
 | Identity count for individual profile Identity Graph | 50 | Hard | **The maximum number of identities in an Identity Graph for an individual profile is 50.** Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups. | 
 
@@ -63,9 +62,9 @@ The following guardrails provide recommended limits when modeling Real-Time Cust
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| No time-series data permitted for non-[!DNL XDM Individual Profile] entities| 0 | Hard | **Time-series data is not permitted for non-[!DNL XDM Individual Profile] entities in Profile Service.** If a time-series dataset is associated with a non-[!DNL XDM Individual Profile] ID, the dataset should not be enabled for [!DNL Profile]. |
+| No time-series data permitted for non-[!DNL XDM Individual Profile] entities | 0 | Hard | **Time-series data is not permitted for non-[!DNL XDM Individual Profile] entities in Profile Service.** If a time-series dataset is associated with a non-[!DNL XDM Individual Profile] ID, the dataset should not be enabled for [!DNL Profile]. |
 | No nested relationships | 0 | Soft | You should not create a relationship between two non-[!DNL XDM Individual Profile] schemas. The ability to create relationships is not recommended for any schemas which are not part of the [!DNL Profile] union schema.|
-| JSON depth for primary ID field | 4 | Soft | The recommended maximum JSON depth for the primary ID field is 4. This means that in a highly nested schema, you should not select a field as a primary ID if it is nested more than 4 levels deep. A field that is on the 4th nested level can be used as a primary ID.|
+| JSON depth for primary ID field | 4 | Soft | The recommended maximum JSON depth for the primary ID field is 4. This means that in a highly nested schema, you should not select a field as a primary ID if it is nested more than 4 levels deep. A field that is on the 4th nested level can be used as a primary ID. |
 
 {style="table-layout:auto"}
 
@@ -96,7 +95,7 @@ The following guardrails refer to data size and provide recommended limits for d
 | --- | --- | --- | --- |
 | Total size for all dimensional entities | 5GB | Soft | The recommended total size for all dimensional entities is 5GB. Ingesting large dimension entities may affect system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended.|
 | Datasets per dimensional entity schema | 5 | Soft | A maximum of 5 datasets associated with each dimensional entity schema is recommended. For example, if you create a schema for "products" and add five contributing datasets, you should not create a sixth dataset tied to the products schema.|
-|Dimension entity batches ingested per day |4 per entity|Soft|The recommended maximum number of dimension entity batches ingested per day is 4 per entity. For example, you could ingest updates to a product catalog up to 4 times per day. Ingesting additional dimension entity batches for the same entity may affect system performance.|
+| Dimension entity batches ingested per day | 4 per entity | Soft | The recommended maximum number of dimension entity batches ingested per day is 4 per entity. For example, you could ingest updates to a product catalog up to 4 times per day. Ingesting additional dimension entity batches for the same entity may affect system performance. |
 
 {style="table-layout:auto"}
 

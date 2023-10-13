@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to retrieve details about a destination publishing request through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to retrieve details about a destination publishing request through Adobe Experience Platform Destination SDK.
 title: Retrieve a destination publishing request
+exl-id: fceef12d-a52c-4259-a91e-7af88b132800
 ---
-
 # Retrieve a destination publishing request
 
 >[!IMPORTANT]

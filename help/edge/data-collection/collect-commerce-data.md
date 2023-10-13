@@ -1,8 +1,8 @@
 ---
 title: Collect commerce, product, and order information using the Adobe Experience Platform Web SDK
 description: Learn how to add data related to products or a shopping cart using the Adobe Experience Platform Web SDK.
+exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
 ---
-
 # Collect commerce, product, and order information
 
 If your organization sells products or services, you can use this page as a guide on how to track those products and services.
