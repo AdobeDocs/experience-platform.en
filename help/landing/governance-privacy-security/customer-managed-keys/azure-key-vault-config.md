@@ -39,7 +39,7 @@ Once you arrive at the **[!DNL Review + create]** step, you can review the detai
 
 ## Configure access {#configure-access}
 
-Next, enable Azure role-based access control for your key vault. This step is essential as the CMK App must later be associated with an Azure role. Assigning a role is documented in both the [API](./api-set-up.md#assign-to-role) and [UI](./ui-set-up.md#assign-to-role) workflow. Select **[!DNL Access configuration]** in the [!DNL Settings] section of the left navigation, then select **[!DNL Azure role-based access control]** to enable the setting.
+Next, enable Azure role-based access control for your key vault. Select **[!DNL Access configuration]** in the [!DNL Settings] section of the left navigation, then select **[!DNL Azure role-based access control]** to enable the setting. This step is essential as the CMK App must later be associated with an Azure role. Assigning a role is documented in both the [API](./api-set-up.md#assign-to-role) and [UI](./ui-set-up.md#assign-to-role) workflows. 
 
 ![The [!DNL Microsoft Azure] dashboard with [!DNL Access configuration] and [!DNL Azure role-based access control] highlighted.](../../images/governance-privacy-security/customer-managed-keys/access-configuration.png)
 
