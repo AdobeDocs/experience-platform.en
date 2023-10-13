@@ -52,10 +52,6 @@ When activating audiences to the [!DNL (API) Salesforce Marketing Cloud] destina
 
 For each audience that you activate from Platform to [!DNL Salesforce], you must have an attribute of type `Text` linked to the [!DNL Email Demographics] data extension within [!DNL Salesforce Marketing Cloud]. Use the [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] to create attributes. Refer to the [!DNL Salesforce Marketing Cloud] documentation to [create attributes](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US) if you need guidance on creating attributes.
 
->[!WARNING]
->
-> Do not use the same attribute for the audience status across multiple audiences within a single execution. When Platform creates the request it includes the **[!UICONTROL Mapping ID]** attribute value and status for each selected audience. Because the same attribute is mapped more than once across the selected audiences, the request also includes duplicate occurrences of the same attribute for each record. This will cause the execution to result in an error.
-
 The attribute field names are used for the [!DNL (API) Salesforce Marketing Cloud] target field during the **[!UICONTROL Mapping]** step. You can define the field character with a maximum of 4000 characters, according to your business requirement. See the [!DNL Salesforce Marketing Cloud] [Data Extensions Data Types](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&type=5) documentation page for additional information on attribute types.
 
 An example of the data designer screen in [!DNL Salesforce Marketing Cloud], into which you will add the attribute is shown below:
@@ -234,10 +230,6 @@ When you have finished providing the mappings for your destination connection, s
 When performing the [Schedule audience export](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map Platform audiences to the [attributes](#prerequisites-attribute) in [!DNL Salesforce Marketing Cloud].
 
 To do this, select each segment, then enter name of the attribute from [!DNL Salesforce Marketing Cloud] in the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** field. Refer to the [Create attribute within [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field) section for guidance and best practices on creating attributes in [!DNL Salesforce Marketing Cloud].
-
->[!WARNING]
->
-> Do not use the same attribute for the audience status across multiple audiences within a single execution. When Platform creates the request it includes the **[!UICONTROL Mapping ID]** attribute value and status for each selected audience. Because the same attribute is mapped more than once across the selected audiences, the request also includes duplicate occurrences of the same attribute for each record. This will cause the execution to result in an error.
 
 For example, if your [!DNL Salesforce Marketing Cloud] attribute is `salesforce_mc_segment_1`, specify this value in the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** to populate audience audiences from Experience Platform into this attribute.
 
