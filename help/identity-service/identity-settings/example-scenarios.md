@@ -37,4 +37,7 @@ With identity graph linking rules, you can:
 
 * Configure either the CRM ID, phone number, or email address as the unique identifier and thus limit one person to just one CRM ID, phone number, and/or email address associated with their account.
 
-## Bad data
+## Bad identity values
+
+There are cases where non-unique, erroneous identity values are ingested in the system. Examples include:
+
