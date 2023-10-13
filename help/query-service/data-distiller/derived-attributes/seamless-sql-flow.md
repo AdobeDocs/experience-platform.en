@@ -29,7 +29,7 @@ Query Service allows you to perform all of the actions listed above using SQL qu
 >
 >The SQL query provided below assumes the use of a pre-existing namespace.
 
-Use a Create Table as Select (CTAS) query to create a dataset, assign datatypes, set a primary identity, create a schema, and mark it as profile-enabled. The example SQL statement below creates attributes and makes it available for Real-Time Customer Data Profile (Real-Time CDP). Your SQL query will follow the format shown in the example below:
+Use a Create Table as Select (CTAS) query to create a dataset, assign datatypes, set a primary identity, create a schema, and mark it as profile-enabled. The example SQL statement below creates attributes and makes it available for Real-Time Customer Data Platform (Real-Time CDP). Your SQL query will follow the format shown in the example below:
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];

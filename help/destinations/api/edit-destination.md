@@ -3,6 +3,7 @@ solution: Experience Platform
 title: Edit destination connections using the Flow Service API
 type: Tutorial
 description: Learn how to how to edit various components of a destination connection using the Flow Service API.
+exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
 ---
 # Edit destination connections using the Flow Service API
 

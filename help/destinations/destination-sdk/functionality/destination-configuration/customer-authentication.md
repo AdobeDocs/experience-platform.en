@@ -1,8 +1,8 @@
 ---
 description: Learn how to set up an authentication mechanism for your destination and get insight into what users will be seeing in the UI depending on the authentication method you select.
 title: Customer authentication configuration
+exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
 ---
-
 # Customer authentication configuration
 
 Experience Platform provides great flexibility in the authentication protocols available to partners and customers. You can configure your destination to support any of the industry-standard authentication methods like [!DNL OAuth2], bearer token authentication, password authentication, and many more.

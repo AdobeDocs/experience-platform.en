@@ -1,8 +1,8 @@
 ---
 title: Evolution from Audience Manager to Real-Time CDP
 description: Understand the considerations before planning your migration from Audience Manager to Real-Time CDP.
+exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
 ---
-
 # Evolution from Audience Manager to Real-Time CDP
 
 As your organization evolves to use Adobe Real-Time CDP, explore these considerations to prepare your data and to become aware of critical differences between the two technologies. This article is aimed at a practitioner audience.
@@ -17,9 +17,9 @@ Furthermore, think about the data sources that you currently use in Audience Man
 
 Adobe recommends that you categorize your segments as follows: 
 
-* Segments that can be sent to Experience Platform via the [[!UICONTROL Audience Manager Source Connector]](/help/sources/connectors/adobe-applications/audience-manager.md), as they have no data dependencies, no destination or activation challenges, and their segmentation rules can be created through the Real-time CDP [segment builder](/help/segmentation/ui/segment-builder.md) later. 
+* Segments that can be sent to Experience Platform via the [[!UICONTROL Audience Manager Source Connector]](/help/sources/connectors/adobe-applications/audience-manager.md), as they have no data dependencies, no destination or activation challenges, and their segmentation rules can be created through the Real-Time CDP [segment builder](/help/segmentation/ui/segment-builder.md) later. 
 * Segments that have rules that can be supported but may have contain data that won't be available in Real-Time CDP.
-* Segments that cannot be created in Real-time CDP and are missing functionality.
+* Segments that cannot be created in Real-Time CDP and are missing functionality.
 
 >[!TIP]
 >
@@ -45,4 +45,4 @@ Real-Time CDP currently supports more than 60 destinations natively in the [cata
 
 ## Next steps
 
-After reading this page, you now have a first set of considerations to work through as you start your evolution from Audience Manager to Real-Time CDP. 
+After reading this page, you now have a first set of considerations to work through as you start your evolution from Audience Manager to Real-Time CDP.

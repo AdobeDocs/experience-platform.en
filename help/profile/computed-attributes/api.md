@@ -1,15 +1,13 @@
 ---
 title: Computed Attributes API Endpoint
 description: Learn how to create, view, update, and delete computed attributes using the Real-Time Customer Profile API.
-badge: "Beta"
+exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
 ---
 # Computed attributes API endpoint
 
 >[!IMPORTANT]
 >
->The computed attributes functionality is currently in beta. The documentation and functionality are subject to change. 
->
->Additionally, access to the API is restricted. To learn how to get access to the computed attributes API, please contact Adobe Support.
+>Access to the API is restricted. To learn how to get access to the computed attributes API, please contact Adobe Support.
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. This guide includes sample API calls for performing basic CRUD operations using the `/attributes` endpoint. 
 
@@ -46,7 +44,7 @@ The following query parameters can be used when retrieving a list of computed at
 | `limit` | A parameter that specifies the maximum number of items returned as part of the response. The minimum value of this parameter is 1 and the maximum value is 40. If this parameter is not included, by default, 20 items will be returned. | `limit=20` |
 | `offset` | A parameter that specifies the number of items to skip before returning the items. | `offset=5` |
 | `sortBy` | A parameter that specifies the order in which the returned items are sorted. Available options include `name`, `status`, `updateEpoch`, and `createEpoch`. You can also choose whether to sort in ascending order or descending order by not including or including a `-` in front of the sort option. By default, the items will be sorted by `updateEpoch` in descending order. | `sortBy=name` |
-| `status` | A parameter that lets you filter by the status of the computed attribute. Available options include `draft`, `new`, `processing`, `processed`, `failed`, `disabled`, and `initializing`. This option is case insensitive. | `status=draft` | 
+| `property` | A parameter that lets you filter on various computed attribute fields. Supported properties include `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, and `status`. The supported operations depend on the property listed. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (<=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (!=contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (<=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul>| `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **Request**
 
@@ -101,19 +99,24 @@ A successful response returns HTTP status 200 with a list of the last 3 updated 
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
+            "keepCurrent": false,
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
                 "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "SUM"
             },
             "status": "DRAFT",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "",
             "createEpoch": 1671223530322,
             "updateEpoch": 1673043640946,
             "createdBy": "{USER_ID}"
@@ -132,19 +135,24 @@ A successful response returns HTTP status 200 with a list of the last 3 updated 
                 "default": true
             },
             "path": "{TENANT_ID}/ComputedAttributes",
+            "keepCurrent": true,
             "expression": {
                 "type": "PQL",
                 "format": "pql/text",
-                "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
+                "value": "xEvent[eventType.equals(\"commerce.backofficeOrderPlaced\", false)].topN(timestamp, 1).map({\"timestamp\": timestamp, \"value\": producedBy}).head()"
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "MOST_RECENT"
             },
             "status": "DRAFT",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "",
             "createEpoch": 1671223586455,
             "updateEpoch": 1671223586455,
             "createdBy": "{USER_ID}"
@@ -167,15 +175,19 @@ A successful response returns HTTP status 200 with a list of the last 3 updated 
                 "type": "PQL",
                 "format": "pql/text",
                 "value": "xEvent[(commerce.checkouts.value > 0.0 or commerce.purchases.value > 1.0 or commerce.order.priceTotal >= 10.0)",
-                "meta": " "
             },
             "mergeFunction": {
-                "value": "-"
+                "value": "SUM"
             },
-            "status": "DRAFT",
+            "status": "PROCESSED",
             "schema": {
                 "name": "_xdm.context.profile"
             },
+            "duration": {
+                "count": 7,
+                "unit": "DAYS"
+            },
+            "lastEvaluationTs": "2023-08-27T00:14:55.028",
             "createEpoch": 1671220358902,
             "updateEpoch": 1671220358902,
             "createdBy": "{USER_ID}"
@@ -246,7 +258,7 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 | `expression.type` | The type of the expression. Currently, only PQL is supported. |
 | `expression.format` | The format of the expression. Currently, only `pql/text` is supported. |
 | `expression.value` | The value of the expression. |
-| `keepCurrent` | A boolean that determines whether or not the computed attribute's value is kept up-to-date. Currently, this value should be set to `false`. |
+| `keepCurrent` | A boolean that determines whether or not the computed attribute's value is kept up-to-date using fast refresh. Currently, this value should be set to `false`. |
 | `duration` | An object that represents the lookback period for the computed attribute. The lookback period represents how far back can be looked back to compute the computed attribute. |
 | `duration.count` | A number that represents the duration for the lookback period. The possible values depend on the value of the `duration.unit` field. <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
 | `duration.unit` | A string that represents the unit of time that will be used for the lookback period. Possible values include: `HOURS`, `DAYS`, `WEEKS`, and `MONTHS`. |
@@ -288,6 +300,7 @@ A successful response returns HTTP status 200 with information about your newly 
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680070188696,
     "updateEpoch": 1680070188696,
     "createdBy": "{USER_ID}"
@@ -362,6 +375,7 @@ A successful response returns HTTP status 200 with detailed information about th
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680070188696,
     "updateEpoch": 1680070188696,
     "createdBy": "{USER_ID}"
@@ -372,13 +386,18 @@ A successful response returns HTTP status 200 with detailed information about th
 | -------- | ----------- |
 | `id` | A unique, read-only, system-generated ID that can be used for referencing the computed attribute during other API operations. |
 | `type` | A string that shows that the returned object is a computed attribute. |
+| `name` | The name for the computed attribute. |
+| `displayName` | The display name for the computed attribute. This is the name that will be displayed when listing your computed attributes within the Adobe Experience Platform UI. |
+| `description` | A description of the computed attribute. This is especially useful once multiple computed attributes have been defined as it will help others within your organization to determine the correct computed attribute to use. |
 | `imsOrgId` | The ID of the organization the computed attribute belongs to. |
 | `sandbox` | The sandbox object contains details of the sandbox within which the computed attribute was configured. This information is drawn from the sandbox header sent in the request. For more information, please see the [sandboxes overview](../../sandboxes/home.md). |
 | `path` | The `path` to the computed attribute. |
+| `keepCurrent` | A boolean that determines whether or not the computed attribute's value is kept up-to-date using fast refresh. |
 | `expression` | An object that contains the computed attribute's expression. |
-| `mergeFunction` | An object that contains the merge function for the computed attribute. This value is based off of the corresponding aggregation parameter within the computed attribute's expression. |
+| `mergeFunction` | An object that contains the merge function for the computed attribute. This value is based off of the corresponding aggregation parameter within the computed attribute's expression. Possible values include `SUM`, `MIN`, `MAX`, and `MOST_RECENT`. |
 | `status` | The computed attribute's status. This can be one of the following values: `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED`, or `DISABLED`. |
 | `schema` | An object that contains information about the schema where the expression is evaluated in. Currently, only `_xdm.context.profile` is supported. |
+| `lastEvaluationTs` | A timestamp that represents when the computed attribute was last evaluated. |
 | `createEpoch` | The time at which the computed attribute was created, in seconds. |
 | `updateEpoch`| The time at which the computed attribute was last updated, in seconds. |
 | `createdBy` | The ID of the user who created the computed attribute. |
@@ -451,6 +470,7 @@ A successful response returns HTTP status 202 with details of the deleted comput
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1681365690928,
     "updateEpoch": 1681365690928,
     "createdBy": "{USER_ID}"
@@ -542,6 +562,7 @@ A successful response returns HTTP status 200 with information about your newly 
     "schema": {
         "name": "_xdm.context.profile"
     },
+    "lastEvaluationTs": "",
     "createEpoch": 1680071726825,
     "updateEpoch": 1680074429192,
     "createdBy": "{USER_ID}"

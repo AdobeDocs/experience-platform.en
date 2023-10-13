@@ -2,12 +2,13 @@
 title: Adobe Commerce Source Connector
 description: Learn how to use the Adobe Commerce source to bring your commerce data to Experience Platform.
 last-substantial-update: 2023-06-21
+exl-id: 8313e3d5-5c3d-448c-883c-b9386dbbb2f5
 ---
 # Adobe Commerce
 
 Adobe Commerce is an agile B2B and B2C commerce platform that enables merchants and brands to accelerate revenue through customer-centric digital commerce experiences across online and physical spaces. 
 
-Adobe Experience Platform Sources supports the integration of Adobe Commerce to allow merchants to send storefront and back office data to Adobe Experience Edge, so other Adobe Experience Cloud products like Adobe Analytics and Adobe Target can use [!DNL Commerce] data.
+Adobe Experience Platform Sources supports the integration of Adobe Commerce to allow merchants to send storefront and back office data to the Experience Platform Edge Network, so other Adobe Experience Cloud products like Adobe Analytics and Adobe Target can use [!DNL Commerce] data.
 
 * **Storefront events**: Capture shopper interactions such as `View Page`, `View Product`, and `Add to Cart`. For B2B merchants, storefront events also captures [requisition lists](<https://experienceleague.adobe.com/docs/commerce-admin/b2b/requisition-lists/requisition-lists.html>).
 * **Back office events**: Capture information on the status of an order, such as whether an order was placed, canceled, refunded, shipped, or completed.

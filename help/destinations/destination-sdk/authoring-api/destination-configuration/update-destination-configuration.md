@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to update an existing destination configuration through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to update an existing destination configuration through Adobe Experience Platform Destination SDK.
 title: Update a destination configuration
+exl-id: d7f18689-9806-4f73-a63a-fa112569819c
 ---
-
 # Update a destination configuration
 
 This page exemplifies the API request and payload that you can use to update an existing destination configuration, using the `/authoring/destinations` API endpoint.
