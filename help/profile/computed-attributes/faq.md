@@ -61,13 +61,17 @@ Computed attributes drive Profile enrichment by aggregating your event attribute
 
 Computed attributes are evaluated in a **batch** frequency that is **independent** to the schedule of your audience, destination, and journey evaluation. This means that regardless of the segmentation type (batch segmentation or streaming segmentation), the computed attribute will be evaluated on its own schedule (hourly, daily, weekly, or monthly). 
 
-The first time evaluation of your computed attribute happens within the 24 hours of your computed attribute's **creation**. This currently occurs at 12AM UTC across all sandboxes and for all newly created computed attributes. The subsequent batch evaluations happen at an hourly/daily/weekly/monthly basis depending on the defined lookback period.
+The first time evaluation of your computed attribute happens within the 24 hours of your computed attribute's **creation**. The subsequent batch evaluations happen at an hourly/daily/weekly/monthly basis depending on the defined lookback period.
 
-For example, if a first time evaluation occurs at 12AM UTC on October 9th, the subsequent evaluations will occur at the following times:
+For example, if a first time evaluation occurs at 12AM UTC on October 9th, the subsequent evaluations would occur at the following times:
 
 - Next daily refresh: 12AM UTC on October 10th
 - Next weekly refresh: 12AM UTC on October 15th
 - Next monthly refresh:  12AM UTC on November 1st
+
+>[!IMPORTANT]
+>
+>This is only the case if fast refresh is **not** enabled. To learn how the lookback period changes when fast refresh is enabled, please read the [fast refresh section](./overview.md#fast-refresh).
 
 Both the **weekly** and **monthly** refreshes take place on the beginning of the **calendar week** (the Sunday of the new week) or the beginning of the **calendar month** (the first of the new month), as opposed to exactly one week or one month after the first time evaluation date.
 
