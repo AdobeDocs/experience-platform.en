@@ -71,7 +71,7 @@ For example, if a first time evaluation occurs at 12AM UTC on October 9th, the s
 
 >[!IMPORTANT]
 >
->This is only the case if fast refresh is **not** enabled. With fast refresh enabled, the lookback period will change on a **rolling** basis. To learn how the lookback period changes when fast refresh is enabled, please read the [fast refresh section](./overview.md#fast-refresh).
+>This is only the case if fast refresh is **not** enabled. To learn how the lookback period changes when fast refresh is enabled, please read the [fast refresh section](./overview.md#fast-refresh).
 
 Both the **weekly** and **monthly** refreshes take place on the beginning of the **calendar week** (the Sunday of the new week) or the beginning of the **calendar month** (the first of the new month), as opposed to exactly one week or one month after the first time evaluation date.
 
