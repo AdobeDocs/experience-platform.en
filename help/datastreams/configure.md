@@ -42,12 +42,18 @@ Expand the **[!UICONTROL Geolocation and network lookup]** section to configure 
 
 | Setting | Description |
 | --- | --- |
-| [!UICONTROL Geo Lookup] | Enables geolocation lookups for the selected options, based on the visitor IP address. Geolocation lookup requires you to include the [`placeContext`](../edge/data-collection/automatic-information.md#place-context) field group in your Web SDK configuration. <br> Available options: <ul><li>Country</li><li>Postal Code</li><li>State/Province</li><li>DMA</li><li>City</li><li>Latitude </li><li>Longitude</li></ul>Selecting **[!UICONTROL City]**, **[!UICONTROL Latitude]**, or **[!UICONTROL Longitude]** provides coordinates up to two decimal points, regardless of what other options are selected. This is considered city-level granularity. <br> <br>Not selecting any option disables any geolocation lookups. Geolocation occurs before [!UICONTROL IP Obfuscation] and is not impacted by the  [!UICONTROL IP Obfuscation] setting.|
-| [!UICONTROL Network Lookup] | Enables network lookups for the selected options, based on the visitor IP address. Network lookup requires you to include the [`Environment`](../edge/data-collection/automatic-information.md#environment) field group in your Web SDK configuration. <br> Available options: <ul><li>Carrier</li><li>Domain</li><li>ISP</li></ul>Use these options to provide more information to other services about the specific network where the requests originated.|
+| [!UICONTROL Geo Lookup] | Enables geolocation lookups for the selected options based on the visitor's IP address. Available options include: <ul><li>**Country**: Populates `xdm.placeContext.geo.countryCode`</li><li>**Postal Code**: Populates `xdm.placeContext.geo.postalCode`</li><li>**State/Province**: Populates `xdm.placeContext.geo.stateProvince`</li><li>**DMA**: Populates `xdm.placeContext.geo.dmaID`</li><li>**City**: Populates `xdm.placeContext.geo.city`</li><li>**Latitude**: Populates `xdm.placeContext.geo._schema.latitude`</li><li>**Longitude**: Populates `xdm.placeContext.geo._schema.longitude`</li></ul>Selecting **[!UICONTROL City]**, **[!UICONTROL Latitude]**, or **[!UICONTROL Longitude]** provides coordinates up to two decimal points, regardless of what other options are selected. This is considered city-level granularity.<br> <br>Not selecting any option disables geolocation lookups. Geolocation happens before [!UICONTROL IP Obfuscation], which means that it is not impacted by the [!UICONTROL IP Obfuscation] setting. |
+| [!UICONTROL Network Lookup] | Enables network lookups for the selected options based on the visitor's IP address. Available options include: <ul><li>**Carrier**: Populates `xdm.environment.carrier`</li><li>**Domain**: Populates `xdm.environment.domain`</li><li>**ISP**: Populates `xdm.environment.ISP`</li></ul> |
+
+If you enable any of the fields above for data collection, make sure that you correctly set the [`context`](../edge/data-collection/automatic-information.md) array property when [configuring the Web SDK](../edge/fundamentals/configuring-the-sdk.md).
+
+Geolocation lookup fields use the `context` array string `"placeContext"`, while network lookup fields use the `context` array string `"environment"`.
+
+Additionally, make sure that each desired XDM field exists in your schema. If it does not, you can add the Adobe-provided `Environment Details` field group to your schema.
 
 ### Configure device lookup {#geolocation-device-lookup}
 
-The **[!UICONTROL Device Lookup]** settings allow you to select the granularity level of the device-specific information that you want to collect.
+The **[!UICONTROL Device Lookup]** settings allow you to select device-specific information that you want to collect.
 
 Expand the **[!UICONTROL Device Lookup]** section to configure the settings described below.
 
@@ -59,9 +65,15 @@ Expand the **[!UICONTROL Device Lookup]** section to configure the settings desc
 
 | Setting | Description |
 | --- | --- |
-| **[!UICONTROL Keep user agent and client hints headers]** | Select this option to only collect the information stored in the user agent string. This is the default setting. |
-| **[!UICONTROL Use device lookup to collect the following information]** | Select this option if you want to collect one or more of the following device-specific information: <ul><li>**[!UICONTROL Device]** information:<ul><li>Device manufacturer</li><li>Device model</li><li>Marketing name</li></ul></li><li>**[!UICONTROL Hardware]** information: <ul><li>Device type</li><li>Display height</li><li>Display width</li><li>Display color depth</li></ul></li><li>**[!UICONTROL Browser]** information: <ul><li>Browser vendor</li><li>Browser name</li><li>Browser version</li></ul></li><li>**[!UICONTROL Operating system]** information: <ul><li>OS vendor</li><li>OS name</li><li>OS version</li></ul></li></ul> <br>  Device lookup information cannot be collected along with user agent and client hints. Choosing to collect device information will disable the collection of user agent and client hints, and vice versa. All device lookup information is stored in the `xdm:device` field group. |
-| **[!UICONTROL Do not collect any device information]** | Select this option if you do not want to collect any kind of lookup information. No device, hardware, browser or operating system information will be collected, including no user agent or client hints headers. |
+| **[!UICONTROL Keep user agent and client hints headers]** | Select this option to only collect the information stored in the user agent string. This setting is selected by default. Populates `xdm.environment.browserDetails.userAgent` |
+| **[!UICONTROL Use device lookup to collect the following information]** | Select this option if you want to collect one or more of the following device-specific information: <ul><li>**[!UICONTROL Device]** information:<ul><li>**Device manufacturer**: Populates `xdm.device.manufacturer`</li><li>**Device model**: Populates `xdm.device.modelNumber`</li><li>**Marketing name**: Populates `xdm.device.model`</li></ul></li><li>**[!UICONTROL Hardware]** information: <ul><li>**Hardware type**: Populates `xdm.device.type`</li><li>**Display height**: Populates `xdm.device.screenHeight`</li><li>**Display width**: Populates `xdm.device.screenWidth`</li><li>**Display color depth**: Populates `xdm.device.colorDepth`</li></ul></li><li>**[!UICONTROL Browser]** information: <ul><li>**Browser vendor**: Populates `xdm.environment.browserDetails.vendor`</li><li>**Browser name**: Populates `xdm.environment.browserDetails.name`</li><li>**Browser version**: Populates `xdm.environment.browserDetails.version`</li></ul></li><li>**[!UICONTROL Operating system]** information: <ul><li>**OS vendor**: Populates `xdm.environment.operatingSystemVendor`</li><li>**OS name**: Populates `xdm.environment.operatingSystem`</li><li>**OS version**: Populates `xdm.environment.operatingSystemVersion`</li></ul></li></ul>Device lookup information cannot be collected along with user agent and client hints. Choosing to collect device information disables the collection of user agent and client hints, and vice versa. |
+| **[!UICONTROL Do not collect any device information]** | Select this option if you do not want to collect any device lookup information. No device, hardware, browser, operating system, user agent, or client hint data is collected. |
+
+If you enable any of the fields above for data collection, make sure that you correctly set the [`context`](../edge/data-collection/automatic-information.md) array property when [configuring the Web SDK](../edge/fundamentals/configuring-the-sdk.md).
+
+Device and hardware information use the `context` array string `"device"`, while browser and operating system information use the `context` array string `"environment"`.
+
+Additionally, make sure that each desired XDM field exists in your schema. If it does not, you can add the Adobe-provided `Environment Details` field group to your schema.
 
 ### Configure advanced options {#@advanced-options}
 
