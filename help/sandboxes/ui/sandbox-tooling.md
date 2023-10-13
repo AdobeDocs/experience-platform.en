@@ -19,9 +19,7 @@ You can use the sandbox tooling feature to select different objects and export t
 
 ## Objects supported for sandbox tooling {#supported-objects}
 
->[!NOTE]
->
->The full sandbox package only contains the supported object types and does not contain all of the sandbox's objects.
+The sandbox tooling feature provides you with the ability to export [!DNL Adobe Real-Time Customer Data Platform] and [!DNL Adobe Journey Optimizer] objects into a package. 
 
 ### Real-time Customer Data Platform objects {#real-time-cdp-objects}
 
@@ -33,7 +31,7 @@ The table below lists [!DNL Adobe Real-Time Customer Data Platform] objects that
 | Customer Data Platform | Audiences | Only the **[!UICONTROL Customer Audience]** type **[!UICONTROL Segmentation service]** is supported. Existing labels for consent and governance will be copied over in the same import job. |
 | Customer Data Platform | Identities | The system will auto-deduplicate Adobe standard identity namespaces when creating in the target sandbox. Audiences can only be copied when all attributes in audience rules are enabled in the union schema. The necessary schemas must be moved and enabled for unified profile first.|
 | Customer Data Platform | Schemas | Existing labels for consent and governance will be copied over in the same import job. The schema unified profile status will be copied as is from the source sandbox. If the schema is enabled for unified profile in the source sandbox, all attributes are moved to the union schema. The schema relationships edge case are not included in the package.|
-| Customer Data Platform | Datasets | Datasets are copied. |
+| Customer Data Platform | Datasets | Datasets are copied with the unified profile setting disabled by default. |
 
 The following objects are imported but are in a draft or disabled status:
 
@@ -41,9 +39,7 @@ The following objects are imported but are in a draft or disabled status:
 | --- | --- | --- |
 | Import status | Source dataflow | Draft |
 | Import status |  Journey | Draft |
-| Unified profile | Schema | Disabled |
-| Unified profile | Dataset | Disabled |
-| Policies | Consent policies | Disabled |
+| Unified profile | Dataset | Unified profile disabled |
 | Policies | Data governance policies | Disabled |
 
 ### Adobe Journey Optimizer objects {#abobe-journey-optimizer-objects}
