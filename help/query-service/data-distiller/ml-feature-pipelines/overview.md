@@ -4,42 +4,42 @@ description: Learn how to enrich your preferred machine learning tools with feat
 ---
 # AI/ML feature pipelines
 
-This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. The document also provides instructions for getting started with certain [!DNL Python] notebooks that illustrate data pipeline enrichment.
+This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided Python notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
 
 >[!IMPORTANT]
 >
 >This workflow requires Data Distiller and an Adobe Experience Platform Intelligence license. If you do not have either of these products, please speak to your Adobe Service representative.
 
-Through the use of Python notebooks in you machine learning environments, you can leverage Data Distiller capabilities to explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
+This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks.
 
-## Train and score a propensity model to predict subscription conversions from Platform data
+## Train and score a propensity model to predict subscription conversions from Platform data {#train-and-score-a-propensity-model}
 
-The linked repositories provide sample notebooks that demonstrate an end-to-end workflow. The workflow uses customer data from the Adobe Experience Platform with cloud-based machine learning tools to train and score a propensity model that predict subscription conversions. The notebooks serve as a template to help data science teams take advantage of their organization's Platform data and services within their modeling workflow to develop custom models to support their organization's marketing and experience activities.
+The linked repositories provide sample notebooks that demonstrate the AI/ML feature pipeline end-to-end workflow. The workflow uses customer data from Experience Platform with cloud-based machine learning tools to train and score a propensity model that predict subscription conversions. Use the notebooks as a template to help data science teams take advantage of your organization's Platform data and services. Platform data and services can then be used within your modeling workflow to develop custom models that support your organization's marketing and experience activities.
 
-The sample notebooks listed in this document provide a stylized **example of training and scoring a propensity model to predict subscription conversions from Platform data**. The first notebook generates synthetic datasets in an Platform sandbox which are then used in subsequent notebooks to illustrate an end-to-end flow. The workflow includes:
+The sample notebooks listed in this document provide a stylized example of training and scoring a propensity model to predict subscription conversions from Platform data. The first notebook generates synthetic datasets in an Platform sandbox which is then used in subsequent notebooks to illustrate an end-to-end flow. The workflow includes:
 
 - Exploring and featuring data from Experience Platform
-- Making the prepared training data available in your machine learning environment (Databricks ML is used as an example, but you can modify the sample notebooks to use your own ML environment)
+- Making the prepared training data available in your machine learning environment ([!DNL Databricks] ML is used as an example, but you can modify the sample notebooks to use your own ML environment)
 - Training and scoring the propensity model
 - Enriching Platform profiles with the computed propensity scores, and using those scores to create and activate an audience
 
 The sample notebooks are intended to be used in one of two ways:
 
-1. As a tutorial for using Platform data in ML workflows
-    - Ideally, use a dedicated Platform sandbox for completing the tutorial, to avoid mixing synthetic data with real customer data. You can reset or delete the sandbox after completing the tutorial to free it up for other use.
-    - Clone or download this repository to create a copy in your ML environment.
-    - Follow the instructions in the [getting started](#getting-started) section to get an Platform API credential with the required permissions and update the config.ini file with the required values.
-    - Review and execute the cells in each notebook, in order to demonstrate and validate the workflow in your environment
-    - Modify the code in the notebooks as needed to adapt to your environment
-2. As a template for Platform-related ML projects for your organization
-    - Fork the CMLE repository as a starting template for a new ML project
-    - Alternatively, simply reference the code in these notebooks as helpful examples to start a new project from scratch
+1. As a tutorial for using Platform data in ML workflows.
+    - Ideally, use a dedicated Platform sandbox for completing the tutorial. The use of a dedicated sandbox will avoid mixing synthetic data with real customer data. You can reset or delete the sandbox after completing the tutorial to free it up for other use. See the documentation to learn how to [create a new sandbox](../../../sandboxes/ui/user-guide.md#create), or to [swtich between them](../../../sandboxes/ui/user-guide.md#switch-between-sandboxes).
+    - Clone or download this repository to create a copy in your ML environment.<!-- Jeremy - What repository? -->
+    - Follow the instructions in the [getting started](#getting-started) section to get an Platform API credential with the necessary permissions and update the `config.ini` file with the required values.
+    - Review and execute the cells in each notebook in order to demonstrate and validate the workflow in your environment.
+    - Modify the code in the notebooks as needed to adapt to your environment.
+2. As a template for Platform-related ML projects for your organization.
+    - Fork the CMLE repository as a starting template for a new ML project. <!-- Where is the CMLE repository? -->
+    - Alternatively, reference the code in these notebooks as helpful examples to start a new project from scratch.
 
 >[!WARNING]
 >
-> The workflow illustrated in these notebooks involves exporting datasets from Platform to a cloud storage destination, where it can be read and processed using external machine learning tools. As such, there is some risk of sensitive personal data leaving the Experience Platform and being used inappropriately outside of the Platform.<br><br>Experience Platform provides data governance tools for you to manage your data usage obligations and help minimize this risk. You are responsible ensuring that data in the Experience Platform is properly labeled before querying or exporting that data. This includes manually re-applying labels to derived datasets created from query output.  Derived datasets from queries do not support the processing of sensitive personal data. You are responsible for understanding the limitations and obligations of your data and how you use that data in Experience Platform and the destination platform, which may have its own rules and obligations for incoming and outgoing data. Learn more about [data governance tools](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html) in Experience Platform.
+> The workflow illustrated in these notebooks involves exporting datasets from Platform to a cloud storage destination, where it can be read and processed using external machine learning tools. As such, there is some risk of sensitive personal data leaving the Experience Platform and being used inappropriately outside of the platform.<br><br>Experience Platform provides data governance tools for you to manage your data usage obligations and help minimize this risk. You are responsible ensuring that data in the Experience Platform is properly labeled before querying or exporting that data. This includes manually re-applying labels to derived datasets created from query output. Derived datasets from queries do not support the processing of sensitive personal data. You are responsible for understanding the limitations and obligations of your data and how you use that data in Experience Platform and the destination platform, which may have its own rules and obligations for incoming and outgoing data. Learn more about [data governance tools](../../../data-governance/home.md) in Experience Platform.
 
-## Prerequisites 
+## Prerequisites {#prerequisites}
 
 This tutorial requires a working understanding of the various aspects of Adobe Experience Platform. Before beginning this tutorial, please review the documentation for the following concepts:
 
@@ -58,30 +58,35 @@ There are several steps necessary to get started with the CMLE notebooks. The CM
 
 The following steps are required to set up access to Platform APIs through `aepp`. If you wish to code requests to Platform APIs yourself rather than use `aepp`, you will still need to complete these steps to get a credential with the necessary permissions and store it safely.
 
-### Step 1: Create an API credential in the Adobe Developer Console
+### Step 1: Create an API credential in the Adobe Developer Console {#create-api-credential}
 
-API credentials may be created by anyone with Developer access to Platform in your organization. If you are a data scientist without Developer access, ask your manager or Adobe Admin to create a credential for you in the [Adobe Developer Console](https://developer.adobe.com/console/home). Alternatively, they can grant you Developer access to create one yourself.
+API credentials can be created by anyone with Developer access to Platform in your organization. If you are a data scientist without Developer access, ask your manager or Adobe Admin to [create a credential](../../../landing/api-authentication.md#generate-credentials) for you in the [Adobe Developer Console](https://developer.adobe.com/console/home). Alternatively, they can [grant you Developer access](../../../landing/api-authentication.md#add-developers-to-product-profile) to create one yourself.
 
-We recommend creating an Oauth2 API credential specifically for Cloud ML workflows with appropriate permissions and labels (as described below in "Grant permissions to credentials for Cloud ML).
+You are recommended to create an [!DNL Oauth2] API credential specifically for Cloud ML workflows with appropriate permissions and labels.
+
+<!-- 
+Is this the correct doc to link to about creating an Oauth2 API credential?:
+../../../destinations/destination-sdk/functionality/destination-configuration/oauth2-authentication.md
+ -->
 
 See [Authenticate and access Experience Platform APIs](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html) detailed instructions instructions on creating an API credential.
 
-### Step 2: Get the necessary attribute-based access control permissions for your credential
+### Step 2: Get the necessary attribute-based access control permissions for your credential {#get-permissions}
 
-An API credential will not be able to access Platform APIs without explicit permissions granted by your organization's Adobe System Admin for specific Platform services and data. A System Admin can assign the API credential to a Role and manage permissions for Role in the [Permissions](https://experience.adobe.com/admin/permissions) UI in AEP. 
+An API credential will not be able to access Platform APIs without explicit permissions granted by your organization's Adobe System Admin for specific Platform services and data. A System Admin can [assign the API credential to a role](../../../landing/api-authentication.md#assign-api-to-a-role) and manage permissions for role in the [!UICONTROL Permissions] UI in Platform. 
 
-You will need to provide your system admin with the name and technical account email of your API credential. System admins can find more details about managing permissions for API credentials [here](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#get-abac-permissions) and [here](https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/permissions.html?lang=en#manage-api-credentials-for-role).
+You will need to provide your system admin with the name and technical account email of your API credential. System admins can refer to the documentation to find information about how to [manage API credentials for a role](https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/permissions.html?lang=en#manage-api-credentials-for-role) and [grant the required permissions to access Platform resources](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#get-abac-permissions).
 
 The minimum permissions required to execute these notebooks include:
 
-- Sandbox(es) that will be used for data science (usually prod)
+- Sandbox(es) that will be used for data science (usually `prod`)
 - Data modeling: [!UICONTROL Manage Schemas]
 - Data management: [!UICONTROL Manage Datasets]
 - Data ingestion: [!UICONTROL View Sources]
 - Destinations: [!UICONTROL Manage and Activate Dataset Destinations]
 - Query Service: [!UICONTROL Manage Queries]
 
-#### Label access
+#### Label access {#label-access}
 
 By default, a role (and the API credentials assigned to that role) is blocked from accessing any labeled data. Given the organization's data governance policies, a System Admin may grant the role access to certain labeled data that is deemed appropriate for data science usage. 
 
