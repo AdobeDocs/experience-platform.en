@@ -54,7 +54,7 @@ XDM views can be leveraged in Adobe Journey Optimizer to empower marketers to ru
 
 This requires performing the following steps in order to complete a one-time developer setup:
 
-1. Install [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html){target="_blank"} and check the [web channel pre-requisites](web-prerequisites.md) page.
+1. Install [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md) and check the [web channel pre-requisites](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html){target="_blank"} page.
 
 2. Determine all XDM views in your single-page application that you want to personalize.
 
