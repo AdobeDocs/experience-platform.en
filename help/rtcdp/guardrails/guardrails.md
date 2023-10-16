@@ -15,26 +15,29 @@ Start here and follow the links below to understand all guardrails across the va
 * [Guardrails for [!DNL Query Service]](/help/query-service/guardrails.md)
 * [Guardrails for data activation through destinations](/help/destinations/guardrails.md)
 
+>[!TIP]
+>
+>Additionally, see [this page](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) for information on guardrails for other Experience Platform apps, such as [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html) and [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html), and [end-to-end latency diagrams](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) for various Experience Platform services.
+
 ## Guardrail types {#guardrail-types}
 
 Note that the two guardrail types across all Real-Time CDP areas and services are: 
 
 | Guardrail type | Description|
 |----------|---------|
-| **Performance Guardrail (Soft limit)** | Performance Guardrail (soft limit) means usage limits that relate to the scoping of your use cases. When exceeding Performance Guardrails, you may experience performance degradation and latency; Adobe will not be responsible for such performance degradation. Customers who consistently exceed a Performance Guardrail may elect to license additional capacity to avoid performance degradation.|
+| **Performance Guardrail (Soft limit)** | Performance Guardrail (soft limit) means usage limits that relate to the scoping of your use cases. When exceeding Performance Guardrails, you may experience performance degradation and latency; Adobe is not responsible for such performance degradation. Customers who consistently exceed a Performance Guardrail may elect to license additional capacity to avoid performance degradation.|
 | **System-enforced guardrails (Hard limit)** | System-enforced guardrails are enforced by the Real-Time CDP UI or API. These are limits that you cannot exceed as the UI and API will block you from doing so or will return an error.|
 
 {style="table-layout:auto"}
 
 ## Real-Time CDP licensing and entitlement information {#product-descriptions}
 
-Additionally, refer to the product description links below for licensing and entitlement information based on the Real-Time CDP edition and tier you purchased
+Additionally, refer to the product description links below for licensing and entitlement information based on the Real-Time CDP edition and tier you purchased:
 
 * [All Adobe product descriptions](https://helpx.adobe.com/legal/product-descriptions.html)
 * [Real-Time Customer Data Platform (B2C Edition - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2P - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2B - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
-
 
 ## Next steps
 
