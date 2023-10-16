@@ -1,10 +1,10 @@
 ---
 keywords: streaming, Qualtrics destination
-title: Take action in Qualtrics
+title: Qualtrics Automations
 description: Synchronize experience and operational customer data to unlock personalization at scale. Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience iD to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers.
 ---
 
-# Take action in Qualtrics
+# Qualtrics Automations
 
 ## Overview {#overview}
 
@@ -18,7 +18,7 @@ Use the aggregation of multiple sources of operational data in Adobe Experience 
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the *Take action in Qualtrics* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the *Qualtrics Automations* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
 ### Use case #1 {#use-case-1}
 
@@ -50,7 +50,7 @@ Below are the necessary steps for obtaining an API token from Qualtrics.
 
 ## Supported identities {#supported-identities}
 
-*Take action in Qualtrics* supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+*Qualtrics Automations* supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
@@ -65,7 +65,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the *Take action in Qualtrics* destination.|
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the *Qualtrics Automations* destination.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
