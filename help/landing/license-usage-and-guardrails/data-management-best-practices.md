@@ -88,6 +88,12 @@ There are a number of tools that you can leverage to stay within your license us
 * [Ingestion filters](#ingestion-filters)
 * [Profile store](#profile-service)
 
+### Identity Service and addressable audience {#identity-service}
+
+Identity graphs do not count towards your total addressable audience entitlement because addressable audience refers to your total count of customer profiles.
+
+However, identity graph limits can affect your addressable audience due to splitting identities. For example, if the oldest ECID is removed from the graph, ECID will continue to exist in Real-Time Customer Profile as a pseudonymous profile. You can set [Pseudonymous profile data expirations](../../profile/pseudonymous-profiles.md) to circumvent this behavior. For more information, read the [guardrails for Identity Service data](../../identity-service/guardrails.md).
+
 ### Ingestion filters {#ingestion-filters}
 
 Ingestion filters allow you to bring in only the data that is needed for your use cases and filters out all events that are not required.
@@ -98,7 +104,7 @@ Ingestion filters allow you to bring in only the data that is needed for your us
 | Adobe Analytics Data Prep | You can use [!DNL Data Prep] functionalities when creating an Analytics source connection to filter out data that is not required for your use cases. Through [!DNL Data Prep], you can define which attributes/columns need to be published to Profile. You can also provide conditional statements to inform Platform whether data is expected to be published to Profile, or just to the [!DNL data lake]. See the guide on [creating an Analytics source connection](../../sources/tutorials/ui/create/adobe-applications/analytics.md) for more information. |
 | Support for enable/disable datasets for Profile | To ingest data into the Real-Time Customer Profile, you must enable a dataset for use in the Profile store. Doing so, adds to your [!DNL Addressable Audience] and [!DNL Profile Richness] entitlements. Once a dataset is no longer required for customer profile use cases, you can disable that dataset's integration to Profile to ensure that your data remains license compliant. See the guide on [enabling and disabling datasets for Profile](../../catalog/datasets/enable-for-profile.md) for more information. |
 | Web SDK and Mobile SDK data exclusion | There are two types of data collected by Web and Mobile SDK: data that is collected automatically and data that is explicitly collected by your developer. To better manage license compliance, you can disable automatic data collection in the configuration of the SDK through the context setting. Custom data can also be removed or not set by your developer. See the guide on [configuring SDK fundamentals](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) for more information. |
-| Server-side forwarding data exclusion | If you are sending data to Platform using server-side forwarding, you can exclude what data is sent by either removing the mapping in a rule action to exclude it across all events, or by adding conditions to the rule so that data only fires for certain events. See the documentation on [events and conditions](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) for more information. |
+| Server-side forwarding data exclusion | If you are sending data to Platform using server-side forwarding, you can exclude what data is sent by either removing the mapping in a rule action to exclude it across all events, or by adding conditions to the rule so that data only fires for certain events. See the documentation on [events and conditions](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if) for more information. |
 | Filter data at the source level | You can use logical and comparison operators to filter row-level data from your sources before creating a connection and ingesting data to Experience Platform. For more information, read the guide on [filtering row-level data for a source using the [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
