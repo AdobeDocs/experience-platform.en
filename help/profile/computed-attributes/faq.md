@@ -61,7 +61,7 @@ Computed attributes drive Profile enrichment by aggregating your event attribute
 
 Computed attributes are evaluated in a **batch** frequency that is **independent** to the schedule of your audience, destination, and journey evaluation. This means that regardless of the segmentation type (batch segmentation or streaming segmentation), the computed attribute will be evaluated on its own schedule (hourly, daily, weekly, or monthly). 
 
-The first time evaluation of your computed attribute happens within the 24 hours of your computed attribute's **creation**. The subsequent batch evaluations happen at an hourly/daily/weekly/monthly basis depending on the defined lookback period.
+The first time evaluation of your computed attribute happens within the 24 hours of its **creation**. The subsequent batch evaluations happen at an hourly, daily, weekly, or monthly basis depending on the defined lookback period.
 
 For example, if a first time evaluation occurs at 12AM UTC on October 9th, the subsequent evaluations would occur at the following times:
 
@@ -77,7 +77,7 @@ Both the **weekly** and **monthly** refreshes take place on the beginning of the
 
 >[!NOTE]
 >
->The computed attribute value is **not** immediately refreshed in profile after each evaluation run. In order to ensure the updated value is in your profiles, you should have consider a buffer of a few hours between evaluation time and computed attribute usage. The computed attribute refresh schedule is **system-determined** and **cannot** be modified. For more information, please contact Adobe Customer Care.
+>The computed attribute value is **not** immediately refreshed in profile after each evaluation run. In order to ensure the updated value is in your profiles, you should consider a buffer of a few hours between evaluation time and computed attribute usage. The computed attribute refresh schedule is **system-determined** and **cannot** be modified. For more information, please contact Adobe Customer Care.
 
 ## How do computed attributes interact with audiences evaluated using streaming segmentation?
 
