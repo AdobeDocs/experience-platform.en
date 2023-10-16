@@ -50,9 +50,9 @@ The identity optimization algorithm is a rule that ensures that the limits are e
 
 The following is a list of implications of the algorithm on associating anonymous events to known identifiers:
 
-  * The ECID will be associated to the last authenticated user if the following conditions are met:
-    * If CRM IDs are merged by ECID (shared device).
-    * If limits are configured to just one CRM ID.
+* The ECID will be associated to the last authenticated user if the following conditions are met:
+  * If CRM IDs are merged by ECID (shared device).
+  * If limits are configured to just one CRM ID.
 
 
 ### Priority
