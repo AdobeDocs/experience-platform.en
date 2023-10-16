@@ -18,36 +18,33 @@ badge: Alpha
 * [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
 * [Identity linking logic](./identity-linking-logic.md)
 
-
-With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly, resulting in all merged profiles representing a single individual person (represented by a person identifier, such as CRM ID). However, there are possible scenarios where certain data could try to merge multiple profiles into a single profile ("profile collapse"). This feature is designed to prevent these unwanted merges, which could prevent accurate personalization to users.
+With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRM ID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("profile collapse"). To prevent these unwanted merges, you can use configurations provided through identity graph linking rules and allow for accurate personalization for your users.
 
 ## Example scenarios where profile collapse could happen
 
-* Shared device: Shared device refers to devices that are used by more than one individual. Examples of a shared device include tablets, library computers, and kiosks.
-* Bad email / phone numbers: End-users registering invalid contact information, such as "test<span>@test.com", "+1-111-111-1111"
-* Erroneous/'bad' identity values: Non-unique identity values that could merge CRMIDs, such as an identity with an IDFA namespace with identity value "user_null" (IDFA identity values should have 36 characters - 32 alphanumeric characters and four hyphens), or phone namespace with identity value "not-specified" (phone numbers should not have any alphabet characters).
+* **Shared device**: Shared device refers to devices that are used by more than one individual. Examples of a shared device include tablets, library computers, and kiosks.
+* **Bad email and phone numbers**: Bad email and phone numbers refer to end-users registering invalid contact information, such as "test<span>@test.com" for email, and "+1-111-111-1111" for phone number.
+* **Erroneous or bad identity values**: Erroneous or bad identity values refer to non-unique identity values that could merge CRM IDs. For example, while IDFA's are required to have 36 characters (32 alphanumeric characters and four hyphens), there are scenarios where an IDFA with an identity value of "user_null" can get ingested. Similarly, phone numbers only support numerical characters, but a phone namespace with an identity value of "not-specified" may get ingested.
 
 ## Identity graph linking rules objectives
 
 With Identity graph linking rules you can:
 
-* Configure limits to prevent two person identifiers from merging into one identity graph, so that a single identity graph only represents a single person.
+* Configure limits to prevent two disparate person identifiers from merging into one identity graph, so that a single identity graph only represents a single person.
   * The limits that you configure are then enforced by identity optimization algorithm.
 * Configure priorities to associate online events conducted by the authenticated individual to a given user.
 
 ### Limits
 
-Namespace limits define the maximum number of identities that can exist in a graph from a given namespace.
+You can use namespace limits to define the maximum number of identities that can exist in a graph based on a given namespace. For example, you can set your graph to have a maximum of just one identity with a CRM ID namespace, thus preventing the merging of two disparate person identifiers within the same graph.
 
-* Customers will define whether a limit is needed for each namespace.
-* If a limit is not configured, this could result in unwanted graph merges, such as 2 identities with a CRM ID namespace in a graph.
-* If a limit is not configured, the graph can add as many namespaces as needed as long as the graph is within the guardrails (50 identities/graph)
-* If a limit is configured, then the identity optimization algorithm (see below) will ensure that the limit is honored.
+* If a limit is not configured, this could result in unwanted graph merges, such as two identities with a CRM ID namespace in a graph.
+* If a limit is not configured, the graph can add as many namespaces as needed as long as the graph is within the guardrails (50 identities/graph).
+* If a limit is configured, then the identity optimization algorithm will ensure that the limit is enforced.
 
 ### Identity optimization algorithm
 
-* The identity optimization algorithm is a rule that ensures that the limits are honored. 
-* The algorithm honors the most recent links and removes the oldest links to make sure that a given identity graph stays within the limits that you have defined.
+The identity optimization algorithm is a rule that ensures that the limits are enforced. The algorithm honors the most recent links and removes the oldest links to make sure that a given graph stays within the limits that you have defined.
 
 The following is a list of implications of the algorithm on associating anonymous events to known identifiers:
 
@@ -56,16 +53,19 @@ The following is a list of implications of the algorithm on associating anonymou
     * If limits are configured to just one CRM ID.
 
 
-### Priority (not available for alpha)
-
-You can use namespace priority to define which namespaces are more important than others. The hierarchy that you set for your namespaces are then used to define primary identities and store profile fragments. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
+### Priority
 
 >[!IMPORTANT]
 >
-> * Limits and priority are independent configurations and do **not** affect each other:
->   * Limits is an identity graph configuration in Identity Service.
->   * Priority is a profile fragment configuration on Real-Time Customer Profile.
->   * Priority does **not** affect identity graph system guardrails.
+>Namespace priorities are currently not available for alpha.
+
+You can use namespace priority to define which namespaces are more important than others. The hierarchy that you set for your namespaces are then used to define primary identities and store profile fragments. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
+
+
+* Limits and priority are independent configurations and do **not** affect each other:
+  * Limits is an identity graph configuration in Identity Service.
+  * Priority is a profile fragment configuration on Real-Time Customer Profile.
+  * Priority does **not** affect identity graph system guardrails.
 
 
 >[!BEGINSHADEBOX]
@@ -83,13 +83,15 @@ If ECID and AAID are sent simultaneously, both identities represent the same web
 
 If the following experience events are ingested into Experience Platform, the profile fragments are then stored against the namespace with the higher priority.
 
-* Authenticated events:
-  * If the identity map contains an ECID, a GAID, and a CRM ID, the event information will be stored against the CRM ID (primary identity).
-    * GAID represents John's Google Pixel (hardware), ECID represents Google Chrome (web browser), CRM ID represents John (person).
+**Authenticated events:**
+
+* If the identity map contains an ECID, a GAID, and a CRM ID, the event information will be stored against the CRM ID (primary identity).
+  * GAID represents a Google hardware device (e.g. Google Pixel), ECID represents a web browser (e.g. Google Chrome), and CRM ID represents an authenticated user.
   * If the identity map contains a CRM ID, an ECID, and an AAID, the event information will be stored against the CRM ID (primary identity).
-* Unauthenticated events:
-  * If the identity map contains an ECID, IDFA, and AAID, then the event information will be stored against the IDFA (primary identity).
-    * John uses Safari on his iPhone to browse your website anonymously.
-      * IDFA represents iPhone (hardware), ECID and AAID both represent Safari (web browser).
+
+**Unauthenticated events:**
+
+* If the identity map contains an ECID, IDFA, and AAID, then the event information will be stored against the IDFA (primary identity).
+  * IDFA represents an Apple hardware device (e.g. iPhone), ECID and AAID both represent a web browser (Safari).
 
 >[!ENDSHADEBOX]

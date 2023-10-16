@@ -10,17 +10,12 @@ hidefromtoc: true
 >
 >This page assumes that the merge policy is using the identity graph. For more information about merge policies in Real-Time Customer Profile, read the documentation on [merge policies and identity stitching].
 
-## Table of contents
-
-* [Overview](./overview.md)
-* [Example scenarios](./example-scenarios.md)
-* [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
-* [Identity linking logic](./identity-linking-logic.md)
-
 While you can use Identity Service and Real-Time Customer Profile in tandem, the two features of Adobe Experience Platform are not inherently the same.
 
 * You can use Identity Service to generate and maintain the identity graph that brings together the disparate identities of an individual customer.
 * You can use Real-Time Customer Profile to bring together disparate profile fragments and create a merged profile. This process requires the use of the identity graph.
+
+This document outlines the similarities, differences, and relatinship between Identity Service and Real-Time Customer Profile.
 
 ## Identity Service vs Real-Time Customer Profile
 
@@ -63,3 +58,11 @@ Once you mark fields as identities, they can then be defined as either primary o
 * If there are two or more identities, then one will be designated as primary, and the remaining will be designated as secondary.
 
 Identity Service only ingests fields designated as identity. Identity Service does not store information on whether an identity is primary or secondary.
+
+## Next steps
+
+For more information on identity graph linking rules, read the following documentation:
+
+* [Identity graph linking rules overview](./overview.md)
+* [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
+* [Identity linking logic](./identity-linking-logic.md)

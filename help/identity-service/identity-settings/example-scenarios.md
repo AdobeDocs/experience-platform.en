@@ -8,12 +8,6 @@ hidefromtoc: true
 
 This document outlines example scenarios that you may consider when configuring identity graph linking rules.
 
-## Table of contents
-
-* [Overview](./overview.md)
-* [Example scenarios](./example-scenarios.md)
-* [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
-* [Identity linking logic](./identity-linking-logic.md)
 
 ## Shared device
 
@@ -58,3 +52,11 @@ These identities could result in the following graphs, where multiple CRM IDs ar
 ![bad-data](../images/identity-settings/bad-data.png)
 
 With identity graph linking rules you can configure the CRM ID as the unique identifier to prevent unwanted profile collapsing due to this type of data.
+
+## Next steps
+
+For more information on identity graph linking rules, read the following documentation:
+
+* [Identity graph linking rules overview](./overview.md)
+* [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
+* [Identity linking logic](./identity-linking-logic.md)

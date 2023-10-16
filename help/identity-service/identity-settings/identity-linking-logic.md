@@ -13,13 +13,6 @@ There are two types of identities that get linked:
 * **Profile records**: These identities usually come from CRM systems.
 * **Experience Events**: These identities usually come from WebSDK implementation or the Adobe Analytics source.
 
-## Table of contents
-
-* [Overview](./overview.md)
-* [Example scenarios](./example-scenarios.md)
-* [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
-* [Identity linking logic](./identity-linking-logic.md)
-
 ## Understanding the Identity Service linking logic
 
 An identity consists of an identity namespace and an identity value.
@@ -139,3 +132,11 @@ At `timestamp=4`, a customer uses the same tablet, logs in to their account (CRM
 ![timestamp-four](../images/identity-settings/timestamp-four.png)
 
 >[!ENDTABS]
+
+## Next steps
+
+For more information on identity graph linking rules, read the following documentation:
+
+* [Identity graph linking rules overview](./overview.md)
+* [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
+* [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
