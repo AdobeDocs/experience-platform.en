@@ -26,6 +26,8 @@ With Adobe Experience Platform Identity Service and Real-Time Customer Profile, 
 * **Bad email and phone numbers**: Bad email and phone numbers refer to end-users registering invalid contact information, such as "test<span>@test.com" for email, and "+1-111-111-1111" for phone number.
 * **Erroneous or bad identity values**: Erroneous or bad identity values refer to non-unique identity values that could merge CRM IDs. For example, while IDFA's are required to have 36 characters (32 alphanumeric characters and four hyphens), there are scenarios where an IDFA with an identity value of "user_null" can get ingested. Similarly, phone numbers only support numerical characters, but a phone namespace with an identity value of "not-specified" may get ingested.
 
+For more information on use case scenarios for identity graph linking rules, read the document on [example scenarios](./example-scenarios.md).
+
 ## Identity graph linking rules objectives
 
 With Identity graph linking rules you can:
@@ -95,3 +97,11 @@ If the following experience events are ingested into Experience Platform, the pr
   * IDFA represents an Apple hardware device (e.g. iPhone), ECID and AAID both represent a web browser (Safari).
 
 >[!ENDSHADEBOX]
+
+## Next steps
+
+For more information on identity graph linking rules, read the following documentation:
+
+* [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
+* [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
+* [Identity linking logic](./identity-linking-logic.md)
