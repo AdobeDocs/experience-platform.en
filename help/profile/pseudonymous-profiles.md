@@ -74,3 +74,8 @@ For a typical use case, you can set your Experience Event data expiry based on t
 - This is **not** a one-time cleanup job. Pseudonymous profile data expiry will continually run once per day and delete profiles that match the customer's input.
 - **All** profiles that are defined as Pseudonymous profiles will be affected by the Pseudonymous profile data expiration. It does **not** matter if the profile is Experience Event only or if it only contains profile attributes.
 - This cleanup will **only** occur in Profile. Identity Service may continue to show the deleted identities within the graph after the cleanup in cases where the profile has two or more associated pseudonymous identities (such as `AAID` and `ECID`). This discrepancy will be addressed in the near future.
+
+### How does Pseudonymous profiles data expiration interact with guardrails for Identity Service data?
+
+- The Identity Service ["first-in, first-out" deletion system](../identity-service/guardrails.md) could delete ECIDs from the identity graph, which are stored in Identity Service.
+- If this deletion behavior results in an ECID-only profile being stored in the Real-Time Customer Profile (Profile Store), then Pseudonymous profile data expiration will delete this profile from the Profile Store.
