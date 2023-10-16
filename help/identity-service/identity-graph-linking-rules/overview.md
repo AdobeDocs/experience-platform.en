@@ -54,7 +54,6 @@ The following is a list of implications of the algorithm on associating anonymou
   * If CRM IDs are merged by ECID (shared device).
   * If limits are configured to just one CRM ID.
 
-
 ### Priority
 
 >[!IMPORTANT]
@@ -63,12 +62,10 @@ The following is a list of implications of the algorithm on associating anonymou
 
 You can use namespace priority to define which namespaces are more important than others. The hierarchy that you set for your namespaces are then used to define primary identities and store profile fragments. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
 
-
 * Limits and priority are independent configurations and do **not** affect each other:
   * Limits is an identity graph configuration in Identity Service.
   * Priority is a profile fragment configuration on Real-Time Customer Profile.
   * Priority does **not** affect identity graph system guardrails.
-
 
 >[!BEGINSHADEBOX]
 
