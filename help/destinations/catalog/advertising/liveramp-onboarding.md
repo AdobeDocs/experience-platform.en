@@ -189,7 +189,7 @@ Platform will export two CSV files to [!DNL LiveRamp - Onboarding]:
 
 Exported CSV files contain profiles with the selected attributes and the corresponding audience status, on separate columns, with the attribute name, and `audience_namespace:audience_ID` pairs as column headers, as shown in the example below:
 
-`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1:AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2:AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X:AUDIENCE_ID_X`
+`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1_AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2_AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X_AUDIENCE_ID_X`
 
 The profiles included in the exported files can match one the following audience qualification statuses:
 
