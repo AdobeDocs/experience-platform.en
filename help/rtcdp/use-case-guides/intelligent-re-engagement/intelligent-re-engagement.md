@@ -232,7 +232,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 +++
 
-### Create datasets {#create-datasets}
+### Create a dataset from a schema {#create-datasets}
 
 A dataset is a storage and management structure for a group of data. Each schema for intelligent re-engagement scenarios should have it's own dataset. 
 
@@ -242,7 +242,7 @@ For more information on how to create a [dataset](/help/catalog/datasets/overvie
 >
 >Similar to the step to create a schema, you need to enable the dataset to be included in the Real-Time Customer Profile. For more information about enabling the dataset for use in Real-Time Customer Profile, see tutorial on [bringing data into Real-Time Customer Profile](https://experienceleague.adobe.com/docs/platform-learn/tutorials/profiles/bring-data-into-the-real-time-customer-profile.html).
 
-### Privacy, consent and data governance {#privacy-consent}
+### Consent and data governance {#privacy-consent}
 
 >[!IMPORTANT]
 >
