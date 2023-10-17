@@ -88,6 +88,8 @@ The minimum permissions required to execute these notebooks include:
 
 #### Label access {#label-access}
 
+<!-- Edited up to here -->
+
 By default, a role (and the API credentials assigned to that role) is blocked from accessing any labeled data. Given the organization's data governance policies, a System Admin may grant the role access to certain labeled data that is deemed appropriate for data science usage. 
 
 We recommend that any API credential used for CMLE workflows does **NOT** have access to data labeled `C9` (No Data Science), `PSPD` (Permitted Sensitive Personal Data), or `RHD` (PHI/Regulated Health Data). Platform customers are responsible to manage label access and policies appropriately in order to comply with relevant regulations and organizational policies.
