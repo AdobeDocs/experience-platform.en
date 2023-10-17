@@ -115,11 +115,11 @@ You can also ask the Assistant questions regarding your data usage. When inquiri
 
 Assistant can answer questions regarding Real-Time CDP and Experience Platform concepts, as well as data usage specific to your user account. Assistant can also infer context based on the UI page that you are in. It can identify:
 
- * The user account that you are using.
- * The organization that you belong to. 
- * The page that you are viewing on your screen.
- * The resource (including type and ID) that you are viewing on your screen.
- * Given that you are in the process of a particular Experience Platform or Real-Time CDP workflow, Assistant can deduce your intent.
+* The user account that you are using.
+* The organization that you belong to. 
+* The page that you are viewing on your screen.
+* The resource (including type and ID) that you are viewing on your screen.
+* Given that you are in the process of a particular Experience Platform or Real-Time CDP workflow, Assistant can deduce your intent.
 
 ### Documentation
 
