@@ -136,7 +136,19 @@ This field group is used for best practice.
 
 This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via [Web SDK](/help/edge/home.md) and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced audience capabilities.
 
-The customer digital transactions schema is represented by an [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class, which includes the following field groups:
+The customer digital transactions schema is represented by an [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class. 
+
++++XDM ExperienceEvent (Class)
+
+| Fields | Requirement | Description |
+| --- | --- | --- |
+| `_id` | Required | Uniquely identifies individual events that are ingested into [!DNL Adobe Experience Platform]. |
+| `timestamp` | Required | An ISO 8601 timestamp of when the event occurred, formatted as per RFC 3339 Section 5.6. This timestamp must occur in the past. |
+| `eventType` | Required | A string that indicates the type of category for the event. |
+
++++
+
+The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class includes the following field groups:
 
 +++End User ID Details (Field Group)
 
@@ -163,7 +175,19 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 This schema is used to structure and reference the event data that makes up your customer activity that occurs on platforms outside of your website. This data is typically ingested into [!DNL Adobe Experience Platform] from a POS (or similar system) and most often streamed into Platform via an API connection. Its purpose is to reference the various offline conversion events that are used for triggering journeys, deep online and offline customer analysis, and enhanced audience capabilities.
 
-The customer offline transactions schema is represented by an [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class, which includes the following field groups:
+The customer offline transactions schema is represented by an [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class.
+
++++XDM ExperienceEvent (Class)
+
+| Fields | Requirement | Description |
+| --- | --- | --- |
+| `_id` | Required | Uniquely identifies individual events that are ingested into [!DNL Adobe Experience Platform]. |
+| `timestamp` | Required | An ISO 8601 timestamp of when the event occurred, formatted as per RFC 3339 Section 5.6. This timestamp must occur in the past. |
+| `eventType` | Required | A string that indicates the type of category for the event. |
+
++++
+
+The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class includes the following field groups:
 
 +++Commerce Details (Field Group)
 
@@ -205,11 +229,23 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 >[!NOTE]
 >
->This is an optional implementation if you are using the [[!DNL Adobe Analytics Data Connector]](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/connectors/analytics-connector/adobe-analytics-connector.html).
+>This is an optional implementation if you are using the [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md).
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when [Web SDK](/help/edge/home.md) is not an option for data collection; thus, this schema is needed when you are utilizing the [!DNL Adobe Analytics Data Connector] to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when [Web SDK](/help/edge/home.md) is not an option for data collection; thus, this schema is needed when you are utilizing the [!DNL Adobe Analytics Source Connector] to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
 
-The [!DNL Adobe] web connector schema is represented by a [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class, which includes the following field groups:
+The [!DNL Adobe] web connector schema is represented by an [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class.
+
++++XDM ExperienceEvent (Class)
+
+| Fields | Requirement | Description |
+| --- | --- | --- |
+| `_id` | Required | Uniquely identifies individual events that are ingested into [!DNL Adobe Experience Platform]. |
+| `timestamp` | Required | An ISO 8601 timestamp of when the event occurred, formatted as per RFC 3339 Section 5.6. This timestamp must occur in the past. |
+| `eventType` | Required | A string that indicates the type of category for the event. |
+
++++
+
+The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class includes the following field groups:
 
 +++Adobe Analytics ExperienceEvent Template (Field Group)
 
