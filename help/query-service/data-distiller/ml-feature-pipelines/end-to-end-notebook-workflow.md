@@ -55,8 +55,6 @@ The sample notebooks included in the linked repository are briefly described bel
 
 ### Generate synthetic data {#generate-synthetic-data}
 
-<!-- Need access to the notebook: https://adobe-my.sharepoint.com/notebooks/SyntheticData.ipynb is restricted.  -->
-
 This notebook provides code for generating datsets of synthetic profiles and experience events in your Platform that will be used to illustrate the CMLE workflow.
 
 ### EDA and Featurization with Query Service {#eda-and-featurization-with-query-service}

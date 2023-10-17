@@ -25,7 +25,10 @@ feature: Queries
         - [Create decile-based derived attributes](data-distiller/derived-attributes/decile-based-derived-attributes.md)
     - AI/ML feature pipelines {#ml-feature-pipelines}
         - [AI/ML feature pipelines](data-distiller/ml-feature-pipelines/overview.md)
-        - [Establish connection to Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
+        - [Connect to Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
+        - [Exploratory data analysis](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
+        - [Feature engineering](data-distiller/ml-feature-pipelines/feature-engineering.md)
+        - [Export data to ML environments](data-distiller/ml-feature-pipelines/export-data.md)
         - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Use cases {#use-cases}
     - [Abandoned browse](use-cases/abandoned-browse.md)
