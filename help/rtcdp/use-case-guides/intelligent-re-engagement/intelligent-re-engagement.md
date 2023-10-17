@@ -5,7 +5,7 @@ exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
 ---
 # Intelligently re-engage your customers to return
 
-Re-engage customers who have abandoned a conversion before completing it in an intelligent and responsible way. Engage lapsed customers through experiences rather than reminders to enhance conversion and propel the growth of client lifetime value.
+Re-engage customers who have abandoned a conversion in an intelligent and responsible way. Engage lapsed customers with experiences to increase conversion and increase the client lifetime value.
 
 Employ real-time considerations, take into account all consumer qualities and behaviors, and offer fast re-qualification based on both online and offline events.
 
@@ -13,15 +13,15 @@ Employ real-time considerations, take into account all consumer qualities and be
 
 ## Use case overview
 
-You will construct schemas, datasets, and audiences as you work through examples of re-engagement journeys. You will also discover the features needed to set up the example journeys in [!DNL Adobe Journey Optimizer] and those needed to create paid media advertisements in destinations. This guide uses examples of re-engaging customers in the use case journeys outlined below:
+You will construct schemas, datasets, and audiences as you work through examples of re-engagement scenarios. You will also discover the features needed to set up the example journeys in [!DNL Adobe Journey Optimizer] and those needed to create paid media advertisements in destinations. This guide uses examples of re-engaging customers in the use case journeys outlined below:
 
-* **Re-engagement journey** - Target customers who have abandoned product browsing on both the website and mobile app.
-* **Abandoned cart journey** - Target customers who have placed products in the cart but have not yet been purchased on both the website and mobile app.
-* **Order confirmation journey** - Focus on product purchases made through the website and mobile app.
+* **Re-engagement scenario** - Target customers who have abandoned product browsing on both the website and mobile app.
+* **Abandoned cart scenario** - Target customers who have placed products in the cart but have not yet been purchased on both the website and mobile app.
+* **Order confirmation scenario** - Focus on product purchases made through the website and mobile app.
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
-As you complete the steps to implement the use case, you will make use of the following Real-Time CDP functionality and UI elements (listed in the order in which you will use them). Make sure that you have the necessary attribute-based access control permissions for all these areas, or ask your system administrator to grant you the necessary permissions.
+As you complete the steps to implement the use case, you will make use of the following Real-Time CDP functionality and UI elements (listed in the order in which you will use them). Make sure that you have the necessary [attribute-based access control permissions](/help/access-control/home.md) for all these areas, or ask your system administrator to grant you the necessary permissions.
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Integrates data across data sources to fuel the campaign. This data is then used to create the campaign audiences and surface personalized data elements used in the email and the web promo tiles (for example, name or account-related information). The CDP is also used to activate audiences across email and the web (via [!DNL Adobe Target]).
     * [Schemas](/help/xdm/home.md)
@@ -30,65 +30,61 @@ As you complete the steps to implement the use case, you will make use of the fo
     * [Audiences](/help/segmentation/home.md)
     * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
     * [Destinations](/help/destinations/home.md)
+
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html) - Helps you deliver connected, contextual, and personalized experiences to your customers.
     * [Event or Audience Trigger](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
     * [Audiences/ Events](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
     * [Journey Actions](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
-### How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
+## How to achieve the use case {#achieve-use-case-instruction}
 
-Below is a high level overview of the three example re-engagement journeys.
+Below is a high level overview of the three example re-engagement scenarios.
 
 >[!BEGINTABS]
 
->[!TAB Re-Engagement Journey]
+>[!TAB Re-Engagement Scenario]
 
-The re-engagement journey targets abandoned product browsing on both the website and mobile app. This journey is triggered when a product has been viewed but not purchased or added to the cart. Brand engagement is triggered after three days if there are no list additions within the last 24 hours.<p>![Customer intelligent re-engagement journey high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent re-engagement journey high level visual overview."){width="2560" zoomable="yes"}</p>
+The re-engagement scenario targets abandoned product browsing on both the website and mobile app. This scenario is triggered when a product has been viewed but not purchased or added to the cart. Brand engagement is triggered after three days if there are no list additions within the last 24 hours.<p>![Customer intelligent re-engagement scenario high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent re-engagement scenario high level visual overview."){width="1920" zoomable="yes"}</p>
 
-1. You create schemas and datasets, then mark for [!UICONTROL Profile].
-2. Data is integrated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
-3. You load profiles into Real-Time CDP and build governance policies to ensure responsible use.
+1. You create schemas and datasets, then enable for [!UICONTROL Profile].
+2. You ingest data into Experience Platform via Web SDK, Mobile SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
+3. You ingest additional profile-enabled data, which can be linked to the authenticated web and/or mobile app visitor via identity graphs.
 4. You build focused audiences from the list of profiles to check if a **customer** has made an engagement in the last three days.
 5. You create a re-engagement journey in [!DNL Adobe Journey Optimizer].
 6. If needed, work with the **data partner** for the activation of audiences to desired paid-media destinations.
 7. [!DNL Adobe Journey Optimizer] checks for consent and sends out the various actions configured.
 
->[!TAB Abandoned Cart Journey]
+>[!TAB Abandoned Cart Scenario]
 
-The abandoned cart journey targets products that have been placed in the cart but have not yet been purchased on both the website and mobile app. Also, Paid Media campaigns are started and stopped using this method.<p>![Customer abandoned cart journey high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Customer abandoned cart journey high level visual overview."){width="2560" zoomable="yes"}</p> 
+The abandoned cart scenario targets products that have been placed in the cart but have not yet been purchased on both the website and mobile app. Also, Paid Media campaigns are started and stopped using this method.<p>![Customer abandoned cart scenario high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Customer abandoned cart scenario high level visual overview."){width="1920" zoomable="yes"}</p> 
 
-1. You create schemas and datasets, the mark for [!UICONTROL Profile].
-2. Data is integrated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
-3. You load profiles into Real-Time CDP and build governance policies to ensure responsible use.
+1. You create schemas and datasets, the enable for [!UICONTROL Profile].
+2. You ingest data into Experience Platform via Web SDK, Mobile SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
+3. You ingest additional profile-enabled data, which can be linked to the authenticated web and/or mobile app visitor via identity graphs.
 4. You build focused audiences from the list of profiles to check if a **customer** has placed an item in their cart but has not completed the purchase. The **[!UICONTROL Add to cart]** event kicks off a timer that waits for 30 minutes, then checks for purchase. If no purchase has been made, then the **customer** is added to the **[!UICONTROL Abandon Cart]** audiences.
 5. You create an abandoned cart journey in [!DNL Adobe Journey Optimizer].
 6. If needed, work with the **data partner** for the activation of audiences to desired paid-media destinations.
 7. [!DNL Adobe Journey Optimizer] checks for consent and sends out the various actions configured.
 
->[!TAB Order Confirmation Journey]
+>[!TAB Order Confirmation Scenario]
 
-The order confirmation journey focuses on product purchases made through the website and mobile app.<p>![Customer order confirmation journey high level visual overview.](../intelligent-re-engagement/images/order-confirmation-journey.png "Customer order confirmation journey high level visual overview."){width="2560" zoomable="yes"}</p>
+The order confirmation scenario focuses on product purchases made through the website and mobile app.<p>![Customer order confirmation scenario high level visual overview.](../intelligent-re-engagement/images/order-confirmation-journey.png "Customer order confirmation scenario high level visual overview."){width="1920" zoomable="yes"}</p>
 
-1. You create schemas and datasets, then mark for [!UICONTROL Profile].
-2. Data is integrated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
-3. You load profiles into Real-Time CDP and build governance policies to ensure responsible use.
+1. You create schemas and datasets, then enable for [!UICONTROL Profile].
+2. You ingest data into Experience Platform via Web SDK, Mobile SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
+3. You ingest additional profile-enabled data, which can be linked to the authenticated web and/or mobile app visitor via identity graphs.
 4. You create a confirmation journey in [!DNL Adobe Journey Optimizer].
 5. [!DNL Adobe Journey Optimizer] sends out an order confirmation message using the preferred channel.
 
 >[!ENDTABS]
 
-## How to achieve the use case {#achieve-use-case-instruction}
-
 To complete each of the steps in the high-level overviews above, read through the sections below, which offer links to more information and more detailed instructions.
-
-### UI functionality and elements that you will use {#ui-functionality-and-elements}
-
-As you complete the steps to implement the use case, you will make use of the Real-Time CDP functionality and UI elements listed at the beginning of this document. Make sure that you have the necessary attribute-based access control permissions for all these areas, or ask your system administrator to grant you the necessary permissions. 
 
 ### Create a schema design and specify field groups {#schema-design}
 
-Experience Data Model (XDM) resources are managed in the [!UICONTROL Schemas] workspace in [!DNL Adobe Experience Platform]. You can view and explore core resources provided by [!DNL Adobe] (for example, [!UICONTROL Field Groups]) and create custom resources and schemas for your organization.
+Experience Data Model (XDM) resources are managed in the [!UICONTROL Schemas] workspace in [!DNL Adobe Experience Platform]. You can view and explore core resources provided by [!DNL Adobe] (for example, field groups) and create custom resources and schemas for your organization.
 
-For more information about creating [schemas](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html), read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md) 
+For more information about creating [schemas](/help/xdm/home.md), see the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md) and [Model Your Customer Experience Data with XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html).
 
 There are four schema designs that are used for the re-engagement use case. Each schema requires specific fields to be set up, and some fields that are strongly suggested.
 
@@ -153,7 +149,7 @@ This schema is used to structure and reference the event data that makes up your
 
 The customer digital transactions schema is represented by an [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class, which includes the following field groups:
 
-+++Adobe Experience Platform Web SDK ExperienceEvent (Field Group)
++++AEP Web SDK ExperienceEvent (Field Group)
 
 | Fields | Requirement |
 | --- | --- |
@@ -275,7 +271,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 >[!NOTE]
 >
->This is an optional implementation if you are using the [!DNL Adobe Analytics Data Connector].
+>This is an optional implementation if you are using the [[!DNL Adobe Analytics Data Connector]](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/connectors/analytics-connector/adobe-analytics-connector.html).
 
 This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when Web SDK is not an option for data collection; thus, this schema is needed when you are utilizing the [!DNL Adobe Analytics Data Connector] to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
 
@@ -336,23 +332,23 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 +++
 
-### Create a dataset from a schema {#dataset-from-schema}
+### Create datasets {#create-datasets}
 
-A dataset is a storage and management structure for a group of data. Each schema for intelligent re-engagement journeys have a single dataset. 
+A dataset is a storage and management structure for a group of data. Each schema for intelligent re-engagement scenarios should have it's own dataset. 
 
 For more information on how to create a [dataset](/help/catalog/datasets/overview.md) from a schema, read the [Datasets UI guide](/help/catalog/datasets/user-guide.md).
 
 >[!NOTE] 
 >
->Similar to the step to create a schema, you need to enable the dataset to be included in the Real-Time Customer Profile. For more information about enabling the dataset for use in Real-Time Customer Profile, read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md#profile).
+>Similar to the step to create a schema, you need to enable the dataset to be included in the Real-Time Customer Profile. For more information about enabling the dataset for use in Real-Time Customer Profile, see tutorial on [bringing data into Real-Time Customer Profile](https://experienceleague.adobe.com/docs/platform-learn/tutorials/profiles/bring-data-into-the-real-time-customer-profile.html).
 
 ### Privacy, consent and data governance {#privacy-consent}
-
-#### Consent policies
 
 >[!IMPORTANT]
 >
 >Providing customers with the capability to unsubscribe from receiving communications from a brand is a legal requirement, as well as ensuring this choice is honored. Learn more about the applicable legislation in the [Privacy regulations overview](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+
+#### Consent policies
 
 When creating a re-engagement path, the following [consent policies](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) should be considered:
 
@@ -361,16 +357,16 @@ When creating a re-engagement path, the following [consent policies](https://exp
 * If `consents.marketing.push.val = "Y"` then Can Push
 * If `consents.share.val = "Y"` then Can Advertise
 
-#### Data Governance label and enforcement
+#### Data Governance labelling and enforcement
 
 When creating a re-engagement path, the following [Data Governance labels](/help/data-governance/labels/overview.md) should be considered:
 
 * Personal email addresses are utilized as direct identifiable data that is used for identifying or getting in touch with a specific individual rather than a device.
     * `personalEmail.address = I1`
 
-#### Marketing policies
+#### Data usage policies
 
-There are no [marketing policies](/help/data-governance/policies/overview.md) required for the re-engagement journeys. However, you should consider the following::
+There are no [data usage policies](/help/data-governance/policies/overview.md) required for the re-engagement scenario. However, you should consider the following:
 
 * Restrict Sensitive Data
 * Restrict Onsite Advertising
@@ -378,11 +374,9 @@ There are no [marketing policies](/help/data-governance/policies/overview.md) re
 * Restrict cross site Targeting
 * Restrict combining directly identifiable data with anonymous data
 
-### Create an audience {#create-audience}
+### Create audiences {#create-audience}
 
-#### Audience creation for brand re-engagement journeys
-
-The re-engagement journeys use audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways on [!DNL Adobe Experience Platform].
+The re-engagement scenarios use audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways on [!DNL Adobe Experience Platform].
 
 For more information on how to create an audience, read the [Audience service UI guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
@@ -392,45 +386,45 @@ For more information on how to build audiences through Platform-derived segment 
 
 >[!BEGINTABS]
 
->[!TAB Re-Engagement Journey]
+>[!TAB Re-Engagement Scenario]
 
 This audience is created as an enhancement to the classic "Cart Abandonment" scenario. Whereas cart abandonment typically focuses on a cart addition without a subsequent purchase in a certain period of time, this audience looks for an earlier engagement, specifically those who may have browsed a particular product but did not add it to their cart and had no follow-up activity on your site within a certain time frame. This audience helps to keep your brand "top of mind" for customers who meet this inclusion criteria and can also be leveraged for customers whose digital properties may differ from a traditional e-commerce model.
 
-The following events are used for the re-engagement journey where users viewed products online, and did not add to cart in the next 24 hours, followed by no brand engagement in the 3 days following.
+The following events are used for the re-engagement scenario where users viewed products online, did not add products to their cart in the next 24 hours, and had no brand engagement in the 3 days following.
 
 The following fields and conditions are required when setting up this audience:
 
-* `EventType: commerce.productViews`
+* `eventType: commerce.productViews`
     * `Timestamp: <= 24 hours before now`
-* `EventType is not: commerce.procuctListAdds`
+* `eventType is not: commerce.productListAdds`
     * `Timestamp: <= 24 hours before now, GAP(>= 3 days)`
-* `EventType: application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `eventType: application.launch or web.webpagedetails.pageViews or commerce.purchases`
     * `Timestamp: <= 2 days before now`
 
-The descriptor for the re-engagement journey appears as:
+The descriptor for the re-engagement scenario appears as:
 
-`Include audience who have at least 1 EventType = ProductViews event THEN have at least 1 Any event where (EventType does not equal commerce.productListAdds) and occurs in last 24 hour(s) then after 3 days do not have any Any event where (EventType = application.launch or web.webpagedetails.pageViews or commerce.purchases) and occurs in last 2 day(s).`
+`Include audience who have at least 1 eventType = ProductViews event THEN have at least 1 Any event where (eventType does not equal commerce.productListAdds) and occurs in last 24 hour(s) then after 3 days do not have any Any event where (eventType = application.launch or web.webpagedetails.pageViews or commerce.purchases) and occurs in last 2 day(s).`
 
->[!TAB Abandoned Cart Journey]
+>[!TAB Abandoned Cart Scenario]
 
 This audience is created to support the classic "Cart Abandonment" scenario. Its purpose is to find customers who added a product to their shopping cart but ultimately did not follow through with a purchase. This audience will help keep not only your brand "top of mind" for your customers but also the products that they left behind without a subsequent purchase.
 
-The following events are used for the abandoned cart journey where users added a product to their cart, but did not complete the purchase or clear their cart in the last 24 hours.
+The following events are used for the abandoned cart scenario where users added a product to their cart, but did not complete the purchase or clear their cart in the last 24 hours.
 
 The following fields and conditions are required when setting up this audience:
 
-* `EventType: commerce.productListAdds`
+* `eventType: commerce.productListAdds`
     * `Timestamp: >= 1 days before now and <= 4 days before now `
-* `EventType: commerce.purchases`
+* `eventType: commerce.purchases`
     * `Timestamp: <= 4 days before now` 
-* `EventType: commerce.productListRemovals`
+* `eventType: commerce.productListRemovals`
     * `Timestamp: <= 4 days before now`
 
-The descriptor for the abandoned cart journey appears as:
+The descriptor for the abandoned cart scenario appears as:
 
-`Include EventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
+`Include eventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude eventType = commerce.purchases 30 minutes before now OR eventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
 
->[!TAB Order Confirmation Journey]
+>[!TAB Order Confirmation Scenario]
 
 This journey does not require any audiences to be created.
 
@@ -442,25 +436,25 @@ This journey does not require any audiences to be created.
 >
 >[!DNL Adobe Journey Optimizer] does not encompass everything shown in the diagrams. All [paid media ads](/help/destinations/catalog/social/overview.md) are created in [!UICONTROL Destinations].
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) helps you deliver connected, contextual, and personalized experiences to your customers. The customer journey is the entire process of a customer's interactions with the brand. Each use case journey requires specific information. Listed below is the precise data needed for each Journey branch.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) helps you deliver connected, contextual, and personalized experiences to your customers. The customer journey is the entire process of a customer's interactions with the brand. Each use case journey requires specific information. Listed below is the precise data needed for each journey.
 
 >[!BEGINTABS]
 
->[!TAB Re-Engagement Journey]
+>[!TAB Re-Engagement Scenario]
 
-The re-engagement journey targets abandoned product browsing on both the website and mobile app.<p>![Customer intelligent re-engagement journey high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent re-engagement journey high level visual overview."){width="2560" zoomable="yes"}</p>
+The re-engagement scenario targets abandoned product browsing on both the website and mobile app.<p>![Customer intelligent re-engagement scenario high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent re-engagement scenario high level visual overview."){width="1920" zoomable="yes"}</p>
 
 +++Events
 
 * Event 1: Product Views
     * Schema: Customer Digital Transactions
     * Fields:
-        * `EventType`
+        * `eventType`
     * Condition: 
-        * `EventType = commerce.productViews`
+        * `eventType = commerce.productViews`
         * Fields:
-            * `Commerce.productViews.id`
-            * `Commerce.productViews.value`
+            * `commerce.productViews.id`
+            * `commerce.productViews.value`
             * `eventType`
             * `identityMap.authenticatedState`
             * `identityMap.id`
@@ -481,12 +475,12 @@ The re-engagement journey targets abandoned product browsing on both the website
 * Event 2: Add to Cart
     * Schema: Customer Digital Transactions
     * Fields:
-        * `EventType`
+        * `eventType`
     * Condition:
-        * `EventType = commerce.productListAdds`
+        * `eventType = commerce.productListAdds`
         * Fields:
-            * `Commerce.productListAdds.id`
-            * `Commerce.productListAdds.value`
+            * `commerce.productListAdds.id`
+            * `commerce.productListAdds.value`
             * `eventType`
             * `identityMap.authenticatedState`
             * `identityMap.id`
@@ -508,9 +502,9 @@ The re-engagement journey targets abandoned product browsing on both the website
 * Event 3: Brand Engagement
     * Schema: Customer Digital Transactions
     * Fields:
-        * `EventType`
+        * `eventType`
     * Condition: 
-        * `EventType in application.launch, commerce.purchases, web.webpagedetails.pageViews`
+        * `eventType in application.launch, commerce.purchases, web.webpagedetails.pageViews`
         * Fields:
             * `eventType`
             * `identityMap.authenticatedState`
@@ -531,8 +525,8 @@ The re-engagement journey targets abandoned product browsing on both the website
             * `endUserIDs._experience.emailid.id`
             * `endUserIDs._experience.emailid.namespace.code`
             * `_id`
-            * `Commerce.purchases.id`
-            * `Commerce.purchases.value`
+            * `commerce.purchases.id`
+            * `commerce.purchases.value`
             * `shipping.address.city`
             * `shipping.address.countryCode`
             * `shipping.address.postalCode`
@@ -574,21 +568,21 @@ The re-engagement journey targets abandoned product browsing on both the website
 
 +++
 
->[!TAB Abandoned Cart Journey]
+>[!TAB Abandoned Cart Scenario]
 
-The abandoned cart journey targets products that have been placed in the cart but have not yet been purchased on both the website and mobile app.<p>![Customer abandoned cart journey high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Customer abandoned cart journey high level visual overview."){width="2560" zoomable="yes"}</p>
+The abandoned cart scenario targets products that have been placed in the cart but have not yet been purchased on both the website and mobile app.<p>![Customer abandoned cart scenario high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Customer abandoned cart scenario high level visual overview."){width="1920" zoomable="yes"}</p>
 
 +++Events
 
 * Event 2: Add to Cart
     * Schema: Customer Digital Transactions
     * Fields:
-        * `EventType`
+        * `eventType`
     * Condition:
-        * `EventType = commerce.productListAdds`
+        * `eventType = commerce.productListAdds`
         * Fields:
-            * `Commerce.productListAdds.id`
-            * `Commerce.productListAdds.value`
+            * `commerce.productListAdds.id`
+            * `commerce.productListAdds.value`
             * `eventType`
             * `identityMap.authenticatedState`
             * `identityMap.id`
@@ -610,12 +604,12 @@ The abandoned cart journey targets products that have been placed in the cart bu
 * Event 4: Online Purchases
     * Schema: Customer Digital Transactions
     * Fields:
-        * `EventType`
+        * `eventType`
     * Condition:
-        * `EventType = commerce.purchases`
+        * `eventType = commerce.purchases`
         * Fields: 
-            * `Commerce.purchases.id`
-            * `Commerce.purchases.value`
+            * `commerce.purchases.id`
+            * `commerce.purchases.value`
             * `eventType`
             * `identityMap.authenticatedState`
             * `identityMap.id`
@@ -636,9 +630,9 @@ The abandoned cart journey targets products that have been placed in the cart bu
 * Event 3: Brand Engagement
     * Schema: Customer Digital Transactions
     * Fields:
-        * `EventType`
+        * `eventType`
     * Condition:
-        * `EventType in application.launch, commerce.purchases, web.webpagedetails.pageViews`
+        * `eventType in application.launch, commerce.purchases, web.webpagedetails.pageViews`
         * Fields:
             * `eventType`
             * `identityMap.authenticatedState`
@@ -659,8 +653,8 @@ The abandoned cart journey targets products that have been placed in the cart bu
             * `endUserIDs._experience.emailid.id`
             * `endUserIDs._experience.emailid.namespace.code`
             * `_id`
-            * `Commerce.purchases.id`
-            * `Commerce.purchases.value`
+            * `commerce.purchases.id`
+            * `commerce.purchases.value`
             * `shipping.address.city`
             * `shipping.address.countryCode`
             * `shipping.address.postalCode`
@@ -703,21 +697,21 @@ The abandoned cart journey targets products that have been placed in the cart bu
 
 +++
 
->[!TAB Order Confirmation Journey]
+>[!TAB Order Confirmation Scenario]
 
-The order confirmation journey focuses on product purchases made through the website and mobile app.<p>![Customer order confirmation journey high level visual overview.](../intelligent-re-engagement/images/order-confirmation-journey.png "Customer order confirmation journey high level visual overview."){width="2560" zoomable="yes"}</p>
+The order confirmation scenario focuses on product purchases made through the website and mobile app.<p>![Customer order confirmation scenario high level visual overview.](../intelligent-re-engagement/images/order-confirmation-journey.png "Customer order confirmation scenario high level visual overview."){width="1920" zoomable="yes"}</p>
 
 +++Events
 
 * Event 4: Online Purchases
     * Schema: Customer Digital Transactions
     * Fields:
-        * `EventType`
+        * `eventType`
     * Condition: 
-        * `EventType = commerce.purchases`
+        * `eventType = commerce.purchases`
         * Fields: 
-            * `Commerce.purchases.id`
-            * `Commerce.purchases.value`
+            * `commerce.purchases.id`
+            * `commerce.purchases.value`
             * `eventType`
             * `identityMap.authenticatedState`
             * `identityMap.id`
