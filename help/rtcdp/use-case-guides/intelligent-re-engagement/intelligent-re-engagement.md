@@ -15,7 +15,7 @@ Employ real-time considerations, take into account all consumer qualities and be
 
 You will construct schemas, datasets, and audiences as you work through examples of re-engagement scenarios. You will also discover the features needed to set up the example journeys in [!DNL Adobe Journey Optimizer] and those needed to create paid media advertisements in destinations. This guide uses examples of re-engaging customers in the use case journeys outlined below:
 
-* **Re-engagement scenario** - Target customers who have abandoned product browsing on both the website and mobile app.
+* **Abandoned product browse scenario** - Target customers who have abandoned product browsing on both the website and mobile app.
 * **Abandoned cart scenario** - Target customers who have placed products in the cart but have not yet been purchased on both the website and mobile app.
 * **Order confirmation scenario** - Focus on product purchases made through the website and mobile app.
 
@@ -42,15 +42,15 @@ Below is a high level overview of the three example re-engagement scenarios.
 
 >[!BEGINTABS]
 
->[!TAB Re-Engagement Scenario]
+>[!TAB Abandoned Product Browse Scenario]
 
-The re-engagement scenario targets abandoned product browsing on both the website and mobile app. This scenario is triggered when a product has been viewed but not purchased or added to the cart. Brand engagement is triggered after three days if there are no list additions within the last 24 hours.<p>![Customer intelligent re-engagement scenario high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent re-engagement scenario high level visual overview."){width="1920" zoomable="yes"}</p>
+The abandoned product browse scenario targets abandoned product browsing on both the website and mobile app. This scenario is triggered when a product has been viewed but not purchased or added to the cart. Brand engagement is triggered after three days if there are no list additions within the last 24 hours.<p>![Customer intelligent abandoned product browse scenario high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent abandoned product browse scenario high level visual overview."){width="1920" zoomable="yes"}</p>
 
 1. You create schemas and datasets, then enable for [!UICONTROL Profile].
 2. You ingest data into Experience Platform via Web SDK, Mobile SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
 3. You ingest additional profile-enabled data, which can be linked to the authenticated web and/or mobile app visitor via identity graphs.
 4. You build focused audiences from the list of profiles to check if a **customer** has made an engagement in the last three days.
-5. You create a re-engagement journey in [!DNL Adobe Journey Optimizer].
+5. You create a abandoned product browse journey in [!DNL Adobe Journey Optimizer].
 6. If needed, work with the **data partner** for the activation of audiences to desired paid-media destinations.
 7. [!DNL Adobe Journey Optimizer] checks for consent and sends out the various actions configured.
 
@@ -80,17 +80,17 @@ The order confirmation scenario focuses on product purchases made through the we
 
 To complete each of the steps in the high-level overviews above, read through the sections below, which offer links to more information and more detailed instructions.
 
-### Create a schema design and specify field groups {#schema-design}
+### Create schemas and specify field groups {#schema-design}
 
 Experience Data Model (XDM) resources are managed in the [!UICONTROL Schemas] workspace in [!DNL Adobe Experience Platform]. You can view and explore core resources provided by [!DNL Adobe] (for example, field groups) and create custom resources and schemas for your organization.
 
 For more information about creating [schemas](/help/xdm/home.md), see the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md) and [Model Your Customer Experience Data with XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html).
 
-There are four schema designs that are used for the re-engagement use case. Each schema requires specific fields to be set up, and some fields that are strongly suggested.
+There are four schema designs that are used for the re-engagement use case. Each schema requires specific fields to be set up. You need to enable the schema to be included in the Real-Time Customer Profile. For more information about enabling the schema for use in Real-Time Customer Profile, read [enable a schema for Real-Time Customer Profile](/help/xdm/ui/resources/schemas.md#enable-a-schema-for-real-time-customer-profile).
 
 #### Customer attributes schema
 
-This schema is used to structure and reference the profile data that makes up your customer information. This data is typically ingested into [!DNL Adobe Experience Platform] via your CRM or similar system and is necessary to reference customer details that are used for personalization, marketing consent, and enhanced segmentation capabilities.
+This schema is used to structure and reference the profile data that makes up your customer information. This data is typically ingested into [!DNL Adobe Experience Platform] via your CRM or similar system and is necessary to reference customer details that are used for personalization, marketing consent, and enhanced audience capabilities.
 
 The customer attributes schema is represented by an [[!UICONTROL XDM Individual Profile]](/help/xdm/classes/individual-profile.md) class, which includes the following field groups:
 
@@ -105,17 +105,6 @@ The customer attributes schema is represented by an [[!UICONTROL XDM Individual 
 
 +++
 
-+++Demographic Details (Field Group)
-
-[Demographic Details](/help/xdm/field-groups/profile/demographic-details.md) is a standard schema field group for the XDM Individual Profile class. The field group provides a root-level person object, whose sub-fields describe information about an individual person.
-
-| Fields | Requirement |
-| --- | --- |
-| `person.name.firstName`| Suggested | 
-| `person.name.lastName` | Suggested |
-
-+++
-
 +++External Source System Audit Details (Field Group)
 
 [External Source System Audit Attributes](/help/xdm/data-types/external-source-system-audit-attributes.md) is a standard Experience Data Model (XDM) data type that captures audit details about an external source system.
@@ -124,7 +113,7 @@ The customer attributes schema is represented by an [[!UICONTROL XDM Individual 
 
 +++Consent and Preference Field Groups (Field Group)
 
-[The Consents and Preferences](/help/xdm/field-groups//profile/consents.md) field group provides a single object-type field, consents, to capture consent and preference information.
+The [Consents and Preferences](/help/xdm/field-groups//profile/consents.md) field group provides a single object-type field, consents, to capture consent and preference information.
 
 | Fields | Requirement |
 | --- | --- |
@@ -145,72 +134,13 @@ This field group is used for best practice.
 
 #### Customer digital transactions schema
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via Web SDK and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced segmentation capabilities.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via [Web SDK](/help/edge/home.md) and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced audience capabilities.
 
 The customer digital transactions schema is represented by an [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class, which includes the following field groups:
 
-+++AEP Web SDK ExperienceEvent (Field Group)
-
-| Fields | Requirement |
-| --- | --- |
-| `device.model` | Suggested |
-| `environment.browserDetails.userAgent` | Suggested |
-
-+++
-
-+++Web Details (Field Group)
-
-Web Details is a standard schema field group for the XDM ExperienceEvent class, used to describe information regarding web details events such as interaction, page details, and referrer.
-
-| Fields | Requirement | Description |
-| --- | --- | --- |
-| `web.webInteraction.linkClicks.id` | Suggested | The id for the web link or URL that corresponds to the interaction. |
-| `web.webInteraction.linkClicks.value` | Suggested | The number of clicks for the web link or URL that corresponds to the interaction. |
-| `web.webInteraction.name` | Suggested | The name of the web page. |
-| `web.webInteraction.URL` | Suggested | The URL for the web page. |
-| `web.webPageDetails.name` | Suggested | The name of the web page where the web interaction occurred. |
-| `web.webPageDetails.URL` | Suggested | The URL of the web page where the web interaction occurred. |
-| `web.webReferrer.URL` | Suggested | Describes the referrer of a web interaction, which is the URL a visitor came from immediately before the current web interaction was recorded. |
-
-+++
-
-+++Consumer Experience Event (Field Group)
-
-| Fields | Requirement |
-| --- | --- |
-| `commerce.cart.cartID` | Suggested |
-| `commerce.cart.cartSource` | Suggested |
-| `commerce.cartAbandons.id` | Suggested |
-| `commerce.cartAbandons.value` | Suggested |
-| `commerce.order.orderType` | Suggested |
-| `commerce.order.payments.paymentAmount` | Suggested |
-| `commerce.order.payments.paymentType` | Suggested |
-| `commerce.order.payments.transactionID` | Suggested |
-| `commerce.order.priceTotal` | Suggested |
-| `commerce.order.purchaseID` | Suggested |
-| `commerce.productListAdds.id` | Suggested |
-| `commerce.productListAdds.value` | Suggested |
-| `commerce.productListOpens.id` | Suggested |
-| `commerce.productListOpens.value` | Suggested |
-| `commerce.productListRemoval.id` | Suggested |
-| `commerce.productListRemoval.value` | Suggested |
-| `commerce.productListViews.id` | Suggested |
-| `commerce.productListViews.value` | Suggested |
-| `commerce.productViews.id` | Suggested |
-| `commerce.productViews.value` | Suggested |
-| `commerce.purchases.id` | Suggested |
-| `commerce.purchases.value` | Suggested |
-| `marketing.campaignGroup` | Suggested |
-| `marketing.campaignName` | Suggested |
-| `marketing.trackingCode` | Suggested |
-| `productListItems.name` | Suggested |
-| `productListItems.priceTotal` | Suggested |
-| `productListItems.product` | Suggested |
-| `productListItems.quantity` | Suggested |
-
-+++
-
 +++End User ID Details (Field Group)
+
+The [End User ID Details](/help/xdm/field-groups/event/enduserids.md) field group is used to describe an individual's identity information across several Adobe applications.
 
 | Fields | Requirement | Description |
 | --- | --- | --- |
@@ -231,11 +161,13 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 #### Customer offline transactions schema
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on platforms outside of your website. This data is typically ingested into [!DNL Adobe Experience Platform] from a POS (or similar system) and most often streamed into Platform via an API connection. Its purpose is to reference the various offline conversion events that are used for triggering journeys, deep online and offline customer analysis, and enhanced segmentation capabilities.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on platforms outside of your website. This data is typically ingested into [!DNL Adobe Experience Platform] from a POS (or similar system) and most often streamed into Platform via an API connection. Its purpose is to reference the various offline conversion events that are used for triggering journeys, deep online and offline customer analysis, and enhanced audience capabilities.
 
-The customer offline transactions schema is represented by an [!UICONTROL XDM ExperienceEvent] class, which includes the following field groups:
+The customer offline transactions schema is represented by an [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class, which includes the following field groups:
 
 +++Commerce Details (Field Group)
+
+The [Commerce Details](/help/xdm/field-groups/event/commerce-details.md) field group is used to describe commerce data such as product information (SKU, name, quantity), and standard cart operations (order, checkout, abandon).
 
 | Fields | Requirement | Description |
 | --- | --- | --- |
@@ -253,6 +185,8 @@ The customer offline transactions schema is represented by an [!UICONTROL XDM Ex
 +++
 
 +++Personal Contact Details (Field Group)
+
+[Personal Contact Details](/help/xdm/field-groups/profile/personal-contact-details.md) is a standard schema field group for the XDM Individual Profile class which describes the contact information for an individual person.
 
 | Fields | Requirement | Description |
 | --- | --- | --- |
@@ -273,50 +207,16 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 >
 >This is an optional implementation if you are using the [[!DNL Adobe Analytics Data Connector]](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/connectors/analytics-connector/adobe-analytics-connector.html).
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when Web SDK is not an option for data collection; thus, this schema is needed when you are utilizing the [!DNL Adobe Analytics Data Connector] to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when [Web SDK](/help/edge/home.md) is not an option for data collection; thus, this schema is needed when you are utilizing the [!DNL Adobe Analytics Data Connector] to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
 
-The [!DNL Adobe] web connector schema is represented by a [!UICONTROL XDM ExperienceEvent] class, which includes the following field groups:
+The [!DNL Adobe] web connector schema is represented by a [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class, which includes the following field groups:
 
 +++Adobe Analytics ExperienceEvent Template (Field Group)
 
+The [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/event/analytics-full-extension.md) field group captures common metrics that are collected by Adobe Analytics.
+
 | Fields | Requirement | Description |
 | --- | --- | --- |
-| `web.webInteraction.linkClicks.id` | Suggested | The id for the web link or URL that corresponds to the interaction. |
-| `web.webInteraction.linkClicks.value` | Suggested | The number of clicks for the web link or URL that corresponds to the interaction. |
-| `web.webInteraction.name` | Suggested | The name of the web page. |
-| `web.webInteraction.URL` | Suggested | The URL for the web page. |
-| `web.webPageDetails.name` | Suggested | The name of the web page where the web interaction occurred. |
-| `web.webPageDetails.URL` | Suggested | The URL of the web page where the web interaction occurred. |
-| `web.webReferrer.URL` | Suggested | Describes the referrer of a web interaction, which is the URL a visitor came from immediately before the current web interaction was recorded. |
-| `commerce.cart.cartID` | Suggested | |
-| `commerce.cart.cartSource` | Suggested | |
-| `commerce.cartAbandons.id` | Suggested | |
-| `commerce.cartAbandons.value` | Suggested | |
-| `commerce.order.orderType` | Suggested | |
-| `commerce.order.payments.paymentAmount` | Suggested | |
-| `commerce.order.payments.paymentType` | Suggested | |
-| `commerce.order.payments.transactionID` | Suggested | |
-| `commerce.order.priceTotal` | Suggested | |
-| `commerce.order.purchaseID` | Suggested | |
-| `commerce.productListAdds.id` | Suggested | |
-| `commerce.productListAdds.value` | Suggested | |
-| `commerce.productListOpens.id` | Suggested | |
-| `commerce.productListOpens.value` | Suggested | |
-| `commerce.productListRemoval.id` | Suggested | |
-| `commerce.productListRemoval.value` | Suggested | |
-| `commerce.productListViews.id` | Suggested | |
-| `commerce.productListViews.value` | Suggested | |
-| `commerce.productViews.id` | Suggested | |
-| `commerce.productViews.value` | Suggested | |
-| `commerce.purchases.id` | Suggested | |
-| `commerce.purchases.value` | Suggested | |
-| `marketing.campaignGroup` | Suggested | |
-| `marketing.campaignName` | Suggested | |
-| `marketing.trackingCode` | Suggested | |
-| `productListItems.name` | Suggested | |
-| `productListItems.priceTotal` | Suggested | |
-| `productListItems.product` | Suggested | |
-| `productListItems.quantity` | Suggested | |
 | `endUserIDs._experience.emailid.authenticatedState` | Required | End user email address ID authenticated state. |
 | `endUserIDs._experience.emailid.id` | Required | End user email address ID. |
 | `endUserIDs._experience.emailid.namespace.code` | Required | End user email address ID namespace code. |
@@ -366,7 +266,7 @@ When creating a re-engagement path, the following [Data Governance labels](/help
 
 #### Data usage policies
 
-There are no [data usage policies](/help/data-governance/policies/overview.md) required for the re-engagement scenario. However, you should consider the following:
+There are no [data usage policies](/help/data-governance/policies/overview.md) required for the abandoned product browse scenario. However, you should consider the following:
 
 * Restrict Sensitive Data
 * Restrict Onsite Advertising
@@ -378,19 +278,19 @@ There are no [data usage policies](/help/data-governance/policies/overview.md) r
 
 The re-engagement scenarios use audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways on [!DNL Adobe Experience Platform].
 
-For more information on how to create an audience, read the [Audience service UI guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
+For more information on how to create an audience, read the [audience service UI guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
 For more information on how to directly compose [Audiences](/help/segmentation/home.md), read the [Audience Composition UI guide](/help/segmentation/ui/audience-composition.md).
 
-For more information on how to build audiences through Platform-derived segment definitions, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
+For more information on how to build audiences through Platform-derived audience definitions, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
->[!TAB Re-Engagement Scenario]
+>[!TAB Abandoned Product Browse Scenario]
 
 This audience is created as an enhancement to the classic "Cart Abandonment" scenario. Whereas cart abandonment typically focuses on a cart addition without a subsequent purchase in a certain period of time, this audience looks for an earlier engagement, specifically those who may have browsed a particular product but did not add it to their cart and had no follow-up activity on your site within a certain time frame. This audience helps to keep your brand "top of mind" for customers who meet this inclusion criteria and can also be leveraged for customers whose digital properties may differ from a traditional e-commerce model.
 
-The following events are used for the re-engagement scenario where users viewed products online, did not add products to their cart in the next 24 hours, and had no brand engagement in the 3 days following.
+The following events are used for the abandoned product browse scenario where users viewed products online, did not add products to their cart in the next 24 hours, and had no brand engagement in the 3 days following.
 
 The following fields and conditions are required when setting up this audience:
 
@@ -401,7 +301,7 @@ The following fields and conditions are required when setting up this audience:
 * `eventType: application.launch or web.webpagedetails.pageViews or commerce.purchases`
     * `Timestamp: <= 2 days before now`
 
-The descriptor for the re-engagement scenario appears as:
+The descriptor for the abandoned product browse scenario appears as:
 
 `Include audience who have at least 1 eventType = ProductViews event THEN have at least 1 Any event where (eventType does not equal commerce.productListAdds) and occurs in last 24 hour(s) then after 3 days do not have any Any event where (eventType = application.launch or web.webpagedetails.pageViews or commerce.purchases) and occurs in last 2 day(s).`
 
@@ -440,9 +340,9 @@ This journey does not require any audiences to be created.
 
 >[!BEGINTABS]
 
->[!TAB Re-Engagement Scenario]
+>[!TAB Abandoned Product Browse Scenario]
 
-The re-engagement scenario targets abandoned product browsing on both the website and mobile app.<p>![Customer intelligent re-engagement scenario high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent re-engagement scenario high level visual overview."){width="1920" zoomable="yes"}</p>
+The abandoned product browse scenario targets abandoned product browsing on both the website and mobile app.<p>![Customer abandoned product browse scenario high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer abandoned product browse scenario high level visual overview."){width="1920" zoomable="yes"}</p>
 
 +++Events
 
@@ -758,16 +658,16 @@ The destinations framework is used for paid media ads. Once consent has been che
 
 #### Data required for destinations
 
-Streaming segment export destinations (such as Facebook, Google Customer Match, Google DV360) support various identities from customer data: 
+Streaming audience export destinations (such as Facebook, Google Customer Match, Google DV360) support various identities from customer data: 
 
 * `personalEmail.address`
 * `ECID`
 * `mobilePhone.number`
 
-The Abandon Cart Segment is streaming and therefore can be used by the Destination framework for this use case.
+The abandon cart audience is streaming and therefore can be used by the Destination framework for this use case.
 
 * Stream/Triggered
     * [Advertising](/help/destinations/catalog/advertising/overview.md)/[Paid Media & Social](/help/destinations/catalog/social/overview.md)
     * [Mobile](/help/destinations/catalog/mobile-engagement/overview.md)
     * [Streaming Destination](/help/destinations/catalog/streaming/http-destination.md)
-    * [Custom Destination SDK](/help/destinations/destination-sdk/overview.md)
+    * [Custom destination created by using Destination SDK.](/help/destinations/destination-sdk/overview.md). If you are a Real-Time CDP Ultimate customer, you can also create a private [custom destination using Destination SDK](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
