@@ -170,7 +170,6 @@ feature: Destinations
         * [Pega Profile connection](./catalog/personalization/pega-profile.md)
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
-        * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
         * [Facebook connection](./catalog/social/facebook.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
         * [TikTok connection](./catalog/social/tiktok.md)
