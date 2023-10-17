@@ -30,7 +30,7 @@ With identity graph linking rules, you can:
 
 ## Invalid email/phone scenarios
 
-There are also instances of users who provide fake values as phone numbers and/or email addresses when registering. In these case, if limits are not enabled, then a single hashed email or hashed phone number will end up being linked to multiple different CRM IDs.
+There are also instances of users who provide fake values as phone numbers and/or email addresses when registering. In these cases, if limits are not enabled, then phone/email related identities will end up being linked to multiple different CRM IDs.
 
 ![invalid-email-phone](../images/identity-settings/invalid-email-phone.png)
 
