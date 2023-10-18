@@ -1,14 +1,14 @@
 ---
-title: Linkedin event forwarding extension
+title: Linkedin conversions API event forwarding extension
 description: This Adobe Experience Platform event forwarding extension allows you to measure the performace of your Linkedin marketing campaign.
 ---
 # [!DNL LinkedIn] event forwarding extension
 
-[[!DNL LinkedIn Conversion API]](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/conversions-api) is a conversion tracking tool that creates a direct connection between marketing data from an advertiser's server and LinkedIn. This enables advertisers to evaluate the effectiveness of their LinkedIn marketing campaigns regardless of the location of the conversion and utilize this information to drive campaign optimization. The [!DNL LinkedIn Conversion API] can help strengthen performance and decrease cost per action with more complete attribution, improved data reliability, and better optimized delivery.
+[[!DNL LinkedIn Conversions API]](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/conversions-api) extension is a conversion tracking tool that creates a direct connection between marketing data from an advertiser's server and LinkedIn. This enables advertisers to evaluate the effectiveness of their LinkedIn marketing campaigns regardless of the location of the conversion and utilize this information to drive campaign optimization. The [!DNL LinkedIn Conversions API] extension can help strengthen performance and decrease cost per action with more complete attribution, improved data reliability, and better optimized delivery.
 
 ## Prerequisites {#prerequisites}
 
-You must have access to the [[!DNL LinkedIn] Advertising API](https://learn.microsoft.com/en-us/linkedin/marketing/quick-start) in order to use this extension. Once you have access to the advertising API, you need to contact your [!DNL LinkedIn] representative to obtain access to the [[!DNL LinkedIn Conversion API]](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/conversions-api).
+You must have access to the [[!DNL LinkedIn] Advertising API](https://learn.microsoft.com/en-us/linkedin/marketing/quick-start) in order to use this extension. Once you have access to the advertising API, you need to contact your [!DNL LinkedIn] representative to obtain access to the [[!DNL LinkedIn Conversions API]](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/conversions-api) extension.
 
 You must use [!DNL LinkedIn Campaign Manager] to establish a conversion rule after gaining access to the advertising and conversion APIs.
 
@@ -22,7 +22,7 @@ Next, [create a data element](../../../ui/managing-resources/data-elements.md#cr
 
 To install the extension, [create an event forwarding property](../../../ui/event-forwarding/overview.md#properties) or select an existing property to edit.
 
-Select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL Catalog]** tab, select **[!UICONTROL Install]** on the card for the [!DNL Linkedin] extension.
+Select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL Catalog]** tab, select **[!UICONTROL Install]** on the card for the [!DNL LinkedIn] extension.
 
 ![The extension catalog showing the [!DNL LinkedIn] extension card highlighting install.](../../../images/extensions/server/linkedin/install-extension.png)
 
@@ -68,4 +68,4 @@ After selection, additional controls appear to further configure the event.
 
 ## Next steps
 
-This guide covered how to send data to the [!DNL Linkedin Conversion API] using the [!DNL LinkedIn] event forwarding extension. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md).
+This guide covered how to send data to [!DNL LinkedIn] using the [!DNL LinkedIn Conversions API] event forwarding extension. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md).
