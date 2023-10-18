@@ -189,6 +189,48 @@ Depending on the Flow Service entity you are retrieving, different properties ca
 
 {style="table-layout:auto"}
 
+## Use cases
+
+Read this section for some specific examples of filtering and sorting for sources and destinations:
+
+**Filter to return connections to aa certain destination only**
+
+For example, filter your destinations to only return existing connections to Amazon S3 connections:
+
+```http
+GET /connections?property=connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
+```
+
+**Filter to return dataflows to destinations only**
+
+To only return dataflows to destinations, use `isDestinationFlow` as query parameter to return destination dataflows only, like this: 
+
+```http
+GET /flows?property=inheritedAttributes.properties.isDestinationFlow==true
+```
+
+**Filter to return dataflows to a certain destination only**
+
+For example, filter your destinations to only return existing connections to Amazon S3 connections:
+
+```http
+GET /flows?property=inheritedAttributes.targetConnections[].connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
+```
+
+**Filter to get all runs of a dataflow for a specific time-period**
+
+```
+GET /runs?property=flowId==<flow-id>&property=metrics.durationSummary.startedAtUTC>1593134665781&property=metrics.durationSummary.startedAtUTC<1653134665781
+```
+
+**Filter to return failed dataflows only**
+
+For debugging purposes, you can filter and see all the failed dataflow runs to a certain destination dataflow. 
+
+```http
+GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Failed
+```
+
 ## Next steps
 
 This guide covered how to use the `orderby` and `property` query parameters to sort and filter responses in the Flow Service API. For step-by-step guides on how to use the API for common workflows in Platform, see the API tutorials contained in the [sources](../../sources/home.md) and [destinations](../../destinations/home.md) documentation.
