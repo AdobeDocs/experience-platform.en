@@ -78,6 +78,8 @@ The following query aggregates the events in the dataset into meaningful, numeri
 - Number of minutes between 2 propositions that were dismissed.
 - Number of minutes between 2 links that were clicked on.
 
++++Select to view example query
+
 ```python
 query_features = f"""
 SELECT
@@ -131,6 +133,8 @@ df_features = dd_cursor.query(query_features, output="dataframe")
 df_features.head()
 ```
 
++++
+
 **Sample output**
 
 |   |   userId  |  emailsReceived  |  emailsOpened  |  emailsClicked  |  productsViewed   | propositionInteracts  |  propositionDismissed  |  webLinkClicks |   minutes_since_emailSent  |  minutes_since_emailOpened  |  minutes_since_emailClick   | minutes_since_productView |   minutes_since_propositionInteract    |minutes_since_propositionDismiss |   minutes_since_linkClick|
@@ -143,7 +147,11 @@ df_features.head()
 
 {style="table-layout:auto"}
 
+#### Combine labels and features queries {#combine-queries}
+
 Finally, the labels query and the features query can be combined into a single query that returns a training dataset of labels and features:
+
++++Select to view example query
 
 ```python
 query_training_set = f"""
@@ -207,6 +215,8 @@ ORDER BY timestamp
 df_training_set = dd_cursor.query(query_training_set, output="dataframe")
 df_training_set.head()
 ```
+
++++
 
 **Sample output**
 
