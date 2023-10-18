@@ -243,6 +243,8 @@ Doing so requires a few modifications to the training set query:
 
 Applying those changes results in the following query:
 
++++Select to view example query
+
 ```python
 ctas_table_name = "propensity_training_set"
 
@@ -376,6 +378,8 @@ EXCEPTION
 END $$;
 """
 ```
+
++++
 
 Finally, the following code saves the query template in Data Distiller:
 
