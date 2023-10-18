@@ -20,7 +20,7 @@ Data Distiller enables data scientists and engineers to enrich their machine lea
 
 1. With Data Distiller's powerful query capabilities, you can extract meaningful features from the rich behavioral data available in the Experience Platform and bring the distilled feature data into your machine learning environment without the need to copy large volumes of event data outside of the Experience Platform.
 2. Read the prepared feature dataset into your preferred machine learning tools and combine with other features derived from enterprise data to train, experiment, tune, and deploy custom models tailored to your business.
-3. Generate scores, predictions, or recommendations from you models and return the output to the Experience Platform to optimize customer experiences through Real-Time Customer Data Platform and Adobe Journey Optimizer.
+3. Generate scores, predictions, or recommendations from your models and return the output to the Experience Platform to optimize customer experiences through Real-Time Customer Data Platform and Adobe Journey Optimizer.
 
 ## Prerequisites {#prerequisites}
 
@@ -43,7 +43,7 @@ The documents included in this series of guides, describe the basic steps for cr
 
 ## Additional resources
 
-- [aepp](https://github.com/adobe/aepp): an Adobe-managed open source Python library for making requests to Data Distiller and other Experience Platform services from Python code.
+- [aepp](https://github.com/adobe/aepp): an Adobe-managed open-source Python library for making requests to Data Distiller and other Experience Platform services from Python code.
 
 <!-- Old content below -->
 
