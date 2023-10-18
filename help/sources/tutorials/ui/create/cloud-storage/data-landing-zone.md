@@ -62,7 +62,7 @@ In the [!UICONTROL Sources catalog], under the [!UICONTROL Cloud storage] catego
 
 ![options](../../../../images/tutorials/create/dlz/options.png)
 
-A popover appears, displaying your container name, SAS token, storage account name, and SAS URI. 
+A popover appears, displaying your container name, SAS token, storage account name, SAS URI, and expiry date.
 
 Select **[!UICONTROL Refresh credentials]** and allow for a few seconds for your updated credentials to be processed.
 
@@ -70,7 +70,7 @@ Select **[!UICONTROL Refresh credentials]** and allow for a few seconds for your
 >
 >Your [!DNL Data Landing Zone] credentials are set to auto-expire after 90 days and you must use new credentials to re-connect to [!DNL Data Landing Zone] after expiration. Your dataflows in Platform are not affected by expiring credentials and you can still continue working with new and existing dataflows with your new credentials.
 
-![view-credentials](../../../../images/tutorials/create/dlz/credentials.png)
+![view-credentials](../../../../images/tutorials/create/dlz/view-credentials.png)
 
 ## Next steps
 
