@@ -24,7 +24,7 @@ feature: Queries
         - [Seamless SQL flow](data-distiller/derived-attributes/seamless-sql-flow.md)
         - [Create decile-based derived attributes](data-distiller/derived-attributes/decile-based-derived-attributes.md)
     - AI/ML feature pipelines {#ml-feature-pipelines}
-        - [AI/ML feature pipelines](data-distiller/ml-feature-pipelines/overview.md)
+        - [Overview](data-distiller/ml-feature-pipelines/overview.md)
         - [Connect to Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
         - [Exploratory data analysis](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
         - [Engineer features for ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
