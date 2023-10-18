@@ -1,23 +1,23 @@
 ---
 title: Engineer Features for Machine Learning
-description: Learn how to transform data in Adobe Experience Platform into features, or variables, that can consumed by a machine learning model. Use Data Distiller to compute ML features at scale and share those features with your machine learning environment.
+description: Learn how to transform data in Adobe Experience Platform into features or variables that can be consumed by a machine learning model. Use Data Distiller to compute ML features at scale and share those features with your machine learning environment.
 ---
 # Engineer features for machine learning
 
-This document demonstrates how you can transform data in Adobe Experience Platform into **features**, or variables, that can consumed by a machine learning model, a process referred to as **feature engineering**. With Data Distiller you can compute ML features at scale and share those features to your machine learning environment. This involves the following:
+This document demonstrates how you can transform data in Adobe Experience Platform into **features**, or variables, that can be consumed by a machine learning model. This process is referred to as **feature engineering**. Use Data Distiller to compute ML features at scale and share those features to your machine learning environment. This involves the following:
 
 1. Create a query template to define the target labels and features you want to compute for your model
 2. Execute the query and store the results in a training dataset
 
-## Build a query to define training data {#define-training-data}
+## Define your training data {#define-training-data}
 
-The following example illustrates a query to derive training data from an Experience Events dataset for a model to predict the propensity of a user to subscribe to a newsletter. Subscription events are represented by the event type `web.formFilledOut`, and other behavioral events in the dataset will be used to derive profile-level features to predict subscriptions.
+The following example illustrates a query to derive training data from an Experience Events dataset for a model to predict the propensity of a user to subscribe to a newsletter. Subscription events are represented by the event type `web.formFilledOut`, and other behavioral events in the dataset are used to derive profile-level features to predict subscriptions.
 
 ### Query positive and negative labels {#query-positive-and-negative-labels}
 
 A complete dataset for training a (supervised) machine learning model includes target variable or label that represents the outcome to be predicted, and a set of features or explanatory variables used to describe the example profiles used to train the model.
 
-In this case the label will be a variable called called `subscriptionOccurred` which equals 1 if the user profile has an event with type `web.formFilledOut` , and 0 otherwise. The following query returns a set of 50,000 users from the events dataset, including all users with positive labels (`subscriptionOccurred = 1`) plus a set randomly selected users with negative labels to complete the 50,000 user sample size. This ensures that the training data includes both positive and negative examples for the model to learn from.
+In this case, the label is a variable called `subscriptionOccurred` which equals 1 if the user profile has an event with type `web.formFilledOut` , and 0 otherwise. The following query returns a set of 50,000 users from the events dataset, including all users with positive labels (`subscriptionOccurred = 1`) plus a set randomly selected user with negative labels to complete the 50,000 user sample size. This ensures that the training data includes both positive and negative examples for the model to learn from.
 
 ```python
 from aepp import queryservice
@@ -64,19 +64,19 @@ Number of classes: 50000
 The following query aggregates the events in the dataset into meaningful, numerical features that can be used to train a propensity model:
 
 - **Number of emails** that were sent for marketing purposes and received by the user.
-- Portion of these emails that were actually **opened**.
-- Portion of these emails where the user actually **clicked** on the link.
+- Portion of these emails that were **opened**.
+- Portion of these emails where the user **selected** the link.
 - **Number of products** that were viewed.
 - Number of **propositions that were interacted with**.
 - Number of **propositions that were dismissed**.
-- Number of **links that were clicked on**.
-- Number of minutes between 2 consecutive emails received.
-- Number of minutes between 2 consecutive emails opened.
-- Number of minutes between 2 consecutive emails where the user actually clicked on the link.
-- Number of minutes between 2 consecutive product views.
-- Number of minutes between 2 propositions that were interacted with.
-- Number of minutes between 2 propositions that were dismissed.
-- Number of minutes between 2 links that were clicked on.
+- Number of **links that were selected**.
+- Number of minutes between two consecutive emails received.
+- Number of minutes between two consecutive emails opened.
+- Number of minutes between two consecutive emails where the user actually selected the link.
+- Number of minutes between two consecutive product views.
+- Number of minutes between two propositions that were interacted with.
+- Number of minutes between two propositions that were dismissed.
+- Number of minutes between two links that were selected.
 
 +++Select to view example query
 
@@ -232,14 +232,14 @@ df_training_set.head()
 
 ## Create a query template to incrementally compute training data
 
-It is typical to periodically re-train a model with updated training data to maintain accuracy of the model over time. As a best practice for efficiently updating your training dataset, you can create a template from your training set query to compute new training data incrementally. This allows you compute labels and features only from data that was added to the original Experience Events dataset since the the training data was last update, and insert the new labels and features into the existing training dataset.
+It is typical to periodically retrain a model with updated training data to maintain accuracy of the model over time. As a best practice for efficiently updating your training dataset, you can create a template from your training set query to compute new training data incrementally. This allows you compute labels and features only from data that was added to the original Experience Events dataset since the training data was last updated, and insert the new labels and features into the existing training dataset.
 
 Doing so requires a few modifications to the training set query:
 
 - Add logic to create a new training dataset if it doesn't exist, and insert the new labels and features into the existing training dataset otherwise. This requires a series of two versions of the training set query:
     - First, using the `CREATE TABLE IF NOT EXISTS {table_name} AS` statement
     - Next, using the `INSERT INTO {table_name}` statement for the case where the training dataset already exists
-- Add a `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` statement to limit the query to event data that was added within a specified interval. The `$` prefix on the snapshot IDs indicate that thy are variables that will be passed in when the query template is executed.
+- Add a `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` statement to limit the query to event data that was added within a specified interval. The `$` prefix on the snapshot IDs indicates that thy are variables that will be passed in when the query template is executed.
 
 Applying those changes results in the following query:
 
@@ -398,7 +398,7 @@ print(f"Template for propensity training data created as ID {template_id}")
 
 `Template for propensity training data created as ID f3d1ec6b-40c2-4d13-93b6-734c1b3c7235`
 
-With the template saved, you can execute the query at anytime by referencing the template ID and specify the range of snapshot IDs that should be included in the query. The following query retrieves the snapshots of the original Experience Events dataset:
+With the template saved, you can execute the query at any time by referencing the template ID and specify the range of snapshot IDs that should be included in the query. The following query retrieves the snapshots of the original Experience Events dataset:
 
 ```python
 query_snapshots = f"""
@@ -413,7 +413,7 @@ ORDER BY snapshot_generation ASC
 df_snapshots = dd_cursor.query(query_snapshots, output="dataframe")
 ```
 
-The following code demonstrates execution of the query template, using the very first and last snapshots to query the entire dataset:
+The following code demonstrates execution of the query template, using the first and last snapshots to query the entire dataset:
 
 ```python
 snapshot_start_id = str(df_snapshots["snapshot_id"].iloc[0])
@@ -461,7 +461,7 @@ wait_for_query_completion(query_final_id)
 
 **Sample output**
 
-```
+```console
 Query is still in progress, sleeping…
 Query is still in progress, sleeping…
 Query is still in progress, sleeping…
@@ -475,4 +475,4 @@ Query completed successfully in 473.8 seconds
 
 ## Next steps:
 
-By reading this document you have learned how to transform data in Adobe Experience Platform into features, or variables, that can consumed by a machine learning model. The next step in creating feature pipelines from Experience Platform to feed custom models in your machine learning environment is to [export feature datasets](./export-data.md).
+By reading this document you have learned how to transform data in Adobe Experience Platform into features, or variables, that can be consumed by a machine learning model. The next step in creating feature pipelines from Experience Platform to feed custom models in your machine learning environment is to [export feature datasets](./export-data.md).

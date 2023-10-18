@@ -12,9 +12,9 @@ This guide assumes that you are familiar with interactive Python notebooks and h
 
 ### Obtain connection credentials
 
-To connect to Data Distiller and other Adobe Experience Platform services, you will need an Experience Platform API credential. API credentials can be created in the  [Adobe Developer Console](https://developer.adobe.com/console/home) by someone with Developer access to the Experience Platform. It is recommended to create an Oauth2 API credential specifically for data science workflows and have an Adobe system admin from your organization assign the credential to a Role with appropriate permissions.
+To connect to Data Distiller and other Adobe Experience Platform services, you need an Experience Platform API credential. API credentials can be created in the  [Adobe Developer Console](https://developer.adobe.com/console/home) by someone with Developer access to the Experience Platform. You are recommended to create an Oauth2 API credential specifically for data science workflows and have an Adobe system admin from your organization assign the credential to a Role with appropriate permissions.
 
-See [Authenticate and access Experience Platform APIs](../../../landing/api-authentication.md) for detailed instructions instructions on creating an API credential and obtaining the required permissions.
+See [Authenticate and access Experience Platform APIs](../../../landing/api-authentication.md) for detailed instructions on creating an API credential and obtaining the required permissions.
 
 Recommended permissions for data science include:
 
@@ -25,7 +25,7 @@ Recommended permissions for data science include:
 - Destinations: Manage and Activate Dataset Destinations
 - Query Service: Manage Queries
 
-By default, a Role (and API credentials assigned to that role) is blocked from accessing any labeled data. Subject to the organization's data governance policies, a System Admin may grant the Role access to certain labeled data that is deemed appropriate for data science usage. AEP customers are responsible to manage label access and policies appropriately in order to comply with relevant regulations and organizational policies.
+By default, a Role (and API credentials assigned to that role) is blocked from accessing any labeled data. Subject to the organization's data governance policies, a System Admin may grant the Role access to certain labeled data that is deemed appropriate for data science usage. Platform customers are responsible to manage label access and policies appropriately in order to comply with relevant regulations and organizational policies.
 
 ### Store credentials in a separate configuration file
 
@@ -62,7 +62,7 @@ org_id = config.get('Credential', 'ims_org_id')
 
 ## The `aepp` Python library
 
-[aepp](https://github.com/adobe/aepp/tree/main) is an Adobe-managed open source Python library that provides functions for connecting to Data Distiller and submitting queries, as making requests to other Experience Platform services. The `aepp` library in turn relies on the PostgreSQL database adapter package  `psycopg2` for interactive Data Distiller queries. It is possible to connect to Data Distiller and query Experience Platform datasets with `psycopg2` alone, but `aepp` provides greater convenience and additional functionality to make requests to all Experience Platform API services.
+[aepp](https://github.com/adobe/aepp/tree/main) is an Adobe-managed open-source Python library that provides functions for connecting to Data Distiller and submitting queries, as making requests to other Experience Platform services. The `aepp` library in turn relies on the PostgreSQL database adapter package  `psycopg2` for interactive Data Distiller queries. It is possible to connect to Data Distiller and query Experience Platform datasets with `psycopg2` alone, but `aepp` provides greater convenience and additional functionality to make requests to all Experience Platform API services.
 
 To install or upgrade `aepp` and `psycopg2` in your environment, you can use the `%pip` magic command in your notebook:
 
@@ -94,7 +94,7 @@ aepp.configure(
 )
 ```
 
-## Create an connection to Data Distiller
+## Create a connection to Data Distiller
 
 Once `aepp` is configured with your credentials, you can use the following code to create a connection to Data Distiller and start an interactive session as follows:
 
@@ -115,7 +115,7 @@ dd_cursor.query(simple_query)
 
 ### Connect to a single dataset for faster query performance
 
-By default, the Data Distiller connection will connect to all datasets in your sandbox. For faster queries and reduced resource usage, you can instead connect to a specific dataset of interest. You can do this by changing the `dbname` in the Data Distiller connection object to `{sandbox}:{table_name}`:
+By default, the Data Distiller connection connects to all datasets in your sandbox. For faster queries and reduced resource usage, you can instead connect to a specific dataset of interest. You can do this by changing the `dbname` in the Data Distiller connection object to `{sandbox}:{table_name}`:
 
 ```python
 from aepp import queryservice
@@ -130,4 +130,4 @@ dd_cursor = queryservice.InteractiveQuery2(dd_conn)
 
 ## Next Steps
 
-By reading this document you have learned how to connect to Data Distiller from a Python notebook in your machine learning environment. The next step in creating feature pipelines from Experience Platform to feed custom models in your machine learning environment is to [explore and analyze your datasets](./exploratory-analysis.md).
+By reading this document, you have learned how to connect to Data Distiller from a Python notebook in your machine learning environment. The next step in creating feature pipelines from Experience Platform to feed custom models in your machine learning environment is to [explore and analyze your datasets](./exploratory-analysis.md).

@@ -153,7 +153,7 @@ Another common analysis is to compute correlations between event types and a tar
 
 1. Count the number of events for each event type by profile.
 2. Aggregate the counts of each event type across profiles and compute the correlations of each event type with `web,formFilledOut`.
-3. Transform the dataframe of counts and correlations into a table of pearson correlation coefficients of each feature (event type counts) with the target event.
+3. Transform the dataframe of counts and correlations into a table of Pearson Correlation coefficients of each feature (event type counts) with the target event.
 4. Visualize the results in a plot.
 
 The [!DNL Spark] functions aggregate the data to return a small table of results, so you can execute this type of query on the full dataset.
@@ -255,4 +255,4 @@ ax.set_title("Pearson Correlation of Events with the outcome event")
 
 ## Next Steps
 
-By reading this document you have learned how to use Data Distiller to explore and analyze data from a Python notebook. The next step in creating feature pipelines from Experience Platform to feed custom models in your machine learning environment is to [engineer features for machine learning](./feature-engineering.md).
+By reading this document, you have learned how to use Data Distiller to explore and analyze data from a Python notebook. The next step in creating feature pipelines from Experience Platform to feed custom models in your machine learning environment is to [engineer features for machine learning](./feature-engineering.md).

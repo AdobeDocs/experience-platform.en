@@ -33,13 +33,13 @@ However, all of these phases can be executed in one or more notebooks from your 
 
 The typical steps of this end-to-end flow have been divided into a set of modular notebooks which, taken together, demonstrate the steps involved in typical machine learning project involving Platform data. This makes it easier to use the notebooks as a reference for implementing specific activities, and to select and adapt code from the relevant notebooks to implement a real-world use case. In practice, a data scientist may prepare a single notebook the implements the end-to-end pipeline for their ML project. Alternatively, a data scientist may simply adapt the sample code for querying Platform data and making it available in their ML environment before continuing the project use UI-based features in their ML platform.
 
-The sample notebooks included in the linked repository are briefly described below. Detailed documentation for each notebook is interspersed with the code in the notebooks themselves
+The sample notebooks included in the linked repository are briefly described below. Detailed documentation for each notebook is interspersed with the code in the notebooks themselves.
 
 <!-- Below is the meat - the how to (but without links or details) -->
 
 ### Generate synthetic data {#generate-synthetic-data}
 
-This notebook provides code for generating datsets of synthetic profiles and experience events in your Platform that will be used to illustrate the CMLE workflow.
+This notebook provides code for generating datsets of synthetic profiles and Experience Events in your Platform that will be used to illustrate the CMLE workflow.
 
 ### EDA and Featurization with Query Service {#eda-and-featurization-with-query-service}
 
@@ -51,7 +51,7 @@ This notebook illustrates exporting the training dataset to cloud storage that c
 
 ### Train a propensity model {#train-a-propensity-model}
 
-This notebook illustrates training a propensity model. It assumes Databricks ML as your ML environment, but is written generically (i.e. without heavy use of Databricks-specific features/APIs) so that it can be adapted to other platforms.
+This notebook illustrates training a propensity model. It assumes Databricks ML as your ML environment, but is written generically (that is, without heavy use of Databricks-specific features/APIs) so that it can be adapted to other platforms.
 
 ### Score the propensity model
 
@@ -63,4 +63,4 @@ This brief notebook illustrates ingesting the dataset of propensity scores to en
 
 ### Create and activate audiences from code
 
-This notebook illustrate how the user can create audiences from the scores and activate those audiences through Platform apps from their notebook code.
+This notebook illustrates how the user can create audiences from the scores and activate those audiences through Platform apps from their notebook code.
