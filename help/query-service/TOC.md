@@ -27,7 +27,7 @@ feature: Queries
         - [AI/ML feature pipelines](data-distiller/ml-feature-pipelines/overview.md)
         - [Connect to Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
         - [Exploratory data analysis](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
-        - [Feature engineering](data-distiller/ml-feature-pipelines/feature-engineering.md)
+        - [Engineer features for ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
         - [Export data to ML environments](data-distiller/ml-feature-pipelines/export-data.md)
         - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Use cases {#use-cases}

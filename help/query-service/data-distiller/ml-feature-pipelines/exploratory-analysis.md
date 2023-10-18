@@ -252,3 +252,7 @@ ax.set_title("Pearson Correlation of Events with the outcome event")
 ```
 
 ![An bar graph of the Pearson Correlation of events of event outcomes](../../images/data-distiller/pearson-correlations.png)
+
+## Next Steps
+
+By reading this document you have learned how to use Data Distiller to explore and analyze data from a Python notebook. The next step in creating feature pipelines from Experience Platform to feed custom models in your machine learning environment is to [engineer features for machine learning](./feature-engineering.md).

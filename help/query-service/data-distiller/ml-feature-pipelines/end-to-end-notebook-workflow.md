@@ -1,6 +1,8 @@
 ---
 title: AI/ML Data Pipeline Enrichment end-to-end workflow
-description: Use cloud-based machine learning environment notebooks to create a training and scoring a propensity model that predicts subscription conversions from Adobe Experience Platform data.  
+description: Use cloud-based machine learning environment notebooks to create a training and scoring a propensity model that predicts subscription conversions from Adobe Experience Platform data.
+hide: true
+hidefromtoc: true
 ---
 <!-- 
 title: Cloud Machine Learning Environment Notebooks
@@ -18,24 +20,6 @@ This document provides a series of cloud-based machine learning environment note
 This workflow requires the use of [!DNL Python] notebooks in your machine learning environments. Instructions for getting started with these [!DNL Python] notebooks are included in their respective readme files.
 
 Before you continue with this guide, follow the steps outlined in the [AI/ML feature pipelines overview](./overview.md) to enable the use of the sample Python notebooks used in this AI/ML feature pipeline use case.
-
-<!-- FOR MY REFERENCE - Pages:
-
-Pages:
-1. Overview and prerequisites
-2. Connect to DD from a Jupyter notebooks (adapt exisiting page)
-    1. Install psycopg2
-    2. Install aepp
-    3. Connect to Data Distiller
-3. Exploratory data analysis
-4. Feature engineering
-5. Export training data to cloud storage
-6. End-to-end propensity model example
-    1. Overview of use case, end-to-end flow, recommended use
-    2. Link to repository and summary of each notebook
-    3. ML platform-specific versions of the end-to-end example 
- -->
-
 
 ## Cloud machine learning environment notebooks {#cmle-notebooks}
 
@@ -80,15 +64,3 @@ This brief notebook illustrates ingesting the dataset of propensity scores to en
 ### Create and activate audiences from code
 
 This notebook illustrate how the user can create audiences from the scores and activate those audiences through Platform apps from their notebook code.
-
-
-
-
-<!-- Below can be incorporated or cut -->
-
-## Appendix
-
-- [aepp](https://github.com/adobe/aepp/tree/main)
-- [Authenticate and access Experience Platform APIs](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html) 
-- [Adobe Experience Platform APIs](https://developer.adobe.com/experience-platform-apis/)
-- [Query Service Guide](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=en)
