@@ -3,11 +3,15 @@ title: Example Scenarios For Configuring Identity Settings
 description: Learn about example scenarios for configuring Identity Settings.
 hide: true
 hidefromtoc: true
+badge: Alpha
 ---
 # Example scenarios for configuring identity graph linking rules
 
-This document outlines example scenarios that you may consider when configuring identity graph linking rules.
+>[!IMPORTANT]
+>
+>Identity graph linking rules are currently in Alpha. The feature and documentation are subject to change.
 
+This document outlines example scenarios that you may consider when configuring identity graph linking rules.
 
 ## Shared device
 
