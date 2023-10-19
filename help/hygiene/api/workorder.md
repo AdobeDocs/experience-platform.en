@@ -21,6 +21,10 @@ The endpoint used in this guide is part of the Data Hygiene API. Before continui
 
 You can delete one or more identities from a single dataset or all datasets by making a POST request to the `/workorder` endpoint.
 
+>[!IMPORTANT] 
+> 
+>There are different limits for the total number of unique identity record deletes that can be submitted each month. These limits are based on your license agreement. Organizations who have purchased all editions of Adobe Real-Time Customer Data Platform and Adobe Journey Optimizer can submit up to 100,000 identity record deletes each month. Organizations who have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600,000 identity record deletes each month.<br>A single [record delete request through the UI](../ui/record-delete.md) allows you to submit 10,000 IDs at one time. The API method to delete records allows for the submission of 100,000 IDs at one time.
+
 **API format**
 
 ```http

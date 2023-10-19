@@ -133,7 +133,7 @@ Once you have finished adding identities to the request, under **[!UICONTROL Req
 
 >[!IMPORTANT] 
 > 
->There are different limits for the total number of unique identity record deletes that can be submitted each month. These limits are based on your license agreement. Organizations who have purchased all editions of Adobe Real-Time Customer Data Platform and Adobe Journey Optimizer can submit up to 100,000 identity record deletes each month. Organizations who have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600,000 identity record deletes each month.<br>A single record delete request through the UI allows you to submit 10,000 IDs at one time. The [API method to delete records](https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/workorder.html?lang=en#create) allows for the submission of 100,000 IDs at one time.
+>There are different limits for the total number of unique identity record deletes that can be submitted each month. These limits are based on your license agreement. Organizations who have purchased all editions of Adobe Real-Time Customer Data Platform and Adobe Journey Optimizer can submit up to 100,000 identity record deletes each month. Organizations who have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600,000 identity record deletes each month.<br>A single record delete request through the UI allows you to submit 10,000 IDs at one time. The [API method to delete records](../api/workorder.md#create) allows for the submission of 100,000 IDs at one time.
 
 ![The request setting's [!UICONTROL Name] and [!UICONTROL Description] fields with [!UICONTROL Submit] highlighted.](../images/ui/record-delete/submit.png)
 
