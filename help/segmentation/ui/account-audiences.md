@@ -7,7 +7,7 @@ description: Learn how to create and use account audiences to target account pro
 
 Adobe Experience Platform allows you to bring the full ease and sophistication of the marketing segmentation experience from people-based audiences to account-based audiences. 
 
-Account-based audiences can be used as an input for account-based destinations, allowing you to target the people within those accounts in downstream services. For example, you can use account-based audiences to retrieve records of all the accounts with Chief Operating Officer (COO) or Chief Marketing Officer (CMO) as their title but do **not** have the contact information for.
+Account-based audiences can be used as an input for account-based destinations, allowing you to target the people within those accounts in downstream services. For example, you can use account-based audiences to retrieve records of all the accounts that do **not** have contact information for any people with the title Chief Operating Officer (COO) or Chief Marketing Officer (CMO).
 
 ## Access {#access}
 
