@@ -36,6 +36,10 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ## Create a base connection
 
+>[!TIP]
+>
+>Once created, you cannot change the authentication type of a [!DNL Blob] base connection. To change the authentication type, you must create a new base connection.
+
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 The [!DNL Blob] source supports both connection string and shared access signature (SAS) authentication. A shared access signature (SAS) URI allows for secure delegated authorization to your [!DNL Blob] account. You can use SAS to create authentication credentials with varying degrees of access, as a SAS-based authentication allows you to set permissions, start and expiry dates, as well as provisions to specific resources.

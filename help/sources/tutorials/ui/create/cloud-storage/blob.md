@@ -59,6 +59,10 @@ To use an existing account, select the [!DNL Blob] account you want to create a 
 
 ### New account
 
+>[!TIP]
+>
+>Once created, you cannot change the authentication type of a [!DNL Blob] base connection. To change the authentication type, you must create a new base connection.
+
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name and an optional description for your new [!DNL Blob] account.
 
 ![The new account screen for the Azure Blob Storage source.](../../../../images/tutorials/create/blob/new.png)
