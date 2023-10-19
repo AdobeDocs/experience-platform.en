@@ -71,7 +71,7 @@ After selection, additional controls appear to further configure the event. Sele
 
 >NOTE
 >
->The [!UICONTROL Configuration Overrides] field allows a user to set a different [!DNL LinkedIn] access token on every rule, allowing each rule to use an access token from a different [!DNL LinkedIn account.
+>The [!UICONTROL Configuration Overrides] field allows a user to set a different [!DNL LinkedIn] access token on every rule, allowing each rule to use an access token from a different [!DNL LinkedIn] account.
 
 | Input | Description |
 | --- | --- |
