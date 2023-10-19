@@ -1,11 +1,11 @@
 ---
-title: Linkedin conversions API event forwarding extension
-description: This Adobe Experience Platform event forwarding extension allows you to measure the performace of your Linkedin marketing campaign.
+title: [!DNL Linkedin Conversions API] event forwarding extension
+description: This Adobe Experience Platform event forwarding extension allows you to measure the performace of your [!DNL Linkedin] marketing campaign.
 last-substantial-update: 2023-10-25
 ---
 # [!DNL LinkedIn] event forwarding extension
 
-[[!DNL LinkedIn Conversions API]](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/conversions-api) extension is a conversion tracking tool that creates a direct connection between marketing data from an advertiser's server and LinkedIn. This enables advertisers to evaluate the effectiveness of their LinkedIn marketing campaigns regardless of the location of the conversion and utilize this information to drive campaign optimization. The [!DNL LinkedIn Conversions API] extension can help strengthen performance and decrease cost per action with more complete attribution, improved data reliability, and better optimized delivery.
+[[!DNL LinkedIn Conversions API]](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/conversions-api) extension is a conversion tracking tool that creates a direct connection between marketing data from an advertiser's server and [!DNL LinkedIn]. This enables advertisers to evaluate the effectiveness of their [!DNL LinkedIn] marketing campaigns regardless of the location of the conversion and utilize this information to drive campaign optimization. The [!DNL LinkedIn Conversions API] extension can help strengthen performance and decrease cost per action with more complete attribution, improved data reliability, and better optimized delivery.
 
 ## Prerequisites {#prerequisites}
 
