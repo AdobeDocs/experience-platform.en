@@ -1,6 +1,7 @@
 ---
 solution: Experience Platform
 title: Media Edge Open API specification
+description: This document includes a YAML Open API Specification (OAS), or "Swagger" reference. You can copy and paste this specification into a rendering tool, such as editor.swagger.io to view Media Edge API information. This specification includes parameters, examples, and schema for each endpoint.
 ---
 # Using the Open API Specification file for Media Edge APIs
 
