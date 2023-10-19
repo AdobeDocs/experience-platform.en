@@ -223,7 +223,7 @@ solution: Data Collection
     * Google Cloud Platform {#google-cloud-platform}
       * [Overview](./extensions/server/google-cloud-platform/overview.md)
     * [!DNL LinkedIn Conversions API] {#linkedin}
-      * [Overview](./extensions/server/linkedIn/overview.md)
+      * [Overview](./extensions/server/linkedin/overview.md)
     * [!DNL Mailchimp] Edge {#mailchimp}
       * [Overview](./extensions/server/mailchimp/overview.md)
     * [!DNL Meta Conversions API] {#meta}
