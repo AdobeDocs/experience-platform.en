@@ -22,7 +22,7 @@ Next, [create a data element](../../../ui/managing-resources/data-elements.md#cr
 
 To install the extension, [create an event forwarding property](../../../ui/event-forwarding/overview.md#properties) or select an existing property to edit.
 
-Select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL Catalog]** tab, select **[!UICONTROL Install]** on the card for the [!DNL LinkedIn] extension.
+Select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL Catalog]** tab, select the **[!UICONTROL LinkedIn]** extension and then select **[!UICONTROL Install]**.
 
 ![The extension catalog showing the [!DNL LinkedIn] extension card highlighting install.](../../../images/extensions/server/linkedin/install-extension.png)
 
@@ -36,26 +36,26 @@ Once all your data elements are set up, you can start creating event forwarding 
 
 Create a new event forwarding [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL LinkedIn]**. Next, select **[!UICONTROL Send Web Conversion]** for the **[!UICONTROL Action Type]**.
 
-After selection, additional controls appear to further configure the event.
-
 ![Add an event forwarding rule action configuration.](../../../images/extensions/server/linkedin/linkedin-event-action.png)
+
+After selection, additional controls appear to further configure the event. Select **[!UICONTROL Keep Changes]** to save the rule.
 
 **[!UICONTROL User Data]**
 
 | Input | Description |
-|---|---|
+| --- | --- |
 | [!UICONTROL Email] | Email address of the contact associated with the conversion event. The email value will be encoded by the extension code in SHA256 unless the provided value is already a SHA256 string. |
 | [!UICONTROL LinkedIn First Party Ads Tracking UUID] | This is a first party cookie id. Advertisers need to enable enhanced conversion tracking from [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/help/lms/answer/a423304/enable-first-party-cookies-on-a-linkedin-insight-tag) in order to activate first party cookies that append a click ID parameter `li_fat_id` to the click URLs. |
 | [!UICONTROL Customer Information Data] | This field contains a JSON object with extra attributes that will be sent along with the message.<br><br>Under the **[!UICONTROL Raw]** option, you can paste the JSON object directly into the provided text field, or you can select the data element icon (![Dataset icon](../../../images/extensions/server/aws/data-element-icon.png)) to select from a list of existing data elements to represent the data.<br><br>You can also use the **[!UICONTROL JSON Key-Value Pairs Editor]** option to manually add each key-value pair through a UI editor. Each value can be represented by a raw input, or a data element can be selected instead. The accepted key values are: `firstName`, `lastName`, `companyName`, `title` and `country`. |
 
 {style="table-layout:auto"}
 
-![The [!DNL User Data] section showing example data input into the fields.](../../../images/extensions/server/linkedin/configure-extension.png)
+![The [!DNL User Data] section showing example data input into the fields.](../../../images/extensions/server/linkedin/configure-extension-user-data.png)
 
 **[!UICONTROL Conversion Data]**
 
 | Input | Description |
-|---|---|
+| --- | --- |
 | [!UICONTROL Conversion] | URN of the conversion rule created through the [API](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/conversions-api?view=li-lms-2023-06&tabs=http#create-a-conversion) or through [!DNL LinkedIn Campaign Manager]. |
 | [!UICONTROL Conversion Time] | Each timestamp in milliseconds at which the conversion event happened. <br><br> Note: If your source records the conversion timestamp in seconds, please insert 000 at the end to transform it to milliseconds. |
 | [!UICONTROL Currency] | Currency code in ISO format. |
@@ -64,7 +64,19 @@ After selection, additional controls appear to further configure the event.
 
 {style="table-layout:auto"}
 
-![The [!DNL Conversion Data] section showing example data input into the fields.](../../../images/extensions/server/linkedin/configure-extension.png)
+![The [!DNL Conversion Data] section showing example data in the fields.](../../../images/extensions/server/linkedin/configure-extension-conversions-data.png)
+
+**[!UICONTROL Configuration Overrides]**
+
+>NOTE
+>
+>The [!UICONTROL Configuration Overrides] field allows a user to set a different [!DNL LinkedIn] access token on every rule, allowing each rule to use an access token from a different [!DNL LinkedIn account.
+
+| Input | Description |
+| --- | --- |
+| [!UICONTROL Access Token] | The [!DNL LinkedIn] access token. |
+
+![The [!DNL Configuration Overrides] section showing example data input in the field.](../../../images/extensions/server/linkedin/configure-extension-configuration-override.png)
 
 ## Next steps
 
