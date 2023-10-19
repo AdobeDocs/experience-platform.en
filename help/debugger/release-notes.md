@@ -11,21 +11,21 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 
 ### New features
 
-* Show links to property, environment, and rules in Launch summary and logs
+* Show links to property, environment, and rules in Tags summary and logs.
 
 ### Fixes and improvements
 
 * Fixed an issue where Tags summary data was not sent.
-* Fixed issue where Assurance sessions would give a CORS error.
+* Fixed issue where Assurance sessions would give a CORS error
 * Fixed an issue that prevented Target Trace from appearing.
-* Fix the 'Send Feedback' button.
-* Fix the missing "Datastream ID" in the Web SDK Summary for version ≥2.18.0.
+* Fixed the 'Send Feedback' button.
+* Fixed the missing "Datastream ID" in the Web SDK Summary for version ≥2.18.0.
 * Fixed an issue where Edge logs were not searchable.
 * Added a note about additional profiles for certain account types.
 
 ## Version 1.4.1 - November 1, 2022
 
-* Improved performance on pages with many AEP Assurance events.
+* Improved performance on pages with many Adobe Experience Platform Assurance events.
 
 ## Version 1.4.0 - October 3, 2022
 
