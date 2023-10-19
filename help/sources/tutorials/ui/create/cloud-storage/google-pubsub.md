@@ -62,7 +62,8 @@ To use an existing account, select the [!DNL PubSub] account you want to create 
 
 >[!TIP]
 >
->When creating an account with restricted access, you must provide at least one of your topic name or subscription name. Authentication will fail if both values are missing.
+>* When creating an account with restricted access, you must provide at least one of your topic name or subscription name. Authentication will fail if both values are missing.
+>* Once created, you cannot change the authentication type of a [!DNL Google PubSub] base connection. To change the authentication type, you must create a new base connection.
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name and an optional description for your new [!DNL PubSub] account.
 

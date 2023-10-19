@@ -45,6 +45,10 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ## Create a base connection
 
+>[!TIP]
+>
+>Once created, you cannot change the authentication type of a [!DNL Google PubSub] base connection. To change the authentication type, you must create a new base connection.
+
 The first step in creating a source connection is to authenticate your [!DNL PubSub] source and generate a base connection ID. A base connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL PubSub] authentication credentials as part of the request parameters.

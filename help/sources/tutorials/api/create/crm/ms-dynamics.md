@@ -42,11 +42,19 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ## Create a base connection
 
+>[!TIP]
+>
+>Once created, you cannot change the authentication type of a [!DNL Dynamics] base connection. To change the authentication type, you must create a new base connection.
+
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Dynamics] authentication credentials as part of the request parameters.
 
-### Create a [!DNL Dynamics] base connection using basic authentication
+### Create a [!DNL Dynamics] base connection 
+
+>[!BEGINTABS]
+
+>[!TAB Basic authentication]
 
 To create a [!DNL Dynamics] base connection using basic authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `serviceUri`, `username`, and `password`.
 
@@ -102,7 +110,7 @@ A successful response returns the newly created connection, including its unique
 }
 ```
 
-### Create a [!DNL Dynamics] base connection using service principal key-based authentication
+>[!TAB Service principal key-based authentication]
 
 To create a [!DNL Dynamics] base connection using service principal key-based authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `serviceUri`, `servicePrincipalId`, and `servicePrincipalKey`.
 
@@ -116,28 +124,28 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Dynamics connection",
-        "description": "Dynamics connection using key-based authentication",
-        "auth": {
-            "specName": "Service Principal Key Based Authentication",
-            "params": {
-                "serviceUri": "{SERVICE_URI}",
-                "servicePrincipalId": "{SERVICE_PRINCIPAL_ID}",
-                "servicePrincipalKey": "{SERVICE_PRINCIPAL_KEY}"
-            }
-        },
-        "connectionSpec": {
-            "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Dynamics connection",
+      "description": "Dynamics connection using key-based authentication",
+      "auth": {
+          "specName": "Service Principal Key Based Authentication",
+          "params": {
+              "serviceUri": "{SERVICE_URI}",
+              "servicePrincipalId": "{SERVICE_PRINCIPAL_ID}",
+              "servicePrincipalKey": "{SERVICE_PRINCIPAL_KEY}"
+          }
+      },
+      "connectionSpec": {
+          "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Property | Description |
@@ -157,6 +165,9 @@ A successful response returns the newly created connection, including its unique
     "etag": "\"9e0052a2-0000-0200-0000-5e35tb330000\""
 }
 ```
+
+>[!ENDTABS]
+
 
 ## Next steps
 
