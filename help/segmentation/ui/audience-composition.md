@@ -46,6 +46,10 @@ To add audiences to the Audience block. select **[!UICONTROL Add Audience]**.
 
 ![The Add audience button is highlighted.](../images/ui/audience-composition/add-audience.png)
 
+>[!IMPORTANT]
+>
+>Please note that **only** audiences defined using the default merge policy will appear. 
+
 A list of audiences appears. Select the audiences you want to include, followed by **[!UICONTROL Add]** to append them to your audience block.
 
 ![A list of audiences appears. You can select which audience you want to add from this dialog.](../images/ui/audience-composition/select-audience.png)
