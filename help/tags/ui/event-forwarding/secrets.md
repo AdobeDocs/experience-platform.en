@@ -200,7 +200,7 @@ Three months prior to the secret requiring reauthorization, a popup will begin t
 
 You are redirected to the [!UICONTROL Secrets] tab. The secrets listed on this page are filtered to show only the secrets that need to be reauthorized. Select **[!UICONTROL Auth Needed]** for the secret you need to reauthorize. 
 
-![The [!UICONTROL Secret] tab highlighting [!Auth Needed]for the LinkedIn secret.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+![The [!UICONTROL Secret] tab highlighting [!UICONTROL Auth Needed]for the LinkedIn secret.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 A dialog appears that prompts you to enter your LinkedIn credentials. Follow the prompts to reauthorize your secret.
 
