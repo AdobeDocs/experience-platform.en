@@ -95,7 +95,7 @@ Please contact your Adobe account team to request a change in identity type if y
 
 Once this feature is available, graphs that exceed the limit of 50 identities will be reduced down to up to 50 identities. For Real-Time CDP B2C Edition, this could result in a minimal increase in the number of profiles qualifying for an audience, as these profiles were previously ignored from Segmentation and Activation.
 
-#### Real-Time Customer Profile: Pseudonymous profile setup
+#### Real-Time Customer Profile: impact to addressable audiences
 
 Deletion only happens to data in the Identity Service and not Real-Time Customer Profile.
 
