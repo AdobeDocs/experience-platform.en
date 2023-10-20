@@ -18,7 +18,7 @@ Package name
 Package description
 IMS Org (required)
 User ID (creator)
-List<Artifact>
+List Artifact
 
 See the [packages endpoint guide](./packages.md) for more information on working with packages in the API.
 
