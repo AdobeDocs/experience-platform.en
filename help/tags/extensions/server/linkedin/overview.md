@@ -29,7 +29,7 @@ Select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL 
 
 On the next screen, enter the data element secret you created earlier into the `Access Token` field. The data element secret will contain your [!DNL LinkedIn] OAuth 2 token. Select **[!UICONTROL Save]** when finished.
 
-![The [!DNL LinkedIn] extension configuration page.](../../../images/extensions/server/linkedin/configure-extension.png)
+![The [!DNL LinkedIn] extension configuration page with the [!UICONTROL Access Token] field and [!UICONTROL Save] highlighted.](../../../images/extensions/server/linkedin/configure-extension.png)
 
 ## Create a [!DNL Send Conversion] rule {#tracking-rule}
 
@@ -37,7 +37,7 @@ Once all your data elements are set up, you can start creating event forwarding 
 
 Create a new event forwarding [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL LinkedIn]**. Next, select **[!UICONTROL Send Web Conversion]** for the **[!UICONTROL Action Type]**.
 
-![Add an event forwarding rule action configuration.](../../../images/extensions/server/linkedin/linkedin-event-action.png)
+![The Event Forwarding Property Rules view, with the fields required to add an event forwarding rule action configuration highlighted.](../../../images/extensions/server/linkedin/linkedin-event-action.png)
 
 After selection, additional controls appear to further configure the event. Select **[!UICONTROL Keep Changes]** to save the rule.
 

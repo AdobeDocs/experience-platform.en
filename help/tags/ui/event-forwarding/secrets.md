@@ -13,7 +13,7 @@ The following secret types are currently supported:
 | --- | --- |
 | [!UICONTROL Google OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec for use in the [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) and [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL HTTP] | Contains two string attributes for a username and password, respectively. |
-| [!UICONTROL LinkedIn OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
+| [!UICONTROL [!DNL LinkedIn] OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL OAuth 2] | Contains several attributes to support the [client credentials grant type](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) for the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL OAuth 2 JWT] | Contains several attributes to support JSON Web Token (JWT) Profile for [OAuth 2.0 Authorization](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) grants. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL Token] | A single string of characters representing an authentication token value that is known and understood by both systems. |
@@ -71,7 +71,7 @@ From here, the steps to create the secret differ depending on the type of secret
 * [[!UICONTROL OAuth 2]](#oauth2)
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
-* [[!UICONTROL LinkedIn OAuth 2]](#linkedin-oauth2)
+* [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -172,27 +172,27 @@ A dialog appears that allows you to enter the credentials for your Google accoun
 >
 >To resolve this issue, sign in to the Google Admin console and navigate to the **[!DNL App access control]** page so you can mark the event forwarding app (Adobe Real-Time CDP Event Forwarding) as [!DNL Trusted]. Refer to the Google documentation on [setting session lengths for Google Cloud services](https://support.google.com/a/answer/9368756) for more information.
 
-### [!UICONTROL LinkedIn OAuth 2] {#linkedin-oauth2}
+### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
 
-To create a LinkedIn OAuth 2 secret, select **[!UICONTROL LinkedIn OAuth 2]** from the **[!UICONTROL Type]** dropdown. Next, select **[!UICONTROL Create Secret]**.
+To create a [!DNL LinkedIn] OAuth 2 secret, select **[!UICONTROL [!DNL LinkedIn] OAuth 2]** from the **[!UICONTROL Type]** dropdown. Next, select **[!UICONTROL Create Secret]**.
 
 ![The [!UICONTROL Create Secret] tab with the [!UICONTROL Type] field highlighted.](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
 
-A popover appears informing you that the secret needs to be manually authorized through LinkedIn. Select **[!UICONTROL Create & Authorize secret with LinkedIn]** to continue.
+A popover appears informing you that the secret needs to be manually authorized through [!DNL LinkedIn]. Select **[!UICONTROL Create & Authorize secret with [!DNL LinkedIn]]** to continue.
 
-![LinkedIn authorization popover highlighting [!UICONTROL Create & Authorize secret with LinkedIn].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+![[!DNL LinkedIn] authorization popover highlighting [!UICONTROL Create & Authorize secret with [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
-A dialog appears prompting you to enter your LinkedIn credentials. Follow the prompts to grant event forwarding access to your data under the selected scope. 
+A dialog appears prompting you to enter your [!DNL LinkedIn] credentials. Follow the prompts to grant event forwarding access to your data under the selected scope. 
 
 Once the authorization process is complete, you are returned to the **[!UICONTROL Secrets]** tab, where you can see your newly created secret. Here you can see the status of the secret and the date of expiration.
 
 ![The [!UICONTROL Secret] tab highlighting the newly created secret.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
-#### Reauthorize a [!UICONTROL LinkedIn OAuth 2] secret
+#### Reauthorize a [!UICONTROL [!DNL LinkedIn] OAuth 2] secret
 
 >IMPORTANT
 >
->You are required to reauthorize using your LinkedIn credentials every 365 days. If you do not reauthorize in due time, your secret will not be refreshed, and the LinkedIn conversion requests will begin failing.
+>You are required to reauthorize using your [!DNL LinkedIn] credentials every 365 days. If you do not reauthorize in due time, your secret will not be refreshed, and the [!DNL LinkedIn] conversion requests will fail.
 
 Three months prior to the secret requiring reauthorization, a popup will begin to show when you are navigating any page of the property. Select **[!UICONTROL Click here to go to your secrets]**.
 
@@ -200,9 +200,9 @@ Three months prior to the secret requiring reauthorization, a popup will begin t
 
 You are redirected to the [!UICONTROL Secrets] tab. The secrets listed on this page are filtered to show only the secrets that need to be reauthorized. Select **[!UICONTROL Auth Needed]** for the secret you need to reauthorize. 
 
-![The [!UICONTROL Secret] tab highlighting [!UICONTROL Auth Needed]for the LinkedIn secret.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+![The [!UICONTROL Secret] tab highlighting [!UICONTROL Auth Needed]for the [!DNL LinkedIn] secret.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
-A dialog appears that prompts you to enter your LinkedIn credentials. Follow the prompts to reauthorize your secret.
+A dialog appears that prompts you to enter your [!DNL LinkedIn] credentials. Follow the prompts to reauthorize your secret.
 
 ## Edit a secret
 
