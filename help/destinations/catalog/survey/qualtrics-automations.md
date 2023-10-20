@@ -2,6 +2,7 @@
 keywords: streaming, Qualtrics destination
 title: Qualtrics Automations
 description: Synchronize experience and operational customer data to unlock personalization at scale. Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience iD to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers.
+last-substantial-update: 2023-10-25
 ---
 
 # Qualtrics Automations
@@ -36,8 +37,8 @@ To help you better understand how and when you should use the *Qualtrics Automat
 
 Before setting up the Qualtrics destination in Adobe Experience Platform, please ensure the following prerequisites have been met:
 
-- You have a Qualtrics account.
-- You have obtained the necessary API token from Qualtrics.
+* You have a Qualtrics account.
+* You have obtained the necessary API token from Qualtrics.
 
 ### Obtaining an API Token
 
