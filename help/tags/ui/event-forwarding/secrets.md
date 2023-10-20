@@ -70,6 +70,7 @@ From here, the steps to create the secret differ depending on the type of secret
 * [[!UICONTROL OAuth 2]](#oauth2)
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
+* [[!UICONTROL LinkedIn OAuth 2]](#linkedin-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -169,6 +170,40 @@ A dialog appears that allows you to enter the credentials for your Google accoun
 >If your organization has a re-authentication policy set for Google Cloud applications, the created secrets will not be refreshed successfully after the authentication expires (between 1 and 24 hours depending on the policy configuration).
 >
 >To resolve this issue, sign in to the Google Admin console and navigate to the **[!DNL App access control]** page so you can mark the event forwarding app (Adobe Real-Time CDP Event Forwarding) as [!DNL Trusted]. Refer to the Google documentation on [setting session lengths for Google Cloud services](https://support.google.com/a/answer/9368756) for more information.
+
+### [!UICONTROL LinkedIn OAuth 2]In {#linkedin-oauth2}
+
+To create a LinkedIn OAuth 2 secret, select **[!UICONTROL LinkedIn OAuth 2]** from the **[!UICONTROL Type]** dropdown.Next, select **[!UICONTROL Create Secret]**.
+
+![LinkedIn OAuth 2 secret](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+
+A popover appears informing you that the secret needs to be manually authorized through LinkedIn. Select **[!UICONTROL Create & Authorize secret with LinkedIn]** to continue.
+
+![LinkedIn authorization popover](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+
+A dialog appears that allows you to enter the credentials for your LinkedIn account. Follow the prompts to grant event forwarding access to your data under the selected scope. Once the authorization process is complete, you are returned to the secrets tab where you will see your newly created secret. Here you can see the status of the secret and the date of expiry.
+
+![LinkedIn secret created](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+
+#### Reauthorize a [!UICONTROL LinkedIn OAuth 2] secret
+
+>IMPORTANT
+>
+>In order to refresh your LinkedIn OAuth2 secret, you are required to re-authorize using your LinkedIn credentials every 365 days.
+
+You will see a popup appear when navigating any page of the property three months prior to the secret requiring reauthorization. Select **[!UICONTROL Click here to go to your secrets]**.
+
+![LinkedIn secret reauthorization popup](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+
+You are redirected to the secrets list page. The secrets listed on this page are filtered to show only the secrets that need to be re-authorized.
+
+Select **[!UICONTROL Auth Needed]** on the secret. A dialog appears that allows you to enter the credentials for your LinkedIn account. 
+
+![LinkedIn secret page](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+
+>NOTE
+>
+>If you do not re-authorize in due time we your secret will not be refreshed, and the LinkedIn conversions requests will begin failing.
 
 ## Edit a secret
 
