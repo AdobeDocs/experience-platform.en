@@ -189,7 +189,7 @@ Depending on the Flow Service entity you are retrieving, different properties ca
 
 {style="table-layout:auto"}
 
-## Use cases
+## Use cases {#use-cases}
 
 Read this section for some specific examples of how you can use filtering and sorting to return information about certain connectors or to assist you in debugging issues. If there are any additional use cases that you would like Adobe to add, please use the **[!UICONTROL Detailed feedback options]** on the page to submit a request.
 
@@ -211,7 +211,7 @@ GET /connections?property=connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f8
 
 **Filter to return dataflows to destinations only**
 
-When querying the `/flows` endpoint, instead of returning dataflows from sources and to destinations, you can use a filter to only return dataflows to destinations. To do this, use `isDestinationFlow` as query parameter, like this: 
+When querying the `/flows` endpoint, instead of returning all sources and destinations dataflows, you can use a filter to only return dataflows to destinations. To do this, use `isDestinationFlow` as query parameter, like this: 
 
 ```http
 GET /flows?property=inheritedAttributes.properties.isDestinationFlow==true
