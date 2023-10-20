@@ -217,9 +217,9 @@ When querying the `/flows` endpoint, instead of returning all sources and destin
 GET /flows?property=inheritedAttributes.properties.isDestinationFlow==true
 ```
 
-**Filter to return dataflows to a certain destination only**
+**Filter to return dataflows to a certain source or destination only**
 
-For example, filter your destinations to only return existing connections to Amazon S3 connections:
+You can filter dataflows to return dataflows to a certain destination or from a certain source only. For example, filter your destinations to only return existing connections to Amazon S3 connections:
 
 ```http
 GET /flows?property=inheritedAttributes.targetConnections[].connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
