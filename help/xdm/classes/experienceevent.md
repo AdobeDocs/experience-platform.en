@@ -17,12 +17,12 @@ The [!DNL XDM ExperienceEvent] class itself provides several time-series-related
 
 | Property | Description |
 | --- | --- |
-| `_id`<br>**(Required)** | The Experience Event Class `_id` field uniquely identifies individual events that are ingested into Adobe Experience Platform. This field is used to track the uniqueness of an individual event, prevent duplication of data, and look up that event in downstream services.<br><br>Where duplicate events are detected, Platform applications and services may handle the duplication differently.  For example, duplicate events in Profile Service are dropped if the event with the same `_id` already exists in the Profile Store.<br><br>In some cases, `_id` can be a [Universally Unique Identifier (UUID)](https://tools.ietf.org/html/rfc4122) or [Globally Unique Identifier (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>If you are streaming data from a source connection or ingesting directly from a Parquet file, you should generate this value by concatenating a certain combination of fields that make the event unique, such as a primary ID, timestamp, event type, and so on. The concatenated value must be a `uri-reference` formatted string, meaning any colon characters must be removed. Afterwards, the concatenated value should be hashed using SHA-256 or another algorithm of your choice.<br><br>It is important to distinguish that **this field does not represent an identity related to an individual person**, but rather the record of data itself. Identity data relating to a person should be relegated to [identity fields](../schema/composition.md#identity) provided by compatible field groups instead. |
+| `_id`<br>**(Required)** | The Experience Event Class `_id` field uniquely identifies individual events that are ingested into Adobe Experience Platform. This field is used to track the uniqueness of an individual event, prevent duplication of data, and look up that event in downstream services.<br><br>Where duplicate events are detected, Platform applications and services may handle the duplication differently. For example, duplicate events in Profile Service are dropped if the event with the same `_id` already exists in the Profile Store.<br><br>In some cases, `_id` can be a [Universally Unique Identifier (UUID)](https://datatracker.ietf.org/doc/html/rfc4122) or [Globally Unique Identifier (GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>If you are streaming data from a source connection or ingesting directly from a Parquet file, you should generate this value by concatenating a certain combination of fields that make the event unique. Examples of events that could be concatenated include primary ID, timestamp, event type, and so on. The concatenated value must be a `uri-reference` formatted string, meaning any colon characters must be removed. Afterwards, the concatenated value should be hashed using SHA-256 or another algorithm of your choice.<br><br>It is important to distinguish that **this field does not represent an identity related to an individual person**, but rather the record of data itself. Identity data relating to a person should be relegated to [identity fields](../schema/composition.md#identity) provided by compatible field groups instead. |
 | `eventMergeId` | If using the [Adobe Experience Platform Web SDK](../../edge/home.md) to ingest data, this represents the ID of the ingested batch that caused the record to be created. This field is automatically populated by the system upon data ingestion. The use of this field outside of the context of a Web SDK implementation is not supported. |
 | `eventType` | A string that indicates the type or category for the event. This field can be used if you want to distinguish different event types within the same schema and dataset, such as distinguishing a product view event from an add-to-shopping-cart event for a retail company.<br><br>Standard values for this property are provided in the [appendix section](#eventType), including descriptions of their intended use case. This field is an extensible enum, meaning that you can also use your own event type strings to categorize the events you are tracking.<br><br>`eventType` limits you to using only a single event per hit on your application, and therefore you must use calculated fields to let the system know which event is most important. For more information, see the section on [best practices for calculated fields](#calculated). |
 | `producedBy` | A string value that describes the producer or origin of the event. This field can be used to filter out certain event producers if needed for segmentation purposes.<br><br>Some suggested values for this property are provided in the [appendix section](#producedBy). This field is an extensible enum, meaning that you can also use your own strings to represent different event producers. |
 | `identityMap` | A map field that contains a set of namespaced identities for the individual that the event applies to. This field is automatically updated by the system as identity data is ingested. In order to properly utilize this field for [Real-Time Customer Profile](../../profile/home.md), do not attempt to manually update the field's contents in your data operations.<br /><br />See the section on identity maps in the [basics of schema composition](../schema/composition.md#identityMap) for more information on their use case. |
-| `timestamp`<br>**(Required)** | An ISO 8601 timestamp of when the event occurred, formatted as per [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). This timestamp must occur in the past. See the section below on [timestamps](#timestamps) for best practices on the use of this field. |
+| `timestamp`<br>**(Required)** | An ISO 8601 timestamp of when the event occurred, formatted as per [RFC 3339 Section 5.6](https://datatracker.ietf.org/doc/html/rfc3339). This timestamp must occur in the past. See the section below on [timestamps](#timestamps) for best practices on the use of this field. |
 
 {style="table-layout:auto"}
 
@@ -86,12 +86,12 @@ The following table outlines the accepted values for `eventType`, along with the
 
 | Value | Definition |
 | --- | --- |
-|`advertising.clicks` | Click action(s) on an advertisement. |
-|`advertising.completes` | A timed media asset has been watched to completion. This does not necessarily mean the viewer watched the whole video, as the viewer could have skipped ahead. |
-|`advertising.conversions` | Pre-defined action(s) performed by a customer which triggers an event for performance evaluation. |
+|`advertising.clicks` | One or more click actions on an advertisement. |
+|`advertising.completes` | A timed media asset has been watched to completion. This does not necessarily mean that the viewer watched the whole video, as the viewer could have skipped ahead. |
+|`advertising.conversions` | One or more pre-defined actions performed by a customer which triggers an event for performance evaluation. |
 |`advertising.federated` | Indicates if an Experience Event was created through data federation (data sharing between customers). |
 |`advertising.firstQuartiles` | A digital video ad has played through 25% of its duration at normal speed. |
-|`advertising.impressions` | Impression(s) of an advertisement to a customer with the potential of being viewed. |
+|`advertising.impressions` | The impressions of an advertisement to a customer with the potential of being viewed. |
 |`advertising.midpoints` | A digital video ad has played through 50% of its duration at normal speed. |
 |`advertising.starts` | A digital video ad has started playing. |
 |`advertising.thirdQuartiles` | A digital video ad has played through 75% of its duration at normal speed. |
@@ -107,7 +107,7 @@ The following table outlines the accepted values for `eventType`, along with the
 |`commerce.productListAdds` | A product has been added to the product list or shopping cart. |
 |`commerce.productListOpens` | A new product list (shopping cart) has been initialized or created. |
 |`commerce.productListRemovals` | One or more product entries have been removed from a product list or shopping cart. |
-|`commerce.productListReopens` | A product list (shopping cart) that was no longer accessible (abandoned) has been re-activated by a customer, such as via a re-marketing activity. |
+|`commerce.productListReopens` | A product list (shopping cart) that was no longer accessible (abandoned) has been reactivated by a customer, such as via a re-marketing activity. |
 |`commerce.productListViews` | A product list or shopping cart has received one or more views. |
 |`commerce.productViews` | A product has received one or more views. |
 |`commerce.purchases` | An order has been accepted. This is the only required action in a commerce conversion. A purchase event must have a product list referenced. |
@@ -139,31 +139,31 @@ The following table outlines the accepted values for `eventType`, along with the
 |`leadOperation.statusInCampaignProgressionChanged` | A lead's status in a campaign has changed. |
 |`listOperation.addToList` | A person was added to a marketing list. |
 |`listOperation.removeFromList` | A person was removed from a marketing list. |
-|`media.adBreakComplete` | |
-|`media.adBreakStart` | |
-|`media.adComplete` | |
-|`media.adSkip` | |
-|`media.adStart` | |
-|`media.bitrateChange` | |
-|`media.bufferStart` | |
-|`media.chapterComplete` | |
-|`media.chapterSkip` | |
-|`media.chapterStart` | |
-|`media.downloaded` | |
-|`media.error` | |
-|`media.pauseStart` | |
-|`media.ping` | |
-|`media.play` | |
-|`media.sessionComplete` | |
-|`media.sessionEnd` | |
-|`media.sessionStart` | |
-|`media.statesUpdate` | |
+|`media.adBreakComplete` | Indicates that an `adBreakComplete` event has occurred. This event is triggered at the start of an ad break. |
+|`media.adBreakStart` |Indicates that an `adBreakStart` event has occurred. This event is triggered at the end of an ad break. |
+|`media.adComplete` | Indicates that an `adComplete` event has occurred. This event is triggered when an advert has been completed.|
+|`media.adSkip` |Indicates that an `adSkip` event has occurred. This event is triggered when an advert has been skipped. |
+|`media.adStart` | Indicates that an `adStart` event has occurred. This event is triggered when an advert has begun.|
+|`media.bitrateChange` | Indicates that a `bitrateChange` event has occurred. This event is triggered when there is a change in the bit rate. |
+|`media.bufferStart` |Indicates that a `bufferStart` event has occurred. This event is triggered when media has begun to buffer. |
+|`media.chapterComplete` |Indicates that a `chapterComplete` event has occurred. This event is triggered at the completion of a chapter in the media. |
+|`media.chapterSkip` | Indicates that a `chapterSkip` event has occurred. This event is triggered when a user skips forward or backward to another section or chapter within the media content. |
+|`media.chapterStart` |Indicates that a `chapterStart` event has occurred. This event is triggered at the start of a specific section or chapter within the media content. |
+|`media.downloaded` | Indicates that media downloaded content has been tracked. |
+|`media.error` |Indicates that a `error` event has occurred. This event is triggered when an error or issue occurs during media playback. |
+|`media.pauseStart` | Indicates that a `pauseStart` event has occurred. This event is triggered when a user initiates a pause in the media playback. |
+|`media.ping` |Indicates that a `ping` event has occurred. This verifies the availability of a media resource. |
+|`media.play` | Indicates that a `play` event has occurred. This event is triggered when the media content is playing, indicating active consumption by the user. |
+|`media.sessionComplete` |Indicates that a `sessionComplete` event has occurred. This event marks the end of a media playback session. |
+|`media.sessionEnd` | Indicates that a `sessionEnd` event has occurred. This event indicates the conclusion of a media session. This conclusion could involve closing the media player or stopping playback. |
+|`media.sessionStart` | Indicates that a `sessionStart` event has occurred. This event marks the beginning of a media playback session. It is triggered when a user starts playing a media file. |
+|`media.statesUpdate` | Indicates that a `statesUpdate` event has occurred. This event is triggered by changes in the state of the media player or media content. The changes in state could include playback progress, volume adjustments, and so on. |
 |`opportunityEvent.addToOpportunity` | A person was added to an opportunity. |
 |`opportunityEvent.opportunityUpdated` | An opportunity was updated. |
 |`opportunityEvent.removeFromOpportunity` | A person was removed from an opportunity. |
 |`pushTracking.applicationOpened` | A person opened an application from a push notification. |
 |`pushTracking.customAction` | A person clicked a custom action in a push notification. |
-|`web.formFilledOut` | A person filled out a form on a wep page. |
+|`web.formFilledOut` | A person filled out a form on a web page. |
 |`web.webinteraction.linkClicks` | A link has been selected one or more times. |
 |`web.webpagedetails.pageViews` | A webpage has received one or more views. |
 |`location.entry` | |
