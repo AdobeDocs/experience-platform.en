@@ -13,6 +13,7 @@ The following secret types are currently supported:
 | --- | --- |
 | [!UICONTROL Google OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec for use in the [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) and [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL HTTP] | Contains two string attributes for a username and password, respectively. |
+| [!UICONTROL LinkedIn OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL OAuth 2] | Contains several attributes to support the [client credentials grant type](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) for the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL OAuth 2 JWT] | Contains several attributes to support JSON Web Token (JWT) Profile for [OAuth 2.0 Authorization](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) grants. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL Token] | A single string of characters representing an authentication token value that is known and understood by both systems. |
@@ -189,7 +190,7 @@ A dialog appears that allows you to enter the credentials for your LinkedIn acco
 
 >IMPORTANT
 >
->In order to refresh your LinkedIn OAuth2 secret, you are required to re-authorize using your LinkedIn credentials every 365 days.
+>In order to refresh your LinkedIn OAuth2 secret, you are required to re-authorize using your LinkedIn credentials every 365 days. If you do not re-authorize in due time your secret will not be refreshed, and the LinkedIn conversions requests will begin failing.
 
 You will see a popup appear when navigating any page of the property three months prior to the secret requiring reauthorization. Select **[!UICONTROL Click here to go to your secrets]**.
 
@@ -200,10 +201,6 @@ You are redirected to the secrets list page. The secrets listed on this page are
 Select **[!UICONTROL Auth Needed]** on the secret. A dialog appears that allows you to enter the credentials for your LinkedIn account. 
 
 ![LinkedIn secret page](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
-
->NOTE
->
->If you do not re-authorize in due time we your secret will not be refreshed, and the LinkedIn conversions requests will begin failing.
 
 ## Edit a secret
 
