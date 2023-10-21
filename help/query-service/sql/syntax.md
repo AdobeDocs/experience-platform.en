@@ -424,7 +424,9 @@ ELSE
 END IF
 ```
 
-**example**
+**Example**
+
+The example below executes `SELECT 200;`.
 
 ```sql
 $$BEGIN
@@ -443,9 +445,9 @@ $$BEGIN
  END$$;
 ```
 
-The example above executes `SELECT 200;`. This structure can be used in combination with `raise_error();` to return a custom error message.
+This structure can be used in combination with `raise_error();` to return a custom error message. The code block seen below terminates the anonymous block with "custom error message".
 
-**example**
+**Example**
 
 ```sql
 $$BEGIN
@@ -464,13 +466,11 @@ $$BEGIN
  END$$;
 ```
 
-The code block seen above terminates the anonymous block with "custom error message".
-
 #### Nested IF statements
 
 Nested IF statements are supported within anonymous blocks.
 
-**example**
+**Example**
 
 ```sql
 $$BEGIN
@@ -489,7 +489,7 @@ $$BEGIN
 
 Exception blocks are supported within anonymous blocks.
 
-**example**
+**Example**
 
 ```sql
 $$BEGIN
