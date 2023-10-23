@@ -86,11 +86,20 @@ To create a new account, select **[!UICONTROL New account]**, and then provide a
 
 To create an [!DNL Event Hubs] account with standard authentication, select **[!UICONTROL Standard authentication]** and then provide values for your [!UICONTROL SAS key name], [!UICONTROL SAS key], and [!UICONTROL Namespace].
 
+Once you have inputted your authentication credentials, select **[!UICONTROL Connect to source]**.
+
+![The standard authentication interface for Azure Event Hubs.](../../../../images/tutorials/create/eventhub/standard.png)
+
 >[!TAB SAS authentication]
+
+To create an [!DNL Event Hubs] account with SAS authentication, select **[!UICONTROL SAS authentication]** and then provide values for your [!UICONTROL SAS key name], [!UICONTROL SAS key], [!UICONTROL Namespace], and [!UICONTROL Event Hubs name].
+
+Once you have inputted your authentication credentials, select **[!UICONTROL Connect to source]**.
+
+![The SAS authentication interface for Azure Event Hubs.](../../../../images/tutorials/create/eventhub/sas.png)
 
 >[!ENDTABS]
 
-To create an [!DNL Event Hubs] account with SAS authentication, select **[!UICONTROL SAS authentication]** and then provide values for your [!UICONTROL SAS key name], [!UICONTROL SAS key], [!UICONTROL Namespace], and [!UICONTROL Event Hubs name].
 
 ## Next steps
 
