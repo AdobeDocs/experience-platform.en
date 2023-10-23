@@ -12,8 +12,6 @@ description: This page provides IP ranges that you can add to your allow list.
 
 ## Overview {#overview}
 
-<!-- I believe that the sentence below needs to be updated. -->
-
 This page provides IP addresses that you can add to your allowlist, to safely export data from Experience Platform to your [SFTP server](../destinations/catalog/cloud-storage/sftp.md).
 
 You can define network access controls through your network firewall. By specifying the appropriate IP range, you can allow traffic for the data transfer service.
