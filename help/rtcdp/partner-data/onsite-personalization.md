@@ -242,9 +242,13 @@ Input `interact` in the search box, refresh the page, and you should see network
 
 You are now ready to create and activate audiences for personalization.
 
-#### Set up edge segmentation
+#### Create audience and set up edge segmentation
 
-Set up [edge segmentation](/help/segmentation/ui/edge-segmentation.md) so the audience membership of your visitors is evaluated in real-time, as they visit your web property.  
+In the Platform UI, navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and create an audience to capture your website visitors. 
+
+![View of how to navigate to audiences.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+
+You must set up your audience with [edge segmentation](/help/segmentation/ui/edge-segmentation.md) so the audience membership of your visitors is evaluated in real-time, as they visit your web property.  
 
 Make sure to also set up an [active-on-edge merge policy](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) for the edge audiences.
 
