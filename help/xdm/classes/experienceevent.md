@@ -157,7 +157,7 @@ The following table outlines the accepted values for `eventType`, along with the
 |`media.sessionComplete` |Indicates that a `sessionComplete` event has occurred. This event marks the end of a media playback session. |
 |`media.sessionEnd` | Indicates that a `sessionEnd` event has occurred. This event indicates the conclusion of a media session. This conclusion could involve closing the media player or stopping playback. |
 |`media.sessionStart` | Indicates that a `sessionStart` event has occurred. This event marks the beginning of a media playback session. It is triggered when a user starts playing a media file. |
-|`media.statesUpdate` | Indicates that a `statesUpdate` event has occurred. This event is triggered by changes in the state of the media player or media content. The changes in state could include playback progress, volume adjustments, and so on. |
+|`media.statesUpdate` | Indicates that a `statesUpdate` event has occurred. The player state tracking capabilities can be attached to an audio or video stream. The standard states are: fullscreen, mute, closedCaptioning, pictureInPicture, and inFocus. |
 |`opportunityEvent.addToOpportunity` | A person was added to an opportunity. |
 |`opportunityEvent.opportunityUpdated` | An opportunity was updated. |
 |`opportunityEvent.removeFromOpportunity` | A person was removed from an opportunity. |
