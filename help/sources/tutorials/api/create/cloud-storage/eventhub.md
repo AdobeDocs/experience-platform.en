@@ -70,8 +70,6 @@ To create a base connection ID, make a POST request to the `/connections` endpoi
 POST /connections
 ```
 
-**Request**
-
 >[!BEGINTABS]
 
 >[!TAB Standard authentication]

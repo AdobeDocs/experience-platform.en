@@ -52,11 +52,13 @@ To create a base connection ID, make a POST request to the `/connections` endpoi
 
 ### Create a [!DNL Dynamics] base connection 
 
->[!BEGINTABS]
+>[!TIP]
+>
+>Once created, you cannot change the authentication type of an [!DNL Dynamics] base connection. To change the authentication type, you must create a new base connection.
 
->[!TAB Basic authentication]
+The first step in creating a source connection is to authenticate your [!DNL Dynamics] source and generate a base connection ID. A base connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
 
-To create a [!DNL Dynamics] base connection using basic authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `serviceUri`, `username`, and `password`.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Dynamics] authentication credentials as part of the request parameters.
 
 **API format**
 
@@ -65,6 +67,12 @@ POST /connections
 ```
 
 **Request**
+
+>[!BEGINTABS]
+
+>[!TAB Basic authentication]
+
+To create a [!DNL Dynamics] base connection using basic authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `serviceUri`, `username`, and `password`.
 
 ```shell
 curl -X POST \

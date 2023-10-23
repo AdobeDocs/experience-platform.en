@@ -66,7 +66,7 @@ The **[!UICONTROL Connect to Azure Event Hubs]** dialog appears. On this page, y
 
 ### Existing account
 
-To use an existing account, select the [!DNL Event Hubs] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
+To use an existing account, select the [!DNL Event Hubs] account you want to use, then select **[!UICONTROL Next]** to proceed.
 
 ![A list of existing Azure Event Hubs source accounts.](../../../../images/tutorials/create/eventhub/existing.png)
 
