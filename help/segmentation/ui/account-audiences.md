@@ -1,13 +1,17 @@
 ---
-title: Account audiences
+title: Account Audiences
 description: Learn how to create and use account audiences to target account profiles in downstream destinations.
 ---
 
 # Account audiences
 
-Adobe Experience Platform allows you to bring the full ease and sophistication of the marketing segmentation experience from people-based audiences to account-based audiences. 
+>[!IMPORTANT]
+>
+>Please note that account audiences are only available in the B2B Edition of Real-Time Customer Data Platform.
 
-Account-based audiences can be used as an input for account-based destinations, allowing you to target the people within those accounts in downstream services. For example, you can use account-based audiences to retrieve records of all the accounts that do **not** have contact information for any people with the title Chief Operating Officer (COO) or Chief Marketing Officer (CMO).
+With account segmentation, Adobe Experience Platform allows you to bring the full ease and sophistication of the marketing segmentation experience from people-based audiences to account-based audiences. 
+
+Account audiences can be used as an input for account-based destinations, allowing you to target the people within those accounts in downstream services. For example, you can use account-based audiences to retrieve records of all the accounts that do **not** have contact information for any people with the title Chief Operating Officer (COO) or Chief Marketing Officer (CMO).
 
 ## Access {#access}
 
@@ -33,9 +37,9 @@ The Segment Builder appears. The account attributes are displayed on the left na
 
 When creating account audiences, please note that events are listed under **[!UICONTROL People]**, rather than being their own tab, since these attributes are associated with people.
 
-![The location to find events, which is within the [!UICONTROL People] folder, is highlighted.](../images/ui/account-audiences/activate.png)
+![The location to find events, which is within the [!UICONTROL People] folder, is highlighted.](../images/ui/account-audiences/attributes.png)
 
-For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md)
+For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md).
 
 ## Activate audience {#activate}
 
