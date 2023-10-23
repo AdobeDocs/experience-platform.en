@@ -9,7 +9,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 
 With the July 2023 Experience Platform release, the [!DNL Amazon S3] destination provides new functionality, as listed below:
 
-* [!BADGE Beta]{type=Informative} [Dataset export support](/help/destinations/ui/export-datasets.md).
+* [Dataset export support](/help/destinations/ui/export-datasets.md).
 * Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -21,15 +21,12 @@ With the July 2023 Experience Platform release, the [!DNL Amazon S3] destination
 
 ## Supported audiences {#supported-audiences}
 
-This section describes all the audiences that you can export to this destination.
+This section describes which type of audiences you can export to this destination.
 
-This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
-
-*Additionally*, this destination also supports the activation of the audiences described in the table below.
-
-| Audience type | Description | 
----------|----------|
-| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -83,13 +80,18 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-* **[!UICONTROL Name]**: enter a name that will help you identify this destination.
-* **[!UICONTROL Description]**: enter a description of this destination.
-* **[!UICONTROL Bucket name]**: enter the name of the [!DNL Amazon S3] bucket to be used by this destination.
-* **[!UICONTROL Folder path]**: enter the path to the destination folder that will host the exported files.
-* **[!UICONTROL File type]**: select the format Experience Platform should use for the exported files. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Compression format]**: select the compression type that Experience Platform should use for the exported files.
-* **[!UICONTROL Include manifest file]**: toggle this option on if you'd like the exports to include a manifest JSON file that contains information abut the export location, export size, and more.
+* **[!UICONTROL Name]**: Enter a name that will help you identify this destination.
+* **[!UICONTROL Description]**: Enter a description of this destination.
+* **[!UICONTROL Bucket name]**: Enter the name of the [!DNL Amazon S3] bucket to be used by this destination.
+* **[!UICONTROL Folder path]**: Enter the path to the destination folder that will host the exported files.
+* **[!UICONTROL File type]**: Select the format Experience Platform should use for the exported files. When selecting the [!UICONTROL CSV] option, you can also [configure the file formatting options](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Compression format]**: Select the compression type that Experience Platform should use for the exported files.
+* **[!UICONTROL Include manifest file]**: Toggle this option on if you'd like the exports to include a manifest JSON file that contains information about the export location, export size, and more. The manifest is named using the format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. View a [sample manifest file](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). The manifest file includes the following fields:
+  * `flowRunId`: The [dataflow run](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) which generated the exported file. 
+  * `scheduledTime`: The time in UTC when the file was exported. 
+  * `exportResults.sinkPath`: The path in your storage location where the exported file is deposited. 
+  * `exportResults.name`: The name of the exported file.
+  * `size`: The size of the exported file, in bytes.
 
 >[!TIP]
 >
@@ -126,7 +128,8 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 

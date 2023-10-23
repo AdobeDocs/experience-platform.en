@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure file formatting options for file-based destinations built with Adobe Experience Platform Destination SDK, via the `/destination-servers` endpoint.
 title: File formatting configuration
+exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
 ---
-
 # File formatting configuration
 
 Destination SDK supports a flexible set of features which you can configure according to your integration needs. Among these features is the support for [!DNL CSV] file formatting.
@@ -113,7 +113,11 @@ In the configuration example below, all the CSV options are predefined. The expo
                 "value": ""
             }
         },
-        "maxFileRowCount":5000000
+        "maxFileRowCount":5000000,
+        "includeFileManifest": {
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{ customerData.includeFileManifest }}"
+      }
     }
 ```
 
@@ -154,7 +158,11 @@ In the configuration example below, none of the CSV options are predefined. The 
             "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
          }
       },
-      "maxFileRowCount":5000000
+      "maxFileRowCount":5000000,
+      "includeFileManifest": {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{ customerData.includeFileManifest }}"
+      }
    }
 }
 ```
@@ -172,7 +180,7 @@ Below is a complete reference of all available file formatting options in Destin
 |`templatingStrategy`|Required| For each file formatting option that you configure, you are required to add the parameter `templatingStrategy`, which can have two values: <br><ul><li>`NONE`: use this value if you are not planning to allow users to select between different values for a configuration. See [this configuration](#file-configuration-templating-none) for an example where file formatting options are fixed.</li><li>`PEBBLE_V1`: use this value if you want to allow users to select between different values for a configuration. In this case, you must also set up a corresponding customer data field in the `/destination` endpoint configuration, to surface the various options to users in the UI. See [this configuration](#file-configuration-templating-pebble) for an example where users can select between different values for file formatting options.</li></ul> |-|-|-|
 |`compression.value`|Optional|Compression codec to use when saving data to file. Supported values: `none`, `bzip2`, `gzip`, `lz4`, and `snappy`.|`none`|-|-|
 |`fileType.value`|Optional|Specifies the output file format. Supported values: `csv`, `parquet`, and `json`.|`csv`|-|-|
-|`csvOptions.quote.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets a single character used for escaping quoted values where the separator can be part of the value.|`null`|-|-|
+|`csvOptions.quote.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets a single character used for escaping quoted values where the separator can be part of the value.|`null`| Default value example: `quote.value: "u0000"` --> `male,NULJohn,LastNameNUL`| Custom example: `quote.value: "\""` --> `male,"John,LastName"`|
 |`csvOptions.quoteAll.value`|Optional|*Only for `"fileType.value": "csv"`*. Indicates whether all values should always be enclosed in quotes. Default is to only escape values containing a quote character.|`false`| `quoteAll`:`false` --> `male,John,"TestLastName"`|`quoteAll`:`true` -->`"male","John","TestLastName"`|
 |`csvOptions.delimiter.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets a separator for each field and value. This separator can be one or more characters.|`,`|`delimiter`:`,` --> `comma-separated values"`|`delimiter`:`\t` --> `tab-separated values`|
 |`csvOptions.escape.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets a single character used for escaping quotes inside an already quoted value.|`\`|`"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"`|`"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"`|
@@ -186,6 +194,7 @@ Below is a complete reference of all available file formatting options in Destin
 |`csvOptions.charToEscapeQuoteEscaping.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets a single character used for escaping the escape for the quote character.|`\` when the escape and quote characters are different. `\0` when the escape and quote character are the same.|-|-|
 |`csvOptions.emptyValue.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets the string representation of an empty value.|`""`|`"emptyValue":""` --> `male,"",John`|`"emptyValue":"empty"` --> `male,empty,John`|
 |`maxFileRowCount`|Optional|Indicates the maximum number of rows per exported file, between 1,000,000 and 10,000,000 rows. | 5,000,000 |
+|`includeFileManifest`|Optional| Enables support for exporting a file manifest along with the file exports. The manifest JSON file contains information about the export location, export size, and more. The manifest is named using the format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | View a [sample manifest file](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). The manifest file includes the following fields: <ul><li>`flowRunId`: The [dataflow run](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) which generated the exported file.</li><li>`scheduledTime`: The time in UTC when the file was exported. </li><li>`exportResults.sinkPath`: The path in your storage location where the exported file is deposited. </li><li>`exportResults.name`: The name of the exported file.</li><li>`size`: The size of the exported file, in bytes.</li></ul> |
 
 {style="table-layout:auto"}
 

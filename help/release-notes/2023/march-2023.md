@@ -90,7 +90,7 @@ For more information on Data Prep, please read the [Data Prep overview](../../da
 
 **Fixes and enhancements** {#destinations-fixes-and-enhancements}
 
-We are releasing a bug fix for PGP/GPG encryption in file-based destinations for Real-time CDP. With this change, existing file-based destinations currently using encryption will generate a filename with a different extension than before. 
+We are releasing a bug fix for PGP/GPG encryption in file-based destinations for Real-Time CDP. With this change, existing file-based destinations currently using encryption will generate a filename with a different extension than before. 
 
 - Current extension when using encryption: `filename.csv`
 - Future extension when using encryption: `filename.csv.gpg`

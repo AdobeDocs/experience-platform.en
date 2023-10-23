@@ -1,12 +1,13 @@
 ---
 title: Engage and acquire new customers through prospecting use cases
 description: Learn how to engage and acquire new customers through prospecting use cases, enabled by the partner data support in Real-Time CDP.
+exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 ---
 # Engage and acquire new customers through prospecting use cases
 
 >[!AVAILABILITY]
 >
->* This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
+>* This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
 
 Use third party data support in Real-Time CDP to expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers.
 
@@ -35,6 +36,12 @@ Before you expand Real-Time CDP to engage and acquire new customers, make sure t
 5. As a **customer**, you activate prospect audiences to destinations which are accepting of the identities available in your prospect list.
 6. If needed, work with the **data partner** for last-mile activation of audiences to desired paid-media destinations.
  
+## Video walkthrough {#video-walkthrough}
+
+View the video tutorial below for a walkthrough of how to reach and engage prospect audiences:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
+
 ## How to achieve the use case: Step-by-step instructions {#step-by-step-instructions}
 
 Read through the sections below which include links to further documentation, to complete each of the steps in the high-level overview above.
@@ -102,7 +109,7 @@ Note that the schema is not yet enabled for profile. Toggle the profile button t
 
 #### Add the third-party data governance label to all fields in the schema
 
-Consider adding third-party data governance labels to all of the fields that make up the schema. This is important in order to ensure responsible use of third-party data and minimize the risk of data leakage. Find more information about third-party data governance labels (add link to docs by Jordan)
+Consider adding third-party data governance labels to all of the fields that make up the schema. This is important in order to ensure responsible use of third-party data and minimize the risk of data leakage. Find more information about [third-party data governance labels](../../data-governance/labels/reference.md#partner-ecosystem-labels).
 
 To do this, follow the steps below: 
 
@@ -195,7 +202,11 @@ Read more about [prospect audiences](/help/segmentation/ui/prospect-audience.md)
 
 ### Activate prospect profiles to destinations {#activate-to-destinations}
 
-Make use of the prospect audiences by exporting them to destinations. Currently, only certain destinations such as [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) or the [!BADGE Alpha]{type=Informative} [LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) destination support activation of prospect profiles. 
+Make use of the prospect audiences by exporting them to destinations. Currently, only certain cloud storage destinations support activation of prospect profiles. 
+
+![Destinations which support prospect audiences.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+
+[Read more](/help/destinations/ui/activate-prospect-audiences.md) about activating prospects to cloud storage destinations.
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 

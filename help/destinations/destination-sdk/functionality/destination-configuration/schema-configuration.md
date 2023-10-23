@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure the partner schema for destinations built with Destination SDK.
 title: Partner schema configuration
+exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
 ---
-
 # Partner schema configuration
 
 Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. When data is ingested into Platform, it is structured according to an XDM schema. For more information on the schema composition model, including design principles and best practices, see the [basics of schema composition](../../../../xdm/schema/composition.md).

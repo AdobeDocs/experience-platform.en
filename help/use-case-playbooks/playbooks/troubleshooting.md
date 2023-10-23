@@ -3,8 +3,8 @@ solution: Experience Platform
 title: Troubleshoot issues with playbooks
 description: Learn common issues with playbooks and how to troubleshoot them
 badgeBeta: label="Beta" type="Informative"
+exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
 ---
-
 # (Beta) Troubleshooting and known limitations
 
 >[!AVAILABILITY]
@@ -16,7 +16,3 @@ For the beta release of [!UICONTROL Use Case Playbooks], note the troubleshootin
 ## Known limitations {#known-limitations}
 
 When you create a new instance of a playbook, new assets get generated. For generated schemas however, if a schema gets generated in one instance of a playbook, and you edit it, then another schema *will not* get generated if you enable another instance of the playbook. Instead, you will continue to use the schema you edited within the new instance as well.
-
-
-
-

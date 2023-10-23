@@ -3,6 +3,7 @@ title: Connect Your Snowflake Streaming Account to Adobe Experience Platform
 description: Learn how to connect Adobe Experience Platform to Snowflake Streaming using the Flow Service API.
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
+exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
 ---
 # Stream [!DNL Snowflake] data to Experience Platform using the [!DNL Flow Service] API
 
@@ -180,7 +181,8 @@ curl -X POST \
       "params": {
           "tableName": "ACME",
           "timestampColumn": "dOb",
-          "backfill": "true"
+          "backfill": "true",
+          "timezoneValue": "PST"
       }
   }'
 ```
@@ -192,6 +194,7 @@ curl -X POST \
 | `params.tableName` | The name of the table in your [!DNL Snowflake] database that you want to bring to Platform. |
 | `params.timestampColumn` | The name of the timestamp column that will be used to fetch incremental values. |
 | `params.backfill` | A boolean flag that determines whether data is fetched from the beginning (0 epoch time) or from the time the source is initiated. For more information on this value, read the [[!DNL Snowflake] streaming source overview](../../../../connectors/databases/snowflake-streaming.md).  |
+| `params.timezoneValue` | The timezone value indicates which timezone's current time should be fetched when querying the [!DNL Snowflake] database. This parameter should be provided if the timestamp column in the config is set to `TIMESTAMP_NTZ`. If unprovided, `timezoneValue` defaults to UTC.  |
 
 **Response**
 

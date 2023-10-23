@@ -1,7 +1,7 @@
 ---
 title: Configure datastream overrides
 description: Learn how to configure datastream overrides in the Datastreams UI and activate them via the Web SDK.
-exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
+exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
 ---
 # Configure datastream overrides
 

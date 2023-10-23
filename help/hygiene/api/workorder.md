@@ -1,18 +1,15 @@
 ---
-title: Work order API Endpoint
-description: The /workorder endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for  identities.
+title: Work Order API Endpoint
+description: The /workorder endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for identities.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-hide: true
-hidefromtoc: true
 ---
-# Work order endpoint
+# [!BADGE Beta]{type=Informative} Work order endpoint {#work-order-endpoint}
 
 The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage record delete requests in Adobe Experience Platform.
 
->[!IMPORTANT]
->
->Record delete requests are only available for organizations that have purchased **Adobe Healthcare Shield**.
->
+>[!IMPORTANT] 
+> 
+>The Record Delete feature is currently in Beta and available only in a **limited release**. It is not available to all customers. Record delete requests are only available for organizations in the limited release.
 >
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) instead.
 
@@ -23,6 +20,10 @@ The endpoint used in this guide is part of the Data Hygiene API. Before continui
 ## Create a record delete request {#create}
 
 You can delete one or more identities from a single dataset or all datasets by making a POST request to the `/workorder` endpoint.
+
+>[!IMPORTANT] 
+> 
+>There are different limits for the total number of unique identity record deletes that can be submitted each month. These limits are based on your license agreement. Organizations who have purchased all editions of Adobe Real-Time Customer Data Platform and Adobe Journey Optimizer can submit up to 100,000 identity record deletes each month. Organizations who have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600,000 identity record deletes each month.<br>A single [record delete request through the UI](../ui/record-delete.md) allows you to submit 10,000 IDs at one time. The API method to delete records allows for the submission of 100,000 IDs at one time.<br>It is best practice to submit as many IDs per request as possible, up to your ID limit. When you intend to delete a high volume of IDs, submitting a low volume, or a single ID per record delete request should be avoided.
 
 **API format**
 
