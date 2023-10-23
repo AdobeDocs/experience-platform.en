@@ -1,6 +1,6 @@
 ---
 title: Account audiences
-description: Learn how to create and use account audiences to target account profiles in downstream destinations
+description: Learn how to create and use account audiences to target account profiles in downstream destinations.
 ---
 
 # Account audiences
@@ -11,29 +11,29 @@ Account-based audiences can be used as an input for account-based destinations, 
 
 ## Access {#access}
 
-To access account audiences, select **Audiences** in the **Accounts** section.
+To access account audiences, select **[!UICONTROL Audiences]** in the **[!UICONTROL Accounts]** section.
 
-IMAGE
+![The Audiences button is highlighted within the Accounts section.](../images/ui/account-audiences/select.png)
 
-The Browse page is displayed, showing a list of all the account audiences for the organization.
+The [!UICONTROL Browse] page is displayed, showing a list of all the account audiences for the organization.
 
-IMAGE
+![The account audiences belonging to the organization are displayed.](../images/ui/account-audiences/browse.png)
 
 This view lists information about the audience, including name, profile count, origin, lifecycle status, created date, and last updated date.
 
 ## Create audience {#create}
 
-To create an account audience, select **Create audience** on the Browse page.
+To create an account audience, select **[!UICONTROL Create audience]** on the [!UICONTROL Browse] page.
 
-IMAGE
+![The [!UICONTROL Create audience] button is highlighted on the account audience browse page.](../images/ui/account-audiences/select-create-audience.png)
 
 The Segment Builder appears. The account attributes are displayed on the left navigation bar.
 
-IMAGE
+![The Segment Builder is displayed. Note that only the attributes are displayed.](../images/ui/account-audiences/segment-builder.png)
 
-When creating account audiences, please note that events are listed under **People**, rather than being their own tab, since these attributes are associated with people.
+When creating account audiences, please note that events are listed under **[!UICONTROL People]**, rather than being their own tab, since these attributes are associated with people.
 
-IMAGE
+![The location to find events, which is within the [!UICONTROL People] folder, is highlighted.](../images/ui/account-audiences/activate.png)
 
 For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md)
 
@@ -45,12 +45,12 @@ For more information on using the Segment Builder, please read the [Segment Buil
 
 After creating your account audience, you can activate the audience to other downstream services.
 
-Select the audience you want to activate, followed by **Activate to destination**.
+Select the audience you want to activate, followed by **[!UICONTROL Activate to destination]**.
 
-IMAGE
+![The [!UICONTROL Activate to destination] button is highlighted in the quick actions menu for the selected audience.](../images/ui/account-audiences/activate.png)
 
-The Activate destination page appears. For more information on the activation process, including details on field mappings, please read the ???.
+The [!UICONTROL Activate destination] page appears. For more information on the activation process, including details on field mappings, please read the ???.
 
 ## Next steps {#next-steps}
 
-After reading this guide, you now have a better understanding of how to create and use your prospect audiences in Adobe Experience Platform.
+After reading this guide, you now have a better understanding of how to create and use your account audiences in Adobe Experience Platform.
