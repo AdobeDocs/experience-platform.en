@@ -98,11 +98,11 @@ The following table outlines the accepted values for `eventType`, along with the
 |`advertising.timePlayed` | Describes the amount of time spent by a user on a specific timed media asset. |
 |`application.close` | An application was closed or sent into the background. |
 |`application.launch` | An application was launched or brought into the foreground. |
-|`commerce.backofficeCreditMemoIssued` | |
-|`commerce.backofficeOrderCancelled` | |
-|`commerce.backofficeOrderItemsShipped` | |
-|`commerce.backofficeOrderPlaced` | |
-|`commerce.backofficeShipmentCompleted` | |
+|`commerce.backofficeCreditMemoIssued` | This event signifies that a notice of credit has been issued to a customer. |
+|`commerce.backofficeOrderCancelled` | This event indicates that a previously initiated purchase process has been terminated before completion. |
+|`commerce.backofficeOrderItemsShipped` | This event indicates that the purchased items have been physically shipped to the customer. |
+|`commerce.backofficeOrderPlaced` | This event indicates the placement of an order. |
+|`commerce.backofficeShipmentCompleted` | This event signifies the successful completion of the entire shipment process. |
 |`commerce.checkouts` | A checkout event has occurred for a product list. There can be more than one checkout event if there are multiple steps in a checkout process. If there are multiple steps, the timestamp and referenced page/experience for each event are used to identify each individual event (step), represented in order. |
 |`commerce.productListAdds` | A product has been added to the product list or shopping cart. |
 |`commerce.productListOpens` | A new product list (shopping cart) has been initialized or created. |
@@ -113,27 +113,27 @@ The following table outlines the accepted values for `eventType`, along with the
 |`commerce.purchases` | An order has been accepted. This is the only required action in a commerce conversion. A purchase event must have a product list referenced. |
 |`commerce.saveForLaters` | A product list has been saved for future use, such a product wishlist. |
 |`decisioning.propositionDisplay` | A decisioning proposition was displayed to a person. |
-|`decisioning.propositionDismiss` | |
+|`decisioning.propositionDismiss` | This event indicates that a decision has been made not to engage with the presented offer. |
 |`decisioning.propositionInteract` | A person interacted with a decisioning proposition. |
-|`decisioning.propositionSend` | |
-|`decisioning.propositionTrigger` | |
+|`decisioning.propositionSend` | This event indicates that it has been decided to send to a prospective customer a recommendation or offer for consideration. |
+|`decisioning.propositionTrigger` | This event indicates the activation of a proposition process. A certain condition or action has occurred to prompt the presentation of an offer. |
 |`delivery.feedback` | Feedback events for a delivery, such as an email delivery. |
 |`directMarketing.emailBounced` | An email to a person bounced. |
 |`directMarketing.emailBouncedSoft` | An email to a person soft-bounced. |
 |`directMarketing.emailClicked` | A person clicked a link in a marketing email. |
 |`directMarketing.emailDelivered` | An email was successfully delivered to person's email service |
 |`directMarketing.emailOpened` | A person opened a marketing email. |
-|`directMarketing.emailSent` | |
+|`directMarketing.emailSent` | This indicates that a marketing email has been sent to a person. |
 |`directMarketing.emailUnsubscribed` | A person unsubscribed from a marketing email. |
 |`inappmessageTracking.dismiss` | An in-app message was dismissed. |
 |`inappmessageTracking.display` | An in-app message was displayed. |
 |`inappmessageTracking.interact` | An in-app message was interacted with. |
 |`leadOperation.callWebhook` | A webhook was called in response to a lead. |
-|`leadOperation.changeCampaignStream` | |
-|`leadOperation.changeEngagementCampaignCadence` | |
+|`leadOperation.changeCampaignStream` | This event signifies a shift in the marketing or engagement strategy for a particular business lead. |
+|`leadOperation.changeEngagementCampaignCadence` | This event indicates that there has been a change in how often a lead is engaged with as part of a campaign. |
 |`leadOperation.convertLead` | A lead was converted. |
 |`leadOperation.interestingMoment` | An interesting moment was recorded for a person. |
-|`leadOperation.mergeLeads` | |
+|`leadOperation.mergeLeads` | This event indicates that information from multiple leads, that refer to the same entity, were consolidated. |
 |`leadOperation.newLead` | A lead was created. |
 |`leadOperation.scoreChanged` | The value of the lead's score attribute was changed. |
 |`leadOperation.statusInCampaignProgressionChanged` | A lead's status in a campaign has changed. |
@@ -166,8 +166,8 @@ The following table outlines the accepted values for `eventType`, along with the
 |`web.formFilledOut` | A person filled out a form on a web page. |
 |`web.webinteraction.linkClicks` | A link has been selected one or more times. |
 |`web.webpagedetails.pageViews` | A webpage has received one or more views. |
-|`location.entry` | |
-|`location.exit` | |
+|`location.entry` | This event represents the entry of a person or device at a specific location. |
+|`location.exit` | This event represents the exit of a person or device from a specific location. |
 
 {style="table-layout:auto"}
 
