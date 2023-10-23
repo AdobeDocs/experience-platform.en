@@ -1,16 +1,16 @@
 ---
 title: AI/ML feature pipelines
-description: Learn how you can use Data Distiller to enrich your machine learning pipelines with features derived from Adobe Experience Platform data. Transform raw data into features and deliver the feature data to train or score a model that supports your marketing use cases.
+description: Learn how to use Data Distiller to enrich your machine learning pipelines with features derived from Adobe Experience Platform data. Transform raw data into features and deliver the feature data to train or score a model that supports your marketing use cases.
 ---
 # AI/ML feature pipelines
 
-<!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided Python notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
+<!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
 
 <!--  -->
 
-Data Distiller enables data scientists and engineers to enrich their machine learning pipelines with high-value customer experience data that has been collected and curated in Adobe Experience Platform. From a Python notebook in any environment, you can interactively explore customer data in the Experience Platform, define and compute features from the data, and read the computed features into your machine learning environment for modeling.
+Data Distiller enables data scientists and engineers to enrich their machine learning pipelines with high-value customer experience data that has been collected and curated in Adobe Experience Platform. From a [!DNL Python] notebook in any environment, you can interactively explore customer data in the Experience Platform, define and compute features from the data, and read the computed features into your machine learning environment for modeling.
 
 >[!IMPORTANT]
 >
@@ -26,7 +26,7 @@ Data Distiller enables data scientists and engineers to enrich their machine lea
 
 This workflow requires a working understanding of the various aspects of Adobe Experience Platform. Before beginning this tutorial, please review the documentation for the following concepts:
 
-- How to [Authenticate and access Experience Platform APIs](../../../landing/api-authentication.md)
+- How to [authenticate and access Experience Platform APIs](../../../landing/api-authentication.md)
 - Sandboxes: [Attribute-based access control permissions](../../../access-control/abac/overview.md) and how to create and manage roles, as well as assign the desired resource permissions for these roles.
 - Data Governance: How to [apply data usage labels to datasets and fields, categorizing each](../../../data-governance/labels/overview.md) according to related data governance policies and access control policies.
 
@@ -36,14 +36,14 @@ By reading this document, you have been introduced to the important concepts beh
 
 The documents included in this series of guides, describe the basic steps for creating feature pipelines from Experience Platform to feed custom models in your machine learning environment. You are now ready to establish a connection between Data Distiller and your Jupyter notebook.
 
-- [Connect to Data Distiller from a Python notebook](./establish-connection.md)
+- [Connect to Data Distiller from a [!DNL Python] notebook](./establish-connection.md)
 - [Explore and analyze datasets](./exploratory-analysis.md)
 - [Engineer features for machine learning](./feature-engineering.md)
 - [Export feature datasets](./export-data.md)
 
 ## Additional resources
 
-- [aepp](https://github.com/adobe/aepp): an Adobe-managed open-source Python library for making requests to Data Distiller and other Experience Platform services from Python code.
+- [aepp](https://github.com/adobe/aepp): an Adobe-managed open-source [!DNL Python] library for making requests to Data Distiller and other Experience Platform services from [!DNL Python] code.
 
 <!-- Old content below -->
 
