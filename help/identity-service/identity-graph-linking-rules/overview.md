@@ -46,7 +46,7 @@ You can use namespace limits to define the maximum number of identities that can
 
 ### Identity optimization algorithm
 
-The identity optimization algorithm is a rule that help ensure that an identity graph is representative of a single person, and therefore, prevents the unwanted merging of identities on Real-Time Customer Profile.
+The identity optimization algorithm is a rule that helps ensure that an identity graph is representative of a single person, and therefore, prevents the unwanted merging of identities on Real-Time Customer Profile.
 
 #### Input parameters
 
@@ -65,13 +65,22 @@ Upon ingesting new identities, Identity Service checks if the new identities and
 
 +++
 
-<!-- The identity optimization algorithm is a rule that ensures that the limits are enforced. The algorithm honors the most recent links and removes the oldest links to make sure that a given graph stays within the limits that you have defined.
++++Example #2: Shared device case two
+
++++
+
++++Example #3: Same timestamp event
+
++++
+
+The identity optimization algorithm is a rule that ensures that the limits are enforced. The algorithm honors the most recent links and removes the oldest links to make sure that a given graph stays within the limits that you have defined.
 
 The following is a list of implications of the algorithm on associating anonymous events to known identifiers:
 
 * The ECID will be associated to the last authenticated user if the following conditions are met:
   * If CRM IDs are merged by ECID (shared device).
-  * If limits are configured to just one CRM ID. -->
+  * If limits are configured to just one CRM ID. 
+
 
 ### Priority
 
