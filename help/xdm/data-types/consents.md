@@ -303,9 +303,9 @@ The following table outlines the accepted values for `preferred`. The `preferred
 | `inHome` | This preference indicates the customer's consent to receive messages while at home. These messages may be delivered through smart home devices or other home-based communication channels. |
 | `iot` | This preference denotes the customer's consent to receive messages related to the Internet of Things (IoT). These messages may be delivered through connected devices and systems within their environment. |
 | `social` | This preference indicates the customer's consent to receive communications through social media platforms.  |
-| `other` | This category encompasses channels that do not fit into standard categories. It represents alternative or specialized communication channels that may be specific to a particular business or industry. |
-| `none` | This preference indicates that the customer does not have a preferred channel. They may not have specified a particular medium for receiving communications. |
-| `unknown` | This preference signifies that the customer's preferred channel is not known or has not been specified. This could occur if the customer has not provided explicit consent or preference information. |
+| `other` | This preference encompasses channels that do not fit into standard categories. It represents alternative or specialized communication channels that may be specific to a particular business or industry. |
+| `none` | This preference indicates that the customer does not have a preferred communication channel. |
+| `unknown` | This preference signifies that the customer's preferred communication channel is not known or has not been specified. This could occur if the customer has not provided explicit consent or preference information. |
 
 {style="table-layout:auto"}
 
