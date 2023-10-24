@@ -369,7 +369,7 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
-## Anonymous block
+## Anonymous block {#anonymous-block}
 
 An anonymous block consists of two sections: executable and exception-handling sections. In an anonymous block, the executable section is mandatory. However, the exception-handling section is optional.
 
@@ -404,6 +404,109 @@ EXCEPTION
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
 $$END;
+```
+
+### Conditional statements in an anonymous block {#conditional-anonymous-block-statements}
+
+The IF-THEN-ELSE control structure enables the conditional execution of a list of statements when a condition is evaluated as TRUE. This control structure is only applicable within an anonymous block. If this structure is used as a standalone command, it results in a syntax error ("Invalid command outside Anonymous Block"). 
+
+The code snippet below demonstrates the correct format for an IF-THEN-ELSE conditional statements in an anonymous block.
+
+```javascript
+IF booleanExpression THEN
+   List of statements;
+ELSEIF booleanExpression THEN 
+   List of statements;
+ELSEIF booleanExpression THEN 
+   List of statements;
+ELSE
+   List of statements;
+END IF
+```
+
+**Example**
+
+The example below executes `SELECT 200;`.
+
+```sql
+$$BEGIN
+    SET @V = SELECT 2;
+    SELECT @V;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT 200;
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT 'DEFAULT';
+    END IF;   
+
+ END$$;
+```
+
+This structure can be used in combination with `raise_error();` to return a custom error message. The code block seen below terminates the anonymous block with "custom error message".
+
+**Example**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 5;
+    SELECT @V;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT 200;
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT raise_error('custom error message');
+    END IF;   
+
+ END$$;
+```
+
+#### Nested IF statements
+
+Nested IF statements are supported within anonymous blocks.
+
+**Example**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 1;
+    IF @V = 1 THEN
+       SELECT 100;
+       IF @V > 0 THEN
+         SELECT 1000;
+       END IF;   
+    END IF;   
+
+ END$$; 
+```
+
+#### Exception blocks
+
+Exception blocks are supported within anonymous blocks.
+
+**Example**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 2;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT raise_error(concat('custom-error for v= ', '@V' ));
+
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT 'DEFAULT';
+    END IF;  
+EXCEPTION WHEN OTHER THEN 
+  SELECT 'THERE WAS AN ERROR';    
+ END$$;
 ```
 
 ### Auto to JSON {#auto-to-json}
