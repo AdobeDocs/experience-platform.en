@@ -1,39 +1,53 @@
 ---
 title: Identity Namespace Overview
-description: Identity namespaces are a component of Identity Service that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name@email.com" as an email address or "443522" as a numeric CRM ID.
+description: Learn about identity namespaces in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 ---
 # Identity namespace overview
 
-Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID. 
+Read the following document to learn more about what you can do with identity namespaces in Adobe Experience Platform Identity Service.
 
 ## Getting started
 
-Working with identity namespaces requires an understanding of the various Adobe Experience Platform services involved. Before beginning to work with namespaces, please review the documentation for the following services:
+Identity namespaces requires an understanding of various Adobe Experience Platform services. Before beginning to work with namespaces, please review the documentation for the following services:
 
-- [[!DNL Real-Time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
-- [[!DNL Identity Service]](./home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
-- [[!DNL Privacy Service]](../privacy-service/home.md): Identity namespaces are used in compliance requests for legal privacy regulations like the General Data Protection Regulation (GDPR). Each privacy request is made relative to a namespace in order to identify which consumers' data should be affected.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
+* [[!DNL Identity Service]](./home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
+* [[!DNL Privacy Service]](../privacy-service/home.md): Identity namespaces are used in compliance requests for legal privacy regulations like the General Data Protection Regulation (GDPR). Each privacy request is made relative to a namespace in order to identify which consumers' data should be affected.
 
 ## Understanding identity namespaces
 
-A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments, as when [!DNL Real-Time Customer Profile] merges profile data, both the identity value and the namespace must match.
+A fully qualified identity includes two components: an **identity value** and an **identity namespace**. For example, if the value of an identity is `scott@acme.com`, then a namespace provides context to this value by distinguishing it as an email address. Similarly, a namespace can distinguish `555-123-456` as a phone number, and `3126ABC` as a CRM ID. Essentially, **a namespace provides context to a given identity**. When matching record data across profile fragments, as when [!DNL Real-Time Customer Profile] merges profile data, both the identity value and the namespace must match.
 
-For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore [!DNL Platform] is able to see that these fragments are actually the same individual and brings the data together in the identity graph for the individual.
+For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore Experience Platform is able to see that these fragments are actually the same individual and brings the data together in the identity graph for the individual.
 
 ![](images/identity-service-stitching.png)
 
-### Identity types {#identity-types}
+### Components of a namespace
+
+A namespace consists of the following components:
+
+* **Display name**: The user-friendly name for a given namespace.
+* **Identity symbol**: A code used internally by Identity Service to represent a namespace.
+* **Identity type**: The classification of a given namespace.
+* **Description**: (Optional) Any supplemental information that you can provide regarding a given namespace.
+
+### Identity type {#identity-type}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="Specify identity type"
->abstract="The identity type controls whether or not data is stored to the identity graph. Non-people identifiers will not be stored, and all other identity types will."
+>abstract="The identity type controls whether or not data is stored to the identity graph. Identity graphs are not generated for the following identity types: non-person identifiers and partner ID."
 >text="Learn more in documentation"
 
-Data can be identified by several different identity types. The identity type is specified at the time the identity namespace is created and controls whether or not the data is persisted to the identity graph and any special instructions for how that data should be handled. All identity types except **Non-people identifier** follow the same behavior of stitching a namespace and its corresponding ID value to an identity graph cluster. Data is not stitched together when using **Non-people identifier**.
+One element of an identity namespace is the **identity type**. The identity type determines:
 
-The following identity types are available within [!DNL Platform]:
+* Whether an identity graph will be generated:
+  * Identity graphs are not generated for the following identity types: non-person identifiers and partner ID.
+  * Identity graphs are generated for all other identity types.
+* Which identities are removed from the identity graph when system limits are reached. For more information, read the [guardrails for identity data](guardrails.md).
+
+The following identity types are available within Experience Platform:
 
 | Identity type | Description |
 | --- | --- |
@@ -42,7 +56,7 @@ The following identity types are available within [!DNL Platform]:
 | Device ID | Device IDs identify hardware devices, such as IDFA (iPhone and iPad), GAID (Android), and RIDA (Roku), and can be shared by multiple people in households.|
 | Email address | Email addresses are often associated with a single person and therefore can be used to identify that person across different channels. Identities of this type include personally identifiable information (PII). This is an indication to [!DNL Identity Service] to handle the value sensitively.|
 | Non-people identifier | Non-people IDs are used for storing identifiers that require namespaces but are not connected to a person cluster. For example, a product SKU, data related to products, organizations, or stores. |
-| Partner ID [!BADGE Beta]{type=Informative} | <ul><li>Partner IDs are identifiers used by data partners to represent people. Partner IDs are often pseudonymous so as to not reveal a person's true identity, and may be probabilistic. In Real-Time Customer Data Platform, Partner IDs are used primarily for expanded audience activation and data enrichment, and not for building identity graph linkages.</li><li>Identity graphs are not generated when ingesting an identity that includes an identity namespace specified as Partner ID type.</li><li>Failure to ingest partner data using the identity type of Partner ID could result in reaching system graph limitations on Identity Service, as well as unwanted merging of profiles.</li><ul> |
+| Partner ID | <ul><li>Partner IDs are identifiers used by data partners to represent people. Partner IDs are often pseudonymous so as to not reveal a person's true identity, and may be probabilistic. In Real-Time Customer Data Platform, Partner IDs are used primarily for expanded audience activation and data enrichment, and not for building identity graph linkages.</li><li>Identity graphs are not generated when ingesting an identity that includes an identity namespace specified as Partner ID type.</li><li>Failure to ingest partner data using the identity type of Partner ID could result in reaching system graph limitations on Identity Service, as well as unwanted merging of profiles.</li><ul> |
 | Phone number | Phone numbers are often associated with a single person and therefore can be used to identify that person across different channels. Identities of this type include PII. This is indication to [!DNL Identity Service] to handle the value sensitively. |
 
 {style="table-layout:auto"}
@@ -70,7 +84,7 @@ The following standard namespaces are provided for use by all organizations with
 | Phone (E.164) | A namespace that represents raw phone numbers that need to be hashed in E.164 format. The E.164 format includes a plus sign (`+`), an international country calling code, a local area code, and a phone number. For example: `(+)(country code)(area code)(phone number)`. |
 | Phone (SHA256) | A namespace that represents phone numbers that need to be hashed using SHA256. You must remove symbols, letters, and any leading zeroes. You must also add the country calling code as a prefix. |
 | Phone (SHA256_E.164) | A namespace that represents raw phone numbers that need to be hashed using both SHA256 and E.164 format. |
-| TNTID | A namespace that represents Adobe Target. See the following document on [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) fore more information. |
+| TNTID | A namespace that represents Adobe Target. See the following document on [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) for more information. |
 | Windows AID | A namespace that represents a Windows Advertising ID. See the following document on [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) for more information. |
 
 ### View identity namespaces {#view-identity-namespaces}
@@ -82,43 +96,33 @@ The following standard namespaces are provided for use by all organizations with
 
 To view identity namespaces in the UI, select **[!UICONTROL Identities]** in the left navigation and then select **[!UICONTROL Browse]**.
 
-![browse](./images/browse.png)
+A directory of namespaces in your organization appears, displaying information on their names, identity symbols, last updated dates, corresponding identity types, and description.
 
-A list of identity namespaces appears in the main interface of the page, displaying information on their names, identity symbols, last updated date, and whether they are a standard or a custom namespace. The right rail contains information on [!UICONTROL Identity graph strength].
+![A directory of custom identity namespaces in your organization.](./images/namespace/browse.png)
 
-![identities](./images/identities.png)
-
-Platform also provides namespaces for integration purposes. These namespaces are hidden by default as they are used to connect with other systems, and not used to stitch identities. To view integration namespaces, select **[!UICONTROL View integration identities]**.
-
-![view-integration-identities](./images/view-integration-identities.png)
-
-Select an identity namespace from the list to view information on a specific namespace. Selecting an identity namespace updates the display on the right rail to show metadata regarding the identity namespace that you selected, including the number of identities ingested and the number of records failed and skipped.
-
-![select-namespace](./images/select-namespace.png)
-
-## Manage custom namespaces {#manage-namespaces}
+## Create custom namespaces {#create-namespaces}
 
 Depending on your organizational data and use cases, you may require custom namespaces. Custom namespaces can be created using the [[!DNL Identity Service]](./api/create-custom-namespace.md) API or through the UI.
 
-To create a custom namespace using the UI, navigate to the **[!UICONTROL Identities]** workspace, select **[!UICONTROL Browse]**, and then select **[!UICONTROL Create identity namespace]**.
+To create a custom namespace, select **[!UICONTROL Create identity namespace]**.
 
-![select-create](./images/select-create.png)
+![The create identity namespace button in the identities workspace.](./images/namespace/create-identity-namespace.png)
 
-The **[!UICONTROL Create identity namespace]** dialog box appears. Provide a unique **[!UICONTROL Display name]** and **[!UICONTROL Identity symbol]** and then select the identity type you would like to create. You can also add an optional description to add further information about the namespace. All the identity types except **Non-people identifier** follows the same behavior of stitching. If you select **Non-people identifier** as identity type when creating a namespace, stitching does not occur. For specific information regarding each identity type, refer to the table on [identity types](#identity-types).
+The [!UICONTROL Create identity namespace] window appears. First, you must provide a display name and an identity symbol for the custom namespace that you want to create. You can also optionally provide a description to add more context on the custom namespace that you are creating.
 
-When finished, select **[!UICONTROL Create]**.
+![A pop-up window where you can input information regarding your custom identity namespace.](./images/namespace/name-and-symbol.png)
+
+Next, select the the identity type that you want to assign to the custom namespace. When finished, select **[!UICONTROL Create]**.
+
+![A selection of identity types that you can choose from and assign to your custom identity namespace.](./images/namespace/select-identity-type.png)
 
 >[!IMPORTANT]
 >
->Namespaces that you define are private to your organization and require a unique identity symbol in order to be created successfully.
-
-![create-identity-namespace](./images/create-identity-namespace.png)
-
-Similar to standard namespaces, you can select a custom namespace from the **[!UICONTROL Browse]** tab to view its details. However, with a custom namespace you can also edit its display name and description from the details area.
-
->[!NOTE]
+>* Namespaces that you define are private to your organization and require a unique identity symbol in order to be created successfully.
 >
->Once a namespace has been created, it cannot be deleted and its identity symbol and type cannot be changed.
+>* Once a namespace has been created, it cannot be deleted and its identity symbol and type cannot be changed.
+>
+>* Duplicate namespaces are not supported. You cannot use an existing display name and identity symbol when creating a new namespace. 
 
 ## Namespaces in identity data
 

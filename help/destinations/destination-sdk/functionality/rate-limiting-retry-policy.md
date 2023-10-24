@@ -1,6 +1,7 @@
 ---
 description: Learn how Experience Platform handles different types of errors returned by streaming destinations and how it retries to send data to the destination platform.
 title: Rate limiting and retry policy for streaming destinations built with Destination SDK
+exl-id: aad10039-9957-4e9e-a0b7-7bf65eb3eaa9
 ---
 # Rate limiting and retry policy for streaming destinations built with Destination SDK
 

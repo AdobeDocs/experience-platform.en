@@ -19,7 +19,6 @@ feature: Dashboards
   * [Audiences](guides/audiences.md)
   * [Destinations](guides/destinations.md)
   * [License usage](guides/license-usage.md)
-  * [License usage (limited release)](guides/license-usage-limited.md)
 * Customize dashboards {#customize}  
   * [Customization overview](customize/overview.md)
   * [Modify dashboards](customize/modify.md)

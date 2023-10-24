@@ -1,12 +1,13 @@
 ---
 title: Use Partner-Aided Visitor Recognition to Personalize Onsite Experiences
 description: Learn how to use partner-aided visitor recognition to deliver personalized onsite experiences to your visitors.
+exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
 ---
 # Use partner-aided visitor recognition to personalize onsite experiences
 
 >[!AVAILABILITY]
 >
->This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
+>This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
 
 Learn how to use partner-aided recognition to deliver personalized experiences to your web property visitors. Use this tutorial to understand the implementation sequence of various elements in Experience Platform and other Experience Cloud solutions to display a personalized experience to authenticated and unauthenticated visitors.
 
@@ -43,6 +44,12 @@ To successfully implement this use case, you must use multiple areas of Real-Tim
   * [Edge segmentation](/help/segmentation/ui/edge-segmentation.md)
   * [Edge Personalization destinations](/help/destinations/destination-types.md#edge-personalization-destinations)
   * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (or a personalization platform of your choice. This use case tutorial highlights Adobe Target as personalization engine)
+
+## Video walkthrough {#video-walkthrough}
+
+View the video tutorial below for a walkthrough of how personalize onsite experiences for unknown visitors:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
@@ -235,9 +242,13 @@ Input `interact` in the search box, refresh the page, and you should see network
 
 You are now ready to create and activate audiences for personalization.
 
-#### Set up edge segmentation
+#### Create audience and set up edge segmentation
 
-Set up [edge segmentation](/help/segmentation/ui/edge-segmentation.md) so the audience membership of your visitors is evaluated in real-time, as they visit your web property.  
+In the Platform UI, navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and create an audience to capture your website visitors. 
+
+![View of how to navigate to audiences.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+
+You must set up your audience with [edge segmentation](/help/segmentation/ui/edge-segmentation.md) so the audience membership of your visitors is evaluated in real-time, as they visit your web property.  
 
 Make sure to also set up an [active-on-edge merge policy](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) for the edge audiences.
 
