@@ -7,7 +7,7 @@ description: The /tools endpoint in the Sandbox Tooling API allows you to list a
 
 ## Job details
 
-<base service URL>/tools/job/{jobId}
+/tools/job/{jobId}
 
 ## The UI needs to display all dependent Artifacts related one or more root Artifacts
 

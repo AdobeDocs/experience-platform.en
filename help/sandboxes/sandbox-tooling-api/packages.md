@@ -95,7 +95,7 @@ A successful response returns your newly created package, with its corresponding
 
 You can update a package, by making a PUT request to the `/packages` endpoint.
 
-### Add artifacts to a package {add-artifacts}
+### Add artifacts to a package {#add-artifacts}
 
 To add artifacts to a package, you must provide an `id` and `action`.
 
@@ -173,7 +173,7 @@ A successful response returns your updated package, with its corresponding packa
 }
 ```
 
-### Delete artifacts from a package {delete-artifacts}
+### Delete artifacts from a package {#delete-artifacts}
 
 To delete artifacts from a package, you must provide an `id` and `action`.
 
@@ -244,7 +244,7 @@ A successful response returns your updated package, with its corresponding packa
 }
 ```
 
-### Update metadata fields in a package {update-metadata}
+### Update metadata fields in a package {#update-metadata}
 
 >NOTE
 >
@@ -381,6 +381,7 @@ curl -X GET \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
+
 | Property | Description | Type | Mandatory |
 | --- | --- | --- | --- |
 | `expiryPeriod` | Defines the user-specified custom time-to-live (in days) to calculate the package expiration date at the time of publishing the package. This value should not be negative.<br> If no value is specified, the default will be calculated as 90 (days) from the date of publishing. | Integer | No |
@@ -471,7 +472,7 @@ A successful response returns details for the queried package ID, including the 
 }
 ```
 
-## List packages {list-packages}
+## List packages {#list-packages}
 
 You can list all packages in your organization, by making a GET request to the `/packages` endpoint.
 
@@ -576,7 +577,7 @@ A successful response returns a list of packages belonging to your organization,
 }
 ```
 
-## Import a package {import}
+## Import a package {#import}
 
 You can import a **PUBLISHED** package by making a GET request to the `/packages` endpoint while specifying the ID of the package you want to import.
 
@@ -713,7 +714,7 @@ curl -X GET \
 ]
 ```
 
-## Submit an import {submit-import}
+## Submit an import {#submit-import}
 
 You can submit an import once you have reviewed conflicts and provided substitutions. The result is provided as a payload, which starts the Import job into the x-gw-ims-org-id and x-sandbox-name provided in HTTP headers.
 
@@ -777,7 +778,7 @@ curl -X GET \
 }
 ```
 
-## List all dependent objects {dependent-objects}
+## List all dependent objects {#dependent-objects}
 
 List all dependent objects for the exported objects in a package by making a POST request to the `/packages` endpoint while specifying the ID of the package.
 
@@ -856,7 +857,7 @@ A successful response returns a list of children for the objects.
 ]
 ```
 
-## Check role-based permissions to import all package artifacts (Pre-Flight) {role-based-permissions}
+## Check role-based permissions to import all package artifacts (Pre-Flight) {#role-based-permissions}
 
 You can check if you have permissions to import package artifacts by making a GET request to the `/packages` endpoint while specifying the ID of the package and the target sandbox name.
 
@@ -1000,7 +1001,7 @@ A successful response returns resource permissions for the target sandbox.
 }
 ```
 
-## List export/import jobs {list-jobs}
+## List export/import jobs {#list-jobs}
 
 You can list current export/import jobs by making a GET request to the `/packages` endpoint.
 
@@ -1012,7 +1013,7 @@ GET /packages/jobs?{QUERY_PARAMS}
 
 | Parameter | Description |
 | --- | --- |
-| {QUERY_PARAMS} | Optional query parameters to filter results by. See the section on [query parameters](./appendix.md) for more information. |.
+| {QUERY_PARAMS} | Optional query parameters to filter results by. See the section on [query parameters](./appendix.md) for more information. |
 
 **Request**
 
