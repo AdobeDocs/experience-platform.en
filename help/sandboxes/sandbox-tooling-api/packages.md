@@ -6,7 +6,7 @@ description: The /packages endpoint in the Sandbox Tooling API allows you to pro
 
 Sandbox tooling allows you to select different artifacts and export them into a package. A package can consist of a single object or multiple objects. Any objects that are included in a package must be from the same sandbox. 
 
-The `/packages` endpoint in the sandbox tooling API allows you to  programmatically manage packages in your organization.
+The `/packages` endpoint in the sandbox tooling API allows you to programmatically manage packages in your organization.
 
 ## Create a package {#create}
 
