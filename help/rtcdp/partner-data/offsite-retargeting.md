@@ -1,25 +1,23 @@
 ---
-title: Offsite Retargeting of Unknown Visitors
+title: Offsite Retargeting of Unauthenticated Visitors
 description: Learn how to 
 ---
 
-# Offsite retargeting of unknown visitors
+# Offsite retargeting of unauthenticated visitors
 
 >[!AVAILABILITY]
 >
 >This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information.
 
-Learn how to build an audience of unknown visitors and retarget them using partner provided addressable IDs.
+Learn how to build an audience of unauthenticated visitors and retarget them using partner provided addressable IDs.
 
 IMAGE
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
-When planning on retargeting unknown visitors, please consider the following prerequisites during your planning process:
+When planning on retargeting unauthenticated visitors, please consider the following prerequisites during your planning process:
 
-- Is all the data I need imported?
 - Have I set up the partner IDs with the proper identity namespaces?
-- Do the destinations I want to activate my audience to support enrichment data?
 
 Additionally, in order to implement the use case, you will make use of the following Real-time CDP functionality and UI elements. Ensure that you have the necessary attribute-based access control permissions for all these areas or ask your system administrator to grant you the necessary permissions.
 
@@ -29,7 +27,9 @@ Additionally, in order to implement the use case, you will make use of the follo
 
 ## Bringing partner provided IDs forward
 
-To create an audience of unknown visitors, you'll first need to bring forth the partner provided IDs from the event dataset into the profile records. You can do this by utilizing computed attributes.
+To create an audience of unauthenticated visitors, you'll first need to bring forth the partner provided IDs from the event dataset into the profile records. You can do this by utilizing computed attributes.
+
+Computed attributes let you quickly convert profile behavioral data into aggregated values at the profile level. This lets you 
 
 To access computed attributes, select **Profiles** followed by **Computed attributes** and **Create computed attribute**.
 
@@ -73,7 +73,7 @@ Select the newly added **Page View** event. Change the lookback period from **An
 
 IMAGE
 
-After adding your event, you'll need to add an attribute. Since you're dealing with unknown visitors, search for and add the **PartnerID** to the attributes section of the canvas. Additionally, search for **Personal Email** and add the **Address** attribute below **PartnerID** to the attributes section of the canvas.
+After adding your event, you'll need to add an attribute. Since you're dealing with unauthenticated visitors, search for and add the **PartnerID** to the attributes section of the canvas. Additionally, search for **Personal Email** and add the **Address** attribute below **PartnerID** to the attributes section of the canvas.
 
 IMAGE
 
