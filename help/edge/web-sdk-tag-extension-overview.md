@@ -1,8 +1,8 @@
 ---
 title: Adobe Experience Platform Web SDK extension
 description: Learn about the Web SDK tag extension in Adobe Experience Platform.
+exl-id: 987a6675-4d1f-4a5a-b721-991ae5a9a3f4
 ---
-
 # Adobe Experience Platform Web SDK extension
 
 >[!NOTE]

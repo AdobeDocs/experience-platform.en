@@ -77,6 +77,8 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Alerts] | [!UICONTROL Resolve Alerts] | Access to read, edit, and delete alerts. |
 | [!DNL Alerts] | [!UICONTROL View Alerts] | Read-only access for alerts. |
 | [!DNL Alerts] | [!UICONTROL Manage Alerts] | Access to read, create, edit, and delete alerts history. |
+| [!DNL Computed Attributes] | [!UICONTROL View Computed attributes] | Read-only access for computed attributes tab, inventory, and details. |
+| [!DNL Computed Attributes] | [!UICONTROL Manage Computed attributes] | Access to read, create, delete drafts, and deactivate computed attributes. |
 | [!DNL Data Hygiene] | [!UICONTROL View Data Hygiene] | Read-only access for data hygiene.|
 | [!DNL Data Hygiene] | [!UICONTROL Manage Data Hygiene] | Access to read, create, edit, and delete data hygiene. |
 | [!DNL Data Modeling] | [!UICONTROL Manage Schemas] | Access to read, create, edit, and delete schemas and related resources. |
@@ -93,7 +95,11 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Profile Management] | [!UICONTROL Manage Merge Policies] | Access to read, create, edit, and delete merge policies. |
 | [!DNL Profile Management] | [!UICONTROL View Merge Policies] | Read-only access to available merge policies. |
 | [!DNL Profile Management] | [!UICONTROL Export Audience for Segment] | Ability to export an evaluated audience segment to a dataset. |
-| [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | Ability to generate profiles for an audience by evaluating a segment definition.. |
+| [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | Ability to generate profiles for an audience by evaluating a segment definition. |
+| [!DNL Profile Management] | [!UICONTROL View B2B AI] | Read-only access to settings and configurations for all B2B AI/ML services. |
+| [!DNL Profile Management] | [!UICONTROL Manage B2B AI] | Access to read, create, edit, and delete settings and configurations for all B2B AI/ML services. |
+| [!DNL Profile Management] | [!UICONTROL View B2B Profile] | Read-only access to B2B entity profiles (such as Account, Opportunity, and so on), settings and configurations for all B2B AI/ML services, and B2B dashboard widgets. |
+| [!DNL Profile Management] | [!UICONTROL Manage B2B Profile] | Access to read, create, edit, and delete B2B entity profiles (such as Account, Opportunity, and so on). Read-only access for settings and configurations for all B2B AI/ML services, and B2B dashboard widgets. |
 | [!DNL Identity Management] | [!UICONTROL Manage Identity Namespaces] | Access to read, create, edit, and delete identity namespaces. |
 | [!DNL Identity Management] | [!UICONTROL View Identity Namespaces] | Read-only access for identity namespaces. |
 | [!DNL Identity Management] | [!UICONTROL View Identity Graph] | Read-only access for identity graphs. |

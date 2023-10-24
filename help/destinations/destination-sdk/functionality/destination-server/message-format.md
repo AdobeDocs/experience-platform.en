@@ -1,8 +1,8 @@
 ---
 description: This page addresses the message format and the profile transformation in data exported from Adobe Experience Platform to destinations.
 title: Message format
+exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
 ---
-
 # Message format
 
 ## Prerequisites - Adobe Experience Platform concepts {#prerequisites}

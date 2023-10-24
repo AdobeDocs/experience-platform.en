@@ -11,31 +11,37 @@ exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 
 For more information about the concepts and features of [!DNL Query Service], see the [Query Service overview](../home.md). To learn more about how to navigate the Query Service user interface on [!DNL Platform], see the [Query Service UI overview](./overview.md).
 
+>[!NOTE]
+>
+>Certain Query Service functionality is not provided by the legacy version of the Query Editor. The screenshots used in this document are taken using the enhanced version of the Query Editor unless otherwise stated. See the section on the [enhanced Query Editor](#enhanced-editor-toggle) for more details.
+
 ## Getting started {#getting-started}
 
 [!DNL Query Editor] provides flexible execution of queries by connecting to [!DNL Query Service], and queries only run while this connection is active.
 
-### Connecting to [!DNL Query Service] {#connecting-to-query-service}
-
-[!DNL Query Editor] takes a few seconds to initialize and connect to [!DNL Query Service] when it is opened. The console tells you when it is connected, as shown below. If you attempt to run a query before the editor has connected, it delays execution until the connection is complete. 
-
-![The console output of the Query Editor upon initial connection.](../images/ui/query-editor/connect.png)
-
-### How queries are run from [!DNL Query Editor] {#run-a-query}
-
-Queries executed from [!DNL Query Editor] run interactively which means that if you close the browser or navigate away, the query is canceled. The same is true for queries made to generate datasets from query outputs. 
-
-## Query authoring using [!DNL Query Editor] {#query-authoring}
-
-Using [!DNL Query Editor], you can write, execute, and save queries for customer experience data. All queries executed, or saved in [!DNL Query Editor] are available to all users in your organization with access to [!DNL Query Service].
-
-### Accessing [!DNL Query Editor] {#accessing-query-editor}
+## Accessing [!DNL Query Editor] {#accessing-query-editor}
 
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Queries]** in the left navigation menu to open the [!DNL Query Service] workspace. Next, to start writing queries, select **[!UICONTROL Create Query]** at the top right of the screen. This link is available from any of the pages in the [!DNL Query Service] workspace. 
 
 ![The Queries workspace overview tab with Create query highlighted.](../images/ui/query-editor/create-query.png)
 
-### Enhanced Query Editor toggle {#enhanced-editor-toggle}
+### Connecting to [!DNL Query Service] {#connecting-to-query-service}
+
+The Query Editor takes a few seconds to initialize and connect to Query Service when it is opened. The console tells you when it is connected, as shown below. If you attempt to run a query before the editor has connected, it delays execution until the connection is complete. 
+
+![The console output of the Query Editor upon initial connection.](../images/ui/query-editor/connect.png)
+
+### How queries are run from [!DNL Query Editor] {#run-a-query}
+
+Queries executed from [!DNL Query Editor] run interactively which means that if you close the browser or navigate away, the query is cancelled. The same is true for queries made to generate datasets from query outputs.
+
+The Enhanced edition of the Query Editor allows you to write more than one query in the Query Editor and execute all queries sequentially. See the section on [executing multiple sequential queries](#execute-multiple-sequential-queries) for more information.
+
+## Query authoring using [!DNL Query Editor] {#query-authoring}
+
+Using [!DNL Query Editor], you can write, execute, and save queries for customer experience data. All queries executed, or saved in [!DNL Query Editor] are available to all users in your organization with access to [!DNL Query Service].
+
+## Enhanced Query Editor toggle {#enhanced-editor-toggle}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_enhancedEditorToggle"
@@ -56,7 +62,30 @@ To enable dark or light themes, select the settings icon (![A settings icon.](..
 
 ![The Query Editor with the settings icon and Enable dark theme dropdown menu option highlighted.](../images/ui/query-editor/query-editor-settings.png)
 
-### Writing queries {#writing-queries}
+### Execute multiple sequential queries {#execute-multiple-sequential-queries}
+
+The Enhanced edition of the Query Editor allows you to write more than one query in the Query Editor and execute all queries in a sequential manner.
+
+The execution of multiple queries in a sequence each generate a log entry. However, only the results of the first query display in the Query Editor console. Check the query log if you need to troubleshoot or confirm the queries that were executed. See the [query logs documentation](./query-logs.md) for more information. 
+
+>[!NOTE]
+> 
+>If a CTAS query is executed after the first query in the Query Editor, a table is still created however there is no output on the Query Editor console.
+
+### Execute selected query {#execute-selected-query}
+
+If you have written multiple queries but need to execute only one query, you can highlight your chosen query and select the 
+[!UICONTROL Run selected query] icon. This icon is disabled by default unless you select a query in the editor.
+
+![The Query Editor with the [!UICONTROL Run selected query] icon highlighted.](../images/ui/query-editor/run-selected-query.png)
+
+### Result count {#result-count}
+
+The Query Editor has a maximum 50,000 row output. However, only 50 rows are displayed at one time in the Query Editor console. To change the number of rows displayed in the console, select the **[!UICONTROL Result count]** dropdown and choose from either 50, 100, 150, 300, and 500 values.
+
+![The Query Editor with the Result count dropdown highlighted.](../images/ui/query-editor/result-count.png)
+
+## Writing queries {#writing-queries}
 
 [!UICONTROL Query Editor] is organized to make writing queries as easy as possible. The screenshot below shows how the editor appears in the UI, with the SQL entry field and **Play** highlighted.
 
@@ -64,7 +93,7 @@ To enable dark or light themes, select the settings icon (![A settings icon.](..
 
 To minimize your development time, it is recommended that you develop your queries with limits on the rows returned. For example, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. After you have verified that your query produces the expected output, remove the limits and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. 
 
-### Writing tools in [!DNL Query Editor] {#writing-tools}
+## Writing tools in [!DNL Query Editor] {#writing-tools}
 
 - **Automatic syntax highlighting:** Makes reading and organizing SQL easier.
 
@@ -77,6 +106,18 @@ To minimize your development time, it is recommended that you develop your queri
 - **Table and field auto-complete:** Start typing the table name you want to `SELECT` from, then use the arrow keys to navigate to the table you are looking for, and press **Enter**. Once a table is selected, autocomplete recognizes fields in that table. 
 
 ![The Query Editor input displaying drop down table name suggestions.](../images/ui/query-editor/tables-auto.png)
+
+### Format text {#format-text}
+
+The [!UICONTROL Format text] feature makes your query more readable by adding standardized syntax styling. Select **[!UICONTROL Format text]** to standardize all the text within the Query Editor. 
+
+![The Query Editor with [!UICONTROL Format text] and the SQL statements highlighted.](../images/ui/query-editor/format-text.png)
+
+### Copy SQL {#copy-sql}
+
+Select the copy icon to copy SQL form the Query Editor to your clipboard. This copy feature is available for both query templates and newly created queries in the Query Editor.
+
+![The Queries workspace with an example query template with the copy icon highlighted.](../images/ui/query-editor/copy-sql.png)
 
 ### Auto-complete UI configurational toggle {#auto-complete}
 

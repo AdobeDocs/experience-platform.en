@@ -28,15 +28,12 @@ In the [mapping step](#map) of the activation workflow, you must define the targ
 
 ## Supported audiences {#supported-audiences}
 
-This section describes all the audiences that you can export to this destination.
+This section describes which type of audiences you can export to this destination.
 
-This destination supports the activation of audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
-
-Additionally, this destination also supports the activation of the additional audiences described in the table below.
-
-| Audience type | Description | 
----------|----------|
-| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#importing-an-audience) into Experience Platform from CSV files. |
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -192,7 +189,7 @@ Platform will export two CSV files to [!DNL LiveRamp - Onboarding]:
 
 Exported CSV files contain profiles with the selected attributes and the corresponding audience status, on separate columns, with the attribute name, and `audience_namespace:audience_ID` pairs as column headers, as shown in the example below:
 
-`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1:AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2:AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X:AUDIENCE_ID_X`
+`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1_AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2_AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X_AUDIENCE_ID_X`
 
 The profiles included in the exported files can match one the following audience qualification statuses:
 

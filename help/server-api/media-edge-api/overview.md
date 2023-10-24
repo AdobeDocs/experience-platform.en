@@ -2,8 +2,8 @@
 solution: Experience Platform
 title: Media Edge APIs
 description: Media Edge APIs Overview
+exl-id: 55c952de-caab-4301-acf2-f7b64cebbb1c
 ---
-
 # Media Edge API overview
 
 Media Edge APIs are built on the Adobe Experience Platform to provide media event tracking data within the framework of [XDM schemas](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=en#:~:text=Experience%20Data%20Model%20(XDM)%2C,the%20power%20of%20digital%20experiences). For Media Analytics customers, this makes the following features available:
@@ -21,7 +21,7 @@ Both [Media Collection APIs](https://experienceleague.adobe.com/docs/media-analy
 
 * It is the easiest way to incorporate XDM schemas into your data flow. 
 
-* Calls are directed from a media player directly to the [Experience Edge Platform Network](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=en).
+* Calls are directed from a media player directly to the [Experience Platform Edge Network](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=en).
 
 * It tracks media events efficiently with a minimum of cross-server calls. 
 
@@ -30,7 +30,7 @@ The following table shows a possible Adobe API service for various media analyti
 | Use case | API service |
 | -------- | ----------- |
 | Adobe Experience Platform solution | Media Edge |
-| Real-time CDP + Customer Journey Analytics | Media Edge |
+| Real-Time CDP + Customer Journey Analytics | Media Edge |
 | Adobe Analytics + Adobe Experience Platform solution | Media Edge |
 | Adobe Analytics only (already tracking) | Media Collection |
 
@@ -47,7 +47,3 @@ The following graphic shows the data flows for the two API services:
 * For more information on using Media Edge APIs, see the [Getting started documentation](getting-started.md). 
 
 * For more information on working with Platform Edge, see [Installing Media Analytics with Experience Platform Edge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=en).
-
-
-
-

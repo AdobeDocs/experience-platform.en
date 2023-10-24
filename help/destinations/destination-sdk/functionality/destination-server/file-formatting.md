@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure file formatting options for file-based destinations built with Adobe Experience Platform Destination SDK, via the `/destination-servers` endpoint.
 title: File formatting configuration
+exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
 ---
-
 # File formatting configuration
 
 Destination SDK supports a flexible set of features which you can configure according to your integration needs. Among these features is the support for [!DNL CSV] file formatting.
@@ -113,7 +113,11 @@ In the configuration example below, all the CSV options are predefined. The expo
                 "value": ""
             }
         },
-        "maxFileRowCount":5000000
+        "maxFileRowCount":5000000,
+        "includeFileManifest": {
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{ customerData.includeFileManifest }}"
+      }
     }
 ```
 
@@ -154,7 +158,11 @@ In the configuration example below, none of the CSV options are predefined. The 
             "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
          }
       },
-      "maxFileRowCount":5000000
+      "maxFileRowCount":5000000,
+      "includeFileManifest": {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{ customerData.includeFileManifest }}"
+      }
    }
 }
 ```
@@ -186,6 +194,7 @@ Below is a complete reference of all available file formatting options in Destin
 |`csvOptions.charToEscapeQuoteEscaping.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets a single character used for escaping the escape for the quote character.|`\` when the escape and quote characters are different. `\0` when the escape and quote character are the same.|-|-|
 |`csvOptions.emptyValue.value`|Optional|*Only for `"fileType.value": "csv"`*. Sets the string representation of an empty value.|`""`|`"emptyValue":""` --> `male,"",John`|`"emptyValue":"empty"` --> `male,empty,John`|
 |`maxFileRowCount`|Optional|Indicates the maximum number of rows per exported file, between 1,000,000 and 10,000,000 rows. | 5,000,000 |
+|`includeFileManifest`|Optional| Enables support for exporting a file manifest along with the file exports. The manifest JSON file contains information about the export location, export size, and more. The manifest is named using the format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | View a [sample manifest file](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). The manifest file includes the following fields: <ul><li>`flowRunId`: The [dataflow run](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) which generated the exported file.</li><li>`scheduledTime`: The time in UTC when the file was exported. </li><li>`exportResults.sinkPath`: The path in your storage location where the exported file is deposited. </li><li>`exportResults.name`: The name of the exported file.</li><li>`size`: The size of the exported file, in bytes.</li></ul> |
 
 {style="table-layout:auto"}
 

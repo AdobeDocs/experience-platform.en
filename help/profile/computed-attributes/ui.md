@@ -1,14 +1,13 @@
 ---
 title: Computed Attributes UI guide
 description: Learn how to create, view, and update computed attributes using the Adobe Experience Platform UI.
-badge: "Beta"
+exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
 ---
-
 # Computed attributes UI guide
 
->[!IMPORTANT]
+>[!NOTE]
 >
->Computed attributes is currently in **beta** and is **not** available to all users.
+>To get access to computed attributes, you'll need to have the appropriate permissions (**View Computed attributes** and **Manage Computed attributes**). For more information on the permissions required, please read the [access control documentation](../../access-control/home.md). To learn how to apply these permissions, please read the [managing permissions guide](../../access-control/ui/permissions.md).
 
 In Adobe Experience Platform, computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 
@@ -39,6 +38,16 @@ To select which fields are visible, you can select ![the configure columns icon]
 | [!UICONTROL Refresh frequency] | An indication on how frequently the computed attribute is expected to be refreshed. Possible values include hourly, daily, weekly, or monthly. |
 | [!UICONTROL Fast refresh] | A value that shows whether or not fast refresh is enabled for this compute attribute. If fast refresh is enabled, this lets the computed attribute be refreshed on a daily basis, rather than on a weekly, bi-weekly, or monthly basis. This value is only applicable for computed attributes with a lookback period greater than a weekly basis. |
 | [!UICONTROL Lifecycle status] | The current status of the computed attribute. There are three possible statuses: <ul><li>**[!UICONTROL Draft]:** The computed attribute does **not** have a field created on the schema yet. In this state, the computed attribute can be edited. </li><li>**[!UICONTROL Published]:** The computed attribute has a field created on the schema and is ready to be used. In this state, the computed attribute **cannot** be edited.</li><li>**[!UICONTROL Inactive]:** The computed attribute is disabled. For more information about the inactive status, please read the [FAQ page](./faq.md#inactive-status). </li> | 
+| [!UICONTROL Created] | A timestamp showing the date and time the computed attribute was created. |
+| [!UICONTROL Last modified ]| A timestamp showing the date and time the computed attribute was last modified. |
+
+You can also filter the displayed computed attributes based on the lifecycle status. Select the ![funnel](./images/ui/filter-icon.png) icon.
+
+![The filter icon is highlighted.](./images/ui/select-filter.png)
+
+You can now choose to filter the computed attributes by status ([!UICONTROL Draft], [!UICONTROL Published], and [!UICONTROL Inactive]).
+
+![The options tht you can filter the computed attributes by are highlighted. These options include [!UICONTROL Draft], [!UICONTROL Published], and [!UICONTROL Inactive].](./images/ui/view-filters.png)
 
 Additionally, you can select a computed attribute to see more detailed information about it. For more information on the computed attributes details page, please read the [view a computed attribute's details section](#view-details).
 
@@ -85,6 +94,21 @@ After choosing a function, you can choose the field to aggregate on. The eligibl
 After applying the aggregation function, you'll need to define the lookback period of the computed attribute. This lookback period specifies the length of time that you want to aggregate events on. This lookback duration can be specified in terms of hours, days, weeks, or months.
 
 ![The lookback duration is highlighted.](./images/ui/select-lookback-duration.png)
+
+### Fast refresh {#fast-refresh}
+
+>[!CONTEXTUALHELP]
+>id="platform_profile_computedAttributes_fastRefresh"
+>title="Fast refresh"
+>abstract="Fast refresh allows you to keep your attributes up-to-date. Enabling this option lets you refresh your computed attributes on a daily basis, even for longer lookback periods, allowing you to rapidly react to user activities. This value is only applicable for computed attributes with a lookback period greater than a weekly basis."
+
+While applying the aggregation function, you can enable fast refresh if the lookback period is greater than one week.
+
+![The [!UICONTROL Fast Refresh] checkbox is highlighted.](./images/ui/enable-fast-refresh.png)
+
+Fast refresh allows you to keep your attributes up-to-date. Enabling this option lets you refresh your computed attributes on a daily basis, even for longer lookback periods, allowing you to rapidly react to user activities.
+
+For more information on fast refresh, please read the [fast refresh section](./overview.md#fast-refresh) of the computed attributes overview.
 
 With these steps completed, you can now either choose to save this computed attribute as a draft or to immediately publish it.
 
