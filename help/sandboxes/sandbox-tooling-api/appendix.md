@@ -19,7 +19,9 @@ The Sandbox Tooling API supports the use of query parameters to page and filter 
 | --- | --- |
 | `limit` | The maximum number of records to be returned in the response. |
 | `offset` | The number of entities from the first record to start (offset) the response list from. |
-| `targetSandbox` | Represents the sandbox name where the end-user wants to import their artifacts. |
-| `jobType` | NEW, RESUME, ROLLBACK |
-| `jobStatus` | PENDING, IN_PROGRESS, SUCCESS, FAILED, CANCELLED |
-| `requestType` | EXPORT, IMPORT, COPY |
+| `targetSandbox` | Represents the sandbox name where you want to import your artifacts. |
+| `jobType` | The type of job. This value can be NEW, RESUME, and ROLLBACK. |
+| `jobStatus` | The status of the job. This value can be PENDING, IN_PROGRESS, SUCCESS, FAILED, and CANCELLED. |
+| `requestType` | The type of request. This value can be EXPORT, IMPORT, and COPY. |
+| `expiryPeriod ` | This defines the user-specified custom time-to-live (in days) to calculate the package expiration date at the time of publishing the package. This value should not be negative. |
+| `parentId` | This represents the list of `parentId` in a package. |
