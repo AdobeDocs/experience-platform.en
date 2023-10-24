@@ -1,5 +1,15 @@
-**Adobe Merkury Identity Source Connector**
+---
+keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
+title: Merkury Enterprise Identity Resolution Documentation self-service template for the UI
+description: Learn how to create a Merkury Enterprise Identity Resolution source connection using the Adobe Experience Platform UI.
+hide: true
+hidefromtoc: true
+---
+# Create a Merkury Enterprise Identity Resolution source connection in the UI
 
+This tutorial provides steps for creating a *Merkury Enterprise Identity Resolution* source connector using the Platform user interface.
+
+## Overview
 Merkury, by Merkle, helps you recognize more digital visitors --- even
 without cookies --- so you can deliver the relevant, personalized
 experiences your customer\'s demand. The **person ID** combines
