@@ -2,7 +2,7 @@
 title: Getting Started with the Sandbox Tooling API
 description: Use the Sandbox tooling API to examine artifacts and export and import a snapshot of sandbox configurations between sandboxes. Follow this guide to learn how to perform key operations using the API.
 ---
-# Getting started with the attribute-based access control API {#getting-started}
+# Getting started with the sandbox tooling API {#getting-started}
 
 This developer guide provides steps to help you use the sandbox tooling API to manage packages and tools in Adobe Experience Platform, and includes sample API calls for performing various operations.
 

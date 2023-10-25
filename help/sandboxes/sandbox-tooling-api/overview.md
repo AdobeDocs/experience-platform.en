@@ -4,13 +4,13 @@ description: Sandbox Tooling in Adobe Experience Platform allows you to export a
 ---
 # [!DNL Sandbox] tooling API guide
 
-The [!DNL Sandbox] tooling API provides several endpoints that allow you to export and import snapshots between sandboxes available to you within your organization. All interactions occur via HTTP endpoints. The source sandbox is checked for artifacts before exporting a snapshot. When an import request is made, an [!DNL Azure Blob] snapshot is obtained and utilized as a template to produce almost similar artifacts for the destination sandbox.
+The [!DNL Sandbox] tooling API provides several endpoints that allow you to export and import snapshots between sandboxes available to you within your organization. All interactions occur via HTTP endpoints. The source sandbox is checked for artifacts, which are the objects contained within a package, before exporting a snapshot. When an import request is made, an [!DNL Azure Blob] snapshot is obtained and utilized as a template to produce almost similar artifacts for the destination sandbox. See the [sandbox tooling](../ui/sandbox-tooling.md#objects-supported-for-sandbox-tooling) documentation for a list of supported objects and limitations.
 
 These endpoints are outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 
 ## Jobs {#jobs}
 
-The sandbox tooling jobs endpoint allows you to view a list of import jobs. See the [packages endpoint guide](./jobs.md) for more information on retrieving import jobs in the API.
+The sandbox tooling jobs endpoint allows you to view a list of import jobs. See the [jobs endpoint guide](./jobs.md) for more information on retrieving import jobs in the API.
 
 ## Packages {#packages}
 
