@@ -44,7 +44,7 @@ Follow the instructions to select a destination where you can export your datase
 
   ![Amazon S3 destination page that can export profile audiences highlighted.](/help/destinations/assets/ui/activate-account-audiences/amazon-s3-icon-activate-account-audiences.png)
 
-1. Select **[!UICONTROL Data type Prospects]**, followed by the destination connection that you want to export datasets to, then select **[!UICONTROL Next]**.
+1. Select **[!UICONTROL Data type Accounts]**, followed by the destination connection that you want to export datasets to, then select **[!UICONTROL Next]**.
 
   >[!TIP]
   > 
