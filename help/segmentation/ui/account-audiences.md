@@ -1,13 +1,15 @@
 ---
 title: Account Audiences
 description: Learn how to create and use account audiences to target account profiles in downstream destinations.
+badgeLimitedAvailability: label="Limited availability" type="Caution"
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html"
 ---
 
 # Account audiences
 
 >[!IMPORTANT]
 >
->Please note that account audiences are only available in the B2B Edition of Real-Time Customer Data Platform.
+>Please note that account audiences are only available in the [B2B Edition of Real-Time Customer Data Platform](../../rtcdp/b2b-overview.md). Additionally, account audience functionality is currently in **limited availability**.
 
 With account segmentation, Adobe Experience Platform allows you to bring the full ease and sophistication of the marketing segmentation experience from people-based audiences to account-based audiences. 
 
@@ -18,7 +20,7 @@ Account audiences can be used as an input for account-based destinations, allowi
 Before getting started with account audiences, please review the differences between the different audience types:
 
 - **Account audiences**: An account audience is an audience that is created using **account** profile data. Account profile data can be used to create audiences that target people within downstream accounts. For more information about account profiles, please read the [account profile overview](../../rtcdp/accounts/account-profile-overview.md).
-- **People audiences**: A people audience is an audience that is created using **customer** profile data. Customer profile data can be used to create audiences that your business' clientele. For more information on customer profiles, please read the [Real-Time Customer Profile overview](../../profile/home.md).
+- **People audiences**: A people audience is an audience that is created using **customer** profile data. Customer profile data can be used to create audiences that targets your business' clientele. For more information on customer profiles, please read the [Real-Time Customer Profile overview](../../profile/home.md).
 - **Prospect audiences**: A prospect audience is an audience that is created using **prospect** profile data. Prospect profile data can be used to create audiences from unauthenticated users. For more information about prospect profiles, please read the [prospect profile overview](../../profile/ui/prospect-profile.md).
 
 ## Access {#access}
