@@ -5,7 +5,7 @@ description: Learn how to configure bot detection for datastreams.
 
 # Configure bot detection for datastreams
 
-
+Traffic originating from nonhuman entities, such as automated programs, web scrapers, spiders, scripted scanners, can make it more difficult to identify events occuring from human visitors. This type of traffic can negatively affect important business metrics, leading to incorrect traffic reporting.
 
 Bot detection enables datastreams to detect nonhuman traffic based on rules that you define.
 
@@ -21,9 +21,13 @@ When a request to the Edge Network matches any of the bot detection rules, the X
 
 This bot scoring helps the solutions receiving the request correctly identify the bot traffic.
 
-## Use case {#use-case}
+>[!IMPORTANT]
+>
+>Bot detection does not drop any bot requests. It only updates the XDM schema with the bot scoring, and forwards the event to the [datastream service](configure.md) which you configured.
 
-when to use this
+<!-- ## Use case {#use-case}
+
+when to use this -->
 
 ## Prerequisites {#prerequisites}
 
