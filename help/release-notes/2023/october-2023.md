@@ -8,7 +8,20 @@ description: The October 2023 release notes for Adobe Experience Platform.
 
 Updates to existing features in Experience Platform:
 
-- [Sources](#sources) 
+- [Segmentation Service](#segmentation)
+- [Sources](#sources)
+
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Account audiences (Limited GA) | In Real-Time Customer Data Platform B2B Edition, you can now use account segmentation to bring the full ease and sophistication of the marketing segmentation experience from people-based audiences to account-based audiences. For more information about this feature, please read the [account audiences overview](../../segmentation/ui/account-audiences.md). |
+
+To learn more about Segmentation Service, please read the [Segmentation Service overview](../../segmentation/home.md).
 
 ## Sources {#sources}
 
