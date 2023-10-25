@@ -869,7 +869,7 @@ You can check if you have permissions to import package artifacts by making a GE
 **API format**
 
 ```http
-GET /packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName
+GET /packages/preflight/{packageId}?targetSandbox=<sandbox_name
 ```
 
 | Parameter | Description |
