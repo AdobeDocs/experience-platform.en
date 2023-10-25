@@ -4,9 +4,9 @@ description: The /packages endpoint in the Sandbox Tooling API allows you to pro
 ---
 # Packages endpoint
 
-Sandbox tooling allows you to select different artifacts and export them into a package. A package can consist of a single object or multiple objects. Any objects that are included in a package must be from the same sandbox. 
+Sandbox tooling allows you to select different artifacts (also known as objects) and export them into a package. A package can consist of a single artifact or multiple artifacts (such as datasets or schemas). Any artifacts that are included in a package must be from the same sandbox. 
 
-The `/packages` endpoint in the sandbox tooling API allows you to programmatically manage packages in your organization.
+The `/packages` endpoint in the sandbox tooling API allows you to programmatically manage packages in your organization, including publishing a package and importing a package to a sandbox.
 
 ## Create a package {#create}
 
@@ -117,7 +117,7 @@ curl -X PUT \
   -d'{
       "id": "6fa50baedd344a278129a87e68cc9dc7",
       "action": "ADD",
-      "expiry": "2023-05-20T20:05:10Z", // Optional field, send only if user needs to set custom expiration date. Default will be +90 days from the API call.
+      "expiry": "2023-05-20T20:05:10Z", 
       "artifacts": [
         {
          "id": "d8d8ed6d-696a-40bd-b4fe-ca053ec94e29@1647559351683",
@@ -132,6 +132,7 @@ curl -X PUT \
 | `id` | The id of the package to be updated. | String | Yes |
 | `action` | To add artifacts into the package, the action value should be **ADD**. This action is supported for only **PARTIAL** package types. | String | Yes |
 | `artifacts` | A list of artifacts to be added in the package. There would be no change to the package if the list is **null** or **empty**. Artifacts are de-duplicated before they are added to the package.<br>**Note:** There would be no change to the package if the `packageType` is **FULL**. | Array | No |
+| `expiry` | The timestamp that defines the expiration date for package. The default value is 90 days from the creation date. The response expiry field will be epoch UTC time. | String (UTC Timestamp format) | No |
 
 **Response**
 
@@ -208,11 +209,11 @@ curl -X PUT \
 | --- | --- | --- | --- |
 | `id` | The id of the package to be updated. | String | Yes |
 | `action` | To delete artifacts from a package, the action value should be **DELETE**. This action is supported for only **PARTIAL** package types. | String | Yes |
-| `artifacts` | A list of artifacts to be delete from the package. There would be no change to the package if the list is **null** or **empty**.<br>**Note:** There would be no change to the package if the `packageType` is **FULL**. | Array | No |
+| `artifacts` | A list of artifacts to be deleted from the package. There would be no change to the package if the list is **null** or **empty**. | Array | No |
 
 **Response**
 
-A successful response returns your updated package. The response includes the corresponding package ID, as well as information on its status, expiry, and list of artifacts.
+A successful response returns your updated package. The response includes the corresponding package ID, as well as information on its status, expiry, and list of artifacts. There would be no change to the package if the `packageType` is **FULL**.
 
 ```json
 {
@@ -358,7 +359,7 @@ A successful response returns a reason which shows the package ID deleted.
 
 ## Publish a package {#publish}
 
-To publish a package, make a GET request to the `/packages` endpoint while specifying the ID of the package you want to publish.
+In order to enable the import of a package into a sandbox, you must publish it. Make a GET request to the `/packages` endpoint while specifying the ID of the package you want to publish.
 
 **API format**
 
@@ -433,7 +434,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns details for the queried package ID. The response includes the name, description, and a list of artifacts.
+A successful response returns details for the queried package ID. The response includes the name, description, publish date and expiry date, source sandbox of the package, as well as a list of artifacts.
 
 ```json
 {
@@ -492,7 +493,7 @@ The following request retrieves information of the packages based on the {QUERY_
 
 ```shell
 curl -X GET \
-  https://platform-int.adobe.io/data/foundation/exim/packages/?property=status==DRAFT,PUBLISHED&property=createdDate>=2023-05-11T18:29:59.999Z&property=createdDate<=2023-05-16T18:29:59.999Z&start=0&orderby=-createdDate&limit=20 \
+  https://platform.adobe.io/data/foundation/exim/packages/?property=status==DRAFT,PUBLISHED&property=createdDate>=2023-05-11T18:29:59.999Z&property=createdDate<=2023-05-16T18:29:59.999Z&start=0&orderby=-createdDate&limit=20 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -597,7 +598,7 @@ The following request imports the {PACKAGE_ID}.
 
 ```shell
 curl -X GET \
-  https://platform-int.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -606,7 +607,7 @@ curl -X GET \
 
 **Response**
 
-Click here+++
+View response+++
 
 ```json
 [
@@ -734,7 +735,7 @@ The following request imports the package.
 
 ```shell
 curl -X POST \
-  https://platform-int.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -802,7 +803,7 @@ The following request lists all dependent objects for the {PACKAGE_ID}.
 
 ```shell
 curl -X GET \
-  https://platform-int.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -881,7 +882,7 @@ The following request checks your permissions for the {PACKAGE_ID} and sandbox.
 
 ```shell
 curl -X GET \
-  https://platform-int.adobe.io/data/foundation/exim/packages//preflight/{PACKAGE_ID}?targetSandbox=<sandbox_name> \
+  https://platform.adobe.io/data/foundation/exim/packages//preflight/{PACKAGE_ID}?targetSandbox=<sandbox_name> \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -892,7 +893,7 @@ curl -X GET \
 
 A successful response returns resource permissions for the target sandbox.
 
-Click here+++
+View response+++
 
 ```json
 {
@@ -1029,7 +1030,7 @@ The following request lists all successful import jobs.
 
 ```shell
 curl -X GET \
-  https://platform-int.adobe.io/data/foundation/exim/packages/jobs?property=requestType==IMPORT&property=jobStatus==SUCCESS&orderby=createdDate&start=0&limit=5 \
+  https://platform.adobe.io/data/foundation/exim/packages/jobs?property=requestType==IMPORT&property=jobStatus==SUCCESS&orderby=createdDate&start=0&limit=5 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
