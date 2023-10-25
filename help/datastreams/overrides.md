@@ -13,8 +13,8 @@ Datastream configuration override is a two step process:
 
 1. First, you must define your datastream configuration overrides in the [datastream configuration page](configure.md).
 2. Then, you must send the overrides to the Edge Network in one of the following ways:
-    * Through a Web SDK command
-    * Through the Web SDK [tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)
+    * Through the `sendEvent` or `configure` [Web SDK](#send-overrides-web-sdk) commands.
+    * Through the Web SDK [tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
     * Through the Mobile SDK [sendEvent API](#send-overrides-mobile-sdk) call
 
 This article explains the end-to-end datastream configuration override process for every type of supported override.
@@ -108,7 +108,7 @@ After you've added the desired overrides, save your datastream settings.
 
 You should now have the ID sync container overrides configured. Now you can [send the overrides to the Edge Network via the Web SDK](#send-overrides).
 
-## Send the overrides to the Edge Network via the Web SDK {#send-overrides}
+## Send the overrides to the Edge Network via the Web SDK {#send-overrides-web-sdk}
 
 >[!NOTE]
 >
