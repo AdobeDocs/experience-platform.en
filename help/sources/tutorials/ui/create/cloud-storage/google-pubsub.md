@@ -44,7 +44,6 @@ In order to connect [!DNL PubSub] to Platform, you must provide a valid value fo
 
 >[!ENDTABS]
 
-
 For more information about these values, see the following [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication) document. If you are using service account-based authentication, see the following [PubSub guide](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
 
 >[!TIP]
