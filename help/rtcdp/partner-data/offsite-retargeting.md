@@ -29,7 +29,7 @@ Additionally, in order to implement the use case, you will make use of the follo
 
 To create an audience of unauthenticated visitors, you'll first need to bring forth the partner provided IDs from the event dataset into the profile records. You can do this by utilizing computed attributes.
 
-Computed attributes let you quickly convert profile behavioral data into aggregated values at the profile level. This lets you 
+Computed attributes let you quickly convert profile behavioral data into aggregated values at the profile level. As a result, you can use add these expressions, such as "lifetime purchase total" to the profile, allowing you to use easily use the computed attribute within your audiences. More information about computed attributes can be found in the [computed attributes overview](../../profile/computed-attributes/overview.md).
 
 To access computed attributes, select **Profiles** followed by **Computed attributes** and **Create computed attribute**.
 
@@ -43,7 +43,7 @@ IMAGE
 >
 >For more detailed information on creating computed attributes, please read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
 
-For this use case, you can create a computed attribute that looks at all the Web Page View events in your sandbox collected in the last day, then scans the events for the most recent value of the partner ID.
+For this use case, you can create a computed attribute that, if the partner ID exists, gets the most recent value of the partner ID within the last 24 hours.
 
 STEPS
 
