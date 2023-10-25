@@ -25,16 +25,26 @@ The following sections provide additional information that you will need to know
 
 In order for [!DNL Flow Service] to connect to [!DNL Dynamics], you must provide values for the following connection properties:
 
+>[!BEGINTABS]
+
+>[!TAB Basic authentication]
+
 | Credential | Description |
-| ---------- | ----------- |
+| --- | --- |
 | `serviceUri` | The service URL of your [!DNL Dynamics] instance. |
 | `username` | The user name for your [!DNL Dynamics] user account. |
 | `password` | The password for your [!DNL Dynamics] account. |
+
+>[!TAB Service-principal and key authentication]
+
+| Credential | Description |
+| --- | --- |
 | `servicePrincipalId` | The client ID of your [!DNL Dynamics] account. This ID is required when using service principal and key-based authentication. |
 | `servicePrincipalKey` | The service principal secret key. This credential is required when using service principal and key-based authentication. |
-| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Dynamics] is: `38ad80fe-8b06-4938-94f4-d4ee80266b07`. |
 
-For more information on getting started, visit [this [!DNL Dynamics] document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
+>[!ENDTABS]
+
+For more information on getting started, refer to [this [!DNL Dynamics] document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
 ### Using Platform APIs
 
@@ -66,13 +76,13 @@ To create a base connection ID, make a POST request to the `/connections` endpoi
 POST /connections
 ```
 
-**Request**
-
 >[!BEGINTABS]
 
 >[!TAB Basic authentication]
 
 To create a [!DNL Dynamics] base connection using basic authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `serviceUri`, `username`, and `password`.
+
++++Request
 
 ```shell
 curl -X POST \
@@ -107,7 +117,9 @@ curl -X POST \
 | `auth.params.password` | The password associated with your [!DNL Dynamics] account. |
 | `connectionSpec.id` | The [!DNL Dynamics] connection specification ID: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 
-**Response**
++++
+
++++Response
 
 A successful response returns the newly created connection, including its unique identifier (`id`). This ID is required to explore your CRM system in the next step.
 
@@ -118,17 +130,13 @@ A successful response returns the newly created connection, including its unique
 }
 ```
 
++++
+
 >[!TAB Service principal key-based authentication]
 
 To create a [!DNL Dynamics] base connection using service principal key-based authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `serviceUri`, `servicePrincipalId`, and `servicePrincipalKey`.
 
-**API format**
-
-```http
-POST /connections
-```
-
-**Request**
++++Request
 
 ```shell
 curl -X POST \
@@ -163,7 +171,9 @@ curl -X POST \
 | `auth.params.servicePrincipalKey` | The service principal secret key. This credential is required when using service principal and key-based authentication. |
 | `connectionSpec.id` | The [!DNL Dynamics] connection specification ID: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 
-**Response**
++++
+
++++Response
 
 A successful response returns the newly created connection, including its unique identifier (`id`). This ID is required to explore your CRM system in the next step.
 
@@ -173,6 +183,8 @@ A successful response returns the newly created connection, including its unique
     "etag": "\"9e0052a2-0000-0200-0000-5e35tb330000\""
 }
 ```
+
++++
 
 >[!ENDTABS]
 

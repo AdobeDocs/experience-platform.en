@@ -28,16 +28,27 @@ Experience Platform supports the following file formats to be ingested from exte
 
 ### Gather required credentials
 
-In order to access your [!DNL Blob] storage on Platform, you must provide a valid value for the following credential:
+In order to access your [!DNL Blob] storage on Experience Platform, you must provide valid values for the following credentials:
+
+>[!BEGINTABS]
+
+>[!TAB Connection string authentication]
 
 | Credential | Description |
-| ---------- | ----------- |
+| --- | --- |
 | Connection string | A string that contains the authorization information necessary to authenticate [!DNL Blob] to Experience Platform. The [!DNL Blob] connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. For more information about connection strings, see this [!DNL Blob] document on [configuring connection strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
-| SAS URI| The shared access signature URI that you can use as an alternative authentication type to connect your [!DNL Blob] account. The [!DNL Blob] SAS URI pattern is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` For more information, see this [!DNL Blob] document on [shared access signature URIs](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
+
+>[!TAB SAS URI authentication]
+
+| Credential | Description |
+| --- | --- |
+| SAS URI | The shared access signature URI that you can use as an alternative authentication type to connect your [!DNL Blob] account. The [!DNL Blob] SAS URI pattern is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` For more information, see this [!DNL Blob] document on [shared access signature URIs](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication).  |
 | Container | The name of the container that you want to designate access to. When creating a new account with the [!DNL Blob] source, you can provide a container name to specify user access to the sub folder of your choice. |
 | Folder path | The path to the folder that you want to provide access to. |
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Blob] account to Platform.
+>[!ENDTABS]
+
+Once you have gathered your required credentials, you can follow the steps below to connect your [!DNL Blob] storage to Experience Platform
 
 ## Connect your [!DNL Blob] account
 

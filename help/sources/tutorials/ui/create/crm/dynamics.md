@@ -8,7 +8,7 @@ exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
 ---
 # Create a [!DNL Microsoft Dynamics] source connection in the UI
 
-This tutorial provides steps for creating a [!DNL Microsoft Dynamics] (hereinafter referred to as "[!DNL Dynamics]") source connection using the Adobe Experience Platform UI.
+This tutorial provides steps to create a [!DNL Microsoft Dynamics] (hereinafter referred to as "[!DNL Dynamics]") source connection using the Adobe Experience Platform UI.
 
 ## Getting started
 
@@ -95,7 +95,6 @@ When finished, select **[!UICONTROL Connect to source]** and then allow some tim
 ![The service-principal key authentication interface.](../../../../images/tutorials/create/ms-dynamics/service-principal.png)
 
 >[!ENDTABS]
-
 
 ## Next steps
 
