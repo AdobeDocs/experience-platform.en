@@ -82,9 +82,9 @@ POST /connections
 
 >[!TAB Project-based authentication]
 
-+++Request
-
 To create base connection with project-based authentication, make a POST request to the `/connections` endpoint and provide your `projectId` and `credentials` in the request body.
+
++++Request
 
 ```shell
 curl -X POST \
@@ -134,9 +134,9 @@ A successful response returns details of the newly created connection, including
 
 >[!TAB Topic and subscription-based authentication]
 
-+++Request
-
 To create base connection with topic and subscription-based authentication, make a POST request to the `/connections` endpoint and provide your `credentials`, `topicName`, and `subscriptionName` in the request body.
+
++++Request
 
 ```shell
 curl -X POST \
