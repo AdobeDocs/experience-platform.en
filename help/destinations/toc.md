@@ -180,6 +180,7 @@ feature: Destinations
         * [IP address allowlist for streaming destinations](./catalog/streaming/ip-address-allow-list.md)
     * Survey destinations {#survey}
         * [Survey destinations overview](./catalog/survey/overview.md)
+        * [Qualtrics Automations destination](./catalog/survey/qualtrics-automations.md)
         * [Foresee extension destination](./catalog/survey/foresee.md)
         * [InMoment extension](./catalog/survey/inmoment.md)
         * [Qualtrics Website Feedback extension](./catalog/survey/qualtrics.md)
