@@ -10,7 +10,7 @@ The `/tools` endpoint in the sandbox tooling API allows you to list and retrieve
 
 ## Job details {#details}
 
-You can fetch the job JSON independently, by making a GET request to the `/tools` endpoint while a providing the ID of the job. 
+To independently fetch the job JSON data, make a GET request to the `/tools` endpoint and provide the ID of the job.
 
 **API format**
 
@@ -20,7 +20,7 @@ GET /tools/job/{JOB_ID}
 
 | Parameter | Description |
 | --- | --- |
-| {JOB_ID} | The Id of the job you want to look up. |
+| {JOB_ID} | The ID of the job you want to look up. |
 
 **Request**
 
@@ -146,7 +146,7 @@ A successful response returns details for the queried job ID.
 
 ## Display all dependent artifacts related to one or more root artifacts {#dependent-artifacts}
 
-You can traverse and return the dependency tree for all artifacts related to the root artifact provided by making a POST request to the `/tools` endpoint. 
+To traverse and return the dependency tree for all artifacts related to the provided root artifact, make a POST request to the `/tools` endpoint.
 
 **API format**
 
@@ -267,7 +267,7 @@ curl -X GET \
 
 ## List all artifacts of a specific type {#all-artifacts}
 
-You can list all artifacts in this Org and Sandbox using the natural order provided by the backend API, by making a GET request to the `/tools` endpoint while a providing the type of the artifact. 
+To list all artifacts in your organization and sandbox, make a GET request to the `/tools` endpoint and provide the type of the artifact.
 
 **API format**
 
@@ -399,7 +399,7 @@ curl -X GET \
 
 ## Retrieve contents of a specific file within a snapshot {#contents}
 
-You can retrieve the contents of a specific file within a snapshot by making a POST request to the `/tools` endpoint. This file is located in [!DNL Azure Blob Store].
+To retrieve the contents of a specific file within a snapshot, make a POST request to the `/tools` endpoint. This file is located in [!DNL Azure Blob Store].
 
 **API format**
 
@@ -424,7 +424,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns a list of artifact for the queried artifact type.
+A successful response returns a list of artifacts for the queried artifact type.
 
 ```json
 {
@@ -515,14 +515,14 @@ A successful response returns a list of artifact for the queried artifact type.
             ]
         }
     ],
-    "tuples": {...},
-    "tupleList": [...]
+    "tuples": {...}, //Response has been truncated from brevity.
+    "tupleList": [...] //Response has been truncated from brevity.
 }
 ```
 
 ## List all files in a snapshot {#files}
 
-You can retrieve a list of all files within a snapshot by making a GET request to the `/tools` endpoint, by making a GET request to the `/tools` endpoint while a providing the Id of the snapshot. 
+To retrieve a list of all files within a snapshot, make a GET request to the `/tools` endpoint and provide the ID of the snapshot. 
 
 **API format**
 

@@ -1,10 +1,10 @@
 ---
 title: Sandbox Tooling Jobs API Endpoint
-description: The /jobs endpoint in the Sandbox Tooling API allows you to view jobs in Adobe Experience Platform.
+description: The /jobs endpoint in the Sandbox Tooling API allows you to view import jobs in Adobe Experience Platform.
 ---
 # Jobs endpoint
 
-Sandbox tooling allows you to view current jobs. The `/jobs` endpoint in the sandbox tooling API allows you to view jobs in your organization.
+Sandbox tooling allows you to view current import jobs. The `/jobs` endpoint in the sandbox tooling API allows you to view jobs in your organization.
 
 ## View import jobs {#import}
 

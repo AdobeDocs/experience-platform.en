@@ -9,7 +9,7 @@ This document provides supplemental information related to working with the [!DN
 
 ## Using query parameters {#query}
 
-The Sandbox Tooling API supports the use of query parameters to page and filter results when listing packages.
+The Sandbox Tooling API supports the use of query parameters to paginate and filter results when listing packages.
 
 >[!NOTE]
 >
@@ -23,5 +23,5 @@ The Sandbox Tooling API supports the use of query parameters to page and filter 
 | `jobType` | The type of job. This value can be NEW, RESUME, and ROLLBACK. |
 | `jobStatus` | The status of the job. This value can be PENDING, IN_PROGRESS, SUCCESS, FAILED, and CANCELLED. |
 | `requestType` | The type of request. This value can be EXPORT, IMPORT, and COPY. |
-| `expiryPeriod ` | This defines the user-specified custom time-to-live (in days) to calculate the package expiration date at the time of publishing the package. This value should not be negative. |
+| `expiryPeriod ` | This user-specified time period defines the package expiration date (in days) from the time the package was published. This value should not be negative. |
 | `parentId` | This represents the list of `parentId` in a package. |

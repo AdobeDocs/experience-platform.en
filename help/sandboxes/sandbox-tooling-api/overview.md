@@ -1,6 +1,6 @@
 ---
 title: Sandbox Tooling API Guide
-description: Sandbox Tooling in Adobe Experience Platform  allows you to export and import a snapshot of sandbox configurations between sandboxes. 
+description: Sandbox Tooling in Adobe Experience Platform allows you to export and import a snapshot of sandbox configurations between sandboxes. 
 ---
 # [!DNL Sandbox] tooling API guide
 
@@ -8,18 +8,18 @@ The [!DNL Sandbox] tooling API provides several endpoints that allow you to expo
 
 These endpoints are outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 
-## Jobs
+## Jobs {#jobs}
 
-The sandbox tooling jobs endpoint allows you to view a list of import jobs. See the [packages endpoint guide](./jobs.md) for more information on working with packages in the API.
+The sandbox tooling jobs endpoint allows you to view a list of import jobs. See the [packages endpoint guide](./jobs.md) for more information on retrieving import jobs in the API.
 
-## Packages
+## Packages {#packages}
 
-The sandbox tooling packages endpoint allows you to manage packages. The sandbox tooling package is a collection of artifact definitions including package Id, name, description, org Id, and creator Id.  See the [packages endpoint guide](./packages.md) for more information on working with packages in the API.
+The sandbox tooling packages endpoint allows you to manage packages. The sandbox tooling package is a collection of artifact definitions including package ID, name, description, org ID, and creator ID. See the [packages endpoint guide](./packages.md) for more information on working with packages in the API.
 
-## Tools
+## Tools {#tools}
 
-The sandbox tooling tools endpoint allows you to list and retrieve artifacts and snapshots that are stored in [!DNL Azure Blob]. See the [tools endpoint guide](./tools.md) for more information on working with packages in the API.
+The sandbox tooling tools endpoint allows you to list and retrieve artifacts and snapshots that are stored in [!DNL Azure Blob]. See the [tools endpoint guide](./tools.md) for more information on retrieving snapshots in the API.
 
-## Next steps
+## Next steps {#next-steps}
 
 To begin making calls using the sandbox tooling API, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.

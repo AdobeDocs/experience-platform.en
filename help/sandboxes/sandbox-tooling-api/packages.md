@@ -10,7 +10,7 @@ The `/packages` endpoint in the sandbox tooling API allows you to programmatical
 
 ## Create a package {#create}
 
-You can create a multi artifact package, by making a POST request to the `/packages` endpoint while providing values for your package's name and package type.
+You can create a multi-artifact package, by making a POST request to the `/packages` endpoint while providing values for your package's name and package type.
 
 **API format**
 
@@ -46,18 +46,18 @@ curl -X POST \
   }'
 ```
 
-| Property | Description | Type | Mandatory |
+| Property | Description | Type | Required |
 | --- | --- | --- | --- |
 | `name` | The name of your package. | String | Yes |
-| `description` | A descriptive value to provide more information on your package. | String | No |
-| `packageType` | Either `PARTIAL` OR `FULL`. `PARTIAL` is when you are using specific artifacts in a package. FULL is when you are exporting entire artifacts from a sandbox. | String | YES |
-| `sourceSandbox` | The source sandbox of the package | String | No|
-| `expiry` | The timestamp that defines the expiration date for package. The default value is 90 days from the creation date. The response expiry field will be epoch UTC time. | String (Timestamp format) | No |
-| `artifacts` | A list of artifacts to be exported into the package. `artifacts` is expected to be **null** or **empty**, when the `packageType` is `FULL`. | Array | No |
+| `description` | A description to provide more information on your package. | String | No |
+| `packageType` | "Accepted values are either **PARTIAL** or **FULL**. The **PARTIAL** value is used when you are including specific artifacts in a package. **FULL** is used when you are exporting all artifacts from a sandbox. | String | YES |
+| `sourceSandbox` | The source sandbox of the package. | String | No|
+| `expiry` | The timestamp that defines the expiration date for package. The default value is 90 days from the creation date. The response expiry field will be epoch UTC time. | String (UTC Timestamp format) | No |
+| `artifacts` | A list of artifacts to be exported into the package. The `artifacts` value should be **null** or **empty**, when the `packageType` is `FULL`. | Array | No |
 
 **Response**
 
-A successful response returns your newly created package, with its corresponding package ID, as well as information on its status, expiry, and list of artifacts.
+A successful response returns your newly created package. The response includes the corresponding package ID, as well as information on its status, expiry, and list of artifacts.
 
 ```json
 {
@@ -135,7 +135,7 @@ curl -X PUT \
 
 **Response**
 
-A successful response returns your updated package, with its corresponding package ID, as well as information on its status, expiry, and list of artifacts.
+A successful response returns your updated package. The response includes the corresponding package ID, as well as information on its status, expiry, and list of artifacts.
 
 ```json
 {
@@ -212,7 +212,7 @@ curl -X PUT \
 
 **Response**
 
-A successful response returns your updated package, with its corresponding package ID, as well as information on its status, expiry, and list of artifacts.
+A successful response returns your updated package. The response includes the corresponding package ID, as well as information on its status, expiry, and list of artifacts.
 
 ```json
 {
@@ -284,11 +284,11 @@ curl -X PUT \
 | `id` | The id of the package to be updated. | String | Yes |
 | `action` | To update the metadata fields in a package, the action value should be **UPDATE**. This action is supported for only **PARTIAL** package types. | String | Yes |
 | `name` | The updated name of the package. Duplicate package names are not allowed. | Array | Yes |
-| `sourceSandbox` | Source sandbox should belong to the same Org as specified in the header of the request. | String | Yes |
+| `sourceSandbox` | Source sandbox should belong to the same organization as specified in the header of the request. | String | Yes |
 
 **Response**
 
-A successful response returns your updated package, with its corresponding package ID, as well as information of the package name and description, its status, expiry, and list of artifacts.
+A successful response returns your updated package. The response includes the corresponding package ID, as well as information on its description, status, expiry, and list of artifacts.
 
 ```json
 {
@@ -322,7 +322,7 @@ A successful response returns your updated package, with its corresponding packa
 
 ## Delete a package {#delete}
 
-To delete a package, make a DELETE request to the `/packages` endpoint while specifying the ID of the package you want to delete.
+To delete a package, make a DELETE request to the `/packages` endpoint and specify the ID of the package you want to delete.
 
 **API format**
 
@@ -332,7 +332,7 @@ DELETE /packages/{PACKAGE_ID}
 
 | Parameter | Description |
 | --- | --- |
-| {PACKAGE_ID} | The Id of the package you want to delete. |
+| {PACKAGE_ID} | The ID of the package you want to delete. |
 
 **Request**
 
@@ -368,7 +368,7 @@ GET /packages/{PACKAGE_ID}/export
 
 | Parameter | Description |
 | --- | --- |
-| {PACKAGE_ID} | The Id of the package you want to publish. |
+| {PACKAGE_ID} | The ID of the package you want to publish. |
 
 **Request**
 
@@ -384,11 +384,11 @@ curl -X GET \
 
 | Property | Description | Type | Mandatory |
 | --- | --- | --- | --- |
-| `expiryPeriod` | Defines the user-specified custom time-to-live (in days) to calculate the package expiration date at the time of publishing the package. This value should not be negative.<br> If no value is specified, the default will be calculated as 90 (days) from the date of publishing. | Integer | No |
+| `expiryPeriod` | This user-specified time period defines the package expiration date (in days) from the time the package was published. This value should not be negative.<br> If no value is specified, the default will be calculated as 90 (days) from the date of publishing. | Integer | No |
 
 **Response**
 
-A successful response returns published package.
+A successful response returns the published package.
 
 ```json
 {
@@ -417,7 +417,7 @@ GET /packages/{PACKAGE_ID}
 
 | Parameter | Description |
 | --- | --- |
-| {PACKAGE_ID} | The Id of the package you want to look up. |
+| {PACKAGE_ID} | The ID of the package you want to look up. |
 
 **Request**
 
@@ -433,7 +433,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns details for the queried package ID, including the name on, description, and a list of artifacts.
+A successful response returns details for the queried package ID. The response includes the name, description, and a list of artifacts.
 
 ```json
 {
@@ -474,7 +474,7 @@ A successful response returns details for the queried package ID, including the 
 
 ## List packages {#list-packages}
 
-You can list all packages in your organization, by making a GET request to the `/packages` endpoint.
+You can list all the packages in your organization, by making a GET request to the `/packages` endpoint.
 
 **API format**
 
@@ -589,7 +589,7 @@ GET /packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName
 
 | Parameter | Description |
 | --- | --- |
-| {PACKAGE_ID} | The Id of the package you want to look up. |
+| {PACKAGE_ID} | The ID of the package you want to look up. |
 
 **Request**
 
@@ -605,6 +605,8 @@ curl -X GET \
 ```
 
 **Response**
+
+Click here+++
 
 ```json
 [
@@ -714,14 +716,16 @@ curl -X GET \
 ]
 ```
 
++++
+
 ## Submit an import {#submit-import}
 
-You can submit an import once you have reviewed conflicts and provided substitutions. The result is provided as a payload, which starts the Import job into the x-gw-ims-org-id and x-sandbox-name provided in HTTP headers.
+You can submit an import for a package once you have reviewed conflicts and provided substitutions. The result is provided as a payload, which starts the import job into the `x-gw-ims-org-id` and `x-sandbox-name` provided in HTTP headers.
 
 **API format**
 
 ```http
-GET /packages/import
+POST /packages/import
 ```
 
 **Request**
@@ -729,7 +733,7 @@ GET /packages/import
 The following request imports the package.
 
 ```shell
-curl -X GET \
+curl -X POST \
   https://platform-int.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -754,7 +758,7 @@ curl -X GET \
 
 | Property | Description | Type | Mandatory |
 | --- | --- | --- | --- |
-| `id` | The id of the package. | String | Yes |
+| `id` | The ID of the package. | String | Yes |
 
 **Response**
 
@@ -790,7 +794,7 @@ GET /packages/{PACKAGE_ID}/children
 
 | Parameter | Description |
 | --- | --- |
-| {PACKAGE_ID} | The Id of the package. |
+| {PACKAGE_ID} | The ID of the package. |
 
 **Request**
 
@@ -857,7 +861,7 @@ A successful response returns a list of children for the objects.
 ]
 ```
 
-## Check role-based permissions to import all package artifacts (Pre-Flight) {#role-based-permissions}
+## Check role-based permissions to import all package artifacts {#role-based-permissions}
 
 You can check if you have permissions to import package artifacts by making a GET request to the `/packages` endpoint while specifying the ID of the package and the target sandbox name.
 
@@ -887,6 +891,8 @@ curl -X GET \
 **Response**
 
 A successful response returns resource permissions for the target sandbox.
+
+Click here+++
 
 ```json
 {
@@ -1000,6 +1006,8 @@ A successful response returns resource permissions for the target sandbox.
   ]
 }
 ```
+
++++
 
 ## List export/import jobs {#list-jobs}
 
