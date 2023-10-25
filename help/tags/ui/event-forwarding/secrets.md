@@ -13,7 +13,7 @@ The following secret types are currently supported:
 | --- | --- |
 | [!UICONTROL Google OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec for use in the [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) and [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL HTTP] | Contains two string attributes for a username and password, respectively. |
-| [!UICONTROL [!DNL LinkedIn] OAuth 2] | Contains several attributes to support the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
+| [!UICONTROL [!DNL LinkedIn] OAuth 2] | The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL OAuth 2] | Contains several attributes to support the [client credentials grant type](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) for the [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL OAuth 2 JWT] | Contains several attributes to support JSON Web Token (JWT) Profile for [OAuth 2.0 Authorization](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) grants. The system asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 | [!UICONTROL Token] | A single string of characters representing an authentication token value that is known and understood by both systems. |
@@ -182,7 +182,7 @@ A popover appears informing you that the secret needs to be manually authorized 
 
 ![[!DNL LinkedIn] authorization popover highlighting [!UICONTROL Create & Authorize secret with [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
-A dialog appears prompting you to enter your [!DNL LinkedIn] credentials. Follow the prompts to grant event forwarding access to your data under the selected scope. 
+A dialog appears prompting you to enter your [!DNL LinkedIn] credentials. Follow the prompts to grant event forwarding access to your data. 
 
 Once the authorization process is complete, you are returned to the **[!UICONTROL Secrets]** tab, where you can see your newly created secret. Here you can see the status of the secret and the date of expiration.
 
