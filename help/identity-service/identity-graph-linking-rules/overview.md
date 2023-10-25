@@ -32,46 +32,18 @@ For more information on use case scenarios for identity graph linking rules, rea
 
 With Identity graph linking rules you can:
 
-* Configure limits to prevent two disparate person identifiers from merging into one identity graph, so that a single identity graph only represents a single person.
-  * The limits that you configure are then enforced by identity optimization algorithm.
-* Configure priorities to associate online events conducted by the authenticated individual to a given user.
+* Create a single identity graph / merged profile for each user by configuring unique namespaces (limits), which will prevent two disparate person identifiers from merging into one identity graph.
+* Associate online, authenticated events to the person by configuring priorities
 
 ### Limits
 
-You can use namespace limits to define the maximum number of identities that can exist in a graph based on a given namespace. For example, you can set your graph to have a maximum of just one identity with a CRM ID namespace, thus preventing the merging of two disparate person identifiers within the same graph.
+A unique namespace is an identifier that represents an individual, such as CRM ID, login ID, and hashed email. If a namespace is designated as unique, then a graph can only have one identity with that namespace (`limit=1`). This will prevent the merging of two disparate person identifiers within the same graph. 
 
 * If a limit is not configured, this could result in unwanted graph merges, such as two identities with a CRM ID namespace in a graph.
 * If a limit is not configured, the graph can add as many namespaces as needed as long as the graph is within the guardrails (50 identities/graph).
 * If a limit is configured, then the identity optimization algorithm will ensure that the limit is enforced.
 
 ### Identity optimization algorithm
-
-The identity optimization algorithm is a rule that helps ensure that an identity graph is representative of a single person, and therefore, prevents the unwanted merging of identities on Real-Time Customer Profile.
-
-#### Input parameters
-
-You must specify which namespaces represent a person entity in Identity Service using the identity optimization algorithm. For example, if a CRM database defines a user account to be associated with a single CRM ID and a single email address, then the identity settings for this sandbox would look like:
-
-* CRM ID namespace = unique
-* Email namespace = unique
-
->[!IMPORTANT]
->
->Currently, the algorithm only supports the use of a single login identifier (one login namespace). Multiple login identifiers (multiple identity namespaces used to login), household entity graphs, and hierarchical graph structures are not supported at this time.
-
-Upon ingesting new identities, Identity Service checks if the new identities and their corresponding namespaces will result in exceeding the configured limits. If limits are not exceeded, then the ingestion of new identities will proceed and these identities will be linked to the graph. However, if limits are exceeded, the identity optimization algorithm will update the graph such that the most recent timestamp is honored, and oldest links with the lower priority namespaces are removed.
-
-+++Example #1: Shared device
-
-+++
-
-+++Example #2: Shared device case two
-
-+++
-
-+++Example #3: Same timestamp event
-
-+++
 
 The identity optimization algorithm is a rule that ensures that the limits are enforced. The algorithm honors the most recent links and removes the oldest links to make sure that a given graph stays within the limits that you have defined.
 
@@ -81,6 +53,7 @@ The following is a list of implications of the algorithm on associating anonymou
   * If CRM IDs are merged by ECID (shared device).
   * If limits are configured to just one CRM ID. 
 
+For more information, read the document on [identity optimization algorithm](./identity-optimization-algorithm.md).
 
 ### Priority
 
