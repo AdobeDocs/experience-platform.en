@@ -13,6 +13,14 @@ With account segmentation, Adobe Experience Platform allows you to bring the ful
 
 Account audiences can be used as an input for account-based destinations, allowing you to target the people within those accounts in downstream services. For example, you can use account-based audiences to retrieve records of all the accounts that do **not** have contact information for any people with the title Chief Operating Officer (COO) or Chief Marketing Officer (CMO).
 
+## Terminology {#terminology}
+
+Before getting started with account audiences, please review the differences between the different audience types:
+
+- **Account audiences**: An account audience is an audience that is created using **account** profile data. Account profile data can be used to create audiences that target people within downstream accounts. For more information about account profiles, please read the [account profile overview](../../rtcdp/accounts/account-profile-overview.md).
+- **People audiences**: A people audience is an audience that is created using **customer** profile data. Customer profile data can be used to create audiences that your business' clientele. For more information on customer profiles, please read the [Real-Time Customer Profile overview](../../profile/home.md).
+- **Prospect audiences**: A prospect audience is an audience that is created using **prospect** profile data. Prospect profile data can be used to create audiences from unauthenticated users. For more information about prospect profiles, please read the [prospect profile overview](../../profile/ui/prospect-profile.md).
+
 ## Access {#access}
 
 To access account audiences, select **[!UICONTROL Audiences]** in the **[!UICONTROL Accounts]** section.
@@ -53,8 +61,8 @@ Select the audience you want to activate, followed by **[!UICONTROL Activate to 
 
 ![The [!UICONTROL Activate to destination] button is highlighted in the quick actions menu for the selected audience.](../images/ui/account-audiences/activate.png)
 
-The [!UICONTROL Activate destination] page appears. For more information on the activation process, including details on field mappings, please read the ???.
+The [!UICONTROL Activate destination] page appears. For more information on the activation process, including details on field mappings, please read the [activation overview](../../destinations/ui/activation-overview.md).
 
 ## Next steps {#next-steps}
 
-After reading this guide, you now have a better understanding of how to create and use your account audiences in Adobe Experience Platform.
+After reading this guide, you now have a better understanding of how to create and use your account audiences in Adobe Experience Platform. To learn how to use other types of audiences in Platform, please read the [Segmentation Service UI guide](./overview.md).
