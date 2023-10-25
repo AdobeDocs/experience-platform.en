@@ -882,7 +882,7 @@ The following request checks your permissions for the {PACKAGE_ID} and sandbox.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/exim/packages//preflight/{PACKAGE_ID}?targetSandbox=<sandbox_name> \
+  https://platform.adobe.io/data/foundation/exim/packages/preflight/{PACKAGE_ID}?targetSandbox=<sandbox_name> \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \

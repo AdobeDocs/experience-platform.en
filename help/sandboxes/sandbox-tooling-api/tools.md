@@ -28,7 +28,7 @@ The following request retrieves information for {JOB_ID}.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/exim//tools/job/{JOB_ID} \
+  https://platform.adobe.io/data/foundation/exim/tools/job/{JOB_ID} \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -158,7 +158,7 @@ GET /tools/artifacts/dependencies
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/exim//tools/artifacts/dependencies \
+  https://platform.adobe.io/data/foundation/exim/tools/artifacts/dependencies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
