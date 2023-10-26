@@ -2,20 +2,22 @@
 title: Activate account audiences to destinations
 type: Tutorial
 description: Learn how to activate account audiences to destinations
+badgeLimitedAvailability: label="Limited availability" type="Caution"
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html"
 ---
 # Activate account audiences
 
 >[!AVAILABILITY]
 >
->This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Contact your Adobe representative for more information. 
+>The functionality to activate account audiences to destinations is only available in the [B2B Edition of Real-Time Customer Data Platform](../../rtcdp/b2b-overview.md). Additionally, account audience functionality is currently in **limited availability**.
 
 This article explains the workflow required to export [account audiences](/help/segmentation/ui/account-audiences.md) from Adobe Experience Platform to your preferred destination. 
 
 ## Supported destinations {#supported-destinations}
 
-Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab. Use the **[!UICONTROL Data types]** filter and select **[!UICONTROL Accounts]** to see the destinations which support the activation of account audiences. Currently, exporting account audiences is available only to cloud storage destinations and the **[!UICONTROL (Companies) LinkedIn Matched Audiences]** destination.  
+Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab. Use the **[!UICONTROL Data types]** filter and select **[!UICONTROL Accounts]** to see the destinations which support the activation of account audiences. Currently, exporting account audiences is available only to cloud storage destinations and the [(Companies) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin.md) destination.  
 
-![Destinations which support prospect audiences.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
+![Destinations which support account audiences.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
 ## Prerequisites {#prerequisites}
 
@@ -40,7 +42,7 @@ Follow the instructions to select a destination where you can export your datase
 
   >[!TIP]
   >
-  >The destinations that can export profile audiences are indicated with an icon in the upper right corner of the card, similar to the destination highlighted below, or you can use the data type filter to only display destinations that can export prospect audiences, as [shown higher on the page](#supported-destinations).
+  >The destinations that can export account audiences are indicated with an icon in the upper right corner of the card, similar to the destination highlighted below, or you can use the data type filter to only display destinations that can export account audiences, as [shown higher on the page](#supported-destinations).
 
   ![Amazon S3 destination page that can export profile audiences highlighted.](/help/destinations/assets/ui/activate-account-audiences/amazon-s3-icon-activate-account-audiences.png)
 
@@ -48,23 +50,38 @@ Follow the instructions to select a destination where you can export your datase
 
   >[!TIP]
   > 
-  >If you want to set up a new destination to activate prospect audiences, select **[!UICONTROL Configure new destination]** to trigger the [Connect to destination](/help/destinations/ui/connect-destination.md) workflow. 
+  >If you want to set up a new destination to activate account audiences, select **[!UICONTROL Configure new destination]** to trigger the [Connect to destination](/help/destinations/ui/connect-destination.md) workflow and [select accounts as data type](/help/destinations/ui/connect-destination.md#segment-activation-or-dataset-exports).
 
-  ![Destination activation workflow with Prospects control highlighted.](/help/destinations/assets/ui/activate-prospect-audiences/activate-prospects-highlighted.png)
+  ![Destination activation workflow with accounts control highlighted.](/help/destinations/assets/ui/activate-account-audiences/activate-account-audiences-highlighted.png)
 
 1. Proceed to the next section to [select your account audiences](#select-profile-audiences) for export.
 
 ## Select your account audiences {#select-account-audiences}
 
-Use the check boxes to the left of the account audiences names to select the audiences that you want to export to the destination, then select **[!UICONTROL Next]**. Note that only the account audiences are shown in this view, and no other audience types are displayed. 
+Use the check boxes to the left of the account audiences names to select the audiences that you want to export to the destination, then select **[!UICONTROL Next]**. Note that only account audiences are shown in this view, and no other audience types are displayed. 
 
-![Dataset export workflow showing the Select audiences step where you can select which prospect audiences to export.](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
+![Dataset export workflow showing the Select audiences step where you can select which account audiences to export.](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
 
 ## Scheduling and next steps
 
-For the rest of the activation workflow to export prospect audiences, read the tutorial on activating data to file based-destinations. Continue from the [schedule audience export step](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+For the rest of the activation workflow to export account audiences, read the tutorial on activating data to file based-destinations. Continue from the [schedule audience export step](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling). If you are activating account audiences to the **[!UICONTROL (Companies) LinkedIn Matched Audiences]** destination, read the tutorial on activating streaming destinations. Continue from the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
 
 >[!NOTE]
 >
->Note that in the scheduling step, the workflow to activate prospect audiences only allows you to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files). Incremental file exports are not supported.
+>Note that in the scheduling step, the workflow to activate account audiences only allows you to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and incremental files _on a daily schedule_. Hourly exports are not supported. Note also that **[!UICONTROL After audience evaluation]** is the only supported evaluation type.
+
+## Important callout in the mapping step when activating account audiences to the **[!UICONTROL (Companies) LinkedIn Matched Audiences]** destination
+
+When activating account audiences to the **[!UICONTROL (Companies) LinkedIn Matched Audiences]** destination, note that the following two mapping pairs are mandatory to successfully export data:
+
+![LinkedIn mapping required fields.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
+
+
+|Source field | Target field |
+|---------|----------|
+| `accountName` | `companyName` |
+| `accountKey.sourceKey`  | `primaryId` (select this field in the **[!UICONTROL Select Identity namespace]** view) |
+
+
+
 
