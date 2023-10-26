@@ -13,7 +13,7 @@ You must create a conversion rule in your [!DNL LinkedIn] campaign ads account. 
 
 ### Create a secret and a data element
 
-Create a new `LinkedIn` [event forwarding secret](../../../ui/event-forwarding/secrets.md) and provide it a unique name that signifies the authenticating member. This will be used to authenticate the connection to your account while keeping the value secure.
+Create a new [!DNL LinkedIn] [event forwarding secret](../../../ui/event-forwarding/secrets.md) and provide it a unique name that signifies the authenticating member. This will be used to authenticate the connection to your account while keeping the value secure.
 
 Next, [create a data element](../../../ui/managing-resources/data-elements.md#create-a-data-element) using the [!UICONTROL Core] extension and a [!UICONTROL Secret] data element type to reference the `LinkedIn` secret you just created.
 
