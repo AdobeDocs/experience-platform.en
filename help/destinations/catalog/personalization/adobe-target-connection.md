@@ -46,6 +46,17 @@ In Adobe Target, make sure that your user has:
 
 Read more about granting permissions for [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) and for [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions).
 
+## Supported audiences {#supported-audiences}
+
+This section describes which type of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | X | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.

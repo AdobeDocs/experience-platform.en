@@ -3,8 +3,8 @@ solution: Experience Platform
 title: Discover the right playbook
 description: Learn how to discover the right playbook for your use case enable playbooks.
 badgeBeta: label="Beta" type="Informative"
+exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 ---
-
 # (Beta) Discover the right playbook
 
 >[!AVAILABILITY]
@@ -17,7 +17,7 @@ To use a playbook, navigate to **[!UICONTROL Use Case Playbooks] > [!UICONTROL P
 
 Use the search window and filters available on the page to find the right playbook for your use case. 
 
-For example, you can filter playbooks that you can use based on the stage in the marketing funnel that you want to target - conversion, engagement, or retention. You could also filter the displayed playbooks by the industry that you are in or the product entitlement that you have access to - Adobe Journey Optimizer or Real-time CDP. 
+For example, you can filter playbooks that you can use based on the stage in the marketing funnel that you want to target - conversion, engagement, or retention. You could also filter the displayed playbooks by the industry that you are in or the product entitlement that you have access to - Adobe Journey Optimizer or Real-Time CDP. 
 
 ![Filter playbooks by marketing funnel, industry, or product](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
 
