@@ -38,7 +38,7 @@ Follow the instructions to select a destination where you can export your datase
     
     ![Destination catalog tab with Catalog control highlighted.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-2. Select **[!UICONTROL Activate]** on the card corresponding to the destination that you want to export datasets to. 
+1. Select **[!UICONTROL Activate]** on the card corresponding to the destination that you want to export datasets to. 
 
   >[!TIP]
   >
