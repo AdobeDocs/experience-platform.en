@@ -7,9 +7,9 @@ badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/le
 
 # Account audiences
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Please note that account audiences are only available in the [B2B Edition of Real-Time Customer Data Platform](../../rtcdp/b2b-overview.md). Additionally, account audience functionality is currently in **limited availability**.
+>Account audiences are only available in the [B2B Edition of Real-Time Customer Data Platform](../../rtcdp/b2b-overview.md). Additionally, account audience functionality is currently in **limited availability**. Contact your Adobe representative to request access to this functionality.
 
 With account segmentation, Adobe Experience Platform allows you to bring the full ease and sophistication of the marketing segmentation experience from people-based audiences to account-based audiences. 
 
@@ -63,7 +63,7 @@ Select the audience you want to activate, followed by **[!UICONTROL Activate to 
 
 ![The [!UICONTROL Activate to destination] button is highlighted in the quick actions menu for the selected audience.](../images/ui/account-audiences/activate.png)
 
-The [!UICONTROL Activate destination] page appears. For more information on the activation process, including details on field mappings, please read the [activation overview](../../destinations/ui/activation-overview.md).
+The [!UICONTROL Activate destination] page appears. For more information on the activation process, including supported destinations and details on field mappings, please read the [activate account audiences](/help/destinations/ui/activate-account-audiences.md) tutorial.
 
 ## Next steps {#next-steps}
 
