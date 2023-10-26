@@ -1,6 +1,6 @@
 ---
-title: Configure bot detection
-description: Learn how to configure bot detection for datastreams.
+title: Configure bot detection for datastreams
+description: Learn how to configure bot detection for datastreams, to differentiate human and nonhuman traffic.
 hide: yes
 hidefromtoc: yes
 ---
