@@ -97,7 +97,7 @@ You can update a package, by making a PUT request to the `/packages` endpoint.
 
 ### Add artifacts to a package {#add-artifacts}
 
-To add artifacts to a package, you must provide an `id` and `action`.
+To add artifacts to a package, you must provide an `id` and include **ADD** for the `action`.
 
 **API format**
 
@@ -176,7 +176,8 @@ A successful response returns your updated package. The response includes the co
 
 ### Delete artifacts from a package {#delete-artifacts}
 
-To delete artifacts from a package, you must provide an `id` and `action`.
+To delete artifacts from a package, you must provide an `id` and include **DELETE** for the `action`.
+
 
 **API format**
 
@@ -247,11 +248,11 @@ A successful response returns your updated package. The response includes the co
 
 ### Update metadata fields in a package {#update-metadata}
 
->NOTE
+>[!NOTE]
 >
 >The **UPDATE** action is used to update the package metadata fields of the package and **cannot** be used to add/delete artifacts to a package.
 
-To update the metadata fields in a package, you must provide an `id` and `action`.
+To update the metadata fields in a package, you must provide an `id` and include **UPDATE** for the `action`.
 
 **API format**
 
@@ -580,7 +581,7 @@ A successful response returns a list of packages belonging to your organization,
 
 ## Import a package {#import}
 
-You can import a **PUBLISHED** package by making a GET request to the `/packages` endpoint while specifying the ID of the package you want to import.
+You can import a **PUBLISHED** package by making a GET request to the `/packages` endpoint while specifying the ID of the package you want to import.  
 
 **API format**
 
@@ -606,6 +607,8 @@ curl -X GET \
 ```
 
 **Response**
+
+Conflicts are returned in the response. The response shows the original package plus the `alternatives` fragment as an array ordered by ranking.
 
 View response+++
 
@@ -721,7 +724,13 @@ View response+++
 
 ## Submit an import {#submit-import}
 
-You can submit an import for a package once you have reviewed conflicts and provided substitutions. The result is provided as a payload, which starts the import job into the `x-gw-ims-org-id` and `x-sandbox-name` provided in HTTP headers.
+>[!NOTE]
+>
+>It is inherent with conflict resolution that the alternative artifact already exists in the target sandbox.
+
+You can submit an import for a package once you have reviewed conflicts and provided substitutions by making a POST request to the `/packages` endpoint. The result is provided as a payload, which starts the import job into the `x-gw-ims-org-id` and `x-sandbox-name` provided in HTTP headers.
+
+Payload also accept user specified job name and description for import job. If user specified name and description is not available, then package name and description is used for job name and description.
 
 **API format**
 
@@ -731,7 +740,7 @@ POST /packages/import
 
 **Request**
 
-The following request imports the package.
+The following request retrieves the package using the {PACKAGE_ID} provided. The payload is a map of substitutions where, if an entry exists, the key is the `artifactId` provided by the package, and the alternative is the value. If the map or payload is **empty**, no substitutions are performed.
 
 ```shell
 curl -X POST \
@@ -790,7 +799,7 @@ List all dependent objects for the exported objects in a package by making a POS
 **API format**
 
 ```http
-GET /packages/{PACKAGE_ID}/children
+POST /packages/{PACKAGE_ID}/children
 ```
 
 | Parameter | Description |
@@ -802,7 +811,7 @@ GET /packages/{PACKAGE_ID}/children
 The following request lists all dependent objects for the {PACKAGE_ID}.
 
 ```shell
-curl -X GET \
+curl -X POST \
   https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \

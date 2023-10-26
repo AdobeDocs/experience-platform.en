@@ -36,7 +36,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns details for the queried job ID.
+A successful response returns details for the queried job ID, providing real-time status updates as `completedTasks` and `failedTasks` are updated as the job progresses.
 
 ```json
 {
@@ -151,13 +151,13 @@ To traverse and return the dependency tree for all artifacts related to the prov
 **API format**
 
 ```http
-GET /tools/artifacts/dependencies
+POST /tools/artifacts/dependencies
 ```
 
 **Request**
 
 ```shell
-curl -X GET \
+curl -X POST \
   https://platform.adobe.io/data/foundation/exim/tools/artifacts/dependencies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -176,6 +176,8 @@ curl -X GET \
 ```
 
 **Response**
+
+A successful response returns details for the queried package ID. The response includes the name, description, publish date and expiry date, source sandbox of the package, as well as a list of artifacts.
 
 ```json
 {
@@ -277,7 +279,7 @@ GET /tools/artifacts/{ARTIFACT_TYPE}
 
 | Parameter | Description |
 | --- | --- |
-| {ARTIFACT_TYPE} | The type of artifacts you want to retrieve. |
+| {ARTIFACT_TYPE} | The type of artifacts you want to retrieve. For example, JOURNEY, MESSAGE, PROFILE_SEGMENT and so on. |
 
 **Request**
 
@@ -294,7 +296,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns a list of artifact for the queried artifact type.
+A successful response returns a list of artifacts for the queried artifact type.
 
 ```json
 {
@@ -328,13 +330,13 @@ You can retrieve the JSON of a specific artifact by making a POST request to the
 **API format**
 
 ```http
-GET /tools/artifacts/
+POST /tools/artifacts/
 ```
 
 **Request**
 
 ```shell
-curl -X GET \
+curl -X POST \
   https://platform.adobe.io/data/foundation/exim/tools/artifacts \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -424,7 +426,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns a list of artifacts for the queried artifact type.
+A successful response returns the contents of the file requested. The response includes the name, description, source sandbox of the package, destination sandbox, as well as a list of artifacts.
 
 ```json
 {
