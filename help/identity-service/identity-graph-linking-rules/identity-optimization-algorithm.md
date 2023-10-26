@@ -36,16 +36,28 @@ A shared device refers to a device that is used by more than one individual. For
 
 >[!BEGINTABS]
 
->[!TAB Case one]
+>[!TAB Example one]
 
-In this example, at `timestamp=0`, you ingest a CRM record dataset, creating two different graphs, both with an Email namespace and a CRM ID namespace. In this example, both CRM ID and Email are configured as unique namespaces, which means that a given graph can have a maximum of one identity with a CRM ID or an Email namespace.
+| Namespace | Limit |
+| --- | --- |
+| CRM ID | 1 |
+| Email | 1 |
+| ECID | N/A |
 
-* `timestamp=1`: Jane logs in to your e-commerce website using a web browser on her laptop (ECID).
-* `timestamp=2`: John logs in to your e-commerce website using the same laptop, creating a link between Jane's CRM ID and ECID.
+In this example, both CRM ID and Email are designated as unique namespaces. At `timestamp=0`, a CRM record dataset is ingested and creates two different graphs because of the limit configuration. Each graph contains a CRM ID and an Email namespace.
+
+* `timestamp=1`: Jane logs in to your e-commerce website using a laptop. Jane's authenticated account is represented by her CRM ID and Email, while the web browser on her laptop that she uses is represented by an ECID.
+* `timestamp=2`: John logs in to your e-commerce website using the same laptop. John's authenticated account is represented by his CRM ID and Email, while the web browser he used is already represented by an ECID. Due to the same ECID being linked to two different graphs, Identity Service is able to know that this device (laptop) is a shared device.
+* However, due to the limit configuration that sets a maximum of one CRM ID namespace and one Email namespace per graph, identity optimization algorithm then splits the graph into two, while recognizing that the ECID represents a shared device.
 
 ![shared device case one](../images/identity-settings/shared-device-case-one.png)
 
->[!TAB Case two]
+>[!TAB Example two]
+
+| Namespace | Limit |
+| --- | --- |
+| CRM ID | 1 |
+| ECID | N/A |
 
 ![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
 
