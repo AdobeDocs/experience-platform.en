@@ -68,7 +68,7 @@ For the rest of the activation workflow to export account audiences, read the tu
 
 >[!NOTE]
 >
->Note that in the scheduling step, the workflow to activate account audiences only allows you to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and incremental files _on a daily schedule_. Hourly exports are not supported. Note also that **[!UICONTROL After audience evaluation]** is the only supported evaluation type.
+>Note that in the scheduling step when exporting account audiences to cloud storage destinations, the workflow to activate account audiences only allows you to export [full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _on a daily schedule_. Hourly exports are not supported. Note also that **[!UICONTROL After audience evaluation]** is the only supported evaluation type.
 
 ## Important callout in the mapping step when activating account audiences to the **[!UICONTROL (Companies) LinkedIn Matched Audiences]** destination
 
