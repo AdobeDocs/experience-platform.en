@@ -8,17 +8,13 @@ The [!DNL Sandbox] tooling API provides several endpoints that allow you to expo
 
 These endpoints are outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 
-## Jobs {#jobs}
-
-The sandbox tooling jobs endpoint allows you to view a list of import jobs. See the [jobs endpoint guide](./jobs.md) for more information on retrieving import jobs in the API.
-
 ## Packages {#packages}
 
 The sandbox tooling packages endpoint allows you to manage packages. The sandbox tooling package is a collection of artifact definitions including package ID, name, description, org ID, and creator ID. See the [packages endpoint guide](./packages.md) for more information on working with packages in the API.
 
 ## Tools {#tools}
 
-The sandbox tooling tools endpoint allows you to list and retrieve artifacts and snapshots that are stored in [!DNL Azure Blob]. See the [tools endpoint guide](./tools.md) for more information on retrieving snapshots in the API.
+The sandbox tooling tools endpoint allows you to to independently fetch the job JSON data. See the [tools endpoint guide](./tools.md) for more information on retrieving job JSON data in the API.
 
 ## Next steps {#next-steps}
 

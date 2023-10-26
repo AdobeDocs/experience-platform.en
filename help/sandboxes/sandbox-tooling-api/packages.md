@@ -50,7 +50,7 @@ curl -X POST \
 | --- | --- | --- | --- |
 | `name` | The name of your package. | String | Yes |
 | `description` | A description to provide more information on your package. | String | No |
-| `packageType` | "Accepted values are either **PARTIAL** or **FULL**. The **PARTIAL** value is used when you are including specific artifacts in a package. **FULL** is used when you are exporting all artifacts from a sandbox. | String | YES |
+| `packageType` | The package type is **PARTIAL** to indicate you are including specific artifacts in a package. | String | YES |
 | `sourceSandbox` | The source sandbox of the package. | String | No|
 | `expiry` | The timestamp that defines the expiration date for package. The default value is 90 days from the creation date. The response expiry field will be epoch UTC time. | String (UTC Timestamp format) | No |
 | `artifacts` | A list of artifacts to be exported into the package. The `artifacts` value should be **null** or **empty**, when the `packageType` is `FULL`. | Array | No |
@@ -131,8 +131,8 @@ curl -X PUT \
 | --- | --- | --- | --- |
 | `id` | The id of the package to be updated. | String | Yes |
 | `action` | To add artifacts into the package, the action value should be **ADD**. This action is supported for only **PARTIAL** package types. | String | Yes |
-| `artifacts` | A list of artifacts to be added in the package. There would be no change to the package if the list is **null** or **empty**. Artifacts are de-duplicated before they are added to the package.<br>**Note:** There would be no change to the package if the `packageType` is **FULL**. | Array | No |
-| `expiry` | The timestamp that defines the expiration date for package. The default value is 90 days from the creation date. The response expiry field will be epoch UTC time. | String (UTC Timestamp format) | No |
+| `artifacts` | A list of artifacts to be added in the package. There would be no change to the package if the list is **null** or **empty**. Artifacts are de-duplicated before they are added to the package. | Array | No |
+| `expiry` | The timestamp that defines the expiration date for package. The default value is 90 days from the time PUT API is called if expiry is not specified in the payload. The response expiry field will be epoch UTC time. | String (UTC Timestamp format) | No |
 
 **Response**
 
@@ -214,7 +214,7 @@ curl -X PUT \
 
 **Response**
 
-A successful response returns your updated package. The response includes the corresponding package ID, as well as information on its status, expiry, and list of artifacts. There would be no change to the package if the `packageType` is **FULL**.
+A successful response returns your updated package. The response includes the corresponding package ID, as well as information on its status, expiry, and list of artifacts.
 
 ```json
 {
@@ -581,7 +581,7 @@ A successful response returns a list of packages belonging to your organization,
 
 ## Import a package {#import}
 
-You can import a **PUBLISHED** package by making a GET request to the `/packages` endpoint while specifying the ID of the package you want to import.  
+This endpoint is used to fetch the conflicting objects in the specified target sandbox. Conflicting objects represent similar objects that are already present in the target sandbox. 
 
 **API format**
 
@@ -728,7 +728,7 @@ View response+++
 >
 >It is inherent with conflict resolution that the alternative artifact already exists in the target sandbox.
 
-You can submit an import for a package once you have reviewed conflicts and provided substitutions by making a POST request to the `/packages` endpoint. The result is provided as a payload, which starts the import job into the `x-gw-ims-org-id` and `x-sandbox-name` provided in HTTP headers.
+You can submit an import for a package once you have reviewed conflicts and provided substitutions by making a POST request to the `/packages` endpoint. The result is provided as a payload, which starts the import job for the destination sandbox as specified in the payload.
 
 Payload also accept user specified job name and description for import job. If user specified name and description is not available, then package name and description is used for job name and description.
 
@@ -769,6 +769,7 @@ curl -X POST \
 | Property | Description | Type | Mandatory |
 | --- | --- | --- | --- |
 | `id` | The ID of the package. | String | Yes |
+| `alternatives` | `alternatives` represent the mapping of source sandbox artifacts to the existing target sandbox artifacts. Because they are already there, the import job avoids creating these artifacts in the target sandbox. | String | No |
 
 **Response**
 
@@ -900,7 +901,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns resource permissions for the target sandbox.
+A successful response returns resource permissions for the target sandbox, including a list of permissions required, missing permissions, type of artifact, and a decision on whether the creation is allowed.
 
 View response+++
 
