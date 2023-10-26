@@ -31,6 +31,8 @@ This bot scoring helps the solutions receiving the request correctly identify th
 >
 >Bot detection does not drop any bot requests. It only updates the XDM schema with the bot scoring, and forwards the event to the [datastream service](configure.md) which you configured.
 
+Bot detection rules can take up to 15 minutes to propagate across the Edge Network after being created.
+
 ## Prerequisites {#prerequisites}
 
 For bot detection to work on your datastream, you must add the **[!UICONTROL Bot Detection Information]** field group to your schema. See the [XDM schema](../xdm/ui/resources/schemas.md#add-field-groups) documentation to learn how to add fields groups to a schema.
