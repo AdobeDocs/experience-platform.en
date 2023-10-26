@@ -11,6 +11,7 @@ feature: Datastreams
 
 * [Datastreams overview](overview.md)
 * [Configure a datastream](configure.md)
+* [Configure bot detection for datastreams](bot-detection.md)
 * [Configure datastream overrides](overrides.md)
 * [Data Prep for Data Collection](data-prep.md)
 * Data Enrichment {#data-enrichment}
