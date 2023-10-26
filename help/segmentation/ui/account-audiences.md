@@ -2,7 +2,7 @@
 title: Account Audiences
 description: Learn how to create and use account audiences to target account profiles in downstream destinations.
 badgeLimitedAvailability: label="Limited availability" type="Caution"
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html"
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 ---
 
 # Account audiences

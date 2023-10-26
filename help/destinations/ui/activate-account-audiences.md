@@ -3,7 +3,7 @@ title: Activate account audiences to destinations
 type: Tutorial
 description: Learn how to activate account audiences to destinations
 badgeLimitedAvailability: label="Limited availability" type="Caution"
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html"
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 ---
 # Activate account audiences
 
@@ -15,7 +15,7 @@ This article explains the workflow required to export [account audiences](/help/
 
 ## Supported destinations {#supported-destinations}
 
-Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab. Use the **[!UICONTROL Data types]** filter and select **[!UICONTROL Accounts]** to see the destinations which support the activation of account audiences. Currently, exporting account audiences is available only to cloud storage destinations and the [(Companies) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin.md) destination.  
+Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab. Use the **[!UICONTROL Data types]** filter and select **[!UICONTROL Accounts]** to see the destinations which support the activation of account audiences. Currently, exporting account audiences is available only to certain cloud storage destinations ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), and [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) and the [(Companies) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin.md) destination.  
 
 ![Destinations which support account audiences.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -70,17 +70,29 @@ For the rest of the activation workflow to export account audiences, read the tu
 >
 >Note that in the scheduling step when exporting account audiences to cloud storage destinations, the workflow to activate account audiences only allows you to export [full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _on a daily schedule_. Hourly exports are not supported. Note also that **[!UICONTROL After audience evaluation]** is the only supported evaluation type.
 
-## Important callout in the mapping step when activating account audiences to the **[!UICONTROL (Companies) LinkedIn Matched Audiences]** destination
+## Important callouts and known limitations {#important-callouts-known-limitations}
+
+Note the following important callouts and known limitations for the limited availability release of the functionality to activate account audiences.
+
+### Required mapping pairs in the mapping step when activating account audiences to the **[!UICONTROL (Companies) LinkedIn Matched Audiences]** destination {#required-mappings}
 
 When activating account audiences to the **[!UICONTROL (Companies) LinkedIn Matched Audiences]** destination, note that the following two mapping pairs are mandatory to successfully export data:
 
 ![LinkedIn mapping required fields.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
 
-
 |Source field | Target field |
 |---------|----------|
 | `accountName` | `companyName` |
 | `accountKey.sourceKey`  | `primaryId` (select this field in the **[!UICONTROL Select Identity namespace]** view) |
+
+### Data governance enforcement {#data-governance-enforcement}
+
+[Consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) is currently not supported when activating account audiences to destinations. In the review step of the activation workflow, you can see a greyed out control for **[!UICONTROL View applicable consent policies]**. 
+
+![Review step of the activate account audiences workflow with the consent enforcement control greyed out.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
+
+Other data governance mechanisms in Real-Time CDP such as [data usage policy checks](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) and [attribute-based access control](/help/destinations/home.md#attribute-based-access) are supported.
+
 
 
 
