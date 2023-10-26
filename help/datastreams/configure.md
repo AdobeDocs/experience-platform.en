@@ -1,10 +1,10 @@
 ---
-title: Configure a datastream
+title: Create and configure datastreams
 description: Learn how to connect your client-side Web SDK integration with other Adobe products and third-party destinations.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
 ---
 
-# Configure a datastream
+# Create and configure datastreams
 
 This document covers the steps for configuring a [datastream](./overview.md) in the UI. 
 
