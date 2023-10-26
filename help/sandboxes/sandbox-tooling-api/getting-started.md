@@ -32,6 +32,5 @@ Now that you have gathered the required credentials, you can now continue to rea
 
 See the following API tutorials to start making calls to the sandbox tooling API:
 
-* [Jobs endpoint](./jobs.md)
 * [Packages endpoint](./packages.md)
 * [Tools endpoint](./tools.md)
