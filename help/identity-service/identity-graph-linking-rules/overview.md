@@ -14,6 +14,7 @@ badge: Alpha
 ## Table of contents
 
 * [Overview](./overview.md)
+* [Identity optimization algorithm](./identity-optimization-algorithm.md)
 * [Example scenarios](./example-scenarios.md)
 * [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
 * [Identity linking logic](./identity-linking-logic.md)
@@ -100,6 +101,7 @@ If the following experience events are ingested into Experience Platform, the pr
 
 For more information on identity graph linking rules, read the following documentation:
 
+* [Identity optimization algorithm](./identity-optimization-algorithm.md)
 * [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
 * [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
 * [Identity linking logic](./identity-linking-logic.md)

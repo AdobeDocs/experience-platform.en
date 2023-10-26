@@ -46,9 +46,10 @@ A shared device refers to a device that is used by more than one individual. For
 
 In this example, both CRM ID and Email are designated as unique namespaces. At `timestamp=0`, a CRM record dataset is ingested and creates two different graphs because of the limit configuration. Each graph contains a CRM ID and an Email namespace.
 
-* `timestamp=1`: Jane logs in to your e-commerce website using a laptop. Jane's authenticated account is represented by her CRM ID and Email, while the web browser on her laptop that she uses is represented by an ECID.
-* `timestamp=2`: John logs in to your e-commerce website using the same laptop. John's authenticated account is represented by his CRM ID and Email, while the web browser he used is already represented by an ECID. Due to the same ECID being linked to two different graphs, Identity Service is able to know that this device (laptop) is a shared device.
-* However, due to the limit configuration that sets a maximum of one CRM ID namespace and one Email namespace per graph, identity optimization algorithm then splits the graph into two, while recognizing that the ECID represents a shared device.
+* `timestamp=1`: Jane logs in to your e-commerce website using a laptop. Jane is represented by her CRM ID and Email, while the web browser on her laptop that she uses is represented by an ECID.
+* `timestamp=2`: John logs in to your e-commerce website using the same laptop. John is represented by his CRM ID and Email, while the web browser he used is already represented by an ECID. Due to the same ECID being linked to two different graphs, Identity Service is able to know that this device (laptop) is a shared device.
+* However, due to the limit configuration that sets a maximum of one CRM ID namespace and one Email namespace per graph, identity optimization algorithm then splits the graph into two.
+  * Finally, because John is the last authenticated user, the ECID that represents the laptop, remains linked to his graph instead of Jane's.
 
 ![shared device case one](../images/identity-settings/shared-device-case-one.png)
 
@@ -59,10 +60,23 @@ In this example, both CRM ID and Email are designated as unique namespaces. At `
 | CRM ID | 1 |
 | ECID | N/A |
 
+In this example, the CRM ID namespace is designated as a unique namespace.
+
+* `timestamp=1`: Jane logs in to your e-commerce website using a laptop. She is represented by her CRM ID, and the web browser on the laptop is represented by the ECID.
+* `timestamp=2`: John logs in to your e-commerce website using the same laptop. He is represented by his CRM ID and the web browser he uses is represented by the same ECID.
+  * This event links two independent CRM IDs to the same ECID, which exceeds the configured limit of one CRM ID.
+  * As a result, identity optimization algorithm removes the older link, which in this case is Jane's CRM ID that was linked at `timestamp=1`.
+  * However, while Jane's CRM ID will no longer exist as a graph on Identity Service, it will still persist as a profile on Real-Time Customer Profile. This is because an identity graph must contain at least two linked identities, and as a result of removing the links, Jane's CRM ID no longer has another identity to link to.
+
 ![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
 
 >[!ENDTABS]
 
-### Same timestamp
+## Next steps
 
-![same-timestamp](../images/identity-settings/same-timestamp.png)
+For more information on identity graph linking rules, read the following documentation:
+
+* [Identity graph linking rules overview](./overview.md)
+* [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
+* [Identity linking logic](./identity-linking-logic.md)
+* [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
