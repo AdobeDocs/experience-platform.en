@@ -1,21 +1,19 @@
 ---
 title: Linkedin Conversions API event forwarding extension
-description: This Adobe Experience Platform event forwarding extension allows you to measure the performace of your Linkedin marketing campaign.
+description: This Adobe Experience Platform event forwarding extension allows you to measure the performance of your Linkedin marketing campaign.
 last-substantial-update: 2023-10-25
 ---
-# [!DNL LinkedIn] event forwarding extension
+# [!DNL LinkedIn] conversions API extension
 
-[[!DNL LinkedIn Conversions API]](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/conversions-api) extension is a conversion tracking tool that creates a direct connection between marketing data from an advertiser's server and [!DNL LinkedIn]. This enables advertisers to evaluate the effectiveness of their [!DNL LinkedIn] marketing campaigns regardless of the location of the conversion and utilize this information to drive campaign optimization. The [!DNL LinkedIn Conversions API] extension can help strengthen performance and decrease cost per action with more complete attribution, improved data reliability, and better optimized delivery.
+[[!DNL LinkedIn Conversions API]](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/conversions-api) is a conversion tracking tool that creates a direct connection between marketing data from an advertiser's server and [!DNL LinkedIn]. This enables advertisers to evaluate the effectiveness of their [!DNL LinkedIn] marketing campaigns regardless of the location of the conversion and utilize this information to drive campaign optimization. The [!DNL LinkedIn Conversions API] extension can help strengthen performance and decrease cost per action with more complete attribution, improved data reliability, and better optimized delivery.
 
 ## Prerequisites {#prerequisites}
 
-You must have access to the [[!DNL LinkedIn] Advertising API](https://learn.microsoft.com/en-us/linkedin/marketing/quick-start) in order to use this extension. Once you have access to the advertising API, you need to contact your [!DNL LinkedIn] representative to obtain access to the [[!DNL LinkedIn Conversions API]](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/conversions-api) extension.
-
-You must use [!DNL LinkedIn Campaign Manager] to establish a conversion rule after gaining access to the advertising and conversion APIs.
+You must create a conversion rule in your [!DNL LinkedIn] campaign ads account. [!DNL Adobe] recommends including "CAPI" at the beginning of the conversation rule name to set it apart from other conversion rule types you might have configured.
 
 ### Create a secret and a data element
 
-Create a new `LinkedIn` [event forwarding secret](../../../ui/event-forwarding/secrets.md). This will be used to authenticate the connection to your account while keeping the value secure.
+Create a new `LinkedIn` [event forwarding secret](../../../ui/event-forwarding/secrets.md) and provide it a unique name that signifies the authenticating member. This will be used to authenticate the connection to your account while keeping the value secure.
 
 Next, [create a data element](../../../ui/managing-resources/data-elements.md#create-a-data-element) using the [!UICONTROL Core] extension and a [!UICONTROL Secret] data element type to reference the `LinkedIn` secret you just created.
 
@@ -57,7 +55,7 @@ After selection, additional controls appear to further configure the event. Sele
 
 | Input | Description |
 | --- | --- |
-| [!UICONTROL Conversion] | URN of the conversion rule created through the [API](https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/conversions-api?view=li-lms-2023-06&tabs=http#create-a-conversion) or through [!DNL LinkedIn Campaign Manager]. |
+| [!UICONTROL Conversion] | The ID of the conversion rule created in [LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a1657171) or through [!DNL LinkedIn Campaign Manager]. |
 | [!UICONTROL Conversion Time] | Each timestamp in milliseconds at which the conversion event happened. <br><br> Note: If your source records the conversion timestamp in seconds, please insert 000 at the end to transform it to milliseconds. |
 | [!UICONTROL Currency] | Currency code in ISO format. |
 | [!UICONTROL Amount] | Value of the conversion in decimal string (for example, "100.05"). |
@@ -71,7 +69,7 @@ After selection, additional controls appear to further configure the event. Sele
 
 >NOTE
 >
->The [!UICONTROL Configuration Overrides] field allows a user to set a different [!DNL LinkedIn] access token on every rule, allowing each rule to use an access token from a different [!DNL LinkedIn] account.
+>The [!UICONTROL Configuration Overrides] field allows a user to set a different [!DNL LinkedIn] access token on every rule, allowing each rule to use an access token that may have access to different [!DNL LinkedIn] ad accounts.
 
 | Input | Description |
 | --- | --- |
