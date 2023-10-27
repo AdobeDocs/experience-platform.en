@@ -97,14 +97,15 @@ curl -X GET \
 
 **Response**
 
-The following response returns the credential information for your landing zone, including your current `SASToken` and `SASUri`, as well as the `storageAccountName` that corresponds to your landing zone container.
+The following response returns the credential information for your data landing zone, including your current `SASToken`, `SASUri`, `storageAccountName`, and expiry date.
 
 ```json
 {
     "containerName": "dlz-user-container",
     "SASToken": "sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
     "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "expiryDate": "2024-01-06"
 }
 ```
 
@@ -113,6 +114,7 @@ The following response returns the credential information for your landing zone,
 | `containerName` | The name of your landing zone. |
 | `SASToken` | The shared access signature token for your landing zone. This string contains all of the information necessary to authorize a request. |
 | `SASUri` | The shared access signature URI for your landing zone. This string is a combination of the URI to the landing zone for which you are being authenticated to and its corresponding SAS token, |
+| `expiryDate` | The date when your SAS token will expire. You must refresh your token before the expiry date in order to continue using it in your application for uploading data to the Data Landing Zone. If you do not manually refresh your token before the stated expiry date, then it will automatically refresh and provide a new token when the GET credentials call is performed. |
 
 
 ## Update [!DNL Data Landing Zone] credentials
@@ -153,7 +155,8 @@ The following response returns updated values for your `SASToken` and `SASUri`.
     "containerName": "dlz-user-container",
     "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
     "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "expiryDate": "2024-01-06"
 }
 ```
 
