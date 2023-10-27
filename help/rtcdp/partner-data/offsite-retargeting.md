@@ -45,9 +45,13 @@ IMAGE
 
 For this use case, you can create a computed attribute that, if the partner ID exists, gets the most recent value of the partner ID within the last 24 hours.
 
-STEPS
+Using the search bar, you can locate and add the Partner ID event to the computed attribute canvas.
 
-IMAGES
+IMAGE
+
+After adding the Partner ID event to the definition, set the event filtering condition to **[!UICONTROL Exists]**, set the event filtering condition to be the **[!UICONTROL Most Recent]** value of the added Partner ID, and with a lookback period of 24 hours.
+
+IMAGE
 
 ## Create an audience using the computed attribute
 
