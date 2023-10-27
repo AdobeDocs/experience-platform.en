@@ -20,7 +20,7 @@ profile. Ingested data can be formatted as XDM JSON, XDM Parquet, or
 delimited. Every step of the process is integrated into the Sources
 workflow.
 
-![](./assets/52053a98cb5b8f163c1711ba58cbbb00b468fb0e.png){width="6.624365704286964in"
+![](./merkury-enterprise-identity-resolution-assets/52053a98cb5b8f163c1711ba58cbbb00b468fb0e.png){width="6.624365704286964in"
 height="2.71875in"}
 
 **IP address allow list**
@@ -146,7 +146,7 @@ wish to work with using the search option.
 Under the **Enrichment** category, select **Merkury** and then
 select **Add data**.
 
-![](./assets/c5503baaad6e0be4a10cc675f6c6ddc5793d4dcb.png){width="6.349206036745406in"
+![](./merkury-enterprise-identity-resolution-assets/c5503baaad6e0be4a10cc675f6c6ddc5793d4dcb.png){width="6.349206036745406in"
 height="2.7777777777777777in"}
 
 The **Connect to Merkury** page appears. On this page, you can either
@@ -159,7 +159,7 @@ form that appears, provide a name, an optional description, and your
 Merkury credentials. When finished, select **Connect to source** and
 then allow some time for the new connection to establish.
 
-![](./assets/cca42dc1b31c64075713b3814dd2d3b5ecc59da1.png){width="5.0in"
+![](./merkury-enterprise-identity-resolution-assets/cca42dc1b31c64075713b3814dd2d3b5ecc59da1.png){width="5.0in"
 height="4.40625in"}
 
 ### Existing account
@@ -167,7 +167,7 @@ height="4.40625in"}
 To connect an existing account, select Merkury account you want to
 connect with, then select **Next** to proceed.
 
-![](./assets/616d2005eddb6ea8828572a523296d5c1172ed2e.png){width="6.943346456692914in"
+![](./merkury-enterprise-identity-resolution-assets/616d2005eddb6ea8828572a523296d5c1172ed2e.png){width="6.943346456692914in"
 height="1.9962117235345582in"}
 
 **Configure a dataflow to ingest batch data from a cloud storage source
@@ -237,21 +237,21 @@ bring to Platform.
 -   The right part of the interface lets you preview up to 100 rows of
     data from a compatible folder or file.
 
-![](./assets/3ecf99b1861044c74bbdf69421532070f364e1e8.png){width="6.651583552055993in"
+![](./merkury-enterprise-identity-resolution-assets/3ecf99b1861044c74bbdf69421532070f364e1e8.png){width="6.651583552055993in"
 height="2.3557699037620297in"}
 
 Select the root folder to access your folder hierarchy. From here, you
 can select a single folder to ingest all files in the folder
 recursively. When ingesting an entire folder, you must ensure that all
 files in that folder share the same data format and schema.
-![](./assets/3ecf99b1861044c74bbdf69421532070f364e1e8.png){width="6.176469816272966in"
+![](./merkury-enterprise-identity-resolution-assets/3ecf99b1861044c74bbdf69421532070f364e1e8.png){width="6.176469816272966in"
 height="2.1875in"}
 
 Once you have selected a folder, the right interface updates to a
 preview of the contents and structure of the first file in the selected
 folder.
 
-![](./assets/1b77ad9a11000927fdefcb5b03cc4ef339da781b.png){width="6.625087489063867in"
+![](./merkury-enterprise-identity-resolution-assets/1b77ad9a11000927fdefcb5b03cc4ef339da781b.png){width="6.625087489063867in"
 height="2.0427351268591427in"}
 
 During this step, you can make several configurations to your data,
@@ -313,7 +313,7 @@ option or by scrolling through the list of existing datasets in the
 dropdown menu. Once you have selected a dataset, provide a name and a
 description for your dataflow.
 
-![](./assets/37fbc55857978f56a86b21c734336638aec6cb4a.png){width="5.681089238845145in"
+![](./merkury-enterprise-identity-resolution-assets/37fbc55857978f56a86b21c734336638aec6cb4a.png){width="5.681089238845145in"
 height="3.8229002624671917in"}
 
 ### 
@@ -327,7 +327,7 @@ output dataset name and an optional description. Next, select a schema
 to map to using the Advanced search option or by scrolling through the
 list of existing schemas in the dropdown menu. Once you have selected a
 schema, provide a name and a description for your dataflow
-![](./assets/4164df81759304c6cef0d3a63c64ecc661ffde55.png){width="4.2565102799650045in"
+![](./merkury-enterprise-identity-resolution-assets/4164df81759304c6cef0d3a63c64ecc661ffde55.png){width="4.2565102799650045in"
 height="4.887858705161855in"}
 
 ### Enable Profile and error diagnostics
@@ -355,7 +355,7 @@ UI](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutor
 When you are finished providing details to your dataflow,
 select **Next**.
 
-![](./assets/a7492c766da7f5e37c022e0cbeab8fa63b279fc1.png){width="4.354166666666667in"
+![](./merkury-enterprise-identity-resolution-assets/a7492c766da7f5e37c022e0cbeab8fa63b279fc1.png){width="4.354166666666667in"
 height="5.0in"}
 
 ## Map data fields to an XDM schema
@@ -374,7 +374,7 @@ see the [Data Prep UI
 guide](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html?lang=en).
 
 Once your source data is successfully mapped, select **Next**.
-![](./assets/e94eb1a624c639e79c69f526adf42ec8c577b9b3.png){width="7.364078083989502in"
+![](./merkury-enterprise-identity-resolution-assets/e94eb1a624c639e79c69f526adf42ec8c577b9b3.png){width="7.364078083989502in"
 height="1.5034995625546808in"}
 
 **Schedule ingestion runs**
@@ -393,7 +393,7 @@ from the dropdown menu.
 
 Interval and backfill are not visible during a one-time ingestion.
 
-![](./assets/dba5692ae6c41a2e47de3251464cc0ef868e3d4f.png){width="5.0in"
+![](./merkury-enterprise-identity-resolution-assets/dba5692ae6c41a2e47de3251464cc0ef868e3d4f.png){width="5.0in"
 height="2.125in"}
 
 If you set your ingestion frequency to Minute, Hour, Day, or Week, then
@@ -408,7 +408,7 @@ historical data, while the column you define for incremental ingestion
 allows new data to be differentiated from existing data.
 
 ![A screenshot of a computer Description automatically
-generated](./assets/media/image12.png){width="6.748530183727034in"
+generated](./merkury-enterprise-identity-resolution-assets/media/image12.png){width="6.748530183727034in"
 height="1.9993241469816272in"}
 
 **NOTE**
@@ -444,5 +444,5 @@ categories:
 Once you have reviewed your dataflow, click **Finish** and allow some
 time for the dataflow to be created.
 
-![](./assets/d73a264c1f8e991d4e8aac0d3bada41175cf9feb.png){width="6.627603893263342in"
+![](./merkury-enterprise-identity-resolution-assets/d73a264c1f8e991d4e8aac0d3bada41175cf9feb.png){width="6.627603893263342in"
 height="1.7673611111111112in"}
