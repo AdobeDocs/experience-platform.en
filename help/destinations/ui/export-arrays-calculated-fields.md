@@ -210,8 +210,21 @@ In this case, your output file looks like below, exporting the first and the las
 johndoe@acme.org,"1538097126","1664327526"
 ```
 
-### `md5` and `sha256` hashing functions {#hashing-functions}
+### Hashing functions {#hashing-functions}
 
-In addition to the functions specific for exporting arrays or elements from an array, you can use hashing functions to hash attributes. For example, if you have any personally identifiable information in attributes, you can hash those fields when exporting them. 
+In addition to the functions specific for exporting arrays or elements from an array, you can use hashing functions to hash attributes in the exported files. For example, if you have any personally identifiable information in attributes, you can hash those fields when exporting them. 
 
-You can hash string values directly, for example `md5(personalEmail.address)`. If desired, you can also hash individual elements of array fields, like this: `md5(purchaseTime[0])`
+You can hash string values directly, for example `md5(personalEmail.address)`. If desired, you can also hash individual elements of array fields, assuming elements in the array are strings, like this: `md5(purchaseTime[0])`
+
+The supported hashing functions are:
+
+|Function | Sample expression |
+|---------|----------|
+| `sha1` | `sha1(organizations[0])` |
+| `sha256` | `sha256(organizations[0])` |
+| `sha512` | `sha512(organizations[0])` |
+| `hash` | `hash("crc32", organizations[0], "UTF-8")` |
+| `md5` |  `md5(organizations[0], "UTF-8")` |
+| `crc32` | `crc32(organizations[0])` |
+
+{style="table-layout:auto"}
