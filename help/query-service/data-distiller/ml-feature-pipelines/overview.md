@@ -34,7 +34,7 @@ This workflow requires a working understanding of the various aspects of Adobe E
 
 By reading this document, you have been introduced to the important concepts behind using your preferred machine learning tools to build custom models that support your marketing use cases. 
 
-The documents included in this series of guides, describe the basic steps for creating feature pipelines from Experience Platform to feed custom models in your machine learning environment. You are now ready to establish a connection between Data Distiller and your Jupyter notebook.
+The documents included in this series of guides, describe the basic steps for creating feature pipelines from Experience Platform to feed custom models in your machine learning environment. You are now ready to establish a connection between Data Distiller and your [!DNL Jupyter Notebook].
 
 - [Connect to Data Distiller from a [!DNL Python] notebook](./establish-connection.md)
 - [Explore and analyze datasets](./exploratory-analysis.md)

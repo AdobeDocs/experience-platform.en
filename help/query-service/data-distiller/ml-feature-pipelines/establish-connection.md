@@ -2,13 +2,13 @@
 title: Connect to Data Distiller from a Jupyter Notebook
 description: Learn how to connect to Data Distiller from a Jupyter Notebook.  
 ---
-# Connect to DD from a Jupyter notebook
+# Connect to Data Distiller from a Jupyter Notebook
 
-To enrich your machine learning pipelines with high-value customer experience data, you must first connect to Data Distiller from Jupyter Notebooks. This document covers the steps to connect to Data Distiller from a [!DNL Python] notebook in your machine learning environment.
+To enrich your machine learning pipelines with high-value customer experience data, you must first connect to Data Distiller from [!DNL Jupyter Notebooks]. This document covers the steps to connect to Data Distiller from a [!DNL Python] notebook in your machine learning environment.
 
 ## Getting started
 
-This guide assumes that you are familiar with interactive [!DNL Python] notebooks and have access to a notebook environment. The notebook may be hosted within a cloud-based machine learning environment, or locally with [Jupyter Notebook](https://jupyter.org/).
+This guide assumes that you are familiar with interactive [!DNL Python] notebooks and have access to a notebook environment. The notebook may be hosted within a cloud-based machine learning environment, or locally with [[!DNL Jupyter Notebook]](https://jupyter.org/).
 
 ### Obtain connection credentials {#obtain-credentials}
 
