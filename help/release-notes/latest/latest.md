@@ -46,7 +46,8 @@ For more information on data collection, please read the [data collections overv
 
 | Functionality | Description |
 | ----------- | ----------- |
-| Support for hashing functions in calculated fields | In addition to the functions specific for [exporting arrays](../../destinations/ui/export-arrays-calculated-fields.md) or elements from an array, you can now use additional [hashing functions](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) to hash attributes in the exported files. The supported hashing functions are: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Beta) Support for hashing functions in calculated fields | In addition to the functions specific for [exporting arrays](../../destinations/ui/export-arrays-calculated-fields.md) or elements from an array, you can now use additional [hashing functions](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) to hash attributes in the exported files. The supported hashing functions are: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Limited GA) Activate account audiences to certain destinations | Real-Time CDP B2B customers can now activate [account audiences](../../segmentation/ui/account-audiences.md) to certain destinations. For more information about this feature, please read the [activate account audiences tutorial](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
