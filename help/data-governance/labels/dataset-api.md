@@ -9,10 +9,6 @@ exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 
 The [[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) allows you to apply and edit usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the [!DNL Catalog Service] API which manages dataset metadata.
 
-<!-- >[!IMPORTANT]
->
->Applying labels at the dataset level is only supported for data governance use cases. If you are trying to create access policies for the data, you must [apply labels to the schema](../../xdm/tutorials/labels.md) that the dataset is based on. See the overview on [attribute-based access control](../../access-control/abac/overview.md) for more information. -->
-
 This document covers how to manage labels for datasets and fields using the [!DNL Dataset Service API]. For steps on how to manage data usage labels themselves using API calls, see the [labels endpoint guide](../api/labels.md) for the [!DNL Policy Service API].
 
 ## Getting started
@@ -98,7 +94,7 @@ The example POST request below updates the entire dataset with a `C1` label. The
 >[!NOTE]
 >
 >If labels currently exist for the dataset in question, new labels can only be added through a PUT request, which requires an `If-Match` header. Once labels have been added to a dataset, the most recent `etag` value is required to update or remove the labels at a later time.
-><br>You need to do a GET request on the dataset before doing a PUT call and update only the fields which are intended to be modified by the request. The rest of the fields should remain unchanged.<br>The PUT call needs to have the same parent entities from the GET call and if there is a discrepancy then the customer would get an error. 
+><br>You must perform a GET request on the dataset before doing a PUT call and update only the fields which are intended to be modified by the request. The rest of the fields should remain unchanged.<br>The PUT call needs to have the same parent entities from the GET call and if there is a discrepancy then the customer would get an error. 
 
 
 To retrieve the most recent version of the dataset-label entity, make a [GET request](#look-up) to the `/datasets/{DATASET_ID}/labels` endpoint. The current value is returned in the response under an `etag` header. When updating existing dataset labels, best practice is to first perform a lookup request for the dataset in order to fetch its latest `etag` value before using that value in the `If-Match` header of your subsequent PUT request.
