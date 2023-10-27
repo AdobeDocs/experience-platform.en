@@ -4,11 +4,9 @@ type: Tutorial
 description: Learn how to activate the audiences you have in Adobe Experience Platform by sending them to connected TV destinations.
 ---
 
-# Activate audiences to connected TV and audio destinations
+# Activate audiences to curated destinations based on LiveRamp identifiers
 
-This article explains the workflow required to activate audiences from Adobe Experience Platform to connected TV and audio destinations, through the use of [LiveRamp RampID](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html).
-
-Use Adobe's integration with LiveRamp to activate audiences directly from Experience Platform to the following destinations: 
+Through Adobe's integration with [!DNL LiveRamp] you can activate audiences to a curated list of destinations which use [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) for activation, including connected TV and audio destinations, such as:
 
 * [[!DNL 4C Insights]](#insights)
 * [[!DNL Acast]](#acast)
@@ -31,9 +29,21 @@ Use Adobe's integration with LiveRamp to activate audiences directly from Experi
 * [[!DNL Teads]](#teads)
 * [[!DNL WB Discovery]](#wb-discovery)
 
+This article explains the workflow required to activate audiences from Real-Time CDP to the destinations listed above, directly from the Real-Time CDP UI.
+
 ## Activation workflow {#workflow}
 
-You activate audiences to connected TV and audio destinations by going through a two step process.
+You activate audiences to connected TV and audio destinations by going through a two step process, as shown in the image below.
+
+![Diagram showing the workflow for activating audiences from Real-Time CDP to curated destinations, through LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png)
+
+First, you export your audiences from Real-Time CDP to the [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) destination, as CSV files.
+
+After you've exported your audiences, you activate them by using the [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md) destination.
+
+>[!TIP]
+>
+>This process enables you to activate your audiences to destinations such as [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney), and more, directly from the Real-Time CDP UI, without the need of logging in to your [!DNL LiveRamp] account for activation.
 
 ### Step 1: Send your audiences from Experience Platform to LiveRamp, through the [!DNL LiveRamp - Onboarding] destination {#onboarding}
 
@@ -41,7 +51,7 @@ The first thing you must do in order to activate your audiences to connected TV 
 
 You do this by using the **[!DNL LiveRamp - Onboarding]** destination.
 
-![Experience Platform UI image showing the LiveRamp - Onboarding destination card](../assets/ui/activate-connected-tv-destinations/liveramp-onboarding-catalog.png)
+![Experience Platform UI image showing the LiveRamp - Onboarding destination card](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)
 
 To learn how to configure the [!DNL LiveRamp - Onboarding] destination and export your audiences from Experience Platform, read the [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) destination documentation.
 
@@ -62,17 +72,13 @@ After you have [validated](../catalog/advertising/liveramp-onboarding.md#exporte
 
 You activate the audiences (exported in [step 1](#onboarding)) by using the **[!DNL LiveRamp - Distribution]** destination.
 
-![Experience Platform UI image showing the LiveRamp - Distribution destination card](../assets/ui/activate-connected-tv-destinations/liveramp-distribution-catalog.png)
+![Experience Platform UI image showing the LiveRamp - Distribution destination card](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
 
 To learn how to configure the **[!DNL LiveRamp - Distribution]** destination and activate the audiences which you exported in [step 1](#onboarding), read the [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md) destination documentation.
 
 >[!IMPORTANT]
 >
 >In the **audience selection** step of the **[!DNL LiveRamp - Distribution]** destination, you must select the *exact same audiences* which you have exported to the [LiveRamp - Onboarding](liveramp-onboarding.md) destination in [step 1](#onboarding).
-
-Click the image below to view a full sized overview diagram of the workflow.
-
-![Diagram of the LiveRamp activation workflow](../assets/ui/activate-connected-tv-destinations/liveramp-workflow.png "Diagram of the LiveRamp activation workflow") {width="500" align="center" zoomable="yes"}
 
 When you configure the **[!DNL LiveRamp - Distribution]** destination, you must create a dedicated connection for each downstream destination that you want to use (e.g. Roku, Disney, etc.).
 
@@ -82,6 +88,8 @@ When you configure the **[!DNL LiveRamp - Distribution]** destination, you must 
 ><br>
 >Example: `LiveRamp - Roku`.
 
-![Platform UI screenshot showing multiple LiveRamp destinations.](../assets/ui/activate-connected-tv-destinations/liveramp-naming.png)
+![Platform UI screenshot showing multiple LiveRamp destinations.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
 
 ## Exported data / Validate data export {#exported-data}
+
+To validate the successful activation of your audiences, log in to your destination platform account and check the activation metrics.

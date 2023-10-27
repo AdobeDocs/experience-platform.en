@@ -35,6 +35,7 @@ feature: Destinations
         * [Activate audiences to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
         * [Activate audiences to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
         * [Activate audiences to edge personalization destinations](./ui/activate-edge-personalization-destinations.md)
+        * [Activate audiences to curated destinations based on LiveRamp identifiers](./ui/activate-curated-destinations.md)
         * [Activate prospect audiences to destinations](./ui/activate-prospect-audiences.md)
         * [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
         * [Export datasets using the Experience Platform UI](./ui/export-datasets.md)
