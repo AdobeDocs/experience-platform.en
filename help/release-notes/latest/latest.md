@@ -9,11 +9,26 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 Updates to existing features in Experience Platform:
 
+- [Dashboards](#dashboards)
 - [Data collection](#data-collection)
 - [Destinations](#destinations)
 - [Sandboxes](#sandboxes)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
+
+## Dashboards {#dashboards}
+
+Adobe Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots. 
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Destinations usage metrics | New metering metrics have been added to the license usage dashboard. The **[!UICONTROL Audience Activation Size]** and **[!UICONTROL Data Export Size]** metrics provide a convenient way to track how much data you have exported out of Platform in relation to your license usage entitlements. See the [available metrics](../../dashboards/guides/license-usage.md#available-metrics) documentation for descriptions of these and and other licence usage metrics. |
+
+{style="table-layout:auto"}
+
+For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
 
 ## Data collection {#data-collection}
 
