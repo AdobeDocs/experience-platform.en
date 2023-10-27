@@ -58,7 +58,7 @@ Follow the instructions to select a destination where you can export your datase
 
 ## Select your account audiences {#select-account-audiences}
 
-Use the check boxes to the left of the account audiences names to select the audiences that you want to export to the destination, then select **[!UICONTROL Next]**. Note that only account audiences are shown in this view, and no other audience types are displayed. 
+Use the check boxes to the left of the account audiences names to select the audiences that you want to export to the destination, then select **[!UICONTROL Next]**. Note that only *account audiences* are shown in this view, and no other audience types are displayed. 
 
 ![Dataset export workflow showing the Select audiences step where you can select which account audiences to export.](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
 
@@ -92,8 +92,3 @@ When activating account audiences to the **[!UICONTROL (Companies) LinkedIn Matc
 ![Review step of the activate account audiences workflow with the consent enforcement control greyed out.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 
 Other data governance mechanisms in Real-Time CDP such as [data usage policy checks](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) and [attribute-based access control](/help/destinations/home.md#attribute-based-access) are supported.
-
-
-
-
-
