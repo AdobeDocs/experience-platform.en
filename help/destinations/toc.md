@@ -25,6 +25,7 @@ feature: Destinations
     * [Delete destination accounts](./api/delete-destination-account.md)
     * [Delete destination dataflows](./api/delete-destination-dataflow.md)
     * [Export datasets](/help/destinations/api/export-datasets.md)
+    * [Sort and filter API responses for destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases) 
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
     * [Create a new destination connection](./ui/connect-destination.md)
@@ -179,6 +180,7 @@ feature: Destinations
         * [IP address allowlist for streaming destinations](./catalog/streaming/ip-address-allow-list.md)
     * Survey destinations {#survey}
         * [Survey destinations overview](./catalog/survey/overview.md)
+        * [Qualtrics Automations destination](./catalog/survey/qualtrics-automations.md)
         * [Foresee extension destination](./catalog/survey/foresee.md)
         * [InMoment extension](./catalog/survey/inmoment.md)
         * [Qualtrics Website Feedback extension](./catalog/survey/qualtrics.md)
