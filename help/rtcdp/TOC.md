@@ -32,7 +32,13 @@ user-guide-description: Bring together known and anonymous data from multiple en
   * [Destinations overview](destinations/overview.md)
   * [Destinations in Real-Time CDP B2B Edition](destinations/b2b.md)
 * Guardrails {#guardrails}
-  * [Real-Time CDP guardrails](/help/rtcdp/guardrails/guardrails.md)
+  * [Real-Time CDP guardrails overview](/help/rtcdp/guardrails/overview.md)
+  * [Guardrails for data ingestion](/help/ingestion/guardrails.md)
+  * [Guardrails for the [!DNL Edge Network Server API]](/help/server-api/guardrails.md)
+  * [Guardrails for [!DNL Real-Time Customer Profile] data and segmentation](/help/profile/guardrails.md)
+  * [Guardrails for [!DNL Identity Service] data](/help/identity-service/guardrails.md)
+  * [Guardrails for [!DNL Query Service]](/help/query-service/guardrails.md)
+  * [Guardrails for data activation through destinations](/help/destinations/guardrails.md)
 * Identities {#identity}  
   * [Identities & identity namespaces](profile/identities-overview.md)
 * Merge policies {#merge-policies}
