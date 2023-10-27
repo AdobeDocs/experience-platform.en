@@ -9,7 +9,7 @@ badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/le
 
 >[!AVAILABILITY]
 >
->The functionality to activate account audiences to destinations is only available in the [B2B Edition of Real-Time Customer Data Platform](../../rtcdp/b2b-overview.md). Additionally, account audience functionality is currently in **limited availability**. Contact your Adobe representative to request access to this functionality.
+>The functionality to activate account audiences to destinations is only available in the [B2B Edition of Real-Time Customer Data Platform](../../rtcdp/b2b-overview.md). Additionally, account audience functionality is currently in **limited availability**. Contact Adobe Customer Care or your Adobe representative to request access to this functionality.
 
 This article explains the workflow required to export [account audiences](/help/segmentation/ui/account-audiences.md) from Adobe Experience Platform to your preferred destination. 
 
