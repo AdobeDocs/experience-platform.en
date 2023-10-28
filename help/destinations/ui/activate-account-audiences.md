@@ -4,6 +4,7 @@ type: Tutorial
 description: Learn how to activate account audiences to destinations
 badgeLimitedAvailability: label="Limited availability" type="Caution"
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
 ---
 # Activate account audiences
 
