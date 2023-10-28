@@ -1,6 +1,7 @@
 ---
 title: Sandbox Tooling Tools API Endpoint
 description: The /tools endpoint in the Sandbox Tooling API allows you to retrieve job JSON data in Adobe Experience Platform.
+exl-id: 529cb7d6-6b3f-459c-be03-35fc28b891cf
 ---
 # Tools endpoint
 

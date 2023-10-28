@@ -1,6 +1,7 @@
 ---
 title: AI/ML feature pipelines
 description: Learn how to use Data Distiller to enrich your machine learning pipelines with features derived from Adobe Experience Platform data. Transform raw data into features and deliver the feature data to train or score a model that supports your marketing use cases.
+exl-id: 3b452181-e254-4155-8bf5-0990533f202d
 ---
 # AI/ML feature pipelines
 
@@ -220,6 +221,3 @@ If the connection test above is unsuccessful, you will likely get `KeyError: 'te
 - Check your `config.ini` file and make sure that your environment and credential information is correct.
 
 If your configuration is correct and you are able to successfully make calls to `aepp` methods, you may sometimes get an unsuccessful response from the Platform server. This may happen if you try to create an object in Platform that already exists, or get an object that does not exist, or attempt to send a malformed payload with a request. Most `aepp` methods make a request to an Platform API endpoint and return the response from the server. Print the response and review it to get error message from the API. This will usually give you enough information to understand the problem with the request and fix it. -->
-
-
-

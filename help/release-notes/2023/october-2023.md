@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The October 2023 release notes for Adobe Experience Platform.
+exl-id: e9cf5299-8350-4b40-8f56-05e598846875
 ---
 # Adobe Experience Platform release notes 
 

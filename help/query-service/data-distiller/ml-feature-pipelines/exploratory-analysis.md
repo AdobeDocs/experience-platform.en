@@ -1,6 +1,7 @@
 ---
 title: Exploratory Data Analysis
 description: Learn how to use Data Distiller to explore and analyze data from a Python notebook.
+exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
 ---
 # Exploratory data analysis
 
