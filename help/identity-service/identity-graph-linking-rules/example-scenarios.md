@@ -4,6 +4,7 @@ description: Learn about example scenarios for configuring Identity Settings.
 hide: true
 hidefromtoc: true
 badge: Alpha
+exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
 ---
 # Example scenarios for configuring identity graph linking rules
 

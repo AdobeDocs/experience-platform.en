@@ -4,6 +4,7 @@ description: Learn about how Identity Service links disparate identities to crea
 hide: true
 hidefromtoc: true
 badge: Alpha
+exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
 ---
 # Identity Service linking logic
 

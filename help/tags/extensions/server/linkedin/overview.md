@@ -2,6 +2,7 @@
 title: Linkedin Conversions API event forwarding extension
 description: This Adobe Experience Platform event forwarding extension allows you to measure the performance of your Linkedin marketing campaign.
 last-substantial-update: 2023-10-25
+exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
 ---
 # [!DNL LinkedIn] conversions API extension
 
