@@ -13,7 +13,7 @@ Learn how to use partner-aided recognition to deliver personalized experiences t
 
 ![An infographic that describes how to use partner-provided attributes to deliver personalized experiences to your visitors.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png)
 
-## Why consider this use case
+## Why consider this use case {#why-this-use-case}
 
 Fragmentation of digital experiences as consumers interact with brands in myriad ways is very real and is becoming increasingly harder to solve for. The best customer engagement strategies for cohesive experiences, targeted recommendations, and tailor-made interactions are all constrained by user recognition. 
 

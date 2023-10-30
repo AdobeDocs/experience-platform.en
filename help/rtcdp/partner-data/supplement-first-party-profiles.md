@@ -13,7 +13,7 @@ Supplement first-party profiles with attributes from trusted data partners to im
 
 ![Enrich profiles with partner-provided attributes use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
 
-## Why consider this use case {#prerequisites-and-planning}
+## Why consider this use case {#why-this-use-case}
 
 Brands are simultaneously facing daunting challenges of responsibly executing top-of-the-funnel customer acquisition use-cases without dependency on third-party cookies, limited budgets, higher demand on transparency and return on ad-spend.  Adobe's Real-Time Customer Data Platform can help brands safely transition their DMP supported use-cases to a cookie-less alternatives and do so in a way that brings forward the full sophistication and power of self-serve segmentation, audience curation, and activation into a single system.  All without compromising on our unwavering focus on responsible use of data via our patented data governance and consent framework.
 
