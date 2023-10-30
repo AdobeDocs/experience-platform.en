@@ -23,6 +23,13 @@ feature: Queries
         - [Overview](data-distiller/derived-attributes/overview.md)
         - [Seamless SQL flow](data-distiller/derived-attributes/seamless-sql-flow.md)
         - [Create decile-based derived attributes](data-distiller/derived-attributes/decile-based-derived-attributes.md)
+    - AI/ML feature pipelines {#ml-feature-pipelines}
+        - [Overview](data-distiller/ml-feature-pipelines/overview.md)
+        - [Connect to Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
+        - [Exploratory data analysis](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
+        - [Engineer features for ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
+        - [Export data to ML environments](data-distiller/ml-feature-pipelines/export-data.md)
+        - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Use cases {#use-cases}
     - [Abandoned browse](use-cases/abandoned-browse.md)
     - [Attribution analysis](use-cases/attribution-analysis.md)
@@ -95,5 +102,6 @@ feature: Queries
     - [Metadata commands](sql/metadata.md)
     - [Prepared statements](sql/prepared-statements.md)
 - [Frequently asked questions](troubleshooting-guide.md)
+- [IP address allowlist](ip-address-allowlist.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

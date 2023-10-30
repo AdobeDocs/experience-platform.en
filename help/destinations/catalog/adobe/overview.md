@@ -29,7 +29,6 @@ To understand the difference between connections and extensions, see [Connection
 
 * [Adobe Advertising Cloud extension](../advertising/adobe-advertising-cloud.md)
 * [Adobe Analytics extension](../analytics/adobe-analytics.md)
-* [Adobe Livefyre extension](../social/adobe-livefyre.md)
 * [Adobe Media Analytics for Audio and Video extension](../analytics/adobe-video-analytics.md)
 * [Adobe Target extension](../personalization/adobe-target.md)
 * [Adobe Target v2 extension](../personalization/adobe-target-v2.md)

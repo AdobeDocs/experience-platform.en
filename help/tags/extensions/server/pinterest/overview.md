@@ -3,6 +3,7 @@ keywords: event forwarding extension;pinterest;pinterest event forwarding extens
 title: Pinterest event forwarding extension
 description: This Adobe Experience Platform event forwarding extension allows you to ingest events into Pinterest for your business requirements.
 last-substantial-update: 2023-04-27
+exl-id: 44f38a9b-0a28-4b51-bead-ee460eb8405e
 ---
 # [!DNL Pinterest] event forwarding extension
 

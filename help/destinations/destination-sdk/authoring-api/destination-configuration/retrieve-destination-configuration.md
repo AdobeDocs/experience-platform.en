@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to retrieve a destination configuration through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to retrieve a destination configuration through Adobe Experience Platform Destination SDK.
 title: Retrieve a destination configuration
+exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
 ---
-
 # Retrieve a destination configuration
 
 This page exemplifies the API request and payload that you can use to retrieve information about an existing destination configuration, using the `/authoring/destination` API endpoint.

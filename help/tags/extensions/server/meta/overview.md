@@ -29,7 +29,7 @@ To install the [!DNL Meta Conversions API] extension, navigate to the Data Colle
 
 Once you have selected or created the desired property, select **[!UICONTROL Extensions]** in the left navigation, then select the **[!UICONTROL Catalog]** tab. Search for the [!UICONTROL Meta Conversions API] card, then select **[!UICONTROL Install]**.
 
-![The [!UICONTROL Install] button being selected for the [!UICONTROL Meta Conversions API] extension in the Data Collection UI.](../../../images/extensions/server/meta/install.png)
+![The [!UICONTROL Install] option being selected for the [!UICONTROL Meta Conversions API] extension in the Data Collection UI.](../../../images/extensions/server/meta/install.png)
 
 In the configuration view that appears, you must provide the [!DNL Pixel] ID you copied earlier to link the extension to your account. You can paste the ID directly into the input, or you can use a data element instead.
 
@@ -40,6 +40,30 @@ When finished, select **[!UICONTROL Save]**
 ![The [!DNL Pixel] ID provided as a data element in the extension configuration view.](../../../images/extensions/server/meta/configure.png)
 
 The extension is installed and you can now employ its capabilities in your event forwarding rules.
+
+## Integration with Meta Business Extension (MBE) {#mbe}
+
+The integration with Meta Business Extensions (MBE) enhancement allows you to quickly authenticate into your Meta Business Account. This then auto-populates your [!UICONTROL Pixel ID] and the Meta Conversions API [!UICONTROL Access Token], making it easier to install and configure the Meta Conversions API.
+
+A dialogue prompt to authenticate in MBE appears when installing the [!UICONTROL Meta Conversions API] extension.
+
+![The [!UICONTROL Meta Conversions API Extension] installation page highlighting [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
+
+A dialogue prompt to authenticate in MBE also appears in the quick start workflow UI within event forwarding. 
+
+![The quick start workflow UI highlighting [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
+
+## Integration with Event Quality Match Score (EMQ) {#emq}
+
+The integration with Event Quality Match Score (EMQ) allows you to easily view the effectiveness of your implementation by showing EMQ scores. This integration minimizes context switching and helps you improve the success of your Meta Conversions API implementations. These event scores appear in the [!UICONTROL Meta Conversions API extension] configuration screen.
+
+![The [!UICONTROL Meta Conversions API Extension] configuration page highlighting [!UICONTROL View EMQ Score].](../../../images/extensions/server/meta/emq-score.png)
+
+## Integration with LiveRamp (Alpha) {#alpha}
+
+The integration with LiveRamp adds new fields to the Meta Conversions API rule configuration, making it easier for customers to integrate with LiveRamp Conversions API. This integration eliminates the need for you to share PII directly with your partner or Meta. Due to the robust identity graph of LiveRamp, the inclusion of [!UICONTROL Partner ID (alpha)] may improve integration quality by boosting the user match rate.
+
+![The Meta even forwarding [!UICONTROL Rule] configuration page highlighting [!UICONTROL Partner Name (alpha)] and [!UICONTROL Partner ID (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Configure an event forwarding rule {#rule}
 

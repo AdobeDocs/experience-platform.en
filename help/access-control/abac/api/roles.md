@@ -492,20 +492,18 @@ PATCH /roles/{ROLE_ID}
 The following request updates the subjects associated with `{ROLE_ID}`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/access-control/administration/roles/{ROLE_ID} \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
-  -d'{
-    "operations": [
-      {
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
         "op": "add",
-        "path": "/subjects",
-        "value": "New subjects"
-      }
-    ]
-  }'
+        "path": "/user",
+        "value": "{USER ID}"
+    }
+]' 
 ```
 
 | Operations | Description |
@@ -516,37 +514,7 @@ curl -X PATCH \
 
 **Response**
 
-A successful response returns the updated subjects associated with the queried role ID.
-
-```json
-{
-  "subjects": [
-    {
-      "subjectId": "string",
-      "subjectType": "user"
-    }
-  ],
-  "_page": {
-    "limit": 0,
-    "count": 0
-  },
-  "_links": {
-    "next": {
-      "href": "string",
-      "templated": true
-    },
-    "page": {
-      "href": "string",
-      "templated": true
-    }
-  }
-}
-```
-
-| Property | Description |
-| --- | --- |
-| `subjectId` | The ID of a subject. |
-| `subjectType` | The type of a subject. |
+A successful response returns HTTP status 204 (No Content) and a blank body.
 
 ## Delete a role {#delete}
 
@@ -579,3 +547,34 @@ curl -X DELETE \
 A successful response returns HTTP status 204 (No Content) and a blank body.
 
 You can confirm the deletion by attempting a lookup (GET) request to the role. You will receive an HTTP status 404 (Not Found) because the role has been removed from the administration.
+
+## Add an API credential {#apicredential}
+
+To add an API credential, make a PATCH request to `/roles` endpoint while providing the role ID of the subjects.
+
+**API format**
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
+        "op": "add",
+        "path": "/api-integration",
+        "value": "{TECHNICAL ACCOUNT ID}"
+    }
+]'   
+```
+
+| Operations | Description |
+| --- | --- |
+| `op` | The operation call used to define the action needed to update the role. Operations include: `add`, `replace`, and `remove`. |
+| `path` | The path of the parameter to be added. |
+| `value` | The value you want to add your parameter with. |
+
+**Response**
+
+A successful response returns HTTP status 204 (No Content) and a blank body.

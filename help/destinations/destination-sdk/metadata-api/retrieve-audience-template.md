@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to retrieve an audience template through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to retrieve an audience template through Adobe Experience Platform Destination SDK.
 title: Retrieve an audience template
+exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
 ---
-
 # Retrieve an audience template
 
 >[!IMPORTANT]

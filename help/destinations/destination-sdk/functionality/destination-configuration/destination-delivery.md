@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure the destination delivery settings for destinations built with Destination SDK, to indicate where the exported data goes and what authentication rule is used in the location where the data will land.
 title: Destination delivery
+exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
 ---
-
 # Destination delivery
 
 To offer more control over where the data exported to your destination lands, Destination SDK allows you to specify destination delivery settings.

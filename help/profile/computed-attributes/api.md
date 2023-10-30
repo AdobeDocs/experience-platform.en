@@ -1,8 +1,8 @@
 ---
 title: Computed Attributes API Endpoint
 description: Learn how to create, view, update, and delete computed attributes using the Real-Time Customer Profile API.
+exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
 ---
-
 # Computed attributes API endpoint
 
 >[!IMPORTANT]

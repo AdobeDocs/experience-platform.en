@@ -43,7 +43,7 @@ The following table outlines how each XDM type is represented in JSON Schema, al
       <td><code>"Platinum"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Double]</td>
+      <td>[!UICONTROL Number]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "number"}</pre>
@@ -152,7 +152,7 @@ The sections below describe how each XDM type maps to other common serialization
 | XDM type | Parquet | Spark SQL | Java | 
 | --- | --- | --- | --- |
 | [!UICONTROL String] | Type: `BYTE_ARRAY`<br>Annotation: `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Double] | Type: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Number] | Type: `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Long] | Type: `INT64` | `LongType` | `java.lang.Long` |
 | [!UICONTROL Integer] | Type: `INT32`<br>Annotation: `INT_32` | `IntegerType` | `java.lang.Integer` |
 | [!UICONTROL Short] | Type: `INT32`<br>Annotation: `INT_16` | `ShortType` | `java.lang.Short` |
@@ -169,7 +169,7 @@ The sections below describe how each XDM type maps to other common serialization
 | XDM type | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `String` | `System.String` | `String` |
-| [!UICONTROL Double] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Number] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
 | [!UICONTROL Integer] | `Int` | `System.Int32` | `Number` |
 | [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
@@ -186,7 +186,7 @@ The sections below describe how each XDM type maps to other common serialization
 | XDM type | MongoDB | Aerospike | Protobuf 2 | 
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `string` | `String` | `string` |
-| [!UICONTROL Double] | `double` | `Double` | `double` |
+| [!UICONTROL Number] | `double` | `Double` | `double` |
 | [!UICONTROL Long] | `long` | `Integer` | `int64` |
 | [!UICONTROL Integer] | `int` | `Integer` | `int32` |
 | [!UICONTROL Short] | `int` | `Integer` | `int32` |

@@ -1,8 +1,8 @@
 ---
 description: Learn how to format an API call to submit a destination publishing request through Adobe Experience Platform Destination SDK.
 title: Create a destination publishing request
+exl-id: 913be9de-a699-4756-885d-b3761ec729cb
 ---
-
 # Create a destination publishing request
 
 >[!IMPORTANT]

@@ -1,8 +1,8 @@
 ---
 title: Computed Attributes Frequently Asked Questions
 description: Find out answers to frequently asked questions about using computed attributes.
+exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
 ---
-
 # Frequently asked questions
 
 In Adobe Experience Platform, computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. The following is a list of frequently asked questions regarding computed attributes.
@@ -19,9 +19,9 @@ Computed attributes considers Real-Time Customer Profile-enabled Experience Even
 
 All XDM fields on your Experience Event union schema can be used to create computed attributes.
 
-## What does the "last evaluation time" represent?
+## What do "last evaluation" and "last evaluation status" represent?
 
-The last evaluation time means that the events **prior** to that timestamp were considered in the latest successful refresh of the computed attribute.
+Last evaluated refers to the timestamp until which events are considered in the last successful run. Last evaluation status refers to whether or not the last evaluation run was successful.
 
 ## Can I choose the refresh frequency? How is this decided?
 
@@ -59,9 +59,25 @@ Computed attributes drive Profile enrichment by aggregating your event attribute
 
 ## How often are computed attributes evaluated? Is this related to the audience evaluation schedule?
 
-Computed attributes are evaluated in batches independently of the segmentation schedule. This means that regardless of the segmentation type (batch segmentation or streaming segmentation), the computed attribute will be evaluated on its own schedule (hourly, daily, weekly, or monthly). 
+Computed attributes are evaluated in a **batch** frequency that is **independent** to the schedule of your audience, destination, and journey evaluation. This means that regardless of the segmentation type (batch segmentation or streaming segmentation), the computed attribute will be evaluated on its own schedule (hourly, daily, weekly, or monthly). 
 
-When the audience is evaluated, it will use the **latest** value of the computed attribute available.
+The first time evaluation of your computed attribute happens within the 24 hours of its **creation**. The subsequent batch evaluations happen at an hourly, daily, weekly, or monthly basis depending on the defined lookback period.
+
+For example, if a first time evaluation occurs at 12AM UTC on October 9th, the subsequent evaluations would occur at the following times:
+
+- Next daily refresh: 12AM UTC on October 10th
+- Next weekly refresh: 12AM UTC on October 15th
+- Next monthly refresh:  12AM UTC on November 1st
+
+>[!IMPORTANT]
+>
+>This is only the case if fast refresh is **not** enabled. To learn how the lookback period changes when fast refresh is enabled, please read the [fast refresh section](./overview.md#fast-refresh).
+
+Both the **weekly** and **monthly** refreshes take place on the beginning of the **calendar week** (the Sunday of the new week) or the beginning of the **calendar month** (the first of the new month), as opposed to exactly one week or one month after the first time evaluation date.
+
+>[!NOTE]
+>
+>The computed attribute value is **not** immediately refreshed in profile after each evaluation run. In order to ensure the updated value is in your profiles, you should consider a buffer of a few hours between evaluation time and computed attribute usage. The computed attribute refresh schedule is **system-determined** and **cannot** be modified. For more information, please contact Adobe Customer Care.
 
 ## How do computed attributes interact with audiences evaluated using streaming segmentation?
 

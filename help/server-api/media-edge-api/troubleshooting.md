@@ -1,9 +1,9 @@
 ---
 solution: Experience Platform
 title: Getting started with Media Edge APIs
-description: Media Edge APIs Trouble-shooting guide 
+description: Media Edge APIs Trouble-shooting guide
+exl-id: 51f494f5-25a3-400d-b225-8d8dc4cbebd5
 ---
-
 # Media Edge API trouble-shooting guide
 
 This guide provides trouble-shooting instructions for handling errors and for obtaining successful responses.
@@ -159,5 +159,3 @@ VideoPlayer.prototype._processPendingEvents function(sessionID) {
     _pendingEvents = [];
 }
 ```
-
-
