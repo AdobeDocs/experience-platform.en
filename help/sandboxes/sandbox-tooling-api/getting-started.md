@@ -1,6 +1,7 @@
 ---
 title: Getting Started with the Sandbox Tooling API
 description: Use the Sandbox tooling API to examine artifacts and export and import a snapshot of sandbox configurations between sandboxes. Follow this guide to learn how to perform key operations using the API.
+exl-id: 0b34d153-a603-4397-a375-9cc846efe23a
 ---
 # Getting started with the sandbox tooling API {#getting-started}
 

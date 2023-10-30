@@ -1,6 +1,7 @@
 ---
 title: Export Data to external ML Environments
 description: Learn how to share a prepared training dataset, created with Data Distiller, to a cloud storage location that your ML environment can read for training and scoring your model.
+exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
 ---
 # Export data to external ML environments
 

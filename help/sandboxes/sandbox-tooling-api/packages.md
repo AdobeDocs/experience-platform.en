@@ -1,6 +1,7 @@
 ---
 title: Sandbox Tooling Packages API Endpoint
 description: The /packages endpoint in the Sandbox Tooling API allows you to programmatically manage packages in Adobe Experience Platform.
+exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
 ---
 # Packages endpoint
 
