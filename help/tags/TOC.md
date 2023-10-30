@@ -222,11 +222,13 @@ solution: Data Collection
       * [Overview](./extensions/server/google-ads-enhanced-conversions/overview.md)
     * Google Cloud Platform {#google-cloud-platform}
       * [Overview](./extensions/server/google-cloud-platform/overview.md)
+    * [!DNL LinkedIn Conversions API] {#linkedin}
+      * [Overview](./extensions/server/linkedin/overview.md)
     * [!DNL Mailchimp] Edge {#mailchimp}
       * [Overview](./extensions/server/mailchimp/overview.md)
     * [!DNL Meta Conversions API] {#meta}
       * [Overview](./extensions/server/meta/overview.md)
-    * [!UICONTROL Microsoft Azure] {#azure}
+    * [!DNL Microsoft Azure] {#azure}
       * [Overview](./extensions/server/azure/overview.md)
     * [!DNL Mixpanel] {#mixpanel}
       * [Overview](./extensions/server/mixpanel/overview.md)
