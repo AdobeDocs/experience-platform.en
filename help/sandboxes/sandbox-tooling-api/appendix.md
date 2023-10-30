@@ -1,8 +1,8 @@
 ---
 title: Sandbox Tooling API Guide Appendix
 description: This document provides supplemental information related to working with the Sandbox Tooling API.
+exl-id: fdfa019d-ce0e-456b-b591-7d96d1115e02
 ---
-
 # Sandbox API guide appendix
 
 This document provides supplemental information related to working with the [!DNL Sandbox] API.

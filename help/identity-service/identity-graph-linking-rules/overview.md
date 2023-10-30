@@ -4,6 +4,7 @@ description: Learn about Identity Graph Linking Rules in Identity Service.
 hide: true
 hidefromtoc: true
 badge: Alpha
+exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 ---
 # Identity graph linking rules overview
 

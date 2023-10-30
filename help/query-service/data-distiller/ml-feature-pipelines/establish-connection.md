@@ -1,6 +1,7 @@
 ---
 title: Connect to Data Distiller from a Jupyter Notebook
-description: Learn how to connect to Data Distiller from a Jupyter Notebook.  
+description: Learn how to connect to Data Distiller from a Jupyter Notebook.
+exl-id: e6238b00-aaeb-40c0-a90f-9aebb1a1c421
 ---
 # Connect to Data Distiller from a Jupyter Notebook
 

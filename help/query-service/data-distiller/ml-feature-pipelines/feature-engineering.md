@@ -1,6 +1,7 @@
 ---
 title: Engineer Features for Machine Learning
 description: Learn how to transform data in Adobe Experience Platform into features or variables that can be consumed by a machine learning model. Use Data Distiller to compute ML features at scale and share those features with your machine learning environment.
+exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
 ---
 # Engineer features for machine learning
 
