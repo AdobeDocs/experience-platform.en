@@ -15,7 +15,9 @@ Use third party data support in Real-Time CDP to expand your profile base with p
 
 ## Why consider this use case {#why-this-use-case}
 
-Brands are simultaneously facing daunting challenges of responsibly executing top-of-the-funnel customer acquisition use-cases without dependency on third-party cookies, limited budgets, and higher demand on transparency and return on ad-spend. Adobe Real-Time Customer Data Platform can help brands safely transition their Data Management Platform (DMP) supported use-cases to cookie-less alternatives and do so in a way that brings forward the full sophistication and power of self-serve segmentation, audience curation, and activation into a single system. All without compromising on Adobe's unwavering focus on responsible use of data via a patented data governance and consent framework.
+Brands are simultaneously facing daunting challenges of responsibly executing top-of-the-funnel customer acquisition use-cases without dependency on third-party cookies, limited budgets, and higher demand on transparency and return on ad-spend. 
+
+Adobe Real-Time Customer Data Platform can help brands safely transition their Data Management Platform (DMP) supported use-cases to cookie-less alternatives and do so in a way that brings forward the full sophistication and power of self-serve segmentation, audience curation, and activation into a single system. All without compromising on Adobe's unwavering focus on responsible use of data via a patented data governance and consent framework.
 
 For example, follow the steps described in this use case when you need to run a campaign to attract prospects to become users or known customers.
 

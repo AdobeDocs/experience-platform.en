@@ -15,7 +15,11 @@ Supplement first-party profiles with attributes from trusted data partners to im
 
 ## Why consider this use case {#why-this-use-case}
 
-Brands are simultaneously facing daunting challenges of responsibly executing top-of-the-funnel customer acquisition use-cases without dependency on third-party cookies, limited budgets, higher demand on transparency and return on ad-spend.  Adobe's Real-Time Customer Data Platform can help brands safely transition their DMP supported use-cases to a cookie-less alternatives and do so in a way that brings forward the full sophistication and power of self-serve segmentation, audience curation, and activation into a single system.  All without compromising on our unwavering focus on responsible use of data via our patented data governance and consent framework.
+Most brands, even those which are rich with first party data, can benefit from streamlining their data and gaining a more nuanced understanding of customers, their behaviors, patterns, and preferences. 
+
+Adobe Real-time Customer Data Platform can help brands responsibly supplement their first-party data with valuable insights, identifiers, and attributes from one or more trusted partners. 
+
+Adobe understands there is no one-size-fits-all approach and allows for seamless interoperability with data and identity partners to foster individualized and thoughtful engagement across all stages of the customer lifecycle. These capabilities are underpinned by a trusted data governance framework, allowing for nuanced control on where and how partner data gets used. For instance, you may want to use partner provided insights for segmentation but not for personalization.
 
 For example, follow the steps described in this use case when you need to enrich your customer records with demographic and intent signals. 
 
