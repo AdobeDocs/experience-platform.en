@@ -190,7 +190,7 @@ alloy("configure", {
     "com_adobe_experience_platform": {
       "datasets": {
         "event": { 
-          datasetId: "SampleEventDatasetIdOverride"
+          datasetId: "SampleProfileDatasetIdOverride"
         },
         "profile": { 
           datasetId: "www"
@@ -220,7 +220,6 @@ alloy("configure", {
 After [configuring the datastream overrides](#configure-overrides) in the Data Collection UI, you can now send the overrides to the Edge Network, via the Mobile SDK.
 
 If you are using the Mobile SDK, sending the overrides to the Edge Network via the `sendEvent` API is the second and final step of activating datastream configuration overrides.
-
 
 For more information about the Experience Platform Mobile SDK, see the [Mobile SDK documentation](https://developer.adobe.com/client-sdks/edge/edge-network/).
 
@@ -252,19 +251,19 @@ Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) 
 This example shows what a datastream ID override looks like in a Mobile SDK [!DNL Android] integration.
 
 ```kotlin
- // Create experience event from Map
- val xdmData = mutableMapOf<String, Any>()
- xdmData["eventType"] = "SampleXDMEvent"
- xdmData["sample"] = "data"
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
 
- val experienceEvent = ExperienceEvent.Builder()
-   .setXdmSchema(xdmData)
-   .setDatastreamIdOverride("SampleDatastreamId")
-   .build()
- 
- Edge.sendEvent(experienceEvent) {
-   // Handle the Edge Network response
- }
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamIdOverride("SampleDatastreamId")
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
 ```
 
 >[!ENDTABS]
@@ -298,18 +297,18 @@ let configOverrides: [String: Any] = [
     ]
   ],
   "com_adobe_analytics": [
-    "reportSuites": [
-      "rsid1",
-      "rsid2",
-      "rsid3",
-    ]
-  ],
+  "reportSuites": [
+        "MyFirstOverrideReportSuite",
+          "MySecondOverrideReportSuite",
+          "MyThirdOverrideReportSuite"
+      ]
+  ],  
   "com_adobe_identity": [
     "idSyncContainerId": "1234567"
   ],
   "com_adobe_target": [
-    "propertyToken": "SamplePropertyToken"
-  ],
+    "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+ ],
 ]
 
 let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
@@ -324,37 +323,53 @@ Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) 
 This example shows what a datastream configuration override looks like in a Mobile SDK [!DNL Android] integration.
 
 ```kotlin
- // Create experience event from Map
- val xdmData = mutableMapOf<String, Any>()
- xdmData["eventType"] = "SampleXDMEvent"
- xdmData["sample"] = "data"
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
 
- val configOverrides = mapOf(
-                 "com_adobe_experience_platform" to mapOf(
-                     "datasets" to mapOf(
-                         "event" to mapOf("datasetId" to "SampleEventDatasetIdOverride"),
-                         "profile" to mapOf("datasetId" to "SampleProfileDatasetIdOverride")
-                     )
-                 ),
-                 "com_adobe_analytics" to mapOf(
-                     "reportSuites" to listOf("rsid1", "rsid2", "rsid3")
-                 ),
-                 "com_adobe_identity" to mapOf(
-                     "idSyncContainerId" to "1234567"
-                 ),
-                 "com_adobe_target" to mapOf(
-                     "propertyToken" to "SamplePropertyToken"
-                 )
-             )
+val configOverrides = mapOf(
+    "com_adobe_experience_platform"
+    to mapOf(
+        "datasets"
+        to mapOf(
+            "event"
+            to mapOf("datasetId"
+                to "SampleEventDatasetIdOverride"),
+            "profile"
+            to mapOf("datasetId"
+                to "SampleProfileDatasetIdOverride")
+        )
+    ),
+    "com_adobe_analytics"
+    to mapOf(
+        "reportSuites"
+        to listOf(
+            "MyFirstOverrideReportSuite",
+            "MySecondOverrideReportSuite",
+            "MyThirdOverrideReportSuite"
+        )
+    ),
+    "com_adobe_identity"
+    to mapOf(
+        "idSyncContainerId"
+        to "1234567"
+    ),
+    "com_adobe_target"
+    to mapOf(
+        "propertyToken"
+        to "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+    )
+)
 
- val experienceEvent = ExperienceEvent.Builder()
-   .setXdmSchema(xdmData)
-   .setDatastreamConfigOverride(configOverrides)
-   .build()
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamConfigOverride(configOverrides)
+    .build()
 
- Edge.sendEvent(experienceEvent) {
-   // Handle the Edge Network response
- }
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
 ```
 
 >[!ENDTABS]
@@ -370,7 +385,7 @@ The examples above generate an [!DNL Edge Network] payload similar to the one be
       "com_adobe_experience_platform": {
         "datasets": {
           "event": {
-            "datasetId": "SampleEventDatasetIdOverride"
+            "datasetId": "SampleProfileDatasetIdOverride"
           },
           "profile": {
             "datasetId": "www"
