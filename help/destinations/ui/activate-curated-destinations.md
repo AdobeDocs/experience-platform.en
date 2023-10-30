@@ -64,7 +64,7 @@ To learn how to configure the [!DNL LiveRamp - Onboarding] destination and expor
 
 >[!IMPORTANT]
 >
->When exporting files to the [!DNL LiveRamp - Onboarding] destination, Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md). See the [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) destination documentation for detailed information on how to validate your data export to LiveRamp.
+>When exporting files to the [!DNL LiveRamp - Onboarding] destination, Platform generates one CSV file for each [merge policy ID](../../profile/merge-policies/overview.md). See the [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) destination documentation for detailed information on how to validate your data export to LiveRamp.
 
 
 After you have successfully exported your audiences to LiveRamp, continue to [step 2](#distribution).
@@ -85,13 +85,13 @@ To learn how to configure the **[!DNL LiveRamp - Distribution]** destination and
 
 >[!IMPORTANT]
 >
->In the **audience selection** step of the **[!DNL LiveRamp - Distribution]** destination, you must select the *exact same audiences* which you have exported to the [LiveRamp - Onboarding](liveramp-onboarding.md) destination in [step 1](#onboarding).
+>In the **audience selection** step of the **[!DNL LiveRamp - Distribution]** destination, you must select the *exact same audiences* which you have exported to the [LiveRamp - Onboarding](../catalog/advertising/liveramp-onboarding.md) destination in [step 1](#onboarding).
 
 When you configure the **[!DNL LiveRamp - Distribution]** destination, you must create a dedicated connection for each downstream destination that you want to use (Roku, Disney, and so on).
 
 >[!TIP]
 >
->When naming your destination, Adobe recommends following this format: `LiveRamp - Downstream Destination Name`. This naming pattern helps you quickly identify your destinations in the [Browse](../../ui/destinations-workspace.md#browse) tab of the destinations workspace.
+>When naming your destination, Adobe recommends following this format: `LiveRamp - Downstream Destination Name`. This naming pattern helps you quickly identify your destinations in the [Browse](../ui/destinations-workspace.md#browse) tab of the destinations workspace.
 ><br>
 >Example: `LiveRamp - Roku`.
 
