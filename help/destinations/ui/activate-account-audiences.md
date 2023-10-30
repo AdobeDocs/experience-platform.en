@@ -84,11 +84,11 @@ When activating account audiences to the **[!UICONTROL (Companies) LinkedIn Matc
 |Source field | Target field |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey`  | `primaryId` (select this field in the **[!UICONTROL Select Identity namespace]** view) |
+| `accountKey.sourceKey`  | `primaryId` (select this field in the **[!UICONTROL Select Identity namespace]** view, when selecting the **[!UICONTROL Target Field]**). <br> ![Select identity namespace highlighted in the workflow to activate account audiences to destinations.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Select identity namespace highlighted in the workflow to activate account audiences to destinations."){width="100" zoomable="yes" |
 
 ### Data governance enforcement {#data-governance-enforcement}
 
-[Consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) is currently not supported when activating account audiences to destinations. In the review step of the activation workflow, you can see a greyed out control for **[!UICONTROL View applicable consent policies]**. 
+Consent is enforced at the person or profile level for *customer and prospect audiences*. Therefore,  [consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) is currently not supported when activating account audiences to destinations. In the review step of the activation workflow, you can see a greyed out control for **[!UICONTROL View applicable consent policies]**. 
 
 ![Review step of the activate account audiences workflow with the consent enforcement control greyed out.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 
