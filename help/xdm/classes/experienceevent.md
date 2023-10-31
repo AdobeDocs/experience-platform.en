@@ -86,9 +86,9 @@ The following table outlines the accepted values for `eventType`, along with the
 
 | Value | Definition |
 | --- | --- |
-|`advertising.clicks` | One or more click actions on an advertisement. |
+|`advertising.clicks` | The event triggers when an action to select an advertisement occurs. |
 |`advertising.completes` | A timed media asset has been watched to completion. This does not necessarily mean that the viewer watched the whole video, as the viewer could have skipped ahead. |
-|`advertising.conversions` | One or more pre-defined actions performed by a customer which triggers an event for performance evaluation. |
+|`advertising.conversions` | A pre-defined action performed by a customer that triggers an event for performance evaluation. |
 |`advertising.federated` | Indicates if an Experience Event was created through data federation (data sharing between customers). |
 |`advertising.firstQuartiles` | A digital video ad has played through 25% of its duration at normal speed. |
 |`advertising.impressions` | The impressions of an advertisement to a customer with the potential of being viewed. |
@@ -106,9 +106,9 @@ The following table outlines the accepted values for `eventType`, along with the
 |`commerce.checkouts` | A checkout event has occurred for a product list. There can be more than one checkout event if there are multiple steps in a checkout process. If there are multiple steps, the timestamp and referenced page/experience for each event are used to identify each individual event (step), represented in order. |
 |`commerce.productListAdds` | A product has been added to the product list or shopping cart. |
 |`commerce.productListOpens` | A new product list (shopping cart) has been initialized or created. |
-|`commerce.productListRemovals` | One or more product entries have been removed from a product list or shopping cart. |
+|`commerce.productListRemovals` | The event triggers when a product entry has been removed from a product list or shopping cart. |
 |`commerce.productListReopens` | A product list (shopping cart) that was no longer accessible (abandoned) has been reactivated by a customer, such as via a re-marketing activity. |
-|`commerce.productListViews` | A product list or shopping cart has received one or more views. |
+|`commerce.productListViews` | The event triggers when a product list or shopping cart has received a view. |
 |`commerce.productViews` | A product has received one or more views. |
 |`commerce.purchases` | An order has been accepted. This is the only required action in a commerce conversion. A purchase event must have a product list referenced. |
 |`commerce.saveForLaters` | A product list has been saved for future use, such a product wishlist. |
