@@ -71,7 +71,7 @@ After you have successfully exported your audiences to LiveRamp, continue to [st
 
 >[!TIP]
 >
->Before moving to [step 2](#distribution), [validate](../catalog/advertising/liveramp-onboarding.md#exported-data) that your audiences have been successfully exported to LiveRamp.
+>Before moving to [step 2](#distribution), [validate](../catalog/advertising/liveramp-onboarding.md#exported-data) that your audiences have been successfully exported to LiveRamp. See the documentation on [monitoring destination dataflows](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) and read about the specific monitoring details for [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md#exported-data).
 
 ### Step 2: Activate the onboarded audiences to connected TV and audio destinations, through the [!DNL LiveRamp - Distribution] destination {#distribution} 
 
@@ -99,4 +99,6 @@ When you configure the **[!DNL LiveRamp - Distribution]** destination, you must 
 
 ## Exported data / Validate data export {#exported-data}
 
-To validate the successful activation of your audiences, log in to your destination platform account and check the activation metrics.
+To validate the successful export of your audiences to the [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) destination, see the documentation on [monitoring destination dataflows](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) and read about the specific monitoring details for [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md#exported-data).
+
+To validate the successful activation of your audiences to your advertising platform of choice (such as Roku, Disney, and others) log in to your destination platform account and check the activation metrics.
