@@ -24,7 +24,9 @@ You must specify which namespaces represent a person entity in Identity Service 
 
 >[!NOTE]
 >
->Currently, the algorithm only supports the use of a single login identifier (one login namespace). Multiple login identifiers (multiple identity namespaces used to login), household entity graphs, and hierarchical graph structures are not supported at this time.
+>* Currently, the algorithm only supports the use of a single login identifier (one login namespace). Multiple login identifiers (multiple identity namespaces used to login), household entity graphs, and hierarchical graph structures are not supported at this time.
+>
+>* All namespaces that are person identifiers and that are used in the sandbox to generate identity graphs must be marked as a unique namespace. Otherwise, you may see undesirable linking results.
 
 ## Process
 
@@ -75,6 +77,35 @@ In this example, the CRM ID namespace is designated as a unique namespace.
 ![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
 
 >[!ENDTABS]
+
+
+### Bad email
+
+| Namespace | Limit |
+| --- | --- |
+| CRM ID | 1 |
+| Phone | 1 |
+| Email | 1 |
+| ECID | N/A |
+
+In this example, CRM ID, Phone, and Email namespaces are designated as unique.
+
+There are instances where a user may input bad values for their email and/or phone numbers. This 
+
+* `timestamp=1`: {CRM ID: 456, ECID: 999} is established.
+* `timestamp=2`: {CRM ID: 123, ECID: 888} is established.
+* `timestamp=3`: {CRM ID: 456, ECID: 999}, {PHONE: 123-4567}, and {EMAIL: test@test} are linked together.
+* `timestamp=4`: {CRM ID: 123, ECID: 888} is linked with {PHONE: 765-4321} and {EMAIL: test@test}, thus linking the two graphs together.
+  * However, linking the two graphs together would result in violations of the limits as it would bring two disparate CRM IDs and Phone namespaces into the same graph.
+  * Since a person is defined by a CRM ID, Phone, or Email, the links that will be deleted are the links that connected {CRM ID: 456, PHONE: 123-4567} to the bad email.
+  * This results into two different graphs. One with {ECID:999, CRM ID: 456, PHONE: 123-4567} and another with {ECID: 888, CRM ID: 123, PHONE: 765-4321, EMAIL: test@test}
+
+>[!NOTE]
+>
+>If CRM ID was the lone namespace that was configured to be unique, then the expected results may not have been yielded. Therefore, it is important that you mark all person identifiers that you will ingest into the sandbox as a unique namespace.
+
+![bad-email](../images/identity-settings/bad-email.png)
+
 
 ## Next steps
 
