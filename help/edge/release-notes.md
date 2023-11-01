@@ -15,12 +15,12 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **New features**
 
 * Added support for rendering in-app messages from Adobe Journey Optimizer.
-* Added "defaultPersonalizationEnabled" option to the sendEvent command to control requesting the page-wide scope and default surface.
 * Added support for top and bottom of page events.
+* Added "defaultPersonalizationEnabled" option to the sendEvent command to control requesting the page-wide scope and default surface.
 
 **Fixes and improvements**
 
-* Combined personalization display notifications together.
+* Combined personalization display events together when rendering multiple types of personalization.
 * Fixed issue where single page application view names were case-sensitive.
 * Fixed an issue with shadow DOM personalized offer selectors.
 
