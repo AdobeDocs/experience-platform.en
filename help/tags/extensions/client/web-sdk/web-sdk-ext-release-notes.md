@@ -8,6 +8,20 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Version 2.21.0 - November 1, 2023
+
+**New features**
+
+* Added "request default personalization" option to send event action.
+* Added support for top and bottom of page events in the send event action.
+* Added apply propositions action.
+* Added evaluate rulesets action, and subscribe ruleset items event for in-app messages.
+* Added decision context to send event action.
+
+**Fixes and improvements**
+
+* Contains version 2.19.0 of the Adobe Experience Platform Web SDK.
+
 ## Version 2.20.3 - August 8, 2023
 
 **Fixes and improvements**
