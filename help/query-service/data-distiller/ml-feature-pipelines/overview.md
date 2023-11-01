@@ -1,6 +1,7 @@
 ---
 title: AI/ML feature pipelines
 description: Learn how to use Data Distiller to enrich your machine learning pipelines with features derived from Adobe Experience Platform data. Transform raw data into features and deliver the feature data to train or score a model that supports your marketing use cases.
+exl-id: 3b452181-e254-4155-8bf5-0990533f202d
 ---
 # AI/ML feature pipelines
 
@@ -26,7 +27,7 @@ Data Distiller enables data scientists and engineers to enrich their machine lea
 
 This workflow requires a working understanding of the various aspects of Adobe Experience Platform. Before beginning this tutorial, please review the documentation for the following concepts:
 
-- How to [authenticate and access Experience Platform APIs](../../../landing/api-authentication.md)
+- How to [authenticate and access Experience Platform APIs](../../../landing/api-authentication.md).
 - Sandboxes: [Attribute-based access control permissions](../../../access-control/abac/overview.md) and how to create and manage roles, as well as assign the desired resource permissions for these roles.
 - Data Governance: How to [apply data usage labels to datasets and fields, categorizing each](../../../data-governance/labels/overview.md) according to related data governance policies and access control policies.
 
@@ -34,7 +35,7 @@ This workflow requires a working understanding of the various aspects of Adobe E
 
 By reading this document, you have been introduced to the important concepts behind using your preferred machine learning tools to build custom models that support your marketing use cases. 
 
-The documents included in this series of guides, describe the basic steps for creating feature pipelines from Experience Platform to feed custom models in your machine learning environment. You are now ready to establish a connection between Data Distiller and your Jupyter notebook.
+The documents included in this series of guides, describe the basic steps for creating feature pipelines from Experience Platform to feed custom models in your machine learning environment. You are now ready to establish a connection between Data Distiller and your [!DNL Jupyter Notebook].
 
 - [Connect to Data Distiller from a [!DNL Python] notebook](./establish-connection.md)
 - [Explore and analyze datasets](./exploratory-analysis.md)
@@ -220,6 +221,3 @@ If the connection test above is unsuccessful, you will likely get `KeyError: 'te
 - Check your `config.ini` file and make sure that your environment and credential information is correct.
 
 If your configuration is correct and you are able to successfully make calls to `aepp` methods, you may sometimes get an unsuccessful response from the Platform server. This may happen if you try to create an object in Platform that already exists, or get an object that does not exist, or attempt to send a malformed payload with a request. Most `aepp` methods make a request to an Platform API endpoint and return the response from the server. Print the response and review it to get error message from the API. This will usually give you enough information to understand the problem with the request and fix it. -->
-
-
-

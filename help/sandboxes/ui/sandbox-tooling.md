@@ -3,11 +3,7 @@ title: Sandboxes Tooling
 description: Seamlessly export and import Sandbox configurations between sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
 ---
-# [!BADGE Beta] Sandbox tooling
-
->[!IMPORTANT]
->
->The **Sandbox tooling** feature described below is available only to select Beta customers.
+# Sandbox tooling
 
 >[!NOTE]
 >
@@ -50,10 +46,9 @@ The table below lists [!DNL Adobe Journey Optimizer] objects that are currently 
 | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer] | Audience | An audience can be copied as a dependent object of the journey object. You can select create a new audience or reuse an existing one in the target sandbox. |
 | [!DNL Adobe Journey Optimizer] | Schema | The schemas used in the journey can be copied as dependent objects. You can select create a new schema or reuse an existing one in the target sandbox. |
-| [!DNL Adobe Journey Optimizer] | Message | The messages used in the journey can be copied as dependent objects. The channel action activities used in the journey fields, which are used for personalization in the message, are not checked for completeness. Content blocks are not copied. |
 | [!DNL Adobe Journey Optimizer] | Journey - canvas details | The representation of the journey on the canvas includes the objects in the journey, such as conditions, actions, events, read audiences, and so on, which are copied. The jump activity is excluded from the copy. |
 | [!DNL Adobe Journey Optimizer] | Event | The events and event details used in the journey are copied. It will always create a new version in the target sandbox. |
-| [!DNL Adobe Journey Optimizer] | Action | The actions and action details used in the journey are copied. It will always create a new version in the target sandbox. |
+| [!DNL Adobe Journey Optimizer] | Action | Email and push messages used in the journey can be copied as dependent objects. The channel action activities used in the journey fields, which are used for personalization in the message, are not checked for completeness. Content blocks are not copied.<br><br>The update profile action used in the journey can be copied. Custom actions and action details used in the journey are also copied. It will always create a new version in the target sandbox.|
 
 Surfaces (for example, presets) are not copied over. The system automatically selects the closest possible match on the destination sandbox based on the message type and surface name. If there are no surfaces found on the target sandbox, then the surface copy will fail, causing the message copy to fail because a message requires a surface to be available for setup. In this case, at least one surface needs to be created for the right channel of the message in order for the copy to work.
 

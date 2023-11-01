@@ -1,6 +1,7 @@
 ---
 title: Exploratory Data Analysis
 description: Learn how to use Data Distiller to explore and analyze data from a Python notebook.
+exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
 ---
 # Exploratory data analysis
 
@@ -84,7 +85,7 @@ sample_table_name = df_samples[df_samples["sampling_rate"] == sampling_rate]["sa
 count_query=f'''SELECT count(*) as cnt from {sample_table_name}'''
 
 df = qs_cursor.query(count_query, output="dataframe")
-# divide by the sampling rate to extrapolate to the full dataset
+# Divide by the sampling rate to extrapolate to the full dataset
 approx_count = df["cnt"].iloc[0] / (sampling_rate / 100)
 
 print(f"Approximate count: {approx_count} using {sampling_rate *10}% sample")
