@@ -48,6 +48,17 @@ The [Pricing and Rate Limits](https://developer.zendesk.com/api-reference/sales-
 |---|---|---|---|
 | `email` | `test@test.com` | Email address of the contact.| Yes |
 
+## Supported audiences {#supported-audiences}
+
+This section describes which type of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
@@ -175,9 +186,11 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
+|November 2023|Functionality update|<ul><li>We now automatically convert the **[UICONTROL Mapping ID]** values in the [schedule audience export](#schedule-segment-export-example) step to `lowercase`. Additionally we also sanitize `spaces` and `special characters`. This is done to ensure compliance with [!DNL Zendesk] field names.</li><li>We now support custom uploads, see the [supported audiences](#supported-audiences) section.</li></ul>|
 |April 2023|Documentation update| <ul><li>We updated the [use-cases](#use-cases) section with a clearer example of when customers would benefit from using this destination.</li> <li>We updated the [mapping](#mapping-considerations-example) section to reflect the correct required mappings. The `Attribute: last_name` and `Identity: email` target mappings are mandatory for this destination. If these mappings are missing, any other mappings are ignored and not sent to [!DNL Zendesk].</li> <li>We updated the [mapping](#mapping-considerations-example) section with clear examples of both mandatory and optional mappings.</li></ul> |
 |March 2023|Initial release|Initial destination release and documentation publish.|
 
 {style="table-layout:auto"}
 
 +++
+
