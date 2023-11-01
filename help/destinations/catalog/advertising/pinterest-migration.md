@@ -4,7 +4,7 @@ description: Pinterest is deprecating the v4 advertiser API currently used by th
 hide: yes
 hidefromtoc: yes
 ---
-# Pinterest destination migration to new API. Customer action required.
+# Pinterest destination migration to new API. Customer action required
 
 ## What is happening?
 
@@ -16,11 +16,11 @@ We have identified your organization as having active campaigns to activate data
 
 ## What is the migration plan?
 
-Adobe will release a new Pinterest destination card for V5 and will copy your existing dataflows to the new connection.
+Adobe is releasing a new Pinterest destination card for V5 and has copied your existing dataflows to the new connection.
 
 ## Do I need to do anything to move my active campaigns to the new card?
 
-Yes, once Adobe completes the migration (estimated first week of November), you will need to re-authenticate to Pinterest. Instructions below.
+Yes, Adobe has completed the migration, and you now need to re-authenticate to Pinterest. Follow the instructions below.
 
 1. Go to **[!UICONTROL Destinations > Accounts]** and use the filter on the screen to filter the Pinterest destination only.
     ![Filter Pinterest accounts only](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
@@ -30,11 +30,15 @@ Yes, once Adobe completes the migration (estimated first week of November), you 
     ![Select Reconnect OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
 4. Let Adobe know you reauthenticated to the **[!UICONTROL (New) Pinterest]** destination.
 
-Then, you need to manually disable existing flows to the old card and enable flows to the new card. After reauthenticating, you can reach out to us and we can perform this second step for you. If you prefer to perform this step manually, follow the steps below:
+Then, you need to manually disable existing flows to the old card and enable flows to the new card. 
+
+>[!IMPORTANT]
+>
+>After reauthenticating, you can reach out to Adobe and we will perform this second step for you. If you prefer to perform this step manually, follow the steps below:
 
 1. Go to **[!UICONTROL Destinations > Browse]** and use the filter on the screen to filter the **[!UICONTROL (New) Pinterest]** and **[!UICONTROL (Deprecating) Pinterest]** destinations only.
     ![Filter Pinterest dataflows only in the Browse tab](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
-2. Select the hyperlinked connection name (Loyalty campaign in the screnshot example) and move the enable toggle off for the old connection and on for the new connection.
+2. Select the hyperlinked connection name (Loyalty campaign in the screenshot example above) and move the enable toggle off for the old connection and on for the new connection.
     ![Toggle on for new connections and off for old connections](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle.png)
 
 While no disruption to your campaigns is expected, remember to check in the Pinterest UI that everything works as expected.
@@ -43,7 +47,7 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 Yes, please see below:
  
-**By November 2nd**: The new destination is ready, and you will see two Pinterest cards side-by-side in the catalog, and all your existing dataflows to the current Pinterest card are copied to the new destination.
+**By November xxxx**: The new destination is ready, and you will see two Pinterest cards side-by-side in the catalog, and all your existing dataflows to the current Pinterest card are copied to the new destination.
 
 ![Old and new Pinterest destination side-by-side](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
