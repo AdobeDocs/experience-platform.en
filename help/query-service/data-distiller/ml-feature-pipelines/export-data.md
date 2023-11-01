@@ -5,7 +5,7 @@ exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
 ---
 # Export data to external ML environments
 
-This document demonstrates how to share a prepared training dataset created with Data Distiller to a cloud storage location which your ML environment can read for training and scoring your model. The example here exports the training dataset to the [Data Landing Zone (DLZ)](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html?lang=en). You can change the storage destination as needed to work with your machine learning environment.
+This document demonstrates how to share a prepared training dataset created with Data Distiller to a cloud storage location which your ML environment can read for training and scoring your model. The example here exports the training dataset to the [Data Landing Zone (DLZ)](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html). You can change the storage destination as needed to work with your machine learning environment.
 
 The [Flow Service for Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/) is used to complete the feature pipeline by landing a dataset of computed features into an appropriate cloud storage location.
 
