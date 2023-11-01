@@ -86,88 +86,88 @@ The following table outlines the accepted values for `eventType`, along with the
 
 | Value | Definition |
 | --- | --- |
-|`advertising.clicks` | The event triggers when an action to select an advertisement occurs. |
-|`advertising.completes` | A timed media asset has been watched to completion. This does not necessarily mean that the viewer watched the whole video, as the viewer could have skipped ahead. |
-|`advertising.conversions` | A pre-defined action performed by a customer that triggers an event for performance evaluation. |
-|`advertising.federated` | Indicates if an Experience Event was created through data federation (data sharing between customers). |
-|`advertising.firstQuartiles` | A digital video ad has played through 25% of its duration at normal speed. |
-|`advertising.impressions` | The impressions of an advertisement to a customer with the potential of being viewed. |
-|`advertising.midpoints` | A digital video ad has played through 50% of its duration at normal speed. |
-|`advertising.starts` | A digital video ad has started playing. |
-|`advertising.thirdQuartiles` | A digital video ad has played through 75% of its duration at normal speed. |
-|`advertising.timePlayed` | Describes the amount of time spent by a user on a specific timed media asset. |
-|`application.close` | An application was closed or sent into the background. |
-|`application.launch` | An application was launched or brought into the foreground. |
-|`commerce.backofficeCreditMemoIssued` | This event signifies that a notice of credit has been issued to a customer. |
-|`commerce.backofficeOrderCancelled` | This event indicates that a previously initiated purchase process has been terminated before completion. |
-|`commerce.backofficeOrderItemsShipped` | This event indicates that the purchased items have been physically shipped to the customer. |
-|`commerce.backofficeOrderPlaced` | This event indicates the placement of an order. |
-|`commerce.backofficeShipmentCompleted` | This event signifies the successful completion of the entire shipment process. |
-|`commerce.checkouts` | A checkout event has occurred for a product list. There can be more than one checkout event if there are multiple steps in a checkout process. If there are multiple steps, the timestamp and referenced page/experience for each event are used to identify each individual event (step), represented in order. |
-|`commerce.productListAdds` | A product has been added to the product list or shopping cart. |
-|`commerce.productListOpens` | A new product list (shopping cart) has been initialized or created. |
-|`commerce.productListRemovals` | The event triggers when a product entry has been removed from a product list or shopping cart. |
-|`commerce.productListReopens` | A product list (shopping cart) that was no longer accessible (abandoned) has been reactivated by a customer, such as via a re-marketing activity. |
-|`commerce.productListViews` | The event triggers when a product list or shopping cart has received a view. |
-|`commerce.productViews` | A product has received one or more views. |
-|`commerce.purchases` | An order has been accepted. This is the only required action in a commerce conversion. A purchase event must have a product list referenced. |
-|`commerce.saveForLaters` | A product list has been saved for future use, such a product wishlist. |
-|`decisioning.propositionDisplay` | A decisioning proposition was displayed to a person. |
-|`decisioning.propositionDismiss` | This event indicates that a decision has been made not to engage with the presented offer. |
-|`decisioning.propositionInteract` | A person interacted with a decisioning proposition. |
-|`decisioning.propositionSend` | This event indicates that it has been decided to send to a prospective customer a recommendation or offer for consideration. |
-|`decisioning.propositionTrigger` | This event indicates the activation of a proposition process. A certain condition or action has occurred to prompt the presentation of an offer. |
-|`delivery.feedback` | Feedback events for a delivery, such as an email delivery. |
-|`directMarketing.emailBounced` | An email to a person bounced. |
-|`directMarketing.emailBouncedSoft` | An email to a person soft-bounced. |
-|`directMarketing.emailClicked` | A person clicked a link in a marketing email. |
-|`directMarketing.emailDelivered` | An email was successfully delivered to person's email service |
-|`directMarketing.emailOpened` | A person opened a marketing email. |
-|`directMarketing.emailSent` | This indicates that a marketing email has been sent to a person. |
-|`directMarketing.emailUnsubscribed` | A person unsubscribed from a marketing email. |
-|`inappmessageTracking.dismiss` | An in-app message was dismissed. |
-|`inappmessageTracking.display` | An in-app message was displayed. |
-|`inappmessageTracking.interact` | An in-app message was interacted with. |
-|`leadOperation.callWebhook` | A webhook was called in response to a lead. |
+|`advertising.clicks` | This event tracks when an action to select an advertisement occurs. |
+|`advertising.completes` | This event tracks when a timed media asset has been watched to completion. This does not necessarily mean that the viewer watched the whole video, as the viewer could have skipped ahead. |
+|`advertising.conversions` | This event tracks a pre-defined action performed by a customer that triggers an event for performance evaluation. |
+|`advertising.federated` | This event tracks whether an Experience Event was created through data federation (data sharing between customers). |
+|`advertising.firstQuartiles` | This event tracks when a digital video ad has played through 25% of its duration at normal speed. |
+|`advertising.impressions` | This event tracks the impressions of an advertisement to a customer with the potential of being viewed. |
+|`advertising.midpoints` | This event tracks when a digital video ad has played through 50% of its duration at normal speed. |
+|`advertising.starts` | This event tracks when a digital video ad has started playing. |
+|`advertising.thirdQuartiles` | This event tracks when a digital video ad has played through 75% of its duration at normal speed. |
+|`advertising.timePlayed` | This event tracks the amount of time spent by a user on a specific timed media asset. |
+|`application.close` | This event tracks when an application was closed or sent into the background. |
+|`application.launch` | This event tracks when an application was launched or brought into the foreground. |
+|`commerce.backofficeCreditMemoIssued` | This event tracks when a notice of credit has been issued to a customer. |
+|`commerce.backofficeOrderCancelled` | This event tracks when a previously initiated purchase process has been terminated before completion. |
+|`commerce.backofficeOrderItemsShipped` | This event tracks when the purchased items have been physically shipped to the customer. |
+|`commerce.backofficeOrderPlaced` | This event tracks the placement of an order. |
+|`commerce.backofficeShipmentCompleted` | This event tracks the successful completion of the entire shipment process. |
+|`commerce.checkouts` | This event tracks when a checkout event has occurred for a product list. There can be more than one checkout event if there are multiple steps in a checkout process. If there are multiple steps, the timestamp and referenced page/experience for each event are used to identify each individual event (step), represented in order. |
+|`commerce.productListAdds` | This event tracks when a product has been added to the product list or shopping cart. |
+|`commerce.productListOpens` | This event tracks when a new product list (shopping cart) has been initialized or created. |
+|`commerce.productListRemovals` | This event tracks when a product entry has been removed from a product list or shopping cart. |
+|`commerce.productListReopens` | This event tracks when a product list (shopping cart) that was no longer accessible (abandoned) has been reactivated by a customer, such as via a re-marketing activity. |
+|`commerce.productListViews` | This event tracks when a product list or shopping cart has received a view. |
+|`commerce.productViews` | This event tracks when a product has received one or more views. |
+|`commerce.purchases` | This event tracks when an order has been accepted. This is the only required action in a commerce conversion. A purchase event must have a product list referenced. |
+|`commerce.saveForLaters` | This event tracks when a product list has been saved for future use, such a product wishlist. |
+|`decisioning.propositionDisplay` | This event tracks when a decisioning proposition was displayed to a person. |
+|`decisioning.propositionDismiss` | This event tracks when a decision has been made not to engage with the presented offer. |
+|`decisioning.propositionInteract` | This event tracks when a person interacted with a decisioning proposition. |
+|`decisioning.propositionSend` | This event tracks when it has been decided to send to a prospective customer a recommendation or offer for consideration. |
+|`decisioning.propositionTrigger` | This event tracks the activation of a proposition process. A certain condition or action has occurred to prompt the presentation of an offer. |
+|`delivery.feedback` | This event tracks feedback events for a delivery, such as an email delivery. |
+|`directMarketing.emailBounced` | This event tracks when an email to a person bounced. |
+|`directMarketing.emailBouncedSoft` | This event tracks when an email to a person soft-bounced. |
+|`directMarketing.emailClicked` | This event tracks when a person clicked a link in a marketing email. |
+|`directMarketing.emailDelivered` | This event tracks when an email was successfully delivered to a person's email service. |
+|`directMarketing.emailOpened` | This event tracks when a person opened a marketing email. |
+|`directMarketing.emailSent` | This event tracks when a marketing email has been sent to a person. |
+|`directMarketing.emailUnsubscribed` | This event tracks when a person unsubscribed from a marketing email. |
+|`inappmessageTracking.dismiss` | This event tracks when an in-app message was dismissed. |
+|`inappmessageTracking.display` | This event tracks when an in-app message was displayed. |
+|`inappmessageTracking.interact` | This event tracks when an in-app message was interacted with. |
+|`leadOperation.callWebhook` | This event tracks when a webhook was called in response to a lead. |
 |`leadOperation.changeCampaignStream` | This event signifies a shift in the marketing or engagement strategy for a particular business lead. |
-|`leadOperation.changeEngagementCampaignCadence` | This event indicates that there has been a change in how often a lead is engaged with as part of a campaign. |
-|`leadOperation.convertLead` | A lead was converted. |
-|`leadOperation.interestingMoment` | An interesting moment was recorded for a person. |
-|`leadOperation.mergeLeads` | This event indicates that information from multiple leads, that refer to the same entity, were consolidated. |
-|`leadOperation.newLead` | A lead was created. |
-|`leadOperation.scoreChanged` | The value of the lead's score attribute was changed. |
-|`leadOperation.statusInCampaignProgressionChanged` | A lead's status in a campaign has changed. |
-|`listOperation.addToList` | A person was added to a marketing list. |
-|`listOperation.removeFromList` | A person was removed from a marketing list. |
-|`media.adBreakComplete` | Indicates that an `adBreakComplete` event has occurred. This event is triggered at the start of an ad break. |
-|`media.adBreakStart` |Indicates that an `adBreakStart` event has occurred. This event is triggered at the end of an ad break. |
-|`media.adComplete` | Indicates that an `adComplete` event has occurred. This event is triggered when an advert has been completed.|
-|`media.adSkip` |Indicates that an `adSkip` event has occurred. This event is triggered when an advert has been skipped. |
-|`media.adStart` | Indicates that an `adStart` event has occurred. This event is triggered when an advert has begun.|
-|`media.bitrateChange` | Indicates that a `bitrateChange` event has occurred. This event is triggered when there is a change in the bit rate. |
-|`media.bufferStart` |Indicates that a `bufferStart` event has occurred. This event is triggered when media has begun to buffer. |
-|`media.chapterComplete` |Indicates that a `chapterComplete` event has occurred. This event is triggered at the completion of a chapter in the media. |
-|`media.chapterSkip` | Indicates that a `chapterSkip` event has occurred. This event is triggered when a user skips forward or backward to another section or chapter within the media content. |
-|`media.chapterStart` |Indicates that a `chapterStart` event has occurred. This event is triggered at the start of a specific section or chapter within the media content. |
-|`media.downloaded` | Indicates that media downloaded content has been tracked. |
-|`media.error` |Indicates that a `error` event has occurred. This event is triggered when an error or issue occurs during media playback. |
-|`media.pauseStart` | Indicates that a `pauseStart` event has occurred. This event is triggered when a user initiates a pause in the media playback. |
-|`media.ping` |Indicates that a `ping` event has occurred. This verifies the availability of a media resource. |
-|`media.play` | Indicates that a `play` event has occurred. This event is triggered when the media content is playing, indicating active consumption by the user. |
-|`media.sessionComplete` |Indicates that a `sessionComplete` event has occurred. This event marks the end of a media playback session. |
-|`media.sessionEnd` | Indicates that a `sessionEnd` event has occurred. This event indicates the conclusion of a media session. This conclusion could involve closing the media player or stopping playback. |
-|`media.sessionStart` | Indicates that a `sessionStart` event has occurred. This event marks the beginning of a media playback session. It is triggered when a user starts playing a media file. |
-|`media.statesUpdate` | Indicates that a `statesUpdate` event has occurred. The player state tracking capabilities can be attached to an audio or video stream. The standard states are: fullscreen, mute, closedCaptioning, pictureInPicture, and inFocus. |
-|`opportunityEvent.addToOpportunity` | A person was added to an opportunity. |
-|`opportunityEvent.opportunityUpdated` | An opportunity was updated. |
-|`opportunityEvent.removeFromOpportunity` | A person was removed from an opportunity. |
-|`pushTracking.applicationOpened` | A person opened an application from a push notification. |
-|`pushTracking.customAction` | A person clicked a custom action in a push notification. |
-|`web.formFilledOut` | A person filled out a form on a web page. |
-|`web.webinteraction.linkClicks` | A link has been selected one or more times. |
-|`web.webpagedetails.pageViews` | A webpage has received one or more views. |
-|`location.entry` | This event represents the entry of a person or device at a specific location. |
-|`location.exit` | This event represents the exit of a person or device from a specific location. |
+|`leadOperation.changeEngagementCampaignCadence` | This event tracks when there has been a change in how often a lead is engaged with as part of a campaign. |
+|`leadOperation.convertLead` | This event tracks when a lead was converted. |
+|`leadOperation.interestingMoment` | This event tracks when an interesting moment was recorded for a person. |
+|`leadOperation.mergeLeads` | This event tracks when information from multiple leads, that refer to the same entity, were consolidated. |
+|`leadOperation.newLead` | This event tracks when a lead was created. |
+|`leadOperation.scoreChanged` | This event tracks when the value of the lead's score attribute was changed. |
+|`leadOperation.statusInCampaignProgressionChanged` | This event tracks when a lead's status in a campaign has changed. |
+|`listOperation.addToList` | This event tracks when a person was added to a marketing list. |
+|`listOperation.removeFromList` | This event tracks when a person was removed from a marketing list. |
+|`media.adBreakComplete` | This event tracks when an `adBreakComplete` event has occurred. This event is triggered at the start of an ad break. |
+|`media.adBreakStart` | This event tracks when an `adBreakStart` event has occurred. This event is triggered at the end of an ad break. |
+|`media.adComplete` | This event tracks when an `adComplete` event has occurred. This event is triggered when an advert has been completed.|
+|`media.adSkip` | This event tracks when an `adSkip` event has occurred. This event is triggered when an advert has been skipped. |
+|`media.adStart` | This event tracks when an `adStart` event has occurred. This event is triggered when an advert has begun.|
+|`media.bitrateChange` | This event tracks when a `bitrateChange` event has occurred. This event is triggered when there is a change in the bit rate. |
+|`media.bufferStart` |This event tracks when a `bufferStart` event has occurred. This event is triggered when media has begun to buffer. |
+|`media.chapterComplete` |This event tracks when a `chapterComplete` event has occurred. This event is triggered at the completion of a chapter in the media. |
+|`media.chapterSkip` | This event tracks when a `chapterSkip` event has occurred. This event is triggered when a user skips forward or backward to another section or chapter within the media content. |
+|`media.chapterStart` | This event tracks when a `chapterStart` event has occurred. This event is triggered at the start of a specific section or chapter within the media content. |
+|`media.downloaded` | This event tracks when media downloaded content has occurred. |
+|`media.error` | This event tracks when an `error` event has occurred. This event is triggered when an error or issue occurs during media playback. |
+|`media.pauseStart` | This event tracks when a `pauseStart` event has occurred. This event is triggered when a user initiates a pause in the media playback. |
+|`media.ping` |This event tracks when an `ping` event has occurred. This verifies the availability of a media resource. |
+|`media.play` | This event tracks when a `play` event has occurred. This event is triggered when the media content is playing, indicating active consumption by the user. |
+|`media.sessionComplete` |This event tracks when a `sessionComplete` event has occurred. This event marks the end of a media playback session. |
+|`media.sessionEnd` | This event tracks when a `sessionEnd` event has occurred. This event indicates the conclusion of a media session. This conclusion could involve closing the media player or stopping playback. |
+|`media.sessionStart` | This event tracks when a `sessionStart` event has occurred. This event marks the beginning of a media playback session. It is triggered when a user starts playing a media file. |
+|`media.statesUpdate` | This event tracks when a `statesUpdate` event has occurred. The player state tracking capabilities can be attached to an audio or video stream. The standard states are: fullscreen, mute, closedCaptioning, pictureInPicture, and inFocus. |
+|`opportunityEvent.addToOpportunity` | This event tracks when a person was added to an opportunity. |
+|`opportunityEvent.opportunityUpdated` | This event tracks when an opportunity was updated. |
+|`opportunityEvent.removeFromOpportunity` | This event tracks when a person was removed from an opportunity. |
+|`pushTracking.applicationOpened` | This event tracks when a person opened an application from a push notification. |
+|`pushTracking.customAction` | This event tracks when a person selected a custom action in a push notification. |
+|`web.formFilledOut` | This event tracks when a person filled out a form on a web page. |
+|`web.webinteraction.linkClicks` | This event tracks when a link has been selected one or more times. |
+|`web.webpagedetails.pageViews` | This event tracks when a webpage has received one or more views. |
+|`location.entry` | This event tracks the entry of a person or device at a specific location. |
+|`location.exit` | This event tracks the exit of a person or device from a specific location. |
 
 {style="table-layout:auto"}
 
