@@ -17,7 +17,7 @@ To send audiences to other Adobe solutions, use the direct connections from Real
 
 >[!IMPORTANT]
 >
->This destination replaces the [legacy audience sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam) from Real-Time Customer Data Platform to various Experience Cloud solutions.
+>This destination replaces the [legacy audience sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) from Real-Time Customer Data Platform to various Experience Cloud solutions.
 > 
 >If you are already sharing audiences from Real-Time CDP to Audience Manager and other Experience Cloud solutions via the [legacy audience sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), you must contact Customer Care to disable the legacy integration before using this destination.
 
@@ -31,8 +31,8 @@ To help you better understand how and when you should use the [!UICONTROL Experi
 
 In Audience Manager, you can use Real-Time CDP audiences for Data Management Platform use cases, such as:
 
-* Adding [third party data](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html?lang=en#third-party-data) to your segments;
-* [Algorithmic modeling](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html?lang=en);
+* Adding [third party data](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html#third-party-data) to your segments;
+* [Algorithmic modeling](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html);
 * Activating your audiences to cookie-based destinations that are not yet supported in the Real-Time CDP destinations catalog.
 
 ### Granular control of exported audiences {#segments-control}
@@ -162,7 +162,7 @@ To validate successful data export, you can check that your audiences have succe
 
 ### Validate data in Audience Manager
 
-Your Real-Time CDP audiences appear in Audience Manager as [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-signals), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-traits), and [segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-as-aam-segments). You can verify in Audience Manager if the data has appeared as described in the documentation links above. 
+Your Real-Time CDP audiences appear in Audience Manager as [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-signals), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-traits), and [segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-segments). You can verify in Audience Manager if the data has appeared as described in the documentation links above. 
 
 Segment names begin populating in Audience Manager 15 minutes after the audiences have been sent from Real-Time CDP.
 
@@ -175,13 +175,13 @@ The full population will be visible in Audience Manager after 72 hours, and popu
 All [!DNL Real-Time CDP] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
 Data governance in Real-Time CDP is enforced by both [data usage labels](/help/data-governance/labels/reference.md) and marketing actions.
-Data usage labels will transfer to applications but marketing actions will not. This means that once they land in Audience Manager, audiences from Real-Time CDP can be exported to any available destinations. In Audience Manager, you can use [data export controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=en) to block audiences from being exported to certain destinations.
+Data usage labels will transfer to applications but marketing actions will not. This means that once they land in Audience Manager, audiences from Real-Time CDP can be exported to any available destinations. In Audience Manager, you can use [data export controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html) to block audiences from being exported to certain destinations.
 
 Audiences marked with the [!DNL HIPAA] marketing action will not be sent from Real-Time CDP to Audience Manager.
 
 ### Permissions management in Audience Manager
 
-Audiences and traits in Audience Manager are subject to [Role-Based Access Controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=en) (RBAC). 
+Audiences and traits in Audience Manager are subject to [Role-Based Access Controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) (RBAC). 
 
 Audiences exported from Real-Time CDP are assigned to a specific datasource in Audience Manager called **[!UICONTROL Experience Platform Segments]**.
 

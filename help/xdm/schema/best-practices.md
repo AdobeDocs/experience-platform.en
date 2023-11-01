@@ -225,7 +225,7 @@ For Adobe Analytics, ECID is the default primary identity. If an ECID value is n
 
 ## Data validation fields {#data-validation-fields}
 
-To prevent bad data being ingested into Platform, you are recommended to define the criteria for field level validation when creating your schemas. To set constraints on a particular field, select the field from the Schema Editor to open the [!UICONTROL Field properties] sidebar. See the documentation on [type-specific field properties](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) for exact descriptions of the available fields.
+To prevent bad data being ingested into Platform, you are recommended to define the criteria for field level validation when creating your schemas. To set constraints on a particular field, select the field from the Schema Editor to open the [!UICONTROL Field properties] sidebar. See the documentation on [type-specific field properties](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html#type-specific-properties) for exact descriptions of the available fields.
 
 ![The Schema Editor with the constraint fields highlighted in the [!UICONTROL Field properties] sidebar.](../images/best-practices/data-validation-fields.png)
 

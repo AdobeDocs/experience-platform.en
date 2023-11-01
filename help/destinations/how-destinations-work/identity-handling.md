@@ -72,7 +72,7 @@ Note, however, that you have the flexibility to use data from either [private gr
 
 ### Advertising destinations relying on third-party cookie integrations {#third-party-cookie-destinations}
 
-Advertising destinations relying on third party cookies (for example: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) do not require customers to select IDs in the activation workflow. For these destinations, when setting up an activation workflow, Experience Platform automatically looks up the identity match table constructed by the [[!UICONTROL Experience Cloud ID service]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=en) and exports all identities that are available for a profile and supported by the destination. 
+Advertising destinations relying on third party cookies (for example: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) do not require customers to select IDs in the activation workflow. For these destinations, when setting up an activation workflow, Experience Platform automatically looks up the identity match table constructed by the [[!UICONTROL Experience Cloud ID service]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) and exports all identities that are available for a profile and supported by the destination. 
 
 These destinations require an ID sync to happen through either the [!UICONTROL Experience Cloud ID service] or through [!UICONTROL Experience Platform Web SDK]. 
 
@@ -82,7 +82,7 @@ When configuring a datastream as described in the documentation linked above, yo
 
 >[!NOTE]
 >
->Most of these advertising destinations are supported in Audience Manager (these destination types are known in Audience Manager as device-based destinations. See a [list of all supported device-based destinations in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=en)). Only a few are listed in Experience Platform. For information about sharing data between Experience Platform and Audience Manager, read the section on [enabling data sharing from Experience Platform to Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#enable-aep-to-aam-data). Currently, there is no plan to support more third-party cookie destinations. 
+>Most of these advertising destinations are supported in Audience Manager (these destination types are known in Audience Manager as device-based destinations. See a [list of all supported device-based destinations in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)). Only a few are listed in Experience Platform. For information about sharing data between Experience Platform and Audience Manager, read the section on [enabling data sharing from Experience Platform to Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data). Currently, there is no plan to support more third-party cookie destinations. 
 
 ## Enterprise destinations {#enterprise-destinations}
 
