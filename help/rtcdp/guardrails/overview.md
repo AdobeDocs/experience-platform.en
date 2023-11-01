@@ -25,7 +25,7 @@ Note that the two guardrail types across all Real-Time CDP areas and services ar
 
 | Guardrail type | Description|
 |----------|---------|
-| **Performance guardrail (Soft limit)** | Performance guardrail (soft limit) means usage limits that relate to the scoping of your use cases. When exceeding performance guardrails, you may experience performance degradation and latency. Adobe is not responsible for such performance degradation. Customers who consistently exceed a performance guardrail may elect to license additional capacity to avoid performance degradation.|
+| **Performance guardrail (Soft limit)** | Performance guardrails are usage limits that relate to the scoping of your use cases. When exceeding performance guardrails, you may experience performance degradation and latency. Adobe is not responsible for such performance degradation. Customers who consistently exceed a performance guardrail may elect to license additional capacity to avoid performance degradation.|
 | **System-enforced guardrails (Hard limit)** | System-enforced guardrails are enforced by the Real-Time CDP UI or API. These are limits that you cannot exceed as the UI and API will block you from doing so or will return an error.|
 
 {style="table-layout:auto"}
@@ -41,4 +41,4 @@ Additionally, refer to the product description links below for licensing and ent
 
 ## Next steps
 
-After understanding the guardrails that apply to various areas and services of Real-Time CDP, you can follow along a [sample use case of a Real-Time CDP implementation](/help/rtcdp/get-started.md).
+After understanding the guardrails that apply to various areas and services of Real-Time CDP, you can follow along with a [sample use case of a Real-Time CDP implementation](/help/rtcdp/get-started.md).
