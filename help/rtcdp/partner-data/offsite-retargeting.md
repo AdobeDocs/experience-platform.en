@@ -53,11 +53,19 @@ After adding the Partner ID event to the definition, set the event filtering con
 
 IMAGE
 
+Give the computed attribute a name of "Partner ID" and an appropriate description, then select **Publish** to complete the computed attribute creation process.
+
+IMAGE
+
 ## Create an audience using the computed attribute
 
 Now that you've created the computed attribute, you can use this computed attribute to create an audience. In this example, you will be creating an audience comprised of visitors that visited your website more than 5 times this month but have not yet signed up.
 
-To create an audience, select **Audiences**, followed by **Create audience** and **Build rule**. 
+To create an audience, select **Audiences**, followed by **Create audience**.
+
+IMAGE
+
+A dialog appears, asking you to choose between [!UICONTROL Compose audience] and [!UICONTROL Build rule]. Select **[!UICONTROL Build rule]** followed by **[!UICONTROL Create]**.
 
 IMAGE
 
@@ -77,7 +85,9 @@ Select the newly added **Page View** event. Change the lookback period from **An
 
 IMAGE
 
-After adding your event, you'll need to add an attribute. Since you're dealing with unauthenticated visitors, search for and add the **PartnerID** to the attributes section of the canvas. Additionally, search for **Personal Email** and add the **Address** attribute below **PartnerID** to the attributes section of the canvas.
+After adding your event, you'll need to add an attribute. Since you're dealing with unauthenticated visitors, you can add the computed attribute you just created. This newly created computed attribute lets you link partner IDs to an audience.
+
+To add the computed attribute, under **Attributes**, select **_atag**, followed by **SystemComputedAttributes**, and **PartnerID**. Now, add the **Value** of the computed attribute to the attributes section of the canvas. Additionally, search for **Personal Email** and add the **Address** attribute below **PartnerID** to the attributes section of the canvas.
 
 IMAGE
 
@@ -85,7 +95,7 @@ Now that you've added your attributes, you'll need to set their evaluation crite
 
 IMAGE
 
-You've now successfully created an audience that looks for high intensity visitors who have a partner-provided ID but have not yet signed up for your site. Name your audience and select **Save** to finish creating your audience.
+You've now successfully created an audience that looks for high intensity visitors who have a partner-provided ID but have not yet signed up for your site. Name your audience "Retargeting Unauthenticated Users" and select **Save** to finish creating your audience.
 
 ## Activate your audience
 
@@ -95,11 +105,9 @@ IMAGE
 
 >[!NOTE]
 >
->For more information on 
+>For more information on activating audiences to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md).
 
 The **Activate destination** page appears. On this page, you can select which destination you want to activate your destination to. After selecting the destination of choice, select **Next**.
-
-(Is there a limited type of destination supported?)
 
 IMAGE
 
@@ -112,6 +120,8 @@ The **Select attributes** page appears. On this page, you can select which attri
 IMAGE
 
 The **Review** page appears. On this page, you can review the details of your audience activation. If you're satisfied with the provided details, select **Finish**.
+
+IMAGE
 
 ## Other use cases
 
