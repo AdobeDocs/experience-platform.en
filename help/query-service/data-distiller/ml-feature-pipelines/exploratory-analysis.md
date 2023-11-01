@@ -243,7 +243,7 @@ corrdf.fillna(0)
 | 10  |  `webForms_webPageViews`  |  0.000000  |  webPageViews   | 0.000000 |
 
 
-Finally, you can visualize the correlations with the `matplotlib` Python library:
+Finally, you can visualize the correlations with the `matplotlib` [!DNL Python] library:
 
 ```python
 import matplotlib.pyplot as plt
