@@ -21,7 +21,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **Fixes and improvements**
 
 * Combined personalization display events together when rendering multiple types of personalization.
-* Fixed issue where single page application view names were case-sensitive.
+* Fixed an issue where single page application view names were case-sensitive.
 * Fixed an issue with shadow DOM personalized offer selectors.
 
 ## Version 2.18.0 - July 31, 2023

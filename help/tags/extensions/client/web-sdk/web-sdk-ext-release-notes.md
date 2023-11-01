@@ -15,7 +15,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 * Added `Request default personalization` option to send event action.
 * Added support for top and bottom of page events in the send event action.
 * Added `Apply propositions` action.
-* Added `Evaluate rulesets` action, and `Subscribe ruleset items` event for in-app messages.
+* Added `Evaluate rulesets` action and `Subscribe ruleset items` event for in-app messages.
 * Added `Decision context` to send event action.
 
 **Fixes and improvements**
