@@ -10,6 +10,20 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.19.0 - November 1, 2023
+
+**New features**
+
+* Added support for rendering in-app messages from Adobe Journey Optimizer.
+* Added support for top and bottom of page events.
+* Added "defaultPersonalizationEnabled" option to the sendEvent command to control requesting the page-wide scope and default surface.
+
+**Fixes and improvements**
+
+* Combined personalization display events together when rendering multiple types of personalization.
+* Fixed an issue where single page application view names were case-sensitive.
+* Fixed an issue with shadow DOM personalized offer selectors.
+
 ## Version 2.18.0 - July 31, 2023
 
 **New features**
