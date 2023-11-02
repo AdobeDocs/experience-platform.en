@@ -1,8 +1,8 @@
 ---
 title: Single-page application implementation
 description: Learn how to implement SPA views in Adobe Journey Optimizer
+exl-id: 1883251b-2d59-46d3-ac74-b8657edd0325
 ---
-
 # Implement single-page applications (SPAs) {#web-spa-implementation}
 
 Adobe Experience Platform Web SDK provides rich features that equip your business to execute personalization on next-generation, client-side technologies, such as single-page applications (SPAs).

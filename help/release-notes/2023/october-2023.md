@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The October 2023 release notes for Adobe Experience Platform.
+exl-id: e9cf5299-8350-4b40-8f56-05e598846875
 ---
 # Adobe Experience Platform release notes 
 
@@ -8,11 +9,26 @@ description: The October 2023 release notes for Adobe Experience Platform.
 
 Updates to existing features in Experience Platform:
 
+- [Dashboards](#dashboards)
 - [Data collection](#data-collection)
 - [Destinations](#destinations)
 - [Sandboxes](#sandboxes)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
+
+## Dashboards {#dashboards}
+
+Adobe Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots. 
+
+**New or updated features**
+
+| Feature | Description |
+| --- | --- |
+| Destinations usage metrics | New metering metrics have been added to the license usage dashboard. The **[!UICONTROL Audience Activation Size]** and **[!UICONTROL Data Export Size]** metrics provide a convenient way to track how much data you have exported out of Platform in relation to your license usage entitlements. See the [available metrics](../../dashboards/guides/license-usage.md#available-metrics) documentation for descriptions of these and and other licence usage metrics. |
+
+{style="table-layout:auto"}
+
+For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
 
 ## Data collection {#data-collection}
 
@@ -47,7 +63,8 @@ For more information on data collection, please read the [data collections overv
 
 | Functionality | Description |
 | ----------- | ----------- |
-| Support for hashing functions in calculated fields | In addition to the functions specific for [exporting arrays](../../destinations/ui/export-arrays-calculated-fields.md) or elements from an array, you can now use additional [hashing functions](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) to hash attributes in the exported files. The supported hashing functions are: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Beta) Support for hashing functions in calculated fields | In addition to the functions specific for [exporting arrays](../../destinations/ui/export-arrays-calculated-fields.md) or elements from an array, you can now use additional [hashing functions](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) to hash attributes in the exported files. The supported hashing functions are: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Limited GA) Activate account audiences to certain destinations | Real-Time CDP B2B customers can now activate [account audiences](../../segmentation/ui/account-audiences.md) to certain destinations. For more information about this feature, please read the [activate account audiences tutorial](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
