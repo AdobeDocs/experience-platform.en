@@ -12,14 +12,17 @@ This helps you trigger different datastream behaviors than the default ones, wit
 Datastream configuration override is a two step process:
 
 1. First, you must define your datastream configuration overrides in the [datastream configuration page](configure.md).
-2. Then, you must send the overrides to the Edge Network either via a Web SDK command, or by using the Web SDK [tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+2. Then, you must send the overrides to the Edge Network in one of the following ways:
+    * Through the `sendEvent` or `configure` [Web SDK](#send-overrides-web-sdk) commands.
+    * Through the Web SDK [tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+    * Through the Mobile SDK [sendEvent API](#send-overrides-mobile-sdk) call.
 
 This article explains the end-to-end datastream configuration override process for every type of supported override.
 
 >[!IMPORTANT]
 >
->Datastream overrides are only supported for [Web SDK](../edge/home.md) integrations. [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) and [Server API](../server-api/overview.md) integrations do not currently support datastream overrides.
-><br><br>
+>Datastream overrides are only supported for [Web SDK](../edge/home.md) and [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) integrations. [Server API](../server-api/overview.md) integrations do not currently support datastream overrides.
+><br>
 >Datastream overrides should be used when you need different data sent to different datastreams. You should not use datastream overrides for personalization use cases or consent data.
 
 ## Use cases {#use-cases}
@@ -105,7 +108,7 @@ After you've added the desired overrides, save your datastream settings.
 
 You should now have the ID sync container overrides configured. Now you can [send the overrides to the Edge Network via the Web SDK](#send-overrides).
 
-## Send the overrides to the Edge Network via the Web SDK {#send-overrides}
+## Send the overrides to the Edge Network via the Web SDK {#send-overrides-web-sdk}
 
 >[!NOTE]
 >
@@ -113,7 +116,7 @@ You should now have the ID sync container overrides configured. Now you can [sen
 
 After [configuring the datastream overrides](#configure-overrides) in the Data Collection UI, you can now send the overrides to the Edge Network, via the Web SDK.
 
-Sending the overrides to the Edge Network via the Web SDK is the second and final step of activating datastream configuration overrides.
+If you are using Web SDK, sending the overrides to the Edge Network via the `edgeConfigOverrides` command is the second and final step of activating datastream configuration overrides.
 
 The datastream configuration overrides are sent to the Edge Network through the `edgeConfigOverrides` Web SDK command. This command creates datastream overrides that are passed on to the [!DNL Edge Network] on the next command, or, in the case of the `configure` command, for every request.
 
@@ -129,7 +132,7 @@ When a configuration override is sent with the `configure` command, it is includ
 
 Options specified globally can be overridden by the configuration option on individual commands.
 
-### Sending configuration overrides via the `sendEvent` command {#send-event}
+### Sending configuration overrides via the Web SDK `sendEvent` command {#send-event}
 
 The example below shows what a configuration override could look like on a `sendEvent` command.
 
@@ -143,7 +146,7 @@ alloy("sendEvent", {
     com_adobe_experience_platform: {
       datasets: {
         event: {
-          datasetId: "MyOverrideDataset"
+          datasetId: "SampleEventDatasetIdOverride"
         },
         profile: {
           datasetId: "www"
@@ -187,7 +190,7 @@ alloy("configure", {
     "com_adobe_experience_platform": {
       "datasets": {
         "event": { 
-          datasetId: "MyOverrideDataset"
+          datasetId: "SampleProfileDatasetIdOverride"
         },
         "profile": { 
           datasetId: "www"
@@ -212,9 +215,168 @@ alloy("configure", {
 };
 ```
 
-### Payload example {#payload-example}
+## Send the overrides to the Edge Network via the Mobile SDK {#send-overrides-mobile-sdk}
 
-The examples above generate an [!DNL Edge Network] payload that looks like this:
+After [configuring the datastream overrides](#configure-overrides) in the Data Collection UI, you can now send the overrides to the Edge Network, via the Mobile SDK.
+
+If you are using the Mobile SDK, sending the overrides to the Edge Network via the `sendEvent` API is the second and final step of activating datastream configuration overrides.
+
+For more information about the Experience Platform Mobile SDK, see the [Mobile SDK documentation](https://developer.adobe.com/client-sdks/edge/edge-network/).
+
+### Datastream ID override via Mobile SDK {#id-override-mobile}
+
+The examples below show what a datastream ID override could look like on a Mobile SDK integration. Select the tabs below to see the [!DNL iOS] and [!DNL Android] examples.
+
+>[!BEGINTABS]
+
+>[!TAB iOS (Swift)]
+
+This example shows what a datastream ID override looks like in a Mobile SDK [!DNL iOS] integration.
+
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamIdOverride: "SampleDatastreamId")
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
+```
+
+>[!TAB Android (Kotlin)]
+
+This example shows what a datastream ID override looks like in a Mobile SDK [!DNL Android] integration.
+
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamIdOverride("SampleDatastreamId")
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
+
+### Datastream configuration override via Mobile SDK {#config-override-mobile}
+
+The examples below show what a datastream configuration override could look like on a Mobile SDK integration. Select the tabs below to see the [!DNL iOS] and [!DNL Android] examples.
+
+>[!BEGINTABS]
+
+>[!TAB iOS (Swift)]
+
+This example shows what a datastream configuration override looks like in a Mobile SDK [!DNL iOS] integration.
+
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+
+let configOverrides: [String: Any] = [
+  "com_adobe_experience_platform": [
+    "datasets": [
+      "event": [
+        "datasetId": "SampleEventDatasetIdOverride"
+      ],
+      "profile": [
+        "datasetId": "SampleProfileDatasetIdOverride"
+      ],
+    ]
+  ],
+  "com_adobe_analytics": [
+  "reportSuites": [
+        "MyFirstOverrideReportSuite",
+          "MySecondOverrideReportSuite",
+          "MyThirdOverrideReportSuite"
+      ]
+  ],  
+  "com_adobe_identity": [
+    "idSyncContainerId": "1234567"
+  ],
+  "com_adobe_target": [
+    "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+ ],
+]
+
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
+```
+
+>[!TAB Android (Kotlin)]
+
+This example shows what a datastream configuration override looks like in a Mobile SDK [!DNL Android] integration.
+
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val configOverrides = mapOf(
+    "com_adobe_experience_platform"
+    to mapOf(
+        "datasets"
+        to mapOf(
+            "event"
+            to mapOf("datasetId"
+                to "SampleEventDatasetIdOverride"),
+            "profile"
+            to mapOf("datasetId"
+                to "SampleProfileDatasetIdOverride")
+        )
+    ),
+    "com_adobe_analytics"
+    to mapOf(
+        "reportSuites"
+        to listOf(
+            "MyFirstOverrideReportSuite",
+            "MySecondOverrideReportSuite",
+            "MyThirdOverrideReportSuite"
+        )
+    ),
+    "com_adobe_identity"
+    to mapOf(
+        "idSyncContainerId"
+        to "1234567"
+    ),
+    "com_adobe_target"
+    to mapOf(
+        "propertyToken"
+        to "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+    )
+)
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamConfigOverride(configOverrides)
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
+
+## Payload example {#payload-example}
+
+The examples above generate an [!DNL Edge Network] payload similar to the one below.
 
 ```json
 {
@@ -223,7 +385,7 @@ The examples above generate an [!DNL Edge Network] payload that looks like this:
       "com_adobe_experience_platform": {
         "datasets": {
           "event": {
-            "datasetId": "MyOverrideDataset"
+            "datasetId": "SampleProfileDatasetIdOverride"
           },
           "profile": {
             "datasetId": "www"
@@ -246,13 +408,6 @@ The examples above generate an [!DNL Edge Network] payload that looks like this:
     },
     "state": {  }
   },
-  "events": [  ],
-  "query": {
-    "identity": {
-      "fetch": [
-        "ECID"
-      ]
-    }
-  }
+  "events": [  ]
 }
 ```

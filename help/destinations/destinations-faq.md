@@ -184,7 +184,7 @@ For detailed explanations on the ID matching requirements, see [ID matching requ
 +++Answer
 No, [Web SDK](../edge/home.md) is not required to activate audiences to [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-However, if [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) is used instead of Web SDK, only next-session personalization is supported.
+However, if [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) is used instead of Web SDK, only next-session personalization is supported.
 
 For [same-page and next-page personalization](ui/activate-edge-personalization-destinations.md) use cases, you must use either [Web SDK](../edge/home.md) or the [Edge Network Server API](../server-api/overview.md). See the documentation on [activating audiences to edge destinations](ui/activate-edge-personalization-destinations.md) for more implementation details.
 +++
@@ -214,7 +214,7 @@ Audience definitions are propagated to the [Edge Network](../edge/home.md) in up
 ### Where can I see the activated attributes in Adobe Target?
 
 +++Answer
-Attributes will be available to use in Target in [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) and [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=en) offers. 
+Attributes will be available to use in Target in [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) and [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) offers. 
 +++
 
 ### Can I create a destination without a datastream and then add a datastream to the same destination at a later point?

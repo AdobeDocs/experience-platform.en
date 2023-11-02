@@ -29,7 +29,7 @@ Criteo powers trusted and impactful advertising to bring richer experiences to e
 
 ## Supported identities {#supported-identities}
 
-Criteo supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+Criteo supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Target Identity | Description | Considerations |
 | --- | --- | --- |
@@ -172,7 +172,7 @@ The request body of removing user profile  received by the [!DNL Criteo] connect
 
 ## Data usage and governance {#data-usage}
 
-All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how Adobe Experience Platform enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=en).
+All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how Adobe Experience Platform enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## Additional resources
 

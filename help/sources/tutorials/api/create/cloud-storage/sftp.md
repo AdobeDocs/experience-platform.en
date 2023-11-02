@@ -44,6 +44,10 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ## Create a base connection
 
+>[!TIP]
+>
+>Once created, you cannot change the authentication type of an [!DNL SFTP] base connection. To change the authentication type, you must create a new base connection.
+
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 The [!DNL SFTP] source supports both basic authentication and authentication via SSH public key. During this step, you can also designate the path to the sub folder that you want to provide access to.
@@ -60,13 +64,11 @@ To create a base connection ID, make a POST request to the `/connections` endpoi
 POST /connections
 ```
 
-**Request**
-
-The following request creates a base connection for [!DNL SFTP]:
-
 >[!BEGINTABS]
 
 >[!TAB Basic authentication]
+
++++Request
 
 ```shell
 curl -X POST \
@@ -107,7 +109,24 @@ curl -X POST \
 | `auth.params.folderPath` | The path to the folder that you want to provide access to. |
 | `connectionSpec.id` | The SFTP server connection specification ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
++++
+
++++Response
+
+A successful response returns the unique identifier (`id`) of the newly created connection. This ID is required to explore your SFTP server in the next tutorial.
+
+```json
+{
+    "id": "bf367b0d-3d9b-4060-b67b-0d3d9bd06094",
+    "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
+}
+```
+
++++
+
 >[!TAB SSH public key authentication]
+
++++Request
 
 ```shell
 curl -X POST \
@@ -150,9 +169,9 @@ curl -X POST \
 | `auth.params.folderPath` | The path to the folder that you want to provide access to. |
 | `connectionSpec.id` | The [!DNL SFTP] server connection specification ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
->[!ENDTABS]
++++
 
-**Response**
++++Response
 
 A successful response returns the unique identifier (`id`) of the newly created connection. This ID is required to explore your SFTP server in the next tutorial.
 
@@ -162,6 +181,10 @@ A successful response returns the unique identifier (`id`) of the newly created 
     "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
 }
 ```
+
++++
+
+>[!ENDTABS]
 
 ## Next steps
 

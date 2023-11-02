@@ -4,6 +4,7 @@ description: Learn about the relationship between Identity Service and Real-Time
 hide: true
 hidefromtoc: true
 badge: Alpha
+exl-id: 09961b8e-f736-4fcc-ac53-88b55cca7d55
 ---
 # Understanding the relationship between Identity Service and Real-Time Customer Profile
 

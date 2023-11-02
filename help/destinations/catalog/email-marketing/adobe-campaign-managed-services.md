@@ -7,7 +7,7 @@ exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
 
 >[!IMPORTANT]
 >
->This integration works with [Adobe Campaign version 8.4 or higher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1).
+>This integration works with [Adobe Campaign version 8.4 or higher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1).
 
 ## Overview {#overview}
 

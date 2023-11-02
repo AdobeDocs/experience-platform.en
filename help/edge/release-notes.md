@@ -25,7 +25,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **Fixes and improvements**
 
-* The Web SDK now encodes the Audience Manager cookie destination values, similar to the [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en).
+* The Web SDK now encodes the Audience Manager cookie destination values, similar to the [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html).
 
 ## Version 2.16.0 - April 25, 2023
 

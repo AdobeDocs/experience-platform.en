@@ -2,8 +2,8 @@
 title: Moengage connection
 description: Moengage is a customer engagement platform that powers customer-centric interactions between consumers and brands in real time.
 last-substantial-update: 2023-10-11
+exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
 ---
-
 # [!DNL Moengage] connection
 
 ## Overview {#overview}
@@ -144,4 +144,3 @@ To verify if data has been exported successfully to the [!DNL Moengage] destinat
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
-
