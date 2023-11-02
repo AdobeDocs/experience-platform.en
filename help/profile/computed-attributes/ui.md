@@ -144,7 +144,7 @@ When selecting a draft computed attribute, the **[!UICONTROL Edit computed attri
 
 >[!IMPORTANT]
 >
->If you are using a computed attribute with the **Most recent** function in a segment definition, you **must** include **both** the value and the timestamp value. 
+>If you are using a computed attribute with the **Most recent** function in a segment definition, you **must** include **both** the value and the timestamp value in the computed attribute object.
 >
 >For example, if you're creating a segment definition that is looking for "All profiles that have a valid email address" where the email address field is populated by a computed attribute with the most recent function, you **must** include both the email address' value exists **and** the email address' timestamp exists.
 
