@@ -206,6 +206,6 @@ A successful response returns HTTP status 200 with the ad hoc schema created by 
 | `resultsMeta`  | This object contains the metadata for each column returned in results so users know the name and type of each column. | 
 | `resultsMeta._adhoc`  | An ad-hoc Experience Data Model (XDM) schema with fields that are namespaced for usage only by a single dataset.  | 
 | `resultsMeta._adhoc.type`  | The data type of the ad hoc schema. | 
-| `resultsMeta._adhoc.meta:xdmType`  | This is a system-generated value for the XDM field type. For more information on the available types see the documentation on [available XDM types](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). | 
+| `resultsMeta._adhoc.meta:xdmType`  | This is a system-generated value for the XDM field type. For more information on the available types see the documentation on [available XDM types](../../xdm/tutorials/custom-fields-api.md). | 
 | `resultsMeta._adhoc.properties`  | These are the column names of the queried dataset. | 
 | `resultsMeta._adhoc.results`  | These are the row names of the queried dataset. They reflect each of the returned columns.  |

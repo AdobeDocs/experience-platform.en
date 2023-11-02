@@ -8,7 +8,7 @@ exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-Adobe Campaign Managed Cloud Services provides a Managed Services platform for designing cross-channel customer experiences and provides an environment for visual campaign orchestration, real time interaction management, and cross-channel execution. Visit the [Adobe Campaign v8 documentation](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=en) for more information.
+Adobe Campaign Managed Cloud Services provides a Managed Services platform for designing cross-channel customer experiences and provides an environment for visual campaign orchestration, real time interaction management, and cross-channel execution. Visit the [Adobe Campaign v8 documentation](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html) for more information.
 
 The Adobe Campaign Managed Cloud Services source allows you to bring Adobe Campaign v8 delivery logs and tracking logs data to Adobe Experience Platform.
 
@@ -24,7 +24,7 @@ Before you can create a source connection to bring your Campaign v8 to Experienc
 
 >[!IMPORTANT]
 >
->You must have access to the Adobe Campaign v8 Client Console in order to view your log data in Campaign. Visit the [Campaign v8 documentation](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=en) for information on how to download and install the client console.
+>You must have access to the Adobe Campaign v8 Client Console in order to view your log data in Campaign. Visit the [Campaign v8 documentation](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) for information on how to download and install the client console.
 
 Log in to your Campaign v8 instance through the Client Console. Under the [!DNL Explorer] tab, select [!DNL Administration] and then select [!DNL Configuration]. Next, select [!DNL Data schemas] and then apply the `broadLog` filter for name or label. In the list that appears, select the recipient delivery logs source schema with the name `broadLogRcp`.
 

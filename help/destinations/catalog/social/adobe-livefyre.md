@@ -10,7 +10,7 @@ exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
 
 Adobe Livefyre enables you to discover, organize, and publish a constant flow of user generated content onto your website to create authentic and highly personalized experiences.
 
-Adobe Livefyre is a social extension in Adobe Experience Platform. For more information about the Adobe Livefyre, read the [Livefyre implementation guide](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=en).
+Adobe Livefyre is a social extension in Adobe Experience Platform. For more information about the Adobe Livefyre, read the [Livefyre implementation guide](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
 
 This destination is a tag extension. For more information about how tags extensions work in Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 

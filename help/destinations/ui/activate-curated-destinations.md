@@ -42,7 +42,7 @@ This article explains the workflow required to activate audiences from Real-Time
 
 You activate audiences to connected TV and audio destinations by going through a two-step process, and by using the [LiveRamp - Onboarding](../catalog/advertising/liveramp-onboarding.md) and the [LiveRamp - Distribution](../catalog/advertising/liveramp-distribution.md) destinations, as shown in the image below.
 
-![Diagram showing the workflow for activating audiences from Real-Time CDP to curated destinations, through LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png)
+![Diagram showing the workflow for activating audiences from Real-Time CDP to curated destinations, through LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png){width="1920" zoomable="yes"}
 
 First, you export your audiences from Real-Time CDP to the [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) destination, as CSV files.
 
