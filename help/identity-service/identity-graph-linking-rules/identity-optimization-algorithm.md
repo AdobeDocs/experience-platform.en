@@ -22,6 +22,8 @@ You must specify which namespaces represent a person entity in Identity Service 
 * CRM ID namespace = unique
 * Email namespace = unique
 
+A namespace that you declare to be unique will automatically be configured to have a maximum limit of one within a given identity graph. For example, if you declare a CRM ID namespace as unique, then an identity graph can only have one identity, that contains a CRM ID namespace.
+
 >[!NOTE]
 >
 >* Currently, the algorithm only supports the use of a single login identifier (one login namespace). Multiple login identifiers (multiple identity namespaces used to login), household entity graphs, and hierarchical graph structures are not supported at this time.
@@ -78,27 +80,24 @@ In this example, the CRM ID namespace is designated as a unique namespace.
 
 >[!ENDTABS]
 
-
 ### Bad email
 
 | Namespace | Limit |
 | --- | --- |
 | CRM ID | 1 |
-| Phone | 1 |
 | Email | 1 |
 | ECID | N/A |
 
-In this example, CRM ID, Phone, and Email namespaces are designated as unique.
+In this example, CRM ID and Email namespaces are designated as unique.
 
 There are instances where a user may input bad values for their email and/or phone numbers. This 
 
 * `timestamp=1`: {CRM ID: 456, ECID: 999} is established.
 * `timestamp=2`: {CRM ID: 123, ECID: 888} is established.
-* `timestamp=3`: {CRM ID: 456, ECID: 999}, {PHONE: 123-4567}, and {EMAIL: test@test} are linked together.
-* `timestamp=4`: {CRM ID: 123, ECID: 888} is linked with {PHONE: 765-4321} and {EMAIL: test@test}, thus linking the two graphs together.
-  * However, linking the two graphs together would result in violations of the limits as it would bring two disparate CRM IDs and Phone namespaces into the same graph.
-  * Since a person is defined by a CRM ID, Phone, or Email, the links that will be deleted are the links that connected {CRM ID: 456, PHONE: 123-4567} to the bad email.
-  * This results into two different graphs. One with {ECID:999, CRM ID: 456, PHONE: 123-4567} and another with {ECID: 888, CRM ID: 123, PHONE: 765-4321, EMAIL: test@test}
+* `timestamp=3`: {CRM ID: 456, ECID: 999} is linked to {EMAIL: test@test}
+* `timestamp=4`: {CRM ID: 123, ECID: 888} is linked to {EMAIL: test@test}, thereby linking the two graphs together.
+  * This then becomes a violation of the configured limits as it creates a single graph with two disparate CRM ID namespaces.
+  * As a result, the identity optimization algorithm deletes the older link, which in this case is the link between {CRM ID: 456, ECID: 999} and {EMAIL: test@test} that was established at `timestamp=3`.
 
 >[!NOTE]
 >
