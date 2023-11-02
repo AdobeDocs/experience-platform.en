@@ -22,7 +22,7 @@ You must specify which namespaces represent a person entity in Identity Service 
 * CRM ID namespace = unique
 * Email namespace = unique
 
-A namespace that you declare to be unique will automatically be configured to have a maximum limit of one within a given identity graph. For example, if you declare a CRM ID namespace as unique, then an identity graph can only have one identity, that contains a CRM ID namespace.
+A namespace that you declare to be unique will automatically be configured to have a maximum limit of one within a given identity graph. For example, if you declare a CRM ID namespace as unique, then an identity graph can only have one identity that contains a CRM ID namespace.
 
 >[!NOTE]
 >
@@ -98,10 +98,6 @@ There are instances where a user may input bad values for their email and/or pho
 * `timestamp=4`: {CRM ID: 123, ECID: 888} is linked to {EMAIL: test@test}, thereby linking the two graphs together.
   * This then becomes a violation of the configured limits as it creates a single graph with two disparate CRM ID namespaces.
   * As a result, the identity optimization algorithm deletes the older link, which in this case is the link between {CRM ID: 456, ECID: 999} and {EMAIL: test@test} that was established at `timestamp=3`.
-
->[!NOTE]
->
->If CRM ID was the lone namespace that was configured to be unique, then the expected results may not have been yielded. Therefore, it is important that you mark all person identifiers that you will ingest into the sandbox as a unique namespace.
 
 ![bad-email](../images/identity-settings/bad-email.png)
 
