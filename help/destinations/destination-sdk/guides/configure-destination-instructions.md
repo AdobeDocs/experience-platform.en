@@ -270,7 +270,7 @@ After setting up your destination using the configuration endpoints in the previ
 As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create audiences in Experience Platform:
 
 * [Create an audience documentation page](/help/segmentation/ui/overview.md#create-segment)
-* [Create an audience video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [Create an audience video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Step 7: Publish your destination {#publish-destination}
 
