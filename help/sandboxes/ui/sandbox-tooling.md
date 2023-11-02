@@ -232,6 +232,12 @@ The **[!UICONTROL Import details]** dialog shows a detailed breakdown of the imp
 >
 >When an import is completed, you receive notifications in the Platform UI. You can access these notifications from the alerts icon. You can navigate to troubleshooting from here if a job is unsuccessful.
 
+## Video tutorial
+
+The following video is intended to support your understanding of sandbox tooling, and outlines how to create a new package, publish a package, and import a package.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
+
 ## Next steps
 
 This document demonstrated how to use the sandbox tooling feature within the Experience Platform UI. For information on sandboxes, see the [sandbox user guide](../ui/user-guide.md).
