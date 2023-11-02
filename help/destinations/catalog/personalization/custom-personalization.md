@@ -59,7 +59,7 @@ This section describes which type of audiences you can export to this destinatio
 >id="platform_destinations_custom_personalization_datastream"
 >title="About datastream IDs"
 >abstract="This option determines in which data collection datastream the audiences will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. You must configure a datastream before you can configure your destination."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en" text="Learn how to configure a datastream"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="Learn how to configure a datastream"
 
 >[!IMPORTANT]
 > 

@@ -7,13 +7,13 @@ exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
 
 ## Overview {#overview}
 
-The Edge Network Server API can deliver personalized experiences managed in [Offer Decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) to the web channel.
+The Edge Network Server API can deliver personalized experiences managed in [Offer Decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html) to the web channel.
 
 [!DNL Offer Decisioning] supports a non-visual interface to create, activate, and deliver your activities and personalization experiences.
 
 ## Prerequisites {#prerequisites}
 
-Personalization via [!DNL Offer Decisioning] requires that you have access to [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=en) before you configure your integration.
+Personalization via [!DNL Offer Decisioning] requires that you have access to [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) before you configure your integration.
 
 ## Configure your datastream {#configure-your-datastream}
 
@@ -35,7 +35,7 @@ To learn more about the [!DNL Offer Decisioning Engine], see the dedicated [docu
 
 After [configuring your datastream](#configure-your-datastream), you must define the decision scopes to be used in your personalization campaign.
 
-[Decision scopes](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes) are the Base64-encoded JSON strings containing the activity and placement IDs that you want the [!DNL Offer Decisioning Service] to use when proposing offers.
+[Decision scopes](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes) are the Base64-encoded JSON strings containing the activity and placement IDs that you want the [!DNL Offer Decisioning Service] to use when proposing offers.
 
 **Decision scope JSON**
 
@@ -52,7 +52,7 @@ After [configuring your datastream](#configure-your-datastream), you must define
 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
 ```
 
-After you have created your offers and collections, you need to define a [decision scope](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes).
+After you have created your offers and collections, you need to define a [decision scope](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes).
 
 Copy the Base64-encoded decision scope. You will use it in the `query` object of the Server API request. 
 

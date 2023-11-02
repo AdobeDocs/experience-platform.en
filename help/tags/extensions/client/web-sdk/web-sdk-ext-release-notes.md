@@ -200,7 +200,7 @@ Contains version 2.5.0 of the Adobe Experience Platform Web SDK library.
 
 Contains version 2.4.0 of the Adobe Experience Platform Web SDK library.
 
-* Added ["document unloading"](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) checkbox to Send Event action UI.
+* Added ["document unloading"](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) checkbox to Send Event action UI.
 * Added support for an `out` option when [configuring default consent](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) which drops all events until consent is received (the existing `pending` option queues events and sends them once consent is received).
 * Added a tooltip to the default consent field.
 * Added support for [Adobe's Consent 2.0 standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).

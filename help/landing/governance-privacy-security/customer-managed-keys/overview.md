@@ -15,7 +15,7 @@ This document provides a high level overview of the process for enabling the cus
 
 >[!NOTE]
 >
->For Customer Journey Analytics customers, please follow the instructions in the [Customer Journey Analytics documentation](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=en).
+>For Customer Journey Analytics customers, please follow the instructions in the [Customer Journey Analytics documentation](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html).
 
 ## Prerequisites
 

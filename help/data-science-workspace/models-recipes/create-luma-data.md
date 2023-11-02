@@ -24,7 +24,7 @@ This tutorial provides you with the prerequisites and assets required for all ot
 
 ## Download the assets {#assets}
 
-The following tutorial uses a custom Luma purchase propensity model. Before proceeding, [download the required assets](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip?lang=en) zip folder. This folder contains:
+The following tutorial uses a custom Luma purchase propensity model. Before proceeding, [download the required assets](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) zip folder. This folder contains:
 
 - The purchase propensity model notebook
 - A notebook used to ingest data to a training and scoring dataset (a subset of the Luma web data)
