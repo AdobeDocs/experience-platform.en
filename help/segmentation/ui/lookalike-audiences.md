@@ -104,7 +104,7 @@ The Look-alike audiences section displays a list of all the Look-alike audiences
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Influential factors"
 >abstract="Influential factors are attributes, events and audience memberships that are important in explaining similarity of a profile to members of the base audience. Data usage labels and policies can be used to exclude certain data from being considered as influential factors in look-alike models."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Exclude data"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html#exclude" text="Exclude data"
 
 The influential factors section displays the top 100 factors that influence the look-alike model for the selected base audience. These influential factors are the profile attributes, the experience events, and the audience memberships that are the most important in explaining similarities in the base audience. Understanding the top influential factors lets you better personalize your marketing content for this audience and any Look-alike audience you create from it. Please note that not all the influential factors that affect the look-alike model will be displayed.
 

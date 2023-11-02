@@ -1,11 +1,11 @@
 ---
-title: Create an SFTP  Source Connection in the UI
+title: Create an SFTP Source Connection in the UI
 description: Learn how to create an SFTP source connection using the Adobe Experience Platform UI.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
 ---
 # Create an [!DNL SFTP] source connection in the UI
 
-This tutorial provides steps for creating an [!DNL SFTP] source connection using the Adobe Experience Platform UI.
+This tutorial provides steps to create an [!DNL SFTP] source connection using the Adobe Experience Platform UI.
 
 ## Getting started
 
@@ -61,7 +61,7 @@ To connect an existing account, select the FTP or SFTP account you want to conne
 
 >[!TIP]
 >
->* Once created, you cannot change the authentication type of a [!DNL SFTP] base connection. To change the authentication type, you must create a new base connection.
+>* Once created, you cannot change the authentication type of an [!DNL SFTP] base connection. To change the authentication type, you must create a new base connection.
 >
 >* SFTP supports an RSA or DSA type OpenSSH key. Ensure that your key file content starts with `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` and ends with `"-----END [RSA/DSA] PRIVATE KEY-----"`. If the private key file is a PPK-format file, use the PuTTY tool to convert from PPK to OpenSSH format.
 

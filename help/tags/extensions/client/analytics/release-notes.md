@@ -187,7 +187,7 @@ The following is a list of release notes for the Adobe Analytics tag extension.
 
 **Features**:
 
-* Updated the Adobe Analytics Extension to [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=en#version-2.14.0) which includes a fix to a known clearVars issue
+* Updated the Adobe Analytics Extension to [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0) which includes a fix to a known clearVars issue
 * Added an Exchange link to the extension. The Exchange listing can be reached by selecting the dropdown and choosing "extension info"
 
 **Bug fixes**:
