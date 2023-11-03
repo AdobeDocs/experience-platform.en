@@ -3,6 +3,7 @@ title: AI/ML Data Pipeline Enrichment end-to-end workflow
 description: Use cloud-based machine learning environment notebooks to create a training and scoring a propensity model that predicts subscription conversions from Adobe Experience Platform data.
 hide: true
 hidefromtoc: true
+exl-id: 2853e7c7-cab8-4e1b-b73f-622c937fbbaf
 ---
 <!-- 
 title: Cloud Machine Learning Environment Notebooks

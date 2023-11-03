@@ -8,7 +8,7 @@ exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
 
 ## Overview {#overview}
 
-Build custom audiences on TikTok with your data for targeting with your ad campaigns. These audiences could be of people who visited your website or interacted with your content. Quickly and securely push the desired audience from Adobe Experience Platform to TikTok using Adobe's real-time integration with TikTok Ads Manager. Visit [TikTok's business help center](https://ads.tiktok.com/help/article/audiences?lang=en) for more information. 
+Build custom audiences on TikTok with your data for targeting with your ad campaigns. These audiences could be of people who visited your website or interacted with your content. Quickly and securely push the desired audience from Adobe Experience Platform to TikTok using Adobe's real-time integration with TikTok Ads Manager. Visit [TikTok's business help center](https://ads.tiktok.com/help/article/audiences) for more information. 
 
 >[!IMPORTANT]
 >
@@ -24,7 +24,7 @@ An athletic apparel brand wants to reach existing customers through their social
 
 ## Prerequisites {#prerequisites}
 
-You need to have [!DNL Admin] or [!DNL Operator] access to the TikTok Ads Manager account you want to send audiences to. More instructions can be found on the [TikTok Help Center](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+You need to have [!DNL Admin] or [!DNL Operator] access to the TikTok Ads Manager account you want to send audiences to. More instructions can be found on the [TikTok Help Center](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
 Before sending data to your TikTok Ads Manager account, you will need to give Adobe Experience Platform permission to access your Ad Account for `Audience Management`. This permission can be provided by [entering your Ads Manager ID](#authenticate) in the Experience Platform UI and granting the permission after being redirected to your TikTok Ads Manager Account. 
 
@@ -117,4 +117,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-Please refer to the [TikTok Help Center page](https://ads.tiktok.com/help/article/audiences?lang=en) for additional information.
+Please refer to the [TikTok Help Center page](https://ads.tiktok.com/help/article/audiences) for additional information.
