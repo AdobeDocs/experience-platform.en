@@ -25,11 +25,11 @@ Additionally, in order to implement the use case, you will make use of the follo
 - [Computed attributes](../../profile/computed-attributes/overview.md)
 - [Destinations](../../destinations/home.md)
 
-## Bringing partner provided IDs forward
+## Bringing partner provided IDs forward {#bring-partner-ids-forward}
 
 To create an audience of unauthenticated visitors, you'll first need to bring forth the partner provided IDs from the event dataset into the profile records. You can do this by utilizing computed attributes.
 
-Computed attributes let you quickly convert profile behavioral data into aggregated values at the profile level. As a result, you can use add these expressions, such as "lifetime purchase total" to the profile, allowing you to use easily use the computed attribute within your audiences. More information about computed attributes can be found in the [computed attributes overview](../../profile/computed-attributes/overview.md).
+Computed attributes let you quickly convert profile behavioral data into aggregated values at the profile level. As a result, you can use these expressions, such as "lifetime purchase total" to the profile, allowing you to easily use the computed attribute within your audiences. More information about computed attributes can be found in the [computed attributes overview](../../profile/computed-attributes/overview.md).
 
 To access computed attributes, select **[!UICONTROL Profiles]** followed by **[!UICONTROL Computed attributes]** and **[!UICONTROL Create computed attribute]**.
 
@@ -57,7 +57,7 @@ Give the computed attribute a name of "Partner ID" and an appropriate descriptio
 
 ![The basic information of the computed attribute you want to create is highlighted.](../assets/offsite-retargeting/ca-publish.png)
 
-## Create an audience using the computed attribute
+## Create an audience using the computed attribute {#create-audience}
 
 Now that you've created the computed attribute, you can use this computed attribute to create an audience. In this example, you will be creating an audience comprised of visitors that visited your website more than 5 times this month but have not yet signed up.
 
@@ -75,7 +75,7 @@ The Segment Builder page appears. On this page, you can use the components to bu
 
 >[!NOTE]
 >
->For more detailed information about using the Segment Builder, please read the Segment Builder UI guide.
+>For more detailed information about using the Segment Builder, please read the [Segment Builder UI guide](../../segmentation/ui/segment-builder.md).
 
 To achieve the goal of finding these visitors, you'll first need to add a **[!UICONTROL Page View]** event to your audience. Select the **[!UICONTROL Events]** tab under **[!UICONTROL Fields]**, then drag and drop the **[!UICONTROL Page View]** event and add it to the events section canvas.
 
@@ -85,11 +85,13 @@ Select the newly added **[!UICONTROL Page View]** event. Change the lookback per
 
 ![Details of the added [!UICONTROL Page View] event are displayed.](../assets/offsite-retargeting/edit-event.png)
 
-After adding your event, you'll need to add an attribute. Since you're dealing with unauthenticated visitors, you can add the computed attribute you just created. This newly created computed attribute lets you link partner IDs to an audience.
+After adding your event, you'll need to add an attribute. Since you're working with unauthenticated visitors, you can add the computed attribute you just created. This newly created computed attribute lets you link partner IDs to an audience.
 
-To add the computed attribute, under **[!UICONTROL Attributes]**, select **[!UICONTROL _atag]**, followed by **[!UICONTROL SystemComputedAttributes]**, and **[!UICONTROL PartnerID]**. 
+To add the computed attribute, under **[!UICONTROL Attributes]**, select **[!UICONTROL XDM Individual Profile]**, followed by **[!UICONTROL _atag]**, **[!UICONTROL SystemComputedAttributes]**, and **[!UICONTROL PartnerID]**. Now, add the **[!UICONTROL Value]** of the computed attribute to the attributes section of the canvas.
 
-Now, add the **[!UICONTROL Value]** of the computed attribute to the attributes section of the canvas. Additionally, search for **[!UICONTROL Personal Email]** and add the **[!UICONTROL Address]** attribute below **[!UICONTROL PartnerID]** to the attributes section of the canvas.
+![The folder pathing to access the computed attribute is displayed.](../assets/offsite-retargeting/access-computed-attribute.png)
+
+Additionally, search for **[!UICONTROL Personal Email]** and add the **[!UICONTROL Address]** attribute below **[!UICONTROL PartnerID]** to the attributes section of the canvas.
 
 ![The [!UICONTROL PartnerID] computed attribute and the [!UICONTROL Personal Email Address] attribute are highlighted on the Segment Builder canvas.](../assets/offsite-retargeting/added-attributes.png)
 
@@ -101,7 +103,7 @@ You've now successfully created an audience that looks for high intensity visito
 
 ![The audience properties are highlighted.](../assets/offsite-retargeting/save-audience-properties.png)
 
-## Activate your audience
+## Activate your audience {#activate-audience}
 
 After successfully creating your audience, you can now activate this audience to downstream destinations. Select **[!UICONTROL Audiences]** on the left navigation rail, look for your newly created audience, select the ellipsis icon, and select **[!UICONTROL Activate to destination]**. 
 
@@ -127,7 +129,7 @@ After confirming the scheduling details, select **[!UICONTROL Next]**.
 
 ![The details of the schedule are displayed.](../assets/offsite-retargeting/created-schedule.png)
 
-The **[!UICONTROL Select attributes]** page appears. On this page, you can select which attributes you want exporting along with the activated audience. At a minimum, you'll want to include the partner ID, since this will let you identify the visitors you plan to retarget. Select **[!UICONTROL Add new mapping]** and search for the computed attribute. After adding the necessary attributes, select **[!UICONTROL Next]**.
+The **[!UICONTROL Select attributes]** page appears. On this page, you can select which attributes you want to export along with the activated audience. At a minimum, you'll want to include the partner ID, since this will let you identify the visitors you plan to retarget. Select **[!UICONTROL Add new mapping]** and search for the computed attribute. After adding the necessary attributes, select **[!UICONTROL Next]**.
 
 ![Both the [!UICONTROL Add new mapping] button and the computed attribute are highlighted.](../assets/offsite-retargeting/add-new-mapping.png)
 
@@ -135,7 +137,9 @@ The **[!UICONTROL Review]** page appears. On this page, you can review the detai
 
 ![The [!UICONTROL Review] page is displayed, showing details of the audience activation.](../assets/offsite-retargeting/review-destination-activation.png)
 
-## Other use cases
+You have now activated an audience of unauthenticated users to a downstream destination for further retargeting.
+
+## Other use cases {#other-use-cases}
 
 You can explore further use cases enabled through partner data support in Real-Time CDP:
 
