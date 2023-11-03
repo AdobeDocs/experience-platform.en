@@ -158,7 +158,7 @@ This rule checks if the request originates from a specific IP address and if the
 
 ![Image of bot detection rule based on IP address and request header.](assets/bot-detection/bot-detection-header-ip.png)
 
-### Bot detection based multiple conditions {#multiple-conditions}
+### Bot detection based on multiple conditions {#multiple-conditions}
 
 You can create bot detection rules based on:
 
