@@ -8,7 +8,7 @@ exl-id: 677d1054-0769-4ec6-811e-e02d4b247c2a
 
 The mbox3rdPartyId in Adobe Target is your company's visitor ID, such as the membership ID for your company's loyalty program.
 
-When a visitor logs in to a company's site, the company typically creates an ID that is tied to the visitor's account, loyalty card, membership number, or other applicable identifiers for that company. [Learn more](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=en#)
+When a visitor logs in to a company's site, the company typically creates an ID that is tied to the visitor's account, loyalty card, membership number, or other applicable identifiers for that company. [Learn more](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html#)
 
 
 ## How to use `mbox3rdPartyId` with the Web SDK

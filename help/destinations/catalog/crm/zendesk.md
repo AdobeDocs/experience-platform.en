@@ -2,6 +2,7 @@
 title: Zendesk connection
 description: The Zendesk destination allows you to export your account data and activate it within Zendesk for your business needs.
 last-substantial-update: 2023-03-14
+exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
 ---
 # [!DNL Zendesk] connection
 
@@ -19,7 +20,7 @@ The customer service department of a multichannel B2C platform wants to ensure a
 
 ### Experience Platform prerequisites {#prerequisites-in-experience-platform}
 
-Before activating data to the [!DNL Zendesk] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
+Before activating data to the [!DNL Zendesk] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) created in [!DNL Experience Platform].
 
 Refer to Experience Platform documentation for [Audience Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on audience statuses.
 

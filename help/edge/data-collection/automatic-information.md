@@ -1,6 +1,7 @@
 ---
 title: Automatically collected information
 description: An overview of the data that the Adobe Experience Platform Web SDK collects automatically.
+exl-id: 901df786-df36-4986-9c74-a32d29c11b71
 ---
 # Automatically collected information
 

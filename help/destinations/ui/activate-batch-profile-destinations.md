@@ -392,6 +392,10 @@ Adobe recommends selecting an identity namespace such as a [!DNL CRM ID] or emai
 >
 > For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
+### [!BADGE Beta]{type=Informative} Export arrays through calculated fields {#export-arrays-calculated-fields}
+
+Select beta customers can export array objects from Experience Platform to cloud storage destinations. Read more about [exporting arrays and calculated fields](/help/destinations/ui/export-arrays-calculated-fields.md) and contact your Adobe representative to get access to the functionality. 
+
 ### Known limitations {#known-limitations}
 
 The new **[!UICONTROL Mapping]** page has the following known limitations:
@@ -403,8 +407,10 @@ Due to a known limitation, you cannot currently use the **[!UICONTROL Select fie
 ![Screen recording showing the audience membership workaround in the mapping step of the activation workflow.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
 File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
-* If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
+* If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and newly **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
 * If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
+
+Read more about [profile export behavior for file-based destinations](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
 #### Identity namespaces cannot currently be selected for exports
 

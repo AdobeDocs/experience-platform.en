@@ -25,8 +25,7 @@ The following table outlines static limits applied to identity data.
 
 | Guardrail | Limit | Notes |
 | --- | --- | --- |
-| (Current behavior) Number of identities in a graph | 150 | The limit is applied at the sandbox level. Once the number of identities reaches 150 or more, no new identities will be added, and the identity graph will not be updated. Graphs may show identities greater than 150 as a result of linking one or more graphs with less than 150 identities. **Note**: The maximum number of identities in an identity graph **for an individual merged profile** is 50. Merged profiles that are based off identity graphs with more than 50 identities are excluded from Real-Time Customer Profile. For more information, read the guide on [guardrails for Profile data](../profile/guardrails.md). |
-| (Upcoming behavior) Number of identities in a graph [!BADGE Beta]{type=Informative} | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity. Deletion is based on identity type and timestamp. The limit is applied at the sandbox level. For more information, read the section on [understanding the deletion logic](#deletion-logic). |
+| Number of identities in a graph | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity. Deletion is based on identity type and timestamp. The limit is applied at the sandbox level. For more information, read the section on [understanding the deletion logic](#deletion-logic). |
 | Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
 | Number of custom namespaces | None | There are no limits to the number of custom namespaces you can create. |
 | Number of characters for a namespace display name or identity symbol | None | There are no limits to the number of characters of a namespace display name or identity symbol. |
@@ -44,7 +43,7 @@ The following table outlines existing rules you must follow to ensure a successf
 
 Starting March 31, 2023, Identity Service will block the ingestion of Adobe Analytics ID (AAID) for new customers. This identity is typically ingested through the [Adobe Analytics source](../sources/connectors/adobe-applications/analytics.md) and the [Adobe Audience Manager source](../sources//connectors/adobe-applications/audience-manager.md) and is redundant because the ECID represents the same web browser. If you would like to change this default configuration, please contact your Adobe account team.
 
-## [!BADGE Beta]{type=Informative} Understanding the deletion logic when an identity graph at capacity is updated {#deletion-logic}
+## Understanding the deletion logic when an identity graph at capacity is updated {#deletion-logic}
 
 When a full identity graph is updated, Identity Service deletes the oldest identity in the graph before adding the latest identity. This is to maintain accuracy and relevance of identity data. This process of deletion follows two primary rules:
 
@@ -96,7 +95,7 @@ Please contact your Adobe account team to request a change in identity type if y
 
 Once this feature is available, graphs that exceed the limit of 50 identities will be reduced down to up to 50 identities. For Real-Time CDP B2C Edition, this could result in a minimal increase in the number of profiles qualifying for an audience, as these profiles were previously ignored from Segmentation and Activation.
 
-#### Real-Time Customer Profile: Pseudonymous profile setup
+#### Real-Time Customer Profile: impact to addressable audiences
 
 Deletion only happens to data in the Identity Service and not Real-Time Customer Profile.
 

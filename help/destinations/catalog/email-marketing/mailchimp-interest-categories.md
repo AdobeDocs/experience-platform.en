@@ -2,6 +2,7 @@
 title: Mailchimp Interest Categories
 description: Mailchimp (also known as Intuit Mailchimp) is a popular marketing automation platform and email marketing service used by businesses to manage and talk to contacts (clients, customers, or other interested parties) using mailing lists and email marketing campaigns. Use this connector to sort your contacts based on their interests and preferences.
 last-substantial-update: 2023-05-24
+exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
 ---
 # [!DNL Mailchimp Interest Categories] connection
 
@@ -29,7 +30,7 @@ Refer to the sections below for any prerequisites that you need to set up in Exp
 
 ### Prerequisites in Experience Platform {#prerequisites-in-experience-platform}
 
-Before activating data to the [!DNL Mailchimp Interest Categories] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
+Before activating data to the [!DNL Mailchimp Interest Categories] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) created in [!DNL Experience Platform].
 
 ### Prerequisites for the [!DNL Mailchimp Interest Categories] destination {#prerequisites-destination}
 

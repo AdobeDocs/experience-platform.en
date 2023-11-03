@@ -9,7 +9,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 
 With the July 2023 Experience Platform release, the SFTP destination provides new functionality, as listed below:
 
-* [!BADGE Beta]{type=Informative} [Dataset export support](/help/destinations/ui/export-datasets.md).
+* [Dataset export support](/help/destinations/ui/export-datasets.md).
 * Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -20,7 +20,7 @@ Create a live outbound connection to your SFTP server to periodically export del
 
 >[!IMPORTANT]
 >
-> While Experience Platform supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL SFTP].
+> While Experience Platform supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL Azure Blob].
 
 ## Connect to SFTP through API or UI {#connect-api-or-ui}
 
