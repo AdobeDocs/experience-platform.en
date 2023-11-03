@@ -11,7 +11,7 @@ To optimize the loading times and deliver personalization as quickly as possible
 
 Top and bottom of page events describe a method of asynchronously loading various elements in the page, while keeping the page load time at a minimum.
 
-This configuration ensures that visitors receive a personalized experience without running into a blank screen until the personalization is loaded on the page. Data can be loaded asynchronously and recorded later.
+This configuration minimizes the amount of time a user has to wait until the personalized content is loaded.
 
 In terms of metrics accuracy, Adobe Analytics can ignore top of page events, which leads to more accurate metrics recording, since only one page hit is recorded (the bottom of page event).  
 
@@ -37,7 +37,7 @@ alloy("sendEvent", {
   type: "decisioning.propositionFetch",
   renderDecisions: true,
   personalization: {
-    sendDisplayNotifications: false
+    sendDisplayEvent: false
   }
 });
 ```
@@ -46,7 +46,7 @@ alloy("sendEvent", {
 |---|---|---|
 |`type`|Required|Set this parameter to `decisioning.propositionFetch`. This special event type tells Adobe Analytics to drop this event. When using Customer Journey Analytics, you can also set up a filter to drop these events.|
 |`renderDecisions`|Required|Set this parameter to `true`. This parameter tells Web SDK to render decisions returned by the Edge Network.|
-|`personalization.sendDisplayNotifications`|Required| Set this parameter to `false`. This stops display notifications from being sent.|
+|`personalization.sendDisplayEvent`|Required| Set this parameter to `false`. This stops display notifications from being sent.|
 
 >[!ENDTABS]
 
@@ -65,7 +65,7 @@ The code sample below exemplifies a bottom of page event configuration which sen
 ```js
 alloy("sendEvent", {
   personalization: {
-    includePendingDisplayNotifications: true
+    includeRenderedPropositions: true
   },
   xdm: { ... }
 });
@@ -73,7 +73,7 @@ alloy("sendEvent", {
 
 |Paramter| Required/Optional |Description|
 |---|---|---|
-|`personalization.includePendingDisplayNotifications`|Required|Set this parameter to `true`. This enables the sending of display notifications which were suppressed in the top of page event.|
+|`personalization.includeRenderedPropositions`|Required|Set this parameter to `true`. This enables the sending of display notifications which were suppressed in the top of page event.|
 |`xdm`| Optional | Use this section to include all the data you need for the bottom of page event. |
 
 >[!TAB Manually rendered propositions]
@@ -132,7 +132,7 @@ alloy("sendEvent", {
     type: "decisioning.propositionFetch",
     renderDecisions: true,
     personalization: {
-        sendDisplayNotifications: false
+        sendDisplayEvent: false
     },
     xdm: {
         web: {
@@ -150,7 +150,7 @@ alloy("sendEvent", {
 
 alloy("sendEvent", {
     personalization: {
-        includePendingDisplayNotifications: true
+        includeRenderedPropositions: true
     },
     xdm: {
         ...,
@@ -198,7 +198,7 @@ alloy("applyPropositions", {
 // at the bottom of the page.
 alloy("sendEvent", {
     personalization: {
-        includePendingDisplayNotifications: true
+        includeRenderedPropositions: true
     },
     xdm: {
         ...,
