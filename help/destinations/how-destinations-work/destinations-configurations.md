@@ -17,7 +17,7 @@ This page describes or links out to all the common and the configurable export s
 
 ## Common export settings across destination types {#common-settings-across-destination-types}
 
-Destination export behavior is consistent across destinations belonging to a destination type with regard to *what triggers a destination export* and *what is included in the destination exports*. Destination exports are triggered by notifications that the destinations service receives from the [upstream Real-time Customer Profile service](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=en#adobe-experience-platform-%26-applications-detailed-architecture-diagram). 
+Destination export behavior is consistent across destinations belonging to a destination type with regard to *what triggers a destination export* and *what is included in the destination exports*. Destination exports are triggered by notifications that the destinations service receives from the [upstream Real-time Customer Profile service](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram). 
 
 What is included in the destination exports varies slightly between destination types. Read more about the [common export behavior patterns per destination type](/help/destinations/how-destinations-work/profile-export-behavior.md). These settings cannot be edited by destination developers or Real-Time CDP users.
 

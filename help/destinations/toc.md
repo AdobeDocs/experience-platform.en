@@ -25,6 +25,7 @@ feature: Destinations
     * [Delete destination accounts](./api/delete-destination-account.md)
     * [Delete destination dataflows](./api/delete-destination-dataflow.md)
     * [Export datasets](/help/destinations/api/export-datasets.md)
+    * [Sort and filter API responses for destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases) 
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
     * [Create a new destination connection](./ui/connect-destination.md)
@@ -34,7 +35,9 @@ feature: Destinations
         * [Activate audiences to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
         * [Activate audiences to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
         * [Activate audiences to edge personalization destinations](./ui/activate-edge-personalization-destinations.md)
+        * [Activate audiences to curated destinations based on LiveRamp identifiers](./ui/activate-curated-destinations.md)
         * [Activate prospect audiences to destinations](./ui/activate-prospect-audiences.md)
+        * [(Limited availability) Activate account audiences to destinations](./ui/activate-account-audiences.md)
         * [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
         * [Export datasets using the Experience Platform UI](./ui/export-datasets.md)
         * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
@@ -152,6 +155,7 @@ feature: Destinations
         * [Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
         * [Braze connection](./catalog/mobile-engagement/braze.md)
         * [Line connection](./catalog/mobile-engagement/line.md)
+        * [Moengage connection](./catalog/mobile-engagement/moengage.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
         * [Adobe Commerce connection](./catalog/personalization/adobe-commerce.md)
@@ -169,7 +173,6 @@ feature: Destinations
         * [Pega Profile connection](./catalog/personalization/pega-profile.md)
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
-        * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
         * [Facebook connection](./catalog/social/facebook.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
         * [TikTok connection](./catalog/social/tiktok.md)
@@ -179,6 +182,7 @@ feature: Destinations
         * [IP address allowlist for streaming destinations](./catalog/streaming/ip-address-allow-list.md)
     * Survey destinations {#survey}
         * [Survey destinations overview](./catalog/survey/overview.md)
+        * [Qualtrics Automations destination](./catalog/survey/qualtrics-automations.md)
         * [Foresee extension destination](./catalog/survey/foresee.md)
         * [InMoment extension](./catalog/survey/inmoment.md)
         * [Qualtrics Website Feedback extension](./catalog/survey/qualtrics.md)

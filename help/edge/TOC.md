@@ -17,6 +17,7 @@ feature: Web SDK
   * [Configure the SDK](fundamentals/configuring-the-sdk.md)
   * [Execute commands](fundamentals/executing-commands.md)
   * [Track events](fundamentals/tracking-events.md)
+  * [Configure top and bottom of page events](fundamentals/top-bottom-page-events.md)
   * [Debugging](fundamentals/debugging.md)
   * [Configure a CSP](fundamentals/configuring-a-csp.md)
   * [Interact with multiple properties](fundamentals/interacting-with-multiple-properties.md)
@@ -52,6 +53,7 @@ feature: Web SDK
     * [Overview](personalization/offer-decisioning/offer-decisioning-overview.md)
   * Adobe Journey Optimizer {#ajo}
     * [Overview](personalization/ajo/overview.md)
+    * [Single-page application implementation](personalization/ajo/web-spa-implementation.md)
 * Consent {#consent}
   * [Supporting consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}

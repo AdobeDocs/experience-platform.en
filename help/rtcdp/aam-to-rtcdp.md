@@ -11,7 +11,7 @@ As your organization evolves to use Adobe Real-Time CDP, explore these considera
 
 ## 1. Consider data architecture within Audience Manager
 
-As you consider the evolution from Audience Manager to Real-Time CDP, now is a critical time to analyze your [Audience Manager segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html?lang=en) and determine what the [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html?lang=en), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html?lang=en), and [rules](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html?lang=en#segment-builder-section) are that make up those segments.
+As you consider the evolution from Audience Manager to Real-Time CDP, now is a critical time to analyze your [Audience Manager segments](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html) and determine what the [signals](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html), [traits](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html), and [rules](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html#segment-builder-section) are that make up those segments.
 
 Furthermore, think about the data sources that you currently use in Audience Manager.
 
@@ -35,7 +35,7 @@ Segments that have rules that can be supported in Real-Time CDP but have activat
 
 ## 4. Which destinations do you have in place in Audience Manager today that you can start moving to Real-Time CDP?
 
-Adobe strongly recommends that segments activated in Audience Manager to [people-based destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=en) get pushed to Real-Time CDP via the [!UICONTROL Audience Manager Source Connector], to then activate through Real-Time CDP. 
+Adobe strongly recommends that segments activated in Audience Manager to [people-based destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) get pushed to Real-Time CDP via the [!UICONTROL Audience Manager Source Connector], to then activate through Real-Time CDP. 
 
 All people-based destinations available in Audience Manager - [Facebook](/help/destinations/catalog/social/facebook.md), [[!UICONTROL Google Customer Match]](/help/destinations/catalog/advertising/google-customer-match.md), [LinkedIn](/help/destinations/catalog/social/linkedin.md) - are also available in Real-Time CDP.
 
