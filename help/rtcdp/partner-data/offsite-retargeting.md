@@ -87,7 +87,9 @@ Select the newly added **[!UICONTROL Page View]** event. Change the lookback per
 
 After adding your event, you'll need to add an attribute. Since you're dealing with unauthenticated visitors, you can add the computed attribute you just created. This newly created computed attribute lets you link partner IDs to an audience.
 
-To add the computed attribute, under **[!UICONTROL Attributes]**, select **[!UICONTROL _atag]**, followed by **[!UICONTROL SystemComputedAttributes]**, and **[!UICONTROL PartnerID]**. Now, add the **[!UICONTROL Value]** of the computed attribute to the attributes section of the canvas. Additionally, search for **[!UICONTROL Personal Email]** and add the **[!UICONTROL Address]** attribute below **[!UICONTROL PartnerID]** to the attributes section of the canvas.
+To add the computed attribute, under **[!UICONTROL Attributes]**, select **[!UICONTROL _atag]**, followed by **[!UICONTROL SystemComputedAttributes]**, and **[!UICONTROL PartnerID]**. 
+
+Now, add the **[!UICONTROL Value]** of the computed attribute to the attributes section of the canvas. Additionally, search for **[!UICONTROL Personal Email]** and add the **[!UICONTROL Address]** attribute below **[!UICONTROL PartnerID]** to the attributes section of the canvas.
 
 ![The [!UICONTROL PartnerID] computed attribute and the [!UICONTROL Personal Email Address] attribute are highlighted on the Segment Builder canvas.](../assets/offsite-retargeting/added-attributes.png)
 
