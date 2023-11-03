@@ -82,20 +82,20 @@ In this example, the CRM ID namespace is designated as a unique namespace.
 
 ### Bad email
 
+There are instances where a user may input bad values for their email and/or phone numbers. 
+
 | Namespace | Limit |
 | --- | --- |
 | CRM ID | 1 |
 | Email | 1 |
 | ECID | N/A |
 
-In this example, CRM ID and Email namespaces are designated as unique.
+In this example, CRM ID and Email namespaces are designated as unique. Consider the scenario that Jane and John have signed up to your e-commerce website using a bad email value (for example, test<span>@test.com).
 
-There are instances where a user may input bad values for their email and/or phone numbers. This 
-
-* `timestamp=1`: {CRM ID: 456, ECID: 999} is established.
-* `timestamp=2`: {CRM ID: 123, ECID: 888} is established.
-* `timestamp=3`: {CRM ID: 456, ECID: 999} is linked to {EMAIL: test@test}
-* `timestamp=4`: {CRM ID: 123, ECID: 888} is linked to {EMAIL: test@test}, thereby linking the two graphs together.
+* `timestamp=1`: Jane logs in to your e-commerce website using Safari on her iPhone, establishing her CRM ID (login information) and her ECID (browser). This event also registers an EMAIL namespace with the value of test<span>@test.com.
+* `timestamp=2`: John logs in to your e-commerce website using Google Chrome on his iPhone, establishing his CRM ID (login information) and ECID (browser). (Should it be clarified that John is also using test<span>@test.com)
+* `timestamp=3`: Jane logs in again and her graph gets linked to test<span>@test.com.
+* `timestamp=4`: John logs in again and his graph also gets linked to test<span>@test.com.
   * This then becomes a violation of the configured limits as it creates a single graph with two disparate CRM ID namespaces.
   * As a result, the identity optimization algorithm deletes the older link, which in this case is the link between {CRM ID: 456, ECID: 999} and {EMAIL: test@test} that was established at `timestamp=3`.
 
