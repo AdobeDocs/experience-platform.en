@@ -16,11 +16,13 @@ We have identified your organization as having active campaigns to activate data
 
 ## What is the migration plan?
 
-Adobe is releasing a new Pinterest destination card for V5 and has copied your existing dataflows to the new connection.
+Adobe is releasing a new Pinterest destination card that leverages the v5 advertiser API and will copy your existing dataflows to the new connection.
 
 ## Do I need to do anything to move my active campaigns to the new card?
 
-Yes, Adobe has completed the migration, and you now need to reauthenticate to Pinterest. Follow the instructions below.
+Yes, once Adobe completes the migration (estimated first week of November), you will need to reauthenticate to Pinterest. Instructions below.
+
+### Reauthenticate to Pinterest {#reauthenticate}
 
 1. Go to **[!UICONTROL Destinations > Accounts]** and use the filter on the screen to filter the Pinterest destination only.
     ![Filter Pinterest accounts only](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
@@ -29,6 +31,8 @@ Yes, Adobe has completed the migration, and you now need to reauthenticate to Pi
 3. Select **[!UICONTROL Reconnect OAuth]** and log in to your Pinterest account.
     ![Select Reconnect OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
 4. Let Adobe know you reauthenticated to the **[!UICONTROL (New) Pinterest]** destination.
+
+### Disable existing flows to old destination and enable flows to new destination {#disable-old-enable-new-flows}
 
 Then, you need to manually disable existing flows to the old card and enable flows to the new card. 
 
@@ -47,10 +51,14 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 Yes, please see below:
  
-**By November xxxx**: The new destination is ready, and you should two Pinterest cards side by side in the catalog, and all your existing dataflows to the current Pinterest card are copied to the new destination.
+**By November 9**: The new destination is ready, and you should see two Pinterest cards side by side in the catalog, and all your existing dataflows to the current Pinterest card are copied to the new destination.
 
 ![Old and new Pinterest destination side-by-side](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
-**By November 16**: <span class="preview">Customer action</span>. You need to reauthenticate to Pinterest so that the new card is connected to Pinterest (instructions further above). Once you have done this, reach out to us.
+**By November 23**: <span class="preview">Customer action</span>. You need to reauthenticate to Pinterest so that the new card is connected to Pinterest (instructions further above). Once you have done this, reach out to us.
 
 The dataflows to Pinterest in the old card need to be disabled and the ones in the new card need to be enabled. You can do that manually in the UI, or you can reach out to Adobe and we will do that for you.
+
+## Other items to note
+
+After you enable the dataflows on the new destination card and disable the dataflows on the old destination cards, you should see no disruption in your campaigns or in the numbers of qualified profiles in the audiences coming in from Adobe Real-Time CDP.
