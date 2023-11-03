@@ -31,6 +31,14 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Destinations {#destinations}
   * [Destinations overview](destinations/overview.md)
   * [Destinations in Real-Time CDP B2B Edition](destinations/b2b.md)
+* Guardrails {#guardrails}
+  * [Real-Time CDP guardrails overview](/help/rtcdp/guardrails/overview.md){target="_blank"}
+  * [Guardrails for data ingestion](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+  * [Guardrails for the [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
+  * [Guardrails for [!DNL Real-Time Customer Profile] data and segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html){target="_blank"}
+  * [Guardrails for [!DNL Identity Service] data](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+  * [Guardrails for [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+  * [Guardrails for data activation through destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identities {#identity}  
   * [Identities & identity namespaces](profile/identities-overview.md)
 * Merge policies {#merge-policies}
@@ -61,9 +69,10 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Use cases {#use-cases}
   * Intelligent re-engagement use cases {#intelligent-re-engagement}
     * [Intelligently re-engage your customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
-  * Partner data use cases {#partner-data}
-    * [Engage and acquire new customers through prospecting support](/help/rtcdp/partner-data/prospecting.md)  
+  * Customer acquisition {#customer-acquisition}
+    * [Engage and acquire new customers without dependency on third-party cookies](/help/rtcdp/partner-data/prospecting.md)  
+    * [Personalize onsite experiences for unknown visitors using partner-aided visitor recognition](/help/rtcdp/partner-data/onsite-personalization.md)
+  * Profile enrichment {#profile-enrichment}
     * [Supplement first-party profiles with partner-provided attributes](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-    * [Use partner-aided visitor recognition to personalize onsite experiences](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Experience Platform Release notes](https://www.adobe.com/go/platform-release-notes-en)
 * [Experience Platform Glossary](https://www.adobe.com/go/platform-glossary-en)
