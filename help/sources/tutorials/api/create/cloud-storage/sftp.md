@@ -46,7 +46,7 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 >[!TIP]
 >
->Once created, you cannot change the authentication type of a [!DNL Dynamics] base connection. To change the authentication type, you must create a new base connection.
+>Once created, you cannot change the authentication type of an [!DNL SFTP] base connection. To change the authentication type, you must create a new base connection.
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 

@@ -28,7 +28,7 @@ Refer to the sections below for any prerequisites that you need to set up in Exp
 
 ### Prerequisites in Experience Platform {#prerequisites-in-experience-platform}
 
-Before activating data to the [!DNL Marketing Cloud Account Engagement] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
+Before activating data to the [!DNL Marketing Cloud Account Engagement] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) created in [!DNL Experience Platform].
 
 ### Prerequisites in [!DNL Marketing Cloud Account Engagement] {#prerequisites-destination}
 
