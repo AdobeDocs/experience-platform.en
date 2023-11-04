@@ -79,7 +79,7 @@ The pre-configured profile details widgets are as follows.
 
 #### Customer profile {#customer-profile}
 
-The [!UICONTROL Customer profile] widget displays the first and last name of the user associated with the profile as well as their [!UICONTROL Profile ID].
+The [!UICONTROL Customer profile] widget displays the first and last name of the user associated with the profile, as well as their [!UICONTROL Profile ID].
 
 ![The Customer profile widget.](../images/profiles/customer-profile.png)
 
@@ -93,7 +93,7 @@ The [!UICONTROL Basic attributes] widget displays the most commonly used attribu
 
 The [!UICONTROL Linked identities] widget displays any other identities associated with the profile.
 
-To view the identity details of the profile in greater depth and navigate to the identities workspace, select **[!UICONTROL View identity graph]**.
+To view the identity details of the profile in greater depth and navigate to the [!UICONTROL Identities] workspace, select **[!UICONTROL View identity graph]**.
 
 ![The Linked identities widget.](../images/profiles/linked-identities.png)
 
@@ -105,12 +105,12 @@ The [!UICONTROL Channel preferences] widget displays the channels of communicati
 
 ![The Channel preferences widget.](../images/profiles/channel-preferences.png)
 
-Customer consent and contact preferences are a complex topic. To learn how consent and context preferences can be collected, processed, and filtered in Experience Platform, you are recommended to read the following documents:
+Customer consent and contact preferences are complex topics. To learn how consent and context preferences can be collected, processed, and filtered in Experience Platform, you are recommended to read the following documents:
 
 * To learn about the schema field groups required to collect consent data according to the Adobe standard, see the documentation on these Profile-enabled schema field groups.
     * [[!UICONTROL Consent and Preference Details]](../../xdm/field-groups/profile/consents.md)
     * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (required if using the Platform Web or Mobile SDK to send consent signals)
-* To learn how to process customer consent and preference data using the Adobe standard, see the overview on [consent processing in Experience Platform.](../../landing/governance-privacy-security/consent/adobe/overview.md).
+* To learn how to process customer consent and preference data using the Adobe standard, see the overview on [consent processing in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
 * A combined data governance and consent policy can be used to filter profiles for segmentation based on their consent preferences and your established organizational rules. To learn how to create and use these combined policies, see the user guide on [managing data usage policies](../../data-governance/policies/user-guide.md#combine-policies). 
 
 <!-- 
@@ -133,7 +133,11 @@ The widget creator appears. Enter a descriptive name for your widget in the [!UI
 
 ![The widget creator canvas with the [!UICONTROL Card title] field and [!UICONTROL Add attributes] highlighted.](../images/profiles/widget-creator.png)
 
-A dialog appears that contains a visualization of the profile's union schema. Select the attributes that you want to report on the widget in the [!UICONTROL Details] workspace. If necessary, use the search field to find your desired attributes and select the check box for the attributes that you want to include. A selection at the top level includes any child elements. Select [!UICONTROL Select] ot continue the creation workflow.
+A dialog appears that contains a visualization of the profile's union schema. Use the search field or scroll to find the attributes that you want to report on with your widget. Select the checkbox for any attributes that you want to include. Select **[!UICONTROL Select]** to continue the creation workflow.
+
+>[!TIP]
+>
+>A selection of the top level checkbox includes any child elements.
 
 ![The union schema diagram with the loyalty attribute checkbox and [!UICONTROL Select] highlighted.](../images/profiles/union-schema-attributes.png)
 
