@@ -69,11 +69,13 @@ To open the [!UICONTROL Profiles] [!UICONTROL Detail] workspace, select a [!UICO
 
 ![The Profiles Browse tab with a profile ID highlighted.](../images/profiles/profile-id.png)
 
-The Profiles Detail workspace displays several pre-configured widgets that convey information specific to that profile. This information allows you to understand key attributes of the profile at a glance. You can also customize you profile detail workspace by creating your own widgets. See the section on [how to add widgets](#add-widgets) for more details.
+The [!UICONTROL Profiles] [!UICONTROL Detail] workspace displays several pre-configured widgets that convey information specific to that profile. This information allows you to understand key attributes of the profile at a glance. You can also customize your [!UICONTROL Profiles] [!UICONTROL Detail] workspace by creating your own widgets. See the section on [how to add widgets](#add-widgets) for more details.
+
+![The [!UICONTROL Profiles] [!UICONTROL Detail] workspace.](../images/profiles/profile-details-workspace.png)
 
 ### Profile details widgets
 
-The pre-configured profile detail widgets are as follows.
+The pre-configured profile details widgets are as follows.
 
 #### Customer profile {#customer-profile}
 
@@ -131,9 +133,13 @@ The widget creator appears. Enter a descriptive name for your widget in the [!UI
 
 ![The widget creator canvas with the [!UICONTROL Card title] field and [!UICONTROL Add attributes] highlighted.](../images/profiles/widget-creator.png)
 
-A dialog appears that contains a visualization of the profile's union schema. Select the attributes that you want to report on the widget in the [!UICONTROL Details] workspace. If necessary, use the search field to find your desired attributes and select the check box for the attributes that you want to include. A selection at the top level includes any child elements. 
+A dialog appears that contains a visualization of the profile's union schema. Select the attributes that you want to report on the widget in the [!UICONTROL Details] workspace. If necessary, use the search field to find your desired attributes and select the check box for the attributes that you want to include. A selection at the top level includes any child elements. Select [!UICONTROL Select] ot continue the creation workflow.
 
 ![The union schema diagram with the loyalty attribute checkbox and [!UICONTROL Select] highlighted.](../images/profiles/union-schema-attributes.png)
+
+A preview of the completed widget is displayed in the canvas. Once you are happy with your chosen attributes, select **[!UICONTROL Save]** to confirm your choices and return to the [!UICONTROL Profiles] [!UICONTROL Detail] workspace. The newly created widget is now visible in the workspace.
+
+![The widget creator canvas with Save highlighted and displaying the widget preview.](../images/profiles/widget-preview.png)
 
 ## Merge policies {#merge-policies}
 
