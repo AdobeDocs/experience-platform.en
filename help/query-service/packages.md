@@ -19,6 +19,8 @@ Query Service capabilities are packaged with the following products and add-ons:
 
 The following table outlines the key Query Service entitlements based on how they are packaged:
 
+<!-- Updates to be made here -->
+
 | Query Service Entitlement | Packaged with Platform-based applications | Packaged with [!DNL Data Distiller] |
 |---|---|---|
 | Query Pattern Supported | Ad hoc query only | Batch query |
