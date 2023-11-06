@@ -32,7 +32,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
   * [Destinations overview](destinations/overview.md)
   * [Destinations in Real-Time CDP B2B Edition](destinations/b2b.md)
 * Guardrails {#guardrails}
-  * [Real-Time CDP guardrails overview](/help/rtcdp/guardrails/overview.md){target="_blank"}
+  * [Real-Time CDP guardrails overview](guardrails/overview.md)
   * [Guardrails for data ingestion](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
   * [Guardrails for the [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
   * [Guardrails for [!DNL Real-Time Customer Profile] data and segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html){target="_blank"}
