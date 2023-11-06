@@ -71,15 +71,15 @@ To open the [!UICONTROL Profiles] [!UICONTROL Detail] workspace, select a [!UICO
 
 The [!UICONTROL Profiles] [!UICONTROL Detail] workspace displays several pre-configured widgets that convey information specific to that profile. This information allows you to understand key attributes of the profile at a glance. You can also customize your [!UICONTROL Profiles] [!UICONTROL Detail] workspace by creating your own widgets. See the section on [how to add widgets](#add-widgets) for more details.
 
-![The [!UICONTROL Profiles] [!UICONTROL Detail] workspace.](../images/profiles/profile-details-workspace.png)
+![The [!UICONTROL Profiles] [!UICONTROL Detail] workspace with the [!UICONTROL Detail] tab highlighted.](../images/profiles/profile-details-workspace.png)
 
-### Profile details widgets
+### Profile details widgets {#widgets}
 
-The pre-configured profile details widgets are as follows.
+The pre-configured profile details widgets are as follows:
 
 #### Customer profile {#customer-profile}
 
-The [!UICONTROL Customer profile] widget displays the first and last name of the user associated with the profile, as well as their [!UICONTROL Profile ID].
+The [!UICONTROL Customer profile] widget displays the first and last name of the user associated with the profile, as well as their [!UICONTROL Profile ID]. A profile ID is an auto-generated identifier associated with an identity type and represents a profile. To learn more about identities and identity namespaces, see the [identities overview](../../rtcdp/profile/identities-overview.md).
 
 ![The Customer profile widget.](../images/profiles/customer-profile.png)
 
@@ -99,7 +99,7 @@ To view the identity details of the profile in greater depth and navigate to the
 
 #### Channel preferences {#channel-preferences}
 
-The [!UICONTROL Channel preferences] widget displays the channels of communication that the user has consented to receive communication from. A tick indicates each channel that the user has consented to receive communication from.
+The [!UICONTROL Channel preferences] widget displays the channels of communication that the user has consented to receive communication from. A check mark indicates each channel that the user has consented to receive communication from.
 
 <!-- image needs a blue tick added below -->
 
@@ -107,17 +107,11 @@ The [!UICONTROL Channel preferences] widget displays the channels of communicati
 
 Customer consent and contact preferences are complex topics. To learn how consent and context preferences can be collected, processed, and filtered in Experience Platform, you are recommended to read the following documents:
 
-* To learn about the schema field groups required to collect consent data according to the Adobe standard, see the documentation on these Profile-enabled schema field groups.
+* To learn about the schema field groups required to [collect consent data according to the Adobe standard](../../landing/governance-privacy-security/consent/adobe/overview.md), see the documentation on these Profile-enabled schema field groups.
     * [[!UICONTROL Consent and Preference Details]](../../xdm/field-groups/profile/consents.md)
     * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (required if using the Platform Web or Mobile SDK to send consent signals)
 * To learn how to process customer consent and preference data using the Adobe standard, see the overview on [consent processing in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
 * A combined data governance and consent policy can be used to filter profiles for segmentation based on their consent preferences and your established organizational rules. To learn how to create and use these combined policies, see the user guide on [managing data usage policies](../../data-governance/policies/user-guide.md#combine-policies). 
-
-<!-- 
-* To learn how to build a consent policy that filters profiles for segmentation based on their consent preferences, see the user guide on [managing data usage policies](../../data-governance/policies/user-guide.md#combine-policies). 
-
-* To learn how to create a combined data governance and consent policy, that can filter profiles for segmentation based on their consent preferences and your established organizational rules, see the user guide on [managing data usage policies](../../data-governance/policies/user-guide.md#combine-policies). The combination of these policies can  
--->
 
 ### Add widgets {#add-widgets}
 
@@ -141,7 +135,7 @@ A dialog appears that contains a visualization of the profile's union schema. Us
 
 ![The union schema diagram with the loyalty attribute checkbox and [!UICONTROL Select] highlighted.](../images/profiles/union-schema-attributes.png)
 
-A preview of the completed widget is displayed in the canvas. Once you are happy with your chosen attributes, select **[!UICONTROL Save]** to confirm your choices and return to the [!UICONTROL Profiles] [!UICONTROL Detail] workspace. The newly created widget is now visible in the workspace.
+A preview of the completed widget is displayed on the canvas. Once you are happy with your chosen attributes, select **[!UICONTROL Save]** to confirm your choices and return to the [!UICONTROL Profiles] [!UICONTROL Detail] workspace. The newly created widget is now visible in the workspace.
 
 ![The widget creator canvas with Save highlighted and displaying the widget preview.](../images/profiles/widget-preview.png)
 
