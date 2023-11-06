@@ -90,14 +90,16 @@ There are instances where a user may input bad values for their email and/or pho
 | Email | 1 |
 | ECID | N/A |
 
-In this example, CRM ID and Email namespaces are designated as unique. Consider the scenario that Jane and John have signed up to your e-commerce website using a bad email value (for example, test<span>@test.com).
+In this example, the CRM ID and Email namespaces are designated as unique. Consider the scenario that Jane and John have signed up to your e-commerce website using a bad email value (for example, test<span>@test.com).
 
-* `timestamp=1`: Jane logs in to your e-commerce website using Safari on her iPhone, establishing her CRM ID (login information) and her ECID (browser). This event also registers an EMAIL namespace with the value of test<span>@test.com.
-* `timestamp=2`: John logs in to your e-commerce website using Google Chrome on his iPhone, establishing his CRM ID (login information) and ECID (browser). (Should it be clarified that John is also using test<span>@test.com)
-* `timestamp=3`: Jane logs in again and her graph gets linked to test<span>@test.com.
-* `timestamp=4`: John logs in again and his graph also gets linked to test<span>@test.com.
+* `timestamp=1`: Jane logs in to your e-commerce website using Safari on her iPhone, establishing her CRM ID (login information) and her ECID (browser). 
+* `timestamp=2`: John logs in to your e-commerce website using Google Chrome on his iPhone, establishing his CRM ID (login information) and ECID (browser).
+* `timestamp=3`: Jane's CRM ID is ingested and her graph is linked with the existing test<span>@test Email namespace.
+* `timestamp=4`: John's CRM ID is ingested and his graph is also linked to test<span>@test.com.
   * This then becomes a violation of the configured limits as it creates a single graph with two disparate CRM ID namespaces.
-  * As a result, the identity optimization algorithm deletes the older link, which in this case is the link between {CRM ID: 456, ECID: 999} and {EMAIL: test@test} that was established at `timestamp=3`.
+  * As a result, the identity optimization algorithm deletes the older link, which in this case is the link between Jane's graph and {EMAIL: test@test} that was established at `timestamp=3`.
+
+With identity optimization algorithm, bad identity values such as bogus emails or phone numbers do not get propagated across several different identity graphs.
 
 ![bad-email](../images/identity-settings/bad-email.png)
 
