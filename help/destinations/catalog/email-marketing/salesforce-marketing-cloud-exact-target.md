@@ -133,7 +133,7 @@ This section describes which type of audiences you can export to this destinatio
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | X | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -300,6 +300,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
+|November 2023|Functionality update|<ul><li>We now automatically convert the **[UICONTROL Mapping ID]** values in the [schedule audience export](#schedule-segment-export-example) step to `lowercase`. Additionally we also sanitize `spaces` and `special characters`. This is done to ensure compliance with [!DNL Salesforce Marketing Cloud] field names.</li><li>We now support custom uploads, see the [supported audiences](#supported-audiences) section.</li></ul>|
 |October 2023|Documentation update|<ul><li>We updated the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section and in general removed unnecessary references to attribute groups across the document.</li> <li>Updated documentation to indicate that attributes for the audiences statuses should be created within [!DNL Salesforce Marketing Cloud] inside the [!DNL Email Demographics] data extension only.</li> <li>We updated the mapping table within the [Mapping considerations and example](#mapping-considerations-example) section, the mapping for `Email Address` attribute within the `Email Addresses` data extension is marked mandatory, this requirement was mentioned in the callout marked IMPORTANT but was omitted from the table.</li></ul>|
 |April 2023|Documentation update|<ul><li>We corrected a statement and reference link in the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section to call out that [!DNL Salesforce Marketing Cloud Engagement] is a mandatory subscription to use this destination. The section previously called out erroneously that users need a subscription to the Marketing Cloud **Account** Engagement to proceed.</li> <li>We added a section under [prerequisites](#prerequisites) for [roles and permissions](#prerequisites-roles-permissions) to be assigned to the [!DNL Salesforce] user for this destination to work. (PLATIR-26299)</li></ul>|
 |February 2023|Documentation update|We updated the [Prerequisites in (API) Salesforce Marketing Cloud](#prerequisites-destination) section to include a reference link calling out that [!DNL Salesforce Marketing Cloud Engagement] is a mandatory subscription to use this destination.|
