@@ -72,7 +72,7 @@ Read the [(Beta) Export datasets](/help/destinations/ui/export-datasets.md) tuto
 
 ## Validate data export {#exported-data}
 
-To validate a successful dataset export, you can check that your dataset has successfully made it through to your [Snowflake data warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=en). 
+To validate a successful dataset export, you can check that your dataset has successfully made it through to your [Snowflake data warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html). 
 
 ## Data usage and governance {#data-usage-governance}
 

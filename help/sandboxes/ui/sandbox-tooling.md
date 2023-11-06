@@ -3,11 +3,7 @@ title: Sandboxes Tooling
 description: Seamlessly export and import Sandbox configurations between sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
 ---
-# [!BADGE Beta] Sandbox tooling
-
->[!IMPORTANT]
->
->The **Sandbox tooling** feature described below is available only to select Beta customers.
+# Sandbox tooling
 
 >[!NOTE]
 >
@@ -235,6 +231,12 @@ The **[!UICONTROL Import details]** dialog shows a detailed breakdown of the imp
 >[!NOTE]
 >
 >When an import is completed, you receive notifications in the Platform UI. You can access these notifications from the alerts icon. You can navigate to troubleshooting from here if a job is unsuccessful.
+
+## Video tutorial
+
+The following video is intended to support your understanding of sandbox tooling, and outlines how to create a new package, publish a package, and import a package.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Next steps
 

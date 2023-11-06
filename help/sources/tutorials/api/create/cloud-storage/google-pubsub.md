@@ -25,13 +25,26 @@ The following sections provide additional information that you will need to know
 
 In order for [!DNL Flow Service] to connect to [!DNL PubSub], you must provide values for the following connection properties:
 
+>[!BEGINTABS]
+
+>[!TAB Project-based authentication]
+
 | Credential | Description |
-| ---------- | ----------- |
+| --- | --- |
 | `projectId` | The project ID required to authenticate [!DNL PubSub]. |
+| `credentials` | The credential required to authenticate [!DNL PubSub]. You must ensure that you put the complete JSON file after removing the white spaces from your credentials. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source target connections. The [!DNL PubSub] connection specification ID is: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!TAB Topic and subscription-based authentication]
+
+| Credential | Description |
+| --- | --- |
 | `credentials` | The credential required to authenticate [!DNL PubSub]. You must ensure that you put the complete JSON file after removing the white spaces from your credentials. |
 | `topicName` | The name of the resource that represents a feed of messages. You must specify a topic name if you want to provide access to a specific stream of data in your [!DNL PubSub] source. The topic name format is: `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
 | `subscriptionName` | The name of your [!DNL PubSub] subscription. In [!DNL PubSub], subscriptions allow you to receive messages, by subscribing to the topic in which messages have been published to. **Note**: A single [!DNL PubSub] subscription can only be used for one dataflow. In order to make multiple dataflows, you must have multiple subscriptions. The subscription name format is: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source target connections. The [!DNL PubSub] connection specification ID is: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!ENDTABS]
 
 For more information about these values, see this [[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication) document. To use service account-based authentication, see this [[!DNL PubSub] guide on creating service accounts](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
 
@@ -44,6 +57,10 @@ For more information about these values, see this [[!DNL PubSub] authentication]
 For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
 
 ## Create a base connection
+
+>[!TIP]
+>
+>Once created, you cannot change the authentication type of a [!DNL Google PubSub] base connection. To change the authentication type, you must create a new base connection.
 
 The first step in creating a source connection is to authenticate your [!DNL PubSub] source and generate a base connection ID. A base connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
 
@@ -61,11 +78,13 @@ The [!DNL PubSub] source allows you to specify the type of access that you want 
 POST /connections
 ```
 
-**Request**
-
 >[!BEGINTABS]
 
 >[!TAB Project-based authentication]
+
+To create base connection with project-based authentication, make a POST request to the `/connections` endpoint and provide your `projectId` and `credentials` in the request body.
+
++++Request
 
 ```shell
 curl -X POST \
@@ -98,7 +117,26 @@ curl -X POST \
 | `auth.params.credentials` | The credential or key required to authenticate [!DNL PubSub]. |
 | `connectionSpec.id` | The [!DNL PubSub] connection spec ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
+++++
+
++++Response
+
+A successful response returns details of the newly created connection, including its unique identifier (`id`). This base connection ID is required in the next step to create a source connection.
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
+++++
+
 >[!TAB Topic and subscription-based authentication]
+
+To create base connection with topic and subscription-based authentication, make a POST request to the `/connections` endpoint and provide your `credentials`, `topicName`, and `subscriptionName` in the request body.
+
++++Request
 
 ```shell
 curl -X POST \
@@ -133,9 +171,9 @@ curl -X POST \
 | `auth.params.subscriptionName` | The project ID and subscription ID pair for the [!DNL PubSub] source that you want to provide access to. |
 | `connectionSpec.id` | The [!DNL PubSub] connection spec ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
->[!ENDTABS]
++++
 
-**Response**
++++Response
 
 A successful response returns details of the newly created connection, including its unique identifier (`id`). This base connection ID is required in the next step to create a source connection.
 
@@ -145,6 +183,11 @@ A successful response returns details of the newly created connection, including
     "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
 }
 ```
+
+++++
+
+>[!ENDTABS]
+
 
 ## Create a source connection {#source}
 

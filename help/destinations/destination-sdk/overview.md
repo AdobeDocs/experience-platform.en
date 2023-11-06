@@ -77,6 +77,6 @@ The process to configure your destination in Experience Platform is outlined bel
 
 Adobe recommends that you read and understand the following Experience Platform documentation:
 
-* [Adobe Experience Platform destinations overview](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=en)
-* [Basis of XDM schema composition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en)
-* [Identity namespace overview](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en)
+* [Adobe Experience Platform destinations overview](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html)
+* [Basis of XDM schema composition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html)
+* [Identity namespace overview](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html)

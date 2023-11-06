@@ -80,7 +80,7 @@ Refer to the table below for information about the destination export type and f
 
 ### Fill in Destination Details {#fill-in-details}
 
-Before you can send, or activate, audience data to a destination, you must set up a connection to your own destination platform. While [setting up](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) this destination, you must provide the following information:
+Before you can send, or activate, audience data to a destination, you must set up a connection to your own destination platform. While [setting up](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) this destination, you must provide the following information:
 
 *  **[!UICONTROL Account Type]**: Please choose the **[!UICONTROL Existing Account]** option. 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future. 
