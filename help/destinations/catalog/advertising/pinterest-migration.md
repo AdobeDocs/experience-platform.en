@@ -8,7 +8,7 @@ hidefromtoc: yes
 
 ## What is happening?
 
-Pinterest is deprecating the v4 advertiser API currently used by the [Pinterest destination](/help/destinations/catalog/advertising/pinterest.md) in Real-Time CDP. Adobe is working with Pinterest and is updating the destination to use the v5 advertiser API. Read this page to understand your action items in order to seamlessly transition to the new API without disruption to your Pinterest campaigns.
+Pinterest is deprecating the v4 advertiser API currently used by the [Pinterest destination](/help/destinations/catalog/advertising/pinterest.md) in Real-Time CDP. Adobe is working with Pinterest and is updating the destination to use the [v5 advertiser API](https://developers.pinterest.com/docs/getting-started/migration/). Read this page to understand your action items in order to seamlessly transition to the new API without disruption to your Pinterest campaigns.
 
 ## Why am I getting this email?
 
