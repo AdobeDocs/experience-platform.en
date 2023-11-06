@@ -41,6 +41,10 @@ The Enhanced edition of the Query Editor allows you to write more than one query
 
 Using [!DNL Query Editor], you can write, execute, and save queries for customer experience data. All queries executed, or saved in [!DNL Query Editor] are available to all users in your organization with access to [!DNL Query Service].
 
+>[!IMPORTANT]
+>
+>The legacy editor will be retired on 01-April-2024, and will no longer be available for use.
+
 ## Enhanced Query Editor toggle {#enhanced-editor-toggle}
 
 >[!CONTEXTUALHELP]
