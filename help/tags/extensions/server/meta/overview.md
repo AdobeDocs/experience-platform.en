@@ -61,7 +61,7 @@ The integration with Event Quality Match Score (EMQ) allows you to easily view t
 
 ## Integration with LiveRamp (Alpha) {#alpha}
 
-Customers of [!DNL LiveRamp] who have [!DNL LiveRamp]'s Authenticated Traffic Solution (ATS) deployed on their sites may opt to share RampIDs as a customer information parameter. Please work with your Meta account team to join the Alpha program for this feature.
+[!DNL LiveRamp] customers who have [!DNL LiveRamp]'s Authenticated Traffic Solution (ATS) deployed on their sites may opt to share RampIDs as a customer information parameter. Please work with your Meta account team to join the Alpha program for this feature.
 
 ![The Meta event forwarding [!UICONTROL Rule] configuration page highlighting [!UICONTROL Partner Name (alpha)] and [!UICONTROL Partner ID (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
