@@ -41,27 +41,31 @@ Use the new self-service audience sharing integration via the Experience Cloud A
 
 The legacy audience sharing integration did not allow for a granular control of which audiences should be exported to Audience Manager and beyond.
 
-### Share Real-Time CDP audiences with further Experience Cloud solutions {#share-segments-with-other-solutions}
+### Share Real-Time CDP audiences with Adobe Analytics {#share-audiences-with-analytics}
+
+Audiences that you send to the Experience Cloud Audiences destination do not appear automatically in Adobe Analytics.
+
+Before you can send audiences to Adobe Analytics, you must [implement the Experience Cloud Identity Service for Analytics and Audience Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=en).
+
+>[!IMPORTANT]
+>
+>To send audiences from Real-Time CDP to Adobe Analytics through the Experience Cloud Audiences destination, you must have an Audience Manager license.
+
+### Share Real-Time CDP audiences with other Experience Cloud solutions {#share-segments-with-other-solutions}
 
 Apart from sharing audiences with Audience Manager, the Real-Time CDP Audiences destination card enables you to share audiences with any other Experience Cloud solution that you are provisioned for, including: 
 
 * Adobe Campaign
 * Adobe Target
 * Advertising Cloud
-* Analytics
 * Marketo
-
-<!--
-
-Note: briefly talk about when to share audiences to these destinations using the existing destination cards and when to share using the new Experience Cloud Audiences destination. 
-
--->
 
 ## Prerequisites {#prerequisites}
 
 >[!IMPORTANT]
 >
 > * You need an Audience Manager license to enable the [Data Management Platform use cases](#dmp-use-cases) mentioned further above.
+> * You *do* need an Audience Manager license to share Real-Time CDP audiences with Adobe Analytics.
 > * You *do not need* an Audience Manager license to share Real-Time CDP audiences with Adobe Advertising Cloud, Adobe Target, Marketo, and other Experience Cloud solutions, mentioned in the [section above](#share-segments-with-other-solutions).
 
 ### For customers who are using the legacy audience sharing solution
