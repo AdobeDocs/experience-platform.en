@@ -36,13 +36,13 @@ The request creation workflow appears. By default, the **[!UICONTROL Delete reco
 
 >[!IMPORTANT] 
 > 
->As part of ongoing changes to improve efficiency and make dataset operations less expensive, organizations who have been moved to the Delta format can delete data from the Identity Service, Real-Time Customer Profile, and the data lake. This type of user is referred to as delta-migrated. Users from organizations who have been delta-migrated can choose to delete records from either a single or all datasets. Users from organizations who have not been delta-migrated cannot choose to delete records from either a single or all datasets as seen in the image below. In this case, please continue to the [provide identities](#provide-identities) section of the guide.
+>As part of ongoing changes to improve efficiency and make dataset operations less expensive, organizations who have been moved to the Delta format can delete data from the Identity Service, Real-Time Customer Profile, and the data lake. This type of user is referred to as delta-migrated. Users from organizations who have been delta-migrated can choose to delete records from either a single or all datasets. Users from organizations who have not been delta-migrated cannot choose to delete records from either a single or all datasets as seen in the image below. In this case, continue to the [provide identities](#provide-identities) section of the guide.
 
 ![The request creation workflow with the [!UICONTROL Delete record] option selected and highlighted.](../images/ui/record-delete/delete-record.png)
 
 ## Select datasets {#select-dataset}
 
-The next step is to determine whether you want to delete records from a single dataset or all datasets. If this option is not available to you, please continue to the [provide identities](#provide-identities) section of the guide. 
+The next step is to determine whether you want to delete records from a single dataset or all datasets. If this option is not available to you, continue to the [provide identities](#provide-identities) section of the guide. 
 
 Under the **[!UICONTROL Record Details]** section, use the radio button to select between a specific dataset and all datasets. If you choose **[!UICONTROL Select dataset]**, proceed to select the database icon (![The database icon](../images/ui/record-delete/database-icon.png)) to open a dialog that provides a list of available datasets. Select the desired dataset from the list followed by **[!UICONTROL Done]**.  
 
@@ -133,7 +133,7 @@ Once you have finished adding identities to the request, under **[!UICONTROL Req
 
 >[!IMPORTANT] 
 > 
->There are different limits for the total number of unique identity record deletes that can be submitted each month. These limits are based on your license agreement. Organizations who have purchased all editions of Adobe Real-Time Customer Data Platform and Adobe Journey Optimizer can submit up to 100,000 identity record deletes each month. Organizations who have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600,000 identity record deletes each month.<br>A single record delete request through the UI allows you to submit 10,000 IDs at one time. The [API method to delete records](https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/workorder.html?lang=en#create) allows for the submission of 100,000 IDs at one time.
+>There are different limits for the total number of unique identity record deletes that can be submitted each month. These limits are based on your license agreement. Organizations who have purchased all editions of Adobe Real-Time Customer Data Platform and Adobe Journey Optimizer can submit up to 100,000 identity record deletes each month. Organizations who have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600,000 identity record deletes each month.<br>A single record delete request through the UI allows you to submit 10,000 IDs at one time. The [API method to delete records](../api/workorder.md#create) allows for the submission of 100,000 IDs at one time.<br>It is best practice to submit as many IDs per request as possible, up to your ID limit. When you intend to delete a high volume of IDs, submitting a low volume, or a single ID per record delete request should be avoided.
 
 ![The request setting's [!UICONTROL Name] and [!UICONTROL Description] fields with [!UICONTROL Submit] highlighted.](../images/ui/record-delete/submit.png)
 
