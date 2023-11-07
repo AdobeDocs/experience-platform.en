@@ -205,7 +205,7 @@ This section captures the functionality and significant documentation updates ma
 |Release month|Update type|Description|
 |---|---|---|
 |October 2023|Functionality update|<ul><li>You can now activate external audiences originating from custom uploads to this destination. See the [supported audiences](#supported-audiences) section for more details.</li><li>The audience names are now automatically converted into lowercase. Additionally, spaces and special characters are now automatically sanitized to ensure compliance with [!DNL HubSpot] field names. This solves the issue where executions could result in an error message `Property name must be lowercase, but given:....` with the associated error code `PROPERTY INVALID`. (PLATIR-33437)</li></ul>|
-|October 2023|Documentation update|We corrected the target identity mapping in the [mapping considerations and example](#mapping-considerations-example) section. During identity mapping we had erroneously called out mapping to an attribute instead of the `Email` identity.|
+|October 2023|Documentation update|Corrected an erroneous mapping, An attribute was shown instead of the `Email` identity during the target identity mapping in the [mapping considerations and example](#mapping-considerations-example) section.|
 |September 2023| Initial release |Initial destination release and documentation publish. |
 
 {style="table-layout:auto"}
