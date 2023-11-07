@@ -11,7 +11,9 @@ exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
 >
 > This destination is available to [Adobe Real-Time Customer Data Platform Prime and Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
-Use this destination to activate audiences from Real-Time CDP to Audience Manager and Adobe Analytics. You need an Audience Manager license to send audiences to Adobe Analytics.
+Use this destination to activate audiences from Real-Time CDP to Audience Manager and Adobe Analytics.
+
+To send audiences to Adobe Analytics, you need an Audience Manager license. For more details, see the [Audience Analytics overview](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=en).
 
 To send audiences to other Adobe solutions, use the direct connections from Real-Time CDP to [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) and [Marketo Engage](../adobe/marketo-engage.md).
 
@@ -190,3 +192,6 @@ Audiences and traits in Audience Manager are subject to [Role-Based Access Contr
 Audiences exported from Real-Time CDP are assigned to a specific datasource in Audience Manager called **[!UICONTROL Experience Platform Segments]**.
 
 To allow only certain users access to the audiences, you can apply access controls to the audiences belonging to the datasource. You must set new access control permissions in Audience Manager for these audiences and traits created from Real-Time CDP segments.
+
+
+**[!UICONTROL ]**
