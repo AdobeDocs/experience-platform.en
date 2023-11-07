@@ -38,20 +38,15 @@ _You can link out to your relevant documentation if that would be useful to cust
 
 PubMatic Connect supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
-| Target Identity | Description                                      | Considerations                                                                                                                                                                                                                                                                         |
-| --------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GAID            | Google Advertising ID                            | Select the GAID target identity when your source identity is a GAID namespace.                                                                                                                                                                                                         |
-| IDFA            | Apple ID for Advertisers                         | Select the IDFA target identity when your source identity is an IDFA namespace.                                                                                                                                                                                                        |
-| ECID            | Experience Cloud ID                              | A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the following document on [ECID](/help/identity-service/ecid.md) for more information. |
-| phone_sha256    | Phone numbers hashed with the SHA256 algorithm   | Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.            |
-| email_lc_sha256 | Email addresses hashed with the SHA256 algorithm | Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.          |
-| extern_id       | Custom user IDs                                  | Select this target identity when your source identity is a custom namespace.                                                                                                                                                                                                           |
+| Target Identity | Description              | Considerations                                                                  |
+| --------------- | ------------------------ | ------------------------------------------------------------------------------- |
+| GAID            | Google Advertising ID    | Select the GAID target identity when your source identity is a GAID namespace.  |
+| IDFA            | Apple ID for Advertisers | Select the IDFA target identity when your source identity is an IDFA namespace. |
+| extern_id       | Custom user IDs          | Select this target identity when your source identity is a custom namespace.    |
 
 {style="table-layout:auto"}
 
 ## Supported audiences {#supported-audiences}
-
-_Add information in this section about the audiences supported by your destination. We have prefilled the table with some standard values. Use the `✓` and `X` characters to mark whether your audience type is supported by this destination._
 
 This section describes which type of audiences you can export to this destination.
 
@@ -71,8 +66,6 @@ Refer to the table below for information about the destination export type and f
 | Item             | Type                            | Notes                                                                                                                                                                                                                                                                                                                              |
 | ---------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Export type      | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the PubMatic Connect destination.                                                                                                                                                                               |
-| Export type      | **[!UICONTROL Profile-based]**  | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).             |
-| Export type      | **[!UICONTROL Dataset export]** | You are exporting raw datasets, which are not grouped or structured by audience interests or qualifications.                                                                                                                                                                                                                       |
 | Export frequency | **[!UICONTROL Streaming]**      | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 | Export frequency | **[!UICONTROL Batch]**          | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).                                                                                                     |
 
@@ -98,8 +91,6 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 ### Fill in destination details {#destination-details}
 
-_Add the fields that customers must fill in when configuring a new destination. These fields are destination-specific and depend on your configuration in Destination SDK. Your destination's fields may not be the same as the ones listed below. Please also include a screenshot similar to the sample screenshot shown below._
-
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
 ![Add a link here to one or more sample screenshots that show users how to fill in details for your destination](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
@@ -107,6 +98,12 @@ To configure details for the destination, fill in the required and optional fiel
 - **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 - **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 - **[!UICONTROL Account ID]**: Your PubMatic Connect account ID.
+- Data partner ID: The data partner ID set up in you PubMatic account for this integration.
+- Default Country Code: The default country code that should be applied to all identities if none is provided in the profile.
+- Account type: The account type of your PubMatic platform account. These are the available options:
+  PUBLISHER
+  Demand Partner
+  BUYER
 
 ### Enable alerts {#enable-alerts}
 
@@ -121,13 +118,7 @@ When you are finished providing details for your destination connection, select 
 > - To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 > - To export _identities_, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-_Delete as appropriate - If you are documenting a new streaming destination, keep the first paragraph below. If you are documenting a new file-based destination, keep the second paragraph. If you are documenting a destination that exports datasets, keep the third paragraph._
-
 Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
-
-Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
-
-Read [(Beta) Export datasets](/help/destinations/ui/export-datasets.md) for extensive instructions on exporting datasets to this destination.
 
 ### Map attributes and identities {#map}
 
