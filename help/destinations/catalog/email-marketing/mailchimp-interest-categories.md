@@ -257,7 +257,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
-|November 2023|Functionality update|We now support custom uploads, see the [supported audiences](#supported-audiences) section.|
+|November 2023|Functionality update|You can now activate external audiences originating from custom uploads to this destination. See the [supported audiences](#supported-audiences) section for more details.|
 |May 2023|Initial release|Initial destination release and documentation publish.|
 
 {style="table-layout:auto"}
