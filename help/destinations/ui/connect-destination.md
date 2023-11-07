@@ -78,9 +78,9 @@ For file-based destinations, you can configure various settings related to how t
 
 ![Image showing the file type selection and various options for CSV files.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Set up destination connection for audience activation, prospects activation, or dataset exports {#segment-activation-or-dataset-exports}
+### Set up destination connection for audience activation, account activation, prospects activation, or dataset exports {#segment-activation-or-dataset-exports}
 
-Some file-based destinations support audience activation to known customers or prospects, as well as dataset exports. For those destinations, you can choose whether to create a connection that enables you to [activate audiences](/help/destinations/ui/activate-batch-profile-destinations.md), [prospects](/help/destinations/ui/activate-prospect-audiences.md), or [export datasets](/help/destinations/ui/export-datasets.md).
+Some file-based destinations support audience activation to known customers, account customers, or prospects, as well as dataset exports. For those destinations, you can choose whether to create a connection that enables you to [activate audiences](/help/destinations/ui/activate-batch-profile-destinations.md), [accounts](/help/destinations/ui/activate-account-audiences.md), [prospects](/help/destinations/ui/activate-prospect-audiences.md), or [export datasets](/help/destinations/ui/export-datasets.md).
 
 >[!WARNING]
 >

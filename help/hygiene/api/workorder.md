@@ -21,11 +21,19 @@ The endpoint used in this guide is part of the Data Hygiene API. Before continui
 
 You can delete one or more identities from a single dataset or all datasets by making a POST request to the `/workorder` endpoint.
 
+>[!IMPORTANT] 
+> 
+>There are different limits for the total number of unique identity record deletes that can be submitted each month. These limits are based on your license agreement. Organizations who have purchased all editions of Adobe Real-Time Customer Data Platform and Adobe Journey Optimizer can submit up to 100,000 identity record deletes each month. Organizations who have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield** can submit up to 600,000 identity record deletes each month.<br>A single [record delete request through the UI](../ui/record-delete.md) allows you to submit 10,000 IDs at one time. The API method to delete records allows for the submission of 100,000 IDs at one time.<br>It is best practice to submit as many IDs per request as possible, up to your ID limit. When you intend to delete a high volume of IDs, submitting a low volume, or a single ID per record delete request should be avoided.
+
 **API format**
 
 ```http
 POST /workorder
 ```
+
+>[!NOTE]
+>
+>Data Lifecycle requests can only modify datasets based on primary identities or an identity map. A request must either specify the primary identity, or provide an identity map.
 
 **Request**
 
@@ -70,7 +78,7 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `action` | The action to be performed. The value must be set to `delete_identity` for record deletes. |
-| `datasetId` | If you are deleting from a single dataset, this value must be the ID of the dataset in question. If you are deleting from all datasets, set the value to `ALL`.<br><br>If you are specifying a single dataset, the dataset's associated Experience Data Model (XDM) schema must have a primary identity defined. |
+| `datasetId` | If you are deleting from a single dataset, this value must be the ID of the dataset in question. If you are deleting from all datasets, set the value to `ALL`.<br><br>If you are specifying a single dataset, the dataset's associated Experience Data Model (XDM) schema must have a primary identity defined. If the dataset does not have a primary identity, then it must have an identity map in order to be modified by a Data Lifecycle request.<br>If an identity map exists, it will be present as a top-level field named `identityMap`.<br>Note that a dataset row may have many identities in its identity map, but only one can be marked as primary. `"primary": true` must be included to force the `id` to match a primary identity. |
 | `displayName` | The display name for the record delete request. |
 | `description` | A description for the record delete request. |
 | `identities` | An array containing the identities of at least one user whose information you would like to delete. Each identity is comprised of an [identity namespace](../../identity-service/namespaces.md) and a value:<ul><li>`namespace`: Contains a single string property, `code`, which represents the identity namespace. </li><li>`id`: The identity value.</ul>If `datasetId` specifies a single dataset, each entity under `identities` must use the same identity namespace as the schema's primary identity.<br><br>If `datasetId` is set to `ALL`, the `identities` array is not constrained to any single namespace since each dataset might be different. However, your requests are still constrained the namespaces available to your organization, as reported by [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |

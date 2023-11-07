@@ -13,6 +13,10 @@ Data stored on Adobe Experience Platform is encrypted at rest using system-level
 
 This document provides a high level overview of the process for enabling the customer-managed keys (CMK) feature in Platform, and the prerequisite information required to complete these steps.
 
+>[!NOTE]
+>
+>For Customer Journey Analytics customers, please follow the instructions in the [Customer Journey Analytics documentation](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html).
+
 ## Prerequisites
 
 To view and visit the [!UICONTROL Encryption] section in Adobe Experience Platform, you must have created a role and assigned the [!UICONTROL Manage Customer Managed Key] permission to that role. Any user that has the [!UICONTROL Manage Customer Managed Key] permission can enable CMK for their organization. 
