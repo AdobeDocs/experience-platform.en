@@ -7,11 +7,17 @@ description: Learn how to retarget unauthenticated users by using prospect IDs t
 
 >[!AVAILABILITY]
 >
->This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information.
+>This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information.
 
-Learn how to build an audience of unauthenticated visitors and retarget them using partner provided addressable IDs.
+Learn how to build an audience of unauthenticated visitors and retarget them using partner provided durable IDs.
 
 IMAGE
+
+With the phasing out of third-party cookies, digital marketers must reimagine their strategies for re-engaging with anonymous visitors. Brands that choose to integrate with identity vendors for real-time visitor recognition can also leverage partner provided durable identifiers for off-site paid-media retargeting.
+
+Despite high volume of traffic, many brands see a significant drop-off at the conversion stage. Visitors engage with content and product demos but leave without signing up or making a purchase.
+
+Not only can you build audiences based on on-site engagement to personalize marketing messages, you can also use Adobe's support for partner IDs to re-engage with visitors across paid-media destinations.
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -19,11 +25,12 @@ When planning on retargeting unauthenticated visitors, please consider the follo
 
 - Have I set up the partner IDs with the proper identity namespaces?
 
-Additionally, in order to implement the use case, you will make use of the following Real-time CDP functionality and UI elements. Ensure that you have the necessary attribute-based access control permissions for all these areas or ask your system administrator to grant you the necessary permissions.
+Additionally, in order to implement the use case, you will make use of the following Real-Time CDP functionality and UI elements. Ensure that you have the necessary attribute-based access control permissions for all these areas or ask your system administrator to grant you the necessary permissions.
 
 - [Audiences](../../segmentation/home.md)
 - [Computed attributes](../../profile/computed-attributes/overview.md)
 - [Destinations](../../destinations/home.md)
+- [Web SDK](../../edge/home.md)
 
 ## Bringing partner provided IDs forward {#bring-partner-ids-forward}
 
@@ -45,15 +52,15 @@ The **[!UICONTROL Create computed attribute]** page appears. On this page, you c
 
 For this use case, you can create a computed attribute that, if the partner ID exists, gets the most recent value of the partner ID within the last 24 hours.
 
-Using the search bar, you can locate and add the Partner ID event to the computed attribute canvas.
+Using the search bar, you can locate and add the "Partner ID" event to the computed attribute canvas.
 
 ![The [!UICONTROL Events] tab and the search bar are highlighted.](../assets/offsite-retargeting/ca-add-partner-id.png)
 
-After adding the Partner ID event to the definition, set the event filtering condition to **[!UICONTROL Exists]**, set the event filtering condition to be the **[!UICONTROL Most Recent]** value of the added Partner ID, and with a lookback period of 24 hours.
+After adding the "Partner ID" event to the definition, set the event filtering condition to **[!UICONTROL Exists]**, set the event filtering condition to be the **[!UICONTROL Most Recent]** value of the added partner ID, and with a lookback period of 24 hours.
 
 ![The definition of the computed attribute you want to create is highlighted.](../assets/offsite-retargeting/ca-add-definition.png)
 
-Give the computed attribute a name of "Partner ID" and an appropriate description, then select **[!UICONTROL Publish]** to complete the computed attribute creation process.
+Give the computed attribute an appropriate name (such as "Partner ID") and description, then select **[!UICONTROL Publish]** to complete the computed attribute creation process.
 
 ![The basic information of the computed attribute you want to create is highlighted.](../assets/offsite-retargeting/ca-publish.png)
 
@@ -110,6 +117,8 @@ After successfully creating your audience, you can now activate this audience to
 ![The [!UICONTROL Activate to destination] button is highlighted.](../assets/offsite-retargeting/activate-to-destination.png)
 
 >[!NOTE]
+>
+>All destination types, including file-based destinations, support audience activation with partner IDs.
 >
 >For more information on activating audiences to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md).
 
