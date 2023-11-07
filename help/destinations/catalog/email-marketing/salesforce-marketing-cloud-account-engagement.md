@@ -198,7 +198,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
-|November 2023|Functionality update|<ul><li>We now automatically convert the **[UICONTROL Mapping ID]** values in the [schedule audience export](#schedule-segment-export-example) step to `lowercase`. Additionally we also sanitize `spaces` and `special characters`. This is done to ensure compliance with [!DNL Marketing Cloud Account Engagement] field names.</li><li>We now support custom uploads, see the [supported audiences](#supported-audiences) section.</li></ul>|
+|November 2023|Functionality update|<ul><li>You can now activate external audiences originating from custom uploads to this destination. See the [supported audiences](#supported-audiences) section for more details.</li><li>The **[UICONTROL Mapping ID]** values in the [schedule audience export](#schedule-segment-export-example) step are now automatically converted to lowercase values. Additionally, spaces and special characters are now automatically sanitized to ensure compliance with [!DNL Marketing Cloud Account Engagement] field names.</li></ul>|
 |April 2023|Initial release|Initial destination release and documentation publish.|
 
 {style="table-layout:auto"}
