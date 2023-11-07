@@ -84,7 +84,7 @@ feature: Destinations
         * [Microsoft Bing connection](./catalog/advertising/bing.md)
         * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
-        * [Pinterest connection migration](./catalog/advertising/pinterest-migration.md)
+        * [Pinterest connection upgrade](./catalog/advertising/pinterest-upgrade.md)
         * [Snapchat Ads connection](./catalog/advertising/snap-inc.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
         * [(Beta) The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
