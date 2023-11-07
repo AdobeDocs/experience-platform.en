@@ -67,7 +67,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
   * [Sources overview](sources/sources-overview.md)
   * [Sources in Real-Time CDP B2B Edition](sources/b2b.md)
 * Use cases {#use-cases}
-  * Intelligent re-engagement use cases {#intelligent-re-engagement}
+  * Personalization, Insights, and Engagement Use Cases {#personalization-insights-engagement}
     * [Intelligently re-engage your customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
   * Customer acquisition {#customer-acquisition}
     * [Engage and acquire new customers without dependency on third-party cookies](/help/rtcdp/partner-data/prospecting.md)  
