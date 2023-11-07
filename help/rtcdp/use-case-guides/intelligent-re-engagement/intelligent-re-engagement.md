@@ -5,13 +5,17 @@ exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
 ---
 # Intelligently re-engage your customers to return
 
+>[!NOTE]
+>
+>This is a sample implementation, and the examples on this page, such as segment syntax, are merely examples. You should use the examples as a guide, as your implementation may differ.
+
 Re-engage customers who have abandoned a conversion in an intelligent and responsible way. Engage lapsed customers with experiences to increase conversion and increase the client lifetime value.
 
 Employ real-time considerations, take into account all consumer qualities and behaviors, and offer fast re-qualification based on both online and offline events.
 
-![Step by step intelligent re-engagement high level visual overview.](../intelligent-re-engagement/images/step-by-step.png) 
+![Intelligent re-engagement high level visual overview.](../intelligent-re-engagement/images/step-by-step.png) 
 
-## Use case overview
+## Use case overview {#overview}
 
 You will construct schemas, datasets, and audiences as you work through examples of re-engagement scenarios. You will also discover the features needed to set up the example journeys in [!DNL Adobe Journey Optimizer] and those needed to create paid media advertisements in destinations. This guide uses examples of re-engaging customers in the use case journeys outlined below:
 
@@ -21,7 +25,7 @@ You will construct schemas, datasets, and audiences as you work through examples
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
-As you complete the steps to implement the use case, you will make use of the following Real-Time CDP functionality and UI elements (listed in the order in which you will use them). Make sure that you have the necessary [attribute-based access control permissions](/help/access-control/home.md) for all these areas, or ask your system administrator to grant you the necessary permissions.
+As you complete the steps to implement the use case, you will make use of the following Real-Time CDP and Adobe Journey Optimizer functionality (listed in the order in which you will use them). Make sure that you have the necessary [attribute-based access control permissions](/help/access-control/home.md) for all these areas, or ask your system administrator to grant you the necessary permissions.
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Integrates data across data sources to fuel the campaign. This data is then used to create the campaign audiences and surface personalized data elements used in the email and the web promo tiles (for example, name or account-related information). The CDP is also used to activate audiences across email and the web (via [!DNL Adobe Target]).
     * [Schemas](/help/xdm/home.md)
@@ -44,7 +48,7 @@ Below is a high level overview of the three example re-engagement scenarios.
 
 >[!TAB Abandoned Product Browse Scenario]
 
-The abandoned product browse scenario targets abandoned product browsing on both the website and mobile app. This scenario is triggered when a product has been viewed but not purchased or added to the cart. Brand engagement is triggered after three days if there are no list additions within the last 24 hours.<p>![Customer intelligent abandoned product browse scenario high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent abandoned product browse scenario high level visual overview."){width="1920" zoomable="yes"}</p>
+The abandoned product browse scenario targets abandoned product browsing on both the website and mobile app. This scenario is triggered when a product has been viewed but not purchased or added to the cart. In this example, brand engagement is triggered after three days if there are no list additions within the last 24 hours.<p>![Customer intelligent abandoned product browse scenario high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent abandoned product browse scenario high level visual overview."){width="1920" zoomable="yes"}</p>
 
 1. You create schemas and datasets, then enable for [!UICONTROL Profile].
 2. You ingest data into Experience Platform via Web SDK, Mobile SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
@@ -56,7 +60,7 @@ The abandoned product browse scenario targets abandoned product browsing on both
 
 >[!TAB Abandoned Cart Scenario]
 
-The abandoned cart scenario targets products that have been placed in the cart but have not yet been purchased on both the website and mobile app. Also, Paid Media campaigns are started and stopped using this method.<p>![Customer abandoned cart scenario high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Customer abandoned cart scenario high level visual overview."){width="1920" zoomable="yes"}</p> 
+The abandoned cart scenario applies when products have been placed in the cart but have not yet been purchased on both the website and mobile app. Also, Paid Media campaigns are started and stopped using this method.<p>![Customer abandoned cart scenario high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Customer abandoned cart scenario high level visual overview."){width="1920" zoomable="yes"}</p> 
 
 1. You create schemas and datasets, the enable for [!UICONTROL Profile].
 2. You ingest data into Experience Platform via Web SDK, Mobile SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
@@ -270,7 +274,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 ### Create a dataset from a schema {#create-datasets}
 
-A dataset is a storage and management structure for a group of data. Each schema for intelligent re-engagement scenarios should have it's own dataset. 
+A dataset is a storage and management structure for a group of data. Each schema for intelligent re-engagement scenarios should have its own dataset. 
 
 For more information on how to create a [dataset](/help/catalog/datasets/overview.md) from a schema, read the [Datasets UI guide](/help/catalog/datasets/user-guide.md).
 
@@ -282,11 +286,11 @@ For more information on how to create a [dataset](/help/catalog/datasets/overvie
 
 >[!IMPORTANT]
 >
->Providing customers with the capability to unsubscribe from receiving communications from a brand is a legal requirement, as well as ensuring this choice is honored. Learn more about the applicable legislation in the [Privacy regulations overview](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>Providing customers with the capability to unsubscribe from receiving communications from a brand, as well as ensuring this choice is honored, is a legal requirement. Learn more about the applicable legislation in the [Privacy regulations overview](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
 #### Consent policies
 
-When creating a re-engagement path, the following [consent policies](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) should be considered:
+When creating a re-engagement path, consider adding the following [consent policies](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html):
 
 * If `consents.marketing.email.val = "Y"` then Can Email
 * If `consents.marketing.sms.val = "Y"` then Can SMS
@@ -295,7 +299,7 @@ When creating a re-engagement path, the following [consent policies](https://exp
 
 #### Data Governance labelling and enforcement
 
-When creating a re-engagement path, the following [Data Governance labels](/help/data-governance/labels/overview.md) should be considered:
+When creating a re-engagement path, consider adding the following [Data Governance labels](/help/data-governance/labels/overview.md):
 
 * Personal email addresses are utilized as direct identifiable data that is used for identifying or getting in touch with a specific individual rather than a device.
     * `personalEmail.address = I1`
@@ -312,7 +316,7 @@ There are no [data usage policies](/help/data-governance/policies/overview.md) r
 
 ### Create audiences {#create-audience}
 
-The re-engagement scenarios use audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways on [!DNL Adobe Experience Platform].
+The re-engagement scenarios use audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways in [!DNL Adobe Experience Platform].
 
 For more information on how to create an audience, read the [audience service UI guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
@@ -326,26 +330,55 @@ For more information on how to build audiences through Platform-derived audience
 
 This audience is created as an enhancement to the classic "Cart Abandonment" scenario. Whereas cart abandonment typically focuses on a cart addition without a subsequent purchase in a certain period of time, this audience looks for an earlier engagement, specifically those who may have browsed a particular product but did not add it to their cart and had no follow-up activity on your site within a certain time frame. This audience helps to keep your brand "top of mind" for customers who meet this inclusion criteria and can also be leveraged for customers whose digital properties may differ from a traditional e-commerce model.
 
-The following events are used for the abandoned product browse scenario where users viewed products online, did not add products to their cart in the next 24 hours, and had no brand engagement in the 3 days following.
++++Abandoned product view with no engagement in the last three days
+
+The following event is used for the abandoned product browse scenario where users viewed products online, and did not engage (site visits, app visits, online purchase, offline purchase, and add to cart events) in the 3 days following.
 
 The following fields and conditions are required when setting up this audience:
 
 * `eventType: commerce.productViews`
-    * `Timestamp: <= 24 hours before now`
-* `eventType is not: commerce.productListAdds`
-    * `Timestamp: <= 24 hours before now, GAP(>= 3 days)`
-* `eventType: application.launch or web.webpagedetails.pageViews or commerce.purchases`
-    * `Timestamp: <= 2 days before now`
+* And `THEN` (sequential event) exclude `eventType: commerce.procuctListAdds` or `application.launch` or `web.webpagedetails.pageViews` or `commerce.purchases` (this includes both online and offline)
+    * `Timestamp: > 3 days after productView`
 
-The descriptor for the abandoned product browse scenario appears as:
++++
 
-`Include audience who have at least 1 eventType = ProductViews event THEN have at least 1 Any event where (eventType does not equal commerce.productListAdds) and occurs in last 24 hour(s) then after 3 days do not have any Any event where (eventType = application.launch or web.webpagedetails.pageViews or commerce.purchases) and occurs in last 2 day(s).`
++++Product view with engagement in the last three days
+
+The following event is used for the abandoned product browse scenario where users viewed products online, and did engage (site visits, app visits, online purchase, offline purchase, and add to cart events) in the 3 days following.
+
+The following fields and conditions are required when setting up this audience:
+
+* `eventType: commerce.productViews`
+* And `THEN` (sequential event) include `eventType: commerce.procuctListAdds` or `application.launch` or `web.webpagedetails.pageViews` or `commerce.purchases` (this includes both online and offline)
+    * `Timestamp: > 3 days after productView`
+
++++Engagement streaming in the last one day
+
+The following event is used for the abandoned product browse scenario where users have engaged (site visits, app visits, online purchase, offline purchase, and add to cart events) in the last 1 day.
+
+The following fields and conditions are required when setting up this audience:
+
+* `eventType: commerce.procuctListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+    * `Timestamp: in last 1 day` (Streaming)
+
++++
+
++++Engagement batch in the last three days
+
+The following event is used for the abandoned product browse scenario where users have engaged (site visits, app visits, online purchase, offline purchase, and add to cart events) in the last 3 days.
+
+The following fields and conditions are required when setting up this audience:
+
+* `EventType: commerce.procuctListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+    * `Timestamp: in last 3 days` (Batch) 
+
++++
 
 >[!TAB Abandoned Cart Scenario]
 
 This audience is created to support the classic "Cart Abandonment" scenario. Its purpose is to find customers who added a product to their shopping cart but ultimately did not follow through with a purchase. This audience will help keep not only your brand "top of mind" for your customers but also the products that they left behind without a subsequent purchase.
 
-The following events are used for the abandoned cart scenario where users added a product to their cart, but did not complete the purchase or clear their cart in the last 24 hours.
+The following events are used for the abandoned cart scenario where users added a product to their cart between 1 and 4 days ago, but did not complete the purchase or clear their cart.
 
 The following fields and conditions are required when setting up this audience:
 
@@ -700,7 +733,7 @@ Streaming audience export destinations (such as Facebook, Google Customer Match,
 * `ECID`
 * `mobilePhone.number`
 
-The abandon cart audience is streaming and therefore can be used by the Destination framework for this use case.
+the abandon cart audience is evaluated as a streaming audience and therefore can be used by the destinations framework for this use case.
 
 * Stream/Triggered
     * [Advertising](/help/destinations/catalog/advertising/overview.md)/[Paid Media & Social](/help/destinations/catalog/social/overview.md)
