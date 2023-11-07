@@ -35,7 +35,10 @@ The following table outlines guardrails to consider when using the streaming sou
 
 ## Next steps
 
-See the following documentation for more information on data and processing guardrails in Experience Platform:
+See the following documentation for more information on other Experience Platform services guardrails, on end-to-end latency information, and licensing information from Real-Time CDP Product Description documents:
 
-* [Guardrails for Real-Time Customer Profile data](../profile/guardrails.md)
-* [Guardrails for Identity Service data](../identity-service/guardrails.md)
+* [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
+* [End-to-end latency diagrams](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) for various Experience Platform services.
+* [Real-Time Customer Data Platform (B2C Edition - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

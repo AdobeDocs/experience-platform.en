@@ -31,6 +31,14 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Destinations {#destinations}
   * [Destinations overview](destinations/overview.md)
   * [Destinations in Real-Time CDP B2B Edition](destinations/b2b.md)
+* Guardrails {#guardrails}
+  * [Real-Time CDP guardrails overview](guardrails/overview.md)
+  * [Guardrails for data ingestion](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+  * [Guardrails for the [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
+  * [Guardrails for [!DNL Real-Time Customer Profile] data and segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html){target="_blank"}
+  * [Guardrails for [!DNL Identity Service] data](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+  * [Guardrails for [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+  * [Guardrails for data activation through destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identities {#identity}  
   * [Identities & identity namespaces](profile/identities-overview.md)
 * Merge policies {#merge-policies}
