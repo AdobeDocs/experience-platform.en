@@ -2,8 +2,8 @@
 keywords: Experience Platform;home;popular topics;API error codes;API error code;error code API;error codes API;API request error;API troubleshooting;API error
 solution: Experience Platform
 title: Adobe Experience Platform FAQ and Troubleshooting Guide
-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
-landing-page-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
+description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Adobe Experience Platform.
+landing-page-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Adobe Experience Platform.
 short-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
