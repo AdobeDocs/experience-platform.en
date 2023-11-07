@@ -208,7 +208,7 @@ feature: Destinations
             * [File formatting configuration](./destination-sdk/functionality/destination-server/file-formatting.md)
         * Destination configuration components {#destination-configuration}
             * [Customer authentication configuration](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
-            * [OAuth2 authentication](./destination-sdk/functionality/destination-configuration/oauth2-authentication.md)
+            * [OAuth2 authorization](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
             * [Customer data fields](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
             * [UI attributes](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
             * [Partner schema configuration](./destination-sdk/functionality/destination-configuration/schema-configuration.md)
