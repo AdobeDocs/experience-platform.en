@@ -144,6 +144,8 @@ The customer digital transactions schema is represented by an [[!UICONTROL XDM E
 
 +++XDM ExperienceEvent (Class)
 
+The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class includes the following field groups:
+
 | Fields | Requirement | Description |
 | --- | --- | --- |
 | `_id` | Required | Uniquely identifies individual events that are ingested into [!DNL Adobe Experience Platform]. |
@@ -151,8 +153,6 @@ The customer digital transactions schema is represented by an [[!UICONTROL XDM E
 | `eventType` | Required | A string that indicates the type of category for the event. |
 
 +++
-
-The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class includes the following field groups:
 
 +++End User ID Details (Field Group)
 
@@ -183,6 +183,8 @@ The customer offline transactions schema is represented by an [[!UICONTROL XDM E
 
 +++XDM ExperienceEvent (Class)
 
+The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class includes the following field groups:
+
 | Fields | Requirement | Description |
 | --- | --- | --- |
 | `_id` | Required | Uniquely identifies individual events that are ingested into [!DNL Adobe Experience Platform]. |
@@ -190,8 +192,6 @@ The customer offline transactions schema is represented by an [[!UICONTROL XDM E
 | `eventType` | Required | A string that indicates the type of category for the event. |
 
 +++
-
-The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class includes the following field groups:
 
 +++Commerce Details (Field Group)
 
@@ -241,6 +241,8 @@ The [!DNL Adobe] web connector schema is represented by an [[!UICONTROL XDM Expe
 
 +++XDM ExperienceEvent (Class)
 
+The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class includes the following field groups:
+
 | Fields | Requirement | Description |
 | --- | --- | --- |
 | `_id` | Required | Uniquely identifies individual events that are ingested into [!DNL Adobe Experience Platform]. |
@@ -248,8 +250,6 @@ The [!DNL Adobe] web connector schema is represented by an [[!UICONTROL XDM Expe
 | `eventType` | Required | A string that indicates the type of category for the event. |
 
 +++
-
-The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class includes the following field groups:
 
 +++Adobe Analytics ExperienceEvent Template (Field Group)
 
