@@ -13,7 +13,9 @@ This destination can be used to send audience data to the PubMatic platform.
 
 > [!IMPORTANT]
 >
-> The destination connector and documentation page are created and maintained by the PubMatic team. For any inquiries or update requests, please contact them directly at _Insert link or email address where you can be reached for updates, for example `support@YourDestination.com`._
+> The destination connector and documentation page are created and maintained by the PubMatic team. For any inquiries or update requests, please contact them directly at `support@pubmatic.com`.
+
+TODO: fix email above
 
 ## Use cases {#use-cases}
 
@@ -25,14 +27,7 @@ Publisher or data providers want to send audiences from Adobe Experience Platfor
 
 ## Prerequisites {#prerequisites}
 
-_Add information in this section about anything that customers need to be aware of before starting to set up the destination in the Adobe Experience Platform user interface. This can be about:_
-
-- _needing to be added to an allow list_
-- _requirements for email hashing_
-- _any account specifics on your side_
-- _how to obtain an API key to connect to your platform_
-
-_You can link out to your relevant documentation if that would be useful to customers._
+Please talk to your PubMatic Account Manager to make sure your account is configured correctly and supports onboarding of audience segments. They will also make sure you have all the relevant details to set up this destination and to provide you support during the integration.
 
 ## Supported identities {#supported-identities}
 
@@ -59,15 +54,12 @@ This section describes which type of audiences you can export to this destinatio
 
 ## Export type and frequency {#export-type-frequency}
 
-_In the table, keep only the lines that correspond to your destination. You should have one line for Export type and one line for Export frequency. Delete the values that don't apply to your destination._
-
 Refer to the table below for information about the destination export type and frequency.
 
 | Item             | Type                            | Notes                                                                                                                                                                                                                                                                                                                              |
 | ---------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Export type      | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the PubMatic Connect destination.                                                                                                                                                                               |
 | Export frequency | **[!UICONTROL Streaming]**      | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
-| Export frequency | **[!UICONTROL Batch]**          | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).                                                                                                     |
 
 {style="table-layout:auto"}
 
@@ -81,11 +73,9 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authenticate to destination {#authenticate}
 
-_Add the fields that customers must fill in when authenticating to your destination. These fields are destination-specific and depend on your configuration in Destination SDK. Your destination's fields may not be the same as the ones listed below. Please also include a screenshot similar to the sample screenshot shown below._
-
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![Add a link here to one or more sample screenshots that show users how to authenticate to your destination](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![How to authenticate](/help/destinations/assets/catalog/advertising/pubmatic/authenticate-destination.png)
 
 - **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.
 
@@ -93,7 +83,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Add a link here to one or more sample screenshots that show users how to fill in details for your destination](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Destination details](/help/destinations/assets/catalog/advertising/pubmatic/destination-details.png)
 
 - **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 - **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -101,9 +91,9 @@ To configure details for the destination, fill in the required and optional fiel
 - Data partner ID: The data partner ID set up in you PubMatic account for this integration.
 - Default Country Code: The default country code that should be applied to all identities if none is provided in the profile.
 - Account type: The account type of your PubMatic platform account. These are the available options:
-  PUBLISHER
-  Demand Partner
-  BUYER
+  - PUBLISHER
+  - Demand Partner
+  - BUYER
 
 ### Enable alerts {#enable-alerts}
 
@@ -122,10 +112,15 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 ### Map attributes and identities {#map}
 
-_Add information about supported mappings between source and target fields in the Mapping step of the activation workflow. Your destination might support exporting profile attributes, identity namespaces, or both. Some fields might be mandatory. Target attributes might be predefined or custom. Call out the important caveats and use examples, preferably with screenshots. Two examples of destination pages which you can use as reference are:_
+Selecting source fields:
 
-- _[Pega](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/pega.html?lang=en#mapping-example)_
-- _[Medallia](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/voice/medallia-connector.html?lang=en#map)_
+- Select an identifier (For example: CustomerID) as source identity that uniquely identifies a profile in Adobe Experience Platform and Pega Customer Decision Hub.
+- Select XDM source profile attribute changes that need to be exported and updated in Pega Customer Decision Hub.
+
+Selecting target fields:
+
+- Select the CustomerID namespace as target identity.
+- Select destination profile attribute names that need to be mapped to corresponding XDM source profile attributes.
 
 ## Exported data / Validate data export {#exported-data}
 
