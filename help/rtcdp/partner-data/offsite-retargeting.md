@@ -11,7 +11,9 @@ description: Learn how to retarget unauthenticated users by using prospect IDs t
 
 Learn how to build an audience of unauthenticated visitors and retarget them using partner provided durable IDs.
 
-IMAGE
+![An infographic that shows the flow of partner data from ingestion into Adobe Experience Platform to output via audiences to a downstream destination.](../assets/offsite-retargeting/header.png)
+
+## Why to consider this use case {#why-use-case}
 
 With the phasing out of third-party cookies, digital marketers must reimagine their strategies for re-engaging with anonymous visitors. Brands that choose to integrate with identity vendors for real-time visitor recognition can also leverage partner provided durable identifiers for off-site paid-media retargeting.
 
@@ -32,9 +34,15 @@ Additionally, in order to implement the use case, you will make use of the follo
 - [Destinations](../../destinations/home.md)
 - [Web SDK](../../edge/home.md)
 
+## Get partner data into Real-Time CDP {#get-data-in}
+
+To create an audience of unauthenticated visitors, you'll first need to get your partner data into Real-Time CDP.
+
+To learn how to best import data into Real-Time CDP using Web SDK, please read the [data management and event data collection sections](./onsite-personalization.md#data-management) of the onsite personalization use case.
+
 ## Bringing partner provided IDs forward {#bring-partner-ids-forward}
 
-To create an audience of unauthenticated visitors, you'll first need to bring forth the partner provided IDs from the event dataset into the profile records. You can do this by utilizing computed attributes.
+After importing the partner provided IDs into an event dataset, you'll need to get this data into the profile records. You can do this by utilizing computed attributes.
 
 Computed attributes let you quickly convert profile behavioral data into aggregated values at the profile level. As a result, you can use these expressions, such as "lifetime purchase total" to the profile, allowing you to easily use the computed attribute within your audiences. More information about computed attributes can be found in the [computed attributes overview](../../profile/computed-attributes/overview.md).
 
