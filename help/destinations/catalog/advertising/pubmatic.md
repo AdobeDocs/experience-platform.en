@@ -9,7 +9,7 @@ description: PubMatic maximizes customer value by delivering the programmatic di
 
 PubMatic maximizes customer value by delivering the programmatic digital marketing supply chain of the future. PubMatic Connect combines platform technology and dedicated service to enhance how inventory and data are packaged and transacted.
 
-This destination can be used to send audience data to the PubMatic platform.
+This destination can be used to send audience data to the PubMatic Connect platform.
 
 > [!IMPORTANT]
 >
@@ -21,11 +21,11 @@ To help you better understand how and when you should use the PubMatic Connect d
 
 ### Use case #1 {#use-case-1}
 
-Publisher or data providers want to send audiences from Adobe Experience Platform to onboard identities into PubMatic Connect in order to target users on mobile, web and CTV platforms, using a large range of identifiers.
+Publisher or data providers want to send audiences from Adobe Experience Platform to PubMatic Connect in order to target users on mobile, web and CTV platforms, using a large range of identifiers.
 
 ## Prerequisites {#prerequisites}
 
-Talk to your PubMatic Account Manager to make sure your account is configured correctly and supports onboarding of audience segments. They will also make sure you have all the relevant details to set up this destination and to provide you support during the integration.
+Talk to your PubMatic Account Manager to make sure your account is configured correctly and supports onboarding of audience segments. They will also make sure you have all the relevant details to use this destination and to provide you with support during the setup.
 
 ## Supported identities {#supported-identities}
 
@@ -104,7 +104,8 @@ When you are finished providing details for your destination connection, select 
 > [!IMPORTANT]
 >
 > - To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
-> - To export _identities_, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png){width="100" zoomable="yes"}
+>
+> * To export _identities_, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
@@ -112,18 +113,16 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 Selecting source fields:
 
-- Select an identifier (usually namespaces like IDFA or a custom ID).
+- Select an identifier (usually namespaces like IDFA or a custom ID namespace).
 
 Selecting target fields:
 
-- Select the PubMatic UID type that matches the identifier you selected in the first step.
-- Talk to your PubMatic Account Manager to get the information on which UID type will be correct during the step.
+- Talk to your PubMatic Account Manager to get the information on which UID type will be correct during this step.
+- Select the PubMatic UID type number that matches the identifier you selected in the first step.
 
 ## Exported data / Validate data export {#exported-data}
 
-The PubMatic UI will allow you to check if the data has been pushed correctly and the that the segments are available. It can take up to 24 hours after data has been pushed for the PubMatic UI to be updated.
-
-Data should be available immediately for targeting. Please talk to your PubMatic Account Manager for more details.
+The PubMatic UI will allow you to check if the data has been pushed correctly and that the segments are available. It can take up to 24 hours after data has been pushed for the PubMatic UI to be updated.
 
 ## Data usage and governance {#data-usage-governance}
 
