@@ -91,7 +91,7 @@ You are recommended to create an [!DNL Oauth2] API credential specifically for C
 
 <!-- 
 Is this the correct doc to link to about creating an Oauth2 API credential?:
-../../../destinations/destination-sdk/functionality/destination-configuration/oauth2-authentication.md
+../../../destinations/destination-sdk/functionality/destination-configuration/oauth2-authorization.md
  -->
 
 <!-- See [Authenticate and access Experience Platform APIs](../../../landing/api-authentication.md) detailed instructions instructions on creating an API credential. -->

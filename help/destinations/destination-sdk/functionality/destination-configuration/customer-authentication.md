@@ -20,7 +20,7 @@ When [creating a destination](../../authoring-api/destination-configuration/crea
 
 * For destinations using [basic authentication](#basic), users must provide a username and password directly in the Experience Platform UI authentication page.
 * For destinations using [bearer authentication](#bearer), users must provide a bearer token.
-* For destinations using [OAuth2 authentication](#oauth2), users are redirected to your destination's login page where they can log in with their credentials.
+* For destinations using [OAuth2 authorization](#oauth2), users are redirected to your destination's login page where they can log in with their credentials.
 * For [Amazon S3](#s3) destinations, users must provide their [!DNL Amazon S3] access key and secret key.
 * For [Azure Blob](#blob) destinations, users must provide their [!DNL Azure Blob] connection string.
 
@@ -99,7 +99,7 @@ To set up bearer type authentication for your destination, configure the `custom
 
 ## OAuth 2 authentication {#oauth2}
 
-Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 authentication flow to your destination, as shown in the example below for the Twitter Custom Audiences destination. For detailed information on configuring OAuth 2 authentication to your destination endpoint, read the dedicated [Destination SDK OAuth 2 authentication page](oauth2-authentication.md).
+Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 authentication flow to your destination, as shown in the example below for the Twitter Custom Audiences destination. For detailed information on configuring OAuth 2 authentication to your destination endpoint, read the dedicated [Destination SDK OAuth 2 authentication page](oauth2-authorization.md).
 
 ![UI render with OAuth 2 authentication](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -227,7 +227,7 @@ After reading this article, you should have a better understanding of how you ca
 
 To learn more about the other destination components, see the following articles:
 
-* [OAuth2 authentication](oauth2-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
 * [Customer data fields](customer-data-fields.md)
 * [UI attributes](ui-attributes.md)
 * [Schema configuration](schema-configuration.md)

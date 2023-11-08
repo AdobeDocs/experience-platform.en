@@ -14,7 +14,7 @@ This page exemplifies the API request and payload that you can use to update an 
 For a detailed description of the capabilities of a destination configuration, read the following articles:
 
 * [Customer authentication configuration](../../functionality/destination-configuration/customer-authentication.md)
-* [OAuth2 authentication](../../functionality/destination-configuration/oauth2-authentication.md)
+* [OAuth2 authorization](../../functionality/destination-configuration/oauth2-authorization.md)
 * [Customer data fields](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI attributes](../../functionality/destination-configuration/ui-attributes.md)
 * [Schema configuration](../../functionality/destination-configuration/schema-configuration.md)
