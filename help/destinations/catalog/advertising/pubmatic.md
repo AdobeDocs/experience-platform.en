@@ -1,6 +1,6 @@
 ---
 title: PubMatic Connect
-description: Use this template to create public documentation for your destination in the Adobe Experience Platform catalog. // Replace with the paragraph in the Overview section
+description: PubMatic maximizes customer value by delivering the programmatic digital marketing supply chain of the future. PubMatic Connect combines platform technology and dedicated service to enhance how inventory and data are packaged and transacted.
 ---
 
 # PubMatic Connect destination {#your-destination}
@@ -15,8 +15,6 @@ This destination can be used to send audience data to the PubMatic platform.
 >
 > The destination connector and documentation page are created and maintained by the PubMatic team. For any inquiries or update requests, please contact them directly at `support@pubmatic.com`.
 
-TODO: fix email above
-
 ## Use cases {#use-cases}
 
 To help you better understand how and when you should use the PubMatic Connect destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
@@ -27,7 +25,7 @@ Publisher or data providers want to send audiences from Adobe Experience Platfor
 
 ## Prerequisites {#prerequisites}
 
-Please talk to your PubMatic Account Manager to make sure your account is configured correctly and supports onboarding of audience segments. They will also make sure you have all the relevant details to set up this destination and to provide you support during the integration.
+Talk to your PubMatic Account Manager to make sure your account is configured correctly and supports onboarding of audience segments. They will also make sure you have all the relevant details to set up this destination and to provide you support during the integration.
 
 ## Supported identities {#supported-identities}
 
@@ -48,7 +46,7 @@ This section describes which type of audiences you can export to this destinatio
 | Audience origin             | Supported | Description                                                                                                         |
 | --------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------- |
 | [!DNL Segmentation Service] | ✓         | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).          |
-| Custom uploads              | X         | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads              | ✓         | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -87,9 +85,9 @@ To configure details for the destination, fill in the required and optional fiel
 
 - **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 - **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-- **[!UICONTROL Account ID]**: Your PubMatic Connect account ID.
 - Data partner ID: The data partner ID set up in you PubMatic account for this integration.
 - Default Country Code: The default country code that should be applied to all identities if none is provided in the profile.
+- **[!UICONTROL Account ID]**: Your PubMatic Connect account ID.
 - Account type: The account type of your PubMatic platform account. These are the available options:
   - PUBLISHER
   - Demand Partner
@@ -114,61 +112,19 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 Selecting source fields:
 
-- Select an identifier (For example: CustomerID) as source identity that uniquely identifies a profile in Adobe Experience Platform and Pega Customer Decision Hub.
-- Select XDM source profile attribute changes that need to be exported and updated in Pega Customer Decision Hub.
+- Select an identifier (usually namespaces like IDFA or a custom ID).
 
 Selecting target fields:
 
-- Select the CustomerID namespace as target identity.
-- Select destination profile attribute names that need to be mapped to corresponding XDM source profile attributes.
+- Select the PubMatic UID type that matches the identifier you selected in the first step.
+- Talk to your PubMatic Account Manager to get the information on which UID type will be correct during the step.
 
 ## Exported data / Validate data export {#exported-data}
 
-_Add a paragraph about how data is exported to your destination. This would help the customer make sure that they have correctly integrated with your destination. For example, you could provide a sample JSON like the one below. Or, you could provide screenshots and information from your destination's interface that show how customers should expect segments to be populating in the destination platform._
+The PubMatic UI will allow you to check if the data has been pushed correctly and the that the segments are available. It can take up to 24 hours after data has been pushed for the PubMatic UI to be updated.
 
-```
-{
-  "person": {
-    "email": "yourstruly@adobe.com"
-  },
-  "segmentMembership": {
-    "ups": {
-      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
-        "lastQualificationTime": "2020-05-25T21:24:39Z",
-        "status": "exited"
-      },
-      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
-        "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
-      }
-    }
-  },
-  "identityMap": {
-    "ecid": [
-      {
-        "id": "14575006536349286404619648085736425115"
-      },
-      {
-        "id": "66478888669296734530114754794777368480"
-      }
-    ],
-    "email_lc_sha256": [
-      {
-        "id": "655332b5fa2aea4498bf7a290cff017cb4"
-      },
-      {
-        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
-      }
-    ]
-  }
-}
-
-```
+Data should be available immediately for targeting. Please talk to your PubMatic Account Manager for more details.
 
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
-
-## Additional resources {#additional-resources}
-
-_You can provide further links to your product documentation or any other resources that you consider important for the customer to be successful._
