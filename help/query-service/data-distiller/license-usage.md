@@ -6,7 +6,9 @@ recommendations: noCatalog, display
 ---
 # Monitor batch query license usage {#monitor-license-usage}
 
-The license usage dashboard provides granular reports about your organization's Query Service license usage and usage metrics for each purchased product. To learn more about the available metrics displayed in the dashboard, visit the [license usage dashboard guide](../../dashboards/guides/license-usage.md#available-metrics). Information displayed here is captured during a daily snapshot of your Platform instance. The dashboard provides usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metrics from a specific sandbox. 
+The license usage dashboard provides granular reports about your organization's Query Service license usage and usage metrics for each purchased product. To learn more about the available metrics displayed in the dashboard, visit the [license usage dashboard guide](../../dashboards/guides/license-usage.md#available-metrics). 
+
+The dashboard provides usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metrics from a specific sandbox. Information displayed here is captured during a daily snapshot of your Platform instance. 
 
 >[!NOTE]
 >
