@@ -8,15 +8,9 @@ recommendations: noCatalog, display
 ---
 # Monitor batch query license usage {#monitor-license-usage}
 
->[!IMPORTANT]
->
->The ability to monitor batch query license usage through the UI is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
-
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your organization's Query Service license usage.
 
 For detailed instructions on how to access and interact with the license usage dashboard in the UI, as well as to learn more about the available metrics displayed in the dashboard, please visit the [license usage dashboard guide](../../dashboards/guides/license-usage.md).
-
-Please read the [dashboards overview](../../dashboards/home.md) for a summary of all the dashboard features within Experience Platform.
 
 ## Widgets {#widgets}
 
