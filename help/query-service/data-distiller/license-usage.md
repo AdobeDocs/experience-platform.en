@@ -6,7 +6,7 @@ hide: true
 hidefromtoc: true
 recommendations: noCatalog, display
 ---
-# (Alpha) Monitor batch query license usage {#monitor-license-usage}
+# Monitor batch query license usage {#monitor-license-usage}
 
 >[!IMPORTANT]
 >
