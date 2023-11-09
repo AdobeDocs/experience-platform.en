@@ -58,7 +58,8 @@ Yes, please see below:
 
 >[!IMPORTANT]
 >
->After November 16th, the legacy Pinterest destination is marked **[!UICONTROL Deprecating]** and we *do not recommend* that customers activate new audiences to the old destination. If you do that, you will then have to follow the [regular activation steps](/help/destinations/ui/activate-segment-streaming-destinations.md) to add the audience to the new destination once the customer actions are taken.
+>After November 16th, the legacy Pinterest destination is marked **[!UICONTROL Deprecating]**. <span class="preview">Any changes that you make to dataflows to the (Deprecating) Pinterest destination after November 16th will *not* be automatically carried over to the new Pinterest destination. </span>
+>For example, we *do not recommend* that you activate new audiences to the old destination after November 16th. If you do that, you will then have to follow the [regular activation steps](/help/destinations/ui/activate-segment-streaming-destinations.md) to add the audience to the new destination once the customer actions are taken.
 
 **By December 15th**: <span class="preview">Customer action</span>. You need to reauthenticate to Pinterest so that the new card is connected to Pinterest (instructions further above). Once you have done this, reach out to us.
 
