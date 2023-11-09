@@ -20,7 +20,7 @@ Adobe is releasing a new Pinterest destination card that leverages the Pinterest
 
 ## Do I need to do anything to keep my activated audiences functioning?
 
-Yes, once Adobe completes the upgrade (targeted on November xx), you will need to reauthenticate to Pinterest with your Pinterest advertiser account in Adobe Experience Platform. See the detailed instructions below.
+Yes, once Adobe completes the upgrade (targeted on November 16th), you will need to reauthenticate to Pinterest with your Pinterest advertiser account in Adobe Experience Platform. See the detailed instructions below.
 
 ### Reauthenticate to Pinterest {#reauthenticate}
 
@@ -51,11 +51,11 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 Yes, please see below:
  
-**By November 9**: The new destination is ready, and you should see two Pinterest cards side by side in the catalog, and all your existing dataflows to the current Pinterest card are copied to the new destination.
+**By November 16**: The new destination is ready, and you should see two Pinterest cards side by side in the catalog, and all your existing dataflows to the current Pinterest card are copied to the new destination.
 
 ![Old and new Pinterest destination side-by-side](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
-**By November 23**: <span class="preview">Customer action</span>. You need to reauthenticate to Pinterest so that the new card is connected to Pinterest (instructions further above). Once you have done this, reach out to us.
+**By December 15th**: <span class="preview">Customer action</span>. You need to reauthenticate to Pinterest so that the new card is connected to Pinterest (instructions further above). Once you have done this, reach out to us.
 
 The dataflows to Pinterest in the old card need to be disabled and the ones in the new card need to be enabled. You can do that manually in the UI, or you can reach out to Adobe and we will do that for you.
 
