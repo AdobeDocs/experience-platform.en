@@ -12,7 +12,7 @@ The dashboard provides usage metrics for each purchased product, the consolidate
 
 >[!NOTE]
 >
->The license usage dashboard is not enabled by default. Users must be granted "View License Usage Dashboard" permission to be able to view the dashboard. For steps on granting access permissions for viewing the license usage dashboard, refer to the [dashboard permissions guide](../permissions.md).
+>The license usage dashboard is not enabled by default. Users must be granted "View License Usage Dashboard" permission to be able to view the dashboard. For steps on granting access permissions for viewing the license usage dashboard, refer to the [dashboard permissions guide](../../dashboards/permissions.md).
 
 ## Compute hours {#compute-hours}
 
