@@ -1199,13 +1199,18 @@ The context provided to the template contains `input`  (the profiles / data that
 
 The table below provides descriptions for the functions in the examples above.
 
-|Function | Description |
-|---------|----------|
+|Function | Description | Example |
+|---------|----------|----------|
 | `input.profile` | The profile, represented as a [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Follows the partner XDM schema mentioned further above on this page.|
-| `destination.segmentAliases` | Map from audience IDs in the Adobe Experience Platform namespace to audience aliases in the partner's system. |
-| `destination.segmentNames` | Map from audience names in the Adobe Experience Platform namespace to audience names in the partner's system. |
-| `addedSegments(listOfSegments)` | Returns only the audiences that have status `realized`. |
-| `removedSegments(listOfSegments)` | Returns only the audiences that have status `exited`. |
+|`hasSegments`| This function takes a map of namespace audience IDs as parameter. The function returns `true` if there is at least one audience in the map (regardless of its status), and `false` otherwise. You can use this function to decide whether to iterate over a map of audiences or not.|`hasSegments(input.profile.segmentMembership)`|
+|`destination.namespaceSegmentAliases`| Map from audience IDs in a specific Adobe Experience Platform namespace to audience aliases in the partner's system.|`destination.namespaceSegmentAliases["ups"]["seg-id-1"]`|
+|`destination.namespaceSegmentNames`| Map from audience names in specific Adobe Experience Platform namespaces to audience names in the partner's system.|`destination.namespaceSegmentNames["ups"]["seg-name-1"]`|
+|`destination.namespaceSegmentTimestamps`|Returns the time when a audience was created, updated, or activated, in UNIX timestamp format.|<ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: returns the time when the segment with the ID `seg-id-1`, from the `ups` namespace, was created, in UNIX timestamp format.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: returns the time when the audience with the ID `seg-id-1`, from the `ups` namespace, was updated, in UNIX timestamp format.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: returns the time when the audience with the ID `seg-id-1`, from the `ups` namespace, was activated to the destination, in UNIX timestamp format.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: returns the time when the audience activation was updated on the destination, in UNIX timestamp format.</li></ul>|
+| `addedSegments(mapOfNamespacedSegmentIds)` | Returns only the audiences that have status `realized`, across all namespaces. | `addedSegments(input.profile.segmentMembership)`|
+| `removedSegments(mapOfNamespacedSegmentIds)` | Returns only the audiences that have status `exited`, across all namespaces. |`removedSegments(input.profile.segmentMembership)`|
+| `destination.segmentAliases` | **Deprecated. Replaced by `destination.namespaceSegmentAliases`** <br><br> Map from audience IDs in the Adobe Experience Platform namespace to audience aliases in the partner's system. |`destination.segmentAliases["seg-id-1"]`|
+| `destination.segmentNames` | **Deprecated. Replaced by `destination.namespaceSegmentNames`** <br><br>  Map from audience names in the Adobe Experience Platform namespace to audience names in the partner's system. |`destination.segmentNames["seg-name-1"]`|
+|`destination.segmentTimestamps`| **Deprecated. Replaced by `destination.namespaceSegmentTimestamps`** <br><br> Returns the time when a audience was created, updated, or activated, in UNIX timestamp format.|<ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: returns the time when the audience with the ID `seg-id-1` was created, in UNIX timestamp format.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: returns the time when the audience with the ID `seg-id-1` was updated, in UNIX timestamp format.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: returns the time when the audience with the ID `seg-id-1` was activated to the destination, in UNIX timestamp format.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: returns the time when the audience activation was updated on the destination, in UNIX timestamp format.</li></ul>|
 
 {style="table-layout:auto"}
 
