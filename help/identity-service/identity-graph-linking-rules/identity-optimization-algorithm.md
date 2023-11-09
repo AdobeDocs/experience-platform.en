@@ -97,7 +97,7 @@ In this example, the CRM ID and Email namespaces are designated as unique. Consi
 * `timestamp=3`: Your data engineer ingests Jane's CRM record, which results in her CRM ID getting linked to the bad email.
 * `timestamp=4`: Your data engineer ingests John's CRM record, which results in his CRM ID getting linked to the bad email.
   * This then becomes a violation of the configured limits as it creates a single graph with two CRM ID namespaces.
-  * As a result, the identity optimization algorithm deletes the older link, which in this case is the link between Jane's CRM ID namespace and the test<span>@test Email namespace.
+  * As a result, the identity optimization algorithm deletes the older link, which in this case is the link between Jane's identity with CRM ID namespace and the identity with test<span>@test.
 
 With identity optimization algorithm, bad identity values such as bogus emails or phone numbers do not get propagated across several different identity graphs.
 
@@ -110,13 +110,11 @@ ECIDs store unauthenticated (anonymous) events, while CRM ID stores authenticate
 View the diagram below to better understand how anonymous event association works:
 
 * Kevin and Nora share a tablet.
-  * Kevin logs in to an e-commerce website using his account, thereby establishing his CRM ID (login information) and an ECID (browser).
-  * Kevin logs out. At this point, the last authenticated user is Kevin.
-  * Nora logs in to an e-commerce website using her account, thereby establishing her CRM ID (login information) and the same ECID.
-  * Nora logs out and becomes the last authenticated user.
-  * Kevin uses the tablet to browse the e-commerce website, but does not log in with his account. Kevin's browsing activity are then stored in the ECID, which in turn is associated with Nora, because she is the last authenticated user.
+  * `timestamp=1`: Kevin logs in to an e-commerce website using his account, thereby establishing his CRM ID (login information) and an ECID (browser). Afterwards, Kevin logs out and becomes the last authenticated user.
+  * `timestamp=2`: Nora logs in to an e-commerce website using her account, thereby establishing her CRM ID (login information) and the same ECID. Afterwards, Nora logs out and becomes the last authenticated user.
+  * `timestamp=3`: Kevin uses the tablet to browse the e-commerce website, but does not log in with his account. Kevin's browsing activity are then stored in the ECID, which in turn is associated with Nora because she is the last authenticated user. At this point, Nora owns the anonymous events.
     * Until Kevin logs in again, all unauthenticated events will be stored against the ECID.
-  * Once Kevin logs in for a second time, he will own the unauthenticated events that occurred during:
+  * `timestamp=4`: Kevin logs in for a second time. At this point, he once again becomes the last authenticated user and also now owns the unauthenticated:
     * Before his initial login.
     * Anything he or Nora did while browsing anonymously, in-between Kevin's first and second logins.
 
