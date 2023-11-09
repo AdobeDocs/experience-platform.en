@@ -20,4 +20,8 @@ The [!UICONTROL Compute hours] metric is only applicable to customers with the D
 
 ![The license usage dashboard with the compute hours metric highlighted.](../images/data-distiller/compute-hours.png)
 
+>[!NOTE]
+>
+>**The data is available with limitations**: The data begins from Oct 1 2023 with no trends.<br>**Backfill** is ongoing to your contract period start date. The estimated completion date is Dec'2023.
+
 To find more information about the metrics available for your organization based on your organization's purchased license, see the [license usage dashboard guide](../../dashboards/guides/license-usage.md).
