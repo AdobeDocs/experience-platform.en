@@ -57,7 +57,7 @@ Select the **[!UICONTROL Assistant icon]** from the header to launch Assistant p
 
 ![The Experience Platform UI home page with Assistant icon selected.](./images/ai-assistant/ai-assistant.png)
 
-+++Use immersive mode
+<!-- +++Use immersive mode
 
 To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
 
@@ -69,7 +69,7 @@ A dedicated pop-up interface for Assistant appears at the center of your screen.
 
 +++
 
-From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case. 
+From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
 
 ### Example use case: Use Assistant to expedite your schema creation process
 
