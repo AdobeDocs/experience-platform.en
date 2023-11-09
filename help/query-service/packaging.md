@@ -1,9 +1,9 @@
 ---
-title: Query Service Packages
-description: The following document outlines the packages of capabilities and products available for Query Service and highlights the differences between ad hoc and batch queries.
+title: Query Service Packaging
+description: The following document outlines the packaging of capabilities and products available for Query Service and highlights the differences between ad hoc and batch queries.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
 ---
-# Query Service packages
+# Query Service packaging
 
 This document outlines the different types of packaging and query execution capabilities available in Query Service.
 
@@ -19,7 +19,7 @@ Query Service capabilities are packaged with the following products and add-ons:
 
 ## Terminology {#terminology}
 
-The following section provides definitions for key terms related to Query Service packages:
+The following section provides definitions for key terms related to Query Service packaging:
 
 - **Data lake storage**: The data lake primarily serves the following purposes:
     - Acts as the staging area for onboarding data into Experience Platform;
