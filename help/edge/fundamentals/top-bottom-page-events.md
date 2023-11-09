@@ -71,7 +71,7 @@ alloy("sendEvent", {
 });
 ```
 
-|Paramter| Required/Optional |Description|
+|Parameter| Required/Optional |Description|
 |---|---|---|
 |`personalization.includeRenderedPropositions`|Required|Set this parameter to `true`. This enables the sending of display notifications which were suppressed in the top of page event.|
 |`xdm`| Optional | Use this section to include all the data you need for the bottom of page event. |

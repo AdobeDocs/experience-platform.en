@@ -42,7 +42,7 @@ To start using [!DNL Adobe Journey Optimizer], follow the steps below.
     alloy("sendEvent", {
         ...
         "personalization": {
-        "surfaces": [ "web://my.site.com/about.html", "web://my.site.com/contact.html" ]
+            "surfaces": [ "web://my.site.com/about.html", "web://my.site.com/contact.html" ]
         }
     })
     ```

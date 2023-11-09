@@ -1,6 +1,6 @@
 ---
-title: Track Links Using the Adobe Experience Platform Web SDK
-description: Learn how to send Link Data to Adobe Analytics with Experience Platform Web SDK
+title: Track links using the Adobe Experience Platform Web SDK
+description: Learn how to send link data using the Web SDK
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
 ---
@@ -28,9 +28,9 @@ alloy("sendEvent", {
 });
 ```
 
-Starting with version 2.15.0, Web SDK captures the `region` of the clicked HTML element. This enables the [Activity Map](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html) reporting features in Adobe Analytics.
+Starting with version 2.15.0, Web SDK captures the `region` of the clicked HTML element. This field collects data for [Activity Map](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html) in Adobe Analytics.
 
-The link type can be one of three values: 
+Valid values for `web.webInteraction.type` include: 
 
 * **`other`:** A custom link
 * **`download`:** A download link

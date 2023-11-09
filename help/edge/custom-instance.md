@@ -59,3 +59,18 @@ Be sure to execute the `configure` command for each instance before executing ot
 ## Limitations
 
 To avoid conflicts with cookies, only one instance of Adobe Experience Platform [!DNL Web SDK] within a page can have a particular `edgeConfigId`. Similarly, only one instance of Adobe Experience Platform [!DNL Web SDK] can have a particular `orgId`.
+
+
+The "base code" creates a global function named `alloy`. Use this function to interact with the SDK. If you would like to name the global function something else, change the `alloy` name as follows:
+
+```markup
+<script>
+  !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
+  []).push(o),n[o]=function(){var u=arguments;return new Promise(
+  function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+  (window,["mycustomname"]);
+</script>
+<script src="https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js" async></script>
+```
+
+In this example, the global function is renamed `mycustomname`, instead of `alloy`.

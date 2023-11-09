@@ -169,3 +169,37 @@ The Adobe Experience Platform Web SDK is designed to work optimally in the lates
 
 * [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html)
 * [Source Code](https://github.com/adobe/alloy)
+
+### Supporting Internet Explorer {#support-internet-explore}
+
+This SDK uses promises, which are a method of communicating the completion of asynchronous tasks. The [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementation used by the SDK is natively supported by all target browsers except [!DNL Internet Explorer]. To use the SDK on [!DNL Internet Explorer], you must have `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+
+To determine if you already have `window.Promise` polyfilled:
+
+1. Open your website in [!DNL Internet Explorer].
+1. Open the browser's debugging console.
+1. Type `window.Promise` into the console, then press Enter.
+
+If something other than `undefined` appears, you likely have already polyfilled `window.Promise`. Another way to determine if `window.Promise` is polyfilled is by loading your website after having completed the above installation instructions. If the SDK throws an error mentioning something about a promise, you likely have not polyfilled `window.Promise`.
+
+If you've determined you must polyfill `window.Promise`, include the following script tag above the previously provided base code:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+```
+
+This tag loads a script that ensures that `window.Promise` is a valid Promise implementation.
+
+>[!NOTE]
+>
+>If you choose to load a different Promise implementation, be sure it supports `Promise.prototype.finally`.
+
+### Supporting Internet Explorer
+
+The Adobe Experience Platform SDK uses promises, which are a method of communicating the completion of asynchronous tasks. The [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementation used by the SDK is natively supported by all target browsers except [!DNL Internet Explorer]. To use the SDK on [!DNL Internet Explorer], you must have `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+
+One library you could use to polyfill promise is promise-polyfill. See the [promise-polyfill documentation](https://www.npmjs.com/package/promise-polyfill) for more information on how to install with NPM.
+
+>[!NOTE]
+>
+>If you choose to load a different Promise implementation, be sure it supports `Promise.prototype.finally`.
