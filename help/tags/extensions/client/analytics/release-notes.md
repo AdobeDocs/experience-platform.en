@@ -11,13 +11,22 @@ The following is a list of release notes for the Adobe Analytics tag extension.
 >
 >The Analytics tag extension if often updated in response to updates to the [AppMeasurement JavaScript library](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html). Refer to the [AppMeasurement release notes](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) for details on the specific versions mentioned below.
 
+## September 15, 2023
+
+**Adobe Analytics Extension 1.9.3**
+
+**Features**:
+
+* Upgraded to [AppMeasurement to v2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+
+
 ## July 19, 2023
 
 **Adobe Analytics Extension 1.9.2**
 
 **Features**:
 
-* Upgraded to AppMeasurement v2.24.0.
+* Upgraded to [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
 * Added an optional configuration (`decodeLinkParameters` default `false`) that decodes link URL's that includes double byte encoded characters.
 
 **Bug fixes**:
