@@ -44,6 +44,7 @@ Then, you need to manually disable existing flows to the old card and enable flo
     ![Filter Pinterest dataflows only in the Browse tab](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
 2. Select the hyperlinked connection name (Loyalty campaign in the screenshot example above) and switch the **[!UICONTROL Enable]** toggle to **off** for the old connection and to **on** for the new connection.
     ![Toggle on for new connections and off for old connections](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle.png)
+3. Compare the activated audience list in the old and new dataflow and make sure that you do not have any new audiences in the old flows that are missing missing in the new flows.
 
 While no disruption to your campaigns is expected, remember to check in the Pinterest UI that everything works as expected.
 
@@ -54,6 +55,10 @@ Yes, please see below:
 **By November 16**: The new destination is ready, and you should see two Pinterest cards side by side in the catalog, and all your existing dataflows to the current Pinterest card are copied to the new destination.
 
 ![Old and new Pinterest destination side-by-side](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
+
+>[!IMPORTANT]
+>
+>After November 16th, the legacy Pinterest destination is marked **[!UICONTROL Deprecating]** and we *do not recommend* that customers activate new audiences to the old destination. If you do that, you will then have to follow the [regular activation steps](/help/destinations/ui/activate-segment-streaming-destinations.md) to add the audience to the new destination once the customer actions are taken.
 
 **By December 15th**: <span class="preview">Customer action</span>. You need to reauthenticate to Pinterest so that the new card is connected to Pinterest (instructions further above). Once you have done this, reach out to us.
 
