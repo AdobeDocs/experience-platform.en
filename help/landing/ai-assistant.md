@@ -91,25 +91,45 @@ A given answer provides hyperlinks to any referenced entities. In the example be
 
 Assistant provides you with a way to validate your answer by viewing its source. Links to the documentation are provided for concept questions, while data usage questions can be verified with an SQL query that demonstrates how the answer was computed.
 
-![Options provided by Assistant after returning an answer.](./images/ai-assistant/options-post-answer.png)
-
-#### Related suggestions
-
-You can also dive deeper into the topic of your query by selecting one of the related suggestions that Assistant provides. 
-
-![Related suggestions.](./images/ai-assistant/related-suggestions.png)
+![Options provided by Assistant after returning an answer.](./images/ai-assistant/options.png)
 
 #### Follow up question
 
++++Select to view an example of a follow up question
+
 You can further learn more about a particular topic by asking a follow up question. In the next example, the Assistant is asked how the eventType can be used in segmentation.
 
-![A follow up question and answer displayed on the Assistant for Experience Platform.](./images/ai-assistant/follow-up-answer.png)
+![A follow up question and answer displayed on the Assistant for Experience Platform.](./images/ai-assistant/follow-up-question.png)
+
++++
 
 #### Data usage question
 
++++Select to view an example of a data usage question
+
 You can also ask the Assistant questions regarding your data usage. When inquiring about data usage, you must be in an active sandbox in order for the Assistant to answer your query.
 
+For responses that involve data usage information, Assistant provides links to entities in question. In addition, Assistant provides you with an explanation on how it computed its answer.
+
 ![A data usage question, asking how many segments a user has.](./images/ai-assistant/data-usage-question.png)
+
++++
+
+#### Use autocomplete
+
++++Select to view an example of autocomplete
+
+You can use the autocomplete function to receive a list of data objects that exist in your sandbox. Autocomplete recommendations are available for the following domains: segments, schemas, datasets, sources, and destinations.
+
+To use autocomplete, enter a plus symbol (**`+`**) as part of your question. Alternatively, you can also select the plus symbol (**`+`**) in the text input box. Then, a window appears with a list of recommended data objects the exist in your sandbox.
+
+![](./images/ai-assistant/autocomplete-options.png)
+
+Next, select the data object that you want to query to complete your question and then submit your question.
+
+![](./images/ai-assistant/autocomplete-question.png)
+
++++
 
 ## Scope
 
@@ -162,13 +182,9 @@ You can verify the response that the Assistant returns using a number of differe
 
 With every response, Assistant provides you with citations that you can refer to for verification or more information.
 
-Select **[!UICONTROL Show source]** for a list of links to documentation that the Assistant references to compute its response.
+Select **[!UICONTROL Show source]** for a list of links to documentation that the Assistant references to compute its response. When you select a link to the referenced documentation, you are taken to the relevant section of that particular page, with the specific information highlighted.
 
-![The links to the source displayed in the Assistant.](./images/ai-assistant/sources.png)
-
-For responses that involve data usage information, Assistant provides links to entities in question. In addition, Assistant provides you with an explanation on how it computed its answer.
-
-![explanation](./images/ai-assistant/explanation.png)
+![The links to the source displayed in the Assistant.](./images/ai-assistant/show-sources.png)
 
 ## Provide feedback
 
@@ -202,7 +218,7 @@ Select the thumbs down icon to provide feedback on what could be improved upon b
 
 Select the flag icon to provide further reports on your experience using the Assistant.
 
-![The report results window.](./images/ai-assistant/report-results.png)
+![The report results window.](./images/ai-assistant/flag.png)
 
 >[!ENDTABS]
 
