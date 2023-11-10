@@ -1,9 +1,47 @@
-### `clickCollectionEnabled` {#clickCollectionEnabled}
+---
+title: clickCollectionEnabled
+description: Determine if link click data is automatically collected.
+---
+# `clickCollectionEnabled`
 
-| Type | Required | Default Value |
-| -------- | ------------ | ----------------- |
-| Boolean  | No           | `true`            |
+The `clickCollectionEnabled` property is a boolean that determines if the Web SDK automatically collects link data.
 
-{style="table-layout:auto"}
+If not disabled, the following XDM elements automatically populate with data:
 
-Indicates whether data associated with link clicks are automatically collected. See [Automatic Link Tracking](../data-collection/track-links.md#automaticLinkTracking) for more information. Links are also labeled as download links if they include a download attribute or if the link ends with a file extension. Download link qualifiers can be configured with a regular expression. The default value is `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
+* `web.webInteraction.type`
+* `web.webInteraction.value`
+
+If you omit this property when configuring the Web SDK, it defaults to `true`.
+
+## Automatic link tracking logic
+
+The Web SDK tracks all clicks on `<a>` and `<area>` HTML elements if it doesn't have an `onClick` attribute. Clicks are captured with a [capture](https://www.w3.org/TR/uievents/#capture-phase) click event listener that is attached to the document. When a valid link is clicked, the following logic is run in order:
+
+1. If the link matches criteria based on values in [`downloadLinkQualifier`](downloadLinkQualifier.md), `web.webInteraction.type` is set to `"download"`.
+1. If the link target domain differs from the current `window.location.hostname`, `web.webInteraction.type` is set to `"exit"`.
+1. If the link doesn't qualify for either `"download"` or `"exit"`, `web.webInteraction.type` is set to `"other"`.
+
+In all cases, `web.webInteraction.value` is set to the link text label. If you want to set this value to the URL instead, you can override this XDM element using [`onBeforeLinkClickSend`](onbeforelinkclicksend.md).
+
+## Enable automatic link tracking in the Web SDK extension
+
+Select the [!UICONTROL Enable click data collection] checkbox when configuring the extension.
+
+1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Navigate to [!UICONTROL Data Collection] > [!UICONTROL Tags]
+1. Select the desired tag property.
+1. Navigate to [!UICONTROL Extensions], then click [!UICONTROL Configure] on the [!UICONTROL Adobe Experience Platform Web SDK] card.
+1. Scroll down to the [!UICONTROL Data Collection] section, then select the checkbox [!UICONTROL Enable click data collection].
+1. Click [!UICONTROL Save], then publish your changes.
+
+## Enable automatic link tracking using alloy.js
+
+Set the `clickCollectionEnabled` boolean when running the `configure` command.
+
+```js
+alloy("configure", {
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg",
+  "clickCollectionEnabled": true
+});
+```
