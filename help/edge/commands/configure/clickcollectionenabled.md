@@ -28,11 +28,11 @@ In all cases, `web.webInteraction.value` is set to the link text label. If you w
 Select the [!UICONTROL Enable click data collection] checkbox when configuring the extension.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
-1. Navigate to [!UICONTROL Data Collection] > [!UICONTROL Tags]
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
-1. Navigate to [!UICONTROL Extensions], then click [!UICONTROL Configure] on the [!UICONTROL Adobe Experience Platform Web SDK] card.
-1. Scroll down to the [!UICONTROL Data Collection] section, then select the checkbox [!UICONTROL Enable click data collection].
-1. Click [!UICONTROL Save], then publish your changes.
+1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
+1. Scroll down to the [!UICONTROL Data Collection] section, then select the checkbox **[!UICONTROL Enable click data collection]**.
+1. Click **[!UICONTROL Save]**, then publish your changes.
 
 ## Enable automatic link tracking using alloy.js
 
