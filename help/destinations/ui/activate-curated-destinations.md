@@ -52,6 +52,12 @@ After you've exported your audiences, you activate them by using the [[!DNL Live
 >
 >This process enables you to activate your audiences to destinations such as [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney), and more, directly from the Real-Time CDP UI, without the need to log in to your [!DNL LiveRamp] account for activation.
 
+### Video tutorial {#video}
+
+Watch the video below for an end-to-end explanation of the workflow described in this page.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425367)
+
 ### Step 1: Send your audiences from Experience Platform to LiveRamp, through the [!DNL LiveRamp - Onboarding] destination {#onboarding}
 
 The first thing that you must do in order to activate your audiences to curated destinations based on LiveRamp RampIDs is to **export your audiences from Experience Platform to [!DNL LiveRamp]**.
