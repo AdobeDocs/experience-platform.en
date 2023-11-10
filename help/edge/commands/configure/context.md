@@ -1,44 +1,102 @@
-### `context` {#context}
-
-| **Type**         | Required | **Default Value**                                  |
-| ---------------- | ------------ | -------------------------------------------------- |
-| Array of Strings | No           | `["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]` |
-
-{style="table-layout:auto"}
-
-Indicates which context categories to collect automatically as described in [Automatic Information](../data-collection/automatic-information.md). If this configuration is not specified, all categories are used by default.
-
->[!IMPORTANT]
->
->All context properties, with the exception of `highEntropyUserAgentHints`, are enabled by default. If you specified context properties manually in your Web SDK configuration, you must enable all context properties to continue collecting the needed information.
-
-To enable [high entropy client hints](user-agent-client-hints.md#enabling-high-entropy-client-hints) on your Web SDK deployment, you must include the additional `highEntropyUserAgentHints` context option, alongside your existing configuration.
-
-For example, to retrieve high entropy client hints from web properties, your configuration would look like this:
-
-`context: ["highEntropyUserAgentHints", "web"]`
-
 ---
+title: context
+description: Automatically collect device, environment, or location data.
+---
+# `context`
 
-Adobe Experience Platform Web SDK automatically collects some information out of the box. If your organization does not want to automatically collect this data, you can use the `context` option in the [`configure` command](../fundamentals/configuring-the-sdk.md).
+The `context` property is an array of strings that determines what the Web SDK can automatically collect. While this data can provide great value, omitting some of this data can be beneficial so that you can comply with your organization's privacy policy.
 
-Keywords excluded from the `context` array are not included in data collection. If the `context` array does not exist in the `configure` command, all the data in the table below is automatically collected.
+## Context keywords and XDM elements
 
-| Name | Description | `context` array keyword | XDM path | Example value |
-| --- | --- | --- | --- | --- |
-| Screen height | The height of the screen in pixels. | `device` | `events[].xdm.device.screenHeight` | `900` |
-| Screen width | The width of the screen in pixels. | `device` | `events[].xdm.device.screenWidth` | `1440` |
-| Screen orientation | The orientation of the screen. | `device` | `events[].xdm.device.screenOrientation` | `landscape` or `portrait` |
-| Environment type | The type of environment through which the experience surfaced. Adobe Experience Platform Web SDK always sets this field to `browser`. | `environment` | `events[].xdm.environment.type` | `browser` |
-| Viewport height | The height of the browser's content area in pixels. | `environment` | `events[].xdm.environment.browserDetails.viewportHeight` | `679` |
-| Viewport width | The width of the browser's content area in pixels. | `environment` | `events[].xdm.environment.browserDetails.viewportWidth` | `642` |
-| SDK name | The SDK identifier. This field uses a URI to improve uniqueness among identifiers provided by different software libraries. When the standalone library is used, the value is `https://ns.adobe.com/experience/alloy`. When the library is used as part of the tag extension, the value is `https://ns.adobe.com/experience/alloy+reactor`. | | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
-| SDK version | When the standalone library is used, the value is the library version. When the library is used as part of the tag extension, the value is a concatenation of the library version and tag extension version. | | `events[].xdm.implementationDetails.version` | `2.1.0+2.1.3` |
-| Environment | The environment where the data was collected. Adobe Experience Platform Web SDK always sets this field to `browser`. | | `events[].xdm.implementationDetails.environment` | `browser` |
-| Local time | Local timestamp for the end user in simplified extended ISO format [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | `placeContext` | `events[].xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
-| Local timezone offset | Number of minutes that the user is offset from GMT. | `placeContext` | `events[].xdm.placeContext.localTimezoneOffset` | `360` |
-| Timestamp | The UTC timestamp for the end user in simplified extended ISO format [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6). | Always included | `events[].xdm.timestamp` | `YYYY-08-07T22:47:17.129Z` |
-| Current page URL | The URL of the current page. | `web` | `events[].xdm.web.webPageDetails.URL` | `https://example.com/index.html` |
-| Referrer URL | The URL of the previous page visited. | `web` | `events[].xdm.web.webReferrer.URL` | `http://example.org/linkedpage.html` |
+If you include a given context keyword, the Web SDK populates all of its associated XDM elements. If you want to omit a specific XDM element while allowing others, you can clear values out using [`onBeforeEventSend`](onbeforeeventsend.md). If you send multiple events on a page, the Web SDK includes these fields on every `SendEvent` call.
+
+### Web
+
+The `"web"` keyword collects information about the current page.
+
+| Dimension | Description | XDM path | Example value |
+| --- | --- | --- | --- |
+| Page URL | The URL of the current page. | `xdm.web.webPageDetails.URL` | `https://example.com/index.html` |
+| Referrer URL | The URL of the previous page visited. | `xdm.web.webReferrer.URL` | `http://example.org/linkedpage.html` |
 
 {style="table-layout:auto"}
+
+### Device
+
+The `"device"` keyword collects information about the user's device.
+
+| Dimension | Description | XDM path | Example value |
+| --- | --- | --- | --- |
+| Screen height | The height of the screen in pixels. | `xdm.device.screenHeight` | `900` |
+| Screen width | The width of the screen in pixels. | `xdm.device.screenWidth` | `1440` |
+| Screen orientation | The orientation of the screen. | `xdm.device.screenOrientation` | `landscape` or `portrait` |
+
+{style="table-layout:auto"}
+
+### Environment
+
+The `"environment"` keyword collects information about the user's browser.
+
+| Dimension | Description | XDM path | Example value |
+| --- | --- | --- | --- |
+| Environment type | The type of environment through which the experience surfaced. The Web SDK always sets this field to `browser`. | `xdm.environment.type` | `browser` |
+| Viewport height | The height of the browser's content area in pixels. | `xdm.environment.browserDetails.viewportHeight` | `679` |
+| Viewport width | The width of the browser's content area in pixels. | `xdm.environment.browserDetails.viewportWidth` | `642` |
+
+{style="table-layout:auto"}
+
+### Place context
+
+The `"placeContext"` keyword collects information about the user's location.
+
+| Dimension | Description | XDM path | Example value |
+| --- | --- | --- | --- |
+| Local time | Local timestamp for the end user in simplified extended [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format. | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
+| Local timezone offset | The number of minutes that the user is offset from GMT. | `xdm.placeContext.localTimezoneOffset` | `360` |
+
+{style="table-layout:auto"}
+
+### High entropy client hints
+
+The `"highEntropyUserAgentHints"` keyword collects detailed information about the user's device. This data is included in the HTTP header of the request sent to Adobe. After the data has arrived within the Edge network, the XDM object is populated depending on how you [configure your datastream](/help/datastreams/configure.md):
+
+* If you configure your datastream to keep user agent and client hint headers, the full string is included under `xdm.environment.browserDetails.userAgent`.
+* If you configure your datastream to use device lookup, see the table below to see which XDM elements are populated.
+
+| Dimension | Description | HTTP header | Device lookup XDM path | Example value |
+| --- | --- | --- | --- | --- |
+| Operating system version | The version of the operating system. | `Sec-CH-UA-Platform-Version` | `xdm.environment.operatingSystemVersion` | |
+| Architecture | The underlying CPU architecture. | `Sec-CH-UA-Arch` | | |
+| Device model | The name of the device used. | `Sec-CH-UA-Model` | `xdm.device.modelNumber` | |
+| Bitness | The number of bits the underlying CPU architecture supports. | `Sec-CH-UA-Bitness` | | |
+| Browser vendor | The company that created the browser. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.vendor` | |
+| Browser name | The browser used. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.name` | |
+| Browser version | The exact version of the browser. The low entropy hint `Sec-CH-UA` only collects the significant version, not the exact version. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.version` | |
+
+{style="table-layout:auto"}
+
+## Collect context information in the Web SDK extension
+
+The context information setting is a combination of radio buttons and check boxes when configuring the extension. Each checkbox maps to a context keyword.
+
+1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Select the desired tag property.
+1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
+1. Scroll down to the [!UICONTROL Data Collection] section, then select either **[!UICONTROL All default context information]** or **[!UICONTROL Specific context information]**.
+1. If you select **[!UICONTROL Specific context information]**, enable the check box next to each desired context information element.
+1. Click **[!UICONTROL Save]**, then publish your changes.
+
+## Collect context information using alloy.js
+
+Set the `context` array of strings when running the `configure` command. If you omit this property when configuring the SDK, all context information except `"highEntropyUserAgentHints"` is collected by default. Set this property if you want to collect high entropy client hints, or if you want to omit other context information from data collection. Strings can be included in any order.
+
+If you want to collect all context information including high entropy client hints, you must include every value in the `context` array string.
+
+```js
+alloy("configure", {
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg",
+  "context": ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]
+});
+```
