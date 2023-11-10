@@ -91,7 +91,9 @@ The context information setting is a combination of radio buttons and check boxe
 
 Set the `context` array of strings when running the `configure` command. If you omit this property when configuring the SDK, all context information except `"highEntropyUserAgentHints"` is collected by default. Set this property if you want to collect high entropy client hints, or if you want to omit other context information from data collection. Strings can be included in any order.
 
-If you want to collect all context information including high entropy client hints, you must include every value in the `context` array string.
+>[!NOTE]
+>
+>If you want to collect all context information including high entropy client hints, you must include every value in the `context` array string.
 
 ```js
 alloy("configure", {
