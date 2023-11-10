@@ -55,6 +55,12 @@ Understand from the table below which dataset types you can export depending on 
 </tbody>
 </table>
 
+## Video tutorial {#video-tutorial}
+
+Watch the video below for an end-to-end explanation of the workflow described on this page, benefits of using the export dataset functionality, and some suggested use cases.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
+
 ## Supported destinations {#supported-destinations}
 
 Currently, you can export datasets to the cloud storage destinations highlighted in the screenshot and listed below. 
