@@ -37,10 +37,10 @@ By reading this document, you have been introduced to the important concepts beh
 
 The documents included in this series of guides, describe the basic steps for creating feature pipelines from Experience Platform to feed custom models in your machine learning environment. You are now ready to establish a connection between Data Distiller and your [!DNL Jupyter Notebook].
 
-- [Connect to Data Distiller from a [!DNL Python] notebook](./establish-connection.md)
-- [Explore and analyze datasets](./exploratory-analysis.md)
-- [Engineer features for machine learning](./feature-engineering.md)
-- [Export feature datasets](./export-data.md)
+- **Step 1**: [Connect to Data Distiller from a [!DNL Python] notebook](./establish-connection.md)
+- **Step 2**: [Explore and analyze datasets](./exploratory-analysis.md)
+- **Step 3**: [Engineer features for machine learning](./feature-engineering.md)
+- **Step 4**: [Export feature datasets](./export-data.md)
 
 ## Additional resources
 
