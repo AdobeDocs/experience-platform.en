@@ -4,7 +4,7 @@ description: Determine if link click data is automatically collected.
 ---
 # `clickCollectionEnabled`
 
-The `clickCollectionEnabled` property is a boolean that determines if the Web SDK automatically collects link data.
+The `clickCollectionEnabled` property is a boolean that determines if the Web SDK automatically collects link data. This property is valuable in cases where you prefer to manually track link data.
 
 If not disabled, the following XDM elements automatically populate with data:
 
