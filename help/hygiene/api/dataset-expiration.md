@@ -27,7 +27,11 @@ Once the dataset deletion is initiated, its expiration job will be marked as `ex
 
 ## Getting started
 
-The endpoint used in this guide is part of the Data Hygiene API. Before continuing, please review the [overview](./overview.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The endpoint used in this guide is part of the Data Hygiene API. Before continuing, please review the [API guide](./overview.md) for information on required headers for CRUD operations, error messages, Postman collections, and how to read sample API calls.
+
+>[!IMPORTANT]
+>
+>When making calls to the data Hygiene API, you must use the -H `x-sandbox-name: {SANDBOX_NAME}` header.
 
 ## List dataset expirations {#list}
 
@@ -41,7 +45,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 | Parameter | Description |
 | --- | --- |
-| `{QUERY_PARAMETERS}` | A list of optional query parameters, with multiple parameters separated by `&` characters. Common parameters include `size` and `page` for pagination purposes. For a full list of supported query parameters, refer to the [appendix section](#query-params). |
+| `{QUERY_PARAMETERS}` | A list of optional query parameters, with multiple parameters separated by `&` characters. Common parameters include `limit` and `page` for pagination purposes. For a full list of supported query parameters, refer to the [appendix section](#query-params). |
 
 {style="table-layout:auto"}
 
@@ -72,7 +76,7 @@ A successful response lists the resulting dataset expirations. The following exa
       "status": "pending",
       "expiry": "2050-01-01T00:00:00Z",
       "updatedAt": "2023-06-09T16:52:44.136028Z",
-      "updatedBy": "Jane Doe 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
+      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
     }
   ],
   "current_page": 0,
@@ -276,13 +280,11 @@ DELETE /ttl/{EXPIRATION_ID}
 
 **Request**
 
-The following request cancels a dataset expiration with ID `SD-b16c8b48-a15a-45c8-9215-
-587ea89369bf`:
+The following request cancels a dataset expiration with ID `SD-b16c8b48-a15a-45c8-9215-587ea89369bf`:
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/core/hygiene/ttl/SD-b16c8b48-a15a-45c8-9215-
-587ea89369bf \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-b16c8b48-a15a-45c8-9215-587ea89369bf \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -293,7 +295,7 @@ curl -X DELETE \
 
 A successful response returns HTTP status 204 (No Content), and the expiration's `status` attribute is set to `cancelled`.
 
-## Retrieve the expiration status history of a dataset
+## Retrieve the expiration status history of a dataset {#retrieve-expiration-history}
 
 You can look up the expiration status history of a specific dataset by using the query parameter `include=history` in a lookup request. The result includes information about about the creation of the dataset expiration, any updates that have been applied, and its cancellation or execution (if applicable). You can also use the `ttlId` of the dataset expiration.
 
@@ -328,36 +330,35 @@ A successful response returns the details of the dataset expiration, with a `his
 
 ```json
 {
-  "ttlId": "SD-b16c8b48-a15a-45c8-9215-
-587ea89369bf",
+  "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
   "datasetId": "62759f2ede9e601b63a2ee14",
   "datasetName": "Example Dataset",
   "sandboxName": "prod",
   "displayName": "Expiration Request 123",
   "description": "Expiration Request 123 Description",
-  "imsOrg": "{ORG_ID}",
+  "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
   "status": "cancelled",
   "expiry": "2022-05-09T23:47:30.071186Z",
   "updatedAt": "2022-05-09T23:47:30.071186Z",
-  "updatedBy": "{USER_ID}",
+  "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
   "history": [
     {
       "status": "created",
       "expiry": "2032-12-31T23:59:59Z",
       "updatedAt": "2022-05-09T22:38:40.393115Z",
-      "updatedBy": "{USER_ID}"
+      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
     },
     {
       "status": "updated",
       "expiry": "2032-12-31T23:59:59Z",
       "updatedAt": "2022-05-09T22:41:46.731002Z",
-      "updatedBy": "{USER_ID}"
+      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
     },
     {
       "status": "cancelled",
       "expiry": "2022-05-09T23:47:30.071186Z",
       "updatedAt": "2022-05-09T23:47:30.071186Z",
-      "updatedBy": "{USER_ID}"
+      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
     }
   ]
 }
@@ -382,9 +383,13 @@ A successful response returns the details of the dataset expiration, with a `his
 
 The following table outlines the available query parameters when [listing dataset expirations](#list):
 
+>[!NOTE]
+>
+>The `description`, `displayName`, and `datasetName` parameters all contain the ability to searched for by LIKE values. This means that you can find scheduled dataset expirations named: "Name123", "Name183", "DisplayName1234" by searching for the string "Name1".
+
 | Parameter | Description | Example |
 | --- | --- | --- |
-| `size` | An integer between 1 and 100 that indicates the maximum number of expirations to return. Defaults to 25. | `size=50` |
+| `limit` | An integer between 1 and 100 that indicates the maximum number of expirations to return. Defaults to 25. | `limit=50` |
 | `page` | An integer that indicates which page of expirations to return. | `page=3` |
 | `orgId` | Matches datasets expirations whose organization ID matches that of the parameter. This value defaults to that of the `x-gw-ims-org-id` headers, and is ignored unless the request supplies a service token. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `status` | A comma-separated list of statuses. When included, the response matches dataset expirations whose current status is among those listed. | `status=pending,cancelled` |
@@ -403,5 +408,9 @@ The following table outlines the available query parameters when [listing datase
 | `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | Matches expirations that were cancelled at any time in the indicated interval. This applies even if the expiration was later reopened (by setting a new expiry for the same dataset). | `updatedDate=2022-01-01` |
 | `completedDate` / `completedToDate` / `completedFromDate` | Matches expirations that were completed during the specified interval. | `completedToDate=2021-11-11-06:00` |
 | `expiryDate` / `expiryToDate` / `expiryFromDate` | Matches expirations that are due to be executed, or have already been executed, during the specified interval. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
+| `orderBy`  |   | INCLUDE INFO FROM DENNIS  |
+| `executedDate`  |   |   |
+| `executedFromDate`  |   |   |
+|  `executedToDate` |   |   |
 
 {style="table-layout:auto"}
