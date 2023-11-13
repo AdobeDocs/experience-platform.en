@@ -95,7 +95,6 @@ A successful response lists the resulting dataset expirations. The following exa
 ## Look up a dataset expiration {#lookup}
 
 To lookup a dataset expiration, make a GET request with either the `datasetId` or the `ttlId`. 
-<!-- You can look up the expiration status history of a specific dataset by using the query parameter `include=history` in a lookup request. The result includes information about about the creation of the dataset expiration, any updates that have been applied, and its cancellation or execution (if applicable). You can also use the `ttlId` of the dataset expiration. -->
 
 **API format**
 
@@ -187,7 +186,6 @@ The following JSON represents a truncated response for a dataset's details from 
 ## Create or update a dataset expiration {#create-or-update}
 
 Create or update an expiration date for a dataset through a PUT request. The PUT request uses either the `datasetId` or the `ttlId`. 
-<!-- You can look up the expiration status history of a specific dataset by using the query parameter `include=history` in a lookup request. The result includes information about about the creation of the dataset expiration, any updates that have been applied, and its cancellation or execution (if applicable). You can also use the `ttlId` of the dataset expiration. -->
 
 **API format**
 
