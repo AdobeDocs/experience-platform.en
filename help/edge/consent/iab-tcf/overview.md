@@ -6,7 +6,7 @@ exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
 ---
 # IAB TCF 2.0 support in the Adobe Experience Platform Web SDK
 
-The Adobe Experience Platform Web SDK has support for the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows the requirements for supporting IAB TCF 2.0 through Adobe Experience Platform Web SDK integrating with Adobe Real-Time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics, and Experience Edge.
+The Adobe Experience Platform Web SDK has support for the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows the requirements for supporting IAB TCF 2.0 through Adobe Experience Platform Web SDK integrating with Adobe Real-Time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics, and Edge Network.
 
 Additionally, the following guides are available to assist in learning how to integrate IAB TCF 2.0 with and without tags.
 
@@ -65,9 +65,9 @@ For more information on default consent, refer to the [default consent section](
 
 ### Setting consent when it changes
 
-Adobe Experience Platform Web SDK has a `setConsent` command, which communicates your customer's consent preferences to all the Adobe services using IAB TCF 2.0. If you are integrating with Real-Time CDP, this updates your customer's profile. If you are integrating with Audience Manager, this updates your customer's information. Calling this also sets a cookie with an all-or-nothing consent preference that controls whether future Experience Events are allowed to be sent. It is intended that this action is called whenever consent changes. On future page loads, the Experience Edge consent cookie will be read to determine whether Experience Events can be sent, and whether an identity cookie can be set.
+Adobe Experience Platform Web SDK has a `setConsent` command, which communicates your customer's consent preferences to all the Adobe services using IAB TCF 2.0. If you are integrating with Real-Time CDP, this updates your customer's profile. If you are integrating with Audience Manager, this updates your customer's information. Calling this also sets a cookie with an all-or-nothing consent preference that controls whether future Experience Events are allowed to be sent. It is intended that this action is called whenever consent changes. On future page loads, the Edge Network consent cookie will be read to determine whether Experience Events can be sent, and whether an identity cookie can be set.
 
-Similar to Audience Manager's IAB TCF 2.0 integration, Experience Edge gives consent when a customer has provided their explicit consent to the following purposes:
+Similar to Audience Manager's IAB TCF 2.0 integration, the Edge Network gives consent when a customer has provided their explicit consent to the following purposes:
 
 - **Purpose 1:** Store and/or access information on a device
 - **Purpose 10:** Develop and improve products

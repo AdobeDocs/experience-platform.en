@@ -134,7 +134,7 @@ alloy("sendEvent", {
 
 >[!IMPORTANT]
 >
->The `datasetId` option supported by the `sendEvent` command was deprecated. To override a dataset ID, use [configuration overrides](../datastreams/overrides.md) instead.
+>The `datasetId` option supported by the `sendEvent` command was deprecated. To override a dataset ID, use [configuration overrides](../../datastreams/overrides.md) instead.
 
 In some use cases, you might want to send an event to a dataset other than the one configured in the Configuration UI. For that you need to set the `datasetId` option on the `sendEvent` command:
 
@@ -212,7 +212,7 @@ The `sendEvent` command returns a promise that is resolved with a `result` objec
 
 **decisions**: This property is deprecated. Please use `propositions` instead.
 
-**destinations**: Segments from Adobe Experience Platform that can be shared with external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites. [Learn more about destinations.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html?lang=en)
+**destinations**: Segments from Adobe Experience Platform that can be shared with external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites. [Learn more about destinations.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)
 
 >[!WARNING]
 >

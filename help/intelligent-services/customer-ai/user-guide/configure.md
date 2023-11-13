@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;user guide;customer ai;popular topics;configure instance;create instance;
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Configure a Customer AI Instance
 description: AI/ML Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
@@ -62,7 +62,7 @@ By design, Customer AI uses Adobe Analytics, Adobe Audience Manager, Experience 
 
 ![Select and search for dataset](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
-After selecting the datasets you wish to use, select the **[!UICONTROL Add]** button to add the datasets to the the dataset preview pane.
+After selecting the datasets you wish to use, select the **[!UICONTROL Add]** button to add the datasets to the dataset preview pane.
 
 ![Select datasets](../images/user-guide/select-datasets.png)
 

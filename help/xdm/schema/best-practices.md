@@ -7,7 +7,7 @@ exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 ---
 # Best practices for data modeling
 
-[!DNL Experience Data Model] (XDM) is the core framework that standardizes customer experience data by providing common structures and definitions for use in downstream Adobe Experience Platform services. By adhering to XDM standards, all customer experience data can be incorporated into a common representation that allows you to gain valuable insights from customer actions, define customer audiences through segments, and express customer attributes for personalization purposes.
+[!DNL Experience Data Model] (XDM) is the core framework that standardizes customer experience data by providing common structures and definitions for use in downstream Adobe Experience Platform services. By adhering to XDM standards, all customer experience data can be incorporated into a common representation that allows you to gain valuable insights from customer actions, define customer audiences, and express customer attributes for personalization purposes.
 
 Since XDM is extremely versatile and customizable by design, it is therefore important to follow best practices for data modeling when designing your schemas. This document covers the key decisions and considerations you must make when mapping your customer experience data to XDM.
 
@@ -86,24 +86,24 @@ If you want to analyze how certain attributes within an entity change over time,
 
 #### Segmentation use cases
 
-When categorizing your entities, it is important to think about the audience segments you may want to build to address your particular business use cases.
+When categorizing your entities, it is important to think about the audiences you may want to build to address your particular business use cases.
 
-For example, a company wants to know all of the "Gold" or "Platinum" members of their loyalty program that have made more than five purchases in the last year. Based on this segment logic, the following conclusions can be made regarding how relevant entities should be represented:
+For example, a company wants to know all of the "Gold" or "Platinum" members of their loyalty program that have made more than five purchases in the last year. Based on this segmentation logic, the following conclusions can be made regarding how relevant entities should be represented:
 
-* "Gold" and "Platinum" represent loyalty statuses applicable to an individual customer. Since the segment logic is only concerned with the current loyalty status of customers, this data can be modeled as part of a profile schema. If you wished to track changes in loyalty status over time, you could also create an additional event schema for loyalty status changes.
-* Purchases are events which occur at a particular time, and the segment logic is concerned with purchase events within a specified time window. This data should therefore be modeled as an event schema.
+* "Gold" and "Platinum" represent loyalty statuses applicable to an individual customer. Since the segmentation logic is only concerned with the current loyalty status of customers, this data can be modeled as part of a profile schema. If you wished to track changes in loyalty status over time, you could also create an additional event schema for loyalty status changes.
+* Purchases are events which occur at a particular time, and the segmentation logic is concerned with purchase events within a specified time window. This data should therefore be modeled as an event schema.
 
 #### Activation use cases
 
-In addition to considerations regarding segmentation use cases, you should also review the activation use cases for those segments in order to identify additional relevant attributes.
+In addition to considerations regarding segmentation use cases, you should also review the activation use cases for those audiences in order to identify additional relevant attributes.
 
-For example, a company has built an audience segment based on the rule that `country = US`. Then, when activating that segment to certain downstream targets, the company wants to filter all exported profiles based on home state. Therefore, a `state` attribute should also be captured in the applicable profile entity.
+For example, a company has built an audience based on the rule that `country = US`. Then, when activating that audience to certain downstream targets, the company wants to filter all exported profiles based on home state. Therefore, a `state` attribute should also be captured in the applicable profile entity.
 
 #### Aggregated values
 
 Based on the use case and granularity of your data, you should decide whether certain values need to be pre-aggregated before being included in a profile or event entity.
 
-For example, a company wants to build a segment based on the number of cart purchases. You can choose to incorporate this data at the lowest granularity by including each timestamped purchase event as its own entity. However, this can sometimes increase the number of recorded events exponentially. To reduce the number of ingested events, you can choose to create an aggregate value `numberOfPurchases` over a weeklong or monthlong period. Other aggregate functions like MIN and MAX can also apply to these situations.
+For example, a company wants to build an audience based on the number of cart purchases. You can choose to incorporate this data at the lowest granularity by including each timestamped purchase event as its own entity. However, this can sometimes increase the number of recorded events exponentially. To reduce the number of ingested events, you can choose to create an aggregate value `numberOfPurchases` over a weeklong or monthlong period. Other aggregate functions like MIN and MAX can also apply to these situations.
 
 >[!CAUTION]
 >
@@ -167,7 +167,7 @@ The second approach would be to use event schemas to represent subscriptions. Th
 
 **Cons**
 
-* Segmentation becomes more complex for the original intended use case (identifying the status of customers' most recent subscriptions). The segment now needs additional logic to flag the last subscription event for a customer in order to check its status.
+* Segmentation becomes more complex for the original intended use case (identifying the status of customers' most recent subscriptions). The audience now needs additional logic to flag the last subscription event for a customer in order to check its status.
 * Events have a higher risk of automatically expiring and being purged from the Profile store. See the guide on [Experience Event expirations](../../profile/event-expirations.md) for more information.
 
 ## Create schemas based on your categorized entities
@@ -222,6 +222,16 @@ For Adobe Analytics, ECID is the default primary identity. If an ECID value is n
 >[!IMPORTANT]
 >
 >When using Adobe application field groups, no other fields should be marked as the primary identity. If there are additional properties that need to be marked as identities, these fields need to be assigned as secondary identities instead.
+
+## Data validation fields {#data-validation-fields}
+
+To prevent bad data being ingested into Platform, you are recommended to define the criteria for field level validation when creating your schemas. To set constraints on a particular field, select the field from the Schema Editor to open the [!UICONTROL Field properties] sidebar. See the documentation on [type-specific field properties](../ui/fields/overview.md#type-specific-properties) for exact descriptions of the available fields.
+
+![The Schema Editor with the constraint fields highlighted in the [!UICONTROL Field properties] sidebar.](../images/best-practices/data-validation-fields.png)
+
+>[!TIP]
+>
+>The following are a collection of suggestions for data modelling when creating a schema:<br><ul><li>**Consider primary identities**: For Adobe products like web SDK, mobile SDK, Adobe Analytics, and Adobe Journey Optimizer, the `identityMap` field often serves as the primary identity. Avoid designating additional fields as primary identities for that schema.</li><li>**Avoid using `_id` as an identity**: Avoid using the `_id` field in Experience Event schemas as an identity. It is meant for record uniqueness, not for use as an identity.</li><li>**Set length constraints**: It is best practice to set minimum and maximum lengths on fields marked as identities. These limitations helps maintain consistency and data quality.</li><li>**Apply patterns for consistent values**: If your identity values follow a specific pattern, you should use the [!UICONTROL Pattern] setting to enforce this constraint. This setting can include rules like digits only, uppercase or lowercase, or specific character combinations. Use regular expressions to match patterns in your strings.</li><li>**Limit eVars in Analytics Schema**: Typically, an Analytics schema should have only one eVar designated as an identity. If you intend to use more than one eVar as an identity, you should double-check whether the data structure can be optimized.</li><li>**Ensure uniqueness of a selected field**: Your chosen field should be unique compared to the primary identity in the schema. If it is not, do not mark it as an identity. For instance, if multiple customers can provide the same email address, then that namespace is not a suitable identity. This principle also applies to other identity namespaces like phone numbers.</li></ul>
 
 ## Next steps
 

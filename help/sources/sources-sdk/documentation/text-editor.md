@@ -11,7 +11,7 @@ This document provides steps on how to use your local environment to author docu
 
 >[!TIP]
 >
->The following documents from Adobe's contributing guide can be used to further support your documentation process: <ul><li>[Install Git and Markdown Authoring tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)</li><li>[Set up Git repository locally for documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)</li><li>[GitHub contribution workflow for major changes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en)</li></ul>
+>The following documents from Adobe's contributing guide can be used to further support your documentation process: <ul><li>[Install Git and Markdown Authoring tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Set up Git repository locally for documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[GitHub contribution workflow for major changes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ To clone the repository to your local machine, select **Code**. From the dropdow
 
 >[!TIP]
 >
->For more information, see the tutorial on [setting up Git repository locally for documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository).
+>For more information, see the tutorial on [setting up Git repository locally for documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository).
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
@@ -53,7 +53,7 @@ Next, select **Publish branch**.
 
 ## Author the documentation page for your source
 
-With the repository cloned to your local machine and a new branch created, you can now start authoring the documentation page for your new source through the [text editor of your choice](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors).
+With the repository cloned to your local machine and a new branch created, you can now start authoring the documentation page for your new source through the [text editor of your choice](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors).
 
 Adobe recommends that you use [Visual Studio Code](https://code.visualstudio.com/) and that you install the Adobe Markdown Authoring extension. To install the extension, launch Visual Studio Code, and then select the **Extensions** tab from the left-navigation.
 

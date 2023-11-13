@@ -50,6 +50,6 @@ If you defined a primary identity for the schema, you can now proceed to [enable
 
 ## Next steps
 
-This guide covered how to define an identity field in the the UI. As data is ingested using this schema, your customer identity graphs will update to reflect the schema's identity fields. See the guide on the [identity graph viewer](../../../identity-service/ui/identity-graph-viewer.md) to learn how to explore your organization's private graph in the UI.
+This guide covered how to define an identity field in the UI. As data is ingested using this schema, your customer identity graphs will update to reflect the schema's identity fields. See the guide on the [identity graph viewer](../../../identity-service/ui/identity-graph-viewer.md) to learn how to explore your organization's private graph in the UI.
 
 See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].

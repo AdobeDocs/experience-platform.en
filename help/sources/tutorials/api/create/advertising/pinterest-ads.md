@@ -10,7 +10,7 @@ exl-id: 293a3ec9-38ea-4b71-a923-1f4e28a41236
 
 >[!NOTE]
 >
->The [!DNL Pinterest Ads] source is in beta. Read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Pinterest Ads] source is in beta. Read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 The following tutorial walks you through the steps to create a [!DNL Pinterest Ads] source connection and dataflow to bring [[!DNL Pinterest Ads]](https://ads.pinterest.com/) data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -586,13 +586,13 @@ In order for the source data to be used in Platform, a target schema must be cre
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Create a target dataset {#target-dataset}
 
 A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
 
-For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### Create a target connection {#target-connection}
 

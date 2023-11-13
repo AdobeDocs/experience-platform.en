@@ -8,7 +8,7 @@ exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
 
 >[!NOTE]
 >
->The [!DNL Chatlio] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Chatlio] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps for creating a [!DNL Chatlio] source connection using the Adobe Experience Platform user interface.
 
@@ -141,7 +141,7 @@ Next, select the **[!DNL Behavior]** tab and add your webhook URL to the *[!DNL 
 
 >[!TIP]
 >
->You can subscribe to a variety of different events for your [!DNL Chatlio] webhook. For more information on the different events, please refer to the the [[!DNL Chatlio] events documentation](https://chatlio.com/docs/webhooks/).
+>You can subscribe to a variety of different events for your [!DNL Chatlio] webhook. For more information on the different events, please refer to the [[!DNL Chatlio] events documentation](https://chatlio.com/docs/webhooks/).
 
 ## Next steps {#next-steps}
 

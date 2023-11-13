@@ -9,7 +9,11 @@ exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 
 Adobe Experience Platform Query Service allows you to connect with external clients. You can connect to these external clients by using either expiring credentials or non-expiring credentials.
 
-## Expiring credentials {#expiring-credentials}
+>[!NOTE]
+>
+>The credentials panel is not automatically available to all users. Please contact your Adobe account team to request the [!UICONTROL Credentials] tab to be included in the Query Service workspace should you require it. If requested, this change is organization wide and is conducted by Adobe's engineering team. It is not a setting controlled by users.
+
+## Expiring credentials {#expiring-credentials} 
 
 >[!CONTEXTUALHELP]
 >id="platform_queryservice_credentials_expiringcredentials"
@@ -42,6 +46,10 @@ The **[!UICONTROL Expiring credentials]** section provides the following informa
 
 You can use non-expiring credentials to set up a more permanent connection to an external client.
 
+>[!NOTE]
+>
+>Non-expiring credentials have the following limitations:<br><ul><li>Users must log in with their username and password comprised of `{technicalAccountId}:{credential}`. More information can be found in the [Generate credentials](#generate-credentials) section.</li><li>Upon the creation of expiring credentials, a new role with a set of basic permissions is created that allows users to view schemas and datasets. The 'manage queries' permission is also assigned to this role for use with Query Service.</li><li>Third-party clients may perform differently than expected when listing out query objects. For example, some third-party clients such as [!DNL DB Visualizer] will not display the view name in the left panel. However, the view name is accessible if called within a SELECT query. Similarly, [!DNL PowerUI] might not list the temporary views created through the SQL to be selected for dashboard creation.</li></ul>
+
 ### Prerequisites
 
 Before you can generate non-expiring credentials, you must complete the following steps in Adobe Admin Console:
@@ -57,7 +65,7 @@ To learn more about how to assign permissions, please read the documentation on 
 
 All the required permissions are now configured in Adobe Developer Console for the user to use the expiring credentials feature.
 
-### Generate credentials
+### Generate credentials {#generate-credentials}
 
 To create a set of non-expiring credentials, return to the Platform UI and select **[!UICONTROL Queries]** from the left navigation to access the [!UICONTROL Queries] workspace. Next, select the **[!UICONTROL Credentials]** tab followed by **[!UICONTROL Generate credentials]**.
 

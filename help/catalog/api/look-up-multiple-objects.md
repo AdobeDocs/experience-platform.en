@@ -22,7 +22,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | Parameter | Description |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` | An identifier for one of the specific objects you want to retrieve. |
 
 **Request**

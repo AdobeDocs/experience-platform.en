@@ -26,7 +26,7 @@ The following is a list of constraints that you must account for when naming you
 - Illegal URL path characters not allowed. Code points like `\uE000`, while valid in NTFS filenames, are not valid Unicode characters. In addition, some ASCII or Unicode characters, like control characters (such as `0x00` to `0x1F`, `\u0081`, and so on), are also not allowed. For rules governing Unicode strings in HTTP/1.1 see [RFC 2616, Section 2.2: Basic Rules](https://www.ietf.org/rfc/rfc2616.txt) and [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - The following file names are not allowed: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, dot character (.), and two dot characters (..).
 
-## Manage the contents of your [!DNL Data Landing Zone]
+## Manage the contents of your Data Landing Zone{#manage-the-contents-of-your-data-landing-zone}
 
 You can use [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) to manage the contents of your [!DNL Data Landing Zone] container. 
 
@@ -156,3 +156,8 @@ The documentation below provides information on how to bring data from your [!DN
 
 - [Connect [!DNL Data Landing Zone] to Platform using the UI](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Create a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+
+>[!IMPORTANT]
+>
+>Private links are currently not supported when connecting to Experience Platform using the [!DNL Data Landing Zone]. The only supported methods for access are the methods listed [here](#manage-the-contents-of-your-data-landing-zone).
+

@@ -47,7 +47,7 @@ The following diagram helps you understand the workflow of [!DNL Target] and [!D
 
 To enable [!DNL Target], do the following:
 
-1. Enable [!DNL Target] in your [datastream](../../datastreams/overview.md) with the appropriate client code.
+1. Enable [!DNL Target] in your [datastream](../../../datastreams/overview.md) with the appropriate client code.
 1. Add the `renderDecisions` option to your events.
 
 Then, optionally, you can also add the following options:
@@ -80,7 +80,7 @@ If you have [!DNL Target] activities with predefined audiences that use custom p
 * Traffic Sources
 * Time Frame
 
-For more information, see [Categories for audiences](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en) in the *Adobe Target guide*.
+For more information, see [Categories for audiences](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html) in the *Adobe Target guide*.
 
 ### Response tokens
 

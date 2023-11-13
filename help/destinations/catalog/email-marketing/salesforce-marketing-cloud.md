@@ -10,7 +10,18 @@ exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
 
-To send segment data to [!DNL Salesforce Marketing Cloud], you must first [connect the destination](#connect-destination) in Platform, and then [set up a data import](#import-data-into-salesforce) from your storage location into [!DNL Salesforce Marketing Cloud].
+To send audience data to [!DNL Salesforce Marketing Cloud], you must first [connect the destination](#connect-destination) in Platform, and then [set up a data import](#import-data-into-salesforce) from your storage location into [!DNL Salesforce Marketing Cloud].
+
+## Supported audiences {#supported-audiences}
+
+This section describes which type of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -27,7 +38,7 @@ Refer to the table below for information about the destination export type and f
 
 When setting up email marketing destinations with SFTP storage, Adobe recommends that you add certain IP ranges to your allow list.
 
-Refer to [IP address allow list for cloud storage destinations](../cloud-storage/ip-address-allow-list.md) if you need to add Adobe IPs to your allow list.
+Refer to [IP address allow list for SFTP destinations](../cloud-storage/ip-address-allow-list.md) if you need to add Adobe IPs to your allow list.
 
 ## Connect to the destination {#connect}
 
@@ -47,15 +58,15 @@ This destination supports the following connection types:
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 * For **[!UICONTROL SFTP with Password]** connections, you must provide:
-  * [!UICONTROL Domain]
-  * [!UICONTROL Port]
-  * [!UICONTROL Username]
-  * [!UICONTROL Password]
+  * **[!UICONTROL Domain]**: The IP address or the domain name of your SFTP account;
+  * **[!UICONTROL Port]**: The port used by your SFTP storage location;
+  * **[!UICONTROL Username]**: The username to log into your SFTP storage location;
+  * **[!UICONTROL Password]**: The password to log into your SFTP storage location.
 * For **[!UICONTROL SFTP with SSH Key]** connections, you must provide:
-  * [!UICONTROL Domain]
-  * [!UICONTROL Port]
-  * [!UICONTROL Username]
-  * [!UICONTROL SSH Key]
+  * **[!UICONTROL Domain]**: The IP address or the domain name of your SFTP account;
+  * **[!UICONTROL Port]**: The port used by your SFTP storage location;
+  * **[!UICONTROL Username]**: The username to log into your SFTP storage location;
+  * **[!UICONTROL SSH Key]**: The private SSH key used to log into your SFTP storage location. The private key must be formatted as a Base64-encoded string and must not be password-protected.
 
 * Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Your public key must be written as a [!DNL Base64] encoded string.
 * **[!UICONTROL Name]**: Pick a relevant name for your destination.
@@ -77,21 +88,22 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
 ### Destination attributes {#destination-attributes}
 
-When activating segments to this destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, refer to [best practices when activating audiences to email marketing destinations](overview.md#best-practices).
+When activating audiences to this destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, refer to [best practices when activating audiences to email marketing destinations](overview.md#best-practices).
 
 ## Exported data {#exported-data}
 
-For [!DNL Salesforce Marketing Cloud] destinations, Platform creates a `.csv` file in the storage location that you provided. For more information about the files, see [verify segment activation](../../ui/activate-batch-profile-destinations.md#verify) in the segment activation tutorial.
+For [!DNL Salesforce Marketing Cloud] destinations, Platform creates a `.csv` file in the storage location that you provided. For more information about the files, see [verify audience activation](../../ui/activate-batch-profile-destinations.md#verify) in the audience activation tutorial.
 
 ## Set up data import into [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 

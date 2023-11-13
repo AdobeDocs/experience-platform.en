@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Experience Data Model (XDM) System Help
 breadcrumb-title: Experience Data Model (XDM) Guide
-user-guide-description: Use Experience Data Model (XDM) classes and schema field groups to standardize experience data.
+user-guide-description: Explore an overview of the Experience Data Model (XDM) system within Experience Platform and learn how to use classes and schema field groups to standardize experience data.
 feature: Schemas
 ---
 
@@ -31,6 +31,7 @@ feature: Schemas
   * [Plan](./classes/plan.md)
   * [Policy](./classes/policy.md)
   * [Product](./classes/product.md)
+  * [Prospect](./classes/prospect.md)
   * [Provider](./classes/provider.md)
   * [Segment definition](./classes/segment-definition.md)
   * B2B classes {#b2b}

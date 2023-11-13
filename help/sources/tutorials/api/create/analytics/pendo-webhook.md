@@ -8,7 +8,7 @@ exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
 
 >[!NOTE]
 >
->The [!DNL Pendo] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Pendo] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 The following tutorial walks you through the steps to create a source connection and a dataflow to bring [[!DNL Pendo]](https://Pendo.com/) event data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -83,13 +83,13 @@ In order for the source data to be used in Platform, a target schema must be cre
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Create a target dataset {#target-dataset}
 
 A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
 
-For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### Create a target connection {#target-connection}
 

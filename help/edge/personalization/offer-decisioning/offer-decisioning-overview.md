@@ -47,7 +47,7 @@ It is important to understand the following terminology when working with Offer 
 
   ![](assets/decision-scope-copy.png)
 
-* **Datastreams:** For more information, please read the [datastreams](../../datastreams/overview.md) documentation.
+* **Datastreams:** For more information, please read the [datastreams](../../../datastreams/overview.md) documentation.
 
 * **Identity**: For more information, please read this documentation outlining how [Platform Web SDK uses Identity Service](../../identity/overview.md).
 
@@ -55,7 +55,7 @@ It is important to understand the following terminology when working with Offer 
 
 To enable Offer Decisioning, perform the following steps:
 
-1. Enabled Adobe Experience Platform in your [datastream](../../datastreams/overview.md) and check the "Offer Decisioning" box
+1. Enabled Adobe Experience Platform in your [datastream](../../../datastreams/overview.md) and check the "Offer Decisioning" box
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
@@ -326,4 +326,4 @@ To enable Offer Decisioning, perform the following steps:
 
 ## Limitations
 
-Some offer constraints are currently not supported with the mobile Experience Edge workflows, for example Capping. The Capping field value specifies the number of times an offer can be presented across all users. For more details, see [Offer eligibility rules and constraints documentation](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+Some offer constraints are currently not supported with the mobile Edge Network workflows, for example Capping. The Capping field value specifies the number of times an offer can be presented across all users. For more details, see [Offer eligibility rules and constraints documentation](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).

@@ -68,4 +68,4 @@ Here is an example of a processing rule that would use this data.
 
 >[!NOTE]
 >
->With Experience Edge collection, all events are sent to Analytics as well as to any other services you have configured for your datastream. For example, if you have both Analytics and Target configured as services and you make separate calls for personalization and for Analytics, both events will be sent to Analytics as well as Target. These events will be recorded in Analytics reporting and can affect metrics like bounce rate.
+>With the Edge Network collection, all events are sent to Analytics as well as to any other services you have configured for your datastream. For example, if you have both Analytics and Target configured as services and you make separate calls for personalization and for Analytics, both events will be sent to Analytics as well as Target. These events will be recorded in Analytics reporting and can affect metrics like bounce rate.

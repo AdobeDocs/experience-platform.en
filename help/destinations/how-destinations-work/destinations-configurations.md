@@ -7,9 +7,9 @@ exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
 
 When thinking about the export behavior to Experience Platform destinations, you need to consider three separate levels on which configurations act.
 
-* On a first level, some of the settings related to profile export behavior and configuration settings are common across all destinations belonging to a destination type. These settings refer to what triggers a destination export and what is included in an export and cannot be edited by destination developers or Real-time CDP users.
+* On a first level, some of the settings related to profile export behavior and configuration settings are common across all destinations belonging to a destination type. These settings refer to what triggers a destination export and what is included in an export and cannot be edited by destination developers or Real-Time CDP users.
 * On a second level, some settings can be customized on a destination level by the destination developer when authoring destinations using Destination SDK. 
-* On a third level, there are configuration settings that Real-time CDP users can set in the activation workflows.
+* On a third level, there are configuration settings that Real-Time CDP users can set in the activation workflows.
 
 ![Diagram showing the interplay between common and configurable export settings for destinations](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
 
@@ -17,16 +17,16 @@ This page describes or links out to all the common and the configurable export s
 
 ## Common export settings across destination types {#common-settings-across-destination-types}
 
-Destination export behavior is consistent across destinations belonging to a destination type with regard to *what triggers a destination export* and *what is included in the destination exports*. Destination exports are triggered by notifications that the destinations service receives from the [upstream Real-time Customer Profile service](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=en#adobe-experience-platform-%26-applications-detailed-architecture-diagram). 
+Destination export behavior is consistent across destinations belonging to a destination type with regard to *what triggers a destination export* and *what is included in the destination exports*. Destination exports are triggered by notifications that the destinations service receives from the [upstream Real-time Customer Profile service](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram). 
 
-What is included in the destination exports varies slightly between destination types. Read more about the [common export behavior patterns per destination type](/help/destinations/how-destinations-work/profile-export-behavior.md). These settings cannot be edited by destination developers or Real-time CDP users.
+What is included in the destination exports varies slightly between destination types. Read more about the [common export behavior patterns per destination type](/help/destinations/how-destinations-work/profile-export-behavior.md). These settings cannot be edited by destination developers or Real-Time CDP users.
 
 ## Customizable export settings by destination developers {#customizable-settings-by-destination-developers}
 
 Destination developers can use [Destination SDK](/help/destinations/destination-sdk/overview.md) to create custom or productized (private or public) destinations. Destination SDK provides developers with great flexibility to configure destinations based on the downstream capabilities of their API endpoints and file reception systems. Based on the downstream capabilities, destination developers have the following configuration options available when configuring a destination using Destination SDK:
 
 * Determine which attributes and identities can be exported out of Experience Platform to the destination. Determine also which identities are required by their destinations for a successful data export.
-* Set an aggregation policy, which determines how long Experience Platform should wait when aggregating HTTP messages to be sent to API integrations. Destination developers can configure different aggregation types to determine how many profiles should be included in outgoing HTTP messages and how long Experience Platform should wait until dispatching the HTTP message. Find extensive information about the [aggregation policy configuration options](/help/destinations/destination-sdk/destination-configuration.md#aggregation) available to destination developers in the Destination SDK documentation.
+* Set an aggregation policy, which determines how long Experience Platform should wait when aggregating HTTP messages to be sent to API integrations. Destination developers can configure different aggregation types to determine how many profiles should be included in outgoing HTTP messages and how long Experience Platform should wait until dispatching the HTTP message. Find extensive information about the [aggregation policy configuration options](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) available to destination developers in the Destination SDK documentation.
 * Determine if HTTP message exports should include profiles that qualify for segments, that are removed from segments, or both.
 * Determine which file name and file formatting configurations should be available to users when exporting files.
 
@@ -50,9 +50,9 @@ Read more about the different options and steps available in the activation work
 
 * [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md)
 * [Activate audience data to enterprise destinations](/help/destinations/ui/activate-streaming-profile-destinations.md)
-* [Activate audience data to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md)
+* [Activate audience data to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [Export files on-demand to batch destinations](/help/destinations/ui/export-file-now.md)
-* [(Beta) Export datasets to cloud storage destinations](/help/destinations/ui/export-datasets.md)
+* [Export datasets to cloud storage destinations](/help/destinations/ui/export-datasets.md)
 
 ## Next steps {#next-steps}
 

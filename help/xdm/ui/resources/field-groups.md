@@ -5,7 +5,12 @@ title: Create and Edit Schema Field groups in the UI
 description: Learn how to create and edit schema field groups in the Experience Platform user interface.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
 ---
-# Create and edit schema field groups in the UI
+# Create and edit schema field groups in the UI {#ui-create-and-edit}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup_filter"
+>title="Standard or custom field group filter"
+>abstract="The list of available field groups is pre-filtered based on how they were created. Select the radio button to choose between the Standard and Custom options. The Standard option shows entities created by Adobe and the Custom option displays entities created within your organization. See the documentation to learn more about creating and editing field groups."
 
 In Experience Data Model (XDM), schema field groups are reusable components that define one or more fields that implement certain functions such as personal details, hotel preferences, or address. Field groups are intended to be included as part of a schema that implements a compatible class. 
 
@@ -34,6 +39,12 @@ In the dialog that appears, select **[!UICONTROL Create new field group]**. Here
 The [!DNL Schema Editor] reappears, with the new field group listed in the left rail. Since this is a brand new field group, it currently does not provide any fields to the schema, and therefore the canvas remains unchanged. You can now start [adding fields to the field group](#add-fields).
 
 ![](../../images/ui/resources/field-groups/field-group-added.png)
+
+## Filter field groups {#filter}
+
+The list of available field groups is pre-filtered based on how they were created. The default setting displays the field groups defined by Adobe. However, you can also filter the list to show those created by your organization. Select the radio button to choose between the [!UICONTROL Standard] and [!UICONTROL Custom] options. The [!UICONTROL Standard] option shows entities created by Adobe and the [!UICONTROL Custom] option displays entities created within your organization.
+
+![The [!UICONTROL Field groups] tab of the [!UICONTROL Schemas] workspace with [!UICONTROL Standard] and [!UICONTROL Custom] highlighted.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## Edit an existing field group {#edit}
 

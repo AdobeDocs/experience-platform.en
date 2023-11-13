@@ -18,7 +18,7 @@ This tutorial provides steps for creating a *YOURSOURCE* source connector using 
 
 >[!IMPORTANT]
 >
->This documentation page was created by the *YOURSOURCE* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*.
+>This source connector and documentation page are created and maintained by the *YourSource* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*.
 
 ## Prerequisites
 

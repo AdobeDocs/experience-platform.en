@@ -28,13 +28,13 @@ A technology retailer wants to improve their visitor activity reporting with inf
 
 To use mobile-to-web and cross-domain ID sharing, you must use [!DNL Web SDK] version 2.11.0 or later.
 
-For Edge Network mobile implementations, this feature is supported in the [Identity for Edge Network](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) extension starting with version 1.1.0 (iOS and Android).
+For Edge Network mobile implementations, this feature is supported in the [Identity for Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) extension starting with version 1.1.0 (iOS and Android).
 
 This feature is also compatible with [!DNL VisitorAPI.js] version 1.7.0 or later.
 
 ## Mobile-to-web ID sharing {#mobile-to-web}
 
-Use the `getUrlVariables` API from the [Identity for Edge Network](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network/api-reference#geturlvariables) extension to retrieve the identifiers as query parameters and attach them to your URL when opening [!DNL webViews].
+Use the `getUrlVariables` API from the [Identity for Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) extension to retrieve the identifiers as query parameters and attach them to your URL when opening [!DNL webViews].
 
 No additional configuration is required for the Web SDK to accept `ECID` values in the query string. 
 

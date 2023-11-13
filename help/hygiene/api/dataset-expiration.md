@@ -5,10 +5,6 @@ exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 ---
 # Dataset expiration endpoint
 
->[!IMPORTANT]
->
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
-
 The `/ttl` endpoint in the Data Hygiene API allows you to schedule expiration dates for datasets in Adobe Experience Platform.
 
 A dataset expiration is only a timed-delayed delete operation. The dataset is not protected in the interim, so it may be be deleted by other means before its expiry is reached.

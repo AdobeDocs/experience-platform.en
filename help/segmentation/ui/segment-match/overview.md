@@ -38,7 +38,7 @@ The list of supported namespaces are as follows:
 
 | Namespace | Description |
 | --------- | ----------- |
-| Emails (SHA256, lowercased) | A namespace for pre-hashed email address. Values provided in this namespace are converted to lowercase before hashing with SHA256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. Platform offers two methods of supporting hashing upon data collection, through [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) and through [data prep](../../../data-prep/functions.md#hashing). |
+| Emails (SHA256, lowercased) | A namespace for pre-hashed email address. Values provided in this namespace are converted to lowercase before hashing with SHA256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. Platform offers two methods of supporting hashing upon data collection, through [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) and through [data prep](../../../data-prep/functions.md#hashing). |
 | Phone (SHA256_E.164)| A namespace that represents raw phone numbers that need to be hashed using both SHA256 and E.164 format. |
 | ECID | A namespace that represents an Experience Cloud ID (ECID) value. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the [ECID overview](../../../identity-service/ecid.md) for more information. |
 | Apple IDFA (ID for Advertisers) | A namespace that represents Apple ID for Advertisers. See the following document on [interest-based ads](https://support.apple.com/en-us/HT202074) for more information. |
@@ -52,7 +52,7 @@ The opt-in and opt-out consent check determines whether you can operate with the
 
 The default consent configuration for [!DNL Segment Match] is set to `opt-out`. To enforce an opt-in model for your data, please send an email request to your Adobe account team.
 
-For more information on the `share` attribute used to set data-sharing consent value, see the the following documentation on [privacy and consents field group](../../../xdm/field-groups/profile/consents.md). For information on the specific field group used to capture consumer consent for collection and use of data related to privacy, personalization and marketing preferences, see the following [Consent for Privacy, Personalization and Marketing Preferences GitHub example](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
+For more information on the `share` attribute used to set data-sharing consent value, see the following documentation on [privacy and consents field group](../../../xdm/field-groups/profile/consents.md). For information on the specific field group used to capture consumer consent for collection and use of data related to privacy, personalization and marketing preferences, see the following [Consent for Privacy, Personalization and Marketing Preferences GitHub example](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
 ### Configure data usage labels
 

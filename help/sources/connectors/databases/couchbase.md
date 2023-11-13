@@ -9,7 +9,7 @@ exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
 
 >[!NOTE]
 >
->The [!DNL Couchbase] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The [!DNL Couchbase] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 Adobe Experience Platform provides native connectivity for database providers like [!DNL Microsoft], MySQL, and [!DNL Azure], allowing you to bring your data from these systems. Different types of third-party databases are supported, including relational, NoSQL, or data warehouses. Support for database providers includes [!DNL Couchbase].
 
