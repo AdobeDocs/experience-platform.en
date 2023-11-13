@@ -133,7 +133,7 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
-## (Beta) Export datasets {#export-datasets}
+## Export datasets {#export-datasets}
 
 This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
 
