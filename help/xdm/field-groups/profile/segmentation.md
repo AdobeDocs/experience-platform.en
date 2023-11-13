@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
 solution: Experience Platform
 title: Segment Membership Details Schema Field Group
 description: This document provides an overview of the Segment Membership Details schema field group.

@@ -29,16 +29,16 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the [!UICONTROL cloud storage] category, select [!DNL Data Landing Zone] and then select **[!UICONTROL Add data]**.
 
-![catalog](../../../../images/tutorials/create/dlz/catalog.png)
+![The sources catalog with Data Landing Zone selected.](../../../../images/tutorials/create/dlz/catalog.png)
 
 The [!UICONTROL Add data] step appears, providing you with an interface to select and preview the data you want to bring to Platform.
 
 * The left part of the interface is a folder browser, providing you with a list of files from your container that you can then bring to Platform.
 * The right part of the interface lets you preview up to 100 rows of data from a compatible file.
 
-Select the file that you want to bring to Platform and allow for a few moments for the right interface to update into a preview screen.
+Select the file that you want to bring to Experience Platform and allow for a few moments for the right interface to update into a preview screen.
 
-![add-data](../../../../images/tutorials/create/dlz/add-data.png)
+![The add data interface of the sources workspace.](../../../../images/tutorials/create/dlz/add-data.png)
 
 >[!TIP]
 >
@@ -50,7 +50,7 @@ To preview a different file, select the preview icon beside the name of the file
 
 When finished, select **[!UICONTROL Next]**.
 
-![file-detection](../../../../images/tutorials/create/dlz/file-detection.png)
+![The data preview page of the sources workspace.](../../../../images/tutorials/create/dlz/file-detection.png)
 
 For a detailed, step-by-step guide on how to create a dataflow for a cloud storage source, see the tutorial on [creating a cloud storage dataflow to bring data to Platform](../../dataflow/batch/cloud-storage.md).
 
@@ -60,9 +60,9 @@ For a detailed, step-by-step guide on how to create a dataflow for a cloud stora
 
 In the [!UICONTROL Sources catalog], under the [!UICONTROL Cloud storage] category, select the ellipses (**...**) from the **[!UICONTROL Data Landing Zone]** card. From the dropdown menu that appears, select **[!UICONTROL View credentials]**.
 
-![options](../../../../images/tutorials/create/dlz/options.png)
+![A list of view options for Data Landing Zone.](../../../../images/tutorials/create/dlz/options.png)
 
-A popover appears, displaying your container name, SAS token, storage account name, and SAS URI. 
+A popover appears, displaying your container name, SAS token, storage account name, SAS URI, and expiry date.
 
 Select **[!UICONTROL Refresh credentials]** and allow for a few seconds for your updated credentials to be processed.
 
@@ -70,7 +70,7 @@ Select **[!UICONTROL Refresh credentials]** and allow for a few seconds for your
 >
 >Your [!DNL Data Landing Zone] credentials are set to auto-expire after 90 days and you must use new credentials to re-connect to [!DNL Data Landing Zone] after expiration. Your dataflows in Platform are not affected by expiring credentials and you can still continue working with new and existing dataflows with your new credentials.
 
-![view-credentials](../../../../images/tutorials/create/dlz/credentials.png)
+![The credentials associated with a given Data Landing Zone account.](../../../../images/tutorials/create/dlz/view-credentials.png)
 
 ## Next steps
 

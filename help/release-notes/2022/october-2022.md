@@ -8,22 +8,16 @@ exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
 **Release date: October 26, 2022**
 
 - [Customer-managed keys](#cmk)
-
-Updates to existing features in Adobe Experience Platform:
-
-- [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
-  - [Customer-managed keys {#cmk}](#customer-managed-keys-cmk)
-  - [Data collection {#data-collection}](#data-collection-data-collection)
-  - [\[!DNL Destinations\] {#destinations}](#dnl-destinations-destinations)
-  - [Experience Data Model (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-  - [Query Service {#query-service}](#query-service-query-service)
-  - [Sources {#sources}](#sources-sources)
+- [Data collection](#data-collection)
+- [Destinations](#destinations)
+- [Experience Data Model](#xdm)
+- [Query Service](#query-service)
 
 ## Customer-managed keys {#cmk}
 
 All data stored on Adobe Experience Platform is encrypted at rest using system-level keys. If you are using an application built on top of Platform, you can now opt to use your own encryption keys instead, giving you greater control over your data security.
 
-See the overview on [customer-managed keys](../../landing/governance-privacy-security/customer-managed-keys.md) for details on the feature.
+See the overview on [customer-managed keys](../../landing/governance-privacy-security/customer-managed-keys/overview.md) for details on the feature.
 
 ## Data collection {#data-collection}
 
@@ -33,7 +27,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 | Feature | Description |
 | --- | --- |
-| Sensitive data handling for datastreams | Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../edge/datastreams/overview.md#sensitive) for more information.  |
+| Sensitive data handling for datastreams | Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../datastreams/overview.md#sensitive) for more information.  |
 | [!DNL Splunk] extension for event forwarding | You can now send data to [!DNL Splunk] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Splunk] extension overview](../../tags/extensions/server/splunk/overview.md) for more information. |
 | [!DNL Zendesk] extension for event forwarding | You can now send data to [!DNL Zendesk] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Zendesk] extension overview](../../tags/extensions/server/zendesk/overview.md) for more information. |
 
@@ -108,16 +102,3 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 For more information on Query Services, refer to the [Query Service overview](../../query-service/home.md).
 New features in Adobe Experience Platform:
 
-## Sources {#sources}
-
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
-
-Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
-
-**Updated features**
-
-| Feature | Description |
-| --- | --- | 
-| Beta availability of Adobe Workfront source | Use the [Adobe Workfront source](../../sources/connectors/adobe-applications/workfront.md) to bring your Workfront data to Experience Platform and perform use cases such as combining your work records with third-party data, applying historical and time-series analytics on work records, and querying work data using standard SQL. For more information, read the guide on [creating a Workfront source connection in the UI](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-
-To learn more about sources, read the [sources overview](../../sources/home.md).

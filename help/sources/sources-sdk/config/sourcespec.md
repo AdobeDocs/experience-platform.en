@@ -375,7 +375,54 @@ The following is a completed source specification using [!DNL MailChimp Members]
 
 The following are examples of other pagination types supported by Self-Serve Sources (Batch SDK):
 
-#### `CONTINUATION_TOKEN`
+>[!BEGINTABS]
+
+>[!TAB Offset]
+
+This pagination type allows you to parse through results by specifying an index from where to start the resulting array, and a limit on how many results are returned. For example:
+
+```json
+
+"paginationParams": {
+        "type": "OFFSET",
+        "limitName": "limit",
+        "limitValue": "4",
+        "offSetName": "offset",
+        "endConditionName": "$.hasMore",
+        "endConditionValue": "Const:false"
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `type` | The type of pagination used to return data. |
+| `limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. |
+| `limitValue` | The number of records to be fetched in a page. | 
+| `offSetName` | The offset attribute name. This is required if pagination type is set to `offset`. |
+| `endConditionName` | A user-defined value that indicates the condition that will end the pagination loop in the next HTTP request. You must provide the attribute name on which you want to put the end condition. |
+| `endConditionValue` | The attribute value on which you want to put the end condition. |
+
+>[!TAB Pointer]
+
+ This pagination type allows you to use a `pointer` variable to point to a particular item that needs to be sent with a request. The pointer type pagination requires path in payload that point to next page. For example:
+
+```json
+{
+ "type": "POINTER",
+ "limitName": "limit",
+ "limitValue": 1,
+ "pointerPath": "paging.next"
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `type` | The type of pagination used to return data. |
+| `limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. |
+| `limitValue` | The number of records to be fetched in a page. | 
+| `pointerPath` | The pointer attribute name. This requires json path to the attribute that will point to next page. |
+
+>[!TAB Continuation token]
 
 A continuation token type of pagination returns a string token that signifies the existence of more items that could not be returned, due to a pre-determined maximum number of items that can be returned in a single response.
 
@@ -426,16 +473,18 @@ The following is an example of a response returned using continuation token type
 }
 ```
 
-#### `PAGE`
+>[!TAB Page]
 
 The `PAGE` type of pagination allows you to traverse through return data by number of pages starting from zero. When using `PAGE` type pagination, you must provide the number of records given in a single page.
 
 ```json
 "paginationParams": {
   "type": "PAGE",
-  "limitName": "records",
-  "limitValue": "100",
-  "pageParamName": "pageIndex",
+  "limitName": "pageSize",
+  "limitValue": 100,
+  "initialPageIndex": 1,
+  "endPageIndex": "headers.x-pagecount",
+  "pageParamName": "pageNumber",
   "maximumRequest": 10000
 }
 ```
@@ -445,10 +494,15 @@ The `PAGE` type of pagination allows you to traverse through return data by numb
 | `type` | The type of pagination used to return data. |
 | `limitName` | The name for the limit through which the API can specify the number of records to be fetched in a page. |
 | `limitValue` | The number of records to be fetched in a page. |
+| `initialPageIndex` | (Optional) The initial page index defines the page number from which pagination will start. This field can be used for sources where pagination doesn't start from 0. If unprovided, the initial page index will default to 0. This field expects an integer. |
+| `endPageIndex` | (Optional) The end page index allows you to establish an end condition and stop pagination. This field can be used when default end conditions to stop pagination are unavailable. This field can also be used if the number of pages to be ingested or the last page number is provided through the response header, which is common when using `PAGE` type pagination. The value for the end page index can either be the last page number or a string-type expression value from the response header. For example, you can use `headers.x-pagecount` to assign end page index to the `x-pagecount` value from the response headers. **Note**: `x-pagecount` is a mandatory response header for some sources and holds the value number of pages to be ingested. |
 | `pageParamName` | The name of the parameter that you must append to query parameters in order to traverse through different pages of the return data. For example, `https://abc.com?pageIndex=1` would return the second page of an API's return payload. |
 | `maximumRequest` | The maximum number of requests a source can make for a given incremental run. The current default limit is 10000. |
 
-#### `NONE`
+{style="table-layout:auto"}
+
+
+>[!TAB None]
 
 The `NONE` pagination type can be used for sources that don't support any of the available pagination types. Sources that use the pagination type of `NONE` simply return all retrievable records when a GET request is made.
 
@@ -457,6 +511,8 @@ The `NONE` pagination type can be used for sources that don't support any of the
   "type": "NONE"
 }
 ```
+
+>[!ENDTABS]
 
 ### Advanced scheduling for Self-Serve Sources (Batch SDK)
 
@@ -598,4 +654,4 @@ The following is an example of a custom schema that you can add to your source's
 
 ## Next steps
 
-With your source specifications populated, you can proceed to configure the explore specifications for the source that you want to integrate to Platform. See the the document on [configuring explore specifications](./explorespec.md) for more information.
+With your source specifications populated, you can proceed to configure the explore specifications for the source that you want to integrate to Platform. See the document on [configuring explore specifications](./explorespec.md) for more information.

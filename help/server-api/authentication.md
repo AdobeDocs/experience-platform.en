@@ -11,7 +11,7 @@ The [!DNL Edge Network Server API] handles both authenticated and unauthenticate
 
 For each request, the [!DNL Server API] verifies the datastream [!DNL access type] setting. Using this setting, customers can configure a datastream to accept either authenticated data, or both authenticated and unauthenticated data. By default, both types of data are accepted.
 
-For details on configuring the datastream access type, see the documentation on how to [create and configure a datastream](../edge/datastreams/overview.md#create).
+For details on configuring the datastream access type, see the documentation on how to [create and configure a datastream](../datastreams/overview.md#create).
 
 Below is a summary of the behavior, based on the datastream [!DNL Access Type] configuration and the endpoint on which the request is received.
 
@@ -66,5 +66,5 @@ To configure dataset write permissions, go to the [Admin Console](https://adminc
 | `EXEG-0502-401` | Invalid authorization token | This error message is displayed when the provided authorization token has a valid format (JWT), but its signature is invalid. Check the [authentication tutorial](../landing/api-authentication.md) to learn how to get a valid JWT token. |
 | `EXEG-0503-401` | Invalid authorization token | This error message is displayed when the provided authorization token is expired. Go through the [authentication tutorial](../landing/api-authentication.md) to generate a new token. |
 | `EXEG-0504-401` | Required product context is missing | This error message is displayed in any of the following situations:  <ul><li>The developer account does not have access to Adobe Experience Platform product context.</li><li>The company account is not yet entitled to Adobe Experinece Platform.</li></ul>|
-| `EXEG-0505-401` | Required authorization token scope is missing | This error applies only to service account authentication. The error message is displayed when the the service authorization token included in the call belongs to a service account which does not have access to the `acp.foundation` IMS scope.|
+| `EXEG-0505-401` | Required authorization token scope is missing | This error applies only to service account authentication. The error message is displayed when the service authorization token included in the call belongs to a service account which does not have access to the `acp.foundation` IMS scope.|
 | `EXEG-0506-401` | Sandbox not accessible for write | This error message is displayed when the developer account does not have `WRITE` access to the Experience Platform sandbox in which the datastream is defined. |

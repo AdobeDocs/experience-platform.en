@@ -72,7 +72,6 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "fields":[],
     "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
         "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -146,15 +145,6 @@ curl -X GET \
                 "enabled:true"
             ]
         },
-        "lastBatchId": "6dcd9128a1c84e6aa5177641165e18e4",
-        "lastBatchStatus": "success",
-        "dule": {},
-        "statsCache": {
-            "startDate": null,
-            "endDate": null
-        },
-        "namespace": "ACP",
-        "state": "DRAFT",
         "version": "1.0.1",
         "created": 1536536917382,
         "updated": 1539793978215,
@@ -162,15 +152,8 @@ curl -X GET \
         "createdUser": "{CREATED_BY}",
         "updatedUser": "{CREATED_BY}",
         "viewId": "5b020a27e7040801dedbf46f",
-        "status": "enabled",
-        "transforms": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/transforms",
         "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",
         "schema": "@/xdms/context/experienceevent",
-        "schemaMetadata": {
-            "primaryKey": [],
-            "delta": [],
-            "dule": []
-        },
         "schemaRef": {
             "id": "https://ns.adobe.com/xdm/context/experienceevent",
             "contentType": "application/vnd.adobe.xed+json"

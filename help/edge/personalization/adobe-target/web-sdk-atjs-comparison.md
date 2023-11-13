@@ -69,7 +69,7 @@ window.adobe.target.init(window, document, {
 });
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 
 ### Configuring the Web SDK
@@ -234,7 +234,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
 ### Using Web SDK
 
@@ -319,7 +319,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
 
 ### Using Web SDK
@@ -457,7 +457,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-Learn more about the `applyOffers` command from the [dedicated documentation](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en).
+Learn more about the `applyOffers` command from the [dedicated documentation](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html).
 
 
 ### Using Web SDK
@@ -509,7 +509,7 @@ adobe.target.sendNotifications({
 });
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
 
 ### Using Web SDK
 
@@ -641,7 +641,7 @@ Use the `adobe.target.triggerView` function. This function can be called wheneve
 adobe.target.triggerView("homeView")
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html)
 
 
 ### Using Web SDK
@@ -681,7 +681,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 
 ### Using Web SDK
@@ -690,7 +690,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >Ensure that you are using Platform Web SDK version 2.6.0 or later.
 
-The Response Tokens are returned as part of the `propositions` that are exposed in the result of the `sendEvent` command. Each proposition contains an array of `items`, and each item will have a `meta` object populated with Response Tokens if they are enabled in the Target admin UI. [Learn more](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
+The Response Tokens are returned as part of the `propositions` that are exposed in the result of the `sendEvent` command. Each proposition contains an array of `items`, and each item will have a `meta` object populated with Response Tokens if they are enabled in the Target admin UI. [Learn more](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 **Example**
 
@@ -857,7 +857,7 @@ Then the data flows as following:
 
 ![](assets/a4t-server-side-atjs.png)
 
-[Learn More](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=en)
+[Learn More](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
 ### Using Web SDK
 
@@ -917,7 +917,7 @@ Analytics Server Side Logging is enabled when Analytics is enabled for that Data
 ![](assets/analytics-enabled-datastream-config.png)
 
 When Server Side Analytics Logging is enabled the A4T payload that needs to be shared with Analytics so that the Analytics reporting show 
-correct impressions and conversions is shared at the Experience Edge level, so that the customer doesn't have to do any additional processing.
+correct impressions and conversions is shared at the Edge Network level, so that the customer doesn't have to do any additional processing.
 
 Here is how data flows into our systems when Server Side Analytics Logging is enabled:
 
@@ -941,7 +941,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 ### Using Web SDK
 
@@ -1041,7 +1041,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
 
 
 ### Using Web SDK
@@ -1121,7 +1121,7 @@ window.targetPageParams = function() {
 };
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
 
 ### Using Web SDK
 
@@ -1232,7 +1232,7 @@ Note: All these debugging features are available with enhanced capabilities in [
 
 You have multiple debugging capabilities when using Web SDK:
 
-* Using [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* Using [Assurance](../../../assurance/home.md)
 * [Web SDK debug enabled](../../../edge/fundamentals/debugging.md)
 * Use [Web SDK monitoring hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Use [Adobe Experience Platform Debugger](../../../debugger/home.md)

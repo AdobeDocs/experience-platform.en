@@ -1,7 +1,7 @@
 ---
 keywords: event forwarding extension;braze;braze event forwarding extension
 title: Braze Event Forwarding Extension
-description: This Adobe Experience Platform event forwarding extension sends Adobe Experience Edge Network events to Braze.
+description: This Adobe Experience Platform event forwarding extension sends Edge Network events to Braze.
 last-substantial-update: 2023-03-29
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
 ---
@@ -53,7 +53,7 @@ In order to connect the Edge Network to [!DNL Braze], the following inputs are r
 
 | Key Type | Description | Example |
 | --- | --- | --- |
-| [!DNL Braze] Instance | The REST endpoint associated with the [!DNL Braze] account. Refer to the [!DNL Braze] documentation on [instances](https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances) for guidance. | `https://rest.iad-03.braze.com` |
+| [!DNL Braze] Instance | The REST endpoint associated with the [!DNL Braze] account. Refer to the [!DNL Braze] documentation on [instances](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) for guidance. | `https://rest.iad-03.braze.com` |
 | API Key | The [!DNL Braze] API Key associated with the [!DNL Braze] account. <br/>Refer to the [!DNL Braze] documentation on the [REST API key](https://www.braze.com/docs/api/basics/#rest-api-key) for guidance. | `YOUR-BRAZE-REST-API-KEY` |
 
 ### Create a secret

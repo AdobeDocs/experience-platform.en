@@ -33,7 +33,7 @@ The flow diagram below describes the order of the steps taken to deliver hybrid 
 1. The Server API returns the personalization content to your application server.
 1. The application server returns an HTML response to the client browser, containing the [identity and cluster cookies](#cookies).
 1. On the client page, the [!DNL Web SDK] `applyResponse` command is called, passing in the headers and body of the [!UICONTROL Server API] response from the previous step.
-1. The [!DNL Web SDK] renders page load [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) offers automatically, because the `renderDecisions` flag is set to `true`.
+1. The [!DNL Web SDK] renders page load [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) offers automatically, because the `renderDecisions` flag is set to `true`.
 1. Form-based [!DNL JSON] offers are manually applied through the `applyPersonalization` method, to update the [!DNL DOM] based on the personalization offer.
 1. For form-based activities, display events must manually be sent, to indicate when the offer has been displayed. This is done via the `sendEvent` command.
 
@@ -59,7 +59,7 @@ Server API requests are required to get propositions and send a display notifica
 
 When implementing hybrid personalization, you must pay special attention so that page hits are not counted multiple times in Analytics.
 
-When you [configure a datastream](../datastreams/overview.md) for Analytics, events are automatically forwarded so that page hits are captured. 
+When you [configure a datastream](../../datastreams/overview.md) for Analytics, events are automatically forwarded so that page hits are captured. 
 
 The sample from this implementation uses two different datastreams:
 
@@ -156,7 +156,7 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 | Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Yes. | The ID of the datastream that you use to pass the interactions to the Edge Network. See the [datastreams overview](../datastreams/overview.md) to learn how to configure a datastream. |
+| `dataStreamId` | `String` | Yes. | The ID of the datastream that you use to pass the interactions to the Edge Network. See the [datastreams overview](../../datastreams/overview.md) to learn how to configure a datastream. |
 | `requestId` | `String` | No | A random ID for correlating internal server requests. If none is provided, the Edge Network will generate one and return it in the response.|
 
 ### Server-side response {#server-response}
