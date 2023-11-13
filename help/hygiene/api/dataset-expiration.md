@@ -136,11 +136,11 @@ A successful response returns the details of the dataset expiration.
     "datasetId": "62759f2ede9e601b63a2ee14",
     "datasetName": "XtVRwq9-38734",
     "sandboxName": "prod",
-    "imsOrg": "{ORG_ID}",
+    "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
     "status": "pending",
     "expiry": "2024-12-31T23:59:59Z",
     "updatedAt": "2024-05-11T15:12:40.393115Z",
-    "updatedBy": "{USER_ID}",
+    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
     "displayName": "Delete Acme Data before 2025",
     "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
 }
@@ -236,11 +236,11 @@ A successful response returns the details of the dataset expiration, with HTTP s
 {
     "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
     "datasetId": "5b020a27e7040801dedbf46e",
-    "imsOrg": "{ORG_ID}",
+    "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
     "status": "pending",
     "expiry": "2024-12-31T23:59:59Z",
     "updatedAt": "2022-05-09T22:38:40.393115Z",
-    "updatedBy": "{USER_ID}",
+    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
     "displayName": "Delete Acme Data before 2025",
     "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
 }
@@ -389,28 +389,26 @@ The following table outlines the available query parameters when [listing datase
 
 | Parameter | Description | Example |
 | --- | --- | --- |
-| `limit` | An integer between 1 and 100 that indicates the maximum number of expirations to return. Defaults to 25. | `limit=50` |
-| `page` | An integer that indicates which page of expirations to return. | `page=3` |
-| `orgId` | Matches datasets expirations whose organization ID matches that of the parameter. This value defaults to that of the `x-gw-ims-org-id` headers, and is ignored unless the request supplies a service token. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
-| `status` | A comma-separated list of statuses. When included, the response matches dataset expirations whose current status is among those listed. | `status=pending,cancelled` |
 | `author` | Matches expirations whose `created_by` is a match for the search string. If the search string begins with `LIKE` or `NOT LIKE`, the remainder is treated as an SQL search pattern. Otherwise, the entire search string is treated as a literal string that must exactly match the entire content of a `created_by` field. | `author=LIKE %john%`, `author=John Q. Public` |
-| `sandboxName` | Matches dataset expirations whose sandbox name exactly matches the argument. Defaults to the sandbox name in the request's `x-sandbox-name` header. Use `sandboxName=*` to include dataset expirations from all sandboxes. | `sandboxName=dev1` |
-| `datasetId` | Matches expirations that apply to specific dataset. | `datasetId=62b3925ff20f8e1b990a7434` |
-| `ttlId` | Matches the expiration request with the given ID. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
-| `search`  | Matches expirations where the specified string is an exact match for the expiration ID, or is **contained** in any of these fields:<br><ul><li>author</li><li>display name</li><li>description</li><li>display name</li><li>dataset name</li></ul> | `search=TESTING`  |
-| `displayName`  | Matches expirations whose display name contains the provided search string. The match is case-insensitive. | `displayName=License Expiry`  |
-| `datasetName`  | Matches expirations whose dataset name contains the provided search string. The match is case-insensitive.  | `datasetName=Acme`  |
-| `description`  |   | `description=Handle expiration of Acme information through the end of 2024.`  |
+| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | Matches expirations that were cancelled at any time in the indicated interval. This applies even if the expiration was later reopened (by setting a new expiry for the same dataset). | `updatedDate=2022-01-01` |
+| `completedDate` / `completedToDate` / `completedFromDate` | Matches expirations that were completed during the specified interval. | `completedToDate=2021-11-11-06:00` |
 | `createdDate` | Matches expirations that were created in the 24-hour window starting at the stated time.<br><br>Note that dates without a time (like `2021-12-07`) represent the datetime at the beginning of that day. Thus, `createdDate=2021-12-07` refers to any expiration created on 7 December 2021, from `00:00:00` through `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
 | `createdFromDate` | Matches expirations that were created at, or after, the indicated time. | `createdFromDate=2021-12-07T00:00:00Z` |
 | `createdToDate` | Matches expirations that were created at, or before, the indicated time. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
-| `updatedDate` / `updatedToDate` / `updatedFromDate` | Like `createdDate` / `createdFromDate` / `createdToDate`, but matches against a dataset expiration's update time instead of creation time.<br><br>An expiration is considered updated on every edit, including when it is created, cancelled, or executed. | `updatedDate=2022-01-01` |
-| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | Matches expirations that were cancelled at any time in the indicated interval. This applies even if the expiration was later reopened (by setting a new expiry for the same dataset). | `updatedDate=2022-01-01` |
-| `completedDate` / `completedToDate` / `completedFromDate` | Matches expirations that were completed during the specified interval. | `completedToDate=2021-11-11-06:00` |
+| `datasetId` | Matches expirations that apply to specific dataset. | `datasetId=62b3925ff20f8e1b990a7434` |
+| `datasetName`  | Matches expirations whose dataset name contains the provided search string. The match is case-insensitive.  | `datasetName=Acme`  |
+| `description`  |   | `description=Handle expiration of Acme information through the end of 2024.`  |
+| `displayName`  | Matches expirations whose display name contains the provided search string. The match is case-insensitive. | `displayName=License Expiry`  |
+| `executedDate` / `executedFromDate` / `executedToDate` | Filters results based on an exact execution date, an ending date for execution, or a starting date for execution. They are used to retrieve data or records associated with the execution of an operation on a specific date, before a particular date, or after a particular date. | `executedDate=2023-02-05T19:34:40.383615Z` / `executedToDate=2022-05-09T22:38:40.393115Z` / `executedFromDate=2023-04-07T18:25:40.352715Z` |
 | `expiryDate` / `expiryToDate` / `expiryFromDate` | Matches expirations that are due to be executed, or have already been executed, during the specified interval. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
-| `orderBy`  |   | INCLUDE INFO FROM DENNIS  |
-| `executedDate`  |   |   |
-| `executedFromDate`  |   |   |
-|  `executedToDate` |   |   |
+| `limit` | An integer between 1 and 100 that indicates the maximum number of expirations to return. Defaults to 25. | `limit=50` |
+| `orderBy`  | The `orderBy` query parameter specifies the sorting order of the results returned by the API. Use it to arrange the data based on one or more fields, either in ascending (ASC) or descending (DESC) order. Use the + or - prefix to signify ASC, DESC respectively. The following values are accepted: `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`. | `-datasetName`  |
+| `orgId` | Matches datasets expirations whose organization ID matches that of the parameter. This value defaults to that of the `x-gw-ims-org-id` headers, and is ignored unless the request supplies a service token. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
+| `page` | An integer that indicates which page of expirations to return. | `page=3` |
+| `sandboxName` | Matches dataset expirations whose sandbox name exactly matches the argument. Defaults to the sandbox name in the request's `x-sandbox-name` header. Use `sandboxName=*` to include dataset expirations from all sandboxes. | `sandboxName=dev1` |
+| `search`  | Matches expirations where the specified string is an exact match for the expiration ID, or is **contained** in any of these fields:<br><ul><li>author</li><li>display name</li><li>description</li><li>display name</li><li>dataset name</li></ul> | `search=TESTING`  |
+| `status` | A comma-separated list of statuses. When included, the response matches dataset expirations whose current status is among those listed. | `status=pending,cancelled` |
+| `ttlId` | Matches the expiration request with the given ID. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
+| `updatedDate` / `updatedToDate` / `updatedFromDate` | Like `createdDate` / `createdFromDate` / `createdToDate`, but matches against a dataset expiration's update time instead of creation time.<br><br>An expiration is considered updated on every edit, including when it is created, cancelled, or executed. | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
