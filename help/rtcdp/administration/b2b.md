@@ -1,6 +1,8 @@
 ---
 title: Access control in Real-Time Customer Data Platform B2B Edition
 description: An overview of the role of access control in Adobe Real-Time Customer Data Platform B2B Edition.
+feature: Access Control, Sandboxes
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 ---
 # Access control in Adobe Real-Time Customer Data Platform B2B Edition
 
