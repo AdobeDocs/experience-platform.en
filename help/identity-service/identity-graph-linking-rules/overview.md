@@ -15,6 +15,7 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 ## Table of contents
 
 * [Overview](./overview.md)
+* [Identity optimization algorithm](./identity-optimization-algorithm.md)
 * [Example scenarios](./example-scenarios.md)
 * [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
 * [Identity linking logic](./identity-linking-logic.md)
@@ -33,13 +34,12 @@ For more information on use case scenarios for identity graph linking rules, rea
 
 With Identity graph linking rules you can:
 
-* Configure limits to prevent two disparate person identifiers from merging into one identity graph, so that a single identity graph only represents a single person.
-  * The limits that you configure are then enforced by identity optimization algorithm.
-* Configure priorities to associate online events conducted by the authenticated individual to a given user.
+* Create a single identity graph / merged profile for each user by configuring unique namespaces (limits), which will prevent two disparate person identifiers from merging into one identity graph.
+* Associate online, authenticated events to the person by configuring priorities
 
 ### Limits
 
-You can use namespace limits to define the maximum number of identities that can exist in a graph based on a given namespace. For example, you can set your graph to have a maximum of just one identity with a CRM ID namespace, thus preventing the merging of two disparate person identifiers within the same graph.
+A unique namespace is an identifier that represents an individual, such as CRM ID, login ID, and hashed email. If a namespace is designated as unique, then a graph can only have one identity with that namespace (`limit=1`). This will prevent the merging of two disparate person identifiers within the same graph. 
 
 * If a limit is not configured, this could result in unwanted graph merges, such as two identities with a CRM ID namespace in a graph.
 * If a limit is not configured, the graph can add as many namespaces as needed as long as the graph is within the guardrails (50 identities/graph).
@@ -53,7 +53,9 @@ The following is a list of implications of the algorithm on associating anonymou
 
 * The ECID will be associated to the last authenticated user if the following conditions are met:
   * If CRM IDs are merged by ECID (shared device).
-  * If limits are configured to just one CRM ID.
+  * If limits are configured to just one CRM ID. 
+
+For more information, read the document on [identity optimization algorithm](./identity-optimization-algorithm.md).
 
 ### Priority
 
@@ -100,6 +102,7 @@ If the following experience events are ingested into Experience Platform, the pr
 
 For more information on identity graph linking rules, read the following documentation:
 
+* [Identity optimization algorithm](./identity-optimization-algorithm.md)
 * [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
 * [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
 * [Identity linking logic](./identity-linking-logic.md)
