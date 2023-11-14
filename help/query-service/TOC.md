@@ -9,7 +9,7 @@ feature: Queries
 # Adobe Experience Platform Query Service {#query}
 
 - [Query Service overview](home.md)
-- [Query Service packaging](packages.md)
+- [Query Service packaging](packaging.md)
 - [Query Service guardrails](guardrails.md)
 - Get started {#get-started}
     - [Prerequisites](get-started/prerequisites.md)
