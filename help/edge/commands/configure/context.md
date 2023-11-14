@@ -8,7 +8,7 @@ The `context` property is an array of strings that determines what the Web SDK c
 
 ## Context keywords and XDM elements
 
-If you include a given context keyword, the Web SDK populates all of its associated XDM elements. If you want to omit a specific XDM element while allowing others, you can clear values out using [`onBeforeEventSend`](onbeforeeventsend.md). If you send multiple events on a page, the Web SDK includes these fields on every `SendEvent` call.
+If you include a given context keyword, the Web SDK automatically populates all of its associated XDM elements. If you want to omit a specific XDM element while allowing others, you can clear values out using [`onBeforeEventSend`](onbeforeeventsend.md). If you send multiple events on a page, the Web SDK includes these fields on every `SendEvent` call.
 
 ### Web
 
@@ -58,20 +58,19 @@ The `"placeContext"` keyword collects information about the user's location.
 
 ### High entropy client hints
 
-The `"highEntropyUserAgentHints"` keyword collects detailed information about the user's device. This data is included in the HTTP header of the request sent to Adobe. After the data has arrived within the Edge network, the XDM object is populated depending on how you [configure your datastream](/help/datastreams/configure.md):
+The `"highEntropyUserAgentHints"` keyword collects detailed information about the user's device. This data is included in the HTTP header of the request sent to Adobe. After the data has arrived within the Edge network, the XDM object populates its respective XDM path. If you set the respective XDM path in your `sendEvent` call, it takes precedence over the HTTP header value.
 
-* If you configure your datastream to keep user agent and client hint headers, the full string is included under `xdm.environment.browserDetails.userAgent`.
-* If you configure your datastream to use device lookup, see the table below to see which XDM elements are populated.
+If you use device lookups when [configuring your datastream](/help/datastreams/configure.md), data can be cleared out in favor of device lookup values. Some client hint fields and device lookup fields cannot exist in the same hit.
 
-| Dimension | Description | HTTP header | Device lookup XDM path | Example value |
+| Dimension | Description | HTTP header | XDM path | Example value |
 | --- | --- | --- | --- | --- |
-| Operating system version | The version of the operating system. | `Sec-CH-UA-Platform-Version` | `xdm.environment.operatingSystemVersion` | |
-| Architecture | The underlying CPU architecture. | `Sec-CH-UA-Arch` | | |
-| Device model | The name of the device used. | `Sec-CH-UA-Model` | `xdm.device.modelNumber` | |
-| Bitness | The number of bits the underlying CPU architecture supports. | `Sec-CH-UA-Bitness` | | |
-| Browser vendor | The company that created the browser. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.vendor` | |
-| Browser name | The browser used. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.name` | |
-| Browser version | The exact version of the browser. The low entropy hint `Sec-CH-UA` only collects the significant version, not the exact version. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.version` | |
+| Operating system version | The version of the operating system. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | |
+| Architecture | The underlying CPU architecture. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | |
+| Device model | The name of the device used. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | |
+| Bitness | The number of bits that the underlying CPU architecture supports. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | |
+| Browser vendor | The company that created the browser. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-CH-UA-Full-Version-List` | | |
+| Browser name | The browser used. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | |
+| Browser version | The significant version of the browser. The low entropy hint `Sec-CH-UA` also collects this element. Exact browser version is not automatically collected. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | |
 
 {style="table-layout:auto"}
 
@@ -93,7 +92,7 @@ Set the `context` array of strings when running the `configure` command. If you 
 
 >[!NOTE]
 >
->If you want to collect all context information including high entropy client hints, you must include every value in the `context` array string.
+>If you want to collect all context information, including high entropy client hints, you must include every value in the `context` array string. The default `context` value omits `highEntropyUserAgentHints`, and if you set the `context` property, any omitted values do not collect data.
 
 ```js
 alloy("configure", {
