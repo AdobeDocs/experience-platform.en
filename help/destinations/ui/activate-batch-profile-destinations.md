@@ -24,7 +24,7 @@ This article explains the workflow required to activate audiences in Adobe Exper
 
 To activate audiences to destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 
-### Supported file formats for export {#supported-file-formats-export}
+## Supported file formats for export {#supported-file-formats-export}
 
 The following file formats are supported when exporting audiences:
 
