@@ -61,7 +61,7 @@ Read more about [Taxonomy Metadata](https://developer.verizonmedia.com/datax/gui
 
 ## Supported identities {#supported-identities}
 
-[!DNL Verizon Media] supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+[!DNL Verizon Media] supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 |Target Identity|Description|Considerations|
 |---|---|---|

@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Debugger Help
 breadcrumb-title: Adobe Experience Platform Debugger Guide
-user-guide-description: Examine your web pages for problems with your Experience Platform implementations.
+user-guide-description: Examine your web pages for problems with your Experience Platform implementations using the Adobe Experience Platform Debugger for Chrome and Firefox.
 feature: Debugger
 ---
 

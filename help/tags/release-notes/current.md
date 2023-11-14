@@ -7,11 +7,11 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 
 >[!IMPORTANT]
 >
->Moving forward the tags and event forwarding release notes will no longer be provided on this page. Please refer to the latest [Adobe Experience Platform release notes](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en#data-collection) for detailed tags and event forwarding updates.
+>Moving forward the tags and event forwarding release notes will no longer be provided on this page. Please refer to the latest [Adobe Experience Platform release notes](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html#data-collection) for detailed tags and event forwarding updates.
 
 ## April 26, 2023
 
-* **OAuth JWT Secret**: The [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) allows customers to use Adobe and Google Service tokens to support server-to-server interactions in Event Forwarding.
+* **OAuth JWT Secret**: The [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) allows customers to use Adobe and Google Service tokens to support server-to-server interactions in Event Forwarding.
 
 The following new extension has been released:
 
@@ -22,7 +22,7 @@ The following new extension has been released:
 **Quick Stark Workflows (Beta)**
 
 Access new quick start workflows under "Getting Started" from the Data Collection home screen! The following workflows are now available to customers as a public Beta.
-* **[Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: Event Forwarding customers can rapidly collect and forward event data, server-side to Meta for ad conversions in just a few simple steps.
+* **[Meta Conversions API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)**: Event Forwarding customers can rapidly collect and forward event data, server-side to Meta for ad conversions in just a few simple steps.
 * **[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)**: Customers can rapidly implement the Mobile SDK and validate basic mobile events in just a few simple steps.
 
 New extensions have been released:

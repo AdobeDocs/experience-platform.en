@@ -29,9 +29,12 @@ The following Experience Platform services are involved with modeling Real-Time 
 
 There are two types of default limits within this document:
 
-* **Soft limit:** It is possible to go beyond a soft limit, however soft limits provide a recommended guideline for system performance.
+| Guardrail type | Description|
+|----------|---------|
+| **Performance guardrail (Soft limit)** | Performance guardrails are usage limits that relate to the scoping of your use cases. When exceeding performance guardrails, you may experience performance degradation and latency. Adobe is not responsible for such performance degradation. Customers who consistently exceed a performance guardrail may elect to license additional capacity to avoid performance degradation.|
+| **System-enforced guardrails (Hard limit)** | System-enforced guardrails are enforced by the Real-Time CDP UI or API. These are limits that you cannot exceed as the UI and API will block you from doing so or will return an error.|
 
-* **Hard limit:** A hard limit provides an absolute maximum.
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -47,14 +50,14 @@ The following guardrails provide recommended limits when modeling Real-Time Cust
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| XDM Individual Profile class datasets | 20 | Soft | A maximum of 20 datasets that leverage the XDM Individual Profile class is recommended. |
-| XDM ExperienceEvent class datasets | 20 | Soft | A maximum of 20 datasets that leverage the XDM ExperienceEvent class is recommended. |
-| Adobe Analytics report suite datasets enabled for Profile | 1 | Soft | A maximum of one (1) Analytics report suite dataset should be enabled for Profile. Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix. |
-| Multi-entity relationships | 5 | Soft | A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
-| JSON depth for ID field used in multi-entity relationship| 4 | Soft | The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4. This means that in a highly nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
-| Array cardinality in a profile fragment|<=500|Soft|The optimal array cardinality in a profile fragment (time-independent data) is <=500. |
-| Array cardinality in ExperienceEvent | <=10 | Soft | The optimal array cardinality in an ExperienceEvent (time series data) is <=10. |
-| Identity count for individual profile Identity Graph | 50 | Hard | **The maximum number of identities in an Identity Graph for an individual profile is 50.** Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups. | 
+| XDM Individual Profile class datasets | 20 | Performance guardrail | A maximum of 20 datasets that leverage the XDM Individual Profile class is recommended. |
+| XDM ExperienceEvent class datasets | 20 | Performance guardrail | A maximum of 20 datasets that leverage the XDM ExperienceEvent class is recommended. |
+| Adobe Analytics report suite datasets enabled for Profile | 1 | Performance guardrail | A maximum of one (1) Analytics report suite dataset should be enabled for Profile. Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix. |
+| Multi-entity relationships | 5 | Performance guardrail | A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
+| JSON depth for ID field used in multi-entity relationship| 4 | Performance guardrail | The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4. This means that in a highly nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
+| Array cardinality in a profile fragment|<=500|Performance guardrail|The optimal array cardinality in a profile fragment (time-independent data) is <=500. |
+| Array cardinality in ExperienceEvent | <=10 | Performance guardrail | The optimal array cardinality in an ExperienceEvent (time series data) is <=10. |
+| Identity count for individual profile Identity Graph | 50 | System-enforced guardrail | **The maximum number of identities in an Identity Graph for an individual profile is 50.** Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups. | 
 
 {style="table-layout:auto"}
 
@@ -62,9 +65,9 @@ The following guardrails provide recommended limits when modeling Real-Time Cust
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| No time-series data permitted for non-[!DNL XDM Individual Profile] entities | 0 | Hard | **Time-series data is not permitted for non-[!DNL XDM Individual Profile] entities in Profile Service.** If a time-series dataset is associated with a non-[!DNL XDM Individual Profile] ID, the dataset should not be enabled for [!DNL Profile]. |
-| No nested relationships | 0 | Soft | You should not create a relationship between two non-[!DNL XDM Individual Profile] schemas. The ability to create relationships is not recommended for any schemas which are not part of the [!DNL Profile] union schema.|
-| JSON depth for primary ID field | 4 | Soft | The recommended maximum JSON depth for the primary ID field is 4. This means that in a highly nested schema, you should not select a field as a primary ID if it is nested more than 4 levels deep. A field that is on the 4th nested level can be used as a primary ID. |
+| No time-series data permitted for non-[!DNL XDM Individual Profile] entities | 0 | System-enforced guardrail | **Time-series data is not permitted for non-[!DNL XDM Individual Profile] entities in Profile Service.** If a time-series dataset is associated with a non-[!DNL XDM Individual Profile] ID, the dataset should not be enabled for [!DNL Profile]. |
+| No nested relationships | 0 | Performance guardrail | You should not create a relationship between two non-[!DNL XDM Individual Profile] schemas. The ability to create relationships is not recommended for any schemas which are not part of the [!DNL Profile] union schema.|
+| JSON depth for primary ID field | 4 | Performance guardrail | The recommended maximum JSON depth for the primary ID field is 4. This means that in a highly nested schema, you should not select a field as a primary ID if it is nested more than 4 levels deep. A field that is on the 4th nested level can be used as a primary ID. |
 
 {style="table-layout:auto"}
 
@@ -80,12 +83,12 @@ The following guardrails refer to data size and provide recommended limits for d
 
 | Guardrail | Limit| Limit Type | Description|
 | --- | --- | --- | --- |
-| Maximum ExperienceEvent size | 10KB | Hard | **The maximum size of an event is 10KB.** Ingestion will continue, however any events larger than 10KB will be dropped.|
-| Maximum profile record size | 100KB | Hard | **The maximum size of a profile record is 100KB.** Ingestion will continue, however profile records larger than 100KB will be dropped.|
-| Maximum profile fragment size | 50MB | Hard | **The maximum size of a single profile fragment is 50MB.** Segmentation, exports, and lookups may fail for any [profile fragment](#profile-fragments) that is larger than 50MB.|
-| Maximum profile storage size | 50MB | Soft | **The maximum size of a stored profile is 50MB.** Adding new [profile fragments](#profile-fragments) into a profile that is larger than 50MB will affect system performance. For example, a profile could contain a single fragment that is 50MB or it could contain multiple fragments across multiple datasets with a combined total size of 50MB. Attempting to store a profile with a single fragment larger than 50MB, or multiple fragments that total more than 50MB in combined size, will affect system performance.|
-| Number of Profile or ExperienceEvent batches ingested per day | 90 | Soft | **The maximum number of Profile or ExperienceEvent batches ingested per day is 90.** This means that the combined total of Profile and ExperienceEvent batches ingested each day cannot exceed 90. Ingesting additional batches will affect system performance.|
-| Number of ExperienceEvents per profile record | 5000 | Soft | **The maximum number of ExperienceEvents per profile record is 5000.** Profiles with more than 5000 ExperienceEvents will **not** be considered for segmentation. | 
+| Maximum ExperienceEvent size | 10KB | System-enforced guardrail | **The maximum size of an event is 10KB.** Ingestion will continue, however any events larger than 10KB will be dropped.|
+| Maximum profile record size | 100KB | System-enforced guardrail | **The maximum size of a profile record is 100KB.** Ingestion will continue, however profile records larger than 100KB will be dropped.|
+| Maximum profile fragment size | 50MB | System-enforced guardrail | **The maximum size of a single profile fragment is 50MB.** Segmentation, exports, and lookups may fail for any [profile fragment](#profile-fragments) that is larger than 50MB.|
+| Maximum profile storage size | 50MB | Performance guardrail | **The maximum size of a stored profile is 50MB.** Adding new [profile fragments](#profile-fragments) into a profile that is larger than 50MB will affect system performance. For example, a profile could contain a single fragment that is 50MB or it could contain multiple fragments across multiple datasets with a combined total size of 50MB. Attempting to store a profile with a single fragment larger than 50MB, or multiple fragments that total more than 50MB in combined size, will affect system performance.|
+| Number of Profile or ExperienceEvent batches ingested per day | 90 | Performance guardrail | **The maximum number of Profile or ExperienceEvent batches ingested per day is 90.** This means that the combined total of Profile and ExperienceEvent batches ingested each day cannot exceed 90. Ingesting additional batches will affect system performance.|
+| Number of ExperienceEvents per profile record | 5000 | Performance guardrail | **The maximum number of ExperienceEvents per profile record is 5000.** Profiles with more than 5000 ExperienceEvents will **not** be considered for segmentation. | 
 
 {style="table-layout:auto"}
 
@@ -93,9 +96,9 @@ The following guardrails refer to data size and provide recommended limits for d
 
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
-| Total size for all dimensional entities | 5GB | Soft | The recommended total size for all dimensional entities is 5GB. Ingesting large dimension entities may affect system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended.|
-| Datasets per dimensional entity schema | 5 | Soft | A maximum of 5 datasets associated with each dimensional entity schema is recommended. For example, if you create a schema for "products" and add five contributing datasets, you should not create a sixth dataset tied to the products schema.|
-| Dimension entity batches ingested per day | 4 per entity | Soft | The recommended maximum number of dimension entity batches ingested per day is 4 per entity. For example, you could ingest updates to a product catalog up to 4 times per day. Ingesting additional dimension entity batches for the same entity may affect system performance. |
+| Total size for all dimensional entities | 5GB | Performance guardrail | The recommended total size for all dimensional entities is 5GB. Ingesting large dimension entities may affect system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended.|
+| Datasets per dimensional entity schema | 5 | Performance guardrail | A maximum of 5 datasets associated with each dimensional entity schema is recommended. For example, if you create a schema for "products" and add five contributing datasets, you should not create a sixth dataset tied to the products schema.|
+| Dimension entity batches ingested per day | 4 per entity | Performance guardrail | The recommended maximum number of dimension entity batches ingested per day is 4 per entity. For example, you could ingest updates to a product catalog up to 4 times per day. Ingesting additional dimension entity batches for the same entity may affect system performance. |
 
 {style="table-layout:auto"}
 
@@ -105,10 +108,10 @@ The guardrails outlined in this section refer to the number and nature of audien
 
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
-| Audiences per sandbox | 4000 | Soft | An organization can have more than 4000 audiences in total, as long as there are less than 4000 audiences in each individual sandbox. Attempting to create additional audiences may affect system performance.|
-| Edge audiences per sandbox | 150 | Soft | An organization can have more than 150 edge audiences in total, as long as there are less than 150 edge audiences in each individual sandbox. Attempting to create additional edge audiences may affect system performance. | 
-| Streaming audiences per sandbox | 500 | Soft | An organization can have more than 500 streaming audiences in total, as long as there are less than 500 streaming audiences in each individual sandbox. Attempting to create additional streaming audiences may affect system performance.|
-| Batch audiences per sandbox | 4000 | Soft | An organization can have more than 4000 batch audiences in total, as long as there are less than 4000 batch audiences in each individual sandbox. Attempting to create additional batch audiences may affect system performance.|
+| Audiences per sandbox | 4000 | Performance guardrail | An organization can have more than 4000 audiences in total, as long as there are less than 4000 audiences in each individual sandbox. Attempting to create additional audiences may affect system performance.|
+| Edge audiences per sandbox | 150 | Performance guardrail | An organization can have more than 150 edge audiences in total, as long as there are less than 150 edge audiences in each individual sandbox. Attempting to create additional edge audiences may affect system performance. | 
+| Streaming audiences per sandbox | 500 | Performance guardrail | An organization can have more than 500 streaming audiences in total, as long as there are less than 500 streaming audiences in each individual sandbox. Attempting to create additional streaming audiences may affect system performance.|
+| Batch audiences per sandbox | 4000 | Performance guardrail | An organization can have more than 4000 batch audiences in total, as long as there are less than 4000 batch audiences in each individual sandbox. Attempting to create additional batch audiences may affect system performance.|
 
 {style="table-layout:auto"}
 
@@ -149,3 +152,13 @@ When bringing data together from multiple sources, merge policies are the rules 
 ### Adobe Analytics report suite datasets in Platform {#aa-datasets}
 
 Multiple report suites can be enabled for Profile as long as all data conflicts are resolved. You can use the Data Prep functionality to resolve data conflicts across eVars, Lists, and Props. To learn more about how to use the Data Prep functionality, please read the [Adobe Analytics connector UI guide](../sources/tutorials/ui/create/adobe-applications/analytics.md). 
+
+## Next steps
+
+See the following documentation for more information on other Experience Platform services guardrails, on end-to-end latency information, and licensing information from Real-Time CDP Product Description documents:
+
+* [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
+* [End-to-end latency diagrams](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) for various Experience Platform services.
+* [Real-Time Customer Data Platform (B2C Edition - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

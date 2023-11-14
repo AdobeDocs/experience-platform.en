@@ -33,7 +33,7 @@ The flow diagram below describes the order of the steps taken to deliver hybrid 
 1. The Server API returns the personalization content to your application server.
 1. The application server returns an HTML response to the client browser, containing the [identity and cluster cookies](#cookies).
 1. On the client page, the [!DNL Web SDK] `applyResponse` command is called, passing in the headers and body of the [!UICONTROL Server API] response from the previous step.
-1. The [!DNL Web SDK] renders page load [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) offers automatically, because the `renderDecisions` flag is set to `true`.
+1. The [!DNL Web SDK] renders page load [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) offers automatically, because the `renderDecisions` flag is set to `true`.
 1. Form-based [!DNL JSON] offers are manually applied through the `applyPersonalization` method, to update the [!DNL DOM] based on the personalization offer.
 1. For form-based activities, display events must manually be sent, to indicate when the offer has been displayed. This is done via the `sendEvent` command.
 

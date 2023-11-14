@@ -56,7 +56,7 @@ For more information, please see the [access control overview](../../access-cont
 | Centralized offer library | The interface where you create and manage the different elements that compose your offers, and define their rules and constraints. |
 | Offer Decision Engine | The Offer Decision Engine leverages [!DNL Platform] data and [!DNL Real-Time Customer Profiles], along with the Offer Library, in order to select the right time, customers and channels to which offers will be delivered. |
 
-For more information, please see the [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=en) documentation.
+For more information, please see the [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html) documentation.
 
 ## [!DNL Sandboxes] {#sandboxes}
 
