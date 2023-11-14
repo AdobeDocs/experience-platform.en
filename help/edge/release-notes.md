@@ -14,7 +14,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **Fixes and improvements**
 
-* Fixed an issue where the propositions array returned from sendEvent calls was always empty.
+* Fixed an issue where the propositions array returned from `sendEvent` calls was always empty.
 
 ## Version 2.19.0 - November 1, 2023
 

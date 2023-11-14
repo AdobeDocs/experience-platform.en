@@ -10,10 +10,11 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 ## Version 2.21.3 - November 10, 2023
 
+Contains version 2.19.1 of the Adobe Experience Platform Web SDK.
+
 **Fixes and improvements**
 
 * Fixed an issue where the propositions array available in `Send event complete` events was always empty.
-* Contains version 2.19.1 of the Adobe Experience Platform Web SDK.
 
 ## Version 2.21.2 - November 1, 2023
 
