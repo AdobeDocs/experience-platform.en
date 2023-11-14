@@ -1,49 +1,38 @@
-### `defaultConsent` {#default-consent}
-
-| Type | Required | Default Value |
-| -------- | ------------ | ----------------- |
-| Object   | No           | `"in"`|
-
-{style="table-layout:auto"}
-
-Sets the user's default consent. Use this setting when there is no consent preference already saved for the user. The other valid values are `"pending"` and `"out"`. This default value is not persisted to the user's profile. The user's profile is updated only when `setConsent` is called.
-* `"in"`: When this setting is set or no value is provided, work proceeds without user consent preferences.
-* `"pending"`: When this setting is set, work is queued until the user provides consent preferences.
-* `"out"`: When this setting is set, work is discarded until the user provides consent preferences.
-After the user's preferences have been provided, work either proceeds or is aborted based on the user's preferences. See [Supporting Consent](../consent/supporting-consent.md) for more information.
-
 ---
+title: defaultConsent
+description: 
+---
+# `defaultConsent`
 
-### Default consent
+The `defaultConsent` property determines how you handle data collection consent before you call the [`setConsent`](../setconsent.md) command. This property is valuable when you don't want to accidentally collect data from individuals who reside in areas where consent is required before collecting data.
 
-Default consent is used when there is no consent preference already saved for a customer. This means the default consent options can control the behavior of Adobe Experience Platform Web SDK and change based on a customer's region.
+This property allows three values:
 
-For example, if you have a customer that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to `in`, but inside the jurisdiction of GDPR, the default consent could be set to `pending`. Your Consent Management Platform (CMP) might detect the customer's region and provide the flag `gdprApplies` to IAB TCF 2.0. This flag can be used to set the default consent.
+* **In**: Data collection proceeds as normal until the user opts out.
+* **Out**: Data is permanently discarded until the user opts in.
+* **Pending**: Data is stored locally until the user opts in using the [`setConsent`](../setconsent.md) command. Data does not persist between page loads.
 
-For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
+If you have a customer that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to `in`, but inside the jurisdiction of GDPR, the default consent could be set to `pending`. Your Consent Management Platform (CMP) can detect the customer's region and provide the flag `gdprApplies` to IAB TCF 2.0. This flag can be used to set the default consent.
 
-## Configuring consent
+## Set default consent in the Web SDK extension
 
-By default the user is opted in to all purposes. To prevent the SDK from performing the above tasks until the user opts in, pass `"defaultConsent": "pending"` during SDK configuration as follows:
+Select the desired radio button under [!UICONTROL Default consent] when configuring the extension.
 
-```javascript
+1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Select the desired tag property.
+1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
+1. Scroll down to the [!UICONTROL Privacy] section, then select the desired **[!UICONTROL Default consent]**.
+1. Click **[!UICONTROL Save]**, then publish your changes.
+
+## Set default consent using alloy.js
+
+Set the `defaultConsent` string property to the desired consent level when running the `configure` command. This property only supports three values: **"in"**, **"out"**, and **"pending"**.
+
+```js
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "imsOrgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg",
   "defaultConsent": "pending"
 });
 ```
-
-When the default consent for the general purpose is set to pending, attempting to execute any commands that depend on user opt-in preferences (for example, the `sendEvent` command) results in the command being queued within the SDK. These commands are not processed until you have communicated the user's opt-in preferences to the SDK.
-
->[!NOTE]
->
->Commands are only queued in memory. They are not saved across page loads.
-
-If you do not want to collect events that occurred before the user's opt-in preferences are set, you can pass `"defaultConsent": "out"` during SDK configuration. Attempting to execute any commands that depend on user opt-in preferences will have no effect until you have communicated the user's opt-in preferences to the SDK.
-
->[!NOTE]
->
->Currently, the SDK supports only a single all or nothing purpose. Although we plan to build out a more robust set of purposes or categories that will correspond to the different Adobe capabilities and product offerings, the current implementation is an all or nothing approach to opt-in.  This only applies to Adobe Experience Platform [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
-
-At this point, you might prefer to ask the user to opt in somewhere within your user interface. After the user's preferences have been collected, communicate these preferences to the SDK.
