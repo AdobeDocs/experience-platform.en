@@ -1,31 +1,25 @@
-### `debugEnabled`
+---
+title: debugEnabled
+description: Use code to enable debugging capabilities in the Web SDK.
+---
+# `debugEnabled`
 
-| Type | Required | Default Value |
-| -------- | ------------ | ----------------- |
-| Boolean  | No           | `false`           |
+The `debugEnabled` property allows you to enable or disable debugging using Web SDK code. It is one of the available ways to enable [debugging](../../use-cases/debugging.md). Enabling debugging within your implementation can be more convenient than other methods during website development when you always want to have debugging enabled. This method of debugging enables it for all visitors, so it is not recommended for production pages.
 
-{style="table-layout:auto"}
+See the [Debugging](../../use-cases/debugging.md) use case page for more ways to enable debugging.
 
-Indicates whether debugging is enabled. Setting this config to `true` enables the following features:
+## Enable debugging in the Web SDK extension
 
-| **Feature**            | **Function** |
-| ---------------------- | ------------------ |
-| Console logging        | Enables debugging messages to be displayed in the browser's JavaScript console  |
+There are no debugging options available natively in the Web SDK extension. Use an [alternate debugging method](../../use-cases/debugging.md).
 
-{style="table-layout:auto"}
+## Enable debugging using alloy.js
 
-## Toggling debugging with the Configure command
+Set the `debugEnabled` boolean to `true` when running the `configure` command. If you omit this property when configuring the SDK, it defaults to `false`.
 
-When configuring the SDK using the `configure` command, enable debugging by setting the `debugEnabled` option to `true`.
-
-```javascript
+```js
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg",
   "debugEnabled": true
 });
 ```
-
->[!TIP]
->
->This enables debugging for all users of the webpage rather than only your personal browser.
