@@ -110,13 +110,13 @@ ECIDs store unauthenticated (anonymous) events, while CRM ID stores authenticate
 View the diagram below to better understand how anonymous event association works:
 
 * Kevin and Nora share a tablet.
-  * `timestamp=1`: Kevin logs in to an e-commerce website using his account, thereby establishing his CRM ID (login information) and an ECID (browser). Afterwards, Kevin logs out and becomes the last authenticated user.
-  * `timestamp=2`: Nora logs in to an e-commerce website using her account, thereby establishing her CRM ID (login information) and the same ECID. Afterwards, Nora logs out and becomes the last authenticated user.
+  * `timestamp=1`: Kevin logs in to an e-commerce website using his account, thereby establishing his CRM ID (login information) and an ECID (browser). At time of login, Kevin is now considered the last authenticated user.
+  * `timestamp=2`: Nora logs in to an e-commerce website using her account, thereby establishing her CRM ID (login information) and the same ECID. At time of login, Nora is now considered the last authenticated user.
   * `timestamp=3`: Kevin uses the tablet to browse the e-commerce website, but does not log in with his account. Kevin's browsing activity are then stored in the ECID, which in turn is associated with Nora because she is the last authenticated user. At this point, Nora owns the anonymous events.
-    * Until Kevin logs in again, all unauthenticated events will be stored against the ECID.
-  * `timestamp=4`: Kevin logs in for a second time. At this point, he once again becomes the last authenticated user and also now owns the unauthenticated:
-    * Before his initial login.
-    * Anything he or Nora did while browsing anonymously, in-between Kevin's first and second logins.
+    * Until Kevin logs in again, Nora's merged profile will be associated to all the unauthenticated events stored against the ECID (with events being where ECID is the primary identity).
+  * `timestamp=4`: Kevin logs in for a second time. At this point, he once again becomes the last authenticated user, and also now owns the unauthenticated events:
+    * Before his initial login prior to `timestamp=1`; and
+    * Any activities he or Nora did while browsing anonymously in-between Kevin's first and second logins.
 
 ![anon-event-association](../images/identity-settings/anon-event-association.png)
 
