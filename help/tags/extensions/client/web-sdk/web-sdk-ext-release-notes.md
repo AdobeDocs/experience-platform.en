@@ -8,7 +8,15 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## Version 2.21.0 - November 1, 2023
+## Version 2.21.3 - November 10, 2023
+
+Contains version 2.19.1 of the Adobe Experience Platform Web SDK.
+
+**Fixes and improvements**
+
+* Fixed an issue where the propositions array available in `Send event complete` events was always empty.
+
+## Version 2.21.2 - November 1, 2023
 
 **New features**
 
