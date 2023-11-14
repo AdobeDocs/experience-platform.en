@@ -50,7 +50,7 @@ Computed attributes let you define event aggregates in a self-serve manner by le
 
 ### Lookback periods
 
-Computed attributes are calculated in batches, letting you keep your aggregates fresh and using the latest events. In order to support these near real-time scenarios, the refresh frequency varies depending on the event lookback period.
+Computed attributes are calculated in batches, letting you keep your aggregates fresh and using the latest events. In order to support these scenarios with minimal delay, the refresh frequency varies depending on the event lookback period.
 
 The lookback period refers to the amount of time that is reviewed when aggregating Experience Events for the computed attribute. This period of time can defined in hours, days, weeks, or months.
 
@@ -67,7 +67,9 @@ For example, if your computed attribute has a lookback period of the last 7 days
 
 >[!NOTE]
 >
->Both weeks and months are considered as **calendar weeks** and **calendar months** when used in event lookbacks. The calendar week starts on the **Sunday** and ends on the **Saturday** of the week.
+>Both weeks and months are considered as **calendar weeks** and **calendar months** when used in event lookbacks. The calendar week starts on the **Sunday** and ends on the **Saturday** of the week. The calendar month starts on the **first** of the month and ends on the **last day** of the month.
+
+The lookback period for computed attributes is a **rolling** lookback period. For example, if a first time evaluation occurs on October 15 at 12AM UTC, the a lookback period of two weeks would retrieve all the events from October 1st to October 15th, refresh in one week's time on October 22nd, then retrieve all the events from October 8th to October 22nd.
 
 **Fast refresh** {#fast-refresh}
 

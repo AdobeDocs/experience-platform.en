@@ -10,7 +10,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 
 |Release month|Update type|Description|
 |---|---|---|
-|June 2023|Functionality and documentation update| As of June 2023, you can select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target for more information about workspaces.|
+|June 2023|Functionality and documentation update| As of June 2023, you can select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) in Adobe Target for more information about workspaces.|
 |May 2023|Functionality and documentation update| As of May 2023, the **[!UICONTROL Adobe Target]** connection supports [attribute-based personalization](../../ui/activate-edge-personalization-destinations.md#map-attributes) and is generally available to all customers.|
 
 {style="table-layout:auto"}
@@ -41,10 +41,10 @@ Configuring the Adobe Target connection without using a datastream ID does not r
 
 In Adobe Target, make sure that your user has:
 
-* Access to the [default workspace](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#default-workspace);
-* The **Approver** [role](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#roles-and-permissions).
+* Access to the [default workspace](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#default-workspace);
+* The **Approver** [role](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#roles-and-permissions).
 
-Read more about granting permissions for [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) and for [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions).
+Read more about granting permissions for [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) and for [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions).
 
 ## Supported audiences {#supported-audiences}
 
@@ -90,7 +90,7 @@ Adobe Experience Platform automatically connects to your company's Adobe Target 
 >id="platform_destinations_target_workspace"
 >title="About Adobe Target Workspaces"
 >abstract="Select the Adobe Target workspace to which audiences will be shared. You can select a single workspace for each Adobe Target connection. Upon activation, audiences are routed to the selected workspace while following the applicable Experience Platform data usage labels."
->additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en" text="Learn more about Adobe Target workspaces"
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html" text="Learn more about Adobe Target workspaces"
 
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
@@ -101,9 +101,9 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
     |Adobe Target implementation (without Web SDK)| Web SDK implementation |
     |---|---|
-    |<ul><li>A datastream is not required. Adobe Target can be deployed through [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en), [server-side](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=en#server-side-implementation), or [hybrid](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=en#hybrid-implementation) implementation methods.</li><li>[Edge segmentation](../../../segmentation/ui/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md) are not supported.</li><li>You can share audiences and profile attributes to the Adobe Target connection only for the *default production sandbox*.</li><li>To configure next-session personalization without using a datastream ID, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul>|<ul><li>A datastream with Adobe Target and Experience Platform configured as services is required.</li><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md) are supported.</li><li>Sharing audiences and profile attributes from other sandboxes is supported.</li></ul>|
+    |<ul><li>A datastream is not required. Adobe Target can be deployed through [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [server-side](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), or [hybrid](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) implementation methods.</li><li>[Edge segmentation](../../../segmentation/ui/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md) are not supported.</li><li>You can share audiences and profile attributes to the Adobe Target connection only for the *default production sandbox*.</li><li>To configure next-session personalization without using a datastream ID, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul>|<ul><li>A datastream with Adobe Target and Experience Platform configured as services is required.</li><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md) are supported.</li><li>Sharing audiences and profile attributes from other sandboxes is supported.</li></ul>|
 
-* **Workspace**: Select the Adobe Target [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) to which audiences will be shared. You can select a single workspace for each Adobe Target connection. Upon activation, audiences are routed to the selected workspace while following the applicable [Experience Platform data usage labels](../../../data-governance/labels/overview.md).
+* **Workspace**: Select the Adobe Target [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) to which audiences will be shared. You can select a single workspace for each Adobe Target connection. Upon activation, audiences are routed to the selected workspace while following the applicable [Experience Platform data usage labels](../../../data-governance/labels/overview.md).
     
 >[!NOTE]
 >

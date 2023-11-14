@@ -195,9 +195,9 @@ Each field requires the following information:
 * **[!UICONTROL Type]:** The data type of the field. This includes basic scalar types and any data types defined in the [!DNL Schema Registry]. Examples: [!UICONTROL String], [!UICONTROL Integer], [!UICONTROL Boolean], [!UICONTROL Person], [!UICONTROL Address], [!UICONTROL Phone number], etc.
 * **[!UICONTROL Description]:** An optional description of the field should be included with a maximum of 200 characters.
 
-The first field for the `loyaltyTier` object will be a string called `id`, representing the ID of the loyalty member's current tier. The tier ID will be unique for each loyalty member, since this company sets different loyalty tier point thresholds for each customer based on different factors. Set the new field's type to "[!UICONTROL String]", and the **[!UICONTROL Field properties]** section becomes populated with several options for applying constraints, including default value, format, and maximum length.
+The first field for the `loyaltyTier` object will be a string called `id`, representing the ID of the loyalty member's current tier. The tier ID will be unique for each loyalty member, since this company sets different loyalty tier point thresholds for each customer based on different factors. Set the new field's type to "[!UICONTROL String]", and the **[!UICONTROL Field properties]** section becomes populated with several options for applying constraints, including default value, format, and maximum length. See the documentation on [best practices for data validation fields](../schema/best-practices.md#data-validation-fields) to learn more.
 
-![The Schema Editor with the field property values for the new ID field highlighted.](../images/tutorials/create-schema/string-constraints.png)
+![The Schema Editor with the field property values for the new ID field highlighted.](../images/tutorials/create-schema/string-constraints.png)   
 
 Since `id` will be a randomly generated freeform string, no further constraints are necessary. Select **[!UICONTROL Apply]** to apply your changes.
 

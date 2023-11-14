@@ -240,7 +240,7 @@ After reading this article, you should have a better understanding of what schem
 To learn more about the other destination components, see the following articles:
 
 * [Customer authentication](customer-authentication.md)
-* [OAuth2 authentication](oauth2-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
 * [UI attributes](ui-attributes.md)
 * [Customer data fields](customer-data-fields.md)
 * [Identity namespace configuration](identity-namespace-configuration.md)
