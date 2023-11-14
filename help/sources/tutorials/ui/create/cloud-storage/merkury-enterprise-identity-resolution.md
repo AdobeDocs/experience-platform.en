@@ -73,12 +73,11 @@ subfolder, you can specify the bucket parameter as myBucket and
 the folderPath as folder/subfolder to ensure that file exploration
 starts at subfolder as opposed to subsubfolder/abc.csv.
 
-**Connect Merkury to Platform**
+## Connect Merkury to Platform
 
-The documentation below provides information on how to connect Merkury
-to Adobe Experience Platform using APIs or the user interface:
+The documentation below provides information on how to connect Merkury to Experience Platform using the user interface.
 
-**Create Merkury source connection in the UI**
+## Create Merkury source connection in the UI
 
 Source connectors in Adobe Experience Platform provide the ability to
 ingest externally sourced data on a scheduled basis. This tutorial
@@ -109,7 +108,7 @@ components of Adobe Experience Platform:
     Provides a unified, real-time consumer profile based on aggregated
     data from multiple sources.
 
-If you already have a valid S3 connection, you may skip the remainder of
+If you already have a valid Merkury connection, you may skip the remainder of
 this document and proceed to the tutorial on [configuring a
 dataflow](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html?lang=en).
 
@@ -119,18 +118,17 @@ In order to access your bucket on Platform, you need to provide valid
 values for the following credentials:
 
   ---------------------------------------------------------------------------------
-  **Credential**   **Description**
-  ---------------- ----------------------------------------------------------------
-  AccessKey        The access key ID for your bucket.
+  **Credential**   **Description**                        **Example**
+  ---------------- ------------------------------------ ---------------------------
+  AccessKey        The access key ID for your bucket.   [string]
+                   Provided by your Merkury team
 
-  SecretKey        The secret key ID for your bucket.
+  SecretKey        The secret key ID for your bucket.   [string]
+                   Provided by your Merkury team
 
-  bucketName       The bucket contains your data and its corresponding descriptive
-                   metadata. Your S3 bucket name must be between three and 63
-                   characters long and must begin and end with either a letter or a
-                   number. The bucket name can only have lowercase letters,
-                   numbers, or hyphens (-), and cannot be formatted as an IP
-                   address.
+  bucketName       This is your Merkury bucket where    [string]
+                   files will be shared.
+                   Provided by your Merkury team
   ---------------------------------------------------------------------------------
 
 ## Connect your Merkury Account
@@ -377,11 +375,7 @@ Once your source data is successfully mapped, select **Next**.
 ![](./merkury-enterprise-identity-resolution-assets/e94eb1a624c639e79c69f526adf42ec8c577b9b3.png){width="7.364078083989502in"
 height="1.5034995625546808in"}
 
-**Schedule ingestion runs**
-
-**IMPORTANT** It is strongly recommended to schedule your dataflow for
-one-time ingestion when using the [[FTP
-source]{.underline}](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/cloud-storage/ftp.html?lang=en).
+## Schedule ingestion runs
 
 The Scheduling step appears, allowing you to configure an ingestion
 schedule to automatically ingest the selected source data using the
@@ -389,7 +383,7 @@ configured mappings. By default, scheduling is set to Once. To adjust
 your ingestion frequency, select **Frequency** and then select an option
 from the dropdown menu.
 
-**TIP**
+[!TIP]
 
 Interval and backfill are not visible during a one-time ingestion.
 
@@ -411,7 +405,7 @@ allows new data to be differentiated from existing data.
 generated](./merkury-enterprise-identity-resolution-assets/media/image12.png){width="6.748530183727034in"
 height="1.9993241469816272in"}
 
-**NOTE**
+[!NOTE]
 
 For batch ingestion, every ensuing dataflow selects files to be ingested
 from your source based on their **last modified** timestamp. This means
@@ -424,7 +418,7 @@ for ingestion.
 
 When finished configuring your ingestion schedule, select **Next**.
 
-**Review your dataflow**
+## Review your dataflow
 
 The **Review** step appears, allowing you to review your new dataflow
 before it is created. Details are grouped within the following
