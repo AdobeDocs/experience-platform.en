@@ -8,7 +8,7 @@ exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
 
 This document provides information on use and rate limits for [!DNL Identity Service] data to help you optimize your use of the identity graph. When reviewing the following guardrails, it is assumed that you have modeled the data correctly. If you have questions on how to model your data, please contact your customer service representative.
 
-## Getting started
+## Get started
 
 The following Experience Platform services are involved with modeling Identity data: 
 
@@ -66,23 +66,6 @@ When a full graph is updated with a new identity, these two rules work in tandem
 >
 >If the identity designated to be deleted is linked to multiple other identities in the graph, then the links connecting that identity will also be deleted.
 
->[!BEGINSHADEBOX]
-
-**A visual representation of the deletion logic**
-
-![An example of the oldest identity being deleted to accommodate the latest identity](./images/graph-limits-v3.png)
-
-*Diagram notes:*
-
-* `t` = timestamp. 
-* The value of a timestamp corresponds with the recency of a given identity. For example, `t1` represents the first linked identity (oldest) and `t51` would represent the newest linked identity.
-
-In this example, before the graph on the left can be updated with a new identity, Identity Service first deletes the existing identity with the oldest timestamp. However, because the oldest identity is a device ID, Identity Service skips that identity until it gets to the namespace with a type that is higher on the deletion priority list, which in this case is `ecid-3`. Once the oldest identity with a higher deletion priority type is removed, the graph then gets updated with a new link, `ecid-51`.
-
-* In the rare case that there are two identities with the same timestamp and identity type, Identity Service will sort the IDs based on [XID](./api/list-native-id.md) and conduct deletion.
-
->[!ENDSHADEBOX]
-
 ### Implications on implementation
 
 The following sections outline the implications that the deletion logic has to Identity Service, Real-Time Customer Profile, and WebSDK.
@@ -110,7 +93,24 @@ If you would like to preserve your authenticated events against the CRM ID, then
 * [Configure identity map for Experience Platform tags](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Identity data in the Experience Platform Web SDK](../edge/identity/overview.md#using-identitymap)
 
+### Example scenarios
 
+#### Example one
+
+*Diagram notes:*
+
+* `t` = timestamp. 
+* The value of a timestamp corresponds with the recency of a given identity. For example, `t1` represents the first linked identity (oldest) and `t51` would represent the newest linked identity.
+
+In this example, before the graph on the left can be updated with a new identity, Identity Service first deletes the existing identity with the oldest timestamp. However, because the oldest identity is a device ID, Identity Service skips that identity until it gets to the namespace with a type that is higher on the deletion priority list, which in this case is `ecid-3`. Once the oldest identity with a higher deletion priority type is removed, the graph then gets updated with a new link, `ecid-51`.
+
+* In the rare case that there are two identities with the same timestamp and identity type, Identity Service will sort the IDs based on [XID](./api/list-native-id.md) and conduct deletion.
+
+![An example of the oldest identity being deleted to accommodate the latest identity](./images/graph-limits-v3.png)
+
+#### Example two:
+
+#### Example three
 
 ## Next steps
 
