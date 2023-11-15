@@ -5,13 +5,10 @@ feature: Use Cases
 ---
 # Evolve one-time value to lifetime value
 
->[!NOTE]
-> 
->This page presents a sample implementation of Real-Time CDP and Adobe Journey Optimizer to solve for the described use case. Use the figures, qualification criteria, and other given fields on the page as a guide, not as prescriptive figures.
-
 >[!IMPORTANT]
 > 
->To complete this use case, you need to be licensed for Real-Time CDP and Adobe Journey Orchestration. Read more in the [prerequisites and planning section](#prerequisites-and-planning) further below.
+>* This page presents a sample implementation of Real-Time CDP and Adobe Journey Optimizer to solve for the described use case. Use the figures, qualification criteria, and other given fields on the page as a guide, not as prescriptive figures.
+>* To complete this use case, you need to be licensed for Real-Time CDP and Adobe Journey Orchestration. Read more in the [prerequisites and planning section](#prerequisites-and-planning) further below.
 
 Learn how to create personalized campaigns to offer the best complementary products or services based on a specific customer's attributes, behavior, and past purchases.
 
