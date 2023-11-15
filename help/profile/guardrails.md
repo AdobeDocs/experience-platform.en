@@ -3,7 +3,7 @@ title: Default Guardrails for Real-Time Customer Profile Data and segmentation
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Learn about performance and system-enforced guardrails for profile data and segmentation to ensure and optimal use of Real-Time CDP functionality.
+description: Learn about performance and system-enforced guardrails for profile data and segmentation to ensure an optimal use of Real-Time CDP functionality.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 ---
 # Default Guardrails for [!DNL Real-Time Customer Profile] data and segmentation
