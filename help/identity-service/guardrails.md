@@ -37,7 +37,7 @@ The following table outlines existing rules you must follow to ensure a successf
 
 | Namespace | Validation rule | System behavior when rule is violated |
 | --- | --- | --- |
-| ECID | <ul><li>The identity value of an ECID must be exactly 38 characters.</li><li>The identity value of an ECID must consist of numbers only.</li><li>Identity values cannot be "null", "anonymous", "invalid", be an empty string (for example: " ", "", "  ")</li></ul> | <ul><li>If the identity value of ECID is not exactly 38 characters, then the record is skipped.</li><li>If the identity value of ECID contains non-numerical characters, then the record is skipped.</li><li>The identity will be blocked from ingestion.</li></ul> |
+| ECID | <ul><li>The identity value of an ECID must be exactly 38 characters.</li><li>The identity value of an ECID must consist of numbers only.</li><li>Identity values cannot be "null", "anonymous", "invalid", or be an empty string (for example: " ", "", "  ").</li></ul> | <ul><li>If the identity value of ECID is not exactly 38 characters, then the record is skipped.</li><li>If the identity value of ECID contains non-numerical characters, then the record is skipped.</li><li>The identity will be blocked from ingestion.</li></ul> |
 | Non-ECID | The identity value cannot exceed 1024 characters. | If the identity value exceeds 1024 characters, then the record is skipped. |
 
 ### Identity namespace ingestion
