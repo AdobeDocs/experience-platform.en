@@ -6,9 +6,9 @@ badgeBeta: label="Beta" type="Informative"
 exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
 ---
 
-# Data Awareness - Overview
+# Data Awareness or Schema Awareness - Overview
 
-Adobe Experience Platform provides several standard fields and field groups for migrating your data. In certain cases, you may already have your own schemas, fields and field groups and might want to integrate both. To better align your existing fields and enhance schema awareness, follow the steps outlined below using through the beta application.
+Adobe Experience Platform provides several standard fields and field groups for migrating your data. In certain cases, you may already have your own schemas, fields and field groups. To better align your existing fields and enhance schema awareness, follow the steps outlined below using through the beta application.
 
 ## Getting started
 
