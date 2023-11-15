@@ -7,7 +7,7 @@ feature: Use Cases
 
 >[!IMPORTANT]
 > 
->* This page presents a sample implementation of Real-Time CDP and Adobe Journey Optimizer to solve for the described use case. Use the figures, qualification criteria, and other given fields on the page as a guide, not as prescriptive figures.
+>* This page presents a sample implementation of Real-Time CDP and Adobe Journey Optimizer to achieve the described use case. Use the figures, qualification criteria, and other fields given on the page as a guide, not as prescriptive figures.
 >* To complete this use case, you need to be licensed for Real-Time CDP and Adobe Journey Orchestration. Read more in the [prerequisites and planning section](#prerequisites-and-planning) further below.
 
 Learn how to create personalized campaigns to offer the best complementary products or services based on a specific customer's attributes, behavior, and past purchases.
@@ -16,13 +16,13 @@ Learn how to create personalized campaigns to offer the best complementary produ
 
 ## Use case overview
 
-Consider that you have customers who visit your properties and sporadically purchase products or services you offer. You want to create personalized campaigns to appeal to these customers so your brand can offer them longer-term value instead of one-time value. Learn how to collect and manage data, create audiences, and create journeys to action upon these audiences in Real-Time CDP and Adobe Journey Optimizer in order to evolve from offering one-time value to offering long-term value to your customers.
+Consider that you have customers who visit your properties and sporadically purchase products or services you offer. You may want to create personalized campaigns to appeal to these customers so your brand can offer them longer-term value instead of one-time value. Learn how to collect and manage data, create audiences, and create journeys to action upon these audiences in Real-Time CDP and Adobe Journey Optimizer in order to evolve from offering one-time value to offering long-term value to your customers.
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
-As you work through the steps to implement the use case, you will use various Real-Time CDP and Adobe Journey Optimizer functionality and UI elements (listed below in the order in which you will use them). 
+As you work through the steps to implement the use case, you will use various Real-Time CDP and Adobe Journey Optimizer functionality and UI element, listed below. 
 
-Make sure that you have the necessary attribute-based access control permissions for all these areas, or ask your system administrator to grant you the necessary permissions.
+Make sure that you have the necessary [attribute-based access control permissions](/help/access-control/abac/end-to-end-guide.md) for all these areas, or ask your system administrator to grant you the necessary permissions.
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html): Integrate data across data sources to fuel the campaign. This data is then used to create the campaign audiences and surface personalized data elements used in the email and the web promo tiles (for example, name or account-related information). Finally, Real-Time CDP is also used to activate audiences to paid media destinations.
   * [Schemas](/help/xdm/home.md)
@@ -37,7 +37,7 @@ Make sure that you have the necessary attribute-based access control permissions
 
 ## Real-Time CDP and Journey Optimizer architecture
 
-Below is a high-level architecture view of the various components of Real-Time CDP and Journey Optimizer. This diagram shows how data flows through the two apps from data collection up to the point where it is activated through journeys or campaigns to destinations.
+Below is a high-level architecture view of the various components of Real-Time CDP and Journey Optimizer. This diagram shows how data flows through the two apps from data collection up to the point where it is activated through journeys or campaigns to destinations, in order to achieve the use case described on this page.
 
 ![Architecture high level visual overview.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){width="1000" zoomable="yes"}
 
@@ -45,9 +45,9 @@ Below is a high-level architecture view of the various components of Real-Time C
 
 Below is a high level overview of the workflow, a hybrid of a journey and an activation workflow.
 
-In the sample workflow, you look for customers who meet a certain criteria and you want to entice them to return to your website or app. You want to set them on a journey where instead of limited activity on your property, you. You are trying to get them back to your property and then once they are back, you have enter the journey in order to continuously make purchases on your site. The campaign set up here is capped at one engagement with customers per month. 
+In the sample workflow pictured below, you look for customers who meet a certain criteria and you want to entice them to return to your website or app. You are looking to set them on a journey where instead of limited activity on your property, they return in a more recurrent manner. You are trying to get them back to your property and then once they are back, you have them enter the journey to recurringly make purchases on your site. The campaign set up here is capped at one engagement with customers per month. 
 
-You start by sending your audience of high valued and low frequency customers a message. You then check if they received this message within the last thirty days. If they have not, then you can enter them into a journey about, for example, a new subscription program. You can then wait for a few days (seven days in this example). After this time, if they have not purchased the subscription that you messaged them about, you can deliver paid media ads via destinations. If they have purchased the subscription, you can have them enter an order confirmation journey. 
+You start by sending your audience of high valued and low frequency customers a message. You then check if they received this message within the last thirty days. If they have not, then you can enter them into a journey about, for example, a new subscription program. You can then wait for a few days (seven days in this example). After this time, if they have not purchased the subscription that you messaged them about, you can deliver paid media ads via destinations. If they have purchased the subscription, you can have them enter an order confirmation journey, thereby completing the use case. 
 
 >[!BEGINSHADEBOX]
 
