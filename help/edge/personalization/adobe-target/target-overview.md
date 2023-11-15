@@ -80,7 +80,7 @@ If you have [!DNL Target] activities with predefined audiences that use custom p
 * Traffic Sources
 * Time Frame
 
-For more information, see [Categories for audiences](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en) in the *Adobe Target guide*.
+For more information, see [Categories for audiences](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html) in the *Adobe Target guide*.
 
 ### Response tokens
 

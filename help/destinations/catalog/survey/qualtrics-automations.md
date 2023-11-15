@@ -3,8 +3,8 @@ keywords: streaming, Qualtrics destination
 title: Qualtrics Automations
 description: Synchronize experience and operational customer data to unlock personalization at scale. Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience iD to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers.
 last-substantial-update: 2023-10-25
+exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
 ---
-
 # Qualtrics Automations
 
 ## Overview {#overview}
