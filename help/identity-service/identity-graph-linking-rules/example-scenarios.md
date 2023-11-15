@@ -4,6 +4,7 @@ description: Learn about example scenarios for configuring Identity Settings.
 hide: true
 hidefromtoc: true
 badge: Alpha
+exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
 ---
 # Example scenarios for configuring identity graph linking rules
 
@@ -62,5 +63,6 @@ With identity graph linking rules you can configure the CRM ID as the unique ide
 For more information on identity graph linking rules, read the following documentation:
 
 * [Identity graph linking rules overview](./overview.md)
+* [Identity optimization algorithm](./identity-optimization-algorithm.md)
 * [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
 * [Identity linking logic](./identity-linking-logic.md)

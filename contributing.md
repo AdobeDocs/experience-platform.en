@@ -12,7 +12,7 @@ Please report unacceptable behavior to [Grp-opensourceoffice@adobe.com](mailto:G
 
 ## Contributor Guide Documentation
 
-See the [Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en).
+See the [Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
 
 ## Have A Question?
 

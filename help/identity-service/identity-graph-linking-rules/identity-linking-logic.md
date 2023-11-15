@@ -4,6 +4,7 @@ description: Learn about how Identity Service links disparate identities to crea
 hide: true
 hidefromtoc: true
 badge: Alpha
+exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
 ---
 # Identity Service linking logic
 
@@ -143,5 +144,6 @@ At `timestamp=4`, a customer uses the same tablet, logs in to their account (CRM
 For more information on identity graph linking rules, read the following documentation:
 
 * [Identity graph linking rules overview](./overview.md)
+* [Identity optimization algorithm](./identity-optimization-algorithm.md)
 * [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
 * [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
