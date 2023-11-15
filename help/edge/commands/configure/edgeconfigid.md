@@ -1,13 +1,41 @@
-### `edgeConfigId`
+---
+title: edgeConfigId
+description: Determine the datastream ID that you want to send data to.
+---
+# `edgeConfigId`
 
->[!NOTE]
->
->**Edge Configurations have been rebranded to Datastreams. A datastream ID is the same as a configuration ID.** 
+The `edgeConfigId` property is a string that determines which datastream that you want to send data to. This property is required when sending data to Adobe.
 
-| Type | Required | Default Value |
-| -------- | ------------ | ----------------- |
-| String   | Yes          | None              |
+If you want to locate a datastream ID:
 
-{style="table-layout:auto"}
+1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]**.
+1. Use the search field to locate the desired datastream, then click the [!UICONTROL Copy] icon ![Copy](../../assets/copy.png) next to the datastream ID.
 
-Your assigned configuration ID, which links the SDK to the appropriate accounts and configuration. When configuring multiple instances within a single page, you must configure a different `edgeConfigId` for each instance.
+## Datastream ID in the Web SDK extension
+
+The Web SDK extension allows the ability to choose from a list of available datastreams, or enter a datastream ID directly.
+
+1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Select the desired tag property.
+1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
+1. Locate the [!UICONTROL Datastreams] section, then select the desired method of determining datastream.
+   * If choosing from a list, select the sandbox and datastream from each respective dropdown list.
+   * If entering values, enter the desired datastream ID.
+1. Click **[!UICONTROL Save]**, then publish your changes.
+
+You can send data to different datastreams for production, staging, and development tag environments.
+
+## Datastream ID using alloy.js
+
+Set the `edgeConfigId` string property when running the `configure` command. This property is required for all Web SDK implementations. If you omit this property, the Web SDK does not know which datastream to send data to, causing that data to be permanently lost.
+
+```js
+alloy("configure", {
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
+});
+```
+
+If you configure multiple instances of the Web SDK on a single page, you must configure a different `edgeConfigId` for each instance.
