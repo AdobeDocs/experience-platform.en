@@ -66,17 +66,17 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 
 | Action | Origins | Description |
 | ------ | ------- | ----------- |
-| Edit | Segmentation Service | Lets you open Segment Builder to edit your audience. For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md). |
-| Open composition | Audience composition | Lets you open Audience composition to see your audience. For more information on Audience composition, please read the [audience composition UI guide](./audience-composition.md). |
-| Activate to destination | Segmentation Service | Lets you activate the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md). |
-| Share with partners | Audience composition, Custom upload, Segmentation Service | Lets you share your audience with other Platform users. For more information on this feature, please read the [Segment Match overview](./segment-match/overview.md). |
-| Manage tags | Audience composition, Custom upload, Segmentation Service | Lets you manage the user-defined tags that belong to the audience. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
-| Move to folder | Audience composition, Custom upload, Segmentation Service |  Lets you manage which folder the audience belongs to. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
-| Copy | Audience composition, Custom upload, Segmentation Service |  Duplicates the selected audience. |
-| Apply access labels | Audience composition, Custom upload, Segmentation Service |  Lets you manage the access labels that belong to the audience. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
-| Archive | Custom upload | Archives the selected audience. |
-| Delete | Audience composition, Custom upload, Segmentation Service |  Deletes the selected audience. |
-| Add to package | Audience composition, Custom upload, Segmentation Service | Lets you move the audience between sandboxes. For more information on this feature, please read the [sandbox tooling guide](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Edit] | Segmentation Service | Lets you open Segment Builder to edit your audience. For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md). |
+| [!UICONTROL Open composition] | Audience composition | Lets you open Audience composition to see your audience. For more information on Audience composition, please read the [audience composition UI guide](./audience-composition.md). |
+| [!UICONTROL Activate to destination] | Segmentation Service | Lets you activate the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL Share with partners] | Audience composition, Custom upload, Segmentation Service | Lets you share your audience with other Platform users. For more information on this feature, please read the [Segment Match overview](./segment-match/overview.md). |
+| [!UICONTROL Manage tags] | Audience composition, Custom upload, Segmentation Service | Lets you manage the user-defined tags that belong to the audience. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
+| [!UICONTROL Move to folder] | Audience composition, Custom upload, Segmentation Service |  Lets you manage which folder the audience belongs to. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
+| [!UICONTROL Copy] | Audience composition, Custom upload, Segmentation Service |  Duplicates the selected audience. |
+| [!UICONTROL Apply access labels] | Audience composition, Custom upload, Segmentation Service |  Lets you manage the access labels that belong to the audience. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Archive] | Custom upload | Archives the selected audience. |
+| [!UICONTROL Delete] | Audience composition, Custom upload, Segmentation Service |  Deletes the selected audience. |
+| [!UICONTROL Add to package] | Audience composition, Custom upload, Segmentation Service | Lets you move the audience between sandboxes. For more information on this feature, please read the [sandbox tooling guide](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!NOTE]
 >
@@ -333,6 +333,8 @@ After selecting the CSV file to import, a list of sample data is shown for this 
 
 The **[!UICONTROL Audience details]** page appears. You can add information about your audience, including its name, description, primary identity, and identity namespace value. 
 
+When importing the externally generated audience, you must select one of the columns to be the primary identity field and specify the namespace value. Please note that all the remaining fields will be considered **payload attributes**. These attributes are considered **non-durable**, as they will only be associated with this audience for purposes of personalization, and are **not** connected to the profile.
+
 ![The [!UICONTROL Audience details] page is displayed.](../images/ui/overview/import-audience-audience-details.png)
 
 After filling in your audience details, select **[!UICONTROL Next]**.
@@ -347,7 +349,9 @@ After confirming the details are correct, select **[!UICONTROL Finish]** to impo
 
 >[!IMPORTANT]
 >
->If your externally generated audience contains sensitive and/or healthcare-related information, you **must** apply the necessary data usage labels before activating it to any destination. For more information on applying data usage labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md).
+>By default, externally generated audiences have a data expiration of 30 days. The data expiration is reset if the audience is updated or modified in any way.
+>
+>Additionally, if your externally generated audience contains sensitive and/or healthcare-related information, you **must** apply the necessary data usage labels before activating it to any destination. For more information on applying data usage labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md).
 
 ## Scheduled segmentation {#scheduled-segmentation}
 

@@ -36,7 +36,7 @@ Understand from the table below which dataset types you can export depending on 
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Profile and Experience Event datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">System-generated Profile Snapshot dataset</a>.</li></td>
+    <td><ul><li>Profile and Experience Event datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">System-generated Profile Snapshot dataset</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
@@ -54,6 +54,12 @@ Understand from the table below which dataset types you can export depending on 
   </tr>
 </tbody>
 </table>
+
+## Video tutorial {#video-tutorial}
+
+Watch the video below for an end-to-end explanation of the workflow described on this page, benefits of using the export dataset functionality, and some suggested use cases.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Supported destinations {#supported-destinations}
 

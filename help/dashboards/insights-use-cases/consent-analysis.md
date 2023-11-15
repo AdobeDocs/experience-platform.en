@@ -54,7 +54,7 @@ The [!UICONTROL Subscriptions] folder appears. From the options available, selec
 
 >[!NOTE]
 >
->There is a soft limit on the number of audiences that you are recommended to create. More information can be found in the [segmentation guardrails documentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=en#segmentation-guardrails).
+>There is a soft limit on the number of audiences that you are recommended to create. More information can be found in the [segmentation guardrails documentation](../../profile/guardrails.md#segmentation-guardrails).
 
 ![The [!UICONTROL Choice Value] attribute with the [!UICONTROL Yes (opt-in)] value highlighted in the segment builder. The name and description of the audience are also highlighted.](../images/insights-use-cases/consent-analysis/choice-value.png)
 

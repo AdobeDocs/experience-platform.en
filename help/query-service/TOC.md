@@ -9,7 +9,7 @@ feature: Queries
 # Adobe Experience Platform Query Service {#query}
 
 - [Query Service overview](home.md)
-- [Query Service packaging](packages.md)
+- [Query Service packaging](packaging.md)
 - [Query Service guardrails](guardrails.md)
 - Get started {#get-started}
     - [Prerequisites](get-started/prerequisites.md)
@@ -62,7 +62,7 @@ feature: Queries
     - [UI overview](ui/overview.md)
     - [Query Editor user guide](ui/user-guide.md)
     - [Query templates](ui/query-templates.md)
-    - [Parameterized queries (limited)](ui/parameterized-queries.md)
+    - [Parameterized queries](ui/parameterized-queries.md)
     - [Query schedules](ui/query-schedules.md)
     - [Query logs](ui/query-logs.md)
     - [Monitor scheduled queries](ui/monitor-queries.md)

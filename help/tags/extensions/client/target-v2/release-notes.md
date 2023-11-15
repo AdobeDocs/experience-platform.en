@@ -9,15 +9,20 @@ exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
+## v0.20.1 (November 3, 2023)
+
+- Updated to support `at.js` 2.11.2.
+- Fixed a bug that caused inconsistencies in the response tokens sent on custom events.
+
 ## v0.20.0 (October 9, 2023)
 
-- Updated to support at.js 2.11.0.
+- Updated to support `at.js` 2.11.0.
 - Added support for setting custom Adobe Experience Platform sandboxId and sandboxName in targetGlobalSettings, which will be passed to Delivery API on getOffer/getOffers calls.
 - Shadow DOM fix for chaining :eq() in selector.
 
 ## v0.19.3 (September 18, 2023)
 
-- Updated to support at.js v2.10.3.
+- Updated to support `at.js` v2.10.3.
 - Fixed an issue that incorrectly triggered the at-content-rendering-succeeded custom event when no offers are rendered. The correct event, at-content-rendering-no-offers, is now triggered.
 - Added eventToken and responseTokens to error object for the at-content-rendering-failed custom event.
 
@@ -55,6 +60,12 @@ exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
 ## v0.16.0 (October 28, 2021)
 
 - Updated to support `at.js` v2.7.0, now available for download from Adobe Target.
+
+## v0.15.2 (August 16, 2021)
+
+- Updated to support `at.js` 2.6.1.
+- Initialize On-Device decisioning on start up independent of Page Load event.
+- On-Device decisioning can now be used on first visit after the artifact has downloaded.
 
 ## v0.15.1 (July 20, 2021)
 
