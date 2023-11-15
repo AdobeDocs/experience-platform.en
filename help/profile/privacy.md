@@ -217,6 +217,6 @@ Privacy Service is only able to process [!DNL Profile] data using a merge policy
 
 ## Next steps
 
-By reading this document, you have been introduced to the important concepts involved with processing privacy requests in [!DNL Experience Platform]. To deepen your understanding of how to manage identity data and create privacy jobs, continue reading the documentation provided throughout this guide.
+By reading this document, you have been introduced to the important concepts involved with processing privacy requests in [!DNL Experience Platform]. To deepen your understanding of how to manage identity data and create privacy jobs, continue reading the documentation provided in this guide.
 
 For information on processing privacy requests for [!DNL Platform] resources not used by [!DNL Profile], see the document on [privacy request processing in the data lake](../catalog/privacy.md).
