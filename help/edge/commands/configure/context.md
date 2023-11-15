@@ -97,7 +97,7 @@ Set the `context` array of strings when running the `configure` command. If you 
 ```js
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg",
+  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "context": ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]
 });
 ```

@@ -8,18 +8,18 @@ The `clickCollectionEnabled` property is a boolean that determines if the Web SD
 
 If not disabled, the following XDM elements automatically populate with data:
 
-* `web.webInteraction.type`
-* `web.webInteraction.value`
+* `xdm.web.webInteraction.type`
+* `xdm.web.webInteraction.value`
 
 ## Automatic link tracking logic
 
 The Web SDK tracks all clicks on `<a>` and `<area>` HTML elements if it doesn't have an `onClick` attribute. Clicks are captured with a [capture](https://www.w3.org/TR/uievents/#capture-phase) click event listener that is attached to the document. When a valid link is clicked, the following logic is run in order:
 
-1. If the link matches criteria based on values in [`downloadLinkQualifier`](downloadLinkQualifier.md), `web.webInteraction.type` is set to `"download"`.
-1. If the link target domain differs from the current `window.location.hostname`, `web.webInteraction.type` is set to `"exit"`.
-1. If the link doesn't qualify for either `"download"` or `"exit"`, `web.webInteraction.type` is set to `"other"`.
+1. If the link matches criteria based on values in [`downloadLinkQualifier`](downloadLinkQualifier.md), or if the link contains a `download` HTML attribute, `xdm.web.webInteraction.type` is set to `"download"`.
+1. If the link target domain differs from the current `window.location.hostname`, `xdm.web.webInteraction.type` is set to `"exit"`.
+1. If the link doesn't qualify for either `"download"` or `"exit"`, `xdm.web.webInteraction.type` is set to `"other"`.
 
-In all cases, `web.webInteraction.value` is set to the link text label. If you want to set this value to the URL instead, you can override this XDM element using [`onBeforeLinkClickSend`](onbeforelinkclicksend.md).
+In all cases, `xdm.web.webInteraction.value` is set to the link text label. If you want to set this value to the URL instead, you can override this XDM element using [`onBeforeLinkClickSend`](onbeforelinkclicksend.md).
 
 ## Enable automatic link tracking in the Web SDK extension
 
@@ -34,12 +34,12 @@ Select the [!UICONTROL Enable click data collection] checkbox when configuring t
 
 ## Enable automatic link tracking using alloy.js
 
-Set the `clickCollectionEnabled` boolean when running the `configure` command. If you omit this property when configuring the Web SDK, it defaults to `true`. Set this value to `false` if you prefer to manually set `web.webInteraction.type` and `web.webInteraction.value`.
+Set the `clickCollectionEnabled` boolean when running the `configure` command. If you omit this property when configuring the Web SDK, it defaults to `true`. Set this value to `false` if you prefer to manually set `xdm.web.webInteraction.type` and `xdm.web.webInteraction.value`.
 
 ```js
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg",
+  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "clickCollectionEnabled": false
 });
 ```

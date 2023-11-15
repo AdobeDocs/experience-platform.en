@@ -1,6 +1,6 @@
 ---
 title: defaultConsent
-description: 
+description: Set the default consent collection method.
 ---
 # `defaultConsent`
 
@@ -32,7 +32,7 @@ Set the `defaultConsent` string property to the desired consent level when runni
 ```js
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg",
+  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "defaultConsent": "pending"
 });
 ```
