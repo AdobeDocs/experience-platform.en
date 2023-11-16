@@ -16,11 +16,11 @@ Learn how to create personalized campaigns to offer the best complementary produ
 
 ## Use case overview
 
-Consider that you have customers who visit your properties and sporadically purchase products or services you offer. You may want to create personalized campaigns to appeal to these customers so your brand can offer them longer-term value instead of one-time value. Learn how to collect and manage data, create audiences, and create journeys to action upon these audiences in Real-Time CDP and Adobe Journey Optimizer in order to evolve from offering one-time value to offering long-term value to your customers.
+Consider that you have customers who visit your properties and sporadically purchase the products or services you offer. You may want to create personalized campaigns to appeal to these customers so your brand can offer them longer-term value instead of one-time value. Learn how to collect and manage data, create audiences, and create journeys to action upon these audiences in Real-Time CDP and Adobe Journey Optimizer in order to evolve from offering one-time value to offering long-term value to your customers.
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
-As you work through the steps to implement the use case, you will use various Real-Time CDP and Adobe Journey Optimizer functionality and UI element, listed below. 
+As you work through the steps to implement the use case, you will use various [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html) and [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html) functionality and UI elements, listed below. 
 
 Make sure that you have the necessary [attribute-based access control permissions](/help/access-control/abac/end-to-end-guide.md) for all these areas, or ask your system administrator to grant you the necessary permissions.
 
