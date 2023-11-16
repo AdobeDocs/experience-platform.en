@@ -18,7 +18,7 @@ Before you configure your [!DNL Twitter Custom Audiences] destination, make sure
 
 ## Supported identities {#supported-identities}
 
-[!DNL Twitter Custom Audiences] supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+[!DNL Twitter Custom Audiences] supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 |Target Identity|Description|Considerations|
 |---|---|---|

@@ -20,7 +20,7 @@ Create audiences from your customer lists, people who've visited your site or pe
 
 ## Supported identities {#supported-identities}
 
-The [!DNL Pinterest Customer List] destination supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+The [!DNL Pinterest Customer List] destination supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 In the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the destination activation workflow, map the desired identities to the target field *pinterest_audience*. Identities are distinguished and resolved upon data ingestion into Pinterest.
 

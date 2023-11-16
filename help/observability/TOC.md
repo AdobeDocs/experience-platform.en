@@ -1,7 +1,7 @@
 ---
 audience: user
 user-guide-title: Observability Insights Guide
-user-guide-description: Use statistical metrics and event notifications to monitor Experience Platform activities.
+user-guide-description: Find out how you can monitor Platform activities, using statistical metrics and event notifications from Adobe Experience Platform Observability Insights.
 feature: Observability
 ---
 

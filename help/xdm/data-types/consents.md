@@ -289,23 +289,23 @@ The following table outlines the accepted values for `val`:
 
 ### Accepted values for `preferred` {#preferred-values}
 
-The following table outlines the accepted values for `preferred`:
+The following table outlines the accepted values for `preferred`. The `preferred` values indicate the customer's preferred channel for receiving communications that would inform them about data collection, privacy policies, and personalization options. 
 
 | Value | Description |
 | --- | --- |
-| `email` | Email messages. |
-| `push` | Push notifications. |
-| `inApp` | In-app messages. |
-| `sms` | SMS messages. |
-| `phone` | Phone call interactions. |
-| `phyMail` | Physical mail. |
-| `inVehicle` | In-vehicle messages. |
-| `inHome` | In-home messages. |
-| `iot` | Internet of things (IoT) messages. |
-| `social` | Social media content. |
-| `other` | A channel that does not fit into a standard category. |
-| `none` | No preferred channel. |
-| `unknown` | The preferred channel is unknown. |
+| `email` | This preference indicates the customer's consent to receive messages via email. |
+| `push` | This preference indicates the customer's consent to receive push notifications. These are messages or alerts sent directly to their device, often a mobile application. |
+| `inApp` | This preference indicates the customer's consent to receive in-app messages. These messages are delivered within a mobile or web application and provide information while the user is actively engaged with the app. |
+| `sms` | This preference indicates the customer's consent to receive messages via SMS (Short Message Service). These are text messages sent to their mobile phone. |
+| `phone` | This preference indicates the customer's consent to receive communications through phone call interactions.  |
+| `phyMail` | This preference indicates the customer's consent to receive materials through physical mail.  |
+| `inVehicle` | This preference indicates the customer's consent to receive notifications while in their vehicle. These messages may be delivered through vehicle infotainment systems or other in-vehicle communication channels. |
+| `inHome` | This preference indicates the customer's consent to receive messages while at home. These messages may be delivered through smart home devices or other home-based communication channels. |
+| `iot` | This preference denotes the customer's consent to receive messages related to the Internet of Things (IoT). These messages may be delivered through connected devices and systems within their environment. |
+| `social` | This preference indicates the customer's consent to receive communications through social media platforms.  |
+| `other` | This preference encompasses channels that do not fit into standard categories. It represents alternative or specialized communication channels that may be specific to a particular business or industry. |
+| `none` | This preference indicates that the customer does not have a preferred communication channel. |
+| `unknown` | This preference signifies that the customer's preferred communication channel is not known or has not been specified. This could occur if the customer has not provided explicit consent or preference information. |
 
 {style="table-layout:auto"}
 

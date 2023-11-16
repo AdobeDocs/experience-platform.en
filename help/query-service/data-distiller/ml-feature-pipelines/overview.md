@@ -1,16 +1,17 @@
 ---
 title: AI/ML feature pipelines
-description: Learn how you can use Data Distiller to enrich your machine learning pipelines with features derived from Adobe Experience Platform data. Transform raw data into features and deliver the feature data to train or score a model that supports your marketing use cases.
+description: Learn how to use Data Distiller to enrich your machine learning pipelines with features derived from Adobe Experience Platform data. Transform raw data into features and deliver the feature data to train or score a model that supports your marketing use cases.
+exl-id: 3b452181-e254-4155-8bf5-0990533f202d
 ---
 # AI/ML feature pipelines
 
-<!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided Python notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
+<!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
 
 <!--  -->
 
-Data Distiller enables data scientists and engineers to enrich their machine learning pipelines with high-value customer experience data that has been collected and curated in Adobe Experience Platform. From a Python notebook in any environment, you can interactively explore customer data in the Experience Platform, define and compute features from the data, and read the computed features into your machine learning environment for modeling.
+Data Distiller enables data scientists and engineers to enrich their machine learning pipelines with high-value customer experience data that has been collected and curated in Adobe Experience Platform. From a [!DNL Python] notebook in any environment, you can interactively explore customer data in the Experience Platform, define and compute features from the data, and read the computed features into your machine learning environment for modeling.
 
 >[!IMPORTANT]
 >
@@ -26,7 +27,7 @@ Data Distiller enables data scientists and engineers to enrich their machine lea
 
 This workflow requires a working understanding of the various aspects of Adobe Experience Platform. Before beginning this tutorial, please review the documentation for the following concepts:
 
-- How to [Authenticate and access Experience Platform APIs](../../../landing/api-authentication.md)
+- How to [authenticate and access Experience Platform APIs](../../../landing/api-authentication.md).
 - Sandboxes: [Attribute-based access control permissions](../../../access-control/abac/overview.md) and how to create and manage roles, as well as assign the desired resource permissions for these roles.
 - Data Governance: How to [apply data usage labels to datasets and fields, categorizing each](../../../data-governance/labels/overview.md) according to related data governance policies and access control policies.
 
@@ -34,16 +35,16 @@ This workflow requires a working understanding of the various aspects of Adobe E
 
 By reading this document, you have been introduced to the important concepts behind using your preferred machine learning tools to build custom models that support your marketing use cases. 
 
-The documents included in this series of guides, describe the basic steps for creating feature pipelines from Experience Platform to feed custom models in your machine learning environment. You are now ready to establish a connection between Data Distiller and your Jupyter notebook.
+The documents included in this series of guides, describe the basic steps for creating feature pipelines from Experience Platform to feed custom models in your machine learning environment. You are now ready to establish a connection between Data Distiller and your [!DNL Jupyter Notebook].
 
-- [Connect to Data Distiller from a Python notebook](./establish-connection.md)
+- [Connect to Data Distiller from a [!DNL Python] notebook](./establish-connection.md)
 - [Explore and analyze datasets](./exploratory-analysis.md)
 - [Engineer features for machine learning](./feature-engineering.md)
 - [Export feature datasets](./export-data.md)
 
 ## Additional resources
 
-- [aepp](https://github.com/adobe/aepp): an Adobe-managed open-source Python library for making requests to Data Distiller and other Experience Platform services from Python code.
+- [aepp](https://github.com/adobe/aepp): an Adobe-managed open-source [!DNL Python] library for making requests to Data Distiller and other Experience Platform services from [!DNL Python] code.
 
 <!-- Old content below -->
 
@@ -90,16 +91,16 @@ You are recommended to create an [!DNL Oauth2] API credential specifically for C
 
 <!-- 
 Is this the correct doc to link to about creating an Oauth2 API credential?:
-../../../destinations/destination-sdk/functionality/destination-configuration/oauth2-authentication.md
+../../../destinations/destination-sdk/functionality/destination-configuration/oauth2-authorization.md
  -->
 
-<!-- See [Authenticate and access Experience Platform APIs](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html) detailed instructions instructions on creating an API credential. -->
+<!-- See [Authenticate and access Experience Platform APIs](../../../landing/api-authentication.md) detailed instructions instructions on creating an API credential. -->
 
 <!-- ### Step 2: Get the necessary attribute-based access control permissions for your credential {#get-permissions}
 
 An API credential will not be able to access Platform APIs without explicit permissions granted by your organization's Adobe System Admin for specific Platform services and data. A System Admin can [assign the API credential to a role](../../../landing/api-authentication.md#assign-api-to-a-role) and manage permissions for role in the [!UICONTROL Permissions] UI in Platform. 
 
-You will need to provide your system admin with the name and technical account email of your API credential. System admins can refer to the documentation to find information about how to [manage API credentials for a role](https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/permissions.html?lang=en#manage-api-credentials-for-role) and [grant the required permissions to access Platform resources](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#get-abac-permissions).
+You will need to provide your system admin with the name and technical account email of your API credential. System admins can refer to the documentation to find information about how to [manage API credentials for a role](../../../access-control/abac/ui/permissions.md#manage-api-credentials-for-role) and [grant the required permissions to access Platform resources](../../../landing/api-authentication.md#get-abac-permissions).
 
 The minimum permissions required to execute these notebooks include:
 
@@ -220,6 +221,3 @@ If the connection test above is unsuccessful, you will likely get `KeyError: 'te
 - Check your `config.ini` file and make sure that your environment and credential information is correct.
 
 If your configuration is correct and you are able to successfully make calls to `aepp` methods, you may sometimes get an unsuccessful response from the Platform server. This may happen if you try to create an object in Platform that already exists, or get an object that does not exist, or attempt to send a malformed payload with a request. Most `aepp` methods make a request to an Platform API endpoint and return the response from the server. Print the response and review it to get error message from the API. This will usually give you enough information to understand the problem with the request and fix it. -->
-
-
-

@@ -1,9 +1,9 @@
 ---
-title: Use Partner-Aided Visitor Recognition to Personalize Onsite Experiences
+title: Personalize onsite experiences for unknown visitors using partner-aided visitor recognition
 description: Learn how to use partner-aided visitor recognition to deliver personalized onsite experiences to your visitors.
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
 ---
-# Use partner-aided visitor recognition to personalize onsite experiences
+# Personalize onsite experiences for unknown visitors using partner-aided visitor recognition
 
 >[!AVAILABILITY]
 >
@@ -11,7 +11,15 @@ exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
 
 Learn how to use partner-aided recognition to deliver personalized experiences to your web property visitors. Use this tutorial to understand the implementation sequence of various elements in Experience Platform and other Experience Cloud solutions to display a personalized experience to authenticated and unauthenticated visitors.
 
-![An infographic that describes how to use partner-provided attributes to deliver personalized experiences to your visitors.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
+![An infographic that describes how to use partner-provided attributes to deliver personalized experiences to your visitors.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png)
+
+## Why consider this use case {#why-this-use-case}
+
+Fragmentation of digital experiences as consumers interact with brands in myriad ways is very real and is becoming increasingly harder to solve for. The best customer engagement strategies for cohesive experiences, targeted recommendations, and tailor-made interactions are all constrained by user recognition. 
+
+This is where partner-aided real-time recognition can make a meaningful difference. Adobe allows identity partners to plug into our sophisticated client-side data collection and market-leading experience optimization offerings, to effectively raise the bar on experience delivery from the first visit onwards, without prior history or authentication. 
+
+This is especially valuable to verticals that have low authentication rates, like Consumer Packaged Goods, on-line retail, and more.
 
 ## Industry example {#industry-example}
 

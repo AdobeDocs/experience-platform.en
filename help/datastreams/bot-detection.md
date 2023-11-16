@@ -3,8 +3,8 @@ title: Configure bot detection for datastreams
 description: Learn how to configure bot detection for datastreams, to differentiate human and nonhuman traffic.
 hide: yes
 hidefromtoc: yes
+exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
 ---
-
 # Configure bot detection for datastreams
 
 Traffic originating from nonhuman entities, such as automated programs, web scrapers, spiders, scripted scanners, can make it more difficult to identify events occuring from human visitors. This type of traffic can negatively affect important business metrics, leading to incorrect traffic reporting.
@@ -158,7 +158,7 @@ This rule checks if the request originates from a specific IP address and if the
 
 ![Image of bot detection rule based on IP address and request header.](assets/bot-detection/bot-detection-header-ip.png)
 
-### Bot detection based multiple conditions {#multiple-conditions}
+### Bot detection based on multiple conditions {#multiple-conditions}
 
 You can create bot detection rules based on:
 
@@ -170,4 +170,3 @@ The rule shown in the image below identifies a bot-originating request if the fo
 The request originates from either one of the two IP addresses, the `referer` header starts with `www.adobe.com`, and the `sec-ch-ua-mobile` header identifies the request as originating from a desktop browser.
 
 ![Image of bot detection rule based on multiple conditions.](assets/bot-detection/bot-detection-multiple.png)
-

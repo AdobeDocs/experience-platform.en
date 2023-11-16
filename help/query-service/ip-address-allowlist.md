@@ -1,7 +1,8 @@
 ---
 keywords: IP address, IP range, allow list, allowlist
-title: IP Address Allowlist for Query Service 
+title: IP Address Allowlist for Query Service
 description: This page provides IP ranges that you can add to your allow list.
+exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
 ---
 # IP address allowlist {#ip-address-allow-list}
 

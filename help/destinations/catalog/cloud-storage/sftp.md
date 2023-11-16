@@ -20,7 +20,7 @@ Create a live outbound connection to your SFTP server to periodically export del
 
 >[!IMPORTANT]
 >
-> While Experience Platform supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL SFTP].
+> While Experience Platform supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL Azure Blob].
 
 ## Connect to SFTP through API or UI {#connect-api-or-ui}
 
@@ -123,7 +123,7 @@ After establishing the authentication connection to the SFTP location, provide t
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
-## (Beta) Export datasets {#export-datasets}
+## Export datasets {#export-datasets}
 
 This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
 

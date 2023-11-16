@@ -7,6 +7,14 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ---
 # Adobe Experience Platform Debugger release notes
 
+## Version 1.5.1 - November 2, 2023
+
+### Fixes and improvements
+
+* Fixed issues where Analytics events would be ignored or duplicated.
+* Fixed an issue where the maximum state storage size was exceeded.
+* Fixed an issue where the Edge Logs search would not filter events.
+
 ## Version 1.5.0 - October 19, 2023
 
 ### New features

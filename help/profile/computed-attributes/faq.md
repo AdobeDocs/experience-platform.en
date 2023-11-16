@@ -93,4 +93,4 @@ Computed attributes automatically derives data usage labels from the source fiel
 
 ## How do I use computed attributes with Adobe Journey Optimizer?
 
-To use computed attributes in journeys, you'll need to add the `SystemComputedAttributes` field group to the Experience Platform data source. For more information on configuring the Experience Platform data source, please read the [Adobe Experience Platform data source guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=en).
+To use computed attributes in journeys, you'll need to add the `SystemComputedAttributes` field group to the Experience Platform data source. For more information on configuring the Experience Platform data source, please read the [Adobe Experience Platform data source guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).
