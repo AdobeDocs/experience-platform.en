@@ -1,6 +1,6 @@
 ---
 title: Manage display events in Web SDK
-description: This article what display events are and how they work in Web SDK.
+description: This article explains what display events are and how you can use them in Web SDK.
 ---
 
 # Manage display events in Web SDK
