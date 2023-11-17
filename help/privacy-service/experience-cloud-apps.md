@@ -48,7 +48,6 @@ The following is a list of [!DNL Experience Cloud] applications that are not int
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | An overview of how a customer privacy administrator or AEM administrator can handle GDPR requests. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Steps for making GDPR access and delete requests using Livefyre. |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Ensure that your Magento Commerce installations comply with the requirements of specific privacy legislations. |
-| [Marketo](https://www.marketo.com/company/trust/gdpr/) | Learn how privacy regulations apply to Marketo. |
 | [Tags in Adobe Experience Platform](../tags/ui/client-side/consent.md) | How developers can use extensions and the rule builder to define opt-in and opt-out solutions. |
 | [Workfront](https://www.workfront.com/privacy-notice) | Learn how Workfront collects personal data, and how a data subject can submit a privacy request via a form. |
 

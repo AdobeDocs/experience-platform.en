@@ -19,7 +19,7 @@ The [!UICONTROL Compute hours] metric is only applicable to customers with the D
 
 >[!NOTE]
 >
->**The data is available with limitations**: The data begins from Oct 1 2023 with no trends.<br>The **backfill** of data from your contract start date is a work-in-progress. It is expected to be available by end of the calendar year.
+>**The [!UICONTROL Compute hours] data is available with limitations**: The data begins from Oct 1 2023 with no trends.<br>The **backfill** of data from your contract start date is a work-in-progress. It is expected to be available by the end of the calendar year.
 
 ![The license usage dashboard with the compute hours metric highlighted.](../images/data-distiller/compute-hours.png)
 
