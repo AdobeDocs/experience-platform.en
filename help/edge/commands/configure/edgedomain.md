@@ -1,5 +1,32 @@
-### `edgeDomain` {#edge-domain}
+---
+title: edgeDomain
+description: Determine the root domain that you want to send data to.
+---
+# `edgeDomain`
 
-Populate this field with your first-party domain. For more details, please see the [documentation](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).  
+The `edgeDomain` property allows you to change the domain where the Web SDK sends data. This property is frequently used by organizations using [First party cookies](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html). Data is sent to the organization's own domain, then a CNAME record forwards that data to Adobe.
 
-The domain is similar to `data.{customerdomain.com}` for a website at www.{customerdomain.com}.
+Your organization determines the correct value for this property when setting up [First party cookies](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html). An organization typically uses a dedicated subdomain for this purpose. For example, if you use the domain `example.com`, you can set up first party cookies on `data.example.com`.
+
+## Edge domain in the Web SDK extension
+
+Set the [!UICONTROL Edge domain] text field when configuring the extension.
+
+1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Select the desired tag property.
+1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
+1. Locate the text field **[!UICONTROL Edge domain]**, then enter the desired value.
+1. Click **[!UICONTROL Save]**, then publish your changes.
+
+## Edge domain using alloy.js
+
+Set the `edgeDomain` string when running the `configure` command. If you omit this property when configuring the SDK, it defaults to `edge.adobedc.net`. Set this value if you would like to override the domain that the Web SDK sends data to.
+
+```js
+alloy("configure", {
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  "edgeDomain": "data.example.com"
+});
+```

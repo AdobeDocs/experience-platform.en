@@ -1,83 +1,110 @@
-### `onBeforeEventSend`
+---
+title: onBeforeEventSend
+description: Callback that runs just before data is sent.
+---
+# `onBeforeEventSend`
 
-| Type | Required | Default Value |
-| -------- | ------------ | ----------------- |
-| Function | No           | () => undefined   |
+The `onBeforeEventSend` callback allows you to register a JavaScript function that can alter the data you send just before that data is sent to Adobe. This callback allows you to manipulate the XDM object, including the ability to add, edit, or remove elements. You can also conditionally cancel the sending of data altogether, such as with detected client-side bot traffic.
 
-{style="table-layout:auto"}
+>[!WARNING]
+>
+>This callback allows the use of custom code. If any code that you include in the callback throws an uncaught exception, processing for the event halts. Data is not sent to Adobe.
 
-Configure a callback that is called for every event just before it is sent. An object with the field `xdm` is sent in to the callback. To change what is sent, modify the `xdm` object. Inside the callback, the `xdm` object already has the data passed in the event command, and the automatically collected information. For more information on the timing of this callback and an example, see [Modifying Events Globally](tracking-events.md#modifying-events-globally).
+## On before event send callback in the Web SDK extension
 
-## Modifying events globally {#modifying-events-globally}
+Select the **[!UICONTROL Provide on before event send callback code]** button when configuring the extension. This button opens a modal window where you can insert the desired code.
 
-If you want to add, remove, or modify fields from the event globally, you can configure an `onBeforeEventSend` callback.  This callback is called every time an event is sent.  This callback is passed in an event object with an `xdm` field.  Modify `content.xdm` to change the data that is sent with the event.
+1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Select the desired tag property.
+1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
+1. Scroll down to the [!UICONTROL Data Collection] section, then select the button **[!UICONTROL Provide on before event send callback code]**.
+1. This button opens a modal window with a code editor. Insert the desired code, then click **[!UICONTROL Save]** to close the modal window.
+1. Click **[!UICONTROL Save]** under extension settings, then publish your changes.
 
+Within the code editor, you can add, edit, or remove elements within the `content` object. This object contains the payload sent to Adobe. You do not need to define the `content` object or wrap any code within a function. Any variables defined outside of `content` can be used, but are not included in the payload sent to Adobe.
 
-```javascript
+For example, if you wanted to:
+
+* Add the XDM element `xdm.commerce.order.purchaseID`
+* Force all characters in `xdm.marketing.trackingCode` to lower case
+* Delete `xdm.environment.operatingSystemVersion`
+* If an event type is a link click, immediately send data regardless of the code below it
+* Cancel sending data to Adobe if a bot is detected
+
+The equivalent code within the modal window would be the following:
+
+```js
+// Add purchaseID
+content.xdm.commerce.order.purchaseID = "12345";
+
+// Edit tracking code
+content.xdm.marketing.trackingCode = content.xdm.marketing.trackingCode.toLowerCase();
+
+// Delete operating system version
+delete content.xdm.environment.operatingSystemVersion;
+
+// Immediately end onBeforeEventSend logic and send the data to Adobe for this event type
+if (content.xdm.eventType === "web.webInteraction.linkClicks") {
+  return true;
+}
+
+// Cancel sending data if it is a known bot
+if (MyBotDetector.isABot()) {
+  return false;
+}
+```
+
+>[!NOTE]
+>
+>Avoid returning `false` on the first event on a page. Returning `false` on the first event can negatively impact personalization.
+
+## Enable automatic link tracking using alloy.js
+
+Register the `onBeforeEventSend` callback when running the `configure` command. You can change the `content` variable name to any value that you would like by changing the parameter variable inside the wrapper function.
+
+```js
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "onBeforeEventSend": function(content) {
-    // Change existing values
-    content.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
-    // Remove existing values
+    // Add a new value
+    content.xdm._experience.analytics.customDimensions.eVars.eVar1 = "Analytics custom value";
+    
+    // Change an existing value
+    content.xdm.web.webPageDetails.URL = content.xdm.web.webPageDetails.URL.toLowerCase();
+    
+    // Remove an existing value
     delete content.xdm.web.webReferrer.URL;
-    // Or add new values
-    content.xdm._adb3lettersandnumbers.mycustomkey = "value";
+    
+    // Return true to immediately send data
+    if (sendImmediate == true) {
+      return true;
+    }
+    
+    // Return false to immediately cancel sending data
+    if(MyBotDetector.isABot()){
+      return false;
+    }
+    
+    // Assign the value in the 'cid' query string to the tracking code XDM element
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    content.xdm.marketing.trackingCode = urlParams.get('cid')
   }
 });
 ```
 
-`xdm` fields are set in this order:
+You can also register your own function instead of an inline function.
 
-1. Values passed in as options to the event command `alloy("sendEvent", { xdm: ... });`
-2. Automatically collected values.  (See [Automatic Information](../data-collection/automatic-information.md).)
-3. The changes made in the `onBeforeEventSend` callback.
+```js
+function lastChanceLogic(content) {
+  content.xdm.application.name = "App name";
+}
 
-A few notes on the `onBeforeEventSend` callback:
-
-* Event XDM can be modified during the callback. After the callback has returned, any modified fields and values of 
-the content.xdm and content.data objects are sent with the event.
-
-    ```javascript
-    onBeforeEventSend: function(content){
-      //sets a query parameter in XDM
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      content.xdm.marketing.trackingCode = urlParams.get('cid')
-    }
-    ```
-
-* If the callback throws an exception, processing for the event discontinues and the event is not sent.
-* If the callback returns the boolean value of `false`, event processing discontinues, 
-without an error, and the event is not sent. This mechanism allows for certain events to be easily ignored by 
-examining the event data and returning `false` if the event should not be sent. 
-
-  >[!NOTE]
-  >Care should be taken to avoid returning false on the first event on a page. Returning false on the first event can negatively impact personalization.
-
-```javascript
-   onBeforeEventSend: function(content) {
-     // ignores events from bots
-     if (MyBotDetector.isABot()) {
-       return false;
-     }
-   }
-```
-
-   Any return value other than the boolean `false` will allow the event to process and send after the callback.
-
-* Events can be filtered by examining the event type (See [Event Types](#event-types).):
-
-```javascript
-    onBeforeEventSend: function(content) {  
-      // augments XDM if link click event is to a partner website
-      if (
-        content.xdm.eventType === "web.webinteraction.linkClicks" &&
-        content.xdm.web.webInteraction.URL ===
-          "http://example.com/partner-page.html"
-      ) {
-        content.xdm.partnerWebsiteClick = true;
-      }
-   }
+alloy("configure", {
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  "onBeforeEventSend": lastChanceLogic
+});    
 ```

@@ -4,13 +4,15 @@ description: Determine the datastream ID that you want to send data to.
 ---
 # `edgeConfigId`
 
-The `edgeConfigId` property is a string that determines which datastream that you want to send data to. This property is required when sending data to Adobe.
+The `edgeConfigId` property is a string that determines which datastream in Adobe Experience Platform that you want to send data to. This property is required when sending data to Adobe.
 
 If you want to locate a datastream ID:
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]**.
 1. Use the search field to locate the desired datastream, then click the [!UICONTROL Copy] icon ![Copy](../../assets/copy.png) next to the datastream ID.
+
+You can also click on the desired datastream name, and the datastream ID appears in the right column for you to copy.
 
 ## Datastream ID in the Web SDK extension
 
