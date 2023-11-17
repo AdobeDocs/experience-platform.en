@@ -16,23 +16,24 @@ The Privacy Service UI [!DNL Privacy Service] allows you to coordinate privacy a
 
 >[!NOTE]
 >
->For information on managing compliance requests programmatically using the Privacy Service API, please see the [Privacy Service API guide](../api/overview.md). 
+>For information on managing compliance requests programmatically using the Privacy Service API, please see the [Privacy Service API guide](../api/overview.md). See the document no [managing Privacy Service permissions](../permissions.md) for more information.
 
 ## Log in to the [!DNL Privacy Service] UI
 
->[!IMPORTANT]
+>[!IMPORTANT] 
 >
->You must have an Adobe ID in order to authenticate to the [!DNL Privacy Service] UI. In addition, you must have System Administrator privileges within your organization.
+>You must have an Adobe ID in order to authenticate to the [!DNL Privacy Service] UI. 
 
 To access the UI, log in to [Adobe Experience Cloud](https://experience.adobe.com/) and select **[!UICONTROL Privacy UI]** under the quick access menu.
 
-![](../images/ui-overview/quick-access.png)
+![The Experience Cloud dashboard with Privacy UI highlighted.](../images/ui-overview/quick-access.png)
+
 
 ### Logging in from [!DNL Experience Platform]
 
 If you have access to the Adobe Experience Platform UI, you can also access the [!DNL Privacy Service] UI through the **[!UICONTROL Requests]** tab in the left navigation.
 
-![](../images/ui-overview/platform.png)
+![The Adobe Experience Platform UI with Requests highlighted in the left navigation bar.](../images/ui-overview/platform.png)
 
 ## Next steps
 

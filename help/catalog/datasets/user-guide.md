@@ -259,6 +259,10 @@ You can select on an individual **[!UICONTROL Batch ID]** to access the **[!UICO
 
 If you wish to delete the batch, select **[!UICONTROL Delete batch]** near the top right of the dashboard. Deleting a batch also removes its records from the dataset that the batch was originally ingested to.
 
+>[!NOTE]
+>
+>If the ingested data has been enabled for Profile and processed, then deleting a batch does not delete that data from the Profile Store.
+
 ![The Delete batch button is highlighted on the dataset details page.](../images/datasets/user-guide/delete-batch.png)
 
 ## Next steps
