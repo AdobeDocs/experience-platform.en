@@ -88,10 +88,7 @@ To configure details for the destination, fill in the required and optional fiel
 -   **[!UICONTROL Data partner ID]**: The data partner ID set up in you PubMatic account for this integration.
 -   **[!UICONTROL Default country code]**: The default country code that should be applied to all identities if none is provided in the profile.
 -   **[!UICONTROL Account ID]**: Your PubMatic Connect account ID.
--   **[!UICONTROL Account type]**: The account type of your PubMatic platform account. These are the available options:
-    -   PUBLISHER
-    -   Demand Partner
-    -   BUYER
+-   **[!UICONTROL Account type]**: The account type of your PubMatic platform account. Talk to your PubMatic account manager if you have any questions on which to choose.
 
 ### Enable alerts {#enable-alerts}
 
