@@ -27,7 +27,7 @@ Select the desired radio button under [!UICONTROL Default consent] when configur
 
 ## Set default consent using alloy.js
 
-Set the `defaultConsent` string property to the desired consent level when running the `configure` command. This property only supports three values: **"in"**, **"out"**, and **"pending"**.
+Set the `defaultConsent` string property to the desired consent level when running the `configure` command. This property only supports three values: `"in"`, `"out"`, and `"pending"`.
 
 ```js
 alloy("configure", {
