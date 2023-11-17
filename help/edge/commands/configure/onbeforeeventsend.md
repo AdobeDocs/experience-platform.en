@@ -59,7 +59,7 @@ if (MyBotDetector.isABot()) {
 >
 >Avoid returning `false` on the first event on a page. Returning `false` on the first event can negatively impact personalization.
 
-## Enable automatic link tracking using alloy.js
+## On before event send callback using alloy.js
 
 Register the `onBeforeEventSend` callback when running the `configure` command. You can change the `content` variable name to any value that you would like by changing the parameter variable inside the wrapper function.
 
