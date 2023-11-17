@@ -50,7 +50,7 @@ if (content.xdm.eventType === "web.webInteraction.linkClicks") {
 }
 
 // Cancel sending data if it is a known bot
-if (MyBotDetector.isABot()) {
+if (myBotDetector.isABot()) {
   return false;
 }
 ```
@@ -83,7 +83,7 @@ alloy("configure", {
     }
     
     // Return false to immediately cancel sending data
-    if(MyBotDetector.isABot()){
+    if(myBotDetector.isABot()){
       return false;
     }
     
