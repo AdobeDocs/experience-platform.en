@@ -61,7 +61,7 @@ if (MyBotDetector.isABot()) {
 
 ## On before event send callback using alloy.js
 
-Register the `onBeforeEventSend` callback when running the `configure` command. You can change the `content` variable name to any value that you would like by changing the parameter variable inside the wrapper function.
+Register the `onBeforeEventSend` callback when running the `configure` command. You can change the `content` variable name to any value that you would like by changing the parameter variable inside the inline function.
 
 ```js
 alloy("configure", {
