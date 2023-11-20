@@ -131,6 +131,14 @@ Next, select the data object that you want to query to complete your question an
 
 +++
 
+### Multi-turn
+
++++Select to view an example of multi-turn
+
+
+
++++
+
 ## Scope
 
 Assistant can answer questions regarding Real-Time CDP and Experience Platform concepts, as well as data usage specific to your user account. Assistant can also infer context based on the UI page that you are in. It can identify:
