@@ -79,6 +79,12 @@ For more information about creating [schemas](https://experienceleague.adobe.com
 
 There are several schema designs that you can use in this sample implementation for the use case to evolve one-time value to lifetime value. Each schema includes specific required fields to be set up, and some fields that are strongly suggested.
 
+Three schemas are suggested to accomplish this use case: 
+
+* Customer attributes schema (a profile schema)
+* Customer digital transactions schema
+* Customer Offline Transactions 
+
 #### Customer attributes schema
 
 This schema is used to structure and reference the profile data that makes up your customer information. This data is typically ingested into [!DNL Adobe Experience Platform] via your CRM or similar system and is necessary to reference customer details that are used for personalization, marketing consent, and enhanced segmentation capabilities.
@@ -128,12 +134,6 @@ The customer attributes schema is represented by an [!UICONTROL XDM Individual P
 
 +++
 
-+++Profile Test Details (Field Group)
-
-This field group is used for best practice.
-
-+++
-
 #### Customer digital transactions schema
 
 This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via Web SDK and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced segmentation capabilities.
@@ -167,7 +167,9 @@ Web Details is a standard schema field group for the XDM ExperienceEvent class, 
 
 +++Consumer Experience Event (Field Group)
 
-| Fields | Requirement |
+This field group includes various information about actions, such as purchase or browsing events, taken by users on your web property.
+
+| Field | Requirement |
 | --- | --- |
 | `commerce.cart.cartID` | Suggested |
 | `commerce.cart.cartSource` | Suggested |
@@ -202,6 +204,8 @@ Web Details is a standard schema field group for the XDM ExperienceEvent class, 
 +++
 
 +++End User ID Details (Field Group)
+
+This field group includes various information about your users, such as whether they are authenticated on your site when visiting, and information about their identity.
 
 | Fields | Requirement | Description |
 | --- | --- | --- |
@@ -317,12 +321,6 @@ The [!DNL Adobe] web connector schema is represented by a [!UICONTROL XDM Experi
 
 +++
 
-+++External Source System Audit Details (Field Group)
-
-External Source System Audit Attributes is a standard Experience Data Model (XDM) data type that captures audit details about an external source system.
-
-+++
-
 ### Create a dataset from a schema {#dataset-from-schema}
 
 A dataset is a storage and management structure for a group of data. Each schema used to accomplish this sample implementation has a single dataset. 
@@ -339,9 +337,9 @@ For more information on how to create a [dataset](/help/catalog/datasets/overvie
 
 >[!IMPORTANT]
 >
->Providing customers with the capability to unsubscribe from receiving communications from a brand is a legal requirement, as well as ensuring this choice is honored. Learn more about the applicable legislation in the [Privacy regulations overview](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>Providing customers with the capability to unsubscribe from receiving communications from a brand, as well as ensuring this choice is honored, is a legal requirement. Learn more about the applicable legislation in the [Privacy regulations overview](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-When creating a re-engagement path, the following [consent policies](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) should be considered:
+Consider implementing the following [consent policies](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) and asking your visitors for consent before you  reaching out to them:
 
 * If `consents.marketing.email.val = "Y"` then Can Email
 * If `consents.marketing.sms.val = "Y"` then Can SMS
@@ -350,7 +348,7 @@ When creating a re-engagement path, the following [consent policies](https://exp
 
 #### Data Governance label and enforcement
 
-When creating a re-engagement path, the following [Data Governance labels](/help/data-governance/labels/overview.md) should be considered:
+Consider adding and enforcing the following [data governance labels](/help/data-governance/labels/overview.md):
 
 * Personal email addresses are utilized as direct identifiable data that is used for identifying or getting in touch with a specific individual rather than a device.
     * `personalEmail.address = I1`
@@ -367,9 +365,7 @@ There are no [marketing policies](/help/data-governance/policies/overview.md) re
 
 ### Create audiences {#create-audiences}
 
-#### Audience creation for brand re-engagement journeys
-
-The re-engagement journeys use audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways on [!DNL Adobe Experience Platform].
+This use cases requires that you create two audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways in [!DNL Adobe Experience Platform].
 
 For more information on how to create an audience, read the [Audience service UI guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
@@ -377,11 +373,21 @@ For more information on how to directly compose [Audiences](/help/segmentation/h
 
 For more information on how to build audiences through Platform-derived segment definitions, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
 
+Specifically, you need to create and use two audiences:
+
 >[!BEGINTABS]
 
->[!TAB Re-Engagement Journey]
+>[!TAB Adobe Journey Optimizer Qualifying Audience]
 
-This audience is created as an enhancement to the classic "Cart Abandonment" scenario. Whereas cart abandonment typically focuses on a cart addition without a subsequent purchase in a certain period of time, this audience looks for an earlier engagement, specifically those who may have browsed a particular product but did not add it to their cart and had no follow-up activity on your site within a certain time frame. This audience helps to keep your brand "top of mind" for customers who meet this inclusion criteria and can also be leveraged for customers whose digital properties may differ from a traditional e-commerce model.
+This high value and low frequency audience includes the profiles that you want to reach out to via a journey, to let them know about a new subscription program.
+
+* Description: Profiles who have spent more than $250 in aggregate in the last 3 months
+* Fields & Conditions Needed in the audience:
+  * Event: `commerce.order.payments.paymentamount`
+        * Aggregate Sum: >= $250
+  * EventType: `commerce.purchases`
+        * Timestamp: less than 3 months before now
+
 
 The following events are used for the re-engagement journey where users viewed products online, and did not add to cart in the next 24 hours, followed by no brand engagement in the 3 days following.
 
@@ -747,7 +753,11 @@ For more information about creating journeys in [!DNL Adobe Journey Optimizer], 
 
 ### Set up paid media ads in destinations {#paid-media-ads}
 
-Use the destinations framework in Real-Time CDP for paid media ads. Select one of the many available destinations to display paid media ads to your customers. See and overview of available advertising and social destinations. As part of the activation process, the destination checks for customer consent For more information about destinations, read the [Destinations overview](/help/destinations/home.md) document.
+Some users might not have purchased your subscription even after you message them about the new program. After waiting for a number of days, (seven in our example use case), you can decide to show paid media ads to those users. 
+
+Use the destinations framework in Real-Time CDP for paid media ads. Select one of the many available destinations to display paid media ads to your customers. See an overview of available [advertising](/help/destinations/catalog/advertising/overview.md) and [social](/help/destinations/catalog/social/overview.md) destinations. Browse all available destinations in the destinations catalog. 
+
+As part of the activation process, the destination checks for customer consent. 
 
 #### Data required for destinations
 
