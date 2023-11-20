@@ -30,20 +30,20 @@ Make sure that you have the necessary [attribute-based access control permission
   * [Datasets](/help/catalog/datasets/overview.md)
   * [Audiences](/help/segmentation/home.md)
   * [Destinations](/help/destinations/home.md)
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html): Design journeys, set triggers, and create the right messaging to address your visitors.
   * [Event or Audience Trigger](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
   * [Audiences and Events](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
   * [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Real-Time CDP and Journey Optimizer architecture
 
-Below is a high-level architecture view of the various components of Real-Time CDP and Journey Optimizer. This diagram shows how data flows through the two apps from data collection up to the point where it is activated through journeys or campaigns to destinations, in order to achieve the use case described on this page.
+Below is a high-level architecture view of the various components of Real-Time CDP and Journey Optimizer. This diagram shows how data flows through the two Experience Platform apps from data collection up to the point where it is activated through journeys or campaigns to destinations, in order to achieve the use case described on this page.
 
 ![Architecture high level visual overview.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){width="1000" zoomable="yes"}
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
-Below is a high level overview of the workflow, a hybrid of a journey and an activation workflow.
+Below is a high level overview of the workflow, a combination of a journey workflow and an activation workflow.
 
 In the sample workflow pictured below, you look for customers who meet a certain criteria and you want to entice them to return to your website or app. You are looking to set them on a journey where instead of limited activity on your property, they return in a more recurrent manner. You are trying to get them back to your property and then once they are back, you have them enter the journey to recurringly make purchases on your site. The campaign set up here is capped at one engagement with customers per month. 
 
@@ -54,11 +54,11 @@ You start by sending your audience of high valued and low frequency customers a 
 ![Step by step Evolve one-time value to lifetime value high level visual overview.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="1000" zoomable="yes"}
 
 1. You create schemas and datasets, then mark these for [!UICONTROL Profile].
-2. Data is integrated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
+2. Data is collected and integrated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
 3. You load profiles into Real-Time CDP and build governance policies to ensure responsible use.
-4. You build focused audiences from the list of profiles to check if a **customer** has made an engagement in the last three days.
-5. You create a re-engagement journey in [!DNL Adobe Journey Optimizer].
-6. If needed, work with the **data partner** for the activation of audiences to desired paid-media destinations.
+4. You build focused audiences from the list of profiles to check for high valued and low frequency customers.
+5. You create two journeys in [!DNL Adobe Journey Optimizer], one to message users about a new subscription program, and another to message them to confirm the purchase later on.
+6. If needed, you activate of audiences to desired paid-media destinations.
 7. [!DNL Adobe Journey Optimizer] checks for consent and sends out the various actions configured.
 
 >[!ENDSHADEBOX]
@@ -77,7 +77,7 @@ Experience Data Model (XDM) resources are managed in the [!UICONTROL Schemas] wo
 
 For more information about creating [schemas](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html), read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md) 
 
-There are several schema designs that are used in this sample implementation for the use case to evolve one-time value to lifetime value. Each schema includes specific required fields to be set up, and some fields that are strongly suggested.
+There are several schema designs that you can use in this sample implementation for the use case to evolve one-time value to lifetime value. Each schema includes specific required fields to be set up, and some fields that are strongly suggested.
 
 #### Customer attributes schema
 

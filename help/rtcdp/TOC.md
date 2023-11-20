@@ -68,6 +68,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
   * [Sources in Real-Time CDP B2B Edition](sources/b2b.md)
 * Use cases {#use-cases}
   * Personalization, Insights, and Engagement {#personalization-insights-engagement}
+    * [Evolve one-time customer value to lifetime value](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
     * [Intelligently re-engage your customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
   * Customer acquisition {#customer-acquisition}
     * [Engage and acquire new customers without dependency on third-party cookies](/help/rtcdp/partner-data/prospecting.md)  
