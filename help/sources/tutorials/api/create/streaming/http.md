@@ -556,7 +556,6 @@ A successful response returns HTTP status 201 with details of your newly created
 }
 ```
 
-
 ## Post data to be ingested to Platform {#ingest-data}
 
 Now that you've created your flow, you can send your JSON message to the streaming endpoint you previously created.
@@ -570,6 +569,7 @@ POST /collection/{INLET_URL}
 | Parameter | Description |
 | --------- | ----------- |
 | `{INLET_URL}` | Your streaming endpoint URL. You can retrieve this URL by making a GET request to the `/connections` endpoint while providing your base connection ID. |
+| `{FLOW_ID}` | The ID of your HTTP API streaming dataflow. |
 
 **Request**
 
@@ -578,9 +578,8 @@ POST /collection/{INLET_URL}
 >[!TAB XDM]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
   -d '{
         "header": {
           "schemaRef": {
@@ -619,9 +618,8 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
 >[!TAB Raw data]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
   -d '{
       "name": "Johnson Smith",
       "location": {
