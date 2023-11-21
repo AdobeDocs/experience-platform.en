@@ -1,6 +1,7 @@
 ---
 title: Offsite Retargeting of Unauthenticated Visitors
 description: Learn how to retarget unauthenticated users by using prospect IDs to create a computed attribute that can be used to create an audience of unauthenticated users.
+feature: Use Cases, Customer Acquisition
 ---
 
 # Offsite retargeting of unauthenticated visitors
