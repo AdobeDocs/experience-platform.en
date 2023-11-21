@@ -2,6 +2,7 @@
 keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance
 title: Data Governance overview
 description: Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
+feature: Get Started, Data Governance
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
 ---
 # Data Governance in Real-Time CDP

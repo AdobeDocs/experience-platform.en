@@ -1,6 +1,7 @@
 ---
 title: Supplement First-party Profiles with Partner-provided Attributes
 description: Learn how to supplement first-party profiles with attributes from trusted data partners to improve your data foundation, gain new insights into your customer base, and better audience optimization.
+feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
 ---
 # Supplement First-party Profiles with Partner-provided Attributes
