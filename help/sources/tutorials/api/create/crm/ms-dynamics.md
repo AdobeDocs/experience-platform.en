@@ -25,16 +25,26 @@ The following sections provide additional information that you will need to know
 
 In order for [!DNL Flow Service] to connect to [!DNL Dynamics], you must provide values for the following connection properties:
 
+>[!BEGINTABS]
+
+>[!TAB Basic authentication]
+
 | Credential | Description |
-| ---------- | ----------- |
+| --- | --- |
 | `serviceUri` | The service URL of your [!DNL Dynamics] instance. |
 | `username` | The user name for your [!DNL Dynamics] user account. |
 | `password` | The password for your [!DNL Dynamics] account. |
+
+>[!TAB Service-principal and key authentication]
+
+| Credential | Description |
+| --- | --- |
 | `servicePrincipalId` | The client ID of your [!DNL Dynamics] account. This ID is required when using service principal and key-based authentication. |
 | `servicePrincipalKey` | The service principal secret key. This credential is required when using service principal and key-based authentication. |
-| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Dynamics] is: `38ad80fe-8b06-4938-94f4-d4ee80266b07`. |
 
-For more information on getting started, visit [this [!DNL Dynamics] document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
+>[!ENDTABS]
+
+For more information on getting started, refer to [this [!DNL Dynamics] document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
 ### Using Platform APIs
 
@@ -42,13 +52,23 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ## Create a base connection
 
+>[!TIP]
+>
+>Once created, you cannot change the authentication type of a [!DNL Dynamics] base connection. To change the authentication type, you must create a new base connection.
+
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Dynamics] authentication credentials as part of the request parameters.
 
-### Create a [!DNL Dynamics] base connection using basic authentication
+### Create a [!DNL Dynamics] base connection 
 
-To create a [!DNL Dynamics] base connection using basic authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `serviceUri`, `username`, and `password`.
+>[!TIP]
+>
+>Once created, you cannot change the authentication type of an [!DNL Dynamics] base connection. To change the authentication type, you must create a new base connection.
+
+The first step in creating a source connection is to authenticate your [!DNL Dynamics] source and generate a base connection ID. A base connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
+
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Dynamics] authentication credentials as part of the request parameters.
 
 **API format**
 
@@ -56,7 +76,13 @@ To create a [!DNL Dynamics] base connection using basic authentication, make a P
 POST /connections
 ```
 
-**Request**
+>[!BEGINTABS]
+
+>[!TAB Basic authentication]
+
+To create a [!DNL Dynamics] base connection using basic authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `serviceUri`, `username`, and `password`.
+
++++Request
 
 ```shell
 curl -X POST \
@@ -91,7 +117,9 @@ curl -X POST \
 | `auth.params.password` | The password associated with your [!DNL Dynamics] account. |
 | `connectionSpec.id` | The [!DNL Dynamics] connection specification ID: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 
-**Response**
++++
+
++++Response
 
 A successful response returns the newly created connection, including its unique identifier (`id`). This ID is required to explore your CRM system in the next step.
 
@@ -102,42 +130,38 @@ A successful response returns the newly created connection, including its unique
 }
 ```
 
-### Create a [!DNL Dynamics] base connection using service principal key-based authentication
++++
+
+>[!TAB Service principal key-based authentication]
 
 To create a [!DNL Dynamics] base connection using service principal key-based authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `serviceUri`, `servicePrincipalId`, and `servicePrincipalKey`.
 
-**API format**
-
-```http
-POST /connections
-```
-
-**Request**
++++Request
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Dynamics connection",
-        "description": "Dynamics connection using key-based authentication",
-        "auth": {
-            "specName": "Service Principal Key Based Authentication",
-            "params": {
-                "serviceUri": "{SERVICE_URI}",
-                "servicePrincipalId": "{SERVICE_PRINCIPAL_ID}",
-                "servicePrincipalKey": "{SERVICE_PRINCIPAL_KEY}"
-            }
-        },
-        "connectionSpec": {
-            "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Dynamics connection",
+      "description": "Dynamics connection using key-based authentication",
+      "auth": {
+          "specName": "Service Principal Key Based Authentication",
+          "params": {
+              "serviceUri": "{SERVICE_URI}",
+              "servicePrincipalId": "{SERVICE_PRINCIPAL_ID}",
+              "servicePrincipalKey": "{SERVICE_PRINCIPAL_KEY}"
+          }
+      },
+      "connectionSpec": {
+          "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Property | Description |
@@ -147,7 +171,9 @@ curl -X POST \
 | `auth.params.servicePrincipalKey` | The service principal secret key. This credential is required when using service principal and key-based authentication. |
 | `connectionSpec.id` | The [!DNL Dynamics] connection specification ID: `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
 
-**Response**
++++
+
++++Response
 
 A successful response returns the newly created connection, including its unique identifier (`id`). This ID is required to explore your CRM system in the next step.
 
@@ -157,6 +183,11 @@ A successful response returns the newly created connection, including its unique
     "etag": "\"9e0052a2-0000-0200-0000-5e35tb330000\""
 }
 ```
+
++++
+
+>[!ENDTABS]
+
 
 ## Next steps
 

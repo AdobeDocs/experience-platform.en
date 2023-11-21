@@ -40,13 +40,14 @@ For more information about identity namespaces in [!DNL Experience Platform], se
 
 ## Submitting requests {#submit}
 
-The sections below outline how to make privacy requests for [!DNL Real-Time Customer Profile] using the [!DNL Privacy Service] API or UI. Before reading these sections, it is strongly recommended that you review the [Privacy Service API](../privacy-service/api/getting-started.md) or [Privacy Service UI](../privacy-service/ui/overview.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
+The sections below outline how to make privacy requests for [!DNL Real-Time Customer Profile] using the [!DNL Privacy Service] API or UI. Before reading these sections, you should review, or be aware of, the [Privacy Service API](../privacy-service/api/getting-started.md) or [Privacy Service UI](../privacy-service/ui/overview.md) documentation. These documents provide complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
 >[!IMPORTANT]
 >
 >Privacy Service is only able to process [!DNL Profile] data using a merge policy that does not perform identity stitching. See the section on [merge policy limitations](#merge-policy-limitations) for more information.
 >
->Please note that the amount of time a privacy request can take to complete **cannot** be guaranteed. If changes occur in your [!DNL Profile] data while a request is still processing, whether or not those records are processed also cannot be guaranteed.
+>Note that privacy requests are processed asynchronously within the regulatory requirements, and the amount of time they take to complete can vary. If changes occur in your [!DNL Profile] data while a request is still processing, it is not guaranteed that those incoming records will also be processed in that request. Only profiles held in the data lake or Profile Store at the time the privacy job is requested are guaranteed to be deleted. If you ingest profile data related to the subject of a deletion request during the deletion job, it is not guaranteed that all profile fragments will be deleted. 
+>It is your responsibility to be aware of any incoming data in Platform or Profile Service at the time of a deletion request, as that data will be inserted into your record stores. You must be judicious with the ingestion of data that has been, or is in the process of, being deleted.
 
 ### Using the API
 
@@ -216,6 +217,6 @@ Privacy Service is only able to process [!DNL Profile] data using a merge policy
 
 ## Next steps
 
-By reading this document, you have been introduced to the important concepts involved with processing privacy requests in [!DNL Experience Platform]. To deepen your understanding of how to manage identity data and create privacy jobs, please continue reading the documentation provided throughout this guide.
+By reading this document, you have been introduced to the important concepts involved with processing privacy requests in [!DNL Experience Platform]. To deepen your understanding of how to manage identity data and create privacy jobs, continue reading the documentation provided in this guide.
 
 For information on processing privacy requests for [!DNL Platform] resources not used by [!DNL Profile], see the document on [privacy request processing in the data lake](../catalog/privacy.md).

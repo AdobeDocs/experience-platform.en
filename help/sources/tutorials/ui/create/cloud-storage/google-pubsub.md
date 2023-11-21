@@ -25,12 +25,24 @@ If you already have a valid [!DNL PubSub] connection, you may skip the remainder
 
 In order to connect [!DNL PubSub] to Platform, you must provide a valid value for the following credentials:
 
+>[!BEGINTABS]
+
+>[!TAB Project-based authentication]
+
 | Credential | Description |
-| ---------- | ----------- |
+| --- | --- |
 | Project ID | The project ID required to authenticate [!DNL PubSub]. |
+| Credentials | The credential required to authenticate [!DNL PubSub]. You must ensure that you put the complete JSON file after removing the white spaces from your credentials.|
+
+>[!TAB Topic and subscription-based authentication]
+
+| Credential | Description |
+| --- | --- |
 | Credentials | The credential required to authenticate [!DNL PubSub]. You must ensure that you put the complete JSON file after removing the white spaces from your credentials.|
 | Topic name | The name of your [!DNL PubSub] subscription. In [!DNL PubSub], subscriptions allow you to receive messages, by subscribing to the topic in which messages have been published to. **Note**: A single [!DNL PubSub] subscription can only be used for one dataflow. In order to make multiple dataflows, you must have multiple subscriptions. |
 | Subscription name | The name of your [!DNL PubSub] subscription. In [!DNL PubSub], subscriptions allow you to receive messages, by subscribing to the topic in which messages have been published to. |
+
+>[!ENDTABS]
 
 For more information about these values, see the following [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication) document. If you are using service account-based authentication, see the following [PubSub guide](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
 
@@ -62,7 +74,8 @@ To use an existing account, select the [!DNL PubSub] account you want to create 
 
 >[!TIP]
 >
->When creating an account with restricted access, you must provide at least one of your topic name or subscription name. Authentication will fail if both values are missing.
+>* When creating an account with restricted access, you must provide at least one of your topic name or subscription name. Authentication will fail if both values are missing.
+>* Once created, you cannot change the authentication type of a [!DNL Google PubSub] base connection. To change the authentication type, you must create a new base connection.
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name and an optional description for your new [!DNL PubSub] account.
 

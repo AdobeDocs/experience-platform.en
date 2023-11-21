@@ -12,7 +12,7 @@ Additionally, the Web SDK powers same-page and next-page personalization capabil
 
 Content created within Adobe Target's [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) and Adobe Journey Optimizer's [Web Campaign UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) can be retrieved and rendered automatically by the SDK. Content created within Adobe Target's [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) or Offer Decisioning cannot be rendered automatically by the SDK. Instead, you must request this content using the SDK and then manually render the content yourself.
 
-## Automatically rendering content
+## Automatically rendering content {#automatic}
 
 When sending events to the server, you may set the `renderDecisions` option to `true`. Doing so forces the SDK to automatically render any personalized content that's eligible for automatic rendering.
 
@@ -34,7 +34,7 @@ alloy("sendEvent", {
 
 Rendering personalized content is asynchronous, so you should not make assumptions regarding when a particular piece of content will have completed rendering.
 
-## Manually rendering content
+## Manually rendering content {#manual}
 
 To access any personalization content, you may provide a callback function, which will be called after the SDK receives a successful response from the server. Your callback is provided a `result` object, which may contain a `propositions` property containing any returned personalization content. Below is an example of how you would provide a callback function when sending an event.
 

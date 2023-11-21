@@ -17,7 +17,7 @@ This page describes or links out to all the common and the configurable export s
 
 ## Common export settings across destination types {#common-settings-across-destination-types}
 
-Destination export behavior is consistent across destinations belonging to a destination type with regard to *what triggers a destination export* and *what is included in the destination exports*. Destination exports are triggered by notifications that the destinations service receives from the [upstream Real-time Customer Profile service](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=en#adobe-experience-platform-%26-applications-detailed-architecture-diagram). 
+Destination export behavior is consistent across destinations belonging to a destination type with regard to *what triggers a destination export* and *what is included in the destination exports*. Destination exports are triggered by notifications that the destinations service receives from the [upstream Real-time Customer Profile service](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram). 
 
 What is included in the destination exports varies slightly between destination types. Read more about the [common export behavior patterns per destination type](/help/destinations/how-destinations-work/profile-export-behavior.md). These settings cannot be edited by destination developers or Real-Time CDP users.
 
@@ -52,7 +52,7 @@ Read more about the different options and steps available in the activation work
 * [Activate audience data to enterprise destinations](/help/destinations/ui/activate-streaming-profile-destinations.md)
 * [Activate audience data to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [Export files on-demand to batch destinations](/help/destinations/ui/export-file-now.md)
-* [(Beta) Export datasets to cloud storage destinations](/help/destinations/ui/export-datasets.md)
+* [Export datasets to cloud storage destinations](/help/destinations/ui/export-datasets.md)
 
 ## Next steps {#next-steps}
 

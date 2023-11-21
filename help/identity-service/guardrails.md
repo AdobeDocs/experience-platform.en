@@ -26,6 +26,7 @@ The following table outlines static limits applied to identity data.
 | Guardrail | Limit | Notes |
 | --- | --- | --- |
 | Number of identities in a graph | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity. Deletion is based on identity type and timestamp. The limit is applied at the sandbox level. For more information, read the section on [understanding the deletion logic](#deletion-logic). |
+| Number of links to an identity for a single batch ingestion | 50 | A single batch could contain anomalous identities that cause unwanted graph merges. To prevent this, Identity Service will not ingest identities that are already linked to 50 or more identities. |
 | Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
 | Number of custom namespaces | None | There are no limits to the number of custom namespaces you can create. |
 | Number of characters for a namespace display name or identity symbol | None | There are no limits to the number of characters of a namespace display name or identity symbol. |
@@ -36,7 +37,7 @@ The following table outlines existing rules you must follow to ensure a successf
 
 | Namespace | Validation rule | System behavior when rule is violated |
 | --- | --- | --- |
-| ECID | <ul><li>The identity value of an ECID must be exactly 38 characters.</li><li>The identity value of an ECID must consist of numbers only.</li></ul> | <ul><li>If the identity value of ECID is not exactly 38 characters, then the record is skipped.</li><li>If the identity value of ECID contains non-numerical characters, then the record is skipped.</li></ul> |
+| ECID | <ul><li>The identity value of an ECID must be exactly 38 characters.</li><li>The identity value of an ECID must consist of numbers only.</li><li>Identity values cannot be "null", "anonymous", "invalid", or be an empty string (for example: " ", "", "  ").</li></ul> | <ul><li>If the identity value of ECID is not exactly 38 characters, then the record is skipped.</li><li>If the identity value of ECID contains non-numerical characters, then the record is skipped.</li><li>The identity will be blocked from ingestion.</li></ul> |
 | Non-ECID | The identity value cannot exceed 1024 characters. | If the identity value exceeds 1024 characters, then the record is skipped. |
 
 ### Identity namespace ingestion
@@ -95,7 +96,7 @@ Please contact your Adobe account team to request a change in identity type if y
 
 Once this feature is available, graphs that exceed the limit of 50 identities will be reduced down to up to 50 identities. For Real-Time CDP B2C Edition, this could result in a minimal increase in the number of profiles qualifying for an audience, as these profiles were previously ignored from Segmentation and Activation.
 
-#### Real-Time Customer Profile: Pseudonymous profile setup
+#### Real-Time Customer Profile: impact to addressable audiences
 
 Deletion only happens to data in the Identity Service and not Real-Time Customer Profile.
 
@@ -109,9 +110,19 @@ If you would like to preserve your authenticated events against the CRM ID, then
 * [Configure identity map for Experience Platform tags](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Identity data in the Experience Platform Web SDK](../edge/identity/overview.md#using-identitymap)
 
+
+
 ## Next steps
 
 See the following documentation for more information on [!DNL Identity Service]:
 
 * [[!DNL Identity Service] overview](home.md)
 * [Identity graph viewer](ui/identity-graph-viewer.md)
+
+See the following documentation for more information on other Experience Platform services guardrails, on end-to-end latency information, and licensing information from Real-Time CDP Product Description documents:
+
+* [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
+* [End-to-end latency diagrams](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) for various Experience Platform services.
+* [Real-Time Customer Data Platform (B2C Edition - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

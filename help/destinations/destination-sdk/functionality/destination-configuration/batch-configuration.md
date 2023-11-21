@@ -149,7 +149,7 @@ After reading this article, you should have a better understanding of how you ca
 To learn more about the other destination components, see the following articles:
 
 * [Customer authentication configuration](customer-authentication.md)
-* [OAuth2 authentication](oauth2-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
 * [Customer data fields](customer-data-fields.md)
 * [UI attributes](ui-attributes.md)
 * [Schema configuration](schema-configuration.md)

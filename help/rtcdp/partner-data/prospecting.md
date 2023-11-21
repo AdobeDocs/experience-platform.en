@@ -1,9 +1,9 @@
 ---
-title: Engage and acquire new customers through prospecting use cases
-description: Learn how to engage and acquire new customers through prospecting use cases, enabled by the partner data support in Real-Time CDP.
+title: Engage and acquire new customers without dependency on third-party cookies
+description: Learn how to engage and acquire new customers through prospecting use cases, without relying on third-party cookies.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 ---
-# Engage and acquire new customers through prospecting use cases
+# Engage and acquire new customers without dependency on third-party cookies
 
 >[!AVAILABILITY]
 >
@@ -13,9 +13,17 @@ Use third party data support in Real-Time CDP to expand your profile base with p
 
 ![Customer prospecting use case high-level visual overview.](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png)
 
+## Why consider this use case {#why-this-use-case}
+
+Brands are simultaneously facing daunting challenges of responsibly executing top-of-the-funnel customer acquisition use-cases without dependency on third-party cookies, limited budgets, and higher demand on transparency and return on ad-spend. 
+
+Adobe Real-Time Customer Data Platform can help brands safely transition their Data Management Platform (DMP) supported use-cases to cookie-less alternatives and do so in a way that brings forward the full sophistication and power of self-serve segmentation, audience curation, and activation into a single system. All without compromising on Adobe's unwavering focus on responsible use of data via a patented data governance and consent framework.
+
+For example, follow the steps described in this use case when you need to run a campaign to attract prospects to become users or known customers.
+
 ## Prerequisites and planning {#prerequisites-and-planning}
 
-As you consider reaching out to and acquiring new customers by using partner data support in Real-Time CDP, consider the following prerequisites in your planning process:
+As you consider reaching out to and acquiring new customers, consider the following prerequisites in your planning process:
 
 * What is the cadence with which you expect partner-provided profiles to be ingested into Real-Time CDP and refreshed?
 * What identities do your downstream destinations require?
@@ -213,5 +221,5 @@ Make use of the prospect audiences by exporting them to destinations. Currently,
 Explore further use cases enabled through partner data support in Real-Time CDP:
 
 * [Supplement first-party profiles with attributes from trusted data partners](/help/rtcdp/partner-data/supplement-first-party-profiles.md) to improve your data foundation and gain new insights into your customer base and gain better audience optimization.
-* [Leverage partner aided recognition for personalizing on-site experiences](/help/rtcdp/partner-data/onsite-personalization.md) during the visit without the user authenticating or having prior history with your brand.
+* [Personalize onsite experiences for unknown visitors using partner-aided visitor recognition](/help/rtcdp/partner-data/onsite-personalization.md) during the visit without the user authenticating or having prior history with your brand.
 * [Expanded activation of prospect profiles and prospect audiences](/help/destinations/ui/activate-prospect-audiences.md) to select destinations.
