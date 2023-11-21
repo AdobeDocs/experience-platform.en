@@ -1,9 +1,9 @@
 ---
-title: Evolve one-time value to lifetime value
+title: Evolve one-time customer value to lifetime value
 description: Learn how to create personalized campaigns to offer the best complementary products or services based on a specific customer's attributes, behavior, and past purchases.
 feature: Use Cases
 ---
-# Evolve one-time value to lifetime value
+# Evolve one-time customer value to lifetime value
 
 >[!IMPORTANT]
 > 
@@ -30,7 +30,7 @@ Make sure that you have the necessary [attribute-based access control permission
   * [Datasets](/help/catalog/datasets/overview.md)
   * [Audiences](/help/segmentation/home.md)
   * [Destinations](/help/destinations/home.md)
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html): Design journeys, set triggers, and create the right messaging to address your visitors.
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html): Design journeys, set up triggers, and create the right messaging to address your visitors.
   * [Event or Audience Trigger](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
   * [Audiences and Events](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
   * [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
@@ -43,7 +43,7 @@ Below is a high-level architecture view of the various components of Real-Time C
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
-Below is a high level overview of the workflow, a combination of a journey workflow and an activation workflow.
+Below is a high level overview of the workflow - a combination of a journey workflow and an activation workflow.
 
 In the sample workflow pictured below, you look for customers who meet a certain criteria and you want to entice them to return to your website or app. You are looking to set them on a journey where instead of limited activity on your property, they return in a more recurrent manner. You are trying to get them back to your property and then once they are back, you have them enter the journey to recurringly make purchases on your site. The campaign set up here is capped at one engagement with customers per month. 
 
@@ -58,7 +58,7 @@ You start by sending your audience of high valued and low frequency customers a 
 3. You load profiles into Real-Time CDP and build governance policies to ensure responsible use.
 4. You build focused audiences from the list of profiles to check for high valued and low frequency customers.
 5. You create two journeys in [!DNL Adobe Journey Optimizer], one to message users about a new subscription program, and another to message them to confirm the purchase later on.
-6. If needed, you activate of audiences to desired paid-media destinations.
+6. If desired, you activate the audience of customers who have not purchased your subscription to desired paid-media destinations.
 7. [!DNL Adobe Journey Optimizer] checks for consent and sends out the various actions configured.
 
 >[!ENDSHADEBOX]
@@ -69,7 +69,7 @@ To complete each of the steps in the high-level overview above, read through the
 
 ### UI functionality and elements that you will use {#ui-functionality-and-elements}
 
-As you complete the steps to implement the use case, you will make use of the Real-Time CDP functionality and UI elements listed at the beginning of this document. Make sure that you have the necessary attribute-based access control permissions for all these areas, or ask your system administrator to grant you the necessary permissions. 
+As you complete the steps to implement the use case, you will make use of the Real-Time CDP and Adobe Journey Optimizer functionality and UI elements listed at the beginning of this document. Make sure that you have the necessary attribute-based access control permissions for all these areas, or ask your system administrator to grant you the necessary permissions. 
 
 ### Create a schema design and specify field groups {#schema-design}
 
@@ -79,15 +79,17 @@ For more information about creating [schemas](https://experienceleague.adobe.com
 
 There are several schema designs that you can use in this sample implementation for the use case to evolve one-time value to lifetime value. Each schema includes specific required fields to be set up, and some fields that are strongly suggested.
 
-Three schemas are suggested to accomplish this use case: 
+Based on sample implementations, Adobe suggests that you create the following three schemas to accomplish this use case: 
 
 * Customer attributes schema (a profile schema)
-* Customer digital transactions schema
-* Customer Offline Transactions 
+* Customer digital transactions schema (an experience event schema)
+* Customer offline transactions (an experience event schema)
 
 #### Customer attributes schema
 
-This schema is used to structure and reference the profile data that makes up your customer information. This data is typically ingested into [!DNL Adobe Experience Platform] via your CRM or similar system and is necessary to reference customer details that are used for personalization, marketing consent, and enhanced segmentation capabilities.
+Use this schema to structure and reference the profile data that makes up your customer information. This data is typically ingested into [!DNL Adobe Experience Platform] via your CRM or similar system and is necessary to reference customer details that are used for personalization, marketing consent, and enhanced segmentation capabilities.
+
+![Customer attributes schema with field groups highlighted](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-attributes-schema.png)
 
 The customer attributes schema is represented by an [!UICONTROL XDM Individual Profile] class, which includes the following field groups:
 
@@ -137,6 +139,8 @@ The customer attributes schema is represented by an [!UICONTROL XDM Individual P
 #### Customer digital transactions schema
 
 This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via Web SDK and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced segmentation capabilities.
+
+![Customer digital transactions schema with field groups highlighted](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
 
 The customer digital transactions schema is represented by an [!UICONTROL XDM ExperienceEvent] class, which includes the following field groups:
 
@@ -228,6 +232,8 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 This schema is used to structure and reference the event data that makes up your customer activity that occurs on platforms outside of your website. This data is typically ingested into [!DNL Adobe Experience Platform] from a POS (or similar system) and most often streamed into Platform via an API connection. Its purpose is to reference the various offline conversion events that are used for triggering journeys, deep online and offline customer analysis, and enhanced segmentation capabilities.
 
+![Customer offline transactions schema with field groups highlighted](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-offline-transactions-schema.png)
+
 The customer offline transactions schema is represented by an [!UICONTROL XDM ExperienceEvent] class, which includes the following field groups:
 
 +++Commerce Details (Field Group)
@@ -269,6 +275,8 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 >This is an optional implementation if you are using the [!DNL Adobe Analytics Data Connector].
 
 This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when Web SDK is not an option for data collection; thus, this schema is needed when you are utilizing the [!DNL Adobe Analytics Data Connector] to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
+
+![Adobe web connector schema with field groups highlighted](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
 
 The [!DNL Adobe] web connector schema is represented by a [!UICONTROL XDM ExperienceEvent] class, which includes the following field groups:
 
@@ -439,9 +447,11 @@ This journey does not require any audiences to be created.
 
 >[!BEGINTABS]
 
->[!TAB Re-Engagement Journey]
+>[!TAB Lifetime Journey]
 
-The re-engagement journey targets abandoned product browsing on both the website and mobile app.<p>![Customer intelligent re-engagement journey high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent re-engagement journey high level visual overview."){width="2560" zoomable="yes"}</p>
+The lifetime journey addresses the audience of high value and low frequency customers who were not targeted within the last 30 days. A message is shown to these customers and then, if after 7 days they still do not purchase, you can include the non-purchasers in an audience which will you can show paid media ads to.
+
+![Lifetime journey high level visual overview.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "Customer intelligent re-engagement journey high level visual overview."){width="2560" zoomable="yes"}
 
 +++Events
 
@@ -567,138 +577,11 @@ The re-engagement journey targets abandoned product browsing on both the website
 
 +++
 
->[!TAB Abandoned Cart Journey]
-
-The abandoned cart journey targets products that have been placed in the cart but have not yet been purchased on both the website and mobile app.<p>![Customer abandoned cart journey high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Customer abandoned cart journey high level visual overview."){width="2560" zoomable="yes"}</p>
-
-+++Events
-
-* Event 2: Add to Cart
-    * Schema: Customer Digital Transactions
-    * Fields:
-        * `EventType`
-    * Condition:
-        * `EventType = commerce.productListAdds`
-        * Fields:
-            * `Commerce.productListAdds.id`
-            * `Commerce.productListAdds.value`
-            * `eventType`
-            * `identityMap.authenticatedState`
-            * `identityMap.id`
-            * `identityMap.primary`
-            * `productListItems.SKU`
-            * `productListItems.currencyCode`
-            * `productListItems.name`
-            * `productListItems.priceTotal`
-            * `productListItems.product`
-            * `productListItems.productImageUrl`
-            * `productListItems.quantity`
-            * `timestamp`
-            * `commerce.cart.cartID`
-            * `endUserIDs._experience.emailid.authenticatedState`
-            * `endUserIDs._experience.emailid.id`
-            * `endUserIDs._experience.emailid.namespace.code`
-            * `_id`
-
-* Event 4: Online Purchases
-    * Schema: Customer Digital Transactions
-    * Fields:
-        * `EventType`
-    * Condition:
-        * `EventType = commerce.purchases`
-        * Fields: 
-            * `Commerce.purchases.id`
-            * `Commerce.purchases.value`
-            * `eventType`
-            * `identityMap.authenticatedState`
-            * `identityMap.id`
-            * `identityMap.primary`
-            * `productListItems.SKU`
-            * `productListItems.currencyCode`
-            * `productListItems.name`
-            * `productListItems.priceTotal`
-            * `productListItems.product`
-            * `productListItems.productImageUrl`
-            * `productListItems.quantity`
-            * `timestamp`
-            * `endUserIDs._experience.emailid.authenticatedState`
-            * `endUserIDs._experience.emailid.id`
-            * `endUserIDs._experience.emailid.namespace.code`
-            * `_id`
-
-* Event 3: Brand Engagement
-    * Schema: Customer Digital Transactions
-    * Fields:
-        * `EventType`
-    * Condition:
-        * `EventType in application.launch, commerce.purchases, web.webpagedetails.pageViews`
-        * Fields:
-            * `eventType`
-            * `identityMap.authenticatedState`
-            * `identityMap.id`
-            * `identityMap.primary`
-            * `productListItems.SKU`
-            * `productListItems.currencyCode`
-            * `productListItems.name`
-            * `productListItems.priceTotal`
-            * `productListItems.product`
-            * `productListItems.productImageUrl`
-            * `productListItems.quantity`
-            * `timestamp`
-            * `web.webpagedetails.URL`
-            * `web.webpagedetails.isHomePage`
-            * `web.webpagedetails.name`
-            * `endUserIDs._experience.emailid.authenticatedState`
-            * `endUserIDs._experience.emailid.id`
-            * `endUserIDs._experience.emailid.namespace.code`
-            * `_id`
-            * `Commerce.purchases.id`
-            * `Commerce.purchases.value`
-            * `shipping.address.city`
-            * `shipping.address.countryCode`
-            * `shipping.address.postalCode`
-            * `shipping.address.state`
-            * `shipping.address.street1`
-            * `shipping.address.street2`
-            * `shipping.shipDate`
-            * `shipping.trackingNumber`
-            * `shipping.trackingURL`
-
-+++
-
-+++Key Journey Logic 
-
-* Journey Entry Logic
-    * `AddToCart` Event
-
-* AuthenticatedState in authenticated
-
-* Condition: Offline purchases since the cart was last abandoned: 
-    * Schema: Customer Offline Transactions
-    * `eventType = commerce.purchases` 
-    * `timestamp > timestamp of cart was last abandoned`
-
-* Condition: Cart cleared since the cart was last abandoned:
-    * Schema: Customer Digital Transactions
-    * `eventType = commerce.cartCleared`
-    * `cartID` (ID of the cart)
-    * `timestamp > timestamp of cart was last abandoned`
-
-* Select Target Channel (Select one or multiple channels for wider reach)
-    * Email
-        * `consents.marketing.email.val = y`
-    * Push
-        * `consents.marketing.push.val = y`
-    * SMS
-        * `consents.marketing.sms.val = y`
-    * Channel Personalization
-        * Display cart detail information and can display multiple products in a table format.
-
-+++
+Add a custom condition at the end of journey, creating a journey.feedback event. You will use this event to segment the audience which has not purchased the subscription and which you can target via paid media ads.
 
 >[!TAB Order Confirmation Journey]
 
-The order confirmation journey focuses on product purchases made through the website and mobile app.<p>![Customer order confirmation journey high level visual overview.](../intelligent-re-engagement/images/order-confirmation-journey.png "Customer order confirmation journey high level visual overview."){width="2560" zoomable="yes"}</p>
+The order confirmation journey focuses on whether a purchase was made through the website or mobile app.<p>![Customer order confirmation journey high level visual overview.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Customer order confirmation journey high level visual overview."){width="2560" zoomable="yes"}</p>
 
 +++Events
 
