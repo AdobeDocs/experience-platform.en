@@ -115,6 +115,22 @@ For responses that involve data usage information, Assistant provides links to e
 
 +++
 
+#### Multi-turn
+
++++Select to view an example of multi-turn
+
+You can use Assistant's multi-turn capabilities to have a more natural conversation during your experience. Assistant is able to answer follow up questions given that context can be inferred from an earlier interaction.
+
+In the example below, Assistant is asked to list the existing segments in the organization, as a follow up to an earlier query about total number of segments.
+
+![](./images/ai-assistant/multi-turn-one.png)
+
+Next, Assistant receives another follow up request. This time, Assistant responds by listing the existing segments ordered by their respective sizes.
+
+![](./images/ai-assistant/multi-turn-two.png)
+
++++
+
 #### Use autocomplete
 
 +++Select to view an example of autocomplete
@@ -168,9 +184,9 @@ You will need to log into a sandbox to inquire about specific data related to ob
 
 | Question type | Description | Examples |
 | --- | --- | --- | 
-| Data lineage | Track usage of one or multiple objects across other Experience Platform objects | <ul><li>Which dataset(s) use {SCHEMA_NAME} schema?</li><li>How many datasets have been ingested using the same schema?</li><li>Which datasets have been used in activated segments?</li><li>List the schemas which have attributes used in activated segments.</li><li>Show me the segments which are activated to {DESTINATION_ACCOUNT_NAME} and have more than 1000 profiles.</li><li>Show me the attributes which are used in the activated segments which have been modified after Jan 2023.</li><li>List the schemas that are related to activated segments and were created in last 1 year.</li></ul> |
-| Distribution and aggregations | Summary-based questions about Experience Platform object usage | <ul><li>What is the percentage of activated segments?</li><li>How many fields are used in segmentation?</li><li>Which segments are activated to the most number of destinations?</li><li>List duplicate segments.</li><li>Show me the segments activated to {DESTINATION_ACCOUNT_NAME} and rank them by profile size.</li><li>What is the percentage of the segments which have not been activated but have more than 100 profiles. Show me their names.</li><li>List me the top 5 attributes used in activated segments based on their occurrence.</li></ul> |
-| Object lookup | Retrieve or access an Experience Platform object or it's properties. | <ul><li>Which datasets do not have any schema associated with them</li><li>List the attributes used for {SEGMENT_NAME}?</li><li>Give me the list of schemas which are profile enabled but have not been modified since their creation.</li><li>Which segments have been modified in the last week?</li><li>List me the segments which have the same segment definitions along with their creation date.</li><li>Which datasets are profile enabled and also include how many segments have been created from each dataset.</li><li>Show me the segment definition and modification date of {SEGMENT_NAME}.</li></ul>|
+| Data lineage | Track usage of one or multiple objects across other Experience Platform objects | <ul><li>Which dataset(s) use {SCHEMA_NAME} schema?</li><li>How many datasets have been ingested using the same schema?</li><li>Which datasets have been used in activated segments?</li><li>List the schemas which have attributes used in activated segments.</li><li>Show me the segments which are activated to {DESTINATION_ACCOUNT_NAME} and have more than 1000 profiles.</li><li>Show me the attributes which are used in the activated segments which have been modified after Jan 2023.</li><li>What are the datasets ingested via {SOURCE_NAME}?</li><li>Which dataflows are associated with {DATAFLOW_NAME}</li><li>List the schemas that are related to activated segments and were created in last 1 year.</li></ul> |
+| Distribution and aggregations | Summary-based questions about Experience Platform object usage | <ul><li>What is the percentage of activated segments?</li><li>How many fields are used in segmentation?</li><li>Which segments are activated to the most number of destinations?</li><li>List duplicate segments.</li><li>Show me the segments activated to {DESTINATION_ACCOUNT_NAME} and rank them by profile size.</li><li>What is the percentage of the segments which have not been activated but have more than 100 profiles. Show me their names.</li><li>List the 3 source connectors ingesting data into my datasets.</li><li>List me the top 5 attributes used in activated segments based on their occurrence.</li></ul> |
+| Object lookup | Retrieve or access an Experience Platform object or it's properties. | <ul><li>Which datasets do not have any schema associated with them</li><li>List the attributes used for {SEGMENT_NAME}?</li><li>Give me the list of schemas which are profile enabled but have not been modified since their creation.</li><li>Which segments have been modified in the last week?</li><li>List me the segments which have the same segment definitions along with their creation date.</li><li>Which datasets are profile enabled and also include how many segments have been created from each dataset.</li><li>Which source accounts are associated with dataset XYZ?</li><li>Show me the segment definition and modification date of {SEGMENT_NAME}.</li></ul>|
 
 +++
 
@@ -231,7 +247,7 @@ Refer to this section for additional information on the Assistant for Experience
 ### Caveats and limitations
 
 The following section outlines current caveats and limitations to considers when using Assistant.
-
+<!-- 
 #### Conversational experience
 
 You must consider several nuances regarding the conversational experience when querying the Assistant.
@@ -280,7 +296,7 @@ You must phrase your questions clearly and scope them within a product, applicat
 
 {style="table-layout:auto"}
 
->[!ENDTABS]
+>[!ENDTABS] -->
 
 #### Limited small talk
 

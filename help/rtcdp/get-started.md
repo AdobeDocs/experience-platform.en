@@ -2,6 +2,7 @@
 keywords: RTCDP;CDP;Real-Time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Getting Started with Real-Time Customer Data Platform
 description: Use this sample scenario as an example when setting up your implementation of Adobe Real-Time Customer Data Platform.
+feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
 ---
 # Getting started with Real-Time Customer Data Platform
@@ -18,7 +19,7 @@ This example shows the power of Real-Time Customer Data Platform, powered by Ado
 
 Luma, an athletic apparel company, is always trying to improve their customer experience. They have a new initiative to increase gift-related sales. They also want to reduce overexposure, such as annoying ads that follow customers around.
 
-Currently, they're spending too much on media that retargets against items that the visitor isn’t going to buy moving forward. For example, Luma doesn’t want to retarget someone with an item that was intended as a one-time purchase for someone else.
+Currently, they're spending too much on media that retargets against items that the visitor isn't going to buy moving forward. For example, Luma doesn't want to retarget someone with an item that was intended as a one-time purchase for someone else.
 
 Right now, Luma's data is dispersed across multiple sources. As a result, they face significant challenges:
 
@@ -33,7 +34,7 @@ As a result, Luma has the following business objectives:
 
 To meet these goals, the marketing team needs to be able to manage customer data at scale. 
 
-With Real-Time CDP, powered by Adobe Experience Platform, Luma’s marketing organization can:  
+With Real-Time CDP, powered by Adobe Experience Platform, Luma's marketing organization can:  
 
 1. Collect data from disparate platforms and make sure it's available downstream for other marketing activities. 
 1. Create a single, real-time view of their consumers, independent of where data originates.  
@@ -65,7 +66,7 @@ Many visitors to the website are probably repeat customers who have previously p
 
 ### New customer's first visit
 
-For example, an unidentifed visitor navigates to the Men’s section on the Luma site, and views a couple running sweatshirts. 
+For example, an unidentifed visitor navigates to the Men's section on the Luma site, and views a couple running sweatshirts. 
 
 ![image](assets/luma-sweatshirts.png)
 
@@ -90,7 +91,7 @@ Two identies are merged:
 
 Both identies are combined into a single profile in [!DNL Experience Platform]. Luma now has a unified view of this consumer.
 
-Based on the browsing behavior of the anonymous visitor in the Men's section of the site, it might have been assumed that the customer was a male. Now that she’s logged in, Luma recognizes Sarah Rose. Luma uses the power of the [!DNL Real-Time Customer Profile] to refine the messaging delivered to her across channels.  
+Based on the browsing behavior of the anonymous visitor in the Men's section of the site, it might have been assumed that the customer was a male. Now that she's logged in, Luma recognizes Sarah Rose. Luma uses the power of the [!DNL Real-Time Customer Profile] to refine the messaging delivered to her across channels.  
 
 ## Personalizing the user experience
 
@@ -102,7 +103,7 @@ She navigates to the home page to browse some more.
 
 Sarah receives a personalized home page experience that is dynamically delivered, based on her [!DNL Real-Time Customer Profile] in Adobe Experience Platform.  
 
-She sees relevant content, thanks to Adobe Sensei-powered personalization in Adobe Target, which takes into account her past purchases and affinity toward running apparel and gear. Luma also tailors the men’s catalog content toward running gear for men based on her most recent browse.
+She sees relevant content, thanks to Adobe Sensei-powered personalization in Adobe Target, which takes into account her past purchases and affinity toward running apparel and gear. Luma also tailors the men's catalog content toward running gear for men based on her most recent browse.
 
 Further down the page, Sarah is shown featured products, as well as a new recommendations tray based on her most recently viewed items.  
 
@@ -139,7 +140,7 @@ Use [!DNL Real-Time Customer Data Platform] to bring new sources of data into Pl
 
 ![image](assets/luma-source-cat.png)
 
-For example, to ingest Luma’s CRM data, filter the catalog by *CRM*, and all out-of-the-box connectors containing *CRM* are listed. To add [!DNL Microsoft Dynamics CRM] data:
+For example, to ingest Luma's CRM data, filter the catalog by *CRM*, and all out-of-the-box connectors containing *CRM* are listed. To add [!DNL Microsoft Dynamics CRM] data:
 
 1. Authorize the connection.
 
@@ -197,9 +198,9 @@ The powerful Adobe Experience Platform segmentation capabilities enable marketer
 
 <!-- ![image](assets/luma-segments.png) -->
 
-In this scenario, Sarah's recent interactions on the site exhibit a different behavior than her past actions. She usually buys women's apparel. However, the item in her cart is a men’s large sweatshirt. 
+In this scenario, Sarah's recent interactions on the site exhibit a different behavior than her past actions. She usually buys women's apparel. However, the item in her cart is a men's large sweatshirt. 
 
-The Luma data science team has created models around propensity to buy. One model identifies a sudden change in apparel category (such as mens/womens) or size for the existing consumer. Sarah's change in purchasing behavior suggests she isn’t shopping for herself.  
+The Luma data science team has created models around propensity to buy. One model identifies a sudden change in apparel category (such as mens/womens) or size for the existing consumer. Sarah's change in purchasing behavior suggests she isn't shopping for herself.  
 
 <!-- ![image](assets/luma-gift.png) -->
 
@@ -224,7 +225,7 @@ Because Sarah added an apparent gift item in the cart and abandoned it, Luma can
 
 ## Destinations
 
-When you've added the “Gift Giving Cart Abandoners” segment, you can see roughly how many people are part of this segment. You can take action on it and make it available for personalization across channels.  
+When you've added the "Gift Giving Cart Abandoners" segment, you can see roughly how many people are part of this segment. You can take action on it and make it available for personalization across channels.  
 
 Select **[!UICONTROL Send to destinations]**.
 
@@ -253,7 +254,7 @@ You can also schedule the segment to start or end at a particular time. The segm
 
 Select **[!UICONTROL Save]** to go to the next page. 
 
-When a customer in this audience makes a purchase, their membership to this audience is suppressed in real time. They don’t qualify anymore because their status has changed. 
+When a customer in this audience makes a purchase, their membership to this audience is suppressed in real time. They don't qualify anymore because their status has changed. 
 
 This saves the director of the Luma media team  hundreds of thousands of dollars by not using up inventory for an audience that is not qualified.
 
@@ -263,7 +264,7 @@ Adobe Experience Platform includes privacy and security controls to determine wh
 
 If your activity violates policy, a warning appears. This warning contains data lineage information that can help you identify why the policy was violated, and what you can do to resolve the violation.
 
-With these controls, [!DNL Experience Platform] helps Luma comply with regulations and market responsibly. These controls are flexible and can be modified to meet the requirements of Luma’s security and governance teams, allowing them to confidently address regional and organizational requirements for managing known and unknown customer data.
+With these controls, [!DNL Experience Platform] helps Luma comply with regulations and market responsibly. These controls are flexible and can be modified to meet the requirements of Luma's security and governance teams, allowing them to confidently address regional and organizational requirements for managing known and unknown customer data.
 
 ### Data flow canvas
 
@@ -280,8 +281,8 @@ Later, she opens her email and sees the retargeted emails. She selects a link to
 The link takes Sarah to the mobile Luma homepage, where she sees a highly personalized experience powered by Adobe Target.
 
 * She is welcomed as a Bronze member.  
-* She sees the “Gift” message.  
-* She also sees “Free Gift Wrap” message, which is part of her Bronze membership benefits.  
+* She sees the "Gift" message.  
+* She also sees "Free Gift Wrap" message, which is part of her Bronze membership benefits.  
 * She's still targeted in the hero image based on her affinity for running.
 
 She buys the sweater, adds gift wrap, and writes a gift note. She also has the option to remember this event and get a reminder next year to get at gift at this time. She says yes, and is scheduled into an email campaign the following year to remind her to buy another gift.
