@@ -20,13 +20,9 @@ You must be logged into your business account to set up [!DNL TikTok] Pixel usin
 3. Select **[!UICONTROL Set Up Web Events]**.
 4. Select **[!UICONTROL Partner Setup]** as your connection method.
 
-![Create pixel dialogue highlighting [!UICONTROL Partner setup].](../../../images/extensions/server/tiktok/partner-setup.png)
-
 See the [Get Started with Pixel](https://ads.tiktok.com/help/article/get-started-pixel) for more information on how to setup the [!DNL TikTok] pixel.
 
 You can generate an access token once the pixel has been successfully created. To do this navigate to the Pixel and select the **[!UICONTROL Settings]** tab. Under Events API, select **[!UICONTROL Generate Access Token]**.
-
-![The settings tab highlighting the [!UICONTROL Generate Access Token] option.](../../../images/extensions/server/tiktok/generate-access-token.png)
 
 See the [[!DNL TikTok] getting started guide](https://business-api.tiktok.com/portal/docs?id=1739584855420929) for more information on how to setup the pixel code and access token.
 
@@ -51,7 +47,9 @@ Once all your data elements are set up, you can start creating event forwarding 
 
 Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL TikTok Web Events API Extension]**. To send Edge Network events to [!DNL TikTok], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send TikTok Web Events API Event].**
 
-After selection, additional controls appear to further configure the event. Select **[!UICONTROL Keep Changes]** to save the rule.
+![The [!UICONTROL Send TikTok Web Events API Event] action type being selected for a [!DNL TikTok] rule in the Data Collection UI.](../../../images/extensions/server/tiktok/select-action.png)
+
+After selection, additional controls appear to further configure the event, as outlined below. Once complete, select **[!UICONTROL Keep Changes]** to save the rule.
 
 **[!UICONTROL Web Events and Parameters]**
 
@@ -75,8 +73,8 @@ User context parameters contains customer information which is used to match web
 | --- | --- |
 | IP Address | Non-hashed public IP address of the browser. Support is provided for IPv4 and IPv6 addresses. Both the full and compressed forms of IPv6 addresses are recognized. |
 | User Agent | The non-hashed user agent from the user's device. |
-| Email | Email address of the contact associated with the conversion event. The email value will must be hashed with SHA256. |
-| Phone | The contact number of the customer which must be hashed with SHA256 on the client side.  |
+| Email | Email address of the contact associated with the conversion event. |
+| Phone | The phone number must be in E164 format [+][country code][area code][local phone number] before hashing. |
 | Cookie ID | If you are using Pixel SDK will automatically save a unique identifier in the `_ttp` cookie, if cookies are enabled. The `_ttp` value can  extracted and used for this field. |
 | External ID | Any unique identifier such as user IDs, external cookie IDs and so on and must be hashed with SHA256. |
 | TikTok Click ID | The `ttclid` which is added to the URL of the landing page each time an advertisement is selected on [!DNL TikTok]. |
@@ -117,7 +115,7 @@ Deduplication is not required if distinct event types are being sent from the cl
 
 When sending shared events, make sure that every event includes a pixel ID, event ID and name. Duplicated events that arrive within five minutes of each other will be merged. If the data field was absent from the first event, it will be combined with the subsequent event. Any duplicate events received within 48 hours will be removed.
 
-See the [!DNL TikTok] documentation on [Event Deduplication](https://ads.tiktok.com/help/article/event-deduplication) for details on this process.
+See the [!DNL TikTok] documentation on [Event Deduplication](https://ads.tiktok.com/help/article/event-deduplication) for more details on this process.
 
 ## Next steps
 
