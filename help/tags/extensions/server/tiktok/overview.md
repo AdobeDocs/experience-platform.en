@@ -113,9 +113,9 @@ The properties parameters allows you to configure additional supported propertie
 
 [!DNL TikTok] pixel will need to be setup for deduplication if you use both the [!DNL TikTok] pixel SDK and the [!DNL TikTok] web events API extension to send the same events to [!DNL TikTok]. 
 
-If you are sending different event types from the client and server with no overlap between the two, then deduplication is not necessary. However, if any single event is shared by both [!DNL TikTok] pixel SDK and the [!DNL TikTok] web events API extension, you must ensure that these redundant events are deduplicated so that your reporting is not adversely affected.
+Deduplication is not required if distinct event types are being sent from the client and server without any overlap. To ensure that your reporting is not negatively impacted, you must make sure that any single event that is shared by the [!DNL TikTok] pixel SDK and the [!DNL TikTok] web events API extension is deduplicated.
 
-When sending shared events, make sure that you are including a pixel ID, event ID and name with every event that you send from both the client and server. Duplicated events that arrive within five minutes of each other will be merged. The latter event will be merged into the first event, if the data field was not present in the first event. After five minutes any duplicated events received within 48 hours, the latter will be dropped.
+When sending shared events, make sure that every event includes a pixel ID, event ID and name. Duplicated events that arrive within five minutes of each other will be merged. If the data field was absent from the first event, it will be combined with the subsequent event. Any duplicate events received within 48 hours will be removed.
 
 See the [!DNL TikTok] documentation on [Event Deduplication](https://ads.tiktok.com/help/article/event-deduplication) for details on this process.
 
