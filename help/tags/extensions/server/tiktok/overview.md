@@ -13,14 +13,14 @@ To configure the [!DNL TikTok] web events API to use the [!DNL TikTok] events AP
 
 You must have a valid [!DNL TikTok] for business account in order to create a [!DNL TikTok] pixel using the partner setup. Go to the [[!DNL TikTok] for business registration page](https://www.tiktok.com/business/en-US/solutions/business-account) to register and create an account if you do not have one already.
 
-You must be logged into your business account to set up [!DNL TikTok] Pixel using partner setup. To do this follow the steps below:
+You must be logged into your business account to set up [!DNL TikTok] Pixel using partner setup. To do this, follow the steps below:
 
 1. Navigate to the **[!UICONTROL Assets]** tab and select **[!UICONTROL Event]**.
 2. Under Web Events, select **[!UICONTROL Manage]**.
 3. Select **[!UICONTROL Set Up Web Events]**.
 4. Select **[!UICONTROL Partner Setup]** as your connection method.
 
-See the [Get Started with Pixel](https://ads.tiktok.com/help/article/get-started-pixel) for more information on how to setup the [!DNL TikTok] pixel.
+See the [Get Started with Pixel](https://ads.tiktok.com/help/article/get-started-pixel) guide for more information on how to setup the [!DNL TikTok] pixel.
 
 You can generate an access token once the pixel has been successfully created. To do this navigate to the Pixel and select the **[!UICONTROL Settings]** tab. Under Events API, select **[!UICONTROL Generate Access Token]**.
 
@@ -53,7 +53,7 @@ After selection, additional controls appear to further configure the event, as o
 
 **[!UICONTROL Web Events and Parameters]**
 
-Web events and parameters contains general information about the event. Standard events are supported across [!DNL TikTok] integration tools and can be used for reporting , optimizing for conversions, and building audiences.
+Web events and parameters contain general information about the event. Standard events are supported across [!DNL TikTok] integration tools and can be used for reporting , optimizing for conversions, and building audiences.
 
 | Input | Description |
 | --- | --- |
@@ -67,7 +67,7 @@ Web events and parameters contains general information about the event. Standard
 
 **[!UICONTROL User Context Parameters]**
 
-User context parameters contains customer information which is used to match web visitor events with [!DNL TikTok] users. Including multiple types of matching data allows you to increase the accuracy of targeting and optimization models.
+User context parameters contain customer information that is used to match web visitor events with [!DNL TikTok] users. Including multiple types of matching data allows you to increase the accuracy of targeting and optimization models.
 
 | Input | Description |
 | --- | --- |
@@ -87,7 +87,7 @@ User context parameters contains customer information which is used to match web
 
 **[!UICONTROL Properties Parameters]**
 
-The properties parameters allows you to configure additional supported properties.
+Use the properties parameters to configure additional supported properties.
 
 | Input | Description |
 | --- | --- |
