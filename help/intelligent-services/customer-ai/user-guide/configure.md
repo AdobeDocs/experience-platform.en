@@ -195,7 +195,7 @@ You can also choose to include profile attributes from the daily Profile snapsho
 
 >[!WARNING]
 >
-> Be careful not to select a profile attribute that is updated as a result of the prediction goal or highly correlated with the prediction goal. This causes data leakage and over-fitting of the model. An example of such an attribute is `total_purchases_in_the_last_3_months` that predicts purchase conversion.
+> Do not select a profile attribute that has been updated as a result of the prediction goal or is highly-correlated with prediction goal. This results in data leakage and over-fitting of the model. For example, `total_purchases_in_the_last_3_months` is an attribute that predicts purchase conversion..
 
 ### Adding a custom event example {#custom-event}
 
