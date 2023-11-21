@@ -64,7 +64,7 @@ When you [configure a datastream](../../datastreams/overview.md) for Analytics, 
 The sample from this implementation uses two different datastreams:
 
 * A datastream configured for Analytics. This datastream is used for Web SDK interactions.
-* A second datastream without an Analytics configuration. This datastream is used for Server API requests.
+* A second datastream without an Analytics configuration. This datastream is used for Server API requests. You must configure this datastream with the same destination configuration as the datastream that you configured for Analytics.
 
 This way, the server-side request do not register any Analytics events, but the client-side requests do. This leads to Analytics requests being accurately counted.
 
