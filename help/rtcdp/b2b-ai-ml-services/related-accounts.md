@@ -2,6 +2,8 @@
 title: Related accounts in Real-Time CDP B2B Edition
 type: Documentation
 description: An overview and more information about the related accounts feature in Experience Platform Real-Time CDP B2B.
+feature: Get Started, Profiles, B2B
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
 ---
 # Related accounts in Real-Time CDP B2B Edition
