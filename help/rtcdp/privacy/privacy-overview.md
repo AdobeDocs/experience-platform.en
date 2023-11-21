@@ -2,6 +2,7 @@
 keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance;privacy rtcdp;rtcdp privacy
 title: Privacy in Real-Time Customer Data Platform
 description: Adobe Real-Time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
+feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
 ---
 # Privacy in Real-Time Customer Data Platform
