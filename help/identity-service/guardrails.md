@@ -108,9 +108,53 @@ In this example, before the graph on the left can be updated with a new identity
 
 ![An example of the oldest identity being deleted to accommodate the latest identity](./images/graph-limits-v3.png)
 
-#### Example two:
+#### Example two
+
+>[!BEGINTABS]
+
+>[!TAB Before split]
+
+*Diagram notes:*
+
+* `(...)` represents any number of identities linked in the graph.
+
+In this example, two graphs are linked together by a single ECID, thus creating a large graph.
+
+![](./images/guardrails/before-split.png)
+
+>[!TAB During split]
+
+However, due to the limit of 50 identities being exceeded, the large graph gets split into two smaller graphs. The deletion of links starts with the oldest established timestamp (in this case, timestamp=1 and timestamp=2).
+
+![](./images/guardrails/during-split.png)
+
+>[!TAB After split]
+
+The deletion process results into two smaller graphs that are both in accordance of the established guardrails.
+
+![](./images/guardrails/after-split.png)
+
+>[!ENDTABS]
 
 #### Example three
+
+>[!BEGINTABS]
+
+>[!TAB First graph]
+
+By virtue of the deletion logic, some "hub" identities can get deleted. These hub identities 
+
+![](./images/guardrails/hub-and-spoke-start.png)
+
+>[!TAB Graph process]
+
+![](./images/guardrails/hub-and-spoke-process.png)
+
+>[!TAB Graph split]
+
+![](./images/guardrails/hub-and-spoke-result.png)
+
+>[!ENDTABS]
 
 ## Next steps
 
