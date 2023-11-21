@@ -22,13 +22,13 @@ You must be logged into your business account to set up [!DNL TikTok] Pixel usin
 
 ![Create pixel dialogue highlighting [!UICONTROL Partner setup].](../../../images/extensions/server/tiktok/partner-setup.png)
 
-Refer to the [Get Started with Pixel](https://ads.tiktok.com/help/article/get-started-pixel) for more information on how to setup the [!DNL TikTok] pixel.
+See the [Get Started with Pixel](https://ads.tiktok.com/help/article/get-started-pixel) for more information on how to setup the [!DNL TikTok] pixel.
 
 You can generate an access token once the pixel has been successfully created. To do this navigate to the Pixel and select the **[!UICONTROL Settings]** tab. Under Events API, select **[!UICONTROL Generate Access Token]**.
 
 ![The settings tab highlighting the [!UICONTROL Generate Access Token] option.](../../../images/extensions/server/tiktok/generate-access-token.png)
 
-Refer to the [[!DNL TikTok] getting started guide](https://business-api.tiktok.com/portal/docs?id=1739584855420929) for more information on how to setup the pixel code and access token.
+See the [[!DNL TikTok] getting started guide](https://business-api.tiktok.com/portal/docs?id=1739584855420929) for more information on how to setup the pixel code and access token.
 
 ## Install and configure the [!DNL TikTok] web events API extension {#install}
 
