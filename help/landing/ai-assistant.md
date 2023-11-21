@@ -71,7 +71,7 @@ A dedicated pop-up interface for Assistant appears at the center of your screen.
 
 From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
 
-### Example use case: Use Assistant to expedite your schema creation process
+### Example use case: Use Assistant to expedite your schema creation process {#example-use-case}
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ Assistant provides you with a way to validate your answer by viewing its source.
 
 ![Options provided by Assistant after returning an answer.](./images/ai-assistant/options.png)
 
-#### Follow up question
+### Follow up question {#follow-up-question}
 
 +++Select to view an example of a follow up question
 
@@ -103,7 +103,7 @@ You can further learn more about a particular topic by asking a follow up questi
 
 +++
 
-#### Data usage question
+### Data usage question {#data-usage-question}
 
 +++Select to view an example of a data usage question
 
@@ -115,7 +115,7 @@ For responses that involve data usage information, Assistant provides links to e
 
 +++
 
-#### Multi-turn
+### Multi-turn {#multi-turn}
 
 +++Select to view an example of multi-turn
 
@@ -131,7 +131,7 @@ Next, Assistant receives another follow up request. This time, Assistant respond
 
 +++
 
-#### Use autocomplete
+### Use autocomplete {#use-auto-complete}
 
 +++Select to view an example of autocomplete
 
@@ -147,7 +147,7 @@ Next, select the data object that you want to query to complete your question an
 
 +++
 
-## Scope
+## Scope {#scope}
 
 Assistant can answer questions regarding Real-Time CDP and Experience Platform concepts, as well as data usage specific to your user account. Assistant can also infer context based on the UI page that you are in. It can identify:
 
@@ -157,13 +157,13 @@ Assistant can answer questions regarding Real-Time CDP and Experience Platform c
 * The resource (including type and ID) that you are viewing on your screen.
 * Given that you are in the process of a particular Experience Platform or Real-Time CDP workflow, Assistant can deduce your intent.
 
-### Documentation
+### Documentation {#documentation}
 
 Currently, the documentation index covers Adobe Experience Platform (Real-Time CDP and Audiences). The index is updated periodically.
 
 The documentation retrieval model is trained on Experience Platform (Real-Time CDP and Audiences). Questions outside the scope of Adobe Experience Platform such as, questions about other Adobe products like Adobe Target and the Creative Cloud suite cannot be answered.
 
-### Data usage
+### Data usage {#data-usage}
 
 You can also ask Assistant questions about your data usage in the following domains: 
 
@@ -178,7 +178,7 @@ For usage data queries, answers may not reflect the current state of the UI. The
 
 You will need to log into a sandbox to inquire about specific data related to objects like schemas, datasets, attributes, destinations and segments.
 
-### Example data usage questions
+### Example data usage questions {#example-data-usage-questions}
 
 +++Select to see a list of example data usage questions
 
@@ -190,11 +190,11 @@ You will need to log into a sandbox to inquire about specific data related to ob
 
 +++
 
-## Verify the response
+## Verify the response {#verify-the-response}
 
 You can verify the response that the Assistant returns using a number of different ways.
 
-### Citations for documentation
+### Citations for documentation {#citations}
 
 With every response, Assistant provides you with citations that you can refer to for verification or more information.
 
@@ -202,7 +202,7 @@ Select **[!UICONTROL Show source]** for a list of links to documentation that th
 
 ![The links to the source displayed in the Assistant.](./images/ai-assistant/show-sources.png)
 
-## Provide feedback
+## Provide feedback {#feedback}
 
 >[!BEGINSHADEBOX]
 
@@ -240,11 +240,11 @@ Select the flag icon to provide further reports on your experience using the Ass
 
 +++
 
-## Additional information 
+## Additional information {#additional-information}
 
 Refer to this section for additional information on the Assistant for Experience Platform.
 
-### Caveats and limitations
+### Caveats and limitations {#caveats-and-limitations}
 
 The following section outlines current caveats and limitations to considers when using Assistant.
 <!-- 
@@ -312,7 +312,7 @@ The Assistant may give an inaccurate impression of what it can do. It may answer
 | "Do you know **x** language?" | The Assistant currently only supports English, but may answer "yes" due to the underlying model being able to support it. |
 | "Can you do...?" | The Assistant may answer yes, even though it cannot. |
 
-### Tips
+### Tips {#tips}
 
 The following section outlines some tips and workarounds to consider when using Assistant.
 
