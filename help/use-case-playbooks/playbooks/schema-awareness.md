@@ -29,8 +29,6 @@ Use case playbooks are marketing templates that are designed to generate technic
 >
 > The package can only be imported into another development sandbox as the production environment is disabled.
 
-Fill in a job name and job description and select **Next** when you are ready.
-
 ![Import workflow](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
 
 * Step 5: You now land on the package dependency page where you can begin to map schemas. The **Finish** button is disabled until you map each schema.
