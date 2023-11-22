@@ -3,6 +3,8 @@ keywords: profile;real-time customer profile;troubleshooting;guardrails;guidelin
 title: Default Guardrails for Real-Time Customer Data Platform B2B Edition
 type: Documentation
 description: Adobe Experience Platform uses a highly denormalized hybrid data model that differs from the traditional relational data model. This document provides default use and rate limits to help you model your data for optimal system performance using Adobe Real-Time Customer Data Platform B2B Edition.
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
 ---
 # Default Guardrails for Real-Time Customer Data Platform B2B Edition
