@@ -95,7 +95,7 @@ If you would like to preserve your authenticated events against the CRM ID, then
 
 ### Example scenarios
 
-#### Example one
+#### Example one: typical large graph
 
 *Diagram notes:*
 
@@ -108,49 +108,57 @@ In this example, before the graph on the left can be updated with a new identity
 
 ![An example of the oldest identity being deleted to accommodate the latest identity](./images/graph-limits-v3.png)
 
-#### Example two
+#### Example two: "graph split"
 
 >[!BEGINTABS]
 
->[!TAB Before split]
+>[!TAB Incoming event]
 
 *Diagram notes:*
 
 * `(...)` represents any number of identities linked in the graph.
 
-In this example, two graphs are linked together by a single ECID, thus creating a large graph.
+In this example, an ECID is ingested and linked to a large graph at timestamp=51, thereby exceeding the limit of 50 identities.
 
 ![](./images/guardrails/before-split.png)
 
->[!TAB During split]
+>[!TAB Guardrails processing]
 
-However, due to the limit of 50 identities being exceeded, the large graph gets split into two smaller graphs. The deletion of links starts with the oldest established timestamp (in this case, timestamp=1 and timestamp=2).
+As a result, Identity Service deletes the oldest established links (timestamp=1 and timestamp=2) to keep the graph within the limit of 50 identities. 
 
 ![](./images/guardrails/during-split.png)
 
->[!TAB After split]
+>[!TAB Graph output]
 
-The deletion process results into two smaller graphs that are both in accordance of the established guardrails.
+The deletion of links (timestamp=1 and timestamp=2) also leads to the deletion of an ECID node, which then splits the graph into two. Both of which are in adherence to the guardrails.
 
 ![](./images/guardrails/after-split.png)
 
 >[!ENDTABS]
 
-#### Example three
+#### Example three: "hub-and-spoke"
 
 >[!BEGINTABS]
 
->[!TAB First graph]
+>[!TAB Incoming event]
 
-By virtue of the deletion logic, some "hub" identities can get deleted. These hub identities 
+By virtue of the deletion logic, some "hub" identities can also get deleted. These hub identities refer to nodes that serve as hubs for individual identities that would otherwise be unlinked. 
+
+In the example below, several independent nodes are linked to ECID marked at timestamp=1. However, the graph gets linked to two incoming events, as two ECIDs are ingested at timestamp=51 and timestamp=52.
 
 ![](./images/guardrails/hub-and-spoke-start.png)
 
->[!TAB Graph process]
+>[!TAB Guardrails processing]
+
+Identity Service deletes the oldest identity, which in this case is ECID at timestamp=1. This then results in the deletion of the independent nodes that this identity is linked to.
+
+**Note**: An identity must be linked to another identity in order to be represented in a graph.
 
 ![](./images/guardrails/hub-and-spoke-process.png)
 
->[!TAB Graph split]
+>[!TAB Graph output]
+
+The deletion results into two smaller graphs, both in adherence of the guardrails.
 
 ![](./images/guardrails/hub-and-spoke-result.png)
 
