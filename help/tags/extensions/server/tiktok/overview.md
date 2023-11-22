@@ -5,7 +5,7 @@ last-substantial-update: 2023-09-26
 ---
 # [!DNL TikTok] web events API extension overview
 
-The [!DNL TikTok] events API is a secure [Edge Network Server API](../server-api/overview.md) interface that allows you to share information with [!DNL TikTok] directly about user actions on your websites. You can leverage the event forwarding rules to send data from the [!DNL Adobe Experience Platform Edge Network] to [!DNL TikTok] by using the [!DNL TikTok] Web Events API extension.
+The [!DNL TikTok] events API is a secure [Edge Network Server API](/help/server-api/overview.md) interface that allows you to share information with [!DNL TikTok] directly about user actions on your websites. You can leverage the event forwarding rules to send data from the [!DNL Adobe Experience Platform Edge Network] to [!DNL TikTok] by using the [!DNL TikTok] Web Events API extension.
 
 ## [!DNL TikTok] prerequisites {#prerequisites}
 
