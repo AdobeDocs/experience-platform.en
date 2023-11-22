@@ -4,6 +4,7 @@ description: Learn about Identity Optimization Algorithm in Identity Service.
 hide: true
 hidefromtoc: true
 badge: Alpha
+exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 ---
 # Identity optimization algorithm
 

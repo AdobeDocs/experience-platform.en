@@ -118,13 +118,7 @@ curl -X POST \
         "labels": [
           "C1"
         ],
-        "parents": [
-            {
-              "id": "_ddgduleint.schemas.4a95cdba7d560e3bca7d8c5c7b58f00ca543e2bb1e4137d6",
-              "type": "schema",
-              "namespace": "AEP"
-            }
-        ]
+        "parents": []
       } '
 ```
 
@@ -201,7 +195,13 @@ curl -X PUT \
         "labels": [
           "C1"
         ],
-        "parents": [],
+        "parents": [
+          {
+            "id": "_xdm.context.identity-graph-flattened-export",
+            "type": "schema",
+            "namespace": "AEP"
+          }
+        ],
         "optionalLabels": [
           {
             "option": {
