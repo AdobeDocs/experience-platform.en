@@ -1,12 +1,12 @@
 ---
-title: Default Guardrails for Real-Time Customer Profile Data
+title: Default Guardrails for Real-Time Customer Profile Data and segmentation
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Adobe Experience Platform uses a highly denormalized hybrid data model that differs from the traditional relational data model. This document provides default use and rate limits to help you model your Profile data for optimal system performance. 
+description: Learn about performance and system-enforced guardrails for profile data and segmentation to ensure an optimal use of Real-Time CDP functionality.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 ---
-# Default Guardrails for [!DNL Real-Time Customer Profile] data
+# Default Guardrails for [!DNL Real-Time Customer Profile] data and segmentation
 
 Adobe Experience Platform enables you to deliver personalized cross-channel experiences based on behavioral insights and customer attributes in the form of Real-Time Customer Profiles. To support this new approach to profiles, Experience Platform uses a highly denormalized hybrid data model that differs from the traditional relational data model.
 
@@ -102,16 +102,17 @@ The following guardrails refer to data size and provide recommended limits for d
 
 {style="table-layout:auto"}
 
-## Segmentation guardrails
+## Segmentation guardrails {#segmentation-guardrails}
 
 The guardrails outlined in this section refer to the number and nature of audiences an organization can create within Experience Platform, as well as mapping and activating audiences to destinations.
 
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
-| Audiences per sandbox | 4000 | Performance guardrail | An organization can have more than 4000 audiences in total, as long as there are less than 4000 audiences in each individual sandbox. Attempting to create additional audiences may affect system performance.|
-| Edge audiences per sandbox | 150 | Performance guardrail | An organization can have more than 150 edge audiences in total, as long as there are less than 150 edge audiences in each individual sandbox. Attempting to create additional edge audiences may affect system performance. | 
-| Streaming audiences per sandbox | 500 | Performance guardrail | An organization can have more than 500 streaming audiences in total, as long as there are less than 500 streaming audiences in each individual sandbox. Attempting to create additional streaming audiences may affect system performance.|
+| Audiences per sandbox | 4000 | Performance guardrail | An organization can have more than 4000 audiences in total, as long as there are less than 4000 audiences in each individual sandbox. Attempting to create additional audiences may affect system performance. Read more about [creating audiences](/help/segmentation/ui/segment-builder.md) through the segment builder.|
+| Edge audiences per sandbox | 150 | Performance guardrail | An organization can have more than 150 edge audiences in total, as long as there are less than 150 edge audiences in each individual sandbox. Attempting to create additional edge audiences may affect system performance. Read more about [edge audiences](/help/segmentation/ui/edge-segmentation.md).| 
+| Streaming audiences per sandbox | 500 | Performance guardrail | An organization can have more than 500 streaming audiences in total, as long as there are less than 500 streaming audiences in each individual sandbox. Attempting to create additional streaming audiences may affect system performance. Read more about [streaming audiences](/help/segmentation/ui/streaming-segmentation.md).|
 | Batch audiences per sandbox | 4000 | Performance guardrail | An organization can have more than 4000 batch audiences in total, as long as there are less than 4000 batch audiences in each individual sandbox. Attempting to create additional batch audiences may affect system performance.|
+| Account audiences per sandbox | 50 | System-enforced guardrail | You cannot create more than 50 account audiences in a sandbox. After you reach 50 audiences in a sandbox, the **[!UICONTROL Create audience]** control is disabled when trying to create a new account audience. Read more about [account audiences](/help/segmentation/ui/account-audiences.md). |
 
 {style="table-layout:auto"}
 
