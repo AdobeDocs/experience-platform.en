@@ -616,11 +616,11 @@ For more information about creating journeys in [!DNL Adobe Journey Optimizer], 
 
 ### Set up paid media ads in destinations {#paid-media-ads}
 
-Some users might not have purchased your subscription even after you message them about the new program. After waiting for a number of days, (seven in our example use case), you can decide to show paid media ads to those users. 
+Some users might not have purchased your subscription even after you message them about the new program. After waiting for a number of days, (seven in our example use case), you can decide to show paid media ads to those users, to try an nudge them into purchasing your subscription. 
 
 Use the destinations framework in Real-Time CDP for paid media ads. Select one of the many available destinations to display paid media ads to your customers. See an overview of available [advertising](/help/destinations/catalog/advertising/overview.md) and [social](/help/destinations/catalog/social/overview.md) destinations. Browse all available destinations in the destinations catalog. 
 
-As part of the activation process, the destination checks for customer consent. 
+As part of the activation process, the destination also checks for customer consent. 
 
 #### Data required for destinations
 
@@ -630,10 +630,8 @@ Streaming segment export destinations (such as Facebook, Google Customer Match, 
 * `ECID`
 * `mobilePhone.number`
 
-The Abandon Cart Segment is streaming and therefore can be used by the Destination framework for this use case.
+## Next steps {#next-steps}
 
-* Stream/Triggered
-    * [Advertising](/help/destinations/catalog/advertising/overview.md)/[Paid Media & Social](/help/destinations/catalog/social/overview.md)
-    * [Mobile](/help/destinations/catalog/mobile-engagement/overview.md)
-    * [Streaming Destination](/help/destinations/catalog/streaming/http-destination.md)
-    * [Custom Destination SDK](/help/destinations/destination-sdk/overview.md)
+By setting your low frequency and high value users on a journey and by displaying paid media ads to a subset of them, you have hopefully turned some of them from one-time value to lifetime value. 
+
+Next, you can explore other use cases supported by Real-Time CDP, such as intelligently re-engaging customers or displaying personalized content to unauthenticated users on your properties.
