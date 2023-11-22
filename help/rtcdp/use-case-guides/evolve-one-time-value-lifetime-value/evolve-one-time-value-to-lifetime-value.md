@@ -381,7 +381,9 @@ For more information on how to directly compose [Audiences](/help/segmentation/h
 
 For more information on how to build audiences through Platform-derived segment definitions, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
 
-Specifically, you need to create and use two audiences:
+Specifically, you need to create and use two audiences at different steps of the use case, as shown in the image below.
+
+![Audiences highlighted.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){width="1000" zoomable="yes"}
 
 >[!BEGINTABS]
 
@@ -397,43 +399,21 @@ This high value and low frequency audience includes the profiles that you want t
         * Timestamp: less than 3 months before now
 
 
-The following events are used for the re-engagement journey where users viewed products online, and did not add to cart in the next 24 hours, followed by no brand engagement in the 3 days following.
+>[!TAB Paid media audience]
 
-The following fields and conditions are required when setting up this audience:
+This audience is created to include profiles who have spent more than $250 in aggregate in the last 3 months, and have not had a purchase in the last 7 days. 
 
-* `EventType: commerce.productViews`
-    * `Timestamp: <= 24 hours before now`
-* `EventType is not: commerce.procuctListAdds`
-    * `Timestamp: <= 24 hours before now, GAP(>= 3 days)`
-* `EventType: application.launch or web.webpagedetails.pageViews or commerce.purchases`
-    * `Timestamp: <= 2 days before now`
-
-The descriptor for the re-engagement journey appears as:
-
-`Include audience who have at least 1 EventType = ProductViews event THEN have at least 1 Any event where (EventType does not equal commerce.productListAdds) and occurs in last 24 hour(s) then after 3 days do not have any Any event where (EventType = application.launch or web.webpagedetails.pageViews or commerce.purchases) and occurs in last 2 day(s).`
-
->[!TAB Abandoned Cart Journey]
-
-This audience is created to support the classic "Cart Abandonment" scenario. Its purpose is to find customers who added a product to their shopping cart but ultimately did not follow through with a purchase. This audience will help keep not only your brand "top of mind" for your customers but also the products that they left behind without a subsequent purchase.
-
-The following events are used for the abandoned cart journey where users added a product to their cart, but did not complete the purchase or clear their cart in the last 24 hours.
-
-The following fields and conditions are required when setting up this audience:
-
-* `EventType: commerce.productListAdds`
-    * `Timestamp: >= 1 days before now and <= 4 days before now `
-* `EventType: commerce.purchases`
-    * `Timestamp: <= 4 days before now` 
-* `EventType: commerce.productListRemovals`
-    * `Timestamp: <= 4 days before now`
-
-The descriptor for the abandoned cart journey appears as:
-
-`Include EventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
-
->[!TAB Order Confirmation Journey]
-
-This journey does not require any audiences to be created.
+* Description: profiles who have spent more than $250 in aggregate in the last 3 months, and have not had a purchase in the last 7 days. 
+* Fields & Conditions Needed:
+  * EventType: `journey.feedback`
+    * Operand: = true
+  * Event: `experience.journeyOrchestration.stepEvents.nodeName`
+    * Operand: = JourneyStepEventTracker - Subscription Not Purchased
+    * Timestamp: in last 7 days
+  * EventType is not: `commerce.purchases`
+    * Timestamp: <= 7 days before now
+  * Event: SKU
+    * Value: = `subscription`
 
 >[!ENDTABS]
 
