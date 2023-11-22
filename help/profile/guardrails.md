@@ -117,10 +117,6 @@ The guardrails outlined in this section refer to the number and nature of audien
 
 {style="table-layout:auto"}
 
-**[!UICONTROL Publish to a different sandbox]**
-
-**[!UICONTROL View dependencies]**
-
 ## Appendix
 
 This section provides additional details for the limits in this document.
