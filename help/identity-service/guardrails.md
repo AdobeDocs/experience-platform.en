@@ -116,21 +116,22 @@ In this example, before the graph on the left can be updated with a new identity
 
 *Diagram notes:*
 
-* `(...)` represents any number of identities linked in the graph.
+* The following diagram assumes that at `timestamp=50`, 50 identities exist in the identity graph.
+* `(...)` signifies the other identities that are already linked within the graph.
 
-In this example, an ECID is ingested and linked to a large graph at timestamp=51, thereby exceeding the limit of 50 identities.
+In this example, ECID:32110 is ingested and linked to a large graph at `timestamp=51`, thereby exceeding the limit of 50 identities.
 
 ![](./images/guardrails/before-split.png)
 
->[!TAB Guardrails processing]
+>[!TAB Deletion process]
 
-As a result, Identity Service deletes the oldest established links (timestamp=1 and timestamp=2) to keep the graph within the limit of 50 identities. 
+As a result, Identity Service deletes the oldest identity based on timestamp and identity type. In this case, ECID:35577 gets deleted.
 
 ![](./images/guardrails/during-split.png)
 
 >[!TAB Graph output]
 
-The deletion of links (timestamp=1 and timestamp=2) also leads to the deletion of an ECID node, which then splits the graph into two. Both of which are in adherence to the guardrails.
+As a result of deleting ECID:35577, the edges that linked CRM ID:60013 and CRM ID:25212 with the now deleted ECID:35577 also get deleted. This deletion process leads to the graph being split into two smaller graphs.
 
 ![](./images/guardrails/after-split.png)
 
@@ -142,23 +143,29 @@ The deletion of links (timestamp=1 and timestamp=2) also leads to the deletion o
 
 >[!TAB Incoming event]
 
-By virtue of the deletion logic, some "hub" identities can also get deleted. These hub identities refer to nodes that serve as hubs for individual identities that would otherwise be unlinked. 
+*Diagram notes:*
 
-In the example below, several independent nodes are linked to ECID marked at timestamp=1. However, the graph gets linked to two incoming events, as two ECIDs are ingested at timestamp=51 and timestamp=52.
+* The following diagram assumes that at `timestamp=50`, 50 identities exist in the identity graph.
+* `(...)` signifies the other identities that are already linked within the graph.
+
+By virtue of the deletion logic, some "hub" identities can also get deleted. These hub identities refer to nodes that are linked to several individual identities that would otherwise be unlinked. 
+
+In the example below, ECID:21011 is ingested and linked to the graph at `timestamp=51`, thereby exceeding the limit of 50 identities.
 
 ![](./images/guardrails/hub-and-spoke-start.png)
 
->[!TAB Guardrails processing]
+>[!TAB Deletion process]
 
-Identity Service deletes the oldest identity, which in this case is ECID at timestamp=1. This then results in the deletion of the independent nodes that this identity is linked to.
+As a result, Identity Service deletes the oldest identity, which in this case is ECID:35577. The deletion of ECID:35577 also results in the deletion of the following:
 
-**Note**: An identity must be linked to another identity in order to be represented in a graph.
+* The link between CRM ID: 60013 and the now-deleted ECID:35577, thus resulting in a graph split scenario.
+* IDFA: 32110, IDFA: 02383, and the remaining identities represented by `(...)`. These identities get deleted because individually, they are not linked to any other identities and therefore, cannot be represented in a graph.
 
 ![](./images/guardrails/hub-and-spoke-process.png)
 
 >[!TAB Graph output]
 
-The deletion results into two smaller graphs, both in adherence of the guardrails.
+Finally, the deletion process yields two smaller graphs.
 
 ![](./images/guardrails/hub-and-spoke-result.png)
 
