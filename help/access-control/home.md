@@ -79,8 +79,8 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Alerts] | [!UICONTROL Manage Alerts] | Access to read, create, edit, and delete alerts history. |
 | [!DNL Computed Attributes] | [!UICONTROL View Computed attributes] | Read-only access for computed attributes tab, inventory, and details. |
 | [!DNL Computed Attributes] | [!UICONTROL Manage Computed attributes] | Access to read, create, delete drafts, and deactivate computed attributes. |
-| [!DNL Data Hygiene] | [!UICONTROL View Data Hygiene] | Read-only access for data hygiene.|
-| [!DNL Data Hygiene] | [!UICONTROL Manage Data Hygiene] | Access to read, create, edit, and delete data hygiene. |
+| [!DNL Data Lifecycle] | [!UICONTROL View Data Lifecycle] | Read-only access for data lifecycle.|
+| [!DNL Data Lifecycle] | [!UICONTROL Manage Data Lifecycle] | Access to read, create, edit, and delete data lifecycle. |
 | [!DNL Data Modeling] | [!UICONTROL Manage Schemas] | Access to read, create, edit, and delete schemas and related resources. |
 | [!DNL Data Modeling] | [!UICONTROL View Schemas] | Read-only access to schemas and related resources. |
 | [!DNL Data Modeling] | [!UICONTROL Manage Relationships] | Access to read, create, edit, and delete schema relationships. |
