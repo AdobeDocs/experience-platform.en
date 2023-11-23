@@ -43,41 +43,79 @@ The coefficient ranges from 0 (completely dissimilar) to 1 (completely similar).
 
 ## Placeholder title - Establish similarity
 
-The Jaccard similarity measure can be applied to a wide range of data types, including text data, categorical data, and binary data. Calculating the Jaccard similarity can be computationally efficient for large datasets, and makes it suitable for real-time or batch processing.
+This use case requires a similarity measurement between text strings as the measurement will be used later to establish a threshold for filtering. In this example, the products in Set A and Set B represent the words in two documents.  
 
-This workflow requires a similarity measurement between the text strings of the products in Set A and Set B. This measurement will be used later to establish a threshold for filtering. 
+The Jaccard similarity measure can be applied to a wide range of data types, including text data, categorical data, and binary data. It is also suitable for real-time or batch processing as it can be computationally efficient to calculate for large datasets.
 
-Product Set A and Set B contain the test data for this workflow and represent the words in two documents.
+Product Set A and Set B contain the test data for this workflow.
 
 - Product Set A: `{iPhone, iPad, iWatch, iPad Mini}`
 - Product Set B: `{iPhone, iPad, Macbook Pro}`
 
-To calculate the Jaccard similarity between product sets A and B, first find the **intersection** (common elements) of the product sets. In this case, `{iPhone, iPad}`. Next, find the **union** (all unique elements) of the product sets A and B. In this example, `{iPhone, iPad, iWatch, iPad Mini, Macbook Pro}`.
+To calculate the Jaccard similarity between product sets A and B, first find the **intersection** (common elements) of the product sets. In this case, `{iPhone, iPad}`. Next, find the **union** (all unique elements) of both product sets. In this example, `{iPhone, iPad, iWatch, iPad Mini, Macbook Pro}`.
 
-Now, use the Jaccard similarity formula: `J(A,B) = A∪B / A∩B` to calculate the similarity. 
+Finally, use the Jaccard similarity formula: `J(A,B) = A∪B / A∩B` to calculate the similarity. 
 
 J = Jaccard distance
 A = set 1
 B = set 2
 
-The Jaccard similarity between product sets A and B is 0.4. This indicates a moderate degree of similarity between the words used in the two documents. This is the similarity between the two sets that will become the columns in the similarity join. These columns represent individual pieces of information or characteristics associated with the data stored in a table. 
+The Jaccard similarity between product sets A and B is 0.4. This indicates a moderate degree of similarity between the words used in the two documents. This similarity between the two sets will define the columns in the similarity join. These columns represent individual pieces of information, or characteristics, associated with the data stored in a table. 
 
-To more accurately compare the similarities between strings, the pairwise similarity must be computed. Pairwise similarity splits highly dimensional objects into smaller dimensional objects for comparrisson and anylisis. The similarity for each pair of points between each element in Set A with that in Set B provides the foundation for analytical and computational comparisons, relationships, and insights to be drawn from data.
+### Pairwise Jaccard Computation with String Similarity
 
+To more accurately compare the similarities between strings, the pairwise similarity must be computed. Pairwise similarity splits highly dimensional objects into smaller dimensional objects for comparrisson and analysis. To do this, a string of text is broken into smaller parts or units (tokens). They could be individual letters, groups of letters (like syllables), or entire words. The similarity is calculated for each pair of tokens between each element in Set A with each element in Set B. This tokenization provides a foundation for analytical and computational comparisons, relationships, and insights to be drawn from the data.
+
+For the pairwise similarity calculation, this example uses character bi-grams (two character tokens) to compare a similarity match between the text strings of the products in Set A and Set B. A bi-gram is a consecutive sequence of two items or elements in a given sequence or text. You can generalize this to n-grams. 
+
+This example assumes that the case does not matter and that spaces should not be accounted for. According to these criteria, Set A and Set B have the following bi-grams:
+
+Product Set A bi-grams:
+
+- iPhone (5): "ip", "ph", "ho", "on", "ne"
+- iPad (3): "ip", "pa", "ad"
+- iWatch (5): "iw", "wa", "at", "tc", "ch"
+- iPad Mini (7): "ip", "pa", "ad", "dm", "mi", "in", "ni"
+
+Product Set B bi-grams:
+
+- iPhone (5): "ip", "ph", "ho", "on", "ne"
+- iPad (3): "ip", "pa", "ad"
+- Macbook Pro (9): "Ma", "ac", "cb", "bo", "oo", "ok", "kp", "pr", "ro"
+
+Next, calculate the Jaccard similarity coefficient for each pair:
+
+|                   | iPhone (Set B)                               | iPad (Set B)                                | Macbook Pro (Set B)                       |
+|-------------------|----------------------------------------------|---------------------------------------------|-------------------------------------------|
+| iPhone (Set A)    | (Intersection: 5, Union: 5) = 5 / 5 = 1      | (Intersection: 1, Union: 7) =1 / 7 ≈ 0.14   | (Intersection: 0, Union: 14) = 0 / 14 = 0 |
+| iPad (Set A)      | (Intersection: 1, Union: 7) = 1 / 7 ≈ 0.14   | (Intersection: 3, Union: 3) = 3 / 3 = 1     | (Intersection: 0, Union: 12) = 0 / 12 = 0 |
+| iWatch (Set A)    | (Intersection: 0, Union: 8) = 0 / 8 = 0      | (Intersection: 0, Union: 8) = 0 / 8 = 0     | (Intersection: 0, Union: 8) = 0 / 8 =0    |
+| iPad Mini (Set A) | (Intersection: 1, Union: 11) = 1 / 11 ≈ 0.09 | (Intersection: 3, Union: 7) = 3 / 7 ≈ 0.43  | (Intersection: 0, Union: 16) = 0 / 16 = 0 |
 
 <!-- JUNK ON COLUMNS:
 To establsh the similarity of to specific fields or attributes within a structured dataset, this guide uses the Jaccard similarity calculation. 
 
 columns' in this context are the individual fields or attributes within the datasets used for performing similarity computations, tokenization, and filtering operations. Each column holds specific information or results generated at different stages of the data processing pipeline described in the document. -->
 
-
-### Pairwise Jaccard Computation with String Similarity
-
-Performs pairwise Jaccard similarity computations between elements in two sets by tokenizing and comparing the elements.
+<!-- Performs pairwise Jaccard similarity computations between elements in two sets by tokenizing and comparing the elements. -->
 
 ## Creating Test Data in SQL
 
-Demonstrates SQL code to manually create test tables using SQL's CREATE TABLE statement.
+To manually create a test tables for the product sets, use SQL's CREATE TABLE statement.
+
+```sql
+CREATE TABLE featurevector1 AS SELECT *
+FROM (
+    SELECT 'iPad' AS ProductName
+    UNION ALL
+    SELECT 'iPhone'
+    UNION ALL
+    SELECT 'iWatch'
+     UNION ALL
+    SELECT 'iPad Mini'
+);
+SELECT * FROM featurevector1;
+```
 
 ## Tokenization and Data Transformation using SQL
 
@@ -85,6 +123,14 @@ This section illustrates the process of tokenization by breaking down strings in
 
 Overlapping bigrams are generated for effective tokenization.
 Lambda functions are explained and used to create n-grams efficiently.
+
+### Deduplication
+
+### Whitespace removal
+
+### Convert top lowercase
+
+### Extract tokens using SQL
 
 ### Explore Solutions Using Data Distiller Lambda Functions
 
