@@ -10,6 +10,12 @@ Streaming upserts in [!DNL Data Prep] allows you to send partial row updates to 
 
 By streaming upserts, you can retain the format of your data while translating that data to [!DNL Real-Time Customer Profile] PATCH requests during ingestion. Based on the inputs you provide, [!DNL Data Prep] allows you to send a single API payload and translate the data to both [!DNL Real-Time Customer Profile] PATCH and [!DNL Identity Service] CREATE requests. 
 
+<!-- We no longer want to support ingestion on XDM Entity Update messages (with JSON patch operations) for profile updates via the DCS inlet. This is to announce the deprecation of this path for external customers. The recommended approach is to ingest raw data into the DCS inlet, specify the required data mappings to transfer the data into XDM compliant message for profile updates. -->
+
+>[!IMPORTANT]
+>
+>
+
 This document provides information on how to stream upserts in [!DNL Data Prep].
 
 ## Getting started
