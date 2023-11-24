@@ -41,7 +41,7 @@ Defined as the ratio of the size of the intersection of sets to the size of thei
 Popular due to its simplicity, effectiveness, and applicability to various data types.
 The coefficient ranges from 0 (completely dissimilar) to 1 (completely similar). -->
 
-## Placeholder title - Establish similarity
+## Placeholder title - Establish similarity {#establish-similarity}
 
 This use case requires a similarity measurement between text strings as the measurement will be used later to establish a threshold for filtering. In this example, the products in Set A and Set B represent the words in two documents.  
 
@@ -62,9 +62,9 @@ B = set 2
 
 The Jaccard similarity between product sets A and B is 0.4. This indicates a moderate degree of similarity between the words used in the two documents. This similarity between the two sets will define the columns in the similarity join. These columns represent individual pieces of information, or characteristics, associated with the data stored in a table. 
 
-### Pairwise Jaccard Computation with String Similarity
+### Pairwise Jaccard Computation with String Similarity {#pairwise-similarity}
 
-To more accurately compare the similarities between strings, the pairwise similarity must be computed. Pairwise similarity splits highly dimensional objects into smaller dimensional objects for comparrisson and analysis. To do this, a string of text is broken into smaller parts or units (tokens). They could be individual letters, groups of letters (like syllables), or entire words. The similarity is calculated for each pair of tokens between each element in Set A with each element in Set B. This tokenization provides a foundation for analytical and computational comparisons, relationships, and insights to be drawn from the data.
+To more accurately compare the similarities between strings, the pairwise similarity must be computed. Pairwise similarity splits highly dimensional objects into smaller dimensional objects for comparison and analysis. To do this, a string of text is broken into smaller parts or units (tokens). They could be individual letters, groups of letters (like syllables), or entire words. The similarity is calculated for each pair of tokens between each element in Set A with each element in Set B. This tokenization provides a foundation for analytical and computational comparisons, relationships, and insights to be drawn from the data.
 
 For the pairwise similarity calculation, this example uses character bi-grams (two character tokens) to compare a similarity match between the text strings of the products in Set A and Set B. A bi-gram is a consecutive sequence of two items or elements in a given sequence or text. You can generalize this to n-grams. 
 
@@ -99,11 +99,11 @@ columns' in this context are the individual fields or attributes within the data
 
 <!-- Performs pairwise Jaccard similarity computations between elements in two sets by tokenizing and comparing the elements. -->
 
-## Creating Test Data in SQL
+## Creating test data in SQL 
 
 To manually create a test tables for the product sets, use SQL's CREATE TABLE statement.
 
-```sql
+```SQL {line-numbers="true"}
 CREATE TABLE featurevector1 AS SELECT *
 FROM (
     SELECT 'iPad' AS ProductName
@@ -117,22 +117,178 @@ FROM (
 SELECT * FROM featurevector1;
 ```
 
-## Tokenization and Data Transformation using SQL
+The following descriptions provide a breakdown of the SQL code block above:
 
-This section illustrates the process of tokenization by breaking down strings into 2-grams (and higher-order n-grams) and various transformations like deduplication, whitespace removal, lowercase conversion, and extracting tokens using SQL functions like `REGEXP_EXTRACT_ALL`.
+- Line 1: `CREATE TEMP TABLE featurevector1 AS`: This statement creates a temporary table named featurevector1. Temporary tables are typically only accessible within the current session and are automatically dropped at the end of the session.
+- Line 1 and 2: `SELECT * FROM (...)`: This part of the code is a subquery used to generate the data that will be inserted into the featurevector1 table.
+Inside the subquery, there are multiple SELECT statements combined using UNION ALL. Each SELECT statement generates one row of data with the specified values for the 'ProductName' column.
+- Line 3: `SELECT 'iPad' AS ProductName`: This generates a row with the value 'iPad' in the 'ProductName' column.
+- Line 5: `SELECT 'iPhone'`: This generates a row with the value 'iPhone' in the 'ProductName' column.
 
-Overlapping bigrams are generated for effective tokenization.
-Lambda functions are explained and used to create n-grams efficiently.
+The SQL statement creates a table as seen below:
 
-### Deduplication
+|   | `ProductName` |
+|---|---------------|
+| 1 | iPad          |
+| 2 |iPhone         |
+| 3 | iWatch        |
+| 4 |iPad Mini      |
 
-### Whitespace removal
+To create the second feature vector, use the following SQL statement:
 
-### Convert top lowercase
+```SQL
+CREATE TABLE featurevector2 AS SELECT *
+FROM (
+    SELECT 'iPad' AS ProductName
+    UNION ALL
+    SELECT 'iPhone'
+    UNION ALL
+    SELECT 'Macbook Pro'
+);
+SELECT * FROM featurevector2;
+```
 
-### Extract tokens using SQL
+<!-- Alternative title: ## Tokenize data using SQL -->
+## Data transformations {#data-transformation}
+
+In this example, several actions must be performed to accurately compare the sets. Firstly, any whitespaces are removed from the feature vectors as it is assumed that they do not contribute to the similarity measure. Then, any duplicates present in the feature vector are removed as they waste computational processing. Next, tokens of 2 characters (bi-grams) are extracted from the feature vectors. In this example, they are assumed to be overlapping. 
+
+>[!NOTE]
+>
+>For illustration purposes, the processed columns will be added next to the feature vector for each of the steps. 
+
+The following sections illustrate the prerequisite data transformations like deduplication, whitespace removal, and lowercase conversion before starting the process of tokenization.
+
+### Deduplication {#deduplication}
+
+Next, use the `DISTINCT` clause to remove duplicates. There are no duplicates in this example, however it is an important step to improve the accuracy of any comparison. The necessary SQL is displayed below:
+
+```SQL
+SELECT DISTINCT(ProductName) AS featurevector1_distinct FROM featurevector1
+SELECT DISTINCT(ProductName) AS featurevector2_distinct FROM featurevector2
+```
+
+### Whitespace removal {#whitespace-removal}
+
+In the following SQL statement, the whitespaces are removed from the feature vectors. The `replace(ProductName, ' ', '') AS featurevector1_nospaces` part of the query takes the `ProductName` column from the `featurevector1` table and uses the `replace()` function. The `REPLACE` function replaces all occurrences of a space (' ') with an empty string (''). This effectively removes all spaces from the `ProductName` values. The result is aliased as `featurevector1_nospaces`.
+
+```SQL
+SELECT DISTINCT(ProductName) AS featurevector1_distinct, replace(ProductName, ' ', '') AS featurevector1_nospaces FROM featurevector1
+```
+
+The results are shown in the table below:
+
+|   | featurevector1_distinct  | featurevector1_nospaces |
+|---|---|---|
+| 1 | iPad Mini  | iPadMini |
+| 2 | iPad  | iPad |
+| 3 | iWatch  | iWatch |
+| 4 | iPhone  | iPhone |
+
+The SQL statement and its results on the second feature vector are seen below:
+
++++Select to expand
+
+```SQL
+SELECT DISTINCT(ProductName) AS featurevector2_distinct, replace(ProductName, ' ', '') AS featurevector2_nospaces FROM featurevector2
+```
+
+The results appear as below:
+
+|   | featurevector2_distinct  | featurevector2_nospaces |
+|---|---|---|
+| 1 | iPad  | iPad |
+| 2 | Macbook Pro  | MacbookPro |
+| 3 | iPhone  | iPhone |
+
++++
+
+### Convert to lowercase {#lowercase-conversion}
+
+Next, the SQL is improved to convert the product names to lowercase as well as removing whitespace. The lower function (`lower(...)`) is applied to the result of the `replace()` function. The lower function converts all characters in the modified `ProductName` values to lowercase. This ensures that the values are in lowercase regardless of their original case.
+
+```SQL
+SELECT DISTINCT(ProductName) AS featurevector1_distinct, lower(replace(ProductName, ' ', '')) AS featurevector1_transform FROM featurevector1;
+```
+
+The result of this statement is:
+
+|   | featurevector1_distinct  | featurevector1_transform |
+|---|---|---|
+| 1 | iPad Mini  | ipadmini |
+| 2 | iPad  | iPad |
+| 3 | iWatch  | iWatch |
+| 4 | iPhone  | iPhone |
+
+The SQL statement and its results on the second feature vector are seen below:
+
++++Select to expand
+
+```SQL
+SELECT DISTINCT(ProductName) AS featurevector2_distinct, lower(replace(ProductName, ' ', '')) AS featurevector2_transform FROM featurevector2
+```
+
+The results appear as below:
+
+|   | featurevector2_distinct  | featurevector2_transform |
+|---|---|---|
+| 1 | iPad  | ipad |
+| 2 | Macbook Pro  | macbookpro |
+| 3 | iPhone  | iphone |
+
++++
+
+### Extract tokens using SQL {#tokenization}
+
+The next step is tokenization, or text splitting. Tokenization is the process of taking text and breaking it into individual terms. Typically this involves splitting sentences into words. In this example, strings are broken down into bi-grams (and higher-order n-grams) by extracting tokens using SQL functions like `regexp_extract_all`. Overlapping bi-grams must be generated for effective tokenization.
+
+The SQL is further improved to use `regexp_extract_all`. `regexp_extract_all(lower(replace(ProductName, ' ', '')), '.{2}', 0) AS tokens:` This part of the query further processes the modified `ProductName` values created in the previous step. It uses the `regexp_extract_all()` function to extract all non-overlapping substrings of one to two characters from the modified and lowercase `ProductName` values. The `.{2}` regular expression pattern matches substrings of two characters in length. The `regexp_extract_all(..., '.{2}', 0)` part of the function, then extracts all matching substrings from the input text.
+
+```SQL
+SELECT DISTINCT(ProductName) AS featurevector1_distinct, lower(replace(ProductName, ' ', '')) AS featurevector1_transform, 
+regexp_extract_all(lower(replace(ProductName, ' ', '')) , '.{2}', 0) AS tokens
+FROM featurevector1;
+```
+
+The results are shown in the table below:
+
+|   | featurevector1_distinct  | featurevector1_transform | tokens     |
+|---|--------------------------|--------------|------------------------|
+| 1 | iPad Mini                | ipadmini     | {"ip","ad","mi","ni"}  |
+| 2 | iPad                     | iPad         | {"ip","ad"}            |
+| 3 | iWatch                   | iWatch       | {"iw","at", "ch"}      |
+| 4 | iPhone                   | iPhone       | {"ip","ho","ne"}       |
+
+However, the SQL still needs to create overlapping tokens. For example, the "iPad" string above is missing the "pa" token. To fix this, shift the lookahead operator (using `substring`) by one step and generate the bi-grams.
+
+Similar to the previous step, `regexp_extract_all(lower(replace(substring(ProductName, 2), ' ', '')), '.{2}', 0):` extracts two-character sequences from the modified product name, but starts from the second character using the `substring` method to create overlapping tokens. Next, in lines 3-7 (`array_union(...) AS tokens`), the `array_union()` function combines the arrays of two-character sequences obtained by the two regular expression extractions. This ensures that the result contains unique tokens from both non-overlapping and overlapping sequences.
+
+```SQL {line-numbers="true"}
+SELECT DISTINCT(ProductName) AS featurevector1_distinct, 
+       lower(replace(ProductName, ' ', '')) AS featurevector1_transform, 
+       array_union(
+           regexp_extract_all(lower(replace(ProductName, ' ', '')), '.{2}', 0),
+           regexp_extract_all(lower(replace(substring(ProductName, 2), ' ', '')), '.{2}', 0)
+       ) AS tokens
+FROM featurevector1;
+```
+
+The results are shown in the table below:
+
+|   | featurevector1_distinct  | featurevector1_transform | tokens     |
+|---|--------------------------|--------------|------------------------|
+| 1 | iPad Mini                | ipadmini     | {"ip","ad","mi","ni","pa","dm","in"}  |
+| 2 | iPad                     | iPad         | {"ip","ad","pa"}            |
+| 3 | iWatch                   | iWatch       | {"iw","at","ch","wa","tc"}  |
+| 4 | iPhone                   | iPhone       | {"ip","ho","ne","ph","on"}  |
+
+However, the use of `substring` as a solution to the problem has limitations. If you were to make tokens from the text based on tri-grams (three characters), you would need to use two `substrings` to lookahead twice to get the required shifts. To make 10-grams, you would need nine `substring` expressions. This would make the code bloat and becomes an untenable approach. The use of plain regular expressions is unsuitable. A new approach is needed. 
+
+<!-- Up to here -->
 
 ### Explore Solutions Using Data Distiller Lambda Functions
+
+<!-- Lambda functions are explained and used to create n-grams efficiently. -->
 
 Introduces lambda functions in the context of Data Distiller, demonstrating their use for creating n-grams and iterating over sequences of characters.
 
