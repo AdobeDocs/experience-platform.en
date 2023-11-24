@@ -284,10 +284,66 @@ The results are shown in the table below:
 
 However, the use of `substring` as a solution to the problem has limitations. If you were to make tokens from the text based on tri-grams (three characters), you would need to use two `substrings` to lookahead twice to get the required shifts. To make 10-grams, you would need nine `substring` expressions. This would make the code bloat and becomes an untenable approach. The use of plain regular expressions is unsuitable. A new approach is needed. 
 
+### Adjust for the length of product name {#length-adjustment}
+
+The SQl can be improved with the sequence and length functions. In the following example, `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 3)` generates a sequence of numbers from one to the length of the modified product name minus three. For example, if the modified product name is "ipadmini" with a character length of eight, it generates numbers from one to five (eight-three).
+
+The statement below extracts unique product names and then breaks down each name into sequences of characters (tokens) of four character lengths, excluding spaces, and presenting them as two columns. One column shows the unique product names and another column shows their respective generated tokens.
+
+```SQL
+SELECT
+   DISTINCT(ProductName) AS featurevector1_distinct,
+  transform(
+    sequence(1, length(lower(replace(ProductName, ' ', ''))) - 3),
+    i -> substring(lower(replace(ProductName, ' ', '')), i, 4)
+  ) AS tokens
+FROM
+  featurevector1;
+```
+
+The results are shown in the table below:
+
+|   | featurevector1_distinct  | tokens                 |
+|---|--------------------------|------------------------|
+| 1 | iPad Mini                | {"ipad","padm","admi","dmin","mini"}  |
+| 2 | iPad                     | {"ipad"}            |
+| 3 | iWatch                   | {"iwat","watc","atch"}  |
+| 4 | iPhone                   | {"ipho","phon","hone"}  |
+
+### Ensure set token length
+
+Additional conditions can be added to the statement to ensure that the generated sequences are of a specific length. The following SQL statement expands on the token generation logic by making the `transform` function is more complex. The statement uses the `filter` function within `transform` to ensure the generated sequences are of six character length. It handles the cases where that is not possible by assigning NULL values to those positions.
+
+```SQL
+SELECT
+  DISTINCT(ProductName) AS featurevector1_distinct,
+  transform(
+    filter(
+      sequence(1, length(lower(replace(ProductName, ' ', ''))) - 5),
+      i -> i + 5 <= length(lower(replace(ProductName, ' ', '')))
+    ),
+    i -> CASE WHEN length(substring(lower(replace(ProductName, ' ', '')), i, 6)) = 6
+               THEN substring(lower(replace(ProductName, ' ', '')), i, 6)
+               ELSE NULL
+          END
+  ) AS tokens
+FROM
+  featurevector1;
+```
+
+The results are shown in the table below:
+
+|   | featurevector1_distinct  | tokens                 |
+|---|--------------------------|------------------------|
+| 1 | iPad Mini                | {"ipadmi","padmin","admini"}  |
+| 2 | iPad                     | {null}      |
+| 3 | iWatch                   | {"iwatch"}  |
+| 4 | iPhone                   | {"iphone"}  |
+
+
 <!-- Up to here -->
 
 ### Explore Solutions Using Data Distiller Lambda Functions
-
 <!-- Lambda functions are explained and used to create n-grams efficiently. -->
 
 Introduces lambda functions in the context of Data Distiller, demonstrating their use for creating n-grams and iterating over sequences of characters.
