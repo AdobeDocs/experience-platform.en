@@ -1,15 +1,15 @@
 ---
-title: Create a source connection and dataflow for Oracle NetSuite Activities using the Flow Service API
+title: Create a source connection and dataflow for Oracle NetSuite Entities using the Flow Service API
 description: Learn how to create a source connection and dataflow to bring Oracle NetSuite events data to Experience Platform using the Flow Service API.
 badge: Beta
 ---
-# Create a source connection and dataflow for [!DNL Oracle NetSuite Activities] using the Flow Service API
+# Create a source connection and dataflow for [!DNL Oracle NetSuite Entities] using the Flow Service API
 
 >[!NOTE]
 >
->The [!DNL Oracle NetSuite Activities] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
+>The [!DNL Oracle NetSuite Entities] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-The following tutorial walks you through the steps to create a [!DNL Oracle NetSuite Activities] source connection to bring [!DNL Oracle NetSuite] events data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a [!DNL Oracle NetSuite Entities] source connection to bring [!DNL Oracle NetSuite] events data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 
@@ -18,11 +18,11 @@ This guide requires a working understanding of the following components of Exper
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Oracle NetSuite Activities] using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Oracle NetSuite Entities] using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
-In order to connect [!DNL Oracle NetSuite Activities] to Platform, you must provide values for the following connection properties:
+In order to connect [!DNL Oracle NetSuite Entities] to Platform, you must provide values for the following connection properties:
 
 | Credential | Description | Example |
 | --- | --- | --- |
@@ -30,18 +30,18 @@ In order to connect [!DNL Oracle NetSuite Activities] to Platform, you must prov
 | Client secret | The Client Secret value when you create the integration record. The process to create an interation record can be found [here](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). | `5c98.....1b46`<br>The value is a 64 characters string. |
 | authorizationTestUrl | Your [!DNL NetSuite] authorization test URL. This is optional. | <code>https://<NETSUITE_ACCOUNT_ID>.app.netsuite.com<br>/app/login/oauth2/authorize.nl?response_type=code<br>&redirect_uri=https%3A%2F%2Fapi.github.com<br>&scope=rest_webservices<br>&state=ykv2XLx1BpT5Q0F3MRPHb94j<br>&client_id=<CLIENT_ID></code> |
 | Access token | The Access token value is generated at the end of [Step Two](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) of the [OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) tutorial. Access tokens expire are valid only for 60 minutes. | `eyJr......f4V0`<br> the value is a 1024 characters string formatted as a JSON Web Token (JWT). |
-| Refresh token | The Refresh token value value is generated at the end of [Step Two](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) of the [OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) tutorial. Refresh tokens have a longer validity and are valid for 7 days. Refresh tokens are used by the [!DNL Oracle NetSuite Activities] source to internally generate new Access tokens. | `eyJr......dmxM`<br> the value is a 1024 characters string formatted as a JSON Web Token (JWT). |
+| Refresh token | The Refresh token value value is generated at the end of [Step Two](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) of the [OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) tutorial. Refresh tokens have a longer validity and are valid for 7 days. Refresh tokens are used by the [!DNL Oracle NetSuite Entities] source to internally generate new Access tokens. | `eyJr......dmxM`<br> the value is a 1024 characters string formatted as a JSON Web Token (JWT). |
 | accessTokenUrl | The [!DNL NetSuite] Access Token URL. This takes the form shown alongside. | <code>https://<NETSUITE_ACCOUNT_ID>.suitetalk.api.netsuite.com<br>/services/rest/auth/oauth2/v1/token</code> |
 
-## Connect [!DNL Oracle NetSuite Activities] to Platform using the [!DNL Flow Service] API
+## Connect [!DNL Oracle NetSuite Entities] to Platform using the [!DNL Flow Service] API
 
-The following outlines the steps you need to make in order to authenticate your [!DNL Oracle NetSuite Activities] source, create a source connection, and create a dataflow to bring your events data to Experience Platform.
+The following outlines the steps you need to make in order to authenticate your [!DNL Oracle NetSuite Entities] source, create a source connection, and create a dataflow to bring your customer and contact data to Experience Platform.
 
 ### Create a base connection {#base-connection}
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Oracle NetSuite Activities] authentication credentials as part of the request body.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Oracle NetSuite Entities] authentication credentials as part of the request body.
 
 **API format**
 
@@ -51,7 +51,7 @@ POST /connections
 
 **Request**
 
-The following request creates a base connection for [!DNL Oracle NetSuite Activities]:
+The following request creates a base connection for [!DNL Oracle NetSuite Entities]:
 
 ```shell
 curl -X POST \
@@ -62,8 +62,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Oracle NeSuite Activities base connection",
-      "description": "Authenticated base connection for Oracle NetSuite Activities",
+      "name": "Oracle NetSuite Entities base connection",
+      "description": "Authenticated base connection for Oracle NetSuite Entities",
       "connectionSpec": {
           "id": "fdf850b4-5a8d-4a5a-9ce8-4caef9abb2a8",
           "version": "1.0"
@@ -123,20 +123,362 @@ When performing GET requests to explore your source's file structure and content
 | `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. For this source the value would be `json`. |
 | `fileType=json` | The file type of the file you want to bring to Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
-| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire string in base64. <br> The value is empty for [!DNL Oracle NetSuite Activities].</li></ul>|
+| `{SOURCE_PARAMS}` | Defines parameters for the source file you want to bring to Platform. To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire string in base64. <br> [!DNL Oracle NetSuite Entities] supports both customer and contact data retrieval. Depending on which object type you are leveraging, pass one of the below : <ul><li>`customer` : Retrieve specific customer data, including details such as customer names, addresses, and key identifiers.</li><li>`contact` : Retrieve contact names, emails, phone numbers, and any custom contact-related fields associated with customers.</li></ul>|
+
+>[!BEGINTABS]
+
+>[!TAB Customer]
+
+For [!DNL Oracle NetSuite Entities], to retrieve contact data the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"customer"}`. When encoded in base64, it equates to `eyAib2JqZWN0X3R5cGUiOiAiY3VzdG9tZXIifQ%3D%3D` as shown below.
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/f5421911-6f6c-41c7-aafa-5d9d2ce51535/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=e30%3D' \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/db7a6f4b-3f5d-487c-9a87-83e84df5074c/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyAib2JqZWN0X3R5cGUiOiAiY3VzdG9tZXIifQ%3D%3D' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
+>[!TAB Contact]
+
+For [!DNL Oracle NetSuite Entities], to retrieve contact data the value for `{SOURCE_PARAMS}` is passed as `{"object_type":"contact"}`. When encoded in base64, it equates to `eyAib2JqZWN0X3R5cGUiOiAiY29udGFjdCJ9` as shown below.
+
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/db7a6f4b-3f5d-487c-9a87-83e84df5074c/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyAib2JqZWN0X3R5cGUiOiAiY29udGFjdCJ9' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+>[!ENDTABS]
+
 **Response**
 
-A successful response returns a JSON structure like the following: 
+Similarly, depending on which object type you are leveraging the response received is as below:
+
+>[!NOTE]
+>
+>Some records have been truncated to allow for a better presentation.
+
+>[!BEGINTABS]
+
+>[!TAB Customer]
+
+A successful response returns a structure as below. 
+
+```json
+    "format": "hierarchical",
+    "schema": {
+        "type": "object",
+        "properties": {
+            "totalResults": {
+                "type": "integer",
+                "minimum": -9007199254740992,
+                "maximum": 9007199254740991
+            },
+            "offset": {
+                "type": "integer",
+                "minimum": -9007199254740992,
+                "maximum": 9007199254740991
+            },
+            "count": {
+                "type": "integer",
+                "minimum": -9007199254740992,
+                "maximum": 9007199254740991
+            },
+            "hasMore": {
+                "type": "boolean"
+            },
+            "links": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "rel": {
+                            "type": "string"
+                        },
+                        "href": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "items": {
+                "type": "object",
+                "properties": {
+                    "isinactive": {
+                        "type": "string"
+                    },
+                    "weblead": {
+                        "type": "string"
+                    },
+                    "emailtransactions": {
+                        "type": "string"
+                    },
+                    "entityid": {
+                        "type": "string"
+                    },
+                    "dateclosed": {
+                        "type": "string"
+                    },
+                    "entitynumber": {
+                        "type": "string"
+                    },
+                    "emailpreference": {
+                        "type": "string"
+                    },
+                    "creditholdoverride": {
+                        "type": "string"
+                    },
+                    "entitystatus": {
+                        "type": "string"
+                    },
+                    "giveaccess": {
+                        "type": "string"
+                    },
+                    "isbudgetapproved": {
+                        "type": "string"
+                    },
+                    "receivablesaccount": {
+                        "type": "string"
+                    },
+                    "shippingcarrier": {
+                        "type": "string"
+                    },
+                    "isperson": {
+                        "type": "string"
+                    },
+                    "balancesearch": {
+                        "type": "string"
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {}
+                        }
+                    },
+                    "currency": {
+                        "type": "string"
+                    },
+                    "overduebalancesearch": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "entitytitle": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "displaysymbol": {
+                        "type": "string"
+                    },
+                    "searchstage": {
+                        "type": "string"
+                    },
+                    "lastmodifieddate": {
+                        "type": "string"
+                    },
+                    "oncredithold": {
+                        "type": "string"
+                    },
+                    "probability": {
+                        "type": "string"
+                    },
+                    "faxtransactions": {
+                        "type": "string"
+                    },
+                    "altname": {
+                        "type": "string"
+                    },
+                    "datecreated": {
+                        "type": "string"
+                    },
+                    "printtransactions": {
+                        "type": "string"
+                    },
+                    "alcoholrecipienttype": {
+                        "type": "string"
+                    },
+                    "overridecurrencyformat": {
+                        "type": "string"
+                    },
+                    "companyname": {
+                        "type": "string"
+                    },
+                    "unbilledorderssearch": {
+                        "type": "string"
+                    },
+                    "shipcomplete": {
+                        "type": "string"
+                    },
+                    "symbolplacement": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    },
+    "data": [
+        {
+            "totalResults": 10,
+            "offset": 0,
+            "count": 10,
+            "hasMore": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://<NETSUITE_ACCOUNT_ID>.suitetalk.api.netsuite.com/services/rest/query/v1/suiteql"
+                }
+            ],
+            "items": {
+                "alcoholrecipienttype": "CONSUMER",
+                "altname": "Company 1615554322",
+                "balancesearch": "0",
+                "companyname": "Company 1615554322",
+                "creditholdoverride": "AUTO",
+                "currency": "1",
+                "dateclosed": "2022-12-15",
+                "datecreated": "2022-12-15",
+                "displaysymbol": "£",
+                "email": "customer3@example.com",
+                "emailpreference": "DEFAULT",
+                "emailtransactions": "F",
+                "entityid": "4",
+                "entitynumber": "4",
+                "entitystatus": "13",
+                "entitytitle": "4 Company 1615554322",
+                "faxtransactions": "F",
+                "giveaccess": "F",
+                "id": "404",
+                "isbudgetapproved": "F",
+                "isinactive": "F",
+                "isperson": "F",
+                "lastmodifieddate": "2022-12-15",
+                "oncredithold": "F",
+                "overduebalancesearch": "0",
+                "overridecurrencyformat": "F",
+                "printtransactions": "F",
+                "probability": "1",
+                "receivablesaccount": "-10",
+                "searchstage": "Customer",
+                "shipcomplete": "F",
+                "shippingcarrier": "nonups",
+                "symbolplacement": "1",
+                "unbilledorderssearch": "0",
+                "weblead": "F"
+            }
+        },
+        {
+            "totalResults": 10,
+            "offset": 0,
+            "count": 10,
+            "hasMore": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://<NETSUITE_ACCOUNT_ID>.suitetalk.api.netsuite.com/services/rest/query/v1/suiteql"
+                }
+            ],
+            "items": {
+                "alcoholrecipienttype": "CONSUMER",
+                "altname": "Company 1615554322",
+                "balancesearch": "0",
+                "companyname": "Company 1615554322",
+                "creditholdoverride": "AUTO",
+                "currency": "1",
+                "dateclosed": "2023-01-19",
+                "datecreated": "2023-01-19",
+                "displaysymbol": "£",
+                "email": "customer3@example.com",
+                "emailpreference": "DEFAULT",
+                "emailtransactions": "F",
+                "entityid": "6",
+                "entitynumber": "6",
+                "entitystatus": "13",
+                "entitytitle": "6 Company 1615554322",
+                "faxtransactions": "F",
+                "giveaccess": "F",
+                "id": "605",
+                "isbudgetapproved": "F",
+                "isinactive": "F",
+                "isperson": "F",
+                "lastmodifieddate": "2023-01-19",
+                "oncredithold": "F",
+                "overduebalancesearch": "0",
+                "overridecurrencyformat": "F",
+                "printtransactions": "F",
+                "probability": "1",
+                "receivablesaccount": "-10",
+                "searchstage": "Customer",
+                "shipcomplete": "F",
+                "shippingcarrier": "nonups",
+                "symbolplacement": "1",
+                "unbilledorderssearch": "0",
+                "weblead": "F"
+            }
+        },
+        {
+            "totalResults": 10,
+            "offset": 0,
+            "count": 10,
+            "hasMore": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "href": "https://<NETSUITE_ACCOUNT_ID>.suitetalk.api.netsuite.com/services/rest/query/v1/suiteql"
+                }
+            ],
+            "items": {
+                "alcoholrecipienttype": "CONSUMER",
+                "altname": "Company 1615554322",
+                "balancesearch": "0",
+                "companyname": "Company 1615554322",
+                "creditholdoverride": "AUTO",
+                "currency": "1",
+                "dateclosed": "2023-02-01",
+                "datecreated": "2023-02-01",
+                "displaysymbol": "£",
+                "email": "customer3@example.com",
+                "emailpreference": "DEFAULT",
+                "emailtransactions": "F",
+                "entityid": "9",
+                "entitynumber": "9",
+                "entitystatus": "13",
+                "entitytitle": "9 Company 1615554322",
+                "faxtransactions": "F",
+                "giveaccess": "F",
+                "id": "710",
+                "isbudgetapproved": "F",
+                "isinactive": "F",
+                "isperson": "F",
+                "lastmodifieddate": "2023-02-01",
+                "oncredithold": "F",
+                "overduebalancesearch": "0",
+                "overridecurrencyformat": "F",
+                "printtransactions": "F",
+                "probability": "1",
+                "receivablesaccount": "-10",
+                "searchstage": "Customer",
+                "shipcomplete": "F",
+                "shippingcarrier": "nonups",
+                "symbolplacement": "1",
+                "unbilledorderssearch": "0",
+                "weblead": "F"
+            }
+        },
+    ]
+},
+```
+
+>[!TAB Contact]
 
 ```json
 {
@@ -179,34 +521,16 @@ A successful response returns a JSON structure like the following:
             "items": {
                 "type": "object",
                 "properties": {
-                    "owner": {
+                    "isinactive": {
                         "type": "string"
                     },
-                    "createddate": {
+                    "isprivate": {
+                        "type": "string"
+                    },
+                    "phone": {
                         "type": "string"
                     },
                     "lastmodifieddate": {
-                        "type": "string"
-                    },
-                    "accesslevel": {
-                        "type": "string"
-                    },
-                    "alldayevent": {
-                        "type": "string"
-                    },
-                    "message": {
-                        "type": "string"
-                    },
-                    "startdate": {
-                        "type": "string"
-                    },
-                    "title": {
-                        "type": "string"
-                    },
-                    "organizer": {
-                        "type": "string"
-                    },
-                    "response": {
                         "type": "string"
                     },
                     "links": {
@@ -216,16 +540,19 @@ A successful response returns a JSON structure like the following:
                             "properties": {}
                         }
                     },
-                    "location": {
+                    "company": {
                         "type": "string"
                     },
-                    "timedevent": {
+                    "entityid": {
+                        "type": "string"
+                    },
+                    "datecreated": {
                         "type": "string"
                     },
                     "id": {
                         "type": "string"
                     },
-                    "status": {
+                    "entitytitle": {
                         "type": "string"
                     }
                 }
@@ -234,9 +561,9 @@ A successful response returns a JSON structure like the following:
     },
     "data": [
         {
-            "totalResults": 13,
+            "totalResults": 10,
             "offset": 0,
-            "count": 13,
+            "count": 10,
             "hasMore": false,
             "links": [
                 {
@@ -245,26 +572,21 @@ A successful response returns a JSON structure like the following:
                 }
             ],
             "items": {
-                "accesslevel": "BUSY",
-                "alldayevent": "F",
-                "createddate": "2022-12-15",
-                "id": "5",
-                "lastmodifieddate": "2022-12-15",
-                "location": "Caffe West",
-                "message": "Bring Monthly Results",
-                "organizer": "-5",
-                "owner": "-5",
-                "response": "ACCEPTED",
-                "startdate": "2022-12-15",
-                "status": "CONFIRMED",
-                "timedevent": "T",
-                "title": "Meeting with Tom"
+                "company": "504",
+                "datecreated": "2023-09-06",
+                "entityid": "John Doe2",
+                "entitytitle": "John Doe2",
+                "id": "1210",
+                "isinactive": "F",
+                "isprivate": "F",
+                "lastmodifieddate": "2023-09-06",
+                "phone": "+9199999999998"
             }
         },
         {
-            "totalResults": 13,
+            "totalResults": 10,
             "offset": 0,
-            "count": 13,
+            "count": 10,
             "hasMore": false,
             "links": [
                 {
@@ -273,26 +595,21 @@ A successful response returns a JSON structure like the following:
                 }
             ],
             "items": {
-                "accesslevel": "BUSY",
-                "alldayevent": "F",
-                "createddate": "2023-02-01",
-                "id": "103",
-                "lastmodifieddate": "2023-02-01",
-                "location": "Caffe West",
-                "message": "Bring Monthly Results",
-                "organizer": "-5",
-                "owner": "-5",
-                "response": "ACCEPTED",
-                "startdate": "2022-12-15",
-                "status": "CONFIRMED",
-                "timedevent": "T",
-                "title": "Meeting with Tom"
+                "company": "504",
+                "datecreated": "2023-09-06",
+                "entityid": "John Doe4",
+                "entitytitle": "John Doe4",
+                "id": "1212",
+                "isinactive": "F",
+                "isprivate": "F",
+                "lastmodifieddate": "2023-09-06",
+                "phone": "+9199999999996"
             }
         },
         {
-            "totalResults": 13,
+            "totalResults": 10,
             "offset": 0,
-            "count": 13,
+            "count": 10,
             "hasMore": false,
             "links": [
                 {
@@ -301,25 +618,22 @@ A successful response returns a JSON structure like the following:
                 }
             ],
             "items": {
-                "accesslevel": "BUSY",
-                "alldayevent": "F",
-                "createddate": "2023-11-09",
-                "id": "204",
-                "lastmodifieddate": "2023-11-09",
-                "location": "Caffe West",
-                "message": "Bring Monthly Results",
-                "organizer": "-5",
-                "owner": "-5",
-                "response": "ACCEPTED",
-                "startdate": "2023-12-15",
-                "status": "CONFIRMED",
-                "timedevent": "T",
-                "title": "Meeting with Tom"
+                "company": "504",
+                "datecreated": "2023-09-06",
+                "entityid": "John Doe6",
+                "entitytitle": "John Doe6",
+                "id": "1214",
+                "isinactive": "F",
+                "isprivate": "F",
+                "lastmodifieddate": "2023-09-06",
+                "phone": "+9199999999994"
             }
         },
     ]
 }
 ```
+
+>[!ENDTABS]
 
 ### Create a source connection {#source-connection}
 
@@ -333,7 +647,13 @@ POST /sourceConnections
 
 **Request**
 
-The following request creates a source connection for [!DNL Oracle NetSuite Activities].
+The following request creates a source connection for [!DNL Oracle NetSuite Entities]:
+
+>[!BEGINTABS]
+
+>[!TAB Customer]
+
+When retrieving customer data the `object_type` property value should be `customer`.
 
 ```shell
 curl -X POST \
@@ -344,8 +664,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Oracle NetSuite Activities Source Connection",
-      "description": "Oracle NetSuite Activities Source Connection",
+      "name": "Oracle NetSuite Entities Source Connection",
+      "description": "Oracle NetSuite Entities Source Connection",
       "baseConnectionId": "60c81023-99b4-4aae-9c31-472397576dd2",
       "connectionSpec": {
           "id": "fdf850b4-5a8d-4a5a-9ce8-4caef9abb2a8",
@@ -355,17 +675,52 @@ curl -X POST \
           "format": "json"
       },
       "params": {
+            "object_type": "customer"        
       }
   }'
 ```
+
+>[!TAB Contact]
+
+When retrieving contact data the `object_type` property value should be `contact`.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Oracle NetSuite Entities Source Connection",
+      "description": "Oracle NetSuite Entities Source Connection",
+      "baseConnectionId": "60c81023-99b4-4aae-9c31-472397576dd2",
+      "connectionSpec": {
+          "id": "fdf850b4-5a8d-4a5a-9ce8-4caef9abb2a8",
+          "version": "1.0"
+      },
+      "data": {
+          "format": "json"
+      },
+      "params": {
+            "object_type": "contact"        
+      }
+  }'
+```
+
+>[!ENDTABS]
 
 | Property | Description |
 | --- | --- |
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can include to provide more information on your source connection. |
-| `baseConnectionId` | The base connection ID of [!DNL Oracle NetSuite Activities]. This ID was generated in an earlier step. |
+| `baseConnectionId` | The base connection ID of [!DNL Oracle NetSuite Entities]. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
-| `data.format` | The format of the [!DNL Oracle NetSuite Activities] data that you want to ingest. Currently, the only supported data format is `json`. |
+| `data.format` | The format of the [!DNL Oracle NetSuite Entities] data that you want to ingest. Currently, the only supported data format is `json`. |
+| `object_type` | [!DNL Oracle NetSuite Entities] supports both customer and contact retrieval. Depending on which entity you want, pass one of the below : <ul><li>`customer` : Retrieve specific customer data, including details such as customer names, addresses, and key identifiers.</li><li>`contact` : Retrieve contact names, emails, phone numbers, and any custom contact-related fields associated with customers.</li></ul> |
+
+**Response**
 
 A successful response returns the unique identifier (`id`) of the newly created source connection. This ID is required in a later step to create a dataflow.
 
@@ -404,7 +759,7 @@ POST /targetConnections
 
 **Request**
 
-The following request creates a target connection for [!DNL Oracle NetSuite Activities]:
+The following request creates a target connection for [!DNL Oracle NetSuite Entities]:
 
 ```shell
 curl -X POST \
@@ -415,8 +770,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Oracle NetSuite Activities Target Connection Generic Rest",
-      "description": "Oracle NetSuite Activities Target Connection Generic Rest",
+      "name": "Oracle NetSuite Entities Target Connection Generic Rest",
+      "description": " Oracle NetSuite Entities Connection Generic Rest",
       "connectionSpec": {
           "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
           "version": "1.0"
@@ -439,7 +794,7 @@ curl -X POST \
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
 | `connectionSpec.id` | The connection specification ID that corresponds to data lake. This fixed ID is: `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
-| `data.format` | The format of the [!DNL Oracle NetSuite Activities] data that you want to ingest. |
+| `data.format` | The format of the [!DNL Oracle NetSuite Entities] data that you want to ingest. |
 | `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 
 **Response**
@@ -465,7 +820,7 @@ POST /conversion/mappingSets
 
 **Request**
 
-The following request creates a mapping for [!DNL DNL NetSuite Activities]
+The following request creates a mapping for [!DNL DNL NetSuite Entities]
 
 ```shell
 curl -X POST \
@@ -482,40 +837,34 @@ curl -X POST \
               "contentType": "application/vnd.adobe.xed-full+json;version=1"
           }
       },
-      "mappings": [
+    "mappings": [
         {
             "sourceType": "ATTRIBUTE",
             "source": "items.id",
-            "destination": "_extconndev.NSA_ID"
+            "destination": "_extconndev.NS_ID"
         },
         {
             "sourceType": "ATTRIBUTE",
-            "source": "items.title",
-            "destination": "_extconndev.NSA_title"
+            "source": "items.entitytitle",
+            "destination": "_extconndev.NS_entity_title"
         },
         {
             "sourceType": "ATTRIBUTE",
-            "source": "items.createddate",
-            "destination": "_extconndev.NSA_createddate"
+            "source": "items.datecreated",
+            "destination": "_extconndev.NS_datecreated"
         },
         {
             "sourceType": "ATTRIBUTE",
-            "source": "items.location",
-            "destination": "_extconndev.NSA_location"
+            "destination": "_extconndev.NS_email",
+            "source": "items.email"
         },
         {
             "sourceType": "ATTRIBUTE",
             "source": "items.lastmodifieddate",
-            "destination": "_extconndev.NSA_lastmodifieddate"
+            "destination": "_extconndev.NS_lastmodified"
         }
-      ],
-    "outputSchema": {
-        "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/325fd5394ba421246b05c0a3c2cd5efeec2131058a63d473",
-            "contentType": "application/vnd.adobe.xed-full+json;version=1"
-        }
-    }
-  }'
+    ]
+}'
 ```
 
 | Property | Description |
@@ -542,7 +891,7 @@ A successful response returns details of the newly created mapping including its
 
 ### Create a flow {#flow}
 
-The last step towards bringing data from [!DNL Oracle NetSuite Activities] to Platform is to create a dataflow. By now, you have the following required values prepared:
+The last step towards bringing data from [!DNL Oracle NetSuite Entities] to Platform is to create a dataflow. By now, you have the following required values prepared:
 
 * [Source connection ID](#source-connection)
 * [Target connection ID](#target-connection)
@@ -566,8 +915,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-    "name": "Oracle NetSuite Activities connector Flow Generic Rest",
-    "description": "Oracle NetSuite Activities connector Description Flow Generic Rest",
+    "name": "Oracle NetSuite Entities connector Flow Generic Rest",
+    "description": "Oracle NetSuite Entities connector Description Flow Generic Rest",
     "flowSpec": {
         "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
         "version": "1.0"
