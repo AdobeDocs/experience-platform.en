@@ -1,48 +1,31 @@
 ---
-title: Retrieve Similar Records Based on a Similarity Metric
-description: Learn how to identify and retrieve similar or related records from one or more datasets based on a similarity metric.
+title: Retrieve Similar Records
+description: Learn how to identify and retrieve similar or related records from one or more datasets based on a similarity metric and similarity threshold. This workflow can highlight meaningful relationships or overlaps between disparate datasets.
 ---
-# Compute similarity between sets of data
+# Retrieve similar records
 
-You can solve several common use cases through the use of Data Distiller Lambda functions to identify and retrieve similar or related records from one or more datasets. This methodology provides solutions to: data deduplication, record linkage, recommendation systems, information retrieval, and text analytics among others.
+Solve several common use cases by using Data Distiller Lambda functions to identify and retrieve similar or related records from one or more datasets. You can use this guide to identify products from different datasets that have a significant similarity in their characteristics or attributes. The methodology in this document provides solutions to: data deduplication, record linkage, recommendation systems, information retrieval, and text analytics among others.
 
-<!-- 
-performing a similarity join operation using SQL
-steps involved in computing similarity between sets of data, 
-    Uses tokenization, Jaccard similarity computation, and Jaccard similarity computation
- -->
-
-The document describes the process of implementing a similarity join then uses Data Distiller Lambda functions to compute the similarity between sets of data and filter them based on selected attributes. This guide provides SQL code snippets and explanations for each step of the process. The workflow implements similarity joins using the Jaccard similarity measure and tokenization using Data Distiller Lambda functions. These methods are then used to identify and retrieve similar or related records from one or more datasets based on a similarity metric. The key sections of the process include: [tokenization using Lambda functions](#tokenization), the [cross join and Jaccard similarity calculation](#cross-join-calculation), and the [threshold-based filtering](#threshold-filtering).
+The document describes the process of implementing a similarity join then uses Data Distiller Lambda functions to compute the similarity between sets of data and filter them based on selected attributes. SQL code snippets and explanations are provided for each step of the process. The workflow implements similarity joins using the Jaccard similarity measure and tokenization using Data Distiller Lambda functions. These methods are then used to identify and retrieve similar or related records from one or more datasets based on a similarity metric. The key sections of the process include: [tokenization using Lambda functions](#data-transformation), the [cross-join of unique elements](#cross-join-unique-elements), the [Jaccard similarity calculation](#compute-the-jaccard-similarity-measure), and the [threshold-based filtering](#similarity-threshold-filter).
 
 ## Prerequisites
 
-Before continuing with this document you should be familiar with the following concepts:
+Before continuing with this document, you should be familiar with the following concepts:
 
 - A **similarity join** is an operation that identifies and retrieves pairs of records from one or more tables based on a measure of similarity between the records. The key requirements for a similarity join are as follows:
-    - **Similarity metric**: A similarity join relies on a predefined similarity metric or measure, such as Jaccard similarity, cosine similarity, edit distance, and so on. The metric depends on the nature of the data and the use case. This metric quantifies how similar or dissimilar two records are.
+    - **Similarity metric**: A similarity join relies on a predefined similarity metric or measure. Such metrics include: the Jaccard similarity, cosine similarity, edit distance, and so on. The metric depends on the nature of the data and the use case. This metric quantifies how similar or dissimilar two records are.
     - **Threshold**: A similarity threshold is used to determine when the two records are considered similar enough to be included in the join result. Records with a similarity score above the threshold are considered matches.
-- The **Jaccard similarity** index, or the Jaccard similarity measurement, is a statistic used to gauge the similarity and diversity of sample sets. It is is defined as the size of the intersection divided by the size of the union of the sample sets. The Jaccard similarity measurement ranges from 0 to 1. A Jaccard similarity of 0 indicates no similarity between the sets (completely dissimilar), and a Jaccard similarity of 1 indicates that the sets are identical (completely similar).
+- The **Jaccard similarity** index, or the Jaccard similarity measurement, is a statistic used to gauge the similarity and diversity of sample sets. It is defined as the size of the intersection divided by the size of the union of the sample sets. The Jaccard similarity measurement ranges from zero to one. A Jaccard similarity of zero indicates no similarity between the sets, and a Jaccard similarity of one indicates that the sets are identical.
 ![A venn diagram to illustrate the Jaccard similarity measurement.](../images/use-cases/jaccard-similarity.png)
-- **Lambda functions** in Data Distiller are anonymous, inline functions that can be defined and used within SQL statements. They are frequently used in conjunction with higher-order functions due to their ability to create concise, on-the-fly functions that can be passed around as data. Lambda functions are often employed with higher-order functions like `transform`, `filter`, and `array_sort`. Lambda functions are especially useful in situations where defining a full function is unnecessary, and a brief, one-time function can be used inline.
+- **Lambda functions** in Data Distiller are anonymous, inline functions that can be defined and used within SQL statements. They are frequently used with higher-order functions due to their ability to create concise, on-the-fly functions that can be passed around as data. Lambda functions are often employed with higher-order functions like `transform`, `filter`, and `array_sort`. Lambda functions are especially useful in situations where defining a full function is unnecessary, and a brief, one-time function can be used inline.
 
 ## Getting started
 
-The Data Distiller SKU is required to perform the Lambda functions on your Adobe Experience Platform data. If you do not have the Data Distiller SKU please contact your Adobe customer service representative for more information.
+The Data Distiller SKU is required to perform the Lambda functions on your Adobe Experience Platform data. If you do not have the Data Distiller SKU, contact your Adobe customer service representative for more information.
 
-<!-- **Similarity Join Requirements**:
+## Establish similarity {#establish-similarity}
 
-- Similarity Metric: A predefined metric like Jaccard similarity, cosine similarity, or edit distance.
-- Threshold: A similarity threshold to determine when two records are considered similar.
-
-**Jaccard Similarity Measure**:
-
-Defined as the ratio of the size of the intersection of sets to the size of their union.
-Popular due to its simplicity, effectiveness, and applicability to various data types.
-The coefficient ranges from 0 (completely dissimilar) to 1 (completely similar). -->
-
-## Placeholder title - Establish similarity {#establish-similarity}
-
-This use case requires a similarity measurement between text strings as the measurement will be used later to establish a threshold for filtering. In this example, the products in Set A and Set B represent the words in two documents.  
+This use case requires a similarity measure between text strings that can be used later to establish a threshold for filtering. In this example, the products in Set A and Set B represent the words in two documents.  
 
 The Jaccard similarity measure can be applied to a wide range of data types, including text data, categorical data, and binary data. It is also suitable for real-time or batch processing as it can be computationally efficient to calculate for large datasets.
 
@@ -59,7 +42,7 @@ J = Jaccard distance
 A = set 1
 B = set 2
 
-The Jaccard similarity between product sets A and B is 0.4. This indicates a moderate degree of similarity between the words used in the two documents. This similarity between the two sets will define the columns in the similarity join. These columns represent individual pieces of information, or characteristics, associated with the data stored in a table. 
+The Jaccard similarity between product sets A and B is 0.4. This indicates a moderate degree of similarity between the words used in the two documents. This similarity between the two sets defines the columns in the similarity join. These columns represent individual pieces of information, or characteristics, associated with the data stored in a table. 
 
 ### Pairwise Jaccard Computation with String Similarity {#pairwise-similarity}
 
@@ -98,9 +81,9 @@ columns' in this context are the individual fields or attributes within the data
 
 <!-- Performs pairwise Jaccard similarity computations between elements in two sets by tokenizing and comparing the elements. -->
 
-## Creating test data in SQL 
+## Create the test data with SQL {#create-test-data}
 
-To manually create a test tables for the product sets, use SQL's CREATE TABLE statement.
+To manually create a test table for the product sets, use the SQL CREATE TABLE statement.
 
 ```SQL {line-numbers="true"}
 CREATE TABLE featurevector1 AS SELECT *
@@ -118,11 +101,11 @@ SELECT * FROM featurevector1;
 
 The following descriptions provide a breakdown of the SQL code block above:
 
-- Line 1: `CREATE TEMP TABLE featurevector1 AS`: This statement creates a temporary table named featurevector1. Temporary tables are typically only accessible within the current session and are automatically dropped at the end of the session.
-- Line 1 and 2: `SELECT * FROM (...)`: This part of the code is a subquery used to generate the data that will be inserted into the featurevector1 table.
-Inside the subquery, there are multiple SELECT statements combined using UNION ALL. Each SELECT statement generates one row of data with the specified values for the 'ProductName' column.
-- Line 3: `SELECT 'iPad' AS ProductName`: This generates a row with the value 'iPad' in the 'ProductName' column.
-- Line 5: `SELECT 'iPhone'`: This generates a row with the value 'iPhone' in the 'ProductName' column.
+- Line 1: `CREATE TEMP TABLE featurevector1 AS`: This statement creates a temporary table named `featurevector1`. Temporary tables are typically only accessible within the current session and are automatically dropped at the end of the session.
+- Line 1 and 2: `SELECT * FROM (...)`: This part of the code is a subquery used to generate the data that is inserted into the `featurevector1` table.
+Inside the subquery, multiple `SELECT` statements are combined using the `UNION ALL` command. Each `SELECT` statement generates one row of data with the specified values for the `ProductName` column.
+- Line 3: `SELECT 'iPad' AS ProductName`: This generates a row with the value `iPad` in the `ProductName` column.
+- Line 5: `SELECT 'iPhone'`: This generates a row with the value `iPhone` in the `ProductName` column.
 
 The SQL statement creates a table as seen below:
 
@@ -132,6 +115,8 @@ The SQL statement creates a table as seen below:
 | 2 |iPhone         |
 | 3 | iWatch        |
 | 4 |iPad Mini      |
+
+{style="table-layout:auto"}
 
 To create the second feature vector, use the following SQL statement:
 
@@ -151,11 +136,11 @@ SELECT * FROM featurevector2;
 
 ## Data transformations {#data-transformation}
 
-In this example, several actions must be performed to accurately compare the sets. Firstly, any whitespaces are removed from the feature vectors as it is assumed that they do not contribute to the similarity measure. Then, any duplicates present in the feature vector are removed as they waste computational processing. Next, tokens of 2 characters (bi-grams) are extracted from the feature vectors. In this example, they are assumed to be overlapping. 
+In this example, several actions must be performed to accurately compare the sets. First, any whitespaces are removed from the feature vectors as it is assumed that they do not contribute to the similarity measure. Then, any duplicates present in the feature vector are removed as they waste computational processing. Next, tokens of two characters (bi-grams) are extracted from the feature vectors. In this example, they are assumed to be overlapping. 
 
 >[!NOTE]
 >
->For illustration purposes, the processed columns will be added next to the feature vector for each of the steps. 
+>For illustration purposes, the processed columns are added next to the feature vector for each of the steps. 
 
 The following sections illustrate the prerequisite data transformations like deduplication, whitespace removal, and lowercase conversion before starting the process of tokenization.
 
@@ -185,6 +170,8 @@ The results are shown in the table below:
 | 3 | iWatch  | iWatch |
 | 4 | iPhone  | iPhone |
 
+{style="table-layout:auto"}
+
 The SQL statement and its results on the second feature vector are seen below:
 
 +++Select to expand
@@ -201,11 +188,13 @@ The results appear as below:
 | 2 | Macbook Pro  | MacbookPro |
 | 3 | iPhone  | iPhone |
 
+{style="table-layout:auto"}
+
 +++
 
 ### Convert to lowercase {#lowercase-conversion}
 
-Next, the SQL is improved to convert the product names to lowercase as well as removing whitespace. The lower function (`lower(...)`) is applied to the result of the `replace()` function. The lower function converts all characters in the modified `ProductName` values to lowercase. This ensures that the values are in lowercase regardless of their original case.
+Next, the SQL is improved to convert the product names to lowercase and remove any whitespaces. The lower function (`lower(...)`) is applied to the result of the `replace()` function. The lower function converts all characters in the modified `ProductName` values to lowercase. This ensures that the values are in lowercase regardless of their original case.
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, lower(replace(ProductName, ' ', '')) AS featurevector1_transform FROM featurevector1;
@@ -219,6 +208,8 @@ The result of this statement is:
 | 2 | iPad  | iPad |
 | 3 | iWatch  | iWatch |
 | 4 | iPhone  | iPhone |
+
+{style="table-layout:auto"}
 
 The SQL statement and its results on the second feature vector are seen below:
 
@@ -236,13 +227,15 @@ The results appear as below:
 | 2 | Macbook Pro  | macbookpro |
 | 3 | iPhone  | iphone |
 
+{style="table-layout:auto"}
+
 +++
 
 ### Extract tokens using SQL {#tokenization}
 
 The next step is tokenization, or text splitting. Tokenization is the process of taking text and breaking it into individual terms. Typically this involves splitting sentences into words. In this example, strings are broken down into bi-grams (and higher-order n-grams) by extracting tokens using SQL functions like `regexp_extract_all`. Overlapping bi-grams must be generated for effective tokenization.
 
-The SQL is further improved to use `regexp_extract_all`. `regexp_extract_all(lower(replace(ProductName, ' ', '')), '.{2}', 0) AS tokens:` This part of the query further processes the modified `ProductName` values created in the previous step. It uses the `regexp_extract_all()` function to extract all non-overlapping substrings of one to two characters from the modified and lowercase `ProductName` values. The `.{2}` regular expression pattern matches substrings of two characters in length. The `regexp_extract_all(..., '.{2}', 0)` part of the function, then extracts all matching substrings from the input text.
+The SQL is further improved to use `regexp_extract_all`. `regexp_extract_all(lower(replace(ProductName, ' ', '')), '.{2}', 0) AS tokens:` This part of the query further processes the modified `ProductName` values created in the previous step. It uses the `regexp_extract_all()` function to extract all non-overlapping substrings of one to two characters from the modified and lowercase `ProductName` values. The `.{2}` regular expression pattern matches substrings of two characters in length. The `regexp_extract_all(..., '.{2}', 0)` part of the function then extracts all matching substrings from the input text.
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector1_distinct, lower(replace(ProductName, ' ', '')) AS featurevector1_transform, 
@@ -261,9 +254,11 @@ The results are shown in the table below:
 | 3 | iWatch                   | iWatch       | {"iw","at", "ch"}      |
 | 4 | iPhone                   | iPhone       | {"ip","ho","ne"}       |
 
+{style="table-layout:auto"}
+
 +++
 
-However, the SQL still needs to create overlapping tokens. For example, the "iPad" string above is missing the "pa" token. To fix this, shift the lookahead operator (using `substring`) by one step and generate the bi-grams.
+To further improve accuracy, the SQL must be used to create overlapping tokens. For example, the "iPad" string above is missing the "pa" token. To fix this, shift the lookahead operator (using `substring`) by one step and generate the bi-grams.
 
 Similar to the previous step, `regexp_extract_all(lower(replace(substring(ProductName, 2), ' ', '')), '.{2}', 0):` extracts two-character sequences from the modified product name, but starts from the second character using the `substring` method to create overlapping tokens. Next, in lines 3-7 (`array_union(...) AS tokens`), the `array_union()` function combines the arrays of two-character sequences obtained by the two regular expression extractions. This ensures that the result contains unique tokens from both non-overlapping and overlapping sequences.
 
@@ -288,15 +283,17 @@ The results are shown in the table below:
 | 3 | iWatch                   | iWatch       | {"iw","at","ch","wa","tc"}  |
 | 4 | iPhone                   | iPhone       | {"ip","ho","ne","ph","on"}  |
 
+{style="table-layout:auto"}
+
 +++
 
-However, the use of `substring` as a solution to the problem has limitations. If you were to make tokens from the text based on tri-grams (three characters), you would need to use two `substrings` to lookahead twice to get the required shifts. To make 10-grams, you would need nine `substring` expressions. This would make the code bloat and becomes an untenable approach. The use of plain regular expressions is unsuitable. A new approach is needed. 
+However, the use of `substring` as a solution to the problem has limitations. If you were to make tokens from the text based on tri-grams (three characters), it would require the use of two `substrings` to lookahead twice to get the required shifts. To make 10-grams, you would need nine `substring` expressions. This would make the code bloat and it becomes untenable. The use of plain regular expressions is unsuitable. A new approach is needed. 
 
 ### Adjust for the length of product name {#length-adjustment}
 
 The SQl can be improved with the sequence and length functions. In the following example, `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 3)` generates a sequence of numbers from one to the length of the modified product name minus three. For example, if the modified product name is "ipadmini" with a character length of eight, it generates numbers from one to five (eight-three).
 
-The statement below extracts unique product names and then breaks down each name into sequences of characters (tokens) of four character lengths, excluding spaces, and presenting them as two columns. One column shows the unique product names and another column shows their respective generated tokens.
+The statement below extracts unique product names and then breaks down each name into sequences of characters (tokens) of four character lengths, excluding spaces, and presenting them as two columns. One column shows the unique product names and the other column shows their generated tokens.
 
 ```SQL
 SELECT
@@ -320,11 +317,13 @@ The results are shown in the table below:
 | 3 | iWatch                   | {"iwat","watc","atch"}  |
 | 4 | iPhone                   | {"ipho","phon","hone"}  |
 
+{style="table-layout:auto"}
+
 +++
 
 ### Ensure set token length
 
-Additional conditions can be added to the statement to ensure that the generated sequences are of a specific length. The following SQL statement expands on the token generation logic by making the `transform` function is more complex. The statement uses the `filter` function within `transform` to ensure the generated sequences are of six character length. It handles the cases where that is not possible by assigning NULL values to those positions.
+Additional conditions can be added to the statement to ensure that the generated sequences are of a specific length. The following SQL statement expands on the token generation logic by making the `transform` function is more complex. The statement uses the `filter` function within `transform` to ensure that the generated sequences are of six character length. It handles the cases where that is not possible by assigning NULL values to those positions.
 
 ```SQL
 SELECT
@@ -354,17 +353,19 @@ The results are shown in the table below:
 | 3 | iWatch                   | {"iwatch"}  |
 | 4 | iPhone                   | {"iphone"}  |
 
+{style="table-layout:auto"}
+
 +++
 
-### Explore solutions using Data Distiller Lambda functions
+## Explore solutions using Data Distiller Lambda functions {#lambda-function-solutions}
 
-Lambda functions are extremely powerful constructs that allow you to implement "programming" like syntax in Data Distiller. They can be used to iterate a function over multiple values in an array.
+Lambda functions are powerful constructs that allow you to implement "programming" like syntax in Data Distiller. They can be used to iterate a function over multiple values in an array.
 
 In the context of Data Distiller, lambda functions are ideal for creating n-grams and iterating over sequences of characters.
 
 The `reduce` function, especially when used within sequences generated by `transform`, provides a way to derive cumulative values or aggregates, which can be pivotal in various analytical and planning processes.
 
-For example, in the SQl statement below, the `reduce()` function aggregates elements in an array using a custom aggregator. It simulates a for loop to **create the cumulative sums of all the integers** from one to five.  `1, 1+2, 1+2+3, 1+2+3+4, 1+2+3+4`.
+For example, in the SQl statement below, the `reduce()` function aggregates elements in an array using a custom aggregator. It simulates a for loop to **create the cumulative sums of all the integers** from one to five. `1, 1+2, 1+2+3, 1+2+3+4, 1+2+3+4`.
 
 ```SQL {line-numbers="true"}
 SELECT transform(
@@ -390,7 +391,7 @@ To summarize, this lambda function takes two parameters (`acc` and `y`) and defi
 
 The output of this statement is a single column (`sum_result`) that contains the cumulative sums of numbers from one to five.
 
-#### The value of Lambda functions
+### The value of Lambda functions {#value-of-lambda-functions}
 
 This section analyses a slimmed-down version of a tri-gram SQL statement to better understand the value of Lambda functions in Data Distiller to create n-grams more efficiently.
 
@@ -408,19 +409,19 @@ FROM
 
 The following is an analysis of the SQL statement:
 
-- Line 2: `transform` as mentioned earlier will apply a lambda function to each integer in the sequence.
+- Line 2: `transform` applies a lambda function to each integer in the sequence.
 - Line 3: `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 2)` generates a sequence of integers from `1` to the length of the modified product name minus two. 
     - `length(lower(replace(ProductName, ' ', '')))` calculates the length of the `ProductName` after making it lowercase and removing spaces.
-    - `- 2` subtracts two from the length to ensure that the sequence generates valid starting positions for 3-character substrings. Subtracting 2 ensures that you have enough characters following each starting position to extract a 3-character substring. Note that the substring function will operate like a lookahead operator.
+    - `- 2` subtracts two from the length to ensure that the sequence generates valid starting positions for 3-character substrings. Subtracting 2 ensures that you have enough characters following each starting position to extract a 3-character substring. The substring function here operates like a lookahead operator.
 - Line 4: `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` is a lambda function that operates on each integer `i` in the generated sequence.
     - The `substring(...)` function extracts a 3-character substring from the `ProductName` column.
-    - Before extracting the substring `lower(replace(ProductName, ' ', ''))` converts the `ProductName` to lowercase and removes spaces to ensure consistency.
+    - Before extracting the substring, `lower(replace(ProductName, ' ', ''))` converts the `ProductName` to lowercase and removes spaces to ensure consistency.
 
 The output is a list of substrings of three characters in length, extracted from the modified product names, based on the positions specified in the sequence.
 
-#### Filter the results
+## Filter the results {#filter-results}
 
-The `filter` function, in conjunction with subsequent data transformations, allows for a more refined and precise extraction of relevant information from text data. This enables you to derive insights, improve data quality, and facilitate better decision-making processes.
+The `filter` function, with subsequent [data transformations](#data-transformation), allows for a more refined and precise extraction of relevant information from text data. This enables you to derive insights, improve data quality, and facilitate better decision-making processes.
 
 The `filter` function in the following SQL statement serves to refine and limit the sequence of positions within the string from which substrings are extracted using the subsequent transform function.
 
@@ -450,7 +451,7 @@ The `CASE` statement is used to conditionally include or exclude substrings base
 >
 >You can use the [parameterized templates](../ui/parameterized-queries.md) feature to reuse and abstract logic within your queries. For example, when you build general-purpose utility functions (such as the one displayed above for tokenizing strings), you can use Data Distiller parameterized templates where the number of characters would be a parameter.
 
-## Compute the Cross Join of Unique Elements Across Two Feature Vectors
+## Compute the cross-join of unique elements across two feature vectors {#cross-join-unique-elements}
 
 Identifying the differences or discrepancies between the two datasets based on a specific transformation of the data is a common process to maintain data accuracy, improve data quality, and to ensure consistency across datasets. 
 
@@ -464,7 +465,7 @@ SELECT lower(replace(ProductName, ' ', '')) FROM featurevector1;
 
 >[!TIP]
 >
->In addition to `EXCEPT`, you could also use `UNION` and `INTERSECT` depending on your use case. You should also experiment with `ALL` or `DISTINCT` clauses to see the difference between including all values and returning only the unique values for the specified column(s).
+>In addition to `EXCEPT`, you could also use `UNION` and `INTERSECT` depending on your use case. Also, you can experiment with `ALL` or `DISTINCT` clauses to see the difference between including all values and returning only the unique values for the specified columns.
 
 The results are shown in the table below:
 
@@ -473,6 +474,8 @@ The results are shown in the table below:
 |   | lower(replace(ProductName, ' ', ''))  |
 |---|---------------------------------------|
 | 1 | macbookpro                            |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -515,9 +518,11 @@ The results are shown in the table below:
 | 3 | iwatch                   | {"iw","wa","at","tc","ch"}  |
 | 4 | iphone                   | {"ip","ph","ho","on","ne"}  |
 
+{style="table-layout:auto"}
+
 +++
 
-Then repeat the process for for `featurevector2`:
+Then repeat the process for `featurevector2`:
 
 ```SQL
 CREATE TABLE featurevector2tokenized AS 
@@ -548,6 +553,8 @@ The results are shown in the table below:
 | 1 | ipadmini                 | {"ip","pa","ad"}   |
 | 2 | macbookpro               | {"ma","ac","cb","bo","oo","ok","kp","pr","ro"}  |
 | 3 | iphone                   | {"ip","ph","ho","on","ne"}  |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -590,11 +597,13 @@ The results are shown in the table below:
 | 11| iphone              | macbookpro        |  {"ip","ph","ho","on","ne"} | {"ma","ac","cb","bo","oo","ok","kp","pr","ro"} |
 | 12| iphone              |  iphone           |  {"ip","ph","ho","on","ne"} | {"ip","ph","ho","on","ne"} |
 
+{style="table-layout:auto"}
+
 +++
 
-## Compute the Jaccard Similarity Measure
+## Compute the Jaccard similarity measure {#compute-the-jaccard-similarity-measure}
 
-Next, calculate use the Jaccard similarity coefficient to perform a similarity analysis between the two sets of product names by comparing their tokenized representations. The output of the SQL script below provides the product names from both sets, their respective tokenized representations, the counts of common and total unique tokens, and the calculated Jaccard similarity coefficient for each pair of datasets.
+Next, calculate use the Jaccard similarity coefficient to perform a similarity analysis between the two sets of product names by comparing their tokenized representations. The output of the SQL script below provides the following: product names from both sets, their tokenized representations, counts of common and total unique tokens, and the calculated Jaccard similarity coefficient for each pair of datasets.
 
 
 ```SQL {line-numbers="true"}
@@ -620,11 +629,11 @@ FROM
     );
 ```
 
-The following is a summary of the SQl used to calculate use the Jaccard similarity coefficient:
+The following is a summary of the SQL used to calculate the Jaccard similarity coefficient:
 
 - Line 6: `size(array_intersect(SetA_tokens1, SetB_tokens2)) AS token_intersect_count` calculates the number of tokens that are common to both `SetA_tokens1` and `SetB_tokens2`. This calculation is achieved by computing the size of the intersection of the two arrays of tokens.
 - Line 7: `size(array_union(SetA_tokens1, SetB_tokens2)) AS token_union_count` calculates the total number of unique tokens across both `SetA_tokens1` and `SetB_tokens2`. This line computes the size of the union of the two arrays of tokens.
-- Line 8-10: `ROUND(CAST(size(array_intersect(SetA_tokens1, SetB_tokens2)) AS DOUBLE) / size(array_union(SetA_tokens1, SetB_tokens2)), 2) AS jaccard_similarity` calculates the Jaccard similarity between the token sets. These lines divide the size of the token intersection by the size of the token union and rounds the result to two decimal places. The result is a value between zero and one, where one indicates complete similarity.
+- Line 8-10: `ROUND(CAST(size(array_intersect(SetA_tokens1, SetB_tokens2)) AS DOUBLE) / size(array_union(SetA_tokens1, SetB_tokens2)), 2) AS jaccard_similarity` calculates the Jaccard similarity between the token sets. These lines divide the size of the token intersection by the size of the token union and round the result to two decimal places. The result is a value between zero and one, where one indicates complete similarity.
 
 The results are shown in the table below:
 
@@ -645,9 +654,11 @@ The results are shown in the table below:
 | 11| iphone              | macbookpro        |  {"ip","ph","ho","on","ne"}           | {"ma","ac","cb","bo","oo","ok","kp","pr","ro"}  |  0  |  14  | 0.0   |
 | 12| iphone              |  iphone           |  {"ip","ph","ho","on","ne"}           | {"ip","ph","ho","on","ne"}                      |  5  |  5  |  1.0  |
 
+{style="table-layout:auto"}
+
 +++
 
-## Filter results based on Jaccard Similarity threshold
+## Filter results based on Jaccard Similarity threshold {#similarity-threshold-filter}
 
 Finally, filter the results based on a predefined threshold to select only those pairs that meet the similarity criteria. The SQL statement below filters the products with a Jaccard similarity coefficient of at least 0.4. This narrows down the results to pairs that exhibit a substantial degree of similarity.
 
@@ -682,7 +693,7 @@ FROM
 WHERE jaccard_similarity>=0.4
 ```
 
-The results of this query gives the columns for the similarity join, as seen below:
+The results of this query give the columns for the similarity join, as seen below:
 
 +++Select to expand
 
@@ -692,13 +703,15 @@ The results of this query gives the columns for the similarity join, as seen bel
 | 2 | ipad                     | ipad                   |
 | 3 | iphone                   | iphone                 |
 
+{style="table-layout:auto"}
+
 +++:
 
-### Next steps
+### Next steps {#next-steps}
 
 By reading this document, you can now use this logic to highlight meaningful relationships or overlaps between disparate datasets. The ability to identify products from different datasets that have a significant similarity in their characteristics or attributes, has numerous real-world applications. This logic could be used for scenarios such as product matching (to group or recommend similar products to customers), data cleansing (to improve data quality), and market basket analysis (to provide insights into customer behavior, preferences, and potential cross-selling opportunities). 
 
-If you have not done so already, you are reccomended to read the [AI/ML feature pipeline overview](../data-distiller/ml-feature-pipelines/overview.md). Use that overview to learn how Data Distiller and your preferred machine learning can build custom data models that support your marketing use cases with Experience Platform data.
+If you have not already done so, you are recommended to read the [AI/ML feature pipeline overview](../data-distiller/ml-feature-pipelines/overview.md). Use that overview to learn how Data Distiller and your preferred machine learning can build custom data models that support your marketing use cases with Experience Platform data.
 
 
 
