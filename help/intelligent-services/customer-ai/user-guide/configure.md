@@ -191,15 +191,11 @@ You can define important Profile dataset fields (with timestamps) in your data i
 
 #### Select profile attributes from the Profile snapshot export
 
-You can also choose to include profile attributes from the daily Profile snapshot export. These attributes are synced to the Profile snapshot export and display the most recently available value. 
+You can also choose to include profile attributes from the daily Profile snapshot export. These attributes are synced to the Profile snapshot export and display the most recently available value. They automatically show up and do not require a dataset to be selected in the configuration step.
 
 >[!WARNING]
 >
-> Be careful not to select a profile attribute that is updated as a result of the prediction goal or highly correlated with the prediction goal. This causes data leakage and over-fitting of the model. An example of such an attribute is `total_purchases_in_the_last_3_months` that predicts purchase conversion. 
-
->[!NOTE]
->
->Support for using profile attributes from the UPS snapshot export is available in the UI upon request. 
+> Do not select a profile attribute that has been updated as a result of the prediction goal or is highly-correlated with prediction goal. This results in data leakage and over-fitting of the model. For example, `total_purchases_in_the_last_3_months` is an attribute that predicts purchase conversion..
 
 ### Adding a custom event example {#custom-event}
 
@@ -258,3 +254,5 @@ The following video is designed to support your understanding of the configurati
 > The following video is out of date. For the most up-to-date information refer to the documentation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
+
+<!-- comment -->

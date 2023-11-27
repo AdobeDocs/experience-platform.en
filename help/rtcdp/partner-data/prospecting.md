@@ -1,6 +1,7 @@
 ---
 title: Engage and acquire new customers without dependency on third-party cookies
 description: Learn how to engage and acquire new customers through prospecting use cases, without relying on third-party cookies.
+feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 ---
 # Engage and acquire new customers without dependency on third-party cookies
