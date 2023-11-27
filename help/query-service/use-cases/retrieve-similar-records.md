@@ -22,7 +22,7 @@ Before continuing with this document you should be familiar with the following c
     - **Similarity metric**: A similarity join relies on a predefined similarity metric or measure, such as Jaccard similarity, cosine similarity, edit distance, and so on. The metric depends on the nature of the data and the use case. This metric quantifies how similar or dissimilar two records are.
     - **Threshold**: A similarity threshold is used to determine when the two records are considered similar enough to be included in the join result. Records with a similarity score above the threshold are considered matches.
 - The **Jaccard similarity** index, or the Jaccard similarity measurement, is a statistic used to gauge the similarity and diversity of sample sets. It is is defined as the size of the intersection divided by the size of the union of the sample sets. The Jaccard similarity measurement ranges from 0 to 1. A Jaccard similarity of 0 indicates no similarity between the sets (completely dissimilar), and a Jaccard similarity of 1 indicates that the sets are identical (completely similar).
-![A venn diagram to illustrate the Jackard similarity measurment.](../images/use-cases/jaccard-similarity.png)
+![A venn diagram to illustrate the Jaccard similarity measurement.](../images/use-cases/jaccard-similarity.png)
 - **Lambda functions** in Data Distiller are anonymous, inline functions that can be defined and used within SQL statements. They are frequently used in conjunction with higher-order functions due to their ability to create concise, on-the-fly functions that can be passed around as data. Lambda functions are often employed with higher-order functions like `transform`, `filter`, and `array_sort`. Lambda functions are especially useful in situations where defining a full function is unnecessary, and a brief, one-time function can be used inline.
 
 ## Getting started
@@ -594,12 +594,119 @@ The results are shown in the table below:
 
 ## Compute the Jaccard Similarity Measure
 
-<!-- Up to here ... -->
+Next, calculate use the Jaccard similarity coefficient to perform a similarity analysis between the two sets of product names by comparing their tokenized representations. The output of the SQL script below provides the product names from both sets, their respective tokenized representations, the counts of common and total unique tokens, and the calculated Jaccard similarity coefficient for each pair of datasets.
 
-Calculates the Jaccard similarity between the pairs generated in the cross join, measuring the similarity between tokens.
+
+```SQL {line-numbers="true"}
+SELECT 
+    SetA_ProductNames, 
+    SetB_ProductNames, 
+    SetA_tokens1,
+    SetB_tokens2,
+    size(array_intersect(SetA_tokens1, SetB_tokens2)) AS token_intersect_count,
+    size(array_union(SetA_tokens1, SetB_tokens2)) AS token_union_count,
+    ROUND(
+        CAST(size(array_intersect(SetA_tokens1, SetB_tokens2)) AS DOUBLE) /    size(array_union(SetA_tokens1, SetB_tokens2)), 2) AS jaccard_similarity
+FROM
+    (SELECT
+        A.featurevector1_distinct AS SetA_ProductNames,
+        B.featurevector2_distinct AS SetB_ProductNames,
+        A.tokens AS SetA_tokens1,
+        B.tokens AS SetB_tokens2
+    FROM
+        featurevector1tokenized A
+    CROSS JOIN
+        featurevector2tokenized B
+    );
+```
+
+The following is a summary of the SQl used to calculate use the Jaccard similarity coefficient:
+
+- Line 6: `size(array_intersect(SetA_tokens1, SetB_tokens2)) AS token_intersect_count` calculates the number of tokens that are common to both `SetA_tokens1` and `SetB_tokens2`. This calculation is achieved by computing the size of the intersection of the two arrays of tokens.
+- Line 7: `size(array_union(SetA_tokens1, SetB_tokens2)) AS token_union_count` calculates the total number of unique tokens across both `SetA_tokens1` and `SetB_tokens2`. This line computes the size of the union of the two arrays of tokens.
+- Line 8-10: `ROUND(CAST(size(array_intersect(SetA_tokens1, SetB_tokens2)) AS DOUBLE) / size(array_union(SetA_tokens1, SetB_tokens2)), 2) AS jaccard_similarity` calculates the Jaccard similarity between the token sets. These lines divide the size of the token intersection by the size of the token union and rounds the result to two decimal places. The result is a value between zero and one, where one indicates complete similarity.
+
+The results are shown in the table below:
+
++++Select to expand
+
+| *  | SetA_ProductNames  | SetB_ProductNames | SetA_tokens 1                         | SetB_tokens 2                                   | token_intersect_count | token_intersect_count | Jaccard similarity |
+|---|---------------------|-------------------|---------------------------------------|-------------------------------------------------|----|----|----|
+| 1 | ipadmini            | ipad              | {"ip","pa","ad","dm","mi","in","ni"}  | {"ip","pa","ad"}                                |  3  |  7  | 0.43   |
+| 2 | ipadmini            | macbookpro        | {"ip","pa","ad","dm","mi","in","ni"}  | {"ma","ac","cb","bo","oo","ok","kp","pr","ro"}  | 0   | 16   | 0.0   |
+| 3 | ipadmini            | iphone            | {"ip","pa","ad","dm","mi","in","ni"}  | {"ip","ph","ho","on","ne"}                      |  1  | 11   |  0.09  |
+| 4 | ipad                |  ipad             | {"ip","pa","ad"}                      | {"ip","pa","ad"}                                |  3  | 3   |  1.0  |
+| 5 | ipad                | macbookpro        | {"ip","pa","ad"}                      | {"ma","ac","cb","bo","oo","ok","kp","pr","ro"}  |  0  |  12  |  0.0  |
+| 6 | ipad                | iphone            | {"ip","pa","ad"}                      |  {"ip","ph","ho","on","ne"}                     |  1  |  7  | 0.14   |
+| 7 | iwatch              | ipad              |  {"iw","wa","at","tc","ch"}           |  {"ip","pa","ad"}                               |  0  | 8  |  0.0  |
+| 8 | iwatch              | macbookpro        |  {"iw","wa","at","tc","ch"}           | {"ma","ac","cb","bo","oo","ok","kp","pr","ro"}  | 0   |  14  |  0.0  |
+| 9 | iwatch              | iphone            |  {"iw","wa","at","tc","ch"}           | {"ip","ph","ho","on","ne"}                      |  0  |  10  |  0.0  |
+| 10| iphone              | ipad              |  {"ip","ph","ho","on","ne"}           | {"ip","pa","ad"}                                |  1  |  7  |  0.14  |
+| 11| iphone              | macbookpro        |  {"ip","ph","ho","on","ne"}           | {"ma","ac","cb","bo","oo","ok","kp","pr","ro"}  |  0  |  14  | 0.0   |
+| 12| iphone              |  iphone           |  {"ip","ph","ho","on","ne"}           | {"ip","ph","ho","on","ne"}                      |  5  |  5  |  1.0  |
+
++++
 
 ## Filter results based on Jaccard Similarity threshold
 
-Filter the results based on a predefined threshold (of 0.4 in this case) to select only those pairs that meet the similarity criteria. 
-<!-- Applying a threshold (0.4) to filter out columns that meet the similarity criteria. -->
+Finally, filter the results based on a predefined threshold to select only those pairs that meet the similarity criteria. The SQL statement below filters the products with a Jaccard similarity coefficient of at least 0.4. This narrows down the results to pairs that exhibit a substantial degree of similarity.
+
+```SQL
+SELECT 
+    SetA_ProductNames, 
+    SetB_ProductNames
+FROM 
+(SELECT 
+    SetA_ProductNames, 
+    SetB_ProductNames, 
+    SetA_tokens1,
+    SetB_tokens2,
+    size(array_intersect(SetA_tokens1, SetB_tokens2)) AS token_intersect_count,
+    size(array_union(SetA_tokens1, SetB_tokens2)) AS token_union_count,
+    ROUND(
+        CAST(size(array_intersect(SetA_tokens1, SetB_tokens2)) AS DOUBLE) / size(array_union(SetA_tokens1, SetB_tokens2)),
+        2
+    ) AS jaccard_similarity
+FROM
+    (SELECT
+        A.featurevector1_distinct AS SetA_ProductNames,
+        B.featurevector2_distinct AS SetB_ProductNames,
+        A.tokens AS SetA_tokens1,
+        B.tokens AS SetB_tokens2
+    FROM
+        featurevector1tokenized A
+    CROSS JOIN
+        featurevector2tokenized B
+    )
+)
+WHERE jaccard_similarity>=0.4
+```
+
+The results of this query gives the columns for the similarity join, as seen below:
+
++++Select to expand
+
+|   | SetA_ProductNames        | SetA_ProductNames      |
+|---|--------------------------|------------------------|
+| 1 | ipadmini                 | ipad                   |
+| 2 | ipad                     | ipad                   |
+| 3 | iphone                   | iphone                 |
+
++++:
+
+### Next steps
+
+By reading this document, you can now use this logic to highlight meaningful relationships or overlaps between disparate datasets. The ability to identify products from different datasets that have a significant similarity in their characteristics or attributes, has numerous real-world applications. This logic could be used for scenarios such as product matching (to group or recommend similar products to customers), data cleansing (to improve data quality), and market basket analysis (to provide insights into customer behavior, preferences, and potential cross-selling opportunities). 
+
+If you have not done so already, you are reccomended to read the [AI/ML feature pipeline overview](../data-distiller/ml-feature-pipelines/overview.md). Use that overview to learn how Data Distiller and your preferred machine learning can build custom data models that support your marketing use cases with Experience Platform data.
+
+
+
+
+
+
+
+
+
+
 
