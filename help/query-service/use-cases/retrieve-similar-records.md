@@ -712,14 +712,3 @@ The results of this query give the columns for the similarity join, as seen belo
 By reading this document, you can now use this logic to highlight meaningful relationships or overlaps between disparate datasets. The ability to identify products from different datasets that have a significant similarity in their characteristics or attributes, has numerous real-world applications. This logic could be used for scenarios such as product matching (to group or recommend similar products to customers), data cleansing (to improve data quality), and market basket analysis (to provide insights into customer behavior, preferences, and potential cross-selling opportunities). 
 
 If you have not already done so, you are recommended to read the [AI/ML feature pipeline overview](../data-distiller/ml-feature-pipelines/overview.md). Use that overview to learn how Data Distiller and your preferred machine learning can build custom data models that support your marketing use cases with Experience Platform data.
-
-
-
-
-
-
-
-
-
-
-
