@@ -1,8 +1,8 @@
 ---
 title: Manage display events in Web SDK
 description: This article explains what display events are and how you can use them in Web SDK.
+exl-id: 7150ad6e-7693-4f4d-917e-8d08a39a0b41
 ---
-
 # Manage display events in Web SDK
 
 Display events are used by Web SDK to inform your personalization or analytics service when a specific personalization content is displayed on a page.
