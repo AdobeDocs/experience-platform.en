@@ -4,9 +4,9 @@ description: Learn how to identify and retrieve similar or related records from 
 ---
 # Retrieve similar records
 
-Solve several common use cases by using Data Distiller Lambda functions to identify and retrieve similar or related records from one or more datasets. You can use this guide to identify products from different datasets that have a significant similarity in their characteristics or attributes. The methodology in this document provides solutions to: data deduplication, record linkage, recommendation systems, information retrieval, and text analytics among others.
+Solve several common use cases by using Data Distiller lambda functions to identify and retrieve similar or related records from one or more datasets. You can use this guide to identify products from different datasets that have a significant similarity in their characteristics or attributes. The methodology in this document provides solutions to: data deduplication, record linkage, recommendation systems, information retrieval, and text analytics among others.
 
-The document describes the process of implementing a similarity join then uses Data Distiller Lambda functions to compute the similarity between sets of data and filter them based on selected attributes. SQL code snippets and explanations are provided for each step of the process. The workflow implements similarity joins using the Jaccard similarity measure and tokenization using Data Distiller Lambda functions. These methods are then used to identify and retrieve similar or related records from one or more datasets based on a similarity metric. The key sections of the process include: [tokenization using Lambda functions](#data-transformation), the [cross-join of unique elements](#cross-join-unique-elements), the [Jaccard similarity calculation](#compute-the-jaccard-similarity-measure), and the [threshold-based filtering](#similarity-threshold-filter).
+The document describes the process of implementing a similarity join then uses Data Distiller lambda functions to compute the similarity between sets of data and filter them based on selected attributes. SQL code snippets and explanations are provided for each step of the process. The workflow implements similarity joins using the Jaccard similarity measure and tokenization using Data Distiller lambda functions. These methods are then used to identify and retrieve similar or related records from one or more datasets based on a similarity metric. The key sections of the process include: [tokenization using lambda functions](#data-transformation), the [cross-join of unique elements](#cross-join-unique-elements), the [Jaccard similarity calculation](#compute-the-jaccard-similarity-measure), and the [threshold-based filtering](#similarity-threshold-filter).
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ Before continuing with this document, you should be familiar with the following 
 
 ## Getting started
 
-The Data Distiller SKU is required to perform the Lambda functions on your Adobe Experience Platform data. If you do not have the Data Distiller SKU, contact your Adobe customer service representative for more information.
+The Data Distiller SKU is required to perform the lambda functions on your Adobe Experience Platform data. If you do not have the Data Distiller SKU, contact your Adobe customer service representative for more information.
 
 ## Establish similarity {#establish-similarity}
 
@@ -357,7 +357,7 @@ The results are shown in the table below:
 
 +++
 
-## Explore solutions using Data Distiller Lambda functions {#lambda-function-solutions}
+## Explore solutions using Data Distiller lambda functions {#lambda-function-solutions}
 
 Lambda functions are powerful constructs that allow you to implement "programming" like syntax in Data Distiller. They can be used to iterate a function over multiple values in an array.
 
@@ -391,9 +391,9 @@ To summarize, this lambda function takes two parameters (`acc` and `y`) and defi
 
 The output of this statement is a single column (`sum_result`) that contains the cumulative sums of numbers from one to five.
 
-### The value of Lambda functions {#value-of-lambda-functions}
+### The value of lambda functions {#value-of-lambda-functions}
 
-This section analyses a slimmed-down version of a tri-gram SQL statement to better understand the value of Lambda functions in Data Distiller to create n-grams more efficiently.
+This section analyses a slimmed-down version of a tri-gram SQL statement to better understand the value of lambda functions in Data Distiller to create n-grams more efficiently.
 
 The statement below operates on the `ProductName` column within the `featurevector1` table. It produces a set of three-character substrings derived from the modified product names within the table, using positions obtained from the sequence generated.
 
@@ -505,7 +505,7 @@ SELECT * FROM featurevector1tokenized;
 
 >[!NOTE]
 >
->If you are using [!DNL DBvisualizer], after you create or delete a table, refresh the database connection so that the table's metadata cache is refreshed. Data Distiller does not push out metadata updates.
+>If you are using [!DNL DbVisualizer], after you create or delete a table, refresh the database connection so that the table's metadata cache is refreshed. Data Distiller does not push out metadata updates.
 
 The results are shown in the table below:
 
