@@ -113,6 +113,7 @@ The guardrails outlined in this section refer to the number and nature of audien
 | Streaming audiences per sandbox | 500 | Performance guardrail | An organization can have more than 500 streaming audiences in total, as long as there are less than 500 streaming audiences in each individual sandbox. Attempting to create additional streaming audiences may affect system performance. Read more about [streaming audiences](/help/segmentation/ui/streaming-segmentation.md).|
 | Batch audiences per sandbox | 4000 | Performance guardrail | An organization can have more than 4000 batch audiences in total, as long as there are less than 4000 batch audiences in each individual sandbox. Attempting to create additional batch audiences may affect system performance.|
 | Account audiences per sandbox | 50 | System-enforced guardrail | You cannot create more than 50 account audiences in a sandbox. After you reach 50 audiences in a sandbox, the **[!UICONTROL Create audience]** control is disabled when trying to create a new account audience. Read more about [account audiences](/help/segmentation/ui/account-audiences.md). |
+| Published compositions per sandbox | 10 | Performance guardrail | You cannot have more than 10 published compositions in a sandbox. Read more about [audience composition in the UI guide](/help/segmentation/ui/audience-composition.md). |
 
 {style="table-layout:auto"}
 
