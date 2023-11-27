@@ -42,7 +42,7 @@ J = Jaccard distance
 A = set 1
 B = set 2
 
-The Jaccard similarity between product sets A and B is 0.4. This indicates a moderate degree of similarity between the words used in the two documents. This similarity between the two sets defines the columns in the similarity join. These columns represent individual pieces of information, or characteristics, associated with the data stored in a table. 
+The Jaccard similarity between product sets A and B is 0.4. This indicates a moderate degree of similarity between the words used in the two documents. This similarity between the two sets defines the columns in the similarity join. These columns represent pieces of information, or characteristics associated with the data, that are stored in a table and used for performing the similarity computations. 
 
 ### Pairwise Jaccard Computation with String Similarity {#pairwise-similarity}
 
@@ -558,7 +558,7 @@ The results are shown in the table below:
 
 +++
 
-With both tokenized vectors complete, you can now create the cross join, as seen in the SQL below:
+With both tokenized vectors complete, you can now create the cross join. This is seen in the SQL below:
 
 ```SQL {line-numbers="true"}
 SELECT
