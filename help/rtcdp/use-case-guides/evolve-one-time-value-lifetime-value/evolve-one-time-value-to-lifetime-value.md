@@ -347,7 +347,7 @@ For more information on how to create a [dataset](/help/catalog/datasets/overvie
 >
 >Providing customers with the capability to unsubscribe from receiving communications from a brand, as well as ensuring this choice is honored, is a legal requirement. Learn more about the applicable legislation in the [Privacy regulations overview](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-Consider implementing the following [consent policies](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) and asking your visitors for consent before you  reaching out to them:
+Consider implementing the following [consent policies](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) and asking your visitors for consent before you  reach out to them:
 
 * If `consents.marketing.email.val = "Y"` then Can Email
 * If `consents.marketing.sms.val = "Y"` then Can SMS
@@ -363,7 +363,7 @@ Consider adding and enforcing the following [data governance labels](/help/data-
 
 #### Marketing policies
 
-There are no [marketing policies](/help/data-governance/policies/overview.md) required for the re-engagement journeys however, the following should be considered as desired:
+There are no [marketing policies](/help/data-governance/policies/overview.md) required for the journeys you create as part of this use case. However, you can consider the following policies as desired:
 
 * Restrict Sensitive Data
 * Restrict Onsite Advertising
