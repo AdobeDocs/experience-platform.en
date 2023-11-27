@@ -57,7 +57,7 @@ Select the **[!UICONTROL Assistant icon]** from the header to launch Assistant p
 
 ![The Experience Platform UI home page with Assistant icon selected.](./images/ai-assistant/ai-assistant.png)
 
-+++Use immersive mode
+<!-- +++Use immersive mode
 
 To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
 
@@ -69,9 +69,9 @@ A dedicated pop-up interface for Assistant appears at the center of your screen.
 
 +++
 
-From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case. 
+From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
 
-### Example use case: Use Assistant to expedite your schema creation process
+### Example use case: Use Assistant to expedite your schema creation process {#example-use-case}
 
 >[!NOTE]
 >
@@ -91,27 +91,63 @@ A given answer provides hyperlinks to any referenced entities. In the example be
 
 Assistant provides you with a way to validate your answer by viewing its source. Links to the documentation are provided for concept questions, while data usage questions can be verified with an SQL query that demonstrates how the answer was computed.
 
-![Options provided by Assistant after returning an answer.](./images/ai-assistant/options-post-answer.png)
+![Options provided by Assistant after returning an answer.](./images/ai-assistant/options.png)
 
-#### Related suggestions
+### Follow up question {#follow-up-question}
 
-You can also dive deeper into the topic of your query by selecting one of the related suggestions that Assistant provides. 
-
-![Related suggestions.](./images/ai-assistant/related-suggestions.png)
-
-#### Follow up question
++++Select to view an example of a follow up question
 
 You can further learn more about a particular topic by asking a follow up question. In the next example, the Assistant is asked how the eventType can be used in segmentation.
 
-![A follow up question and answer displayed on the Assistant for Experience Platform.](./images/ai-assistant/follow-up-answer.png)
+![A follow up question and answer displayed on the Assistant for Experience Platform.](./images/ai-assistant/follow-up-question.png)
 
-#### Data usage question
++++
+
+### Data usage question {#data-usage-question}
+
++++Select to view an example of a data usage question
 
 You can also ask the Assistant questions regarding your data usage. When inquiring about data usage, you must be in an active sandbox in order for the Assistant to answer your query.
 
+For responses that involve data usage information, Assistant provides links to entities in question. In addition, Assistant provides you with an explanation on how it computed its answer.
+
 ![A data usage question, asking how many segments a user has.](./images/ai-assistant/data-usage-question.png)
 
-## Scope
++++
+
+### Multi-turn {#multi-turn}
+
++++Select to view an example of multi-turn
+
+You can use Assistant's multi-turn capabilities to have a more natural conversation during your experience. Assistant is able to answer follow up questions given that context can be inferred from an earlier interaction.
+
+In the example below, Assistant is asked to list the existing segments in the organization, as a follow up to an earlier query about total number of segments.
+
+![](./images/ai-assistant/multi-turn-one.png)
+
+Next, Assistant receives another follow up request. This time, Assistant responds by listing the existing segments ordered by their respective sizes.
+
+![](./images/ai-assistant/multi-turn-two.png)
+
++++
+
+### Use autocomplete {#use-auto-complete}
+
++++Select to view an example of autocomplete
+
+You can use the autocomplete function to receive a list of data objects that exist in your sandbox. Autocomplete recommendations are available for the following domains: segments, schemas, datasets, sources, and destinations.
+
+To use autocomplete, enter a plus symbol (**`+`**) as part of your question. Alternatively, you can also select the plus symbol (**`+`**) in the text input box. Then, a window appears with a list of recommended data objects the exist in your sandbox.
+
+![](./images/ai-assistant/autocomplete-options.png)
+
+Next, select the data object that you want to query to complete your question and then submit your question.
+
+![](./images/ai-assistant/autocomplete-question.png)
+
++++
+
+## Scope {#scope}
 
 Assistant can answer questions regarding Real-Time CDP and Experience Platform concepts, as well as data usage specific to your user account. Assistant can also infer context based on the UI page that you are in. It can identify:
 
@@ -121,13 +157,13 @@ Assistant can answer questions regarding Real-Time CDP and Experience Platform c
 * The resource (including type and ID) that you are viewing on your screen.
 * Given that you are in the process of a particular Experience Platform or Real-Time CDP workflow, Assistant can deduce your intent.
 
-### Documentation
+### Documentation {#documentation}
 
 Currently, the documentation index covers Adobe Experience Platform (Real-Time CDP and Audiences). The index is updated periodically.
 
 The documentation retrieval model is trained on Experience Platform (Real-Time CDP and Audiences). Questions outside the scope of Adobe Experience Platform such as, questions about other Adobe products like Adobe Target and the Creative Cloud suite cannot be answered.
 
-### Data usage
+### Data usage {#data-usage}
 
 You can also ask Assistant questions about your data usage in the following domains: 
 
@@ -142,35 +178,31 @@ For usage data queries, answers may not reflect the current state of the UI. The
 
 You will need to log into a sandbox to inquire about specific data related to objects like schemas, datasets, attributes, destinations and segments.
 
-### Example data usage questions
+### Example data usage questions {#example-data-usage-questions}
 
 +++Select to see a list of example data usage questions
 
 | Question type | Description | Examples |
 | --- | --- | --- | 
-| Data lineage | Track usage of one or multiple objects across other Experience Platform objects | <ul><li>Which dataset(s) use {SCHEMA_NAME} schema?</li><li>How many datasets have been ingested using the same schema?</li><li>Which datasets have been used in activated segments?</li><li>List the schemas which have attributes used in activated segments.</li><li>Show me the segments which are activated to {DESTINATION_ACCOUNT_NAME} and have more than 1000 profiles.</li><li>Show me the attributes which are used in the activated segments which have been modified after Jan 2023.</li><li>List the schemas that are related to activated segments and were created in last 1 year.</li></ul> |
-| Distribution and aggregations | Summary-based questions about Experience Platform object usage | <ul><li>What is the percentage of activated segments?</li><li>How many fields are used in segmentation?</li><li>Which segments are activated to the most number of destinations?</li><li>List duplicate segments.</li><li>Show me the segments activated to {DESTINATION_ACCOUNT_NAME} and rank them by profile size.</li><li>What is the percentage of the segments which have not been activated but have more than 100 profiles. Show me their names.</li><li>List me the top 5 attributes used in activated segments based on their occurrence.</li></ul> |
-| Object lookup | Retrieve or access an Experience Platform object or it's properties. | <ul><li>Which datasets do not have any schema associated with them</li><li>List the attributes used for {SEGMENT_NAME}?</li><li>Give me the list of schemas which are profile enabled but have not been modified since their creation.</li><li>Which segments have been modified in the last week?</li><li>List me the segments which have the same segment definitions along with their creation date.</li><li>Which datasets are profile enabled and also include how many segments have been created from each dataset.</li><li>Show me the segment definition and modification date of {SEGMENT_NAME}.</li></ul>|
+| Data lineage | Track usage of one or multiple objects across other Experience Platform objects | <ul><li>Which dataset(s) use {SCHEMA_NAME} schema?</li><li>How many datasets have been ingested using the same schema?</li><li>Which datasets have been used in activated segments?</li><li>List the schemas which have attributes used in activated segments.</li><li>Show me the segments which are activated to {DESTINATION_ACCOUNT_NAME} and have more than 1000 profiles.</li><li>Show me the attributes which are used in the activated segments which have been modified after Jan 2023.</li><li>What are the datasets ingested via {SOURCE_NAME}?</li><li>Which dataflows are associated with {DATAFLOW_NAME}</li><li>List the schemas that are related to activated segments and were created in last 1 year.</li></ul> |
+| Distribution and aggregations | Summary-based questions about Experience Platform object usage | <ul><li>What is the percentage of activated segments?</li><li>How many fields are used in segmentation?</li><li>Which segments are activated to the most number of destinations?</li><li>List duplicate segments.</li><li>Show me the segments activated to {DESTINATION_ACCOUNT_NAME} and rank them by profile size.</li><li>What is the percentage of the segments which have not been activated but have more than 100 profiles. Show me their names.</li><li>List the 3 source connectors ingesting data into my datasets.</li><li>List me the top 5 attributes used in activated segments based on their occurrence.</li></ul> |
+| Object lookup | Retrieve or access an Experience Platform object or it's properties. | <ul><li>Which datasets do not have any schema associated with them</li><li>List the attributes used for {SEGMENT_NAME}?</li><li>Give me the list of schemas which are profile enabled but have not been modified since their creation.</li><li>Which segments have been modified in the last week?</li><li>List me the segments which have the same segment definitions along with their creation date.</li><li>Which datasets are profile enabled and also include how many segments have been created from each dataset.</li><li>Which source accounts are associated with dataset XYZ?</li><li>Show me the segment definition and modification date of {SEGMENT_NAME}.</li></ul>|
 
 +++
 
-## Verify the response
+## Verify the response {#verify-the-response}
 
 You can verify the response that the Assistant returns using a number of different ways.
 
-### Citations for documentation
+### Citations for documentation {#citations}
 
 With every response, Assistant provides you with citations that you can refer to for verification or more information.
 
-Select **[!UICONTROL Show source]** for a list of links to documentation that the Assistant references to compute its response.
+Select **[!UICONTROL Show source]** for a list of links to documentation that the Assistant references to compute its response. When you select a link to the referenced documentation, you are taken to the relevant section of that particular page, with the specific information highlighted.
 
-![The links to the source displayed in the Assistant.](./images/ai-assistant/sources.png)
+![The links to the source displayed in the Assistant.](./images/ai-assistant/show-sources.png)
 
-For responses that involve data usage information, Assistant provides links to entities in question. In addition, Assistant provides you with an explanation on how it computed its answer.
-
-![explanation](./images/ai-assistant/explanation.png)
-
-## Provide feedback
+## Provide feedback {#feedback}
 
 >[!BEGINSHADEBOX]
 
@@ -202,20 +234,20 @@ Select the thumbs down icon to provide feedback on what could be improved upon b
 
 Select the flag icon to provide further reports on your experience using the Assistant.
 
-![The report results window.](./images/ai-assistant/report-results.png)
+![The report results window.](./images/ai-assistant/flag.png)
 
 >[!ENDTABS]
 
 +++
 
-## Additional information 
+## Additional information {#additional-information}
 
 Refer to this section for additional information on the Assistant for Experience Platform.
 
-### Caveats and limitations
+### Caveats and limitations {#caveats-and-limitations}
 
 The following section outlines current caveats and limitations to considers when using Assistant.
-
+<!-- 
 #### Conversational experience
 
 You must consider several nuances regarding the conversational experience when querying the Assistant.
@@ -264,7 +296,7 @@ You must phrase your questions clearly and scope them within a product, applicat
 
 {style="table-layout:auto"}
 
->[!ENDTABS]
+>[!ENDTABS] -->
 
 #### Limited small talk
 
@@ -280,7 +312,7 @@ The Assistant may give an inaccurate impression of what it can do. It may answer
 | "Do you know **x** language?" | The Assistant currently only supports English, but may answer "yes" due to the underlying model being able to support it. |
 | "Can you do...?" | The Assistant may answer yes, even though it cannot. |
 
-### Tips
+### Tips {#tips}
 
 The following section outlines some tips and workarounds to consider when using Assistant.
 

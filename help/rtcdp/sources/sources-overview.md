@@ -2,6 +2,7 @@
 keywords: rtcdp sources;sources rtcdp;real time customer data platform sources
 title: Sources in Real-Time Customer Data Platform
 description: This document provides an overview of Sources in Adobe Real-Time Customer Data Platform
+feature: Sources, Data Ingestion, Get Started
 exl-id: 15b3ee9b-6faf-4091-9641-e653e4cdd7fb
 ---
 # Sources in Real-Time Customer Data Platform

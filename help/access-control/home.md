@@ -79,8 +79,8 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Alerts] | [!UICONTROL Manage Alerts] | Access to read, create, edit, and delete alerts history. |
 | [!DNL Computed Attributes] | [!UICONTROL View Computed attributes] | Read-only access for computed attributes tab, inventory, and details. |
 | [!DNL Computed Attributes] | [!UICONTROL Manage Computed attributes] | Access to read, create, delete drafts, and deactivate computed attributes. |
-| [!DNL Data Hygiene] | [!UICONTROL View Data Hygiene] | Read-only access for data hygiene.|
-| [!DNL Data Hygiene] | [!UICONTROL Manage Data Hygiene] | Access to read, create, edit, and delete data hygiene. |
+| [!DNL Data Lifecycle] | [!UICONTROL View Data Lifecycle] | Read-only access for data lifecycle.|
+| [!DNL Data Lifecycle] | [!UICONTROL Manage Data Lifecycle] | Access to read, create, edit, and delete data lifecycle. |
 | [!DNL Data Modeling] | [!UICONTROL Manage Schemas] | Access to read, create, edit, and delete schemas and related resources. |
 | [!DNL Data Modeling] | [!UICONTROL View Schemas] | Read-only access to schemas and related resources. |
 | [!DNL Data Modeling] | [!UICONTROL Manage Relationships] | Access to read, create, edit, and delete schema relationships. |
@@ -117,7 +117,7 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Access to create, accept, and decline partner handshakes to connect two organizations and enable [!DNL Segment Match] flows. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Access to read, create, edit, and publish [!DNL Segment Match] feeds with active partners. |
 | [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
-| Data Governance | [!UICONTROL Apply Data Usage Labels] | Access to read, create, and delete usage labels. |
+| Data Governance | [!UICONTROL Manage Usage Labels] | Access to read, create, and delete usage labels. |
 | Data Governance | [!UICONTROL Manage Data Usage Policies] | Access to read, create, edit, and delete data usage policies. |
 | Data Governance | [!UICONTROL View Data Usage Policies] | Read-only access for data usage policies belonging to your organization. |
 | Data Governance | [!UICONTROL View User Activity Log] | Read-only access to view recorded [audit logs](../landing/governance-privacy-security/audit-logs/overview.md) of Platform activities. |
