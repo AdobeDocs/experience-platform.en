@@ -74,12 +74,7 @@ Next, calculate the Jaccard similarity coefficient for each pair:
 | iWatch (Set A)    | (Intersection: 0, Union: 8) = 0 / 8 = 0      | (Intersection: 0, Union: 8) = 0 / 8 = 0     | (Intersection: 0, Union: 8) = 0 / 8 =0    |
 | iPad Mini (Set A) | (Intersection: 1, Union: 11) = 1 / 11 ≈ 0.09 | (Intersection: 3, Union: 7) = 3 / 7 ≈ 0.43  | (Intersection: 0, Union: 16) = 0 / 16 = 0 |
 
-<!-- JUNK ON COLUMNS:
-To establsh the similarity of to specific fields or attributes within a structured dataset, this guide uses the Jaccard similarity calculation. 
-
-columns' in this context are the individual fields or attributes within the datasets used for performing similarity computations, tokenization, and filtering operations. Each column holds specific information or results generated at different stages of the data processing pipeline described in the document. -->
-
-<!-- Performs pairwise Jaccard similarity computations between elements in two sets by tokenizing and comparing the elements. -->
+{style="table-layout:auto"}
 
 ## Create the test data with SQL {#create-test-data}
 
@@ -131,8 +126,6 @@ FROM (
 );
 SELECT * FROM featurevector2;
 ```
-
-<!-- Alternative title: ## Tokenize data using SQL -->
 
 ## Data transformations {#data-transformation}
 
