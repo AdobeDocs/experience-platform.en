@@ -16,7 +16,7 @@ Learn how to create personalized campaigns to offer the best complementary produ
 
 ## Use case overview
 
-Consider that you have customers who visit your properties and sporadically purchase the products or services you offer. You may want to create personalized campaigns to appeal to these customers so your brand can offer them longer-term value instead of one-time value. Learn how to collect and manage data, create audiences, and create journeys to action upon these audiences in Real-Time CDP and Adobe Journey Optimizer in order to evolve from offering one-time value to offering long-term value to your customers.
+Consider that you have customers who visit your properties and sporadically purchase the products or services that you offer. You may want to create personalized campaigns to appeal to these customers so your brand can offer them longer-term value instead of one-time value. Learn how to collect and manage data, create audiences, and create journeys to action upon these audiences in Real-Time CDP and Adobe Journey Optimizer in order to evolve from offering one-time value to offering long-term value to your customers.
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -54,12 +54,11 @@ You start by sending your audience of high valued and low frequency customers a 
 ![Step by step Evolve one-time value to lifetime value high level visual overview.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="1000" zoomable="yes"}
 
 1. You create schemas and datasets, then mark these for [!UICONTROL Profile].
-2. Data is collected and integrated into Experience Platform via Web SDK, Mobile Edge SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
+2. Data is collected and integrated into Experience Platform via Web SDK, Mobile Edge SDK, or API. Analytics Data Connector can also be utilized, but may result in journey latency.
 3. You load profiles into Real-Time CDP and build governance policies to ensure responsible use.
 4. You build focused audiences from the list of profiles to check for high valued and low frequency customers.
 5. You create two journeys in [!DNL Adobe Journey Optimizer], one to message users about a new subscription program, and another to message them to confirm the purchase later on.
 6. If desired, you activate the audience of customers who have not purchased your subscription to desired paid-media destinations.
-7. [!DNL Adobe Journey Optimizer] checks for consent and sends out the various actions configured.
 
 >[!ENDSHADEBOX]
 
@@ -77,15 +76,15 @@ Experience Data Model (XDM) resources are managed in the [!UICONTROL Schemas] wo
 
 For more information about creating [schemas](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html), read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md) 
 
-There are several schema designs that you can use in this sample implementation for the use case to evolve one-time value to lifetime value. Each schema includes specific required fields to be set up, and some fields that are strongly suggested.
+There are several schema designs that you can use in this sample implementation for the use case to evolve one-time value to lifetime value. Each schema includes specific required fields to be set up, and some fields that are suggested.
 
 Based on sample implementations, Adobe suggests that you create the following three schemas to accomplish this use case: 
 
-* Customer attributes schema (a profile schema)
-* Customer digital transactions schema (an experience event schema)
-* Customer offline transactions (an experience event schema)
+* [Customer attributes schema](#customer-attributes-schema) (a profile schema)
+* [Customer digital transactions schema](#customer-digital-transactions-schema) (an experience event schema)
+* [Customer offline transactions schema](#customer-offline-transactions-schema) (an experience event schema)
 
-#### Customer attributes schema
+#### Customer attributes schema {#customer-attributes-schema}
 
 Use this schema to structure and reference the profile data that makes up your customer information. This data is typically ingested into [!DNL Adobe Experience Platform] via your CRM or similar system and is necessary to reference customer details that are used for personalization, marketing consent, and enhanced segmentation capabilities.
 
@@ -97,9 +96,9 @@ The customer attributes schema is represented by an [!UICONTROL XDM Individual P
 
 [Personal Contact Details](/help/xdm/field-groups/profile/personal-contact-details.md) is a standard schema field group for the XDM Individual Profile class which describes the contact information for an individual person.
 
-| Fields | Requirement | Description |
+| Field | Requirement | Description |
 | --- | --- | --- |
-| `mobilePhone.number` | Required | The person's mobile phone number, which will be used for SMS notifications. |
+| `mobilePhone.number` | Required | The person's mobile phone number, which is used for SMS notifications. |
 | `personalEmail.address` | Required | The person's email address. |
 
 +++
@@ -136,7 +135,7 @@ The customer attributes schema is represented by an [!UICONTROL XDM Individual P
 
 +++
 
-#### Customer digital transactions schema
+#### Customer digital transactions schema {#customer-digital-transactions-schema}
 
 This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via Web SDK and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced segmentation capabilities.
 
@@ -228,7 +227,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 +++
 
-#### Customer offline transactions schema
+#### Customer offline transactions schema {#customer-offline-transactions-schema}
 
 This schema is used to structure and reference the event data that makes up your customer activity that occurs on platforms outside of your website. This data is typically ingested into [!DNL Adobe Experience Platform] from a POS (or similar system) and most often streamed into Platform via an API connection. Its purpose is to reference the various offline conversion events that are used for triggering journeys, deep online and offline customer analysis, and enhanced segmentation capabilities.
 
@@ -268,7 +267,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 +++
 
-#### Adobe web connector schema
+#### Adobe web connector schema {#adobe-web-connector-schema}
 
 >[!NOTE]
 >
@@ -339,7 +338,7 @@ For more information on how to create a [dataset](/help/catalog/datasets/overvie
 >
 >Similar to the step to create a schema, you need to enable the dataset to be included in the Real-Time Customer Profile. For more information about enabling the dataset for use in Real-Time Customer Profile, read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
-### Privacy, consent and data governance {#privacy-consent}
+### Privacy, consent, and data governance {#privacy-consent}
 
 #### Consent policies
 
@@ -358,22 +357,22 @@ Consider implementing the following [consent policies](https://experienceleague.
 
 Consider adding and enforcing the following [data governance labels](/help/data-governance/labels/overview.md):
 
-* Personal email addresses are utilized as direct identifiable data that is used for identifying or getting in touch with a specific individual rather than a device.
+* Personal email addresses are utilized as directly identifiable data that is used for identifying or getting in touch with a specific individual rather than a device.
     * `personalEmail.address = I1`
 
 #### Marketing policies
 
-There are no [marketing policies](/help/data-governance/policies/overview.md) required for the journeys you create as part of this use case. However, you can consider the following policies as desired:
+There are no [marketing policies](/help/data-governance/policies/overview.md) required for the journeys that you create as part of this use case. However, you can consider the following policies as desired:
 
 * Restrict Sensitive Data
 * Restrict Onsite Advertising
 * Restrict Email Targeting
-* Restrict cross site Targeting
+* Restrict cross-site Targeting
 * Restrict combining directly identifiable data with anonymous data
 
 ### Create audiences {#create-audiences}
 
-This use cases requires that you create two audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways in [!DNL Adobe Experience Platform].
+This use case requires that you create two audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways in [!DNL Adobe Experience Platform].
 
 For more information on how to create an audience, read the [Audience service UI guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
@@ -381,7 +380,7 @@ For more information on how to directly compose [Audiences](/help/segmentation/h
 
 For more information on how to build audiences through Platform-derived segment definitions, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
 
-Specifically, you need to create and use two audiences at different steps of the use case, as shown in the image below.
+Specifically, you must create and use two audiences at different steps of the use case, as shown in the image below.
 
 ![Audiences highlighted.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){width="1000" zoomable="yes"}
 
@@ -392,7 +391,7 @@ Specifically, you need to create and use two audiences at different steps of the
 This high value and low frequency audience includes the profiles that you want to reach out to via a journey, to let them know about a new subscription program.
 
 * Description: Profiles who have spent more than $250 in aggregate in the last 3 months
-* Fields & Conditions Needed in the audience:
+* Fields and Conditions Needed in the audience:
   * Event: `commerce.order.payments.paymentamount`
         * Aggregate Sum: >= $250
   * EventType: `commerce.purchases`
@@ -404,7 +403,7 @@ This high value and low frequency audience includes the profiles that you want t
 This audience is created to include profiles who have spent more than $250 in aggregate in the last 3 months, and have not had a purchase in the last 7 days. 
 
 * Description: profiles who have spent more than $250 in aggregate in the last 3 months, and have not had a purchase in the last 7 days. 
-* Fields & Conditions Needed:
+* Fields and Conditions Needed:
   * EventType: `journey.feedback`
     * Operand: = true
   * Event: `experience.journeyOrchestration.stepEvents.nodeName`
@@ -425,7 +424,7 @@ This audience is created to include profiles who have spent more than $250 in ag
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) helps you deliver connected, contextual, and personalized experiences to your customers. The customer journey is the entire process of a customer's interactions with the brand. Each use case journey requires specific information. 
 
-For the purpose of this use case, you must create two separate journeys - the lifetime journey, which includes the message that you send to your high-value, low-frequency customers, and the order confirmation journey for the users wgo respond to your call and purchase a subscription. 
+To accomplish this use case, you must create two separate journeys - the lifetime journey, which includes the message that you send to your high-value, low-frequency customers, and the order confirmation journey for the users who respond to your call and purchase a subscription. 
 
 ![Journeys highlighted.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){width="1000" zoomable="yes"}
 
@@ -443,7 +442,7 @@ The lifetime journey addresses the audience of high value and low frequency cust
 
 The journey shown above follows the following logic.
 
-1. Read audience - use a [read audience activity](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en) for the first audience created UC2_HighValueLowFrequency_NotTargetedLast30Days_AJO in the audiences section. 
+1. Read audience - use a [read audience activity](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en) for the first audience created in the audiences section above. 
 
 2. Condition - Preferred Channel - use a [condition activity](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html) to determine how to reach out to customers, whether through email, SMS, or push notifications. Use three action activities to create the three branches.
 
@@ -512,22 +511,12 @@ For more information about creating journeys in [!DNL Adobe Journey Optimizer], 
 
 ### Set up paid media ads in destinations {#paid-media-ads}
 
-Some users might not have purchased your subscription even after you message them about the new program. After waiting for a number of days, (seven in our example use case), you can decide to show paid media ads to those users, to try an nudge them into purchasing your subscription. 
+Some users might not have purchased your subscription even after you message them about the new program. After waiting for a number of days, (seven in this example use case), you can decide to show paid media ads to those users, to try and nudge them into purchasing your subscription. 
 
 Use the destinations framework in Real-Time CDP for paid media ads. Select one of the many available destinations to display paid media ads to your customers and activate the Paid media audience that you [created earlier](#create-audiences) to a destination of your choice. See an overview of available [advertising](/help/destinations/catalog/advertising/overview.md) and [social](/help/destinations/catalog/social/overview.md) destinations. Browse all available destinations in the destinations catalog. 
 
-As part of the activation process, the destination also checks for customer consent. 
-
-#### Data required for destinations
-
-Streaming segment export destinations (such as Facebook, Google Customer Match, Google DV360) support various identities from customer data: 
-
-* `personalEmail.address`
-* `ECID`
-* `mobilePhone.number`
-
 ## Next steps {#next-steps}
 
-By setting your low frequency and high value users on a journey and by displaying paid media ads to a subset of them, you have hopefully turned some of them from one-time value to lifetime value. 
+By setting your low frequency and high value users on a journey and by displaying paid media ads to a subset of them, you have hopefully turned some of them from one-time value to lifetime value customers. 
 
-Next, you can explore other use cases supported by Real-Time CDP, such as intelligently re-engaging customers or displaying personalized content to unauthenticated users on your properties.
+Next, you can explore other use cases supported by Real-Time CDP, such as [intelligently re-engaging customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) or [displaying personalized content to unauthenticated users](/help/rtcdp/partner-data/onsite-personalization.md) on your web properties.
