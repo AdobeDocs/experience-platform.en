@@ -35,6 +35,15 @@ An advertiser wants to target users in audiences with ads through the Zeta DSP a
 
 The ZMP destination connector will allow you to map any platform identities to the identities that are set in your ZMP account. The connector automagically fills out the target fields that you can choose during the mapping step.
 
+[!DNL Zeta Marketing Platform] supports the activation of custom user IDs described in the table below. For more details, see [identities](/help/identity-service/namespaces.md).
+
+|Target Identity|Description|Notes|
+---------|----------|----------|
+|Email|Email address|Select email when you want to identify a unique profile using their email address.|
+|Email MD5|MD5-hashed email address|Select emailmd5 when you want to identify a unique profile using their Md5-hased email address.|
+
+{style="table-layout:auto"}
+
 ## Supported audiences {#supported-audiences}
 
 This section describes which type of audiences you can export to this destination.
@@ -80,7 +89,7 @@ To configure details for the destination, fill in the required and optional fiel
 ![Image showing ZMP configuration](../../assets/catalog/data-management-platform/zmp-extension/ConfigureNewDestination.png)
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Account Site ID]**: Your ZMP **Site Id** where you want to send your audiences to.
+*  **[!UICONTROL Account Site ID]**: Your ZMP **Site Id** where you want to send your audiences to. You can view your Site Id by navigating to **Settings** > **Integrations** > **Keys & Apps** section. More information can be found [here](https://knowledgebase.zetaglobal.com/zmp/integrations).
 *  **[!UICONTROL Select Segment]**: The static segment in your ZMP Site Id that you want to be updated with the Platform audience.
 
 ### Enable alerts {#enable-alerts}
@@ -100,10 +109,17 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 ### Map attributes and identities {#map}
 
-*Add information about supported mappings between source and target fields in the Mapping step of the activation workflow. Your destination might support exporting profile attributes, identity namespaces, or both. Some fields might be mandatory. Target attributes might be predefined or custom. Call out the important caveats and use examples, preferably with screenshots. Two examples of destination pages which you can use as reference are:*
+Below is an example of correct identity mapping when exporting profiles to [!DNL Pega Customer Decision Hub].
 
-* *[Pega](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/pega.html?lang=en#mapping-example)*
-* *[Medallia](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/voice/medallia-connector.html?lang=en#map)*
+Selecting source fields:
+* Select an identifier (For example: Email) as source identity that uniquely identifies a profile in Adobe Experience Platform and [!DNL Zeta Marketing Platform].
+* Select any XDM source profile attribute changes that need to be exported and updated in [!DNL Zeta Marketing Platform].
+
+Selecting target fields:
+* Select `uid` as the target identity. Note that you can set any one of the [Supported Identities](#supported-audiences) as the `uid`.
+* Select any other destination profile attribute names that need to be mapped to corresponding XDM source profile attributes.
+
+![Identity mapping](../../assets/catalog/data-management-platform/zmp-extension/MappingExample.png)
 
 ## Exported data / Validate data export {#exported-data}
 
