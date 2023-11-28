@@ -83,9 +83,9 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
-[Consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) is currently not honored in exports to the three enterprise destinations - Amazon Kinesis, Azure Event Hubs, and HTTP API.
+[Consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) is currently not supported in exports to the three enterprise destinations - Amazon Kinesis, Azure Event Hubs, and HTTP API.
 
-This means that profiles who have not consented to being targeted *are not excluded* from the exports to these three destinations.
+This means that profiles which have not consented to being targeted *are included* in the exports to these three destinations.
 
 <!--
 
