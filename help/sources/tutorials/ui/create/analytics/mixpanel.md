@@ -59,7 +59,7 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 >id="platform_sources_mixpanel_timezone"
 >title="Set a timezone for Mixpanel ingestion"
 >abstract="The timezone must be the same as your Mixpanel profile timezone setting because Platform uses the designated project timezone to ingest relevant data from Mixpanel. Mixpanel will adjust its timezone to coordinate with your project timezone before recording the event to a Mixpanel data store."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="Learn more in documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html#project-id-and-timezone" text="Learn more in documentation"
 
 Once your source is authenticated, provide your project ID and timezone and then select **[!UICONTROL Select]**. 
 

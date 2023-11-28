@@ -1,6 +1,7 @@
 ---
 title: Supplement First-party Profiles with Partner-provided Attributes
 description: Learn how to supplement first-party profiles with attributes from trusted data partners to improve your data foundation, gain new insights into your customer base, and better audience optimization.
+feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
 ---
 # Supplement First-party Profiles with Partner-provided Attributes
@@ -12,6 +13,16 @@ exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
 Supplement first-party profiles with attributes from trusted data partners to improve your data foundation and gain new insights into your customer base and gain better audience optimization.
 
 ![Enrich profiles with partner-provided attributes use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
+
+## Why consider this use case {#why-this-use-case}
+
+Most brands, even those which are rich with first party data, can benefit from streamlining their data and gaining a more nuanced understanding of customers, their behaviors, patterns, and preferences. 
+
+Adobe Real-time Customer Data Platform can help brands responsibly supplement their first-party data with valuable insights, identifiers, and attributes from one or more trusted partners. 
+
+Adobe understands there is no one-size-fits-all approach and allows for seamless interoperability with data and identity partners to foster individualized and thoughtful engagement across all stages of the customer lifecycle. These capabilities are underpinned by a trusted data governance framework, allowing for nuanced control on where and how partner data gets used. For instance, you may want to use partner provided insights for segmentation but not for personalization.
+
+For example, follow the steps described in this use case when you need to enrich your customer records with demographic and intent signals. 
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -120,5 +131,5 @@ Note the following limitations as you explore the use case described on this pag
 Explore further use cases enabled through partner data support in Real-Time CDP:
 
 * Use third-party data support in Real-Time CDP to [expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers](/help/rtcdp/partner-data/prospecting.md).
-* [Leverage partner aided recognition for personalizing on-site experiences](/help/rtcdp/partner-data/onsite-personalization.md) during the visit without the user authenticating or having prior history with your brand.
+* [Personalize onsite experiences for unknown visitors using partner-aided visitor recognition](/help/rtcdp/partner-data/onsite-personalization.md) during the visit without the user authenticating or having prior history with your brand.
 * [Expanded activation of prospect profiles and prospect audiences](/help/destinations/ui/activate-prospect-audiences.md) to select destinations.

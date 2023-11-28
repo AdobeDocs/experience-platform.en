@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
-title: Getting started with Media Edge APIs
-description: Media Edge APIs allow developers to collect data for Media Edge Analytics and Customer Journey Analytics.
+title: Media Edge Open API specification
+description: This document includes a YAML Open API Specification (OAS), or "Swagger" reference. You can copy and paste this specification into a rendering tool, such as editor.swagger.io to view Media Edge API information. This specification includes parameters, examples, and schema for each endpoint.
 exl-id: 14395fa4-14a6-4487-8645-1a19e5695349
 ---
 # Using the Open API Specification file for Media Edge APIs
 
-This document includes a JSON Open API Specification (OAS), or "Swagger" reference. You can copy and paste this specification into a rendering tool, such as editor.swagger.io to view Media Edge API information. This specification includes parameters, examples, and schema for each endpoint.
+This document includes a YAML Open API Specification (OAS), or "Swagger" reference. You can copy and paste this specification into a rendering tool, such as editor.swagger.io to view Media Edge API information. This specification includes parameters, examples, and schema for each endpoint.
 
 +++ Select to view and copy Open API Specification
 
@@ -2654,7 +2654,7 @@ This document includes a JSON Open API Specification (OAS), or "Swagger" referen
     },
     "/play": {
       "post": {
-        "description": "Sent when the player changes state to "playing" from another state, such as when the on ('Playing') callback is triggered by the player. Other states from which the player moves to "playing" include "buffering", when the user resumes from "paused", when the player recovers from an error, and during autoplay."
+        "description": "Sent when the player changes state to \"playing\" from another state, such as when the on ('Playing') callback is triggered by the player. Other states from which the player moves to \"playing\" include \"buffering\", when the user resumes from \"paused\", when the player recovers from an error, and during autoplay.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -3326,11 +3326,11 @@ This document includes a JSON Open API Specification (OAS), or "Swagger" referen
                                     },
                                     "contentType": {
                                       "type": "string",
-                                      "description": "Available values per Stream Type: Audio - "song", "podcast", "audiobook", "radio"; Video: "VoD", "Live", "Linear", "UGC", "DVoD" Customers can provide custom values for this parameter"
+                                      "description": "Available values per Stream Type: Audio - \"song\", \"podcast\", \"audiobook\", \"radio\"; Video: \"VoD\", \"Live\", \"Linear\", \"UGC\", \"DVoD\" Customers can provide custom values for this parameter",
                                     },
                                     "friendlyName": {
                                       "type": "string",
-                                      "description": "This is the "friendly" (human-readable) name of the content"
+                                      "description": "This is the \"friendly\" (human-readable) name of the content"
                                     },
                                     "playerName": {
                                       "type": "string",

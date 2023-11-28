@@ -630,7 +630,7 @@ This action triggers all rules that use a specific [direct call event](#direct-c
 
 ![Screenshot of a Trigger Direct Call action in the Data Collection UI](../../../images/extensions/client/core/direct-call-action.png)
 
-The action maps directly to the [`track` method](../../../ui/client-side/satellite-object.md?lang=en#track) in the `satellite` object, which can be accessed by client-side code.
+The action maps directly to the [`track` method](../../../ui/client-side/satellite-object.md#track) in the `satellite` object, which can be accessed by client-side code.
 
 ## Core extension data element types
 

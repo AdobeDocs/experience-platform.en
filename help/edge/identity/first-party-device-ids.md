@@ -5,7 +5,7 @@ exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
 ---
 # First-party device IDs in the Platform Web SDK
 
-The Adobe Experience Platform Web SDK assigns [Adobe Experience Cloud IDs (ECIDs)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en) to website visitors through the use of cookies, in order to track user behavior. To account for browser restrictions on cookie lifespans, you can opt to set and manage your own device identifiers instead. These are referred to as first-party device IDs (FPIDs).
+The Adobe Experience Platform Web SDK assigns [Adobe Experience Cloud IDs (ECIDs)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) to website visitors through the use of cookies, in order to track user behavior. To account for browser restrictions on cookie lifespans, you can opt to set and manage your own device identifiers instead. These are referred to as first-party device IDs (FPIDs).
 
 >[!NOTE]
 >
@@ -204,6 +204,10 @@ If you are migrating to using FPIDs from a previous implementation, it may be di
 To help illustrate this process, consider a scenario that involves a customer who has previously visited your site and what impact an FPID migration would have on how that customer is identified in Adobe solutions. 
 
 ![Diagram showing how a customer's ID values are updated between visits after migrating to FPIDs](../assets/identity/tracking/visits.png)
+
+>[!IMPORTANT]
+>
+>The `ECID` cookie is always prioritized over the `FPID`.
 
 | Visit | Description |
 | --- | --- |

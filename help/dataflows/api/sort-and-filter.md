@@ -189,6 +189,58 @@ Depending on the Flow Service entity you are retrieving, different properties ca
 
 {style="table-layout:auto"}
 
+## Use cases {#use-cases}
+
+Read this section for some specific examples of how you can use filtering and sorting to return information about certain connectors or to assist you in debugging issues. If there are any additional use cases that you would like Adobe to add, please use the **[!UICONTROL Detailed feedback options]** on the page to submit a request.
+
+**Filter to return connections to a certain destination only**
+
+You can use filters to return connections to certain destinations only. First, query the `connectionSpecs` endpoint like below:
+
+```http
+GET /connectionSpecs
+```
+
+Then, search for your desired `connectionSpec` by inspecting the `name` parameter. For example, search for Amazon Ads, or Pega, or SFTP, and so on in the `name` parameter. The corresponding `id` is the `connectionSpec` that you can search by in the next API call. 
+
+For example, filter your destinations to only return existing connections to Amazon S3 connections:
+
+```http
+GET /connections?property=connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
+```
+
+**Filter to return dataflows to destinations only**
+
+When querying the `/flows` endpoint, instead of returning all sources and destinations dataflows, you can use a filter to only return dataflows to destinations. To do this, use `isDestinationFlow` as query parameter, like this: 
+
+```http
+GET /flows?property=inheritedAttributes.properties.isDestinationFlow==true
+```
+
+**Filter to return dataflows to a certain source or destination only**
+
+You can filter dataflows to return dataflows to a certain destination or from a certain source only. For example, filter your destinations to only return existing connections to Amazon S3 connections:
+
+```http
+GET /flows?property=inheritedAttributes.targetConnections[].connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
+```
+
+**Filter to get all runs of a dataflow for a specific time-period**
+
+You can filter dataflow runs of a dataflow to only look at runs in a certain time interval, like below:
+
+```
+GET /runs?property=flowId==<flow-id>&property=metrics.durationSummary.startedAtUTC>1593134665781&property=metrics.durationSummary.startedAtUTC<1653134665781
+```
+
+**Filter to return failed dataflows only**
+
+For debugging purposes, you can filter and see all the failed dataflow runs for a certain source or destination dataflow, like below:
+
+```http
+GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Failed
+```
+
 ## Next steps
 
 This guide covered how to use the `orderby` and `property` query parameters to sort and filter responses in the Flow Service API. For step-by-step guides on how to use the API for common workflows in Platform, see the API tutorials contained in the [sources](../../sources/home.md) and [destinations](../../destinations/home.md) documentation.
