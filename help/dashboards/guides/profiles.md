@@ -63,7 +63,81 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 The [!UICONTROL Browse] tab allows you to search and view the read-only profiles ingested into your organization. From here you can see important information belonging to the profile regarding their preferences, past events, interactions, and audiences. 
 
-To learn more about the profile viewing capabilities provided in the Platform UI, refer to the documentation on [browsing profiles in Adobe Real-Time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+## Profile details {#profile-details}
+
+To open the [!UICONTROL Profiles] [!UICONTROL Detail] workspace, select a [!UICONTROL Profile ID] from the list.
+
+![The Profiles Browse tab with a profile ID highlighted.](../images/profiles/profile-id.png)
+
+The [!UICONTROL Profiles] [!UICONTROL Detail] workspace displays several pre-configured widgets that convey information specific to that profile. This information allows you to understand key attributes of the profile at a glance. You can also customize your [!UICONTROL Profiles] [!UICONTROL Detail] workspace by creating your own widgets. See the section on [how to add widgets](#add-widgets) for more details.
+
+![The [!UICONTROL Profiles] [!UICONTROL Detail] workspace with the [!UICONTROL Detail] tab highlighted.](../images/profiles/profile-details-workspace.png)
+
+### Profile details widgets {#widgets}
+
+The pre-configured profile details widgets are as follows:
+
+#### Customer profile {#customer-profile}
+
+The [!UICONTROL Customer profile] widget displays the first and last name of the user associated with the profile, as well as their [!UICONTROL Profile ID]. A profile ID is an auto-generated identifier associated with an identity type and represents a profile. To learn more about identities and identity namespaces, see the [identities overview](../../rtcdp/profile/identities-overview.md).
+
+![The Customer profile widget.](../images/profiles/customer-profile.png)
+
+#### Basic attributes {#basic-attributes}
+
+The [!UICONTROL Basic attributes] widget displays the most commonly used attributes that are used to define an individual profile. 
+
+![The Basic attributes widget.](../images/profiles/basic-attributes.png)
+
+#### Linked identities {#linked-identities}
+
+The [!UICONTROL Linked identities] widget displays any other identities associated with the profile.
+
+To view the identity details of the profile in greater depth and navigate to the [!UICONTROL Identities] workspace, select **[!UICONTROL View identity graph]**.
+
+![The Linked identities widget.](../images/profiles/linked-identities.png)
+
+#### Channel preferences {#channel-preferences}
+
+The [!UICONTROL Channel preferences] widget displays the channels of communication that the user has consented to receive communication from. A check mark indicates each channel that the user has consented to receive communication from.
+
+<!-- image needs a blue tick added below -->
+
+![The Channel preferences widget.](../images/profiles/channel-preferences.png)
+
+Customer consent and contact preferences are complex topics. To learn how consent and context preferences can be collected, processed, and filtered in Experience Platform, you are recommended to read the following documents:
+
+* To learn about the schema field groups required to [collect consent data according to the Adobe standard](../../landing/governance-privacy-security/consent/adobe/overview.md), see the documentation on these Profile-enabled schema field groups.
+    * [[!UICONTROL Consent and Preference Details]](../../xdm/field-groups/profile/consents.md)
+    * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (required if using the Platform Web or Mobile SDK to send consent signals)
+* To learn how to process customer consent and preference data using the Adobe standard, see the overview on [consent processing in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
+* A combined data governance and consent policy can be used to filter profiles for segmentation based on their consent preferences and your established organizational rules. To learn how to create and use these combined policies, see the user guide on [managing data usage policies](../../data-governance/policies/user-guide.md#combine-policies). 
+
+### Add widgets {#add-widgets}
+
+To add customized widgets to your [!UICONTROL Profiles] [!UICONTROL Detail] workspace, select **[!UICONTROL Customize profile details]**. 
+
+![The Profiles Detail workspace with [!UICONTROL Customize profile details] highlighted.](../images/profiles/customize-profile-details.png)
+
+You can now edit the workspace by resizing or relocating the widgets. Select **[!UICONTROL Add widget]** to create a widget with custom attributes. 
+
+![The Profiles [!UICONTROL Detail] workspace with [!UICONTROL Add widget] highlighted.](../images/profiles/add-widget.png)
+
+The widget creator appears. Enter a descriptive name for your widget in the [!UICONTROL Card title] text field and select **[!UICONTROL Add attributes]**.
+
+![The widget creator canvas with the [!UICONTROL Card title] field and [!UICONTROL Add attributes] highlighted.](../images/profiles/widget-creator.png)
+
+A dialog appears that contains a visualization of the profile's union schema. Use the search field or scroll to find the attributes that you want to report on with your widget. Select the checkbox for any attributes that you want to include. Select **[!UICONTROL Select]** to continue the creation workflow.
+
+>[!TIP]
+>
+>A selection of the top level checkbox includes any child elements.
+
+![The union schema diagram with the loyalty attribute checkbox and [!UICONTROL Select] highlighted.](../images/profiles/union-schema-attributes.png)
+
+A preview of the completed widget is displayed on the canvas. Once you are happy with your chosen attributes, select **[!UICONTROL Save]** to confirm your choices and return to the [!UICONTROL Profiles] [!UICONTROL Detail] workspace. The newly created widget is now visible in the workspace.
+
+![The widget creator canvas with Save highlighted and displaying the widget preview.](../images/profiles/widget-preview.png)
 
 ## Merge policies {#merge-policies}
 
