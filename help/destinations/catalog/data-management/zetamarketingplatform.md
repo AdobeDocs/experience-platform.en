@@ -35,8 +35,6 @@ An advertiser wants to target users in audiences with ads through the Zeta DSP a
 
 The ZMP destination connector will allow you to map any platform identities to the identities that are set in your ZMP account. The connector automagically fills out the target fields that you can choose during the mapping step.
 
-ADD IMAGE FOR EXPLANATION
-
 ## Supported audiences {#supported-audiences}
 
 This section describes which type of audiences you can export to this destination.
@@ -79,8 +77,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-ADD IMAGE
-
+![Image showing ZMP configuration](../../assets/catalog/data-management-platform/zmp-extension/ConfigureNewDestination.png)
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Account Site ID]**: Your ZMP **Site Id** where you want to send your audiences to.
@@ -158,4 +155,3 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Additional resources {#additional-resources}
 
 *You can provide further links to your product documentation or any other resources that you consider important for the customer to be successful.*
-
