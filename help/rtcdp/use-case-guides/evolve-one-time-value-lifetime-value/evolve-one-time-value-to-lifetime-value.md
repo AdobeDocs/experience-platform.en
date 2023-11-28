@@ -423,141 +423,37 @@ This audience is created to include profiles who have spent more than $250 in ag
 >
 >[!DNL Adobe Journey Optimizer] does not encompass everything shown in the diagrams. All [paid media ads](/help/destinations/catalog/social/overview.md) are created in [!UICONTROL Destinations].
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) helps you deliver connected, contextual, and personalized experiences to your customers. The customer journey is the entire process of a customer's interactions with the brand. Each use case journey requires specific information. Listed below is the precise data needed for each Journey branch.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) helps you deliver connected, contextual, and personalized experiences to your customers. The customer journey is the entire process of a customer's interactions with the brand. Each use case journey requires specific information. 
+
+For the purpose of this use case, you must create two separate journeys - the lifetime journey, which includes the message that you send to your high-value, low-frequency customers, and the order confirmation journey for the users wgo respond to your call and purchase a subscription. 
+
+![Journeys highlighted.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){width="1000" zoomable="yes"}
+
+Listed below is the precise data needed for each Journey branch.
 
 >[!BEGINTABS]
 
 >[!TAB Lifetime Journey]
 
-The lifetime journey addresses the audience of high value and low frequency customers who were not targeted within the last 30 days. A message is shown to these customers and then, if after 7 days they still do not purchase, you can include the non-purchasers in an audience which will you can show paid media ads to.
+The lifetime journey addresses the audience of high value and low frequency customers who were not targeted within the last 30 days. A message is shown to these customers and then, if after 7 days they still do not purchase, you can include the non-purchasers in an audience which will you can show paid media ads to. If they do purchase, you can set the purchasers on an order confirmation journey, detailed in the separate tab.
 
-![Lifetime journey high level visual overview.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "Customer intelligent re-engagement journey high level visual overview."){width="2560" zoomable="yes"}
+![Lifetime journey high-level visual overview.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "One-time value to lifetime journey high-level visual overview."){width="2560" zoomable="yes"}
 
-+++Events
++++Detailed Journey Logic
 
-* Event 1: Product Views
-    * Schema: Customer Digital Transactions
-    * Fields:
-        * `EventType`
-    * Condition: 
-        * `EventType = commerce.productViews`
-        * Fields:
-            * `Commerce.productViews.id`
-            * `Commerce.productViews.value`
-            * `eventType`
-            * `identityMap.authenticatedState`
-            * `identityMap.id`
-            * `identityMap.primary`
-            * `productListItems.SKU`
-            * `productListItems.currencyCode`
-            * `productListItems.name`
-            * `productListItems.priceTotal`
-            * `productListItems.product`
-            * `productListItems.productImageUrl`
-            * `productListItems.quantity`
-            * `timestamp`
-            * `endUserIDs._experience.emailid.authenticatedState`
-            * `endUserIDs._experience.emailid.id`
-            * `endUserIDs._experience.emailid.namespace.code`
-            * `_id`
+The journey shown above follows the following logic.
 
-* Event 2: Add to Cart
-    * Schema: Customer Digital Transactions
-    * Fields:
-        * `EventType`
-    * Condition:
-        * `EventType = commerce.productListAdds`
-        * Fields:
-            * `Commerce.productListAdds.id`
-            * `Commerce.productListAdds.value`
-            * `eventType`
-            * `identityMap.authenticatedState`
-            * `identityMap.id`
-            * `identityMap.primary`
-            * `productListItems.SKU`
-            * `productListItems.currencyCode`
-            * `productListItems.name`
-            * `productListItems.priceTotal`
-            * `productListItems.product`
-            * `productListItems.productImageUrl`
-            * `productListItems.quantity`
-            * `timestamp`
-            * `commerce.cart.cartID`
-            * `endUserIDs._experience.emailid.authenticatedState`
-            * `endUserIDs._experience.emailid.id`
-            * `endUserIDs._experience.emailid.namespace.code`
-            * `_id`
+1. Read audience - use a [read audience activity](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en) for the first audience created UC2_HighValueLowFrequency_NotTargetedLast30Days_AJO in the audiences section. 
 
-* Event 3: Brand Engagement
-    * Schema: Customer Digital Transactions
-    * Fields:
-        * `EventType`
-    * Condition: 
-        * `EventType in application.launch, commerce.purchases, web.webpagedetails.pageViews`
-        * Fields:
-            * `eventType`
-            * `identityMap.authenticatedState`
-            * `identityMap.id`
-            * `identityMap.primary`
-            * `productListItems.SKU`
-            * `productListItems.currencyCode`
-            * `productListItems.name`
-            * `productListItems.priceTotal`
-            * `productListItems.product`
-            * `productListItems.productImageUrl`
-            * `productListItems.quantity`
-            * `timestamp`
-            * `web.webpagedetails.URL`
-            * `web.webpagedetails.isHomePage`
-            * `web.webpagedetails.name`
-            * `endUserIDs._experience.emailid.authenticatedState`
-            * `endUserIDs._experience.emailid.id`
-            * `endUserIDs._experience.emailid.namespace.code`
-            * `_id`
-            * `Commerce.purchases.id`
-            * `Commerce.purchases.value`
-            * `shipping.address.city`
-            * `shipping.address.countryCode`
-            * `shipping.address.postalCode`
-            * `shipping.address.state`
-            * `shipping.address.street1`
-            * `shipping.address.street2`
-            * `shipping.shipDate`
-            * `shipping.trackingNumber`
-            * `shipping.trackingURL`
+2. Condition - Preferred Channel - use a [condition activity](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html) to determine how to reach out to customers, whether through email, SMS, or push notifications. Use three action activities to create the three branches.
+
+3. Wait - use a [wait activity](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html) to wait until you listen for purchases.
+
+4. Condition - Purchased Subscription in last 7 days? - use a condition activity to listen for product purchases in the last seven days. 
+
+5. JourneyStepEventTracker - Subscription Not Purchased - use a [custom action](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) for the visitors who have not yet purchased your subscription, despite receiving your message. As part of the custom condition at the end of journey, create a `journey.feedback` event. You will use this event to segment the audience which has not purchased the subscription and which you can target via paid media ads.
 
 +++
-
-+++Key Journey logic
-
-* Journey Entry Logic
-    * Product View Event
-
-* Conditions 
-    * Check for at least one online or offline purchase event since the product was last viewed.
-        * Schema: Customer Digital Transactions
-        * `eventType = commerce.purchases` 
-        * `timestamp > timestamp of product last viewed`
-    
-    * Check for at least one offline purchase since product last viewed: 
-        * Schema: Customer Offline Transactions
-        * `eventType = commerce.purchases`
-        * `timestamp > timestamp of product last viewed`
-
-    * Conditions - Select the Target channel
-        * Email
-            * `consents.marketing.email.val = y`
-        * Push 
-            * `consents.marketing.push.val=y`
-        * SMS
-            * `consents.marketing.sms.val = y`
-
-    * Channel Personalization
-        * Personalized channel content based on product view.
-
-+++
-
-Add a custom condition at the end of journey, creating a journey.feedback event. You will use this event to segment the audience which has not purchased the subscription and which you can target via paid media ads.
 
 >[!TAB Order Confirmation Journey]
 
@@ -618,7 +514,7 @@ For more information about creating journeys in [!DNL Adobe Journey Optimizer], 
 
 Some users might not have purchased your subscription even after you message them about the new program. After waiting for a number of days, (seven in our example use case), you can decide to show paid media ads to those users, to try an nudge them into purchasing your subscription. 
 
-Use the destinations framework in Real-Time CDP for paid media ads. Select one of the many available destinations to display paid media ads to your customers. See an overview of available [advertising](/help/destinations/catalog/advertising/overview.md) and [social](/help/destinations/catalog/social/overview.md) destinations. Browse all available destinations in the destinations catalog. 
+Use the destinations framework in Real-Time CDP for paid media ads. Select one of the many available destinations to display paid media ads to your customers and activate the Paid media audience that you [created earlier](#create-audiences) to a destination of your choice. See an overview of available [advertising](/help/destinations/catalog/advertising/overview.md) and [social](/help/destinations/catalog/social/overview.md) destinations. Browse all available destinations in the destinations catalog. 
 
 As part of the activation process, the destination also checks for customer consent. 
 
