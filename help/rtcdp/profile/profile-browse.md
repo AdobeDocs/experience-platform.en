@@ -28,6 +28,8 @@ The profile detail includes access to [!UICONTROL Accounts], [!UICONTROL Opportu
 
 ![](images/b2b-profile-detail.png)
 
+To learn more about the profile details provided in the Platform UI, refer to the [details section of the Profiles dashboard documentation](../../dashboards/guides/profiles.md#browse-profiles).
+
 ### Accounts tab
 
 Select **[!UICONTROL Accounts]** to view a list of accounts related to the profile. This list includes basic information from the account profile such as the name, website, and industry of the account, as well as a link to the account profile. 
