@@ -7,11 +7,15 @@ exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
 ---
 # Real-Time Customer Data Platform overview
 
+## What is Real-Time CDP
+
 Built on Adobe Experience Platform, Adobe Real-Time Customer Data Platform (Real-Time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time.
 
 Real-Time CDP includes tools for data governance, identity management, advanced segmentation, and data science so that you can build profiles and define audiences, as well as derive rich insights while being able to enforce strict data governance policies.
 
 Real-Time Customer Data Platform connects to a large ecosystem of partners, not to mention native integrations with Adobe Experience Cloud, so you can seamlessly activate these audiences and deliver great customer experiences across all channels, from on-site or in-app personalization to email, paid media, call centers, connected devices, and more.
+
+## What you can do with Real-Time CDP
 
 With Real-Time Customer Data Platform, you can:
 
@@ -20,11 +24,20 @@ With Real-Time Customer Data Platform, you can:
 * Generate actionable insights and scale audiences with AI and machine learning powered by Adobe Sensei and built for marketers.
 * Deliver personalized experiences in realtime across all channels and destinations.
 
-## Real-Time Customer Data Platform B2B Edition
+## Significant links
+
+
+
+## Real-Time Customer Data Platform editions
+
+|Real-Time CDP B2C | Real-Time CDP B2B | Real-Time CDP B2P|
+|---------|----------|---------|
+| Prime | Prime | Prime |
+| Ultimate | Ultimate | Ultimate |
 
 There is also a different edition of Real-Time CDP available to suit business-to-business organizational needs. Real-Time CDP B2B Edition is purpose-built to expand the functionality of Real-Time CDP for marketers. It has different capabilities enabled within the Adobe Experience Platform ecosystem to better suit operating within a business-to-business service model. 
 
-Real-Time CDP B2B Edition allows marketers to create holistic profiles for people and accounts. Specifically you can enrich, segment, and export all of your cross-source data from a centralized store of unified account profiles. This data can be managed using data governance tools that are available at every step of the centralizing process.
+Real-Time CDP B2B Edition allows marketers to create complete profiles for people and accounts. Specifically you can enrich, segment, and export all of your cross-source data from a centralized store of unified account profiles. This data can be managed using data governance tools that are available at every step of the centralizing process.
 
 See [the overview on Real-Time CDP B2B Edition](./b2b-overview.md) for more comprehensive information.
 
