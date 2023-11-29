@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Overview of data awareness in Use Case Playbooks
-description: Learn how to accelerate time to value by leveraging Adobe standard fields and field groups
+description: Learn how to accelerate time to value by copying the assets generated in the end inspirational sandbox to other sandboxes.
 badgeBeta: label="Beta" type="Informative"
 ---
 
@@ -11,7 +11,7 @@ Use case playbooks are marketing templates that are designed to generate assets 
 
 ## Prerequisistes {#prerequisites}
 
-Before reading this tutorial, browse the [available use case playbook templates](/help/use-case-playbooks/playbooks/discover.md#search-and-filter) and [create an instance](https://experienceleague.adobe.com/docs/experience-platform/use-case-playbooks/playbooks/create-share-reuse.html?lang=en#create-playbook-instance) of a preferred playbook.
+Before reading this tutorial, browse the [available use case playbook templates](/help/use-case-playbooks/playbooks/discover.md#search-and-filter) and [create an instance](/help/use-case-playbooks/playbooks/create-share-reuse.md) of a preferred playbook.
 
 Creating an instance generates a set of assets such as journeys, segments, schemas, and messages in the inspirational sandbox. Read on to learn how you can copy these assets into other sandboxes.
 
@@ -49,11 +49,11 @@ Creating an instance generates a set of assets such as journeys, segments, schem
 
 ### Map schemas {#map-schemas}
 
-1. Map the first schema. The schema mapping dialog displays a picker to select the target schema. If the source schema is a profile schema, then there are no other target schema options besides the [individual union profile schema](/help/xdm/classes/individual-profile.md). You can see automatically generated mapping recommendations between Source Data and Target Fields when the page is first displayed. You can edit the mappings by selecting the target field and then selecting a new field. If you make changes to the suggested mappings, use the **Validate** button to validate the new mappings and display any errors that may be linked to the new mappings. Select **Save** once the mapping is complete.
+1. Map the first schema. The schema mapping dialog displays a drop-down to select the target schema. If the source schema is a profile schema, then there are no other target schema options besides the [individual union profile schema](/help/xdm/classes/individual-profile.md). You can see automatically generated mapping recommendations between Source Data and Target Fields when the page is first displayed. You can edit the mappings by selecting the target field and then selecting a new field. If you make changes to the suggested mappings, use the **Validate** button to validate the new mappings and display any errors that may be linked to the new mappings. Select **Save** once the mapping is complete.
 
    ![Schema mapping dialog with a dropdown to select a target schema.](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
 
-2. Continue mapping all the schemas in the package. If the schema is an [event schema](/help/xdm/classes/experienceevent.md), the dialog shows a dropdown where you can view all the event schemas in the target sandbox.
+2. Continue mapping all the fields in the schemas. If the schema is an [event schema](/help/xdm/classes/experienceevent.md), the dialog shows a dropdown where you can view all the event schemas in the target sandbox.
 
    ![Select a target schema from dropdown](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-event-schema.png)
 
@@ -65,13 +65,13 @@ Creating an instance generates a set of assets such as journeys, segments, schem
 
    ![Save mapping](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-modal.png)
 
-5. Once all schemas have been mapped, select **Finish** to complete the import workflow.
+5. Once you've completed mapping all the fields in the schemas, select **Finish** to complete the import workflow.
 
    ![Finish the flow](/help/use-case-playbooks/assets/playbooks/data-awareness/complete-flow.png)
 
 ### Import status {#import-status}
 
-1. You are automatically redirected to the [**Imports**](/help/sandboxes/ui/sandbox-tooling.md) page where you can see the progress of your import.
+1. You are automatically redirected to the [**Imports**](/help/sandboxes/ui/sandbox-tooling.md#view-import-details) page where you can see the progress of your import.
 
     ![Page showing import progress](/help/use-case-playbooks/assets/playbooks/data-awareness/import-progress.png)
 
