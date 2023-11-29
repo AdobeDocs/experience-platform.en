@@ -11,7 +11,9 @@ Use case playbooks are marketing templates that are designed to generate assets 
 
 ## Prerequisistes {#prerequisites}
 
-Before reading this tutorial, browse the [available use case playbook templates](https://experienceleague.adobe.com/docs/experience-platform/use-case-playbooks/playbooks/discover.html?lang=en#search-and-filter) and [create an instance](https://experienceleague.adobe.com/docs/experience-platform/use-case-playbooks/playbooks/create-share-reuse.html?lang=en#create-playbook-instance) of a preferred playbook.
+Before reading this tutorial, browse the [available use case playbook templates](/help/use-case-playbooks/playbooks/discover.md#search-and-filter) and [create an instance](https://experienceleague.adobe.com/docs/experience-platform/use-case-playbooks/playbooks/create-share-reuse.html?lang=en#create-playbook-instance) of a preferred playbook.
+
+Creating an instance generates a set of assets such as journeys, segments, schemas, and messages in the inspirational sandbox. Read on to learn how you can copy these assets into other sandboxes.
 
 ### Create and publish a package {#create-publish-package}
 
