@@ -205,6 +205,10 @@ To help illustrate this process, consider a scenario that involves a customer wh
 
 ![Diagram showing how a customer's ID values are updated between visits after migrating to FPIDs](../assets/identity/tracking/visits.png)
 
+>[!IMPORTANT]
+>
+>The `ECID` cookie is always prioritized over the `FPID`.
+
 | Visit | Description |
 | --- | --- |
 | First Visit | Assume you have not yet started setting the FPID cookie. The ECID contained in the [AMCV cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) will be the identifier used to identify the visitor. |

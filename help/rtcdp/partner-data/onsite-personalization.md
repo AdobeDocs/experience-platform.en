@@ -1,6 +1,7 @@
 ---
 title: Personalize onsite experiences for unknown visitors using partner-aided visitor recognition
 description: Learn how to use partner-aided visitor recognition to deliver personalized onsite experiences to your visitors.
+feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
 ---
 # Personalize onsite experiences for unknown visitors using partner-aided visitor recognition
