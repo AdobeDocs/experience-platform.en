@@ -26,7 +26,7 @@ Once you select the **[!UICONTROL Publish to a different sandbox]** button, a mo
 
 ![Create package modal](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 
-Now, navigate to the **Sandboxes** page in the left side navigation and select the **Packages** tab, find your package and publish it. In this example, the package is already published but in order to publish a package, follow the steps in the [sandbox tooling](/help/sandboxes/ui/sandbox-tooling#add-object-to-existing-package.md) document. 
+Now, navigate to the **Sandboxes** page in the left side navigation and select the **Packages** tab, find your package and publish it. In this example, the package is already published but in order to publish a package, follow the steps in the [sandbox tooling](/help/sandboxes/ui/sandbox-tooling.md) document. 
 
 After the publish succeeds, on the packages browse page you should see a **+** button enabled next to the name. 
 
@@ -82,4 +82,4 @@ While the package is importing, the assets of the package are being created in t
 
 ## Next steps
 
-After reading this guide, you now have a better understanding of how to leverage use case playbooks along with [sandbox tooling](/help/sandboxes/ui/sandbox-tooling#add-object-to-existing-package.md) to create executable journeys that reference your schemas. Learn more about the common [Real-Time CDP use cases](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+After reading this guide, you now have a better understanding of how to leverage use case playbooks along with [sandbox tooling](/help/sandboxes/ui/sandbox-tooling.md) to create executable journeys that reference your schemas. Learn more about the common [Real-Time CDP use cases](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
