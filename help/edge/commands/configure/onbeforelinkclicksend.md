@@ -45,10 +45,10 @@ content.xdm.web.webPageDetails.URL = "https://example.com/current.html";
 
 // Use nullish coalescing assignments to create objects if they don't yet exist, preventing undefined errors. 
 // Can be omitted if you are certain that the object is already defined
-content.xdm._experience ||= {};
-content.xdm._experience.analytics ||= {};
-content.xdm._experience.analytics.customDimensions ||= {};
-content.xdm._experience.analytics.customDimensions.eVars ||= {};
+content.xdm._experience ??= {};
+content.xdm._experience.analytics ??= {};
+content.xdm._experience.analytics.customDimensions ??= {};
+content.xdm._experience.analytics.customDimensions.eVars ??= {};
 
 // Then set the property to the clicked element
 content.xdm._experience.analytics.customDimensions.eVars.eVar1 = content.clickedElement;
@@ -88,7 +88,7 @@ You can also register your own function instead of an inline function.
 
 ```js
 function lastChanceLinkLogic(content) {
-  content.xdm.application ||= {};
+  content.xdm.application ??= {};
   content.xdm.application.name = "App name";
 }
 

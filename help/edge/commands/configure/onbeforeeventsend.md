@@ -40,8 +40,8 @@ The equivalent code within the modal window would be the following:
 
 ```js
 // Use nullish coalescing assignments to add objects if they don't yet exist
-content.xdm.commerce ||= {};
-content.xdm.commerce.order ||= {};
+content.xdm.commerce ??= {};
+content.xdm.commerce.order ??= {};
 
 // Then add the purchase ID
 content.xdm.commerce.order.purchaseID = "12345";
@@ -77,10 +77,10 @@ alloy("configure", {
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "onBeforeEventSend": function(content) {
     // Use nullish coalescing assignments to add a new value
-    content.xdm._experience ||= {};
-    content.xdm._experience.analytics ||= {};
-    content.xdm._experience.analytics.customDimensions ||= {};
-    content.xdm._experience.analytics.customDimensions.eVars ||= {};
+    content.xdm._experience ??= {};
+    content.xdm._experience.analytics ??= {};
+    content.xdm._experience.analytics.customDimensions ??= {};
+    content.xdm._experience.analytics.customDimensions.eVars ??= {};
     content.xdm._experience.analytics.customDimensions.eVars.eVar1 = "Analytics custom value";
     
     // Use optional chaining to change an existing value
@@ -111,7 +111,7 @@ You can also register your own function instead of an inline function.
 
 ```js
 function lastChanceLogic(content) {
-  content.xdm.application ||= {};
+  content.xdm.application ??= {};
   content.xdm.application.name = "App name";
 }
 
