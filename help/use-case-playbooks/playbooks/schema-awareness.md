@@ -26,7 +26,7 @@ Creating an instance generates a set of assets such as journeys, segments, schem
 
 ![Create package modal](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 
-3. Now, navigate to the **Sandboxes** page in the left side navigation and select the **Packages** tab, find your package and publish it. In this example, the package is already published but in order to publish a package, select the package that is still in draft mode and open the package detail page. It could take a while for the publish to succeed. 
+1. Now, navigate to the **Sandboxes** page in the left side navigation and select the **Packages** tab, find your package and publish it. In this example, the package is already published but in order to publish a package, follow the steps in the [sandbox tooling](/help/sandboxes/ui/sandbox-tooling#add-object-to-existing-package.md) document. 
 
 After the publish succeeds, on the packages browse page you should see a **+** button enabled next to the name. 
 
