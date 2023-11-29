@@ -579,6 +579,18 @@ Yes, attribute-based access control is enforced if configured. See the [attribut
 No, Query Service does not support the "INSERT OVERWRITE INTO" command.
 +++
 
+### How frequently is the usage data on the license usage dashboard updated for Data Distiller compute hours?
+
++++Answer
+The license usage dashboard for Data Distiller computer hours is updated four times a day, every six hours.
++++
+
+### Can I use the CREATE VIEW command without Data Distiller access?
+
++++Answer
+Yes, you can use `CREATE VIEW` command without Data Distiller access. This command provides a logical view of data but does not write it back to the data lake.
++++
+
 ## Exporting data {#exporting-data}
 
 This section provides information on exporting data and limits.
