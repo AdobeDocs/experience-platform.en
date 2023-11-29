@@ -1,60 +1,100 @@
-### `onBeforeLinkClickSend` {#onBeforeLinkClickSend}
+---
+title: onBeforeLinkClickSend
+description: Callback that runs just before link tracking data is sent.
+---
+# `onBeforeLinkClickSend`
 
-| Type | Required | Default Value |
-| -------- | ------------ | ----------------- |
-| Function | No           | () => undefined   |
+The `onBeforeLinkClickSend` callback allows you to register a JavaScript function that can alter link tracking data you send just before that data is sent to Adobe. This callback allows you to manipulate the XDM object, including the ability to add, edit, or remove elements. You can also conditionally cancel the sending of data altogether, such as with detected client-side bot traffic. It is supported on Web SDK 2.15.0 or later.
 
-{style="table-layout:auto"}
+This callback only runs when [`clickCollectionEnabled`](clickcollectionenabled.md) is enabled. If `clickCollectionEnabled` is disabled, this callback does not execute. If both `onBeforeEventSend` and `onBeforeLinkClickSend` contain registered functions, the `onBeforeLinkClickSend` function executes first. Once the `onBeforeLinkClickSend` function finishes, the `onBeforeEventSend` function then executes.
 
-Configure a callback that is called for every link click tracking event just before it is sent. The callback sends an object with the `xdm`, `clickedElement`, and `data` fields.
+>[!WARNING]
+>
+>This callback allows the use of custom code. If any code that you include in the callback throws an uncaught exception, processing for the event halts. Data is not sent to Adobe.
 
-When filtering the link tracking by using the DOM elements structure, you can use the `clickElement` command. `clickedElement` is the DOM element node that was clicked and has encapsulated the parent nodes tree.
+## On before link click send callback in the Web SDK extension
 
-To change what data gets sent, modify the `xdm` and/or `data` objects. Inside the callback, the `xdm` object already has the data passed in the event command, and the automatically collected information.
+Select the **[!UICONTROL Provide on before link click event send callback code]** button when configuring the extension. This button opens a modal window where you can insert the desired code.
 
-* Any value other than `false` will allow the event to process and the callback to be sent.
-* If the callback returns the `false` value, event processing is stopped, without an error, and the event is not sent. This mechanism allows for certain events to be filtered out by examining the event data and returning `false` if the event should not be sent.
-* If the callback throws an exception, processing for the event is stopped and the event is not sent.
+1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Select the desired tag property.
+1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
+1. Scroll down to the [!UICONTROL Data Collection] section, then select the checkbox **[!UICONTROL Enable click data collection]**.
+1. Select the button labeled **[!UICONTROL Provide on before link click event send callback code]**.
+1. This button opens a modal window with a code editor. Insert the desired code, then click **[!UICONTROL Save]** to close the modal window.
+1. Click **[!UICONTROL Save]** under extension settings, then publish your changes.
 
-Starting with Web SDK version 2.15.0, the data collected with automatic link tracking can be inspected, augmented or filtered by providing an [onBeforeLinkClickSend callback function](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend).
+Within the code editor, you can add, edit, or remove elements within the `content` object. This object contains the payload sent to Adobe. You do not need to define the `content` object or wrap any code within a function. Any variables defined outside of `content` can be used, but are not included in the payload sent to Adobe.
 
-This callback function is executed only when an automatic link click event occurs.
+>[!TIP]
+>
+>The objects `content.xdm`, `content.data`, and `content.clickedElement` are guaranteed to be defined, so you do not need to check if they exist. Some variables within these objects depend on your implementation and data layer. Adobe recommends checking for undefined values within these objects to prevent JavaScript errors.
 
-```javascript
+For example, say you want to perform the following actions:
+
+* Modify the current page URL
+* Capture the clicked element in an Adobe Analytics eVar
+* Change the link type from "other" to "download"
+
+The equivalent code within the modal window would be the following:
+
+```js
+// Set an already existing value to something else
+content.xdm.web.webPageDetails.URL = "https://example.com/current.html";
+
+// Use nullish coalescing assignments to create objects if they don't yet exist, preventing undefined errors. 
+// Can be omitted if you are certain that the object is already defined
+content.xdm._experience ||= {};
+content.xdm._experience.analytics ||= {};
+content.xdm._experience.analytics.customDimensions ||= {};
+content.xdm._experience.analytics.customDimensions.eVars ||= {};
+
+// Then set the property to the clicked element
+content.xdm._experience.analytics.customDimensions.eVars.eVar1 = content.clickedElement;
+
+// Use optional chaining to check if each object is defined, preventing undefined errors
+if(content.xdm.web?.webInteraction?.type === "other") content.xdm.web.webInteraction.type = "download";
+```
+
+Similarly to [`onBeforeEventSend`](onbeforeeventsend.md), you can `return true` to immediately complete the function, or `return false` to immediately cancel sending data. If you cancel the sending of data in `onBeforeLinkClickSend` when both `onBeforeEventSend` and `onBeforeLinkClickSend` contain registered functions, the `onBeforeEventSend` function does not run.
+
+## On before link click send callback using alloy.js
+
+Register the `onBeforeLinkClickSend` callback when running the `configure` command. You can change the `content` variable name to any value that you would like by changing the parameter variable inside of the inline function.
+
+```js
 alloy("configure", {
-  onBeforeLinkClickSend: function(options) {
-    if (options.xdm.web.webInteraction.type === "download") {
-      options.xdm.web.webInteraction.name = undefined;
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  "onBeforeLinkClickSend": function(content) {
+    // Add, modify, or delete values
+    content.xdm.web.webPageDetails.URL = "https://example.com/current.html";
+    
+    // Return true to immediately complete the function
+    if (sendImmediate == true) {
+      return true;
+    }
+    
+    // Return false to immediately cancel sending data
+    if(myBotDetector.isABot()){
+      return false;
     }
   }
 });
 ```
 
-When filtering the link tracking events using the `onBeforeLinkClickSend` command, Adobe recommends returning `false` for the link clicks that should not be tracked. Any other response will make Web SDK send the data to the Edge Network.
+You can also register your own function instead of an inline function.
 
+```js
+function lastChanceLinkLogic(content) {
+  content.xdm.application ||= {};
+  content.xdm.application.name = "App name";
+}
 
->[!NOTE]
->
->** When both the `onBeforeEventSend` and `onBeforeLinkClickSend` callback functions are set, the Web SDK runs the `onBeforeLinkClickSend` callback function to filter and augment the link click interaction event, followed by the `onBeforeEventSend` callback function.
-
-
-### How can link-tracking values be filtered?
-
-The data collected with automatic link tracking can be inspected and filtered by providing an [onBeforeEventSend callback function](../fundamentals/tracking-events.md#modifying-events-globally).
-
-Filtering link tracking data can be useful when preparing data for Analytics reporting. Automatic link tracking captures both the link name and link URL. In Analytics reports, the link name takes priority over link URL. If you wish to report the link URL, the link name needs to be removed. The following example shows an `onBeforeEventSend` function that removes the link name for download links:
-
-```javascript
 alloy("configure", {
-  onBeforeEventSend: function(options) {
-    if (options
-      && options.xdm
-      && options.xdm.web
-      && options.xdm.web.webInteraction) {
-        if (options.xdm.web.webInteraction.type === "download") {
-          options.xdm.web.webInteraction.name = undefined;
-        }
-    }
-  }
-});
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  "onBeforeLinkClickSend": lastChanceLinkLogic
+});    
 ```

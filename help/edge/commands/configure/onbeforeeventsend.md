@@ -24,6 +24,10 @@ Select the **[!UICONTROL Provide on before event send callback code]** button wh
 
 Within the code editor, you can add, edit, or remove elements within the `content` object. This object contains the payload sent to Adobe. You do not need to define the `content` object or wrap any code within a function. Any variables defined outside of `content` can be used, but are not included in the payload sent to Adobe.
 
+>[!TIP]
+>
+>The objects `content.xdm` and `content.data` are guaranteed to be defined, so you do not need to check if they exist. Some variables within these objects depend on your implementation and data layer. Adobe recommends checking for undefined values within these objects to prevent JavaScript errors.
+
 For example, if you wanted to:
 
 * Add the XDM element `xdm.commerce.order.purchaseID`
@@ -35,14 +39,18 @@ For example, if you wanted to:
 The equivalent code within the modal window would be the following:
 
 ```js
-// Add purchaseID
+// Use nullish coalescing assignments to add objects if they don't yet exist
+content.xdm.commerce ||= {};
+content.xdm.commerce.order ||= {};
+
+// Then add the purchase ID
 content.xdm.commerce.order.purchaseID = "12345";
 
-// Edit tracking code
-content.xdm.marketing.trackingCode = content.xdm.marketing.trackingCode.toLowerCase();
+// Use optional chaining to prevent undefined errors when setting tracking code to lower case
+if(content.xdm.marketing?.trackingCode) content.xdm.marketing.trackingCode = content.xdm.marketing.trackingCode.toLowerCase();
 
 // Delete operating system version
-delete content.xdm.environment.operatingSystemVersion;
+if(content.xdm.environment) delete content.xdm.environment.operatingSystemVersion;
 
 // Immediately end onBeforeEventSend logic and send the data to Adobe for this event type
 if (content.xdm.eventType === "web.webInteraction.linkClicks") {
@@ -61,21 +69,25 @@ if (myBotDetector.isABot()) {
 
 ## On before event send callback using alloy.js
 
-Register the `onBeforeEventSend` callback when running the `configure` command. You can change the `content` variable name to any value that you would like by changing the parameter variable inside the inline function.
+Register the `onBeforeEventSend` callback when running the `configure` command. You can change the `content` variable name to any value that you would like by changing the parameter variable inside of the inline function.
 
 ```js
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "onBeforeEventSend": function(content) {
-    // Add a new value
+    // Use nullish coalescing assignments to add a new value
+    content.xdm._experience ||= {};
+    content.xdm._experience.analytics ||= {};
+    content.xdm._experience.analytics.customDimensions ||= {};
+    content.xdm._experience.analytics.customDimensions.eVars ||= {};
     content.xdm._experience.analytics.customDimensions.eVars.eVar1 = "Analytics custom value";
     
-    // Change an existing value
-    content.xdm.web.webPageDetails.URL = content.xdm.web.webPageDetails.URL.toLowerCase();
+    // Use optional chaining to change an existing value
+    if(content.xdm.web?.webPageDetails) content.xdm.web.webPageDetails.URL = content.xdm.web.webPageDetails.URL.toLowerCase();
     
     // Remove an existing value
-    delete content.xdm.web.webReferrer.URL;
+    if(content.xdm.web?.webReferrer) delete content.xdm.web.webReferrer.URL;
     
     // Return true to immediately send data
     if (sendImmediate == true) {
@@ -90,7 +102,7 @@ alloy("configure", {
     // Assign the value in the 'cid' query string to the tracking code XDM element
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    content.xdm.marketing.trackingCode = urlParams.get('cid')
+    if(content.xdm.marketing?.trackingCode) content.xdm.marketing.trackingCode = urlParams.get('cid');
   }
 });
 ```
@@ -99,6 +111,7 @@ You can also register your own function instead of an inline function.
 
 ```js
 function lastChanceLogic(content) {
+  content.xdm.application ||= {};
   content.xdm.application.name = "App name";
 }
 
