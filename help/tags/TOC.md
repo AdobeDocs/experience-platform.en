@@ -242,7 +242,8 @@ solution: Data Collection
       * [Overview](./extensions/server/splunk/overview.md)
     * [!DNL Twitter] {#twitter}
       * [Overview](./extensions/server/twitter/overview.md)
-    * [[!DNL Tiktok] Web Events API](https://exchange.adobe.com/apps/ec/109834)
+    * [!DNL Tiktok] Web Events API {#tiktok}
+      * [Overview](./extensions/server/tiktok/overview.md)
     * [!DNL Zendesk] Events API {#zendesk}
       * [Overview](./extensions/server/zendesk/overview.md)
 * Extension development {#extension-dev}
