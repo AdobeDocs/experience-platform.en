@@ -27,7 +27,7 @@ An advertiser wants to target users in audiences with ads through the Zeta DSP a
 
 ### Zeta Marketing Platform prerequisites
 
-* Before configuring a new destination, ensure that you have a shell customer list already created in the ZMP. You will need to select one of these customer lists when sending the platform audience over to the ZMP
+* Prior to setting up a new destination, please ensure the presence of a pre-existing shell customer list in your ZMP account. You will then be required to choose one of these customer lists as the designated target to receive the Adobe Experience Platform audience that you plan to send. You can create an empty customer list by following the instructions [here](https://knowledgebase.zetaglobal.com/zmp/creating-audiences#CreatingAudiences-CreatingaCustomerList).
 * The username and password to configure the destination will be **api** and the **REST API Key** that you can view in your ZMP account by navigating to **Settings** > **Integrations** > **Keys & Apps** section. More information can be found [here](https://knowledgebase.zetaglobal.com/zmp/integrations).
 * Note that even though the Adobe Experience Platform supports activating multiple audience to a specific ZMP destination instance, each ZMP destination instance should only receive one and only one Experience Platform audience.
 
@@ -109,7 +109,7 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 ### Map attributes and identities {#map}
 
-Below is an example of correct identity mapping when exporting profiles to [!DNL Pega Customer Decision Hub].
+Below is an example of correct identity mapping when exporting profiles to [!DNL Zeta Marketing Platform].
 
 Selecting source fields:
 * Select an identifier (For example: Email) as source identity that uniquely identifies a profile in Adobe Experience Platform and [!DNL Zeta Marketing Platform].
@@ -169,5 +169,4 @@ Selecting target fields:
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
 ## Additional resources {#additional-resources}
-
-*You can provide further links to your product documentation or any other resources that you consider important for the customer to be successful.*
+* [Zeta Knowledge Base](https://knowledgebase.zetaglobal.com/zmp/).
