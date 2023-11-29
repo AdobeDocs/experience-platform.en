@@ -26,9 +26,9 @@ Creating an instance generates a set of assets such as journeys, segments, schem
 
 ![A modal for creating a package](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 
-1. Now, navigate to the **Sandboxes** page in the left side navigation and select the **Packages** tab, find your package and publish it. In this example, the package is already published but in order to publish a package, follow the steps in the [sandbox tooling](/help/sandboxes/ui/sandbox-tooling.md) document. 
+3. Now, navigate to the **Sandboxes** page in the left side navigation and select the **Packages** tab, find your package and publish it. In this example, the package is already published but in order to publish a package, follow the steps in the [sandbox tooling](/help/sandboxes/ui/sandbox-tooling.md) document. 
 
-2. After the publish succeeds, on the packages browse page you should see a **+** button enabled next to the name. 
+4. After the publish succeeds, on the packages browse page you should see a **+** button enabled next to the name. 
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Creating an instance generates a set of assets such as journeys, segments, schem
 >
 > You can import packages only into other development sandboxes. The production sandbox is disabled for such imports.
 
-In the **[!UICONTROL View dependencies]** step, you can map schemas. The **[!UICONTROL Finish]** button is disabled until you map each schema.
+6. In the **[!UICONTROL View dependencies]** step, you can map schemas. The **[!UICONTROL Finish]** button is disabled until you map each schema.
 
 ![Map schemas in the 'View dependencies' step, enabling Finish button.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-view-dependencies.png)
 
@@ -76,7 +76,7 @@ In the **[!UICONTROL View dependencies]** step, you can map schemas. The **[!UIC
 
 ![Page showing import progress](/help/use-case-playbooks/assets/playbooks/data-awareness/import-progress.png)
 
-1. While the package is importing, the assets of the package are being created in the target sandbox. Once complete, they will reference the fields that you just mapped to in the import process. The process is now complete and the assets from the inspirational sandbox are now also present in your target sandbox for you to test.
+2. While the package is importing, the assets of the package are being created in the target sandbox. Once complete, they will reference the fields that you just mapped to in the import process. The process is now complete and the assets from the inspirational sandbox are now also present in your target sandbox for you to test.
 
 ![Generated assets in the target sandbox](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
