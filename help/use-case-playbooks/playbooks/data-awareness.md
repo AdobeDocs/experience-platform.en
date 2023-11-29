@@ -25,7 +25,11 @@ Creating an instance generates a set of assets such as journeys, segments, schem
 
     ![A modal for creating a package](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 
-3. Navigate to the **Sandboxes** page in the left side navigation and select the **Packages** tab, find your package and publish it. In this example, the package is already published but in order to publish a package, follow the steps in the [sandbox tooling](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish) document. 
+3. Navigate to the **Sandboxes** page in the left side navigation and select the **Packages** tab, find your package and publish it. In order to publish a package that is in draft state, follow the steps in the [sandbox tooling](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish) document. 
+
+    ![Package in draft or unpublished state](/help/use-case-playbooks/assets/playbooks/data-awareness/draft-mode.png) 
+
+    ![Publishing the package](/help/use-case-playbooks/assets/playbooks/data-awareness/publish-draft.png) 
 
 4. After the publish succeeds, on the packages browse page you should see a **+** button enabled next to the name. 
 
@@ -68,6 +72,10 @@ Creating an instance generates a set of assets such as journeys, segments, schem
 5. Once you've completed mapping all the fields in the schemas, select **Finish** to complete the import workflow.
 
    ![Finish the flow](/help/use-case-playbooks/assets/playbooks/data-awareness/complete-flow.png)
+
+    >[!NOTE]
+    >
+    > You can't take action on any assets except for the schemas as this is an inspirational sandbox but they do show up as they are dependencies of the package. 
 
 ### Import status {#import-status}
 
