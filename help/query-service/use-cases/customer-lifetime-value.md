@@ -85,7 +85,7 @@ Check the [email marketing destinations overview](../../destinations/catalog/ema
 
 ## See the returned analysis data from your campaign {#post-campaign-data-analysis} 
 
-The data from sources can now be [incrementally processed](../essential-concepts/incremental-load.md) as part of a scheduled refresh to your data model in the accelerated data store. Any response events from customers can be ingested into Adobe Experience Platform as they happen or in batches. Your data model could be refreshed once, or multiple times a day depending on your settings or source connectors. See the [batch ingestion API overview](../../ingestion/batch-ingestion/api-overview.md) or the [streaming ingestion overview](../../ingestion/streaming-ingestion/overview.md) for more information. 
+The data from sources can now be [incrementally processed](../key-concepts/incremental-load.md) as part of a scheduled refresh to your data model in the accelerated data store. Any response events from customers can be ingested into Adobe Experience Platform as they happen or in batches. Your data model could be refreshed once, or multiple times a day depending on your settings or source connectors. See the [batch ingestion API overview](../../ingestion/batch-ingestion/api-overview.md) or the [streaming ingestion overview](../../ingestion/streaming-ingestion/overview.md) for more information. 
 
 Once your data model is updated, your custom dashboard widgets provide meaningful signals that allow you to measure and visualize customer lifetime value.
 
