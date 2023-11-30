@@ -10,7 +10,7 @@ This property is a regex string. If the clicked URL matches this regex, `xdm.web
 
 ## Download link qualifier in the Web SDK extension
 
-Select the [!UICONTROL Enable click data collection] checkbox when configuring the extension, then enter the desired text under [!UICONTROL Download link qualifier].
+Enable the **[!UICONTROL Enable click data collection]** checkbox when configuring the extension, then enter the desired text under **[!UICONTROL Download link qualifier]**.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

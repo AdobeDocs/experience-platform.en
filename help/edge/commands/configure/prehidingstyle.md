@@ -4,15 +4,15 @@ description: Create a CSS definition that allows personalized content to load wi
 ---
 # `prehidingStyle`
 
-The `prehidingStyle` property allows you to define a CSS selector to hide parts of your site that haven't loaded yet. This property is valuable in synchronous Web SDK implementations to avoid flickering while personalized content loads.
+The `prehidingStyle` property allows you to define a CSS selector to hide personalized content until it loads. This property is valuable in synchronous Web SDK implementations to avoid flickering. Adobe recommends using the [prehiding snippet](../../personalization/manage-flicker.md) for asynchronous Web SDK implementations.
 
->[!IMPORTANT]
->
->If you load the Web SDK library or tags asynchronously, using this property does nothing. See [Manage flicker](../../personalization/manage-flicker.md) for information around using the prehiding snippet instead.
+The CSS selectors that you define in this property begin hiding content when you run the first [`sendEvent`](../sendevent/overview.md) command on a page. Content is unhidden when a response from Adobe is received, which typically includes personalized content. Content is also unhidden if the `sendEvent` command fails or times out.
+
+If you include both `prehidingStyle` and the prehiding snippet in your implementation, the prehiding snippet takes priority over this configuration property.
 
 ## Prehiding style in the Web SDK extension
 
-Select the **[!UICONTROL Provide prehiding style]** button when configuring the extension. This section only applies to tag deployments loaded synchronously.
+Select the **[!UICONTROL Provide prehiding style]** button when configuring the extension.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
@@ -24,7 +24,7 @@ Select the **[!UICONTROL Provide prehiding style]** button when configuring the 
 
 ## Prehiding style using alloy.js
 
-Set the `prehidingStyle` string when running the `configure` command. If you omit this property when configuring the Web SDK, nothing is hidden when loading personalized content. Set this value to the desired CSS selector and declaration block for synchronously loaded libraries.
+Set the `prehidingStyle` string when running the `configure` command. If you omit this property when configuring the Web SDK, nothing is hidden when running the first `sendEvent` command on a page. Set this value to the desired CSS selector and declaration block for synchronously loaded libraries.
 
 ```js
 alloy("configure", {

@@ -4,7 +4,7 @@ description: Your Adobe organization ID.
 ---
 # orgId
 
-The `orgId` property is a string that tells Adobe which organization that the data is sent to. **This property is required for all data sent using the Web SDK.**
+The `orgId` property is a string that tells Adobe which organization that data is sent to. **This property is required for all data sent using the Web SDK.**
 
 To locate your org ID:
 
@@ -17,7 +17,7 @@ Org IDs are always 24-character alpha-numeric strings, and always end in `@Adobe
 
 ## Org ID in the Web SDK extension
 
-Enter the org ID in the [!UICONTROL IMS organization ID] text field when configuring the extension.
+Enter the org ID in the **[!UICONTROL IMS organization ID]** text field when configuring the extension.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

@@ -23,7 +23,7 @@ In all cases, `xdm.web.webInteraction.value` is set to the link text label. If y
 
 ## Enable automatic link tracking in the Web SDK extension
 
-Select the [!UICONTROL Enable click data collection] checkbox when configuring the extension.
+Select the **[!UICONTROL Enable click data collection]** checkbox when configuring the extension.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

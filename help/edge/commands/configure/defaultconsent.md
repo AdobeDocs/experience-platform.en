@@ -16,7 +16,7 @@ If you have a customer that is not within the jurisdiction of General Data Prote
 
 ## Set default consent in the Web SDK extension
 
-Select the desired radio button under [!UICONTROL Default consent] when configuring the extension.
+Select the desired radio button under **[!UICONTROL Default consent]** when configuring the extension.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
