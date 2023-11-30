@@ -56,7 +56,7 @@ $$;
 
 ## Anonymous block with third-party clients {#third-party-clients}
 
-Certain third-party clients may require a separate identifier before and after an SQL block to indicate that a part of a script should be handled as a single statement. If you receive an error message when using Query Service with a third-party client, you should refer to the documentation of the third-party client regarding the use of an SQL block. 
+Certain third-party clients may require a separate identifier before and after an SQL block to indicate that a part of the script should be handled as a single statement. If you receive an error message when using Query Service with a third-party client, you should refer to the documentation of the third-party client regarding the use of an SQL block. 
 
 For example, DbVisualizer requires that the delimiter must be the only text on the line. In DbVisualizer, the default value for the Begin Identifier is `--/` and for the End Identifier it is `/`. An example of an anonymous block in DbVisualizer is seen below:
 
