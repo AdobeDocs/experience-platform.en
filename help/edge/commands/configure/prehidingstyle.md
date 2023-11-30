@@ -12,7 +12,7 @@ The `prehidingStyle` property allows you to define a CSS selector to hide parts 
 
 ## Prehiding style in the Web SDK extension
 
-Select the **[!UICONTROL Provide prehiding style]** button when configuring the extension.
+Select the **[!UICONTROL Provide prehiding style]** button when configuring the extension. This section only applies to tag deployments loaded synchronously.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
@@ -24,7 +24,7 @@ Select the **[!UICONTROL Provide prehiding style]** button when configuring the 
 
 ## Prehiding style using alloy.js
 
-Set the `prehidingStyle` string when running the `configure` command. If you omit this property when configuring the Web SDK, nothing is hidden when loading personalized content. Set this value to the desired CSS selector and declaration block for synchronous libraries.
+Set the `prehidingStyle` string when running the `configure` command. If you omit this property when configuring the Web SDK, nothing is hidden when loading personalized content. Set this value to the desired CSS selector and declaration block for synchronously loaded libraries.
 
 ```js
 alloy("configure", {
