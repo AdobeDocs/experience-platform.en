@@ -16,7 +16,10 @@ Learn how to create personalized campaigns to offer the best complementary produ
 
 ## Use case overview
 
-Consider that you have customers who visit your properties and sporadically purchase the products or services that you offer. You may want to create personalized campaigns to appeal to these customers so your brand can offer them longer-term value instead of one-time value. Learn how to collect and manage data, create audiences, and create journeys to action upon these audiences in Real-Time CDP and Adobe Journey Optimizer in order to evolve from offering one-time value to offering long-term value to your customers.
+Consider that you have customers who visit your properties and sporadically purchase the products or services that you offer. You may want to create personalized campaigns to appeal to these customers so your brand can offer them longer-term value instead of one-time value. Learn how to: 
+* Collect and manage data, 
+* create audiences, 
+* and create journeys to action upon these audiences in Real-Time CDP and Adobe Journey Optimizer.
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -43,11 +46,11 @@ Below is a high-level architecture view of the various components of Real-Time C
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
-Below is a high level overview of the workflow - a combination of a journey workflow and an activation workflow.
+Below is a high-level overview of the workflow, a combination of a journey workflow and an activation workflow.
 
 In the sample workflow pictured below, you look for customers who meet a certain criteria and you want to entice them to return to your website or app. You are looking to set them on a journey where instead of limited activity on your property, they return in a more recurrent manner. You are trying to get them back to your property and then once they are back, you have them enter the journey to recurringly make purchases on your site. The campaign set up here is capped at one engagement with customers per month. 
 
-You start by sending your audience of high valued and low frequency customers a message. You then check if they received this message within the last thirty days. If they have not, then you can enter them into a journey about, for example, a new subscription program. You can then wait for a few days (seven days in this example). After this time, if they have not purchased the subscription that you messaged them about, you can deliver paid media ads via destinations. If they have purchased the subscription, you can have them enter an order confirmation journey, thereby completing the use case. 
+You start by sending your audience of high-valued and low-frequency customers a message. You then check if they received this message within the last thirty days. If they have not, then you can enter them into a journey about, for example, a new subscription program. You can then wait for a few days (seven days in this example). After this time, if they have not purchased the subscription that you messaged them about, you can deliver paid media ads via destinations. If they have purchased the subscription, you can have them enter an order confirmation journey, thereby completing the use case. 
 
 >[!BEGINSHADEBOX]
 
@@ -56,7 +59,7 @@ You start by sending your audience of high valued and low frequency customers a 
 1. You create schemas and datasets, then mark these for [!UICONTROL Profile].
 2. Data is collected and integrated into Experience Platform via Web SDK, Mobile Edge SDK, or API. Analytics Data Connector can also be utilized, but may result in journey latency.
 3. You load profiles into Real-Time CDP and build governance policies to ensure responsible use.
-4. You build focused audiences from the list of profiles to check for high valued and low frequency customers.
+4. You build focused audiences from the list of profiles to check for high-valued and low-frequency customers.
 5. You create two journeys in [!DNL Adobe Journey Optimizer], one to message users about a new subscription program, and another to message them to confirm the purchase later on.
 6. If desired, you activate the audience of customers who have not purchased your subscription to desired paid-media destinations.
 
@@ -68,11 +71,11 @@ To complete each of the steps in the high-level overview above, read through the
 
 ### UI functionality and elements that you will use {#ui-functionality-and-elements}
 
-As you complete the steps to implement the use case, you will make use of the Real-Time CDP and Adobe Journey Optimizer functionality and UI elements listed at the beginning of this document. Make sure that you have the necessary attribute-based access control permissions for all these areas, or ask your system administrator to grant you the necessary permissions. 
+As you complete the steps to implement the use case, you'll use the Real-Time CDP, Adobe Journey Optimizer functionality, and UI elements listed at the beginning of this document. Make sure that you have the necessary attribute-based access control permissions for all these areas, or ask your system administrator to grant you the necessary permissions. 
 
 ### Create a schema design and specify field groups {#schema-design}
 
-Experience Data Model (XDM) resources are managed in the [!UICONTROL Schemas] workspace in [!DNL Adobe Experience Platform]. You can view and explore core resources provided by [!DNL Adobe] (for example, [!UICONTROL Field Groups]) and create custom resources and schemas for your organization.
+Experience Data Model (XDM) resources are managed in the [!UICONTROL Schemas] workspace in [!DNL Adobe Experience Platform]. You can view and explore core resources provided by [!DNL Adobe] (for example, [!UICONTROL field groups]) and create custom resources and schemas for your organization.
 
 For more information about creating [schemas](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html), read the [create schema tutorial.](/help/xdm/tutorials/create-schema-ui.md) 
 
@@ -137,7 +140,7 @@ The customer attributes schema is represented by an [!UICONTROL XDM Individual P
 
 #### Customer digital transactions schema {#customer-digital-transactions-schema}
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via Web SDK and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced segmentation capabilities.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website or on other associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via Web SDK and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced segmentation capabilities.
 
 ![Customer digital transactions schema with field groups highlighted](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
 
@@ -158,7 +161,7 @@ Web Details is a standard schema field group for the XDM ExperienceEvent class, 
 
 | Fields | Requirement | Description |
 | --- | --- | --- |
-| `web.webInteraction.linkClicks.id` | Suggested | The id for the web link or URL that corresponds to the interaction. |
+| `web.webInteraction.linkClicks.id` | Suggested | The ID for the web link or URL that corresponds to the interaction. |
 | `web.webInteraction.linkClicks.value` | Suggested | The number of clicks for the web link or URL that corresponds to the interaction. |
 | `web.webInteraction.name` | Suggested | The name of the web page. |
 | `web.webInteraction.URL` | Suggested | The URL for the web page. |
@@ -245,10 +248,10 @@ The customer offline transactions schema is represented by an [!UICONTROL XDM Ex
 | `commerce.order.payments.paymentType` | Required | An object that describes product order payment type. |
 | `commerce.order.payments.transactionID` | Required | An object product order transaction ID. |
 | `commerce.order.purchaseID` | Required | An object product order purchase ID. |
-| `productListItems.name` | Required | A list of item names representing the product(s) selected by a customer. |
-| `productListItems.priceTotal` | Required | The total price of list of items representing the product(s) selected by a customer. |
-| `productListItems.product` | Required | The product(s) selected. |
-| `productListItems.quantity` | Required | The quantity of list of items representing the product(s) selected by a customer. |
+| `productListItems.name` | Required | A list of item names representing the products selected by a customer. |
+| `productListItems.priceTotal` | Required | The total price of list of items representing the products selected by a customer. |
+| `productListItems.product` | Required | The products selected. |
+| `productListItems.quantity` | Required | The quantity of list of items representing the products selected by a customer. |
 
 +++
 
@@ -273,7 +276,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 >
 >This is an optional implementation if you are using the [!DNL Adobe Analytics Data Connector].
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when Web SDK is not an option for data collection; thus, this schema is needed when you are utilizing the [!DNL Adobe Analytics Data Connector] to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website or on other associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when Web SDK is not an option for data collection; thus, this schema is needed when you are utilizing the [!DNL Adobe Analytics Data Connector] to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
 
 ![Adobe web connector schema with field groups highlighted](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
 
@@ -388,7 +391,7 @@ Specifically, you must create and use two audiences at different steps of the us
 
 >[!TAB Adobe Journey Optimizer Qualifying Audience]
 
-This high value and low frequency audience includes the profiles that you want to reach out to via a journey, to let them know about a new subscription program.
+This high-value and low-frequency audience includes the profiles that you want to reach out to via a journey, to let them know about a new subscription program.
 
 * Description: Profiles who have spent more than $250 in aggregate in the last 3 months
 * Fields and Conditions Needed in the audience:
@@ -420,11 +423,14 @@ This audience is created to include profiles who have spent more than $250 in ag
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] does not encompass everything shown in the diagrams. All [paid media ads](/help/destinations/catalog/social/overview.md) are created in [!UICONTROL Destinations].
+>[!DNL Adobe Journey Optimizer] does not encompass everything shown in the diagrams. All [paid media ads](/help/destinations/catalog/social/overview.md) are created in the [!UICONTROL destinations] [workspace](/help/destinations/ui/destinations-workspace.md).
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) helps you deliver connected, contextual, and personalized experiences to your customers. The customer journey is the entire process of a customer's interactions with the brand. Each use case journey requires specific information. 
 
-To accomplish this use case, you must create two separate journeys - the lifetime journey, which includes the message that you send to your high-value, low-frequency customers, and the order confirmation journey for the users who respond to your call and purchase a subscription. 
+To accomplish this use case, you must create two separate journeys: 
+
+* The lifetime journey, which includes the message that you send to your high-value, low-frequency customers
+* The order confirmation journey for the users who respond to your call and purchase a subscription. 
 
 ![Journeys highlighted.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){width="1000" zoomable="yes"}
 
@@ -434,7 +440,7 @@ Listed below is the precise data needed for each Journey branch.
 
 >[!TAB Lifetime Journey]
 
-The lifetime journey addresses the audience of high value and low frequency customers who were not targeted within the last 30 days. A message is shown to these customers and then, if after 7 days they still do not purchase, you can include the non-purchasers in an audience which will you can show paid media ads to. If they do purchase, you can set the purchasers on an order confirmation journey, detailed in the separate tab.
+The lifetime journey addresses the audience of high-value and low-frequency customers who were not targeted within the last 30 days. A message is shown to these customers and then, if after 7 days they still do not purchase, you can include the non-purchasers in an audience that you can show paid media ads to. If they do purchase, you can set the purchasers on an order confirmation journey, detailed in the separate tab.
 
 ![Lifetime journey high-level visual overview.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "One-time value to lifetime journey high-level visual overview."){width="2560" zoomable="yes"}
 
@@ -442,15 +448,15 @@ The lifetime journey addresses the audience of high value and low frequency cust
 
 The journey shown above follows the following logic.
 
-1. Read audience - use a [read audience activity](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en) for the first audience created in the audiences section above. 
+1. Read audience: Use a [read audience activity](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en) for the first audience created in the audiences section above. 
 
-2. Condition - Preferred Channel - use a [condition activity](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html) to determine how to reach out to customers, whether through email, SMS, or push notifications. Use three action activities to create the three branches.
+2. Condition - Preferred Channel: Use a [condition activity](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html) to determine how to reach out to customers, whether through email, SMS, or push notifications. Use three action activities to create the three branches.
 
-3. Wait - use a [wait activity](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html) to wait until you listen for purchases.
+3. Wait: Use a [wait activity](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html) to wait until you listen for purchases.
 
-4. Condition - Purchased Subscription in last 7 days? - use a condition activity to listen for product purchases in the last seven days. 
+4. Condition - Purchased Subscription in last 7 days?: use a condition activity to listen for product purchases in the last seven days. 
 
-5. JourneyStepEventTracker - Subscription Not Purchased - use a [custom action](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) for the visitors who have not yet purchased your subscription, despite receiving your message. As part of the custom condition at the end of journey, create a `journey.feedback` event. You will use this event to segment the audience which has not purchased the subscription and which you can target via paid media ads.
+5. JourneyStepEventTracker - Subscription Not Purchased: Use a [custom action](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) for the visitors who have not yet purchased your subscription, despite receiving your message. As part of the custom condition at the end of journey, create a `journey.feedback` event. You will use this event to segment the audience that has not purchased the subscription and that you can target via paid media ads.
 
 +++
 
@@ -509,7 +515,7 @@ The order confirmation journey focuses on whether a purchase was made through th
 
 For more information about creating journeys in [!DNL Adobe Journey Optimizer], read the [Get started with journeys guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
-### Set up paid media ads in destinations {#paid-media-ads}
+### Set up destination to display paid media ads {#paid-media-ads}
 
 Some users might not have purchased your subscription even after you message them about the new program. After waiting for a number of days, (seven in this example use case), you can decide to show paid media ads to those users, to try and nudge them into purchasing your subscription. 
 
@@ -517,6 +523,6 @@ Use the destinations framework in Real-Time CDP for paid media ads. Select one o
 
 ## Next steps {#next-steps}
 
-By setting your low frequency and high value users on a journey and by displaying paid media ads to a subset of them, you have hopefully turned some of them from one-time value to lifetime value customers. 
+By setting your low-frequency and high-value users on a journey and by displaying paid media ads to a subset of them, you have hopefully turned some of them from one-time value to lifetime value customers. 
 
 Next, you can explore other use cases supported by Real-Time CDP, such as [intelligently re-engaging customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) or [displaying personalized content to unauthenticated users](/help/rtcdp/partner-data/onsite-personalization.md) on your web properties.
