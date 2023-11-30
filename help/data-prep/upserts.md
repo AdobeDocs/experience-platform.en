@@ -12,7 +12,7 @@ By streaming upserts, you can retain the format of your data while translating t
 
 >[!WARNING]
 >
->Ingestion on Experience Data Model (XDM) Entity Update massages (with JSON PATCH operations) for Profile updates through the DCS inlet has been deprecated. As an alternative, you can [ingest raw data into the DCS inlet](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) and specify the necessary data mappings to transform your data into XDM-compliant messages for Profile updates.
+>Ingestion on Experience Data Model (XDM) Entity Update messages (with JSON PATCH operations) for Profile updates via the DCS inlet has been deprecated. As an alternative, you can [ingest raw data into the DCS inlet](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) and specify the necessary data mappings to transform your data into XDM-compliant messages for Profile updates.
 
 This document provides information on how to stream upserts in [!DNL Data Prep].
 
