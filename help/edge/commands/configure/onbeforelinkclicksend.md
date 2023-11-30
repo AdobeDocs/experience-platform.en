@@ -4,7 +4,7 @@ description: Callback that runs just before link tracking data is sent.
 ---
 # `onBeforeLinkClickSend`
 
-The `onBeforeLinkClickSend` callback allows you to register a JavaScript function that can alter link tracking data you send just before that data is sent to Adobe. This callback allows you to manipulate the XDM object, including the ability to add, edit, or remove elements. You can also conditionally cancel the sending of data altogether, such as with detected client-side bot traffic. It is supported on Web SDK 2.15.0 or later.
+The `onBeforeLinkClickSend` callback allows you to register a JavaScript function that can alter link tracking data you send just before that data is sent to Adobe. This callback allows you to manipulate the `xdm` or `data` object, including the ability to add, edit, or remove elements. You can also conditionally cancel the sending of data altogether, such as with detected client-side bot traffic. It is supported on Web SDK 2.15.0 or later.
 
 This callback only runs when [`clickCollectionEnabled`](clickcollectionenabled.md) is enabled. If `clickCollectionEnabled` is disabled, this callback does not execute. If both `onBeforeEventSend` and `onBeforeLinkClickSend` contain registered functions, the `onBeforeLinkClickSend` function executes first. Once the `onBeforeLinkClickSend` function finishes, the `onBeforeEventSend` function then executes.
 
