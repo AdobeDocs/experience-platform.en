@@ -43,7 +43,7 @@ Both plain text and SHA256 hashed email addresses are supported by Adobe Experie
 |Target Identity|Description|Considerations|
 |---|---|---|
 |Email|Email addresses (clear text) |Input `email` as the target identity when your source identity is an Email namespace or attribute.|
-|Email_LC_SHA256|Email addresses need to be hashed using SHA256 and lowercased. Be sure to follow any [email normalization](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) rules required. You won't be able to change this setting later. |Input `hashed_email` as the target identity when your source identity is an Email_LC_SHA256 namespace or attribute.|
+|Email_LC_SHA256|Email addresses need to be hashed using SHA256 and lowercased. You won't be able to change this setting later. |Input `hashed_email` as the target identity when your source identity is an Email_LC_SHA256 namespace or attribute.|
 
 {style="table-layout:auto"}
 
