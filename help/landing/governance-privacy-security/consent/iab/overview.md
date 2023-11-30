@@ -13,7 +13,7 @@ The [!DNL Transparency & Consent Framework] (TCF), as outlined by the [!DNL Inte
 >
 >More information on TCF 2.0 can be found on the [IAB Europe website](https://iabeurope.eu/tcf-2-0/), including support materials and technical specifications.
 
-Adobe Experience Platform is part of the registered [IAB TCF 2.0 vendor list](https://iabeurope.eu/vendor-list-tcf-v2-0/), under the ID **565**. In compliance with TCF 2.0 requirements, Platform allows you to collect customer consent data and integrate it into your stored customer profiles. This consent data can then be factored into whether profiles are included in exported audience segments, depending on their use case.
+Adobe Experience Platform is part of the registered [IAB TCF 2.0 vendor list](https://iabeurope.eu/vendor-list-tcf/), under the ID **565**. In compliance with TCF 2.0 requirements, Platform allows you to collect customer consent data and integrate it into your stored customer profiles. This consent data can then be factored into whether profiles are included in exported audience segments, depending on their use case.
 
 >[!IMPORTANT]
 >
