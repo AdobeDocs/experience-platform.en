@@ -58,7 +58,7 @@ $$;
 
 Certain third-party clients may require a separate identifier before and after an SQL block to indicate that a part of the script should be handled as a single statement. If you receive an error message when using Query Service with a third-party client, you should refer to the documentation of the third-party client regarding the use of an SQL block. 
 
-For example, DbVisualizer requires that the delimiter must be the only text on the line. In DbVisualizer, the default value for the Begin Identifier is `--/` and for the End Identifier it is `/`. An example of an anonymous block in DbVisualizer is seen below:
+For example, **DbVisualizer** requires that the delimiter must be the only text on the line. In DbVisualizer, the default value for the Begin Identifier is `--/` and for the End Identifier it is `/`. An example of an anonymous block in DbVisualizer is seen below:
 
 ```SQL
 --/
@@ -72,10 +72,10 @@ $$;
 /
 ```
 
-For DbVisualizer in particular, there is also an option in the UI to "[Execute the complete buffer as one SQL statement](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer)". See the DBVisualizer documentation for more information.
+For DbVisualizer in particular, there is also an option in the UI to "[!DNL Execute the complete buffer as one SQL statement]". See the [DbVisualizer documentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) for more information.
 
 ## Next steps
 
-By reading this document, you now have a clear understanding of anonymous blocks and how they are structured. [For more information on query execution](../best-practices/writing-queries.md), please read the guide on query execution in Query Service.
+By reading this document, you now have a clear understanding of anonymous blocks and how they are structured. Please read the [query execution guide](](../best-practices/writing-queries.md)) for more information on writing queries.
 
-You should also read about [how anonymous block is used with the incremental load design pattern](./incremental-load.md) to increase query efficiency.
+You should also read about [how anonymous blocks are used with the incremental load design pattern](./incremental-load.md) to increase query efficiency.
