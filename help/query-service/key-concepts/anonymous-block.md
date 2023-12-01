@@ -76,6 +76,6 @@ For DbVisualizer in particular, there is also an option in the UI to "[!DNL Exec
 
 ## Next steps
 
-By reading this document, you now have a clear understanding of anonymous blocks and how they are structured. Please read the [query execution guide](](../best-practices/writing-queries.md)) for more information on writing queries.
+By reading this document, you now have a clear understanding of anonymous blocks and how they are structured. Please read the [query execution guide](../best-practices/writing-queries.md) for more information on writing queries.
 
 You should also read about [how anonymous blocks are used with the incremental load design pattern](./incremental-load.md) to increase query efficiency.
