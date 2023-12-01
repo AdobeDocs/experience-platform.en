@@ -591,6 +591,12 @@ The license usage dashboard for Data Distiller computer hours is updated four ti
 Yes, you can use `CREATE VIEW` command without Data Distiller access. This command provides a logical view of data but does not write it back to the data lake.
 +++
 
+### Can I use anonymous blocks in DbVisualizer?
+
++++Answer
+Yes. Although, certain third-party clients, such as DbVisualizer, may require a separate identifier before and after an SQL block to indicate that a part of a script should be handled as a single statement. More details can be found in the [anonymous block documentation](./key-concepts/anonymous-block.md) or in [the official DbVisualizer documentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect). 
++++
+
 ## Exporting data {#exporting-data}
 
 This section provides information on exporting data and limits.
