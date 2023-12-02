@@ -4,30 +4,16 @@ description: This document provides an overview of the Media Event Information E
 ---
 # [!UICONTROL Media event information] data type
 
-Words
+[!UICONTROL Media Event Information] is a standard Experience Data Model (XDM) data type that describes media details information related to the experience event. 
 
-![A diagram of the Media Event Information data type.]()
+![A diagram of the Media Event Information data type.](../images/data-types/media-event.png)
 
 | Property | Data type | Description |
 | --- | --- | --- |
 | `mediaCollection` | [[!UICONTROL mediaDetails]]() | Media details information related to the experience event. |
-| `mediaEventTimestamp` | [[!UICONTROL String]]() | The time when an event or observation occurred. |
-| `mediaEventType` | [[!UICONTROL String]]() | The media event type. |
+| `mediaEventTimestamp` | [!UICONTROL String] | The time when a media event occurred. |
+| `mediaEventType` | [!UICONTROL String] | The media event type. |
 
+{style="table-layout:auto"}
 
- <!-- "xdm:mediaCollection": {
-          "title": "Media Details",
-          "$ref": "https://ns.adobe.com/xdm/datatypes/mediaDetails",
-          "description": ""
-        },
-        "xdm:mediaEventTimestamp": {
-          "title": "Media Timestamp",
-          "type": "string",
-          "format": "date-time",
-          "description": "The time when an event or observation occurred."
-        },
-        "xdm:mediaEventType": {
-          "title": "Media Event Type",
-          "type": "string",
-          "description": "The media event type.", -->
-
+For more details on the field group, refer to the [public XDM repository](https://github.com/adobe/xdm/blob/master/components/datatypes/mediaevent.schema.json)
