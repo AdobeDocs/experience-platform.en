@@ -6,7 +6,7 @@ description: This document provides an overview of the Advertising Details Infor
 
 [!UICONTROL Advertising Details Information] is a standard Experience Data Model (XDM) data type that describes ...
 
-![The Advertising Details Information...]()
+![A diagram of the Advertising Details Information data type.]()
 
 | Property | Data type | Description |
 | --- | --- | --- |
