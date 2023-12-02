@@ -29,6 +29,49 @@ For more details on the field group, refer to the [public XDM repository](https:
 
 
 <!-- 
+Missing stuff
+Field groups: 
+experienceevent-media-analytics (mediaanalytics-interaction.md)
+
+datatypes: 
+advertisingdetails (advertising-details-information.md) "title": "Advertising Details Information"
+advertisingpoddetails (advertising-pod-details-information.md) "title": "Advertising Pod Details Information"
+chapterdetails (chapter-details-information.md)  "title": "Chapter Details Information",
+custommetadatadetails  (custom-metadata-details-information.md)  "title": "Custom Metadata Details Information",
+errordetails (error-details-information.md)  "title": "Error Details Information",
+playerstatedata (player-state-data-information.md)  "title": "Player State Data Information",
+qoedatadetails  (qoe-data-details-information.md) "title": "QoE (Quality of Experience) Data details information"
+sessiondetails (session-details-information.md)  "title": "Session Details Information"
+mediaevent (media-event-information.md)  title: Media Event Information
+mediadetails (media-details-information.md)  title: Media Details Information
+-->
+
+<!-- 
+Template:
+
+---
+title: ... Data Type
+description: This document provides an overview of the ... Experience Data Model (XDM) data type.
+---
+# [!UICONTROL ...] data type
+
+[!UICONTROL ...] is a standard Experience Data Model (XDM) data type that describes ...
+
+![A diagram of the  ... data type.]()
+
+| Property | Data type | Description |
+| --- | --- | --- |
+|     |     |     |
+
+{style="table-layout:auto"}
+
+For more details on the field group, refer to the [public XDM repository](...)
+
+ -->
+
+
+
+<!-- 
 
 Media Session ID
 Session Details
@@ -41,23 +84,3 @@ List Of States Start
 List Of States End
 List Of States
 The Custom Metadata -->
-
-
-<!-- 
-Missing stuff
-Field groups: 
-experienceevent-media-analytics (mediaanalytics-interaction.md)
-
-datatypes: 
-advertisingdetails (advertising-details-information.md) "title": "Advertising Details Information"
-advertisingpoddetails
-chapterdetails
-custommetadatadetails
-errordetails
-playerstatedata
-qoedatadetails
-sessiondetails
-mediaevent
-mediadetails 
--->
-
