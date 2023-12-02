@@ -1,51 +1,30 @@
 ---
-title: Track Events Using the Adobe Experience Platform Web SDK
-description: Learn how to track Adobe Experience Platform Web SDK events.
-keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
+title: sendEvent
+description: Send data to the Adobe Experience Platform Edge Network.
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
 ---
-# Track events
+# `sendEvent`
 
-To send event data to Adobe Experience Cloud, use the `sendEvent` command. The `sendEvent` command is the primary way to send data to the [!DNL Experience Cloud], and to retrieve personalized content, identities, and audience destinations.
+The `sendEvent` command is the primary way to send data to Adobe, to retrieve personalized content, identities, and audience destinations. Use the [`xdm`](xdm.md) object to send data that maps to your Adobe Experience Platform schema. Use the [`data`](data.md) object to send non-XDM data. You can use the datastream mapper to align data within this object to schema fields.
 
-Data sent to Adobe Experience Cloud falls into two categories:
+## Send event data in the Web SDK extension
 
-* XDM data
-* Non-XDM data
+Sending event data is performed as an action within a rule in the Adobe Experience Platform Data Collection tags interface.
 
-## Handling responses from events
+1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Select the desired tag property.
+1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.
+1. Under [!UICONTROL Actions], select an existing action or create an action.
+1. Set the [!UICONTROL Extension] dropdown field to **[!UICONTROL Adobe Experience Platform Web SDK]**, and set the [!UICONTROL Action Type] to **[!UICONTROL Send event]**.
+1. Set the desired fields, click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
 
-If you want to handle a response from an event, you can be notified of a success or failure as follows:
+## Send event data using alloy.js
 
+Run the `sendEvent` command when calling your configured instance of the Web SDK. Make sure that you call the [`configure`](../configure/overview.md) command before calling the `sendEvent` command.
 
-```javascript
+```js
 alloy("sendEvent", {
-  "renderDecisions": true,
-  "xdm": {
-    "commerce": {
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3",
-        "purchaseOrderNumber": "VAU3123",
-        "currencyCode": "USD",
-        "priceTotal": 999.98
-      }
-    }
-  }
-}).then(function(result) {
-    // Tracking the event succeeded.
-  })
-  .catch(function(error) {
-    // Tracking the event failed.
-  });
+  "xdm": adobeDataLayer.getState(reference);
+});
 ```
-
-
-### The `result` object
-
-The `sendEvent` command returns a promise that is resolved with a `result` object. The `result` object contains the following properties:
-
-**propositions**: The Personalization offers that the visitor has qualified for. [Learn more about propositions.](../personalization/rendering-personalization-content.md#manually-rendering-content)
-
-**decisions**: This property is deprecated. Please use `propositions` instead.
-
-**destinations**: Segments from Adobe Experience Platform that can be shared with external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites. [Learn more about destinations.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)

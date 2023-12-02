@@ -40,7 +40,7 @@ To access any personalization content, you may provide a callback function, whic
 
 ```javascript
 alloy("sendEvent", {
-    xdm: {}
+    "xdm": {}
   }).then(function(result) {
     if (result.propositions) {
       // Manually render propositions and send "display" event
@@ -107,8 +107,8 @@ Here is an example:
 
 ```javascript
 alloy("sendEvent", {
-    xdm: {},
-    decisionScopes: ['salutation', 'discount']
+    "xdm": {},
+    "decisionScopes": ['salutation', 'discount']
   }).then(function(result) {
     if (result.propositions) {
       // Manually render propositions and send "display" event
@@ -226,8 +226,8 @@ Your code would look as follows:
 
 ```javascript
 alloy("sendEvent", {
-  xdm: {},
-  decisionScopes: ['salutation', 'discount']
+  "xdm": {},
+  "decisionScopes": ['salutation', 'discount']
 }).then(function(result) {
   var propositions = result.propositions;
 
@@ -263,15 +263,15 @@ alloy("sendEvent", {
     }
       // Send a "display" event 
     alloy("sendEvent", {
-      xdm: {
-        eventType: "decisioning.propositionDisplay",
-        _experience: {
-          decisioning: {
-            propositions: [
+      "xdm": {
+        "eventType": "decisioning.propositionDisplay",
+        "_experience": {
+          "decisioning": {
+            "propositions": [
               {
-                id: discountProposition.id,
-                scope: discountProposition.scope,
-                scopeDetails: discountProposition.scopeDetails
+                "id": discountProposition.id,
+                "scope": discountProposition.scope,
+                "scopeDetails": discountProposition.scopeDetails
               }
             ]
           }
@@ -309,11 +309,11 @@ Next, when the view or a component gets updated, the `applyPropositions` command
 
 ```js
 var cartPropositions = alloy("sendEvent", {
-    renderDecisions: true,
-    xdm: {
-        web: {
-            webPageDetails: {
-                viewName: "cart"
+    "renderDecisions": true,
+    "xdm": {
+        "web": {
+            "webPageDetails": {
+                "viewName": "cart"
             }
         }
     }
@@ -326,7 +326,7 @@ var cartPropositions = alloy("sendEvent", {
 
 // Call applyPropositions to re-render the view propositions from the previous sendEvent command.
 alloy("applyPropositions", {
-    propositions: cartPropositions
+    "propositions": cartPropositions
 });
 ```
 
@@ -345,21 +345,21 @@ Supported `actionTypes` are:
 ```js
 // Retrieve propositions for salutation and discount scopes
 alloy("sendEvent", {
-    decisionScopes: ["salutation", "discount"]
+    "decisionScopes": ["salutation", "discount"]
 }).then(function(result) {
     var retrievedPropositions = result.propositions;
     // Render propositions on the page by providing additional metadata
 
     return alloy("applyPropositions", {
-        propositions: retrievedPropositions,
-        metadata: {
-            salutation: {
-                selector: "#first-form-based-offer",
-                actionType: "setHtml"
+        "propositions": retrievedPropositions,
+        "metadata": {
+            "salutation": {
+                "selector": "#first-form-based-offer",
+                "actionType": "setHtml"
             },
-            discount: {
-                selector: "#second-form-based-offer",
-                actionType: "replaceHtml"
+            "discount": {
+                "selector": "#second-form-based-offer",
+                "actionType": "replaceHtml"
             }
         }
     }).then(function(applyPropositionsResult) {
@@ -367,11 +367,11 @@ alloy("sendEvent", {
 
         // Send the display notifications via sendEvent command
         alloy("sendEvent", {
-            xdm: {
-                eventType: "decisioning.propositionDisplay",
-                _experience: {
-                    decisioning: {
-                        propositions: renderedPropositions
+            "xdm": {
+                "eventType": "decisioning.propositionDisplay",
+                "_experience": {
+                    "decisioning": {
+                        "propositions": renderedPropositions
                     }
                 }
             }

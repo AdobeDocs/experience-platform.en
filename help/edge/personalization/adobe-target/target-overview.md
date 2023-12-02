@@ -115,8 +115,8 @@ indicating whether the `proposition` was rendered or not. See the sample below:
 ```js
 alloy("sendEvent",
   {
-    renderDecisions: true,
-    decisionScopes: [
+    "renderDecisions": true,
+    "decisionScopes": [
       "hero-container"
     ]
   }).then(result => {
@@ -195,10 +195,10 @@ alloy("sendEvent", {
 
 ```js
 alloy("sendEvent", {
-  renderDecisions: true,
-  data: {
-    __adobe: {
-      target: {
+  "renderDecisions": true,
+  "data": {
+    "__adobe": {
+      "target": {
         "profile.gender": "female",
         "profile.age": 30
       }
@@ -234,10 +234,10 @@ The following table lists [!DNL Recommendations] attributes and whether each one
 
 ```js
 alloy("sendEvent", {
-  renderDecisions: true,
-  data: {
-    __adobe: {
-      target: {
+  "renderDecisions": true,
+  "data": {
+    "__adobe": {
+      "target": {
         "entity.id": "123",
         "entity.genre": "Drama"
       }
