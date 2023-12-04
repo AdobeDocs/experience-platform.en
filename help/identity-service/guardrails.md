@@ -8,7 +8,7 @@ exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
 
 This document provides information on use and rate limits for [!DNL Identity Service] data to help you optimize your use of the identity graph. When reviewing the following guardrails, it is assumed that you have modeled the data correctly. If you have questions on how to model your data, please contact your customer service representative.
 
-## Getting started
+## Get started
 
 The following Experience Platform services are involved with modeling Identity data: 
 
@@ -26,6 +26,7 @@ The following table outlines static limits applied to identity data.
 | Guardrail | Limit | Notes |
 | --- | --- | --- |
 | Number of identities in a graph | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity. Deletion is based on identity type and timestamp. The limit is applied at the sandbox level. For more information, read the section on [understanding the deletion logic](#deletion-logic). |
+| Number of links to an identity for a single batch ingestion | 50 | A single batch could contain anomalous identities that cause unwanted graph merges. To prevent this, Identity Service will not ingest identities that are already linked to 50 or more identities. |
 | Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
 | Number of custom namespaces | None | There are no limits to the number of custom namespaces you can create. |
 | Number of characters for a namespace display name or identity symbol | None | There are no limits to the number of characters of a namespace display name or identity symbol. |
@@ -36,7 +37,7 @@ The following table outlines existing rules you must follow to ensure a successf
 
 | Namespace | Validation rule | System behavior when rule is violated |
 | --- | --- | --- |
-| ECID | <ul><li>The identity value of an ECID must be exactly 38 characters.</li><li>The identity value of an ECID must consist of numbers only.</li></ul> | <ul><li>If the identity value of ECID is not exactly 38 characters, then the record is skipped.</li><li>If the identity value of ECID contains non-numerical characters, then the record is skipped.</li></ul> |
+| ECID | <ul><li>The identity value of an ECID must be exactly 38 characters.</li><li>The identity value of an ECID must consist of numbers only.</li><li>Identity values cannot be "null", "anonymous", "invalid", or be an empty string (for example: " ", "", "  ").</li></ul> | <ul><li>If the identity value of ECID is not exactly 38 characters, then the record is skipped.</li><li>If the identity value of ECID contains non-numerical characters, then the record is skipped.</li><li>The identity will be blocked from ingestion.</li></ul> |
 | Non-ECID | The identity value cannot exceed 1024 characters. | If the identity value exceeds 1024 characters, then the record is skipped. |
 
 ### Identity namespace ingestion
@@ -65,23 +66,6 @@ When a full graph is updated with a new identity, these two rules work in tandem
 >
 >If the identity designated to be deleted is linked to multiple other identities in the graph, then the links connecting that identity will also be deleted.
 
->[!BEGINSHADEBOX]
-
-**A visual representation of the deletion logic**
-
-![An example of the oldest identity being deleted to accommodate the latest identity](./images/graph-limits-v3.png)
-
-*Diagram notes:*
-
-* `t` = timestamp. 
-* The value of a timestamp corresponds with the recency of a given identity. For example, `t1` represents the first linked identity (oldest) and `t51` would represent the newest linked identity.
-
-In this example, before the graph on the left can be updated with a new identity, Identity Service first deletes the existing identity with the oldest timestamp. However, because the oldest identity is a device ID, Identity Service skips that identity until it gets to the namespace with a type that is higher on the deletion priority list, which in this case is `ecid-3`. Once the oldest identity with a higher deletion priority type is removed, the graph then gets updated with a new link, `ecid-51`.
-
-* In the rare case that there are two identities with the same timestamp and identity type, Identity Service will sort the IDs based on [XID](./api/list-native-id.md) and conduct deletion.
-
->[!ENDSHADEBOX]
-
 ### Implications on implementation
 
 The following sections outline the implications that the deletion logic has to Identity Service, Real-Time Customer Profile, and WebSDK.
@@ -108,6 +92,84 @@ If you would like to preserve your authenticated events against the CRM ID, then
 
 * [Configure identity map for Experience Platform tags](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Identity data in the Experience Platform Web SDK](../edge/identity/overview.md#using-identitymap)
+
+### Example scenarios
+
+#### Example one: typical large graph
+
+*Diagram notes:*
+
+* `t` = timestamp. 
+* The value of a timestamp corresponds with the recency of a given identity. For example, `t1` represents the first linked identity (oldest) and `t51` would represent the newest linked identity.
+
+In this example, before the graph on the left can be updated with a new identity, Identity Service first deletes the existing identity with the oldest timestamp. However, because the oldest identity is a device ID, Identity Service skips that identity until it gets to the namespace with a type that is higher on the deletion priority list, which in this case is `ecid-3`. Once the oldest identity with a higher deletion priority type is removed, the graph then gets updated with a new link, `ecid-51`.
+
+* In the rare case that there are two identities with the same timestamp and identity type, Identity Service will sort the IDs based on [XID](./api/list-native-id.md) and conduct deletion.
+
+![An example of the oldest identity being deleted to accommodate the latest identity](./images/graph-limits-v3.png)
+
+#### Example two: "graph split"
+
+>[!BEGINTABS]
+
+>[!TAB Incoming event]
+
+*Diagram notes:*
+
+* The following diagram assumes that at `timestamp=50`, 50 identities exist in the identity graph.
+* `(...)` signifies the other identities that are already linked within the graph.
+
+In this example, ECID:32110 is ingested and linked to a large graph at `timestamp=51`, thereby exceeding the limit of 50 identities.
+
+![](./images/guardrails/before-split.png)
+
+>[!TAB Deletion process]
+
+As a result, Identity Service deletes the oldest identity based on timestamp and identity type. In this case, ECID:35577 gets deleted.
+
+![](./images/guardrails/during-split.png)
+
+>[!TAB Graph output]
+
+As a result of deleting ECID:35577, the edges that linked CRM ID:60013 and CRM ID:25212 with the now deleted ECID:35577 also get deleted. This deletion process leads to the graph being split into two smaller graphs.
+
+![](./images/guardrails/after-split.png)
+
+>[!ENDTABS]
+
+#### Example three: "hub-and-spoke"
+
+>[!BEGINTABS]
+
+>[!TAB Incoming event]
+
+*Diagram notes:*
+
+* The following diagram assumes that at `timestamp=50`, 50 identities exist in the identity graph.
+* `(...)` signifies the other identities that are already linked within the graph.
+
+By virtue of the deletion logic, some "hub" identities can also get deleted. These hub identities refer to nodes that are linked to several individual identities that would otherwise be unlinked. 
+
+In the example below, ECID:21011 is ingested and linked to the graph at `timestamp=51`, thereby exceeding the limit of 50 identities.
+
+![](./images/guardrails/hub-and-spoke-start.png)
+
+>[!TAB Deletion process]
+
+As a result, Identity Service deletes the oldest identity, which in this case is ECID:35577. The deletion of ECID:35577 also results in the deletion of the following:
+
+* The link between CRM ID: 60013 and the now-deleted ECID:35577, thus resulting in a graph split scenario.
+* IDFA: 32110, IDFA: 02383, and the remaining identities represented by `(...)`. These identities get deleted because individually, they are not linked to any other identities and therefore, cannot be represented in a graph.
+
+![](./images/guardrails/hub-and-spoke-process.png)
+
+>[!TAB Graph output]
+
+Finally, the deletion process yields two smaller graphs.
+
+![](./images/guardrails/hub-and-spoke-result.png)
+
+>[!ENDTABS]
 
 ## Next steps
 

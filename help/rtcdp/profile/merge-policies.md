@@ -2,6 +2,7 @@
 keywords: merge policies rtcdp;rtcdp merge policies
 title: Merge policies in Real-Time Customer Data Platform
 description: Working with merge policies in Adobe Real-Time Customer Data Platform
+feature: Get Started, Identities, Profiles
 exl-id: 1a9d9549-a7de-46d7-a23e-dd41829839c5
 ---
 # Merge policies overview

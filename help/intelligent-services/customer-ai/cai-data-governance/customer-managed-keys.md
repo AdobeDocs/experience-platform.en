@@ -4,7 +4,7 @@ title: Customer Managed Keys in Customer AI.
 description: Learn how to set up Customer Managed Keys for Customer AI.
 exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
 ---
-# Customer Managed Keys
+# Customer Managed Keys in Customer AI
 
 Customer AI provides the option for [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) and Privacy & Security Shield customers to utilize Azure Customer Managed Keys (CMK) to be applied to your Customer AI data. The setup process is the same as [Adobe Experience Platform CMK setup](../../../landing/governance-privacy-security/customer-managed-keys/overview.md) and you can follow the steps outlined in there.
 

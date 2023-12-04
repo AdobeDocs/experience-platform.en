@@ -2,8 +2,8 @@
 title: Activate audiences to curated destinations based on LiveRamp identifiers
 type: Tutorial
 description: Learn how to activate audiences from Adobe Experience Platform to connected TV and audio destinations, and other integrations using the LiveRamp RampID.
+exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
 ---
-
 # Activate audiences to curated destinations based on LiveRamp identifiers
 
 Use the Adobe Real-Time CDP integration with [!DNL LiveRamp] to activate audiences to a curated list of destinations which use [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) for activation, including connected TV and audio destinations, such as the ones listed below.
@@ -51,6 +51,12 @@ After you've exported your audiences, you activate them by using the [[!DNL Live
 >[!TIP]
 >
 >This process enables you to activate your audiences to destinations such as [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney), and more, directly from the Real-Time CDP UI, without the need to log in to your [!DNL LiveRamp] account for activation.
+
+### Video tutorial {#video}
+
+Watch the video below for an end-to-end explanation of the workflow described in this page.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
 ### Step 1: Send your audiences from Experience Platform to LiveRamp, through the [!DNL LiveRamp - Onboarding] destination {#onboarding}
 
