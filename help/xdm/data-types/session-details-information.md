@@ -10,8 +10,6 @@ description: This document provides an overview of the Session Details Informati
 ![A diagram of the  Session Details Information data type.]()
 +++
 
-| Property | Data type | Description |
-| --- | --- | --- |
 | Display name | Property | Data type | Description |
 | --- | --- | --- | --- |
 | [!UICONTROL Media Session ID] | `ID` | string |  The [!UICONTROL Media Session ID] identifies an instance of a content stream unique to an individual playback. |
