@@ -478,11 +478,21 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 
 ## Post data for ingestion
 
+View the sample payload below for examples of raw or XDM-compliant json that you can send for ingestion.
+
+>[!TIP]
+>
+>The following examples apply to all three of:
+>
+>- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+>- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+>- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+
 >[!BEGINTABS]
 
 >[!TAB Raw data]
 
-```
+```json
 '{
       "name": "Johnson Smith",
       "location": {
@@ -517,9 +527,9 @@ A successful response returns the ID (`id`) of the newly created dataflow.
       }
     },
     "xdmEntity": {
-      "_id": "googlepubsub",
+      "_id": "acme",
       "workEmail": {
-        "address": "pubsub@wmail.com",
+        "address": "mike@acme.com",
         "primary": true,
         "type": "work",
         "status": "active"
@@ -527,9 +537,8 @@ A successful response returns the ID (`id`) of the newly created dataflow.
       "person": {
         "gender": "male",
         "name": {
-          "firstName": "Pub",
-          "middleName": "E",
-          "lastName": "Sub"
+          "firstName": "Mike",
+          "lastName": "Wazowski"
         },
         "birthDate": "1985-01-01"
       },
