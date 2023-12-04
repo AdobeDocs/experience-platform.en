@@ -91,9 +91,13 @@ The prehiding style editor allows you to define custom CSS rules to hide specifi
  
 ### Prehiding snippet {#prehiding-snippet}
 
-The prehiding snippet is useful when the Web SDK library is loaded asynchronously. In this situation, you might want to hide the content before the Web SDK library is loaded.
+The prehiding snippet is useful when the Web SDK library is loaded asynchronously. In this situation, to avoid flickering, we recommend hiding the content before the Web SDK library is loaded.
 
 To use the prehiding snippet, copy and paste it inside the `<head>` element of your page.
+
+>[!IMPORTANT]
+>
+>When using the prehiding snippet, Adobe recommends to use the same [!DNL CSS] rule as the one used by the [prehiding style](#prehiding-style).
 
 ## Configure data collection settings {#data-collection}
 
