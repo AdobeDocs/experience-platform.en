@@ -114,7 +114,7 @@ The guardrails outlined in this section refer to the number and nature of audien
 | Batch audiences per sandbox | 4000 | Performance guardrail | An organization can have more than 4000 batch audiences in total, as long as there are less than 4000 batch audiences in each individual sandbox. Attempting to create additional batch audiences may affect system performance.|
 | Account audiences per sandbox | 50 | System-enforced guardrail | You can create a maximum of 50 account audiences in a sandbox. After you reach 50 audiences in a sandbox, the **[!UICONTROL Create audience]** control is disabled when trying to create a new account audience. Read more about [account audiences](/help/segmentation/ui/account-audiences.md). |
 | Published compositions per sandbox | 10 | Performance guardrail | You can have a maximum of  10 published compositions in a sandbox. Read more about [audience composition in the UI guide](/help/segmentation/ui/audience-composition.md). |
-| Maximum audience size | 30 percent | Performance guardrail | The recommended maximum membership of a segment is 30 percent of the total number of profiles in the system. Creating segments with more than 30% of the profiles as members or multiple large segments is possible but will impact system performance. |
+| Maximum audience size | 30 percent | Performance guardrail | The recommended maximum membership of an audience is 30 percent of the total number of profiles in the system. Creating audiences with more than 30% of the profiles as members or multiple large audiences is possible but will impact system performance. |
 
 {style="table-layout:auto"}
 
