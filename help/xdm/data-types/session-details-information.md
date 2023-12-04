@@ -19,7 +19,6 @@ description: This document provides an overview of the Session Details Informati
 |  [!UICONTROL Content Name]  | `friendlyName` | String | The [!UICONTROL Content Name] is the "friendly" (human-readable) name of the content. | 
 |  [!UICONTROL Media Content Length]  | `length` | Integer | **Required** The [!UICONTROL Media Content Length] contains the clip length/runtime - This is the maximum length (or duration) of the content being consumed (in seconds). | 
 | !UICONTROL Broadcast Content Type]   | `contentType` | String | **Required** The [!UICONTROL Broadcast Content Type] of the stream delivery. Available values per [!UICONTROL Stream Type] include:<br>Audio: "song", "podcast", "audiobook", and "radio";<br>Video: "VoD", "Live", "Linear", "UGC", and "DVoD". Customers can provide custom values for this parameter. |
-
 |  [!UICONTROL Content Player Name]  | `playerName` | String | **Required** The name of the content player. | 
 |  [!UICONTROL Content Channel]  | `channel` | String | **Required** The [!UICONTROL Content Channel] is the distribution channel from where the content was played. | 
 |  [!UICONTROL Version]  | `appVersion` | String | The SDK version used by the player. This could have any custom value that makes sense for your player. | 
