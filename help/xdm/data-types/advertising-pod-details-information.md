@@ -4,13 +4,16 @@ description: This document provides an overview of the Advertising Pod Details I
 ---
 # [!UICONTROL Advertising Pod Details Information] data type
 
-[!UICONTROL Advertising Pod Details Information] is a standard Experience Data Model (XDM) data type that describes ...
+[!UICONTROL Advertising Pod Details Information] is a standard Experience Data Model (XDM) data type. It defines a sequence or group of ads typically played in succession during content breaks. It captures details such as the ad break ID, a friendly name for the ad break, the index of ads within the break, and the offset of the ad break within the content's timeline in seconds.
 
-![A diagram of the Advertising Pod Details Information data type.]()
+![A diagram of the Advertising Pod Details Information data type.](../images/data-types/advertising-pod-details-information.png)
 
-| Property | Data type | Description |
-| --- | --- | --- |
-|     |     |     |
+| Display name               | Property               | Data type | Description                                           |
+|----------------------------|------------------------|-----------|-------------------------------------------------------|
+| [!UICONTROL Ad Break ID]                | `ID`               | string    | The ID of the ad break.                               |
+| [!UICONTROL Pod Friendly Name]          | `friendlyName`      | string    | The easily understandable name of the ad break.                     |
+| [!UICONTROL Ad In Pod Position]         | `index`         | integer   | The index of the ad inside the parent ad break start.  |
+| [!UICONTROL Pod Offset]                 | `offset`           | integer   | The offset of the ad break inside the content, in seconds. |
 
 {style="table-layout:auto"}
 
