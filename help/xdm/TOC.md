@@ -129,7 +129,7 @@ feature: Schemas
   * [Key Value Pair](./data-types/key-value-pair.md)
   * [Marketing](./data-types/marketing.md)
   * [Measure](./data-types/measure.md)
-  * [Media Details Information](./data-types/media-details-information.md)
+  * [Media Details Information](./data-types/media-details-information.md) 
   * [Media Event Information](./data-types/media-event-information.md)
   * [Order](./data-types/order.md)
   * [Payment Item](./data-types/payment-item.md)
