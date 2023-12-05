@@ -4,7 +4,7 @@ description: This document provides an overview of the QoE (Quality of Experienc
 ---
 # QoE (Quality of Experience) Data Details Information data type
 
-[!UICONTROL QoE Data Details Information Data Type] is a standard Experience Data Model (XDM) data type provides detailed metrics related to the quality of experience (QoE) during media playback. It captures various parameters such as bitrate information, frame rates, buffering events, errors, stalling occurrences, dropped frames, and durations associated with these events. This data type enables the analysis of playback quality, allowing for insights into streaming performance, user experience, and potential issues encountered during playback sessions.
+[!UICONTROL QoE Data Details Information] is a standard Experience Data Model (XDM) data type provides detailed metrics related to the quality of experience (QoE) during media playback. It captures various parameters such as bitrate information, frame rates, buffering events, errors, stalling occurrences, dropped frames, and durations associated with these events. This data type enables the analysis of playback quality, allowing for insights into streaming performance, user experience, and potential issues encountered during playback sessions.
 
 +++Select to display the QoE Data Details Information data type.
 ![A diagram of the QoE (Quality of Experience) Data Details Information data type.](../images/data-types/qoe-data-details-information.png)

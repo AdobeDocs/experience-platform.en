@@ -8,13 +8,11 @@ description: This document provides an overview of the MediaAnalytics Interactio
 
 ![A schema diagram of the [!UICONTROL MediaAnalytics Interaction Details] schema field group.](../../images/field-groups/mediaanalytics-interaction.png)
 
-<!-- Update the links to the mediaDetails datatype documentation once it exists. -->
-
-| Property | Data type | Description |
-| --- | --- | --- |
-| `mediaCollection` | [[!UICONTROL mediaDetails]](https://ns.adobe.com/xdm/datatypes/mediaDetails) | Attributes related to a collection of media items.  |
-|  `mediaDownloadedEvents` | An [!UICONTROL Array] of [[!UICONTROL mediaEvent]](https://ns.adobe.com/xdm/datatypes/mediaEvent) | Events that track the downloading of content within the media collection. |
-| `mediaReporting` | [[!UICONTROL mediaDetails]](https://ns.adobe.com/xdm/datatypes/mediaDetails) | Reporting details and metrics associated with the media content. |
+| Display name    | Property | Data type | Description |
+|---| --- | --- | --- |
+| [!UICONTROL Media Collection Details]  | `mediaCollection` | [[!UICONTROL Media details information]](../../data-types/media-details-information.md) | Attributes related to a collection of media items.  |
+| [!UICONTROL Media Reporting Details]  | `mediaReporting` | [[!UICONTROL Media details information]](../../data-types/media-details-information.md) | Reporting details and metrics associated with the media content. |
+| [!UICONTROL List Of Media Collection Downloaded Content Events]  |  `mediaDownloadedEvents` | [!UICONTROL Array] of [[!UICONTROL mediaEvent]](../../data-types/media-event-information.md) | Events that track the downloading of content within the media collection. |
 
 {style="table-layout:auto"}
 

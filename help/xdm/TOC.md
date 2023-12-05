@@ -6,7 +6,7 @@ user-guide-description: Explore an overview of the Experience Data Model (XDM) s
 feature: Schemas
 ---
 
-# Experience Data Model (XDM) System {#xdm}
+# Experience Data Model (XDM) System {#xdm} 
 
 * [XDM System overview](home.md)
 * Schemas {#schema}
@@ -74,6 +74,7 @@ feature: Schemas
     * [Flight Reservation](./field-groups/event/flight-reservation.md)
     * [IAB TCF 2.0 Consent](./field-groups/event/iab.md)
     * [Lodging Reservation](./field-groups/event/lodging-reservation.md)
+    * [MediaAnalytics Interaction Details](./field-groups/event/mediaanalytics-interaction.md)
     * [Quote Request Details](./field-groups/event/quote-request-details.md)
     * [Reservation Details](./field-groups/event/reservation-details.md)
     * [Sitetool Details](./field-groups/event/sitetool-details.md)
@@ -128,17 +129,22 @@ feature: Schemas
   * [Key Value Pair](./data-types/key-value-pair.md)
   * [Marketing](./data-types/marketing.md)
   * [Measure](./data-types/measure.md)
+  * [Media Details Information](./data-types/media-details-information.md)
+  * [Media Event Information](./data-types/media-event-information.md)
   * [Order](./data-types/order.md)
   * [Payment Item](./data-types/payment-item.md)
   * [Person](./data-types/person.md)
   * [Person name](./data-types/person-name.md)
   * [Phone number](./data-types/phone-number.md)
   * [Place context](./data-types/place-context.md)
+  * [Player State Data Information](./data-types/player-state-data-information.md)
   * [POI details](./data-types/poi-details.md)
   * [POI interaction](./data-types/poi-interaction.md)
   * [Postal address](./data-types/postal-address.md)
   * [Product list item](./data-types/product-list-item.md)
+  * [QoE Data Details Information](./data-types/qoe-data-details-information.md)
   * [Search](./data-types/search.md)
+  * [Session Details Information](./data-types/session-details-information.md)
   * [Subscription](./data-types/subscription.md)
   * [Telecom Subscription](./data-types/telecom-subscription.md)
   * [Transaction](./data-types/transaction.md)
