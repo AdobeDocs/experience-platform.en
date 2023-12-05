@@ -4,7 +4,7 @@ description: Override configuration settings for all commands on a page
 ---
 # `edgeConfigOverrides`
 
-*This page outlines the object to override configuration settings all commands on a page. If you want to override configuration settings for just a single `sendEvent` command, see [`edgeConfigOverrides`](../sendevent/edgeconfigoverrides.md) within the `sendEvent` command.*
+*This page outlines the object to override configuration settings for all commands on a page. If you want to override configuration settings for just a single `sendEvent` command, see [`edgeConfigOverrides`](../sendevent/edgeconfigoverrides.md) within the `sendEvent` command.*
 
 The `edgeConfigOverrides` object allows you to override configuration settings for commands run on the current page. This override is useful when you have different websites or subdomains for different countries, or if you have multiple Experience Platform sandboxes to store data specific to different business units.
 
