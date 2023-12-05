@@ -26,7 +26,7 @@ Select the **[!UICONTROL Roles]** tab to view the roles the user is assigned to.
 >
 >Only system administrators have the ability to view and manage API credentials in Permissions.
 
-The transition to Adobe Experience Platform permissions has additional steps that need to be completed for the developer API workflow that previously relied on product profiles. See the guide on [API authentication](../../../landing/api-authentication.md) for more information.
+The transition to Adobe Experience Platform permissions has additional steps that need to be completed for the developer API workflow that previously relied on roles. See the guide on [API authentication](../../../landing/api-authentication.md) for more information.
 
 ## Next steps
 
