@@ -29,7 +29,7 @@ The attribute-based access control workspace for Adobe Experience Cloud appears,
 
 >[!IMPORTANT]
 >
->Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe Experience Cloud, instead of Product Profiles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
+>Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe Experience Cloud, instead of Roles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
 
 ![flac-select-roles](../../images/flac-ui/flac-select-roles.png)
 
