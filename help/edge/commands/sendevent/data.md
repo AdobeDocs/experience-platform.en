@@ -30,7 +30,7 @@ Provide a data element in the [!UICONTROL Data] field within the actions of a ta
 
 ## Use the data property using alloy.js
 
-Set the `data` property as part of the JSON object within the parameter of the `sendEvent` command. For data that you plan to map in the datastream, you can structure this property however you'd like. For data used by certain services, make sure that the object hierarchy matches what the service expects. 
+Set the `data` property as part of the JSON object within the parameter of the `sendEvent` command. For data that you plan to map in the datastream, you can structure this property however you'd like. For data used by certain services, make sure that the object hierarchy matches what the service expects. You can include both the `data` object and the `xdm` object in the same `sendEvent` command.
 
 ```javascript
 alloy("sendEvent", {
