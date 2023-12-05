@@ -26,7 +26,7 @@ Platform enforces a strict seven-day time-to-live (TTL) on all files uploaded to
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|

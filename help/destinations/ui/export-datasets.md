@@ -65,7 +65,7 @@ Watch the video below for an end-to-end explanation of the workflow described on
 
 Currently, you can export datasets to the cloud storage destinations highlighted in the screenshot and listed below. 
 
-![Destinations which support dataset exports](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+![Destinations catalog page showing which destinations support dataset exports.](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -215,7 +215,7 @@ Refer to the product description documents to understand how much data you are e
 
 Note that the data export entitlements for different applications are not additive. For example, this means that if you purchase Real-Time CDP Ultimate and Adobe Journey Optimizer Ultimate, the profile export entitlement will be the larger of the two entitlements, as per the product descriptions. Your volume entitlements are calculated by taking your total number of licensed profiles and multiplying by 500 KB for Real-Time CDP Prime or 700 KB for Real-Time CDP Ultimate to determine how much volume of data you are entitled to.
 
-On the other hand, if you purchase add-ons such as Data Distiller, the data export limit that you are entitled to represents the sum of the product tier and the add-on. 
+On the other hand, if you purchased add-ons such as Data Distiller, the data export limit that you are entitled to represents the sum of the product tier and the add-on. 
 
 You can view and track your profile exports against your contractual limits in the licensing dashboard. 
 

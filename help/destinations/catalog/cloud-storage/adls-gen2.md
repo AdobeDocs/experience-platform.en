@@ -17,7 +17,7 @@ Read this page to learn to create a live outbound connection to your [[!DNL Azur
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|

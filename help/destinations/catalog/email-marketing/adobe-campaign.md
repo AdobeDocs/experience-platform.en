@@ -14,7 +14,7 @@ To send audience data to Adobe Campaign, you must first [connect the destination
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|

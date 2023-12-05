@@ -29,7 +29,7 @@ Create a live outbound connection to your SFTP server to periodically export del
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
@@ -49,7 +49,7 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
-![SFTP profile-based export type](../../assets/catalog/cloud-storage/sftp/catalog.png)
+![SFTP profile-based export type highlighted in the destinations catalog.](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
 ## Connect to the destination {#connect}
 
@@ -73,7 +73,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 If you select the **[!UICONTROL SFTP with password]** authentication type to connect to your SFTP location:
 
-![SFTP destination basic authentication](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![SFTP destination basic authentication with password.](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL Domain]**: The address of your SFTP storage location;
 * **[!UICONTROL Username]**: The username to log into your SFTP storage location;
@@ -81,12 +81,12 @@ If you select the **[!UICONTROL SFTP with password]** authentication type to con
 * **[!UICONTROL Password]**: The password to log into your SFTP storage location.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
-  ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Image showing an example of a correctly formatted PGP key in the UI.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 If you select the **[!UICONTROL SFTP with SSH key]** authentication type to connect to your SFTP location:
 
-![SFTP destination SSH key authentication](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+![SFTP destination SSH key authentication.](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
 * **[!UICONTROL Domain]**: Fill in the IP address or the domain name of your SFTP account
 * **[!UICONTROL Port]**: The port used by your SFTP storage location;
@@ -94,13 +94,13 @@ If you select the **[!UICONTROL SFTP with SSH key]** authentication type to conn
 * **[!UICONTROL SSH Key]**: The private SSH key used to log into your SFTP storage location. The private key must be an RSA-formatted, Base64-encoded string, and must not be password-protected.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
-    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+    ![Image showing an example of a correctly formatted PGP key in the UI.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
     
 ### Destination details {#destination-details}
 
 After establishing the authentication connection to the SFTP location, provide the following information for the destination:
 
-![Available Destination details for SFTP destination](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+![Destination details fields for the SFTP destination.](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
 * **[!UICONTROL Name]**: Enter a name that helps you identify this destination in the Experience Platform user interface;
 * **[!UICONTROL Description]**: Enter a description for this destination;
@@ -134,6 +134,6 @@ This destination supports dataset exports. For complete information on how to se
 
 For [!DNL SFTP] destinations, Platform creates a `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the audience activation tutorial.
 
-## IP address allow list {#ip-address-allow-list}
+## IP address allowlist {#ip-address-allow-list}
 
-Refer to [IP address allow list for SFTP destinations](ip-address-allow-list.md) if you need to add Adobe IPs to an allow list.
+Refer to [IP address allowlist for SFTP destinations](ip-address-allow-list.md) if you need to add Adobe IPs to an allowlist.

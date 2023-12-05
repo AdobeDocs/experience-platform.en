@@ -30,7 +30,7 @@ As a marketer, I want to be able to use audiences built off of [!DNL Microsoft A
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
