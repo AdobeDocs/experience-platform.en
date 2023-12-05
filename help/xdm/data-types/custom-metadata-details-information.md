@@ -4,13 +4,14 @@ description: This document provides an overview of the Custom Metadata Details I
 ---
 # [!UICONTROL Custom Metadata Details Information] data type
 
-[!UICONTROL Custom Metadata Details Information] is a standard Experience Data Model (XDM) data type that describes ...
+[!UICONTROL Custom Metadata Details Information] is a standard Experience Data Model (XDM) data type defines a structure for storing custom metadata. It includes fields for the name and value of custom metadata associated with content or interactions, and allows flexibility in adding and organizing additional information beyond the standard predefined properties.
 
 ![A diagram of the  Custom Metadata Details Information data type.]()
 
-| Property | Data type | Description |
-| --- | --- | --- |
-|     |     |     |
+| Display name                               | Property         | Data type | Description                             |
+|--------------------------------------------|------------------|-----------|-----------------------------------------|
+| [!UICONTROL Custom Metadata Field Name]    | `name`           | string    | The name of the custom field.           |
+| [!UICONTROL Custom Metadata Field Value]   | `value`          | string    | The value of the custom field.          |
 
 {style="table-layout:auto"}
 
