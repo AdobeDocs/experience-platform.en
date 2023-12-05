@@ -4,13 +4,20 @@ description: This document provides an overview of the Chapter Details Informati
 ---
 # [!UICONTROL Chapter Details Information] data type
 
-[!UICONTROL Chapter Details Information] is a standard Experience Data Model (XDM) data type that describes ...
+[!UICONTROL Chapter Details Information] is a standard Experience Data Model (XDM) data type that describes various attributes related to chapters or segments within media content. It captures details such as chapter name, duration, position, ID, playback status (started/completed), and the time spent on each chapter.
 
-![A diagram of the  Chapter Details Information data type.]()
+![A diagram of the  Chapter Details Information data type.](../images/data-types/chapter-details-information.png)
 
-| Property | Data type | Description |
-| --- | --- | --- |
-|     |     |     |
+| Display name              | Property      | Data type | Description                                       |
+|---------------------------|---------------|-----------|---------------------------------------------------|
+| [!UICONTROL Chapter Name]              | `friendlyName` | string    | The name of the chapter and/or segment.           |
+| [!UICONTROL Chapter Length Or Duration]| `length`       | integer   | **Required** The length of the chapter, in seconds.            |
+| [!UICONTROL Chapter Offset]            | `offset`      | integer   | **Required** The offset of the chapter inside the content (in seconds) from the start. |
+| [!UICONTROL Chapter Position]          | `index`       | integer   | **Required** The position (index, integer) of the chapter inside the content. |
+| [!UICONTROL Chapter ID]                | `ID`          | string    | The auto-generated ID of the chapter.             |
+| [!UICONTROL Chapter Started]           | `isStarted`   | boolean   | Whether the chapter has started.                  |
+| [!UICONTROL Chapter Completed]         | `isCompleted` | boolean   | Whether the chapter has completed.                |
+| [!UICONTROL Chapter Time Played ]      | `timePlayed`  | integer   | The time spent on the chapter, in seconds.        |
 
 {style="table-layout:auto"}
 
