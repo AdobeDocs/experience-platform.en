@@ -13,7 +13,7 @@ description: This document provides an overview of the Advertising Pod Details I
 | [!UICONTROL Ad Break ID]                | `ID`               | string    | The ID of the ad break.                               |
 | [!UICONTROL Pod Friendly Name]          | `friendlyName`      | string    | The easily understandable name of the ad break.                     |
 | [!UICONTROL Ad In Pod Position]         | `index`         | integer   | The index of the ad inside the parent ad break start.  |
-| [!UICONTROL Pod Offset]                 | `offset`           | integer   | The offset of the ad break inside the content, in seconds. |
+| [!UICONTROL Pod Offset]                 | `offset`           | integer   | **Required** The offset of the ad break inside the content, in seconds. |
 
 {style="table-layout:auto"}
 
