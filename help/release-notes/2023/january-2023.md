@@ -133,7 +133,7 @@ XDM is an open-source specification that provides common structures and definiti
 | --- | --- | --- |
 | Class | [[!UICONTROL Conversion]](https://github.com/adobe/xdm/blob/master/components/classes/conversion.schema.json) | A class for tracking conversion data like currency conversions. |
 | Field group | [[!UICONTROL Currency Conversion Rate Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/conversion/currency-conversion-details.schema.json) | A field group for the [!UICONTROL Conversion] class, capturing additional details related to currency conversion. |
-| Field group | [[!UICONTROL Consent policies evaluation results map with metadata]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.jsonn) | Captures details for the evaluation result of multiple consent policies, including metadata information about consent policy entrances and exists. |
+| Field group | [[!UICONTROL Consent policies evaluation results map with metadata]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResultsv2.schema.json) | Captures details for the evaluation result of multiple consent policies, including metadata information about consent policy entrances and exists. |
 
 **Updated XDM components**
 
@@ -143,7 +143,7 @@ XDM is an open-source specification that provides common structures and definiti
 | Data type | [[!UICONTROL Decision Proposition Details]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-detail.schema.json) | Added a `selectionStrategy` field which captures the details of a selection strategy. |
 | Field group | [[!UICONTROL Experience Event - Proposition Interactions]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | The field group is now compatible with the [!UICONTROL Journey Step Event] class. |
 | Data type | [[!UICONTROL Error details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | The `ID` field has been renamed to `name`. |
-| Data type | [[!UICONTROL Media information]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Reverted a change in pattern to the video segment property. |
+| Data type | [[!UICONTROL Media information]](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/media.schema.json) | Reverted a change in pattern to the video segment property. |
 | Data type | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Removed the `droppedFrameCount` field. |
 | Data type | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Renamed the `isAuthorized` field to `authorized`, and updated its `type` to a string when it was previously a Boolean. |
 | Data type | [[!UICONTROL Shipping]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Added several new fields: `shipDate`, `trackingNumber`, and `trackingURL`. |
