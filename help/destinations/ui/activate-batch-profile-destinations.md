@@ -45,11 +45,11 @@ Select your desired file format for export when [creating a connection to the fi
 
     ![Activate audiences control highlighted in the catalo page.](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
-2. Select the destination connection that you want to use to activate your audiences, then select **[!UICONTROL Next]**.
+1. Select the destination connection that you want to use to activate your audiences, then select **[!UICONTROL Next]**.
 
     ![Checkboxes highlighted to select one or multiple destinations to activate audiences to.](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
-3. Move to the next section to [select your audiences](#select-audiences).
+1. Move to the next section to [select your audiences](#select-audiences).
 
 ## Select your audiences {#select-audiences}
 
