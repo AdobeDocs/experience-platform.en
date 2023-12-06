@@ -313,7 +313,7 @@ The response will include one dataset (`limit=1`) showing the "files" property.
 ```json
 {
   "5bf479a6a8c862000050e3c7": {
-    "files": "@/dataSets/5bf479a6a8c862000050e3c7/views/5bf479a654f52014cfffe7f1/files"
+    "files": "@/dataSetFiles?dataSetId=5bf479a6a8c862000050e3c7"
   }
 }
 ```
