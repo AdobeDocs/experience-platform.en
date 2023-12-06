@@ -6,6 +6,28 @@ description: Learn how to map your data to an Experience Data Model (XDM) event 
 
 Data Prep is an Adobe Experience Platform service that allows you to map, transform, and validate data to and from [Experience Data Model (XDM)](../xdm/home.md). When configuring a Platform-enabled [datastream](./overview.md), you can use Data Prep capabilities to map your source data to XDM when sending it to the Platform Edge Network.
 
+All data sent from a webpage must, ultimately, land in Experience Platorm as XDM. There are 3 ways to translate data from an on-page datalayer to the AEP-accepted XDM.
+
+1.  Reformat the datalayer into XDM on the webpage itself.
+2.  Use Adobe Tags' native Data Elements functionality to reformat a webpage's existing datalayer format into XDM.
+3.  Reformat a webpage's existing datalayer format into XDM via the Experience Edge network using Data Prep for Data Collection.
+
+This guide focuses on the 3rd option. 
+
+## [!UICONTROL When to use Data Prep for Data Collection] {#when-to-use-data-prep}
+
+Two primary uses cases for when to use Data Prep for Data Collection include:
+
+1.  The website has a well-formed, governed, and maintained data layer and there's a preference for sending it directly to the Experience Edge instead of using JavaScript manipulation to convert it to XDM on the page (either via Adobe Tag's Data Elements funcationality or manual JS manipulation).
+
+2. A tagging system other than Adobe Tags is deployed on the site.
+
+## [!UICONTROL Sending an existing Data Layer to Experience Edge via WebSDK] {#send-datalayer-via-websdk}
+
+The existing datalayer must be sent using the *data* option of the *sendEvent* command as described in [this section](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data) of the WebSDK Guide. Or, if using Adobe Tags, using the *Data* field of the Send Event action type as described [here](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html?lang=en). 
+
+The rest of this guide will focus on how to map the data layer to XDM standards after it has been sent by the WebSDK. 
+
 >[!NOTE]
 >
 >For comprehensive guidance on all Data Prep capabilities, including transformation functions for calculated fields, refer to the following documentation:
@@ -125,6 +147,9 @@ To capture properties from an XDM object data element, the same rules apply to t
 You can select the option to upload the object as a file, or paste the raw object into the provided textbox instead. If the JSON is valid, a preview schema is displayed in the right panel. Select **[!UICONTROL Next]** to continue.
 
 ![JSON sample of expected incoming data](assets/data-prep/select-data.png)
+
+[!NOTE]
+>Be sure to use a sample JSON object that represents every data layer element that may be used on any page. For example, not all pages use shopping cart data layer elements. However, the shopping cart data layer elements should be included in this sample JSON object.
 
 ## [!UICONTROL Mapping]
 
