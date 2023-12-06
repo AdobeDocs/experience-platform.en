@@ -1,6 +1,8 @@
 ---
 title: Real-Time CDP Guardrails
 description: Learn about the data guardrails across the various services and areas of Real-Time CDP.
+feature: Guardrails, Data Management, Data Ingestion, Data Export
+exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
 ---
 # Real-Time CDP Guardrails
 

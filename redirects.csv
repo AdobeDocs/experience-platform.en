@@ -1,4 +1,12 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-statistics.html,https://experienceleague.adobe.com/docs/experience-platform/query/key-concepts/dataset-statistics.html
+https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html,https://experienceleague.adobe.com/docs/experience-platform/query/key-concepts/dataset-samples.html
+https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/deduplication.html,https://experienceleague.adobe.com/docs/experience-platform/query/key-concepts/deduplication.html
+https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/incremental-load.html,https://experienceleague.adobe.com/docs/experience-platform/query/key-concepts/incremental-load.html
+https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/inline-templates.html,https://experienceleague.adobe.com/docs/experience-platform/query/key-concepts/inline-templates.html
+https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/flatten-nested-data.html,https://experienceleague.adobe.com/docs/experience-platform/query/key-concepts/flatten-nested-data.html
+https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/nested-data-structures.html,https://experienceleague.adobe.com/docs/experience-platform/query/key-concepts/nested-data-structures.html
+https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/anonymous-block.html,https://experienceleague.adobe.com/docs/experience-platform/query/key-concepts/anonymous-block.html
 https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/ml-feature-piplines.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/ml-feature-pipelines/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/data-pipeline-enrichment.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/ml-feature-pipelines/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/hygiene/home.html,https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/home.html
