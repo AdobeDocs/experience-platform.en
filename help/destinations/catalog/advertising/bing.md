@@ -20,7 +20,7 @@ As a marketer, I want to be able to use audiences built off of [!DNL Microsoft A
 
 ## Supported identities {#supported-identities}
 
-[!DNL Microsoft Bing] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Microsoft Bing] supports the activation of audiences based on the identities shown in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description|
 |---|---|
