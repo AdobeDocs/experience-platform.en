@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
-title: Merkury Enterprise Identity Resolution Documentation self-service template for the UI
+title: Create A Merkury Enterprise Identity Resolution Source Connection and Dataflow in the UI
 description: Learn how to create a Merkury Enterprise Identity Resolution source connection using the Adobe Experience Platform UI.
 hide: true
 hidefromtoc: true
 ---
 # Create a Merkury Enterprise Identity Resolution source connection and dataflow in the UI
 
-This tutorial provides steps to create a Merkury Enterprise Identity Resolution source connection and dataflow using the Adobe Experience Platform user interface.
+This tutorial provides steps to create a [!DNL Merkury Enterprise Identity Resolution] source connection and dataflow using the Adobe Experience Platform user interface.
 
 ## Get started
 
@@ -20,13 +19,15 @@ This tutorial requires a working understanding of the following components of Ex
 
 ### Gather required credentials
 
-In order to access your bucket on Platform, you need to provide valid values for the following credentials:
+In order to access your bucket on Experience Platform, you need to provide valid values for the following credentials:
 
 | Credential | Description |
 | --- | --- |
 | Access key | The access key ID for your bucket. You can retrieve this value from your [!DNL Merkury] team. |
 | Secret key | The secret key ID for your bucket. You can retrieve this value from your [!DNL Merkury] team. |
 | Bucket name | This is your Merkury bucket where files will be shared. You can retrieve this value from your [!DNL Merkury] team. |
+
+For more information on set up for [!DNL Merkury] and other prerequisites, read the [[!DNL Merkury] source overview](../../../../connectors/data-partners/merkury.md).
 
 ## Connect your Merkury Account
 
@@ -201,3 +202,19 @@ The **[!UICONTROL Review]** step appears, allowing you to review your new datafl
 Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
 ![The review page.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/review.png)
+
+## Next steps
+
+By following this tutorial, you have successfully created a dataflow to bring batch data from your [!DNL Merkury] source to Experience Platform. For additional resources, visit the documentation outlined below.
+
+### Monitor your dataflow
+
+Once your dataflow has been created, you can monitor the data that is being ingested through it to view information on ingestion rates, success, and errors. For more information on how to monitor dataflow, visit the tutorial on [monitoring accounts and dataflows in the UI](../../monitor.md).
+
+### Update your dataflow
+
+To update configurations for your dataflows scheduling, mapping, and general information, visit the tutorial on [updating sources dataflows in the UI](../../update-dataflows.md)
+
+### Delete your dataflow
+
+You can delete dataflows that are no longer necessary or were incorrectly created using the **[!UICONTROL Delete]** function available in the **[!UICONTROL Dataflows]** workspace. For more information on how to delete dataflows, visit the tutorial on [deleting dataflows in the UI](../../delete.md).
