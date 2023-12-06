@@ -1,7 +1,6 @@
 ---
 title: Data Prep for Data Collection
 description: Learn how to map your data to an Experience Data Model (XDM) event schema when configuring a datastream for the Adobe Experience Platform Web and Mobile SDKs.
-exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
 ---
 # Data Prep for Data Collection
 
@@ -25,7 +24,7 @@ For a quick demonstration of the Data Prep for Data Collection process, refer to
 
 Select **[!UICONTROL Save and Add Mapping]** after completing the basic configuration for a datastream, and the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data that you plan on sending to Platform.
 
-To capture properties directly from your data layer, the JSON object must have a single root property `data`. The sub-properties of the `data` object should then be constructed in a way that maps to the data layer properties that you want to capture. Select the section below to view an example of a properly formatted JSON object with a `data` root.
+To capture properties directly from your data layer, the JSON object must have a single root property `data`. The subproperties of the `data` object should then be constructed in a way that maps to the data layer properties that you want to capture. Select the section below to view an example of a properly formatted JSON object with a `data` root.
 
 +++Sample JSON file with `data` root
 
@@ -131,12 +130,12 @@ You can select the option to upload the object as a file, or paste the raw objec
 
 The **[!UICONTROL Mapping]** step appears, allowing you to map the fields in your source data to that of the target event schema in Platform. From here, you can configure the mapping in two ways:
 
-* [Create new mapping rules](#create-mapping) for this datastream through a manual process.
+* [Create mapping rules](#create-mapping) for this datastream through a manual process.
 * [Import mapping rules](#import-mapping) from an existing datastream.
 
-### Create a new mapping {#create-mapping}
+### Create mapping rules {#create-mapping}
 
-To get started, select **[!UICONTROL Add new mapping]** to create a new mapping row.
+To create a mapping rule, select **[!UICONTROL Add new mapping]**.
 
 ![Adding a new mapping](assets/data-prep/add-new-mapping.png)
 
@@ -160,11 +159,11 @@ The mapping page reappears with the completed field mapping shown. The **[!UICON
 
 ### Import existing mapping rules {#import-mapping}
 
-If you have previously created a datastream, you can re-use its configured mapping rules for a new datastream. 
+If you have previously created a datastream, you can reuse its configured mapping rules for a new datastream. 
 
 >[!WARNING]
 >
->Importing mapping rules from another datastream will overwrite any field mappings you might have added before the import.
+>Importing mapping rules from another datastream overwrites any field mappings that you might have added before the import.
 
 To start, select **[!UICONTROL Import Mapping]**.
 
@@ -188,9 +187,9 @@ The next screen shows a preview of the saved mapping rules for the selected data
 
 ### Complete the mapping
 
-Continue following the above steps to map the rest of the fields to the target schema. While you do not have to map all available source fields, any fields in the target schema that are set as required must be mapped in order to complete this step. The **[!UICONTROL Required fields]** counter indicates how many required fields are not yet mapped in the current configuration.
+Continue following the above steps to map the rest of the fields to the target schema. While you do not have to map all available source fields, any fields in the target schema that are set as required must be mapped to complete this step. The **[!UICONTROL Required fields]** counter indicates how many required fields are not yet mapped in the current configuration.
 
-Once the required fields count reaches zero and you are satisfied with your mapping, select **[!UICONTROL Save]** to finalize your changes.
+Once the required field count reaches zero and you are satisfied with your mapping, select **[!UICONTROL Save]** to finalize your changes.
 
 ![Mapping complete](assets/data-prep/mapping-complete.png)
 
