@@ -34,13 +34,13 @@ Before you can make calls to the [!DNL Server API], make sure you meet the follo
 
 In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../landing/api-authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
-*   Authorization: Bearer `{ACCESS_TOKEN}`
-*   x-api-key: `{API_KEY}`
-*   x-gw-ims-org-id: `{ORG_ID}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 Resources in Experience Platform can be isolated to specific virtual sandboxes. In requests to Platform APIs, you can specify the name and ID of the sandbox that the operation will take place in. These are optional parameters.
 
-*   x-sandbox-name: `{SANDBOX_NAME}`
+* x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ Resources in Experience Platform can be isolated to specific virtual sandboxes. 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
-*   Content-Type: `application/json`
+* Content-Type: `application/json`
 
 ## Configure dataset write permissions {#dataset-write-permissions}
 

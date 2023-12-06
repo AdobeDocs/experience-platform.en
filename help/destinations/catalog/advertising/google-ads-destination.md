@@ -1,5 +1,4 @@
 ---
-keywords: Google ads;google ads;google adwords;Google AdWords;Google Adwords
 title: Google Ads connection
 description: Google Ads, formerly known as Google AdWords, is an online advertising service that allows businesses to pay-per-click advertising across text-based searches, graphic displays, YouTube videos, and in-app mobile displays.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
@@ -23,7 +22,7 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 
 ## Supported identities {#supported-identities}
 
-[!DNL Google Ad Manager] supports the activation of identities described in the table below.
+[!DNL Google Ads] supports the activation of identities described in the table below.
 
 |Target Identity|Description|Considerations|
 |---|---|---|
