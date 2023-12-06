@@ -100,9 +100,8 @@ alloy("configure", {
     }
     
     // Assign the value in the 'cid' query string to the tracking code XDM element
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    if(content.xdm.marketing?.trackingCode) content.xdm.marketing.trackingCode = urlParams.get('cid');
+    content.xdm.marketing ??= {};
+    content.xdm.marketing.trackingCode = new URLSearchParams(window.location.search).get('cid');
   }
 });
 ```

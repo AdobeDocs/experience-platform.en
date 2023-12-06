@@ -12,7 +12,7 @@ The `edgeConfigOverrides` object allows you to override configuration settings f
 >
 >You must first configure override settings within the datastream before using product-specific overrides. See [Datastream overrides](/help/datastreams/overrides.md) for more information.
 
-If you set overrides both in the `configure` command and in the `sendEvent` command, the overrides in the `sendEvent` command take priority.
+If you set overrides both in the `configure` command here and in another command (such as `sendEvent`), the overrides in the other command take priority.
 
 ## Properties within this object
 
@@ -45,7 +45,7 @@ Set the `edgeConfigOverrides` object when running the `sendEvent` command. Set e
 * **`com_adobe_identity.idSyncContainerId`**: The third-party ID sync container that you want to use in Audience Manager.
 * **`com_adobe_target.propertyToken`**: The token for the Target destination property.
 
-```js {highlight="4-20"}
+```js
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
