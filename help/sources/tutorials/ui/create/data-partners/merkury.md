@@ -34,10 +34,9 @@ In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the **[!UICONTROL Data partners]** category, select **[!UICONTROL Merkury Enterprise Identity Resolution]** and then select **[!UICONTROL Add data]**.
+Under the **[!UICONTROL Data partners]** category, select **[!UICONTROL Merkury]** and then select **[!UICONTROL Set up]**.
 
-![](./merkury-enterprise-identity-resolution-assets/c5503baaad6e0be4a10cc675f6c6ddc5793d4dcb.png){width="6.349206036745406in"
-height="2.7777777777777777in"}
+![The sources catalog with the Merkury source selected.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/catalog.png)
 
 The **[!UICONTROL Connect to Merkury]** page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -45,51 +44,42 @@ The **[!UICONTROL Connect to Merkury]** page appears. On this page, you can ei
 
 If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your [!DNL Merkury] credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![](./merkury-enterprise-identity-resolution-assets/cca42dc1b31c64075713b3814dd2d3b5ecc59da1.png){width="5.0in"
-height="4.40625in"}
+![The new account interface for Merkury.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/new-account.png)
 
 ### Use an existing account
 
 To use an existing account, select **[!UICONTROL Existing account]** and then select the [!DNL Merkury] account that you would like to use. Select **[!UICONTROL Next]** to proceed.
 
-![](./merkury-enterprise-identity-resolution-assets/616d2005eddb6ea8828572a523296d5c1172ed2e.png){width="6.943346456692914in"
-height="1.9962117235345582in"}
+![The existing account interface for Merkury.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/existing-account.png)
 
-**Configure a dataflow to ingest batch data from a cloud storage source
-in the UI**
+>[!BEGINSHADEBOX]
 
-This tutorial provides steps on how to configure a dataflow to bring
-batch data from your source connector to Adobe Experience Platform.
+**Supported file formats**
 
-### Supported file formats
-
-Cloud storage sources for batch data supports the following file formats for ingestion:
+You can ingest the following file formats with the [!DNL Merkury] source:
 
 * Delimiter-separated values (DSV): Any single-character value can be used as a delimiter for DSV-formatted data files.
 * [!DNL JavaScript Object Notation] (JSON): JSON-formatted data files must be XDM-compliant.
 * [!DNL Apache Parquet]: Parquet-formatted data files must be XDM-compliant.
 * Compressed files: JSON and delimited files can be compressed as: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, and `tar`.
 
+>[!ENDSHADEBOX]
+
 ## Add data
 
-After creating your [!DNL Merkury] account, the **[!UICONTROL Add data]** step appears, providing an interface for you to explore your [!DNL Merkury] file hierarchy and select the folder or specific file that you want to bring to Platform.
+After creating your [!DNL Merkury] account, the **[!UICONTROL Add data]** step appears, providing an interface for you to explore your [!DNL Merkury] file hierarchy and select the folder or specific file that you want to bring to Experience Platform.
 
 * The left part of the interface is a directory browser, displaying your [!DNL Merkury] file hierarchy.
 * The right part of the interface lets you preview up to 100 rows of data from a compatible folder or file.
 
-
-![](./merkury-enterprise-identity-resolution-assets/3ecf99b1861044c74bbdf69421532070f364e1e8.png){width="6.651583552055993in"
-height="2.3557699037620297in"}
+![The file and folder directory of the sources workflow where you can select the data that you want to ingest.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/add-data.png)
 
 Select the root folder to access your folder hierarchy. From here, you can select a single folder to ingest all files in the folder recursively. When ingesting an entire folder, you must ensure that all files in that folder share the same data format and schema.
 
-![](./merkury-enterprise-identity-resolution-assets/3ecf99b1861044c74bbdf69421532070f364e1e8.png){width="6.176469816272966in"
-height="2.1875in"}
-
 Once you have selected a folder, the right interface updates to a preview of the contents and structure of the first file in the selected folder.
 
-![](./merkury-enterprise-identity-resolution-assets/1b77ad9a11000927fdefcb5b03cc4ef339da781b.png){width="6.625087489063867in"
-height="2.0427351268591427in"}
+![The data selected for ingestion and the file preview interface.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/selected-data.png)
+
 
 During this step, you can make several configurations to your data, before proceeding. First, select **[!UICONTROL Data format]** and then select the appropriate data format for your file in the dropdown panel that appears.
 
@@ -103,11 +93,17 @@ The following table displays the appropriate data formats for the supported file
 
 ### Select a column delimiter
 
++++Select to view steps on how to set a delimiter
+
 After configuring your data format, you can set a column delimiter when ingesting delimited files. Select the **[!UICONTROL Delimiter]** option and then select a delimiter from the dropdown menu. The menu displays the most frequently used options for delimiters, including a comma (`,`), a tab (`\t`), and a pipe (`|`). 
 
 If you prefer to use a custom delimiter, select **[!UICONTROL Custom]** and enter a single-character delimiter of your choice in the pop up input bar.
 
++++
+
 ### Ingest compressed files
+
++++ Select to view steps on how to ingest compressed files
 
 You can also ingest compressed JSON or delimited files by specifying their compression type.
 
@@ -117,6 +113,8 @@ To bring a specific file to Platform, select a folder, and then select the file 
 
 When finished, select **[!UICONTROL Next]**.
 
++++
+
 ## Provide dataflow details
 
 The [!UICONTROL Dataflow detail] page allows you to select whether you want to use an existing dataset or a new dataset. During this process, you can also configure your data to be ingested to Profile, and enable settings like [!UICONTROL Error diagnostics], [!UICONTROL Partial ingestion], and [!UICONTROL Alerts].
@@ -125,30 +123,33 @@ The [!UICONTROL Dataflow detail] page allows you to select whether you want to u
 
 To ingest data into an existing dataset, select **[!UICONTROL Existing dataset]**. You can either retrieve an existing dataset using the [!UICONTROL Advanced search] option or by scrolling through the list of existing datasets in the dropdown menu. Once you have selected a dataset, provide a name and a description for your dataflow.
 
-![](./merkury-enterprise-identity-resolution-assets/37fbc55857978f56a86b21c734336638aec6cb4a.png){width="5.681089238845145in"
-height="3.8229002624671917in"}
+![The existing dataset interface.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/existing-dataset.png)
 
 ### Use a new dataset
 
 To ingest into a new dataset, select **[!UICONTROL New dataset]** and then provide an output dataset name and an optional description. Next, select a schema to map to using the [!UICONTROL Advanced search] option or by scrolling through the list of existing schemas in the dropdown menu. Once you have selected a schema, provide a name and a description for your dataflow.
 
-![](./merkury-enterprise-identity-resolution-assets/4164df81759304c6cef0d3a63c64ecc661ffde55.png){width="4.2565102799650045in"
-height="4.887858705161855in"}
+![The new dataset interface.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/new-dataset.png)
 
 ### Enable Profile and error diagnostics
 
-Next, select the **[!UICONTROL Profile dataset]** toggle to enable your dataset for Profile. This allows you to create a holistic view of an entity's attributes and behaviors. Data from all Profile-enabled datasets will be included in Profile and changes are applied when you save your dataflow.
++++Select to view steps to enable error diagnostics and Profile ingestion
+
+Next, select the **[!UICONTROL Profile dataset]** toggle to enable your dataset for Real-Time Customer Profile. This allows you to create a holistic view of an entity's attributes and behaviors. Data from all Profile-enabled datasets will be included in Profile and changes are applied when you save your dataflow.
 
 [!UICONTROL Error diagnostics] enables detailed error message generation for any erroneous records that occur in your dataflow, while [!UICONTROL Partial ingestion] allows you to ingest data containing errors, up to a certain threshold that you manually define. See the [partial batch ingestion overview](../../../../../ingestion/batch-ingestion/partial.md) for more information.
 
++++
+
 ### Enable alerts
+
++++Select to view steps to enable alerts
 
 You can enable alerts to receive notifications on the status of your dataflow. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to sources alerts using the UI](../../alerts.md).
 
 When you are finished providing details to your dataflow, select **[!UICONTROL Next]**.
 
-![](./merkury-enterprise-identity-resolution-assets/a7492c766da7f5e37c022e0cbeab8fa63b279fc1.png){width="4.354166666666667in"
-height="5.0in"}
++++
 
 ## Map data fields to an XDM schema
 
@@ -158,8 +159,7 @@ Platform provides intelligent recommendations for auto-mapped fields based on th
 
 Once your source data is successfully mapped, select **[!UICONTROL Next]**.
 
-![](./merkury-enterprise-identity-resolution-assets/e94eb1a624c639e79c69f526adf42ec8c577b9b3.png){width="7.364078083989502in"
-height="1.5034995625546808in"}
+![The mapping interface.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/mapping.png)
 
 ## Schedule ingestion runs
 
@@ -169,8 +169,7 @@ The [!UICONTROL Scheduling] step appears, allowing you to configure an ingestion
 >
 >Interval and backfill are not visible during a one-time ingestion.
 
-![](./merkury-enterprise-identity-resolution-assets/dba5692ae6c41a2e47de3251464cc0ef868e3d4f.png){width="5.0in"
-height="2.125in"}
+![The scheduling interface](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/schedule.png)
 
 If you set your ingestion frequency to `Minute`, `Hour`, `Day`, or `Week`, then you must set an interval to establish a set time frame between every ingestion. For example, an ingestion frequency set to `Day` and  an interval set to `15` means that your dataflow is scheduled to ingest data every 15 days.
 
@@ -184,11 +183,6 @@ See the table below for more information on scheduling configurations.
 | Interval | An integer that sets the interval for the selected frequency. The interval's value should be a non-zero integer and should be set to greater than or equal to 15. |
 | Start time | A UTC timestamp indicating when the very first ingestion is set to occur. Start time must be greater than or equal to your current UTC time. |
 | Backfill | A boolean value that determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested. |
-
-![A screenshot of a computer Description automatically
-generated](./merkury-enterprise-identity-resolution-assets/media/image12.png){width="6.748530183727034in"
-height="1.9993241469816272in"}
-
 
 >[!NOTE]
 >
@@ -206,5 +200,4 @@ The **[!UICONTROL Review]** step appears, allowing you to review your new datafl
 
 Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
-![](./merkury-enterprise-identity-resolution-assets/d73a264c1f8e991d4e8aac0d3bada41175cf9feb.png){width="6.627603893263342in"
-height="1.7673611111111112in"}
+![The review page.](../../../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/review.png)
