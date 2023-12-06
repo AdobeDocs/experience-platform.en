@@ -10,7 +10,7 @@ description: This document provides an overview of the Media Event Information E
 
 | Property | Data type | Description |
 | --- | --- | --- |
-| `mediaCollection` | [[!UICONTROL mediaDetails]]() | Media details information related to the experience event. |
+| `mediaCollection` | [[!UICONTROL mediaDetails]](./-details-information.md) | Media details information related to the experience event. |
 | `mediaEventTimestamp` | [!UICONTROL String] | The time when a media event occurred. |
 | `mediaEventType` | [!UICONTROL String] | The media event type. |
 
