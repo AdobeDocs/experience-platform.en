@@ -53,91 +53,91 @@ Experience Platform allows data to be ingested from other Adobe applications, in
  
 Experience Platform provides support for ingesting data from a third-party advertising system. See the following related documents for more information on specific source connectors:
 
-- [Google Ads](connectors/advertising/ads.md)
+- [Google Ads](connectors/advertising/ads.md) [!BADGE Batch]{type=Informative}
 
 ### Analytics {#analytics}
 
 Experience Platform provides support for ingesting data from a third-party analytics platform. See the following related documents for more information:
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
-- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md)
-- [[!DNL RainFocus]](connectors/analytics/rainfocus.md)
+- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE Streaming]{type=Positive}
+- [[!DNL RainFocus]](connectors/analytics/rainfocus.md) [!BADGE Streaming]{type=Positive}
 
 ### Cloud Storage {#cloud-storage}
 
 Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow using the user interface. See the following related documents for more information:
 
-- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md)
-- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md)
-- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md)
-- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md)
-- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md)
-- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md)
-- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md)
-- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md)
-- [[!DNL FTP]](connectors/cloud-storage/ftp.md)
-- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md)
-- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md)
-- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md)
-- [[!DNL SFTP]](connectors/cloud-storage/sftp.md)
+- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE Streaming]{type=Positive}
+- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE Streaming]{type=Positive}
+- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE Batch]{type=Informative}
+- [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE Streaming]{type=Positive}
+- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) [!BADGE Batch]{type=Informative}
+- [[!DNL SFTP]](connectors/cloud-storage/sftp.md) [!BADGE Batch]{type=Informative}
 
 ### Consent and Preferences {#consent}
 
 Experience Platform provides support for ingesting data from a third-party consent and preferences management platform. See the following related documents for more information:
 
-- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
+- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) [!BADGE Batch]{type=Informative}
 
 ### Customer Relationship Management (CRM) {#customer-relationship-management}
 
 CRM systems provide data that can help build customer relationships, which in turn, create loyalty and drive customer retention. Experience Platform provides support for ingesting CRM data from [!DNL Microsoft Dynamics 365] and [!DNL Salesforce]. See the following related documents for more information:
 
-- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md)
-- [[!DNL Salesforce]](connectors/crm/salesforce.md)
-- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md)
-- [[!DNL Veeva CRM]](connectors/crm/veeva.md)
-- [[!DNL Zoho CRM]](connectors/crm/zoho.md)
+- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE Batch]{type=Informative}
+- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Zoho CRM]](connectors/crm/zoho.md) [!BADGE Batch]{type=Informative}
 
 ### Customer Success {#customer-success}
 
 Experience Platform provides support for ingesting data from a third-party customer success application. See the following related documents for more information:
 
-- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md)
-- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md)
-- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md)
-- [[!DNL Zendesk]](connectors/customer-success/zendesk.md)
+- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE Batch]{type=Informative}
+- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE Batch]{type=Informative}
 
 ### Database {#database}
 
 Experience Platform provides support for ingesting data from a third-party database. See the following related documents for more information on specific source connectors:
 
-- [[!DNL Amazon Redshift]](connectors/databases/redshift.md)
-- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md)
-- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md)
-- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md)
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md)
-- [[!DNL Azure Table Storage]](connectors/databases/ats.md)
-- [[!DNL Couchbase]](connectors/databases/couchbase.md)
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md)
-- [[!DNL GreenPlum]](connectors/databases/greenplum.md)
-- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md)
-- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md)
-- [[!DNL MariaDB]](connectors/databases/mariadb.md)
-- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md)
-- [[!DNL MySQL]](connectors/databases/mysql.md)
-- [[!DNL Oracle]](connectors/databases/oracle.md)
-- [[!DNL Phoenix]](connectors/databases/phoenix.md)
-- [[!DNL PostgreSQL]](connectors/databases/postgres.md)
-- [[!DNL Snowflake (Streaming)]](connectors/databases//snowflake-streaming.md)
-- [[!DNL Snowflake]](connectors/databases/snowflake.md)
-- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md)
+- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE Batch]{type=Informative}
+- [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE Batch]{type=Informative}
+- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE Batch]{type=Informative}
+- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE Batch]{type=Informative}
+- [[!DNL MariaDB]](connectors/databases/mariadb.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE Batch]{type=Informative}
+- [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Phoenix]](connectors/databases/phoenix.md) [!BADGE Batch]{type=Informative}
+- [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE Streaming]{type=Positive}
+- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE Batch]{type=Informative}
 
 ### eCommerce {#ecommerce}
 
 Experience Platform provides support for ingesting data from a third-party eCommerce system. See the following related documents for more information on specific source connectors:
 
-- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md)
-- [[!DNL Shopify]](connectors/ecommerce/shopify.md)
-- [[!DNL Shopify (Streaming)]](connectors/ecommerce/shopify-streaming.md)
+- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) [!BADGE Streaming]{type=Positive}
 
 ### Local system {#local-system}
 
@@ -149,12 +149,12 @@ Experience Platform provides support for ingesting data from your local system. 
 
 Experience Platform provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
 
-- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md)
-- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md)
-- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
-- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
-- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md)
-- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
+- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE Streaming]{type=Positive}
+- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE Streaming]{type=Positive}
+- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE Batch]{type=Informative}
 <!-- 
 - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
 -->
@@ -163,21 +163,21 @@ Experience Platform provides support for ingesting data from a third-party marke
 
 Experience Platform provides support for ingesting data from a third-party payments system. See the following related documents for more information on specific source connectors:
 
-- [[!DNL PayPal]](connectors/payments/paypal.md)
-- [[!DNL Square]](connectors/payments/square.md)
+- [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Square]](connectors/payments/square.md) [!BADGE Batch]{type=Informative}
 
 ### Streaming {#streaming}
 
 Experience Platform provides support for ingesting data from streaming sources. See the following related documents for more information on specific source connectors:
 
-- [[!DNL HTTP API]](connectors/streaming/http.md)
+- [[!DNL HTTP API]](connectors/streaming/http.md) [!BADGE Streaming]{type=Positive}
 
 ### Protocols {#protocols}
 
 Experience Platform provides support for ingesting data from a third-party protocols system. See the following related documents for more information on specific source connectors:
 
-- [[!DNL Generic OData]](connectors/protocols/odata.md)
-- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md)
+- [[!DNL Generic OData]](connectors/protocols/odata.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) [!BADGE Batch]{type=Informative}
 
 ## Access control for sources in data ingestion
 
@@ -215,7 +215,7 @@ For more information on attribute-based access control, read the [attribute-base
 
 By using any of the Sources labeled as beta ("Beta"), You hereby acknowledge that the Beta is provided ***"as is" without warranty of any kind***.
 
-Adobe shall have no obligation to maintain, correct, update, change, modify, or otherwise support the Beta. You are advised to use caution and not to rely in any way on the correct functioning or performance of such Beta and/or accompanying materials. The Beta is considered Confidential Information of Adobe.
+Adobe shall have no obligation to maintain, correct, update, change, modify, or otherwise support the Beta. You are advised to use Informative and not to rely in any way on the correct functioning or performance of such Beta and/or accompanying materials. The Beta is considered Confidential Information of Adobe.
 
 Any "Feedback" (information regarding the Beta including but not limited to problems or defects you encounter while using the Beta, suggestions, improvements, and recommendations) provided by You to Adobe is hereby assigned to Adobe including all rights, title, and interest in and to such Feedback.
 

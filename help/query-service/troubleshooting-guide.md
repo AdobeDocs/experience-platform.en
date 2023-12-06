@@ -110,7 +110,7 @@ The following steps describe how to display a tabular view of a dataset through 
 
 ![The XDM schema and tabular view of the flattened data. The column name of a nested dataset is highlighted in the UI.](./images/troubleshooting/column-name.png)
 
-See the documentation for full guidance on [how to work with nested data structures](./essential-concepts/nested-data-structures.md) using the Query Editor or a third-party client.
+See the documentation for full guidance on [how to work with nested data structures](./key-concepts/nested-data-structures.md) using the Query Editor or a third-party client.
 +++
 
 ### How do I speed up a query on a dataset that contains arrays?
@@ -150,7 +150,7 @@ A dropdown banner appears containing a [!UICONTROL Help and support] section. Se
 +++Answer
 The anonymous block feature allows you to chain one or more SQL statements that are executed in sequence. They also allow for the option of exception-handling.
 
-See the [anonymous block documentation](./essential-concepts/anonymous-block.md) for more details.
+See the [anonymous block documentation](./key-concepts/anonymous-block.md) for more details.
 +++
 
 ### How do I implement custom attribution in Query Service?
@@ -239,7 +239,7 @@ AS SELECT '1' as _id,
 ### How do I quickly process the new data coming into the system every day?
 
 +++Answer
-The [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./essential-concepts/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result, it increases processing efficiency and can be used with both streaming and batch data processing.
+The [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) clause can be used to incrementally read data on a table based on a snapshot ID. This is ideal for use with the [incremental load](./key-concepts/incremental-load.md) design pattern that only processes information in the dataset that has been created or modified since the last load execution. As a result, it increases processing efficiency and can be used with both streaming and batch data processing.
 +++
 
 ### Why is there a difference between the numbers shown in Profile UI and the numbers calculated from the profile export dataset? 
@@ -577,6 +577,24 @@ Yes, attribute-based access control is enforced if configured. See the [attribut
 
 +++Answer
 No, Query Service does not support the "INSERT OVERWRITE INTO" command.
++++
+
+### How frequently is the usage data on the license usage dashboard updated for Data Distiller compute hours?
+
++++Answer
+The license usage dashboard for Data Distiller computer hours is updated four times a day, every six hours.
++++
+
+### Can I use the CREATE VIEW command without Data Distiller access?
+
++++Answer
+Yes, you can use `CREATE VIEW` command without Data Distiller access. This command provides a logical view of data but does not write it back to the data lake.
++++
+
+### Can I use anonymous blocks in DbVisualizer?
+
++++Answer
+Yes. Although, certain third-party clients, such as DbVisualizer, may require a separate identifier before and after an SQL block to indicate that a part of a script should be handled as a single statement. More details can be found in the [anonymous block documentation](./key-concepts/anonymous-block.md) or in [the official DbVisualizer documentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect). 
 +++
 
 ## Exporting data {#exporting-data}

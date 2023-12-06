@@ -1,8 +1,8 @@
 ---
-keywords: activate profile destinations;activate destinations;activate data; activate email marketing destinations; activate cloud storage destinations
 title: Activate audiences to streaming profile export destinations
 type: Tutorial
 description: Learn how to activate the audience data you have in Adobe Experience Platform by sending audiences to streaming profile-based destinations.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
 ---
 
@@ -17,7 +17,13 @@ exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
 
 ## Overview {#overview}
 
-This article explains the workflow required to activate audience data in Adobe Experience Platform streaming profile-based destinations, such as Amazon Kinesis.
+This article explains the workflow required to activate audience data in Adobe Experience Platform to streaming profile-based destinations (also referred to as [enterprise destinations](/help/destinations/destination-types.md#streaming-profile-export)).
+
+This article applies to the following three destinations:
+
+* [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
+* [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [HTTP API destination](/help/destinations/catalog/streaming/http-destination.md).
 
 ## Prerequisites {#prerequisites}
 
@@ -77,7 +83,15 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
+[Consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) is currently not supported in exports to the three enterprise destinations - Amazon Kinesis, Azure Event Hubs, and HTTP API.
+
+This means that profiles which have not consented to being targeted *are included* in the exports to these three destinations.
+
+<!--
+
 If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**, select **[!UICONTROL View applicable consent policies]** to see which consent policies are applied and how many profiles are included in the activation as a result of them. Read about [consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
+
+-->
 
 ### Data usage policy checks {#data-usage-policy-checks}
 
