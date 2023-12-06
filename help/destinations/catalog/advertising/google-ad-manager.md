@@ -23,7 +23,7 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 
 [!DNL Google Ad Manager] supports the activation of audiences based on the identities shown in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
-|Target Identity|Description|Considerations|
+|Identity|Description|Considerations|
 |---|---|---|
 |GAID|[!DNL Google Advertising ID]||
 |IDFA|[!DNL Apple ID for Advertisers]||

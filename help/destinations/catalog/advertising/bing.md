@@ -22,7 +22,7 @@ As a marketer, I want to be able to use audiences built off of [!DNL Microsoft A
 
 [!DNL Microsoft Bing] supports the activation of audiences based on the identities shown in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
-|Target Identity|Description|
+|Identity|Description|
 |---|---|
 |MAID|Microsoft Advertising ID|
 

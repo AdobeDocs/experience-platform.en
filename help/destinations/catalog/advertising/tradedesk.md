@@ -22,7 +22,7 @@ As a marketer, I want to be able to use audiences built off of [!DNL Trade Desk 
 
 [!DNL The Trade Desk] supports the activation of audiences based on the identities shown in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
-|Target Identity|Description|
+|Identity|Description|
 |---|---|
 |GAID|[!DNL Google Advertising ID]|
 |IDFA|[!DNL Apple ID for Advertisers]|
