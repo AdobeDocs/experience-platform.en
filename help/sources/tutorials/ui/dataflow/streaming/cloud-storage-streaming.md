@@ -31,7 +31,7 @@ This tutorial requires a working understanding of the following components of Ad
 
 >[!NOTE]
 >
->You can only create one dataflow per consumer group in Azure Event Hubs.
+>You can only create one source dataflow per consumer group for a given Event Hub.
 
 After creating your authenticating your streaming cloud storage account, the **[!UICONTROL Select data]** step appears, providing an interface for you to select which data stream you will bring to Platform.
 
