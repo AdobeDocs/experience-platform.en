@@ -2,12 +2,22 @@
 title: Merkury Enterprise Identity Resolution Source Overview
 description: Learn how to connect Merkury Enterprise Identity Resolution to Adobe Experience Platform using the user interface.
 ---
-# Merkury Enterprise Identity Resolution
+# [!DNL Merkury Enterprise Identity Resolution]
 
-Merkury, by Merkle, helps you recognize more digital visitors - even without cookies - so you can deliver the relevant, personalized experiences your customer\'s demand.The **person ID** combines everything your organization knows about an individual -- digital behaviors, buying preferences, and identifying information like a name, email address, physical address, or device ID -- into one single profile. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow.
+Adobe Experience Platform provides support for ingesting data from a data partner application. Support for data partners include [!DNL Merkury Enterprise Identity Resolution].
 
-![](./merkury-enterprise-identity-resolution-assets/52053a98cb5b8f163c1711ba58cbbb00b468fb0e.png){width="6.624365704286964in"
-height="2.71875in"}
+You can use [!DNL Merkury] by [!DNL Merkle] to recognize more digital visitors - even without the use of cookies - and deliver the relevant and personalized experiences that your customer's need. 
+
+You can utilize the **person ID** as part of the [!DNL Merkury] source to combine everything that your organization knows about an individual into a single comprehensive profile. These details can include: 
+
+- digital behaviors
+- buying preferences
+- identifying information such as a name, email address, physical address, or device ID.
+
+You can format ingested data as Experience Data Model (XDM) JSON, XDM Parquet, or delimited. Every step of the process is integrated into the sources work
+
+![An illustration of the data processing workflow for the Merkury source.](../../images/tutorials/create/merkury-enterprise-identity-resolution-assets/architecture.png)
+
 
 ## IP address allow list
 
@@ -26,10 +36,14 @@ The following is a list of constraints you must account for when naming your clo
 
 ## Prerequisites
 
-- Merkury setup completed with your Merkury team. 
-- Obtained key, secret and bucket name from Merkury team. 
+You must meet the following prerequisites before you can start using the [!DNL Merkury] source:
 
-A file path like `myBucket/folder/subfolder/subsubfolder/abc.csv` may lead you to only access `subsubfolder/abc.csv`. If you want to access the subfolder, you can specify the bucket parameter as myBucket and the folderPath as folder/subfolder to ensure that file exploration starts at subfolder as opposed to `subsubfolder/abc.csv`.
+- You must complete your [!DNL Merkury] setup with your [!DNL Merkury] team.
+- You must retrieve your credentials (access key, secret key, and bucket name) from your [!DNL Merkury] team. 
+
+>[!NOTE]
+>
+>A file path like `myBucket/folder/subfolder/subsubfolder/abc.csv` may lead you to only access `subsubfolder/abc.csv`. If you want to access the subfolder, you can specify the bucket parameter as myBucket and the folderPath as folder/subfolder to ensure that file exploration starts at subfolder as opposed to `subsubfolder/abc.csv`.
 
 ## Connect Merkury to Platform
 
