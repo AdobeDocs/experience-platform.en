@@ -45,7 +45,7 @@ It is important to understand the following terminology when working with Offer 
   >
   >You can copy the decision scope value from the **Activity Overview** page in the UI.
 
-  ![](assets/decision-scope-copy.png)
+  ![Decision copy settings.](assets/decision-scope-copy.png)
 
 * **Datastreams:** For more information, please read the [datastreams](../../../datastreams/overview.md) documentation.
 
