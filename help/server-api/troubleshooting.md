@@ -3,6 +3,7 @@ title: Troubleshooting
 description: Learn how to troubleshoot errors when using the Edge Network Server API.
 exl-id: f0223fca-30ec-4229-93a5-3faa6cef5482
 ---
+
 # Troubleshooting
 
 The Adobe Experience Platform Edge Network Server API allows you to capture debug information from services, as your events are processed through the Edge Network data collection pipeline.
