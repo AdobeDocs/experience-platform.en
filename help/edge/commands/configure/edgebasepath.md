@@ -6,7 +6,7 @@ description: The base path of the endpoint used to interact with Adobe services.
 
 The `edgeBasePath` property alters the destination path when you interact with Adobe services. Most organizations do not need to set or alter this property.
 
-## Edge base path in the Web SDK extension
+## Edge base path using the Web SDK tag extension
 
 Enter the desired text in the **[!UICONTROL Edge base path]** text field when configuring the extension.
 
@@ -17,7 +17,7 @@ Enter the desired text in the **[!UICONTROL Edge base path]** text field when co
 1. Scroll down to the [!UICONTROL Advanced Settings] section, then enter the desired value in the **[!UICONTROL Edge base path]** text field.
 1. Click **[!UICONTROL Save]**, then publish your changes.
 
-## Edge base path using alloy.js
+## Edge base path using the Web SDK JavaScript library
 
 Set the `edgeBasePath` text field when running the `configure` command. If you omit this property, it defaults to the value of `ee`. Adobe recommends omitting this property from most configurations.
 

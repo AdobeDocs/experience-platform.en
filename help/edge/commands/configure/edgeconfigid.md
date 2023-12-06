@@ -14,7 +14,7 @@ If you want to locate a datastream ID:
 
 You can also click on the desired datastream name, and the datastream ID appears in the right column for you to copy.
 
-## Datastream ID in the Web SDK extension
+## Datastream ID using the Web SDK tag extension
 
 The Web SDK extension allows the ability to choose from a list of available datastreams, or enter a datastream ID directly.
 
@@ -29,7 +29,7 @@ The Web SDK extension allows the ability to choose from a list of available data
 
 You can send data to different datastreams for production, staging, and development tag environments.
 
-## Datastream ID using alloy.js
+## Datastream ID using the Web SDK JavaScript library
 
 Set the `edgeConfigId` string property when running the `configure` command. This property is required for all Web SDK implementations. If you omit this property, the Web SDK does not know which datastream to send data to, causing that data to be permanently lost.
 

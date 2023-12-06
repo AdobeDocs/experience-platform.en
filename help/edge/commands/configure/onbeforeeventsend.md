@@ -10,7 +10,7 @@ The `onBeforeEventSend` callback allows you to register a JavaScript function th
 >
 >This callback allows the use of custom code. If any code that you include in the callback throws an uncaught exception, processing for the event halts. Data is not sent to Adobe.
 
-## On before event send callback in the Web SDK extension
+## On before event send callback using the Web SDK tag extension
 
 Select the **[!UICONTROL Provide on before event send callback code]** button when configuring the extension. This button opens a modal window where you can insert the desired code.
 
@@ -67,7 +67,7 @@ if (myBotDetector.isABot()) {
 >
 >Avoid returning `false` on the first event on a page. Returning `false` on the first event can negatively impact personalization.
 
-## On before event send callback using alloy.js
+## On before event send callback using the Web SDK JavaScript library
 
 Register the `onBeforeEventSend` callback when running the `configure` command. You can change the `content` variable name to any value that you would like by changing the parameter variable inside of the inline function.
 

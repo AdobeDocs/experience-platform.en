@@ -14,7 +14,7 @@ This property allows three values:
 
 If you have a customer that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to `in`, but inside the jurisdiction of GDPR, the default consent could be set to `pending`. Your Consent Management Platform (CMP) can detect the customer's region and provide the flag `gdprApplies` to IAB TCF 2.0. This flag can be used to set the default consent.
 
-## Set default consent in the Web SDK extension
+## Set default consent using the Web SDK tag extension
 
 Select the desired radio button under **[!UICONTROL Default consent]** when configuring the extension.
 
@@ -25,7 +25,7 @@ Select the desired radio button under **[!UICONTROL Default consent]** when conf
 1. Scroll down to the [!UICONTROL Privacy] section, then select the desired **[!UICONTROL Default consent]**.
 1. Click **[!UICONTROL Save]**, then publish your changes.
 
-## Set default consent using alloy.js
+## Set default consent using the Web SDK JavaScript library
 
 Set the `defaultConsent` string property to the desired consent level when running the `configure` command. This property only supports three values: `"in"`, `"out"`, and `"pending"`.
 

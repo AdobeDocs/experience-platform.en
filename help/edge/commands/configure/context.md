@@ -74,7 +74,7 @@ If you use device lookups when [configuring your datastream](/help/datastreams/c
 
 {style="table-layout:auto"}
 
-## Collect context information in the Web SDK extension
+## Collect context information using the Web SDK tag extension
 
 The context information setting is a combination of radio buttons and check boxes when configuring the extension. Each checkbox maps to a context keyword.
 
@@ -86,7 +86,7 @@ The context information setting is a combination of radio buttons and check boxe
 1. If you select **[!UICONTROL Specific context information]**, enable the check box next to each desired context information element.
 1. Click **[!UICONTROL Save]**, then publish your changes.
 
-## Collect context information using alloy.js
+## Collect context information using the Web SDK JavaScript library
 
 Set the `context` array of strings when running the `configure` command. If you omit this property when configuring the SDK, all context information except `"highEntropyUserAgentHints"` is collected by default. Set this property if you want to collect high entropy client hints, or if you want to omit other context information from data collection. Strings can be included in any order.
 

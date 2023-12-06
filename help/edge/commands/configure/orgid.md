@@ -15,7 +15,7 @@ To locate your org ID:
 
 Org IDs are always 24-character alpha-numeric strings, and always end in `@AdobeOrg`.
 
-## Org ID in the Web SDK extension
+## Org ID using the Web SDK tag extension
 
 Enter the org ID in the **[!UICONTROL IMS organization ID]** text field when configuring the extension.
 
@@ -26,7 +26,7 @@ Enter the org ID in the **[!UICONTROL IMS organization ID]** text field when con
 1. Input the desired org ID into the [!UICONTROL IMS organization ID] text field near the top.
 1. Click **[!UICONTROL Save]**, then publish your changes.
 
-## Org ID using alloy.js
+## Org ID using the Web SDK JavaScript library
 
 Set the `orgId` string when running the `configure` command. If you omit this property when configuring the Web SDK, the Web SDK throws a console error and data is not sent to Adobe.
 

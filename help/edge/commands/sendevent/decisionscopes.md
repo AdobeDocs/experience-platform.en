@@ -12,7 +12,7 @@ This property accepts Base64 decision scopes. You can include multiple decision 
 >
 >You must enable **[!UICONTROL Offer Decisioning]** in datastream settings before using this variable. The [!UICONTROL Offer Decisioning] checkbox is in the configuration settings of the Adobe Experience Platform service in a given datastream.
 
-## Decision scopes in the Web SDK tag extension
+## Decision scopes using the Web SDK tag extension
 
 Provide the desired decision scopes in the [!UICONTROL Scopes] field within the actions of a tag rule. You can also provide a data element that represents an array of scopes.
 

@@ -8,7 +8,7 @@ The `edgeDomain` property allows you to change the domain where the Web SDK send
 
 Your organization determines the correct value for this property when setting up [First party cookies](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html). An organization typically uses a dedicated subdomain for this purpose. For example, if you use the domain `example.com`, you can set up first party cookies on `data.example.com`.
 
-## Edge domain in the Web SDK extension
+## Edge domain using the Web SDK tag extension
 
 Set the **[!UICONTROL Edge domain]** text field when configuring the extension.
 
@@ -19,7 +19,7 @@ Set the **[!UICONTROL Edge domain]** text field when configuring the extension.
 1. Locate the text field **[!UICONTROL Edge domain]**, then enter the desired value.
 1. Click **[!UICONTROL Save]**, then publish your changes.
 
-## Edge domain using alloy.js
+## Edge domain using the Web SDK JavaScript library
 
 Set the `edgeDomain` string when running the `configure` command. If you omit this property when configuring the SDK, it defaults to `edge.adobedc.net`. Set this value if you would like to override the domain that the Web SDK sends data to.
 

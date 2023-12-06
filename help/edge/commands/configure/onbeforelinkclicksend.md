@@ -12,7 +12,7 @@ This callback only runs when [`clickCollectionEnabled`](clickcollectionenabled.m
 >
 >This callback allows the use of custom code. If any code that you include in the callback throws an uncaught exception, processing for the event halts. Data is not sent to Adobe.
 
-## On before link click send callback in the Web SDK extension
+## On before link click send callback using the Web SDK tag extension
 
 Select the **[!UICONTROL Provide on before link click event send callback code]** button when configuring the extension. This button opens a modal window where you can insert the desired code.
 
@@ -59,7 +59,7 @@ if(content.xdm.web?.webInteraction?.type === "other") content.xdm.web.webInterac
 
 Similarly to [`onBeforeEventSend`](onbeforeeventsend.md), you can `return true` to immediately complete the function, or `return false` to immediately cancel sending data. If you cancel the sending of data in `onBeforeLinkClickSend` when both `onBeforeEventSend` and `onBeforeLinkClickSend` contain registered functions, the `onBeforeEventSend` function does not run.
 
-## On before link click send callback using alloy.js
+## On before link click send callback using the Web SDK JavaScript library
 
 Register the `onBeforeLinkClickSend` callback when running the `configure` command. You can change the `content` variable name to any value that you would like by changing the parameter variable inside of the inline function.
 

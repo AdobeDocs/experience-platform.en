@@ -21,7 +21,7 @@ The Web SDK tracks all clicks on `<a>` and `<area>` HTML elements if it doesn't 
 
 In all cases, `xdm.web.webInteraction.value` is set to the link text label. If you want to set this value to the URL instead, you can override this XDM element using [`onBeforeLinkClickSend`](onbeforelinkclicksend.md).
 
-## Enable automatic link tracking in the Web SDK extension
+## Enable automatic link tracking using the Web SDK tag extension
 
 Select the **[!UICONTROL Enable click data collection]** checkbox when configuring the extension.
 
@@ -32,7 +32,7 @@ Select the **[!UICONTROL Enable click data collection]** checkbox when configuri
 1. Scroll down to the [!UICONTROL Data Collection] section, then select the checkbox **[!UICONTROL Enable click data collection]**.
 1. Click **[!UICONTROL Save]**, then publish your changes.
 
-## Enable automatic link tracking using alloy.js
+## Enable automatic link tracking using the Web SDK JavaScript library
 
 Set the `clickCollectionEnabled` boolean when running the `configure` command. If you omit this property when configuring the Web SDK, it defaults to `true`. Set this value to `false` if you prefer to manually set `xdm.web.webInteraction.type` and `xdm.web.webInteraction.value`.
 

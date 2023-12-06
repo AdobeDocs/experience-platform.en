@@ -8,7 +8,7 @@ The `thirdPartyCookiesEnabled` property is a boolean that determines if the Web 
 
 When this option is enabled, the Web SDK uses Adobe Audience Manager to help identify a visitor. When this option is disabled, the call to Audience Manager is disabled. See [Understading calls to the Demdex domain](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html) in the Audience Manager user guide for more information.
 
-## Enable third-party cookies in the Web SDK extension
+## Enable third-party cookies using the Web SDK tag extension
 
 Select the **[!UICONTROL Use third-party cookies]** checkbox when configuring the extension.
 
@@ -19,7 +19,7 @@ Select the **[!UICONTROL Use third-party cookies]** checkbox when configuring th
 1. Scroll down to the [!UICONTROL Identity] section, then select the checkbox **[!UICONTROL Use third-party cookies]**.
 1. Click **[!UICONTROL Save]**, then publish your changes.
 
-## Enable third-party cookies using alloy.js
+## Enable third-party cookies using the Web SDK JavaScript library
 
 Set the `thirdPartyCookiesEnabled` boolean when running the `configure` command. If you omit this property when configuring the Web SDK, it defaults to `true`. Set this value to `false` if you do not want the Web SDK to use Audience Manager to help identify visitors.
 

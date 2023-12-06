@@ -8,7 +8,7 @@ If you enable automatic link tracking using [`clickCollectionEnabled`](clickcoll
 
 This property is a regex string. If the clicked URL matches this regex, `xdm.web.webInteraction.type` is set to `"download"`. Links are also immediately classified as a download link if they include a `download` HTML attribute. If `clickCollectionEnabled` is not enabled, this property does nothing.
 
-## Download link qualifier in the Web SDK extension
+## Download link qualifier using the Web SDK tag extension
 
 Enable the **[!UICONTROL Enable click data collection]** checkbox when configuring the extension, then enter the desired text under **[!UICONTROL Download link qualifier]**.
 
@@ -20,7 +20,7 @@ Enable the **[!UICONTROL Enable click data collection]** checkbox when configuri
 1. Once enabled, the **[!UICONTROL Download link qualifier]** text box appears. Enter the desired value. Buttons are also available to test the regex and restore the default value.
 1. Click **[!UICONTROL Save]**, then publish your changes.
 
-## Download link qualifier using alloy.js
+## Download link qualifier using the Web SDK JavaScript library
 
 Set the `downloadLinkQualifier` string when running the `configure` command. If you omit this property, it defaults to the following value:
 

@@ -23,7 +23,7 @@ The following properties are available within this object:
 * **Target property token**: The token for the destination property in Adobe Target. You must first configure a Target property token override in the datastream's settings before using this field.
 * **Report suites**: The report suite IDs to override in Adobe Analytics. You must first configure report suite overrides in the datastream's settings before using this field.
 
-## Edge configuration overrides in the Web SDK extension
+## Edge configuration overrides using the Web SDK tag extension
 
 Set each desired field within the actions of a tag rule.
 
@@ -39,7 +39,7 @@ Set each desired field within the actions of a tag rule.
 
 Separate fields are provided for [!UICONTROL Development], [!UICONTROL Staging], and [!UICONTROL Production] environments. Make sure that you fill in each desired field for each environment.
 
-## Edge configuration overrides using alloy.js
+## Edge configuration overrides using the Web SDK JavaScript library
 
 Set the `edgeConfigOverrides` object when running the `sendEvent` command. Set each desired property within this object.
 

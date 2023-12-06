@@ -8,7 +8,7 @@ The `documentUnloading` property allows you to use JavaScript's [`sendBeacon`](h
 
 Several browsers impose a limit of 64K to the amount of data that can be sent with `sendBeacon` at one time. If the browser rejects the event because the payload is too large, the Web SDK falls back to using its normal transport method.
 
-## Document unloading in the Web SDK tag extension
+## Document unloading using the Web SDK tag extension
 
 Enable the **[!UICONTROL Document will unload]** checkbox within the actions of a tag rule.
 

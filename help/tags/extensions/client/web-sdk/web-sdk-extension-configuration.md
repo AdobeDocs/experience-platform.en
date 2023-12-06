@@ -126,10 +126,10 @@ As an alternative to passing the overrides through a Web SDK command, you can co
 >
 > Datastream overrides must be configured on a per-environment basis. The development, staging, and production environments all have separate overrides. You can copy the settings between them using the dedicated options shown in the screen below.
 
-![Image showing the datastream configuration overrides in the Web SDK tag extension page.](assets/datastream-overrides.png)
+![Image showing the datastream configuration overrides using the Web SDK tag extension page.](assets/datastream-overrides.png)
 
 ## Configure advanced settings
 
 Use the **[!UICONTROL Edge base path]** field if you need to change the base path that is used to interact with the Edge Network. This shouldn't require updating, but in the case that you participate on a beta or alpha, Adobe might ask you to change this field.
 
-![Image showing the advanced settings in the Web SDK tag extension page.](assets/advanced-settings.png)
+![Image showing the advanced settings using the Web SDK tag extension page.](assets/advanced-settings.png)

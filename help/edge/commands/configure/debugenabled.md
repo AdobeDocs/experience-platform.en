@@ -8,11 +8,11 @@ The `debugEnabled` property allows you to enable or disable debugging using Web 
 
 See the [Debugging](../../use-cases/debugging.md) use case page for more ways to enable debugging.
 
-## Enable debugging in the Web SDK extension
+## Enable debugging using the Web SDK tag extension
 
-There are no debugging options available natively in the Web SDK extension. Use an [alternate debugging method](../../use-cases/debugging.md).
+There are no debugging options available natively using the Web SDK tag extension. Use an [alternate debugging method](../../use-cases/debugging.md).
 
-## Enable debugging using alloy.js
+## Enable debugging using the Web SDK JavaScript library
 
 Set the `debugEnabled` boolean to `true` when running the `configure` command. If you omit this property when configuring the SDK, it defaults to `false`.
 

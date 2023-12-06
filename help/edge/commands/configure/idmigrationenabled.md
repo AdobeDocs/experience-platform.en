@@ -8,7 +8,7 @@ The `idMigrationEnabled` property allows the Web SDK to read AMCV cookies set by
 
 If your organization runs a fresh Web SDK implementation, enabling this setting has no impact on data collection or visitor identification. It is enabled by default, and there are no downsides to leaving it enabled for all implementations.
 
-## Enable ID migration in the Web SDK extension
+## Enable ID migration using the Web SDK tag extension
 
 Select the **[!UICONTROL Migrate ECID from VisitorAPI to the web SDK]** checkbox when configuring the extension.
 
@@ -19,7 +19,7 @@ Select the **[!UICONTROL Migrate ECID from VisitorAPI to the web SDK]** checkbox
 1. Locate the [!UICONTROL Identity] section, then select the checkbox **[!UICONTROL Migrate ECID from VisitorAPI to the web SDK]**.
 1. Click **[!UICONTROL Save]**, then publish your changes.
 
-## Enable ID migration using alloy.js
+## Enable ID migration using the Web SDK JavaScript library
 
 Set the `idMigrationEnabled` boolean when running the `configure` command. If you omit this property when configuring the Web SDK, it defaults to `true`. Set this property if you want to disable the ability to read AMCV cookies set by the Visitor API. Most organizations do not need to set this property.
 

@@ -10,7 +10,7 @@ The CSS selectors that you define in this property begin hiding content when you
 
 If you include both `prehidingStyle` and the prehiding snippet in your implementation, the prehiding snippet takes priority over this configuration property.
 
-## Prehiding style in the Web SDK extension
+## Prehiding style using the Web SDK tag extension
 
 Select the **[!UICONTROL Provide prehiding style]** button when configuring the extension.
 
@@ -22,7 +22,7 @@ Select the **[!UICONTROL Provide prehiding style]** button when configuring the 
 1. This button opens a modal window with a CSS editor. Insert the desired CSS selector and declaration block, then click **[!UICONTROL Save]** to close the modal window.
 1. Click **[!UICONTROL Save]** under extension settings, then publish your changes.
 
-## Prehiding style using alloy.js
+## Prehiding style using the Web SDK JavaScript library
 
 Set the `prehidingStyle` string when running the `configure` command. If you omit this property when configuring the Web SDK, nothing is hidden when running the first `sendEvent` command on a page. Set this value to the desired CSS selector and declaration block for synchronously loaded libraries.
 

@@ -18,7 +18,7 @@ Navigate to the extension configuration page.
 
 These configuration settings are set whenever you use the extension to send data to Adobe.
 
-## Configure the SDK using alloy.js
+## Configure the SDK using the Web SDK JavaScript library
 
 Run the `configure` command. This command is required before you can call any other Web SDK commands, such as [`sendEvent`](../sendevent/overview.md). The properties [`edgeConfigId`](edgeconfigid.md) and [`orgId`](orgid.md) are required. All other properties are optional, depending on your organization's implementation requirements.
 
