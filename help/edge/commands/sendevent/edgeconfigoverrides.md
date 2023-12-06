@@ -48,11 +48,8 @@ Set the `edgeConfigOverrides` object when running the `sendEvent` command. Set e
 * **`com_adobe_identity.idSyncContainerId`**: The third-party ID sync container that you want to use in Audience Manager.
 * **`com_adobe_target.propertyToken`**: The token for the Target destination property.
 
-```js {highlight="5-21"}
+```js
 alloy("sendEvent", {
-  xdm: {
-    /* ... */
-  },
   edgeConfigOverrides: {
     datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93"
     com_adobe_analytics: {
