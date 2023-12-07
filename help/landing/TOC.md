@@ -68,6 +68,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 * License usage and guardrails {#license}
   * [Data management license entitlement best practices](./license-usage-and-guardrails/data-management-best-practices.md)    
   * [License usage dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)
+  * [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
 * [Troubleshooting guide](troubleshooting.md)
 * [Gen2 data lake migration](adls2-gen2-migration.md)
 * [Glossary](glossary.md)
