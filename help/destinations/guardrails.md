@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;activation;troubleshooting;guardrails;guidelines;limit
-title: Default guardrails for activation data
+title: Default guardrails for data activation
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Learn more about the data activation default usage and rate limits.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
 ---
-# Guardrails for activation data
+# Guardrails for data activation
 
 This page provides default usage and rate limits with regard to activation behavior. When reviewing the following guardrails, it is assumed that you have correctly [connected to destinations](/help/destinations/ui/connect-destination.md).
 
