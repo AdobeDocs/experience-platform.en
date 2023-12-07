@@ -1,8 +1,8 @@
 ---
 title: Datastreams overview
 description: Learn how datastreams help you connect your client-side Experience Platform SDK integration with Adobe products and third-party destinations.
+exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 ---
-
 # Datastreams overview
 
 A datastream represents the server-side configuration when implementing the Adobe Experience Platform Web and Mobile SDKs. While the [configure](../edge/fundamentals/configuring-the-sdk.md) command in the SDK controls things that must be handled on the client (such as the `edgeDomain`), datastreams handle all other configurations for the SDK. When a request is sent to the Adobe Experience Platform Edge Network, the `edgeConfigId` is used to reference the datastream. This allows you to update the server-side configuration without having to make code changes on your website. 

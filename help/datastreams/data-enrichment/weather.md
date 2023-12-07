@@ -1,8 +1,8 @@
 ---
 title: Enhance data collection with weather data from DNL The Weather Channel
 description: Enhance the data that you collect via datastreams with weather data from DNL The Weather Channel.
+exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
 ---
-
 # Enhance data collection with weather data from [!DNL The Weather Channel]
 
 Adobe has partnered with [!DNL [The Weather Company]](https://www.ibm.com/weather) to bring the additional context of United States weather to the data collected via datastreams. You can use this data for analytics, targeting, and audience creation in Experience Platform.
