@@ -1,8 +1,8 @@
 ---
 title: Identity Data in Web SDK
 description: Learn how to retrieve and manage Adobe Experience Cloud IDs (ECIDs) using the Adobe Experience Platform Web SDK.
+exl-id: 03060cdb-becc-430a-b527-60c055c2a906
 ---
-
 # Identity data in Web SDK
 
 The Adobe Experience Platform Web SDK uses [Adobe Experience Cloud IDs (ECIDs)](../../identity-service/ecid.md) to track visitor behavior. Using ECIDs, you can ensure that each device has a unique identifier that can persist across multiple sessions, tying all the hits that occur during and across web sessions to a specific device.
