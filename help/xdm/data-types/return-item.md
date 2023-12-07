@@ -4,14 +4,21 @@ description: This document provides an overview of the Return Item Experience Da
 ---
 # [!UICONTROL Return Item] data type
 
-[!UICONTROL Return Item] is a standard Experience Data Model (XDM) data type that describes ...
+[!UICONTROL Return Item] is a standard Experience Data Model (XDM) data type captures essential details related to the return process for a purchased item.
 
 ![A diagram of the  Return Item data type.]()
 
-| Display name  | Property | Data type | Description |
-| --- | --- | --- | --- |
-|     |     |     |     |
-|     |     |     |     |
+| Display name                | Property                     | Data type | Description                                            |
+|-----------------------------|------------------------------|-----------|--------------------------------------------------------|
+| [!UICONTROL Return Status]               | `returnStatus`             | string    | The status of returned item (e.g. Pending, Approved).       |
+| [!UICONTROL Return Reason]               | `returnReason`             | string    | The reason why the return was requested for this item.            |
+| [!UICONTROL Return Item Condition]       | `returnItemCondition`      | string    | The condition of the item for which the return is requested.|
+| [!UICONTROL Return Resolution]           | `returnResolution`         | string    | The desired resolution or outcome expected from the return (e.g. Refund, Exchange).|
+| [!UICONTROL Return Quantity Requested]   | `returnQuantityRequested`  | integer   | The quantity of this item that the shopper requested to return.|
+| [!UICONTROL Return Quantity Authorized]  | `returnQuantityAuthorized` | integer   | The quantity of this item authorized to be returned.          |
+| [!UICONTROL Return Quantity Received]    | `returnQuantityReceived`   | integer   | The quantity of returned items received.                      |
+| [!UICONTROL Return Quantity Approved]    | `returnQuantityApproved`   | integer   | The quantity of this item with a return fully complete and approved. |
+
 
 {style="table-layout:auto"}
 

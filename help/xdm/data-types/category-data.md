@@ -4,14 +4,17 @@ description: This document provides an overview of the Category data Experience 
 ---
 # [!UICONTROL Category data] data type
 
-[!UICONTROL Category data] is a standard Experience Data Model (XDM) data type that describes ...
+[!UICONTROL Category data] is a standard Experience Data Model (XDM) data type that describes information related to a product's category. 
 
 ![A diagram of the  Category data data type.]()
 
-| Display name  | Property | Data type | Description |
-| --- | --- | --- | --- |
-|     |     |     |     |
-|     |     |     |     |
+Certainly! Here's the table based on the provided JSON schema:
+
+| Display name    | Property           | Data type | Description                              |
+|-----------------|--------------------|-----------|------------------------------------------|
+| [!UICONTROL Category identifier] | `categoryID`   | string    | Identifier for the product's category.    |
+| [!UICONTROL Category name]   | `categoryName`   | string    | Name of the product's category.          |
+| [!UICONTROL Category path]   | `categoryPath`   | string    | Path of the product's category.          |
 
 {style="table-layout:auto"}
 

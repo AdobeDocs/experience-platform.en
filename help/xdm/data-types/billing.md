@@ -4,14 +4,16 @@ description: This document provides an overview of the Billing Experience Data M
 ---
 # [!UICONTROL Billing] data type
 
-[!UICONTROL Billing] is a standard Experience Data Model (XDM) data type that describes ...
+[!UICONTROL Billing] is a standard Experience Data Model (XDM) data type that contains information about billing details. Specifically, it focuses on the billing address. 
 
 ![A diagram of the  Billing data type.]()
 
-| Display name  | Property | Data type | Description |
-| --- | --- | --- | --- |
-|     |     |     |     |
-|     |     |     |     ||
+<!-- Where is the address data type?
+Also, check for required fields -->
+
+| Display name                  | Property        | Data type       | Description              |
+|-------------------------------|-----------------|-----------------|--------------------------|
+| [!UICONTROL Billing Address]  | `address`       | [address]()     | Billing Address.         |
 
 {style="table-layout:auto"}
 
