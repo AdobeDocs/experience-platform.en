@@ -50,20 +50,21 @@ Set the `edgeConfigOverrides` object when running the `sendEvent` command. Set e
 
 ```js
 alloy("sendEvent", {
-  edgeConfigOverrides: {
-    datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93"
-    com_adobe_analytics: {
-      reportSuites: [
+  "xdm": adobeDataLayer.getState(reference),
+  "edgeConfigOverrides": {
+    "datastreamId": "ebebf826-a01f-4458-8cec-ef61de241c93"
+    "com_adobe_analytics": {
+      "reportSuites": [
         "examplersid",
         "examplersid2",
         "examplersid3"
         ]
     },
-    com_adobe_identity: {
-      idSyncContainerId: "1234567"
+    "com_adobe_identity": {
+      "idSyncContainerId": "1234567"
     },
-    com_adobe_target: {
-      propertyToken: "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+    "com_adobe_target": {
+      "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
     }
   }
 });

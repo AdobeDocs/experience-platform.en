@@ -14,7 +14,7 @@ This property accepts Base64 decision scopes. You can include multiple decision 
 
 ## Decision scopes using the Web SDK tag extension
 
-Provide the desired decision scopes in the [!UICONTROL Scopes] field within the actions of a tag rule. You can also provide a data element that represents an array of scopes.
+Provide the desired decision scopes in the **[!UICONTROL Scopes]** field within the actions of a tag rule. You can also provide a data element that represents an array of scopes.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
@@ -32,6 +32,7 @@ Set the `decisionScopes` string array when running the `sendEvent` command. Each
 
 ```js
 alloy("sendEvent", {
+  "xdm": adobeDataLayer.getState(reference),
   "decisionScopes": [
     "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIxYWIwOWMx...TEifQ==",
     "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIxYWIyNWI5...mIifQ=="

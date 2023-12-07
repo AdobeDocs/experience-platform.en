@@ -25,6 +25,6 @@ Run the `sendEvent` command when calling your configured instance of the Web SDK
 
 ```js
 alloy("sendEvent", {
-  "xdm": adobeDataLayer.getState(reference);
+  "xdm": adobeDataLayer.getState(reference)
 });
 ```

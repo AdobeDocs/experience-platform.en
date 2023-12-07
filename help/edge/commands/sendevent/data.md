@@ -17,7 +17,7 @@ The `data` property allows you to send data to Adobe that does not match an XDM 
 
 ## Use the data property using the Web SDK tag extension
 
-Provide a data element in the [!UICONTROL Data] field within the actions of a tag rule.
+Provide a data element in the **[!UICONTROL Data]** field within the actions of a tag rule.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
@@ -30,19 +30,10 @@ Provide a data element in the [!UICONTROL Data] field within the actions of a ta
 
 ## Use the data property using the Web SDK JavaScript library
 
-Set the `data` property as part of the JSON object within the parameter of the `sendEvent` command. For data that you plan to map in the datastream, you can structure this property however you'd like. For data used by certain services, make sure that the object hierarchy matches what the service expects. You can include both the `data` object and the `xdm` object in the same `sendEvent` command.
+Set the `data` property as part of the JSON object within the parameter of the `sendEvent` command. For data that you plan to map in the datastream, you can structure this property however you'd like. For data used by certain services, make sure that the object hierarchy matches what the service expects. You can include both the `data` object and the [`xdm`](xdm.md) object in the same `sendEvent` command.
 
 ```javascript
 alloy("sendEvent", {
-  "data": {
-    "__adobe": {
-      "target": {
-        "profile.gender": "female",
-        "profile.age": 30,
-        "entity.id": "123",
-        "entity.genre": "Drama"
-      }
-    }
-  }
+  "data": dataObject
 });
 ```

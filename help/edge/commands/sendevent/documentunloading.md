@@ -27,6 +27,7 @@ Set the `documentUnloading` boolean when running the `sendEvent` command. Its de
 
 ```js
 alloy("sendEvent", {
+  "xdm": adobeDataLayer.getState(reference),
   "documentUnloading": true
 });
 ```
