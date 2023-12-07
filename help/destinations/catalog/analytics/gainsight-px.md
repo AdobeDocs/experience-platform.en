@@ -64,7 +64,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![Authentication screenshot](../../assets/catalog/analytics/gainsight_px/auth_screen.png)
+![Authentication screenshot](../../assets/catalog/analytics/gainsight_px/auth-screen.png)
 * **[!UICONTROL Password]**: The password used to login to the [Gainsight PX UI](https://app.aptrinsic.com)
 * **[!UICONTROL Client ID]**: The Gainsight PX subscription ID on the [Company Details page](https://app.aptrinsic.com/settings/subscription)
 * **[!UICONTROL Client secret]**: The OAuth secret generated on bottom of the [Company Details page](https://app.aptrinsic.com/settings/subscription)
