@@ -2,6 +2,7 @@
 title: Adobe TikTok web events API extension Integration
 description: This Adobe Experience Platform web events API allows you to share website interactions directly with TikTok.
 last-substantial-update: 2023-09-26
+exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
 ---
 # [!DNL TikTok] web events API extension overview
 

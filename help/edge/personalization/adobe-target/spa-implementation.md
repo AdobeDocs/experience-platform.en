@@ -4,6 +4,7 @@ description: Learn how to create a single-page application (SPA) implementation 
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
 ---
+
 # Single-page application implementation 
 
 Adobe Experience Platform Web SDK provides rich features that equip your business to execute personalization on next-generation, client-side technologies such as single-page applications (SPAs).
@@ -12,7 +13,7 @@ Traditional websites worked on "Page-to-Page" navigation models, otherwise known
 
 Modern web applications, such as single-page applications, have instead adopted a model that propels rapid use of browser UI rendering, which is often independent of page reloads. These experiences can be triggered by customer interactions, such as scrolls, clicks, and cursor movements. As the paradigms of the modern web have evolved, the relevance of traditional generic events, such as a page load, to deploy personalization and experimentation no longer work.   
 
-![](assets/spa-vs-traditional-lifecycle.png)
+![Diagram showing the SPA lifecycle compared to traiditional page lifecycle.](assets/spa-vs-traditional-lifecycle.png)
 
 ## Benefits of Platform Web SDK for SPAs
 
@@ -30,23 +31,23 @@ To further explain what Views are, the following example uses a hypothetical onl
 
 After navigating to the home site, a hero image promotes an Easter sale as well as the newest products available on the site. In this case, a View could be defined for the entire home screen. This View could simply be called "home".
 
-![](assets/example-views.png)
+![Sample image of a singl-page application in a browser window.](assets/example-views.png)
 
 As the customer becomes more interested in the products that the business is selling, they decide to click the **Products** link. Similar to the home site, the entirety of the products site can be defined as a View. This View could be named "products-all". 
 
-![](assets/example-products-all.png)
+![Sample image of a singl-page application in a browser window, with all products displayed.](assets/example-products-all.png)
 
 Since a View can be defined as a whole site or a group of visual elements on a site, the four products shown on the products site could be grouped and considered as a View. This view could be named "products." 
 
-![](assets/example-products.png)
+![Sample image of a singl-page application in a browser window, with example products displayed.](assets/example-products.png)
 
 When the customer decides to click the **Load More** button to explore more products on the site, the website URL does not change in this case, but a View can be created here to represent only the second row of products that are shown. The View name could be "products-page-2". 
 
-![](assets/example-load-more.png)
+![Sample image of a singl-page application in a browser window, with example products displayed on an additional page.](assets/example-load-more.png)
 
 The customer decides to purchase a few products from the site and proceeds to the checkout screen. On the checkout site the customer is given options to choose normal delivery or express delivery. A View can be any group of visual elements on a site, so a View could be created for delivery preferences and be called, "Delivery Preferences". 
 
-![](assets/example-check-out.png)
+![Sample image of a singl-page application checkout page in a browser window.](assets/example-check-out.png)
 
 The concept of Views can be extended much further than this. These are just a few examples of Views that can be defined on a site.
 
@@ -83,7 +84,7 @@ This section outlines three examples showing how to invoke the `sendEvent()` fun
 
 The marketing team want to run A/B tests on the entire home page.
 
-![](assets/use-case-1.png)
+![Sample image of a singl-page application in a browser window.](assets/use-case-1.png)
 
 To run A/B tests on the whole home site, `sendEvent()` must be invoked with the XDM `viewName` set to `home`: 
 
@@ -127,7 +128,7 @@ history.listen(onViewChange);
 
 The marketing team want to personalize the second row of products by changing the price label color to red after a user clicks **Load More**. 
 
-![](assets/use-case-2.png)
+![Sample image of a single-page application in a browser window, showing personalized offers.](assets/use-case-2.png)
 
 ```jsx
 function onViewChange(viewName) { 
@@ -153,7 +154,7 @@ class Products extends Component {
   } 
 
   handleLoadMoreClicked() { 
-    var page = this.state.page + 1; // assuming page number is derived from component’s state 
+    var page = this.state.page + 1; // assuming page number is derived from component's state 
     this.setState({page: page}); 
     onViewChange('PRODUCTS-PAGE-' + page); 
   } 
@@ -165,7 +166,7 @@ class Products extends Component {
 
 The marketing team want to run an A/B test to see whether changing the color of the button from blue to red when **Express Delivery** is selected can boost conversions (as opposed to keeping the button color blue for both delivery options). 
  
-![](assets/use-case-3.png)
+![Sample image of a single-page application in a browser window, with A/B testing.](assets/use-case-3.png)
 
 To personalize content on the site depending on which delivery preference is selected, a View can be created for each delivery preference. When **Normal Delivery** is selected, the View can be named "checkout-normal". If **Express Delivery** is selected, the View can be named "checkout-express". 
 
@@ -220,19 +221,19 @@ When you have finished defining your XDM Views and implemented `sendEvent()` wit
 
 The Modifications panel captures the actions created for a particular View. All actions for a View are grouped under that View. 
 
-![](assets/modifications-panel.png)
+![The Modifications panel with page load options shown in the sidebar of the browser window.](assets/modifications-panel.png)
 
 ### Actions 
 
 Clicking an action highlights the element on the site where this action will be applied. Each VEC action created under a View has the following icons: **Information**, **Edit**, **Clone**, **Move**, and **Delete**. These icons are explained in more detail in the table that follows.
 
-![](assets/action-icons.png) 
+![Action icons](assets/action-icons.png) 
 
 |Icon|Description|
 |---|---|
 |Information|Displays the details of the action.|
 |Edit |Allows you to edit the properties of the action directly. |
-|Clone|Clone the action to one or more Views that exist on the Modifications panel or to one or more Views that you have browsed and navigated to in the VEC. The action doesn’t have to necessarily exist in the Modifications panel.<br/><br/>**Note:** After a clone operation is made, you must navigate to the View in the VEC via Browse to see whether the cloned action was a valid operation. If the action cannot be applied to the View, you will see an error.| 
+|Clone|Clone the action to one or more Views that exist on the Modifications panel or to one or more Views that you have browsed and navigated to in the VEC. The action doesn't have to necessarily exist in the Modifications panel.<br/><br/>**Note:** After a clone operation is made, you must navigate to the View in the VEC via Browse to see whether the cloned action was a valid operation. If the action cannot be applied to the View, you will see an error.| 
 |Move |Moves the action to a Page Load Event or any other View that already exists in the modifications panel.<br/><br/>**Page Load Event:** Any actions corresponding to the page load event are applied on the initial page load of your web application. <br/><br/>**Note:** After a move operation is made, you must navigate to the View in the VEC via Browse to see whether the move was a valid operation. If the action cannot be applied to the View, you will see an error.|
 |Delete |Deletes the action.|
 
@@ -249,7 +250,7 @@ Earlier in this document a View named "home" was defined for the entire home sit
 
 To make these updates in the VEC, select **Compose** and apply those changes to the "home" view. 
 
-![](assets/vec-home.png)
+![Visual Experience Composer sample page.](assets/vec-home.png)
 
 ### Example 2: Change product labels
 
@@ -263,7 +264,7 @@ To make these updates in the VEC, the following steps are required:
 4. Select **Compose** in the VEC. 
 5. Apply actions to change the text label to **Sale Price** and the color to red. 
 
-![](assets/vec-products-page-2.png)
+![Visual Experience Composer sample page with product labels.](assets/vec-products-page-2.png)
 
 ### Example 3: Personalize delivery preference styling
 
@@ -283,4 +284,4 @@ To make these updates in the VEC, the following steps are required:
 >
 >The "checkout-express" View does not appear in the Modifications panel until the **Express Delivery** radio button is selected. This is because the `sendEvent()` function is executed when the **Express Delivery** radio button is selected, therefore the VEC is not aware of the "checkout-express" View until the radio button is selected.
 
-![](assets/vec-delivery-preference.png)
+![Visual Experience Composer showing delivery preferences selector.](assets/vec-delivery-preference.png)

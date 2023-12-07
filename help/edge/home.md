@@ -3,20 +3,20 @@ title: Adobe Experience Platform Web Software Development Kit (SDK) Overview
 description: Learn how to use the Adobe Experience Platform Web SDK to integrate Platform capabilities into your website.
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
 ---
-# Adobe Experience Platform Web SDK overview {#overview}
+# Adobe Experience Platform Web SDK {#overview}
 
-Adobe Experience Platform Web Software Development Kit (SDK) is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with its services through the Adobe Experience Platform Edge Network. Adobe offers two methods to implement the Web SDK:
+The Adobe Experience Platform Web Software Development Kit (SDK) is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with its services through the Adobe Experience Platform Edge Network. Adobe offers two methods to implement the Web SDK:
 
-* Manual implementation using `alloy.js`. This user guide provides documentation for this implementation method.
+* Manual implementation using the `alloy.js` JavaScript library. This user guide provides documentation for this implementation method.
 * The [Web SDK tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). See [Implement Adobe Experience Cloud with Web SDK tutorial](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) for more information.
 
-## Experience Platform Edge Network
+## Experience Platform Edge Network {#edge-network}
 
 The Experience Platform Web SDK is part of a collection of tools which make up the Adobe Experience Platform Edge Network. The Edge Network consists of the following components:
 
 * **[Experience Platform Web SDK](#overview):** A JavaScript SDK and tag extension to dramatically simplify deploying Adobe technologies.
-* **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/):** An extension to the v5 mobile SDK to allow customers to use the new deployment methodology
-* **[Experience Platform Edge Network Server API](../server-api/overview.md):** An API which can be used for a variety of data collection, personalization, advertising and marketing use cases. The Server API can be used on servers, IoT devices, set-top boxes, and a variety of other devices.
+* **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/):** An extension to the v5 mobile SDK to allow customers to use the new deployment methodology
+* **[Experience Platform Edge Network Server API](../server-api/overview.md):** An API which can be used for various data collection, personalization, advertising and marketing use cases. The Server API can be used on servers, IoT devices, set-top boxes, and various other devices.
 
 The Edge Network is a framework for low-latency data collection, pluggable computing, and rapid data activation across all addressable channels. It provides a single consolidated SDK for every channel (JavaScript, Mobile, Server-side), which sends data to a common Adobe domain (`adobedc.net`) and receives a single payload back for data and experience delivery.
 

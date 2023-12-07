@@ -130,11 +130,11 @@ Use the check boxes to the left of the dataset names to select the datasets that
 
 In the **[!UICONTROL Scheduling]** step, you can set a start date and an export cadence for your dataset exports.
 
-The **[!UICONTROL Export incremental files]** option is automatically selected. This triggers an export where the first file is a full snapshot of the dataset and subsequent files are incremental additions to the dataset since the previous export.
+The **[!UICONTROL Export incremental files]** option is automatically selected. This triggers an export of one or multiple files representing a full snapshot of the dataset. Subsequent files are incremental additions to the dataset since the previous export.
 
 >[!IMPORTANT]
 >
->The first exported incremental file includes all existing data in the dataset, functioning as a backfill.
+>The first incremental file export includes all existing data in the dataset, functioning as a backfill. The export can contain one or multiple files.
 
 ![Dataset export workflow showing the scheduling step.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
@@ -161,7 +161,7 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 ## Verify successful dataset export {#verify}
 
-When exporting datasets, Experience Platform creates a `.json` or `.parquet` file in the storage location that you provided. Expect a new file to be deposited in your storage location according to the export schedule you provided. 
+When exporting datasets, Experience Platform creates one or multiple `.json` or `.parquet` files in the storage location that you provided. Expect new files to be deposited in your storage location according to the export schedule you provided.
 
 Experience Platform creates a folder structure in the storage location you specified, where it deposits the exported dataset files. A new folder is created for each export time, following the pattern below:
 
