@@ -1,8 +1,8 @@
 ---
 title: Install the Adobe Experience Platform Web SDK
 description: Learn how to install the Experience Platform Web SDK.
+exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
 ---
-
 # Install Web SDK {#installing-the-sdk}
 
 There are three supported ways to install Adobe Experience Platform Web SDK:
