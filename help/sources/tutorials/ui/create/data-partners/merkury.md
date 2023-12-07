@@ -1,10 +1,15 @@
 ---
 title: Create A Merkury Enterprise Identity Resolution Source Connection and Dataflow in the UI
 description: Learn how to create a Merkury Enterprise Identity Resolution source connection using the Adobe Experience Platform UI.
+badge: Beta
 hide: true
 hidefromtoc: true
 ---
-# Create a Merkury Enterprise Identity Resolution source connection and dataflow in the UI
+# Create a [!DNL Merkury Enterprise Identity Resolution] source connection and dataflow in the UI
+
+>[!NOTE]
+>
+>The [!DNL Merkury Enterprise Identity Resolution] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 This tutorial provides steps to create a [!DNL Merkury Enterprise Identity Resolution] source connection and dataflow using the Adobe Experience Platform user interface.
 

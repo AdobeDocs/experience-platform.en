@@ -1,10 +1,15 @@
 ---
 title: Merkury Enterprise Identity Resolution Source Overview
 description: Learn how to connect Merkury Enterprise Identity Resolution to Adobe Experience Platform using the user interface.
+badge: Beta
 hide: true
 hidefromtoc: true
 ---
 # [!DNL Merkury Enterprise Identity Resolution]
+
+>[!NOTE]
+>
+>The [!DNL Merkury Enterprise Identity Resolution] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Adobe Experience Platform provides support for ingesting data from a data partner application. Support for data partners include [!DNL Merkury Enterprise Identity Resolution].
 
@@ -47,6 +52,5 @@ You must meet the following prerequisites before you can start using the [!DNL M
 >A file path like `myBucket/folder/subfolder/subsubfolder/abc.csv` may lead you to only access `subsubfolder/abc.csv`. If you want to access the subfolder, you can specify the bucket parameter as myBucket and the folderPath as folder/subfolder to ensure that file exploration starts at subfolder as opposed to `subsubfolder/abc.csv`.
 
 ## Next steps
-
 
 By reading this document, you have completed prerequisite setup needed in order to bring data from your [!DNL Merkury] account to Experience Platform. You can now proceed to the guide on [connecting [!DNL Merkury] to Experience Platform using the user interface](../../tutorials/ui/create/data-partners/merkury.md).
