@@ -21,6 +21,8 @@ Adobe Target is an application that provides real-time, AI-powered personalizati
 
 Adobe Target is a personalization connection in the Adobe Experience Platform destinations catalog.
 
+## Video overview {#video-overview}
+
 For a brief overview on how to configure the Adobe Target connection in Experience Platform, watch the video below.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
@@ -35,7 +37,7 @@ Configuring the Adobe Target connection without using a datastream ID does not r
 
 >[!IMPORTANT]
 >
->Before creating an [!DNL Adobe Target] connection, read the guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components. Same-page and next-page personalization requires you to use a datastream ID when configuring the Adobe Target connection.
+>Before creating an [!DNL Adobe Target] connection, read the guide on how to [configure personalization destinations for same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md). This guide takes you through the required configuration steps for same-page and next-page personalization use cases, across multiple Experience Platform components. To achieve same-page and next-page personalization use cases, you must use a datastream ID when configuring the Adobe Target connection.
 
 ### Prerequisites in Adobe Target {#prerequisites-in-adobe-target}
 
@@ -48,7 +50,7 @@ Read more about granting permissions for [Target Premium](https://experienceleag
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
@@ -127,7 +129,7 @@ Read [Activate audiences to edge personalization destinations](../../ui/activate
 
 ## Exported data {#exported-data}
 
-Adobe Target reads profile data from the Adobe Experience Platform Edge Network, so no data gets exported.
+Adobe Target *reads* profile data from the Adobe Experience Platform Edge Network, so no data gets exported.
 
 ## Data usage and governance {#data-usage-governance}
 

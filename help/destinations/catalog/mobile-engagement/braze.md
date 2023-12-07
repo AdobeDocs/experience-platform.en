@@ -40,7 +40,7 @@ As a marketer, I want to target users in a mobile engagement destination, with a
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
