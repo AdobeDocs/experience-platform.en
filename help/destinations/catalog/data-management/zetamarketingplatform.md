@@ -51,7 +51,6 @@ This section describes which type of audiences you can export to this destinatio
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ Are you sure?| Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -123,46 +122,15 @@ Selecting target fields:
 
 ## Exported data / Validate data export {#exported-data}
 
-*Add a paragraph about how data is exported to your destination. This would help the customer make sure that they have correctly integrated with your destination. For example, you could provide a sample JSON like the one below. Or, you could provide screenshots and information from your destination's interface that show how customers should expect segments to be populating in the destination platform.*
+A successful audience syndication from experience platfrom to the ZMP will update the target customer list in the ZMP. The count as well as sample profiles in the target customer list will be exactly equal to the number of identities that were successfuly activated from experience platform.
 
-```
-{
-  "person": {
-    "email": "yourstruly@adobe.com"
-  },
-  "segmentMembership": {
-    "ups": {
-      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
-        "lastQualificationTime": "2020-05-25T21:24:39Z",
-        "status": "exited"
-      },
-      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
-        "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
-      }
-    }
-  },
-  "identityMap": {
-    "ecid": [
-      {
-        "id": "14575006536349286404619648085736425115"
-      },
-      {
-        "id": "66478888669296734530114754794777368480"
-      }
-    ],
-    "email_lc_sha256": [
-      {
-        "id": "655332b5fa2aea4498bf7a290cff017cb4"
-      },
-      {
-        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
-      }
-    ]
-  }
-}
+Each audience member that was syndicated from the experience platform will also be visible under **Audiences** > **People** in the ZMP. 
 
-```
+![Customer List in ZMP](../../assets/catalog/data-management-platform/zmp-extension/CustomerListInZMP.png)
+
+You will also be able to view the **Customer List** segment a profile belongs to in the Single Customer view as shown below.
+
+![SingleCustomerViewInZMP](../../assets/catalog/data-management-platform/zmp-extension/SingleCustomerViewInZMP.png)
 
 ## Data usage and governance {#data-usage-governance}
 
