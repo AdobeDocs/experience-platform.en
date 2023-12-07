@@ -1,5 +1,4 @@
 ---
-keywords: connect destination;destination connect;how to connect destination
 title: Create a new destination connection
 type: Tutorial
 description: Learn how to connect to a destination in Adobe Experience Platform, enable alerts, and set up marketing actions for your connected destination.
