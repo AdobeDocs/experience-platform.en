@@ -1,8 +1,8 @@
 ---
 title: Data Prep for Data Collection
 description: Learn how to map your data to an Experience Data Model (XDM) event schema when configuring a datastream for the Adobe Experience Platform Web and Mobile SDKs.
+exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
 ---
-
 # Data Prep for Data Collection
 
 Data Prep is an Adobe Experience Platform service that allows you to map, transform, and validate data to and from [Experience Data Model (XDM)](../xdm/home.md). When configuring a Platform-enabled [datastream](./overview.md), you can use Data Prep capabilities to map your source data to XDM when sending it to the Platform Edge Network.

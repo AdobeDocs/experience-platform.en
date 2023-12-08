@@ -9,7 +9,7 @@ Adobe Experience Platform Destination SDK is a suite of configuration APIs that 
 
 The Destination SDK documentation provides instructions for you to use the Adobe Experience Platform Destination SDK to configure, test and release a productized destination integration with Adobe Experience Platform, and have your destination become part of the ever-growing destinations catalog. By using Destination SDK, you can also create your own custom private destination to export data tailored to your needs.
 
-![Screenshot from the Experience Platform UI, showing the destinations catalog](assets/destinations-catalog-overview.png)
+![Screenshot from the Experience Platform UI, showing the destinations catalog.](assets/destinations-catalog-overview.png)
 
 ## Productized and custom integrations {#productized-custom-integrations}
 
@@ -55,7 +55,7 @@ Destination SDK access varies based on your status as a partner or Experience Pl
 |Type of partner or customer | How to access Destination SDK |
 ---------|----------|
 | Independent Software Vendor (ISV) | Join the [Adobe Technology Partner Program](https://partners.adobe.com/technologyprogram/experiencecloud.html) and request to get an Experience Platform sandbox provisioned to access Destination SDK. |
-| System Integrator (SI) | You need to be at either Gold or Platinum level in the [Adobe Solution Partner Program](https://solutionpartners.adobe.com/home.html), and you will get an Experience Platform sandbox provisioned and access to Destination SDK. |
+| System Integrator (SI) | You need to be at either Gold or Platinum level in the [Adobe Solution Partner Program](https://solutionpartners.adobe.com/home.html) to get an Experience Platform sandbox provisioned and access to Destination SDK. |
 | Experience Platform customer on the [Real-Time CDP Ultimate package](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | By default, you get access to Experience Platform sandboxes and Destination SDK, allowing you to build private destinations for your organization.|
 
 {style="table-layout:auto"}

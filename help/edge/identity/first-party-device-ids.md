@@ -1,8 +1,8 @@
 ---
 title: First-party device IDs in Web SDK
 description: Learn how to configure first-party device IDs (FPIDs) for the Adobe Experience Platform Web SDK.
+exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
 ---
-
 # First-party device IDs in Web SDK
 
 The Adobe Experience Platform Web SDK assigns [Adobe Experience Cloud IDs (ECIDs)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) to website visitors by using cookies, to track user behavior. To account for browser restrictions on cookie lifespans, you can opt to set and manage your own device identifiers instead. These are referred to as first-party device IDs (FPIDs).

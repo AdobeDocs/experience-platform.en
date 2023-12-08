@@ -1,8 +1,8 @@
 ---
 title: Use Adobe Target with Web SDK for personalization
 description: Learn how to render personalized content with the Experience Platform Web SDK using Adobe Target
+exl-id: 021171ab-0490-4b27-b350-c37d2a569245
 ---
-
 # Use [!DNL Adobe Target] and [!DNL Web SDK] for personalization
 
 [!DNL Adobe Experience Platform] [!DNL Web SDK] can deliver and render personalized experiences managed in [!DNL Adobe Target] to the web channel. You can use a WYSIWYG editor, called the [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), or a non-visual interface, the [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), to create, activate, and deliver your activities and personalization experiences.
