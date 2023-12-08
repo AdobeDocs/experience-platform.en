@@ -3,7 +3,7 @@ title: PubMatic Connect
 description: PubMatic maximizes customer value by delivering the programmatic digital marketing supply chain of the future. PubMatic Connect combines platform technology and dedicated service to enhance how inventory and data are packaged and transacted.
 ---
 
-# PubMatic Connect destination {#your-destination}
+# PubMatic Connect destination {#pubmatic-connect}
 
 ## Overview {#overview}
 
@@ -11,17 +11,17 @@ PubMatic maximizes customer value by delivering the programmatic digital marketi
 
 This destination can be used to send audience data to the PubMatic Connect platform.
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 >
-> The destination connector and documentation page are created and maintained by the PubMatic team. For any inquiries or update requests, please contact them directly at `support@pubmatic.com`.
+>The destination connector and documentation page are created and maintained by the PubMatic team. For any inquiries or update requests, contact them directly at `support@pubmatic.com`.
 
 ## Use cases {#use-cases}
 
 To help you better understand how and when you should use the PubMatic Connect destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Targeting users on mobile, web, and CTV platforms {#use-case-1}
+### Targeting users on mobile, web, and CTV platforms {#targeting}
 
-Publisher or data providers want to send audiences from Adobe Experience Platform to PubMatic Connect in order to target users on mobile, web and CTV platforms, using a large range of identifiers.
+Publisher or data providers want to send audiences from Adobe Experience Platform to PubMatic Connect to target users on mobile, web, and CTV platforms, using a large range of identifiers.
 
 ## Prerequisites {#prerequisites}
 
@@ -31,8 +31,8 @@ Talk to your PubMatic Account Manager to make sure your account is configured co
 
 PubMatic Connect supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
-| Target Identity | Description              | Considerations                                                                  |
-| --------------- | ------------------------ | ------------------------------------------------------------------------------- |
+| Target Identity | Description | Considerations |
+| --------------- | ------ | --- |
 | GAID            | Google Advertising ID    | Select the GAID target identity when your source identity is a GAID namespace.  |
 | IDFA            | Apple ID for Advertisers | Select the IDFA target identity when your source identity is an IDFA namespace. |
 | extern_id       | Custom user IDs          | Select this target identity when your source identity is a custom namespace.    |
@@ -43,8 +43,8 @@ PubMatic Connect supports the activation of identities described in the table be
 
 This section describes which type of audiences you can export to this destination.
 
-| Audience origin             | Supported | Description                                                                                                         |
-| --------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------- |
+| Audience origin| Supported | Description|
+| --- | --------- | ------ |
 | [!DNL Segmentation Service] | ✓         | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).          |
 | Custom uploads              | ✓         | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
@@ -54,44 +54,44 @@ This section describes which type of audiences you can export to this destinatio
 
 Refer to the table below for information about the destination export type and frequency.
 
-| Item             | Type                            | Notes                                                                                                                                                                                                                                                                                                                              |
-| ---------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Export type      | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the PubMatic Connect destination.                                                                                                                                                                               |
-| Export frequency | **[!UICONTROL Streaming]**      | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
+| Item| Type  | Notes |
+| --- | --- | --- |
+| Export type      | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the PubMatic Connect destination. |
+| Export frequency | **[!UICONTROL Streaming]**      | Streaming destinations are "always on" API-based connections. When a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Connect to the destination {#connect}
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 >
 > To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the destination configuration workflow, fill in the fields listed in the two sections below.
 
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-![How to authenticate](/help/destinations/assets/catalog/advertising/pubmatic/authenticate-destination.png)
+![How to authenticate](../../assets/catalog/advertising/pubmatic/authenticate-destination.png)
 
--   **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.
+- **[!UICONTROL Bearer token]**: Fill in the bearer token to authenticate to the destination.
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Destination details](/help/destinations/assets/catalog/advertising/pubmatic/destination-details.png)
+![Destination details](../../assets/catalog/advertising/pubmatic/destination-details.png)
 
--   **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
--   **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
--   **[!UICONTROL Data partner ID]**: The data partner ID set up in your PubMatic account for this integration.
--   **[!UICONTROL Default country code]**: The default country code that should be applied to all identities if none is provided in the profile.
--   **[!UICONTROL Account ID]**: Your PubMatic Connect account ID.
--   **[!UICONTROL Account type]**: The account type of your PubMatic platform account. Talk to your PubMatic account manager if you have any questions on which to choose. The available options are:
-    -   [!UICONTROL PUBLISHER]
-    -   [!UICONTROL DEMAND_PARTNER]
-    -   [!UICONTROL BUYER]
+- **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+- **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+- **[!UICONTROL Data partner ID]**: The data partner ID set up in your PubMatic account for this integration.
+- **[!UICONTROL Default country code]**: The default country code that should be applied to all identities if none is provided in the profile.
+- **[!UICONTROL Account ID]**: Your PubMatic Connect account ID.
+- **[!UICONTROL Account type]**: The account type of your PubMatic platform account. Talk to your PubMatic account manager if you have any questions on which to choose. The available options are:
+    - [!UICONTROL PUBLISHER]
+    - [!UICONTROL DEMAND_PARTNER]
+    - [!UICONTROL BUYER]
 
 ### Enable alerts {#enable-alerts}
 
@@ -101,11 +101,11 @@ When you are finished providing details for your destination connection, select 
 
 ## Activate segments to this destination {#activate}
 
-> [!IMPORTANT]
+>[!IMPORTANT]
 >
-> -   To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+> - To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >
-> *   To export _identities_, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
+> - To export _identities_, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](../../assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
@@ -113,18 +113,18 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 Selecting source fields:
 
--   Select an identifier (usually namespaces like IDFA or a custom ID namespace).
+- Select an identifier (usually namespaces like IDFA or a custom ID namespace).
 
 Selecting target fields:
 
--   Talk to your PubMatic Account Manager to get the information on which UID type will be correct during this step.
--   Select the PubMatic UID type number that matches the identifier you selected in the first step.
+- Talk to your PubMatic Account Manager to get the information on which UID type will be correct during this step.
+- Select the PubMatic UID type number that matches the identifier you selected in the first step.
 
-![Map attributes and identities](/help/destinations/assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
+![Map attributes and identities](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
 
 ## Exported data / Validate data export {#exported-data}
 
-The PubMatic UI will allow you to check if the data has been pushed correctly and that the segments are available. It can take up to 24 hours after data has been pushed for the PubMatic UI to be updated.
+The PubMatic UI allows you to check if the data has been pushed correctly and that the segments are available. It can take up to 24 hours after data has been pushed for the PubMatic UI to be updated.
 
 ## Data usage and governance {#data-usage-governance}
 
