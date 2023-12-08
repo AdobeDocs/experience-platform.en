@@ -4,7 +4,7 @@ description: The schema-aligned object sent to Adobe.
 ---
 # `xdm`
 
-The `xdm` object contains the data payload send to Adobe. Fields set within this object map directly to elements defined in the dataset's schema.
+The `xdm` object contains the data payload sent to Adobe. Fields set within this object map directly to elements defined in the dataset's schema.
 
 Adobe Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and, therefore, gain value from data.
 
