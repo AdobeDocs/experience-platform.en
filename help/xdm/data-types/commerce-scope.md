@@ -6,7 +6,7 @@ description: This document provides an overview of the Commerce Scope Experience
 
 [!UICONTROL Commerce Scope] is a standard Experience Data Model (XDM) data type that defines identifiers for where an event occurred within a commerce ecosystem. It distinguishes environments, websites, stores, and store views.
 
-![A diagram of the  Commerce Scope data type.]()
+![A diagram of the  Commerce Scope data type.](../images/data-types/commerce-scope.png)
 
 | Display name                    | Property            | Data type | Description                                           |
 |---------------------------------|-------------------|-----------|-------------------------------------------------------|

@@ -6,7 +6,7 @@ description: This document provides an overview of the Return Item Experience Da
 
 [!UICONTROL Return Item] is a standard Experience Data Model (XDM) data type captures essential details related to the return process for a purchased item.
 
-![A diagram of the  Return Item data type.]()
+![A diagram of the  Return Item data type.](../images/data-types/return-item.png)
 
 | Display name                | Property                     | Data type | Description                                            |
 |-----------------------------|------------------------------|-----------|--------------------------------------------------------|

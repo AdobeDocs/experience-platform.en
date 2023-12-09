@@ -6,7 +6,7 @@ description: This document provides an overview of the Return Experience Data Mo
 
 [!UICONTROL Return] is a standard Experience Data Model (XDM) data type that captures the essential information related to a Return Merchandise Authorization (RMA).
 
-![A diagram of the  Return data type.]()
+![A diagram of the  Return data type.](../images/data-types/return.png)
 
 Certainly, here's the information in a table format:
 

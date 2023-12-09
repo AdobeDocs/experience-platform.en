@@ -6,7 +6,7 @@ description: This document provides an overview of the Refund Item Experience Da
 
 [!UICONTROL Refund Item] is a standard Experience Data Model (XDM) data type that describes captures information related to a refund associated with an order.
 
-![A diagram of the  Refund Item data type.]()
+![A diagram of the  Refund Item data type.](../images/data-types/refund-item.png)
 
 | Display name       | Property              | Data type | Description                                                                                       |
 |--------------------|-----------------------|-----------|---------------------------------------------------------------------------------------------------|
