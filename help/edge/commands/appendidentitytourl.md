@@ -4,7 +4,7 @@ description: Deliver personalized experiences more accurately between apps, web,
 ---
 # `appendIdentityToUrl`
 
-The `appendIdentityToUrl` command allows you to add a user identifier to a the URL as a query string. This action allows you to carry a visitor's identity between domains, preventing duplicate visitor counts for datasets that include both domains or channels. It is available on the Web SDK v2.11.0 or later.
+The `appendIdentityToUrl` command allows you to add a user identifier to a the URL as a query string. This action allows you to carry a visitor's identity between domains, preventing duplicate visitor counts for datasets that include both domains or channels. It is available on Web SDK versions 2.11.0 or later.
 
 The query string generated and appended to the URL is `adobe_mc`. If the Web SDK cannot find an ECID, it calls the `/acquire` endpoint to generate one.
 
@@ -14,7 +14,37 @@ The query string generated and appended to the URL is `adobe_mc`. If the Web SDK
 
 ## Append identity to URL using the Web SDK extension
 
+Appending an identity to a URL is performed as an action within a rule in the Adobe Experience Platform Data Collection tags interface.
 
+1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Select the desired tag property.
+1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.
+1. Under [!UICONTROL Actions], select an existing action or create an action.
+1. Set the [!UICONTROL Extension] dropdown field to **[!UICONTROL Adobe Experience Platform Web SDK]**, and set the [!UICONTROL Action Type] to **[!UICONTROL Redirect with identity]**.
+1. Click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
+
+This command is typically used with a specific rule that listens for clicks and checks desired domains.
+
+* **Event**: Triggers any time an anchor tag with an `href` property is clicked.
+  * **[!UICONTROL Extension]**: Core
+  * **[!UICONTROL Event type]**: Click
+  * **[!UICONTROL When the user clicks on]**: Specific elements
+  * **[!UICONTROL Elements matching the CSS selector]**: `a[href]`
+
+* **Condition**: Triggers only on desired domains.
+  * **[!UICONTROL Logic type]**: Regular
+  * **[!UICONTROL Extension]**: Core
+  * **[!UICONTROL Condition Type]**: Value Comparison
+  * **[!UICONTROL Left Operand]**: `%this.hostname%`
+  * **[!UICONTROL Operator]**: Matches Regex
+  * **[!UICONTROL Right Operand]**: A regular expression that matches the desired domains. For example, `adobe.com$|behance.com$`
+
+* **Action**: Append the identity to the URL
+  * **[!UICONTROL Extension]**: Adobe Experience Platform Web SDK
+  * **[!UICONTROL Action Type]**: Redirect with identity
+
+<!-- Add images and accordions -->
 
 ## Append identity to URL using the Web SDK JavaScript library
 
@@ -32,7 +62,7 @@ document.addEventListener("click", event => {
   const anchor = event.target.closest("a");
   if (!anchor || !anchor.href) return;
 
-  // Check if the link points to the right domain
+  // Check if the link points to the desired domain
   const url = new URL(anchor.href);
   if (!url.hostname.endsWith("adobe.com") && !url.hostname.endsWith("behance.com")) return;
 
