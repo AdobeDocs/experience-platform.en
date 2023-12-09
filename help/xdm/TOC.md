@@ -52,6 +52,7 @@ feature: Schemas
     * [Healthcare Member Details](./field-groups/profile/healthcare-member-details.md)
     * [Loyalty Details](./field-groups/profile/loyalty-details.md)
     * [Personal Contact Details](./field-groups/profile/personal-contact-details.md)
+    * [Profile Partner Enrichment (Sample)](./field-groups/profile/profile-partner-enrichment.md)
     * [Segment Membership Details](./field-groups/profile/segmentation.md)
     * [Telecom Subscription](./field-groups/profile/telecom-subscription.md)
     * [Work Contact Details](./field-groups/profile/work-contact-details.md)
