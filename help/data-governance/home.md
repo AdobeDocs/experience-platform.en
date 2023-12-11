@@ -7,8 +7,6 @@ exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 ---
 # Data Governance overview
 
-<!-- Checked for please and image accuracy and user centricity-->
-
 One of the core capabilities of Adobe Experience Platform is to bring data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. This data may be subject to usage restrictions defined by your organization or by legal regulations. It is therefore important to ensure that your data operations within [!DNL Platform] are compliant with data usage policies. 
 
 Manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use with Adobe Experience Platform Data Governance. Data governance plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
@@ -52,9 +50,7 @@ There are three key elements to the Data Governance framework: Labels, Policies,
 
 ## Data usage labels {#data-usage-labels}
 
-<!-- Is that line still accurate? can you label data at the dataset level? ... -->
-
-Data Governance enables data stewards to apply usage labels at the schema field level and dataset level to categorize data according to the type of policies that apply.
+Data Governance enables data stewards to apply usage labels at the schema field level to categorize data according to the type of policies that apply.
 
 The Data Governance framework includes predefined data usage labels that can be used to categorize data in three ways:
 
@@ -76,7 +72,8 @@ See the overview on [data usage labels](./labels/overview.md) for more informati
 
 In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform.
 
-An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place declaring that Personally Identifiable Information (PII) cannot be exported, and an "I" label (identity data) has been applied to the field level or dataset. Policy Service then prevents any action that would export this dataset to a third-party destination. Should one of these action attempts occur, Policy Service sends a message telling you that a data usage policy has been violated.
+An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place declaring that Personally Identifiable Information (PII) cannot be exported, and an "I" label (identity data) has been applied to the field level from its schema. Policy Service then prevents any action that would export this dataset to a third-party destination. Should one of these action attempts occur, Policy Service sends a message telling you that a data usage policy has been violated.
+
 
 There are two types of policies available:
 
@@ -124,6 +121,6 @@ The following video is intended to support your understanding of the Data Govern
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-The following video provides guidance on how to apply data usage labels to your schemas and datasets in Experience Platform.
+The following video provides guidance on how to apply data usage labels to your schemas or the entirity of a dataset in Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
