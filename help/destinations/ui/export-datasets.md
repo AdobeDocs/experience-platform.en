@@ -65,7 +65,7 @@ Watch the video below for an end-to-end explanation of the workflow described on
 
 Currently, you can export datasets to the cloud storage destinations highlighted in the screenshot and listed below. 
 
-![Destinations which support dataset exports](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+![Destinations catalog page showing which destinations support dataset exports.](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -130,11 +130,11 @@ Use the check boxes to the left of the dataset names to select the datasets that
 
 In the **[!UICONTROL Scheduling]** step, you can set a start date and an export cadence for your dataset exports.
 
-The **[!UICONTROL Export incremental files]** option is automatically selected. This triggers an export where the first file is a full snapshot of the dataset and subsequent files are incremental additions to the dataset since the previous export.
+The **[!UICONTROL Export incremental files]** option is automatically selected. This triggers an export of one or multiple files representing a full snapshot of the dataset. Subsequent files are incremental additions to the dataset since the previous export.
 
 >[!IMPORTANT]
 >
->The first exported incremental file includes all existing data in the dataset, functioning as a backfill.
+>The first incremental file export includes all existing data in the dataset, functioning as a backfill. The export can contain one or multiple files.
 
 ![Dataset export workflow showing the scheduling step.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
@@ -161,7 +161,7 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 ## Verify successful dataset export {#verify}
 
-When exporting datasets, Experience Platform creates a `.json` or `.parquet` file in the storage location that you provided. Expect a new file to be deposited in your storage location according to the export schedule you provided. 
+When exporting datasets, Experience Platform creates one or multiple `.json` or `.parquet` files in the storage location that you provided. Expect new files to be deposited in your storage location according to the export schedule you provided.
 
 Experience Platform creates a folder structure in the storage location you specified, where it deposits the exported dataset files. A new folder is created for each export time, following the pattern below:
 
@@ -215,7 +215,7 @@ Refer to the product description documents to understand how much data you are e
 
 Note that the data export entitlements for different applications are not additive. For example, this means that if you purchase Real-Time CDP Ultimate and Adobe Journey Optimizer Ultimate, the profile export entitlement will be the larger of the two entitlements, as per the product descriptions. Your volume entitlements are calculated by taking your total number of licensed profiles and multiplying by 500 KB for Real-Time CDP Prime or 700 KB for Real-Time CDP Ultimate to determine how much volume of data you are entitled to.
 
-On the other hand, if you purchase add-ons such as Data Distiller, the data export limit that you are entitled to represents the sum of the product tier and the add-on. 
+On the other hand, if you purchased add-ons such as Data Distiller, the data export limit that you are entitled to represents the sum of the product tier and the add-on. 
 
 You can view and track your profile exports against your contractual limits in the licensing dashboard. 
 

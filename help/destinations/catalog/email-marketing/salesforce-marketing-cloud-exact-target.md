@@ -1,5 +1,4 @@
 ---
-keywords: email;Email;e-mail;email destinations;salesforce;api salesforce marketing cloud destination
 title: (API) Salesforce Marketing Cloud connection
 description: The Salesforce Marketing Cloud (formerly known as ExactTarget) destination allows you to export your account data and activate it within Salesforce Marketing Cloud for your business needs.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
@@ -16,7 +15,7 @@ exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
 
 Compared to [!DNL Salesforce Marketing Cloud Account Engagement] which is more oriented towards **B2B** marketing, the [!DNL (API) Salesforce Marketing Cloud] destination is ideal for **B2C** use cases with shorter transactional decision-making cycles. You can consolidate larger datasets representing your target audience's behavior to adjust and improve marketing campaigns by prioritizing and segmenting contacts, especially from datasets outside [!DNL Salesforce]. *Note, Experience Platform also has a connection for the [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [!DNL Salesforce Marketing Cloud] [update contacts](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, which allows you to **add contacts and update contact data** for your business needs after activating them within a new [!DNL Salesforce Marketing Cloud] segment.
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) uses the [!DNL Salesforce Marketing Cloud] [update contacts](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API, which allows you to **add contacts and update contact data** for your business needs after activating them within a new [!DNL Salesforce Marketing Cloud] segment.
 
 [!DNL Salesforce Marketing Cloud] uses OAuth 2 with Client Credentials as the authentication mechanism to communicate with the [!DNL Salesforce Marketing Cloud] API. Instructions to authenticate to your [!DNL Salesforce Marketing Cloud] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
@@ -88,7 +87,7 @@ As this destination requires access to the `[!DNL data extension]`, you need to 
 
 ![Salesforce Marketing Cloud UI showing the email data extension with allowed permissions.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
 
-To restrict the level of access, you can also override individual accesses by using granular privileges.
+To restrict the level of access, you can also override individual access by using granular privileges.
 ![Salesforce Marketing Cloud UI showing the email data extension with granular permissions.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
 
 Refer to the [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&id=sf.mc_overview_marketing_cloud_roles.htm&type=5) and [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&id=sf.mc_overview_roles.htm&type=5) pages for detailed guidance.
@@ -128,7 +127,7 @@ Note down the items below before you authenticate to the [!DNL (API) Salesforce 
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|

@@ -46,8 +46,7 @@ All data collected by the edge network can be accessed via [processing rules](ht
 
 For example, in the following rule, Adobe Analytics is set to populate **Internal Search terms (eVar2)** with the data associated with **a.x._atag.search.term(Context Data)**.
 
-![](assets/examplerule.png)
-
+![Analytics UI image showing a rule example.](assets/examplerule.png)
 
 ## XDM schema
 

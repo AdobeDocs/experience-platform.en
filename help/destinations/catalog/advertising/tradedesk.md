@@ -20,9 +20,9 @@ As a marketer, I want to be able to use audiences built off of [!DNL Trade Desk 
 
 ## Supported identities {#supported-identities}
 
-[!DNL The Trade Desk] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] supports the activation of audiences based on the identities shown in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
-|Target Identity|Description|
+|Identity|Description|
 |---|---|
 |GAID|[!DNL Google Advertising ID]|
 |IDFA|[!DNL Apple ID for Advertisers]|
@@ -32,7 +32,7 @@ As a marketer, I want to be able to use audiences built off of [!DNL Trade Desk 
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|

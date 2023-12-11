@@ -87,7 +87,7 @@ This section outlines two examples showing how to invoke the `sendEvent()` funct
 
 The marketing team want to run A/B tests on the entire home page.
 
-![](assets/web-spa-home.png)
+![Single-page application sample page.](assets/web-spa-home.png)
 
 To run A/B tests on the whole home site, `sendEvent()` must be invoked with the XDM `viewName` set to `home`:
 
@@ -133,7 +133,7 @@ history.listen(onViewChange);
 
 The marketing team want to personalize the second row of products by changing the price label color to red after a user clicks to see all Men products.
 
-![](assets/web-spa-men-products.png)
+![Single-page application sample page with personalized products.](assets/web-spa-men-products.png)
 
 ```js
 function onViewChange(viewName) {

@@ -17,7 +17,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 
 >[!IMPORTANT]
 >
->Profile attributes may contain sensitive data. To protect this data, the **[!UICONTROL Custom Personalization]** destination requires you to use the [Edge Network Server API](/help/server-api/overview.md) when configuring the destination for attribute-based personalization. All the Server API calls must be made in an [authenticated context](../../../server-api/authentication.md).
+>Profile attributes may contain sensitive data. To protect this data, the  you must use the [Edge Network Server API](/help/server-api/overview.md) when configuring the **[!UICONTROL Custom Personalization]** destination for attribute-based personalization. All the Server API calls must be made in an [authenticated context](../../../server-api/authentication.md).
 >
 ><br>If you are already using Web SDK or Mobile SDK for your integration, you can retrieve attributes via the Server API by adding a server-side integration.
 >
@@ -25,7 +25,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 
 ## Overview {#overview}
 
-This destination provides a way to retrieve audience information from Adobe Experience Platform to external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites.
+Set up this destination to allow external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites to retrieve audience information from Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
@@ -37,7 +37,7 @@ This integration is powered by the [Adobe Experience Platform Web SDK](../../../
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
