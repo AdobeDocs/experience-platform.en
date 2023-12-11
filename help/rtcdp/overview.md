@@ -24,11 +24,7 @@ With Real-Time Customer Data Platform, you can:
 * Generate actionable insights and scale audiences with AI and machine learning powered by Adobe Sensei and built for marketers.
 * Deliver personalized experiences in realtime across all channels and destinations.
 
-## Significant links
-
-
-
-## Real-Time Customer Data Platform editions
+## Real-Time Customer Data Platform editions (B2C, B2B, B2P) {#rtcdp-editions}
 
 |Real-Time CDP B2C | Real-Time CDP B2B | Real-Time CDP B2P|
 |---------|----------|---------|

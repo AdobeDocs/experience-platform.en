@@ -1,8 +1,8 @@
 ---
 title: Real-Time CDP product documentation
 description: Learn how to use Adobe Real-Time CDP.
-solution: Real-Time CDP
-product: Real-Time CDP
+solution: Real-Time Customer Data Platform
+product: Real-Time Customer Data Platform
 ---
 # Adobe [!DNL Real-Time CDP] Documentation {#rtcdp-documentation}
 
