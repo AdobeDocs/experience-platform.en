@@ -32,7 +32,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Salesforce Marketing Clou
 
 | Credential | Description |
 | ---------- | ----------- |
-| `host` | The host server of your application. This is often your subdomain. **Note:** When entering your `host` value, you only need to specify the subdomain and not the entire URL. For example, if your host URL is `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, then you only need to enter `acme-ab12c3d4e5fg6hijk7lmnop8qrst` as your host value. |
+| `host` | The host server of your application. This is often your subdomain. **Note:** When entering your `host` value, you need to specify the `{subdomain}.rest.marketingcloudapis.com`. For example, if your host URL is `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, then you only need to enter `acme-ab12c3d4e5fg6hijk7lmnop8qrstauth.marketingcloudapis.com/` as your host value. |
 | `clientId` | The client ID associated with your [!DNL Salesforce Marketing Cloud] application. |
 | `clientSecret` | The client secret associated with your [!DNL Salesforce Marketing Cloud] application. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce Marketing Cloud] is: `ea1c2a08-b722-11eb-8529-0242ac130003`.  |
