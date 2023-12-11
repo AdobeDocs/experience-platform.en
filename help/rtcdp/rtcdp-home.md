@@ -8,7 +8,7 @@ product: Real-Time CDP
 
 ## What's new?
 
-Get a glimpse of the newest enhancements in Real-Time CDP product and documentation! For a comprehensive list of features, improvements, and fixes, check out the detailed [Release Notes](/help/release-notes/latest/latest.md). Stay up-to-date with the latest changes in our documentation by visiting the [documentation updates page](using/rn/documentation-updates.md).
+Get a glimpse of the newest enhancements in Real-Time CDP product and documentation! For a comprehensive list of features, improvements, and fixes, check out the detailed [Release Notes](/help/release-notes/latest/latest.md). Stay up-to-date with the latest changes in our documentation by visiting the [documentation updates section of the monthly release notes](/help/release-notes/latest/latest.md#documentation-updates).
 
 >[!BEGINTABS]
 
@@ -43,28 +43,28 @@ The dataset export functionality is now generally available. See [which datasets
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
-    <a href="using/start/quick-start.md"><img src="using/assets/do-not-localize/start-quick.png"></a>
-    <div><strong>Quick start guides</strong><br/>Learn how to achieve your goals faster in Journey Optimizer with your personalized approach depending on your role.</div>
+    <a href="/help/rtcdp/get-started.md"><img src="assets/do-not-localize/start-quick.png"></a>
+    <div><strong>Get started</strong><br/>Understand how to ingest, manage, and activate data at scale with Real-Time CDP</div>
     </td>
     <td>
-    <a href="using/start/user-interface.md"><img src="using/assets/do-not-localize/start-interface.jpeg"></a>
-    <div><strong>User interface</strong><br/>Learn how to navigate and optimize your experience in Journey Optimizer.</div>
+    <a href="/help/landing/ui-guide.md"><img src="assets/do-not-localize/start-interface.jpeg"></a>
+    <div><strong>User interface</strong><br/>Understand the elements of the Real-Time CDP UI homepage, how to navigate and optimize your in-product experience.</div>
     </td>
     <td>
-    <a href="using/building-journeys/journey-gs.md"><img src="using/assets/do-not-localize/start-journey.jpeg"></a>
+    <a href="/help/landing/end-to-end-tutorial.md"><img src="assets/do-not-localize/start-journey.jpeg"></a>
     <div><strong>Explore an end-to-end workflow</strong><br/>Understand the flow of data from ingestion, through enriching profiles and creating audiences, to activation.
     </div>
     </td>
     <td>
-    <a href="using/campaigns/create-campaign.md"><img src="using/assets/do-not-localize/start-campaign.jpeg"></a>
+    <a href="/help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/start-campaign.jpeg"></a>
     <div><strong>Which Real-Time CDP edition is right for me</strong><br/>Understand the differences between the different B2B, B2C, and B2P offerings of Real-Time CDP and decide which one to buy.</div>
     </td>
   </tr>
   <tr style="border: 0;">
-    <td align="center"><a href="using/start/quick-start.md"><img src="using/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="using/start/user-interface.md"><img src="using/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="using/building-journeys/journey-gs.md"><img src="using/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="using/campaigns/create-campaign.md"><img src="using/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="/help/rtcdp/overview.md"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="/help/rtcdp/home-page-dashboards.md"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="/help/landing/end-to-end-tutorial.md"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="//help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -73,29 +73,29 @@ The dataset export functionality is now generally available. See [which datasets
 <table style="table-layout:auto">
   <tr style="border: 0;">
     <td>
-      <img src="using/assets/do-not-localize/icon-quick-start.svg" width="35px"><br/>
-      <strong>Customer experience</strong><br/><a href="using/building-journeys/journey.md">Journeys</a> - <a href="using/campaigns/get-started-with-campaigns.md">Campaigns</a> - <a href="using/landing-pages/get-started-lp.md">Landing pages</a> - <a href="using/reports/live-report.md">Reporting</a> - <a href="using/offers/get-started/starting-offer-decisioning.md">Decision management</a>
+      <img src="assets/do-not-localize/icon-data.svg" width="35px"><br/>
+      <strong>Data ingestion and management</strong><br/><a href="/help/ingestion/batch-ingestion/overview.md">Batch ingestion</a> - <a href="/help/ingestion/streaming-ingestion/overview.md">Streaming ingestion</a> - <a href="/help/sources/home.md">Sources</a> - <a href="/help/xdm/schema/composition.md">Schemas</a> - <a href="/help/catalog/datasets/overview.md">Datasets</a> - <a href="/help/query-service/home.md">Queries</a>
     </td>
     <td>
-      <img src="using/assets/do-not-localize/icon-configure.svg" width="35px"><br/>
-      <strong>Configuration<br/>administration</strong><br/><a href="using/configuration/channel-surfaces.md">Channel surfaces</a> - <a href="using/configuration/about-data-sources-events-actions.md">Configure journeys</a>  - <a href="using/administration/permissions-overview.md">Access control</a> - <a href="using/administration/sandboxes.md">Sandboxes management</a>
+      <img src="assets/do-not-localize/icon_profile-audience.svg" width="35px"><br/>
+      <strong>Profiles & audiences</strong><br/><a href="/help/segmentation/home.md">Audiences</a> - <a href="/help/profile/home.md">Profiles</a> - <a href="/help/identity-service/home.md">Identities</a> - <a href="/help/dashboards/guides/license-usage.md">License usage</a> - <a href="using/privacy/get-started-privacy.md">Privacy management</a>
     </td>
-        <td>
-      <img src="using/assets/do-not-localize/icon-content.svg" width="35px"><br/>
-      <strong>Data activation</strong><br/><a href="using/content-management/assets.md">Assets/images</a> - <a href="using/personalization/personalize.md">Personalization</a> - <a href="using/content-management/content-templates.md">Reusable</a> & <a href="using/personalization/dynamic-content.md">dynamic</a> content - <a href="using/content-management/preview-test.md">Test & preview content</a>
+    <td>
+      <img src="assets/do-not-localize/icon-content.svg" width="35px"><br/>
+      <strong>Data activation</strong><br/><a href="/help/destinations/catalog/overview.md">Destinations catalog</a> - <a href="/help/destinations/destination-types.md">Destination types</a> - <a href="/help/destinations/ui/activation-overview.md">Activate audiences</a>  - <a href="/help/destinations/ui/export-datasets.md">Export datasets</a>
     </td>
   </tr>
   <tr style="border: 0;">
     <td>
-      <img src="using/assets/do-not-localize/icon_profile-audience.svg" width="35px"><br/>
-      <strong>Profiles & audiences</strong><br/><a href="using/audience/about-audiences.md">Audiences</a> - <a href="using/audience/get-started-profiles.md">Profiles</a> - <a href="using/audience/get-started-identity.md">Identities</a> - <a href="using/audience/license-usage.md">License usage</a> - <a href="using/privacy/get-started-privacy.md">Privacy management</a>
+      <img src="assets/do-not-localize/icon-configure.svg" width="35px"><br/>
+      <strong>Configuration and administration</strong><br/><a href="/help/access-control/home.md">Access control</a> - <a href="/help/access-control/abac/overview.md">Attribute-based access control</a> - <a href="/help/access-control/abac/end-to-end-guide.md">End-to-end guide</a> - <a href="/help/sandboxes/home.md">Sandboxes management</a> 
     </td>
     <td>
-      <img src="using/assets/do-not-localize/icon-data.svg" width="35px"><br/>
-      <strong>Data management</strong><br/><a href="using/data/get-started-schemas.md">Schemas</a> - <a href="using/data/get-started-datasets.md">Datasets</a> - <a href="using/data/get-started-queries.md">Queries</a>
+      <img src="assets/do-not-localize/icon-learn.svg" width="35px"><br/>
+      <strong>Guardrails and best practices</strong><br/><a href="/help/rtcdp/guardrails/overview.md">Real-Time CDP Guardrails</a> - <a href="/help/landing/license-usage-and-guardrails/data-management-best-practices.md">Data Management License Entitlement Best Practices</a> - <a href="/help/xdm/schema/best-practices.md">Data Modeling Best Practices</a> 
     </td>
-        <td>
-      <img src="using/assets/do-not-localize/icon-campaign.svg" width="35px"><br/>
+    <td>
+      <img src="assets/do-not-localize/icon-quick-start.svg" width="35px"><br/>
       <strong>Use Cases</strong><br/><a href="/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md">Intelligent re-engagement</a> - <a href="/help/rtcdp/partner-data/prospecting.md">New customer acquisition</a> - <a href="/help/rtcdp/partner-data/onsite-personalization.md">Onsite personalization to unknown users</a> - <a href="help/rtcdp/partner-data/supplement-first-party-profiles.md">Profile enrichment</a> - <a href="/help/rtcdp/partner-data/offsite-retargeting.md">Offsite retargeting</a>
     </td>
   </tr>
@@ -112,5 +112,5 @@ The dataset export functionality is now generally available. See [which datasets
 </td>
 </tr></table>
 
-<table style="table-layout:auto"><tr style="border: 0;"><td><img src="using/assets/do-not-localize/newsletter.png"></td><td>
+<table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
 <b>Stay informed and elevate your Adobe Journey Optimizer experience!</b><br/>Sign up for our quarterly newsletter. Gain exclusive access to the latest product updates, captivating stories, real-world use cases, valuable tips, and more – all delivered directly to your inbox every quarter. <a href="https://www.adobe.com/subscription/Adobe_Journey_Optimizer_NL.html">Sign up today!</a></td></tr></table>
