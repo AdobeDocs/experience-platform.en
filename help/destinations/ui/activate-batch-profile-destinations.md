@@ -1,5 +1,4 @@
 ---
-keywords: activate profile destinations;activate destinations;activate data; activate email marketing destinations; activate cloud storage destinations
 title: Activate audiences to batch profile export destinations
 type: Tutorial
 description: Learn how to activate the audiences you have in Adobe Experience Platform by sending them to batch profile-based destinations.
@@ -18,7 +17,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 
 ## Overview {#overview}
 
-This article explains the workflow required to activate audiences in Adobe Experience Platform batch profile-based destinations, such as cloud storage and email marketing destinations.
+This article explains the workflow required to activate audiences in Adobe Experience Platform to batch profile file-based destinations, such as cloud storage and email marketing destinations.
 
 ## Prerequisites {#prerequisites}
 
@@ -40,15 +39,15 @@ Select your desired file format for export when [creating a connection to the fi
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     
-    ![Image highlighting how to get to the destinations catalog tab](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+    ![Image highlighting how to get to the destinations catalog tab.](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
 1. Select **[!UICONTROL Activate audiences]** on the card corresponding to the destination where you want to activate your audiences, as shown in the image below.
 
-    ![Image highlighting the Activate audiences button](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
+    ![Activate audiences control highlighted in the catalo page.](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
 1. Select the destination connection that you want to use to activate your audiences, then select **[!UICONTROL Next]**.
 
-    ![Image highlighting how to select one or multiple destinations to activate audiences to](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+    ![Checkboxes highlighted to select one or multiple destinations to activate audiences to.](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. Move to the next section to [select your audiences](#select-audiences).
 
@@ -62,7 +61,7 @@ You can select from multiple types of audiences, depending on their origin:
 * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/overview.md#import-audience).
 * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
 
-![Image highlighting how to select one or multiple audiences to activate](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
+![Checkboxes shown when selecting one or multiple audiences to activate.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
@@ -75,7 +74,7 @@ You can select from multiple types of audiences, depending on their origin:
 >title="Schedule"
 >abstract="Use the pencil icon to set the file export type (full files or incremental files) and the export frequency."
 
-[!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations in the form of [!DNL CSV] files. In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each audience you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
+[!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations as [different file types](#supported-file-formats-export). In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each audience you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
 
 >[!IMPORTANT]
 >
@@ -83,9 +82,9 @@ You can select from multiple types of audiences, depending on their origin:
 >
 >Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
-Select the **[!UICONTROL Create schedule]** button corresponding to the audience that you want to send to your destination.
+Select the **[!UICONTROL Create schedule]** control corresponding to the audience that you want to send to your destination.
 
-![Image highlighting the Create schedule button](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
+![Create schedule control highlighted in the Scheduling step.](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Export full files {#export-full-files}
 
@@ -107,14 +106,14 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the audience
 
 Select **[!UICONTROL Export full files]** to trigger the export of a file containing a full snapshot of all profile qualifications for the selected audience.
 
-![Image of the UI with the Export full files toggle selected.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![Export full files toggle selected.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
     * **[!UICONTROL Once]**: schedule a one time on-demand full file export.
     * **[!UICONTROL Daily]**: schedule full file exports once a day, every day, at the time you specify.
 
-1. Use the **[!UICONTROL Time]** toggle to select whether the export should happen immediately after audience evaluation or on a scheduled basis, at a specified time. When selecting the **[!UICONTROL Scheduled]** option, you can use the selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
+2. Use the **[!UICONTROL Time]** toggle to select whether the export should happen immediately after audience evaluation or on a scheduled basis, at a specified time. When selecting the **[!UICONTROL Scheduled]** option, you can use the selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
       >[!NOTE]
       >
@@ -129,13 +128,13 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
     ![Image highlighting the Scheduled option in the activation flow for batch destinations and showing the time selector.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place. For daily exports, best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
+3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place. For daily exports, best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
 
       >[!IMPORTANT]
       >
       > When selecting an export interval, the last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10.
 
-1. Select **[!UICONTROL Create]** to save the schedule.
+4. Select **[!UICONTROL Create]** to save the schedule.
 
 ### Export incremental files {#export-incremental-files}
 
@@ -145,22 +144,22 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 >
 >The first exported incremental file includes all profiles that qualify for an audience, functioning as a backfill.
 
-![Image of the UI with the Export incremental files toggle selected.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![Export incremental files toggle selected.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
     * **[!UICONTROL Daily]**: schedule incremental file exports once a day, every day, at the time you specify.
     * **[!UICONTROL Hourly]**: schedule incremental file exports every 3, 6, 8, or 12 hours.
 
-1. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
+2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
-1. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. Best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
+3. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. Best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
 
       >[!IMPORTANT]
       >
       >The last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10.
 
-1. Select **[!UICONTROL Create]** to save the schedule.
+4. Select **[!UICONTROL Create]** to save the schedule.
 
 ### Configure file names {#file-names}
 
@@ -209,7 +208,7 @@ Once you have finished configuring all your audiences, select **[!UICONTROL Next
 
 In this step, you must select the profile attributes that you want to add to the files exported to the target destination. To select profile attributes and identities for export: 
 
-1. In the **[!UICONTROL Mapping]** page, select **[!UICONTROL Add new field]**.
+1. In the **[!UICONTROL Mapping]** page, select **[!UICONTROL Add new mapping]**.
     
     ![Add new field control highlighted in the mapping workflow.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
@@ -428,7 +427,7 @@ Read more about [profile export behavior for file-based destinations](/help/dest
 
 Selecting identity namespaces for export, as shown in the image below, is currently not supported. Selecting any identity namespaces for export will result in an error in the **[!UICONTROL Review]** step.
 
-![Unsupported mapping showing identity exports](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+![Unsupported mapping showing identity exports.](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
 As a temporary workaround if you need to add identity namespaces to your exported files during the beta, you can either:
 * Use the legacy cloud storage destinations for the dataflows where you want to include identity namespaces in the exports
@@ -511,7 +510,7 @@ Select **[!UICONTROL Next]** to move to the [Review](#review) step.
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
-![Selection summary in the review step.](../assets/ui/activate-batch-profile-destinations/review.png)
+![Selection summary displayed in the review step.](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
@@ -526,7 +525,7 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 In the **[!UICONTROL Review]** step, Experience Platform also checks for any data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the audience activation workflow until you have resolved the violation. For information on how to resolve policy violations, read about [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in the data governance documentation section.
  
-![data policy violation](../assets/common/data-policy-violation.png)
+![A data policy violation example shown in the activation workflow.](../assets/common/data-policy-violation.png)
 
 ### Filter audiences {#filter-audiences}
 

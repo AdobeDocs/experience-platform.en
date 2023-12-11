@@ -54,8 +54,28 @@ END
 $$;
 ```
 
+## Anonymous block with third-party clients {#third-party-clients}
+
+Certain third-party clients may require a separate identifier before and after an SQL block to indicate that a part of the script should be handled as a single statement. If you receive an error message when using Query Service with a third-party client, you should refer to the documentation of the third-party client regarding the use of an SQL block. 
+
+For example, **DbVisualizer** requires that the delimiter must be the only text on the line. In DbVisualizer, the default value for the Begin Identifier is `--/` and for the End Identifier it is `/`. An example of an anonymous block in DbVisualizer is seen below:
+
+```SQL
+--/
+$$ BEGIN
+    CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
+    ....
+    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
+    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+END
+$$;
+/
+```
+
+For DbVisualizer in particular, there is also an option in the UI to "[!DNL Execute the complete buffer as one SQL statement]". See the [DbVisualizer documentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) for more information.
+
 ## Next steps
 
-By reading this document, you now have a clear understanding of anonymous blocks and how they are structured. [For more information on query execution](../best-practices/writing-queries.md), please read the guide on query execution in Query Service.
+By reading this document, you now have a clear understanding of anonymous blocks and how they are structured. Please read the [query execution guide](../best-practices/writing-queries.md) for more information on writing queries.
 
-You should also read about [how anonymous block is used with the incremental load design pattern](./incremental-load.md) to increase query efficiency.
+You should also read about [how anonymous blocks are used with the incremental load design pattern](./incremental-load.md) to increase query efficiency.

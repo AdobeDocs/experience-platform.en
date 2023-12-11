@@ -17,7 +17,7 @@ Media Edge APIs are built on the Adobe Experience Platform to provide media even
 
 ## Optimizing media tracking data flows
 
-Both [Media Collection APIs](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html&media-tracking-data-flows) and Media Edge APIs provide media tracking data as RESTful services. But using the Media Edge service has the following advantages:
+Both [Media Collection APIs](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html#media-tracking-data-flows) and Media Edge APIs provide media tracking data as RESTful services. But using the Media Edge service has the following advantages:
 
 * It is the easiest way to incorporate XDM schemas into your data flow. 
 

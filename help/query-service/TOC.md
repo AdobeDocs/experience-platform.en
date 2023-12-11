@@ -42,10 +42,20 @@ feature: Queries
     - [List the page views of a user](use-cases/list-visitor-sessions.md)
     - [List visitors by their page views](use-cases/visitors-by-number-of-page-views.md)
     - [Propensity score](use-cases/propensity-score.md)
-    - [SQLAlchemy](use-cases/sqlalchemy.md)
+    - [Lambda function example: Retrieve similar records](use-cases/retrieve-similar-records.md)
     - [Return and use merchandising variables from analytics data](use-cases/merchandising-variables.md)
+    - [SQLAlchemy](use-cases/sqlalchemy.md)
     - [View the roll-up report for a visitor](use-cases/roll-up-report-of-a-visitor.md)
     - [Web and mobile analytics insights](use-cases/analytics-insights.md)
+- Key concepts {#key-concepts}
+    - [Working with nested data structures](key-concepts/nested-data-structures.md)
+    - [Flatten nested data structures](key-concepts/flatten-nested-data.md)
+    - [Anonymous block](key-concepts/anonymous-block.md)
+    - [Inline template](key-concepts/inline-templates.md)
+    - [Incremental loading](key-concepts/incremental-load.md)
+    - [Data deduplication](key-concepts/deduplication.md)
+    - [Dataset samples](key-concepts/dataset-samples.md)
+    - [Dataset statistics computation](key-concepts/dataset-statistics.md)
 - Connect clients to Query Service {#clients}
     - [Client connections overview](clients/overview.md)
     - [SSL modes](./clients/ssl-modes.md)
@@ -85,15 +95,6 @@ feature: Queries
 - Best practices {#best-practices}
     - [Query execution](best-practices/writing-queries.md)
     - [Data asset organization](./best-practices/organize-data-assets.md)
-- Essential concepts {#essential-concepts}
-    - [Working with nested data structures](essential-concepts/nested-data-structures.md)
-    - [Flatten nested data structures](essential-concepts/flatten-nested-data.md)
-    - [Anonymous block](essential-concepts/anonymous-block.md)
-    - [Inline template](essential-concepts/inline-templates.md)
-    - [Incremental loading](essential-concepts/incremental-load.md)
-    - [Data deduplication](essential-concepts/deduplication.md)
-    - [Dataset samples](essential-concepts/dataset-samples.md)
-    - [Dataset statistics computation](essential-concepts/dataset-statistics.md)
 - SQL reference {#sql}
     - [SQL overview](sql/overview.md)
     - [SQL syntax](sql/syntax.md)

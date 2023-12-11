@@ -14,6 +14,8 @@ Re-engage customers who have abandoned a conversion in an intelligent and respon
 
 Employ real-time considerations, take into account all consumer qualities and behaviors, and offer fast re-qualification based on both online and offline events.
 
+Below is a high-level architecture view of the various components of Real-Time CDP and Journey Optimizer. This diagram shows how data flows through the two Experience Platform apps from data collection up to the point where it is activated through journeys or campaigns to destinations, in order to achieve the use case described on this page.
+
 ![Intelligent re-engagement high level visual overview.](../intelligent-re-engagement/images/step-by-step.png) 
 
 ## Use case overview {#overview}
@@ -53,7 +55,7 @@ The abandoned product browse scenario targets abandoned product browsing on both
 
 1. You create schemas and datasets, then enable for [!UICONTROL Profile].
 2. You ingest data into Experience Platform via Web SDK, Mobile SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
-3. You ingest additional profile-enabled data, which can be linked to the authenticated web and/or mobile app visitor via identity graphs.
+3. You ingest additional profile-enabled data, which can be linked to the authenticated web and mobile app visitor via identity graphs.
 4. You build focused audiences from the list of profiles to check if a **customer** has made an engagement in the last three days.
 5. You create a abandoned product browse journey in [!DNL Adobe Journey Optimizer].
 6. If needed, work with the **data partner** for the activation of audiences to desired paid-media destinations.
@@ -65,7 +67,7 @@ The abandoned cart scenario applies when products have been placed in the cart b
 
 1. You create schemas and datasets, the enable for [!UICONTROL Profile].
 2. You ingest data into Experience Platform via Web SDK, Mobile SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
-3. You ingest additional profile-enabled data, which can be linked to the authenticated web and/or mobile app visitor via identity graphs.
+3. You ingest additional profile-enabled data, which can be linked to the authenticated web and mobile app visitor via identity graphs.
 4. You build focused audiences from the list of profiles to check if a **customer** has placed an item in their cart but has not completed the purchase. The **[!UICONTROL Add to cart]** event kicks off a timer that waits for 30 minutes, then checks for purchase. If no purchase has been made, then the **customer** is added to the **[!UICONTROL Abandon Cart]** audiences.
 5. You create an abandoned cart journey in [!DNL Adobe Journey Optimizer].
 6. If needed, work with the **data partner** for the activation of audiences to desired paid-media destinations.
@@ -77,7 +79,7 @@ The order confirmation scenario focuses on product purchases made through the we
 
 1. You create schemas and datasets, then enable for [!UICONTROL Profile].
 2. You ingest data into Experience Platform via Web SDK, Mobile SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
-3. You ingest additional profile-enabled data, which can be linked to the authenticated web and/or mobile app visitor via identity graphs.
+3. You ingest additional profile-enabled data, which can be linked to the authenticated web and mobile app visitor via identity graphs.
 4. You create a confirmation journey in [!DNL Adobe Journey Optimizer].
 5. [!DNL Adobe Journey Optimizer] sends out an order confirmation message using the preferred channel.
 
@@ -103,10 +105,10 @@ The customer attributes schema is represented by an [[!UICONTROL XDM Individual 
 
 [Personal Contact Details](/help/xdm/field-groups/profile/personal-contact-details.md) is a standard schema field group for the XDM Individual Profile class which describes the contact information for an individual person.
 
-| Fields | Requirement | Description |
-| --- | --- | --- |
-| `mobilePhone.number` | Required | The person's mobile phone number, which will be used for SMS. |
-| `personalEmail.address` | Required | The person's email address. |
+| Fields | Description |
+| --- | --- |
+| `mobilePhone.number` |  The person's mobile phone number, which will be used for SMS. |
+| `personalEmail.address` | The person's email address. |
 
 +++
 
@@ -133,13 +135,13 @@ The [Consents and Preferences](/help/xdm/field-groups//profile/consents.md) fiel
 
 +++Profile Test Details (Field Group)
 
-This field group is used for best practice.
+This field group allows you to test your journey before it is published, using test profiles. For more information about creating test profiles, read the [create test profiles tutorial](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) and [testing the journey tutorial](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html).
 
 +++
 
 #### Customer digital transactions schema
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via [Web SDK](/help/edge/home.md) and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced audience capabilities.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website or associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via [Web SDK](/help/edge/home.md) and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced audience capabilities.
 
 The customer digital transactions schema is represented by an [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class. 
 
@@ -147,11 +149,11 @@ The customer digital transactions schema is represented by an [[!UICONTROL XDM E
 
 The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class includes the following field groups:
 
-| Fields | Requirement | Description |
-| --- | --- | --- |
-| `_id` | Required | Uniquely identifies individual events that are ingested into [!DNL Adobe Experience Platform]. |
-| `timestamp` | Required | An ISO 8601 timestamp of when the event occurred, formatted as per RFC 3339 Section 5.6. This timestamp must occur in the past. |
-| `eventType` | Required | A string that indicates the type of category for the event. |
+| Fields | Description |
+| --- | --- |
+| `_id` | Uniquely identifies individual events that are ingested into [!DNL Adobe Experience Platform]. |
+| `timestamp` | An ISO 8601 timestamp of when the event occurred, formatted as per RFC 3339 Section 5.6. This timestamp must occur in the past. |
+| `eventType` | A string that indicates the type of category for the event. |
 
 +++
 
@@ -159,14 +161,14 @@ The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) cla
 
 The [End User ID Details](/help/xdm/field-groups/event/enduserids.md) field group is used to describe an individual's identity information across several Adobe applications.
 
-| Fields | Requirement | Description |
-| --- | --- | --- |
-| `endUserIDs._experience.emailid.authenticatedState` | Required | End user email address ID authenticated state. |
-| `endUserIDs._experience.emailid.id` | Required | End user email address ID. |
-| `endUserIDs._experience.emailid.namespace.code` | Required | End user email address ID namespace code. |
-| `endUserIDs._experience.mcid.authenticatedState` | Required | [!DNL Adobe] Marketing Cloud ID (MCID) authenticated state. The MCID is now known as the Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.id` | Required | [!DNL Adobe] Marketing Cloud ID (MCID). The MCID is now known as the Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | Required | [!DNL Adobe] Marketing Cloud ID (MCID) namespace code. |
+| Fields | Description |
+| --- | --- |
+| `endUserIDs._experience.emailid.authenticatedState` | End user email address ID authenticated state. |
+| `endUserIDs._experience.emailid.id` | End user email address ID. |
+| `endUserIDs._experience.emailid.namespace.code` | End user email address ID namespace code. |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Marketing Cloud ID (MCID) authenticated state. The MCID is now known as the Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID (MCID). The MCID is now known as the Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Marketing Cloud ID (MCID) namespace code. |
 
 +++
 
@@ -186,11 +188,11 @@ The customer offline transactions schema is represented by an [[!UICONTROL XDM E
 
 The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class includes the following field groups:
 
-| Fields | Requirement | Description |
-| --- | --- | --- |
-| `_id` | Required | Uniquely identifies individual events that are ingested into [!DNL Adobe Experience Platform]. |
-| `timestamp` | Required | An ISO 8601 timestamp of when the event occurred, formatted as per RFC 3339 Section 5.6. This timestamp must occur in the past. |
-| `eventType` | Required | A string that indicates the type of category for the event. |
+| Fields | Description |
+| --- | --- |
+| `_id` | Uniquely identifies individual events that are ingested into [!DNL Adobe Experience Platform]. |
+| `timestamp` | An ISO 8601 timestamp of when the event occurred, formatted as per RFC 3339 Section 5.6. This timestamp must occur in the past. |
+| `eventType` | A string that indicates the type of category for the event. |
 
 +++
 
@@ -198,18 +200,18 @@ The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) cla
 
 The [Commerce Details](/help/xdm/field-groups/event/commerce-details.md) field group is used to describe commerce data such as product information (SKU, name, quantity), and standard cart operations (order, checkout, abandon).
 
-| Fields | Requirement | Description |
-| --- | --- | --- |
-| `commerce.cart.cartID` | Required | An ID for the shopping cart. |
-| `commerce.order.orderType` | Required | An object that describes product order type. |
-| `commerce.order.payments.paymentAmount` | Required | An object that describes product order payment amount. |
-| `commerce.order.payments.paymentType` | Required | An object that describes product order payment type. |
-| `commerce.order.payments.transactionID` | Required | An object product order transaction ID. |
-| `commerce.order.purchaseID` | Required | An object product order purchase ID. |
-| `productListItems.name` | Required | A list of item names representing the product(s) selected by a customer. |
-| `productListItems.priceTotal` | Required | The total price of list of items representing the product(s) selected by a customer. |
-| `productListItems.product` | Required | The product(s) selected. |
-| `productListItems.quantity` | Required | The quantity of list of items representing the product(s) selected by a customer. |
+| Fields | Description |
+| --- | --- |
+| `commerce.cart.cartID` | An ID for the shopping cart. |
+| `commerce.order.orderType` | An object that describes product order type. |
+| `commerce.order.payments.paymentAmount` | An object that describes product order payment amount. |
+| `commerce.order.payments.paymentType` | An object that describes product order payment type. |
+| `commerce.order.payments.transactionID` | An object product order transaction ID. |
+| `commerce.order.purchaseID` | An object product order purchase ID. |
+| `productListItems.name` | A list of item names representing the product(s) selected by a customer. |
+| `productListItems.priceTotal` | The total price of list of items representing the product(s) selected by a customer. |
+| `productListItems.product` | The product(s) selected. |
+| `productListItems.quantity` | The quantity of list of items representing the product(s) selected by a customer. |
 
 +++
 
@@ -217,10 +219,10 @@ The [Commerce Details](/help/xdm/field-groups/event/commerce-details.md) field g
 
 [Personal Contact Details](/help/xdm/field-groups/profile/personal-contact-details.md) is a standard schema field group for the XDM Individual Profile class which describes the contact information for an individual person.
 
-| Fields | Requirement | Description |
-| --- | --- | --- |
-| `mobilePhone.number` | Required | The person's mobile phone number, which will be used for SMS. |
-| `personalEmail.address` | Required | The person's email address. |
+| Fields | Description |
+| --- | --- |
+| `mobilePhone.number` | The person's mobile phone number, which will be used for SMS. |
+| `personalEmail.address` | The person's email address. |
 
 +++
 
@@ -236,7 +238,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 >
 >This is an optional implementation if you are using the [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md).
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website and/or associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when [Web SDK](/help/edge/home.md) is not an option for data collection; thus, this schema is needed when you are utilizing the [!DNL Adobe Analytics Source Connector] to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website or associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when [Web SDK](/help/edge/home.md) is not an option for data collection; thus, this schema is needed when you are utilizing the [!DNL Adobe Analytics Source Connector] to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
 
 The [!DNL Adobe] web connector schema is represented by an [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class.
 
@@ -244,11 +246,11 @@ The [!DNL Adobe] web connector schema is represented by an [[!UICONTROL XDM Expe
 
 The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class includes the following field groups:
 
-| Fields | Requirement | Description |
-| --- | --- | --- |
-| `_id` | Required | Uniquely identifies individual events that are ingested into [!DNL Adobe Experience Platform]. |
-| `timestamp` | Required | An ISO 8601 timestamp of when the event occurred, formatted as per RFC 3339 Section 5.6. This timestamp must occur in the past. |
-| `eventType` | Required | A string that indicates the type of category for the event. |
+| Fields | Description |
+| --- | --- |
+| `_id` | Uniquely identifies individual events that are ingested into [!DNL Adobe Experience Platform]. |
+| `timestamp` | An ISO 8601 timestamp of when the event occurred, formatted as per RFC 3339 Section 5.6. This timestamp must occur in the past. |
+| `eventType` | A string that indicates the type of category for the event. |
 
 +++
 
@@ -256,14 +258,14 @@ The [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) cla
 
 The [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/event/analytics-full-extension.md) field group captures common metrics that are collected by Adobe Analytics.
 
-| Fields | Requirement | Description |
-| --- | --- | --- |
-| `endUserIDs._experience.emailid.authenticatedState` | Required | End user email address ID authenticated state. |
-| `endUserIDs._experience.emailid.id` | Required | End user email address ID. |
-| `endUserIDs._experience.emailid.namespace.code` | Required | End user email address ID namespace code. |
-| `endUserIDs._experience.mcid.authenticatedState` | Required | [!DNL Adobe] Marketing Cloud ID (MCID) authenticated state. The MCID is now known as the Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.id` | Required | [!DNL Adobe] Marketing Cloud ID (MCID). The MCID is now known as the Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | Required | [!DNL Adobe] Marketing Cloud ID (MCID) namespace code. |
+| Fields | Description |
+| --- | --- |
+| `endUserIDs._experience.emailid.authenticatedState` | End user email address ID authenticated state. |
+| `endUserIDs._experience.emailid.id` | End user email address ID. |
+| `endUserIDs._experience.emailid.namespace.code` | End user email address ID namespace code. |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Marketing Cloud ID (MCID) authenticated state. The MCID is now known as the Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID (MCID). The MCID is now known as the Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Marketing Cloud ID (MCID) namespace code. |
 
 +++
 
@@ -338,8 +340,9 @@ The following event is used for the abandoned product browse scenario where user
 The following fields and conditions are required when setting up this audience:
 
 * `eventType: commerce.productViews`
-* And `THEN` (sequential event) exclude `eventType: commerce.procuctListAdds` or `application.launch` or `web.webpagedetails.pageViews` or `commerce.purchases` (this includes both online and offline)
+* And `THEN` (sequential event) exclude `eventType: commerce.productListAdds` or `application.launch` or `web.webpagedetails.pageViews` or `commerce.purchases` (this includes both online and offline)
     * `Timestamp: > 3 days after productView`
+* `Timestamp: > 4 days`
 
 +++
 
@@ -350,8 +353,10 @@ The following event is used for the abandoned product browse scenario where user
 The following fields and conditions are required when setting up this audience:
 
 * `eventType: commerce.productViews`
-* And `THEN` (sequential event) include `eventType: commerce.procuctListAdds` or `application.launch` or `web.webpagedetails.pageViews` or `commerce.purchases` (this includes both online and offline)
+* And `THEN` (sequential event) include `eventType: commerce.productListAdds` or `application.launch` or `web.webpagedetails.pageViews` or `commerce.purchases` (this includes both online and offline)
     * `Timestamp: > 3 days after productView`
+* `Timestamp: > 4 days`
++++
 
 +++Engagement streaming in the last one day
 
@@ -359,7 +364,7 @@ The following event is used for the abandoned product browse scenario where user
 
 The following fields and conditions are required when setting up this audience:
 
-* `eventType: commerce.procuctListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `eventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
     * `Timestamp: in last 1 day` (Streaming)
 
 +++
@@ -370,7 +375,7 @@ The following event is used for the abandoned product browse scenario where user
 
 The following fields and conditions are required when setting up this audience:
 
-* `EventType: commerce.procuctListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `EventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
     * `Timestamp: in last 3 days` (Batch) 
 
 +++
@@ -416,6 +421,8 @@ The abandoned product browse scenario targets abandoned product browsing on both
 
 +++Events
 
+Events allow you to trigger your journeys unitarily to send messages, in real-time, to the individual flowing into the journey. For more information on events, read the [general events guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+
 * Event 1: Product Views
     * Schema: Customer Digital Transactions
     * Fields:
@@ -423,14 +430,7 @@ The abandoned product browse scenario targets abandoned product browsing on both
     * Condition: 
         * `eventType = commerce.productViews`
         * Fields:
-            * `commerce.productViews.id`
-            * `commerce.productViews.value`
             * `eventType`
-            * `identityMap.authenticatedState`
-            * `identityMap.id`
-            * `identityMap.primary`
-            * `productListItems.SKU`
-            * `productListItems.currencyCode`
             * `productListItems.name`
             * `productListItems.priceTotal`
             * `productListItems.product`
@@ -509,7 +509,9 @@ The abandoned product browse scenario targets abandoned product browsing on both
 
 +++
 
-+++Key Journey logic
++++Journey canvas key logic
+
+The journey canvas key logic requires you to identify specific events and configure actions to take place after the event occurs.
 
 * Journey Entry Logic
     * Product View Event
@@ -543,6 +545,8 @@ The abandoned product browse scenario targets abandoned product browsing on both
 The abandoned cart scenario targets products that have been placed in the cart but have not yet been purchased on both the website and mobile app.<p>![Customer abandoned cart scenario high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Customer abandoned cart scenario high level visual overview."){width="1920" zoomable="yes"}</p>
 
 +++Events
+
+Events allow you to trigger your journeys unitarily to send messages, in real-time, to the individual flowing into the journey. For more information on events, read the [general events guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Event 2: Add to Cart
     * Schema: Customer Digital Transactions
@@ -637,7 +641,9 @@ The abandoned cart scenario targets products that have been placed in the cart b
 
 +++
 
-+++Key Journey Logic 
++++Journey canvas key logic
+
+The journey canvas key logic requires you to identify specific events and configure actions to take place after the event occurs.
 
 * Journey Entry Logic
     * `AddToCart` Event
@@ -673,6 +679,8 @@ The order confirmation scenario focuses on product purchases made through the we
 
 +++Events
 
+Events allow you to trigger your journeys unitarily to send messages, in real-time, to the individual flowing into the journey. For more information on events, read the [general events guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+
 * Event 4: Online Purchases
     * Schema: Customer Digital Transactions
     * Fields:
@@ -701,7 +709,9 @@ The order confirmation scenario focuses on product purchases made through the we
 
 +++
 
-+++Key Journey logic
++++Journey canvas key logic
+
+The journey canvas key logic requires you to identify specific events and configure actions to take place after the event occurs.
 
 * Journey Entry Logic
     * Order Event
@@ -734,10 +744,16 @@ Streaming audience export destinations (such as Facebook, Google Customer Match,
 * `ECID`
 * `mobilePhone.number`
 
-the abandon cart audience is evaluated as a streaming audience and therefore can be used by the destinations framework for this use case.
+You can activate abandoned product browse and abandon cart audiences to paid media ads.
 
 * Stream/Triggered
     * [Advertising](/help/destinations/catalog/advertising/overview.md)/[Paid Media & Social](/help/destinations/catalog/social/overview.md)
     * [Mobile](/help/destinations/catalog/mobile-engagement/overview.md)
     * [Streaming Destination](/help/destinations/catalog/streaming/http-destination.md)
     * [Custom destination created by using Destination SDK.](/help/destinations/destination-sdk/overview.md). If you are a Real-Time CDP Ultimate customer, you can also create a private [custom destination using Destination SDK](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
+
+## Next steps {#next-steps}
+
+By re-engaging your customers who abandoned a conversion in an intelligent and responsible way, you have hopefully increased conversions and increased the client lifetime value.
+
+Next, you can explore other use cases supported by Real-Time CDP, such as [displaying personalized content to unauthenticated users](/help/rtcdp/partner-data/onsite-personalization.md) on your web properties.
