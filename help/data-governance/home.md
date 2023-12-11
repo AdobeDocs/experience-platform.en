@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;DULE;dule
 solution: Experience Platform
 title: Data Governance Overview
-description: Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions
+description: Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 ---
 # Data Governance overview
@@ -45,7 +45,7 @@ The Data Governance framework simplifies and streamlines the process of categori
 There are three key elements to the Data Governance framework: Labels, Policies, and Enforcement.
 
 1. **Labels:** Classify data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and organization policies.
-1. **Policies:** Describe what kind(s) of marketing actions are allowed or not allowed to be taken on specific data.
+1. **Policies:** Describe what kinds of marketing actions are allowed or not allowed to be taken on specific data.
 1. **Enforcement:** Uses the policy framework to advise and enforce policies across different data access patterns. 
 
 ## Data usage labels {#data-usage-labels}
@@ -62,15 +62,15 @@ The Data Governance framework includes predefined data usage labels that can be 
 
 >[!NOTE]
 >
->See the guide on [supported data usage labels](labels/reference.md) for a complete list of available labels, as well as definitions for each label type.
+>See the guide on [supported data usage labels](labels/reference.md) for a complete list of available labels, and definitions for each label type.
 
-Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practice encourages labeling data as soon as it is ingested into Experience Platform, or as soon as data becomes available in [!DNL Platform].
+Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practice encourages labeling data when it is ingested into Experience Platform, or as soon as data becomes available in [!DNL Platform].
 
 See the overview on [data usage labels](./labels/overview.md) for more information on how data usage labels are used to help enforce data governance compliance.
 
 ## Data usage policies {#data-usage-policies}
 
-In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform.
+For data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform.
 
 An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place declaring that Personally Identifiable Information (PII) cannot be exported, and an "I" label (identity data) has been applied to the field level from its schema. Policy Service then prevents any action that would export this dataset to a third-party destination. Should one of these action attempts occur, Policy Service sends a message telling you that a data usage policy has been violated.
 
@@ -84,7 +84,7 @@ Once data usage labels have been applied, data stewards can create policies usin
 
 >[!IMPORTANT]
 >
->All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy.
+>All data usage policies (including core policies provided by Adobe) are disabled by default. For an individual policy to be considered for enforcement, you must manually enable that policy.
 
 ## Next steps
 
@@ -101,18 +101,18 @@ The following table outlines key terms related to Data Governance and theData Go
 |Term|Definition |
 |---|---|
 |**Contract labels**|Contract "C" labels are used to categorize data that has contractual obligations or is related to your organization's data governance policies.|
-|**Cross-site data**|Cross-site data is the combination of data from several sites, including a combination of on-site data and off-site data or a combination of data from several off-site sources.|
-|**Data governance**|Data governance encompasses the strategies and technologies used to ensure data is in compliance with regulations and corporate policies with respect to data usage.|
-|**Data steward**|The data steward is the person responsible for the management, oversight, and enforcement of an organization's data assets. A data steward also ensures data governance policies are safeguarded and maintained to be compliant with government regulations and organization policies.|
+|**Cross-site data**|Cross-site data is the combination of data from several sites. Cross-site data includes both on-site and off-site data, or a combination of data from several off-site sources.|
+|**Data governance**|Data governance encompasses the strategies and technologies used to ensure that data is in compliance with regulations and corporate policies with respect to data usage.|
+|**Data steward**|The data steward is the person responsible for the management, oversight, and enforcement of an organization's data assets. A data steward also ensures that data governance policies are safeguarded and maintained to be compliant with government regulations and organization policies.|
 |**Data usage labels**|Data usage labels provide users the ability to categorize data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and corporate policies.|
 |**Dataset labels**| Labels can be added to a schema. All fields within a dataset inherit the schema's labels.|
 |**Field labels**|Field labels are data governance labels that are either inherited from a schema or applied directly to a field. Data governance labels applied to a field are not inherited up to the schema level.|
 |**Geofence**| A geofence is a virtual geographic boundary, defined by GPS or RFID technology, that enables software to trigger a response when a mobile device enters or leaves a particular area.|
 |**Identity labels**|Identity "I" labels are used to categorize data that can identify or contact a specific person.|
-|**Interest-based targeting**|Interest-based targeting, also known as personalization, occurs if the following three conditions are met: data collected on-site is, used to make inferences about a users' interest, is used in another context, such as on another site or app (off-site) and is used to select which content or ads are served based on those inferences.|
+|**Interest-based targeting**|Interest-based targeting, also known as personalization, occurs if the following three conditions are met:<br>Data collected on-site is,<br><ul><li>Used to make inferences about a users' interest,</li><li>Used in another context, such as on another site or app (off-site)</li><li>Used to select which content or ads are served based on those inferences.</li></ul>|
 |**Marketing action**|A marketing action, in the context of the data governance framework, is an action that an Experience Platform data consumer takes, for which there is a need to check for violations of data usage policies|
-|**Policy**|In the data governance framework, a policy is a rule that describes what kind of marketing actions are allowed or not allowed to be taken on specific data.|
-| **Schema Labels** | Manage the labels for data governance, consent, and access control at the schema level. This propogates the labels to every dataset that uses that schema. |
+|**Policy**|In the data governance framework, a policy is a rule that describes what kinds of marketing actions are allowed or not allowed to be taken on specific data.|
+| **Schema Labels** | Manage the labels for data governance, consent, and access control at the schema level. This propagates the labels to every dataset that uses that schema. |
 |**Sensitive Labels**|Sensitive "S" labels are used to categorize data that you, and your organization, consider sensitive.|
 
 ## Additional resources
@@ -121,6 +121,6 @@ The following video is intended to support your understanding of the Data Govern
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-The following video provides guidance on how to apply data usage labels to your schemas or the entirity of a dataset in Experience Platform.
+The following video provides guidance on how to apply data usage labels to your schemas or the entirety of a dataset in Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
