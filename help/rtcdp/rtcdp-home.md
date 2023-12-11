@@ -64,7 +64,7 @@ The dataset export functionality is now generally available. See [which datasets
     <td align="center"><a href="/help/rtcdp/overview.md"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="/help/rtcdp/home-page-dashboards.md"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="/help/landing/end-to-end-tutorial.md"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="//help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="/help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -78,7 +78,7 @@ The dataset export functionality is now generally available. See [which datasets
     </td>
     <td>
       <img src="assets/do-not-localize/icon_profile-audience.svg" width="35px"><br/>
-      <strong>Profiles & audiences</strong><br/><a href="/help/segmentation/home.md">Audiences</a> - <a href="/help/profile/home.md">Profiles</a> - <a href="/help/identity-service/home.md">Identities</a> - <a href="/help/dashboards/guides/license-usage.md">License usage</a> - <a href="using/privacy/get-started-privacy.md">Privacy management</a>
+      <strong>Profiles & audiences</strong><br/><a href="/help/segmentation/home.md">Audiences</a> - <a href="/help/profile/home.md">Profiles</a> - <a href="/help/identity-service/home.md">Identities</a> - <a href="/help/dashboards/guides/license-usage.md">License usage</a> - <a href="/help/privacy-service/home.md">Privacy management</a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon-content.svg" width="35px"><br/>
@@ -96,7 +96,7 @@ The dataset export functionality is now generally available. See [which datasets
     </td>
     <td>
       <img src="assets/do-not-localize/icon-quick-start.svg" width="35px"><br/>
-      <strong>Use Cases</strong><br/><a href="/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md">Intelligent re-engagement</a> - <a href="/help/rtcdp/partner-data/prospecting.md">New customer acquisition</a> - <a href="/help/rtcdp/partner-data/onsite-personalization.md">Onsite personalization to unknown users</a> - <a href="help/rtcdp/partner-data/supplement-first-party-profiles.md">Profile enrichment</a> - <a href="/help/rtcdp/partner-data/offsite-retargeting.md">Offsite retargeting</a>
+      <strong>Use Cases</strong><br/><a href="/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md">Intelligent re-engagement</a> - <a href="/help/rtcdp/partner-data/prospecting.md">New customer acquisition</a> - <a href="/help/rtcdp/partner-data/onsite-personalization.md">Onsite personalization to unknown users</a> - <a href="/help/rtcdp/partner-data/supplement-first-party-profiles.md">Profile enrichment</a> - <a href="/help/rtcdp/partner-data/offsite-retargeting.md">Offsite retargeting</a>
     </td>
   </tr>
 </table> 
