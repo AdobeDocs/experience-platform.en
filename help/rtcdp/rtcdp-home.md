@@ -47,6 +47,10 @@ The dataset export functionality is now generally available. See [which datasets
     <div><strong>Get started</strong><br/>Get an overview of Real-Time CDP to learn how to ingest, manage, and activate data at scale with Real-Time CDP</div>
     </td>
     <td>
+    <a href="/help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/start-campaign.jpeg"></a>
+    <div><strong>Which Real-Time CDP edition is right for me</strong><br/>Understand the differences between the different B2B, B2C, and B2P offerings of Real-Time CDP and decide which one to buy.</div>
+    </td>
+    <td>
     <a href="/help/landing/ui-guide.md"><img src="assets/do-not-localize/start-interface.jpeg"></a>
     <div><strong>User interface</strong><br/>Understand the elements of the Real-Time CDP UI homepage, how to navigate and optimize your in-product experience.</div>
     </td>
@@ -55,16 +59,12 @@ The dataset export functionality is now generally available. See [which datasets
     <div><strong>Explore an end-to-end workflow</strong><br/>Understand the flow of data from ingestion, through enriching profiles and creating audiences, to activation.
     </div>
     </td>
-    <td>
-    <a href="/help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/start-campaign.jpeg"></a>
-    <div><strong>Which Real-Time CDP edition is right for me</strong><br/>Understand the differences between the different B2B, B2C, and B2P offerings of Real-Time CDP and decide which one to buy.</div>
-    </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="/help/rtcdp/overview.md"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="/help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="/help/rtcdp/home-page-dashboards.md"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="/help/landing/end-to-end-tutorial.md"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="/help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
