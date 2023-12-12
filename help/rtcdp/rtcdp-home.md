@@ -44,7 +44,7 @@ The dataset export functionality is now generally available. See [which datasets
   <tr style="border: 0;">
     <td>
     <a href="/help/rtcdp/get-started.md"><img src="assets/do-not-localize/start-quick.png"></a>
-    <div><strong>Get started</strong><br/>Understand how to ingest, manage, and activate data at scale with Real-Time CDP</div>
+    <div><strong>Get started</strong><br/>Get an overview of Real-Time CDP to learn how to ingest, manage, and activate data at scale with Real-Time CDP</div>
     </td>
     <td>
     <a href="/help/landing/ui-guide.md"><img src="assets/do-not-localize/start-interface.jpeg"></a>

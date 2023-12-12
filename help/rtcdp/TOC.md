@@ -9,13 +9,13 @@ user-guide-description: Bring together known and anonymous data from multiple en
 # Real-Time Customer Data Platform Help {#rtcdp}
 
 * [Real-Time CDP documentation](rtcdp-home.md)
-* [Real-Time CDP overview](overview.md)
-* [Real-Time CDP B2B Edition overview](b2b-overview.md)
 * Get started {#intro}
   * Real-Time CDP {#rtcdp-intro}
+    * [Real-Time CDP overview](overview.md)
     * [Get started with Real-Time CDP](get-started.md)
     * [Home page](home-page-dashboards.md)
   * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
+    * [Real-Time CDP B2B Edition overview](b2b-overview.md)
     * [Example use case](./b2b-use-case.md)
     * [End-to-end tutorial](./b2b-tutorial.md)
     * [Real-Time CDP B2B Edition guardrails](b2b-guardrails.md)
