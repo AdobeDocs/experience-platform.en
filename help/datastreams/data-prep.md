@@ -7,6 +7,29 @@ exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
 
 Data Prep is an Adobe Experience Platform service that allows you to map, transform, and validate data to and from [Experience Data Model (XDM)](../xdm/home.md). When configuring a Platform-enabled [datastream](./overview.md), you can use Data Prep capabilities to map your source data to XDM when sending it to the Platform Edge Network.
 
+All data sent from a web page must land in Experience Platform as XDM. There are 3 ways to translate data from an on-page data layer to the XDM accepted by Experience Platform:
+
+1. Reformat the data layer into XDM on the web page itself.
+2. Use the Tags native data elements functionality to reformat a web page's existing data layer format into XDM.
+3. Reformat a web page's existing data layer format into XDM via the Edge Network, using Data Prep for Data Collection.
+
+This guide focuses on the 3rd option. 
+
+## When to use Data Prep for Data Collection {#when-to-use-data-prep}
+
+There are two uses cases where Data Prep for Data Collection is useful:
+
+1. The website has a well-formed, governed, and maintained data layer and there is a preference for sending it directly to the Edge Network instead of using JavaScript manipulation to convert it to XDM on the page (either via Tags data elements or via manual JavaScript manipulation).
+2. A tagging system other than Tags is deployed on the site.
+
+## Send an existing data layer to the Edge Network via WebSDK {#send-datalayer-via-websdk}
+
+The existing data layer must be sent using the `data` option of the `sendEvent` command as described in the [Web SDK documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+
+If you are using Tags, you must use the **[!UICONTROL Data]** field of the **[!UICONTROL Send Event]** action type, as described in the [Web SDK tag extension documentation](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+
+The rest of this guide will focus on how to map the data layer to XDM standards after it has been sent by the WebSDK. 
+
 >[!NOTE]
 >
 >For comprehensive guidance on all Data Prep capabilities, including transformation functions for calculated fields, refer to the following documentation:
@@ -25,7 +48,7 @@ For a quick demonstration of the Data Prep for Data Collection process, refer to
 
 Select **[!UICONTROL Save and Add Mapping]** after completing the basic configuration for a datastream, and the **[!UICONTROL Select data]** step appears. From here, you must provide a sample JSON object that represents the structure of the data that you plan on sending to Platform.
 
-To capture properties directly from your data layer, the JSON object must have a single root property `data`. The sub-properties of the `data` object should then be constructed in a way that maps to the data layer properties that you want to capture. Select the section below to view an example of a properly formatted JSON object with a `data` root.
+To capture properties directly from your data layer, the JSON object must have a single root property `data`. The subproperties of the `data` object should then be constructed in a way that maps to the data layer properties that you want to capture. Select the section below to view an example of a properly formatted JSON object with a `data` root.
 
 +++Sample JSON file with `data` root
 
@@ -127,16 +150,20 @@ You can select the option to upload the object as a file, or paste the raw objec
 
 ![JSON sample of expected incoming data](assets/data-prep/select-data.png)
 
+>[!NOTE]
+>
+> Use a sample JSON object that represents every data layer element that may be used on any page. For example, not all pages use shopping cart data layer elements. However, the shopping cart data layer elements should be included in this sample JSON object.
+
 ## [!UICONTROL Mapping]
 
 The **[!UICONTROL Mapping]** step appears, allowing you to map the fields in your source data to that of the target event schema in Platform. From here, you can configure the mapping in two ways:
 
-* [Create new mapping rules](#create-mapping) for this datastream through a manual process.
+* [Create mapping rules](#create-mapping) for this datastream through a manual process.
 * [Import mapping rules](#import-mapping) from an existing datastream.
 
-### Create a new mapping {#create-mapping}
+### Create mapping rules {#create-mapping}
 
-To get started, select **[!UICONTROL Add new mapping]** to create a new mapping row.
+To create a mapping rule, select **[!UICONTROL Add new mapping]**.
 
 ![Adding a new mapping](assets/data-prep/add-new-mapping.png)
 
@@ -160,11 +187,11 @@ The mapping page reappears with the completed field mapping shown. The **[!UICON
 
 ### Import existing mapping rules {#import-mapping}
 
-If you have previously created a datastream, you can re-use its configured mapping rules for a new datastream. 
+If you have previously created a datastream, you can reuse its configured mapping rules for a new datastream. 
 
 >[!WARNING]
 >
->Importing mapping rules from another datastream will overwrite any field mappings you might have added before the import.
+>Importing mapping rules from another datastream overwrites any field mappings that you might have added before the import.
 
 To start, select **[!UICONTROL Import Mapping]**.
 
@@ -188,9 +215,9 @@ The next screen shows a preview of the saved mapping rules for the selected data
 
 ### Complete the mapping
 
-Continue following the above steps to map the rest of the fields to the target schema. While you do not have to map all available source fields, any fields in the target schema that are set as required must be mapped in order to complete this step. The **[!UICONTROL Required fields]** counter indicates how many required fields are not yet mapped in the current configuration.
+Continue following the above steps to map the rest of the fields to the target schema. While you do not have to map all available source fields, any fields in the target schema that are set as required must be mapped to complete this step. The **[!UICONTROL Required fields]** counter indicates how many required fields are not yet mapped in the current configuration.
 
-Once the required fields count reaches zero and you are satisfied with your mapping, select **[!UICONTROL Save]** to finalize your changes.
+Once the required field count reaches zero and you are satisfied with your mapping, select **[!UICONTROL Save]** to finalize your changes.
 
 ![Mapping complete](assets/data-prep/mapping-complete.png)
 

@@ -10,7 +10,7 @@ Read this page to understand the different types and categories of Adobe Experie
 
 ## Destination types {#destination-types}
 
-In Adobe Experience Platform, we distinguish between different destination types - connections, dataset exports, and extensions. There are several types of connection destinations, allowing you to export data to API-based destinations, .
+In Adobe Experience Platform, we distinguish between different destination types - connections, dataset exports, and extensions. There are several types of connection destinations, allowing you to export data to API-based destinations, social destinations, CRM platforms, and many more.
 
 Finally, connections can also be distinguished between public destinations available across all organizations in the destinations catalog, and private destinations which Real-Time CDP Ultimate customers can create to satisfy their specific export use cases.
 
@@ -62,6 +62,21 @@ Read more about how to [configure personalization destinations for same-page and
 The video below runs you through the particularities of the two types of destinations:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+
+## Types of exported audiences {#exported-audiences-types}
+
+You can export three types of audiences from Experience Platform to various destinations:
+
+* People audiences
+* Account audiences
+* Prospect audiences
+
+Learn more about the [various audience types](/help/segmentation/ui/account-audiences.md#terminology).
+
+A symbol on the destination card shows which types of audiences you can export to each destination. 
+
+![Example destination card with symbols showing which audience types can be exported.](/help/destinations/assets/destination-types/types-of-audiences.png)
+
 
 ## Dataset export destinations {#dataset-export-destinations}
 

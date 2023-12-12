@@ -23,7 +23,6 @@ When configuring your datastream, you can (optionally) provide values for [!DNL 
 
 ![UI image showing the datastream service configuration screen, with Adobe Target selected](assets/target-datastream.png)
 
-
 ## Custom parameters {#custom-parameters}
 
 Most fields in the [!DNL XDM] portion of each request are serialized into dot notation and then sent to Target as custom or [!DNL mbox] parameters.
