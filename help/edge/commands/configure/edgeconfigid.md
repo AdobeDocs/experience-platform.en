@@ -16,7 +16,7 @@ You can also click on the desired datastream name, and the datastream ID appears
 
 ## Datastream ID using the Web SDK tag extension
 
-The Web SDK extension allows the ability to choose from a list of available datastreams, or enter a datastream ID directly.
+Choose from a list of available datastreams, or enter a datastream ID directly when [configuring the tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

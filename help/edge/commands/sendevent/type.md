@@ -8,6 +8,8 @@ The `eventType` property allows you to define the type of event you send using t
 
 Adobe provides a number of predefined event types that you can use. See [Available values for `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype) for a full list of predefined values. You can also use your own values if preferred.
 
+If you set both `type` here and `xdm.eventType` in the [`xdm`](xdm.md) object, the value in this field takes priority.
+
 ## Event type using the Web SDK tag extension
 
 Set the **[!UICONTROL Type]** dropdown field within the actions of a tag rule.

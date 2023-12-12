@@ -37,25 +37,9 @@ alloy("commandName", options)
   });
 ```
 
-If knowing when the command succeeds is not important to you, you may remove the `then` call.
-
-```javascript
-alloy("commandName", options)
-  .catch(function(error) {
-    // The command failed.
-    // "error" is an error object with additional information
-  });
-```
-
-Likewise, if knowing when the command fails is not important to you, you may remove the `catch` call.
-
-```javascript
-alloy("commandName", options)
-  .then(function(result) {
-    // The command succeeded.
-    // "value" will be whatever the command returned
-  });
-```
+>[!TIP]
+>
+>You can omit the `.then` or `.catch` clauses if their purposes are not important to your implementation.
 
 ### Response objects
 
@@ -70,33 +54,14 @@ alloy("getLibraryInfo")
   });
 ```
 
-### Consent
+>[!NOTE]
+>
+>If a user has not given their consent for a particular purpose, the promise will still be resolved; however, the response object will only contain the information that can be provided in the context of what the user has consented to.
 
-If a user has not given their consent for a particular purpose, the promise will still be resolved; however, the response object will only contain the information that can be provided in the context of what the user has consented to.
-
-
-## Retrieving library information
-
-It's often helpful to access some of the details behind the library you have loaded onto your website. To do this, execute the `getLibraryInfo` command as follows:
-
-```js
-alloy("getLibraryInfo").then(function(result) {
-  console.log(result.libraryInfo.version);
-  console.log(result.libraryInfo.commands);
-  console.log(result.libraryInfo.configs);
-});
-```
-
-Currently, the provided `libraryInfo` object contains the following properties:
-
-* `version`: This is the version of the loaded library. For example, if the version of the library being loaded were 1.0.0, the value would be `1.0.0`. When the library is run inside the tag extension (named "AEP Web SDK"), the version is the library version and the tag extension version joined with a "+" sign. For example, if the version of the library were 1.0.0, and the version of the tag extension were 1.2.0, the value would be `1.0.0+1.2.0`.
-* `commands`: These are all of the available commands supported by the loaded library. 
-* `configs`: These are all of the current configs in the loaded library.
 
 # Handling responses from events
 
 If you want to handle a response from an event, you can be notified of a success or failure as follows:
-
 
 ```javascript
 alloy("sendEvent", {
@@ -125,7 +90,4 @@ alloy("sendEvent", {
 The `sendEvent` command returns a promise that is resolved with a `result` object. The `result` object contains the following properties:
 
 **propositions**: The Personalization offers that the visitor has qualified for. [Learn more about propositions.](../personalization/rendering-personalization-content.md#manually-rendering-content)
-
-**decisions**: This property is deprecated. Please use `propositions` instead.
-
 **destinations**: Segments from Adobe Experience Platform that can be shared with external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites. [Learn more about destinations.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)

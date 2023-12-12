@@ -8,7 +8,7 @@ The `targetMigrationEnabled` property is a boolean that allows the Web SDK to re
 
 ## Enable Target migration from at.js using the Web SDK tag extension
 
-Select the **[!UICONTROL Migrate Target from at.js to the Web SDK]** checkbox when configuring the extension.
+Select the **[!UICONTROL Migrate Target from at.js to the Web SDK]** checkbox when [configuring the tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

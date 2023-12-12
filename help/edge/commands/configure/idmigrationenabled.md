@@ -10,7 +10,7 @@ If your organization runs a fresh Web SDK implementation, enabling this setting 
 
 ## Enable ID migration using the Web SDK tag extension
 
-Select the **[!UICONTROL Migrate ECID from VisitorAPI to the web SDK]** checkbox when configuring the extension.
+Select the **[!UICONTROL Migrate ECID from VisitorAPI to the web SDK]** checkbox when [configuring the tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

@@ -8,7 +8,7 @@ The `edgeBasePath` property alters the destination path when you interact with A
 
 ## Edge base path using the Web SDK tag extension
 
-Enter the desired text in the **[!UICONTROL Edge base path]** text field when configuring the extension.
+Enter the desired text in the **[!UICONTROL Edge base path]** text field when [configuring the tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

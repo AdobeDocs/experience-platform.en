@@ -17,7 +17,7 @@ Org IDs are always 24-character alpha-numeric strings, and always end in `@Adobe
 
 ## Org ID using the Web SDK tag extension
 
-Enter the org ID in the **[!UICONTROL IMS organization ID]** text field when configuring the extension.
+Enter the org ID in the **[!UICONTROL IMS organization ID]** text field when [configuring the tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

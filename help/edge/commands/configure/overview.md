@@ -9,7 +9,7 @@ Configuration for the SDK is done with the `configure` command. Configuring the 
 
 ## Configure the SDK in the extension
 
-Navigate to the extension configuration page.
+Navigate to the [tag extension configuration page](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
@@ -32,9 +32,7 @@ alloy("configure", {
   "defaultConsent": "pending",
   "downloadLinkQualifier": "\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$",
   "edgeBasePath": "ee",
-  "edgeConfigOverrides": {
-    "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287"
-  },
+  "edgeConfigOverrides": { "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287" },
   "edgeDomain": "data.example.com",
   "idMigrationEnabled": false,
   "onBeforeEventSend": function(content) {

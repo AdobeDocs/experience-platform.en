@@ -12,7 +12,7 @@ The `onBeforeEventSend` callback allows you to register a JavaScript function th
 
 ## On before event send callback using the Web SDK tag extension
 
-Select the **[!UICONTROL Provide on before event send callback code]** button when configuring the extension. This button opens a modal window where you can insert the desired code.
+Select the **[!UICONTROL Provide on before event send callback code]** button when [configuring the tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). This button opens a modal window where you can insert the desired code.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

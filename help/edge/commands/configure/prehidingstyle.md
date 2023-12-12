@@ -12,7 +12,7 @@ If you include both `prehidingStyle` and the prehiding snippet in your implement
 
 ## Prehiding style using the Web SDK tag extension
 
-Select the **[!UICONTROL Provide prehiding style]** button when configuring the extension.
+Select the **[!UICONTROL Provide prehiding style]** button when [configuring the tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

@@ -26,25 +26,44 @@ Appending an identity to a URL is performed as an action within a rule in the Ad
 
 This command is typically used with a specific rule that listens for clicks and checks desired domains.
 
-* **Event**: Triggers any time an anchor tag with an `href` property is clicked.
-  * **[!UICONTROL Extension]**: Core
-  * **[!UICONTROL Event type]**: Click
-  * **[!UICONTROL When the user clicks on]**: Specific elements
-  * **[!UICONTROL Elements matching the CSS selector]**: `a[href]`
++++**Rule event criteria**
 
-* **Condition**: Triggers only on desired domains.
-  * **[!UICONTROL Logic type]**: Regular
-  * **[!UICONTROL Extension]**: Core
-  * **[!UICONTROL Condition Type]**: Value Comparison
-  * **[!UICONTROL Left Operand]**: `%this.hostname%`
-  * **[!UICONTROL Operator]**: Matches Regex
-  * **[!UICONTROL Right Operand]**: A regular expression that matches the desired domains. For example, `adobe.com$|behance.com$`
+Triggers any time an anchor tag with an `href` property is clicked.
 
-* **Action**: Append the identity to the URL
-  * **[!UICONTROL Extension]**: Adobe Experience Platform Web SDK
-  * **[!UICONTROL Action Type]**: Redirect with identity
+* **[!UICONTROL Extension]**: Core
+* **[!UICONTROL Event type]**: Click
+* **[!UICONTROL When the user clicks on]**: Specific elements
+* **[!UICONTROL Elements matching the CSS selector]**: `a[href]`
 
-<!-- Add images and accordions -->
+![Rule event](../assets/id-sharing-event-configuration.png)
+
++++
+
++++**Rule condition**
+
+Triggers only on desired domains.
+
+* **[!UICONTROL Logic type]**: Regular
+* **[!UICONTROL Extension]**: Core
+* **[!UICONTROL Condition Type]**: Value Comparison
+* **[!UICONTROL Left Operand]**: `%this.hostname%`
+* **[!UICONTROL Operator]**: Matches Regex
+* **[!UICONTROL Right Operand]**: A regular expression that matches the desired domains. For example, `adobe.com$|behance.com$`
+
+![Rule condition](../assets/id-sharing-condition-configuration.png)
+
++++
+
++++**Rule action**
+
+Append the identity to the URL.
+
+* **[!UICONTROL Extension]**: Adobe Experience Platform Web SDK
+* **[!UICONTROL Action Type]**: Redirect with identity
+
+![Rule action](../assets/id-sharing-action-configuration.png)
+
++++
 
 ## Append identity to URL using the Web SDK JavaScript library
 
@@ -64,7 +83,7 @@ document.addEventListener("click", event => {
 
   // Check if the link points to the desired domain
   const url = new URL(anchor.href);
-  if (!url.hostname.endsWith("adobe.com") && !url.hostname.endsWith("behance.com")) return;
+  if (!url.hostname.endsWith(".adobe.com") && !url.hostname.endsWith(".behance.com")) return;
 
   // Append the identity to the URL, then direct the user to the URL
   event.preventDefault();
