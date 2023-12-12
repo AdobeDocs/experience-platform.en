@@ -32,7 +32,7 @@ Before you can send your Adobe Experience Platform audiences to [!DNL Airship], 
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|

@@ -1,6 +1,7 @@
 ---
 title: Lambda Function Example - Retrieve Similar Records
 description: Learn how to identify and retrieve similar or related records from one or more datasets based on a similarity metric and similarity threshold. This workflow can highlight meaningful relationships or overlaps between disparate datasets.
+exl-id: 4810326a-a613-4e6a-9593-123a14927214
 ---
 # Lambda Function Example: Retrieve similar records
 
