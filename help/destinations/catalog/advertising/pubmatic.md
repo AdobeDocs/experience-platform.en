@@ -1,35 +1,36 @@
 ---
 title: PubMatic Connect
 description: PubMatic maximizes customer value by delivering the programmatic digital marketing supply chain of the future. PubMatic Connect combines platform technology and dedicated service to enhance how inventory and data are packaged and transacted.
+last-substantial-update: 2023-12-12
 ---
 
 # PubMatic Connect destination {#pubmatic-connect}
 
 ## Overview {#overview}
 
-PubMatic maximizes customer value by delivering the programmatic digital marketing supply chain of the future. PubMatic Connect combines platform technology and dedicated service to enhance how inventory and data are packaged and transacted.
+[!DNL PubMatic Connect] maximizes customer value by delivering the programmatic digital marketing supply chain of the future. [!DNL PubMatic Connect] combines platform technology and dedicated service to enhance how inventory and data are packaged and transacted.
 
-This destination can be used to send audience data to the PubMatic Connect platform.
+Use this destination to send audience data to the [!DNL PubMatic Connect] platform.
 
 >[!IMPORTANT]
 >
->The destination connector and documentation page are created and maintained by the PubMatic team. For any inquiries or update requests, contact them directly at `support@pubmatic.com`.
+>The destination connector and documentation page are created and maintained by the [!DNL PubMatic] team. For any inquiries or update requests, contact them directly at `support@pubmatic.com`.
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the PubMatic Connect destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL PubMatic Connect] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
 ### Targeting users on mobile, web, and CTV platforms {#targeting}
 
-Publisher or data providers want to send audiences from Adobe Experience Platform to PubMatic Connect to target users on mobile, web, and CTV platforms, using a large range of identifiers.
+Publisher or data providers want to send audiences from Adobe Experience Platform to [!DNL PubMatic Connect] to target users on mobile, web, and CTV platforms, using a large range of identifiers.
 
 ## Prerequisites {#prerequisites}
 
-Talk to your PubMatic Account Manager to make sure your account is configured correctly and supports onboarding of audience segments. They will also make sure you have all the relevant details to use this destination and to provide you with support during the setup.
+Talk to your [!DNL PubMatic] Account Manager to make sure your account is configured correctly and supports onboarding of audience segments. They will also make sure you have all the relevant details to use this destination and to provide you with support during the setup.
 
 ## Supported identities {#supported-identities}
 
-PubMatic Connect supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL PubMatic Connect] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 | Target Identity | Description | Considerations |
 | --------------- | ------ | --- |
@@ -85,10 +86,10 @@ To configure details for the destination, fill in the required and optional fiel
 
 - **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 - **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-- **[!UICONTROL Data partner ID]**: The data partner ID set up in your PubMatic account for this integration.
+- **[!UICONTROL Data partner ID]**: The data partner ID set up in your [!DNL PubMatic] account for this integration.
 - **[!UICONTROL Default country code]**: The default country code that should be applied to all identities if none is provided in the profile.
-- **[!UICONTROL Account ID]**: Your PubMatic Connect account ID.
-- **[!UICONTROL Account type]**: The account type of your PubMatic platform account. Talk to your PubMatic account manager if you have any questions on which to choose. The available options are:
+- **[!UICONTROL Account ID]**: Your [!DNL PubMatic Connect] account ID.
+- **[!UICONTROL Account type]**: The account type of your [!DNL PubMatic] platform account. Talk to your [!DNL PubMatic] account manager if you have any questions on which to choose. The available options are:
     - [!UICONTROL PUBLISHER]
     - [!UICONTROL DEMAND_PARTNER]
     - [!UICONTROL BUYER]
@@ -117,14 +118,14 @@ Selecting source fields:
 
 Selecting target fields:
 
-- Talk to your PubMatic Account Manager to get the information on which UID type will be correct during this step.
-- Select the PubMatic UID type number that matches the identifier you selected in the first step.
+- Talk to your [!DNL PubMatic] Account Manager to get the information on which UID type will be correct during this step.
+- Select the [!DNL PubMatic UID] type number that matches the identifier you selected in the first step.
 
 ![Map attributes and identities](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
 
 ## Exported data / Validate data export {#exported-data}
 
-The PubMatic UI allows you to check if the data has been pushed correctly and that the segments are available. It can take up to 24 hours after data has been pushed for the PubMatic UI to be updated.
+The [!DNL PubMatic] UI allows you to check if the data has been pushed correctly and that the segments are available. It can take up to 24 hours after data has been pushed for the [!DNL PubMatic] UI to be updated.
 
 ## Data usage and governance {#data-usage-governance}
 
