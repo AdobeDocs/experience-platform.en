@@ -54,6 +54,9 @@ This section describes which type of audiences you can export to this destinatio
 
 {style="table-layout:auto"}
 
+>[!NOTE]
+> As individual members are added or removed from the audience, updates will be sent to the ZMP to ensure that the destination segment is synchronized accordingly.
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
