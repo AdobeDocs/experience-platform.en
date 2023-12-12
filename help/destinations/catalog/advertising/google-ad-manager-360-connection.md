@@ -35,7 +35,7 @@ Note the following details that are specific to [!DNL Google Ad Manager 360] des
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
