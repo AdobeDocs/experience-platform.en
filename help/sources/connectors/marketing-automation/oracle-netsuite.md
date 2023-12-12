@@ -29,15 +29,13 @@ A list of IP addresses may require to be added to an allow list prior to working
 Before you can bring your [!DNL Oracle NetSuite] data to Experience Platform, you must first ensure that you have the following:
 
 * A [!DNL Oracle NetSuite] account. If you do not already have an account, contact [!DNL Oracle NetSuite](https://www.NetSuite.com/portal/company/contactus.shtml).
-* Have an active subscription to any product.
+* An active subscription to any [!DNL Oracle NetSuite] product.
 * [!DNL Oracle NetSuite] uses OAuth 2.0 to communicate with [!DNL Oracle NetSuite] API's. 
     * You will need your **Account ID**. Refer to the [Finding your NetSuite Account ID](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1498754928.html#Finding-Your-NetSuite-Account-ID)] page if you do not know your NetSuite Account ID.
-    * You will need your **[!DNL NetSuite] Account ID**. Refer to the [Finding your NetSuite Account ID](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_1498754928.html#Finding-Your-NetSuite-Account-ID)] page if you do not know your NetSuite Account ID.
-    * To access the [!DNL Oracle NetSuite] API's, You will need a **Client ID** and **Client secret**, follow the [OAuth 2.0](https://docs.oracle.com/en/cloud/saas/NetSuite/ns-online-help/chapter_157769826287.html#OAuth-2.0) tutorial within your [!DNL Oracle NetSuite] account and ensure you execute the below:
-        * Ensure your [!DNL Oracle NetSuite] administrator has enabled the OAuth 2.0 feature
-        * Setup Roles
-        * Assigned Users to the Oauth 2.0 Roles, and created Integration records
-    * You will also need to generate an **Access token** and a **Refresh Token**. Refer to the [OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) tutorial to generate them. Complete [Step One](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081944642.html#Step-One-GET-Request-to-the-Authorization-Endpoint) and [Step Two](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) from the tutorial.
+    * To access the [!DNL Oracle NetSuite] API's, You will need a **Client ID** and **Client secret**, follow the [OAuth 2.0](https://docs.oracle.com/en/cloud/saas/NetSuite/ns-online-help/chapter_157769826287.html#OAuth-2.0) tutorial within your [!DNL Oracle NetSuite] account and ensure your [!DNL Oracle NetSuite] administrator has done the following:
+        * Enabled the OAuth 2.0 feature and setup the Oauth 2.0 roles.
+        * Assigned Users to the Oauth 2.0 Roles, and created Integration records.
+    * You will also need to generate an **access token** and a **refresh token**. Refer to the [OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) tutorial to generate them. Complete [step one](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081944642.html#Step-One-GET-Request-to-the-Authorization-Endpoint) and [step two](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) from the tutorial.
 
 ### Gather required credentials {#gather-credentials}
 
@@ -47,14 +45,14 @@ In order to connect [!DNL Oracle NetSuite] to Platform, you must provide values 
 | --- | --- | --- |
 | Client ID | The Client ID value when you create the integration record in [!DNL Oracle NetSuite]. The process to create an interation record can be found [here](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). | `7fce.....b42f`<br>The value is a 64 characters string. |
 | Client secret | The Client Secret value when you create the integration record. The process to create an interation record can be found [here](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). | `5c98.....1b46`<br>The value is a 64 characters string. |
-| authorizationTestUrl | Your [!DNL NetSuite] authorization test URL. This is optional. | <code>https://<NETSUITE_ACCOUNT_ID>.app.netsuite.com<br>/app/login/oauth2/authorize.nl?response_type=code<br>&redirect_uri=https%3A%2F%2Fapi.github.com<br>&scope=rest_webservices<br>&state=ykv2XLx1BpT5Q0F3MRPHb94j<br>&client_id=<CLIENT_ID></code> |
-| Access token | The Access token value is generated at the end of [Step Two](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) of the [OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) tutorial. Access tokens expire are valid only for 60 minutes. | `eyJr......f4V0`<br> the value is a 1024 characters string formatted as a JSON Web Token (JWT). |
-| Refresh token | The Refresh token value value is generated at the end of [Step Two](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) of the [OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) tutorial. Refresh tokens have a longer validity and are valid for 7 days. Refresh tokens are used by the [!DNL Oracle NetSuite] source to internally generate new Access tokens. | `eyJr......dmxM`<br> the value is a 1024 characters string formatted as a JSON Web Token (JWT). |
-| accessTokenUrl | The [!DNL NetSuite] Access Token URL. This takes the form shown alongside. | <code>https://<NETSUITE_ACCOUNT_ID>.suitetalk.api.netsuite.com<br>/services/rest/auth/oauth2/v1/token</code> |
+| authorizationTestUrl | Your [!DNL NetSuite] authorization test URL. This is optional. | <code>https://{ACCOUNT_ID}.app.netsuite.com<br>/app/login/oauth2/authorize.nl?response_type=code<br>&redirect_uri=https%3A%2F%2Fapi.github.com<br>&scope=rest_webservices<br>&state=ykv2XLx1BpT5Q0F3MRPHb94j<br>&client_id={CLIENT_ID}</code> |
+| Access token | The Access token value is generated at the end of [step two](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) of the [OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) tutorial. Access tokens expire are valid only for 60 minutes. | `eyJr......f4V0`<br> the value is a 1024 characters string formatted as a JSON Web Token (JWT). |
+| Refresh token | The Refresh token value value is generated at the end of [step two](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) of the [OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) tutorial. Refresh tokens have a longer validity and are valid for 7 days. Refresh tokens are used by the [!DNL Oracle NetSuite] source to internally generate new Access tokens. | `eyJr......dmxM`<br> the value is a 1024 characters string formatted as a JSON Web Token (JWT). |
+| accessTokenUrl | The [!DNL NetSuite] Access Token URL. This takes the form shown alongside. | <code>https://{ACCOUNT_ID}.suitetalk.api.netsuite.com<br>/services/rest/auth/oauth2/v1/token</code> |
 
 >[!IMPORTANT]
 >
-> After a Refresh token expires you must create a New Account in Platform with updated tokens.
+> After a refresh token expires you must create a new account in Platform with updated tokens.
 
 ## Connect [!DNL Oracle NetSuite Activities] to Platform {#oracle-netsuite-activities}
 
