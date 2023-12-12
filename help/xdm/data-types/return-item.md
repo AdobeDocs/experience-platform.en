@@ -19,7 +19,6 @@ description: This document provides an overview of the Return Item Experience Da
 | [!UICONTROL Return Quantity Received]    | `returnQuantityReceived`   | integer   | The quantity of returned items received.                      |
 | [!UICONTROL Return Quantity Approved]    | `returnQuantityApproved`   | integer   | The quantity of this item with a return fully complete and approved. |
 
-
 {style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
