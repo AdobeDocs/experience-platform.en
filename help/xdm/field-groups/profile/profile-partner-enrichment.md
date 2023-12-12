@@ -5,9 +5,9 @@ description: This document provides an overview of the Profile Partner Enrichmen
 
 # [!UICONTROL Profile Partner Enrichment (Sample)] schema field group
 
-[!UICONTROL Profile Partner Enrichment (Sample)] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) which provides additional data related to partner-driven enrichments for customer profiles.
+[!UICONTROL Profile Partner Enrichment (Sample)] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). This field group provides additional data related to partner-driven enrichments for customer profiles.
 
-![](../../images/field-groups/personal-contact-details.png)
+![A diagram of the [!UICONTROL Profile Partner Enrichment (Sample)] field group.](../../images/field-groups/profile-partner-enrichment-sample.png)
 
 | Display name                | Property               | Data type | Description                      |
 |-----------------------------|------------------------|-----------|----------------------------------|
@@ -43,3 +43,5 @@ description: This document provides an overview of the Profile Partner Enrichmen
 {style="table-layout:auto"}
 
 For more details on the field group, refer to the [full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/partner-profile-enrichment/profile-partner-enrichment-sample.schema.json) on the public XDM repository.
+
+<!-- no populated example available -->

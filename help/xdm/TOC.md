@@ -58,11 +58,14 @@ feature: Schemas
     * [Work Contact Details](./field-groups/profile/work-contact-details.md)
     * [XDM Business Person Components](./field-groups/profile/business-person-components.md)
     * [XDM Business Person Details](./field-groups/profile/business-person-details.md)
+  * XDM Individual Prospect Profile {#prospect-profile}
+    * [Partner Prospect Details (Sample)](./field-groups/prospect-profile/partner-prospect-details.md)
   * XDM ExperienceEvent {#event}
     * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
     * [Advertising Details](./field-groups/event/advertising-details.md)
     * [Application Details](./field-groups/event/application-details.md)
     * [Balance Transfers](./field-groups/event/balance-transfers.md)
+    * [Bot Detection](./field-groups/event/bot-detection-information.md)
     * [Campaign Marketing Details](./field-groups/event/campaign-marketing-details.md)
     * [Card Actions](./field-groups/event/card-actions.md)
     * [Channel Details](./field-groups/event/channel-details.md)
