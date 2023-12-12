@@ -17,11 +17,11 @@ With the July 2023 Experience Platform release, the [!DNL Amazon S3] destination
 ## Connect to your [!DNL Amazon S3] storage through API or UI {#connect-api-or-ui}
 
 * To connect to your [!DNL Amazon S3] storage location using the Platform user interface, read the sections [Connect to the destination](#connect) and [Activate audiences to this destination](#activate) below.
-* To connect to your [!DNL Amazon S3] storage location programmatically, read the [Activate audiences to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
+* To connect to your [!DNL Amazon S3] storage location programmatically, read the guide on how to [activate audiences to file-based destinations by using the Flow Service API tutorial](../../api/activate-segments-file-based-destinations.md).
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
@@ -41,7 +41,7 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
-![Amazon S3 profile-based export type](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+![Amazon S3 profile-based export type highlighted in the UU.](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
 ## Connect to the destination {#connect}
 
@@ -63,7 +63,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 * **[!DNL Amazon S3] access key** and **[!DNL Amazon S3] secret key**: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon S3] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
-    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+    ![Image showing an example of a correctly formatted PGP key in the UI.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Fill in destination details {#destination-details}
 

@@ -17,11 +17,24 @@ Identity namespaces requires an understanding of various Adobe Experience Platfo
 
 ## Understanding identity namespaces
 
+![An illustration of data workflow with Identity Service.](images/identity-service-stitching.png)
+
 A fully qualified identity includes two components: an **identity value** and an **identity namespace**. For example, if the value of an identity is `scott@acme.com`, then a namespace provides context to this value by distinguishing it as an email address. Similarly, a namespace can distinguish `555-123-456` as a phone number, and `3126ABC` as a CRM ID. Essentially, **a namespace provides context to a given identity**. When matching record data across profile fragments, as when [!DNL Real-Time Customer Profile] merges profile data, both the identity value and the namespace must match.
 
 For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore Experience Platform is able to see that these fragments are actually the same individual and brings the data together in the identity graph for the individual.
 
-![](images/identity-service-stitching.png)
+>[!BEGINSHADEBOX]
+
+**Identity namespace explained**
+
+Another way to better understand the concept of namespace is to consider real world examples such as cities and their corresponding states. For example, Portland, Maine and Portland, Oregon are two different places in the United States. While the cities share the same name, the state operates as a namespace and provides necessary context that distinguishes the two cities from each other.
+
+Applying the same logic to Identity Service:
+
+* At a glance, the identity value of: `1-234-567-8900` can look like a phone number. However, from a system perspective, this value could have been configured as a CRM ID. Identity Service would have no way of applying the necessary context to this identity value without a corresponding namespace.
+* Another example is the identity value of: `john@gmail.com`. While this identity value can be easily assumed to be an Email, it is entirely possible that it's configured as a custom namespace CRM ID. With namespace, you can distinguish `Email:john@gmail.com` from `CRM ID:john@gmail.com`.
+
+>[!ENDSHADEBOX]
 
 ### Components of a namespace
 

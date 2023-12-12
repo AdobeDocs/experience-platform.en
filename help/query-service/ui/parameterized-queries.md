@@ -18,7 +18,7 @@ Before continuing with this guide, read the [Query Editor UI guide](./user-guide
 
 >[!NOTE]
 >
->Within the Adobe Experience Platform UI, parameterized queries are only supported at the parent level of inline templates. This means that parameterized queries only work when used in the original template. Child templates must be a static template and cannot have dynamic parameters. See the [inline templates documentation](../essential-concepts/inline-templates.md) to learn more.
+>Within the Adobe Experience Platform UI, parameterized queries are only supported at the parent level of inline templates. This means that parameterized queries only work when used in the original template. Child templates must be a static template and cannot have dynamic parameters. See the [inline templates documentation](../key-concepts/inline-templates.md) to learn more.
 
 ## Parameterized query syntax {#syntax}
 

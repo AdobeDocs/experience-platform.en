@@ -1,30 +1,30 @@
 ---
-title: Use weather data from DNL The Weather Channel
-description: Use weather data from DNL The Weather Channel to enhance the data you collect through datastreams.
+title: Enhance data collection with weather data from DNL The Weather Channel
+description: Enhance the data that you collect via datastreams with weather data from DNL The Weather Channel.
 exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
 ---
-# Use weather data from [!DNL The Weather Channel]
+# Enhance data collection with weather data from [!DNL The Weather Channel]
 
-Adobe has partnered with [!DNL [The Weather Company]](https://www.ibm.com/weather) to bring the additional context of United States weather to the data collected via datastreams. You can use this data for analytics, targeting and segment creation in Experience Platform.
+Adobe has partnered with [!DNL [The Weather Company]](https://www.ibm.com/weather) to bring the additional context of United States weather to the data collected via datastreams. You can use this data for analytics, targeting, and audience creation in Experience Platform.
 
-There are 3 types of data that are available from [!DNL The Weather Channel]:
+There are three types of data that are available from [!DNL The Weather Channel]:
 
-* **[!UICONTROL Current Weather]**: The current weather conditions of the user, based on their location. This include current temperature, percipitation, cloud coverage, and more.
-* **[!UICONTROL Forecasted Weather]**: The forecast includes the 1,2,3,5,7 and 10 day forecast for the user location.
+* **[!UICONTROL Current Weather]**: The current weather conditions of the user, based on their location. This includes current temperature, precipitation, cloud coverage, and more.
+* **[!UICONTROL Forecasted Weather]**: The forecast includes the 1, 2, 3, 5, 7 and 10-day forecast for the user location.
 * **[!UICONTROL Triggers]**: Triggers are specific combinations that map to different semantic weather conditions. There are three different types of weather triggers:
   
     * **[!UICONTROL Weather Triggers]**: Semantically meaningful conditions, such as cold or rainy weather. These can differ in their definitions between various climates.
-    * **[!UICONTROL Product Triggers]**: Conditions that would lead to the purchase of different types of products. For example: cold weather forecasts could mean that purchases of rain coats are more likely. 
+    * **[!UICONTROL Product Triggers]**: Conditions that would lead to the purchase of different types of products. For example: cold-weather forecasts could mean that purchases of rain coats are more likely. 
     * **[!UICONTROL Severe Weather Triggers]**: Severe weather warnings, like winter storm or hurricane warnings. 
 
 ## Prerequisites {#prerequisites}
 
 Before you use weather data, make sure you meet the following prerequisites:
 
-* You must license the weather data that you will use, from [!DNL The Weather Channel]. They will then enable it on your account. 
-* Weather data is available only through datastreams. To use weather data, you must use [!DNL Web SDK], [!DNL Mobile Edge Extension] or the [Server API](../../server-api/overview.md) to leverage this data.
+* You must license the weather data that you will use from [!DNL The Weather Channel]. They will then enable it on your account. 
+* Weather data is available only through datastreams. To use weather data, you must use [!DNL Web SDK], [!DNL Mobile Edge Extension] or the [Server API](../../server-api/overview.md) to include this data.
 * Your datastream must have [[!UICONTROL Geo Location]](../configure.md#advanced-options) enabled.
-* Add the [weather field group](#schema-configuration) to the schema you are using.
+* Add the [weather field group](#schema-configuration) to the schema that you are using.
 
 ## Provisioning {#provisioning}
 
@@ -44,7 +44,7 @@ You must add the weather field groups to your Experience Platform schema corresp
 
 ## Access the weather data {#access-weather-data}
 
-Once your data is licensed and available, you can access it in a variety of ways throughout the Adobe services.
+Once your data is licensed and available, you can access it in various ways throughout the Adobe services.
 
 ### Adobe Analytics {#analytics}
 
@@ -56,15 +56,15 @@ You can find the list of fields that you can map in the [weather reference](weat
 
 ### Adobe Customer Journey Analytics {#cja}
 
-In [!DNL Adobe Customer Journey Analytics], the weather data is available in the dataset that is specified in the datastream. As long as the weather attributes are [added to your schema](#prerequisites-prerequisites), they will be available to [add to a data view](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html) in [!DNL Customer Journey Analytics]. 
+In [!DNL Adobe Customer Journey Analytics], the weather data is available in the dataset that is specified in the datastream. As long as the weather attributes are [added to your schema](#prerequisites-prerequisites), they are available to [add to a data view](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html) in [!DNL Customer Journey Analytics]. 
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-Weather data is available in the [Real-Time Customer Data Platform](../../rtcdp/overview.md), for use in segments. Weather data is attached to events.
+Weather data is available in the [Real-Time Customer Data Platform](../../rtcdp/overview.md), for use in audiences. Weather data is attached to events.
 
 ![Segemnt Builder Showing Weather Events](../assets/data-enrichment/weather/schema-builder.png)
 
-Since weather conditions change often, Adobe recommends that you set time constraints on the segments, as shown in the example above. Having a cold day in the last day or two is much more impactful than having a cold day 6 months ago.
+Since weather conditions change frequently, Adobe recommends that you set time constraints on the audiences, as shown in the example above. Having a cold day in the last day or two is much more impactful than having a cold day 6 months ago.
 
 See the [weather reference](weather-reference.md) for the available fields.
 

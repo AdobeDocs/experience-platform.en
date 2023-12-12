@@ -1,5 +1,4 @@
 ---
-keywords: Google ads;google ads;google adwords;Google AdWords;Google Adwords
 title: Google Ads connection
 description: Google Ads, formerly known as Google AdWords, is an online advertising service that allows businesses to pay-per-click advertising across text-based searches, graphic displays, YouTube videos, and in-app mobile displays.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
@@ -19,11 +18,11 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 
 >[!IMPORTANT]
 >
->If you are looking to create your first destination with [!DNL Google Ads] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
+>If you are looking to create your first destination with [!DNL Google Ads] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
 
 ## Supported identities {#supported-identities}
 
-[!DNL Google Ad Manager] supports the activation of identities described in the table below.
+[!DNL Google Ads] supports the activation of identities described in the table below.
 
 |Target Identity|Description|Considerations|
 |---|---|---|
@@ -39,7 +38,7 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
@@ -65,16 +64,16 @@ Refer to the table below for information about the destination export type and f
 
 >[!IMPORTANT]
 >
-> [!DNL Google] has deprecated new [!DNL Google Ads] cookie integrations with third-party vendors. In order to perform the allow list steps in the next section, you must have an existing integration with [!DNL Google Ads]. As a result, the recommended approach for using [!DNL Google Ads] is setting up a [!DNL Google Customer Match] integration. For more details on creating a [!DNL Google Customer Match] integration, please read the tutorial on creating a [[!DNL Google Customer Match]](./google-customer-match.md) connection.
+> [!DNL Google] has deprecated new [!DNL Google Ads] cookie integrations with third-party vendors. In order to perform the allowlist steps in the next section, you must have an existing integration with [!DNL Google Ads]. As a result, the recommended approach for using [!DNL Google Ads] is setting up a [!DNL Google Customer Match] integration. For more details on creating a [!DNL Google Customer Match] integration, read the tutorial on creating a [[!DNL Google Customer Match]](./google-customer-match.md) connection.
 
 ### Allow-listing {#allow-listing}
 
 >[!NOTE]
 >
->Allow-listing is mandatory before setting up your first [!DNL Google Ads] destination in Platform. Please ensure the allow-listing process described below has been completed by [!DNL Google] before creating a destination.
+>Allow-listing is mandatory before setting up your first [!DNL Google Ads] destination in Platform. Make sure the allow-listing process described below has been completed by [!DNL Google] before creating a destination.
 >The exception to this rule is for [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) customers. If you have already created a connection to this Google destination in Audience Manager, then it is not necessary to go through the allow-listing process again and you can proceed to the next steps.
 
-Before creating the [!DNL Google Ads] destination in Platform, you must contact [!DNL Google] for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact [!DNL Google] and provide the following information:
+Before creating the [!DNL Google Ads] destination in Platform, you must contact [!DNL Google] for Adobe to be put on the list of allowed data providers, and for your account to be added to the allowlist. Contact [!DNL Google] and provide the following information:
 
 * **Account ID**: Adobe's account ID with Google. Account ID: 87933855.
 * **Customer ID**: Adobe's customer account ID with Google. Customer ID: 89690775.
@@ -126,6 +125,6 @@ When configuring this destination, you may receive the following error:
 
 This error occurs either when customer accounts do not comply with the [prerequisites](#prerequisites) or when customers try to configure the destination without an existing [!DNL Google Ads] account.
 
-[!DNL Google] has deprecated new [!DNL Google Ads] cookie integrations with third-party vendors. To perform the [allow-list](#allow-listing) steps, you must have an existing integration with [!DNL Google Ads].
+[!DNL Google] has deprecated new [!DNL Google Ads] cookie integrations with third-party vendors. To perform the [allowlist](#allow-listing) steps, you must have an existing integration with [!DNL Google Ads].
 
 The recommended approach for using [!DNL Google Ads] is setting up a [[!DNL Google Customer Match]](google-customer-match.md) integration.

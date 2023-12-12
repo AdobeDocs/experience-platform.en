@@ -29,7 +29,7 @@ Before you configure your [!DNL Twitter Custom Audiences] destination, make sure
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|

@@ -759,7 +759,7 @@ The console output appears as seen below.
 (1 row)
 ```
 
-You can then query the computed statistics directly by referencing the `Statistics ID`. The example statement below allows you to view the output in full when used with the `Statistics ID` or the alias name. To learn more about this feature, see tha [alias name documentation](../essential-concepts/dataset-statistics.md#alias-name).
+You can then query the computed statistics directly by referencing the `Statistics ID`. The example statement below allows you to view the output in full when used with the `Statistics ID` or the alias name. To learn more about this feature, see tha [alias name documentation](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
@@ -782,7 +782,7 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-See the [dataset statistics documentation](../essential-concepts/dataset-statistics.md) for more information.
+See the [dataset statistics documentation](../key-concepts/dataset-statistics.md) for more information.
 
 #### TABLESAMPLE {#tablesample}
 
@@ -800,7 +800,7 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-See the [dataset samples documentation](../essential-concepts/dataset-samples.md) for more information.
+See the [dataset samples documentation](../key-concepts/dataset-samples.md) for more information.
 
 ### BEGIN
 
