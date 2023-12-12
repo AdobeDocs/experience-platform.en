@@ -4,14 +4,14 @@ description: This document provides an overview of the Bot Detection field group
 ---
 # [!UICONTROL Bot Detection] field group
 
-[!UICONTROL Bot Detection] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). The field group provides information about bot generated traffic. 
+[!UICONTROL Bot Detection] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). The field group provides information about bot-generated traffic. 
 
 ![A diagram of the [!UICONTROL Bot Detection] field group.](../../images/field-groups/bot-detection-information.png)
 
 | Display name               | Property        | Data type | Description                                             |
 |----------------------------|-----------------|-----------|---------------------------------------------------------|
-|[!UICONTROL Bot Detection]  | `botDetection`  | object    | Provides information about bot generated traffic.        |
-|[!UICONTROL Score]          | `score`         | number    | Bot probability score between 0 and 1, 0 meaning not a bot. |
+|[!UICONTROL Bot Detection]  | `botDetection`  | object    | Provides information about bot-generated traffic.        |
+|[!UICONTROL Score]          | `score`         | number    | The bot probability score from zero through one. A score of zero means that the traffic is not a bot. |
 
 {style="table-layout:auto"}
 
