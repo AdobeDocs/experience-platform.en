@@ -41,24 +41,22 @@ For bot detection to work on your datastream, you must add the **[!UICONTROL Bot
 
 You can configure bot detection after creating a datastream configuration. See the documentation on how to [create and configure a datastream](configure.md), then follow the instructions below to add bot detection capabilities to your datastream.
 
-
 Go to the datastreams list and select the datastream to which you want to add bot detection.
 
-![Image of Datastreams UI](assets/bot-detection/datastream-list.png)
+![Datastreams user interface showing the list of datastreams.](assets/bot-detection/datastream-list.png)
 
 In the datastream details page, select the **[!UICONTROL Bot Detection]** option on the right rail.
 
-![Image of Datastreams UI with the Bot Detection option highlighted](assets/bot-detection/bot-detection.png)
+![Bot detection option highlighted in the datastreams user interface.](assets/bot-detection/bot-detection.png)
 
 The **[!UICONTROL Bot Detection Rules]** page is shown.
 
-![Image of Datastreams UI with the Bot Detection option highlighted](assets/bot-detection/bot-detection-page.png)
+![Bot detection settings in the datastream settings page.](assets/bot-detection/bot-detection-page.png)
 
 From the Bot Detection Rules page, you can configure bot detection by using the following functionalities:
 
 * Using the [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * Creating your own bot detection rules.
-
 
 ### Use the IAB/ABC International Spiders and Bots List {#iab-list}
 
@@ -66,8 +64,7 @@ The [IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines
 
 To configure your datastream to use the [!DNL IAB/ABC International Spiders and Bots List], toggle the **[!UICONTROL Use IAB/ABC International Spiders and Bots List for bot detection on this datastream]** option, then select Save to apply the bot detection settings to your datastream.
 
-![Image of the bot detection settings screen with the IAB spiders and bot list enabled.](assets/bot-detection/bot-detection-list.png)
-
+![IAB spiders and bot list enabled.](assets/bot-detection/bot-detection-list.png)
 
 ### Create bot detection rules {#rules}
 
@@ -91,25 +88,21 @@ If you need more granular bot detection rules, you can combine the IP conditions
 | `sec-ch-ua-bitness`| Provides the "bitness" of the user-agent's underlying CPU architecture. This is the size in bits of an integer or memory address—typically 64 or 32 bits. |
 | `sec-ch-ua-wow64`| Indicates whether a user agent binary is running in 32-bit mode on 64-bit Windows. |
 
-
-
-
-
 To create a bot detection rule, follow the steps below:
 
 1. Select **[!UICONTROL Add New Rule]**.
     
-    ![Image of the bot detection settings screen with the Add New Rule button highlighted.](assets/bot-detection/bot-detection-new-rule.png)
+    ![Bot detection settings screen with the Add New Rule button highlighted.](assets/bot-detection/bot-detection-new-rule.png)
 
 2. Type a name for the rule in the **[!UICONTROL Rule Name]** field.
 
-    ![Image of the bot detection rule screen with the rule name highlighted.](assets/bot-detection/rule-name.png)
+    ![Bot detection rule screen with the rule name highlighted.](assets/bot-detection/rule-name.png)
 
 3. Select **[!UICONTROL Add new IP condition]** to add a new IP-based rule. You can define the rule by IP address or by IP address range.
 
-    ![Image of the bot detection rule screen with the IP address field highlighted.](assets/bot-detection/ip-address-rule.png)
+    ![Bot detection rule screen with the IP address field highlighted.](assets/bot-detection/ip-address-rule.png)
 
-    ![Image of the bot detection rule screen with the IP range field highlighted.](assets/bot-detection/ip-range-rule.png)
+    ![Bot detection rule screen with the IP range field highlighted.](assets/bot-detection/ip-range-rule.png)
 
     >[!TIP]
     >
@@ -117,15 +110,15 @@ To create a bot detection rule, follow the steps below:
 
 4. If you want to add header conditions to your rule, select **[!UICONTROL Add header conditions group]**, and then select the headers which you want the rule to use.
 
-    ![Image of the bot detection rule screen with the header conditions highlighted.](assets/bot-detection/header-conditions.png)
+    ![Bot detection rule screen with the header conditions highlighted.](assets/bot-detection/header-conditions.png)
 
     Then, add the conditions to be used for the selected header.
 
-    ![Image of the bot detection rule screen with the header conditions highlighted.](assets/bot-detection/header-condition-rule.png)
+    ![Bot detection rule screen with the header conditions highlighted.](assets/bot-detection/header-condition-rule.png)
 
 5. After configuring the desired bot detection rules, select **[!UICONTROL Save]** to have the rules applied to your datastream.
 
-    ![Image of the bot detection rule screen with the header conditions highlighted.](assets/bot-detection/bot-detection-save.png)
+    ![Bot detection rule screen with the header conditions highlighted.](assets/bot-detection/bot-detection-save.png)
 
 
 ## Bot detection rule examples {#examples}
@@ -136,19 +129,19 @@ To help you get started with bot detection, you can use the examples detailed be
 
 To mark all requests originating from a specific IP address as bot traffic, create a new bot detection rule which evaluates a single IP address, as shown in the image below.
 
-![Image of bot detection rule based on one IP address.](assets/bot-detection/bot-detection-one-ip.png)
+![Bot detection rule based on one IP address.](assets/bot-detection/bot-detection-one-ip.png)
 
 ### Bot detection based on two IP addresses {#two-ip}
 
 To mark all requests originating from either of two specific IP addresses as bot traffic, create a new bot detection rule which evaluates two IP addresses, as shown in the image below.
 
-![Image of bot detection rule based on two IP addresses.](assets/bot-detection/bot-detection-two-ips.png)
+![Bot detection rule based on two IP addresses.](assets/bot-detection/bot-detection-two-ips.png)
 
 ### Bot detection based on a range of IP addresses {#range}
 
 To mark all requests originating from any IP address in a specific range as bot traffic, create a new bot detection rule which evaluates an entire IP address range, as shown in the image below.
 
-![Image of bot detection rule based on IP range.](assets/bot-detection/bot-detection-range.png)
+![Bot detection rule based on IP range.](assets/bot-detection/bot-detection-range.png)
 
 ### Bot detection based on an IP address and a request header {#ip-header}
 
@@ -156,7 +149,7 @@ To mark all requests originating from a specific IP address and containing a spe
 
 This rule checks if the request originates from a specific IP address and if the `referer` request header starts with `www.adobe.com`.
 
-![Image of bot detection rule based on IP address and request header.](assets/bot-detection/bot-detection-header-ip.png)
+![Bot detection rule based on IP address and request header.](assets/bot-detection/bot-detection-header-ip.png)
 
 ### Bot detection based on multiple conditions {#multiple-conditions}
 
@@ -169,4 +162,4 @@ The rule shown in the image below identifies a bot-originating request if the fo
 
 The request originates from either one of the two IP addresses, the `referer` header starts with `www.adobe.com`, and the `sec-ch-ua-mobile` header identifies the request as originating from a desktop browser.
 
-![Image of bot detection rule based on multiple conditions.](assets/bot-detection/bot-detection-multiple.png)
+![Bot detection rule based on multiple conditions.](assets/bot-detection/bot-detection-multiple.png)

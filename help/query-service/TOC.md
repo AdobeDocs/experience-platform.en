@@ -16,13 +16,13 @@ feature: Queries
 - Data Distiller {#data-distiller}
     - [Overview](data-distiller/overview.md)
     - [License usage](data-distiller/license-usage.md)
+    - Derived datasets {#derived-datasets}
+        - [Overview](data-distiller/derived-datasets/overview.md)
+        - [Seamless SQL flow](data-distiller/derived-datasets/seamless-sql-flow.md)
+        - [Create decile-based derived datasets](data-distiller/derived-datasets/decile-based-derived-attributes.md)
     - Query accelerated store {#query-accelerated-store}
         - [Send accelerated queries](data-distiller/query-accelerated-store/send-accelerated-queries.md)
         - [Reporting insights data model guide](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
-    - Derived attributes {#derived-attributes}
-        - [Overview](data-distiller/derived-attributes/overview.md)
-        - [Seamless SQL flow](data-distiller/derived-attributes/seamless-sql-flow.md)
-        - [Create decile-based derived attributes](data-distiller/derived-attributes/decile-based-derived-attributes.md)
     - AI/ML feature pipelines {#ml-feature-pipelines}
         - [Overview](data-distiller/ml-feature-pipelines/overview.md)
         - [Connect to Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
@@ -37,7 +37,7 @@ feature: Queries
     - [Create a trended report of events](use-cases/trended-report-of-events.md)
     - [Consent analysis](use-cases/consent-analysis.md)
     - [Customer lifetime value](use-cases/customer-lifetime-value.md)
-    - [Decile-based derived attributes](use-cases/deciles-use-case.md)
+    - [Decile-based derived datasets](use-cases/deciles-use-case.md)
     - [Fuzzy match](use-cases/fuzzy-match.md)
     - [List the page views of a user](use-cases/list-visitor-sessions.md)
     - [List visitors by their page views](use-cases/visitors-by-number-of-page-views.md)

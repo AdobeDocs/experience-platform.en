@@ -131,6 +131,12 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE Batch]{type=Informative}
 
+### Data partner {#data-partner}
+
+Experience Platform provides support for ingesting data from a third-party database. See the following related documents for more information on specific source connectors:
+
+- [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE Batch]{type=Informative}
+
 ### eCommerce {#ecommerce}
 
 Experience Platform provides support for ingesting data from a third-party eCommerce system. See the following related documents for more information on specific source connectors:
