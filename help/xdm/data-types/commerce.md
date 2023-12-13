@@ -9,9 +9,7 @@ exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
 
 [!UICONTROL Commerce] is a standard Experience Data Model (XDM) data type that describes the records related to buying and selling activity.
 
-<img src='../images/data-types/commerce.PNG' width=400 /><br />
-
-Here is the table based on the provided JSON schema:
+![A diagram of the [!UICONTROL Commerce] data type.](../images/data-types/commerce.png)
 
 | Display name                             | Property              | Data type                          | Description                                                                                              |
 |------------------------------------------|-----------------------|------------------------------------|----------------------------------------------------------------------------------------------------------|
@@ -28,16 +26,28 @@ Here is the table based on the provided JSON schema:
 | [!UICONTROL Purchases]                   | `purchases`           | [[!UICONTROL Measure]](./measure.md)    | Used to track when an order has been accepted. The purchase event is the only required action in a commerce conversion. The purchase event must have a product list referenced.                                                                                                                                                                                                            |
 | [!UICONTROL Save For Laters]             | `saveForLaters`       | [[!UICONTROL Measure]](./measure.md)    | Describes when a product list is saved for future use, such as a wish list.                                              |
 | [!UICONTROL In Store Purchase]           | `inStorePurchase`     | [[!UICONTROL Measure]](./measure.md)    | 'inStore' purchase is saved for analytics use.                                                                         |
-| [!UICONTROL Cart]                        | `cart`                |[!UICONTROL cart]                        | The properties of the cart that contains one or more products.                                         |
-| [!UICONTROL Shipping]                    | `shipping`            |[!UICONTROL shipping]                    | Shipping details for one or more products.                                                             |
-| [!UICONTROL Billing]                     | `billing`             | [!UICONTROL billing]                    | Billing details for one or more payments.                                                               |
+| [!UICONTROL Cart]                        | `cart`                | [[!UICONTROL cart]](./cart.md)                        | The properties of the cart that contains one or more products.                                         |
+| [!UICONTROL Shipping]                    | `shipping`            |[[!UICONTROL shipping]](./shipping.md)                  | Shipping details for one or more products.                                                             |
+| [!UICONTROL Billing]                     | `billing`             | [[!UICONTROL billing]](#billing)        | Billing details for one or more payments.                                                               |
 | [!UICONTROL Instant Purchase]            | `instantPurchase`     | [[!UICONTROL Measure]](./measure.md)    | A product has been purchased instantly, potentially skipping the cart or checkout.                                    |
 | [!UICONTROL Requisition List Opens]      | `requisitionListOpens`| [[!UICONTROL Measure]](./measure.md)    | Initializations of a new Requisition List.                                                                             |
 | [!UICONTROL Requisition List Deletes]    | `requisitionListDeletes` | [[!UICONTROL Measure]](./measure.md) | Removal of requisition list.                                                                                           |
 | [!UICONTROL Requisition List Adds]       | `requisitionListAdds` | [[!UICONTROL Measure]](./measure.md)    | Addition of a product(s) to a requisition list.                                                                          |
 | [!UICONTROL Requisition List Removals]   | `requisitionListRemovals` | [[!UICONTROL Measure]](./measure.md)| Removal of a product(s) from a requisition product list.                                                               |
-| [!UICONTROL Requisition List]            | `requisitionList`     |     [!UICONTROL requisitionlist]        | The properties of requisition list created by the customer.                                                               |
+| [!UICONTROL Requisition List]            | `requisitionList`     |     [[!UICONTROL requisitionlist]](./requisition-list.md)        | The properties of requisition list created by the customer.                                                               |
 | [!UICONTROL Scope]                       | `commerceScope`       | [[!UICONTROL commercescope]](./e-scope.md) | Commerce scope identifiers of where an event occurred (store view, store, website, etc.).                            |
+
+{style="table-layout:auto"}
+
+## [!UICONTROL billing] data type {#billing}
+
+[!UICONTROL billing] is a standard Experience Data Model (XDM) data type that contains information about billing details. Specifically, it focuses on the billing address. 
+
+![A diagram of the billing data type.](../images/data-types/billing.png)
+
+| Display name                  | Property        | Data type       | Description              |
+|-------------------------------|-----------------|-----------------|--------------------------|
+| [!UICONTROL Billing Address]  | `address`       | [[!UICONTROL Postal Address]](./postal-address.md)   | Billing Address.         |
 
 {style="table-layout:auto"}
 

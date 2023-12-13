@@ -15,7 +15,7 @@ Also, check for required fields -->
 
 | Display name                  | Property        | Data type       | Description              |
 |-------------------------------|-----------------|-----------------|--------------------------|
-| [!UICONTROL Billing Address]  | `address`       | [address](noAddress)     | Billing Address.         |
+| [!UICONTROL Billing Address]  | `address`       | [[!UICONTROL address]](address.md)     | Billing Address.         |
 
 {style="table-layout:auto"}
 
