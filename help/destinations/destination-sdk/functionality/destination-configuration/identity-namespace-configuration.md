@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure the supported target identities for destinations built with Destination SDK.
 title: Identity namespace configuration
+exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
 ---
-
 # Identity namespace configuration
 
 Experience Platform uses identity namespaces to describe the type of specific identities. For example, an identity namespace called `Email` identifies a value like `name@email.com` as an email address.
@@ -139,7 +139,7 @@ After reading this article, you should have a better understanding of how to con
 To learn more about the other destination components, see the following articles:
 
 * [Customer authentication](customer-authentication.md)
-* [OAuth2 authentication](oauth2-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
 * [Customer data fields](customer-data-fields.md)
 * [UI attributes](ui-attributes.md)
 * [Schema configuration](schema-configuration.md)

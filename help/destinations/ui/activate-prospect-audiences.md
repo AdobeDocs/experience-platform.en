@@ -1,12 +1,9 @@
 ---
-
 title: Activate prospect audiences to destinations
 type: Tutorial
-hide: yes
-hidefromtoc: yes
 description: Learn how to activate prospect audiences to destinations
+exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
 ---
-
 # Activate prospect audiences
 
 >[!AVAILABILITY]
@@ -17,9 +14,9 @@ This article explains the workflow required to export [prospect audiences](/help
 
 ## Supported destinations {#supported-destinations}
 
-Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab. Use the **[!UICONTROL Data types]** filter and select **[!UICONTROL Prospects]** to see the destinations which support the activation of prospect audiences. Currently, exporting prospect audiences is available only to the [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) destination.  
+Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select the **[!UICONTROL Catalog]** tab. Use the **[!UICONTROL Data types]** filter and select **[!UICONTROL Prospects]** to see the destinations which support the activation of prospect audiences. Currently, exporting prospect audiences is available only to cloud storage destinations.  
 
-![Destinations which support dataset exports](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![Destinations which support prospect audiences.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
 ## Prerequisites {#prerequisites}
 
@@ -77,3 +74,11 @@ For the rest of the activation workflow to export prospect audiences, read the t
 Note that we will need to add links to other destination types here as more destinations become supported 
 
 -->
+
+## Other use cases achieved through partner data support {#other-use-cases}
+
+Explore further use cases enabled through partner data support in Real-Time CDP:
+
+* [Supplement first-party profiles with attributes from trusted data partners](/help/rtcdp/partner-data/supplement-first-party-profiles.md) to improve your data foundation and gain new insights into your customer base and gain better audience optimization.
+* Use third-party data support in Real-Time CDP to [expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers](/help/rtcdp/partner-data/prospecting.md).
+* [Leverage partner aided recognition for personalizing on-site experiences](/help/rtcdp/partner-data/onsite-personalization.md) during the visit without the user authenticating or having prior history with your brand.

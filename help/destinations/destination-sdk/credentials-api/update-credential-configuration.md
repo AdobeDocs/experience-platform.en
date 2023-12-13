@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to update an existing credential configuration through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to update an existing credential configuration through Adobe Experience Platform Destination SDK.
 title: Update a credential configuration
+exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
 ---
-
 # Update a credential configuration
 
 >[!IMPORTANT]

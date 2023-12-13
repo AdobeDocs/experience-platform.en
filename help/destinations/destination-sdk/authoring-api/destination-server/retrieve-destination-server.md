@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to retrieve a destination server configuration through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to retrieve a destination server configuration through Adobe Experience Platform Destination SDK.
 title: Retrieve a destination server configuration
+exl-id: 1b375343-e793-4c91-856f-af66fe71822e
 ---
-
 # Retrieve a destination server configuration
 
 This page exemplifies the API request and payload that you can use to retrieve information about an existing destination server configuration using the `/authoring/destination-servers` API endpoint.

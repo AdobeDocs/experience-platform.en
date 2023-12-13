@@ -259,4 +259,4 @@ A sample of the external audience membership payload can be seen below:
 
 >[!NOTE]
 >
->By default, external audience memberships are only retained for 30 days. To retain them for longer than 30 days, please use the `validUntil` field while ingesting your audience data. For more information on this field, please read the guide on [Segment Membership Details schema field groups](../../xdm/field-groups/profile/segmentation.md).
+>By default, external audience memberships are deleted after 30 days. To prevent deletion and retain them for longer than 30 days, please use the `validUntil` field while ingesting your audience data. For more information on this field, please read the guide on [Segment Membership Details schema field groups](../../xdm/field-groups/profile/segmentation.md).

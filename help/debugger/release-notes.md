@@ -7,6 +7,47 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ---
 # Adobe Experience Platform Debugger release notes
 
+## Version 1.5.3 - December 6, 2023
+
+### New features
+
+* Added a "lock to the active tab when opening the Debugger" setting.
+
+### Fixes and improvements
+
+* Fixed an issue where Analytics requests were missing on private domains.
+* Fixed an issue where Activity Map data would be missing from Analytics requests table.
+* Fixed an issue where viewing the Target Trace would cause a crash.
+* Added a warning when the Debugger fails to set up on-page infrastructure in Firefox.
+
+## Version 1.5.1 - November 2, 2023
+
+### Fixes and improvements
+
+* Fixed issues where Analytics events would be ignored or duplicated.
+* Fixed an issue where the maximum state storage size was exceeded.
+* Fixed an issue where the Edge Logs search would not filter events.
+
+## Version 1.5.0 - October 19, 2023
+
+### New features
+
+* Show links to property, environment, and rules in Tags summary and logs.
+
+### Fixes and improvements
+
+* Fixed an issue where Tags summary data was not sent.
+* Fixed issue where Assurance sessions would give a CORS error
+* Fixed an issue that prevented Target Trace from appearing.
+* Fixed the 'Send Feedback' button.
+* Fixed the missing "Datastream ID" in the Web SDK Summary for version ≥2.18.0.
+* Fixed an issue where Edge logs were not searchable.
+* Added a note about additional profiles for certain account types.
+
+## Version 1.4.1 - November 1, 2022
+
+* Improved performance on pages with many Adobe Experience Platform Assurance events.
+
 ## Version 1.4.0 - October 3, 2022
 
 * Added AEP Assurance debugging support for Web SDK hybrid implementations.

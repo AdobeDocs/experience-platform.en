@@ -256,7 +256,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 ## CREATE DATABASE
 
-The `CREATE DATABASE` command creates an ADLS database.
+The `CREATE DATABASE` command creates an Azure Data Lake Storage (ADLS) database.
 
 ```sql
 CREATE DATABASE [IF NOT EXISTS] db_name
@@ -290,7 +290,7 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 ## CREATE VIEW
 
-The following syntax defines a `CREATE VIEW` query:
+The following syntax defines a `CREATE VIEW` query for a dataset. This dataset can be an ADLS or accelerated store dataset.
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -309,6 +309,46 @@ CREATE VIEW V1 AS SELECT color, type FROM Inventory
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
 
+The following syntax defines a `CREATE VIEW` query which creates a view in the context of a database and schema.
+
+**Example**
+
+```sql
+CREATE VIEW db_name.schema_name.view_name AS select_query
+CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
+```
+
+| Parameters | Description|
+| ------ | ------ |
+| `db_name`  | The name of the database. |
+| `schema_name` | The name of the schema. |
+| `view_name` | The name of the view to be created. |
+| `select_query` | A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries). |
+
+**Example**
+
+```sql
+CREATE VIEW <dbV1 AS SELECT color, type FROM Inventory;
+
+CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory;
+```
+
+## SHOW VIEWS
+
+The following query shows the list of views.
+
+```sql
+SHOW VIEWS;
+```
+
+```console
+ Db Name  | Schema Name | Name  | Id       |  Dataset Dependencies | Views Dependencies | TYPE
+----------------------------------------------------------------------------------------------
+ qsaccel  | profile_agg | view1 | view_id1 | dwh_dataset1          |                    | DWH
+          |             | view2 | view_id2 | adls_dataset          | adls_views         | ADLS
+(2 rows)
+```
+
 ## DROP VIEW
 
 The following syntax defines a `DROP VIEW` query:
@@ -320,7 +360,7 @@ DROP VIEW [IF EXISTS] view_name
 | Parameters | Description|
 | ------ | ------ |
 | `IF EXISTS` | If this is specified, no exception is thrown if the view does **not** exist. |
-| `view_name` | The name of view to be deleted. |
+| `view_name` | The name of the view to be deleted. |
 
 **Example**
 
@@ -329,7 +369,7 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
-## Anonymous block
+## Anonymous block {#anonymous-block}
 
 An anonymous block consists of two sections: executable and exception-handling sections. In an anonymous block, the executable section is mandatory. However, the exception-handling section is optional.
 
@@ -364,6 +404,109 @@ EXCEPTION
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
 $$END;
+```
+
+### Conditional statements in an anonymous block {#conditional-anonymous-block-statements}
+
+The IF-THEN-ELSE control structure enables the conditional execution of a list of statements when a condition is evaluated as TRUE. This control structure is only applicable within an anonymous block. If this structure is used as a standalone command, it results in a syntax error ("Invalid command outside Anonymous Block"). 
+
+The code snippet below demonstrates the correct format for an IF-THEN-ELSE conditional statements in an anonymous block.
+
+```javascript
+IF booleanExpression THEN
+   List of statements;
+ELSEIF booleanExpression THEN 
+   List of statements;
+ELSEIF booleanExpression THEN 
+   List of statements;
+ELSE
+   List of statements;
+END IF
+```
+
+**Example**
+
+The example below executes `SELECT 200;`.
+
+```sql
+$$BEGIN
+    SET @V = SELECT 2;
+    SELECT @V;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT 200;
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT 'DEFAULT';
+    END IF;   
+
+ END$$;
+```
+
+This structure can be used in combination with `raise_error();` to return a custom error message. The code block seen below terminates the anonymous block with "custom error message".
+
+**Example**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 5;
+    SELECT @V;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT 200;
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT raise_error('custom error message');
+    END IF;   
+
+ END$$;
+```
+
+#### Nested IF statements
+
+Nested IF statements are supported within anonymous blocks.
+
+**Example**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 1;
+    IF @V = 1 THEN
+       SELECT 100;
+       IF @V > 0 THEN
+         SELECT 1000;
+       END IF;   
+    END IF;   
+
+ END$$; 
+```
+
+#### Exception blocks
+
+Exception blocks are supported within anonymous blocks.
+
+**Example**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 2;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT raise_error(concat('custom-error for v= ', '@V' ));
+
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT 'DEFAULT';
+    END IF;  
+EXCEPTION WHEN OTHER THEN 
+  SELECT 'THERE WAS AN ERROR';    
+ END$$;
 ```
 
 ### Auto to JSON {#auto-to-json}
@@ -616,7 +759,7 @@ The console output appears as seen below.
 (1 row)
 ```
 
-You can then query the computed statistics directly by referencing the `Statistics ID`. The example statement below allows you to view the output in full when used with the `Statistics ID` or the alias name. To learn more about this feature, see tha [alias name documentation](../essential-concepts/dataset-statistics.md#alias-name).
+You can then query the computed statistics directly by referencing the `Statistics ID`. The example statement below allows you to view the output in full when used with the `Statistics ID` or the alias name. To learn more about this feature, see tha [alias name documentation](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
@@ -639,7 +782,7 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-See the [dataset statistics documentation](../essential-concepts/dataset-statistics.md) for more information.
+See the [dataset statistics documentation](../key-concepts/dataset-statistics.md) for more information.
 
 #### TABLESAMPLE {#tablesample}
 
@@ -657,7 +800,7 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-See the [dataset samples documentation](../essential-concepts/dataset-samples.md) for more information.
+See the [dataset samples documentation](../key-concepts/dataset-samples.md) for more information.
 
 ### BEGIN
 
@@ -1068,7 +1211,7 @@ SHOW DATAGROUPS
    Database   |      Schema       | GroupType |      ChildType       |                     ChildName                       |               ChildId
   -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
    adls_db     | adls_scheema      | ADLS      | Data Lake Table      | adls_table1                                        | 6149ff6e45cfa318a76ba6d3
-   adls_db     | adls_scheema      | ADLS      | Data Warehouse Table | _table_demo1                                       | 22df56cf-0790-4034-bd54-d26d55ca6b21
+   adls_db     | adls_scheema      | ADLS      | Accelerated Store | _table_demo1                                       | 22df56cf-0790-4034-bd54-d26d55ca6b21
    adls_db     | adls_scheema      | ADLS      | View                 | adls_view1                                         | c2e7ddac-d41c-40c5-a7dd-acd41c80c5e9
    adls_db     | adls_scheema      | ADLS      | View                 | adls_view4                                         | b280c564-df7e-405f-80c5-64df7ea05fc3
 ```
@@ -1089,7 +1232,7 @@ SHOW DATAGROUPS FOR 'table_name'
 ```console
    Database   |      Schema       | GroupType |      ChildType       |                     ChildName                      |               ChildId
   -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
-   dwh_db_demo | schema2           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
-   dwh_db_demo | schema1           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
-   qsaccel     | profile_aggs      | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   dwh_db_demo | schema2           | QSACCEL   | Accelerated Store | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   dwh_db_demo | schema1           | QSACCEL   | Accelerated Store | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   qsaccel     | profile_aggs      | QSACCEL   | Accelerated Store | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
 ```

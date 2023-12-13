@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to create a destination server through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to create a destination server through Adobe Experience Platform Destination SDK.
 title: Create a destination server configuration
+exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
 ---
-
 # Create a destination server configuration
 
 Creating a destination server is the first step in creating your own destination with Destination SDK. The destination server includes configuration options for the [server](../../functionality/destination-server/server-specs.md) and [templating](../../functionality/destination-server/templating-specs.md) specs, the [message format](../../functionality/destination-server/message-format.md), and the [file formatting](../../functionality/destination-server/file-formatting.md) options (for file-based destinations).
@@ -238,7 +238,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"File-based SFTP destination server",
    "destinationServerType":"FILE_BASED_SFTP",
-   "fileBasedSftpDestination":{
+   "fileBasedSFTPDestination":{
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
@@ -313,10 +313,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |---|---|---|
 |`name`|String|The name of your destination connection.|
 |`destinationServerType`|String|Set this value according to your destination platform. For [!DNL SFTP] destinations, set this to `FILE_BASED_SFTP`.|
-|`fileBasedSftpDestination.rootDirectory.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
-|`fileBasedSftpDestination.rootDirectory.value`|String|The root directory of the destination storage.|
-|`fileBasedSftpDestination.hostName.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
-|`fileBasedSftpDestination.hostName.value`|String|The host name of the destination storage.|
+|`fileBasedSFTPDestination.rootDirectory.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
+|`fileBasedSFTPDestination.rootDirectory.value`|String|The root directory of the destination storage.|
+|`fileBasedSFTPDestination.hostName.templatingStrategy`|String| *Required.* Use `PEBBLE_V1`.|
+|`fileBasedSFTPDestination.hostName.value`|String|The host name of the destination storage.|
 |`port`|Integer|The SFTP file server port.|
 |`encryptionMode`|String|Indicates whether to use file encryption. Supported values: <ul><li>PGP</li><li>None</li></ul>|
 |`fileConfigurations`|N/A|See [file formatting configuration](../../functionality/destination-server/file-formatting.md) for detailed information on how to configure these settings.|
@@ -838,6 +838,103 @@ A successful response returns HTTP status 200 with details of your newly created
 
 +++
 
+
+>[!ENDTABS]
+
+
+### Create dynamic dropdown destination servers {#dynamic-dropdown-servers}
+
+Use [dynamic dropdowns](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) to dynamically retrieve and populate dropdown customer data fields, based on your own API. For example, you could retrieve a list of existing user accounts which you want to use for a destination connection.
+
+You need to configure a destination server for dynamic dropdowns before you can configure the dyamic dropwdown customer data field.
+
+See in the tab below an example of a destination server used to dynamically retrieve the values to be displayed in a dropdown selector, from an API.
+
+The sample payload below includes all parameters required for a dynamic schema server.
+
+>[!BEGINTABS]
+
+>[!TAB Dynamic dropdown server]
+
+**Create a dynamic dropdown server**
+
+You need to create a dynamic dropdown server similar to the one shown below when you configure a destination that retrieves the values for a dropdown customer data field from your own API endpoint.
+
++++Request
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"https://api.moviestar.com/data/{{customerData.users}}/items"
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+| Parameter | Type | Description |
+| -------- | ----------- | ----------- |
+|`name` | String | *Required.* Represents a friendly name of your dynamic dropdown server, visible only to Adobe. |
+|`destinationServerType` | String | *Required.* Set to `URL_BASED` for dynamic dropdown servers. |
+|`urlBasedDestination.url.templatingStrategy` | String | *Required.* <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items`.</li></ul>  |
+|`urlBasedDestination.url.value` | String | *Required.* Fill in the address of the API endpoint that Experience Platform should connect to and retrieve the dropwdown values. |
+|`httpTemplate.httpMethod` | String | *Required.* The method that Adobe will use in calls to your server. For dynamic dropdown servers, use `GET`. |
+|`httpTemplate.headers` | Object | *Optiona.l* Include any headers required to connect to the dynamic dropdown server. |
+|`responseFields.templatingStrategy` | String | *Required.* Use `PEBBLE_V1`. |
+|`responseFields.value` | String | *Required.* This string is the character-escaped transformation template that transforms the response received from your API into the values that will be displayed in the Platform UI. <br> <ul><li> For information on how to write the template, read the [Using templating section](../../functionality/destination-server/message-format.md#using-templating). </li><li> For more information about character escaping, refer to the [RFC JSON standard, section seven](https://tools.ietf.org/html/rfc8259#section-7). |
+
+{style="table-layout:auto"}
+
++++
+
++++Response
+
+A successful response returns HTTP status 200 with details of your newly created destination server configuration.
+
++++
 
 >[!ENDTABS]
 

@@ -1,8 +1,6 @@
 ---
 title: Encrypted Data Ingestion
 description: Learn how to ingest encrypted files through cloud storage batch sources using the API.
-hide: true
-hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
 ---
 # Encrypted data ingestion
@@ -326,6 +324,40 @@ A successful response returns the ID (`id`) of the newly created dataflow for yo
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+
+>[!BEGINSHADEBOX]
+
+**Restrictions on recurring ingestion**
+
+Encrypted data ingestion does not support ingestion of recurring or multi-level folders in sources. All encrypted files must be contained in a single folder. Wildcards with multiple folders in a single source path are also not supported.
+
+The following is an example of a supported folder structure, where the source path is `/ACME-customers/*.csv.gpg`.
+
+In this scenario, the files in bold are ingested into Experience Platform.
+
+* ACME-customers
+  * **File1.csv.gpg**
+  * File2.json.gpg
+  * **File3.csv.gpg**
+  * File4.json
+  * **File5.csv.gpg**
+
+The following is an example of an unsupported folder structure where the source path is `/ACME-customers/*`.
+
+In this scenario, the flow run will fail and return an error message indicating that data cannot be copied from the source.
+
+* ACME-customers
+  * File1.csv.gpg
+  * File2.json.gpg
+  * Subfolder1
+    * File3.csv.gpg
+    * File4.json.gpg
+    * File5.csv.gpg
+* ACME-loyalty
+  * File6.csv.gpg
+
+>[!ENDSHADEBOX]
 
 ## Next steps
 

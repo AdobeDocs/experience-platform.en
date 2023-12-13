@@ -201,7 +201,7 @@ You can manage the data governance labels for a dataset by selecting the inline 
 
 Data usage labels, applied at the schema level, allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to schemas for propagation to datasets.
 
-### Move to folders {#move-to-folders}
+## Move to folders {#move-to-folders}
 
 You can place datasets within folders for better dataset management. To move a dataset into a folder, select the ellipses (...) next to the dataset name you wish to manage, followed by **[!UICONTROL Move to folder]** from the dropdown menu.
 
@@ -211,7 +211,7 @@ The [!UICONTROL Move] dataset to folder dialog appears. Select the folder you wa
 
 ![The [!UICONTROL Move] dataset dialog with [!UICONTROL Move] highlighted.](../images/datasets/user-guide/move-dialog.png)
 
->![TIP]
+>[!TIP]
 >
 >You can also create folders directly from the Move dataset dialog. To create a folder, select the create folder icon (![The create folder icon.](../images/datasets/user-guide/create-folder-icon.png)) in the top right of the dialog.
 >
@@ -258,6 +258,10 @@ You can select on an individual **[!UICONTROL Batch ID]** to access the **[!UICO
 ![Details of the selected batch are displayed. This includes the number of records ingested, the number of records failed, the batch status, the file size, the ingestion start and end times, the dataset and batch IDs, the organization ID, the dataset name, and the access information.](../images/datasets/user-guide/batch-overview.png)
 
 If you wish to delete the batch, select **[!UICONTROL Delete batch]** near the top right of the dashboard. Deleting a batch also removes its records from the dataset that the batch was originally ingested to.
+
+>[!NOTE]
+>
+>If the ingested data has been enabled for Profile and processed, then deleting a batch does not delete that data from the Profile Store.
 
 ![The Delete batch button is highlighted on the dataset details page.](../images/datasets/user-guide/delete-batch.png)
 

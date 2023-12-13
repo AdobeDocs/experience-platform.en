@@ -10,11 +10,11 @@ Within the Adobe Experience Platform user interface, you can view and interact w
 
 This guide provides step-by-step instructions for accessing the [!UICONTROL Widget library] within Experience Platform, where you can select standard widgets and create custom widgets to customize the information that is displayed within your dashboards.
 
-For information on how to modify the location and size of the widgets already displayed in your dashboards, please refer to the [modify dashboards guide](modify.md).
-
 >[!NOTE]
 >
->The widgets shown in the [!UICONTROL License usage] dashboard cannot be customized. To learn more about this unique dashboard, read the [license usage dashboard documentation](../guides/license-usage.md).
+>Any updates made to the dashboards are per organization and by sandbox.
+
+For information on how to modify the location and size of the widgets already displayed in your dashboards, please refer to the [modify dashboards guide](modify.md).
 
 ## Access the widget library {#access}
 

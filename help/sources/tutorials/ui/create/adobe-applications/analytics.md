@@ -20,9 +20,9 @@ This tutorial requires a working understanding of the following components of Ex
 It is important to understand the following key terms used throughout this document:
 
 * **Standard attribute**: Standard attributes are any attribute that is pre-defined by Adobe. They contain the same meaning for all customers and are available in the [!DNL Analytics] source data and [!DNL Analytics] schema field groups.
-* **Custom attribute**: Custom attributes are any attribute in the custom variable hierarchy in [!DNL Analytics]. Custom attributes are used within an Adobe Analytics implementation to capture specific information into a report suite, and they can differ in their use from report suite to report suite. Custom attributes include eVars, props, and lists. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) for more information on eVars.
+* **Custom attribute**: Custom attributes are any attribute in the custom variable hierarchy in [!DNL Analytics]. Custom attributes are used within an Adobe Analytics implementation to capture specific information into a report suite, and they can differ in their use from report suite to report suite. Custom attributes include eVars, props, and lists. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) for more information on eVars.
 * **Any attribute in Custom field groups**: Attributes that originate from field groups created by customers are all user-defined and are considered to be neither standard nor custom attributes.
-* **Friendly names**: Friendly names are human-provided labels for custom variables in an [!DNL Analytics] implementation. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) for more information on friendly names.
+* **Friendly names**: Friendly names are human-provided labels for custom variables in an [!DNL Analytics] implementation. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) for more information on friendly names.
 
 ## Create a source connection with Adobe Analytics
 
@@ -258,33 +258,53 @@ The [!UICONTROL Review] step appears, allowing you to review your new Analytics 
 
 ![review](../../../../images/tutorials/create/analytics/review.png)
 
-### Monitor your dataflow
+## Monitor your dataflow {#monitor-your-dataflow}
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it. From the [!UICONTROL Catalog] screen, select **[!UICONTROL Dataflows]** to view a list of established flows associated with your Analytics account.
+Once your dataflow is complete, select **[!UICONTROL Dataflows]** in the sources catalog to monitor the activity and status of your data.
 
-![select-dataflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
+![The sources catalog with the dataflows tab selected.](../../../../images/tutorials/create/analytics/select-dataflows.png)
 
-The **Dataflows** screen appears. On this page is a pair of dataset flows, including information about their name, source data, creation time, and status.
+A list of existing Analytics dataflows in your organization appears. From here, select a target dataset to view its respective ingestion activity.
 
-The connector instantiates two dataset flows. One flow represents backfill data and the other is for live data. Backfill data is not configured for Profile but is sent to the data lake for analytical and data-science use-cases.
+![A list of existing Adobe Analytics dataflows in your organization.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-For more information on backfill, live data, and their respective latencies, see the [Analytics Data Connector overview](../../../../connectors/adobe-applications/analytics.md).
+The [!UICONTROL Dataset activity] page provides information on the progress of data that is being sent from Analytics to Experience Platform. The interface displays metrics such as the number of ingested records, number of ingested batches, and number of failed batches.
 
-Select the dataset flow you wish to view from the list.
+The source instantiates two dataset flows. One flow represents backfill data and the other is for live data. Backfill data is not configured for ingestion into Real-Time Customer Profile but is sent to the data lake for analytical and data-science use-cases.
 
-![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
+For more information on backfill, live data, and their respective latencies, read the [Analytics source overview](../../../../connectors/adobe-applications/analytics.md).
 
-The **[!UICONTROL Dataset activity]** page appears. This page displays the rate of messages being consumed in the form of a graph. Select **[!UICONTROL Data governance]** from the top header to access the labelling fields.
+![The dataset activity page for a given target dataset for Adobe Analytics data.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-![dataset-activity](../../../../images/tutorials/create/analytics/dataset-activity.png)
++++View individual batches using the legacy monitoring interface
 
-You can view a dataset flow's inherited labels from the [!UICONTROL Data governance] screen. For more information on how to label data coming from Analytics, visit the [data usage labels guide](../../../../../data-governance/labels/user-guide.md).
+The dataset activity page does not display a list of individual batches. To view a list of individual batches, select a chart in the dataset activity interface.
 
-![data-gov](../../../../images/tutorials/create/analytics/data-gov.png)
+![The dataset activity page with a chart selected.](../../../../images/tutorials/create/analytics/select-chart.png)
 
-To delete a dataflow, head to the [!UICONTROL Dataflows] page and then select the ellipses (`...`) beside the dataflow name and then select [!UICONTROL Delete].
+You are taken to the Monitoring dashboard. Next, select **[!UICONTROL ONLY INGEST FAILURES: YES]** to clear the filter and view a list of individual batches.
 
-![delete](../../../../images/tutorials/create/analytics/delete.png)
+![The monitoring dashboard with the failure filter selected.](../../../../images/tutorials/create/analytics/clear-filter.png)
+
+The interface updates to a list of individual batches, including information on their respective metrics. 
+
+![The legacy monitoring page for batch data.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
+
+| Metrics | Description |
+| --- | --- |
+| Batch ID | The ID of a given batch. This value is generated internally. |
+| Dataset name | The name of a given dataset used for Analytics data. |
+| Source | The source of the ingested data. |
+| Updated | The date of the most recent flow run iteration. |
+| Records in dataset | The total count of records in the dataset. **Note**: This parameter will occasionally display a status of `in-progress`. This status indicates that the record ingestion process is not yet complete. |
+| New profile fragments | The total count of new profile fragments that were ingested. |
+| Existing profile fragments | The total count of existing profile fragments. |
+| Identity records stitched | The total count of identity records that were stitched together after ingestion. |
+| Records in Profile | The total count of records that were ingested to Real-Time Customer Profile. |
+
+{style="table-layout:auto"}
+
++++
 
 ## Next steps and additional resources
 

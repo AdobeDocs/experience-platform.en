@@ -17,7 +17,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 
 >[!IMPORTANT]
 >
->Profile attributes may contain sensitive data. To protect this data, the **[!UICONTROL Custom Personalization]** destination requires you to use the [Edge Network Server API](/help/server-api/overview.md) when configuring the destination for attribute-based personalization. All the Server API calls must be made in an [authenticated context](../../../server-api/authentication.md).
+>Profile attributes may contain sensitive data. To protect this data, the  you must use the [Edge Network Server API](/help/server-api/overview.md) when configuring the **[!UICONTROL Custom Personalization]** destination for attribute-based personalization. All the Server API calls must be made in an [authenticated context](../../../server-api/authentication.md).
 >
 ><br>If you are already using Web SDK or Mobile SDK for your integration, you can retrieve attributes via the Server API by adding a server-side integration.
 >
@@ -25,11 +25,11 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 
 ## Overview {#overview}
 
-This destination provides a way to retrieve audience information from Adobe Experience Platform to external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites.
+Set up this destination to allow external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites to retrieve audience information from Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
-This integration is powered by the [Adobe Experience Platform Web SDK](../../../edge/home.md) or the [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). You must be using one of these SDKs to use this destination.
+This integration is powered by the [Adobe Experience Platform Web SDK](../../../edge/home.md) or the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). You must be using one of these SDKs to use this destination.
 
 >[!IMPORTANT]
 >
@@ -37,15 +37,12 @@ This integration is powered by the [Adobe Experience Platform Web SDK](../../../
 
 ## Supported audiences {#supported-audiences}
 
-This section describes all the audiences that you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
-This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
-
-*Additionally*, this destination also supports the activation of the audiences described in the table below.
-
-| Audience type | Description | 
----------|----------|
-| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -62,7 +59,7 @@ This destination supports the activation of all audiences generated through the 
 >id="platform_destinations_custom_personalization_datastream"
 >title="About datastream IDs"
 >abstract="This option determines in which data collection datastream the audiences will be included in the response to the page. The drop-down menu shows only datastreams that have the destination configuration enabled. You must configure a datastream before you can configure your destination."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en" text="Learn how to configure a datastream"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="Learn how to configure a datastream"
 
 >[!IMPORTANT]
 > 

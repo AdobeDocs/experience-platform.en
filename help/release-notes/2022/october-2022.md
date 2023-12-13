@@ -17,7 +17,7 @@ exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
 
 All data stored on Adobe Experience Platform is encrypted at rest using system-level keys. If you are using an application built on top of Platform, you can now opt to use your own encryption keys instead, giving you greater control over your data security.
 
-See the overview on [customer-managed keys](../../landing/governance-privacy-security/customer-managed-keys.md) for details on the feature.
+See the overview on [customer-managed keys](../../landing/governance-privacy-security/customer-managed-keys/overview.md) for details on the feature.
 
 ## Data collection {#data-collection}
 

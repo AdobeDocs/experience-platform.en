@@ -13,7 +13,7 @@ The [!UICONTROL Scheduled Queries] tab provides an overview of all your schedule
 
 To navigate to the [!UICONTROL Scheduled Queries] tab, select **[!UICONTROL Queries]** from the left navigation bar followed by **[!UICONTROL Scheduled Queries]**
 
-![The Scheduled Queries tab in the Queries workspace.](../images/ui/monitor-queries/scheduled-queries.png)
+![The Scheduled Queries tab in the Queries workspace with Scheduled Queries and Queries highlighted.](../images/ui/monitor-queries/scheduled-queries.png)
 
 The table below describes each available column.
 
@@ -155,7 +155,7 @@ Queries that use anonymous blocks to comprise their SQL statements are separated
 >
 >The run details of an anonymous block that uses the DROP command will **not** be reported as a separate subquery. Separate run details are available for CTAS queries, ITAS queries, and COPY statements used as anonymous block subqueries. Run details for the DROP command are currently not supported.  
 
-Anonymous blocks are denoted through the use of a `$$` prefix before the query. To find out more about anonymous blocks in query service, see the [anonymous block document](../essential-concepts/anonymous-block.md).
+Anonymous blocks are denoted through the use of a `$$` prefix before the query. To find out more about anonymous blocks in query service, see the [anonymous block document](../key-concepts/anonymous-block.md).
 
 Anonymous block subqueries have tabs to the left of the run status. Select a tab to display the run details.
 

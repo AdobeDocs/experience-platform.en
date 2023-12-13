@@ -45,7 +45,7 @@ It is important to understand the following terminology when working with Offer 
   >
   >You can copy the decision scope value from the **Activity Overview** page in the UI.
 
-  ![](assets/decision-scope-copy.png)
+  ![Decision copy settings.](assets/decision-scope-copy.png)
 
 * **Datastreams:** For more information, please read the [datastreams](../../../datastreams/overview.md) documentation.
 
@@ -326,4 +326,4 @@ To enable Offer Decisioning, perform the following steps:
 
 ## Limitations
 
-Some offer constraints are currently not supported with the mobile Experience Edge workflows, for example Capping. The Capping field value specifies the number of times an offer can be presented across all users. For more details, see [Offer eligibility rules and constraints documentation](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+Some offer constraints are currently not supported with the mobile Edge Network workflows, for example Capping. The Capping field value specifies the number of times an offer can be presented across all users. For more details, see [Offer eligibility rules and constraints documentation](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
