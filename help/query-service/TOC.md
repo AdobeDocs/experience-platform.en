@@ -19,10 +19,10 @@ feature: Queries
     - Query accelerated store {#query-accelerated-store}
         - [Send accelerated queries](data-distiller/query-accelerated-store/send-accelerated-queries.md)
         - [Reporting insights data model guide](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
-    - Derived attributes {#derived-attributes}
-        - [Overview](data-distiller/derived-attributes/overview.md)
-        - [Seamless SQL flow](data-distiller/derived-attributes/seamless-sql-flow.md)
-        - [Create decile-based derived attributes](data-distiller/derived-attributes/decile-based-derived-attributes.md)
+    - Derived datasets {#derived-datasets}
+        - [Overview](data-distiller/derived-datasets/overview.md)
+        - [Seamless SQL flow](data-distiller/derived-datasets/seamless-sql-flow.md)
+        - [Create decile-based derived datasets](data-distiller/derived-datasets/decile-based-derived-attributes.md)
     - AI/ML feature pipelines {#ml-feature-pipelines}
         - [Overview](data-distiller/ml-feature-pipelines/overview.md)
         - [Connect to Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
