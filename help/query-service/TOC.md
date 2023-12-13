@@ -16,13 +16,13 @@ feature: Queries
 - Data Distiller {#data-distiller}
     - [Overview](data-distiller/overview.md)
     - [License usage](data-distiller/license-usage.md)
-    - Query accelerated store {#query-accelerated-store}
-        - [Send accelerated queries](data-distiller/query-accelerated-store/send-accelerated-queries.md)
-        - [Reporting insights data model guide](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
     - Derived datasets {#derived-datasets}
         - [Overview](data-distiller/derived-datasets/overview.md)
         - [Seamless SQL flow](data-distiller/derived-datasets/seamless-sql-flow.md)
         - [Create decile-based derived datasets](data-distiller/derived-datasets/decile-based-derived-attributes.md)
+    - Query accelerated store {#query-accelerated-store}
+        - [Send accelerated queries](data-distiller/query-accelerated-store/send-accelerated-queries.md)
+        - [Reporting insights data model guide](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
     - AI/ML feature pipelines {#ml-feature-pipelines}
         - [Overview](data-distiller/ml-feature-pipelines/overview.md)
         - [Connect to Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
