@@ -37,7 +37,7 @@ feature: Queries
     - [Create a trended report of events](use-cases/trended-report-of-events.md)
     - [Consent analysis](use-cases/consent-analysis.md)
     - [Customer lifetime value](use-cases/customer-lifetime-value.md)
-    - [Decile-based derived attributes](use-cases/deciles-use-case.md)
+    - [Decile-based derived datasets](use-cases/deciles-use-case.md)
     - [Fuzzy match](use-cases/fuzzy-match.md)
     - [List the page views of a user](use-cases/list-visitor-sessions.md)
     - [List visitors by their page views](use-cases/visitors-by-number-of-page-views.md)
