@@ -463,7 +463,7 @@ The overlap namespace-audience model is comprised of the following datasets:
 - `adwh_dim_overlap_namespaces`
 - `adwh dim overlap namespaces`
 
-<!-- also needs the SQL. Does this apply to any particular widget? -->
+<!-- Also needs the SQL. Does this apply to any particular widget? -->
 
 ### Custom Model {#custom-model}
 
