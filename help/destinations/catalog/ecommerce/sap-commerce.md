@@ -7,7 +7,7 @@ last-substantial-update: 2023-12-14
 
 [!DNL SAP Commerce] formerly known as [[!DNL Hybris]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), is a cloud-based e-commerce platform solution for B2B and B2C enterprises and available as part of the SAP Customer Experience portfolio. [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) is a product under the portfolio and enables complete subscription lifecycle management with simplified selling and payment experiences through standardized integrations.
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL SAP Subscription Billing] customer management API](https://api.sap.com/api/BusinessPartner_APIs/path/PUT_customers-customerNumber), to update your customer details within [!DNL SAP] from an existing Experience Platform audience after activation.
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL SAP Subscription Billing] customer management API](https://api.sap.com/api/BusinessPartner_APIs/path/PUT_customers-customerNumber), to update your customer details within [!DNL SAP Commerce] from an existing Experience Platform audience after activation.
 
 Instructions to authenticate to your [!DNL SAP Commerce] instance are further below, in the [Authenticate to destination](#authenticate) section.
 
@@ -72,7 +72,7 @@ In order to export data from Platform to your [!DNL SAP Commerce] account you ne
 
 #### Create custom references in [!DNL SAP Subscription Billing] {#prerequisites-custom-reference}
 
-Login to your [!DNL SAP Subscription Billing] account and navigate to the **[Master Data and Configuration]** > **[Custom References]** page, click **Create** to add new attributes which you will use in the []() step.
+Login to your [!DNL SAP Subscription Billing] account and navigate to the **[Master Data and Configuration]** > **[Custom References]** page, click **[!UICONTROL Create]** to add new attributes which you will use in the [Schedule audience export and example](#schedule-segment-export-example) step.
 
 ![Image showing where to create a custom reference in SAP Subscription Billing.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
@@ -110,7 +110,7 @@ This destination also supports the activation of the audiences described in the 
 | Audience type | Description | 
 ---------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | X | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
