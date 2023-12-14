@@ -1,14 +1,14 @@
 ---
 title: PubMatic Connect
 description: PubMatic maximizes customer value by delivering the programmatic digital marketing supply chain of the future. PubMatic Connect combines platform technology and dedicated service to enhance how inventory and data are packaged and transacted.
-last-substantial-update: 2023-12-12
+last-substantial-update: 2023-12-14
 ---
 
 # PubMatic Connect destination {#pubmatic-connect}
 
 ## Overview {#overview}
 
-[!DNL PubMatic Connect] maximizes customer value by delivering the programmatic digital marketing supply chain of the future. [!DNL PubMatic Connect] combines platform technology and dedicated service to enhance how inventory and data are packaged and transacted.
+Use [!DNL PubMatic Connect] to maximize customer value by delivering the programmatic digital marketing supply chain of the future. [!DNL PubMatic Connect] combines platform technology and dedicated service to enhance how inventory and data are packaged and transacted.
 
 Use this destination to send audience data to the [!DNL PubMatic Connect] platform.
 
@@ -18,11 +18,11 @@ Use this destination to send audience data to the [!DNL PubMatic Connect] platfo
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL PubMatic Connect] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL PubMatic Connect] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
 
 ### Targeting users on mobile, web, and CTV platforms {#targeting}
 
-Publisher or data providers want to send audiences from Adobe Experience Platform to [!DNL PubMatic Connect] to target users on mobile, web, and CTV platforms, using a large range of identifiers.
+Publishers or data providers want to send audiences from Adobe Experience Platform to [!DNL PubMatic Connect] to target users on mobile, web, and CTV platforms, using a large range of identifiers.
 
 ## Prerequisites {#prerequisites}
 
