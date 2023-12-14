@@ -135,7 +135,7 @@ Refer to the table below for information about the destination export type and f
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL SAP Commerce]. Alternatively you can locate it under the **[!UICONTROL Ecommerce]** category.
+Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL SAP Commerce]. Alternatively you can locate it under the **[!UICONTROL eCommerce]** category.
 
 ### Authenticate to destination {#authenticate}
 
@@ -185,9 +185,9 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 The `Email` identity is a mandatory mapping for this destination. Follow the steps below to map it:
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
 ![Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
-1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity.
+1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** and select `customerNumber`.
 ![Platform UI screenshot selecting email as a source attribute to map as identity.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
-1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select attributes]** and select `customerNumber`.
+1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select the `customerNumber` identity.
 ![Platform UI screenshot selecting email as a target attribute to map as identity.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
 
 | Source Field | Target Field | Mandatory |
@@ -209,7 +209,7 @@ To add any other attributes you want to update between your XDM profile schema a
 
 >[!IMPORTANT]
 >
-> Target field names are case sensitive and should match the [!DNL SAP Subscription Billing] attribute names. The only exception for this is `country` where you should use `countryCode` instead. [!DNL SAP Subscription Billing] supports alpha-2, alpha-3 code (ISO 3166) [country codes](https://www.iso.org/obp/ui/en/). The value is case sensitive and must be between 0-3 characters, hence ensure you provide exactly as defined else you would encounter errors: `The country code {} does not exist` or `size must be between 0 and 3`.
+> Target field names are case sensitive and should match the [!DNL SAP Subscription Billing] attribute names. The only exception for this is `country` where you should use `countryCode` instead. [!DNL SAP Subscription Billing] supports alpha-2 (ISO 3166) country codes. The value is case sensitive and must be between 0-3 characters, hence ensure you provide exactly as defined else you would encounter errors: `The country code {} does not exist` or `size must be between 0 and 3`.
 
 #### Map `mandatory` attributes for the selected customer type
 
@@ -243,7 +243,7 @@ You can then add any additional mappings between your XDM profile schema and the
 
 | Source Field | Target Field | Mandatory |
 | --- | --- | --- |
-| `xdm: person.name.firstName` | `Attribute: firstname` |
+| `xdm: person.name.firstName` | `Attribute: firstName` |
 | `xdm: workAddress.street1` | `Attribute: street` |
 | `xdm: workAddress.city` | `Attribute: city` |
 
@@ -254,7 +254,7 @@ An example with both mandatory and optional attribute mappings where the custome
 
 | Source Field | Target Field | Mandatory |
 | --- | --- | --- |
-| `xdm: person.name.firstName` | `Attribute: firstname` |
+| `xdm: person.name.firstName` | `Attribute: firstName` |
 | `xdm: workAddress.street1` | `Attribute: street` |
 | `xdm: workAddress.city` | `Attribute: city` |
 
