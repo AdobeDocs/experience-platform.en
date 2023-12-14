@@ -38,7 +38,7 @@ Geolocation and network lookup settings help you define the level of granularity
 
 Expand the **[!UICONTROL Geolocation and network lookup]** section to configure the settings described below.
 
-![Platform UI screenshot showing the datastream configuration screen with the geolocation and network lookup settings highlighted.](assets/configure/geolookup.png)
+![Datastream configuration screen with the geolocation and network lookup settings highlighted.](assets/configure/geolookup.png)
 
 | Setting | Description |
 | --- | --- |
@@ -57,7 +57,7 @@ The **[!UICONTROL Device Lookup]** settings allow you to select device-specific 
 
 Expand the **[!UICONTROL Device Lookup]** section to configure the settings described below.
 
-![Platform UI screenshot showing the datastream configuration screen with the device lookup settings highlighted.](assets/configure/device-lookup.png)
+![Datastream configuration screen with the device lookup settings highlighted.](assets/configure/device-lookup.png)
 
 >[!IMPORTANT]
 >
@@ -103,7 +103,7 @@ From here, if you are configuring your datastream for Experience Platform, follo
 
 After configuring a new datastream or selecting an existing one to view, the details page for that datastream appears. Here you can find further information about the datastream, including its ID.
 
-![Details page for a created datastream](assets/configure/view-details.png)
+![Datastream details page.](assets/configure/view-details.png)
 
 From the datastream details screen, you can [add services](#add-services) to enable capabilities from the Adobe Experience Cloud products you have access to. You can also edit the datastream's [basic configuration](#create), update its [mapping rules](./data-prep.md), [copy the datastream](#copy), or delete it entirely.
 
@@ -111,11 +111,11 @@ From the datastream details screen, you can [add services](#add-services) to ena
 
 On the details page of a datastream, select **[!UICONTROL Add Service]** to start adding available services for that datastream.
 
-![Select Add Service to continue](assets/configure/add-service.png)
+![Select Add Service to continue.](assets/configure/add-service.png)
 
 On the next screen, use the dropdown menu to select a service to configure for this datastream. Only the services that you have access to are shown in this list.
 
-![Select a service from the list](assets/configure/service-selection.png)
+![Select a service from the list.](assets/configure/service-selection.png)
 
 Select the desired service, fill in the configuration options that appear, and then select **[!UICONTROL Save]** to add the service to the datastream. All added services appear in the details view for the datastream.
 
@@ -131,7 +131,7 @@ The subsections below describe the configuration options for each service.
 
 This service controls whether and how data is sent to Adobe Analytics. Additional details can be found in the guide on [sending data to Analytics](../edge/data-collection/adobe-analytics/analytics-overview.md).
 
-![Adobe Analytics settings Block](assets/configure/analytics-config.png)
+![Adobe Analytics datastream settings.](assets/configure/analytics-config.png)
 
 | Setting | Description |
 | --- | --- |
@@ -142,7 +142,7 @@ This service controls whether and how data is sent to Adobe Analytics. Additiona
 
 This service controls whether and how data is sent to Adobe Audience Manager. All that is needed to send data to Audience Manager is to enable this section. The other settings are optional but encouraged.
 
-![Adobe Audience Manage settings block](assets/configure/audience-manager-config.png)
+![Adobe Audience Manage datastream settings.](assets/configure/audience-manager-config.png)
 
 | Setting | Description |
 | --- | --- |
@@ -161,7 +161,7 @@ This service controls whether and how data is sent to Adobe Audience Manager. Al
 
 This service controls whether and how data is sent to Adobe Experience Platform.
 
-![Adobe Experience Platform settings block](assets/configure/platform-config.png)
+![Adobe Experience Platform datastream settings.](assets/configure/platform-config.png)
 
 | Setting | Description |
 |---| --- |
@@ -176,7 +176,7 @@ This service controls whether and how data is sent to Adobe Experience Platform.
 
 This service controls whether and how data is sent to Adobe Target.
 
-![Adobe Target settings block](assets/configure/target-config.png)
+![Adobe Target datastream settings.](assets/configure/target-config.png)
 
 | Setting | Description |
 | --- | --- |
@@ -189,7 +189,7 @@ This service controls whether and how data is sent to Adobe Target.
 
 This service controls whether and how data is sent to [event forwarding](../tags/ui/event-forwarding/overview.md).
 
-![Event Forwarding section of the configuration UI](assets/configure/event-forwarding-config.png)
+![Event Forwarding section of the datastream configuration screen.](assets/configure/event-forwarding-config.png)
 
 | Setting | Description |
 | --- | --- |
@@ -210,15 +210,15 @@ You can create a copy of an existing datastream and alter its details as needed.
 
 From the main page in the [!UICONTROL Datastreams] workspace, select the ellipsis (**....**) for the datastream in question, then select **[!UICONTROL Copy]**.
 
-![Image showing the [!UICONTROL Copy] option being selected from the datastream list view](assets/configure/copy-datastream-list.png)
+![Image showing the Copy option being selected from the datastream list view.](assets/configure/copy-datastream-list.png)
 
 Alternatively, you can select **[!UICONTROL Copy Datastream]** from the details view of a given datastream.
 
-![Image showing the [!UICONTROL Copy] option being selected from the datastream details view](assets/configure/copy-datastream-details.png)
+![Copy option being selected from the datastream details view.](assets/configure/copy-datastream-details.png)
 
 A confirmation dialog appears, prompting you to provide a unique name for the new datastream to be created, along with details about the configuration options that will be copied over. When ready, select **[!UICONTROL Copy]**.
 
-![Image of the confirmation dialog for copying a datastream](assets/configure/copy-datastream-confirm.png)
+![Confirmation dialog for copying a datastream.](assets/configure/copy-datastream-confirm.png)
 
 The main page of the [!UICONTROL Datastreams] workspace reappears with the new datastream listed.
 

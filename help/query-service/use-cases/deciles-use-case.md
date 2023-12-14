@@ -1,19 +1,19 @@
 ---
-title: Decile-based Derived Attributes Use Case
-description: This guide demonstrates the steps required to use Query Service to create decile-based derived attributes for use with your Profile data.
+title: Decile-based Derived Datasets Use Case
+description: This guide demonstrates the steps required to use Query Service to create decile-based derived datasets for use with your Profile data.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
 ---
-# Decile-based derived attributes use case
+# Decile-based derived datasets use case
 
-Derived attributes facilitate complicated use cases for analyzing data from the data lake that can be used with other downstream Platform services or published into your Real-Time Customer Profile data.
+Derived datasets facilitate complicated use cases for analyzing data from the data lake that can be used with other downstream Platform services or published into your Real-Time Customer Profile data.
 
-This example use case demonstrates how to create decile-based derived attributes for use with your Real-Time Customer Profile data. Using an airline loyalty scenario as an example, this guide informs you how to create a dataset that uses categorical deciles to segment and create audiences based on ranked attributes.
+This example use case demonstrates how to create decile-based derived datasets for use with your Real-Time Customer Profile data. Using an airline loyalty scenario as an example, this guide informs you how to create a dataset that uses categorical deciles to segment and create audiences based on ranked attributes.
 
 The following key concepts are illustrated:
 
 * Schema creation for decile bucketing.
 * Categorical decile creation.
-* Creation of complex derived attributes.
+* Creation of complex derived datasets.
 * Calculation of deciles over a lookback period.
 * An example query to demonstrate aggregation, ranking, and adding unique identities to allow for audiences to be generated based on these decile buckets.
 
@@ -28,9 +28,9 @@ This guide requires a working understanding of [query execution in Query Service
 
 ## Objectives
 
-The example given in this document uses deciles to build derived attributes for ranking data from an airline loyalty schema. Derived attributes allow you to maximise the utility of your data by identifying an audience based on the top 'n' % for a chosen category. 
+The example given in this document uses deciles to build derived datasets for ranking data from an airline loyalty schema. Derived datasets allow you to maximise the utility of your data by identifying an audience based on the top 'n' % for a chosen category. 
 
-## Build decile-based derived attributes 
+## Build decile-based derived datasets 
 
 To define the ranking of deciles based on a particular dimension and a corresponding metric, a schema must be designed to allow for decile bucketing.
 
@@ -50,7 +50,7 @@ The initial airline loyalty dataset for this example is "Airline Loyalty Data", 
 
 **Sample data**
 
-The following table displays the sample data contained in the `_profilefoundationreportingstg` object used for this example. It provides context for the use of decile buckets to create complex derived attributes.
+The following table displays the sample data contained in the `_profilefoundationreportingstg` object used for this example. It provides context for the use of decile buckets to create complex derived datasets.
 
 >[!NOTE]
 >
@@ -293,4 +293,4 @@ Run the query to populate the decile dataset. You can also save the query as a t
 
 ## Next steps
 
-The example use case provided above highlights steps to make decile attributes available in Real-Time Customer Profile. This allows for Segmentation Service, either via a user interface or RESTful API, to be able to generate audiences based on these decile buckets. See the [Segmentation Service overview](../../segmentation/home.md) for information on how to create, evaluate, and access segments.
+The example use case provided above highlights steps to make decile-based derived datasets available in Real-Time Customer Profile. This allows for Segmentation Service, either via a user interface or RESTful API, to be able to generate audiences based on these decile buckets. See the [Segmentation Service overview](../../segmentation/home.md) for information on how to create, evaluate, and access segments.
