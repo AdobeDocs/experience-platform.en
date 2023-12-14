@@ -1,6 +1,6 @@
 ---
 title: Media Event Information Data Type
-description: This document provides an overview of the Media Event Information Experience Data Model (XDM) data type.
+description: Learn about the Media Event Information Experience Data Model (XDM) data type.
 ---
 # [!UICONTROL Media event information] data type
 

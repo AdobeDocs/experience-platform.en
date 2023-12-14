@@ -1,13 +1,14 @@
 ---
 title: Media Details Information Data Type
-description: This document provides an overview of the Media Details Information Experience Data Model (XDM) data type.
+description: Learn about the Media Details Information Experience Data Model (XDM) data type.
 ---
 # [!UICONTROL Media details information] data type 
 
-[!UICONTROL Media details information] is a standard Experience Data Model (XDM) data type that captures essential details about media playback events. It includes specifics such as the playhead position within the content, unique session identifiers, and various nested properties related to session, player states, advertising, chapters, and errors among others. This data type provides a comprehensive overview of the playback experience, enabling tracking and analysis of media consumption patterns and associated events during playback sessions.
+[!UICONTROL Media details information] is a standard Experience Data Model (XDM) data type that captures essential details about media playback events. Use the [!UICONTROL Media details information] data type to capture details such as the playhead position within the content, unique session identifiers, and various nested properties related to session, among others. This data type provides a comprehensive overview of the playback experience, that enables the tracking and analysis of media consumption patterns and associated events during playback sessions.
 
-
++++Select to display a diagram of the [!UICONTROL Media details information] data type.
 ![A diagram of the [!UICONTROL Media details information] data type.](../images/data-types/media-details-information.png)
++++
 
 | Display name          | Property        | Data type | Description |
 | --------------------- | --------------- | --------- | ----------- |

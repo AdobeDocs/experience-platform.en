@@ -1,10 +1,10 @@
 ---
 title: Chapter Details Information Data Type
-description: This document provides an overview of the Chapter Details Information Experience Data Model (XDM) data type.
+description: Learn about the Chapter Details Information Experience Data Model (XDM) data type.
 ---
 # [!UICONTROL Chapter Details Information] data type
 
-[!UICONTROL Chapter Details Information] is a standard Experience Data Model (XDM) data type that describes various attributes related to chapters or segments within media content. It captures details such as chapter name, duration, position, ID, playback status (started/completed), and the time spent on each chapter.
+[!UICONTROL Chapter Details Information] is a standard Experience Data Model (XDM) data type that describes various attributes related to chapters or segments within media content. Use the [!UICONTROL Chapter Details Information] data type to capture details such as chapter name, duration, position, ID, playback status (started/completed), and the time spent on each chapter.
 
 ![A diagram of the  Chapter Details Information data type.](../images/data-types/chapter-details-information.png)
 

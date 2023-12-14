@@ -1,10 +1,10 @@
 ---
 title: Error Details Information Data Type
-description: This document provides an overview of the Error Details Information Experience Data Model (XDM) data type.
+description: Learn about the Error Details Information Experience Data Model (XDM) data type.
 ---
 # [!UICONTROL Error Details Information] data type
 
-[!UICONTROL Error Details Information] is a standard Experience Data Model (XDM) data type that describes error details. It contains properties for error identification and source. The error ID is a string identifying the error, and the error source specifies whether it originates from the player or an external source.
+[!UICONTROL Error Details Information] is a standard Experience Data Model (XDM) data type that describes error details. Use the [!UICONTROL Error Details Information] data type to capture details for the error source and identification. The error ID identifies the error and the error source specifies whether it originates from the player or an external source.
 
 ![A diagram of the  Error Details Information data type.](../images/data-types/error-details-information.png)
 

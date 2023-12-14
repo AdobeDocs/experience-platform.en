@@ -1,10 +1,10 @@
 ---
 title: Custom Metadata Details Information Data Type
-description: This document provides an overview of the Custom Metadata Details Information Experience Data Model (XDM) data type.
+description: Learn about the Custom Metadata Details Information Experience Data Model (XDM) data type.
 ---
 # [!UICONTROL Custom Metadata Details Information] data type
 
-[!UICONTROL Custom Metadata Details Information] is a standard Experience Data Model (XDM) data type defines a structure for storing custom metadata. It includes fields for the name and value of custom metadata associated with content or interactions, and allows flexibility in adding and organizing additional information beyond the standard predefined properties.
+[!UICONTROL Custom Metadata Details Information] is a standard Experience Data Model (XDM) data type defines a structure for storing custom metadata. Use the [!UICONTROL Custom Metadata Details Information] data type to capture details such as the name and value of custom metadata associated with content or interactions.
 
 ![A diagram of the  Custom Metadata Details Information data type.](../images/data-types/custom-metadata-details-information.png)
 

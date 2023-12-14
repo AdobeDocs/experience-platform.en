@@ -1,10 +1,10 @@
 ---
 title: MediaAnalytics Interaction Details Schema Field Group
-description: This document provides an overview of the MediaAnalytics Interaction Details schema field group.
+description: Learn about the MediaAnalytics Interaction Details schema field group.
 ---
 # [!UICONTROL MediaAnalytics Interaction Details] schema field group
 
-[!UICONTROL MediaAnalytics Interaction Details] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). The field group provides an enriched set of data fields to comprehensively monitor and analyze interactions with media content across various platforms or channels.
+[!UICONTROL MediaAnalytics Interaction Details] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Use this field group to capture enriched data fields that comprehensively monitor and analyze interactions with media content across various platforms or channels.
 
 ![A schema diagram of the [!UICONTROL MediaAnalytics Interaction Details] schema field group.](../../images/field-groups/mediaanalytics-interaction.png)
 

@@ -1,12 +1,14 @@
 ---
 title: Advertising Details Information Data Type
-description: This document provides an overview of the Advertising Details Information Experience Data Model (XDM) data type.
+description: Learn about the Advertising Details Information Experience Data Model (XDM) data type.
 ---
 # [!UICONTROL Advertising Details Information] data type
 
-[!UICONTROL Advertising Details Information] is a standard Experience Data Model (XDM) data type that captures key attributes related to advertisements. It includes information such as the ad ID, advertiser and campaign IDs, length, position within a sequence, details about the player rendering the ad, and so on. This data type helps track and analyze various aspects of ad performance and engagement, providing insights into how audiences interact with and respond to different advertisements.
+[!UICONTROL Advertising Details Information] is a standard Experience Data Model (XDM) data type that captures key attributes related to advertisements. It includes information such as the ad ID, advertiser and campaign IDs, length, position within a sequence, details about the player rendering the ad, and so on. You can use this data type to track and analyze various aspects of ad performance and engagement, and provide insights into how audiences interact with and respond to different advertisements.
 
++++Select to display a diagram of the Advertising Details Information data type.
 ![A diagram of the Advertising Details Information data type.](../images/data-types/advertising-details-information.png)
++++
 
 | Display name               | Property        | Data type | Description                                                                                   |
 |----------------------------|-----------------|-----------|-----------------------------------------------------------------------------------------------|
@@ -20,7 +22,7 @@ description: This document provides an overview of the Advertising Details Infor
 | [!UICONTROL Ad Creative ID]             | `creativeID`  | string    | The ID of the ad creative.                                                                         |
 | [!UICONTROL Ad Site ID]                 | `siteID`      | string    | The ID of the ad site.                                                                             |
 | [!UICONTROL Ad Creative URL]            | `creativeURL` | string    | The URL of the ad creative.                                                                       |
-| [!UICONTROL Ad Placement ID]            | `placementID` | string    | Placement ID of the ad.                                                                        |
+| [!UICONTROL Ad Placement ID]            | `placementID` | string    | The placement ID of the ad.                                                                        |
 | [!UICONTROL Ad Completed]               | `isCompleted` | boolean   | Tracks whether the ad has completed.                                                                               |
 | [!UICONTROL Ad Started]                 | `isStarted`   | boolean   | Tracks whether the Ad has started.                                                                                 |
 | [!UICONTROL Ad Time Played]             | `timePlayed`  | integer   | The total amount of time, in seconds, spent watching the ad (that is, the number of seconds played). |

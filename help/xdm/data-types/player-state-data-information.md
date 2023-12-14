@@ -1,10 +1,10 @@
 ---
 title: Player State Data Information Data Type
-description: This document provides an overview of the Player State Data Information Experience Data Model (XDM) data type.
+description: Learn about the Player State Data Information Experience Data Model (XDM) data type.
 ---
 # [!UICONTROL Player State Data Information] data type
 
-[!UICONTROL Player State Data Information] is a standard Experience Data Model (XDM) data type that describes the various states and their occurrences within a media player. It captures details about different player states such as fullscreen, mute, closed captioning, picture-in-picture, and in-focus states. For each state, it records whether the state is set, the count of occurrences, and the total duration it remains active during the media playback.
+[!UICONTROL Player State Data Information] is a standard Experience Data Model (XDM) data type that describes the various states and their occurrences within a media player. Use the [!UICONTROL Player State Data Information] data type to capture different player states such as fullscreen, mute, closed captioning, picture-in-picture, and in-focus states. For each state, it records whether the state is set, the count of occurrences, and the total duration it remains active during the media playback.
 
 ![A diagram of the  Player State Data Information data type.](../images/data-types/player-state-data-information.png)
 
