@@ -12,7 +12,7 @@ This document and accompanying video presentation provide a high-level end-to-en
 * Ways to build the query based on your existing data architecture.
 * Ensure data quality that meets your needs, and methods to mitigate any shortfalls.
 * The process to schedule a query to run at a set frequency for use downstream in segmentation and destinations for personalization.
-* The ease for marketers to include derived attributes in their audiences through the power of [!DNL Query Service].
+* The ease for marketers to include derived datasets in their audiences through the power of [!DNL Query Service].
 
 ## Objectives {#objectives}
 

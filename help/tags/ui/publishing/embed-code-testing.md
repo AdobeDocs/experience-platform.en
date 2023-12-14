@@ -15,10 +15,9 @@ As you make changes to your tag library builds in Adobe Experience Platform, you
 
 This tutorial requires a working understanding of the use of environments and embed codes for tags. See the [environments overview](./environments.md) for more information.
 
-This tutorial also requires that you have the Platform Debugger browser extension installed. Platform Debugger is only available for Chrome and Firefox browsers. Use one of the following links to install the extension before starting the tutorial:
+This tutorial also requires that you have the Platform Debugger browser extension installed. Platform Debugger is available for the Chrome browser. Use the following link to install the extension before starting the tutorial:
 
 * [Platform Debugger for Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
-* [Platform Debugger for Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
 
 ## Open Platform Debugger on your website
 

@@ -1,11 +1,9 @@
 ---
-title: Using Adobe Target with the Platform Web SDK
+title: Use Adobe Target with Web SDK for personalization
 description: Learn how to render personalized content with the Experience Platform Web SDK using Adobe Target
-keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;system diagram;diagram
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-
 ---
-# Using [!DNL Adobe Target] with the [!DNL Platform Web SDK]
+# Use [!DNL Adobe Target] and [!DNL Web SDK] for personalization
 
 [!DNL Adobe Experience Platform] [!DNL Web SDK] can deliver and render personalized experiences managed in [!DNL Adobe Target] to the web channel. You can use a WYSIWYG editor, called the [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), or a non-visual interface, the [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), to create, activate, and deliver your activities and personalization experiences.
 
@@ -27,20 +25,20 @@ The following features have been tested and are currently supported in [!DNL Tar
 * [Native Target impression and conversion reporting](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [VEC Support](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
-## [!DNL Platform Web SDK] system diagram
+## [!DNL Web SDK] system diagram
 
-The following diagram helps you understand the workflow of [!DNL Target] and [!DNL Platform Web SDK] edge decisioning.
+The following diagram helps you understand the workflow of [!DNL Target] and [!DNL Web SDK] edge decisioning.
 
 ![Diagram of Adobe Target edge decisioning with the Platform Web SDK](./assets/target-platform-web-sdk.png)
 
 |Call|Details|
 | --- | --- |
-|1|The device loads the [!DNL Platform Web SDK]. The [!DNL Platform Web SDK] sends a request to the edge network with XDM data, the Datastreams Environment ID, passed-in parameters, and the Customer ID (optional). Page (or containers) is pre-hidden.|
+|1|The device loads the [!DNL Web SDK]. The [!DNL Web SDK] sends a request to the edge network with XDM data, the Datastreams Environment ID, passed-in parameters, and the Customer ID (optional). Page (or containers) is pre-hidden.|
 |2|The edge network sends the request to the edge services to enrich it with the Visitor ID, consent, and other visitor context info, such as geolocation and device-friendly names.|
 |3|The edge network sends the enriched personalization request to the [!DNL Target] edge with the Visitor ID and passed-in parameters.|
 |4|Profile scripts execute and then feed into [!DNL Target] profile storage. Profile storage fetches segments from the [!UICONTROL Audience Library] (for example, segments shared from [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], the [!DNL Adobe Experience Platform]).|
 |5|Based on URL request parameters and profile data, [!DNL Target] determines which activities and experiences to display for the visitor for the current page view and for future prefetched views. [!DNL Target] then sends this back to the edge network.|
-|6|a. The edge network sends the personalization response back to the page, optionally including profile values for additional personalization. Personalized content on the current page is revealed as quickly as possible without flicker of default content.<br>b. Personalized content for views that are shown as a result of user actions in a Single Page Application (SPA) is cached so it can be instantly applied without an additional server call when the views are triggered. <br>c. The edge network sends the Visitor ID and other values in cookies, such as consent, Session ID, identity, cookie check, personalization, and so forth.|
+|6|a. The edge network sends the personalization response back to the page, optionally including profile values for additional personalization. Personalized content on the current page is revealed as quickly as possible without flicker of default content.<br>b. Personalized content for views that are shown as a result of user actions in a Single Page Application (SPA) is cached so it can be instantly applied without an additional server call when the views are triggered. <br>. The Edge Network sends the Visitor ID and other values in cookies, such as consent, Session ID, identity, cookie check, personalization.|
 |7|The edge network forwards [!UICONTROL Analytics for Target] (A4T) details (activity, experience, and conversion metadata) to the [!DNL Analytics] edge.|
 
 ## Enabling [!DNL Adobe Target]
@@ -57,7 +55,7 @@ Then, optionally, you can also add the following options:
 
 ## Using the Adobe Target VEC
 
-To use the VEC with a [!DNL Platform Web SDK] implementation, install and activate either the [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) or [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension.
+To use the VEC with a [!DNL Web SDK] implementation, install and activate either the [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) or [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension.
 
 For more information, see [Visual Experience Composer helper extension](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) in the *Adobe Target guide*.
 
@@ -67,9 +65,9 @@ See [Rendering personalization content](../rendering-personalization-content.md)
 
 ## Audiences in XDM
 
-When defining audiences for your [!DNL Target] activities that are delivered via the [!DNL Platform Web SDK], [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) must be defined and used. After you define XDM schemas, classes, and schema field groups, you can create a [!DNL Target] audience rule defined by XDM data for targeting. Within [!DNL Target], XDM data displays in the [!UICONTROL Audience Builder] as a custom parameter. The XDM is serialized using dot notation (for example, `web.webPageDetails.name`).
+When defining audiences for your [!DNL Target] activities that are delivered via the [!DNL Web SDK], [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) must be defined and used. After you define XDM schemas, classes, and schema field groups, you can create a [!DNL Target] audience rule defined by XDM data for targeting. Within [!DNL Target], XDM data displays in the [!UICONTROL Audience Builder] as a custom parameter. The XDM is serialized using dot notation (for example, `web.webPageDetails.name`).
 
-If you have [!DNL Target] activities with predefined audiences that use custom parameters or a user profile, they are not delivered correctly via the SDK. Instead of using custom parameters or the user profile, you must use XDM instead. However, there are out-of-the-box audience targeting fields supported via the [!DNL Platform Web SDK] that do not require XDM. These fields are available in the [!DNL Target] UI that do not require XDM: 
+If you have [!DNL Target] activities with predefined audiences that use custom parameters or a user profile, they are not delivered correctly via the SDK. Instead of using custom parameters or the user profile, you must use XDM instead. However, there are out-of-the-box audience targeting fields supported via the [!DNL Web SDK] that do not require XDM. These fields are available in the [!DNL Target] UI that do not require XDM: 
 
 * Target Library
 * Geo
@@ -84,7 +82,7 @@ For more information, see [Categories for audiences](https://experienceleague.ad
 
 ### Response tokens
 
-Response tokens are mainly used to send metadata to third parties like Google, Facebook, etc. Response tokens are returned
+Response tokens are used to send metadata to third parties like Google or Facebook. Response tokens are returned
 in the `meta` field within `propositions` -> `items`. Here is a sample:
 
 ```json      
@@ -108,9 +106,9 @@ in the `meta` field within `propositions` -> `items`. Here is a sample:
 }
 ```
 
-To collect the response tokens, you have to subscribe to `alloy.sendEvent` promise, iterate through `propositions`
-and extract the details from `items` -> `meta`. Every `proposition` has a `renderAttempted` boolean field
-indicating whether the `proposition` was rendered or not. See the sample below:
+To collect the response tokens, you have to subscribe to `alloy.sendEvent` promise, iterate through `propositions`, and extract the details from `items` -> `meta`.
+
+Every `proposition` has a `renderAttempted` boolean field indicating whether the `proposition` was rendered or not. See the sample below:
 
 ```js
 alloy("sendEvent",
@@ -154,32 +152,32 @@ When automatic rendering is disabled, propositions array contains:
 
 #### On Page-Load:
 
-* Form-based Composer based `propositions` with `renderAttempted` flag set to `false`
-* Visual Experience Composer based propositions with `renderAttempted` flag set to `false`
-* Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `false`
+* [!DNL Form-based Composer]-based `propositions` with `renderAttempted` flag set to `false`
+* [!DNL Visual Experience Composer]-based propositions with `renderAttempted` flag set to `false`
+* [!DNL Visual Experience Composer]-based propositions for a Single Page Application view with `renderAttempted` flag set to `false`
 
 #### On View - change (for cached views):
 
-* Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `false`
+* Visual Experience Composer-based propositions for a Single Page Application view with `renderAttempted` flag set to `false`
 
 ### Single profile update
 
-The [!DNL Platform Web SDK] lets you update the profile to the [!DNL Target] profile and to the [!DNL Platform Web SDK] as an experience event.
+The [!DNL Web SDK] lets you update the profile to the [!DNL Target] profile and to the [!DNL Web SDK] as an experience event.
 
 To update a [!DNL Target] profile, ensure that the profile data is passed with the following:
 
 * Under `"data {"`
 * Under `"__adobe.target"`
-* Prefix `"profile."` e.g. as below
+* Prefix `"profile."`
 
 |Key|Type|Description|
 | --- | --- | --- |
 |`renderDecisions`|Boolean|Instructs the personalization component whether it should interpret DOM actions|
 |`decisionScopes`|Array `<String>`|A list of scopes to retrieve decisions for|
-|`xdm`|Object|Data formatted in XDM that land in the Platform Web SDK as an experience event|
+|`xdm`|Object|Data formatted in XDM that lands in Web SDK as an experience event|
 |`data`|Object|Arbitrary key/value pairs sent to [!DNL Target] solutions under the target class.|
 
-Typical [!DNL Platform Web SDK] code using this command looks like the following:
+Typical [!DNL Web SDK] code using this command looks like the following:
 
 **`sendEvent` with profile data**
 
@@ -209,11 +207,11 @@ alloy("sendEvent", {
 
 ## Request recommendations
 
-The following table lists [!DNL Recommendations] attributes and whether each one is supported via the [!DNL Platform Web SDK]:
+The following table lists [!DNL Recommendations] attributes and whether each one is supported via the [!DNL Web SDK]:
 
 |Category|Attribute|Support Status|
 | --- | --- | --- |
-|Recommendations – Default entity attributes |entity.id|Supported|
+|Recommendations - Default entity attributes |entity.id|Supported|
 ||entity.name|Supported|
 ||entity.categoryId|Supported|
 ||entity.pageUrl|Supported|
@@ -224,8 +222,8 @@ The following table lists [!DNL Recommendations] attributes and whether each one
 ||entity.brand|Supported|
 ||entity.margin|Supported|
 ||entity.event.detailsOnly|Supported|
-|Recommendations – Custom entity attributes|entity.yourCustomAttributeName|Supported|
-|Recommendations – Reserved mbox/page parameters|excludedIds|Supported|
+|Recommendations - Custom entity attributes|entity.yourCustomAttributeName|Supported|
+|Recommendations - Reserved mbox/page parameters|excludedIds|Supported|
 ||cartIds|Supported|
 ||productPurchasedId|Supported|
 |Page or item category for category affinity|user.categoryId|Supported|
@@ -248,14 +246,14 @@ alloy("sendEvent", {
 
 ## Debugging
 
-mboxTrace and mboxDebug have been deprecated. Use [[!DNL Platform Web SDK] debugging](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html).
+mboxTrace and mboxDebug have been deprecated. Use [[!DNL Web SDK] debugging](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html).
 
 ## Terminology
 
-__Propositions:__ In [!DNL Target], propositions correlate to the experience that is selected from an Activity.
+__Propositions:__ In [!DNL Adobe Target], propositions correlate to the experience that is selected from an Activity.
 
-__Schema:__ The schema of a decision is the type of offer in [!DNL Target]. 
+__Schema:__ The schema of a decision is the type of offer in [!DNL Adobe Target]. 
 
-__Scope:__ The scope of the decision. In [!DNL Target], the scope is the mBox. The global mBox is the `__view__` scope.
+__Scope:__ The scope of the decision. In [!DNL Adobe Target], the scope is the mBox. The global mBox is the `__view__` scope.
 
-__XDM:__ The XDM is serialized into dot notation and then put into [!DNL Target] as mBox parameters.
+__XDM:__ The XDM is serialized into dot notation and then put into [!DNL Adobe Target] as mBox parameters.
