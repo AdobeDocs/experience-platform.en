@@ -76,6 +76,8 @@ Login to your [!DNL SAP Subscription Billing] account and navigate to the **[Mas
 
 ![Image showing where to create a custom reference in SAP Subscription Billing.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
+For additional guidance refer to the [!DNL SAP Subscription Billing] [custom references](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27) documentation.
+
 ### Gather required credentials {#gather-credentials}
 
 In order to connect [!DNL SAP Commerce] to Experience Platform, you must provide values for the following connection properties:
