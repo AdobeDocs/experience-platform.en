@@ -178,7 +178,7 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 To correctly send your audience data from Adobe Experience Platform to the [!DNL SAP Commerce] destination, you must go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL SAP Commerce] destination fields, follow the steps below:
 
-#### Mapping the `customerNumber` identity
+#### Map the `customerNumber` identity
 
 The `Email` identity is a mandatory mapping for this destination. Follow the steps below to map it:
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
@@ -207,7 +207,9 @@ To add any other attributes you want to update between your XDM profile schema a
 
 >[!IMPORTANT]
 >
-> Target field names are case sensitive and should match the [!DNL SAP Commerce] attribute names. The only exception for this is `country` where you should use `countryCode` instead. [!DNL SAP Subscription Billing] supports alpha-2, alpha-3 code (ISO 3166) [country codes](https://www.iso.org/obp/ui/en/). The value is case sensitive and must be between 0-3 characters, hence ensure you provide exactly as defined else you would encounter errors: `The country code {} does not exist` or `size must be between 0 and 3`.
+> Target field names are case sensitive and should match the [!DNL SAP Subscription Billing] attribute names. The only exception for this is `country` where you should use `countryCode` instead. [!DNL SAP Subscription Billing] supports alpha-2, alpha-3 code (ISO 3166) [country codes](https://www.iso.org/obp/ui/en/). The value is case sensitive and must be between 0-3 characters, hence ensure you provide exactly as defined else you would encounter errors: `The country code {} does not exist` or `size must be between 0 and 3`.
+
+#### Map `mandatory` attributes for the selected customer type
 
 Mandatory attribute mappings are dependent on the **[!UICONTROL Type of Customer]** you had selected. To map the mandatory attributes select from the below:
 
@@ -229,6 +231,8 @@ Mandatory attribute mappings are dependent on the **[!UICONTROL Type of Customer
 
 >[!ENDTABS]
 
+#### Mapping additional attributes
+
 You can then add any additional mappings between your XDM profile schema and the [!DNL SAP Subscription Billing] [schema](https://api.sap.com/api/BusinessPartner_APIs/schema) attributes for a customer as shown below:
 
 >[!BEGINTABS]
@@ -247,7 +251,7 @@ An example with both mandatory and optional attribute mappings where the custome
 >[!TAB Corporate customer]
 
 | Source Field | Target Field | Mandatory |
-| --- | --- |
+| --- | --- | --- |
 | `xdm: person.name.firstName` | `Attribute: firstname` |
 | `xdm: workAddress.street1` | `Attribute: street` |
 | `xdm: workAddress.city` | `Attribute: city` |
@@ -292,7 +296,7 @@ A typical example based on the image shown above could be.
 
 To validate that you have correctly set up the destination, follow the steps below:
 
-1. Log in to the [!DNL SAP Subscription Billing] account, then navigate to the **[!UICONTROL Contacts]** page to check the audience statuses. This list can be configured to display columns for the custom references and display the corresponding audience statuses.
+Log in to the [!DNL SAP Subscription Billing] account, then navigate to the **[!UICONTROL Contacts]** page to check the audience statuses. The list can be configured to display columns for the custom references and display the corresponding audience statuses.
 ![Image of SAP Subscription Billing showing the customer overview page with column headers showing the audience name and cells audience statuses](../../assets/catalog/ecommerce/sap-commerce/customer-overview.png)
 
 ## Data usage and governance {#data-usage-governance}
