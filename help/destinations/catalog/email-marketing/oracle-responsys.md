@@ -14,7 +14,7 @@ To send audience data to [!DNL Oracle Responsys], you must first [connect to the
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|

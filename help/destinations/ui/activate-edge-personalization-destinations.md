@@ -9,13 +9,13 @@ exl-id: cd7132eb-4047-4faa-a224-47366846cb56
 
 ## Overview {#overview}
 
-Adobe Experience Platform uses [edge segmentation](../../segmentation/ui/edge-segmentation.md) together with edge destinations to enable customers to create and target audiences at high scale, in real time. This capability helps you configure same-page and next-page personalization use cases.
+Adobe Experience Platform uses [edge segmentation](../../segmentation/ui/edge-segmentation.md) together with [edge destinations](/help/destinations/destination-types.md#edge-personalization-destinations) to enable customers to create and target audiences at high scale, in real time. This capability helps you configure same-page and next-page personalization use cases.
 
 Examples of edge destinations are the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) connections.
 
 >[!NOTE]
 >
->When [configuring the Adobe Target connection](../catalog/personalization/adobe-target-connection.md) without using a datastream ID, the use cases described in this article are not supported. Only next-session personalization use cases are supported in the absence of a datastream.
+>When [configuring the Adobe Target connection](../catalog/personalization/adobe-target-connection.md) *without* using a datastream ID, the use cases described in this article are not supported. Only next-session personalization use cases are supported in the absence of a datastream.
 
 >[!IMPORTANT]
 > 
@@ -25,7 +25,7 @@ Examples of edge destinations are the [Adobe Target](../../destinations/catalog/
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-This article explains the workflow required to activate audiences in Adobe Experience Platform edge destinations. When used together with [edge segmentation](../../segmentation/ui/edge-segmentation.md) and the optional [profile attributes mapping](#mapping), these destinations enable same-page and next-page personalization use cases on your web and mobile properties. 
+This article explains the workflow required to activate audiences to Adobe Experience Platform edge destinations. When used together with [edge segmentation](../../segmentation/ui/edge-segmentation.md) and the optional [profile attributes mapping](#mapping), these destinations enable same-page and next-page personalization use cases on your web and mobile properties. 
 
 For a brief overview on how to configure the Adobe Target connection for edge personalization, watch the video below.
 
@@ -41,7 +41,7 @@ For a brief overview of how to share audiences and profile attributes to Adobe T
 
 ## Use cases {#use-cases}
 
-Edge personalization destinations enable you to use Adobe personalization solutions, such as Adobe Target, or your own personalization partner platforms (for example, [!DNL Optimizely], [!DNL Pega]), as well as proprietary systems (for example, in-house CMS) to power a deeper customer personalization experience via the [Custom Personalization](../catalog/personalization/custom-personalization.md) destination. All this while also leveraging Experience Platform Edge Network data collection & segmentation capabilities.
+Use Adobe personalization solutions, such as Adobe Target, or your own personalization partner platforms (for example, [!DNL Optimizely], [!DNL Pega]), as well as proprietary systems (for example, in-house CMS) to power a deeper customer personalization experience via the [Custom Personalization](../catalog/personalization/custom-personalization.md) destination. All this while also leveraging Experience Platform Edge Network data collection & segmentation capabilities.
 
 The use cases described below include both site personalization and targeted on-site advertising.
 
@@ -49,11 +49,11 @@ To enable these use cases, customers need a quick, streamlined way of retrieving
 
 ### Same-page personalization {#same-page}
 
-A user visits a page of your website. The customer can use the current page visit information (for example, referring URL, browser language, embedded product info) to select the next action / decision (for example, personalization), using the [Custom personalization](../catalog/personalization/custom-personalization.md) connection for non-Adobe platforms (for example, [!DNL Pega], [!DNL Optimizely], etc.).
+A user visits a page of your website. You can use the current page visit information (for example referring URL, browser language, embedded product info) to select the next action or decision (for example, personalization), using the [Custom personalization](../catalog/personalization/custom-personalization.md) connection for non-Adobe platforms (for example, [!DNL Pega], [!DNL Optimizely] or others.).
 
 ### Next-page personalization {#next-page}
 
-A user visits Page A on your website. Based on this interaction, the user has qualified for a set of audiences. The user then clicks on a link that takes them from Page A to Page B. The audiences that the user had qualified for during the previous interaction on Page A, together with the profile updates determined by the current website visit, will be used to power the next action / decision (for example, which advertising banner to display to the visitor, or, in case of A/B testing, which version of the page to display).
+A user visits Page A on your website. Based on this interaction, the user has qualified for a set of audiences. The user then clicks on a link that takes them from Page A to Page B. The audiences that the user had qualified for during the previous interaction on Page A, together with the profile updates determined by the current website visit, will be used to power the next action or decision (for example, which advertising banner to display to the visitor, or, in case of A/B testing, which version of the page to display).
 
 ### Next-session personalization {#next-session}
 
@@ -61,9 +61,9 @@ A user visits several pages on your website. Based on these interactions, the us
 
 The following day, the user returns to the same customer website. The audiences they had qualified for during the previous interaction with all the visited website pages, together with the profile updates determined by the current website visit, will be used to select the next action / decision (for example, which advertising banner to display to the visitor, or, in case of A/B testing, which version of the page to display).
 
-### Personalizing a home page banner {#home-page-banner}
+### Personalize a home page banner {#home-page-banner}
 
-A home rental and sales company wants to personalize their home page with a banner, based on audience qualifications in Adobe Experience Platform. The company can select what audiences should get a personalized experience and send those to Adobe Target as targeting criteria for their Target offer.
+A home rental and sales company wants to personalize their home page with a banner, based on audience qualifications in Adobe Experience Platform. The company can select what audiences should get a personalized experience and send those audiences to Adobe Target as targeting criteria for their Target offer.
 
 ## Prerequisites {#prerequisites}
 
@@ -73,7 +73,7 @@ The first step in setting up your personalization destination is to configure a 
 
 When configuring the datastream, under **[!UICONTROL Adobe Experience Platform]** make sure that both **[!UICONTROL Edge Segmentation]** and **[!UICONTROL Personalization Destinations]** are selected.
 
-![Datastream configuration](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
+![Datastream configuration with Edge Segmentation and Personalization Destinations highlighted!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
 For more details on how to set up a datastream, follow the instructions described in the [Platform Web SDK documentation](../../datastreams/configure.md#aep).
 
@@ -91,7 +91,7 @@ Follow the instructions on [creating a merge policy](../../profile/merge-policie
 
 After you have created the [!DNL Active-On-Edge] merge policy, you must create a new audience in Platform.
 
-Follow the [audience builder](../../segmentation/ui/segment-builder.md) guide to create your new audience, and make sure to [assign it](../../segmentation/ui/segment-builder.md#merge-policies) the [!DNL Active-On-Edge] merge policy that you created in step 3.
+Follow the [audience builder](../../segmentation/ui/segment-builder.md) guide to create your new audience, and make sure to [assign it](../../segmentation/ui/segment-builder.md#merge-policies) the [!DNL Active-On-Edge] merge policy that you created in the previous step.
 
 ### Create a destination connection {#connect-destination}
 
@@ -99,7 +99,7 @@ After you have configured your datastream, you can start configuring your person
 
 Follow the [destination connection creation tutorial](../ui/connect-destination.md) for detailed instructions on how to create a new destination connection.
 
-Depending on the destination you are configuring, refer to the following articles for destination-specific prerequisites and related information:
+Depending on the destination that you are configuring, refer to the following articles for destination-specific prerequisites and related information:
 
 * [Adobe Target connection](../catalog/personalization/adobe-target-connection.md#parameters)
 * [Custom personalization connection](../catalog/personalization/custom-personalization.md##parameters)
@@ -110,15 +110,15 @@ After you completed the prerequisites, you can now select the edge personalizati
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     
-    ![Destination Catalog tab](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
+    ![Destination Catalog tab highlighted in the Experience Platform UI.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
 1. Select **[!UICONTROL Activate audiences]** on the card corresponding to the personalization destination where you want to activate your audiences, as shown in the image below.
 
-    ![Activate buttons](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
+    ![Activate audience control highlighted on a destination card in the catalog.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
 1. Select the destination connection that you want to use to activate your audiences, then select **[!UICONTROL Next]**.
 
-    ![Select destination](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
+    ![Select destination step in the activation workflow.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
 1. Move to the next section to [select your audiences](#select-audiences).
 
@@ -134,7 +134,7 @@ You can select from multiple types of audiences, depending on their origin:
 * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/overview.md#import-audience).
 * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
 
-![Select audiences](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
+![Select audiences step of the activation workflow with several audiences highlighted.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
 ## Map attributes {#mapping}
 
@@ -150,13 +150,13 @@ Select the attributes based on which you want to enable personalization use case
 
 Adding attributes is optional and you can still proceed to the next step and enable same-page and next-page personalization without selecting attributes. If you do not add any attributes in this step, personalization will still occur based on the audience membership and identity map qualifications for profiles.
 
-![Image showing the mapping step with an attribute selected](../assets/ui/activate-edge-personalization-destinations/mapping-step.png)
+![Image showing the mapping step with an attribute selected.](../assets/ui/activate-edge-personalization-destinations/mapping-step.png)
 
 ### Select source attributes {#select-source-attributes}
 
 To add source attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Source field]** column and search or navigate to your desired XDM attribute field, as shown below.
 
-![Screen recording showing how to select a target attribute in the mapping step](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
+![Screen recording showing how to select a target attribute in the mapping step.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
 ### Select target attributes {#select-target-attributes}
 
@@ -174,11 +174,11 @@ By default, the [!UICONTROL Audience schedule] page shows only the newly selecte
 
 To see all the audiences being activated to your destination, use the filtering option and disable the **[!UICONTROL Show new audiences only]** filter.
 
-![All audiences](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
+![All audiences filter highlighted.](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
 
 On the **[!UICONTROL Audience schedule]** page, select each audience, then use the **[!UICONTROL Start date]** and **[!UICONTROL End date]** selectors to configure the time interval for sending data to your destination.
 
-![Audience schedule](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
+![Audience schedule step of the activation workflow with start and end date highlighted.](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
 
 Select **[!UICONTROL Next]** to go to the [!UICONTROL Review] page.
 
@@ -196,7 +196,7 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 In the **[!UICONTROL Review]** step, Experience Platform also checks for any data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the audience activation workflow until you have resolved the violation. For information on how to resolve policy violations, read about [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in the data governance documentation section.
  
-![data policy violation](../assets/common/data-policy-violation.png)
+![An example of a data policy violation.](../assets/common/data-policy-violation.png)
 
 ### Filter audiences {#filter-audiences}
 

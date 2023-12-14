@@ -8,7 +8,7 @@ exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
 
 ## Overview {#overview} 
 
-[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) is a popular Customer Relationship Management (CRM) platform and supports the below:
+[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) is a popular Customer Relationship Management (CRM) platform and supports the types of profiles described below:
 
 * [Leads](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) - A lead is the name of a person or company who may (or may not) be interested in the products or services you sell.
 * [Contacts](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) - A contact is an individual with whom one of your representatives has established a relationship and has been qualified as a potential customer.     
@@ -21,7 +21,7 @@ When [activating segments](#activate), you can select between either leads or co
 
 ## Use cases {#use-cases}
 
-As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build audiences from your offline data and send these audiences to Salesforce CRM, to display in the users' feeds as soon as audiences and profiles are updated in Adobe Experience Platform.
+As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build audiences from your offline data and send these audiences to Salesforce CRM, to update CRM membership as soon as audiences and profiles are updated in Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
