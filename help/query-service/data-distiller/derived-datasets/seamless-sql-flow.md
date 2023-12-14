@@ -1,25 +1,25 @@
 ---
-title: Seamless SQL Flow for Derived Attributes
-description: Query Service SQL has been extended to provide seamless support for derived attributes. Learn how to use this SQL extension to create a derived attribute that is enabled for profile, and how to use the attribute for Real-Time Customer Profile and Segmentation Service.
+title: Seamless SQL Flow for Derived Datasets
+description: Query Service SQL has been extended to provide seamless support for derived datasets. Learn how to use this SQL extension to create a derived dataset that is enabled for profile, and how to use the dataset for Real-Time Customer Profile and Segmentation Service.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
 ---
-# Seamless SQL flow for derived attributes
+# Seamless SQL flow for derived datasets
 
-Query Service SQL has been extended to provide seamless support for derived attributes. This provides an efficient alternative method to create derived attributes for your Real-Time Customer Profile business use cases.
+Query Service SQL has been extended to provide seamless support for derived datasets. This provides an efficient alternative method to create derived datasets for your Real-Time Customer Profile business use cases.
 
-This document outlines various convenient SQL extensions that generate a derived attribute for use with Real-Time Customer Profile. The workflow simplifies the process that you would otherwise have to complete through various API calls or Platform UI interactions.
+This document outlines various convenient SQL extensions that generate a derived dataset for use with Real-Time Customer Profile. The workflow simplifies the process that you would otherwise have to complete through various API calls or Platform UI interactions.
 
-Typically, generating and publishing an attribute for Real-Time Customer Profile would involve the following steps:
+Typically, generating and publishing a derived dataset for Real-Time Customer Profile would involve the following steps:
 
 * Create an identity namespace, if one does not already exist.
-* Create the datatype to store the derived attribute, if necessary.
-* Create a field group with that datatype to store the derived attribute information.
+* Create the datatype to store the derived dataset, if necessary.
+* Create a field group with that datatype to store the derived dataset information.
 * Create or assign a primary identity column with the namespace created earlier.
 * Create a schema using the field group and datatype created earlier.
 * Create a new dataset using your schema and enable it for profile, if needed.
 * Optionally mark a dataset as profile-enabled.
 
-After completing the steps mentioned above, you are ready to populate the dataset. If you enabled the dataset for profile, you can also create segments that refer to the new attribute and begin producing insights.
+After completing the steps mentioned above, you are ready to populate the dataset. If you enabled the dataset for profile, you can also create segments that refer to the new dataset and begin producing insights.
 
 Query Service allows you to perform all of the actions listed above using SQL queries. This includes making changes to your datasets and field groups if needed.
 
@@ -29,7 +29,7 @@ Query Service allows you to perform all of the actions listed above using SQL qu
 >
 >The SQL query provided below assumes the use of a pre-existing namespace.
 
-Use a Create Table as Select (CTAS) query to create a dataset, assign datatypes, set a primary identity, create a schema, and mark it as profile-enabled. The example SQL statement below creates attributes and makes it available for Real-Time Customer Data Platform (Real-Time CDP). Your SQL query will follow the format shown in the example below:
+Use a Create Table as Select (CTAS) query to create a dataset, assign datatypes, set a primary identity, create a schema, and mark it as profile-enabled. The example SQL statement below creates a dataset and makes it available for Real-Time Customer Data Platform (Real-Time CDP). Your SQL query will follow the format shown in the example below:
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
@@ -71,9 +71,9 @@ ALTER TABLE <your_table_name> DROP label upsert;
 
 See the SQl syntax documentation for more information on the use of the [ALTER TABLE](../../sql/syntax.md#alter-table) command and [label as part of a CTAS query](../../sql/syntax.md#create-table-as-select).
 
-## Constructs to help with managing derived attributes through SQL
+## Constructs to help with managing derived datasets through SQL
 
-The features described below are of great benefit when managing derived attributes through SQL.
+The features described below are of great benefit when managing derived datasets through SQL.
 
 ### Change existing datasets to be enabled for profile {#enable-existing-dataset-for-profile}
 
@@ -231,4 +231,4 @@ An example of this command's output can be seen below:
 
 ## Next steps
 
-After reading this document, you have a better understanding of how to use SQL to create a profile and upsert-enabled dataset based on derived attributes. You are now ready to use this dataset with batch ingestion workflows to make updates to your profile data. To learn more about ingesting data into Adobe Experience Platform, please begin by reading the [data ingestion overview](../../../ingestion/home.md).
+After reading this document, you have a better understanding of how to use SQL to create a profile and upsert-enabled dataset based on derived datasets. You are now ready to use this dataset with batch ingestion workflows to make updates to your profile data. To learn more about ingesting data into Adobe Experience Platform, please begin by reading the [data ingestion overview](../../../ingestion/home.md).

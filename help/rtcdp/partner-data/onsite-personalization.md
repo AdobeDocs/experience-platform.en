@@ -33,7 +33,7 @@ This brand chooses to leverage partner recognition technology to probabilistical
 When planning to use partner-provided attributes to deliver personalized experiences to your authenticated and unauthenticated visitors, consider the following prerequisites in your planning process:
 
 * What inputs are expected by your partner's recognition technology so they can layer on additional attributes?
-* To what extent are you comfortable delivering personalization in different channels and for different use cases based on probabilistically derived attributes, versus deterministically confirmed attributes?
+* To what extent are you comfortable delivering personalization in different channels and for different use cases based on probabilistically derived datasets, versus deterministically confirmed attributes?
 * How should the experience for a pre-authenticated but recognized visitor change when they authenticate?
 
 ### UI functionality, Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}
