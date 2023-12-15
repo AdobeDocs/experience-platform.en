@@ -182,7 +182,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 
 #### Map the `customerNumber` identity
 
-The `Email` identity is a mandatory mapping for this destination. Follow the steps below to map it:
+The `customerNumber` identity is a mandatory mapping for this destination. Follow the steps below to map it:
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
 ![Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** and select `customerNumber`.
