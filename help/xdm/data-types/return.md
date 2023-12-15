@@ -1,6 +1,6 @@
 ---
 title: Return Data Type
-description: This document provides an overview of the Return Experience Data Model (XDM) data type.
+description: Learn about the Return Experience Data Model (XDM) data type.
 ---
 # [!UICONTROL Return] data type
 
@@ -8,12 +8,10 @@ description: This document provides an overview of the Return Experience Data Mo
 
 ![A diagram of the  Return data type.](../images/data-types/return.png)
 
-Certainly, here's the information in a table format:
-
 | Display name                     | Property             | Data type | Description                                      |
 |----------------------------------|----------------------|-----------|--------------------------------------------------|
 | [!UICONTROL Return ID]           | `returnID`           | string    | The unique identifier for this RMA.               |
-| [!UICONTROL Return Status]       | `returnStatus`       | string    | The current status of the RMA (e.g. Pending, Closed). |
+| [!UICONTROL Return Status]       | `returnStatus`       | string    | The current status of the RMA (for example Pending or Closed). |
 | [!UICONTROL Order Purchase ID]   | `purchaseID`         | string    | The unique identifier of the order/purchase that the RMA pertains to. |
 
 {style="table-layout:auto"}

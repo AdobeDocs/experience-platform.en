@@ -1,6 +1,6 @@
 ---
 title: Commerce Scope Data Type
-description: This document provides an overview of the Commerce Scope Experience Data Model (XDM) data type.
+description: Learn about the Commerce Scope Experience Data Model (XDM) data type.
 ---
 # [!UICONTROL Commerce Scope] data type
 
@@ -11,9 +11,9 @@ description: This document provides an overview of the Commerce Scope Experience
 | Display name                    | Property            | Data type | Description                                           |
 |---------------------------------|-------------------|-----------|-------------------------------------------------------|
 | [!UICONTROL Environment ID]     | `environmentID`   | string    | The environment ID. A 32-digit alphanumeric ID.        |
-| [!UICONTROL Website Code]       | `websiteCode`     | string    | Unique website code within an environment.              |
-| [!UICONTROL Store Code]         | `storeCode`       | string    | Unique store code within a website.                    |
-| [!UICONTROL Store View Code]    | `storeViewCode`   | string    | Unique store view code within a store.                 |
+| [!UICONTROL Website Code]       | `websiteCode`     | string    | The unique website code within an environment.              |
+| [!UICONTROL Store Code]         | `storeCode`       | string    | The unique store code within a website.                    |
+| [!UICONTROL Store View Code]    | `storeViewCode`   | string    | The unique store view code within a store.                 |
 
 {style="table-layout:auto"}
 

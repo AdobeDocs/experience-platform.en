@@ -1,6 +1,6 @@
 ---
 title: Bot Detection Field Group
-description: This document provides an overview of the Bot Detection field group (XDM) schema field group.
+description: Learn about the Bot Detection field group (XDM) schema field group.
 ---
 # [!UICONTROL Bot Detection] field group
 

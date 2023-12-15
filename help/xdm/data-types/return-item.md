@@ -1,6 +1,6 @@
 ---
 title: Return Item Data Type
-description: This document provides an overview of the Return Item Experience Data Model (XDM) data type.
+description: Learn about the Return Item Experience Data Model (XDM) data type.
 ---
 # [!UICONTROL Return Item] data type
 
@@ -10,14 +10,14 @@ description: This document provides an overview of the Return Item Experience Da
 
 | Display name                | Property                     | Data type | Description                                            |
 |-----------------------------|------------------------------|-----------|--------------------------------------------------------|
-| [!UICONTROL Return Status]               | `returnStatus`             | string    | The status of returned item (e.g. Pending, Approved).       |
-| [!UICONTROL Return Reason]               | `returnReason`             | string    | The reason why the return was requested for this item.            |
+| [!UICONTROL Return Status]               | `returnStatus`             | string    | The status of the returned item (for example, Pending or Approved).       |
+| [!UICONTROL Return Reason]               | `returnReason`             | string    | The reason why the return was requested for the item.            |
 | [!UICONTROL Return Item Condition]       | `returnItemCondition`      | string    | The condition of the item for which the return is requested.|
-| [!UICONTROL Return Resolution]           | `returnResolution`         | string    | The desired resolution or outcome expected from the return (e.g. Refund, Exchange).|
-| [!UICONTROL Return Quantity Requested]   | `returnQuantityRequested`  | integer   | The quantity of this item that the shopper requested to return.|
-| [!UICONTROL Return Quantity Authorized]  | `returnQuantityAuthorized` | integer   | The quantity of this item authorized to be returned.          |
+| [!UICONTROL Return Resolution]           | `returnResolution`         | string    | The desired resolution or outcome expected from the return (for example, Refund or Exchange).|
+| [!UICONTROL Return Quantity Requested]   | `returnQuantityRequested`  | integer   | The quantity of the item that the shopper requested to return.|
+| [!UICONTROL Return Quantity Authorized]  | `returnQuantityAuthorized` | integer   | The quantity of the item authorized to be returned.          |
 | [!UICONTROL Return Quantity Received]    | `returnQuantityReceived`   | integer   | The quantity of returned items received.                      |
-| [!UICONTROL Return Quantity Approved]    | `returnQuantityApproved`   | integer   | The quantity of this item with a return fully complete and approved. |
+| [!UICONTROL Return Quantity Approved]    | `returnQuantityApproved`   | integer   | The quantity of the item with a return fully complete and approved. |
 
 {style="table-layout:auto"}
 

@@ -1,6 +1,6 @@
 ---
 title: Postal Address Data Type
-description: This document provides an overview of the Postal Address Experience Data Model (XDM) data type.
+description: Learn about the Postal Address Experience Data Model (XDM) data type.
 ---
 # [!UICONTROL Postal Address] data type
 

@@ -1,11 +1,11 @@
 ---
 title: Profile Partner Enrichment (Sample) Field Group
-description: This document provides an overview of the Profile Partner Enrichment (Sample) schema field group.
+description: Learn about the Profile Partner Enrichment (Sample) schema field group.
 ---
 
 # [!UICONTROL Profile Partner Enrichment (Sample)] schema field group
 
-[!UICONTROL Profile Partner Enrichment (Sample)] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). This field group provides additional data related to partner-driven enrichments for customer profiles.
+[!UICONTROL Profile Partner Enrichment (Sample)] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). Use this field group to provide additional data related to partner-driven enrichments for customer profiles.
 
 ![A diagram of the [!UICONTROL Profile Partner Enrichment (Sample)] field group.](../../images/field-groups/profile-partner-enrichment-sample.png)
 
@@ -21,8 +21,8 @@ description: This document provides an overview of the Profile Partner Enrichmen
 | [!UICONTROL footwear]                    | `footwear`            | string    | Footwear-related information.    |
 | [!UICONTROL healthFoods]                 | `healthFoods`         | string    | Health foods data.               |
 | [!UICONTROL hiking]                      | `hiking`              | string    | Hiking-related information.      |
-| [!UICONTROL householdId]                 | `householdId`         | string    | Unique ID for a household.       |
-| [!UICONTROL individualId]                | `individualId`        | string    | Unique ID for an individual.     |
+| [!UICONTROL householdId]                 | `householdId`         | string    | The unique ID for a household.       |
+| [!UICONTROL individualId]                | `individualId`        | string    | The unique ID for an individual.     |
 | [!UICONTROL inferredCardHolder]          | `inferredCardHolder`  | string    | Inferred cardholder information. |
 | [!UICONTROL inferredPremiumCardholder]   | `inferredPremiumCardholder` | string | Inferred premium cardholder details. |
 | [!UICONTROL matchLevelFlag]              | `matchLevelFlag`      | string    | Match level flag data.           |
@@ -43,5 +43,3 @@ description: This document provides an overview of the Profile Partner Enrichmen
 {style="table-layout:auto"}
 
 For more details on the field group, refer to the [full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/partner-profile-enrichment/profile-partner-enrichment-sample.schema.json) on the public XDM repository.
-
-<!-- no populated example available -->

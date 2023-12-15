@@ -1,6 +1,6 @@
 ---
 title: Shipping Data Type
-description: This document provides an overview of the Shipping Experience Data Model (XDM) data type.
+description: Learn about the Shipping Experience Data Model (XDM) data type.
 ---
 # [!UICONTROL Shipping] data type
 
@@ -11,12 +11,12 @@ description: This document provides an overview of the Shipping Experience Data 
 
 | Display name         | Property              | Data type | Description                                          |
 |----------------------|-----------------------|-----------|------------------------------------------------------|
-| [!UICONTROL Shipping Method]      | `shippingMethod`    | string    | **Required** The method of shipping chosen by the customer.        |
-| [!UICONTROL Shipping Amount]      | `shippingAmount`    | number    | **Required** The amount the customer had to pay for shipping.      |
-| [!UICONTROL Currency code]        | `currencyCode`      | string    | **Required** The ISO 4217 alphabetic currency code used for pricing the product. |
-| [!UICONTROL Shipping Destination] | `shippingDestination` | string | **Required** The ship-to destination specified by the user (home, store, etc.). |
-| [!UICONTROL Ship Date]            | `shipDate`          | string    | **Required** The date when one or more items from an order are shipped. |
-| [!UICONTROL Shipping Address]     | `address`           | [[!UICONTROL address]](./address.md)       | **Required** Reference to shipping address properties.              |
+| [!UICONTROL Shipping Method]      | `shippingMethod`    | string    | The method of shipping chosen by the customer.        |
+| [!UICONTROL Shipping Amount]      | `shippingAmount`    | number    | The amount the customer had to pay for shipping.      |
+| [!UICONTROL Currency code]        | `currencyCode`      | string    | The ISO 4217 alphabetic currency code used for pricing the product. |
+| [!UICONTROL Shipping Destination] | `shippingDestination` | string | The ship-to destination specified by the user (for example, home, store, and so on). |
+| [!UICONTROL Ship Date]            | `shipDate`          | string    | The date when one or more items from an order are shipped. |
+| [!UICONTROL Shipping Address]     | `address`           | [[!UICONTROL address]](./address.md) | The shipping address.           |
 | [!UICONTROL Tracking Number]      | `trackingNumber`    | number    | The tracking number provided by the shipping carrier. |
 | [!UICONTROL Tracking URL]         | `trackingURL`       | string    | The URL to track the shipping status of an order item. |
 

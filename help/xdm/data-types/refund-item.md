@@ -1,6 +1,6 @@
 ---
 title: Refund Item Data Type
-description: This document provides an overview of the Refund Item Experience Data Model (XDM) data type.
+description: Learn about the Refund Item Experience Data Model (XDM) data type.
 ---
 # [!UICONTROL Refund Item] data type
 

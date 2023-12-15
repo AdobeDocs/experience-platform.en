@@ -1,6 +1,6 @@
 ---
 title: Partner Prospect Details (Sample) Field Group
-description: This document provides an overview of the Partner Prospect Details (Sample) field group (XDM) schema field group.
+description: Learn about the Partner Prospect Details (Sample) field group (XDM) schema field group.
 ---
 # [!UICONTROL Partner Prospect Details (Sample)] field group
 
@@ -15,34 +15,32 @@ This field group extends the [Individual Prospect Profile class](https://experie
 | [!UICONTROL ageRangeInHousehold]      | `ageRangeInHousehold`       | string    | Age range within the household.                   |
 | [!UICONTROL apparelAccessories]       | `apparelAccessories`        | string    | Preferences or involvement in apparel/accessories.|
 | [!UICONTROL bicycling]                | `bicycling`                 | string    | Interest or involvement in bicycling activities.  |
-| [!UICONTROL cableTv]                  | `cableTv`                   | string    | Engagement with cable television.                 |
+| [!UICONTROL cableTv]                  | `cableTv`                   | string    | Indicates engagement with cable television.                 |
 | [!UICONTROL domestics]                | `domestics`                 | string    | Preferences or engagement in domestic activities.|
 | [!UICONTROL electronics]              | `electronics`               | string    | Interest or engagement in electronic devices.      |
 | [!UICONTROL foodAndBeverage]          | `foodAndBeverage`           | string    | Preferences or involvement in food/beverage.      |
 | [!UICONTROL footwear]                 | `footwear`                  | string    | Interest or involvement in footwear.              |
 | [!UICONTROL healthFoods]              | `healthFoods`               | string    | Preferences or involvement in health foods.       |
 | [!UICONTROL hiking]                   | `hiking`                    | string    | Interest or involvement in hiking activities.     |
-| [!UICONTROL householdId]              | `householdId`               | string    | Unique identifier for the household.              |
-| [!UICONTROL individualId]             | `individualId`              | string    | Unique identifier for the individual.             |
-| [!UICONTROL inferredCardHolder]       | `inferredCardHolder`        | string    | Inference of being a cardholder.                  |
-| [!UICONTROL inferredPremiumCardholder]| `inferredPremiumCardholder]`| string    | Inference of being a premium cardholder.        |
-| [!UICONTROL matchLevelFlag]           | `matchLevelFlag`            | string    | Indicator of the matching level.                  |
-| [!UICONTROL BuyerRating]              | `buyerRating`               | string    | Rating related to buying behavior.                |
-| [!UICONTROL DonorRating]              | `donorRating`               | string    | Rating related to donor behavior.                 |
-| [!UICONTROL InvestmentRating]         | `investmentRating`          | string    | Rating related to investment behavior.             |
-| [!UICONTROL ResponderRating]          | `responderRating`           | string    | Rating related to responder behavior.             |
-| [!UICONTROL SpendingVelocity]         | `spendingVelocity`          | string    | Speed or rate of spending.                        |
-| [!UICONTROL SpendingVolume]           | `spendingVolume`            | string    | Amount or volume of spending.                     |
-| [!UICONTROL recordId]                 | `recordId`                  | string    | Unique identifier for the record.                 |
-| [!UICONTROL residenceId]              | `residenceId`               | string    | Unique identifier for the residence.              |
-| [!UICONTROL sailing]                  | `sailing`                   | string    | Interest or involvement in sailing activities.    |
-| [!UICONTROL seasonalHolidayProducts]  | `seasonalHolidayProducts`   | string    | Preferences or involvement in holiday products. |
-| [!UICONTROL skiing]                   | `skiing`                    | string    | Interest or involvement in skiing activities.     |
-| [!UICONTROL tennis]                   | `tennis`                    | string    | Interest or involvement in tennis activities.     |
-| [!UICONTROL tvShoppers]               | `tvShoppers`                | string    | Engagement with TV shopping.                      |
+| [!UICONTROL householdId]              | `householdId`               | string    | A unique identifier for the household.              |
+| [!UICONTROL individualId]             | `individualId`              | string    | A unique identifier for the individual.             |
+| [!UICONTROL inferredCardHolder]       | `inferredCardHolder`        | string    | The inference of being a cardholder.                  |
+| [!UICONTROL inferredPremiumCardholder]| `inferredPremiumCardholder]`| string    | The inference of being a premium cardholder.        |
+| [!UICONTROL matchLevelFlag]           | `matchLevelFlag`            | string    | An indicator of the matching level.                  |
+| [!UICONTROL BuyerRating]              | `buyerRating`               | string    | A rating related to buying behavior.                |
+| [!UICONTROL DonorRating]              | `donorRating`               | string    | A rating related to donor behavior.                 |
+| [!UICONTROL InvestmentRating]         | `investmentRating`          | string    | A rating related to investment behavior.             |
+| [!UICONTROL ResponderRating]          | `responderRating`           | string    | A rating related to responder behavior.             |
+| [!UICONTROL SpendingVelocity]         | `spendingVelocity`          | string    | The speed or rate of spending.                        |
+| [!UICONTROL SpendingVolume]           | `spendingVolume`            | string    | The amount or volume of spending.                     |
+| [!UICONTROL recordId]                 | `recordId`                  | string    | A unique identifier for the record.                 |
+| [!UICONTROL residenceId]              | `residenceId`               | string    | A unique identifier for the residence.              |
+| [!UICONTROL sailing]                  | `sailing`                   | string    | Indicates the interest or involvement in sailing activities.    |
+| [!UICONTROL seasonalHolidayProducts]  | `seasonalHolidayProducts`   | string    | Indicates the preferences or involvement in holiday products. |
+| [!UICONTROL skiing]                   | `skiing`                    | string    | Indicates the interest or involvement in skiing activities.     |
+| [!UICONTROL tennis]                   | `tennis`                    | string    | Indicates the interest or involvement in tennis activities.     |
+| [!UICONTROL tvShoppers]               | `tvShoppers`                | string    | Indicates engagement with TV shopping.                      |
 
 {style="table-layout:auto"}
 
 For more details on the field group, refer to the [full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/partner-prospect/merkle/prospect-details-partner-sample.schema.json) on the public XDM repository.
-
-<!-- no populated example available -->
