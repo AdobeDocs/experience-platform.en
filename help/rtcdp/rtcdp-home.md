@@ -74,7 +74,7 @@ The dataset export functionality is now generally available. See [which datasets
   <tr style="border: 0;">
     <td>
       <img src="assets/do-not-localize/icon-data.svg" width="35px"><br/>
-      <strong>Data ingestion and management</strong><br/><a href="/help/ingestion/batch-ingestion/overview.md">Batch ingestion</a> - <a href="/help/ingestion/streaming-ingestion/overview.md">Streaming ingestion</a> - <a href="/help/sources/home.md">Sources</a> - <a href="/help/xdm/schema/composition.md">Schemas</a> - <a href="/help/catalog/datasets/overview.md">Datasets</a> - <a href="/help/query-service/home.md">Queries</a>
+      <strong>Data ingestion and management</strong><br/>Explore the many ways that you can get data into Real-Time CDP. <br/><a href="/help/ingestion/batch-ingestion/overview.md">Batch ingestion</a> - <a href="/help/ingestion/streaming-ingestion/overview.md">Streaming ingestion</a> - <a href="/help/sources/home.md">Sources</a> - <a href="/help/xdm/schema/composition.md">Schemas</a> - <a href="/help/catalog/datasets/overview.md">Datasets</a> - <a href="/help/query-service/home.md">Queries</a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon_profile-audience.svg" width="35px"><br/>
@@ -82,7 +82,7 @@ The dataset export functionality is now generally available. See [which datasets
     </td>
     <td>
       <img src="assets/do-not-localize/icon-content.svg" width="35px"><br/>
-      <strong>Data activation</strong><br/><a href="/help/destinations/catalog/overview.md">Destinations catalog</a> - <a href="/help/destinations/destination-types.md">Destination types</a> - <a href="/help/destinations/ui/activation-overview.md">Activate audiences</a>  - <a href="/help/destinations/ui/export-datasets.md">Export datasets</a>
+      <strong>Data activation</strong><br/>Market to your customers across channels and export data from Real-Time CDP to any desired storage location. <br/><a href="/help/destinations/catalog/overview.md">Destinations catalog</a> - <a href="/help/destinations/destination-types.md">Destination types</a> - <a href="/help/destinations/ui/activation-overview.md">Activate audiences</a>  - <a href="/help/destinations/ui/export-datasets.md">Export datasets</a>
     </td>
   </tr>
   <tr style="border: 0;">
@@ -92,11 +92,11 @@ The dataset export functionality is now generally available. See [which datasets
     </td>
     <td>
       <img src="assets/do-not-localize/icon-learn.svg" width="35px"><br/>
-      <strong>Guardrails and best practices</strong><br/><a href="/help/rtcdp/guardrails/overview.md">Real-Time CDP Guardrails</a> - <a href="/help/landing/license-usage-and-guardrails/data-management-best-practices.md">Data Management License Entitlement Best Practices</a> - <a href="/help/xdm/schema/best-practices.md">Data Modeling Best Practices</a> 
+      <strong>Guardrails and best practices</strong><br/>Learn about best practices and current limitations when working with data in Real-Time CDP.<br/><a href="/help/rtcdp/guardrails/overview.md">Guardrails</a> - <a href="/help/landing/license-usage-and-guardrails/data-management-best-practices.md">Data Management License Entitlement Best Practices</a> - <a href="/help/xdm/schema/best-practices.md">Data Modeling Best Practices</a> 
     </td>
     <td>
       <img src="assets/do-not-localize/icon-quick-start.svg" width="35px"><br/>
-      <strong>Use Cases</strong><br/><a href="/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md">Intelligent re-engagement</a> - <a href="/help/rtcdp/partner-data/prospecting.md">New customer acquisition</a> - <a href="/help/rtcdp/partner-data/onsite-personalization.md">Onsite personalization to unknown users</a> - <a href="/help/rtcdp/partner-data/supplement-first-party-profiles.md">Profile enrichment</a> - <a href="/help/rtcdp/partner-data/offsite-retargeting.md">Offsite retargeting</a>
+      <strong>Use Cases</strong><br/>Learn how you use Real-Time CDP to acquire new customers, intelligently engage your exixting customers, enrich their profiles, and much more. <br/><a href="/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md">Intelligent re-engagement</a> - <a href="/help/rtcdp/partner-data/prospecting.md">New customer acquisition</a> - <a href="/help/rtcdp/partner-data/onsite-personalization.md">Onsite personalization to unknown users</a> - <a href="/help/rtcdp/partner-data/supplement-first-party-profiles.md">Profile enrichment</a> - <a href="/help/rtcdp/partner-data/offsite-retargeting.md">Offsite retargeting</a>
     </td>
   </tr>
 </table> 
@@ -105,7 +105,7 @@ The dataset export functionality is now generally available. See [which datasets
 
 <table style="table-layout:fixed"><tr style="border: 0;">
 <td><strong>Real-Time CDP</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=en" target="_blank">Tutorials</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Product description Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B Edition</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">Security overview (PDF)</a> - <a href="https://developer.adobe.com/journey-optimizer-apis/" target="_blank">Implementation Blueprints</a>
+<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=en" target="_blank">Tutorials</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Product description Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B Edition</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">Security overview (PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html" target="_blank">Implementation Blueprints</a>
 </td>
 <td><strong>Adobe Experience Platform</strong><br/>
 <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html" target="_blank">Documentation</a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">API reference - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank">Course: Introduction to Experience Platform</a></a>
