@@ -25,7 +25,7 @@ This tutorial uses an example of building an audience insight data model. If you
 
 At the outset, you have an initial data model from your sources (potentially from your advertiser platform API). To make an aggregated view of your raw data, create a reporting insights model as described in the image below. This allows for one dataset to get the upper and lower bounds of the audience match.
 
-![An entity relational diagram (ERD) of the audience insight user model.](../../images/query-accelerated-store/audience-insight-user-model.png)
+![An entity relational diagram (ERD) of the audience insight user model.](../../images/data-distiller/customizable-insights/audience-insight-user-model.png)
 
 In this example, the `externalaudiencereach` table/dataset is based on an ID and tracks the lower and upper bounds for match count. The `externalaudiencemapping` dimension table/dataset maps the external ID to a destination and audience on Platform. 
 
@@ -125,7 +125,7 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 You can extend your audience model with additional details to create a richer dimension table. For example, you can map the audience name and destination name to the external audience identifier. To do this, use Query Service to create or refresh a new dataset and add it to the audience model that combines audiences and destinations with an external identity. The diagram below illustrates the concept of this data model extension.
 
-![An ERD diagram linking the Real-Time CDP insight data model and the Query accelerated store model.](../../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
+![An ERD diagram linking the Real-Time CDP insight data model and the Query accelerated store model.](../../images/data-distiller/customizable-insights/updatingAudienceInsightUserModel.png)
 
 ## Create dimension tables to extend your reporting insights model
 
@@ -221,6 +221,6 @@ LIMIT  5000
 
 The image below provides an example of the possible custom visualizations using your reporting insights data model.
 
-![A match count by destination and audience widget created from the new reporting insights data model.](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
+![A match count by destination and audience widget created from the new reporting insights data model.](../../images/data-distiller/customizable-insights/user-defined-dashboard-widget.png)
 
 Your custom data model can be found in the list of available data models in the user-defined dashboard workspace. See the [user-defined dashboard guide](../../../dashboards/user-defined-dashboards.md) for guidance on how to utilize your custom data model.
