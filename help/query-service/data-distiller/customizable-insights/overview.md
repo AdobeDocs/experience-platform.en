@@ -44,8 +44,6 @@ Below are common use cases that can be effectively addressed through Customizabl
 
 **Customizable Insights Solution:** By extending the reporting data model, users can incorporate additional profile attributes, enriching the audience overlap report with relevant demographic data and preferences.
 
-<!-- Customizable Insights in Data Distiller offers a flexible and powerful solution to tailor reporting data models, enabling businesses to extract deeper, more meaningful insights across various facets of their Adobe Experience Platform. This customization capability empowers organizations to optimize strategies, enhance transparency, and adapt analytics to meet specific business requirements. -->
-
 ## Key capabilities for generating Customizable Insights {#key-capabilities}
 
 The illustration below highlights several essential capabilities for generating Customizable Insights. These capabilities include:
