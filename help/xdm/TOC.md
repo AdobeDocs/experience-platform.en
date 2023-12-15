@@ -105,7 +105,6 @@ feature: Schemas
   * [Address](./data-types/address.md)
   * [Application](./data-types/application.md)
   * [Beacon](./data-types/beacon.md)
-  * [Billing](./data-types/billing.md)
   * [Browser details](./data-types/browser-details.md)
   * [B2B Source](./data-types/b2b-source.md)
   * [Cart](./data-types/cart.md)
