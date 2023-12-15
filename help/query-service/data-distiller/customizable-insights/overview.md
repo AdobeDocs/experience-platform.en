@@ -54,7 +54,7 @@ The illustration below highlights several essential capabilities for generating 
 1. **Accelerated store:** Implementing an accelerated store mechanism to efficiently serve aggregated insights through SQL, ensuring streamlined and rapid access to valuable information.
 1. **BI connectivity:** Facilitating seamless integration with popular Business Intelligence (BI) tools, including Power BI, Tableau, Looker, and Apache Superset. This connectivity ensures compatibility with diverse BI environments, offering users the flexibility to use their tool of choice for in-depth analysis and reporting.
 
-![Visual representations of the key capabilities of Data Distiller's Customizable Insights.](../../images/data-distiller/key-capabilities-of-customizable-insights.png)
+![Visual representations of the key capabilities of Data Distiller's Customizable Insights.](../../images/data-distiller/customizable-insights/key-capabilities-of-customizable-insights.png)
 
 ## Steps to create Customizable Insights {#steps-to-create}
 
@@ -65,7 +65,7 @@ To develop a Customizable Insights dashboard within Data Distiller, follow the s
 1. **Aggregated insights loading:** Load the generated aggregated insights into the accelerated store and use SQL to test queries, and ensure the accuracy and efficiency of data retrieval. To learn how to [make stateless queries to the accelerated store](../../api/accelerated-queries.md), see the documentation.
 1. **Access and integration:** Access the insights stored in the accelerated store seamlessly by integrating with Adobe Experience Platform [User-defined Dashboards](../../../dashboards/user-defined-dashboards.md) or other preferred Business Intelligence (BI) tools. These integrations with third-party clients facilitate a cohesive and intuitive experience for users.
 
-![An infographic illustrating the four steps to Customizable Insights in Data Distiller.](../../images/data-distiller/steps-to-customizable-insights.png)
+![An infographic illustrating the four steps to Customizable Insights in Data Distiller.](../../images/data-distiller/customizable-insights/steps-to-customizable-insights.png)
 
 ## Next Steps
 
