@@ -16,10 +16,12 @@ Start here and follow the links below to understand all guardrails across the va
 * [Guardrails for [!DNL Identity Service] data](/help/identity-service/guardrails.md)
 * [Guardrails for [!DNL Query Service]](/help/query-service/guardrails.md)
 * [Guardrails for data activation through destinations](/help/destinations/guardrails.md)
+* [Guardrails for Real-Time CDP B2B](/help/rtcdp/b2b-guardrails.md)
 
 >[!TIP]
 >
->Additionally, see [this page](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) for information on guardrails for other Experience Platform apps, such as [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html) and [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html), and [end-to-end latency diagrams](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) for various Experience Platform services.
+>Additionally, visit [the digital experience blueprints](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) for further information such as [end-to-end latency diagrams](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) for various Experience Platform services.
+
 
 ## Guardrail types {#guardrail-types}
 
@@ -40,6 +42,13 @@ Additionally, refer to the product description links below for licensing and ent
 * [Real-Time Customer Data Platform (B2C Edition - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2P Edition - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2B Edition - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+
+## Guardrails for other Experience Platform applications  {#guardrails-other-aep-apps}
+
+Similar guardrails exist for other Experience Platform applications. Visit the links below for more information:
+
+* [Adobe Journey Optimizer guardrails](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
+* [Customer Journey Analytics guardrails](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
 
 ## Next steps
 
