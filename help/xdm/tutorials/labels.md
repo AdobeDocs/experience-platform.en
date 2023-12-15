@@ -38,6 +38,10 @@ To start adding labels, you must first [select an existing schema to edit](../ui
 
 To edit the labels for an individual field, you can select the field in the canvas and then select **[!UICONTROL Manage access]** in the right rail.
 
+>[!IMPORTANT]
+>
+>A maximum of 300 labels can be applied to any schema.
+
 ![Select a field from the Schema Editor canvas](../images/tutorials/labels/manage-access.png)
 
 You can also select the **[!UICONTROL Labels]** tab, choose the desired field from the list, and select **[!UICONTROL Apply Access and Data Governance Labels]** in the right rail.
