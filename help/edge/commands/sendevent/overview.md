@@ -34,3 +34,11 @@ alloy("sendEvent", {
   "xdm": adobeDataLayer.getState(reference)
 });
 ```
+
+## Response object
+
+If you decide to [handle responses](../../handle-responses.md) with this command, the following properties are available in the response object:
+
+* **`propositions`**: An array of propositions returned from Experience Edge. Propositions that are automatically rendered include the flag `renderAttempted` set to `true`.
+* **`inferences`**: An array of inference objects, which contain machine learning information about this user.
+* **`destinations`**: An array of destination objects returned from Experience Edge.

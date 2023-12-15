@@ -9,8 +9,11 @@ The `applyPropositions` command allows you to re-render propositions that were a
 This command supports the following fields:
 
 * **Propositions**: An array of proposition objects that you want to re-render.
-* **Inferences**: An array of inference objects, which contain machine learning information about this user.
-* **Destinations**: An array of destination objects returned from Experience Edge.
+* **View name**: The name of the view to render. The display notifications for these decisions are cached and can be included in a subsequent `sendEvent` command using the `personalization.includePendingDisplayNotifications` option.
+* **Meta data**: An object that determines how HTML offers can be applied. It contains the following properties:
+  * Scope
+  * Selector
+  * Action type
 
 ## Apply propositions using the Web SDK tag extension
 
@@ -22,5 +25,15 @@ Applying propositions is performed as an action within a rule in the Adobe Exper
 1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.
 1. Under [!UICONTROL Actions], select an existing action or create an action.
 1. Set the [!UICONTROL Extension] dropdown field to **[!UICONTROL Adobe Experience Platform Web SDK]**, and set the [!UICONTROL Action Type] to **[!UICONTROL Apply propositions]**.
-1. Set the desired fields 
+1. Set the desired fields on the right.
 1. Click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
+
+## Apply propositions using the Web SDK JavaScript library
+
+Run the `applyPropositions` command when calling your configured instance of the Web SDK.
+
+```js
+allow("applyPropositiions",{
+  
+});
+```

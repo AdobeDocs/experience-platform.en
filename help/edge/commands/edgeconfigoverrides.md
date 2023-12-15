@@ -1,18 +1,16 @@
 ---
 title: edgeConfigOverrides
-description: Override configuration settings for all commands on a page
+description: Override configuration settings for a command.
 ---
 # `edgeConfigOverrides`
 
-*This page outlines the object to override configuration settings for all commands on a page. If you want to override configuration settings for just a single `sendEvent` command, see [`edgeConfigOverrides`](../sendevent/edgeconfigoverrides.md) within the `sendEvent` command.*
-
-The `edgeConfigOverrides` object allows you to override configuration settings for commands run on the current page. This override is useful when you have different websites or subdomains for different countries, or if you have multiple Experience Platform sandboxes to store data specific to different business units.
+The `edgeConfigOverrides` object allows you to override configuration settings for commands run on the current page. This override object is not a command, but rather an object that you can include in most Web SDK commands. This object is useful when you have different websites or subdomains for different countries, or if you have multiple Experience Platform sandboxes to store data specific to different business units.
 
 >[!IMPORTANT]
 >
 >You must first configure override settings within the datastream before using product-specific overrides. See [Datastream overrides](/help/datastreams/overrides.md) for more information.
 
-If you set overrides both in the `configure` command here and in another command (such as `sendEvent`), the overrides in the other command take priority.
+If you set overrides both in the Web SDK configuration and in a specific command (such as `sendEvent`), the overrides in the specific command take priority.
 
 ## Properties within this object
 
@@ -25,7 +23,7 @@ The following properties are available within this object:
 
 ## Edge configuration overrides using the Web SDK tag extension
 
-Set each desired field under **[!UICONTROL Datastream configuration overrides]** when [configuring the tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+If you want to set overrides for the entire tag extension, set each desired field under **[!UICONTROL Datastream configuration overrides]** when [configuring the tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
@@ -34,11 +32,23 @@ Set each desired field under **[!UICONTROL Datastream configuration overrides]**
 1. Scroll down to the **[!UICONTROL Datastream configuration overrides]** section. Set each desired override value.
 1. Click **[!UICONTROL Save]**, then publish your changes.
 
+If you want to set overrides just for a specific command, set each desired field within the actions of a tag rule.
+
+1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Select the desired tag property.
+1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.
+1. Under [!UICONTROL Actions], select an existing action or create an action.
+1. Set the [!UICONTROL Extension] dropdown field to **[!UICONTROL Adobe Experience Platform Web SDK]**, and set the [!UICONTROL Action Type] to **[!UICONTROL Send event]**.
+1. Scroll down to the section labled **[!UICONTROL Datastream configuration overrides]**.
+1. Set each field in this section to the desired override value.
+1. Click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
+
 Separate fields are provided for [!UICONTROL Development], [!UICONTROL Staging], and [!UICONTROL Production] environments. Make sure that you fill in each desired field for each environment.
 
 ## Edge configuration overrides using the Web SDK JavaScript library
 
-Set the `edgeConfigOverrides` object when running the `sendEvent` command. Set each desired property within this object.
+Set the `edgeConfigOverrides` object when running a command. Set each desired property within this object.
 
 * **`datastreamId`**: The datastream override ID.
 * **`com_adobe_analytics.reportSuites[]`**: An array of strings that determines which report suites that you want to send Analytics data to.
@@ -46,11 +56,33 @@ Set the `edgeConfigOverrides` object when running the `sendEvent` command. Set e
 * **`com_adobe_target.propertyToken`**: The token for the Target destination property.
 
 ```js
+// Set overrides in the configure command
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "edgeConfigOverrides": {
     "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287"
+    "com_adobe_analytics": {
+      "reportSuites": [
+        "examplersid",
+        "examplersid2",
+        "examplersid3"
+        ]
+    },
+    "com_adobe_identity": {
+      "idSyncContainerId": "1234567"
+    },
+    "com_adobe_target": {
+      "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+    }
+  }
+});
+
+// Set overrides in a specific command
+alloy("sendEvent", {
+  "xdm": adobeDataLayer.getState(reference),
+  "edgeConfigOverrides": {
+    "datastreamId": "ebebf826-a01f-4458-8cec-ef61de241c93"
     "com_adobe_analytics": {
       "reportSuites": [
         "examplersid",

@@ -1,11 +1,9 @@
 ---
 title: Execute Adobe Experience Platform Web SDK Commands
 description: Learn how to execute Experience Platform Web SDK commands
-keywords: Execute commands;commandName;Promises;getLibraryInfo;response objects;consent;
 exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
 ---
 # Execute commands
-
 
 After the base code has been implemented on your webpage, you can begin executing commands with the SDK. You do not need to wait for the external file (`alloy.js`) to be loaded from the server before executing commands. If the SDK has not finished loading, commands are queued and processed by the SDK as soon as possible.
 
