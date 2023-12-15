@@ -162,6 +162,7 @@ feature: Schemas
   * [QoE Data Details Information](./data-types/qoe-data-details-information.md)
   * [Search](./data-types/search.md)
   * [Session Details Information](./data-types/session-details-information.md)
+  * [Shipping](./data-types/shipping.md)
   * [Subscription](./data-types/subscription.md)
   * [Telecom Subscription](./data-types/telecom-subscription.md)
   * [Transaction](./data-types/transaction.md)
