@@ -99,7 +99,7 @@ API requests to the [!DNL SAP Cloud Management service] are subject to [Rate Lim
 
 | Target Identity | Description | Considerations |
 | --- | --- | --- |
-| `customerNumber` | A customer identifier of the individual or corporate customer already present in your [!DNL SAP Commerce] account.| Mandatory |
+| `customerNumberSAP` | A customer identifier of the individual or corporate customer already present in your [!DNL SAP Commerce] account.| Mandatory |
 
 ## Supported audiences {#supported-audiences}
 
@@ -180,19 +180,19 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 To correctly send your audience data from Adobe Experience Platform to the [!DNL SAP Commerce] destination, you must go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination. To correctly map your XDM fields to the [!DNL SAP Commerce] destination fields, follow the steps below:
 
-#### Map the `customerNumber` identity
+#### Map the `customerNumberSAP` identity
 
-The `customerNumber` identity is a mandatory mapping for this destination. Follow the steps below to map it:
+The `customerNumberSAP` identity is a mandatory mapping for this destination. Follow the steps below to map it:
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
 ![Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
-1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** and select `customerNumber`.
+1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** and select `customerNumberSAP`.
 ![Platform UI screenshot selecting email as a source attribute to map as identity.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
 1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select the `customerNumber` identity.
 ![Platform UI screenshot selecting email as a target attribute to map as identity.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
 
 | Source Field | Target Field | Mandatory |
 | --- | --- | --- |
-| `IdentityMap: customerNumber` | `Identity: customerNumber` | Yes |
+| `IdentityMap: customerNumberSAP` | `Identity: customerNumber` | Yes |
 
 An example with the identity mapping is shown below:
 ![Image from Platform UI showing an example of customerNumber identity mapping.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
