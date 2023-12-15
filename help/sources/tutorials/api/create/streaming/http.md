@@ -558,6 +558,10 @@ A successful response returns HTTP status 201 with details of your newly created
 
 ## Post data to be ingested to Platform {#ingest-data}
 
+>[!NOTE]
+>
+>You must add a delay of at least ~5 minutes between creation of dataflow and ingesting any streaming data. This allows the dataflow to be fully enabled, before any data is ingested.
+
 Now that you've created your flow, you can send your JSON message to the streaming endpoint you previously created.
 
 **API format**
