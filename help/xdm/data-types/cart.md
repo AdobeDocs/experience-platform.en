@@ -4,7 +4,7 @@ description: Learn about the Cart Experience Data Model (XDM) data type.
 ---
 # [!UICONTROL Cart] data type
 
-[!UICONTROL Cart] is a standard Experience Data Model (XDM) data type that provides properties related to a shopping cart. Use this data type to capture the unique identifier assigned by the seller ([!UICONTROL Cart ID]) and the source ([!UICONTROL Cart Source]) where one or more products were added to the cart. 
+[!UICONTROL Cart] is a standard Experience Data Model (XDM) data type that provides properties related to a shopping cart. Use this data type to capture the unique identifier assigned by the seller (`Cart ID`) and the source (`Cart Source`) where one or more products were added to the cart. 
 
 ![A diagram of the [!UICONTROL Cart] data type.](../images/data-types/cart.png)
 
