@@ -103,12 +103,12 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 ### Map identities {#map}
 
-Use the mapping step to configure the relationship between a identity value within the Adobe environment that matches the value passed into the Gainsight PX system during the identify step.  There only restriction is that the field is of type string and the value for a particular user match exactly the value used during the Gainsight PX identify step.   The only choice on the target side of the mapping is IDENTIFY_ID.
+Use the mapping step to configure the relationship between a identity value within the Experience Platform that matches the value passed into the Gainsight PX system during the identify step.  There only restriction is that the field is of type string and the value for a particular user match exactly the value used during the Gainsight PX identify step.   The only choice on the target side of the mapping is IDENTIFY_ID.
 ![Identity mapping screen showing how to select the source and target values for the identity](../../assets/catalog/analytics/gainsight_px/mapping_identities.png)
 
 ## Exported data / Validate data export {#exported-data}
 
-Segmentation data is streamed from the Adobe environment to Gainsight PX.  
+Segmentation data is streamed from the Experience Platform to Gainsight PX.  
 Segment metadata will be visible in the Segments screen within the PX application:![Segment list screen in Gainsight PX showing external segments](../../assets/catalog/analytics/gainsight_px/segment_metadata.png)  
 Segment membership information will be visible on the Segments tab of the Audience Explorer screen within PX: ![Audience Explorer screen in Gainsight PX showing associated segments for a user](../../assets/catalog/analytics/gainsight_px/PX_Segments.png)
 
