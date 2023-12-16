@@ -35,7 +35,7 @@ exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
 | [!UICONTROL Requisition List Adds]       | `requisitionListAdds` | [[!UICONTROL Measure]](./measure.md)    | Indicates the addition of a product(s) to a requisition list.                                                                          |
 | [!UICONTROL Requisition List Removals]   | `requisitionListRemovals` | [[!UICONTROL Measure]](./measure.md)| Indicates the removal of a product(s) from a requisition product list.                                                               |
 | [!UICONTROL Requisition List]            | `requisitionList`     |     [[!UICONTROL requisitionlist]](./requisition-list.md)        | The properties of requisition list created by the customer.                    |
-| [!UICONTROL Scope]                       | `commerceScope`       | [[!UICONTROL commercescope]](./e-scope.md) | The commerce scope identifiers of where an event occurred (store view, store, website, etc.).                            |
+| [!UICONTROL Scope]                       | `commerceScope`       | [[!UICONTROL commercescope]](./commerce-scope.md) | The commerce scope identifiers of where an event occurred (store view, store, website, etc.).                            |
 
 {style="table-layout:auto"}
 
