@@ -1,23 +1,27 @@
 ---
-title: Execute Adobe Experience Platform Web SDK Commands
-description: Learn how to execute Experience Platform Web SDK commands
+title: Command responses
+description: Handle responses from commands using JavaScript promises.
 exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
 ---
-# Execute commands
+# Command responses
 
-After the base code has been implemented on your webpage, you can begin executing commands with the SDK. You do not need to wait for the external file (`alloy.js`) to be loaded from the server before executing commands. If the SDK has not finished loading, commands are queued and processed by the SDK as soon as possible.
+Some Web SDK commands can return an object containing data potentially useful to your organization. You can choose what to do with that data, if desired. Command responses are particularly valuable for propositions and destinations, as they require Experience Edge data to effectively work. 
 
-Commands are executed using the following syntax.
+Command responses use JavaScript [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), acting as a proxy for a value that is not known when the promise is created. Once the value is known, the promise is "resolved" with the value.
 
-```javascript
-alloy("commandName", options);
-```
+## Handle command responses using the Web SDK tag extension
 
-The `commandName` tells the SDK what to do, while `options` are the parameters and data you would like to pass into a command. Because the available options depend on the command, please consult the documentation for more details about each command.
+Create a rule that subscribes to the **[!UICONTROL Send event complete]** event as part of a rule.
 
-## A note on promises
+1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
+1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
+1. Select the desired tag property.
+1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.
+1. Under [!UICONTROL Events], select an existing event or create an event.
+1. Set the [!UICONTROL Extension] dropdown field to **[!UICONTROL Adobe Experience Platform Web SDK]**, and set the [!UICONTROL Event Type] to **[!UICONTROL Send event complete]**.
+1. Click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
 
-[Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) are fundamental to how the SDK communicates with the code on your webpage. A promise is a common programming structure and is not specific to this SDK or even JavaScript. A promise acts as a proxy for a value that is not known when the promise is created. Once the value is known, the promise is "resolved" with the value. Handler functions can be associated with a promise, so that you can be notified when the promise has been resolved or when an error has occurred in the process of resolving the promise. To learn more about promises, please read [this tutorial](https://javascript.info/promise-basics) or any of the other resources on the web.
+
 
 ## Handling success or failure {#handling-success-or-failure}
 

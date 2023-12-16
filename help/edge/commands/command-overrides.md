@@ -1,8 +1,8 @@
 ---
-title: edgeConfigOverrides
+title: Command overrides
 description: Override configuration settings for a command.
 ---
-# `edgeConfigOverrides`
+# Command overrides
 
 The `edgeConfigOverrides` object allows you to override configuration settings for commands run on the current page. This override object is not a command, but rather an object that you can include in most Web SDK commands. This object is useful when you have different websites or subdomains for different countries, or if you have multiple Experience Platform sandboxes to store data specific to different business units.
 
