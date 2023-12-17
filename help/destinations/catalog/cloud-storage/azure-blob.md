@@ -36,7 +36,7 @@ If you already have a valid [!DNL Blob] destination, you may skip the remainder 
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|

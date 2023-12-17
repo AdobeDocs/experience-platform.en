@@ -2,6 +2,7 @@
 keywords: streaming; HTTP destination
 title: HTTP API connection
 description: Use the HTTP API destination in Adobe Experience Platform to send profile data to third-party HTTP endpoint to run your own analytics or perform any other operations you may need on profile data exported out of Experience Platform.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 ---
 # HTTP API connection
@@ -24,7 +25,7 @@ HTTP endpoints can be either customers' own systems or third-party solutions.
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
@@ -58,7 +59,7 @@ To use the HTTP API destination to export data out of Experience Platform, you m
 
 ## IP address allowlist {#ip-address-allowlist}
 
-To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the HTTP API destination. Refer to [IP address allow list for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
+To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the HTTP API destination. Refer to [IP address allowlist for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
 
 ## Supported authentication types {#supported-authentication-types}
 
@@ -66,7 +67,7 @@ The HTTP API destination supports several authentication types to your HTTP endp
 
 * HTTP endpoint with no authentication;
 * Bearer token authentication;
-* [OAuth 2.0 client credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) authentication with the body form, with [!DNL client ID], [!DNL client secret] and [!DNL grant type] in the body of the HTTP request, as shown in the example below.
+* [OAuth 2.0 client credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) authentication with the body form, with [!DNL client ID], [!DNL client secret], and [!DNL grant type] in the body of the HTTP request, as shown in the example below.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -106,7 +107,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 If you select the **[!UICONTROL Bearer token]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
 
-![Image of the UI screen where you can connect to the HTTP API destination, using bearer token authentication](../../assets/catalog/http/http-api-authentication-bearer.png)
+![Image of the UI screen where you can connect to the HTTP API destination, using bearer token authentication.](../../assets/catalog/http/http-api-authentication-bearer.png)
 
 * **[!UICONTROL Bearer token]**: insert the bearer token to authenticate to your HTTP location.
 
@@ -114,7 +115,7 @@ If you select the **[!UICONTROL Bearer token]** authentication type to connect t
 
 If you select the **[!UICONTROL None]** authentication type to connect to your HTTP endpoint:
 
-![Image of the UI screen where you can connect to the HTTP API destination, using no authentication](../../assets/catalog/http/http-api-authentication-none.png)
+![Image of the UI screen where you can connect to the HTTP API destination, using no authentication.](../../assets/catalog/http/http-api-authentication-none.png)
 
 When you select this authentication open, you only need to select **[!UICONTROL Connect to destination]** and the connection to your endpoint is established.
 
@@ -122,7 +123,7 @@ When you select this authentication open, you only need to select **[!UICONTROL 
 
 If you select the **[!UICONTROL OAuth 2 Password]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
 
-![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 with Password authentication](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 with Password authentication.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
 * **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens.
 * **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
@@ -134,7 +135,7 @@ If you select the **[!UICONTROL OAuth 2 Password]** authentication type to conne
 
 If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication type to connect to your HTTP endpoint, input the fields below and select **[!UICONTROL Connect to destination]**:
 
-![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 with Client Credentials authentication](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![Image of the UI screen where you can connect to the HTTP API destination, using OAuth 2 with Client Credentials authentication.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 * **[!UICONTROL Access Token URL]**: The URL on your side which issues access tokens and, optionally, refresh tokens.
 * **[!UICONTROL Client ID]**: The [!DNL client ID] that your system assigns to Adobe Experience Platform.
@@ -172,7 +173,7 @@ If you select the **[!UICONTROL OAuth 2 Client Credentials]** authentication typ
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Image of the UI screen showing completed fields for the HTTP destination details](../../assets/catalog/http/http-api-destination-details.png)
+![Image of the UI screen showing completed fields for the HTTP destination details.](../../assets/catalog/http/http-api-destination-details.png)
 
 * **[!UICONTROL Name]**: Enter a name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: Enter a description that will help you identify this destination in the future.
@@ -192,7 +193,8 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* [Consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) is currently not supported in exports to the HTTP API destination. [Read more](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 See [Activate audience data to streaming profile export destinations](../../ui/activate-streaming-profile-destinations.md) for instructions on activating audiences to this destination.
 
@@ -210,7 +212,7 @@ Experience Platform optimizes the profile export behavior to your HTTP API desti
 
 In all the cases described above, only the profiles where relevant updates have occurred are exported to your destination. For example, if an audience mapped to the destination flow has a hundred members, and five new profiles qualify for the segment, the export to your destination is incremental and only includes the five new profiles.
 
-Note that the all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
+Note that all the mapped attributes are exported for a profile, no matter where the changes lie. So, in the example above all the mapped attributes for those five new profiles will be exported even if the attributes themselves haven't changed.
 
 ### What determines a data export and what is included in the export {#what-determines-export-what-is-included}
 
@@ -224,7 +226,7 @@ Regarding the data that is exported for a given profile, it is important to unde
 
 For example, consider this dataflow to an HTTP destination where three audiences are selected in the dataflow, and four attributes are mapped to the destination.  
 
-![HTTP API destination dataflow](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![An example of a HTTP API destination dataflow.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
 A profile export to the destination can be determined by a profile qualifying for or exiting one of the *three mapped segments*. However, in the data export, in the `segmentMembership` object (see [Exported Data](#exported-data) section below), other unmapped audiences might appear, if that particular profile is a member of them and if these share the same merge policy as the audience that triggered the export. If a profile qualifies for the **Customer with DeLorean Cars** segment but is also a member of the **Watched "Back to the Future"** movie and **Science fiction fans** segments, then these other two audiences will also be present in the `segmentMembership` object of the data export, even though these are not mapped in the dataflow, if these share the same merge policy with the **Customer with DeLorean Cars** segment.
 

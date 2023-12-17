@@ -168,7 +168,7 @@ The MA extension exposes the `get-instance` and `media-heartbeat` shared modules
     ...
     ```
 
-1. Using the Media Heartbeat instance, follow the [Media SDK JS documentation](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/setup/setup-javascript/set-up-js-2.html) and [JS API documentation](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) to implement media tracking.
+1. Using the Media Heartbeat instance, follow the [Media SDK JS documentation](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) and [JS API documentation](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) to implement media tracking.
 
 >[!NOTE]
 >

@@ -1,7 +1,6 @@
 ---
-title: Track Events Using the Adobe Experience Platform Web SDK
+title: Track events using the Adobe Experience Platform Web SDK
 description: Learn how to track Adobe Experience Platform Web SDK events.
-keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
 ---
 # Track events
@@ -15,7 +14,7 @@ Data sent to Adobe Experience Cloud falls into two categories:
 
 ## Sending XDM data
 
-XDM data is an object whose content and structure matches a schema you have created within Adobe Experience Platform. [Learn more about how to create a schema.](../../xdm/tutorials/create-schema-ui.md)
+XDM data is an object whose content and structure match a schema you have created within Adobe Experience Platform. [Learn more about how to create a schema.](../../xdm/tutorials/create-schema-ui.md)
 
 Any XDM data that you would like to be part of your analytics, personalization, audiences, or destinations should be sent using the `xdm` option.
 
@@ -66,16 +65,14 @@ In this example, the data layer is cloned by serializing it to JSON, then deseri
 
 >[!NOTE]
 >
->There is a 32 KB limit on the data that can be sent in each event in the XDM field.
+>There is a 32KB limit on the data that can be sent in each event in the XDM field.
 
 
 ## Sending non-XDM data
 
-Data that does not match an XDM schema should be sent using the `data` option of the `sendEvent` command. This feature is supported in versions 2.5.0 and higher of the Web SDK.
+Data that does not match an XDM schema should be sent using the `data` option of the `sendEvent` command. This feature is supported in versions 2.5.0 and higher of the Web SDK. When using this option, the data will need to be mapped to a supported XDM schema server-side via [Data Prep for Data Collection](../../datastreams/data-prep.md#create-mapping).
 
-This is useful if you need to update an Adobe Target profile or send Target Recommendations attributes. [Read more about these Target features.](../personalization/adobe-target/target-overview.md#single-profile-update)
-
-In the future, you will be able to send your full data layer under the `data` option and map it to XDM server-side.
+This feature is also useful if you need to update an Adobe Target profile or send Target Recommendations attributes. Read more about [Target personalization](../personalization/adobe-target/target-overview.md#single-profile-update).
 
 **How to send Profile and Recommendations attributes to Adobe Target:**
 
@@ -97,9 +94,9 @@ alloy("sendEvent", {
 
 ### Setting `eventType` {#event-types}
 
-In XDM ExperienceEvent schemas, there is an optional `eventType` field. This holds the primary event type for the record. Setting an event type can help you differentiate between the different events you will be sending in. XDM provides several predefined event types that you can use or you always create your own custom event types for your use cases. Refer to the XDM documentation for a [list of all the predefined event types](../../xdm/classes/experienceevent.md#eventType).
+In XDM ExperienceEvent schemas, there is an optional `eventType` field. This holds the primary event type for the record. Setting an event type can help you differentiate between the different events you are sending in. XDM provides several predefined event types that you can use or you always create your own custom event types for your use cases. Refer to the XDM documentation for a [list of all the predefined event types](../../xdm/classes/experienceevent.md#eventType).
 
-These event types will be shown in a dropdown if using the tag extension or you can always pass them in without tags. They can be passed in as part of the `xdm` option.
+These event types are shown in a dropdown if using the tag extension or you can always pass them in without tags. They can be passed in as part of the `xdm` option.
 
 
 ```javascript
@@ -136,7 +133,7 @@ alloy("sendEvent", {
 >
 >The `datasetId` option supported by the `sendEvent` command was deprecated. To override a dataset ID, use [configuration overrides](../../datastreams/overrides.md) instead.
 
-In some use cases, you might want to send an event to a dataset other than the one configured in the Configuration UI. For that you need to set the `datasetId` option on the `sendEvent` command:
+In some use cases, you might want to send an event to a dataset other than the one configured in the Configuration UI. For that you must set the `datasetId` option on the `sendEvent` command:
 
 
 
@@ -156,8 +153,9 @@ Custom identity information can also be added to the event. See [Retrieving Expe
 
 ## Using the sendBeacon API
 
-It can be tricky to send event data just before the web page user has navigated away. If the request takes too long, the browser might cancel the request. Some browsers have implemented a web standard API called `sendBeacon` to allow data to be more easily collected during this time. When using `sendBeacon`, the browser makes the web request in the global browsing context. This means the browser makes the beacon request in the background and does not hold up the page navigation. To tell Adobe Experience Platform [!DNL Web SDK] to use `sendBeacon`, add the option `"documentUnloading": true` to the event command.  Here is an example:
+It can be tricky to send event data just before the web page user has navigated away. If the request takes too long, the browser might cancel the request. Some browsers have implemented a web standard API called `sendBeacon` to allow data to be more easily collected during this time. When using `sendBeacon`, the browser makes the web request in the global browsing context. This means that the browser makes the beacon request in the background and does not hold up the page navigation. To tell Adobe Experience Platform [!DNL Web SDK] to use `sendBeacon`, add the option `"documentUnloading": true` to the event command.
 
+**Example**
 
 ```javascript
 alloy("sendEvent", {
@@ -175,7 +173,7 @@ alloy("sendEvent", {
 });
 ```
 
-Browsers have imposed limits to the amount of data that can be sent with `sendBeacon` at one time. In many browsers, the limit is 64K. If the browser rejects the event because the payload is too large, Adobe Experience Platform [!DNL Web SDK] falls back to using its normal transport method (for example, fetch).
+Browsers have imposed limits to the amount of data that can be sent with `sendBeacon` at one time. In many browsers, the limit is 64 KB. If the browser rejects the event because the payload is too large, Adobe Experience Platform [!DNL Web SDK] falls back to using its normal transport method (for example, fetch).
 
 ## Handling responses from events
 
@@ -208,19 +206,19 @@ alloy("sendEvent", {
 
 The `sendEvent` command returns a promise that is resolved with a `result` object. The `result` object contains the following properties:
 
-**propositions**: The Personalization offers that the visitor has qualified for. [Learn more about propositions.](../personalization/rendering-personalization-content.md#manually-rendering-content)
-
-**decisions**: This property is deprecated. Please use `propositions` instead.
-
-**destinations**: Segments from Adobe Experience Platform that can be shared with external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites. [Learn more about destinations.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)
+|Property | Description | 
+|---------|----------|
+| `propositions` | The personalization offers that the visitor has qualified for. [Learn more about propositions.](../personalization/rendering-personalization-content.md#manually-rendering-content) |
+| `decisions` | This property is deprecated. Use `propositions` instead. |
+| `destinations` | Audiences from Adobe Experience Platform that can be shared with external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites. [Learn more about destinations.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html) |
 
 >[!WARNING]
 >
->`destinations` is currently in Beta. The documentation and functionality are subject to change.
+>The `destinations` property is in beta. The documentation and functionality are subject to change.
 
 ## Modifying events globally {#modifying-events-globally}
 
-If you want to add, remove, or modify fields from the event globally, you can configure an `onBeforeEventSend` callback.  This callback is called every time an event is sent.  This callback is passed in an event object with an `xdm` field.  Modify `content.xdm` to change the data that is sent with the event.
+If you want to add, remove, or modify fields from the event globally, you can configure an `onBeforeEventSend` callback. This callback is called every time an event is sent. This callback is passed in an event object with an `xdm` field. To change the data that is sent with the event, modify `content.xdm`.
 
 
 ```javascript
@@ -240,8 +238,8 @@ alloy("configure", {
 
 `xdm` fields are set in this order:
 
-1. Values passed in as options to the event command `alloy("sendEvent", { xdm: ... });`
-2. Automatically collected values.  (See [Automatic Information](../data-collection/automatic-information.md).)
+1. Values passed in as options to the event command `alloy("sendEvent", { xdm: ... });`.
+2. Automatically collected values. See [Automatic Information](../data-collection/automatic-information.md).
 3. The changes made in the `onBeforeEventSend` callback.
 
 A few notes on the `onBeforeEventSend` callback:
@@ -294,4 +292,4 @@ examining the event data and returning `false` if the event should not be sent.
 
 ## Potential actionable errors
 
-When sending an event, an error might be thrown if the data being sent is too large (over 32KB for the full request). In this case, you need to reduce the amount of data being sent.
+When sending an event, an error might be thrown if the data being sent is too large (over 32 KB for the full request). In this case, you must reduce the amount of data being sent.

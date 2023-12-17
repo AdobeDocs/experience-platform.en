@@ -21,12 +21,12 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 
 ## Supported Identities {#supported-identities}
 
-[!DNL Google Ad Manager] supports the activation of identities described in the table below.
+[!DNL Google Ad Manager] supports the activation of audiences based on the identities shown in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
-|Target Identity|Description|Considerations|
+|Identity|Description|Considerations|
 |---|---|---|
-|GAID|[!DNL Google Advertising ID]|Select this target identity when your source identity is a GAID namespace.|
-|IDFA|[!DNL Apple ID for Advertisers]|Select this target identity when your source identity is an IDFA namespace.|
+|GAID|[!DNL Google Advertising ID]||
+|IDFA|[!DNL Apple ID for Advertisers]||
 |AAM UUID|[Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), also known as [!DNL Device ID]. A numerical, 38-digit device ID that Audience Manager associates to each device it interacts with.|Google uses [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html) to target users in California, and the Google Cookie ID for all other users.|
 |[!DNL Google] cookie ID|[!DNL Google] cookie ID|[!DNL Google] uses this ID to target users outside of California.|
 |RIDA|Roku ID for Advertising. This ID uniquely identifies Roku devices.||
@@ -37,7 +37,7 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|

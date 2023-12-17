@@ -1,34 +1,33 @@
 ---
-keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & Video 360;display 360;video 360;Video 360;Display 360;display and video
 title: Google Display & Video 360 connection
-description: Display & Video 360, formerly known as DoubleClick Bid Manager is a tool used to execute retargeting and audience targeted digital campaigns across Display, Video and Mobile inventory sources.
+description: Display & Video 360, formerly known as DoubleClick Bid Manager is a tool used to execute retargeting and audience targeted digital campaigns across Display, Video, and Mobile inventory sources.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
 ---
 # [!DNL Google Display & Video 360] connection
 
 ## Overview {#overview}
 
-[!DNL Display & Video 360], formerly known as [!DNL DoubleClick Bid Manager], is a tool used to execute retargeting and audience targeted digital campaigns across Display, Video and Mobile inventory sources. 
+[!DNL Display & Video 360], formerly known as [!DNL DoubleClick Bid Manager], is a tool used to execute retargeting and audience targeted digital campaigns across Display, Video, and Mobile inventory sources. 
 
 ## Destination specifics {#specifics}
 
 Note the following details that are specific to [!DNL Google Display & Video 360] destinations:
 
 * Activated audiences are created programmatically in the Google platform.
-* The activation of audience backfills to the [!DNL Google Display & Video 360] destination is scheduled to occur 24-48 hours after an audience is first mapped to a destination connection. This update is in response to Google's policy to wait 24 hours until ingesting data and is meant to improve match rates between Real-Time CDP and [!DNL Google Display & Video 360]. Note that this is a backend configuration applicable to this destination only and that is unrelated to any customer-configurable scheduling options in the UI.
+* The activation of audience backfills to the [!DNL Google Display & Video 360] destination is scheduled to occur 24-48 hours after an audience is first mapped to a destination connection. This update is in response to Google's policy to wait 24 hours until ingesting data and is meant to improve match rates between Real-Time CDP and [!DNL Google Display & Video 360]. This is a backend configuration applicable to this destination only and that is unrelated to any customer-configurable scheduling options in the UI.
 
 >[!IMPORTANT]
 >
->If you are looking to create your first destination with Google Display & Video 360 and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
+>If you are looking to create your first destination with Google Display & Video 360 and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
 
 ## Supported identities {#supported-identities}
 
-[!DNL Google Display & Video 360] supports the activation of identities described in the table below.
+[!DNL Google Display & Video 360] supports the activation of audiences based on the identities shown in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
-|Target Identity|Description|Considerations|
+|Identity|Description|Considerations|
 |---|---|---|
-|GAID|[!DNL Google Advertising ID]|Select this target identity when your source identity is a GAID namespace.|
-|IDFA|[!DNL Apple ID for Advertisers]|Select this target identity when your source identity is an IDFA namespace.|
+|GAID|[!DNL Google Advertising ID]||
+|IDFA|[!DNL Apple ID for Advertisers]||
 |AAM UUID|[Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), also known as [!DNL Device ID]. A numerical, 38-digit device ID that Audience Manager associates to each device it interacts with.|Google uses [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html) to target users in California, and the Google Cookie ID for all other users.|
 |[!DNL Google] cookie ID|[!DNL Google] cookie ID|[!DNL Google] uses this ID to target users outside of California.|
 |RIDA|Roku ID for Advertising. This ID uniquely identifies Roku devices.||
@@ -37,7 +36,7 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
@@ -61,10 +60,10 @@ Refer to the table below for information about the destination export type and f
 
 >[!NOTE]
 >
->Allow-listing is mandatory before setting up your first [!DNL Google Display & Video 360] destination in Platform. Please ensure the allow-listing process described below has been completed by [!DNL Google] before creating a destination.
+>Allow-listing is mandatory before setting up your first [!DNL Google Display & Video 360] destination in Platform. Ensure the allow-listing process described below has been completed by [!DNL Google] before creating a destination.
 >The exception to this rule is for [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) customers. If you have already created a connection to this Google destination in Audience Manager, then it is not necessary to go through the allow-listing process again and you can proceed to the next steps.
 
-Before creating the [!DNL Google Display & Video 360] destination in Platform, you must contact Google asking for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact Google and provide the following information:
+Before creating the [!DNL Google Display & Video 360] destination in Platform, you must contact Google asking for Adobe to be put on the list of allowed data providers, and for your account to be added to the allowlist. Contact Google and provide the following information:
 
 * **Account ID**: Adobe's account ID with Google. Account ID: 87933855.
 * **Customer ID**: Adobe's customer account ID with Google. Customer ID: 89690775.
@@ -91,7 +90,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 >[!NOTE]
 >
->When setting up a [!DNL Google Display & Video 360] destination, please work with your [!DNL Google Account Manager] or Adobe representative to understand which account type you have.
+>When setting up a [!DNL Google Display & Video 360] destination, work with your [!DNL Google Account Manager] or Adobe representative to understand which account type you have.
 
 ### Enable alerts {#enable-alerts}
 
@@ -119,4 +118,4 @@ When configuring this destination, you may receive the following error:
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-This error occurs when customer accounts do not comply with the [prerequisites](#prerequisites). To fix this issue, contact Google and make sure your account is allow-listed.
+This error occurs when customer accounts do not comply with the [prerequisites](#prerequisites). To fix this issue, contact Google and make sure that your account is allow-listed.

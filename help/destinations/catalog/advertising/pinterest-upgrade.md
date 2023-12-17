@@ -3,6 +3,7 @@ title: Pinterest destination migration to new API. Customer action required.
 description: Pinterest is deprecating the v4 advertiser API currently used by the Pinterest destination in Real-Time CDP. Understand your action items in order to seamlessly transition to the new API without disruption to your Pinterest campaigns.
 hide: yes
 hidefromtoc: yes
+exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
 ---
 # Pinterest destination upgrade to new API. Customer action required by December 15, 2023
 

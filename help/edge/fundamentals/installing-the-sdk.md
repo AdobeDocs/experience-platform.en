@@ -1,12 +1,11 @@
 ---
 title: Install the Adobe Experience Platform Web SDK
 description: Learn how to install the Experience Platform Web SDK.
-keywords: web sdk installation;installing web sdk;internet explorer;promise;npm package
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
 ---
-# Install the SDK {#installing-the-sdk}
+# Install Web SDK {#installing-the-sdk}
 
-There are three supported ways to use Adobe Experience Platform Web SDK:
+There are three supported ways to install Adobe Experience Platform Web SDK:
 
 1. The preferred way to use Adobe Experience Platform Web SDK is via the Data Collection UI or Experience Platform UI.
 1. Adobe Experience Platform Web SDK is also available on a content delivery network (CDN) for you to use.
@@ -24,9 +23,8 @@ URL structure: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR a
 
 For example:
 
-
 * Minified: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
-* Un-minified: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
+* Unminified: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
 
 
 ### Adding the code {#adding-the-code}
@@ -71,7 +69,7 @@ To determine if you already have `window.Promise` polyfilled:
 
 1. Open your website in [!DNL Internet Explorer].
 1. Open the browser's debugging console.
-1. Type `window.Promise` into the console, then press Enter.
+1. Type `window.Promise` into the console and press Enter.
 
 If something other than `undefined` appears, you likely have already polyfilled `window.Promise`. Another way to determine if `window.Promise` is polyfilled is by loading your website after having completed the above installation instructions. If the SDK throws an error mentioning something about a promise, you likely have not polyfilled `window.Promise`.
 
@@ -91,7 +89,7 @@ This tag loads a script that ensures that `window.Promise` is a valid Promise im
 
 As explained in the section [Adding the code](#adding-the-code), the base code you have copied and pasted into your website's HTML loads an external file. The external file contains the core functionality of the SDK. Any command you attempt to execute while this file loads is queued and then processed after the file is loaded. Loading the file asynchronously is the most performant method of installation.
 
-Under certain circumstances, however, you might want to load the file synchronously \(more details about these circumstances will be documented later\). Doing so blocks the rest of the HTML document from being parsed and rendered by the browser until the external file has been loaded and executed. This additional delay before displaying primary content to users is typically discouraged, but can make sense depending on the circumstances.
+Under certain circumstances, however, you might want to load the file synchronously. Doing so blocks the rest of the HTML document from being parsed and rendered by the browser until the external file has been loaded and executed. This additional delay before displaying primary content to users is typically discouraged, but can make sense depending on the circumstances.
 
 To load the file synchronously instead of asynchronously, remove the `async` attribute from the second `script` tag as shown below:
 
@@ -126,7 +124,7 @@ alloy("sendEvent", { ... });
 
 >[!NOTE]
 >
->The NPM package relies on CommonJS modules; therefore, when using a bundler, make sure the bundler supports CommonJS modules. Some bundlers, such as [Rollup](https://rollupjs.org), require a [plugin](https://www.npmjs.com/package/@rollup/plugin-commonjs) that provides CommonJS support.
+>The NPM package relies on CommonJS modules; therefore, when using a bundler, make sure that the bundler supports CommonJS modules. Some bundlers, such as [Rollup](https://rollupjs.org), require a [plugin](https://www.npmjs.com/package/@rollup/plugin-commonjs) that provides CommonJS support.
 
 ### Using the package as an ECMAScript 5 module
 
