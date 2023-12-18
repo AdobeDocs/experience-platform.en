@@ -1,6 +1,6 @@
 ---
 title: XDM Business Marketing List Class
-description: This document provides an overview of the XDM Business Marketing List class in Experience Data Model (XDM).
+description: Learn about the XDM Business Marketing List class in Experience Data Model (XDM).
 exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
 ---
 # [!UICONTROL XDM Business Marketing List] class

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;event modeling;event modelling;best practices;event;events;
 solution: Experience Platform
 title: XDM ExperienceEvent Class
-description: This document provides an overview of the XDM ExperienceEvent class, and best practices for event data modeling.
+description: Learn about the XDM ExperienceEvent class, and best practices for event data modeling.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 ---
 # [!DNL XDM ExperienceEvent] class
@@ -72,6 +72,7 @@ Adobe provides several standard field groups for use with the [!DNL XDM Experien
 * [[!UICONTROL Flight Reservation]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL IAB TCF 2.0 Consent]](../field-groups/event/iab.md)
 * [[!UICONTROL Lodging Reservation]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL MediaAnalytics Interaction Details]](../field-groups/event/mediaanalytics-interaction.md)
 * [[!UICONTROL Quote Request Details]](../field-groups/event/quote-request-details.md)
 * [[!UICONTROL Reservation Details]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Web Details]](../field-groups/event/web-details.md)
