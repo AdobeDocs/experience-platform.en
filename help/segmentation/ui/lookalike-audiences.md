@@ -2,14 +2,13 @@
 solution: Experience Platform
 title: Look-Alike Audiences
 description: Learn how to target new high-value audiences in Adobe Experience Platform using Look-alike audiences.
-badgeLimitedAvailability: label="Limited availability" type=Caution
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
 ---
 # Look-alike audiences guide
 
 >[!IMPORTANT]
 >
->Please note that look-alike insights and Look-alike audiences are in **limited availability**.
+>Please note that look-alike insights and Look-alike audiences are only available in the **B2C edition**.
 
 In Adobe Experience Platform, Look-alike audiences provide intelligent insights on each of your audiences, leveraging machine-learning-based insights to identify and target high-value customers with your marketing campaigns. 
 
@@ -23,6 +22,10 @@ Before getting started with Look-alike audiences, make sure to understand the fo
 - **Look-alike model**: A look-alike model is a machine learning model that is trained on every eligible base audience without any customer input. Each look-alike model creates the influential factors and similarity graphs. A look-alike model does **not** get scored.
 - **Look-alike audience**: A Look-alike audience is the audience that is created when a look-alike model with a selected similarity threshold is applied to the base audience. You can create multiple Look-alike audiences using the same look-alike model. The Look-alike audience is what gets scored.
 - **Total addressable audience size**: The total addressable audience size is the total number of profiles in the past 30 days minus the base audience population in the past 30 days. For example, if a customer has 10 million profiles in the past 30 days, and the base audience has 1 million profiles in the past 30 days, the total addressable audience size is 9 million profiles.
+
+## Eligibility {#eligibility}
+
+
 
 ## Look-alike model details {#details}
 
