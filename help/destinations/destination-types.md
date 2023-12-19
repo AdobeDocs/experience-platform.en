@@ -10,15 +10,15 @@ Read this page to understand the different types and categories of Adobe Experie
 
 ## Destination types {#destination-types}
 
-In Adobe Experience Platform, we distinguish between different destination types - connections, dataset exports, and extensions. There are several types of connection destinations, allowing you to export data to API-based destinations, .
+In Adobe Experience Platform, we distinguish between different destination types - connections, dataset exports, and extensions. There are several types of connection destinations, allowing you to export data to API-based destinations, social destinations, CRM platforms, and many more.
 
-Finally, connections can also be distinguished between public destinations available across all organizations in the destinations catalog, and private destinations which Real-time CDP Ultimate customers can create to satisfy their specific export use cases.
+Finally, connections can also be distinguished between public destinations available across all organizations in the destinations catalog, and private destinations which Real-Time CDP Ultimate customers can create to satisfy their specific export use cases.
 
 ![Types of destinations diagram.](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## Connections {#connections}
 
-**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Segment Export]**, and **[!DNL Edge Personalization]** destinations in Adobe Experience Platform capture event data, combine it with other data sources to form the [Real-Time Customer Profile](../profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
+**[!UICONTROL Profile Export]**, **[!UICONTROL Streaming Audience Export]**, and **[!DNL Edge Personalization]** destinations in Adobe Experience Platform capture event data, combine it with other data sources to form the [Real-Time Customer Profile](../profile/home.md), apply segmentation, and export audiences and qualified profiles to destinations. 
 
 ## Profile export destinations {#profile-export}
 
@@ -35,7 +35,7 @@ Profile export destinations receive raw data, often with email address as the pr
 
 Use enterprise destination data connectors to deliver Adobe Real-Time Customer Data Platform profiles in near real-time to internal systems or to other third-party systems for data synchronization, analysis, and further profile enrichment use cases.
 
-These destinations receive segment and profile data as Experience Platform data streams.
+These destinations receive audience and profile data as Experience Platform data streams.
 
 Enterprise destinations include:
 
@@ -47,9 +47,9 @@ Enterprise destinations include:
 
 File-based destinations receive `.csv` files containing profiles and/or attributes. [Amazon S3](catalog/cloud-storage/amazon-s3.md) is an example of a destination where you can export files containing profile exports.
 
-## Streaming segment export destinations {#streaming-destinations}
+## Streaming audience export destinations {#streaming-destinations}
 
-Segment export destinations receive Experience Platform segment data. These destinations use segment IDs or user IDs. Advertising and social destinations like [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), or [Facebook](catalog/social/facebook.md) are examples of such destinations.
+Audience export destinations receive Experience Platform audience data. These destinations use audience IDs or user IDs. Advertising and social destinations like [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), or [Facebook](catalog/social/facebook.md) are examples of such destinations.
 
 ## Edge personalization destinations {#edge-personalization-destinations}
 
@@ -57,13 +57,28 @@ Edge personalization destinations in Experience Platform include [Adobe Target](
 
 Read more about how to [configure personalization destinations for same-page and next-page personalization](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
-## Profile export and segment export destinations - video overview {#video}
+## Profile export and audience export destinations - video overview {#video}
 
 The video below runs you through the particularities of the two types of destinations:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
-## (Beta) Dataset export destinations {#dataset-export-destinations}
+## Types of exported audiences {#exported-audiences-types}
+
+You can export three types of audiences from Experience Platform to various destinations:
+
+* People audiences
+* Account audiences
+* Prospect audiences
+
+Learn more about the [various audience types](/help/segmentation/ui/account-audiences.md#terminology).
+
+A symbol on the destination card shows which types of audiences you can export to each destination. 
+
+![Example destination card with symbols showing which audience types can be exported.](/help/destinations/assets/destination-types/types-of-audiences.png)
+
+
+## Dataset export destinations {#dataset-export-destinations}
 
 Some cloud storage destinations in the destinations catalog support dataset exports. Use these destinations to export raw datasets to cloud storage locations. 
 
@@ -85,7 +100,7 @@ Tag extensions forward raw event data to several types of destinations. Think of
 
 As a marketer, you could use a combination of connections and extensions to address your use cases.
 
-Connections are useful when it's necessary to leverage a complete centralized customer profile or a customer segment for activation. For example, use connections if you are joining behavioral data from an analytics system with uploaded CRM data to qualify a user for a given segment before delivering a personalized message to that user.
+Connections are useful when it's necessary to leverage a complete centralized customer profile or a customer audience for activation. For example, use connections if you are joining behavioral data from an analytics system with uploaded CRM data to qualify a user for a given audience before delivering a personalized message to that user.
 
 Extensions are helpful when event data is used to trigger an action, or to conduct segmentation in an external environment. For example, if behavioral data needs to be forwarded to an external system without being joined to other data sources on file for a given user.
 

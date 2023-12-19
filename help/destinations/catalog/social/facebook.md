@@ -10,9 +10,9 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 
 Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization, and suppression based on hashed emails.
 
-You can use this destination for audience targeting across [!DNL Facebook’s] family of apps that are supported by [!DNL Custom Audiences], including [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], and [!DNL Messenger]. Selection of the app that you want to run campaign against is indicated at the placement level in [!DNL Facebook Ads Manager].
+You can use this destination for audience targeting across [!DNL Facebook's] family of apps that are supported by [!DNL Custom Audiences], including [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], and [!DNL Messenger]. Selection of the app that you want to run campaign against is indicated at the placement level in [!DNL Facebook Ads Manager].
 
-![Facebook destination in the Adobe Experience Platform UI](../../assets/catalog/social/facebook/catalog.png)
+![Facebook destination in the Adobe Experience Platform UI.](../../assets/catalog/social/facebook/catalog.png)
 
 ## Use cases
 
@@ -20,15 +20,15 @@ To help you better understand how and when to use the [!DNL Facebook] destinatio
 
 ### Use case #1
 
-An online retailer wants to reach existing customers through social platforms and show them personalized offers based on their previous orders. The online retailer can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to the [!DNL Facebook] social platform, optimizing their advertising spending.
+An online retailer wants to reach existing customers through social platforms and show them personalized offers based on their previous orders. The online retailer can ingest email addresses from their own CRM to Adobe Experience Platform, build audiences from their own offline data, and send these audiences to the [!DNL Facebook] social platform, optimizing their advertising spending.
 
 ### Use case #2
 
-An airline has different customer tiers (Bronze, Silver, and Gold), and wants to provide each of the tiers with personalized offers via social platforms. However, not all customers use the airline's mobile app, and some of them have not logged on to the company's website. The only identifiers the company has about these customers are membership IDs and email addresses.
+An airline has different customer tiers (Bronze, Silver, and Gold), and wants to provide each of the tiers with personalized offers via social platforms. However, not all customers use the airline's mobile app, and some of them have not logged on to the company's website. The only identifiers that the company has about these customers are membership IDs and email addresses.
 
 To target them across social media, they can onboard the customer data from their CRM into Adobe Experience Platform, using the email addresses as identifiers.
 
-Next, they can use their offline data including associated membership IDs and customer tiers to build new audience segments that they can target through the [!DNL Facebook] destination.
+Next, they can use their offline data including associated membership IDs and customer tiers to build new audiences that they can target through the [!DNL Facebook] destination.
 
 ## Supported identities {#supported-identities}
 
@@ -42,21 +42,33 @@ Next, they can use their offline data including associated membership IDs and cu
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 |extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
 
+## Supported audiences {#supported-audiences}
+
+This section describes which types of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the Facebook destination.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the Facebook destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
 ## Facebook account prerequisites {#facebook-account-prerequisites}
 
-Before you can send your audience segments to [!DNL Facebook], make sure you meet the following requirements:
+Before you can send your audiences to [!DNL Facebook], make sure you meet the following requirements:
 
+* Your [!DNL Facebook] user account must have full access to the [!DNL Facebook Business Account] which owns the Ad account that you are using.
 * Your [!DNL Facebook] user account must have the **[!DNL Manage campaigns]** permission enabled for the Ad account that you plan to use.
 * The **Adobe Experience Cloud** business account must be added as an advertising partner in your [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. See [Add Partners to Your Business Manager](https://www.facebook.com/business/help/1717412048538897) in the Facebook documentation for details.
     >[!IMPORTANT]
@@ -105,7 +117,7 @@ If you select to hash the email addresses yourself, make sure to comply with the
 > Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 > The **[!UICONTROL Apply transformation]** option is only displayed when you select attributes as source fields. It is not displayed when you choose namespaces.
 
-![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![Apply transformation control highlighted in the mapping step.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Using custom namespaces {#custom-namespaces}
 
@@ -119,7 +131,7 @@ Before you can use the `Extern_ID` namespace to send data to [!DNL Facebook], ma
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
-The video below also demonstrates the steps to configure a [!DNL Facebook] destination and activate segments. 
+The video below also demonstrates the steps to configure a [!DNL Facebook] destination and activate audiences. 
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
@@ -131,7 +143,7 @@ The video below also demonstrates the steps to configure a [!DNL Facebook] desti
 
 1. Find the Facebook destination in the destination catalog and select **[!UICONTROL Set Up]**.
 2. Select **[!UICONTROL Connect to destination]**. 
-  ![Authenticate to Facebook](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+  ![Authenticate to Facebook step shown in the activation workflow.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Enter your Facebook credentials and select **Log In**.
 
 ### Fill in destination details {#destination-details}
@@ -153,12 +165,12 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Origin of audience"
->abstract="Choose how the customer data in the segment was originally collected. The data will be displayed in Facebook when a user is targeted by the segment"
+>abstract="Choose how the customer data in the audience was originally collected. The data is displayed in Facebook when a user is targeted by the segment"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -177,13 +189,14 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
-In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL Origin of audience] when sending segments to [!DNL Facebook Custom Audiences].
+In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL Origin of audience] when sending audiences to [!DNL Facebook Custom Audiences].
 
-![Facebook Origin of Audience](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Origin of Audience dropdown shown in the Facebook activation step.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### Mapping example: activating audience data in [!DNL Facebook Custom Audience] {#example-facebook}
 
@@ -212,15 +225,15 @@ Selecting target fields:
 > 
 >Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 
-![Identity mapping](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![Apply transformation control highlighted in the mapping step.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Exported data {#exported-data}
 
-For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
+For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Audience membership would be added and removed as users are qualified or disqualified for the activated audiences.
 
 >[!TIP]
 >
->The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications get sent to [!DNL Facebook] when you activate the segments to the destination.
+>The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical audience qualifications get sent to [!DNL Facebook] when you activate the audiences to the destination.
 
 ## Troubleshooting {#troubleshooting}
 
@@ -232,4 +245,4 @@ When configuring this destination, you may receive the following error:
 
 This error occurs when customers are using newly created accounts, and the [!DNL Facebook] permissions are not yet active.
 
-If you receive the `400 Bad Request` error message after following the steps in [Facebook account prerequisites](#facebook-account-prerequisites), please allow a few days for the [!DNL Facebook] permissions to come into effect.
+If you receive the `400 Bad Request` error message after following the steps in [Facebook account prerequisites](#facebook-account-prerequisites), allow a few days for the [!DNL Facebook] permissions to come into effect.

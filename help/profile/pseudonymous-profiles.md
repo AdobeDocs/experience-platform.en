@@ -16,7 +16,7 @@ A profile is considered for Pseudonymous data expiration if it meets the followi
 - The stitched profile's identity namespaces match what the customer has specified as a pseudonymous or unknown identity namespace. 
   - For example, if the profile's identity namespace is `ECID`, `GAID`, or `AAID`. The stitched profile has no IDs from any other identity namespace. In this example, a stitched profile does **not** have either an email or CRM identity. 
 - No activity has taken place in a user-defined amount of time. Activity is defined either by any Experience Events being ingested or customer-initiated updates to the profile attributes. 
-  - For example, a new page view event or age attribute update is considered as an activity. However, a non-user-initiated segment membership update is **not** considered as an activity. Currently, to compute data expiration, the tracking at a profile level is based on the time of event for Experience Events and time of ingestion for profile attributes.
+  - For example, a new page view event or age attribute update is considered as an activity. However, a non-user-initiated audience membership update is **not** considered as an activity. Currently, to compute data expiration, the tracking at a profile level is based on the time of event for Experience Events and time of ingestion for profile attributes.
 
 ## Access {#access}
 
@@ -74,3 +74,8 @@ For a typical use case, you can set your Experience Event data expiry based on t
 - This is **not** a one-time cleanup job. Pseudonymous profile data expiry will continually run once per day and delete profiles that match the customer's input.
 - **All** profiles that are defined as Pseudonymous profiles will be affected by the Pseudonymous profile data expiration. It does **not** matter if the profile is Experience Event only or if it only contains profile attributes.
 - This cleanup will **only** occur in Profile. Identity Service may continue to show the deleted identities within the graph after the cleanup in cases where the profile has two or more associated pseudonymous identities (such as `AAID` and `ECID`). This discrepancy will be addressed in the near future.
+
+### How does Pseudonymous profiles data expiration interact with guardrails for Identity Service data?
+
+- The Identity Service ["first-in, first-out" deletion system](../identity-service/guardrails.md) could delete ECIDs from the identity graph, which are stored in Identity Service.
+- If this deletion behavior results in an ECID-only profile being stored in the Real-Time Customer Profile (Profile Store), then Pseudonymous profile data expiration will delete this profile from the Profile Store.

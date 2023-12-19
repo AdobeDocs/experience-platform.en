@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;segment;Segment;create segment;segmentation;create a segment;Segmentation Service;
 solution: Experience Platform
-title: Create a Segment Using the Segmentation Service API
+title: Create a Segment Definition Using the Segmentation Service API
 type: Tutorial
 description: Follow this tutorial to learn how to develop, test, preview, and save a segment definition using the Adobe Experience Platform Segmentation Service API.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
 ---
-# Create a segment using the Segmentation Service API 
+# Create a segment definition using the Segmentation Service API 
 
 This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md). 
 
-For information on how to build segments using the user interface, please see the [Segment Builder guide](../ui/overview.md).
+For information on how to build segment definitions using the user interface, please see the [Segment Builder guide](../ui/overview.md).
 
 ## Getting started
 
-This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
+This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating segment definitions. Before beginning this tutorial, please review the documentation for the following services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audience segments from Real-Time Customer Profile data.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audiences using segment definitions or other external sources from Real-Time Customer Profile data.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data. To best make use of Segmentation, please ensure your data is ingested as profiles and events according to the [best practices for data modeling](../../xdm/schema/best-practices.md).
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
@@ -48,11 +47,11 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Develop a segment definition
 
-The first step in segmentation is to define a segment, represented in a construct called a segment definition. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). This object is also called a PQL predicate. PQL predicates define the rules for the segment based on conditions related to any record or time series data you supply to [!DNL Real-Time Customer Profile]. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
+The first step in segmentation is to define a segment definition. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). This object is also called a PQL predicate. PQL predicates define the rules for the segment definition based on conditions related to any record or time series data you supply to [!DNL Real-Time Customer Profile]. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
 
-You can create a new segment definition by making a POST request to the `/segment/definitions` endpoint in the [!DNL Segmentation] API. The following example outlines how to format a definition request, including what information is required in order for a segment to be defined successfully.
+You can create a new segment definition by making a POST request to the `/segment/definitions` endpoint in the [!DNL Segmentation] API. The following example outlines how to format a definition request, including what information is required in order for a segment definition to be defined successfully.
 
-For a detailed explanation on how to define a segment, please read the [segment definition developer guide](../api/segment-definitions.md#create).
+For a detailed explanation on how to define a segment definition, please read the [segment definition developer guide](../api/segment-definitions.md#create).
 
 ## Estimate and preview an audience {#estimate-and-preview-an-audience}
 
@@ -60,14 +59,14 @@ As you develop your segment definition, you can use the estimate and preview too
 
 By estimating and previewing your audience, you can test and optimize your PQL predicates until they produce a desireable result, where they can then be used in an updated segment definition.
 
-There are two required steps to preview or get an estimate of your segment:
+There are two required steps to preview or get an estimate of your segment definition:
 
 1. [Create a preview job](#create-a-preview-job)
 2. [View estimate or preview](#view-an-estimate-or-preview) using the ID of the preview job
   
 ### How estimates are generated
 
-Data samples are used to evaluate segments and estimate the number of qualifying profiles. New data is loaded into memory each morning (between 12AM-2AM PT, which is 7-9AM UTC), and all segmentation queries are estimated using that day's sample data. Consequently, any new fields added or additional data collected will be reflected in estimates the following day.
+Data samples are used to evaluate segment definitions and estimate the number of qualifying profiles. New data is loaded into memory each morning (between 12AM-2AM PT, which is 7-9AM UTC), and all segmentation queries are estimated using that day's sample data. Consequently, any new fields added or additional data collected will be reflected in estimates the following day.
 
 The sample size depends on the overall number of entities in your profile store. These sample sizes are represented in the following table:
 

@@ -29,7 +29,7 @@ To install the [!DNL Meta Conversions API] extension, navigate to the Data Colle
 
 Once you have selected or created the desired property, select **[!UICONTROL Extensions]** in the left navigation, then select the **[!UICONTROL Catalog]** tab. Search for the [!UICONTROL Meta Conversions API] card, then select **[!UICONTROL Install]**.
 
-![The [!UICONTROL Install] button being selected for the [!UICONTROL Meta Conversions API] extension in the Data Collection UI.](../../../images/extensions/server/meta/install.png)
+![The [!UICONTROL Install] option being selected for the [!UICONTROL Meta Conversions API] extension in the Data Collection UI.](../../../images/extensions/server/meta/install.png)
 
 In the configuration view that appears, you must provide the [!DNL Pixel] ID you copied earlier to link the extension to your account. You can paste the ID directly into the input, or you can use a data element instead.
 
@@ -40,6 +40,30 @@ When finished, select **[!UICONTROL Save]**
 ![The [!DNL Pixel] ID provided as a data element in the extension configuration view.](../../../images/extensions/server/meta/configure.png)
 
 The extension is installed and you can now employ its capabilities in your event forwarding rules.
+
+## Integration with Meta Business Extension (MBE) {#mbe}
+
+The integration with Meta Business Extensions (MBE) enhancement allows you to quickly authenticate into your Meta Business Account. This then auto-populates your [!UICONTROL Pixel ID] and the Meta Conversions API [!UICONTROL Access Token], making it easier to install and configure the Meta Conversions API.
+
+A dialogue prompt to authenticate in MBE appears when installing the [!UICONTROL Meta Conversions API] extension.
+
+![The [!UICONTROL Meta Conversions API Extension] installation page highlighting [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
+
+A dialogue prompt to authenticate in MBE also appears in the quick start workflow UI within event forwarding. 
+
+![The quick start workflow UI highlighting [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
+
+## Integration with Event Quality Match Score (EMQ) {#emq}
+
+The integration with Event Quality Match Score (EMQ) allows you to easily view the effectiveness of your implementation by showing EMQ scores. This integration minimizes context switching and helps you improve the success of your Meta Conversions API implementations. These event scores appear in the [!UICONTROL Meta Conversions API extension] configuration screen.
+
+![The [!UICONTROL Meta Conversions API Extension] configuration page highlighting [!UICONTROL View EMQ Score].](../../../images/extensions/server/meta/emq-score.png)
+
+## Integration with LiveRamp (Alpha) {#alpha}
+
+[!DNL LiveRamp] customers who have [!DNL LiveRamp]'s Authenticated Traffic Solution (ATS) deployed on their sites may opt to share RampIDs as a customer information parameter. Please work with your [!DNL Meta] account team to join the Alpha program for this feature.
+
+![The Meta event forwarding [!UICONTROL Rule] configuration page highlighting [!UICONTROL Partner Name (alpha)] and [!UICONTROL Partner ID (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Configure an event forwarding rule {#rule}
 
@@ -93,7 +117,7 @@ When sending shared events, make sure that you are including an event ID and nam
 
 The quick start feature helps you get set up with ease and efficiency with the Meta Conversions API and the Meta Pixel extensions. This tool automates multiple steps that are performed in Adobe tags and event forwarding, significantly reducing the set up time.
 
-This feature automatically installs and configures both the Meta Conversions API and the Meta Pixel extensions on a newly auto-generated tags and event forwarding property with the necessary rules and data elements. Additionally, it also auto installs and configures the Experience Platform Web SDK and Datastream. Lastly, the quick start feature auto-publishes the library to the designated URL in a development environment, which enables client side data collection and server side event forwarding in real-time via Event Forwarding and Experience Edge.
+This feature automatically installs and configures both the Meta Conversions API and the Meta Pixel extensions on a newly auto-generated tags and event forwarding property with the necessary rules and data elements. Additionally, it also auto installs and configures the Experience Platform Web SDK and Datastream. Lastly, the quick start feature auto-publishes the library to the designated URL in a development environment, which enables client side data collection and server side event forwarding in real-time via Event Forwarding and Experience Platform Edge Network.
 
 The following video provides an introduction to the quick start feature.
 

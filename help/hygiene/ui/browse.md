@@ -1,29 +1,25 @@
 ---
-title: Browse Data Hygiene Work Orders
-description: Learn how to view and manage existing data hygiene work orders in the Adobe Experience Platform user interface.
+title: Browse Data Lifecycle Work Orders
+description: Learn how to view and manage existing data lifecycle work orders in the Adobe Experience Platform user interface.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 ---
-# Browse data hygiene work orders {#browse-work-orders}
+# Browse data lifecycle work orders {#browse-work-orders}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="Work order IDs"
->abstract="When a data hygiene request is sent to the system, a work order is created to execute the requested task. In other words, a work order represents a specific data hygiene process, which includes its current status and other related details. Each work order is automatically assigned its own unique ID upon creation."
->text="See the data hygiene UI guide to learn more."
+>abstract="When a data lifecycle request is sent to the system, a work order is created to execute the requested task. In other words, a work order represents a specific data lifecycle process, which includes its current status and other related details. Each work order is automatically assigned its own unique ID upon creation."
+>text="See the data lifecycle UI guide to learn more."
 
->[!IMPORTANT]
->
->Data hygiene capabilities in Adobe Experience Platform are currently only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
-
-When a data hygiene request is sent to the system, a work order is created to execute the requested task. A work order represents a specific data hygiene process, such as a scheduled dataset expiration, which includes its current status and other related details.
+When a data lifecycle request is sent to the system, a work order is created to execute the requested task. A work order represents a specific data lifecycle process, such as a scheduled dataset expiration, which includes its current status and other related details.
 
 This guide covers how to view and manage existing work orders in the Adobe Experience Platform UI.
 
 ## List and filter existing work orders
 
-When you first access the **[!UICONTROL Data Hygiene]** workspace in the UI, a list of existing work orders is shown along with their basic details.
+When you first access the **[!UICONTROL Data Lifecycle]** workspace in the UI, a list of existing work orders is shown along with their basic details.
 
-![Image showing the [!UICONTROL Data Hygiene] workspace in the Platform UI](../images/ui/browse/work-order-list.png)
+![Image showing the [!UICONTROL Data Lifecycle] workspace in the Platform UI](../images/ui/browse/work-order-list.png)
 
 The list only shows work orders for one category at a time. Select **[!UICONTROL Consumer]** to view a list of record delete tasks, and **[!UICONTROL Dataset]** to view a list of scheduled dataset expirations.
 
@@ -63,17 +59,17 @@ The following filters apply to dataset expiration requests:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="Status by service"
->abstract="Data hygiene requests are independently processed by multiple Experience Platform services. This section outlines the request's current processing status for each respective service. To learn more, refer to the data hygiene UI guide."
+>abstract="Data lifecycle requests are independently processed by multiple Experience Platform services. This section outlines the request's current processing status for each respective service. To learn more, refer to the data lifecycle UI guide."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Number of identities"
->abstract="The number of identities whose records were requested to be updated or deleted as part of this work order. The identities included in the count may not necessarily exist in the affected datasets. To learn more, refer to the data hygiene UI guide."
+>abstract="The number of identities whose records were requested to be updated or deleted as part of this work order. The identities included in the count may not necessarily exist in the affected datasets. To learn more, refer to the data lifecycle UI guide."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Record delete response"
->abstract="When a record delete process receives a response from the system, these messages are displayed under the **[!UICONTROL Result]** section. If a problem occurs while a work order is processing, any relevant error messages will appear in this section to help you troubleshoot the issue. To learn more, see the data hygiene UI guide."
+>abstract="When a record delete process receives a response from the system, these messages are displayed under the **[!UICONTROL Result]** section. If a problem occurs while a work order is processing, any relevant error messages will appear in this section to help you troubleshoot the issue. To learn more, see the data lifecycle UI guide."
 
 Select the ID of a listed work order to view its details.
 
@@ -95,7 +91,7 @@ The details page for a dataset expiration provides information on its basic attr
 
 ## Next steps
 
-This guide covered how to view and manage existing data hygiene work orders in the Platform UI. For information on creating your own work orders, refer to the following documentation:
+This guide covered how to view and manage existing data lifecycle work orders in the Platform UI. For information on creating your own work orders, refer to the following documentation:
 
 * [Manage dataset expirations](./dataset-expiration.md)
-<!-- * [Manage record deletes](./record-delete.md) -->
+* [Manage record deletes](./record-delete.md)

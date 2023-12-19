@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure the UI attributes, such as the documentation link, the destination card category, and the destination connection type and frequency, for destinations built with Destination SDK.
 title: UI attributes
+exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
 ---
-
 # UI attributes
 
 UI attributes define the visual elements that Adobe should display for your destination card in the Adobe Experience Platform user interface, such as the destination platform logo, a link to the documentation page, a destination description and its category and type.
@@ -115,7 +115,7 @@ After reading this article, you should have a better understanding of what UI at
 To learn more about the other destination components, see the following articles:
 
 * [Customer authentication](customer-authentication.md)
-* [OAuth2 authentication](oauth2-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
 * [Customer data fields](customer-data-fields.md)
 * [Schema configuration](schema-configuration.md)
 * [Identity namespace configuration](identity-namespace-configuration.md)

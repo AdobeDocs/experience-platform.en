@@ -30,6 +30,7 @@ To understand the difference between connections and extensions, see [Connection
 * [Google Customer Match connection](google-customer-match.md)
 * [Microsoft Bing connection](bing.md)
 * [Pinterest Customer List connection](pinterest.md)
+* [PubMatic Connect destination](pubmatic.md)
 * [(Beta) Snapchat Ads connection](snap-inc.md)
 * [The Trade Desk connection](tradedesk.md)
 * [(Beta) The Trade Desk CRM connection](tradedesk-emails.md)
@@ -53,4 +54,4 @@ To understand the difference between connections and extensions, see [Connection
 
 ## Connect to a new advertising destination {#connect-destination}
 
-To send segments to advertising destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
+To send audiences to advertising destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.

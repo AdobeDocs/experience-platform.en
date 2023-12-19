@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;address;xdm:address;datatype;data-type;data type;
 solution: Experience Platform
 title: Product List Item Data Type
-description: This document provides an overview of the Product list item XDM data type.
+description: Learn about the Product list item XDM data type.
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
 ---
 # [!UICONTROL Product list item] data type

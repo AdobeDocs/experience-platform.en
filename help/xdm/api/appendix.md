@@ -41,7 +41,6 @@ You can filter results by using the `property` parameter, which is used to apply
 | `>` | Filters by whether the property is greater than the provided value. | `property=version>5` |
 | `<=` | Filters by whether the property is less than or equal to the provided value. | `property=version<=5` |
 | `>=` | Filters by whether the property is greater than or equal to the provided value. | `property=version>=5` |
-| `~` | Filters by whether the property matches a provided regular expression. | `property=title~test$` |
 | (None) | Stating only the property name returns only entries where the property exists. | `property=title` |
 
 {style="table-layout:auto"}
