@@ -27,6 +27,14 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 * Fixed an issue where viewing the Target Trace would cause a crash.
 * Added a warning when the Debugger fails to set up on-page infrastructure in Firefox.
 
+## Version 1.5.2 - November 10, 2023
+
+(Firefox Only)
+
+### Fixes and improvements
+
+* Updated the organization of files.
+
 ## Version 1.5.1 - November 2, 2023
 
 ### Fixes and improvements
