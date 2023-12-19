@@ -16,6 +16,8 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 >id="platform_dashboards_licenseUsage_prediction"
 >title="License usage dashboard"
 >abstract="The License usage dashboard offers insight into the Adobe Experience Platform products that you've purchased. The dashboard overview displays the primary metrics for your products including your usage for each of the primary metrics, and your contracted license amount. The details workspace displays a breakdown of your metrics for each product within specific sandboxes.<br>Usage predictions are refreshed on a monthly basis at the end of the month and forecast your usage for the coming six-month period. To reduce usage, configure dataset or Pseudonymous profiles data expirations for the sandboxes and datasets."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Dataset expirations"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expirations"
 
 You can view important information about your organization's license usage through the Adobe Experience Platform [!UICONTROL License usage] dashboard. Information displayed here is captured during a daily snapshot of your Platform instance. 
 
