@@ -7,6 +7,13 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ---
 # Adobe Experience Platform Debugger release notes
 
+## Version 1.5.4 - December 19, 2023
+
+### Fixes and improvements
+
+* Fixed an issue where settings were not persisted.
+* Fixed an issue where viewing Analytics Post-Processed hits crashed the Debugger.
+
 ## Version 1.5.3 - December 6, 2023
 
 ### New features
