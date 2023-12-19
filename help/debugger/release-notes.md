@@ -11,8 +11,8 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 
 ### Fixes and improvements
 
-* Fixed an issue where settings were not persisted.
-* Fixed an issue where viewing Analytics Post-Processed hits crashed the Debugger.
+* Fixed an issue where settings were not being retained.
+* Fixed an issue that caused the Debugger to crash while viewing Analytics Post-Processed hits.
 
 ## Version 1.5.3 - December 6, 2023
 
