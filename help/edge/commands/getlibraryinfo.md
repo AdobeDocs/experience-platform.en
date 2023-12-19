@@ -4,11 +4,7 @@ description: Retrieve information around the current Web SDK library version.
 ---
 # `getLibraryInfo`
 
-The `getLibraryInfo` command provides you with information around the version of the Web SDK library currently used. Running this command provides the following objects:
-
-* **`commands`**: An array of commands that this version of the Web SDK supports.
-* **`configs`**: An array of configuration settings that this version of the Web SDK supports.
-* **`version`**: The version of the Web SDK library.
+The `getLibraryInfo` command provides you with information around the version of the Web SDK library currently used. You can use this command to keep track of which versions of the Web SDK that you deploy to different web properties.
 
 ## Library info using the Web SDK tag extension
 
@@ -18,7 +14,7 @@ If you run this command using the tag extension, both the tag extension version 
 
 ## Library info using the Web SDK JavaScript library
 
-Run the `getLibraryInfo` command. This command is typically paired with a JavaScript promise that allows you to retrieve the objects that it populates.
+Run the `getLibraryInfo` command when calling your configured instance of the Web SDK. This command is typically paired with a JavaScript promise that allows you to retrieve the objects that it populates.
 
 ```js
 alloy("getLibraryInfo").then(function(result) {
@@ -27,3 +23,11 @@ alloy("getLibraryInfo").then(function(result) {
   console.log(result.libraryInfo.configs);
 });
 ```
+
+## Response object
+
+If you decide to [handle responses](../../handle-responses.md) with this command, the following properties are available in the response object:
+
+* **`libraryInfo.commands`**: An array of commands that this version of the Web SDK supports.
+* **`libraryInfo.configs`**: An array of configuration settings that this version of the Web SDK supports.
+* **`libraryInfo.version`**: The version of the Web SDK library.

@@ -30,10 +30,18 @@ Applying propositions is performed as an action within a rule in the Adobe Exper
 
 ## Apply propositions using the Web SDK JavaScript library
 
-Run the `applyPropositions` command when calling your configured instance of the Web SDK.
+Run the `applyPropositions` command when calling your configured instance of the Web SDK. The object containing configuration options supports the following fields:
+
+* **`propositions`**: An array of proposition objects that you want to re-render. This object typically isn't used, as the `propositionScopes` field usually determines which scopes or surfaces that you want to re-render.
+* **`metadata`**: Determines how HTML offers are applied. It is a map where the key is a scope or a surface, and the value is an object containing the keys `selector` and `actionType`.
+  * `selector`: A string containing a CSS selector of where to apply the HTML.
+  * `actionType`: The action to take with the HTML. Valid values include `setHtml`, `replaceHtml`, and `appendHtml`.
+* **`viewName`**: The name of the view to render in a single-page application. The display notifications for these decisions are cached and can be included in a subsequent `sendEvent` command using `personalization.includePendingDisplayNotifications`.
 
 ```js
 alloy("applyPropositiions",{
-  
+  "propositions": [],
+  "metadata": {},
+  "viewName": ""
 });
 ```

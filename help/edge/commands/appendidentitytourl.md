@@ -90,3 +90,7 @@ document.addEventListener("click", event => {
   alloy("appendIdentityToUrl", {url: anchor.href}).then(result => {document.location = result.url;});
 });
 ```
+
+## Response object
+
+If you decide to [handle responses](../../handle-responses.md) with this command, the response object contains **`url`**, the new URL with identity information added as a query string parameter.

@@ -21,11 +21,21 @@ Applying responses is performed as an action within a rule in the Adobe Experien
 
 ## Apply propositions using the Web SDK JavaScript library
 
-Run the `applyPropositions` command when calling your configured instance of the Web SDK.
+Run the `applyPropositions` command when calling your configured instance of the Web SDK. The object containing configuration options supports the following fields:
+
+* **`renderDecisions`**: A boolean that forces the Web SDK to render any personalized content that is eligible for automatic rendering. Identical to [`renderDecisions`](sendevent/renderdecisions.md) in the [`sendEvent`](sendevent/overview.md) command.
+* **`responseHeaders`**: A map of string header names to string header values.
+* **`responseBody`**: Required. A JSON response body from the server Experience Edge call.
+* **`personalization.sendDisplayEvent`**: A boolean that operates identically to [`personalization.sendDisplayEvent`](sendevent/personalization.md) in the `sendEvent` command.
 
 ```js
 allow("applyResponse",{
-  
+  "renderDecisions": true,
+  "responseHeaders": {},
+  "responseBody": {},
+  "personalization": {
+    "sendDisplayEvent": true
+  }
 });
 ```
 
