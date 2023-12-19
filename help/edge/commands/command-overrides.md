@@ -10,7 +10,7 @@ The `edgeConfigOverrides` object allows you to override configuration settings f
 >
 >You must first configure override settings within the datastream before using product-specific overrides. See [Datastream overrides](/help/datastreams/overrides.md) for more information.
 
-If you set overrides both in the Web SDK configuration and in a specific command (such as `sendEvent`), the overrides in the specific command take priority.
+If you set overrides both in the Web SDK configuration and in a specific command (such as [`sendEvent`](sendevent/overview.md)), the overrides in the specific command take priority.
 
 ## Properties within this object
 

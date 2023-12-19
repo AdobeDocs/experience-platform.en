@@ -33,7 +33,7 @@ Applying propositions is performed as an action within a rule in the Adobe Exper
 Run the `applyPropositions` command when calling your configured instance of the Web SDK.
 
 ```js
-allow("applyPropositiions",{
+alloy("applyPropositiions",{
   
 });
 ```
