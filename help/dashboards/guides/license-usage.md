@@ -12,6 +12,11 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 >title="License usage dashboard"
 >abstract="The License usage dashboard offers insight into the Adobe Experience Platform products that you've purchased. The dashboard overview displays the primary metrics for your products including your usage for each of the primary metrics, and your contracted license amount. The details workspace displays a breakdown of your metrics for each product within specific sandboxes."
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage_prediction"
+>title="License usage dashboard"
+>abstract="The License usage dashboard offers insight into the Adobe Experience Platform products that you've purchased. The dashboard overview displays the primary metrics for your products including your usage for each of the primary metrics, and your contracted license amount. The details workspace displays a breakdown of your metrics for each product within specific sandboxes.<br>Usage predictions are refreshed on a monthly basis at the end of the month and forecast your usage for the coming six-month period. To reduce usage, configure dataset or Pseudonymous profiles data expirations for the sandboxes and datasets."
+
 You can view important information about your organization's license usage through the Adobe Experience Platform [!UICONTROL License usage] dashboard. Information displayed here is captured during a daily snapshot of your Platform instance. 
 
 License usage reports provide a high degree of granularity over your license usage metrics. The dashboard provides usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metric from a specific sandbox. The following Experience Platform applications can be tracked with usage metrics: Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics.
