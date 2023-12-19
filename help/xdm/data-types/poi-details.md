@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;poi;poi details;point of interest;point of interest details;datatype;data-type;data type;
 solution: Experience Platform
 title: Point of Interest Details Data Type
-description: This document provides an overview of the Point Of Interest Details XDM data type.
+description: Learn about the Point Of Interest Details XDM data type.
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 ---
 # [!UICONTROL Point of interest details] data type

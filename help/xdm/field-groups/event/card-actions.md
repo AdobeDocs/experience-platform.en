@@ -1,6 +1,6 @@
 ---
 title: Card Actions Schema Field Group
-description: This document provides an overview of the Card Actions schema field group.
+description: Learn about the Card Actions schema field group.
 exl-id: 49851544-9118-4b73-b1d1-4cf49b3f1dee
 ---
 # [!UICONTROL Card Actions] schema field group

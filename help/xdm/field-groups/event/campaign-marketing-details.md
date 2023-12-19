@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;
 solution: Experience Platform
 title: Campaign Marketing Details Schema Field Group
-description: This document provides an overview of the Campaign Marketing Details schema field group.
+description: Learn about the Campaign Marketing Details schema field group.
 exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
 ---
 # [!UICONTROL Campaign Marketing Details] schema field group
