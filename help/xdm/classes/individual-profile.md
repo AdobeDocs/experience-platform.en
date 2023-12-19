@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
 solution: Experience Platform
 title: XDM Individual Profile Class
-description: This document provides an overview of the XDM Individual Profile class.
+description: Learn about the XDM Individual Profile class.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 ---
 # [!DNL XDM Individual Profile] class

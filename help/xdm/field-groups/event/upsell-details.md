@@ -1,6 +1,6 @@
 ---
 title: Upsell Details Schema Field Group
-description: This document provides an overview of the Upsell Details schema field group.
+description: Learn about the Upsell Details schema field group.
 exl-id: 6b69805d-03bc-489b-945a-03e61b99842e
 ---
 # [!UICONTROL Upsell Details] schema field group
