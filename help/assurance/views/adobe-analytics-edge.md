@@ -17,9 +17,9 @@ To use this view, complete the following steps:
 
 ## Analytics Events View
 
-Use this view if you are using the **Adobe Analytics** mobile extension. This view allows you to easily view Analytics Events sent from your connected client, including Track Action, Track State, and Lifecycle events. By selecting one of the Analytics events in the table, details of how the event were processed can be viewed on the right panel.
+Use the Analytics Event View if you are using the **Adobe Analytics** mobile extension. This view allows you to easily view Analytics Events sent from your connected client, including Track Action, Track State, and Lifecycle events. By selecting one of the Analytics events in the table, details of how the event were processed can be viewed on the right panel.
 
-![Analytics Events Overview View](./images/adobe-analytics-edge/analytics-events.png)
+![An image demonstrating different components in the Analytics Events View.](./images/adobe-analytics-edge/analytics-events.png)
 
 ### Post-processed status
 
@@ -48,22 +48,22 @@ For an Analytics track event, the detailed view contains the following parts:
 
 ### Analytics View Validation
 
-The validation view allows you to easily view the results on validation scripts related to Analytics. Errors displayed by validators may contain links to where they should be fixed, or display events that are in an error state.
+The validation view allows you to easily view the results on validation scripts related to Analytics. Errors displayed by validators may contain links to where they should be fixed or display events that are in an error state.
 
-![Analytics Validation View](./images/adobe-analytics-edge/analytics-validation-view.png)
+![An image that shows the validators tab in the Analytics view.](./images/adobe-analytics-edge/analytics-validation-view.png)
 
 ## Analytics Edge view
 
-Use this view if you are using **Edge Network** or **Edge Bridge** mobile extensions. To enable this view, select the "Analytics Edge (Beta)" toggle on the top right to view the Analytics events sent via Edge network in your current session. This includes all events that have been fired by Lifecycle extension, Edge requests, and/or Edge Bridge events based of Track Action and Track State.
+Use the Analytics Edge view if you are using **Edge Network** or **Edge Bridge** mobile extensions. To enable this view, select the "Analytics Edge (Beta)" toggle on the top right to view the Analytics events sent via Edge network in your current session. This includes all events that have been fired by Lifecycle extension, Edge requests, and/or Edge Bridge events based of Track Action and Track State.
 
-![Toggle for Analytics Edge](./images/adobe-analytics-edge/analytics-view-toggle.png)
+![An image that shows toggle which used for switching between Analytics View and Analytics Edge View.](./images/adobe-analytics-edge/analytics-view-toggle.png)
 
 The Analytics Edge view contains information on Analytics-related Edge requests and Lifecycle methods dispatched by the client. By choosing an event in the list, the right panel displays the events that were processed by the client SDK, as well as by the upstream service after they left the device, so you can easily view the chain of events that resulted from a call.
 
-![Analytics Edge General View](./images/adobe-analytics-edge/edge-analytics-events.png)
+![An image demonstrating different components in the Analytics Edge View.](./images/adobe-analytics-edge/edge-analytics-events.png)
 
 ### Analytics Edge Validation
 
 The Analytics Edge validation view allows you to easily view the results on validation scripts related to Analytics Edge. Errors displayed by validators may contain links to where they should be fixed or display events that are in an error state.
 
-![Analytics Edge Validation View](./images/adobe-analytics-edge/edge-analytics-validation-view.png)
+![An image that shows the validators tab in the Analytics Edge view.](./images/adobe-analytics-edge/edge-analytics-validation-view.png)
