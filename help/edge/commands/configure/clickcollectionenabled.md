@@ -8,8 +8,9 @@ The `clickCollectionEnabled` property is a boolean that determines if the Web SD
 
 If not disabled, the following XDM elements automatically populate with data:
 
+* `xdm.web.webInteraction.name`
 * `xdm.web.webInteraction.type`
-* `xdm.web.webInteraction.value`
+* `xdm.web.webInteraction.URL`
 
 ## Automatic link tracking logic
 
@@ -19,7 +20,7 @@ The Web SDK tracks all clicks on `<a>` and `<area>` HTML elements if it doesn't 
 1. If the link target domain differs from the current `window.location.hostname`, `xdm.web.webInteraction.type` is set to `"exit"`.
 1. If the link doesn't qualify for either `"download"` or `"exit"`, `xdm.web.webInteraction.type` is set to `"other"`.
 
-In all cases, `xdm.web.webInteraction.value` is set to the link text label. If you want to set this value to the URL instead, you can override this XDM element using [`onBeforeLinkClickSend`](onbeforelinkclicksend.md).
+In all cases, `xdm.web.webInteraction.name` is set to the link text label and `xdm.web.webInteraction.URL` is set to the link destination URL. If you want to set the link name to the URL as well, you can override this XDM field using [`onBeforeLinkClickSend`](onbeforelinkclicksend.md).
 
 ## Enable automatic link tracking using the Web SDK tag extension
 

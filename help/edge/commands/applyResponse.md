@@ -4,7 +4,7 @@ description: Use a response from Experience Edge to initialize the Web SDK.
 ---
 # `applyResponse`
 
-The `applyResponse` command allows you to perform a number of actions based on a response from Experience Edge. It is typically used in hybrid deployments where the server makes an initial call to Experience Edge. This command takes the response from that call and initializes the Web SDK in the browser.
+The `applyResponse` command allows you to perform various actions based on a response from Experience Edge. It is typically used in hybrid deployments where the server makes an initial call to Experience Edge. This command takes the response from that call and initializes the Web SDK in the browser.
 
 ## Apply response using the Web SDK tag extension
 

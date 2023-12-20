@@ -8,7 +8,7 @@ The `edgeConfigOverrides` object allows you to override configuration settings f
 
 >[!IMPORTANT]
 >
->You must first configure override settings within the datastream before using product-specific overrides. See [Datastream overrides](/help/datastreams/overrides.md) for more information.
+>Configure override settings within the datastream before using product-specific overrides. See [Datastream overrides](/help/datastreams/overrides.md) for more information.
 
 If you set overrides both in the Web SDK configuration and in a specific command (such as [`sendEvent`](sendevent/overview.md)), the overrides in the specific command take priority.
 
@@ -17,9 +17,9 @@ If you set overrides both in the Web SDK configuration and in a specific command
 The following properties are available within this object:
 
 * **Datastream override**: Send calls to a different datastream. If you set this value, other overrides that require datastream configuration must be configured in the datastream set here.
-* **Third-party ID sync container**: The ID for the destination third-party ID sync container in Adobe Audience Manager. You must first configure a third-party ID container override in the datastream's settings before using this field.
-* **Target property token**: The token for the destination property in Adobe Target. You must first configure a Target property token override in the datastream's settings before using this field.
-* **Report suites**: The report suite IDs to override in Adobe Analytics. You must first configure report suite overrides in the datastream's settings before using this field.
+* **Third-party ID sync container**: The ID for the destination third-party ID sync container in Adobe Audience Manager. Configuring a third-party ID container override in the datastream's settings is required before using this field.
+* **Target property token**: The token for the destination property in Adobe Target. Configuring a Target property token override in the datastream's settings is required before using this field.
+* **Report suites**: The report suite IDs to override in Adobe Analytics. Configuring report suite overrides in the datastream's settings is required before using this field.
 
 ## Edge configuration overrides using the Web SDK tag extension
 
@@ -40,7 +40,7 @@ If you want to set overrides just for a specific command, set each desired field
 1. Navigate to **[!UICONTROL Rules]**, then select the desired rule.
 1. Under [!UICONTROL Actions], select an existing action or create an action.
 1. Set the [!UICONTROL Extension] dropdown field to **[!UICONTROL Adobe Experience Platform Web SDK]**, and set the [!UICONTROL Action Type] to **[!UICONTROL Send event]**.
-1. Scroll down to the section labled **[!UICONTROL Datastream configuration overrides]**.
+1. Scroll down to the section labeled **[!UICONTROL Datastream configuration overrides]**.
 1. Set each field in this section to the desired override value.
 1. Click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
 

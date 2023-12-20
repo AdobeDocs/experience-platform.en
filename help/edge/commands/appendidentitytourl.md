@@ -4,7 +4,7 @@ description: Deliver personalized experiences more accurately between apps, web,
 ---
 # `appendIdentityToUrl`
 
-The `appendIdentityToUrl` command allows you to add a user identifier to a the URL as a query string. This action allows you to carry a visitor's identity between domains, preventing duplicate visitor counts for datasets that include both domains or channels. It is available on Web SDK versions 2.11.0 or later.
+The `appendIdentityToUrl` command allows you to add a user identifier to the URL as a query string. This action allows you to carry a visitor's identity between domains, preventing duplicate visitor counts for datasets that include both domains or channels. It is available on Web SDK versions 2.11.0 or later.
 
 The query string generated and appended to the URL is `adobe_mc`. If the Web SDK cannot find an ECID, it calls the `/acquire` endpoint to generate one.
 
@@ -28,7 +28,7 @@ This command is typically used with a specific rule that listens for clicks and 
 
 +++**Rule event criteria**
 
-Triggers any time an anchor tag with an `href` property is clicked.
+Triggers when an anchor tag with an `href` property is clicked.
 
 * **[!UICONTROL Extension]**: Core
 * **[!UICONTROL Event type]**: Click
@@ -73,7 +73,7 @@ Run the `appendIdentityToUrl` command with a URL as a parameter. The method retu
 alloy("appendIdentityToUrl",document.location);
 ```
 
-You can add an event listener for all clicks on the page and check to see if the URL matches any desired domains. If it does, append the identity to the URL and redirect the user.
+You can add an event listener for all clicks received on the page and check to see if the URL matches any desired domains. If it does, append the identity to the URL and redirect the user.
 
 ```js
 document.addEventListener("click", event => {
