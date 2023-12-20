@@ -38,17 +38,25 @@ The dataset export functionality is now generally available. See [which datasets
 
 >[!ENDTABS]
 
+<!--
+
+## What do you want to achieve with Real-Time CDP?
+
+I want to collect data 
+
+-->
+
 ## Start with the basics
 
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
     <a href="/help/rtcdp/get-started.md"><img src="assets/do-not-localize/start-quick.png"></a>
-    <div><strong>Get started</strong><br/>Get an overview of Real-Time CDP to learn how to ingest, manage, and activate data at scale with Real-Time CDP</div>
+    <div><strong>Get started</strong><br/>Get an overview of Real-Time CDP to learn how to ingest, manage, and activate data at scale with Real-Time CDP.</div>
     </td>
     <td>
     <a href="/help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/start-campaign.jpeg"></a>
-    <div><strong>Which Real-Time CDP edition is right for me</strong><br/>Understand the differences between the different B2B, B2C, and B2P offerings of Real-Time CDP and decide which one to buy.</div>
+    <div><strong>Which Real-Time CDP edition is right for me</strong><br/>Understand the differences between the different business-to-consumer, business-to-business, and business-to-person offerings of Real-Time CDP and decide which one to buy.</div>
     </td>
     <td>
     <a href="/help/landing/ui-guide.md"><img src="assets/do-not-localize/start-interface.jpeg"></a>
@@ -59,22 +67,34 @@ The dataset export functionality is now generally available. See [which datasets
     <div><strong>Explore an end-to-end workflow</strong><br/>Understand the flow of data from ingestion, through enriching profiles and creating audiences, to activation.
     </div>
     </td>
+    <td>
+    <a href="/help/landing/end-to-end-tutorial.md"><img src="assets/do-not-localize/start-use-cases.jpeg"></a>
+    <div><strong>Suggested Real-Time CDP Use cases</strong><br/>Explore the many ways in which Real-Time CDP can help you acquire new customers, enrich your profile and more.
+    </div>
+    </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="/help/rtcdp/overview.md"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="/help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="/help/rtcdp/home-page-dashboards.md"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="/help/landing/end-to-end-tutorial.md"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="/help/rtcdp/use-case-guides/overview.md"><img src="assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
 ## Explore the documentation
+
+Learn how Adobe Real-Time CDP can help you achieve your use cases. 
 
 <table style="table-layout:auto">
   <tr style="border: 0;">
     <td>
       <img src="assets/do-not-localize/icon-data.svg" width="35px"><br/>
       <strong>Data ingestion and management</strong><br/>Explore the many ways that you can get data into Real-Time CDP. <br/><a href="/help/ingestion/batch-ingestion/overview.md">Batch ingestion</a> - <a href="/help/ingestion/streaming-ingestion/overview.md">Streaming ingestion</a> - <a href="/help/sources/home.md">Sources</a> - <a href="/help/xdm/schema/composition.md">Schemas</a> - <a href="/help/catalog/datasets/overview.md">Datasets</a> - <a href="/help/query-service/home.md">Queries</a>
+    </td>
+    <td>
+      <img src="assets/do-not-localize/icon-lock.svg" width="35px"><br/>
+      <strong>Data governance and trust</strong><br/><br/><a href="/help/ingestion/batch-ingestion/overview.md">Batch ingestion</a> - <a href="/help/ingestion/streaming-ingestion/overview.md">Streaming ingestion</a> - <a href="/help/sources/home.md">Sources</a> - <a href="/help/xdm/schema/composition.md">Schemas</a> - <a href="/help/catalog/datasets/overview.md">Datasets</a> - <a href="/help/query-service/home.md">Queries</a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon_profile-audience.svg" width="35px"><br/>
@@ -91,17 +111,71 @@ The dataset export functionality is now generally available. See [which datasets
       <strong>Configuration and administration</strong><br/><a href="/help/access-control/home.md">Access control</a> - <a href="/help/access-control/abac/overview.md">Attribute-based access control</a> - <a href="/help/access-control/abac/end-to-end-guide.md">End-to-end guide</a> - <a href="/help/sandboxes/home.md">Sandboxes management</a> 
     </td>
     <td>
+      <img src="assets/do-not-localize/icon-cloud.svg" width="35px"><br/>
+      <strong>Cloud and AI/ML capabilities</strong><br/><a href="/help/access-control/home.md">Customer AI</a> - <a href="/help/access-control/abac/overview.md">Attribute-based access control</a> - <a href="/help/access-control/abac/end-to-end-guide.md">End-to-end guide</a> - <a href="/help/sandboxes/home.md">Sandboxes management</a> 
+    </td>
+    <td>
       <img src="assets/do-not-localize/icon-learn.svg" width="35px"><br/>
       <strong>Guardrails and best practices</strong><br/>Learn about best practices and current limitations when working with data in Real-Time CDP.<br/><a href="/help/rtcdp/guardrails/overview.md">Guardrails</a> - <a href="/help/landing/license-usage-and-guardrails/data-management-best-practices.md">Data Management License Entitlement Best Practices</a> - <a href="/help/xdm/schema/best-practices.md">Data Modeling Best Practices</a> 
     </td>
     <td>
       <img src="assets/do-not-localize/icon-quick-start.svg" width="35px"><br/>
-      <strong>Use Cases</strong><br/>Learn how you use Real-Time CDP to acquire new customers, intelligently engage your exixting customers, enrich their profiles, and much more. <br/><a href="/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md">Intelligent re-engagement</a> - <a href="/help/rtcdp/partner-data/prospecting.md">New customer acquisition</a> - <a href="/help/rtcdp/partner-data/onsite-personalization.md">Onsite personalization to unknown users</a> - <a href="/help/rtcdp/partner-data/supplement-first-party-profiles.md">Profile enrichment</a> - <a href="/help/rtcdp/partner-data/offsite-retargeting.md">Offsite retargeting</a>
+      <strong>Use Cases</strong><br/>Learn how you use Real-Time CDP to acquire new customers, intelligently engage your existing customers, enrich their profiles, and much more. <br/><a href="/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md">Intelligent re-engagement</a> - <a href="/help/rtcdp/partner-data/prospecting.md">New customer acquisition</a> - <a href="/help/rtcdp/partner-data/onsite-personalization.md">Onsite personalization to unknown users</a> - <a href="/help/rtcdp/partner-data/supplement-first-party-profiles.md">Profile enrichment</a> - <a href="/help/rtcdp/partner-data/offsite-retargeting.md">Offsite retargeting</a>
     </td>
   </tr>
 </table> 
 
-## Additional resources
+<!--
+
+## Featured introductory videos {#featured-videos}
+
+View these three introductory videos to get an understanding of Real-Time CDP.
+
+<table style="margin-top: 0 !important">
+<tr>
+  <td>
+    <a href="intro-to-platform/a-customer-experience-powered-by-experience-platform.md">
+      <img alt="A customer experience powered by Experience Platform video" src="assets/thumb_A-Customer-Experience.jpg" />
+    </a>
+    <div>
+      <a href="intro-to-platform/a-customer-experience-powered-by-experience-platform.md">
+    <strong>A customer experience powered by Experience Platform</strong>
+    </a>
+    </div>
+    <p>
+    <em>See how Platform can be used to power a customer experience</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html">
+      <img alt="thumbnail image for the 'Getting started for data architects and data engineers' tutorial" src="assets/thumb_Getting_started.jpg" />
+    </a>
+    <div>
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html">
+    <strong>Getting started for data architects and data engineers</strong>
+    </a>
+    </div>
+    <p>
+    <em>Hands-on exercises to get started</em>
+    <p>
+  </td>
+  <td>
+    <a href="sources/overview.md">
+      <img alt="thumbnail image for the 'Understanding source connectors' video" src="assets/thumb_Sources.png" />
+    </a>
+    <div>
+      <a href="sources/overview.md">
+    <strong>Understanding source connectors</strong>
+    </a>
+    </div>
+    <p>
+    <em>Easily ingest your data</em>
+    <p>
+  </td>
+
+-->
+
+## Additional resources {#additional-resources}
 
 <table style="table-layout:fixed"><tr style="border: 0;">
 <td><strong>Real-Time CDP</strong><br/>
@@ -113,4 +187,4 @@ The dataset export functionality is now generally available. See [which datasets
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b>Stay informed and elevate your Adobe Journey Optimizer experience!</b><br/>Sign up for our quarterly newsletter. Gain exclusive access to the latest product updates, captivating stories, real-world use cases, valuable tips, and more – all delivered directly to your inbox every quarter.. <a href="https://www.adobe.com/subscription/Adobe_Journey_Optimizer_NL.html">Sign up today!</a></td></tr></table>
+<b>Stay informed and elevate your Adobe Real-Time CDP experience!</b><br/>Visit the Real-Time Customer Data Platform community to discuss functionality with fellow practitioners. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">Join the community today!</a></td></tr></table>

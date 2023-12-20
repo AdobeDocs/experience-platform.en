@@ -24,21 +24,28 @@ With Real-Time Customer Data Platform, you can:
 * Generate actionable insights and scale audiences with AI and machine learning powered by Adobe Sensei and built for marketers.
 * Deliver personalized experiences in real-time across all channels and destinations.
 
-## Real-Time Customer Data Platform editions (B2C, B2B, B2P) {#rtcdp-editions}
+## Real-Time Customer Data Platform editions (Business-to-Consumer, Business-to-Business, Business-to-Person) {#rtcdp-editions}
 
 When purchasing Real-Time CDP, your company has the choice between three editions, as shown in the table below. All three editions are available in a standard Prime and an Ultimate level. See the sections below for additional information to help you decide which of the three editions is best for your company.
 
-|Real-Time CDP B2C | Real-Time CDP B2B | Real-Time CDP B2P|
+|Real-Time CDP Business-to-Consumer (B2C) | Real-Time CDP Business-to-Business (B2B) | Real-Time CDP Business-to-Person (B2P)|
 |---------|----------|---------|
 | Prime ✓ | Prime ✓ | Prime ✓ |
 | Ultimate ✓ | Ultimate ✓ | Ultimate ✓ |
 
 {style="table-layout:auto"}
 
+Get complete information about the functionality included in the Prime and Ultimate tiers of all editions below:
+
+* [Real-Time Customer Data Platform (B2C Edition - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B Edition - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P Edition - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+
 ### Adobe Real-Time Customer Data Platform - Business-to-Consumer (B2C) edition
 
-Real-Time CDP B2C is purpose-built for B2C marketers to unify, govern and activate all *consumer data* across systems and
-channels for more personalized customer experiences and complete data peace-of-mind.
+Real-Time CDP B2C is purpose-built for B2C marketers to unify, govern and activate all *consumer data* across systems and channels for more personalized customer experiences and complete data peace-of-mind.
+
+<!--
 
 | Capability | Description |
 |---------|----------|
@@ -49,6 +56,8 @@ channels for more personalized customer experiences and complete data peace-of-m
 | Data Activation & Journey Orchestration | Put your *unified customer audiences* to use by activating them across Adobe and non-Adobe destinations using pre-built connectors to power highly targeted campaigns with in-the-moment personalization using more complete and granular data that was previously too hard to use at scale. |
 
 {style="table-layout:auto"}
+
+-->
 
 ### Adobe Real-Time Customer Data Platform - Business-to-Business (B2B) edition
 
