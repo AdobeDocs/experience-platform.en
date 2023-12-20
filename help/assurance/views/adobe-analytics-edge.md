@@ -1,11 +1,11 @@
 ---
-title: Adobe Analytics and Analytics Edge View in Assurance
+title: Analytics Events 2.0 in Assurance
 description: This guide explains how to use Adobe Analytics and Analytics Edge view with Adobe Experience Platform Assurance.
 badgeBeta: label="Beta" type="Informative"
 ---
-# Adobe Analytics and Analytics Edge View in Assurance
+# Analytics Events 2.0 in Assurance
 
-The Adobe Analytics and Edge view provide a richer view of SDK events to users debugging and validating their Adobe Analytics implementation. The view shows events sent to Adobe Analytics from the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/solution/adobe-analytics/) as well as the [Adobe Experience Platform Edge Network SDK](https://developer.adobe.com/client-sdks/edge/edge-network/). The view also features a details panel, which provides context on how the event was processed by the client SDK, as well as by the upstream services after it left the device.
+The Analytics Events 2.0 provide a richer view of SDK events to users debugging and validating their Adobe Analytics implementation. The view shows events sent to Adobe Analytics from the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/solution/adobe-analytics/) as well as the [Adobe Experience Platform Edge Network SDK](https://developer.adobe.com/client-sdks/edge/edge-network/). The view also features a details panel, which provides context on how the event was processed by the client SDK, as well as by the upstream services after it left the device.
 
 ## Getting started
 
@@ -13,7 +13,7 @@ To use this view, complete the following steps:
 
 1. [Set up Adobe Experience Platform Assurance](../tutorials/implement-assurance.md).
 2. [Create and connect to an Assurance session](../tutorials/using-assurance.md).
-3. In the Assurance UI from the left navigation **Home** view menu, select **Analytics Events + Edge (Beta)**. If you don't see this option, select **Configure** in the bottom left of the window, add the **Analytics Events + Edge (Beta)**, and select **Save**.
+3. In the Assurance UI from the left navigation **Home** view menu, select **Analytics Events 2.0 (Beta)**. If you don't see this option, select **Configure** in the bottom left of the window, add the **Analytics Events 2.0 (Beta)**, and select **Save**.
 
 ## Analytics Events View
 
