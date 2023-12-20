@@ -10,31 +10,56 @@ feature: Web SDK
 # Adobe Experience Platform Web SDK {#edge}
 
 * [Platform Web SDK overview](home.md)
-* Fundamentals {#fundamentals}
-  * [Supported use cases](fundamentals/supported-use-cases.md)
-  * [Prerequisites](fundamentals/prerequisite.md)
-  * [Install the SDK](fundamentals/installing-the-sdk.md)
-  * [Configure the SDK](fundamentals/configuring-the-sdk.md)
-  * [Execute commands](fundamentals/executing-commands.md)
-  * [Track events](fundamentals/tracking-events.md)
-  * [Configure top and bottom of page events](fundamentals/top-bottom-page-events.md)
-  * [Debugging](fundamentals/debugging.md)
-  * [Configure a CSP](fundamentals/configuring-a-csp.md)
-  * [Interact with multiple properties](fundamentals/interacting-with-multiple-properties.md)
-  * [User agent client hints](fundamentals/user-agent-client-hints.md)
+* [Release notes](release-notes.md)
+
+* Install {#install}
+  * [Installation overview](install/overview.md)
+  * [Tag extension](install/extension.md)
+  * [JavaScript library](install/alloy.md)
+  * [NPM](install/npm.md)
+
+* Commands {#commands}
+  * configure {#configure}
+    * [Overview](commands/configure/overview.md)
+    * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
+    * [context](commands/configure/context.md)
+    * [debugEnabled](commands/configure/debugenabled.md)
+    * [defaultConsent](commands/configure/defaultconsent.md)
+    * [downloadLinkQualifier](commands/configure/downloadlinkqualifier.md)
+    * [edgeBasePath](commands/configure/edgebasepath.md)
+    * [edgeConfigId](commands/configure/edgeconfigid.md)
+    * [edgeDomain](commands/configure/edgedomain.md)
+    * [idMigrationEnabled](commands/configure/idmigrationenabled.md)
+    * [onBeforeEventSend](commands/configure/onbeforeeventsend.md)
+    * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
+    * [orgId](commands/configure/orgid.md)
+    * [prehidingStyle](commands/configure/prehidingstyle.md)
+    * [targetMigrationEnabled](commands/configure/targetmigrationenabled.md)
+    * [thirdPartyCookiesEnabled](commands/configure/thirdpartycookiesenabled.md)
+  * sendEvent {#sendevent}
+    * [Overview](commands/sendevent/overview.md)
+    * [data](commands/sendevent/data.md)
+    * [decisionScopes](commands/sendevent/decisionscopes.md)
+    * [documentUnloading](commands/sendevent/documentunloading.md)
+    * [personalization](commands/sendevent/personalization.md)
+    * [renderDecisions](commands/sendevent/renderdecisions.md)
+    * [type](commands/sendevent/type.md)
+    * [xdm](commands/sendevent/xdm.md)
+  * [appendIdentityToUrl](commands/appendidentitytourl.md)
+  * [applyPropositions](commands/applypropositions.md)
+  * [applyResponse](commands/applyresponse.md)
+  * [getIdentity](commands/getidentity.md)
+  * [getLibraryInfo](commands/getlibraryinfo.md)
+  * [setConsent](commands/setconsent.md)
+  * [setDebug](commands/setdebug.md)
+  * [Command overrides](commands/command-overrides.md)
+  * [Command responses](commands/command-responses.md)
+
 * Identity {#identity}
   * [Overview](identity/overview.md)
   * [First-party device IDs](identity/first-party-device-ids.md)
   * [Mobile-to-web and cross-domain ID sharing](identity/id-sharing.md)
-* Data collection {#data-collection}
-  * [Automatically collected information](data-collection/automatic-information.md)
-  * [Track links](data-collection/track-links.md)
-  * [Collect commerce, product, and order data](data-collection/collect-commerce-data.md)
-  * Adobe Analytics {#adobe-analytics}
-    * [Using Adobe Analytics with Platform Web SDK](data-collection/adobe-analytics/analytics-overview.md)
-    * [Mapping Analytics variables](data-collection/adobe-analytics/manually-mapping-variables.md)
-    * [Automatically mapped variables](data-collection/adobe-analytics/automatically-mapped-vars.md)
-    * [Sending data to Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
+
 * Personalization {#personalization}
   * [Manage display events](personalization/display-events.md)
   * [Render personalized content](personalization/rendering-personalization-content.md)
@@ -55,13 +80,22 @@ feature: Web SDK
   * Adobe Journey Optimizer {#ajo}
     * [Overview](personalization/ajo/overview.md)
     * [Single-page application implementation](personalization/ajo/web-spa-implementation.md)
+
 * Consent {#consent}
   * [Supporting consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
     * [Overview](consent/iab-tcf/overview.md)
     * [Integrate with tags](consent/iab-tcf/with-launch.md)
     * [Integrate without tags](consent/iab-tcf/without-launch.md)
-* [Web SDK tag extension](web-sdk-tag-extension-overview.md)
-* [Release notes](release-notes.md)
+
+* Use cases {#use-cases}
+  * [Adobe Analytics](use-cases/adobe-analytics.md)
+  * [Client hints](use-cases/client-hints.md)
+  * [Collect commerce data](use-cases/collect-commerce-data.md)
+  * [Configuring a CSP](use-cases/configuring-a-csp.md)
+  * [Debugging methods](use-cases/debugging.md)
+  * [Multiple Web SDK instances](use-cases/custom-instance.md)
+  * [Top and bottom page events](use-cases/top-bottom-page-events.md)
+
 * [Frequently Asked Questions](web-sdk-faq.md)
 * [Resources](resources.md)

@@ -1,36 +1,51 @@
 ---
-title: Debugging in the Adobe Experience Platform Web SDK
-description: Learn how to toggle debugging capabilities in the Experience Platform Web SDK.
+title: Debugging methods
+description: Learn how to toggle debugging capabilities in the Web SDK.
 keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
 ---
-# Debugging
+# Debugging methods
 
-When debugging is enabled, the SDK outputs messages to the browser console that can be helpful in debugging your implementation and understanding how the SDK is behaving.
+When debugging is enabled, the Web SDK outputs messages to the browser console that can be helpful in debugging your implementation. It is helpful when you want to understand how the SDK behaves according to the rules and data elements that you have established.
 
-Debugging is disabled by default, but can be toggled on in four different ways:
+Debugging is disabled by default, but can be toggled on in four different ways. You can use any combination of these methods to enable or disable debugging most convenient to your development workflow.
 
-* `configure` command
-* `setDebug` command
-* query string parameter
-* Toggling on Enable Debugging in Adobe Experience Platform Debugger. Adobe Experience Platform is a powerful tool that examines your webpages and helps you debug implementation issues with your Experience Cloud products. Adobe Experience Platform Debugger is available as a [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) extension. Debugging can be enabled from the configuration tab of the AEP Web SDK section. 
+## Use `debugEnabled` in the `configure` command
 
-![Experience Platform Debugger UI image showing the configuration  screen.](../assets/enable-debugging.png)
+Set the `debugEnabled` boolean to true when configuring the extension. This option is typically used for development environments, as it enables debugging for everyone visiting any page on your site:
 
-## Toggling debugging with a query string parameter
-
-Toggle debugging by setting an `alloy_debug` query string parameter to `true` or `false` as follows:
-
-```HTTP
-http://example.com/?alloy_debug=true
+```js
+alloy("configure", {
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  "debugEnabled": true
+});
 ```
 
-Similar to the `debug` command, if you prefer not to change code on your webpage or don't want logging messages to be produced for all users of your website, this is particularly useful because you can set the query string parameter when loading the webpage within your browser.
+See [`debugEnabled`](../commands/configure/debugenabled.md) for more information.
 
-## Priority and duration
+## Use the `setDebug` command
 
-When debugging is set through the `debug` command or query string parameter, it overrides any `debug` option set in the `configure` command. In these two cases, debugging also remains toggled on for the duration of the session. In other words, if you enable debugging using the debug command or query string parameter, it stays enabled until one of the following:
+Similarly to the above boolean, this command enables debugging across all visitors to the page.
 
-* The end of your session
-* You run the `debug` command
-* You set the query string parameter again
+```js
+alloy("setDebug", {"enabled": true});
+```
+
+See the [`setDebug`](../commands/setdebug.md) command for more information.
+
+## Set a query string parameter
+
+You can enable debugging by adding the query string `?alloy_debug=true` to the end of any URL. For example:
+
+`http://example.com/?alloy_debug=true`
+
+This method only applies to your local machine, allowing you to debug production websites without enabling debugging for everyone. Enabling debugging in this manner remains on for the rest of your browsing session or until you disable it.
+
+## Use the Adobe Experience Platform Debugger
+
+The Adobe Experience Platform Debugger is a powerful tool that examines your web pages and helps you debug your implementation of Experience Cloud products. You can enable debugging from the configuration tab of the AEP Web SDK section.
+
+![Enable debugger](../assets/enable-debugging.png)
+
+See [Adobe Experience Platform Debugger overview](/help/debugger/home.md) for more information.
