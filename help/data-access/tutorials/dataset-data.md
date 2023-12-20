@@ -345,7 +345,7 @@ Depending on whether the file ID points to an individual file or a directory, th
 | -------- | ----------- | 
 | `data._links.self.href` | The URL to download the associated file. |
 
-This response returns a directory containing two separate files, with IDs `{FILE_ID_2}` and `{FILE_ID_3}`. In this scenario, you need to follow the URL of each file to access the file.
+This response returns a directory containing two separate files, with IDs `{FILE_ID_2}` and `{FILE_ID_3}`. In this scenario, you must follow the URL of each file to access the file.
 
 ## Retrieve the metadata of a file
 
