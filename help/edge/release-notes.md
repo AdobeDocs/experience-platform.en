@@ -87,7 +87,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 * Added support for [Page by Page Full Migration](home.md#migrating-to-web-sdk). The Adobe Target profile will now be preserved as a visitor moves between at.js and Web SDK pages.
 * Added configurable support for [high entropy User-Agent Client Hints](/help/edge/use-cases/client-hints.md).
-* Added support for the [`applyResponse`](/help/edge/commands/applyresponse-russ.md) command. This enables hybrid personalization via the [Edge Network Server API](../server-api/overview.md).
+* Added support for the [`applyResponse`](/help/edge/commands/applyresponse.md) command. This enables hybrid personalization via the [Edge Network Server API](../server-api/overview.md).
 * QA mode links now work across multiple pages.
 
 **Fixes and improvements**
@@ -179,7 +179,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 * Added support for an `out` option when [configuring default consent](/help/edge/commands/configure/defaultconsent.md), which drops all events until consent is received (the existing `pending` option queues events and sends them once consent is received).
 * The [`onBeforeEventSend`](/help/edge/commands/configure/onbeforeeventsend.md) callback can now be used to prevent an event from being sent.
 * Now uses an XDM schema field group instead of `meta.personalization` when sending events about personalized content being rendered or clicked.
-* The [`getIdentity`](/help/edge/commands/getidentity-russ.md) command now returns the edge region ID alongside the identity.
+* The [`getIdentity`](/help/edge/commands/getidentity.md) command now returns the edge region ID alongside the identity.
 * Warnings and errors received from the server have been improved and are handled in a more appropriate fashion.
 * Added support for Adobe's Consent 2.0 standard for the [`setConsent`](/help/edge/commands/setconsent.md) command.
 * Consent preferences, when received, are hashed and stored in local storage for an optimized integration among CMPs, Platform Web SDK, and Platform Edge Network. If you are collecting consent preferences, we now encourage you to call `setConsent` on every page load.
