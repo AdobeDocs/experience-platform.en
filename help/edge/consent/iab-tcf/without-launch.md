@@ -18,13 +18,11 @@ This guide uses the `__tcfapi` interface for accessing the consent information. 
 
 To use IAB TCF 2.0 with tags and the Adobe Experience Platform Web SDK extension, you need to have an XDM schema available. If you have not set either of these up, start by viewing this page before proceeding.
 
-Additionally, this guide requires you to have a working understanding of Adobe Experience Platform Web SDK. For a quick refresher, please read the [Adobe Experience Platform Web SDK overview](../../home.md) and the [Frequently asked questions](../../web-sdk-faq.md) documentation.
+Additionally, this guide requires you to have a working understanding of Adobe Experience Platform Web SDK. For a quick refresher, please read the [Adobe Experience Platform Web SDK overview](../../home.md) and the [Frequently asked questions](../../faq.md) documentation.
 
 ## Enabling default consent
 
-If you want to treat all unknown users the same, you can set the default consent to `pending` or `out`. This queues or discards Experience Events until consent preferences are received.
-
-For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the Platform Web SDK configuration documentation.
+If you want to treat all unknown users the same, you can set [`defaultConsent`](/help/edge/commands/configure/defaultconsent.md) to `pending` or `out`. This queues or discards Experience Events until consent preferences are received.
 
 ### Setting the default consent based on `gdprApplies`
 
@@ -96,9 +94,9 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 });
 ```
 
-This example gets the consent information for the TCF API, and then sends an event with the consent information added to the XDM schema. See the [tracking events](../../fundamentals/tracking-events.md) guide to understand what should be in the `sendEvent` command options.
+This example gets the consent information for the TCF API, and then sends an event with the consent information added to the XDM schema.
 
-The other way to add the consent information to every request is with the `onBeforeEventSend` callback. Read the section on [modifying events globally](../../fundamentals/tracking-events.md#modifying-events-globally) from within the tracking events documentation for more information on how to do this.
+The other way to add the consent information to every request is with the [`onBeforeEventSend`](/help/edge/commands/configure/onbeforeeventsend.md) callback.
 
 ## Next steps
 

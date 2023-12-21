@@ -45,7 +45,7 @@ To collect consent information on events, the following is required:
 - A dataset based on the [!DNL XDM Experience Event] class, with the [!DNL Experience Event] privacy schema field group.
 - A datastream set up with the [!DNL XDM Experience Event] dataset above.
 
-For more information on how to convert an XDM Experience Event to an Analytics hit, start by reading the [Analytics overview](../../data-collection/adobe-analytics/analytics-overview.md) documentation.
+For more information on how to convert an XDM Experience Event to an Analytics hit, see [Sending data to Adobe Analytics using the Web SDK](/help/edge/use-cases/adobe-analytics.md).
 
 ## Adobe Experience Platform Web SDK integration
 
@@ -59,9 +59,7 @@ The sections below describe the main integration points between IAB TCF 2.0 and 
 
 Default consent is used when there is no consent preference already saved for a customer. This means the default consent options can control the behavior of Adobe Experience Platform Web SDK and change based on a customer's region.
 
-For example, if you have a customer that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to `in`, but inside the jurisdiction of GDPR, the default consent could be set to `pending`. Your Consent Management Platform (CMP) might detect the customer's region and provide the flag `gdprApplies` to IAB TCF 2.0. This flag can be used to set the default consent.
-
-For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
+For example, if you have a customer that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to `in`, but inside the jurisdiction of GDPR, the default consent could be set to `pending`. Your Consent Management Platform (CMP) might detect the customer's region and provide the flag `gdprApplies` to IAB TCF 2.0. This flag can be used to set the default consent. See [`defaultConsent`](/help/edge/commands/configure/defaultconsent.md) for more information.
 
 ### Setting consent when it changes
 
@@ -78,9 +76,7 @@ For more information on the `setConsent` command, read the documentation on [Sup
 
 ### Adding Consent to Experience Events
 
-Adobe Experience Platform Web SDK has a `sendEvent` command that collects an Experience Event. If you are integrating with Experience Events or Adobe Analytics and would like the consent preferences on every Experience Event, you should add the consent information to every `sendEvent` command.
-
-For more information on the `sendEvent` command, read the documentation on [tracking events](../../fundamentals/tracking-events.md).
+Adobe Experience Platform Web SDK has a [`sendEvent`](/help/edge/commands/sendevent/overview.md) command that collects an Experience Event. If you are integrating with Experience Events or Adobe Analytics and would like the consent preferences on every Experience Event, add consent information to every `sendEvent` command.
 
 ## Next steps
 

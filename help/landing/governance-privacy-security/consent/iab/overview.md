@@ -131,13 +131,9 @@ When finished, select **[!UICONTROL Save]** at the bottom of the screen and cont
 
 Once you have created the datastream described in the previous section, you can start using SDK commands to send consent data to Platform. The sections below provide examples of how each SDK command can be used in different scenarios.
 
->[!NOTE]
->
->For an introduction to the common syntax for all Platform SDK commands, see the document on [executing commands](../../../../edge/fundamentals/executing-commands.md).
-
 #### Using CMP consent-change hooks {#setConsent}
 
-Many CMPs provide out-of-the-box hooks that listen to consent-change events. When these events occur, you can use the `setConsent` command to update that customer's consent data.
+Many CMPs provide out-of-the-box hooks that listen to consent-change events. When these events occur, you can use the [`setConsent`](/help/edge/commands/setconsent.md) command to update that customer's consent data.
 
 The `setConsent` command expects two arguments: 
 
@@ -220,7 +216,7 @@ alloy("sendEvent", {
 
 ### Handling SDK responses
 
-All [!DNL Platform SDK] commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See the section on [handling success or failure](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) in the guide on executing SDK commands for specific examples.
+Many Web SDK commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See [Command responses](/help/edge/commands/command-responses.md) for more information.
 
 ## Export segments {#export}
 

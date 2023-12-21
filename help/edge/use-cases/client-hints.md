@@ -120,7 +120,7 @@ Audience Manager customers who use platform-level keys for targeting must switch
 
 ## Enabling high entropy client hints {#enabling-high-entropy-client-hints}
 
-To enable high entropy client hints on your Web SDK deployment, you must include the additional `highEntropyUserAgentHints` context option, as described in the [configuration documentation](configuring-the-sdk.md#context), alongside your existing configuration.
+To enable high entropy client hints on your Web SDK deployment, you must include the additional `highEntropyUserAgentHints` context option in the [`context`](/help/edge/commands/configure/context.md) field.
 
 For example, to retrieve high entropy client hints from web properties, your configuration would look like this:
 

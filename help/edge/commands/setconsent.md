@@ -39,7 +39,7 @@ Run the `setConsent` command when calling your configured instance of the Web SD
 
 * **`consent[]`**: An array of `consent` objects. The consent object is formatted different depending on the standard and version that you choose.
 * **`identityMap`**: An object that controls how an ECID is generated and which IDs consent information is tied to. Adobe recommends including this object when `setConsent` is run before other commands, such as [`sendEvent`](sendevent/overview.md).
-* **`edgeConfigOverrides`**: An object that contains [override settings](edgeconfigoverrides.md).
+* **`edgeConfigOverrides`**: An object that contains [override settings](command-overrides.md).
 
 >[!BEGINTABS]
 

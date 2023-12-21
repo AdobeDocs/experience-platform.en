@@ -114,7 +114,7 @@ Here is a sample value for the `event.destinations` variable:
 ]
 ```
 
-If you are not using [Tags](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [handling responses from events](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionality to see the exported data.
+If you are not using [Tags](../../../tags/home.md) to deploy the Experience Platform Web SDK, use [command responses](/help/edge/commands/command-responses.md) to see the exported data.
 
 The JSON response from Adobe Experience Platform can be parsed to find the corresponding integration alias of the application you are integrating with Adobe Experience Platform. The audience IDs can be passed into the application's code as targeting parameters. Below is a sample of what this would look like specific to the destination response.
 

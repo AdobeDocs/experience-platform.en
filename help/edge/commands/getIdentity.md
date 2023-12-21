@@ -25,7 +25,7 @@ alloy("getIdentity",{
 
 ## Response object
 
-If you decide to [handle responses](../../handle-responses.md) with this command, the following properties are available in the response object:
+If you decide to [handle responses](command-responses.md) with this command, the following properties are available in the response object:
 
 * **`identity.ECID`**: A string containing the visitor's ECID.
 * **`edge.regionID`**: An integer that represents the Experience Edge region that the browser hit when acquiring an identity. It is the same as the legacy Audience Manager location hint.

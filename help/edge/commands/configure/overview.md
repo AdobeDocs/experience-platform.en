@@ -9,7 +9,7 @@ Configuration for the SDK is done with the `configure` command. Configuring the 
 
 ## Configure the SDK in the extension
 
-Navigate to the [tag extension configuration page](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Navigate to the [tag extension configuration page](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

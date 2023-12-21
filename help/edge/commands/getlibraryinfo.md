@@ -26,7 +26,7 @@ alloy("getLibraryInfo").then(function(result) {
 
 ## Response object
 
-If you decide to [handle responses](../../handle-responses.md) with this command, the following properties are available in the response object:
+If you decide to [handle responses](command-responses.md) with this command, the following properties are available in the response object:
 
 * **`libraryInfo.commands`**: An array of commands that this version of the Web SDK supports.
 * **`libraryInfo.configs`**: An array of configuration settings that this version of the Web SDK supports.

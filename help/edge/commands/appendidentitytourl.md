@@ -93,4 +93,4 @@ document.addEventListener("click", event => {
 
 ## Response object
 
-If you decide to [handle responses](../../handle-responses.md) with this command, the response object contains **`url`**, the new URL with identity information added as a query string parameter.
+If you decide to [handle responses](command-responses.md) with this command, the response object contains **`url`**, the new URL with identity information added as a query string parameter.

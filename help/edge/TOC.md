@@ -97,5 +97,5 @@ feature: Web SDK
   * [Multiple Web SDK instances](use-cases/custom-instance.md)
   * [Top and bottom page events](use-cases/top-bottom-page-events.md)
 
-* [Frequently Asked Questions](web-sdk-faq.md)
+* [Frequently Asked Questions](faq.md)
 * [Resources](resources.md)

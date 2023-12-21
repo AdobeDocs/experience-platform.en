@@ -8,7 +8,7 @@ exl-id: 506991e8-701c-49b8-9d9d-265415779876
 
 ## Overview {#overview}
 
-Hybdrid personalization describes the process of retrieving personalization content server-side, using the [Edge Network Server API](../..//server-api/overview.md), and rendering it client-side, using the [Web SDK](../home.md).
+Hybdrid personalization describes the process of retrieving personalization content server-side, using the [Edge Network Server API](../../server-api/overview.md), and rendering it client-side, using the [Web SDK](../home.md).
 
 You can use hybrid personalization with personalization solutions like Adobe Target or Offer Decisioning, the difference being the contents of the [!UICONTROL Server API] payload.
 
@@ -19,7 +19,7 @@ Before implementing hybrid personalization on your web properties, make sure you
 * You have decided what personalization solution you want to use. This will have an impact on the contents of the [!UICONTROL Server API] payload.
 * You have access to an application server which you can use to make the [!UICONTROL Server API] calls.
 * You have access to the [Edge Network Server API](../../server-api/authentication.md).
-* You have correctly [configured and deployed](../fundamentals/configuring-the-sdk.md) Web SDK on the pages that you want to personalize.
+* You have correctly [configured](/help/edge/commands/configure/overview.md) and deployed the Web SDK on the pages that you want to personalize.
 
 ## Flow diagram {#flow-diagram}
 

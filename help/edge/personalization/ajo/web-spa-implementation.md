@@ -55,13 +55,13 @@ XDM views can be leveraged in Adobe Journey Optimizer to empower marketers to ru
 
 This requires performing the following steps in order to complete a one-time developer setup:
 
-1. Install [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md) and check the [web channel pre-requisites](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html) page.
+1. Install [Adobe Experience Platform Web SDK](/help/edge/install/overview.md) and check the [web channel pre-requisites](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html) page.
 
 2. Determine all XDM views in your single-page application that you want to personalize.
 
 3. After defining the XDM views, in order to deliver content to those views, you need to implement the `sendEvent()` function with `renderDecisions` set to `true` and the corresponding XDM view in your single-page application. The XDM view must be passed in `xdm.web.webPageDetails.viewName`. This step allows marketers to be able to discover these views inside the Journey Optimizer web editor and apply content modifications for them:
 
-```
+```js
  alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {

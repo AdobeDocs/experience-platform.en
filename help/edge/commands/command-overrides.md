@@ -23,7 +23,7 @@ The following properties are available within this object:
 
 ## Edge configuration overrides using the Web SDK tag extension
 
-If you want to set overrides for the entire tag extension, set each desired field under **[!UICONTROL Datastream configuration overrides]** when [configuring the tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+If you want to set overrides for the entire tag extension, set each desired field under **[!UICONTROL Datastream configuration overrides]** when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

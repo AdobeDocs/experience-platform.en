@@ -20,14 +20,7 @@ We allow our customers to download the library directly from Adobe Experience Cl
 
 The prebuilt version is available on a CDN. You can reference the library on the CDN directly on your page, or download and host it on your own infrastructure. It is available in minified and unminified formats. The unminified version is helpful for debugging purposes.
 
-URL structure: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR alloy.js for the non-minified version.
-
-For example:
-
-* Minified: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
-* Un-minified: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
-
-[Learn more](../../fundamentals/installing-the-sdk.md)
+See [Install the Web SDK using the JavaScript library](/help/edge/install/alloy.md) for more information.
 
 ## Configuring the libraries
 
@@ -74,25 +67,7 @@ window.adobe.target.init(window, document, {
 
 ### Configuring the Web SDK
 
-Configuration for the SDK is done with the `configure` command.
-
->[!IMPORTANT]
->
->`configure` is *always* the first command called.
-
-Example:
-
-```javascript
-alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg"
-});
-```
-
-There are many options that can be set during configuration. All options can be found below, grouped by category.
-
-[Learn more](../../fundamentals/configuring-the-sdk.md)
-
+Configuration for the SDK is done with the [`configure`](/help/edge/commands/configure/overview.md) command. The `configure` command is *always* called first.
 
 ## How to request and automatically render Page Load Target offers
 
@@ -1233,7 +1208,7 @@ Note: All these debugging features are available with enhanced capabilities in [
 You have multiple debugging capabilities when using Web SDK:
 
 * Using [Assurance](../../../assurance/home.md)
-* [Web SDK debug enabled](../../../edge/fundamentals/debugging.md)
+* [Web SDK debug enabled](/help/edge/use-cases/debugging.md)
 * Use [Web SDK monitoring hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Use [Adobe Experience Platform Debugger](../../../debugger/home.md)
 * Target Trace

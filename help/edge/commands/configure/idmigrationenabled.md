@@ -4,13 +4,13 @@ description: Allows the Web SDK to read AMCV cookies.
 ---
 # `idMigrationEnabled`
 
-The `idMigrationEnabled` property allows the Web SDK to read AMCV cookies set by previous Adobe Experience Cloud implementations. If you organization upgrades your implementation to the Web SDK, this setting allows a smoother transition to the current Adobe Experience Cloud ID service. This setting is valuable so that you don't see a sharp increase in unique visitors when upgrading to the Web SDK.
+The `idMigrationEnabled` property allows the Web SDK to read AMCV cookies set by previous Adobe Experience Cloud implementations. If your organization upgrades your implementation to the Web SDK, this setting allows a smoother transition to the current Adobe Experience Cloud ID service. This setting is valuable so that you don't see a sharp increase in unique visitors when upgrading to the Web SDK.
 
-If your organization runs a fresh Web SDK implementation, enabling this setting has no impact on data collection or visitor identification. It is enabled by default, and there are no downsides to leaving it enabled for all implementations.
+If your organization runs a fresh Web SDK implementation, enabling this setting has no impact on data collection or visitor identification. There are no downsides to leaving it enabled for all implementations.
 
 ## Enable ID migration using the Web SDK tag extension
 
-Select the **[!UICONTROL Migrate ECID from VisitorAPI to the web SDK]** checkbox when [configuring the tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Select the **[!UICONTROL Migrate ECID from VisitorAPI to the web SDK]** checkbox when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

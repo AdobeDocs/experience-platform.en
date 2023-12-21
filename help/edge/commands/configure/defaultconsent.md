@@ -16,7 +16,7 @@ If you have a visitor that is not within the jurisdiction of General Data Protec
 
 ## Set default consent using the Web SDK tag extension
 
-Select the desired radio button under **[!UICONTROL Default consent]** when [configuring the tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Select the desired radio button under **[!UICONTROL Default consent]** when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

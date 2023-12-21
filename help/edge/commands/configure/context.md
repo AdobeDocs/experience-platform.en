@@ -76,7 +76,7 @@ If you use device lookups when [configuring your datastream](/help/datastreams/c
 
 ## Collect context information using the Web SDK tag extension
 
-The context information setting is a combination of radio buttons and check boxes when [configuring the tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Each checkbox maps to a context keyword.
+The context information setting is a combination of radio buttons and check boxes when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Each checkbox maps to a context keyword.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
