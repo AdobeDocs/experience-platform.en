@@ -13,7 +13,7 @@ XDM is a publicly documented specification designed to improve the power of digi
 
 XDM is the foundational framework that allows Adobe Experience Cloud, powered by Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Platform services.
 
-This document provides an overview of the role of the XDM system within Experience Platform.
+Learn about the role of XDM System within Experience Platform.
 
 ## XDM schemas {#xdm-schemas}
 

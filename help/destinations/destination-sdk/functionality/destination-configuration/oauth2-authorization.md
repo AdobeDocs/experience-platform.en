@@ -27,11 +27,16 @@ Refer to the table below for details on which types of integrations support the 
 
 ### Prerequisites in your system {#prerequisites}
 
-As a first step, you must create an app in your system for Adobe Experience Platform, or otherwise register Experience Platform in your system. The goal is to generate a client ID and client secret, which are needed to authenticate Experience Platform to your destination. As part of this configuration in your system, you need the Adobe Experience Platform OAuth 2 redirect/callback URLs, which you can get from the list below.
+As a first step, you must create an app in your system for Adobe Experience Platform, or otherwise register Experience Platform in your system. The goal is to generate a client ID and client secret, which are needed to authenticate Experience Platform to your destination.
+
+As part of this configuration in your system, you need the Adobe Experience Platform OAuth 2 redirect/callback URLs, which you can get from the list below.
 
 * `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-aus5.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-can2.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-gbr9.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform.adobe.io/data/core/activation/oauth/api/v1/callback`
 
 >[!IMPORTANT]
 >

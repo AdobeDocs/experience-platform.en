@@ -1,6 +1,6 @@
 ---
 title: External Source System Audit Attributes Data Type
-description: This document provides an overview of the External Source System Audit Attributes Experience Data Model (XDM) data type.
+description: Learn about the External Source System Audit Attributes Experience Data Model (XDM) data type.
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
 ---
 # [!UICONTROL External Source System Audit Attributes] data type

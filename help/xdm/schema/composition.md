@@ -216,7 +216,11 @@ For the most up-to-date list of available standard XDM field groups, refer to th
 
 Data types are used as reference field types in classes or schemas in the same way as basic literal fields. The key difference is that data types can define multiple subfields in the same way as field groups. The key difference between them, is that data types can be included anywhere in a schema by adding it as the "data type" of a field. While field groups are only compatible with certain classes, data types can be included in any parent class or field group.
 
-Experience Platform provides several common data types as part of the [!DNL Schema Registry] to support the use of standard patterns for describing common data structures. This is explained in more detail in the [!DNL Schema Registry] tutorials and will become clearer as you walk through the steps to define data types.
+>[!NOTE]
+>
+>If a field is defined as a specific data type, you cannot create the same field with a different datatype in another schema. This constraint applies across your organization's tenant.
+
+Experience Platform provides a number of common data types as part of the [!DNL Schema Registry] to support the use of standard patterns for describing common data structures. This is explained in more detail in the [Schema Registry tutorials](../tutorials/create-schema-api.md) and will become clearer as you walk through the steps to define data types.
 
 The following screenshot demonstrates how data types are represented in the Platform UI. One of the fields provided by the [!UICONTROL Demographic Details] field group uses the "[!UICONTROL Object]" data type, as indicated by the text following the pipe character (`|`) next to the field's name. This particular data type provides several subfields that relate to the name of an individual person, a construct that can be reused for other fields where a person's name needs to be captured.
 
@@ -224,7 +228,7 @@ The following screenshot demonstrates how data types are represented in the Plat
 
 For the most up-to-date list of available standard XDM data types, refer to the [official XDM repository](https://github.com/adobe/xdm/tree/master/components/datatypes). Alternatively, you can refer to the guide on [exploring XDM components](../ui/explore.md) if you prefer to view resources in the UI.
 
-### Field
+### Field {#field}
 
 A field is the most basic building block of a schema. Fields provide constraints regarding the type of data that they can contain by defining a specific data type. These basic data types define a single field, whereas the [data types](#data-type) previously mentioned allow you to define multiple subfields and reuse the same multi-field structure throughout various schemas. So, in addition to defining a field's "data type" as one of the data types defined in the registry, Experience Platform supports basic scalar types such as:
 

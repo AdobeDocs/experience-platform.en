@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;reservation;dining;
 title: Dining Reservation Schema Field Group
-description: This document provides an overview of the Dining Reservation schema field group.
+description: Learn about the Dining Reservation schema field group.
 exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
 ---
 # [!UICONTROL Dining Reservation] schema field group
