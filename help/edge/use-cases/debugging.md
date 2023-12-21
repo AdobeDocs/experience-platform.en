@@ -6,7 +6,7 @@ exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
 ---
 # Debugging methods
 
-When debugging is enabled, the Web SDK outputs messages to the browser console that can be helpful in debugging your implementation. It is helpful when you want to understand how the SDK behaves according to the rules and data elements that you have established.
+When debugging is enabled, the Web SDK outputs messages to the browser console that can be helpful in debugging your implementation. Debugging is valuable when you want to understand how the SDK behaves according to the rules and data elements that you have established.
 
 Debugging is disabled by default, but can be toggled on in four different ways. You can use any combination of these methods to enable or disable debugging most convenient to your development workflow.
 

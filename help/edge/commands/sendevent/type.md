@@ -4,9 +4,9 @@ description: Set the type of event for a sendEvent call.
 ---
 # `eventType`
 
-The `eventType` property allows you to define the type of event you send using the Web SDK. This field ultimately populates the `xdm.eventType` field. It is valuable in helping you differentiate the event types that you send to Adobe.
+The `eventType` property allows you to define the type of event you send using the Web SDK. This field ultimately populates the `xdm.eventType` field. It is valuable when you want to differentiate the event types that you send to Adobe.
 
-Adobe provides a number of predefined event types that you can use. See [Available values for `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype) for a full list of predefined values. You can also use your own values if preferred.
+Adobe provides some predefined event types that you can use. See [Available values for `eventType`](/help/xdm/classes/experienceevent.md#accepted-values-for-eventtype) in the XDM user guide for a full list of predefined values. You can also use your own values if preferred.
 
 If you set both `type` here and `xdm.eventType` in the [`xdm`](xdm.md) object, the value in this field takes priority.
 

@@ -56,11 +56,11 @@ a.x.arrayofobjects.1.obj2key //objval1
 
 >[!NOTE]
 >
->With the Edge Network collection, all events are sent to Analytics as well as to any other services you have configured for your datastream. For example, if you have both Analytics and Target configured as services and you make separate calls for personalization and for Analytics, both events will be sent to Analytics as well as Target. These events are recorded in Analytics reporting and can affect metrics like bounce rate.
+>With the Edge Network collection, all events are sent to Analytics and any other services that you have configured for your datastream. For example, if you have both Analytics and Target configured as services and you make separate calls for personalization and for Analytics, both events are sent to Analytics and Target. These events are recorded in Analytics reporting and can affect metrics like bounce rate.
 
 ## Page views and link tracking calls
 
-AppMeasurement in Adobe Analytics uses separate method calls for page views ([`t()` method](https://experienceleague.adobe.com/docs/analytics/implementation/vars/functions/t-method.html)) and link tracking calls ([`tl()` method](https://experienceleague.adobe.com/docs/analytics/implementation/vars/functions/tl-method.html)). The Web SDK does not make this same distinction; there is only the [`sendEvent`](../commands/sendevent/overview.md) command. The data that you include in an event determines if it a [page view](https://experienceleague.adobe.com/docs/analytics/components/metrics/page-views.html) or a [page event](https://experienceleague.adobe.com/docs/analytics/components/metrics/page-events.html) in Adobe Analytics.
+AppMeasurement in Adobe Analytics uses separate method calls for page views ([`t()` method](https://experienceleague.adobe.com/docs/analytics/implementation/vars/functions/t-method.html)) and link tracking calls ([`tl()` method](https://experienceleague.adobe.com/docs/analytics/implementation/vars/functions/tl-method.html)). The Web SDK instead only provides the [`sendEvent`](../commands/sendevent/overview.md) command for sending both page views and link tracking. The data that you include in an event determines if it is a [page view](https://experienceleague.adobe.com/docs/analytics/components/metrics/page-views.html) or a [page event](https://experienceleague.adobe.com/docs/analytics/components/metrics/page-events.html) in Adobe Analytics.
 
 By default, all events are considered page views in Adobe Analytics. If you want to set a Web SDK event to an Adobe Analytics link tracking call, set the following XDM fields:
 

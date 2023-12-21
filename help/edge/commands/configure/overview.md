@@ -3,11 +3,11 @@ title: Configure the Adobe Experience Platform Web SDK
 description: Use the configure command to set required settings when using the Web SDK.
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
 ---
-# Configure the Platform Web SDK
+# Configure the Adobe Experience Platform Web SDK
 
-Configuration for the SDK is done with the `configure` command. Configuring the SDK is a vital and required step that must happen whenever the Web SDK is used.
+Configuration for the Web SDK is done with the `configure` command. Configuring the Web SDK is a vital and required step that must happen whenever the library or tag extension is used.
 
-## Configure the SDK in the extension
+## Configuration settings using the Web SDK tag extension
 
 Navigate to the [tag extension configuration page](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
@@ -18,7 +18,7 @@ Navigate to the [tag extension configuration page](/help/tags/extensions/client/
 
 These configuration settings are set whenever you use the extension to send data to Adobe.
 
-## Configure the SDK using the Web SDK JavaScript library
+## Configuration settings using the Web SDK JavaScript library
 
 Run the `configure` command. This command is required before you can call any other Web SDK commands, such as [`sendEvent`](../sendevent/overview.md). The properties [`edgeConfigId`](edgeconfigid.md) and [`orgId`](orgid.md) are required. All other properties are optional, depending on your organization's implementation requirements.
 

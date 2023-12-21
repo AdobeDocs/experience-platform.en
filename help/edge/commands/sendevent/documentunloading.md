@@ -6,7 +6,7 @@ description: Use the JavaScript sendBeacon API to send data to Adobe.
 
 The `documentUnloading` property allows you to use JavaScript's [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) method to send data to Adobe. If a typical request takes too long, the browser can cancel the request. You can tell the Web SDK to use `sendBeacon` so that the request runs in the background after you navigate away from the page. Enable this property to help prevent data requests from getting canceled by the browser when unloading.
 
-Several browsers impose a limit of 64K to the amount of data that can be sent with `sendBeacon` at one time. If the browser rejects the event because the payload is too large, the Web SDK falls back to using its normal transport method.
+Several browsers impose a limit of 64 KB to the amount of data that can be sent with `sendBeacon` at one time. If the browser rejects the event because the payload is too large, the Web SDK falls back to using its normal transport method.
 
 ## Document unloading using the Web SDK tag extension
 

@@ -28,7 +28,7 @@ As a result, the script creates two instances of the SDK. The global function fo
 
 By creating two separate instances, each can be configured for a different property. Any communication or data persistence that occurs due to interacting with `titanium` is kept isolated from `copper`.
 
-Following the above example, you can execute commands using each of the instances, as follows:
+Following the above example, you can execute commands using each instance:
 
 ```javascript
 titanium("configure", {

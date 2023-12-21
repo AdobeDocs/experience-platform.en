@@ -4,13 +4,13 @@ description: Include decision scopes used in offer decisioning.
 ---
 # `decisionScopes`
 
-The `decisionScopes` property allows you to deliver and render personalized offers that are managed in Offer Decisioning. It is a core part of providing ability to render offer-based content on your site.
+The `decisionScopes` property allows you to deliver and render personalized offers that are managed in Offer Decisioning. It is a core part of rendering offer-based content on your site.
 
 This property accepts Base64 decision scopes. You can include multiple decision scopes in a `sendEvent` call.
 
 >[!IMPORTANT]
 >
->You must enable **[!UICONTROL Offer Decisioning]** in datastream settings before using this variable. The [!UICONTROL Offer Decisioning] checkbox is in the configuration settings of the Adobe Experience Platform service in a given datastream.
+>Enable **[!UICONTROL Offer Decisioning]** in datastream settings before using this variable. The [!UICONTROL Offer Decisioning] checkbox is in the configuration settings of the Adobe Experience Platform service in a given datastream.
 
 ## Decision scopes using the Web SDK tag extension
 

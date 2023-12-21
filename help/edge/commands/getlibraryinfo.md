@@ -4,13 +4,13 @@ description: Retrieve information around the current Web SDK library version.
 ---
 # `getLibraryInfo`
 
-The `getLibraryInfo` command provides you with information around the version of the Web SDK library currently used. You can use this command to keep track of which versions of the Web SDK that you deploy to different web properties.
+The `getLibraryInfo` command provides you with information around the version of the Web SDK library currently used. You can use this command to track which versions of the Web SDK that you deploy to different web properties.
 
 ## Library info using the Web SDK tag extension
 
 The tag extension does not provide an interface to send this command. Use the custom code editor, following JavaScript library syntax.
 
-If you run this command using the tag extension, both the tag extension version and library version are included, concatentated with a `+` symbol. The Web SDK library version is listed first, followed by the tag extension version.
+If you run this command using the tag extension, both the tag extension version and library version are included, concatenatated with a `+` symbol. The Web SDK library version is listed first, followed by the tag extension version.
 
 ## Library info using the Web SDK JavaScript library
 

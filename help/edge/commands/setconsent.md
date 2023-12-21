@@ -16,7 +16,7 @@ The Web SDK supports following standards:
 
 After using this command, the Web SDK writes the user's preferences to a cookie. The next time the user loads your website in the browser, the SDK retrieves these persisted preferences to determine if events can be sent to Adobe.
 
-You will want to store any consent dialog preferences separately from Web SDK consent. The Web SDK does not offer a way to retrieve consent. To make sure that the user preferences stay in sync with the SDK, you can call the `setConsent` command on every page load. The SDK only makes a server call if the preferences change.
+Adobe recommends that you store any consent dialog preferences separately from Web SDK consent. The Web SDK does not offer a way to retrieve consent. To make sure that the user preferences stay in sync with the SDK, you can call the `setConsent` command on every page load. The Web SDK only makes a server call when consent changes.
 
 ## Set consent using the Web SDK tag extension
 
@@ -37,7 +37,7 @@ You can include multiple consent objects within this action.
 
 Run the `setConsent` command when calling your configured instance of the Web SDK. You can include the following objects in this command:
 
-* **`consent[]`**: An array of `consent` objects. The consent object is formatted different depending on the standard and version that you choose.
+* **`consent[]`**: An array of `consent` objects. The consent object is formatted differently depending on the standard and version that you choose.
 * **`identityMap`**: An object that controls how an ECID is generated and which IDs consent information is tied to. Adobe recommends including this object when `setConsent` is run before other commands, such as [`sendEvent`](sendevent/overview.md).
 * **`edgeConfigOverrides`**: An object that contains [override settings](command-overrides.md).
 

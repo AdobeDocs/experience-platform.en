@@ -4,7 +4,7 @@ description: Render different content to different users, creating a personalize
 ---
 # `personalization`
 
-The `personalization` object contains several properties that allows you to tailor your user experience depending on the user. It is especially value in Adobe Target or Adobe Journey Optimizer implementations, as it is the driving force that allows you to customize displayed content per user.
+The `personalization` object contains several properties that allow you to tailor your user experience depending on the user. It is especially valuable in Adobe Target or Adobe Journey Optimizer implementations, as it is the driving force that allows you to customize displayed content per user.
 
 See [Render personalized content](../../personalization/rendering-personalization-content.md) for more information.
 

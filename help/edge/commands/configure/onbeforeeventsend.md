@@ -26,7 +26,7 @@ Within the code editor, you can add, edit, or remove elements within the `conten
 
 >[!TIP]
 >
->The objects `content.xdm` and `content.data` are guaranteed to be defined, so you do not need to check if they exist. Some variables within these objects depend on your implementation and data layer. Adobe recommends checking for undefined values within these objects to prevent JavaScript errors.
+>The objects `content.xdm` and `content.data` are always defined in this context, so you do not need to check if they exist. Some variables within these objects depend on your implementation and data layer. Adobe recommends checking for undefined values within these objects to prevent JavaScript errors.
 
 For example, if you wanted to:
 
@@ -69,7 +69,7 @@ if (myBotDetector.isABot()) {
 
 ## On before event send callback using the Web SDK JavaScript library
 
-Register the `onBeforeEventSend` callback when running the `configure` command. You can change the `content` variable name to any value that you would like by changing the parameter variable inside of the inline function.
+Register the `onBeforeEventSend` callback when running the `configure` command. You can change the `content` variable name to any value that you would like by changing the parameter variable inside the inline function.
 
 ```js
 alloy("configure", {
