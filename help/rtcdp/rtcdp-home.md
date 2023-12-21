@@ -68,7 +68,7 @@ I want to collect data
     </div>
     </td>
     <td>
-    <a href="/help/landing/end-to-end-tutorial.md"><img src="assets/do-not-localize/start-use-cases.jpeg"></a>
+    <a href="/help/rtcdp/use-case-guides/overview.md"><img src="assets/do-not-localize/start-use-cases.jpeg"></a>
     <div><strong>Suggested Real-Time CDP Use cases</strong><br/>Explore the many ways in which Real-Time CDP can help you acquire new customers, enrich your profile and more.
     </div>
     </td>
@@ -84,7 +84,7 @@ I want to collect data
 
 ## Explore the documentation
 
-Learn how Adobe Real-Time CDP can help you achieve your use cases. 
+Dive deep into the product documentation to understand how Adobe Real-Time CDP can help you achieve your use cases. 
 
 <table style="table-layout:auto">
   <tr style="border: 0;">
