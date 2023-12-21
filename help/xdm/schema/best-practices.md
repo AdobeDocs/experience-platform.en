@@ -190,7 +190,7 @@ The category that an entity has been sorted under should determine the XDM class
 
 The sections below provide general guidance on constructing schemas based on your ERD.
 
-### Adopt an iterative modeling approach {##iterative-modeling}
+### Adopt an iterative modeling approach {#iterative-modeling}
 
 The [rules of schema evolution](./composition.md#evolution) dictate that only non-destructive changes can be made to schemas once they have been implemented. In other words, once you add a field to a schema and data has been ingested against that field, the field can no longer be removed. It is therefore essential to adopt an iterative modeling approach when you are first creating your schemas, starting with a simplified implementation which progressively gains complexity over time.
 
