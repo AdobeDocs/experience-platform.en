@@ -12,7 +12,7 @@ If you want to locate a datastream ID:
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]**.
 1. Use the search field to locate the desired datastream, then click **[!UICONTROL Copy]** ![Copy](../../assets/copy.png) next to the datastream ID.
 
-You can also click on the desired datastream name, and the datastream ID appears in the right column for you to copy.
+You can also click the desired datastream name, and the datastream ID appears in the right column for you to copy.
 
 ## Datastream ID using the Web SDK tag extension
 

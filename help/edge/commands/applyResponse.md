@@ -19,9 +19,9 @@ Applying responses is performed as an action within a rule in the Adobe Experien
 1. Set the desired fields on the right.
 1. Click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
 
-## Apply propositions using the Web SDK JavaScript library
+## Apply response using the Web SDK JavaScript library
 
-Run the `applyPropositions` command when calling your configured instance of the Web SDK. The object containing configuration options supports the following fields:
+Run the `applyResponse` command when calling your configured instance of the Web SDK. The object containing configuration options supports the following fields:
 
 * **`renderDecisions`**: A boolean that forces the Web SDK to render any personalized content that is eligible for automatic rendering. Identical to [`renderDecisions`](sendevent/renderdecisions.md) in the [`sendEvent`](sendevent/overview.md) command.
 * **`responseHeaders`**: A map of string header names to string header values.

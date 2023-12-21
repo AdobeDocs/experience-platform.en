@@ -8,11 +8,11 @@ The `defaultConsent` property determines how you handle data collection consent 
 
 This property allows three values:
 
-* **In**: Data collection proceeds as normal until the user opts out.
+* **In**: Data collection proceeds as normal, until the user opts out.
 * **Out**: Data is permanently discarded until the user opts in.
 * **Pending**: Data is stored locally until the user opts in using the [`setConsent`](../setconsent.md) command. Data does not persist between page loads.
 
-If you have a customer that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to `in`, but inside the jurisdiction of GDPR, the default consent could be set to `pending`. Your Consent Management Platform (CMP) can detect the customer's region and provide the flag `gdprApplies` to IAB TCF 2.0. This flag can be used to set the default consent.
+If you have a visitor that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to `in`. Visitors inside the jurisdiction of GDPR could have their default consent set to `pending`. Your Consent Management Platform (CMP) can detect the customer's region and provide the flag `gdprApplies` to IAB TCF 2.0. This flag can be used to set the default consent.
 
 ## Set default consent using the Web SDK tag extension
 

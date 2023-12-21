@@ -35,7 +35,7 @@ default-src 'nonce-SERVER-GENERATED-NONCE'
 
 In addition the CSP nonce needs to be added as an attribute to the [!DNL Platform Web SDK] [base code](installing-the-sdk.md#adding-the-code) script tag. [!DNL Platform Web SDK] will then use that nonce when adding inline script or style tags to the page:
 
-```
+```html
 <script nonce="SERVER-GENERATED-NONCE">
   !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
   []).push(o),n[o]=function(){var u=arguments;return new Promise(
