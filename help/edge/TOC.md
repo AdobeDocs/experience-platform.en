@@ -94,7 +94,7 @@ feature: Web SDK
   * [Collect commerce data](use-cases/collect-commerce-data.md)
   * [Configuring a CSP](use-cases/configuring-a-csp.md)
   * [Debugging methods](use-cases/debugging.md)
-  * [Multiple Web SDK instances](use-cases/custom-instance.md)
+  * [Multiple Web SDK instances](use-cases/multiple-instances.md)
   * [Top and bottom page events](use-cases/top-bottom-page-events.md)
 
 * [Frequently Asked Questions](faq.md)

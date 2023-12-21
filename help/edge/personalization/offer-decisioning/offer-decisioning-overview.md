@@ -62,9 +62,9 @@ To enable Offer Decisioning, perform the following steps:
 1. Follow the instructions to [install the SDK](/help/edge/install/overview.md) (The SDK can be installed standalone or through the UI. See the [tags quick start guide](../../../tags/quick-start/quick-start.md)) for more information.
 1. Configure the SDK for Offer Decisioning using [`decisionScopes`](/help/edge/commands/sendevent/decisionscopes.md). Additional Offer Decisioning specific steps are provided below.
 
-  * Install the standalone SDK
+   * Install the standalone SDK
 
-    1. Configure the "sendEvent" action with your `decisionScopes`
+     1. Configure the "sendEvent" action with your `decisionScopes`
 
       ```javascript
       alloy("sendEvent", {
@@ -76,29 +76,29 @@ To enable Offer Decisioning, perform the following steps:
       });
       ```
 
-  * Install the SDK through tags
+   * Install the SDK through tags
 
-    1. [Create a tag property](../../../tags/ui/administration/companies-and-properties.md)
-    1. [Add the embed code](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-    1. Install and configure the Platform Web SDK extension with the Datastream you created by selecting the configuration from the "Datastream" dropdown. See the documentation on [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
+     1. [Create a tag property](../../../tags/ui/administration/companies-and-properties.md)
+     1. [Add the embed code](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+     1. Install and configure the Platform Web SDK extension with the Datastream you created by selecting the configuration from the "Datastream" dropdown. See the documentation on [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
 
-      ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
+        ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
       
-      ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
+        ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
       
-    1. Create the necessary [Data Elements](../../../tags/ui/managing-resources/data-elements.md). At the bare minimum, you must create a Platform Web SDK Identity Map and a Platform Web SDK XDM Object data element.
+     1. Create the necessary [Data Elements](../../../tags/ui/managing-resources/data-elements.md). At the bare minimum, you must create a Platform Web SDK Identity Map and a Platform Web SDK XDM Object data element.
 
-      ![identity-map-data-element](./assets/identity-map-data-element.png)
+        ![identity-map-data-element](./assets/identity-map-data-element.png)
       
-      ![xdm-object-data-element](./assets/xdm-object-data-element.png)
+        ![xdm-object-data-element](./assets/xdm-object-data-element.png)
       
-    1. Create your [Rules](../../../tags/ui/managing-resources/rules.md).
+     1. Create your [Rules](../../../tags/ui/managing-resources/rules.md).
 
-      * Add a Platform Web SDK Send Event action and add the relevant `decisionScopes` to that action's configuration
+        * Add a Platform Web SDK Send Event action and add the relevant `decisionScopes` to that action's configuration
 
-      ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
+        ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
       
-    1. [Create and publish a library](../../../tags/ui/publishing/libraries.md) containing all the relevant Rules, Data Elements, and Extensions you have configured
+     1. [Create and publish a library](../../../tags/ui/publishing/libraries.md) containing all the relevant Rules, Data Elements, and Extensions you have configured
 
 ## Sample requests and responses
 
