@@ -9,13 +9,13 @@ exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 
 [!DNL Experience Data Model] (XDM) is the core framework that standardizes customer experience data by providing common structures and definitions for use in downstream Adobe Experience Platform services. By adhering to XDM standards, all customer experience data can be incorporated into a common representation and used to gain valuable insights from customer actions, define customer audiences, and express customer attributes for personalization purposes.
 
-Since XDM is extremely versatile and customizable by design, it is therefore important to follow best practices for data modeling when designing your schemas. This document covers the key decisions and considerations that you must make when mapping your customer experience data to XDM.
+Since XDM is extremely versatile and customizable by design, it is important to follow best practices for data modeling when designing your schemas. This document covers the key decisions and considerations that you must make when mapping your customer experience data to XDM.
 
 ## Getting started
 
 Before reading this guide, review the [XDM System overview](../home.md) for a high-level introduction to XDM and its role within Experience Platform.
 
-Also, this guide focuses exclusively on key considerations regarding schema design. It is therefore strongly recommended that you refer to the [basics of schema composition](./composition.md) for detailed explanations of the individual schema elements mentioned throughout this guide.
+As this guide focuses exclusively on key considerations regarding schema design, you are strongly recommended to read the [basics of schema composition](./composition.md) for detailed explanations of the individual schema elements mentioned throughout this guide.
 
 ## Best practices summary {#summary}
 
@@ -49,11 +49,11 @@ Once you have created an ERD to identify the essential entities you would like t
 
 {style="table-layout:auto"}
 
-### Considerations for entity sorting
+### Considerations for entity sorting {#considerations}
 
 The sections below provide further guidance for how to sort your entities into the above categories.
 
-#### Mutable and immutable data
+#### Mutable and immutable data {#mutable-and-immutable-data}
 
 A primary way of sorting between entity categories is whether the data being captured is mutable or not.
 
@@ -63,7 +63,7 @@ By contrast, event data is typically immutable. Since events are attached to a s
 
 To summarize, profiles and lookup entities contain mutable attributes and represent the most current information about the subjects they capture, while events are immutable records of the system at a specific time.
 
-#### Customer attributes
+#### Customer attributes {#customer-attributes}
 
 If an entity contains any attributes related to an individual customer, it is most likely a profile entity. Examples of customer attributes include:
 
@@ -71,7 +71,7 @@ If an entity contains any attributes related to an individual customer, it is mo
 * Location information such as addresses and GPS information.
 * Contact information such as phone numbers and email addresses.
 
-#### Tracking data over time
+#### Tracking data over time {#track-data}
 
 If you want to analyze how certain attributes within an entity change over time, it is most likely an event entity. For example, adding product items to a cart can be tracked as add-to-cart events in [!DNL Platform]:
 
@@ -84,7 +84,7 @@ If you want to analyze how certain attributes within an entity change over time,
 
 {style="table-layout:auto"}
 
-#### Segmentation use cases
+#### Segmentation use cases {#segmentation-use-cases}
 
 When categorizing your entities, it is important to think about the audiences you may want to build to address your particular business use cases.
 
@@ -93,13 +93,13 @@ For example, a company wants to know all of the "Gold" or "Platinum" members of 
 * "Gold" and "Platinum" represent loyalty statuses applicable to an individual customer. Since the segmentation logic is only concerned with the current loyalty status of customers, this data can be modeled as part of a profile schema. If you wished to track changes in loyalty status over time, you could also create an additional event schema for loyalty status changes.
 * Purchases are events which occur at a particular time, and the segmentation logic is concerned with purchase events within a specified time window. This data should therefore be modeled as an event schema.
 
-#### Activation use cases
+#### Activation use cases {#activation-use-cases}
 
 In addition to considerations regarding segmentation use cases, you should also review the activation use cases for those audiences to identify additional relevant attributes.
 
 For example, a company has built an audience based on the rule that `country = US`. Then, when activating that audience to certain downstream targets, the company wants to filter all exported profiles based on home state. Therefore, a `state` attribute should also be captured in the applicable profile entity.
 
-#### Aggregated values
+#### Aggregated values {#aggregated-values}
 
 Based on the use case and granularity of your data, you should decide whether certain values need to be pre-aggregated before being included in a profile or event entity.
 
@@ -170,7 +170,7 @@ The second approach would be to use event schemas to represent subscriptions. Th
 * Segmentation becomes more complex for the original intended use case (identifying the status of customers' most recent subscriptions). The audience now needs additional logic to flag the last subscription event for a customer to check its status.
 * Events have a higher risk of automatically expiring and being purged from the Profile store. See the guide on [Experience Event expirations](../../profile/event-expirations.md) for more information.
 
-## Create schemas based on your categorized entities
+## Create schemas based on your categorized entities {#schemas-for-categorized-entities}
 
 Once you have sorted your entities into profile, lookup, and event categories, you can start converting your data model into XDM schemas. For demonstration purposes, the example data model shown earlier has been sorted into appropriate categories in the following diagram:
 
@@ -190,19 +190,19 @@ The category that an entity has been sorted under should determine the XDM class
 
 The sections below provide general guidance on constructing schemas based on your ERD.
 
-### Adopt an iterative modeling approach
+### Adopt an iterative modeling approach {##iterative-modeling}
 
 The [rules of schema evolution](./composition.md#evolution) dictate that only non-destructive changes can be made to schemas once they have been implemented. In other words, once you add a field to a schema and data has been ingested against that field, the field can no longer be removed. It is therefore essential to adopt an iterative modeling approach when you are first creating your schemas, starting with a simplified implementation which progressively gains complexity over time.
 
 If you are not sure whether a particular field is necessary to include in a schema, the best practice is to leave it out. If it is later determined that the field is necessary, it can always be added in the next iteration of the schema.
 
-### Identity fields
+### Identity fields {#identity-fields}
 
 In Experience Platform, XDM fields marked as identities are used to stitch together information about individual customers coming from multiple data sources. Although a schema can have multiple fields marked as identities, a single primary identity must be defined for the schema to be enabled for use in [!DNL Real-Time Customer Profile]. See the section on [identity fields](./composition.md#identity) in the basics of schema composition for more detailed information on the use case of these fields.
 
 When designing your schemas, any primary keys in your relational database tables are likely candidates for primary identities. Other examples of applicable identity fields are customer email addresses, phone numbers, account IDs, and [ECID](../../identity-service/ecid.md).
 
-### Adobe application schema field groups
+### Adobe application schema field groups {#adobe-application-schema-field-groups}
 
 Experience Platform provides several out-of-the-box XDM schema field groups for capturing data related to the following Adobe applications:
 
