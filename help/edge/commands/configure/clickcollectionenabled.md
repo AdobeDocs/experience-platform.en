@@ -16,7 +16,7 @@ If not disabled, the following XDM elements automatically populate with data:
 
 The Web SDK tracks all clicks on `<a>` and `<area>` HTML elements if it doesn't have an `onClick` attribute. Clicks are captured with a [capture](https://www.w3.org/TR/uievents/#capture-phase) click event listener that is attached to the document. When a valid link is clicked, the following logic is run in order:
 
-1. If the link matches criteria based on values in [`downloadLinkQualifier`](downloadlinkqualifier.md), or if the link contains a `download` HTML attribute, `xdm.web.webInteraction.type` is set to `"download"`.
+1. If the link matches criteria based on values in [`downloadLinkQualifier`](downloadlinkqualifier-russ.md), or if the link contains a `download` HTML attribute, `xdm.web.webInteraction.type` is set to `"download"`.
 1. If the link target domain differs from the current `window.location.hostname`, `xdm.web.webInteraction.type` is set to `"exit"`.
 1. If the link doesn't qualify for either `"download"` or `"exit"`, `xdm.web.webInteraction.type` is set to `"other"`.
 
