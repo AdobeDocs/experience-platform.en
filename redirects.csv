@@ -1,4 +1,9 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-attributes/overview.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-datasets/overview.html
+https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-attributes/seamless-sql-flow.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-datasets/seamless-sql-flow.html
+https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-attributes/decile-based-derived-attributes.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-datasets/decile-based-derived-attributes.html?lang=en
+https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/query-accelerated-store/reporting-insights-data-model.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/customizable-insights/reporting-insights-data-model.html
+https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/query-accelerated-store/send-accelerated-queries.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/customizable-insights/send-accelerated-queries.html
 https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-statistics.html,https://experienceleague.adobe.com/docs/experience-platform/query/key-concepts/dataset-statistics.html
 https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html,https://experienceleague.adobe.com/docs/experience-platform/query/key-concepts/dataset-samples.html
 https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/deduplication.html,https://experienceleague.adobe.com/docs/experience-platform/query/key-concepts/deduplication.html

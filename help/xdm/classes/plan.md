@@ -1,6 +1,6 @@
 ---
 title: Plan Class
-description: This document provides an overview of the Plan class in Experience Data Model (XDM).
+description: Learn about the Plan class in Experience Data Model (XDM).
 exl-id: ccff962d-3104-482c-8d65-d2bd2602a9be
 ---
 # [!UICONTROL Plan] class

@@ -1,6 +1,6 @@
 ---
 title: Balance Transfers Schema Field Group
-description: This document provides an overview of the Balance Transfers schema field group.
+description: Learn about the Balance Transfers schema field group.
 exl-id: be0d2ed6-6547-432a-af2f-409c33e268d4
 ---
 # [!UICONTROL Balance Transfers] schema field group

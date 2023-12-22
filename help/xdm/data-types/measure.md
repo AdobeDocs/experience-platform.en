@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;measure;datatype;data-type;data type;
 solution: Experience Platform
 title: Measure Data Type
-description: This document provides an overview of the Measure Experience Data Model (XDM) data type.
+description: Learn about the Measure Experience Data Model (XDM) data type.
 exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
 ---
 # [!UICONTROL Measure] data type
