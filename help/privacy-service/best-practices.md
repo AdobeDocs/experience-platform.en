@@ -16,7 +16,7 @@ This guide requires a working understanding of [Privacy Service](./home.md) and 
 
 Access to Adobe Experience Platform Privacy Service is controlled through granular role-based permissions in Adobe Admin Console. You need the relevant permissions in a product profile to use specific features in the Privacy Service UI and API. Contact your system administrator if you require additional permissions. 
 
-Administrators can refer to the guide on [managing permissions for Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/permissions.html) for more information. 
+Administrators can refer to the guide on [managing permissions for Privacy Service](./permissions.md) for more information. 
 
 ## Privacy job creation guidelines {#creation-guidelines}
 
@@ -29,7 +29,7 @@ To streamline your request processing and improve response times, consider the f
 
 ## Monitor privacy jobs status {#monitor-status}
 
-To effectively monitor privacy jobs and check their status, Privacy Service provides three methods. The available methods are listed below in order of monitoring efficiency and productivity. Each method includes best practice guidelines to improve your experience. They are then followed by an ideal scenario example that combines all the approaches.
+To effectively monitor privacy jobs and check their status, Privacy Service provides three methods. The available methods are listed below in order of monitoring efficiency and productivity. Each method includes best practice guidelines to improve your experience, followed by an ideal scenario example that combines all the approaches.
 
 ### Receive real-time notifications {#real-time-notifications}
 
@@ -37,22 +37,22 @@ To effectively monitor privacy jobs and check their status, Privacy Service prov
 
 **Recommendations:**
 
-- **Webhook setup:** Set up webhooks to receive PUSH notifications when status changes occur for submitted jobs. This aids in real-time monitoring.
+- **Webhook setup:** Set up webhooks to receive push notifications when status changes occur for submitted jobs. This aids in real-time monitoring.
 - **Notifications:** Use notifications at both the job and product level to help monitor the progress of requests.
 
-See the [Subscribe to Privacy Service events documentation](./privacy-events.md) for instructions on setting up an event registration for Privacy Service notifications, and how to interpret notification payloads.
+See the documentation on [subscribing to Privacy Service events](./privacy-events.md) for instructions on setting up an event registration for Privacy Service notifications and how to interpret notification payloads.
 
 ### Retrieve all jobs based on filters {#retrieve-filtered-responses-for-all-jobs}
 
 To retrieve all your privacy job data based on any specified filters, **perform a GET request to the `/jobs` endpoint**. This API call is useful to provide a high-level view of the current job status for large sets of job IDs with only a single request. It does lack detailed product responses, but they can be found using the [`/jobs/{jobID}` endpoint](#retrieve-detailed-responses-for-specific-jobs).
 
-A GET request to the `/jobs` endpoint is best used to gather or compare the status data of a large set of job IDs. It is **not** meant for regular polling type activities.
+A GET request to the `/jobs` endpoint is best used to gather or compare the status data of a large set of job IDs but is **not** meant for regular polling type activities.
 
 **Recommendations:**
 
 - **Query parameters:** Use specific filters to narrow your results, for example: data ranges, regulation types, and status (processing, complete, and so on).
 
-You can view a list of all the current privacy jobs in your organization through the Privacy Service UI. See the [managing privacy jobs in the UI documentation](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html#job-requests) for information on how to filter the job request list. Alternatively, see the documentation on the [use of the /job endpoint in the Privacy Service API](./api/privacy-jobs.md).
+You can view a list of all the current privacy jobs in your organization through the Privacy Service UI. See the [managing privacy jobs in the UI documentation](./ui/user-guide.md#job-requests) for information on how to filter the job request list. Alternatively, see the documentation on the [use of the /job endpoint in the Privacy Service API](./api/privacy-jobs.md).
 
 The Privacy Service API documentation contains details on [the available query parameter filters](https://developer.adobe.com/experience-platform-apis/references/privacy-service/#tag/Privacy-jobs/operation/listPrivacyJobs).
 
@@ -75,12 +75,12 @@ When data-subject information is requested, each service returns data in a forma
 The following are key items of note relating to the management of the data archive:
 
 - All archive files are deleted from Experience Platform servers after 30 days. You cannot query customer data that is older than 30 days.
-- The structure of the archive file includes folders for each product included in the request and the data files contained therein. Archive files or folders may be empty if no data was found for the specified ID
+- The structure of the archive file includes folders for each product included in the request and the data files contained therein. Archive files or folders may be empty if no data was found for the specified ID.
 - The data for previously created jobs is only accessible for 30 days after the completion date. After that time, the data is removed from the system, and a new request must be made.
 
 **Recommendations:**
 
-- **Protect Data Archives:** Both the URL and .ZIP file should be protected, as they may contain PII for the data subject.
+- **Protect Data Archives:** Both the URL and .ZIP file should be protected, as they may contain personally identifiable information (PII) for the data subject.
 
 ## Technical considerations {#technical-considerations}
 
@@ -89,7 +89,7 @@ There are certain technical considerations to be aware of when completing Privac
 - **Data Retention Period:** The maximum look-back period is 60 days for any group of jobs, and the max time span for a query is 30 days (the from/to dates).
 - **Gateway timeout:** Be mindful that your request may be dropped from the gateway if it exceeds 60 seconds.
 - **Error Handling:** Review error messages thoroughly and resubmit requests where appropriate. Privacy Service does not automatically reprocess jobs following an error.
-- **Understanding 429 Errors:** Familiarize yourself with 429 error messages and the necessary steps to mitigate issues. 429 errors are the result of 'Too Many Requests'. See the [Common error messages](./troubleshooting-guide.md#common-error-messages) section of the troubleshooting guide for more information on how to resolve the issue.
+- **Understanding HTTP 429 Errors:** Familiarize yourself with HTTP 429 error messages and the necessary steps to mitigate issues. HTTP 429 errors are the result of 'Too Many Requests'. See the [Common error messages](./troubleshooting-guide.md#common-error-messages) section of the troubleshooting guide for more information on how to resolve the issue.
 
 ## Next steps
 
