@@ -42,5 +42,5 @@ The following is a list of documentation for sever-side event forwarding extensi
 * [Snowflake](./snowflake/overview.md)
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Twitter]](./twitter/overview.md)
-* [[!DNL Tiktok] Web Events API](https://exchange.adobe.com/apps/ec/109834)*
+* [[!DNL Tiktok] Web Events API](./tiktok/overview.md)
 * [[!DNL Zendesk] Events API](./zendesk/overview.md)

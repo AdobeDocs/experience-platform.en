@@ -43,6 +43,10 @@ Field groups are reuseable components which define one or more fields that repre
 
 Data types are used as reference-type fields in classes or field groups in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to field groups in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas field groups can only be added at the root level. See the [data types endpoint guide](./data-types.md) for more information on working with data types in the API.
 
+>[!NOTE]
+>
+>If a field is defined as a specific data type, you cannot create the same field with a different datatype in another schema. This constraint applies across your organization's tenant.
+
 ## Descriptors
 
 Descriptors are sets of metadata that are assigned to specific fields within a schema, providing various contextual details including how those fields (and the schema itself) are related to other schemas. Each schema can have one or more descriptor entities applied to it, and there are several different descriptor types to serve different purposes. See the [descriptors endpoint guide](./descriptors.md) for more information on working with descriptors in the API, and an overview of the different descriptor types and their use cases.

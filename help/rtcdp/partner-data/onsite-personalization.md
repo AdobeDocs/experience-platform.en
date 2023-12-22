@@ -1,6 +1,7 @@
 ---
 title: Personalize onsite experiences for unknown visitors using partner-aided visitor recognition
 description: Learn how to use partner-aided visitor recognition to deliver personalized onsite experiences to your visitors.
+feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
 ---
 # Personalize onsite experiences for unknown visitors using partner-aided visitor recognition
@@ -32,7 +33,7 @@ This brand chooses to leverage partner recognition technology to probabilistical
 When planning to use partner-provided attributes to deliver personalized experiences to your authenticated and unauthenticated visitors, consider the following prerequisites in your planning process:
 
 * What inputs are expected by your partner's recognition technology so they can layer on additional attributes?
-* To what extent are you comfortable delivering personalization in different channels and for different use cases based on probabilistically derived attributes, versus deterministically confirmed attributes?
+* To what extent are you comfortable delivering personalization in different channels and for different use cases based on probabilistically derived datasets, versus deterministically confirmed attributes?
 * How should the experience for a pre-authenticated but recognized visitor change when they authenticate?
 
 ### UI functionality, Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}

@@ -36,7 +36,7 @@ If you already have a valid [!DNL Blob] destination, you may skip the remainder 
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
@@ -117,7 +117,7 @@ When you are finished providing details for your destination connection, select 
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
-## (Beta) Export datasets {#export-datasets}
+## Export datasets {#export-datasets}
 
 This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
 

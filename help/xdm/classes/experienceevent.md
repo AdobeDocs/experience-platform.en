@@ -2,18 +2,18 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;event modeling;event modelling;best practices;event;events;
 solution: Experience Platform
 title: XDM ExperienceEvent Class
-description: This document provides an overview of the XDM ExperienceEvent class, and best practices for event data modeling.
+description: Learn about the XDM ExperienceEvent class, and best practices for event data modeling.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 ---
 # [!DNL XDM ExperienceEvent] class
 
-[!DNL XDM ExperienceEvent] is a standard Experience Data Model (XDM) class which allows you to create a timestamped snapshot of the system when a specific event occurs or a certain set of conditions have been reached.
+[!DNL XDM ExperienceEvent] is a standard Experience Data Model (XDM) class. Use this class to create a timestamped snapshot of the system when a specific event occurs or a certain set of conditions have been reached.
 
 An Experience Event is a fact record of what occurred, including the point in time and identity of the individual involved. Events can be either explicit (directly observable human actions) or implicit (raised without a direct human action) and are recorded without aggregation or interpretation. For more high-level information on the use of this class in the Platform ecosystem, refer to the [XDM overview](../home.md#data-behaviors).
 
-The [!DNL XDM ExperienceEvent] class itself provides several time-series-related fields to a schema. Two of these fields (`_id` and `timestamp`) are **required** for all schemas based on the class, while the rest are optional. The values of some of the fields are automatically populated when data is ingested.
+The [!DNL XDM ExperienceEvent] class itself provides several time-series-related fields to a schema. Two of these fields (`_id` and `timestamp`) are **required** for all schemas based on this class, while the rest are optional. The values of some of the fields are automatically populated when data is ingested.
 
-![The structure of XDM ExperienceEvent as it appears in the Platform UI](../images/classes/experienceevent/structure.png)
+![The structure of XDM ExperienceEvent as it appears in the Platform UI.](../images/classes/experienceevent/structure.png)
 
 | Property | Description |
 | --- | --- |
@@ -21,7 +21,7 @@ The [!DNL XDM ExperienceEvent] class itself provides several time-series-related
 | `eventMergeId` | If using the [Adobe Experience Platform Web SDK](../../edge/home.md) to ingest data, this represents the ID of the ingested batch that caused the record to be created. This field is automatically populated by the system upon data ingestion. The use of this field outside of the context of a Web SDK implementation is not supported. |
 | `eventType` | A string that indicates the type or category for the event. This field can be used if you want to distinguish different event types within the same schema and dataset, such as distinguishing a product view event from an add-to-shopping-cart event for a retail company.<br><br>Standard values for this property are provided in the [appendix section](#eventType), including descriptions of their intended use case. This field is an extensible enum, meaning that you can also use your own event type strings to categorize the events you are tracking.<br><br>`eventType` limits you to using only a single event per hit on your application, and therefore you must use calculated fields to let the system know which event is most important. For more information, see the section on [best practices for calculated fields](#calculated). |
 | `producedBy` | A string value that describes the producer or origin of the event. This field can be used to filter out certain event producers if needed for segmentation purposes.<br><br>Some suggested values for this property are provided in the [appendix section](#producedBy). This field is an extensible enum, meaning that you can also use your own strings to represent different event producers. |
-| `identityMap` | A map field that contains a set of namespaced identities for the individual that the event applies to. This field is automatically updated by the system as identity data is ingested. In order to properly utilize this field for [Real-Time Customer Profile](../../profile/home.md), do not attempt to manually update the field's contents in your data operations.<br /><br />See the section on identity maps in the [basics of schema composition](../schema/composition.md#identityMap) for more information on their use case. |
+| `identityMap` | A map field that contains a set of namespaced identities for the individual that the event applies to. This field is automatically updated by the system as identity data is ingested. To properly utilize this field for [Real-Time Customer Profile](../../profile/home.md), do not attempt to manually update the field's contents in your data operations.<br /><br />See the section on identity maps in the [basics of schema composition](../schema/composition.md#identityMap) for more information on their use case. |
 | `timestamp`<br>**(Required)** | An ISO 8601 timestamp of when the event occurred, formatted as per [RFC 3339 Section 5.6](https://datatracker.ietf.org/doc/html/rfc3339). This timestamp must occur in the past. See the section below on [timestamps](#timestamps) for best practices on the use of this field. |
 
 {style="table-layout:auto"}
@@ -44,7 +44,7 @@ By keeping the class-level timestamp separate from other related datetime values
 
 Certain interactions in your experience applications can result in multiple related events that technically share the same event timestamp, and can therefore be represented as a single event record. For example, if a customer views a product on your website, this can result in an event record that has two potential `eventType` values: a "product view" event (`commerce.productViews`) or a generic "page view" event (`web.webpagedetails.pageViews`). In these cases, you can use calculated fields to capture the most important attributes when multiple events are captured in a single hit.
 
-[Adobe Experience Platform Data Prep](../../data-prep/home.md) allows you to map, transform, and validate data to and from XDM. Using the available [mapping functions](../../data-prep/functions.md) provided by the service you can invoke logical operators to prioritize, transform, and/or consolidate data from multi-event records when being ingested into Experience Platform. In the example above, you could designate `eventType` as a calculated field that would prioritize a "product view" over a "page view" whenever they both occur.
+Use [Adobe Experience Platform Data Prep](../../data-prep/home.md) to map, transform, and validate data to and from XDM. Using the available [mapping functions](../../data-prep/functions.md) provided by the service you can invoke logical operators to prioritize, transform, and/or consolidate data from multi-event records when being ingested into Experience Platform. In the example above, you could designate `eventType` as a calculated field that would prioritize a "product view" over a "page view" whenever they both occur.
 
 If you are manually ingesting data into Platform via the UI, see the guide on [calculated fields](../../data-prep/ui/mapping.md#calculated-fields) for specific steps on how to create calculated fields.
 
@@ -72,6 +72,7 @@ Adobe provides several standard field groups for use with the [!DNL XDM Experien
 * [[!UICONTROL Flight Reservation]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL IAB TCF 2.0 Consent]](../field-groups/event/iab.md)
 * [[!UICONTROL Lodging Reservation]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL MediaAnalytics Interaction Details]](../field-groups/event/mediaanalytics-interaction.md)
 * [[!UICONTROL Quote Request Details]](../field-groups/event/quote-request-details.md)
 * [[!UICONTROL Reservation Details]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Web Details]](../field-groups/event/web-details.md)
@@ -133,7 +134,7 @@ The following table outlines the accepted values for `eventType`, along with the
 |`leadOperation.changeEngagementCampaignCadence` | This event tracks when there has been a change in how often a lead is engaged with as part of a campaign. |
 |`leadOperation.convertLead` | This event tracks when a lead was converted. |
 |`leadOperation.interestingMoment` | This event tracks when an interesting moment was recorded for a person. |
-|`leadOperation.mergeLeads` | This event tracks when information from multiple leads, that refer to the same entity, were consolidated. |
+|`leadOperation.mergeLeads` | This event tracks when information from multiple leads that refer to the same entity were consolidated. |
 |`leadOperation.newLead` | This event tracks when a lead was created. |
 |`leadOperation.scoreChanged` | This event tracks when the value of the lead's score attribute was changed. |
 |`leadOperation.statusInCampaignProgressionChanged` | This event tracks when a lead's status in a campaign has changed. |

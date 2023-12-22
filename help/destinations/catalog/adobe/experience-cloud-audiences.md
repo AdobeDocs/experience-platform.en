@@ -19,9 +19,9 @@ To send audiences to other Adobe solutions, use the direct connections from Real
 
 >[!IMPORTANT]
 >
->This destination replaces the [legacy audience sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) from Real-Time Customer Data Platform to various Experience Cloud solutions.
+>This destination replaces the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) from Real-Time Customer Data Platform to various Experience Cloud solutions.
 > 
->If you are already sharing audiences from Real-Time CDP to Audience Manager and other Experience Cloud solutions via the [legacy audience sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), you must contact Customer Care to disable the legacy integration before using this destination.
+>If you are already sharing audiences from Real-Time CDP to Audience Manager and other Experience Cloud solutions via the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), you must contact Customer Care to disable the legacy integration before using this destination.
 
 ![The Experience Cloud Audiences destination, highlighted in the destinations catalog.](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
 
@@ -39,9 +39,9 @@ In Audience Manager, you can use Real-Time CDP audiences for Data Management Pla
 
 ### Granular control of exported audiences {#segments-control}
 
-To select which audiences to export to Audience Manager and beyond, use the new self-service audience sharing integration via the Experience Cloud Audiences destination.  This allows you to determine which audiences you want to share with other Experience Cloud solutions and which audiences you want to keep in Real-Time CDP exclusively.
+To select which audiences to export to Audience Manager and beyond, use the new self-service audience-sharing integration via the Experience Cloud Audiences destination.  This allows you to determine which audiences you want to share with other Experience Cloud solutions and which audiences you want to keep in Real-Time CDP exclusively.
 
-The legacy audience sharing integration did not allow for a granular control of which audiences should be exported to Audience Manager and beyond.
+The legacy audience-sharing integration did not allow for a granular control of which audiences should be exported to Audience Manager and beyond.
 
 ### Share Real-Time CDP audiences with Adobe Analytics {#share-audiences-with-analytics}
 
@@ -72,9 +72,9 @@ However, Adobe strongly recommends using the following dedicated destination car
 > * You *do* need an Audience Manager license to share Real-Time CDP audiences with Adobe Analytics.
 > * You *do not need* an Audience Manager license to share Real-Time CDP audiences with Adobe Advertising Cloud, Adobe Target, Marketo, and other Experience Cloud solutions, mentioned in the [section above](#share-segments-with-other-solutions).
 
-### For customers who are using the legacy audience sharing solution
+### For customers who are using the legacy audience-sharing solution
 
-If you are already sharing audiences from Real-Time CDP to Audience Manager and other Experience Cloud solutions via the [legacy audience sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), you must contact Customer Care to disable the legacy integration.
+If you are already sharing audiences from Real-Time CDP to Audience Manager and other Experience Cloud solutions via the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), you must contact Customer Care to disable the legacy integration.
 
 The turnaround time to resolve the deprovisioning ticket is six business days or less. After the existing legacy integration has been disabled, you can proceed to [create a connection](#connect) via the self-service destination card. 
 
@@ -88,7 +88,7 @@ Note the following known limitations and important callouts while using the Expe
 
 * Currently, a single Experience Cloud Audiences destination is supported. Attempting to configure a second destination connection results in an error.
 * When connecting to the destination, you can see an option to [enable dataflow alerts](../../ui/alerts.md). Though visible in the UI, the **enable alerts option is not currently supported**.
-* **Audience backfill support**: The first export to Audience Manager or other Experience Cloud solutions includes a historical population of the audiences. Users of the [legacy audience sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) who are configuring this destination should expect a backfill difference of approximately six hours.
+* **Audience backfill support**: The first export to Audience Manager or other Experience Cloud solutions includes a historical population of the audiences. Users of the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) who are configuring this destination should expect a backfill difference of approximately six hours.
 
 ### Latency when activating audiences {#audience-activation-latency}
 

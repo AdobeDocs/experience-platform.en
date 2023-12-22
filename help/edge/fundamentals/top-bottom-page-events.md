@@ -1,8 +1,8 @@
 ---
 title: Using top and bottom of page events
 description: This article explains how to use top and bottom of page events in Web SDK.
+exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
 ---
-
 # Using top and bottom of page events in Web SDK
 
 When you want to deliver personalized experiences to your customers, a web page's loading time is essential.
@@ -26,7 +26,7 @@ By using top and bottom of page events in Web SDK, the marketing team can config
 
 ## Top of page event example {#top-of-page}
 
-The code sample below exemplifies a top of page event configuration which requests personalization but does not send display notifications for automatically rendered propositions. The display notifications will be sent as part of the bottom-of-page event.
+The code sample below exemplifies a top of page event configuration which requests personalization but does not [send display events](../personalization/display-events.md#send-sendEvent-calls) for automatically rendered propositions. The [display events](../personalization/display-events.md#send-sendEvent-calls) will be sent as part of the bottom-of-page event.
 
 >[!BEGINTABS]
 
@@ -46,7 +46,7 @@ alloy("sendEvent", {
 |---|---|---|
 |`type`|Required|Set this parameter to `decisioning.propositionFetch`. This special event type tells Adobe Analytics to drop this event. When using Customer Journey Analytics, you can also set up a filter to drop these events.|
 |`renderDecisions`|Required|Set this parameter to `true`. This parameter tells Web SDK to render decisions returned by the Edge Network.|
-|`personalization.sendDisplayEvent`|Required| Set this parameter to `false`. This stops display notifications from being sent.|
+|`personalization.sendDisplayEvent`|Required| Set this parameter to `false`. This stops display events from being sent.|
 
 >[!ENDTABS]
 
@@ -56,7 +56,7 @@ alloy("sendEvent", {
 
 >[!TAB Auto-rendered propositions]
 
-The code sample below exemplifies a bottom of page event configuration which sends display notifications for propositions which were automatically rendered on the page but for which display notifications were suppressed in [top of page](#top-of-page) event.
+The code sample below exemplifies a bottom of page event configuration which sends display events for propositions which were automatically rendered on the page but for which display events were suppressed in [top of page](#top-of-page) event.
 
 >[!NOTE]
 >
@@ -73,12 +73,12 @@ alloy("sendEvent", {
 
 |Paramter| Required/Optional |Description|
 |---|---|---|
-|`personalization.includeRenderedPropositions`|Required|Set this parameter to `true`. This enables the sending of display notifications which were suppressed in the top of page event.|
+|`personalization.includeRenderedPropositions`|Required|Set this parameter to `true`. This enables the sending of display events which were suppressed in the top of page event.|
 |`xdm`| Optional | Use this section to include all the data you need for the bottom of page event. |
 
 >[!TAB Manually rendered propositions]
 
-The code sample below exemplifies a bottom of page event configuration which sends display notifications for propositions which were manually rendered on the page (i.e. for custom decision scopes or surfaces).
+The code sample below exemplifies a bottom of page event configuration which sends display events for propositions which were manually rendered on the page (i.e. for custom decision scopes or surfaces).
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ alloy("sendEvent", {
 
 |Paramter| Required/Optional |Description|
 |---|---|---|
-|`xdm._experience.decisioning.propositions`| Required | This section defines the manually rendered propositions. You must include the proposition `ID`, `scope`, and `scopeDetails`. See the documentation on how to [manually render personalization](../personalization/rendering-personalization-content.md#manually) for more information on how to record display notifications for manually rendered content. Manually rendered personalization content must be included in the bottom of page hit. |
+|`xdm._experience.decisioning.propositions`| Required | This section defines the manually rendered propositions. You must include the proposition `ID`, `scope`, and `scopeDetails`. See the documentation on how to [manually render personalization](../personalization/rendering-personalization-content.md#manually) for more information on how to record display events for manually rendered content. Manually rendered personalization content must be included in the bottom of page hit. |
 |`xdm._experience.decisioning.propositionEventType`| Required | Set this parameter to `display: 1`. |
 |`xdm`| Optional | Use this section to include all the data you need for the bottom of page event. |
 
@@ -143,7 +143,7 @@ alloy("sendEvent", {
     }
 });
 
-// Bottom of page, send display notifications for the items that were rendered.
+// Bottom of page, send display events for the items that were rendered.
 // Note: You need to include the viewName in both top and bottom of page so that the
 // correct view is rendered at the top of the page, and the correct view is recorded
 // at the bottom of the page.
@@ -192,7 +192,7 @@ alloy("applyPropositions", {
     viewName: "cart"
 });
 
-// bottom of page, send display notifications for the items that were rendered.
+// bottom of page, send display events for the items that were rendered.
 // Note: You need to include the viewName in both top and bottom of page so that the
 // correct view is rendered at the top of the page, and the correct view is recorded
 // at the bottom of the page.
@@ -213,3 +213,6 @@ alloy("sendEvent", {
 
 >[!ENDTABS]
 
+## GitHub sample {#github-sample}
+
+The sample found at [this address](https://github.com/adobe/alloy-samples/tree/main/top-and-bottom) demonstrates how to use Experience Platform and Web SDK to request personalization at the top of the page, and send analytics metrics at the bottom. You can download the sample and run it locally to understand how top and bottom of page events work.

@@ -36,6 +36,7 @@ feature: Web SDK
     * [Automatically mapped variables](data-collection/adobe-analytics/automatically-mapped-vars.md)
     * [Sending data to Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * Personalization {#personalization}
+  * [Manage display events](personalization/display-events.md)
   * [Render personalized content](personalization/rendering-personalization-content.md)
   * [Personalization via hybrid implementation](personalization/hybrid-personalization.md)
   * [Manage flicker](personalization/manage-flicker.md)

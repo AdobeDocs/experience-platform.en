@@ -40,7 +40,7 @@ Attribute-based access control involves the following components:
 
 >[!IMPORTANT]
 >
->Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe Experience Cloud, instead of Product Profiles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
+>Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe Experience Cloud, instead of Roles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
 
 Permissions is the area of Experience Cloud where administrators can define user roles and access policies to manage access permissions for features and objects within a product application. 
 
@@ -56,7 +56,7 @@ The following sections provide information on how attribute-based access control
 
 ### Access control
 
-Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration. Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe Experience Cloud, instead of Product Profiles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
+Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) roles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration. Once your organization is enabled for attribute-based access control, you can start using Permissions on Adobe Experience Cloud, instead of Roles in the Adobe Admin Console, to manage permissions for users, functionality, labels, and other resources in your organization.
 
 There is limited availability to attribute-based access control for customers who purchase Healthcare and/or Privacy Shields. The features of this functionality include:
 
@@ -68,7 +68,7 @@ The administration workflows for all Experience Platform-powered applications fr
 
 >[!IMPORTANT]
 >
->Your product profiles are automatically migrated to the Permissions interface when your organization is enabled. The product profiles in Admin Console will remain as is for the time being. Please **do not** modify your product profiles after your organization has been enabled.
+>Your roles are automatically migrated to the Permissions interface when your organization is enabled. The roles in Admin Console will remain as is for the time being. Please **do not** modify your roles after your organization has been enabled.
 
 For more information on access control, see the [access control overview](../home.md).
 

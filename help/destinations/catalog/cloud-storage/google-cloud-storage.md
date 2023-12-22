@@ -17,7 +17,7 @@ Create a live outbound connection to [!DNL Google Cloud Storage] to periodically
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
@@ -113,7 +113,7 @@ In the **[!UICONTROL Scheduling]** step, you can [set up the export schedule](/h
 
 In the **[!UICONTROL Mapping]** step, you can select which attribute and identity fields to export for your profiles. You can also select to change the headers in the exported file to any friendly name that you wish. For more information, view the [mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate batch destinations UI tutorial.
 
-## (Beta) Export datasets {#export-datasets}
+## Export datasets {#export-datasets}
 
 This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
 
