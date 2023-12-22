@@ -19,9 +19,9 @@ Data Distiller enables data scientists and engineers to enrich their machine lea
 
 ![An infographic detailing the AI-ML feature pipeline.](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
-1. With Data Distiller's powerful query capabilities, you can extract meaningful features from the rich behavioral data available in the Experience Platform and bring the distilled feature data into your machine learning environment without the need to copy large volumes of event data outside of the Experience Platform.
-2. Read the prepared feature dataset into your preferred machine learning tools and combine with other features derived from enterprise data to train, experiment, tune, and deploy custom models tailored to your business.
-3. Generate scores, predictions, or recommendations from your models and return the output to the Experience Platform to optimize customer experiences through Real-Time Customer Data Platform and Adobe Journey Optimizer.
+- With Data Distiller's powerful query capabilities, you can extract meaningful features from the rich behavioral data available in the Experience Platform. You can then bring the distilled feature data into your machine learning environment without the need to copy large volumes of event data outside of the Experience Platform.
+- Read the prepared feature dataset into your preferred machine learning tools and combine with other features derived from enterprise data to train, experiment, tune, and deploy custom models tailored to your business.
+- Generate scores, predictions, or recommendations from your models and return the output to the Experience Platform to optimize customer experiences through Real-Time Customer Data Platform and Adobe Journey Optimizer.
 
 ## Prerequisites {#prerequisites}
 
@@ -35,12 +35,15 @@ This workflow requires a working understanding of the various aspects of Adobe E
 
 By reading this document, you have been introduced to the important concepts behind using your preferred machine learning tools to build custom models that support your marketing use cases. 
 
-The documents included in this series of guides, describe the basic steps for creating feature pipelines from Experience Platform to feed custom models in your machine learning environment. You are now ready to establish a connection between Data Distiller and your [!DNL Jupyter Notebook].
+The documents included in this series of guides, describe the basic steps for creating feature pipelines from Experience Platform to feed custom models in your machine learning environment. You are now ready to establish a connection between Data Distiller and your [!DNL Jupyter Notebook]. 
 
-- [Connect to Data Distiller from a [!DNL Python] notebook](./establish-connection.md)
-- [Explore and analyze datasets](./exploratory-analysis.md)
-- [Engineer features for machine learning](./feature-engineering.md)
-- [Export feature datasets](./export-data.md)
+- **Set up**: [Connect to Data Distiller from a [!DNL Python] notebook](./establish-connection.md)
+
+The documentation linked below corresponds with the steps indicated on the infographic above.
+
+- **Step 1**: [Explore and analyze datasets](./exploratory-analysis.md)
+- **Step 2**: [Engineer features for machine learning](./feature-engineering.md)
+- **Step 3**: [Export feature datasets](./export-data.md)
 
 ## Additional resources
 
