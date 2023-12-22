@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Create table as select
 solution: Experience Platform
 title: SQL Syntax in Query Service
-description: This document shows SQL syntax supported by Adobe Experience Platform Query Service.
+description: This document details and explains the SQL syntax supported by Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
 ---
 # SQL syntax in Query Service
 
-Adobe Experience Platform Query Service provides the ability to use standard ANSI SQL for `SELECT` statements and other limited commands. This document covers the SQL syntax supported by [!DNL Query Service].
+You can use standard ANSI SQL for `SELECT` statements and other limited commands in Adobe Experience Platform Query Service. This document covers the SQL syntax supported by [!DNL Query Service].
 
 ## SELECT queries {#select-queries}
 
@@ -29,7 +29,11 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-where `from_item` can be one of the following options:
+The tabs section below provides the available options for the FROM, GROUP, and WITH keywords.
+
+>[!BEGINTABS]
+
+>[!TAB `from_item`]
 
 ```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -47,7 +51,7 @@ with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
 from_item [ NATURAL ] join_type from_item [ ON join_condition | USING ( join_column [, ...] ) ]
 ```
 
-and `grouping_element` can be one of the following options:
+>[!TAB `grouping_element`]
 
 ```sql
 ( )
@@ -73,17 +77,19 @@ CUBE ( { expression | ( expression [, ...] ) } [, ...] )
 GROUPING SETS ( grouping_element [, ...] )
 ```
 
-and `with_query` is:
+>[!TAB `with_query`]
 
 ```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
 ```
 
-The following sub-sections provide details on additional clauses that you can use in your queries, provided they follow the format outlined above.
+>[!ENDTABS]
+
+The following subsections provide details on additional clauses that you can use in your queries, provided they follow the format outlined above.
 
 ### SNAPSHOT clause
 
-This clause can be used to incrementally read data on a table based on snapshot IDs. A snapshot ID is a checkpoint marker represented by a Long-type number that is applied to a data lake table every time data is written to it. The `SNAPSHOT` clause attaches itself to the table relation it is used next to.
+This clause can be used to incrementally read data on a table based on snapshot IDs. A snapshot ID is a checkpoint marker represented by a Long-type number that is applied to a data lake table every time data is written to it. The `SNAPSHOT` clause attaches itself to the table relation that it is used next to.
 
 ```sql
     [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
@@ -107,17 +113,17 @@ SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C
 SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
 ```
 
-Please note that a `SNAPSHOT` clause works with a table or table alias but not on top of a sub-query or view. A `SNAPSHOT` clause will work anywhere a `SELECT` query on a table can be applied.
+A `SNAPSHOT` clause works with a table or table alias but not on top of a subquery or view. A `SNAPSHOT` clause works anywhere a `SELECT` query on a table can be applied.
 
-Additionally, you can use `HEAD` and `TAIL` as special offset values for snapshot clauses. Using `HEAD` refers to an offset before the first snapshot, while `TAIL` refers to an offset after the last snapshot.
+Also, you can use `HEAD` and `TAIL` as special offset values for snapshot clauses. Using `HEAD` refers to an offset before the first snapshot, while `TAIL` refers to an offset after the last snapshot.
 
 >[!NOTE]
 >
->If you are querying between two snapshot IDs and the start snapshot is expired, the following two scenarios can occur, depending if the optional fallback behavior flag (`resolve_fallback_snapshot_on_failure`) is set:
+>If you are querying between two snapshot IDs, the following two scenarios can occur if the start snapshot is expired and the optional fallback behavior flag (`resolve_fallback_snapshot_on_failure`) is set:
 >
->- If the optional fallback behavior flag is set, Query Service will choose the earliest available snapshot, set it as the start snapshot, and return the data between the earliest available snapshot and the specified end snapshot. This data is **inclusive** of the earliest available snapshot.
+>- If the optional fallback behavior flag is set, Query Service chooses the earliest available snapshot, set it as the start snapshot, and return the data between the earliest available snapshot and the specified end snapshot. This data is **inclusive** of the earliest available snapshot.
 >
->- If the optional fallback behavior flag is not set, an error will be returned.
+>- If the optional fallback behavior flag is not set, an error is returned.
 
 ### WHERE clause
 
@@ -177,7 +183,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 | Parameters | Description |
 | ----- | ----- |
 | `schema` | The title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by the CTAS query. |
-| `rowvalidation` | (Optional) Specifies if the user wants row level validation of every new batches ingested for the newly created dataset. The default value is `true`. |
+| `rowvalidation` | (Optional) Specifies if the user wants row level validation of every new batch ingested for the newly created dataset. The default value is `true`. |
 | `label` | When you create a dataset with a CTAS query, use this label with the value of `profile` to label your dataset as enabled for profile. This means that your dataset automatically gets marked for profile as it gets created. See the derived attribute extension document for more information on the use of `label`. |
 | `select_query` | A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries). |
 
@@ -193,7 +199,7 @@ CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 
 >[!NOTE]
 >
->The `SELECT` statement must have an alias for the aggregate functions such as `COUNT`, `SUM`, `MIN`, and so on. Additionally, the `SELECT` statement can be provided with or without parentheses (). You can provide a `SNAPSHOT` clause to read incremental deltas into the target table.
+>The `SELECT` statement must have an alias for the aggregate functions such as `COUNT`, `SUM`, `MIN`, and so on. Also, the `SELECT` statement can be provided with or without parentheses (). You can provide a `SNAPSHOT` clause to read incremental deltas into the target table.
 
 ## INSERT INTO
 
@@ -222,7 +228,7 @@ INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 
 >[!INFO]
 > 
-> The `SELECT` statement **must not** be enclosed in parentheses (). Additionally, the schema of the result of the `SELECT` statement must conform to that of the table defined in the `INSERT INTO` statement. You can provide a `SNAPSHOT` clause to read incremental deltas into the target table.
+>Do **not** enclose the `SELECT` statement in parentheses (). Also, the schema of the result of the `SELECT` statement must conform to that of the table defined in the `INSERT INTO` statement. You can provide a `SNAPSHOT` clause to read incremental deltas into the target table.
 
 Most fields in a real XDM schema are not found at the root level and SQL does not permit the use of dot notation. To achieve a realistic result using nested fields, you must map each field in your `INSERT INTO` path.
 
@@ -284,9 +290,9 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 | Parameters | Description|
 | ------ | ------ |
-| `IF EXISTS` | If this is specified, no exception is thrown if the schema does **not** exist. |
-| `RESTRICT` | Default value for the mode. If this is specified, the schema will only be dropped if it **doesn't** contain any tables. |
-| `CASCADE` | If this is specified, the schema will be dropped along with all the tables present in the schema. |
+| `IF EXISTS` | If this parameter is specified and the schema does **not** exist, no exception is thrown. |
+| `RESTRICT` | The default value for the mode. If specified, the schema only drops if it does **not** contain any tables. |
+| `CASCADE` | If specified, the schema is dropped along with all the tables present in the schema. |
 
 ## CREATE VIEW
 
@@ -410,7 +416,7 @@ $$END;
 
 The IF-THEN-ELSE control structure enables the conditional execution of a list of statements when a condition is evaluated as TRUE. This control structure is only applicable within an anonymous block. If this structure is used as a standalone command, it results in a syntax error ("Invalid command outside Anonymous Block"). 
 
-The code snippet below demonstrates the correct format for an IF-THEN-ELSE conditional statements in an anonymous block.
+The code snippet below demonstrates the correct format for an IF-THEN-ELSE conditional statement in an anonymous block.
 
 ```javascript
 IF booleanExpression THEN
@@ -445,7 +451,7 @@ $$BEGIN
  END$$;
 ```
 
-This structure can be used in combination with `raise_error();` to return a custom error message. The code block seen below terminates the anonymous block with "custom error message".
+This structure can be used with `raise_error();` to return a custom error message. The code block seen below terminates the anonymous block with "custom error message".
 
 **Example**
 
@@ -603,11 +609,11 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-See the guide on [logical organization of data assets](../best-practices/organize-data-assets.md) for more a detailed explanation on Query Service best practices.
+See the [logical organization of data assets](../best-practices/organize-data-assets.md) guide for a more detailed explanation on Query Service best practices.
 
 ## Table exists
 
-The `table_exists` SQL command is used to confirm whether or not a table currently exists in the system. The command returns a boolean value: `true` if the table **does** exist, and `false` if the table does **not** exist. 
+The `table_exists` SQL command is used to confirm whether a table currently exists in the system. The command returns a boolean value: `true` if the table **does** exist, and `false` if the table does **not** exist. 
 
 By validating whether a table exists before running the statements, the `table_exists` feature simplifies the process of writing an anonymous block to cover both the `CREATE` and `INSERT INTO` use cases.
 
@@ -683,7 +689,7 @@ The values taken from the `source_dataset` are used to populate the target table
 
 ## [!DNL Spark] SQL commands 
 
-The sub-section below covers the Spark SQL commands supported by Query Service.
+The subsection below covers the Spark SQL commands supported by Query Service.
 
 ### SET
 
@@ -702,7 +708,7 @@ To return the value for any setting, use `SET [property key]` without a `propert
 
 ## [!DNL PostgreSQL] commands
 
-The sub-sections below cover the [!DNL PostgreSQL] commands supported by Query Service.
+The subsections below cover the [!DNL PostgreSQL] commands supported by Query Service.
 
 ### ANALYZE TABLE {#analyze-table}
 
@@ -759,7 +765,7 @@ The console output appears as seen below.
 (1 row)
 ```
 
-You can then query the computed statistics directly by referencing the `Statistics ID`. The example statement below allows you to view the output in full when used with the `Statistics ID` or the alias name. To learn more about this feature, see tha [alias name documentation](../key-concepts/dataset-statistics.md#alias-name).
+You can then query the computed statistics directly by referencing the `Statistics ID`. Use the the `Statistics ID` or the alias name as shown in the example statement below, to view the output in full. To learn more about this feature, see the [alias name documentation](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
@@ -787,13 +793,14 @@ See the [dataset statistics documentation](../key-concepts/dataset-statistics.md
 #### TABLESAMPLE {#tablesample}
 
 Adobe Experience Platform Query Service provides sample datasets as part of its approximate query processing capabilities. 
-Data set samples are best used when you do not need an exact answer for an aggregate operation over a dataset. This feature allows you to conduct more efficient exploratory queries on large datasets by issuing an approximate query to return an approximate answer.
+
+Data set samples are best used when you do not need an exact answer for an aggregate operation over a dataset. To conduct more efficient exploratory queries on large datasets by issuing an approximate query to return an approximate answer, use the `TABLESAMPLE` feature.
 
 Sample datasets are created with uniform random samples from existing [!DNL Azure Data Lake Storage] (ADLS) datasets, using only a percentage of records from the original. The dataset sample feature extends the `ANALYZE TABLE` command with the `TABLESAMPLE` and `SAMPLERATE` SQL commands.  
 
-In the examples below, line one demonstrates how to compute a 5% sample of the table. Line two demonstrates how to compute a 5% sample from a  filtered view of the data within the table.
+In the example below, line one demonstrates how to compute a 5% sample of the table. Line two demonstrates how to compute a 5% sample from a  filtered view of the data within the table.
 
-**example**
+**Example**
 
 ```sql {line-numbers="true"}
 ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
@@ -821,18 +828,18 @@ CLOSE name
 CLOSE ALL
 ```
 
-If `CLOSE name` is used, `name` represents the name of an open cursor that needs to be closed. If `CLOSE ALL` is used, all open cursors will be closed.
+If `CLOSE name` is used, `name` represents the name of an open cursor that must be closed. If `CLOSE ALL` is used, all open cursors are closed.
 
 ### DEALLOCATE
 
-The `DEALLOCATE` command allows you to deallocate a previously prepared SQL statement. If you do not explicitly deallocate a prepared statement, it is deallocated when the session ends. More information about prepared statements can be found in the [PREPARE command](#prepare) section.
+To deallocate a previously prepared SQL statement, use the `DEALLOCATE` command. If you did not explicitly deallocate a prepared statement, it is deallocated when the session ends. More information about prepared statements can be found in the [PREPARE command](#prepare) section.
 
 ```sql
 DEALLOCATE name
 DEALLOCATE ALL
 ```
 
-If `DEALLOCATE name` is used, `name` represents the name of the prepared statement that needs to be deallocated. If `DEALLOCATE ALL` is used, all the prepared statements will be deallocated.
+If `DEALLOCATE name` is used, `name` represents the name of the prepared statement that must be deallocated. If `DEALLOCATE ALL` is used, all the prepared statements are deallocated.
 
 ### DECLARE
 
@@ -849,9 +856,9 @@ DECLARE name CURSOR FOR query
 
 ### EXECUTE
 
-The `EXECUTE` command is used to execute a previously prepared statement. Since prepared statements only exist for the duration of a session, the prepared statement must have been created by a `PREPARE` statement executed earlier in the current session. More information about using prepared statements can be found in the [`PREPARE` command](#prepare) section.
+The `EXECUTE` command is used to execute a previously prepared statement. Since prepared statements only exist during a session, the prepared statement must have been created by a `PREPARE` statement executed earlier in the current session. More information about using prepared statements can be found in the [`PREPARE` command](#prepare) section.
 
-If the `PREPARE` statement that created the statement specified some parameters, a compatible set of parameters must be passed to the `EXECUTE` statement. If these parameters are not passed in, an error will be raised. 
+If the `PREPARE` statement that created the statement specified some parameters, a compatible set of parameters must be passed to the `EXECUTE` statement. If these parameters are not passed in, an error is raised. 
 
 ```sql
 EXECUTE name [ ( parameter ) ]
@@ -860,17 +867,17 @@ EXECUTE name [ ( parameter ) ]
 | Parameters | Description|
 | ------ | ------ |
 | `name` | The name of the prepared statement to execute. |
-| `parameter` | The actual value of a parameter to the prepared statement. This must be an expression yielding a value that is compatible with the data type of this parameter, as determined when the prepared statement was created.  If there are multiple parameters for the prepared statement, they are separated by commas. |
+| `parameter` | The actual value of a parameter to the prepared statement. This must be an expression yielding a value that is compatible with the data type of this parameter, as determined when the prepared statement was created. If there are multiple parameters for the prepared statement, they are separated by commas. |
 
 ### EXPLAIN
 
-The `EXPLAIN` command displays the execution plan for the supplied statement. The execution plan shows how the tables referenced by the statement will be scanned.  If multiple tables are referenced, it will show what join algorithms are used to bring together the required rows from each input table.
+The `EXPLAIN` command displays the execution plan for the supplied statement. The execution plan shows how the tables referenced by the statement will be scanned. If multiple tables are referenced, it shows what join algorithms are used to bring together the required rows from each input table.
 
 ```sql
 EXPLAIN statement
 ```
 
-Use the `FORMAT` keyword with the `EXPLAIN` command to define the format of the response.
+To define the format of the response, use the `FORMAT` keyword with the `EXPLAIN` command.
 
 ```sql
 EXPLAIN FORMAT { TEXT | JSON } statement
@@ -918,7 +925,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 The `PREPARE` command lets you create a prepared statement. A prepared statement is a server-side object that can be used to templatize similar SQL statements.
 
-Prepared statements can take parameters, which are values that are substituted into the statement when it is executed. Parameters are referred by position, using $1, $2, etc, when using prepared statements. 
+Prepared statements can take parameters, which are values that are substituted into the statement when it is executed. Parameters are referred by position, using $1, $2, and so on, when using prepared statements. 
 
 Optionally, you can specify a list of parameter data types. If a parameter's data type isn't listed, the type can be inferred from the context.
 
@@ -929,7 +936,7 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 | Parameters | Description|
 | ------ | ------ |
 | `name` | The name for the prepared statement. |
-| `data_type` | The data types of the prepared statement's parameters. If a parameter's data type isn't listed, the type can be inferred from the context. If you need to add multiple data types, you can add them in a comma separated list. |
+| `data_type` | The data types of the prepared statement's parameters. If a parameter's data type isn't listed, the type can be inferred from the context. If you must add multiple data types, you can add them in a comma-separated list. |
 
 ### ROLLBACK
 
@@ -962,12 +969,12 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-More information about the standard SELECT query parameters can be found in the [SELECT query section](#select-queries). This section will only list parameters that are exclusive to the `SELECT INTO` command.
+More information about the standard SELECT query parameters can be found in the [SELECT query section](#select-queries). This section only lists parameters that are exclusive to the `SELECT INTO` command.
 
 | Parameters | Description|
 | ------ | ------ |
-| `TEMPORARY` or `TEMP` | An optional parameter. If specified, the table that is created will be a temporary table. |
-| `UNLOGGED` | An optional parameter. If specified, the table that is created as will be an unlogged table. More information about unlogged tables can be found in the [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `TEMPORARY` or `TEMP` | An optional parameter. If the parameter is specified, the created table is a temporary table. |
+| `UNLOGGED` | An optional parameter. If the parameter is specified, the created table is an unlogged table. More information about unlogged tables can be found in the [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | The name of the table to be created. |
 
 **Example**
@@ -1024,15 +1031,15 @@ COPY query
 
 >[!NOTE]
 >
->The complete output path will be `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+>The complete output path is `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
 ### ALTER TABLE {#alter-table}
 
-The `ALTER TABLE` command lets you add or drop primary or foreign key constraints as well as add columns to the table.
+The `ALTER TABLE` command lets you add or drop primary or foreign key constraints and add columns to the table.
 
 #### ADD or DROP CONSTRAINT
 
-The following SQL queries show examples of adding or dropping constraints to a table. Primary key and foreign key constraints can be added to multiple columns with comma separated values. You can create composite keys by passing two or more column name values as seen in the examples below.
+The following SQL queries show examples of adding or dropping constraints to a table. Primary key and foreign key constraints can be added to multiple columns with comma-separated values. You can create composite keys by passing two or more column name values as seen in the examples below.
 
 **Define primary or composite keys**
 
@@ -1082,16 +1089,15 @@ ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 | `referenced_table_name` | The name of the table that is referenced by the foreign key. |
 | `primary_column_name` | The name of the column that is referenced by the foreign key. |
 
-
 >[!NOTE]
 >
->The table schema should be unique and not shared among multiple tables. Additionally, the namespace is mandatory for primary key, primary identity, and identity constraints.
+>The table schema should be unique and not shared among multiple tables. Also, the namespace is mandatory for primary key, primary identity, and identity constraints.
 
 #### Add or drop primary and secondary identities
 
-The `ALTER TABLE` command allows you to add or delete constraints for both primary and secondary identity table columns directly through SQL.
+To add or delete constraints for both primary and secondary identity table columns, use the `ALTER TABLE` command.
 
-The following examples adds a primary identity and a secondary identity by adding constraints.
+The following examples add a primary identity and a secondary identity by adding constraints.
 
 ```sql
 ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
@@ -1105,7 +1111,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-See the document on [setting identities in an ad hoc datasets](../data-governance/ad-hoc-schema-identities.md) for more detailed information.
+For more detailed information, see the document on [setting identities in an ad hoc datasets](../data-governance/ad-hoc-schema-identities.md).
 
 #### ADD COLUMN
 
@@ -1130,8 +1136,8 @@ The following table lists the accepted data types for adding columns to a table 
 |5| `varchar(len)` | `string` | `varchar(len)` | A character data type that is of variable-size. `varchar` is best used when the sizes of the column data entries vary considerably. |
 |6| `double` | `float8` | `double precision` | `FLOAT8` and `FLOAT` are valid synonyms for `DOUBLE PRECISION`. `double precision` is a floating-point data type. Floating-point values are stored in 8 bytes. |
 |7| `double precision` | `float8` | `double precision` | `FLOAT8` is a valid synonym for `double precision`.`double precision` is a floating-point data type. Floating-point values are stored in 8 bytes. |
-|8| `date` | `date` | `date` | The `date` data type are 4-byte stored calendar date values without any timestamp information. The range of valid dates is from 01-01-0001 to 12-31-9999. |
-|9| `datetime` | `datetime` | `datetime` | A data type used to store an instant in time expressed as a calendar date and time of day. `datetime` includes the qulaifiers of: year, month, day, hour, second, and fraction. A `datetime` declaration can include any subset of these time units that are joined in that sequence, or even comprise only a single time unit. |
+|8| `date` | `date` | `date` | The `date` data types are 4-byte stored calendar date values without any timestamp information. The range of valid dates is from 01-01-0001 to 12-31-9999. |
+|9| `datetime` | `datetime` | `datetime` | A data type used to store an instant in time expressed as a calendar date and time of day. `datetime` includes the qualifiers of: year, month, day, hour, second, and fraction. A `datetime` declaration can include any subset of these time units that are joined in that sequence, or even comprise only a single time unit. |
 |10| `char(len)` | `string` | `char(len)` | The `char(len)` keyword is used to indicate that the item is fixed-length character. |
 
 #### ADD SCHEMA
@@ -1201,7 +1207,7 @@ SHOW FOREIGN KEYS
 
 ### SHOW DATAGROUPS
 
-The `SHOW DATAGROUPS` command returns a table of all associated databases. For each database the table includes schema, group type, child type, child name and child ID.
+The `SHOW DATAGROUPS` command returns a table of all associated databases. For each database, the table includes schema, group type, child type, child name, and child ID.
 
 ```sql
 SHOW DATAGROUPS
@@ -1219,7 +1225,7 @@ SHOW DATAGROUPS
 
 ### SHOW DATAGROUPS FOR table
 
-The `SHOW DATAGROUPS FOR` 'table_name' command returns a table of all associated databases that contain the parameter as its child. For each database the table includes schema, group type, child type, child name and child ID.
+The `SHOW DATAGROUPS FOR 'table_name'` command returns a table of all associated databases that contain the parameter as its child. For each database, the table includes schema, group type, child type, child name, and child ID.
 
 ```sql
 SHOW DATAGROUPS FOR 'table_name'
