@@ -9,6 +9,10 @@ exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 
 Data types are used as reference-type fields in classes or schema field groups in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to field groups in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas field groups can only be added at the root level. The `/datatypes` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage data types within your experience application.
 
+>[!NOTE]
+>
+>If a field is defined as a specific data type, you cannot create the same field with a different datatype in another schema. This constraint applies across your organization's tenant.
+
 ## Getting started
 
 The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.

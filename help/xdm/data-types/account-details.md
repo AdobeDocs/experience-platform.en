@@ -1,6 +1,6 @@
 ---
 title: Account Details Data Type
-description: This document provides an overview of the Account Details Experience Data Model (XDM) data type.
+description: Learn about the Account Details Experience Data Model (XDM) data type.
 exl-id: 17254393-263e-4000-9bd2-815a9e842533
 ---
 # [!UICONTROL Account Details] data type
