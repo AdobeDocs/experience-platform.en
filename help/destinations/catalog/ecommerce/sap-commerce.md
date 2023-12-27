@@ -1,11 +1,11 @@
 ---
 title: SAP Commerce connection
-description: The SAP Commerce destination allows you to manage contact records in your SAP account.
-last-substantial-update: 2023-12-14
+description: Use the SAP Commerce destination connectors to update customer records in your SAP account.
+last-substantial-update: 2024-01-15
 ---
 # [!DNL SAP Commerce] connection
 
-[!DNL SAP Commerce] formerly known as [[!DNL Hybris]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), is a cloud-based e-commerce platform solution for B2B and B2C enterprises and available as part of the SAP Customer Experience portfolio. [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) is a product under the portfolio and enables complete subscription lifecycle management with simplified selling and payment experiences through standardized integrations.
+[!DNL SAP Commerce], formerly known as [[!DNL Hybris]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), is a cloud-based e-commerce platform solution for B2B and B2C enterprises and available as part of the SAP Customer Experience portfolio. [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) is a product under the portfolio and enables complete subscription lifecycle management with simplified selling and payment experiences through standardized integrations.
 
 This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL SAP Subscription Billing] customer management API](https://api.sap.com/api/BusinessPartner_APIs/path/PUT_customers-customerNumber), to update your customer details within [!DNL SAP Commerce] from an existing Experience Platform audience after activation.
 
@@ -33,11 +33,11 @@ Note the following prerequisites in order to export data from Platform to your [
 
 #### You must have a [!DNL SAP Subscription Billing] account {#prerequisites-account}
 
-In order to export data from Platform to your [!DNL SAP Commerce] account you need to have a [!DNL SAP Subscription Billing] account. If you do not have a valid billing account, contact your [!DNL SAP] account manager. Refer to the [[!DNL SAP] Platform Configuration](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) document for additional details.
+In order to export data from Platform to your [!DNL SAP Commerce] account, you need to have a [!DNL SAP Subscription Billing] account. If you do not have a valid billing account, contact your [!DNL SAP] account manager. Refer to the [[!DNL SAP] Platform Configuration](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) document for additional details.
 
 #### Generate a service key {#prerequisites-service-key}
 
-* The [!DNL SAP Commerce] service key allows you to access the [!DNL SAP Subscription Billing] API through Experience Platform. Refer to the [!DNL SAP Commerce] documentation links [here](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) or [here](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/81a854f1410647fa9a06f46d42f3d8b4.html?version=2023-11-27) to create a service key. [!DNL SAP Commerce] requires the following:
+* The [!DNL SAP Commerce] service key allows you to access the [!DNL SAP Subscription Billing] API through Experience Platform. Refer to the [!DNL SAP Commerce] [create a Service Key with Client ID and Client Secret](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) to create a service key. [!DNL SAP Commerce] requires the following:
   * Client ID
   * Client secret
   * URL. The URL pattern is as follows: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. This value will be used later to obtain values for `Region` and `Endpoint`.
@@ -72,8 +72,11 @@ In order to export data from Platform to your [!DNL SAP Commerce] account you ne
 
 #### Create custom references in [!DNL SAP Subscription Billing] {#prerequisites-custom-reference}
 
-Login to your [!DNL SAP Subscription Billing] account and navigate to the **[Master Data and Configuration]** > **[Custom References]** page, click **[!UICONTROL Create]** to add new attributes which you will use in the [Schedule audience export and example](#schedule-segment-export-example) step.
+To update the Experience Plaform audience status in [!DNL SAP Subscription Billing], you will need a custom reference field for each audience selected in Platform.
 
+To create the custom references, Login to your [!DNL SAP Subscription Billing] account and navigate to the **[Master Data and Configuration]** > **[Custom References]** page. Next, select **[!UICONTROL Create]** to add a new reference for each audience selected in Platform. You will require these reference field names in the subsequent [Schedule audience export and example](#schedule-segment-export-example) step.
+
+An example on hiw to create a custom **[!UICONTROL Reference Type]** within [!DNL SAP Subscription Billing] is shown below:
 ![Image showing where to create a custom reference in SAP Subscription Billing.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
 For additional guidance refer to the [!DNL SAP Subscription Billing] [custom references](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27) documentation.
@@ -160,7 +163,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-* **[!UICONTROL Type of Customer]**: Select either ***Individual*** or ***Corporate*** depending on the entities within your audience.
+* **[!UICONTROL Type of Customer]**: Select either ***Individual*** or ***Corporate*** depending on the entities within your audience. The [!DNL SAP Subscription Billing] [schema](https://api.sap.com/api/BusinessPartner_APIs/schema) switches the mandatory fields depending on this selection which is mapped to the `customerType` attribute. If the selection is ***Corporate*** then the mandatory mappings like `firstName` and `lastName` required for an individual customer will be ignored and `company` becomes mandatory and vice-versa.
 
 ### Enable alerts {#enable-alerts}
 
@@ -199,7 +202,7 @@ An example with the identity mapping is shown below:
 
 #### Mapping attributes
 
-To add any other attributes you want to update between your XDM profile schema and your [!DNL SAP Subscription Billing] account repeat the steps below:
+To add any other attributes you want to update between your XDM profile schema and your [!DNL SAP Subscription Billing] account, repeat the steps below:
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
 ![Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute.
@@ -243,9 +246,9 @@ You can then add any additional mappings between your XDM profile schema and the
 
 | Source Field | Target Field | Mandatory |
 | --- | --- | --- |
-| `xdm: person.name.firstName` | `Attribute: firstName` |
-| `xdm: workAddress.street1` | `Attribute: street` |
-| `xdm: workAddress.city` | `Attribute: city` |
+| `xdm: person.name.firstName` | `Attribute: firstName` | No |
+| `xdm: workAddress.street1` | `Attribute: street` | No |
+| `xdm: workAddress.city` | `Attribute: city` | No |
 
 An example with both mandatory and optional attribute mappings where the customer is an individual is shown below:
 ![Image from Platform UI showing an example with both mandatory and optional attribute mappings where the customer is an individual.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
@@ -254,9 +257,8 @@ An example with both mandatory and optional attribute mappings where the custome
 
 | Source Field | Target Field | Mandatory |
 | --- | --- | --- |
-| `xdm: person.name.firstName` | `Attribute: firstName` |
-| `xdm: workAddress.street1` | `Attribute: street` |
-| `xdm: workAddress.city` | `Attribute: city` |
+| `xdm: workAddress.street1` | `Attribute: street` | No |
+| `xdm: workAddress.city` | `Attribute: city` | No |
 
 An example with both mandatory and optional attribute mappings where the customer is a corporate is shown below:
 ![Image from Platform UI showing an example with both mandatory and optional attribute mappings where the customer is a corporate.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
@@ -267,7 +269,10 @@ When you are finished providing the mappings for your destination connection, se
 
 ### Schedule audience export and example {#schedule-segment-export-example}
 
-When performing the [Schedule audience export](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map Platform audiences to the [attributes](#prerequisites-attribute) in [!DNL SAP Commerce].
+When performing the [Schedule audience export](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map Platform audiences to the [attributes](#prerequisites-attribute) in [!DNL SAP Subscription Billing].
+
+An example of the Schedule audience export step, with the location of the [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** highlighted, is shown below:
+![Image from Platform showing schedule audience export with Mapping IDs populated.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
 
 To do this, select each segment, then enter name of the custom reference from [!DNL SAP Subscription Billing] in the [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** destination connector field. For guidance on creating custom references, refer to the [Create custom references in [!DNL SAP Subscription Billing]](#prerequisites-custom-reference) section.
 
@@ -276,19 +281,19 @@ To do this, select each segment, then enter name of the custom reference from [!
 > Do not use the custom reference label as the value.
 ![Image indicating you should not use the custom reference label value for mapping.](../../assets/catalog/ecommerce/sap-commerce/custom-reference-dont-use-label-for-mapping.png)
 
-For example, if your [!DNL SAP Subscription Billing] custom reference is `SAP_1`, specify this value in the [!DNL SAP_Commerce] **[!UICONTROL Mapping ID]** to populate audience audiences from Experience Platform into this attribute.
+For example, if your selected Experience Plaform audience is `sap_audience1` and you want its status to be updated into the [!DNL SAP Subscription Billing] custom reference `SAP_1`, specify this value in the [!DNL SAP_Commerce] **[!UICONTROL Mapping ID]** field.
 
-An example attribute from [!DNL SAP Subscription Billing] is shown below:
+An example **[!UICONTROL Reference Type]** from [!DNL SAP Subscription Billing] is shown below:
 ![Image showing where to create a custom reference in SAP Subscription Billing.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
-An example indicating the location of the [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** is shown below:
-![Image from Platform showing schedule audience export with Mapping IDs populated.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
+An example of the Schedule audience export step, with an audience selected and its corresponding [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** highlighted, is shown below:
+![Image from Platform showing schedule audience export with Mapping IDs populated.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export-example.png)
 
-As shown the [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** should exactly match the value specified within [!DNL SAP Subscription Billing] **[!UICONTROL Reference Type]**.
+As shown the value within the **[!UICONTROL Mapping ID]** field should exactly match the [!DNL SAP Subscription Billing] **[!UICONTROL Reference Type]** value .
 
-Repeat this section for each activated Platform segment.
+Repeat this section for each activated Platform audience.
 
-A typical example based on the image shown above could be.
+Based on the image shown above where you have selected two audiences, the mapping would be as below:
 | [!DNL SAP Commerce] audience name | [!DNL SAP Subscription Billing] **[!UICONTROL Reference Type]** | [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** value |
 | --- | --- | --- |
 | sap_audience1 | `SAP_1` | `SAP_1` |
@@ -322,7 +327,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
-|January 2023| Initial release |Initial destination release and documentation publish. |
+|January 2024| Initial release |Initial destination release and documentation publish. |
 
 {style="table-layout:auto"}
 
