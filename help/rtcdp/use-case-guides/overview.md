@@ -5,15 +5,15 @@ feature: Use Cases
 ---
 # Suggested use cases in Real-Time CDP
 
-Learn about suggested cross-service uses cases to make the most of your Real-Time CDP implementation. This page captures some use-cases made possible by using various services.
+Learn about suggested cross-service uses cases to make the most of your Real-Time CDP implementation. This page captures some use-cases made possible by using various Adobe Experience Platform services.
 
 ## Partner data support
 
-With third-party cookies slowly making an exit from the stage, partner data support can fill the void left by third-party cookie deprecation.
+With third-party cookies set to disappear within the next few years, partner data support can fill the void left by third-party cookie deprecation.
 
-Adobe Real-Time CDP provides extensive support for partner identifier, allowing you to create audiences of prospects, enrich known audiences with attributes from partners, and much more.
+Adobe Real-Time CDP provides extensive support for partner identifiers, allowing you to create audiences of prospects, enrich known audiences with attributes from partners, and much more.
 
-The supported use cases can be divided into customer acquisition and profile enrichment. Visit the documentation links below for extensive implementation information. 
+The supported use cases can be divided into customer acquisition and profile enrichment cases. Visit the documentation links below for extensive implementation information. 
 
 ### Customer acquisition
 

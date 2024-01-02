@@ -6,6 +6,8 @@ product: Real-Time Customer Data Platform
 ---
 # Adobe [!DNL Real-Time CDP] Documentation {#rtcdp-documentation}
 
+Use Adobe Real-Time Customer Data Platform (Real-Time CDP) to bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time. Read the [Real-Time CDP overview](/help/rtcdp/overview.md) for more information.
+
 ## What's new?
 
 Get a glimpse of the newest enhancements in Real-Time CDP product and documentation! For a comprehensive list of features, improvements, and fixes, check out the detailed [Release Notes](/help/release-notes/latest/latest.md). Stay up-to-date with the latest changes in our documentation by visiting the [documentation updates section of the monthly release notes](/help/release-notes/latest/latest.md#documentation-updates).
@@ -36,6 +38,12 @@ The dataset export functionality is now generally available. See [which datasets
 
 [![image](assets/do-not-localize/learn-more-button.svg)](../destinations/ui/export-datasets.md)
 
+>[!TAB Partner data support] 
+
+Execute upper-funnel marketing in Real-Time CDP, with partner-sourced prospect profiles and partner IDs to reach new customers and enrich your first-party data. Leverage cookieless identifiers and hashed PII from data partners of choice to reach net new customers and reduce third-party cookie dependency.
+
+[![image](assets/do-not-localize/learn-more-button.svg)](/help/rtcdp/partner-data/prospecting.md)
+
 >[!ENDTABS]
 
 <!--
@@ -56,7 +64,7 @@ I want to collect data
     </td>
     <td>
     <a href="/help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/start-campaign.jpeg"></a>
-    <div><strong>Which Real-Time CDP edition is right for me</strong><br/>Understand the differences between the different business-to-consumer, business-to-business, and business-to-person offerings of Real-Time CDP and decide which one to buy.</div>
+    <div><strong>Which Real-Time CDP edition is right for my company</strong><br/>Understand the differences between the different business-to-consumer (B2C), business-to-business (B2B), and business-to-person (B2P) offerings of Real-Time CDP and decide which one is best for your company.</div>
     </td>
     <td>
     <a href="/help/landing/ui-guide.md"><img src="assets/do-not-localize/start-interface.jpeg"></a>
@@ -69,7 +77,7 @@ I want to collect data
     </td>
     <td>
     <a href="/help/rtcdp/use-case-guides/overview.md"><img src="assets/do-not-localize/start-use-cases.jpeg"></a>
-    <div><strong>Suggested Real-Time CDP Use cases</strong><br/>Explore the many ways in which Real-Time CDP can help you acquire new customers, enrich your profile and more.
+    <div><strong>Suggested Real-Time CDP Use cases</strong><br/>Explore the many ways in which Real-Time CDP can help your company acquire new customers, enrich your known profiles, and more.
     </div>
     </td>
   </tr>
@@ -82,9 +90,11 @@ I want to collect data
     </tr>
 </table>
 
-## Explore the documentation
+## Explore the core pillars of Real-Time CDP and the documentation
 
-Dive deep into the product documentation to understand how Adobe Real-Time CDP can help you achieve your use cases. 
+![Excerpt from a slide showing the four pillars of Adobe Real-Time CDP.](/help/rtcdp/assets/rtcdp-four-pillars.png)
+
+Dive deep into the product documentation to understand the four core pillars of Adobe Real-Time CDP and how it can help you achieve your enterprise use cases. 
 
 <table style="table-layout:auto">
   <tr style="border: 0;">
@@ -93,12 +103,12 @@ Dive deep into the product documentation to understand how Adobe Real-Time CDP c
       <strong>Data ingestion and management</strong><br/>Explore the many ways that you can get data into Real-Time CDP. <br/><a href="/help/ingestion/batch-ingestion/overview.md">Batch ingestion</a> - <a href="/help/ingestion/streaming-ingestion/overview.md">Streaming ingestion</a> - <a href="/help/sources/home.md">Sources</a> - <a href="/help/xdm/schema/composition.md">Schemas</a> - <a href="/help/catalog/datasets/overview.md">Datasets</a> - <a href="/help/query-service/home.md">Queries</a>
     </td>
     <td>
-      <img src="assets/do-not-localize/icon-lock.svg" width="35px"><br/>
-      <strong>Data governance and trust</strong><br/><br/><a href="/help/ingestion/batch-ingestion/overview.md">Batch ingestion</a> - <a href="/help/ingestion/streaming-ingestion/overview.md">Streaming ingestion</a> - <a href="/help/sources/home.md">Sources</a> - <a href="/help/xdm/schema/composition.md">Schemas</a> - <a href="/help/catalog/datasets/overview.md">Datasets</a> - <a href="/help/query-service/home.md">Queries</a>
+      <img src="assets/do-not-localize/icon_profile-audience.svg" width="35px"><br/>
+      <strong>Profiles & audiences</strong><br/>Manage various types of profiles and group them into audiences based on common interests, behaviors, or characteristics. <br/><a href="/help/segmentation/home.md">Audiences</a> - <a href="/help/profile/home.md">Profiles</a> - <a href="/help/identity-service/home.md">Identities</a> - <a href="/help/dashboards/guides/license-usage.md">License usage</a> - <a href="/help/privacy-service/home.md">Privacy management</a>
     </td>
     <td>
-      <img src="assets/do-not-localize/icon_profile-audience.svg" width="35px"><br/>
-      <strong>Profiles & audiences</strong><br/><a href="/help/segmentation/home.md">Audiences</a> - <a href="/help/profile/home.md">Profiles</a> - <a href="/help/identity-service/home.md">Identities</a> - <a href="/help/dashboards/guides/license-usage.md">License usage</a> - <a href="/help/privacy-service/home.md">Privacy management</a>
+      <img src="assets/do-not-localize/icon-lock.svg" width="35px"><br/>
+      <strong>Data governance and trust</strong><br/>Understand how to ensure compliance with various regulations, restrictions, and policies applicable to data use. <br/><a href="/help/data-governance/home.md">Data governance</a> - <a href="/help/data-governance/labels/overview.md">Data usage labels</a> - <a href="/help/data-governance/policies/overview.md">Data usage policies</a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon-content.svg" width="35px"><br/>
@@ -108,11 +118,11 @@ Dive deep into the product documentation to understand how Adobe Real-Time CDP c
   <tr style="border: 0;">
     <td>
       <img src="assets/do-not-localize/icon-configure.svg" width="35px"><br/>
-      <strong>Configuration and administration</strong><br/><a href="/help/access-control/home.md">Access control</a> - <a href="/help/access-control/abac/overview.md">Attribute-based access control</a> - <a href="/help/access-control/abac/end-to-end-guide.md">End-to-end guide</a> - <a href="/help/sandboxes/home.md">Sandboxes management</a> 
+      <strong>Configuration and administration</strong><br/>As an administrator, learn how you can assist your team with the right permissions, access controls and sandbox configurations. <br/><a href="/help/access-control/home.md">Access control</a> - <a href="/help/access-control/abac/overview.md">Attribute-based access control</a> - <a href="/help/access-control/abac/end-to-end-guide.md">End-to-end guide</a> - <a href="/help/sandboxes/home.md">Sandboxes management</a> 
     </td>
     <td>
       <img src="assets/do-not-localize/icon-cloud.svg" width="35px"><br/>
-      <strong>Cloud and AI/ML capabilities</strong><br/><a href="/help/access-control/home.md">Customer AI</a> - <a href="/help/access-control/abac/overview.md">Attribute-based access control</a> - <a href="/help/access-control/abac/end-to-end-guide.md">End-to-end guide</a> - <a href="/help/sandboxes/home.md">Sandboxes management</a> 
+      <strong>Cloud and AI/ML capabilities</strong><br/>AI and ML capabilities assist you at every step of the way in multiple dashboards. Some highlights include the areas below. <br/><a href="/help/rtcdp/segmentation/customer-ai.md">Customer AI</a> -  
     </td>
     <td>
       <img src="assets/do-not-localize/icon-learn.svg" width="35px"><br/>
@@ -172,6 +182,8 @@ View these three introductory videos to get an understanding of Real-Time CDP.
     <em>Easily ingest your data</em>
     <p>
   </td>
+  </tr>
+  </table>
 
 -->
 
@@ -187,4 +199,4 @@ View these three introductory videos to get an understanding of Real-Time CDP.
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b>Stay informed and elevate your Adobe Real-Time CDP experience!</b><br/>Visit the Real-Time Customer Data Platform community to discuss functionality with fellow practitioners. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">Join the community today!</a></td></tr></table>
+<b>Stay informed, contribute to the community, and elevate your Adobe Real-Time CDP experience!</b><br/>Visit the Real-Time Customer Data Platform community to discuss functionality with fellow practitioners. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">Join the community today!</a></td></tr></table>
