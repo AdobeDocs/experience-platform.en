@@ -66,7 +66,7 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 
 | Action | Origins | Description |
 | ------ | ------- | ----------- |
-| [!UICONTROL Edit] | Segmentation Service | Lets you open Segment Builder to edit your audience. For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md). |
+| [!UICONTROL Edit] | Segmentation Service | Lets you open Segment Builder to edit your audience. Please note that if your audience was created through the API, you will **not** be able to edit it using Segment Builder. For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md). |
 | [!UICONTROL Open composition] | Audience composition | Lets you open Audience composition to see your audience. For more information on Audience composition, please read the [audience composition UI guide](./audience-composition.md). |
 | [!UICONTROL Activate to destination] | Segmentation Service | Lets you activate the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md). |
 | [!UICONTROL Share with partners] | Audience composition, Custom upload, Segmentation Service | Lets you share your audience with other Platform users. For more information on this feature, please read the [Segment Match overview](./segment-match/overview.md). |
