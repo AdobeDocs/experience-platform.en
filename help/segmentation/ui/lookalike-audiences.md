@@ -8,7 +8,7 @@ exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
 
 >[!IMPORTANT]
 >
->Please note that look-alike insights and Look-alike audiences are only available in the **B2C edition**.
+>Look-alike insights and Look-alike audiences are only available in the **B2C edition**.
 
 In Adobe Experience Platform, Look-alike audiences provide intelligent insights on each of your audiences, leveraging machine-learning-based insights to identify and target high-value customers with your marketing campaigns. 
 
@@ -25,7 +25,9 @@ Before getting started with Look-alike audiences, make sure to understand the fo
 
 ## Eligibility {#eligibility}
 
+In order to use look-alike insights, the base audience **must** meet the following eligibility criteria:
 
+LIST
 
 ## Look-alike model details {#details}
 
