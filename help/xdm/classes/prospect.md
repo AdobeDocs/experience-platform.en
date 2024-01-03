@@ -7,6 +7,8 @@ exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
 
 In Experience Data Model (XDM), the [!UICONTROL XDM Individual Prospect Profile] class captures prospect profiles typically sourced from data partners for top-of-the-funnel customer acquisition use-cases.
 
+Note: In order to set a field in the XDM Individual Prospect Profile as an Indentity, there must be at least one Partner ID Namespace created first.
+
 ![The schema diagram of the XDM Prospect class.](../images/classes/individual-prospect-profile.png)
 
 | Property | Data type | Description |
