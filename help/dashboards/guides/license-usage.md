@@ -66,31 +66,23 @@ This dashboard displays all of your licensed Adobe Experience Platform products,
 
 The table indicates the primary metric for each product, as each product can track numerous metrics.
 
-## [!UICONTROL Summary] tab {#summary-tab}
-
-To view more metrics and detailed insights on your product license usage, select a product name from the list. The [!UICONTROL Summary] view for that product appears. All available metrics are displayed on the [!UICONTROL Summary] tab. The metrics available depend on the licensed product. This view provides **a consolidated view of all metrics across all production or development sandboxes**. The same level of analysis is provided for both production and development sandboxes. 
-
-![The summary view of a Platform Product that displays all available metrics for that product.](../images/license-usage/summary-tab.png)
-
-On the summary tab, the table includes the [!UICONTROL Metric] column. These human-readable descriptions indicate all metrics used for that type of sandbox.
-
 ### Predicted usage {#predicted-usage}
 
 <!-- Below needs heavy editing -->
 
-The [!UICONTROL Predicted Usage] column provides involves the future time period during which the forecasting is made. For license usage prediction, the time period should be between 1-6 months in the future. As we validate with customers, and as our model projects more accurate values beyond 6 months, the forecasting time period can be extended accordingly.
+The [!UICONTROL Predicted Usage] column accurately predicts future usage at various levels (organization-level, sandbox-level, or dataset-level). This alerting capability provides a forecast of license usage for six months in the future. The predictive model is refreshed on a monthly basis, based on your usage up to that month.
 
-The model should refresh on a weekly basis, based on the usage until that week.
+Usage predictions are available on the Overview, Summary, and Details dashboards to allow for different degrees of granularity. Usage predictions are available for your product, sandbox, and the individual metrics used at the sandbox level. 
 
-The prediction should be displayed in the following LU pages:
+<!-- As we validate with customers, and as our model projects more accurate values beyond 6 months, the forecasting time period can be extended accordingly. -->
 
-- The main LU Page that displays the list of products purchased.
-- Product → Summary page that displays metrics of a product at a sandbox "type" level.
-- Product → Details page that displays the metrics at a per-sandbox level.
-
+<!-- 
 In the main license usage page, the "end of the current month" prediction should be displayed as a separate column with an option to drill-down to see more predictions (end of the next 2/3/6 months etc.). The end of the current month prediction should be displayed as a % of the licensed amount. 
+ -->
 
-- Each prediction has a lower & an upper bound. Since the current month's projections tend to be more accurate than the subsequent month projections, the lower bound of the current month prediction should be >= 90% of the current usage. This is to avoid a wide ranging prediction that could start with a lower bound of 0% even though the current usage is higher. So, if the current usage is 10M for addressable audience, the lower bound for the current month's prediction should be >= 9M. This lower bound number should act as the "base" for the future 60/90/120 day predictions. 
+Each prediction has a lower & an upper bound. 
+
+Since the current month's projections tend to be more accurate than the subsequent month projections, the lower bound of the current month prediction should be >= 90% of the current usage. This is to avoid a wide ranging prediction that could start with a lower bound of 0% even though the current usage is higher. So, if the current usage is 10M for addressable audience, the lower bound for the current month's prediction should be >= 9M. This lower bound number should act as the "base" for the future 60/90/120 day predictions. 
 
 In order to view additional usage beyond the current month forecast, the user should be able to click on an icon next to the projected value, upon which the system should display projections beyond the current month. In order to let the user know when the prediction was performed and the CTA for the user, there should be relevant text in the modal title/description
 
@@ -115,6 +107,14 @@ The predicted usage feature supports for the following metrics:
 >Predictions are refreshed on a monthly basis. The date of refresh is included in the column title.
 
 <!-- Above needs heavy editing -->
+
+## [!UICONTROL Summary] tab {#summary-tab}
+
+To view more metrics and detailed insights on your product license usage, select a product name from the list. The [!UICONTROL Summary] view for that product appears. All available metrics are displayed on the [!UICONTROL Summary] tab. The metrics available depend on the licensed product. This view provides **a consolidated view of all metrics across all production or development sandboxes**. The same level of analysis is provided for both production and development sandboxes. 
+
+![The summary view of a Platform Product that displays all available metrics for that product.](../images/license-usage/summary-tab.png)
+
+On the summary tab, the table includes the [!UICONTROL Metric] column. These human-readable descriptions indicate all metrics used for that type of sandbox.
 
 ### Select a sandbox {#select-sandbox}
 
