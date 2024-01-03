@@ -1,7 +1,7 @@
 ---
 title: Amazon Ads
 description: Amazon Ads offers a range of options to help you achieve your advertising goals to registered sellers, vendors, book vendors, Kindle Direct Publishing (KDP) authors, app developers, and/or agencies. The Amazon Ads integration with Adobe Experience Platform provides turn-key integration to Amazon Ads products, including the Amazon DSP (ADSP). Using the Amazon Ads destination in Adobe Experience Platform, users are able to define advertiser audiences for targeting and activation on the Amazon DSP.
-last-substantial-update: 2023-03-29
+last-substantial-update: 2024-01-02
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
 ---
 # (Beta) Amazon Ads connection {#amazon-ads}
@@ -10,7 +10,12 @@ exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
 
 Amazon Ads offers a range of options to help you achieve your advertising goals to registered sellers, vendors, book vendors, Kindle Direct Publishing (KDP) authors, app developers, and/or agencies.
 
-The Amazon Ads integration with Adobe Experience Platform provides turn-key integration to Amazon Ads products, including the Amazon DSP (ADSP). Using the Amazon Ads destination in Adobe Experience Platform, users are able to define advertiser audiences for targeting and activation on the Amazon DSP.  
+The Amazon Ads integration with Adobe Experience Platform provides turn-key integration to Amazon Ads products, including the Amazon DSP (ADSP) and Amazon Marekting Cloud (AMC). 
+
+Using the Amazon Ads destination in Adobe Experience Platform, users are able to define advertiser audiences for targeting and activation on the Amazon DSP.  Additionally, users may upload their data to Amazon Marketing Cloud to understand performance by audience, advertiser provided dimensions, membership in Amazon segments, or other signals available in AMC. After uploading advertiser audiences to AMC, users can use Amazon Marketing Cloud to modify, enhance, or append to audience members using Amazon signals from within Amazon Marketing Cloud.
+
+AMC brings together unique signals from across Amazon owned and operated properties, spanning across media including display, video, streaming TV, audio, and sponsored ads. Users can easily send curated segments from Adobe Experience Platform to AMC to enhance learning such as audiences’ in-market groups, lifestyle cohorts, and brand engagement patterns. Augmented segments can then be used to optimize media activations in Amazon DSP. 
+
 
 >[!IMPORTANT]
 >
@@ -20,15 +25,28 @@ The Amazon Ads integration with Adobe Experience Platform provides turn-key inte
 
 To help you better understand how and when you should use the *Amazon Ads* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
+### Use case #1
 ### Activation and targeting {#activation-and-targeting}
 
 This integration with Amazon DSP allows Amazon Ads advertisers to pass advertiser CDP audiences from Adobe Experience Platform to Amazon's DSP to create advertiser audiences for advertising targeting. Audiences may be selected within the Amazon DSP for positive targeting, as well as negative targeting (suppression).
 
+### Use case #2
+### Analytics and Measurement {#analytics-and-measurement}
+
+This integration with Amazon Marketing Cloud (AMC) allows Amazon Ads advertisers to pass CDP segments from Adobe Experience Platform form to AMC. Advertisers can then join the CDP inputs with Amazon Ads signals, and conduct custom analytics on topics such as media impact, audience segments, and customer journeys in privacy compliant format. For example, an advertiser may upload a list of their existing customers to understand the aggregate advertising campaign performance, or aggregated statistics of on-Amazon conversion events, such as viewing a product detail page, adding a product to a shopping cart, or purchase of a product.
+
+### Use case #3
+### Advertising optimization:
+
+This integration with Amazon Marketing Cloud (AMC) allows advertisers to upload their own customer lists, and using Amazon Marketing Cloud SQL, perform overlap analysis, suppressions, additions, or optimizations to audiences in a recurring basis before creating an activation-ready audience in Amazon DSP for targeting.
+
+
 ## Prerequisites {#prerequisites}
 
-To use the Amazon Ads connection with Adobe Experience Platform, users must first have access to an Amazon DSP Advertiser Account. To provision these instances, visit the following page on the Amazon Ads website:
+To use the Amazon Ads connection with Adobe Experience Platform, users must first have access to an Amazon DSP Advertiser Account or an Amazon Marketing Cloud instance. To provision these instances, visit the following page on the Amazon Ads website:
 
-* [Get started with Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp?ref_=a20m_us_hnav_p_dsp_adtech)
+* [Get started with Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp)
+* [Get started with Amazon Marketing Cloud](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
 
 ## Supported identities {#supported-identities}
 
@@ -74,7 +92,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Amazon Ads Advertiser ID]**: Select the ID for the target Amazon Ads account used for the destination.
+*  **[!UICONTROL Amazon Ads Connection]**: Select the ID for the target Amazon Ads account used for the destination.
 
 >[!NOTE]
 >
@@ -111,6 +129,8 @@ The Amazon Ads connection supports hashed email address and hashed phone numbers
 * To map hashed phone numbers, select the `Phone_SHA256` identity namespace as a source field.
 * To map unhashed email addresses or phone numbers, select the corresponding identity namespaces as source fields, and check the `Apply Transformation` option to have Platform hash the identities on activation.
 
+You only select a given target field one time in a destination configuration of the Amazon Ads connector.  For example, if you submit business email, you cannot also map personal email in the same destination configuration.
+
 It is strongly recommended that you map as many fields as you have available. If only one source attribute is available, you may map a single field. The Amazon Ads destination utilizes all mapped fields for mapping purposes, yielding higher match rates if more fields are provided. For more information about the accepted identifiers, visit the [Amazon Ads hashed audience help page](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
 ## Exported data / Validate data export {#exported-data}
@@ -122,6 +142,15 @@ Once your audience has been uploaded, you may validate your audience has been cr
 Navigate to your Advertiser ID → Audiences → Advertiser Audiences. If your audience was created successfully and meets the minimum number of audience members, you will see a Status of `Active`. Additional details about your audience size and reach can be found in the Forecasted Reach panel on the right side of the Amazon DSP user interface. 
 
 ![Amazon DSP audience creation validation](../../assets/catalog/advertising/amazon_ads_image_3.png)
+
+**For Amazon Marketing Cloud**
+
+In the left-hand schema browser, find your audience under Advertiser Uploaded → aep_audiences. You may then query your audience in the AMC SQL editor with the following clause:
+
+select count(user_id) from aep_audiences where audienceId = '1234567'
+
+![Amazon Marketing Cloud audience creation validation]()
+
 
 ## Data usage and governance {#data-usage-governance}
 
@@ -141,6 +170,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
+|January 2024|Functionality and documentation update| Added new documentation for AMC.
 |May 2023|Functionality and documentation update| <ul><li>Added support for Advertiser Region selection in the [destination connection workflow](#destination-details).</li><li>Updated documentation to reflect the addition of Advertiser Region selection. For more information on selecting the correct Advertiser Region, see the [Amazon documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 |March 2023|Initial release|Initial destination release and documentation published.|
 
