@@ -151,7 +151,7 @@ View these three introductory videos to get a deeper understanding of Real-Time 
 <table style="margin-top: 0 !important">
 <tr>
   <td>
-    <a href="[intro-to-platform/a-customer-experience-powered-by-experience-platform.md](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html)">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html">
       <img alt="Real-Time CDP as part of the Adobe Experience Cloud video" src="/help/rtcdp/assets/platform-apps-overview.png" />
     </a>
     <div>
