@@ -56,6 +56,8 @@ I want to collect data
 
 ## Start with the basics
 
+Start by reading the material in the links below to familiarize yourself with Real-Time CDP concepts, user interfaces, workflows, and suggested use cases. 
+
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
@@ -92,9 +94,16 @@ I want to collect data
 
 ## Explore the core pillars of Real-Time CDP and the documentation
 
+Understand the four core pillars of Adobe Real-Time CDP that help you:
+
+* Collect or ingest data through a myriad of source connectors and data collection methods;
+* Manage and segment your most valuable profiles into audiences;
+* Know that you are managing data while staying compliant with various regulations, restrictions, and policies applicable to data use;
+* Market to your customers across channels.
+
 ![Excerpt from a slide showing the four pillars of Adobe Real-Time CDP.](/help/rtcdp/assets/rtcdp-four-pillars.png)
 
-Dive deep into the product documentation to understand the four core pillars of Adobe Real-Time CDP and how it can help you achieve your enterprise use cases. 
+Explore the product documentation links below to understand how the four core pillars of Adobe Real-Time CDP can help you achieve your enterprise use cases.
 
 <table style="table-layout:auto">
   <tr style="border: 0;">
@@ -129,63 +138,59 @@ Dive deep into the product documentation to understand the four core pillars of 
       <strong>Guardrails and best practices</strong><br/>Learn about best practices and current limitations when working with data in Real-Time CDP.<br/><a href="/help/rtcdp/guardrails/overview.md">Guardrails</a> - <a href="/help/landing/license-usage-and-guardrails/data-management-best-practices.md">Data Management License Entitlement Best Practices</a> - <a href="/help/xdm/schema/best-practices.md">Data Modeling Best Practices</a> 
     </td>
     <td>
-      <img src="assets/do-not-localize/icon-quick-start.svg" width="35px"><br/>
-      <strong>Use Cases</strong><br/>Learn how you use Real-Time CDP to acquire new customers, intelligently engage your existing customers, enrich their profiles, and much more. <br/><a href="/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md">Intelligent re-engagement</a> - <a href="/help/rtcdp/partner-data/prospecting.md">New customer acquisition</a> - <a href="/help/rtcdp/partner-data/onsite-personalization.md">Onsite personalization to unknown users</a> - <a href="/help/rtcdp/partner-data/supplement-first-party-profiles.md">Profile enrichment</a> - <a href="/help/rtcdp/partner-data/offsite-retargeting.md">Offsite retargeting</a>
+      <img src="assets/do-not-localize/icon-code.svg" width="35px"><br/>
+      <strong>Developer</strong><br/>Use the various APIs and SDKs provided by Real-Time CDP to set up data ingestion, manage profiles, create audiences, and more. <br/><a href="/help/landing/api-authentication.md">Authenticate and get started with APIs</a> - <a href="https://developer.adobe.com/experience-platform-apis/">Complete API reference</a> - <a href="/help/destinations/destination-sdk/overview.md">Destination SDK</a> - <a href="/help/sources/sources-sdk/overview.md">Sources SDK</a> - <a href="https://developer.adobe.com/client-sdks/home/getting-started/get-the-sdk/">Mobile SDK</a>
     </td>
   </tr>
 </table> 
 
-<!--
-
 ## Featured introductory videos {#featured-videos}
 
-View these three introductory videos to get an understanding of Real-Time CDP.
+View these three introductory videos to get a deeper understanding of Real-Time CDP, its architecture, interface, and how it fits in within the larger Adobe Experience Cloud.
 
 <table style="margin-top: 0 !important">
 <tr>
   <td>
-    <a href="intro-to-platform/a-customer-experience-powered-by-experience-platform.md">
-      <img alt="A customer experience powered by Experience Platform video" src="assets/thumb_A-Customer-Experience.jpg" />
+    <a href="[intro-to-platform/a-customer-experience-powered-by-experience-platform.md](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html)">
+      <img alt="Real-Time CDP as part of the Adobe Experience Cloud video" src="/help/rtcdp/assets/platform-apps-overview.png" />
     </a>
     <div>
-      <a href="intro-to-platform/a-customer-experience-powered-by-experience-platform.md">
-    <strong>A customer experience powered by Experience Platform</strong>
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html">
+    <strong>Real-Time CDP as part of the Adobe Experience Cloud</strong>
     </a>
     </div>
     <p>
-    <em>See how Platform can be used to power a customer experience</em>
+    <em>Understand where Real-Time CDP fits within the larger Adobe Experience Cloud</em>
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html">
-      <img alt="thumbnail image for the 'Getting started for data architects and data engineers' tutorial" src="assets/thumb_Getting_started.jpg" />
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html">
+      <img alt="thumbnail image for the 'Basic architecture of Adobe Experience Platform video" src="/help/rtcdp/assets/platform-architecture-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html">
-    <strong>Getting started for data architects and data engineers</strong>
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html">
+    <strong>Basic architecture of Adobe Experience Platform</strong>
     </a>
     </div>
     <p>
-    <em>Hands-on exercises to get started</em>
+    <em>Learn the high-level architecture of Adobe Experience Platform from a guided walkthrough of an overview diagram</em>
     <p>
   </td>
   <td>
-    <a href="sources/overview.md">
-      <img alt="thumbnail image for the 'Understanding source connectors' video" src="assets/thumb_Sources.png" />
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=en">
+      <img alt="thumbnail image for the 'Interface tour of Adobe Experience Platform' video" src="/help/rtcdp/assets/rtcdp-ui-overview.png" />
     </a>
     <div>
-      <a href="sources/overview.md">
-    <strong>Understanding source connectors</strong>
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=en">
+    <strong>Interface tour of Adobe Experience Platform</strong>
     </a>
     </div>
     <p>
-    <em>Easily ingest your data</em>
+    <em>Learn how to navigate the Real-Time CDP user interface</em>
     <p>
   </td>
   </tr>
   </table>
-
--->
 
 ## Additional resources {#additional-resources}
 
