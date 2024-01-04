@@ -112,7 +112,7 @@ Select fields are directly mapped from Adobe Analytics to Experience Data Model 
 
 {style="table-layout:auto"}
 
-## Split mapping fields
+## Split-mapping fields
 
 These fields have a single source, but map to **multiple** XDM locations.
 
@@ -132,7 +132,7 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 | --------------- | --------- | -------- | ----------- |
 | `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Object | Custom Analytics props, configured to be list props. It contains a delimited list of values. | {} |
 | `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Object | Used by hierarchy variables. It contains a delimited list of values. | {values (array), delimiter (string)} |
-| `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Custom Analytics list vars. Contains a delimited list of values. | {value (string), key (string)} |
+| `m_mvvar1`<br/>`[...]`<br/>`m_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | array | Custom Analytics list variables. Contains a delimited list of values. | {value (string), key (string)} |
 | `m_color` | `device.colorDepth` | integer | The color depth ID, which is based off the value of the c_color column. | 
 | `m_cookies` | `environment.browserDetails.cookiesEnabled` | boolean | A variable used in the Cookie Support dimension. |
 | `m_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | Standard commerce events triggered on the hit.| {id (string), value (number)} |
@@ -228,7 +228,7 @@ To learn more about performing these transformations using Query Service, see [A
 | `post_longitude` | `placeContext.geo._schema.longitude` | number |   <!-- MISSING --> | 
 | `post_page_event` | `web.webInteraction.type` | string | The type of hit that is sent in the image request (standard hit, download link, exit link, or custom link clicked). |
 | `post_page_event` | `web.webInteraction.linkClicks.value` | number | The type of hit that is sent in the image request (standard hit, download link, exit link, or custom link clicked). |
-| `post_page_event_var1` | `web.webInteraction.URL` | string | This variable is only used in link tracking image requests. This is the URL of the donwload link, exit link, or custom link clicked. |
+| `post_page_event_var1` | `web.webInteraction.URL` | string | This variable is only used in link tracking image requests. It is the URL of the download link, exit link, or custom link clicked. |
 | `post_page_event_var2` | `web.webInteraction.name` | string | This variable is only used in link tracking image requests. It is the custom name of the link. |
 | `post_page_type` | `web.webPageDetails.isErrorPage` | boolean | This is used to populate the Pages Not Found dimension. This variable should either be empty or contain "ErrorPage" |
 | `post_pagename_no_url` | `web.webPageDetails.pageViews.value` | number | The name of the page (if set). If no page is specified, this value is left empty. |
