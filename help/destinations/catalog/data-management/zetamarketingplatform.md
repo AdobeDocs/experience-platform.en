@@ -40,7 +40,6 @@ The ZMP destination connector will allow you to map any platform identities to t
 |Target Identity|Description|Notes|
 ---------|----------|----------|
 |Email|Email address|Select email when you want to identify a unique profile using their email address.|
-|Email MD5|MD5-hashed email address|Select emailmd5 when you want to identify a unique profile using their Md5-hased email address.|
 
 {style="table-layout:auto"}
 
