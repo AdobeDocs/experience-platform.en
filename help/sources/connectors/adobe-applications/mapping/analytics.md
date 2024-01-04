@@ -140,7 +140,7 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 | `m_geo_country` | `placeContext.geo.countryCode` | string | Abbreviation of the country where the hit came from, which is based off the IP. |
 | `m_geo_latitude` | `placeContext.geo._schema.latitude` | number | <!-- MISSING --> |
 | `m_geo_longitude` | `placeContext.geo._schema.longitude` | number | <!-- MISSING -->|
-| `m_java_enabled` | `environment.browserDetails.javaEnabled` | boolean | A flag indicating whether Java is enabled. |
+| `m_java_enabled` | `environment.browserDetails.javaEnabled` | boolean | A flag indicating whether Java&trade; is enabled. |
 | `m_latitude` | `placeContext.geo._schema.latitude` | number | <!-- MISSING --> |
 | `m_longitude` | `placeContext.geo._schema.longitude` | number | <!-- MISSING -->|
 | `m_page_event_var1` | `web.webInteraction.URL` | string | A variable that is only used in link tracking image requests. This variable contains the URL of the download link, exit link, or custom link clicked. |
@@ -223,7 +223,7 @@ To learn more about performing these transformations using Query Service, see [A
 | `post_cookies` | `environment.browserDetails.cookiesEnabled` | boolean | Variable used in the Cookie Support dimension. |
 | `post_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Object | Standard commerce events triggered on the hit. | {id (string), value (number)} |
 | `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | Object | Custom events triggered on the hit.| {id (Object), value (Object)} |
-| `post_java_enabled` | `environment.browserDetails.javaEnabled` | boolean | A flag indicating whether Java is enabled. |
+| `post_java_enabled` | `environment.browserDetails.javaEnabled` | boolean | A flag indicating whether Java&trade; is enabled. |
 | `post_latitude` | `placeContext.geo._schema.latitude` | number |   <!-- MISSING --> |
 | `post_longitude` | `placeContext.geo._schema.longitude` | number |   <!-- MISSING --> | 
 | `post_page_event` | `web.webInteraction.type` | string | The type of hit that is sent in the image request (standard hit, download link, exit link, or custom link clicked). |
