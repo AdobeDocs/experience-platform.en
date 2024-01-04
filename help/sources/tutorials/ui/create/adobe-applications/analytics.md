@@ -171,6 +171,18 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 Once you have completed mappings for your [!DNL Analytics] report suite data, you can apply filtering rules and conditions to selectively include or exclude data from ingestion to the Real-Time Customer Profile. Support for filtering is only available for [!DNL Analytics] data and data is only filtered prior to entering [!DNL Profile.] All data are ingested into the data lake.
 
+>[!BEGINSHADEBOX]
+
+**Additional information on filtering Analytics data for Real-Time Customer Profile**
+
+* The filtering functionality applies only to data that is going to Profile and not to data lake.
+* The [!DNL Analytics] source does not backfill data into Profile.
+* If you utilize Data Prep configurations during the initial setup of an [!DNL Analytics] flow, those changes are applied to the automatic 13-month backfill as well.
+* Data Prep is applied to both streaming and batch ingestion paths. If an existing Data Prep configuration is modified, those changes are applied to new incoming data across both streaming and batch ingestion pathways. 
+  * However, any Data Prep configurations do not get applied to data that has already been ingested into Experience Platform, regardless of whether it is streaming or batch data.
+
+>[!ENDSHADEBOX]
+
 #### Row-level filtering
 
 >[!IMPORTANT]
