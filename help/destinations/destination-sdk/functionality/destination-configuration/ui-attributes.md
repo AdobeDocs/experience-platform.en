@@ -5,7 +5,7 @@ exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
 ---
 # UI attributes
 
-UI attributes define the visual elements that Adobe should display for your destination card in the Adobe Experience Platform user interface, such as the destination platform logo, a link to the documentation page, a destination description and its category and type.
+UI attributes define the visual elements that Adobe should display for your destination card in the Adobe Experience Platform user interface, such as a logo, a link to the documentation page, a destination description and its category and type.
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the following destination configuration overview pages:
 
