@@ -71,7 +71,8 @@ You can use namespace priority to define which namespaces are more important tha
   * Priority does **not** affect identity graph system guardrails. 
 * **Namespace priority is a numerical value** assigned to a namespace indicating its relative importance. This is a property of a namespace.
 * **Primary identity is the identity in which a profile fragment is stored against**. A profile fragment is a record of data that stores information about a certain user: attributes (usually ingested via CRM records) or events (usually ingested from experience events, or online data).
-* Namespace priority and primary identity intersect because namespace priority determines the primary identity.
+* Namespace priority determines the primary identity for experience events.
+  * For profile records, you can use the schemas workspace in the Experience Platform UI to define identity fields, including the primary identity. Read the guide on [defining identity fields in the UI](../../xdm/ui/fields/identity.md) for more information.
 
 >[!BEGINSHADEBOX]
 
