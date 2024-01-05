@@ -30,6 +30,7 @@ In order to use look-alike insights, the base audience **must** meet the followi
 - The base audience **must** be created within Platform.
   - Externally-generated audiences are **not** eligible for look-alike insights.
 - The base audience **must** be on the default merge policy.
+- The base audience **must** not use fields that are restricted by data governance.
 
 ## Look-alike model details {#details}
 
