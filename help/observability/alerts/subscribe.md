@@ -35,7 +35,7 @@ Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and si
 
 >[NOTE!]
 >
->The Adobe IO subscription's data ingestion notification will be deprecated. Instead, use the **Sources Flow Run Info** I/O event.
+>The data ingestion notification will be deprecated from the Adobe IO subscription. Instead, you should use the **Sources Flow Run Info** I/O event.
 
 Once you have created a new project, navigate to that project's overview screen. From here, select **[!UICONTROL Add event]**.
 
