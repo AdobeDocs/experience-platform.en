@@ -27,7 +27,9 @@ Before getting started with Look-alike audiences, make sure to understand the fo
 
 In order to use look-alike insights, the base audience **must** meet the following eligibility criteria:
 
-LIST
+- The base audience **must** be created within Platform.
+  - Externally-generated audiences are **not** eligible for look-alike insights.
+- The base audience **must** be on the default merge policy.
 
 ## Look-alike model details {#details}
 
@@ -176,13 +178,19 @@ The audience details page appears. For more information on this page, please rea
 
 ## Exclude data fields from look-alike modeling {#exclude}
 
+>[!IMPORTANT] 
+>
+> **You** are responsible for ensuring that data, including sensitive data, is labeled appropriately and that data usage policies have been defined and enabled to comply with legal and regulatory obligations under which you operate. You should also be aware that data fields or segment memberships that are **not** directly correlated with data fields typically associated with sensitive or protected data types can be a source of potential bias. **You** are responsible in analyzing your data to identify, label, and apply the appropriate data usage policies to your data, including any data fields that may proxy for sensitive or protected data types and should be excluded from modeling.
+
 Look-alike audiences can be configured to exclude data fields that are restricted for the "Data Science" marketing action by applying the relevant data usage labels and policies. Data that is labeled as restricted from use for data science will be removed from consideration when training a Look-alike audience model and when generating a Look-alike audience from the trained model. 
+
+>[!NOTE]
+>
+>Changes to the data usage labels on the base audience may take up to 48 hours to take effect.
 
 The standard "C9" label can be used to label data that should not be used for data science and can be enforced by enabling the standard "Restrict data science" policy. You can also create additional policies to restrict data with other labels, including sensitive labels, from usage for data science. For more information on managing data usage policies, please read the [data usage policies UI guide](../../data-governance/policies/user-guide.md). For more information on managing data usage labels, please read the [data usage labels UI guide](../../data-governance/labels/user-guide.md).
 
 By default, the modeling process for Look-alike audiences will exclude **any** field, dataset, or audience based on the enabled privacy policy for your organization. If the base audience has no contract labels, the modeling process will exclude **any** field, dataset, or audience based on the enabled privacy policy for your organization. 
-
-Please note that **you** are responsible for ensuring that data, including sensitive data, is labeled appropriately and that data usage policies have been defined and enabled to comply with legal and regulatory obligations under which you operate. You should also be aware that data fields or segment memberships that are **not** directly correlated with data fields typically associated with sensitive or protected data types can be a source of potential bias. **You** are responsible in analyzing your data to identify, label, and apply the appropriate data usage policies to your data, including any data fields that may proxy for sensitive or protected data types and should be excluded from modeling.
 
 ## Next steps
 
