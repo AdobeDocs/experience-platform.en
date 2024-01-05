@@ -63,12 +63,16 @@ For more information, read the document on [identity optimization algorithm](./i
 >
 >Namespace priorities are currently not available for alpha.
 
-You can use namespace priority to define which namespaces are more important than others. The hierarchy that you set for your namespaces are then used to define primary identities and store profile fragments. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
+You can use namespace priority to define which namespaces are more important than others. The priority that you set for your namespaces are then used to define primary identities, which is the identity that stores profile fragments (attribute and event data) in Real-Time Customer Profile. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
 
 * Limits and priority are independent configurations and do **not** affect each other:
   * Limits is an identity graph configuration in Identity Service.
   * Priority is a profile fragment configuration on Real-Time Customer Profile.
-  * Priority does **not** affect identity graph system guardrails.
+  * Priority does **not** affect identity graph system guardrails. 
+* **Namespace priority is a numerical value** assigned to a namespace indicating its relative importance. This is a property of a namespace.
+* **Primary identity is the identity in which a profile fragment is stored against**. A profile fragment is a record of data that stores information about a certain user: attributes (usually ingested via CRM records) or events (usually ingested from experience events, or online data).
+* Namespace priority determines the primary identity for experience events.
+  * For profile records, you can use the schemas workspace in the Experience Platform UI to define identity fields, including the primary identity. Read the guide on [defining identity fields in the UI](../../xdm/ui/fields/identity.md) for more information.
 
 >[!BEGINSHADEBOX]
 
