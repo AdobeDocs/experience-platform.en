@@ -33,7 +33,7 @@ Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and si
 
 ## Subscribe to events
 
->[NOTE!]
+>[!NOTE]
 >
 >The data ingestion notification will be deprecated from the Adobe IO subscription. Instead, you should use the **Sources Flow Run Info** I/O event.
 
