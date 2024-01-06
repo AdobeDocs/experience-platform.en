@@ -68,3 +68,21 @@ The [!UICONTROL Activate destination] page appears. For more information on the 
 ## Next steps {#next-steps}
 
 After reading this guide, you now have a better understanding of how to create and use your account audiences in Adobe Experience Platform. To learn how to use other types of audiences in Platform, please read the [Segmentation Service UI guide](./overview.md).
+
+## Appendix {#appendix}
+
+The following section provides additional information about account audiences.
+
+### Account segmentation validation {#validation}
+
+When using account audiences, the audience **must** comply with the following constraints:
+
+- The maximum lookback window for Experience Events is **30 days**.
+- The maximum depth and breadth of a boolean condition is **5**.
+- The maximum depth of a cross entity (?) is **5**.
+- Custom entities **cannot** be used.
+- RHS???
+- Account audiences **cannot** use `inSegment` events.
+- Account audiences **cannot** use sequential events.
+- Account audiences **cannot** use maps.
+- The maximum number of nested objects is **10**.
