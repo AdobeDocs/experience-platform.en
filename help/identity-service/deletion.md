@@ -25,7 +25,7 @@ The document below references the following features of Experience Platform:
 
 ## Single identity deletions
 
-Single identity deletion requests allow you to delete an identity within a graph, resulting in the removal of links tied to a single user identity associated to an identity namespace. Uou can use mechanisms provided by [Privacy Service](../privacy-service/home.md) for use cases such as customer requests for data deletion and compliance to privacy regulations like the General Data Protection Regulation (GDPR).
+Single identity deletion requests allow you to delete an identity within a graph, resulting in the removal of links tied to a single user identity associated to an identity namespace. You can use mechanisms provided by [Privacy Service](../privacy-service/home.md) for use cases such as customer requests for data deletion and compliance to privacy regulations like the General Data Protection Regulation (GDPR).
 
 The sections below outline the mechanisms you can use for single identity deletion requests in Experience Platform.
 
