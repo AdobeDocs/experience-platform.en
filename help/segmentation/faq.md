@@ -25,7 +25,7 @@ Yes, externally generated pre-built audiences are supported with Audience Portal
 
 In order to upload externally generated audiences, you need to have both the "Manage audiences/segments" and the "Manage datasets" permissions. There are no specific role-based controls required to upload externally generated audiences.
 
-### What happens when I upload an externally generated audience? What things are created?
+### What happens when I upload an externally generated audience? What gets created during this process?
 
 The following items are created when you upload an externally generated audience:
 
@@ -34,6 +34,7 @@ The following items are created when you upload an externally generated audience
 - Batch job
   - A batch job will **automatically** run when you upload an externally generated audience. This means that you do **not** need to wait for the daily segmentation job to run in order to activate the externally generated audience.
 - Ad hoc schema
+  - A **new** XDM schema will be created for use with the externally generated audience. The fields in this XDM schema are namespaced for usage with the dataset that was also created.
 
 ### What is an externally generated audience comprised of? What happens to this data when it's imported to Platform?
 
@@ -69,7 +70,7 @@ The organization-specific default merge policy is automatically applied when upl
 
 ### Where can I activate externally generated audiences to? 
 
-An externally generated audience can be mapped to any destination and can be used in Adobe Journey Optimizer campaigns.
+An externally generated audience can be mapped to any RTCDP destination and can be used in Adobe Journey Optimizer campaigns.
 
 ### How soon are externally generated audiences ready for activation?
 
@@ -210,7 +211,7 @@ For more details about using Audience Composition, please read the [Audience Com
 
 Audiences are automatically saved while creating them in Audience Composition. The audience's creation time will be the first time this automatic save occurs.
 
-The audience's evaluation time will be ???
+After the audience has been created, it can take up to 24 hours to be evaluated.
 
 ### When can I use the audience I created?
 
