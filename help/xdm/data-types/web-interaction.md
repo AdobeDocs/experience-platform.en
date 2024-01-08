@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;web interaction;datatype;data-type;data type;
 solution: Experience Platform
 title: Web Interaction Data Type
-description: This document provides an overview of the web interaction Experience Data Model (XDM) data type.
+description: Learn about the web interaction Experience Data Model (XDM) data type.
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 ---
 # [!UICONTROL Web interaction] data type
