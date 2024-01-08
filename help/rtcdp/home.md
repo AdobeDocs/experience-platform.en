@@ -8,7 +8,7 @@ product: Real-Time Customer Data Platform
 
 Use Adobe Real-Time Customer Data Platform (Real-Time CDP) to bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time. Read the [Real-Time CDP overview](/help/rtcdp/overview.md) for more information.
 
-## What's new?
+## What's new? {#whats-new}
 
 Get a glimpse of the newest enhancements in Real-Time CDP product and documentation! For a comprehensive list of features, improvements, and fixes, check out the detailed [Release Notes](/help/release-notes/latest/latest.md). Stay up-to-date with the latest changes in our documentation by visiting the [documentation updates section of the monthly release notes](/help/release-notes/latest/latest.md#documentation-updates).
 
@@ -46,15 +46,7 @@ Execute upper-funnel marketing in Real-Time CDP, with partner-sourced prospect p
 
 >[!ENDTABS]
 
-<!--
-
-## What do you want to achieve with Real-Time CDP?
-
-I want to collect data 
-
--->
-
-## Start with the basics
+## Start with the basics {#start-with-basics}
 
 Start by reading the material in the links below to familiarize yourself with Real-Time CDP concepts, user interfaces, workflows, and suggested use cases. 
 
@@ -66,7 +58,7 @@ Start by reading the material in the links below to familiarize yourself with Re
     </td>
     <td>
     <a href="/help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/start-campaign.jpeg"></a>
-    <div><strong>Which Real-Time CDP edition is right for my company</strong><br/>Understand the differences between the different business-to-consumer (B2C), business-to-business (B2B), and business-to-person (B2P) offerings of Real-Time CDP and decide which one is best for your company.</div>
+    <div><strong>Which Real-Time CDP edition is right for my company</strong><br/>Understand the differences between the different editions of Real-Time CDP and decide which one is best for your company.</div>
     </td>
     <td>
     <a href="/help/landing/ui-guide.md"><img src="assets/do-not-localize/start-interface.jpeg"></a>
@@ -92,7 +84,7 @@ Start by reading the material in the links below to familiarize yourself with Re
     </tr>
 </table>
 
-## Explore the core pillars of Real-Time CDP and the documentation
+## Explore the core pillars of Real-Time CDP and the documentation {#explore-core-pillars}
 
 Understand the four core pillars of Adobe Real-Time CDP that help you:
 
@@ -109,7 +101,7 @@ Explore the product documentation links below to understand how the four core pi
   <tr style="border: 0;">
     <td>
       <img src="assets/do-not-localize/icon-data.svg" width="35px"><br/>
-      <strong>Data ingestion and management</strong><br/>Explore the many ways that you can get data into Real-Time CDP. <br/><a href="/help/ingestion/batch-ingestion/overview.md">Batch ingestion</a> - <a href="/help/ingestion/streaming-ingestion/overview.md">Streaming ingestion</a> - <a href="/help/sources/home.md">Sources</a> - <a href="/help/xdm/schema/composition.md">Schemas</a> - <a href="/help/catalog/datasets/overview.md">Datasets</a> - <a href="/help/query-service/home.md">Queries</a>
+      <strong>Data ingestion and management</strong><br/>Explore the many ways in which you can get data into Real-Time CDP. <br/><a href="/help/ingestion/batch-ingestion/overview.md">Batch ingestion</a> - <a href="/help/ingestion/streaming-ingestion/overview.md">Streaming ingestion</a> - <a href="/help/sources/home.md">Sources</a> - <a href="/help/xdm/schema/composition.md">Schemas</a> - <a href="/help/catalog/datasets/overview.md">Datasets</a> - <a href="/help/query-service/home.md">Queries</a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon_profile-audience.svg" width="35px"><br/>
@@ -127,11 +119,11 @@ Explore the product documentation links below to understand how the four core pi
   <tr style="border: 0;">
     <td>
       <img src="assets/do-not-localize/icon-configure.svg" width="35px"><br/>
-      <strong>Configuration and administration</strong><br/>As an administrator, learn how you can assist your team with the right permissions, access controls and sandbox configurations. <br/><a href="/help/access-control/home.md">Access control</a> - <a href="/help/access-control/abac/overview.md">Attribute-based access control</a> - <a href="/help/access-control/abac/end-to-end-guide.md">End-to-end guide</a> - <a href="/help/sandboxes/home.md">Sandboxes management</a> 
+      <strong>Configuration and administration</strong><br/>As an administrator, learn how you can assist your team with the right permissions, access controls, and sandbox configurations. <br/><a href="/help/access-control/home.md">Access control</a> - <a href="/help/access-control/abac/overview.md">Attribute-based access control</a> - <a href="/help/access-control/abac/end-to-end-guide.md">End-to-end guide</a> - <a href="/help/sandboxes/home.md">Sandboxes management</a> 
     </td>
     <td>
       <img src="assets/do-not-localize/icon-cloud.svg" width="35px"><br/>
-      <strong>Cloud and AI/ML capabilities</strong><br/>AI and ML capabilities assist you at every step of the way in multiple dashboards. Some highlights include the areas below. <br/><a href="/help/rtcdp/segmentation/customer-ai.md">Customer AI</a> -  
+      <strong>Cloud and AI/ML capabilities</strong><br/>AI and ML capabilities assist you at every step of the way in multiple dashboards. Some highlights include the areas below. <br/> <a href="/help/segmentation/ui/lookalike-audiences.md">Lookalike audiences</a> - <a href="/help/rtcdp/segmentation/customer-ai.md">Customer AI</a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md">Related accounts</a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md">Predictive lead and account scoring</a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md">Lead-to-account matching</a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon-learn.svg" width="35px"><br/>
