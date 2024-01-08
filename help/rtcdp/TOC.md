@@ -8,7 +8,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
 
 # Real-Time Customer Data Platform Help {#rtcdp}
 
-* [Real-Time CDP documentation](rtcdp-home.md)
+* [Real-Time CDP documentation](home.md)
 * Get started {#intro}
   * Real-Time CDP {#rtcdp-intro}
     * [Real-Time CDP overview](overview.md)
