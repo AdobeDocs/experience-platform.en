@@ -10,6 +10,8 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 ## Version 2.21.4 - January 10, 2023
 
+**Fixes and improvements**
+
 * Fixed an issue where saving Config Overrides without all 3 environments set would crash the extension UI.
 * Fixed an issue where the root clear existing value checkbox did not populate when editing an update variable action.
 

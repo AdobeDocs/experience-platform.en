@@ -14,7 +14,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **Fixes and improvements**
 
-* Fixed an issue where identity errors were masking other errors. Changed identity errors to warnings.
+* Fixed an issue where identity errors were masking other errors, and changed identity errors to warnings.
 * Fixed an issue where bottom of page calls would never send when there was a top of page call with renderDecisions set to false.
 * Fixed an issue where Web SDK failed to read cross domain identities when there were multiple adobe_mc query string parameters.
 
