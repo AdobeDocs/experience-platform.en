@@ -78,6 +78,10 @@ The **[!UICONTROL Delete user role]** dialog appears, prompting you to confirm t
 
 You will be returned to the **[!UICONTROL Roles]** tab.
 
+The following video is intended to support your understanding of creating a new role and managing users for that role.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+
 ## Next steps
 
 With a new role created, you can proceed to the next step to [manage permissions for a role](permissions.md).
