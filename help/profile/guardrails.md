@@ -122,7 +122,7 @@ The guardrails outlined in this section refer to the number and nature of audien
 
 ## Expected availability
 
-The following section outlines the **expected** availability for audiences and merge policies in downstream services such as RTCDP destinations:
+The following section outlines the **expected** availability for audiences and merge policies in downstream services such as Real-Time CDP destinations:
 
 | Sandbox type | Time |
 | ------------ | ---- |
