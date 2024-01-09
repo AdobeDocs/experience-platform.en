@@ -42,6 +42,10 @@ The new role is successfully created, and you are redirected to the **[!UICONTRO
 
 See the sections on [managing permissions for a role](#manage-permissions-for-a-role) for more details on how to manage role permissions once they are created.
 
+The following video is intended to support your understanding of creating a new role and managing users for that role.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+
 ## Duplicate a role
 
 To duplicate an existing role, select the role from the **[!UICONTROL Roles]** tab. Alternatively, use the filter option to filter the results to find the role you want to duplicate.
@@ -77,10 +81,6 @@ The **[!UICONTROL Delete user role]** dialog appears, prompting you to confirm t
 ![flac-confirm-role-delete](../../images/flac-ui/flac-confirm-role-delete.png)
 
 You will be returned to the **[!UICONTROL Roles]** tab.
-
-The following video is intended to support your understanding of creating a new role and managing users for that role.
-
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## Next steps
 
