@@ -68,6 +68,18 @@ The diagram below visually displays which permissions you need depending on the 
 
 ![Diagram showing the required permissions to perform certain actions on destinations.](/help/destinations/assets/overview/permissions-diagram.png)
 
+The table below visually displays which permissions you need depending on the operations that you want to perform on destinations.
+
+| Get read access to view destinations in the catalog and connected destinations in the browse tab | Create, edit, delete destination connections | Create destination dataflows to export/activate data to a connected destination | Add or remove segments in existing dataflows without having access to the field mapping step |
+|---|---|---|---|
+| View destinations | View destinations | View destinations | View destinations |
+|  | Manage destinations | Activate Destinations | Activate Segment without Mapping |
+|  | View segments | View segments |  |
+|  | View profiles | View profiles |  |
+|  | View identities |  |  |
+
+{style="table-layout:auto"}
+
 For more information about access controls, see the [Access control user guide](../access-control/ui/overview.md).
 
 ### Attribute-based access control for destinations {#attribute-based-access}
