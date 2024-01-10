@@ -10,6 +10,14 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.19.2 - January 10, 2024
+
+**Fixes and improvements**
+
+* Fixed an issue where identity errors were masking other errors, and changed identity errors to warnings.
+* Fixed an issue where bottom of page calls would never send when there was a top of page call with renderDecisions set to false.
+* Fixed an issue where Web SDK failed to read cross domain identities when there were multiple adobe_mc query string parameters.
+
 ## Version 2.19.1 - November 10, 2023
 
 **Fixes and improvements**
