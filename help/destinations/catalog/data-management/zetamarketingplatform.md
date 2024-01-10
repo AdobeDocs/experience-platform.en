@@ -33,13 +33,17 @@ An advertiser wants to target users in audiences with ads through the Zeta DSP a
 
 ## Supported identities {#supported-identities}
 
-The ZMP destination connector will allow you to map any platform identities to the identities that are set in your ZMP account. The connector automagically fills out the target fields that you can choose during the mapping step.
+The ZMP destination connector will allow you to map platform identities to identities that the ZMP accepts. 
+>[!IMPORTANT]
+> Please note that it is required to map a source identity to ZMP's `uid` target identity so that the ZMP can uniquely differentiate each profile. 
+Identities such as the standard Email namespace in the platform can be directly mapped to the `uid`. For other identities, you may need to create a custom namespace as mentioned in the table below.
 
 [!DNL Zeta Marketing Platform] supports the activation of custom user IDs described in the table below. For more details, see [identities](/help/identity-service/namespaces.md).
 
-|Target Identity|Description|Notes|
----------|----------|----------|
-|Email|Email address|Select email when you want to identify a unique profile using their email address.|
+|Target Identity|Description|Considerations|Notes|
+---------|----------|----------|----------|
+|uid|Unique id that ZMP uses to differentiate customer profiles|Mandatory|Select `Email` standard identity namespace when you want to identify unique profiles using their email address. For other identities, create a custom identity namespace `User Id` to represent the unique profiles. Map `userId` to `uid`|
+|email_md5_id|Email MD5 that represents each customer profile|Optional|Select this target identity when you have email md5 emails in customer profiles. Create a custom identity namespace `User Id` to represent the unique profiles and map it to the `uid` target identity|
 
 {style="table-layout:auto"}
 
