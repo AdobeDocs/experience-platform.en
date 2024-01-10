@@ -55,15 +55,15 @@ Run the `setConsent` command when calling your configured instance of the Web SD
 
 ```js
 alloy("setConsent", {
-  consent: [{
-    standard: "Adobe",
-    version: "2.0",
-    value: {
-      collect: {
-        val: "y"
+  "consent": [{
+    "standard": "Adobe",
+    "version": "2.0",
+    "value": {
+      "collect": {
+        "val": "y"
       },
-      metadata: {
-        time: "YYYY-03-17T15:48:42-07:00"
+      "metadata": {
+        "time": "YYYY-03-17T15:48:42-07:00"
       }
     }
   }]
@@ -78,16 +78,17 @@ alloy("setConsent", {
 * **`version`**: A string representing the version of the consent standard. Set this property to `"2.0"` for the IAB TCF 2.0 standard.
 * **`value`**: A string containing the consent value.
 * **`gdprApplies`**: A boolean that determines if GDPR applies to this consent value. Its default value is `true`.
-* **`personalData`**: A boolean that determines if the event data associated with this user contains personal data. Its default value is `false`.
+* **`gdprContainsPersonalData`**: A boolean that determines if the event data associated with this user contains personal data. Its default value is `false`.
 
 ```js
 alloy("setConsent", {
-    consent: [{
-      standard: "IAB TCF",
-      version: "2.0",
-      value: "CO1Z4yuO1Z4yuAcABBENArCsAP_AAH_AACiQGCNX_T5eb2vj-3Zdt_tkaYwf55y3o-wzhhaIse8NwIeH7BoGP2MwvBX4JiQCGBAkkiKBAQdtHGhcCQABgIhRiTKMYk2MjzNKJLJAilsbe0NYCD9mnsHT3ZCY70--u__7P3fAwQgkwVLwCRIWwgJJs0ohTABCOICpBwCUEIQEClhoACAnYFAR6gAAAIDAACAAAAEEEBAIABAAAkIgAAAEBAKACIBAACAEaAhAARIEAsAJEgCAAVA0JACKIIQBCDgwCjlACAoAAAAA.YAAAAAAAAAAA",
-      gdprApplies: true
-    }]
+  consent: [{
+    "standard": "IAB TCF",
+    "version": "2.0",
+    "value": "CO1Z4yuO1Z4yuAcABBENArCsAP_AAH_AACiQGCNX_T5eb2vj-3Zdt_tkaYwf55y3o-wzhhaIse8NwIeH7BoGP2MwvBX4JiQCGBAkkiKBAQdtHGhcCQABgIhRiTKMYk2MjzNKJLJAilsbe0NYCD9mnsHT3ZCY70--u__7P3fAwQgkwVLwCRIWwgJJs0ohTABCOICpBwCUEIQEClhoACAnYFAR6gAAAIDAACAAAAEEEBAIABAAAkIgAAAEBAKACIBAACAEaAhAARIEAsAJEgCAAVA0JACKIIQBCDgwCjlACAoAAAAA.YAAAAAAAAAAA",
+    "gdprApplies": true,
+    "gdprContainsPersonalData": true
+  }]
 });
 ```
 
@@ -102,13 +103,13 @@ alloy("setConsent", {
 ```js
 // Set consent using the Adobe 1.0 standard
 alloy("setConsent", {
-    consent: [{
-      standard: "Adobe",
-      version: "1.0",
-      value: {
-        general: "in"
-      }
-    }]
+  "consent": [{
+    "standard": "Adobe",
+    "version": "1.0",
+    "value": {
+      "general": "in"
+    }
+  }]
 });
 ```
 

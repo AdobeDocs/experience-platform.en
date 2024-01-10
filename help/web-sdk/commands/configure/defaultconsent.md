@@ -27,7 +27,7 @@ Select the desired radio button under **[!UICONTROL Default consent]** when [con
 
 ## Set default consent using the Web SDK JavaScript library
 
-Set the `defaultConsent` string property to the desired consent level when running the `configure` command. This property only supports three values: `"in"`, `"out"`, and `"pending"`.
+Set the `defaultConsent` string property to the desired consent level when running the `configure` command. This property is case-sensitive, and supports only the following three values: `"in"`, `"out"`, and `"pending"`. If you attempt to use any other value, the library throws an error.
 
 ```js
 alloy("configure", {

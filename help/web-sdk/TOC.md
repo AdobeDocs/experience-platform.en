@@ -39,7 +39,6 @@ feature: Web SDK
   * sendEvent {#sendevent}
     * [Overview](commands/sendevent/overview.md)
     * [data](commands/sendevent/data.md)
-    * [decisionScopes](commands/sendevent/decisionscopes.md)
     * [documentUnloading](commands/sendevent/documentunloading.md)
     * [personalization](commands/sendevent/personalization.md)
     * [renderDecisions](commands/sendevent/renderdecisions.md)
