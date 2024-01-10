@@ -7,7 +7,7 @@ exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
 ---
 # Real-Time Customer Data Platform overview
 
-## What is Real-Time CDP
+## What is Real-Time CDP {#what-is-rtcdp}
 
 Built on Adobe Experience Platform, Adobe Real-Time Customer Data Platform (Real-Time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time.
 
@@ -15,11 +15,11 @@ Built on Adobe Experience Platform, Adobe Real-Time Customer Data Platform (Real
 
 Real-Time CDP includes tools for data governance, identity management, advanced segmentation, and data science so that you can build profiles and define audiences, as well as derive rich insights while being able to enforce strict data governance policies.
 
-Real-Time Customer Data Platform connects to a large ecosystem of partners, not to mention native integrations with Adobe Experience Cloud, so you can seamlessly activate these audiences and deliver great customer experiences across all channels, from on-site or in-app personalization to email, paid media, call centers, connected devices, and more.
+Real-Time CDP connects to a large ecosystem of partners, not to mention native integrations with Adobe Experience Cloud, so you can seamlessly activate these audiences and deliver great customer experiences across all channels, from on-site or in-app personalization to email, paid media, call centers, connected devices, and more.
 
-## What you can do with Real-Time CDP
+## What you can do with Real-Time CDP {#what-you-can-do-with-rtcdp}
 
-With Real-Time Customer Data Platform, you can:
+With Real-Time CDP, you can:
 
 * Achieve a single view of your customer by combining data from across the enterprise.
 * Responsibly manage profiles with trusted governance and privacy controls for known and anonymous identifiers.

@@ -10,13 +10,13 @@ Use Adobe Real-Time Customer Data Platform (Real-Time CDP) to bring together kno
 
 ## What's new? {#whats-new}
 
-Get a glimpse of the newest enhancements in Real-Time CDP product and documentation! For a comprehensive list of features, improvements, and fixes, check out the detailed [Release Notes](/help/release-notes/latest/latest.md). Stay up-to-date with the latest changes in our documentation by visiting the [documentation updates section of the monthly release notes](/help/release-notes/latest/latest.md#documentation-updates).
+Get a glimpse of the newest enhancements in Real-Time CDP product and documentation. For a comprehensive list of features, improvements, and fixes, check out the detailed [Release Notes](/help/release-notes/latest/latest.md). Stay up-to-date with the latest changes in our documentation by visiting the [documentation updates section of the monthly release notes](/help/release-notes/latest/latest.md#documentation-updates).
 
 >[!BEGINTABS]
 
 >[!TAB Sandbox tooling]
 
-Use the sandbox tooling feature to improve configuration accuracy across sandboxes and seamlessly export and import sandbox configurations between sandboxes. You can use the sandbox tooling feature to select different objects and export them into a package.
+Use the sandbox tooling feature to improve configuration accuracy across sandboxes and seamlessly export and import configurations between sandboxes. You can use the sandbox tooling feature to select different objects and export them into a package.
 
 [![image](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
 
