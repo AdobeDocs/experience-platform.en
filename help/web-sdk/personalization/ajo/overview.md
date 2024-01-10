@@ -140,6 +140,6 @@ Sample Journey Optimizer content proposition:
 
 ## Debugging {#debugging}
 
-To debug Adobe Journey Optimizer personalization implementations, use [Web SDK debugging](/help/edge/use-cases/debugging.md). [!DNL Adobe Journey Optimizer] debug traces are available when troubleshooting using [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). Check for events with the `AJO:` prefix.
+To debug Adobe Journey Optimizer personalization implementations, use [Web SDK debugging](/help/web-sdk/use-cases/debugging.md). [!DNL Adobe Journey Optimizer] debug traces are available when troubleshooting using [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). Check for events with the `AJO:` prefix.
 
 ![assurance-ajo-trace](./assets/assurance-ajo-trace.png)

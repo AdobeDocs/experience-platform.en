@@ -4,7 +4,7 @@ description: Send non-XDM data to Adobe.
 ---
 # data
 
-The `data` property allows you to send data to Adobe that does not match an XDM schema. It is useful in non-XDM scenarios, such as updating an [Adobe Target profile](/help/edge/personalization/adobe-target/target-overview.md). When data arrives at Adobe, you can use the datastream mapping tool to assign XDM fields to each field in the `data` property.
+The `data` property allows you to send data to Adobe that does not match an XDM schema. It is useful in non-XDM scenarios, such as updating an [Adobe Target profile](/help/web-sdk/personalization/adobe-target/target-overview.md). When data arrives at Adobe, you can use the datastream mapping tool to assign XDM fields to each field in the `data` property.
 
 >[!IMPORTANT]
 >

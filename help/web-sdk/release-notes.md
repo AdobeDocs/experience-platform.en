@@ -57,7 +57,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-* Added support for [`onBeforeLinkClickSend`](/help/edge/commands/configure/onbeforelinkclicksend.md) link click callback.
+* Added support for [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) link click callback.
 * Added support for Adobe Journey Optimizer click tracking.
 
 **Fixes and improvements**
@@ -73,7 +73,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 * Fixed an issue with Adobe Target VEC custom code actions where the code was injected into an alternate location than with [!DNL at.js].
 * Fixed an issue where in some edge cases the "referer" header was not set properly on requests to the Edge Network.
-* Fixed an issue where [user agent client hint](/help/edge/use-cases/client-hints.md) properties could be set to an incorrect type.
+* Fixed an issue where [user agent client hint](/help/web-sdk/use-cases/client-hints.md) properties could be set to an incorrect type.
 * Fixed an issue where `placeContext.localTime` did not match the schema.
 
 ## Version 2.13.1 - October 13, 2022
@@ -86,8 +86,8 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **New features**
 
 * Added support for [Page by Page Full Migration](home.md#migrating-to-web-sdk). The Adobe Target profile will now be preserved as a visitor moves between at.js and Web SDK pages.
-* Added configurable support for [high entropy User-Agent Client Hints](/help/edge/use-cases/client-hints.md).
-* Added support for the [`applyResponse`](/help/edge/commands/applyresponse.md) command. This enables hybrid personalization via the [Edge Network Server API](../server-api/overview.md).
+* Added configurable support for [high entropy User-Agent Client Hints](/help/web-sdk/use-cases/client-hints.md).
+* Added support for the [`applyResponse`](/help/web-sdk/commands/applyresponse.md) command. This enables hybrid personalization via the [Edge Network Server API](../server-api/overview.md).
 * QA mode links now work across multiple pages.
 
 **Fixes and improvements**
@@ -164,7 +164,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.6.0 - July 27, 2021
 
-* Provides more personalization content in the `sendEvent` resolved promise, including Adobe Target response tokens. When the `sendEvent` command is executed, a promise is returned, which is eventually resolved with a `result` object containing information received from the server. Previously, this result object included a property named `decisions`. This `decisions` property has been deprecated. A new property, `propositions`, has been added. This new property provides customers with access to more personalization content, including [response tokens](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html).
+* Provides more personalization content in the `sendEvent` resolved promise, including Adobe Target response tokens. When the `sendEvent` command is executed, a promise is returned, which is eventually resolved with a `result` object containing information received from the server. Previously, this result object included a property named `decisions`. This `decisions` property has been deprecated. A new property, `propositions`, has been added. This new property provides customers with access to more personalization content, including [response tokens](/help/web-sdk/personalization/adobe-target/accessing-response-tokens.md).
 
 ## Version 2.5.0 - June 2021
 
@@ -175,13 +175,13 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.4.0 - March 2021
 
-* The SDK can now be installed as an [NPM package](/help/edge/install/npm.md).
-* Added support for an `out` option when [configuring default consent](/help/edge/commands/configure/defaultconsent.md), which drops all events until consent is received (the existing `pending` option queues events and sends them once consent is received).
-* The [`onBeforeEventSend`](/help/edge/commands/configure/onbeforeeventsend.md) callback can now be used to prevent an event from being sent.
+* The SDK can now be installed as an [NPM package](/help/web-sdk/install/npm.md).
+* Added support for an `out` option when [configuring default consent](/help/web-sdk/commands/configure/defaultconsent.md), which drops all events until consent is received (the existing `pending` option queues events and sends them once consent is received).
+* The [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) callback can now be used to prevent an event from being sent.
 * Now uses an XDM schema field group instead of `meta.personalization` when sending events about personalized content being rendered or clicked.
-* The [`getIdentity`](/help/edge/commands/getidentity.md) command now returns the edge region ID alongside the identity.
+* The [`getIdentity`](/help/web-sdk/commands/getidentity.md) command now returns the edge region ID alongside the identity.
 * Warnings and errors received from the server have been improved and are handled in a more appropriate fashion.
-* Added support for Adobe's Consent 2.0 standard for the [`setConsent`](/help/edge/commands/setconsent.md) command.
+* Added support for Adobe's Consent 2.0 standard for the [`setConsent`](/help/web-sdk/commands/setconsent.md) command.
 * Consent preferences, when received, are hashed and stored in local storage for an optimized integration among CMPs, Platform Web SDK, and Platform Edge Network. If you are collecting consent preferences, we now encourage you to call `setConsent` on every page load.
 * Two [monitoring hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` and `onCommandRejected`, have been added.
 * Bug Fix: Personalization interaction notification events would contain duplicate information about the same activity when a user navigated to a new single-page app view, back to the original view, and clicked an element qualifying for conversion.

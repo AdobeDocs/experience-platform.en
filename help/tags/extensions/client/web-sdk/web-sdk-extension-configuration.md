@@ -103,9 +103,9 @@ To use the prehiding snippet, copy and paste it inside the `<head>` element of y
 
 ![Image showing the data collection settings of the Web SDK tag extension in the Tags UI](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Callback function]**: The callback function provided in the extension is also called the [`onBeforeEventSend` function](/help/edge/commands/configure/onbeforeeventsend.md) in the library. This function allows you to modify events globally before they're sent to the Edge Network. 
+* **[!UICONTROL Callback function]**: The callback function provided in the extension is also called the [`onBeforeEventSend` function](/help/web-sdk/commands/configure/onbeforeeventsend.md) in the library. This function allows you to modify events globally before they're sent to the Edge Network. 
 * **[!UICONTROL Enable click data collection]**: Web SDK can automatically collect link click information for you. By default, this feature is enabled but can be disabled using this option. Links are also labeled as download links if they contain one of the download expressions listed in the [!UICONTROL Download Link Qualifier] textbox. Adobe provides you with some default download link qualifiers. You can edit them according to your needs.
-* **[!UICONTROL Automatically collected context data]**: By default, Web SDK collects certain context data regarding device, web, environment, and place context. If you don't want this data collected or you only want certain categories of data collected, select **[!UICONTROL Specific context information]** and select the data that you want to be collected. See [`context`](/help/edge/commands/configure/context.md) for more information.
+* **[!UICONTROL Automatically collected context data]**: By default, Web SDK collects certain context data regarding device, web, environment, and place context. If you don't want this data collected or you only want certain categories of data collected, select **[!UICONTROL Specific context information]** and select the data that you want to be collected. See [`context`](/help/web-sdk/commands/configure/context.md) for more information.
 
 ## Configure datastream overrides {#datastream-overrides}
 

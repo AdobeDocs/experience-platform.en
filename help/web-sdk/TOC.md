@@ -7,7 +7,7 @@ user-guide-description: Interact with Experience Cloud services through the Edge
 feature: Web SDK
 ---
 
-# Adobe Experience Platform Web SDK {#edge}
+# Adobe Experience Platform Web SDK {#web-sdk}
 
 * [Platform Web SDK overview](home.md)
 * [Release notes](release-notes.md)
@@ -85,8 +85,8 @@ feature: Web SDK
   * [Supporting consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
     * [Overview](consent/iab-tcf/overview.md)
-    * [Integrate with tags](consent/iab-tcf/with-launch.md)
-    * [Integrate without tags](consent/iab-tcf/without-launch.md)
+    * [Integrate with tags](consent/iab-tcf/with-tags.md)
+    * [Integrate without tags](consent/iab-tcf/without-tags.md)
 
 * Use cases {#use-cases}
   * [Adobe Analytics](use-cases/adobe-analytics.md)

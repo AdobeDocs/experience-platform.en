@@ -246,7 +246,7 @@ alloy("sendEvent", {
 
 ## Debugging
 
-mboxTrace and mboxDebug have been deprecated. Use a method of [Web SDK debugging](/help/edge/use-cases/debugging.md) instead.
+mboxTrace and mboxDebug have been deprecated. Use a method of [Web SDK debugging](/help/web-sdk/use-cases/debugging.md) instead.
 
 ## Terminology
 

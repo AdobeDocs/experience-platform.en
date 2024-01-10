@@ -7,7 +7,7 @@ exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
 
 Adobe Experience Platform Web SDK supports the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows you how to set up a tag property for sending IAB TCF 2.0 consent information to Adobe using the Adobe Experience Platform Web SDK tag extension.
 
-If you do not wish to use tags, please refer to the guide on [using IAB TCF 2.0 without tags](./without-launch.md).
+If you do not wish to use tags, please refer to the guide on [using IAB TCF 2.0 without tags](./without-tags.md).
 
 ## Getting started
 
@@ -17,11 +17,11 @@ Additionally, this guide requires you to have a working understanding of Adobe E
 
 ## Setting default consent
 
-Within the extension configuration, there is a setting for default consent. This controls the behavior of customers who do not have a consent cookie. If you want to queue Experience Events for customers who do not have a consent cookie, set this to `pending`. If you want to discard Experience Events for customers who do not have a consent cookie, set this to `out`. You can also use a data element to dynamically set the default consent value. See [`defaultConsent`](/help/edge/commands/configure/defaultconsent.md) for more information.
+Within the extension configuration, there is a setting for default consent. This controls the behavior of customers who do not have a consent cookie. If you want to queue Experience Events for customers who do not have a consent cookie, set this to `pending`. If you want to discard Experience Events for customers who do not have a consent cookie, set this to `out`. You can also use a data element to dynamically set the default consent value. See [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) for more information.
 
 ## Updating Profile with consent information {#consent-code-1}
 
-To call the [`setConsent`](/help/edge/commands/setconsent.md) action when your customers consent preferences have changed, create a tag rule. Start by adding a new event and choose the Core extension's "Custom Code" event type.
+To call the [`setConsent`](/help/web-sdk/commands/setconsent.md) action when your customers consent preferences have changed, create a tag rule. Start by adding a new event and choose the Core extension's "Custom Code" event type.
 
 Use the following code sample for your new event:
 

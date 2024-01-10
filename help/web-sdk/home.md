@@ -67,8 +67,8 @@ To simplify your migration from any of the [existing libraries](#sdks) to Web SD
 
 Before migrating pages that use `AT.js` to Web SDK, make sure to enable the following Web SDK configuration options. These options ensure that the visitor profile is kept while navigating from pages with `AT.js` to pages using Web SDK.
 
-* [`idMigrationEnabled`](/help/edge/commands/configure/idmigrationenabled.md)
-* [`targetMigrationEnabled`](/help/edge/commands/configure/targetmigrationenabled.md)
+* [`idMigrationEnabled`](/help/web-sdk/commands/configure/idmigrationenabled.md)
+* [`targetMigrationEnabled`](/help/web-sdk/commands/configure/targetmigrationenabled.md)
 
 
 >[!IMPORTANT]

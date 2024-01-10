@@ -6,7 +6,7 @@ exl-id: 14f1802a-0f8d-487f-ae17-5daaaab05162
 ---
 # Integrate IAB TCF 2.0 support with the Platform Web SDK
 
-This guide shows how to integrate the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0) with Adobe Experience Platform Web SDK without using tags. For an overview of integrating with IAB TCF 2.0, read the [overview](./overview.md). For a guide on how to integrate with tags, read the [IAB TCF 2.0 guide for tags](./with-launch.md).
+This guide shows how to integrate the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0) with Adobe Experience Platform Web SDK without using tags. For an overview of integrating with IAB TCF 2.0, read the [overview](./overview.md). For a guide on how to integrate with tags, read the [IAB TCF 2.0 guide for tags](./with-tags.md).
 
 ## Getting started
 
@@ -22,7 +22,7 @@ Additionally, this guide requires you to have a working understanding of Adobe E
 
 ## Enabling default consent
 
-If you want to treat all unknown users the same, you can set [`defaultConsent`](/help/edge/commands/configure/defaultconsent.md) to `pending` or `out`. This queues or discards Experience Events until consent preferences are received.
+If you want to treat all unknown users the same, you can set [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) to `pending` or `out`. This queues or discards Experience Events until consent preferences are received.
 
 ### Setting the default consent based on `gdprApplies`
 
@@ -96,7 +96,7 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 
 This example gets the consent information for the TCF API, and then sends an event with the consent information added to the XDM schema.
 
-The other way to add the consent information to every request is with the [`onBeforeEventSend`](/help/edge/commands/configure/onbeforeeventsend.md) callback.
+The other way to add the consent information to every request is with the [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) callback.
 
 ## Next steps
 

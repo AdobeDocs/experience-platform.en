@@ -21,7 +21,7 @@ This article explains the end-to-end datastream configuration override process f
 
 >[!IMPORTANT]
 >
->Datastream overrides are only supported for [Web SDK](../edge/home.md) and [Mobile SDK](https://developer.adobe.com/client-sdks/home/) integrations. [Server API](../server-api/overview.md) integrations do not currently support datastream overrides.
+>Datastream overrides are only supported for [Web SDK](../web-sdk/home.md) and [Mobile SDK](https://developer.adobe.com/client-sdks/home/) integrations. [Server API](../server-api/overview.md) integrations do not currently support datastream overrides.
 ><br>
 >Datastream overrides should be used when you need different data sent to different datastreams. Do not use datastream overrides for personalization use cases or consent data.
 
@@ -112,7 +112,7 @@ You should now have the ID sync container overrides configured. Now you can [sen
 
 After configuring datastream overrides in the Data Collection UI, you can send the overrides to the Edge Network through the Web SDK or Mobile SDK.
 
-* **Web SDK**: See [Command overrides](../edge/commands/command-overrides.md) for tag extension instructions and JavaScript library code examples.
+* **Web SDK**: See [Command overrides](../web-sdk/commands/command-overrides.md) for tag extension instructions and JavaScript library code examples.
 * **Mobile SDK**: See below.
 
 ### Datastream ID override via Mobile SDK {#id-override-mobile}

@@ -59,8 +59,8 @@ To enable Offer Decisioning, perform the following steps:
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Follow the instructions to [install the SDK](/help/edge/install/overview.md) (The SDK can be installed standalone or through the UI. See the [tags quick start guide](../../../tags/quick-start/quick-start.md)) for more information.
-1. Configure the SDK for Offer Decisioning using [`decisionScopes`](/help/edge/commands/sendevent/decisionscopes.md). Additional Offer Decisioning specific steps are provided below.
+1. Follow the instructions to [install the SDK](/help/web-sdk/install/overview.md) (The SDK can be installed standalone or through the UI. See the [tags quick start guide](../../../tags/quick-start/quick-start.md)) for more information.
+1. Configure the SDK for Offer Decisioning using [`decisionScopes`](/help/web-sdk/commands/sendevent/decisionscopes.md). Additional Offer Decisioning specific steps are provided below.
 
    * Install the standalone SDK
 

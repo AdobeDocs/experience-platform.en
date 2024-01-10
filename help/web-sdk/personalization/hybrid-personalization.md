@@ -19,7 +19,7 @@ Before implementing hybrid personalization on your web properties, make sure you
 * You have decided what personalization solution you want to use. This will have an impact on the contents of the [!UICONTROL Server API] payload.
 * You have access to an application server which you can use to make the [!UICONTROL Server API] calls.
 * You have access to the [Edge Network Server API](../../server-api/authentication.md).
-* You have correctly [configured](/help/edge/commands/configure/overview.md) and deployed the Web SDK on the pages that you want to personalize.
+* You have correctly [configured](/help/web-sdk/commands/configure/overview.md) and deployed the Web SDK on the pages that you want to personalize.
 
 ## Flow diagram {#flow-diagram}
 

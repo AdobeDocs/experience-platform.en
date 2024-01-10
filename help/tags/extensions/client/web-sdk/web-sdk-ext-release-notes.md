@@ -6,7 +6,7 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 # Adobe Experience Platform Web SDK extension release notes
 
-This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](/help/web-sdk/release-notes.md).
 
 ## Version 2.21.3 - November 10, 2023
 
@@ -66,7 +66,7 @@ Contains version 2.19.1 of the Adobe Experience Platform Web SDK.
 **New features**
 
 * Contains version 2.16.0 of the Adobe Experience Platform Web SDK.
-* Added support for [datastream configuration overrides](../../../../datastreams/overrides.md).
+* Added support for [datastream configuration overrides](/help/datastreams/overrides.md).
 * Add deprecation notice to the `datasetId` option on the `sendEvent` command.
 
 
@@ -83,7 +83,7 @@ Contains version 2.19.1 of the Adobe Experience Platform Web SDK.
 **New features**
 
 * (Beta) Added **[!UICONTROL Update variable]** action and **[!UICONTROL Variable]** data element.
-* Added configuration for [`onBeforeLinkClickSend`](/help/edge/commands/configure/onbeforelinkclicksend.md) callback function.
+* Added configuration for [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) callback function.
 
 **Fixes and improvements**
 
@@ -208,10 +208,10 @@ Contains version 2.5.0 of the Adobe Experience Platform Web SDK library.
 
 Contains version 2.4.0 of the Adobe Experience Platform Web SDK library.
 
-* Added ["Document unloading"](/help/edge/commands/sendevent/documentunloading.md) checkbox to Send Event action UI.
-* Added support for an `out` option when [configuring default consent](/help/edge/commands/configure/defaultconsent.md) which drops all events until consent is received (the existing `pending` option queues events and sends them once consent is received).
+* Added ["Document unloading"](/help/web-sdk/commands/sendevent/documentunloading.md) checkbox to Send Event action UI.
+* Added support for an `out` option when [configuring default consent](/help/web-sdk/commands/configure/defaultconsent.md) which drops all events until consent is received (the existing `pending` option queues events and sends them once consent is received).
 * Added a tooltip to the default consent field.
-* Added support for Adobe's Consent 2.0 standard when using the [`setConsent`](/help/edge/commands/setconsent.md) command.
+* Added support for Adobe's Consent 2.0 standard when using the [`setConsent`](/help/web-sdk/commands/setconsent.md) command.
 * A better error now displays in the XDM Object data element UI if the user's access token is invalid or improperly provisioned.
 * Fixed a cross-origin error (which does not affect the operation of the extension) that showed up on the browser developer console when viewing an XDM Object data element.
 
@@ -236,7 +236,7 @@ Contains version 2.3.0 of the Adobe Experience Platform Web SDK library.
 ## Version 2.1.0 - August 5, 2020
 
 * Breaking Change: Remove the `syncIdentity` action and support passing those IDs in the `sendEvent` action instead. Please disable any existing rule using this action before upgrading your extension.
-* Update to Alloy v. 2.1.0 ([Release Notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html))
+* Update to Alloy v. 2.1.0 ([Release Notes](/help/web-sdk/release-notes.md))
 * Support IAB 2.0 Consent Standard in the `setConsent` action.
 * Support overriding the dataset ID in the `sendEvent` action.
 * Add a new Data Element of type `IdentityMap` which can be used to populate the `identityMap` entry in the XDM Object Data Element which is now enabled, and in the `setConsent` action.

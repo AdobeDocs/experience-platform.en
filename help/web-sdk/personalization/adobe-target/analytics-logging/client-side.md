@@ -24,8 +24,8 @@ This document covers the steps for setting up client-side A4T logging for the We
 
 This tutorial assumes that you are familiar with the fundamental concepts and processes related to using the Web SDK for personalization purposes. Please review the following documentation if you require an introduction:
 
-* [Configuring the Web SDK](/help/edge/commands/configure/overview.md)
-* [Sending events](/help/edge/commands/sendevent/overview.md)
+* [Configuring the Web SDK](/help/web-sdk/commands/configure/overview.md)
+* [Sending events](/help/web-sdk/commands/sendevent/overview.md)
 * [Rendering personalization content](../../rendering-personalization-content.md)
 
 ## Set up Analytics client-side logging {#set-up-client-side-logging}
@@ -40,7 +40,7 @@ To consider Analytics client-side logging enabled for your implementation, you m
 
 ### Retrieve [!DNL A4T] data from the SDK and send it to Analytics {#a4t-to-analytics}
 
-In order for this reporting method to work properly, you must send the [!DNL A4T] related data retrieved from the [`sendEvent`](/help/edge/commands/sendevent/overview.md) command in the Analytics hit.
+In order for this reporting method to work properly, you must send the [!DNL A4T] related data retrieved from the [`sendEvent`](/help/web-sdk/commands/sendevent/overview.md) command in the Analytics hit.
 
 When Target Edge computes a propositions response, it checks if Analytics client-side logging is enabled (i.e. if Analytics is disabled in your datastream). If client-side logging is enabled, the system adds an Analytics token to each proposition in the response.
 

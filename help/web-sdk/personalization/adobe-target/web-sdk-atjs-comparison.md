@@ -20,7 +20,7 @@ We allow our customers to download the library directly from Adobe Experience Cl
 
 The prebuilt version is available on a CDN. You can reference the library on the CDN directly on your page, or download and host it on your own infrastructure. It is available in minified and unminified formats. The unminified version is helpful for debugging purposes.
 
-See [Install the Web SDK using the JavaScript library](/help/edge/install/alloy.md) for more information.
+See [Install the Web SDK using the JavaScript library](/help/web-sdk/install/alloy.md) for more information.
 
 ## Configuring the libraries
 
@@ -67,7 +67,7 @@ window.adobe.target.init(window, document, {
 
 ### Configuring the Web SDK
 
-Configuration for the SDK is done with the [`configure`](/help/edge/commands/configure/overview.md) command. The `configure` command is *always* called first.
+Configuration for the SDK is done with the [`configure`](/help/web-sdk/commands/configure/overview.md) command. The `configure` command is *always* called first.
 
 ## How to request and automatically render Page Load Target offers
 
@@ -1207,8 +1207,8 @@ Note: All these debugging features are available with enhanced capabilities in [
 
 You have multiple debugging capabilities when using Web SDK:
 
-* Using [Assurance](../../../assurance/home.md)
-* [Web SDK debug enabled](/help/edge/use-cases/debugging.md)
+* Using [Assurance](/help/assurance/home.md)
+* [Web SDK debug enabled](/help/web-sdk/use-cases/debugging.md)
 * Use [Web SDK monitoring hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* Use [Adobe Experience Platform Debugger](../../../debugger/home.md)
+* Use [Adobe Experience Platform Debugger](/help/debugger/home.md)
 * Target Trace

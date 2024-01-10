@@ -55,7 +55,7 @@ The concept of Views can be extended much further than this. These are just a fe
 
 XDM Views can be leveraged in Adobe Target to empower marketers to run A/B and XT tests on SPAs via the Visual Experience Composer. This requires performing the following steps in order to complete a one-time developer setup: 
 
-1. Install [Adobe Experience Platform Web SDK](/help/edge/install/overview.md)
+1. Install [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md)
 2. Determine all XDM Views in your single-page application that you want to personalize.  
 3. After defining the XDM Views, in order to deliver AB or XT VEC activities, implement the `sendEvent()` function with `renderDecisions` set to `true` and the corresponding XDM View in your Single Page Application. The XDM View must be passed in `xdm.web.webPageDetails.viewName`. This step allows marketers to leverage the Visual Experience Composer to launch A/B and XT tests for those XDM.  
 
