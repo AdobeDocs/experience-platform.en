@@ -47,7 +47,7 @@ It is important to understand the following terminology when working with Offer 
 
   ![Decision copy settings.](assets/decision-scope-copy.png)
 
-* **Datastreams:** For more information, please read the [datastreams](../../../datastreams/overview.md) documentation.
+* **Datastreams:** For more information, please read the [datastreams](/help/datastreams/overview.md) documentation.
 
 * **Identity**: For more information, please read this documentation outlining how [Platform Web SDK uses Identity Service](../../identity/overview.md).
 
@@ -55,50 +55,52 @@ It is important to understand the following terminology when working with Offer 
 
 To enable Offer Decisioning, perform the following steps:
 
-1. Enabled Adobe Experience Platform in your [datastream](../../../datastreams/overview.md) and check the "Offer Decisioning" box
+1. Enabled Adobe Experience Platform in your [datastream](/help/datastreams/overview.md) and check the "Offer Decisioning" box
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Follow the instructions to [install the SDK](/help/web-sdk/install/overview.md) (The SDK can be installed standalone or through the UI. See the [tags quick start guide](../../../tags/quick-start/quick-start.md)) for more information.
-1. Configure the SDK for Offer Decisioning using [`decisionScopes`](/help/web-sdk/commands/sendevent/decisionscopes.md). Additional Offer Decisioning specific steps are provided below.
+1. Follow the instructions to [install the SDK](/help/web-sdk/install/overview.md) (The SDK can be installed standalone or through the UI. See the [tags quick start guide](/help/tags/quick-start/quick-start.md)) for more information.
+1. Configure the SDK for Offer Decisioning using `personalization.decisionScopes`. Additional Offer Decisioning specific steps are provided below.
 
    * Install the standalone SDK
 
-     1. Configure the "sendEvent" action with your `decisionScopes`
+     1. Configure the "sendEvent" action with `personalization.decisionScopes`
 
       ```javascript
       alloy("sendEvent", {
         ...
-        "decisionScopes": [
-          "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIxYWIwOWMxM2JkZDIyNCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMWFiMDZhODRkMDViMTEifQ==",
-          "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIxYWIyNWI5NTUwNWIxZiIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMWFiMjFmOTQzMDE0MmIifQ=="
-        ]
+        "personalization": {
+          "decisionScopes": [
+            "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIxYWIwOWMxM2JkZDIyNCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMWFiMDZhODRkMDViMTEifQ==",
+            "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIxYWIyNWI5NTUwNWIxZiIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMWFiMjFmOTQzMDE0MmIifQ=="
+          ]
+        }
       });
       ```
 
    * Install the SDK through tags
 
-     1. [Create a tag property](../../../tags/ui/administration/companies-and-properties.md)
+     1. [Create a tag property](/help/tags/ui/administration/companies-and-properties.md)
      1. [Add the embed code](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-     1. Install and configure the Platform Web SDK extension with the Datastream you created by selecting the configuration from the "Datastream" dropdown. See the documentation on [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
+     1. Install and configure the Platform Web SDK extension with the Datastream you created by selecting the configuration from the "Datastream" dropdown. See the documentation on [extensions](/help/tags/ui/managing-resources/extensions/overview.md).
 
         ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
       
         ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
       
-     1. Create the necessary [Data Elements](../../../tags/ui/managing-resources/data-elements.md). At the bare minimum, you must create a Platform Web SDK Identity Map and a Platform Web SDK XDM Object data element.
+     1. Create the necessary [Data Elements](/help/tags/ui/managing-resources/data-elements.md). At the bare minimum, you must create a Platform Web SDK Identity Map and a Platform Web SDK XDM Object data element.
 
         ![identity-map-data-element](./assets/identity-map-data-element.png)
       
         ![xdm-object-data-element](./assets/xdm-object-data-element.png)
       
-     1. Create your [Rules](../../../tags/ui/managing-resources/rules.md).
+     1. Create your [Rules](/help/tags/ui/managing-resources/rules.md).
 
         * Add a Platform Web SDK Send Event action and add the relevant `decisionScopes` to that action's configuration
 
         ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
       
-     1. [Create and publish a library](../../../tags/ui/publishing/libraries.md) containing all the relevant Rules, Data Elements, and Extensions you have configured
+     1. [Create and publish a library](/help/tags/ui/publishing/libraries.md) containing all the relevant Rules, Data Elements, and Extensions you have configured
 
 ## Sample requests and responses
 
