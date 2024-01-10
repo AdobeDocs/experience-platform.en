@@ -25,9 +25,9 @@ Yes, externally generated pre-built audiences are supported with Audience Portal
 
 In order to upload externally generated audiences, you need to have both the "Manage audiences/segments" and the "Manage datasets" permissions. There are no specific role-based controls required to upload externally generated audiences.
 
-### What happens when I upload an externally generated audience? What gets created during this process?
+### What happens when I upload an externally generated audience? 
 
-The following items are created when you upload an externally generated audience:
+When you upload an externally generated audience, the following items are created:
 
 - Dataset
   - The dataset will be visible within the dataset inventory, and the name of the dataset will be the **same** as the name of the externally generated audience you uploaded.
@@ -36,13 +36,13 @@ The following items are created when you upload an externally generated audience
 - Ad hoc schema
   - A **new** XDM schema will be created for use with the externally generated audience. The fields in this XDM schema are namespaced for usage with the dataset that was also created.
 
-### What is an externally generated audience comprised of? What happens to this data when it's imported to Platform?
+### What is an externally generated audience comprised of, and what happens to this data when it's imported to Platform?
 
-In the import external audience workflow, the user needs to specify which column in the CSV file corresponds with the **Primary Identity**. An example of a primary identity includes email address, ECID, or an organization-specific custom identity namespace. 
+During the import external audience workflow, you must specify which column in the CSV file corresponds with the **Primary Identity**. An example of a primary identity includes email address, ECID, or an organization-specific custom identity namespace. 
 
-The data associated with this primary identity column will be the **only** data that will be attached to the profile. If there are no existing profiles that match the data in the primary identity column, a new profile will be created. However, this profile is essentially an orphaned profile since **no** attributes or experience events will be associated with this profile.
+The data associated with this primary identity columnis the **only** data that is attached to the profile. If there are no existing profiles that match the data in the primary identity column, a new profile is created. However, this profile is essentially an orphaned profile since **no** attributes or experience events are associated with this profile.
 
-All the other data within the externally generated audience will be considered **payload attributes**. These attributes can **only** be used for personalization and enrichment during activation, and are **not** attached to a profile. These attributes are, however, stored in the data lake.
+All the other data within the externally generated audience are considered **payload attributes**. These attributes can **only** be used for personalization and enrichment during activation, and are **not** attached to a profile. These attributes are, however, stored in the data lake.
 
 While the externally generated audience can be referenced when creating audiences using the Segment Builder, individual profile attributes **cannot** be used. 
 
