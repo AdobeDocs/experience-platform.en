@@ -15,8 +15,8 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **Fixes and improvements**
 
 * Fixed an issue where identity errors were masking other errors, and changed identity errors to warnings.
-* Fixed an issue where bottom of page calls would never send when there was a top of page call with renderDecisions set to false.
-* Fixed an issue where Web SDK failed to read cross domain identities when there were multiple adobe_mc query string parameters.
+* Fixed an issue where bottom of page calls would never send when there was a top of page call with `renderDecisions` set to `false`.
+* Fixed an issue where Web SDK failed to read cross domain identities when there were multiple `adobe_mc` query string parameters.
 
 ## Version 2.19.1 - November 10, 2023
 
@@ -29,8 +29,8 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **New features**
 
 * Added support for rendering in-app messages from Adobe Journey Optimizer.
-* Added support for top and bottom of page events.
-* Added "defaultPersonalizationEnabled" option to the sendEvent command to control requesting the page-wide scope and default surface.
+* Added support for [top and bottom of page events](use-cases/top-bottom-page-events.md).
+* Added [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) option to the `sendEvent` command to control requesting the page-wide scope and default surface.
 
 **Fixes and improvements**
 
