@@ -108,13 +108,27 @@ The guardrails outlined in this section refer to the number and nature of audien
 
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
-| Audiences per sandbox | 4000 | Performance guardrail | An organization can have more than 4000 audiences in total, as long as there are less than 4000 audiences in each individual sandbox. Attempting to create additional audiences may affect system performance. Read more about [creating audiences](/help/segmentation/ui/segment-builder.md) through the segment builder.|
+| Audiences per sandbox | 4000 | Performance guardrail | An organization can have more than 4000 audiences in total, as long as there are less than 4000 audiences in each individual sandbox. This is inclusive of batch, streaming, and edge audiences. Attempting to create additional audiences may affect system performance. Read more about [creating audiences](/help/segmentation/ui/segment-builder.md) through the segment builder.|
 | Edge audiences per sandbox | 150 | Performance guardrail | An organization can have more than 150 edge audiences in total, as long as there are less than 150 edge audiences in each individual sandbox. Attempting to create additional edge audiences may affect system performance. Read more about [edge audiences](/help/segmentation/ui/edge-segmentation.md).| 
-| Streaming audiences per sandbox | 500 | Performance guardrail | An organization can have more than 500 streaming audiences in total, as long as there are less than 500 streaming audiences in each individual sandbox. Attempting to create additional streaming audiences may affect system performance. Read more about [streaming audiences](/help/segmentation/ui/streaming-segmentation.md).|
+| Edge throughput across all sandboxes | 1500 RPS | Performance guardrail | Edge segmentation supports up to 1500 inbound events per second entering the Adobe Experience Platform Edge Network. Edge segmentation may take up to 350 milliseconds to process an inbound event after it enters the Adobe Experience Platform Edge Network. Read more about [edge audiences](/help/segmentation/ui/edge-segmentation.md). |
+| Streaming audiences per sandbox | 500 | Performance guardrail | An organization can have more than 500 streaming audiences in total, as long as there are less than 500 streaming audiences in each individual sandbox. This is inclusive of both streaming and edge audiences. Attempting to create additional streaming audiences may affect system performance. Read more about [streaming audiences](/help/segmentation/ui/streaming-segmentation.md).|
+| Streaming throughput across all sandboxes | 1500 RPS | Performance guardrail | Streaming segmentation supports up to 1500 inbound events per second. Streaming segmentation may take up to 5 minutes to qualify a profile for segment membership. Read more about [streaming audiences](/help/segmentation/ui/streaming-segmentation.md). |
 | Batch audiences per sandbox | 4000 | Performance guardrail | An organization can have more than 4000 batch audiences in total, as long as there are less than 4000 batch audiences in each individual sandbox. Attempting to create additional batch audiences may affect system performance.|
 | Account audiences per sandbox | 50 | System-enforced guardrail | You can create a maximum of 50 account audiences in a sandbox. After you reach 50 audiences in a sandbox, the **[!UICONTROL Create audience]** control is disabled when trying to create a new account audience. Read more about [account audiences](/help/segmentation/ui/account-audiences.md). |
 | Published compositions per sandbox | 10 | Performance guardrail | You can have a maximum of  10 published compositions in a sandbox. Read more about [audience composition in the UI guide](/help/segmentation/ui/audience-composition.md). |
 | Maximum audience size | 30 percent | Performance guardrail | The recommended maximum membership of an audience is 30 percent of the total number of profiles in the system. Creating audiences with more than 30% of the profiles as members or multiple large audiences is possible but will impact system performance. |
+
+{style="table-layout:auto"}
+
+## Expected availability
+
+The following section outlines the **expected** availability for audiences and merge policies in downstream services such as Real-Time CDP destinations:
+
+| Sandbox type | Time |
+| ------------ | ---- |
+| Existing sandboxes | 1 hour |
+| New sandboxes | 2 hours |
+| Newly reset sandboxes | 2 hours |
 
 {style="table-layout:auto"}
 
