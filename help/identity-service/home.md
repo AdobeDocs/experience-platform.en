@@ -26,12 +26,12 @@ Before diving into the details of Identity Service, please read the following ta
 | Term | Definition |
 | --- | --- |
 | Identity | An identity is data that is unique to an entity. Typically, this is a real-world object, such as an individual person, a hardware device, or a web browser (represented by a cookie). A fully qualified identity consists of two elements: an **identity namespace** and an **identity value**. |
-| Identity namespace | An identity namespace is context of a given identity. For example, a namespace of `Email` could correspond with **julien<span>@acme.com**. Similarly, a namespace of `Phone` could correspond with `555-555-1234`. |
+| Identity namespace | An identity namespace is the context of a given identity. For example, a namespace of `Email` could correspond with **julien<span>@acme.com**. Similarly, a namespace of `Phone` could correspond with `555-555-1234`. For more information, read the [identity namespace overview](./namespaces.md) |
 | Identity value | An identity value is a string that represents a real-world entity and is categorized within Identity Service through a namespace. For example, the email **julien<span>@acme.com** could be categorized as an `Email` namespace.  |
 | Identity type | An identity type is a component of an identity namespace. The identity type designates whether identity data is linked in an identity graph or not. |
 | Link | A link or a linkage, is a method to establish that two disparate identities represent the same entity. For example, a link between "`Email` = julien<span>@acme.com" and "`Phone` = 555-555-1234" means that both identities represent the same entity. This suggests that the customer who has interacted with your brand with both the email address of julien<span>@acme.com and the phone number of 555-555-1234 is the same. |
 | Identity Service | Identity Service is a feature within Experience Platform that links (or unlinks) identities to maintain identity graphs. |
-| Identity graph | The identity graph is a collection of identities that represent a single customer. |
+| Identity graph | The identity graph is a collection of identities that represent a single customer. For more information, read the guide on [using the identity graph viewer](./ui/identity-graph-viewer.md). |
 | Real-Time Customer Profile | Real-Time Customer Profile is a feature within Adobe Experience Platform that: <ul><li>Merges profiles fragments to create a profile, based on an identity graph.</li><li>Segments profiles so that they can then be sent to destination for activations.</li></ul> |
 | Profile | A profile is a representation of a subject, an organization, or an individual. A profile is composed of two elements: <ul><li>Attributes: attributes provide information such as name, age, or gender.</li><li>Behavior: behaviors provide information on the activities of a given profile. For example, a profile behavior can tell if a given profile was "searching for sandals" or "ordering t-shirts."</li></ul> |
 
@@ -93,29 +93,9 @@ Considering the scenarios above, Identity Service establishes a link between `CR
 
 >[!ENDSHADEBOX]
 
-## Identity namespace {#identity-namespace}
-
->[!CONTEXTUALHELP]
->id="platform_identity_namespace"
->title="Identity namespaces"
->abstract="An identity namespace serves to distinguish the context or type of an identity. For example, an identity distinguishes "name<span>@email.com" as an email address or "443522" as a numeric CRM ID."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_identity_value"
->title="Identity values"
->abstract="An identity value is an identifier that represents a unique individual, organization, or asset. The context or type of identity that the value represents is defined by a corresponding identity namespace. When matching record data across profile fragments, the namespace and identity value must matchWhen matching record data across profile fragments the namespace and identity value must match."
->text="Learn more in documentation"
-
-If you asked a person "What is your ID?" without any further context, it would be difficult for them to provide a useful answer. By the same logic, a string value representing an identity value, whether it is a system generated ID or an email address, is only complete when supplied with a qualifier that gives the string value context: the identity namespace.
-
-Your customers may interact with your brand through a combination of online and offline channels, resulting in the challenge of how to reconcile those fragmented interactions into a single customer identity.
-
-Understanding your customer across multiple devices and channels starts by recognizing them in each channel. Platform achieves this by using identity namespaces. An identity namespace is an identifier such as Email or Phone, used to provide additional context to customer identities. Identity namespaces are used to look up or link individual identities and provide context for identity values. See the [identity namespace overview](./namespaces.md) for more information.
-
 ## Identity graphs
 
-An identity graph is a map of relationships between different identity namespaces, allowing you to visualize and better understand what customer identities are stitched together, and how. See the tutorial on [using the identity graph viewer](./ui/identity-graph-viewer.md) for more information.
+An identity graph is a map of relationships between different identity namespaces, allowing you to visualize and better understand what customer identities are stitched together, and how. Read the tutorial on [using the identity graph viewer](./ui/identity-graph-viewer.md) for more information.
 
 The following video is intended to support your understanding of identities and identity graphs.
 
