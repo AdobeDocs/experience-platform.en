@@ -7,6 +7,10 @@ feature: Use Cases
 
 Learn about suggested cross-service uses cases to make the most of your Real-Time CDP implementation. This page captures some use cases made possible by using various Adobe Experience Platform services.
 
+>[!IMPORTANT]
+>
+>The use cases presented on this page are a subset of the enterprise use cases that you can accomplish with Real-Time CDP. We are working on adding documentation for more supported use cases. In the mean time, reach out to your Adobe representative to explore more use cases in addition to the ones currently documented on the page.
+
 ## Partner data support {#partner-data-support}
 
 With third-party cookies set to disappear within the next few years, partner data support can fill the void left by third-party cookie deprecation.
@@ -78,18 +82,6 @@ The supported use cases can be grouped into customer acquisition and profile enr
     <em>Supplement first-party profiles with attributes from trusted data partners to improve your data foundation, gain new insights into your customer base, and better audience optimization.</em>
     <p>
   </td>
-  <td>
-    <a href="../partner-data/onsite-personalization.md">
-      <img alt="Personalize onsite experiences for unknown visitors using partner-aided visitor recognition" src="/help/rtcdp/assets/do-not-localize/come-back-later.png" />
-    </a>
-    <div>
-    <strong>More to come</strong>
-    </a>
-    </div>
-    <p>
-    <em>Check back later as we add more use cases to the documentation.</em>
-    <p>
-  </td>
   </tr>
   </table>
 
@@ -108,18 +100,6 @@ The supported use cases can be grouped into customer acquisition and profile enr
     </div>
     <p>
     <em>Re-engage customers who have abandoned a conversion in an intelligent and responsible way. Engage lapsed customers with experiences to increase conversion and increase the client lifetime value.</em>
-    <p>
-  </td>
-  <td>
-    <a href="../partner-data/onsite-personalization.md">
-      <img alt="Personalize onsite experiences for unknown visitors using partner-aided visitor recognition" src="/help/rtcdp/assets/do-not-localize/come-back-later.png" />
-    </a>
-    <div>
-    <strong>More to come</strong>
-    </a>
-    </div>
-    <p>
-    <em>Check back later as we add more use cases to the documentation.</em>
     <p>
   </td>
   </tr>
