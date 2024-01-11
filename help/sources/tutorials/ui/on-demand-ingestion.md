@@ -19,6 +19,10 @@ Flow runs represent an instance of dataflow execution. For example, if a dataflo
 
 ## Getting started
 
+>[!NOTE]
+>
+>In order to create a flow run, you must first have the flow ID of a dataflow that is scheduled for one-time ingestion.
+
 This document requires a working understanding of the following components of Experience Platform:
 
 * [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.

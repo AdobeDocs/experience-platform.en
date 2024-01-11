@@ -15,7 +15,7 @@ This document provides an overview of [!DNL Analytics] and describes the use-cas
 
 ![A graphic illustrating the journey of data from different Adobe applications, including Adobe Analytics.](./images/analytics-data-experience-platform.png)
 
-At a high level, [!DNL Analytics] collects data from various digital channels and multiple data centers around the world. Once the data is collected, Visitor Identification, Segmentation and Transformation Architecture (VISTA) rules, and processing rules are applied to shape the incoming data. After raw data has gone through this lightweight processing, it is then considered ready for consumption by [!DNL Real-Time Customer Profile]. In a process parallel to the aforementioned, the same processed data is micro-batched and ingested into Platform datasets for consumption by [!DNL Data Science Workspace], [!DNL Query Service], and other data-discovery applications.
+At a high level, [!DNL Analytics] collects data from various digital channels and multiple data centers around the world. Once the data is collected, Visitor Identification, Segmentation and Transformation Architecture (VISTA) rules, and processing rules are applied to shape the incoming data. After raw data has gone through this lightweight processing, it is then considered ready for consumption by [!DNL Real-Time Customer Profile]. In a process parallel to the aforementioned, the same processed data is micro-batched and ingested into Platform datasets for consumption by [!DNL Query Service], and other data-discovery applications.
 
 See the [processing rules overview](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) for more information on processing rules.
 
@@ -45,7 +45,7 @@ The expected latency for Analytics Data on Platform is outlined in the table bel
 | -------------- | ---------------- |
 | New data to [!DNL Real-Time Customer Profile] (A4T **not** enabled) | < 2 minutes |
 | New data to [!DNL Real-Time Customer Profile] (A4T **is** enabled) | up to 30 minutes |
-| New data to Data Lake | < 90 minutes |
+| New data to Data Lake | < 2.25 hours |
 | Backfill of less than 10 billion events | < 4 weeks |
 
 The Analytics backfill for production sandboxes defaults to 13 months. For Analytics data in non-production sandboxes, backfill is set to three months. The limit of 10 billion events mentioned in the table above is strictly with respect to expected latency. 

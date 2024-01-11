@@ -30,6 +30,7 @@ To understand the difference between connections and extensions, see [Connection
 * [Google Customer Match connection](google-customer-match.md)
 * [Microsoft Bing connection](bing.md)
 * [Pinterest Customer List connection](pinterest.md)
+* [PubMatic Connect destination](pubmatic.md)
 * [(Beta) Snapchat Ads connection](snap-inc.md)
 * [The Trade Desk connection](tradedesk.md)
 * [(Beta) The Trade Desk CRM connection](tradedesk-emails.md)
