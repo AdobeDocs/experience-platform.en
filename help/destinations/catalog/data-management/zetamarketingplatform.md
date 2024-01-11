@@ -30,7 +30,6 @@ An advertiser wants to target users in audiences with ads through the Zeta DSP a
 * Prior to setting up a new destination, please ensure the presence of a pre-existing shell customer list in your ZMP account. You will  be required to choose one of these customer lists as the designated target to receive the Adobe Experience Platform audience that you plan to send. You can create an empty customer list in the ZMP by following the instructions [here](https://knowledgebase.zetaglobal.com/zmp/creating-audiences#CreatingAudiences-CreatingaCustomerList).
 * Although the Adobe Experience Platform permits the activation of multiple audiences to a particular ZMP destination instance, it is mandatory that each ZMP destination instance receives only one Experience Platform audience. To handle multiple audiences from the Experience Platform, create additional ZMP instances for each audience and select a different shell customer list from the dropdown. This approach ensures that the target ZMP audiences does not get overwritten.
 * The username and password needed to configure the destination will be **api** and the **REST API Key**, which you can view in your ZMP account by navigating to **Settings** > **Integrations** > **Keys & Apps** section. More information can be found [here](https://knowledgebase.zetaglobal.com/zmp/integrations).
-* Note that even though the Adobe Experience Platform supports activating multiple audiences to a specific ZMP destination instance, each ZMP destination instance should only receive one and only one Experience Platform audience. Create additional ZMP instances for each audience that you want to send from the Experiences Platform.
 
 ## Supported identities {#supported-identities}
 
@@ -58,7 +57,7 @@ This section describes which type of audiences you can export to this destinatio
 {style="table-layout:auto"}
 
 >[!NOTE]
-> As individual members are added or removed from the audience, updates will be sent to the ZMP to ensure that the destination segment is synchronized accordingly.
+> As individual members are added or removed from the platform audience, updates will be sent to the ZMP to ensure that the destination customer list is synchronized accordingly.
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -80,8 +79,6 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authenticate to destination {#authenticate}
 
-*Add the fields that customers must fill in when authenticating to your destination. These fields are destination-specific and depend on your configuration in Destination SDK. Your destination's fields may not be the same as the ones listed below. Please also include a screenshot similar to the sample screenshot shown below.*
-
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
 * Enter the **[!UICONTROL Username]** as **api**
@@ -94,8 +91,8 @@ To configure details for the destination, fill in the required and optional fiel
 ![Image showing ZMP configuration](../../assets/catalog/data-management-platform/zmp-extension/ConfigureNewDestination.png)
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Account Site ID]**: Your ZMP **Site Id** where you want to send your audiences to. You can view your Site Id by navigating to **Settings** > **Integrations** > **Keys & Apps** section. More information can be found [here](https://knowledgebase.zetaglobal.com/zmp/integrations).
-*  **[!UICONTROL Select Segment]**: The static segment in your ZMP Site Id that you want to be updated with the Platform audience.
+*  **[!UICONTROL ZMP Account Site Id]**: Your ZMP **Site Id** where you want to send your audiences to. You can view your Site Id by navigating to **Settings** > **Integrations** > **Keys & Apps** section. More information can be found [here](https://knowledgebase.zetaglobal.com/zmp/integrations).
+*  **[!UICONTROL ZMP Segment]**: The customer list segment in your ZMP Site Id account that you want to be updated with the Platform audience.
 
 ### Enable alerts {#enable-alerts}
 
@@ -117,22 +114,23 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 Below is an example of correct identity mapping when exporting profiles to [!DNL Zeta Marketing Platform].
 
 Selecting source fields:
-* Select an identifier (For example: Email) as source identity that uniquely identifies a profile in Adobe Experience Platform and [!DNL Zeta Marketing Platform].
-* Select any XDM source profile attribute changes that need to be exported and updated in [!DNL Zeta Marketing Platform].
+* Select an identity namespace (custom or standard such as `Email`) as source field that uniquely identifies a profile in Adobe Experience Platform and [!DNL Zeta Marketing Platform].
+* Select any XDM source profile attributes that need to be exported to and updated in the [!DNL Zeta Marketing Platform].
 
 Selecting target fields:
-* Select `uid` as the target identity. Note that you can set any one of the [Supported Identities](#supported-audiences) as the `uid`.
+* (Mandatory) Select `uid` as the target identity that is mapped to the source identity namespace. 
+* (Optional) Select `email_md5_id` as the target identity that is mapped to the source identity namespace that represents email md5 values. In this scenario, map `uid` to a source identity namespace.
 * Select any other destination profile attribute names that need to be mapped to corresponding XDM source profile attributes.
 
 ![Identity mapping](../../assets/catalog/data-management-platform/zmp-extension/MappingExample.png)
 
 ## Exported data / Validate data export {#exported-data}
 
-A successful audience syndication from experience platfrom to the ZMP will update the target customer list in the ZMP. The count as well as sample profiles in the target customer list will be exactly equal to the number of identities that were successfuly activated from experience platform.
-
-Each audience member that was syndicated from the experience platform will also be visible under **Audiences** > **People** in the ZMP. 
+A successful audience syndication from experience platfrom to the ZMP will update the target customer list in the ZMP. The count as well as sample profiles in the target customer list will be exactly equal to the number of identities that were successfuly activated from experience platform as shown below.
 
 ![Customer List in ZMP](../../assets/catalog/data-management-platform/zmp-extension/CustomerListInZMP.png)
+
+Each audience member that was syndicated from the experience platform will also be visible under **Audiences** > **People** in the ZMP. 
 
 You will also be able to view the **Customer List** segment a profile belongs to in the Single Customer view as shown below.
 
