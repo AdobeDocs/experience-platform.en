@@ -91,7 +91,7 @@ Understand the four core pillars of Adobe Real-Time CDP that help you:
 * Collect or ingest data through a myriad of source connectors and data collection methods;
 * Manage and segment your most valuable profiles into audiences;
 * Know that you are managing data while staying compliant with various regulations, restrictions, and policies applicable to data use;
-* Market to your customers across channels.
+* Market to your customers and personalize their experience across channels.
 
 ![Excerpt from a slide showing the four pillars of Adobe Real-Time CDP.](/help/rtcdp/assets/rtcdp-four-pillars.png)
 
@@ -127,7 +127,7 @@ Explore the product documentation links below to understand how the four core pi
     </td>
     <td>
       <img src="assets/do-not-localize/icon-learn.svg" width="35px"><br/>
-      <strong>Guardrails and best practices</strong><br/>Learn about best practices and current limitations when working with data in Real-Time CDP.<br/><a href="/help/rtcdp/guardrails/overview.md">Guardrails</a> - <a href="/help/landing/license-usage-and-guardrails/data-management-best-practices.md">Data Management License Entitlement Best Practices</a> - <a href="/help/xdm/schema/best-practices.md">Data Modeling Best Practices</a> 
+      <strong>Guardrails and best practices</strong><br/>Learn about best practices and current limitations when working with data in Real-Time CDP.<br/><a href="/help/rtcdp/guardrails/overview.md">Guardrails</a> - <a href="/help/landing/license-usage-and-guardrails/data-management-best-practices.md">Data Management License Entitlement Best Practices</a> - <a href="/help/xdm/schema/best-practices.md">Data Modeling Best Practices</a> - <a href="/help/privacy-service/best-practices.md">Privacy Service Best Practices</a> 
     </td>
     <td>
       <img src="assets/do-not-localize/icon-code.svg" width="35px"><br/>
