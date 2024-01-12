@@ -181,9 +181,9 @@ Once you have completed mappings for your [!DNL Analytics] report suite data, yo
 * If you utilize Data Prep configurations during the initial setup of an [!DNL Analytics] flow, those changes are applied to the automatic 13-month backfill as well. 
   * However, this is not the case for filtering because filtering is reserved only for live data.
 * Data Prep is applied to both streaming and batch ingestion paths. If you modify an existing Data Prep configuration, those changes are then applied to new incoming data across both streaming and batch ingestion pathways. 
-  * However, any Data Prep configurations do not get applied to data that has already been ingested into Experience Platform, regardless of whether it is streaming or batch data.
+  * However, any Data Prep configurations do not apply to data that has already been ingested into Experience Platform, regardless of whether it is streaming or batch data.
 * Standard attributes from Analytics are always mapped automatically. Therefore, you cannot apply transformations to standard attributes.
-  * However, you can filter out standard attributes as long as they are not required in Identity Service.
+  * However, you can filter out standard attributes as long as they are not required in Identity Service or Profile.
 * You cannot use column-level filtering to filter required fields and identity fields.
 * While you can filter out secondary identities, specifically AAID and AACustomID, you cannot filter out ECID.
 * When a transformation error occurs, the corresponding column results in NULL.
