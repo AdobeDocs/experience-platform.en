@@ -30,9 +30,9 @@ Before diving into the details of Identity Service, please read the following ta
 | Identity value | An identity value is a string that represents a real-world entity and is categorized within Identity Service through a namespace. For example, the email **julien<span>@acme.com** could be categorized as an `Email` namespace.  |
 | Identity type | An identity type is a component of an identity namespace. The identity type designates whether identity data is linked in an identity graph or not. |
 | Link | A link or a linkage, is a method to establish that two disparate identities represent the same entity. For example, a link between "`Email` = julien<span>@acme.com" and "`Phone` = 555-555-1234" means that both identities represent the same entity. This suggests that the customer who has interacted with your brand with both the email address of julien<span>@acme.com and the phone number of 555-555-1234 is the same. |
-| Identity Service | Identity Service is a feature within Experience Platform that links (or unlinks) identities to maintain identity graphs. |
+| Identity Service | Identity Service is a service within Experience Platform that links (or unlinks) identities to maintain identity graphs. |
 | Identity graph | The identity graph is a collection of identities that represent a single customer. For more information, read the guide on [using the identity graph viewer](./ui/identity-graph-viewer.md). |
-| Real-Time Customer Profile | Real-Time Customer Profile is a feature within Adobe Experience Platform that: <ul><li>Merges profiles fragments to create a profile, based on an identity graph.</li><li>Segments profiles so that they can then be sent to destination for activations.</li></ul> |
+| Real-Time Customer Profile | Real-Time Customer Profile is a service within Adobe Experience Platform that: <ul><li>Merges profiles fragments to create a profile, based on an identity graph.</li><li>Segments profiles so that they can then be sent to destination for activations.</li></ul> |
 | Profile | A profile is a representation of a subject, an organization, or an individual. A profile is composed of two elements: <ul><li>Attributes: attributes provide information such as name, age, or gender.</li><li>Behavior: behaviors provide information on the activities of a given profile. For example, a profile behavior can tell if a given profile was "searching for sandals" or "ordering t-shirts."</li></ul> |
 
 {style="table-layout:auto"}
@@ -100,10 +100,6 @@ An identity graph is a map of relationships between different identity namespace
 The following video is intended to support your understanding of identities and identity graphs.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
-
-## Data governance
-
-Adobe Experience Platform was built with privacy in mind and includes a data governance framework to protect your customer PII data. Identity data under the "email" or "phone" namespace is encrypted by default, but in order to ensure sensitive data is encrypted before it is persisted, data usage labels can be applied to data as it is ingested or once it arrives in [!DNL Platform]. For more information, please read the [Data Governance overview](../data-governance/home.md).
 
 ## Understanding the role of Identity Service within the Experience Platform infrastructure
 

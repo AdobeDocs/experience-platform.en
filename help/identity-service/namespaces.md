@@ -20,13 +20,13 @@ Identity namespaces requires an understanding of various Adobe Experience Platfo
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
 >title="Identity namespaces"
->abstract="An identity namespace serves to distinguish the context or type of an identity. For example, an identity distinguishes "name<span>@email.com" as an email address or "443522" as a numeric CRM ID."
+>abstract="An identity namespace is the context of a given identity. For example, a namespace of `Email` could correspond with **name<span>@acme.com**. Similarly, a namespace of `Phone` could correspond with `555-555-1234`."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
 >title="Identity values"
->abstract="An identity value is an identifier that represents a unique individual, organization, or asset. The context or type of identity that the value represents is defined by a corresponding identity namespace. When matching record data across profile fragments, the namespace and identity value must matchWhen matching record data across profile fragments the namespace and identity value must match."
+>abstract="An identity value is an identifier that represents a unique individual, organization, or asset. The context or type of identity that the value represents is defined by a corresponding identity namespace. When matching record data across profile fragments, the namespace and identity value must match. When matching record data across profile fragments the namespace and identity value must match."
 >text="Learn more in documentation"
 
 A fully qualified identity includes two components: an **identity value** and an **identity namespace**. For example, if the value of an identity is `scott@acme.com`, then a namespace provides context to this value by distinguishing it as an email address. Similarly, a namespace can distinguish `555-123-456` as a phone number, and `3126ABC` as a CRM ID. Essentially, **a namespace provides context to a given identity**. When matching record data across profile fragments, as when [!DNL Real-Time Customer Profile] merges profile data, both the identity value and the namespace must match.
