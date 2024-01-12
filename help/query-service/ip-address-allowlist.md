@@ -21,16 +21,21 @@ Adobe recommends that you add the following IP ranges to an allowlist depending 
 
 ## VA7: US and Americas customers {#us-americas}
 
-* 52.138.119.167
+* 20.14.241.153
 
 ## NLD2: EMEA customers {#emea}
 
-* 51.124.70.4
+* 20.101.233.128
 
 ## AUS5: APAC customers {#apac}
 
-* 20.193.36.37
+* 20.248.220.69
 
 ## CAN2: Canadian customers {#can2}
 
-* 20.104.5.248
+* 4.172.1.139
+
+## GBR9: United Kingdon customers {#gbr9}
+
+* 20.108.200.9
+
