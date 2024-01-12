@@ -1,15 +1,15 @@
 ---
-title: Suggested use cases in Real-Time CDP
-description: Learn about suggested cross-service uses cases to make the most of your Real-Time CDP implementation.
+title: Sample use cases in Real-Time CDP
+description: View sample cross-service use cases to make the most of your Real-Time CDP implementation.
 feature: Use Cases
 ---
-# Suggested use cases in Real-Time CDP
+# Sample use cases in Real-Time CDP
 
-Learn about suggested cross-service uses cases to make the most of your Real-Time CDP implementation. This page captures some use cases made possible by using various Adobe Experience Platform services.
+View sample cross-service use cases to make the most of your Real-Time CDP implementation. This page captures some use cases made possible by using various Adobe Experience Platform services.
 
 >[!IMPORTANT]
 >
->The use cases presented on this page are a subset of the enterprise use cases that you can accomplish with Real-Time CDP. We are working on adding documentation for more supported use cases. In the mean time, reach out to your Adobe representative to explore more use cases in addition to the ones currently documented on the page.
+>The use cases presented on this page are a subset of the enterprise use cases that you can accomplish with Real-Time CDP. We are working on adding documentation for more sample use cases. In the mean time, reach out to your Adobe representative to explore more use cases in addition to the ones currently documented on the page.
 
 ## Partner data support {#partner-data-support}
 

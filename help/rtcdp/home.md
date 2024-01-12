@@ -71,7 +71,7 @@ Start by reading the material in the links below to familiarize yourself with Re
     </td>
     <td>
     <a href="/help/rtcdp/use-case-guides/overview.md"><img src="assets/do-not-localize/start-use-cases.jpeg"></a>
-    <div><strong>Suggested Real-Time CDP Use cases</strong><br/>Explore the many ways in which Real-Time CDP can help your company acquire new customers, enrich your known profiles, and more.
+    <div><strong>Sample Real-Time CDP Use cases</strong><br/>Explore the many ways in which Real-Time CDP can help your company acquire new customers, enrich your known profiles, and more.
     </div>
     </td>
   </tr>
