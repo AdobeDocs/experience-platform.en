@@ -9,7 +9,7 @@ badge: Beta
 >
 >The [!DNL Oracle NetSuite Entities] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-The following tutorial walks you through the steps to create a [!DNL Oracle NetSuite Entities] source connection to bring [!DNL Oracle NetSuite] contacts and customers data using the Adobe Experience Platform user interface.
+The following tutorial walks you through the steps to create an [!DNL Oracle NetSuite Entities] source connection to bring [!DNL Oracle NetSuite] contacts and customers data using the Adobe Experience Platform user interface.
 
 ## Getting started {#getting-started}
 
@@ -24,12 +24,12 @@ If you already have a valid [!DNL Oracle NetSuite] account, you may skip the rem
 
 ### Gather required credentials
 
-In order to connect [!DNL Oracle NetSuite Entities] to Platform, you must provide values for the following connection properties:
+In order to connect [!DNL Oracle NetSuite Entities] to Experience Platform, you must provide values for the following connection properties:
 
 | Credential | Description | Example |
 | --- | --- | --- |
-| Client ID | The Client ID value when you create the integration record in [!DNL Oracle NetSuite]. The process to create an interation record can be found [here](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). | `7fce.....b42f`<br>The value is a 64 characters string. |
-| Client secret | The Client Secret value when you create the integration record. The process to create an interation record can be found [here](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). | `5c98.....1b46`<br>The value is a 64 characters string. |
+| Client ID | The Client ID value when you create the integration record in [!DNL Oracle NetSuite]. The process to create an integration record can be found [here](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). | `7fce.....b42f`<br>The value is a 64 characters string. |
+| Client secret | The Client Secret value when you create the integration record. The process to create an integration record can be found [here](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). | `5c98.....1b46`<br>The value is a 64 characters string. |
 | authorizationTestUrl | | https://{ACCOUNT_ID}.app.netsuite.com/app/login/oauth2/authorize.nl?response_type=code&redirect_uri=https%3A%2F%2Fapi.github.com&scope=rest_webservices&state=ykv2XLx1BpT5Q0F3MRPHb94j&client_id={CLIENT_ID} |
 | Access token | The Access token value is generated at the end of [step two](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) of the [OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) tutorial. Access tokens expire are valid only for 60 minutes. | `eyJr......f4V0`<br> the value is a 1024 characters string formatted as a JSON Web Token (JWT). |
 | Refresh token | The Refresh token value value is generated at the end of [step two](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) of the [OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) tutorial. Refresh tokens have a longer validity and are valid for 7 days. Refresh tokens are used by the [!DNL Oracle NetSuite Entities] source to internally generate new Access tokens. | `eyJr......dmxM`<br> the value is a 1024 characters string formatted as a JSON Web Token (JWT). |
@@ -37,7 +37,7 @@ In order to connect [!DNL Oracle NetSuite Entities] to Platform, you must provid
 
 >[!IMPORTANT]
 >
-> After a refresh token expires you must create a new account in Platform with updated tokens.
+> After a refresh token expires you must create a new account in Experience Platform with updated tokens.
 
 ## Connect your [!DNL Oracle NetSuite] account {#connect-account}
 
