@@ -31,7 +31,7 @@ feature: Identities
   - [Identity Service and Real-Time Customer Profile](./identity-graph-linking-rules/identity-and-profile.md)
   - [Identity linking logic](./identity-graph-linking-rules/identity-linking-logic.md)
 - [ECID overview](ecid.md)
-- [Implementation guide for Identity Service](implementation.md)
+- [Implementation guide](implementation.md)
 - [Deletions in Identity Service](deletion.md)
 - [Privacy request processing](privacy.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
