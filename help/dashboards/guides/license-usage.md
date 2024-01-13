@@ -66,47 +66,52 @@ This dashboard displays all of your licensed Adobe Experience Platform products,
 
 The table indicates the primary metric for each product, as each product can track numerous metrics.
 
-### Predicted usage {#predicted-usage}
+### (Beta) Predicted usage {#predicted-usage}
 
-<!-- Below needs heavy editing -->
+>[!AVAILABILITY]
+>
+>* The functionality to predicts future license usage is currently in Beta. The documentation and the functionality are subject to change.
 
-The [!UICONTROL Predicted Usage] column accurately predicts future usage at various levels (organization-level, sandbox-level, or dataset-level). This alerting capability provides a forecast of license usage for six months in the future. The predictive model is refreshed on a monthly basis, based on your usage up to that month.
-
-Usage predictions are available on the Overview, Summary, and Details dashboards to allow for different degrees of granularity. Usage predictions are available for your product, sandbox, and the individual metrics used at the sandbox level. 
-
-<!-- As we validate with customers, and as our model projects more accurate values beyond 6 months, the forecasting time period can be extended accordingly. -->
-
-<!-- 
-In the main license usage page, the "end of the current month" prediction should be displayed as a separate column with an option to drill-down to see more predictions (end of the next 2/3/6 months etc.). The end of the current month prediction should be displayed as a % of the licensed amount. 
- -->
-
-Each prediction has a lower & an upper bound. 
-
-Since the current month's projections tend to be more accurate than the subsequent month projections, the lower bound of the current month prediction should be >= 90% of the current usage. This is to avoid a wide ranging prediction that could start with a lower bound of 0% even though the current usage is higher. So, if the current usage is 10M for addressable audience, the lower bound for the current month's prediction should be >= 9M. This lower bound number should act as the "base" for the future 60/90/120 day predictions. 
-
-In order to view additional usage beyond the current month forecast, the user should be able to click on an icon next to the projected value, upon which the system should display projections beyond the current month. In order to let the user know when the prediction was performed and the CTA for the user, there should be relevant text in the modal title/description
-
-The "Details" tab also displays sandbox level predictions (as a separate column). If you use sandboxes to indicate business units, brands, market segments, and so on, you can use sandbox level prediction to understand which unit/group will use more of the licenses.  
-
-The predicted usage feature supports for the following metrics:
-
-- Addressable audience
-- Average profile richness
-- Total storage
-- Audience activation size
-- Data export size
-- Data scanned
-- Count of emails in the last 30 days
-- Lookalike audiences
-- Rows available
-- Compute hours
-- Computed attributes
+Use the predicted usage capability to proactively manage and optimize your licensing resources based on insightful predictions. The [!UICONTROL Predicted Usage] column accurately predicts future license usage at various levels (organization-level, sandbox-level, or dataset-level). This alerting capability provides a forecast of license usage for six months in the future, based on your usage up to that month.
 
 >[!IMPORTANT]
 >
 >Predictions are refreshed on a monthly basis. The date of refresh is included in the column title.
 
-<!-- Above needs heavy editing -->
+![The [!UICONTROL License usage] [!UICONTROL Overview] with the predicted usage column highlighted.](../images/license-usage/product-predicted-usage.png)
+
+Use the granular predictions available on the Overview, Summary, and Details dashboards to ensure informed decision-making for efficient license utilization. Usage predictions are available for your product, sandbox, and the individual metrics used at the sandbox level.
+
+Each prediction has a lower & an upper bound. 
+<!-- Q) Is this accurate? This does not seem to be true.  -->
+
+<!-- Since the current month's projections tend to be more accurate than the subsequent month projections, the lower bound of the current month prediction should be >= 90% of the current usage. This is to avoid a wide ranging prediction that could start with a lower bound of 0% even though the current usage is higher. So, if the current usage is 10M for addressable audience, the lower bound for the current month's prediction should be >= 9M. This lower bound number should act as the "base" for the future 60/90/120 day predictions. 
+
+In order to view additional usage beyond the current month forecast, the user should be able to click on an icon next to the projected value, upon which the system should display projections beyond the current month. In order to let the user know when the prediction was performed and the CTA for the user, there should be relevant text in the modal title/description -->
+
+#### Sandbox level predictions {#sandbox-predictions} 
+
+<!-- Q) I have not yet seen this in QA environment. Is it included in the beta? -->
+
+The [!UICONTROL Details] tab displays sandbox level predictions as a separate column). If you use sandboxes to indicate business units, brands, market segments, and so on, you can use sandbox level prediction to understand which unit or group will use more of the licenses.
+
+![The [!UICONTROL License usage] [!UICONTROL Details] view with the predicted usage column highlighted. MOCK IMAGE.](../images/license-usage/sandbox-predicted-usage.png)
+
+<!-- Q) There is no predicted usage in this org on the Details View for sandboxes. Is this coming? -->
+
+The predicted usage feature supports for the following metrics:
+
+* Addressable audience
+* Average profile richness
+* Total storage
+* Audience activation size
+* Data export size
+* Data scanned
+* Count of emails in the last 30 days
+* Lookalike audiences
+* Rows available
+* Compute hours
+* Computed attributes
 
 ## [!UICONTROL Summary] tab {#summary-tab}
 
