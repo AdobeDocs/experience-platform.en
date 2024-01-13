@@ -1,13 +1,13 @@
 ---
-title: Lambda Function Example - Retrieve Similar Records
+title: Higher-order Function Example - Retrieve Similar Records
 description: Learn how to identify and retrieve similar or related records from one or more datasets based on a similarity metric and similarity threshold. This workflow can highlight meaningful relationships or overlaps between disparate datasets.
 exl-id: 4810326a-a613-4e6a-9593-123a14927214
 ---
-# Lambda function example: Retrieve similar records
+# Higher-order function example: Retrieve similar records
 
-Solve several common use cases by using Data Distiller lambda functions to identify and retrieve similar or related records from one or more datasets. You can use this guide to identify products from different datasets that have a significant similarity in their characteristics or attributes. The methodology in this document provides solutions to: data deduplication, record linkage, recommendation systems, information retrieval, and text analytics among others.
+Solve several common use cases by using Data Distiller higher-order functions to identify and retrieve similar or related records from one or more datasets. You can use this guide to identify products from different datasets that have a significant similarity in their characteristics or attributes. The methodology in this document provides solutions to: data deduplication, record linkage, recommendation systems, information retrieval, and text analytics among others.
 
-The document describes the process of implementing a similarity join then uses Data Distiller lambda functions to compute the similarity between sets of data and filter them based on selected attributes. SQL code snippets and explanations are provided for each step of the process. The workflow implements similarity joins using the Jaccard similarity measure and tokenization using Data Distiller lambda functions. These methods are then used to identify and retrieve similar or related records from one or more datasets based on a similarity metric. The key sections of the process include: [tokenization using lambda functions](#data-transformation), the [cross-join of unique elements](#cross-join-unique-elements), the [Jaccard similarity calculation](#compute-the-jaccard-similarity-measure), and the [threshold-based filtering](#similarity-threshold-filter).
+The document describes the process of implementing a similarity join then uses Data Distiller higher-order functions to compute the similarity between sets of data and filter them based on selected attributes. SQL code snippets and explanations are provided for each step of the process. The workflow implements similarity joins using the Jaccard similarity measure and tokenization using Data Distiller higher-order functions. These methods are then used to identify and retrieve similar or related records from one or more datasets based on a similarity metric. The key sections of the process include: [tokenization using higher-order functions](#data-transformation), the [cross-join of unique elements](#cross-join-unique-elements), the [Jaccard similarity calculation](#compute-the-jaccard-similarity-measure), and the [threshold-based filtering](#similarity-threshold-filter).
 
 ## Prerequisites
 
@@ -18,11 +18,11 @@ Before continuing with this document, you should be familiar with the following 
     - **Threshold**: A similarity threshold is used to determine when the two records are considered similar enough to be included in the join result. Records with a similarity score above the threshold are considered matches.
 - The **Jaccard similarity** index, or the Jaccard similarity measurement, is a statistic used to gauge the similarity and diversity of sample sets. It is defined as the size of the intersection divided by the size of the union of the sample sets. The Jaccard similarity measurement ranges from zero to one. A Jaccard similarity of zero indicates no similarity between the sets, and a Jaccard similarity of one indicates that the sets are identical.
 ![A venn diagram to illustrate the Jaccard similarity measurement.](../images/use-cases/jaccard-similarity.png)
-- **Lambda functions** in Data Distiller are anonymous, inline functions that can be defined and used within SQL statements. They are frequently used with higher-order functions due to their ability to create concise, on-the-fly functions that can be passed around as data. Lambda functions are often employed with higher-order functions like `transform`, `filter`, and `array_sort`. Lambda functions are especially useful in situations where defining a full function is unnecessary, and a brief, one-time function can be used inline.
+- **Higher-order functions** in Data Distiller are anonymous, inline functions that can be defined and used within SQL statements. They are frequently used with higher-order functions due to their ability to create concise, on-the-fly functions that can be passed around as data. Higher-order functions are often employed with higher-order functions like `transform`, `filter`, and `array_sort`. Higher-order functions are especially useful in situations where defining a full function is unnecessary, and a brief, one-time function can be used inline.
 
 ## Getting started
 
-The Data Distiller SKU is required to perform the lambda functions on your Adobe Experience Platform data. If you do not have the Data Distiller SKU, contact your Adobe customer service representative for more information.
+The Data Distiller SKU is required to perform the higher-order functions on your Adobe Experience Platform data. If you do not have the Data Distiller SKU, contact your Adobe customer service representative for more information.
 
 ## Establish similarity {#establish-similarity}
 
@@ -351,11 +351,11 @@ The results are shown in the table below:
 
 +++
 
-## Explore solutions using Data Distiller lambda functions {#lambda-function-solutions}
+## Explore solutions using Data Distiller higher-order functions {#higher-order-function-solutions}
 
-Lambda functions are powerful constructs that allow you to implement "programming" like syntax in Data Distiller. They can be used to iterate a function over multiple values in an array.
+Higher-order functions are powerful constructs that allow you to implement "programming" like syntax in Data Distiller. They can be used to iterate a function over multiple values in an array.
 
-In the context of Data Distiller, lambda functions are ideal for creating n-grams and iterating over sequences of characters.
+In the context of Data Distiller, higher-order functions are ideal for creating n-grams and iterating over sequences of characters.
 
 The `reduce` function, especially when used within sequences generated by `transform`, provides a way to derive cumulative values or aggregates, which can be pivotal in various analytical and planning processes.
 
@@ -367,7 +367,7 @@ SELECT transform(
     x -> reduce(
         sequence(1, x),  
         0,  -- Initial accumulator value
-        (acc, y) -> acc + y  -- Lambda function to add numbers
+        (acc, y) -> acc + y  -- Higher-order function to add numbers
     )
 ) AS sum_result;
 ```
@@ -377,17 +377,17 @@ The following is an analysis of the SQL statement:
 - Line 1: `transform` applies the function `x -> reduce` on each element generated in the sequence.
 - Line 2: `sequence(1, 5)` generates a sequence of numbers from one to five.
 - Line 3: `x -> reduce(sequence(1, x), 0, (acc, y) -> acc + y)` performs a reduction operation for each element x in the sequence (from 1 to 5).
-    - The `reduce` function takes an initial accumulator value of 0, a sequence from one to the current value of `x`, and a lambda function `(acc, y) -> acc + y` to add the numbers.
-    - The lambda function `acc + y` accumulates the sum by adding the current value `y` to the accumulator `acc`.
+    - The `reduce` function takes an initial accumulator value of 0, a sequence from one to the current value of `x`, and a higher-order function `(acc, y) -> acc + y` to add the numbers.
+    - The higher-order function `acc + y` accumulates the sum by adding the current value `y` to the accumulator `acc`.
 - Line 8: `AS sum_result` renames the resulting column as sum_result.
 
-To summarize, this lambda function takes two parameters (`acc` and `y`) and defines the operation to perform, which in this case is adding `y` to the accumulator `acc`. This lambda function is executed for each element in the sequence during the reduction process.
+To summarize, this higher-order function takes two parameters (`acc` and `y`) and defines the operation to perform, which in this case is adding `y` to the accumulator `acc`. This higher-order function is executed for each element in the sequence during the reduction process.
 
 The output of this statement is a single column (`sum_result`) that contains the cumulative sums of numbers from one to five.
 
-### The value of lambda functions {#value-of-lambda-functions}
+### The value of higher-order functions {#value-of-higher-order-functions}
 
-This section analyses a slimmed-down version of a tri-gram SQL statement to better understand the value of lambda functions in Data Distiller to create n-grams more efficiently.
+This section analyses a slimmed-down version of a tri-gram SQL statement to better understand the value of higher-order functions in Data Distiller to create n-grams more efficiently.
 
 The statement below operates on the `ProductName` column within the `featurevector1` table. It produces a set of three-character substrings derived from the modified product names within the table, using positions obtained from the sequence generated.
 
@@ -403,11 +403,11 @@ FROM
 
 The following is an analysis of the SQL statement:
 
-- Line 2: `transform` applies a lambda function to each integer in the sequence.
+- Line 2: `transform` applies a higher-order function to each integer in the sequence.
 - Line 3: `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 2)` generates a sequence of integers from `1` to the length of the modified product name minus two. 
     - `length(lower(replace(ProductName, ' ', '')))` calculates the length of the `ProductName` after making it lowercase and removing spaces.
     - `- 2` subtracts two from the length to ensure that the sequence generates valid starting positions for 3-character substrings. Subtracting 2 ensures that you have enough characters following each starting position to extract a 3-character substring. The substring function here operates like a lookahead operator.
-- Line 4: `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` is a lambda function that operates on each integer `i` in the generated sequence.
+- Line 4: `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` is a higher-order function that operates on each integer `i` in the generated sequence.
     - The `substring(...)` function extracts a 3-character substring from the `ProductName` column.
     - Before extracting the substring, `lower(replace(ProductName, ' ', ''))` converts the `ProductName` to lowercase and removes spaces to ensure consistency.
 
@@ -706,3 +706,201 @@ The results of this query give the columns for the similarity join, as seen belo
 By reading this document, you can now use this logic to highlight meaningful relationships or overlaps between disparate datasets. The ability to identify products from different datasets that have a significant similarity in their characteristics or attributes, has numerous real-world applications. This logic could be used for scenarios such as product matching (to group or recommend similar products to customers), data cleansing (to improve data quality), and market basket analysis (to provide insights into customer behavior, preferences, and potential cross-selling opportunities). 
 
 If you have not already done so, you are recommended to read the [AI/ML feature pipeline overview](../data-distiller/ml-feature-pipelines/overview.md). Use that overview to learn how Data Distiller and your preferred machine learning can build custom data models that support your marketing use cases with Experience Platform data.
+
+## Additional higher-order functions
+
+Analytics or time series datasets are commonly comprised of complex nested structures, arrays, and maps. You can use higher-order functions to process complex data types, such as arrays, without the need to explode the array, perform a function, and then combine the result. 
+
+The following list of use cases contain examples of hider-order array and map manipulation functions.
+
+### Adjust the price total by n 
+
+`transform(array<T>, function<T, U>): array<U>`
+
+Applies a function to each element of the array and returns a new array of transformed elements.
+
+`transform(array<T>, function<T, Int, U>): array<U>`
+
+Similar to the previous transform, but the function also receives the index of the element in the array.
+
+<!-- Anil's description: Transform elements in an array using the function.
+
+If there are two arguments for the lambda function, the second argument means the index of the element. -->
+
+```sql
+```
+
+**Result**
+
+```console
+```
+
+### To know if there is any product with a specific SKU
+
+`exists(array<T>, function<T, Boolean>): Boolean`
+
+Checks if there exists an element in the array satisfying the given condition.
+
+<!-- Anil's description: Test whether a predicate holds for one or more elements in the array. -->
+
+```sql
+```
+
+**Result**
+
+```console
+```
+
+### to know the products for which SKU > 100000
+
+`filter(array<T>, function<T, Boolean>): array<T>`
+
+Filters elements in the array based on a given condition and returns a new array.
+
+### to add the SKU for all the product list items available for a given id and then double the final result.
+
+`aggregate(array<T>, A, function<A, T, A>[, function<A, R>]): R`
+
+Aggregates values in the array using a specified aggregation function and optionally returns a result.
+
+<!-- Anil's description: Apply a binary operator to an initial state and all elements in the array, and reduces this to a single state. The final state is converted into the final result by applying a finish function. -->
+
+```sql
+```
+
+**Result**
+
+```console
+```
+
+### to give a sequence number to all the items in the product list items.
+
+`zip_with(array<T>, array<U>, function<T, U, R>): array<R>`
+
+Combines two arrays element-wise using a function and returns a new array.
+
+<!-- Anil's description: Merge the two given arrays, element-wise, into a single array using the function. If one array is shorter, nulls are appended at the end to match the length of the longer array, before applying the function. -->
+
+```sql
+```
+
+**Result**
+
+```console
+```
+
+### to give a sequence number to all the items in the product list items and to get the final result as map.
+
+`map_from_entries(array<struct<K, V>>): map<K, V>`
+
+Converts an array of key-value pairs into a map.
+
+<!-- Anil's description: Returns a map created from the given array of entries. -->
+
+```sql
+```
+
+**Result**
+
+```console
+```
+
+### to give a sequence number to all the items in the product list items and to get the final result as map
+
+`map_form_arrays(array<K>, array<V>): map<K, V>`
+
+Creates a map from two arrays, one for keys and one for values.
+
+<!-- Anil's description: Creates a map with a pair of the given key/value arrays. All elements in keys should not be null. -->
+
+```sql
+```
+
+**Result**
+
+```console
+```
+
+### to concatenate two maps into as single map
+
+`map_concat(map<K, V>, ...): map<K, V>`
+
+Concatenates multiple maps into a single map.
+
+<!--Anil's description:  Returns the union of all the given maps. -->
+
+```sql
+```
+
+**Result**
+
+```console
+```
+
+### to retrieve a value corresponding to 'AAID' in the identity map and wants to do further computation on that
+
+`element_at(array<T>, Int): T / element_at(map<K, V>, K): V`
+
+Returns the element at a specified index in an array or the value associated with a key in a map.
+
+<!-- Anil's description: For arrays, returns an element of the given array at given (1-based) index. If index < 0, accesses elements from the last to the first. Returns null if the index exceeds the length of the array.
+
+For maps, returns a value for the given key, or null if the key is not contained in the map. -->
+
+```sql
+```
+
+**Result**
+
+```console
+```
+
+### to know the number of identities in the identitiesMap
+
+`cardinality(array<T>): Int / cardinality(map<K, V>): Int`
+
+Returns the number of elements in an array or the number of key-value pairs in a map.
+
+<!--     
+Anil's description: An alias of size. Returns the size of the given array or a map. Returns -1 if null. -->
+
+```sql
+```
+
+**Result**
+
+```console
+```
+
+### to know the distinct elements in the productListItems.
+
+`array_distinct(array<T>): array<T>`
+
+Returns an array with distinct elements from the input array.
+
+<!-- Anil's description: Removes duplicate values from the given array. -->
+
+```sql
+```
+
+**Result**
+
+```console
+```
+
+### to know the common elements of two arrays {#12}
+
+`array_intersect(array<T>, array<T>): array<T>`
+
+Returns an array containing elements that are common to both input arrays
+
+<!-- Anil's description: Returns an array of the elements in the intersection of the given two arrays, without duplicates. -->
+
+```sql
+```
+
+**Result**
+
+```console
+```
+
