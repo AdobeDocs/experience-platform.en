@@ -85,10 +85,6 @@ Use the granular predictions available on the Overview, Summary, and Details das
 Each prediction has a lower & an upper bound. 
 <!-- Q) Is this accurate? This does not seem to be true.  -->
 
-<!-- Since the current month's projections tend to be more accurate than the subsequent month projections, the lower bound of the current month prediction should be >= 90% of the current usage. This is to avoid a wide ranging prediction that could start with a lower bound of 0% even though the current usage is higher. So, if the current usage is 10M for addressable audience, the lower bound for the current month's prediction should be >= 9M. This lower bound number should act as the "base" for the future 60/90/120 day predictions. 
-
-In order to view additional usage beyond the current month forecast, the user should be able to click on an icon next to the projected value, upon which the system should display projections beyond the current month. In order to let the user know when the prediction was performed and the CTA for the user, there should be relevant text in the modal title/description -->
-
 #### Sandbox level predictions {#sandbox-predictions} 
 
 <!-- Q) I have not yet seen this in QA environment. Is it included in the beta? -->
@@ -149,10 +145,10 @@ From this view, you can select ![The inspect icon.](../images/license-usage/insp
 
 Each visualization widget includes the following aspects: 
 
-- A line graph tracking the metric change over time
-- A key for the line graph
-- The sandbox name
-- A dropdown menu to adjust the time period for the line graph
+* A line graph tracking the metric change over time
+* A key for the line graph
+* The sandbox name
+* A dropdown menu to adjust the time period for the line graph
 
 The line graphs compare usage numbers for your organization to the total available with your organization's licensing and provide a percentage of total usage.
 
