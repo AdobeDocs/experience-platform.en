@@ -22,7 +22,7 @@ The **[!UICONTROL Composition properties]** popover appears. You can insert deta
 
 >[!NOTE]
 >
->If you do **not** give your composition a title, it will have a title of "Composition" followed by the creation date and time by default.
+>If you do **not** give your composition a title, it will have a title of "Composition" followed by the creation date and time by default. Additionally, each composition **must** have its own unique name.
 
 After updating your composition's details, select **[!UICONTROL Save]** to confirm these updates. The audience composition canvas re-appears.
 

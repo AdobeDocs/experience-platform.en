@@ -63,6 +63,10 @@ This base code, in addition to creating a global function, also loads additional
 
 ### Supporting Internet Explorer {#support-internet-explore}
 
+>[!IMPORTANT]
+>
+>At the end of April 2024, the Adobe Experience Platform Web SDK will be removing support for all versions of Internet Explorer.
+
 This SDK uses promises, which are a method of communicating the completion of asynchronous tasks. The [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementation used by the SDK is natively supported by all target browsers except [!DNL Internet Explorer]. To use the SDK on [!DNL Internet Explorer], you must have `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 To determine if you already have `window.Promise` polyfilled:
