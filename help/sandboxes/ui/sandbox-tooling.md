@@ -61,19 +61,14 @@ Custom identity types are not supported as dependent objects when exporting a jo
 >All export actions are recorded in the audit logs.
 
 >[!CONTEXTUALHELP]
->id="platform_sandbox_tooling_exit_package"
->title="Save and exit package"
->abstract="To exit the package and save, users can simply use the back option."
-
->[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="Remove an object"
->abstract="The user must select the row and then use the delete option (made available upon selection) to remove the row."
+>abstract="To remove an object from the package, select the row to be removed and then use the delete option, made available upon selection. Note that you cannot remove objects from published packages."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="Package expiry settings"
->abstract="The date is set for 90 days from today. This date continues to change until the package is published. If a user visits the package in draft status tomorrow, the date moves by +1 day (unless set by the user)."
+>abstract="Packages are set to expire after a period of inactivity in draft status. The default date is set for 90 days from today. This date continues to change until the package is published. If you visit the package in draft status tomorrow, the date moves by +1 day, unless you set this manually."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"
