@@ -3,7 +3,12 @@ title: Adobe Experience Platform Web Software Development Kit (SDK) Overview
 description: Learn how to use the Adobe Experience Platform Web SDK to integrate Platform capabilities into your website.
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
 ---
+
 # Adobe Experience Platform Web SDK {#overview}
+
+>[!IMPORTANT]
+>
+>At the end of April 2024, the Adobe Experience Platform Web SDK will be removing support for all versions of Internet Explorer.
 
 The Adobe Experience Platform Web Software Development Kit (SDK) is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with its services through the Adobe Experience Platform Edge Network. Adobe offers two methods to implement the Web SDK:
 
