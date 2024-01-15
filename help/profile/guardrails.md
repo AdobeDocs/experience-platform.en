@@ -49,7 +49,7 @@ The following guardrails provide recommended limits when modeling Real-Time Cust
 ### Primary entity guardrails
 
 | Guardrail | Limit | Limit Type | Description |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | XDM Individual Profile class datasets | 20 | Performance guardrail | A maximum of 20 datasets that leverage the XDM Individual Profile class is recommended. |
 | XDM ExperienceEvent class datasets | 20 | Performance guardrail | A maximum of 20 datasets that leverage the XDM ExperienceEvent class is recommended. |
 | Adobe Analytics report suite datasets enabled for Profile | 1 | Performance guardrail | A maximum of one (1) Analytics report suite dataset should be enabled for Profile. Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix. |

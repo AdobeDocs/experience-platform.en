@@ -59,7 +59,7 @@ The following guardrails provide recommended limits when modeling Real-Time Cust
 
 | Guardrail | Limit | Limit Type | Description |
 | --------- | ----- | ---------- | ----------- |
-| No nested legacy relationships | 0 | Performance guardrail | You should not create a relationship between two non-[!DNL XDM Individual Profile] schemas. The ability to create relationships is not recommended for any schemas which are not part of the [!DNL Profile] union schema. |
+| No nested legacy relationships | 0 | Performance guardrail | You should not create a relationship between two non-[!DNL XDM Individual Profile] schemas. Creating relationships is **not** recommended for any schemas which are not part of the [!DNL Profile] union schema. |
 | Only B2B objects may participate in many-to-one relationships | 0 | System-enforced guardrail | The system only supports many-to-one relationships between B2B objects. For more information on many-to-one relationships, refer to the tutorial on [defining B2B schema relationships](../xdm/tutorials/relationship-b2b.md). |
 | Maximum depth of nested relationships between B2B objects | 3 | System-enforced guardrail | The maximum depth of nested relationships between B2B objects is 3. This means that in a highly nested schema, you should not have a relationship between B2B objects nested more than 3 levels deep. |
 
@@ -103,7 +103,7 @@ The guardrails outlined in this section refer to the number and nature of segmen
 
 | Guardrail | Limit | Limit Type | Description |
 | --------- | ----- | ---------- | ----------- |
-| Segments per B2B sandbox | 400 | Performance guardrail | An organization can have more than 400 segments in total, as long as there are less than 400 segments in each individual B2B sandbox. Attempting to create additional segments may affect system performance. |
+| Segment definitions per B2B sandbox | 400 | Performance guardrail | An organization can have more than 400 segment definitions in total, as long as there are less than 400 segment definitions in each individual B2B sandbox. Attempting to create additional segment definitions may affect system performance. |
 
 ## Next steps
 
