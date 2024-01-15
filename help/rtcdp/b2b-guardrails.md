@@ -46,10 +46,10 @@ The following guardrails provide recommended limits when modeling Real-Time Cust
 
 | Guardrail | Limit | Limit Type | Description |
 | --------- | ----- | ---------- | ----------- |
-|Real-Time CDP B2B Edition standard XDM class datasets | 60 | Performance guardrail| A maximum of 60 datasets that leverage the standard Experience Data Model (XDM) classes provided by Real-Time CDP B2B Edition is recommended. For a complete list of standard XDM classes for B2B use cases, refer to the [schemas in Real-Time CDP B2B Edition documentation](schemas/b2b.md). <br/><br/>*Note: Due to the nature of Experience Platform's denormalized hybrid data model, most customers do not exceed this limit. For questions about how to model your data, or if you would like to learn more about custom limits, please contact your customer care representative.*|
+| Real-Time CDP B2B Edition standard XDM class datasets | 60 | Performance guardrail| A maximum of 60 datasets that leverage the standard Experience Data Model (XDM) classes provided by Real-Time CDP B2B Edition is recommended. For a complete list of standard XDM classes for B2B use cases, refer to the [schemas in Real-Time CDP B2B Edition documentation](schemas/b2b.md). <br/><br/>*Note: Due to the nature of Experience Platform's denormalized hybrid data model, most customers do not exceed this limit. For questions about how to model your data, or if you would like to learn more about custom limits, please contact your customer care representative.* |
 | Identity count for individual account in an Identity Graph | 50 | Performance guardrail | The maximum number of identities in an Identity Graph for an individual account is 50. Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups. | 
 | Legacy multi-entity relationships| 20 | Performance guardrail | A maximum of 20 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
-| Many-to-one relationships per XDM class | 2 | Performance guardrail | A maximum of 2 many-to-one relationships defined per XDM class is recommended. Additional relationship should not be made until an existing relationship is removed or disabled. For steps on how to create a relationship between two schemas, refer to the tutorial on [defining B2B schema relationships](../xdm/tutorials/relationship-b2b.md).|
+| Many-to-one relationships per XDM class | 2 | Performance guardrail | A maximum of 2 many-to-one relationships defined per XDM class is recommended. Additional relationship should not be made until an existing relationship is removed or disabled. For steps on how to create a relationship between two schemas, refer to the tutorial on [defining B2B schema relationships](../xdm/tutorials/relationship-b2b.md). |
 
 ### Dimension entity guardrails
 
@@ -58,10 +58,10 @@ The following guardrails provide recommended limits when modeling Real-Time Cust
 >The data model limits outlined in this section represent the changes enabled by Real-Time Customer Data Platform B2B Edition. For a complete list of default limits for Real-Time CDP B2B Edition, combine these limits with the general Adobe Experience Platform limits outlined in the [guardrails for Real-Time Customer Profile data documentation](../profile/guardrails.md).
 
 | Guardrail | Limit | Limit Type | Description |
-| --- | --- | --- | --- |
-| No nested legacy relationships | 0 | Performance guardrail | You should not create a relationship between two non-[!DNL XDM Individual Profile] schemas. The ability to create relationships is not recommended for any schemas which are not part of the [!DNL Profile] union schema.|
-| Only B2B objects may participate in many-to-one relationships | 0 | System-enforced guardrail | The system only supports many-to-one relationships between B2B objects. For more information on many-to-one relationships, refer to the tutorial on [defining B2B schema relationships](../xdm/tutorials/relationship-b2b.md).|
-| Maximum depth of nested relationships between B2B objects | 3 | System-enforced guardrail | The maximum depth of nested relationships between B2B objects is 3. This means that in a highly nested schema, you should not have a relationship between B2B objects nested more than 3 levels deep.|
+| --------- | ----- | ---------- | ----------- |
+| No nested legacy relationships | 0 | Performance guardrail | You should not create a relationship between two non-[!DNL XDM Individual Profile] schemas. The ability to create relationships is not recommended for any schemas which are not part of the [!DNL Profile] union schema. |
+| Only B2B objects may participate in many-to-one relationships | 0 | System-enforced guardrail | The system only supports many-to-one relationships between B2B objects. For more information on many-to-one relationships, refer to the tutorial on [defining B2B schema relationships](../xdm/tutorials/relationship-b2b.md). |
+| Maximum depth of nested relationships between B2B objects | 3 | System-enforced guardrail | The maximum depth of nested relationships between B2B objects is 3. This means that in a highly nested schema, you should not have a relationship between B2B objects nested more than 3 levels deep. |
 
 ## Data size limits
 
@@ -77,9 +77,9 @@ The following guardrails refer to data size and provide recommended limits for d
 >
 >The data size limits outlined in this section represent the changes enabled by Real-Time Customer Data Platform B2B Edition. For a complete list of default limits for Real-Time CDP B2B Edition, combine these limits with the general Adobe Experience Platform limits outlined in the [guardrails for Real-Time Customer Profile data documentation](../profile/guardrails.md).
 
-| Guardrail | Limit| Limit Type | Description|
-| --- | --- | --- | --- |
-| Batches ingested per XDM class per day | 45 | Performance guardrail | The total number of batches ingested each day per XDM class should not exceed 45. Ingesting additional batches may prevent optimal performance.|
+| Guardrail | Limit | Limit Type | Description |
+| --------- | ----- | ---------- | ----------- |
+| Batches ingested per XDM class per day | 45 | Performance guardrail | The total number of batches ingested each day per XDM class should not exceed 45. Ingesting additional batches may prevent optimal performance. |
 
 ### Dimension entity guardrails
 
@@ -87,11 +87,11 @@ The following guardrails refer to data size and provide recommended limits for d
 >
 >The data size limits outlined in this section represent the changes enabled by Real-Time Customer Data Platform B2B Edition. For a complete list of default limits for Real-Time CDP B2B Edition, combine these limits with the general Adobe Experience Platform limits outlined in the [guardrails for Real-Time Customer Profile data documentation](../profile/guardrails.md).
 
-| Guardrail | Limit | Limit Type | Description|
-| --- | --- | --- | --- |
-| Total size for all dimensional entities | 5GB | Performance guardrail | The recommended total size for all dimensional entities is 5GB. Ingesting large dimension entities may affect system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended.|
-| Datasets per dimensional entity schema | 5 | Performance guardrail | A maximum of 5 datasets associated with each dimensional entity schema is recommended. For example, if you create a schema for "products" and add five contributing datasets, you should not create a sixth dataset tied to the products schema.|
-|Dimension entity batches ingested per day |4 per entity|Performance guardrail|The recommended maximum number of dimension entity batches ingested per day is 4 per entity. For example, you could ingest updates to a product catalog up to 4 times per day. Ingesting additional dimension entity batches for the same entity may affect system performance.|
+| Guardrail | Limit | Limit Type | Description |
+| --------- | ----- | ---------- | ----------- |
+| Total size for all dimensional entities | 5GB | Performance guardrail | The recommended total size for all dimensional entities is 5GB. Ingesting large dimension entities may affect system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended. |
+| Datasets per dimensional entity schema | 5 | Performance guardrail | A maximum of 5 datasets associated with each dimensional entity schema is recommended. For example, if you create a schema for "products" and add five contributing datasets, you should not create a sixth dataset tied to the products schema. |
+| Dimension entity batches ingested per day | 4 per entity |Performance guardrail|The recommended maximum number of dimension entity batches ingested per day is 4 per entity. For example, you could ingest updates to a product catalog up to 4 times per day. Ingesting additional dimension entity batches for the same entity may affect system performance. |
 
 ## Segmentation guardrails
 
@@ -101,9 +101,9 @@ The guardrails outlined in this section refer to the number and nature of segmen
 >
 >The segmentation limits outlined in this section represent the changes enabled by Real-Time Customer Data Platform B2B Edition. For a complete list of default limits for Real-Time CDP B2B Edition, combine these limits with the general Adobe Experience Platform limits outlined in the [guardrails for Real-Time Customer Profile data documentation](../profile/guardrails.md).
 
-| Guardrail | Limit | Limit Type | Description|
-| --- | --- | --- | --- |
-| Segments per B2B sandbox | 400 | Performance guardrail | An organization can have more than 400 segments in total, as long as there are less than 400 segments in each individual B2B sandbox. Attempting to create additional segments may affect system performance.|
+| Guardrail | Limit | Limit Type | Description |
+| --------- | ----- | ---------- | ----------- |
+| Segments per B2B sandbox | 400 | Performance guardrail | An organization can have more than 400 segments in total, as long as there are less than 400 segments in each individual B2B sandbox. Attempting to create additional segments may affect system performance. |
 
 ## Next steps
 
