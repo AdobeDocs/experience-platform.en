@@ -85,9 +85,11 @@ When creating or editing elements, you can save and build to your [active librar
 
 ## Types of data elements {#types-of-data-elements}
 
-Data element types are determined by the extension. There is no limit to the types that can be created.
+>[!NOTE]
+>
+>Data element types are determined by the extension. There is no limit to the types that can be created.
 
-The following sections describe the types of data elements available in the Core extension. Other extensions use other types of data elements.
+The following sections describe the types of data elements available in the **Core extension**. Other extensions use other types of data elements.
 
 ### Cookie
 
