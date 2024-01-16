@@ -28,9 +28,7 @@ If you already have a valid [!DNL Oracle NetSuite] account, you may skip the rem
 
 ## Connect your [!DNL Oracle NetSuite Activities] account {#connect-account}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace.
-
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Under the *Marketing Automation* category, select **[!DNL Oracle NetSuite Entities]**, and then select **[!UICONTROL Add data]**.
 

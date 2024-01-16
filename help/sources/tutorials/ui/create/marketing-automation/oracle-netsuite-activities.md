@@ -9,7 +9,7 @@ badge: Beta
 >
 >The [!DNL Oracle NetSuite Activities] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-The following tutorial walks you through the steps to create a [!DNL Oracle NetSuite Activities] source connection to bring [!DNL Oracle NetSuite] events data using the Adobe Experience Platform user interface.
+Use the following tutorial for guidance on how to bring events data from your [!DNL Oracle NetSuite Activities] account to Adobe Experience Platform in the UI.
 
 ## Getting started {#getting-started}
 
@@ -22,28 +22,13 @@ This tutorial requires a working understanding of the following components of Ex
 
 If you already have a valid [!DNL Oracle NetSuite] account, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/marketing-automation.md).
 
-### Gather required credentials
-
-In order to connect [!DNL Oracle NetSuite Activities] to Platform, you must provide values for the following connection properties:
-
-| Credential | Description | Example |
-| --- | --- | --- |
-| Client ID | The Client ID value when you create the integration record in [!DNL Oracle NetSuite]. The process to create an interation record can be found [here](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). | `7fce.....b42f`<br>The value is a 64 characters string. |
-| Client secret | The Client Secret value when you create the integration record. The process to create an interation record can be found [here](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). | `5c98.....1b46`<br>The value is a 64 characters string. |
-| authorizationTestUrl | | https://{ACCOUNT_ID}.app.netsuite.com/app/login/oauth2/authorize.nl?response_type=code&redirect_uri=https%3A%2F%2Fapi.github.com&scope=rest_webservices&state=ykv2XLx1BpT5Q0F3MRPHb94j&client_id={CLIENT_ID} |
-| Access token | The Access token value is generated at the end of [step two](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) of the [OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) tutorial. Access tokens expire are valid only for 60 minutes. | `eyJr......f4V0`<br> the value is a 1024 characters string formatted as a JSON Web Token (JWT). |
-| Refresh token | The Refresh token value value is generated at the end of [step two](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) of the [OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) tutorial. Refresh tokens have a longer validity and are valid for 7 days. Refresh tokens are used by the [!DNL Oracle NetSuite Activities] source to internally generate new Access tokens. | `eyJr......dmxM`<br> the value is a 1024 characters string formatted as a JSON Web Token (JWT). |
-| accessTokenUrl | The [!DNL NetSuite] Access Token URL. This takes the form shown alongside. | https://{ACCOUNT_ID}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token |
-
->[!IMPORTANT]
+>[!TIP]
 >
-> After a refresh token expires you must create a new account in Platform with updated tokens.
+>Read the [[!DNL Oracle NetSuite] overview](../../../../connectors/marketing-automation/oracle-netsuite.md) for information on how to retrieve your authentication credentials.
 
 ## Connect your [!DNL Oracle NetSuite] account {#connect-account}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
-
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
 Under the *Marketing Automation* category, select **[!DNL Oracle NetSuite Activities]**, and then select **[!UICONTROL Add data]**.
 
@@ -53,7 +38,7 @@ The **[!UICONTROL Connect Oracle NetSuite Activities account]** page appears. On
 
 >[!IMPORTANT]
 >
-> As explained in the [Gather required credentials](../../../../connectors/marketing-automation/oracle-netsuite.md#gather-credentials) section the **Refresh token** expires after 7 days. If you encounter the error message `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`, proceed to create a [New Account](#new-account) in Platform with updated tokens.
+>The refresh token expires after seven days. Once your token expire, you must create account on Experience Platform with your updated token. If you do not create a new account with your updated token, you may see the following error message: `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
 
 ### Existing account {#existing-account}
 
@@ -81,7 +66,7 @@ Platform provides intelligent recommendations for auto-mapped fields based on th
 
 >[!NOTE]
 >
-> The fields displayed are dependent on the subscriptions [!DNL Oracle NetSuite] account has access to. For example, if you do not have access to billing you will not see the billing related fields.  
+>The fields displayed are dependent on the subscriptions that your [!DNL Oracle NetSuite] account has access to. For example, if you do not have access to billing, then you will not see the billing related fields.
 
 ### Scheduling {#scheduling}
 
@@ -91,7 +76,7 @@ When scheduling your [!DNL Oracle NetSuite Activities] dataflow for ingestion, y
 | --- | --- |
 | `Once` | 1 |
 
-While retrieving data the [!DNL Oracle NetSuite] responds with the last modified / created date as a date format instead of a timestamp. Hence, the scheduling is limited to 1 day.
+While retrieving data, the [!DNL Oracle NetSuite] responds with the last modified or created date as a date format instead of a timestamp. Hence, the scheduling is limited to one day.
 
 Once your have provided the values for your schedule, select **[!UICONTROL Next]**.
 
