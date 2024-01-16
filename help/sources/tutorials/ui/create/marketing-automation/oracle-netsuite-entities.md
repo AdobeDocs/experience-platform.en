@@ -9,7 +9,7 @@ badge: Beta
 >
 >The [!DNL Oracle NetSuite Entities] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-The following tutorial walks you through the steps to create an [!DNL Oracle NetSuite Entities] source connection to bring [!DNL Oracle NetSuite] contacts and customers data using the Adobe Experience Platform user interface.
+Use the following tutorial for guidance on how to bring contacts and customers data from your [!DNL Oracle NetSuite Entities] account to Adobe Experience Platform in the UI.
 
 ## Getting started {#getting-started}
 
@@ -22,9 +22,13 @@ This tutorial requires a working understanding of the following components of Ex
 
 If you already have a valid [!DNL Oracle NetSuite] account, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/marketing-automation.md).
 
+>[!TIP]
+>
+>Read the [[!DNL Oracle NetSuite] overview](../../../../connectors/marketing-automation/oracle-netsuite.md) for information on how to retrieve your authentication credentials.
+
 ## Connect your [!DNL Oracle NetSuite Activities] account {#connect-account}
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -36,7 +40,7 @@ The **[!UICONTROL Connect Oracle NetSuite Entities account]** page appears. On t
 
 >[!IMPORTANT]
 >
->As explained in the [Gather required credentials](../../../../connectors/marketing-automation/oracle-netsuite.md#gather-credentials) section the **Refresh token** expires after 7 days. If you encounter the error message `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`, proceed to create a [New Account](#new-account) in Platform with updated tokens.
+>The refresh token expires after seven days. Once your token expire, you must create account on Experience Platform with your updated token. If you do not create a new account with your updated token, you may see the following error message: `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
 
 ### Existing account {#existing-account}
 
@@ -52,7 +56,7 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ### Select data
 
-Before proceeding you must select the object type that you want to ingest to Platform.
+Next, select the object type that you want to ingest to Experience Platform.
 
 | Entity type | Description |
 | --- | --- |
@@ -73,7 +77,7 @@ Before proceeding you must select the object type that you want to ingest to Pla
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have established a connection to your [!DNL Oracle NetSuite Entities] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/marketing-automation.md).
+By following this tutorial, you have established a connection to your [!DNL Oracle NetSuite Entities] account. You can now continue on to the next tutorial and [configure a dataflow to bring marketing automation data into Platform](../../dataflow/marketing-automation.md).
 
 ## Additional resources {#additional-resources}
 
@@ -85,7 +89,7 @@ Platform provides intelligent recommendations for auto-mapped fields based on th
 
 >[!NOTE]
 >
-> The fields displayed are dependent on the subscriptions [!DNL Oracle NetSuite] account has access to. For example, if you do not have access to billing you will not see the billing related fields.
+>The fields displayed are dependent on the subscriptions that your [!DNL Oracle NetSuite] account has access to. For example, if you do not have access to billing, then you will not see the billing related fields.
 
 ### Scheduling {#scheduling}
 
@@ -95,7 +99,7 @@ When scheduling your [!DNL Oracle NetSuite Entities] dataflow for ingestion, you
 | --- | --- |
 | `Once` | 1 |
 
-While retrieving data the [!DNL Oracle NetSuite] responds with the last modified / created date as a date format instead of a timestamp. Hence, the scheduling is limited to 1 day.
+While retrieving data, the [!DNL Oracle NetSuite] responds with the last modified or created date as a date format instead of a timestamp. Hence, the scheduling is limited to one day.
 
 Once your have provided the values for your schedule, select **[!UICONTROL Next]**.
 
