@@ -37,7 +37,7 @@ In order to connect [!DNL Oracle NetSuite Entities] to Experience Platform, you 
 
 >[!IMPORTANT]
 >
-> After a refresh token expires you must create a new account in Experience Platform with updated tokens.
+>After a refresh token expires you must create a new account in Experience Platform with updated tokens.
 
 ## Connect your [!DNL Oracle NetSuite] account {#connect-account}
 
@@ -53,7 +53,7 @@ The **[!UICONTROL Connect Oracle NetSuite Entities account]** page appears. On t
 
 >[!IMPORTANT]
 >
-> As explained in the [Gather required credentials](../../../../connectors/marketing-automation/oracle-netsuite.md#gather-credentials) section the **Refresh token** expires after 7 days. If you encounter the error message `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`, proceed to create a [New Account](#new-account) in Platform with updated tokens.
+>As explained in the [Gather required credentials](../../../../connectors/marketing-automation/oracle-netsuite.md#gather-credentials) section the **Refresh token** expires after 7 days. If you encounter the error message `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`, proceed to create a [New Account](#new-account) in Platform with updated tokens.
 
 ### Existing account {#existing-account}
 
