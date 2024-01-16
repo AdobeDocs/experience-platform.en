@@ -701,12 +701,6 @@ The results of this query give the columns for the similarity join, as seen belo
 
 +++:
 
-### Next steps {#next-steps}
-
-By reading this document, you can now use this logic to highlight meaningful relationships or overlaps between disparate datasets. The ability to identify products from different datasets that have a significant similarity in their characteristics or attributes, has numerous real-world applications. This logic could be used for scenarios such as product matching (to group or recommend similar products to customers), data cleansing (to improve data quality), and market basket analysis (to provide insights into customer behavior, preferences, and potential cross-selling opportunities). 
-
-If you have not already done so, you are recommended to read the [AI/ML feature pipeline overview](../data-distiller/ml-feature-pipelines/overview.md). Use that overview to learn how Data Distiller and your preferred machine learning can build custom data models that support your marketing use cases with Experience Platform data.
-
 ## Additional higher-order functions {#additional-functions}
 
 Analytics or time series datasets are commonly comprised of complex nested structures, arrays, and maps. You can use higher-order functions to process complex data types, such as arrays, without the need to explode the array, perform a function, and then combine the result. 
@@ -762,7 +756,7 @@ In the snippet above, the `exists` function is applied to each element of the ar
 
 **Example**
 
-In the SQL example below, the query fetches `productlistitems` from the `geometrixxx_999_xdm_pqs_1batch_10k_rows` table and evaluates whether an element with sku equal to `123679` in the `productlistitems` array exists. It then filters the results based on a specific range of timestamps and limits the final results to ten rows.
+In the SQL example below, the query fetches `productlistitems` from the `geometrixxx_999_xdm_pqs_1batch_10k_rows` table and evaluates whether an element with an SKU equal to `123679` in the `productlistitems` array exists. It then filters the results based on a specific range of timestamps and limits the final results to ten rows.
 
 ```sql
 SELECT productlistitems
@@ -801,7 +795,7 @@ This function filters an array of elements based on a given condition that evalu
 
 **Example**
 
-The query below selects the `productlistitems` column, applies a filter to include only elements with sku greater than 100000, and restricts the result set to rows within a specific timestamp range. The filtered array is then aliased as `_filter` in the output.
+The query below selects the `productlistitems` column, applies a filter to include only elements with SKU greater than 100000, and restricts the result set to rows within a specific timestamp range. The filtered array is then aliased as `_filter` in the output.
 
 ```sql
 SELECT productlistitems,
@@ -874,7 +868,7 @@ This snippet combines the elements of two arrays into a single new array. The op
 
 **Example**
 
-The following query uses the `zip_with` function to create pairs of values from two arrays. It does this by combining a sequence of integers, generated using the `Sequence` function, with the sku values from the `productlistitems` array. The result is selected alongside the original `productlistitems` column and is limited based on a timestamp range."
+The following query uses the `zip_with` function to create pairs of values from two arrays. It does this by combining a sequence of integers, generated using the `Sequence` function, with the SKU values from the `productlistitems` array. The result is selected alongside the original `productlistitems` column and is limited based on a timestamp range."
 
 ```sql
 SELECT productlistitems,
@@ -945,7 +939,7 @@ productlistitems     | map_from_entries
 (10 rows)
 ```
 
-### to give a sequence number to all the items in the product list items and to get the final result as map
+### Give a sequence number to all the items in the product list and return the final result as a map
 
 `map_form_arrays(array<K>, array<V>): map<K, V>`
 
@@ -1152,3 +1146,12 @@ productlistitems     | array_distinct(productlistitems)
 (10 rows)
 ```
 
+### Next steps {#next-steps}
+
+By reading this document, you can now use this logic to highlight meaningful relationships or overlaps between disparate datasets. The ability to identify products from different datasets that have a significant similarity in their characteristics or attributes, has numerous real-world applications. This logic could be used for scenarios such as:
+
+- Product matching: To group or recommend similar products to customers. 
+- Data cleansing: To improve data quality.
+- Market basket analysis: to provide insights into customer behavior, preferences, and potential cross-selling opportunities. 
+
+If you have not already done so, you are recommended to read the [AI/ML feature pipeline overview](../data-distiller/ml-feature-pipelines/overview.md). Use that overview to learn how Data Distiller and your preferred machine learning can build custom data models that support your marketing use cases with Experience Platform data.
