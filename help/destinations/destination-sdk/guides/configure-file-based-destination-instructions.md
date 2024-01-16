@@ -21,7 +21,7 @@ Before advancing to the steps illustrated below, please read the [Destination SD
 
 Start by [creating a server and file configuration](../authoring-api/destination-server/create-destination-server.md) using the `/destinations-server` endpoint.
 
-Shown below is an example configuration for an [!DNL Amazon S3] destination. To configure other types of file-based destinations, see their corresponding [server configurations](../functionality/destination-server/server-specs.md).
+Shown below is an example configuration for an [!DNL Amazon S3] destination. For more details about the fields used in the configuration and to configure other types of file-based destinations, see their corresponding [server configurations](../functionality/destination-server/server-specs.md).
 
 **API format**
 
@@ -34,7 +34,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
     "name": "S3 destination",
     "destinationServerType": "FILE_BASED_S3",
     "fileBasedS3Destination": {
-        "bucketName": {
+        "bucket": {
             "templatingStrategy": "PEBBLE_V1",
             "value": "{{customerData.bucketName}}"
         },
@@ -110,7 +110,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 Shown below is an example of a destination configuration, created by using the `/destinations` API endpoint.
 
-To connect the server and file configuration in step 1 to this destination configuration, add the instance ID of the server and template configuration as `destinationServerId` here.
+To connect the server and file configuration from step 1 to this destination configuration, add the `instance ID` of the server and file configuration as `destinationServerId` here.
 
 **API format**
 
@@ -118,7 +118,7 @@ To connect the server and file configuration in step 1 to this destination confi
 POST platform.adobe.io/data/core/activation/authoring/destinations
 ``` 
 
-```json {line-numbers="true" highlight="84"}
+```json {line-numbers="true" highlight="83"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -183,7 +183,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "https://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -226,7 +226,22 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -238,7 +253,7 @@ For some destinations, Destination SDK requires that you configure an audience m
 
 If you use an audience metadata configuration, you must connect it to the destination configuration you created in step 2. Add the instance ID of your audience metadata configuration to your destination configuration as `audienceTemplateId`.
 
-```json {line-numbers="true" highlight="91"}
+```json {line-numbers="true" highlight="90"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -303,7 +318,7 @@ If you use an audience metadata configuration, you must connect it to the destin
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "http://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -352,7 +367,22 @@ If you use an audience metadata configuration, you must connect it to the destin
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -361,6 +391,10 @@ If you use an audience metadata configuration, you must connect it to the destin
 ## Step 4: Set up authentication {#set-up-authentication}
 
 Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION"` or `"authenticationRule": "PLATFORM_AUTHENTICATION"` in the destination configuration above, you can set up authentication for your destination by using the `/destination` or the `/credentials` endpoint.
+
+>[!NOTE]
+>
+>`CUSTOMER_AUTHENTICATION` is the more common of the two authentication rules and is the one to use if you require users to provide some form of authentication to your destination before they can set up a connection and export data.
 
 * If you selected `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in the destination configuration, see the following sections for the authentication types supported by Destination SDK for file-based destinations:
     
@@ -378,10 +412,10 @@ Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION
 
 After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](../testing-api/batch-destinations/file-based-destination-testing-overview.md) to test the integration between Adobe Experience Platform and your destination.
 
-As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create audiences in Experience Platform:
+As part of the process to test your destination, you must use the Experience Platform UI to create audiences, which you will activate to your destination. Refer to the two resources below for instructions how to create audiences in Experience Platform:
 
-* [Create an audience documentation page](/help/segmentation/ui/overview.md#create-segment)
-* [Create an audience video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [Create an audience - documentation page](/help/segmentation/ui/overview.md#create-segment)
+* [Create an audience - video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Step 6: Publish your destination {#publish-destination}
 

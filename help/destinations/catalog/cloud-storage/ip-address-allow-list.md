@@ -27,9 +27,17 @@ Adobe recommends that you add the following IP ranges to an allowlist prior to w
 
 * `52.252.71.64/29`
 
+## Canada customers
+
+* `20.220.135.16/29`
+
 ## EMEA customers
 
 * `51.137.8.208/29`
+
+## UK customers
+
+* `20.26.133.96/29`
 
 ## APAC customers
 

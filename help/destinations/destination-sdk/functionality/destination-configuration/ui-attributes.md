@@ -5,7 +5,7 @@ exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
 ---
 # UI attributes
 
-UI attributes define the visual elements that Adobe should display for your destination card in the Adobe Experience Platform user interface, such as the destination platform logo, a link to the documentation page, a destination description and its category and type.
+UI attributes define the visual elements that Adobe should display for your destination card in the Adobe Experience Platform user interface, such as a logo, a link to the documentation page, a destination description and its category and type.
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the following destination configuration overview pages:
 
@@ -15,10 +15,10 @@ To understand where this component fits into an integration created with Destina
 When [creating a destination](../../authoring-api/destination-configuration/create-destination-configuration.md) through Destination SDK, the `uiAttributes` section defines the following visual properties of your destination card:
 
 * The URL of your destination documentation page in the [destination catalog](../../../catalog/overview.md).
-* The URL where you hosted the icon to be displayed in the destinations catalog card.
 * The category under which your destination will be visible in the Platform UI.
 * The data export frequency for your destination.
 * The destination connection type, such as Amazon S3, Azure Blob, etc.
+* The URL where you hosted the icon to be displayed in the destinations catalog card.
 
 You can configure UI attributes via the `/authoring/destinations` endpoint. See the following API reference pages for detailed API call examples where you can configure the components shown in this page.
 
@@ -76,14 +76,6 @@ Users can see the list of destination categories on the left side of the screen 
 
 ![UI image showing the destination category location.](../../assets/functionality/destination-configuration/ui-attributes-category.png)
 
-<!-- ### `iconUrl` {#icon-url}
-
-`iconUrl` is a string parameter that refers to the URL where you hosted the icon to be displayed in the destinations catalog card. For private custom integrations, this is not required. For productized configurations, you need to share an icon with the Adobe team when you [submit the destination for review](../../guides/submit-destination.md#logo).
-
-Users can see the icon on your destination card, as shown in the image below.
-
-![UI image showing the icon location.](../../assets/functionality/destination-configuration/ui-attributes-icon.png) -->
-
 ### `connectionType` {#connection-type}
 
 `connectionType` is a string parameter that refers to the type of connection, depending on the destination. Supported values: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul>
@@ -108,9 +100,17 @@ To do this, you can use the `isBeta: "true"` parameter in the UI attributes sect
 
 ![UI image showing a destination card marked as beta.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
 
+### `icon` {#icon}
+
+You can add a logo icon to your destination, as shown in the image below.
+
+![UI image showing the icon location.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+
+To add a logo to your destination card, you need to share the desired image with the Adobe team when you [submit the destination for review](../../guides/submit-destination.md#logo).
+
 ## Next steps {#next-steps}
 
-After reading this article, you should have a better understanding of what UI attributes you can configure for your destination and where the users will see them in the Platform UI.
+After reading this article, you should have a better understanding of which UI attributes you can configure for your destination and where the users will see them in the Platform UI.
 
 To learn more about the other destination components, see the following articles:
 

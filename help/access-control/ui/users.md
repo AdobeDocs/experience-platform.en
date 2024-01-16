@@ -9,7 +9,7 @@ exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
 
 To assign or remove users from a product profile, open the profile's details page and navigate to the **[!UICONTROL Users]** tab. From here, select **[!UICONTROL Add User]**.
 
-![add-user](../images/add-user.png)
+![The product profile details page showing the users listed in the [!UICONTROL Users] tab.](../images/add-user.png)
 
 The **[!UICONTROL Add User]** dialog appears. Using the search field, you can lookup users to add either by name or by email. As you type, matching users will appear in an autocomplete window below the textbox.
 
@@ -19,7 +19,11 @@ The **[!UICONTROL Add User]** dialog appears. Using the search field, you can lo
 
 Once you have selected a user, select **[!UICONTROL Save]** to add them to the product profile.
 
-![save-user](../images/save-user.png)
+![Add users to the product profile page highlighting user details.](../images/save-user.png)
+
+The following video is intended to support your understanding of managing admins for a product profile.
+
+>[!VIDEO](https://video.tv.adobe.com/v/333860/?learn=on)
 
 ## Next steps
 
