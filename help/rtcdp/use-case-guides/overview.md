@@ -17,7 +17,7 @@ With third-party cookies set to disappear within the next few years, partner dat
 
 Adobe Real-Time CDP provides extensive support for partner identifiers, allowing you to create audiences of prospects, enrich known audiences with attributes from partners, and much more.
 
-The supported use cases can be grouped into customer acquisition and profile enrichment cases. Visit the documentation links below for extensive implementation information. 
+The sample use cases can be grouped into customer acquisition and profile enrichment cases. Visit the documentation links below for extensive implementation information. 
 
 ### Customer acquisition {#customer-acquisition}
 
