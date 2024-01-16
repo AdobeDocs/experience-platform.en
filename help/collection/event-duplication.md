@@ -17,7 +17,6 @@ This is a best practice for handling transient failures. The side-effect is the 
 
 To better understand best practices for handling transient failures, see this article on [transient fault handling](https://learn.microsoft.com/en-us/azure/architecture/best-practices/transient-faults).
 
-
 ## Event duplication scenarios {#scenarios}
 
 Event duplication can occur in any of the following scenarios:
@@ -29,11 +28,9 @@ The Adobe Experience Platform data collection layer is designed to support "at-l
 
 To learn more about "at-least-once" processing, see this article on [message delivery guarantees](https://docs.confluent.io/kafka/design/delivery-semantics.html).
 
-
-
 ## Event deduplication options {#deduplication}
 
 For business scenarios sensitive to duplicate events, Experience Platform uses multiple event deduplication methods in its downstream storage systems.
 
-* Real-Time CDP drops events if an event with the same `_id` already exists in the [!DNL Profile Store]. See the documentation on [XDM ExeprienceEvent class](../xdm/classes/experienceevent.md) for more details.
+* Real-Time CDP Profile Store drops events if an event with the same `_id` already exists in the [!DNL Profile Store]. See the documentation on [XDM ExperienceEvent class](../xdm/classes/experienceevent.md) for more details.
 * Customer Journey Analytics allows users to configure a metric to only count values non-repetitively. To learn how to do this, see the documentation on [metric deduplication component settings](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/component-settings/metric-deduplication.html?lang=en).
