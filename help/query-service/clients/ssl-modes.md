@@ -42,6 +42,25 @@ To ensure a secure connection, SSL usage must be configured on both the client a
 
 By default, [!DNL PostgreSQL] does not perform any verification of the server certificate. To verify the server's identity and ensure a secure connection before any sensitive data is sent (as part of the SSL `verify-full` mode), you must place a root (self-signed) certificate on your local machine (`root.crt`) and a leaf certificate signed by the root certificate on the server.
 
+<!--  -->
+
+>[!IMPORTANT]
+>
+>Query Service Interactive Postgres API will be refreshing TLS/SSL certificates on Production environments on Thursday 11th January at 11am (PST).
+
+TLS/SSL certificates on Production environments for the Query Service API will be refreshed on Thursday 11th January at 11am (PST).
+interactive queries to
+
+TLS (Transport Layer Security) certificates are digital certificates used to secure and encrypt data transmitted over the internet. They are commonly used to establish secure connections between web browsers and servers.
+
+<br>Although this is an annual requirement, on this occasion the root certificate in the chain will also change as Adobe's TLS/SSL certificate provider have updated their certificate hierarchy.
+If you are using a Postgre client and the client's list of Certificate Authorities are missing the root cert, this can result in an error. For example, `psql: error: SSL error: certificate verify failed`
+
+This can impact certain Postgres clients if their list of Certificate Authorities are missing the root cert. For example, a PSQL CLI client needs to have the root certs added to an explicit file `~/postgresql/root.crt` (https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES). The root certificate to add can be downloaded from [here](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
+>If the root cert is missing for psql client, the error will show
+
+<!--  -->
+
 If the `sslmode` parameter is set to `verify-full`, libpq will verify that the server is trustworthy by checking the certificate chain up to the root certificate stored on the client. It then verifies that the hostname matches the name stored in the server certificate.
 
 To allow server certificate verification, you must place one or more root certificates (`root.crt`) in the [!DNL PostgreSQL] file in your home directory. The file path would be similar to `~/.postgresql/root.crt`.
