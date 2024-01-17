@@ -60,6 +60,7 @@ The following guardrails provide recommended limits when modeling Real-Time Cust
 | No nested legacy relationships | 0 | Soft | You should not create a relationship between two non-[!DNL XDM Individual Profile] schemas. The ability to create relationships is not recommended for any schemas which are not part of the [!DNL Profile] union schema.|
 | Only B2B objects may participate in many-to-one relationships | 0 | Hard | The system only supports many-to-one relationships between B2B objects. For more information on many-to-one relationships, refer to the tutorial on [defining B2B schema relationships](../xdm/tutorials/relationship-b2b.md).|
 | Maximum depth of nested relationships between B2B objects | 3 | Hard | The maximum depth of nested relationships between B2B objects is 3. This means that in a highly nested schema, you should not have a relationship between B2B objects nested more than 3 levels deep.|
+| Single schema for each dimension entity | 1 | Hard | Each dimension entity must have a single schema. Attempting to use dimension entities created from more than one schema may impact segmentation results. Different dimension entities are expected to have separate schemas. |
 
 ## Data size limits
 
