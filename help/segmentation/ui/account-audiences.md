@@ -75,13 +75,28 @@ The following section provides additional information about account audiences.
 
 ### Account segmentation validation {#validation}
 
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_eventLookbackWindow"
+>title="Maximum lookback window error"
+>abstract="The maximum lookback window for Experience Events is 30 days."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_combinationMaxDepth"
+>title="Maximum nested container depth error"
+>abstract="The maximum depth of nested containers is **5**. This means that you **cannot** have more than five nested containers when creating your audience."
+
 When using account audiences, the audience **must** comply with the following constraints:
 
 - The maximum lookback window for Experience Events is **30 days**.
-- The maximum depth and breadth of a boolean condition is **5**.
-- The maximum depth of a cross entity (?) is **5**.
+- The maximum depth of nested containers is **5**.
+  - This means that you **cannot** have more than five nested containers when creating your audience.
+- The maximum number of rules is **5**.
+  - This means that your audience **cannot** have more than five rules that compose your audience.
+- The maximum number of cross entities that can be used is **5**.
+  - A cross entity is when you change between different entities within your audience. For example, going from an Account to a Person to a Marketing List.
 - Custom entities **cannot** be used.
-- RHS???
+- The maximum number of values that can be checked for a single field is **50**.
+  - For example, if you have a field of "City Name", you can check that value against 50 city names.
 - Account audiences **cannot** use `inSegment` events.
 - Account audiences **cannot** use sequential events.
 - Account audiences **cannot** use maps.
