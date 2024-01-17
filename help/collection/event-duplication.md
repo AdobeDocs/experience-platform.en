@@ -19,9 +19,11 @@ To better understand best practices for handling transient failures, see this ar
 
 ## Event duplication scenarios {#scenarios}
 
-Event duplication can occur in any of the following scenarios:
+Event duplication can occur in various scenarios, such as, but not limited to:
 
 * Network-related issues between client-side SDKs and the [!DNL Edge Network]. These issues can originate from Internet Service Provider failures, mobile signal loss, or other network failures, since the connectivity between the customer and the Edge Network is done through the public Internet.
+* Incorrect customer implementations. When client-side SDKs are incorrectly configured, or there is a bug in a customer implementation, the same event could be sent to the Edge Network multiple times.
+
 * Internal Experience Platform auto-scaling events. Occasionally, data can be rebalanced due to cloud infrastructure volatility.
 
 The Adobe Experience Platform data collection layer is designed to support "at-least-once" processing. Consequently, event duplication may occur in limited situations.
