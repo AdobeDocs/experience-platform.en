@@ -37,7 +37,7 @@ You must provide values for the following credential properties to authenticate 
 
 | Credential | Description |
 | ---------- | ----------- |
-| `accounr` | The full account name associated with your [!DNL Snowflake] account. A fully qualified [!DNL Snowflake] account name includes your account name, region, and cloud platform. For example, `cj12345.east-us-2.azure`. For more information on account names, read the [!DNL Snowflake] documentation on [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
+| `account` | The full account name associated with your [!DNL Snowflake] account. A fully qualified [!DNL Snowflake] account name includes your account name, region, and cloud platform. For example, `cj12345.east-us-2.azure`. For more information on account names, read the [!DNL Snowflake] documentation on [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
 | `warehouse` | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Platform. |
 | `database` | The [!DNL Snowflake] database contains the data you want to bring the Platform. |
 | `username` | The username for the [!DNL Snowflake] account. |
@@ -166,12 +166,12 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `auth.params.account` | 
-| `auth.params.username` |
-| `auth.params.database` |
-| `auth.params.privateKey` |
-| `auth.params.privateKeyPassphrase` |
-| `auth.params.warehouse` | 
+| `auth.params.account` | The name of your [!DNL Snowflake] account. |
+| `auth.params.username` | The username associated with your [!DNL Snowflake] account.|
+| `auth.params.database` | The [!DNL Snowflake] database from where the data will be pulled from. |
+| `auth.params.privateKey` | The [!DNL Base64] encoded encrypted private key of your [!DNL Snowflake] account. |
+| `auth.params.privateKeyPassphrase` | The passphrase that corresponds with your private key. |
+| `auth.params.warehouse` | The [!DNL Snowflake] warehouse that you are using. |
 | `connectionSpec.id` | The [!DNL Snowflake] connection specification ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 +++
@@ -202,24 +202,32 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Snowflake base connection",
-      "description": "Snowflake base connection",
+      "name": "Snowflake base connection with encrypted private key",
+      "description": "Snowflake base connection with encrypted private key",
       "auth": {
-          "specName": "ConnectionString",
-          "params": {
-              "connectionString": "jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}"
-          }
-      },
-      "connectionSpec": {
-          "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
-          "version": "1.0"
-      }
+        "specName": "KeyPair Authentication",
+        "params": {
+            "account": "acme-snowflake123",
+            "username": "acme-cj123",
+            "database": "ACME_DB",
+            "privateKey": "{BASE_64_ENCODED_PRIVATE_KEY}",
+            "warehouse": "COMPUTE_WH"
+        }
+    },
+    "connectionSpec": {
+        "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+        "version": "1.0"
+    }
   }'
 ```
 
 | Property | Description |
 | -------- | ----------- |
-| `auth.params.connectionString` | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
+| `auth.params.account` | The name of your [!DNL Snowflake] account. |
+| `auth.params.username` | The username associated with your [!DNL Snowflake] account.|
+| `auth.params.database` | The [!DNL Snowflake] database from where the data will be pulled from. |
+| `auth.params.privateKey` | The [!DNL Base64] encoded unencrypted private key of your [!DNL Snowflake] account. |
+| `auth.params.warehouse` | The [!DNL Snowflake] warehouse that you are using. |
 | `connectionSpec.id` | The [!DNL Snowflake] connection specification ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 +++
