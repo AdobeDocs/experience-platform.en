@@ -166,7 +166,12 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `auth.params.connectionString` | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
+| `auth.params.account` | 
+| `auth.params.username` |
+| `auth.params.database` |
+| `auth.params.privateKey` |
+| `auth.params.privateKeyPassphrase` |
+| `auth.params.warehouse` | 
 | `connectionSpec.id` | The [!DNL Snowflake] connection specification ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 +++
