@@ -25,17 +25,14 @@ AMC brings together unique signals from across Amazon owned and operated propert
 
 To help you better understand how and when you should use the *Amazon Ads* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use case #1
 ### Activation and targeting {#activation-and-targeting}
 
 This integration with Amazon DSP allows Amazon Ads advertisers to pass advertiser CDP audiences from Adobe Experience Platform to Amazon's DSP to create advertiser audiences for advertising targeting. Audiences may be selected within the Amazon DSP for positive targeting, as well as negative targeting (suppression).
 
-### Use case #2
 ### Analytics and Measurement {#analytics-and-measurement}
 
 This integration with Amazon Marketing Cloud (AMC) allows Amazon Ads advertisers to pass CDP segments from Adobe Experience Platform form to AMC. Advertisers can then join the CDP inputs with Amazon Ads signals, and conduct custom analytics on topics such as media impact, audience segments, and customer journeys in privacy compliant format. For example, an advertiser may upload a list of their existing customers to understand the aggregate advertising campaign performance, or aggregated statistics of on-Amazon conversion events, such as viewing a product detail page, adding a product to a shopping cart, or purchase of a product.
 
-### Use case #3
 ### Advertising optimization:
 
 This integration with Amazon Marketing Cloud (AMC) allows advertisers to upload their own customer lists, and using Amazon Marketing Cloud SQL, perform overlap analysis, suppressions, additions, or optimizations to audiences in a recurring basis before creating an activation-ready audience in Amazon DSP for targeting.
@@ -170,7 +167,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
-|January 2024|Functionality and documentation update| Added new documentation for AMC.
+|January 2024|Functionality and documentation update| Added the option to export audiences to be used in Amazon Marketing Cloud (AMC).|
 |May 2023|Functionality and documentation update| <ul><li>Added support for Advertiser Region selection in the [destination connection workflow](#destination-details).</li><li>Updated documentation to reflect the addition of Advertiser Region selection. For more information on selecting the correct Advertiser Region, see the [Amazon documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 |March 2023|Initial release|Initial destination release and documentation published.|
 
