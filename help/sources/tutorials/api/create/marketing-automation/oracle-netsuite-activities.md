@@ -20,9 +20,9 @@ This guide requires a working understanding of the following components of Exper
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Oracle NetSuite Activities] using the [!DNL Flow Service] API.
 
->[!TIP]
->
->Read the [[!DNL Oracle NetSuite] overview](../../../../connectors/marketing-automation/oracle-netsuite.md) for information on how to retrieve your authentication credentials.
+### Authentication
+
+Read the [[!DNL Oracle NetSuite] overview](../../../../connectors/marketing-automation/oracle-netsuite.md) for information on how to retrieve your authentication credentials.
 
 ### Using Platform APIs
 
@@ -30,11 +30,11 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ## Connect [!DNL Oracle NetSuite Activities] to Platform using the [!DNL Flow Service] API
 
-The following outlines the steps you need to make in order to authenticate your [!DNL Oracle NetSuite Activities] source, create a source connection, and create a dataflow to bring your events data to Experience Platform.
+Follow the guide below to learn how to authenticate your [!DNL Oracle NetSuite Activities] source, create a source connection, and create a dataflow to bring your events data to Experience Platform.
 
 ### Create a base connection {#base-connection}
 
-A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Oracle NetSuite Activities] authentication credentials as part of the request body.
 
@@ -83,7 +83,7 @@ curl -X POST \
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
 | `auth.params.clientId` | The Client ID value when you create the integration record. The process to create an interation record can be found [here](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). The value is a 64 characters string similar to `7fce.....b42f`. |
 | `auth.params.clientSecret` | The Client ID value when you create the integration record. The process to create an interation record can be found [here](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). The value is a 64 characters string similar to `5c98.....1b46`. |
-| `auth.params.accessTokenUrl` | The [!DNL NetSuite] Access Token URL, similar to `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token` where you will replace ACOUNT_ID with your [!DNL NetSuite] Account ID. |
+| `auth.params.accessTokenUrl` | The [!DNL NetSuite] Access Token URL, similar to `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token` where you will replace ACCOUNT_ID with your [!DNL NetSuite] Account ID. |
 | `auth.params.accessToken` | The Access token value is generated at the end of [Step Two](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) of the [OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) tutorial. Access tokens expire are valid only for 60 minutes. the value is a 1024 characters string formatted as a JSON Web Token (JWT) similar to `eyJr......f4V0`. |
 
 **Response**
