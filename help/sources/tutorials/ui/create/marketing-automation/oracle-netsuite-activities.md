@@ -9,7 +9,7 @@ badge: Beta
 >
 >The [!DNL Oracle NetSuite Activities] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-Use the following tutorial for guidance on how to bring events data from your [!DNL Oracle NetSuite Activities] account to Adobe Experience Platform in the UI.
+Read the following tutorial to learn how to bring events data from your [!DNL Oracle NetSuite Activities] account to Adobe Experience Platform in the UI.
 
 ## Getting started {#getting-started}
 
