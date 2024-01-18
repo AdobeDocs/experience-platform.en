@@ -1,4 +1,5 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/tags/release-notes/current.html,https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html
 https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-attributes/overview.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-datasets/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-attributes/seamless-sql-flow.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-datasets/seamless-sql-flow.html
 https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-attributes/decile-based-derived-attributes.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-datasets/decile-based-derived-attributes.html?lang=en

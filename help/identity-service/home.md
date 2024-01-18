@@ -27,7 +27,7 @@ Before diving into the details of Identity Service, please read the following ta
 | --- | --- |
 | Identity | An identity is data that is unique to an entity. Typically, this is a real-world object, such as an individual person, a hardware device, or a web browser (represented by a cookie). A fully qualified identity consists of two elements: an **identity namespace** and an **identity value**. |
 | Identity namespace | An identity namespace is the context of a given identity. For example, a namespace of `Email` could correspond with **julien<span>@acme.com**. Similarly, a namespace of `Phone` could correspond with `555-555-1234`. For more information, read the [identity namespace overview](./namespaces.md) |
-| Identity value | An identity value is a string that represents a real-world entity and is categorized within Identity Service through a namespace. For example, the email **julien<span>@acme.com** could be categorized as an `Email` namespace.  |
+| Identity value | An identity value is a string that represents a real-world entity and is categorized within Identity Service through a namespace. For example, the identity value (string) **julien<span>@acme.com** could be categorized as an `Email` namespace. |
 | Identity type | An identity type is a component of an identity namespace. The identity type designates whether identity data is linked in an identity graph or not. |
 | Link | A link or a linkage, is a method to establish that two disparate identities represent the same entity. For example, a link between "`Email` = julien<span>@acme.com" and "`Phone` = 555-555-1234" means that both identities represent the same entity. This suggests that the customer who has interacted with your brand with both the email address of julien<span>@acme.com and the phone number of 555-555-1234 is the same. |
 | Identity Service | Identity Service is a service within Experience Platform that links (or unlinks) identities to maintain identity graphs. |
@@ -85,7 +85,7 @@ Consider the following example:
 * Next, if you log in with the same credentials to the same e-commerce website, but use the web browser on your phone instead of the web browser on your laptop, then a new ECID is registered in Identity Service.
 * Behind the scenes, Identity Service processes this new event as `{CRM_ID:ABC, ECID:456}`, where CRM_ID: ABC represents your authenticated customer ID and ECID:456 represents the web browser on your mobile device.
 
-Considering the scenarios above, Identity Service establishes a link between `CRM_ID:ABC, ECID:123`, as well as `{CRM_ID:ABC, ECID:456}`. This results in an identity graph where you "own" three identities: one for person identifier (CRM ID) and two for cookie identifiers (ECIDs).
+Considering the scenarios above, Identity Service establishes a link between `{CRM_ID:ABC, ECID:123}`, as well as `{CRM_ID:ABC, ECID:456}`. This results in an identity graph where you "own" three identities: one for person identifier (CRM ID) and two for cookie identifiers (ECIDs).
 
 ## Identity graphs
 
