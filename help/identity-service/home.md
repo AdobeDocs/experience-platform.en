@@ -14,8 +14,8 @@ Organizations and businesses today face a large volume of disparate datasets: yo
 You can solve these challenges with Adobe Experience Platform Identity Service and its capabilities to:
 
 * Generate an **identity graph** that links disparate identities together, thus giving you with a visual representation of how a customer interacts with your brand across different channels.
-* Provide tools for validation and debugging.
 * Create a graph for Real-Time Customer Profile, which is then used to create a comprehensive view of the customer by merging attributes and behaviors.
+* Perform validation and debugging using the various tools.
 
 This document provides an overview of Identity Service and how you can use its functionalities within the context of Experience Platform.
 
@@ -27,13 +27,13 @@ Before diving into the details of Identity Service, please read the following ta
 | --- | --- |
 | Identity | An identity is data that is unique to an entity. Typically, this is a real-world object, such as an individual person, a hardware device, or a web browser (represented by a cookie). A fully qualified identity consists of two elements: an **identity namespace** and an **identity value**. |
 | Identity namespace | An identity namespace is the context of a given identity. For example, a namespace of `Email` could correspond with **julien<span>@acme.com**. Similarly, a namespace of `Phone` could correspond with `555-555-1234`. For more information, read the [identity namespace overview](./namespaces.md) |
-| Identity value | An identity value is a string that represents a real-world entity and is categorized within Identity Service through a namespace. For example, the email **julien<span>@acme.com** could be categorized as an `Email` namespace.  |
+| Identity value | An identity value is a string that represents a real-world entity and is categorized within Identity Service through a namespace. For example, the identity value (string) **julien<span>@acme.com** could be categorized as an `Email` namespace. |
 | Identity type | An identity type is a component of an identity namespace. The identity type designates whether identity data is linked in an identity graph or not. |
 | Link | A link or a linkage, is a method to establish that two disparate identities represent the same entity. For example, a link between "`Email` = julien<span>@acme.com" and "`Phone` = 555-555-1234" means that both identities represent the same entity. This suggests that the customer who has interacted with your brand with both the email address of julien<span>@acme.com and the phone number of 555-555-1234 is the same. |
 | Identity Service | Identity Service is a service within Experience Platform that links (or unlinks) identities to maintain identity graphs. |
 | Identity graph | The identity graph is a collection of identities that represent a single customer. For more information, read the guide on [using the identity graph viewer](./ui/identity-graph-viewer.md). |
 | Real-Time Customer Profile | Real-Time Customer Profile is a service within Adobe Experience Platform that: <ul><li>Merges profiles fragments to create a profile, based on an identity graph.</li><li>Segments profiles so that they can then be sent to destination for activations.</li></ul> |
-| Profile | A profile is a representation of a subject, an organization, or an individual. A profile is composed of two elements: <ul><li>Attributes: attributes provide information such as name, age, or gender.</li><li>Behavior: behaviors provide information on the activities of a given profile. For example, a profile behavior can tell if a given profile was "searching for sandals" or "ordering t-shirts."</li></ul> |
+| Profile | A profile is a representation of a subject, an organization, or an individual. A profile is composed of four elements: <ul><li>Attributes: attributes provide information such as name, age, or gender.</li><li>Behavior: behaviors provide information on the activities of a given profile. For example, a profile behavior can tell if a given profile was "searching for sandals" or "ordering t-shirts."</li><li>Identities: For a merged profile, this provides information of all the identities associated with the person. Identities can be classified into three categories: Person (CRMID, email, phone), device (IDFA, GAID), and cookie (ECID, AAID).</li><li>Audience memberships: The groups in which the profile belongs to (loyal users, users who live in California, etc.)</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -61,14 +61,10 @@ Consider the following customer journey:
 
 Identity Service provides the following operations to achieve its mission:
 
-You can use Identity Service to achieve the following operations:
-
 * Create custom namespaces to fit your organization's needs.
 * Create, update, and view identity graphs.
 * Delete identities based on datasets.
 * Delete identities to ensure regulatory compliance.
-
->[!BEGINSHADEBOX]
 
 ## How Identity Service links identities
 
@@ -89,9 +85,7 @@ Consider the following example:
 * Next, if you log in with the same credentials to the same e-commerce website, but use the web browser on your phone instead of the web browser on your laptop, then a new ECID is registered in Identity Service.
 * Behind the scenes, Identity Service processes this new event as `{CRM_ID:ABC, ECID:456}`, where CRM_ID: ABC represents your authenticated customer ID and ECID:456 represents the web browser on your mobile device.
 
-Considering the scenarios above, Identity Service establishes a link between `CRM_ID:ABC, ECID:123`, as well as `{CRM_ID:ABC, ECID:456}`. This results in an identity graph where you "own" three identities: one for person identifier (CRM ID) and two for cookie identifiers (ECIDs).
-
->[!ENDSHADEBOX]
+Considering the scenarios above, Identity Service establishes a link between `{CRM_ID:ABC, ECID:123}`, as well as `{CRM_ID:ABC, ECID:456}`. This results in an identity graph where you "own" three identities: one for person identifier (CRM ID) and two for cookie identifiers (ECIDs).
 
 ## Identity graphs
 
@@ -105,9 +99,11 @@ The following video is intended to support your understanding of identities and 
 
 Identity Service plays a vital role within Experience Platform. Some of these key integrations include the following:
 
-* [Real-Time Customer Profile](../profile/home.md): Before attributes and events for a given profile are merged, Real-Time Customer Profile could reference the identity graph.
 * [Schemas](../xdm/home.md): Within a given schema, the schema fields that are marked as identity allow for identity graphs to be built.
 * [Datasets](../catalog/datasets/overview.md): When a dataset is enabled for ingestion into Real-Time Customer Profile, identity graphs are generated from the dataset, given that the dataset as at least two fields marked as identity.
+* [Web SDK](../edge/home.md): Web SDK sends experience events to Adobe Experience Platform, and Identity Service generates a graph when two or more identities exist in the event.
+* [Real-Time Customer Profile](../profile/home.md): Before attributes and events for a given profile are merged, Real-Time Customer Profile could reference the identity graph.
 * [Destinations](../destinations/home.md): Destinations can send profile information to other systems based on an identity namespace, such as hashed email.
 * [Segment Match](../segmentation/ui/segment-match/overview.md): Segment Match matches two profiles across two different sandboxes that have the same identity namespace and identity value.
 * [Privacy Service](../privacy-service/home.md): If the deletion request includes `identity`, then the specified namespace and identity value combination can be deleted from Identity Service using the privacy request processing feature in Privacy Service.
+
