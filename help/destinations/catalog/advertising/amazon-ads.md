@@ -146,7 +146,7 @@ In the left-hand schema browser, find your audience under Advertiser Uploaded â†
 
 select count(user_id) from aep_audiences where audienceId = '1234567'
 
-![Amazon Marketing Cloud audience creation validation]()
+![Amazon Marketing Cloud audience creation validation](../../assets/catalog/advertising/amazon_ads_image_5.png)
 
 
 ## Data usage and governance {#data-usage-governance}
