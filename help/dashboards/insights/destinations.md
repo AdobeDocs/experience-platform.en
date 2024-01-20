@@ -8,7 +8,8 @@ The insights derived from the analysis of your data model make your Adobe Real-t
  
 Understand your destination insights by accessing the SQL that powers them, then generate your own insights to further explore the activation of data from Adobe Experience Platform to your destination platforms. Transform your raw data into new actionable insights by using the existing Real-Time CDP data model SQL as inspiration to create queries for your unique business needs. 
 
-<!-- See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+<!-- This link will go in during the January release.
+See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
 
 The following insights are all available for you to use as part of the [Destinations dashboard](../guides/destinations.md) or a custom [user-defined dashboard](../user-defined-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../user-defined-dashboards.md#create-widget).
 
@@ -41,6 +42,8 @@ WHERE
 
 +++
 
+See the [Activated audiences widget documentation](../guides/destinations.md#activated-audiences) for information on the appearance and functionality of this insight.
+
 ## Activated audiences across all destinations {#activated-audiences-across-all-destinations}
 
 Questions answered by this insight:
@@ -61,6 +64,8 @@ WHERE
 ```
 
 +++
+
+See the [Activated audiences across all destinations widget documentation](../guides/destinations.md#activated-audiences-across-all-destinations) for information on the appearance and functionality of this insight.
 
 ## Active destinations by destination platform {#active-destinations-by-destination-platform}
 
@@ -84,6 +89,8 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 ```
 
 +++
+
+See the [Active destinations by destination platform widget documentation](../guides/destinations.md#active-destinations-by-destination-platform) for information on the appearance and functionality of this insight.
 
 ## Audience size trend {#audience-size-trend}
 
@@ -128,6 +135,8 @@ SELECT d.destination_name,
 ```
 
 +++
+
+See the [Audience size trend widget documentation](../guides/destinations.md#audience-size-trend) for information on the appearance and functionality of this insight.
 
 ## Common audiences {#common-audiences}
 
@@ -199,6 +208,8 @@ SELECT k.destination_name1,
 
 +++
 
+See the [Common audiences widget documentation](../guides/destinations.md#common-audiences) for information on the appearance and functionality of this insight.
+
 ## Destination status {#destination-status}
 
 Questions answered by this insight:
@@ -221,6 +232,8 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
+See the [Destination status widget documentation](../guides/destinations.md#destination-status) for information on the appearance and functionality of this insight.
+
 ## Destinations count {#destinations-count}
 
 Questions answered by this insight:
@@ -236,6 +249,8 @@ SELECT count(destination_id) AS total_number_of_destinations
 ```
 
 +++
+
+See the [Destinations count widget documentation](../guides/destinations.md#destinations-count) for information on the appearance and functionality of this insight.
 
 ## Mapped audience health {#mapped-audience-health}
 
@@ -304,6 +319,8 @@ SELECT destination_name,
 
 +++
 
+See the [Mapped audience health widget documentation](../guides/destinations.md#mapped-audience-health) for information on the appearance and functionality of this insight.
+
 ## Mapped audiences {#mapped-audiences}
 
 Questions answered by this insight:
@@ -322,6 +339,9 @@ WHERE destination_id = 1458738325;
 
 +++
 
+See the [Mapped audiences widget documentation](../guides/destinations.md#mapped-audiences) for information on the appearance and functionality of this insight.
+
+<!-- Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
 
 Questions answered by this insight:
@@ -332,12 +352,13 @@ Questions answered by this insight:
 
 +++Select to reveal the SQL that generates this insight
 
-<!-- SQL IS MISSING -->
-
 ```sql
 ```
 
 +++
+
+See the [Mapped audiences by identity widget documentation](../guides/destinations.md#mapped-audiences-by-identity) for information on the appearance and functionality of this insight.
+-->
 
 ## Most used destinations {#most-used-destinations}
 
@@ -365,6 +386,8 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 ```
 
 +++
+
+See the [Most used destinations widget documentation](../guides/destinations.md#most-used-destinations) for information on the appearance and functionality of this insight.
 
 ## Recently activated audiences {#recently-activated-audiences}
 
@@ -395,6 +418,8 @@ LIMIT
 
 +++
 
+See the [Recently activated audiences widget documentation](../guides/destinations.md#recently-activated-audiences) for information on the appearance and functionality of this insight.
+
 ## Recently activated audiences by destination {#recently-activated-audiences-by-destination}
 
 Questions answered by this insight:
@@ -424,6 +449,8 @@ SELECT c.destination_name,
 
 +++
 
+See the [Recently activated audiences by destination widget documentation](../guides/destinations.md#recently-activated-audiences-by-destination) for information on the appearance and functionality of this insight.
+
 ## Recently created destinations {#recently-created-destinations}
 
 Questions answered by this insight:
@@ -451,6 +478,10 @@ LIMIT
 
 +++
 
+See the [Recently created destinations widget documentation](../guides/destinations.md#recently-created-destinations) for information on the appearance and functionality of this insight.
+
+<!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
+
 ## Unmapped audiences by identity {#unmapped-audiences-by-identity}
 
 Questions answered by this insight:
@@ -459,8 +490,6 @@ Questions answered by this insight:
 - What is the count of identities for audiences that are not mapped to a destination?
 - Which audiences have the highest count of identities not mapped to a particular destination?
 
-<!-- SQL MISSING FROM WIKI -->
-
 +++Select to reveal the SQL that generates this insight
 
 ```sql
@@ -468,11 +497,16 @@ Questions answered by this insight:
 
 +++
 
-## Next steps
+See the [Unmapped audiences by identity widget documentation](../guides/destinations.md#unmapped-audiences-by-identity) for information on the appearance and functionality of this insight.
+
+-->
+
+## Next steps {#next-steps}
 
 By reading this document, you now understand the SQL that generates dashboard insights and what common questions this analysis solves. You are now recommended to edit and iterate on that SQL to generate your own insights.
 
-<!-- See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+<!-- This link will go in during the January release.
+See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
 
 You can also read and understand the SQL that generates insights for the [Profiles](./profiles.md) and [Audiences](./audiences.md) dashboards.
 

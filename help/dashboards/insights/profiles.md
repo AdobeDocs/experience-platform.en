@@ -8,7 +8,8 @@ The insights derived from the analysis of your data model make your Adobe Real-t
  
 Understand your profile insights by accessing the SQL that powers them, then generate your own insights to further explore your customers and their consumer experiences that make up your profiles. Transform your raw data into new actionable insights by using the existing Real-Time CDP data model SQL as inspiration to create queries for your unique business needs. 
 
-<!-- See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+<!-- This link will go in during the January release.
+See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
 
 The following insights are all available for you to use as part of the [Profiles dashboard](../guides/profiles.md) or a custom [user-defined dashboard](../user-defined-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../user-defined-dashboards.md#create-widget). 
 
@@ -774,9 +775,7 @@ See the [Unsegmented profiles widget documentation](../guides/profiles.md#unsegm
 
 By reading this document, you now understand the SQL that generates dashboard insights and what common questions this analysis solves. You are now recommended to edit and iterate on that SQL to generate your own insights.
 
-<!-- See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+<!-- This link will go in during the January release.
+See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
 
 You can also read and understand the SQL that generates insights for the [Audiences](./audiences.md) and [Destinations](./destinations.md) dashboards.
-
-<!-- Q) Is an insight different to a KPI? - Yes, a KPI is a specific metric used to assess performance against objectives, while insights are the valuable interpretations and understanding derived from analyzing data. --> 
-
