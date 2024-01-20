@@ -11,9 +11,9 @@ Understand your audience insights by accessing the SQL that powers them, then ge
 <!-- This link will go in during the January release.
 See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
 
-The following insights are all available for you to use as part of the [Audiences dashboard](../guides/audiences.md) or a custom [user-defined dashboard](../user-defined-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../user-defined-dashboards.md#create-widget). 
+The following insights are all available for you to use as part of the [Audiences dashboard](.../guides/audiences.md) or a custom [user-defined dashboard](../user-defined-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../user-defined-dashboards.md#create-widget). 
 
-The following insights are all available for you to use as part of the [Audiences dashboard](../guides/audiences.md) or a custom dashboard.
+The following insights are all available for you to use as part of the [Audiences dashboard](.../guides/audiences.md) or a custom dashboard.
 
 ## Audience overlap report {#audience-overlap-report}
     
@@ -80,7 +80,7 @@ SELECT source_segment_name,
 
 +++
 
-See the [Audience overlap report widget documentation](./guides/audiences.md#audience-overlap-report) for information on the appearance and functionality of this insight.
+See the [Audience overlap report widget documentation](../guides/audiences.md#audience-overlap-report) for information on the appearance and functionality of this insight.
 
 ## Audience overlap {#audience-overlap}
 
@@ -127,7 +127,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-See the [Audience overlap widget documentation](./guides/audiences.md#audience-overlap) for information on the appearance and functionality of this insight.
+See the [Audience overlap widget documentation](../guides/audiences.md#audience-overlap) for information on the appearance and functionality of this insight.
 
 ## Audience size change trend {#audience-size-change-trend}
 
@@ -168,7 +168,7 @@ SELECT date_key,
 
 +++
 
-See the [Audience size change trend widget documentation](./guides/audiences.md#audience-size-change-trend) for information on the appearance and functionality of this insight.
+See the [Audience size change trend widget documentation](../guides/audiences.md#audience-size-change-trend) for information on the appearance and functionality of this insight.
 
 ## Audience size trend by identity {#audience-size-trend-by-identity}
     
@@ -201,7 +201,7 @@ SELECT sum(count_of_profiles) AS identities,
 
 +++
 
-See the [Audience size trend by identity widget documentation](./guides/audiences.md#audience-size-trend-by-identity) for information on the appearance and functionality of this insight.
+See the [Audience size trend by identity widget documentation](../guides/audiences.md#audience-size-trend-by-identity) for information on the appearance and functionality of this insight.
 
 ## Audience size trend {#audience-size-trend}
 
@@ -232,7 +232,7 @@ SELECT date_key,
 
 +++
 
-See the [Audience size trend widget documentation](./guides/audiences.md#audience-size-trend) for information on the appearance and functionality of this insight.
+See the [Audience size trend widget documentation](../guides/audiences.md#audience-size-trend) for information on the appearance and functionality of this insight.
 
 ## Audience size {#audience-size}
 
@@ -260,7 +260,7 @@ WHERE
 
 +++
 
-See the [Audience size widget documentation](./guides/audiences.md#audience-size) for information on the appearance and functionality of this insight.
+See the [Audience size widget documentation](../guides/audiences.md#audience-size) for information on the appearance and functionality of this insight.
 
 ## Customer AI distribution of scores {#customer-ai-distribution-of-scores}
     
@@ -403,7 +403,7 @@ SELECT b.model_name,
 
 +++
 
-See the [Customer AI distribution of scores widget documentation](./guides/audiences.md#customer-ai-distribution-of-scores) for information on the appearance and functionality of this insight.
+See the [Customer AI distribution of scores widget documentation](../guides/audiences.md#customer-ai-distribution-of-scores) for information on the appearance and functionality of this insight.
 
 ## Customer AI scoring summary {#customer-ai-scoring-summary}
 
@@ -448,7 +448,7 @@ SELECT model_name,
 
 +++
 
-See the [Customer AI scoring summary widget documentation](./guides/audiences.md#customer-ai-scoring-summary) for information on the appearance and functionality of this insight.
+See the [Customer AI scoring summary widget documentation](../guides/audiences.md#customer-ai-scoring-summary) for information on the appearance and functionality of this insight.
 
 ## Identity overlap {#identity-overlap}
 
@@ -508,7 +508,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-See the [Identity overlap widget documentation](./guides/audiences.md#identity-overlap) for information on the appearance and functionality of this insight.
+See the [Identity overlap widget documentation](../guides/audiences.md#identity-overlap) for information on the appearance and functionality of this insight.
 
 ## Profiles by identity {#profiles-by-identity}
 
@@ -536,7 +536,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-See the [Profiles by identity widget documentation](./guides/audiences.md#profiles-by-identity) for information on the appearance and functionality of this insight.
+See the [Profiles by identity widget documentation](../guides/audiences.md#profiles-by-identity) for information on the appearance and functionality of this insight.
 
 ## Scheduled activations {#scheduled-activations}
  
@@ -571,7 +571,7 @@ SELECT p.destination_platform ,
 
 +++
 
-See the [Scheduled activations widget documentation](./guides/audiences.md#scheduled-activations) for information on the appearance and functionality of this insight.
+See the [Scheduled activations widget documentation](../guides/audiences.md#scheduled-activations) for information on the appearance and functionality of this insight. 
 
 ## Next steps
 
