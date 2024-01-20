@@ -754,6 +754,7 @@ Questions answered by this insight:
 - What percentage of the total audience is represented by unsegmented profiles?
 - Does any merge policy contribute to a large number of unsegmented profiles?
 
++++Select to reveal the SQL that generates this insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -764,6 +765,8 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
     AND qsaccel.profile_agg.adwh_fact_profile.merge_policy_id = 2027892989
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
+
++++
 
 See the [Unsegmented profiles widget documentation](./guides/profiles.md#unsegmented-profiles) for information on the appearance and functionality of this insight.
 
