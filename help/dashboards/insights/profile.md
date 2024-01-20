@@ -59,6 +59,8 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
+See the [Audience overlap by merge policy widget documentation](../guides/profiles.md#audience-overlap-by-merge-policy) for information on the appearance and functionality of this insight.
+
 ## Audience overlap report {#audience-overlap-report}
 
 Questions answered by this insight:
@@ -124,7 +126,9 @@ SELECT source_segment_name,
 
 +++
 
-## Audiences (count) {#audiences-count}
+See the [Audience overlap report widget documentation](./guides/profiles.md#audience-overlap-report) for information on the appearance and functionality of this insight.
+
+## Audiences (count) {#audiences}
 
 Questions answered by this insight:
 
@@ -149,6 +153,8 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 ```
 
 +++
+
+See the [Audiences widget documentation](./guides/profiles.md#audiences) for information on the appearance and functionality of this insight.
 
 ## Audiences mapped to destination status {#audiences-mapped-to-destination-status}
 
@@ -180,9 +186,9 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-## Audiences size {#audiences-size}
+See the [Audiences mapped to destination status widget documentation](./guides/profiles.md#audiences-mapped-to-destination-status) for information on the appearance and functionality of this insight.
 
-<!-- Is this title correct? -->
+## Audiences size {#audiences-size}
 
 Questions answered by this insight:
 
@@ -212,6 +218,8 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 ```
 
 +++
+
+See the [Audiences size widget documentation](./guides/profiles.md#audiences-size) for information on the appearance and functionality of this insight.
 
 ## Customer AI distribution of scores {#customer-ai-distribution-of-scores}
 
@@ -348,6 +356,8 @@ SELECT b.model_name,
 
 +++
 
+See the [Customer AI distribution of scores widget documentation](./guides/profiles.md#customer-ai-distribution-of-scores) for information on the appearance and functionality of this insight.
+
 ## Customer AI scoring summary {#customer-ai-scoring-summary}
 
 Questions answered by this insight:
@@ -386,6 +396,8 @@ SELECT model_name,
 ```
 
 +++
+
+See the [Customer AI scoring summary widget documentation](./guides/profiles.md#customer-ai-scoring-summary) for information on the appearance and functionality of this insight.
 
 ## Identity overlap {#identity-overlap}
 
@@ -442,6 +454,8 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
+See the [Identity overlap widget documentation](./guides/profiles.md#identity-overlap) for information on the appearance and functionality of this insight.
+
 ## Profile count {#profile-count}
 
 Questions answered by this insight:
@@ -463,6 +477,8 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 ```
 
 Complete information on the appearance and functionality of this insight can be found in the [Profile-count widget guide](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
+
+See the [Profile count widget documentation](./guides/profiles.md#profile-count) for information on the appearance and functionality of this insight.
 
 ## Profile count change {#profile-count-change}
 
@@ -507,6 +523,8 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
+See the [Profile count change widget documentation](./guides/profiles.md#profile-count-change) for information on the appearance and functionality of this insight.
+
 ## Profile count change trend {#profile-count-change-trend}
 
 Questions answered by this insight:
@@ -539,6 +557,8 @@ SELECT date_key,
 
 +++
 
+See the [Profile count change trend widget documentation](./guides/profiles.md#profile-count-change-trend) for information on the appearance and functionality of this insight.
+
 ## Profile count trend {#profile-count-trend}
 
 Questions answered by this insight:
@@ -568,6 +588,8 @@ SELECT date_key,
 
 +++
 
+See the [Profile count trend widget documentation](./guides/profiles.md#profile-count-trend) for information on the appearance and functionality of this insight.
+
 ## Profiles by identity {#profiles-by-identity}
 
 Questions answered by this insight:
@@ -594,6 +616,8 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 ```
 
 +++
+
+See the [Profiles by identity widget documentation](./guides/profiles.md#profiles-by-identity) for information on the appearance and functionality of this insight.
 
 ## Profiles count change trend {#profiles-count-change-trend}
 
@@ -626,6 +650,8 @@ SELECT date_key,
 ```
 
 +++
+
+See the [Profiles count change trend widget documentation](./guides/profiles.md#profiles-count-change-trend) for information on the appearance and functionality of this insight.
 
 ## Profiles count change trend by identity {#profiles-count-change-trend-by-identity}
 
@@ -666,6 +692,8 @@ SELECT date_key,
 
 +++
 
+See the [Profiles count change trend by identity widget documentation](./guides/profiles.md#profiles-count-change-trend-by-identity) for information on the appearance and functionality of this insight.
+
 ## Single identity profiles {#single-identity-profiles}
 
 Questions answered by this insight:
@@ -688,6 +716,8 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 ```
 
 +++
+
+See the [Single identity profiles widget documentation](./guides/profiles.md#single-identity-profiles) for information on the appearance and functionality of this insight.
 
 ## Single identity profiles by identity {#single-identity-profiles-by-identity}
 
@@ -714,6 +744,8 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
+See the [Single identity profiles by identity widget documentation](./guides/profiles.md#single-identity-profiles-by-identity) for information on the appearance and functionality of this insight.
+
 ## Unsegmented profiles {#unsegmented-profiles}
 
 Questions answered by this insight:
@@ -733,6 +765,8 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
+See the [Unsegmented profiles widget documentation](./guides/profiles.md#unsegmented-profiles) for information on the appearance and functionality of this insight.
+
 ## Next steps
 
 By reading this document, you now understand the SQL that generates dashboard insights and what common questions this analysis solves. You are now recommended to edit and iterate on that SQL to generate your own insights.
@@ -741,13 +775,5 @@ By reading this document, you now understand the SQL that generates dashboard in
 
 You can also read and understand the SQL that generates insights for the [Audiences](./audiences.md) and [Destinations](./destinations.md) dashboards.
 
-
-
-
-<!--  -->
-<!-- Complete information on the appearance and functionality of this insight can be found in the [XXX widget guide]().
-
-Q) How to frame this document. I thought this was about exposing the SQL for the data models?
-Q) What noun would you like to apply to these vizualizations?
-Q) Is an insight different to a KPI? - Yes, a KPI is a specific metric used to assess performance against objectives, while insights are the valuable interpretations and understanding derived from analyzing data. -->
+<!-- Q) Is an insight different to a KPI? - Yes, a KPI is a specific metric used to assess performance against objectives, while insights are the valuable interpretations and understanding derived from analyzing data. --> 
 
