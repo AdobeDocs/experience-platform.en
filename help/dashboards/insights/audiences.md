@@ -8,7 +8,8 @@ The insights derived from the analysis of your data model make your Adobe Real-t
  
 Understand your audience insights by accessing the SQL that powers them, then generate your own insights to further explore the identities and profiles that make up your audiences. Transform your raw data into new actionable insights by using the existing Real-Time CDP data model SQL as inspiration to create queries for your unique business needs. 
 
-<!-- See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+<!-- This link will go in during the January release.
+See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
 
 The following insights are all available for you to use as part of the [Audiences dashboard](../guides/audiences.md) or a custom [user-defined dashboard](../user-defined-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../user-defined-dashboards.md#create-widget). 
 
@@ -79,6 +80,8 @@ SELECT source_segment_name,
 
 +++
 
+See the [Audience overlap report widget documentation](./guides/audiences.md#audience-overlap-report) for information on the appearance and functionality of this insight.
+
 ## Audience overlap {#audience-overlap}
 
 Questions answered by this insight:
@@ -124,6 +127,8 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
+See the [Audience overlap widget documentation](./guides/audiences.md#audience-overlap) for information on the appearance and functionality of this insight.
+
 ## Audience size change trend {#audience-size-change-trend}
 
 Questions answered by this insight:
@@ -163,6 +168,8 @@ SELECT date_key,
 
 +++
 
+See the [Audience size change trend widget documentation](./guides/audiences.md#audience-size-change-trend) for information on the appearance and functionality of this insight.
+
 ## Audience size trend by identity {#audience-size-trend-by-identity}
     
 Questions answered by this insight:
@@ -194,6 +201,8 @@ SELECT sum(count_of_profiles) AS identities,
 
 +++
 
+See the [Audience size trend by identity widget documentation](./guides/audiences.md#audience-size-trend-by-identity) for information on the appearance and functionality of this insight.
+
 ## Audience size trend {#audience-size-trend}
 
 Questions answered by this insight:
@@ -223,6 +232,8 @@ SELECT date_key,
 
 +++
 
+See the [Audience size trend widget documentation](./guides/audiences.md#audience-size-trend) for information on the appearance and functionality of this insight.
+
 ## Audience size {#audience-size}
 
 Questions answered by this insight:
@@ -248,6 +259,8 @@ WHERE
 ```
 
 +++
+
+See the [Audience size widget documentation](./guides/audiences.md#audience-size) for information on the appearance and functionality of this insight.
 
 ## Customer AI distribution of scores {#customer-ai-distribution-of-scores}
     
@@ -390,6 +403,8 @@ SELECT b.model_name,
 
 +++
 
+See the [Customer AI distribution of scores widget documentation](./guides/audiences.md#customer-ai-distribution-of-scores) for information on the appearance and functionality of this insight.
+
 ## Customer AI scoring summary {#customer-ai-scoring-summary}
 
 Questions answered by this insight:
@@ -432,6 +447,8 @@ SELECT model_name,
 ```
 
 +++
+
+See the [Customer AI scoring summary widget documentation](./guides/audiences.md#customer-ai-scoring-summary) for information on the appearance and functionality of this insight.
 
 ## Identity overlap {#identity-overlap}
 
@@ -491,6 +508,8 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
+See the [Identity overlap widget documentation](./guides/audiences.md#identity-overlap) for information on the appearance and functionality of this insight.
+
 ## Profiles by identity {#profiles-by-identity}
 
 Questions answered by this insight:
@@ -516,6 +535,8 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 ```
 
 +++
+
+See the [Profiles by identity widget documentation](./guides/audiences.md#profiles-by-identity) for information on the appearance and functionality of this insight.
 
 ## Scheduled activations {#scheduled-activations}
  
@@ -550,10 +571,13 @@ SELECT p.destination_platform ,
 
 +++
 
+See the [Scheduled activations widget documentation](./guides/audiences.md#scheduled-activations) for information on the appearance and functionality of this insight.
+
 ## Next steps
 
 By reading this document, you now understand the SQL that generates dashboard insights and what common questions this analysis solves. You are now recommended to edit and iterate on that SQL to generate your own insights.
 
-<!-- See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+<!-- This link will go in during the January release.
+See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
 
 You can also read and understand the SQL that generates insights for the [Profiles](./profile.md) and [Destinations](./destinations.md) dashboards.
