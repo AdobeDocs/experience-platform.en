@@ -11,9 +11,9 @@ Understand your audience insights by accessing the SQL that powers them, then ge
 <!-- This link will go in during the January release.
 See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
 
-The following insights are all available for you to use as part of the [Audiences dashboard](.../guides/audiences.md) or a custom [user-defined dashboard](../user-defined-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../user-defined-dashboards.md#create-widget). 
+The following insights are all available for you to use as part of the [Audiences dashboard](../guides/audiences.md) or a custom [user-defined dashboard](../user-defined-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../user-defined-dashboards.md#create-widget). 
 
-The following insights are all available for you to use as part of the [Audiences dashboard](.../guides/audiences.md) or a custom dashboard.
+The following insights are all available for you to use as part of the [Audiences dashboard](../guides/audiences.md) or a custom dashboard.
 
 ## Audience overlap report {#audience-overlap-report}
     
