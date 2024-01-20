@@ -474,7 +474,7 @@ By reading this document, you now understand the SQL that generates dashboard in
 
 <!-- See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
 
-You can also read and understand the SQL that generates insights for the [Profiles](./profile.md) and [Audiences](./audiences.md) dashboards.
+You can also read and understand the SQL that generates insights for the [Profiles](./profiles.md) and [Audiences](./audiences.md) dashboards.
 
 <!-- 
 SQL MISSING FROM WIKI:

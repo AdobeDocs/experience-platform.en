@@ -580,4 +580,4 @@ By reading this document, you now understand the SQL that generates dashboard in
 <!-- This link will go in during the January release.
 See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
 
-You can also read and understand the SQL that generates insights for the [Profiles](./profile.md) and [Destinations](./destinations.md) dashboards.
+You can also read and understand the SQL that generates insights for the [Profiles](./profiles.md) and [Destinations](./destinations.md) dashboards.
