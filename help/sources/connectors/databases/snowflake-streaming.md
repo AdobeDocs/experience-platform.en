@@ -4,6 +4,7 @@ description: Learn how to create a source connection and dataflow to ingest stre
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25
+exl-id: ed937689-e844-487e-85fb-e3536c851fe5
 ---
 # [!DNL Snowflake] streaming source
 
@@ -68,11 +69,11 @@ For more information on role and privilege management, refer to the [[!DNL Snowf
     * You can enable a `backfill` boolean flag for your [!DNL Snowflake] source when creating a source connection.
         * If backfill is set to true, then the value for timestamp.initial is set to 0. This means that data with a timestamp column greater than 0 epoch time are fetched.
         * If backfill is set to false, then the value for timestamp.initial is set to -1. This means that data with a timestamp column greater than the current time (the time in which the source begins ingesting) are fetched.
-    * The timestamp column should be formatted as type: `TIMESTAMP_LTZ` or `TIMESTAMP_NTZ`. If the timestamp column is set to `TIMESTAMP_NTZ`, then the types should be stored in UTC time in the database.
+    * The timestamp column should be formatted as type: `TIMESTAMP_LTZ` or `TIMESTAMP_NTZ`. If the timestamp column is set to `TIMESTAMP_NTZ`, then the corresponding timezone in which the values are stored should be passed via the `timezoneValue` parameter. If unprovided, the value will default to UTC.
+      * `TIMESTAMP_TZ` cannot be used a timestamp column or in a mapping.
 
 ## Next steps
 
 The following tutorial provides steps on how to connect your [!DNL Snowflake] streaming source to Experience Platform using the API:
 
 * [Stream data from a [!DNL Snowflake] database to Experience Platform using the Flow Service API](../../tutorials/api/create/databases/snowflake-streaming.md)
-

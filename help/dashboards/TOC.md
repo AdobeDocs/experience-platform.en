@@ -30,6 +30,8 @@ feature: Dashboards
   * [Standard widgets](customize/standard-widgets.md)
   * [Custom widgets](customize/custom-widgets.md)
   * [Edit schema](customize/edit-schema.md)
+* Insights use cases {#insights-use-cases}
+  * [Consent analysis](insights-use-cases/consent-analysis.md)
 * Application integrations {#integrations}
   * [Power BI](integrations/power-bi.md)
 * [Query dashboard datasets](query.md)

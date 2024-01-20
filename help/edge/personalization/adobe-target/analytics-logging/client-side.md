@@ -34,7 +34,7 @@ The following subsections outline how to enable Analytics client-side logging fo
 
 ### Enable Analytics client-side logging {#enable-analytics-client-side-logging}
 
-To consider Analytics client-side logging enabled for your implementation, you must disable the Adobe Analytics configuration in your [datastream](../../../datastreams/overview.md).
+To consider Analytics client-side logging enabled for your implementation, you must disable the Adobe Analytics configuration in your [datastream](../../../../datastreams/overview.md).
 
 ![Analytics datastream configuration disabled](../assets/disable-analytics-datastream.png)
 

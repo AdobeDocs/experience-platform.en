@@ -27,4 +27,4 @@ Once you have finished constructing the object, you may find that you want to re
 
 ## Next steps
 
-This guide covered how to define an object field in the the UI. See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].
+This guide covered how to define an object field in the UI. See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].

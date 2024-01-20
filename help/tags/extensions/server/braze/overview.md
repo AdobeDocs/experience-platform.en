@@ -1,7 +1,7 @@
 ---
 keywords: event forwarding extension;braze;braze event forwarding extension
 title: Braze Event Forwarding Extension
-description: This Adobe Experience Platform event forwarding extension sends Adobe Experience Edge Network events to Braze.
+description: This Adobe Experience Platform event forwarding extension sends Edge Network events to Braze.
 last-substantial-update: 2023-03-29
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
 ---
@@ -45,7 +45,7 @@ The extension uses two of [!DNL Braze]'s APIs and their limits are outlined belo
 
 ### Billable data points
 
-Sending additional custom attributes to [!DNL Braze] may increase your [!DNL Braze] data point consumption. Consult with your [!DNL Braze] account manager before sending additional custom attributes. Refer to the [!DNL Braze] documentation on [billable data points](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points/#billable-data-points) for more information.
+Sending additional custom attributes to [!DNL Braze] may increase your [!DNL Braze] data point consumption. Consult with your [!DNL Braze] account manager before sending additional custom attributes. Refer to the [!DNL Braze] documentation on [billable data points](https://www.braze.com/docs/user_guide/data_and_analytics/data_points/?tab=billable) for more information.
 
 ### Gather required configuration details {#configuration-details}
 

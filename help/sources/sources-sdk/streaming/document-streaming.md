@@ -13,8 +13,8 @@ This documentation guide includes:
 
 * A tutorial that you can follow to create a documentation page for your new source;
 * A documentation template for you to fill out for your new source;
-* [Instructions on how to use Markdown for writing technical documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
-* [Instructions on understanding Adobe Markdown flavor](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions).
+* [Instructions on how to use Markdown for writing technical documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [Instructions on understanding Adobe Markdown flavor](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
 
 ## Prerequisites
 

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;device;datatype;data-type;data type;currency;
 solution: Experience Platform
 title: Currency Data Type
-description: This document provides an overview of the Currency XDM data type.
+description: Learn about the Currency XDM data type.
 exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
 ---
 # [!UICONTROL Currency] data type

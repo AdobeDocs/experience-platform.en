@@ -3,11 +3,7 @@ title: Create a source connection and dataflow for SugarCRM Accounts & Contacts 
 description: Learn how to connect Adobe Experience Platform to SugarCRM Accounts & Contacts using the Flow Service API.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
 ---
-# (Beta) Create a source connection and dataflow for [!DNL SugarCRM Accounts & Contacts] using the Flow Service API
-
->[!NOTE]
->
->The [!DNL SugarCRM Accounts & Contacts] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
+# Create a source connection and dataflow for [!DNL SugarCRM Accounts & Contacts] using the Flow Service API
 
 The following tutorial walks you through the steps to create a [!DNL SugarCRM Accounts & Contacts] source connection and create a dataflow to bring [[!DNL SugarCRM]](https://www.sugarcrm.com/) accounts and contacts data to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -669,13 +665,13 @@ In order for the source data to be used in Platform, a target schema must be cre
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Create a target dataset {#target-dataset}
 
 A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
 
-For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### Create a target connection {#target-connection}
 

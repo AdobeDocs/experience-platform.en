@@ -5,6 +5,11 @@ exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
 ---
 # [!DNL Pinterest Customer List] connection
 
+>[!IMPORTANT]
+>
+>* Starting November 16, 2023, you can see two Pinterest cards side-by-side in the destinations catalog. This is due to an upgrade to the Pinterest advertiser API used to export data to Pinterest. The existing Pinterest destination connector has been renamed to **[!UICONTROL (Deprecating) Pinterest]** and a new card **[!UICONTROL (New) Pinterest]** is now available to you. 
+>* Use the **[!UICONTROL (New) Pinterest]** connection in the catalog for any campaigns to Pinterest. If you have any active dataflows to the **[!UICONTROL (Deprecating) Pinterest]** destination, read the [upgrade documentation](/help/destinations/catalog/advertising/pinterest-upgrade.md) to understand your action items to ensure no disruption to your campaigns.
+
 ## Overview {#overview}
 
 Create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest.
@@ -20,7 +25,7 @@ Create audiences from your customer lists, people who've visited your site or pe
 
 ## Supported identities {#supported-identities}
 
-The [!DNL Pinterest Customer List] destination supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+The [!DNL Pinterest Customer List] destination supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 In the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the destination activation workflow, map the desired identities to the target field *pinterest_audience*. Identities are distinguished and resolved upon data ingestion into Pinterest.
 
@@ -65,7 +70,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Advertiser ID]**: Your Pinterest advertiser ID.
+*  **[!UICONTROL Ad Account ID]**: Your Pinterest advertiser ID.
 
 ### Enable alerts {#enable-alerts}
 
@@ -77,7 +82,8 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
@@ -87,4 +93,16 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-Please refer to the the [Pinterest Help Center page](https://help.pinterest.com/en/business/article/audience-targeting) for additional information.
+Please refer to the [Pinterest Help Center page](https://help.pinterest.com/en/business/article/audience-targeting) for additional information.
+
++++ View changelog
+
+ 
+|Release month|Update type|Description|
+|---|---|---|
+|November 2023|Functionality and documentation update|The Pinterest destination in Real-Time CDP now uses the v5 Advertiser API.|
+
+{style="table-layout:auto"}
+
+ 
++++

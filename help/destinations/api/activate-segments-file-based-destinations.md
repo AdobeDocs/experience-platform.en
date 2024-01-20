@@ -7,25 +7,21 @@ exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
 ---
 # Activate audiences to file-based destinations by using the Flow Service API
 
->[!IMPORTANT]
->
->* This beta functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Please contact your Adobe representative for more information. 
-
-Use the enhanced file export capabilities (currently in beta) to access enhanced customization functionality when exporting files out of Experience Platform: 
+Use the enhanced file export capabilities to access enhanced customization functionality when exporting files out of Experience Platform: 
 
 * Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 * Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Ability to select the [file type](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) of the exported file.
 * [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-This functionality is supported by the six new beta cloud storage cards listed below: 
+This functionality is supported by the six cloud storage cards listed below: 
 
-* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
-* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
-* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
-* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
-* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) 
-* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
+* [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) 
+* [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
 This article explains the workflow required to use the [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/) to export qualified profiles from Adobe Experience Platform to one of the cloud storage locations linked above.
 
@@ -33,9 +29,13 @@ This article explains the workflow required to use the [Flow Service API](https:
 >
 >You can also use the Experience Platform user interface to export profiles to cloud storage destinations. Read the [activate file-based destinations tutorial](/help/destinations/ui/activate-batch-profile-destinations.md) for more information.
 
+<!--
+
 ## API users migration {#api-migration}
 
 If you were already using the Flow Service API to export profiles to the Amazon S3, Azure Blob, or SFTP cloud storage destinations, read the [API migration guide](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) for necessary migration steps as Adobe transitions users from the legacy destinations to the new destinations. 
+
+-->
 
 ## Getting started {#get-started}
 
@@ -52,6 +52,8 @@ The following sections provide additional information that you need to know in o
 ### Required permissions {#permissions}
 
 To export profiles, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL View Destinations]**, and **[!UICONTROL Activate Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
+To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 ### Reading sample API calls {#reading-sample-api-calls}
 
@@ -2356,7 +2358,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Amazon S3 Beta Target Connection",
+    "name": "Amazon S3 Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -2389,7 +2391,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Amazon S3 Beta Target Connection",
+   "name":"Amazon S3 Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -2448,7 +2450,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Azure Blob Storage Beta Target Connection",
+    "name": "Azure Blob Storage Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -2481,7 +2483,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Azure Blob Storage Beta Target Connection",
+   "name":"Azure Blob Storage Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -2663,7 +2665,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Data Landing Zone Beta Target Connection",
+   "name":"Data Landing Zone Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",
@@ -2755,7 +2757,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-   "name":"Google Cloud Storage Beta Target Connection",
+   "name":"Google Cloud Storage Target Connection",
    "baseConnectionId":"<FROM_STEP_CREATE_BASE_CONNECTION>",
    "params":{
       "mode":"Server-to-server",

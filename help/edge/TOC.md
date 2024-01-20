@@ -17,18 +17,11 @@ feature: Web SDK
   * [Configure the SDK](fundamentals/configuring-the-sdk.md)
   * [Execute commands](fundamentals/executing-commands.md)
   * [Track events](fundamentals/tracking-events.md)
+  * [Configure top and bottom of page events](fundamentals/top-bottom-page-events.md)
   * [Debugging](fundamentals/debugging.md)
   * [Configure a CSP](fundamentals/configuring-a-csp.md)
   * [Interact with multiple properties](fundamentals/interacting-with-multiple-properties.md)
-  * [User-Agent Client Hints](fundamentals/user-agent-client-hints.md)
-* Datastreams {#datastreams}
-  * [Overview](./datastreams/overview.md)
-  * [Configure a datastream](./datastreams/configure.md)
-  * [Configure datastream overrides](./datastreams/overrides.md)
-  * [Data Prep for Data Collection](./datastreams/data-prep.md)
-  * Data Enrichment {#data-enrichment}
-    * [Weather Data by The Weather Channel](./datastreams/data-enrichment/weather.md)
-    * [Weather data field mappings](./datastreams/data-enrichment/weather-reference.md)
+  * [User agent client hints](fundamentals/user-agent-client-hints.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
   * [First-party device IDs](identity/first-party-device-ids.md)
@@ -36,13 +29,14 @@ feature: Web SDK
 * Data collection {#data-collection}
   * [Automatically collected information](data-collection/automatic-information.md)
   * [Track links](data-collection/track-links.md)
-  * [Collect commerce and products data](data-collection/collect-commerce-data.md)
+  * [Collect commerce, product, and order data](data-collection/collect-commerce-data.md)
   * Adobe Analytics {#adobe-analytics}
     * [Using Adobe Analytics with Platform Web SDK](data-collection/adobe-analytics/analytics-overview.md)
     * [Mapping Analytics variables](data-collection/adobe-analytics/manually-mapping-variables.md)
     * [Automatically mapped variables](data-collection/adobe-analytics/automatically-mapped-vars.md)
     * [Sending data to Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * Personalization {#personalization}
+  * [Manage display events](personalization/display-events.md)
   * [Render personalized content](personalization/rendering-personalization-content.md)
   * [Personalization via hybrid implementation](personalization/hybrid-personalization.md)
   * [Manage flicker](personalization/manage-flicker.md)
@@ -60,12 +54,14 @@ feature: Web SDK
     * [Overview](personalization/offer-decisioning/offer-decisioning-overview.md)
   * Adobe Journey Optimizer {#ajo}
     * [Overview](personalization/ajo/overview.md)
+    * [Single-page application implementation](personalization/ajo/web-spa-implementation.md)
 * Consent {#consent}
   * [Supporting consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
     * [Overview](consent/iab-tcf/overview.md)
     * [Integrate with tags](consent/iab-tcf/with-launch.md)
     * [Integrate without tags](consent/iab-tcf/without-launch.md)
+* [Web SDK tag extension](web-sdk-tag-extension-overview.md)
 * [Release notes](release-notes.md)
 * [Frequently Asked Questions](web-sdk-faq.md)
 * [Resources](resources.md)

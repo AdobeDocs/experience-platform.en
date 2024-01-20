@@ -116,6 +116,6 @@ Due to current system limitations, there are two cases where an enum is not vali
 
 ## Next steps
 
-This guide covered how to define enums and suggested values for string fields in the the UI. For information on how to manage enums and suggested values using the Schema Registry API, refer to the following [tutorial](../../tutorials/suggested-values.md).
+This guide covered how to define enums and suggested values for string fields in the UI. For information on how to manage enums and suggested values using the Schema Registry API, refer to the following [tutorial](../../tutorials/suggested-values.md).
 
 To learn how to define other XDM field types in the [!DNL Schema Editor], see the overview on [defining fields in the UI](./overview.md#special).

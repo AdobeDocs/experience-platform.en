@@ -22,7 +22,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | Parameter | Description |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{ID}` | An identifier for one of the specific objects you want to retrieve. |
 
 **Request**
@@ -51,24 +51,24 @@ A successful response returns a list of the specified datasets, containing only 
     "5ba9452f7de80400007fc52a": {
         "name": "Sample Dataset 1",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     },
     "5bb276b03a14440000971552": {
         "name": "Sample Dataset 2",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5bb276b03a14440000971552/views/5bb276b01250b012f9acc75b/files"
+        "files": "@/dataSetFiles?dataSetId=5bb276b03a14440000971552"
     },
     "5bceaa4c26c115000039b24b": {
         "name": "Sample Dataset 3"
     },
     "5bda3a4228babc0000126377": {
         "name": "Sample Dataset 4",
-        "files": "@/dataSets/5bda3a4228babc0000126377/views/5bda3a4228babc0000126378/files"
+        "files": "@/dataSetFiles?dataSetId=5bda3a4228babc0000126377"
     },
     "5bde21511dd27b0000d24e95": {
         "name": "Sample Dataset 5",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5bde21511dd27b0000d24e95/views/5bde21511dd27b0000d24e96/files"
+        "files": "@/dataSetFiles?dataSetId=5bde21511dd27b0000d24e95"
     }
 }
 ```

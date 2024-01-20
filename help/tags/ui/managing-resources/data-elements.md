@@ -85,9 +85,11 @@ When creating or editing elements, you can save and build to your [active librar
 
 ## Types of data elements {#types-of-data-elements}
 
-Data element types are determined by the extension. There is no limit to the types that can be created.
+>[!NOTE]
+>
+>Data element types are determined by the extension. There is no limit to the types that can be created.
 
-The following sections describe the types of data elements available in the Core extension. Other extensions use other types of data elements.
+The following sections describe the types of data elements available in the **Core extension**. Other extensions use other types of data elements.
 
 ### Cookie
 
@@ -168,7 +170,7 @@ For example, let's say your markup contains a JavaScript variable called `Page_N
 
 You must provide the path to that variable when you create the data element.
 
-If you use a data collector object as party of your data layer, simply use dot notation in the path to reference the object and property you want to capture into the data element, like `_myData.pageName`, or `digitalData.pageName`, etc.
+If you use a data collector object as part of your data layer, simply use dot notation in the path to reference the object and property you want to capture into the data element, like `_myData.pageName`, or `digitalData.pageName`, etc.
 
 #### Example:
 

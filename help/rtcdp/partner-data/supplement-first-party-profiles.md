@@ -1,19 +1,28 @@
 ---
-title: (Beta) Supplement First-party Profiles with Partner-provided Attributes
+title: Supplement First-party Profiles with Partner-provided Attributes
 description: Learn how to supplement first-party profiles with attributes from trusted data partners to improve your data foundation, gain new insights into your customer base, and better audience optimization.
-hide: yes
-hidefromtoc: yes
-badgeBeta: label="Beta" type="informative" before-title="true"
+feature: Use Cases, Profile Enrichment
+exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
 ---
 # Supplement First-party Profiles with Partner-provided Attributes
 
 >[!AVAILABILITY]
 >
->* This beta functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
+>* This functionality is available to customers who have licensed Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Read more about these packages in the [product descriptions](https://helpx.adobe.com/legal/product-descriptions.html) and contact your Adobe representative for more information. 
 
 Supplement first-party profiles with attributes from trusted data partners to improve your data foundation and gain new insights into your customer base and gain better audience optimization.
 
-![Enrich profiles with partner-provided attributes use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment-use-case-overview.png)
+![Enrich profiles with partner-provided attributes use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
+
+## Why consider this use case {#why-this-use-case}
+
+Most brands, even those which are rich with first party data, can benefit from streamlining their data and gaining a more nuanced understanding of customers, their behaviors, patterns, and preferences. 
+
+Adobe Real-time Customer Data Platform can help brands responsibly supplement their first-party data with valuable insights, identifiers, and attributes from one or more trusted partners. 
+
+Adobe understands there is no one-size-fits-all approach and allows for seamless interoperability with data and identity partners to foster individualized and thoughtful engagement across all stages of the customer lifecycle. These capabilities are underpinned by a trusted data governance framework, allowing for nuanced control on where and how partner data gets used. For instance, you may want to use partner provided insights for segmentation but not for personalization.
+
+For example, follow the steps described in this use case when you need to enrich your customer records with demographic and intent signals. 
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -21,16 +30,22 @@ As you consider supplementing your own first-party profiles with attributes from
 
 * Think about the location where the audience list will be exported out of Real-Time CDP, to be shared with the data vendor. This location needs to support file export.
 * What are the identifiers that are expected by the data vendor so they can layer on additional attributes?
-* How will the file containing partner-provided attributes be ingested back into Real-time CDP? For example, the files can be ingested through cloud storage source connectors such as [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) or [SFTP](/help/sources/connectors/cloud-storage/sftp.md). 
+* How will the file containing partner-provided attributes be ingested back into Real-Time CDP? For example, the files can be ingested through cloud storage source connectors such as [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) or [SFTP](/help/sources/connectors/cloud-storage/sftp.md). 
 * What is the cadence with which you expect partner-provided attributes to be brought back into Real-Time CDP and refreshed?
 
 >[!WARNING]
 >
 >The additional partner-provided attributes ingested into Real-Time CDP impact your *average profile richness*. Read the [Real-Time Customer Data Platform Product Description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) for more information about profile richness.
 
+## Video walkthrough {#video-walkthrough}
+
+View the video tutorial below for a walkthrough of how to supplement first-party audiences with partner-provided attributes:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
+
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
-![Enrich profiles with partner-provided attributes use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment-use-case-steps.png)
+![Enrich profiles with partner-provided attributes use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
 
 1. As a **customer**, you license attributes from the **data partner**.
 2. As a **customer**, you extend your profile data and governance model to accommodate **partner**-provided attributes.
@@ -85,7 +100,7 @@ Also in this step, think about how your data governance model changes as you exp
 
 ### Export audiences that you want to be enriched when keyed off Personal Identifiable Information (PII) or hashed-PII {#export-audiences}
 
-Export the audiences that you want the partner to enrich. Use the cloud storage destinations provided by Real-time CDP, such as Amazon S3 or SFTP. Read the following documentation pages to complete this step: 
+Export the audiences that you want the partner to enrich. Use the cloud storage destinations provided by Real-Time CDP, such as Amazon S3 or SFTP. Read the following documentation pages to complete this step: 
 
 * [Amazon S3 destination](/help/destinations/catalog/cloud-storage/amazon-s3.md) documentation page
 * [SFTP destination](/help/destinations/catalog/cloud-storage/sftp.md) documentation page
@@ -115,5 +130,6 @@ Note the following limitations as you explore the use case described on this pag
 
 Explore further use cases enabled through partner data support in Real-Time CDP:
 
-* (**Coming soon**) [!BADGE Beta]{type=Informative} **Leverage partner aided recognition** for personalizing on-site experiences during the visit, and for off-site retargeting post visit, without the user authenticating or having prior history with your brand.
-* (**Coming soon**) [!BADGE Beta]{type=Informative} **Expanded activation** using Partner IDs to publishing ecosystems that do not accept PII or hashed PII.
+* Use third-party data support in Real-Time CDP to [expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers](/help/rtcdp/partner-data/prospecting.md).
+* [Personalize onsite experiences for unknown visitors using partner-aided visitor recognition](/help/rtcdp/partner-data/onsite-personalization.md) during the visit without the user authenticating or having prior history with your brand.
+* [Expanded activation of prospect profiles and prospect audiences](/help/destinations/ui/activate-prospect-audiences.md) to select destinations.

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;application;datatype;data-type;data type;
 solution: Experience Platform
 title: Application Data Type
-description: This document provides an overview of the Application Experience Data Model (XDM) data type.
+description: Learn about the Application Experience Data Model (XDM) data type.
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
 ---
 # [!UICONTROL Application] data type

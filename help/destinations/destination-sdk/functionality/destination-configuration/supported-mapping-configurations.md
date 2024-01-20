@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure your destination for the supported identity and attribute mapping configurations.
 title: Supported mapping configurations
+exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
 ---
-
 # Supported mapping configurations
 
 Destinations built with Destination SDK support specific identity namespace and attribute mapping configurations, based on the destination type.
@@ -148,7 +148,7 @@ After reading this article, you should have a better understanding of what mappi
 To learn more about the other destination components, see the following articles:
 
 * [Customer authentication](customer-authentication.md)
-* [OAuth2 authentication](oauth2-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
 * [Customer data fields](customer-data-fields.md)
 * [UI attributes](ui-attributes.md)
 * [Schema configuration](schema-configuration.md)

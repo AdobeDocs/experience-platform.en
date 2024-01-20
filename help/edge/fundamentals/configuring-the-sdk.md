@@ -1,11 +1,9 @@
 ---
 title: Configure the Adobe Experience Platform Web SDK
 description: Learn how to configure the Adobe Experience Platform Web SDK.
-seo-description: Learn how to configure the Experience Platform Web SDK
-keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
 ---
-# Configure the Platform Web SDK
+# Configure Web SDK
 
 Configuration for the SDK is done with the `configure` command.
 
@@ -50,7 +48,7 @@ Indicates which context categories to collect automatically as described in [Aut
 
 >[!IMPORTANT]
 >
->All context properties, with the exception of `highEntropyUserAgentHints`, are enabled by default. If you specified context properties manually in your Web SDK configuration, you must enable all context properties to continue collecting the needed information.
+>All context properties, except for `highEntropyUserAgentHints`, are enabled by default. If you specified context properties manually in your Web SDK configuration, you must enable all context properties to continue collecting the needed information.
 
 To enable [high entropy client hints](user-agent-client-hints.md#enabling-high-entropy-client-hints) on your Web SDK deployment, you must include the additional `highEntropyUserAgentHints` context option, alongside your existing configuration.
 
@@ -77,7 +75,7 @@ Indicates whether debugging is enabled. Setting this config to `true` enables th
 
 ### `edgeDomain` {#edge-domain}
 
-Populate this field with your first-party domain. For more details, please see the [documentation](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).  
+Populate this field with your first-party domain. For more details, see the [documentation](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html).  
 
 The domain is similar to `data.{customerdomain.com}` for a website at www.{customerdomain.com}.
 
@@ -137,7 +135,7 @@ When filtering the link tracking by using the DOM elements structure, you can us
 
 To change what data gets sent, modify the `xdm` and/or `data` objects. Inside the callback, the `xdm` object already has the data passed in the event command, and the automatically collected information.
 
-* Any value other than `false` will allow the event to process and the callback to be sent.
+* Any value other than `false` allows the event to process and the callback to be sent.
 * If the callback returns the `false` value, event processing is stopped, without an error, and the event is not sent. This mechanism allows for certain events to be filtered out by examining the event data and returning `false` if the event should not be sent.
 * If the callback throws an exception, processing for the event is stopped and the event is not sent.
 

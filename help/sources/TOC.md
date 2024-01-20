@@ -18,7 +18,6 @@ feature: Sources
     - [Adobe Commerce source](connectors/adobe-applications/commerce.md)
     - [Customer attributes source](connectors/adobe-applications/customer-attributes.md)
     - [Data Collection source](connectors/adobe-applications/data-collection.md)
-    - [Workfront source](connectors/adobe-applications/workfront.md)
     - Field mappings {#mapping}
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
@@ -56,7 +55,6 @@ feature: Sources
     - [OneTrust Integration](connectors/consent-and-preferences/onetrust.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
-    - [SAP Hybris connector](connectors/crm/sap-hybris.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
     - [SugarCRM connector](connectors/crm/sugarcrm.md)
     - [Veeva CRM connector](connectors/crm/veeva.md)
@@ -87,7 +85,10 @@ feature: Sources
     - [Snowflake Streaming connector](connectors/databases/snowflake-streaming.md)
     - [Snowflake connector](connectors/databases/snowflake.md)
     - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
+  - Data partner {#data-partner}
+    - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - eCommerce {#ecommerce}
+    - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
     - [Shopify](connectors/ecommerce/shopify.md)
     - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
   - Local system {#local-system}
@@ -134,7 +135,6 @@ feature: Sources
       - [OneTrust Integration](tutorials/api/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
-      - [SAP Hybris](tutorials/api/create/crm/sap-hybris.md)
       - [Salesforce](tutorials/api/create/crm/salesforce.md)
       - [SugarCRM Accounts & Contacts](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
       - [SugarCRM Events](tutorials/api/create/crm/sugarcrm-events.md)
@@ -167,6 +167,7 @@ feature: Sources
       - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
       - [SQL Server](tutorials/api/create/databases/sql-server.md)
     - eCommerce {#ecommerce}
+      - [SAP Commerce](tutorials/api/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
     - Marketing automation {#marketing-automation}
@@ -228,7 +229,6 @@ feature: Sources
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - [Marketo Custom Activities](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-      - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
     - Advertising {#advertising}
       - [Google Ads](tutorials/ui/create/advertising/ads.md)
       - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
@@ -255,7 +255,6 @@ feature: Sources
       - [OneTrust Integration](tutorials/ui/create/consent-and-preferences/onetrust.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
-      - [SAP Hybris](tutorials/ui/create/crm/sap-hybris.md)
       - [Salesforce](tutorials/ui/create/crm/salesforce.md)
       - [SugarCRM Accounts & Contacts](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
       - [SugarCRM Events](tutorials/ui/create/crm/sugarcrm-events.md)
@@ -286,7 +285,10 @@ feature: Sources
       - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - [Snowflake](tutorials/ui/create/databases/snowflake.md)
       - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
+    - Data partner {#data-partner}
+      - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
     - eCommerce {#ecommerce}
+      - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
     - Local system {#local-system}
@@ -321,6 +323,7 @@ feature: Sources
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
   - [Create a sources dataflow using templates in the UI](tutorials/ui/templates.md)
+  - [On-demand ingestion](tutorials/ui/on-demand-ingestion.md)
   - [Monitor batch dataflows](tutorials/ui/monitor.md)
   - [Monitor streaming dataflows](tutorials/ui/monitor-streaming.md)
   - [Update accounts](tutorials/ui/update.md)

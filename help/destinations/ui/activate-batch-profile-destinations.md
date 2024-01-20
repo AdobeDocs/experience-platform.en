@@ -1,5 +1,4 @@
 ---
-keywords: activate profile destinations;activate destinations;activate data; activate email marketing destinations; activate cloud storage destinations
 title: Activate audiences to batch profile export destinations
 type: Tutorial
 description: Learn how to activate the audiences you have in Adobe Experience Platform by sending them to batch profile-based destinations.
@@ -12,32 +11,43 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 > 
 > * To activate audiences and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 > * To activate audiences without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
->
-> Some customers participating in the improved file export functionality beta program are seeing the new **[!UICONTROL Mapping]** step as part of their activation workflow to the [new beta cloud storage destinations](/help/release-notes/2022/october-2022.md#destinations). Consider the [known limitations](#known-limitations) as part of the release.
 
 ## Overview {#overview}
 
-This article explains the workflow required to activate audiences in Adobe Experience Platform batch profile-based destinations, such as cloud storage and email marketing destinations.
+This article explains the workflow required to activate audiences in Adobe Experience Platform to batch profile file-based destinations, such as cloud storage and email marketing destinations.
 
 ## Prerequisites {#prerequisites}
 
 To activate audiences to destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 
+## Supported file formats for export {#supported-file-formats-export}
+
+The following file formats are supported when exporting audiences:
+
+* CSV
+* JSON
+* Parquet
+
+Note that exporting CSV files gives you greater flexibility in terms of how you want to structure your exported files. Read more about [file formatting configuration for CSV files](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
+
+Select your desired file format for export when [creating a connection to the file-based destination](/help/destinations/ui/connect-destination.md).
+
 ## Select your destination {#select-destination}
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     
-    ![Image highlighting how to get to the destinations catalog tab](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+    ![Image highlighting how to get to the destinations catalog tab.](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
 1. Select **[!UICONTROL Activate audiences]** on the card corresponding to the destination where you want to activate your audiences, as shown in the image below.
 
-    ![Image highlighting the Activate audiences button](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
+    ![Activate audiences control highlighted in the catalo page.](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
 1. Select the destination connection that you want to use to activate your audiences, then select **[!UICONTROL Next]**.
 
-    ![Image highlighting how to select one or multiple destinations to activate audiences to](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+    ![Checkboxes highlighted to select one or multiple destinations to activate audiences to.](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. Move to the next section to [select your audiences](#select-audiences).
 
@@ -51,7 +61,7 @@ You can select from multiple types of audiences, depending on their origin:
 * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/overview.md#import-audience).
 * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
 
-![Image highlighting how to select one or multiple audiences to activate](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
+![Checkboxes shown when selecting one or multiple audiences to activate.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
@@ -64,7 +74,7 @@ You can select from multiple types of audiences, depending on their origin:
 >title="Schedule"
 >abstract="Use the pencil icon to set the file export type (full files or incremental files) and the export frequency."
 
-[!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations in the form of [!DNL CSV] files. In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each audience you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
+[!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations as [different file types](#supported-file-formats-export). In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each audience you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
 
 >[!IMPORTANT]
 >
@@ -72,9 +82,9 @@ You can select from multiple types of audiences, depending on their origin:
 >
 >Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
-Select the **[!UICONTROL Create schedule]** button corresponding to the audience that you want to send to your destination.
+Select the **[!UICONTROL Create schedule]** control corresponding to the audience that you want to send to your destination.
 
-![Image highlighting the Create schedule button](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
+![Create schedule control highlighted in the Scheduling step.](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Export full files {#export-full-files}
 
@@ -96,14 +106,14 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the audience
 
 Select **[!UICONTROL Export full files]** to trigger the export of a file containing a full snapshot of all profile qualifications for the selected audience.
 
-![Image of the UI with the Export full files toggle selected.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![Export full files toggle selected.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
     * **[!UICONTROL Once]**: schedule a one time on-demand full file export.
     * **[!UICONTROL Daily]**: schedule full file exports once a day, every day, at the time you specify.
 
-1. Use the **[!UICONTROL Time]** toggle to select whether the export should happen immediately after audience evaluation or on a scheduled basis, at a specified time. When selecting the **[!UICONTROL Scheduled]** option, you can use the selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
+2. Use the **[!UICONTROL Time]** toggle to select whether the export should happen immediately after audience evaluation or on a scheduled basis, at a specified time. When selecting the **[!UICONTROL Scheduled]** option, you can use the selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
       >[!NOTE]
       >
@@ -118,17 +128,13 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
     ![Image highlighting the Scheduled option in the activation flow for batch destinations and showing the time selector.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-      >[!IMPORTANT]
-      >
-      >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This limitation will be addressed in future releases.
-
-1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place. For daily exports, best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
+3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place. For daily exports, best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
 
       >[!IMPORTANT]
       >
       > When selecting an export interval, the last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10.
 
-1. Select **[!UICONTROL Create]** to save the schedule.
+4. Select **[!UICONTROL Create]** to save the schedule.
 
 ### Export incremental files {#export-incremental-files}
 
@@ -138,26 +144,22 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 >
 >The first exported incremental file includes all profiles that qualify for an audience, functioning as a backfill.
 
-![Image of the UI with the Export incremental files toggle selected.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![Export incremental files toggle selected.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
     * **[!UICONTROL Daily]**: schedule incremental file exports once a day, every day, at the time you specify.
     * **[!UICONTROL Hourly]**: schedule incremental file exports every 3, 6, 8, or 12 hours.
 
-1. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
-   
-     >[!IMPORTANT]
-     >
-     >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This limitation will be addressed in future releases.
+2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
-1. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. Best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
+3. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. Best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.
 
       >[!IMPORTANT]
       >
       >The last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10.
 
-1. Select **[!UICONTROL Create]** to save the schedule.
+4. Select **[!UICONTROL Create]** to save the schedule.
 
 ### Configure file names {#file-names}
 
@@ -187,10 +189,10 @@ The destination name and audience ID cannot be removed from file names. In addit
 | **[!UICONTROL Audience name]** | The name of the exported audience. |
 | **[!UICONTROL Date and time]** | Select between adding a `MMDDYYYY_HHMMSS` format or a UNIX 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export. |
 | **[!UICONTROL Custom text]** | Any custom text that you want to add to the file names. |
-| **[!UICONTROL Destination ID]** | The ID of the destination dataflow you use to export the audience. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
-| **[!UICONTROL Destination name]** | The name of the destination dataflow you use to export the audience. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
-| **[!UICONTROL Organization name]** | Your organization name within Experience Platform. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
-| **[!UICONTROL Sandbox name]** | The ID of the sandbox you use to export the audience. <br> **Note**: This file name append option is available only to beta customers participating in the improved file export functionality beta program. Contact your Adobe representative or Customer Care if you'd like access to the beta program. |
+| **[!UICONTROL Destination ID]** | The ID of the destination dataflow you use to export the audience.  |
+| **[!UICONTROL Destination name]** | The name of the destination dataflow you use to export the audience.  |
+| **[!UICONTROL Organization name]** | Your organization name within Experience Platform. |
+| **[!UICONTROL Sandbox name]** | The ID of the sandbox you use to export the audience. |
 
 {style="table-layout:auto"}
 
@@ -202,39 +204,44 @@ Select **[!UICONTROL Apply changes]** to confirm your selection.
 
 Once you have finished configuring all your audiences, select **[!UICONTROL Next]** to continue.
 
-## Select profile attributes {#select-attributes}
+## Mapping {#mapping}
 
-For profile-based destinations, you must select the profile attributes that you want to send to the target destination.
+In this step, you must select the profile attributes that you want to add to the files exported to the target destination. To select profile attributes and identities for export: 
 
-1. In the **[!UICONTROL Select attributes]** page, select **[!UICONTROL Add new field]**.
+1. In the **[!UICONTROL Mapping]** page, select **[!UICONTROL Add new mapping]**.
     
-    ![Image highlighting the Add new field button.](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
+    ![Add new field control highlighted in the mapping workflow.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
-1. Select the arrow to the right of the **[!UICONTROL Schema field]** entry.
+1. Select the arrow to the right of the **[!UICONTROL Source field]** entry.
 
-    ![Image highlighting how to select a source field.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
+    ![Select source field control highlighted in the mapping workflow.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
-1. In the **[!UICONTROL Select field]** page, select the XDM attributes or identity namespaces that you want to send to the destination, then choose **[!UICONTROL Select]**.
+1. In the **[!UICONTROL Select source field]** page, select the profile attributes and identities that you want to include in the exported files to the destination, then choose **[!UICONTROL Select]**.
 
-    ![Image showing the various fields available as source fields.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
+    >[!TIP] 
+    > 
+    >You can use the search field to narrow down your selection, as shown in the image below.
 
-1. To add more mappings, repeat steps one to three.
+    ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
 
->[!NOTE] 
->
-> Adobe Experience Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
-![Image showing prefilled recommended attributes in the mapping step of the audience activation workflow.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png) 
+1. The field you selected for export now appears in the mapping view. If you wish, you can edit the name of the header in the exported file. To do this, select the icon on the target field.
 
->[!IMPORTANT] 
->
->Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.status` to your file exports. Instead, you must manually paste the value `xdm: segmentMembership.status` into the schema field, as shown below.
->
->![Screen recording showing the audience membership workaround in the mapping step of the activation workflow.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+    ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
 
-File exports vary in the following ways, depending on whether `segmentMembership.status` is selected:
-* If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
-* If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
+1. In the **[!UICONTROL Select target field]** page, type in the desired name of the header in your exported file, then choose **[!UICONTROL Select]**.
+
+    ![Modal window showing a typed-in friendly name for a header.](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png)
+
+1. The field you selected for export now appears in the mapping view and shows the edited header in the exported file.
+
+    ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. (Optional) You can select your exported field to be a [mandatory key](#mandatory-keys) or a [deduplication key](#deduplication-keys).
+
+    ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png)
+
+1. To add more fields for exporting, repeat the steps above.
 
 ### Mandatory attributes {#mandatory-attributes}
 
@@ -385,7 +392,6 @@ Assuming deduplication by the composite key `personalEmail + lastName`, the expo
 |johndoe@example.com|D|John|
 |johndoe@example.com|Doe|John|
 
-
 Adobe recommends selecting an identity namespace such as a [!DNL CRM ID] or email address as a deduplication key, to ensure all profile records are uniquely identified.
    
 >[!NOTE] 
@@ -397,50 +403,9 @@ Adobe recommends selecting an identity namespace such as a [!DNL CRM ID] or emai
 >
 > For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
-## (Beta) Mapping {#mapping}
+### [!BADGE Beta]{type=Informative} Export arrays through calculated fields {#export-arrays-calculated-fields}
 
->[!IMPORTANT] 
-> 
->Select beta customers can view an improved **[!UICONTROL Mapping]** step which replaces the [Select profile attributes](#select-attributes) step described further above. This new **[!UICONTROL Mapping]** step allows you to edit the headers of exported files to any custom names that you desire.
-> 
-> The functionality and documentation are subject to change. Contact your Adobe representative or Customer Care if you would like access to this beta program.
-
-In this step, you must select the profile attributes that you want to add to the files exported to the target destination. To select profile attributes and identities for export: 
-
-1. In the **[!UICONTROL Mapping]** page, select **[!UICONTROL Add new field]**.
-    
-    ![Add new field control highlighted in the mapping workflow.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
-
-1. Select the arrow to the right of the **[!UICONTROL Source field]** entry.
-
-    ![Select source field control highlighted in the mapping workflow.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
-
-1. In the **[!UICONTROL Select source field]** page, select the profile attributes and identities that you want to include in the exported files to the destination, then choose **[!UICONTROL Select]**.
-
-    >[!TIP] 
-    > 
-    >You can use the search field to narrow down your selection, as shown in the image below.
-
-    ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
-
-
-1. The field you selected for export now appears in the mapping view. If you wish, you can edit the name of the header in the exported file. To do this, select the icon on the target field.
-
-    ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
-
-1. In the **[!UICONTROL Select target field]** page, type in the desired name of the header in your exported file, then choose **[!UICONTROL Select]**.
-
-    ![Modal window showing a typed-in friendly name for a header.](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png)
-
-1. The field you selected for export now appears in the mapping view and shows the edited header in the exported file.
-
-    ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
-
-1. (Optional) You can select your exported field to be a [mandatory key](#mandatory-keys) or a [deduplication key](#deduplication-keys).
-
-    ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png)
-
-1. To add more fields for exporting, repeat the steps above.
+Select beta customers can export array objects from Experience Platform to cloud storage destinations. Read more about [exporting arrays and calculated fields](/help/destinations/ui/export-arrays-calculated-fields.md) and contact your Adobe representative to get access to the functionality. 
 
 ### Known limitations {#known-limitations}
 
@@ -453,18 +418,60 @@ Due to a known limitation, you cannot currently use the **[!UICONTROL Select fie
 ![Screen recording showing the audience membership workaround in the mapping step of the activation workflow.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
 File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
-* If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
+* If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and newly **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
 * If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
+
+Read more about [profile export behavior for file-based destinations](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
 #### Identity namespaces cannot currently be selected for exports
 
 Selecting identity namespaces for export, as shown in the image below, is currently not supported. Selecting any identity namespaces for export will result in an error in the **[!UICONTROL Review]** step.
 
-![Unsupported mapping showing identity exports](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+![Unsupported mapping showing identity exports.](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
 As a temporary workaround if you need to add identity namespaces to your exported files during the beta, you can either:
 * Use the legacy cloud storage destinations for the dataflows where you want to include identity namespaces in the exports
 * Upload identities as attributes into Experience Platform, to then export them to your cloud storage destinations.
+
+## Select profile attributes {#select-attributes}
+
+>[!IMPORTANT] 
+> 
+>All cloud storage destinations in the catalog can view an improved [[!UICONTROL Mapping] step](#mapping) which replaces the **[!UICONTROL Select attributes]** step described in this section. 
+>
+>This **[!UICONTROL Select attributes]** step is still displayed for the Adobe Campaign, Oracle Responsys, Oracle Eloqua, and Salesforce Marketing Cloud email marketing destinations.
+
+For profile-based destinations, you must select the profile attributes that you want to send to the target destination.
+
+1. In the **[!UICONTROL Select attributes]** page, select **[!UICONTROL Add new field]**.
+    
+    ![Image highlighting the Add new field button.](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
+
+2. Select the arrow to the right of the **[!UICONTROL Schema field]** entry.
+
+    ![Image highlighting how to select a source field.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
+
+3. In the **[!UICONTROL Select field]** page, select the XDM attributes or identity namespaces that you want to send to the destination, then choose **[!UICONTROL Select]**.
+
+    ![Image showing the various fields available as source fields.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
+
+4. To add more mappings, repeat steps one to three.
+
+>[!NOTE] 
+>
+> Adobe Experience Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+
+![Image showing prefilled recommended attributes in the mapping step of the audience activation workflow.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png) 
+
+>[!IMPORTANT] 
+>
+>Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.status` to your file exports. Instead, you must manually paste the value `xdm: segmentMembership.status` into the schema field, as shown below.
+>
+>![Screen recording showing the audience membership workaround in the mapping step of the activation workflow.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+
+File exports vary in the following ways, depending on whether `segmentMembership.status` is selected:
+* If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
+* If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
 
 ## Select enrichment attributes {#select-enrichment-attributes}
 
@@ -503,7 +510,7 @@ Select **[!UICONTROL Next]** to move to the [Review](#review) step.
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
-![Selection summary in the review step.](../assets/ui/activate-batch-profile-destinations/review.png)
+![Selection summary displayed in the review step.](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
@@ -518,7 +525,7 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 In the **[!UICONTROL Review]** step, Experience Platform also checks for any data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the audience activation workflow until you have resolved the violation. For information on how to resolve policy violations, read about [data usage policy violations](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in the data governance documentation section.
  
-![data policy violation](../assets/common/data-policy-violation.png)
+![A data policy violation example shown in the activation workflow.](../assets/common/data-policy-violation.png)
 
 ### Filter audiences {#filter-audiences}
 
@@ -530,7 +537,7 @@ If you are satisfied with your selection and no policy violations have been dete
 
 ## Verify audience activation {#verify}
 
-For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location according to the schedule you set in the workflow. The default file format is shown below, but you can [edit the components of the file name](#file-names):
+When exporting audiences to cloud storage destinations, Adobe Experience Platform creates a `.csv`, `.json`, or `.parquet` file in the storage location that you provided. Expect a new file to be created in your storage location according to the schedule you set in the workflow. The default file format is shown below, but you can [edit the components of the file name](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 For example, if you selected a daily export frequency, the files you would receive on three consecutive days could look like this:

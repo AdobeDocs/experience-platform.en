@@ -34,7 +34,7 @@ For example, if you applied an expiration value of 30 days on May 15th, the foll
 
 ## Effects on segmentation
 
-You must ensure that the lookback windows for your segments are within the expiration boundaries of their dependent datasets in order to keep results accurate. For example, if you apply an expiration value of 30 days and have a segment that tries to view data from up to 45 days ago, the resulting audience will likely be inaccurate.
+You must ensure that the lookback windows for your audiences are within the expiration boundaries of their dependent datasets in order to keep results accurate. For example, if you apply an expiration value of 30 days and have an audience that tries to view data from up to 45 days ago, the resulting audience will likely be inaccurate.
  
 You should therefore keep the same Experience Event expiration value for all datasets, if possible, to avoid the impact of different expiration values across different datasets in your segmentation logic.
 
