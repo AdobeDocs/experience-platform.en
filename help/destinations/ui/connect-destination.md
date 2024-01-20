@@ -1,5 +1,4 @@
 ---
-keywords: connect destination;destination connect;how to connect destination
 title: Create a new destination connection
 type: Tutorial
 description: Learn how to connect to a destination in Adobe Experience Platform, enable alerts, and set up marketing actions for your connected destination.
@@ -72,15 +71,19 @@ Depending on the destination that you are connecting to, you might be asked to i
 
 ![Image showing the required and optional input parameters when connecting to a Trade Desk destination.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### (Beta) Set up file formatting options for exported files {#file-formatting-and-compression-options}
+### Set up file formatting options for exported files {#file-formatting-and-compression-options}
 
 For file-based destinations, you can configure various settings related to how the exported files are formatted and compressed. For more information about all the available formatting and compression options, read the [Configure file formatting options for file-based destinations tutorial](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ![Image showing the file type selection and various options for CSV files.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Set up destination connection for audience activation or dataset exports {#segment-activation-or-dataset-exports}
+### Set up destination connection for audience activation, account activation, prospects activation, or dataset exports {#segment-activation-or-dataset-exports}
 
-Some file-based destinations support audience activation as well as dataset exports. For those destinations, you can choose whether to create a connection that enables you to activate audiences or export datasets.
+Some file-based destinations support audience activation to known customers, account customers, or prospects, as well as dataset exports. For those destinations, you can choose whether to create a connection that enables you to [activate audiences](/help/destinations/ui/activate-batch-profile-destinations.md), [accounts](/help/destinations/ui/activate-account-audiences.md), [prospects](/help/destinations/ui/activate-prospect-audiences.md), or [export datasets](/help/destinations/ui/export-datasets.md).
+
+>[!WARNING]
+>
+>When exporting datasets, note that exports to JSON files are supported in a compressed mode only. Exports to [!DNL Parquet] files are supported in a compressed and uncompressed mode.
 
 ![Image showing the data type selection control which allows users to select between audience activation and dataset exports.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 

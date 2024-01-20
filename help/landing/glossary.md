@@ -375,6 +375,10 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **PDPA**: The [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) was introduced to safeguard Thai data owners from the illegal collection, use, or disclosure of their personal data. Inspired by the European Union's GDPR, the regulation grants Thai citizens the right to request access to, or the deletion of, their stored personal data.
 
+<!-- Not yet released
+**PDPD**: The [[!DNL Personal Data Protection Decree] (PDPD) 
+-->
+
 **Personalized offers**: A personalized offer is a customizable marketing message based on eligibility rules and constraints.
 
 **Placements**: A placement is the location and or context in which an offer appears for an end-user.
@@ -532,6 +536,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **Token**: A token is a type of two-factor authentication security that can be used to authorize the use of computer services with [!DNL Query Service].
 
 ## U
+
+**UCPA**: The [[!DNL Utah Consumer Privacy Act]](https://le.utah.gov/~2022/bills/static/SB0227.html) creates the right for a consumer to know what personal data a business collects, how the business uses their personal data, and whether the business sells their personal data. Consumers can require the business to delete or stop selling their personal data.
 
 **Union schema**: A union schema is a consolidation of schemas that share the same class and have been enabled for [!DNL Real-Time Customer Profile]. Multiple union schemas can exist for an organization, but there can only be one union schema per class.
 

@@ -1,17 +1,15 @@
 ---
 solution: Experience Platform
-title: (Beta) Export datasets by using the Flow Service API
+title: Export datasets by using the Flow Service API
 description: Learn how to use the Flow Service API to export datasets to select destinations.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 ---
-# (Beta) Export datasets by using the [!DNL Flow Service API]
+# Export datasets by using the [!DNL Flow Service API]
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->* The functionality to export datasets is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
->* This beta functionality supports the export of first generation data, as defined in the Real-Time Customer Data Platform [product description](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
->* This functionality is available to customers who have purchased the Real-Time CDP Prime or Ultimate package. Contact your Adobe representative for more information. 
+>* This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package, Adobe Journey Optimizer, or Customer Journey Analytics. Contact your Adobe representative for more information.
 
 This article explains the workflow required to use the [!DNL Flow Service API] to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage].
 
@@ -19,18 +17,24 @@ This article explains the workflow required to use the [!DNL Flow Service API] t
 >
 >You can also use the Experience Platform user interface to export datasets. Read the [export datasets UI tutorial](/help/destinations/ui/export-datasets.md) for more information.
 
+## Datasets available for exporting {#datasets-to-export}
+
+The datasets that you can export depend on the Experience Platform application (Real-Time CDP, Adobe Journey Optimizer), the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller). 
+
+Refer to the [table on the UI tutorial page](/help/destinations/ui/export-datasets.md#datasets-to-export) to understand which datasets you can export.
+
 ## Supported destinations {#supported-destinations}
 
 Currently, you can export datasets to the cloud storage destinations highlighted in the screenshot and listed below. 
 
 ![Destinations which support dataset exports](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
-* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
-* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
-* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
-* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
-* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) 
-* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
+* [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) 
+* [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
 ## Getting started {#get-started}
 
@@ -45,7 +49,7 @@ The following sections provide additional information that you must know in orde
 
 ### Required permissions {#permissions}
 
-To export datasets, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+To export datasets, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL View Datasets]**, and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To ensure that you have the necessary permissions to export datasets and that the destination supports exporting datasets, browse the destinations catalog. If a destination has an **[!UICONTROL Activate]** or an **[!UICONTROL Export datasets]** control, then you have the appropriate permissions.
 
@@ -1140,6 +1144,10 @@ Note the connection ID from the response. This ID will be required in the next s
 
 Next, you need to create a target connection which stores the export parameters for your datasets. Export parameters include location, file format, compression, and other details. Refer to the `targetSpec` properties provided in the destination's connection spec to understand the supported properties for each destination type. Reference the tabs below for the `targetSpec` properties of all supported destinations.
 
+>[!WARNING]
+>
+>Exports to JSON files are supported in a compressed mode only. Exports to [!DNL Parquet] files are supported in a compressed and uncompressed mode.
+
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
@@ -1603,7 +1611,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Amazon S3 Beta Target Connection",
+    "name": "Amazon S3 Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",
@@ -1657,7 +1665,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --data-raw '{
-    "name": "Azure Blob Storage Beta Target Connection",
+    "name": "Azure Blob Storage Target Connection",
     "baseConnectionId": "<FROM_STEP_CREATE_TARGET_BASE_CONNECTION>",
     "params": {
         "mode": "Server-to-server",

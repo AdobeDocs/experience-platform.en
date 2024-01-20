@@ -68,11 +68,11 @@ When you are finished providing details for your destination connection, select 
 > 
 >To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-Read the [(Beta) Export datasets](/help/destinations/ui/export-datasets.md) tutorial for extensive instructions on exporting datasets to this destination.
+Read the [Export datasets](/help/destinations/ui/export-datasets.md) tutorial for extensive instructions on exporting datasets to this destination.
 
 ## Validate data export {#exported-data}
 
-To validate a successful dataset export, you can check that your dataset has successfully made it through to your [Snowflake data warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=en). 
+To validate a successful dataset export, you can check that your dataset has successfully made it through to your [Snowflake data warehouse](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html). 
 
 ## Data usage and governance {#data-usage-governance}
 

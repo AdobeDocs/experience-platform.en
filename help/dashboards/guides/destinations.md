@@ -33,7 +33,7 @@ The date and time of the most recent snapshot is displayed at the top of the [!U
 
 ### Modify the [!UICONTROL Destinations] dashboard {#modify}
 
-Select **[!UICONTROL Modify dashboard]** to change the appearance of the destinations dashboard. This enables you to move, add, and remove widgets from the dashboard as well as to access the widget library. From the widget library, you can explore the available widgets and create custom widgets for your organization. 
+Select **[!UICONTROL Modify dashboard]** to change the appearance of the destinations dashboard. Changes to the dashboard are per user and not organization wide. You can move, add, resize, and remove widgets from the dashboard and access the widget library to customize your dashboard. From the widget library, you can explore the available widgets and create custom widgets for your organization. 
 
 Please refer to the [modifying dashboards](../customize/modify.md) and [widget library overview](../customize/widget-library.md) documentation to learn more.
 
@@ -44,6 +44,19 @@ Select **[!UICONTROL Add widget]** to navigate to the widget library and see a l
 ![The Destinations dashboard overview with Add widget highlighted.](../images/destinations/destinations-overview-add-widget.png)
 
 From the widget library, you can browse the selection of standard and custom audience widgets. For information on how to add widgets, please see the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets).
+
+## Default widgets {#default-widgets}
+
+A default widget load-out is provided for all new instances of Adobe Experience Platform that highlights the latest available insights from your data. The following widgets are pre-configured in your segments view from the outset. Full details on the purpose and function of the widgets can be found below.
+
+* [[!UICONTROL Most used destinations]](#most-used-destinations)
+* [[!UICONTROL Recently created destinations]](#recently-created-destinations)
+* [[!UICONTROL Recently activated segments]](#recently-activated-segments)
+
+>[!NOTE]
+>
+>As of July 26th 2023, [!UICONTROL Profiles], [!UICONTROL Audiences], and [!UICONTROL Destinations] Overview dashboards have been reset to a new default widget load-out for all users who did not modify their views in the previous six months. 
+>Refer to the documentation in the [Profiles](./profiles.md#default-widgets) and [Audiences](./audiences.md#default-widgets) default widget sections for details on which widgets are included as part of the default widget load-outs. You can continue to customize your dashboard widgets as before.
 
 ## Standard widgets {#standard-widgets}
 

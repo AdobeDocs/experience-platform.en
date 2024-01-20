@@ -3,8 +3,8 @@ solution: Experience Platform
 title: Get started
 description: Learn how to get started with the Use Case Playbooks functionality.
 badgeBeta: label="Beta" type="Informative"
+exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
 ---
-
 # (Beta) Get started
 
 >[!AVAILABILITY]
@@ -25,7 +25,7 @@ If you do not see [!UICONTROL Playbooks] in the left rail as shown above, use th
 
 ### Sandbox configuration for Adobe Journey Optimizer users {#sandbox-configuration-journey-optimizer}
 
-If your organization is licensed for [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=en), you'll need to configure the channel presets in your sandbox, which define the technical parameters required for your messages. [Learn how to set up channel surfaces in Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html).
+If your organization is licensed for [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html), you'll need to configure the channel presets in your sandbox, which define the technical parameters required for your messages. [Learn how to set up channel surfaces in Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html).
 
 ## Grant your team the required access permissions {#grant-access-permissions}
 

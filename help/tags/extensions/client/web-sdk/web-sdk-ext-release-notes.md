@@ -8,6 +8,60 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Version 2.21.4 - January 10, 2024
+
+**Fixes and improvements**
+
+* Fixed an issue where saving Config Overrides without all 3 environments set would crash the extension UI.
+* Fixed an issue where the root clear existing value checkbox did not populate when editing an update variable action.
+
+Contains version 2.19.2 of the Adobe Experience Platform Web SDK.
+
+## Version 2.21.3 - November 10, 2023
+
+Contains version 2.19.1 of the Adobe Experience Platform Web SDK.
+
+**Fixes and improvements**
+
+* Fixed an issue where the propositions array available in `Send event complete` events was always empty.
+
+## Version 2.21.2 - November 1, 2023
+
+**New features**
+
+* Added `Request default personalization` option to send event action.
+* Added support for top and bottom of page events in the send event action.
+* Added `Apply propositions` action.
+* Added `Evaluate rulesets` action and `Subscribe ruleset items` event for in-app messages.
+* Added `Decision context` to send event action.
+
+**Fixes and improvements**
+
+* Contains version 2.19.0 of the Adobe Experience Platform Web SDK.
+
+## Version 2.20.3 - August 8, 2023
+
+**Fixes and improvements**
+
+* Fixed issue where data elements could not be saved in ID sync container ID override field.
+
+## Version 2.20.1 - August 3, 2023
+
+**Fixes and improvements**
+
+* Improved the validation of saved datastream override settings.
+
+## Version 2.20.0 - July 31, 2023
+
+**New features**
+
+* Added support for [per-command overrides of the datastream ID](../../../../datastreams/overrides.md).
+
+**Fixes and improvements**
+
+* Deprecated `edgeConfigId` in favor of `datastreamId` in the SDK configuration.
+* Multiple user experience enhancements for the datastream configuration overrides user interface.
+
 ## Version 2.19.0 - June 21, 2023
 
 * The **[!UICONTROL Variable]** data element and **[!UICONTROL Update Variable]** actions are now generally available.
@@ -21,7 +75,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 **New features**
 
 * Contains version 2.16.0 of the Adobe Experience Platform Web SDK.
-* Added support for [datastream configuration overrides](../../../../edge/datastreams/overrides.md).
+* Added support for [datastream configuration overrides](../../../../datastreams/overrides.md).
 * Add deprecation notice to the `datasetId` option on the `sendEvent` command.
 
 
@@ -116,7 +170,7 @@ Contains version 2.8.0 of the Adobe Experience Platform Web SDK library.
 
 Contains version 2.7.0 of the Adobe Experience Platform Web SDK library.
 
-* Additional information from Experience Edge are available in the Send Event Complete event, including `inferences` and `destinations`. The format of these properties may change as these features are currently rolling out as part of a Beta. For more information, see [Tracking Events.](../../../../edge/fundamentals/tracking-events.md)
+* Additional information from the Edge Network are available in the Send Event Complete event, including `inferences` and `destinations`. The format of these properties may change as these features are currently rolling out as part of a Beta. For more information, see [Tracking Events.](../../../../edge/fundamentals/tracking-events.md)
 
 ## Version 2.7.3 - September 7, 2021
 
@@ -163,7 +217,7 @@ Contains version 2.5.0 of the Adobe Experience Platform Web SDK library.
 
 Contains version 2.4.0 of the Adobe Experience Platform Web SDK library.
 
-* Added ["document unloading"](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) checkbox to Send Event action UI.
+* Added ["document unloading"](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) checkbox to Send Event action UI.
 * Added support for an `out` option when [configuring default consent](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) which drops all events until consent is received (the existing `pending` option queues events and sends them once consent is received).
 * Added a tooltip to the default consent field.
 * Added support for [Adobe's Consent 2.0 standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).

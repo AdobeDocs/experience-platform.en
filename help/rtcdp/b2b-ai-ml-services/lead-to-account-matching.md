@@ -2,6 +2,8 @@
 title: Lead to account matching in Real-Time CDP B2B
 type: Documentation
 description: An overview and more information about the lead to account matching feature in Experience Platform CDP B2B.
+feature: Get Started, Profiles, B2B
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
 ---
 # Lead to account matching in Real-Time CDP B2B
@@ -72,7 +74,7 @@ The workEmail attribute can be found as a top-level field group in the B2B perso
 
 Profiles will be best matched only if the match score is over an internal confidence threshold. The results are saved in a new system dataset of the existing account person relation XDM. 
 
-The lead to account matching service runs when a new person profile snapshot becomes available which is once every 24 hours. See the documentation for more information about the the [configuration of lead to account matching](/help/rtcdp/accounts/account-profile-ui-guide.md).
+The lead to account matching service runs when a new person profile snapshot becomes available which is once every 24 hours. See the documentation for more information about the [configuration of lead to account matching](/help/rtcdp/accounts/account-profile-ui-guide.md).
 
 ## How to view lead to account matching output {#how-to-view}
 

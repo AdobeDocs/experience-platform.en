@@ -6,7 +6,7 @@ title: Data Governance in Customer AI
 description: Adobe Experience Platform provides several services and tools that allow you to confidently control your collected experience data in order to comply with your business practices, legal obligations, and development process.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
 ---
-# Customer AI and Data Governance
+# Customer AI and Data Governance in Customer AI
 
 Any data governance-related settings in Customer AI are inherited from Adobe Experience Platform.
 
@@ -20,7 +20,7 @@ This integration allows you to manage compliance more efficiently. Data stewards
 
 ## Consent Policy {#consent-policy}
 
-Customer AI honors your consent preferences. Once you've [setup and enabled your consent policy](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=en#consent-policy), Customer AI will honor the consent data collected from you. Only consented data is used for scoring the model in subsequent runs of the model. The new scores will replace the old scores and can be used in segmentation. This feature is currently only available for HealthCare Shield customers, and Privacy and Security shield customers.
+Customer AI honors your consent preferences. Once you've [setup and enabled your consent policy](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy), Customer AI will honor the consent data collected from you. Only consented data is used for scoring the model in subsequent runs of the model. The new scores will replace the old scores and can be used in segmentation. This feature is currently only available for HealthCare Shield customers, and Privacy and Security shield customers.
 
 You can learn more about this feature here: 
 

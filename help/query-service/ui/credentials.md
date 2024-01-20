@@ -9,7 +9,11 @@ exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 
 Adobe Experience Platform Query Service allows you to connect with external clients. You can connect to these external clients by using either expiring credentials or non-expiring credentials.
 
-## Expiring credentials {#expiring-credentials}
+>[!NOTE]
+>
+>The credentials panel is not automatically available to all users. Please contact your Adobe account team to request the [!UICONTROL Credentials] tab to be included in the Query Service workspace should you require it. If requested, this change is organization wide and is conducted by Adobe's engineering team. It is not a setting controlled by users.
+
+## Expiring credentials {#expiring-credentials} 
 
 >[!CONTEXTUALHELP]
 >id="platform_queryservice_credentials_expiringcredentials"

@@ -12,13 +12,12 @@ exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
 - [Destinations](#destinations)
 - [Experience Data Model](#xdm)
 - [Query Service](#query-service)
-- [Sources](#sources-sources)
 
 ## Customer-managed keys {#cmk}
 
 All data stored on Adobe Experience Platform is encrypted at rest using system-level keys. If you are using an application built on top of Platform, you can now opt to use your own encryption keys instead, giving you greater control over your data security.
 
-See the overview on [customer-managed keys](../../landing/governance-privacy-security/customer-managed-keys.md) for details on the feature.
+See the overview on [customer-managed keys](../../landing/governance-privacy-security/customer-managed-keys/overview.md) for details on the feature.
 
 ## Data collection {#data-collection}
 
@@ -28,7 +27,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 | Feature | Description |
 | --- | --- |
-| Sensitive data handling for datastreams | Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../edge/datastreams/overview.md#sensitive) for more information.  |
+| Sensitive data handling for datastreams | Datastreams now leverage several Platform technologies to appropriately handle sensitive data as enforced by regulations such as the Health Insurance Portability and Accountability Act (HIPAA). See the section on [handling senstive data in datstreams](../../datastreams/overview.md#sensitive) for more information.  |
 | [!DNL Splunk] extension for event forwarding | You can now send data to [!DNL Splunk] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Splunk] extension overview](../../tags/extensions/server/splunk/overview.md) for more information. |
 | [!DNL Zendesk] extension for event forwarding | You can now send data to [!DNL Zendesk] using an [event forwarding](../../tags/ui/event-forwarding/overview.md) extension. See the [[!DNL Zendesk] extension overview](../../tags/extensions/server/zendesk/overview.md) for more information. |
 
@@ -96,23 +95,10 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 | Feature | Description |
 | --- | --- |
 | Monitor queries through the Platform UI | The Query Service [!UICONTROL Scheduled Queries] tab provides improved visibility for the status of all query jobs through the UI. You can now find important information about the status of your query runs, including error messages and codes should they fail, from [!UICONTROL Scheduled Queries] tab. You can also subscribe to alerts through the UI for any of these queries based on their status. See the [Monitor Queries document](../../query-service/ui/monitor-queries.md) to learn more about this feature. |
-| Query accelerated reporting insights data model | As part of the Data Distiller SKU, the query accelerated store allows you to reduce the time and processing power required to gain critical insights from your data. With the query accelerated store you can build a custom data model and/or extend on existing Adobe Real-Time Customer Data Platform data models to improve your reporting insights and their visualizations. See the [query accelerated store reporting insights document](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) to learn more about this feature.  |
+| Query accelerated reporting insights data model | As part of the Data Distiller SKU, the query accelerated store allows you to reduce the time and processing power required to gain critical insights from your data. With the query accelerated store you can build a custom data model and/or extend on existing Adobe Real-Time Customer Data Platform data models to improve your reporting insights and their visualizations. See the [query accelerated store reporting insights document](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md) to learn more about this feature.  |
 
 {style="table-layout:auto"}
 
 For more information on Query Services, refer to the [Query Service overview](../../query-service/home.md).
 New features in Adobe Experience Platform:
 
-## Sources {#sources}
-
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
-
-Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
-
-**Updated features**
-
-| Feature | Description |
-| --- | --- | 
-| Beta availability of Adobe Workfront source | Use the [Adobe Workfront source](../../sources/connectors/adobe-applications/workfront.md) to bring your Workfront data to Experience Platform and perform use cases such as combining your work records with third-party data, applying historical and time-series analytics on work records, and querying work data using standard SQL. For more information, read the guide on [creating a Workfront source connection in the UI](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-
-To learn more about sources, read the [sources overview](../../sources/home.md).

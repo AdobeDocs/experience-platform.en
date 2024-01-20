@@ -30,7 +30,7 @@ To increase the rate of speed of ingestion on the Platform side, Platform must i
 
 ## Use a virtual network to connect to [!DNL Event Hubs] to Platform
 
-You can set up a virtual network to connect [!DNL Event Hubs] to Platform while having your firewall measures enabled. To set up a virtual network, head to this [[!DNL Event Hubs] network rule set document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) and follow the steps listed below:
+You can set up a virtual network to connect [!DNL Event Hubs] to Platform while having your firewall measures enabled. To set up a virtual network, head to this [[!DNL Event Hubs] network rule set document](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) and follow the steps listed below:
 
 * Select **Try It** from the REST API panel; 
 * Authenticate your [!DNL Azure] account using your credentials in the same browser;
@@ -82,7 +82,7 @@ See the list below for different regions of Platform subnets:
     "virtualNetworkRules": [
       {
         "subnet": {
-            "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_nld2_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2_network_10_20_40_0_23/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
+            "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_nld2_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2-vnet/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
         }, 
         "ignoreMissingVnetServiceEndpoint": true
       },
@@ -101,7 +101,7 @@ See the list below for different regions of Platform subnets:
     "virtualNetworkRules": [
       {
         "subnet": {
-          "id": "/subscriptions/1618ef18-9edc-48bf-88dd-61cc979629b5/resourceGroups/ethos_12_prod_aus5_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_aus5_network_10_21_116_0_22/subnets/ethos_12_prod_aus5_network_10_21_116_0_22"
+          "id": "/subscriptions/1618ef18-9edc-48bf-88dd-61cc979629b5/resourceGroups/ethos_12_prod_aus5_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_aus5-vnet/subnets/ethos_12_prod_aus5_network_10_21_116_0_22"
         },
         "ignoreMissingVnetServiceEndpoint": true
       },
@@ -111,7 +111,7 @@ See the list below for different regions of Platform subnets:
 }
 ```
 
-See the following [[!DNL Event Hubs] document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) for more information on network rule sets.
+See the following [[!DNL Event Hubs] document](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) for more information on network rule sets.
 
 ## Connect [!DNL Event Hubs] to Platform
 

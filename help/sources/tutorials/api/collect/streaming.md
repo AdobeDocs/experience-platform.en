@@ -240,9 +240,9 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `connectionSpec.id` | The connection specification ID used to connect to the [!DNL Data Lake]. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | The specified format of the data you are bringing to [!DNL Data Lake]. |
-| `params.dataSetId` | The ID of the target dataset retrieved in the previous step. |
+| `data.format` | The specified format of the data you are bringing to data lake. |
+| `params.dataSetId` | The ID of the target dataset generated in the previous step. **Note**: You must provide a valid dataset ID when creating a target connection. An invalid dataset ID will result in an error. |
+| `connectionSpec.id` | The connection spec ID used to connect to the data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Response**
 
@@ -475,6 +475,88 @@ A successful response returns the ID (`id`) of the newly created dataflow.
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+## Post data for ingestion
+
+View the sample payload below for examples of raw or XDM-compliant json that you can send for ingestion.
+
+>[!NOTE]
+>
+>You must add a delay of at least ~5 minutes between creation of dataflow and ingesting any streaming data. This allows the dataflow to be fully enabled, before any data is ingested.
+
+The following examples apply to all of:
+
+- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+
+>[!BEGINTABS]
+
+>[!TAB Raw data]
+
+```json
+'{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!TAB XDM data]
+
+```json
+{
+  "header": {
+    "schemaRef": {
+      "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/73cae7e6db06ebca535cd973e3ece85e66253962f504e7d8",
+      "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+    }
+  },
+  "body": {
+    "xdmMeta": {
+      "schemaRef": {
+        "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/73cae7e6db06ebca535cd973e3ece85e66253962f504e7d8",
+        "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+      }
+    },
+    "xdmEntity": {
+      "_id": "acme",
+      "workEmail": {
+        "address": "mike@acme.com",
+        "primary": true,
+        "type": "work",
+        "status": "active"
+      },
+      "person": {
+        "gender": "male",
+        "name": {
+          "firstName": "Mike",
+          "lastName": "Wazowski"
+        },
+        "birthDate": "1985-01-01"
+      },
+      "identityMap": {
+        "ecid": [
+          {
+            "id": "01262118050522051420082102000000000000"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+>[!ENDTABS]
 
 ## Next steps
 

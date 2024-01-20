@@ -103,6 +103,10 @@ This document provides definitions for key terms related to privacy regulations 
 
 **PDPA**: The [!DNL Personal Data Protection Act] of Thailand (PDPA) was introduced to safeguard Thai data owners from the illegal collection, use, or disclosure of their personal data. Inspired by the European Union's GDPR, the regulation grants Thai citizens the right to request access to, or the deletion of, their stored personal data.
 
+<!-- Not yet released:
+**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
+-->
+
 **Personal data**: Any information related to a natural person or 'Data Subject', that can be used to directly or indirectly identify the person.
 
 **Personal data breach**: A breach of security leading to the accidental or unlawful access to, destruction, misuse, and so on, of personal data.
@@ -145,6 +149,8 @@ This document provides definitions for key terms related to privacy regulations 
 agree on the adoption of a compromise text more quickly.
 
 ## U
+
+**UCPA**: The [!DNL Utah Consumer Privacy Act] creates the right for a consumer to know what personal data a business collects, how the business uses their personal data, and whether the business sells their personal data. Consumers can require the business to delete or stop selling their personal data.
 
 **Unambiguous consent**: Unambiguous consent is also known as implicit consent. Unambiguous consent refers to consent that was not explicitly given by the data subject, but is nonetheless unambiguous in nature. For example, during the sign-up process for a company website, a notice is given that by providing an email address, the data subject consents to receiving emails on special offers. If the data subject reads the notice, the affirmative action of entering their email is enough to be considered unambiguous consent.
 

@@ -1,28 +1,34 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: The June 2023 release notes for Adobe Experience Platform.
+description: The October 2023 release notes for Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: June 21, 2023**
+**Release date: October 25, 2023**
 
-Updates to existing features in Adobe Experience Platform:
+Updates to existing features in Experience Platform:
 
-- [Authentication to Experience Platform APIs](#authentication-platform-apis)
+- [Dashboards](#dashboards)
 - [Data collection](#data-collection)
 - [Destinations](#destinations)
-- [Experience Data Model (XDM)](#xdm)
-- [Query Service](#query-service)
+- [Sandboxes](#sandboxes)
+- [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
-## Authentication to Experience Platform APIs {#authentication-platform-apis}
+## Dashboards {#dashboards}
 
-For Experience Platform API users, the method to obtain required access tokens to authenticate and make calls to API endpoints is now simplified. The JWT method to obtain access tokens is deprecated and replaced by a simpler OAuth Server-to-Server authentication method.<p>![New OAuth authentication method to get access tokens highlighted.](/help/landing/images/api-authentication/oauth-authentication-method.png "New OAuth authentication method to get access tokens highlighted."){width="100" zoomable="yes"}</p> 
+Adobe Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots. 
 
-While existing API integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Read the guide on [migrating from Service Account (JWT) credential to OAuth Server-to-Server credential](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+**New or updated features**
 
-Read the updated [Experience Platform authentication tutorial](/help/landing/api-authentication.md) for more information. 
+| Feature | Description |
+| --- | --- |
+| Destinations usage metrics | New metering metrics have been added to the license usage dashboard. The **[!UICONTROL Audience Activation Size]** and **[!UICONTROL Data Export Size]** metrics provide a convenient way to track how much data you have exported out of Platform in relation to your license usage entitlements. See the [available metrics](../../dashboards/guides/license-usage.md#available-metrics) documentation for descriptions of these and and other licence usage metrics. |
+
+{style="table-layout:auto"}
+
+For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
 
 ## Data collection {#data-collection}
 
@@ -32,13 +38,13 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 | Type | Feature | Description |
 | --- | --- | --- |
-| Extension | [!DNL Google Cloud Platform] event forwarding extension | The [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) event forwarding extension allows you to forward event data to Google for activation via [!DNL Google Pub/Sub]. |
-| Extension | [!DNL Cloud connector for Google Analytics 4 (ga4)] extension | The [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) event forwarding extension allows you to track analytics via the new [!DNL Google Analytics 4 (ga4)] standard. |
-| Secret | OAuth 2 JWT Secret | The [OAuth 2 JWT Secret](../../tags/ui/event-forwarding/secrets.md) allows you to use Adobe and [!DNL Google] Service tokens to support server-server interactions in event forwarding. |
+| Extensions | [!DNL Meta] Conversions API Enhancement | There are three enhancements to the [Meta Conversions API](/help/tags/extensions/server/meta/overview.md) extension: <ul><li>Integration with [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): Creates a seamless login experience by allowing you to share your pixelID and access token for the Conversions API integration with Adobe.</li><li>Integration with [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): Allows you to deliver advertising to people who are more likely to complete a desired action and link the action back to the ads delivered.</li><li>Integration with [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): Allows you to pass LiveRamp's RampID in the CIP field, eliminating the need to share PII directly with partners or Meta. </li></ul>|
+| Extensions | [!DNL LinkedIn] Conversions API | The [[!DNL LinkedIn] Conversions API](../../tags/extensions/server/linkedin/overview.md) extension allows you to evaluate the effectiveness of your LinkedIn marketing campaigns by forwarding Experience Platform event data to LinkedIn. |
+| Secret | [!DNL LinkedIn] OAuth 2 Secret | The [[!DNL LinkedIn] OAuth 2 Secret](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) allows you to send server-server interactions to [!DNL LinkedIn] in event forwarding. |
+| Event Forwarding | Update to Tags and Event Forwarding | To preserve [Tags](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) and [Event Forwarding](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) performance in Platform, only the most recent Development and Stage builds, both successful and unsuccessful, will be retained. All builds no longer in use will be removed. Additionally throttling and rate limiting has been implemented to ensure that a few heavy API usages do not degrade the API performance for others. |
+| Extensions | Elements, Rules, and Extensions | [Elements, rules, and extensions](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html) are now sorted in the library output to ensure more consistency between multiple builds and deployments of the same library. |
 
-{style="table-layout:auto"}
-
-To learn more about data collection, read the [data collection overview](../../tags/home.md).
+For more information on data collection, please read the [data collections overview](../../tags/home.md).
 
 ## Destinations {#destinations}
 
@@ -46,9 +52,10 @@ To learn more about data collection, read the [data collection overview](../../t
 
 **New or updated destinations** {#new-updated-destinations}
 
-| Destination | Description |
-| ----------- | ----------- |
-| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] connection](../../destinations/catalog/advertising/amazon-ads.md) | The [!DNL Amazon Ads] integration with Adobe Experience Platform now supports regional routing to the various [!DNL Amazon Ads] marketplaces. Read more in the [destination changelog](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
+| Destination | New or Updated |Description |
+| ----------- |----------------|----------- |
+| [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | New | Use the Moengage destination to connect and map your Adobe data (user attributes, segments and events) to MoEngage in real-time. Customers can then act on this data, delivering personalized, targeted experiences. |
+| [[!DNL Qualtrics Automations]](/help/destinations/catalog/survey/qualtrics-automations.md) | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. | 
 
 {style="table-layout:auto"}
 
@@ -56,91 +63,49 @@ To learn more about data collection, read the [data collection overview](../../t
 
 | Functionality | Description |
 | ----------- | ----------- |
-| Workspace support for [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinations. | You can now select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target for more information about workspaces. |
+| (Beta) Support for hashing functions in calculated fields | In addition to the functions specific for [exporting arrays](../../destinations/ui/export-arrays-calculated-fields.md) or elements from an array, you can now use additional [hashing functions](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) to hash attributes in the exported files. The supported hashing functions are: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Limited GA) Activate account audiences to certain destinations | Real-Time CDP B2B customers can now activate [account audiences](../../segmentation/ui/account-audiences.md) to certain destinations. For more information about this feature, please read the [activate account audiences tutorial](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
-
-<!--
 
 **Fixes and enhancements** {#destinations-fixes-and-enhancements}
 
-- Placeholder for fixes and enhancements
-
--->
-
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
-## Experience Data Model (XDM) {#xdm}
+## Sandboxes {#sandboxes}
 
-XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. To address this need, Experience Platform provides sandboxes that partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-**New XDM components**
-
-| Component type | Name | Description |
-| --- | --- | --- |
-| Extension (Prospect-Profile)  | [[!UICONTROL Adobe Unified Profile Service Prospect-Profile Union Extension]](https://github.com/adobe/xdm/pull/1735/files) | Added required fields for the Prospect-Profile union schema.  |
-| Extension |  [[!UICONTROL Decisioning Asset]](https://github.com/adobe/xdm/pull/1732/files) |  Add a data type to represent assets used in decisioning. [!UICONTROL Decisioning Asset] provides a reference to assets used to render the `decisionItems`. |
-| Data type  | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/pull/1747/files)  | [!UICONTROL Commerce] stores records related to the buying and selling activity. |
-| Field group  | [[!UICONTROL Profile Partner Enrichment(Sample)]](https://github.com/adobe/xdm/pull/1747/files)  | A sample schema was added for profile partner enrichment.  |
-| Field group  | [[!UICONTROL Partner Prospect Details(Sample)]](https://github.com/adobe/xdm/pull/1747/files)  |  A sample schema was added for data vendor prospect profile extensions. |
-| Data type  | [[!UICONTROL Commerce Scope]](https://github.com/adobe/xdm/pull/1747/files)  | [!UICONTROL Commerce Scope] identifies where an event occurred. For example, in the store view, the store, or website, and so on. |
-| Data type  | [[!UICONTROL Billing]](https://github.com/adobe/xdm/pull/1734/files) | Billing information, for one or more payments, was added to the [!UICONTROL Commerce] schema.  |
-
-{style="table-layout:auto"}
-
-**Updated XDM components**
-
-| Component type | Name | Update description |
-| --- | --- | --- |
-| Field group | [[!UICONTROL MediaAnalytics Interaction Details]](https://github.com/adobe/xdm/pull/1736/files) | Changed `bitrateAverageBucket` from 100 to "800-899". |
-| Data type | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/pull/1736/files) | Changed `bitrateAverageBucket` data type to string. |
-| Field Group | [[!UICONTROL Segment Membership Details]](https://github.com/adobe/xdm/pull/1735/files) | Added to Prospect Profile class.  |
-| Schema | [[!UICONTROL Computed Attributes System Schema]](https://github.com/adobe/xdm/pull/1735/files)  | Identity map added to the [!UICONTROL Computed Attributes System Schema]. |
-| Datatype | [[!UICONTROL Content Delivery Network]](https://github.com/adobe/xdm/pull/1733/files) | Field added to [!UICONTROL Session details information] to describe the content delivery network used. | 
-| Extension | [[!UICONTROL Adobe Unified Profile Service Account Union Extension]](https://github.com/adobe/xdm/pull/1731/files)  | Identity map added to the [!UICONTROL Adobe Unified Profile Service Account Union Extension]. |
-| Data type  | [[!UICONTROL Order]](https://github.com/adobe/xdm/pull/1730/files)  | `discountAmount` was added to [!UICONTROL Order]. This conveys the difference between the regular order price and the special price. It is applied to the entire order rather than to individual products.  |
-| Schema  | [[!UICONTROL AEP Hygiene Operation Request]](https://github.com/adobe/xdm/pull/1728/files)  | The `targetServices` field was added to provide the names of services that process the data hygiene operations. |
-| Data type | [[!UICONTROL Shipping]](https://github.com/adobe/xdm/pull/1727/files) | `currencyCode` was added to the shipping information for one or more products. It is an ISO 4217 alphabetic currency code used for pricing the product. |
-| Data type  | [[!UICONTROL Application]](https://github.com/adobe/xdm/pull/1726/files) |  The `language` field was added to provide the user's linguistic, geographical, or cultural preferences to the application. |
-| Extension | [[!UICONTROL AJO Entity Fields]](https://github.com/adobe/xdm/pull/1746/files)  | [!UICONTROL AJO Timestamp Entity] was added to indicate the time when the message was last modified.  |
-| Data type  | (Multiple) | [Removed several media details](https://github.com/adobe/xdm/pull/1739/files) across several data types for consistency. |
-
-{style="table-layout:auto"}
-
-For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md)
-
-## Query Service {#query-service}
-
-Query Service allows you to use standard SQL to query data in Adobe Experience Platform data lake. You can join any datasets from data lake and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-Time Customer Profile.
-
-**Updated features**
+**New feature**
 
 | Feature | Description |
 | --- | --- |
-| Inline templates | Query Service now supports the use of templates that reference other templates within your SQL. Reduce your workload, and avoid errors by leveraging inline templates in your queries. You can reuse statements or conditions, and reference nested templates for greater flexibility in your SQL. There is no limit in the size of queries that can be stored as templates, or the number of templates that can be referenced from your original query. For more information, read the [inline template guide](../../query-service/essential-concepts/inline-templates.md). |
-| Scheduled query UI updates | Manage all your scheduled queries from one location in the UI with the [[!UICONTROL Scheduled Queries tab]](../../query-service/ui/monitor-queries.md#inline-actions). The [!UICONTROL Scheduled Queries] UI has been improved with the addition of inline query actions and the new query status column. The recent additions include the ability to enable, disable, and delete a schedule, or subscribe to alerts for upcoming query runs directly from the [!UICONTROL Scheduled Queries] view. <p>![Inline actions highlighted in the [!UICONTROL Scheduled Queries] view.](../../query-service/images/ui/monitor-queries/disable-inline.png "Inline actions highlighted in the [!UICONTROL Scheduled Queries] view."){width="100" zoomable="yes"}</p> |
+| Sandbox tooling | The sandbox tooling feature allows you to improve configuration accuracy across sandboxes and seamlessly export and import sandbox configurations between sandboxes. You can use the sandbox tooling feature to select different objects and export them into a package. For more information, see the [sandbox tooling UI guide](../../sandboxes/ui/sandbox-tooling.md). |
 
-{style="table-layout:auto"}
+For more information on sandboxes, please see the [sandboxes overview](../../sandboxes/home.md).
 
-For more information on Query Service, refer to the [Query Service overview](../../query-service/home.md).
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
+
+**New feature**
+
+| Feature | Description |
+| ------- | ----------- |
+| Account audiences (Limited GA) | In Real-Time Customer Data Platform B2B Edition, you can now use account segmentation to bring the full ease and sophistication of the marketing segmentation experience from people-based audiences to account-based audiences. For more information about this feature, please read the [account audiences overview](../../segmentation/ui/account-audiences.md). |
+
+To learn more about Segmentation Service, please read the [Segmentation Service overview](../../segmentation/home.md).
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources and allows you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources ,such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
-
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-**Updated features**
+**New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| Adobe Analytics classification source dataflows deletion support | You can now delete source dataflows that use Adobe Analytics classifications as its source. Under **[!UICONTROL Sources]** > **[!UICONTROL Dataflows]**, select the desired dataflow, then select delete. For more information, read the guide on [creating a source connection for Adobe Analytics classifications data](../../sources/tutorials/ui/create/adobe-applications/classifications.md). |
-| Filtering support for [!DNL Microsoft Dynamics] using the API | Use logical and comparison operators to filter row-level data for the [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) source. For more information, read the guide on [filtering data for a source using the API](../../sources/tutorials/api/filter.md). |
-| [!BADGE Beta]{type=Informative} Support for [!DNL RainFocus] | You can now use the [!DNL RainFocus] sources integration to bring event management and analytics data from your [!DNL RainFocus] account to Experience Platform. For more information, read the [[!DNL RainFocus] source overview](../../sources/connectors/analytics/rainfocus.md). |
-| Support for Adobe Commerce | You can now use the Adobe Commerce sources integration to bring data from your Adobe Commerce account to Experience Platform. For more information, read the [Adobe Commerce source overview](../../sources/connectors/adobe-applications/commerce.md). |
-| Support for [!DNL Mixpanel] | You can now use the [!DNL Mixpanel] sources integration to bring analytics data from your [!DNL Mixpanel] account to Experience Platform using APIs or the user interface. For more information, read the [[!DNL Mixpanel] source overview](../../sources/connectors/analytics/mixpanel.md). |
-| Support for [!DNL Zendesk] | You can now use the [!DNL Zendesk] sources integration to bring customer success data from your [!DNL Zendesk] account to Experience Platform using APIs or the user interface. For more information, read the [[!DNL Zendesk] source overview](../../sources/connectors/customer-success/zendesk.md).  |
+| Updated authentication for Data Landing Zone | You can now see the designated expiry date of your Data Landing Zone when viewing your credentials. You must refresh your token before the expiry date in order to continue using it in your application. If you do not manually refresh your token before the stated expiry date, then it will automatically refresh and provide a new token the next time you retrieve your credentials. For more information, read the documentation on [using the Data Landing Zone](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). |
 
 {style="table-layout:auto"}
 
-To learn more about sources, read the [sources overview](../../sources/home.md).
+To learn more about sources, please read the [sources overview](../../sources/home.md).

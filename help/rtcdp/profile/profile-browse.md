@@ -2,6 +2,7 @@
 keywords: view profiles rtcdp;rtcdp profile view;rtcdp profiles
 title: Browse profiles in Real-Time Customer Data Platform
 description: Adobe Real-Time Customer Data Platform enables you to browse Real-Time Customer Profile data using the Adobe Experience Platform user interface.
+feature: Get Started, Profiles
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
 ---
 
@@ -9,13 +10,13 @@ exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
 
 Real-Time Customer Profile creates a holistic view of each of your individual customers, combining data from multiple channels including online, offline, CRM, and third-party data. As individual profiles are aggregated based on data being brought into the system from various sources, each profile becomes an actionable, timestamped account of every interaction your customer has with your brand.
 
-Within the Adobe Experience Platform user interface, you can view these read-only profiles and see important information regarding each of your individual customers, including their preferences, past events, interactions, and the segments to which the individual belongs.
+Within the Adobe Experience Platform user interface, you can view these read-only profiles and see important information regarding each of your individual customers, including their preferences, past events, interactions, and the audiences to which the individual belongs.
 
 Adobe Real-Time Customer Data Platform is built on top of Adobe Experience Platform and is thereby able to make use of the profile viewing capabilities in the Experience Platform UI. For a detailed guide to viewing customer profiles within the Platform user interface, refer to the [Real-Time Customer Profile user guide](../../profile/ui/user-guide.md).
 
 ## Profile enhancements for Real-Time CDP, B2B Edition
 
-In addition to the profile browse capabilities supported by Adobe Experience Platform, Real-Time CDP, B2B Edition users can access B2B attributes and events within the customer profile on the [!UICONTROL Attributes] and [!UICONTROL Events] tabs, respectively. B2B data can also be used to perform segmentation, with those segments appearing under the customer's [!UICONTROL Segment membership] tab alongside non-B2B segments.
+In addition to the profile browse capabilities supported by Adobe Experience Platform, Real-Time CDP, B2B Edition users can access B2B attributes and events within the customer profile on the [!UICONTROL Attributes] and [!UICONTROL Events] tabs, respectively. B2B data can also be used to perform segmentation, with those audiences appearing under the customer's [!UICONTROL Audience membership] tab alongside non-B2B audiences.
 
 Real-Time CDP, B2B Edition also enables you to browse [!UICONTROL Accounts], [!UICONTROL Opportunities], and [!UICONTROL Source records] from across your enterprise sources that are associated with an individual customer.
 
@@ -26,6 +27,8 @@ To explore these enhancements, begin by following the steps outlined in the [Rea
 The profile detail includes access to [!UICONTROL Accounts], [!UICONTROL Opportunities], and [!UICONTROL Source records] tabs in addition to the standard information provided in the customer profile that is has also been enhanced with B2B events and attributes.
 
 ![](images/b2b-profile-detail.png)
+
+To learn more about the profile details provided in the Platform UI, refer to the [details section of the Profiles dashboard documentation](../../dashboards/guides/profiles.md#browse-profiles).
 
 ### Accounts tab
 

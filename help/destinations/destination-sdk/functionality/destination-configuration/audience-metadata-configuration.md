@@ -1,15 +1,15 @@
 ---
 description: Learn how to configure the audience metadata settings for destinations built with Destination SDK.
 title: Audience metadata configuration
+exl-id: ae71df4f-b753-4084-835f-03559b4986cb
 ---
-
 # Audience metadata configuration
 
 When exporting data from Experience Platform to your destination, you might need specific audience metadata, like audience names or audience IDs, to be shared between Experience Platform and your destination.
 
 Destination SDK offers tools that you can use to programmatically create, update, or delete audiences in your destination platform.
 
-To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the the guide on how to [use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration).
+To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a streaming destination](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
 You can configure the audience metadata template via the `/authoring/audience-templates` endpoint. After creating your audience metadata configuration, you can use the `/authoring/destinations` endpoint to configure the `audienceMetadataConfig` section. This section tells your destination what audience metadata it should map to your audience template.
 
@@ -62,7 +62,7 @@ After reading this article, you should have a better understanding of how you ca
 To learn more about the other destination components, see the following articles:
 
 * [Customer authentication configuration](customer-authentication.md)
-* [OAuth2 authentication](oauth2-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
 * [Customer data fields](customer-data-fields.md)
 * [UI attributes](ui-attributes.md)
 * [Schema configuration](schema-configuration.md)

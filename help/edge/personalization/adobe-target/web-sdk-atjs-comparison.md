@@ -69,7 +69,7 @@ window.adobe.target.init(window, document, {
 });
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 
 ### Configuring the Web SDK
@@ -234,7 +234,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
 ### Using Web SDK
 
@@ -319,7 +319,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
 
 ### Using Web SDK
@@ -457,7 +457,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-Learn more about the `applyOffers` command from the [dedicated documentation](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=en).
+Learn more about the `applyOffers` command from the [dedicated documentation](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html).
 
 
 ### Using Web SDK
@@ -509,7 +509,7 @@ adobe.target.sendNotifications({
 });
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
 
 ### Using Web SDK
 
@@ -641,7 +641,7 @@ Use the `adobe.target.triggerView` function. This function can be called wheneve
 adobe.target.triggerView("homeView")
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html)
 
 
 ### Using Web SDK
@@ -681,7 +681,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 
 ### Using Web SDK
@@ -690,7 +690,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >Ensure that you are using Platform Web SDK version 2.6.0 or later.
 
-The Response Tokens are returned as part of the `propositions` that are exposed in the result of the `sendEvent` command. Each proposition contains an array of `items`, and each item will have a `meta` object populated with Response Tokens if they are enabled in the Target admin UI. [Learn more](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
+The Response Tokens are returned as part of the `propositions` that are exposed in the result of the `sendEvent` command. Each proposition contains an array of `items`, and each item will have a `meta` object populated with Response Tokens if they are enabled in the Target admin UI. [Learn more](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 **Example**
 
@@ -855,9 +855,9 @@ The Analytics payload (`tnta` token) should be included in the Analytics hit usi
 Analytics Server Side Logging can be enabled by setting `analyticsLogging: server_side` in the at.js settings or by overriding the `window.targetglobalSettings` object.
 Then the data flows as following:
 
-![](assets/a4t-server-side-atjs.png)
+![Diagram showing the Analytics Server Side Logging workflow](assets/a4t-server-side-atjs.png)
 
-[Learn More](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=en)
+[Learn More](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
 ### Using Web SDK
 
@@ -870,7 +870,7 @@ Web SDK also supports:
 
 Analytics Client Side Logging is enabled when Adobe Analytics is disabled for that DataStream configuration. 
 
-![](assets/analytics-disabled-datastream-config.png)
+![Diagram showing the Analytics Client Side Logging workflow](assets/analytics-disabled-datastream-config.png)
 
 The customer has access to the Analytics token (`tnta`) that needs to be shared with Analytics using [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) 
 in by chaining the `sendEvent` command and iterate through the resulting propositions array.
@@ -908,20 +908,20 @@ alloy("sendEvent", {
 
 Here is a diagram to show how data flows when Analytics Client Side is enabled:
 
-![](assets/analytics-client-side-logging.png)
+![Data flow diagram in Analytics Client Side logging](assets/analytics-client-side-logging.png)
 
 #### Analytics Server Side Logging
 
 Analytics Server Side Logging is enabled when Analytics is enabled for that DataStream configuration.
 
-![](assets/analytics-enabled-datastream-config.png)
+![Datastreams UI showing the Analytics settings.](assets/analytics-enabled-datastream-config.png)
 
 When Server Side Analytics Logging is enabled the A4T payload that needs to be shared with Analytics so that the Analytics reporting show 
-correct impressions and conversions is shared at the Experience Edge level, so that the customer doesn't have to do any additional processing.
+correct impressions and conversions is shared at the Edge Network level, so that the customer doesn't have to do any additional processing.
 
 Here is how data flows into our systems when Server Side Analytics Logging is enabled:
 
-![](assets/analytics-server-side-logging.png)
+![Diagram showing the data flow in Server Side Analytics Logging](assets/analytics-server-side-logging.png)
 
 ## How to set Target Global Settings
 
@@ -941,7 +941,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 ### Using Web SDK
 
@@ -1041,7 +1041,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
 
 
 ### Using Web SDK
@@ -1121,7 +1121,7 @@ window.targetPageParams = function() {
 };
 ```
 
-[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=en)
+[Learn more](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
 
 ### Using Web SDK
 
@@ -1129,9 +1129,9 @@ Web SDK supports Target Third Party ID. However, it requires a few more steps. B
 Identity Map allows the customers to send multiple identities. All the identities are namespaced. Each namespace can have one or more identities. A particular identity can be marked as primary.
 With this knowledge in mind we can see what are the necessary steps to set up web sdk to use Target Third Party ID.
 
-1. Set up the namespace that will contain the Target Third Party ID in the Data Stream Configuration view:
+1. Set up the namespace that will contain the Target Third Party ID in the datastream configuration page:
 
-  ![](assets/mbox-3-party-id-setup.png)
+  ![Datastreams UI showing the Target third party ID namespace field](assets/mbox-3-party-id-setup.png)
   
 1. Send that identity namespace in every sendEvent command like this:
 
@@ -1179,8 +1179,8 @@ window.targetPageParams = function() {
 
 ### Using Web SDK
 
-Using Web SDK the customers are able to set up the property at a higher level, when setting up the Data Stream configuration, under Adobe Target namespace:
-![](assets/at-property-setup.png)
+Using Web SDK the customers are able to set up the property at a higher level, when setting up the datastream configuration, under Adobe Target namespace:
+![Datastreams UI showing the Adobe Target settings.](assets/at-property-setup.png)
 This means every Target call for that specific Data Stream configuration is going to contain that property token.
 
 ## How do I prefetch mboxes
@@ -1232,7 +1232,7 @@ Note: All these debugging features are available with enhanced capabilities in [
 
 You have multiple debugging capabilities when using Web SDK:
 
-* Using [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* Using [Assurance](../../../assurance/home.md)
 * [Web SDK debug enabled](../../../edge/fundamentals/debugging.md)
 * Use [Web SDK monitoring hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Use [Adobe Experience Platform Debugger](../../../debugger/home.md)

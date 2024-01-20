@@ -56,29 +56,69 @@ To learn more, visit the [audiences dashboard guide](../../dashboards/guides/aud
 >title="Add all audiences to schedule"
 >abstract="Enable to include all audiences evaluated using batch segmentation in the daily scheduled update. Disable to remove all audiences from the scheduled update."
 
-Select the **[!UICONTROL Browse]** tab to see a list of all the audiences for your organization. 
+Select the **[!UICONTROL Browse]** tab to see a list of all the audiences for your organization. This view lists information about the audiences including the profile count, origin, created date, last modified date, tags, and breakdown. 
 
 ![The browse screen is displayed. A list of all the audiences belonging to the organization is shown.](../images/ui/overview/audience-browse.png)
 
-This view lists information about the audiences including the profile count, origin, created date, last modified date, tags, and breakdown. 
+Next to each audience is an ellipsis icon. Selecting this displays a list of available quick actions for the audience. This list of actions differs, based on the audience's origin.
 
-You can add additional fields to this display by selecting ![the filter attribute icon](../images/ui/overview/filter-attribute.png). These additional fields include lifecycle status, update frequency, last updated by, description, created by, and access labels.
+![The quick actions list is shown for audiences with the origin of [!UICONTROL Audience composition].](../images/ui/overview/browse-audience-composition-details.png)
+
+| Action | Origins | Description |
+| ------ | ------- | ----------- |
+| [!UICONTROL Edit] | Segmentation Service | Opens the Segment Builder to edit your audience. Please note that if your audience was created through the API, you will **not** be able to edit it using Segment Builder. For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md). |
+| [!UICONTROL Open composition] | Audience composition | Opens the Audience composition to see your audience. For more information on Audience composition, please read the [audience composition UI guide](./audience-composition.md). |
+| [!UICONTROL Activate to destination] | Segmentation Service | Activates the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL Share with partners] | Audience composition, Custom upload, Segmentation Service | Shares your audience with other Platform users. For more information on this feature, please read the [Segment Match overview](./segment-match/overview.md). |
+| [!UICONTROL Manage tags] | Audience composition, Custom upload, Segmentation Service | Manages the user-defined tags that belong to the audience. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
+| [!UICONTROL Move to folder] | Audience composition, Custom upload, Segmentation Service |  Manages which folder the audience belongs to. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
+| [!UICONTROL Copy] | Audience composition, Custom upload, Segmentation Service | Duplicates the selected audience. |
+| [!UICONTROL Apply access labels] | Audience composition, Custom upload, Segmentation Service | Manages the access labels that belong to the audience. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Archive] | Custom upload | Archives the selected audience. |
+| [!UICONTROL Delete] | Audience composition, Custom upload, Segmentation Service | Deletes the selected audience. |
+| [!UICONTROL Add to package] | Audience composition, Custom upload, Segmentation Service | Moves the audience between sandboxes. For more information on this feature, please read the [sandbox tooling guide](../../sandboxes/ui/sandbox-tooling.md). |
+
+>[!NOTE]
+>
+> You will **not** be able to delete an audience that is used in a destination activation.
+
+On the top of the page are options to add all audiences to a schedule, import an audience, create a new audience, and view a breakdown of the update frequency. 
+
+Toggling **[!UICONTROL Schedule all audiences]** will enable scheduled segmentation. More information on scheduled segmentation can be found in the [scheduled segmentation section of this user guide](#scheduled-segmentation).
+
+Selecting **[!UICONTROL Import audience]** will let you import an externally generated audience. To learn more about importing audiences, please read the section on [importing an audience in the user guide](#import-audience).
+
+Selecting **[!UICONTROL Create audience]** will let you create an audience. To learn more about creating audiences, please read the section on [creating an audience in the user guide](#create-audience).
+
+![The top navigation bar on the audience browse page is highlighted. This bar contains a button to create an audience and a button to import an audience.](../images/ui/overview/browse-audiences-top.png)
+
+You can select **[!UICONTROL Update frequency summary]** to display a pie chart that shows the update frequency.
+
+![The Update frequency summary button is highlighted.](../images/ui/overview/browse-audience-update-frequency-summary.png)
+
+The pie chart appears, displaying a breakdown of the audiences by update frequency. The chart displays the total number of audiences in the middle. If you hover over the different parts of the audience, it will display the number of audiences that belong to each update frequency type.
+
+![The update frequency pie chart is displayed.](../images/ui/overview/update-frequency-chart.png)
+
+### Customize {#customize}
+
+You can add additional fields to the [!UICONTROL Browse] page by selecting ![the filter attribute icon](../images/ui/overview/filter-attribute.png). These additional fields include lifecycle status, update frequency, last updated by, description, created by, and access labels.
 
 | Field | Description | 
 | ----- | ----------- |
 | [!UICONTROL Name] | The name of the audience. |
 | [!UICONTROL Profile count] | The total number of profiles that qualify for the audience. | 
 | [!UICONTROL Origin] | The origin of the audience. This states where the audience comes from. Possible values include Segmentation Service, Custom upload, Audience composition, and Audience Manager. |
+| [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Published`, and `Archived`. |
+| [!UICONTROL Update frequency] | A value that states how often the audience's data is updated. Possible values for this field include [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge], and [!UICONTROL Not Scheduled]. |
+| [!UICONTROL Last updated by] | The name of the person who last updated the audience. |
 | [!UICONTROL Created] | The date and time, in UTC, that the audience was created. |
 | [!UICONTROL Last updated] | The date and time, in UTC, that the audience was last updated. |
 | [!UICONTROL Tags] | The user-defined tags that belong to the audience. More information about these tags can be found in the [section on tags](#tags). |
-| [!UICONTROL Breakdown] | The profile status breakdown for the audience. A more detailed description of this profile status breakdown can be found below. |
-| [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Published`, and `Archived`. |
-| [!UICONTROL Update frequency] | A value that states how often the audience's data is updated. Possible values for this field include `On Demand`, `Scheduled`, and `Continuous`. |
-| [!UICONTROL Last updated by] | The name of the person who last updated the audience. |
 | [!UICONTROL Description] | The description of the audience. |
 | [!UICONTROL Created by] | The name of the person who created the audience. |
 | [!UICONTROL Access labels] | The access labels for the audience. Access labels allow you to categorize datasets and fields according to usage policies that apply to that data. These labels can be applied at any time, providing flexibility in how you choose to govern data. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Breakdown] | The profile status breakdown for the audience. A more detailed description of this profile status breakdown can be found below. |
 
 If breakdown is selected, the display shows a bar graph outlining the percentage of profiles that belong to each of the following calculated profile statuses: [!UICONTROL Realized], [!UICONTROL Existing], and [!UICONTROL Exiting]. Additionally, the breakdown shown on the [!UICONTROL Browse] tab is the most accurate breakdown of the segment definition status. If this number differs with what is stated on the [!UICONTROL Overview] tab, you should use the numbers on the [!UICONTROL Browse] tab as the correct source of information, since the [!UICONTROL Overview] tab numbers only update once per day.
 
@@ -88,38 +128,11 @@ If breakdown is selected, the display shows a bar graph outlining the percentage
 | [!UICONTROL Existing] | The count of profiles which **remained** in the segment in the last 24 hours since the last batch segment job ran. |
 | [!UICONTROL Exiting] | The count of profiles which **exited** the segment in the last 24 hours since the last batch segment job ran. |
 
-Next to each audience is an ellipsis icon. Selecting this displays a list of available quick actions for the audience. This list of actions differs, based on the audience's origin.
+After you selected the fields you want to display, you can also re-size the width of the displayed columns. You can either do this by dragging the area between the columns or by selecting the ![arrow icon](../images/ui/overview/arrow-icon.png) of the column you want to re-size, followed by **[!UICONTROL Resize column]**.
 
-![The quick actions list is shown for audiences with the origin of [!UICONTROL Audience composition].](../images/ui/overview/browse-audience-composition-details.png)
+![The Resize column button is highlighted.](../images/ui/overview/browse-audience-resize-column.png)
 
-| Action | Origins | Description |
-| ------ | ------- | ----------- |
-| Edit | Segmentation Service | Lets you open Segment Builder to edit your audience. For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md). |
-| Open composition | Audience composition | Lets you open Audience composition to see your audience. For more information on Audience composition, please read the [audience composition UI guide](./audience-composition.md). |
-| Activate to destination | Segmentation Service | Lets you activate the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md). |
-| Share with partners | Audience composition, Custom upload, Segmentation Service | Lets you share your audience with other Platform users. For more information on this feature, please read the [Segment Match overview](./segment-match/overview.md). |
-| Manage tags | Audience composition, Custom upload, Segmentation Service | Lets you manage the user-defined tags that belong to the audience. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
-| Move to folder | Audience composition, Custom upload, Segmentation Service |  Lets you manage which folder the audience belongs to. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
-| Copy | Audience composition, Custom upload, Segmentation Service |  Duplicates the selected audience. |
-| Apply access labels | Audience composition, Custom upload, Segmentation Service |  Lets you manage the access labels that belong to the audience. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
-| Archive | Custom upload | Archives the selected audience. |
-| Delete | Audience composition, Custom upload, Segmentation Service |  Deletes the selected audience. |
-
-On the top of the page are options to add all audiences to a schedule, import an audience, and create a new audience. 
-
-Toggling **[!UICONTROL Schedule all audiences]** will enable scheduled segmentation. More information on scheduled segmentation can be found in the [scheduled segmentation section of this user guide](#scheduled-segmentation).
-
-Selecting **[!UICONTROL Import audience]** will let you import an externally generate audience. To learn more importing audiences, please read the section on [importing an audience in the user guide](#import-audience).
-
-Selecting **[!UICONTROL Create audience]** will let you create an audience. To learn more about creating audiences, please read the section on [creating an audience in the user guide](#create-audience).
-
-![The top navigation bar on the audience browse page is highlighted. This bar contains a button to create an audience and a button to import an audience.](../images/ui/overview/browse-audiences-top.png)
-
->[!NOTE]
->
-> You will **not** be able to delete an audience that is used in a destination activation.
-
-### Filtering and tagging {#manage-audiences}
+### Filtering, folders, and tagging {#manage-audiences}
 
 To improve your work efficiency, you can search for existing audiences, add user-defined tags to audiences, put audiences in folders, and filter the displayed audiences.
 
@@ -320,6 +333,8 @@ After selecting the CSV file to import, a list of sample data is shown for this 
 
 The **[!UICONTROL Audience details]** page appears. You can add information about your audience, including its name, description, primary identity, and identity namespace value. 
 
+When importing the externally generated audience, you must select one of the columns to be the primary identity field and specify the namespace value. Please note that all the remaining fields will be considered **payload attributes**. These attributes are considered **non-durable**, as they will only be associated with this audience for purposes of personalization, and are **not** connected to the profile.
+
 ![The [!UICONTROL Audience details] page is displayed.](../images/ui/overview/import-audience-audience-details.png)
 
 After filling in your audience details, select **[!UICONTROL Next]**.
@@ -331,6 +346,12 @@ The **[!UICONTROL Review]** page is displayed. You can review the details of you
 ![The [!UICONTROL Review] page is displayed, showing details of your newly imported externally generated audience.](../images/ui/overview/import-audience-review-details.png)
 
 After confirming the details are correct, select **[!UICONTROL Finish]** to import your externally generated audience into Adobe Experience Platform.
+
+>[!IMPORTANT]
+>
+>By default, externally generated audiences have a data expiration of 30 days. The data expiration is reset if the audience is updated or modified in any way.
+>
+>Additionally, if your externally generated audience contains sensitive and/or healthcare-related information, you **must** apply the necessary data usage labels before activating it to any destination. For more information on applying data usage labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md).
 
 ## Scheduled segmentation {#scheduled-segmentation}
 
