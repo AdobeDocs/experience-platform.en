@@ -8,6 +8,15 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Version 2.21.4 - January 10, 2024
+
+**Fixes and improvements**
+
+* Fixed an issue where saving Config Overrides without all 3 environments set would crash the extension UI.
+* Fixed an issue where the root clear existing value checkbox did not populate when editing an update variable action.
+
+Contains version 2.19.2 of the Adobe Experience Platform Web SDK.
+
 ## Version 2.21.3 - November 10, 2023
 
 Contains version 2.19.1 of the Adobe Experience Platform Web SDK.
