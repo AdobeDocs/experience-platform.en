@@ -13,7 +13,8 @@ feature: Identities
 - Features {#features}
   - [Identity namespace](./features/namespaces.md)
   - [Identity linking logic](./features/identity-linking-logic.md)
-  - [Deletions in Identity Service](deletion.md)
+  - [Deletions in Identity Service](./features/deletion.md)
+  - [ECID overview](./features/ecid.md)
 - [Guardrails for Identity data](guardrails.md)
 - Identity Service API {#api}
   - [Getting Started](api/getting-started.md)
@@ -32,8 +33,6 @@ feature: Identities
   - [Feature overview](./identity-graph-linking-rules/overview.md)
   - [Identity optimization algorithm](./identity-graph-linking-rules/identity-optimization-algorithm.md)
   - [Example scenarios](./identity-graph-linking-rules/example-scenarios.md)
-
-- [ECID overview](ecid.md)
 - [Implementation guide](implementation.md)
 - [Privacy request processing](privacy.md)
 - [Troubleshooting guide](troubleshooting-guide.md)

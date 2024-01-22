@@ -100,7 +100,7 @@ Metadata, such as audience names, is available in Audience Manager within minute
 
 ## Supported identities {#supported-identities}
 
-The profiles that are exported to the [!UICONTROL Experience Cloud Audiences] destination are mapped to the identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+The profiles that are exported to the [!UICONTROL Experience Cloud Audiences] destination are mapped to the identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|

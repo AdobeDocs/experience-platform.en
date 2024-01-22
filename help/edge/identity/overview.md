@@ -98,7 +98,7 @@ alloy("sendEvent", {
 >Adobe recommends sending namespaces which represent a person, such as `CRMID`, as the primary identity.
 
 
-Each property within `identityMap` represents identities belonging to a particular [identity namespace](../../identity-service/namespaces.md). The property name should be the identity namespace symbol, which you can find listed in the Adobe Experience Platform user interface under "[!UICONTROL Identities]". The property value should be an array of identities pertaining to that identity namespace.
+Each property within `identityMap` represents identities belonging to a particular [identity namespace](../../identity-service/features/namespaces.md). The property name should be the identity namespace symbol, which you can find listed in the Adobe Experience Platform user interface under "[!UICONTROL Identities]". The property value should be an array of identities pertaining to that identity namespace.
 
 >[!IMPORTANT]
 >

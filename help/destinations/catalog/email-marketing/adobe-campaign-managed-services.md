@@ -50,7 +50,7 @@ To help you better understand how and when you should use the Adobe Campaign Man
 
 ## Supported identities {#supported-identities}
 
-*Adobe Campaign Managed Cloud Services* supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+*Adobe Campaign Managed Cloud Services* supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|

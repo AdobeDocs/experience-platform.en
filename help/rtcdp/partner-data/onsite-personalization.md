@@ -45,7 +45,7 @@ To successfully implement this use case, you must use multiple areas of Real-Tim
   * [Tags](/help/tags/home.md)
   * [Datastreams](/help/datastreams/overview.md)
 * Data Management in Real-Time CDP
-  * [Identities](/help/identity-service/namespaces.md)
+  * [Identities](/help/identity-service/features/namespaces.md)
   * [Schemas](/help/xdm/home.md)
   * [Data usage labels](/help/data-governance/labels/overview.md)
   * [Datasets](/help/catalog/datasets/overview.md)
