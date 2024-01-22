@@ -17,9 +17,9 @@ Identity namespaces are a component of [!DNL Identity Service] and serve as indi
 
 ## Identity graphs
 
-An identity graph is a map of relationships between different identity namespaces, providing you with a visual representation of how your customer interacts with your brand across different channels. All customer identity graphs are collectively managed and updated by [!DNL Identity Service] in near real-time, in response to customer activity.
+An identity graph is a map of relationships between different identities, providing you with a visual representation of how your customer interacts with your brand across different channels. All customer identity graphs are collectively managed and updated by Identity Service, in response to customer activity.
 
-[!DNL Identity Service] manages an identity graph visible by only your organization and built based on your data, referred to as the private graph. [!DNL Identity Service] augments your private graph when an ingested data record contains more than one identity, adding a relationship between the identities found.
+[!DNL Identity Service] manages an identity graph visible only to your organization and built based on your data. [!DNL Identity Service] augments your graph when an ingested data record contains more than one identity, adding a relationship between the identities found.
 
 ## Next steps
 
