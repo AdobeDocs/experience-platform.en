@@ -11,9 +11,9 @@ Read the following document to learn more about what you can do with identity na
 
 Identity namespaces requires an understanding of various Adobe Experience Platform services. Before beginning to work with namespaces, please review the documentation for the following services:
 
-* [[!DNL Real-Time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
-* [[!DNL Identity Service]](./home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
-* [[!DNL Privacy Service]](../privacy-service/home.md): Identity namespaces are used in compliance requests for legal privacy regulations like the General Data Protection Regulation (GDPR). Each privacy request is made relative to a namespace in order to identify which consumers' data should be affected.
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
+* [[!DNL Identity Service]](../home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
+* [[!DNL Privacy Service]](../../privacy-service/home.md): Identity namespaces are used in compliance requests for legal privacy regulations like the General Data Protection Regulation (GDPR). Each privacy request is made relative to a namespace in order to identify which consumers' data should be affected.
 
 ## Understanding identity namespaces {#understanding-identity-namespaces}
 
@@ -68,7 +68,7 @@ One element of an identity namespace is the **identity type**. The identity type
 * Whether an identity graph will be generated:
   * Identity graphs are not generated for the following identity types: non-person identifiers and partner ID.
   * Identity graphs are generated for all other identity types.
-* Which identities are removed from the identity graph when system limits are reached. For more information, read the [guardrails for identity data](guardrails.md).
+* Which identities are removed from the identity graph when system limits are reached. For more information, read the [guardrails for identity data](../guardrails.md).
 
 The following identity types are available within Experience Platform:
 
@@ -121,23 +121,23 @@ To view identity namespaces in the UI, select **[!UICONTROL Identities]** in the
 
 A directory of namespaces in your organization appears, displaying information on their names, identity symbols, last updated dates, corresponding identity types, and description.
 
-![A directory of custom identity namespaces in your organization.](./images/namespace/browse.png)
+![A directory of custom identity namespaces in your organization.](../images/namespace/browse.png)
 
 ## Create custom namespaces {#create-namespaces}
 
-Depending on your organizational data and use cases, you may require custom namespaces. Custom namespaces can be created using the [[!DNL Identity Service]](./api/create-custom-namespace.md) API or through the UI.
+Depending on your organizational data and use cases, you may require custom namespaces. Custom namespaces can be created using the [[!DNL Identity Service]](../api/create-custom-namespace.md) API or through the UI.
 
 To create a custom namespace, select **[!UICONTROL Create identity namespace]**.
 
-![The create identity namespace button in the identities workspace.](./images/namespace/create-identity-namespace.png)
+![The create identity namespace button in the identities workspace.](../images/namespace/create-identity-namespace.png)
 
 The [!UICONTROL Create identity namespace] window appears. First, you must provide a display name and an identity symbol for the custom namespace that you want to create. You can also optionally provide a description to add more context on the custom namespace that you are creating.
 
-![A pop-up window where you can input information regarding your custom identity namespace.](./images/namespace/name-and-symbol.png)
+![A pop-up window where you can input information regarding your custom identity namespace.](../images/namespace/name-and-symbol.png)
 
 Next, select the the identity type that you want to assign to the custom namespace. When finished, select **[!UICONTROL Create]**.
 
-![A selection of identity types that you can choose from and assign to your custom identity namespace.](./images/namespace/select-identity-type.png)
+![A selection of identity types that you can choose from and assign to your custom identity namespace.](../images/namespace/select-identity-type.png)
 
 >[!IMPORTANT]
 >
@@ -149,8 +149,8 @@ Next, select the the identity type that you want to assign to the custom namespa
 
 ## Namespaces in identity data
 
-Supplying the namespace for an identity depends on the method you use for providing identity data. For details on providing data identity data, please see the section on [supplying identity data](./home.md#supplying-identity-data-to-identity-service) in the [!DNL Identity Service] overview.
+Supplying the namespace for an identity depends on the method you use for providing identity data. For details on providing data identity data, please read the [[!DNL Identity Service] implementation guide](../implementation.md).
 
 ## Next steps
 
-Now that you understand the key concepts of identity namespaces, you can begin to learn how to work with your identity graph using the [identity graph viewer](./ui/identity-graph-viewer.md).
+Now that you understand the key concepts of identity namespaces, you can begin to learn how to work with your identity graph using the [identity graph viewer](../ui/identity-graph-viewer.md).
