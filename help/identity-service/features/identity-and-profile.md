@@ -62,12 +62,3 @@ Once you mark fields as identities, they can then be defined as either primary o
 * If there are two or more identities, then one will be designated as primary, and the remaining will be designated as secondary.
 
 Identity Service only ingests fields designated as identity. Identity Service does not store information on whether an identity is primary or secondary.
-
-## Next steps
-
-For more information on identity graph linking rules, read the following documentation:
-
-* [Identity graph linking rules overview](./overview.md)
-* [Identity optimization algorithm](./identity-optimization-algorithm.md)
-* [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
-* [Identity linking logic](./identity-linking-logic.md)
