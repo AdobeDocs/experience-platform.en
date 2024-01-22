@@ -5,11 +5,6 @@ exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
 ---
 # [!DNL Pinterest Customer List] connection
 
->[!IMPORTANT]
->
->* Starting November 16, 2023, you can see two Pinterest cards side-by-side in the destinations catalog. This is due to an upgrade to the Pinterest advertiser API used to export data to Pinterest. The existing Pinterest destination connector has been renamed to **[!UICONTROL (Deprecating) Pinterest]** and a new card **[!UICONTROL (New) Pinterest]** is now available to you. 
->* Use the **[!UICONTROL (New) Pinterest]** connection in the catalog for any campaigns to Pinterest. If you have any active dataflows to the **[!UICONTROL (Deprecating) Pinterest]** destination, read the [upgrade documentation](/help/destinations/catalog/advertising/pinterest-upgrade.md) to understand your action items to ensure no disruption to your campaigns.
-
 ## Overview {#overview}
 
 Create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest.
