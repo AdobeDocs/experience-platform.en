@@ -315,10 +315,5 @@ solution: Data Collection
 * [FAQ](./faq.md)
 * [Terminology updates](./term-updates.md)
 * [Deprecating support for Internet Explorer 10 and 11](./ie-deprecation.md)
-* Release notes {#release-notes}
-  * [Latest](./release-notes/current.md)
-  * [2021 release notes](./release-notes/2021.md)
-  * [2020 release notes](./release-notes/2020.md)
-  * [2019 release notes](./release-notes/2019.md)
-  * [2018 release notes](./release-notes/2018.md)
+* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
 
