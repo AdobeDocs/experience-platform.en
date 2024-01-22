@@ -21,7 +21,7 @@ We have identified your organization as having active dataflows to activate audi
 
 ## What is the plan?
 
-Adobe is releasing a new Pinterest destination card that leverages the Pinterest API v5 and will preserve your existing dataflows in the new connection.
+Adobe has released a new Pinterest destination card that leverages the Pinterest API v5 and will preserve your existing dataflows in the new connection.
 
 ## Do I need to do anything to keep my activated audiences functioning?
 
@@ -39,7 +39,7 @@ Yes, before January 18th, 2024, you need to authenticate to the new Pinterest de
 
 ### Enable flows to new destination {#disable-old-enable-new-flows}
 
-Then, you need to enable the dataflows to the new card **[!UICONTROL (New) Pinterest]**. 
+Then, you need to enable the dataflows to the new  **[!UICONTROL Pinterest]** card. 
 
 1. Go to **[!UICONTROL Destinations > Browse]** and use the filter on the screen to filter the **[!UICONTROL Pinterest]** destination only.
     ![Filter Pinterest dataflows only in the Browse tab](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
@@ -60,14 +60,18 @@ Yes, please see below:
 
 ![Old and new Pinterest destination side-by-side](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
+<!--
+
 >[!IMPORTANT]
 >
 >After November 16th, 2023 the legacy Pinterest destination is marked **[!UICONTROL Deprecating]**. <span class="preview">Any changes that you make to dataflows to the (Deprecating) Pinterest destination after November 16th will *not* be automatically carried over to the new Pinterest destination. </span>
 >For example, we *do not recommend* that you activate new audiences to the old destination after November 16th. If you do that, you will then have to follow the [regular activation steps](/help/destinations/ui/activate-segment-streaming-destinations.md) to add the audience to the new destination once the customer actions are taken.
 
+-->
+
 **By December 15, 2023**: <span class="preview">Customer action 1</span>. You need to reauthenticate to Pinterest so that the new card is connected to Pinterest. View complete instructions in [this section](#reauthenticate).
 
-<span class="preview">Customer action 2</span>.Then, you need to disable the dataflows to Pinterest in the old card and enable the dataflows in the new card. View complete instructions in [this section](#disable-old-enable-new-flows).
+<span class="preview">Customer action 2</span>.Then, you need to enable the dataflows in the new card. View complete instructions in [this section](#disable-old-enable-new-flows).
 
 <!--
 
@@ -77,8 +81,12 @@ Yes, please see below:
 
 -->
 
-**After January 18, 2024**: <span class="preview">Pinterest has turned off access to the V4 advertiser API. Any Real-Time CDP customers who have not upgraded to the new destination will now find their dataflows to the Pinterest destination failing. [Reauthenticate to Pinterest](#reauthenticate) and [enable the dataflows](#disable-old-enable-new-flows) to the upgraded destination to resume your campaigns to Pinterest</span>. 
+**After January 18, 2024**: <span class="preview">Pinterest has turned off access to the V4 advertiser API. Any Real-Time CDP customers who have not upgraded to the new destination will now find their dataflows to the Pinterest destination failing. [Reauthenticate to Pinterest](#reauthenticate) and [enable the dataflows](#disable-old-enable-new-flows) to the upgraded destination to resume your campaigns to Pinterest.</span>
+
+<!--
 
 ## Other items to note
 
 After you enable the dataflows on the new destination card and disable the dataflows on the old destination cards, you should see no disruption in your campaigns or in the numbers of qualified profiles in the audiences coming in from Adobe Real-Time CDP.
+
+-->
