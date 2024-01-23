@@ -87,6 +87,8 @@ Consider the following example:
 
 Considering the scenarios above, Identity Service establishes a link between `{CRM_ID:ABC, ECID:123}`, as well as `{CRM_ID:ABC, ECID:456}`. This results in an identity graph where you "own" three identities: one for person identifier (CRM ID) and two for cookie identifiers (ECIDs).
 
+For more information, read the the guide on [how Identity Service links identities](./features/identity-linking-logic.md).
+
 ## Identity graphs
 
 An identity graph is a map of relationships between different identity namespaces, allowing you to visualize and better understand what customer identities are stitched together, and how. Read the tutorial on [using the identity graph viewer](./ui/identity-graph-viewer.md) for more information.
@@ -102,7 +104,7 @@ Identity Service plays a vital role within Experience Platform. Some of these ke
 * [Schemas](../xdm/home.md): Within a given schema, the schema fields that are marked as identity allow for identity graphs to be built.
 * [Datasets](../catalog/datasets/overview.md): When a dataset is enabled for ingestion into Real-Time Customer Profile, identity graphs are generated from the dataset, given that the dataset as at least two fields marked as identity.
 * [Web SDK](../edge/home.md): Web SDK sends experience events to Adobe Experience Platform, and Identity Service generates a graph when two or more identities exist in the event.
-* [Real-Time Customer Profile](../profile/home.md): Before attributes and events for a given profile are merged, Real-Time Customer Profile could reference the identity graph.
+* [Real-Time Customer Profile](../profile/home.md): Before attributes and events for a given profile are merged, Real-Time Customer Profile could reference the identity graph. For more information, read the guide on [understanding the relationship between Identity Service and Real-Time Customer Profile](./identity-and-profile.md).
 * [Destinations](../destinations/home.md): Destinations can send profile information to other systems based on an identity namespace, such as hashed email.
 * [Segment Match](../segmentation/ui/segment-match/overview.md): Segment Match matches two profiles across two different sandboxes that have the same identity namespace and identity value.
 * [Privacy Service](../privacy-service/home.md): If the deletion request includes `identity`, then the specified namespace and identity value combination can be deleted from Identity Service using the privacy request processing feature in Privacy Service.
