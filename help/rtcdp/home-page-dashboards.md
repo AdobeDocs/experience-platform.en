@@ -32,7 +32,7 @@ The [!UICONTROL Getting started with Real-Time Customer Profile] widget is divid
 >id="platform_home_metrics_totalProfiles"
 >title="Total profiles count"
 >abstract="The total number of profiles your organization has within Experience Platform. This count is based on your organization's merge policy and does not include profile fragments. The number of profiles is updated once every 24 hours."
->additional-url="<https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count>" text="Learn more in documentation" 
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count" text="Learn more in documentation" 
 
 The metrics dashboard displays up-to-date information on your Experience Platform data. The dashboard is divided into two sections:
 
