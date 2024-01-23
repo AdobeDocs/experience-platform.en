@@ -29,8 +29,8 @@ The following Experience Platform services are involved with modeling Real-Time 
 
 There are two types of default limits within this document:
 
-| Guardrail type | Description|
-|----------|---------|
+| Guardrail type | Description |
+| -------------- | ----------- |
 | **Performance guardrail (Soft limit)** | Performance guardrails are usage limits that relate to the scoping of your use cases. When exceeding performance guardrails, you may experience performance degradation and latency. Adobe is not responsible for such performance degradation. Customers who consistently exceed a performance guardrail may elect to license additional capacity to avoid performance degradation.|
 | **System-enforced guardrails (Hard limit)** | System-enforced guardrails are enforced by the Real-Time CDP UI or API. These are limits that you cannot exceed as the UI and API will block you from doing so or will return an error.|
 
@@ -49,7 +49,7 @@ The following guardrails provide recommended limits when modeling Real-Time Cust
 ### Primary entity guardrails
 
 | Guardrail | Limit | Limit Type | Description |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | XDM Individual Profile class datasets | 20 | Performance guardrail | A maximum of 20 datasets that leverage the XDM Individual Profile class is recommended. |
 | XDM ExperienceEvent class datasets | 20 | Performance guardrail | A maximum of 20 datasets that leverage the XDM ExperienceEvent class is recommended. |
 | Adobe Analytics report suite datasets enabled for Profile | 1 | Performance guardrail | A maximum of one (1) Analytics report suite dataset should be enabled for Profile. Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix. |
@@ -64,7 +64,7 @@ The following guardrails provide recommended limits when modeling Real-Time Cust
 ### Dimension entity guardrails
 
 | Guardrail | Limit | Limit Type | Description |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | No time-series data permitted for non-[!DNL XDM Individual Profile] entities | 0 | System-enforced guardrail | **Time-series data is not permitted for non-[!DNL XDM Individual Profile] entities in Profile Service.** If a time-series dataset is associated with a non-[!DNL XDM Individual Profile] ID, the dataset should not be enabled for [!DNL Profile]. |
 | No nested relationships | 0 | Performance guardrail | You should not create a relationship between two non-[!DNL XDM Individual Profile] schemas. The ability to create relationships is not recommended for any schemas which are not part of the [!DNL Profile] union schema.|
 | JSON depth for primary ID field | 4 | Performance guardrail | The recommended maximum JSON depth for the primary ID field is 4. This means that in a highly nested schema, you should not select a field as a primary ID if it is nested more than 4 levels deep. A field that is on the 4th nested level can be used as a primary ID. |
@@ -81,8 +81,8 @@ The following guardrails refer to data size and provide recommended limits for d
 
 ### Primary entity guardrails
 
-| Guardrail | Limit| Limit Type | Description|
-| --- | --- | --- | --- |
+| Guardrail | Limit | Limit Type | Description |
+| --------- | ----- | ---------- | ----------- |
 | Maximum ExperienceEvent size | 10KB | System-enforced guardrail | **The maximum size of an event is 10KB.** Ingestion will continue, however any events larger than 10KB will be dropped.|
 | Maximum profile record size | 100KB | System-enforced guardrail | **The maximum size of a profile record is 100KB.** Ingestion will continue, however profile records larger than 100KB will be dropped.|
 | Maximum profile fragment size | 50MB | System-enforced guardrail | **The maximum size of a single profile fragment is 50MB.** Segmentation, exports, and lookups may fail for any [profile fragment](#profile-fragments) that is larger than 50MB.|
@@ -94,8 +94,8 @@ The following guardrails refer to data size and provide recommended limits for d
 
 ### Dimension entity guardrails
 
-| Guardrail | Limit | Limit Type | Description|
-| --- | --- | --- | --- |
+| Guardrail | Limit | Limit Type | Description |
+| --------- | ----- | ---------- | ----------- |
 | Total size for all dimensional entities | 5GB | Performance guardrail | The recommended total size for all dimensional entities is 5GB. Ingesting large dimension entities may affect system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended.|
 | Datasets per dimensional entity schema | 5 | Performance guardrail | A maximum of 5 datasets associated with each dimensional entity schema is recommended. For example, if you create a schema for "products" and add five contributing datasets, you should not create a sixth dataset tied to the products schema.|
 | Dimension entity batches ingested per day | 4 per entity | Performance guardrail | The recommended maximum number of dimension entity batches ingested per day is 4 per entity. For example, you could ingest updates to a product catalog up to 4 times per day. Ingesting additional dimension entity batches for the same entity may affect system performance. |
@@ -106,15 +106,29 @@ The following guardrails refer to data size and provide recommended limits for d
 
 The guardrails outlined in this section refer to the number and nature of audiences an organization can create within Experience Platform, as well as mapping and activating audiences to destinations.
 
-| Guardrail | Limit | Limit Type | Description|
-| --- | --- | --- | --- |
-| Audiences per sandbox | 4000 | Performance guardrail | An organization can have more than 4000 audiences in total, as long as there are less than 4000 audiences in each individual sandbox. Attempting to create additional audiences may affect system performance. Read more about [creating audiences](/help/segmentation/ui/segment-builder.md) through the segment builder.|
+| Guardrail | Limit | Limit Type | Description |
+| --------- | ----- | ---------- | ----------- |
+| Audiences per sandbox | 4000 | Performance guardrail | An organization can have more than 4000 audiences in total, as long as there are less than 4000 audiences in each individual sandbox. This is inclusive of batch, streaming, and edge audiences. Attempting to create additional audiences may affect system performance. Read more about [creating audiences](/help/segmentation/ui/segment-builder.md) through the segment builder.|
 | Edge audiences per sandbox | 150 | Performance guardrail | An organization can have more than 150 edge audiences in total, as long as there are less than 150 edge audiences in each individual sandbox. Attempting to create additional edge audiences may affect system performance. Read more about [edge audiences](/help/segmentation/ui/edge-segmentation.md).| 
-| Streaming audiences per sandbox | 500 | Performance guardrail | An organization can have more than 500 streaming audiences in total, as long as there are less than 500 streaming audiences in each individual sandbox. Attempting to create additional streaming audiences may affect system performance. Read more about [streaming audiences](/help/segmentation/ui/streaming-segmentation.md).|
+| Edge throughput across all sandboxes | 1500 RPS | Performance guardrail | Edge segmentation supports a peak value of 1500 inbound events per second entering the Adobe Experience Platform Edge Network. Edge segmentation may take up to 350 milliseconds to process an inbound event after it enters the Adobe Experience Platform Edge Network. Read more about [edge audiences](/help/segmentation/ui/edge-segmentation.md). |
+| Streaming audiences per sandbox | 500 | Performance guardrail | An organization can have more than 500 streaming audiences in total, as long as there are less than 500 streaming audiences in each individual sandbox. This is inclusive of both streaming and edge audiences. Attempting to create additional streaming audiences may affect system performance. Read more about [streaming audiences](/help/segmentation/ui/streaming-segmentation.md).|
+| Streaming throughput across all sandboxes | 1500 RPS | Performance guardrail | Streaming segmentation supports a peak value of 1500 inbound events per second. Streaming segmentation may take up to 5 minutes to qualify a profile for segment membership. Read more about [streaming audiences](/help/segmentation/ui/streaming-segmentation.md). |
 | Batch audiences per sandbox | 4000 | Performance guardrail | An organization can have more than 4000 batch audiences in total, as long as there are less than 4000 batch audiences in each individual sandbox. Attempting to create additional batch audiences may affect system performance.|
 | Account audiences per sandbox | 50 | System-enforced guardrail | You can create a maximum of 50 account audiences in a sandbox. After you reach 50 audiences in a sandbox, the **[!UICONTROL Create audience]** control is disabled when trying to create a new account audience. Read more about [account audiences](/help/segmentation/ui/account-audiences.md). |
 | Published compositions per sandbox | 10 | Performance guardrail | You can have a maximum of  10 published compositions in a sandbox. Read more about [audience composition in the UI guide](/help/segmentation/ui/audience-composition.md). |
 | Maximum audience size | 30 percent | Performance guardrail | The recommended maximum membership of an audience is 30 percent of the total number of profiles in the system. Creating audiences with more than 30% of the profiles as members or multiple large audiences is possible but will impact system performance. |
+
+{style="table-layout:auto"}
+
+## Expected availability
+
+The following section outlines the **expected** availability for audiences and merge policies in downstream services such as Real-Time CDP destinations:
+
+| Sandbox type | Time |
+| ------------ | ---- |
+| Existing sandboxes | 1 hour |
+| New sandboxes | 2 hours |
+| Newly reset sandboxes | 2 hours |
 
 {style="table-layout:auto"}
 
