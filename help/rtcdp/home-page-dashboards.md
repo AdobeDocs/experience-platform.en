@@ -26,7 +26,7 @@ The [!UICONTROL Getting started with Real-Time Customer Profile] widget is divid
 
 ![The Platform UI home page displaying the getting started widget](assets/platform-home/getting-started-widget.png)
 
-## Metrics dashboard
+## Metrics dashboard {#metrics-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_home_metrics_totalprofiles"
