@@ -1,6 +1,6 @@
 ---
-title: Gainsight PX
-description: The Gainsight PX destination allows allows segmentation information to be pushed to Gainsight PX 
+title: Gainsight PX Connection
+description: The Gainsight PX destination allows segmentation information to be pushed to Gainsight PX 
 ---
 
 # Gainsight PX connection {#gainsight-px}
@@ -18,22 +18,18 @@ description: The Gainsight PX destination allows allows segmentation information
 
 To help you better understand how and when you should use the *Gainsight PX* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use case #1 {#use-case-1}
-
-*Targeting In-App Engagements:*
-
-*A SaaS company wants to engage their customers via an in-application guide constructed on Gainsight PX.  An audience to receive this engagement has been built on Adobe Experience Platform and the Gainsight PX destination will consume the audience and make it available within the Gainsight PX environment.*
+### Targeting In-App Engagements {#targeting-in-app-engagements}
+A SaaS company wants to engage their customers via an in-application guide constructed on Gainsight PX.  An audience to receive this engagement has been built on Adobe Experience Platform and the Gainsight PX destination will consume the audience and make it available within the Gainsight PX environment.
 
 ## Prerequisites {#prerequisites}
 
 * Contact the [!DNL Gainsight] support team and request the activation of external segment features for your subscription.
-* Generate an OAuth Secret value for your PX subscription, using the Generate New Secret button at the bottom of the [Company Details page] (https://app.aptrinsic.com/settings/subscription)
+* Generate an OAuth Secret value for your PX subscription, using the Generate New Secret button at the bottom of the [Company Details page](https://app.aptrinsic.com/settings/subscription)
 ![Company Details screen in Gainsight PX showing the Generate New Secret button](../../assets/catalog/analytics/gainsight_px/generate_oauth_secret.png)
 
 ## Supported identities {#supported-identities}
 
-
-*Gainsight PX* supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+Gainsight PX supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 | Target Identity |Description| Considerations                                                                                                                                                                                                                                                                         |
 |---|---|---|
