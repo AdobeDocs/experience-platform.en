@@ -2,14 +2,14 @@
 solution: Experience Platform
 title: Get started
 description: Learn how to get started with the Use Case Playbooks functionality.
-badgeBeta: label="Beta" type="Informative"
+# badgeBeta: label="Beta" type="Informative"
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
 ---
-# (Beta) Get started
+<!-- # Get started -->
 
->[!AVAILABILITY]
+<!-- >[!AVAILABILITY]
 >
->This functionality is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
+>This functionality is currently in Beta and is not available to all users. The documentation and the functionality are subject to change. -->
 
 ## Create a development sandbox {#create-development-sandbox}
 
