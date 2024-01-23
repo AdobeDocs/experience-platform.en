@@ -46,7 +46,7 @@ To use key-pair authentication, you must generate a 2048-bit RSA key pair and th
 | --- | --- |
 | Account | The name of your [!DNL Snowflake] account. A fully-qualified [!DNL Snowflake] account name includes the account name, region, and the cloud platform that you are using. For example, `cj12345.east-us-2.azure`. For more information on account names, read the [!DNL Snowflake] documentation on [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html).  |
 | Username | The username of your [!DNL Snowflake] account. |
-| Private key | The [!DNL Base64] encoded private key of your [!DNL Snowflake] account. You can generate either encrypted or unencrypted private keys. If you are using an encrypted private key, then you must also provide a private key passphrase when authenticating against Experience Platform. |
+| Private key | The [!DNL Base64-]encoded private key of your [!DNL Snowflake] account. You can generate either encrypted or unencrypted private keys. If you are using an encrypted private key, then you must also provide a private key passphrase when authenticating against Experience Platform. |
 | Private key passphrase | The private key passphrase is an additional layer of security that you must use when authenticating with an encrypted private key. You are not required to provide the passphrase if you are using an unencrypted private key. |
 | Database | The [!DNL Snowflake] database that contains the data you want to ingest to Experience Platform. |
 | Warehouse | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Platform. |

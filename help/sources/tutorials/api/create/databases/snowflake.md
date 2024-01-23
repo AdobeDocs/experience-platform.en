@@ -53,12 +53,12 @@ To use key-pair authentication, you must generate a 2048-bit RSA key pair and th
 | --- | --- |
 | `account` | The name of your [!DNL Snowflake] account. A fully-qualified [!DNL Snowflake] account name includes the account name, region, and the cloud platform that you are using. For example, `cj12345.east-us-2.azure`. For more information on account names, read the [!DNL Snowflake] documentation on [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html).  |
 | `username` | The username of your [!DNL Snowflake] account. |
-| `privateKey` | The [!DNL Base64] encoded private key of your [!DNL Snowflake] account. You can generate either encrypted or unencrypted private keys. If you are using an encrypted private key, then you must also provide a private key passphrase when authenticating against Experience Platform. |
+| `privateKey` | The [!DNL Base64-]encoded private key of your [!DNL Snowflake] account. You can generate either encrypted or unencrypted private keys. If you are using an encrypted private key, then you must also provide a private key passphrase when authenticating against Experience Platform. |
 | `privateKeyPassphrase` | The private key passphrase is an additional layer of security that you must use when authenticating with an encrypted private key. You are not required to provide the passphrase if you are using an unencrypted private key. |
 | `database` | The [!DNL Snowflake] database that contains the data you want to ingest to Experience Platform. |
 | `warehouse` | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Experience Platform. |
 
-For more information about these values, refer to [this Snowflake document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+For more information about these values, refer the [[!DNL Snowflake] key-pair authentication guide](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 >[!ENDTABS]
 
@@ -169,7 +169,7 @@ curl -X POST \
 | `auth.params.account` | The name of your [!DNL Snowflake] account. |
 | `auth.params.username` | The username associated with your [!DNL Snowflake] account.|
 | `auth.params.database` | The [!DNL Snowflake] database from where the data will be pulled from. |
-| `auth.params.privateKey` | The [!DNL Base64] encoded encrypted private key of your [!DNL Snowflake] account. |
+| `auth.params.privateKey` | The [!DNL Base64-]encoded encrypted private key of your [!DNL Snowflake] account. |
 | `auth.params.privateKeyPassphrase` | The passphrase that corresponds with your private key. |
 | `auth.params.warehouse` | The [!DNL Snowflake] warehouse that you are using. |
 | `connectionSpec.id` | The [!DNL Snowflake] connection specification ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
@@ -226,7 +226,7 @@ curl -X POST \
 | `auth.params.account` | The name of your [!DNL Snowflake] account. |
 | `auth.params.username` | The username associated with your [!DNL Snowflake] account.|
 | `auth.params.database` | The [!DNL Snowflake] database from where the data will be pulled from. |
-| `auth.params.privateKey` | The [!DNL Base64] encoded unencrypted private key of your [!DNL Snowflake] account. |
+| `auth.params.privateKey` | The [!DNL Base64-]encoded unencrypted private key of your [!DNL Snowflake] account. |
 | `auth.params.warehouse` | The [!DNL Snowflake] warehouse that you are using. |
 | `connectionSpec.id` | The [!DNL Snowflake] connection specification ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
