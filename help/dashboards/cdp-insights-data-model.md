@@ -436,33 +436,3 @@ SELECT Sum(overlap_col1) overlap_col1,
 ```
 
 +++
-
-### Overlap Namespace-Audience model {#overlap-namespace-audience-model}
-
-<!-- Q) What is the difference between the Overlap Namespace-Audience model and the overlap namespace by audience (segment) model?
-
-A) Purnaram "These are 2 different metrics. one overlap count by namespace as well segment and other one overlap of a particular namespace by given segment" -->
-
-The overlap namespace-audience model is comprised of the following datasets: 
-
-- `adwh_dim_date`
-- `adwh_dim_overlap_namespaces`
-- `adwh dim overlap namespaces`
-
-<!-- Also needs the SQL. Does this apply to any particular widget? -->
-
-### Custom Model {#custom-model}
-
-The overlap namespace by audience model is comprised of the following datasets: 
-
-- `list of table names`
-
-<!-- also needs the SQL. Does this apply to any particular widget? -->
-
-### AI model {#ai-model}
-
-The overlap namespace by audience model is comprised of the following datasets: 
-
-- `list of table names`
-
-<!-- also needs the SQL. Does this apply to any particular widget? -->
