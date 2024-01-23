@@ -2,10 +2,10 @@
 solution: Experience Platform
 title: Create, share, and reuse playbook instances
 description: Learn how to create, share, and reuse playbook instances to accomplish your marketing use case.
-badgeBeta: label="Beta" type="Informative"
+# badgeBeta: label="Beta" type="Informative"
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 ---
-# (Beta) Create, share, and reuse playbook instances
+# Create, share, and reuse playbook instances
 
 >[!AVAILABILITY]
 >
