@@ -105,8 +105,8 @@ Use the mapping step to configure the relationship between a identity value with
 ## Exported data / Validate data export {#exported-data}
 
 Segmentation data is streamed from the Experience Platform to Gainsight PX.  
-Segment metadata will be visible in the Segments screen within the PX application:![Segment list screen in Gainsight PX showing external segments](../../assets/catalog/analytics/gainsight_px/segment_metadata.png)  
-Segment membership information will be visible on the Segments tab of the Audience Explorer screen within PX: ![Audience Explorer screen in Gainsight PX showing associated segments for a user](../../assets/catalog/analytics/gainsight_px/PX_Segments.png)
+Segment metadata will be visible in the Segments screen within the [!DNL Gainsight PX] UI. ![Segment list screen in Gainsight PX showing external segments](../../assets/catalog/analytics/gainsight_px/segment_metadata.png)  
+Segment membership information will be visible on the Segments tab of the Audience Explorer screen of the [!DNL Gainsight PX] UI. ![Audience Explorer screen in Gainsight PX showing associated segments for a user](../../assets/catalog/analytics/gainsight_px/PX_Segments.png)
 
 ## Data usage and governance {#data-usage-governance}
 
