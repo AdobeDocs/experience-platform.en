@@ -5,7 +5,9 @@ exl-id: 4810326a-a613-4e6a-9593-123a14927214
 ---
 # Higher-order function example: Retrieve similar records
 
-Solve several common use cases by using Data Distiller higher-order functions to identify and retrieve similar or related records from one or more datasets. You can use this guide to identify products from different datasets that have a significant similarity in their characteristics or attributes. The methodology in this document provides solutions to: data deduplication, record linkage, recommendation systems, information retrieval, and text analytics among others.
+Use Data Distiller higher-order functions to solve a variety of common use cases. To identify and retrieve similar or related records from one or more datasets, use the filter, transform, reduce functions as detailed in this guide. [Additional use cases](#additional-functions) are provided later in the document to demonstrate how higher order functions can be used to process complex data types.
+
+This first example identifies products from different datasets that have a significant similarity in their characteristics or attributes. This methodology provides solutions to: data deduplication, record linkage, recommendation systems, information retrieval, and text analytics among others.
 
 The document describes the process of implementing a similarity join then uses Data Distiller higher-order functions to compute the similarity between sets of data and filter them based on selected attributes. SQL code snippets and explanations are provided for each step of the process. The workflow implements similarity joins using the Jaccard similarity measure and tokenization using Data Distiller higher-order functions. These methods are then used to identify and retrieve similar or related records from one or more datasets based on a similarity metric. The key sections of the process include: [tokenization using higher-order functions](#data-transformation), the [cross-join of unique elements](#cross-join-unique-elements), the [Jaccard similarity calculation](#compute-the-jaccard-similarity-measure), and the [threshold-based filtering](#similarity-threshold-filter).
 
@@ -701,9 +703,9 @@ The results of this query give the columns for the similarity join, as seen belo
 
 +++:
 
-## Additional higher-order functions {#additional-functions}
+## Higher-order functions for array and map data types {#additional-functions}
 
-Analytics or time series datasets are commonly comprised of complex nested structures, arrays, and maps. You can use higher-order functions to process complex data types, such as arrays, without the need to explode the array, perform a function, and then combine the result. 
+Next, learn how to use higher order functions to process complex data types such as arrays and maps. These functions remove the need to explode the array, perform a function, and then combine the result. These are of particular use for analytics or time series datasets are commonly comprised of complex nested structures, arrays, and maps.
 
 The following list of use cases contain examples of hider-order array and map manipulation functions.
 
