@@ -16,8 +16,8 @@ The following criteria must be met for a field to be labeled as identity:
 * Identities are only recognized in record and time series data
 * Only PII fields should be marked as identity. Choosing a field representing more generic data would result in less precise relationships and potentially errors accessing related identities from the identity graph
 
-For instructions on how to label identity fields in the UI, see the guide on [defining identity fields in the UI](../../xdm/ui/fields/identity.md).
+For instructions on how to label identity fields in the UI, see the guide on [defining identity fields in the UI](../xdm/ui/fields/identity.md).
 
 ## Next steps
 
-For more information on [!DNL Identity Service], see the [[!DNL Identity Service] overview](../home.md).
+For more information on [!DNL Identity Service], see the [[!DNL Identity Service] overview](./home.md).

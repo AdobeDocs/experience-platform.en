@@ -28,8 +28,8 @@ feature: Identities
   - [Create a custom namespace](api/create-custom-namespace.md)
   - [List the native ID for an identity](api/list-native-id.md)
   - [API reference](https://www.adobe.io/experience-platform-apis/references/identity-service)
-- [Shared device detection](ui/shared-device-detection.md)
-- [Define identity fields in the UI](ui/label-identities.md)
+- [Shared device detection](shared-device-detection.md)
+- [Define identity fields in the UI](label-identities.md)
 - [Identity graph linking rules] {#identity-graph-linking-rules}
   - [Feature overview](./identity-graph-linking-rules/overview.md)
   - [Identity optimization algorithm](./identity-graph-linking-rules/identity-optimization-algorithm.md)
