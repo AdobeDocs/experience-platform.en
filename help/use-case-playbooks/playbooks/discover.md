@@ -2,14 +2,9 @@
 solution: Experience Platform
 title: Discover the right playbook
 description: Learn how to discover the right playbook for your use case enable playbooks.
-# badgeBeta: label="Beta" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 ---
 # Discover the right playbook
-
-<!-- >[!AVAILABILITY]
->
->This functionality is currently in Beta and is not available to all users. The documentation and the functionality are subject to change. -->
 
 To use a playbook, navigate to **[!UICONTROL Use Case Playbooks] > [!UICONTROL Playbooks]**. Browse and use the various searching and filtering options on the page to select and get started with a specific playbook.
 
