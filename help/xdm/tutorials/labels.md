@@ -34,6 +34,12 @@ This guide requires a working understanding of the following components of Adobe
 >title="Edit governance labels"
 >abstract="Apply a label to a schema field to indicate the usage policies that apply to the data contained in that specific field."
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_labelusageacknowledgement"
+>title="Label usage"
+>abstract="Before you edit the labels for this object, please take note of the following downstream effects:<br>Governance policies: Use labels to govern whether data can be activated to downstream destinations. Incorrect label usage might prevent data from being accessible downstream.<br>Consent policies: Use labels to enforce customer consents and preferences when including profiles in segments. Incorrect label usage might prevent data from being accessible downstream.<br>Access policy: Attribute-based access control uses labels to determine which user roles can access specific assets. Unintended label usage might prevent some people in your organization from using assets that they previously had access to."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/overview.html" text="Attribute-based access control overview"
+
 To start adding labels, you must first [select an existing schema to edit](../ui/resources/schemas.md#edit) or [create a new schema](../ui/resources/schemas.md#create) to view its structure in the Schema Editor.
 
 To edit the labels for an individual field, you can select the field in the canvas and then select **[!UICONTROL Manage access]** in the right rail.
