@@ -110,6 +110,10 @@ A list of profile attributes appears. Select the attribute type you want to excl
 
 ![A list of attributes is shown.](../images/ui/audience-composition/select-attribute-exclude.png)
 
+>[!IMPORTANT]
+>
+>When excluding by attribute, you can only specify **one** value to exclude. Using any sort of separator, like a comma or semicolon, will only result in excluding that exact value. For example, setting the value as `red, blue` will result in excluding the term `red, blue` from the attribute, but will **not** result in excluding either the term `red` or `blue`.
+
 ## [!UICONTROL Enrich] {#enrich-block}
 
 >[!IMPORTANT]

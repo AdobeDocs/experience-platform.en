@@ -38,6 +38,10 @@ When establishing a third-party connection to a Platform database, you are recom
 
 ## Set up a root certificate for sever verification {#root-certificate}
 
+>[!IMPORTANT]
+>
+>The TLS/SSL certificates on Production environments for the Query Service Interactive Postgres API were refreshed on Wednesday 24th January 2024.<br>Although this is an annual requirement, on this occasion the root certificate in the chain has also changed as Adobe's TLS/SSL certificate provider have updated their certificate hierarchy. This can impact certain Postgres clients if their list of Certificate Authorities are missing the root cert. For example, a PSQL CLI client may need to have the root certs added to an explicit file `~/postgresql/root.crt`, otherwise this can result in an error. For example, `psql: error: SSL error: certificate verify failed`. See the [official PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) for more information on this issue.<br>The root certificate to add can be downloaded from [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
+
 To ensure a secure connection, SSL usage must be configured on both the client and the server before the connection is made. If the SSL is only configured on the server, the client might send sensitive information such as passwords before it is established that the server requires high security.
 
 By default, [!DNL PostgreSQL] does not perform any verification of the server certificate. To verify the server's identity and ensure a secure connection before any sensitive data is sent (as part of the SSL `verify-full` mode), you must place a root (self-signed) certificate on your local machine (`root.crt`) and a leaf certificate signed by the root certificate on the server.
@@ -55,7 +59,7 @@ If you need stricter security control than `sslmode=require`, you can follow the
 >There are many options available to attain an SSL certificate. Due to a growing trend in rogue certificates, DigiCert is used in this guide as they are a trusted global provider of high-assurance TLS/SSL, PKI, IoT, and signing solutions. 
 
 1. Navigate to [the list of available DigiCert root certificates](https://www.digicert.com/kb/digicert-root-certificates.htm)
-1. Search for "[!DNL DigiCert Global Root CA]" from the list of available certificates.
+1. Search for "[!DNL DigiCert Global Root G2]" from the list of available certificates.
 1. Select [!DNL **Download PEM**] to download the file to your local machine.
 ![The list of available DigiCert root certificates with Download PEM highlighted.](../images/clients/ssl-modes/digicert.png)
 1. Rename the security certificate file to `root.crt`.
@@ -67,7 +71,7 @@ If you need stricter security control than `sslmode=require`, you can follow the
 >
 >To find your `%appdata%` file location on a Windows operating system, press ⊞ **Win + R** and input `%appdata%` into the search field.
 
-After the [!DNL DigiCert Global Root CA] CRT file is available in your [!DNL PostgreSQL] folder, you can connect to [!DNL Query Service] using the `sslmode=verify-full` or `sslmode=verify-ca` option.
+After the [!DNL DigiCert Global Root G2] CRT file is available in your [!DNL PostgreSQL] folder, you can connect to [!DNL Query Service] using the `sslmode=verify-full` or `sslmode=verify-ca` option.
 
 ## Next steps
 
