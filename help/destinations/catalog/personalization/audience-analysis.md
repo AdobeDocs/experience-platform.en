@@ -8,11 +8,11 @@ The [!UICONTROL Audience Analysis] destination allows you to enrich Adobe Experi
 
 >[!AVAILABILITY]
 >
->This destination is currently in a limited testing phase. If you are interested in using this destination, contact your Adobe Account Team.
+>This destination is in a limited testing phase. If you are interested in using this destination, contact your Adobe Account Team.
 
 ## Prerequisites
 
-You must meet the following requirements before using this destination:
+The following are required before using this destination:
 
 * You must be provisioned to use the Audience Analysis destination. If you are not yet provisioned to use this destination, contact your Adobe Account Team.
 * You must be provisioned to use Customer Journey Analytics.
@@ -35,7 +35,7 @@ Audience Analysis supports the activation of identities described in the table b
 
 ## Supported audiences
 
-This section describes which type of audiences you can export to this destination.
+The following types of audiences are supported when using this destination:
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
@@ -51,7 +51,7 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes |
 ---------|----------|---------|
 | Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the Audience Analysis destination.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. When a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
@@ -61,7 +61,7 @@ Refer to the table below for information about the destination export type and f
 > 
 >To create destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To create this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
+To create this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
 ### Destination details
 
@@ -74,7 +74,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 ### Alerts
 
-You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+You can enable alerts to receive notifications on the status of the dataflow to your destination. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
 
 * **[!UICONTROL Activation Skipped Rate Exceed]**: Be notified when activation skipped rate exceeds a threshold.
 
