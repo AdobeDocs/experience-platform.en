@@ -1,10 +1,10 @@
 ---
-title: Audience Analysis extension
+title: Audience Analysis destination
 description: View audiences that customers qualify for in Customer Journey Analytics.
 ---
-# Audience Analysis extension
+# Audience Analysis destination
 
-The [!UICONTROL Audience Analysis] destination allows you to enrich Adobe Experience Platform audience data into Customer Journey Analytics. You can select which segments that you want to include in the resulting enriched data. Segment qualifications are then available as dimensions in Analysis Workspace reporting.
+The [!UICONTROL Audience Analysis] destination allows you to enrich Adobe Experience Platform audience data into [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html). You can select which audiences that you want to include in the resulting enriched data. Audience qualifications are then available as dimensions in [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) reporting.
 
 >[!AVAILABILITY]
 >
@@ -16,7 +16,7 @@ The following are required before using this destination:
 
 * You must be provisioned to use the Audience Analysis destination. If you are not yet provisioned to use this destination, contact your Adobe Account Team.
 * You must be provisioned to use Customer Journey Analytics.
-* You must have at least one segment created in Adobe Experience Platform.
+* You must have at least one audience created in Adobe Experience Platform.
 
 ## Supported identities
 
@@ -44,14 +44,14 @@ The following types of audiences are supported when using this destination:
 
 {style="table-layout:auto"}
 
-## Export type and frequency {#export-type-frequency}
+## Export type and frequency
 
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the Audience Analysis destination.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. When a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
+| Export type | **[!UICONTROL Audience export]** | You are exporting all members of a audience with the identifiers (name, phone number, or others) used in the Audience Analysis destination.|
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. When a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 
 {style="table-layout:auto"}
 
@@ -69,7 +69,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 * **[!UICONTROL Name]**: The destination name.
 * **[!UICONTROL Description]**: The destination description.
-* **[!UICONTROL Datastream ID]**: The datastream ID that you want to enrich with qualifying segments.
+* **[!UICONTROL Datastream ID]**: The datastream ID that you want to enrich with qualifying audiences. You can obtain this ID in the [Datastreams manager](/help/datastreams/overview.md).
 * **[!UICONTROL Integration alias]**: The integration alias.
 
 ### Alerts
@@ -86,7 +86,7 @@ This optional section allows you to define your data governance policies and ens
 
 When you are finished selecting the desired marketing actions for the destination, select **[!UICONTROL Create]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
