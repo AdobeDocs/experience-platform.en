@@ -9,6 +9,8 @@ exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
 
 This document guides you through the process to set up your account for use case playbooks, designed for Real-Time Customer Data platforms and Journey Optimizer. The three main configuration steps are to create a sandbox, configure user permissions, and set up Journey Optimizer channel surfaces for email, push, and SMS.
 
+➡️ Discover this feature in video
+
 ## Create a development sandbox {#create-development-sandbox}
 
 To get started and get access to the [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md) functionality, [create a new development sandbox](/help/sandboxes/ui/user-guide.md#create) (make sure you do not select a production sandbox) with the name (not the title) containing either `-ucp` or `-UCP` in the suffix, as shown below.
@@ -50,11 +52,11 @@ Confirm that the app surfaces are configured. Next, select the channel, platform
 
 Create an SMS API credential, and select the preferred vendor (e.g., Twilio). Name the SMS channel surface (e.g., SMS Marketing), select the configuration, and enter a sender number. Submit to save the SMS channel surface.
 
-## Additional resources
+## Video walkthrough
 
 This video is designed to take you through the steps needed to create your sandbox, configure permissions and configure channel surfaces for e-mail, push and SMS.
 
-<!-- >[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/3426987?learn=on)
 
 ## Next steps {#next-steps}
 

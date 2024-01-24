@@ -8,7 +8,7 @@ description: A list of all the playbooks in RTCDP and AJO
 
 The purpose of this page is to maintain a list of all the available use case playbooks in Real-time Customer Data Profile and Adobe Journey Optimizer. 
 
-## Use Case Playbooks in Real-time Customer Data Profile 
+## Use Case Playbooks in Journey Optimizer
 
 | Playbook name |  Description |
 | ------------- |  ----------- |
@@ -44,7 +44,7 @@ The purpose of this page is to maintain a list of all the available use case pla
 
 {style="table-layout:auto"}
 
-## Use Case Playbooks in AJO
+## Use Case Playbooks in Real-time Customer Data Profile
 
 | Playbook name | Description |
 | ------------- | ----------- |
