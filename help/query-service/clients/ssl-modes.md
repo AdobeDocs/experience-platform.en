@@ -38,28 +38,13 @@ When establishing a third-party connection to a Platform database, you are recom
 
 ## Set up a root certificate for sever verification {#root-certificate}
 
+>[!IMPORTANT]
+>
+>The TLS/SSL certificates on Production environments for the Query Service Interactive Postgres API were refreshed on Wednesday 24th January 2024.<br>Although this is an annual requirement, on this occasion the root certificate in the chain has also changed as Adobe's TLS/SSL certificate provider have updated their certificate hierarchy. This can impact certain Postgres clients if their list of Certificate Authorities are missing the root cert. For example, a PSQL CLI client needs to have the root certs added to an explicit file `~/postgresql/root.crt`, otherwise this can result in an error. For example, `psql: error: SSL error: certificate verify failed`. See the [official PostgreSQL documentation](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) for more information on this issue.<br>The root certificate to add can be downloaded from [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
+
 To ensure a secure connection, SSL usage must be configured on both the client and the server before the connection is made. If the SSL is only configured on the server, the client might send sensitive information such as passwords before it is established that the server requires high security.
 
 By default, [!DNL PostgreSQL] does not perform any verification of the server certificate. To verify the server's identity and ensure a secure connection before any sensitive data is sent (as part of the SSL `verify-full` mode), you must place a root (self-signed) certificate on your local machine (`root.crt`) and a leaf certificate signed by the root certificate on the server.
-
-<!--  -->
-
->[!IMPORTANT]
->
->Query Service Interactive Postgres API will be refreshing TLS/SSL certificates on Production environments on Thursday 11th January at 11am (PST).
-
-TLS/SSL certificates on Production environments for the Query Service API will be refreshed on Thursday 11th January at 11am (PST).
-interactive queries to
-
-TLS (Transport Layer Security) certificates are digital certificates used to secure and encrypt data transmitted over the internet. They are commonly used to establish secure connections between web browsers and servers.
-
-<br>Although this is an annual requirement, on this occasion the root certificate in the chain will also change as Adobe's TLS/SSL certificate provider have updated their certificate hierarchy.
-If you are using a Postgre client and the client's list of Certificate Authorities are missing the root cert, this can result in an error. For example, `psql: error: SSL error: certificate verify failed`
-
-This can impact certain Postgres clients if their list of Certificate Authorities are missing the root cert. For example, a PSQL CLI client needs to have the root certs added to an explicit file `~/postgresql/root.crt` (https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES). The root certificate to add can be downloaded from [here](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
->If the root cert is missing for psql client, the error will show
-
-<!--  -->
 
 If the `sslmode` parameter is set to `verify-full`, libpq will verify that the server is trustworthy by checking the certificate chain up to the root certificate stored on the client. It then verifies that the hostname matches the name stored in the server certificate.
 
