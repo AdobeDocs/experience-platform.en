@@ -4,12 +4,13 @@ title: Use case playbooks in RTCDP and AJO
 description: A list of all the playbooks in RTCDP and AJO
 ---
 
-# Use Case Playbooks
+# Available Use Case Playbooks
+Purpose - This is a list of all available use cases in RTCDP and AJO
 
 ## Use Case Playbooks in RTCDP
 
-| Playbook name | Product | Description |
-| ------------- | ------- | ----------- |
+| Playbook name |  Description |
+| ------------- |  ----------- |
 | Abandoned Browsing: Merchandise | Nudge fans to re-engage after they leave your website or app after browsing a product.|
 | Abandoned Cart: Merchandise | Nudge fans to re-engage after they leave your website or app after adding merchandise to the cart.|
 | Abandoned Cart: Product| Nudge shoppers to re-engage after they leave your website or app after adding products to the cart.|
@@ -36,14 +37,16 @@ description: A list of all the playbooks in RTCDP and AJO
 | Send Emails to Onboard New Fans| Welcome your newly registered fans through email.|
 | Send Emails to Onboard New Guests| Welcome your newly registered guests through email.|
 | Send Emails to Onboard New Shoppers| Welcome your newly registered shoppers through email.|
-| Trip Receipt - Checkout| Provide a receipt when guests check out.|
+| Trip Receipt - Checkout | Provide a receipt when guests check out.|
 | Upsell Single Game Purchases to Mini Package Purchaser | Nudge fans to convert from single game ticket buyers to game ticket package purchasers.|
 | Welcome New Ticket Package Purchasers| Improve fan experience by sending a welcome email that encourages app download.|
 
+{style:auto}
+
 ## Use Case Playbooks in AJO
 
-| Playbook name | Product | Description |
-| ------------- | ------- | ----------- |
+| Playbook name | Description |
+| ------------- | ----------- |
 | Abandoned Cart: Merchandise - For Activation | Retarget fans after they leave your website or app after adding the merchandise to the cart.|
 | Abandoned Cart: Product - For Activation|Retarget shoppers after they leave your website or app after adding products to the cart. |
 | Abandoned Cart: Reservation - For Activation|Retarget guests after they leave your website or app after adding a new reservation to the cart.|
@@ -57,7 +60,10 @@ description: A list of all the playbooks in RTCDP and AJO
 | Send A Birthday Message to Guests - For Activation|Target guests on their birthday with a "Happy Birthday" message and an exclusive offer.|
 | Send A Birthday Message to Shoppers - For Activation|Target shoppers on their birthday with a "Happy Birthday" message and an exclusive offer.|
 
+{style:auto}
 
 ## Next steps
+
+Now that you're aware of the list. Link to discover.
 
 
