@@ -31,7 +31,7 @@ Before diving into the details of Identity Service, please read the following ta
 | Identity type | An identity type is a component of an identity namespace. The identity type designates whether identity data is linked in an identity graph or not. |
 | Link | A link or a linkage, is a method to establish that two disparate identities represent the same entity. For example, a link between "`Email` = julien<span>@acme.com" and "`Phone` = 555-555-1234" means that both identities represent the same entity. This suggests that the customer who has interacted with your brand with both the email address of julien<span>@acme.com and the phone number of 555-555-1234 is the same. |
 | Identity Service | Identity Service is a service within Experience Platform that links (or unlinks) identities to maintain identity graphs. |
-| Identity graph | The identity graph is a collection of identities that represent a single customer. For more information, read the guide on [using the identity graph viewer](./ui/identity-graph-viewer.md). |
+| Identity graph | The identity graph is a collection of identities that represent a single customer. For more information, read the guide on [using the identity graph viewer](./features/identity-graph-viewer.md). |
 | Real-Time Customer Profile | Real-Time Customer Profile is a service within Adobe Experience Platform that: <ul><li>Merges profiles fragments to create a profile, based on an identity graph.</li><li>Segments profiles so that they can then be sent to destination for activations.</li></ul> |
 | Profile | A profile is a representation of a subject, an organization, or an individual. A profile is composed of four elements: <ul><li>Attributes: attributes provide information such as name, age, or gender.</li><li>Behavior: behaviors provide information on the activities of a given profile. For example, a profile behavior can tell if a given profile was "searching for sandals" or "ordering t-shirts."</li><li>Identities: For a merged profile, this provides information of all the identities associated with the person. Identities can be classified into three categories: Person (CRMID, email, phone), device (IDFA, GAID), and cookie (ECID, AAID).</li><li>Audience memberships: The groups in which the profile belongs to (loyal users, users who live in California, etc.)</li></ul> |
 
@@ -91,7 +91,7 @@ For more information, read the the guide on [how Identity Service links identiti
 
 ## Identity graphs
 
-An identity graph is a map of relationships between different identity namespaces, allowing you to visualize and better understand what customer identities are stitched together, and how. Read the tutorial on [using the identity graph viewer](./ui/identity-graph-viewer.md) for more information.
+An identity graph is a map of relationships between different identity namespaces, allowing you to visualize and better understand what customer identities are stitched together, and how. Read the tutorial on [using the identity graph viewer](./features/identity-graph-viewer.md) for more information.
 
 The following video is intended to support your understanding of identities and identity graphs.
 

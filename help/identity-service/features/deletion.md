@@ -16,7 +16,7 @@ This document provides an overview of the various mechanisms that you can use to
 The document below references the following features of Experience Platform:
 
 * [Identity Service](../home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
-  * [Identity Graph](./ui/identity-graph-viewer.md): An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels.
+  * [Identity Graph](./features/identity-graph-viewer.md): An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels.
   * [Identity namespaces](../features/namespaces.md): Identity namespaces are a component of Identity Service that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID.
 * [Catalog Service](../../catalog/home.md): Explore the data lineage, metadata, file descriptions, directories, and datasets within the data lake.
 * [Data hygiene](../../hygiene/home.md): Manage your stored consumer data by scheduling automated dataset expirations or or deleting individual records from one dataset or all datasets.

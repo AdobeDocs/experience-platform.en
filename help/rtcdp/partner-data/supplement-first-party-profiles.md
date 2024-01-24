@@ -124,7 +124,7 @@ Some recommended source connectors for this purpose might be:
 
 Note the following limitations as you explore the use case described on this page:
 
-* If you select to use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/ui/identity-graph-viewer.md). 
+* If you select to use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/features/identity-graph-viewer.md). 
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 

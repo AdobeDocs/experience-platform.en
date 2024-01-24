@@ -153,4 +153,4 @@ Supplying the namespace for an identity depends on the method you use for provid
 
 ## Next steps
 
-Now that you understand the key concepts of identity namespaces, you can begin to learn how to work with your identity graph using the [identity graph viewer](../ui/identity-graph-viewer.md).
+Now that you understand the key concepts of identity namespaces, you can begin to learn how to work with your identity graph using the [identity graph viewer](../features/identity-graph-viewer.md).
