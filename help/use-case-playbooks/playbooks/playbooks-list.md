@@ -64,6 +64,4 @@ The purpose of this page is to maintain a list of all the available use case pla
 
 ## Next steps
 
-Now that you're aware of the list. Link to discover.
-
-
+Now that you are aware of the available playbooks, you can go to the [discover guide](/help/use-case-playbooks/playbooks/discover.md) to find the appropriate playbook for your use case.

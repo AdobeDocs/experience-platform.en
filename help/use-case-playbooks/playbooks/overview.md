@@ -2,7 +2,6 @@
 solution: Experience Platform
 title: Use case playbooks overview
 description: Learn how to use the Use Case Playbooks feature in Experience Platform to get started with various marketing use cases
-# badgeBeta: label="Beta" type="Informative"
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
 ---
 # Use case playbooks overview
@@ -18,10 +17,6 @@ What you'll find in this documentation guide:
 * [Troubleshooting and known limitations](troubleshooting.md)
 
 >[!ENDSHADEBOX]
-
-<!-- >[!AVAILABILITY]
->
->This functionality is currently in Beta and is not available to all users. The documentation and the functionality are subject to change. -->
 
 ## Overview {#overview}
 

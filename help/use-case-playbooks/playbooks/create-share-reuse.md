@@ -2,14 +2,9 @@
 solution: Experience Platform
 title: Create, share, and reuse playbook instances
 description: Learn how to create, share, and reuse playbook instances to accomplish your marketing use case.
-# badgeBeta: label="Beta" type="Informative"
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 ---
 # Create, share, and reuse playbook instances
-
->[!AVAILABILITY]
->
->This functionality is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
 
 To use a playbook, navigate to **[!UICONTROL Use Case Playbooks] > [!UICONTROL Playbooks]**. Browse and use the various searching and filtering options on the page to select and get started with a specific playbook.
 
