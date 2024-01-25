@@ -7,6 +7,10 @@ exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 
 The Real-Time Customer Data Platform Insights Data Model feature exposes the data models and SQL that power the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your user-defined dashboards. See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
 
+>[!NOTE]
+>
+>The term 'segment' has been updated to 'audience' across Adobe Experience Platform systems. Some references to segments remain in use for file paths and dataset naming conventions.
+
 ## Prerequisites
 
 This guide requires a working understanding of the [user-defined dashboards feature](./user-defined-dashboards.md). Please read the documentation before continuing with this guide.
@@ -436,3 +440,47 @@ SELECT Sum(overlap_col1) overlap_col1,
 ```
 
 +++
+
+### Overlap Namespace-Audience model {#overlap-namespace-audience-model}
+
+The overlap namespace-audience model is comprised of the following datasets: 
+
+- `adwh_fact_profile_overlap_by_namespace_and_segment`
+- `adwh_dim_date`
+- `adwh_dim_namespace`
+- `adwh_dim_overlap_namespaces`
+- `adwh_dim_merge_policies`
+- `adwh_dim_segments`
+- `adwh_dim_br_segment_destinations`
+- `adwh_dim_destination`
+- `adwh_dim_destination_platform`
+
+![An ERD of the overlap namespace-audience model.](./images/cdp-insights/overlap-namespace-audience-model.png)
+
+<!-- What insights are gathered from this particualr data model? -->
+
+### Custom model {#custom-model}
+
+The custom model is comprised of the following datasets: 
+
+- `geo_dim`
+- `retail_acct_fact`
+- `industry_dim`
+
+![An ERD of the custom model.](./images/cdp-insights/custom-model.png)
+
+<!-- What insights are gathered from this particualr data model? -->
+
+### AI model {#ai-model}
+
+The AI model is comprised of the following datasets: 
+
+- `adwh_fact_profile_ai_models`
+- `adwh_dim_date`
+- `adwh_dim_merge_policies`
+- `adwh_dim_ai_models`
+
+![An ERD of the AI model.](./images/cdp-insights/ai-model.png)
+
+<!-- What insights are gathered from this particualr data model? -->
+
