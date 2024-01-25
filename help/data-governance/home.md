@@ -5,7 +5,14 @@ title: Data Governance Overview
 description: Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 ---
-# Data Governance overview
+# Data Governance overview {#data-governance-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_datagovernance_framework"
+>title="Data governance obligation"
+>abstract="Please remember, it is your sole responsibility to adhere to your organization's data governance policies and meet your regulatory requirements. Experience Platform provides data governance tools for you to manage your data usage obligations. Apply the appropriate data usage labels before querying or processing data. See the documentation to learn about data governance tools and best practices."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html" text="Data Governance overview"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html" text="Data Governance labels overview" 
 
 One of the core capabilities of Adobe Experience Platform is to bring data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. This data may be subject to usage restrictions defined by your organization or by legal regulations. It is therefore important to ensure that your data operations within [!DNL Platform] are compliant with data usage policies. 
 
