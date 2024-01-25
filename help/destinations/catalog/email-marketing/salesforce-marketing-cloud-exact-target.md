@@ -119,7 +119,7 @@ Note down the items below before you authenticate to the [!DNL (API) Salesforce 
 
 ## Supported identities {#supported-identities}
 
-[!DNL (API) Salesforce Marketing Cloud] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL (API) Salesforce Marketing Cloud] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|

@@ -39,7 +39,7 @@ Before you can use this destination to export data out of Adobe Experience Platf
 
 ## Supported identities {#supported-identities}
 
-[!DNL Pega Customer Decision Hub] supports the activation of custom user IDs described in the table below. For more details, see [identities](/help/identity-service/namespaces.md).
+[!DNL Pega Customer Decision Hub] supports the activation of custom user IDs described in the table below. For more details, see [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|
 |---|---|

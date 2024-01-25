@@ -102,7 +102,7 @@ For more information on [!DNL Destinations], refer to the [[!DNL Destinations] o
 
 Adobe Experience Platform [!DNL Identity Service] helps you gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 
-As part of attribute-based access control, the `view-identity-graph` permission allows you to determine which users in your organization can access the identity graph through the user interface or APIs. For more information, see the guide on [using the identity graph viewer](../../identity-service/ui/identity-graph-viewer.md).
+As part of attribute-based access control, the `view-identity-graph` permission allows you to determine which users in your organization can access the identity graph through the user interface or APIs. For more information, see the guide on [using the identity graph viewer](../../identity-service/features/identity-graph-viewer.md).
 
 For more information on [!DNL Identity Service], refer to the [[!DNL Identity Service] overview](../../identity-service/home.md).
 

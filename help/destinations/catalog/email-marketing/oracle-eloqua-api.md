@@ -59,7 +59,7 @@ Refer to the [Signing in to [!DNL Oracle Eloqua]](https://docs.oracle.com/en/clo
 
 ## Supported identities {#supported-identities}
 
-[!DNL Oracle Eloqua] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Oracle Eloqua] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 | Target Identity | Description | Mandatory |
 |---|---|---|

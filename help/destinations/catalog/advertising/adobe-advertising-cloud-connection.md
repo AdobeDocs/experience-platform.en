@@ -35,7 +35,7 @@ A media agency with a DSP account is running a retargeting campaign on behalf of
 
 ## Supported identities {#supported-identities}
 
-The Adobe Advertising Cloud DSP destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+The Adobe Advertising Cloud DSP destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|

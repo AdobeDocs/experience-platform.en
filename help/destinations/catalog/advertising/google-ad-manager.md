@@ -21,7 +21,7 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 
 ## Supported Identities {#supported-identities}
 
-[!DNL Google Ad Manager] supports the activation of audiences based on the identities shown in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Google Ad Manager] supports the activation of audiences based on the identities shown in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Identity|Description|Considerations|
 |---|---|---|

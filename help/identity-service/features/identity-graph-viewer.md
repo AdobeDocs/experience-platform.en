@@ -40,7 +40,7 @@ To view an identity graph, provide an identity namespace and its corresponding v
 
 >[!TIP]
 >
->Select the table icon ![table icon](../images/identity-graph-viewer/table-icon.png) to see a panel with a list of all identity namespaces available in your organization. You can use any of the identity namespaces as long as you have a valid identity value connected to them. For more information, read the [identity namespace guide](../namespaces.md).
+>Select the table icon ![table icon](../images/identity-graph-viewer/table-icon.png) to see a panel with a list of all identity namespaces available in your organization. You can use any of the identity namespaces as long as you have a valid identity value connected to them. For more information, read the [identity namespace guide](./namespaces.md).
 
 ![An identity namespace and its corresponding value, provided in the Identity Graph lookup screen.](../images/graph-viewer/namespace-and-value.png)
 
