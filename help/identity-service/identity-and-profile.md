@@ -1,18 +1,13 @@
 ---
 title: Identity Service and Real-Time Customer Profile
 description: Learn about the relationship between Identity Service and Real-Time Customer Profile
-hide: true
-hidefromtoc: true
-badge: Alpha
 exl-id: 09961b8e-f736-4fcc-ac53-88b55cca7d55
 ---
 # Understanding the relationship between Identity Service and Real-Time Customer Profile
 
 >[!IMPORTANT]
 >
->* Identity graph linking rules are currently in Alpha. The feature and documentation are subject to change.
->
->* This page assumes that the merge policy is using the identity graph. For more information about merge policies in Real-Time Customer Profile, read the documentation on [merge policies and identity stitching](../../profile/merge-policies/overview.md#identity-stitching).
+> This page assumes that the merge policy is using the identity graph. For more information about merge policies in Real-Time Customer Profile, read the documentation on [merge policies and identity stitching](../profile/merge-policies/overview.md#identity-stitching).
 
 While you can use Identity Service and Real-Time Customer Profile in tandem, the two features of Adobe Experience Platform are not inherently the same.
 
@@ -45,7 +40,7 @@ Read the steps below to gain a better understanding of the process of creating a
 * Once successful, Profile than merges all existing events and attributes.
   * If needed, apply precedence rules to determine which attribute or event to use
 
-![A flow chart detailing how Identity Service and Profile Merging works.](../images/identity-settings/identity-and-profile.png)
+![A flow chart detailing how Identity Service and Profile Merging works.](./images/identity-settings/identity-and-profile.png)
 
 >[!ENDSHADEBOX]
 
@@ -62,12 +57,3 @@ Once you mark fields as identities, they can then be defined as either primary o
 * If there are two or more identities, then one will be designated as primary, and the remaining will be designated as secondary.
 
 Identity Service only ingests fields designated as identity. Identity Service does not store information on whether an identity is primary or secondary.
-
-## Next steps
-
-For more information on identity graph linking rules, read the following documentation:
-
-* [Identity graph linking rules overview](./overview.md)
-* [Identity optimization algorithm](./identity-optimization-algorithm.md)
-* [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
-* [Identity linking logic](./identity-linking-logic.md)

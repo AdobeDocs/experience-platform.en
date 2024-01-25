@@ -31,7 +31,7 @@ To use this destination, you must have a Snapchat Ads account. Please refer to t
 
 ## Supported identities {#supported-identities}
 
-The *Snap Inc* destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+The *Snap Inc* destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 All identifiers sent to the *Snap Inc* destination must be hashed in SHA-256 format. To hash plain text identifiers before sending them to the destination, check the **[!UICONTROL Apply transformation]** option when mapping target identifiers for the destination. 
 

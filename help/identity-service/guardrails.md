@@ -180,7 +180,7 @@ Finally, the deletion process yields two smaller graphs.
 See the following documentation for more information on [!DNL Identity Service]:
 
 * [[!DNL Identity Service] overview](home.md)
-* [Identity graph viewer](ui/identity-graph-viewer.md)
+* [Identity graph viewer](features/identity-graph-viewer.md)
 
 See the following documentation for more information on other Experience Platform services guardrails, on end-to-end latency information, and licensing information from Real-Time CDP Product Description documents:
 

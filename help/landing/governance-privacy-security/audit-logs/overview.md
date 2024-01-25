@@ -44,8 +44,8 @@ The following table outlines which actions on which resources are recorded by au
 | [Data types](../../../xdm/schema/composition.md#data-type) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Destination](../../../destinations/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable</li><li>Disable</li><li>Dataset Activate</li><li>Dataset Remove</li><li>Profile Activate</li><li>Profile Remove</li></ul> |
 | [Field group](../../../xdm/schema/composition.md#field-group) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
-| [Identity graph](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>View</li></ul> |
-| [Identity namespace](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Create</li><li>Update</li></ul> |
+| [Identity graph](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>View</li></ul> |
+| [Identity namespace](../../../identity-service/features/namespaces.md) | <ul><li>Create</li><li>Update</li></ul> |
 | [Merge policy](../../../profile/merge-policies/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Product profile](../../../access-control/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Query](../../../query-service/ui/overview.md) | <ul><li>Execute</li></ul> |

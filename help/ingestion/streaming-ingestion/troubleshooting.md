@@ -91,6 +91,6 @@ The following JSON is an example response object for an API request with two mes
 
 If [!DNL Real-Time Customer Profile] rejects a message, it is most likely due to incorrect identity information. This can be the result of providing an invalid value or namespace for an identity.
 
-There are two types of identity namespaces: default and custom. When using custom namespaces, make sure the namespace has been registered within [!DNL Identity Service]. See the [identity namespace overview](../../identity-service/namespaces.md) for more information on using default and custom namespaces.
+There are two types of identity namespaces: default and custom. When using custom namespaces, make sure the namespace has been registered within [!DNL Identity Service]. See the [identity namespace overview](../../identity-service/features/namespaces.md) for more information on using default and custom namespaces.
 
 You can use the [[!DNL Experience Platform UI]](https://platform.adobe.com) to see more information on why a message failed ingestion. Click **[!UICONTROL Monitoring]** in the left-navigation, then view the **[!UICONTROL Streaming end-to-end]** tab to see message batches streamed during a selected time period.
