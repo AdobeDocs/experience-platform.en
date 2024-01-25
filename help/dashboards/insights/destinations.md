@@ -258,7 +258,7 @@ Questions answered by this insight:
 
 - Which audiences mapped to a destination have significant variations in the last 30 days?
 - What is the latest size of a mapped audience and whether it has changed over the last month?
-- List all audiences mapped to a destination and the severity of their size changes in the last month?
+- How do I list all the audiences mapped to a destination based on the severity of their size changes in the last month?
 
 +++Select to reveal the SQL that generates this insight
 
@@ -366,7 +366,7 @@ Questions answered by this insight:
 
 - What are the most used destinations?
 - How many audiences are mapped to each destination, sorted by most to least?
-- How is the mapping of audiences to destinations change from one snapshot to another?
+- How does the mapping of audiences to destinations change from one snapshot to another?
 
 +++Select to reveal the SQL that generates this insight
 
@@ -393,7 +393,7 @@ See the [Most used destinations widget documentation](../guides/destinations.md#
 
 Questions answered by this insight:
 
-- Which destination was an audience most recently activated?
+- Which destination was an audience most recently activated to?
 - How do I find a list of all destinations sorted by the last updated date?
 - How can I compare two destinations based on the most recent activations?
 
@@ -425,7 +425,7 @@ See the [Recently activated audiences widget documentation](../guides/destinatio
 Questions answered by this insight:
 
 - What are the audiences activated to a particular destination?
-- How do I find a list of audiences activated by a particular audience from most recent to older?
+- How do I find a list of audiences activated by a particular audience from most to least recent?
 - How do I find a list of audiences by the date it was activated for a specific destination?
 
 +++Select to reveal the SQL that generates this insight
@@ -503,7 +503,7 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 ## Next steps {#next-steps}
 
-By reading this document, you now understand the SQL that generates dashboard insights and what common questions this analysis solves. You are now recommended to edit and iterate on that SQL to generate your own insights.
+By reading this document, you now understand the SQL that generates dashboard insights and what common questions this analysis solves. You can now edit and iterate these SQL queries to generate your own insights.
 
 <!-- This link will go in during the January release.
 See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
