@@ -20,8 +20,8 @@ An identity represents a real-world entity. If there is a link established betwe
 | --- | --- | --- |
 | An end user logs in using a computer. | CRM ID and ECID are linked together. | A person (CRM ID) owns a device with a browser (ECID). |
 | An end user browses anonymously using an iPhone .| IDFA is linked with ECID. | The Apple hardware device (IDFA), such as an iPhone, is associated with the browser (ECID). |
-| An end user logs in using Google Chrome, and then Firefox. | CRM ID is linked with two different ECIDs. | A person (CRMID) is associated to 2 web browsers (**Note**: Each browser will have its own ECID). |
-| A data engineer ingests a CRM record. | CRM ID and Email are linked. | A person (CRM ID) is associated to the email address. |
+| An end user logs in using Google Chrome, and then Firefox. | CRM ID is linked with two different ECIDs. | A person (CRM ID) is associated to 2 web browsers (**Note**: Each browser will have its own ECID). |
+| A data engineer ingests a CRM record that includes two fields marked as an identity: CRM ID and Email.| CRM ID and Email are linked. | A person (CRM ID) is associated to the email address. |
 
 ## Understanding the Identity Service linking logic
 
