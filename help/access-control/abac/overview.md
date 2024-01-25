@@ -4,7 +4,7 @@ title: Attribute-Based Access Control Overview
 description: This document provides information on attribute-based access control in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
 ---
-# Attribute-based access control overview
+# Attribute-based access control overview {#attribute-based-access-control-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_accesscontrol_abac_labelusageaccesspolicy"
