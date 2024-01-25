@@ -89,3 +89,7 @@ Creating an instance generates a set of assets such as journeys, segments, schem
 ## Next steps
 
 After reading this guide, you now have a better understanding of how to leverage use case playbooks along with [sandbox tooling](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) to create executable journeys that reference your schemas. Learn more about the common [Real-Time CDP use cases](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
+
+### More help on this topic
+
+[Sandbox tooling](/help/sandboxes/ui/sandbox-tooling.md)
