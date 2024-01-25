@@ -128,5 +128,5 @@ For more information on identity graph linking rules, read the following documen
 
 * [Identity graph linking rules overview](./overview.md)
 * [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
-* [Identity linking logic](./identity-linking-logic.md)
-* [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
+* [Identity linking logic](../features/identity-linking-logic.md)
+* [Identity Service and Real-Time Customer Profile](../identity-and-profile.md)
