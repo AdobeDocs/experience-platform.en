@@ -104,7 +104,7 @@ The profiles that are exported to the [!UICONTROL Experience Cloud Audiences] de
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|ECID|Experience Cloud ID| A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the following document on [ECID](/help/identity-service/ecid.md) for more information.|
+|ECID|Experience Cloud ID| A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
 |GAID|Google Advertising ID| Profiles ingested into Real-Time CDP with a primary identity of Google Advertising ID (GAID) can be exported to this destination.|
 |IDFA|Apple ID for Advertisers| Profiles ingested into Real-Time CDP with a primary identity of Apple ID for Advertisers (IDFA) can be exported to this destination.|
 |email_lc_sha256| Email addresses hashed with the SHA256 algorithm|Profiles ingested into Real-Time CDP with a primary identity of hashed email address can be exported to this destination.|
