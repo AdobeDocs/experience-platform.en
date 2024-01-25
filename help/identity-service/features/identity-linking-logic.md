@@ -12,6 +12,17 @@ There are two types of identities that get linked:
 * **Profile records**: These identities usually come from CRM systems.
 * **Experience Events**: These identities usually come from WebSDK implementation or the Adobe Analytics source.
 
+## Semantic meaning of establishing links
+
+An identity represents a real-world entity. If there is a link established between two identities, this means that the two identities are associated to one another. The following are some examples that illustrate this concept:
+
+| Action | Links established | Meaning |
+| --- | --- | --- |
+| An end user logs in using a computer. | CRM ID and ECID are linked together. | A person (CRM ID) owns a device with a browser (ECID). |
+| An end user browses anonymously using an iPhone .| IDFA is linked with ECID. | The Apple hardware device (IDFA), such as an iPhone, is associated with the browser (ECID). |
+| An end user logs in using Google Chrome, and then Firefox. | CRM ID is linked with two different ECIDs. | A person (CRM ID) is associated to 2 web browsers (**Note**: Each browser will have its own ECID). |
+| A data engineer ingests a CRM record that includes two fields marked as an identity: CRM ID and Email.| CRM ID and Email are linked. | A person (CRM ID) is associated to the email address. |
+
 ## Understanding the Identity Service linking logic
 
 An identity consists of an identity namespace and an identity value.
@@ -79,10 +90,13 @@ You have also implemented WebSDK and ingested a WebSDK dataset (Experience Event
 | `t=3` | ECID:44675 | View home page |
 | `t=4` | ECID:44675, CRM ID: 31260XYZ | View purchase history |
 
+The primary identity for each event will be determined based on [how you configure data element types](../../tags/extensions/client/web-sdk/data-element-types.md).
+
 >[!NOTE]
 >
->* `*` - Denotes field that is marked as identity, with ECID being marked as primary.
->* By default, the person identifier (in this case, the CRM ID) is designated as the primary identity. If the person identifier does not exist, then the cookie identifier (in this case, the ECID) becomes the primary identity.
+>* If you select the CRM ID as the primary, then authenticated events (events with identity map containing the CRM ID and ECID) will have a primary identity of CRM ID. For unauthenticated events (events with the identity map only containing ECID) will have a primary identity of ECID. Adobe recommends this option.
+>
+>* If you select the ECID as the primary, irrespective of the authentication state, the ECID becomes the primary identity. 
 
 In this example:
 
