@@ -13,7 +13,7 @@ Source connectors in Adobe Experience Platform provide the ability to ingest ext
 ## Prerequisites
 In order to complete the steps in this guide, you will need:
 * A login to [Adobe Experience Platform](https://platform.adobe.com) and permission to create a new streaming connector
-* A login to your Braze dashboard, an unused Currents Connector license, and permissions to create a Connector. Addiitonal details can be found [https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements](here).
+* A login to your Braze dashboard, an unused Currents Connector license, and permissions to create a Connector. Addiitonal details can be found [here](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements).
 
 ## Getting started
 
@@ -24,7 +24,7 @@ This tutorial requires a working understanding of the following components of Ad
     *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 *   [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-This tutorial also requires a working understanding of [[!Braze Currents]https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents).
+This tutorial also requires a working understanding of [[!Braze Currents](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents).
 
 If you already have a [!DNL Braze] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/marketing-automation.md).
 
@@ -42,7 +42,7 @@ Next, you must:
 
 * Upload the provided [Braze Currents sample file](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json). This file contains all possible fields that Braze might send as part of an event.
 
-![The "Add Data" screen ](../../../../images/tutorials/create/braze/select data.png)
+![The "Add Data" screen ](../../../../images/tutorials/create/braze/select_data.png)
 
 * Provide dataflow details, including information on your dataset and the schema that you are mapping to.
 ![The "Dataflow Details" screen ](../../../../images/tutorials/create/braze/dataflow details.png)
@@ -52,7 +52,7 @@ Next, you must:
 
 [!IMPORTANT]
 Braze timestamps are measured in seconds and not milliseconds. Therefore, you must create calculated fields in milliseconds to properly reflect the timestamps in Experience Platform. A calculation of "time * 1000" will properly convert to milliseconds, suitable for mapping to a timestamp field within [!DNL Platform].
-![Creating a calculated field for timestamp ](../../../../images/tutorials/create/braze/create calculated field.png)
+![Creating a calculated field for timestamp ](../../../../images/tutorials/create/braze/create_calculated_field.png)
 
 The **[!UICONTROL Connect to Braze]** page appears. Upload the provided. This sample file contains all possible fields that Braze might send as part of an event.  Proceed to create a new data set. Map your data set into your schema. Note that Braze timestamps are in seconds, and that you'll need to create calculated fields in milliseconds to properly refelect the timestamps in {!DNL Platform].
 
