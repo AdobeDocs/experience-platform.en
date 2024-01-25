@@ -4,7 +4,12 @@ title: Attribute-Based Access Control Overview
 description: This document provides information on attribute-based access control in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
 ---
-# Attribute-based access control overview
+# Attribute-based access control overview {#attribute-based-access-control-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_accesscontrol_abac_labelusageaccesspolicy"
+>title="Label usage access policy"
+>abstract=""
 
 Attribute-based access control is a capability of Adobe Experience Platform that enables administrators to control access to specific objects and/or capabilities based on attributes. Attributes can be metadata added to an object, such as a label added to a schema field or segment. An administrator defines access policies that include attributes to manage user access permissions.
 
