@@ -213,7 +213,7 @@ alloy("configure", {
 
 After [configuring the datastream overrides](#configure-overrides) in the Data Collection UI, you can now send the overrides to the Edge Network, via the Mobile SDK.
 
-To learn how to send the overrides to the Edge Network, read either the [guide on sending overrides using sendEvent](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) or [guide on sending overrides using Rules](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/).
+To learn how to send the overrides to the Edge Network, read the [guide on sending overrides using sendEvent](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) or [guide on sending overrides using Rules](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/).
 
 ## Payload example {#payload-example}
 
