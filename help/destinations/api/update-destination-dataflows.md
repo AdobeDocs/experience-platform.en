@@ -537,7 +537,7 @@ curl -X PATCH \
     -d '[
 {
    "op":"remove",
-   "path":"transformations/0/params/segmentSelectors/selectors/0/",
+   "path":"/transformations/0/params/segmentSelectors/selectors/0",
    "value":{
       "type":"PLATFORM_SEGMENT",
       "value":{
@@ -546,7 +546,7 @@ curl -X PATCH \
 },
 {
    "op":"remove",
-   "path":"transformations/0/params/segmentSelectors/selectors/1/",
+   "path":"/transformations/0/params/segmentSelectors/selectors/1",
    "value":{
       "type":"PLATFORM_SEGMENT",
       "value":{
@@ -559,7 +559,7 @@ curl -X PATCH \
 | Property | Description |
 | --------- | ----------- |
 | `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. To remove an audience from a dataflow, use the `remove` operation. |
-| `path` | Specifies which existing audience should be removed from the destination dataflow, based on the index of the audience selector. To retrieve the order of audiences in a dataflow, perform a GET call to the `/flows` endpoint and inspect the `transformations.segmentSelectors` property. To delete the first audience in the dataflow, use `"path":"transformations/0/params/segmentSelectors/selectors/0/"`.|
+| `path` | Specifies which existing audience should be removed from the destination dataflow, based on the index of the audience selector. To retrieve the order of audiences in a dataflow, perform a GET call to the `/flows` endpoint and inspect the `transformations.segmentSelectors` property. To delete the first audience in the dataflow, use `"path":"/transformations/0/params/segmentSelectors/selectors/0"`.|
 
 
 **Response**
