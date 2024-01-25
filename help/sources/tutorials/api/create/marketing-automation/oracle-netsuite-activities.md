@@ -1,6 +1,8 @@
 ---
 title: Create a source connection and dataflow for Oracle NetSuite Activities using the Flow Service API
 description: Learn how to create a source connection and dataflow to bring Oracle NetSuite events data to Experience Platform using the Flow Service API.
+hide: true
+hidefromtoc: true
 badge: Beta
 ---
 # Create a source connection and dataflow for [!DNL Oracle NetSuite Activities] using the Flow Service API
