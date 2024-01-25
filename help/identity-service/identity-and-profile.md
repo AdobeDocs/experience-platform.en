@@ -45,7 +45,7 @@ Read the steps below to gain a better understanding of the process of creating a
 * Once successful, Profile than merges all existing events and attributes.
   * If needed, apply precedence rules to determine which attribute or event to use
 
-![A flow chart detailing how Identity Service and Profile Merging works.](../images/identity-settings/identity-and-profile.png)
+![A flow chart detailing how Identity Service and Profile Merging works.](./images/identity-settings/identity-and-profile.png)
 
 >[!ENDSHADEBOX]
 
