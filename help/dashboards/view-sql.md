@@ -4,15 +4,15 @@ description: View the SQL behind your Profile, Audience, Destination, and custom
 ---
 # View insight SQL
 
-Use the [!UICONTROL View SQL] feature to view the SQL behind your Profile, Audience, Destination, and customized insights and execute the query on demand through the Query Editor. You can take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Platform data based on your business needs.
+Use the [!UICONTROL View SQL] feature to view the SQL behind your Profile, Audience, Destination, and customized insights and execute the query on demand through the Query Editor. Take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Platform data based on your business needs.
 
 ## Navigate to the dashboard overview {#navigate-to-overview}
 
-Select either **[!UICONTROL Profiles]**, **[!UICONTROL Audiences]**, or **[!UICONTROL Destinations]** from the left navigation to open their respective dashboards. Next select **[!UICONTROL Overview]** from the tab options if the workspace does not automatically appear.
+To open your chosen dashboard, select either **[!UICONTROL Profiles]**, **[!UICONTROL Audiences]**, or **[!UICONTROL Destinations]** from the left navigation. Next select **[!UICONTROL Overview]** from the tab options if the workspace does not automatically appear.
 
 Alternatively, select **[!UICONTROL Dashboards]** from the left navigation followed by the name of your custom dashboard. The overview of your user-defined dashboard appears. 
 
-![The Experience Platform UI with [!UICONTROL Profiles], [!UICONTROL Audiences], [!UICONTROL Destinations], and [!UICONTROL Dashboards] highlighted.]()
+![The Experience Platform UI with [!UICONTROL Profiles], [!UICONTROL Audiences], [!UICONTROL Destinations], and [!UICONTROL Dashboards] highlighted.](./images/view-sql/dashboard-navigation.png)
 
 ## View SQL toggle {#toggle}
 
@@ -28,7 +28,7 @@ Select **[!UICONTROL View SQL]** to open a dialog that contains the widget's SQL
 
 ## SQL dialog {#sql-dialog}
 
-A dialog appears containing the title of the insight and the SQL that generates it.
+A dialog appears that contains the title of the insight and the SQL that generates it.
 
 >[!TIP]
 >
@@ -48,4 +48,4 @@ The Query Editor appears. You can now edit the statement and query your platform
 
 ## Next steps
 
-After reading this document, you now understand how to access the SQL for any insight within either the standard dashboards or a user-defined dashboard. If you have not done so already, you are recommended to read the [Real-Time Customer Data Platform Insights Data Model document](./cdp-insights-data-model.md) for insights on customizing SQL templates for Real-Time CDP reports tailored to your marketing and KPI needs.
+After reading this document, you now understand how to access the SQL for any insight within either the standard dashboards or a user-defined dashboard. If you have not already done so, you are recommended to read the [Real-Time Customer Data Platform Insights Data Model document](./cdp-insights-data-model.md). That document contains insights on customizing SQL templates for Real-Time CDP reports tailored to your marketing and KPI needs.
