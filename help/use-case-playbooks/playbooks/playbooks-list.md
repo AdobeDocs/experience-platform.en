@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Use case playbooks in Real-Time Customer Data Profile and Adobe Journey Optimizer. 
-description: A list of all the playbooks in RTCDP and AJO
+description: A list of all the playbooks in Real-Time Customer Data Profile and Adobe Journey Optimizer.
 ---
 
 # Available Use Case Playbooks
