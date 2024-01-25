@@ -45,7 +45,7 @@ Next, you must:
 ![The "Add Data" screen ](../../../../images/tutorials/create/braze/select_data.png)
 
 * Provide dataflow details, including information on your dataset and the schema that you are mapping to.
-![The "Dataflow Details" screen ](../../../../images/tutorials/create/braze/dataflow details.png)
+![The "Dataflow Details" screen ](../../../../images/tutorials/create/braze/dataflow_details.png)
 
 * Configure mapping for your data. 
 ![The "Mapping" screen ](../../../../images/tutorials/create/braze/mapping.png)
@@ -58,7 +58,7 @@ The **[!UICONTROL Connect to Braze]** page appears. Upload the provided. This sa
 
 ### Gather required credentials
 
-Once your connection is created, you must collect the following credential values, which you will then provide in the Braze Dashboard send data to {!DNL Platform]. Instructions for navigating to the Currents setup page can be found [https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents](here).
+Once your connection is created, you must collect the following credential values, which you will then provide in the Braze Dashboard send data to {!DNL Platform]. Instructions for navigating to the Currents setup page can be found [here](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | Field | Description |
 | ---------- | ----------- |
