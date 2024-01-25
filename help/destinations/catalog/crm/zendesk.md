@@ -42,7 +42,7 @@ The [Pricing and Rate Limits](https://developer.zendesk.com/api-reference/sales-
 
 ## Supported identities {#supported-identities}
 
-[!DNL Zendesk] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Zendesk] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Example|Description|Mandatory|
 |---|---|---|---|

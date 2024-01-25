@@ -32,7 +32,7 @@ Next, they can use their offline data including associated membership IDs and cu
 
 ## Supported identities {#supported-identities}
 
-[!DNL Facebook Custom Audiences] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Facebook Custom Audiences] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|

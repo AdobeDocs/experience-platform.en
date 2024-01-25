@@ -138,12 +138,3 @@ At `timestamp=4`, a customer uses the same tablet, logs in to their account (CRM
 ![timestamp-four](../images/identity-settings/timestamp-four.png)
 
 >[!ENDTABS]
-
-## Next steps
-
-For more information on identity graph linking rules, read the following documentation:
-
-* [Identity graph linking rules overview](./overview.md)
-* [Identity optimization algorithm](./identity-optimization-algorithm.md)
-* [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
-* [Identity Service and Real-Time Customer Profile](identity-and-profile.md)

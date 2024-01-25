@@ -40,7 +40,7 @@ Segment definitions includes information such as the name, description, expressi
 
 The first step for using external audiences is creating an identity namespace. Identity namespaces allow Platform to associate where an audience originates from.
 
-To create an identity namespace, follow the instructions in the [identity namespace guide](../../identity-service/namespaces.md#manage-namespaces). When creating your identity namespace, add the source details to the identity namespace, and mark its [!UICONTROL Type] as a **[!UICONTROL Non-people identifier]**.
+To create an identity namespace, follow the instructions in the [identity namespace guide](../../identity-service/features/namespaces.md#manage-namespaces). When creating your identity namespace, add the source details to the identity namespace, and mark its [!UICONTROL Type] as a **[!UICONTROL Non-people identifier]**.
 
 ![The Non-person identifier is highlighted on the Create identity namespace modal.](../images/tutorials/external-audiences/identity-namespace-info.png)
 
