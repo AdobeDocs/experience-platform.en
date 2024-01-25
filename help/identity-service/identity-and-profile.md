@@ -12,7 +12,7 @@ exl-id: 09961b8e-f736-4fcc-ac53-88b55cca7d55
 >
 >* Identity graph linking rules are currently in Alpha. The feature and documentation are subject to change.
 >
->* This page assumes that the merge policy is using the identity graph. For more information about merge policies in Real-Time Customer Profile, read the documentation on [merge policies and identity stitching](../../profile/merge-policies/overview.md#identity-stitching).
+>* This page assumes that the merge policy is using the identity graph. For more information about merge policies in Real-Time Customer Profile, read the documentation on [merge policies and identity stitching](../profile/merge-policies/overview.md#identity-stitching).
 
 While you can use Identity Service and Real-Time Customer Profile in tandem, the two features of Adobe Experience Platform are not inherently the same.
 
