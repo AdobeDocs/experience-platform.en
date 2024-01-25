@@ -11,7 +11,7 @@ exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
 
 Experience Cloud ID (ECID) is a shared identity namespace used across Adobe Experience Platform and Adobe Experience Cloud applications.
 
-ECID provides the foundation for customer identity. With the context of [[!DNL Identity Service]](./home.md), ECID is used as the primary ID for devices and as a base node for identity graphs.
+ECID provides the foundation for customer identity. With the context of [[!DNL Identity Service]](../home.md), ECID is used as the primary ID for devices and as a base node for identity graphs.
 
 With ECID, you can:
 
@@ -27,6 +27,6 @@ The following documentation provides further resources on understanding ECID acr
 
 * To use ECID with website implementation, see the documentation for [Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html).
 * To see how ECID is used with apps and mobile web content, see the documentation for [visitor tracking between an app and mobile web](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios).
-* Deploying these tools can be simple and easy to manage if you use [tags](../../../tags/home.md).
-* See the [Privacy Service documentation](../../../privacy-service/identity-data.md) for information on using ECID to facilitate compliance with privacy regulations like GDPR.
+* Deploying these tools can be simple and easy to manage if you use [tags](../../tags/home.md).
+* See the [Privacy Service documentation](../../privacy-service/identity-data.md) for information on using ECID to facilitate compliance with privacy regulations like GDPR.
 * For more information on ECID with the context of Platform, see the [Identity Service overview](../home.md) and the [identity namespaces overview](./namespaces.md).
