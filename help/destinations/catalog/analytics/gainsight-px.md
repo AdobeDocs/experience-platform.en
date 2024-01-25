@@ -31,9 +31,9 @@ A SaaS company wants to engage their customers via an in-application guide const
 
 Gainsight PX supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
-| Target Identity |Description| Considerations                                                                                                                                                                                                                                                                         |
-|---|---|---|
-| IdentifyID      |Custom user IDs| Use this namespace to use whatever identify is used when identifying users within PX.                                                                                                                                                                                                  |
+| Target Identity | Description                                                                                                         | 
+|---|---------------------------------------------------------------------------------------------------------------------|
+| IdentifyID      | Common User Identifier that uniquely identifies a user in Gainsight PX and Adobe Experience Platform |
 
 {style="table-layout:auto"}
 
@@ -98,8 +98,7 @@ When you are finished providing details for your destination connection, select 
 Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
 ### Map identities {#map}
-
-Use the mapping step to configure the relationship between an identity value within the Experience Platform that matches the value passed into the Gainsight PX system during the identify step.  The only restriction is that the field is of type string and the value for a particular user match exactly the value used during the Gainsight PX identify step.   The only choice on the target side of the mapping is IDENTIFY_ID.
+Within the mapping step, the only mandatory mapping is to map the User’s Identity, that’s been configured within the Experience Platform (SOURCE), to match the User’s Identity value that’s been collected within Gainsight PX (TARGET).
 ![Identity mapping screen showing how to select the source and target values for the identity](../../assets/catalog/analytics/gainsight_px/mapping_identities.png)
 
 ## Exported data / Validate data export {#exported-data}
