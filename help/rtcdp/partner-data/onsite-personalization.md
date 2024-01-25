@@ -45,7 +45,7 @@ To successfully implement this use case, you must use multiple areas of Real-Tim
   * [Tags](/help/tags/home.md)
   * [Datastreams](/help/datastreams/overview.md)
 * Data Management in Real-Time CDP
-  * [Identities](/help/identity-service/namespaces.md)
+  * [Identities](/help/identity-service/features/namespaces.md)
   * [Schemas](/help/xdm/home.md)
   * [Data usage labels](/help/data-governance/labels/overview.md)
   * [Datasets](/help/catalog/datasets/overview.md)
@@ -273,7 +273,7 @@ You are now ready to integrate with a personalization engine to display personal
 
 Note the following limitations as you explore the use case described on this page:
 
-* If you use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/ui/identity-graph-viewer.md). 
+* If you use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/features/identity-graph-viewer.md). 
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 

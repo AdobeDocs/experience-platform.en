@@ -65,7 +65,7 @@ Refer to the [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs
 
 ## Supported identities {#supported-identities}
 
-[!DNL Outreach] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Outreach] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target identity|Description|Considerations|
 |---|---|---|
