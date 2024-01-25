@@ -76,8 +76,12 @@ Also configure channels for playbooks that contain transactional messages like o
 
 ### Push channel surface
 
-Confirm that the app surfaces are configured. Next, select the channel, platforms, and apps. Submit to create the push channel surface.
+Confirm that the app surfaces are configured either from the Experience Platform or Data Collections interface. This is how app surfaces look like in the Data Collections environment. 
+
+![App surfaces in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png)
+
+Next, select the channel, platforms, and apps that you looked at in the app surface configurations. Select **Submit** to create the push channel surface.
 
 ## Next steps {#next-steps}
 
-Get started with [!UICONTROL Use Case Playbooks] and have a better understanding of how to create and configure playbooks, read how to [discover the right playbook](/help/use-case-playbooks/playbooks/discover.md) for you and then [create instances from it](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Now that you've followed all the steps in this document, you should have created a development sandbox with Use Case Playbooks available in the left navigation and you can successfully create instances of playbooks .Get started with [!UICONTROL Use Case Playbooks] and have a better understanding of how to create and configure playbooks, read how to [discover the right playbook](/help/use-case-playbooks/playbooks/discover.md) for you and then [create instances from it](/help/use-case-playbooks/playbooks/create-share-reuse.md).
