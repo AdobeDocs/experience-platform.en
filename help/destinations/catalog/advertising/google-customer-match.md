@@ -32,7 +32,7 @@ Some destinations in Experience Platform have certain rules and obligations for 
 
 ## Supported identities {#supported-identities}
 
-[!DNL Google Customer Match] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Google Customer Match] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|

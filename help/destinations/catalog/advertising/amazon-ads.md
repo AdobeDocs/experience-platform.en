@@ -32,7 +32,7 @@ To use the Amazon Ads connection with Adobe Experience Platform, users must firs
 
 ## Supported identities {#supported-identities}
 
-The *Amazon Ads* connection supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md). For more details on the identities supported by Amazon Ads, visit the [Amazon DSP Support Center](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
+The *Amazon Ads* connection supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service//features/namespaces.md). For more details on the identities supported by Amazon Ads, visit the [Amazon DSP Support Center](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
 |Target Identity|Description|Considerations|
 |---|---|---|

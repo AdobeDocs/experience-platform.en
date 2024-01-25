@@ -30,9 +30,9 @@ With [!DNL Shared Device Detection] you can:
 
 Working with [!DNL Shared Device Detection] requires an understanding of the various Platform services involved. Before beginning to work with [!DNL Shared Device Detection], please review the documentation for the following services:
 
-* [[!DNL Identity Service]](../home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
-  * [Identity graph viewer](./identity-graph-viewer.md): Visualize and interact with the identity graph viewer to better understand how customer identities are stitched together, and in what ways.
-  * [Identity namespaces](../namespaces.md): See the components of a fully qualified identity, and how identity namespaces allows you to distinguish the context and type of an identity.
+* [[!DNL Identity Service]](./home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
+  * [Identity graph viewer](./features/identity-graph-viewer.md): Visualize and interact with the identity graph viewer to better understand how customer identities are stitched together, and in what ways.
+  * [Identity namespaces](./features/namespaces.md): See the components of a fully qualified identity, and how identity namespaces allows you to distinguish the context and type of an identity.
 
 ## Understanding [!DNL Shared Device Detection]
 
@@ -68,7 +68,7 @@ Consider the following example to help your understanding of how [!DNL Shared De
 >
 >In this diagram, the Shared Identity Namespace is configured to ECID and the User Identity Namespace is configured to CRM ID.
 
-![diagram](../images/shared-device/diagram.png)
+![diagram](./images/shared-device/diagram.png)
 
 * Kevin and Nora share a tablet to visit an e-commerce website. However, they both have their own independent accounts that they each use to browse and shop online;
   * As a shared device, the tablet has a corresponding ECID, which represents the tablet's web browser cookie ID;
@@ -86,13 +86,13 @@ When [!DNL Shared Device Detection] is enabled, [!DNL Profile] defines the prima
 
 An **authenticated experience event** is an action completed by a user while logged-in to a device. For authenticated experience events, the primary identity is the **User Identity Namespace** (Login ID). An **unauthenticated experience event** is an action completed by a user who is not logged-in to a device. For unauthenticated experience events, the primary identity is the **Shared Identity Namespace** (ECID).
 
-For more information, see the  [[!DNL Real-Time Customer Profile] overview](../../profile/home.md).
+For more information, see the  [[!DNL Real-Time Customer Profile] overview](../profile/home.md).
 
 ## Shared Devices UI
 
 In the Platform UI, select **[!UICONTROL Identities]** from the left-navigation and then select **[!UICONTROL Identity settings]**.
 
-![identity-dashboard](../images/shared-device/identity-dashboard.png)
+![identity-dashboard](./images/shared-device/identity-dashboard.png)
 
 The [!UICONTROL Shared device settings] page appears, providing you with an interface to configure shared device settings for your data. Shared device settings are disabled by default.
 
@@ -100,19 +100,19 @@ When enabled, shared device settings allows data from different users of the sam
 
 Select **[!UICONTROL Enable]** to start modifying your shared device settings.
 
-![enable-shared-device](../images/shared-device/enable-shared-device.png)
+![enable-shared-device](./images/shared-device/enable-shared-device.png)
 
 The [!UICONTROL Shared Identity Namespace] and [!UICONTROL User Identity Namespace] configuration options appear, allowing you to modify the identity namespaces that you want to use.
 
-![set-namespaces](../images/shared-device/set-namespaces.png)
+![set-namespaces](./images/shared-device/set-namespaces.png)
 
 [!UICONTROL Shared Identity Namespace] represents a single device that is used by multiple different users. This namespace is always set to **[!UICONTROL ECID]** because all Platform users use **[!UICONTROL ECID]** as the web browser identifier.
 
-![shared-identity-namespace](../images/shared-device/shared-identity-namespace.png)
+![shared-identity-namespace](./images/shared-device/shared-identity-namespace.png)
 
 The [!UICONTROL User Identity Namespace] allows you to identify different users of the same device and prevent data from being combined into the same identity graph.
 
-![user-identity-namespace](../images/shared-device/user-identity-namespace.png)
+![user-identity-namespace](./images/shared-device/user-identity-namespace.png)
 
 Select the **[!UICONTROL User Identity Namespace]** search bar and either enter an identity namespace or select an identity namespace from the dropdown menu.
 
@@ -120,12 +120,12 @@ Select the **[!UICONTROL User Identity Namespace]** search bar and either enter 
 >
 >The [!UICONTROL User Identity Namespace] should be mapped to the identity namespace that corresponds to the end user's login ID. Options include customer ID, email, and hashed email.
 
-![emails](../images/shared-device/emails.png)
+![emails](./images/shared-device/emails.png)
 
 Once you have configured your [!UICONTROL Shared Device Settings], select **[!UICONTROL Save]**.
 
-![save](../images/shared-device/save.png)
+![save](./images/shared-device/save.png)
 
 A pop up window appears prompting you to confirm your selection. Select **[!UICONTROL Yes]** to complete the configuration setting.
 
-![confirm](../images/shared-device/confirm.png)
+![confirm](./images/shared-device/confirm.png)

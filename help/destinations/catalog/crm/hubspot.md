@@ -58,7 +58,7 @@ If you do not have a private app, follow the documentation to [Create a private 
 
 ## Supported identities {#supported-identities}
 
-[!DNL HubSpot] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL HubSpot] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Example|Description|Considerations|
 |---|---|---|---|

@@ -1,4 +1,8 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/identity/ui/label-identities.html,https://experienceleague.adobe.com/docs/experience-platform/identity/label-identities.html?lang=en
+https://experienceleague.adobe.com/docs/experience-platform/identity/deletion.html,https://experienceleague.adobe.com/docs/experience-platform/features/deletion.html?lang=en
+https://experienceleague.adobe.com/docs/experience-platform/identity/ui/identity-graph-viewer.html,https://experienceleague.adobe.com/docs/experience-platform/identity/features/identity-graph-viewer.html
+https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html,https://experienceleague.adobe.com/docs/experience-platform/identity/features/namespaces.html
 https://experienceleague.adobe.com/docs/experience-platform/tags/release-notes/current.html,https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html
 https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-attributes/overview.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-datasets/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-attributes/seamless-sql-flow.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-datasets/seamless-sql-flow.html
