@@ -10,7 +10,9 @@ Use the [!UICONTROL View SQL] feature to view the SQL behind your Profile, Audie
 
 Select either **[!UICONTROL Profiles]**, **[!UICONTROL Audiences]**, or **[!UICONTROL Destinations]** from the left navigation to open their respective dashboards. Next select **[!UICONTROL Overview]** from the tab options if the workspace does not automatically appear.
 
-Alternatively, select **[!UICONTROL Dashboards]** from the left navigation followed by the name of your custom dashboard. The overview of your user-defined dashboard appears.
+Alternatively, select **[!UICONTROL Dashboards]** from the left navigation followed by the name of your custom dashboard. The overview of your user-defined dashboard appears. 
+
+![The Experience Platform UI with [!UICONTROL Profiles], [!UICONTROL Audiences], [!UICONTROL Destinations], and [!UICONTROL Dashboards] highlighted.]()
 
 ## View SQL toggle {#toggle}
 
@@ -42,7 +44,7 @@ Select **[!UICONTROL Run SQL]** to open the Query Editor with the query is pre-p
 
 The Query Editor appears. You can now edit the statement and query your platform data in a fashion that better suits your reporting needs. Save your new query template with an appropriate name.
 
-![The Query Editor with your chosen insight SQL prepopulated.]()
+![The Query Editor with your chosen insight SQL prepopulated.](./images/view-sql/edit-sql.png)
 
 ## Next steps
 
