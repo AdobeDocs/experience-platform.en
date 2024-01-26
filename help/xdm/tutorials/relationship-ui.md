@@ -71,7 +71,7 @@ The reference schema "[!DNL Hotels]" is based on a custom "[!DNL Hotels]" class,
 
 >[!NOTE]
 >
->To learn how to create custom identity namespaces, refer to the [Identity Service documentation](../../identity-service/namespaces.md#manage-namespaces).
+>To learn how to create custom identity namespaces, refer to the [Identity Service documentation](../../identity-service/features/namespaces.md#manage-namespaces).
 
 ## Create a relationship field group
 

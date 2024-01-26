@@ -40,7 +40,7 @@ To view an identity graph, provide an identity namespace and its corresponding v
 
 >[!TIP]
 >
->Select the table icon ![table icon](../images/identity-graph-viewer/table-icon.png) to see a panel with a list of all identity namespaces available in your organization. You can use any of the identity namespaces as long as you have a valid identity value connected to them. For more information, read the [identity namespace guide](../namespaces.md).
+>Select the table icon ![table icon](../images/identity-graph-viewer/table-icon.png) to see a panel with a list of all identity namespaces available in your organization. You can use any of the identity namespaces as long as you have a valid identity value connected to them. For more information, read the [identity namespace guide](./namespaces.md).
 
 ![An identity namespace and its corresponding value, provided in the Identity Graph lookup screen.](../images/graph-viewer/namespace-and-value.png)
 
@@ -54,7 +54,7 @@ The identity graph displays all of the identities linked to the identity namespa
 
 >[!IMPORTANT]
 >
->An identity graph requires a minimum of two linked identities to be generated and a valid identity namespace and value combination. The maximum number of identities that the graph viewer can display is 150. See the [appendix](#appendix) section below for more information.
+>An identity graph requires a minimum of two linked identities to be generated and a valid identity namespace and value combination. The maximum number of identities that the graph viewer can display is 50. See the [appendix](#appendix) section below for more information.
 
 ![The identity graph viewer with five linked identities.](../images/graph-viewer/graph.png)
 
@@ -109,7 +109,7 @@ Errors may happen when accessing the identity graph viewer. The following is a l
 
 - An identity value must exist in the selected namespace.
 - The identity graph viewer requires a minimum of two linked identities to generate. It is possible that there is only one identity value and no linked identities, and in this case, the value would only exist in [!DNL Profile] viewer.
-- The identity graph viewer cannot exceed the maximum of 150 identities.
+- The identity graph viewer cannot exceed the maximum of 50 identities.
 
 ![error-screen](../images/graph-viewer/error-screen.png)
 

@@ -11,6 +11,11 @@ The Adobe Experience Platform Web SDK assigns [Adobe Experience Cloud IDs (ECIDs
 >
 >First-party device ID support is only available when sending data to the Platform Edge Network via the Platform Web SDK.
 
+>[!IMPORTANT]
+>
+>First-party device IDs are not compatible with the [third-party cookies](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) functionality in Web SDK.
+>You can either use first-party device IDs, or you can use third-party cookies, but you cannot use both features simultaneously.
+
 This document covers how to configure first-party device IDs for your Platform Web SDK implementation.
 
 ## Prerequisites

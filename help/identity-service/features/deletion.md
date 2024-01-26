@@ -15,23 +15,23 @@ This document provides an overview of the various mechanisms that you can use to
 
 The document below references the following features of Experience Platform:
 
-* [Identity Service](home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
-  * [Identity Graph](./ui/identity-graph-viewer.md): An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels.
-  * [Identity namespaces](namespaces.md): Identity namespaces are a component of Identity Service that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID.
-* [Catalog Service](../catalog/home.md): Explore the data lineage, metadata, file descriptions, directories, and datasets within the data lake.
-* [Data hygiene](../hygiene/home.md): Manage your stored consumer data by scheduling automated dataset expirations or or deleting individual records from one dataset or all datasets.
-* [Adobe Experience Platform Privacy Service](../privacy-service/home.md): Manage customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
-* [Real-Time Customer Profile](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
+* [Identity Service](../home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
+  * [Identity Graph](./identity-graph-viewer.md): An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels.
+  * [Identity namespaces](./namespaces.md): Identity namespaces are a component of Identity Service that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID.
+* [Catalog Service](../../catalog/home.md): Explore the data lineage, metadata, file descriptions, directories, and datasets within the data lake.
+* [Data hygiene](../../hygiene/home.md): Manage your stored consumer data by scheduling automated dataset expirations or or deleting individual records from one dataset or all datasets.
+* [Adobe Experience Platform Privacy Service](../../privacy-service/home.md): Manage customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
+* [Real-Time Customer Profile](../../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
 
 ## Single identity deletions
 
-Single identity deletion requests allow you to delete an identity within a graph, resulting in the removal of links tied to a single user identity associated to an identity namespace. Uou can use mechanisms provided by [Privacy Service](../privacy-service/home.md) for use cases such as customer requests for data deletion and compliance to privacy regulations like the General Data Protection Regulation (GDPR).
+Single identity deletion requests allow you to delete an identity within a graph, resulting in the removal of links tied to a single user identity associated to an identity namespace. You can use mechanisms provided by [Privacy Service](../../privacy-service/home.md) for use cases such as customer requests for data deletion and compliance to privacy regulations like the General Data Protection Regulation (GDPR).
 
 The sections below outline the mechanisms you can use for single identity deletion requests in Experience Platform.
 
 ### Single identity deletion in Privacy Service 
 
-Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA). With Privacy Service, you can submit job requests using the API or the UI. When Experience Platform receives a delete request from Privacy Service, Platform sends confirmation to Privacy Service that the request has been received and affected data has been marked for deletion. The deletion of the individual identity is based on provided namespace and/or ID value. Furthermore, the deletion takes place for all sandboxes associated with a given organization. For more information, read the guide on [privacy request processing in Identity Service](privacy.md).
+Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA). With Privacy Service, you can submit job requests using the API or the UI. When Experience Platform receives a delete request from Privacy Service, Platform sends confirmation to Privacy Service that the request has been received and affected data has been marked for deletion. The deletion of the individual identity is based on provided namespace and/or ID value. Furthermore, the deletion takes place for all sandboxes associated with a given organization. For more information, read the guide on [privacy request processing in Identity Service](../privacy.md).
 
 The table below provides a breakdown of single identity deletion in Privacy Service :
 
@@ -50,11 +50,11 @@ The following sections outline the mechanisms that can be used to delete dataset
 
 ### Dataset deletion in Catalog Service
 
-You can use the Catalog Service to submit requests for dataset deletion. For more information on how to delete datasets with Catalog Service, read the guide on [deleting objects using the Catalog Service API](../catalog/api/delete-object.md). Alternatively, you can use Platform UI to submit requests for dataset deletion. For more information, read the [datasets user guide](../catalog/datasets/user-guide.md#delete-a-dataset).
+You can use the Catalog Service to submit requests for dataset deletion. For more information on how to delete datasets with Catalog Service, read the guide on [deleting objects using the Catalog Service API](../../catalog/api/delete-object.md). Alternatively, you can use Platform UI to submit requests for dataset deletion. For more information, read the [datasets user guide](../../catalog/datasets/user-guide.md#delete-a-dataset).
 
 ### Dataset expirations in Data hygiene
 
-The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Adobe Experience Platform UI allows you to schedule expirations for datasets. When a dataset reaches its expiration date, the data lake, Identity Service, and Real-Time Customer Profile begin separate processes to remove the dataset's contents from their respective services. For more information, read the guide on [managing dataset expirations using the [!UICONTROL Data Hygiene] workspace](../hygiene/ui/dataset-expiration.md).
+The [[!UICONTROL Data Hygiene] workspace](../../hygiene/ui/overview.md) in the Adobe Experience Platform UI allows you to schedule expirations for datasets. When a dataset reaches its expiration date, the data lake, Identity Service, and Real-Time Customer Profile begin separate processes to remove the dataset's contents from their respective services. For more information, read the guide on [managing dataset expirations using the [!UICONTROL Data Hygiene] workspace](../../hygiene/ui/dataset-expiration.md).
 
 The table below provides a breakdown of differences between dataset deletion in Catalog Service and Data hygiene:
 
@@ -83,7 +83,7 @@ Below is an outline of the potential impacts that deletions may have on the stat
 
 ## Next steps
 
-This document covered the various mechanisms that you can use to delete identities and datasets on Experience Platform. This document also outlined how identity and dataset deletions can impact identity graphs. For more information on Identity Service, read the [Identity Service overview](home.md).
+This document covered the various mechanisms that you can use to delete identities and datasets on Experience Platform. This document also outlined how identity and dataset deletions can impact identity graphs. For more information on Identity Service, read the [Identity Service overview](../home.md).
 
 <!--
 
