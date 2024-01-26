@@ -146,10 +146,10 @@ From this view, you can select ![The inspect icon.](../images/license-usage/insp
 
 Each visualization widget includes the following aspects: 
 
-* A line graph tracking the metric change over time
-* A key for the line graph
-* The sandbox name
-* A dropdown menu to adjust the time period for the line graph
+- A line graph tracking the metric change over time
+- A key for the line graph
+- The sandbox name
+- A dropdown menu to adjust the time period for the line graph
 
 The line graphs compare usage numbers for your organization to the total available with your organization's licensing and provide a percentage of total usage.
 
