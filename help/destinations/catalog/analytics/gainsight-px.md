@@ -98,8 +98,11 @@ When you are finished providing details for your destination connection, select 
 Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
 ### Map identities {#map}
-Within the mapping step, the only mandatory mapping is to map the User’s Identity, that’s been configured within the Experience Platform (SOURCE), to match the User’s Identity value that’s been collected within Gainsight PX (TARGET).
-![Identity mapping screen showing how to select the source and target values for the identity](../../assets/catalog/analytics/gainsight_px/mapping_identities.png)
+Within the mapping step, the only mandatory mapping is to map the User’s Identity that’s been configured within the Experience Platform (SOURCE), to match the User’s Identity value that’s been collected within Gainsight PX (TARGET).
+#### Mapping Identity Namespace Example
+![Identity Namespace example mapping screen showing how to select the source and target values](../../assets/catalog/analytics/gainsight_px/mapping_identities.png)
+#### Mapping Attribute Example
+![Attribute example mapping screen showing how to select the source and target values](../../assets/catalog/analytics/gainsight_px/mapping_attribute.png)
 
 ## Exported data / Validate data export {#exported-data}
 
