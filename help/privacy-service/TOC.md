@@ -27,6 +27,7 @@ feature: Privacy
   * [Overview](./regulations/overview.md)
   * [FAQ](./regulations/faq.md)
   * [Terminology](./regulations/terminology.md)
+* [Best practices](./best-practices.md)
 * [Troubleshooting guide](./troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
 * [Release notes](./release-notes.md)

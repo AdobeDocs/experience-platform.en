@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to update an audience template through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to update an audience template through Adobe Experience Platform Destination SDK.
 title: Update an audience template
+exl-id: 8185a015-256d-46a7-af33-8475832fb6c1
 ---
-
 # Update an audience template
 
 >[!IMPORTANT]

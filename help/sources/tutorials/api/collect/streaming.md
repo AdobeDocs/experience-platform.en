@@ -476,6 +476,88 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 }
 ```
 
+## Post data for ingestion
+
+View the sample payload below for examples of raw or XDM-compliant json that you can send for ingestion.
+
+>[!NOTE]
+>
+>You must add a delay of at least ~5 minutes between creation of dataflow and ingesting any streaming data. This allows the dataflow to be fully enabled, before any data is ingested.
+
+The following examples apply to all of:
+
+- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+
+>[!BEGINTABS]
+
+>[!TAB Raw data]
+
+```json
+'{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!TAB XDM data]
+
+```json
+{
+  "header": {
+    "schemaRef": {
+      "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/73cae7e6db06ebca535cd973e3ece85e66253962f504e7d8",
+      "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+    }
+  },
+  "body": {
+    "xdmMeta": {
+      "schemaRef": {
+        "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/73cae7e6db06ebca535cd973e3ece85e66253962f504e7d8",
+        "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+      }
+    },
+    "xdmEntity": {
+      "_id": "acme",
+      "workEmail": {
+        "address": "mike@acme.com",
+        "primary": true,
+        "type": "work",
+        "status": "active"
+      },
+      "person": {
+        "gender": "male",
+        "name": {
+          "firstName": "Mike",
+          "lastName": "Wazowski"
+        },
+        "birthDate": "1985-01-01"
+      },
+      "identityMap": {
+        "ecid": [
+          {
+            "id": "01262118050522051420082102000000000000"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+>[!ENDTABS]
+
 ## Next steps
 
 By following this tutorial, you have created a dataflow to collect streaming data from your streaming connector. Incoming data can now be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:

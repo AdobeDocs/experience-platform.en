@@ -1,8 +1,8 @@
 ---
 description: Experience Platform Destination SDK uses Pebble templates, allowing you to transform the data exported from Experience Platform into the format required by your destination.
 title: Supported transformation functions in Destination SDK
+exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
 ---
-
 # Supported transformation functions in Destination SDK
 
 Experience Platform Destination SDK uses [[!DNL Pebble] templates](https://pebbletemplates.io/), allowing you to transform the data exported from Experience Platform into the format required by your destination.

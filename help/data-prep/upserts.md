@@ -6,9 +6,17 @@ exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
 ---
 # Send partial row updates to [!DNL Real-Time Customer Profile] using [!DNL Data Prep]
 
+>[!WARNING]
+>
+>Ingestion on Experience Data Model (XDM) Entity Update messages (with JSON PATCH operations) for Profile updates via the DCS inlet has been deprecated. As an alternative, you can [ingest raw data into the DCS inlet](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) and specify the necessary data mappings to transform your data into XDM-compliant messages for Profile updates.
+
 Streaming upserts in [!DNL Data Prep] allows you to send partial row updates to [!DNL Real-Time Customer Profile] data while also creating and establishing new identity links with a single API request.
 
 By streaming upserts, you can retain the format of your data while translating that data to [!DNL Real-Time Customer Profile] PATCH requests during ingestion. Based on the inputs you provide, [!DNL Data Prep] allows you to send a single API payload and translate the data to both [!DNL Real-Time Customer Profile] PATCH and [!DNL Identity Service] CREATE requests. 
+
+>[!NOTE]
+>
+>To leverage upsert functionality, it is recommended that you turn off XDM-compatible configurations during data ingestion and re-map the incoming payload using [Data Prep Mapper](./ui/mapping.md).
 
 This document provides information on how to stream upserts in [!DNL Data Prep].
 
@@ -252,7 +260,7 @@ The following outlines a list of known limitations to consider when streaming up
 
 * The streaming upserts method should only be used when sending partial row updates to [!DNL Real-Time Customer Profile]. Partial row updates are **not** consumed by data lake.
 * The streaming upserts method does not support updating, replacing, and removing identities. New identities are created if they do not exist. Hence the `identity` operation must always be set to create. If an identity already exists, the operation is a no-op.
-* The streaming upserts method currently does not support [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=en) and [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* The streaming upserts method currently does not support [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html) and [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Next steps
 

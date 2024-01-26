@@ -3,8 +3,8 @@ solution: Experience Platform
 title: Create, share, and reuse playbook instances
 description: Learn how to create, share, and reuse playbook instances to accomplish your marketing use case.
 badgeBeta: label="Beta" type="Informative"
+exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 ---
-
 # (Beta) Create, share, and reuse playbook instances
 
 >[!AVAILABILITY]
@@ -14,6 +14,11 @@ badgeBeta: label="Beta" type="Informative"
 To use a playbook, navigate to **[!UICONTROL Use Case Playbooks] > [!UICONTROL Playbooks]**. Browse and use the various searching and filtering options on the page to select and get started with a specific playbook.
 
 ## Create a playbook instance {#create-playbook-instance}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_create"
+>title="Create instance"
+>abstract="Generate a list of assets like journeys, audiences, schemas or destinations to use in journey or activation scenarios."
 
 Before creating a playbook instance, explore the available playbooks to [discover the right playbook for you](/help/use-case-playbooks/playbooks/discover.md). When you are ready to proceed with a playbook and create an instance, select **[!UICONTROL Create Instance]** to proceed with the playbook and generate technical assets.
 

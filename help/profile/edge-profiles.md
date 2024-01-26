@@ -1,8 +1,8 @@
 ---
 title: Edge Profiles
 description: Learn about edge profiles, as well as related terminology, available regions for edge profiles, as well as available services for edge profiles.
+exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
 ---
-
 # Edge profiles
 
 In Adobe Experience Platform, Real-Time Customer Profile is the single source of truth for entity data. This profile data sits in a central hub, and caters to use cases that rely on the comprehensiveness and completeness of your data. However, in more real-time use cases, where time sensitivity is more important, edge profiles are the preferred option. Edge profiles are lightweight profiles that sit on edges and help in real-time personalization use cases. 

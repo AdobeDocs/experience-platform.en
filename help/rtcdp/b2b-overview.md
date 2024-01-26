@@ -2,6 +2,8 @@
 keywords: RTCDP;CDP;B2B Edition;Real-Time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp;Customer AI
 title: Real-Time CDP B2B Edition Overview
 description: Overview of Real-Time Customer Data Platform B2B Edition Account
+feature: Get Started, B2B
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 ---
 # Real-Time Customer Data Platform B2B Edition overview

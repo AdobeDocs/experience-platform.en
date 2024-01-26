@@ -10,6 +10,34 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.19.2 - January 10, 2024
+
+**Fixes and improvements**
+
+* Fixed an issue where identity errors were masking other errors, and changed identity errors to warnings.
+* Fixed an issue where bottom of page calls would never send when there was a top of page call with renderDecisions set to false.
+* Fixed an issue where Web SDK failed to read cross domain identities when there were multiple adobe_mc query string parameters.
+
+## Version 2.19.1 - November 10, 2023
+
+**Fixes and improvements**
+
+* Fixed an issue where the propositions array returned from `sendEvent` calls was always empty.
+
+## Version 2.19.0 - November 1, 2023
+
+**New features**
+
+* Added support for rendering in-app messages from Adobe Journey Optimizer.
+* Added support for top and bottom of page events.
+* Added "defaultPersonalizationEnabled" option to the sendEvent command to control requesting the page-wide scope and default surface.
+
+**Fixes and improvements**
+
+* Combined personalization display events together when rendering multiple types of personalization.
+* Fixed an issue where single page application view names were case-sensitive.
+* Fixed an issue with shadow DOM personalized offer selectors.
+
 ## Version 2.18.0 - July 31, 2023
 
 **New features**
@@ -25,7 +53,7 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **Fixes and improvements**
 
-* The Web SDK now encodes the Audience Manager cookie destination values, similar to the [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en).
+* The Web SDK now encodes the Audience Manager cookie destination values, similar to the [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html).
 
 ## Version 2.16.0 - April 25, 2023
 

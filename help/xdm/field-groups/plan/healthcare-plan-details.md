@@ -1,6 +1,6 @@
 ---
 title: Healthcare Plan Details Schema Field Group
-description: This document provides an overview of the Healthcare Plan Details schema field group.
+description: Learn about the Healthcare Plan Details schema field group.
 exl-id: 5a480c5b-74f8-48dd-858a-5cf2628dc7f0
 ---
 # [!UICONTROL Healthcare Plan Details] schema field group

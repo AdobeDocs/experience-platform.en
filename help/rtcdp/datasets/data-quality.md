@@ -2,6 +2,7 @@
 keywords: data quality;rtcdp data quality
 title: Data Quality in Real-Time Customer Data Platform
 description: A document on data quality on Adobe Real-Time Customer Data Platform
+feature: Get Started, Data Ingestion, Best Practices
 exl-id: 1d1b0bf9-1011-4053-8f8a-7a141febd000
 ---
 # Data quality in Real-Time Customer Data Platform

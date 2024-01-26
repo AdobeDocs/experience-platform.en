@@ -79,8 +79,8 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Alerts] | [!UICONTROL Manage Alerts] | Access to read, create, edit, and delete alerts history. |
 | [!DNL Computed Attributes] | [!UICONTROL View Computed attributes] | Read-only access for computed attributes tab, inventory, and details. |
 | [!DNL Computed Attributes] | [!UICONTROL Manage Computed attributes] | Access to read, create, delete drafts, and deactivate computed attributes. |
-| [!DNL Data Hygiene] | [!UICONTROL View Data Hygiene] | Read-only access for data hygiene.|
-| [!DNL Data Hygiene] | [!UICONTROL Manage Data Hygiene] | Access to read, create, edit, and delete data hygiene. |
+| [!DNL Data Lifecycle] | [!UICONTROL View Data Lifecycle] | Read-only access for data lifecycle.|
+| [!DNL Data Lifecycle] | [!UICONTROL Manage Data Lifecycle] | Access to read, create, edit, and delete data lifecycle. |
 | [!DNL Data Modeling] | [!UICONTROL Manage Schemas] | Access to read, create, edit, and delete schemas and related resources. |
 | [!DNL Data Modeling] | [!UICONTROL View Schemas] | Read-only access to schemas and related resources. |
 | [!DNL Data Modeling] | [!UICONTROL Manage Relationships] | Access to read, create, edit, and delete schema relationships. |
@@ -106,18 +106,18 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Sandbox Administration] | [!UICONTROL Manage Sandboxes] | Access to read, create, edit, and delete sandboxes. |
 | [!DNL Sandbox Administration] | [!UICONTROL View Sandboxes] | Read-only access for sandboxes belonging to your organization. |
 | [!DNL Sandbox Administration] | [!UICONTROL Reset a Sandbox] | Ability to reset a sandbox. |
-| [!DNL Destinations] | [!UICONTROL Manage Destinations] | Access to read, create, and delete destination activation flows and destination accounts. |
-| [!DNL Destinations] | [!UICONTROL View Destinations] | Read-only access to available destinations in the **[!UICONTROL Catalog]** tab and authenticated destinations in the **[!UICONTROL Browse]** tab. |
-| [!DNL Destinations] | [!UICONTROL Activate Destinations] | Gives users the ability to activate segments to existing destinations. Enables the mapping step in the activation workflow. This permission requires either [!UICONTROL View Destinations] or [!UICONTROL Manage Destinations] to be granted to the user who will activate data to destinations. |
-| [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | Gives users the ability to activate segments to existing destinations, without displaying the [mapping step](../destinations/ui/activate-batch-profile-destinations.md#mapping). Users can add and remove segments in activation workflows, but cannot add or remove mapped attributes or identities. This permission requires the [!UICONTROL Activate Destinations] permission to be granted to the user who will activate data to destinations. |
-| [!DNL Destinations] | [!UICONTROL Manage and Activate Dataset Destinations] | Ability to read, create, edit, and disable dataset export flows. Ability to also activate data to active datasets that have been created. |
+| [!DNL Destinations] | [!UICONTROL View Destinations] | Read-only access to view available destinations in the **[!UICONTROL Catalog]** tab and authenticated destinations in the **[!UICONTROL Browse]** tab. |
+| [!DNL Destinations] | [!UICONTROL Manage Destinations] | Access to read, create, and delete destination connections and destination accounts. |
+| [!DNL Destinations] | [!UICONTROL Activate Destinations] | Gives users the ability to activate segments to existing destinations. Enables the mapping step in the activation workflow. This permission also requires the [!UICONTROL View Destinations] permission to be granted to the user who will activate data to destinations. |
+| [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | Gives users the ability to activate segments to existing destinations, without displaying the [mapping step](../destinations/ui/activate-batch-profile-destinations.md#mapping). Users can add and remove segments in activation workflows, but cannot add or remove mapped attributes or identities. This permission also requires the [!UICONTROL View Destinations] permission to be granted to the user who will activate data to destinations. |
+| [!DNL Destinations] | [!UICONTROL Manage and Activate Dataset Destinations] | Ability to read, create, edit, and disable dataset export flows. Ability to also activate data to active datasets that have been created. This permission also requires the [!UICONTROL View Destinations] permission to be granted to the user who will activate data to destinations. |
 | [!DNL Destinations] | [!UICONTROL Destination Authoring] | Ability to author destinations using [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Access to read, create, edit, and disable sources. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Access to create, accept, and decline partner handshakes to connect two organizations and enable [!DNL Segment Match] flows. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Access to read, create, edit, and publish [!DNL Segment Match] feeds with active partners. |
 | [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
-| Data Governance | [!UICONTROL Apply Data Usage Labels] | Access to read, create, and delete usage labels. |
+| Data Governance | [!UICONTROL Manage Usage Labels] | Access to read, create, and delete usage labels. |
 | Data Governance | [!UICONTROL Manage Data Usage Policies] | Access to read, create, edit, and delete data usage policies. |
 | Data Governance | [!UICONTROL View Data Usage Policies] | Read-only access for data usage policies belonging to your organization. |
 | Data Governance | [!UICONTROL View User Activity Log] | Read-only access to view recorded [audit logs](../landing/governance-privacy-security/audit-logs/overview.md) of Platform activities. |

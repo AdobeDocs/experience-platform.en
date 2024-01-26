@@ -30,7 +30,7 @@ To increase the rate of speed of ingestion on the Platform side, Platform must i
 
 ## Use a virtual network to connect to [!DNL Event Hubs] to Platform
 
-You can set up a virtual network to connect [!DNL Event Hubs] to Platform while having your firewall measures enabled. To set up a virtual network, head to this [[!DNL Event Hubs] network rule set document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) and follow the steps listed below:
+You can set up a virtual network to connect [!DNL Event Hubs] to Platform while having your firewall measures enabled. To set up a virtual network, head to this [[!DNL Event Hubs] network rule set document](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) and follow the steps listed below:
 
 * Select **Try It** from the REST API panel; 
 * Authenticate your [!DNL Azure] account using your credentials in the same browser;
@@ -111,7 +111,7 @@ See the list below for different regions of Platform subnets:
 }
 ```
 
-See the following [[!DNL Event Hubs] document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) for more information on network rule sets.
+See the following [[!DNL Event Hubs] document](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) for more information on network rule sets.
 
 ## Connect [!DNL Event Hubs] to Platform
 

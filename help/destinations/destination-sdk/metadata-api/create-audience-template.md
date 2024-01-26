@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to create an audience template through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to create an audience template through Adobe Experience Platform Destination SDK.
 title: Create an audience template
+exl-id: 98d30002-d462-4008-9337-7de0cd608194
 ---
-
 # Create an audience template
 
 >[!IMPORTANT]
