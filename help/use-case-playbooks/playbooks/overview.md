@@ -14,24 +14,23 @@ What you'll find in this documentation guide:
 * [Get started](/help/use-case-playbooks/playbooks/get-started.md)
 * [Discover the right playbook](/help/use-case-playbooks/playbooks/discover.md)
 * [Create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md)
+* [Data awareness](/help/use-case-playbooks/playbooks/data-awareness.md)
 * [Troubleshooting and known limitations](troubleshooting.md)
 
 >[!ENDSHADEBOX]
 
 ## Overview {#overview}
 
-With [!UICONTROL Use Case Playbooks], benefit from automated workflows to help your data engineering team implement a use case faster. Browse the available playbooks in the **[!UICONTROL Use Case Playbooks]** section to get started with various use cases that can accelerate your adoption of Experience Platform. Use Case Playbooks are beneficial in dealing with the "cold start" or "blinking cursor" problem, where we help you get started by:
+[!UICONTROL Use Case Playbooks] can help you overcome the problem when getting started with Real-Time CDP or Adobe Journey Optimizer when you might not know exactly what to begin with or how to create the right assets in order to achieve your desired use cases. Use Case Playbooks can help you here by:
 
 * Showing you use cases for inspiration
-* Creating different assets for you to use
+* Creating different assets for you to use, test, and promote to production when ready.
 
 ![View of all playbooks](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 
 Each playbook includes information about the specific use case that it solves. 
 
 For example, if you select a Real-Time CDP playbook, your objective might be to generate audiences that you can then map to a destination to run a marketing campaign. If you select an Adobe Journey Optimizer playbook, your objective might be to construct a customer journey within your product, and send relevant messaging to your customers.
-
-If you select an Adobe Journey Optimizer playbook, your objective might be to construct a customer journey within your product, and send relevant messaging to your customers.  
 
 Create an instance of a playbook to generate specific assets like schemas, audiences, or journeys that are tailored to your use case and are reusable in Experience Platform. The purpose of these objects is to help you understand all the resources that are required to implement your specific use case. They do not contain any data and are created on development sandboxes. Start using these assets or make edits to them before using them and sharing them with your team in Real-Time CDP or Journey Optimizer. Promote the desired assets from the inspirational sandbox to a development sandbox and then further to a production sandbox.
 
@@ -41,7 +40,7 @@ Some [!UICONTROL Use Case Playbooks] are tailored to Real-Time CDP use cases whi
 
 ## UI guides {#ui-guides}
 
-After you decide on the playbook that you want to use, select it from the UI and get started with it. Read the UI guides on [how to discover the right playbook](/help/use-case-playbooks/playbooks/discover.md) for you and [how to create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md) for complete information on how to create instances and make the most of a playbook. To learn how to promote various assets from the inspirational sandbox to other development sandboxes, and then to production, read the documentation on [data awareness](/help/use-case-playbooks/playbooks/data-awareness.md)
+After you decide on the playbook that you want to use, select it from the UI and get started with it. Read the UI guides on [how to discover the right playbook](/help/use-case-playbooks/playbooks/discover.md) for you and [how to create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md) for complete information on how to create instances and make the most of a playbook. To learn how to promote various assets from the inspirational sandbox to other development sandboxes, and then to production, read the documentation on [data awareness](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Troubleshooting and known limitations {#trouble-shooting-known-limitations}
 

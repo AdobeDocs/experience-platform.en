@@ -11,7 +11,7 @@ Learn how to set up your account for Use Case Playbooks, designed for Real-Time 
 
 * Create a sandbox 
 * Configure user permissions
-* Configure Journey Optimizer channel surfaces for e-mail, push, and SMS notifications.
+* Configure Journey Optimizer channel surfaces for e-mail, push, and SMS notifications (if you plan on using Journey Optimizer playbooks).
 
 ## Configure Use Case Playbooks - Video walkthrough {#video}
 
@@ -37,11 +37,11 @@ To get started with [!UICONTROL Use Case Playbooks], members of your marketing t
 
 **Required permissions**
 
-To add the required permissions, include the new use case playbook sandbox in roles that you've already configured, including those used for other development sandboxes. Alternatively, you could also consider adding new role(s) with [the required permissions](/help/access-control/home.md#sandboxes-and-permissions).
+To add the required permissions, in the Permissions UI, include the new use case playbook sandbox in roles that you've already configured, including those used for other development sandboxes. Alternatively, you could also consider adding new roled with [the required permissions](/help/access-control/home.md#sandboxes-and-permissions).
 
 <!-- ![Required permissions](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
-**Setting up a role for Playbooks:**
+**Set up a role for Playbooks:**
 
 [Set up a new role](/help/access-control/abac/ui/permissions.md) with the necessary permissions for essential playbook tasks. Create the role and add the new sandbox to it, as shown below.
 
@@ -67,7 +67,7 @@ In order to be sure that you can create all these assets, this is a snapshot of 
 
 <!-- ![Snapshot of all the permission items needed to create all instances of the playbooks](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
-**Adding users to the role**
+**Add users to the role**
 
 Add yourself as a user to this role. If you create a pared-down role for another set of users with view-only access, include only the necessary view items associated with these permissions.
 
@@ -86,11 +86,11 @@ To create instances of playbooks in Journey Optimizer, you need to configure cha
 
 ### E-mail channel surface
 
-Go to `Channels` in the Journey Optimizer interface. Configure separate subdomains and IP pools for marketing emails and transactional messaging, if not already configured. These are best practices to ensure that transactional messages such as order confirmation e-mails, get through to your customers. Enter names, email addresses, and additional settings. Select **Submit** at the top-right of the page to create the marketing channel surface. Read the documentation on [how to set up e-mail channel surfaces](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=en)
+Go to `Channels` in the Journey Optimizer interface. Configure separate subdomains and IP pools for marketing emails and transactional messaging, if not already configured. These are best practices to ensure that transactional messages such as order confirmation e-mails, get through to your customers. Enter names, email addresses, and additional settings. Select **Submit** at the top-right of the page to create the marketing channel surface. Read the documentation on [how to set up e-mail channel surfaces](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=en).
 
 ### SMS channel surface
 
-To create an SMS channel surface, first create an SMS API credential, and select the preferred vendor (for example, Sinch). Name the SMS channel surface (for example, SMS Marketing), select the configuration, and enter a sender number. Select **Submit** at the top-right of the page to save the SMS channel surface. Read the documentation on [how to set up SMS channel surfaces](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=en#message-preset-sms)
+To create an SMS channel surface, first create an SMS API credential, and select the preferred vendor (for example, Sinch). Name the SMS channel surface (for example, SMS Marketing), select the configuration, and enter a sender number. Select **Submit** at the top-right of the page to save the SMS channel surface. Read the documentation on [how to set up SMS channel surfaces](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=en#message-preset-sms).
 
 Also configure channels for playbooks that contain transactional messages like order confirmations.
 
@@ -102,7 +102,7 @@ Confirm that the app surfaces are configured either from the Experience Platform
 
 Next, select the channel, platforms, and apps that you looked at in the app surface configurations. Select **Submit** to create the push channel surface.
 
-Read the documentation on [how to set up push channel surfaces](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=en)
+Read the documentation on [how to set up push channel surfaces](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=en).
 
 ## Next steps {#next-steps}
 
