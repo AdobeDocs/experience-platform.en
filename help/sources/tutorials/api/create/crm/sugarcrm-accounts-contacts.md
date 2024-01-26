@@ -345,6 +345,8 @@ A successful response returns a structure as below.
 
 >[!TAB Contacts]
 
+A successful response returns a structure as below. 
+
 ```json
 {
     "format": "hierarchical",

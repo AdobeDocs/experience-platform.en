@@ -16,7 +16,7 @@ Depending on your enterprise data collection strategy, the data fields you label
 
 ## Create additional identity namespaces
 
-While Experience Platform offers a variety of standard namespaces, you may need to create additional namespaces to properly categorize your identities. For more information, read the guide on [creating custom namespaces for your organization](./namespaces.md).
+While Experience Platform offers a variety of standard namespaces, you may need to create additional namespaces to properly categorize your identities. For more information, read the guide on [creating custom namespaces for your organization](./features/namespaces.md).
 
 >[!NOTE]
 >
@@ -39,6 +39,8 @@ For example, by labeling phone number fields as identity fields, Identity Servic
 >
 >* Array and map type fields are not supported and cannot be marked and labeled as identity fields.
 >* The namespace of resulting identities is provided at the time the field is labeled.
+
+For more information, read the guide the guide on [defining identity fields in the UI](../xdm/ui/fields/identity.md).
 
 ## Configure a dataset for Identity Service
 

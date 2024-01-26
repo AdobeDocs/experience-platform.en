@@ -13,7 +13,7 @@ Now, instead of five separate customers interacting with your brand across five 
 
 ## Identity namespaces
 
-Identity namespaces are a component of [!DNL Identity Service] and serve as indicators providing additional context to customer identities. An example of a commonly used ID namespace would be "Email", where the use of the same email address across multiple websites allows you to stitch together several different identities, each with a unique customer ID, as actually belonging to the same customer. [!DNL Experience Platform] allows you to use ID namespaces to search for individual profiles within the user interface. For more information on viewing profiles, please see the [profile browse overview](profile-browse.md). To learn more about identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md).
+Identity namespaces are a component of [!DNL Identity Service] and serve as indicators providing additional context to customer identities. An example of a commonly used ID namespace would be "Email", where the use of the same email address across multiple websites allows you to stitch together several different identities, each with a unique customer ID, as actually belonging to the same customer. [!DNL Experience Platform] allows you to use ID namespaces to search for individual profiles within the user interface. For more information on viewing profiles, please see the [profile browse overview](profile-browse.md). To learn more about identity namespaces, see the [identity namespace overview](../../identity-service/features/namespaces.md).
 
 ## Identity graphs
 

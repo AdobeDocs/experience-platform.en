@@ -66,7 +66,7 @@ Refer to the [!DNL Marketing Cloud Account Engagement] [rate limits](https://dev
 
 ## Supported identities {#supported-identities}
 
-[!DNL Marketing Cloud Account Engagement] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Marketing Cloud Account Engagement] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 | Target Identity | Description | Considerations |
 |---|---|---|

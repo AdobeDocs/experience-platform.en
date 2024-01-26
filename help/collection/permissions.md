@@ -28,7 +28,7 @@ Permissions under Adobe Experience Platform include access to datastreams, ident
 | Sandboxes | (N/A) | Depending on the [sandboxes](../sandboxes/home.md) that have been created under your organization, you can control access to each of them through this permission category in Admin Console. |
 | Data Modeling | Manage Schemas | Grants the ability to view, create, and edit [Experience Data Model (XDM) schemas](../xdm/home.md). |
 | Data Modeling | View Schemas | Grants read-only access to schemas. |
-| Identity Management | Manage Identity Namespaces | Grants the ability to view, create, and edit [identity namespaces](../identity-service/namespaces.md). |
+| Identity Management | Manage Identity Namespaces | Grants the ability to view, create, and edit [identity namespaces](../identity-service/features/namespaces.md). |
 | Identity Management | View Identity Namespaces | Grants read-only access to identity namespaces. |
 | Data Collection | Manage Datastreams | Grants the ability to view, create, and edit [datastreams](../datastreams/overview.md). |
 | Data Collection | View Datastreams | Grants read-only access to datastreams. |
