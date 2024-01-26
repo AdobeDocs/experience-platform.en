@@ -1,14 +1,14 @@
 ---
 solution: Experience Platform
-title: Use case playbooks in Real-Time Customer Data Platform and Adobe Journey Optimizer. 
+title: Available Use Case Playbooks for Real-Time Customer Data Platform and Adobe Journey Optimizer. 
 description: A list of all the playbooks in Real-Time Customer Data Platform and Adobe Journey Optimizer.
 ---
 
 # Available Use Case Playbooks
 
-The purpose of this page is to maintain a list of all the available use case playbooks in Real-time Customer Data Platform and Adobe Journey Optimizer. 
+Read this page to get an overview of all the available playbooks that you can discover and use in Real-time Customer Data Platform and Adobe Journey Optimizer.
 
-## Use Case Playbooks in Journey Optimizer
+## Use Case Playbooks in Journey Optimizer {#optimizer-playbooks}
 
 | Playbook name |  Description |
 | ------------- |  ----------- |
@@ -44,7 +44,7 @@ The purpose of this page is to maintain a list of all the available use case pla
 
 {style="table-layout:auto"}
 
-## Use Case Playbooks in Real-time Customer Data Platform
+## Use Case Playbooks in Real-time Customer Data Platform {#rtcdp-playbooks}
 
 | Playbook name | Description |
 | ------------- | ----------- |
@@ -65,4 +65,4 @@ The purpose of this page is to maintain a list of all the available use case pla
 
 ## Next steps
 
-Now that you are aware of the available playbooks, you can go to the [discover guide](/help/use-case-playbooks/playbooks/discover.md) to find the appropriate playbook for your use case.
+Now that you are aware of the available playbooks, read the [discover guide](/help/use-case-playbooks/playbooks/discover.md) to understand how to get started with the playbooks in the user interface.

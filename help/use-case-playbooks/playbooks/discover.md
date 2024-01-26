@@ -38,7 +38,6 @@ The mindmap starts with a definition of who is reached in the user journey and d
 
 ![Playbook mindmap highlighted.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
 
-
 ### Summary {#summary}
 
 Inspect the summary section to understand which assets are generated once you create instances from the playbook. The assets that get generated for each playbook are tailored to the use case that the playbook enables. Get more information below about all the items in the summary section.

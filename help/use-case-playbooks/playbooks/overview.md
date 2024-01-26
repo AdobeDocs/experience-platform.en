@@ -26,20 +26,20 @@ With [!UICONTROL Use Case Playbooks], benefit from automated workflows to help y
 
 Each playbook includes information about the specific use case that it solves. 
 
-If you select a Real-Time CDP playbook, your objective might be to generate audiences that you can then map to a destination to run a marketing campaign. 
+For example, if you select a Real-Time CDP playbook, your objective might be to generate audiences that you can then map to a destination to run a marketing campaign. If you select an Adobe Journey Optimizer playbook, your objective might be to construct a customer journey within your product, and send relevant messaging to your customers.
 
 If you select an Adobe Journey Optimizer playbook, your objective might be to construct a customer journey within your product, and send relevant messaging to your customers.  
 
-Create an instance of a playbook to generate specific assets like schemas, segments, or journeys that are tailored to your use case and are reusable in Experience Platform. The purpose of these objects is to help you understand all the resources that are required to implement your specific use case. They do not contain any data and are created on development sandboxes. Start using these assets or make edits to them before using them and sharing them with your team in Real-Time CDP or Journey Optimizer. 
+Create an instance of a playbook to generate specific assets like schemas, audiences, or journeys that are tailored to your use case and are reusable in Experience Platform. The purpose of these objects is to help you understand all the resources that are required to implement your specific use case. They do not contain any data and are created on development sandboxes. Start using these assets or make edits to them before using them and sharing them with your team in Real-Time CDP or Journey Optimizer. Promote the desired assets from the inspirational sandbox to a development sandbox and then further to a production sandbox.
 
-## Availability
+## Availability {#availability}
 
-Some [!UICONTROL Use Case Playbooks] are tailored to Real-Time CDP use cases while others are best suited for customers using Journey Optimizer. Browse the catalog to find the playbooks best suited to your product and use case.
+Some [!UICONTROL Use Case Playbooks] are tailored to Real-Time CDP use cases while others are best suited for customers using Journey Optimizer. Browse the catalog to find the playbooks best suited to your product and use case. Use Case Playbooks are available for all editions and all tiers of Real-Time CDP and Adobe Journey Optimizer (Yes for all for CDP but not sure for AJO - check with Rohit).
 
-## UI guides
+## UI guides {#ui-guides}
 
-After you decide on the playbook that you want to use, select it from the UI and get started with it. Read the UI guides on [how to discover the right playbook](/help/use-case-playbooks/playbooks/discover.md) for you and [how to create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md) for complete information on how to create instances and make the most of a playbook.  
+After you decide on the playbook that you want to use, select it from the UI and get started with it. Read the UI guides on [how to discover the right playbook](/help/use-case-playbooks/playbooks/discover.md) for you and [how to create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md) for complete information on how to create instances and make the most of a playbook. To learn how to promote various assets from the inspirational sandbox to other development sandboxes, and then to production, read the documentation on [data awareness](/help/use-case-playbooks/playbooks/data-awareness.md)
 
-## Troubleshooting and known limitations
+## Troubleshooting and known limitations {#trouble-shooting-known-limitations}
 
 For any issues you may come across while using the playbooks, refer to the [troubleshooting and known limitations](/help/use-case-playbooks/playbooks/troubleshooting.md) page.
