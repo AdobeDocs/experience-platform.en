@@ -20,7 +20,10 @@ What you'll find in this documentation guide:
 
 ## Overview {#overview}
 
-With [!UICONTROL Use Case Playbooks], benefit from automated workflows to help your data engineering team implement a use case faster. Browse the available playbooks in the **[!UICONTROL Use Case Playbooks]** section to get started with various use cases that can accelerate your adoption of Experience Platform. 
+With [!UICONTROL Use Case Playbooks], benefit from automated workflows to help your data engineering team implement a use case faster. Browse the available playbooks in the **[!UICONTROL Use Case Playbooks]** section to get started with various use cases that can accelerate your adoption of Experience Platform. Use Case Playbooks are beneficial in dealing with the "cold start" or "blinking cursor" problem, where we help you get started by:
+
+* showing you use cases for inspiration
+* creating different assets for you to use
 
 ![View of all playbooks](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 
