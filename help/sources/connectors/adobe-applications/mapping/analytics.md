@@ -227,7 +227,7 @@ To learn more about performing these transformations using Query Service, see [A
 | `post_latitude` | `placeContext.geo._schema.latitude` | number |   <!-- MISSING --> |
 | `post_longitude` | `placeContext.geo._schema.longitude` | number |   <!-- MISSING --> | 
 | `post_page_event` | `web.webInteraction.type` | string | The type of hit that is sent in the image request (standard hit, download link, exit link, or custom link clicked). |
-| `post_page_event` | `web.webInteraction.linkClicks.value` | number | Equals 1 if the event is a link click. This is similar to the Page Events metric in Adobe Analytics. |
+| `post_page_event` | `web.webInteraction.linkClicks.value` | number | Equals 1 if the hit is a link click. This is similar to the Page Events metric in Adobe Analytics. |
 | `post_page_event_var1` | `web.webInteraction.URL` | string | This variable is only used in link tracking image requests. It is the URL of the download link, exit link, or custom link clicked. |
 | `post_page_event_var2` | `web.webInteraction.name` | string | This variable is only used in link tracking image requests. It is the custom name of the link. |
 | `post_page_type` | `web.webPageDetails.isErrorPage` | boolean | This is used to populate the Pages Not Found dimension. This variable should either be empty or contain "ErrorPage" |
