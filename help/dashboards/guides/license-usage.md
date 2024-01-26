@@ -70,7 +70,7 @@ The table indicates the primary metric for each product, as each product can tra
 
 >[!AVAILABILITY]
 >
->* The functionality to predicts future license usage is currently in Beta. The documentation and the functionality are subject to change.
+>The functionality to predicts future license usage is currently in Beta. The documentation and the functionality are subject to change.
 
 Use the predicted usage capability to proactively manage and optimize your licensing resources based on insightful predictions. The [!UICONTROL Predicted Usage] column accurately predicts future license usage at various levels (organization-level, sandbox-level, or dataset-level). This alerting capability provides a forecast of license usage for six months in the future, based on your usage up to that month.
 
@@ -82,8 +82,9 @@ Use the predicted usage capability to proactively manage and optimize your licen
 
 Use the granular predictions available on the Overview, Summary, and Details dashboards to ensure informed decision-making for efficient license utilization. Usage predictions are available for your product, sandbox, and the individual metrics used at the sandbox level.
 
+<!--
 Each prediction has a lower & an upper bound. 
-<!-- Q) Is this accurate? This does not seem to be true.  -->
+Q) Is this accurate? This does not seem to be true.  -->
 
 #### Sandbox level predictions {#sandbox-predictions} 
 
@@ -97,17 +98,17 @@ The [!UICONTROL Details] tab displays sandbox level predictions as a separate co
 
 The predicted usage feature supports for the following metrics:
 
-* Addressable audience
-* Average profile richness
-* Total storage
-* Audience activation size
-* Data export size
-* Data scanned
-* Count of emails in the last 30 days
-* Lookalike audiences
-* Rows available
-* Compute hours
-* Computed attributes
+- Addressable audience
+- Average profile richness
+- Total storage
+- Audience activation size
+- Data export size
+- Data scanned
+- Count of emails in the last 30 days
+- Lookalike audiences
+- Rows available
+- Compute hours
+- Computed attributes
 
 ## [!UICONTROL Summary] tab {#summary-tab}
 
