@@ -37,13 +37,13 @@ To get started with [!UICONTROL Use Case Playbooks], members of your marketing t
 
 **Required permissions**
 
-To add the required permissions, include the new use case playbook sandbox in roles that you've already configured, including those used for other development sandboxes. Alternatively, you could also consider adding new role(s) with [the required permissions - herv]().
+To add the required permissions, include the new use case playbook sandbox in roles that you've already configured, including those used for other development sandboxes. Alternatively, you could also consider adding new role(s) with [the required permissions](/help/access-control/home.md#sandboxes-and-permissions).
 
 <!-- ![Required permissions](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
 **Setting up a role for Playbooks:**
 
-Set up a new role with the necessary permissions for essential playbook tasks. Create the role and add the new sandbox to it, as shown below. [ask herv where can I link to create a new role ...doc]()
+[Set up a new role](/help/access-control/abac/ui/permissions.md) with the necessary permissions for essential playbook tasks. Create the role and add the new sandbox to it, as shown below.
 
 <!-- ![Create a role and add it to the Sandbox](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
