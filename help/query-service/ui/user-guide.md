@@ -197,7 +197,7 @@ The [!DNL Query Editor] provides a save function that allows you to save a query
 >
 >Queries named and saved in using the Query Editor are available as templates within the Query dashboard [!UICONTROL Templates] tab. See the [templates documentation](./query-templates.md) for more information.
 
-When you save a query in the Query Editor, a confirmation message pops up to notify you of the successful action. This popup message caontains a link thast provides a convenient way to navigate to the queries scheduling workspace. See the [schedule queries documentation](./query-schedules.md) to learn how to run queries on a custom cadence.
+When you save a query in the Query Editor, a confirmation message pops up to notify you of the successful action. This popup message contains a link that provides a convenient way to navigate to the queries scheduling workspace. See the [schedule queries documentation](./query-schedules.md) to learn how to run queries on a custom cadence.
 
 ### Scheduled queries {#scheduled-queries}
 
