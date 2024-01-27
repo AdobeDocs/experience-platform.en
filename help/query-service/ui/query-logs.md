@@ -5,6 +5,8 @@ exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
 ---
 # Query logs
 
+<!-- ... check and update all screenshots. Check for Run as CTAS funstionality -->
+
 >[!IMPORTANT]
 >
 >Certain query logs features are currently in a limited release and not available to all customers. Your UI may appear slightly differently without an edit icon. Also, the process of selecting a query name may to navigate to the Query Editor instead of the [!UICONTROL Query log details] view.

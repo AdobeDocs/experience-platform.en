@@ -5,6 +5,8 @@ exl-id: 4640afdd-b012-4768-8586-32f1b8232879
 ---
 # Monitor scheduled queries
 
+<!-- ... Check and update all screenshots -->
+
 Adobe Experience Platform provides improved visibility for the status of all query jobs through the UI. From the [!UICONTROL Scheduled Queries] tab, you can now find important information about your query runs that includes the status, schedule details, and error messages/codes should they fail. You can also subscribe to alerts for queries based on their status through the UI for any of these queries through [!UICONTROL Scheduled Queries] tab.
 
 ## [!UICONTROL Scheduled Queries] 
@@ -58,6 +60,8 @@ Toggle the relevant checkboxes to remove or add a table column. Next, select **[
 ## Manage scheduled queries with inline actions {#inline-actions}
 
 The [!UICONTROL Scheduled Queries] view offers various inline actions to manage all of your scheduled queries from one location. Inline actions are indicated in each row with ellipsis. Select the ellipsis of a scheduled query that you want to manage to see the available options in a pop-up menu. The available options include [[!UICONTROL Disable schedule]](#disable) or [!UICONTROL Enable schedule], [[!UICONTROL Delete schedule]](#delete), and [[!UICONTROL Subscribe]](#alert-subscription) to query alerts.
+
+<!-- ... update screenshots to include new inline action Icons -->
 
 ![The Scheduled Queries tab with the inline action ellipses and popup menu highlighted.](../images/ui/monitor-queries/disable-inline.png)
 

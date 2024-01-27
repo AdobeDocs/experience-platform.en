@@ -21,6 +21,10 @@ You can create query templates through two methods, either by making a POST requ
 
 See the documentation for instructions on how to use the Query Editor to [write](./user-guide.md#query-authoring) and [save queries](./user-guide.md#saving-queries). Once you have named and saved your query, it is available to be reused as a query template from the [!UICONTROL Templates] tab.
 
+<!-- ... Add in info about the toast message when you save a query - you can quick link to schedule it from the toast message.
+
+Add screenshot of the toast message. Link to Schedule queries doc -->
+
 ## Browse query templates {#browse}
 
 From the Queries workspace of the Platform UI, select **[!UICONTROL Templates]** to display the list of available saved queries.
@@ -29,11 +33,18 @@ From the Queries workspace of the Platform UI, select **[!UICONTROL Templates]**
 
 To find relevant template information, select any query template from the available list to open the details panel.
 
+<!-- ... update screenshot to show Run as CTAS -->
+
 ![The details panel in the queries workspace with the query ID highlighted.](../images/ui/query-templates/details-panel.png)
 
 From the details panel you can execute four separate actions:
 
-* Select **[!UICONTROL Output dataset]** to edit the output dataset for the selected template.
+<!-- Change this below: ...
+* Select **[!UICONTROL Run as CTAS]** to create a new table by selecting data from an existing table or tables. This option is only available if you have a SELECT query.
+-->
+
+* Select **[!UICONTROL Add schedule]** to navigate to the [!UICONTROL Schedules] tab and create a schedule for your query template. <!-- or begin editing your schedule right away? -->
+
 * Select **[!UICONTROL View schedule]** to navigate to the [!UICONTROL Schedules] tab. This view contains any schedule information associated with the query.
 * Select **[!UICONTROL Delete query]** to delete the template.
 * Select the template name to navigate to the Query Editor where the SQL is pre-populated for editing. 
