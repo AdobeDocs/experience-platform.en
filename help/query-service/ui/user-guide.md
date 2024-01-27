@@ -54,8 +54,6 @@ Using [!DNL Query Editor], you can write, execute, and save queries for customer
 
 A UI toggle allows you to switch between the legacy and enhanced version of the Query Editor. The legacy version is enabled by default, although the enhanced version provides better accessibility and multi-theming support. Enable the enhanced version to access to the Query Editor settings.
 
-<!-- .. UPdate screenshot to include new QE features -->
-
 ![The Query Editor with the enhanced Query Editor toggle highlighted.](../images/ui/query-editor/enhanced-query-editor-toggle.png)
 
 Activating the toggle switches the editor to light theme and improves the legibility of your syntax. A settings icon also appears above the Query Editor input field that incorporates the auto-complete toggle. From the settings icon, you can enable dark theme or disable/enable auto-complete.
@@ -137,6 +135,10 @@ The [!DNL Query Editor] automatically suggests potential SQL keywords along with
 
 The auto-complete configuration setting is per user and remembered for the consecutive logins for that user.
 
+>[!NOTE]
+>
+>The syntax autocomplete toggle is only available for the legacy version of the Query Editor.
+
 ![Query Editor with the syntax auto-complete toggle highlighted.](../images/ui/query-editor/auto-complete-toggle.png)
 
 Disabling this feature stops several metadata commands from being processed and providing recommendations that typically benefit the speed of the author when editing queries.
@@ -161,9 +163,13 @@ To disable the auto-complete feature, select the appropriate confirmation option
 
 [!DNL Query Editor] automatically validates a query as you write it, providing generic SQL validation and specific execution validation. If a red underline appears below the query (as shown in the image below), it represents an error within the query.
 
+<!-- ... Image below needs updating couldn't replicate the effect -->
+
 ![The Query Editor input displaying SQL underlined in red to indicate an error.](../images/ui/query-editor/syntax-error-highlight.png)
 
 When errors are detected, you can view the specific error messages by hovering over the SQL code.
+
+<!-- ... Image below needs updating couldn't replicate the effect -->
 
 ![A dialog with an error message.](../images/ui/query-editor/linting-error.png)
 
