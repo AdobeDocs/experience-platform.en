@@ -5,7 +5,7 @@ badge: Beta
 ---
 # Create a [!DNL Braze] source connection in the UI
 
-[!DNL Braze] powers customer-centric interactions between consumers and brands in real-time. [!DNL Braze Currents] is a real-time data stream of engagement events from the Braze platform that is the most robust, yet granular export out of the [!DNL Braze] platform. 
+[!DNL Braze] powers customer-centric interactions between consumers and brands in real-time. [!DNL Braze Currents] is a real-time data stream of engagement events from the Braze platform that is the most robust yet granular export out of the [!DNL Braze] platform. 
 
 Read the following tutorial to learn how to bring engagement events data from your [!DNL Braze] account to Adobe Experience Platform in the UI.
 
@@ -37,12 +37,12 @@ Under the *Marketing Automation* category, select **[!UICONTROL Braze]**, and th
 
 ![The sources catalog on the Experience Platform UI with the Braze Currents source selected.](../../../../images/tutorials/create/braze/catalog.png)
 
-Next, upload the provided [Braze Currents sample file](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json). This file contains all possible fields that Braze might send as part of an event.
+Next, upload the provided [Braze Currents sample file](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json). This file contains all possible the fields that Braze might send as part of an event.
 
 ![The "Add Data" screen.](../../../../images/tutorials/create/braze/select-data.png)
 
 Once your file is uploaded, you must provide your dataflow details, including information on your dataset and the schema that you are mapping to.
-![The "Dataflow Details" screen.](../../../../images/tutorials/create/braze/dataflow-detail.png)
+![The "Dataflow Details" screen highlighting "Dataset details."](../../../../images/tutorials/create/braze/dataflow-detail.png)
 
 Then, configure mapping for your data using the mapping interface.
 
@@ -50,13 +50,13 @@ Then, configure mapping for your data using the mapping interface.
 
 >[!IMPORTANT]
 >
->Braze timestamps are measured in seconds and not milliseconds. Therefore, you must create calculated fields in milliseconds to properly reflect the timestamps in Experience Platform. A calculation of "time * 1000" will properly convert to milliseconds, suitable for mapping to a timestamp field within [!DNL Platform].
+>Braze timestamps are not expressed in milliseconds, but rather in seconds. In order for the timestamps in Experience Platform to be accurately reflected, you need to create calculated fields in milliseconds. A calculation of "time * 1000" will properly convert to milliseconds, suitable for mapping to a timestamp field within Experience Platform.
 >
 >![Creating a calculated field for timestamp ](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
 ### Gather required credentials
 
-Once your connection is created, you must collect the following credential values, which you will then provide in the Braze Dashboard send data to [!DNL Platform]. For more information, read the [!DNL Braze] [guide on navigating to Currents](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Once your connection is created, you must collect the following credential values, which you will then provide in the Braze Dashboard to send data to [!DNL Platform]. For more information, read the [!DNL Braze] [guide on navigating to Currents](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | Field | Description |
 | ---------- | ----------- |
