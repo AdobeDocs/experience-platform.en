@@ -36,7 +36,7 @@ The following table shows a possible Adobe API service for various media analyti
 
 >[!NOTE]
 >
-> The Media Collection API service for Analtyics still receives XDM data, but is not optimized for it to the extent that Media Edge service is. Depending on the data sent from the Media Player, some Analytics-only data can also be routed through the Media Edge API service. 
+> The Media Collection API service for Analytics still receives XDM data, but is not optimized for it to the extent that Media Edge service is. Depending on the data sent from the Media Player, some Analytics-only data can also be routed through the Media Edge API service. 
 
 The following graphic shows the data flows for the two API services:
 
