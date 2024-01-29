@@ -4,6 +4,7 @@ title: Getting started with Media Edge APIs
 description: Getting started with Media Edge APIs
 exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
 ---
+
 # Media Edge API getting started
 
 This guide provides instructions for making successful initial interactions with the Media Edge API service. This includes starting a media session and then tracking events that are sent to an Adobe Experience Platform solution such as Customer Journey Analytics (CJA). The Media Edge API service is initiated with the Session Start endpoint. Once the session is started, one or more of the following events can be tracked:
@@ -36,12 +37,12 @@ This guide shows how to track the following events after starting the session:
 
 ## Implementing the API {#implement-api}
 
-Apart from minor differences in the model and paths called, the Media Edge API has the same implementation as the [Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en). The implementation details of Media Collection remain valid for Media Edge API, as described in the following documentation:
+Apart from minor differences in the model and paths called, the Media Edge API has the same implementation as the [Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html). The implementation details of Media Collection remain valid for Media Edge API, as described in the following documentation:
 
-* [Setting the HTTP request type in your player](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
-* [Sending ping events](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
-* [Timeout conditions](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html?lang=en)
-* [Controlling the order of events](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html?lang=en)
+* [Setting the HTTP request type in your player](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
+* [Sending ping events](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
+* [Timeout conditions](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html)
+* [Controlling the order of events](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html)
 
 ## Authorization {#authorization}
 
@@ -54,7 +55,7 @@ To start the media session on the server, use the Session Start endpoint. A succ
  
 Before making the session start request, you will need the following:
 
-* The `datastreamId`--a required  parameter for the POST Session Start request. To retrieve a `datastreamId`, see [Configure a datastream](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en).
+* The `datastreamId`--a required  parameter for the POST Session Start request. To retrieve a `datastreamId`, see [Configure a datastream](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html).
 
 * A JSON object for the request payload that contains the minimum data required (as shown in the example request below).
 

@@ -3,16 +3,12 @@ title: Parameterized Queries
 description: Learn how to use parameterized queries in the Adobe Experience Platform UI.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
 ---
-# Parameterized queries (limited release) {#parameterized-queries}
+# Parameterized queries {#parameterized-queries}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
 >title="Parameterized queries"
 >abstract="Use parameterized queries to add parameter values at the time of execution. This allows you to work with dynamic data and reuse queries for different use cases. Use the `'$'` preface to enter a query parameter into your query in the text editor. Next, add a value for the key in the Query parameters section below the editor."
-
->[!IMPORTANT]
->
->The parameterized query UI feature is available in a **limited release only** and is not available to all customers.
 
 Query Service supports the use of parameterized queries in the Query Editor. With parameterized queries, you can now use placeholders for parameters and add the parameter values at execution time. Placeholders allow you to work with dynamic data where you don't know what the values will be until the statement is executed. You can also prepare your queries ahead of time and reuse them for similar purposes. Reusing queries saves considerable effort as you avoid creating distinct SQL queries for each use case.
 
@@ -22,7 +18,7 @@ Before continuing with this guide, read the [Query Editor UI guide](./user-guide
 
 >[!NOTE]
 >
->Within the Adobe Experience Platform UI, parameterized queries are only supported at the parent level of inline templates. This means that parameterized queries only work when used in the original template. Child templates must be a static template and cannot have dynamic parameters. See the [inline templates documentation](../essential-concepts/inline-templates.md) to learn more.
+>Within the Adobe Experience Platform UI, parameterized queries are only supported at the parent level of inline templates. This means that parameterized queries only work when used in the original template. Child templates must be a static template and cannot have dynamic parameters. See the [inline templates documentation](../key-concepts/inline-templates.md) to learn more.
 
 ## Parameterized query syntax {#syntax}
 

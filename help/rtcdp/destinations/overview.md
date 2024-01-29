@@ -2,6 +2,7 @@
 keywords: rtcdp destinations;destinations rtcdp;real time customer data platform destinations
 title: Destinations in Real-Time Customer Data Platform
 description: This document provides an overview of Destinations in Adobe Experience Platform
+feature: Destinations, Integrations
 exl-id: 82f4bad2-a0e7-4f49-ac2f-412b5c5c35f3
 ---
 # Destinations in Real-Time Customer Data Platform

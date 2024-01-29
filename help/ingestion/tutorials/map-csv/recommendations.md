@@ -66,6 +66,10 @@ The ML models are run to generate a new schema based on your dataflow configurat
 
 ![The [!UICONTROL Mapping] step in the UI, showing all CSV fields mapped and the resulting schema structure.](../../images/tutorials/map-csv-recommendations/schema-generated.png)
 
+>[!NOTE]
+>
+>You can filter all fields in your schema based on a variety of criteria during the source-to-target field mapping workflow. The default behavior is to display all mapped fields. To change the displayed fields, select the filter icon next to the search input field and choose from the dropdown options.<br> ![The mapping stage fo the CSV to XDM schema creation workflow with teh filter icon and dropdown menu highlighted.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "The mapping stage fo the CSV to XDM schema creation workflow with teh filter icon and dropdown menu highlighted."){width="100" zoomable="yes"}
+
 From here, you can optionally [edit the field mappings](#edit-mappings) or [alter the field groups they are associated with](#edit-schema) according to your needs. When satisfied, select **[!UICONTROL Finish]** to complete the mapping and initiate the dataflow you configured earlier. The CSV data is ingested into the system and populates a dataset based on the generated schema structure, ready to be consumed by downstream Platform services.
 
 ![The [!UICONTROL Finish] button being selected, completing the CSV mapping process.](../../images/tutorials/map-csv-recommendations/finish-mapping.png)

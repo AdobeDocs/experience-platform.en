@@ -1,6 +1,6 @@
 ---
 title: Product Class
-description: This document provides an overview of the Product class in Experience Data Model (XDM).
+description: Learn about the Product class in Experience Data Model (XDM).
 exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
 ---
 # [!UICONTROL Product] class

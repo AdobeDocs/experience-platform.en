@@ -14,6 +14,7 @@ solution: Experience Platform
 type: Documentation
 index: yes
 role: Architect, Developer, Data Architect, Data Engineer, User, Admin, Leader
+auto-video-transcripts: true
 ---
 
 # Metadata for internal use

@@ -114,9 +114,9 @@ The [Operating system](https://experienceleague.adobe.com/docs/analytics/compone
 
 ### Audience Manager traits relying on high entropy client hints {#aam}
 
-[!DNL Google] has updated the [!DNL Chrome] browser functionality to minimize the information collected via the `User-Agent` header. As a result, Audience Manager customers using [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) will no longer receive reliable information for traits based on [platform-level keys](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=en).
+[!DNL Google] has updated the [!DNL Chrome] browser functionality to minimize the information collected via the `User-Agent` header. As a result, Audience Manager customers using [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html) will no longer receive reliable information for traits based on [platform-level keys](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
 
-Audience Manager customers who use platform-level keys for targeting must switch to [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=en) instead of [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en), and enable [High Entropy  Client Hints](#enabling-high-entropy-client-hints) to continue receiving reliable trait data.
+Audience Manager customers who use platform-level keys for targeting must switch to [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html) instead of [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html), and enable [High Entropy  Client Hints](#enabling-high-entropy-client-hints) to continue receiving reliable trait data.
 
 ## Enabling high entropy client hints {#enabling-high-entropy-client-hints}
 

@@ -1,14 +1,15 @@
 ---
 title: Exploratory Data Analysis
 description: Learn how to use Data Distiller to explore and analyze data from a Python notebook.
+exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
 ---
 # Exploratory data analysis
 
-This document provides some basic examples and best practices for using Data Distiller to explore and analyze data from a Python notebook.
+This document provides some basic examples and best practices for using Data Distiller to explore and analyze data from a [!DNL Python] notebook.
 
 ## Getting Started
 
-Before you continue with this guide, ensure that you have created a connection to Data Distiller in your Python notebook. See the documentation for instructions on how to [connect a Python notebook to Data Distiller](./establish-connection.md).
+Before you continue with this guide, ensure that you have created a connection to Data Distiller in your [!DNL Python] notebook. See the documentation for instructions on how to [connect a [!DNL Python] notebook to Data Distiller](./establish-connection.md).
 
 ## Acquire basic statistics {#basic-statistics}
 
@@ -35,7 +36,7 @@ df
 
 ## Create a sampled version of large datasets {#create-dataset-sample}
 
-If the dataset you wish to query is very large, or if exact results from exploratory queries are not necessary, use the [sampling functionality](../../essential-concepts/dataset-samples.md) available for Data Distiller queries. This is a two-step process:
+If the dataset you wish to query is very large, or if exact results from exploratory queries are not necessary, use the [sampling functionality](../../key-concepts/dataset-samples.md) available for Data Distiller queries. This is a two-step process:
 
 - First, **analyze** the dataset to create a sampled version with a specified sampling ratio
 - Next, query the sampled version of the dataset. Depending on the functions you apply to the sampled dataset, you may wish to scale the output to the numbers to the full dataset
@@ -84,7 +85,7 @@ sample_table_name = df_samples[df_samples["sampling_rate"] == sampling_rate]["sa
 count_query=f'''SELECT count(*) as cnt from {sample_table_name}'''
 
 df = qs_cursor.query(count_query, output="dataframe")
-# divide by the sampling rate to extrapolate to the full dataset
+# Divide by the sampling rate to extrapolate to the full dataset
 approx_count = df["cnt"].iloc[0] / (sampling_rate / 100)
 
 print(f"Approximate count: {approx_count} using {sampling_rate *10}% sample")
@@ -131,7 +132,7 @@ funnel_df
 
 ### Plot query results {#plot-results}
 
-Next, plot the query results using the Python `plotly` library:
+Next, plot the query results using the [!DNL Python] `plotly` library:
 
 ```python
 import plotly.express as px
@@ -242,7 +243,7 @@ corrdf.fillna(0)
 | 10  |  `webForms_webPageViews`  |  0.000000  |  webPageViews   | 0.000000 |
 
 
-Finally, you can visualize the correlations with the `matplotlib` Python library:
+Finally, you can visualize the correlations with the `matplotlib` [!DNL Python] library:
 
 ```python
 import matplotlib.pyplot as plt
@@ -255,4 +256,4 @@ ax.set_title("Pearson Correlation of Events with the outcome event")
 
 ## Next Steps
 
-By reading this document, you have learned how to use Data Distiller to explore and analyze data from a Python notebook. The next step in creating feature pipelines from Experience Platform to feed custom models in your machine learning environment is to [engineer features for machine learning](./feature-engineering.md).
+By reading this document, you have learned how to use Data Distiller to explore and analyze data from a [!DNL Python] notebook. The next step in creating feature pipelines from Experience Platform to feed custom models in your machine learning environment is to [engineer features for machine learning](./feature-engineering.md).

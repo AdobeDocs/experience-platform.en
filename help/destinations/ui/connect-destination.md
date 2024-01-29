@@ -1,5 +1,4 @@
 ---
-keywords: connect destination;destination connect;how to connect destination
 title: Create a new destination connection
 type: Tutorial
 description: Learn how to connect to a destination in Adobe Experience Platform, enable alerts, and set up marketing actions for your connected destination.
@@ -9,8 +8,8 @@ exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 
 >[!IMPORTANT]
 > 
->* To connect to a destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
->* To connect to a destination that supports dataset exports, you need the **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To connect to a destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To connect to a destination that supports dataset exports,  you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ## Overview {#overview}
 
@@ -78,9 +77,9 @@ For file-based destinations, you can configure various settings related to how t
 
 ![Image showing the file type selection and various options for CSV files.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Set up destination connection for audience activation, prospects activation, or dataset exports {#segment-activation-or-dataset-exports}
+### Set up destination connection for audience activation, account activation, prospects activation, or dataset exports {#segment-activation-or-dataset-exports}
 
-Some file-based destinations support audience activation to known customers or prospects, as well as dataset exports. For those destinations, you can choose whether to create a connection that enables you to [activate audiences](/help/destinations/ui/activate-batch-profile-destinations.md), [prospects](/help/destinations/ui/activate-prospect-audiences.md), or [export datasets](/help/destinations/ui/export-datasets.md).
+Some file-based destinations support audience activation to known customers, account customers, or prospects, as well as dataset exports. For those destinations, you can choose whether to create a connection that enables you to [activate audiences](/help/destinations/ui/activate-batch-profile-destinations.md), [accounts](/help/destinations/ui/activate-account-audiences.md), [prospects](/help/destinations/ui/activate-prospect-audiences.md), or [export datasets](/help/destinations/ui/export-datasets.md).
 
 >[!WARNING]
 >

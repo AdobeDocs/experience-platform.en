@@ -10,7 +10,7 @@ exl-id: 9e45416d-b951-411c-a59f-34f84529f721
 
 [!DNL Bizible] is the industry-leading B2B attribution solution that gives you unparalleled visibility into your data, so you can make smart decisions that power growth.
 
-[!DNL Bizible] is an email extension in Adobe Experience Platform. For more information about Bizible, read [Marketing Attribution](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=en) in the Bizible overview resources.
+[!DNL Bizible] is an email extension in Adobe Experience Platform. For more information about Bizible, read [Marketing Attribution](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html) in the Bizible overview resources.
 
 This destination is a tag extension. For more information about how tags extensions work in Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 

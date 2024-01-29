@@ -1,6 +1,6 @@
 ---
 title: XDM Business Opportunity Person Relation Class
-description: This document provides an overview of the XDM Business Opportunity Person Relation class in Experience Data Model (XDM).
+description: Learn about the XDM Business Opportunity Person Relation class in Experience Data Model (XDM).
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
 ---
 # [!UICONTROL XDM Business Opportunity Person Relation] class
