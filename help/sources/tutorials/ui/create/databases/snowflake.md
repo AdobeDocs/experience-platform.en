@@ -30,7 +30,7 @@ You must provide values for the following credential properties to authenticate 
 
 | Credential | Description |
 | ---------- | ----------- |
-| Account | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `orgname-account_name`. For more information on account names, read the [!DNL Snowflake] documentation on [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html).|
+| Account | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `orgname-account_name`. For more information on account names, read the [!DNL Snowflake] documentation on [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization).|
 | Warehouse | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Platform. |
 | Database | The [!DNL Snowflake] database contains the data you want to bring the Platform. |
 | Username | The username for the [!DNL Snowflake] account. |
@@ -44,7 +44,7 @@ To use key-pair authentication, you must generate a 2048-bit RSA key pair and th
 
 | Credential | Description |
 | --- | --- |
-| Account | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `orgname-account_name`. For more information on account names, read the [!DNL Snowflake] documentation on [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
+| Account | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `orgname-account_name`. For more information on account names, read the [!DNL Snowflake] documentation on [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | Username | The username of your [!DNL Snowflake] account. |
 | Private key | The [!DNL Base64-]encoded private key of your [!DNL Snowflake] account. You can generate either encrypted or unencrypted private keys. If you are using an encrypted private key, then you must also provide a private key passphrase when authenticating against Experience Platform. |
 | Private key passphrase | The private key passphrase is an additional layer of security that you must use when authenticating with an encrypted private key. You are not required to provide the passphrase if you are using an unencrypted private key. |
