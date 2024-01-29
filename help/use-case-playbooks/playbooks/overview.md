@@ -34,9 +34,13 @@ For example, if you select a Real-Time CDP playbook, your objective might be to 
 
 Create an instance of a playbook to generate specific assets like schemas, audiences, or journeys that are tailored to your use case and are reusable in Experience Platform. The purpose of these objects is to help you understand all the resources that are required to implement your specific use case. They do not contain any data and are created on development sandboxes. Start using these assets or make edits to them before using them and sharing them with your team in Real-Time CDP or Journey Optimizer. Promote the desired assets from the inspirational sandbox to a development sandbox and then further to a production sandbox.
 
+Watch this video to learn how to discover, create, publish, and troubleshoot an instance of a Use Case Playbook from end-to-end.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427058/?learn=on)
+
 ## Availability {#availability}
 
-Some [!UICONTROL Use Case Playbooks] are tailored to Real-Time CDP use cases while others are best suited for customers using Journey Optimizer. Browse the catalog to find the playbooks best suited to your product and use case. Use Case Playbooks are available for all editions and all tiers of Real-Time CDP and Adobe Journey Optimizer (Yes for all for CDP but not sure for AJO - check with Rohit).
+Some [!UICONTROL Use Case Playbooks] are tailored to Real-Time CDP use cases while others are best suited for customers using Journey Optimizer. Browse the catalog to find the playbooks best suited to your product and use case. Use Case Playbooks are available for all editions and all tiers of Real-Time CDP and Adobe Journey Optimizer.
 
 ## UI guides {#ui-guides}
 

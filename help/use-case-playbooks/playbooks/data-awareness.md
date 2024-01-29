@@ -44,7 +44,7 @@ Creating an instance generates a set of assets such as journeys, segments, schem
 
     >[!NOTE]
     >
-    > You can import packages only into other development sandboxes. The production sandbox is disabled for such imports.
+    > You can import packages only into other development sandboxes. Once you make all the necessary changes or updates, then you can import the assets or packages from those development sandboxes into production. You cannot import directly from the Use Case Playbooks sandboxes to production. 
 
 6. In the **[!UICONTROL View dependencies]** step, you can map schemas and copy other assets from the inspirational sandbox into the target sandbox. The **[!UICONTROL Finish]** button is disabled until you map each schema.
 

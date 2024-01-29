@@ -43,7 +43,7 @@ To add the required permissions, in the Permissions UI, include the new use case
 
 **Set up a role for Playbooks:**
 
-[Set up a new role](/help/access-control/abac/ui/permissions.md) with the necessary permissions for essential playbook tasks. Create the role and add the new sandbox to it, as shown below.
+[Set up a new role](/help/access-control/abac/ui/permissions.md) with the necessary permissions for essential playbook tasks. Create a role and add the new sandbox to it, as shown below.
 
 <!-- ![Create a role and add it to the Sandbox](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
@@ -69,14 +69,7 @@ In order to be sure that you can create all these assets, this is a snapshot of 
 
 **Add users to the role**
 
-Add yourself as a user to this role. If you create a pared-down role for another set of users with view-only access, include only the necessary view items associated with these permissions.
-
-To get started with [!UICONTROL Use Case Playbooks], grant permissions to your marketing operations team as needed:
-
-* Marketing operations team members who only want to browse the playbooks can get **View** permission.
-* Marketing operations team members who want to create instances from playbooks can get **Manage** permissions.
-
-You can also choose to add the sandbox to existing roles or create a new role with the required permissions.
+Once you've created a new role as referenced above, add yourself as a user to it. If you create a pared-down role for another set of users with view-only access, include only the necessary view items associated with these permissions.
 
 ## Configure sandbox and channel surfaces in Journey Optimizer {#configure-channel-surfaces}
 
