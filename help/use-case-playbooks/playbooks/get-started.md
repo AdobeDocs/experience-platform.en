@@ -33,11 +33,11 @@ If you do not see [!UICONTROL Playbooks] in the left rail as shown above, use th
 
 ## Grant your team the required access permissions {#grant-access-permissions}
 
-To get started with [!UICONTROL Use Case Playbooks], members of your marketing team will need the right permissions so that they can view the list of created playbooks or create playbooks themselves. 
+To get started with [!UICONTROL Use Case Playbooks], members of your marketing team need the right permissions so that they can view the list of created playbooks or create playbooks themselves. 
 
 **Required permissions**
 
-To add the required permissions, in the Permissions UI, include the new use case playbook sandbox in roles that you've already configured, including those used for other development sandboxes. Alternatively, you could also consider adding new roled with [the required permissions](/help/access-control/home.md#sandboxes-and-permissions).
+To add the required permissions, in the Permissions UI, include the new use case playbook sandbox in roles that you've already configured, including those used for other development sandboxes. Alternatively, you could also consider adding new roles with [the required permissions](/help/access-control/home.md#sandboxes-and-permissions).
 
 <!-- ![Required permissions](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
@@ -53,15 +53,15 @@ As a part of Use Case Playbooks, you'll create various assets like schemas, audi
 
 **Permissions for schemas**
 
-To create schemas, utilize data modeling items to view and manage schemas. Also, allow the attachment of identities to schema fields.
+To create schemas, utilize the data modeling items to view and manage schemas. Also, allow the attachment of identities to schema fields.
 
 **Permissions for destinations**
 
-To create destinations, you need THIS permission.
+To create destinations, use the Destinations permissions items.
 
 **Permissions for journeys**
 
-To create journeys, you need THIS permission.
+To create journeys, you need the Journeys permissions items.
 
 In order to be sure that you can create all these assets, this is a snapshot of the permissions that we recommend that your users or roles should have. 
 
