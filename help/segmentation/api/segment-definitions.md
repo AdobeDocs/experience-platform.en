@@ -147,6 +147,10 @@ A successful response returns HTTP status 200 with a list of segment definitions
 
 You can create a new segment definition by making a POST request to the `/segment/definitions` endpoint.
 
+>[!IMPORTANT]
+>
+>Segment definitions created through the API **cannot** be edited using Segment Builder.
+
 **API format**
 
 ```http

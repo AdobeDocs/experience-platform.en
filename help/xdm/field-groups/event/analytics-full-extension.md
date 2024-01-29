@@ -1,6 +1,6 @@
 ---
 title: Adobe Analytics ExperienceEvent Full Extension Schema Field Group
-description: This document provides an overview of the Adobe Analytics ExperienceEvent Full Extension schema field group.
+description: Learn about the Adobe Analytics ExperienceEvent Full Extension schema field group.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
 ---
 # [!UICONTROL Adobe Analytics ExperienceEvent Full Extension] schema field group

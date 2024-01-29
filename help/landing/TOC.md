@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Overview
 breadcrumb-title: Experience Platform overview
-user-guide-description: Learn how Experience Platform can deliver personalized experiences to your customers in real time.
+user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real time with guides, documentation, and tutorials.
 ---
 
 # Adobe Experience Platform overview {#landing}
@@ -68,6 +68,9 @@ user-guide-description: Learn how Experience Platform can deliver personalized e
 * License usage and guardrails {#license}
   * [Data management license entitlement best practices](./license-usage-and-guardrails/data-management-best-practices.md)    
   * [License usage dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)
+  * [Adobe Journey Optimizer guardrails](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+  * [Customer Journey Analytics guardrails](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+  * [Real-Time CDP guardrails](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Troubleshooting guide](troubleshooting.md)
 * [Gen2 data lake migration](adls2-gen2-migration.md)
 * [Glossary](glossary.md)

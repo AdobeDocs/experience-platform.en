@@ -9,9 +9,8 @@ exl-id: add83773-dad7-4abe-9740-a69eb8fadbc3
 ---
 # Install Platform Debugger
 
-Adobe Experience Platform Debugger can be installed in Google Chrome or Mozilla Firefox browsers Follow the appropriate link below to install the extension on your preferred browser:
+Adobe Experience Platform Debugger can be installed in the Google Chrome browser. Follow the link below to install the extension on your browser:
 
 * [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
-* [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
 
-After you install the Chrome extension or Firefox add-on, an icon (![](images/start-icon.jpg)) is added to the extension bar. Select this icon to open the extension.
+After you install the Chrome extension, an icon (![](images/start-icon.jpg)) is added to the extension bar. Select this icon to open the extension.

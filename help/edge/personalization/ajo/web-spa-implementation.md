@@ -1,8 +1,8 @@
 ---
 title: Single-page application implementation
 description: Learn how to implement SPA views in Adobe Journey Optimizer
+exl-id: 1883251b-2d59-46d3-ac74-b8657edd0325
 ---
-
 # Implement single-page applications (SPAs) {#web-spa-implementation}
 
 Adobe Experience Platform Web SDK provides rich features that equip your business to execute personalization on next-generation, client-side technologies, such as single-page applications (SPAs).
@@ -87,7 +87,7 @@ This section outlines two examples showing how to invoke the `sendEvent()` funct
 
 The marketing team want to run A/B tests on the entire home page.
 
-![](assets/web-spa-home.png)
+![Single-page application sample page.](assets/web-spa-home.png)
 
 To run A/B tests on the whole home site, `sendEvent()` must be invoked with the XDM `viewName` set to `home`:
 
@@ -133,7 +133,7 @@ history.listen(onViewChange);
 
 The marketing team want to personalize the second row of products by changing the price label color to red after a user clicks to see all Men products.
 
-![](assets/web-spa-men-products.png)
+![Single-page application sample page with personalized products.](assets/web-spa-men-products.png)
 
 ```js
 function onViewChange(viewName) {

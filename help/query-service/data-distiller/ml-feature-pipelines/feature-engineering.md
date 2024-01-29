@@ -1,6 +1,7 @@
 ---
 title: Engineer Features for Machine Learning
 description: Learn how to transform data in Adobe Experience Platform into features or variables that can be consumed by a machine learning model. Use Data Distiller to compute ML features at scale and share those features with your machine learning environment.
+exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
 ---
 # Engineer features for machine learning
 
@@ -61,7 +62,7 @@ Number of classes: 50000
 
 ### Aggregate events to define features for ML {#define-features}
 
-The following query aggregates the events in the dataset into meaningful, numerical features that can be used to train a propensity model:
+With an appropriate query you can gather the events in the dataset into meaningful, numerical features that can be used to train a propensity model. Example events are seen below:
 
 - **Number of emails** that were sent for marketing purposes and received by the user.
 - Portion of these emails that were **opened**.
@@ -77,6 +78,8 @@ The following query aggregates the events in the dataset into meaningful, numeri
 - Number of minutes between two propositions that were interacted with.
 - Number of minutes between two propositions that were dismissed.
 - Number of minutes between two links that were selected.
+
+The following query aggregates these events:
 
 +++Select to view example query
 

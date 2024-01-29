@@ -61,9 +61,9 @@ The integration with Event Quality Match Score (EMQ) allows you to easily view t
 
 ## Integration with LiveRamp (Alpha) {#alpha}
 
-The integration with LiveRamp adds new fields to the Meta Conversions API rule configuration, making it easier for customers to integrate with LiveRamp Conversions API. This integration eliminates the need for you to share PII directly with your partner or Meta. Due to the robust identity graph of LiveRamp, the inclusion of [!UICONTROL Partner ID (alpha)] may improve integration quality by boosting the user match rate.
+[!DNL LiveRamp] customers who have [!DNL LiveRamp]'s Authenticated Traffic Solution (ATS) deployed on their sites may opt to share RampIDs as a customer information parameter. Please work with your [!DNL Meta] account team to join the Alpha program for this feature.
 
-![The Meta even forwarding [!UICONTROL Rule] configuration page highlighting [!UICONTROL Partner Name (alpha)] and [!UICONTROL Partner ID (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
+![The Meta event forwarding [!UICONTROL Rule] configuration page highlighting [!UICONTROL Partner Name (alpha)] and [!UICONTROL Partner ID (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Configure an event forwarding rule {#rule}
 
@@ -108,6 +108,12 @@ When sending shared events, make sure that you are including an event ID and nam
 >
 >* The quick start feature is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Please contact your Adobe representative for more information.
 >* This feature is for net new implementations and does not currently support auto installing extensions and configurations on existing tags and event forwarding properties. 
+
+>[!NOTE]
+>
+>Any existing client can use the quick start workflows to create a reference implementation that can be used for the following:
+>* Use it as the start of a brand new implementation. 
+>* Take advantage of it as a reference implementation that you can examine to see how it has been configured and then replicate in your current production implementations.
 
 The quick start feature helps you get set up with ease and efficiency with the Meta Conversions API and the Meta Pixel extensions. This tool automates multiple steps that are performed in Adobe tags and event forwarding, significantly reducing the set up time.
 

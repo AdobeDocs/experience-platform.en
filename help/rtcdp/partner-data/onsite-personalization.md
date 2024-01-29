@@ -1,9 +1,10 @@
 ---
-title: Use Partner-Aided Visitor Recognition to Personalize Onsite Experiences
+title: Personalize onsite experiences for unknown visitors using partner-aided visitor recognition
 description: Learn how to use partner-aided visitor recognition to deliver personalized onsite experiences to your visitors.
+feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
 ---
-# Use partner-aided visitor recognition to personalize onsite experiences
+# Personalize onsite experiences for unknown visitors using partner-aided visitor recognition
 
 >[!AVAILABILITY]
 >
@@ -11,7 +12,15 @@ exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
 
 Learn how to use partner-aided recognition to deliver personalized experiences to your web property visitors. Use this tutorial to understand the implementation sequence of various elements in Experience Platform and other Experience Cloud solutions to display a personalized experience to authenticated and unauthenticated visitors.
 
-![An infographic that describes how to use partner-provided attributes to deliver personalized experiences to your visitors.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
+![An infographic that describes how to use partner-provided attributes to deliver personalized experiences to your visitors.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png)
+
+## Why consider this use case {#why-this-use-case}
+
+Fragmentation of digital experiences as consumers interact with brands in myriad ways is very real and is becoming increasingly harder to solve for. The best customer engagement strategies for cohesive experiences, targeted recommendations, and tailor-made interactions are all constrained by user recognition. 
+
+This is where partner-aided real-time recognition can make a meaningful difference. Adobe allows identity partners to plug into our sophisticated client-side data collection and market-leading experience optimization offerings, to effectively raise the bar on experience delivery from the first visit onwards, without prior history or authentication. 
+
+This is especially valuable to verticals that have low authentication rates, like Consumer Packaged Goods, on-line retail, and more.
 
 ## Industry example {#industry-example}
 
@@ -24,7 +33,7 @@ This brand chooses to leverage partner recognition technology to probabilistical
 When planning to use partner-provided attributes to deliver personalized experiences to your authenticated and unauthenticated visitors, consider the following prerequisites in your planning process:
 
 * What inputs are expected by your partner's recognition technology so they can layer on additional attributes?
-* To what extent are you comfortable delivering personalization in different channels and for different use cases based on probabilistically derived attributes, versus deterministically confirmed attributes?
+* To what extent are you comfortable delivering personalization in different channels and for different use cases based on probabilistically derived datasets, versus deterministically confirmed attributes?
 * How should the experience for a pre-authenticated but recognized visitor change when they authenticate?
 
 ### UI functionality, Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}
@@ -36,7 +45,7 @@ To successfully implement this use case, you must use multiple areas of Real-Tim
   * [Tags](/help/tags/home.md)
   * [Datastreams](/help/datastreams/overview.md)
 * Data Management in Real-Time CDP
-  * [Identities](/help/identity-service/namespaces.md)
+  * [Identities](/help/identity-service/features/namespaces.md)
   * [Schemas](/help/xdm/home.md)
   * [Data usage labels](/help/data-governance/labels/overview.md)
   * [Datasets](/help/catalog/datasets/overview.md)
@@ -264,7 +273,7 @@ You are now ready to integrate with a personalization engine to display personal
 
 Note the following limitations as you explore the use case described on this page:
 
-* If you use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/ui/identity-graph-viewer.md). 
+* If you use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/features/identity-graph-viewer.md). 
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 

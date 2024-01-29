@@ -1,6 +1,7 @@
 ---
 title: Supplement First-party Profiles with Partner-provided Attributes
 description: Learn how to supplement first-party profiles with attributes from trusted data partners to improve your data foundation, gain new insights into your customer base, and better audience optimization.
+feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
 ---
 # Supplement First-party Profiles with Partner-provided Attributes
@@ -12,6 +13,16 @@ exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
 Supplement first-party profiles with attributes from trusted data partners to improve your data foundation and gain new insights into your customer base and gain better audience optimization.
 
 ![Enrich profiles with partner-provided attributes use case high-level visual overview.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
+
+## Why consider this use case {#why-this-use-case}
+
+Most brands, even those which are rich with first party data, can benefit from streamlining their data and gaining a more nuanced understanding of customers, their behaviors, patterns, and preferences. 
+
+Adobe Real-time Customer Data Platform can help brands responsibly supplement their first-party data with valuable insights, identifiers, and attributes from one or more trusted partners. 
+
+Adobe understands there is no one-size-fits-all approach and allows for seamless interoperability with data and identity partners to foster individualized and thoughtful engagement across all stages of the customer lifecycle. These capabilities are underpinned by a trusted data governance framework, allowing for nuanced control on where and how partner data gets used. For instance, you may want to use partner provided insights for segmentation but not for personalization.
+
+For example, follow the steps described in this use case when you need to enrich your customer records with demographic and intent signals. 
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -39,7 +50,7 @@ View the video tutorial below for a walkthrough of how to supplement first-party
 1. As a **customer**, you license attributes from the **data partner**.
 2. As a **customer**, you extend your profile data and governance model to accommodate **partner**-provided attributes.
 3. As a **customer**, you onboard the audiences that you want to be enriched with the data partner. Generally, these audiences are keyed off input identifiers like Personally Identifiable Information (PII) elements like email, name, address, or others.
-4. The **partner** appends licensed attributes for the profiles that they are able to match against. Optionally, a [Partner ID](/help/identity-service/namespaces.md) can be included and ingested into the partner scoped ID namespace.
+4. The **partner** appends licensed attributes for the profiles that they are able to match against. Optionally, a [Partner ID](/help/identity-service/features/namespaces.md) can be included and ingested into the partner scoped ID namespace.
 5. As a **customer**, you load attributes from the data partner into customer profiles in Real-Time CDP.
  
 ## How to achieve the use case: Step-by-step instructions {#step-by-step-instructions}
@@ -82,9 +93,9 @@ Also in this step, think about how your data governance model changes as you exp
 
 >[!TIP]
 >
->If you choose to supplement your customer profiles with a person-based identifier from the data vendor, you can create a new identity type of the type **[[!UICONTROL Partner ID]](/help/identity-service/namespaces.md)**. 
+>If you choose to supplement your customer profiles with a person-based identifier from the data vendor, you can create a new identity type of the type **[[!UICONTROL Partner ID]](/help/identity-service/features/namespaces.md)**. 
 >
->Read more about Partner ID in the [identity types section](/help/identity-service/namespaces.md).
+>Read more about Partner ID in the [identity types section](/help/identity-service/features/namespaces.md).
 >Read about [how to define identity fields](/help/xdm/ui/fields/identity.md) in the Experience Platform user interface.
 
 ### Export audiences that you want to be enriched when keyed off Personal Identifiable Information (PII) or hashed-PII {#export-audiences}
@@ -113,12 +124,12 @@ Some recommended source connectors for this purpose might be:
 
 Note the following limitations as you explore the use case described on this page:
 
-* If you select to use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/ui/identity-graph-viewer.md). 
+* If you select to use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/features/identity-graph-viewer.md). 
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 
 Explore further use cases enabled through partner data support in Real-Time CDP:
 
 * Use third-party data support in Real-Time CDP to [expand your profile base with prospect profiles from data partners and engage with them to acquire or reach new customers](/help/rtcdp/partner-data/prospecting.md).
-* [Leverage partner aided recognition for personalizing on-site experiences](/help/rtcdp/partner-data/onsite-personalization.md) during the visit without the user authenticating or having prior history with your brand.
+* [Personalize onsite experiences for unknown visitors using partner-aided visitor recognition](/help/rtcdp/partner-data/onsite-personalization.md) during the visit without the user authenticating or having prior history with your brand.
 * [Expanded activation of prospect profiles and prospect audiences](/help/destinations/ui/activate-prospect-audiences.md) to select destinations.

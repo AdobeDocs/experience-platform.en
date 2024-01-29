@@ -1,6 +1,6 @@
 ---
 title: Healthcare Member Details Schema Field Group
-description: This document provides an overview of the Healthcare Member Details schema field group.
+description: Learn about the Healthcare Member Details schema field group.
 exl-id: 43ba025e-2acf-4cb7-8487-e6c7c7240867
 ---
 # [!UICONTROL Healthcare Member Details] schema field group

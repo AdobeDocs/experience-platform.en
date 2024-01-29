@@ -4,6 +4,7 @@ description: Learn about Identity Graph Linking Rules in Identity Service.
 hide: true
 hidefromtoc: true
 badge: Alpha
+exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 ---
 # Identity graph linking rules overview
 
@@ -14,9 +15,8 @@ badge: Alpha
 ## Table of contents
 
 * [Overview](./overview.md)
+* [Identity optimization algorithm](./identity-optimization-algorithm.md)
 * [Example scenarios](./example-scenarios.md)
-* [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
-* [Identity linking logic](./identity-linking-logic.md)
 
 With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRM ID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("profile collapse"). To prevent these unwanted merges, you can use configurations provided through identity graph linking rules and allow for accurate personalization for your users.
 
@@ -32,13 +32,12 @@ For more information on use case scenarios for identity graph linking rules, rea
 
 With Identity graph linking rules you can:
 
-* Configure limits to prevent two disparate person identifiers from merging into one identity graph, so that a single identity graph only represents a single person.
-  * The limits that you configure are then enforced by identity optimization algorithm.
-* Configure priorities to associate online events conducted by the authenticated individual to a given user.
+* Create a single identity graph / merged profile for each user by configuring unique namespaces (limits), which will prevent two disparate person identifiers from merging into one identity graph.
+* Associate online, authenticated events to the person by configuring priorities
 
 ### Limits
 
-You can use namespace limits to define the maximum number of identities that can exist in a graph based on a given namespace. For example, you can set your graph to have a maximum of just one identity with a CRM ID namespace, thus preventing the merging of two disparate person identifiers within the same graph.
+A unique namespace is an identifier that represents an individual, such as CRM ID, login ID, and hashed email. If a namespace is designated as unique, then a graph can only have one identity with that namespace (`limit=1`). This will prevent the merging of two disparate person identifiers within the same graph. 
 
 * If a limit is not configured, this could result in unwanted graph merges, such as two identities with a CRM ID namespace in a graph.
 * If a limit is not configured, the graph can add as many namespaces as needed as long as the graph is within the guardrails (50 identities/graph).
@@ -52,7 +51,9 @@ The following is a list of implications of the algorithm on associating anonymou
 
 * The ECID will be associated to the last authenticated user if the following conditions are met:
   * If CRM IDs are merged by ECID (shared device).
-  * If limits are configured to just one CRM ID.
+  * If limits are configured to just one CRM ID. 
+
+For more information, read the document on [identity optimization algorithm](./identity-optimization-algorithm.md).
 
 ### Priority
 
@@ -60,12 +61,16 @@ The following is a list of implications of the algorithm on associating anonymou
 >
 >Namespace priorities are currently not available for alpha.
 
-You can use namespace priority to define which namespaces are more important than others. The hierarchy that you set for your namespaces are then used to define primary identities and store profile fragments. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
+You can use namespace priority to define which namespaces are more important than others. The priority that you set for your namespaces are then used to define primary identities, which is the identity that stores profile fragments (attribute and event data) in Real-Time Customer Profile. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
 
 * Limits and priority are independent configurations and do **not** affect each other:
   * Limits is an identity graph configuration in Identity Service.
   * Priority is a profile fragment configuration on Real-Time Customer Profile.
-  * Priority does **not** affect identity graph system guardrails.
+  * Priority does **not** affect identity graph system guardrails. 
+* **Namespace priority is a numerical value** assigned to a namespace indicating its relative importance. This is a property of a namespace.
+* **Primary identity is the identity in which a profile fragment is stored against**. A profile fragment is a record of data that stores information about a certain user: attributes (usually ingested via CRM records) or events (usually ingested from experience events, or online data).
+* Namespace priority determines the primary identity for experience events.
+  * For profile records, you can use the schemas workspace in the Experience Platform UI to define identity fields, including the primary identity. Read the guide on [defining identity fields in the UI](../../xdm/ui/fields/identity.md) for more information.
 
 >[!BEGINSHADEBOX]
 
@@ -99,6 +104,5 @@ If the following experience events are ingested into Experience Platform, the pr
 
 For more information on identity graph linking rules, read the following documentation:
 
+* [Identity optimization algorithm](./identity-optimization-algorithm.md)
 * [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
-* [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
-* [Identity linking logic](./identity-linking-logic.md)

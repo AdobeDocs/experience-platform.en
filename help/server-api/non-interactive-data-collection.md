@@ -3,13 +3,14 @@ title: Non-interactive data collection
 description: Learn how the Adobe Experience Platform Edge Network Server API performs non-interactive data collection.
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
 ---
+
 # Non-interactive data collection
 
 ## Overview {#overview}
 
 Non-interactive event data collection endpoints are used to send multiple events to Experience Platform datasets or other outlets.
 
-Sending events in batch is recommended when end-user events are queued locally for a short period of time (e.g. when there’s no network connection).
+Sending events in batch is recommended when end-user events are queued locally for a short period of time (e.g. when there's no network connection).
 
 Batch events should not necessarily belong to the same end-user, meaning that events can hold different identities within their `identityMap` object.
 
@@ -86,7 +87,6 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | `dataStreamId` | `String` | Yes | The ID of the datastream used by the data collection endpoint. |
 | `requestId` | `String` | No | Provide an external request tracing ID. If none is provided, the Edge Network will generate one for you and return it back in the response body / headers.|
 | `silent` | `Boolean` | No | Optional boolean parameter indicating whether the Edge Network should return a `204 No Content` response with an empty payload or not. Critical errors are reported using the corresponding HTTP status code and payload.|
-
 
 ### Response {#response}
 
