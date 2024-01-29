@@ -7,6 +7,10 @@ badge: Beta
 ---
 # Create a [!DNL Braze] source connection in the UI
 
+>[!NOTE]
+>
+>The [!DNL Braze] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
+
 [!DNL Braze] powers customer-centric interactions between consumers and brands in real-time. [!DNL Braze Currents] is a real-time data stream of engagement events from the Braze platform that is the most robust yet granular export out of the [!DNL Braze] platform. 
 
 Read the following tutorial to learn how to bring engagement events data from your [!DNL Braze] account to Adobe Experience Platform in the UI.
