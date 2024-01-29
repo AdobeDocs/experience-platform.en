@@ -39,13 +39,13 @@ To get started with [!UICONTROL Use Case Playbooks], members of your marketing t
 
 To add the required permissions, in the Permissions UI, include the new use case playbook sandbox in roles that you've already configured, including those used for other development sandboxes. Alternatively, you could also consider adding new roles with [the required permissions](/help/access-control/home.md#sandboxes-and-permissions).
 
-<!-- ![Required permissions](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
+![Required permissions](/help/use-case-playbooks/assets/playbooks/get-started/required-permissions.png)
 
 **Set up a role for Playbooks:**
 
 [Set up a new role](/help/access-control/abac/ui/permissions.md) with the necessary permissions for essential playbook tasks. Create a role and add the new sandbox to it, as shown below.
 
-<!-- ![Create a role and add it to the Sandbox](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
+![Create a role and add it to the Sandbox](/help/use-case-playbooks/assets/playbooks/get-started/create-new-role.png)
 
 **Permissions for playbook instances**
 
@@ -57,15 +57,15 @@ To create schemas, utilize the data modeling items to view and manage schemas. A
 
 **Permissions for destinations**
 
-To create destinations, use the Destinations permissions items.
+To create destinations, use the Destinations permissions item to view and manage destinations.
 
 **Permissions for journeys**
 
-To create journeys, you need the Journeys permissions items.
+To create journeys, you need the Journeys permissions items to view and manage journeys.
 
 In order to be sure that you can create all these assets, this is a snapshot of the permissions that we recommend that your users or roles should have. 
 
-<!-- ![Snapshot of all the permission items needed to create all instances of the playbooks](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
+![Snapshot of all the permission items needed to create all instances of the playbooks](/help/use-case-playbooks/assets/playbooks/get-started/permission-snapshot.png)
 
 **Add users to the role**
 
