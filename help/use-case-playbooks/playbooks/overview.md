@@ -40,7 +40,7 @@ Watch this video to learn how to discover, create, publish, and troubleshoot an 
 
 ## Availability {#availability}
 
-Some [!UICONTROL Use Case Playbooks] are tailored to Real-Time CDP use cases while others are best suited for customers using Journey Optimizer. Browse the catalog to find the playbooks best suited to your product and use case. Use Case Playbooks are available for all editions and all tiers of Real-Time CDP and Adobe Journey Optimizer.
+Some [!UICONTROL Use Case Playbooks] are tailored to Real-Time CDP use cases while others are best suited for customers using Journey Optimizer. Browse the catalog to find the playbooks best suited to your product and use case. Use Case Playbooks are available for B2C customers for all editions of Real-Time CDP and Adobe Journey Optimizer.
 
 ## UI guides {#ui-guides}
 
