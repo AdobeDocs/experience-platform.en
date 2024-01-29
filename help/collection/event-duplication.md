@@ -22,8 +22,6 @@ To better understand best practices for handling transient failures, see this ar
 Event duplication can occur in various scenarios, such as, but not limited to:
 
 * Network-related issues between client-side SDKs and the [!DNL Edge Network]. These issues can originate from Internet Service Provider failures, mobile signal loss, or other network failures, since the connectivity between the customer and the Edge Network is done through the public Internet.
-* Incorrect customer implementations. When client-side SDKs are incorrectly configured, or there is a bug in a customer implementation, the same event could be sent to the Edge Network multiple times.
-
 * Internal Experience Platform auto-scaling events. Occasionally, data can be rebalanced due to cloud infrastructure volatility.
 
 The Adobe Experience Platform data collection layer is designed to support "at-least-once" processing. Consequently, event duplication may occur in limited situations.
@@ -32,8 +30,12 @@ To learn more about "at-least-once" processing, see this article on [message del
 
 ## Event deduplication options {#deduplication}
 
-For business scenarios sensitive to duplicate events, Experience Platform uses multiple event deduplication methods in its downstream storage systems.
+For business scenarios sensitive to duplicate events, Experience Platform uses multiple event deduplication methods in its downstream storage systems, such as the ones described below.
 
 * Real-Time CDP Profile Store drops events if an event with the same `_id` already exists in the [!DNL Profile Store]. See the documentation on [XDM ExperienceEvent class](../xdm/classes/experienceevent.md) for more details.
 * Customer Journey Analytics allows users to configure a metric to only count values non-repetitively. To learn how to do this, see the documentation on [metric deduplication component settings](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/component-settings/metric-deduplication.html?lang=en).
 * Experience Platform Query Service supports data deduplication when it is required to remove an entire row from a calculation or ignore a specific set of fields because only part of the data in the row is duplicate information. See the documentation around [data deduplication in Query Service](../query-service/key-concepts/deduplication.md) for more information.
+
+>[!NOTE]
+>
+>If you are running into event duplication issues outside of the use cases presented above, reach out to your Adobe representative and provide detailed information about your use case.
