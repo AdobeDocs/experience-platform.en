@@ -38,7 +38,7 @@ Work with your Medallia delivery team to obtain these details.
 
 ## Supported identities {#supported-identities}
 
-Medallia supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+Medallia supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|

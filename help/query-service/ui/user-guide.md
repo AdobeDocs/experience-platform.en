@@ -21,13 +21,6 @@ For more information about the concepts and features of [!DNL Query Service], se
 
 ## Accessing [!DNL Query Editor] {#accessing-query-editor}
 
->[!CONTEXTUALHELP]
->id="platform_queryservice_create_datagovernance"
->title="Data governance obligation"
->abstract="Please remember, it is your sole responsibility to adhere to your organization's data governance policies and meet your regulatory requirements. Experience Platform provides data governance tools for you to manage your data usage obligations. Apply the appropriate data usage labels before querying or processing data. See the documentation to learn about data governance tools and best practices."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html" text="Data Governance overview"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html" text="Data Governance labels overview" 
-
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Queries]** in the left navigation menu to open the [!DNL Query Service] workspace. Next, to start writing queries, select **[!UICONTROL Create Query]** at the top right of the screen. This link is available from any of the pages in the [!DNL Query Service] workspace. 
 
 ![The Queries workspace overview tab with Create query highlighted.](../images/ui/query-editor/create-query.png)

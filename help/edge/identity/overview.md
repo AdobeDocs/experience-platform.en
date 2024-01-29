@@ -5,7 +5,7 @@ exl-id: 03060cdb-becc-430a-b527-60c055c2a906
 ---
 # Identity data in Web SDK
 
-The Adobe Experience Platform Web SDK uses [Adobe Experience Cloud IDs (ECIDs)](../../identity-service/ecid.md) to track visitor behavior. Using ECIDs, you can ensure that each device has a unique identifier that can persist across multiple sessions, tying all the hits that occur during and across web sessions to a specific device.
+The Adobe Experience Platform Web SDK uses [Adobe Experience Cloud IDs (ECIDs)](../../identity-service/features/ecid.md) to track visitor behavior. Using ECIDs, you can ensure that each device has a unique identifier that can persist across multiple sessions, tying all the hits that occur during and across web sessions to a specific device.
 
 This document provides an overview of how to manage ECIDs using the Platform Web SDK.
 
@@ -98,7 +98,7 @@ alloy("sendEvent", {
 >Adobe recommends sending namespaces which represent a person, such as `CRMID`, as the primary identity.
 
 
-Each property within `identityMap` represents identities belonging to a particular [identity namespace](../../identity-service/namespaces.md). The property name should be the identity namespace symbol, which you can find listed in the Adobe Experience Platform user interface under "[!UICONTROL Identities]". The property value should be an array of identities pertaining to that identity namespace.
+Each property within `identityMap` represents identities belonging to a particular [identity namespace](../../identity-service/features/namespaces.md). The property name should be the identity namespace symbol, which you can find listed in the Adobe Experience Platform user interface under "[!UICONTROL Identities]". The property value should be an array of identities pertaining to that identity namespace.
 
 >[!IMPORTANT]
 >

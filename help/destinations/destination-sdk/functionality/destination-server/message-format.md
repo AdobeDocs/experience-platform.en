@@ -375,7 +375,7 @@ Profile 2:
 
 ### Identities {#identities}
 
-For information about identities in Experience Platform, see the [Identity namespace overview](../../../../identity-service/namespaces.md).
+For information about identities in Experience Platform, see the [Identity namespace overview](../../../../identity-service/features/namespaces.md).
 
 **Input**
 

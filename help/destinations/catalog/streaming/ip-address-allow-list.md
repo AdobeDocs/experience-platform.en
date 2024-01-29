@@ -77,6 +77,7 @@ Adobe recommends that you add the following IP ranges to an allowlist prior to w
 `40.74.7.192/28`
 `51.105.144.81`
 `51.124.70.4`
+`20.101.233.128`
 
 ## AUS5: APAC customers {#apac}
 
