@@ -26,7 +26,13 @@ The [!UICONTROL Getting started with Real-Time Customer Profile] widget is divid
 
 ![The Platform UI home page displaying the getting started widget](assets/platform-home/getting-started-widget.png)
 
-## Metrics dashboard
+## Metrics dashboard {#metrics-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="platform_home_metrics_totalProfiles"
+>title="Total profiles count"
+>abstract="The total number of profiles your organization has within Experience Platform. This count is based on your organization's merge policy and does not include profile fragments. The number of profiles is updated once every 24 hours."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="Learn more in documentation" 
 
 The metrics dashboard displays up-to-date information on your Experience Platform data. The dashboard is divided into two sections:
 
@@ -38,7 +44,7 @@ The leaderboard shows the current total number of schemas, datasets, profiles, a
 
 * **Total schemas**: The **Total Schemas** counter displays the number of schemas in the system. This counter is updated when a schema is created. For more information, read the [schemas overview](../xdm/home.md).
 * **Total datasets**: The **Total Datasets** counter shows the number of datasets in the system and the amount of data in [!DNL Platform]. This counter is updated when a dataset is created. For more information about datasets, read the [datasets overview](../catalog/datasets/overview.md).
-* **Total profiles**: The **Profiles** count shows the total number of people with profiles in the [!DNL Real-Time Customer Profile]. It does not include profile fragments. This is your total addressable audience. This count uses the default [merge policy](profile/merge-policies.md) as set in the merge policy configuration in Unified Profile. The number of profiles is updated once every 24 hours. For more information about profiles, read the [Real-Time Customer Profile overview](../profile/home.md).
+* **Total profiles**: The **Profiles** count shows the total number of profiles your organization has within Experience Platform. It does not include profile fragments. This is your total addressable audience. This count uses the default [merge policy](profile/merge-policies.md) as set in the merge policy configuration in Real-Time Customer Profile. The number of profiles is updated once every 24 hours. For more information about profiles, read the [Real-Time Customer Profile overview](../profile/home.md).
 * **Total segments**: **Segments** shows the total number of segments created for the organization. This number is updated when new segments are created. For more information about segments, read the [Segmentation Service overview](../segmentation/home.md).
 
 ### Recent items
