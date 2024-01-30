@@ -4,11 +4,18 @@ description: The January 2024 release notes for Adobe Experience Platform.
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: January 30, 2023**
+**Release date: January 30, 2024**
 
-- [Data Prep]
-- [Real-Time Customer Data Platform]
-- [Sources]
+New features in Experience Platform:
+
+  - [Use Case Playbooks](#use-case-playbooks)
+
+Updates to existing features in Experience Platform:
+
+  - [Data Prep](#data-prep)
+  - [Dashboards](#ddashboards)
+  - [Real-Time Customer Data Platform](#rtcdp)
+  - [Sources](#sources)
 
 ## Data Prep {#data-prep}
 
@@ -23,6 +30,20 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 {style="table-layout:auto"}
 
 For more information on Data Prep, read the [Data Prep overview](../../data-prep/home.md).
+
+## Dashboards {#dashboards}
+
+Adobe Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots.
+
+**New or updated features** 
+
+| Feature | Description |
+| --- | --- |
+| View SQL | You can now view the SQL behind your Profile, Audience, Destination, and customized insights then execute the query on demand through the Query Editor. Take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Platform data based on your business needs. |
+
+{style="table-layout:auto"}
+
+For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
