@@ -14,6 +14,7 @@ Updates to existing features in Experience Platform:
 
   - [Data Prep](#data-prep)
   - [Dashboards](#ddashboards)
+  - [Destinations](#destinations)
   - [Real-Time Customer Data Platform](#rtcdp)
   - [Sources](#sources)
 
@@ -44,6 +45,20 @@ Adobe Experience Platform provides multiple dashboards through which you can vie
 {style="table-layout:auto"}
 
 For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
+
+## Destinations {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New destinations** {#new-destinations}
+
+| Destination | Description |
+| ----------- | ----------- |
+| [Pubmatic connection](../../destinations/catalog/advertising/pubmatic.md) | Use this destination to send audience data to the [!DNL PubMatic Connect] platform. |
+
+{style="table-layout:auto"}
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
