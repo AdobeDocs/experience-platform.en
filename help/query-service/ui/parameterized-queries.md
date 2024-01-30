@@ -41,21 +41,17 @@ SELECT
 
 To create your parameterized query in the UI, navigate to the Query Editor. See the section on [accessing the Query Editor](./user-guide.md#accessing-query-editor) for more instructions.
 
-Use the `'$'` preface to enter a query parameter into your query in the text editor. Next, add the missing value for the key in the [!UICONTROL Query parameters] section below the editor. The query cannot be executed if you neglect to add a value to any of the required keys. An alert icon (![An alert icon.](../images/ui/parameterized-queries/alert-icon.png)) appears in the Query Parameters section next to any empty [!UICONTROL Value] input fields.
+Use the `'$'` preface to enter a query parameter into your query in the text editor. Next, select the **[!UICONTROL Query parameters]** tab next to the [!UICONTROL Console] add the missing value for the key. The query cannot be executed if you neglect to add a value to any of the required keys. An alert icon (![An alert icon.](../images/ui/parameterized-queries/alert-icon.png)) appears in the Query Parameters section next to any empty [!UICONTROL Value] input fields.
+
+>[!NOTE]
+>
+>If your query does not take parameters, you can still enter unnecessary parameters within the Query Editor. The Query Editor ignores all unnecessary key-value pairs and they have no effect on the execution or the results of the query.
 
 ![The Query Editor with a parameterized query and the Query parameters section highlighted.](../images/ui/parameterized-queries/parameterized-query.png)
 
 >[!TIP]
 >
 >Change tabs from [!UICONTROL Query parameters] to [!UICONTROL Console] to view the console output of the query. 
-
-If you remove a parameter and try to execute the query again after it has already been run, an error message is displayed in the [!UICONTROL Query parameters] section to alert you.
-
->[!NOTE]
->
->If your query does not take parameters, you can still enter unnecessary parameters within the Query Editor. The Query Editor ignores all unnecessary key-value pairs and they have no effect on the execution or the results of the query.
-
-![The Query Editor with an empty value field and the query parameters error highlighted.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## Use query logs details to check parameter values {#check-parameter-values}
 
