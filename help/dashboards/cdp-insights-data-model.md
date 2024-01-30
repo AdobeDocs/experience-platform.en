@@ -441,6 +441,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
+<!-- Commented out as Anil wanted to add something but did not provide information yet:
 ### Overlap Namespace-Audience model {#overlap-namespace-audience-model}
 
 The overlap namespace-audience model is comprised of the following datasets: 
@@ -455,22 +456,11 @@ The overlap namespace-audience model is comprised of the following datasets:
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform`
 
-![An ERD of the overlap namespace-audience model.](./images/cdp-insights/overlap-namespace-audience-model.png)
+![An ERD of the overlap namespace-audience model.](./images/cdp-insights/overlap-namespace-audience-model.png) -->
 
-<!-- What insights are gathered from this particualr data model? -->
+<!-- What insights are gathered from this particular data model? -->
 
-### Custom model {#custom-model}
-
-The custom model is comprised of the following datasets: 
-
-- `geo_dim`
-- `retail_acct_fact`
-- `industry_dim`
-
-![An ERD of the custom model.](./images/cdp-insights/custom-model.png)
-
-<!-- What insights are gathered from this particualr data model? -->
-
+<!-- Commented out as Anil wanted to add something but did not provide information yet:
 ### AI model {#ai-model}
 
 The AI model is comprised of the following datasets: 
@@ -480,7 +470,7 @@ The AI model is comprised of the following datasets:
 - `adwh_dim_merge_policies`
 - `adwh_dim_ai_models`
 
-![An ERD of the AI model.](./images/cdp-insights/ai-model.png)
+![An ERD of the AI model.](./images/cdp-insights/ai-model.png) -->
 
-<!-- What insights are gathered from this particualr data model? -->
+<!-- What insights are gathered from this particular data model? -->
 
