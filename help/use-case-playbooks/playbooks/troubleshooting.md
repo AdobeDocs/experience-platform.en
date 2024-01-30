@@ -1,11 +1,13 @@
 ---
 solution: Experience Platform
-title: Troubleshoot issues with playbooks
-description: Learn common issues with playbooks and how to troubleshoot them
+title: Known limitations and troubleshoot issues with playbooks
+description: Learn more about the known issues and common issues with playbooks and how to troubleshoot them
 exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
 ---
 
-# Known limitations {#known-limitations}
+# Known limitations and troubleshooting {#known-limitations-troubleshooting}
+
+## Known limitations
 
 A couple of known limitations show up when you create an instance of a playbook and generate assets. 
 
