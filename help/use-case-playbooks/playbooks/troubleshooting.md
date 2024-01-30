@@ -23,6 +23,8 @@ If you don't already have it enabled, read the documentation to [create schema f
 
 When creating an instance, you might run into some messages. If you try to create an instance of a playbook and get this message:
 
+![Troubleshooting](/help/use-case-playbooks/assets/playbooks/troubleshooting/troubleshooting-ajo.png)
+
 It's because Journey Optimizer playbooks create messages for e-mail, push and SMS channels. This message means that at least one of these channels has not been defined in your playbook sandbox. If that happens, then it's fine as you may not do push messaging. You can still create the instance of the playbook, but you should probably remove the push branch of your journey before packaging up the instance. 
 
 If you get a failed message when you try to create an instance, it's usually because you don't have the right user permissions needed. A playbook contains a lot of different assets and your user needs permissions to create those assets in order to be able to create the instance of the playbook successfully. See the [configuration video or documentation] for more information on resolving these issues.
