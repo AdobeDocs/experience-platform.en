@@ -145,9 +145,9 @@ The **[!UICONTROL Remove user group]** dialogue appears, prompting you to confir
 
 You will be returned to the **[!UICONTROL User groups]** tab.
 
-## Adding users to Experience Platform through a product profile
+## Adding users to Experience Platform through a role
 
-To add a user to a product profile, log into the Admin Console and select **[!UICONTROL Add users]**
+To add a user to a role, log into the Admin Console and select **[!UICONTROL Add users]**
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 
