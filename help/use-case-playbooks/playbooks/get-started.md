@@ -37,7 +37,7 @@ To get started with [!UICONTROL Use Case Playbooks], members of your marketing t
 
 **Required permissions**
 
-To add the required permissions, in the Permissions UI, include the new use case playbook sandbox in roles that you've already configured, including those used for other development sandboxes.
+To add the required permissions, in the Permissions UI, include the new use case playbook sandbox in [roles that you've already configured](https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/permissions.html#managing-sandboxes-for-role), including those used for other development sandboxes.
 
 ![Required permissions](/help/use-case-playbooks/assets/playbooks/get-started/required-permissions.png)
 
@@ -71,7 +71,7 @@ The image below displays a snapshot of the recommended permissions for users to 
 
 **Add users to the role**
 
-Once you've created a new role as referenced above, add yourself as a user to it. If you create a pared-down role for another set of users with view-only access, include only the necessary view items associated with these permissions.
+Once you've [created a new role](https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/permissions.html#managing-users-for-role) as referenced above, add yourself as a user to it. If you create a pared-down role for another set of users with view-only access, include only the necessary view items associated with these permissions.
 
 ## Configure sandbox and channel surfaces in Journey Optimizer {#configure-channel-surfaces}
 
