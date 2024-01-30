@@ -5,7 +5,21 @@ description: Learn more about the known issues and common issues with playbooks 
 exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
 ---
 
-# Known limitations and troubleshooting {#known-limitations-troubleshooting}
+# Troubleshooting and known limitations {#troubleshooting-known-limitations}
+
+## Troubleshooting {#troubleshooting}
+
+### Adobe Journey Optimizer Surfaces not configured
+
+When creating an instance of a playbook, you might see the message below displayed.
+
+![Troubleshooting](/help/use-case-playbooks/assets/playbooks/troubleshooting/troubleshooting-ajo.png)
+
+This is because Journey Optimizer playbooks create messages for e-mail, push and SMS channels. Read the [get started](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) guide to configure the different surfaces.
+
+### Status *failed* when creating a new instance
+
+If you see a failed message when you try to create an instance, this might be because your administrator has not granted you the required user permissions. A playbook contains a lot of different assets and your user needs permissions to create those assets in order to be able to create the instance of the playbook successfully. See the [permissions](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) section of this guide on how to set up permissions.
 
 ## Known limitations
 
@@ -24,18 +38,6 @@ This is because some of the fields generated from your schema are not present in
 
 After you include those fields in the schema in the development sandbox, go back to the workflow to copy the schema fields from the inspirational sandbox to the development sandbox. The errors are now gone.
 
-If you don't already have it enabled, read the documentation to [create schema field groups](https://experienceleague.adobe.com/docs/platform-learn/tutorials/schemas/create-schema-field-groups.html).
+For more information, watch the video below to create schema field groups.
 
-## Troubleshooting {#troubleshooting}
-
-### Adobe Journey Optimizer Surfaces not configured
-
-When creating an instance of a playbook, you might see the message below displayed.
-
-![Troubleshooting](/help/use-case-playbooks/assets/playbooks/troubleshooting/troubleshooting-ajo.png)
-
-This is because Journey Optimizer playbooks create messages for e-mail, push and SMS channels. Read the [get-started](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) guide to configure the different surfaces.
-
-### Status *failed* when creating a new instance
-
-If you see a failed message when you try to create an instance, this might be because your administrator has not granted you the required user permissions. A playbook contains a lot of different assets and your user needs permissions to create those assets in order to be able to create the instance of the playbook successfully. See the [permissions](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) section of this guide on how to set up permissions.
+>[!VIDEO](https://video.tv.adobe.com/v/27013/?learn=on)
