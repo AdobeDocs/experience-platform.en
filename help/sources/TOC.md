@@ -297,6 +297,7 @@ feature: Sources
     - Local system {#local-system}
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Marketing automation {#marketing-automation}
+      - [Braze](tutorials/ui/create/marketing-automation/braze.md)
       - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
       - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
