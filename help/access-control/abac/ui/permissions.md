@@ -95,6 +95,10 @@ To remove a user from a role, select the **X** icon next to the users name.
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
 
+The following video is intended to support your understanding of creating a new role and managing users for that role.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+
 ## Managing API credentials for role {#manage-api-credentials-for-role}
 
 Select the **[!UICONTROL API credentials]** tab to open the roles API credentials page, then select **[!UICONTROL Add API credentials]** to assign API credentials to the role.

@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Generic Personalization Preference Field Data Type
-description: This document provides an overview of the Generic Personalization Preference Field XDM data type.
+description: Learn about the Generic Personalization Preference Field XDM data type.
 exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
 ---
 # [!UICONTROL Generic Personalization Preference Field] data type

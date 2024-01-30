@@ -22,7 +22,7 @@ The **[!UICONTROL Composition properties]** popover appears. You can insert deta
 
 >[!NOTE]
 >
->If you do **not** give your composition a title, it will have a title of "Composition" followed by the creation date and time by default.
+>If you do **not** give your composition a title, it will have a title of "Composition" followed by the creation date and time by default. Additionally, each composition **must** have its own unique name.
 
 After updating your composition's details, select **[!UICONTROL Save]** to confirm these updates. The audience composition canvas re-appears.
 
@@ -109,6 +109,10 @@ If you exclude by attribute, you can select which attributes you want to exclude
 A list of profile attributes appears. Select the attribute type you want to exclude, followed by **[!UICONTROL Select]** to add them to your exclude block.
 
 ![A list of attributes is shown.](../images/ui/audience-composition/select-attribute-exclude.png)
+
+>[!IMPORTANT]
+>
+>When excluding by attribute, you can only specify **one** value to exclude. Using any sort of separator, like a comma or semicolon, will only result in excluding that exact value. For example, setting the value as `red, blue` will result in excluding the term `red, blue` from the attribute, but will **not** result in excluding either the term `red` or `blue`.
 
 ## [!UICONTROL Enrich] {#enrich-block}
 

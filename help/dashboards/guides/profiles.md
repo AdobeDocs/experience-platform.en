@@ -21,7 +21,7 @@ The attribute data in the snapshot shows the data exactly as it appears at the s
 >
 >Any changes or updates made to the data since the snapshot was taken will not be reflected in the dashboard until the next snapshot is taken.
 
-## Exploring the Profiles dashboard
+## Explore the Profiles dashboard {#explore-dashboard}
 
 To navigate to the Profiles dashboard within the Platform UI, select **[!UICONTROL Profiles]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 
@@ -31,7 +31,7 @@ To navigate to the Profiles dashboard within the Platform UI, select **[!UICONTR
 
 ![The Experience Platform Profiles dashboard with Profiles and Overview highlighted.](../images/profiles/dashboard-overview.png)
 
-### Modifying the Profiles dashboard
+### Modify the Profiles dashboard {#modify-dashboard}
 
 You can modify the appearance of the Profiles dashboard by selecting **[!UICONTROL Modify dashboard]**. You can move, add, resize, and remove widgets from the dashboard, as well as to access the **[!UICONTROL Widget library]** to explore available widgets, and create custom widgets for your organization. 
 
@@ -44,6 +44,10 @@ Select **[!UICONTROL Add widget]** to navigate to the widget library and see a l
 ![The Profiles dashboard overview with add widget highlighted.](../images/profiles/profiles-overview-add-widget.png)
 
 From the widget library you can browse the selection of standard and custom audience widgets. For information on how to add widgets, please see the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets).
+
+### View SQL {#view-sql}
+
+You can view the SQL that generates the insights visualized on your dashboard with a toggle on the [!UICONTROL Overview] workspace. You can take inspiration from the SQL of your existing insights to create new queries that derive unique insights from Platform data based on your business needs. To learn more about this feature, see the [View SQL UI guide](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 

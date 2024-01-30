@@ -33,7 +33,7 @@ This brand chooses to leverage partner recognition technology to probabilistical
 When planning to use partner-provided attributes to deliver personalized experiences to your authenticated and unauthenticated visitors, consider the following prerequisites in your planning process:
 
 * What inputs are expected by your partner's recognition technology so they can layer on additional attributes?
-* To what extent are you comfortable delivering personalization in different channels and for different use cases based on probabilistically derived attributes, versus deterministically confirmed attributes?
+* To what extent are you comfortable delivering personalization in different channels and for different use cases based on probabilistically derived datasets, versus deterministically confirmed attributes?
 * How should the experience for a pre-authenticated but recognized visitor change when they authenticate?
 
 ### UI functionality, Platform components, and Experience Cloud products that you will use {#ui-functionality-and-elements}
@@ -45,7 +45,7 @@ To successfully implement this use case, you must use multiple areas of Real-Tim
   * [Tags](/help/tags/home.md)
   * [Datastreams](/help/datastreams/overview.md)
 * Data Management in Real-Time CDP
-  * [Identities](/help/identity-service/namespaces.md)
+  * [Identities](/help/identity-service/features/namespaces.md)
   * [Schemas](/help/xdm/home.md)
   * [Data usage labels](/help/data-governance/labels/overview.md)
   * [Datasets](/help/catalog/datasets/overview.md)
@@ -273,7 +273,7 @@ You are now ready to integrate with a personalization engine to display personal
 
 Note the following limitations as you explore the use case described on this page:
 
-* If you use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/ui/identity-graph-viewer.md). 
+* If you use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/features/identity-graph-viewer.md). 
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 

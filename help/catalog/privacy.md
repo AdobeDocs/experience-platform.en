@@ -32,7 +32,7 @@ Adobe Experience Platform [!DNL Identity Service] bridges customer identity data
 
 [!DNL Identity Service] maintains a store of globally defined (standard) and user-defined (custom) identity namespaces. Standard namespaces are available for all organizations (for example, "Email" and "ECID"), while your organization can also create custom namespaces to suit its particular needs.
 
-For more information about identity namespaces in [!DNL Experience Platform], see the [identity namespace overview](../identity-service/namespaces.md).
+For more information about identity namespaces in [!DNL Experience Platform], see the [identity namespace overview](../identity-service/features/namespaces.md).
 
 ## Adding identity data to datasets
 
