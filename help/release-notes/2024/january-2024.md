@@ -68,7 +68,7 @@ Built on Experience Platform, Real-Time Customer Data Platform ([!DNL Real-Time 
 
 | Feature | Description |
 | --- | --- |
-| Enhanced Real-Time CDP home page | The [Real-Time CDP home page](https://experience.adobe.com) has been enhanced with a refreshed look and improved performance.<ul><li>**Getting started widgets**: Use the getting started widgets to rapidly navigate to different areas of Real-Time CDP, including sources, schemas, audiences, and destinations.</li><li>**Leaderboard**: Refer to the leaderboard for information on total number of schemas, datasets, profiles, and audiences in your organization. You can also use the leaderboard to navigate to a feature's specific overview page and see its metrics. </li><li>**Recent items**: Refer to the recent items section for information on the five most recent changes to to datasets, sources, audiences, and destinations in your organization.</li></ul> For more information, read the [Real-Time CDP home page dashboard overview](../../rtcdp/home-page-dashboards.md). |
+| Updates to [Real-Time CDP home page](https://experience.adobe.com) | <ul><li>**Profiles widget**: You can now use the Profiles widget to navigate to the Profiles overview page and view Profile metrics for your organization..</li><li>**Profile metrics card**: The Profile metrics card in the home page dashboard now displays the total count of profiles in your organization, depending on your respective merge policy</li><li>**Schemas widget**: You can now use the schemas widget to navigate to the schema creation workflow in the UI.</li></ul> |
 
 To learn moore about Real-Time CDP, read the [Real-Time CDP overview](../../rtcdp/overview.md).
 
