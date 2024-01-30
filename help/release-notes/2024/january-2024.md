@@ -6,19 +6,14 @@ description: The January 2024 release notes for Adobe Experience Platform.
 
 **Release date: January 30, 2024**
 
-New features in Experience Platform:
-
-  - [Use Case Playbooks](#use-case-playbooks)
-
 Updates to existing features in Experience Platform:
 
-  - [Data Prep](#data-prep)
   - [Dashboards](#ddashboards)
   - [Destinations](#destinations)
   - [Real-Time Customer Data Platform](#rtcdp)
   - [Sources](#sources)
 
-## Data Prep {#data-prep}
+<!-- ## Data Prep {#data-prep}
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
@@ -30,7 +25,7 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 {style="table-layout:auto"}
 
-For more information on Data Prep, read the [Data Prep overview](../../data-prep/home.md).
+For more information on Data Prep, read the [Data Prep overview](../../data-prep/home.md). -->
 
 ## Dashboards {#dashboards}
 
