@@ -146,7 +146,7 @@ The following tables list all supported mapping functions, including sample expr
 | map_has_keys | If one or more input keys are provided, then the function returns true. If a string array is provided as input, then the function returns true on the first key that is found. | <ul><li>MAP:  **Required** The input map data</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | map_has_keys(MAP, KEY) | Please see the [appendix](#map_has_keys) for a code sample. | |
 | add_to_map | Accepts at least two inputs. Any number of maps can be provided as inputs. Data Prep returns a single map that has all key-value pairs from all the inputs. If one or more keys are repeated (in the same map or across maps), Data Prep de-duplicates the keys so that the first key-value pair persists in the order that they were passed in the input. | MAP: **Required** The input map data. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Please see the [appendix](#add_to_map) for a code sample. | |
 | object_to_map (Syntax 1) | Use this function to create Map data types. |<ul><li>KEY: **Required** Keys must be a string. If any other primitive values such as integers or dates are provided, then they are auto-converted to strings and are treated as strings.</li><li>ANY_TYPE: **Required** Refers to any supported XDM data type except Maps.</li></ul> | object_to_map(KEY, ANY_TYPE, KEY, ANY_TYPE, ... )| Please see the [appendix](#object_to_map) for a code sample. | | 
-| object_object_to_map (Syntax 2) | Use this function to create Map data types.| <ul><li>OBJECT: **Required** You can provide an incoming object or object array and point to an attribute inside the object as key.</li></ul> | object_to_map(OBJECT) | Please see the [appendix](#object_to_map) for a code sample. |
+| object_to_map (Syntax 2) | Use this function to create Map data types.| <ul><li>OBJECT: **Required** You can provide an incoming object or object array and point to an attribute inside the object as key.</li></ul> | object_to_map(OBJECT) | Please see the [appendix](#object_to_map) for a code sample. |
 | object_to_map (Syntax 3) | Use this function to create Map data types.| <ul><li>OBJECT: **Required** You can provide an incoming object or object array and point to an attribute inside the object as key.</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | Please see the [appendix](#object_to_map) for a code sample. |
 
 {style="table-layout:auto"}
@@ -496,7 +496,7 @@ result = "{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State 
 +++Select to view example
 
 ```json
-example = "object_to_map(addresses) where addresses is\n" +
+example = "object_to_map(addresses,type)" +
         "\n" +
         "[\n" +
         "    {\n" +
