@@ -11,6 +11,7 @@ Updates to existing features in Experience Platform:
   - [Dashboards](#ddashboards)
   - [Destinations](#destinations)
   - [Real-Time Customer Data Platform](#rtcdp)
+  - [Real-Time Customer Profile](#profile)
   - [Sources](#sources)
 
 <!-- ## Data Prep {#data-prep}
@@ -35,7 +36,7 @@ Adobe Experience Platform provides multiple dashboards through which you can vie
 
 | Feature | Description |
 | --- | --- |
-| View SQL | You can now view the SQL behind your Profile, Audience, Destination, and customized insights then execute the query on demand through the Query Editor. Take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Platform data based on your business needs. |
+| View SQL | You can now view the SQL behind your Profiles, Audiences, Destinations, and customized insights and then execute the query on demand through the Query Editor.. Take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Platform data based on your business needs. |
 
 {style="table-layout:auto"}
 
@@ -63,9 +64,23 @@ Built on Experience Platform, Real-Time Customer Data Platform ([!DNL Real-Time 
 
 | Feature | Description |
 | --- | --- |
-| Updates to [Real-Time CDP home page](https://experience.adobe.com) | <ul><li>**Profiles widget**: You can now use the Profiles widget to navigate to the Profiles overview page and view Profile metrics for your organization..</li><li>**Profile metrics card**: The Profile metrics card in the home page dashboard now displays the total count of profiles in your organization, depending on your respective merge policy</li><li>**Schemas widget**: You can now use the schemas widget to navigate to the schema creation workflow in the UI.</li></ul> |
+| Updates to the [Real-Time CDP home page](https://experience.adobe.com) | <ul><li>**Profiles widget**: You can now use the Profiles widget to navigate to the Profiles overview page and view Profile metrics for your organization.</li><li>**Profile metrics card**: The Profile metrics card in the home page dashboard now displays the total count of profiles in your organization, depending on your respective merge policy.</li><li>**Schemas widget**: You can now use the schemas widget to navigate to the schema creation workflow in the UI.</li></ul> |
 
 To learn moore about Real-Time CDP, read the [Real-Time CDP overview](../../rtcdp/overview.md).
+
+## Real-Time Customer Profile {#profile}
+
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-Time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+
+**Updated features**
+
+| Feature | Description |
+| --- | --- |
+| Improvements to localizing the profile viewer's out-of-the-box dashboard cards | The out-of-the-box default profile cards will now have dynamically localized names. Custom profile cards can continue to have custom names that can be edited. |
+
+{style="table-layout:auto"}
+
+To learn more about Real-Time Customer Profile, read the [Profile overview](../../profile/home.md)
 
 ## Sources {#sources}
 
