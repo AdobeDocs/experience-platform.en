@@ -22,7 +22,7 @@ This is because some of the fields generated from your schema are not present in
 
 After you include those fields in the schema in the development sandbox, go back to the workflow to copy the schema fields from the inspirational sandbox to the development sandbox. The errors are now gone.
 
-If you don't already have it enabled, read the documentation to [create schema field groups](https://experienceleague.adobe.com/docs/platform-learn/tutorials/schemas/create-schema-field-groups.html). Read the 
+If you don't already have it enabled, read the documentation to [create schema field groups](https://experienceleague.adobe.com/docs/platform-learn/tutorials/schemas/create-schema-field-groups.html).
 
 ## Troubleshooting {#troubleshooting}
 
