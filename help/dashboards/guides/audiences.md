@@ -45,6 +45,10 @@ Select **[!UICONTROL Add widget]** to navigate to the widget library and see a l
 
 From the widget library, you can browse the selection of standard and custom audience widgets. For information on how to add widgets, please see the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets). 
 
+### View SQL {#view-sql}
+
+You can view the SQL that generates the insights visualized on your dashboard with a toggle on the [!UICONTROL Overview] workspace. You can take inspiration from the SQL of your existing insights to create new queries that derive unique insights from Platform data based on your business needs. To learn more about this feature, see the [View SQL UI guide](../view-sql.md).
+
 ## Select a audience {#select-audience}
 
 The dashboard automatically selects an audience to display. However, you can change the audience by using the dropdown menu or audience selector. 
