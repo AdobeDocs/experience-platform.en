@@ -2,14 +2,9 @@
 solution: Experience Platform
 title: Create, share, and reuse playbook instances
 description: Learn how to create, share, and reuse playbook instances to accomplish your marketing use case.
-badgeBeta: label="Beta" type="Informative"
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 ---
-# (Beta) Create, share, and reuse playbook instances
-
->[!AVAILABILITY]
->
->This functionality is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
+# Create, share, and reuse playbook instances
 
 To use a playbook, navigate to **[!UICONTROL Use Case Playbooks] > [!UICONTROL Playbooks]**. Browse and use the various searching and filtering options on the page to select and get started with a specific playbook.
 
@@ -42,7 +37,7 @@ After creating an instance based on a playbook, you can personalize it to distin
 
 It is important to understand that the generated assets differ based on the use case you are enabling:
 
-* Different assets are generated for different types of playbooks. These assets are created specifically for the use case achieved through the playbook. For example, a playbook generates a schema, a segment, a journey, and messages. Another playbook generates a schema, a segment, and a destination to activate data to.
+* Different assets are generated for different types of playbooks. These assets are created specifically for the use case achieved through the playbook. For example, a playbook generates a schema, an audience, a journey, and messages. Another playbook generates a schema, an audience, and a destination to activate data to.
 * The assets themselves differ between playbooks. For example, for the **[!UICONTROL Send A Birthday Message To Guests]** playbook, the audience that is created has the rule `birthday=today AND year=any`. 
 
 To illustrate an example, for the **[!UICONTROL Abandoned Cart: Merchandise]** playbook, you can see that a specific journey is created that includes the messages created for this use case.
@@ -61,7 +56,7 @@ The behavior described above is true for all assets that get created, except for
 >
 >Test in the development sandbox, and move to production when ready.
 >
->Once objects are generated, you can continue to test in the development sandboxes by adding data. You can test the assets as long as you want in the development sandbox and you can replicate the asset logic (segment definitions, journeys, schemas, and so on) in the production sandbox when you are ready.
+>Once objects are generated, you can continue to test in the development sandboxes by adding data. You can test the assets as long as you want in the development sandbox and you can replicate the asset logic (audience definitions, journeys, schemas, and so on) in the production sandbox when you are ready. You can move to the development sandbox and then to the production sandbox by using the [data awareness functionality](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Reuse playbooks {#reuse-playbooks}
 
