@@ -18,6 +18,10 @@ Alternatively, select **[!UICONTROL Dashboards]** from the left navigation follo
 
 A toggle is available from the overview of the Profile, Audience, Destination, and user-defined dashboards to enable or disable the feature. 
 
+>[!NOTE]
+>
+>If you enable the [!UICONTROL View SQL] toggle, you cannot change global and widget level filters until you disable the feature.
+
 ![The [!UICONTROL View SQL] toggle highlighted.](./images/view-sql/view-sql-toggle.png)
 
 Enable the toggle to display [!UICONTROL View SQL] text on each individual insight. 
