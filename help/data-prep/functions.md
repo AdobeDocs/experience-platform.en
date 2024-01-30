@@ -181,7 +181,8 @@ For information on the object copy feature, see the section [below](#object-copy
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| array_to_map | This function takes an object array and a key as input and returns a map of key's field with the value as key and the array element as value. | <ul><li>INPUT: **Required** The object array you want to find the first non-null object of.</li><li>KEY:  **Required** The key must be a field name in the object array and the object as value.</li></ul>  |array_to_map(OBJECT[] INPUTS, KEY) | Read the [appendix](#object_to_map) for a code sample. | |
+| array_to_map | This function takes an object array and a key as input and returns a map of key's field with the value as key and the array element as value. | <ul><li>INPUT: **Required** The object array you want to find the first non-null object of.</li><li>KEY:  **Required** The key must be a field name in the object array and the object as value.</li></ul>  |array_to_map(OBJECT[] INPUTS, KEY) | Read the [appendix](#object_to_map) for a code sample. |
+| object_to_map | This function takes an object as an argument and returns a map of key-value pairs. | PARAMETERS | object_to_map(OBJECT_INPUT) | "object_to_map(address) where input is " + "address: {line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}" | Returns an map with given field name and value pairs or null if input is null. For example: `"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
 
 {style="table-layout:auto"}
 
@@ -612,3 +613,4 @@ returns = "Returns a map with given field name and value pairs or null if input 
 ```
 
 +++
+
