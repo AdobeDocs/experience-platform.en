@@ -575,7 +575,7 @@ See the [Scheduled activations widget documentation](../guides/audiences.md#sche
 
 ## Next steps
 
-By reading this document, you now understand the SQL that generates dashboard insights and what common questions this analysis solves. You are now recommended to edit and iterate on that SQL to generate your own insights.
+By reading this document, you now understand the SQL that generates dashboard insights and what common questions this analysis solves. You can now edit and iterate on the SQL to generate your own insights.
 
 <!-- This link will go in during the January release.
 See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->

@@ -66,7 +66,7 @@ See the [Audience overlap by merge policy widget documentation](../guides/profil
 
 Questions answered by this insight:
 
-- What are the top 50 overlapping audiences?
+- What are the 50 most overlapping audiences?
 - What are the 50 least overlapping audiences?
 - How does the overlapping pattern change by merge policy?
 
@@ -194,7 +194,7 @@ See the [Audiences mapped to destination status widget documentation](../guides/
 Questions answered by this insight:
 
 - Which audience segment has the largest size?
-- What are the top five largest audiences?
+- What are the five largest audiences?
 - How does the audience size distribution change over time for the top audience?
 
 +++Select to reveal the SQL that generates this insight
@@ -477,7 +477,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-Complete information on the appearance and functionality of this insight can be found in the [Profile-count widget guide](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
+Complete information on the appearance and functionality of this insight can be found in the [Profile count widget guide](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
 
 See the [Profile count widget documentation](../guides/profiles.md#profile-count) for information on the appearance and functionality of this insight.
 
@@ -773,7 +773,7 @@ See the [Unsegmented profiles widget documentation](../guides/profiles.md#unsegm
 
 ## Next steps
 
-By reading this document, you now understand the SQL that generates dashboard insights and what common questions this analysis solves. You are now recommended to edit and iterate on that SQL to generate your own insights.
+By reading this document, you now understand the SQL that generates dashboard insights and what common questions this analysis solves. You can now edit and iterate on the SQL to generate your own insights.
 
 <!-- This link will go in during the January release.
 See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
