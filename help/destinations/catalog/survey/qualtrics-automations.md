@@ -51,7 +51,7 @@ Below are the necessary steps for obtaining an API token from Qualtrics.
 
 ## Supported identities {#supported-identities}
 
-*Qualtrics Automations* supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+*Qualtrics Automations* supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|

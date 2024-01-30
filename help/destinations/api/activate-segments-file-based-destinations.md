@@ -3427,7 +3427,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ View available identities to use in the input schema
 
-The response returns the identities that you can use when creating the input schema. Note that this response returns both [standard](/help/identity-service/namespaces.md#standard) and [custom](/help/identity-service/namespaces.md#manage-namespaces) identity namespaces that you set up in Experience Platform. 
+The response returns the identities that you can use when creating the input schema. Note that this response returns both [standard](/help/identity-service/features/namespaces.md#standard) and [custom](/help/identity-service/features/namespaces.md#manage-namespaces) identity namespaces that you set up in Experience Platform. 
 
 ```json
 
