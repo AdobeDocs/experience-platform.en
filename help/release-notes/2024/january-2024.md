@@ -8,13 +8,14 @@ description: The January 2024 release notes for Adobe Experience Platform.
 
 Updates to existing features in Experience Platform:
 
-  - [Dashboards](#ddashboards)
-  - [Destinations](#destinations)
-  - [Real-Time Customer Data Platform](#rtcdp)
-  - [Real-Time Customer Profile](#profile)
-  - [Sources](#sources)
+- [Dashboards](#dashboards)
+- [Data Prep](#data-prep)
+- [Destinations](#destinations)
+- [Real-Time Customer Data Platform](#rtcdp)
+- [Real-Time Customer Profile](#profile)
+- [Sources](#sources)
 
-<!-- ## Data Prep {#data-prep}
+## Data Prep {#data-prep}
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
@@ -22,11 +23,11 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 | Feature | Description |
 | --- | --- |
-| New mapper function | Use the `to_map` function to create map data types. This function supports several different syntaxes. For more information, read the guide on [functions for hierarchies - objects](../../data-prep/functions.md#objects). |
+| New mapper functions | <ul><li>`object_to_map`: Use the `object_to_map` function to create map data types. This function supports several different syntaxes. For more information, read the guide on [functions for hierarchies - objects](../../data-prep/functions.md#objects). </li><li>`to_map`: Use the `to_map` function to create a map with given field name and value pairs using objects. For more information, read the guide on [functions for hierarchies - maps](../../data-prep/functions.md#objects). </li><li>`array_to_map`: Use the `array_to_map` function to create a map with given field name and value pairs using object arrays. For more information, read the guide on [functions for hierarchies - maps](../../data-prep/functions.md#objects).  |
 
 {style="table-layout:auto"}
 
-For more information on Data Prep, read the [Data Prep overview](../../data-prep/home.md). -->
+For more information on Data Prep, read the [Data Prep overview](../../data-prep/home.md).
 
 ## Dashboards {#dashboards}
 
@@ -36,7 +37,7 @@ Adobe Experience Platform provides multiple dashboards through which you can vie
 
 | Feature | Description |
 | --- | --- |
-| View SQL | You can now view the SQL behind your Profiles, Audiences, Destinations, and customized insights and then execute the query on demand through the Query Editor.. Take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Platform data based on your business needs. |
+| View SQL | You can now view the SQL behind your Profiles, Audiences, Destinations, and customized insights and then execute the query on demand through the Query Editor. Take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Platform data based on your business needs. For more information, read guide on [viewing insight SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
