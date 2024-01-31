@@ -160,7 +160,7 @@ In the example below, ECID:21011 is ingested and linked to the graph at `timesta
 
 >[!TAB Deletion process]
 
-As a result, Identity Service deletes the oldest identity from the identity graph, which in this case is ECID:35577. The deletion of ECID:35577 also results in the deletion of the following:
+As a result, Identity Service deletes the oldest identity only from the identity graph, which in this case is ECID:35577. The deletion of ECID:35577 also results in the deletion of the following:
 
 * The link between CRM ID: 60013 and the now-deleted ECID:35577, thus resulting in a graph split scenario.
 * IDFA: 32110, IDFA: 02383, and the remaining identities represented by `(...)`. These identities get deleted because individually, they are not linked to any other identities and therefore, cannot be represented in a graph.
