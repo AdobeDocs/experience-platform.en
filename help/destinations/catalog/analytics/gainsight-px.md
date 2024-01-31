@@ -33,7 +33,7 @@ Gainsight PX supports the activation of identities described in the table below.
 
 | Target Identity | Description                                                                                                         | 
 |---|---------------------------------------------------------------------------------------------------------------------|
-| IdentifyID      | Common User Identifier that uniquely identifies a user in Gainsight PX and Adobe Experience Platform |
+| IdentifyID      | Common user identifier that uniquely identifies a user in Gainsight PX and Adobe Experience Platform |
 
 {style="table-layout:auto"}
 
@@ -98,10 +98,14 @@ When you are finished providing details for your destination connection, select 
 Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
 ### Map identities {#map}
-Within the mapping step, the only mandatory mapping is to map the User’s Identity that’s been configured within the Experience Platform (SOURCE), to match the User’s Identity value that’s been collected within Gainsight PX (TARGET).
-#### Mapping Identity Namespace Example
+This destination supports the mapping of profile attributes and identity namespaces. The target mapping must always be the IDENTIFY_ID identity namespace.
+
+See the examples below to better understand how to configure mapping.
+#### Map a profile attribute {#map-profile-attribute)
+In the example shown below, the source field is an XDM profile attribute which gets mapped to the IDENTIFY_ID target namespace.
 ![Identity Namespace example mapping screen showing how to select the source and target values](../../assets/catalog/analytics/gainsight_px/mapping_identities.png)
-#### Mapping Attribute Example
+#### Map an identity namespace {#map-profile-attribute)
+In the example shown below, the source field is an identity namespace (ECID) which gets mapped to the IDENTIFY_ID target namespace.
 ![Attribute example mapping screen showing how to select the source and target values](../../assets/catalog/analytics/gainsight_px/mapping_attribute.png)
 
 ## Exported data / Validate data export {#exported-data}
