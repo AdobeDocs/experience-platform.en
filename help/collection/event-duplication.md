@@ -7,7 +7,7 @@ description: Learn how Adobe Experience Platform handles event duplication
 
 Adobe Experience Platform is a highly distributed system designed to maximize reliability while scaling to ever-increasing volumes of data.
 
-For real-time data collection, [Experience Events](../xdm/classes/experienceevent.md) are collected via the [Edge Network](../edge/home.md#edge-network),from client-side sources, such as [Web SDK](../edge/home.md) or [Mobile SDK](https://developer.adobe.com/client-sdks/home/), and delivered to Experience Platform processing and storage layers. These layers compose solutions such as Experience Platform, [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html), and [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html).
+For real-time data collection, [Experience Events](../xdm/classes/experienceevent.md) are collected via the [Edge Network](../edge/home.md#edge-network), from client-side sources, such as [Web SDK](../edge/home.md) or [Mobile SDK](https://developer.adobe.com/client-sdks/home/), and delivered to Experience Platform processing and storage layers. These layers compose solutions such as Experience Platform, [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html), and [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html).
 
 To minimize Experience Event loss, client-side SDKs and the internal Experience Platform delivery service expect a confirmation that an event was successfully collected.
 
@@ -24,7 +24,7 @@ Event duplication can occur in various scenarios, such as, but not limited to:
 * Network-related issues between client-side SDKs and the [!DNL Edge Network]. These issues can originate from Internet Service Provider failures, mobile signal loss, or other network failures, since the connectivity between the customer and the Edge Network is done through the public Internet.
 * Internal Experience Platform auto-scaling events. Occasionally, data can be rebalanced due to cloud infrastructure volatility.
 
-The Adobe Experience Platform data collection layer is designed to support "at-least-once" processing. Consequently, event duplication may occur in limited situations.
+The Adobe Experience Platform data collection layer is designed to support "at-least-once" processing. Consequently, event duplication may occur in limited, rare situations.
 
 To learn more about "at-least-once" processing, see this article on [message delivery guarantees](https://docs.confluent.io/kafka/design/delivery-semantics.html).
 
