@@ -70,7 +70,7 @@ The sample use cases can be grouped into customer acquisition and profile enrich
 <table style="margin-top: 0 !important">
 <tr>
   <td>
-    <a href="../partner-data/supplement-first-party-profiles">
+    <a href="../partner-data/supplement-first-party-profiles.md">
       <img alt="Supplement first-party profiles with partner-provided attributes" src="/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png" />
     </a>
     <div>
