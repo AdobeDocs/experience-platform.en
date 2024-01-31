@@ -28,7 +28,6 @@ What you'll find in this documentation guide:
 * Creating different assets for you to use, test, and promote to production when ready.
 
 ![View of all playbooks](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
-<!-- Replace this image with a current image -->
 
 Each playbook includes information about the specific use case that it solves. 
 
