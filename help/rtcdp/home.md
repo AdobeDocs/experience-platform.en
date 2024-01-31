@@ -14,17 +14,17 @@ Get a glimpse of the newest enhancements in Real-Time CDP product and documentat
 
 >[!BEGINTABS]
 
+>[!TAB Use Case Playbooks]
+
+The [!UICONTROL Use Case Playbooks] functionality is now generally available for all Real-Time CDP and Adobe Journey Optimizer customers. [!UICONTROL Use Case Playbooks] are designed to assist users in overcoming challenges when starting with Real-Time Customer Data Platform or Adobe Journey Optimizer. When you're unsure of where to begin or how to create the right assets for your desired use cases, Use Case Playbooks provide inspiration and create different assets for you to test and import to production environments when ready.
+
+[![image](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
+
 >[!TAB Sandbox tooling]
 
 Use the sandbox tooling feature to improve configuration accuracy across sandboxes and seamlessly export and import configurations between sandboxes. You can use the sandbox tooling feature to select different objects and export them into a package.
 
 [![image](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
-
->[!TAB (Limited GA) Activate account audiences] 
-
-Real-Time CDP B2B customers can now activate [account audiences](/help/segmentation/ui/account-audiences.md) to certain destinations. 
-
-[![image](assets/do-not-localize/learn-more-button.svg)](/help/destinations/ui/activate-account-audiences.md)
 
 >[!TAB Computed attributes] 
 

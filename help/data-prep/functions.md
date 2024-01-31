@@ -145,6 +145,9 @@ The following tables list all supported mapping functions, including sample expr
 | map_get_values | Takes a map and a key input. If the input is a single key, then the function returns the value associated with that key. If the input is a string array, then the function returns all values corresponding to the keys provided. If the incoming map has duplicate keys, the return value must de-duplicate the keys and return unique values. | <ul><li>MAP: **Required** The input map data.</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | get_values(MAP, KEY) | Please see the [appendix](#map_get_values) for a code sample. | |
 | map_has_keys | If one or more input keys are provided, then the function returns true. If a string array is provided as input, then the function returns true on the first key that is found. | <ul><li>MAP:  **Required** The input map data</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | map_has_keys(MAP, KEY) | Please see the [appendix](#map_has_keys) for a code sample. | |
 | add_to_map | Accepts at least two inputs. Any number of maps can be provided as inputs. Data Prep returns a single map that has all key-value pairs from all the inputs. If one or more keys are repeated (in the same map or across maps), Data Prep de-duplicates the keys so that the first key-value pair persists in the order that they were passed in the input. | MAP: **Required** The input map data. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Please see the [appendix](#add_to_map) for a code sample. | |
+| object_to_map (Syntax 1) | Use this function to create Map data types. |<ul><li>KEY: **Required** Keys must be a string. If any other primitive values such as integers or dates are provided, then they are auto-converted to strings and are treated as strings.</li><li>ANY_TYPE: **Required** Refers to any supported XDM data type except Maps.</li></ul> | object_to_map(KEY, ANY_TYPE, KEY, ANY_TYPE, ... )| Please see the [appendix](#object_to_map) for a code sample. | | 
+| object_to_map (Syntax 2) | Use this function to create Map data types.| <ul><li>OBJECT: **Required** You can provide an incoming object or object array and point to an attribute inside the object as key.</li></ul> | object_to_map(OBJECT) | Please see the [appendix](#object_to_map) for a code sample. |
+| object_to_map (Syntax 3) | Use this function to create Map data types.| <ul><li>OBJECT: **Required** You can provide an incoming object or object array and point to an attribute inside the object as key.</li></ul> | object_to_map(OBJECT_ARRAY, ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | Please see the [appendix](#object_to_map) for a code sample. |
 
 {style="table-layout:auto"}
 
@@ -167,6 +170,20 @@ For information on the object copy feature, see the section [below](#object-copy
 | size_of | Returns the size of the input. | <ul><li>INPUT: **Required** The object that you're trying to find the size of.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | This function is used to append all elements in the entire input array to the end of the array in Profile. This function is **only** applicable during updates. If used in the context of inserts, this function returns the input as is. | <ul><li>ARRAY: **Required** The array to append the array in the Profile.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | This function is used to replace elements in an array. This function is **only** applicable during updates. If used in the context of inserts, this function returns the input as is. | <ul><li>ARRAY: **Required** The array to replace the array in the Profile.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+
+{style="table-layout:auto"}
+
+### Hierarchies - Map {#map}
+
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
+
+| Function | Description | Parameters | Syntax | Expression | Sample output |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| array_to_map | This function takes an object array and a key as input and returns a map of key's field with the value as key and the array element as value. | <ul><li>INPUT: **Required** The object array you want to find the first non-null object of.</li><li>KEY:  **Required** The key must be a field name in the object array and the object as value.</li></ul> |array_to_map(OBJECT[] INPUTS, KEY) | Read the [appendix](#object_to_map) for a code sample. |
+| object_to_map | This function takes an object as an argument and returns a map of key-value pairs. | <ul><li>INPUT: **Required** The object array you want to find the first non-null object of.</li></ul>  | object_to_map(OBJECT_INPUT) | "object_to_map(address) where input is " + "address: {line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}" | Returns a map with given field name and value pairs or null if input is null. For example: `"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
+| to_map | This function takes a list of ke-value pairs and returns a map of key-value pairs. | | to_map(OBJECT_INPUT) | "to_map(\"firstName\", \"John\", \"lastName\", \"Doe\")" | Returns a map with given field name and value pairs or null if input is null. For example: `"{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"` |
 
 {style="table-layout:auto"}
 
@@ -449,3 +466,152 @@ example = "add_to_map(book_details, book_details2) where input is {\n" +
 ```
 
 +++
+
+#### object_to_map {#object_to_map}
+
+**Syntax 1**
+
++++Select to view example
+
+```json
+example = "object_to_map(\"firstName\", \"John\", \"lastName\", \"Doe\")",
+result = "{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"
+```
+
++++
+
+**Syntax 2**
+
++++Select to view example
+
+```json
+example = "object_to_map(address) where input is " +
+  "address: {line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}",
+result = "{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"
+
+```
+
++++
+
+**Syntax 3**
+
++++Select to view example
+
+```json
+example = "object_to_map(addresses,type)" +
+        "\n" +
+        "[\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City\": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"home\"\n" +
+        "    },\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"work\"\n" +
+        "    },\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"office\"\n" +
+        "    }\n" +
+        "]" ,
+result = "{\n" +
+        "    \"home\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City\": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"home\"\n" +
+        "    },\n" +
+        "    \"work\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"work\"\n" +
+        "    },\n" +
+        "    \"office\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"office\"\n" +
+        "    }\n" +
+        "}" 
+
+```
+
++++
+
+#### array_to_map {#array_to_map}
+
++++Select to view example
+
+```json
+example = "array_to_map(addresses, \"type\") where addresses is\n" +
+  "\n" +
+  "[\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City\": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"home\"\n" +
+  "    },\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"work\"\n" +
+  "    },\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"office\"\n" +
+  "    }\n" +
+  "]" ,
+result = "{\n" +
+  "    \"home\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City\": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"home\"\n" +
+  "    },\n" +
+  "    \"work\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"work\"\n" +
+  "    },\n" +
+  "    \"office\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"office\"\n" +
+  "    }\n" +
+  "}",
+returns = "Returns a map with given field name and value pairs or null if input is null"
+```
+
++++
+
