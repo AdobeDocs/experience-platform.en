@@ -40,7 +40,7 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 | Feature | Description |
 | --- | --- |
-| New mapper functions | <ul><li>`object_to_map`: Use the `object_to_map` function to create map data types. This function supports several different syntaxes. For more information, read the guide on [functions for hierarchies - objects](../../data-prep/functions.md#objects). </li><li>`to_map`: Use the `to_map` function to create a map with given field name and value pairs using objects. For more information, read the guide on [functions for hierarchies - maps](../../data-prep/functions.md#objects). </li><li>`array_to_map`: Use the `array_to_map` function to create a map with given field name and value pairs using object arrays. For more information, read the guide on [functions for hierarchies - maps](../../data-prep/functions.md#objects).  |
+| New mapper functions | <ul><li>`object_to_map`: Use the `object_to_map` function to create map data types. This function supports several different syntaxes. For more information, read the guide on [functions for hierarchies - objects](../../data-prep/functions.md#objects). </li><li>`to_map`: Use the `to_map` function to create a map with given field name and value pairs using objects. For more information, read the guide on [functions for hierarchies - maps](../../data-prep/functions.md#map). </li><li>`array_to_map`: Use the `array_to_map` function to create a map with given field name and value pairs using object arrays. For more information, read the guide on [functions for hierarchies - maps](../../data-prep/functions.md#map).  |
 
 {style="table-layout:auto"}
 
