@@ -2,7 +2,7 @@
 solution: Experience Platform
 title: Overview of data awareness in Use Case Playbooks
 description: Learn how to accelerate time to value by copying the assets generated in the end inspirational sandbox to other sandboxes.
-role: developer
+role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
 ---
 # Publish playbook-generated assets to other sandboxes {#publish-to-other-sandboxes}

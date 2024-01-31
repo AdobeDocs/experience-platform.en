@@ -2,7 +2,7 @@
 solution: Experience Platform
 title: Available Use Case Playbooks for Real-Time Customer Data Platform and Adobe Journey Optimizer. 
 description: A list of all the playbooks in Real-Time Customer Data Platform and Adobe Journey Optimizer.
-role: user
+role: User
 ---
 
 # Available Use Case Playbooks

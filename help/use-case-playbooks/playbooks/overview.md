@@ -2,7 +2,7 @@
 solution: Experience Platform
 title: Use case playbooks overview
 description: Learn how to use the Use Case Playbooks feature in Experience Platform to get started with various marketing use cases
-role: developer, user, admin, leader
+role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
 ---
 # Use Case Playbooks overview
