@@ -240,6 +240,16 @@ For more information on the Split block, please read the [Audience Composition U
 
 Yes, all segmentation types ([batch segmentation, streaming segmentation, and edge segmentation](./home.md#evaluate-segments)) are supported in the Audience Composition workflow. However, since compositions are currently only run once per day, even if streaming- or edge-evaluated audiences are included, the result will be based on audience membership at the time the composition was executed.
 
-## How can I confirm a profile's membership in an audience?
+## Audience membership
+
+The following section lists questions related to audience membership.
+
+### How can I confirm a profile's membership in an audience?
 
 To confirm a profile's audience membership, visit the profile details page of the profile you want to confirm. Select **[!UICONTROL Attributes]**, followed by **[!UICONTROL View JSON]**, and you can confirm that the `segmentMembership` object contains the ID of the audience.
+
+### How does batch segmentation resolve profile membership?
+
+Audiences evaluated using batch segmentation resolve daily, with updates made to the profiles being propagated to the downstream audience once a day. As a result, if changes are made to the profile before the evaluation job is run, there may be differences between the audience membership and the profile that will not be resolved until the evaluation job runs.
+
+If you need more real-time audience resolution, use streaming or edge segmentation.
