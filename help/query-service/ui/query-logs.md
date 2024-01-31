@@ -35,9 +35,13 @@ Each row represents log data for a query run associated with a query template. S
 
 ![The Queries Log workspace with a row selected and the log data in the right sidebar highlighted.](../images/ui/query-log/log-details.png)
 
-In the log details panel, you can select a new output dataset and see or copy the complete SQL query that was used in the run.
+In the log details panel, you can perform a variety of actions. You can run the query as CTAS, which creates a new output dataset, see or copy the complete SQL query that was used in the run, or delete the query. 
 
-![The Queries Log workspace with a row selected and the output dataset and SQL query highlighted.](../images/ui/query-log/edit-output-dataset.png)
+>[!NOTE]
+>
+>The option to [!UICONTROL Run as CTAS] is only available for a SELECT query.
+
+![The Queries Log workspace with a row selected, Run as CTAS, Delete query and the copy SQL icon highlighted.](../images/ui/query-log/edit-output-dataset.png)
 
 >[!IMPORTANT]
 >
