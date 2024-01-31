@@ -2,6 +2,7 @@
 solution: Experience Platform
 title: Get started
 description: Learn how to get started with the Use Case Playbooks functionality.
+role: admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
 ---
 
