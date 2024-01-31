@@ -2,7 +2,7 @@
 solution: Experience Platform
 title: Create, share, and reuse playbook instances
 description: Learn how to create, share, and reuse playbook instances to accomplish your marketing use case.
-role: user, developer
+role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 ---
 # Create, share, and reuse playbook instances
