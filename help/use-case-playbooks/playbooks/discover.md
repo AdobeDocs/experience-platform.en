@@ -2,6 +2,7 @@
 solution: Experience Platform
 title: Discover the right playbook
 description: Learn how to discover the right playbook for your use case enable playbooks.
+role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 ---
 # Discover the right playbook
