@@ -59,7 +59,7 @@ To create and manage schemas, utilize the data modeling permissions; **[!UICONTR
 
 **Permissions for destinations**
 
-To create and manage destinations, use the Destinations permissions; **[!UICONTROL Manage]**, **[!UICONTROL Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL Manage and Activate Dataset Destination]**, UICONTROL Destination Authoring*.
+To create and manage destinations, use the Destinations permissions; **[!UICONTROL Manage]**, **[!UICONTROL Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL Manage and Activate Dataset Destination]**, **[!UICONTROL Destination Authoring]**.
 
 **Permissions for journeys**
 

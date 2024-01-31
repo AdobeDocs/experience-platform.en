@@ -4,7 +4,7 @@ title: Use case playbooks overview
 description: Learn how to use the Use Case Playbooks feature in Experience Platform to get started with various marketing use cases
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
 ---
-# Use case playbooks overview
+# Use Case Playbooks overview
 
 >[!BEGINSHADEBOX]
 
