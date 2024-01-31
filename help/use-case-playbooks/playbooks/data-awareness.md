@@ -4,7 +4,7 @@ title: Overview of data awareness in Use Case Playbooks
 description: Learn how to accelerate time to value by copying the assets generated in the end inspirational sandbox to other sandboxes.
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
 ---
-# Overview of data awareness in Use Case Playbooks
+# Publish playbook-generated assets to other sandboxes {#publish-to-other-sandboxes}
 
 Use case playbooks are marketing templates designed to generate assets such as audiences, schemas, or journeys for common marketing use cases. You can test the assets created by playbooks in the inspirational sandbox and when you are ready, you can import the assets into other developement sandboxes for further testing with the data that you have available in those sandboxes. When satisfied with the testing, you can then move the assets from development sandboxes into production sandboxes.
 
