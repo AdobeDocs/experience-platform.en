@@ -1,19 +1,28 @@
 ---
-title: IP address allow list SFTP destinations
+title: IP address allow list for cloud storage destinations
 type: Documentation
-description: This page provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to your SFTP server.
+description: This page provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to cloud storage destinations.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 ---
-# IP address allowlist for SFTP destinations {#ip-address-allow-list-sftp}
+# IP address allowlist for cloud storage destinations {#ip-address-allow-list-cloud-storage}
 
 >[!IMPORTANT]
 >
 > * Adobe recommends that you bookmark this page and revisit it every three months to check for the latest IP addresses. Adobe does not provide notification of new IP ranges.
 > * While Adobe supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL Azure Blob].
 
+## Applicability {#applicability}
+
+The IP range information on this page applies to the following cloud storage connectors in the destinations catalog:
+
+* [Amazon S3](./amazon-s3.md)
+* [Data Landing Zone](data-landing-zone.md)
+* [Google Cloud Storage](google-cloud-storage.md)
+* [SFTP](./sftp.md)
+
 ## Overview {#overview}
 
-This page provides IP ranges that you can add to your allowlist, to safely export data from Experience Platform to your [SFTP server](./sftp.md).
+This page provides IP ranges that you can add to your allowlist, to safely export data from Experience Platform to several cloud storage destinations.
 
 You can define network access controls through your network firewall. By specifying the appropriate IP range, you can allow traffic for the data transfer service.
 
