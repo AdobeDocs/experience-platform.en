@@ -23,7 +23,7 @@ Yes, externally generated pre-built audiences are supported with Audience Portal
 
 ### What permissions do I need to have in order to upload externally generated audiences?
 
-In order to upload externally generated audiences, you need to have both the "Manage audiences/segments" and the "Manage datasets" permissions. There are no specific role-based controls required to upload externally generated audiences.
+In order to upload externally generated audiences, you need to have the "View audiences/segments", "Manage audiences/segments", "View datasets", "Manage datasets", "View sources", and "Manage sources" permissions. There are no specific role-based controls required to upload externally generated audiences.
 
 ### What happens when I upload an externally generated audience? 
 

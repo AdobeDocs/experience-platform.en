@@ -2,6 +2,7 @@
 solution: Experience Platform
 title: Available Use Case Playbooks for Real-Time Customer Data Platform and Adobe Journey Optimizer. 
 description: A list of all the playbooks in Real-Time Customer Data Platform and Adobe Journey Optimizer.
+role: User
 ---
 
 # Available Use Case Playbooks
@@ -44,22 +45,22 @@ Read this page to get an overview of all the available playbooks that you can di
 
 {style="table-layout:auto"}
 
-## Use Case Playbooks in Real-time Customer Data Platform {#rtcdp-playbooks}
+## Use Case Playbooks in Real-Time Customer Data Platform {#rtcdp-playbooks}
 
 | Playbook name | Description |
 | ------------- | ----------- |
-| Abandoned Cart: Merchandise - For Activation | Retarget fans after they leave your website or app after adding the merchandise to the cart. |
-| Abandoned Cart: Product - For Activation | Retarget shoppers after they leave your website or app after adding products to the cart. |
-| Abandoned Cart: Reservation - For Activation | Retarget guests after they leave your website or app after adding a new reservation to the cart. |
-| Destination Promotion - For Activation | Target guests to make a Reservation during an ongoing travel destination promotion. |
-| Game Promotion - For Activation|  Target fans to buy tickets for an upcoming game. |
+| Abandoned Cart: Merchandise&mdash;For Activation | Retarget fans after they leave your website or app after adding the merchandise to the cart. |
+| Abandoned Cart: Product&mdash;For Activation | Retarget shoppers after they leave your website or app after adding products to the cart. |
+| Abandoned Cart: Reservation&mdash;For Activation | Retarget guests after they leave your website or app after adding a new reservation to the cart. |
+| Destination Promotion&mdash;For Activation | Target guests to make a Reservation during an ongoing travel destination promotion. |
+| Game Promotion&mdash;For Activation|  Target fans to buy tickets for an upcoming game. |
 | Increase Merchandise Purchase During Game - For Activation | Target fans to buy merchandise while they are near the game site. |
-| Increase product purchase during store visit - For Activation | Target shoppers to buy goods while they are near the store. |
-| Increase Product and Services Purchase During Stay - For Activation | Target guests to buy products and services while they are in the property. |
-| Product Promotion - For Activatio n| Target shoppers to buy products during an ongoing product promo campaign. |
-| Send A Birthday Message To Fans - For Activation | Target fans on their birthday with a "Happy Birthday" message and an exclusive offer. |
-| Send A Birthday Message to Guests - For Activation | Target guests on their birthday with a "Happy Birthday" message and an exclusive offer. |
-| Send A Birthday Message to Shoppers - For Activation | Target shoppers on their birthday with a "Happy Birthday" message and an exclusive offer. |
+| Increase product purchase during store visit&mdash;For Activation | Target shoppers to buy goods while they are near the store. |
+| Increase Product and Services Purchase During Stay&mdash;For Activation | Target guests to buy products and services while they are in the property. |
+| Product Promotion&mdash;For Activation| Target shoppers to buy products during an ongoing product promo campaign. |
+| Send A Birthday Message To Fans&mdash;For Activation | Target fans on their birthday with a "Happy Birthday" message and an exclusive offer. |
+| Send A Birthday Message to Guests&mdash;For Activation | Target guests on their birthday with a "Happy Birthday" message and an exclusive offer. |
+| Send A Birthday Message to Shoppers&mdash;For Activation | Target shoppers on their birthday with a "Happy Birthday" message and an exclusive offer. |
 
 {style="table-layout:auto"}
 
