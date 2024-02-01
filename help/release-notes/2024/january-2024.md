@@ -71,6 +71,14 @@ For more information on dashboards, including how to grant access permissions an
 
 {style="table-layout:auto"}
 
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| New **assumed role** authentication type for Amazon S3 destinations | Use the new assumed role authentication type when connecting Experience Platform to your Amazon S3 buckets if you do not want to share account keys and secret keys with Experience Platform. Read more about the new authentication method in the [authentication section](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) of the Amazon S3 documentation. |
+
+{style="table-layout:auto"}
+
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
 ## Real-Time Customer Data Platform {#rtcdp}
