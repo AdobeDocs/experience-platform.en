@@ -80,7 +80,7 @@ If the field you are inspecting is an enum field, the right rail will also displ
 
 When inspecting schemas that contain identity fields, these fields are listed in the left rail under the class or field group that provides them to the schema. Select the identity field name in the left rail to reveal the field in the canvas, regardless of how deeply it is nested.
 
-Identity fields are highlighted in the canvas with a fingerprint icon (![Fingerprint Icon Image](../images/ui/explore/identity-symbol.png)). If you select the identity field's name, you can view additional information such as the [identity namespace](../../identity-service/namespaces.md) and whether or not the field is the primary identity for the schema.
+Identity fields are highlighted in the canvas with a fingerprint icon (![Fingerprint Icon Image](../images/ui/explore/identity-symbol.png)). If you select the identity field's name, you can view additional information such as the [identity namespace](../../identity-service/features/namespaces.md) and whether or not the field is the primary identity for the schema.
 
 ![](../images/ui/explore/identity-field.png)
 

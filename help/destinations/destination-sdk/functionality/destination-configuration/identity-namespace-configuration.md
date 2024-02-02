@@ -11,13 +11,13 @@ When creating a destination through Destination SDK, in addition to [configuring
 
 When you do this, users have the added choice of selecting target identities, in addition to target profile attributes.
 
-To learn more about identity namespaces in Experience Platform, see the [identity namespaces documentation](../../../../identity-service/namespaces.md).
+To learn more about identity namespaces in Experience Platform, see the [identity namespaces documentation](../../../../identity-service/features/namespaces.md).
 
 When configuring identity namespaces for your destination, you can fine tune the target identity mapping supported by your destination, such as:
 
 * Allowing users to map XDM attributes to identity namespaces.
-* Allowing users to map [standard identity namespaces](../../../../identity-service/namespaces.md#standard) to your own identity namespaces.
-* Allowing users to map [custom identity namespaces](../../../../identity-service/namespaces.md#manage-namespaces) to your own identity namespaces.
+* Allowing users to map [standard identity namespaces](../../../../identity-service/features/namespaces.md#standard) to your own identity namespaces.
+* Allowing users to map [custom identity namespaces](../../../../identity-service/features/namespaces.md#manage-namespaces) to your own identity namespaces.
 
 To understand where this component fits into an integration created with Destination SDK, see the diagram in the [configuration options](../configuration-options.md) documentation or see the guide on how to [use Destination SDK to configure a file-based destination](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
@@ -49,7 +49,7 @@ When defining the target identities that your destination supports, you can use 
 |---------|----------|---|------|
 |`acceptsAttributes` | Boolean | Optional | Indicates if customers can map standard profile attributes to the identity that you are configuring. |
 |`acceptsCustomNamespaces` | Boolean | Optional | Indicates if customers can map custom identity namespaces to the identity namespace that you are configuring. |
-|`acceptedGlobalNamespaces` | - | Optional | Indicates which [standard identity namespaces](../../../../identity-service/namespaces.md#standard) (for example, [!UICONTROL IDFA]) customers can map to the identity that you are configuring. |
+|`acceptedGlobalNamespaces` | - | Optional | Indicates which [standard identity namespaces](../../../../identity-service/features/namespaces.md#standard) (for example, [!UICONTROL IDFA]) customers can map to the identity that you are configuring. |
 |`transformation` | String | Optional | Displays the [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) check box in the Platform UI, when the source field is either an XDM attribute or a custom identity namespace. Use this option to give users the ability to hash source attributes on export. To enable this option, set the value to `sha256(lower($))`. |
 |`requiredTransformation` | String | Optional | When customers select this source identity namespace, the [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) check box is automatically applied to the mapping, and customers cannot disable it. To enable this option, set the value to `sha256(lower($))`.|
 
@@ -78,7 +78,7 @@ You must indicate which [!DNL Platform] identities customers are able to export 
 Identity namespaces do not require a 1-to-1 correspondence between [!DNL Platform] and your destination.
 For instance, customers could map a [!DNL Platform] [!DNL IDFA] namespace to an [!DNL IDFA] namespace from your destination, or they can map the same [!DNL Platform] [!DNL IDFA] namespace to a [!DNL Customer ID] namespace in your destination.
 
-Read more about identities in the [identity namespace overview](../../../../identity-service/namespaces.md).
+Read more about identities in the [identity namespace overview](../../../../identity-service/features/namespaces.md).
 
 ## Mapping considerations
 
