@@ -252,4 +252,10 @@ To confirm a profile's audience membership, visit the profile details page of th
 
 Audiences evaluated using batch segmentation resolve daily, with updates made to the profiles being propagated to the downstream audience once a day. As a result, if changes are made to the profile before the evaluation job is run, there may be differences between the audience membership and the profile that will not be resolved until the evaluation job runs.
 
+For example, let's say you've created two mutually exclusive audiences: Audience A is for people who live in Washington and Audience B is for people who do **not** live in Washington. There are two profiles - profile A for a person who lives in Seattle, and profile B for a person who lives in Portland. 
+
+When the batch segmentation evaluation job runs, profile A will go to Audience A, while profile B will go to Audience B. Later on, but before the next day's batch segmentation evaluation job runs, an event that reconciles the two profiles enters Platform. As a result, a single profile that contains profiles A and B is created.
+
+If you use profile lookup to retrieve the newly created profile and look at its audience membership, it'll show that it's a member of **both** Audience A and Audience B, despite the fact that both of these audiences have contradictory definitions. However, this audience membership will resolve itself once the daily batch segmentation evlauation job runs again.
+
 If you need more real-time audience resolution, use streaming or edge segmentation.
