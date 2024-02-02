@@ -160,7 +160,7 @@ feature: Destinations
         * [Moengage connection](./catalog/mobile-engagement/moengage.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
-        * [Audience Analysis](./catalog/personalization/audience-analysis.md)
+        * [(Limited availability) Audience Analysis](./catalog/personalization/audience-analysis.md)
         * [Adobe Commerce connection](./catalog/personalization/adobe-commerce.md)
         * [Adobe Target connection](./catalog/personalization/adobe-target-connection.md)
         * [Adobe Target extension](./catalog/personalization/adobe-target.md)
