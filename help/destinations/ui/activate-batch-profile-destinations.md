@@ -166,7 +166,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 
 4. Select **[!UICONTROL Create]** to save the schedule.
 
-### Configure file names {#file-names}
+### Configure file names
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_something"
