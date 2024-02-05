@@ -138,6 +138,11 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
 ### Export incremental files
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_something"
+>title="Configure file name"
+>abstract="For file-based destinations, a unique file name is generated per audience. Use the file name editor to create and edit a unique file name or keep the default name."
+
 Select **[!UICONTROL Export incremental files]** to trigger an export where the first file is a full snapshot of all profile qualifications for the selected audience, and subsequent files are incremental profile qualifications since the previous export.
 
 >[!IMPORTANT]
@@ -164,7 +169,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 ### Configure file names {#file-names}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_activate_filename"
+>id="platform_destinations_activate_something"
 >title="Configure file name"
 >abstract="For file-based destinations, a unique file name is generated per audience. Use the file name editor to create and edit a unique file name or keep the default name."
 
