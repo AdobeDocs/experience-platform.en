@@ -17,6 +17,10 @@ In Experience Data Model (XDM), data types are reusable fields that contain mult
 
 Adobe Experience Platform provides many standard data types that can be used to cover a wide variety of common experience management use cases. However, you can also define your own custom data types in order to serve your unique business needs.
 
+>[!NOTE]
+>
+>If a field is defined as a specific data type, you cannot create the same field with a different datatype in another schema. This constraint applies across your organization's tenant.
+
 This tutorial covers the steps for creating and editing custom data types in the Platform user interface.
 
 ## Prerequisites

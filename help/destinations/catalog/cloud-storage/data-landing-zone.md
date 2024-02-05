@@ -26,7 +26,7 @@ Platform enforces a strict seven-day time-to-live (TTL) on all files uploaded to
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
@@ -56,11 +56,11 @@ You can use [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/pr
 
 In the [!DNL Azure Storage Explorer] UI, select the connection icon in the left navigation bar. The **Select Resource** window appears, providing you with options to connect to. Select **[!DNL Blob container]** to connect to your [!DNL Data Landing Zone] storage.
 
-![select-resource](/help/sources/images/tutorials/create/dlz/select-resource.png)
+![Select resource highlighted in the Azure UI.](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
 Next, select **Shared access signature URL (SAS)** as your connection method, and then select **Next**.
 
-![select-connection-method](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
+![Select connection method highlighted in the Azure UI.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
 After selecting your connection method, you must provide a **display name** and the **[!DNL Blob] container SAS URL** that corresponds with your [!DNL Data Landing Zone] container.
 
@@ -165,15 +165,15 @@ The following response returns updated values for your `SASToken` and `SASUri`.
 
 Provide your display name (`containerName`) and [!DNL Data Landing Zone] SAS URL, as returned in the API call described above, and then select **Next**.
 
-![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
+![Enter connection info highlighted in the Azure UI.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
 The **Summary** window appears, providing you with an overview of your settings, including information on your [!DNL Blob] endpoint and permissions. When ready, select **Connect**.
 
-![summary](/help/sources/images/tutorials/create/dlz/summary.png)
+![Summary of settings shown in the Azure UI.](/help/sources/images/tutorials/create/dlz/summary.png)
 
 A successful connection updates your [!DNL Azure Storage Explorer] UI with your [!DNL Data Landing Zone] container.
 
-![dlz-user-container](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
+![Summary of the DLZ user container highlighted in the Azure UI.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
 With your [!DNL Data Landing Zone] container connected to [!DNL Azure Storage Explorer], you can now start exporting files from Experience Platform to your [!DNL Data Landing Zone] container. To export files, you must establish a connection to the [!DNL Data Landing Zone] destination in the Experience Platform UI, as described in the section below. 
 
@@ -181,7 +181,7 @@ With your [!DNL Data Landing Zone] container connected to [!DNL Azure Storage Ex
 
 >[!IMPORTANT]
 > 
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). In the destination configuration workflow, fill in the fields listed in the two sections below.
 
@@ -215,7 +215,7 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 > 
->* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.

@@ -21,11 +21,36 @@ At this point in time, only profile-based audiences are supported. Support for a
 
 Yes, externally generated pre-built audiences are supported with Audience Portal. At this point in time, you can import an externally generated audience through a CSV file. In the future, you'll be able to add audiences through batch or streaming-based source connectors.
 
+### What permissions do I need to have in order to upload externally generated audiences?
+
+In order to upload externally generated audiences, you need to have the "View audiences/segments", "Manage audiences/segments", "View datasets", "Manage datasets", "View sources", and "Manage sources" permissions. There are no specific role-based controls required to upload externally generated audiences.
+
+### What happens when I upload an externally generated audience? 
+
+When you upload an externally generated audience, the following items are created:
+
+- Dataset
+  - The dataset will be visible within the dataset inventory, and the name of the dataset will be the **same** as the name of the externally generated audience you uploaded.
+- Batch job
+  - A batch job will **automatically** run when you upload an externally generated audience. This means that you do **not** need to wait for the daily segmentation job to run in order to activate the externally generated audience.
+- Ad hoc schema
+  - A **new** XDM schema will be created for use with the externally generated audience. The fields in this XDM schema are namespaced for usage with the dataset that was also created.
+
+### What is an externally generated audience comprised of, and what happens to this data when it's imported to Platform?
+
+During the import external audience workflow, you must specify which column in the CSV file corresponds with the **Primary Identity**. An example of a primary identity includes email address, ECID, or an organization-specific custom identity namespace. 
+
+The data associated with this primary identity columnis the **only** data that is attached to the profile. If there are no existing profiles that match the data in the primary identity column, a new profile is created. However, this profile is essentially an orphaned profile since **no** attributes or experience events are associated with this profile.
+
+All the other data within the externally generated audience are considered **payload attributes**. These attributes can **only** be used for personalization and enrichment during activation, and are **not** attached to a profile. These attributes are, however, stored in the data lake.
+
+While the externally generated audience can be referenced when creating audiences using the Segment Builder, individual profile attributes **cannot** be used. 
+
 ### Can I reconcile externally generated audience data with an existing profile in Platform?
 
 Yes, the externally generated audience will be merged with the existing profile in Platform if the primary identifiers match.This data can take up to 24 hours to be reconciled. If profile data does not already exist, a new profile will be created as the data is ingested.
 
-## Can I use an externally generated audience to build other audiences?
+### Can I use an externally generated audience to build other audiences?
 
 Yes, any externally generated audience will appear within the audience inventory and can be used when building audiences within the [Segment Builder](./ui/segment-builder.md).
 
@@ -37,15 +62,35 @@ The externally generated audience's contextual data, or enrichment attributes, a
 
 However when mapping your audiences to batch or file-based destinations, you can use these externally generated enrichment attributes to augment your audiences and further downstream activations.
 
-To learn more about this capability, please read the guide on [activating audience data to batch profile export destinations](../destinations/ui/activate-batch-profile-destinations.md#mapping).
+To learn more about this capability, please read the guide on [activating audience data to batch profile export destinations](../destinations/ui/activate-batch-profile-destinations.md#mapping). 
 
-### Can I activate externally generated audiences to Adobe Journey Optimizer?
+### Is there a specific merge policy for externally generated audiences?
 
-At this point in time, no. However, this capability will be available in the near future.
+The organization-specific default merge policy is automatically applied when uploading externally generated audiences. However, you can change the merge policy that is applied to the externally generated audience during the import audience workflow.
+
+### Where can I activate externally generated audiences to? 
+
+An externally generated audience can be mapped to any RTCDP destination and can be used in Adobe Journey Optimizer campaigns.
+
+### How soon are externally generated audiences ready for activation?
+
+If activated to a streaming destination, the data from the externally generated audience will be available within two hours.
+
+If activated to a batch destination, the data from the externally generated audience will sync with the next 24 hour segmentation job.
 
 ### Can I delete an externally generated audience?
 
-At this point in time, no. You can either deactivate or archive this audience instead. In this state, profiles **will** remain active for use in downstream applications. Support for deleting externally generated audiences will be added in a subsequent release.
+At this point in time, you can only deactivate an externally generated audience. In this state, profiles **will** remain active for use in downstream applications. Support for deleting externally generated audiences will be added in a subsequent release.
+
+### What should I do if I accidentally uploaded an externally generated audience?
+
+If you have accidentally uploaded an externally generated audience and you want to remove the data, you can clear the profiles associated with the audience by uploading a CSV file with one row and no data.
+
+### How long do externally generated audiences last for?
+
+The current data expiration for externally generated audiences is **30 days**. This data expiration was chosen to reduce the amount of excess data stored within your organization. 
+
+After the data expiration period passes, the associated dataset will still be visible within the dataset inventory, but you will **not** be able to activate the audience and the profile count will show as zero.
 
 ### What do the different lifecycle states represent?
 
@@ -57,6 +102,7 @@ The following chart explains the different lifecycle statuses, what they represe
 | Published | An audience in the **Published** state is an audience that is ready for use across all downstream services. | Yes | Yes | Yes | Can be imported or updated. | Evaluated using batch, streaming, or edge segmentation. | Yes |
 | Inactive | An audience in the **Inactive** state is an audience that is currently not in use. It still exists within Platform, but it will **not** be useable until it's marked as draft or published. | No, but can be shown. | No | No | No longer updated. | No longer evaluated or updated by Platform. | Yes |
 | Deleted | An audience in the **Deleted** state is an audience that has been deleted. The actual deletion of the data may take up to a few minutes to execute. | No | No | No | Underlying data is deleted. | No data evaluation or execution occurs after the deletion is completed. | No |
+| Active | This status has been **deprecated** and is replaced by the **Published** status. | N/A | N/A | N/A | N/A | N/A | N/A |
 
 ### How will Audience Portal and Audience Composition interact with the release of Real-Time CDP Partner Data?
 
@@ -118,13 +164,13 @@ The following section lists questions related to Audience Composition.
 
 Both Audience Composition and Segment Builder have important roles in the creation of building audiences in Platform.
 
-The Segment Builder is more suited for audience **creation** (for building an audience from scratch), while Audience Composition is more suited for audience **curation** (for creating new audiences based on an existing audience).
+The Segment Builder is more suited for audience **creation** (for building an audience from scratch), while Audience Composition is more suited for audience **curation and personalization** (for creating new audiences based on an existing audience).
 
 The following table illustrates the difference between the two services:
 
 | Segment Builder | Audience Composition |
 | --------------- | -------------------- |
-| <ul><li>Single stage audience generation</li><li>Creates the basic blocks of audiences from profile, time-series, and multi-entity data</li><li>Used to create **one** audience</li></ul> | <ul><li>Multi-stage audience generation, using set based operations</li><li>Uses the audiences created by the Segment Builder and applies data enrichment options such as ranking profile attributes</li><li>Used to create **multiple** audiences at once</li></ul> |
+| <ul><li>Single stage audience generation</li><li>Creates the basic blocks of audiences from profile, time-series, and multi-entity data</li><li>Used to create **one** audience</li></ul> | <ul><li>Multi-stage audience generation, using set based operations</li><li>Uses the audiences created by the Segment Builder and applies data enrichment options such as ranking profile attributes and splitting into sub-audiences</li><li>Used to create **multiple** audiences at once</li></ul> |
 
 To learn more about the Segment Builder, please read the [Segment Builder guide](./ui/segment-builder.md). To learn more about Audience Composition, please read the [Audience Composition guide](./ui/audience-composition.md).
 
@@ -146,11 +192,35 @@ The composition component placing follows a rigid structure as follows:
 
 1. You **always** start with the [!UICONTROL Audience] block to select your starting activity. You can have a maximum of **one** [!UICONTROL Audience] block.
 2. You can optionally add an [!UICONTROL Exclude] block that follows the [!UICONTROL Audience] block.
-3. You can optionally add an [!UICONTROL Enrich] block that follows the [!UICONTROL Exclude] block.
+3. You can optionally add an [!UICONTROL Enrich] block that follows the [!UICONTROL Exclude] block. You can only use **one** [!UICONTROL Enrich] block per composition.
 4. You can optionally add a [!UICONTROL Rank] or [!UICONTROL Split] block. You can **only** have one of these blocks per composition.
 5. You **always** end with a [!UICONTROL Save] block to save your audience.
 
+Additionally, the following restrictions(?) apply when using these blocks:
+
+- Split block
+  - This block only supports **String** data types. The Split block does **not** support the date or boolean data type.
+  - Additionally, this block does **not** support enrichment attributes.
+- Exclude block
+  - This block does **not** support the date or boolean data type.
+- Rank block
+  - This block does **not** support enrichment attributes.
+
 For more details about using Audience Composition, please read the [Audience Composition UI guide](./ui/audience-composition.md).
+
+### When are audiences created using Audience Composition saved and evaluated?
+
+Audiences are automatically saved while creating them in Audience Composition. The audience's creation time will be the first time this automatic save occurs.
+
+After the audience has been created, it can take up to 24 hours to be evaluated.
+
+### When can I use the audience I created?
+
+The audience created in Audience Composition will **immediately** show up in Audience Portal. However, in order to use it in Adobe Journey Optimizer, you must wait at least 24 hours after evaluation.
+
+### Are evaluation jobs visible within the monitoring section?
+
+At this time, evaluation jobs are **not** displayed within the monitoring UI.
 
 ### Can I use an Audience Composition in another composition?
 
@@ -158,7 +228,11 @@ No, audiences created using Audience Composition **cannot** be used as an input 
 
 ### How does splitting work in Audience Composition?
 
-Audience splitting lets you further subset your audience into smaller groups. This split forces mutual exclusivity between the groups. This means that if a record meets the criteria of multiple split paths, it will be assigned the **first** path from the left and **not** assigned to any of the other paths.
+Audience splitting lets you further subset your audience into smaller groups. 
+
+When splitting by attribute, there is mutual exclusivity between the groups. This means that if a record meets the criteria of multiple split paths, it will be assigned the **first** path from the left and **not** assigned to any of the other paths.
+
+When splitting by percentage, splits are **randomly** done. This means that the profiles will be randomly assigned to each path. The split is **not** persistent, so the profile could be in a different sub-audience on each evaluation.
 
 For more information on the Split block, please read the [Audience Composition UI guide](./ui/audience-composition.md#split).
 

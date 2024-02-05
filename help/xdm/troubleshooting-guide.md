@@ -268,7 +268,7 @@ In order to enable schemas that contain relationship descriptors for use in [!DN
 
 Ensure that the `xdm:namespace` value of the reference schema's identity field matches that of the `xdm:identityNamespace` property in the source field's reference identity descriptor to resolve this issue.
 
-For a list of standard identity namespace codes, see the section on [standard namespaces](../identity-service/namespaces.md) in the identity namespace overview.
+For a list of standard identity namespace codes, see the section on [standard namespaces](../identity-service/features/namespaces.md) in the identity namespace overview.
 
 #### The schema must include an identityMap or primary identity
 

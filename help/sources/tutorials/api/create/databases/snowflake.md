@@ -12,7 +12,7 @@ exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL Snowflake] using the [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Use the following tutorial to learn how to create a base connection for [!DNL Snowflake] using the [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Getting started
 
@@ -29,20 +29,38 @@ The following section provides additional information that you will need to know
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect with [!DNL Snowflake], you must provide the following connection properties:
+You must provide values for the following credential properties to authenticate your [!DNL Snowflake] source.
+
+>[!BEGINTABS]
+
+>[!TAB Account key authentication]
 
 | Credential | Description |
-| --- | --- |
-| `account` | The full account name associated with your [!DNL Snowflake] account. A fully qualified [!DNL Snowflake] account name includes your account name, region, and cloud platform. For example, `cj12345.east-us-2.azure`. For more information on account names, refer to this [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html).  |
+| ---------- | ----------- |
+| `account` | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `orgname-account_name`. For more information on account names, read the [!DNL Snowflake] documentation on [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `warehouse` | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Platform. |
 | `database` | The [!DNL Snowflake] database contains the data you want to bring the Platform. |
 | `username` | The username for the [!DNL Snowflake] account. |
 | `password` | The password for the [!DNL Snowflake] user account. |
 | `role` | The default access control role to use in the [!DNL Snowflake] session. The role should be an existing one that has already been assigned to the specified user. The default role is `PUBLIC`. |
 | `connectionString` | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
-| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Snowflake] is `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
-For more information about getting started, refer to this [[!DNL Snowflake] document](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+>[!TAB Key-pair authentication]
+
+To use key-pair authentication, you must generate a 2048-bit RSA key pair and then provide the following values when creating an account for your [!DNL Snowflake] source.
+
+| Credential | Description |
+| --- | --- |
+| `account` | An account name uniquely identifies an account within your organization. In this case, you must uniquely identify an account across different [!DNL Snowflake] organizations. To do this, you must prepend your organization name to the account name. For example: `orgname-account_name`. For more information on account names, read the [!DNL Snowflake] documentation on [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `username` | The username of your [!DNL Snowflake] account. |
+| `privateKey` | The [!DNL Base64-]encoded private key of your [!DNL Snowflake] account. You can generate either encrypted or unencrypted private keys. If you are using an encrypted private key, then you must also provide a private key passphrase when authenticating against Experience Platform. |
+| `privateKeyPassphrase` | The private key passphrase is an additional layer of security that you must use when authenticating with an encrypted private key. You are not required to provide the passphrase if you are using an unencrypted private key. |
+| `database` | The [!DNL Snowflake] database that contains the data you want to ingest to Experience Platform. |
+| `warehouse` | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Experience Platform. |
+
+For more information about these values, refer the [[!DNL Snowflake] key-pair authentication guide](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!ENDTABS]
 
 >[!NOTE]
 >
@@ -60,7 +78,11 @@ To create a base connection ID, make a POST request to the `/connections` endpoi
 POST /connections
 ```
 
-**Request**
+>[!BEGINTABS]
+
+>[!TAB ConnectionString]
+
++++Request
 
 The following request creates a base connection for [!DNL Snowflake]:
 
@@ -93,7 +115,9 @@ curl -X POST \
 | `auth.params.connectionString` | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
 | `connectionSpec.id` | The [!DNL Snowflake] connection specification ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
-**Response**
++++
+
++++Response
 
 A successful response returns the newly created connection, including its unique connection identifier (`id`). This ID is required to explore your data in the next tutorial.
 
@@ -103,6 +127,125 @@ A successful response returns the newly created connection, including its unique
     "etag": "\"d403848a-0000-0200-0000-5e978f7b0000\""
 }
 ```
+
++++
+
+
+>[!TAB Key-pair authentication with encrypted private key]
+
++++Request
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Snowflake base connection with encrypted private key",
+      "description": "Snowflake base connection with encrypted private key",
+      "auth": {
+        "specName": "KeyPair Authentication",
+        "params": {
+            "account": "acme-snowflake123",
+            "username": "acme-cj123",
+            "database": "ACME_DB",
+            "privateKey": "{BASE_64_ENCODED_PRIVATE_KEY}",
+            "privateKeyPassphrase": "abcd1234",
+            "warehouse": "COMPUTE_WH"
+        }
+    },
+    "connectionSpec": {
+        "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+        "version": "1.0"
+    }
+  }'
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `auth.params.account` | The name of your [!DNL Snowflake] account. |
+| `auth.params.username` | The username associated with your [!DNL Snowflake] account.|
+| `auth.params.database` | The [!DNL Snowflake] database from where the data will be pulled from. |
+| `auth.params.privateKey` | The [!DNL Base64-]encoded encrypted private key of your [!DNL Snowflake] account. |
+| `auth.params.privateKeyPassphrase` | The passphrase that corresponds with your private key. |
+| `auth.params.warehouse` | The [!DNL Snowflake] warehouse that you are using. |
+| `connectionSpec.id` | The [!DNL Snowflake] connection specification ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
+
++++
+
++++Response
+
+A successful response returns the newly created connection, including its unique connection identifier (`id`). This ID is required to explore your data in the next tutorial.
+
+```json
+{
+    "id": "2fce94c1-9a93-4971-8e94-c19a93097129",
+    "etag": "\"d403848a-0000-0200-0000-5e978f7b0000\""
+}
+```
+
++++
+
+>[!TAB Key-pair authentication with unencrypted private key]
+
++++Request
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Snowflake base connection with encrypted private key",
+      "description": "Snowflake base connection with encrypted private key",
+      "auth": {
+        "specName": "KeyPair Authentication",
+        "params": {
+            "account": "acme-snowflake123",
+            "username": "acme-cj123",
+            "database": "ACME_DB",
+            "privateKey": "{BASE_64_ENCODED_PRIVATE_KEY}",
+            "warehouse": "COMPUTE_WH"
+        }
+    },
+    "connectionSpec": {
+        "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+        "version": "1.0"
+    }
+  }'
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `auth.params.account` | The name of your [!DNL Snowflake] account. |
+| `auth.params.username` | The username associated with your [!DNL Snowflake] account.|
+| `auth.params.database` | The [!DNL Snowflake] database from where the data will be pulled from. |
+| `auth.params.privateKey` | The [!DNL Base64-]encoded unencrypted private key of your [!DNL Snowflake] account. |
+| `auth.params.warehouse` | The [!DNL Snowflake] warehouse that you are using. |
+| `connectionSpec.id` | The [!DNL Snowflake] connection specification ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
+
++++
+
++++Response
+
+A successful response returns the newly created connection, including its unique connection identifier (`id`). This ID is required to explore your data in the next tutorial.
+
+```json
+{
+    "id": "2fce94c1-9a93-4971-8e94-c19a93097129",
+    "etag": "\"d403848a-0000-0200-0000-5e978f7b0000\""
+}
+```
+
++++
+
+>[!ENDTABS]
 
 By following this tutorial, you have created a [!DNL Snowflake] base connection using the [!DNL Flow Service] API. You can use this base connection ID in the following tutorials:
 

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;order;datatype;data-type;data type;
 solution: Experience Platform
 title: Order Data Type
-description: This document provides an overview of the Order Experience Data Model (XDM) data type.
+description: Learn about the Order Experience Data Model (XDM) data type.
 exl-id: abfc6d53-ffe6-4692-ad65-03d556831fa0
 ---
 # [!UICONTROL Order] data type

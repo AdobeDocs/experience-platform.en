@@ -85,6 +85,7 @@ feature: Destinations
         * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
         * [Pinterest connection upgrade](./catalog/advertising/pinterest-upgrade.md)
+        * [PubMatic Connect connection](./catalog/advertising/pubmatic.md)
         * [Snapchat Ads connection](./catalog/advertising/snap-inc.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
         * [(Beta) The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
@@ -121,7 +122,7 @@ feature: Destinations
         * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
         * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
-        * [IP address allowlist for SFTP destinations](./catalog/cloud-storage/ip-address-allow-list.md)
+        * [IP address allowlist for file-based cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Customer Relationship Management (CRM) destinations {#crm}
         * [Hubspot connection](./catalog/crm/hubspot.md)
         * [Salesforce CRM connection](./catalog/crm/salesforce.md)

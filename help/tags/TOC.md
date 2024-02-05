@@ -242,7 +242,8 @@ solution: Data Collection
       * [Overview](./extensions/server/splunk/overview.md)
     * [!DNL Twitter] {#twitter}
       * [Overview](./extensions/server/twitter/overview.md)
-    * [[!DNL Tiktok] Web Events API](https://exchange.adobe.com/apps/ec/109834)
+    * [!DNL Tiktok] Web Events API {#tiktok}
+      * [Overview](./extensions/server/tiktok/overview.md)
     * [!DNL Zendesk] Events API {#zendesk}
       * [Overview](./extensions/server/zendesk/overview.md)
 * Extension development {#extension-dev}
@@ -314,10 +315,5 @@ solution: Data Collection
 * [FAQ](./faq.md)
 * [Terminology updates](./term-updates.md)
 * [Deprecating support for Internet Explorer 10 and 11](./ie-deprecation.md)
-* Release notes {#release-notes}
-  * [Latest](./release-notes/current.md)
-  * [2021 release notes](./release-notes/2021.md)
-  * [2020 release notes](./release-notes/2020.md)
-  * [2019 release notes](./release-notes/2019.md)
-  * [2018 release notes](./release-notes/2018.md)
+* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
 
