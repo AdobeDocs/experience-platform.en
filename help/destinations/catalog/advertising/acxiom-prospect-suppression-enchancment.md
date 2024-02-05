@@ -25,7 +25,7 @@ Connector used to send data to the Acxiom prospect service using S3 as an drop p
 ## Configuring a new destination
 
 * **Existing Account** -  Accounts already defined using the Prospecting Data for Adobe AEP card will appear here for reuse.  These will appear in a list pop-up and when selected provides details on the account
-  ![Existing Account](../../assets/catalog/advertising/acxiom/image-destination-account.png)
+<br>  ![Existing Account](../../assets/catalog/advertising/acxiom/image-destination-account.png)
 
 * **New Account** - Define a new Acxiom Managed S3 location
   * **Connection type**
@@ -37,7 +37,7 @@ Connector used to send data to the Acxiom prospect service using S3 as an drop p
 ## Destination Details ##
 Overview of target file location
 
-  ![Destination Detail](../../assets/catalog/advertising/acxiom/image-destination-details.png)
+<br>  ![Destination Detail](../../assets/catalog/advertising/acxiom/image-destination-details.png)
 * **Name (Required)** - The name the destination will be saved under
 * **Description** -  Short explanation of the destination's purpose
 * **Bucket Name (Required)** - Name of the S3 bucket set up on S3
@@ -66,7 +66,7 @@ Overview of target file location
     * **Empty String in Double Quotes** ("")
   * **Compression Format** - Specifies if the resulting file will be compressed or not.  Current option include GZIP, and None
   * **Include manifest file** -  This Boolean option appears only when the GZIP option is selected.  When selected a file outlining details on the file included in the zip file is provided.
-  ![CSV Options](../../assets/catalog/advertising/acxiom/image-destination-csv-options.png)
+<br>  ![CSV Options](../../assets/catalog/advertising/acxiom/image-destination-csv-options.png)
 
 * **Alerts** - Adobe Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  [alert overview](../../../observability/alerts/overview.md)
   * **Destination Flow Run Delay** - Issues an alert when the dataflow takes longer than 150 seconds to run.
@@ -86,11 +86,11 @@ Read [Activate profiles and audiences to streaming audience export destinations]
 
 ## Data Governance Policy and Enforcement Action ##
 Option to select data governance policy  [alert overview](../../../data-governance/home.md)
-  ![Data Governance policy](../../assets/catalog/advertising/acxiom/image-destination-governance.png)
+<br>  ![Data Governance policy](../../assets/catalog/advertising/acxiom/image-destination-governance.png)
 
 ## Audience Selection ##
 Selecting an audience defines what data will be selected from the datalike and posted.  An audience would be defined for the account prior destination configuration [account definition](../../../segmentation/ui/account-audiences.md)
-  ![Audience Selection](../../assets/catalog/advertising/acxiom/image-destination-audiences.png)
+<br>  ![Audience Selection](../../assets/catalog/advertising/acxiom/image-destination-audiences.png)
 
 ## Scheduling ##
 Defines when the dataflow should be run.
@@ -102,7 +102,7 @@ Defines when the dataflow should be run.
   * When the File Export Options is set as 'Export incremental files' this will offer the 'Daily' and 'Hourly' with 3, 6, 8, and 12 hour increments.
 * **Start Time** - The timestamp for the projected run, presented in UTC time zone.  You can also select a start and end date for the flow runs.
 * **Date** - Selector to choose the interval when the export should take place. Best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.  When selecting an export interval, the last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10.
-  ![Scheduling](../../assets/catalog/advertising/acxiom/image-destination-scheduling.png)
+<br>  ![Scheduling](../../assets/catalog/advertising/acxiom/image-destination-scheduling.png)
 
 * **File Name Editing** - Allows the user to change the naming of the resulting file on S3, the options presented under this allows for a number of flow derived values, or as a custom text value entered by the user.  Acxiom should be informed of the format.  If you don’t select the Date and Time component, the file names will be static and the new exported file will overwrite the previous file in your storage location with each export.
   * **Audience name** - The name of the exported audience.
@@ -124,12 +124,12 @@ Defines when the dataflow should be run.
 * **Filter fields** - Entering text into this field will restrict the existing map fields, showing only those that contain that substring.
 * **Mandatory Key** - Fields that all exported records must include.  Records without data in the given field would be omitted for the export.
 * **Deduplication Key** - Allows the elimination of records the represent the same data
-  ![Mapping](../../assets/catalog/advertising/acxiom/image-destination-mapping.png)
+<br>  ![Mapping](../../assets/catalog/advertising/acxiom/image-destination-mapping.png)
 
 
 ## Review ##
 This presents a file overview of the options selected before submission
-  ![Review](../../assets/catalog/advertising/acxiom/image-destination-review.png)
+<br>  ![Review](../../assets/catalog/advertising/acxiom/image-destination-review.png)
 
 ## Data usage and governance {#data-usage-governance}
 
