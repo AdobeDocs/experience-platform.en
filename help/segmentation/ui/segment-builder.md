@@ -251,7 +251,7 @@ To select a merge policy for your segment definition, select the gear icon on th
 
 When building a segment definition, the **[!UICONTROL Audience properties]** section on the right-hand side of the workspace displays an estimate of the size of the resulting segment definition, allowing you to adjust your segment definition as needed before building the audience itself.
 
-**[!UICONTROL Qualified Profiles]** indicates the **actual** number of profiles that match the segment definition's rules. For segment definitions evaluated using batch segmentation, this number updates every 24 hours, after the segment evaluation job has ran. For segment definitions evaluated using streaming or edge segmentation, this number is updated within 3 hours.
+**[!UICONTROL Qualified Profiles]** indicates the **actual** number of profiles that match the segment definition's rules. This number updates every 24 hours, after the segment evaluation job has ran.
 
 The timestamp for qualified profiles indicates the most recent **batch** segment evaluation job and is **not** displayed for segment definitions evaluated using streaming or edge segmentation. If you edit the segment definition, the number of qualified profiles will remain the same until the next segment evaluation job is run. 
 
