@@ -14,16 +14,16 @@ This tutorial provides steps to create a [!DNL Acxiom Prospect-Suppression Data 
 
 ![The destination catalog with the Acxiom destination selected.](../../assets/catalog/advertising/acxiom/image-destination-catalog.png)
 
-## Get started
 
+## Get started
 Connector used to send data to the Acxiom prospect service using S3 as an drop point.  This is available as a destination connector, currently listed under the "Other Applications" heading.  Initial runs will provide a "Set up" option as the default behavior.  After the initial destination is defined this will default to "Activate audiences" which will provide a list of existing dataflow to add audiences or “configure new destination” button to create a new destination dataflow.  Additional accounts can be created using the "..." to expand the allowed actions, we can add new destination, view the existing dataflows and existing account, and view the documentation.
 
 >[!IMPORTANT]
 >
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-### Gather required credentials
 
+### Gather required credentials
 In order to access your bucket on Experience Platform, you need to provide valid values for the following credentials:
 
 | Credential | Description |
@@ -33,8 +33,8 @@ In order to access your bucket on Experience Platform, you need to provide valid
 | S3 Secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team. |
 | Bucket name | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
 
-## Configuring a new destination
 
+## Configuring a new destination
 * **Existing Account** -  Accounts already defined using the Prospecting Data for Adobe AEP card will appear here for reuse.  These will appear in a list pop-up and when selected provides details on the account
 <br>  ![Existing Account](../../assets/catalog/advertising/acxiom/image-destination-account.png)
 
@@ -44,6 +44,7 @@ In order to access your bucket on Experience Platform, you need to provide valid
     * **S3 access key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.  Must be equal to 20 characters and can only include characters A-Z and numbers 2-7.
     * **S3 secret key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.  Must be equal to 40 characters and can only include characters A-Z, a-z, 0-9, +, \ and / .
     * **Connect to destination** - Will use the provided authorization keys to connect to the S3 service to validate access.  Success will allow configuration of the destination details while failure will be indicated on the UI.
+
 
 ## Destination Details ##
 Overview of target file location
@@ -86,8 +87,8 @@ Overview of target file location
   * **Destination Flow Run Start** - Issues an alert when the dataflow starts.
   * **Activation Skipped Rate Exceeded** - Issues an alert when the ratio of failed to all records exceed 0.5%
 
-## Activate audiences to this destination {#activate}
 
+## Activate audiences to this destination {#activate}
 >[!IMPORTANT]
 >
 >* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
@@ -95,13 +96,16 @@ Overview of target file location
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
+
 ## Data Governance Policy and Enforcement Action ##
 Option to select data governance policy  [alert overview](../../../data-governance/home.md)
 <br>  ![Data Governance policy](../../assets/catalog/advertising/acxiom/image-destination-governance.png)
 
+
 ## Audience Selection ##
 Selecting an audience defines what data will be selected from the datalike and posted.  An audience would be defined for the account prior destination configuration [account definition](../../../segmentation/ui/account-audiences.md)
 <br>  ![Audience Selection](../../assets/catalog/advertising/acxiom/image-destination-audiences.png)
+
 
 ## Scheduling ##
 Defines when the dataflow should be run.
@@ -127,8 +131,8 @@ Defines when the dataflow should be run.
   * **Date and time** - Select between adding a MMDDYYYY_HHMMSS format or a UNIX 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export.
   * **Custom text** - Any custom text that you want to add to the file names.
 
-## Mapping ##
 
+## Mapping ##
 * **Add new mapping** - New fields can be appended, allowing a user to add additional target field to the destination layout
 * **Add calculated field** - Allows field manipulation though scripting. [Mapping functions](../../../data-prep/functions.md)
 * **Clear all mapping** - Resets the mapping, removing all entries.
@@ -142,10 +146,10 @@ Defines when the dataflow should be run.
 This presents a file overview of the options selected before submission
 <br>  ![Review](../../assets/catalog/advertising/acxiom/image-destination-review.png)
 
-## Data usage and governance {#data-usage-governance}
 
+## Data usage and governance {#data-usage-governance}
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
-## Additional resources {#additional-resources}
 
+## Additional resources {#additional-resources}
 *Acxiom Audience Data and Distribution:* https://www.acxiom.com/customer-data/audience-data-distribution/
