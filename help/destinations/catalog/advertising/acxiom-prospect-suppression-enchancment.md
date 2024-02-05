@@ -66,7 +66,7 @@ Overview of target file location
     * **Empty String in Double Quotes** ("")
   * **Compression Format** - Specifies if the resulting file will be compressed or not.  Current option include GZIP, and None
   * **Include manifest file** -  This Boolean option appears only when the GZIP option is selected.  When selected a file outlining details on the file included in the zip file is provided.
-    ![CSV Options](../../assets/catalog/advertising/acxiom/image-destination-csv-options.png)
+  ![CSV Options](../../assets/catalog/advertising/acxiom/image-destination-csv-options.png)
 
 * **Alerts** - Adobe Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  [alert overview](../../../observability/alerts/overview.md)
   * **Destination Flow Run Delay** - Issues an alert when the dataflow takes longer than 150 seconds to run.
@@ -137,4 +137,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-Acxiom Audience Data and Distribution: https://www.acxiom.com/customer-data/audience-data-distribution/
+*Acxiom Audience Data and Distribution:* https://www.acxiom.com/customer-data/audience-data-distribution/
