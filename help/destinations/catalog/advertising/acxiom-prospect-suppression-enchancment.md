@@ -22,6 +22,17 @@ Connector used to send data to the Acxiom prospect service using S3 as an drop p
 >
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
+### Gather required credentials
+
+In order to access your bucket on Experience Platform, you need to provide valid values for the following credentials:
+
+| Credential | Description |
+| --- | --- |
+| Acxiom authentication key | The authentication key. You can retrieve this value from the [!DNL Acxiom] team. |
+| S3 Access key | The access key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team. |
+| S3 Secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team. |
+| Bucket name | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
+
 ## Configuring a new destination
 
 * **Existing Account** -  Accounts already defined using the Prospecting Data for Adobe AEP card will appear here for reuse.  These will appear in a list pop-up and when selected provides details on the account
