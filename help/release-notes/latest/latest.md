@@ -72,7 +72,7 @@ Adobe Experience Platform provides multiple dashboards through which you can vie
 
 | Feature | Description |
 | --- | --- |
-| View SQL | You can now view the SQL behind your Profiles, Audiences, Destinations, and customized insights and then execute the query on demand through the Query Editor. Take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Platform data based on your business needs. For more information, read the guide on [viewing insight SQL](../../dashboards/view-sql.md). |
+| View SQL  | You can now view the SQL behind your Profiles, Audiences, Destinations, and customized insights with the View SQL toggle, then execute the query on demand through the Query Editor. Accessing the SQL that powers your Real-time Customer Data Platform insights helps you to understand the logic behind the analysis of your data model. This transparency makes your Adobe Real-time CDP data more accessible, understandable, and impactful for decision-making.<br>Take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Platform data based on your business needs. The SQL is also available for your [Profiles](../../dashboards/insights/profiles.md), [Audiences](../../dashboards/insights/audiences.md), and [Destinations](../../dashboards/insights/destinations.md) insights in the Experience League documentation. These documents highlight the business use cases that can be answered with the standard insights. For more information, read the guide on [viewing insight SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
