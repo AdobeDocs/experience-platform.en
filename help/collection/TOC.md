@@ -11,6 +11,7 @@ feature: Data Collection
 
 - [Data collection overview](home.md)
 - [End-to-end overview](e2e.md)
+- [Event duplication handling](event-duplication.md)
 - [Permission management](permissions.md)
 - [Client state management](client-state.md)
 - Visitor identification {#visitor-identification}

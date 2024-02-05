@@ -12,9 +12,11 @@ New features in Adobe Experience Platform:
 
 Updates to existing features in Experience Platform:
 
-- [Dashboards](#dashboards)
+- [Attribute-based access control](#abac)
 - [Data Prep](#data-prep)
+- [Dashboards](#dashboards)
 - [Destinations](#destinations)
+- [Identity Service](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Real-Time Customer Profile](#profile)
 - [Sources](#sources)
@@ -31,6 +33,22 @@ To get started with [!UICONTROL Use Case Playbooks], read the following document
 - Understand the [data awareness functionality](/help/use-case-playbooks/playbooks/data-awareness.md) which allows you to copy generated assets to other sandbox environments
 - Get [troubleshooting tips](/help/use-case-playbooks/playbooks/troubleshooting.md) if you run into errors or difficulties using Use Case Playbooks.
 
+## Attribute-based access control {#abac}
+
+Attribute-based access control is a capability of Adobe Experience Platform that gives privacy conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
+
+Through attribute-based access control, administrators of your organization can control users' access to, sensitive personal data (SPD), personally identifiable information (PII) and other customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+
+**New or updated documentation**
+
+| Documentation update | Description |
+| --- | --- |
+| New API endpoints documented for attribute-based access control | The [Access Control API reference documentation](https://developer.adobe.com/experience-platform-apis/references/access-control/) now includes attribute-based access control API roles, policies, and product endpoints. These endpoints can be used to retrieve relevant roles, policies, and products for a user on given resources in a specified sandbox.|
+
+{style="table-layout:auto"}
+
+For more information on attribute-based access control, see the [attribute-based access control overview](../../access-control/abac/overview.md). For a comprehensive guide on the attribute-based access control workflow, read the [attribute-based access control end-to-end guide](../../access-control/abac/end-to-end-guide.md).
+
 ## Data Prep {#data-prep}
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
@@ -39,7 +57,7 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 | Feature | Description |
 | --- | --- |
-| New mapper functions | <ul><li>`object_to_map`: Use the `object_to_map` function to create map data types. This function supports several different syntaxes. For more information, read the guide on [functions for hierarchies - objects](../../data-prep/functions.md#objects). </li><li>`to_map`: Use the `to_map` function to create a map with given field name and value pairs using objects. For more information, read the guide on [functions for hierarchies - maps](../../data-prep/functions.md#objects). </li><li>`array_to_map`: Use the `array_to_map` function to create a map with given field name and value pairs using object arrays. For more information, read the guide on [functions for hierarchies - maps](../../data-prep/functions.md#objects).  |
+| New mapper functions | <ul><li>`object_to_map`: Use the `object_to_map` function to create map data types. This function supports several different syntaxes. For more information, read the guide on [functions for hierarchies - objects](../../data-prep/functions.md#objects). </li><li>`to_map`: Use the `to_map` function to create a map with given field name and value pairs using objects. For more information, read the guide on [functions for hierarchies - maps](../../data-prep/functions.md#map). </li><li>`array_to_map`: Use the `array_to_map` function to create a map with given field name and value pairs using object arrays. For more information, read the guide on [functions for hierarchies - maps](../../data-prep/functions.md#map).  |
 
 {style="table-layout:auto"}
 
@@ -53,7 +71,7 @@ Adobe Experience Platform provides multiple dashboards through which you can vie
 
 | Feature | Description |
 | --- | --- |
-| View SQL | You can now view the SQL behind your Profiles, Audiences, Destinations, and customized insights and then execute the query on demand through the Query Editor. Take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Platform data based on your business needs. For more information, read the guide on [viewing insight SQL](../../dashboards/view-sql.md). |
+| View SQL  | You can now view the SQL behind your Profiles, Audiences, Destinations, and customized insights with the View SQL toggle, then execute the query on demand through the Query Editor. Accessing the SQL that powers your Real-time Customer Data Platform insights helps you to understand the logic behind the analysis of your data model. This transparency makes your Adobe Real-time CDP data more accessible, understandable, and impactful for decision-making.<br>Take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Platform data based on your business needs. The SQL is also available for your [Profiles](../../dashboards/insights/profiles.md), [Audiences](../../dashboards/insights/audiences.md), and [Destinations](../../dashboards/insights/destinations.md) insights in the Experience League documentation. These documents highlight the business use cases that can be answered with the standard insights. For more information, read the guide on [viewing insight SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
@@ -71,7 +89,29 @@ For more information on dashboards, including how to grant access permissions an
 
 {style="table-layout:auto"}
 
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| New **assumed role** authentication type for Amazon S3 destinations | Use the new assumed role authentication type when connecting Experience Platform to your Amazon S3 buckets if you do not want to share account keys and secret keys with Experience Platform. Read more about the new authentication method in the [authentication section](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) of the Amazon S3 documentation. |
+
+{style="table-layout:auto"}
+
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
+## Identity Service {#identity-service}
+
+Adobe Experience Platform Identity Service provides you with a comprehensive view of your customers and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
+
+**New or updated documentation**
+
+| Documentation update | Description |
+| --- | --- |
+| Documentation restructuring | The Identity Service documentation has been restructured to improve presentation and clarity of concepts within Identity Service:<ul><li>Visit the [Identity Service overview page](../../identity-service/home.md) for an expanded terminology guide, a use-case example detailing a typical customer journey, a breakdown of how Identity Service links identities together, and a summary of the role that Identity Service place within the Experience Platform ecosystem.</li><li>Read the guide on [understanding the relationship between Identity Service and Real-Time Customer Profile](../../identity-service/identity-and-profile.md) for a detailed summary of how the two services work together and the differences between their purposes, processes, inputs, and outputs.</li><li>Refer to the [Identity Service linking logic guide](../../identity-service/features/identity-linking-logic.md) for explanations and visualizations of how the identity graph behaves given different scenarios and timestamps.</li></ul> | 
+
+{style="table-layout:auto"}
+
+To learn more about Identity Service, please read the [Identity Service overview](../../identity-service/home.md).
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
@@ -83,7 +123,18 @@ Built on Experience Platform, Real-Time Customer Data Platform ([!DNL Real-Time 
 | --- | --- |
 | Updates to the [Real-Time CDP home page](https://experience.adobe.com) | <ul><li>**Profiles widget**: You can now use the Profiles widget to navigate to the Profiles overview page and view Profile metrics for your organization.</li><li>**Profile metrics card**: The Profile metrics card in the home page dashboard now displays the total count of profiles in your organization, depending on your respective merge policy.</li><li>**Schemas widget**: You can now use the schemas widget to navigate to the schema creation workflow in the UI.</li></ul> |
 
-To learn moore about Real-Time CDP, read the [Real-Time CDP overview](../../rtcdp/overview.md).
+{style="table-layout:auto"}
+
+**New or updated documentation**
+
+| Documentation update | Description |
+| --- | --- |
+| New Real-Time CDP documentation homepage | Visit the [new Real-Time CDP documentation homepage](/help/rtcdp/home.md) for at-a-glance information about how to get started with the productm, guardrails, sample use case, and much more. |
+| Sample Real-Time CDP use cases overview | Visit the [new sample use cases overiew page](/help/rtcdp/use-case-guides/overview.md) for a collection of sample use cases that your organiation can achieve with Real-Time CDP. |
+
+{style="table-layout:auto"}
+
+To learn more about Real-Time CDP, read the [Real-Time CDP overview](../../rtcdp/overview.md).
 
 ## Real-Time Customer Profile {#profile}
 
