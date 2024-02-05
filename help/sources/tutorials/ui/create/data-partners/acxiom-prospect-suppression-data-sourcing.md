@@ -1,7 +1,7 @@
 ---
 title: Acxiom Prospect-Suppression Data Sourcing
 description: Acxiom Prospect-Suppression Data Sourcing for Adobe Real-Time CDP is our process for delivering the most productive prospect audiences possible. We take the Adobe CDP 1st-party data via a secure export and run it through our award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which  enables the prospect lists to be tailored for import.
-last-substantial-update: 2024-01=31
+last-substantial-update: 2024-01-31
 badge: Beta
 ---
 # Create a [!DNL Acxiom Prospect-Suppression Data Sourcing] source connection and dataflow in the UI
@@ -12,7 +12,7 @@ badge: Beta
 
 This tutorial provides steps to create a [!DNL Acxiom Prospect-Suppression Data Sourcing] source connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to retrieve and map response from Acxiom prospect service using S3 as a drop point.  This connector can be found under source connectors in the "Data Partners" header.  Initial runs will provide a "Set up" option as the default behavior. After the initial source connection is defined this will default to "Add data" which will allow to create a new source dataflow.  The "..." selection in this card provides options to view all existing accounts defined using this connector, previous dataflow, and external facing documentation.
 
-![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-catalog.png)
+<br>![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-catalog.png)
 
 
 ## Get started
@@ -23,6 +23,10 @@ This tutorial requires a working understanding of the following components of Ex
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+
+>[!IMPORTANT]
+>
+>To connect to the source, you need the **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ### Gather required credentials
 
@@ -40,7 +44,7 @@ In order to access your bucket on Experience Platform, you need to provide valid
 Source Configuration and Authentication - Defined S3 account associated with [!DNL Acxiom] prospect response.
 
 * **Existing Account** - Accounts already defined using the Prospecting Data for Adobe AEP card will appear here for reuse.  These will appear in a list below and when selected provides details on the account.
-  ![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-existing-account.png)
+  <br>![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-existing-account.png)
 * **New Account** - Define a new [!DNL Acxiom] Managed S3 location
   * **Account Name (Required)** - The name the account will be saved under 
   * **Description** - Short explanation of the account purpose
@@ -55,9 +59,9 @@ Source Configuration and Authentication - Defined S3 account associated with [!D
     * **Connect to Source** - This button will only be enabled once an Account Name, a valid [!DNL Acxiom] authentication key, and a properly formatted S3 access key and session key is provided.
 
 
-##Data Selection##
+## Data Selection ##
 selecting file in the desired bucket and sub directory, can be performed here.  A preview of the data can be provided once delimiter and compression type is defined.  While JSON and Parquet are listed, we have seen no indication that these formats should be expected by [!DNL Acxiom] processing and will not be supported in the long term.
-    ![File preview.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-preview.png)
+<br>    ![File preview.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-preview.png)
 
 ## Dataset Definition  ##
 
@@ -67,10 +71,10 @@ selecting file in the desired bucket and sub directory, can be performed here.  
       * **Output dataset name (Required)** - Name that the new dataset will appear under
       * **Description** - Short explanation of the dataset's purpose
       * **Schema (Required)** - A dropdown list of schema defined on the instance, this requires a schema to be defined prior source configuration.  [creating schema in the UI](../../../../../xdm/tutorials/create-schema-ui.md)
-      ![Creation of a new dataset.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-dataset.png)
+<br>      ![Creation of a new dataset.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-dataset.png)
   * **Existing Dataset** - Dataset defined by previous dataset definitions, or defined outside of this card can be selected for use.
     * **Advanced Search** - This option is an expansion of the existing dataset dropdown, presenting additional details on the datasets before selection, including details such as if they are profile enabled, the date they were created or the selected behavior of the dataset.
-      ![Searching existing datasets](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset.png)
+<br>      ![Searching existing datasets](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset.png)
   * **Profile Dataset** - Toggle to enable your dataset for Profile. This allows you to create a holistic view of an entity’s attributes and behaviors. Data from all Profile-enabled datasets will be included in Profile.  This option will only be visiable when the chosen dataset has a schema with a Profile option enabled.
   * **Error Diagnostics** - This option instructs the connector to produce error diagnostics which can be referenced using the Adobe API.  [Error Diagnostics overview](../../../../../ingestion/quality/error-diagnostics.md)
   * **Enable Partial Ingestion** - Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. With this capability, users can successfully ingest all their correct data into Adobe Experience Platform while all their incorrect data is batched separately, along with details as to why it is invalid.  [Partial ingestion overview](../../../../../ingestion/batch-ingestion/partial.md)
@@ -81,7 +85,7 @@ selecting file in the desired bucket and sub directory, can be performed here.  
   * **Sources Dataflow Run Start** - Issues an alert when the dataflow starts.
   * **Sources Dataflow Run Success** - Issues an alert when the dataflow ends without error.
   * **Sources Dataflow Run Failure** - Issues an alert when the dataflow ends with a failure status.
-    ![Dataset details](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset-details.png)
+<br>    ![Dataset details](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset-details.png)
 
 ## Mapping ##
 
@@ -102,7 +106,7 @@ Defines interface of source columns to associated schema columns on Adobe.  Plat
 * **Preview Data** - This option will create an example of the mapping as presented.  A filter option allows to restrict the result to specific columns or outlining columns presenting errors.
 * **Validate** - This repeats the validation of the current mapping presented, ensuring that fields qualify to the schema selected.
 * **"Clear all" mapping** - Resets the mapping, removing all entries.
-![Mapping](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-mapping.png)
+<br>![Mapping](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-mapping.png)
 
 ## Scheduling ##
 Defines when the dataflow should be run.
@@ -111,7 +115,7 @@ Defines when the dataflow should be run.
 * **Interval** - When a Frequency is selected other than once, interval to establish a set time frame between every ingestion. For example, an ingestion frequency set to Day and an interval set to 15 means that your dataflow is scheduled to ingest data every 15 days.
 * **Start Time** - The timestamp for the projected run, presented in UTC time zone.
 * **Backfill** - A boolean value that determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested.
-![Schedualing](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-scheduling.png)
+<br>![Schedualing](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-scheduling.png)
 
 ## Review ##
 This presents a file overview of the options selected before submission, allowing users to review the new dataflow before it is created.  Details are grouped within the following categories:
@@ -120,7 +124,7 @@ This presents a file overview of the options selected before submission, allowin
 * **Assign dataset & map fields** - Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
 * **Scheduling** - Shows that active period, frequency, and interval of the ingestion schedule.
 Once you have reviewed your dataflow, click Finish and allow some time for the dataflow to be created.
-![Review](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-review.png)
+<br>![Review](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-review.png)
 
 ## Next steps
 
@@ -137,3 +141,6 @@ To update configurations for your dataflows scheduling, mapping, and general inf
 ### Delete your dataflow
 
 You can delete dataflows that are no longer necessary or were incorrectly created using the **[!UICONTROL Delete]** function available in the **[!UICONTROL Dataflows]** workspace. For more information on how to delete dataflows, visit the tutorial on [deleting dataflows in the UI](../../delete.md).
+
+# Additional resources #{#additional-resources}
+*Acxiom Audience Data and Distribution:* https://www.acxiom.com/customer-data/audience-data-distribution/
