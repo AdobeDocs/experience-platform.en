@@ -136,7 +136,7 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
 4. Select **[!UICONTROL Create]** to save the schedule.
 
-### Export incremental files {#export-incremental-files}
+### Export incremental files
 
 Select **[!UICONTROL Export incremental files]** to trigger an export where the first file is a full snapshot of all profile qualifications for the selected audience, and subsequent files are incremental profile qualifications since the previous export.
 
