@@ -430,3 +430,24 @@ You can [deprecate a field within a custom XDM resource](../tutorials/field-depr
 | `xdm:sourceProperty` | The path to the property within the schema that you are applying the descriptor to. If you want to apply the descriptor to multiple properties, you can provide a list of paths in the form of an array (for example, `["/firstName", "/lastName"]`). |
 
 {style="table-layout:auto"}
+
+### Descriptor labelling limitations  {#descriptor-limitations}
+
+You cannot label the tenant namespace object as the system would apply that label to every single custom field across that sandbox. Instead, you must specify the leaf node under that object that you need to label.
+
+Labelling the tenant namespace object results in the fol;lowing error:
+
+```json
+{
+    "type": "http://ns.adobe.com/aep/errors/XDM-1850-400",
+    "title": "Descriptor validation error",
+    "status": 400,
+    "report": {
+        "registryRequestId": "6bg57e09-3672-5902-ad06-958312ca4bfe",
+        "timestamp": "01-27-2024 07:10:38",
+        "detailed-message": "You cannot label tenant namespace as this would inadvertently label all custom fields. To label custom fields, put a label one level deeper",
+        "sub-errors": []
+    },
+    "detail": "You cannot label tenant namespace as this would inadvertently label all custom fields. To label custom fields, put a label one level deeper"
+}
+```
