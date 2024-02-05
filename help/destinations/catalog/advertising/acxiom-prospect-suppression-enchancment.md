@@ -1,22 +1,26 @@
 ---
 title: Acxiom Prospect-Suppression Data Enhancement
 description: Acxiom Prospect-Suppression Data Enhancement for Adobe Real-Time CDP is our process for delivering the most productive prospect audiences possible. We take the Adobe CDP 1st-party data via a secure export and run it through our award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which  enables the prospect lists to be tailored for import.
-last-substantial-update: 2024-01=31
+last-substantial-update: 2024-01-31
 badge: Beta
 ---
-# Create a [!DNL Acxiom Prospect-Suppression Data Enhancement] source connection and dataflow in the UI
+# Create a [!DNL Acxiom Prospect-Suppression Data Enhancement] destination connection and dataflow in the UI
 
 >[!NOTE]
 >
 >The [!DNL Acxiom Prospect-Suppression Data Enhancement] destination is in beta.
 
-This tutorial provides steps to create a [!DNL Acxiom Prospect-Suppression Data Sourcing] source connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to retrieve and map response from Acxiom prospect service using S3 as a drop point.  This connector can be found under source connectors in the "Data Partners" header.  Initial runs will provide a "Set up" option as the default behavior. After the initial source connection is defined this will default to "Add data" which will allow to create a new source dataflow.  The "..." selection in this card provides options to view all existing accounts defined using this connector, previous dataflow, and external facing documentation.
+This tutorial provides steps to create a [!DNL Acxiom Prospect-Suppression Data Enhancement] destination connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to retrieve and map response from Acxiom prospect service using S3 as a drop point.
 
 ![The destination catalog with the Acxiom destination selected.](../../assets/catalog/advertising/acxiom/image-destination-catalog.png)
 
 ## Get started
 
 Connector used to send data to the Acxiom prospect service using S3 as an drop point.  This is available as a destination connector, currently listed under the "Other Applications" heading.  Initial runs will provide a "Set up" option as the default behavior.  After the initial destination is defined this will default to "Activate audiences" which will provide a list of existing dataflow to add audiences or “configure new destination” button to create a new destination dataflow.  Additional accounts can be created using the "..." to expand the allowed actions, we can add new destination, view the existing dataflows and existing account, and view the documentation.
+
+>[!IMPORTANT]
+>
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ## Configuring a new destination
 
@@ -38,7 +42,7 @@ Overview of target file location
 * **Description** -  Short explanation of the destination's purpose
 * **Bucket Name (Required)** - Name of the S3 bucket set up on S3
 * **Folder Path (Required)** - If subdirectories in a bucket are used a path must be defined, or '/' to reference the root path.
-* **File Type** - Currently the only file type D&I processing will be expecting is CSV
+* **File Type** - Currently the only file type Acxiom processing will be expecting is CSV
 * **CSV Options**
   * **Delimiter** - Field delimiter used for the file.  Options include:
     * **Pipe** (|)
@@ -54,11 +58,11 @@ Overview of target file location
     * **Back Slach** (\) (Default)
   * **Empty Value** - If the value does not exist on the source this indicates the value that should stand in for that missing value.  Options include:
     * **Empty String** () (Default)
-    * **Null** (null) - Null will be set if "empty value" == null or "null value" == null.
+    * **Null** (null)
     * **Empty String in Double Quotes** ("")
   * **Null Value** - If the value does exist, but the value is a null value this indicate how that should be represented on the file.  Options include:
     * **Empty String** ()
-    * **Null** (null) (Default) - Null will be set if "empty value" == null or "null value" == null.
+    * **Null** (null) (Default)
     * **Empty String in Double Quotes** ("")
   * **Compression Format** - Specifies if the resulting file will be compressed or not.  Current option include GZIP, and None
   * **Include manifest file** -  This Boolean option appears only when the GZIP option is selected.  When selected a file outlining details on the file included in the zip file is provided.
@@ -70,6 +74,15 @@ Overview of target file location
   * **Destination Flow Run Success** - Issues an alert when the dataflow ends without error.
   * **Destination Flow Run Start** - Issues an alert when the dataflow starts.
   * **Activation Skipped Rate Exceeded** - Issues an alert when the ratio of failed to all records exceed 0.5%
+
+## Activate audiences to this destination {#activate}
+
+>[!IMPORTANT]
+>
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
+
+Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ## Data Governance Policy and Enforcement Action ##
 Option to select data governance policy  [alert overview](../../../data-governance/home.md)
@@ -91,7 +104,7 @@ Defines when the dataflow should be run.
 * **Date** - Selector to choose the interval when the export should take place. Best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.  When selecting an export interval, the last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10.
   ![Scheduling](../../assets/catalog/advertising/acxiom/image-destination-scheduling.png)
 
-* **File Name Editing** - Allows the user to change the naming of the resulting file on S3, the options presented under this allows for a number of flow derived values, or as a custom text value entered by the user.  D&I should be informed of the format.  If you don’t select the Date and Time component, the file names will be static and the new exported file will overwrite the previous file in your storage location with each export. [filename definition](../../../destinations/ui/activate-batch-profile-destinations.md#review)
+* **File Name Editing** - Allows the user to change the naming of the resulting file on S3, the options presented under this allows for a number of flow derived values, or as a custom text value entered by the user.  Acxiom should be informed of the format.  If you don’t select the Date and Time component, the file names will be static and the new exported file will overwrite the previous file in your storage location with each export.
   * **Audience name** - The name of the exported audience.
   * **Destination** - Name of the destination card itself, as it is show in the catalog with spaces replaced with underscores.
   * **Destination ID** - The ID of the destination dataflow you use to export the audience.
@@ -124,4 +137,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-*You can provide further links to your product documentation or any other resources that you consider important for the customer to be successful.*
+Acxiom Audience Data and Distribution: https://www.acxiom.com/customer-data/audience-data-distribution/
