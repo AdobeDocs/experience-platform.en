@@ -169,7 +169,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 ### Configure file names
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_activate_something"
+>id="platform_destinations_activate_filename"
 >title="Configure file name"
 >abstract="For file-based destinations, a unique file name is generated per audience. Use the file name editor to create and edit a unique file name or keep the default name."
 
