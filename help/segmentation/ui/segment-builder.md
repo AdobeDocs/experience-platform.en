@@ -257,7 +257,7 @@ The timestamp for qualified profiles indicates the most recent **batch** segment
 
 **[!UICONTROL Estimated Profiles]** indicates an **approximate** number of profiles based off of the **sample job**. You can see an updated version of this value after adding the new rules or conditions and selecting **[!UICONTROL Refresh estimate]**. Selecting the information bubble gives the error threshold and most recent sample job time.
 
-![](../images/ui/segment-builder/audience-estimates.png)
+![Qualified Profiles and Estimated Profiles are highlighted within the Audience properties section.](../images/ui/segment-builder/audience-estimates.png)
 
 The **[!UICONTROL Audience properties]** section is also where you can specify important information about your segment definition, including its name, description, and evaluation type. Segment definition names are used to identify your segment definition among those defined by your organization and should therefore be descriptive, concise, and unique. 
 

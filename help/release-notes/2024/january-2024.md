@@ -159,6 +159,7 @@ To learn more about Real-Time Customer Profile, read the [Profile overview](../.
 
 | Feature | Description |
 | ------- | ----------- |
+| Externally generated audience upload | The maximum number of columns has been increased to **25**. |
 | Segment Builder estimates | Estimates and qualified profiles are now displayed within the audience properties section. For more information on this change, read the [Segment Builder UI guide](../../segmentation/ui/segment-builder.md). |
 
 {style="table-layout:auto"}
