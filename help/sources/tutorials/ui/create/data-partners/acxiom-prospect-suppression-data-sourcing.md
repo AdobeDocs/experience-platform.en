@@ -23,6 +23,7 @@ This tutorial requires a working understanding of the following components of Ex
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Prospect Profile]](../../../../../profile/ui/prospect-profile.md): Provides unauthenticated users to build audiences based on aggregated data from multiple sources.
 
 >[!IMPORTANT]
 >
@@ -60,7 +61,7 @@ Source Configuration and Authentication - Defined S3 account associated with [!D
 
 
 ## Data Selection ##
-selecting file in the desired bucket and sub directory, can be performed here.  A preview of the data can be provided once delimiter and compression type is defined.  While JSON and Parquet are listed, we have seen no indication that these formats should be expected by [!DNL Acxiom] processing and will not be supported in the long term.
+Selecting file in the desired bucket and sub directory, can be performed here.  A preview of the data can be provided once delimiter and compression type is defined.  While JSON and Parquet are listed, we have seen no indication that these formats should be expected by [!DNL Acxiom] processing and will not be supported in the long term.
 <br>    ![File preview.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-preview.png)
 
 ## Dataset Definition  ##
@@ -81,7 +82,7 @@ selecting file in the desired bucket and sub directory, can be performed here.  
 * **Dataflow Details**
   * **Dataflow Name** - The name this dataflow will appear as in the logging.  By default this will use the name of the file that is being imported
   * **Description** - Optional description for logging.
-* **Alerts** - Adobe Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  [Alert overview](../../../../../observability/alerts/overview.md)
+* **Alerts** - Adobe Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  [Alert overview](../../alerts.md)
   * **Sources Dataflow Run Start** - Issues an alert when the dataflow starts.
   * **Sources Dataflow Run Success** - Issues an alert when the dataflow ends without error.
   * **Sources Dataflow Run Failure** - Issues an alert when the dataflow ends with a failure status.
