@@ -7,7 +7,7 @@ exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
 
 The Google Data Layer extension allows you to use a Google data layer in your Tags implementation. The extension can be used independently or simultaneously with Google solutions and with Google's open source [Data Layer Helper Library](https://github.com/google/data-layer-helper).
 
-The Helper Library provides similar event-driven functionality to the Adobe Client Data Layer (ACDL). The data elements, rules and actions of the Google Data Layer extension provide similar functionality to those in the [ACDL extension](../client-data-layer/overview.md).
+The Helper Library provides similar event-driven functionality to the Adobe Client Data Layer (ACDL). The data elements, rules, and actions of the Google Data Layer extension provide similar functionality to those in the [ACDL extension](../client-data-layer/overview.md).
 
 ## Installation
 
@@ -43,13 +43,13 @@ The extension provides you with the possibility to listen for changes on the dat
 
 ### Google Event Types
 
-Google supports two means of pushing events: Google Tag Manager, using the push() method, and Google Analytics 4, using the gtag() method.
+Google supports two means of pushing events: Google Tag Manager, using the `push()` method, and Google Analytics 4, using the `gtag()` method.
 
-Google Data Layer extension versions before 1.2.1 supported only events created by push(), as shown in the code examples in this page.
+Google Data Layer extension versions before 1.2.1 supported only events created by `push()`, as shown in the code examples on this page.
 
-Versions 1.2.1 and higher support events created using gtag().  This is optional and can be enabled in the Extension configuration dialog.
+Versions 1.2.1 and higher support events created using `gtag()`.  This is optional and can be enabled in the Extension configuration dialog.
 
-For more information about push() and gtag() events, see the [Google documentation](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  Information is also provided in the configuration and rule dialogs of the extension.
+For more information about `push()` and `gtag()` events, see the [Google documentation](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  Information is also provided in the configuration and rule dialogs of the extension.
 
 ### Listen for all pushes to the data layer
 
