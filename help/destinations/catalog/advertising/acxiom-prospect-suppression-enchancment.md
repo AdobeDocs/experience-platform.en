@@ -87,7 +87,7 @@ Overview of target file location
   * **Destination Flow Run Failure** - Issues an alert when the dataflow ends with a failure status.
   * **Destination Flow Run Success** - Issues an alert when the dataflow ends without error.
   * **Destination Flow Run Start** - Issues an alert when the dataflow starts.
-  * **Activation Skipped Rate Exceeded** - Issues an alert when the ratio of failed to all records exceed 0.5%
+  * **Activation Skipped Rate Exceeded** - Issues an alert when the ratio of skipped records exceed 1% of all records.
 
 ## Data Governance Policy and Enforcement Action ##
 Option to select data governance policy  [alert overview](../../../data-governance/home.md)
