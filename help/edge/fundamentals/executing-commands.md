@@ -29,7 +29,7 @@ Each time a command is executed, a promise is returned. The promise represents t
 alloy("commandName", options)
   .then(function(result) {
     // The command succeeded.
-    // "value" is whatever the command returned
+    // "result" is whatever the command returned
   })
   .catch(function(error) {
     // The command failed.
