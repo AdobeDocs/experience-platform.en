@@ -19,6 +19,7 @@ Updates to existing features in Experience Platform:
 - [Identity Service](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Real-Time Customer Profile](#profile)
+- [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
 ## Use Case Playbooks {#use-case-playbooks}
@@ -149,6 +150,21 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 {style="table-layout:auto"}
 
 To learn more about Real-Time Customer Profile, read the [Profile overview](../../profile/home.md)
+
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Externally generated audience upload | The maximum number of columns has been increased to **25**. |
+| Segment Builder estimates | Estimates and qualified profiles are now displayed within the audience properties section. For more information on this change, read the [Segment Builder UI guide](../../segmentation/ui/segment-builder.md). |
+
+{style="table-layout:auto"}
+
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
 
 ## Sources {#sources}
 
