@@ -14,6 +14,7 @@ exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
 Adobe Campaign Managed Cloud Services provides a platform for designing cross-channel customer experiences and an environment for visual campaign orchestration, real-time interaction management and cross channel execution. [Get Started with Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 Use Campaign to:
+
 * Drive personalization and engagement through a single accessible view of the customer,
 * Integrate email, mobile, online and offline channels into the customer journey,
 * Automate the delivery of meaningful and timely messages and offers.
@@ -26,6 +27,7 @@ Use Campaign to:
 >* For each segment, you can add up to 20 fields to [map](#map) to Adobe Campaign,
 >* Data retention on Azure Blob storage Data Landing Zone (DLZ) : 7 day,
 >* The activation frequency is 3 hours minimum.
+>* The maximum file name length supported by this connection is 255 characters. When you [configure the exported file name](../../ui/activate-batch-profile-destinations.md#configure-file-names), make sure the file name does not exceed 255 characters. Exceeding the maximum file name length results in activation errors.
 
 ## Use cases {#use-cases}
 
