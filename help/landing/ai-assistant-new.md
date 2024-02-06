@@ -56,14 +56,26 @@ The Assistant interface appears, immediately providing you with information to g
 * [!UICONTROL What is a schema?]
 * [!UICONTROL Tell me some common use cases for Real-Time CDP]
 
+![Screenshot of ideas to get started]
+
+* input box
+* auto-complete button
+* save button
+
+![screenshot of interface]
+
 ### Use case example: Use Assistant to expedite your schema creation process
 
 >[!NOTE]
 >
-> The following workflow is an example and uses the experience event schema creation process to illustrate how you can use Assistant when using the Experience Platform UI.
+>The following workflow is an example and uses the experience event schema creation process to illustrate how you can use Assistant when using the Experience Platform UI.
 
 Consider a use case in which you are creating a **Device Trade in Event Schema**. During the experience event schema creation process, you come across the `eventType` field. At this point, you can either leave your workflow and refer to the the documentation on the [basics of a schema composition](../xdm/schema/composition.md), or you can use Assistant to retrieve immediate answers for your questions and find additional resources through the documentation links that Assistant recommends.
 
 To begin, enter your question in the text box provided. In the example below, Assistant is provided the question: "**What is the eventType field in an ExperienceEvent schema?**"
 
-![The Assistant for Experience Platform with the following question prepared for querying: "What is the eventType field in an ExperienceEvent schema?]
+![Screenshot of question?]
+
+Assistant then queries its knowledge base and computes an answer. After a few moments, Assistant returns an answer and related suggestions that you can use as follow up prompts.
+
+![Screenshot of answer.]
