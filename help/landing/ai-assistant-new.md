@@ -56,7 +56,7 @@ The Assistant interface appears, immediately providing you with information to g
 
 ![The "ideas to get started" section of Assistant.](./images/ai-assistant/ideas-to-get-started.png)
 
-To interact with Assistant, use the input box to type in your queries or commands. You can also use the (`+`) icon to utilize the auto-complete function and the bookmark icon to access your bookmarked queries and commands.
+To interact with Assistant, use the input box to type in your queries or commands. You can also use the (**`+`**) symbol to utilize the auto-complete function and the bookmark icon to access your bookmarked queries and commands.
 
 ![The Assistant input box highlighted.](./images/ai-assistant/interact.png)
 
@@ -98,20 +98,42 @@ Regarding your query, Assistant provides additional information pertaining to th
 
 **Show sources**
 
-To view citations and validate Assistant's response, select [!UICONTROL Show sources]. Assistant provides links to documentation that corroborates its response. You can also use these resources to learn more about adjacent topics regarding your query.
+To view citations and validate Assistant's response, select **[!UICONTROL Show sources]**. Assistant provides links to documentation that corroborates its response. You can also use the queries that Assistant provides under [!UICONTROL Related suggestions] to further explore topics related to your original query.
 
 ![Screenshot of "Show sources".](./images/ai-assistant/show-sources.png)
 
-**Related suggestions**
+**Data usage and data visualization**
 
-To further explore your query, you can select a query from the [!UICONTROL Related suggestions] section that Assistant provides.
+You can ask Assistant questions about your own data usage. You must be in an active sandbox in order for Assistant to answer a data usage question regarding data in your organization.
 
-**Ask a follow-up query**
+![Follow up question about data usage.](./images/ai-assistant/data-usage-question.png)
 
-Alternatively, you can submit a follow-up query to Assistant.
+When prompted with a data usage question, Assistant also provides an explanation on how it computed the answer. In the example below, Assistant outlines the steps it took in order to display segments with over 1000 profiles and their respective activation statuses.
 
-![Follow up question about segment definition.]
+![Follow up question about segments illustrating how Assistant computed the answer.](./images/ai-assistant/results-explained.png)
 
-![Follow up question about segments illustrating how Assistant computed the answer.]
+Furthermore, Assistant renders charts to visualize your data. You can also provide filters and modifications to your queries and instruct Assistant to render its findings based on the filters that you include. For example, you can ask Assistant to show you a trend of the count segments in the order of their created date, remove segments with zero total profiles and use month names instead of integers when displaying the data.
 
-![Follow up question illustrating data visualization.]
+![Follow up question illustrating data visualization.](./images/ai-assistant/data-visualization.png)
+
+**Auto-complete**
+
+You can use the autocomplete function to receive a list of data objects that exist in your sandbox. Autocomplete recommendations are available for the following domains: segments, schemas, datasets, sources, and destinations.
+
+To use autocomplete, enter a plus symbol (**`+`**) as part of your question. Alternatively, you can also select the plus symbol (**`+`**) at the bottom of the text input box. Then, a window appears with a list of recommended data objects that exist in your sandbox.
+
+![Example of auto-complete](./images/ai-assistant/auto-complete-one.png)
+
+Next, select the data object that you want to query to complete your question and then submit your question.
+
+![Example of auto-complete with question and answer](./images/ai-assistant/auto-complete-two.png)
+
+You can use Assistant's multi-turn capabilities to have a more natural conversation during your experience. Assistant is able to answer follow up questions given that context can be inferred from an earlier interaction.
+
+In the example below, Assistant is asked for the total count of dataflows in the current organization.
+
+![Example of multi-turn](./images/ai-assistant/multi-turn-one.png)
+
+Next, Assistant receives another follow up request. This time, Assistant responds by listing the dataflows that currently exist in your organization.
+
+![Example of multi-turn with question and answer](./images/ai-assistant/multi-turn-two.png)
