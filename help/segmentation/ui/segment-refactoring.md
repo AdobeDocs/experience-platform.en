@@ -10,8 +10,22 @@ The January 2024 release for Adobe Experience Platform has introduced changes to
 
 Prior to the January 2024 release, all rule-level, group-level, and event-level time constraints were redundantly referring to the same timestamp. In order to clarify time constraint usage, rule-level and group-level time constraints have been removed. To accommodate this change, all time constraints **must** be rewritten as **event-level** or **card-level** time constraints.
 
-Previously, an individual event could have multiple time constraint rules attached to it. 
+Previously, an individual event could have multiple time constraint rules attached to it. With this recent update, attempting to add a time constraint to a rule will now result in an **error**.
 
-SCREENSHOT 1
+![The rule-level time constraint is highlighted. The error that subsequently happens is also highlighted. ](../images/ui/segment-refactoring/rule-time-constraint.png)
 
-With this recent update, attempting to add a time constraint to a rule will now result in an error.
+Time constraints can now only be applied at the overall event level or the card level. 
+
+When applying a time constraint on the overall event level, you can still select all the available time constraints.
+
+>[!NOTE]
+>
+>If there is only **one** card on the canvas, applying the time constraint to the card is **equivalent** to applying the time constraint on the overall event level.
+>
+>If there are **multiple** cards on the canvas, applying the time constraint to the event level will apply that time constraint to **all** cards on the canvas. 
+
+![The event-level time constraint is highlighted.](../images/ui/segment-refactoring/event-time-constraint.png)
+
+To apply a time constraint at the card level, select the specific card you want to apply the time constraint to. The **[!UICONTROL Event Rules]** container appears. You can now select the time constraint you wish to apply to the card.
+
+![The card-level time constraint is highlighted.](../images/ui/segment-refactoring/card-time-constraint.png)
