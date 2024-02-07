@@ -55,7 +55,7 @@ The Express Profile Service (XPS) retrieves the profiles on the different edges.
 
 ## Next steps
 
-After reading this guide, you should have a basic understanding of edge profiles, including information on the available regions and services for edge profiles. For more information on edge projections, please read the [edge projections endpoint guide](./api/edge-projections.md). For more information on Adobe Experience Edge, please read the [Edge overview](../edge/home.md).
+After reading this guide, you should have a basic understanding of edge profiles, including information on the available regions and services for edge profiles. For more information on Adobe Experience Edge, please read the [Edge overview](../edge/home.md).
 
 ## Appendix
 
@@ -71,6 +71,4 @@ Additionally, every edge profile has a schema attribute called the User Activity
 
 ### How does data expirations work with edge profiles?
 
-For edge profiles, data expiry determines how long the profile will stay on edge before it is removed. Data expiry is **rolling**, which means that every time the profile is accessed on edge, the data expiry time resets.
-
-You can add data expiration on your edge profiles by adding it to the [edge projection](./api/edge-projections.md). By default, the data expiration lasts for 14 days, but it can be set to a minimum of 1 hour and a maximum of 90 days.
+For edge profiles, data expiry determines how long the profile will stay on edge before it is removed. Data expiry is **rolling**, which means that every time the profile is accessed on edge, the data expiry time resets. By default, the data expiration lasts for 14 days.
