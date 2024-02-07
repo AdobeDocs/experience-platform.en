@@ -82,7 +82,7 @@ Overview of target file location
   * **Include manifest file** -  This Boolean option appears only when the GZIP option is selected.  When selected a file outlining details on the file included in the zip file is provided.
 <br>  ![CSV Options](../../assets/catalog/advertising/acxiom/image-destination-csv-options.png)
 
-* **Alerts** - Adobe Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  [alert overview](../../../observability/alerts/overview.md)
+* **Alerts** - Adobe Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  [alert overview](../../ui/alerts.md)
   * **Destination Flow Run Delay** - Issues an alert when the dataflow takes longer than 150 minutes to run.
   * **Destination Flow Run Failure** - Issues an alert when the dataflow ends with a failure status.
   * **Destination Flow Run Success** - Issues an alert when the dataflow ends without error.
@@ -90,12 +90,12 @@ Overview of target file location
   * **Activation Skipped Rate Exceeded** - Issues an alert when the ratio of skipped records exceed 1% of all records.
 
 ## Data Governance Policy and Enforcement Action ##
-Option to select data governance policy  [alert overview](../../../data-governance/home.md)
+Option to select data governance policy  [data-governance overview](../../../data-governance/home.md)
 <br>  ![Data Governance policy](../../assets/catalog/advertising/acxiom/image-destination-governance.png)
 
 
 ## Audience Selection ##
-Selecting an audience defines what data will be selected from the datalike and posted.  An audience would be defined for the account prior destination configuration [account definition](../../../segmentation/ui/account-audiences.md)
+Selecting an audience defines what data will be selected from the datalike and posted.  An audience would be defined for the account prior destination configuration [account audiences](../../../segmentation/ui/account-audiences.md)
 <br>  ![Audience Selection](../../assets/catalog/advertising/acxiom/image-destination-audiences.png)
 
 
