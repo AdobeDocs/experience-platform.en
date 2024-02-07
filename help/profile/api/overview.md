@@ -26,10 +26,6 @@ Each computed attribute contains an expression, or "rule", that evaluates incomi
 
 You can create, view, edit, and delete computed attributes using the `ca/attributes/` endpoint. To learn how to use computed attributes, refer to the [computed attributes overview](../computed-attributes/overview.md). For API operations, visit the [computed attributes API endpoint guide](../computed-attributes/api.md).
 
-## Edge projections {#edge-projections}
-
-Adobe Experience Platform enables real-time personalization of customer experiences by making data easily accessible on strategically located servers called "edges." The [!DNL Real-Time Customer Profile] API provides endpoints for working with edges through components called "projections." This includes projection configurations to determine what data should be projected to each edge, as well as projection destinations to define where to route a projection. For detailed information on working with edge projections, please visit the [projection configurations and destinations endpoints guide](edge-projections.md).
-
 ## Entities ([!DNL Profile] access) {#entities}
 
 Through Adobe Experience Platform you can access [!DNL Real-Time Customer Profile] data using RESTful APIs or the user interface. To learn how to access entities, more commonly known as "profiles", using the API, follow the steps outlined in the [entities endpoint guide](entities.md). To access profiles using the [!DNL Platform] UI, refer to the [Profile user guide](../ui/user-guide.md).

@@ -19,6 +19,7 @@ Updates to existing features in Experience Platform:
 - [Identity Service](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Real-Time Customer Profile](#profile)
+- [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
 ## Use Case Playbooks {#use-case-playbooks}
@@ -71,7 +72,7 @@ Adobe Experience Platform provides multiple dashboards through which you can vie
 
 | Feature | Description |
 | --- | --- |
-| View SQL | You can now view the SQL behind your Profiles, Audiences, Destinations, and customized insights and then execute the query on demand through the Query Editor. Take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Platform data based on your business needs. For more information, read the guide on [viewing insight SQL](../../dashboards/view-sql.md). |
+| View SQL  | You can now view the SQL behind your Profiles, Audiences, Destinations, and customized insights with the View SQL toggle, then execute the query on demand through the Query Editor. Accessing the SQL that powers your Real-time Customer Data Platform insights helps you to understand the logic behind the analysis of your data model. This transparency makes your Adobe Real-time CDP data more accessible, understandable, and impactful for decision-making.<br>Take inspiration from the SQL of over 40 existing insights to create new queries that derive unique insights from Platform data based on your business needs. The SQL is also available for your [Profiles](../../dashboards/insights/profiles.md), [Audiences](../../dashboards/insights/audiences.md), and [Destinations](../../dashboards/insights/destinations.md) insights in the Experience League documentation. These documents highlight the business use cases that can be answered with the standard insights. For more information, read the guide on [viewing insight SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
@@ -149,6 +150,21 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 {style="table-layout:auto"}
 
 To learn more about Real-Time Customer Profile, read the [Profile overview](../../profile/home.md)
+
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Externally generated audience upload | The maximum number of columns has been increased to **25**. |
+| Segment Builder estimates | Estimates and qualified profiles are now displayed within the audience properties section. For more information on this change, read the [Segment Builder UI guide](../../segmentation/ui/segment-builder.md). |
+
+{style="table-layout:auto"}
+
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
 
 ## Sources {#sources}
 
