@@ -741,11 +741,11 @@ POST /packages/import
 
 **Request**
 
-The following request retrieves the package using the {PACKAGE_ID} provided. The payload is a map of substitutions where, if an entry exists, the key is the `artifactId` provided by the package, and the alternative is the value. If the map or payload is **empty**, no substitutions are performed.
+The following request retrieves packages to be imported. The payload is a map of substitutions where, if an entry exists, the key is the `artifactId` provided by the package, and the alternative is the value. If the map or payload is **empty**, no substitutions are performed.
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/import/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -769,7 +769,6 @@ curl -X POST \
 
 | Property | Description | Type | Mandatory |
 | --- | --- | --- | --- |
-| `id` | The ID of the package. | String | Yes |
 | `alternatives` | `alternatives` represent the mapping of source sandbox artifacts to the existing target sandbox artifacts. Because they are already there, the import job avoids creating these artifacts in the target sandbox. | String | No |
 
 **Response**
