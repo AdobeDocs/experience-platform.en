@@ -1,6 +1,6 @@
 ---
 title: Zeta Marketing Platform
-description: The Zeta Marketing Platform, henceforth ZMP, is a cloud-based system with the tools to help you acquire, grow, and retain customers more efficiently, powered by intelligence (proprietary data and AI). For more details, refer to [Zeta Global](https://zetaglobal.com/). 
+description: The Zeta Marketing Platform (ZMP) is a cloud-based system which helps you acquire, grow, and retain customers more efficiently, powered by intelligence (proprietary data and AI). For more details, refer to [Zeta Global](https://zetaglobal.com/). 
 
 ---
 
@@ -8,40 +8,41 @@ description: The Zeta Marketing Platform, henceforth ZMP, is a cloud-based syste
 
 ## Overview {#overview}
 
-The Zeta Marketing Platform, henceforth ZMP, is a cloud-based system with the tools to help you acquire, grow, and retain customers more efficiently, powered by intelligence (proprietary data and AI). For more details, refer to [Zeta Global](https://zetaglobal.com/). 
+The Zeta Marketing Platform (ZMP) is a cloud-based system which helps you acquire, grow, and retain customers more efficiently, powered by intelligence (proprietary data and AI). For more details, refer to [Zeta Global](https://zetaglobal.com/). 
 
-With the ZMP connector available in Adobe Experience Platform, you can seamlessly synchronize your audiences from Experience Platform to the ZMP. 
+With the Zeta Marketing Platform connector available in Adobe Experience Platform, you can seamlessly synchronize your audiences from Experience Platform to the ZMP. 
 >[!IMPORTANT]
 >
 >The destination connector and documentation page are created and maintained by the *Zeta Global* team. For any inquiries or update requests, please contact the team at [Contact Us](https://zetaglobal.com/about/contact-us/).
 
 ## Use cases {#use-cases}
 
-### Use case #1 {#use-case-1}
-A marketer wants to build unique audience profiles, identify their most valuable segments, and use them across any digital channels that the ZMP supports. They want to create a true 360 view of a consumer profile, build and activate meaningful audiences. More details on which channels the ZMP supports can be found [here](https://zetaglobal.com/platform/integrations/).
+### Build audience segments {#use-case-build-audiences}
+A marketer wants to build unique audience profiles, identify their most valuable segments, and use them across any digital channels that the Zeta Marketing Platform supports. They want to create a true 360 view of a consumer profile, build and activate meaningful audiences. More details on which channels the Zeta Marketing Platform supports can be found [here](https://zetaglobal.com/platform/integrations/).
 
-### Use case #2 {#use-case-2}
-An advertiser wants to target users in audiences with ads through the Zeta DSP as the user interacts with their brands. More information on the Zeta DSP and other DSPs that the ZMP supports can be found [here](https://knowledgebase.zetaglobal.com/programmatic-user-guide/).
+### Target users with advertisements {#use-case-target-users}
+An advertiser aims to target users within specific audiences through the Zeta Demand Side Platform (DSP), as these users interact with their brands. For more information on the Zeta DSP, click [here](https://knowledgebase.zetaglobal.com/programmatic-user-guide/).
 
 ## Prerequisites {#prerequisites}
 
 ### Zeta Marketing Platform prerequisites
 
-* Prior to setting up a new destination, please ensure the presence of a pre-existing shell customer list in your ZMP account. You will  be required to choose one of these customer lists as the designated target to receive the Adobe Experience Platform audience that you plan to send. You can create an empty customer list in the ZMP by following the instructions [here](https://knowledgebase.zetaglobal.com/zmp/creating-audiences#CreatingAudiences-CreatingaCustomerList).
-* Although the Adobe Experience Platform permits the activation of multiple audiences to a particular ZMP destination instance, it is mandatory that each ZMP destination instance receives only one Experience Platform audience. To handle multiple audiences from the Experience Platform, create additional ZMP instances for each audience and select a different shell customer list from the dropdown. This approach ensures that the target ZMP audiences does not get overwritten. See [Fill in destination details](#destination-details) for more details.
-* The username and password needed to configure the destination will be **api** and the **REST API Key**, which you can view in your ZMP account by navigating to **Settings** > **Integrations** > **Keys & Apps** section. More information can be found [here](https://knowledgebase.zetaglobal.com/zmp/integrations).
-
+* Before you set up a new connection to the Zeta Marketing Platform destination, you must create an empty customer list in your Zeta Marketing Platform account. You will be required to choose one of these customer lists as the designated target to receive the Adobe Experience Platform audience that you plan to send. You can create an empty customer list in the ZMP by following the instructions [here](https://knowledgebase.zetaglobal.com/zmp/creating-audiences#CreatingAudiences-CreatingaCustomerList).
+* Although the Adobe Experience Platform permits the activation of multiple audiences to a particular ZMP destination instance, it is mandatory that each ZMP destination instance receives only one Experience Platform audience. To handle multiple audiences from the Experience Platform, create additional ZMP destination instances for each audience and select a different customer list from the dropdown. This approach ensures that the target ZMP audiences does not get overwritten. See [Fill in destination details](#destination-details) for more details.
+* Use the following credentials to configure the destination:
+    * Username: **api** 
+    * Password: Your ZMP REST API Key. You can find your REST API Key by logging in to your ZMP account and navigating to **Settings** > **Integrations** > **Keys & Apps** section. See the [ZMP documentation](https://knowledgebase.zetaglobal.com/zmp/integrations) for more details.
+    
 ## Supported identities {#supported-identities}
-
-The ZMP destination connector will allow you to map platform identities to identities that the ZMP accepts. 
->[!IMPORTANT]
-> Please note that it is mandatory to map a source identity namespace to ZMP's `uid` target identity so that the ZMP can uniquely differentiate each profile. 
 
 [!DNL Zeta Marketing Platform] supports the activation of custom user IDs described in the table below. For more details, see [identities](/help/identity-service/namespaces.md).
 
+>[!IMPORTANT]
+> The Zeta Marketing Platform destination requires you to map a source identity namespace to the ZMP `uid` target identity. This helps the Zeta Marketing Platform uniquely differentiate each profile. 
+
 |Target Identity|Description|Considerations|Notes|
 ---------|----------|----------|----------|
-|uid|Unique id that ZMP uses to differentiate customer profiles|Mandatory|Choose the `Email` standard identity namespace if you want to identify unique profiles using their email addresses. Alternatively, you can opt to map your custom namespace to `uid` if customer profiles do not have an email.|
+|uid|Unique ID that ZMP uses to differentiate customer profiles|Mandatory|Choose the `Email` standard identity namespace if you want to identify unique profiles using their email addresses. Alternatively, you can opt to map your custom namespace to `uid` if customer profiles do not have an email.|
 |email_md5_id|Email MD5 that represents each customer profile|Optional|Choose this target identity when you aim to uniquely identify customer profiles using email MD5 values. In this case, set `uid` (mandatory) to either the same email MD5 values or another appropriate identity namespace.|
 
 {style="table-layout:auto"}
@@ -53,6 +54,7 @@ This section describes which type of audiences you can export to this destinatio
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | X | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -81,8 +83,8 @@ To connect to this destination, follow the steps described in the [destination c
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-* Enter the **[!UICONTROL Username]** as **api**
-* Enter the **[!UICONTROL Password]** as your **[!UICONTROL REST API Key]** that you can view in your ZMP account by navigating to **Settings** > **Integrations** > **Keys & Apps** section. More information can be found [here](https://knowledgebase.zetaglobal.com/zmp/integrations).
+* **[!UICONTROL Username]**: `api`
+* **[!UICONTROL Password]**: Your ZMP REST API Key. You can find your REST API Key by logging in to your ZMP account and navigating to **Settings** > **Integrations** > **Keys & Apps** section. See the [ZMP documentation]((https://knowledgebase.zetaglobal.com/zmp/integrations) for more details.
 
 ### Fill in destination details {#destination-details}
 
@@ -114,25 +116,23 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 Below is an example of correct identity mapping when exporting profiles to [!DNL Zeta Marketing Platform].
 
 Selecting source fields:
-* Select an identity namespace (custom or standard such as `Email`) as source field that uniquely identifies a profile in Adobe Experience Platform and [!DNL Zeta Marketing Platform].
+* Select a source identity namespace (custom or standard, such as `Email`) that uniquely identifies a profile in Adobe Experience Platform and [!DNL Zeta Marketing Platform].
 * Select any XDM source profile attributes that need to be exported to and updated in the [!DNL Zeta Marketing Platform].
 
 Selecting target fields:
-* (Mandatory) Select `uid` as the target identity that is mapped to the source identity namespace. 
-* (Optional) Select `email_md5_id` as the target identity that is mapped to the source identity namespace that represents email md5 values. In this scenario, map `uid` to a source identity namespace.
-* Select any other destination profile attribute names that need to be mapped to corresponding XDM source profile attributes.
+* (Mandatory) Select `uid` as the target identity to which you map a source identity namespace. 
+* (Optional) Select `email_md5_id` as the target identity to which you mapped the source identity namespace that represents email md5 values.
+* Select any additional target mappings if needed.
 
 ![Identity mapping](../../assets/catalog/data-management-platform/zmp-extension/MappingExample.png)
 
 ## Exported data / Validate data export {#exported-data}
 
-A successful audience syndication from experience platfrom to the ZMP will update the target customer list in the ZMP. The count as well as sample profiles in the target customer list will be exactly equal to the number of identities that were successfuly activated from experience platform as shown below.
+A successful audience activation from Experience Platform to the Zeta Marketing Platform updates the target customer list in the ZMP. The count and the sample profiles in the target customer list will be equal to the number of identities that were successfully activated.
 
 ![Customer List in ZMP](../../assets/catalog/data-management-platform/zmp-extension/CustomerListInZMP.png)
 
-Each audience member that was syndicated from the experience platform will also be visible under **Audiences** > **People** in the ZMP. 
-
-You will also be able to view the **Customer List** segment a profile belongs to in the Single Customer view as shown below.
+Each audience member that was activated from Experience Platform will also be visible under **Audiences** > **People** in the ZMP. You will also be able to view the **Customer List** segment a profile belongs to in the Single Customer view as shown below.
 
 ![SingleCustomerViewInZMP](../../assets/catalog/data-management-platform/zmp-extension/SingleCustomerViewInZMP.png)
 
@@ -141,4 +141,4 @@ You will also be able to view the **Customer List** segment a profile belongs to
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
 ## Additional resources {#additional-resources}
-* [Zeta Knowledge Base](https://knowledgebase.zetaglobal.com/zmp/).
+* [Zeta Knowledge Base](https://knowledgebase.zetaglobal.com/zmp/)
