@@ -71,9 +71,9 @@ To interact with Assistant, use the input box to type in your queries or command
 
 >[!NOTE]
 >
->The following workflow is an example and uses the experience event schema creation process to illustrate how you can use Assistant when using the Experience Platform UI.
+>The following workflow is an example that uses the experience event schema creation process to illustrate how you can use Assistant when using the Experience Platform UI.
 
-Consider a use case in which you are creating a **Device Trade in Event Schema**. During the experience event schema creation process, you come across the `eventType` field. At this point, you can either leave your workflow and refer to the the documentation on the [basics of a schema composition](../xdm/schema/composition.md), or you can use Assistant to retrieve immediate answers for your questions and find additional resources through the documentation links that Assistant recommends.
+Consider a use case in which you are creating a **Device Trade in Event Schema**. During the experience event schema creation process, you come across the `eventType` field. "At this point, you have the option to either exit your workflow and refer to the [basics of a schema composition](../xdm/schema/composition.md) documentation, or you can use Assistant to retrieve answers to your questions and find additional resources through the documentation links recommended by Assistant."
 
 To begin, enter your question in the text box provided. In the example below, Assistant is provided the question: "**What is the eventType field in an ExperienceEvent schema?**"
 
@@ -83,7 +83,7 @@ Assistant then queries its knowledge base and computes an answer. After a few mo
 
 ![Assistant for Experience Platform with an answer to the previous query.](./images/ai-assistant/answer.png)
 
-After receiving a response from Assistant, you can select on a number of options to decide on how you want to proceed.
+After receiving a response from Assistant, you can select from a number of options to decide how you want to proceed.
 
 ### Save your query {#save-your-query}
 
@@ -93,7 +93,7 @@ To save your query, select the bookmark icon beside your question.
 
 ![Screenshot of a selected bookmark.](./images/ai-assistant/save-your-query.png)
 
-To access your saved queries, select the bookmark icon below the input box and then select the query that you would like to run.
+To access your saved queries, select the bookmark icon below the input box, then select the query you would like to run.
 
 ![Screenshot of bookmark icon and a list of saved queries.](./images/ai-assistant/bookmarks.png)
 
@@ -105,7 +105,7 @@ To access your saved queries, select the bookmark icon below the input box and t
 
 Depending on your query, Assistant provides additional information pertaining to the data in your sandbox. To view how the response to your query applies to your sandbox, select **[!UICONTROL In your sandbox].** 
 
-During this step, Assistant may provide direct links to UI pages of certain objects in question. In the example below, Assistant provides direct links to the [!UICONTROL Schemas] and [!UICONTROL Segments] UI pages.
+During this step, Assistant may provide direct links to the UI pages of certain objects in question. In the example below, Assistant provides direct links to the [!UICONTROL Schemas] and [!UICONTROL Segments] UI pages.
 
 ![Screenshot of "In your sandbox" option.](./images/ai-assistant/in-your-sandbox.png)
 
@@ -113,7 +113,7 @@ During this step, Assistant may provide direct links to UI pages of certain obje
 
 ### Verify the response {#verify-the-response}
 
-+++Select to view example of how to show sources
++++Select to view an example of how to display sources
 
 To view citations and validate Assistant's response, select **[!UICONTROL Show sources]**. Assistant provides links to documentation that corroborates its response. You can also use the queries that Assistant provides under [!UICONTROL Related suggestions] to further explore topics related to your original query.
 
@@ -123,17 +123,17 @@ To view citations and validate Assistant's response, select **[!UICONTROL Show s
 
 ### Data usage and visualization {#data-usage-and-visualization}
 
-+++Select to view example of data usage questions and data visualization
++++Select to view an example of data usage questions and data visualization
 
-You can ask Assistant questions about your own data usage. You must be in an active sandbox in order for Assistant to answer a data usage question regarding data in your organization.
+You can inquire with Assistant about your data usage. You must be in an active sandbox for Assistant to answer a data usage question regarding data in your organization.
 
 ![Follow up question about data usage.](./images/ai-assistant/data-usage-question.png)
 
-When prompted with a data usage question, Assistant also provides an explanation on how it computed the answer. In the example below, Assistant outlines the steps it took in order to display segments with over 1000 profiles and their respective activation statuses.
+When prompted with a data usage question, Assistant also provides an explanation of how it computed the answer. In the example below, Assistant outlines the steps it took in order to display segments with over 1000 profiles and their respective activation statuses.
 
 ![Follow up question about segments illustrating how Assistant computed the answer.](./images/ai-assistant/results-explained.png)
 
-Furthermore, Assistant renders charts to visualize your data. You can also provide filters and modifications to your queries and instruct Assistant to render its findings based on the filters that you include. For example, you can ask Assistant to show you a trend of the count segments in the order of their created date, remove segments with zero total profiles and use month names instead of integers when displaying the data.
+Furthermore, Assistant renders charts to visualize your data. You can also provide filters and modifications to your queries, and you can instruct Assistant to render its findings based on the filters that you include. For example, you can ask Assistant to show you a trend of the count segments in the order of their created date, remove segments with zero total profiles, and use month names instead of integers when displaying the data.
 
 ![Follow up question illustrating data visualization.](./images/ai-assistant/data-visualization.png)
 
@@ -141,11 +141,11 @@ Furthermore, Assistant renders charts to visualize your data. You can also provi
 
 ### Use auto-complete {#use-auto-complete}
 
-+++Select to view example of auto-complete
++++Select to view an example of auto-complete
 
 You can use the autocomplete function to receive a list of data objects that exist in your sandbox. Autocomplete recommendations are available for the following domains: segments, schemas, datasets, sources, and destinations.
 
-To use autocomplete, enter a plus symbol (**`+`**) as part of your question. Alternatively, you can also select the plus symbol (**`+`**) at the bottom of the text input box. Then, a window appears with a list of recommended data objects that exist in your sandbox.
+You can use autocomplete by including the plus symbol (**`+`**) in your query. As an alternative, you can also select the plus sign (**`+`**) located at the bottom of the text input box. A window appears with a list of recommended data objects from your sandbox.
 
 ![Example of auto-complete](./images/ai-assistant/auto-complete-one.png)
 
@@ -157,15 +157,15 @@ Next, select the data object that you want to query to complete your question an
 
 ### Use multi-turn {#use-multi-turn}
 
-+++Select to view example of multi-turn
++++Select to view an example of multi-turn
 
-You can use Assistant's multi-turn capabilities to have a more natural conversation during your experience. Assistant is able to answer follow up questions given that context can be inferred from an earlier interaction.
+You can use Assistant's multi-turn capabilities to have a more natural conversation during your experience. Assistant is able to answer follow-up questions, given. that context can be inferred from an earlier interaction.
 
-In the example below, Assistant is asked for the total count of dataflows in the current organization.
+In the example below, Assistant is asked for the total number of dataflows in the current organization.
 
 ![Example of multi-turn](./images/ai-assistant/multi-turn-one.png)
 
-Next, Assistant receives another follow up request. This time, Assistant responds by listing the dataflows that currently exist in your organization.
+Next, Assistant receives another follow-up request. This time, Assistant responds by listing the dataflows that currently exist in your organization.
 
 ![Example of multi-turn with question and answer](./images/ai-assistant/multi-turn-two.png)
 
