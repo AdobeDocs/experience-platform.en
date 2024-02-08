@@ -103,10 +103,10 @@ This destination supports the mapping of profile attributes and identity namespa
 See the examples below to better understand how to configure mapping.
 #### Map a profile attribute {#map-profile-attribute)
 In the example shown below, the source field is an XDM profile attribute which gets mapped to the IDENTIFY_ID target namespace.
-![Identity Namespace example mapping screen showing how to select the source and target values](../../assets/catalog/analytics/gainsight_px/mapping_identities.png)
+![Identity Namespace example mapping screen showing how to select the source and target values](../../assets/catalog/analytics/gainsight_px/mapping_attribute.png)
 #### Map an identity namespace {#map-profile-attribute)
 In the example shown below, the source field is an identity namespace (ECID) which gets mapped to the IDENTIFY_ID target namespace.
-![Attribute example mapping screen showing how to select the source and target values](../../assets/catalog/analytics/gainsight_px/mapping_attribute.png)
+![Attribute example mapping screen showing how to select the source and target values](../../assets/catalog/analytics/gainsight_px/mapping_identities.png)
 
 ## Exported data / Validate data export {#exported-data}
 
