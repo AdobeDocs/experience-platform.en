@@ -33,11 +33,11 @@ Alternatively, select the **[!UICONTROL Schedules]** tab below the query's name.
 
 ![The Query Editor with the Schedules tab highlighted.](../images/ui/query-schedules/schedules-tab.png)
 
-The schedules workspace appears. Select **[!UICONTROL Add Schedule]** to create a schedule. 
+The schedules workspace appears. The UI displays a list of any scheduled runs that the template is associated with. Select **[!UICONTROL Add Schedule]** to create a schedule. 
 
 ![The Query Editor Schedule workspace with Add schedule highlighted.](../images/ui/query-schedules/add-schedule.png)
 
-### Edit the schedule details {#schedule-details}
+### Add schedule details {#schedule-details}
 
 The schedule details page appears. On this page, you can choose the frequency of the scheduled query, the start and end date, the day of the week the scheduled query will run, as well as what dataset to export the query to.
 
@@ -85,13 +85,21 @@ The list of query runs for that scheduled query appears.
 
 See the [monitor scheduled queried guide](./monitor-queries.md#inline-actions) for complete information on how to monitor the status of all query jobs through the UI.
 
-## Delete or disable a schedule {#delete-schedule}
+## Enable, disable, or delete a schedule {#delete-schedule}
 
-You can delete or disable a schedule from the schedules workspace of a particular query or from the [!UICONTROL Scheduled Queries] workspace that lists all the scheduled queries. 
+You can enable, disable, or delete a schedule from the schedules workspace of a particular query or from the [!UICONTROL Scheduled Queries] workspace that lists all the scheduled queries.
 
 To access the [!UICONTROL Schedules] tab of your chosen query, you must select the name of a query template from either the [!UICONTROL Templates] tab or the [!UICONTROL Scheduled Queries] tab. This navigates to the Query Editor for that query. Form the Query Editor, select **[!UICONTROL Schedules]** to access the schedules workspace. 
 
 Select a schedule from the rows of available schedules. You can use the toggle to disable or enable the scheduled query.
+
+### Enable quarantined queries
+
+Scheduled queries that fail three consecutive runs are put in a [!UICONTROL Quarantined] status. A query with this status requires your intervention before any further executions can take place. If you chose to enable a quarantined query, a confirmation dialog will remind you to review the query template.
+
+![The Queries Schedules workspace with the activation toggle and the [!UICONTROL Enable schedule] dialog highlighted.]()
+
+### Delete disabled queries
 
 >[!IMPORTANT]
 >

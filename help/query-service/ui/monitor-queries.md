@@ -31,7 +31,7 @@ The table below describes each available column.
 | **[!UICONTROL Created]** | The timestamp when the query was created, in UTC format.  |
 | **[!UICONTROL Last run timestamp]** | The most recent timestamp when the query was run. This column highlights whether a query has been executed according to its current schedule.  |
 | **[!UICONTROL Last run status]** | The status of the most recent query execution. The status values are: `Success`, `Failed`, `In progress`, and `No runs`. |
-| **[!UICONTROL Schedule Status]** | The current status of the scheduled query. There are five potential values, [!UICONTROL Registering], [!UICONTROL Active], [!UICONTROL Inactive], [!UICONTROL Deleted], and a hyphen. <ul><li>The hyphen indicates the scheduled query is a one-time, non-recurring query.</li><li>The [!UICONTROL Registering] status indicates that the system is still processing the creation of the new schedule for the query. Note, you cannot disable or delete a scheduled query while it is registering.</li><li>The [!UICONTROL Active] status indicates that the scheduled query has **not yet passed** its completion date and time.</li><li>The [!UICONTROL Inactive] status indicates that the scheduled query has **passed** its completion date and time.</li><li>The [!UICONTROL Deleted] status indicates that the query schedule has been deleted.</li></ul> |
+| **[!UICONTROL Schedule Status]** | The current status of the scheduled query. There are six potential values, [!UICONTROL Registering], [!UICONTROL Active], [!UICONTROL Inactive], [!UICONTROL Deleted], a hyphen, and [!UICONTROL Quarantined]. <ul><li>The hyphen indicates the scheduled query is a one-time, non-recurring query.</li><li>The **[!UICONTROL Registering]** status indicates that the system is still processing the creation of the new schedule for the query. Note, you cannot disable or delete a scheduled query while it is registering.</li><li>The **[!UICONTROL Active]** status indicates that the scheduled query has **not yet passed** its completion date and time.</li><li>The **[!UICONTROL Inactive]** status indicates that the scheduled query has **passed** its completion date and time.</li><li>The **[!UICONTROL Deleted]** status indicates that the query schedule has been deleted.</li><li>The **[!UICONTROL Quarantined]** status indicates that the query has failed three consecutive runs and requires your intervention before any further executions can take place.</li></ul> |
 
 >[!TIP]
 >
@@ -67,6 +67,10 @@ To disable a scheduled query, select the ellipsis of a scheduled query you want 
 
 Once a scheduled query is disabled, you can enable the schedule through the same process. Select the ellipsis, then select **[!UICONTROL Enable schedule]** from the available options.
 
+>[!NOTE]
+>
+>If a query has been Quarantined, you are recommended to review the template's SQL before you enable its schedule. This prevents a waste of compute hours if the template is defective.
+
 ### Delete a scheduled query {#delete}
 
 To delete a scheduled query, select the ellipsis of a scheduled query you want to manage, then select **[!UICONTROL Delete schedule]** from the options in the pop-up menu. A dialog appears to confirm your action. Select **[!UICONTROL Delete]** to confirm your setting.
@@ -93,11 +97,19 @@ Select the information icon (![An information icon.](../images/ui/monitor-querie
 
 ![The Scheduled Queries tab with the information icon and the details panel highlighted.](../images/ui/monitor-queries/details-panel.png)
 
+### Quarantined queries {#quarantined-queries}
+
+Any query that fails three consecutive scheduled query runs is automatically placed in quarantine and made inactive. 
+
+<!-- ... more description -->
+
 ## Filter queries {#filter}
 
 You can filter queries based on run frequency. From the [!UICONTROL Scheduled Queries] tab, select the filter icon (![A filter icon](../images/ui/monitor-queries/filter-icon.png)) to open the filter sidebar. 
 
 ![The scheduled queries tab with the filter icon highlighted.](../images/ui/monitor-queries/filter-queries.png)
+
+Filter the list of queries based on a variety of options. 
 
 To filter the list of queries based on their run frequency, select either the **[!UICONTROL Scheduled]** or **[!UICONTROL Run once]** filter checkboxes.
 
@@ -105,9 +117,13 @@ To filter the list of queries based on their run frequency, select either the **
 >
 >Any query that has been executed but not scheduled qualifies as [!UICONTROL Run once].
 
+<!-- Need to update image to include statuses - ned access to latest build first. -->
+
 ![The scheduled queries tab with the filter sidebar highlighted.](../images/ui/monitor-queries/filter-sidebar.png)
 
 Once you have enabled your filter criteria, select **[!UICONTROL Hide Filters]** to close the filter panel.
+
+<!-- ... more info on FIlters for AEP 24.2 release. -->
 
 ## Query runs schedule details {#query-runs}
 
@@ -122,7 +138,7 @@ This information is provided in a five-column table. Each row denotes a query ex
 | **[!UICONTROL Query run ID]**  | The query run ID for the daily execution. Select the **[!UICONTROL Query run ID]** to navigate to the [!UICONTROL Query run overview]. |
 | **[!UICONTROL Query run start]** | The timestamp when the query was executed. The timestamp is in UTC format. |
 | **[!UICONTROL Query run complete]** | The timestamp when the query was completed. The timestamp is in UTC format. |
-| **[!UICONTROL Status]** | The status of the most recent query execution. The three status values are: `successful` `failed` or `in progress`. |
+| **[!UICONTROL Status]** | The status of the most recent query execution. The status values are: `Success` `Failed` or `In progress`, or `Quarantined`. |
 | **[!UICONTROL Dataset]** | The dataset involved in the execution. |
 
 Details of the query being scheduled can be seen in the [!UICONTROL Properties] panel. This panel includes the initial query ID, client type, template name, query SQL, and cadence of the schedule.
