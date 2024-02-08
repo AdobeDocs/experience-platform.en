@@ -1,22 +1,22 @@
 ---
-title: Acxiom Prospect-Suppression Data Enhancement
-description: Acxiom Prospect-Suppression Data Enhancement for Adobe Real-Time CDP is our process for delivering the most productive prospect audiences possible. We take the Adobe CDP 1st-party data via a secure export and run it through our award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which  enables the prospect lists to be tailored for import.
+title: Acxiom Prospect-Suppression
+description: Acxiom Prospect-Suppression for Adobe Real-Time CDP is our process for delivering the most productive prospect audiences possible. We take the Adobe CDP 1st-party data via a secure export and run it through our award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which  enables the prospect lists to be tailored for import.
 last-substantial-update: 2024-01-31
 badge: Beta
 ---
-# Create a [!DNL Acxiom Prospect-Suppression Data Enhancement] destination connection and dataflow in the UI
+# Create a [!DNL Acxiom Prospect-Suppression] destination connection and dataflow in the UI
 
 >[!NOTE]
 >
->The [!DNL Acxiom Prospect-Suppression Data Enhancement] destination is in beta.
+>The [!DNL Acxiom Prospect-Suppression] destination is in beta.
 
-This tutorial provides steps to create a [!DNL Acxiom Prospect-Suppression Data Enhancement] destination connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to deliver data to Acxiom prospect service using S3 as a drop point.
+This tutorial provides steps to create a [!DNL Acxiom Prospect-Suppression] destination connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to deliver data to Acxiom prospect service using S3 as a drop point.
 
 ![The destination catalog with the Acxiom destination selected.](../../assets/catalog/advertising/acxiom/image-destination-catalog.png)
 
 
 ## Get started
-Batch Frequency Connector used to send data to the Acxiom prospect service using S3 as an drop point.  This is available as a destination connector, currently listed under the "Other Applications" heading.  Initial runs will provide a "Set up" option as the default behavior.  After the initial destination is defined this will default to "Activate audiences" which will provide a list of existing dataflow to add audiences or “configure new destination” button to create a new destination dataflow.  Additional accounts can be created using the "..." to expand the allowed actions, we can add new destination, view the existing dataflows and existing account, and view the documentation.
+Batch Frequency Connector used to send data to the Acxiom prospect service using S3 as an drop point.  This is available as a destination connector, currently listed under the "Advertising" heading.  Initial runs will provide a "Set up" option as the default behavior.  After the initial destination is defined this will default to "Activate audiences" which will provide a list of existing dataflow to add audiences or “configure new destination” button to create a new destination dataflow.  Additional accounts can be created using the "..." to expand the allowed actions, we can add new destination, view the existing dataflows and existing account, and view the documentation.
 
 ### Permissions
 >[!IMPORTANT]
