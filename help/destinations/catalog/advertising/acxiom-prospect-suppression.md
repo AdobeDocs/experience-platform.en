@@ -1,31 +1,66 @@
 ---
-title: Acxiom Prospect-Suppression
-description: Acxiom Prospect-Suppression for Adobe Real-Time CDP is our process for delivering the most productive prospect audiences possible. We take the Adobe CDP 1st-party data via a secure export and run it through our award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which  enables the prospect lists to be tailored for import.
+title: Acxiom Prospect-Suppression Data Enhancement
+description: Acxiom Prospect-Suppression Data Enhancement for Adobe Real-Time CDP is our process for delivering the most productive prospect audiences possible. We take the Adobe CDP 1st-party data via a secure export and run it through our award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which  enables the prospect lists to be tailored for import.
 last-substantial-update: 2024-01-31
 badge: Beta
 ---
-# Create a [!DNL Acxiom Prospect-Suppression] destination connection and dataflow in the UI
+# Create a [!DNL Acxiom Prospect-Suppression Data Enhancement] destination connection and dataflow in the UI
 
 >[!NOTE]
 >
->The [!DNL Acxiom Prospect-Suppression] destination is in beta.
+>The [!DNL Acxiom Prospect-Suppression Data Enhancement] destination is in beta.
 
-This tutorial provides steps to create a [!DNL Acxiom Prospect-Suppression] destination connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to deliver data to Acxiom prospect service using S3 as a drop point.
+## Overview {#overview}
+Acxiom Prospect-Suppression Data Enhancement for Adobe Real-Time CDP is our process for delivering the most productive prospect audiences possible. We take the Adobe CDP 1st-party data via a secure export and run it through our award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which  enables the prospect lists to be tailored for import.
+
+Batch Frequency Connector used to send data to the Acxiom prospect service using S3 as an drop point.  This is available as a destination connector, currently listed under the "Other Applications" heading.  Initial runs will provide a "Set up" option as the default behavior.  After the initial destination is defined this will default to "Activate audiences" which will provide a list of existing dataflow to add audiences or “configure new destination” button to create a new destination dataflow.  Additional accounts can be created using the "..." to expand the allowed actions, we can add new destination, view the existing dataflows and existing account, and view the documentation.
+
+This tutorial provides steps to create a [!DNL Acxiom Prospect-Suppression Data Enhancement] destination connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to deliver data to Acxiom prospect service using S3 as a drop point.
 
 ![The destination catalog with the Acxiom destination selected.](../../assets/catalog/advertising/acxiom/image-destination-catalog.png)
 
 
-## Get started
-Batch Frequency Connector used to send data to the Acxiom prospect service using S3 as an drop point.  This is available as a destination connector, currently listed under the "Advertising" heading.  Initial runs will provide a "Set up" option as the default behavior.  After the initial destination is defined this will default to "Activate audiences" which will provide a list of existing dataflow to add audiences or “configure new destination” button to create a new destination dataflow.  Additional accounts can be created using the "..." to expand the allowed actions, we can add new destination, view the existing dataflows and existing account, and view the documentation.
+## Use cases {#use-cases}
+Creating a Suppression List for Prospecting Datasets
 
-### Permissions
+To help you better understand how and when you should use the Acxiom Prospect-Suppression Data Enhancement destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+
+### Use case #1 {#use-case-1}
+Marketing professionals aiming to enhance the effectiveness of their outreach strategies often employ the creation of a suppression list. This list includes existing customers and specific segments, ensuring their exclusion from prospecting activities during targeted campaigns. This strategic approach helps refine the audience, avoid redundant communications, and contributes to a more focused and efficient marketing effort.
+*For mobile messaging platforms:*
+
+## Prerequisites {#prerequisites}
 >[!IMPORTANT]
 >
 >* To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
+## Supported audiences {#supported-audiences}
+This section describes which type of audiences you can export to this destination.
 
-### Gather required credentials
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
+
+
+## Export type and frequency {#export-type-frequency}
+
+Refer to the table below for information about the destination export type and frequency.
+
+| Item | Type | Notes |
+---------|----------|---------|
+| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the *YourDestination* destination.|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export type | **[!UICONTROL Dataset export]** | You are exporting raw datasets, which are not grouped or structured by audience interests or qualifications.|
+| Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
+
+{style="table-layout:auto"}
+
+
+## Connect to the destination {#connect}
 In order to access your bucket on Experience Platform, you need to provide valid values for the following credentials:
 
 | Credential | Description |
@@ -35,8 +70,7 @@ In order to access your bucket on Experience Platform, you need to provide valid
 | S3 Secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team. |
 | Bucket name | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
 
-
-## Configuring a new destination
+### Authenticate to destination {#authenticate}
 * **Existing Account** -  Accounts already defined using the Prospecting Data for Adobe AEP card will appear here for reuse.  These will appear in a list pop-up and when selected provides details on the account
 <br>  ![Existing Account](../../assets/catalog/advertising/acxiom/image-destination-account.png)
 
@@ -48,10 +82,11 @@ In order to access your bucket on Experience Platform, you need to provide valid
     * **Connect to destination** - Will use the provided authorization keys to connect to the S3 service to validate access.  Success will allow configuration of the destination details while failure will be indicated on the UI.
 
 
-## Destination Details ##
+### Fill in destination details {#destination-details}
 Overview of target file location
 
-<br>  ![Destination Detail](../../assets/catalog/advertising/acxiom/image-destination-details.png)
+  ![Destination Detail](../../assets/catalog/advertising/acxiom/image-destination-details.png)
+
 * **Name (Required)** - The name the destination will be saved under
 * **Description** -  Short explanation of the destination's purpose
 * **Bucket Name (Required)** - Name of the S3 bucket set up on S3
@@ -82,20 +117,26 @@ Overview of target file location
   * **Include manifest file** -  This Boolean option appears only when the GZIP option is selected.  When selected a file outlining details on the file included in the zip file is provided.
 <br>  ![CSV Options](../../assets/catalog/advertising/acxiom/image-destination-csv-options.png)
 
-* **Alerts** - Adobe Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  [alert overview](../../ui/alerts.md)
+### Enable alerts {#enable-alerts}
+
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
+
+When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
+
+**Alerts** - Adobe Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  [alert overview](../../../observability/alerts/overview.md)
   * **Destination Flow Run Delay** - Issues an alert when the dataflow takes longer than 150 minutes to run.
   * **Destination Flow Run Failure** - Issues an alert when the dataflow ends with a failure status.
   * **Destination Flow Run Success** - Issues an alert when the dataflow ends without error.
   * **Destination Flow Run Start** - Issues an alert when the dataflow starts.
-  * **Activation Skipped Rate Exceeded** - Issues an alert when the ratio of skipped records exceed 1% of all records.
+  * **Activation Skipped Rate Exceeded** - Issues an alert when the ratio of failed to all records exceed 0.5%
 
 ## Data Governance Policy and Enforcement Action ##
-Option to select data governance policy  [data-governance overview](../../../data-governance/home.md)
+Option to select data governance policy  [alert overview](../../../data-governance/home.md)
 <br>  ![Data Governance policy](../../assets/catalog/advertising/acxiom/image-destination-governance.png)
 
 
 ## Audience Selection ##
-Selecting an audience defines what data will be selected from the datalike and posted.  An audience would be defined for the account prior destination configuration [account audiences](../../../segmentation/ui/account-audiences.md)
+Selecting an audience defines what data will be selected from the datalike and posted.  An audience would be defined for the account prior destination configuration [account definition](../../../segmentation/ui/account-audiences.md)
 <br>  ![Audience Selection](../../assets/catalog/advertising/acxiom/image-destination-audiences.png)
 
 
@@ -143,7 +184,7 @@ This presents a file overview of the options selected before submission
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
 
-## Validate successful data export {#exported-data}
+## Exported data / Validate data export {#exported-data}
 To verify if data has been exported successfully, check your [!DNL Amazon S3 Storage] bucket and make sure that the exported files contain the expected profile populations.
 
 
