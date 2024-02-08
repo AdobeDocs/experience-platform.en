@@ -11,7 +11,7 @@ description: Use the Gainsight PX destination to send segmentation information t
 
 >[!IMPORTANT]
 >
->The destination connector and documentation page are created and maintained by the *Gainsight PX* team. For any inquiries or update requests, please contact them directly at *`pxsupport@gainsight.com`*.
+>The destination connector and documentation page are created and maintained by the *Gainsight PX* team. For any inquiries or update requests, contact them directly at *`pxsupport@gainsight.com`*.
  
 ## Use cases {#use-cases}
 
@@ -19,17 +19,17 @@ To help you better understand how and when you should use the *Gainsight PX* des
 
 ### Targeting In-App Engagements {#targeting-in-app-engagements}
 
-A SaaS company wants to engage their customers via an in-application guide constructed on Gainsight PX.  An audience to receive this engagement has been built on Adobe Experience Platform and the Gainsight PX destination will consume the audience and make it available within the Gainsight PX environment.
+A SaaS company wants to engage their customers via an in-application guide constructed on Gainsight PX. An audience to receive this engagement has been built on Adobe Experience Platform. The Gainsight PX destination receives the audience and makes it available within the Gainsight PX environment.
 
 ## Prerequisites {#prerequisites}
 
 * Contact the [!DNL Gainsight] support team and request the activation of external segment features for your subscription.
-* Generate an OAuth Secret value for your PX subscription, using the Generate New Secret button at the bottom of the [Company Details page](https://app.aptrinsic.com/settings/subscription)
+* Generate an OAuth Secret value for your PX subscription, using the **[!UICONTROL Generate New Secret]** button at the bottom of the [Company Details page](https://app.aptrinsic.com/settings/subscription)
 ![Company Details screen in Gainsight PX showing the Generate New Secret button](../../assets/catalog/analytics/gainsight-px/generate_oauth_secret.png)
 
 ## Supported identities {#supported-identities}
 
-Gainsight PX supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+Gainsight PX supports the activation of identities described in the table below. Learn more about [identities](../../../identity-service/namespaces.md).
 
 | Target Identity | Description  | 
 |---|----|
@@ -39,7 +39,7 @@ Gainsight PX supports the activation of identities described in the table below.
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which type of audience you can export to this destination.
 
 | Audience origin | Supported | Description | 
 |---|---|---|
@@ -55,7 +55,7 @@ Refer to the table below for information about the destination export type and f
 | Item | Type | Notes  |
 |---|---|---|
 | Export type | **[!UICONTROL Segment export]** |You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the [!DNL Gainsight PX] destination.|
-| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on segment evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
+| Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. When a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Refer to the table below for information about the destination export type and f
 >
 >To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the destination configuration workflow, fill in the fields listed in the two sections below.
 
 ### Authenticate to destination {#authenticate}
 
@@ -73,7 +73,7 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 ![Authentication screenshot](../../assets/catalog/analytics/gainsight-px/auth-screen.png)
 
-* **[!UICONTROL Password]**: The password used to login to [[!DNL Gainsight PX]](https://app.aptrinsic.com)
+* **[!UICONTROL Password]**: The password used to log in to [[!DNL Gainsight PX]](https://app.aptrinsic.com)
 * **[!UICONTROL Client ID]**: The Gainsight PX subscription ID on the [Company Details page](https://app.aptrinsic.com/settings/subscription)
 * **[!UICONTROL Client secret]**: The OAuth secret generated at the bottom of the [Company Details page](https://app.aptrinsic.com/settings/subscription) in the [!DNL Gainsight PX] UI.
 * **[!UICONTROL Username]**: The email used to log in to the [[!DNL Gainsight PX]](https://app.aptrinsic.com) UI
@@ -120,11 +120,11 @@ In the example shown below, the source field is an identity namespace (**[!UICON
 
 Segmentation data is streamed from the Experience Platform to Gainsight PX.
 
-Segment metadata will be visible in the Segments screen within the [!DNL Gainsight PX] UI.
+Segment metadata is visible in the Segments screen within the [!DNL Gainsight PX] UI.
 
 ![Segment list screen in Gainsight PX showing external segments.](../../assets/catalog/analytics/gainsight-px/segment_metadata.png)  
 
-Segment membership information will be visible on the Segments tab of the Audience Explorer screen of the [!DNL Gainsight PX] UI.
+Segment membership information is visible on the Segments tab of the Audience Explorer screen of the [!DNL Gainsight PX] UI.
 
 ![Audience Explorer screen in Gainsight PX showing associated segments for a user.](../../assets/catalog/analytics/gainsight-px/PX_Segments.png)
 
