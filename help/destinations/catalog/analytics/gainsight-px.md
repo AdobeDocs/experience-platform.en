@@ -29,7 +29,7 @@ A SaaS company wants to engage their customers via an in-application guide const
 
 ## Supported identities {#supported-identities}
 
-Gainsight PX supports the activation of identities described in the table below. Learn more about [identities](../../../identity-service/namespaces.md).
+Gainsight PX supports the activation of identities described in the table below. Learn more about [identities](../../../identity-service/features/namespaces.md).
 
 | Target Identity | Description  | 
 |---|----|
