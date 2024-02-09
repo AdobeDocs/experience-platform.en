@@ -446,3 +446,13 @@ productlistitems     | array_distinct(productlistitems)
 
 (10 rows)
 ```
+
+### Additional higher order functions
+
+The following examples of higher-order functions are explained as part of the retrieve similar records use case. An example and explanation of each function's use is provided in the respective section of that document.
+
+The [`transform` function example](../use-cases/retrieve-similar-records.md#length-adjustment) covers the tokenization of a product list. 
+
+The [`filter` function example](../use-cases/retrieve-similar-records.md#filter-results) demonstrates a more refined and precise extraction of relevant information from text data.
+
+The [`reduce` function](../use-cases/retrieve-similar-records.md#higher-order-function-solutions), provides a way to derive cumulative values or aggregates, which can be pivotal in various analytical and planning processes.

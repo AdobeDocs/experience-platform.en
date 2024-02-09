@@ -20,7 +20,7 @@ Before continuing with this document, you should be familiar with the following 
     - **Threshold**: A similarity threshold is used to determine when the two records are considered similar enough to be included in the join result. Records with a similarity score above the threshold are considered matches.
 - The **Jaccard similarity** index, or the Jaccard similarity measurement, is a statistic used to gauge the similarity and diversity of sample sets. It is defined as the size of the intersection divided by the size of the union of the sample sets. The Jaccard similarity measurement ranges from zero to one. A Jaccard similarity of zero indicates no similarity between the sets, and a Jaccard similarity of one indicates that the sets are identical.
 ![A venn diagram to illustrate the Jaccard similarity measurement.](../images/use-cases/jaccard-similarity.png)
-- **Higher-order functions** in Data Distiller are anonymous, inline functions that can be defined and used within SQL statements. They are frequently used with higher-order functions due to their ability to create concise, on-the-fly functions that can be passed around as data. Higher-order functions are often employed with higher-order functions like `transform`, `filter`, and `array_sort`. Higher-order functions are especially useful in situations where defining a full function is unnecessary, and a brief, one-time function can be used inline.
+- **Higher-order functions** in Data Distiller are dynamic, inline tools that process and transform data directly within SQL statements. These versatile functions eliminate the need for multiple steps in data manipulation, especially when [dealing with complex types like arrays and maps](../sql/higher-order-functions.md). By enhancing query efficiency and simplifying transformations, higher-order functions contribute to more agile analytics and better decision-making in various business scenarios.
 
 ## Getting started
 
@@ -317,7 +317,7 @@ The results are shown in the table below:
 
 +++
 
-### Ensure set token length
+### Ensure set token length {#ensure-set-token-length}
 
 Additional conditions can be added to the statement to ensure that the generated sequences are of a specific length. The following SQL statement expands on the token generation logic by making the `transform` function is more complex. The statement uses the `filter` function within `transform` to ensure that the generated sequences are of six character length. It handles the cases where that is not possible by assigning NULL values to those positions.
 
