@@ -20,7 +20,7 @@ This document covered the prerequisites needed to use [!DNL Query Service] featu
 - [SQL syntax in Query Service](../sql/syntax.md)
 - [Create derived datasets with SQL](../data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
-Alternatively, to learn more about how Query Service benefits data processing in Platform, watch the [example use case presentation](../use-cases/abandoned-browse.md#video-example).
+Alternatively, to learn more about how Query Service benefits data processing in Platform, watch the [abandoned browse use case presentation](../use-cases/abandoned-browse.md#video-example).
 
 The following resources are useful to improve your understanding of [!DNL Query Service]:
 
