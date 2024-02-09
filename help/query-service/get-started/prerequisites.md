@@ -18,7 +18,7 @@ This document covered the prerequisites needed to use [!DNL Query Service] featu
 
 - [General guidance for query execution](../best-practices/writing-queries.md)
 - [SQL syntax in Query Service](../sql/syntax.md)
-- [Create derived datasets with SQL](https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-datasets/seamless-sql-flow.html)
+- [Create derived datasets with SQL](../data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
 Alternatively, to learn more about how Query Service benefits data processing in Platform, watch the [example use case presentation](../use-cases/abandoned-browse.md#video-example).
 
