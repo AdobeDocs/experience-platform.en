@@ -1,21 +1,21 @@
 ---
-title: Acxiom Prospect-Suppression Data Enhancement
-description: Acxiom Prospect-Suppression Data Enhancement for Adobe Real-Time CDP is our process for delivering the most productive prospect audiences possible. We take the Adobe CDP 1st-party data via a secure export and run it through our award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which  enables the prospect lists to be tailored for import.
+title: Acxiom Prospect-Suppression
+description: Acxiom Prospect-Suppression for Adobe Real-Time CDP is our process for delivering the most productive prospect audiences possible. We take the Adobe CDP 1st-party data via a secure export and run it through our award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
 last-substantial-update: 2024-01-31
 badge: Beta
 ---
-# Create a [!DNL Acxiom Prospect-Suppression Data Enhancement] destination connection and dataflow in the UI
+# Create a [!DNL Acxiom Prospect-Suppression] destination connection and dataflow in the UI
 
 >[!NOTE]
 >
->The [!DNL Acxiom Prospect-Suppression Data Enhancement] destination is in beta.
+>The [!DNL Acxiom Prospect-Suppression] destination is in beta.
 
 ## Overview {#overview}
-Acxiom Prospect-Suppression Data Enhancement for Adobe Real-Time CDP is our process for delivering the most productive prospect audiences possible. We take the Adobe CDP 1st-party data via a secure export and run it through our award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which  enables the prospect lists to be tailored for import.
+Acxiom Prospect-Suppression for Adobe Real-Time CDP is our process for delivering the most productive prospect audiences possible. We take the Adobe CDP 1st-party data via a secure export and run it through our award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
 
-Batch Frequency Connector used to send data to the Acxiom prospect service using S3 as an drop point.  This is available as a destination connector, currently listed under the "Other Applications" heading.  Initial runs will provide a "Set up" option as the default behavior.  After the initial destination is defined this will default to "Activate audiences" which will provide a list of existing dataflow to add audiences or “configure new destination” button to create a new destination dataflow.  Additional accounts can be created using the "..." to expand the allowed actions, we can add new destination, view the existing dataflows and existing account, and view the documentation.
+The Batch Frequency Connector is used to send data to the Acxiom prospect service using S3 as a drop point. It is available as a destination connector listed under the "Advertising" heading. Initial runs will provide a "Set up" option as the default behavior. After the initial destination is defined, this will default to "Activate audiences," providing a list of existing dataflows to add audiences or a "Configure new destination" button to create a new destination dataflow. Additional accounts can be created using the "..." to expand the allowed actions. We can add a new destination, view the existing dataflows and existing account, and access the documentation.
 
-This tutorial provides steps to create a [!DNL Acxiom Prospect-Suppression Data Enhancement] destination connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to deliver data to Acxiom prospect service using S3 as a drop point.
+This tutorial provides steps to create a [!DNL Acxiom Prospect-Suppression] destination connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to deliver data to Acxiom prospect service using S3 as a drop point.
 
 ![The destination catalog with the Acxiom destination selected.](../../assets/catalog/advertising/acxiom/image-destination-catalog.png)
 
@@ -23,11 +23,10 @@ This tutorial provides steps to create a [!DNL Acxiom Prospect-Suppression Data 
 ## Use cases {#use-cases}
 Creating a Suppression List for Prospecting Datasets
 
-To help you better understand how and when you should use the Acxiom Prospect-Suppression Data Enhancement destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the Acxiom Prospect-Suppression destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
 ### Use case #1 {#use-case-1}
-Marketing professionals aiming to enhance the effectiveness of their outreach strategies often employ the creation of a suppression list. This list includes existing customers and specific segments, ensuring their exclusion from prospecting activities during targeted campaigns. This strategic approach helps refine the audience, avoid redundant communications, and contributes to a more focused and efficient marketing effort.
-*For mobile messaging platforms:*
+Marketing professionals aiming to enhance the effectiveness of their outreach strategies often employ the creation of a suppression list. This list includes existing customers and specific segments, ensuring their exclusion from prospecting activities during targeted campaigns. This strategic approach helps refine the audience, avoids redundant communication, and contributes to a more focused and efficient marketing effort.
 
 ## Prerequisites {#prerequisites}
 >[!IMPORTANT]
@@ -41,7 +40,7 @@ This section describes which type of audiences you can export to this destinatio
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads | x | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -52,9 +51,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Segment export]** | You are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the *YourDestination* destination.|
 | Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
-| Export type | **[!UICONTROL Dataset export]** | You are exporting raw datasets, which are not grouped or structured by audience interests or qualifications.|
 | Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
@@ -121,20 +118,13 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-**Alerts** - Adobe Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  [alert overview](../../../observability/alerts/overview.md)
-  * **Destination Flow Run Delay** - Issues an alert when the dataflow takes longer than 150 minutes to run.
-  * **Destination Flow Run Failure** - Issues an alert when the dataflow ends with a failure status.
-  * **Destination Flow Run Success** - Issues an alert when the dataflow ends without error.
-  * **Destination Flow Run Start** - Issues an alert when the dataflow starts.
-  * **Activation Skipped Rate Exceeded** - Issues an alert when the ratio of failed to all records exceed 0.5%
-
 ## Data Governance Policy and Enforcement Action ##
-Option to select data governance policy  [alert overview](../../../data-governance/home.md)
+Option to select data governance policy  [data-governance overview](../../../data-governance/home.md)
 <br>  ![Data Governance policy](../../assets/catalog/advertising/acxiom/image-destination-governance.png)
 
 
 ## Audience Selection ##
-Selecting an audience defines what data will be selected from the datalike and posted.  An audience would be defined for the account prior destination configuration [account definition](../../../segmentation/ui/account-audiences.md)
+Selecting an audience defines what data will be selected from the datalike and posted.  An audience would be defined for the account prior destination configuration [audience definition](../../../segmentation/ui/account-audiences.md)
 <br>  ![Audience Selection](../../assets/catalog/advertising/acxiom/image-destination-audiences.png)
 
 
