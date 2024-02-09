@@ -1,11 +1,11 @@
 ---
 title: Acxiom Prospecting Data Import
-description: Acxiom Prospecting Data Import for Adobe Real-Time CDP is our process for delivering the most productive prospect audiences possible. We take the Adobe CDP 1st-party data via a secure export and run it through our award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which  enables the prospect lists to be tailored for import.
+description: Acxiom’s Prospecting Data Import for Adobe Real-Time CDP is our streamlined process for integrating Acxiom prospect lists into an Adobe CDP. These prospect lists are mapped to the Adobe XDM model, enabling segmentation, activation, and acquisition of new customers. Acxiom offers the industry’s best-performing audiences, featuring the largest catalog of over 12,000 global data attributes, all specifically tailored to provide personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences that can meet the precise needs of specific campaign needs.
 last-substantial-update: 2024-01-31
 badge: Beta
 ---
 ## Overview {#overview}
-Acxiom Prospect-Suppression Data Enhancement for Adobe Real-Time CDP is our process for delivering the most productive prospect audiences possible. We take the Adobe CDP 1st-party data via a secure export and run it through our award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which  enables the prospect lists to be tailored for import.
+Acxiom’s Prospecting Data Import for Adobe Real-Time CDP is our streamlined process for integrating Acxiom prospect lists into an Adobe CDP. These prospect lists are mapped to the Adobe XDM model, enabling segmentation, activation, and acquisition of new customers. Acxiom offers the industry’s best-performing audiences, featuring the largest catalog of over 12,000 global data attributes, all specifically tailored to provide personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences that can meet the precise needs of specific campaign needs.
 
 This tutorial provides steps to create a [!DNL Acxiom Prospecting Data Import] source connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to retrieve and map response from Acxiom prospect service using S3 as a drop point.  This connector can be found under source connectors in the "Data Partners" header.  Initial runs will provide a "Set up" option as the default behavior. After the initial source connection is defined this will default to "Add data" which will allow to create a new source dataflow.  The "..." selection in this card provides options to view all existing accounts defined using this connector, previous dataflow, and external facing documentation.
 
@@ -13,10 +13,6 @@ This tutorial provides steps to create a [!DNL Acxiom Prospecting Data Import] s
 
 
 ## Prerequisites {#prerequisites}
->[!IMPORTANT]
->
->* To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
->* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 >This tutorial requires a working understanding of the following components of Experience Platform:
 
@@ -24,7 +20,8 @@ This tutorial provides steps to create a [!DNL Acxiom Prospecting Data Import] s
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-
+* [[!DNL Prospect Profile]](../../../../../profile/ui/prospect-profile.md): Learn how to create and use prospect profile to gather information about unknown customers using third-party information.
+  
 >[!IMPORTANT]
 >
 >To connect to the source, you need the **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
@@ -68,7 +65,7 @@ Source Configuration and Authentication - Defined S3 account associated with [!D
 
 
 ## Data Selection ##
-selecting file in the desired bucket and sub directory, can be performed here.  A preview of the data can be provided once delimiter and compression type is defined.  While JSON and Parquet are listed, we have seen no indication that these formats should be expected by [!DNL Acxiom] processing and will not be supported in the long term.
+Selecting file in the desired bucket and sub directory, can be performed here.  A preview of the data can be provided once delimiter and compression type is defined.  While JSON and Parquet are listed, we have seen no indication that these formats should be expected by [!DNL Acxiom] processing and will not be supported in the long term.
 <br>    ![File preview.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-preview.png)
 
 ## Dataset Definition  ##
@@ -89,7 +86,7 @@ selecting file in the desired bucket and sub directory, can be performed here.  
 * **Dataflow Details**
   * **Dataflow Name** - The name this dataflow will appear as in the logging.  By default this will use the name of the file that is being imported
   * **Description** - Optional description for logging.
-* **Alerts** - Adobe Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  [Alert overview](../../../../../observability/alerts/overview.md)
+* **Alerts** - Adobe Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  [Alert overview](../../alerts.md)
   * **Sources Dataflow Run Start** - Issues an alert when the dataflow starts.
   * **Sources Dataflow Run Success** - Issues an alert when the dataflow ends without error.
   * **Sources Dataflow Run Failure** - Issues an alert when the dataflow ends with a failure status.
