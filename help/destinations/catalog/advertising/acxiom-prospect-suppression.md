@@ -65,7 +65,6 @@ In order to access your bucket on Experience Platform, you need to provide valid
 
 | Credential | Description |
 | --- | --- |
-| Acxiom authentication key | The authentication key. You can retrieve this value from the [!DNL Acxiom] team. |
 | S3 Access key | The access key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team. |
 | S3 Secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team. |
 | Bucket name | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
@@ -76,7 +75,6 @@ In order to access your bucket on Experience Platform, you need to provide valid
 
 * **New Account** - Define a new Acxiom Managed S3 location
   * **Connection type**
-    * **Enter Acxiom authentication key (Required)** - Acxiom provided value used for account approval.  This will be a must match the proper value before connection to the database can be made.  The value must be 24 characters and can only include characters A-Z, a-z, 0-9.
     * **S3 access key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.  Must be equal to 20 characters and can only include characters A-Z and numbers 2-7.
     * **S3 secret key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.  Must be equal to 40 characters and can only include characters A-Z, a-z, 0-9, +, \ and / .
     * **Connect to destination** - Will use the provided authorization keys to connect to the S3 service to validate access.  Success will allow configuration of the destination details while failure will be indicated on the UI.
