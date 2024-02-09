@@ -1,9 +1,9 @@
 ---
-title: Higher-order Function Example - Retrieve Similar Records
+title: Retrieve Similar Records with Higher-order Functions
 description: Learn how to identify and retrieve similar or related records from one or more datasets based on a similarity metric and similarity threshold. This workflow can highlight meaningful relationships or overlaps between disparate datasets.
 exl-id: 4810326a-a613-4e6a-9593-123a14927214
 ---
-# Higher-order function example: Retrieve similar records
+# Retrieve similar records with higher-order functions
 
 Use Data Distiller higher-order functions to solve a variety of common use cases. To identify and retrieve similar or related records from one or more datasets, use the filter, transform, reduce functions as detailed in this guide. To learn how higher order functions can be used to process complex data types, see the documentation on how to [manage array and maps data types](../sql/higher-order-functions.md).
 
