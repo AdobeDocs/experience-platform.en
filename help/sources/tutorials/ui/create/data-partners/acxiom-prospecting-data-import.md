@@ -1,15 +1,13 @@
 ---
 title: Acxiom Prospecting Data Import
-description: Acxiom’s Prospecting Data Import for Adobe Real-Time CDP is our streamlined process for integrating Acxiom prospect lists into an Adobe CDP. These prospect lists are mapped to the Adobe XDM model, enabling segmentation, activation, and acquisition of new customers. Acxiom offers the industry’s best-performing audiences, featuring the largest catalog of over 12,000 global data attributes, all specifically tailored to provide personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences that can meet the precise needs of specific campaign needs.
+description: earn how to connect Acxiom Prospecting Data to Adobe Experience Platform and Adobe Real-Time Customer Data Platform using the UI.
 last-substantial-update: 2024-01-31
 badge: Beta
 ---
-## Overview {#overview}
-Acxiom’s Prospecting Data Import for Adobe Real-Time CDP is our streamlined process for integrating Acxiom prospect lists into an Adobe CDP. These prospect lists are mapped to the Adobe XDM model, enabling segmentation, activation, and acquisition of new customers. Acxiom offers the industry’s best-performing audiences, featuring the largest catalog of over 12,000 global data attributes, all specifically tailored to provide personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences that can meet the precise needs of specific campaign needs.
+# Create an [!DNL Acxiom Prospecting Data Import] source connection and dataflow in the UI. {#overview}
+Acxiom’s Prospecting Data Import for Adobe Real-Time Customer Data Platform is a process for delivering the most productive prospect audiences possible. [AXCIOM] takes Adobe CDP first-party data via a secure export and runs that data through an award-winning hygiene and identity resolution system/process. This produces a data file to be used as a suppression list. Then, that data file is matched against the Acxiom Global database which enables the prospect lists to be tailored for import.
 
-This tutorial provides steps to create a [!DNL Acxiom Prospecting Data Import] source connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to retrieve and map response from Acxiom prospect service using S3 as a drop point.  This connector can be found under source connectors in the "Data Partners" header.  Initial runs will provide a "Set up" option as the default behavior. After the initial source connection is defined this will default to "Add data" which will allow to create a new source dataflow.  The "..." selection in this card provides options to view all existing accounts defined using this connector, previous dataflow, and external facing documentation.
-
-<br>![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-catalog.png)
+Read this tutorial to learn how to create an [!DNL Acxiom Prospecting Data Import] source connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to retrieve and map response from Acxiom prospect service using S3 as a drop point.
 
 
 ## Prerequisites {#prerequisites}
@@ -46,6 +44,9 @@ In order to access your bucket on Experience Platform, you need to provide valid
 
 ## Connect your [!DNL Acxiom] Account
 
+This connector can be found under source connectors in the "Data Partners" header.  Initial runs will provide a "Set up" option as the default behavior. After the initial source connection is defined this will default to "Add data" which will allow to create a new source dataflow.  The "..." selection in this card provides options to view all existing accounts defined using this connector, previous dataflow, and external facing documentation.
+<br>![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-catalog.png)
+
 Source Configuration and Authentication - Defined S3 account associated with [!DNL Acxiom] prospect response.
 
 * **Existing Account** - Accounts already defined using the Prospecting Data for Adobe AEP card will appear here for reuse.  These will appear in a list below and when selected provides details on the account.
@@ -63,12 +64,13 @@ Source Configuration and Authentication - Defined S3 account associated with [!D
     * **Folder path** - If subdirectories in a bucket are used a path could be provided as a starting path in data selection
     * **Connect to Source** - This button will only be enabled once an Account Name, a valid [!DNL Acxiom] authentication key, and a properly formatted S3 access key and session key is provided.
 
-
-## Data Selection ##
-Selecting file in the desired bucket and sub directory, can be performed here.  A preview of the data can be provided once delimiter and compression type is defined.  While JSON and Parquet are listed, we have seen no indication that these formats should be expected by [!DNL Acxiom] processing and will not be supported in the long term.
+## Data Selection
+Select the file that you want to ingest from the desired bucket and sub-directory.  A preview of the data can be provided once delimiter and compression type is defined.
 <br>    ![File preview.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-preview.png)
-
-## Dataset Definition  ##
+>[!NOTE]
+>
+>While JSON and Parquet are listed, we have seen no indication that these formats should be expected by [!DNL Acxiom] processing and will not be supported in the long term.
+## Provide dataset and dataflow details
 
 * **Dataset Details**  
   * **Target Dataset (Required)** - Data ingested into Adobe will be propagated to the data lake.  The dataset will define where the data will ultimately reside.
@@ -92,28 +94,13 @@ Selecting file in the desired bucket and sub directory, can be performed here.  
   * **Sources Dataflow Run Failure** - Issues an alert when the dataflow ends with a failure status.
 <br>    ![Dataset details](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset-details.png)
 
-## Mapping ##
+## Mapping
 
 Defines interface of source columns to associated schema columns on Adobe.  Platform automatically provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases or fix any duplicated mapping fields to clear any errors. [Field mapping in the UI](../../../../../data-prep/ui/mapping.md)
 
-* **Search source fields** - Entering text into this field will restrict the existing map fields, showing only those that contain that substring.
-* **"All fields" filter fields** - Drop down  restricting the existing map fields, showing only those that match the status indicated in the drop down.  Options include:
-  * **All fields (Default)** - Display all mapping
-  * **Fields with errors** - Show only those that have validation errors
-  * **Required fields** - Show only those that are required
-  * **Identity fields** - Show only those that are defined as identity fields
-  * **Mapped fields** - Show only those that have been mapped
-  * **Unmapped fields** - Show only those that have not been mapped
-* **New field type**
-  * **Add new field** - New fields can be appended, allowing a user to duplicate a source column to a different target field, or adding fields that were previously discarded
-  * **Add calculated field** - Allows field manipulation though scripting.  [Field mapping functions in the UI](../../../../../data-prep/functions.md)
-* **Import Mapping** - This allows mapping to be imported from previous dataflow configurations.  When selected a list will be presenting with the dataflows, their last run status, date of processing, as well as the source used.
-* **Preview Data** - This option will create an example of the mapping as presented.  A filter option allows to restrict the result to specific columns or outlining columns presenting errors.
-* **Validate** - This repeats the validation of the current mapping presented, ensuring that fields qualify to the schema selected.
-* **"Clear all" mapping** - Resets the mapping, removing all entries.
 <br>![Mapping](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-mapping.png)
 
-## Scheduling ##
+## Schedule your dataflow ingestion
 Defines when the dataflow should be run.
 
 * **Frequency** - Indicates how often the flow should be run, once a week, day, hour, minute.  Or simply to only run once.
@@ -122,7 +109,7 @@ Defines when the dataflow should be run.
 * **Backfill** - A boolean value that determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested.
 <br>![Schedualing](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-scheduling.png)
 
-## Review ##
+## Review your dataflow
 This presents a file overview of the options selected before submission, allowing users to review the new dataflow before it is created.  Details are grouped within the following categories:
 
 * **Connection** - Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
