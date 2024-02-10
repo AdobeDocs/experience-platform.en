@@ -1,10 +1,10 @@
 ---
-title: Manage array and maps data types with higher-order functions
-description: Learn how to manage array and maps data types with higher-order functions in Query Service. Practical examples are provided with common use cases.
+title: Manage array and map data types with higher-order functions
+description: Learn how to manage array and map data types with higher-order functions in Query Service. Practical examples are provided with common use cases.
 ---
-# Manage array and maps data types with higher-order functions
+# Manage array and map data types with higher-order functions
 
-Use this guide to learn how higher order functions can process complex data types such as arrays and maps. These functions remove the need to explode the array, perform a function, and then combine the result. This makes them particularly useful for analytics or time series datasets, that are commonly comprised of complex nested structures, arrays, and maps, and a variety of common use cases.
+Use this guide to learn how higher-order functions can process complex data types such as arrays and maps. These functions remove the need to explode the array, perform a function, and then combine the result. Higher-order functions are particularly useful for analyzing or processing time series datasets and analytics, which often feature complex nested structures, arrays, maps, and diverse use cases.
 
 The following list of use cases contain examples of hider-order array and map manipulation functions.
 
@@ -88,7 +88,7 @@ productlistitems
 (10 rows)
 ```
 
-## use filter to find products where the SKU > 100000
+## Use filter to find products where the SKU > 100000 {#find-specific-products}
 
 `filter(array<T>, function<T, Boolean>): array<T>`
 
@@ -122,7 +122,7 @@ productlistitems | _filter
 (10 rows)
 ```
 
-## Use aggregate to sum the SKUs of all product list items associated with a specific ID, and double the resulting total
+## Use aggregate to sum the SKUs of all product list items associated with a specific ID, and double the resulting total {#sum-specific-skus-and-double-the-resulting-total}
 
 `aggregate(array<T>, A, function<A, T, A>[, function<A, R>]): R`
 
@@ -161,7 +161,7 @@ productlistitems | max_value
 (10 rows)
 ```
 
-## Use zip_with to assign a sequence number to all the items in the product list
+## Use zip_with to assign a sequence number to all the items in the product list {#assign-a-sequence-number}
 
 `zip_with(array<T>, array<U>, function<T, U, R>): array<R>`
 
@@ -201,7 +201,7 @@ productlistitems     | zip_with
 (10 rows)
 ```
 
-## Use map_from_entries to assign a sequence number to each item in the product list, and obtain the final result as a map
+## Use map_from_entries to assign a sequence number to each item in the product list, and obtain the final result as a map {#assign-a-sequence-number-return-result-as-map}
 
 `map_from_entries(array<struct<K, V>>): map<K, V>`
 
@@ -240,7 +240,7 @@ productlistitems     | map_from_entries
 (10 rows)
 ```
 
-## Use map_form_arrays to assign sequence numbers to items in the product list and return the result as a map
+## Use map_form_arrays to assign sequence numbers to items in the product list and return the result as a map {#assign-sequence-numbers-to-items-return-the-result-as-a-map}
 
 `map_form_arrays(array<K>, array<V>): map<K, V>`
 
@@ -286,7 +286,7 @@ productlistitems     | map_from_entries
 (10 rows)
 ```
 
-## Use map_concat to concatenate two maps into as single map
+## Use map_concat to concatenate two maps into as single map {#concatenate-two-maps-into-as-single-map}
 
 `map_concat(map<K, V>, ...): map<K, V>`
 
@@ -329,7 +329,7 @@ productlistitems     | map_from_entries
 (10 rows)
 ```
 
-## Retrieve a value corresponding to 'AAID' in the identity map for further computation
+## Use element_at to retrieve a value corresponding to 'AAID' in the identity map for further computation {#retrieve-a-corresponding-value}
 
 `element_at(array<T>, Int): T / element_at(map<K, V>, K): V`
 
@@ -369,7 +369,7 @@ Results for this SQL would appear similar to those seen below.
 (10 rows)
 ```
 
-## Use cardinality to find the number of identities in the identity map
+## Use cardinality to find the number of identities in the identity map {#find-the-number-of-identities-in-the-identity-map}
 
 `cardinality(array<T>): Int / cardinality(map<K, V>): Int`
 
@@ -407,7 +407,7 @@ Results for this SQL would appear similar to those seen below.
 (10 rows)
 ```
 
-## Use array_distinct to find the distinct elements in productListItems
+## Use array_distinct to find the distinct elements in productListItems {#find-distinct-elements}
 
 `array_distinct(array<T>): array<T>`
 
@@ -447,7 +447,7 @@ productlistitems     | array_distinct(productlistitems)
 (10 rows)
 ```
 
-### Additional higher order functions
+### Additional higher-order functions {#additional-higher-order-functions}
 
 The following examples of higher-order functions are explained as part of the retrieve similar records use case. An example and explanation of each function's use is provided in the respective section of that document.
 
