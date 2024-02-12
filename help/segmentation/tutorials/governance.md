@@ -1,14 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;data usage compliance;enforce;enforce data usage compliance;Segmentation Service;segmentation;Segmentation;
 solution: Experience Platform
 title: Enforce Data Usage Compliance for an Audience Segment Using APIs
 type: Tutorial
-description: This tutorial covers the steps for enforcing data usage compliance for Real-Time Customer Profile audience segments using APIs.
+description: This tutorial covers the steps for enforcing data usage compliance segment definitions using APIs.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
 ---
-# Enforce data usage compliance for an audience segment using APIs
+# Enforce data usage compliance for a segment definition using APIs
 
-This tutorial covers the steps for enforcing data usage compliance for [!DNL Real-Time Customer Profile] audience segments using APIs.
+This tutorial covers the steps for enforcing data usage compliance for segment definitions using APIs.
 
 ## Getting started
 
@@ -51,7 +50,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Look up a merge policy for a segment definition {#merge-policy}
 
-This workflow begins by accessing a known audience segment. Segments that are enabled for use in [!DNL Real-Time Customer Profile] contain a merge policy ID within their segment definition. This merge policy contains information about which datasets are to be included in the segment, which in turn contain any applicable data usage labels.
+This workflow begins by accessing a known segment definition. Segment definitions that are enabled for use in [!DNL Real-Time Customer Profile] contain a merge policy ID within their segment definition. This merge policy contains information about which datasets are to be included in the segment definition, which in turn contain any applicable data usage labels.
 
 Using the [!DNL Segmentation] API, you can look up a segment definition by its ID to find its associated merge policy.
 
@@ -361,20 +360,20 @@ Using the data returned in the API response, you can set up protocols within you
 
 ## Filter data fields
 
-If your audience segment does not pass evaluation, you can adjust the data included in the segment through one of the two methods outlined below.
+If your segment definition does not pass evaluation, you can adjust the data included in the segment definition through one of the two methods outlined below.
 
 ### Update the merge policy of the segment definition
 
 Updating the merge policy of a segment definition will adjust the datasets and fields that will be included when the segment job is run. See the section on [updating an existing merge policy](../../profile/api/merge-policies.md#update) in the API merge policy tutorial for more information. 
 
-### Restrict specific data fields when exporting the segment
+### Restrict specific data fields when exporting the segment definition
 
-When exporting a segment to a dataset using the [!DNL Segmentation] API, you can filter the data that is included in the export by using the `fields` parameter. Any data fields added to this parameter will be included in the export, while all other data fields will be excluded.
+When exporting a segment definition to a dataset using the [!DNL Segmentation] API, you can filter the data that is included in the export by using the `fields` parameter. Any data fields added to this parameter will be included in the export, while all other data fields will be excluded.
 
-Consider a segment that has data fields named "A", "B", and "C". If you wished to only export field "C", then the `fields` parameter would contain field "C" alone. By doing this, fields "A" and "B" would be excluded when exporting the segment.
+Consider a segment definition that has data fields named "A", "B", and "C". If you wished to only export field "C", then the `fields` parameter would contain field "C" alone. By doing this, fields "A" and "B" would be excluded when exporting the segment definition.
  
-See the section on [exporting a segment](./evaluate-a-segment.md#export) in the segmentation tutorial for more information.
+See the section on [exporting a segment definition](./evaluate-a-segment.md#export) in the segmentation tutorial for more information.
 
 ## Next steps
 
-By following this tutorial, you have looked up the data usage labels associated with an audience segment and tested them for policy violations against specific marketing actions. For more information on Data Governance in [!DNL Experience Platform], please read the overview for [Data Governance](../../data-governance/home.md).
+By following this tutorial, you have looked up the data usage labels associated with a segment definition and tested them for policy violations against specific marketing actions. For more information on Data Governance in [!DNL Experience Platform], please read the overview for [Data Governance](../../data-governance/home.md).

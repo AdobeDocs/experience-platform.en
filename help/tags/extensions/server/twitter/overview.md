@@ -3,10 +3,11 @@ keywords: event forwarding extension;twitter;twitter event forwarding extension
 title: Twitter event forwarding extension
 description: This Adobe Experience Platform event forwarding extension allows you to ingest events into Twitter for your business requirements.
 last-substantial-update: 2023-05-24
+exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
 ---
 # [!DNL Twitter] event forwarding extension
 
-[[!DNL Twitter]](https://www.twitter.com) is an online social media and social networking service, on which users post and interact with 280-character-long messages known as tweets. Users can interact with Twitter using a browser, mobile frontend software, or programmatically through its [APIs](https://developer.twitter.com/en/docs/twitter-api)
+[[!DNL Twitter]](https://twitter.com/i/flow/login) is an online social media and social networking service, on which users post and interact with 280-character-long messages known as tweets. Users can interact with Twitter using a browser, mobile frontend software, or programmatically through its [APIs](https://developer.twitter.com/en/docs/twitter-api)
 
 The [!DNL Twitter] Web Conversions API [event forwarding](../../../ui/event-forwarding/overview.md) extension allows you to leverage data captured in the Adobe Experience Platform Edge Network and send it to [!DNL Twitter]. This document covers the use cases of the extension, how to install it, and how to integrate its capabilities into your event forwarding [rules](../../../ui/managing-resources/rules.md).
 
@@ -26,7 +27,7 @@ For more information on use cases specific to [!DNL Twitter], refer to the [[!DN
 
 You must have a valid [!DNL Twitter] account in order to use this extension. Go to the [[!DNL Twitter] registration page](https://help.twitter.com/en/using-twitter/create-twitter-account) to register and create an account if you do not have one already.
 
-You must set up your account as a [!DNL Twitter] developer account. To find out how to sign up as a developer, refer to the [[!DNL Twitter] developer account](https://developer.twitter.com/en/support/twitter-api/developer-account).
+You must set up your account as a [!DNL Twitter] developer account. To find out how to sign up as a developer, refer to the [[!DNL Twitter] developer account](https://developer.twitter.com/en/support/twitter-api/developer-account1).
 
 ### API guardrails {#guardrails}
 
@@ -72,7 +73,7 @@ When finished, select **[!UICONTROL Save]**.
 
 Once all your data elements are set up, you can start creating event forwarding rules that determine when and how your events will be sent to [!DNL Twitter].
 
-Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Twitter]**. To send Adobe Experience Edge Network events to [!DNL Twitter], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send Web Conversion].**
+Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Twitter]**. To send Edge Network events to [!DNL Twitter], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send Web Conversion].**
 
 After selection, additional controls appear to further configure the event. You need to map the [!DNL Twitter] event properties to the data elements that you previously created. For more information, refer to the [[!DNL Twitter] Web Conversions API](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 

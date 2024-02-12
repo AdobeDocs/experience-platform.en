@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;user guide;customer ai;popular topics;configure instance;create instance;
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Configure a Customer AI Instance
 description: AI/ML Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
@@ -62,7 +62,7 @@ By design, Customer AI uses Adobe Analytics, Adobe Audience Manager, Experience 
 
 ![Select and search for dataset](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
-After selecting the datasets you wish to use, select the **[!UICONTROL Add]** button to add the datasets to the the dataset preview pane.
+After selecting the datasets you wish to use, select the **[!UICONTROL Add]** button to add the datasets to the dataset preview pane.
 
 ![Select datasets](../images/user-guide/select-datasets.png)
 
@@ -107,7 +107,7 @@ In the event that more than one identity is available within a namespace, make s
 
 >[!NOTE]
 >
-> If no valid identity type (namespace) exists for a dataset, you must set a primary identity and assign it to an identity namespace using the [schema editor](../../../xdm/schema/composition.md#identity). To learn more about namespaces and identities, visit the [Identity Service namespaces](../../../identity-service/namespaces.md) documentation.
+> If no valid identity type (namespace) exists for a dataset, you must set a primary identity and assign it to an identity namespace using the [schema editor](../../../xdm/schema/composition.md#identity). To learn more about namespaces and identities, visit the [Identity Service namespaces](../../../identity-service/features/namespaces.md) documentation.
 
 ## Define goal {#define-a-goal}
 
@@ -191,15 +191,11 @@ You can define important Profile dataset fields (with timestamps) in your data i
 
 #### Select profile attributes from the Profile snapshot export
 
-You can also choose to include profile attributes from the daily Profile snapshot export. These attributes are synced to the Profile snapshot export and display the most recently available value. 
+You can also choose to include profile attributes from the daily Profile snapshot export. These attributes are synced to the Profile snapshot export and display the most recently available value. They automatically show up and do not require a dataset to be selected in the configuration step.
 
 >[!WARNING]
 >
-> Be careful not to select a profile attribute that is updated as a result of the prediction goal or highly correlated with the prediction goal. This causes data leakage and over-fitting of the model. An example of such an attribute is `total_purchases_in_the_last_3_months` that predicts purchase conversion. 
-
->[!NOTE]
->
->Support for using profile attributes from the UPS snapshot export is available in the UI upon request. 
+> Do not select a profile attribute that has been updated as a result of the prediction goal or is highly-correlated with prediction goal. This results in data leakage and over-fitting of the model. For example, `total_purchases_in_the_last_3_months` is an attribute that predicts purchase conversion..
 
 ### Adding a custom event example {#custom-event}
 
@@ -258,3 +254,5 @@ The following video is designed to support your understanding of the configurati
 > The following video is out of date. For the most up-to-date information refer to the documentation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
+
+<!-- comment -->

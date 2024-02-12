@@ -1,6 +1,7 @@
 ---
 title: Draft dataflows in the UI
 description: Learn how to save your dataflows as a draft and publish them at a later time, when using the sources workspace.
+exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
 ---
 # Draft dataflows in the UI
 

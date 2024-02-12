@@ -3,6 +3,7 @@ solution: Experience Platform
 title: Edit destination connections using the Flow Service API
 type: Tutorial
 description: Learn how to how to edit various components of a destination connection using the Flow Service API.
+exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
 ---
 # Edit destination connections using the Flow Service API
 
@@ -239,7 +240,7 @@ A successful response returns your target connection ID and an updated Etag. You
 
 **Request**
 
-The following request updates the parameters of a [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) or [[!DNL Google Ad Manager 360] destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) connection to add the new [**[!UICONTROL Append segment ID to segment name]**](/help/release-notes/2023/april-2023.md#destinations) field.
+The following request updates the parameters of a [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) or [[!DNL Google Ad Manager 360] destination](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) connection to add the new [**[!UICONTROL Append audience ID to audience name]**](/help/release-notes/2023/april-2023.md#destinations) field.
 
 ```shell
 curl -X PATCH \
@@ -323,11 +324,11 @@ A successful response returns your target connection ID and an updated etag. You
 
 ## Edit base connection components (authentication parameters and other components) {#patch-base-connection}
 
-The components of a base connection differ by destination. For example, for [!DNL Amazon S3] destinations, you can update the access key and secret key to your [!DNL Amazon S3] location. 
+Edit the base connection when you want to update a destination's credentials. The components of a base connection differ by destination. For example, for [!DNL Amazon S3] destinations, you can update the access key and secret key to your [!DNL Amazon S3] location. 
 
 To update components of a base connection, perform a PATCH request to the `/connections` endpoint while providing your base connection ID, version, and the new values you want to use.
 
-Remember, you got your base connection ID in a previous step, when you inspected an existing dataflow to your desired destination.
+Remember, you got your base connection ID in a [previous step](#look-up-dataflow-details), when you inspected an existing dataflow to your desired destination for the parameter `baseConnection`.
 
 >[!IMPORTANT]
 >

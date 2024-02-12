@@ -1,6 +1,6 @@
 ---
 title: Adobe Analytics ExperienceEvent Full Extension Schema Field Group
-description: This document provides an overview of the Adobe Analytics ExperienceEvent Full Extension schema field group.
+description: Learn about the Adobe Analytics ExperienceEvent Full Extension schema field group.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
 ---
 # [!UICONTROL Adobe Analytics ExperienceEvent Full Extension] schema field group
@@ -97,4 +97,4 @@ Each even object uses the [[!UICONTROL Measure]](../../data-types/measure.md) da
 
 This document covered the structure and use case for the Analytics extension fieldl group. For more details on the field group itself, refer to the [public XDM repository](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
-If you are using this field group to collect Analytics data using the Adobe Experience Platform Web SDK, see the guide on [configuring a datastream](../../../edge/datastreams/overview.md) to learn how to map data to XDM on the server side.
+If you are using this field group to collect Analytics data using the Adobe Experience Platform Web SDK, see the guide on [configuring a datastream](../../../datastreams/overview.md) to learn how to map data to XDM on the server side.

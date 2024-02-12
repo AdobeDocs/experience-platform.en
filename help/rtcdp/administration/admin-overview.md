@@ -2,6 +2,7 @@
 keywords: rtcdp administration overview;administration overview
 title: Real-Time Customer Data Platform Administration Overview
 description: This document provides an overview of the administration capabilities of Adobe Real-Time Customer Data Platform, powered by Adobe Experience Platform. 
+feature: Access Control, Get Started, Sandboxes
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
 ---
 # Real-Time Customer Data Platform administration overview

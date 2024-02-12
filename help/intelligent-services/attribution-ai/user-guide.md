@@ -53,7 +53,7 @@ Next, the set up page for Attribution AI appears where you can provide a name an
 
 By design, Attribution AI can use Adobe Analytics, Experience event, and Consumer Experience Event data to calculate attribution scores. When selecting a dataset only ones that are compatible with Attribution AI are listed. To select a dataset, select the (**+**) symbol next to the dataset name or select the checkbox to add multiple datasets at once. You can also use the search option to quickly find the datasets you're interested in.
 
-After selecting the datasets you wish to use, select the **[!UICONTROL Add]** button to add the datasets to the the dataset preview pane.
+After selecting the datasets you wish to use, select the **[!UICONTROL Add]** button to add the datasets to the dataset preview pane.
 
 ![Select datasets](./images/user-guide/select-datasets.png)
 
@@ -97,7 +97,7 @@ In the event that more than one identity is available within a namespace, make s
 
 >[!NOTE]
 >
-> If no valid identity type (namespace) exists for a dataset, you must set a primary identity and assign it to an identity namespace using the [schema editor](../../xdm/schema/composition.md#identity). To learn more about namespaces and identities, visit the [Identity Service namespaces](../../identity-service/namespaces.md) documentation.
+> If no valid identity type (namespace) exists for a dataset, you must set a primary identity and assign it to an identity namespace using the [schema editor](../../xdm/schema/composition.md#identity). To learn more about namespaces and identities, visit the [Identity Service namespaces](../../identity-service/features/namespaces.md) documentation.
 
 ## Mapping media channel and campaign fields {#aai-mapping}
 

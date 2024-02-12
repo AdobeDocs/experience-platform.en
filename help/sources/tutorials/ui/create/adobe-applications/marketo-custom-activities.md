@@ -19,7 +19,7 @@ This tutorial requires a working understanding of the following components of Ad
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Experience Data Model (XDM)](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Create and edit schemas in the UI](../../../../../xdm/ui/resources/schemas.md): Learn how to create and edit schemas in the UI.
-* [Identity namespaces](../../../../../identity-service/namespaces.md): Identity namespaces are a component of [!DNL Identity Service] that serve as indicators of the context to which an identity relates. A fully qualified identity includes an ID value and a namespace.
+* [Identity namespaces](../../../../../identity-service/features/namespaces.md): Identity namespaces are a component of [!DNL Identity Service] that serve as indicators of the context to which an identity relates. A fully qualified identity includes an ID value and a namespace.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
@@ -121,7 +121,7 @@ Navigate through the source data structure and find the custom activity field th
 
 ![The source data structure.](../../../../images/tutorials/create/marketo-custom-activities/select-new-mapping-field.png)
 
-To add a target field, select the schema icon ![schema icon](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png) and then select the the custom activity fields from the target schema.
+To add a target field, select the schema icon ![schema icon](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png) and then select the custom activity fields from the target schema.
 
 ![The target schema structure.](../../../../images/tutorials/create/marketo-custom-activities/add-target-mapping-field.png)
 

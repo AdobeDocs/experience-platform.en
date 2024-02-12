@@ -56,17 +56,17 @@ Adobe Experience Platform Web SDK can also send data directly to Adobe Experienc
 
 **Performance:** The web SDK is smaller than using all of the current Adobe libraries and provides significantly faster page loads.
 
-**Simplicity:** The combination of XDM, Web SDK, tags, Experience Edge, Adobe Experience Cloud solutions, and Adobe Experience Platform creates an easy-to-understand and simple-to-follow data collection story.
+**Simplicity:** The combination of XDM, Web SDK, tags, Edge Network, Adobe Experience Cloud solutions, and Adobe Experience Platform creates an easy-to-understand and simple-to-follow data collection story.
 
 * **XDM:** The solution-agnostic schema you use to send data to Adobe. No more tagging for evars or mboxes.
 * **Adobe Experience Platform Web SDK:** Makes it easy to send and receive data to Adobe Experience Platform Edge Network.
 * **Tags:** Simplifies deployment and configuration of the Web SDK (and any other JavaScript tags) on a site.
-* **Experience Edge:** Easily route the data to Adobe Experience Platform and solutions in the format they need.
+* **Edge Network:** Easily route the data to Adobe Experience Platform and solutions in the format they need.
 * **Adobe Experience Platform and Adobe solutions:** Enable their value proposition.
 
 **Control:** Because all of the data is using a single and connected stream of data, you can logically follow and control what the data looks like at every millisecond of its journey, to and from applications.
 
-**Modern and ready for the future:** The Web SDK and its connection to the Experience Edge Network has enabled Adobe to significantly modernize how Adobe deals with data collection, personalization, consent and the future of 3rd party cookies. (It enables a first party domain, managed by Adobe.)
+**Modern and ready for the future:** The Web SDK and its connection to the Edge Network has enabled Adobe to significantly modernize how Adobe deals with data collection, personalization, consent and the future of 3rd party cookies. (It enables a first party domain, managed by Adobe.)
 
 **Time-to-value:** Adobe has worked hard (and will continue) to make it as easy as possible to deploy the Web SDK via tags and map client-side data to XDM. After that work is done, all other Adobe solutions and Adobe Experience Platform services can be turned on or off server-side. For example, if you are using this for Adobe Analytics and you want to turn on Target or Experience Platform, you can simply flip a toggle on the Datastream configuration and light up those use cases.
 
@@ -78,7 +78,7 @@ Alloy is the code name for Adobe Experience Platform Web SDK. It is used within 
 
 No. Any Adobe Digital Experience customer can use the Adobe Experience Platform Web SDK free of charge. Customers who wish to use the [!DNL Web SDK] will need to configure the right permissions to create schemas, datasets, identity namespaces, and datastreams in the Data Collection UI or Experience Platform UI.
 
-For more information on configuring these permissions see our documentation on [data collection permissions management](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
+For more information on configuring these permissions see our documentation on [data collection permissions management](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## Who should use the Web SDK?
 
@@ -113,7 +113,7 @@ In other words, if you decide to use Adobe Experience Platform Web SDK for non-s
 
 ## Can I migrate the ECIDs when I start using Alloy so my website visitors don't start showing up as new visitors?
 
-Yes, Adobe Experience Platform Web SDK provides an Identity Migration feature. Follow the instructions for ID migration in the [Platform Web SDK identity documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration) for more details.
+Yes, Adobe Experience Platform Web SDK provides an Identity Migration feature. Follow the instructions for ID migration in the [Platform Web SDK identity documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#id-migration) for more details.
 
 ## How is the Web SDK different than tags?
 
@@ -137,7 +137,7 @@ However:
 
 ## What is event forwarding?
 
-If you use our SDKs and send XDM to the Experience Edge, these new features event forwarding allows you to install new server-side extensions and map that data to anything--and send it anywhere--from our edge network. Think of it as "data collection as a service". This will be available for a cost, as well as being bundled as part of Adobe Experience Platform.
+If you use our SDKs and send XDM to the Edge Network, these new features event forwarding allows you to install new server-side extensions and map that data to anything--and send it anywhere--from our edge network. Think of it as "data collection as a service". This will be available for a cost, as well as being bundled as part of Adobe Experience Platform.
 
 ## What is a CNAME or First Party Domain and why does it matter?
 
@@ -152,10 +152,10 @@ Yes, currently the Web SDK uses anywhere between one to seven cookies depending 
 |**kndct_orgid_identity**|34128000|395 days|The identity cookie stores the ECID, as well as other information related to the ECID.|
 |**kndctr_orgid_consent_check**|7200|2 hours|This cookie stores the user's consent preference for the website.|
 |**kndctr_orgid_consent**|15552000|180 days|This session-based cookie signals the server to look up the consent preferences server side.|
-|**kndctr_orgid_cluster**|1800|30 minutes|This cookie stores the Experience Edge region that is serving the current user's requests. The region is used in the URL path so that Experience Edge can route the request to the correct region. This cookie has a 30 minutes lifetime, so that if a user connects with a different IP address, the request can be routed to the closest region.|
+|**kndctr_orgid_cluster**|1800|30 minutes|This cookie stores the Edge Network region that is serving the current user's requests. The region is used in the URL path so that the Edge Network can route the request to the correct region. This cookie has a 30 minutes lifetime, so that if a user connects with a different IP address, the request can be routed to the closest region.|
 |**mbox**|63072000|2 years|This cookie appears when the Target migration setting is set to true. This will allow the Target [mbox cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) to be set by the Web SDK.|
 |**mboxEdgeCluster**|1800|30 minutes|This cookie appears when the Target migration setting is set to true. This cookie allows the Web SDK to communicate the correct edge cluster to at.js so that Target profiles can stay in sync as users navigate across a site.|
-|**AMCV_###@AdobeOrg**|34128000|395 days|This cookie only appears when ID migration on the Adobe Experience Platform Web SDK is enabled. This cookie helps when transitioning to Web SDK while some parts of the site are still using visitor.js. See the [idMigrationEnabled documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#identity-options) to read more about this setting.|
+|**AMCV_###@AdobeOrg**|34128000|395 days|This cookie only appears when ID migration on the Adobe Experience Platform Web SDK is enabled. This cookie helps when transitioning to Web SDK while some parts of the site are still using visitor.js. See the [idMigrationEnabled documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#identity-options) to read more about this setting.|
 
 When using the Web SDK, the Edge Network sets one or more of the cookies above. The Edge Network sets all the cookies with the `secure` and `sameSite="none"` attributes.
 

@@ -30,7 +30,7 @@ Adobe Experience Platform [!DNL Identity Service] bridges customer identity data
 
 Identity Service maintains a store of globally defined (standard) and user-defined (custom) identity namespaces. Standard namespaces are available for all organizations (for example, "Email" and "ECID"), while your organization can also create custom namespaces to suit its particular needs.
 
-For more information about identity namespaces in [!DNL Experience Platform], see the [identity namespace overview](../identity-service/namespaces.md).
+For more information about identity namespaces in [!DNL Experience Platform], see the [identity namespace overview](../identity-service/features/namespaces.md).
 
 ## Submitting requests {#submit}
 
@@ -104,10 +104,10 @@ Depending on whether you also included Real-Time Customer Profile (`ProfileServi
 
 | Products included | Effects |
 | --- | --- |
-| `identity` only | The identity graph associated with the provided identity is immediately deleted as soon as Platform sends the confirmation that the deletion request was received. The profile constructed from that identity graph still remains, but will not be updated as new data is ingested since the identity associations are now removed. The data associated with the profile also remains in the data lake. |
-| `identity` and `ProfileService` | The identity graph and its associated profile are immediately deleted as soon as Platform sends the confirmation that the deletion request was received. The data associated with the profile remains in the data lake. |
-| `identity` and `aepDataLake` |  The identity graph associated with the provided identity is immediately deleted as soon as Platform sends the confirmation that the deletion request was received. The profile constructed from that identity graph still remains, but will not be updated as new data is ingested since the identity associations are now removed.<br><br>When the data lake product responds that the request was received and is currently processing, the data associated with the profile is soft-deleted and is therefore not accessible by any [!DNL Platform] service. Once the job is completed, the data is removed from the data lake completely. |
-| `identity`, `ProfileService`, and `aepDataLake` | The identity graph and its associated profile are immediately deleted as soon as Platform sends the confirmation that the deletion request was received.<br><br>When the data lake product responds that the request was received and is currently processing, the data associated with the profile is soft-deleted and is therefore not accessible by any [!DNL Platform] service. Once the job is completed, the data is removed from the data lake completely. |
+| `identity` only | The provided identity is deleted as soon as Platform sends the confirmation that the deletion request was received. The profile constructed from that identity graph still remains, but will not be updated as new data is ingested since the identity associations are now removed. The data associated with the profile also remains in the data lake. |
+| `identity` and `ProfileService` | The provided identity is deleted as soon as Platform sends the confirmation that the deletion request was received. The data associated with the profile remains in the data lake. |
+| `identity` and `aepDataLake` |  The provided identity is deleted as soon as Platform sends the confirmation that the deletion request was received. The profile constructed from that identity graph still remains, but will not be updated as new data is ingested since the identity associations are now removed.<br><br>When the data lake product responds that the request was received and is currently processing, the data associated with the profile is soft-deleted and is therefore not accessible by any [!DNL Platform] service. Once the job is completed, the data is removed from the data lake completely. |
+| `identity`, `ProfileService`, and `aepDataLake` | The provided identity is deleted as soon as Platform sends the confirmation that the deletion request was received.<br><br>When the data lake product responds that the request was received and is currently processing, the data associated with the profile is soft-deleted and is therefore not accessible by any [!DNL Platform] service. Once the job is completed, the data is removed from the data lake completely. |
 
 Refer to the [[!DNL Privacy Service] documentation](../privacy-service/home.md#monitor) for more information on tracking job statuses.
 

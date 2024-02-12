@@ -16,9 +16,13 @@ feature: Dashboards
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
   * [Account Profiles](guides/account-profiles.md)
-  * [Segments](guides/segments.md)
+  * [Audiences](guides/audiences.md)
   * [Destinations](guides/destinations.md)
   * [License usage](guides/license-usage.md)
+* Available Insights {#insights}
+  * [Profiles](insights/profiles.md)
+  * [Audiences](insights/audiences.md)
+  * [Destinations](insights/destinations.md)
 * Customize dashboards {#customize}  
   * [Customization overview](customize/overview.md)
   * [Modify dashboards](customize/modify.md)
@@ -26,8 +30,11 @@ feature: Dashboards
   * [Standard widgets](customize/standard-widgets.md)
   * [Custom widgets](customize/custom-widgets.md)
   * [Edit schema](customize/edit-schema.md)
+* Insights use cases {#insights-use-cases}
+  * [Consent analysis](insights-use-cases/consent-analysis.md)
 * Application integrations {#integrations}
   * [Power BI](integrations/power-bi.md)
 * [Query dashboard datasets](query.md)
 * [Real-Time Customer Data Platform Insights Data Model](cdp-insights-data-model.md)
+* [View insight SQL](view-sql.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

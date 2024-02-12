@@ -86,6 +86,88 @@ To create a new account, select **[!UICONTROL New account]**, and then provide y
 
 ### Select templates
 
+With your account authenticated, you can now select the template that you would like to use for your dataflow.
+
++++[!DNL Marketo Engage] templates
+The following table outlines the templates available for the [!DNL Marketo Engage] source.
+
+| [!DNL Marketo Engage] templates | Description |
+| --- | --- |
+| Activities | The Activities template captures event-based snapshots of activities such as email interactions, website interactions, and sales calls. |
+| Companies | The Companies template captures business account details such as company firmographic information, location, and billing information. |
+| Named Accounts | The Named Accounts template captures details for accounts that have been determined as target accounts to pursue. |
+| Opportunities | The Opportunities template captures business opportunity details such as type, sales stage, and related accounts. |
+| Opportunity Contact Roles | The Opportunity Contact Roles template captures details about the roles for leads associated with a particular opportunity. |
+| Persons | The Persons template captures attributes for individual people such as demographic details, contact information, and consent preferences. |
+| Program Memberships | The Program Memberships template captures details for contacts associated with a business campaign, include nurture cadences and contact responses. |
+| Programs | The Programs template captures business campaign details like status, channels, timelines, and costs. |
+| Static List Memberships | The Static List Memberships template captures teh relationships between people and their membership in static lists. |
+| Static Lists | The Static List template captures instantiated lists of people for specific use cases. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Salesforce] B2B templates
+The following table outlines the B2B templates available for the [!DNL Salesforce] source.
+
+| [!DNL Salesforce] B2B templates | Description |
+| --- | --- |
+| Account Contact Relation | The Account Contact Relation template captures the relationship between a contact and one or more accounts. |
+| Accounts | The Account template captures business account details such as company firmographic information, location, and billing information. |
+| Campaign Members | The Campaign Members template captures the relationship between an individual lead or contact and a specific [!DNL Salesforce] campaign. |
+| Campaigns | The Campaigns template captures business account details such as company firmographic information, location, and billing information. |
+| Contacts | The Contact template captures attributes for contacts such as demographics details, contact information, and related business entities. |
+| Leads | The Leads template captures attributes for leads such as demographics details, contact information, and related business entities. |
+| Opportunities | The Opportunities template captures business opportunity details such as type, sales stage, and related account. |
+| Opportunity Contact Roles | The Opportunity Contact Roles template captures details about the roles for leads associated with a particular opportunity. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Salesforce] B2C templates
+The following table outlines the B2C templates available for the [!DNL Salesforce] source.
+
+| [!DNL Salesforce] B2C templates | Description |
+| --- | --- |
+| Contact | The Contact template captures attributes for contacts such as demographics details, contact information, and related business entities. |
+| Lead | The Lead template captures attributes for leads such as demographics details, contact information, and related business entities.  |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Microsoft Dynamics] B2B templates
+The following table outlines the B2B templates available for the [!DNL Microsoft Dynamics] source.
+
+| [!DNL Microsoft Dynamics] B2B templates | Description |
+| --- | --- |
+| Accounts | The Account template captures business account details such as company firmographic information, location, and billing information. |
+| Campaigns | The Campaigns template captures business account details such as company firmographic information, location, and billing information. |
+| Contacts | The Contact template captures attributes for contacts such as demographics details, contact information, and related business entities. |
+| Leads | The Leads template captures attributes for leads such as demographics details, contact information, and related business entities. |
+| Marketing List | The Marketing List template captures a group of existing or potential customers created for a marketing campaign or other sales purposes. |
+| Marketing List Members | The Marketing List Members captures the details of any one type of customer record, such as leads, accounts, or contacts, in a marketing list. |
+| Opportunities | The Opportunities template captures business opportunity details such as type, sales stage, and related account. |
+| Opportunity Contact Roles | The Opportunity Contact Roles template captures details about the roles for leads associated with a particular opportunity. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Microsoft Dynamics] B2C templates
+The following table outlines the B2C templates available for the [!DNL Microsoft Dynamics] source.
+
+| [!DNL Microsoft Dynamics] B2C templates | Description |
+| --- | --- |
+| Contact | The Contact template captures attributes for contacts such as demographics details, contact information, and related business entities. |
+| Lead | The Lead template captures attributes for leads such as demographics details, contact information, and related business entities.  |
+
+{style="table-layout:auto"}
+
++++
+
 Depending on the business type that you selected, a list of templates appears. Select the preview icon ![preview icon](../../images/tutorials/templates/preview-icon.png) beside a template name to preview sample data from the template.
 
 ![A list of templates with the preview icon highlighted.](../../images/tutorials/templates/templates.png)

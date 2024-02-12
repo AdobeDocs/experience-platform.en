@@ -112,7 +112,6 @@ Non-fatal errors are represented in the _Problem Details_ format, but are embedd
 
 ## Handling `4xx` and `5xx` Responses
 
-
 |Error code|Description|
 |---|---|
 |`4xx Bad Request`| Most `4xx` errors, like 400, 403, 404, should not be retried on behalf of the client, except for `429`. These are client errors and will not succeed. The client must address the error before retrying the request.|

@@ -7,13 +7,14 @@ exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
 
 >[!IMPORTANT]
 >
->This integration works with [Adobe Campaign version 8.4 or higher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1).
+>This integration works with [Adobe Campaign version 8.4 or higher](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1).
 
 ## Overview {#overview}
 
 Adobe Campaign Managed Cloud Services provides a platform for designing cross-channel customer experiences and an environment for visual campaign orchestration, real-time interaction management and cross channel execution. [Get Started with Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 Use Campaign to:
+
 * Drive personalization and engagement through a single accessible view of the customer,
 * Integrate email, mobile, online and offline channels into the customer journey,
 * Automate the delivery of meaningful and timely messages and offers.
@@ -26,29 +27,37 @@ Use Campaign to:
 >* For each segment, you can add up to 20 fields to [map](#map) to Adobe Campaign,
 >* Data retention on Azure Blob storage Data Landing Zone (DLZ) : 7 day,
 >* The activation frequency is 3 hours minimum.
+>* The maximum file name length supported by this connection is 255 characters. When you [configure the exported file name](../../ui/activate-batch-profile-destinations.md#configure-file-names), make sure the file name does not exceed 255 characters. Exceeding the maximum file name length results in activation errors.
 
 ## Use cases {#use-cases}
 
 To help you better understand how and when you should use the Adobe Campaign Manage Service destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
 
-Adobe Experience Platform creates a customer profile that incorporates information like the identity graph, behavioral data from analytics, merges offline and online data etc. With this integration, you can augment the segmentation capabilities that are already existing within Adobe Campaign with those Adobe Experience Platform powered audiences, and you can hence activate that data in Campaign.
+* Adobe Experience Platform creates a customer profile that incorporates information like the identity graph, behavioral data from analytics, merges offline and online data etc. With this integration, you can augment the segmentation capabilities that are already existing within Adobe Campaign with those Adobe Experience Platform powered audiences, and you can hence activate that data in Campaign.
 
-For example, a sports attire company wants to leverage the Adobe Experience Platform powered smart segments and activate them using Adobe Campaign to reach out to their customer base across the different channels supported by Adobe Campaign. 
+  For example, a sports attire company wants to leverage the Adobe Experience Platform powered smart segments and activate them using Adobe Campaign to reach out to their customer base across the different channels supported by Adobe Campaign. Once the messages are sent, they want to enhance the customer profile in Adobe Experience platform with experience data from Adobe Campaign such as sends, open and clicks.
 
-Once the messages are sent, they want to enhance the customer profile in Adobe Experience platform with experience data from Adobe Campaign such as sends, open and clicks.
+  The result is cross channel campaigns that are more consistent across the Adobe Experience cloud ecosystem and a rich customer profile that is quickly adapting and learning.
 
-The result is cross channel campaigns that are more consistent across the Adobe Experience cloud ecosystem and a rich customer profile that is quickly adapting and learning.
+
+* In addition to segment activation in Campaign, you can leverage the Adobe Campaign Managed Services destination to bring in additional profile attributes which are tied to a profile on Adobe Experience Platform and have a sync process in place so that they are updated in the Adobe Campaign database. 
+
+  For example, let's say you are capturing opt-in and opt-out values in Adobe Experience Platform. With this connection, you can bring over these values into Adobe Campaign and have a sync process in place so that they are updated on a regular basis.
+
+  >[!NOTE]
+  >
+  >Profile attributes sync is available for profiles that are already present in the Adobe Campaign database.
 
 [Learn more on Adobe Campaign integration with Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
 
 ## Supported identities {#supported-identities}
 
-*Adobe Campaign Managed Cloud Services* supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+*Adobe Campaign Managed Cloud Services* supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
 |external_id|Custom user IDs|Select this target identity when your source identity is a custom namespace. We recommend using this identity and mapping it to the ID in your Campaign instance that represents customer (loyalty_ID, account_ID, customer_ID...)|
-|ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the following document on [ECID](/help/identity-service/ecid.md) for more information.|
+|ECID|Experience Cloud ID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". See the following document on [ECID](/help/identity-service/features/ecid.md) for more information.|
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 |phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 |GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
@@ -71,7 +80,7 @@ Refer to the table below for information about the destination export type and f
 
 >[!IMPORTANT]
 > 
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
@@ -85,6 +94,10 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 * **[!UICONTROL Select instance]**: Your **[!DNL Campaign]** marketing instance.
 * **[!UICONTROL Target mapping]**: Select the target mapping that you are using in **[!DNL Adobe Campaign]** to send deliveries. [Learn more](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
+* **[!UICONTROL Select sync type]**:
+
+  * **[!UICONTROL Audience sync]**: Use this option to send Adobe Experience Platform audiences over to Adobe Campaign.
+  * **[!UICONTROL Profile sync (Update only)]**: Use this option to bring Adobe Experience Platform profile attributes into Adobe Campaign and have a sync process in place so that they can be updated on a regular basis. 
 
 ### Enable alerts {#enable-alerts}
 
@@ -102,7 +115,8 @@ For more information about marketing actions, see the [data usage policies overv
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate audience data to batch profile export destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) for instructions on activating audience data to this destination.
 
@@ -148,9 +162,11 @@ Navigate to the **[!UICONTROL Administration]** > **[!UICONTROL Audit]** > **[!U
 
 ### Access exported data {#data}
 
-Navigate to the **[!UICONTROL Profile and target]** > **[!UICONTROL List]** > **[!UICONTROL AEP audiences]** menu  to access audiences created after activating a destination.
+For **[!UICONTROL Audience sync]**, you can check the exported audience by navigating to the **[!UICONTROL Profile and target]** > **[!UICONTROL List]** > **[!UICONTROL AEP audiences]** menu.
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
+
+For **[!UICONTROL Profile sync (Update only)]**, data is automatically updated into the Campaign database for each profile targeted by the segment activated in the destination.
 
 ## Data usage and governance {#data-usage-governance}
 

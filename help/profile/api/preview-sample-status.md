@@ -12,7 +12,7 @@ The results of this sample job can be viewed using the `/previewsamplestatus` en
 
 >[!NOTE]
 >
->There are estimate and preview endpoints available as part of the Adobe Experience Platform Segmentation Service API that allow you to view summary-level information regarding segment definitions to help ensure you are isolating the expected audience. To find detailed steps for working with segment preview and estimate endpoints, please visit the [previews and estimates endpoints guide](../../segmentation/api/previews-and-estimates.md), part of the [!DNL Segmentation] API developer guide.
+>There are estimate and preview endpoints available as part of the Adobe Experience Platform Segmentation Service API that allow you to view summary-level information regarding segment definitions to help ensure you are isolating the expected audience. To find detailed steps for working with preview and estimate endpoints, please visit the [previews and estimates endpoints guide](../../segmentation/api/previews-and-estimates.md), part of the [!DNL Segmentation] API developer guide.
 
 ## Getting started
 
@@ -202,7 +202,7 @@ The response includes a `data` array, containing a list of dataset objects. The 
 
 You can perform a GET request to the `/previewsamplestatus/report/namespace` endpoint to view the breakdown by identity namespace across all of the merged profiles in your Profile Store. This includes both the standard identities provided by Adobe, as well as the custom identities defined by your organization.
 
-Identity namespaces are an important component of Adobe Experience Platform Identity Service that serve as indicators of the context to which customer data relates. To learn more, begin by reading the [identity namespace overview](../../identity-service/namespaces.md).
+Identity namespaces are an important component of Adobe Experience Platform Identity Service that serve as indicators of the context to which customer data relates. To learn more, begin by reading the [identity namespace overview](../../identity-service/features/namespaces.md).
 
 >[!NOTE]
 >
@@ -292,7 +292,7 @@ The response includes a `data` array, with individual objects containing the det
 |`fullIDsFragmentCount`|The total number of profile fragments in the namespace.|
 |`fullIDsCount`|The total number of merged profiles in the namespace.|
 |`fullIDsPercentage`|The `fullIDsCount` as a percentage of total merged profiles (the `totalRows` value as returned in the [last sample status](#view-last-sample-status)), expressed in decimal format.|
-|`code`|The `code` for the namespace. This can be found when working with namespaces using the [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) and is also referred to as the [!UICONTROL Identity symbol] in the Experience Platform UI. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md).|
+|`code`|The `code` for the namespace. This can be found when working with namespaces using the [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) and is also referred to as the [!UICONTROL Identity symbol] in the Experience Platform UI. To learn more, visit the [identity namespace overview](../../identity-service/features/namespaces.md).|
 |`value`|The `id` value for the namespace. This can be found when working with namespaces using the [Identity Service API](../../identity-service/api/list-namespaces.md).|
 
 ## Generate the dataset overlap report
@@ -438,7 +438,7 @@ A successful request returns HTTP Status 200 (OK) and the identity namespace ove
 |Property|Description|
 |---|---|
 |`data`|The `data` object contains comma-separated lists with unique combinations of identity namespace codes and their respective profile counts.|
-|Namespace codes|The `code` is a short form for each identity namespace name. A mapping of each `code` to its `name` can be found using the [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md). The `code` is also referred to as the [!UICONTROL Identity symbol] in the Experience Platform UI. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md).|
+|Namespace codes|The `code` is a short form for each identity namespace name. A mapping of each `code` to its `name` can be found using the [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md). The `code` is also referred to as the [!UICONTROL Identity symbol] in the Experience Platform UI. To learn more, visit the [identity namespace overview](../../identity-service/features/namespaces.md).|
 |`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned.|
 
 ### Interpreting the identity namespace overlap report
@@ -586,5 +586,5 @@ This report provides the following information:
 
 ## Next steps
 
-Now that you know how to preview sample data in the Profile Store and run multiple reports on the data, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating the expected audience in your segment. To learn more about working with segment previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
+Now that you know how to preview sample data in the Profile Store and run multiple reports on the data, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating your expected audience. To learn more about working with previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
 
