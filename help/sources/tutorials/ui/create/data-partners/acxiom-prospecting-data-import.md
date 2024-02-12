@@ -5,6 +5,9 @@ last-substantial-update: 2024-01-31
 badge: Beta
 ---
 # Create an [!DNL Acxiom Prospecting Data Import] source connection and dataflow in the UI. {#overview}
+>[!NOTE]
+>
+>The [!DNL Acxiom Prospecting Data Import] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 Acxiom’s Prospecting Data Import for Adobe Real-Time Customer Data Platform is a process for delivering the most productive prospect audiences possible. [ACXIOM] takes Adobe CDP first-party data via a secure export and runs that data through an award-winning hygiene and identity resolution system/process. This produces a data file to be used as a suppression list. Then, that data file is matched against the Acxiom Global database which enables the prospect lists to be tailored for import.
 
 Read this tutorial to learn how to create an [!DNL Acxiom Prospecting Data Import] source connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to retrieve and map response from Acxiom prospect service using S3 as a drop point.
@@ -19,17 +22,6 @@ Read this tutorial to learn how to create an [!DNL Acxiom Prospecting Data Impor
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [[!DNL Prospect Profile]](../../../../../profile/ui/prospect-profile.md): Learn how to create and use prospect profile to gather information about unknown customers using third-party information.
-  
->[!IMPORTANT]
->
->To connect to the source, you need the **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
-
-
-# Create a [!DNL Acxiom Prospecting Data Import] source connection and dataflow in the UI
-
->[!NOTE]
->
->The [!DNL Acxiom Prospecting Data Import] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 ### Gather required credentials
 
@@ -42,6 +34,11 @@ In order to access your bucket on Experience Platform, you need to provide valid
 | S3 Secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team. |
 | Bucket name | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
 
+>[!IMPORTANT]
+>
+>To connect to the source, you need the **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
+
 ## Connect your [!DNL Acxiom] Account
 
 This connector can be found under source connectors in the "Data Partners" header.  Initial runs will provide a "Set up" option as the default behavior. After the initial source connection is defined this will default to "Add data" which will allow to create a new source dataflow.  The "..." selection in this card provides options to view all existing accounts defined using this connector, previous dataflow, and external facing documentation.
@@ -49,22 +46,25 @@ This connector can be found under source connectors in the "Data Partners" heade
 
 Source Configuration and Authentication - Defined S3 account associated with [!DNL Acxiom] prospect response.
 
-* **Existing Account** - Accounts already defined using the Prospecting Data for Adobe AEP card will appear here for reuse.  These will appear in a list below and when selected provides details on the account.
+## Existing Account
+Accounts already defined using the Prospecting Data for Adobe AEP card will appear here for reuse.  These will appear in a list below and when selected provides details on the account.
   <br>![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-existing-account.png)
-* **New Account** - Define a new [!DNL Acxiom] Managed S3 location
-  * **Account Name (Required)** - The name the account will be saved under 
-  * **Description** - Short explanation of the account purpose
-  * **Account Authentication** 
-    * **Enter [!DNL Acxiom] authentication key (Required)** - [!DNL Acxiom] provided value used for account approval.  This will be a must match the proper value before connection to the database can be made.  The value must be 24 characters and can only include characters A-Z, a-z, 0-9.
-    * **S3 access key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.
-    * **S3 secret key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.
-    * **s3SessionToken** - Optional authentication token value used when connecting to S3
-    * **serviceUrl** - Optional URL location to be used when connecting to S3 in non-standard location
-    * **Bucket name** - Optional name of the S3 bucket set up on S3 as a starting path in data selection
-    * **Folder path** - If subdirectories in a bucket are used a path could be provided as a starting path in data selection
-    * **Connect to Source** - This button will only be enabled once an Account Name, a valid [!DNL Acxiom] authentication key, and a properly formatted S3 access key and session key is provided.
+## New Account
+If you are creating a new account, select a new [!DNL Acxiom] Managed S3 location, and then provide a name, an optional description, and your credentials.
+  <br>![New account definition.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-account.png)
+* **Account Name (Required)** - The name the account will be saved under 
+* **Description** - Short explanation of the account purpose
+* **Account Authentication** 
+  * **Enter [!DNL Acxiom] authentication key (Required)** - [!DNL Acxiom] provided value used for account approval.  This will be a must match the proper value before connection to the database can be made.  The value must be 24 characters and can only include characters A-Z, a-z, 0-9.
+  * **S3 access key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.
+  * **S3 secret key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.
+  * **s3SessionToken** - Optional authentication token value used when connecting to S3
+  * **serviceUrl** - Optional URL location to be used when connecting to S3 in non-standard location
+  * **Bucket name** - Optional name of the S3 bucket set up on S3 as a starting path in data selection
+  * **Folder path** - If subdirectories in a bucket are used a path could be provided as a starting path in data selection
+  * **Connect to Source** - This button will only be enabled once an Account Name, a valid [!DNL Acxiom] authentication key, and a properly formatted S3 access key and session key is provided.
 
-## Data Selection
+## Select Data
 Select the file that you want to ingest from the desired bucket and sub-directory.  A preview of the data can be provided once delimiter and compression type is defined.
 <br>    ![File preview.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-preview.png)
 >[!NOTE]
