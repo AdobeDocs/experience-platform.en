@@ -48,6 +48,11 @@ Understand from the table below which dataset types you can export depending on 
     <td>Refer to the <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> documentation.</td>
   </tr>
   <tr>
+    <td>Customer Journey Analytics</td>
+    <td>All</td>
+    <td> Profile and Experience Event datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager. Read about the required permissions in the <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/cja-access-control.html#product-admin-additional-permissions"> Customer Journey Analytics documentation</a>.  <br> <b>Note on availability:</b> The ability to export datasets to the cloud is in the Limited Testing phase of release and might not be available yet in your environment. This note will be removed when the functionality is generally available. For information about the Customer Journey Analytics release process, see <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Customer Journey Analytics feature releases</a>. </td>
+  </tr>
+  <tr>
     <td>Data Distiller</td>
     <td>Data Distiller (Add-on)</td>
     <td>Derived datasets created through Query Service.</td>
