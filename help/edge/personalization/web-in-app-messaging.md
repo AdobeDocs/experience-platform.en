@@ -20,7 +20,19 @@ To better understand how you can use Web In-App Messaging, here are sample use c
 
 ## Prerequisites
 
+### Web SDK tag extension version {#extension-version}
+
 The Web In-app messaging functionality requires the latest version of the Web SDK tag extension.
+
+### Configure a CSP for Web In-app Messaging {#csp}
+
+When you configure [Web In-App Messaging](../personalization/web-in-app-messaging.md), you must inclde the following directive in your CSP:
+
+```
+default-src  blob:;
+```
+
+For more information about configuring a CSP, see the [dedicated documentation](../fundamentals/configuring-a-csp.md).
 
 ## Configure Web In-App Messaging using the Web SDK tag extension {#tag-extension}
 
