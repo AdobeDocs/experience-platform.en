@@ -51,40 +51,39 @@ Source Configuration and Authentication - Defined S3 account associated with [!D
 A list of existing accounts for prospecting data appears. Select an account from the list to view details on that account.
   <br>![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-existing-account.png)
 ## New Account
-If you are creating a new account, select a new [!DNL Acxiom] Managed S3 location, and then provide a name, an optional description, and your credentials.
+If you are creating a new account, select a new [!DNL Acxiom] Managed S3 location, and then provide a name, an optional description, and your credentials.  Once you have provided your credentials, select Connect to source and allow for a few moments for the connection to establish.
   <br>![New account definition.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-account.png)
 * **Account Name (Required)** - The name of the account. 
 * **Description (Optional)** - A brief explanation of the purpose of the account.
 * **Account Authentication** 
-  * **Enter [!DNL Acxiom] authentication key (Required)** - [!DNL Acxiom] provided value used for account approval.  This will be a must match the proper value before connection to the database can be made.  The value must be 24 characters and can only include characters A-Z, a-z, 0-9.
-  * **S3 access key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.
-  * **S3 secret key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.
-  * **s3SessionToken** - Optional authentication token value used when connecting to S3
-  * **serviceUrl** - Optional URL location to be used when connecting to S3 in non-standard location
-  * **Bucket name** - Optional name of the S3 bucket set up on S3 as a starting path in data selection
-  * **Folder path** - If subdirectories in a bucket are used a path could be provided as a starting path in data selection
-  * **Connect to Source** - This button will only be enabled once an Account Name, a valid [!DNL Acxiom] authentication key, and a properly formatted S3 access key and session key is provided.
+  * **Enter [!DNL Acxiom] authentication key (Required)** - The [!DNL Acxiom]-provided key required for account approval. This must match the proper value before a connection to the database can be made.  This key must be 24 characters and can only include: A-Z, a-z, and 0-9.
+  * **S3 access key (Required)** - The S3 access key references the Amazon S3 location. This is provided by your administrator when S3 role permissions are defined.
+  * **S3 secret key (Required)** - The S3 secret key references the Amazon S3 location. This is provided by your administrator when S3 role permissions are defined.
+  * **s3SessionToken (Optional)** - The authentication token value when connection to S3.
+  * **serviceUrl (Optional)** - The URL location to be used when connecting to S3 in a non-standard location.
+  * **Bucket name (Optional)** - The name of the S3 bucket set up on S3 that serves as a starting path in data selection.
+  * **Folder path** - If subdirectories in a bucket are used, then you can also specify a path as a starting path in data selection.
 
 ## Select Data
 Select the file that you want to ingest from the desired bucket and sub-directory.  A preview of the data can be provided once delimiter and compression type is defined.
 <br>    ![File preview.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-preview.png)
 >[!NOTE]
 >
->While JSON and Parquet are listed, we have seen no indication that these formats should be expected by [!DNL Acxiom] processing and will not be supported in the long term.
+>While JSON and Parquet file types are listed, you are not required or expected to use them during the [!DNL Acxiom] source worfklow.
 ## Provide dataset and dataflow details
 
 * **Dataset Details**  
-  * **Target Dataset (Required)** - Data ingested into Adobe will be propagated to the data lake.  The dataset will define where the data will ultimately reside.
-    * **New Dataset** - This option allows a dataset to be created at this point, using a schema to define the structure.    The dataset will then appear as any other dataset.
-      * **Output dataset name (Required)** - Name that the new dataset will appear under
-      * **Description** - Short explanation of the dataset's purpose
-      * **Schema (Required)** - A dropdown list of schema defined on the instance, this requires a schema to be defined prior source configuration.  [creating schema in the UI](../../../../../xdm/tutorials/create-schema-ui.md)
+  * **Target Dataset (Required)** - A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Data that is successfully ingested into Adobe Experience Platform is persisted within the Data Lake as datasets.
+    * **New Dataset** - Select **New dataset** to create a new dataset and define a schema structure.
+      * **Output dataset name (Required)** - The name of the new dataset.
+      * **Description (Optional)** - A brief explanation of the purpose of the dataset.
+      * **Schema (Required)** - A dropdown list of schemas that exist in your organization. You can also create your own schema prior to the source configuration process. For more information, read the guide on [creating schema in the UI](../../../../../xdm/tutorials/create-schema-ui.md)
 <br>      ![Creation of a new dataset.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-dataset.png)
-  * **Existing Dataset** - Dataset defined by previous dataset definitions, or defined outside of this card can be selected for use.
+  * **Existing Dataset** - Select **Existing dataset** to use an existing dataset.
     * **Advanced Search** - This option is an expansion of the existing dataset dropdown, presenting additional details on the datasets before selection, including details such as if they are profile enabled, the date they were created or the selected behavior of the dataset.
 <br>      ![Searching existing datasets](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset.png)
-  * **Profile Dataset** - Toggle to enable your dataset for Profile. This allows you to create a holistic view of an entity’s attributes and behaviors. Data from all Profile-enabled datasets will be included in Profile.  This option will only be visiable when the chosen dataset has a schema with a Profile option enabled.
-  * **Error Diagnostics** - This option instructs the connector to produce error diagnostics which can be referenced using the Adobe API.  [Error Diagnostics overview](../../../../../ingestion/quality/error-diagnostics.md)
+  * **Profile Dataset** - Toggle to enable your dataset for ingestion to Real-Time Customer Profile.
+  * **Error Diagnostics** - Select **Error diagnostics** to instruct the source to produce error diagnostics that you can later reference using APIs. For more information, read the [error diagnostics overview](../../../../../ingestion/quality/error-diagnostics.md)
   * **Enable Partial Ingestion** - Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. With this capability, users can successfully ingest all their correct data into Adobe Experience Platform while all their incorrect data is batched separately, along with details as to why it is invalid.  For more information, read the [Partial ingestion overview](../../../../../ingestion/batch-ingestion/partial.md)
 * **Dataflow Details**
   * **Dataflow Name** - The name of the dataflow.  By default, this will use the name of the file that is being imported.
