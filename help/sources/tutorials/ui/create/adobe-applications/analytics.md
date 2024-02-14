@@ -264,9 +264,9 @@ When finished, select **[!UICONTROL Next]**.
 
 ### Filter secondary identities
 
-Use column filter to exclude secondary identities from Profile ingestion. To filter secondary identities, select **[!UICONTROL Column filter]** and then select **[!UICONTROL _identities]**.
+Use a column filter to exclude secondary identities from Profile ingestion. To filter secondary identities, select **[!UICONTROL Column filter]** and then select **[!UICONTROL _identities]**.
 
-Filter only applies when an identity is marked as secondary. If identities are selected, but an event arrives with one of the identities marked as primary, then those do not get filtered out.
+The filter only applies when an identity is marked as secondary. If identities are selected, but an event arrives with one of the identities marked as primary, then those do not get filtered out.
 
 ![secondary-identities](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
