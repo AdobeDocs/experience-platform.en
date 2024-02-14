@@ -8,6 +8,7 @@ badge: Beta
 >[!NOTE]
 >
 >The [!DNL Acxiom Prospecting Data Import] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
+
 Acxiom’s Prospecting Data Import for Adobe Real-Time Customer Data Platform is a process for delivering the most productive prospect audiences possible. [ACXIOM] takes Adobe CDP first-party data via a secure export and runs that data through an award-winning hygiene and identity resolution system/process. This produces a data file to be used as a suppression list. Then, that data file is matched against the Acxiom Global database which enables the prospect lists to be tailored for import.
 
 Read this tutorial to learn how to create an [!DNL Acxiom Prospecting Data Import] source connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to retrieve and map response from Acxiom prospect service using S3 as a drop point.
@@ -41,19 +42,19 @@ In order to access your bucket on Experience Platform, you need to provide valid
 
 ## Connect your [!DNL Acxiom] Account
 
-This connector can be found under source connectors in the "Data Partners" header.  Initial runs will provide a "Set up" option as the default behavior. After the initial source connection is defined this will default to "Add data" which will allow to create a new source dataflow.  The "..." selection in this card provides options to view all existing accounts defined using this connector, previous dataflow, and external facing documentation.
+You can find the [!DNL Acxiom] source in the sources catalog under the "Data Partners" header.  Sources cards are initially labeled with "Set up". Once you have created an account, this label changes to "Add data", which you can use to access existing accounts or create more new accounts.  Select the ellipses (...) for options to view existing accounts and dataflows, as well as the documentation.
 <br>![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-catalog.png)
 
 Source Configuration and Authentication - Defined S3 account associated with [!DNL Acxiom] prospect response.
 
 ## Existing Account
-Accounts already defined using the Prospecting Data for Adobe AEP card will appear here for reuse.  These will appear in a list below and when selected provides details on the account.
+A list of existing accounts for prospecting data appears. Select an account from the list to view details on that account.
   <br>![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-existing-account.png)
 ## New Account
 If you are creating a new account, select a new [!DNL Acxiom] Managed S3 location, and then provide a name, an optional description, and your credentials.
   <br>![New account definition.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-account.png)
-* **Account Name (Required)** - The name the account will be saved under 
-* **Description** - Short explanation of the account purpose
+* **Account Name (Required)** - The name of the account. 
+* **Description (Optional)** - A brief explanation of the purpose of the account.
 * **Account Authentication** 
   * **Enter [!DNL Acxiom] authentication key (Required)** - [!DNL Acxiom] provided value used for account approval.  This will be a must match the proper value before connection to the database can be made.  The value must be 24 characters and can only include characters A-Z, a-z, 0-9.
   * **S3 access key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.
@@ -84,11 +85,11 @@ Select the file that you want to ingest from the desired bucket and sub-director
 <br>      ![Searching existing datasets](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset.png)
   * **Profile Dataset** - Toggle to enable your dataset for Profile. This allows you to create a holistic view of an entity’s attributes and behaviors. Data from all Profile-enabled datasets will be included in Profile.  This option will only be visiable when the chosen dataset has a schema with a Profile option enabled.
   * **Error Diagnostics** - This option instructs the connector to produce error diagnostics which can be referenced using the Adobe API.  [Error Diagnostics overview](../../../../../ingestion/quality/error-diagnostics.md)
-  * **Enable Partial Ingestion** - Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. With this capability, users can successfully ingest all their correct data into Adobe Experience Platform while all their incorrect data is batched separately, along with details as to why it is invalid.  [Partial ingestion overview](../../../../../ingestion/batch-ingestion/partial.md)
+  * **Enable Partial Ingestion** - Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. With this capability, users can successfully ingest all their correct data into Adobe Experience Platform while all their incorrect data is batched separately, along with details as to why it is invalid.  For more information, read the [Partial ingestion overview](../../../../../ingestion/batch-ingestion/partial.md)
 * **Dataflow Details**
-  * **Dataflow Name** - The name this dataflow will appear as in the logging.  By default this will use the name of the file that is being imported
-  * **Description** - Optional description for logging.
-* **Alerts** - Adobe Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  [Alert overview](../../alerts.md)
+  * **Dataflow Name** - The name of the dataflow.  By default, this will use the name of the file that is being imported.
+  * **Description (Optional)** - A brief description of your dataflow.
+* **Alerts** - Adobe Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  For more information, read the [alerts overview](../../alerts.md)
   * **Sources Dataflow Run Start** - Issues an alert when the dataflow starts.
   * **Sources Dataflow Run Success** - Issues an alert when the dataflow ends without error.
   * **Sources Dataflow Run Failure** - Issues an alert when the dataflow ends with a failure status.
@@ -96,12 +97,12 @@ Select the file that you want to ingest from the desired bucket and sub-director
 
 ## Mapping
 
-Defines interface of source columns to associated schema columns on Adobe.  Platform automatically provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases or fix any duplicated mapping fields to clear any errors. [Field mapping in the UI](../../../../../data-prep/ui/mapping.md)
+Use the mapping interface to map your source data to the appropriate schema fields before ingesting data to Experience Platform.  For more information, read the [mapping guide in the UI](../../../../../data-prep/ui/mapping.md)
 
 <br>![Mapping](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-mapping.png)
 
 ## Schedule your dataflow ingestion
-Defines when the dataflow should be run.
+Use the scheduling interface to define the ingestion schedule of your dataflow.
 
 * **Frequency** - Indicates how often the flow should be run, once a week, day, hour, minute.  Or simply to only run once.
 * **Interval** - When a Frequency is selected other than once, interval to establish a set time frame between every ingestion. For example, an ingestion frequency set to Day and an interval set to 15 means that your dataflow is scheduled to ingest data every 15 days.
@@ -110,7 +111,7 @@ Defines when the dataflow should be run.
 <br>![Schedualing](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-scheduling.png)
 
 ## Review your dataflow
-This presents a file overview of the options selected before submission, allowing users to review the new dataflow before it is created.  Details are grouped within the following categories:
+Use the review page for a summary of your dataflow prior to ingestion. Details are grouped in the following categories:
 
 * **Connection** - Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
 * **Assign dataset & map fields** - Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
