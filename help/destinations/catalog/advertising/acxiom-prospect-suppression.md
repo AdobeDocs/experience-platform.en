@@ -12,7 +12,7 @@ badge: Beta
 
 ## Overview {#overview}
 
-Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securly exports first party data from Real-Time CDP and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
+Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securly exports first party data from Real-Time Customer Data Platform and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
 
 This tutorial provides steps to create an [!DNL Acxiom Prospect-Suppression] destination connection and dataflow using the Adobe Experience Platform user interface.  This connector is used to deliver data to Acxiom prospect service using Amazon S3 as a drop point.
 
@@ -37,10 +37,10 @@ Marketing professionals aiming to enhance the effectiveness of their outreach st
 
 This section describes which type of audiences you can export to this destination.
 
-| Audience origin | Supported | Description | 
----------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | x | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Audience origin             | Supported | Description                                                                                                         | 
+|-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
+| [!DNL Segmentation Service] | ✓         | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).          |
+| Custom uploads              | x         | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -49,10 +49,10 @@ This section describes which type of audiences you can export to this destinatio
 
 Refer to the table below for information about the destination export type and frequency.
 
-| Item | Type | Notes |
----------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
-| Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
+| Item             | Type                           | Notes                                                                                                                                                                                                                                                                                                                  |
+|------------------|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Export type      | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Export frequency | **[!UICONTROL Batch]**         | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).                                                                                         |
 
 {style="table-layout:auto"}
 
@@ -60,13 +60,18 @@ Refer to the table below for information about the destination export type and f
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
-* **New Account** - Define a new Acxiom Managed S3 location
-  * **Connection type**
-    * **S3 access key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.  Must be equal to 20 characters and can only include characters A-Z and numbers 2-7.
-    * **S3 secret key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.  Must be equal to 40 characters and can only include characters A-Z, a-z, 0-9, +, \ and / .
-    * **Connect to destination** - Will use the provided authorization keys to connect to the S3 service to validate access.  Success will allow configuration of the destination details while failure will be indicated on the UI.
+### New Account
 
-* **Existing Account** -  Accounts already defined using the Prospecting Data for Adobe Experience Platform card will appear here for reuse.  These will appear in a list pop-up and when selected provides details on the account
+Define a new Acxiom Managed S3 location
+* **Connection type**
+  * **S3 access key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.  Must be equal to 20 characters and can only include characters A-Z and numbers 2-7.
+  * **S3 secret key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.  Must be equal to 40 characters and can only include characters A-Z, a-z, 0-9, +, \ and / .
+  * **Connect to destination** - Will use the provided authorization keys to connect to the S3 service to validate access.  Success will allow configuration of the destination details while failure will be indicated on the UI.
+<br>  ![New Account](../../assets/catalog/advertising/acxiom/image-destination-new-account.png)
+
+### Existing Account
+
+Accounts already defined using the Prospecting Data for Adobe Experience Platform card will appear here for reuse.  These will appear in a list pop-up and when selected provides details on the account
 <br>  ![Existing Account](../../assets/catalog/advertising/acxiom/image-destination-account.png)
 
 ## Connect to the destination {#connect}
@@ -77,11 +82,11 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 In order to access your bucket on Experience Platform, you need to provide valid values for the following credentials:
 
-| Credential | Description |
-| --- | --- |
-| S3 Access key | The access key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team. |
-| S3 Secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team. |
-| Bucket name | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
+| Credential    | Description                                                                                              |
+|---------------|----------------------------------------------------------------------------------------------------------|
+| S3 Access key | The access key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team.              |
+| S3 Secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team.              |
+| Bucket name   | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
 
 ### Fill in destination details {#destination-details}
 
