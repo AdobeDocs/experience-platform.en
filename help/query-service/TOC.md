@@ -18,7 +18,7 @@ feature: Queries
     - [License usage](data-distiller/license-usage.md)
     - Derived datasets {#derived-datasets}
         - [Overview](data-distiller/derived-datasets/overview.md)
-        - [Seamless SQL flow](data-distiller/derived-datasets/seamless-sql-flow.md)
+        - [Create derived datasets with SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
         - [Create decile-based derived datasets](data-distiller/derived-datasets/decile-based-derived-attributes.md)
     - Customizable Insights for extended app reporting {#customizable-insights}
         - [Overview](data-distiller/customizable-insights/overview.md)

@@ -26,13 +26,13 @@ Updates to existing features in Adobe Experience Platform:
 
 ## (Beta) Dashboards {#dashboards}
 
-Adobe Experience Platform provides multiple dashboards through which you can view important information about your organization’s data, as captured during daily snapshots.
+Adobe Experience Platform provides multiple dashboards through which you can view important information about your organization's data, as captured during daily snapshots.
 
 **New features**
 
 | Feature | Description |
 | --- | --- |
-|Profiles, Segments, Destinations, and License Usage Dashboards (Beta)| **Note: Dashboard functionality is currently in beta and is not available to all users. The documentation and the functionality are subject to change.**<br/><br/>Dashboards provide out-of-the-box reporting on your organization’s data and are built directly into the marketer workflow within Platform. These dashboards are available without the need for additional IT support or the time and effort it would otherwise take to export and process data with additional data warehousing design and implementation.|
+|Profiles, Segments, Destinations, and License Usage Dashboards (Beta)| **Note: Dashboard functionality is currently in beta and is not available to all users. The documentation and the functionality are subject to change.**<br/><br/>Dashboards provide out-of-the-box reporting on your organization's data and are built directly into the marketer workflow within Platform. These dashboards are available without the need for additional IT support or the time and effort it would otherwise take to export and process data with additional data warehousing design and implementation.|
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -96,7 +96,7 @@ Adobe Experience Platform [!DNL Identity Service] helps you to gain a better vie
 
 | Feature | Description |
 | --- | --- |
-| Identity graph viewer | The identity graph viewer allows you to validate and visualize identities that are stitched together in the UI, allowing for improved debugging and transparency. See the [identity graph viewer document](../../identity-service/ui/identity-graph-viewer.md) for more information. |
+| Identity graph viewer | The identity graph viewer allows you to validate and visualize identities that are stitched together in the UI, allowing for improved debugging and transparency. See the [identity graph viewer document](../../identity-service/features/identity-graph-viewer.md) for more information. |
 
 For more general information on [!DNL Identity Service], refer to the [Identity Service overview](../../identity-service/home.md).
 

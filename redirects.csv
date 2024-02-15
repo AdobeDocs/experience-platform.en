@@ -1,4 +1,11 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-datasets/seamless-sql-flow.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-datasets/create-derived-datasets-with-sql.html
+https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html,https://experienceleague.adobe.com/docs/experience-platform/identity/features/ecid.html
+https://experienceleague.adobe.com/docs/experience-platform/identity/ui/label-identities.html,https://experienceleague.adobe.com/docs/experience-platform/identity/label-identities.html?lang=en
+https://experienceleague.adobe.com/docs/experience-platform/identity/deletion.html,https://experienceleague.adobe.com/docs/experience-platform/features/deletion.html?lang=en
+https://experienceleague.adobe.com/docs/experience-platform/identity/ui/identity-graph-viewer.html,https://experienceleague.adobe.com/docs/experience-platform/identity/features/identity-graph-viewer.html
+https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html,https://experienceleague.adobe.com/docs/experience-platform/identity/features/namespaces.html
+https://experienceleague.adobe.com/docs/experience-platform/tags/release-notes/current.html,https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html
 https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-attributes/overview.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-datasets/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-attributes/seamless-sql-flow.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-datasets/seamless-sql-flow.html
 https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-attributes/decile-based-derived-attributes.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-datasets/decile-based-derived-attributes.html?lang=en
@@ -468,3 +475,7 @@ https://experienceleague.adobe.com/docs/experience-platform/destinations/destina
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp/use-cases/intelligent-re-engagement/intelligent-re-engagement.html, https://experienceleague.adobe.com/docs/experience-platform/rtcdp/use-cases/personalization-insights-engagement/intelligent-re-engagement.html
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html, https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp/b2b-overview.html, https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdpb2b-intro/b2b-overview.html
+https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/overview.html, https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/index
+https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/getting-started.html, https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started
+https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/troubleshooting.html, https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/troubleshooting
+https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/swagger.html, https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/swagger

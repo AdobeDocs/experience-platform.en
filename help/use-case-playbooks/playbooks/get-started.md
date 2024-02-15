@@ -2,38 +2,109 @@
 solution: Experience Platform
 title: Get started
 description: Learn how to get started with the Use Case Playbooks functionality.
-badgeBeta: label="Beta" type="Informative"
+role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
 ---
-# (Beta) Get started
 
->[!AVAILABILITY]
->
->This functionality is currently in Beta and is not available to all users. The documentation and the functionality are subject to change.
+# Get started
+
+Learn how to set up your account for Use Case Playbooks, designed for Real-Time Customer Data Platform and Adobe Journey Optimizer. The three main configuration steps are: 
+
+* Create a sandbox 
+* Configure user permissions
+* Configure Journey Optimizer channel surfaces for e-mail, push, and SMS notifications (if you plan on using Journey Optimizer playbooks)
+
+## Configure Use Case Playbooks - Video walkthrough {#video}
+
+Watch this video to learn about the steps needed to create your sandbox, configure permissions and configure channel surfaces for e-mail, push and SMS notifications in Journey Optimizer.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3426987?learn=on)
 
 ## Create a development sandbox {#create-development-sandbox}
 
-To get started and get access to the [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md) functionality, [create a new development sandbox](/help/sandboxes/ui/user-guide.md#create) (make sure you do not select a production sandbox) with the name (not the title) containing either `-ucp` or `-UCP` in the suffix, as shown below.
+Use Case Playbooks uses a special type of development sandbox. To get started and get access to the [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md) functionality, [create a new development sandbox](/help/sandboxes/ui/user-guide.md#create) (make sure you do not select a production sandbox) with the name (not the title) containing either `-ucp` or `-UCP` in the suffix, as shown below.
+
+>[!IMPORTANT]
+>
+>When you create a new development sandbox, ensure that the name contains `-ucp` or `-UCP` in the suffix.
+
 
 ![Create a development sandbox for use case playbooks](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
-You should now see [!UICONTROL Playbooks] in the left rail under [!UICONTROL Use Case Playbooks] or under [!UICONTROL Marketer Playground].
+You should now see [!UICONTROL Playbooks] in the left rail under [!UICONTROL Use Case Playbooks].
 
 ![Use Case Playbooks in the UI after creating sandbox.](/help/use-case-playbooks/assets/playbooks/get-started/ucp-sandbox-in-ui.png)
 
 If you do not see [!UICONTROL Playbooks] in the left rail as shown above, use this link `https://experience.adobe.com/#/@<YOUR_ORG>/sname:<YOUR_SANDBOX_NAME>/platform/mexp/templates` to navigate there directly. In the link, `<YOUR_ORG>` is the name of your organization and `<YOUR_SANDBOX_NAME>` is the name of the development sandbox you created. 
 
-### Sandbox configuration for Adobe Journey Optimizer users {#sandbox-configuration-journey-optimizer}
-
-If your organization is licensed for [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html), you'll need to configure the channel presets in your sandbox, which define the technical parameters required for your messages. [Learn how to set up channel surfaces in Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html).
-
 ## Grant your team the required access permissions {#grant-access-permissions}
 
-To get started with [!UICONTROL Use Case Playbooks], the members of your marketing operations team need the right permissions. You can grant your team permissions as follows:
+To get started with [!UICONTROL Use Case Playbooks], members of your marketing team need the right permissions so that they can view the list of created playbooks or create playbooks themselves. 
 
-* Marketing operations team members who only want to browse the playbooks can get **read** permission.
-* Marketing operations team members who want to create instances from playbooks can get **read and write** permissions.
+**Required permissions**
+
+To add the required permissions, in the Permissions UI, include the new use case playbook sandbox in [roles that you've already configured](/help/access-control/abac/ui/permissions.md#managing-sandboxes-for-role), including those used for other development sandboxes.
+
+![Playbook sandbox for roles already configured](/help/use-case-playbooks/assets/playbooks/get-started/permissions-to-existing-roles.png)
+
+**Set up a role for Playbooks:**
+
+Alternatively, you could also consider adding new roles with [the required permissions](/help/access-control/home.md#sandboxes-and-permissions).
+
+[Set up a new role](/help/access-control/abac/ui/permissions.md) with the necessary permissions for essential playbook tasks. Create a role and add the new sandbox to it, as shown below.
+
+![Create a role and add it to the Sandbox](/help/use-case-playbooks/assets/playbooks/get-started/create-new-role.png)
+
+**Permissions for playbook instances**
+
+As a part of Use Case Playbooks, you'll create various assets like schemas, audiences, destinations, journeys. You and other users will need the right permissions to create these objects.
+
+**Permissions for schemas**
+
+To create and manage schemas, utilize the data modeling permissions; **[!UICONTROL Manage Schemas]**, **[!UICONTROL View Schemas]**, **[!UICONTROL Manage Relationships]**, **[!UICONTROL Manage Identity Metadata]**
+
+**Permissions for destinations**
+
+To create and manage destinations, use the Destinations permissions; **[!UICONTROL Manage]**, **[!UICONTROL Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL Manage and Activate Dataset Destination]**, **[!UICONTROL Destination Authoring]**.
+
+**Permissions for journeys**
+
+To create and manage journeys, use the Journeys permissions; **[!UICONTROL Manage Journeys]**, **[!UICONTROL View Journeys]**, **[!UICONTROL View Journeys Report]**, **[!UICONTROL Manage Journeys]**, **[!UICONTROL Events]**, **[!UICONTROL Data Sources and Actions]**, **[!UICONTROL View Journeys]**, **[!UICONTROL Events]**, **[!UICONTROL Data Sources and Actions, Publish Journeys]**.
+
+The image below displays a snapshot of the recommended permissions for users to view, create, and manage playbooks and the assets generated by playbooks.
+
+![Snapshot of all the permission items needed to create all instances of the playbooks](/help/use-case-playbooks/assets/playbooks/get-started/permission-snapshot.png)
+
+**Add users to the role**
+
+Once you've [created a new role](/help/access-control/abac/ui/permissions.md#managing-users-for-role) as referenced above, add yourself as a user to it. If you create a role with limited access for another set of users with view-only access, include only the necessary view items associated with these permissions.
+
+## Configure sandbox and channel surfaces in Journey Optimizer {#configure-channel-surfaces}
+
+If your organization is licensed for [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html), and you're looking to use the playbooks designed for Journey Optimizer, you'll need to configure the channel presets in your sandbox, which define the technical parameters required for your messages. [Learn how to set up channel surfaces in Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html).
+
+To create instances of playbooks in Journey Optimizer, you need to configure channel surfaces for e-mail, push, and SMS notifications. 
+
+### E-mail channel surface
+
+Go to `Channels` in the Journey Optimizer interface. Configure separate subdomains and IP pools for marketing emails and transactional messaging, if not already configured. These are best practices to ensure that transactional messages such as order confirmation e-mails, get through to your customers. Enter names, email addresses, and additional settings. Select **Submit** at the top-right of the page to create the marketing channel surface. Read the documentation on [how to set up e-mail channel surfaces](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
+
+### SMS channel surface
+
+To create an SMS channel surface, first create an SMS API credential, and select the preferred vendor (for example, Sinch). Name the SMS channel surface (for example, SMS Marketing), select the configuration, and enter a sender number. Select **Submit** at the top-right of the page to save the SMS channel surface. Read the documentation on [how to set up SMS channel surfaces](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=en#message-preset-sms).
+
+Also configure channels for playbooks that contain transactional messages like order confirmations.
+
+### Push channel surface
+
+Confirm that the app surfaces are configured either from the Experience Platform or Data Collections interface. This is how app surfaces look like in the Data Collections environment. 
+
+<!-- ![App surfaces in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
+
+Next, select the channel, platforms, and apps that you looked at in the app surface configurations. Select **Submit** to create the push channel surface.
+
+Read the documentation on [how to set up push channel surfaces](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
 
 ## Next steps {#next-steps}
 
-After reading this document, you now know how to get started with [!UICONTROL Use Case Playbooks]. Next, read how to [discover the right playbook](/help/use-case-playbooks/playbooks/discover.md) for you and then [create instances from it](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Now that you've followed all the steps in this document, you should have created a development sandbox with Use Case Playbooks available in the left navigation. You now also know how to grant your team members the required permissions to view and manage playbooks and generate assets. As a next step, read how to [discover the right playbook](/help/use-case-playbooks/playbooks/discover.md) for you and then [create instances from it](/help/use-case-playbooks/playbooks/create-share-reuse.md).
