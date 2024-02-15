@@ -109,21 +109,21 @@ The [!UICONTROL Activation data] tab displays a list of audiences that have been
 
 ![Activation data view streaming destination](../assets/ui/details-page/activation-data-streaming.png)
 
-### Bulk remove audiences from activation flows {#bulk-remove}
+### Remove multiple audiences from activation flows {#bulk-remove}
 
-You can remove audiences from existing activation flows by selecting the audiences and then selecting **[!UICONTROL Remove audiences]**.
+To remove multiple audiences from existing activation flows, select the audiences and then select **[!UICONTROL Remove audiences]**.
 
 ![Activation data screen highlighting the Remove audiences option.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### Bulk export files on-demand to batch destinations {#bulk-export}
+### Export multiple files on-demand to batch destinations {#bulk-export}
 
 You can [export multiple files on-demand](../ui/export-file-now.md) from the **[!UICONTROL Activation data]** page. To do this, select the audiences for which you want to export files on-demand and select the **[!UICONTROL Export file now]** control to trigger a one-time export which will deliver a file for each selected audience to your batch destination.
 
 ![Image highlighting the Export file now button.](../assets/ui/details-page/bulk-export-file-now.png)
 
-### Bulk edit activation schedule for batch destinations {#bulk-edit-schedule}
+### Edit activation schedules for multiple audiences exported to batch destinations {#bulk-edit-schedule}
 
-To edit the existing activation schedule of multiple audiences at the same time, select the audiences and then select **[!UICONTROL Edit schedule]**. For detailed information on how to define an export schedule, see the [dedicated documentation](../ui/activate-batch-profile-destinations.md#scheduling).
+To edit the existing activation schedule of multiple audiences at the same time, select the desired audiences and then select **[!UICONTROL Edit schedule]**. For detailed information on how to define or edit an export schedule, read the [schedule audience export](../ui/activate-batch-profile-destinations.md#scheduling) section.
 
 ![Activation data screen highlighting the option to edit activation schedules for multiple audiences.](../assets/ui/details-page/bulk-edit-schedule.png)
 

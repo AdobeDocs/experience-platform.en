@@ -84,8 +84,6 @@ Experience Platform automatically sets a default schedule for each file export. 
 
 ![Edit schedule control highlighted in the Scheduling step.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
-Configuring a schedule is mandatory, but configuring the file name is optional.
-
 >[!TIP]
 >
 >You can edit audience activation schedules for existing activation flows from the **[!UICONTROL Activation data]** page. See the documentation on [bulk editing activation schedules](../ui/destination-details-page.md#bulk-edit-schedule) for details.
@@ -252,7 +250,7 @@ In this step, you must select the profile attributes that you want to add to the
 
     ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
 
-1. [!BADGE Beta]{type=Informative} (Optional) The order of the mapped fields reflects in the order of the columns in the exported CSV file, from top to bottom, with the top row being the leftmost column in the CSV file. Select beta customers can reorder the mapped fields in any way you want, by dragging and dropping the mapping rows, as shown below.
+1. [!BADGE Beta]{type=Informative} (Optional) The order of the mapped fields in the UI reflects in the order of the columns in the exported CSV file, from top to bottom, with the top row being the leftmost column in the CSV file. You can reorder the mapped fields in any way you want, by dragging and dropping the mapping rows, as shown below. Contact an Adobe representative or customer support to get access to this functionality.
 
     ![Recording showing the mapping fields reordering by drag and drop.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
