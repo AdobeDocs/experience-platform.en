@@ -1,10 +1,10 @@
 ---
 title: Acxiom Prospect-Suppression
-description: Acxiom Prospect-Suppression for Adobe Real-Time CDP is our process for delivering the most productive prospect audiences possible. We take the Adobe CDP 1st-party data via a secure export and run it through our award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
+description: Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securly exports first party data from Real-Time CDP and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
 last-substantial-update: 2024-01-31
 badge: Beta
 ---
-# Create a [!DNL Acxiom Prospect-Suppression] destination connection and dataflow in the UI
+# [!DNL Acxiom Prospect-Suppression] destination connection
 
 >[!NOTE]
 >
@@ -86,30 +86,7 @@ Overview of target file location
 * **Description** -  Short explanation of the destination's purpose
 * **Bucket Name (Required)** - Name of the S3 bucket set up on S3
 * **Folder Path (Required)** - If subdirectories in a bucket are used a path must be defined, or '/' to reference the root path.
-* **File Type** - Currently the only file type Acxiom processing will be expecting is CSV
-* **CSV Options**
-  * **Delimiter** - Field delimiter used for the file.  Options include:
-    * **Pipe** (|)
-    * **Semicolon** (;)
-    * **Tab** (\t)
-    * **Colon** (:)
-    * **Comma** (,) (Default)
-  * **Quote Character** - Includes the selected quote value around all columns in the resulting file.  Options include:
-    * **Null Character** (\u0000) (Default)
-    * **Double Quotes** (")
-  * **Escape Character** - When fields include characters that may interfere with the delimiters or quotes such as double quotes or commas, an escape character would need to be provided so they can be properly evaluated during import.  This value indicates what that escape character should be.  Values include:
-    * **Single Quote** (')
-    * **Back Slach** (\) (Default)
-  * **Empty Value** - If the value does not exist on the source this indicates the value that should stand in for that missing value.  Options include:
-    * **Empty String** () (Default)
-    * **Null** (null)
-    * **Empty String in Double Quotes** ("")
-  * **Null Value** - If the value does exist, but the value is a null value this indicate how that should be represented on the file.  Options include:
-    * **Empty String** ()
-    * **Null** (null) (Default)
-    * **Empty String in Double Quotes** ("")
-  * **Compression Format** - Specifies if the resulting file will be compressed or not.  Current option include GZIP, and None
-  * **Include manifest file** -  This Boolean option appears only when the GZIP option is selected.  When selected a file outlining details on the file included in the zip file is provided.
+* **File Type** - Select the format Experience Platform should use for the exported files. When selecting the CSV option, you can also [configure the formatting options](../../ui/batch-destinations-file-formatting-options.md).
 <br>  ![CSV Options](../../assets/catalog/advertising/acxiom/image-destination-csv-options.png)
 
 ### Enable alerts {#enable-alerts}
@@ -118,53 +95,36 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Data Governance Policy and Enforcement Action ##
-Option to select data governance policy  [data-governance overview](../../../data-governance/home.md)
-<br>  ![Data Governance policy](../../assets/catalog/advertising/acxiom/image-destination-governance.png)
+### Mapping suggestions 
 
+Processing requires name and address elements.  Mapping suggestions are provided in the table below listing attributes on your destination side that are used by Acxiom processing that customers can map profile attributes to.  This should be treated as suggestions as not all elements are required and the source values will depend on the needs of the account, but providing as much as possible will aid in matching.
 
-## Audience Selection ##
-Selecting an audience defines what data will be selected from the datalike and posted.  An audience would be defined for the account prior destination configuration [audience definition](../../../segmentation/ui/account-audiences.md)
-<br>  ![Audience Selection](../../assets/catalog/advertising/acxiom/image-destination-audiences.png)
+| Target Field | Source Description                                          |
+|--------------|-------------------------------------------------------------|
+| fullName     | The person.name.fullName value in Experience Platform.      |
+| firstName    | The person.name.firstName value in Experience Platform.     |
+| lastName     | The person.name.lastName value in Experience Platform.      |
+| street1      | The mailingAddress.street1 value in Experience Platform.    |
+| street2      | The mailingAddress.street2 value in Experience Platform.    |
+| city         | The mailingAddress.city value in Experience Platform.       |
+| state        | The mailingAddress.state value in Experience Platform.      |
+| postalCode   | The mailingAddress.postalCode value in Experience Platform. |
 
+>[!NOTE]
+>
+>Additional fields not listed will be ignored
 
-## Scheduling ##
-Defines when the dataflow should be run.
-* **File Export Options** - Defines if there should be a full export of the file, or should only include records that have been updated since the last run.  In either case the first run would run as a full export.
-* **Frequency** - Indicates how often the flow should be run hourly, daily.  Or simply to only run once. 
-  * When the File Export Options is set as 'Export full files' this will offer the 'Once' and 'Daily', this also offers two different scheduling types
-    * **After segment evaluation** - Activation runs immediately after the daily segmentation job completes. This ensures that the most up-to-date profiles are exported.
-    * **Scheduled** - Activation runs at a fixed time of the day. 
-  * When the File Export Options is set as 'Export incremental files' this will offer the 'Daily' and 'Hourly' with 3, 6, 8, and 12 hour increments.
-* **Start Time** - The timestamp for the projected run, presented in UTC time zone.  You can also select a start and end date for the flow runs.
-* **Date** - Selector to choose the interval when the export should take place. Best practice is to set your start and end date to line up with the duration of your campaigns in your downstream platforms.  When selecting an export interval, the last day of the interval is not included in the exports. For example, if you select an interval of January 4 - 11, the last file export will take place on January 10.
-<br>  ![Scheduling](../../assets/catalog/advertising/acxiom/image-destination-scheduling.png)
+## Activate audiences to this destination {#activate}
 
-* **File Name Editing** - Allows the user to change the naming of the resulting file on S3, the options presented under this allows for a number of flow derived values, or as a custom text value entered by the user.  Acxiom should be informed of the format.  If you don’t select the Date and Time component, the file names will be static and the new exported file will overwrite the previous file in your storage location with each export.
-  * **Audience name** - The name of the exported audience.
-  * **Destination** - Name of the destination card itself, as it is show in the catalog with spaces replaced with underscores.
-  * **Destination ID** - The ID of the destination dataflow you use to export the audience.
-  * **Destination name** - The name of the destination dataflow you use to export the audience.
-  * **Audience source** - The source identifier for the exported audience
-  * **Audience ID** - The ID of the exported audience
-  * **Organization name** - Your organization name within Experience Platform.
-  * **Sandbox name** - The ID of the sandbox you use to export the audience.
-  * **Date and time** - Select between adding a MMDDYYYY_HHMMSS format or a UNIX 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export.
-  * **Custom text** - Any custom text that you want to add to the file names.
+>[!IMPORTANT]
+>
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
+Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
-## Mapping ##
-* **Add new mapping** - New fields can be appended, allowing a user to add additional target field to the destination layout
-* **Add calculated field** - Allows field manipulation though scripting. [Mapping functions](../../../data-prep/functions.md)
-* **Clear all mapping** - Resets the mapping, removing all entries.
-* **Filter fields** - Entering text into this field will restrict the existing map fields, showing only those that contain that substring.
-* **Mandatory Key** - Fields that all exported records must include.  Records without data in the given field would be omitted for the export.
-* **Deduplication Key** - Allows the elimination of records the represent the same data
-<br>  ![Mapping](../../assets/catalog/advertising/acxiom/image-destination-mapping.png)
-
-
-## Review ##
-This presents a file overview of the options selected before submission
+## Review your dataflow ##
+Use the review page for a summary of your dataflow prior to submission
 <br>  ![Review](../../assets/catalog/advertising/acxiom/image-destination-review.png)
 
 
