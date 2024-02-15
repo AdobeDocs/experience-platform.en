@@ -10,7 +10,7 @@ description: The Mailchimp Tags destination allows you to export your account da
 
 Compared to [!DNL Mailchimp Interest Categories] which you would use to sort your contacts based on their interests and preferences, [!DNL Mailchimp Tags] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Interest Categories], you can check it out on the [[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md) page.*
 
-This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) endpoint. You can **add new contacts** or **update tags of existing [!DNL Mailchimp] contacts** within an existing [!DNL Mailchimp] audience after activating them within a new segment. [!DNL Mailchimp Tags] uses the selected segment names from Platform as the tag names within [!DNL Mailchimp].
+This [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) leverages the [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) endpoint. You can **add new contacts** or **update tags of existing [!DNL Mailchimp] contacts** within an existing [!DNL Mailchimp] audience after activating them within a new audience. [!DNL Mailchimp Tags] uses the selected audience names from Platform as the tag names within [!DNL Mailchimp].
 
 ## Use cases {#use-cases}
 
@@ -18,7 +18,7 @@ To help you better understand how and when you should use the [!DNL Mailchimp Ta
 
 ### Send emails to contacts for marketing campaigns {#use-case-send-emails}
 
-The sales department of an organization wants to broadcast an email based marketing campaign to a curated list of contacts. The contact lists are received in batches from different offline sources and therefore need to be tracked. The team identifies an existing [!DNL Mailchimp] audience and starts building the Experience Platform audiences into which the contacts from each list are added. After sending these audiences to [!DNL Mailchimp Tags], if any contacts do not exist in the selected [!DNL Mailchimp] audience, they get added with an associated tag which includes the audience name the contact belongs to. If any contacts already exist in the [!DNL Mailchimp] audience a new tag with the name of the segment is added. As the labels are visible in [!DNL Mailchimp] the offline sources are easily identifiable. After the data is sent over to [!DNL Mailchimp] they send the marketing campaign email to the audience.
+The sales department of an organization wants to broadcast an email based marketing campaign to a curated list of contacts. The contact lists are received in batches from different offline sources and therefore need to be tracked. The team identifies an existing [!DNL Mailchimp] audience and starts building the Experience Platform audiences into which the contacts from each list are added. After sending these audiences to [!DNL Mailchimp Tags], if any contacts do not exist in the selected [!DNL Mailchimp] audience, they get added with an associated tag which includes the audience name the contact belongs to. If any contacts already exist in the [!DNL Mailchimp] audience a new tag with the name of the audience is added. As the labels are visible in [!DNL Mailchimp] the offline sources are easily identifiable. After the data is sent over to [!DNL Mailchimp] they send the marketing campaign email to the audience.
 
 ## Prerequisites {#prerequisites}
 
@@ -26,7 +26,7 @@ Refer to the sections below for any prerequisites that you need to set up in Exp
 
 ### Prerequisites in Experience Platform {#prerequisites-in-experience-platform}
 
-Before activating data to the [!DNL Mailchimp Tags] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
+Before activating data to the [!DNL Mailchimp Tags] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) created in [!DNL Experience Platform].
 
 ### Prerequisites for the [!DNL Mailchimp Tags] destination {#prerequisites-destination}
 
@@ -142,13 +142,14 @@ You can enable alerts to receive notifications on the status of the dataflow to 
 
 When you are finished providing details for your destination connection, select **[!UICONTROL Next]**.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
->
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+> 
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
-Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate audiences to streaming destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 ### Mapping considerations and example {#mapping-considerations-example}
 
@@ -179,7 +180,7 @@ When you have finished providing the mappings for your destination connection, s
 
 To validate that you have correctly set up the destination, follow the steps below:
 
-1. Log in to your [[!DNL Mailchimp]](https://login.mailchimp.com/) account. Then navigate to the **[!DNL Audience]** > **[!DNL All Contacts]** page and check if the contacts from the segment have been added and contacts within the segment have been updated with the segment name.
+1. Log in to your [[!DNL Mailchimp]](https://login.mailchimp.com/) account. Then navigate to the **[!DNL Audience]** > **[!DNL All Contacts]** page and check if the contacts from the audience have been added and contacts within the audience have been updated with the audience name.
 ![Mailchimp UI screenshot showing the Audience page.](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)
 
 ## Data usage and governance {#data-usage-governance}

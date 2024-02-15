@@ -143,6 +143,7 @@ feature: Destinations
         * [Adobe Campaign connection](./catalog/email-marketing/adobe-campaign.md)
         * [Adobe Campaign Managed Cloud Services connection](./catalog/email-marketing/adobe-campaign-managed-services.md)
         * [Mailchimp Interest Categories](./catalog/email-marketing/mailchimp-interest-categories.md)
+        * [Mailchimp Tags](./catalog/email-marketing/mailchimp-tags.md)
         * [(API) Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua-api.md)
         * [(Files) Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua.md)
         * [Oracle Responsys connection](./catalog/email-marketing/oracle-responsys.md)
