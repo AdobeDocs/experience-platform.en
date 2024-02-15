@@ -12,13 +12,7 @@ You can use these notifications for different purposes, such as promoting new fe
 
 By using in-app messages, you can effectively engage with your audience and steer them towards important aspects of your application.
 
-## Use cases {#use-cases}
-
-To better understand how you can use Web In-App Messaging, here are sample use cases showcasing the usefulness of this functionality.
-
-### Use case 1 {#use-case-1}
-
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 ### Web SDK tag extension version {#extension-version}
 
@@ -98,9 +92,10 @@ The configuration process is now completed and your message is ready to be shown
 Select the tag property which contains your Web SDK extension, and [create a new rule](../../tags/ui/managing-resources/rules.md##create-a-rule) with the following settings:
 
 1. **[!UICONTROL Extension]**: [!UICONTROL Core]
-2. **[!UICONTROL Event Type]**: [!UICONTROL Library Loaded (Page Top)]
+2. **[!UICONTROL Event Type]**: [!UICONTROL Click]
+3. Set the trigger for a specific element on the page, identifier by a CSS selector of your choosing.
 
-    ![Image showing the event configuration screen.](assets/web-in-app-messaging/rule-configuration.png)
+    ![Image showing the event configuration screen.](assets/web-in-app-messaging/event-configuration-manual.png)
 
 
 Next, you must add an action to the rule that you created.
@@ -134,3 +129,37 @@ After you have added the rule to the library, select **[!UICONTROL Save & Build 
 The configuration process is now completed and your message is ready to be shown to your users.
 
 ## Configure Web In-App Messaging using the Web SDK JavaScript library {#js-library}
+
+As an alternative to using the Web SDK tag extension, you can also configure Web In-App Messaging directly from the Web SDK JavaScript library.
+
+You can display web in-app messages from Adobe Journey Optimizer in two ways.
+
+### Method 1: Automatically fetch the personalization content {#automatic}
+
+To have Web SDK automatically fetch the personalization content on page load, use the `sendEvent` command, as shown in the example below.
+
+```js
+  alloy("sendEvent", {
+      renderDecisions: true,
+      personalization: {
+          surfaces: ['#welcome']
+      }
+  });
+```
+
+### Method 2: Manually fetch the personalization content based on user action {#manual}
+
+To show the personalization content only after the user performs a specific action, use the `evaluateRulesets` command as shown in the example below.
+
+In this example, the personalization content is displayed when a user clicks the **[!UICONTROL Buy Now]** button on your website.
+
+```js
+ alloy("evaluateRulesets", {
+     renderDecisions: true,
+     personalization: {
+         decisionContext: {
+             "userAction": "buy_now"
+         }
+     }
+ });
+```
