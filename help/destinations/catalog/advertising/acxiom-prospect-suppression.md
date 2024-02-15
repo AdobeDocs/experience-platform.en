@@ -8,33 +8,33 @@ badge: Beta
 
 >[!NOTE]
 >
->The [!DNL Acxiom Prospect-Suppression] destination is in beta.
+>The [!DNL Acxiom Prospect-Suppression] destination is in beta.  This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, please contact them directly at support@YourDestination.com.
 
 ## Overview {#overview}
-Acxiom Prospect-Suppression for Adobe Real-Time CDP is our process for delivering the most productive prospect audiences possible. We take the Adobe CDP 1st-party data via a secure export and run it through our award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
 
-The Batch Frequency Connector is used to send data to the Acxiom prospect service using S3 as a drop point. It is available as a destination connector listed under the "Advertising" heading. Initial runs will provide a "Set up" option as the default behavior. After the initial destination is defined, this will default to "Activate audiences," providing a list of existing dataflows to add audiences or a "Configure new destination" button to create a new destination dataflow. Additional accounts can be created using the "..." to expand the allowed actions. We can add a new destination, view the existing dataflows and existing account, and access the documentation.
+Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securly exports first party data from Real-Time CDP and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
 
-This tutorial provides steps to create a [!DNL Acxiom Prospect-Suppression] destination connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to deliver data to Acxiom prospect service using S3 as a drop point.
+This tutorial provides steps to create an [!DNL Acxiom Prospect-Suppression] destination connection and dataflow using the Adobe Experience Platform user interface.  This connector is used to deliver data to Acxiom prospect service using Amazon S3 as a drop point.
 
 ![The destination catalog with the Acxiom destination selected.](../../assets/catalog/advertising/acxiom/image-destination-catalog.png)
 
-
 ## Use cases {#use-cases}
-Creating a Suppression List for Prospecting Datasets
 
 To help you better understand how and when you should use the Acxiom Prospect-Suppression destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use case #1 {#use-case-1}
+### Use case 1 Creating a Suppression List for Prospecting Datasets {#use-case-1}
+
 Marketing professionals aiming to enhance the effectiveness of their outreach strategies often employ the creation of a suppression list. This list includes existing customers and specific segments, ensuring their exclusion from prospecting activities during targeted campaigns. This strategic approach helps refine the audience, avoids redundant communication, and contributes to a more focused and efficient marketing effort.
 
 ## Prerequisites {#prerequisites}
+
 >[!IMPORTANT]
 >
 >* To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 ## Supported audiences {#supported-audiences}
+
 This section describes which type of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
@@ -56,8 +56,25 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
+### Authenticate to destination {#authenticate}
+
+To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
+
+* **New Account** - Define a new Acxiom Managed S3 location
+  * **Connection type**
+    * **S3 access key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.  Must be equal to 20 characters and can only include characters A-Z and numbers 2-7.
+    * **S3 secret key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.  Must be equal to 40 characters and can only include characters A-Z, a-z, 0-9, +, \ and / .
+    * **Connect to destination** - Will use the provided authorization keys to connect to the S3 service to validate access.  Success will allow configuration of the destination details while failure will be indicated on the UI.
+
+* **Existing Account** -  Accounts already defined using the Prospecting Data for Adobe Experience Platform card will appear here for reuse.  These will appear in a list pop-up and when selected provides details on the account
+<br>  ![Existing Account](../../assets/catalog/advertising/acxiom/image-destination-account.png)
 
 ## Connect to the destination {#connect}
+
+>[!IMPORTANT]
+>
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
 In order to access your bucket on Experience Platform, you need to provide valid values for the following credentials:
 
 | Credential | Description |
@@ -66,25 +83,15 @@ In order to access your bucket on Experience Platform, you need to provide valid
 | S3 Secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team. |
 | Bucket name | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
 
-### Authenticate to destination {#authenticate}
-* **Existing Account** -  Accounts already defined using the Prospecting Data for Adobe AEP card will appear here for reuse.  These will appear in a list pop-up and when selected provides details on the account
-<br>  ![Existing Account](../../assets/catalog/advertising/acxiom/image-destination-account.png)
-
-* **New Account** - Define a new Acxiom Managed S3 location
-  * **Connection type**
-    * **S3 access key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.  Must be equal to 20 characters and can only include characters A-Z and numbers 2-7.
-    * **S3 secret key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.  Must be equal to 40 characters and can only include characters A-Z, a-z, 0-9, +, \ and / .
-    * **Connect to destination** - Will use the provided authorization keys to connect to the S3 service to validate access.  Success will allow configuration of the destination details while failure will be indicated on the UI.
-
-
 ### Fill in destination details {#destination-details}
-Overview of target file location
+
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
   ![Destination Detail](../../assets/catalog/advertising/acxiom/image-destination-details.png)
 
 * **Name (Required)** - The name the destination will be saved under
 * **Description** -  Short explanation of the destination's purpose
-* **Bucket Name (Required)** - Name of the S3 bucket set up on S3
+* **Bucket Name (Required)** - Name of the Amazon S3 bucket set up on S3
 * **Folder Path (Required)** - If subdirectories in a bucket are used a path must be defined, or '/' to reference the root path.
 * **File Type** - Select the format Experience Platform should use for the exported files. When selecting the CSV option, you can also [configure the formatting options](../../ui/batch-destinations-file-formatting-options.md).
 <br>  ![CSV Options](../../assets/catalog/advertising/acxiom/image-destination-csv-options.png)
@@ -124,17 +131,21 @@ Processing requires name and address elements.  Mapping suggestions are provided
 Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
 ## Review your dataflow ##
+
 Use the review page for a summary of your dataflow prior to submission
 <br>  ![Review](../../assets/catalog/advertising/acxiom/image-destination-review.png)
 
 
 ## Data usage and governance {#data-usage-governance}
+
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
 
 ## Exported data / Validate data export {#exported-data}
+
 To verify if data has been exported successfully, check your [!DNL Amazon S3 Storage] bucket and make sure that the exported files contain the expected profile populations.
 
 
 ## Additional resources {#additional-resources}
+
 *Acxiom Audience Data and Distribution:* https://www.acxiom.com/customer-data/audience-data-distribution/
