@@ -67,12 +67,14 @@ Define a new Acxiom Managed S3 location
   * **S3 access key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.  Must be equal to 20 characters and can only include characters A-Z and numbers 2-7.
   * **S3 secret key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.  Must be equal to 40 characters and can only include characters A-Z, a-z, 0-9, +, \ and / .
   * **Connect to destination** - Will use the provided authorization keys to connect to the S3 service to validate access.  Success will allow configuration of the destination details while failure will be indicated on the UI.
-<br>  ![New Account](../../assets/catalog/advertising/acxiom/image-destination-new-account.png)
+
+![New Account](../../assets/catalog/advertising/acxiom/image-destination-new-account.png)
 
 ### Existing Account
 
 Accounts already defined using the Prospecting Data for Adobe Experience Platform card will appear here for reuse.  These will appear in a list pop-up and when selected provides details on the account
-<br>  ![Existing Account](../../assets/catalog/advertising/acxiom/image-destination-account.png)
+
+![Existing Account](../../assets/catalog/advertising/acxiom/image-destination-account.png)
 
 ## Connect to the destination {#connect}
 
@@ -92,14 +94,15 @@ In order to access your bucket on Experience Platform, you need to provide valid
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-  ![Destination Detail](../../assets/catalog/advertising/acxiom/image-destination-details.png)
+![Destination Detail](../../assets/catalog/advertising/acxiom/image-destination-details.png)
 
 * **Name (Required)** - The name the destination will be saved under
 * **Description** -  Short explanation of the destination's purpose
 * **Bucket Name (Required)** - Name of the Amazon S3 bucket set up on S3
 * **Folder Path (Required)** - If subdirectories in a bucket are used a path must be defined, or '/' to reference the root path.
 * **File Type** - Select the format Experience Platform should use for the exported files. When selecting the CSV option, you can also [configure the formatting options](../../ui/batch-destinations-file-formatting-options.md).
-<br>  ![CSV Options](../../assets/catalog/advertising/acxiom/image-destination-csv-options.png)
+
+![CSV Options](../../assets/catalog/advertising/acxiom/image-destination-csv-options.png)
 
 ### Enable alerts {#enable-alerts}
 
@@ -138,7 +141,8 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 ## Review your dataflow ##
 
 Use the review page for a summary of your dataflow prior to submission
-<br>  ![Review](../../assets/catalog/advertising/acxiom/image-destination-review.png)
+
+![Review](../../assets/catalog/advertising/acxiom/image-destination-review.png)
 
 
 ## Data usage and governance {#data-usage-governance}
