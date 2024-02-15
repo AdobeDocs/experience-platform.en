@@ -279,7 +279,7 @@ To do this, select each segment, then enter name of the custom reference from [!
 >[!IMPORTANT]
 >
 > Do not use the custom reference label as the value.
-![Image indicating you should not use the custom reference label value for mapping.](../../assets/catalog/ecommerce/sap-commerce/custom-reference-dont-use-label-for-mapping.png)
+>![Image indicating you should not use the custom reference label value for mapping.](../../assets/catalog/ecommerce/sap-commerce/custom-reference-dont-use-label-for-mapping.png)
 
 For example, if your selected Experience Platform audience is `sap_audience1` and you want its status to be updated into the [!DNL SAP Subscription Billing] custom reference `SAP_1`, specify this value in the [!DNL SAP_Commerce] **[!UICONTROL Mapping ID]** field.
 
