@@ -12,6 +12,12 @@ You can use these notifications for different purposes, such as promoting new fe
 
 By using in-app messages, you can effectively engage with your audience and steer them towards important aspects of your application.
 
+>[!IMPORTANT]
+>
+>Web In-App Messaging is an [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) feature, which uses the Web SDK to deliver the personalized content.
+>
+>For detailed instructions on how to configure your Web In-App Messaging campaign, see the [Adobe Journey Optimizer documentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
+
 ## Prerequisites {#prerequisites}
 
 ### Web SDK tag extension version {#extension-version}
