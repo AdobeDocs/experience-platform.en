@@ -50,30 +50,37 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the **[!UICONTROL Data partners]** category, select **[!UICONTROL Merkury]** and then select **[!UICONTROL Set up]**.
 
+>[!TIP]
+>
+>A source card that displays **[!UICONTROL Add data]** means that the source already has an authenticated account. On the other hand, a source card that displays **[!UICONTROL Set up]** means that you must provide credentials and create a new account in order to use that source.
 
-Once you have created an account, this label changes to "Add data", which you can use to access existing accounts or create more new accounts.  Select the ellipses (...) for options to view existing accounts and dataflows, as well as the documentation.
+![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-catalog.png)
 
+### Create a new account
 
-<br>![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-catalog.png)
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your [!DNL Acxiom] credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-Source Configuration and Authentication - Defined S3 account associated with [!DNL Acxiom] prospect response.
+![New account definition.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-account.png)
 
-## Existing Account
-A list of existing accounts for prospecting data appears. Select an account from the list to view details on that account.
-  <br>![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-existing-account.png)
-## New Account
-If you are creating a new account, select a new [!DNL Acxiom] Managed S3 location, and then provide a name, an optional description, and your credentials.  Once you have provided your credentials, select Connect to source and allow for a few moments for the connection to establish.
-  <br>![New account definition.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-account.png)
-* **Account Name (Required)** - The name of the account. 
-* **Description (Optional)** - A brief explanation of the purpose of the account.
-* **Account Authentication** 
-  * **Enter [!DNL Acxiom] authentication key (Required)** - The [!DNL Acxiom]-provided key required for account approval. This must match the proper value before a connection to the database can be made.  This key must be 24 characters and can only include: A-Z, a-z, and 0-9.
-  * **S3 access key (Required)** - The S3 access key references the Amazon S3 location. This is provided by your administrator when S3 role permissions are defined.
-  * **S3 secret key (Required)** - The S3 secret key references the Amazon S3 location. This is provided by your administrator when S3 role permissions are defined.
-  * **s3SessionToken (Optional)** - The authentication token value when connection to S3.
-  * **serviceUrl (Optional)** - The URL location to be used when connecting to S3 in a non-standard location.
-  * **Bucket name (Optional)** - The name of the S3 bucket set up on S3 that serves as a starting path in data selection.
-  * **Folder path** - If subdirectories in a bucket are used, then you can also specify a path as a starting path in data selection.
+| Credentials | Description |
+| --- | --- |
+| Account Name | The name of the account. |
+| Description | (Optional) A brief explanation of the purpose of the account. |
+| [!DNL Acxiom] authentication key | The [!DNL Acxiom]-provided key required for account approval. This must match the proper value before a connection to the database can be made.  This key must be 24 characters and can only include: A-Z, a-z, and 0-9. |
+| S3 access key | The S3 access key references the Amazon S3 location. This is provided by your administrator when S3 role permissions are defined. |
+| S3 secret key | The S3 secret key references the Amazon S3 location. This is provided by your administrator when S3 role permissions are defined. |
+| s3SessionToken | The authentication token value when connection to S3. |
+| serviceUrl | (Optional) The URL location to be used when connecting to S3 in a non-standard location. |
+| Bucket name |  The name of the S3 bucket set up on S3 that serves as a starting path in data selection. |
+| Folder path|  If subdirectories in a bucket are used, then you can also specify a path as a starting path in data selection. |
+
+### Use an existing account
+
+To use an existing account, select **[!UICONTROL Existing account]**.
+
+Select an account from the list to view details on that account. Once you have selected an account, select **[!UICONTROL Next]** to proceed.
+
+![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-existing-account.png)
 
 ## Select Data
 Select the file that you want to ingest from the desired bucket and sub-directory.  A preview of the data can be provided once delimiter and compression type is defined.
