@@ -8,7 +8,8 @@ badge: Beta
 
 >[!NOTE]
 >
->The [!DNL Acxiom Prospect-Suppression] destination is in beta.  This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, please contact them directly at support@YourDestination.com.
+>The [!DNL Acxiom Prospect-Suppression] destination is in beta.  This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, please contact them directly at [11:38 AM] Narisety, K. Deepak (Acxiom)
+acxiom-adobe-help@acxiom.com.
 
 ## Overview {#overview}
 
