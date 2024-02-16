@@ -1,6 +1,6 @@
 ---
 title: Acxiom Prospect-Suppression
-description: Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securely exports first party data from Real-Time CDP and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
+description: Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securely exports first party data from Real-Time CDP and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. This will be matched against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
 last-substantial-update: 2024-01-31
 badge: Beta
 ---
@@ -12,7 +12,7 @@ badge: Beta
 
 ## Overview {#overview}
 
-Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securely exports first party data from Real-Time Customer Data Platform and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
+Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securely exports first party data from Real-Time Customer Data Platform and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. This will be matched against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
 
 This tutorial provides steps to create an [!DNL Acxiom Prospect-Suppression] destination connection and dataflow using the Adobe Experience Platform user interface.  This connector is used to deliver data to Acxiom prospect service using Amazon S3 as a drop point.
 
