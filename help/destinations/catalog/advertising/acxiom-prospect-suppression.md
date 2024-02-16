@@ -1,6 +1,6 @@
 ---
 title: Acxiom Prospect-Suppression
-description: Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securly exports first party data from Real-Time CDP and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
+description: Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securely exports first party data from Real-Time CDP and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. We then match that against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
 last-substantial-update: 2024-01-31
 badge: Beta
 ---
@@ -56,9 +56,23 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
+## Connect to the destination {#connect}
+
+>[!IMPORTANT]
+>
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
+
+In order to access your bucket on Experience Platform, you need to provide valid values for the following credentials:
+
+| Credential    | Description                                                                                              |
+|---------------|----------------------------------------------------------------------------------------------------------|
+| S3 Access key | The access key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team.              |
+| S3 Secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team.              |
+| Bucket name   | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
 
 ### New Account
 
@@ -72,23 +86,9 @@ Define a new Acxiom Managed S3 location
 
 ### Existing Account
 
-Accounts already defined using the Prospecting Data for Adobe Experience Platform card will appear here for reuse.  These will appear in a list pop-up and when selected provides details on the account
+Accounts already defined using the Acxiom Prospect-Suppression card will appear here for reuse.  These will appear in a list pop-up and when selected provides details on the account
 
 ![Existing Account](../../assets/catalog/advertising/acxiom/image-destination-account.png)
-
-## Connect to the destination {#connect}
-
->[!IMPORTANT]
->
->To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
-
-In order to access your bucket on Experience Platform, you need to provide valid values for the following credentials:
-
-| Credential    | Description                                                                                              |
-|---------------|----------------------------------------------------------------------------------------------------------|
-| S3 Access key | The access key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team.              |
-| S3 Secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team.              |
-| Bucket name   | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
 
 ### Fill in destination details {#destination-details}
 
@@ -100,7 +100,11 @@ To configure details for the destination, fill in the required and optional fiel
 * **Description** -  Short explanation of the destination's purpose
 * **Bucket Name (Required)** - Name of the Amazon S3 bucket set up on S3
 * **Folder Path (Required)** - If subdirectories in a bucket are used a path must be defined, or '/' to reference the root path.
-* **File Type** - Select the format Experience Platform should use for the exported files. When selecting the CSV option, you can also [configure the formatting options](../../ui/batch-destinations-file-formatting-options.md).
+* **File Type** - Select the format Experience Platform should use for the exported files. Currently, the only file type Acxiom processing will be expecting is CSV 
+
+>[!IMPORTANT]
+>
+>When selecting the CSV option, *Delimiter*, *Quote Character*, *Escape Character*, *Empty Value*, *Null Value*, *Compression format*, and *Include menifest file* options will be presented, the following document explains these settings in more detail [configure the formatting options](../../ui/batch-destinations-file-formatting-options.md).
 
 ![CSV Options](../../assets/catalog/advertising/acxiom/image-destination-csv-options.png)
 
@@ -119,20 +123,20 @@ When you are finished providing details for your destination connection, select 
 
 Read [Activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
-### Mapping suggestions 
+### Mapping suggestions
 
 Processing requires name and address elements.  Mapping suggestions are provided in the table below listing attributes on your destination side that are used by Acxiom processing that customers can map profile attributes to.  This should be treated as suggestions as not all elements are required and the source values will depend on the needs of the account, but providing as much as possible will aid in matching.
 
 | Target Field | Source Description                                          |
 |--------------|-------------------------------------------------------------|
-| fullName     | The person.name.fullName value in Experience Platform.      |
+| name         | The person.name.fullName value in Experience Platform.      |
 | firstName    | The person.name.firstName value in Experience Platform.     |
 | lastName     | The person.name.lastName value in Experience Platform.      |
-| street1      | The mailingAddress.street1 value in Experience Platform.    |
-| street2      | The mailingAddress.street2 value in Experience Platform.    |
+| address1     | The mailingAddress.street1 value in Experience Platform.    |
+| address2     | The mailingAddress.street2 value in Experience Platform.    |
 | city         | The mailingAddress.city value in Experience Platform.       |
 | state        | The mailingAddress.state value in Experience Platform.      |
-| postalCode   | The mailingAddress.postalCode value in Experience Platform. |
+| zip          | The mailingAddress.postalCode value in Experience Platform. |
 
 >[!NOTE]
 >
