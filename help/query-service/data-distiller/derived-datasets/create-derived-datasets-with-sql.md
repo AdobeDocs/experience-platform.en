@@ -1,11 +1,11 @@
 ---
-title: Seamless SQL Flow for Derived Datasets
-description: Query Service SQL has been extended to provide seamless support for derived datasets. Learn how to use this SQL extension to create a derived dataset that is enabled for profile, and how to use the dataset for Real-Time Customer Profile and Segmentation Service.
+title: Create Derived Datasets with SQL
+description: Learn how to use SQL to create a derived dataset that is enabled for profile, and how to use the dataset for Real-Time Customer Profile and Segmentation Service.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
 ---
-# Seamless SQL flow for derived datasets
+# Create derived datasets with SQL
 
-Query Service SQL has been extended to provide seamless support for derived datasets. This provides an efficient alternative method to create derived datasets for your Real-Time Customer Profile business use cases.
+Learn how to use SQL queries to manipulate and transform data from existing datasets to create a derived dataset that is enabled for Profile. This workflow provides an efficient, alternative method to create derived datasets for your Real-Time Customer Profile business use cases.
 
 This document outlines various convenient SQL extensions that generate a derived dataset for use with Real-Time Customer Profile. The workflow simplifies the process that you would otherwise have to complete through various API calls or Platform UI interactions.
 
