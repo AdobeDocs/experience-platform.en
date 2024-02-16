@@ -82,7 +82,7 @@ Define a new Acxiom Managed S3 location
 
 ### Existing Account
 
-Accounts already defined using the Acxiom Prospect-Suppression card will appear in a list pop-up and when selected provides details on the account
+Accounts already defined using the Acxiom Prospect-Suppression card will appear in a list pop-up and when selected provides details on the account as shown in the example below;
 
 ![Existing Account](../../assets/catalog/advertising/acxiom/image-destination-account.png)
 
