@@ -46,11 +46,11 @@ The expected latency for Analytics Data on Platform is outlined in the table bel
 | New data to [!DNL Real-Time Customer Profile] (A4T **not** enabled) | < 2 minutes |
 | New data to [!DNL Real-Time Customer Profile] (A4T **is** enabled) | up to 30 minutes |
 | New data to Data Lake | < 2.25 hours |
-| New data to CJA without [stitching](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en)| < 3.75 hours |
-| New data to CJA with stitching| < 7 hours |
+| New data to Customer Journey Analytics without [stitching](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en)| < 3.75 hours |
+| New data to Customer Journey Analytics with stitching| < 7 hours |
 | Backfill of less than 10 billion events | < 4 weeks |
 
-For more information about CJA latencies, see: [Customer Journey Analytics Guardrails](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
+For more information about Customer Journey Analytics latencies, see: [Customer Journey Analytics Guardrails](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
 
 The Analytics backfill for production sandboxes defaults to 13 months. For Analytics data in non-production sandboxes, backfill is set to three months. The limit of 10 billion events mentioned in the table above is strictly with respect to expected latency. 
 
