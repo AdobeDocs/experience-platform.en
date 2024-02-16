@@ -8,8 +8,7 @@ badge: Beta
 
 >[!NOTE]
 >
->The [!DNL Acxiom Prospect-Suppression] destination is in beta.  This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, please contact them directly at [11:38 AM] Narisety, K. Deepak (Acxiom)
-acxiom-adobe-help@acxiom.com.
+>The [!DNL Acxiom Prospect-Suppression] destination is in beta.  This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, please contact them directly at acxiom-adobe-help@acxiom.com.
 
 ## Overview {#overview}
 
@@ -23,7 +22,7 @@ This tutorial provides steps to create an [!DNL Acxiom Prospect-Suppression] des
 
 To help you better understand how and when you should use the Acxiom Prospect-Suppression destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use case 1 Creating a Suppression List for Prospecting Datasets {#use-case-1}
+### Use case 1: Creating a Suppression List for Prospecting Datasets {#use-case-1}
 
 Marketing professionals aiming to enhance the effectiveness of their outreach strategies often employ the creation of a suppression list. This list includes existing customers and specific segments, ensuring their exclusion from prospecting activities during targeted campaigns. This strategic approach helps refine the audience, avoids redundant communication, and contributes to a more focused and efficient marketing effort.
 
@@ -78,16 +77,12 @@ In order to access your bucket on Experience Platform, you need to provide valid
 ### New Account
 
 Define a new Acxiom Managed S3 location
-* **Connection type**
-  * **S3 access key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.  Must be equal to 20 characters and can only include characters A-Z and numbers 2-7.
-  * **S3 secret key (Required)** - Reference to Amazon S3 location, provided by admin when S3 role permissions are defined.  Must be equal to 40 characters and can only include characters A-Z, a-z, 0-9, +, \ and / .
-  * **Connect to destination** - Will use the provided authorization keys to connect to the S3 service to validate access.  Success will allow configuration of the destination details while failure will be indicated on the UI.
 
 ![New Account](../../assets/catalog/advertising/acxiom/image-destination-new-account.png)
 
 ### Existing Account
 
-Accounts already defined using the Acxiom Prospect-Suppression card will appear here for reuse.  These will appear in a list pop-up and when selected provides details on the account
+Accounts already defined using the Acxiom Prospect-Suppression card will appear in a list pop-up and when selected provides details on the account
 
 ![Existing Account](../../assets/catalog/advertising/acxiom/image-destination-account.png)
 
@@ -126,7 +121,7 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 ### Mapping suggestions
 
-Processing requires name and address elements.  Mapping suggestions are provided in the table below listing attributes on your destination side that are used by Acxiom processing that customers can map profile attributes to.  This should be treated as suggestions as not all elements are required and the source values will depend on the needs of the account, but providing as much as possible will aid in matching.
+Processing requires name and address elements, while not all elements are required providing as much as possible will aid in successful matching.  Mapping suggestions are provided in the table below listing attributes on your destination side that are used by Acxiom processing that customers can map profile attributes to.  This should be treated as suggestions as not all elements are required and the source values will depend on the needs of the account.
 
 | Target Field | Source Description                                          |
 |--------------|-------------------------------------------------------------|
@@ -141,9 +136,9 @@ Processing requires name and address elements.  Mapping suggestions are provided
 
 >[!NOTE]
 >
->Additional fields not listed will be ignored
+>Additional fields not listed above will be included on the export, but will be ignored by Acxiom processing. 
 
-## Review your dataflow ##
+## Review your dataflow
 
 Use the review page for a summary of your dataflow prior to submission
 
