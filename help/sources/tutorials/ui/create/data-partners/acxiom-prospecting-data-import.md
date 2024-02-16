@@ -1,22 +1,25 @@
 ---
 title: Acxiom Prospecting Data Import
 description: Learn how to connect Acxiom Prospecting Data to Adobe Experience Platform and Adobe Real-Time Customer Data Platform using the UI.
-last-substantial-update: 2024-01-31
+last-substantial-update: 2024-02-21
 badge: Beta
 ---
-# Create an [!DNL Acxiom Prospecting Data Import] source connection and dataflow in the UI. {#overview}
+# Create an [!DNL Acxiom Prospecting Data Import] source connection and dataflow in the UI
+
 >[!NOTE]
 >
 >The [!DNL Acxiom Prospecting Data Import] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-Acxiom’s Prospecting Data Import for Adobe Real-Time Customer Data Platform is a process for delivering the most productive prospect audiences possible. [ACXIOM] takes Adobe CDP first-party data via a secure export and runs that data through an award-winning hygiene and identity resolution system/process. This produces a data file to be used as a suppression list. Then, that data file is matched against the Acxiom Global database which enables the prospect lists to be tailored for import.
+[!DNL Acxiom]'s Prospecting Data Import for Adobe Real-Time Customer Data Platform is a process for delivering the most productive prospect audiences possible. [!DNL Acxiom] takes Real-Time CDP first-party data via a secure export and runs that data through an award-winning hygiene and identity resolution system. This produces a data file to be used as a suppression list. This data file is then matched against the Acxiom Global database, which enables the prospect lists to be tailored for import.
 
-Read this tutorial to learn how to create an [!DNL Acxiom Prospecting Data Import] source connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to retrieve and map response from Acxiom prospect service using S3 as a drop point.
+You can use the [!DNL Acxiom] source to retrieve and map responses from Acxiom prospect service using Amazon S3 as a drop point.
+
+Read this tutorial to learn how to create an [!DNL Acxiom Prospecting Data Import] source connection and dataflow using the Adobe Experience Platform user interface. 
 
 
 ## Prerequisites {#prerequisites}
 
->This tutorial requires a working understanding of the following components of Experience Platform:
+This tutorial requires a working understanding of the following components of Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
@@ -30,19 +33,27 @@ In order to access your bucket on Experience Platform, you need to provide valid
 
 | Credential | Description |
 | --- | --- |
-| Acxiom authentication key | The authentication key. You can retrieve this value from the [!DNL Acxiom] team. |
-| S3 Access key | The access key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team. |
-| S3 Secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team. |
+| [!DNL Acxiom] authentication key | The authentication key. You can retrieve this value from the [!DNL Acxiom] team. |
+| [!DNL Amazon S3] access key | The access key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team. |
+| [!DNL Amazon S3] secret key | The secret key ID for your bucket. You can retrieve this value from the [!DNL Acxiom] team. |
 | Bucket name | This is your bucket where files will be shared. You can retrieve this value from the [!DNL Acxiom] team. |
 
 >[!IMPORTANT]
 >
->To connect to the source, you need the **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>You must have both **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** permissions enabled for your account in order to connect your [!DNL Acxiom] account to Experience Platform. Contact your product administrator to obtain the necessary permissions. For more information, read the [access control UI guide](../../../../../access-control/ui/overview.md).
+
+## Connect your [!DNL Acxiom] account
+
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
+
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+
+Under the **[!UICONTROL Data partners]** category, select **[!UICONTROL Merkury]** and then select **[!UICONTROL Set up]**.
 
 
-## Connect your [!DNL Acxiom] Account
+Once you have created an account, this label changes to "Add data", which you can use to access existing accounts or create more new accounts.  Select the ellipses (...) for options to view existing accounts and dataflows, as well as the documentation.
 
-You can find the [!DNL Acxiom] source in the sources catalog under the "Data Partners" header.  Sources cards are initially labeled with "Set up". Once you have created an account, this label changes to "Add data", which you can use to access existing accounts or create more new accounts.  Select the ellipses (...) for options to view existing accounts and dataflows, as well as the documentation.
+
 <br>![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-catalog.png)
 
 Source Configuration and Authentication - Defined S3 account associated with [!DNL Acxiom] prospect response.
