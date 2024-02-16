@@ -183,4 +183,5 @@ To update configurations for your dataflows scheduling, mapping, and general inf
 You can delete dataflows that are no longer necessary or were incorrectly created using the **[!UICONTROL Delete]** function available in the **[!UICONTROL Dataflows]** workspace. For more information on how to delete dataflows, visit the tutorial on [deleting dataflows in the UI](../../delete.md).
 
 ## Additional resources {#additional-resources}
-*Acxiom Audience Data and Distribution:* https://www.acxiom.com/customer-data/audience-data-distribution/
+
+[!DNL Acxiom] Audience Data and Distribution: https://www.acxiom.com/customer-data/audience-data-distribution/
