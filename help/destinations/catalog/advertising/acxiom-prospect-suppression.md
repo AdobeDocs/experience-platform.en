@@ -144,6 +144,9 @@ Use the review page for a summary of your dataflow prior to submission
 
 ![Review](../../assets/catalog/advertising/acxiom/image-destination-review.png)
 
+## Next steps
+
+By following this tutorial, you have successfully created a dataflow to export batch data from Experience Platform to your [!DNL Acxiom] managed S3 location. You would need to contact your Acxiom representative with the name of the account, filename, and the bucket path so that processing can set up.
 
 ## Data usage and governance {#data-usage-governance}
 
