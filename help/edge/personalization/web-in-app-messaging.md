@@ -18,6 +18,7 @@ By using in-app messages, you can effectively engage with your audience and stee
 >
 >For detailed instructions on how to configure your Web In-App Messaging campaign, see the [Adobe Journey Optimizer documentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
 
+
 ## Prerequisites {#prerequisites}
 
 ### Web SDK tag extension version {#extension-version}
