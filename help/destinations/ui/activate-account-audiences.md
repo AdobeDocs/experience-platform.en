@@ -10,7 +10,7 @@ exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
 
 >[!AVAILABILITY]
 >
->The functionality to activate account audiences to destinations is available for companies purchasing the [Business-to-Business](help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](help/rtcdp/overview.md#rtcdp-b2b) editions of Real-Time Customer Data Platform.
+>The functionality to activate account audiences to destinations is available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2b) editions of Real-Time Customer Data Platform.
 
 This article explains the workflow required to export [account audiences](/help/segmentation/ui/account-audiences.md) from Adobe Experience Platform to your preferred destination. 
 
