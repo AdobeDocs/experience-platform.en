@@ -252,9 +252,9 @@ To confirm a profile's audience membership, visit the profile details page of th
 
 Audiences evaluated using batch segmentation resolve daily, with the audience membership results being recorded into the profile's `segmentMembership` attribute. Profile lookups generate a fresh version of the profile at the time of the lookup, but it does **not** refresh the batch segmentation results.
 
-As a result, changes are made to the profile, such as merging two profiles together **will** appear in the profile when looked up, but will **not** be reflected in the `segmentMembership` attribute until the segment evaluation job has run again.
+As a result, when changes are made to the profile, such as merging two profiles together **will** appear in the profile when looked up, but will **not** be reflected in the `segmentMembership` attribute until the segment evaluation job has run again.
 
-For example, let's say you've created two mutually exclusive audiences: Audience A is for people who live in Washington and Audience B is for people who do **not** live in Washington. There are two profiles - profile 1 for a person who lives in Seattle, and profile 2 for a person who lives in Oregon. 
+For example, let's say you've created two mutually exclusive audiences: Audience A is for people who live in Washington and Audience B is for people who do **not** live in Washington. There are two profiles - profile 1 for a person who lives in Washington, and profile 2 for a person who lives in Oregon. 
 
 When the batch segmentation evaluation job runs, profile 1 will go to Audience A, while profile 2 will go to Audience B. Later on, but before the next day's batch segmentation evaluation job runs, an event that reconciles the two profiles enters Platform. As a result, a single merged profile that contains profiles 1 and 2 is created. 
 
