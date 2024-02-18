@@ -31,6 +31,36 @@ Select the ellipsis (**...**) next to a rule's name, and a dropdown displays con
 
 ![](../images/alerts/ui/disable-subscribe.png)
 
+## Manage alert subscribers
+
+>[!NOTE]
+>
+> To assign an alert to an Adobe user ID, an external email address, or an email group list, you must be an administrator. 
+
+The **[!UICONTROL Browse]** tab lists the available rules that may trigger an alert.
+
+![](../images/alerts/ui/rules.png)
+
+Select the ellipsis (**...**) next to a rule's name, a dropdown displays controls. Select **[!UICONTROL Manage alert subscribers]**.
+
+![](../images/alerts/ui/manage-alert-subscribers.png)
+
+The [!UICONTROL Manage alert subscribers] page appears. To assign the notifications to specific users, enter their Adobe user ID, external email address, or an email group list, then press enter.
+
+>[!NOTE]
+>
+>To send this notice to several users at once, provide a list of user ID's or email addresses separated by commas.
+
+![](../images/alerts/ui/manage-alert-add-email.png)
+
+The email addresses appear in the list of current subscribers listed. Select **[!UICONTROL Update]**.
+
+![](../images/alerts/ui/manage-alert-subscribers-added-email.png)
+
+You have added users successfully to your alert notification list. Users will now receive email notifications for this alert.
+
+![](../images/alerts/ui/manage-alert-subscribers-email.png)
+
 ## Enable email alerts
 
 Alert notifications can be delivered direct to your email. 
