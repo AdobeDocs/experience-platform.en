@@ -28,6 +28,7 @@ The table below lists [!DNL Adobe Real-Time Customer Data Platform] objects that
 | Customer Data Platform | Identities | The system will auto-deduplicate Adobe standard identity namespaces when creating in the target sandbox. Audiences can only be copied when all attributes in audience rules are enabled in the union schema. The necessary schemas must be moved and enabled for unified profile first.|
 | Customer Data Platform | Schemas | Existing labels for consent and governance will be copied over in the same import job. The schema unified profile status will be copied as is from the source sandbox. If the schema is enabled for unified profile in the source sandbox, all attributes are moved to the union schema. The schema relationships edge case are not included in the package.|
 | Customer Data Platform | Datasets | Datasets are copied with the unified profile setting disabled by default. |
+| Customer Data Platform | Consent and Governance Policies | Add policies created by a user to a package and move them across sandboxes. |
 
 The following objects are imported but are in a draft or disabled status:
 
