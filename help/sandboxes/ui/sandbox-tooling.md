@@ -130,7 +130,7 @@ To import the package into a target sandbox, navigate to the Sandboxes **[!UICON
 
 ![The sandboxes **[!UICONTROL Browse]** tab highlighting the import package selection.](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-Using the dropdown menu, select the **[!UICONTROL Package name]** you want to import to the targeted sandbox. Add an optional **[!UICONTROL Job name]**, which will be used for future monitoring, then select **[!UICONTROL Next]**.
+Using the dropdown menu, select the **[!UICONTROL Package name]** you want to import to the targeted sandbox. Add an optional **[!UICONTROL Job name]**, which will be used for future monitoring. By default, unified profile will be disabled when the package's schemas are imported. Toggle **Enable schemas for profile** to enable this, then select **[!UICONTROL Next]**.
 
 ![The import details page showing the [!UICONTROL Package name] dropdown selection](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
