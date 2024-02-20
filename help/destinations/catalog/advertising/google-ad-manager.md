@@ -15,7 +15,7 @@ exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 ><br><br>
 >Customers who have purchased **Adobe Privacy & Security Shield** must update their [consent policy](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) to filter out non-consented profiles. 
 ><br><br>
->Customers who have *not* purchased **Adobe Privacy & Security Shield** must use the [segment definition](segmentation/home.md#segment-definitions) options to filter out non-consented profiles.
+>Customers who have *not* purchased **Adobe Privacy & Security Shield** must use the [segment definition](../../../segmentation/home.md#segment-definitions) options to filter out non-consented profiles.
 
 [!DNL Google Ad Manager], formerly known as [!DNL DoubleClick for Publishers] (DFP) or [!DNL DoubleClick AdX], is an ad serving platform from [!DNL Google] that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.
 

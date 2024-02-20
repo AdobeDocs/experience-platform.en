@@ -13,7 +13,7 @@ exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
 ><br><br>
 >Customers who have purchased **Adobe Privacy & Security Shield** must update their [consent policy](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) to filter out non-consented profiles. 
 ><br><br>
->Customers who have *not* purchased **Adobe Privacy & Security Shield** must use the [segment definition](segmentation/home.md#segment-definitions) options to filter out non-consented profiles.
+>Customers who have *not* purchased **Adobe Privacy & Security Shield** must use the [segment definition](../../../segmentation/home.md#segment-definitions) options to filter out non-consented profiles.
 
 [!DNL Display & Video 360], formerly known as [!DNL DoubleClick Bid Manager], is a tool used to execute retargeting and audience targeted digital campaigns across Display, Video, and Mobile inventory sources. 
 
