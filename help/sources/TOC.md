@@ -290,6 +290,7 @@ feature: Sources
       - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
     - Data partner {#data-partner}
       - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+      - [Acxiom Prospecting Data Import](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
     - eCommerce {#ecommerce}
       - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
