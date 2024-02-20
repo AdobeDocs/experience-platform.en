@@ -100,7 +100,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 >[!IMPORTANT]
 >
->When selecting the CSV option, *Delimiter*, *Quote Character*, *Escape Character*, *Empty Value*, *Null Value*, *Compression format*, and *Include menifest file* options will be presented, the following document explains these settings in more detail [configure the formatting options](../../ui/batch-destinations-file-formatting-options.md).
+>When selecting the CSV option, *Delimiter*, *Quote Character*, *Escape Character*, *Empty Value*, *Null Value*, *Compression format*, and *Include manifest file* options will be presented, the following document explains these settings in more detail [configure the formatting options](../../ui/batch-destinations-file-formatting-options.md).
 
 ![CSV Options](../../assets/catalog/advertising/acxiom/image-destination-csv-options.png)
 
