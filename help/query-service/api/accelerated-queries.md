@@ -34,7 +34,7 @@ POST /accelerated-queries
 The following request submits an SQL query in the request body to the accelerated store.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
  -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'
@@ -54,7 +54,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 This alternate request submits a template ID in the request body to the accelerated store. The SQL from the corresponding template is used to query the accelerated store.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
  -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'
