@@ -47,6 +47,7 @@ The table below lists [!DNL Adobe Journey Optimizer] objects that are currently 
 | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer] | Audience | An audience can be copied as a dependent object of the journey object. You can select create a new audience or reuse an existing one in the target sandbox. |
 | [!DNL Adobe Journey Optimizer] | Schema | The schemas used in the journey can be copied as dependent objects. You can select create a new schema or reuse an existing one in the target sandbox. |
+| [!DNL Adobe Journey Optimizer] | Merge policy | The merge policies used in the journey can be copied as dependent objects. In the target sandbox, you **cannot** create a new merge policy, you can only utilize an already existing one. |
 | [!DNL Adobe Journey Optimizer] | Journey - canvas details | The representation of the journey on the canvas includes the objects in the journey, such as conditions, actions, events, read audiences, and so on, which are copied. The jump activity is excluded from the copy. |
 | [!DNL Adobe Journey Optimizer] | Event | The events and event details used in the journey are copied. It will always create a new version in the target sandbox. |
 | [!DNL Adobe Journey Optimizer] | Action | Email and push messages used in the journey can be copied as dependent objects. The channel action activities used in the journey fields, which are used for personalization in the message, are not checked for completeness. Content blocks are not copied.<br><br>The update profile action used in the journey can be copied. Custom actions and action details used in the journey are also copied. It will always create a new version in the target sandbox.|
@@ -134,15 +135,19 @@ Using the dropdown menu, select the **[!UICONTROL Package name]** you want to im
 
 ![The import details page showing the [!UICONTROL Package name] dropdown selection](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-The [!UICONTROL Package object and dependencies] page provides a list of all assets included in this package. The system automatically detects dependent objects that are required for successfully importing selected parent objects.
+The [!UICONTROL Package object and dependencies] page provides a list of all assets included in this package. The system automatically detects dependent objects that are required for successfully importing selected parent objects. Any missing attributes are displayed at the top of the page. Select **[!UICONTROL View details]** for a more detailed breakdown.
 
-![The [!UICONTROL Package object and dependencies] page shows a list of assets included in the package.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![The [!UICONTROL Package object and dependencies] page shows missing attributes.](../images/ui/sandbox-tooling/missing-attributes.png)
 
 >[!NOTE]
 >
 >Dependent objects can be replaced with existing ones in the target sandbox, which allows you to reuse existing objects rather than creating a new version. For example, when you import a package including schemas, you can reuse existing custom field group and identity namespaces in the target sandbox. Alternatively, when you import a package including Journeys, you can reuse existing segments in the target sandbox.
 
-To use an existing object, select the pencil icon beside the dependent object. The options to create new or use existing are displayed. Select **[!UICONTROL Use existing]**.
+To use an existing object, select the pencil icon beside the dependent object.
+
+![The [!UICONTROL Package object and dependencies] page shows a list of assets included in the package.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+
+The options to create new or use existing are displayed. Select **[!UICONTROL Use existing]**.
 
 ![The [!UICONTROL Package object and dependencies] page showing dependent object options [!UICONTROL Create new] and [!UICONTROL Use existing].](../images/ui/sandbox-tooling/use-existing-object.png)
 
