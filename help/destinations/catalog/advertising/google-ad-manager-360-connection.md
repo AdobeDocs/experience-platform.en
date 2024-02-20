@@ -5,7 +5,15 @@ exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 ---
 # (Beta) [!DNL Google Ad Manager 360] connection
 
-## Overview {#overview}
+>[!IMPORTANT]
+>
+>As a Data Processor under the [!DNL GDPR] regulations, Adobe provides you with the necessary tools to comply with consent requirements under the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) in the European Union.
+><br><br>
+>When you activate audiences to this destination, you must include user-level consent strings in the activation workflow, in order to comply with the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en).
+><br><br>
+>Customers who have purchased **Adobe Privacy & Security Shield** must update their [consent policy](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) to filter out non-consented profiles. 
+><br><br>
+>Customers who have *not* purchased **Adobe Privacy & Security Shield** must use the [segment definition](segmentation/home.md#segment-definitions) options to filter out non-consented profiles.
 
 The [!DNL Google Ad Manager 360] connection enables batch upload for [!DNL publisher provided identifiers] (PPID) into [!DNL Google Ad Manager 360], via [!DNL Google Cloud Storage].
 

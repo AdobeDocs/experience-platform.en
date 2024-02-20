@@ -6,7 +6,16 @@ exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 ---
 # [!DNL Google Ad Manager] connection
 
-## Overview {#overview}
+>[!IMPORTANT]
+>
+>As a Data Processor under the [!DNL GDPR] regulations, Adobe provides you with the necessary tools to comply with consent requirements under the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) in the European Union.
+><br><br>
+>When you activate audiences to this destination, you must include user-level consent strings in the activation workflow, in order to comply with the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en).
+>
+><br><br>
+>Customers who have purchased **Adobe Privacy & Security Shield** must update their [consent policy](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) to filter out non-consented profiles. 
+><br><br>
+>Customers who have *not* purchased **Adobe Privacy & Security Shield** must use the [segment definition](segmentation/home.md#segment-definitions) options to filter out non-consented profiles.
 
 [!DNL Google Ad Manager], formerly known as [!DNL DoubleClick for Publishers] (DFP) or [!DNL DoubleClick AdX], is an ad serving platform from [!DNL Google] that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.
 

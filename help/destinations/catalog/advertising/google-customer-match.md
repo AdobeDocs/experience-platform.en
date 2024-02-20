@@ -6,7 +6,15 @@ exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 ---
 # [!DNL Google Customer Match] connection
 
-## Overview {#overview}
+>[!IMPORTANT]
+>
+>As a Data Processor under the [!DNL GDPR] regulations, Adobe provides you with the necessary tools to comply with consent requirements under the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) in the European Union.
+><br><br>
+>When you activate audiences to this destination, you must include user-level consent strings in the activation workflow, in order to comply with the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en).
+><br><br>
+>Customers who have purchased **Adobe Privacy & Security Shield** must update their [consent policy](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) to filter out non-consented profiles. 
+><br><br>
+>Customers who have *not* purchased **Adobe Privacy & Security Shield** must use the [segment definition](segmentation/home.md#segment-definitions) options to filter out non-consented profiles.
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], [!DNL Gmail], and [!DNL YouTube].
 

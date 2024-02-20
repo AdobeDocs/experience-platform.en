@@ -5,7 +5,15 @@ exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
 ---
 # [!DNL Google Display & Video 360] connection
 
-## Overview {#overview}
+>[!IMPORTANT]
+>
+>As a Data Processor under the [!DNL GDPR] regulations, Adobe provides you with the necessary tools to comply with consent requirements under the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) in the European Union.
+><br><br>
+>When you activate audiences to this destination, you must include user-level consent strings in the activation workflow, in order to comply with the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en).
+><br><br>
+>Customers who have purchased **Adobe Privacy & Security Shield** must update their [consent policy](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) to filter out non-consented profiles. 
+><br><br>
+>Customers who have *not* purchased **Adobe Privacy & Security Shield** must use the [segment definition](segmentation/home.md#segment-definitions) options to filter out non-consented profiles.
 
 [!DNL Display & Video 360], formerly known as [!DNL DoubleClick Bid Manager], is a tool used to execute retargeting and audience targeted digital campaigns across Display, Video, and Mobile inventory sources. 
 
