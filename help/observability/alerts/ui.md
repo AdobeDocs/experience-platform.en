@@ -29,7 +29,7 @@ Select a rule from the list to view its description and its configuration parame
 
 Select the ellipsis (**...**) next to a rule's name, and a dropdown displays controls to enable or disable the alert (depending on its current status), and to subscribe or unsubscribe to email notifications for the alert.
 
-![Ellipses selected showing the drop down menu.](../images/alerts/ui/disable-subscribe.png)
+![The selected ellipses reveal the drop-down menu.](../images/alerts/ui/disable-subscribe.png)
 
 ## Manage alert subscribers
 
@@ -43,9 +43,9 @@ The **[!UICONTROL Browse]** tab lists the available rules that may trigger an al
 
 Select the ellipsis (**...**) next to a rule's name, a dropdown displays controls. Select **[!UICONTROL Manage alert subscribers]**.
 
-![Ellipses selected showing the drop down menu highlighting [!UICONTROL Manage alert subscribers].](../images/alerts/ui/manage-alert-subscribers.png)
+![Select the ellipses to display the drop-down menu. The [!UICONTROL Manage alert subscribers] option is highlighted.](../images/alerts/ui/manage-alert-subscribers.png)
 
-The [!UICONTROL Manage alert subscribers] page appears. To assign the notifications to specific users, enter their Adobe user ID, external email address, or an email group list, then press enter.
+The [!UICONTROL Manage alert subscribers] page appears. To assign notifications to specific users, enter their Adobe user ID, external email address, or an email group list, then press enter.
 
 >[!NOTE]
 >
@@ -57,7 +57,7 @@ The email addresses appear in the list of current subscribers listed. Select **[
 
 ![The manage alert subscribers page highglighting subscribers and [!UICONTROL Update].](../images/alerts/ui/manage-alert-subscribers-added-email.png)
 
-You have added users successfully to your alert notification list. Users will now receive email notifications for this alert.
+You have added users successfully to your alert notification list. The submitted users will now receive email notifications for this alert as seen in the image below.
 
 ![An email example of the alert notification that is received.](../images/alerts/ui/manage-alert-subscribers-email.png)
 
