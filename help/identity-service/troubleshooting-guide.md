@@ -67,7 +67,7 @@ For step-by-step instructions for defining a namespace when creating an identity
 
 ## What are the standard identity namespaces provided by Experience Platform? {#standard-namespaces}
 
-Standard identity namespaces are namespaces available to all organizations. See the [Identity namespaces overview](./namespaces.md) for a full list of available standard namespaces.
+Standard identity namespaces are namespaces available to all organizations. See the [Identity namespaces overview](./features/namespaces.md) for a full list of available standard namespaces.
 
 ## Where can I find the list of identity namespaces available for my organization?
 

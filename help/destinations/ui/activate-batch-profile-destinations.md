@@ -9,8 +9,8 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 
 >[!IMPORTANT]
 > 
-> * To activate audiences and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
-> * To activate audiences without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+> * To activate audiences and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+> * To activate audiences without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
@@ -136,7 +136,12 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
 4. Select **[!UICONTROL Create]** to save the schedule.
 
-### Export incremental files {#export-incremental-files}
+### Export incremental files
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_something"
+>title="Configure file name"
+>abstract="For file-based destinations, a unique file name is generated per audience. Use the file name editor to create and edit a unique file name or keep the default name."
 
 Select **[!UICONTROL Export incremental files]** to trigger an export where the first file is a full snapshot of all profile qualifications for the selected audience, and subsequent files are incremental profile qualifications since the previous export.
 
@@ -161,7 +166,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 
 4. Select **[!UICONTROL Create]** to save the schedule.
 
-### Configure file names {#file-names}
+### Configure file names
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"

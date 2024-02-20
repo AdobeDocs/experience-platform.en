@@ -434,13 +434,13 @@ curl -X PUT \
 
 **Response**
 
-A successful returns your updated role, including new values for its name, description, and role type.
+A successful response returns your updated role, including new values for its name, description, and role type.
 
 ```json
 {
   "id": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
-  "name": "Administrator Role",
-  "description": "Role with permission sets for admin type of access",
+  "name": "Administrator role for ACME",
+  "description": "New administrator role for ACME",
   "roleType": "user-defined",
   "permissionSets": [
     "manage-datasets",
@@ -480,7 +480,7 @@ To update the subjects associated with a role, make a PATCH request to the `/rol
 **API format**
 
 ```http
-PATCH /roles/{ROLE_ID}
+PATCH /roles/{ROLE_ID}/subjects
 ```
 
 | Parameter | Description |
@@ -514,7 +514,34 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 **Response**
 
-A successful response returns HTTP status 204 (No Content) and a blank body.
+A successful response returns your updated role, including new values for the subjects.
+
+```json
+{
+  "subjects": [
+    [
+      {
+        "subjectId": "03Z07HFQCCUF3TUHAX274206@AdobeID",
+        "subjectType": "user"
+      }
+    ]
+  ],
+  "_page": {
+    "limit": 1,
+    "count": 1
+  },
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/{ROLE_ID}/subjects",
+      "templated": true
+    },
+    "page": {
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/{ROLE_ID}/subjects?limit={limit}&start={start}&orderBy={orderBy}&property={property}",
+      "templated": true
+    }
+  }
+}
+```
 
 ## Delete a role {#delete}
 
