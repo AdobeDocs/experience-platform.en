@@ -147,6 +147,10 @@ The following section provides additional information about account audiences.
 
 When using account audiences, the audience **must** comply with the following constraints:
 
+>[!NOTE]
+>
+>The following list shows the **default** constraints for account audiences. These values **may** change, depending on the settings implemented by your organization's administrator.
+
 - The maximum lookback window for Experience Events is **30 days**.
 - The maximum depth of nested containers is **5**.
   - This means that you **cannot** have more than five nested containers when creating your audience.
