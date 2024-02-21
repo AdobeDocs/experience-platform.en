@@ -30,7 +30,7 @@ Talk to your [!DNL PubMatic] Account Manager to make sure your account is config
 
 ## Supported identities {#supported-identities}
 
-[!DNL PubMatic Connect] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL PubMatic Connect] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 | Target Identity | Description | Considerations |
 | --------------- | ------ | --- |

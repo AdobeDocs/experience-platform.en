@@ -14,7 +14,7 @@ In Experience Data Model (XDM), an identity field represents a field that that c
 Identity fields are a crucial component in how customer identity graphs are constructed in Platform, which ultimately affects how Real-Time Customer Profile merges disparate data fragments together to gain a complete view of the customer. Before defining identity fields in your schemas, please refer to the following documentation to learn about the key services and concepts related to identity fields:
 
 * [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Bridges identities across devices and systems, linking datasets together based on the identity fields defined by the XDM schemas they conform to.
-  * [Identity namespaces](../../../identity-service/namespaces.md): Identity namespaces define the different types of identity information that can relate to a single person, and are a required component for each identity field.
+  * [Identity namespaces](../../../identity-service/features/namespaces.md): Identity namespaces define the different types of identity information that can relate to a single person, and are a required component for each identity field.
 * [Real-Time Customer Profile](../../../profile/home.md): Leverages customer identity graphs to provide a unified consumer profile based on aggregated data from multiple sources, updated in near-real-time.
 
 ## Define an identity field {#define-a-identity-field}
@@ -50,6 +50,6 @@ If you defined a primary identity for the schema, you can now proceed to [enable
 
 ## Next steps
 
-This guide covered how to define an identity field in the UI. As data is ingested using this schema, your customer identity graphs will update to reflect the schema's identity fields. See the guide on the [identity graph viewer](../../../identity-service/ui/identity-graph-viewer.md) to learn how to explore your organization's private graph in the UI.
+This guide covered how to define an identity field in the UI. As data is ingested using this schema, your customer identity graphs will update to reflect the schema's identity fields. See the guide on the [identity graph viewer](../../../identity-service/features/identity-graph-viewer.md) to learn how to explore your organization's private graph in the UI.
 
 See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].

@@ -20,7 +20,7 @@ A software company organizes a conference and wants to keep in touch with partic
 
 ## Supported identities {#supported-identities}
 
-[!DNL LinkedIn Matched Audiences] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL LinkedIn Matched Audiences] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|

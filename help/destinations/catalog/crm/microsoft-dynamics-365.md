@@ -76,7 +76,7 @@ The [Requests limits and allocations](https://docs.microsoft.com/en-us/power-pla
 
 ## Supported identities {#supported-identities}
 
-[!DNL Dynamics 365] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Dynamics 365] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Example|Description|Considerations|
 |---|---|---|---|

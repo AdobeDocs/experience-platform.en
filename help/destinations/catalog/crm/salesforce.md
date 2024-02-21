@@ -117,7 +117,7 @@ If your [!DNL Salesforce] account administrator has enforced IP restrictions, yo
 
 ## Supported identities {#supported-identities}
 
-[!DNL Salesforce CRM] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Salesforce CRM] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
