@@ -140,6 +140,11 @@ The following section provides additional information about account audiences.
 >title="Maximum nested object amount error"
 >abstract="The maximum number of nested objects allowed is **10**."
 
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_generic"
+>title="Constraint violation"
+>abstract="The audience violates a constraint. Please read the linked document for more details."
+
 When using account audiences, the audience **must** comply with the following constraints:
 
 - The maximum lookback window for Experience Events is **30 days**.
