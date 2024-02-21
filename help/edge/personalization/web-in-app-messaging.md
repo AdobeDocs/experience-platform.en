@@ -139,6 +139,8 @@ The configuration process is now completed and your message is ready to be shown
 
 As an alternative to using the Web SDK tag extension, you can also configure Web In-App Messaging directly from the Web SDK JavaScript library.
 
+
+
 You can display web in-app messages from Adobe Journey Optimizer in two ways.
 
 ### Method 1: Automatically fetch the personalization content {#automatic}
@@ -170,3 +172,11 @@ In this example, the personalization content is displayed when a user clicks the
      }
  });
 ```
+### Configure personalization storage {#personalization-storage}
+
+You can choose to show in-app messages to users for a set number of times, or every time they visit a page, through the `personalizationStorageEnabled` configuration option.
+
+In the [Web SDK configuration](../fundamentals/configuring-the-sdk.md) set the `personalizationStorageEnabled` option according to your needs:
+
+* `personalizationStorageEnabled: true` triggers the in-app message with the frequency you defined in the [Adoube Journey Optimizer campaign](https://experienceleague-review.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
+* `personalizationStorageEnabled: false` triggers the in-app message on every page load.
