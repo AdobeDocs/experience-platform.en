@@ -109,11 +109,11 @@ The [!UICONTROL Activation data] tab displays a list of audiences that have been
 
 ![Activation data view streaming destination](../assets/ui/details-page/activation-data-streaming.png)
 
-### Remove multiple audiences from activation flows {#bulk-remove}
+<!-- ### Remove multiple audiences from activation flows {#bulk-remove}
 
 To remove multiple audiences from existing activation flows, select the audiences and then select **[!UICONTROL Remove audiences]**.
 
-![Activation data screen highlighting the Remove audiences option.](../assets/ui/details-page/bulk-remove-audiences.png)
+![Activation data screen highlighting the Remove audiences option.](../assets/ui/details-page/bulk-remove-audiences.png) -->
 
 ### Export multiple files on-demand to batch destinations {#bulk-export}
 
