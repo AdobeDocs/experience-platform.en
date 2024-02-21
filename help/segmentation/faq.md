@@ -240,6 +240,26 @@ For more information on the Split block, please read the [Audience Composition U
 
 Yes, all segmentation types ([batch segmentation, streaming segmentation, and edge segmentation](./home.md#evaluate-segments)) are supported in the Audience Composition workflow. However, since compositions are currently only run once per day, even if streaming- or edge-evaluated audiences are included, the result will be based on audience membership at the time the composition was executed.
 
-## How can I confirm a profile's membership in an audience?
+## Audience membership
+
+The following section lists questions related to audience membership.
+
+### How can I confirm a profile's membership in an audience?
 
 To confirm a profile's audience membership, visit the profile details page of the profile you want to confirm. Select **[!UICONTROL Attributes]**, followed by **[!UICONTROL View JSON]**, and you can confirm that the `segmentMembership` object contains the ID of the audience.
+
+### How does batch segmentation resolve profile membership?
+
+Audiences evaluated using batch segmentation resolve daily, with the audience membership results being recorded into the profile's `segmentMembership` attribute. Profile lookups generate a fresh version of the profile at the time of the lookup, but it does **not** refresh the batch segmentation results.
+
+As a result, when changes are made to the profile, such as merging two profiles together, these changes **will** appear in the profile when looked up, but will **not** be reflected in the `segmentMembership` attribute until the segment evaluation job has run again.
+
+For example, let's say you've created two mutually exclusive audiences: Audience A is for people who live in Washington and Audience B is for people who do **not** live in Washington. There are two profiles - profile 1 for a person who lives in Washington, and profile 2 for a person who lives in Oregon. 
+
+When the batch segmentation evaluation job runs, profile 1 will go to Audience A, while profile 2 will go to Audience B. Later on, but before the next day's batch segmentation evaluation job runs, an event that reconciles the two profiles enters Platform. As a result, a single merged profile that contains profiles 1 and 2 is created. 
+
+Until the next batch segment evaluation job is run, the new merged profile will have audience membership in **both** profile 1 and profile 2. As a result, this means it'll be a member of **both** Audience A and Audience B, despite the fact that these audiences have contradictory definitions. For the end-user, this is the **exact same situation** as before the profiles were connected, since there was always just the one person involved, and Platform just did **not** have enough information to connect the two profiles together. 
+
+If you use profile lookup to retrieve the newly created profile and look at its audience membership, it'll show that it's a member of **both** Audience A and Audience B, despite the fact that both of these audiences have contradictory definitions. Once the daily batch segmentation evaluation job runs, the audience membership will be updated to reflect this updated state of profile data.
+
+If you need more real-time audience resolution, use streaming or edge segmentation.
