@@ -189,9 +189,9 @@ Note the difference in file format between the two file types, when compressed:
 * When exporting compressed JSON files, the exported file format is `json.gz`
 * When exporting compressed parquet files, the exported file format is `gz.parquet`
 
-## Remove dataset from destination {#remove-dataset}
+## Remove datasets from destinations {#remove-dataset}
 
-To remove a dataset from an existing dataflow, follow the steps below:
+To remove datasets from an existing dataflow, follow the steps below:
 
 1. Log in to the [Experience Platform UI](https://experience.adobe.com/platform/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destination dataflows.
 
@@ -205,14 +205,19 @@ To remove a dataset from an existing dataflow, follow the steps below:
 
     ![The available datasets navigation option highlighted in the Activation data column.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. The **[!UICONTROL Activation data]** page for the destination appears. Select **[!UICONTROL Remove dataset]** in the right rail to trigger the remove dataset confirmation dialog. 
+1. The **[!UICONTROL Activation data]** page for the destination appears. Select the dataset which you want to remove, then select **[!UICONTROL Remove dataset]** in the right rail to trigger the dataset removal confirmation dialog.
 
     ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/remove-dataset-control.png)
+
+<!-- USE THIS FOR BULK REMOVE RELEASE
+
+1. The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog. 
+
+    ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/bulk-remove-datasets.png) -->
 
 1. In the confirmation dialog, select **[!UICONTROL Remove]** to immediately remove the dataset from exports to the destination. 
 
     ![Dialog showing the Confirm dataset removal option from the dataflow.](../assets/ui/export-datasets/remove-dataset-confirm.png)
-
 
 ## Dataset export entitlements {#licensing-entitlement}
 
