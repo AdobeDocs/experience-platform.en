@@ -62,7 +62,7 @@ A successful request creates the namespaces and schemas required for B2B.
 
 ## B2B namespaces
 
-Identity namespaces are a component of [[!DNL Identity Service]](../../../../identity-service/home.md) that serve to distinguish the context or type of an identity. A fully qualified identity includes an ID value and a namespace. See the [namespaces overview](../../../../identity-service/features/namespaces.md) for more information.
+Identity namespaces are a component of [[!DNL Identity Service]](../../../../identity-service/home.md) that serve to distinguish the context of an identity. A fully qualified identity includes an identity value and a namespace. Read the [namespaces overview](../../../../identity-service/features/namespaces.md) for more information.
 
 B2B namespaces are used in the primary identity of the entity.
 

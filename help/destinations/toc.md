@@ -101,7 +101,7 @@ feature: Destinations
         * [Decibel extension](./catalog/analytics/decibel.md)
         * [Demandbase extension](./catalog/analytics/demandbase.md)
         * [DialogTech extension](./catalog/analytics/dialogtech.md)
-        * [Gainsight PX](./catalog/analytics/gainsight-px.md)
+        * [Gainsight PX connection](./catalog/analytics/gainsight-px.md)
         * [Google Global Site Tag extension](./catalog/analytics/gtag-analytics.md)
         * [Google Universal Analytics extension](./catalog/analytics/google-universal-analytics.md)
         * [JW Player Analytics (Beta) extension](./catalog/analytics/jw-player-analytics.md)
@@ -133,6 +133,8 @@ feature: Destinations
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
+    * eCommerce destinations {#ecommerce}
+        * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
     * Email destinations {#email}
         * [Bizible extension](./catalog/email/bizible.md)
         * [Marketo extension](./catalog/email/marketo.md)
@@ -143,6 +145,7 @@ feature: Destinations
         * [Adobe Campaign connection](./catalog/email-marketing/adobe-campaign.md)
         * [Adobe Campaign Managed Cloud Services connection](./catalog/email-marketing/adobe-campaign-managed-services.md)
         * [Mailchimp Interest Categories](./catalog/email-marketing/mailchimp-interest-categories.md)
+        * [Mailchimp Tags](./catalog/email-marketing/mailchimp-tags.md)
         * [(API) Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua-api.md)
         * [(Files) Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua.md)
         * [Oracle Responsys connection](./catalog/email-marketing/oracle-responsys.md)
