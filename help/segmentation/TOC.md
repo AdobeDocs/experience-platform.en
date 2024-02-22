@@ -34,6 +34,7 @@ feature: Segments
     - [Edge segmentation](ui/edge-segmentation.md)
     - [Streaming segmentation](ui/streaming-segmentation.md)
     - [Streaming segmentation (Video)](video/streaming-segmentation-overview.md)
+    - [Ignore year time constraint update](ui/ignore-year.md)
     - [Time constraints refactoring](ui/segment-refactoring.md)
     - Segment Match {#segment-match}
       - [Segment Match overview](ui/segment-match/overview.md) 
