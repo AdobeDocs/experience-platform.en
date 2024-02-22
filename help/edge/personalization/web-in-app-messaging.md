@@ -172,6 +172,7 @@ In this example, the personalization content is displayed when a user clicks the
      }
  });
 ```
+
 ### Configure personalization storage {#personalization-storage}
 
 You can choose to show in-app messages to users for a set number of times, or every time they visit a page, through the `personalizationStorageEnabled` configuration option.
