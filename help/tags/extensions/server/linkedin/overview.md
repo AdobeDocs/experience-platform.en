@@ -56,7 +56,7 @@ After selection, additional controls appear to further configure the event. Sele
 
 | Input | Description |
 | --- | --- |
-| [!UICONTROL Conversion] | The ID of the conversion rule created in [LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a1657171). Select the conversion rule to obtain the ID, then copy the ID from the browser URL (for example, "/campaignmanager/accounts/508111232/conversions/15588877") as /conversions/<id>. |
+| [!UICONTROL Conversion] | The ID of the conversion rule created in ![LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a1657171). Select the conversion rule to obtain the ID, then copy the ID from the browser URL (for example, /campaignmanager/accounts/508111232/conversions/15588877) as **/conversions/<id>**. |
 | [!UICONTROL Conversion Time] | Each timestamp in milliseconds at which the conversion event happened. <br><br> Note: If your source records the conversion timestamp in seconds, please insert 000 at the end to transform it to milliseconds. |
 | [!UICONTROL Currency] | Currency code in ISO format. |
 | [!UICONTROL Amount] | Value of the conversion in decimal string (for example, "100.05"). |
