@@ -58,7 +58,7 @@ The next screen prompts you to choose a role for this assignment. Select **[!DNL
 
 >[!NOTE]
 >
->If you selected the RSA-HSM key type and have the Managed-HSM Key Vault tier, then you must select **[!DNL Managed HSM Crypto Service Encryption User]** user role.
+>If you selected the RSA-HSM key type and have the [!DNL Managed-HSM Key Vault] tier, then you must select **[!DNL Managed HSM Crypto Service Encryption User]** user role.
 
 ![The [!DNL Microsoft Azure] dashboard with the [!DNL Key Vault Crypto Service Encryption User] highlighted.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 

@@ -65,8 +65,6 @@ Use the provided form to provide a name for the key, and select either **RSA** o
 
 Use the remaining controls to configure the key you want to generate or import as desired. When finished, select **[!DNL Create]**.
 
-<!-- Is the image below now outdated (due to the RSA-HSM option)? -->
-
 ![The Create a key dashboard with [!DNL 3072] bits highlighted.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
 
 The configured key appears in the list of keys for the vault.
