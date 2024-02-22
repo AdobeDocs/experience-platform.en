@@ -9,7 +9,7 @@ exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
 
 >[!IMPORTANT]
 >
->Namespace in XDM is different from [identity namespace in Identity Service](../../identity-service/features/namespaces.md).
+>In XDM, namespace (the topic of this page) is used to distinguish fields in a schema. This is different with the concept of identity namespace in Identity Service, where namespace is used to distinguish identity values. Read the documentation on [namespace in Identity Service](../../identity-service/features/namespaces.md) for more information.
 
 All fields in Experience Data Model (XDM) schemas have an associated namespace. These namespaces allow you to extend your schemas and prevent field collisions as different schema components are brought together. This document provides an overview of namespaces in XDM and how they are represented in the [Schema Registry API](../api/overview.md).
 
