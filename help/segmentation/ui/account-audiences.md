@@ -9,7 +9,7 @@ exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 
 >[!AVAILABILITY]
 >
->Account audiences are only available in the [B2B Edition of Real-Time Customer Data Platform](../../rtcdp/b2b-overview.md) and the [B2P Edition of Real-Time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html). 
+>Account audiences are only available in the [B2B Edition of Real-Time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) and the [B2P Edition of Real-Time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p). 
 
 With account segmentation, Adobe Experience Platform allows you to bring the full ease and sophistication of the marketing segmentation experience from people-based audiences to account-based audiences. 
 
