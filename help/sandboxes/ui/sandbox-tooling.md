@@ -24,11 +24,11 @@ The table below lists [!DNL Adobe Real-Time Customer Data Platform] objects that
 | Platform | Object | Details |
 | --- | --- | --- |
 | Customer Data Platform | Sources | The source account credentials are not replicated in the target sandbox for security reasons and will be required to be updated manually. The source dataflow is copied in a draft status by default. |
-| Customer Data Platform | Audiences | Only the **[!UICONTROL Customer Audience]** type **[!UICONTROL Segmentation service]** is supported. Existing labels for consent and governance will be copied over in the same import job. |
-| Customer Data Platform | Identities | The system will auto-deduplicate Adobe standard identity namespaces when creating in the target sandbox. Audiences can only be copied when all attributes in audience rules are enabled in the union schema. The necessary schemas must be moved and enabled for unified profile first.|
-| Customer Data Platform | Schemas | Existing labels for consent and governance will be copied over in the same import job. The schema unified profile status will be copied as is from the source sandbox. If the schema is enabled for unified profile in the source sandbox, all attributes are moved to the union schema. The schema relationships edge case are not included in the package.|
+| Customer Data Platform | Audiences | Only the **[!UICONTROL Customer Audience]** type **[!UICONTROL Segmentation service]** is supported. Existing labels for consent and governance will be copied over in the same import job. System will auto select default Merge Policy in target sandbox with same XDM class when checking merge policy dependencies. |
+| Customer Data Platform | Identities | The system will auto-deduplicate Adobe standard identity namespaces when creating in the target sandbox. Audiences can only be copied when all attributes in audience rules are enabled in the union schema. The necessary schemas must be moved and enabled for unified profile first. |
+| Customer Data Platform | Schemas | Existing labels for consent and governance will be copied over in the same import job. User has the flexibility to import schemas without Unified Profile option enabled. The schema relationships edge case are not included in the package. |
 | Customer Data Platform | Datasets | Datasets are copied with the unified profile setting disabled by default. |
-| Customer Data Platform | Consent and Governance Policies | Add policies created by a user to a package and move them across sandboxes. |
+| Customer Data Platform | Consent and Governance Policies | Add custom policies created by a user to a package and move them across sandboxes. |
 
 The following objects are imported but are in a draft or disabled status:
 
