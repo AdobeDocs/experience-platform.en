@@ -40,6 +40,7 @@ feature: Web SDK
   * [Render personalized content](personalization/rendering-personalization-content.md)
   * [Personalization via hybrid implementation](personalization/hybrid-personalization.md)
   * [Manage flicker](personalization/manage-flicker.md)
+
   * Adobe Target {#adobe-target}
     * [Overview](personalization/adobe-target/target-overview.md)
     * [Single-page application implementation](personalization/adobe-target/spa-implementation.md)
@@ -55,6 +56,7 @@ feature: Web SDK
   * Adobe Journey Optimizer {#ajo}
     * [Overview](personalization/ajo/overview.md)
     * [Single-page application implementation](personalization/ajo/web-spa-implementation.md)
+    * [Configure Web In-App Messaging](personalization/web-in-app-messaging.md)
 * Consent {#consent}
   * [Supporting consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}

@@ -101,7 +101,7 @@ feature: Destinations
         * [Decibel extension](./catalog/analytics/decibel.md)
         * [Demandbase extension](./catalog/analytics/demandbase.md)
         * [DialogTech extension](./catalog/analytics/dialogtech.md)
-        * [Gainsight PX](./catalog/analytics/gainsight-px.md)
+        * [Gainsight PX connection](./catalog/analytics/gainsight-px.md)
         * [Google Global Site Tag extension](./catalog/analytics/gtag-analytics.md)
         * [Google Universal Analytics extension](./catalog/analytics/google-universal-analytics.md)
         * [JW Player Analytics (Beta) extension](./catalog/analytics/jw-player-analytics.md)
