@@ -41,6 +41,8 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 {style="table-layout:auto"}
 
+To learn more about data collections, read the [data collections overview](../../tags/home.md).
+
 <!-- ## Data Prep {#data-prep}
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
