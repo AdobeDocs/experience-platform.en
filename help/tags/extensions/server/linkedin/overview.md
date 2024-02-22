@@ -80,4 +80,6 @@ After selection, additional controls appear to further configure the event. Sele
 
 ## Next steps
 
-This guide covered how to send data to [!DNL LinkedIn] using the [!DNL LinkedIn Conversions API] event forwarding extension. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], refer to the [event forwarding overview](../../../ui/event-forwarding/overview.md).
+This guide covered how to send data to [!DNL LinkedIn] using the [!DNL LinkedIn Conversions API] event forwarding extension. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], read the [event forwarding overview](../../../ui/event-forwarding/overview.md).
+
+For details on how to debug your implementation using the Experience Platform Debugger and Event Forwarding Monitoring tool, read the [Adobe Experience Platform Debugger overview](../../../../debugger/home.md) and [Monitor activities in event forwarding](../../../ui/event-forwarding/monitoring.md).
