@@ -10,7 +10,7 @@ description: Learn about the Media Reporting Details Information Experience Data
 
 [!UICONTROL Media Reporting Details Information] is a standard Experience Data Model (XDM) data type that captures essential details about media playback events. Use the [!UICONTROL Media Reporting Details Information] data type to capture details such as the playhead position within the content, unique session identifiers, and various nested properties related to session, among others. This data type provides a comprehensive overview of the playback experience, that enables the tracking and analysis of media consumption patterns and associated events during playback sessions.
 
-<!-- What did you mean by "provide the correct screenshot with the Media Reporting details fields: adStart example" -->
+<!-- What did you mean by #2.a.3 "provide the correct screenshot with the Media Reporting details fields: adStart example" -->
 
 +++Select to display a diagram of the [!UICONTROL Media Reporting Details Information] data type.
 ![A diagram of the [!UICONTROL Media Reporting Details Information] data type.](../images/data-types/media-reporting-details-information.png)
