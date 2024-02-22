@@ -11,23 +11,29 @@ description: Learn about the Advertising Details Information Collection Experien
 ![A diagram of the Advertising Details Information Collection data type.](../images/data-types/advertising-details-information-collection.png)
 +++
 
-| Display name                            | Property        | Data type | Required | Description                                                                                                        | Audio and video paramters link |
+>[!NOTE]
+>
+>Each display name contains a link to further information on its audio and video parameters. The linked pages contain details on the video ad data collected by Adobe, implementation values, network parameters, reporting, and important considerations. 
+
+| Display name                            | Property        | Data type | Required | Description                                                                                                        | Audio and video parameters link |
 |----------------------------------------|-----------------|-----------|----------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
-| [!UICONTROL Ad Name]                   | `friendlyName`| string    |   Yes    | The human readable name of the ad. In reporting, "Ad Name" is the classification and "Ad Name (variable)" is the eVar. |
-| [!UICONTROL Ad ID]                      | `name`        | string    |   No     | The ID of the ad. Any integer and/or letter combination.                                           |
-| [!UICONTROL Ad Length Or Duration]      | `length`      | integer   |  Yes     | The length of video ad in seconds.                                                                 |
-| [!UICONTROL Ad In Pod Position (Ad Start)] | `podPosition` | integer|  Yes     | The index of the ad inside the parent ad start, for example, the first ad has index 0 and the second ad has index 1. |
-| [!UICONTROL Ad Player Name]             | `playerName`  | string    |  Yes     | The name of the player responsible for rendering the ad.                                       |
-| [!UICONTROL Ad Advertiser]              | `advertiser`  | string    |   No     | The company or brand whose product is featured in the ad.                                             |
+| [[!UICONTROL Ad Advertiser]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#advertiser)              | `advertiser`  | string    |   No     | The company or brand whose product is featured in the ad.                                             |  |
 | [!UICONTROL Ad Campaign]                | `campaignID`  | string    |   No     | The ID of the ad campaign.                                                                         |
 | [!UICONTROL Ad Creative ID]             | `creativeID`  | string    |   No     | The ID of the ad creative.                                                                         |
-| [!UICONTROL Ad Site ID]                 | `siteID`      | string    |   No     | The ID of the ad site.                                                                             |
 | [!UICONTROL Ad Creative URL]            | `creativeURL` | string    |   No     | The URL of the ad creative.                                                                       |
+| [!UICONTROL Ad In Pod Position (Ad Start)] | `podPosition` | integer|  Yes     | The index of the ad inside the parent ad start, for example, the first ad has index 0 and the second ad has index 1. |
+| [!UICONTROL Ad Length Or Duration]      | `length`      | integer   |  Yes     | The length of video ad in seconds.                                                                 |
+| [!UICONTROL Ad Name]                   | `friendlyName`| string    |   Yes    | The human readable name of the ad. In reporting, "Ad Name" is the classification and "Ad Name (variable)" is the eVar. |
 | [!UICONTROL Ad Placement ID]            | `placementID` | string    |   No     | The placement ID of the ad.                                                                        |
-| [!UICONTROL Ad Completed]               | `isCompleted` | boolean   |   No     | Tracks whether the ad has completed.                                                                               |
-| [!UICONTROL Ad Started]                 | `isStarted`   | boolean   |   No     | Tracks whether the Ad has started.                                                                                 |
-| [!UICONTROL Ad Time Played]             | `timePlayed`  | integer   |   No     | The total amount of time, in seconds, spent watching the ad (that is, the number of seconds played). |
+| [!UICONTROL Ad Player Name]             | `playerName`  | string    |  Yes     | The name of the player responsible for rendering the ad.                                       |
+| [!UICONTROL Ad Site ID]                 | `siteID`      | string    |   No     | The ID of the ad site.                                                                             |
 
 {style="table-layout:auto"}
 
-For more details on the field group, refer to the [public XDM repository](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json)
+<!-- REMOVED due to absence in Ref-Impl-Schema schema:
+| [!UICONTROL Ad ID]                      | `name`        | string    |   No     | The ID of the ad. Any integer and/or letter combination.                                           |
+| [!UICONTROL Ad Completed]               | `isCompleted` | boolean   |   No     | Tracks whether the ad has completed.                                                                               |
+| [!UICONTROL Ad Started]                 | `isStarted`   | boolean   |   No     | Tracks whether the Ad has started.                                                                                 |
+| [!UICONTROL Ad Time Played]             | `timePlayed`  | integer   |   No     | The total amount of time, in seconds, spent watching the ad (that is, the number of seconds played). | 
+-->
+
