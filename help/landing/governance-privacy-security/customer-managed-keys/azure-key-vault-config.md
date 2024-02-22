@@ -9,7 +9,7 @@ Customer-managed keys (CMK) only supports keys from a [!DNL Microsoft Azure] Key
 
 >[!IMPORTANT]
 >
->Only the Premium and Standard service tiers for [!DNL Azure] Key Vault are supported. [!DNL Azure Managed HSM], [!DNL Azure Dedicated HSM] and [!DNL Azure Payments HSM] are not supported. Refer to the [[!DNL Azure] documentation](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) for more information on offered key management services.
+>Only the Premium and Standard service tiers for [!DNL Azure] Key Vault are supported. Refer to the [[!DNL Azure] documentation](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) for more information on offered key management services.
 
 >[!NOTE]
 >
@@ -57,13 +57,15 @@ Once you have created a Key Vault, you can generate a new key. Navigate to the *
 
 ![The [!DNL Keys] tab of [!DNL Azure] with [!DNL Generate import] highlighted.](../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-Use the provided form to provide a name for the key, and select **RSA** for the key type. At a minimum, the **[!DNL RSA key size]** must be at least **3072** bits as required by [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] is also compatible with RSA 3027.
+Use the provided form to provide a name for the key, and select either **RSA** or **RSA-HSM** for the key type. At a minimum, the **[!DNL RSA key size]** must be at least **3072** bits as required by [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] is also compatible with RSA 3027.
 
 >[!NOTE]
 >
 >Remember the name that you provide for the key, as it is required to send the key to Adobe.
 
 Use the remaining controls to configure the key you want to generate or import as desired. When finished, select **[!DNL Create]**.
+
+<!-- Is the image below now outdated (due to the RSA-HSM option)? -->
 
 ![The Create a key dashboard with [!DNL 3072] bits highlighted.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
 
