@@ -68,3 +68,101 @@ The [!UICONTROL Activate destination] page appears. For more information on the 
 ## Next steps {#next-steps}
 
 After reading this guide, you now have a better understanding of how to create and use your account audiences in Adobe Experience Platform. To learn how to use other types of audiences in Platform, please read the [Segmentation Service UI guide](./overview.md).
+
+## Appendix {#appendix}
+
+The following section provides additional information about account audiences.
+
+### Account segmentation validation {#validation}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_eventLookbackWindow"
+>title="Maximum lookback window error"
+>abstract="The maximum lookback window for Experience Events is 30 days."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_combinationMaxDepth"
+>title="Maximum nested container depth error"
+>abstract="The maximum depth of nested containers is **5**. This means that you **cannot** have more than five nested containers when creating your audience."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_combinationMaxBreadth"
+>title="Maximum rules amount error"
+>abstract="The maximum number of rules within a single container is **5**. This means you that you **cannot** have more than five rules within a single container when creating your audience."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_crossEntityMaxDepth"
+>title="Maximum cross entity amount error"
+>abstract="The maximum number of cross entities that can be used within a single audience is **5**. A cross entity is when you change between different entities within your audience. For example, going from an Account to a Person to a Marketing List."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowCustomEntity"
+>title="Custom entity error"
+>abstract="Custom entities are **not** allowed."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_b2bBuiltInEntities"
+>title="Invalid B2B entity error"
+>abstract="Only the following B2B entities are allowed to be used: `_xdm.context.account`, `_xdm.content.opportunity`, `_xdm.context.profile`, `_xdm.context.experienceevent`, `_xdm.context.account-person`, `_xdm.classes.opportunity-person`, `_xdm.classes.marketing-list-member`, `_xdm.classes.marketing-list`, `_xdm.context.campaign-member`, and `_xdm.classes.campaign`."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_rhsMaxOptions"
+>title="Maximum values error"
+>abstract="The maximum number of values that can be checked for a single field is **50**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowInSegmentByReference"
+>title="inSegment event error"
+>abstract="inSegment events are **not** allowed."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowInSegmentByValue"
+>title="inSegment event error"
+>abstract="inSegment events are **not** allowed."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowSequentialEvents"
+>title="Sequential events error"
+>abstract="Sequential events are **not** allowed."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowMaps"
+>title="Map-type property error"
+>abstract="Map-type properties are **not** allowed."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_maxNestedAggregationDepth"
+>title="Maximum nested entity depth error"
+>abstract="The maximum depth of nested arrays is **5**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_maxObjectNestingLevel"
+>title="Maximum nested object amount error"
+>abstract="The maximum number of nested objects allowed is **10**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_generic"
+>title="Constraint violation"
+>abstract="The audience violates a constraint. Please read the linked document for more details."
+
+When using account audiences, the audience **must** comply with the following constraints:
+
+>[!NOTE]
+>
+>The following list shows the **default** constraints for account audiences. These values **may** change, depending on the settings implemented by your organization's administrator.
+
+- The maximum lookback window for Experience Events is **30 days**.
+- The maximum depth of nested containers is **5**.
+  - This means that you **cannot** have more than five nested containers when creating your audience.
+- The maximum number of rules within a single container is **5**.
+  - This means that your audience **cannot** have more than five rules that compose your audience.
+- The maximum number of cross entities that can be used is **5**.
+  - A cross entity is when you change between different entities within your audience. For example, going from an Account to a Person to a Marketing List.
+- Custom entities **cannot** be used.
+- The maximum number of values that can be checked for a single field is **50**.
+  - For example, if you have a field of "City Name", you can check that value against 50 city names.
+- Account audiences **cannot** use `inSegment` events.
+- Account audiences **cannot** use sequential events.
+- Account audiences **cannot** use maps.
+- The maximum depth of nested arrays is **5**.
+- The maximum number of nested objects is **10**.
