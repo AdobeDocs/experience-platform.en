@@ -7,13 +7,13 @@ exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
 
 >[!IMPORTANT]
 >
->As a Data Processor under the [!DNL GDPR] regulations, Adobe provides you with the necessary tools to comply with consent requirements under the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) in the European Union.
-><br><br>
->When you activate audiences to this destination, you must include user-level consent strings in the activation workflow, in order to comply with the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en).
-><br><br>
->Customers who have purchased **Adobe Privacy & Security Shield** must update their [consent policy](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) to filter out non-consented profiles. 
-><br><br>
->Customers who have *not* purchased **Adobe Privacy & Security Shield** must use the [segment definition](../../../segmentation/home.md#segment-definitions) options to filter out non-consented profiles.
+> Google is releasing changes to the [Google Ads API](https://developers.google.com/google-ads/api/docs/start) and the [Display & Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) in order to support the compliance and consent-related requirements defined under the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in the European Union ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). Enforcement of these changes to consent requirements is expected to go into effect starting March 6, 2024.
+><br/><br/>
+>To adhere to the EU user consent policy and continue creating audience lists for users in the European Economic Area (EEA), advertisers and partners must ensure they are passing end-user consent when uploading audience data. As a Google Partner, Adobe provides you with the necessary tools to comply with these consent requirements under the DMA in the European Union.
+><br/><br/>
+>Customers who have purchased Adobe Privacy & Security Shield and have configured a [consent policy](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) to filter out non-consented profiles do not need to take any action.
+><br/><br/>
+>Customers who have not purchased Adobe Privacy & Security Shield must use the [segment definition](../../../segmentation/home.md#segment-definitions) capabilities within [Segment Builder](../../../segmentation/ui/segment-builder.md) to filter out non-consented profiles, in order to continue using the existing Real-Time CDP Google Destinations without interruption.
 
 [!DNL Display & Video 360], formerly known as [!DNL DoubleClick Bid Manager], is a tool used to execute retargeting and audience targeted digital campaigns across Display, Video, and Mobile inventory sources. 
 
