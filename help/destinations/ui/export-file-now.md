@@ -42,13 +42,9 @@ To export files on-demand to batch destinations, you must have successfully [con
 
     ![Image highlighting a filtered dataflow.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Select the **[!UICONTROL Activation data]** tab and select the audience for which you want to export a file on-demand and select the **[!UICONTROL Export file now]** control to trigger a one-time export which will deliver a file to your batch destination.
+3. Select the **[!UICONTROL Activation data]** tab and select the audiences for which you want to export files on-demand and select the **[!UICONTROL Export file now]** control to trigger a one-time export which will deliver a file for each selected audience to your batch destination.
 
-    >[!IMPORTANT]
-    >
-    >Selecting multiple audiences to export files on-demand in bulk is currently not supported in the UI. Use the [ad-hoc activation API](/help/destinations/api/ad-hoc-activation-api.md) for that purpose.
-
-    ![Image highlighting the Export file now button.](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
+    ![Image highlighting the Export file now button.](../assets/ui/activate-on-demand/bulk-export-file-now.png)
 
 4. Select **[!UICONTROL Yes]** to confirm and trigger the file export.
 
