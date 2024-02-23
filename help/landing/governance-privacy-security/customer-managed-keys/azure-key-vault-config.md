@@ -9,7 +9,7 @@ Customer-managed keys (CMK) only supports keys from a [!DNL Microsoft Azure] Key
 
 >[!IMPORTANT]
 >
->Only the Premium and Standard service tiers for [!DNL Azure] Key Vault are supported. Refer to the [[!DNL Azure] documentation](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) for more information on offered key management services.
+>Only the Standard, Premium, and Managed HSM tiers for [!DNL Azure] Key Vault are supported. [!DNL Azure Dedicated HSM] and [!DNL Azure Payments HSM] are not supported. Refer to the [[!DNL Azure] documentation](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) for more information on offered key management services.
 
 >[!NOTE]
 >
