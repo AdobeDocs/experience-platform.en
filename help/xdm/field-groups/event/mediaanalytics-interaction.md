@@ -16,4 +16,6 @@ description: Learn about the MediaAnalytics Interaction Details schema field gro
 
 {style="table-layout:auto"}
 
-For more details on the field group, refer to the [public XDM repository](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json)
+>[!TIP]
+>
+>You can hide certain fields that are not used by the Media Edge API. Hiding these fields makes the schema easier to read and understand, but it is not required. These fields refer only to those in the [!UICONTROL MediaAnalytics Interaction Details] fieldgroup. To improve readability in the Platform UI, follow the instructions in the [Media Analytics documentation on how to hide unused fields](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform).

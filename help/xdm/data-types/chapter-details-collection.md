@@ -1,12 +1,12 @@
 ---
-title: Chapter Details Information Data Type
-description: Learn about the Chapter Details Information Experience Data Model (XDM) data type.
+title: Chapter Details Collection Data Type
+description: Learn about the Chapter Details Collection Experience Data Model (XDM) data type.
 ---
-# [!UICONTROL Chapter Details Information] data type
+# [!UICONTROL Chapter Details] Collection data type
 
-[!UICONTROL Chapter Details Information] is a standard Experience Data Model (XDM) data type that describes various attributes related to chapters or segments within media content. Use the [!UICONTROL Chapter Details Information] data type to capture details such as chapter name, duration, position, ID, playback status (started/completed), and the time spent on each chapter.
+[!UICONTROL Chapter Details] Collection is a standard Experience Data Model (XDM) data type that describes various attributes related to chapters or segments within media content. Use the [!UICONTROL Chapter Details] Collection data type to capture details such as chapter name, duration, position, ID, playback status (started/completed), and the time spent on each chapter.
 
-![A diagram of the  Chapter Details Information data type.](../images/data-types/chapter-details-information.png)
+![A diagram of the Chapter Details Collection data type.](../images/data-types/chapter-details-collection.png)
 
 | Display name              | Property      | Data type | Description                                       |
 |---------------------------|---------------|-----------|---------------------------------------------------|
@@ -20,5 +20,3 @@ description: Learn about the Chapter Details Information Experience Data Model (
 | [!UICONTROL Chapter Time Played ]      | `timePlayed`  | integer   | The time spent on the chapter, in seconds.        |
 
 {style="table-layout:auto"}
-
-For more details on the field group, refer to the [public XDM repository](https://github.com/adobe/xdm/blob/master/components/datatypes/chapterdetails.schema.json)

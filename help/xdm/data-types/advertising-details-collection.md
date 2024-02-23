@@ -1,10 +1,10 @@
 ---
-title: Advertising Details Information Collection Data Type
-description: Learn about the Advertising Details Information Collection Experience Data Model (XDM) data type.
+title: Advertising Details Collection Data Type
+description: Learn about the Advertising Details Collection Experience Data Model (XDM) data type.
 ---
-# [!UICONTROL Advertising Details Information] Collection data type
+# [!UICONTROL Advertising Details] Collection data type
 
-[!UICONTROL Advertising Details Information] Collection is a standard Experience Data Model (XDM) data type that captures key attributes related to advertisements. It includes information such as the ad ID, advertiser and campaign IDs, length, position within a sequence, details about the player rendering the ad, and so on. You can use this data type to track and analyze various aspects of ad performance and engagement, and provide insights into how audiences interact with and respond to different advertisements. This information you provide is used to track your streaming data.
+[!UICONTROL Advertising Details] Collection is a standard Experience Data Model (XDM) data type that captures key attributes related to advertisements. It includes information such as the ad ID, advertiser and campaign IDs, length, position within a sequence, details about the player rendering the ad, and so on. You can use this data type to track and analyze various aspects of ad performance and engagement, and provide insights into how audiences interact with and respond to different advertisements. This information you provide is used to track your streaming data.
 
 +++Select to display a diagram of the Advertising Details Information Collection data type.
 ![A diagram of the Advertising Details Information Collection data type.](../images/data-types/advertising-details-information-collection.png)
