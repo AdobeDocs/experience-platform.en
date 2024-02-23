@@ -89,7 +89,7 @@ Note the following known limitations and important callouts while using the Expe
 * Currently, a single Experience Cloud Audiences destination is supported. Attempting to configure a second destination connection results in an error.
 * When connecting to the destination, you can see an option to [enable dataflow alerts](../../ui/alerts.md). Though visible in the UI, the **enable alerts option is not currently supported**.
 * **Audience backfill support**: The first export to Audience Manager or other Experience Cloud solutions includes a historical population of the audiences. Users of the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) who are configuring this destination should expect a backfill difference of approximately six hours.
-* Composite audiences are not directly supported. You will need to create an Adobe Experience Platform audience based on your composite audience in order to activate via this destination. 
+* Composite audiences are not directly supported. You will need to create an Adobe Experience Platform segment definition based on your composite audience in order to activate via this destination. 
 
 ### Latency when activating audiences {#audience-activation-latency}
 
