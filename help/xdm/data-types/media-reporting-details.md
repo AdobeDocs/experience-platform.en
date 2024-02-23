@@ -16,26 +16,15 @@ description: Learn about the Media Reporting Details Experience Data Model (XDM)
 ![A diagram of the [!UICONTROL Media Reporting Details] data type.](../images/data-types/media-reporting-details-information.png)
 +++
 
-<!-- 
->[!NOTE]
->
->Not all 12 events are sent further down the chain, only five of them are: `sessionStart`, `adStart`, `adComplete`, `chapterStart`, `sessionComplete`.
- -->
-<!-- Please clarify what you meant by this. I cannot refer to a 'chain' without an explanation. -->
-
 | Display name          | Property        | Data type | Description |
 | --------------------- | --------------- | --------- | ----------- |
-| [!UICONTROL Playhead] | `playhead` |  integer |  The Playhead represents the current playback position within the media content. For live content, it indicates the current second of the day (0 <= playhead < 86400). For recorded content, it reflects the current second of the content's duration (0 <= playhead < content length).  |
-| [!UICONTROL Media Session ID] | `sessionID` |  string |  The Media Session ID uniquely identifies an instance of a content stream during an individual playback session. It serves as a distinctive identifier for tracking and managing the specific playback experience associated with a user or viewer. |
-| [!UICONTROL Session Details]  | `sessionDetails` | [[!UICONTROL sessionDetails]](./session-details-information.md)  |  Session Details encompass comprehensive information associated with the experience event, offering insights into user interactions, duration, and contextual data pertinent to the playback session. |
 | [!UICONTROL Advertising Details]  | `advertisingDetails` |  [[!UICONTROL advertisingDetails]](./advertising-details-information.md) |  Advertising Details refer to specific information related to advertising activities during the experience event. This includes ad metadata, targeting specifics, and performance metrics. |
 | [!UICONTROL Advertising Pod Details]  | `advertisingPodDetails` | [[!UICONTROL advertisingPodDetails]](./advertising-pod-details-information.md)  |  Advertising Pod Details contain information concerning ad pods within the experience event. It provides insights into ad sequence, content, and engagement metrics. |
 | [!UICONTROL Chapter Details]  | `chapterDetails` |  [[!UICONTROL chapterDetails]](./chapter-details-information.md) |  Chapter Details captures data related to the chapters or segmented portions of the content. It provides information about chapter markers, timelines, and associated metadata. |
-| [!UICONTROL Error Details]  | `errorDetails` |  [[!UICONTROL errorDetails]](./error-details-information.md) |  Error Details contain information pertaining to errors encountered during the experience event. This includes error codes, descriptions, timestamps, and relevant contextual data. |
-|  [!UICONTROL Qoe Data Details] | `qoeDataDetails` | [[!UICONTROL qoeDataDetails]](./qoe-data-details-information.md) |  QoE (Quality of Experience) Data Details capture performance-related metrics and user experience data. It provides insights into quality, responsiveness, and user interactions. |
-| [!UICONTROL List Of States Start]  | `statesStart` | [[!UICONTROL playerStateData]](./player-state-data-information.md) |  States Start provides an array to list the states at the beginning of the experience event. It features data related to playback, user actions, or content specifics. |
-| [!UICONTROL List Of States End]  | `statesEnd` | [[!UICONTROL playerStateData]](./player-state-data-information.md) |  States End provides an array to list the states at the conclusion of the experience event. It contains details about the final playback states or content status. |
-|  [!UICONTROL List Of States] | `states` | [[!UICONTROL playerStateData]](./player-state-data-information.md) |  The States property is an array that captures various states throughout the experience event. This property provides sequential data on playback, user actions, or content changes. |
+| [!UICONTROL List Of States] | `states` | [[!UICONTROL playerStateData]](./player-state-data-information.md) |  The States property is an array that captures various states throughout the experience event. This property provides sequential data on playback, user actions, or content changes. |
+| [!UICONTROL Qoe Data Details] | `qoeDataDetails` | [[!UICONTROL qoeDataDetails]](./qoe-data-details-information.md) |  QoE (Quality of Experience) Data Details capture performance-related metrics and user experience data. It provides insights into quality, responsiveness, and user interactions. |
+| [!UICONTROL Session Details]  | `sessionDetails` | [[!UICONTROL sessionDetails]](./session-details-information.md)  |  Session Details encompass comprehensive information associated with the experience event, offering insights into user interactions, duration, and contextual data pertinent to the playback session. |
 | [!UICONTROL The Custom Metadata]  | `customMetadata` | [[!UICONTROL customMetadataDetails]](./custom-metadata-details-information.md) |  Custom Metadata contains user-defined or additional metadata associated with the experience event. This metadata allows for personalized or specific data to be included in the event context. |
+| [!UICONTROL Playhead] | `playhead` |  integer |  The Playhead represents the current playback position within the media content. For live content, it indicates the current second of the day (0 <= playhead < 86400). For recorded content, it reflects the current second of the content's duration (0 <= playhead < content length).  |
 
 {style="table-layout:auto"}

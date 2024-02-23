@@ -115,7 +115,7 @@ feature: Schemas
   * [Cart](./data-types/cart.md)
   * [Category data](./data-types/category-data.md)
   * [Chapter Details Collection](./data-types/chapter-details-collection.md)
-  * [Chapter details information](./data-types/chapter-details.md)
+  * [Chapter Details Reporting](./data-types/chapter-details-reporting.md)
   * [Commerce Scope](./data-types/commerce-scope.md)
   * [Commerce](./data-types/commerce.md)
   * [Consent String](./data-types/consent-string.md)
