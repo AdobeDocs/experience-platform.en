@@ -37,7 +37,7 @@ feature: Destinations
         * [Activate audiences to edge personalization destinations](./ui/activate-edge-personalization-destinations.md)
         * [Activate audiences to curated destinations based on LiveRamp identifiers](./ui/activate-curated-destinations.md)
         * [Activate prospect audiences to destinations](./ui/activate-prospect-audiences.md)
-        * [(Limited availability) Activate account audiences to destinations](./ui/activate-account-audiences.md)
+        * [Activate account audiences to destinations](./ui/activate-account-audiences.md)
         * [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
         * [Export datasets using the Experience Platform UI](./ui/export-datasets.md)
         * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
@@ -101,6 +101,7 @@ feature: Destinations
         * [Decibel extension](./catalog/analytics/decibel.md)
         * [Demandbase extension](./catalog/analytics/demandbase.md)
         * [DialogTech extension](./catalog/analytics/dialogtech.md)
+        * [Gainsight PX connection](./catalog/analytics/gainsight-px.md)
         * [Google Global Site Tag extension](./catalog/analytics/gtag-analytics.md)
         * [Google Universal Analytics extension](./catalog/analytics/google-universal-analytics.md)
         * [JW Player Analytics (Beta) extension](./catalog/analytics/jw-player-analytics.md)
@@ -132,6 +133,8 @@ feature: Destinations
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
+    * eCommerce destinations {#ecommerce}
+        * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
     * Email destinations {#email}
         * [Bizible extension](./catalog/email/bizible.md)
         * [Marketo extension](./catalog/email/marketo.md)
@@ -142,6 +145,7 @@ feature: Destinations
         * [Adobe Campaign connection](./catalog/email-marketing/adobe-campaign.md)
         * [Adobe Campaign Managed Cloud Services connection](./catalog/email-marketing/adobe-campaign-managed-services.md)
         * [Mailchimp Interest Categories](./catalog/email-marketing/mailchimp-interest-categories.md)
+        * [Mailchimp Tags](./catalog/email-marketing/mailchimp-tags.md)
         * [(API) Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua-api.md)
         * [(Files) Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua.md)
         * [Oracle Responsys connection](./catalog/email-marketing/oracle-responsys.md)

@@ -54,3 +54,11 @@ style-src 'unsafe-inline'
 >[!NOTE]
 >
 >Adobe does **not** recommend specifying `unsafe-inline` because it allows for any script to run on the page, which limits the benefits of the CSP.
+
+## Configure a CSP for In-App Messaging {#in-app-messaging}
+
+When you configure [Web In-App Messaging](../personalization/web-in-app-messaging.md), you must inclde the following directive in your CSP:
+
+```
+default-src  blob:;
+```
