@@ -34,4 +34,3 @@ description: Learn about the Advertising Details Collection Experience Data Mode
 | [[!UICONTROL Ad Player Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-player-name)             | `playerName`  | string    |  Yes     | The name of the player responsible for rendering the ad.                                       |
 | [[!UICONTROL Ad Site ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#site-id)                 | `siteID`      | string    |   No     | The ID of the ad site.                                                                             |
 
-{style="table-layout:auto"}
