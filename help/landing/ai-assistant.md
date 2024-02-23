@@ -18,7 +18,7 @@ You can query Assistant for information such as:
 
 * Guidance on how to perform tasks pertaining to data and audiences.
 * Statuses and metrics of the existing data objects in your organization.
-* Use case examples and nuances to better understand your data objects, including attributes, datasets, destinations, schemas, segments, and sources.
+* Use case examples and nuances to better understand your data objects, including attributes, dataflows, datasets, destinations, schemas, segments, and sources.
 
 Read the guide below to learn how you can use Assistant to help navigate and understand your Experience Platform and Real-Time CDP workflows.
 
@@ -171,27 +171,18 @@ Next, Assistant receives another follow-up request. This time, Assistant respond
 
 +++
 
-## Scope {#scope}
-
-Assistant can answer questions regarding Real-Time CDP and Experience Platform concepts, as well as data usage specific to your user account. Assistant can also infer context based on the UI page that you are in. It can identify:
-
-* The user account that you are using.
-* The organization that you belong to. 
-* The page that you are viewing on your screen.
-* The resource (including type and ID) that you are viewing on your screen.
-* Given that you are in the process of a particular Experience Platform or Real-Time CDP workflow, Assistant can deduce your intent.
-
-### Documentation {#documentation}
+## Documentation {#documentation}
 
 Currently, the documentation index covers Adobe Experience Platform (Real-Time CDP and Audiences). The index is updated periodically.
 
 The documentation retrieval model is trained on Experience Platform (Real-Time CDP and Audiences). Questions outside the scope of Adobe Experience Platform such as, questions about other Adobe products like Adobe Target and the Creative Cloud suite cannot be answered.
 
-### Data usage {#data-usage}
+## Data usage {#data-usage}
 
 You can also ask Assistant questions about your data usage in the following domains: 
 
 * Attributes
+* Dataflows
 * Datasets
 * Destinations _(Questions regarding accounts and some questions about dataflow cannot be answered at this time.)_
 * Schemas _(Questions regarding field groups cannot be answered at this time.)_
