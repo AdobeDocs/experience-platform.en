@@ -22,5 +22,3 @@ description: Learn about the Chapter Details Reporting Experience Data Model (XD
 | [!UICONTROL Chapter Position]          | `index`       | integer   |   Yes     | The position (index, integer) of the chapter inside the content. |
 | [!UICONTROL Chapter Started]           | `isStarted`   | boolean   |   NO      | Whether the chapter has started.                  |
 | [!UICONTROL Chapter Time Played ]      | `timePlayed`  | integer   |   NO      | The time spent on the chapter, in seconds.        |
-
-{style="table-layout:auto"}
