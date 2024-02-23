@@ -179,5 +179,5 @@ You can choose to show in-app messages to users for a set number of times, or ev
 
 In the [Web SDK configuration](../fundamentals/configuring-the-sdk.md) set the `personalizationStorageEnabled` option according to your needs:
 
-* `personalizationStorageEnabled: true` triggers the in-app message with the frequency you defined in the [Adoube Journey Optimizer campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
+* `personalizationStorageEnabled: true` triggers the in-app message with the frequency you defined in the [Adobe Journey Optimizer campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
 * `personalizationStorageEnabled: false` triggers the in-app message on every page load.
