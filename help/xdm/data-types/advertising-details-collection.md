@@ -14,6 +14,13 @@ description: Learn about the Advertising Details Collection Experience Data Mode
 >
 >Each display name contains a link to further information on its audio and video parameters. The linked pages contain details on the video ad data collected by Adobe, implementation values, network parameters, reporting, and important considerations. 
 
+<!-- REMOVED due to absence in Ref-Impl-Schema schema:
+| [!UICONTROL Ad ID]                      | `name`        | string    |   No     | The ID of the ad. Any integer and/or letter combination.                                           |
+| [!UICONTROL Ad Completed]               | `isCompleted` | boolean   |   No     | Tracks whether the ad has completed.                                                                               |
+| [!UICONTROL Ad Started]                 | `isStarted`   | boolean   |   No     | Tracks whether the Ad has started.                                                                                 |
+| [!UICONTROL Ad Time Played]             | `timePlayed`  | integer   |   No     | The total amount of time, in seconds, spent watching the ad (that is, the number of seconds played). | 
+-->
+
 | Display name                                                                                                                                                    | Property        | Data type | Required | Description                                                                                                        |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|----------------------------------------------------------------------------------------------------------------------------------|
 | [[!UICONTROL Ad Advertiser]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#advertiser)              | `advertiser`  | string    |   No     | The company or brand whose product is featured in the ad.                                             | 
@@ -28,11 +35,3 @@ description: Learn about the Advertising Details Collection Experience Data Mode
 | [[!UICONTROL Ad Site ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#site-id)                 | `siteID`      | string    |   No     | The ID of the ad site.                                                                             |
 
 {style="table-layout:auto"}
-
-<!-- REMOVED due to absence in Ref-Impl-Schema schema:
-| [!UICONTROL Ad ID]                      | `name`        | string    |   No     | The ID of the ad. Any integer and/or letter combination.                                           |
-| [!UICONTROL Ad Completed]               | `isCompleted` | boolean   |   No     | Tracks whether the ad has completed.                                                                               |
-| [!UICONTROL Ad Started]                 | `isStarted`   | boolean   |   No     | Tracks whether the Ad has started.                                                                                 |
-| [!UICONTROL Ad Time Played]             | `timePlayed`  | integer   |   No     | The total amount of time, in seconds, spent watching the ad (that is, the number of seconds played). | 
--->
-
