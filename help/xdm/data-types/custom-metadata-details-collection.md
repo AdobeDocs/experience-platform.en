@@ -6,7 +6,7 @@ description: Learn about the Custom Metadata Details Collection Experience Data 
 
 [!UICONTROL Custom Metadata Details] Collection is a standard Experience Data Model (XDM) data type defines a structure for storing custom metadata. Use the [!UICONTROL Custom Metadata Details] Collection data type to capture details such as the name and value of custom metadata associated with content or interactions.
 
-![A diagram of the Custom Metadata Details Collection data type.](../images/data-types/custom-metadata-details-collection.png)
+![A diagram of the Custom Metadata Details Collection data type.](../images/data-types/the-custom-metadata-collection.png)
 
 | Display name                               | Property         | Data type | Description                             |
 |--------------------------------------------|------------------|-----------|-----------------------------------------|

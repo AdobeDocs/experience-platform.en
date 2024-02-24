@@ -1,13 +1,13 @@
 ---
-title: Advertising Details Information Data Type
-description: Learn about the Advertising Details Information Experience Data Model (XDM) data type.
+title: Advertising Details Reporting Data Type
+description: Learn about the Advertising Details Reporting Experience Data Model (XDM) data type.
 ---
-# [!UICONTROL Advertising Details Information] data type
+# [!UICONTROL Advertising Details] Reporting data type
 
-[!UICONTROL Advertising Details Information] is a standard Experience Data Model (XDM) data type that captures key attributes related to advertisements. It includes information such as the ad ID, advertiser and campaign IDs, length, position within a sequence, details about the player rendering the ad, and so on. You can use this data type to track and analyze various aspects of ad performance and engagement, and provide insights into how audiences interact with and respond to different advertisements.
+[!UICONTROL Advertising Details] Reporting is a standard Experience Data Model (XDM) data type that captures key attributes related to advertisements. It includes information such as the ad ID, advertiser and campaign IDs, length, position within a sequence, details about the player rendering the ad, and so on. You can use this data type to track and analyze various aspects of ad performance and engagement, and provide insights into how audiences interact with and respond to different advertisements.
 
-+++Select to display a diagram of the Advertising Details Information data type.
-![A diagram of the Advertising Details Information data type.](../images/data-types/advertising-details-information.png)
++++Select to display a diagram of the Advertising Details Reporting data type.
+![A diagram of the Advertising Details Reporting data type.](../images/data-types/advertising-details-information.png)
 +++
 
 | Display name               | Property        | Data type | Description                                                                                   |

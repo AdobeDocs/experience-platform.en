@@ -13,7 +13,7 @@ description: Learn about the Media Reporting Details Experience Data Model (XDM)
 <!-- What did you mean by #2.a.3 "provide the correct screenshot with the Media Reporting details fields: adStart example" -->
 
 +++Select to display a diagram of the [!UICONTROL Media Reporting Details] data type.
-![A diagram of the [!UICONTROL Media Reporting Details] data type.](../images/data-types/media-reporting-details-reporting.png)
+![A diagram of the [!UICONTROL Media Reporting Details] data type.](../images/data-types/media-reporting-details.png)
 +++
 
 | Display name          | Property        | Data type | Description |
