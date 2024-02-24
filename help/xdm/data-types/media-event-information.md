@@ -2,7 +2,7 @@
 title: Media Event Information Data Type
 description: Learn about the Media Event Information Experience Data Model (XDM) data type.
 ---
-# [!UICONTROL Media event information] data type
+# [!UICONTROL Media Event Information] data type
 
 [!UICONTROL Media Event Information] is a standard Experience Data Model (XDM) data type that describes media details information related to the experience event. 
 
@@ -10,7 +10,7 @@ description: Learn about the Media Event Information Experience Data Model (XDM)
 
 | Property | Data type | Description |
 | --- | --- | --- |
-| `mediaCollection` | [[!UICONTROL mediaDetails]](./media-details-information.md) | Media details information related to the experience event. |
+| `mediaCollection` | [!UICONTROL mediaDetails] | Media details information related to the experience event. This data type is used for both [media data collection](./media-collection-details.md) and [media data reporting](./media-reporting-details.md). |
 | `mediaEventTimestamp` | [!UICONTROL String] | The time when a media event occurred. |
 | `mediaEventType` | [!UICONTROL String] | The media event type. |
 

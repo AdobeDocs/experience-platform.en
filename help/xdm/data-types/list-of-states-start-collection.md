@@ -6,7 +6,7 @@ description: Learn about the XXX Data Type Experience Data Model (XDM) data type
 
 Description
 
-![A diagram of XXX data type.](../images/data-types/qoe-data-details-information.png)
+![A diagram of XXX data type.](../images/data-types/list-of-states-start-collection.png)
 
 | Display name      | Property       | Data type | Description                                  |
 |-------------------|----------------|-----------|----------------------------------------------|

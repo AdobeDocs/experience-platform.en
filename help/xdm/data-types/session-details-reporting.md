@@ -7,7 +7,7 @@ description: Learn about the Session Details Information Experience Data Model (
 [!UICONTROL Session Details Information] is a standard Experience Data Model (XDM) data type that tracks data related to media playback sessions. The schema encompasses a wide range of properties that provide insights into how media content is consumed. Use the [!UICONTROL Session Details Information] data type to capture user engagement by logging playback events, ad interactions, progress markers, pauses, and other metrics. This offers valuable insights into user behavior and content consumption patterns.
 
 +++Select to display a diagram of the Session Details Information data type.
-![A diagram of the  Session Details Information data type.](../images/data-types/session-details-information.png)
+![A diagram of the  Session Details Information data type.](../images/data-types/session-details-reporting.png)
 +++
 
 | Display name | Property | Data type | Description |
