@@ -43,11 +43,11 @@ Get complete information about the functionality included in the Prime and Ultim
 * [Real-Time Customer Data Platform (B2B Edition - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 * [Real-Time Customer Data Platform (B2P Edition - Prime and Ultimate Packages)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 
-### Adobe Real-Time Customer Data Platform - Business-to-Consumer (B2C) edition
+### Adobe Real-Time Customer Data Platform - Business-to-Consumer (B2C) edition {#rtcdp-b2c}
 
 Real-Time CDP Business-to-Consumer (B2C) is purpose-built for B2C marketers to unify, govern and activate all *consumer data* across systems and channels for more personalized customer experiences and complete data peace-of-mind.
 
-### Adobe Real-Time Customer Data Platform - Business-to-Business (B2B) edition
+### Adobe Real-Time Customer Data Platform - Business-to-Business (B2B) edition {#rtcdp-b2b}
 
 Real-Time CDP Business-to-Business (B2B) is purpose-built for B2B marketers to unify, govern and activate all *lead and account data* across systems and channels for more personalized customer experiences and complete data peace-of-mind
 
@@ -55,7 +55,7 @@ Real-Time CDP B2B Edition allows marketers to create complete profiles for peopl
 
 See [the overview on Real-Time CDP B2B Edition](./b2b-overview.md) for more comprehensive information.
 
-### Adobe Real-Time Customer Data Platform - Business-to-Person (B2P) edition
+### Adobe Real-Time Customer Data Platform - Business-to-Person (B2P) edition {#rtcdp-b2p}
 
 With the Business-to-Person (B2P) edition of Real-Time CDP, you can unify, govern and activate your *B2C and B2B customer data* using a single CDP to target the same person across all lines of business with a seamless experience and complete data peace-of-mind.
 
