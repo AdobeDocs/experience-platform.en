@@ -1,30 +1,30 @@
 ---
 title: Acxiom 
-description: Use Acxiom Infobase to deliver the most productive prospect audiences possible. This connector securely exports first party data from Real-Time CDP and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. This will be matched against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
-last-substantial-update: 2024-02-21
+description: Use Acxiom Data Enhancement Export to facilitate the export of 1st party profile data for Acxiom enhancement, which Acxiom will utilize to append contracted attributes for import back into the profile.
+last-substantial-update: 2024-02-26
 badge: Beta
 ---
-# [!DNL Acxiom Infobase] destination connection
+# [!DNL Acxiom Data Enhancement Export] destination connection
 
 >[!NOTE]
 >
->The [!DNL Acxiom Infobase] destination is in beta.  This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, please contact them directly at acxiom-adobe-help@acxiom.com.
+>The [!DNL Acxiom Data Enhancement Export] destination is in beta.  This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, please contact them directly at acxiom-adobe-help@acxiom.com.
 
 ## Overview {#overview}
 
-Use Acxiom Infobase to deliver the most productive prospect audiences possible. This connector securely exports first party data from Real-Time Customer Data Platform and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. This will be matched against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
+Use Acxiom Data Enhancement Import to facilitate the export of 1st party profile data for Acxiom enhancement, which Acxiom will utilize to append contracted attributes for import back into the profile.
 
-This tutorial provides steps to create an [!DNL Acxiom Infobase] destination connection and dataflow using the Adobe Experience Platform user interface.  This connector is used to deliver data to Acxiom prospect service using Amazon S3 as a drop point.
+This tutorial provides steps to create an [!DNL Acxiom Data Enhancement Export] destination connection and dataflow using the Adobe Experience Platform user interface.  This connector is used to deliver data to Acxiom enhancement service using Amazon S3 as a drop point.
 
-![The destination catalog with the Acxiom destination selected.](../../assets/catalog/advertising/acxiom/image-destination-catalog.png)
+![The destination catalog with the Acxiom destination selected.](../../assets/catalog/advertising/acxiom/image-destination-enhancement-catalog.png)
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Acxiom Infobase destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the Acxiom Data Enhancement Import destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use case 1: Creating a Suppression List for Prospecting Datasets {#use-case-1}
+### Use case 1: Enhance Customer Datasets {#use-case-1}
 
-Marketing professionals aiming to enhance the effectiveness of their outreach strategies often employ the creation of a suppression list. This list includes existing customers and specific segments, ensuring their exclusion from prospecting activities during targeted campaigns. This strategic approach helps refine the audience, avoids redundant communication, and contributes to a more focused and efficient marketing effort.
+Marketing professionals aiming to enhance the effectiveness of their outreach strategies by adding selected elements to better target campaigns. This strategic approach helps refine the audience and contributes to a more focused and efficient marketing effort.
 
 ## Prerequisites {#prerequisites}
 
@@ -82,9 +82,9 @@ Define a new Acxiom Managed S3 location
 
 ### Existing Account
 
-Accounts already defined using the Acxiom Infobase card will appear in a list pop-up and when selected provides details on the account.  This is shown below in the example from the UI, when you navigate to **Destinations** > **Accounts**;
+Accounts already defined using the Acxiom Data Enhancement Import card will appear in a list pop-up and when selected provides details on the account.  This is shown below in the example from the UI, when you navigate to **Destinations** > **Accounts**;
 
-![Existing Account](../../assets/catalog/advertising/acxiom/image-destination-account.png)
+![Existing Account](../../assets/catalog/advertising/acxiom/image-destination-enhancement-account.png)
 
 ### Fill in destination details {#destination-details}
 
@@ -142,7 +142,7 @@ Processing requires name and address elements, while not all elements are requir
 
 Use the review page for a summary of your dataflow prior to submission
 
-![Review](../../assets/catalog/advertising/acxiom/image-destination-review.png)
+![Review](../../assets/catalog/advertising/acxiom/image-destination-enhancement-review.png)
 
 ## Next steps
 
