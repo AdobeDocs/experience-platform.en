@@ -1,14 +1,15 @@
 ---
-title: Session Details Information Data Type
-description: Learn about the Session Details Information Experience Data Model (XDM) data type.
+title: Session Details Reporting Data Type
+description: Learn about the Session Details Reporting Experience Data Model (XDM) data type.
 ---
-# [!UICONTROL Session Details Information] data type
+# [!UICONTROL Session Details] Reporting data type
 
-[!UICONTROL Session Details Information] is a standard Experience Data Model (XDM) data type that tracks data related to media playback sessions. The schema encompasses a wide range of properties that provide insights into how media content is consumed. Use the [!UICONTROL Session Details Information] data type to capture user engagement by logging playback events, ad interactions, progress markers, pauses, and other metrics. This offers valuable insights into user behavior and content consumption patterns.
+[!UICONTROL Session Details] Reporting is a standard Experience Data Model (XDM) data type that tracks data related to media playback sessions. The schema encompasses a wide range of properties that provide insights into how media content is consumed. Use the [!UICONTROL Session Details] Reporting data type to capture user engagement by logging playback events, ad interactions, progress markers, pauses, and other metrics. This offers valuable insights into user behavior and content consumption patterns.
 
-+++Select to display a diagram of the Session Details Information data type.
-![A diagram of the  Session Details Information data type.](../images/data-types/session-details-reporting.png)
++++Select to display a diagram of the Session Details Reporting data type.
+![A diagram of the  Session Details Reporting data type.](../images/data-types/session-details-reporting.png)
 +++
+<!-- Confirm fields below:  -->
 
 | Display name | Property | Data type | Description |
 | --- | --- | --- | --- |
