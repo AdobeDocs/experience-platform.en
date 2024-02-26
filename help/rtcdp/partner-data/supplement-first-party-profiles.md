@@ -24,7 +24,7 @@ Adobe understands there is no one-size-fits-all approach and allows for seamless
 
 For example, follow the steps described in this use case when you need to enrich your customer records with demographic and intent signals. 
 
-## Prerequisites and planning {#prerequisites-and-planning}
+## Prerequisites and planning
 
 As you consider supplementing your own first-party profiles with attributes from data partners, you should discuss and address the following details on the data enrichment loop with the data partner:
 
