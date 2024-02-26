@@ -3,8 +3,6 @@ title: Acxiom Prospecting Data Import
 description: Learn how to connect Acxiom Prospecting Data to Adobe Experience Platform and Adobe Real-Time Customer Data Platform using the UI.
 last-substantial-update: 2024-02-21
 badge: Beta
-hide: true
-hidefromtoc: true
 ---
 # Create an [!DNL Acxiom Prospecting Data Import] source connection and dataflow in the UI
 
