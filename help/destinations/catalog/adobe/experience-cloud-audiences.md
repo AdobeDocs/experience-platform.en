@@ -89,6 +89,7 @@ Note the following known limitations and important callouts while using the Expe
 * Currently, a single Experience Cloud Audiences destination is supported. Attempting to configure a second destination connection results in an error.
 * When connecting to the destination, you can see an option to [enable dataflow alerts](../../ui/alerts.md). Though visible in the UI, the **enable alerts option is not currently supported**.
 * **Audience backfill support**: The first export to Audience Manager or other Experience Cloud solutions includes a historical population of the audiences. Users of the [legacy audience-sharing integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) who are configuring this destination should expect a backfill difference of approximately six hours.
+* Audiences originating from [Audience Composition](../../../segmentation/ui/audience-composition.md) are not supported directly. To activate composite audiences to this destination you must create an audience definition through [Segment Builder](../../../segmentation/ui/segment-builder.md) based on your composite audience, and activate the newly created audience.
 
 ### Latency when activating audiences {#audience-activation-latency}
 
@@ -193,4 +194,4 @@ Audiences and traits in Audience Manager are subject to [Role-Based Access Contr
 
 Audiences exported from Real-Time CDP are assigned to a specific datasource in Audience Manager called **[!UICONTROL Experience Platform Segments]**.
 
-To allow only certain users access to the audiences, you can apply access controls to the audiences belonging to the datasource. Set new access control permissions in Audience Manager for these audiences and traits created from Real-Time CDP segments.
+To allow only certain users access to the audiences, use [Role-Based Access Controls](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) to configure user access to the audiences and traits created from Real-Time CDP audiences.

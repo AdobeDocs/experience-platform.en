@@ -1,7 +1,8 @@
 ---
 solution: Experience Platform
-title: Get started
+title: Get started with Use Case Playbooks
 description: Learn how to get started with the Use Case Playbooks functionality.
+role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
 ---
 
@@ -21,7 +22,12 @@ Watch this video to learn about the steps needed to create your sandbox, configu
 
 ## Create a development sandbox {#create-development-sandbox}
 
-Use Case Playbooks uses a special type of developement sandbox. To get started and get access to the [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md) functionality, [create a new development sandbox](/help/sandboxes/ui/user-guide.md#create) (make sure you do not select a production sandbox) with the name (not the title) containing either `-ucp` or `-UCP` in the suffix, as shown below.
+Use Case Playbooks uses a special type of development sandbox. To get started and get access to the [[!UICONTROL Use Case Playbooks]](/help/use-case-playbooks/playbooks/overview.md) functionality, [create a new development sandbox](/help/sandboxes/ui/user-guide.md#create) (make sure you do not select a production sandbox) with the name (not the title) containing either `-ucp` or `-UCP` in the suffix, as shown below.
+
+>[!IMPORTANT]
+>
+>When you create a new development sandbox, ensure that the name contains `-ucp` or `-UCP` in the suffix.
+
 
 ![Create a development sandbox for use case playbooks](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
@@ -59,7 +65,7 @@ To create and manage schemas, utilize the data modeling permissions; **[!UICONTR
 
 **Permissions for destinations**
 
-To create and manage destinations, use the Destinations permissions; **[!UICONTROL Manage]**, **[!UICONTROL Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL Manage and Activate Dataset Destination]**, UICONTROL Destination Authoring*.
+To create and manage destinations, use the Destinations permissions; **[!UICONTROL Manage]**, **[!UICONTROL Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL Manage and Activate Dataset Destination]**, **[!UICONTROL Destination Authoring]**.
 
 **Permissions for journeys**
 
