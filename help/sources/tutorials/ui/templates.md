@@ -45,7 +45,7 @@ This tutorial requires a working understanding of the following components of Ex
 >id="platform_sources_templates_accounttype"
 >title="Select business type"
 >abstract="Select the appropriate business type for your use case. Your access may vary depending on your Real-Time Customer Data Platform subscription account."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html" text="Real-Time CDP overview"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP overview"
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace and see a catalog of sources available in Experience Platform.
 

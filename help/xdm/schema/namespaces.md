@@ -7,6 +7,10 @@ exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
 ---
 # Namespacing in Experience Data Model (XDM)
 
+>[!IMPORTANT]
+>
+>In XDM, namespace (the topic of this page) is used to distinguish fields in a schema. This is different to the concept of identity namespace in Identity Service, where namespace is used to distinguish identity values. Read the documentation on [namespace in Identity Service](../../identity-service/features/namespaces.md) for more information.
+
 All fields in Experience Data Model (XDM) schemas have an associated namespace. These namespaces allow you to extend your schemas and prevent field collisions as different schema components are brought together. This document provides an overview of namespaces in XDM and how they are represented in the [Schema Registry API](../api/overview.md).
 
 Namespacing allows you to define a field in one namespace as meaning something different than the same field in a different namespace. In practice, the namespace of a field indicates who created the field (such as standard XDM (Adobe), a vendor, or your organization).

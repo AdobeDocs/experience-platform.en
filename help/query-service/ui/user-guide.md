@@ -113,7 +113,11 @@ To minimize your development time, you are recommended to develop your queries w
 
 ### Format text {#format-text}
 
-The [!UICONTROL Format text] feature makes your query more readable by adding standardized syntax styling. Select **[!UICONTROL Format text]** to standardize all the text within the Query Editor. 
+The [!UICONTROL Format text] feature makes your query more readable by adding standardized syntax styling. Select **[!UICONTROL Format text]** to standardize all the text within the Query Editor.
+
+>[!NOTE]
+>
+>The [!UICONTROL Format text] feature does not work with anonymous blocks. To learn how to chain one or more SQL statements sequentially, see the [anonymous block documentation](../key-concepts/anonymous-block.md). 
 
 ![The Query Editor with [!UICONTROL Format text] and the SQL statements highlighted.](../images/ui/query-editor/format-text.png)
 

@@ -14,7 +14,13 @@ After you have ingested your data into Adobe Experience Platform, you can begin 
 
 ## Next Steps
 
-This document covered the prerequisites needed to use [!DNL Query Service] features in Experience Platform. To learn more about how [!DNL Query Service] benefits data processing in Platform, see the [example use case presentation](../use-cases/abandoned-browse.md).
+This document covered the prerequisites needed to use [!DNL Query Service] features in Experience Platform. To quickly get started using Query Service features, you are recommended to read the following documents:
+
+- [General guidance for query execution](../best-practices/writing-queries.md)
+- [SQL syntax in Query Service](../sql/syntax.md)
+- [Create derived datasets with SQL](../data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
+
+Alternatively, to learn more about how Query Service benefits data processing in Platform, watch the [abandoned browse use case presentation](../use-cases/abandoned-browse.md#video-example).
 
 The following resources are useful to improve your understanding of [!DNL Query Service]:
 
