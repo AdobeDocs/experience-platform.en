@@ -43,16 +43,16 @@ In order to access your bucket on Experience Platform, you need to provide valid
 ## Connect your [!DNL Acxiom] Account
 
 You can find the [!DNL Acxiom] source in the sources catalog under the "Data Partners" header.  Sources cards are initially labeled with "Set up". Once you have created an account, this label changes to "Add data", which you can use to access existing accounts or create more new accounts.  Select the ellipses (...) for options to view existing accounts and dataflows, as well as the documentation.
-<br>![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-catalog.png)
+<br>![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-catalog.png)
 
 Source Configuration and Authentication - Defined S3 account associated with [!DNL Acxiom] prospect response.
 
 ## Existing Account
 A list of existing accounts for Infobase data appears. Select an account from the list to view details on that account.
-<br>![The sources catalog with the Acxiom source selected.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-existing-account.png)
+<br>![Existing account listing](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-existing-account.png)
 ## New Account
 If you are creating a new account, select a new [!DNL Acxiom] Managed S3 location, and then provide a name, an optional description, and your credentials.  Once you have provided your credentials, select Connect to source and allow for a few moments for the connection to establish.
-<br>![New account definition.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-account.png)
+<br>![New account definition.](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-new-account.png)
 * **Account Name (Required)** - The name of the account.
 * **Description (Optional)** - A brief explanation of the purpose of the account.
 * **Account Authentication**
@@ -66,7 +66,7 @@ If you are creating a new account, select a new [!DNL Acxiom] Managed S3 locatio
 
 ## Select Data
 Select the file that you want to ingest from the desired bucket and sub-directory.  A preview of the data can be provided once delimiter and compression type is defined.
-<br>    ![File preview.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-preview.png)
+<br>    ![File preview.](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-preview.png)
 >[!NOTE]
 >
 >While JSON and Parquet file types are listed, you are not required or expected to use them during the [!DNL Acxiom] source worfklow.
@@ -78,10 +78,10 @@ Select the file that you want to ingest from the desired bucket and sub-director
             * **Output dataset name (Required)** - The name of the new dataset.
             * **Description (Optional)** - A brief explanation of the purpose of the dataset.
             * **Schema (Required)** - A dropdown list of schemas that exist in your organization. You can also create your own schema prior to the source configuration process. For more information, read the guide on [creating schema in the UI](../../../../../xdm/tutorials/create-schema-ui.md)
-              <br>      ![Creation of a new dataset.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-dataset.png)
+              <br>      ![Creation of a new dataset.](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-new-dataset.png)
     * **Existing Dataset** - Select **Existing dataset** to use an existing dataset.
         * **Advanced Search** - This option is an expansion of the existing dataset dropdown, presenting additional details on the datasets before selection, including details such as if they are profile enabled, the date they were created or the selected behavior of the dataset.
-          <br>      ![Searching existing datasets](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset.png)
+          <br>      ![Searching existing datasets](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-dataset.png)
     * **Profile Dataset** - Toggle to enable your dataset for ingestion to Real-Time Customer Profile.
     * **Error Diagnostics** - Select **Error diagnostics** to instruct the source to produce error diagnostics that you can later reference using APIs. For more information, read the [error diagnostics overview](../../../../../ingestion/quality/error-diagnostics.md)
     * **Enable Partial Ingestion** - Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. With this capability, users can successfully ingest all their correct data into Adobe Experience Platform while all their incorrect data is batched separately, along with details as to why it is invalid.  For more information, read the [Partial ingestion overview](../../../../../ingestion/batch-ingestion/partial.md)
@@ -92,13 +92,13 @@ Select the file that you want to ingest from the desired bucket and sub-director
     * **Sources Dataflow Run Start** - Issues an alert when the dataflow starts.
     * **Sources Dataflow Run Success** - Issues an alert when the dataflow ends without error.
     * **Sources Dataflow Run Failure** - Issues an alert when the dataflow ends with a failure status.
-      <br>    ![Dataset details](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-dataset-details.png)
+      <br>    ![Dataset details](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-dataset-details.png)
 
 ## Mapping
 
 Use the mapping interface to map your source data to the appropriate schema fields before ingesting data to Experience Platform.  For more information, read the [mapping guide in the UI](../../../../../data-prep/ui/mapping.md)
 
-<br>![Mapping](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-mapping.png)
+<br>![Mapping](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-mapping.png)
 
 ## Schedule your dataflow ingestion
 Use the scheduling interface to define the ingestion schedule of your dataflow.
@@ -107,7 +107,7 @@ Use the scheduling interface to define the ingestion schedule of your dataflow.
 * **Interval** - When a Frequency is selected other than once, interval to establish a set time frame between every ingestion. For example, an ingestion frequency set to Day and an interval set to 15 means that your dataflow is scheduled to ingest data every 15 days.
 * **Start Time** - The timestamp for the projected run, presented in UTC time zone.
 * **Backfill** - A boolean value that determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested.
-  <br>![Schedualing](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-scheduling.png)
+  <br>![Schedualing](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-scheduling.png)
 
 ## Review your dataflow
 Use the review page for a summary of your dataflow prior to ingestion. Details are grouped in the following categories:
@@ -116,7 +116,7 @@ Use the review page for a summary of your dataflow prior to ingestion. Details a
 * **Assign dataset & map fields** - Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
 * **Scheduling** - Shows that active period, frequency, and interval of the ingestion schedule.
   Once you have reviewed your dataflow, click Finish and allow some time for the dataflow to be created.
-  <br>![Review](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-review.png)
+  <br>![Review](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-review.png)
 
 ## Next steps
 
