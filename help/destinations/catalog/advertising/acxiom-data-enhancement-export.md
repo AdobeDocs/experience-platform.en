@@ -1,5 +1,5 @@
 ---
-title: Acxiom 
+title: Acxiom Data Enhancement Export
 description: Use Acxiom Data Enhancement Export to facilitate the export of 1st party profile data for Acxiom enhancement, which Acxiom will utilize to append contracted attributes for import back into the profile.
 last-substantial-update: 2024-02-26
 badge: Beta
@@ -160,4 +160,4 @@ To verify if data has been exported successfully, check your [!DNL Amazon S3 Sto
 
 ## Additional resources {#additional-resources}
 
-*Acxiom Audience Data and Distribution:* https://www.acxiom.com/customer-data/audience-data-distribution/
+*Acxiom Infobase:* https://www.acxiom.com/wp-content/uploads/2022/02/fs-acxiom-infobase_AC-0268-22.pdf
