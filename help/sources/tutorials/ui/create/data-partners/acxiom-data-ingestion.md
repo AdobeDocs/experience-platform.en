@@ -1,17 +1,17 @@
 ---
-title: Acxiom Data Enhancement Import
+title: Acxiom Data Ingestion
 description: This connector facilitates the import of Acxiom enhancement data into a schema mapped to the 1st-party profile data in Adobe Experience Platform, based on contracted choices. Afterwards, this data can be utilized to generate comprehensive segments for preview and activation across outbound marketing channels.
 last-substantial-update: 2024-02-26
 badge: Beta
 ---
-# Create an [!DNL Acxiom Data Enhancement Import] source connection and dataflow in the UI. {#overview}
+# Create an [!DNL Acxiom Data Ingestion] source connection and dataflow in the UI. {#overview}
 >[!NOTE]
 >
->The [!DNL Acxiom Data Enhancement Import] source is in beta. Please read the [sources overview](../../../../home.md) for more information on using beta-labeled sources.
+>The [!DNL Acxiom Data Ingestion] source is in beta. Please read the [sources overview](../../../../home.md) for more information on using beta-labeled sources.
 
-Acxiom Data Enhancement Import connector facilitates the import of Acxiom enhancement data into a schema mapped to the 1st-party profile data in Adobe Experience Platform, based on contracted choices. Afterwards, this data can be utilized to generate comprehensive segments for preview and activation across outbound marketing channels.
+Acxiom Data Ingestion connector facilitates the import of Acxiom enhancement data into a schema mapped to the 1st-party profile data in Adobe Experience Platform, based on contracted choices. Afterwards, this data can be utilized to generate comprehensive segments for preview and activation across outbound marketing channels.
 
-Read this tutorial to learn how to create an [!DNL Acxiom Data Enhancement Import] source connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to retrieve and map response from Acxiom enhancement service using Amazon S3 as a drop point.
+Read this tutorial to learn how to create an [!DNL Acxiom Data Ingestion] source connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to retrieve and map response from Acxiom enhancement service using Amazon S3 as a drop point.
 
 
 ## Prerequisites {#prerequisites}
@@ -44,7 +44,7 @@ In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the **[!UICONTROL Data & Identity Partners]** category, select **[!UICONTROL Acxiom Data Enhancement Import]** and then select **[!UICONTROL Set up]**.
+Under the **[!UICONTROL Data & Identity Partners]** category, select **[!UICONTROL Acxiom Data Ingestion]** and then select **[!UICONTROL Set up]**.
 
 >[!TIP]
 >
