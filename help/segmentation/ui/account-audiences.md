@@ -39,6 +39,10 @@ You can also use the search and filtering functionality to quickly search and so
 
 ## Create audience {#create}
 
+>[!NOTE]
+>
+>Account audiences are evaluated using **batch** segmentation, and will be evaluated every 24 hours.
+
 To create an account audience, select **[!UICONTROL Create audience]** on the [!UICONTROL Browse] page.
 
 ![The [!UICONTROL Create audience] button is highlighted on the account audience browse page.](../images/ui/account-audiences/select-create-audience.png)
