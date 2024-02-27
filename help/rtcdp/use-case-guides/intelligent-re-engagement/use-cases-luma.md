@@ -1,5 +1,5 @@
 ---
-title: Intelligent Re-engagement Luma example
+title: Intelligent Re-engagement Luma examples
 description: Example videos for Intelligent Re-engagement use case.
 feature: Use Cases
 ---
