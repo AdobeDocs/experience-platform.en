@@ -1,15 +1,15 @@
 ---
 title: Account Audiences
 description: Learn how to create and use account audiences to target account profiles in downstream destinations.
-badgeLimitedAvailability: label="Limited availability" type="Caution"
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 ---
 # Account audiences
 
 >[!AVAILABILITY]
 >
->Account audiences are only available in the [B2B Edition of Real-Time Customer Data Platform](../../rtcdp/b2b-overview.md). Additionally, account audience functionality is currently in **limited availability**. Contact Adobe Customer Care or your Adobe representative to request access to this functionality.
+>Account audiences are only available in the [B2B Edition of Real-Time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) and the [B2P Edition of Real-Time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p). 
 
 With account segmentation, Adobe Experience Platform allows you to bring the full ease and sophistication of the marketing segmentation experience from people-based audiences to account-based audiences. 
 
