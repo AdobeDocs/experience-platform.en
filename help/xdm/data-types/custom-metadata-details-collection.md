@@ -8,9 +8,9 @@ description: Learn about the Custom Metadata Details Collection Experience Data 
 
 ![A diagram of the Custom Metadata Details Collection data type.](../images/data-types/the-custom-metadata-collection.png)
 
-| Display name                               | Property         | Data type | Description                             |
-|--------------------------------------------|------------------|-----------|-----------------------------------------|
-| [!UICONTROL Custom Metadata Field Name]    | `name`           | string    | The name of the custom field.           |
-| [!UICONTROL Custom Metadata Field Value]   | `value`          | string    | The value of the custom field.          |
+| Display name                               | Property         | Data type | Required | Description                             |
+|--------------------------------------------|------------------|-----------|----------|-------------------------------|
+| [!UICONTROL Custom Metadata Field Name]    | `name`           | string    |    No    | The name of the custom field.           |
+| [!UICONTROL Custom Metadata Field Value]   | `value`          | string    |    No    | The value of the custom field.          |
 
 {style="table-layout:auto"}

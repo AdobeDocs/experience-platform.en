@@ -8,9 +8,9 @@ description: Learn about the Error Details Collection Experience Data Model (XDM
 
 ![A diagram of the  Error Details Information data type.](../images/data-types/error-details-collection.png)
 
-| Display name   | Property       | Data type | Description                                  |
-|----------------|----------------|-----------|----------------------------------------------|
-| [!UICONTROL Error ID]      | `name`       | string    | The error ID.                                |
-| [!UICONTROL Error Source]   | `source`     | string    | The error source. Enumerated: "player", "external" with respective meanings.  |
+| Display name               | Property     | Data type | Required | Description                                   | 
+|----------------------------|--------------|-----------|----------|-----------------------------------------------|
+| [!UICONTROL Error ID]      | `name`       | string    |    No    | The error ID.                                 |
+| [!UICONTROL Error Source]  | `source`     | string    |    No    | The error source. Enumerated: "player", "external" with respective meanings.  |
 
 {style="table-layout:auto"}

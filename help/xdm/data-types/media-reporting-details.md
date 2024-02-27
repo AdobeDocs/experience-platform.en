@@ -12,6 +12,10 @@ description: Learn about the Media Reporting Details Experience Data Model (XDM)
 
 <!-- What did you mean by #2.a.3 "provide the correct screenshot with the Media Reporting details fields: adStart example" -->
 
+>[!NOTE]
+>
+>Media Collection fields capture data and send it onto other Adobe services for further processing. Media Reporting fields are used by Adobe services to analyze the Media Collection fields sent by users. This data, alongside other specific user metrics, are computed and reported upon.
+
 +++Select to display a diagram of the [!UICONTROL Media Reporting Details] data type.
 ![A diagram of the [!UICONTROL Media Reporting Details] data type.](../images/data-types/media-reporting-details.png)
 +++

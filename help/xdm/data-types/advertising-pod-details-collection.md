@@ -8,11 +8,11 @@ description: Learn about the Advertising Pod Details Collection Experience Data 
 
 ![A diagram of the Advertising Pod Details Information Collection data type.](../images/data-types/advertising-pod-details-collection.png)
 
-| Display name               | Property               | Data type | Description                                           |
-|----------------------------|------------------------|-----------|-------------------------------------------------------|
-| [!UICONTROL Ad Break ID]                | `ID`               | string    | The ID of the ad break.                               |
-| [!UICONTROL Pod Friendly Name]          | `friendlyName`      | string    | The easily understandable name of the ad break.                     |
-| [!UICONTROL Ad In Pod Position]         | `index`         | integer   | The index of the ad inside the parent ad break start.  |
-| [!UICONTROL Pod Offset]                 | `offset`           | integer   | **Required** The offset of the ad break inside the content, in seconds. |
+| Display name                            | Property        | Data type | Required | Description                                             |
+|-----------------------------------------|-----------------|-----------|--------------------------------------------------------------------|
+| [!UICONTROL Ad Break ID]                | `ID`            | string    |  No    | The ID of the ad break.                                   |
+| [!UICONTROL Pod Friendly Name]          | `friendlyName`  | string    |  No    | The easily understandable name of the ad break.           |
+| [!UICONTROL Ad In Pod Position]         | `index`         | integer   |  No    | The index of the ad inside the parent ad break start.      |
+| [!UICONTROL Pod Offset]                 | `offset`        | integer   |  Yes   | The offset of the ad break inside the content, in seconds. |
 
 {style="table-layout:auto"}

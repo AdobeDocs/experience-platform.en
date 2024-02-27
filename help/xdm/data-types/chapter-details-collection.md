@@ -8,15 +8,15 @@ description: Learn about the Chapter Details Collection Experience Data Model (X
 
 ![A diagram of the Chapter Details Collection data type.](../images/data-types/chapter-details-collection.png)
 
-| Display name              | Property      | Data type | Description                                       |
-|---------------------------|---------------|-----------|---------------------------------------------------|
-| [!UICONTROL Chapter Name]              | `friendlyName` | string    | The name of the chapter and/or segment.           |
-| [!UICONTROL Chapter Length Or Duration]| `length`       | integer   | **Required** The length of the chapter, in seconds.            |
-| [!UICONTROL Chapter Offset]            | `offset`      | integer   | **Required** The offset of the chapter inside the content (in seconds) from the start. |
-| [!UICONTROL Chapter Position]          | `index`       | integer   | **Required** The position (index, integer) of the chapter inside the content. |
-| [!UICONTROL Chapter ID]                | `ID`          | string    | The auto-generated ID of the chapter.             |
-| [!UICONTROL Chapter Started]           | `isStarted`   | boolean   | Whether the chapter has started.                  |
-| [!UICONTROL Chapter Completed]         | `isCompleted` | boolean   | Whether the chapter has completed.                |
-| [!UICONTROL Chapter Time Played ]      | `timePlayed`  | integer   | The time spent on the chapter, in seconds.        |
+| Display name                           | Property      | Data type | Required | Description                                       | 
+|----------------------------------------|---------------|-----------|----------|---------------------------------------------------|
+| [!UICONTROL Chapter Name]              | `friendlyName`| string    |   No     | The name of the chapter and/or segment.           |
+| [!UICONTROL Chapter Length Or Duration]| `length`      | integer   |   Yes    | The length of the chapter, in seconds.            |
+| [!UICONTROL Chapter Offset]            | `offset`      | integer   |   Yes    | The offset of the chapter inside the content (in seconds) from the start. |
+| [!UICONTROL Chapter Position]          | `index`       | integer   |   Yes    | The position (index, integer) of the chapter inside the content. |
+| [!UICONTROL Chapter ID]                | `ID`          | string    |   No     | The auto-generated ID of the chapter.             |
+| [!UICONTROL Chapter Started]           | `isStarted`   | boolean   |    No    | Whether the chapter has started.                  |
+| [!UICONTROL Chapter Completed]         | `isCompleted` | boolean   |    No    | Whether the chapter has completed.                |
+| [!UICONTROL Chapter Time Played ]      | `timePlayed`  | integer   |    No    | The time spent on the chapter, in seconds.        |
 
 {style="table-layout:auto"}
