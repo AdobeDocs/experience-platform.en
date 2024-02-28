@@ -1,27 +1,22 @@
 ---
 title: Transport Layer Security (TLS) Information
 description: Information regarding what TLS versions and ciphers are used
-exl-id: 
 ---
 # Transport Layer Security (TLS) Information
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. For a consolidated reference of the terminology changes, refer to the [term updates](../../term-updates.md) document.
 
-TLS is a cryptographic protocol that provides end-to-end security of data sent between applications over the Internet.
-
->[!NOTE]
->
-> For more detailed information on TLS, refer to the [TLS internetsociety docs](https://www.internetsociety.org/deploy360/tls/basics/).
+Transport Layer Security (TLS) is a cryptographic protocol that provides end-to-end security for data sent between applications over the Internet.  For more detailed information on TLS, read the [TLS basics](https://www.internetsociety.org/deploy360/tls/basics/) documentation.
 
 Tags in Adobe Experience Platform are a tag management system that is designed to dynamically load scripts on your website. TLS secures the communication between the Adobe host `assets.adobedtm.com` and your website when these scripts are loaded.
 
-Various versions of TLS exist along with a number of different ciphers it supports. Not all versions and ciphers are the same as some are considered less or more secure than others.
+There are multiple TLS versions available, and it supports a number of different ciphers.. Not all versions and ciphers are the same as some are considered less or more secure than others.
 
 ### Supported TLS versions and Ciphers
 
-The following TLS versions and ciphers are currently supported by the Adobe host option.
+The Adobe host option currently supports the following TLS versions and ciphers:
 
 ```
 PORT    STATE SERVICE
@@ -81,5 +76,3 @@ PORT    STATE SERVICE
 |     cipher preference: client
 |_  least strength: A
 ```
-
-
