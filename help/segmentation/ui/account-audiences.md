@@ -47,7 +47,7 @@ To create an account audience, select **[!UICONTROL Create audience]** on the [!
 
 ![The [!UICONTROL Create audience] button is highlighted on the account audience browse page.](../images/ui/account-audiences/select-create-audience.png)
 
-The Segment Builder appears. The account attributes and audiences are displayed on the left navigation bar.
+The Segment Builder appears. The account attributes and audiences are displayed on the left navigation bar. Under the [!UICONTROL Attributes] tab, you can add both Platform-created and custom attributes.
 
 ![The Segment Builder is displayed. Note that only the attributes and audiences are displayed.](../images/ui/account-audiences/segment-builder.png)
 
@@ -55,7 +55,7 @@ When creating account audiences, please note that events are listed under **[!UI
 
 ![The location to find events, which is within the [!UICONTROL People] folder, is highlighted.](../images/ui/account-audiences/attributes.png)
 
-Additionally, you can add previously created account audiences to build off of when creating your own account audience.
+Under the [!UICONTROL Audiences] tab, ou can add previously created people-based audiences to build off of when creating your own account audience.
 
 ![The Audiences tab within the Segment Builder for account audiences is highlighted.](../images/ui/account-audiences/audiences.png)
 
