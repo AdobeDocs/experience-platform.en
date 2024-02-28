@@ -39,7 +39,7 @@ description: Learn about the Session Details Collection Experience Data Model (X
 | [[!UICONTROL Media Authorized]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#authorized)           | `authorized`     | String    |    No    | Confirms whether the user has been authorized via Adobe authentication. | 
 | [[!UICONTROL Media Content Length]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-length-(variable))| `length`         | Integer   |   Yes    | The [!UICONTROL Media Content Length] contains the clip length/runtime - This is the maximum length (or duration) of the content being consumed (in seconds). | 
 | [[!UICONTROL Media Starts]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#media-starts)             | `isViewed`       | Boolean   |    No    | The load event for the media. This occurs when the viewer selects the play button. This counts even if there are pre-roll ads, buffering, errors, and so on. |
-| [!UICONTROL MVPD Identifier]                                                                                                                                      | `mvpd`           | String    |    No    | The Multi-channel Video Programming Distributor (MVPD) identifier that was provided via Adobe authentication. | 
+| [[!UICONTROL MVPD Identifier]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#mvpd)                                                                                                                                      | `mvpd`           | String    |    No    | The Multi-channel Video Programming Distributor (MVPD) identifier that was provided via Adobe authentication. | 
 | [[!UICONTROL Publisher]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#publisher)                   | `publisher`      | String    |    No    | The name of the audio content publisher. | 
 | [[!UICONTROL Radio Station]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#station)                 | `station`        | String    |    No    | The radio station name on which the audio is played. | 
 | [[!UICONTROL Rating Value]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-rating)           | `rating`         | String    |    No    | The rating as defined by TV Parental Guidelines. | 
@@ -59,5 +59,4 @@ Q) How do I indicate that?
 Q) Do you know where to link for:
 Ad Load Type
 Content Delivery Network
-MVPD Identifier
  -->
