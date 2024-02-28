@@ -1,6 +1,6 @@
 ---
 title: Acxiom Data Ingestion
-description: This connector facilitates the import of Acxiom enhancement data into a schema mapped to the 1st-party profile data in Adobe Experience Platform, based on contracted choices. Afterwards, this data can be utilized to generate comprehensive segments for preview and activation across outbound marketing channels.
+description: Use this connector to ingest Acxiom data into Real-Time CDP and enrich first-party profiles. Use your Acxiom-enriched first-party profiles to improve audiences and activate across marketing channels.
 last-substantial-update: 2024-02-26
 badge: Beta
 ---
