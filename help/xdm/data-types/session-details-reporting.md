@@ -4,11 +4,20 @@ description: Learn about the Session Details Reporting Experience Data Model (XD
 ---
 # [!UICONTROL Session Details] Reporting data type
 
+<!-- 
+[!UICONTROL Session Details] Collection is a standard Experience Data Model (XDM) data type that tracks data related to media playback sessions. Media collection fields are used to capture data that is sent onto other Adobe services for further processing. This schema encompasses a wide range of properties that can be used to provide insights into user behavior and content consumption patterns. Use the [!UICONTROL Session Details] Collection data type to capture user engagement by logging playback events, ad interactions, progress markers, pauses, and other metrics.
+ -->
+
 [!UICONTROL Session Details] Reporting is a standard Experience Data Model (XDM) data type that tracks data related to media playback sessions. The schema encompasses a wide range of properties that provide insights into how media content is consumed. Use the [!UICONTROL Session Details] Reporting data type to capture user engagement by logging playback events, ad interactions, progress markers, pauses, and other metrics. This offers valuable insights into user behavior and content consumption patterns.
 
 +++Select to display a diagram of the Session Details Reporting data type.
 ![A diagram of the  Session Details Reporting data type.](../images/data-types/session-details-reporting.png)
 +++
+
+>[!NOTE]
+>
+>Each display name contains a link to further information on its audio and video parameters. The linked pages contain details on the video ad data collected by Adobe, implementation values, network parameters, reporting, and important considerations. 
+
 <!-- Confirm fields below:  -->
 
 | Display name | Property | Data type | Description |
