@@ -10,8 +10,6 @@ description: Learn about the Media Reporting Details Experience Data Model (XDM)
 
 [!UICONTROL Media Reporting Details] is a standard Experience Data Model (XDM) data type that captures essential details about media playback events. Use the [!UICONTROL Media Reporting Details] data type to capture details such as the playhead position within the content, unique session identifiers, and various nested properties related to session, among others. This data type provides a comprehensive overview of the playback experience, that enables the tracking and analysis of media consumption patterns and associated events during playback sessions.
 
-<!-- What did you mean by #2.a.3 "provide the correct screenshot with the Media Reporting details fields: adStart example" -->
-
 >[!NOTE]
 >
 >Media Collection fields capture data and send it onto other Adobe services for further processing. Media Reporting fields are used by Adobe services to analyze the Media Collection fields sent by users. This data, alongside other specific user metrics, are computed and reported upon.
