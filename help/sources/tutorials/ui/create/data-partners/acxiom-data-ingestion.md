@@ -9,7 +9,7 @@ badge: Beta
 >
 >The [!DNL Acxiom Data Ingestion] source is in beta. Please read the [sources overview](../../../../home.md) for more information on using beta-labeled sources.
 
-Acxiom Data Ingestion connector facilitates the import of Acxiom enhancement data into a schema mapped to the 1st-party profile data in Adobe Experience Platform, based on contracted choices. Afterwards, this data can be utilized to generate comprehensive segments for preview and activation across outbound marketing channels.
+Use Acxiom Data Ingestion connector to ingest Acxiom data into Real-Time CDP and enrich first-party profiles. Use your Acxiom-enriched first-party profiles to improve audiences and activate across marketing channels.
 
 Read this tutorial to learn how to create an [!DNL Acxiom Data Ingestion] source connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to retrieve and map response from Acxiom enhancement service using Amazon S3 as a drop point.
 
