@@ -29,24 +29,3 @@ description: Learn about the Media Collection Details Experience Data Model (XDM
 | [!UICONTROL Playhead]                | `playhead`              |   All events                                               | integer |  The Playhead represents the current playback position within the media content. For live content, it indicates the current second of the day (0 <= playhead < 86400). For recorded content, it reflects the current second of the content's duration (0 <= playhead < content length).  |
 
 {style="table-layout:auto"}
-
-<!-- REMOVED due to absence in Ref-Impl-Schema schema: | [!UICONTROL List Of States]          | `states`                |   `statesUpdate`                                           | [[!UICONTROL playerStateData]](./player-state-data-information.md) |  The States property is an array that captures various states throughout the experience event. This property provides sequential data on playback, user actions, or content changes. | -->
-
-<!-- removed but there is no 'List of states' Start/End data type so i am unsure what to do ?
-| [!UICONTROL List Of States End]      | `statesEnd`             |   Used in `statesUpdate`                                   |[[!UICONTROL playerStateData] - Collection](./player-state-data-collection.md) |  States End provides an array to list the states at the conclusion of the experience event. It contains details about the final playback states or content status. |
-| [!UICONTROL List Of States Start]    | `statesStart`           |   Used in `statesUpdate`                                   | [[!UICONTROL playerStateData] - Collection](./player-state-data-information-collection.md) |  States Start provides an array to list the states at the beginning of the experience event. It features data related to playback, user actions, or con
- -->
-
-<!-- 
-advertisingDetails 
-advertisingPodDetails 
-chapterDetails 
-customMetadata
-errorDetails 
-qoeDataDetails
-sessionDetails
-statesEnd
-statesStart
-playhead 
-sessionID  
--->
