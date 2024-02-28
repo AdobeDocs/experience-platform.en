@@ -4,6 +4,7 @@ user-guide-title: Adobe Experience Platform Data Access
 breadcrumb-title: Data Access Guide
 user-guide-description: Find and access ingested datasets in Experience Platform.
 feature: Data Access
+role: Developer
 ---
 
 # Adobe Experience Platform Data Access {#data-access}
