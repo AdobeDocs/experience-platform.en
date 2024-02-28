@@ -1,6 +1,6 @@
 ---
 title: Acxiom Data Activation
-description: Use Acxiom Data Activation to Acxiom Data Activation to activate first-party profiles in Real-Time CDP to Acxiom for enrichment and use across marketing channels.
+description: Use this connector to activate first-party profiles in Real-Time CDP to Acxiom for enrichment and use across marketing channels.
 last-substantial-update: 2024-02-26
 badge: Beta
 ---
@@ -12,7 +12,7 @@ badge: Beta
 
 ## Overview {#overview}
 
-Use Acxiom Data Enhancement Import to facilitate the export of 1st party profile data for Acxiom enhancement, which Acxiom will utilize to append contracted attributes for import back into the profile.
+Use Acxiom Data Activation connector to activate first-party profiles in Real-Time CDP to Acxiom for enrichment and use across marketing channels.
 
 This tutorial provides steps to create an [!DNL Acxiom Data Activation] destination connection and dataflow using the Adobe Experience Platform user interface.  This connector is used to deliver data to Acxiom enhancement service using Amazon S3 as a drop point.
 
