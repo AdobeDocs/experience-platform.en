@@ -1,20 +1,20 @@
 ---
-title: Acxiom Data Enhancement Export
-description: Use Acxiom Data Enhancement Export to facilitate the export of 1st party profile data for Acxiom enhancement, which Acxiom will utilize to append contracted attributes for import back into the profile.
+title: Acxiom Data Activation
+description: Use Acxiom Data Activation to Acxiom Data Activation to activate first-party profiles in Real-Time CDP to Acxiom for enrichment and use across marketing channels.
 last-substantial-update: 2024-02-26
 badge: Beta
 ---
-# [!DNL Acxiom Data Enhancement Export] destination connection
+# [!DNL Acxiom Data Activation] destination connection
 
 >[!NOTE]
 >
->The [!DNL Acxiom Data Enhancement Export] destination is in beta.  This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, please contact them directly at acxiom-adobe-help@acxiom.com.
+>The [!DNL Acxiom Data Activation] destination is in beta.  This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, please contact them directly at acxiom-adobe-help@acxiom.com.
 
 ## Overview {#overview}
 
 Use Acxiom Data Enhancement Import to facilitate the export of 1st party profile data for Acxiom enhancement, which Acxiom will utilize to append contracted attributes for import back into the profile.
 
-This tutorial provides steps to create an [!DNL Acxiom Data Enhancement Export] destination connection and dataflow using the Adobe Experience Platform user interface.  This connector is used to deliver data to Acxiom enhancement service using Amazon S3 as a drop point.
+This tutorial provides steps to create an [!DNL Acxiom Data Activation] destination connection and dataflow using the Adobe Experience Platform user interface.  This connector is used to deliver data to Acxiom enhancement service using Amazon S3 as a drop point.
 
 ![The destination catalog with the Acxiom destination selected.](../../assets/catalog/advertising/acxiom/image-destination-enhancement-catalog.png)
 
