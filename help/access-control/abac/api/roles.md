@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;api;Attribute-Based Access Con
 solution: Experience Platform
 title: Roles API Endpoint
 description: The /roles endpoint in the Attribute-Based Access Control API allows you to  programmatically manage roles in Adobe Experience Platform.
+role: Developer
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
 ---
 # Roles endpoint
