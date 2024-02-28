@@ -14,7 +14,7 @@ Tags in Adobe Experience Platform are a tag management system that is designed t
 
 There are multiple TLS versions available, and it supports a number of different ciphers.. Not all versions and ciphers are the same as some are considered less or more secure than others.
 
-### Supported TLS versions and Ciphers
+## Supported TLS versions and Ciphers
 
 The Adobe host option currently supports the following TLS versions and ciphers:
 
@@ -46,7 +46,7 @@ PORT    STATE SERVICE
 
 If you are [self-hosting](../publishing/hosts/self-hosting-libraries.md) your library, then the TLS versions supported will be determined by your own hosting service.
 
-### TLS Ciphers to be removed May 1st 2024
+## TLS Ciphers to be removed May 1st 2024
 
 ```
 PORT    STATE SERVICE
