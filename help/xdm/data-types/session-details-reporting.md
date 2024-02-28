@@ -24,61 +24,99 @@ Media reporting fields are used by Adobe services to analyze the media collectio
 | [!UICONTROL 50% Progress Marker]  | `hasProgress50` | Boolean  | Indicates that the playhead passed the 50% marker of media based on stream length. Marker only counted once, even if seeking backward. If seeking forward, markers that are skipped are not counted. |
 | [!UICONTROL 75% Progress Marker]  | `hasProgress75` | Boolean  | Indicates that the playhead passed the 75% marker of media based on stream length. Marker only counted once, even if seeking backward. If seeking forward, markers that are skipped are not counted. |
 | [!UICONTROL 95% Progress Marker]  | `hasProgress95` | Boolean  | Indicates that the playhead passed the 95% marker of media based on stream length. Marker only counted once, even if seeking backward. If seeking forward, markers that are skipped are not counted. |
-| [!UICONTROL Media Session ID] | `ID` | string |  The [!UICONTROL Media Session ID] identifies an instance of a content stream unique to an individual playback. |
-| [!UICONTROL Content ID] | `name` | string  | **Required** The [!UICONTROL Content ID] is a unique identifier of the content. It can be used to link back to other industry or CMS IDs. |
-| [!UICONTROL Content Name]  | `friendlyName` | String | The [!UICONTROL Content Name] is the "friendly" (human-readable) name of the content. | 
-| [!UICONTROL Media Content Length]  | `length` | Integer | **Required** The [!UICONTROL Media Content Length] contains the clip length/runtime - This is the maximum length (or duration) of the content being consumed (in seconds). | 
-| [!UICONTROL Broadcast Content Type]   | `contentType` | String | **Required** The [!UICONTROL Broadcast Content Type] of the stream delivery. Available values per [!UICONTROL Stream Type] include:<br>Audio: "song", "podcast", "audiobook", and "radio";<br>Video: "VoD", "Live", "Linear", "UGC", and "DVoD".<br>Customers can provide custom values for this parameter. |
-| [!UICONTROL Content Player Name]  | `playerName` | String | **Required** The name of the content player. | 
-| [!UICONTROL Content Channel]  | `channel` | String | **Required** The [!UICONTROL Content Channel] is the distribution channel from where the content was played. | 
-| [!UICONTROL Version]  | `appVersion` | String | The SDK version used by the player. This could have any custom value that makes sense for your player. | 
-| [!UICONTROL Series Name]  | `show` | String | The Program/Series Name. The Program Name is required only if the show is part of a series. | 
-| [!UICONTROL Season Number] | `season` | String  | The [!UICONTROL Season Number] that the show belongs to. Season Series is required only if the show is part of a series. |
-| [!UICONTROL Episode Number]  | `episode` | String | The number of the episode. | 
-| [!UICONTROL Asset ID] | `assetID` | String  | The [!UICONTROL Asset ID] is the unique identifier for the content of the media asset, such as the TV series episode identifier, movie asset identifier, or live event identifier. Typically these IDs are derived from metadata authorities such as EIDR, TMS/Gracenote, or Rovi. These identifiers can also be from other proprietary or in-house systems. |
-| [!UICONTROL Genre]  | `genre` | String | The type or grouping of content as defined by the content producer. Values should be comma-delimited in variable implementation.  |
+| [!UICONTROL Ad Count]  | `adCount` | Integer | The number of ads started during the playback. | 
+| [!UICONTROL Ad Load Type]  | `adLoad` | String | The type of ad loaded as defined by each customer's internal representation. | 
+| [[!UICONTROL Album]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#album)  | `album` | String | The name of the album that the music recording or video belongs to. | 
+| [[!UICONTROL Artist]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#artist)   | `artist` | String | The name of the album artist or group performing the music recording or video. | 
+| [[!UICONTROL Asset ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#asset-id) | `assetID` | String  | The [!UICONTROL Asset ID] is the unique identifier for the content of the media asset, such as the TV series episode identifier, movie asset identifier, or live event identifier. Typically these IDs are derived from metadata authorities such as EIDR, TMS/Gracenote, or Rovi. These identifiers can also be from other proprietary or in-house systems. |
+| [[!UICONTROL Author]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#author)  | `author` | String | The name of the media author. | 
+| [!UICONTROL Average Minute Audience]  | `averageMinuteAudience`| Number | Describes the average content time spent for a specific media item - that is, the total content time spent divided by the length of all of the playback sessions. |
+| [[!UICONTROL Broadcast Content Type]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-type)   | `contentType` | String | **Required** The [!UICONTROL Broadcast Content Type] of the stream delivery. Available values per [!UICONTROL Stream Type] include:<br>Audio: "song", "podcast", "audiobook", and "radio";<br>Video: "VoD", "Live", "Linear", "UGC", and "DVoD".<br>Customers can provide custom values for this parameter. |
+| [[!UICONTROL Broadcast Network]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#network)  | `network` | String | The network/channel name. | 
+| [!UICONTROL Chapter Count]  | `chapterCount` | Integer | The number of chapters started during the playback. | 
+| [[!UICONTROL Content Channel]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-channel)  | `channel` | String | **Required** The [!UICONTROL Content Channel] is the distribution channel from where the content was played. | 
+| [[!UICONTROL Content Completes]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-complete) | `isCompleted` | Boolean | [!UICONTROL Content Completes] indicates if a timed media asset was watched to completion. This event does not necessarily mean that the viewer watched the whole video; the viewer could have skipped ahead. |
+| [[!UICONTROL Content Delivery Network]](N/A) | `cdn` | String | The [!UICONTROL Content Delivery Network] of the content played. | 
+| [[!UICONTROL Content ID]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-id) | `name` | string  | **Required** The [!UICONTROL Content ID] is a unique identifier of the content. It can be used to link back to other industry or CMS IDs. |
+| [[!UICONTROL Content Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-name-(variable))  | `friendlyName` | String | The [!UICONTROL Content Name] is the "friendly" (human-readable) name of the content. | 
+| [[!UICONTROL Content Player Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-player-name)  | `playerName` | String | **Required** The name of the content player. | 
+| [!UICONTROL Content Starts] | `isPlayed` | Boolean | [!UICONTROL Content Starts] becomes true when the first frame of media is consumed. If the user drops during an ad, buffering, and so on, then there would be no [!UICONTROL Content Starts] event.  |
+| [!UICONTROL Content Time Spent] | `timePlayed` | Integer | [!UICONTROL Content Time Spent] sums the event duration (in seconds) for all events of type PLAY on the main content. | 
+| [[!UICONTROL Creator Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#originator)  | `originator` | String | The name of the content creator. | 
+| [[!UICONTROL Day Part]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#day-part)  | `dayPart` | String | A property that defines the time of the day when the content was broadcast or played. This could have any value set as necessary by customers | 
+| [[!UICONTROL Episode Number]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#episode)  | `episode` | String | The number of the episode. | 
+| [!UICONTROL Estimated Streams]  | `estimatedStreams` | Number | The estimated number of video or audio streams for each individual piece of content. | 
+| [!UICONTROL Federated Data]  | `isFederated` | Boolean | [!UICONTROL Federated Data] is set to true when the hit is federated (that is, received by the customer as part of a federated data share, rather than their own implementation). |
+| [[!UICONTROL Feed Type]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#media-feed-type)  | `feed` | String | The type of feed, which can either represent actual feed-related data such as EAST HD or SD, or the source of the feed like a URL. |
 | [!UICONTROL First Air Date]  | `firstAirDate` | String | The date when the content first aired on television. Any date format is acceptable, but Adobe recommends: YYYY-MM-DD. |
 | [!UICONTROL First Digital Date]  | `firstDigitalDate` | String | The date when the content first aired on any digital channel or platform. Any date format is acceptable but Adobe recommends: YYYY-MM-DD. |
-| [!UICONTROL Rating Value]  | `rating` | String | The rating as defined by TV Parental Guidelines. | 
-| [!UICONTROL  Creator Name]  | `originator` | String | The name of the content creator. | 
-| [!UICONTROL Broadcast Network]  | `network` | String | The network/channel name. | 
-| [!UICONTROL Show Type]  | `showType` | String | The type of content, for example, trailer or full episode. | 
-| [!UICONTROL Ad Load Type]  | `adLoad` | String | The type of ad loaded as defined by each customer's internal representation. | 
-| [!UICONTROL MVPD Identifier]  | `mvpd` | String | The [!UICONTROL MVPD Identifier] that was provided via Adobe authentication. | 
+| [!UICONTROL Genre]  | `genre` | String | The type or grouping of content as defined by the content producer. Values should be comma-delimited in variable implementation.  |
 | [!UICONTROL Media Authorized]   | `authorized` | String | Confirms whether the user has been authorized via Adobe authentication. | 
-| [!UICONTROL Day Part]  | `dayPart` | String | A property that defines the time of the day when the content was broadcast or played. This could have any value set as necessary by customers | 
-| [!UICONTROL Feed Type]  | `feed` | String | The type of feed, which can either represent actual feed-related data such as EAST HD or SD, or the source of the feed like a URL. |
-| [!UICONTROL Stream Format]  | `streamFormat` | String | The format of the stream (HD, SD). | 
-| [!UICONTROL Resume]  | `hasResume` | Boolean  | Marks each playback that was resumed after more than 30 minutes of buffer, pause, or stall period. |
-| [!UICONTROL Stream Type]  | `streamType` | String | The type of the media stream. | 
-| [!UICONTROL Artist]   | `artist` | String | The name of the album artist or group performing the music recording or video. | 
-| [!UICONTROL Album]  | `album` | String | The name of the album that the music recording or video belongs to. | 
-| [!UICONTROL Record Label]   | `label` | String | The name of the record label. | 
-| [!UICONTROL Author]  | `author` | String | The name of the media author. | 
-| [!UICONTROL Radio Station]   | `station` | String | The radio station name on which the audio is played. | 
-| [!UICONTROL Publisher]   | `publisher` | String | The name of the audio content publisher. | 
-| [!UICONTROL Video Segment]   | `segment` | String | The interval that describes the part of the content that has been viewed in minutes. | 
+| [!UICONTROL Media Content Length]  | `length` | Integer | **Required** The [!UICONTROL Media Content Length] contains the clip length/runtime - This is the maximum length (or duration) of the content being consumed (in seconds). | 
 | [!UICONTROL Media Downloaded Flag]  | `isDownloaded` | Boolean | The stream was played locally on the device after being downloaded. | 
-| [!UICONTROL Federated Data]  | `isFederated` | Boolean | [!UICONTROL Federated Data] is set to true when the hit is federated (that is, received by the customer as part of a federated data share, rather than their own implementation). |
-| [!UICONTROL Media Starts]  | `isViewed` | Boolean | The load event for the media. This occurs when the viewer selects the play button. This counts even if there are pre-roll ads, buffering, errors, and so on. |
-| [!UICONTROL Content Starts] | `isPlayed` | Boolean | [!UICONTROL Content Starts] becomes true when the first frame of media is consumed. If the user drops during an ad, buffering, and so on, then there would be no [!UICONTROL Content Starts] event.  |
-| [!UICONTROL Content Completes] | `isCompleted` | Boolean | [!UICONTROL Content Completes] indicates if a timed media asset was watched to completion. This event does not necessarily mean that the viewer watched the whole video; the viewer could have skipped ahead. |
-| [!UICONTROL Content Time Spent] | `timePlayed` | Integer | [!UICONTROL Content Time Spent] sums the event duration (in seconds) for all events of type PLAY on the main content. | 
-| [!UICONTROL Media Time Spent]  | `totalTimePlayed` | Integer | Describes the total amount of time spent by a user on a specific timed media asset, which includes time spent watching ads. | 
-| [!UICONTROL Unique Time Played]  | `uniqueTimePlayed` | Integer | Describes the sum of the unique intervals seen by a user on a timed media asset - that is, the length playback intervals viewed multiple times are only counted once. | 
-| [!UICONTROL Average Minute Audience]  | `averageMinuteAudience`| Number | Describes the average content time spent for a specific media item - that is, the total content time spent divided by the length of all of the playback sessions. |
-| [!UICONTROL Ad Count]  | `adCount` | Integer | The number of ads started during the playback. | 
-| [!UICONTROL Chapter Count]  | `chapterCount` | Integer | The number of chapters started during the playback. | 
-| [!UICONTROL Estimated Streams]  | `estimatedStreams` | Number | The estimated number of video or audio streams for each individual piece of content. | 
-| [!UICONTROL Pause Impacted Streams]  | `hasPauseImpactedStreams` | Boolean  | Indicates if one or more pauses occurred during the playback of a single media item. |
-| [!UICONTROL Pause Events] | `pauseCount` | Integer | [!UICONTROL Pause Events] counts the number of pause periods that occurred during playback. | 
-| [!UICONTROL Total Pause Duration] | `pauseTime` | Integer | [!UICONTROL Total Pause Duration] describes the duration in seconds in which playback was paused by the user. | 
 | [!UICONTROL Media Segment Views] | `hasSegmentView` | Boolean | [!UICONTROL Media Segment Views] indicates when at least one frame, not necessarily the first, has been viewed. | 
+| [!UICONTROL Media Session ID] | `ID` | string |  The [!UICONTROL Media Session ID] identifies an instance of a content stream unique to an individual playback. |
 | [!UICONTROL Media Session Server Timeout] | `secondsSinceLastCall` | Number  | The [!UICONTROL Media Session Server Timeout] indicates the amount of time, in seconds, that passed between the user's last known interaction and the moment the session was closed. |
-| [!UICONTROL Content Delivery Network] | `cdn` | String | The [!UICONTROL Content Delivery Network] of the content played. | 
-| [!UICONTROL Pev3] | `pev3` | String | [!UICONTROL Pev3] is the type of media stream used for reporting. | 
+| [!UICONTROL Media Starts]  | `isViewed` | Boolean | The load event for the media. This occurs when the viewer selects the play button. This counts even if there are pre-roll ads, buffering, errors, and so on. |
+| [!UICONTROL Media Time Spent]  | `totalTimePlayed` | Integer | Describes the total amount of time spent by a user on a specific timed media asset, which includes time spent watching ads. | 
+| [!UICONTROL MVPD Identifier]  | `mvpd` | String | The [!UICONTROL MVPD Identifier] that was provided via Adobe authentication. | 
+| [!UICONTROL Pause Events] | `pauseCount` | Integer | [!UICONTROL Pause Events] counts the number of pause periods that occurred during playback. | 
+| [!UICONTROL Pause Impacted Streams]  | `hasPauseImpactedStreams` | Boolean  | Indicates if one or more pauses occurred during the playback of a single media item. |
 | [!UICONTROL Pccr] | `pccr` | Boolean | [!UICONTROL Pccr] indicates that a redirect occurred. | 
+| [!UICONTROL Pev3] | `pev3` | String | [!UICONTROL Pev3] is the type of media stream used for reporting. | 
+| [!UICONTROL Publisher]   | `publisher` | String | The name of the audio content publisher. | 
+| [!UICONTROL Radio Station]   | `station` | String | The radio station name on which the audio is played. | 
+| [!UICONTROL Rating Value]  | `rating` | String | The rating as defined by TV Parental Guidelines. | 
+| [!UICONTROL Record Label]   | `label` | String | The name of the record label. | 
+| [!UICONTROL Resume]  | `hasResume` | Boolean  | Marks each playback that was resumed after more than 30 minutes of buffer, pause, or stall period. |
+| [!UICONTROL Season Number] | `season` | String  | The [!UICONTROL Season Number] that the show belongs to. Season Series is required only if the show is part of a series. |
+| [!UICONTROL Series Name]  | `show` | String | The Program/Series Name. The Program Name is required only if the show is part of a series. | 
+| [!UICONTROL Show Type]  | `showType` | String | The type of content, for example, trailer or full episode. | 
+| [!UICONTROL Stream Format]  | `streamFormat` | String | The format of the stream (HD, SD). | 
+| [!UICONTROL Stream Type]  | `streamType` | String | The type of the media stream. | 
+| [!UICONTROL Total Pause Duration] | `pauseTime` | Integer | [!UICONTROL Total Pause Duration] describes the duration in seconds in which playback was paused by the user. | 
+| [!UICONTROL Unique Time Played]  | `uniqueTimePlayed` | Integer | Describes the sum of the unique intervals seen by a user on a timed media asset - that is, the length playback intervals viewed multiple times are only counted once. | 
+| [!UICONTROL Version]  | `appVersion` | String | The SDK version used by the player. This could have any custom value that makes sense for your player. | 
+| [!UICONTROL Video Segment]   | `segment` | String | The interval that describes the part of the content that has been viewed in minutes. |
 
 {style="table-layout:auto"}
 
-For more details on the field group, refer to the [public XDM repository](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json)
+<!-- --- -->
+<!-- Continue adding in the links :)  -->
+<!--  -->
+
+| [!UICONTROL Ad Load Type]                                                                                                                                         | `adLoad`         | String    |    No    | The type of ad loaded as defined by each customer's internal representation. | 
+|                            | `album`          | String    |   No     | The name of the album that the music recording or video belongs to. | 
+|                          | `artist`         | String    |   No     | The name of the album artist or group performing the music recording or video. | 
+|                      | `assetID`        | String    |   No     | The [!UICONTROL Asset ID] is the unique identifier for the content of the media asset, such as the TV series episode identifier, movie asset identifier, or live event identifier. Typically these IDs are derived from metadata authorities such as EIDR, TMS/Gracenote, or Rovi. These identifiers can also be from other proprietary or in-house systems. |
+|                          | `author`         | String    |    No    |The name of the media author. | 
+|    | `contentType`    | String    |   Yes    | The [!UICONTROL Broadcast Content Type] of the stream delivery. Available values per [!UICONTROL Stream Type] include:<br>Audio: "song", "podcast", "audiobook", and "radio";<br>Video: "VoD", "Live", "Linear", "UGC", and "DVoD".<br>Customers can provide custom values for this parameter. |
+|              | `network`        | String    |    No    | The network/channel name. | 
+|        | `channel`        | String    |   Yes    | The [!UICONTROL Content Channel] is the distribution channel from where the content was played. | 
+|     | `isCompleted`    | Boolean   |    No    | [!UICONTROL Content Completes] indicates if a timed media asset was watched to completion. This event does not necessarily mean that the viewer watched the whole video; the viewer could have skipped ahead. |
+| [!UICONTROL Content Delivery Network]                                                                                                                             | `cdn`            | String    |    No    | The [!UICONTROL Content Delivery Network] of the content played. | 
+|                  | `name`           | string    |   Yes     | The [!UICONTROL Content ID] is a unique identifier of the content. It can be used to link back to other industry or CMS IDs. |
+|   | `friendlyName`   | String    |   No     | The [!UICONTROL Content Name] is the "friendly" (human-readable) name of the content. | 
+| | `playerName`     | String    |   Yes    | The name of the content player. | 
+|                | `originator`     | String    |    No    | The name of the content creator. | 
+|                      | `dayPart`        | String    |    No    | A property that defines the time of the day when the content was broadcast or played. This could have any value set as necessary by customers | 
+|                 | `episode`        | String    |    No    | The number of the episode. | 
+|              | `feed`           | String    |    No    | The type of feed, which can either represent actual feed-related data such as EAST HD or SD, or the source of the feed like a URL. |
+| [[!UICONTROL First Air Date]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#first-air-date)         | `firstAirDate`   | String    |    No    | The date when the content first aired on television. Any date format is acceptable, but Adobe recommends: YYYY-MM-DD. |
+| [[!UICONTROL First Digital Date]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#first-digital-date) | `firstDigitalDate`| String   |    No    | The date when the content first aired on any digital channel or platform. Any date format is acceptable but Adobe recommends: YYYY-MM-DD. |
+| [[!UICONTROL Genre]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#genre)                           | `genre`          | String    |    No    | The type or grouping of content as defined by the content producer. Values should be comma-delimited in variable implementation.  |
+| [[!UICONTROL Media Authorized]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#authorized)           | `authorized`     | String    |    No    | Confirms whether the user has been authorized via Adobe authentication. | 
+| [[!UICONTROL Media Content Length]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-length-(variable))| `length`         | Integer   |   Yes    | The [!UICONTROL Media Content Length] contains the clip length/runtime - This is the maximum length (or duration) of the content being consumed (in seconds). | 
+| [[!UICONTROL Media Starts]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#media-starts)             | `isViewed`       | Boolean   |    No    | The load event for the media. This occurs when the viewer selects the play button. This counts even if there are pre-roll ads, buffering, errors, and so on. |
+| [!UICONTROL MVPD Identifier]                                                                                                                                      | `mvpd`           | String    |    No    | The Multi-channel Video Programming Distributor (MVPD) identifier that was provided via Adobe authentication. | 
+| [[!UICONTROL Publisher]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#publisher)                   | `publisher`      | String    |    No    | The name of the audio content publisher. | 
+| [[!UICONTROL Radio Station]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#station)                 | `station`        | String    |    No    | The radio station name on which the audio is played. | 
+| [[!UICONTROL Rating Value]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-rating)           | `rating`         | String    |    No    | The rating as defined by TV Parental Guidelines. | 
+| [[!UICONTROL Record Label]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#label)                    | `label`          | String    |    No    | The name of the record label. | 
+| [[!UICONTROL Resume]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-resumes)                | `hasResume`      | Boolean   |    No    | Marks each playback that was resumed after more than 30 minutes of buffer, pause, or stall period. |
+| [[!UICONTROL Season Number]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#season)                  | `season`         | String    |    No     | The [!UICONTROL Season Number] that the show belongs to. Season Series is required only if the show is part of a series. |
+| [[!UICONTROL Series Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#show)                      | `show`           | String    |    No    | The Program/Series Name. The Program Name is required only if the show is part of a series. | 
+| [[!UICONTROL Show Type]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#show-type)                   | `showType`       | String    |    No    | The type of content. For example, a trailer or a full episode. The type of content is expressed as an integer between 0 and 3. For example, "0" = Full episode; "1" = Preview/trailer; "2" = Clip; "3" = Other. | 
+| [[!UICONTROL Stream Format]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#stream-format)           | `streamFormat`   | String    |    No    | The format of the stream (HD, SD). | 
+| [[!UICONTROL Stream Type]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#stream-type)               | `streamType`     | String     |   No    |The type of the media stream. | 
+| [[!UICONTROL Version]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#sdk-version)   
