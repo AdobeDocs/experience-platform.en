@@ -1,6 +1,7 @@
 ---
 title: Work Order API Endpoint
 description: The /workorder endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for identities.
+role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 ---
 # [!BADGE Beta]{type=Informative} Work order endpoint {#work-order-endpoint}
