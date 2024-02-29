@@ -3,6 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Profile System Jobs API Endpoint
 type: Documentation
 description: Adobe Experience Platform enables you to delete a dataset or batch from the Profile store in order to remove Real-Time Customer Profile data that is no longer needed or was added in error. This requires using the Profile API to create a Profile system job, or delete request.
+role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
 ---
 # Profile system jobs endpoint (Delete requests)

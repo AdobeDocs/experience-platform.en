@@ -18,7 +18,7 @@ You can query Assistant for information such as:
 
 * Guidance on how to perform tasks pertaining to data and audiences.
 * Statuses and metrics of the existing data objects in your organization.
-* Use case examples and nuances to better understand your data objects, including attributes, datasets, destinations, schemas, segments, and sources.
+* Use case examples and nuances to better understand your data objects, including attributes, dataflows, datasets, destinations, schemas, segments, and sources.
 
 Read the guide below to learn how you can use Assistant to help navigate and understand your Experience Platform and Real-Time CDP workflows.
 
@@ -125,17 +125,25 @@ To view citations and validate Assistant's response, select **[!UICONTROL Show s
 
 +++Select to view an example of data usage questions and data visualization
 
-You can inquire with Assistant about your data usage. You must be in an active sandbox for Assistant to answer a data usage question regarding data in your organization.
+For Assistant to respond to a query about data usage within your organization, you have to be in an active sandbox.
+
+In the example below, Assistant is provided with the following query: **"Show me segments definitions with over 1000 profiles and include activation status."** Assistant then responds with a chart visualizing your segment and profile data.
 
 ![Follow up question about data usage.](./images/ai-assistant/data-usage-question.png)
 
-When prompted with a data usage question, Assistant also provides an explanation of how it computed the answer. In the example below, Assistant outlines the steps it took in order to display segments with over 1000 profiles and their respective activation statuses.
+You can hover over an individual bar to view specific data. You can also select the expand icon for a larger view of the chart.
+
+![Follow up question illustrating data visualization.](./images/ai-assistant/data-visualization.png)
+
+An expanded view of the visualization appears. You can use the expanded modal to further inspect your data and is especially useful when visualization returns with a large number of columns.
+
+![Expanded chart.](./images/ai-assistant/chart-expanded.png)
+
+When prompted with a data usage question, Assistant provides an explanation of how it computed the answer. In the example below, Assistant outlines the steps it took in order to display segments definitions with over 1000 profiles and their respective activation statuses.
 
 ![Follow up question about segments illustrating how Assistant computed the answer.](./images/ai-assistant/results-explained.png)
 
-Furthermore, Assistant renders charts to visualize your data. You can also provide filters and modifications to your queries, and you can instruct Assistant to render its findings based on the filters that you include. For example, you can ask Assistant to show you a trend of the count segments in the order of their created date, remove segments with zero total profiles, and use month names instead of integers when displaying the data.
-
-![Follow up question illustrating data visualization.](./images/ai-assistant/data-visualization.png)
+You can also provide filters and modifications to your queries, and you can instruct Assistant to render its findings based on the filters that you include. For example, you can ask Assistant to show you a trend of the count segments definitions in the order of their created date, remove segments definitions with zero total profiles, and use month names instead of integers when displaying the data.
 
 +++
 
@@ -171,27 +179,18 @@ Next, Assistant receives another follow-up request. This time, Assistant respond
 
 +++
 
-## Scope {#scope}
-
-Assistant can answer questions regarding Real-Time CDP and Experience Platform concepts, as well as data usage specific to your user account. Assistant can also infer context based on the UI page that you are in. It can identify:
-
-* The user account that you are using.
-* The organization that you belong to. 
-* The page that you are viewing on your screen.
-* The resource (including type and ID) that you are viewing on your screen.
-* Given that you are in the process of a particular Experience Platform or Real-Time CDP workflow, Assistant can deduce your intent.
-
-### Documentation {#documentation}
+## Documentation {#documentation}
 
 Currently, the documentation index covers Adobe Experience Platform (Real-Time CDP and Audiences). The index is updated periodically.
 
 The documentation retrieval model is trained on Experience Platform (Real-Time CDP and Audiences). Questions outside the scope of Adobe Experience Platform such as, questions about other Adobe products like Adobe Target and the Creative Cloud suite cannot be answered.
 
-### Data usage {#data-usage}
+## Data usage {#data-usage}
 
 You can also ask Assistant questions about your data usage in the following domains: 
 
 * Attributes
+* Dataflows
 * Datasets
 * Destinations _(Questions regarding accounts and some questions about dataflow cannot be answered at this time.)_
 * Schemas _(Questions regarding field groups cannot be answered at this time.)_
