@@ -20,7 +20,7 @@ This tutorial provides steps to create an [!DNL Acxiom Data Activation] destinat
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Acxiom Data Enhancement Import destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the Acxiom Data Activation destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
 ### Use case 1: Enhance Customer Datasets {#use-case-1}
 
