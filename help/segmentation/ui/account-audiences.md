@@ -55,9 +55,9 @@ When creating account audiences, please note that events are listed under **[!UI
 
 ![The location to find events, which is within the [!UICONTROL People] folder, is highlighted.](../images/ui/account-audiences/attributes.png)
 
-Under the [!UICONTROL Audiences] tab, ou can add previously created people-based audiences to build off of when creating your own account audience.
+Under the [!UICONTROL Audiences] tab, you can add previously created people-based audiences to build off of when creating your own account audience.
 
-![The Audiences tab within the Segment Builder for account audiences is highlighted.](../images/ui/account-audiences/audiences.png)
+![The Audiences tab within the Segment Builder is highlighted.](../images/ui/account-audiences/audiences.png)
 
 For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md).
 
