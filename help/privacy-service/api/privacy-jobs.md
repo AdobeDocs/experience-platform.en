@@ -14,26 +14,35 @@ This document covers how to work with privacy jobs using API calls. Specifically
 >
 >If you are trying to manage consent or opt-out requests from customers, refer to the [consent endpoint guide](./consent.md).
 
-## List all jobs {#list}
+## List all jobs {#list} 
 
 You can view a list of all available privacy jobs within your organization by making a GET request to the `/jobs` endpoint.
 
 **API format**
 
-This request format uses a `regulation` query parameter on the `/jobs` endpoint, therefore it begins with a question mark (`?`) as shown below. The response is paginated, allowing you to use other query parameters (`page` and `size`) to filter the response. You can separate multiple parameters using ampersands (`&`).
+This request format uses a `regulation` query parameter on the `/jobs` endpoint, therefore it begins with a question mark (`?`) as shown below. When listing resources, the Privacy Service API returns up to 1000 jobs and paginates the response. Use other query parameters (`page` and `size`) to filter the response. You can separate multiple parameters using ampersands (`&`).
+
+>[!TIP]
+>
+>Use additional query parameters to further filter results for specific queries. For example, you can discover how many privacy jobs were submitted over a given period of time and what their status is using the `status`, `fromDate`, and `toDate` query parameters.
 
 ```http
 GET /jobs?regulation={REGULATION}
 GET /jobs?regulation={REGULATION}&page={PAGE}
 GET /jobs?regulation={REGULATION}&size={SIZE}
 GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={STATUS}
 ```
 
 | Parameter | Description |
 | --- | --- |
 | `{REGULATION}` | The regulation type to query for. Accepted values include: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>See the overview on [supported regulations](../regulations/overview.md) for more information on the privacy regulations that the above values represent. |
 | `{PAGE}` | The page of data to be displayed, using 0-based numbering. The default is `0`. |
-| `{SIZE}` | The number of results to display on each page. The default is `1` and the maximum is `100`. Exceeding the maximum causes the API to return a 400-code error. |
+| `{SIZE}` | The number of results to display on each page. The default is `100` and the maximum is `1000`. Exceeding the maximum causes the API to return a 400-code error. |
+| `{status}` | The default behavior is to include all statuses. If you specify a status type, the request returns only privacy jobs that match that status type. The accepted values include: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
+| `{toDate}` | This parameter limits results to those processed before a specified date. From the date of the request, the system can can look back 45 days. However, the range cannot be more than 30 days.<br>It accepts the format YYYY-MM-DD. The date you provide is interpreted as the termination date expressed in Greenwich Mean Time (GMT).<br>If you do not provide this parameter (and a corresponding `fromDate`), the default behavior returns jobs that data back over the last seven days. |
+| `{fromDate}` | This parameter limits results to those processed after a specified date. From the date of the request, the system can can look back 45 days. However, the range cannot be more than 30 days.<br>It accepts the format YYYY-MM-DD. The date you provide is interpreted as the request's date of origin expressed in Greenwich Mean Time (GMT).<br>If you do not provide this parameter (and a corresponding `toDate`), the default behavior returns jobs that data back over the last seven days. |
+| `{filterDate}` |  This parameter limits results to those processed on a specified date. It accepts the format YYYY-MM-DD. The system can look back over last 45 days. |
 
 {style="table-layout:auto"}
 
