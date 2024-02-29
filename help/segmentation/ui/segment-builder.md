@@ -277,6 +277,8 @@ You can also select your evaluation method. If you know what evaluation method y
 
 The [!UICONTROL Evaluation method eligibility] popover appears. This popover displays the available evaluation methods, which are batch, streaming, and edge. The popover shows which evaluation methods are eligible and ineligible. Depending on the parameters you used in your segment definition, it may not qualify for certain evaluation methods. For more information on the requirements for each evaluation method, please read the [streaming segmentation](./streaming-segmentation.md#query-types) or the [edge segmentation](./edge-segmentation.md#query-types) overviews.
 
+You can also change the evaluation method of the segment definition after you've finished creating it. If you change the evaluation method from Edge or Streaming to Batch, you will **not** be able to change it back to Edge or Streaming. The change to evaluation method will **only** take effect once you select **[!UICONTROL Save]** in the popover. Cancelling the dialog will **maintain** the original evaluation method.
+
 ![The evaluation method eligibility pop up appears. This displays which methods of evaluation are eligible and ineligible for the segment definition.](../images/ui/segment-builder/select-evaluation-method.png)
 
 If you select an invalid evaluation method, you will be prompted to either change your segment definition rules or change the evaluation method. 
