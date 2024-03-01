@@ -44,8 +44,6 @@ After selecting the **plus (+)** icon, an **[!UICONTROL Untitled field]** placeh
 
 In the right rail under **[!UICONTROL Field properties]**, you can configure the details of the new field. The following information is required for each field:
 
-<!-- Update Type field in table. ... PLAT-181676 -->
-
 | Field property | Description |
 | --- | --- |
 | [!UICONTROL Field name] | A unique, descriptive name for the field. Note that the field's name cannot be changed once the schema has been saved. This value is used to identify and reference the field in code and in other downstream applications<br><br>The name should ideally be written in camelCase. It may contain alphanumeric, dash, or underscore characters, but it **may not** start with an underscore.<ul><li>**Correct**: `fieldName`</li><li>**Acceptable:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrect**: `_fieldName`</li></ul> |
@@ -79,8 +77,6 @@ You can continue to follow the steps above to add more fields to the schema. Onc
 >Any changes you make to the field groups or class of one schema will be reflected in all other schemas that employ them.
 
 ## Type-specific field properties {#type-specific-properties}
-
-<!-- ... PLAT-181676 updates -->
 
 When defining a new field, additional configuration options may appear in the right rail depending on the **[!UICONTROL Type]** you choose for the field. The following table outlines these additional field properties along with their compatible types:
 
