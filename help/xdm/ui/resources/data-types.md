@@ -105,8 +105,6 @@ Once you have created a data type, you can start using it in your schemas. Since
 
 Start by following the steps involved with [adding a field to a class](./classes.md#add-fields) or [adding a field to a field group](./field-groups.md#add-fields). Alternatively, you can start [adding a field directly to a schema](./schemas.md#add-individual-fields) and choose the parent class or field group from there. When you choose the **[!UICONTROL Type]** for the new field, select the name of your data type from the dropdown menu.
 
-
-
 ## Convert a multi-field object into a data type {#convert}
 
 When you create an object-type field with multiple sub-fields in the [!DNL Schema Editor], you can convert that field into a data type so you can use that same field structure in a different class or field group.
