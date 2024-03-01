@@ -27,7 +27,7 @@ An advertiser aims to target users within specific audiences through the Zeta De
 
 ### Zeta Marketing Platform prerequisites
 
-* Before you set up a new connection to the Zeta Marketing Platform destination, you must create an empty customer list in your Zeta Marketing Platform account. You will be required to choose one of these customer lists as the designated target to receive the Adobe Experience Platform audience that you plan to send. You can create an empty customer list in the ZMP by following the instructions [here](https://knowledgebase.zetaglobal.com/zmp/creating-audiences#CreatingAudiences-CreatingaCustomerList).
+* Before you set up a new connection to the Zeta Marketing Platform destination, you must create an empty customer list in your Zeta Marketing Platform account. You must choose one of these customer lists as the designated target to receive the Adobe Experience Platform audience that you plan to send. You can create an empty customer list in the ZMP by following the instructions [here](https://knowledgebase.zetaglobal.com/zmp/creating-audiences#CreatingAudiences-CreatingaCustomerList).
 * Although the Adobe Experience Platform permits the activation of multiple audiences to a particular ZMP destination instance, it is mandatory that each ZMP destination instance receives only one Experience Platform audience. To handle multiple audiences from the Experience Platform, create additional ZMP destination instances for each audience and select a different customer list from the dropdown. This approach ensures that the target ZMP audiences does not get overwritten. See [Fill in destination details](#destination-details) for more details.
 * Use the following credentials to configure the destination:
     * Username: **api** 
@@ -43,7 +43,7 @@ An advertiser aims to target users within specific audiences through the Zeta De
 |Target Identity|Description|Considerations|Notes|
 ---------|----------|----------|----------|
 |uid|Unique ID that ZMP uses to differentiate customer profiles|Mandatory|Choose the `Email` standard identity namespace if you want to identify unique profiles using their email addresses. Alternatively, you can opt to map your custom namespace to `uid` if customer profiles do not have an email.|
-|email_md5_id|Email MD5 that represents each customer profile|Optional|Choose this target identity when you aim to uniquely identify customer profiles using email MD5 values. In this case, set `uid` (mandatory) to either the same email MD5 values or another appropriate identity namespace.|
+|email_md5_id|Email MD5 that represents each customer profile|Optional|Choose this target identity when you aim to uniquely identify customer profiles using email MD5 values. It is essential that email addresses are already in MD5 format within the Experience Platform, as the Platform does not convert plain text to MD5. In this scenario, set `uid` (mandatory) to either the same email MD5 values or another appropriate identity namespace.|
 
 {style="table-layout:auto"}
 
@@ -59,7 +59,7 @@ This section describes which type of audiences you can export to this destinatio
 {style="table-layout:auto"}
 
 >[!NOTE]
-> As individual members are added or removed from the platform audience, updates will be sent to the ZMP to ensure that the destination customer list is synchronized accordingly.
+> As individual members are added or removed from the Platform audience, updates will be sent to the ZMP to ensure that the destination customer list is synchronized accordingly.
 
 ## Export type and frequency {#export-type-frequency}
 
@@ -84,7 +84,7 @@ To connect to this destination, follow the steps described in the [destination c
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
 * **[!UICONTROL Username]**: `api`
-* **[!UICONTROL Password]**: Your ZMP REST API Key. You can find your REST API Key by logging in to your ZMP account and navigating to **Settings** > **Integrations** > **Keys & Apps** section. See the [ZMP documentation]((https://knowledgebase.zetaglobal.com/zmp/integrations) for more details.
+* **[!UICONTROL Password]**: Your ZMP REST API Key. You can find your REST API Key by logging in to your ZMP account and navigating to **Settings** > **Integrations** > **Keys & Apps** section. See the [ZMP documentation](https://knowledgebase.zetaglobal.com/zmp/integrations) for more details.
 
 ### Fill in destination details {#destination-details}
 
@@ -121,7 +121,7 @@ Selecting source fields:
 
 Selecting target fields:
 * (Mandatory) Select `uid` as the target identity to which you map a source identity namespace. 
-* (Optional) Select `email_md5_id` as the target identity to which you mapped the source identity namespace that represents email md5 values.
+* (Optional) Select `email_md5_id` as the target identity to which you mapped the source identity namespace that represents email md5 values. It is essential that email addresses are already in MD5 format within the Experience Platform, as the Platform does not convert plain text to MD5
 * Select any additional target mappings if needed.
 
 ![Identity mapping](../../assets/catalog/data-management-platform/zeta-marketing-platform/MappingExample.png)
