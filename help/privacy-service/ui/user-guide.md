@@ -40,6 +40,7 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 | [!UICONTROL GDPR] | The European Union's [!DNL General Data Protection Regulation] |
 | [!UICONTROL HIPAA_AUS] | The [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | Brazil's [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL MHMDA] | The [!DNL Washington My Health My Data Act] |
 | [!UICONTROL NZPA_NZL] | The New Zealand [!DNL Privacy Act] |
 | [!UICONTROL PDPA_THA] | Thailand's [!DNL Personal Data Protection Act] |
 | [!UICONTROL UCPA]  | The [!DNL Utah Consumer Privacy Act] |
