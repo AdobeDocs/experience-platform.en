@@ -19,8 +19,6 @@ You can also set up STFP or other storage locations to export prospect audiences
 
 ```
 
-Adding the snippet above to the destination configuration will enable the destination to export prospect audiences, as 
-
 For detailed descriptions of the parameters used below, see [configuration options in Destinations SDK](../../functionality/configuration-options.md).
 
 ## Prerequisites {#prerequisites}
