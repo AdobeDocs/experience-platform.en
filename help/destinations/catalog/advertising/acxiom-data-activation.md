@@ -12,7 +12,7 @@ badge: Beta
 
 ## Overview {#overview}
 
-Use Acxiom Data Activation connector to activate first-party profiles in Real-Time CDP to Acxiom for enrichment and use across marketing channels.
+Use the Acxiom Data Activation connector to activate first-party profiles in Real-Time CDP to Acxiom for enrichment and use across marketing channels.
 
 This tutorial provides steps to create an [!DNL Acxiom Data Activation] destination connection and dataflow using the Adobe Experience Platform user interface.  This connector is used to deliver data to Acxiom enhancement service using Amazon S3 as a drop point.
 
@@ -121,7 +121,9 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 ### Mapping suggestions
 
-Processing requires name and address elements, while not all elements are required providing as much as possible will aid in successful matching.  Mapping suggestions are provided in the table below listing attributes on your destination side that are used by Acxiom processing that customers can map profile attributes to.  This should be treated as suggestions as not all elements are required and the source values will depend on the needs of the account.
+The correct processing of files on the Acxiom side requires name and address elements. While not all elements are required, providing as much as possible will aid in successful matching.
+
+Mapping suggestions are provided in the table below listing attributes on your destination side that are used by Acxiom processing that customers can map profile attributes to. Treat these elements as suggestions as not all elements are required and the source values will depend on the needs of the account.
 
 | Target Field | Source Description                                          |
 |--------------|-------------------------------------------------------------|
@@ -136,24 +138,18 @@ Processing requires name and address elements, while not all elements are requir
 
 >[!NOTE]
 >
->Additional fields not listed above will be included on the export, but will be ignored by Acxiom processing.
-
-## Review your dataflow
-
-Use the review page for a summary of your dataflow prior to submission
-
-![Review](../../assets/catalog/advertising/acxiom/image-destination-enhancement-review.png)
+>If you map additional fields not listed above in the dataflow, these will be included in the data export, but will be ignored by Acxiom processing.
 
 ## Next steps
 
-By following this tutorial, you have successfully created a dataflow to export batch data from Experience Platform to your [!DNL Acxiom] managed S3 location. You would need to contact your Acxiom representative with the name of the account, filename, and the bucket path so that processing can set up.
+By following this tutorial, you have successfully created a dataflow to export profile data from Experience Platform to your [!DNL Acxiom] managed S3 location. Next, you need to contact your Acxiom representative with the name of the account, file names, and the bucket path so that processing can set up.
 
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
 
 
-## Exported data / Validate data export {#exported-data}
+## Validate data export {#exported-data}
 
 To verify if data has been exported successfully, check your [!DNL Amazon S3 Storage] bucket and make sure that the exported files contain the expected profile populations.
 
