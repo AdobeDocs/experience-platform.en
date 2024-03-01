@@ -71,12 +71,6 @@ Only custom data types defined by your organization can be edited. Select **[!UI
 
 Select the data type you want to edit from the list to open the right rail, showing the details of the data type. From the details panel you can also download a sample file, copy the JSON structure or add the data type to a package. 
 
->[!NOTE]
->
->If you created a map data type that is not either a string or an integer, the data type will show as [!UICONTROL Complex].
-
-<!-- ... PLAT-181676-->
-
 Select the name of the data type in the right rail to open its structure in the [!DNL Schema Editor].
 
 ![The [!UICONTROL Data types] tab of the [!UICONTROL Schemas] workspace, with a data type, [!UICONTROL Custom] and the data type [!UICONTROL Name] highlighted.](../../images/ui/resources/data-types/edit.png)
