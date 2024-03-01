@@ -20,6 +20,12 @@ Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select t
 
 ![Destinations which support account audiences.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
+## Video overview
+
+View the video below for an overview of creating and activating account audiences, and the supported use cases when activating account audiences.
+
+>[!VIDEO](https://video.tv.adobe.com/v/338252/?learn=on)
+
 ## Prerequisites {#prerequisites}
 
 * You must first ingest [account profiles](/help/rtcdp/accounts/account-profile-overview.md) and create [account audiences](/help/segmentation/ui/account-audiences.md) before you can activate them to downstream destinations.
