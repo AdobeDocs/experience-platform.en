@@ -7,7 +7,7 @@ title: Configure a file-based destination to export prospect audiences to a stor
 
 ## Overview {#overview}
 
-This page describes how to use Destination SDK to configure a file-based destination with custom [file formatting options](configure-file-formatting-options.md) and a custom [file name configuration](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) to activate [prospect audiences](/help/destinations/ui/activate-prospect-audiences.md). The examples in this guide describe how to export audiences of prospect profiles to an Amazon S3 location.
+This page describes how to use Destination SDK to configure a file-based destination with custom [file formatting options](configure-file-formatting-options.md) and a custom [file name configuration](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) to export [prospect audiences](/help/destinations/ui/activate-prospect-audiences.md). The examples in this guide describe how to export audiences of prospect profiles to an Amazon S3 location.
 
 You can also set up STFP or other storage locations to export prospect audiences. The important part to remember is to add the snippet below to the destination configuration in [step 2](#create-destination-configuration) to enable the [workflow to export prospect audiences](/help/destinations/ui/activate-prospect-audiences.md) to the destination.
 
@@ -18,6 +18,8 @@ You can also set up STFP or other storage locations to export prospect audiences
   ],
 
 ```
+
+Adding the snippet above to the destination configuration will enable the destination to export prospect audiences, as 
 
 For detailed descriptions of the parameters used below, see [configuration options in Destinations SDK](../../functionality/configuration-options.md).
 
@@ -379,15 +381,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       "allowDedupeKeyFieldSelection":true,
       "defaultExportMode":"DAILY_FULL_EXPORT",
       "allowedExportMode":[
-         "DAILY_FULL_EXPORT",
-         "FIRST_FULL_THEN_INCREMENTAL"
+         "DAILY_FULL_EXPORT"
       ],
       "allowedScheduleFrequency":[
          "DAILY",
-         "EVERY_3_HOURS",
-         "EVERY_6_HOURS",
-         "EVERY_8_HOURS",
-         "EVERY_12_HOURS",
          "ONCE"
       ],
       "defaultFrequency":"DAILY",
@@ -431,7 +428,7 @@ When filling in details about the destination, notice how the fields surfaced ar
 ![fill in destination details](../../assets/guides/batch/file-configuration-options.gif)
 
 When scheduling export intervals, notice how the fields surfaced are the fields you set up in the `batchConfig` configuration.
-![export scheduling options](../../assets/guides/batch/file-export-scheduling.png)
+![export scheduling options](../../assets/guides/batch/ui-view-scheduling-prospect-destination.png)
 
 When viewing the filename configuration options, notice how the fields surfaced represent the `filenameConfig` options that you set up in the configuration.
 ![filename configuration options](../../assets/guides/batch/file-naming-options.gif)
@@ -456,4 +453,4 @@ If you are an Independent Software Vendor (ISV) or System Integrator (SI) creati
 
 ## Next steps {#next-steps}
 
-By reading this article, you now know how to author a custom [!DNL Amazon S3] destination to export prospect audiences by using Destination SDK.
+By reading this article, you now know how to use Destination SDK to author a custom [!DNL Amazon S3] destination to export prospect audiences.
