@@ -71,6 +71,12 @@ Only custom data types defined by your organization can be edited. Select **[!UI
 
 Select the data type you want to edit from the list to open the right rail, showing the details of the data type. From the details panel you can also download a sample file, copy the JSON structure or add the data type to a package. 
 
+>[!NOTE]
+>
+>If you created a map data type that is not either a string or an integer, the data type will show as [!UICONTROL Complex].
+
+<!-- ... PLAT-181676-->
+
 Select the name of the data type in the right rail to open its structure in the [!DNL Schema Editor].
 
 ![The [!UICONTROL Data types] tab of the [!UICONTROL Schemas] workspace, with a data type, [!UICONTROL Custom] and the data type [!UICONTROL Name] highlighted.](../../images/ui/resources/data-types/edit.png)
@@ -104,6 +110,8 @@ Once you have finished adding fields to the data type, select **[!UICONTROL Save
 Once you have created a data type, you can start using it in your schemas. Since XDM schemas are composed of a class and zero or more field groups, fields provided by a data type cannot be added to a schema directly. Instead, they must be included in a class or a field group.
 
 Start by following the steps involved with [adding a field to a class](./classes.md#add-fields) or [adding a field to a field group](./field-groups.md#add-fields). Alternatively, you can start [adding a field directly to a schema](./schemas.md#add-individual-fields) and choose the parent class or field group from there. When you choose the **[!UICONTROL Type]** for the new field, select the name of your data type from the dropdown menu.
+
+
 
 ## Convert a multi-field object into a data type {#convert}
 
