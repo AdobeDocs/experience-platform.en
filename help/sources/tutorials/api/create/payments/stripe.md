@@ -3,7 +3,7 @@ title:
 description:
 badge: Beta
 ---
-# Bring your payments data from [!DNL Stripe] to Experience Platform using APIs
+# Bring payments data from your [!DNL Stripe] account to Experience Platform using APIs
 
 >[!NOTE]
 >
