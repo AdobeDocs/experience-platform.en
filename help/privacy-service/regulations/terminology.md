@@ -95,6 +95,8 @@ This document provides definitions for key terms related to privacy regulations 
 
 **Main establishment**: The place within the Union that the main decisions surrounding data processing are made; with regard to the processor.
 
+**MHMDAa**: The [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) enhances privacy rights for consumers regarding their health data. It mandates disclosures, consumer consent, and deletion rights for health data, and prohibits the sale of health data without authorization. Additionally, the Act makes it unlawful to use geofencing around healthcare facilities.
+
 ## N
 
 ## O

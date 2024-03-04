@@ -4,6 +4,7 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentation Service Guide
 user-guide-description: Build audiences from your Real-Time Customer Profile data using Adobe Experience Platform generated segment definitions or external sources.
 feature: Segments
+role: User
 ---
 
 # Adobe Experience Platform Segmentation Service {#segmentation}
@@ -34,6 +35,7 @@ feature: Segments
     - [Edge segmentation](ui/edge-segmentation.md)
     - [Streaming segmentation](ui/streaming-segmentation.md)
     - [Streaming segmentation (Video)](video/streaming-segmentation-overview.md)
+    - [Ignore year time constraint update](ui/ignore-year.md)
     - [Time constraints refactoring](ui/segment-refactoring.md)
     - Segment Match {#segment-match}
       - [Segment Match overview](ui/segment-match/overview.md) 

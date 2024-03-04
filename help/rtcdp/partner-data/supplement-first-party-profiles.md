@@ -24,7 +24,7 @@ Adobe understands there is no one-size-fits-all approach and allows for seamless
 
 For example, follow the steps described in this use case when you need to enrich your customer records with demographic and intent signals. 
 
-## Prerequisites and planning {#prerequisites-and-planning}
+## Prerequisites and planning
 
 As you consider supplementing your own first-party profiles with attributes from data partners, you should discuss and address the following details on the data enrichment loop with the data partner:
 
@@ -50,7 +50,7 @@ View the video tutorial below for a walkthrough of how to supplement first-party
 1. As a **customer**, you license attributes from the **data partner**.
 2. As a **customer**, you extend your profile data and governance model to accommodate **partner**-provided attributes.
 3. As a **customer**, you onboard the audiences that you want to be enriched with the data partner. Generally, these audiences are keyed off input identifiers like Personally Identifiable Information (PII) elements like email, name, address, or others.
-4. The **partner** appends licensed attributes for the profiles that they are able to match against. Optionally, a [Partner ID](/help/identity-service/namespaces.md) can be included and ingested into the partner scoped ID namespace.
+4. The **partner** appends licensed attributes for the profiles that they are able to match against. Optionally, a [Partner ID](/help/identity-service/features/namespaces.md) can be included and ingested into the partner scoped ID namespace.
 5. As a **customer**, you load attributes from the data partner into customer profiles in Real-Time CDP.
  
 ## How to achieve the use case: Step-by-step instructions {#step-by-step-instructions}
@@ -93,9 +93,9 @@ Also in this step, think about how your data governance model changes as you exp
 
 >[!TIP]
 >
->If you choose to supplement your customer profiles with a person-based identifier from the data vendor, you can create a new identity type of the type **[[!UICONTROL Partner ID]](/help/identity-service/namespaces.md)**. 
+>If you choose to supplement your customer profiles with a person-based identifier from the data vendor, you can create a new identity type of the type **[[!UICONTROL Partner ID]](/help/identity-service/features/namespaces.md)**. 
 >
->Read more about Partner ID in the [identity types section](/help/identity-service/namespaces.md).
+>Read more about Partner ID in the [identity types section](/help/identity-service/features/namespaces.md).
 >Read about [how to define identity fields](/help/xdm/ui/fields/identity.md) in the Experience Platform user interface.
 
 ### Export audiences that you want to be enriched when keyed off Personal Identifiable Information (PII) or hashed-PII {#export-audiences}
@@ -124,7 +124,7 @@ Some recommended source connectors for this purpose might be:
 
 Note the following limitations as you explore the use case described on this page:
 
-* If you select to use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/ui/identity-graph-viewer.md). 
+* If you select to use Partner IDs, be aware that these IDs are not used when building your [identity graph](/help/identity-service/features/identity-graph-viewer.md). 
 
 ## Other use cases achieved through partner data support {#other-use-cases}
 

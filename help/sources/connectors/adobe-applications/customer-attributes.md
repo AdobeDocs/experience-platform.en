@@ -19,7 +19,7 @@ The [!DNL Customer Attributes] source automatically creates the dataset for data
 
 ## Identities
 
-The primary identity of a dataset is contained in the first column of the CSV file of the source data. The [!DNL Customer Attributes] source assumes that the identity is always mapped to the [`CORE` namespace](../../../identity-service/namespaces.md), a system-generated namespace that is supported by [[!DNL Identity Service]](../../../identity-service/home.md).
+The primary identity of a dataset is contained in the first column of the CSV file of the source data. The [!DNL Customer Attributes] source assumes that the identity is always mapped to the [`CORE` namespace](../../../identity-service/features/namespaces.md), a system-generated namespace that is supported by [[!DNL Identity Service]](../../../identity-service/home.md).
 
 You cannot select an existing namespace for the identity when using [!DNL Customer Attributes] source because [!DNL Customer Attributes] assumes that the primary identity for the schema is always in the identity map. [!DNL Customer Attributes] then creates the mapping of the source ID to the identity map UUID in an automated manner.
 

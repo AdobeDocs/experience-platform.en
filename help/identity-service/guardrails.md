@@ -25,7 +25,7 @@ The following table outlines static limits applied to identity data.
 
 | Guardrail | Limit | Notes |
 | --- | --- | --- |
-| Number of identities in a graph | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity. Deletion is based on identity type and timestamp. The limit is applied at the sandbox level. For more information, read the section on [understanding the deletion logic](#deletion-logic). |
+| Number of identities in a graph | 50 | When a graph with 50 linked identities is updated, Identity Service will apply a "first-in, first-out" mechanism and deletes the oldest identity to make space for the newest identity for this graph (**Note**: Real-Time Customer Profile is unaffected). Deletion is based on identity type and timestamp. The limit is applied at the sandbox level. For more information, read the section on [understanding the deletion logic](#deletion-logic). |
 | Number of links to an identity for a single batch ingestion | 50 | A single batch could contain anomalous identities that cause unwanted graph merges. To prevent this, Identity Service will not ingest identities that are already linked to 50 or more identities. |
 | Number of identities in an XDM record | 20 | The minimum number of XDM records required is two. |
 | Number of custom namespaces | None | There are no limits to the number of custom namespaces you can create. |
@@ -129,7 +129,7 @@ In this example, ECID:32110 is ingested and linked to a large graph at `timestam
 
 >[!TAB Deletion process]
 
-As a result, Identity Service deletes the oldest identity based on timestamp and identity type. In this case, ECID:35577 gets deleted.
+As a result, Identity Service deletes the oldest identity based on timestamp and identity type. In this case, ECID:35577 gets deleted only from the identity graph.
 
 ![](./images/guardrails/during-split.png)
 
@@ -160,7 +160,7 @@ In the example below, ECID:21011 is ingested and linked to the graph at `timesta
 
 >[!TAB Deletion process]
 
-As a result, Identity Service deletes the oldest identity, which in this case is ECID:35577. The deletion of ECID:35577 also results in the deletion of the following:
+As a result, Identity Service deletes the oldest identity only from the identity graph, which in this case is ECID:35577. The deletion of ECID:35577 also results in the deletion of the following:
 
 * The link between CRM ID: 60013 and the now-deleted ECID:35577, thus resulting in a graph split scenario.
 * IDFA: 32110, IDFA: 02383, and the remaining identities represented by `(...)`. These identities get deleted because individually, they are not linked to any other identities and therefore, cannot be represented in a graph.
@@ -180,7 +180,7 @@ Finally, the deletion process yields two smaller graphs.
 See the following documentation for more information on [!DNL Identity Service]:
 
 * [[!DNL Identity Service] overview](home.md)
-* [Identity graph viewer](ui/identity-graph-viewer.md)
+* [Identity graph viewer](features/identity-graph-viewer.md)
 
 See the following documentation for more information on other Experience Platform services guardrails, on end-to-end latency information, and licensing information from Real-Time CDP Product Description documents:
 

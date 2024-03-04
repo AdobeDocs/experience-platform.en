@@ -61,7 +61,7 @@ The **[!UICONTROL Create computed attribute]** page appears. On this page, you c
 
 For this use case, you can create a computed attribute that, if the partner ID exists, gets the most recent value of the partner ID within the last 24 hours.
 
-Using the search bar, you can locate and add the "Partner ID" event to the computed attribute canvas.
+Using the search bar, you can locate and add the "Partner ID" event that [you created during the onsite personalization use case](#get-data-in) to the computed attribute canvas.
 
 ![The [!UICONTROL Events] tab and the search bar are highlighted.](../assets/offsite-retargeting/ca-add-partner-id.png)
 
@@ -103,7 +103,7 @@ Select the newly added **[!UICONTROL Page View]** event. Change the lookback per
 
 After adding your event, you'll need to add an attribute. Since you're working with unauthenticated visitors, you can add the computed attribute you just created. This newly created computed attribute lets you link partner IDs to an audience.
 
-To add the computed attribute, under **[!UICONTROL Attributes]**, select **[!UICONTROL XDM Individual Profile]**, followed by **[!UICONTROL _atag]**, **[!UICONTROL SystemComputedAttributes]**, and **[!UICONTROL PartnerID]**. Now, add the **[!UICONTROL Value]** of the computed attribute to the attributes section of the canvas.
+To add the computed attribute, under **[!UICONTROL Attributes]**, select **[!UICONTROL XDM Individual Profile]**, followed by **[your organization's tenant ID](../../xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL SystemComputedAttributes]**, and **[!UICONTROL PartnerID]**. Now, add the **[!UICONTROL Value]** of the computed attribute to the attributes section of the canvas.
 
 ![The folder pathing to access the computed attribute is displayed.](../assets/offsite-retargeting/access-computed-attribute.png)
 

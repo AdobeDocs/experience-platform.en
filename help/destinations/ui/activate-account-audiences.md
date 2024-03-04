@@ -2,15 +2,15 @@
 title: Activate account audiences to destinations
 type: Tutorial
 description: Learn how to activate account audiences to destinations
-badgeLimitedAvailability: label="Limited availability" type="Caution"
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
 ---
 # Activate account audiences
 
 >[!AVAILABILITY]
 >
->The functionality to activate account audiences to destinations is only available in the [B2B Edition of Real-Time Customer Data Platform](../../rtcdp/b2b-overview.md). Additionally, account audience functionality is currently in **limited availability**. Contact Adobe Customer Care or your Adobe representative to request access to this functionality.
+>The functionality to activate account audiences to destinations is available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) editions of Real-Time Customer Data Platform.
 
 This article explains the workflow required to export [account audiences](/help/segmentation/ui/account-audiences.md) from Adobe Experience Platform to your preferred destination. 
 
@@ -20,6 +20,12 @@ Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select t
 
 ![Destinations which support account audiences.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
+## Video overview
+
+View the video below for an overview of creating and activating account audiences, and the supported use cases when activating account audiences.
+
+>[!VIDEO](https://video.tv.adobe.com/v/338252/?learn=on)
+
 ## Prerequisites {#prerequisites}
 
 * You must first ingest [account profiles](/help/rtcdp/accounts/account-profile-overview.md) and create [account audiences](/help/segmentation/ui/account-audiences.md) before you can activate them to downstream destinations.
@@ -27,7 +33,7 @@ Go to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, and select t
 
 ### Required permissions {#permissions}
 
-To activate account audiences, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+To activate account audiences, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Activate Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To ensure that you have the necessary permissions to activate account audiences, browse the destinations catalog. If a destination has an **[!UICONTROL Activate]** control, then you have the appropriate permissions.
 
@@ -73,7 +79,7 @@ For the rest of the activation workflow to export account audiences, read the tu
 
 ## Important callouts and known limitations {#important-callouts-known-limitations}
 
-Note the following important callouts and known limitations for the limited availability release of the functionality to activate account audiences.
+Note the following important callouts and known limitations for the general availability release of the functionality to activate account audiences.
 
 ### Required mapping pairs in the mapping step when activating account audiences to the **[!UICONTROL (Companies) LinkedIn Matched Audiences]** destination {#required-mappings}
 

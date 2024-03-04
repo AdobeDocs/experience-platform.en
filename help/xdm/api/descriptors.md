@@ -41,18 +41,18 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-The response format depends on the `Accept` header sent in the request. Notice that the `/descriptors` endpoint uses `Accept` headers that are different than all other endpoints in the [!DNL Schema Registry] API.
+The response format depends on the `Accept` header sent in the request. Notice that the `/descriptors` endpoint uses `Accept` headers that are different from all other endpoints in the [!DNL Schema Registry] API.
 
 >[!IMPORTANT]
 >
->Descriptors require unique `Accept` headers that replace `xed` with `xdm`, and also offer a `link` option that is unique to descriptors. The proper `Accept` headers have been included in the examples calls below, but take extra caution to ensure the correct headers are being used when working with descriptors.
+>Descriptors require unique `Accept` headers that replace `xed` with `xdm`, and also offer a `link` option that is unique to descriptors. The proper `Accept` headers have been included in the examples calls below, but take extra caution to ensure that the correct headers are being used when working with descriptors.
 
 | `Accept` header | Description |
 | -------|------------ |
 | `application/vnd.adobe.xdm-id+json` | Returns an array of descriptor IDs |
 | `application/vnd.adobe.xdm-link+json` | Returns an array of descriptor API paths |
 | `application/vnd.adobe.xdm+json` | Returns an array of expanded descriptor objects |
-| `application/vnd.adobe.xdm-v2+json` | This `Accept` header must be used in order to utilize paging capabilities. |
+| `application/vnd.adobe.xdm-v2+json` | This `Accept` header must be used to use paging capabilities. |
 
 {style="table-layout:auto"}
 
@@ -205,11 +205,11 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Request**
 
-This request essentially re-writes the descriptor, so the request body must include all fields required for defining a descriptor of that type. In other words, the request payload to update (PUT) a descriptor is the same as the payload to [create (POST) a descriptor](#create) of the same type.
+This request essentially rewrites the descriptor, so the request body must include all fields required for defining a descriptor of that type. In other words, the request payload to update (PUT) a descriptor is the same as the payload to [create (POST) a descriptor](#create) of the same type.
 
 >[!IMPORTANT]
 >
->Just as with creating descriptors using POST requests, each descriptor type requires its own specific fields to be sent in PUT request payloads. See the [appendix](#defining-descriptors) for a complete list of descriptors and the fields necessary to define them.
+>As with creating descriptors using POST requests, each descriptor type requires its own specific fields to be sent in PUT request payloads. See the [appendix](#defining-descriptors) for a complete list of descriptors and the fields necessary to define them.
 
 The following example updates an identity descriptor to reference a different `xdm:sourceProperty` (`mobile phone`) and change the `xdm:namespace` to `Phone`.
 
@@ -242,11 +242,11 @@ A successful response returns HTTP status 201 (Created) and the `@id` of the upd
 }
 ```
 
-Performing a [lookup (GET) request](#lookup) to view the descriptor will show that the fields have now been updated to reflect the changes sent in the PUT request.
+Performing a [lookup (GET) request](#lookup) to view the descriptor shows that the fields have now been updated to reflect the changes sent in the PUT request.
 
 ## Delete a descriptor {#delete}
 
-Occasionally you may need to remove a descriptor that you have defined from the [!DNL Schema Registry]. This is done by making a DELETE request referencing the `@id` of the descriptor you wish to remove.
+Occasionally you may need to remove a descriptor that you have defined from the [!DNL Schema Registry]. This is done by making a DELETE request referencing the `@id` of the descriptor that you wish to remove.
 
 **API format**
 
@@ -285,6 +285,10 @@ The following section provides additional information regarding working with des
 
 The following sections provide an overview of available descriptor types, including the required fields for defining a descriptor of each type.
 
+>[!IMPORTANT]
+>
+>You cannot label the tenant namespace object, as the system would apply that label to every custom field across that sandbox. Instead, you must specify the leaf node under that object that you need to label.
+
 #### Identity descriptor
 
 An identity descriptor signals that the "[!UICONTROL sourceProperty]" of the "[!UICONTROL sourceSchema]" is an [!DNL Identity] field as described by [Adobe Experience Platform Identity Service](../../identity-service/home.md).
@@ -307,8 +311,8 @@ An identity descriptor signals that the "[!UICONTROL sourceProperty]" of the "[!
 | `@type` | The type of descriptor being defined. For an identity descriptor, this value must be set to `xdm:descriptorIdentity`. |
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
 | `xdm:sourceVersion` | The major version of the source schema. |
-| `xdm:sourceProperty` | The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address") |
-| `xdm:namespace` | The `id` or `code` value of the identity namespace. A list of namespaces can be found using the [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). |
+| `xdm:sourceProperty` | The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (for example, use "/personalEmail/address" instead of "/properties/personalEmail/properties/address") |
+| `xdm:namespace` | The `id` or `code` value of the identity namespace. A list of namespaces can be found using the [[!DNL Identity Service API]](https://developer.adobe.com/experience-platform-apis/references/identity-service). |
 | `xdm:property` | Either `xdm:id` or `xdm:code`, depending on the `xdm:namespace` used. |
 | `xdm:isPrimary` | An optional boolean value. When true, indicates the field as the primary identity. Schemas may contain only one primary identity. |
 
@@ -347,8 +351,8 @@ Friendly name descriptors allow a user to modify the `title`, `description`, and
 | `@type` | The type of descriptor being defined. For a friendly name descriptor, this value must be set to `xdm:alternateDisplayInfo`. |
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
 | `xdm:sourceVersion` | The major version of the source schema. |
-| `xdm:sourceProperty` | The path to the specific property whose details you want to modify.The path should begin with a slash (`/`) and not end with one. Do not include `properties` in the path (for example, use `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
-| `xdm:title` | The new title you wish to display for this field, written in Title Case. |
+| `xdm:sourceProperty` | The path to the specific property whose details you want to modify. The path should begin with a slash (`/`) and not end with one. Do not include `properties` in the path (for example, use `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
+| `xdm:title` | The new title that you wish to display for this field, written in Title Case. |
 | `xdm:description` | An optional description can be added along with the title. |
 | `meta:enum` | If the field indicated by `xdm:sourceProperty` is a string field, `meta:enum` can be used to add suggested values for the field in the Segmentation UI. It is important to note that `meta:enum` does not declare an enumeration or provide any data validation for the XDM field.<br><br>This should only be used for core XDM fields defined by Adobe. If the source property is a custom field defined by your organization, you should instead edit the field's `meta:enum` property directly through a PATCH request to the field's parent resource. |
 | `meta:excludeMetaEnum` | If the field indicated by `xdm:sourceProperty` is a string field that has existing suggested values provided under a `meta:enum` field, you can include this object in a friendly name descriptor to exclude some or all of these values from segmentation. The key and value for each entry must match those included in the original `meta:enum` of the field in order for the entry to be excluded.  |

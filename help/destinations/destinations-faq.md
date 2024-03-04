@@ -43,6 +43,15 @@ You re-activate the updated audience to the same destination, but since there is
 To ensure all the profiles are sent to your destination, you must create a new audience with the new configuration, and then activate it to your destination.
 
 +++
+
+### When an audience is removed from a destination, is there any signal that is sent to the destination indicating that the audience is removed?
+
++++Answer
+
+No, there is no dependency between the Experience Platform destination and the customer instance of the target system. On the receiving side, the only indication that the target system would see is that it stopped receiving that audience data.
+
++++
+
 <!--
 ## [!DNL Experience Cloud Audiences] {#eca-faq}
 

@@ -3,6 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Profile Export Jobs API Endpoint
 type: Documentation
 description: Real-Time Customer Profile enables you to build a single view of individual customers within Adobe Experience Platform by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing.
+role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 ---
 # Profile export jobs endpoint

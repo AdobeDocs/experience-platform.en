@@ -12,15 +12,15 @@ exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
 >
 >Assistant for Adobe Experience Platform is currently in Alpha. The feature and documentation are subject to change.
 
-Assistant for Adobe Experience Platform is a UI feature that you can use to navigate and understand Experience Platform and Real-Time Customer Data Platform concepts, and usage information about your objects.
+Assistant is a UI feature that you can use to navigate and understand Adobe Experience Platform and Real-Time Customer Data Platform concepts and usage information about your objects.
 
 You can query Assistant for information such as:
 
 * Guidance on how to perform tasks pertaining to data and audiences.
 * Statuses and metrics of the existing data objects in your organization.
-* Use case examples and nuances to better understand your data objects, including attributes, datasets, destinations, schemas, segments, and sources.
+* Use case examples and nuances to better understand your data objects, including attributes, dataflows, datasets, destinations, schemas, segments, and sources.
 
-This document provides information on how you can access and use Assistant to ask questions and receive answers about Experience Platform and Real-Time CDP concepts.
+Read the guide below to learn how you can use Assistant to help navigate and understand your Experience Platform and Real-Time CDP workflows.
 
 >[!BEGINSHADEBOX]
 
@@ -49,125 +49,148 @@ There are two classes of questions to consider before querying Assistant:
 
 >[!ENDSHADEBOX]
 
-## Access Assistant for Experience Platform in the UI
+## Access Assistant in the Experience Platform UI
 
-You can access Assistant from the header navigation in the Experience Platform UI.
+To launch Assistant, select the **[!UICONTROL Assistant icon]** from the top header of the Experience Platform UI.
 
-Select the **[!UICONTROL Assistant icon]** from the header to launch Assistant panel.
+![The Experience Platform home page, with the Assistant icon selected and the Assistant interface open.](./images/ai-assistant/ai-assistant.png)
 
-![The Experience Platform UI home page with Assistant icon selected.](./images/ai-assistant/ai-assistant.png)
+The Assistant interface appears, immediately providing you with information to get started. You can use the options provided under [!UICONTROL Ideas to get started] to answer questions and commands such as:
 
-<!-- +++Use immersive mode
+* [!UICONTROL Which of my segments are activated?] 
+* [!UICONTROL What is a schema?]
+* [!UICONTROL Tell me some common use cases for Real-Time CDP]
 
-To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
+![The "ideas to get started" section of Assistant.](./images/ai-assistant/ideas-to-get-started.png)
 
-![select-immersive](./images/ai-assistant/select-immersive.png)
+To interact with Assistant, use the input box to type in your queries or commands. You can also use the (**`+`**) symbol to utilize the auto-complete function and the bookmark icon to access your bookmarked queries and commands.
 
-A dedicated pop-up interface for Assistant appears at the center of your screen.
+![The Assistant input box highlighted.](./images/ai-assistant/interact.png)
 
-![immersive-mode](./images/ai-assistant/immersive-mode.png)
-
-+++
-
-From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
-
-### Example use case: Use Assistant to expedite your schema creation process {#example-use-case}
+## Use case example: Use Assistant to expedite your schema creation process
 
 >[!NOTE]
 >
->The following example workflow uses the ExperienceEvent schema creation process to illustrate how you can use Assistant when using the Experience Platform UI.
+>The following workflow is an example that uses the experience event schema creation process to illustrate how you can use Assistant when using the Experience Platform UI.
 
-Consider a use case in which you are creating a **Device Trade in Event Schema**. During the ExperienceEvent schema creation process, you come across the `eventType` field. At this point, you can either leave your workflow and refer to the the documentation on the [basics of a schema composition](../xdm/schema/composition.md), or you can use Assistant to retrieve immediate answers for your questions. 
+Consider a use case in which you are creating a **Device Trade in Event Schema**. During the experience event schema creation process, you come across the `eventType` field. "At this point, you have the option to either exit your workflow and refer to the [basics of a schema composition](../xdm/schema/composition.md) documentation, or you can use Assistant to retrieve answers to your questions and find additional resources through the documentation links recommended by Assistant."
 
 To begin, enter your question in the text box provided. In the example below, Assistant is provided the question: "**What is the eventType field in an ExperienceEvent schema?**"
 
-![The Assistant for Experience Platform with the following question prepared for querying: "What is the eventType field in an ExperienceEvent schema?](./images/ai-assistant/question.png)
+![Assistant for Experience Platform with the following question prepared for querying: "What is the eventType field in an ExperienceEvent schema?](./images/ai-assistant/question.png)
 
 Assistant then queries its knowledge base and computes an answer. After a few moments, Assistant returns an answer and related suggestions that you can use as follow up prompts.
 
-A given answer provides hyperlinks to any referenced entities. In the example below, select **[!UICONTROL Schemas]** to view a list of the referenced schemas, or **[!UICONTROL Segments]** to view a list of the referenced segments.
-
 ![Assistant for Experience Platform with an answer to the previous query.](./images/ai-assistant/answer.png)
 
-Assistant provides you with a way to validate your answer by viewing its source. Links to the documentation are provided for concept questions, while data usage questions can be verified with an SQL query that demonstrates how the answer was computed.
+After receiving a response from Assistant, you can select from a number of options to decide how you want to proceed.
 
-![Options provided by Assistant after returning an answer.](./images/ai-assistant/options.png)
+### Save your query {#save-your-query}
 
-### Follow up question {#follow-up-question}
++++Select to view an example of how to save a query
 
-+++Select to view an example of a follow up question
+To save your query, select the bookmark icon beside your question.
 
-You can further learn more about a particular topic by asking a follow up question. In the next example, the Assistant is asked how the eventType can be used in segmentation.
+![Screenshot of a selected bookmark.](./images/ai-assistant/save-your-query.png)
 
-![A follow up question and answer displayed on the Assistant for Experience Platform.](./images/ai-assistant/follow-up-question.png)
+To access your saved queries, select the bookmark icon below the input box, then select the query you would like to run.
 
-+++
-
-### Data usage question {#data-usage-question}
-
-+++Select to view an example of a data usage question
-
-You can also ask the Assistant questions regarding your data usage. When inquiring about data usage, you must be in an active sandbox in order for the Assistant to answer your query.
-
-For responses that involve data usage information, Assistant provides links to entities in question. In addition, Assistant provides you with an explanation on how it computed its answer.
-
-![A data usage question, asking how many segments a user has.](./images/ai-assistant/data-usage-question.png)
+![Screenshot of bookmark icon and a list of saved queries.](./images/ai-assistant/bookmarks.png)
 
 +++
 
-### Multi-turn {#multi-turn}
+### View data in your sandbox {#view-data-in-your-sandbox}
 
-+++Select to view an example of multi-turn
++++Select to view example
 
-You can use Assistant's multi-turn capabilities to have a more natural conversation during your experience. Assistant is able to answer follow up questions given that context can be inferred from an earlier interaction.
+Depending on your query, Assistant provides additional information pertaining to the data in your sandbox. To view how the response to your query applies to your sandbox, select **[!UICONTROL In your sandbox].** 
 
-In the example below, Assistant is asked to list the existing segments in the organization, as a follow up to an earlier query about total number of segments.
+During this step, Assistant may provide direct links to the UI pages of certain objects in question. In the example below, Assistant provides direct links to the [!UICONTROL Schemas] and [!UICONTROL Segments] UI pages.
 
-![](./images/ai-assistant/multi-turn-one.png)
-
-Next, Assistant receives another follow up request. This time, Assistant responds by listing the existing segments ordered by their respective sizes.
-
-![](./images/ai-assistant/multi-turn-two.png)
+![Screenshot of "In your sandbox" option.](./images/ai-assistant/in-your-sandbox.png)
 
 +++
 
-### Use autocomplete {#use-auto-complete}
+### Verify the response {#verify-the-response}
 
-+++Select to view an example of autocomplete
++++Select to view an example of how to display sources
+
+To view citations and validate Assistant's response, select **[!UICONTROL Show sources]**. Assistant provides links to documentation that corroborates its response. You can also use the queries that Assistant provides under [!UICONTROL Related suggestions] to further explore topics related to your original query.
+
+![Screenshot of "Show sources".](./images/ai-assistant/show-sources.png)
+
++++
+
+### Data usage and visualization {#data-usage-and-visualization}
+
++++Select to view an example of data usage questions and data visualization
+
+For Assistant to respond to a query about data usage within your organization, you have to be in an active sandbox.
+
+In the example below, Assistant is provided with the following query: **"Show me segments definitions with over 1000 profiles and include activation status."** Assistant then responds with a chart visualizing your segment and profile data.
+
+![Follow up question about data usage.](./images/ai-assistant/data-usage-question.png)
+
+You can hover over an individual bar to view specific data. You can also select the expand icon for a larger view of the chart.
+
+![Follow up question illustrating data visualization.](./images/ai-assistant/data-visualization.png)
+
+An expanded view of the visualization appears. You can use the expanded modal to further inspect your data and is especially useful when visualization returns with a large number of columns.
+
+![Expanded chart.](./images/ai-assistant/chart-expanded.png)
+
+When prompted with a data usage question, Assistant provides an explanation of how it computed the answer. In the example below, Assistant outlines the steps it took in order to display segments definitions with over 1000 profiles and their respective activation statuses.
+
+![Follow up question about segments illustrating how Assistant computed the answer.](./images/ai-assistant/results-explained.png)
+
+You can also provide filters and modifications to your queries, and you can instruct Assistant to render its findings based on the filters that you include. For example, you can ask Assistant to show you a trend of the count segments definitions in the order of their created date, remove segments definitions with zero total profiles, and use month names instead of integers when displaying the data.
+
++++
+
+### Use auto-complete {#use-auto-complete}
+
++++Select to view an example of auto-complete
 
 You can use the autocomplete function to receive a list of data objects that exist in your sandbox. Autocomplete recommendations are available for the following domains: segments, schemas, datasets, sources, and destinations.
 
-To use autocomplete, enter a plus symbol (**`+`**) as part of your question. Alternatively, you can also select the plus symbol (**`+`**) in the text input box. Then, a window appears with a list of recommended data objects the exist in your sandbox.
+You can use autocomplete by including the plus symbol (**`+`**) in your query. As an alternative, you can also select the plus sign (**`+`**) located at the bottom of the text input box. A window appears with a list of recommended data objects from your sandbox.
 
-![](./images/ai-assistant/autocomplete-options.png)
+![Example of auto-complete](./images/ai-assistant/auto-complete-one.png)
 
 Next, select the data object that you want to query to complete your question and then submit your question.
 
-![](./images/ai-assistant/autocomplete-question.png)
+![Example of auto-complete with question and answer](./images/ai-assistant/auto-complete-two.png)
 
 +++
 
-## Scope {#scope}
+### Use multi-turn {#use-multi-turn}
 
-Assistant can answer questions regarding Real-Time CDP and Experience Platform concepts, as well as data usage specific to your user account. Assistant can also infer context based on the UI page that you are in. It can identify:
++++Select to view an example of multi-turn
 
-* The user account that you are using.
-* The organization that you belong to. 
-* The page that you are viewing on your screen.
-* The resource (including type and ID) that you are viewing on your screen.
-* Given that you are in the process of a particular Experience Platform or Real-Time CDP workflow, Assistant can deduce your intent.
+You can use Assistant's multi-turn capabilities to have a more natural conversation during your experience. Assistant is able to answer follow-up questions, given. that context can be inferred from an earlier interaction.
 
-### Documentation {#documentation}
+In the example below, Assistant is asked for the total number of dataflows in the current organization.
+
+![Example of multi-turn](./images/ai-assistant/multi-turn-one.png)
+
+Next, Assistant receives another follow-up request. This time, Assistant responds by listing the dataflows that currently exist in your organization.
+
+![Example of multi-turn with question and answer](./images/ai-assistant/multi-turn-two.png)
+
++++
+
+## Documentation {#documentation}
 
 Currently, the documentation index covers Adobe Experience Platform (Real-Time CDP and Audiences). The index is updated periodically.
 
 The documentation retrieval model is trained on Experience Platform (Real-Time CDP and Audiences). Questions outside the scope of Adobe Experience Platform such as, questions about other Adobe products like Adobe Target and the Creative Cloud suite cannot be answered.
 
-### Data usage {#data-usage}
+## Data usage {#data-usage}
 
 You can also ask Assistant questions about your data usage in the following domains: 
 
 * Attributes
+* Dataflows
 * Datasets
 * Destinations _(Questions regarding accounts and some questions about dataflow cannot be answered at this time.)_
 * Schemas _(Questions regarding field groups cannot be answered at this time.)_
@@ -189,18 +212,6 @@ You will need to log into a sandbox to inquire about specific data related to ob
 | Object lookup | Retrieve or access an Experience Platform object or it's properties. | <ul><li>Which datasets do not have any schema associated with them</li><li>List the attributes used for {SEGMENT_NAME}?</li><li>Give me the list of schemas which are profile enabled but have not been modified since their creation.</li><li>Which segments have been modified in the last week?</li><li>List me the segments which have the same segment definitions along with their creation date.</li><li>Which datasets are profile enabled and also include how many segments have been created from each dataset.</li><li>Which source accounts are associated with dataset XYZ?</li><li>Show me the segment definition and modification date of {SEGMENT_NAME}.</li></ul>|
 
 +++
-
-## Verify the response {#verify-the-response}
-
-You can verify the response that the Assistant returns using a number of different ways.
-
-### Citations for documentation {#citations}
-
-With every response, Assistant provides you with citations that you can refer to for verification or more information.
-
-Select **[!UICONTROL Show source]** for a list of links to documentation that the Assistant references to compute its response. When you select a link to the referenced documentation, you are taken to the relevant section of that particular page, with the specific information highlighted.
-
-![The links to the source displayed in the Assistant.](./images/ai-assistant/show-sources.png)
 
 ## Provide feedback {#feedback}
 

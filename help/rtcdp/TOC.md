@@ -4,17 +4,19 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform Guide
 user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audience segments from those profiles, and activate those segments to third-party destinations.
+role: Admin
 ---
 
 # Real-Time Customer Data Platform Help {#rtcdp}
 
-* [Real-Time CDP overview](overview.md)
-* [Real-Time CDP B2B Edition overview](b2b-overview.md)
-* Getting started {#intro}
+* [Real-Time CDP documentation](home.md)
+* Get started {#intro}
   * Real-Time CDP {#rtcdp-intro}
+    * [Real-Time CDP overview](overview.md)
     * [Get started with Real-Time CDP](get-started.md)
     * [Home page](home-page-dashboards.md)
   * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
+    * [Real-Time CDP B2B Edition overview](b2b-overview.md)
     * [Example use case](./b2b-use-case.md)
     * [End-to-end tutorial](./b2b-tutorial.md)
     * [Real-Time CDP B2B Edition guardrails](b2b-guardrails.md)
@@ -67,8 +69,10 @@ user-guide-description: Bring together known and anonymous data from multiple en
   * [Sources overview](sources/sources-overview.md)
   * [Sources in Real-Time CDP B2B Edition](sources/b2b.md)
 * Use cases {#use-cases}
+  * [Overview of sample use cases](/help/rtcdp/use-case-guides/overview.md)
   * Personalization, Insights, and Engagement {#personalization-insights-engagement}
     * [Intelligently re-engage your customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+    * [Intelligently re-engage your customers: Luma examples](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
   * Customer acquisition {#customer-acquisition}
     * [Engage and acquire new customers without dependency on third-party cookies](/help/rtcdp/partner-data/prospecting.md)  
     * [Personalize onsite experiences for unknown visitors using partner-aided visitor recognition](/help/rtcdp/partner-data/onsite-personalization.md)

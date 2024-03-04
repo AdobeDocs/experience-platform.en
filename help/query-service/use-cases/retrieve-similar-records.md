@@ -1,13 +1,15 @@
 ---
-title: Lambda Function Example - Retrieve Similar Records
+title: Retrieve Similar Records with Higher-order Functions
 description: Learn how to identify and retrieve similar or related records from one or more datasets based on a similarity metric and similarity threshold. This workflow can highlight meaningful relationships or overlaps between disparate datasets.
 exl-id: 4810326a-a613-4e6a-9593-123a14927214
 ---
-# Lambda Function Example: Retrieve similar records
+# Retrieve similar records with higher-order functions
 
-Solve several common use cases by using Data Distiller lambda functions to identify and retrieve similar or related records from one or more datasets. You can use this guide to identify products from different datasets that have a significant similarity in their characteristics or attributes. The methodology in this document provides solutions to: data deduplication, record linkage, recommendation systems, information retrieval, and text analytics among others.
+Use Data Distiller higher-order functions to solve a variety of common use cases. To identify and retrieve similar or related records from one or more datasets, use the filter, transform, and reduce functions as detailed in this guide. To learn how higher-order functions can be used to process complex data types, see the documentation on how to [manage array and map data types](../sql/higher-order-functions.md).
 
-The document describes the process of implementing a similarity join then uses Data Distiller lambda functions to compute the similarity between sets of data and filter them based on selected attributes. SQL code snippets and explanations are provided for each step of the process. The workflow implements similarity joins using the Jaccard similarity measure and tokenization using Data Distiller lambda functions. These methods are then used to identify and retrieve similar or related records from one or more datasets based on a similarity metric. The key sections of the process include: [tokenization using lambda functions](#data-transformation), the [cross-join of unique elements](#cross-join-unique-elements), the [Jaccard similarity calculation](#compute-the-jaccard-similarity-measure), and the [threshold-based filtering](#similarity-threshold-filter).
+Use this guide to identify products from different datasets that have a significant similarity in their characteristics or attributes. This methodology provides solutions to: data deduplication, record linkage, recommendation systems, information retrieval, and text analytics, among others.
+
+The document describes the process of implementing a similarity join, which then uses Data Distiller higher-order functions to compute the similarity between sets of data and filter them based on selected attributes. SQL code snippets and explanations are provided for each step of the process. The workflow implements similarity joins using the Jaccard similarity measure and tokenization using Data Distiller higher-order functions. These methods are then used to identify and retrieve similar or related records from one or more datasets based on a similarity metric. The key sections of the process include: [tokenization using higher-order functions](#data-transformation), the [cross-join of unique elements](#cross-join-unique-elements), the [Jaccard similarity calculation](#compute-the-jaccard-similarity-measure), and the [threshold-based filtering](#similarity-threshold-filter).
 
 ## Prerequisites
 
@@ -18,11 +20,11 @@ Before continuing with this document, you should be familiar with the following 
     - **Threshold**: A similarity threshold is used to determine when the two records are considered similar enough to be included in the join result. Records with a similarity score above the threshold are considered matches.
 - The **Jaccard similarity** index, or the Jaccard similarity measurement, is a statistic used to gauge the similarity and diversity of sample sets. It is defined as the size of the intersection divided by the size of the union of the sample sets. The Jaccard similarity measurement ranges from zero to one. A Jaccard similarity of zero indicates no similarity between the sets, and a Jaccard similarity of one indicates that the sets are identical.
 ![A venn diagram to illustrate the Jaccard similarity measurement.](../images/use-cases/jaccard-similarity.png)
-- **Lambda functions** in Data Distiller are anonymous, inline functions that can be defined and used within SQL statements. They are frequently used with higher-order functions due to their ability to create concise, on-the-fly functions that can be passed around as data. Lambda functions are often employed with higher-order functions like `transform`, `filter`, and `array_sort`. Lambda functions are especially useful in situations where defining a full function is unnecessary, and a brief, one-time function can be used inline.
+- **Higher-order functions** in Data Distiller are dynamic, inline tools that process and transform data directly within SQL statements. These versatile functions eliminate the need for multiple steps in data manipulation, especially when [dealing with complex types like arrays and maps](../sql/higher-order-functions.md). By enhancing query efficiency and simplifying transformations, higher-order functions contribute to more agile analytics and better decision-making in various business scenarios.
 
 ## Getting started
 
-The Data Distiller SKU is required to perform the lambda functions on your Adobe Experience Platform data. If you do not have the Data Distiller SKU, contact your Adobe customer service representative for more information.
+The Data Distiller SKU is required to perform the higher-order functions on your Adobe Experience Platform data. If you do not have the Data Distiller SKU, contact your Adobe customer service representative for more information.
 
 ## Establish similarity {#establish-similarity}
 
@@ -315,7 +317,7 @@ The results are shown in the table below:
 
 +++
 
-### Ensure set token length
+### Ensure set token length {#ensure-set-token-length}
 
 Additional conditions can be added to the statement to ensure that the generated sequences are of a specific length. The following SQL statement expands on the token generation logic by making the `transform` function is more complex. The statement uses the `filter` function within `transform` to ensure that the generated sequences are of six character length. It handles the cases where that is not possible by assigning NULL values to those positions.
 
@@ -351,11 +353,11 @@ The results are shown in the table below:
 
 +++
 
-## Explore solutions using Data Distiller lambda functions {#lambda-function-solutions}
+## Explore solutions using Data Distiller higher-order functions {#higher-order-function-solutions}
 
-Lambda functions are powerful constructs that allow you to implement "programming" like syntax in Data Distiller. They can be used to iterate a function over multiple values in an array.
+Higher-order functions are powerful constructs that allow you to implement "programming" like syntax in Data Distiller. They can be used to iterate a function over multiple values in an array.
 
-In the context of Data Distiller, lambda functions are ideal for creating n-grams and iterating over sequences of characters.
+In the context of Data Distiller, higher-order functions are ideal for creating n-grams and iterating over sequences of characters.
 
 The `reduce` function, especially when used within sequences generated by `transform`, provides a way to derive cumulative values or aggregates, which can be pivotal in various analytical and planning processes.
 
@@ -367,7 +369,7 @@ SELECT transform(
     x -> reduce(
         sequence(1, x),  
         0,  -- Initial accumulator value
-        (acc, y) -> acc + y  -- Lambda function to add numbers
+        (acc, y) -> acc + y  -- Higher-order function to add numbers
     )
 ) AS sum_result;
 ```
@@ -377,17 +379,17 @@ The following is an analysis of the SQL statement:
 - Line 1: `transform` applies the function `x -> reduce` on each element generated in the sequence.
 - Line 2: `sequence(1, 5)` generates a sequence of numbers from one to five.
 - Line 3: `x -> reduce(sequence(1, x), 0, (acc, y) -> acc + y)` performs a reduction operation for each element x in the sequence (from 1 to 5).
-    - The `reduce` function takes an initial accumulator value of 0, a sequence from one to the current value of `x`, and a lambda function `(acc, y) -> acc + y` to add the numbers.
-    - The lambda function `acc + y` accumulates the sum by adding the current value `y` to the accumulator `acc`.
+    - The `reduce` function takes an initial accumulator value of 0, a sequence from one to the current value of `x`, and a higher-order function `(acc, y) -> acc + y` to add the numbers.
+    - The higher-order function `acc + y` accumulates the sum by adding the current value `y` to the accumulator `acc`.
 - Line 8: `AS sum_result` renames the resulting column as sum_result.
 
-To summarize, this lambda function takes two parameters (`acc` and `y`) and defines the operation to perform, which in this case is adding `y` to the accumulator `acc`. This lambda function is executed for each element in the sequence during the reduction process.
+To summarize, this higher-order function takes two parameters (`acc` and `y`) and defines the operation to perform, which in this case is adding `y` to the accumulator `acc`. This higher-order function is executed for each element in the sequence during the reduction process.
 
 The output of this statement is a single column (`sum_result`) that contains the cumulative sums of numbers from one to five.
 
-### The value of lambda functions {#value-of-lambda-functions}
+### The value of higher-order functions {#value-of-higher-order-functions}
 
-This section analyses a slimmed-down version of a tri-gram SQL statement to better understand the value of lambda functions in Data Distiller to create n-grams more efficiently.
+This section analyses a slimmed-down version of a tri-gram SQL statement to better understand the value of higher-order functions in Data Distiller to create n-grams more efficiently.
 
 The statement below operates on the `ProductName` column within the `featurevector1` table. It produces a set of three-character substrings derived from the modified product names within the table, using positions obtained from the sequence generated.
 
@@ -403,11 +405,11 @@ FROM
 
 The following is an analysis of the SQL statement:
 
-- Line 2: `transform` applies a lambda function to each integer in the sequence.
+- Line 2: `transform` applies a higher-order function to each integer in the sequence.
 - Line 3: `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 2)` generates a sequence of integers from `1` to the length of the modified product name minus two. 
     - `length(lower(replace(ProductName, ' ', '')))` calculates the length of the `ProductName` after making it lowercase and removing spaces.
     - `- 2` subtracts two from the length to ensure that the sequence generates valid starting positions for 3-character substrings. Subtracting 2 ensures that you have enough characters following each starting position to extract a 3-character substring. The substring function here operates like a lookahead operator.
-- Line 4: `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` is a lambda function that operates on each integer `i` in the generated sequence.
+- Line 4: `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` is a higher-order function that operates on each integer `i` in the generated sequence.
     - The `substring(...)` function extracts a 3-character substring from the `ProductName` column.
     - Before extracting the substring, `lower(replace(ProductName, ' ', ''))` converts the `ProductName` to lowercase and removes spaces to ensure consistency.
 
@@ -703,6 +705,10 @@ The results of this query give the columns for the similarity join, as seen belo
 
 ### Next steps {#next-steps}
 
-By reading this document, you can now use this logic to highlight meaningful relationships or overlaps between disparate datasets. The ability to identify products from different datasets that have a significant similarity in their characteristics or attributes, has numerous real-world applications. This logic could be used for scenarios such as product matching (to group or recommend similar products to customers), data cleansing (to improve data quality), and market basket analysis (to provide insights into customer behavior, preferences, and potential cross-selling opportunities). 
+By reading this document, you can now use this logic to highlight meaningful relationships or overlaps between disparate datasets. The ability to identify products from different datasets that have a significant similarity in their characteristics or attributes has numerous real-world applications. This logic could be used for scenarios such as:
 
-If you have not already done so, you are recommended to read the [AI/ML feature pipeline overview](../data-distiller/ml-feature-pipelines/overview.md). Use that overview to learn how Data Distiller and your preferred machine learning can build custom data models that support your marketing use cases with Experience Platform data.
+- Product matching: to group or recommend similar products to customers. 
+- Data cleansing: to improve data quality.
+- Market basket analysis: to provide insights into customer behavior, preferences, and potential cross-selling opportunities. 
+
+If you haven't already done so, you are recommended to read the [AI/ML feature pipeline overview](../data-distiller/ml-feature-pipelines/overview.md). Use that overview to learn how Data Distiller and your preferred machine learning can build custom data models that support your marketing use cases with Experience Platform data.

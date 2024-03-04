@@ -15,7 +15,16 @@ You can use Query Service to connect the online-to-offline customer journey and 
 
 ## Using Query Service {#usage}
 
-To analyze your data, you can use the Query Service user interface and a RESTful API, from which you can create SQL queries. With the user interface, you can write and execute queries, view previously executed queries, and access queries saved by users within your organization. You can use the Query Editor like a sandbox to test out your queries before executing them on your wider dataset. See the [Query Service user interface guide](ui/overview.md) for more information on using the UI. The RESTful API provides a similar experience. You can use the Query Service API to programmatically write and execute queries, schedule queries for future use and repetition, as well as create templates for queries you wish to write. More information on using the Query Service API can be found in the [Query Service developer guide](api/getting-started.md).
+To analyze your data, create and execute SQL queries with either the Query Service user interface or the RESTful API. 
+With the Query Service UI you can write, execute, and schedule queries, view previously executed queries, and access queries saved by users within your organization. You can also test out your queries before executing them on your wider dataset with the Query Editor. See the [Query Service UI guide](ui/overview.md) for an overview of the UI functionality. 
+
+The RESTful API provides a similar experience. You can use the Query Service API to programmatically write and execute queries, create and save templates for queries that you wish to adapt, or schedule queries for automated execution. See the [Query Service developer guide](api/getting-started.md) for more information on using the Query Service API.
+
+To quickly get started using Query Service features, you are recommended to read the following documents:
+
+- [General guidance for query execution](./best-practices/writing-queries.md)
+- [SQL syntax in Query Service](./sql/syntax.md)
+- [Create derived datasets with SQL](./data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
 ## Query Service and Experience Platform services {#experience-platform-services}
 
@@ -23,7 +32,7 @@ Query Service interacts and can be used with multiple Experience Platform servic
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
-Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to gain insights from data stored within Experience Platform. Data scientists can use the [!DNL Data Science Workspace] to build recipes based on record and time-series data about customers and their activities. These recipes facilitate predictions such as buying propensity and recommended offers that the individual is likely to appreciate and use. You can use SQL within [!DNL Data Science Workspace] by integrating Query Service into [!DNL JupyterLab] to explore, transform, and analyze Adobe Analytics data. Read the [[!DNL Data Science Workspace] overview](../data-science-workspace/home.md) and the [Jypiter Notebook connection guide](./clients/jupyter-notebook.md) for more information about how [!DNL Data Science Workspace] interacts with Query Service.
+Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to gain insights from data stored within Experience Platform. Data scientists can use the [!DNL Data Science Workspace] to build recipes based on record and time-series data about customers and their activities. These recipes facilitate predictions such as buying propensity and recommended offers that the individual is likely to appreciate and use. You can use SQL within [!DNL Data Science Workspace] by integrating Query Service into [!DNL JupyterLab] to explore, transform, and analyze Adobe Analytics data. Read the [[!DNL Data Science Workspace] overview](../data-science-workspace/home.md) and the [Jupyter Notebook connection guide](./clients/jupyter-notebook.md) for more information about how [!DNL Data Science Workspace] interacts with Query Service.
 
 ### [!DNL Segmentation Service] {#segmentation}
 

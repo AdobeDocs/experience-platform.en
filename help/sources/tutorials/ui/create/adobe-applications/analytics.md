@@ -162,7 +162,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
-### Filtering for Real-Time Customer Profile {#filtering-for-profile}
+## Filtering for Real-Time Customer Profile {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
@@ -171,7 +171,26 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 Once you have completed mappings for your [!DNL Analytics] report suite data, you can apply filtering rules and conditions to selectively include or exclude data from ingestion to the Real-Time Customer Profile. Support for filtering is only available for [!DNL Analytics] data and data is only filtered prior to entering [!DNL Profile.] All data are ingested into the data lake.
 
-#### Row-level filtering
+>[!BEGINSHADEBOX]
+
+**Additional information on Data Prep and filtering Analytics data for Real-Time Customer Profile**
+
+* You can use the filtering functionality for data that is going to Profile, but not for data going to data lake.
+* You can use filtering for live data, but you cannot filter backfill data.
+  * The [!DNL Analytics] source does not backfill data into Profile.
+* If you utilize Data Prep configurations during the initial setup of an [!DNL Analytics] flow, those changes are applied to the automatic 13-month backfill as well. 
+  * However, this is not the case for filtering because filtering is reserved only for live data.
+* Data Prep is applied to both streaming and batch ingestion paths. If you modify an existing Data Prep configuration, those changes are then applied to new incoming data across both streaming and batch ingestion pathways. 
+  * However, any Data Prep configurations do not apply to data that has already been ingested into Experience Platform, regardless of whether it is streaming or batch data.
+* Standard attributes from Analytics are always mapped automatically. Therefore, you cannot apply transformations to standard attributes.
+  * However, you can filter out standard attributes as long as they are not required in Identity Service or Profile.
+* You cannot use column-level filtering to filter required fields and identity fields.
+* While you can filter out secondary identities, specifically AAID and AACustomID, you cannot filter out ECID.
+* When a transformation error occurs, the corresponding column results in NULL.
+
+>[!ENDSHADEBOX]
+
+### Row-level filtering
 
 >[!IMPORTANT]
 >
@@ -229,7 +248,7 @@ When finished, select **[!UICONTROL Next]**.
 
 ![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
 
-#### Column-level filtering
+### Column-level filtering
 
 Select **[!UICONTROL Column filter]** from the header to apply column-level filtering. 
 
@@ -242,6 +261,14 @@ By default, all [!DNL Analytics] go to [!DNL Profile] and this process allows fo
 When finished, select **[!UICONTROL Next]**.
 
 ![columns-selected](../../../../images/tutorials/create/analytics/columns-selected.png)
+
+### Filter secondary identities
+
+Use a column filter to exclude secondary identities from Profile ingestion. To filter secondary identities, select **[!UICONTROL Column filter]** and then select **[!UICONTROL _identities]**.
+
+The filter only applies when an identity is marked as secondary. If identities are selected, but an event arrives with one of the identities marked as primary, then those do not get filtered out.
+
+![secondary-identities](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### Provide dataflow details
 

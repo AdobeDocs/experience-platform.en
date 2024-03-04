@@ -10,6 +10,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 
 |Release month|Update type|Description|
 |---|---|---|
+|January 2024|Functionality and documentation update.| You can now share audiences and profile attributes to the Adobe Target connection for the default production sandbox and other non-default sandboxes.  |
 |June 2023|Functionality and documentation update| As of June 2023, you can select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) in Adobe Target for more information about workspaces.|
 |May 2023|Functionality and documentation update| As of May 2023, the **[!UICONTROL Adobe Target]** connection supports [attribute-based personalization](../../ui/activate-edge-personalization-destinations.md#map-attributes) and is generally available to all customers.|
 
@@ -80,7 +81,7 @@ Refer to the table below for information about the destination export type and f
 
 >[!IMPORTANT]
 > 
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
@@ -103,7 +104,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
     |Adobe Target implementation (without Web SDK)| Web SDK implementation |
     |---|---|
-    |<ul><li>A datastream is not required. Adobe Target can be deployed through [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [server-side](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), or [hybrid](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) implementation methods.</li><li>[Edge segmentation](../../../segmentation/ui/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md) are not supported.</li><li>You can share audiences and profile attributes to the Adobe Target connection only for the *default production sandbox*.</li><li>To configure next-session personalization without using a datastream ID, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul>|<ul><li>A datastream with Adobe Target and Experience Platform configured as services is required.</li><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md) are supported.</li><li>Sharing audiences and profile attributes from other sandboxes is supported.</li></ul>|
+    |<ul><li>A datastream is not required. Adobe Target can be deployed through [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [server-side](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), or [hybrid](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) implementation methods.</li><li>[Edge segmentation](../../../segmentation/ui/edge-segmentation.md) is not supported.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md) are not supported.</li><li>You can share audiences and profile attributes to the Adobe Target connection for the *default production sandbox* and non-default sandboxes.</li><li>To configure next-session personalization without using a datastream ID, use [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul>|<ul><li>A datastream with Adobe Target and Experience Platform configured as services is required.</li><li>Edge segmentation works as expected.</li><li>[Same-page and next-page personalization](../../ui/activate-edge-personalization-destinations.md) are supported.</li><li>Sharing audiences and profile attributes from other sandboxes is supported.</li></ul>|
 
 * **Workspace**: Select the Adobe Target [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) to which audiences will be shared. You can select a single workspace for each Adobe Target connection. Upon activation, audiences are routed to the selected workspace while following the applicable [Experience Platform data usage labels](../../../data-governance/labels/overview.md).
     
@@ -123,7 +124,7 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [Activate audiences to edge personalization destinations](../../ui/activate-edge-personalization-destinations.md) for instructions on activating audiences to this destination.
 
