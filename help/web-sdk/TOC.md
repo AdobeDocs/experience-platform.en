@@ -77,6 +77,7 @@ feature: Web SDK
   * Adobe Journey Optimizer {#ajo}
     * [Overview](personalization/ajo/overview.md)
     * [Single-page application implementation](personalization/ajo/web-spa-implementation.md)
+    * [Configure Web In-app Messaging support in Web SDK](personalization/web-in-app-messaging.md)
 
 * Consent {#consent}
   * [Supporting consent](consent/supporting-consent.md)

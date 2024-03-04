@@ -5,7 +5,6 @@ description: Learn how to configure the Web SDK tag extension to support Web In-
 
 # Configure Web In-app Messaging support in Web SDK
 
-
 In-app messages are notifications which you can send to users within your web application, guiding them to specific points of interest. 
 
 You can use these notifications for different purposes, such as promoting new features, presenting special offers, or facilitating user onboarding.
