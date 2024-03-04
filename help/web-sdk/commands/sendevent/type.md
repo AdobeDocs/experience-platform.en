@@ -10,7 +10,7 @@ Adobe provides some predefined event types that you can use. See [Available valu
 
 If you set both `type` here and `xdm.eventType` in the [`xdm`](xdm.md) object, the value in this field takes priority.
 
-## Event type using the Web SDK tag extension
+## Configure event type using the Web SDK tag extension
 
 Set the **[!UICONTROL Type]** dropdown field within the actions of a tag rule.
 
@@ -23,7 +23,7 @@ Set the **[!UICONTROL Type]** dropdown field within the actions of a tag rule.
 1. Use the dropdown under the **[!UICONTROL Type]** field, or enter your own value.
 1. Click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
 
-## Event type using the Web SDK JavaScript library
+## Configure event type using the Web SDK JavaScript library
 
 Set the `eventType` string property when running the `sendEvent` command.
 

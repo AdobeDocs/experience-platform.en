@@ -4,11 +4,13 @@ description: Obtain a visitor's identity without sending event data.
 ---
 # `getIdentity`
 
-The `getIdentity` command allows you to obtain a visitor ID without sending event data. When you run the `sendEvent` command, the Web SDK automatically obtains the visitor's identity if there isn't one. If you require separate calls to generate a visitor ID and send data, you can use this command.
+The `getIdentity` command allows you to obtain a visitor ID without sending event data. When you run the `sendEvent` command, the Web SDK automatically obtains the visitor's identity if one is not already present.
+
+If you require separate calls to generate a visitor ID and send data, you can use this command.
 
 ## Get identity using the Web SDK tag extension
 
-The Web SDK tag extension does not offer this command through the extension UI. Use the custom code editor using JavaScript library syntax.
+The Web SDK tag extension does not offer this command through the tag extension UI. Use the custom code editor using JavaScript library syntax.
 
 ## Get identity using the Web SDK JavaScript library
 
@@ -28,4 +30,4 @@ alloy("getIdentity",{
 If you decide to [handle responses](command-responses.md) with this command, the following properties are available in the response object:
 
 * **`identity.ECID`**: A string containing the visitor's ECID.
-* **`edge.regionID`**: An integer that represents the Experience Edge region that the browser hit when acquiring an identity. It is the same as the legacy Audience Manager location hint.
+* **`edge.regionID`**: An integer that represents the Edge Network region that the browser hit when acquiring an identity. It is the same as the legacy Audience Manager location hint.

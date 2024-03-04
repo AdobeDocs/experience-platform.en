@@ -10,7 +10,7 @@ Adobe Experience Platform uses schemas to describe the structure of data in a co
 
 This field has a maximum limit of 32 KB.
 
-## The XDM object using the Web SDK extension
+## Configure the XDM object using the Web SDK extension
 
 Set the **[!UICONTROL XDM]** field within the actions of a tag rule. The [XDM object](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) provides an intuitive interface to map other data elements to their respective XDM fields.
 
@@ -23,7 +23,7 @@ Set the **[!UICONTROL XDM]** field within the actions of a tag rule. The [XDM ob
 1. Provide the data element containing the desired object in the **[!UICONTROL XDM]** field.
 1. Click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
 
-## The XDM object using the Web SDK JavaScript library
+## Configure the XDM object using the Web SDK JavaScript library
 
 Set the `xdm` object when running the `sendEvent` command. Make sure that the hierarchy in this object matches the schema for the configured dataset. You can include both the `xdm` object and the [`data`](data.md) object in the same `sendEvent` command.
 

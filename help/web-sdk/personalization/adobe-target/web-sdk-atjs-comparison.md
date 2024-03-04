@@ -20,7 +20,7 @@ We allow our customers to download the library directly from Adobe Experience Cl
 
 The prebuilt version is available on a CDN. You can reference the library on the CDN directly on your page, or download and host it on your own infrastructure. It is available in minified and unminified formats. The unminified version is helpful for debugging purposes.
 
-See [Install the Web SDK using the JavaScript library](/help/web-sdk/install/alloy.md) for more information.
+See [Install the Web SDK using the JavaScript library](/help/web-sdk/install/library.md) for more information.
 
 ## Configuring the libraries
 

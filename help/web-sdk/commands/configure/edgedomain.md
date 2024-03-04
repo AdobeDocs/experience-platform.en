@@ -4,11 +4,11 @@ description: Determine the root domain that you want to send data to.
 ---
 # `edgeDomain`
 
-The `edgeDomain` property allows you to change the domain where the Web SDK sends data. This property is frequently used by organizations using [First party cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html). Data is sent to the organization's own domain, then a CNAME record forwards that data to Adobe.
+The `edgeDomain` property allows you to change the domain where the Web SDK sends data. This property is frequently used by organizations using [first party cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html). Data is sent to the organization's own domain, then a CNAME record forwards that data to Adobe.
 
-Your organization determines the correct value for this property when setting up [First party cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html). An organization typically uses a dedicated subdomain for this purpose. For example, if you use the domain `example.com`, you can set up first party cookies on `data.example.com`.
+Your organization determines the correct value for this property when setting up [first party cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html). An organization typically uses a dedicated subdomain for this purpose. For example, if you use the domain `example.com`, you can set up first party cookies on `data.example.com`.
 
-## Edge domain using the Web SDK tag extension
+## Configure an edge domain using the Web SDK tag extension
 
 Set the **[!UICONTROL Edge domain]** text field when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
@@ -19,7 +19,7 @@ Set the **[!UICONTROL Edge domain]** text field when [configuring the tag extens
 1. Locate the text field **[!UICONTROL Edge domain]**, then enter the desired value.
 1. Click **[!UICONTROL Save]**, then publish your changes.
 
-## Edge domain using the Web SDK JavaScript library
+## Configure an edge domain using the Web SDK JavaScript library
 
 Set the `edgeDomain` string when running the `configure` command. If you omit this property when configuring the SDK, it defaults to `edge.adobedc.net`. Set this value if you would like to override the domain that the Web SDK sends data to.
 

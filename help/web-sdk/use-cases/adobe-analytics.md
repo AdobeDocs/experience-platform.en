@@ -4,9 +4,9 @@ description: Learn how to send data to Adobe Analytics with the Adobe Experience
 keywords: adobe analytics;analytics;mapped data;mapped vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
 ---
-# Sending data to Adobe Analytics using the Web SDK
+# Send data to Adobe Analytics using the Web SDK
 
-The Adobe Experience Platform Web SDK can send data to Adobe Analytics through the Adobe Experience Platform Edge Network. When data arrives at Experience Edge, it translates the XDM object into a format that Adobe Analytics understands.
+The Adobe Experience Platform Web SDK can send data to Adobe Analytics through the Adobe Experience Platform Edge Network. When data arrives at the Edge Network, it translates the XDM object into a format that Adobe Analytics understands.
 
 ## XDM field group
 
@@ -14,7 +14,7 @@ To make it easier to capture the most common Adobe Analytics metrics, Adobe prov
 
 ## Variable mapping
 
-Experience Edge automatically maps many XDM variables. See [Analytics variable mapping in Adobe Experience Edge](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html) in the Adobe Analytics implementation guide for a comprehensive variable list of automatically mapped variables.
+The Edge Network automatically maps many XDM variables. See [Analytics variable mapping in the Edge Network](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html) in the Adobe Analytics implementation guide for a comprehensive variable list of automatically mapped variables.
 
 Any variables that are not automatically mapped are available as [Context data variables](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html). You can then use [Processing rules](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about.html) to map context data variables to Analytics variables. For example, if you had a custom XDM schema that looked like the following:
 

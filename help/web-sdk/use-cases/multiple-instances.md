@@ -1,10 +1,10 @@
 ---
-title: Multiple Web SDK instances
+title: Use multiple Web SDK instances
 description: Learn how to interact with multiple Experience Platform Web SDK properties.
 keywords: multiple properties;configure;sendEvent;edgeConfigId;orgId;
 exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
 ---
-# Multiple Web SDK instances
+# Use multiple Web SDK instances
 
 There are certain cases where you might want to interact with two different properties on the same page. These cases include:
 

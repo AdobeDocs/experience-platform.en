@@ -1,6 +1,6 @@
 ---
 title: data
-description: Send non-XDM data to Adobe.
+description: Learn how to send non-XDM data to Adobe.
 ---
 # data
 

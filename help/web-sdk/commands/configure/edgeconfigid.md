@@ -4,17 +4,17 @@ description: Determine the datastream ID that you want to send data to.
 ---
 # `edgeConfigId`
 
-The `edgeConfigId` property is a string that determines which datastream in Adobe Experience Platform that you want to send data to. This property is required when sending data to Adobe.
+The `edgeConfigId` property is a string that determines which [datastream](../../../datastreams/overview.md) in Adobe Experience Platform you want to send data to. This property is required when sending data to Adobe.
 
-If you want to locate a datastream ID:
+To locate a datastream ID:
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]**.
-1. Use the search field to locate the desired datastream, then click **[!UICONTROL Copy]** ![Copy](../../assets/copy.png) next to the datastream ID.
+1. Use the search field to locate the desired datastream, then select **[!UICONTROL Copy]** ![Copy](../../assets/copy.png) next to the datastream ID.
 
-You can also click the desired datastream name, and the datastream ID appears in the right column for you to copy.
+You can also select the desired datastream name, and the datastream ID appears in the right column for you to copy.
 
-## Datastream ID using the Web SDK tag extension
+## Select the datastream ID using the Web SDK tag extension
 
 Choose from a list of available datastreams, or enter a datastream ID directly when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
@@ -29,7 +29,7 @@ Choose from a list of available datastreams, or enter a datastream ID directly w
 
 You can send data to different datastreams for production, staging, and development tag environments.
 
-## Datastream ID using the Web SDK JavaScript library
+## Select the datastream ID using the Web SDK JavaScript library
 
 Set the `edgeConfigId` string property when running the `configure` command. This property is required for all Web SDK implementations. If you omit this property, the Web SDK does not know which datastream to send data to, causing that data to be permanently lost.
 

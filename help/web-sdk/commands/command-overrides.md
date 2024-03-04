@@ -1,18 +1,29 @@
 ---
-title: Command overrides
-description: Override configuration settings for a command.
+title: Datastream configuration overrides
+description: Learn how to configure datastream overrides via the Web SDK.
 ---
-# Command overrides
 
-The `edgeConfigOverrides` object allows you to override configuration settings for commands run on the current page. This override object is not a command, but rather an object that you can include in most Web SDK commands. This object is useful when you have different websites or subdomains for different countries, or if you have multiple Experience Platform sandboxes to store data specific to different business units.
+# Datastream configuration overrides
+
+The `edgeConfigOverrides` object allows you to override configuration settings for commands run on the current page. This override object is not a command, but rather an object that you can include in most Web SDK commands.
+
+This object is useful when you have different websites or subdomains for different countries, or if you have multiple Experience Platform sandboxes to store data specific to different business units.
 
 >[!IMPORTANT]
 >
->Configure override settings within the datastream before using product-specific overrides. See [Datastream overrides](/help/datastreams/overrides.md) for more information.
+>For detailed, end-to-end configuration instructions for datastream overrides, see the [datastream configuration overrides](../../datastreams/overrides.md#configure-overrides) documentation.
+
+Datastream configuration override is a two-step process:
+
+1. First, you must define your datastream configuration override in the [datastream configuration page](../../datastreams/configure.md), within the Datastreams UI. See the [datastream configuration overrides](../../datastreams/overrides.md#configure-overrides) documentation for instructions on how to configure overrides.
+2. After you have configured the datastream override in the UI, you must send the overrides to the Edge Network in one of the following ways:
+    * Through the Web SDK [tag extension](#tag-extension).
+    * Through the `sendEvent` or `configure` Web SDK commands.
+    * Through the Mobile SDK `sendEvent` command.
 
 If you set overrides both in the Web SDK configuration and in a specific command (such as [`sendEvent`](sendevent/overview.md)), the overrides in the specific command take priority.
 
-## Properties within this object
+## Object properties
 
 The following properties are available within this object:
 
@@ -21,9 +32,11 @@ The following properties are available within this object:
 * **Target property token**: The token for the destination property in Adobe Target. Configuring a Target property token override in the datastream's settings is required before using this field.
 * **Report suites**: The report suite IDs to override in Adobe Analytics. Configuring report suite overrides in the datastream's settings is required before using this field.
 
-## Edge configuration overrides using the Web SDK tag extension
+## Send datastream overrides to the Edge Network through the Web SDK tag extension {#tag-extension}
 
-If you want to set overrides for the entire tag extension, set each desired field under **[!UICONTROL Datastream configuration overrides]** when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+See the documentation on [configuring datastream overrides](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#datastrea-overrides) from the Web SDK tag extension for detailed configuration instructions.
+
+If you want to configure datastream overrides from the Web SDK tag extension, set each desired field under **[!UICONTROL Datastream configuration overrides]** when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
@@ -46,56 +59,109 @@ If you want to set overrides just for a specific command, set each desired field
 
 Separate fields are provided for [!UICONTROL Development], [!UICONTROL Staging], and [!UICONTROL Production] environments. Make sure that you fill in each desired field for each environment.
 
-## Edge configuration overrides using the Web SDK JavaScript library
+## Send the overrides to the Edge Network via the Web SDK JavaScript library {#library}
 
-Set the `edgeConfigOverrides` object when running a command. Set each desired property within this object.
+After [configuring the datastream overrides](../../datastreams/overrides.md) in the Data Collection UI, you can now send the overrides to the Edge Network, via the Web SDK JavaScript library.
 
-* **`datastreamId`**: The datastream override ID.
-* **`com_adobe_analytics.reportSuites[]`**: An array of strings that determines which report suites that you want to send Analytics data to.
-* **`com_adobe_identity.idSyncContainerId`**: The third-party ID sync container that you want to use in Audience Manager.
-* **`com_adobe_target.propertyToken`**: The token for the Target destination property.
+If you are using Web SDK, sending the overrides to the Edge Network via the `edgeConfigOverrides` command is the second and final step of activating datastream configuration overrides.
 
-```js
-// Set overrides in the configure command
-alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "edgeConfigOverrides": {
-    "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287"
-    "com_adobe_analytics": {
-      "reportSuites": [
-        "examplersid",
-        "examplersid2",
-        "examplersid3"
-        ]
-    },
-    "com_adobe_identity": {
-      "idSyncContainerId": "1234567"
-    },
-    "com_adobe_target": {
-      "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    }
-  }
-});
+The datastream configuration overrides are sent to the Edge Network through the `edgeConfigOverrides` Web SDK command. This command creates datastream overrides that are passed on to the [!DNL Edge Network] on the next command. If you are using the `configure` command, the overrides are passed for every request.
 
-// Set overrides in a specific command
+The `edgeConfigOverrides` command creates datastream overrides which are passed on to the [!DNL Edge Network] on the next command. 
+
+When a configuration override is sent with the `configure` command, it is included on the following Web SDK commands.
+
+* [sendEvent](../commands/sendevent/)
+* [setConsent](../commands/setconsent.md)
+* [getIdentity](../commands/getidentity.md)
+* [appendIdentityToUrl](../commands/appendidentitytourl.md)
+* [configure](../commands/configure/overview.md)
+
+Options specified globally can be overridden by the configuration option on individual commands.
+
+### Send configuration overrides via the Web SDK `sendEvent` command {#send-event}
+
+The example below shows what a configuration override could look like on a `sendEvent` command.
+
+```js {line-numbers="true" highlight="5-25"}
 alloy("sendEvent", {
-  "xdm": adobeDataLayer.getState(reference),
-  "edgeConfigOverrides": {
-    "datastreamId": "ebebf826-a01f-4458-8cec-ef61de241c93"
-    "com_adobe_analytics": {
-      "reportSuites": [
-        "examplersid",
-        "examplersid2",
-        "examplersid3"
+  xdm: {
+    /* ... */
+  },
+  edgeConfigOverrides: {
+    datastreamId: "{DATASTREAM_ID}"
+    com_adobe_experience_platform: {
+      datasets: {
+        event: {
+          datasetId: "SampleEventDatasetIdOverride"
+        }
+      }
+    },
+    com_adobe_analytics: {
+      reportSuites: [
+        "MyFirstOverrideReportSuite",
+        "MySecondOverrideReportSuite",
+        "MyThirdOverrideReportSuite"
         ]
     },
-    "com_adobe_identity": {
-      "idSyncContainerId": "1234567"
+    com_adobe_identity: {
+      idSyncContainerId: "1234567"
     },
-    "com_adobe_target": {
-      "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+    com_adobe_target: {
+      propertyToken: "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
     }
   }
 });
 ```
+
+|Parameter|Description|
+|---|---|
+|`edgeConfigOverrides.datastreamId`| Use this parameter to allow a single request to go to a different datastream than the one defined by the `configure` command. |
+|`com_adobe_analytics.reportSuites[]`| An array of strings that determines to which report suites want to send Analytics data.|
+|`com_adobe_identity.idSyncContainerId`| The third-party ID sync container that you want to use in Audience Manager.|
+|`com_adobe_target.propertyToken`| The token for the Adobe Target destination property.|
+
+### Send configuration overrides via the Web SDK `configure` command {#send-configure}
+
+The example below shows what a configuration override could look like on a `configure` command.
+
+```js {line-numbers="true" highlight="8-30"}
+alloy("configure", {
+  defaultConsent: "in",
+  edgeDomain: "etc",
+  edgeBasePath: "ee",
+  datastreamId: "{DATASTREAM_ID}",
+  orgId: "org",
+  debugEnabled: true,
+  edgeConfigOverrides: {
+    "com_adobe_experience_platform": {
+      "datasets": {
+        "event": {
+          datasetId: "SampleProfileDatasetIdOverride"
+        }
+      }
+    },
+    "com_adobe_analytics": {
+      "reportSuites": [
+        "MyFirstOverrideReportSuite",
+        "MySecondOverrideReportSuite",
+        "MyThirdOverrideReportSuite"
+      ]
+    },
+    "com_adobe_identity": {
+      "idSyncContainerId": "1234567"
+    },
+    "com_adobe_target": {
+      "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+    }
+  },
+  onBeforeEventSend: function() { /* … */ });
+};
+```
+
+|Parameter|Description|
+|---|---|
+|`edgeConfigOverrides.datastreamId`| Use this parameter to allow a single request to go to a different datastream than the one defined by the `configure` command. |
+|`com_adobe_analytics.reportSuites[]`| An array of strings that determines to which report suites want to send Analytics data.|
+|`com_adobe_identity.idSyncContainerId`| The third-party ID sync container that you want to use in Audience Manager.|
+|`com_adobe_target.propertyToken`| The token for the Adobe Target destination property.|

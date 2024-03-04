@@ -26,7 +26,7 @@ Appending an identity to a URL is performed as an action within a rule in the Ad
 
 This command is typically used with a specific rule that listens for clicks and checks desired domains.
 
-+++**Rule event criteria**
++++Rule event criteria
 
 Triggers when an anchor tag with an `href` property is clicked.
 
@@ -39,7 +39,7 @@ Triggers when an anchor tag with an `href` property is clicked.
 
 +++
 
-+++**Rule condition**
++++Rule condition
 
 Triggers only on desired domains.
 
@@ -54,7 +54,7 @@ Triggers only on desired domains.
 
 +++
 
-+++**Rule action**
++++Rule action
 
 Append the identity to the URL.
 

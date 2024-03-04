@@ -1,8 +1,8 @@
 ---
 title: sendEvent
 description: Send data to the Adobe Experience Platform Edge Network.
-exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
 ---
+
 # `sendEvent`
 
 The `sendEvent` command is the primary way to send data to Adobe, to retrieve personalized content, identities, and audience destinations. Use the [`xdm`](xdm.md) object to send data that maps to your Adobe Experience Platform schema. Use the [`data`](data.md) object to send non-XDM data. You can use the datastream mapper to align data within this object to schema fields.
@@ -38,6 +38,6 @@ alloy("sendEvent", {
 
 If you decide to [handle responses](../command-responses.md) with this command, the following properties are available in the response object:
 
-* **`propositions`**: An array of propositions returned from Experience Edge. Propositions that are automatically rendered include the flag `renderAttempted` set to `true`.
+* **`propositions`**: An array of propositions returned by the Edge Network. Propositions that are automatically rendered include the flag `renderAttempted` set to `true`.
 * **`inferences`**: An array of inference objects, which contain machine learning information about this user.
-* **`destinations`**: An array of destination objects returned from Experience Edge.
+* **`destinations`**: An array of destination objects returned by the Edge Network.

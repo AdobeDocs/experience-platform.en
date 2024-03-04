@@ -2,6 +2,7 @@
 title: Install the Web SDK using the JavaScript library
 description: Reference the Web SDK library using a standalone CDN file.
 ---
+
 # Install the Web SDK using the JavaScript library
 
 One option to install the Web SDK is by referencing the JavaScript library hosted on a CDN. You can reference the library directly, or download it and host it on your own infrastructure. It is available in minified and full formats.

@@ -1,13 +1,13 @@
 ---
-title: Command responses
+title: Handling command responses
 description: Handle responses from commands using JavaScript promises.
 exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
 ---
-# Command responses
+# Handling command responses
 
-Some Web SDK commands can return an object containing data potentially useful to your organization. You can choose what to do with that data, if desired. Command responses are  valuable for propositions and destinations, as they require Experience Edge data to effectively work. 
+Some Web SDK commands can return an object containing data potentially useful to your organization. You can choose what to do with that data, if desired. Command responses are  valuable for propositions and destinations, as they require Edge Network data to effectively work. 
 
-Command responses use JavaScript [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), acting as a proxy for a value that is not known when the promise is created. Once the value is known, the promise is "resolved" with the value.
+Command responses use JavaScript [promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), acting as a proxy for a value that is not known when the promise is created. Once the value is known, the promise is "resolved" with the value.
 
 ## Handle command responses using the Web SDK tag extension
 

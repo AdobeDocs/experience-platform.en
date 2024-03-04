@@ -2,6 +2,7 @@
 title: applyPropositions
 description: Re-render propositions that have already been rendered with sendEvent.
 ---
+
 # `applyPropositions`
 
 The `applyPropositions` command allows you to re-render propositions that were already rendered using the [`sendEvent`](sendevent/overview.md) command. This command is useful when working with single-page applications where portions of the page get re-rendered, potentially overwriting any personalizations already applied to the page.

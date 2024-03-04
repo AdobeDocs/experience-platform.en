@@ -2,6 +2,7 @@
 title: clickCollectionEnabled
 description: Determine if link click data is automatically collected.
 ---
+
 # `clickCollectionEnabled`
 
 The `clickCollectionEnabled` property is a boolean that determines if the Web SDK automatically collects link data. This property is valuable in cases where you prefer to manually track link data.

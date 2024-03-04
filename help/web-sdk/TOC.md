@@ -9,15 +9,13 @@ feature: Web SDK
 
 # Adobe Experience Platform Web SDK {#web-sdk}
 
-* [Platform Web SDK overview](home.md)
+* [Web SDK overview](home.md)
 * [Release notes](release-notes.md)
-
-* Install {#install}
-  * [Installation overview](install/overview.md)
-  * [Tag extension](install/extension.md)
-  * [JavaScript library](install/alloy.md)
-  * [NPM](install/npm.md)
-
+* Web SDK installation {#install}
+  * [Overview](install/overview.md)
+  * [Install the Web SDK using the tag extension](install/extension.md)
+  * [Install the Web SDK using the JavaScript library](install/library.md)
+  * [Install the Web SDK using the NPM package](install/npm.md)
 * Commands {#commands}
   * configure {#configure}
     * [Overview](commands/configure/overview.md)
@@ -88,13 +86,13 @@ feature: Web SDK
     * [Integrate without tags](consent/iab-tcf/without-tags.md)
 
 * Use cases {#use-cases}
-  * [Adobe Analytics](use-cases/adobe-analytics.md)
-  * [Client hints](use-cases/client-hints.md)
+  * [Send data to Adobe Analytics using the Web SDK](use-cases/adobe-analytics.md)
+  * [User agent client hints](use-cases/client-hints.md)
   * [Collect commerce data](use-cases/collect-commerce-data.md)
   * [Configuring a CSP](use-cases/configuring-a-csp.md)
   * [Debugging methods](use-cases/debugging.md)
-  * [Multiple Web SDK instances](use-cases/multiple-instances.md)
-  * [Top and bottom page events](use-cases/top-bottom-page-events.md)
+  * [Use multiple Web SDK instances](use-cases/multiple-instances.md)
+  * [Configure top and bottom page events](use-cases/top-bottom-page-events.md)
 
 * [Frequently Asked Questions](faq.md)
 * [Resources](resources.md)

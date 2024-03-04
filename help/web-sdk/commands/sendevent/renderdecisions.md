@@ -6,7 +6,7 @@ description: Render personalized content that is eligible for automatic renderin
 
 The `renderDecisions` property allows you to force the Web SDK to render any personalized content that is eligible for automatic rendering.
 
-## Render decisions using the Web SDK tag extension
+## Render personalized content using the Web SDK tag extension
 
 Select the **[!UICONTROL Render visual personalization decisions]** checkbox within the actions of a tag rule.
 
@@ -19,7 +19,7 @@ Select the **[!UICONTROL Render visual personalization decisions]** checkbox wit
 1. Scroll down to the [!UICONTROL Personalization] section, then select the **[!UICONTROL Render visual personalization decisions]** checkbox.
 1. Click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
 
-## Render decisions using the Web SDK JavaScript library
+## Render personalized content using the Web SDK JavaScript library
 
 Set the `renderDecisions` boolean when running the `sendEvent` command. If omitted, this property defaults to `false`. Set this property to `true` if you want to automatically render personalized content.
 

@@ -8,7 +8,7 @@ The `documentUnloading` property allows you to use JavaScript's [`sendBeacon`](h
 
 Several browsers impose a limit of 64 KB to the amount of data that can be sent with `sendBeacon` at one time. If the browser rejects the event because the payload is too large, the Web SDK falls back to using its normal transport method.
 
-## Document unloading using the Web SDK tag extension
+## Configure document unloading using the Web SDK tag extension
 
 Enable the **[!UICONTROL Document will unload]** checkbox within the actions of a tag rule.
 
@@ -21,7 +21,7 @@ Enable the **[!UICONTROL Document will unload]** checkbox within the actions of 
 1. Enable the **[!UICONTROL Document will unload]** checkbox in the [!UICONTROL Data] section.
 1. Click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
 
-## Document unloading using the Web SDK JavaScript library
+## Configure document unloading using the Web SDK JavaScript library
 
 Set the `documentUnloading` boolean when running the `sendEvent` command. Its default value is `false`. Set this property to `true` if you want to use the `sendBeacon` method to send data to Adobe.
 

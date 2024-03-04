@@ -1,9 +1,10 @@
 ---
-title: Using top and bottom of page events
+title: Configure top and bottom of page events in Web SDK
 description: This article explains how to use top and bottom of page events in Web SDK.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
 ---
-# Using top and bottom of page events in Web SDK
+
+# Configure top and bottom of page events in Web SDK
 
 When you want to deliver personalized experiences to your customers, a web page's loading time is essential.
 
