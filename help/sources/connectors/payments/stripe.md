@@ -4,11 +4,12 @@ description: Learn how to bring your payments data from Stripe to Adobe Experien
 ---
 # [!DNL Stripe]
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+* INTRODUCTION ABOUT STRIPE
+* USE CASE EXAMPLE
 
-Experience Platform provides support for ingesting data from a third-party payments application. Support for payments providers include [!DNL Stripe].
+## Prerequisites {#prerequisites}
 
-## Prerequisites
+* DOCUMENT API KEY RETRIEVAL ON STRIPE SIDE
 
 ### Gather required credentials
 
