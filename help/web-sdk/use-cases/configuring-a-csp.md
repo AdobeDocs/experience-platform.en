@@ -57,7 +57,7 @@ style-src 'unsafe-inline'
 
 ## Configure a CSP for In-App Messaging {#in-app-messaging}
 
-When you configure [Web In-App Messaging](../personalization/personalization/web-in-app-messaging.md), you must inclde the following directive in your CSP:
+When you configure [Web In-App Messaging](../personalization/web-in-app-messaging.md), you must inclde the following directive in your CSP:
 
 ```
 default-src  blob:;
