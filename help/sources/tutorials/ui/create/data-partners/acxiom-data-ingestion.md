@@ -1,10 +1,11 @@
 ---
 title: Acxiom Data Ingestion
 description: Use this connector to ingest Acxiom data into Real-Time CDP and enrich first-party profiles. Use your Acxiom-enriched first-party profiles to improve audiences and activate across marketing channels.
-last-substantial-update: 2024-02-26
+last-substantial-update: 2024-03-19
 badge: Beta
 ---
-# Create an [!DNL Acxiom Data Ingestion] source connection and dataflow in the UI. {#overview}
+# Create an [!DNL Acxiom Data Ingestion] source connection and dataflow in the UI {#overview}
+
 >[!NOTE]
 >
 >The [!DNL Acxiom Data Ingestion] source is in beta. Please read the [sources overview](../../../../home.md) for more information on using beta-labeled sources.
@@ -58,17 +59,17 @@ If you are using new credentials, select **[!UICONTROL New account]**. On the in
 
 ![The new account interface of the sources workflow.](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-new-account.png)
 
-| Credentials | Description                                                                                                                                                                                                             |
-| --- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Account Name | The name of the account.                                                                                                                                                                                                |
-| Description | (Optional) A brief explanation of the purpose of the account.                                                                                                                                                           |
+| Credentials | Description |
+| --- | --- |
+| Account Name | The name of the account. |
+| Description | (Optional) A brief explanation of the purpose of the account. |
 | [!DNL Acxiom] authentication key | The [!DNL Acxiom]-provided key required for account approval. This must match the proper value before a connection to the database can be made.  This key must be 24 characters and can only include: A-Z, a-z, and 0-9. |
-| S3 access key | The S3 access key references the Amazon S3 location. This is provided by your administrator when S3 role permissions are defined.                                                                                       |
-| S3 secret key | The S3 secret key references the Amazon S3 location. This is provided by your administrator when S3 role permissions are defined.                                                                                       |
-| s3SessionToken | (Optional) The authentication token value when connection to S3.                                                                                                                                                        |
-| serviceUrl | (Optional) The URL location to be used when connecting to S3 in a non-standard location.                                                                                                                                |
-| Bucket name | (Optional) The name of the S3 bucket set up on S3 that serves as a starting path in data selection.                                                                                                                     |
-| Folder path | If subdirectories in a bucket are used, then you can also specify a path as a starting path in data selection.                                                                                                          |
+| S3 access key | The S3 access key references the Amazon S3 location. This is provided by your administrator when S3 role permissions are defined. |
+| S3 secret key | The S3 secret key references the Amazon S3 location. This is provided by your administrator when S3 role permissions are defined. |
+| s3SessionToken | (Optional) The authentication token value when connection to S3. |
+| serviceUrl | (Optional) The URL location to be used when connecting to S3 in a non-standard location. |
+| Bucket name | (Optional) The name of the S3 bucket set up on S3 that serves as a starting path in data selection. |
+| Folder path | If subdirectories in a bucket are used, then you can also specify a path as a starting path in data selection. |
 
 ### Use an existing account
 
