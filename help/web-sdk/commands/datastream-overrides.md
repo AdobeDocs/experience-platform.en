@@ -71,7 +71,7 @@ The `edgeConfigOverrides` command creates datastream overrides which are passed 
 
 When a configuration override is sent with the `configure` command, it is included on the following Web SDK commands.
 
-* [sendEvent](../commands/sendevent.md)
+* [sendEvent](../commands/sendevent/overview.md)
 * [setConsent](../commands/setconsent.md)
 * [getIdentity](../commands/getidentity.md)
 * [appendIdentityToUrl](../commands/appendidentitytourl.md)
