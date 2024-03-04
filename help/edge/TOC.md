@@ -5,6 +5,7 @@ user-guide-title: Adobe Experience Platform Web SDK Help
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interact with Experience Cloud services through the Edge network.
 feature: Web SDK
+role: Developer
 ---
 
 # Adobe Experience Platform Web SDK {#edge}
@@ -17,6 +18,7 @@ feature: Web SDK
   * [Configure the SDK](fundamentals/configuring-the-sdk.md)
   * [Execute commands](fundamentals/executing-commands.md)
   * [Track events](fundamentals/tracking-events.md)
+  * [Configure top and bottom of page events](fundamentals/top-bottom-page-events.md)
   * [Debugging](fundamentals/debugging.md)
   * [Configure a CSP](fundamentals/configuring-a-csp.md)
   * [Interact with multiple properties](fundamentals/interacting-with-multiple-properties.md)
@@ -35,9 +37,11 @@ feature: Web SDK
     * [Automatically mapped variables](data-collection/adobe-analytics/automatically-mapped-vars.md)
     * [Sending data to Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * Personalization {#personalization}
+  * [Manage display events](personalization/display-events.md)
   * [Render personalized content](personalization/rendering-personalization-content.md)
   * [Personalization via hybrid implementation](personalization/hybrid-personalization.md)
   * [Manage flicker](personalization/manage-flicker.md)
+
   * Adobe Target {#adobe-target}
     * [Overview](personalization/adobe-target/target-overview.md)
     * [Single-page application implementation](personalization/adobe-target/spa-implementation.md)
@@ -52,6 +56,8 @@ feature: Web SDK
     * [Overview](personalization/offer-decisioning/offer-decisioning-overview.md)
   * Adobe Journey Optimizer {#ajo}
     * [Overview](personalization/ajo/overview.md)
+    * [Single-page application implementation](personalization/ajo/web-spa-implementation.md)
+    * [Configure Web In-App Messaging](personalization/web-in-app-messaging.md)
 * Consent {#consent}
   * [Supporting consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}

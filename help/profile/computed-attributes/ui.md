@@ -1,8 +1,8 @@
 ---
 title: Computed Attributes UI guide
 description: Learn how to create, view, and update computed attributes using the Adobe Experience Platform UI.
+exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
 ---
-
 # Computed attributes UI guide
 
 >[!NOTE]
@@ -142,7 +142,17 @@ When selecting a draft computed attribute, the **[!UICONTROL Edit computed attri
 
 ## Using computed attributes {#usage}
 
+>[!IMPORTANT]
+>
+>If you are using a computed attribute with the **Most recent** function in a segment definition, you **must** include **both** the value and the timestamp value in the computed attribute object.
+>
+>For example, if you're creating a segment definition that is looking for "All profiles that have a valid email address" where the email address field is populated by a computed attribute with the most recent function, you **must** include both the email address' value exists **and** the email address' timestamp exists.
+
 After creating a computed attribute, you can use **published** computed attributes in other downstream services. Since computed attributes are profile attribute fields created on your profile union schema, you can look up computed attribute values for a Real-Time Customer Profile, use them in an audience, activate them to a destination, or use them for personalization in journeys in Adobe Journey Optimizer.
+
+>[!NOTE]
+>
+>Computed attributes **cannot** be used in audience **compositions**.
 
 ![The Segment Builder is displayed, showing a computed attribute as part of the segment definition composition.](./images/ui/use-ca.png)
 

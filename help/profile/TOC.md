@@ -3,6 +3,7 @@ audience: user
 user-guide-title: Real-Time Customer Profile Guide
 user-guide-description: Merge customer data to create a unified view of customer interactions across channels.
 feature: Profiles
+role: User
 ---
 
 # [!DNL Real-Time Customer Profile] {#profile}
@@ -17,7 +18,6 @@ feature: Profiles
 * [!DNL Profile] API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
-  * [Edge projections](api/edge-projections.md)
   * [Entities ([!DNL Profile] access)](api/entities.md)
   * [Export jobs ([!DNL Profile] export)](api/export-jobs.md)
   * [Preview sample status ([!DNL Profile] preview)](api/preview-sample-status.md)

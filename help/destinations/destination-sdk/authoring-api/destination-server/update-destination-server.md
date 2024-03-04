@@ -1,8 +1,8 @@
 ---
-description: This page exemplifies the API call used to update an existing destination server configuration through Adobe Experience Platform Destination SDK. 
+description: This page exemplifies the API call used to update an existing destination server configuration through Adobe Experience Platform Destination SDK.
 title: Update a destination server configuration
+exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
 ---
-
 # Update a destination server configuration
 
 This page exemplifies the API request and payload that you can use to update an existing destination server configuration, using the `/authoring/destination-servers` API endpoint.

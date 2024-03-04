@@ -4,25 +4,34 @@ user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Query Service Guide
 user-guide-description: Use standard SQL to query data within the data lake in Experience Platform.
 feature: Queries
+role: User,Developer
 ---
 
 # Adobe Experience Platform Query Service {#query}
 
 - [Query Service overview](home.md)
-- [Query Service packaging](packages.md)
+- [Query Service packaging](packaging.md)
 - [Query Service guardrails](guardrails.md)
 - Get started {#get-started}
     - [Prerequisites](get-started/prerequisites.md)
 - Data Distiller {#data-distiller}
     - [Overview](data-distiller/overview.md)
     - [License usage](data-distiller/license-usage.md)
-    - Query accelerated store {#query-accelerated-store}
-        - [Send accelerated queries](data-distiller/query-accelerated-store/send-accelerated-queries.md)
-        - [Reporting insights data model guide](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
-    - Derived attributes {#derived-attributes}
-        - [Overview](data-distiller/derived-attributes/overview.md)
-        - [Seamless SQL flow](data-distiller/derived-attributes/seamless-sql-flow.md)
-        - [Create decile-based derived attributes](data-distiller/derived-attributes/decile-based-derived-attributes.md)
+    - Derived datasets {#derived-datasets}
+        - [Overview](data-distiller/derived-datasets/overview.md)
+        - [Create derived datasets with SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
+        - [Create decile-based derived datasets](data-distiller/derived-datasets/decile-based-derived-attributes.md)
+    - Customizable Insights for extended app reporting {#customizable-insights}
+        - [Overview](data-distiller/customizable-insights/overview.md)
+        - [Send accelerated queries](data-distiller/customizable-insights/send-accelerated-queries.md)
+        - [Reporting insights data model guide](data-distiller/customizable-insights/reporting-insights-data-model.md)
+    - AI/ML feature pipelines {#ml-feature-pipelines}
+        - [Overview](data-distiller/ml-feature-pipelines/overview.md)
+        - [Connect to Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
+        - [Exploratory data analysis](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
+        - [Engineer features for ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
+        - [Export data to ML environments](data-distiller/ml-feature-pipelines/export-data.md)
+        - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Use cases {#use-cases}
     - [Abandoned browse](use-cases/abandoned-browse.md)
     - [Attribution analysis](use-cases/attribution-analysis.md)
@@ -30,15 +39,25 @@ feature: Queries
     - [Create a trended report of events](use-cases/trended-report-of-events.md)
     - [Consent analysis](use-cases/consent-analysis.md)
     - [Customer lifetime value](use-cases/customer-lifetime-value.md)
-    - [Decile-based derived attributes](use-cases/deciles-use-case.md)
+    - [Decile-based derived datasets](use-cases/deciles-use-case.md)
     - [Fuzzy match](use-cases/fuzzy-match.md)
     - [List the page views of a user](use-cases/list-visitor-sessions.md)
     - [List visitors by their page views](use-cases/visitors-by-number-of-page-views.md)
     - [Propensity score](use-cases/propensity-score.md)
-    - [SQLAlchemy](use-cases/sqlalchemy.md)
+    - [Retrieve similar records with higher-order functions](use-cases/retrieve-similar-records.md)
     - [Return and use merchandising variables from analytics data](use-cases/merchandising-variables.md)
+    - [SQLAlchemy](use-cases/sqlalchemy.md)
     - [View the roll-up report for a visitor](use-cases/roll-up-report-of-a-visitor.md)
     - [Web and mobile analytics insights](use-cases/analytics-insights.md)
+- Key concepts {#key-concepts}
+    - [Working with nested data structures](key-concepts/nested-data-structures.md)
+    - [Flatten nested data structures](key-concepts/flatten-nested-data.md)
+    - [Anonymous block](key-concepts/anonymous-block.md)
+    - [Inline template](key-concepts/inline-templates.md)
+    - [Incremental loading](key-concepts/incremental-load.md)
+    - [Data deduplication](key-concepts/deduplication.md)
+    - [Dataset samples](key-concepts/dataset-samples.md)
+    - [Dataset statistics computation](key-concepts/dataset-statistics.md)
 - Connect clients to Query Service {#clients}
     - [Client connections overview](clients/overview.md)
     - [SSL modes](./clients/ssl-modes.md)
@@ -55,7 +74,7 @@ feature: Queries
     - [UI overview](ui/overview.md)
     - [Query Editor user guide](ui/user-guide.md)
     - [Query templates](ui/query-templates.md)
-    - [Parameterized queries (limited)](ui/parameterized-queries.md)
+    - [Parameterized queries](ui/parameterized-queries.md)
     - [Query schedules](ui/query-schedules.md)
     - [Query logs](ui/query-logs.md)
     - [Monitor scheduled queries](ui/monitor-queries.md)
@@ -78,22 +97,15 @@ feature: Queries
 - Best practices {#best-practices}
     - [Query execution](best-practices/writing-queries.md)
     - [Data asset organization](./best-practices/organize-data-assets.md)
-- Essential concepts {#essential-concepts}
-    - [Working with nested data structures](essential-concepts/nested-data-structures.md)
-    - [Flatten nested data structures](essential-concepts/flatten-nested-data.md)
-    - [Anonymous block](essential-concepts/anonymous-block.md)
-    - [Inline template](essential-concepts/inline-templates.md)
-    - [Incremental loading](essential-concepts/incremental-load.md)
-    - [Data deduplication](essential-concepts/deduplication.md)
-    - [Dataset samples](essential-concepts/dataset-samples.md)
-    - [Dataset statistics computation](essential-concepts/dataset-statistics.md)
 - SQL reference {#sql}
     - [SQL overview](sql/overview.md)
     - [SQL syntax](sql/syntax.md)
     - [Adobe-defined functions](sql/adobe-defined-functions.md)
+    - [Higher-order functions](sql/higher-order-functions.md)
     - [Spark SQL functions](sql/spark-sql-functions.md)
     - [Metadata commands](sql/metadata.md)
     - [Prepared statements](sql/prepared-statements.md)
 - [Frequently asked questions](troubleshooting-guide.md)
+- [IP address allowlist](ip-address-allowlist.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

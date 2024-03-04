@@ -2,6 +2,7 @@
 solution: Experience Platform
 title: Segment Definitions API Endpoint
 description: The segment definitions endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage segment definitions for your organization.
+role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
 ---
 # Segment definitions endpoint
@@ -146,6 +147,10 @@ A successful response returns HTTP status 200 with a list of segment definitions
 ## Create a new segment definition {#create}
 
 You can create a new segment definition by making a POST request to the `/segment/definitions` endpoint.
+
+>[!IMPORTANT]
+>
+>Segment definitions created through the API **cannot** be edited using Segment Builder.
 
 **API format**
 

@@ -95,6 +95,10 @@ To remove a user from a role, select the **X** icon next to the users name.
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
 
+The following video is intended to support your understanding of creating a new role and managing users for that role.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+
 ## Managing API credentials for role {#manage-api-credentials-for-role}
 
 Select the **[!UICONTROL API credentials]** tab to open the roles API credentials page, then select **[!UICONTROL Add API credentials]** to assign API credentials to the role.
@@ -145,9 +149,9 @@ The **[!UICONTROL Remove user group]** dialogue appears, prompting you to confir
 
 You will be returned to the **[!UICONTROL User groups]** tab.
 
-## Adding users to Experience Platform through a product profile
+## Adding users to Experience Platform through a role
 
-To add a user to a product profile, log into the Admin Console and select **[!UICONTROL Add users]**
+To add a user to a role, log into the Admin Console and select **[!UICONTROL Add users]**
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 

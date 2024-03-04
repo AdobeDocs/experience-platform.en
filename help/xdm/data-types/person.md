@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;person;datatype;data-type;data type;
 solution: Experience Platform
 title: Person data type
-description: This document provides an overview of the Person Experience Data Model (XDM) data type.
+description: Learn about the Person Experience Data Model (XDM) data type.
 exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
 ---
 # [!UICONTROL Person] data type

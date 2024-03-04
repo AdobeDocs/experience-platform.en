@@ -1,13 +1,9 @@
 ---
 title: Sandboxes Tooling
 description: Seamlessly export and import Sandbox configurations between sandboxes.
+exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
 ---
-
-# [!BADGE Beta] Sandbox tooling
-
->[!IMPORTANT]
->
->The **Sandbox tooling** feature described below is available only to select Beta customers.
+# Sandbox tooling
 
 >[!NOTE]
 >
@@ -15,53 +11,66 @@ description: Seamlessly export and import Sandbox configurations between sandbox
 
 Improve configuration accuracy across sandboxes and seamlessly export and import sandbox configurations between sandboxes with the sandbox tooling feature. Use sandbox tooling to reduce the time to value for the implementation process and move successful configurations across sandboxes.
 
-You can use the sandbox tooling feature to select different objects and export them into a package. A package can consist of a single object, multiple objects, or an entire sandbox. Any objects that are included in a package must be from the same sandbox.
+You can use the sandbox tooling feature to select different objects and export them into a package. A package can consist of a single object or multiple objects. <!--or an entire sandbox.-->Any objects that are included in a package must be from the same sandbox.
 
 ## Objects supported for sandbox tooling {#supported-objects}
 
-The table below lists objects that are currently supported for sandbox tooling:
+The sandbox tooling feature provides you with the ability to export [!DNL Adobe Real-Time Customer Data Platform] and [!DNL Adobe Journey Optimizer] objects into a package. 
 
-| Platform | Object |
-| --- | --- |
-| [!DNL Adobe Journey Optimizer]| Journeys |
-| Customer Data Platform | Sources |
-| Customer Data Platform | Segments |
-| Customer Data Platform | Identities |
-| Customer Data Platform | Policies |
-| Customer Data Platform | Schemas |
-| Customer Data Platform | Datasets |
+### Real-time Customer Data Platform objects {#real-time-cdp-objects}
 
-The following objects are imported but are in draft or disabled status:
+The table below lists [!DNL Adobe Real-Time Customer Data Platform] objects that are currently supported for sandbox tooling:
+
+| Platform | Object | Details |
+| --- | --- | --- |
+| Customer Data Platform | Sources | The source account credentials are not replicated in the target sandbox for security reasons and will be required to be updated manually. The source dataflow is copied in a draft status by default. |
+| Customer Data Platform | Audiences | Only the **[!UICONTROL Customer Audience]** type **[!UICONTROL Segmentation service]** is supported. Existing labels for consent and governance will be copied over in the same import job. System will auto select default Merge Policy in target sandbox with same XDM class when checking merge policy dependencies. |
+| Customer Data Platform | Identities | The system will auto-deduplicate Adobe standard identity namespaces when creating in the target sandbox. Audiences can only be copied when all attributes in audience rules are enabled in the union schema. The necessary schemas must be moved and enabled for unified profile first. |
+| Customer Data Platform | Schemas | Existing labels for consent and governance will be copied over in the same import job. User has the flexibility to import schemas without Unified Profile option enabled. The schema relationships edge case are not included in the package. |
+| Customer Data Platform | Datasets | Datasets are copied with the unified profile setting disabled by default. |
+| Customer Data Platform | Consent and Governance Policies | Add custom policies created by a user to a package and move them across sandboxes. |
+
+The following objects are imported but are in a draft or disabled status:
 
 | Feature | Object | Status |
 | --- | --- | --- |
 | Import status | Source dataflow | Draft |
 | Import status |  Journey | Draft |
-| Unified profile | Schema | Disabled |
-| Unified profile | Dataset | Disabled |
-| Policies | Consent policies | Disabled |
+| Unified profile | Dataset | Unified profile disabled |
 | Policies | Data governance policies | Disabled |
 
-The edge cases listed below are not included in the package:
+### Adobe Journey Optimizer objects {#abobe-journey-optimizer-objects}
 
-* Schema relationships
+The table below lists [!DNL Adobe Journey Optimizer] objects that are currently supported for sandbox tooling and limitations:
+
+| Platform | Object | Details |
+| --- | --- | --- |
+| [!DNL Adobe Journey Optimizer] | Audience | An audience can be copied as a dependent object of the journey object. You can select create a new audience or reuse an existing one in the target sandbox. |
+| [!DNL Adobe Journey Optimizer] | Schema | The schemas used in the journey can be copied as dependent objects. You can select create a new schema or reuse an existing one in the target sandbox. |
+| [!DNL Adobe Journey Optimizer] | Merge policy | The merge policies used in the journey can be copied as dependent objects. In the target sandbox, you **cannot** create a new merge policy, you can only utilize an already existing one. |
+| [!DNL Adobe Journey Optimizer] | Journey - canvas details | The representation of the journey on the canvas includes the objects in the journey, such as conditions, actions, events, read audiences, and so on, which are copied. The jump activity is excluded from the copy. |
+| [!DNL Adobe Journey Optimizer] | Event | The events and event details used in the journey are copied. It will always create a new version in the target sandbox. |
+| [!DNL Adobe Journey Optimizer] | Action | Email and push messages used in the journey can be copied as dependent objects. The channel action activities used in the journey fields, which are used for personalization in the message, are not checked for completeness. Content blocks are not copied.<br><br>The update profile action used in the journey can be copied. Custom actions and action details used in the journey are also copied. It will always create a new version in the target sandbox.|
+
+Surfaces (for example, presets) are not copied over. The system automatically selects the closest possible match on the destination sandbox based on the message type and surface name. If there are no surfaces found on the target sandbox, then the surface copy will fail, causing the message copy to fail because a message requires a surface to be available for setup. In this case, at least one surface needs to be created for the right channel of the message in order for the copy to work.
+
+Custom identity types are not supported as dependent objects when exporting a journey.
 
 ## Export objects into a package {#export-objects}
 
->[!CONTEXTUALHELP]
->id="platform_sandbox_tooling_exit_package"
->title="Save and exit package"
->abstract="To exit the package and save, users can simply use the back option."
+>[!NOTE]
+>
+>All export actions are recorded in the audit logs.
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="Remove an object"
->abstract="The user must select the row and then use the delete option (made available upon selection) to remove the row."
+>abstract="To remove an object from the package, select the row to be removed and then use the delete option, made available upon selection. Note that you cannot remove objects from published packages."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="Package expiry settings"
->abstract="The date is set for 90 days from today. This date continues to change until the package is published. If a user visits the package in draft status tomorrow, the date moves by +1 day (unless set by the user)."
+>abstract="Packages are set to expire after a period of inactivity in draft status. The default date is set for 90 days from today. This date continues to change until the package is published. If you visit the package in draft status tomorrow, the date moves by +1 day, unless you set this manually."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"
@@ -114,23 +123,31 @@ You are returned to the **[!UICONTROL Packages]** tab in the [!UICONTROL Sandbox
 
 ## Import a package to a target sandbox {#import-package-to-target-sandbox}
 
+>[!NOTE]
+>
+>All import actions are recorded in the audit logs.
+
 To import the package into a target sandbox, navigate to the Sandboxes **[!UICONTROL Browse]** tab and select the plus (+) option beside the sandbox name.
 
 ![The sandboxes **[!UICONTROL Browse]** tab highlighting the import package selection.](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-Using the dropdown menu, select the **[!UICONTROL Package name]** you want to import to the targeted sandbox. Add an optional **[!UICONTROL Job name]**, which will be used for future monitoring, then select **[!UICONTROL Next]**.
+Using the dropdown menu, select the **[!UICONTROL Package name]** you want to import to the targeted sandbox. Add an optional **[!UICONTROL Job name]**, which will be used for future monitoring. By default, unified profile will be disabled when the package's schemas are imported. Toggle **Enable schemas for profile** to enable this, then select **[!UICONTROL Next]**.
 
 ![The import details page showing the [!UICONTROL Package name] dropdown selection](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-The [!UICONTROL Package object and dependencies] page provides a list of all assets included in this package. The system automatically detects dependent objects that are required for successfully importing selected parent objects.
+The [!UICONTROL Package object and dependencies] page provides a list of all assets included in this package. The system automatically detects dependent objects that are required for successfully importing selected parent objects. Any missing attributes are displayed at the top of the page. Select **[!UICONTROL View details]** for a more detailed breakdown.
 
-![The [!UICONTROL Package object and dependencies] page shows a list of assets included in the package.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![The [!UICONTROL Package object and dependencies] page shows missing attributes.](../images/ui/sandbox-tooling/missing-attributes.png)
 
 >[!NOTE]
 >
 >Dependent objects can be replaced with existing ones in the target sandbox, which allows you to reuse existing objects rather than creating a new version. For example, when you import a package including schemas, you can reuse existing custom field group and identity namespaces in the target sandbox. Alternatively, when you import a package including Journeys, you can reuse existing segments in the target sandbox.
 
-To use an existing object, select the pencil icon beside the dependent object. The options to create new or use existing are displayed. Select **[!UICONTROL Use existing]**.
+To use an existing object, select the pencil icon beside the dependent object.
+
+![The [!UICONTROL Package object and dependencies] page shows a list of assets included in the package.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+
+The options to create new or use existing are displayed. Select **[!UICONTROL Use existing]**.
 
 ![The [!UICONTROL Package object and dependencies] page showing dependent object options [!UICONTROL Create new] and [!UICONTROL Use existing].](../images/ui/sandbox-tooling/use-existing-object.png)
 
@@ -142,7 +159,12 @@ You are returned to the [!UICONTROL Package object and dependencies] page. From 
 
 ![The [!UICONTROL Package object and dependencies] page shows a list of assets included in the package, highlighting [!UICONTROL Finish].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
+<!--
 ## Export and import an entire sandbox 
+
+>[!NOTE]
+>
+>All export and import actions are recorded in the audit logs.
 
 ### Export an entire sandbox {#export-entire-sandbox}
 
@@ -177,6 +199,7 @@ Using the dropdown menu, select the full sandbox using the **[!UICONTROL Package
 You are taken to the [!UICONTROL Package object and dependencies] page where you can see the number of objects and dependencies that are imported and excluded objects. From here, select **[!UICONTROL Import]** to complete the package import.
 
  ![The [!UICONTROL Package object and dependencies] page shows the inline message of object types not supported, highlighting [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+-->
 
 ## Monitor import jobs and view import objects details 
 
@@ -209,6 +232,12 @@ The **[!UICONTROL Import details]** dialog shows a detailed breakdown of the imp
 >[!NOTE]
 >
 >When an import is completed, you receive notifications in the Platform UI. You can access these notifications from the alerts icon. You can navigate to troubleshooting from here if a job is unsuccessful.
+
+## Video tutorial
+
+The following video is intended to support your understanding of sandbox tooling, and outlines how to create a new package, publish a package, and import a package.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Next steps
 

@@ -9,6 +9,12 @@ The [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing
 
 Using the [!DNL Meta Conversions API] extension, you can leverage the API's capabilities in your [event forwarding](../../../ui/event-forwarding/overview.md) rules to send data to [!DNL Meta] from the Adobe Experience Platform Edge Network. This document covers how to install the extension and use its capabilities in an event forwarding [rule](../../../ui/managing-resources/rules.md).
 
+## Demo
+
+The following video is intended to support your understanding of the [!DNL Meta Conversions API].
+
+>[!VIDEO](https://unlockmarketingdata.com/video-meta-conversions-api)
+
 ## Prerequisites
 
 It is strongly recommended to use [!DNL Meta Pixel] and the [!DNL Conversions API] to share and send the same events from the client side and server side, respectively, since this may help recover events that were not picked up by [!DNL Meta Pixel]. Before installing the [!DNL Conversions API] extension, see the guide on the [[!DNL Meta Pixel] extension](../../client/meta/overview.md) for steps on how to integrate it in your client-side tag implementations.
@@ -29,7 +35,7 @@ To install the [!DNL Meta Conversions API] extension, navigate to the Data Colle
 
 Once you have selected or created the desired property, select **[!UICONTROL Extensions]** in the left navigation, then select the **[!UICONTROL Catalog]** tab. Search for the [!UICONTROL Meta Conversions API] card, then select **[!UICONTROL Install]**.
 
-![The [!UICONTROL Install] button being selected for the [!UICONTROL Meta Conversions API] extension in the Data Collection UI.](../../../images/extensions/server/meta/install.png)
+![The [!UICONTROL Install] option being selected for the [!UICONTROL Meta Conversions API] extension in the Data Collection UI.](../../../images/extensions/server/meta/install.png)
 
 In the configuration view that appears, you must provide the [!DNL Pixel] ID you copied earlier to link the extension to your account. You can paste the ID directly into the input, or you can use a data element instead.
 
@@ -40,6 +46,30 @@ When finished, select **[!UICONTROL Save]**
 ![The [!DNL Pixel] ID provided as a data element in the extension configuration view.](../../../images/extensions/server/meta/configure.png)
 
 The extension is installed and you can now employ its capabilities in your event forwarding rules.
+
+## Integration with Meta Business Extension (MBE) {#mbe}
+
+The integration with Meta Business Extensions (MBE) enhancement allows you to quickly authenticate into your Meta Business Account. This then auto-populates your [!UICONTROL Pixel ID] and the Meta Conversions API [!UICONTROL Access Token], making it easier to install and configure the Meta Conversions API.
+
+A dialogue prompt to authenticate in MBE appears when installing the [!UICONTROL Meta Conversions API] extension.
+
+![The [!UICONTROL Meta Conversions API Extension] installation page highlighting [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
+
+A dialogue prompt to authenticate in MBE also appears in the quick start workflow UI within event forwarding. 
+
+![The quick start workflow UI highlighting [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
+
+## Integration with Event Quality Match Score (EMQ) {#emq}
+
+The integration with Event Quality Match Score (EMQ) allows you to easily view the effectiveness of your implementation by showing EMQ scores. This integration minimizes context switching and helps you improve the success of your Meta Conversions API implementations. These event scores appear in the [!UICONTROL Meta Conversions API extension] configuration screen.
+
+![The [!UICONTROL Meta Conversions API Extension] configuration page highlighting [!UICONTROL View EMQ Score].](../../../images/extensions/server/meta/emq-score.png)
+
+## Integration with LiveRamp (Alpha) {#alpha}
+
+[!DNL LiveRamp] customers who have [!DNL LiveRamp]'s Authenticated Traffic Solution (ATS) deployed on their sites may opt to share RampIDs as a customer information parameter. Please work with your [!DNL Meta] account team to join the Alpha program for this feature.
+
+![The Meta event forwarding [!UICONTROL Rule] configuration page highlighting [!UICONTROL Partner Name (alpha)] and [!UICONTROL Partner ID (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Configure an event forwarding rule {#rule}
 
@@ -84,6 +114,12 @@ When sending shared events, make sure that you are including an event ID and nam
 >
 >* The quick start feature is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Please contact your Adobe representative for more information.
 >* This feature is for net new implementations and does not currently support auto installing extensions and configurations on existing tags and event forwarding properties. 
+
+>[!NOTE]
+>
+>Any existing client can use the quick start workflows to create a reference implementation that can be used for the following:
+>* Use it as the start of a brand new implementation. 
+>* Take advantage of it as a reference implementation that you can examine to see how it has been configured and then replicate in your current production implementations.
 
 The quick start feature helps you get set up with ease and efficiency with the Meta Conversions API and the Meta Pixel extensions. This tool automates multiple steps that are performed in Adobe tags and event forwarding, significantly reducing the set up time.
 

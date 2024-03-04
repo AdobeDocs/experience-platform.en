@@ -5,146 +5,107 @@ title: Identity Service Overview
 description: Adobe Experience Platform Identity Service helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 ---
-# [!DNL Identity Service] overview
+# Adobe Experience Platform Identity Service
 
-Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple "identities".
+In order to deliver relevant digital experiences, you need a comprehensive and accurate representation of the real-world entities that make up your customer base.
 
-Adobe Experience Platform Identity Service provides you with a comprehensive view of your customers and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
+Organizations and businesses today face a large volume of disparate datasets: your individual customers are represented by a variety of different identifiers. Your customer can be linked to different web browsers (Safari, Google Chrome), hardware devices (Phones, Laptops), and other person identifiers (CRM IDs, Email accounts). This creates a disjointed view of your customer.
 
-With [!DNL Identity Service], you can:
+You can solve these challenges with Adobe Experience Platform Identity Service and its capabilities to:
 
-- Ensure that your customers receive a consistent, personalized, and relevant experience through each interaction.
-- Stitch together several different identities from disparate sources and create a comprehensive view of your customers.
-- Utilize an identity graph to map different identity namespaces, providing you with a visual representation of how your customers interact with your brand across different channels.
+* Generate an **identity graph** that links disparate identities together, thus giving you with a visual representation of how a customer interacts with your brand across different channels.
+* Create a graph for Real-Time Customer Profile, which is then used to create a comprehensive view of the customer by merging attributes and behaviors.
+* Perform validation and debugging using the various tools.
 
-## Getting started
+This document provides an overview of Identity Service and how you can use its functionalities within the context of Experience Platform.
 
-Before diving into the details of [!DNL Identity Service], here is a brief summary of the key terms:
+## Terminology {#terminology}
+
+Before diving into the details of Identity Service, please read the following table for a summary of the key terms:
 
 | Term | Definition |
 | --- | --- |
-| Identity | An identity is data that is unique to an entity, typically an individual person. An identity, such as a log-in ID, ECID, or loyalty ID, is also referred to as a "known identity". |
-| ECID | Experience Cloud ID (ECID) is a shared identity namespace used across Experience Platform and Adobe Experience Cloud applications. ECID provides a foundation for customer identity and is used as the primary ID for devices and as a base node for identity graphs. See the [ECID overview](./ecid.md) for more information. |
-| Identity namespace | An identity namespace serves to distinguish the context or type of an identity. For example, an identity distinguishes "name<span>@email.com" as an email address or "443522" as a numeric CRM ID. Identity namespaces are used to look up individual identities and provide the context for identity values. This allows you to determine that two [!DNL Profile] fragments that contain different primary IDs, but share the same value for the `email` identity namespace, are in fact, the same individual. See the [identity namespace overview](./namespaces.md) for more information. |
-| Identity graph | An identity graph is a map of relationships between different identities, allowing you to visualize and better understand which customer identities are stitched together, and how. See the tutorial on [using the identity graph viewer](./ui/identity-graph-viewer.md) for more information. |
-| Personally Identifiable Information (PII) | PII is information that can directly identify a customer, such as an email address or a phone number. PII values are often used to match. a customer's multiple identities across different systems. |
-| Unknown or anonymous identities | Unknown or anonymous identities are indicators that isolate devices without identifying the actual person using the device. Unknown and anonymous identities include information such as a visitor's IP address and cookie ID. Although unknown and anonymous identities can provide behavioral data, they are limited until a customer supplies their PII. |
+| Identity | An identity is data that is unique to an entity. Typically, this is a real-world object, such as an individual person, a hardware device, or a web browser (represented by a cookie). A fully qualified identity consists of two elements: an **identity namespace** and an **identity value**. |
+| Identity namespace | An identity namespace is the context of a given identity. For example, a namespace of `Email` could correspond with the identity value: **julien<span>@acme.com**. Similarly, a namespace of `Phone` could correspond with the identity value: `555-555-1234`. For more information, read the [identity namespace overview](./features/namespaces.md). |
+| Identity value | An identity value is a string that represents a real-world entity and is categorized within Identity Service through a namespace. For example, the identity value (string) **julien<span>@acme.com** could be categorized as an `Email` namespace. |
+| Identity type | An identity type is a component of an identity namespace. The identity type designates whether identity data is linked in an identity graph or not. |
+| Link | A link or a linkage, is a method to establish that two disparate identities represent the same entity. For example, a link between "`Email` = julien<span>@acme.com" and "`Phone` = 555-555-1234" means that both identities represent the same entity. This suggests that the customer who has interacted with your brand with both the email address of julien<span>@acme.com and the phone number of 555-555-1234 is the same. |
+| Identity Service | Identity Service is a service within Experience Platform that links (or unlinks) identities to maintain identity graphs. |
+| Identity graph | The identity graph is a collection of identities that represent a single customer. For more information, read the guide on [using the identity graph viewer](./features/identity-graph-viewer.md). |
+| Real-Time Customer Profile | Real-Time Customer Profile is a service within Adobe Experience Platform that: <ul><li>Merges profiles fragments to create a profile, based on an identity graph.</li><li>Segments profiles so that they can then be sent to destination for activations.</li></ul> |
+| Profile | A profile is a representation of a subject, an organization, or an individual. A profile is composed of four elements: <ul><li>Attributes: attributes provide information such as name, age, or gender.</li><li>Behavior: behaviors provide information on the activities of a given profile. For example, a profile behavior can tell if a given profile was "searching for sandals" or "ordering t-shirts."</li><li>Identities: For a merged profile, this provides information of all the identities associated with the person. Identities can be classified into three categories: Person (CRMID, email, phone), device (IDFA, GAID), and cookie (ECID, AAID).</li><li>Audience memberships: The groups in which the profile belongs to (loyal users, users who live in California, etc.)</li></ul> |
 
-## What is [!DNL Identity Service]?
+{style="table-layout:auto"}
 
-Each day, customers interact with your business and establish a continuously growing relationship with your brand. A typical customer may be active in any number of systems within your organization's data infrastructure, such as your e-commerce, loyalty, and help-desk systems. That same customer may also engage anonymously on any number of devices. [!DNL Identity Service] allows you to piece together a complete picture of your customer, aggregating related data that might otherwise be siloed across disparate systems.
-
-Consider an everyday example of a consumer's relationship with your brand:
-
-- Mary has an account on your e-commerce site where she has completed a few orders in the past. She typically uses her personal laptop to shop, where she logs in each time. However, during one of her visits she uses her tablet to shop for sandals, but does not place an order and does not log in.
-- At this point, Mary's activity appears as two separate profiles:
-  - Her e-commerce login
-  - Her tablet device, perhaps identified by device ID
-- Mary later resumes her tablet session and provides her email address while subscribing to your newsletter. Upon doing so, streaming ingestion adds a new identity as record data within her profile. As a result, [!DNL Identity Service] now relates Mary's tablet device activity with her e-commerce account history.
-- By the next click on her tablet, your targeted content could reflect Mary's full profile and history, rather than just a tablet used by an unknown shopper.
+## What is Identity Service?
 
 ![Identity stitching on Platform](./images/identity-service-stitching.png)
 
-Essentially, [!DNL Identity Service] allows you to piece together a complete picture of your customer, aggregating related data that might otherwise be scattered across disparate systems. The identity relationships that [!DNL Identity Service] defines and maintains are leveraged by Real-Time Customer Profile to build a complete a picture of a customer and their interactions with your brand. For more information, see the [Real-Time Customer Profile overview](../profile/home.md).
+In a Business-To-Customer (B2C) context, customers interact with your business and establish a relationship with your brand. A typical customer may be active in any number of systems within your organization's data infrastructure. Any given customer may be active within your e-commerce, loyalty, and help-desk systems. That same customer may also engage both anonymously or through authenticated means on any number of different devices.
 
-### Use cases
+Consider the following customer journey:
 
-Examples of [!DNL Identity Service] implementations include:
+* Julien has created an account on your e-commerce website and ordered some items in the past. Julien typically uses her personal laptop to shop and logs in to her account with each use time of use.
+* However, during one of her visits to your site, she uses a tablet to search for sandals. During this session, because she used a different device, she neither logs in nor does she place an order.
+* At this point, Julien's activities are represented in two separate profiles:
+  * Her first profile is her e-commerce login ID. This profile is used when she uses a username and password combination to authenticate her session on your e-commerce site. This profile is identified by a cross-device identifier.
+  * Her second profile is her tablet device. This profile was created after she browses your e-commerce site anonymously using a tablet without logging in to her account. This profile is identified by a cookie identifier.
+* Later, Julien resumes her tablet session. However, this time she logs in to her account. As a result, Identity Service now relates that Julien's tablet device activity with her e-commerce login ID. 
+* Moving forward, your targeted content could reflect Julien's full profile, purchase history, and anonymous browsing activity.
 
-- A telecom company may rely on the "phone number" value, where a phone number would refer to the same individual of interest in both offline and online data sets.
-- A retail company may use "email address" in offline data sets and ECID in online datasets due to the high percentage of anonymous visitors.
-- A bank may prefer "account number" in offline data sets, such as branch transactions. They may depend on "login ID" in online data sets, because most visitors would be authenticated during their visit.
-- Your customers may also have unique proprietary IDs, such as GUID or other universally unique identifiers.
+>[!IMPORTANT]
+>
+>You can use Identity Service to link identities and piece together a complete picture of your customer that might otherwise be scattered across different systems.
 
-## Identity namespace {#identity-namespace}
+## What does Identity Service do?
 
->[!CONTEXTUALHELP]
->id="platform_identity_namespace"
->title="Identity namespaces"
->abstract="An identity namespace serves to distinguish the context or type of an identity. For example, an identity distinguishes "name<span>@email.com" as an email address or "443522" as a numeric CRM ID."
->text="Learn more in documentation"
+Identity Service provides the following operations to achieve its mission:
 
->[!CONTEXTUALHELP]
->id="platform_identity_value"
->title="Identity values"
->abstract="An identity value is an identifier that represents a unique individual, organization, or asset. The context or type of identity that the value represents is defined by a corresponding identity namespace. When matching record data across profile fragments, the namespace and identity value must matchWhen matching record data across profile fragments the namespace and identity value must match."
->text="Learn more in documentation"
+* Create custom namespaces to fit your organization's needs.
+* Create, update, and view identity graphs.
+* Delete identities based on datasets.
+* Delete identities to ensure regulatory compliance.
 
-If you asked a person "What is your ID?" without any further context, it would be difficult for them to provide a useful answer. By the same logic, a string value representing an identity value, whether it is a system generated ID or an email address, is only complete when supplied with a qualifier that gives the string value context: the identity namespace.
+## How Identity Service links identities
 
-Your customers may interact with your brand through a combination of online and offline channels, resulting in the challenge of how to reconcile those fragmented interactions into a single customer identity.
+A link between two identities is established when the identity namespace and the identity values match.
 
-Understanding your customer across multiple devices and channels starts by recognizing them in each channel. Platform achieves this by using identity namespaces. An identity namespace is an identifier such as Email or Phone, used to provide additional context to customer identities. Identity namespaces are used to look up or link individual identities and provide context for identity values. See the [identity namespace overview](./namespaces.md) for more information.
+A typical login event **sends two identities** into Experience Platform:
+
+* The person identifier (such as a CRM ID) that represents an authenticated user.
+* The browser identifier (such as an ECID) that represents the web browser.
+
+Consider the following example:
+
+* You log in with your username and password combination to an e-commerce website using your laptop. This event qualifies you as an authenticated user, thus Identity Service recognizes your CRM ID.
+* Your use of a browser to access the e-commerce website is also recognized by Identity Service as an event. This event is represented in Identity Service through an ECID.
+* Behind the scenes, Identity Service processes the two events as: `CRM_ID:ABC, ECID:123`.
+  * CRM ID: ABC is the namespace and value that represents you, as an authenticated user.
+  * ECID: 123 is the namespace and value that represents your web browser usage on your laptop.
+* Next, if you log in with the same credentials to the same e-commerce website, but use the web browser on your phone instead of the web browser on your laptop, then a new ECID is registered in Identity Service.
+* Behind the scenes, Identity Service processes this new event as `{CRM_ID:ABC, ECID:456}`, where CRM_ID: ABC represents your authenticated customer ID and ECID:456 represents the web browser on your mobile device.
+
+Considering the scenarios above, Identity Service establishes a link between `{CRM_ID:ABC, ECID:123}`, as well as `{CRM_ID:ABC, ECID:456}`. This results in an identity graph where you "own" three identities: one for person identifier (CRM ID) and two for cookie identifiers (ECIDs).
+
+For more information, read the the guide on [how Identity Service links identities](./features/identity-linking-logic.md).
 
 ## Identity graphs
 
-An identity graph is a map of relationships between different identity namespaces, allowing you to visualize and better understand what customer identities are stitched together, and how. See the tutorial on [using the identity graph viewer](./ui/identity-graph-viewer.md) for more information.
+An identity graph is a map of relationships between different identity namespaces, allowing you to visualize and better understand what customer identities are stitched together, and how. Read the tutorial on [using the identity graph viewer](./features/identity-graph-viewer.md) for more information.
 
 The following video is intended to support your understanding of identities and identity graphs.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
-## Supplying identity data to [!DNL Identity Service]
+## Understanding the role of Identity Service within the Experience Platform infrastructure
 
-This section covers how data provided to Adobe Experience Platform is processed prior to being used by [!DNL Identity Service] to build an identity graph for each customer.
+Identity Service plays a vital role within Experience Platform. Some of these key integrations include the following:
 
-### Decide on identity fields
+* [Schemas](../xdm/home.md): Within a given schema, the schema fields that are marked as identity allow for identity graphs to be built.
+* [Datasets](../catalog/datasets/overview.md): When a dataset is enabled for ingestion into Real-Time Customer Profile, identity graphs are generated from the dataset, given that the dataset as at least two fields marked as identity.
+* [Web SDK](../edge/home.md): Web SDK sends experience events to Adobe Experience Platform, and Identity Service generates a graph when two or more identities exist in the event.
+* [Real-Time Customer Profile](../profile/home.md): Before attributes and events for a given profile are merged, Real-Time Customer Profile could reference the identity graph. For more information, read the guide on [understanding the relationship between Identity Service and Real-Time Customer Profile](./identity-and-profile.md).
+* [Destinations](../destinations/home.md): Destinations can send profile information to other systems based on an identity namespace, such as hashed email.
+* [Segment Match](../segmentation/ui/segment-match/overview.md): Segment Match matches two profiles across two different sandboxes that have the same identity namespace and identity value.
+* [Privacy Service](../privacy-service/home.md): If the deletion request includes `identity`, then the specified namespace and identity value combination can be deleted from Identity Service using the privacy request processing feature in Privacy Service.
 
-Depending on your enterprise data collection strategy, the data fields you label as identities determine which data is included in your identity map. To get the maximum benefit of Adobe Experience Platform and the most comprehensive customer identities possible, you should upload both online and offline data.
-
-- Online data is data that describes online presence and behavior, such as usernames and email addresses.
-
-- Offline data refers to data that is not directly related to online presence, such as IDs from CRM systems. This type of data makes your identities more robust and supports data cohesion across your disparate systems.
-
-### Create additional identity namespaces
-
-While Experience Platform offers a variety of standard namespaces, you may need to create additional namespaces to properly categorize your identities. For more information, see the section on [viewing and creating namespaces for your organization](./namespaces.md) in the identity namespace overview.
-
->[!NOTE]
->
->Identity namespaces are a qualifier for identities. As a result, once a namespace has been created, it cannot be deleted.
-
-### Include identity data in [!DNL Experience Data Model] (XDM)
-
-As the standardized framework by which [!DNL Platform] organizes customer data, [!DNL Experience Data Model] (XDM) allows data to be shared and understood across Experience Platform and other services interacting with [!DNL Platform]. For more information see the [XDM System overview](../xdm/home.md).
-
-Both record and time series schemas provide the means to include identity data. As data is ingested, the identity graph will create new relationships between data fragments from different namespaces if they are found to share common identity data.
-
-### Marking XDM fields as identity
-
-Any field of type `string` in schemas that implement either record or time series XDM classes can be labeled as an identity field. As a result, all data ingested into that field would be considered identity data. 
-
->[!NOTE]
->
->Array and map type fields are not supported and cannot be marked and labeled as identity fields.
-
-Identity fields also allow for the linking of identities if they share common PII data.
-For example, by labeling phone number fields as identity fields, [!DNL Identity Service] automatically graphs relationships with the other individuals found to be using the same phone number.
-
->[!NOTE]
->
->The namespace of resulting identities is provided at the time the field is labeled.
-
-### Configure a dataset for [!DNL Identity Service]
-
-During the streaming ingestion process, [!DNL Identity Service ]automatically extracts identity data from record and time series data. However, before data can be ingested, it must be enabled for [!DNL Identity Service]. See the tutorial on  [configuring a Dataset for Real-Time Customer Profile and Identity Service using APIs](../profile/tutorials/dataset-configuration.md) for more information.
-
-### Ingest data to [!DNL Identity Service]
-
-[!DNL Identity Service] consumes XDM compliant data sent to Experience Platform either by [batch ingestion](../ingestion/batch-ingestion/overview.md) or [streaming ingestion](../ingestion/streaming-ingestion/overview.md).
-
-The following video is intended to support your understanding of Identity Service. This video shows you how to label data fields as identities, ingest Identity data and then verify that the data has made it to the Adobe Experience Platform Identity Service Private Graph. 
-
->[!WARNING]
->
->The [!DNL Platform] UI shown in the following video is out-of-date. Please refer to the documentation for the latest UI screenshots and functionality.
-
->[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
-
-## Data governance
-
-Adobe Experience Platform was built with privacy in mind and includes a data governance framework to protect your customer PII data. Identity data under the "email" or "phone" namespace is encrypted by default, but in order to ensure sensitive data is encrypted before it is persisted, data usage labels can be applied to data as it is ingested or once it arrives in [!DNL Platform]. For more information, please read the [Data Governance overview](../data-governance/home.md).
-
-## Next steps
-
-Now that you understand the key concepts of [!DNL Identity Service] and its role within Experience Platform, you can begin to learn how to work with your identity graph using the [[!DNL Identity Service API]](./api/getting-started.md).

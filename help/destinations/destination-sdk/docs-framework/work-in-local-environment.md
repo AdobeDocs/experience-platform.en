@@ -10,18 +10,18 @@ The instructions on this page show you how to use a text editor to work in your 
 >[!TIP]
 >
 >Refer also to the supporting documentation in Adobe's contributor guide:
->* [Install Git and Markdown Authoring tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)
->* [Set up Git repository locally for documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)
->* [GitHub contribution workflow for major changes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en).
+>* [Install Git and Markdown Authoring tools](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
+>* [Set up Git repository locally for documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
+>* [GitHub contribution workflow for major changes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
 
 ## Connect to GitHub and set up your local authoring environment {#set-up-environment}
 
 1. In your browser, navigate to `https://github.com/AdobeDocs/experience-platform.en`
-2. To [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) the repository, click **Fork** as shown below. This creates a copy of the Experience Platform repository in your own GitHub account.
+2. To [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) the repository, click **Fork** as shown below. This creates a copy of the Experience Platform repository in your own GitHub account.
 
    ![Fork Adobe documentation repository](../assets/docs-framework/ssd-fork-repository.gif)
 
-3. Clone the repository to your local machine. Select **Code > HTTPS > Open with GitHub Desktop**, as shown below. Make sure you have [GitHub Desktop](https://desktop.github.com/) installed. For further reference, read [Create a local clone of the repository](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository) in the Adobe contributor guide.
+3. Clone the repository to your local machine. Select **Code > HTTPS > Open with GitHub Desktop**, as shown below. Make sure you have [GitHub Desktop](https://desktop.github.com/) installed. For further reference, read [Create a local clone of the repository](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository) in the Adobe contributor guide.
 
    ![Clone Adobe documentation repository to local environment](../assets/docs-framework/clone-local.png)
 
@@ -30,10 +30,10 @@ The instructions on this page show you how to use a text editor to work in your 
 ## Author the documentation page for your destination {#author-documentation}
 
 1. Your documentation page is based on the [self-service destination template](../docs-framework/self-service-template.md). Download the [destination template](../assets/docs-framework/yourdestination-template.zip). Unzip it and extract the file `yourdestination-template.md` to the directory mentioned in step 4 above.  Rename the file `YOURDESTINATION.md`, where YOURDESTINATION is the name of your destination in Adobe Experience Platform. For example, if your company is called Moviestar, you would name your file `moviestar.md`.
-2. Open your new file in your [text editor of choice](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors). Adobe recommends that you use [Visual Studio Code](https://code.visualstudio.com/) and install the Adobe Markdown Authoring extension. To install the extension, open Visual Studio Code, select the **[!DNL Extensions]** tab on the left of the screen, and search for `adobe markdown authoring`. Select the extension and click **[!DNL Install]**.
+2. Open your new file in your [text editor of choice](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors). Adobe recommends that you use [Visual Studio Code](https://code.visualstudio.com/) and install the Adobe Markdown Authoring extension. To install the extension, open Visual Studio Code, select the **[!DNL Extensions]** tab on the left of the screen, and search for `adobe markdown authoring`. Select the extension and click **[!DNL Install]**.
    ![Install Adobe Markdown Authoring extension](../assets/docs-framework/install-adobe-markdown-extension.gif)
 3. Edit the template with relevant information for your destination. Follow the instructions in the template. 
-4.  For any screenshots or images that you plan on adding to your documentation, go to `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]`, where `[...]` is the desired category for your destination. For example, if you are adding a personalization destination to Experience Platform, select the `personalization` folder. Create a new folder for your destination and save your images here. You must link to them from the page you are authoring. See [instructions how to link to images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images).
+4.  For any screenshots or images that you plan on adding to your documentation, go to `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]`, where `[...]` is the desired category for your destination. For example, if you are adding a personalization destination to Experience Platform, select the `personalization` folder. Create a new folder for your destination and save your images here. You must link to them from the page you are authoring. See [instructions how to link to images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
 5.  When you are ready, save the file you are working on.
 
 ## Submit your documentation for review {#submit-review}
@@ -75,4 +75,4 @@ The instructions on this page show you how to use a text editor to work in your 
 
 >[!TIP]
 >
->To add images and links to your documentation, and for any other questions around Markdown, read [Using Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en) in Adobe's collaborative writing guide.
+>To add images and links to your documentation, and for any other questions around Markdown, read [Using Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) in Adobe's collaborative writing guide.

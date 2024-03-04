@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;field group;Field group;
 solution: Experience Platform
 title: Personal Contact Details Schema Field Group
-description: This document provides an overview of the Personal Contact Details schema field group.
+description: Learn about the Personal Contact Details schema field group.
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 ---
 

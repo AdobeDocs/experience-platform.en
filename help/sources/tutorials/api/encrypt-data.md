@@ -1,8 +1,6 @@
 ---
 title: Encrypted Data Ingestion
 description: Learn how to ingest encrypted files through cloud storage batch sources using the API.
-hide: true
-hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
 ---
 # Encrypted data ingestion
