@@ -32,7 +32,7 @@ When you configure [Web In-App Messaging](../personalization/web-in-app-messagin
 default-src  blob:;
 ```
 
-For more information about configuring a CSP, see the [dedicated documentation](../fundamentals/configuring-a-csp.md).
+For more information about configuring a CSP, see the [dedicated documentation](../use-cases/configuring-a-csp.md).
 
 ## Configure Web In-App Messaging using the Web SDK tag extension {#tag-extension}
 
@@ -176,7 +176,7 @@ In this example, the personalization content is displayed when a user clicks the
 
 You can choose to show in-app messages to users for a set number of times, or every time they visit a page, through the `personalizationStorageEnabled` configuration option.
 
-In the [Web SDK configuration](../fundamentals/configuring-the-sdk.md) set the `personalizationStorageEnabled` option according to your needs:
+In the [Web SDK configuration](../commands/configure/overview.md) set the `personalizationStorageEnabled` option according to your needs:
 
 * `personalizationStorageEnabled: true` triggers the in-app message with the frequency you defined in the [Adobe Journey Optimizer campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
 * `personalizationStorageEnabled: false` triggers the in-app message on every page load.
