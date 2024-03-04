@@ -49,7 +49,7 @@ feature: Web SDK
   * [getLibraryInfo](commands/getlibraryinfo.md)
   * [setConsent](commands/setconsent.md)
   * [setDebug](commands/setdebug.md)
-  * [Command overrides](commands/command-overrides.md)
+  * [Configre datastream overrides](commands/datastream-overrides.md)
   * [Command responses](commands/command-responses.md)
 
 * Identity {#identity}

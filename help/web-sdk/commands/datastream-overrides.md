@@ -3,7 +3,7 @@ title: Datastream configuration overrides
 description: Learn how to configure datastream overrides via the Web SDK.
 ---
 
-# Datastream configuration overrides
+# Configure datastream overrides
 
 The `edgeConfigOverrides` object allows you to override configuration settings for commands run on the current page. This override object is not a command, but rather an object that you can include in most Web SDK commands.
 
@@ -71,7 +71,7 @@ The `edgeConfigOverrides` command creates datastream overrides which are passed 
 
 When a configuration override is sent with the `configure` command, it is included on the following Web SDK commands.
 
-* [sendEvent](../commands/sendevent/)
+* [sendEvent](../commands/sendevent.md)
 * [setConsent](../commands/setconsent.md)
 * [getIdentity](../commands/getidentity.md)
 * [appendIdentityToUrl](../commands/appendidentitytourl.md)
