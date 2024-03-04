@@ -112,7 +112,7 @@ You should now have the ID sync container overrides configured. Now you can [sen
 
 After configuring datastream overrides in the Data Collection UI, you can send the overrides to the Edge Network through the Web SDK or Mobile SDK.
 
-* **Web SDK**: See [Command overrides](../web-sdk/commands/command-overrides.md) for tag extension instructions and JavaScript library code examples.
+* **Web SDK**: See [datastream configuration overrides](../web-sdk/commands/datastream-overrides.md#library) for tag extension instructions and JavaScript library code examples.
 * **Mobile SDK**: See below.
 
 ### Datastream ID override via Mobile SDK {#id-override-mobile}

@@ -17,7 +17,7 @@ The Web SDK tag extension does not offer this command through the tag extension 
 Run the `getIdentity` command when calling your configured instance of the Web SDK. The following options are available when configuring this command:
 
 * **`namespaces`**: An array of namespaces. The default value is `["ECID"]`. Valid values include `["ECID"]`, `null`, or `undefined`.
-* **`edgeConfigOverrides`**: An [override object](command-overrides.md).
+* **`edgeConfigOverrides`**: An [datastream configuration override object](datastream-overrides.md).
 
 ```js
 alloy("getIdentity",{

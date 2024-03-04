@@ -23,7 +23,7 @@ default-src 'self';
 connect-src 'self' EDGE-DOMAIN
 ```
 
-In the above example, `EDGE-DOMAIN` should be replaced with the first-party domain. The first-party domain is configured for the [edgeDomain](configuring-the-sdk.md#edge-domain) setting. If no first-party domain has been configured, `EDGE-DOMAIN` should be replaced with `*.adobedc.net`. If visitor migration is turned on using [idMigrationEnabled](configuring-the-sdk.md#id-migration-enabled), the `connect-src` directive also needs to include `*.demdex.net`.
+In the above example, `EDGE-DOMAIN` should be replaced with the first-party domain. The first-party domain is configured for the [edgeDomain](../commands/configure/edgedomain.md) setting. If no first-party domain has been configured, `EDGE-DOMAIN` should be replaced with `*.adobedc.net`. If visitor migration is turned on using [idMigrationEnabled](../commands/configure/idmigrationenabled.md), the `connect-src` directive also needs to include `*.demdex.net`.
 
 ### Use NONCE to allow inline script and style elements
 
@@ -33,7 +33,7 @@ In the above example, `EDGE-DOMAIN` should be replaced with the first-party doma
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-In addition the CSP nonce needs to be added as an attribute to the [!DNL Platform Web SDK] [base code](installing-the-sdk.md#adding-the-code) script tag. [!DNL Platform Web SDK] will then use that nonce when adding inline script or style tags to the page:
+In addition the CSP nonce needs to be added as an attribute to the [!DNL Platform Web SDK] [base code](../install/library.md) script tag. [!DNL Platform Web SDK] will then use that nonce when adding inline script or style tags to the page:
 
 ```
 <script nonce="SERVER-GENERATED-NONCE">
@@ -57,7 +57,7 @@ style-src 'unsafe-inline'
 
 ## Configure a CSP for In-App Messaging {#in-app-messaging}
 
-When you configure [Web In-App Messaging](../personalization/web-in-app-messaging.md), you must inclde the following directive in your CSP:
+When you configure [Web In-App Messaging](../personalization/personalization/web-in-app-messaging.md), you must inclde the following directive in your CSP:
 
 ```
 default-src  blob:;
