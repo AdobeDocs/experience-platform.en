@@ -289,7 +289,7 @@ role: Developer
       - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - [Snowflake](tutorials/ui/create/databases/snowflake.md)
       - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
-    - Data partner {#data-partner}
+    - Data & identity partner {#data-partner}
       - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
       - [Acxiom Prospecting Data Import](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
     - eCommerce {#ecommerce}
@@ -299,7 +299,7 @@ role: Developer
     - Local system {#local-system}
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Marketing automation {#marketing-automation}
-      - [Braze](tutorials/ui/create/marketing-automation/braze.md)
+      - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
       - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
       - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
