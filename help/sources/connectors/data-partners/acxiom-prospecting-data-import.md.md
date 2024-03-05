@@ -13,6 +13,8 @@ Adobe Experience Platform provides support for ingesting data from a data partne
 
 [!DNL Acxiom]'s Prospecting Data Import for Adobe Real-Time Customer Data Platform is a process for delivering the most productive prospect audiences possible. [!DNL Acxiom] takes Real-Time CDP first-party data via a secure export and runs that data through an award-winning hygiene and identity resolution system. This produces a data file to be used as a suppression list. This data file is then matched against the Acxiom Global database, which enables the prospect lists to be tailored for import.
 
+You can use the [!DNL Acxiom] source to retrieve and map responses from Acxiom prospect service using [!DNL Amazon S3] as a drop point.
+
 ## Prerequisites
 
 In order to access your bucket on Experience Platform, you need to provide valid values for the following credentials:
