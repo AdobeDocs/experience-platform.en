@@ -95,7 +95,7 @@ Deletion only happens to data in the Identity Service and not Real-Time Customer
 If you would like to preserve your authenticated events against the CRM ID, then it is recommended that you change your primary IDs from ECID to CRM ID. Read the following documents for steps on how to implement this change:
 
 * [Configure identity map for Experience Platform tags](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Identity data in the Experience Platform Web SDK](../edge/identity/overview.md#using-identitymap)
+* [Identity data in the Experience Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
 
 ### Example scenarios
 

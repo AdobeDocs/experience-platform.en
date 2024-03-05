@@ -11,7 +11,7 @@ The Edge Network Server API can deliver and render personalized experiences crea
 
 >[!IMPORTANT]
 >
->Personalization experiences created through the [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) are not fully supported by the Server API. The Server API can **retrieve** activities created by VEC, but Server API cannot **render** activities created by VEC. If you want to render activities created by VEC, please implement [hybrid personalization](../edge/personalization/hybrid-personalization.md) using the Web SDK and the Edge Network Server API.
+>Personalization experiences created through the [Target Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) are not fully supported by the Server API. The Server API can **retrieve** activities created by VEC, but Server API cannot **render** activities created by VEC. If you want to render activities created by VEC, please implement [hybrid personalization](../web-sdk/personalization/hybrid-personalization.md) using the Web SDK and the Edge Network Server API.
 
 ## Configure your datastream {#configure-your-datastream}
 

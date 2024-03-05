@@ -36,7 +36,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 | Feature | Description |
 | --- | --- |
-| [Web In-App Messaging support in Web SDK](../../edge/personalization/web-in-app-messaging.md) | The Adobe Experience Platform Web SDK now supports Web In-App Messaging configuration for Adobe Journey Optimizer campaigns. |
+| [Web In-App Messaging support in Web SDK](../../web-sdk/personalization/web-in-app-messaging.md) | The Adobe Experience Platform Web SDK now supports Web In-App Messaging configuration for Adobe Journey Optimizer campaigns. |
 
 {style="table-layout:auto"}
 
