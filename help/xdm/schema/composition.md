@@ -255,7 +255,7 @@ The valid ranges of these scalar types can be further constrained to certain pat
 
 >[!NOTE]
 >
->The "map" field type allows for key-value pair data, including multiple values for a single key. Maps can be found in standard XDM classes and field groups, but you can also define custom maps using the Schema Registry API. See the tutorial on [defining custom fields](../tutorials/custom-fields-api.md#custom-maps) for more information.
+>The "map" field type allows for key-value pair data, including multiple values for a single key. Maps can be found in standard XDM classes and field groups, but you can also define custom maps. See the API tutorial on [defining custom map fields](../tutorials/custom-fields-api.md#custom-maps) or the guide on [defining map fields in the UI](../ui/fields/map.md) for more information.
 
 ## Composition example {#composition-example}
 

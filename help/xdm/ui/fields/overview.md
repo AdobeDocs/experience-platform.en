@@ -101,6 +101,7 @@ The right rail provides several checkboxes for designating special roles for the
 
 To learn more about these special types, refer to the following documentation:
 
+* [Map](./map.md)
 * [[!UICONTROL Required]](./required.md)
 * [[!UICONTROL Array]](./array.md)
 * [[!UICONTROL Enum]](./enum.md)
