@@ -49,7 +49,7 @@ curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/root
 
 **Response**
 
-A successful response returns HTTP status ??? with a list of all top-level folders for datasets in your organization.
+A successful response returns HTTP status 200 with a list of all top-level folders for datasets in your organization.
 
 +++A sample response that contains a list of all top-level folders for datasets in your organization.
 
@@ -149,7 +149,7 @@ curl -X POST https://experience.adobe.io/unifiedFolders/folder/datasets
 
 **Response**
 
-A successful response returns HTTP status ??? with details of your newly created folder.
+A successful response returns HTTP status 200 with details of your newly created folder.
 
 +++A sample response that contains details of your newly created folder.
 
@@ -213,7 +213,7 @@ curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/83f8287c-
 
 **Response**
 
-A successful response returns HTTP status ??? with details of the requested folder.
+A successful response returns HTTP status 200 with details of the requested folder.
 
 +++A sample response that contains details of the requested folder.
 
@@ -282,7 +282,7 @@ curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/83f8287c-
 
 **Response**
 
-A successful status returns HTTP status ??? with details of the folder you are validating.
+A successful status returns HTTP status 200 with details of the folder you are validating.
 
 +++A sample response contains details of the validated folder
 
@@ -336,7 +336,7 @@ curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/83f8287c-
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
     "op": "replace",
-    "path": "/name1",
+    "path": "/name",
     "value": "RenamedSampleFolder"
  }'
 ```
@@ -345,9 +345,30 @@ curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/83f8287c-
 
 **Response**
 
-A successful response returns HTTP status ??? with information about your newly updated folder.
+A successful response returns HTTP status 200 with information about your newly updated folder.
 
-??????????????????????
+```json
+{
+    "id": "eafab5bf-3457-4b7f-b366-3c5399bd98f1",
+    "name": "RenamedSampleFolder",
+    "noun": "dataset",
+    "parentFolderId": null,
+    "imsOrg": "{ORG_ID}",
+    "sandboxId": "{SANDBOX_ID}",
+    "sandboxName": "prod",
+    "createdBy": "183807A65A0F5D180A494004@AdobeID",
+    "createdAt": "2024-03-05T01:42:36.910+00:00",
+    "modifiedBy": "183807A65A0F5D180A494004@AdobeID",
+    "modifiedAt": "2024-03-05T01:45:54.740+00:00",
+    "status": "IN_USE",
+    "_links": {
+        "self": {
+            "href": "/folders/segment/eafab5bf-3457-4b7f-b366-3c5399bd98f1"
+        }
+    },
+    "namespace": null
+}
+```
 
 ## Retrieve a specific folder's subfolders {#get-subfolders}
 
@@ -376,7 +397,7 @@ curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/83f8287c-
 
 **Response**
 
-A successful response returns HTTP status ??? with details of the requested folder's subfolders.
+A successful response returns HTTP status 200 with details of the requested folder's subfolders.
 
 +++A sample response that contains details of the requested folder's subfolders.
 
@@ -449,9 +470,13 @@ curl -X DELETE https://experience.adobe.io/unifiedFolders/folder/datasets/83f828
 
 **Response**
 
-A successful response returns HTTP status ??? with ????????
+A successful response returns HTTP status 200 with a message body informing you of the folder's deletion.
 
-Response??????????
+```json
+{
+    "message": "delete request accepted successfully"
+}
+```
 
 ## Next steps
 
