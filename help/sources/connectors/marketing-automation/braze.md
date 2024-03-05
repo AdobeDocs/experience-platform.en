@@ -11,7 +11,7 @@ badge: Beta
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-Experience Platform provides support for ingesting data from Streaming applications. Support for streaming providers include [!DNL Braze Currents].
+Experience Platform provides support for ingesting data from Streaming applications. Support for streaming providers includes [!DNL Braze Currents].
 
 [!DNL Braze] powers customer-centric interactions between consumers and brands in real-time. [!DNL Braze Currents] is a real-time data stream of engagement events from the Braze platform that is the most robust yet granular export out of the [!DNL Braze] platform. 
 
@@ -24,7 +24,7 @@ In order to complete the steps in this guide, you will need:
 
 ### Gather required credentials
 
-You must provide the following Experience Platform credentials in the [!DNL Braze] UI dashboard in order to successfully send your [!DNL Braze Currents] data to Experience Platform.
+To successfully submit your [!DNL Braze Currents] data to Experience Platform, you need to enter the following Experience Platform credentials in the [!DNL Braze] UI dashboard.
 
 | Field | Description |
 | --- | --- |
@@ -35,8 +35,8 @@ You must provide the following Experience Platform credentials in the [!DNL Braz
 | Dataflow ID | The dataflow ID associated with your Experience Platform source. |
 | Streaming Endpoint | The streaming endpoint associated with your Experience Platform source. **Note**: [!DNL Braze] automatically converts this to the batch streaming endpoint. |
 
-For information on how to retrieve these values, read the guide on [getting started with Platform APIs](../../../landing/api-authentication.md). For information on using the [!DNL Braze] dashboard, read the [!DNL Braze] [guide on navigating to Currents](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+For information on how to retrieve these values, read the guide on [getting started with Platform APIs](../../../landing/api-authentication.md). For information on using the [!DNL Braze] dashboard, read the [!DNL Braze] guide on how to [Navigate to Currents](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 ## Next steps
 
-By reading this document, you have completed prerequisite setup needed in order to stream data from your [!DNL Braze Currents] account to Experience Platform. You can now proceed to the guide on [connecting [!DNL Braze Currents] to Experience Platform using the user interface](../../tutorials/ui/create/marketing-automation/braze.md).
+By reading this document, you have completed the prerequisite setup needed in order to stream data from your [!DNL Braze Currents] account to Experience Platform. You can now proceed to the guide on [connecting [!DNL Braze Currents] to Experience Platform using the user interface](../../tutorials/ui/create/marketing-automation/braze.md).
