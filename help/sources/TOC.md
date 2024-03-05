@@ -86,7 +86,8 @@ role: Developer
     - [Snowflake Streaming connector](connectors/databases/snowflake-streaming.md)
     - [Snowflake connector](connectors/databases/snowflake.md)
     - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
-  - Data partner {#data-partner}
+  - Data & identity partner {#data-partner}
+    - [Acxiom Prospecting Data Import](connectors/data-partners/acxiom-prospecting-data-import.md.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - eCommerce {#ecommerce}
     - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
@@ -95,6 +96,7 @@ role: Developer
   - Local system {#local-system}
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Marketing automation {#marketing-automation}
+    - [Braze Currents](connectors/marketing-automation/braze.md)
     - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
     - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
