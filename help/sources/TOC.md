@@ -87,7 +87,7 @@ role: Developer
     - [Snowflake connector](connectors/databases/snowflake.md)
     - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
   - Data & identity partner {#data-partner}
-    - [Acxiom Prospecting Data Import](connectors/data-partners/acxiom-prospecting-data-import.md.md)
+    - [Acxiom Prospecting Data Import](connectors/data-partners/acxiom-prospecting-data-import.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - eCommerce {#ecommerce}
     - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
