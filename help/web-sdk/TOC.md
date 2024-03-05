@@ -87,6 +87,7 @@ feature: Web SDK
     * [Integrate without tags](consent/iab-tcf/without-tags.md)
 
 * Use cases {#use-cases}
+  * [Overview](use-cases/overview.md)
   * [Send data to Adobe Analytics using the Web SDK](use-cases/adobe-analytics.md)
   * [User agent client hints](use-cases/client-hints.md)
   * [Collect commerce data](use-cases/collect-commerce-data.md)
