@@ -138,7 +138,7 @@ The **[!UICONTROL Create Request]** dialog opens, displaying the available optio
 
 Select the **[!UICONTROL Job Type]** of the request ("Delete" or "Access") and one or more available products from the list.
 
-Privacy Service supports two kinds of job requests for personal data: [!UICONTROL Access] (read) and/or [!UICONTROL Delete]. You can either submit a request to receive all information held in the product that relates to the subject of the inquiry. Or request to delete all the information that relates to the subject of the inquiry.
+Privacy Service supports two kinds of job requests for personal data: [!UICONTROL Access] (read) and/or [!UICONTROL Delete]. You can either submit a request to receive all information held in the product that relates to the subject of the inquiry, or request to delete all the information that relates to the subject of the inquiry.
 
 <img src="../images/user-guide/type-and-products.png" width=500 /><br/>
 
