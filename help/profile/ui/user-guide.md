@@ -138,6 +138,12 @@ These attributes can also be viewed as a JSON object by selecting to **[!UICONTR
 
 ![The Attributes tab is highlighted. The profile attributes are displayed.](../images/user-guide/attributes.png)
 
+You can also view the attributes that are available on Edge by selecting **[!UICONTROL Edge]** on the data location selector.
+
+![The data location selector within the attributes tab is highlighted.](../images/user-guide/attributes-select.png)
+
+For more information on edge profiles, please read the [edge profiles documentation](../edge-profiles.md).
+
 ### Events tab
 
 The **[!UICONTROL Events]** tab contains data from the 100 most recent ExperienceEvents associated with the customer. This data could include email opens, cart activities, and page views. Selecting **[!UICONTROL View all]** for any individual event provides additional fields and values captures as part of the event.
@@ -152,7 +158,11 @@ The **[!UICONTROL Audience membership]** tab displays a list with the name and d
 
 For more information about segmentation in Experience Platform, please refer to the [Adobes Experience Platform Segmentation Service documentation](../../segmentation/home.md).
 
-![The Audience membership tab is highlighted. The profile's audience membership details are displayed.](../images/user-guide/segment-membership.png)
+![The Audience membership tab is highlighted. The profile's audience membership details are displayed.](../images/user-guide/audience-membership.png)
+
+You can also view the audience membership of the profiles that are available on Edge by selecting **[!UICONTROL Edge]** in the data location selector. More information about Edge segmentation can be found in the [Edge segmentation guide](../../segmentation/ui/edge-segmentation.md).
+
+![The data location selector within the audience membership tab is highlighted.](../images/user-guide/audience-membership-select.png)
 
 ## Merge policies
 
