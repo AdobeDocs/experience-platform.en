@@ -7,7 +7,7 @@ description: Learn how Adobe Experience Platform handles event duplication
 
 Adobe Experience Platform is a highly distributed system designed to maximize reliability while scaling to ever-increasing volumes of data.
 
-For real-time data collection, [Experience Events](../xdm/classes/experienceevent.md) are collected via the [Edge Network](../edge/home.md#edge-network), from client-side sources, such as [Web SDK](../edge/home.md) or [Mobile SDK](https://developer.adobe.com/client-sdks/home/), and delivered to Experience Platform processing and storage layers. These layers compose solutions such as Experience Platform, [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html), and [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html).
+For real-time data collection, [Experience Events](../xdm/classes/experienceevent.md) are collected via the [Edge Network](../web-sdk/home.md#edge-network), from client-side sources, such as [Web SDK](../web-sdk/home.md) or [Mobile SDK](https://developer.adobe.com/client-sdks/home/), and delivered to Experience Platform processing and storage layers. These layers compose solutions such as Experience Platform, [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html), and [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html).
 
 To minimize Experience Event loss, client-side SDKs and the internal Experience Platform delivery service expect a confirmation that an event was successfully collected.
 
