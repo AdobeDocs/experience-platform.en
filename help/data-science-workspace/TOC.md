@@ -5,6 +5,7 @@ breadcrumb-title: Data Science Workspace Guide
 user-guide-description: Use machine learning to develop, train, and score models and recipes with Adobe Sensei and JupyterLab Notebooks.
 feature: Data Science Workspace
 solution: Experience Platform
+role: User, Developer
 ---
 
 # Data Science Workspace {#data-science-workspace}

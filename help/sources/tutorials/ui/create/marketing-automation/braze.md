@@ -4,11 +4,11 @@ description: Learn how to create a dataflow for your Braze account using the Ado
 last-substantial-update: 2024-01-30
 badge: Beta
 ---
-# Create a [!DNL Braze] source connection in the UI
+# Create a [!DNL Braze Currents] source connection in the UI
 
 >[!NOTE]
 >
->The [!DNL Braze] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
+>The [!DNL Braze Currents] source is in beta. Please read the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 [!DNL Braze] powers customer-centric interactions between consumers and brands in real-time. [!DNL Braze Currents] is a real-time data stream of engagement events from the Braze platform that is the most robust yet granular export out of the [!DNL Braze] platform. 
 
@@ -38,7 +38,7 @@ If you already have a [!DNL Braze] connection, you may skip the remainder of thi
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *Marketing Automation* category, select **[!UICONTROL Braze]**, and then select **[!UICONTROL Add data]**.
+Under the *Marketing Automation* category, select **[!UICONTROL Braze Currents]**, and then select **[!UICONTROL Add data]**.
 
 ![The sources catalog on the Experience Platform UI with the Braze Currents source selected.](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -61,16 +61,16 @@ Then, configure mapping for your data using the mapping interface.
 
 ### Gather required credentials
 
-Once your connection is created, you must collect the following credential values, which you will then provide in the Braze Dashboard to send data to [!DNL Platform]. For more information, read the [!DNL Braze] [guide on navigating to Currents](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Once your connection is created, you must collect the following credential values, which you will then provide in the Braze Dashboard to send data to Experience Platform. For more information, read the [!DNL Braze] [guide on navigating to Currents](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | Field | Description |
-| ---------- | ----------- |
-| `Client ID` | The client ID associated with your [!DNL Platform] source. |
-| `Client Secret` | The client secret associated with your [!DNL Platform] source. |
-| `Tenant ID` | The tenant ID associated with your [!DNL Platform] source. |
-| `Sandbox Name` | The sandbox associated with your [!DNL Platform] source. |
-| `Dataflow ID` | The dataflow ID associated with your [!DNL Platform] source. |
-| `Streaming Endpoint` | The streaming endpoint associated with your [!DNL Platform] source. Note that Braze will automatically convert this to the batch streaming endpoint. |
+| --- | --- |
+| Client ID | The client ID associated with your Experience Platform source. |
+| Client Secret | The client secret associated with your Experience Platform source. |
+| Tenant ID | The tenant ID associated with your Experience Platform source. |
+| Sandbox Name | The sandbox associated with your Experience Platform source. |
+| Dataflow ID | The dataflow ID associated with your Experience Platform source. |
+| Streaming Endpoint | The streaming endpoint associated with your Experience Platform source. **Note**: [!DNL Braze] automatically converts this to the batch streaming endpoint. |
 
 ### Configure [!DNL Braze Currents] to stream data to your data source
 

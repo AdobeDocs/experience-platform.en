@@ -5,6 +5,7 @@ breadcrumb-title: Tags
 user-guide-description: Learn to deploy and manage analytics, marketing, and advertising tags to power customer experiences.
 feature: Tags
 solution: Data Collection
+role: Developer
 ---
 
 # Tags {#tags}
@@ -47,6 +48,7 @@ solution: Data Collection
   * [Deploy JavaScript tags to manage customer consent](./ui/client-side/consent.md)
   * [Content Security Policy (CSP) support](./ui/client-side/content-security-policy.md)
   * [Subresource Integrity (SRI) support](./ui/client-side/sri.md)
+  * [Transport Layer Security](./ui/client-side/transport-layer-security.md)
 * Event forwarding {#event-forwarding}
   * [Overview](./ui/event-forwarding/overview.md)
   * [Getting started](./ui/event-forwarding/getting-started.md)

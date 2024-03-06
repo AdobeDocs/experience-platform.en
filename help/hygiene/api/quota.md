@@ -1,6 +1,7 @@
 ---
 title: Quota API Endpoint
 description: The /quota endpoint in the Data Hygiene API allows you to monitor your Advanced data lifecycle management usage against your organization's monthly quota limits for each job type.
+role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
 ---
 # Quota endpoint

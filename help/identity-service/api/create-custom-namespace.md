@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;namespace;Namespace;namespaces
 solution: Experience Platform
 title: Create a Custom Namespace in the Identity Service API
 description: Using the Identity Namespace API, you can create a custom identity namespace that will be available only to your organization.
+role: Developer
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
 ---
 # Create a custom namespace in the Identity Service API

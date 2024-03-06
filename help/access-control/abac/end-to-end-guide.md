@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;
 title: Attribute-Based Access Control End-to-End Guide
 description: This document provides an end-to-end guide on attribute-based access control in Adobe Experience Platform
+role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 ---
 # Attribute-based access control end-to-end guide
