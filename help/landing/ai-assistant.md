@@ -49,6 +49,18 @@ There are two classes of questions to consider before querying Assistant:
 
 >[!ENDSHADEBOX]
 
+## Objectives that you can accomplish with Assistant
+
+You can use Assistant for objectives such as:
+
+| Objective | Description |
+| --- | --- |
+| Learning Experience Platform and Real-Time CDP concepts | You can ask Assistant conceptual questions so that you can onboard yourself onto Experience Platform and Real-Time CDP. You can also use Assistant to learn about objects and behaviors that you are unfamiliar with. |
+| Ensuring data cleanliness in your sandboxes | You can use Assistant to identify any duplicate or unused objects so that you can efficiently the data cleanliness of your sandbox.|
+| Orchestrating value analysis | You can use Assistant to identify your most used objects and assess any performance indicators or find the most valuable data. |
+| Understanding impact analysis | You can use Assistant to identify objects that have been used in certain workflows so that you can assess the impact of any changes. |
+| Monitoring your data | You can use Assistant to monitor any dataflow, ingestion, or evaluation jobs so that you can view any discrepancies or report on progress. |
+
 ## Access Assistant in the Experience Platform UI
 
 To launch Assistant, select the **[!UICONTROL Assistant icon]** from the top header of the Experience Platform UI.
