@@ -65,6 +65,17 @@ Refer to the [Signing in to [!DNL Oracle Eloqua]](https://docs.oracle.com/en/clo
 |---|---|---|
 | `EloquaId` | Unique identifier of the contact.| Yes |
 
+## Supported audiences {#supported-audiences}
+
+This section describes which type of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
@@ -227,6 +238,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
+|March 2024|Functionality update|You can now activate external audiences originating from custom uploads to this destination. See the [supported audiences](#supported-audiences) section for more details.|
 |April 2023|Documentation update| <ul><li>We updated the [use-cases](#use-cases) section with a clearer example of when customers would benefit from using this destination.</li> <li>We updated the [mapping](#mapping-considerations-example) section with clear examples of both mandatory and optional mappings.</li> <li>We updated the [Connect to the destination](#connect) section with an example on how to construct the concatenated value for the **[!UICONTROL Username]** field using the [!DNL Oracle Eloqua] Company Name and the [!DNL Oracle Eloqua] Username. (PLATIR-28343)</li><li>We updated the [Gather [!DNL Oracle Eloqua] credentials](#gather-credentials) and the [Fill in destination details](#destination-details) sections with guidance on [!DNL Oracle Eloqua] **[!UICONTROL Pod]** selection. The *"Pod"* value is used by the destination to construct the base URL for the API calls. The [[!DNL Oracle Eloqua] prerequisites](#prerequisites-destination) section was also updated with guidance on assigning *"Advanced Users - Marketing permissions"* as a required *"Security Groups"* for your [!DNL Oracle Eloqua] instance.</li></ul> |
 |March 2023|Initial release|Initial destination release and documentation publish.|
 
