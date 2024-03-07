@@ -123,6 +123,18 @@ If your [!DNL Salesforce] account administrator has enforced IP restrictions, yo
 |---|---|---|
 | `SalesforceId` | The [!DNL Salesforce CRM] identifier for the contact or lead identities that you export or update through your segment.|Mandatory|
 
+## Supported audiences {#supported-audiences}
+
+This section describes which type of audiences you can export to this destination.
+
+This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
@@ -201,7 +213,11 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce CRM] destination 
 1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** and select an identity or choose **[!UICONTROL Select custom attributes]** category and select an attribute or define one using the **[!UICONTROL Attribute name]** field as needed. Refer to the [[!DNL Salesforce CRM] documentation](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5) for guidance on supported attributes.
     * Repeat these steps to add the following mappings between your XDM profile schema and [!DNL (API) Salesforce CRM]:
 
-    **Working with Contacts**
+    >[!BEGINTABS]
+
+    Based on the identity you selected when [activating segments](#activate) choose from the below:
+
+    >[!TAB Contacts]
 
     * If you are working with *Contacts* within your segment, refer to the Object Reference in Salesforce for [Contact](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) to define mappings for the fields to be updated.
     * You can identify mandatory fields by searching for the word *Required*, which is mentioned in field descriptions in the link above.
@@ -216,7 +232,7 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce CRM] destination 
     * An example using these mappings is shown below:
     ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
-    **Working with Leads**
+    >[!TAB Leads]
 
     * If you are working with *Leads* within your segment, refer to the Object Reference in Salesforce for [Lead](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) to define mappings for the fields to be updated.
     * You can identify mandatory fields by searching for the word *Required*, which is mentioned in field descriptions in the link above.
@@ -229,7 +245,9 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce CRM] destination 
         |`xdm: personalEmail.address`|`Attribute: Email`| The lead's email address. |
 
     * An example using these mappings is shown below:
-    ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/salesforce/mappings-leads.png)    
+    ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/salesforce/mappings-leads.png)
+
+    >[!ENDTABS]
 
 When you have finished providing the mappings for your destination connection, select **[!UICONTROL Next]**.
 
@@ -275,7 +293,11 @@ To validate that you have correctly set up the destination, follow the steps bel
 
 1. Finally, log in to the Salesforce website and validate if the profiles from the audience have been added or updated.
 
-    **Working with Contacts**
+    >[!BEGINTABS]
+
+    Based on the identity you selected when [activating segments](#activate) choose from the below:
+
+    >[!TAB Contacts]
 
     * If you have selected *Contacts* within your Platform segment, navigate to the **[!DNL Apps]** > **[!DNL Contacts]** page.
     ![Salesforce CRM screenshot showing the Contacts page with the profiles from the segment.](../../assets/catalog/crm/salesforce/contacts.png)
@@ -283,13 +305,15 @@ To validate that you have correctly set up the destination, follow the steps bel
     * Select a *Contact* and check if the fields are updated. You can see that each audience status in [!DNL Salesforce CRM] was updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-segment-export-example).
     ![Salesforce CRM screenshot showing the Contact Details page with updated audience statuses.](../../assets/catalog/crm/salesforce/contact-info.png)
 
-    **Working with Leads**
+    >[!TAB Leads]
 
     * If you have selected *Leads* within your Platform segment, then navigate to the **[!DNL Apps]** > **[!DNL Leads]** page.
     ![Salesforce CRM screenshot showing the Leads page with the profiles from the segment.](../../assets/catalog/crm/salesforce/leads.png)
 
     * Select a *Lead* and check if the fields are updated. You can see that each audience status in [!DNL Salesforce CRM] was updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-segment-export-example).
     ![Salesforce CRM screenshot showing the Lead Details page with updated audience statuses.](../../assets/catalog/crm/salesforce/lead-info.png)
+
+    >[!ENDTABS]
 
 ## Data usage and governance {#data-usage-governance}
 
@@ -315,3 +339,18 @@ Additional useful information from the [Salesforce developer portal](https://dev
 * [Custom Recommendation Audiences](https://developer.salesforce.com/docs/atlas.en-us.236.0.chatterapi.meta/chatterapi/connect_resources_recommendation_audiences_list.htm)
 * [Using Composite Resources](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/using_composite_resources.htm?q=composite)
 * This destination leverages the [Upsert Multiple Records](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_composite_sobjects_collections_update.htm) API instead of the [Upsert Single Record](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_composite_upsert_example.htm?q=contacts) API call.
+
+### Changelog
+
+This section captures the functionality and significant documentation updates made to this destination connector.
+
++++ View changelog
+
+|Release month|Update type|Description|
+|---|---|---|
+|March 2024|Functionality update|You can now activate external audiences originating from custom uploads to this destination. See the [supported audiences](#supported-audiences) section for more details.|
+|Feb 2023|Documentation update|
+<ul><li>We updated the [Create custom field within [!DNL Salesforce]](#prerequisites-custom-field) section to elaborate on the purpose and mapping of the custom fields from [!DNL Salesforce] to this destinations Mapping ID field. </li> <li>We have also documented the custom field length and count limits.</li> <li>We also updated the [Gather [!DNL Salesforce CRM] credentials](#gather-credentials) section to update guidance on creating the concatenated string for the password field.</li></ul>|
+|Sep 2022|Initial release|Initial destination release and documentation publish. |
+
+{style="table-layout:auto"}
