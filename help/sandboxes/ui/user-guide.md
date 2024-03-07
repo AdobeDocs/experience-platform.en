@@ -43,7 +43,7 @@ Once a sandbox is selected, the screen refreshes and updates to the sandbox you 
 
 >[!NOTE]
 >
->When a new sandbox is created, you must first add that new sandbox to your product profile in [Adobe Admin Console](https://adminconsole.adobe.com/) before you can start using the new sandbox. See the documentation on [managing permissions for a product profile](../../access-control/ui/permissions.md) for information on how to provision a sandbox to a product profile.
+>The creation of a new sandbox requires you to add it to a role in [[!UICONTROL Permissions]](../../access-control/abac/ui/permissions.md) before you can begin using it. To learn how to provision a sandbox for a role, refer to the [managing sandboxes for a role](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) documentation.
 
 Use the following video for a quick overview on how to use Sandboxes in Experience Platform.
 
