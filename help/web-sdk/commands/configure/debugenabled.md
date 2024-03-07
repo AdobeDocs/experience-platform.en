@@ -1,6 +1,7 @@
 ---
 title: debugEnabled
 description: Use code to enable debugging capabilities in the Web SDK.
+exl-id: 89392d16-9a0d-427b-86b6-70005f63f440
 ---
 # `debugEnabled`
 

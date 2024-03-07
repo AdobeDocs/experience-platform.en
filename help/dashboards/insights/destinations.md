@@ -1,6 +1,7 @@
 ---
 title: Destinations Insights
 description: Discover the SQL that powers your destinations insights and use these queries to generate custom insights to further explore the activation of data from Adobe Experience Platform.
+exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
 ---
 # Destinations insights
 

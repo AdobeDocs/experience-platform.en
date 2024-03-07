@@ -1,6 +1,7 @@
 ---
 title: Configure the Adobe Experience Platform Web SDK
 description: Use the configure command to set required settings when using the Web SDK.
+exl-id: 05ba98ae-c004-4b7b-b55b-38290ca62cfa
 ---
 # Configure the Adobe Experience Platform Web SDK
 

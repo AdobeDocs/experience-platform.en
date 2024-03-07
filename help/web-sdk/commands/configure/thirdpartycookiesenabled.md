@@ -1,6 +1,7 @@
 ---
 title: thirdPartyCookiesEnabled
 description: Allow the use of third-party cookies to identify visitors.
+exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
 ---
 # `thirdPartyCookiesEnabled`
 
