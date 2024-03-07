@@ -62,19 +62,16 @@ If you do not have a private app, follow the documentation to [Create a private 
 
 |Target Identity|Example|Description|Considerations|
 |---|---|---|---|
-| `email` | `test@test.com` | Email address of the contact.| Mandatory |
+| `email` | `test@test.com` | The email address of the contact.| Mandatory |
 
 ## Supported audiences {#supported-audiences}
 
-This section describes all the audiences that you can export to this destination.
+This section describes which type of audiences you can export to this destination.
 
-This destination supports the activation of all audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).
-
-This destination also supports the activation of the audiences described in the table below.
-
-| Audience type | Description | 
----------|----------|
-| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -131,13 +128,13 @@ When you are finished providing details for your destination connection, select 
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
-### Map attributes and identities {#map}
+### Mapping considerations and example {#mapping-considerations-example}
 
 To correctly send your audience data from Adobe Experience Platform to the [!DNL HubSpot] destination, you must go through the field mapping step. Mapping consists of creating a link between your Experience Data Model (XDM) schema fields in your Platform account and their corresponding equivalents from the target destination.
 
 To correctly map your XDM fields to the [!DNL HubSpot] destination fields, follow the steps below:
 
-#### Mapping the `Email` identity
+#### Mapping the `Email` identity {#map-identity}
 
 The `Email` identity is a mandatory mapping for this destination. Follow the steps below to map it:
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
@@ -149,12 +146,12 @@ The `Email` identity is a mandatory mapping for this destination. Follow the ste
 
 | Source Field | Target Field | Mandatory |
 | --- | --- | --- |
-| `IdentityMap: Email` | `Identity: email` | Yes |
+| `IdentityMap: Email` | `Identity: Email` | Yes |
 
 An example with the identity mapping is shown below:
 ![Platform UI screenshot example with email identity mapping.](../../assets/catalog/crm/hubspot/mapping-identities.png)
 
-#### Mapping **optional** attributes
+#### Mapping **optional** attributes {#map-attributes}
 
 To add any other attributes you want to update between your XDM profile schema and your [!DNL HubSpot] account repeat the steps below:
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
@@ -207,6 +204,8 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
+|November 2023|Functionality update|<ul><li>You can now activate external audiences originating from custom uploads to this destination. See the [supported audiences](#supported-audiences) section for more details.</li><li>The audience names are now automatically converted into lowercase. Additionally, spaces and special characters are now automatically sanitized to ensure compliance with [!DNL HubSpot] field names. This solves the issue where executions could result in an error message `Property name must be lowercase, but given:....` with the associated error code `PROPERTY INVALID`. (PLATIR-33437)</li></ul>|
+|November 2023|Documentation update|Updated an incorrect mapping where an attribute was shown instead of the `Email` identity during the target identity mapping in the [mapping considerations and example](#mapping-considerations-example) section.|
 |September 2023| Initial release |Initial destination release and documentation publish. |
 
 {style="table-layout:auto"}
