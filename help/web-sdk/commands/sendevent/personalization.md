@@ -1,6 +1,7 @@
 ---
 title: personalization
 description: Render different content to different users, creating a personalized experience for them.
+exl-id: 4bd370c8-8d8d-469e-9666-b5b6d0e3a660
 ---
 # `personalization`
 

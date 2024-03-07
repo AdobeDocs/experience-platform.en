@@ -1,6 +1,7 @@
 ---
 title: context
 description: Automatically collect device, environment, or location data.
+exl-id: 911cabec-2afb-4216-b413-80533f826b0e
 ---
 # `context`
 

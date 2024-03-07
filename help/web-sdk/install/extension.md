@@ -1,8 +1,8 @@
 ---
 title: Install the Web SDK using the tag extension
 description: Reference the Web SDK library using Adobe Experience Cloud Data Collection.
+exl-id: ba8348c9-f642-4230-9f7f-4496d4154d83
 ---
-
 # Install the Web SDK using the tag extension
 
 Adobe offers a dedicated tag extension to implement and configure the Web SDK. This implementation method is the primary method recommended by Adobe to deploy and maintain data collection code.

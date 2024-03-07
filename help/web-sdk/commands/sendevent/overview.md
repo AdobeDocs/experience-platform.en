@@ -1,8 +1,8 @@
 ---
 title: sendEvent
 description: Send data to the Adobe Experience Platform Edge Network.
+exl-id: 83de368d-78d4-4e28-aadd-afaea1ca091d
 ---
-
 # `sendEvent`
 
 The `sendEvent` command is the primary way to send data to Adobe, to retrieve personalized content, identities, and audience destinations. Use the [`xdm`](xdm.md) object to send data that maps to your Adobe Experience Platform schema. Use the [`data`](data.md) object to send non-XDM data. You can use the datastream mapper to align data within this object to schema fields.

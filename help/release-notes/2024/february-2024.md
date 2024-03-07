@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes February 2024
 description: The February 2024 release notes for Adobe Experience Platform.
+exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
 ---
 # Adobe Experience Platform release notes 
 
