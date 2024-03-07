@@ -349,8 +349,7 @@ This section captures the functionality and significant documentation updates ma
 |Release month|Update type|Description|
 |---|---|---|
 |March 2024|Functionality update|You can now activate external audiences originating from custom uploads to this destination. See the [supported audiences](#supported-audiences) section for more details.|
-|Feb 2023|Documentation update|
-<ul><li>We updated the [Create custom field within [!DNL Salesforce]](#prerequisites-custom-field) section to elaborate on the purpose and mapping of the custom fields from [!DNL Salesforce] to this destinations Mapping ID field. </li> <li>We have also documented the custom field length and count limits.</li> <li>We also updated the [Gather [!DNL Salesforce CRM] credentials](#gather-credentials) section to update guidance on creating the concatenated string for the password field.</li></ul>|
+|Feb 2023|Documentation update|<ul><li>We updated the [Create custom field within [!DNL Salesforce]](#prerequisites-custom-field) section to elaborate on the purpose and mapping of the custom fields from [!DNL Salesforce] to this destinations Mapping ID field. </li> <li>We have also documented the custom field length and count limits.</li> <li>We also updated the [Gather [!DNL Salesforce CRM] credentials](#gather-credentials) section to update guidance on creating the concatenated string for the password field.</li></ul>|
 |Sep 2022|Initial release|Initial destination release and documentation publish. |
 
 {style="table-layout:auto"}
