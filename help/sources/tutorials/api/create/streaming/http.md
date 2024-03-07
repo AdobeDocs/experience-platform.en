@@ -450,9 +450,6 @@ A successful response returns details of the newly created mapping including its
 }
 ```
 
-| Property | Description |
-| --- | --- |
-
 ## Create a dataflow
 
 With your source and target connections created, you can now create a dataflow. The dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request to the `/flows` endpoint. 
@@ -573,7 +570,7 @@ POST /collection/{INLET_URL}
 | Parameter | Description |
 | --------- | ----------- |
 | `{INLET_URL}` | Your streaming endpoint URL. You can retrieve this URL by making a GET request to the `/connections` endpoint while providing your base connection ID. |
-| `{FLOW_ID}` | The ID of your HTTP API streaming dataflow. |
+| `{FLOW_ID}` | The ID of your HTTP API streaming dataflow. This ID is required for both XDM and raw data. |
 
 **Request**
 
@@ -583,7 +580,8 @@ POST /collection/{INLET_URL}
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
-  -H 'Content-Type: application/json' \
+  -H 'Content-Type: application/json' 
+  -H ''
   -d '{
         "header": {
           "schemaRef": {
@@ -622,8 +620,9 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
 >[!TAB Raw data]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
-  -H 'Content-Type: application/json' \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec? \
+  -H 'Content-Type: application/json' 
+  -H 'x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db' \
   -d '{
       "name": "Johnson Smith",
       "location": {
