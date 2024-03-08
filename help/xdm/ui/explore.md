@@ -50,11 +50,11 @@ All object-type fields containing sub-properties are collapsed by default when t
 
 ### Standard class and field group indicator {#standard-class-and-field-group-indicator}
 
-Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](../images/ui/explore/padlock-icon.png). The padlock is displayed in the left rail next to the class or field group name, and next to any field in the schema diagram that belongs to a system-generated resource.
+Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](../images/ui/explore/padlock-icon.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
 
 ![The Schema Editor with the padlock icon highlighted](../images/ui/explore/schema-editor-padlock-icon.png)
 
-See the documentation for guidance on how to [add custom fields to standard field groups](./resources/schemas.md). You cannot edit a standard class.
+See the [Add custom fields to standard field groups](./resources/schemas.md) documentation for guidance. You cannot edit a standard class.
 
 ### System-generated fields {#system-fields}
 
