@@ -76,4 +76,5 @@ For more information on role and privilege management, refer to the [[!DNL Snowf
 
 The following tutorial provides steps on how to connect your [!DNL Snowflake] streaming source to Experience Platform using the API:
 
+* [Stream data from a [!DNL Snowflake] database to Experience Platform using the sources workspace in the Experience Platform user interface](../../tutorials/ui/create/databases/snowflake-streaming.md)
 * [Stream data from a [!DNL Snowflake] database to Experience Platform using the Flow Service API](../../tutorials/api/create/databases/snowflake-streaming.md)
