@@ -1,6 +1,7 @@
 ---
 title: Cart Data Type
 description: Learn about the Cart Experience Data Model (XDM) data type.
+exl-id: 24ae3882-60f3-4962-b0b5-7dba48170da8
 ---
 # [!UICONTROL Cart] data type
 

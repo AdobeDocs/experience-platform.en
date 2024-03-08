@@ -96,7 +96,7 @@ https://experienceleague.adobe.com/docs/experience-platform/query/sample-queries
 https://experienceleague.adobe.com/docs/experience-platform/catalog/data-protection.html,https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/encryption.html
 https://experienceleague.adobe.com/docs/experience-platform/privacy/data-hygiene-api.html,https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/query/get-started/use-case.html,https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/abandoned-cart.html
-https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html,https://experienceleague.adobe.com/docs/experience-platform/web-sdk/datastreams/overview.html
+https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html,https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/query/audit-log-guide.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-governance/audit-log-guide.html
 https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/abandoned-cart.html,https://experienceleague.adobe.com/docs/experience-platform/query/use-cases/abandoned-browse.html
 https://experienceleague.adobe.com/docs/experience-platform/query/quickstart.html,https://experienceleague.adobe.com/docs/experience-platform/query/get-started/prerequisites.html
@@ -520,3 +520,8 @@ https://experienceleague.adobe.com/docs/experience-platform/edge/resources.html,
 https://experienceleague.adobe.com/docs/experience-platform/edge/install/extension.html,https://experienceleague.adobe.com/docs/experience-platform/web-sdk/install/extension.html
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html,https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp/b2b-overview.html,https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdpb2b-intro/b2b-overview.html?lang=en
+https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/ajo/web-in-app-messaging.html,https://experienceleague.adobe.com/docs/experience-platform/web-sdk/personalization/ajo/web-in-app-messaging.html
+https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/overview.html,https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started/
+https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/getting-started.html, https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started
+https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/troubleshooting.html, https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/troubleshooting
+https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/swagger.html, https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/swagger

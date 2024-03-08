@@ -1,6 +1,7 @@
 ---
 title: Category Data Data Type
 description: Learn about the Category data Experience Data Model (XDM) data type.
+exl-id: f8d52f2d-5fb0-4999-8b31-ddc14225b0ab
 ---
 # [!UICONTROL Category data] data type
 

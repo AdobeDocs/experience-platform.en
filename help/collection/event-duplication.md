@@ -1,8 +1,8 @@
 ---
 title: Event duplication handling in Experience Platform
 description: Learn how Adobe Experience Platform handles event duplication
+exl-id: ac8c3ee8-52cf-459c-b283-16ed32d2976d
 ---
-
 # Event duplication handling in Adobe Experience Platform
 
 Adobe Experience Platform is a highly distributed system designed to maximize reliability while scaling to ever-increasing volumes of data.
