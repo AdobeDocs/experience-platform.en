@@ -21,4 +21,123 @@ This tutorial requires a working understanding of the following components of Ex
 
 Read the guide on [prerequisite setup for [!DNL Snowflake] streaming data](../../../../connectors/databases/snowflake-streaming.md) for information on the steps that you need to complete before you can ingest streaming data from [!DNL Snowflake] to Experience Platform.
 
-## 
+## Use the [!DNL Snowflake Streaming] source to stream [!DNL Snowflake] data to Experience Platform
+
+
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+
+Under the *Databases* category, select **[!DNL Snowflake Streaming]**, and then select **[!UICONTROL Add data]**.
+
+>[!TIP]
+>
+>Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
+
+![The sources catalog in the Experience Platform UI, with the Snowflake Streaming source card selected.]
+
+The **[!UICONTROL Connect Snowflake Streaming account]** page appears. On this page, you can either use new credentials or existing credentials.
+
+>[!BEGINTABS]
+
+>[!TAB Create a new account]
+
+To create a new account, select **[!UICONTROL New account]** and provide a name, an optional description, and your credentials. 
+
+When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
+
+![The new account creation interface of the sources workflow.]
+
+| Credential | Description |
+| --- | --- |
+| Account |  |
+| Warehouse | |
+| Database | |
+| Schema | |
+| Username | |
+| Password | |
+| Role | |
+
+
+>[!TAB Use an existing account]
+
+To use an existing account, select **[!UICONTROL Existing account]** and then select the account that you want to use from the existing account catalog.
+
+Select **[!UICONTROL Next]** to proceed.
+
+![The existing account selection page of the sources catalog.]
+
+>[!ENDTABS]
+
+## Select data {#select-data}
+
+The [!UICONTROL Select data] step appears. In this step, you must:
+
+* Select the database table that you will use
+* Select the timestamp column
+* Enable backfill
+* Upload sample source data
+
+## Provide dataset and dataflow details {#provide-dataset-and-dataflow-details}
+
+Next, you must provide information on your dataset and your dataflow. 
+
+### Dataset details {#dataset-details}
+
+A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Data that is successfully ingested into Experience Platform is persisted within the data lake as datasets. During this step, you can create a new dataset or use an existing dataset.
+
+>[!BEGINTABS]
+
+>[!TAB Use a new dataset]
+
+To use a new dataset, select **[!UICONTROL New dataset]** and then provide a name, and an optional description for your dataset. You must also select an Experience Data Model (XDM) schema that your dataset adheres to.
+
+![The new dataset selection interface.]
+
+| New dataset details | Description |
+| --- | --- |
+| Output dataset name | The name of your new dataset. |
+| Description | (Optional) A brief explanation of the new dataset. |
+| Schema | A dropdown list of schemas that exist in your organization. You can also create your own schema prior to the source configuration process. For more information, read the guide on [creating an XDM schema in the UI](../../../../../xdm/tutorials/create-schema-ui.md). |
+
+>[!TAB Use an existing dataset]
+
+If you already have an existing dataset, select **[!UICONTROL Existing dataset]** and then usee the **[!UICONTROL Advanced search]** option to view a window of all datasets in your organization, including their respective details such as whether are enabled for ingestion to Real-Time Customer Profile or not.
+
+![The existing dataset selection interface.]
+
+>[!ENDTABS]
+
+If your dataset is enabled for Real-Time Customer Profile, then during this step, you can toggle **[!UICONTROL Profile dataset]** to enable your data for Profile-ingestion. You can also use this step to enable **[!UICONTROL Error diagnostics]** and **[!UICONTROL Partial ingestion]**.
+
+* **[!UICONTROL Error diagnostics]**: Select **[!UICONTROL Error diagnostics]** to instruct the source to produce error diagnostics that you can later reference when monitoring your dataset activity and dataflow status.
+* **[!UICONTROL Partial ingestion]**: Partial batch ingestion is the ability to ingest data containing errors, up to a certain configurable threshold. This feature allows you to successfully ingest all of your accurate data into Experience Platform, while all of your incorrect data is batched separately with information on why it is invalid.
+
+### Dataflow details {#dataflow-details}
+
+Once your dataset is configured, you must then provide details on your dataflow, including a name, an optional description, and alert configurations.
+
+![The dataflow details configuration step.]
+
+| Dataflow configurations | Description |
+| --- | --- |
+| Dataflow name | The name of the dataflow.  By default, this will use the name of the file that is being imported. |
+| Description | (Optional) A brief description of your dataflow. |
+| Alerts | Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  For more information, read the [alerts overview](../../alerts.md) <ul><li>**Sources Dataflow Run Start**: Select this alert to receive a notification when your dataflow run begins.</li><li>**Sources Dataflow Run Success**: Select this alert to receive a notification if your dataflow ends without any errors.</li><li>**Sources Dataflow Run Failure**: Select this alert to receive a notification if your dataflow run ends with any errors.</li></ul> |
+
+When finished, select **[!UICONTROL Next]** to proceed.
+
+## Map fields to an XDM schema {#mapping}
+
+The **[!UICONTROL Mapping]** step appears. Use the mapping interface to map your source data too the appropriate schema fields before ingesting that data to Experience Platform. For an extensive guide on how to use the mapping interface, read the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md) for more information.
+
+![The mapping interface of the sources workflow.]
+
+## Review your dataflow {#review}
+
+The final step in the dataflow creation process is to review your dataflow before executing it. Use the **[!UICONTROL Review]** step to review the details of your new dataflow before it runs. Details are grouped in the following categories:
+
+* **Connection**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+* **Assign dataset & map fields**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
+
+Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
+
+![The Review step of the sources workflow.]
