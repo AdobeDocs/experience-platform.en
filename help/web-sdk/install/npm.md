@@ -1,8 +1,8 @@
 ---
 title: Install the Web SDK using the NPM package
 description: Use an NPM package to install and reference the Web SDK library.
+exl-id: 4c70ec5d-33fd-4ef7-ba9e-5b92ff6c3e86
 ---
-
 # Install the Web SDK using the NPM package
 
 Adobe Experience Platform Web SDK is available as an [NPM package](https://www.npmjs.com). Installing the NPM package allows you to have control of the build process for the Adobe Experience Platform Web SDK JavaScript library. The NPM package exposes EcmaScript version 5 modules or EcmaScript version 2015 (ES6) modules meant to be run in the browser.

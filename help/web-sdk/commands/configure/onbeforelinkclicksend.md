@@ -1,6 +1,7 @@
 ---
 title: onBeforeLinkClickSend
 description: Callback that runs just before link tracking data is sent.
+exl-id: 8c73cb25-2648-4cf7-b160-3d06aecde9b4
 ---
 # `onBeforeLinkClickSend`
 

@@ -129,6 +129,10 @@ Depending on your organizational data and use cases, you may require custom name
 
 To create a custom namespace, select **[!UICONTROL Create identity namespace]**.
 
+>[!TIP]
+>
+>Integration identities are namespaces that are used to connect with other systems. They are not used in identity resolution nor are they used to stitch identities. Select **[!UICONTROL View integration identities]** to update the list and include integration identities. However, integration identities are hidden by default because they are view-only and you are not required to configure them.
+
 ![The create identity namespace button in the identities workspace.](../images/namespace/create-identity-namespace.png)
 
 The [!UICONTROL Create identity namespace] window appears. First, you must provide a display name and an identity symbol for the custom namespace that you want to create. You can also optionally provide a description to add more context on the custom namespace that you are creating.

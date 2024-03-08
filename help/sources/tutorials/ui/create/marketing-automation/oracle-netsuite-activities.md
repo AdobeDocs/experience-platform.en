@@ -4,6 +4,7 @@ description: Learn how to create a Oracle NetSuite Activities source connection 
 hide: true
 hidefromtoc: true
 badge: Beta
+exl-id: 99ef0b50-c8d6-48d6-895f-46b7ade47520
 ---
 # Create a [!DNL Oracle NetSuite Activities] source connection in the UI
 
