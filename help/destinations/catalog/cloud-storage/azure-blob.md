@@ -63,7 +63,7 @@ This destination supports dataset exports. For complete information on how to se
 * How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
 * How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
 
-## File format of the exported data {#exported-data}
+## File format of the exported data {#file-format}
 
 When exporting *audience data*, Platform creates a `.csv`, `parquet`, or `.json` file in the storage location that you provided. For more information about the files, see the [supported file formats for export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) section in the audience activation tutorial.
 
