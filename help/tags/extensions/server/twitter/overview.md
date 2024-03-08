@@ -91,7 +91,7 @@ After selection, additional controls appear to further configure the event. You 
 
 | Field name | Description | Example | Required | 
 | --- | --- | --- | --- |
-| [!UICONTROL Conversion Time] | Date-time as string in ISO 8601 or in yyyy-MM-dd'T'HH:mm:ss:SSSZ format. | 2022-02-18T01:14:00.603Z | Yes |
+| [!UICONTROL Conversion Time] | Date-time as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. | 2022-02-18T01:14:00.603Z | Yes |
 | [!UICONTROL Event Id] | The base-36 ID of a specific event. This Id should match a pre-configured event contained within your [!DNL Twitter] ad account. This is known as the ID for the corresponding event in Events Manager. | o87ne or tw-o8z6j-o87ne (tw-pixel_id-event-id) | Yes |
 | [!UICONTROL Number of Items] | The number of items being purchased in the event. This must be a positive number greater than 0. | 4 | No |
 | [!UICONTROL Currency] | The currency of the items being purchased in the event. This is expressed in ISO-4217 and if not provided, the default will be USD. | USD | No |
