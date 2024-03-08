@@ -60,14 +60,13 @@ curl -X POST \
       "name": "Stripe base connection",
       "description": "Authenticated base connection for Stripe",
       "connectionSpec": {
-          "id": "",
+          "id": "cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3",
           "version": "1.0"
       },
       "auth": {
-          "specName": "Basic Authentication",
+          "specName": "OAuth 2 Refresh Code",
           "params": {
-            "username": "{USERNAME}",
-            "password": "{PASSWORD}
+            "accessToken": "{ACCESS_TOKEN}",
           }
       }
   }'
@@ -77,11 +76,9 @@ curl -X POST \
 | --- | --- |
 | `name` | The name of your base connection. Ensure that the name of your base connection is descriptive as you can use this to look up information on your base connection. |
 | `description` | An optional value that you can include to provide more information on your base connection. |
-| `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
+| `connectionSpec.id` | The connection spec ID of your source. This ID is fixed. The connection spec ID for [!DNL Stripe] is: `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3`. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Experience Platform. |
-| `auth.params.username` | The username of your [!DNL Stripe] account. |
-| `auth.params.password` | The password of your [!DNL Stripe] account. |
-
+| `auth.params.accessToken` | The access token of your [!DNL Stripe] account. Read the [[!DNL Stripe] authentication guide](../../../../connectors/payments/stripe.md) for steps on how to retrieve your access token. |
 
 **Response**
 
@@ -89,8 +86,8 @@ A successful response returns the newly created base connection, including its u
 
 ```json
 {
-    "id": "60c81023-99b4-4aae-9c31-472397576dd2",
-    "etag": "\"fa003785-0000-0200-0000-6555c5310000\""
+  "id": "a9950001-a386-4642-a0cd-5eaac6db5556",
+  "etag": "\"dc01244d-0000-0200-0000-65ea4e500000\""
 }
 ```
 
@@ -115,10 +112,11 @@ When performing GET requests to explore your source's file structure and content
 | `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. For this source the value would be `json`. |
 | `fileType=json` | The file type of the file you want to bring to Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
+| `{SOURCE_PARAMS}` |
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/f5421911-6f6c-41c7-aafa-5d9d2ce51535/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=e30%3D' \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/a9950001-a386-4642-a0cd-5eaac6db5556/explore?objectType=rest&object=json&fileType=json&preview=false&sourceParams=eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -132,6 +130,272 @@ A successful response returns a JSON structure like the following:
 +++Select to view the JSON payload
 
 ```json
+{
+  "format": "hierarchical",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object",
+        "properties": {
+          "balance_transaction": {},
+          "billing_details": {
+            "type": "object",
+            "properties": {
+              "address": {
+                "type": "object",
+                "properties": {
+                  "country": {},
+                  "city": {},
+                  "state": {},
+                  "postal_code": {},
+                  "line2": {},
+                  "line1": {}
+                }
+              },
+              "phone": {},
+              "name": {},
+              "email": {}
+            }
+          },
+          "metadata": {
+            "type": "object",
+            "properties": {}
+          },
+          "livemode": {
+            "type": "boolean"
+          },
+          "radar_options": {
+            "type": "object",
+            "properties": {}
+          },
+          "destination": {},
+          "description": {
+            "type": "string"
+          },
+          "failure_message": {},
+          "fraud_details": {
+            "type": "object",
+            "properties": {}
+          },
+          "source": {},
+          "amount_refunded": {
+            "type": "integer",
+            "minimum": -9007199254740992,
+            "maximum": 9007199254740991
+          },
+          "statement_descriptor": {
+            "type": "string"
+          },
+          "transfer_data": {},
+          "receipt_url": {
+            "type": "string"
+          },
+          "shipping": {},
+          "review": {},
+          "captured": {
+            "type": "boolean"
+          },
+          "calculated_statement_descriptor": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "refunded": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "string"
+          },
+          "outcome": {
+            "type": "object",
+            "properties": {
+              "reason": {},
+              "risk_level": {
+                "type": "string"
+              },
+              "risk_score": {
+                "type": "integer",
+                "minimum": -9007199254740992,
+                "maximum": 9007199254740991
+              },
+              "seller_message": {
+                "type": "string"
+              },
+              "network_status": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          },
+          "payment_method": {
+            "type": "string"
+          },
+          "order": {},
+          "dispute": {},
+          "amount": {
+            "type": "integer",
+            "minimum": -9007199254740992,
+            "maximum": 9007199254740991
+          },
+          "disputed": {
+            "type": "boolean"
+          },
+          "failure_code": {},
+          "transfer_group": {},
+          "on_behalf_of": {},
+          "created": {
+            "type": "integer",
+            "minimum": -9007199254740992,
+            "maximum": 9007199254740991
+          },
+          "payment_method_details": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "card": {
+                "type": "object",
+                "properties": {
+                  "country": {
+                    "type": "string"
+                  },
+                  "last4": {
+                    "type": "string"
+                  },
+                  "funding": {
+                    "type": "string"
+                  },
+                  "mandate": {},
+                  "wallet": {},
+                  "exp_month": {
+                    "type": "integer",
+                    "minimum": -9007199254740992,
+                    "maximum": 9007199254740991
+                  },
+                  "exp_year": {
+                    "type": "integer",
+                    "minimum": -9007199254740992,
+                    "maximum": 9007199254740991
+                  },
+                  "overcapture": {
+                    "type": "object",
+                    "properties": {
+                      "maximum_amount_capturable": {
+                        "type": "integer",
+                        "minimum": -9007199254740992,
+                        "maximum": 9007199254740991
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "amount_authorized": {
+                    "type": "integer",
+                    "minimum": -9007199254740992,
+                    "maximum": 9007199254740991
+                  },
+                  "network": {
+                    "type": "string"
+                  },
+                  "network_token": {
+                    "type": "object",
+                    "properties": {
+                      "used": {
+                        "type": "boolean"
+                      }
+                    }
+                  },
+                  "incremental_authorization": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "checks": {
+                    "type": "object",
+                    "properties": {
+                      "cvc_check": {
+                        "type": "string"
+                      },
+                      "address_line1_check": {},
+                      "address_postal_code_check": {}
+                    }
+                  },
+                  "extended_authorization": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "installments": {},
+                  "capture_before": {
+                    "type": "integer",
+                    "minimum": -9007199254740992,
+                    "maximum": 9007199254740991
+                  },
+                  "fingerprint": {
+                    "type": "string"
+                  },
+                  "three_d_secure": {},
+                  "brand": {
+                    "type": "string"
+                  },
+                  "multicapture": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "amount_captured": {
+            "type": "integer",
+            "minimum": -9007199254740992,
+            "maximum": 9007199254740991
+          },
+          "source_transfer": {},
+          "failure_balance_transaction": {},
+          "receipt_number": {},
+          "application": {},
+          "receipt_email": {},
+          "paid": {
+            "type": "boolean"
+          },
+          "application_fee": {},
+          "payment_intent": {
+            "type": "string"
+          },
+          "invoice": {},
+          "statement_descriptor_suffix": {},
+          "application_fee_amount": {},
+          "object": {
+            "type": "string"
+          },
+          "customer": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
 ```
 
 +++
@@ -159,19 +423,19 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Stripe Source Connection",
-      "description": "Stripe Source Connection",
-      "baseConnectionId": "",
+      "name": "Stripe Source Connection For Charges Data",
+      "description": "Stripe source connection for charges data",
+      "baseConnectionId": "a9950001-a386-4642-a0cd-5eaac6db5556",
       "connectionSpec": {
-          "id": "",
-          "version": "1.0"
+        "id": "cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3",
+        "version": "1.0"
       },
       "data": {
-          "format": "json"
+        "format": "json"
       },
       "params": {
-          "resourcePath": "{RESOURCE_PATH}"
-      }
+        "resourcePath": "charges"
+      },
   }'
 ```
 
@@ -187,8 +451,8 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ```json
 {
-    "id": "574c049f-29fc-411f-be0d-f80002025f51",
-    "etag": "\"0704acb3-0000-0200-0000-6555c5470000\""
+  "id": "abbfac4e-202c-4e04-902d-6f73e9041068",
+  "etag": "\"0a033818-0000-0200-0000-65ea5a770000\""
 }
 ```
 
@@ -231,8 +495,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Stripe Target Connection Generic Rest",
-      "description": "Stripe Target Connection Generic Rest",
+      "name": "Stripe Target Connection For Charges Data",
+      "description": "Stripe target connection for charges data",
       "connectionSpec": {
           "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
           "version": "1.0"
@@ -240,12 +504,12 @@ curl -X POST \
       "data": {
           "format": "parquet_xdm",
           "schema": {
-              "id": "",
-              "version": ""
+              "id": "https://ns.adobe.com/{ORG_ID}/schemas/5f76be8c4e4b847fdac13ca42aa6b596a89a5b91dea48b16",
+              "version": "application/vnd.adobe.xed-full+json;version=1.3"
           }
       },
       "params": {
-          "dataSetId": ""
+          "dataSetId": "65e622315f78042c9e8166e8"
       }
   }'
 ```
@@ -264,8 +528,8 @@ A successful response returns the new target connection's unique identifier (`id
 
 ```json
 {
-    "id": "382fc614-3c5b-46b9-a971-786fb0ae6c5d",
-    "etag": "\"e0016100-0000-0200-0000-655707a40000\""
+  "id": "69879751-ba43-48df-8cd0-39d2bb76a5b8",
+  "etag": "\"4b02ef5b-0000-0200-0000-65ea5f730000\""
 }
 ```
 
@@ -292,48 +556,239 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "outputSchema": {
-          "schemaRef": {
-              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b156e6f818f923e048199173c45e55e20fd2487f5eb03d22",
-              "contentType": "application/vnd.adobe.xed-full+json;version=1"
-          }
+      "version": 0,
+      "xdmSchema": "https://ns.adobe.com/exchangesandboxcharlie/schemas/5f76be8c4e4b847fdac13ca42aa6b596a89a5b91dea48b16",
+      "xdmVersion": "1.0",
       },
-      "mappings": [
+      "mappings":[
         {
-            "sourceType": "ATTRIBUTE",
-            "source": "items.id",
-            "destination": "_extconndev.NSA_ID"
+            "destinationXdmPath":"_{ORG_ID}.charges_data.id",
+            "sourceAttribute":"data.id",
+            "identity":false,
+            "version":0
         },
         {
-            "sourceType": "ATTRIBUTE",
-            "source": "items.title",
-            "destination": "_extconndev.NSA_title"
+            "destinationXdmPath":"_{ORG_ID}.charges_data.refunded",
+            "sourceAttribute":"data.refunded",
+            "identity":false,
+            "version":0
         },
         {
-            "sourceType": "ATTRIBUTE",
-            "source": "items.createddate",
-            "destination": "_extconndev.NSA_createddate"
+            "destinationXdmPath":"_{ORG_ID}.charges_data.disputed",
+            "sourceAttribute":"data.disputed",
+            "identity":false,
+            "version":0
         },
         {
-            "sourceType": "ATTRIBUTE",
-            "source": "items.location",
-            "destination": "_extconndev.NSA_location"
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method_details.card.last4",
+            "sourceAttribute":"data.payment_method_details.card.last4",
+            "identity":false,
+            "version":0
         },
         {
-            "sourceType": "ATTRIBUTE",
-            "source": "items.lastmodifieddate",
-            "destination": "_extconndev.NSA_lastmodifieddate"
+            "destinationXdmPath":"_{ORG_ID}.charges_data.livemode",
+            "sourceAttribute":"data.livemode",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.status",
+            "sourceAttribute":"data.status",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method_details.card.overcapture.maximum_amount_capturable",
+            "sourceAttribute":"data.payment_method_details.card.overcapture.maximum_amount_capturable",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.receipt_url",
+            "sourceAttribute":"data.receipt_url",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method_details.card.fingerprint",
+            "sourceAttribute":"data.payment_method_details.card.fingerprint",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_intent",
+            "sourceAttribute":"data.payment_intent",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method_details.card.overcapture.status",
+            "sourceAttribute":"data.payment_method_details.card.overcapture.status",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method_details.card.network_token.used",
+            "sourceAttribute":"data.payment_method_details.card.network_token.used",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method_details.card.funding",
+            "sourceAttribute":"data.payment_method_details.card.funding",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.amount",
+            "sourceAttribute":"data.amount",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.customer",
+            "sourceAttribute":"data.customer",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method_details.card.incremental_authorization.status",
+            "sourceAttribute":"data.payment_method_details.card.incremental_authorization.status",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method_details.card.multicapture.status",
+            "sourceAttribute":"data.payment_method_details.card.multicapture.status",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.amount_captured",
+            "sourceAttribute":"data.amount_captured",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method",
+            "sourceAttribute":"data.payment_method",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.object",
+            "sourceAttribute":"data.object",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.captured",
+            "sourceAttribute":"data.captured",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.created",
+            "sourceAttribute":"data.created",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.paid",
+            "sourceAttribute":"data.paid",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.amount_refunded",
+            "sourceAttribute":"data.amount_refunded",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.currency",
+            "sourceAttribute":"data.currency",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method_details.card.country",
+            "sourceAttribute":"data.payment_method_details.card.country",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method_details.card.exp_year",
+            "sourceAttribute":"data.payment_method_details.card.exp_year",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method_details.card.amount_authorized",
+            "sourceAttribute":"data.payment_method_details.card.amount_authorized",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method_details.card.network",
+            "sourceAttribute":"data.payment_method_details.card.network",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method_details",
+            "sourceAttribute":"data.payment_method_details",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method_details.card.exp_month",
+            "sourceAttribute":"data.payment_method_details.card.exp_month",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.calculated_statement_descriptor",
+            "sourceAttribute":"data.calculated_statement_descriptor",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method_details.card.brand",
+            "sourceAttribute":"data.payment_method_details.card.brand",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.balance_transaction",
+            "sourceAttribute":"data.balance_transaction",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.payment_method_details.card.extended_authorization.status",
+            "sourceAttribute":"data.payment_method_details.card.extended_authorization.status",
+            "identity":false,
+            "version":0
+        },
+        {
+            "destinationXdmPath":"_{ORG_ID}.charges_data.outcome",
+            "sourceAttribute":"data.outcome",
+            "identity":false,
+            "version":0
         }
-      ],
-  }'
+      ]
+}
 ```
+
 
 | Property | Description |
 | --- | --- |
-| `outputSchema.schemaRef.id` | The ID of the [target XDM schema](#target-schema) generated in an earlier step. |
-| `mappings.sourceType` | The source attribute type that is being mapped. |
-| `mappings.source` | The source attribute that needs to be mapped to a destination XDM path. |
-| `mappings.destination` | The destination XDM path where the source attribute is being mapped to. |
+| `xdmSchema` | |
+| `destinationXdmPath` | The ID of the [target XDM schema](#target-schema) generated in an earlier step. |
+| `sourceAttribute` | The source attribute type that is being mapped. |
+| `identity` | The source attribute that needs to be mapped to a destination XDM path. |
+| `version` | The destination XDM path where the source attribute is being mapped to. |
 
 **Response**
 
@@ -341,12 +796,12 @@ A successful response returns details of the newly created mapping including its
 
 ```json
 {
-    "id": "ddf0592bcc9d4ac391803f15f2429f87",
-    "version": 0,
-    "createdDate": 1597784069368,
-    "modifiedDate": 1597784069368,
-    "createdBy": "{CREATED_BY}",
-    "modifiedBy": "{MODIFIED_BY}"
+  "id": "f4aad280fdec4770b7e33066945919d8",
+  "version": 0,
+  "createdDate": 1709860257007,
+  "modifiedDate": 1709860257007,
+  "createdBy": "{CREATED_BY}",
+  "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
@@ -376,32 +831,33 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-    "name": "Stripe connector Flow Generic Rest",
-    "description": "Stripe connector Description Flow Generic Rest",
+    "name": "Stripe Connector Flow Generic Rest",
+    "description": "Stripe Connector Description Flow Generic Rest",
     "flowSpec": {
         "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
         "version": "1.0"
     },
     "sourceConnectionIds": [
-        ""
+        "abbfac4e-202c-4e04-902d-6f73e9041068"
     ],
     "targetConnectionIds": [
-        "e"
+        "69879751-ba43-48df-8cd0-39d2bb76a5b8"
     ],
     "transformations": [
         {
             "name": "Mapping",
             "params": {
-                "mappingId": "10787532e0994eb686e76bdab69a9e88",
+                "mappingId": "f4aad280fdec4770b7e33066945919d8",
                 "mappingVersion": 0
             }
         }
     ],
-      "scheduleParams": {
-          "startTime": 1700202649,
-          "frequency": "once"
-      }
-  }'
+    "scheduleParams": {
+        "startTime": "{{startTime}}",
+        "frequency": "minute",
+        "interval": {{interval}}
+    }
+}'
 ```
 
 | Property | Description |
