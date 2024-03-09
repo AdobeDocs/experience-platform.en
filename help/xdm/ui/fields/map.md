@@ -12,13 +12,13 @@ When defining a new field in the Platform user interface (UI), use the **[!UICON
 
 ![The Schemas Editor with the Type dropdown and Map value highlighted.](../../images/ui/fields/special/map.png)
 
-A [!UICONTROL Map value type] property appears. This value is required for [!UICONTROL Map] data types. Available values for the map are [!UICONTROL String] and [!UICONTROL Integer]. Select a value from the drop down list of available options.
+A [!UICONTROL Map value type] property appears. This value is required for [!UICONTROL Map] data types. Available values for the map are [!UICONTROL String] and [!UICONTROL Integer]. Select a value from the drop-down list of available options.
 
-![The Schemas Editor with the [!UICONTROL Map value type] dropdown highlighted.](.png)
+![The Schemas Editor with the [!UICONTROL Map value type] dropdown highlighted.](../../images/ui/fields/special/map-value-type.png)
 
-Once you have configured the sub-field you must assign it to a field group. Use the **[!UICONTROL Field Group]** drop down menu, or search field, and select **[!UICONTROL Apply]**. You can continue to add fields to the object using the same process.
+Once you have configured the subfield, you must assign it to a field group. Use the **[!UICONTROL Field Group]** drop down menu, or search field, and select **[!UICONTROL Apply]**. You can continue to add fields to the object using the same process, or select **[!UICONTROL Save]** to confirm your settings. 
 
-![A recording of the field group selection and settings being applied.](.gif)
+![A recording of the field group selection and settings being applied.](../../images/ui/fields/special/assign-to-field-group.gif)
 
 >[!NOTE]
 >
@@ -26,6 +26,6 @@ Once you have configured the sub-field you must assign it to a field group. Use 
 
 ## Next steps
 
-After reading this document, you are now able to define map fields in the Platform UI. Remember that fields can only be added to schemas through the use of classes and field groups. To learn more about how to manage these resources in the UI, see the guides on creating and editing [classes](../resources/classes.md) and [field groups](../resources/field-groups.md).
+After reading this document, you are now able to define map fields in the Platform UI. Remember that you can only use classes and field groups to add fields to schemas. To learn more about how to manage these resources in the UI, see the guides on creating and editing [classes](../resources/classes.md) and [field groups](../resources/field-groups.md).
 
 For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
