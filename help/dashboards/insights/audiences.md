@@ -1,6 +1,7 @@
 ---
 title: Audiences Insights
 description: Discover the SQL that powers your audience insights and use these queries to generate custom insights to further explore audience data from Adobe Experience Platform.
+exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
 ---
 # Audiences insights
 

@@ -3,6 +3,7 @@ title: Real-Time CDP product documentation
 description: Learn how to use Adobe Real-Time CDP.
 solution: Real-Time Customer Data Platform
 product: Real-Time Customer Data Platform
+exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
 ---
 # Adobe [!DNL Real-Time CDP] Documentation {#rtcdp-documentation}
 

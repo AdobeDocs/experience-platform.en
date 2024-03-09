@@ -1,6 +1,7 @@
 ---
 title: Return Data Type
 description: Learn about the Return Experience Data Model (XDM) data type.
+exl-id: 1fd99a25-547f-49e7-8980-dda7db2ebb8a
 ---
 # [!UICONTROL Return] data type
 
@@ -20,4 +21,3 @@ For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/return.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/return.schema.json)
-

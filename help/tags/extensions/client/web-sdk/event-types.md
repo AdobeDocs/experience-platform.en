@@ -6,7 +6,7 @@ exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
 ---
 # Event types
 
-This page describes the Adobe Experience Platform event types provided by the Adobe Experience Platform Web SDK tag extension. These are used to [build rules](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) and should not be confused with the [`eventType` field in XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html).
+This page describes the Adobe Experience Platform event types provided by the Adobe Experience Platform Web SDK tag extension. These are used to [build rules](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) and should not be confused with the `eventType` field in the [`xdm` object](/help/web-sdk/commands/sendevent/xdm.md).
 
 ## [!UICONTROL Send event complete]
 
