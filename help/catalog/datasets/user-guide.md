@@ -235,6 +235,8 @@ Alternatively, select **[!UICONTROL Delete dataset]** from the **[!UICONTROL Dat
 >
 >Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Offer Decisioning]) cannot be deleted.
 
+<!-- 182866 Below workflow has changed.  -->
+
 ![The Delete dataset button is highlighted within the dataset details page.](../images/datasets/user-guide/delete-dataset.png)
 
 A confirmation box appears. Select **[!UICONTROL Delete]** to confirm the deletion of the dataset.
