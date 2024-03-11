@@ -32,7 +32,7 @@ Under the *Databases* category, select **[!DNL Snowflake Streaming]**, and then 
 >
 >Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
 
-![The sources catalog in the Experience Platform UI, with the Snowflake Streaming source card selected.]
+![The sources catalog in the Experience Platform UI, with the Snowflake Streaming source card selected.](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
 
 The **[!UICONTROL Connect Snowflake Streaming account]** page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -44,17 +44,17 @@ To create a new account, select **[!UICONTROL New account]** and provide a name,
 
 When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![The new account creation interface of the sources workflow.]
+![The new account creation interface of the sources workflow.](../../../../images/tutorials/create/snowflake-streaming/new.png)
 
 | Credential | Description |
 | --- | --- |
-| Account |  |
-| Warehouse | |
-| Database | |
-| Schema | |
-| Username | |
-| Password | |
-| Role | |
+| Account | The name of your [!DNL Snowflake] account. |
+| Warehouse | The name of your [!DNL Snowflake] warehouse. In [!DNL Snowflake], warehouses manage query execution processes. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually to bring data to Experience Platform. |
+| Database | The name of your [!DNL Snowflake] database. The database contains the data that you want to bring to Experience Platform. |
+| Schema | (Optional) The database schema associated with your [!DNL Snowflake] account. |
+| Username | The username of your [!DNL Snowflake] account. |
+| Password | The password to your [!DNL Snowflake] account. |
+| Role | (Optional) A custom-defined role that can be provided to a user, for a given connection. If unprovided, this value defaults to `public`. |
 
 
 >[!TAB Use an existing account]
@@ -63,18 +63,35 @@ To use an existing account, select **[!UICONTROL Existing account]** and then se
 
 Select **[!UICONTROL Next]** to proceed.
 
-![The existing account selection page of the sources catalog.]
+![The existing account selection page of the sources catalog.](../../../../images/tutorials/create/snowflake-streaming/existing.png)
 
 >[!ENDTABS]
 
 ## Select data {#select-data}
 
-The [!UICONTROL Select data] step appears. In this step, you must:
+>[!IMPORTANT]
+>
+>A timestamp column must exist in your source table in order for a streaming dataflow to be created. The timestamp is required for Experience Platform to know from when data will be ingested and when incremental data will be streamed. You can retroactively add a timestamp column for an existing connection and create a new dataflow.
 
-* Select the database table that you will use
-* Select the timestamp column
-* Enable backfill
-* Upload sample source data
+The [!UICONTROL Select data] step appears. In this step, you must select the data that you want to bring to Experience Platform, configure timestamp and timezones, as well as provide a sample source data file for raw data ingestion.
+
+Use the database directory on the left of your screen and select the table that you want to bring to Experience Platform.
+
+![The select data interface with a database table selected.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
+
+Next, select the timestamp column that you want to use. You can select between `TS_NTZ` and `TS_LTZ`. If you set your timestamp colum to `TS_NTZ`, then you must also provide a timezone. 
+
+You can also configure backfill settings during this step. Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If not, then only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested. 
+
+Select the **[!UICONTROL Backfill]** toggle to enable backfill.
+
+![The timestamp, timezone, and backfill configuration steps.](../../../../images/tutorials/create/snowflake-streaming/timezone.png)
+
+Finally, select **[!UICONTROL Choose file]** to upload a sample source data to help create the mapping set that will be used in a later step to map your original data to Experience Data Model (XDM). 
+
+When finished, select **[!UICONTROL Next]** to proceed.
+
+![The preview of the source sample data.](../../../../images/tutorials/create/snowflake-streaming/preview.png)
 
 ## Provide dataset and dataflow details {#provide-dataset-and-dataflow-details}
 
@@ -90,7 +107,7 @@ A dataset is a storage and management construct for a collection of data, typica
 
 To use a new dataset, select **[!UICONTROL New dataset]** and then provide a name, and an optional description for your dataset. You must also select an Experience Data Model (XDM) schema that your dataset adheres to.
 
-![The new dataset selection interface.]
+![The new dataset selection interface.](../../../../images/tutorials/create/snowflake-streaming/new-dataset.png)
 
 | New dataset details | Description |
 | --- | --- |
@@ -102,20 +119,24 @@ To use a new dataset, select **[!UICONTROL New dataset]** and then provide a nam
 
 If you already have an existing dataset, select **[!UICONTROL Existing dataset]** and then usee the **[!UICONTROL Advanced search]** option to view a window of all datasets in your organization, including their respective details such as whether are enabled for ingestion to Real-Time Customer Profile or not.
 
-![The existing dataset selection interface.]
+![The existing dataset selection interface.](../../../../images/tutorials/create/snowflake-streaming/existing-dataset.png)
 
 >[!ENDTABS]
+
++++Select for steps to enable Profile ingestion, error diagnostics, and partial ingestion.
 
 If your dataset is enabled for Real-Time Customer Profile, then during this step, you can toggle **[!UICONTROL Profile dataset]** to enable your data for Profile-ingestion. You can also use this step to enable **[!UICONTROL Error diagnostics]** and **[!UICONTROL Partial ingestion]**.
 
 * **[!UICONTROL Error diagnostics]**: Select **[!UICONTROL Error diagnostics]** to instruct the source to produce error diagnostics that you can later reference when monitoring your dataset activity and dataflow status.
 * **[!UICONTROL Partial ingestion]**: Partial batch ingestion is the ability to ingest data containing errors, up to a certain configurable threshold. This feature allows you to successfully ingest all of your accurate data into Experience Platform, while all of your incorrect data is batched separately with information on why it is invalid.
 
++++
+
 ### Dataflow details {#dataflow-details}
 
 Once your dataset is configured, you must then provide details on your dataflow, including a name, an optional description, and alert configurations.
 
-![The dataflow details configuration step.]
+![The dataflow details configuration step.](../../../../images/tutorials/create/snowflake-streaming/dataflow-details.png)
 
 | Dataflow configurations | Description |
 | --- | --- |
@@ -129,7 +150,7 @@ When finished, select **[!UICONTROL Next]** to proceed.
 
 The **[!UICONTROL Mapping]** step appears. Use the mapping interface to map your source data too the appropriate schema fields before ingesting that data to Experience Platform. For an extensive guide on how to use the mapping interface, read the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md) for more information.
 
-![The mapping interface of the sources workflow.]
+![The mapping interface of the sources workflow.](../../../../images/tutorials/create/snowflake-streaming/mapping.png)
 
 ## Review your dataflow {#review}
 
@@ -140,4 +161,20 @@ The final step in the dataflow creation process is to review your dataflow befor
 
 Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
-![The Review step of the sources workflow.]
+![The Review step of the sources workflow.](../../../../images/tutorials/create/snowflake-streaming/review.png)
+
+## Next steps
+
+By following this tutorial, you have successfully created a streaming dataflow for [!DNL Snowflake] data. For additional resources, read the documentation below.
+
+### Monitor your dataflow
+
+Once your dataflow has been created, you can monitor the data that is being ingested through it to view information on ingestion rates, success, and errors. For more information on how to monitor streaming dataflows, visit the tutorial on [monitoring streaming dataflows in the UI](../../monitor-streaming.md).
+
+### Update your dataflow
+
+To update configurations for your dataflows scheduling, mapping, and general information, visit the tutorial on [updating sources dataflows in the UI](../../update-dataflows.md)
+
+### Delete your dataflow
+
+You can delete dataflows that are no longer necessary or were incorrectly created using the **[!UICONTROL Delete]** function available in the **[!UICONTROL Dataflows]** workspace. For more information on how to delete dataflows, visit the tutorial on [deleting dataflows in the UI](../../delete.md).
