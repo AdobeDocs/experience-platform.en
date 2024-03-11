@@ -13,6 +13,7 @@ role: Admin
 * Attribute-based access control {#abac}
   * [Overview](abac/overview.md)
   * [End-to-end guide](abac/end-to-end-guide.md)
+  * [Use access labels to manage user access to destination dataflows](/help/access-control/abac/apply-access-labels-destinations.md)
   * Permissions {#permissions-ui}
     * [Browse](abac/ui/browse.md)
     * [Labels](abac/ui/labels.md)
