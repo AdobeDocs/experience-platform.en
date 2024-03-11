@@ -1,6 +1,7 @@
 ---
 title: eventType
 description: Set the type of event for a sendEvent call.
+exl-id: 9d0fae3b-827a-4084-b460-b755e478e06a
 ---
 # `eventType`
 

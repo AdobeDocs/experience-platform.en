@@ -1,6 +1,7 @@
 ---
 title: Chapter Details Information Data Type
 description: Learn about the Chapter Details Information Experience Data Model (XDM) data type.
+exl-id: bff5d073-95e0-4380-a91d-d05979bc71d4
 ---
 # [!UICONTROL Chapter Details Information] data type
 

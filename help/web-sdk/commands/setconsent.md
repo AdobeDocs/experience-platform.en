@@ -1,6 +1,7 @@
 ---
 title: setConsent
 description: Used on each page to track the user's consent.
+exl-id: d01a6ef1-4fa7-4a60-a3a1-19568b4e0d23
 ---
 # setConsent
 

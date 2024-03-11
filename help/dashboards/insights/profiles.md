@@ -1,6 +1,7 @@
 ---
 title: Profile Insights
 description: Discover the SQL that powers your profile insights and use these queries to generate custom insights that further explore your customers and their consumer experiences.
+exl-id: f3792076-3e01-4e26-8788-32927202a2e5
 ---
 # Profile insights
 

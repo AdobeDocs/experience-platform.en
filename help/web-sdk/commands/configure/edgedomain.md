@@ -1,6 +1,7 @@
 ---
 title: edgeDomain
 description: Determine the root domain that you want to send data to.
+exl-id: 6beb5116-cd23-42fd-934c-5cf84d1d7153
 ---
 # `edgeDomain`
 

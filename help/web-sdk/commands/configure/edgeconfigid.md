@@ -1,6 +1,7 @@
 ---
 title: edgeConfigId
 description: Determine the datastream ID that you want to send data to.
+exl-id: 2d709f70-c014-4868-b2f5-17e8b88343d1
 ---
 # `edgeConfigId`
 

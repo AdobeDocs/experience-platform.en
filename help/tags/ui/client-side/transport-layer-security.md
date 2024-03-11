@@ -1,6 +1,7 @@
 ---
 title: Transport Layer Security (TLS) Information
 description: Information regarding what TLS versions and ciphers are used
+exl-id: 04948cd8-6cf0-4159-a9d3-3130b97af106
 ---
 # Transport Layer Security (TLS) Information
 

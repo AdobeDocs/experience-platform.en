@@ -15,7 +15,7 @@ This guide provides an overview of how to create, edit, and manage Experience Da
 >
 >For a full tour of the schema creation process, follow along with the [schema creation tutorial](../../tutorials/create-schema-ui.md) to create a complete example schema and familiarize yourself with the many capabilities of the [!DNL Schema Editor].
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for an overview of how schemas are constructed.
 
@@ -344,7 +344,7 @@ A new dialog opens, asking you to confirm that you wish to assign a new class. S
 
 After confirming the class change, the canvas will be reset and all composition progress will be lost.
 
-## Next steps
+## Next steps {#next-steps}
 
 This document covered the basics of creating and editing schemas in the Platform UI. It is strongly recommended that you review the [schema creation tutorial](../../tutorials/create-schema-ui.md) for a comprehensive workflow for building a complete schema in the UI, including creating custom field groups and data types for unique use cases.
 
