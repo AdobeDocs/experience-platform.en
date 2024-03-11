@@ -21,7 +21,7 @@ To define new XDM fields in the UI, you must first open a schema within the [!DN
 
 Once you have the [!DNL Schema Editor] open, controls to add fields appear in the canvas. These controls appear next to the name of the schema, as well as any object-type fields that have been defined under the selected class or field group.
 
-![](../../images/ui/fields/overview/select-resource.png)
+![The Schema Editor with the add icons highlighted.](../../images/ui/fields/overview/select-resource.png)
 
 >[!WARNING]
 >
@@ -29,7 +29,7 @@ Once you have the [!DNL Schema Editor] open, controls to add fields appear in th
 
 To add a new field to the resource, select the **plus (+)** icon next to the schema's name in the canvas, or next to the object-type field that you want to define the field under.
 
-![](../../images/ui/fields/overview/plus-icon.png)
+![The Schema Editor with an add icon highlighted.](../../images/ui/fields/overview/plus-icon.png)
 
 Depending on whether you are adding a field directly to a schema or its constituent class and field groups, the required steps to add the field will vary. The remainder of this document focuses on how to configure a field's properties regardless of where that field appears in the schema. For more information on the different ways that fields can be added to a schema, refer to the following sections in the schemas UI guide:
 
@@ -40,7 +40,7 @@ Depending on whether you are adding a field directly to a schema or its constitu
 
 After selecting the **plus (+)** icon, an **[!UICONTROL Untitled field]** placeholder appears in in the canvas.
 
-![](../../images/ui/fields/overview/new-field.png)
+![The Schema Editor with a new untitled field highlighted.](../../images/ui/fields/overview/new-field.png)
 
 In the right rail under **[!UICONTROL Field properties]**, you can configure the details of the new field. The following information is required for each field:
 
@@ -53,7 +53,7 @@ In the right rail under **[!UICONTROL Field properties]**, you can configure the
 
 {style="table-layout:auto"}
 
-You can also chose to provide a description and notes for each field. Use the **[!UICONTROL Description]**  field to add context and describe the functionality of the map data type. This contributes to the maintainability and readability of the implementation. You can also add notes to complement the initial description. This should offer more granular and specific information to help developers in understanding, maintaining, and utilizing the map effectively within the context of the codebase. |
+You can also choose to provide a description and notes for each field. Use the **[!UICONTROL Description]** field to add context and describe the functionality of the map data type. This contributes to the maintainability and readability of the implementation. You can also add notes to complement the initial description. This should offer more granular and specific information to help developers in understanding, maintaining, and utilizing the map effectively within the context of the codebase. |
 
 
 >[!NOTE]
@@ -64,11 +64,11 @@ You can also chose to provide a description and notes for each field. Use the **
 
 Once you have finished configuring the field, select **[!UICONTROL Apply]**.
 
-![](../../images/ui/fields/overview/field-details.png)
+![The [!UICONTROL Field properties] section of the Schema Editor is highlighted.](../../images/ui/fields/overview/field-details.png)
 
 The canvas updates to show the newly added field, located within an object that is namespaced to your unique tenant ID (shown as `_tenantId` in the example below). All custom fields that are added to a schema  are automatically placed within this namespace to prevent conflicts with other fields from Adobe-provided classes and field groups. The right rail now lists the field's path in addition to its other properties.
 
-![](../../images/ui/fields/overview/field-added.png)
+![A new field in the schema diagram and its corresponding path in the [!UICONTROL Field properties] section is highlighted.](../../images/ui/fields/overview/field-added.png)
 
 You can continue to follow the steps above to add more fields to the schema. Once the schema is saved, its base class and field groups are also saved if any changes have been made to them.
 
