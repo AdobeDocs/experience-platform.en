@@ -1,6 +1,7 @@
 ---
 title: prehidingStyle
 description: Create a CSS definition that allows personalized content to load without flickering.
+exl-id: 3693542a-69d3-4ad8-bea4-4cabf7d80563
 ---
 # `prehidingStyle`
 

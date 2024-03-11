@@ -2,8 +2,8 @@
 title: PubMatic Connect
 description: PubMatic maximizes customer value by delivering the programmatic digital marketing supply chain of the future. PubMatic Connect combines platform technology and dedicated service to enhance how inventory and data are packaged and transacted.
 last-substantial-update: 2023-12-14
+exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
 ---
-
 # PubMatic Connect destination {#pubmatic-connect}
 
 ## Overview {#overview}
