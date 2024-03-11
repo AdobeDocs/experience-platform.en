@@ -10,20 +10,26 @@ exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
 >
 >At the end of April 2024, the Adobe Experience Platform Web SDK will be removing support for all versions of Internet Explorer.
 
-The Adobe Experience Platform Web Software Development Kit (SDK) is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with its services through the Adobe Experience Platform Edge Network. Adobe offers two methods to implement the Web SDK:
+The Adobe Experience Platform Web Software Development Kit (SDK) is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with its services through the Adobe Experience Platform Edge Network.
 
-* Manual implementation using the `alloy.js` JavaScript library. This user guide provides documentation for this implementation method.
-* The [Web SDK tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). See [Implement Adobe Experience Cloud with Web SDK tutorial](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) for more information.
+Adobe offers two methods to implement the Web SDK:
+
+* The [Web SDK tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). See the tutorial on how to [implement Adobe Experience Cloud with Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) for more information.
+* Manual implementation using the Web SDK JavaScript library.
+
+This user guide includes instructions on interacting with the Experience Cloud solutions through both the Web SDK JavaScript library and the tag extension, where applicable.
 
 ## Experience Platform Edge Network {#edge-network}
 
-The Experience Platform Web SDK is part of a collection of tools which make up the Adobe Experience Platform Edge Network. The Edge Network consists of the following components:
+The Experience Platform Web SDK is part of a collection of tools which make up the Adobe Experience Platform Edge Network.
 
-* **[Experience Platform Web SDK](#overview):** A JavaScript SDK and tag extension to dramatically simplify deploying Adobe technologies.
-* **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/):** An extension to the v5 mobile SDK to allow customers to use the new deployment methodology
-* **[Experience Platform Edge Network Server API](../server-api/overview.md):** An API which can be used for various data collection, personalization, advertising and marketing use cases. The Server API can be used on servers, IoT devices, set-top boxes, and various other devices.
+The Edge Network consists of the following components:
 
-The Edge Network is a framework for low-latency data collection, pluggable computing, and rapid data activation across all addressable channels. It provides a single consolidated SDK for every channel (JavaScript, Mobile, Server-side), which sends data to a common Adobe domain (`adobedc.net`) and receives a single payload back for data and experience delivery.
+* **[Experience Platform Web SDK](#overview):** A JavaScript library and a tag extension which help you simplify the deployment of Adobe technologies.
+* **[Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/):** An extension to the v5 mobile SDK which allows you to use the new deployment methodology.
+* **[Edge Network Server API](../server-api/overview.md):** A server-side API which you can use for various data collection, personalization, advertising and marketing use cases. The Server API can be used on servers, IoT devices, set-top boxes, and various other devices.
+
+The Edge Network is a framework for low-latency data collection, pluggable computing, and rapid data activation across all addressable channels. It provides a single consolidated SDK for every channel (web, mobile, server-side), which sends data to a common Adobe domain (`adobedc.net`) and receives a single payload back for data and experience delivery.
 
 On the server-side, a unified edge gateway and a common platform service framework help make it easy to deploy new capabilities into this real-time computing environment. This architecture:
 
@@ -34,11 +40,11 @@ On the server-side, a unified edge gateway and a common platform service framewo
 * Increases the speed of innovation
 * Creates sustained competitive advantages for Adobe customers
 
-A single consolidated edge system allows customers to manage their advertising, marketing, or personalization campaigns across all channels as an integrated experience. It also allows Adobe to deliver services with lower total cost of ownership for customers. The edge system is designed to accommodate most types of data, allowing you to map your own data model to be ingested by multiple Experience Cloud products.
+A single consolidated edge system allows you to manage your advertising, marketing, or personalization campaigns across all channels as an integrated experience. It also allows Adobe to deliver services with lower total cost of ownership for customers. The edge system is designed to accommodate most types of data, allowing you to map your own data model to be ingested by multiple Experience Cloud products.
 
 ## Video overview {#video}
 
-The following video gives an overview of the Adobe Experience Platform [!DNL Web SDK] and Adobe Experience Platform [!DNL Edge Network].
+Watch the video below for an overview of the Adobe Experience Platform [!DNL Web SDK] and the [!DNL Edge Network].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
