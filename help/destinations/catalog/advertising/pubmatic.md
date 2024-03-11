@@ -2,8 +2,8 @@
 title: PubMatic Connect
 description: PubMatic maximizes customer value by delivering the programmatic digital marketing supply chain of the future. PubMatic Connect combines platform technology and dedicated service to enhance how inventory and data are packaged and transacted.
 last-substantial-update: 2023-12-14
+exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
 ---
-
 # PubMatic Connect destination {#pubmatic-connect}
 
 ## Overview {#overview}
@@ -30,7 +30,7 @@ Talk to your [!DNL PubMatic] Account Manager to make sure your account is config
 
 ## Supported identities {#supported-identities}
 
-[!DNL PubMatic Connect] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL PubMatic Connect] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 | Target Identity | Description | Considerations |
 | --------------- | ------ | --- |
@@ -104,7 +104,7 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 >
-> - To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+> - To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >
 > - To export _identities_, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](../../assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 

@@ -131,10 +131,11 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE Batch]{type=Informative}
 
-### Data partner {#data-partner}
+### Data & Identity Partners {#data-partner}
 
 Experience Platform provides support for ingesting data from a third-party database. See the following related documents for more information on specific source connectors:
 
+- [[!DNL Acxiom Prospecting Data Import]](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE Batch]{type=Informative}
 
 ### eCommerce {#ecommerce}
@@ -155,11 +156,13 @@ Experience Platform provides support for ingesting data from your local system. 
 
 Experience Platform provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
 
+- [[!DNL Braze]](tutorials/ui/create/marketing-automation/braze.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE Batch]{type=Informative}
 <!-- 
 - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)

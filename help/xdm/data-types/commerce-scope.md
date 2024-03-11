@@ -1,6 +1,7 @@
 ---
 title: Commerce Scope Data Type
 description: Learn about the Commerce Scope Experience Data Model (XDM) data type.
+exl-id: c2888c3a-a49c-43c4-8d36-0a485cb76a58
 ---
 # [!UICONTROL Commerce Scope] data type
 

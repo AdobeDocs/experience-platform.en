@@ -17,7 +17,7 @@ Each destination in the [catalog](/help/destinations/catalog/overview.md) is sli
 
 For [file-based destinations](/help/destinations/destination-types.md#file-based) (for example [!DNL Amazon S3], SFTP, most email marketing destinations such as [!DNL Adobe Campaign], [!DNL Oracle Eloqua], [!DNL Salesforce Marketing Cloud]), the identity setup in most of these destinations is open, meaning that you are not required to select any identity in the [Select attributes](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) step of the batch activation workflow.
 
-If you choose to add identities to your file exports, note that only a single identity from the [identity namespace](/help/identity-service/ui/identity-graph-viewer.md#access-identity-graph-viewer) can be selected in an export. When you select an identity for export, it is automatically selected as a [mandatory attribute](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) and [deduplication key](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
+If you choose to add identities to your file exports, note that only a single identity from the [identity namespace](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer) can be selected in an export. When you select an identity for export, it is automatically selected as a [mandatory attribute](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) and [deduplication key](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
 
 ![An identity selected as mandatory attribute and deduplication key.](/help/destinations/assets/how-destinations-work/selected-identity.png)
 

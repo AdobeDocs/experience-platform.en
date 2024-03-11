@@ -29,7 +29,7 @@ Set up this destination to allow external personalization platforms, content man
 
 ## Prerequisites {#prerequisites}
 
-This integration is powered by the [Adobe Experience Platform Web SDK](../../../edge/home.md) or the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). You must be using one of these SDKs to use this destination.
+This integration is powered by the [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) or the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). You must be using one of these SDKs to use this destination.
 
 >[!IMPORTANT]
 >
@@ -63,7 +63,7 @@ This section describes which types of audiences you can export to this destinati
 
 >[!IMPORTANT]
 > 
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
@@ -86,7 +86,7 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 Read [Activate profiles and audiences edge personalization destinations](../../ui/activate-edge-personalization-destinations.md) for instructions on activating audiences to this destination.
 
@@ -114,7 +114,7 @@ Here is a sample value for the `event.destinations` variable:
 ]
 ```
 
-If you are not using [Tags](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [handling responses from events](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionality to see the exported data.
+If you are not using [Tags](/help/tags/home.md) to deploy the Experience Platform Web SDK, use [command responses](/help/web-sdk/commands/command-responses.md) to see the exported data.
 
 The JSON response from Adobe Experience Platform can be parsed to find the corresponding integration alias of the application you are integrating with Adobe Experience Platform. The audience IDs can be passed into the application's code as targeting parameters. Below is a sample of what this would look like specific to the destination response.
 

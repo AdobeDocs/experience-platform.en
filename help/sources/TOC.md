@@ -4,6 +4,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Source Connectors Guide
 user-guide-description: Ingest data from a variety of sources. Learn how to structure, label, and enhance already ingested data.
 feature: Sources
+role: Developer
 ---
 
 # Sources {#sources}
@@ -85,7 +86,8 @@ feature: Sources
     - [Snowflake Streaming connector](connectors/databases/snowflake-streaming.md)
     - [Snowflake connector](connectors/databases/snowflake.md)
     - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
-  - Data partner {#data-partner}
+  - Data & identity partner {#data-partner}
+    - [Acxiom Prospecting Data Import](connectors/data-partners/acxiom-prospecting-data-import.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - eCommerce {#ecommerce}
     - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
@@ -94,11 +96,13 @@ feature: Sources
   - Local system {#local-system}
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Marketing automation {#marketing-automation}
+    - [Braze Currents](connectors/marketing-automation/braze.md)
     - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
     - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
     - [Mailchimp connector](connectors/marketing-automation/mailchimp.md)
     - [Oracle Eloqua connector](connectors/marketing-automation/oracle-eloqua.md)
+    - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
     - [Oracle Responsys connector](connectors/marketing-automation/oracle-responsys.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
   - Payments {#payments}
@@ -177,6 +181,8 @@ feature: Sources
       - [MailChimp Campaign](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
       - [MailChimp Members](tutorials/api/create/marketing-automation/mailchimp-members.md)
       - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
+      - [Oracle NetSuite Activities](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
+      - [Oracle NetSuite Entities](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
       - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
       - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
@@ -285,8 +291,9 @@ feature: Sources
       - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - [Snowflake](tutorials/ui/create/databases/snowflake.md)
       - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
-    - Data partner {#data-partner}
+    - Data & identity partner {#data-partner}
       - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+      - [Acxiom Prospecting Data Import](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
     - eCommerce {#ecommerce}
       - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -294,12 +301,15 @@ feature: Sources
     - Local system {#local-system}
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Marketing automation {#marketing-automation}
+      - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
       - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
       - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - [Mailchimp Campaigns](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
       - [Mailchimp Members](tutorials/ui/create/marketing-automation/mailchimp-members.md)
       - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
+      - [Oracle NetSuite Activities](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
+      - [Oracle NetSuite Entities](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
       - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}

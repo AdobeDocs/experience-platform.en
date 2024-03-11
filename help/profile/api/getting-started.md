@@ -3,6 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Getting Started with the Real-Time Customer Profile API
 type: Documentation
 description: The Profile API getting started guide outlines the key concepts and basic functionality that you need to know in order to use Real-Time Customer Profile API endpoints to perform basic CRUD operations against Profile data.
+role: Developer
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
 ---
 # Getting started with the [!DNL Real-Time Customer Profile] API {#getting-started}

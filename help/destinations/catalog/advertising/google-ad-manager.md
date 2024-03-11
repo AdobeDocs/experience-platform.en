@@ -6,7 +6,16 @@ exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 ---
 # [!DNL Google Ad Manager] connection
 
-## Overview {#overview}
+>[!IMPORTANT]
+>
+> Google is releasing changes to the [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), and the [Display & Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) in order to support the compliance and consent-related requirements defined under the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in the European Union ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). Enforcement of these changes to consent requirements is expected to go into effect starting March 6, 2024.
+><br/>
+>To adhere to the EU user consent policy and continue creating audience lists for users in the European Economic Area (EEA), advertisers and partners must ensure they are passing end-user consent when uploading audience data. As a Google Partner, Adobe provides you with the necessary tools to comply with these consent requirements under the DMA in the European Union.
+><br/>
+>Customers who have purchased Adobe Privacy & Security Shield and have configured a [consent policy](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) to filter out non-consented profiles do not need to take any action.
+><br/>
+>Customers who have not purchased Adobe Privacy & Security Shield must use the [segment definition](../../../segmentation/home.md#segment-definitions) capabilities within [Segment Builder](../../../segmentation/ui/segment-builder.md) to filter out non-consented profiles, in order to continue using the existing Real-Time CDP Google Destinations without interruption.
+
 
 [!DNL Google Ad Manager], formerly known as [!DNL DoubleClick for Publishers] (DFP) or [!DNL DoubleClick AdX], is an ad serving platform from [!DNL Google] that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.
 
@@ -21,7 +30,7 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 
 ## Supported Identities {#supported-identities}
 
-[!DNL Google Ad Manager] supports the activation of audiences based on the identities shown in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Google Ad Manager] supports the activation of audiences based on the identities shown in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Identity|Description|Considerations|
 |---|---|---|
@@ -72,7 +81,7 @@ Allow-listing is mandatory before setting up your first [!DNL Google Ad Manager]
 
 >[!IMPORTANT]
 > 
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
@@ -107,7 +116,7 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 

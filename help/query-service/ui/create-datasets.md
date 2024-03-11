@@ -18,15 +18,15 @@ To create datasets from the Adobe Experience Platform user interface (UI), follo
 
 2. In the Platform UI, navigate to **[!UICONTROL Queries]** followed by the **[!UICONTROL Templates]** tab and select the query you have created. For more details on how to view queries that were created and saved for your organization within the Platform UI, read the [[!DNL Query Service] overview](./overview.md#browse).
 
-3. In the Query details panel, select **[!UICONTROL Output dataset]**.
+3. In the Query details panel, select **[!UICONTROL Run as CTAS]**.
 
-    ![The Queries workspace Templates tab with Select Output dataset highlighted.](../images/ui/create-datasets/output-dataset.png)
+    ![The Queries workspace [!UICONTROL Templates] tab with Select [!UICONTROL Run as CTAS] highlighted.](../images/ui/create-datasets/run-as-ctas.png)
 
 4. In the dialog that appears, enter a dataset name prepended with your LDAP ID. The dataset name does not have to be unique or SQL-safe. Note that the table name for your dataset will be generated based on the dataset name you create here.
 
-5. Next, enter a description for your dataset in the [!UICONTROL Description] field and select **[!UICONTROL Run query]**.
+5. Next, enter a description for your dataset in the [!UICONTROL Description] field and select **[!UICONTROL Run as CTAS]**.
 
-    ![The Output dataset dialog with the dataset details and run query highlighted](../images/ui/create-datasets/run-query.png)
+    ![The Output dataset dialog with the dataset details and [!UICONTROL Run as CTAS] highlighted](../images/ui/create-datasets/run-query.png)
 
 6. Once the query run is complete, navigate to **[!UICONTROL Datasets]** to view the dataset you have created. To learn more about how to perform common actions when working with datasets within the Platform UI, see the [Datasets UI guide](../../catalog/datasets/user-guide.md).
 

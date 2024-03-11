@@ -7,12 +7,17 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 
 ## Destination changelog {#changelog}
 
-With the July 2023 Experience Platform release, the [!DNL Amazon S3] destination provides new functionality, as listed below:
++++ View changelog
 
-* [Dataset export support](/help/destinations/ui/export-datasets.md).
-* Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
-* Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
-* [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+ 
+|Release month|Update type|Description|
+|---|---|---|
+|January 2024| Functionality and documentation update | The Amazon S3 destination connector now supports a new assumed role authentication type. Read more about it in the [authentication section](#assumed-role-authentication). |
+|July 2023|Functionality and documentation update| With the July 2023 Experience Platform release, the [!DNL Amazon S3] destination provides new functionality, as listed below: <br><ul><li>[Dataset export support](/help/destinations/ui/export-datasets.md)</li><li>Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
+
+{style="table-layout:auto"}
+
++++
 
 ## Connect to your [!DNL Amazon S3] storage through API or UI {#connect-api-or-ui}
 
@@ -43,11 +48,24 @@ Refer to the table below for information about the destination export type and f
 
 ![Amazon S3 profile-based export type highlighted in the UU.](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
+## Export datasets {#export-datasets}
+
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
+
+* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
+* How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
+
+## File format of the exported data {#file-format}
+
+When exporting *audience data*, Platform creates a `.csv`, `parquet`, or `.json` file in the storage location that you provided. For more information about the files, see the [supported file formats for export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) section in the audience activation tutorial.
+
+When exporting *datasets*, Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
+
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
 > 
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the destination configuration workflow, fill in the fields listed in the two sections below.
 
@@ -58,12 +76,37 @@ To connect to this destination, follow the steps described in the [destination c
 >title="RSA public key"
 >abstract="Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted key in the documentation link below."
 
-To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
+To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**. The Amazon S3 destination supports two authentication methods: 
+
+* Access key and secret key authentication
+* Assumed role authentication
+
+#### Access key and secret key authentication
+
+Use this authentication method when you want to input your Amazon S3 access key and secret key to allow Experience Platform to export data to your Amazon S3 properties.
+
+![Image of the required fields when selecting access key and secret key authentication.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
 * **[!DNL Amazon S3] access key** and **[!DNL Amazon S3] secret key**: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon S3] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
     ![Image showing an example of a correctly formatted PGP key in the UI.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+
+#### Assumed role {#assumed-role-authentication}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_assumed_role"
+>title="Assumed role authentication"
+>abstract="Use this authentication type if you prefer not to share account keys and secret keys with Adobe. Instead, Experience Platform connects to your Amazon S3 location using role-based access. Paste the ARN of the role that you created in AWS for the Adobe user. The pattern is similar to `arn:aws:iam::800873819705:role/destinations-role-customer` "
+
+![Image of the required fields when selecting assumed role authentication.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
+
+Use this authentication type if you prefer not to share account keys and secret keys with Adobe. Instead, Experience Platform connects to your Amazon S3 location using role-based access. 
+
+To do this, you need to create in the AWS console an assumed user for Adobe with the [right required permissions](#required-s3-permission) to write to your Amazon S3 buckets. Create a **[!UICONTROL Trusted entity]** in AWS with the Adobe account **[!UICONTROL 670664943635]**. For more information, refer to the [AWS documentation on creating roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html). 
+
+* **[!DNL Role]**: Paste the ARN of the role that you created in AWS for the Adobe user. The pattern is similar to `arn:aws:iam::800873819705:role/destinations-role-customer`.
+* **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
 ### Fill in destination details {#destination-details}
 
@@ -128,18 +171,15 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 >[!IMPORTANT]
 > 
->* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
-## Export datasets {#export-datasets}
+## Validate successful data export {#exported-data}
 
-This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
+To verify if data has been exported successfully, check your [!DNL Amazon S3] storage and make sure that the exported files contain the expected profile populations.
 
-* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
-* How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
+## IP address allowlist {#ip-address-allow-list}
 
-## Exported data {#exported-data}
-
-For [!DNL Amazon S3] destinations, [!DNL Platform] creates a data file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the audience activation tutorial.
+Refer to the [IP address allowlist](ip-address-allow-list.md) article if you need to add Adobe IPs to an allowlist.

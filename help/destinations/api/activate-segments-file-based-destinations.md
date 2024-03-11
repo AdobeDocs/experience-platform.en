@@ -51,7 +51,7 @@ The following sections provide additional information that you need to know in o
 
 ### Required permissions {#permissions}
 
-To export profiles, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL View Destinations]**, and **[!UICONTROL Activate Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+To export profiles, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
@@ -384,38 +384,58 @@ Note the highlighted line with inline comments in the [!DNL connection spec] exa
 {
     "items": [
         {
-            "id": "4fce964d-3f37-408f-9778-e597338a21ee",
-            "name": "Amazon S3",
-            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
-            "version": "1.0",
-            "authSpec": [ // describes the authentication parameters
-                {
-                    "name": "Access Key",
-                    "type": "KeyBased",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "description": "Defines auth params required for connecting to amazon-s3",
-                        "type": "object",
-                        "properties": {
-                            "s3AccessKey": {
-                                "description": "Access key id",
-                                "type": "string",
-                                "pattern": "^[A-Z2-7]{20}$"
-                            },
-                            "s3SecretKey": {
-                                "description": "Secret access key for the user account",
-                                "type": "string",
-                                "format": "password",
-                                "pattern": "^[A-Za-z0-9\/\\+]{40}$"
-                            }
-                        },
-                        "required": [
-                            "s3SecretKey",
-                            "s3AccessKey"
-                        ]
-                    }
+        "id": "4fce964d-3f37-408f-9778-e597338a21ee",
+        "name": "amazon-s3",
+        "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+        "version": "1.0",
+        "authSpec": [
+            {
+            "name": "Access Key",
+            "type": "KeyBased",
+            "spec": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "description": "Defines auth params required for connecting to amazon-s3",
+                "type": "object",
+                "properties": {
+                "s3AccessKey": {
+                    "description": "Access key id",
+                    "type": "string",
+                    "pattern": "^[A-Z2-7]{20}$"
+                },
+                "s3SecretKey": {
+                    "description": "Secret access key for the user account",
+                    "type": "string",
+                    "format": "password",
+                    "pattern": "^[A-Za-z0-9\\/\\+]{40}$"
                 }
-            ],
+                },
+                "required": [
+                "s3SecretKey",
+                "s3AccessKey"
+                ]
+            }
+            },
+            {
+            "name": "Assumed Role",
+            "type": "S3RoleBased",
+            "spec": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "description": "Defines role based auth params required for connecting to amazon-s3",
+                "type": "object",
+                "properties": {
+                "s3Role": {
+                    "title": "Role",
+                    "description": "S3 role",
+                    "type": "string",
+                    "format": "password"
+                }
+                },
+                "required": [
+                "s3Role"
+                ]
+            }
+            }
+        ],
 //...
 ```
 
@@ -685,7 +705,7 @@ Using the properties specified in the authentication spec (i.e. `authSpec` from 
 
 **Request** 
 
-+++[!DNL Amazon S3] - Base connection request
++++[!DNL Amazon S3] - Base connection request with access key and secret key authentication
 
 >[!TIP]
 >
@@ -708,6 +728,39 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "s3SecretKey": "<Add secret key>",
       "s3AccessKey": "<Add access key>"
+    }
+  },
+  "connectionSpec": {
+    "id": "4fce964d-3f37-408f-9778-e597338a21ee", // Amazon S3 connection spec
+    "version": "1.0"
+  }
+}'
+```
+
++++
+
+++[!DNL Amazon S3] - Base connection request with assumed role authentication
+
+>[!TIP]
+>
+>For information on how to obtain the required authentication credentials, refer to the [authenticate to destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) section of the Amazon S3 destination documentation page.
+
+Note the highlighted lines with inline comments in the request example, which provide additional information. Remove the inline comments in the request when copy-pasting the request into your terminal of choice. 
+
+```shell {line-numbers="true" start-line="1" highlight="17"}
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'accept: application/json' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "name": "Amazon S3 Base Connection",
+  "auth": {
+    "specName": "Assumed Role",
+    "params": {
+      "s3Role": "<Add s3 role>"
     }
   },
   "connectionSpec": {
@@ -3427,7 +3480,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ View available identities to use in the input schema
 
-The response returns the identities that you can use when creating the input schema. Note that this response returns both [standard](/help/identity-service/namespaces.md#standard) and [custom](/help/identity-service/namespaces.md#manage-namespaces) identity namespaces that you set up in Experience Platform. 
+The response returns the identities that you can use when creating the input schema. Note that this response returns both [standard](/help/identity-service/features/namespaces.md#standard) and [custom](/help/identity-service/features/namespaces.md#manage-namespaces) identity namespaces that you set up in Experience Platform. 
 
 ```json
 
