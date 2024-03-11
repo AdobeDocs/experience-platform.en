@@ -1,6 +1,7 @@
 ---
 title: Return Item Data Type
 description: Learn about the Return Item Experience Data Model (XDM) data type.
+exl-id: e703d65b-a133-484e-96d6-6b1f50fc1e48
 ---
 # [!UICONTROL Return Item] data type
 

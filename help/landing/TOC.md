@@ -41,6 +41,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+  * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
   * [Platform integrations with Experience Cloud (Video)](video/experience-cloud-integrations.md)
 * Governance, privacy, and security {#governance-privacy-security}
   * [Overview](./governance-privacy-security/overview.md)

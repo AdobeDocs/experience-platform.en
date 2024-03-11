@@ -9,7 +9,7 @@ With the [!DNL Server API], you can retrieve personalized content from Adobe per
 
 Additionally, the [!DNL Server API] powers same-page and next-page personalization capabilities through Adobe Experience Platform personalization destinations, such as [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) and the [custom personalization connection](../destinations/catalog/personalization/custom-personalization.md). To learn how to configure Experience Platform for same-page and next-page personalization, see the [dedicated guide](../destinations/ui/activate-edge-personalization-destinations.md).
 
-When using the Server API, you must integrate the response provided by the personalization engine with the logic used to render content on your site. Unlike the [Web SDK](../edge/home.md), the [!DNL Server API] does not have a mechanism to automatically apply content returned by [!DNL Adobe Target] and [!DNL Offer Decisioning].
+When using the Server API, you must integrate the response provided by the personalization engine with the logic used to render content on your site. Unlike the [Web SDK](../web-sdk/home.md), the [!DNL Server API] does not have a mechanism to automatically apply content returned by [!DNL Adobe Target] and [!DNL Offer Decisioning].
 
 ## Terminology {#terminology}
 
