@@ -34,7 +34,7 @@ Under the *Payments* category, select **[!DNL Stripe]**, and then select **[!UIC
 >
 >Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
 
-![The sources catalog in the Experience Platform UI, with the Stripe source card selected.]
+![The sources catalog in the Experience Platform UI, with the Stripe source card selected.](../../../../images/tutorials/create/stripe/catalog.png)
 
 The **[!UICONTROL Connect Oracle NetSuite Activities account]** page appears. On this page, you can either use new credentials or existing credentials.
 
