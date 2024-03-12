@@ -10,6 +10,12 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+>[!IMPORTANT]
+>
+>Google [has announced](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) plans to discontinue Chrome support for third-party cookies in the second half of 2024. Consequently, third-party cookies will no longer be supported in any of the major browsers.
+>
+>When this change is implemented, Adobe will discontinue support for the `demdex` cookie that is currently supported in the Web SDK.
+
 ## Version 2.19.2 - January 10, 2024
 
 **Fixes and improvements**
