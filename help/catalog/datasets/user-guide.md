@@ -44,9 +44,9 @@ Select the name of a dataset from the [!UICONTROL Browse] tab to access its **[!
 
 ## More actions {#more-actions}
 
-You can [!UICONTROL Delete] or [!UICONTROL Enable a dataset for Profile] from the [!UICONTROL Dataset] details view. To see the available actions, select **[UICONTROL ... More]** in the top right of the UI. The drop-down menu appears. 
+You can [!UICONTROL Delete] or [!UICONTROL Enable a dataset for Profile] from the [!UICONTROL Dataset] details view. To see the available actions, select **[!UICONTROL ... More]** in the top right of the UI. The drop-down menu appears. 
 
-![The Datasets workspace with the [UICONTROL ... More] dropdown menu highlighted.](../images/datasets/user-guide/more-actions.png)
+![The Datasets workspace with the [!UICONTROL ... More] dropdown menu highlighted.](../images/datasets/user-guide/more-actions.png)
 
 If you select **[!UICONTROL Enable a dataset for Profile]**, a confirmation dialog appears. Select **[!UICONTROL Enable]** to confirm your choice.
 
