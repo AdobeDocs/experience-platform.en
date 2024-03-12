@@ -9,7 +9,7 @@ role: Developer, Admin, User
 
 # Use access labels to manage user access to destination dataflows
 
-As part of the Attribute-based access control functionality in Real-Time CDP, you can now apply access labels to destination dataflows. You can thereby ensure that certain users in your organization get access to specific destination dataflows.
+As part of the Attribute-based access control functionality in Real-Time CDP, you can now apply access labels to destination dataflows. You can thereby ensure that only a subset of users in your organization get access to specific destination dataflows.
 
 When you add an access label to a particular destination, only users who have access to a role that is assigned that label are able to see and edit that destination dataflow. If a destination dataflow is not marked with any labels, it is visible for all users belonging to your organization.
 
@@ -24,7 +24,7 @@ Note the following prerequisites to complete before you start using this functio
 
 ### Access to the permissions UI
 
-
+help/access-control/abac/end-to-end-guide.md#permissions
 
 ### Create roles, labels, and assign users
 
