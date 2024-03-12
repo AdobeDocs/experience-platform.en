@@ -39,8 +39,8 @@ In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the le
 
 Select the name of a dataset from the [!UICONTROL Browse] tab to access its **[!UICONTROL Dataset activity]** screen and see details of the dataset you selected. The activity tab includes a graph visualizing the rate of messages being consumed as well as a list of successful and failed batches.
 
-![Details of your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-1.png)
-![Sample batches that belong to your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-2.png)
+![Metrics and visualizations of your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-1.png)
+![The sample batches that relate to your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-2.png)
 
 ## More actions {#more-actions}
 
