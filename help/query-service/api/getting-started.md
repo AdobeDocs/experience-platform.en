@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;qu
 solution: Experience Platform
 title: Query Service API Guide
 description: The Query Service API allows developers to query their Adobe Experience Platform data using standard SQL. Follow this guide to learn how to perform key operations using the API.
+role: Developer
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
 ---
 # [!DNL Query Service] API guide

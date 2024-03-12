@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;effective policies;access cont
 solution: Experience Platform
 title: Effective Policies API Endpoint
 description: Learn how to view effective access policies using the Access Control API for Adobe Experience Platform.
+role: Developer
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
 ---
 # Effective policies endpoint

@@ -1,6 +1,7 @@
 ---
 title: Player State Data Information Data Type
 description: Learn about the Player State Data Information Experience Data Model (XDM) data type.
+exl-id: 01bd0cea-5b2f-46ae-b140-75035c3b68d6
 ---
 # [!UICONTROL Player State Data Information] data type
 

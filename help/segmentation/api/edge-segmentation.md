@@ -2,6 +2,7 @@
 solution: Experience Platform
 title: Edge Segmentation using the API 
 description: This document contains examples on how to use edge segmentation with the Adobe Experience Platform Segmentation Service API.
+role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
 ---
 # Edge segmentation

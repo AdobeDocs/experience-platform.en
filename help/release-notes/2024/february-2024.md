@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes February 2024
 description: The February 2024 release notes for Adobe Experience Platform.
+exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
 ---
 # Adobe Experience Platform release notes 
 
@@ -37,7 +38,7 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 | Feature | Description |
 | --- | --- |
-| [Web In-App Messaging support in Web SDK](../../edge/personalization/web-in-app-messaging.md) | The Adobe Experience Platform Web SDK now supports Web In-App Messaging configuration for Adobe Journey Optimizer campaigns. |
+| [Web In-App Messaging support in Web SDK](../../web-sdk/personalization/web-in-app-messaging.md) | The Adobe Experience Platform Web SDK now supports Web In-App Messaging configuration for Adobe Journey Optimizer campaigns. |
 
 {style="table-layout:auto"}
 

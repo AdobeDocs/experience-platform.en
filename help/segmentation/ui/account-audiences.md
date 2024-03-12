@@ -35,19 +35,29 @@ The [!UICONTROL Browse] page is displayed, showing a list of all the account aud
 
 This view lists information about the audience, including name, profile count, origin, lifecycle status, created date, and last updated date.
 
+You can also use the search and filtering functionality to quickly search and sort for specific account audiences. More information about this feature can be found in the [segmentation UI guide](./overview.md#manage-audiences).
+
 ## Create audience {#create}
+
+>[!NOTE]
+>
+>Account audiences are evaluated using **batch** segmentation, and will be evaluated every 24 hours.
 
 To create an account audience, select **[!UICONTROL Create audience]** on the [!UICONTROL Browse] page.
 
 ![The [!UICONTROL Create audience] button is highlighted on the account audience browse page.](../images/ui/account-audiences/select-create-audience.png)
 
-The Segment Builder appears. The account attributes are displayed on the left navigation bar.
+The Segment Builder appears. The account attributes and audiences are displayed on the left navigation bar. Under the [!UICONTROL Attributes] tab, you can add both Platform-created and custom attributes.
 
-![The Segment Builder is displayed. Note that only the attributes are displayed.](../images/ui/account-audiences/segment-builder.png)
+![The Segment Builder is displayed. Note that only the attributes and audiences are displayed.](../images/ui/account-audiences/segment-builder.png)
 
 When creating account audiences, please note that events are listed under **[!UICONTROL People]**, rather than being their own tab, since these attributes are associated with people.
 
 ![The location to find events, which is within the [!UICONTROL People] folder, is highlighted.](../images/ui/account-audiences/attributes.png)
+
+Under the [!UICONTROL Audiences] tab, you can add previously created people-based audiences to build off of when creating your own account audience.
+
+![The Audiences tab within the Segment Builder is highlighted.](../images/ui/account-audiences/audiences.png)
 
 For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md).
 

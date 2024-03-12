@@ -1,6 +1,7 @@
 ---
 title: Refund Item Data Type
 description: Learn about the Refund Item Experience Data Model (XDM) data type.
+exl-id: 9968d314-c6f3-49d9-b860-709d7478c43a
 ---
 # [!UICONTROL Refund Item] data type
 
