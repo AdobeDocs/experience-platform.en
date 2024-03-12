@@ -24,6 +24,7 @@ role: Developer,User
   * [Profiles](insights/profiles.md)
   * [Audiences](insights/audiences.md)
   * [Destinations](insights/destinations.md)
+  * [Account Profiles](insights/account-profiles.md)
 * Customize dashboards {#customize}  
   * [Customization overview](customize/overview.md)
   * [Modify dashboards](customize/modify.md)
@@ -33,7 +34,7 @@ role: Developer,User
   * [Edit schema](customize/edit-schema.md)
 * Insights use cases {#insights-use-cases}
   * [Consent analysis](insights-use-cases/consent-analysis.md)
-* Available data models {#available-data-models}
+* Available data models {#data-models}
   * [Real-Time Customer Data Platform Insights data model B2C edition](cdp-insights-data-model-b2c.md)
 * Application integrations {#integrations}
   * [Power BI](integrations/power-bi.md)

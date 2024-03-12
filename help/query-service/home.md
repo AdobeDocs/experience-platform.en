@@ -48,7 +48,7 @@ This [browse abandonment example centers on using Adobe [!DNL Analytics]](./use-
 
 ## Generate insights with custom dashboards {#custom-dashboards} 
 
-With Adobe Experience Platform, you can ingest, store, structure, and pull all stored datasets — including behavioral, CRM, and point-of-sale data. Using [!DNL Experience Platform's Query Service], you can query on these datasets and answer specific questions about the business and then start generating impactful insights. Learn how to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics with [user-defined dashbaords](../dashboards/user-defined-dashboards.md). You can even [customize your own Real-Time CDP reports](../dashboards/available-data-models/cdp-insights-data-model-b2c.md) for your marketing and KPI use cases by using SQL queries with the Real-Time Customer Data Platform Insights Data Models.
+With Adobe Experience Platform, you can ingest, store, structure, and pull all stored datasets — including behavioral, CRM, and point-of-sale data. Using [!DNL Experience Platform's Query Service], you can query on these datasets and answer specific questions about the business and then start generating impactful insights. Learn how to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics with [user-defined dashbaords](../dashboards/user-defined-dashboards.md). You can even [customize your own Real-Time CDP reports](../dashboards/data-models/cdp-insights-data-model-b2c.md) for your marketing and KPI use cases by using SQL queries with the Real-Time Customer Data Platform Insights Data Models.
 
 ## Next steps and additional resources
 
