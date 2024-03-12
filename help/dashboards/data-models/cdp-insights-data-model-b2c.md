@@ -5,7 +5,7 @@ exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 ---
 # Real-Time Customer Data Platform Insights data model B2C Edition
 
-The Real-Time Customer Data Platform Insights Data Model feature exposes the data models and SQL that power the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your user-defined dashboards. See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
+The Real-Time Customer Data Platform Insights Data Model feature exposes the data models and SQL that power the insights for various profile, destination, and segmentation widgets. You can customize these SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your user-defined dashboards. See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
 
 >[!NOTE]
 >
@@ -13,7 +13,7 @@ The Real-Time Customer Data Platform Insights Data Model feature exposes the dat
 
 ## Prerequisites
 
-This guide requires a working understanding of the [user-defined dashboards feature](./user-defined-dashboards.md). Please read the documentation before continuing with this guide.
+This guide requires a working understanding of the [user-defined dashboards feature](../user-defined-dashboards.md). Please read the documentation before continuing with this guide.
 
 ## Real-Time CDP insight reports and use cases
 
@@ -37,7 +37,7 @@ The image below contains the relevant data fields in each dataset.
 
 #### The profile count use case {#profile-count}
 
-The logic used for the [!UICONTROL Profile count] widget returns the total number of merged profiles within the Profile Store at the time the snapshot was taken. See the [[!UICONTROL Profile count] widget documentation](./guides/profiles.md#profile-count) for more information. 
+The logic used for the [!UICONTROL Profile count] widget returns the total number of merged profiles within the Profile Store at the time the snapshot was taken. See the [[!UICONTROL Profile count] widget documentation](../guides/profiles.md#profile-count) for more information. 
 
 The SQL that generates the [!UICONTROL Profile count] widget is seen in the collapsible section below.
 
@@ -57,7 +57,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 #### The single identity profiles use case {#single-identity-profiles}
 
-The logic used for the [!UICONTROL Single identity profiles] widget provides a count of your organization's profiles that only have one type of ID type that creates their identity. See the[[!UICONTROL Single identity profiles] widget documentation](./guides/profiles.md#single-identity-profiles) for more information.
+The logic used for the [!UICONTROL Single identity profiles] widget provides a count of your organization's profiles that only have one type of ID type that creates their identity. See the[[!UICONTROL Single identity profiles] widget documentation](../guides/profiles.md#single-identity-profiles) for more information.
 
 The SQL that generates the [!UICONTROL Single identity profiles] widget is seen in the collapsible section below.
 
@@ -90,7 +90,7 @@ The image below contains the relevant data fields in each dataset.
 
 #### Profiles by identity use case {#profiles-by-identity}
 
-The [!UICONTROL Profiles by identity] widget displays the breakdown of identities across all of the merged profiles in your Profile Store. See the [[!UICONTROL Profiles by identity] widget documentation](./guides/profiles.md#profiles-by-identity) for more information.
+The [!UICONTROL Profiles by identity] widget displays the breakdown of identities across all of the merged profiles in your Profile Store. See the [[!UICONTROL Profiles by identity] widget documentation](../guides/profiles.md#profiles-by-identity) for more information.
 
 The SQL that generates the [!UICONTROL Profiles by identity] widget is seen in the collapsible section below.
 
@@ -114,7 +114,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### Single identity profiles by identity use case {#single-identity-profiles-by-identity}
 
-The logic used for the [!UICONTROL Single identity profiles by identity] widget illustrates the total number of profiles that are identified with only a single unique identifier. See the [Single identity profiles by identity widget documentation](./guides/profiles.md#single-identity-profiles-by-identity) for more information.
+The logic used for the [!UICONTROL Single identity profiles by identity] widget illustrates the total number of profiles that are identified with only a single unique identifier. See the [Single identity profiles by identity widget documentation](../guides/profiles.md#single-identity-profiles-by-identity) for more information.
 
 The SQL that generates the [!UICONTROL Single identity profiles by identity] widget is seen in the collapsible section below.
 
@@ -153,7 +153,7 @@ The image below contains the relevant data fields in each dataset.
 
 #### Audience size use case {#audience-size}
 
-The logic used for the [!UICONTROL Audience size] widget returns the total number of merged profiles within the selected audience at the time of the most recent snapshot. See the [[!UICONTROL Audience size] widget documentation](./guides/audiences.md#audience-size) for more information.
+The logic used for the [!UICONTROL Audience size] widget returns the total number of merged profiles within the selected audience at the time of the most recent snapshot. See the [[!UICONTROL Audience size] widget documentation](../guides/audiences#audience-size) for more information.
 
 The SQL that generates the [!UICONTROL Audience size] widget is seen in the collapsible section below.
 
@@ -177,7 +177,7 @@ WHERE
 
 #### Audience size change trend use case {#audience-size-change-trend}
 
-The logic used for the [!UICONTROL Audience size change trend] widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given audience between the most recent daily snapshots. See the [[!UICONTROL Audience size change trend] widget documentation](./guides/audiences.md#audience-size-change-trend) for more information.
+The logic used for the [!UICONTROL Audience size change trend] widget provides a line graph illustration of the difference in the total number of profiles that qualified for a given audience between the most recent daily snapshots. See the [[!UICONTROL Audience size change trend] widget documentation](../guides/audiences.md#audience-size-change-trend) for more information.
 
 The SQL that generates the [!UICONTROL Audience size change trend] widget is seen in the collapsible section below.
 
@@ -214,7 +214,7 @@ SELECT date_key,
 
 #### Most used destinations use case {#most-used-destinations}
 
-The logic used in the [!UICONTROL Most used destinations] widget lists your organization's most used destinations according to the number of audiences mapped to them. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized. See the documentation on the [[!UICONTROL Most used destinations] widget](./guides/destinations.md#most-used-destinations) for more information.
+The logic used in the [!UICONTROL Most used destinations] widget lists your organization's most used destinations according to the number of audiences mapped to them. This ranking provides insight into which destinations are being utilized while also potentially showing those that may be underutilized. See the documentation on the [[!UICONTROL Most used destinations] widget](../guides/destinations.md#most-used-destinations) for more information.
 
 The SQL that generates the [!UICONTROL Most used destinations] widget is seen in the collapsible section below.
 
@@ -239,7 +239,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 #### Recently activated audiences use case {#recently-activated-audiences}
 
-The logic for the [!UICONTROL Recently activated audiences] widget provides a list of the audiences most recently mapped to a destination. This list provides a snapshot of the audiences and destinations that are actively in use in the system and can help in troubleshooting any erroneous mappings. See the [[!UICONTROL Recently activated audiences] widget documentation](./guides/destinations.md#recently-activated-audiences) for more information.
+The logic for the [!UICONTROL Recently activated audiences] widget provides a list of the audiences most recently mapped to a destination. This list provides a snapshot of the audiences and destinations that are actively in use in the system and can help in troubleshooting any erroneous mappings. See the [[!UICONTROL Recently activated audiences] widget documentation](../guides/destinations.md#recently-activated-audiences) for more information.
 
 The SQL that generates the [!UICONTROL Recently activated audiences] widget is seen in the collapsible section below.
 
@@ -283,7 +283,7 @@ The image below contains the relevant data fields in each dataset.
 
 #### Profiles by identity for an audience use case {#audience-profiles-by-identity}
 
-The logic used in the [!UICONTROL Profiles by identity] widget provides a breakdown of identities across all of the merged profiles in your Profile Store for a given audience. See the [[!UICONTROL Profiles by identity] widget documentation](./guides/audiences.md#profiles-by-identity) for more information.
+The logic used in the [!UICONTROL Profiles by identity] widget provides a breakdown of identities across all of the merged profiles in your Profile Store for a given audience. See the [[!UICONTROL Profiles by identity] widget documentation](../guides/audiences.md#profiles-by-identity) for more information.
 
 The SQL that generates the [!UICONTROL Profiles by identity] widget is seen in the collapsible section below.
 
@@ -319,7 +319,7 @@ The image below contains the relevant data fields in each dataset.
 
 #### Identity overlap (profiles) use case {#profiles-identity-overlap}
 
-The logic used in the [!UICONTROL Identity overlap] widget displays the overlap of profiles in your **Profile Store** that contain the two selected identities. For more information, see the [[!UICONTROL Identity overlap] widget section of the [!UICONTROL Profiles] dashboard documentation](./guides/profiles.md#identity-overlap).
+The logic used in the [!UICONTROL Identity overlap] widget displays the overlap of profiles in your **Profile Store** that contain the two selected identities. For more information, see the [[!UICONTROL Identity overlap] widget section of the [!UICONTROL Profiles] dashboard documentation](../guides/profiles.md#identity-overlap).
 
 The SQL that generates the [!UICONTROL Identity overlap] widget is seen in the collapsible section below.
 
@@ -388,7 +388,7 @@ The image below contains the relevant data fields in each dataset.
 
 #### Identity overlap (audiences) use case {#audiences-identity-overlap}
 
-The logic used in the [!UICONTROL Audiences] dashboard [!UICONTROL Identity overlap] widget illustrates the overlap of profiles that contain the two selected identities for a particular audience. For more information, see the [[!UICONTROL Identity overlap] widget section of the [!UICONTROL Audiences] dashboard documentation](./guides/audiences.md#identity-overlap).
+The logic used in the [!UICONTROL Audiences] dashboard [!UICONTROL Identity overlap] widget illustrates the overlap of profiles that contain the two selected identities for a particular audience. For more information, see the [[!UICONTROL Identity overlap] widget section of the [!UICONTROL Audiences] dashboard documentation](../guides/audiences.md#identity-overlap).
 
 The SQL that generates the [!UICONTROL Identity overlap] widget is seen in the collapsible section below.
 

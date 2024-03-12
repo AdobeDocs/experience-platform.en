@@ -9,12 +9,9 @@ The insights derived from the analysis of your data model make your Adobe Real-t
  
 Understand your profile insights by accessing the SQL that powers them, then generate your own insights to further explore your customers and their consumer experiences that make up your profiles. Transform your raw data into new actionable insights by using the existing Real-Time CDP data model SQL as inspiration to create queries for your unique business needs. 
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+See the [View SQL documentation](../view-sql.md) for more information on how to adapt your insights' SQL directly through the Platform UI. 
 
 The following insights are all available for you to use as part of the [Profiles dashboard](../guides/profiles.md) or a custom [user-defined dashboard](../user-defined-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../user-defined-dashboards.md#create-widget). 
-
-The following insights are all available for you to use as part of the [Profile dashboard](../guides/profiles.md) or a custom dashboard.
 
 ## Audience overlap by merge policy {#audience-overlap-by-merge-policy}
 
