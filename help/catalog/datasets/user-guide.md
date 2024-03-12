@@ -44,7 +44,7 @@ Select the name of a dataset from the [!UICONTROL Browse] tab to access its **[!
 
 ## More actions {#more-actions}
 
-From the [!UICONTROL Dataset] details view, you can also [!UICONTROL Delete] or [!UICONTROL Enable a dataset for Profile]. To see more available actions, select **[UICONTROL ... More]** in the top right of the UI. The drop-down menu appears. 
+From the [!UICONTROL Dataset] details view, you can also [!UICONTROL Delete] or [!UICONTROL Enable a dataset for Profile]. To see the available actions, select **[UICONTROL ... More]** in the top right of the UI. The drop-down menu appears. 
 
 ![The Datasets workspace with the [UICONTROL ... More] dropdown menu highlighted.](../images/datasets/user-guide/more-actions.png)
 
@@ -58,9 +58,13 @@ If you select **[!UICONTROL Enable a dataset for Profile]**, a confirmation dial
 
 If you select **[!UICONTROL Delete]**, the [!UICONTROL Delete dataset] confirmation dialog appears. Select **[!UICONTROL Delete]** to confirm your choice.
 
-![The Delete dataset confirmation dialog.](../images/datasets/user-guide/delete-confirmation-dialog.png)
+>[!NOTE]
+>
+>System datasets cannot be deleted.
 
-If there are already associated datasets this option is grayed out and cannot be selected.
+You can also delete a dataset or add a dataset for use with Real-Time Customer Profile from the inline actions found on the [!UICONTROL Browse] tab. See the [inline actions section](#inline-actions) for more information.
+
+![The Delete dataset confirmation dialog.](../images/datasets/user-guide/delete-confirmation-dialog.png)
 
 ## Inline dataset actions {#inline-actions}
 
@@ -254,8 +258,6 @@ Alternatively, select **[!UICONTROL Delete dataset]** from the **[!UICONTROL Dat
 >[!NOTE]
 >
 >Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Offer Decisioning]) cannot be deleted.
-
-<!-- 182866 Below workflow has changed.  -->
 
 ![The Delete dataset button is highlighted within the dataset details page.](../images/datasets/user-guide/delete-dataset.png)
 
