@@ -55,7 +55,9 @@ See the [datastreams documentation](../../datastreams/configure.md) for detailed
 
 When configuring your datastream, enable the **[!UICONTROL First Party ID Cookie]** option. This setting tells the Edge Network to refer to a specified cookie when looking up a first-party device ID, rather than looking up this value in the [Identity Map](#identityMap).
 
-![Platform UI image showing the datastream configuration highlighting the First Party ID Cookie setting](assets/first-party-id-datastreams.png)
+See the documentation on [first-party cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html) for more details on how they work with Adobe Experience Cloud.
+
+![Platform UI image showing the datastream configuration highlighting the First Party ID Cookie setting](../assets/first-party-id-datastreams.png)
 
 When enabling this setting, you must provide the name of the cookie where the ID is expected to be stored.
 
