@@ -11,7 +11,7 @@ badge: Beta
 
 Thousands of companies, of all sizes, use [!DNL Stripe] online and in person to accept payments, create new revenue sources, and grow globally using the Adobe Experience Platform, Adobe Commerce and [!DNL Magento Open Source].
 
-Use the [!DNL Stripe] source in Experience Platform to ingest data captured during the purchase flow by your customers. Once ingested, use this data too create personalized offers and unlock richer business insights.
+Use the [!DNL Stripe] source in Experience Platform to ingest data captured during the purchase flow by your customers. Once ingested, use this data to create personalized offers and unlock richer business insights.
 
 >[!TIP]
 >
