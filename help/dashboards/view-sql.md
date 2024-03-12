@@ -53,4 +53,4 @@ The Query Editor appears. You can now edit the statement and query your platform
 
 ## Next steps
 
-After reading this document, you now understand how to access the SQL for any insight within either the standard dashboards or a user-defined dashboard. If you have not already done so, you are recommended to read the [Real-Time Customer Data Platform Insights Data Model document](./cdp-insights-data-model.md). That document contains insights on customizing SQL templates for Real-Time CDP reports tailored to your marketing and KPI needs.
+After reading this document, you now understand how to access the SQL for any insight within either the standard dashboards or a user-defined dashboard. If you have not already done so, you are recommended to read the [Real-Time Customer Data Platform Insights Data Model document](./available-data-models/cdp-insights-data-model-b2c.md). That document contains insights on customizing SQL templates for Real-Time CDP reports tailored to your marketing and KPI needs.

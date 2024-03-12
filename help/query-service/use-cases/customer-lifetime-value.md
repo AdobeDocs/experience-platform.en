@@ -50,7 +50,7 @@ Next, you must build a custom data model or extend an existing Adobe Real-Time C
 * Create dimension tables to extend your reporting insights model.
 * Query your extended accelerated store reporting insights data model
 
-Please see the Real-Time Customer Data Platform Insights Data Model documentation to learn how to [customize your SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases](../../dashboards/cdp-insights-data-model.md).
+Please see the Real-Time Customer Data Platform Insights Data Model documentation to learn how to [customize your SQL query templates to create Real-Time CDP reports for your marketing and key performance indicator (KPI) use cases](../../dashboards/available-data-models/cdp-insights-data-model-b2c.md).
 
 Make sure to set a schedule to refresh your custom data model on a regular cadence. This ensures that the data comes back in as part of your ingestion pipeline as needed, and populates your user-defined dashboards. See the [schedule queries guide](../ui/query-schedules.md#create-schedule) to learn how to set up your schedule.
 

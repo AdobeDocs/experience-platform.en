@@ -33,9 +33,10 @@ role: Developer,User
   * [Edit schema](customize/edit-schema.md)
 * Insights use cases {#insights-use-cases}
   * [Consent analysis](insights-use-cases/consent-analysis.md)
+* Available data models {#available-data-models}
+  * [Real-Time Customer Data Platform Insights data model B2C edition](cdp-insights-data-model-b2c.md)
 * Application integrations {#integrations}
   * [Power BI](integrations/power-bi.md)
 * [Query dashboard datasets](query.md)
-* [Real-Time Customer Data Platform Insights Data Model](cdp-insights-data-model.md)
 * [View insight SQL](view-sql.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

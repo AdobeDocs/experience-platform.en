@@ -137,7 +137,7 @@ After the widget composer is populated with data from your chosen table, perform
 >You can now resize or move the widget to the desired size and position before you save the dashboard.
 
 
-The image below demonstrates how your finished widget appears and other potential custom insights. For more details on the types of widgets that can be created, refer to the [data model documentation](../cdp-insights-data-model.md).
+The image below demonstrates how your finished widget appears and other potential custom insights. For more details on the types of widgets that can be created, refer to the [data model documentation](../available-data-models/cdp-insights-data-model-b2c.md).
 
 <!-- The diagram shows straight lines due to a lack of data, however in your environment the trends will reflect the actual changes over time. -->
 
