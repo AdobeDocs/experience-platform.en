@@ -33,7 +33,7 @@ The profile model is comprised of three datasets:
 
 The image below contains the relevant data fields in each dataset.
 
-![An ERD of the profile model.](./images/cdp-insights/profile-model.png)
+![An ERD of the profile model.](../images/cdp-insights/profile-model.png)
 
 #### The profile count use case {#profile-count}
 
@@ -86,7 +86,7 @@ The namespace model is comprised of the following datasets:
 
 The image below contains the relevant data fields in each dataset.
 
-![An ERD of the namespace model.](./images/cdp-insights/namespace-model.png)
+![An ERD of the namespace model.](../images/cdp-insights/namespace-model.png)
 
 #### Profiles by identity use case {#profiles-by-identity}
 
@@ -149,7 +149,7 @@ The audience model is comprised of the following datasets:
 
 The image below contains the relevant data fields in each dataset.
 
-![An ERD of the audience model.](./images/cdp-insights/audience-model.png)
+![An ERD of the audience model.](../images/cdp-insights/audience-model.png)
 
 #### Audience size use case {#audience-size}
 
@@ -279,7 +279,7 @@ The namespace-audience model is comprised of the following datasets:
 
 The image below contains the relevant data fields in each dataset.
 
-![An ERD of the namespace-audience model.](./images/cdp-insights/namespace-audience-model.png)
+![An ERD of the namespace-audience model.](../images/cdp-insights/namespace-audience-model.png)
 
 #### Profiles by identity for an audience use case {#audience-profiles-by-identity}
 
@@ -315,7 +315,7 @@ The overlap namespace model is comprised of the following datasets:
 
 The image below contains the relevant data fields in each dataset.
 
-![An ERD of the overlap namespace model.](./images/cdp-insights/overlap-namespace-model.png)
+![An ERD of the overlap namespace model.](../images/cdp-insights/overlap-namespace-model.png)
 
 #### Identity overlap (profiles) use case {#profiles-identity-overlap}
 
@@ -384,7 +384,7 @@ The overlap namespace by audience model is comprised of the following datasets:
 
 The image below contains the relevant data fields in each dataset.
 
-![An ERD of the overlap namespace by audience model.](./images/cdp-insights/overlap-namespace-by-audience-model.png)
+![An ERD of the overlap namespace by audience model.](../images/cdp-insights/overlap-namespace-by-audience-model.png)
 
 #### Identity overlap (audiences) use case {#audiences-identity-overlap}
 
@@ -456,7 +456,7 @@ The overlap namespace-audience model is comprised of the following datasets:
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform`
 
-![An ERD of the overlap namespace-audience model.](./images/cdp-insights/overlap-namespace-audience-model.png) -->
+![An ERD of the overlap namespace-audience model.](../images/cdp-insights/overlap-namespace-audience-model.png) -->
 
 <!-- What insights are gathered from this particular data model? -->
 
