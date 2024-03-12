@@ -466,7 +466,9 @@ In [!DNL Stripe], **prices** represent the unit cost, currency, and the optional
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
-The documentation below provides information on how to connect [!DNL Stripe] to Platform using APIs or the user interface:
+### Configure permissions on Experience Platform
+
+You must have both **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** permissions enabled for your account in order to connect your [!DNL Stripe] account to Experience Platform. Contact your product administrator to obtain the necessary permissions. For more information, read the [access control UI guide](../../../access-control/ui/overview.md).
 
 ## Next steps
 
