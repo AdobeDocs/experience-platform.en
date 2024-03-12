@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure the partner schema for destinations built with Destination SDK.
 title: Partner schema configuration
+exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
 ---
-
 # Partner schema configuration
 
 Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. When data is ingested into Platform, it is structured according to an XDM schema. For more information on the schema composition model, including design principles and best practices, see the [basics of schema composition](../../../../xdm/schema/composition.md).
@@ -240,7 +240,7 @@ After reading this article, you should have a better understanding of what schem
 To learn more about the other destination components, see the following articles:
 
 * [Customer authentication](customer-authentication.md)
-* [OAuth2 authentication](oauth2-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
 * [UI attributes](ui-attributes.md)
 * [Customer data fields](customer-data-fields.md)
 * [Identity namespace configuration](identity-namespace-configuration.md)

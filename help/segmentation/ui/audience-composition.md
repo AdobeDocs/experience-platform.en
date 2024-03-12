@@ -22,7 +22,7 @@ The **[!UICONTROL Composition properties]** popover appears. You can insert deta
 
 >[!NOTE]
 >
->If you do **not** give your composition a title, it will have a title of "Composition" followed by the creation date and time by default.
+>If you do **not** give your composition a title, it will have a title of "Composition" followed by the creation date and time by default. Additionally, each composition **must** have its own unique name.
 
 After updating your composition's details, select **[!UICONTROL Save]** to confirm these updates. The audience composition canvas re-appears.
 
@@ -45,6 +45,10 @@ When you select the **[!UICONTROL Audience]** block, the right rail displays con
 To add audiences to the Audience block. select **[!UICONTROL Add Audience]**.
 
 ![The Add audience button is highlighted.](../images/ui/audience-composition/add-audience.png)
+
+>[!IMPORTANT]
+>
+>Please note that **only** audiences defined using the default merge policy will appear. 
 
 A list of audiences appears. Select the audiences you want to include, followed by **[!UICONTROL Add]** to append them to your audience block.
 
@@ -105,6 +109,10 @@ If you exclude by attribute, you can select which attributes you want to exclude
 A list of profile attributes appears. Select the attribute type you want to exclude, followed by **[!UICONTROL Select]** to add them to your exclude block.
 
 ![A list of attributes is shown.](../images/ui/audience-composition/select-attribute-exclude.png)
+
+>[!IMPORTANT]
+>
+>When excluding by attribute, you can only specify **one** value to exclude. Using any sort of separator, like a comma or semicolon, will only result in excluding that exact value. For example, setting the value as `red, blue` will result in excluding the term `red, blue` from the attribute, but will **not** result in excluding either the term `red` or `blue`.
 
 ## [!UICONTROL Enrich] {#enrich-block}
 
@@ -206,9 +214,9 @@ A list of profile attributes appears. On this popover, you can select the attrib
 
 After selecting the attribute, you can select the order to rank it by. This is either in ascending (from lowest to highest) or descending (from highest to lowest) order.
 
-Additionally, you can limit the number of audiences returned by enabling the **[!UICONTROL Add profile limit]** toggle. When this toggle is enabled, you can set the maximum number of audiences returned within the **[!UICONTROL Included profiles]** field.
+Additionally, you can limit the number of profiles returned by enabling the **[!UICONTROL Add profile limit]** toggle. When this toggle is enabled, you can set the maximum number of profiles returned within the **[!UICONTROL Included profiles]** field.
 
-![The Add profile limit toggle is highlighted, which lets you limit the number of audiences returned.](../images/ui/audience-composition/add-profile-limit.png)
+![The Add profile limit toggle is highlighted, which lets you limit the number of profiles returned.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Split] {#split-block}
 

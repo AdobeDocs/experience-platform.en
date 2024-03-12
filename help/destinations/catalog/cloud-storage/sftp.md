@@ -9,7 +9,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 
 With the July 2023 Experience Platform release, the SFTP destination provides new functionality, as listed below:
 
-* [!BADGE Beta]{type=Informative} [Dataset export support](/help/destinations/ui/export-datasets.md).
+* [Dataset export support](/help/destinations/ui/export-datasets.md).
 * Additional [file naming options](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * Ability to set custom file headers in your exported files via the [improved mapping step](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Ability to customize the formatting of exported CSV data files](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -20,7 +20,7 @@ Create a live outbound connection to your SFTP server to periodically export del
 
 >[!IMPORTANT]
 >
-> While Experience Platform supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL SFTP].
+> While Experience Platform supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL Azure Blob].
 
 ## Connect to SFTP through API or UI {#connect-api-or-ui}
 
@@ -29,7 +29,7 @@ Create a live outbound connection to your SFTP server to periodically export del
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
@@ -49,13 +49,26 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
-![SFTP profile-based export type](../../assets/catalog/cloud-storage/sftp/catalog.png)
+![SFTP profile-based export type highlighted in the destinations catalog.](../../assets/catalog/cloud-storage/sftp/catalog.png)
+
+## Export datasets {#export-datasets}
+
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
+
+* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
+* How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
+
+## File format of the exported data {#file-format}
+
+When exporting *audience data*, Platform creates a `.csv`, `parquet`, or `.json` file in the storage location that you provided. For more information about the files, see the [supported file formats for export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) section in the audience activation tutorial.
+
+When exporting *datasets*, Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
 
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
 > 
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
@@ -73,7 +86,7 @@ To connect to this destination, follow the steps described in the [destination c
 
 If you select the **[!UICONTROL SFTP with password]** authentication type to connect to your SFTP location:
 
-![SFTP destination basic authentication](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![SFTP destination basic authentication with password.](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL Domain]**: The address of your SFTP storage location;
 * **[!UICONTROL Username]**: The username to log into your SFTP storage location;
@@ -81,12 +94,12 @@ If you select the **[!UICONTROL SFTP with password]** authentication type to con
 * **[!UICONTROL Password]**: The password to log into your SFTP storage location.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
-  ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Image showing an example of a correctly formatted PGP key in the UI.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 If you select the **[!UICONTROL SFTP with SSH key]** authentication type to connect to your SFTP location:
 
-![SFTP destination SSH key authentication](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+![SFTP destination SSH key authentication.](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
 * **[!UICONTROL Domain]**: Fill in the IP address or the domain name of your SFTP account
 * **[!UICONTROL Port]**: The port used by your SFTP storage location;
@@ -94,13 +107,13 @@ If you select the **[!UICONTROL SFTP with SSH key]** authentication type to conn
 * **[!UICONTROL SSH Key]**: The private SSH key used to log into your SFTP storage location. The private key must be an RSA-formatted, Base64-encoded string, and must not be password-protected.
 * **[!UICONTROL Encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
 
-    ![Image showing an example of a correctly formatted PGP key in the UI](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+    ![Image showing an example of a correctly formatted PGP key in the UI.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
     
 ### Destination details {#destination-details}
 
 After establishing the authentication connection to the SFTP location, provide the following information for the destination:
 
-![Available Destination details for SFTP destination](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+![Destination details fields for the SFTP destination.](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
 * **[!UICONTROL Name]**: Enter a name that helps you identify this destination in the Experience Platform user interface;
 * **[!UICONTROL Description]**: Enter a description for this destination;
@@ -118,21 +131,15 @@ After establishing the authentication connection to the SFTP location, provide t
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
-## (Beta) Export datasets {#export-datasets}
+## Validate successful data export {#exported-data}
 
-This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
+To verify if data has been exported successfully, check your SFTP storage and make sure that the exported files contain the expected profile populations.
 
-* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
-* How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
+## IP address allowlist {#ip-address-allow-list}
 
-## Exported data {#exported-data}
-
-For [!DNL SFTP] destinations, Platform creates a `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the audience activation tutorial.
-
-## IP address allow list {#ip-address-allow-list}
-
-Refer to [IP address allow list for SFTP destinations](ip-address-allow-list.md) if you need to add Adobe IPs to an allow list.
+Refer to the [IP address allowlist](ip-address-allow-list.md) article if you need to add Adobe IPs to an allowlist.

@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
 title: Real-Time Customer Profile Overview
 description: Real-Time Customer Profile merges data from various sources and provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
@@ -99,10 +98,6 @@ Adobe Experience Platform [!DNL Segmentation Service] produces the audiences nee
 ### Streaming ingestion and streaming segmentation
 
 Real-time input is made possible through a process called streaming ingestion. As profile and time series data is ingested, [!DNL Real-Time Customer Profile] automatically decides to include or exclude that data from audiences through an ongoing process called streaming segmentation, before merging it with existing data and updating the union view. As a result, you can instantaneously perform computations and make decisions to deliver enhanced, individualized experiences to customers as they interact with your brand. While being ingested, the data also undergoes validation to ensure it being ingested properly and conforming to the schema upon which the dataset is based. For more information about what validation is done during ingestion, please begin by reading the [data ingestion quality overview](../ingestion/quality/overview.md).
-
-## Edge projections
-
-In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real time, the right data needs to be readily available and continuously updated as changes happen. Adobe Experience Platform enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. For example, Adobe applications such as Adobe Target and Adobe Campaign use edges in order to provide personalized customer experiences in real time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. To learn more and begin working with projections using the [!DNL Real-Time Customer Profile] API, refer to the [edge projection endpoints guide](api/edge-projections.md). 
 
 ## Ingesting data into [!DNL Profile]
 

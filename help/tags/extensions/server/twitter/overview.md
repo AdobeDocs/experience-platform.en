@@ -3,6 +3,7 @@ keywords: event forwarding extension;twitter;twitter event forwarding extension
 title: Twitter event forwarding extension
 description: This Adobe Experience Platform event forwarding extension allows you to ingest events into Twitter for your business requirements.
 last-substantial-update: 2023-05-24
+exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
 ---
 # [!DNL Twitter] event forwarding extension
 
@@ -72,7 +73,7 @@ When finished, select **[!UICONTROL Save]**.
 
 Once all your data elements are set up, you can start creating event forwarding rules that determine when and how your events will be sent to [!DNL Twitter].
 
-Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Twitter]**. To send Adobe Experience Edge Network events to [!DNL Twitter], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send Web Conversion].**
+Create a new [rule](../../../ui/managing-resources/rules.md) in your event forwarding property. Under **[!UICONTROL Actions]**, add a new action and set the extension to **[!UICONTROL Twitter]**. To send Edge Network events to [!DNL Twitter], set the **[!UICONTROL Action Type]** to **[!UICONTROL Send Web Conversion].**
 
 After selection, additional controls appear to further configure the event. You need to map the [!DNL Twitter] event properties to the data elements that you previously created. For more information, refer to the [[!DNL Twitter] Web Conversions API](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 
@@ -90,7 +91,7 @@ After selection, additional controls appear to further configure the event. You 
 
 | Field name | Description | Example | Required | 
 | --- | --- | --- | --- |
-| [!UICONTROL Conversion Time] | Date-time as string in ISO 8601 or in yyyy-MM-dd'T'HH:mm:ss:SSSZ format. | 2022-02-18T01:14:00.603Z | Yes |
+| [!UICONTROL Conversion Time] | Date-time as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. | 2022-02-18T01:14:00.603Z | Yes |
 | [!UICONTROL Event Id] | The base-36 ID of a specific event. This Id should match a pre-configured event contained within your [!DNL Twitter] ad account. This is known as the ID for the corresponding event in Events Manager. | o87ne or tw-o8z6j-o87ne (tw-pixel_id-event-id) | Yes |
 | [!UICONTROL Number of Items] | The number of items being purchased in the event. This must be a positive number greater than 0. | 4 | No |
 | [!UICONTROL Currency] | The currency of the items being purchased in the event. This is expressed in ISO-4217 and if not provided, the default will be USD. | USD | No |

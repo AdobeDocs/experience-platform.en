@@ -8,7 +8,7 @@ exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
 
 ## Overview {#overview}
 
-Build custom audiences on TikTok with your data for targeting with your ad campaigns. These audiences could be of people who visited your website or interacted with your content. Quickly and securely push the desired audience from Adobe Experience Platform to TikTok using Adobe's real-time integration with TikTok Ads Manager. Visit [TikTok's business help center](https://ads.tiktok.com/help/article/audiences?lang=en) for more information. 
+Build custom audiences on TikTok with your data for targeting with your ad campaigns. These audiences could be of people who visited your website or interacted with your content. Quickly and securely push the desired audience from Adobe Experience Platform to TikTok using Adobe's real-time integration with TikTok Ads Manager. Visit [TikTok's business help center](https://ads.tiktok.com/help/article/audiences) for more information. 
 
 >[!IMPORTANT]
 >
@@ -24,13 +24,13 @@ An athletic apparel brand wants to reach existing customers through their social
 
 ## Prerequisites {#prerequisites}
 
-You need to have [!DNL Admin] or [!DNL Operator] access to the TikTok Ads Manager account you want to send audiences to. More instructions can be found on the [TikTok Help Center](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+You need to have [!DNL Admin] or [!DNL Operator] access to the TikTok Ads Manager account you want to send audiences to. More instructions can be found on the [TikTok Help Center](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
 Before sending data to your TikTok Ads Manager account, you will need to give Adobe Experience Platform permission to access your Ad Account for `Audience Management`. This permission can be provided by [entering your Ads Manager ID](#authenticate) in the Experience Platform UI and granting the permission after being redirected to your TikTok Ads Manager Account. 
 
 ## Supported identities {#supported-identities}
 
-TikTok supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+TikTok supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
@@ -56,7 +56,7 @@ Refer to the table below for information about the destination export type and f
 
 >[!IMPORTANT]
 > 
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
@@ -88,7 +88,8 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 > 
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
@@ -116,4 +117,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-Please refer to the [TikTok Help Center page](https://ads.tiktok.com/help/article/audiences?lang=en) for additional information.
+Please refer to the [TikTok Help Center page](https://ads.tiktok.com/help/article/audiences) for additional information.

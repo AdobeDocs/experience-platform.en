@@ -9,7 +9,7 @@ exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_filter"
->title="Standard or ustom field group filter"
+>title="Standard or custom field group filter"
 >abstract="The list of available field groups is pre-filtered based on how they were created. Select the radio button to choose between the Standard and Custom options. The Standard option shows entities created by Adobe and the Custom option displays entities created within your organization. See the documentation to learn more about creating and editing field groups."
 
 In Experience Data Model (XDM), schema field groups are reusable components that define one or more fields that implement certain functions such as personal details, hotel preferences, or address. Field groups are intended to be included as part of a schema that implements a compatible class. 
@@ -18,7 +18,7 @@ A field group defines which class(es) it is compatible with, based on the behavi
 
 Adobe Experience Platform provides many standard field groups that cover a wide range of marketing use cases. However, you can also create and edit your own custom field groups to define additional concepts related to your business within your XDM schemas. This guide provides an overview of how to create, edit, and manage custom field groups for your organization in the Platform UI.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for how field groups contribute to XDM schemas.
 
@@ -40,11 +40,17 @@ The [!DNL Schema Editor] reappears, with the new field group listed in the left 
 
 ![](../../images/ui/resources/field-groups/field-group-added.png)
 
+## Filter field groups {#filter}
+
+The list of available field groups is pre-filtered based on how they were created. The default setting displays the field groups defined by Adobe. However, you can also filter the list to show those created by your organization. Select the radio button to choose between the [!UICONTROL Standard] and [!UICONTROL Custom] options. The [!UICONTROL Standard] option shows entities created by Adobe and the [!UICONTROL Custom] option displays entities created within your organization.
+
+![The [!UICONTROL Field groups] tab of the [!UICONTROL Schemas] workspace with [!UICONTROL Standard] and [!UICONTROL Custom] highlighted.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
+
 ## Edit an existing field group {#edit}
 
 >[!NOTE]
 >
->Only custom field groups defined by your organization can be fully edited and customized. For core field groups defined by Adobe, only the display names for their fields can be edited within the context of individual schemas. See the section on [editing display names for schema fields](./schemas.md#display-names) for details.
+>Only custom field groups defined by your organization can be fully edited and customized. For core field groups defined by Adobe, only the display names for their fields can be edited within the context of individual schemas. They are indicated in the Schema Editor by a padlock icon (![A padlock icon.](../../images/ui/explore/padlock-icon.png)). See the section on [editing display names for schema fields](./schemas.md#display-names) for details.
 >
 >Once a custom field group has been saved and used in a schema for data ingestion, only additive changes can be made to the field group thereafter. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
 
@@ -78,7 +84,7 @@ Once the field is added to the schema, it is assigned to the selected field grou
 
 If the same field group is already employed in other schemas, the newly added fields will automatically appear in those schemas.
 
-## Next steps
+## Next steps {#next-steps}
 
 This guide covered how to create and edit field groups using the Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
 

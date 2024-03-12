@@ -8,7 +8,7 @@ exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
 
 ## Overview {#overview} 
 
-[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) is a popular Customer Relationship Management (CRM) platform and supports the below:
+[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) is a popular Customer Relationship Management (CRM) platform and supports the types of profiles described below:
 
 * [Leads](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) - A lead is the name of a person or company who may (or may not) be interested in the products or services you sell.
 * [Contacts](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) - A contact is an individual with whom one of your representatives has established a relationship and has been qualified as a potential customer.     
@@ -21,13 +21,13 @@ When [activating segments](#activate), you can select between either leads or co
 
 ## Use cases {#use-cases}
 
-As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build audiences from your offline data and send these audiences to Salesforce CRM, to display in the users' feeds as soon as audiences and profiles are updated in Adobe Experience Platform.
+As a marketer, you can deliver personalized experiences to your users, based on attributes from their Adobe Experience Platform profiles. You can build audiences from your offline data and send these audiences to Salesforce CRM, to update CRM membership as soon as audiences and profiles are updated in Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
 ### Prerequisites in Experience Platform {#prerequisites-in-experience-platform}
 
-Before activating data to the Salesforce CRM destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) created in [!DNL Experience Platform].
+Before activating data to the Salesforce CRM destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), and [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) created in [!DNL Experience Platform].
 
 ### Prerequisites in [!DNL Salesforce CRM] {#prerequisites-destination}
 
@@ -117,7 +117,7 @@ If your [!DNL Salesforce] account administrator has enforced IP restrictions, yo
 
 ## Supported identities {#supported-identities}
 
-[!DNL Salesforce CRM] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Salesforce CRM] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
@@ -138,7 +138,7 @@ Refer to the table below for information about the destination export type and f
 
 >[!IMPORTANT]
 >
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
@@ -179,8 +179,9 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
->
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+> 
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 

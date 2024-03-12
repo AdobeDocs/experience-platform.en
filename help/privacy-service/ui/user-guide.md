@@ -32,19 +32,25 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 | UI label | Regulation |
 | --- | --- |
+| [!UICONTROL APA_AUS] | The [!DNL Australia Privacy Act (Privacy Act)] |
 | [!UICONTROL CPA] | The [!DNL Colorado Privacy Act] |
 | [!UICONTROL CCPA] | The [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPRA_USA] | The [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA] | The [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL GDPR] | The European Union's [!DNL General Data Protection Regulation] |
-| [!UICONTROL PDPA_THA] | Thailand's [!DNL Personal Data Protection Act] |
-| [!UICONTROL LGPD_BRA] | Brazil's [!DNL Lei Geral de Proteção de Dados] |
-| [!UICONTROL NZPA_NZL] | The New Zealand [!DNL Privacy Act] |
-| [!UICONTROL VCDPA_USA] | The [!DNL Virginia Consumer Data Protection Act] |
-| [!UICONTROL CPRA_USA] | The [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL APA_AUS] | The [!DNL Australia Privacy Act (Privacy Act)] |
 | [!UICONTROL HIPAA_AUS] | The [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL LGPD_BRA] | Brazil's [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL MHMDA] | The [!DNL Washington My Health My Data Act] |
+| [!UICONTROL NZPA_NZL] | The New Zealand [!DNL Privacy Act] |
+| [!UICONTROL PDPA_THA] | Thailand's [!DNL Personal Data Protection Act] |
+| [!UICONTROL UCPA]  | The [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_USA] | The [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
+
+<!--Not released yet:
+| [!UICONTROL PDPA_VNM] | Vietnam's [!DNL Personal Data Protection Decree] |
+ -->
 
 >[!NOTE]
 >
@@ -131,6 +137,8 @@ The **[!UICONTROL Create Request]** dialog opens, displaying the available optio
 <img src="../images/user-guide/request-builder.png" width=500 /><br/>
 
 Select the **[!UICONTROL Job Type]** of the request ("Delete" or "Access") and one or more available products from the list.
+
+Privacy Service supports two kinds of job requests for personal data: [!UICONTROL Access] (read) and/or [!UICONTROL Delete]. You can either submit a request to receive all information held in the product that relates to the subject of the inquiry, or request to delete all the information that relates to the subject of the inquiry.
 
 <img src="../images/user-guide/type-and-products.png" width=500 /><br/>
 

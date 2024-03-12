@@ -1,8 +1,8 @@
 ---
 description: Learn how to configure the file export settings for destinations built with Destination SDK.
 title: Batch configuration
+exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
 ---
-
 # Batch configuration {#batch-configuration}
 
 Use the batch configuration options in Destination SDK to allow users to customize the exported file names and to configure the export schedule according to their preference.
@@ -149,7 +149,7 @@ After reading this article, you should have a better understanding of how you ca
 To learn more about the other destination components, see the following articles:
 
 * [Customer authentication configuration](customer-authentication.md)
-* [OAuth2 authentication](oauth2-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
 * [Customer data fields](customer-data-fields.md)
 * [UI attributes](ui-attributes.md)
 * [Schema configuration](schema-configuration.md)

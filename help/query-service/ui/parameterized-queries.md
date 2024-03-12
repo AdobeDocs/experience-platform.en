@@ -1,17 +1,14 @@
 ---
 title: Parameterized Queries
 description: Learn how to use parameterized queries in the Adobe Experience Platform UI.
+exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
 ---
-# Parameterized queries (limited release) {#parameterized-queries}
+# Parameterized queries {#parameterized-queries}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
 >title="Parameterized queries"
 >abstract="Use parameterized queries to add parameter values at the time of execution. This allows you to work with dynamic data and reuse queries for different use cases. Use the `'$'` preface to enter a query parameter into your query in the text editor. Next, add a value for the key in the Query parameters section below the editor."
-
->[!IMPORTANT]
->
->The parameterized query UI feature is available in a **limited release only** and is not available to all customers.
 
 Query Service supports the use of parameterized queries in the Query Editor. With parameterized queries, you can now use placeholders for parameters and add the parameter values at execution time. Placeholders allow you to work with dynamic data where you don't know what the values will be until the statement is executed. You can also prepare your queries ahead of time and reuse them for similar purposes. Reusing queries saves considerable effort as you avoid creating distinct SQL queries for each use case.
 
@@ -21,7 +18,7 @@ Before continuing with this guide, read the [Query Editor UI guide](./user-guide
 
 >[!NOTE]
 >
->Within the Adobe Experience Platform UI, parameterized queries are only supported at the parent level of inline templates. This means that parameterized queries only work when used in the original template. Child templates must be a static template and cannot have dynamic parameters. See the [inline templates documentation](../essential-concepts/inline-templates.md) to learn more.
+>Within the Adobe Experience Platform UI, parameterized queries are only supported at the parent level of inline templates. This means that parameterized queries only work when used in the original template. Child templates must be a static template and cannot have dynamic parameters. See the [inline templates documentation](../key-concepts/inline-templates.md) to learn more.
 
 ## Parameterized query syntax {#syntax}
 
@@ -44,21 +41,17 @@ SELECT
 
 To create your parameterized query in the UI, navigate to the Query Editor. See the section on [accessing the Query Editor](./user-guide.md#accessing-query-editor) for more instructions.
 
-Use the `'$'` preface to enter a query parameter into your query in the text editor. Next, add the missing value for the key in the [!UICONTROL Query parameters] section below the editor. The query cannot be executed if you neglect to add a value to any of the required keys. An alert icon (![An alert icon.](../images/ui/parameterized-queries/alert-icon.png)) appears in the Query Parameters section next to any empty [!UICONTROL Value] input fields.
+Use the `'$'` preface to enter a query parameter into your query in the text editor. Next, select the **[!UICONTROL Query parameters]** tab next to the [!UICONTROL Console] add the missing value for the key. The query cannot be executed if you neglect to add a value to any of the required keys. An alert icon (![An alert icon.](../images/ui/parameterized-queries/alert-icon.png)) appears in the Query Parameters section next to any empty [!UICONTROL Value] input fields.
+
+>[!NOTE]
+>
+>If your query does not take parameters, you can still enter unnecessary parameters within the Query Editor. The Query Editor ignores all unnecessary key-value pairs and they have no effect on the execution or the results of the query.
 
 ![The Query Editor with a parameterized query and the Query parameters section highlighted.](../images/ui/parameterized-queries/parameterized-query.png)
 
 >[!TIP]
 >
 >Change tabs from [!UICONTROL Query parameters] to [!UICONTROL Console] to view the console output of the query. 
-
-If you remove a parameter and try to execute the query again after it has already been run, an error message is displayed in the [!UICONTROL Query parameters] section to alert you.
-
->[!NOTE]
->
->If your query does not take parameters, you can still enter unnecessary parameters within the Query Editor. The Query Editor ignores all unnecessary key-value pairs and they have no effect on the execution or the results of the query.
-
-![The Query Editor with an empty value field and the query parameters error highlighted.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## Use query logs details to check parameter values {#check-parameter-values}
 

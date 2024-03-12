@@ -2,6 +2,8 @@
 title: Lead to account matching in Real-Time CDP B2B
 type: Documentation
 description: An overview and more information about the lead to account matching feature in Experience Platform CDP B2B.
+feature: Get Started, Profiles, B2B
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
 ---
 # Lead to account matching in Real-Time CDP B2B

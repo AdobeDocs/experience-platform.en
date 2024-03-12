@@ -31,7 +31,7 @@ Contract "C" labels are used to categorize data that has contractual obligations
 | [C6](#c6) | Data cannot be used for on-site ad targeting. |
 | [C7](#c7) | Data cannot be used for on-site targeting of content. |
 | [C8](#c8) | Data cannot be used for measurement of your organization's websites or apps. |
-| [C9](#c9) | Data cannot be used in Data Science workflows. |
+| [C9](#c9) | Data cannot be used in data science workflows. |
 | [C10](#c10) | Data cannot be used for stitched identity activation. |
 | [C11](#c11) | Data cannot be shared with Segment Match partners. |
 | [C12](#c12) | Data cannot be exported in any way. |
@@ -67,6 +67,8 @@ This label is used to govern the use of prospect data.
 | Label | Definition |
 | --- | --- |
 | **Third-Party** | Third-party data is data provided to you by a third-party data vendor. A third-party data vendor is an entity that has entered into an agreement with your organization authorizing you to access, use, display, and transmit the third party's data in conjunction with Platform.  |
+| **Third-Party-Enrichment**  | Data collected by a third-party organization that is not directly related to the data subject. The label should be applied to third-party data that is used for enriching first-party profiles. |
+| **Third-Party-Prospecting** | Data collected by a third-party organization that is not directly related to the data subject. The label should be applied to third-party data used for top of the funnel prospecting to net-new customers. |
 
 ## Appendix
 

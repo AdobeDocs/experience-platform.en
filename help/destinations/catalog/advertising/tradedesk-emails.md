@@ -32,18 +32,18 @@ Before you can activate audiences to [!DNL The Trade Desk], you must contact you
 
 ## ID Matching Requirements {#id-matching-requirements}
 
-Depending on the type of IDs you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements. Please read the [Identity Namespace overview](/help/identity-service/namespaces.md) for more information.  
+Depending on the type of IDs you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements. Please read the [Identity Namespace overview](/help/identity-service/features/namespaces.md) for more information.  
 
 ## Supported identities {#supported-identities}
 
-[!DNL The Trade Desk] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the ID matching requirements section and use the appropriate namespaces for plain text and hashed email addresses, respectively.
 
 |Target Identity|Description|Considerations|
 |---|---|---|
 |Email|Email addresses (clear text) |Input `email` as the target identity when your source identity is an Email namespace or attribute.|
-|Email_LC_SHA256|Email addresses need to be hashed using SHA256 and lowercased. Be sure to follow any [email normalization](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) rules required. You won't be able to change this setting later. |Input `hashed_email` as the target identity when your source identity is an Email_LC_SHA256 namespace or attribute.|
+|Email_LC_SHA256|Email addresses need to be hashed using SHA256 and lowercased. You won't be able to change this setting later. |Input `hashed_email` as the target identity when your source identity is an Email_LC_SHA256 namespace or attribute.|
 
 {style="table-layout:auto"}
 
@@ -80,7 +80,7 @@ Refer to the table below for information about the destination export type and f
 
 ### Fill in Destination Details {#fill-in-details}
 
-Before you can send, or activate, audience data to a destination, you must set up a connection to your own destination platform. While [setting up](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) this destination, you must provide the following information:
+Before you can send, or activate, audience data to a destination, you must set up a connection to your own destination platform. While [setting up](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) this destination, you must provide the following information:
 
 *  **[!UICONTROL Account Type]**: Please choose the **[!UICONTROL Existing Account]** option. 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future. 
@@ -92,6 +92,11 @@ Before you can send, or activate, audience data to a destination, you must set u
 When connecting to the destination, setting a data governance policy is completely optional. Please review the Experience Platform [data governance overview](/help/data-governance/policies/overview.md) for more details.  
 
 ## Activate audiences to this destination {#activate}
+
+>[!IMPORTANT]
+> 
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [activate audience data to batch profile export destinations](/help/destinations/ui/activate-batch-profile-destinations.md) for instructions on activating audiences to a destination. 
 

@@ -22,9 +22,9 @@ The filter icon (![Filter Icon Image](../images/ui/explore/icon.png)) reveals co
 
 For example, to filter the list to only show standard data types provided by Adobe, select **[!UICONTROL Datatype]** and **[!UICONTROL Adobe]** under the **[!UICONTROL Type]** and **[!UICONTROL Owner]** sections, respectively.
 
-The **[!UICONTROL Included in Profile]** toggle allows you to filter results to show only resources that are used in schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md).
+The **[!UICONTROL Included in Profile]** toggle allows you to filter results to show only resources that are used in schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md). The **[!UICONTROL Show adhoc schemas]** toggle filters the list of schemas that were created with fields that are namespaced for use only by a single dataset.
 
-![](../images/ui/explore/filter.png)
+![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with the filters panel highlighted.](../images/ui/explore/filter.png)
 
 When listing resources on the **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, or **[!UICONTROL Data types]** tabs, you can select **[!UICONTROL Adobe]** to only show standard resources or **[!UICONTROL Customer]** to only show resources created by your organization.
 
@@ -47,6 +47,14 @@ Once you select a resource, its structure opens in the canvas.
 All object-type fields containing sub-properties are collapsed by default when they first appear in the canvas. To show the sub-properties of any field, select the icon next to its name.
 
 ![](../images/ui/explore/field-expand.png)
+
+### Standard class and field group indicator {#standard-class-and-field-group-indicator}
+
+Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](../images/ui/explore/padlock-icon.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
+
+![The Schema Editor with the padlock icon highlighted](../images/ui/explore/schema-editor-padlock-icon.png)
+
+See the [Add custom fields to standard field groups](./resources/schemas.md) documentation for guidance. You cannot edit a standard class.
 
 ### System-generated fields {#system-fields}
 
@@ -80,7 +88,7 @@ If the field you are inspecting is an enum field, the right rail will also displ
 
 When inspecting schemas that contain identity fields, these fields are listed in the left rail under the class or field group that provides them to the schema. Select the identity field name in the left rail to reveal the field in the canvas, regardless of how deeply it is nested.
 
-Identity fields are highlighted in the canvas with a fingerprint icon (![Fingerprint Icon Image](../images/ui/explore/identity-symbol.png)). If you select the identity field's name, you can view additional information such as the [identity namespace](../../identity-service/namespaces.md) and whether or not the field is the primary identity for the schema.
+Identity fields are highlighted in the canvas with a fingerprint icon (![Fingerprint Icon Image](../images/ui/explore/identity-symbol.png)). If you select the identity field's name, you can view additional information such as the [identity namespace](../../identity-service/features/namespaces.md) and whether or not the field is the primary identity for the schema.
 
 ![](../images/ui/explore/identity-field.png)
 

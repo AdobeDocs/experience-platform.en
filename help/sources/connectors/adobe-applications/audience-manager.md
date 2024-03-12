@@ -7,6 +7,13 @@ exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
 ---
 # Audience Manager source
 
+>[!IMPORTANT]
+>
+>On your initial set up, the Adobe Audience Manager source returns an error messages that explains that an identity namespace with a given `namespaceCode={VALUE}` does not exist. **Note**: In the back end, `namespaceCode` is used to refer to identity symbol. To complete your integration, you must:
+>
+>- [Create a custom namespace in Identity Service](../../../identity-service/features/namespaces.md#create-custom-namespaces) with the specified identity symbol (`VALUE`) .
+>- Re-ingest your data.
+
 The Adobe Audience Manager source streams first-party data collected in Adobe Audience Manager for activation in Adobe Experience Platform. The Audience Manager source ingests two types of data to Platform:
 
 - **Real-time data:** Data captured in real time on Audience Manager's data collection server. This data is used in Audience Manager to populate rule-based traits and will surface in Platform in the shortest latency time.

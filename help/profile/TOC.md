@@ -3,6 +3,7 @@ audience: user
 user-guide-title: Real-Time Customer Profile Guide
 user-guide-description: Merge customer data to create a unified view of customer interactions across channels.
 feature: Profiles
+role: User
 ---
 
 # [!DNL Real-Time Customer Profile] {#profile}
@@ -11,12 +12,12 @@ feature: Profiles
 * [Profile overview (Video)](video/profile-overview.md)
 * [[!DNL Profile] and Segmentation guardrails](guardrails.md)
 * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
+* [Edge profiles](edge-profiles.md)
 * [Experience Event expirations](event-expirations.md)
 * [Pseudonymous Profile expirations](pseudonymous-profiles.md)
 * [!DNL Profile] API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
-  * [Edge projections](api/edge-projections.md)
   * [Entities ([!DNL Profile] access)](api/entities.md)
   * [Export jobs ([!DNL Profile] export)](api/export-jobs.md)
   * [Preview sample status ([!DNL Profile] preview)](api/preview-sample-status.md)
@@ -25,7 +26,7 @@ feature: Profiles
   * [[!DNL Profile] UI guide](ui/user-guide.md)
   * [[!DNL Profile] detail customization](ui/profile-customization.md)
   * [Prospect profiles](ui/prospect-profile.md)
-* (Beta) Computed attributes {#computed-attributes}
+* Computed attributes {#computed-attributes}
   * [Overview](computed-attributes/overview.md)
   * [Computed attributes API guide](computed-attributes/api.md)
   * [Computed attributes UI guide](computed-attributes/ui.md)

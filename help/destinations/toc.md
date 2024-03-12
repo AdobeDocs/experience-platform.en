@@ -4,6 +4,7 @@ user-guide-title: Destinations Guide
 user-guide-description: Activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and more.
 description: This document lists the table of contents for Adobe Experience Platform destinations
 feature: Destinations
+role: Admin,User
 ---
 
 # Destinations {#destinations}
@@ -16,29 +17,32 @@ feature: Destinations
   * [Profile export behavior for different destination types](./how-destinations-work/profile-export-behavior.md)
   * [Identity handling in the destinations activation workflow](./how-destinations-work/identity-handling.md)
 * API tutorials {#api}
-    * [API migration guide for cloud storage destinations](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) 
+    * [Activate data to file-based destinations by using the Flow Service API](/help/destinations/api/activate-segments-file-based-destinations.md) 
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
-    * [Connect to batch cloud storage and email marketing destinations and activate data using the Flow Service API](./api/connect-activate-batch-destinations.md)
+    * [Connect to file-based email marketing destinations and activate data using the Flow Service API](./api/connect-activate-batch-destinations.md)
     * [(Beta) Activate audiences to batch destinations via the ad-hoc activation API](./api/ad-hoc-activation-api.md)
     * [Edit destination](./api/edit-destination.md)
     * [Update destination dataflows](./api/update-destination-dataflows.md)
     * [Delete destination accounts](./api/delete-destination-account.md)
     * [Delete destination dataflows](./api/delete-destination-dataflow.md)
-    * [(Beta) Activate data to file-based destinations by using the Flow Service API](/help/destinations/api/activate-segments-file-based-destinations.md)
-    * [(Beta) Export datasets](/help/destinations/api/export-datasets.md)
+    * [Export datasets](/help/destinations/api/export-datasets.md)
+    * [Sort and filter API responses for destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases) 
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
     * [Create a new destination connection](./ui/connect-destination.md)
-    * Activate audience data to destinations{#activate}
+    * Activate data to destinations{#activate}
         * [Activation overview](./ui/activation-overview.md)
         * [Activate audiences to streaming audience export destinations](./ui/activate-segment-streaming-destinations.md)
         * [Activate audiences to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
         * [Activate audiences to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
         * [Activate audiences to edge personalization destinations](./ui/activate-edge-personalization-destinations.md)
+        * [Activate audiences to curated destinations based on LiveRamp identifiers](./ui/activate-curated-destinations.md)
         * [Activate prospect audiences to destinations](./ui/activate-prospect-audiences.md)
+        * [Activate account audiences to destinations](./ui/activate-account-audiences.md)
         * [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
-        * [(Beta) Export datasets using the Experience Platform UI](./ui/export-datasets.md)
+        * [Export datasets using the Experience Platform UI](./ui/export-datasets.md)
         * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
+        * [(Beta) Use calculated fields to export arrays in flat schema files](/help/destinations/ui/export-arrays-calculated-fields.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Delete destination accounts](./ui/delete-destination-account.md)
@@ -51,7 +55,7 @@ feature: Destinations
     * [Destinations catalog overview](./catalog/overview.md)
     * Adobe destinations{#adobe}
         * [Adobe destinations overview](./catalog/adobe/overview.md)
-        * [(Beta) Experience Cloud audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+        * [Experience Cloud audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
         * [Marketo Engage connection](./catalog/adobe/marketo-engage.md)
         * [Marketo Measure Ultimate connection](./catalog/adobe/marketo-measure-ultimate.md)
         * [Experience Platform audience sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
@@ -81,6 +85,8 @@ feature: Destinations
         * [Microsoft Bing connection](./catalog/advertising/bing.md)
         * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
+        * [Pinterest connection upgrade](./catalog/advertising/pinterest-upgrade.md)
+        * [PubMatic Connect connection](./catalog/advertising/pubmatic.md)
         * [Snapchat Ads connection](./catalog/advertising/snap-inc.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
         * [(Beta) The Trade Desk CRM connection](./catalog/advertising/tradedesk-emails.md)
@@ -96,6 +102,7 @@ feature: Destinations
         * [Decibel extension](./catalog/analytics/decibel.md)
         * [Demandbase extension](./catalog/analytics/demandbase.md)
         * [DialogTech extension](./catalog/analytics/dialogtech.md)
+        * [Gainsight PX connection](./catalog/analytics/gainsight-px.md)
         * [Google Global Site Tag extension](./catalog/analytics/gtag-analytics.md)
         * [Google Universal Analytics extension](./catalog/analytics/google-universal-analytics.md)
         * [JW Player Analytics (Beta) extension](./catalog/analytics/jw-player-analytics.md)
@@ -117,8 +124,9 @@ feature: Destinations
         * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
         * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
-        * [IP address allowlist for SFTP destinations](./catalog/cloud-storage/ip-address-allow-list.md)
+        * [IP address allowlist for file-based cloud storage destinations](./catalog/cloud-storage/ip-address-allow-list.md)
     * Customer Relationship Management (CRM) destinations {#crm}
+        * [Hubspot connection](./catalog/crm/hubspot.md)
         * [Salesforce CRM connection](./catalog/crm/salesforce.md)
         * [Microsoft Dynamics 365 connection](./catalog/crm/microsoft-dynamics-365.md)
         * [Outreach connection](catalog/crm/outreach.md)
@@ -126,6 +134,8 @@ feature: Destinations
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
+    * eCommerce destinations {#ecommerce}
+        * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
     * Email destinations {#email}
         * [Bizible extension](./catalog/email/bizible.md)
         * [Marketo extension](./catalog/email/marketo.md)
@@ -136,6 +146,7 @@ feature: Destinations
         * [Adobe Campaign connection](./catalog/email-marketing/adobe-campaign.md)
         * [Adobe Campaign Managed Cloud Services connection](./catalog/email-marketing/adobe-campaign-managed-services.md)
         * [Mailchimp Interest Categories](./catalog/email-marketing/mailchimp-interest-categories.md)
+        * [Mailchimp Tags](./catalog/email-marketing/mailchimp-tags.md)
         * [(API) Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua-api.md)
         * [(Files) Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua.md)
         * [Oracle Responsys connection](./catalog/email-marketing/oracle-responsys.md)
@@ -151,8 +162,10 @@ feature: Destinations
         * [Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
         * [Braze connection](./catalog/mobile-engagement/braze.md)
         * [Line connection](./catalog/mobile-engagement/line.md)
+        * [Moengage connection](./catalog/mobile-engagement/moengage.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
+        * [(Limited availability) Audience Analysis](./catalog/personalization/audience-analysis.md)
         * [Adobe Commerce connection](./catalog/personalization/adobe-commerce.md)
         * [Adobe Target connection](./catalog/personalization/adobe-target-connection.md)
         * [Adobe Target extension](./catalog/personalization/adobe-target.md)
@@ -168,7 +181,6 @@ feature: Destinations
         * [Pega Profile connection](./catalog/personalization/pega-profile.md)
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
-        * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
         * [Facebook connection](./catalog/social/facebook.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
         * [TikTok connection](./catalog/social/tiktok.md)
@@ -178,6 +190,7 @@ feature: Destinations
         * [IP address allowlist for streaming destinations](./catalog/streaming/ip-address-allow-list.md)
     * Survey destinations {#survey}
         * [Survey destinations overview](./catalog/survey/overview.md)
+        * [Qualtrics Automations destination](./catalog/survey/qualtrics-automations.md)
         * [Foresee extension destination](./catalog/survey/foresee.md)
         * [InMoment extension](./catalog/survey/inmoment.md)
         * [Qualtrics Website Feedback extension](./catalog/survey/qualtrics.md)
@@ -203,7 +216,7 @@ feature: Destinations
             * [File formatting configuration](./destination-sdk/functionality/destination-server/file-formatting.md)
         * Destination configuration components {#destination-configuration}
             * [Customer authentication configuration](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
-            * [OAuth2 authentication](./destination-sdk/functionality/destination-configuration/oauth2-authentication.md)
+            * [OAuth2 authorization](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
             * [Customer data fields](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
             * [UI attributes](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
             * [Partner schema configuration](./destination-sdk/functionality/destination-configuration/schema-configuration.md)
@@ -228,6 +241,7 @@ feature: Destinations
             * [Configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
             * [Configure an Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
             * [Configure an SFTP destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+            * [Configure a file-based destination to export prospect audiences](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
     * Destination authoring API reference {#authoring-api}
         * [Destination SDK (Destination Authoring) API reference](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
         * Destination server operations {#server-operations}

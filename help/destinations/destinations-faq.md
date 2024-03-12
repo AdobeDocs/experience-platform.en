@@ -44,6 +44,40 @@ To ensure all the profiles are sent to your destination, you must create a new a
 
 +++
 
+### When an audience is removed from a destination, is there any signal that is sent to the destination indicating that the audience is removed?
+
++++Answer
+
+No, there is no dependency between the Experience Platform destination and the customer instance of the target system. On the receiving side, the only indication that the target system would see is that it stopped receiving that audience data.
+
++++
+
+<!--
+## [!DNL Experience Cloud Audiences] {#eca-faq}
+
+### What are the differences between the Experience Cloud Audiences and Adobe Target destinations?
+
++++Answer
+
+See the table below for a feature comparison between the Experience Cloud Audiences and Adobe Target destinations.
+
+||Experience Cloud Audiences|Adobe Target|
+|---|---|---|
+| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, Adobe Target, Adobe Analytics, Advertising Cloud, Marketo, Adobe Campaign | Supports audience activation only to Adobe Target |
+| **Supports audience activation** | ✓ | ✓ |
+| **Supports attribute activation** | X | ✓ |
+| **Latency** | Profiles begin activating in 6 hours. Full population is visible in 48 hours​. |Depends on implementation​ type. <ul><li>Web SDK enables same-page/next-page​ personalization.</li><li>AT.js enables next-session personalization.</li></ul> |
+| **DULE support** | ✓ | ✓ |
+| **Marketing actions support** | ✓ | ✓ |
+| **Supported IDs** | [!DNL ECID], [!DNL GAID], [!DNL IDFA], [!DNL email_lc_sha256] | Any ID type |
+| **Sandbox support** | One sandbox | Multiple sandboxes |
+| **Consent support** | X | Yes. Requires Privacy & Security Shield. |
+| **Edge segmentation support** | Supports activation of edge audiences. Does not support edge segmentation. | Supports edge segmentation and activation of edge audiences. |
+| **Supported audiences** | All types of audiences  | Edge merge policy required for activation.|
+
++++
+
+-->
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
@@ -54,6 +88,7 @@ Before you can send your audiences to [!DNL Facebook], make sure you meet the fo
 
 * Your [!DNL Facebook] user account must have the **[!DNL Manage campaigns]** permission enabled for the Ad account that you plan to use.
 * The **Adobe Experience Cloud** business account must be added as an advertising partner in your [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. See [Add Partners to Your Business Manager](https://www.facebook.com/business/help/1717412048538897) in the Facebook documentation for details.
+    
     >[!IMPORTANT]
     >
     > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. This is required for the [!DNL Adobe Experience Platform] integration.
@@ -156,11 +191,11 @@ For detailed explanations on the ID matching requirements, see [ID matching requ
 ### Do I need to use the Experience Platform Web SDK to send audiences and attributes to Adobe Target?
 
 +++Answer
-No, [Web SDK](../edge/home.md) is not required to activate audiences to [Adobe Target](catalog/personalization/adobe-target-connection.md).
+No, [Web SDK](../web-sdk/home.md) is not required to activate audiences to [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-However, if [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) is used instead of Web SDK, only next-session personalization is supported.
+However, if [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) is used instead of Web SDK, only next-session personalization is supported.
 
-For [same-page and next-page personalization](ui/activate-edge-personalization-destinations.md) use cases, you must use either [Web SDK](../edge/home.md) or the [Edge Network Server API](../server-api/overview.md). See the documentation on [activating audiences to edge destinations](ui/activate-edge-personalization-destinations.md) for more implementation details.
+For [same-page and next-page personalization](ui/activate-edge-personalization-destinations.md) use cases, you must use either [Web SDK](../web-sdk/home.md) or the [Edge Network Server API](../server-api/overview.md). See the documentation on [activating audiences to edge destinations](ui/activate-edge-personalization-destinations.md) for more implementation details.
 +++
 
 ### Is there a limit on the number of attributes that I can send from Real-time Customer Data Platform to Adobe Target or a Custom Personalization destination?
@@ -182,13 +217,13 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### After I create an audience in Experience Platform, how long will it take for that audience to be available for edge segmentation use cases?
 
 +++Answer
-Audience definitions are propagated to the [Edge Network](../edge/home.md) in up to one hour. However, if an audience is activated within this first hour, some visitors who would have qualified for the audience could be missed. 
+Audience definitions are propagated to the [Edge Network](../web-sdk/home.md) in up to one hour. However, if an audience is activated within this first hour, some visitors who would have qualified for the audience could be missed. 
 +++
 
 ### Where can I see the activated attributes in Adobe Target?
 
 +++Answer
-Attributes will be available to use in Target in [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) and [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=en) offers. 
+Attributes will be available to use in Target in [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) and [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) offers. 
 +++
 
 ### Can I create a destination without a datastream and then add a datastream to the same destination at a later point?

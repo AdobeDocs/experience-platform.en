@@ -4,12 +4,14 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentation Service Guide
 user-guide-description: Build audiences from your Real-Time Customer Profile data using Adobe Experience Platform generated segment definitions or external sources.
 feature: Segments
+role: User
 ---
 
 # Adobe Experience Platform Segmentation Service {#segmentation}
 
 - [Segmentation Service overview](home.md)
 - [Segmentation data types](data-types.md)
+- [Segmentation guardrails](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - Segmentation API {#api}
     - [Overview](api/overview.md)
     - [Getting started](api/getting-started.md)
@@ -27,11 +29,13 @@ feature: Segments
     - [Audience dashboard](ui/audience-dashboard.md)
     - [Audience Composition](ui/audience-composition.md)
     - [Segment Builder](ui/segment-builder.md)
+    - [Account audiences](ui/account-audiences.md)
     - [Look-alike audiences](ui/lookalike-audiences.md)
     - [Prospect audiences](ui/prospect-audience.md)
     - [Edge segmentation](ui/edge-segmentation.md)
     - [Streaming segmentation](ui/streaming-segmentation.md)
     - [Streaming segmentation (Video)](video/streaming-segmentation-overview.md)
+    - [Ignore year time constraint update](ui/ignore-year.md)
     - [Time constraints refactoring](ui/segment-refactoring.md)
     - Segment Match {#segment-match}
       - [Segment Match overview](ui/segment-match/overview.md) 

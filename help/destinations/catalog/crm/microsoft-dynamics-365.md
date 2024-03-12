@@ -23,7 +23,7 @@ As a marketer, you can deliver personalized experiences to your users, based on 
 
 ### Experience Platform prerequisites {#prerequisites-in-experience-platform}
 
-Before activating data to the [!DNL Dynamics 365] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), and [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=en) created in [!DNL Experience Platform].
+Before activating data to the [!DNL Dynamics 365] destination, you must have a [schema](/help/xdm/schema/composition.md), a [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), and [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) created in [!DNL Experience Platform].
 
 Refer to Adobe's documentation for [Audience Membership Details schema field group](/help/xdm/field-groups/profile/segmentation.md) if you need guidance on audience statuses.
 
@@ -76,11 +76,11 @@ The [Requests limits and allocations](https://docs.microsoft.com/en-us/power-pla
 
 ## Supported identities {#supported-identities}
 
-[!DNL Dynamics 365] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Dynamics 365] supports update of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Example|Description|Considerations|
 |---|---|---|---|
-| `contactId` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Unique identifier for a contact.| **Mandatory**. Refer to the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) for further details. |
+| `contactid` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Unique identifier for a contact.| **Mandatory**. Refer to the [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) for further details. |
 
 {style="table-layout:auto"}
 
@@ -105,7 +105,7 @@ Refer to the table below for information about the destination export type and f
 
 >[!IMPORTANT]
 >
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the configure destination workflow, fill in the fields listed in the two sections below.
 
@@ -143,8 +143,9 @@ When you are finished providing details for your destination connection, select 
 ## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
->
->To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+> 
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
@@ -155,31 +156,32 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 ![Platform UI screenshot example for Add new mapping.](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
-1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** category and select `contactId`.
+1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** category and select `contactid`.
 ![Platform UI screenshot example for Source mapping.](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
 1. In the **[!UICONTROL Select target field]** window, select the type of target field that you want to map your source field to.
     * **[!UICONTROL Select identity namespace]**: select this option to map your source field to an identity namespace from the list.
-    ![Platform UI screenshot showing Target mapping for contactId.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
+    ![Platform UI screenshot showing Target mapping for contactid.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
     * Add the following mapping between your XDM profile schema and your [!DNL Dynamics 365] instance:
         |XDM Profile Schema|[!DNL Dynamics 365] Instance| Mandatory|
         |---|---|---|
-        |`contactId`|`contactId`| Yes |
+        |`contactid`|`contactid`| Yes |
 
     * **[!UICONTROL Select custom attributes]**: select this option to map your source field to a custom attribute that you define in the **[!UICONTROL Attribute name]** field. Refer to [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) for a comprehensive list of supported attributes.
-    ![Platform UI screenshot showing Target mapping for LastName.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
+    ![Platform UI screenshot showing Target mapping for email.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
         >[!IMPORTANT]
         >
-        >If you have a date or timestamp source field which is mapped to a [!DNL Dynamics 365] [date or timestamp](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) target field, ensure that the mapped value being is not empty. If the value passed is empty you will encounter a *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* error message and the data will not be updated. This is a [!DNL Dynamics 365] limitation.
+        > * Target field names should be in `lowercase`.
+        > * Additionally, if you have a date or timestamp source field which is mapped to a [!DNL Dynamics 365] [date or timestamp](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) target field, ensure that the mapped value is not empty. If the exported field value is empty you will encounter a *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* error message and the data will not be updated. This is a [!DNL Dynamics 365] limitation.
 
     * For instance, depending on the values you want to update, add the following mapping between your XDM profile schema and your [!DNL Dynamics 365] instance:
         |XDM Profile Schema|[!DNL Dynamics 365] Instance|
         |---|---|
-        |`person.name.firstName`|`FirstName`|
-        |`person.name.lastName`|`LastName`|
-        |`personalEmail.address`|`Email`|
+        |`person.name.firstName`|`firstname`|
+        |`person.name.lastName`|`lastname`|
+        |`personalEmail.address`|`emailaddress1`|
 
     * An example using these mappings is shown below:
     ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
@@ -244,6 +246,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
+|October 2023|Documentation update| Updated guidance to indicate all target attribute names should be in lowercase, in the [Mapping considerations and example](#mapping-considerations-example) step. |
 |August 2023|Functionality and documentation update| Added support for [!DNL Dynamics 365] custom field prefixes for custom fields which were not created within the default solution in [!DNL Dynamics 365]. A new input field, **[!UICONTROL Customization Prefix]**, has been added in the [Fill in destination details](#destination-details) step. (PLATIR-31602). |
 |Nov 2022|Initial release|Initial destination release and documentation publish.|
 

@@ -1,8 +1,8 @@
 ---
 description: Learn how to set up an aggregation policy to determine how HTTP requests to your destination should be grouped and batched.
 title: Aggregation policy
+exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
 ---
-
 # Aggregation policy
 
 To ensure maximum efficiency when exporting data to your API endpoint, you can use various settings to aggregate exported profiles into larger or smaller batches, group them by identity, and other use cases. This also allows you to tailor data exports to any downstream limitations on your API endpoint (rate limiting, number of identities per API call, etc.).
@@ -121,7 +121,7 @@ After reading this article, you should have a better understanding of how you ca
 To learn more about the other destination components, see the following articles:
 
 * [Customer authentication configuration](customer-authentication.md)
-* [OAuth2 authentication](oauth2-authentication.md)
+* [OAuth2 authorization](oauth2-authorization.md)
 * [Customer data fields](customer-data-fields.md)
 * [UI attributes](ui-attributes.md)
 * [Schema configuration](schema-configuration.md)

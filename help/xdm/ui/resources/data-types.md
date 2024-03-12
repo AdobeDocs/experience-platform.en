@@ -17,9 +17,13 @@ In Experience Data Model (XDM), data types are reusable fields that contain mult
 
 Adobe Experience Platform provides many standard data types that can be used to cover a wide variety of common experience management use cases. However, you can also define your own custom data types in order to serve your unique business needs.
 
+>[!NOTE]
+>
+>If a field is defined as a specific data type, you cannot create the same field with a different datatype in another schema. This constraint applies across your organization's tenant.
+
 This tutorial covers the steps for creating and editing custom data types in the Platform user interface.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for how data types contribute to XDM schemas.
 
@@ -27,20 +31,21 @@ While not required for this guide, it is recommended that you also follow the tu
 
 ## Open the [!DNL Schema Editor] for a data type {#data-type}
 
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace, then select the **[!UICONTROL Data types]** tab. A list of available data types is displayed, including those defined by Adobe and those created by your organization.
+In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace, then select the **[!UICONTROL Data types]** tab. A list of available data types is displayed. The list of data types is automatically filtered based on how they were created. The default setting displays the data types defined by Adobe. You can also filter the list to show those created by your organization. 
 
-![](../../images/ui/resources/data-types/data-types-tab.png)
+![The [!UICONTROL Schemas] workspace with [!UICONTROL Schemas] in the left navigation and [!UICONTROL Data types] highlighted.](../../images/ui/resources/data-types/data-types-tab.png)
 
-From here, you have two options:
+From here, you have the following options:
 
 - [Create a new data type](#create)
+- [Filter data types](#filter)
 - [Select an existing data type to edit](#edit)
 
 ### Create a new data type {#create}
 
 From the **[!UICONTROL Data types]** tab, select **[!UICONTROL Create data type]**.
 
-![](../../images/ui/resources/data-types/create.png)
+![The [!UICONTROL Schemas] workspace [!UICONTROL Data types] tab with [!UICONTROL Create data type] highlighted.](../../images/ui/resources/data-types/create.png)
 
 The [!DNL Schema Editor] appears, showing the current structure of the new data type in the canvas. On the right-hand side of the editor, you can provide a display name and optional description for the data type. Ensure that you provide a unique and concise name for your data type, as that is how it will be identified when adding it to a schema.
 
@@ -50,17 +55,25 @@ This tutorial creates a data type that describes a restaurant property, so the d
 
 From here, you can skip ahead to the [next section](#add-fields) to start adding fields to the new data type.
 
+### Filter data types {#filter}
+
+The list of available data types is pre-filtered based on how they were created. Select the radio button to choose between the [!UICONTROL Standard] and [!UICONTROL Custom] options. The [!UICONTROL Standard] option shows entities created by Adobe and the [!UICONTROL Custom] option displays entities created within your organization.
+
+![The [!UICONTROL Data types] tab of the [!UICONTROL Schemas] workspace with [!UICONTROL Standard] and [!UICONTROL Custom] highlighted.](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
+
 ### Edit an existing data type {#edit}
 
 >[!NOTE]
 >
 >Once an existing data type is used in a schema that has been enabled for use in Real-Time Customer Profile, only non-destructive changes can be made to that data type thereafter. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
 
-Only custom data types defined by your organization can be edited. To narrow down the displayed list, select the filter icon (![Filter Icon](../../images/ui/resources/data-types/filter.png)) to reveal controls for filtering based on [!UICONTROL Owner]. Select **[!UICONTROL Customer]** to show only custom data types owned by your organization.
+Only custom data types defined by your organization can be edited. Select **[!UICONTROL Custom]** to show only custom data types owned by your organization.
 
-Select the data type you want to edit from the list to open the right rail, showing the details of the data type. Select the name of the data type in the right rail to open its structure in the [!DNL Schema Editor].
+Select the data type you want to edit from the list to open the right rail, showing the details of the data type. From the details panel you can also download a sample file, copy the JSON structure or add the data type to a package. 
 
-![](../../images/ui/resources/data-types/edit.png)
+Select the name of the data type in the right rail to open its structure in the [!DNL Schema Editor].
+
+![The [!UICONTROL Data types] tab of the [!UICONTROL Schemas] workspace, with a data type, [!UICONTROL Custom] and the data type [!UICONTROL Name] highlighted.](../../images/ui/resources/data-types/edit.png)
 
 ## Add fields to the data type {#add-fields}
 
@@ -86,7 +99,7 @@ This demonstrates how flexible data types can be in terms of describing your dat
 
 Once you have finished adding fields to the data type, select **[!UICONTROL Save]** to save your changes and add the data type to the [!DNL Schema Library].
 
-## Add the data type to a schema
+## Add the data type to a schema {#add-data-type}
 
 Once you have created a data type, you can start using it in your schemas. Since XDM schemas are composed of a class and zero or more field groups, fields provided by a data type cannot be added to a schema directly. Instead, they must be included in a class or a field group.
 
@@ -104,7 +117,7 @@ The canvas updates the data type of the field from "[!UICONTROL Object]" to the 
 
 ![](../../images/ui/resources/data-types/converted.png)
 
-## Next steps
+## Next steps {#next-steps}
 
 This guide covered how to create and edit data types using the Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
 
