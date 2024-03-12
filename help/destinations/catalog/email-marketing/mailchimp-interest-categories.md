@@ -72,7 +72,7 @@ Additionally, refer to the [!DNL Mailchimp] [rate limits](https://mailchimp.com/
 
 ## Supported identities {#supported-identities}
 
-[!DNL Mailchimp] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Mailchimp] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 | Target Identity | Description | Considerations |
 |---|---|---|

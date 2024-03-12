@@ -30,7 +30,7 @@ Before sending data to your TikTok Ads Manager account, you will need to give Ad
 
 ## Supported identities {#supported-identities}
 
-TikTok supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+TikTok supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/features/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|

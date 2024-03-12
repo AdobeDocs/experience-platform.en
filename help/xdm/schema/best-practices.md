@@ -200,7 +200,7 @@ If you are not sure whether a particular field is necessary to include in a sche
 
 In Experience Platform, XDM fields marked as identities are used to stitch together information about individual customers coming from multiple data sources. Although a schema can have multiple fields marked as identities, a single primary identity must be defined for the schema to be enabled for use in [!DNL Real-Time Customer Profile]. See the section on [identity fields](./composition.md#identity) in the basics of schema composition for more detailed information on the use case of these fields.
 
-When designing your schemas, any primary keys in your relational database tables are likely candidates for primary identities. Other examples of applicable identity fields are customer email addresses, phone numbers, account IDs, and [ECID](../../identity-service/ecid.md).
+When designing your schemas, any primary keys in your relational database tables are likely candidates for primary identities. Other examples of applicable identity fields are customer email addresses, phone numbers, account IDs, and [ECID](../../identity-service/features/ecid.md).
 
 ### Adobe application schema field groups {#adobe-application-schema-field-groups}
 
@@ -225,13 +225,27 @@ For Adobe Analytics, ECID is the default primary identity. If an ECID value is n
 
 ## Data validation fields {#data-validation-fields}
 
-To prevent bad data being ingested into Platform, you are recommended to define the criteria for field level validation when creating your schemas. To set constraints on a particular field, select the field from the Schema Editor to open the [!UICONTROL Field properties] sidebar. See the documentation on [type-specific field properties](../ui/fields/overview.md#type-specific-properties) for exact descriptions of the available fields.
+When you ingest data into the data lake, data validation is only enforced for constrained fields. To validate a particular field during a batch ingestion, you must mark the field as constrained in the XDM schema. To prevent bad data from being ingested into Platform, you are recommended to define the criteria for field level validation when you create your schemas.
+
+>[!IMPORTANT]
+>
+>Validation does not apply to nested columns. If the field format is located within an array column, the data will not be validated.
+
+To set constraints on a particular field, select the field from the Schema Editor to open the **[!UICONTROL Field properties]** sidebar. See the documentation on [type-specific field properties](../ui/fields/overview.md#type-specific-properties) for exact descriptions of the available fields.
 
 ![The Schema Editor with the constraint fields highlighted in the [!UICONTROL Field properties] sidebar.](../images/best-practices/data-validation-fields.png)
 
->[!TIP]
->
->The following are a collection of suggestions for data modeling when creating a schema:<br><ul><li>**Consider primary identities**: For Adobe products like web SDK, mobile SDK, Adobe Analytics, and Adobe Journey Optimizer, the `identityMap` field often serves as the primary identity. Avoid designating additional fields as primary identities for that schema.</li><li>**Avoid using `_id` as an identity**: Avoid using the `_id` field in Experience Event schemas as an identity. It is meant for record uniqueness, not for use as an identity.</li><li>**Set length constraints**: It is best practice to set minimum and maximum lengths on fields marked as identities. These limitations help maintain consistency and data quality.</li><li>**Apply patterns for consistent values**: If your identity values follow a specific pattern, you should use the [!UICONTROL Pattern] setting to enforce this constraint. This setting can include rules like digits only, uppercase or lowercase, or specific character combinations. Use regular expressions to match patterns in your strings.</li><li>**Limit eVars in Analytics Schema**: Typically, an Analytics schema should have only one eVar designated as an identity. If you intend to use more than one eVar as an identity, you should double-check whether the data structure can be optimized.</li><li>**Ensure uniqueness of a selected field**: Your chosen field should be unique compared to the primary identity in the schema. If it is not, do not mark it as an identity. For instance, if multiple customers can provide the same email address, then that namespace is not a suitable identity. This principle also applies to other identity namespaces like phone numbers.</li></ul>
+### Tips to maintain data integrity {#data-integrity-tips}
+
+The following are a collection of suggestions to maintain data integrity when you create a schema.
+
+* **Consider primary identities**: For Adobe products like web SDK, mobile SDK, Adobe Analytics, and Adobe Journey Optimizer, the `identityMap` field often serves as the primary identity. Avoid designating additional fields as primary identities for that schema.
+* **Avoid using `_id` as an identity**: Avoid using the `_id` field in Experience Event schemas as an identity. It is meant for record uniqueness, not for use as an identity.
+* **Set length constraints**: It is best practice to set minimum and maximum lengths on fields marked as identities. A warning triggers if you try to assign a custom namespace to an identity field without meeting the minimum and maximum length constraints. These limitations help maintain consistency and data quality.
+* **Apply patterns for consistent values**: If your identity values follow a specific pattern, you should use the **[!UICONTROL Pattern]** setting to enforce this constraint. This setting can include rules like digits only, uppercase or lowercase, or specific character combinations. Use regular expressions to match patterns in your strings.
+* **Limit eVars in Analytics schemas**: Typically, an Analytics schema should have only one eVar designated as an identity. If you intend to use more than one eVar as an identity, you should double-check whether the data structure can be optimized.
+* **Ensure uniqueness of a selected field**: Your chosen field should be unique compared to the primary identity in the schema. If it is not, do not mark it as an identity. For instance, if multiple customers can provide the same email address, then that namespace is not a suitable identity. This principle also applies to other identity namespaces like phone numbers.
+* **Constraints trigger warnings for custom namespace fields**: Set constraints to trigger a warning when a schema field is marked with a custom namespace without specifying both minimum and maximum lengths. The warning serves as an important caution for maintaining data integrity. See the [type-specific field properties](../ui/fields/overview.md#type-specific-properties) documentation for information on how to set constraints on a particular field.
 
 ## Next steps
 

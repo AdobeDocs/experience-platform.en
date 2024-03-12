@@ -4,6 +4,7 @@ user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Query Service Guide
 user-guide-description: Use standard SQL to query data within the data lake in Experience Platform.
 feature: Queries
+role: User,Developer
 ---
 
 # Adobe Experience Platform Query Service {#query}
@@ -18,7 +19,7 @@ feature: Queries
     - [License usage](data-distiller/license-usage.md)
     - Derived datasets {#derived-datasets}
         - [Overview](data-distiller/derived-datasets/overview.md)
-        - [Seamless SQL flow](data-distiller/derived-datasets/seamless-sql-flow.md)
+        - [Create derived datasets with SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
         - [Create decile-based derived datasets](data-distiller/derived-datasets/decile-based-derived-attributes.md)
     - Customizable Insights for extended app reporting {#customizable-insights}
         - [Overview](data-distiller/customizable-insights/overview.md)
@@ -32,6 +33,7 @@ feature: Queries
         - [Export data to ML environments](data-distiller/ml-feature-pipelines/export-data.md)
         - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Use cases {#use-cases}
+    - [Supported use cases](use-cases/overview.md)
     - [Abandoned browse](use-cases/abandoned-browse.md)
     - [Attribution analysis](use-cases/attribution-analysis.md)
     - [Bot filtering](use-cases/bot-filtering.md)
@@ -43,7 +45,7 @@ feature: Queries
     - [List the page views of a user](use-cases/list-visitor-sessions.md)
     - [List visitors by their page views](use-cases/visitors-by-number-of-page-views.md)
     - [Propensity score](use-cases/propensity-score.md)
-    - [Lambda function example: Retrieve similar records](use-cases/retrieve-similar-records.md)
+    - [Retrieve similar records with higher-order functions](use-cases/retrieve-similar-records.md)
     - [Return and use merchandising variables from analytics data](use-cases/merchandising-variables.md)
     - [SQLAlchemy](use-cases/sqlalchemy.md)
     - [View the roll-up report for a visitor](use-cases/roll-up-report-of-a-visitor.md)
@@ -100,6 +102,7 @@ feature: Queries
     - [SQL overview](sql/overview.md)
     - [SQL syntax](sql/syntax.md)
     - [Adobe-defined functions](sql/adobe-defined-functions.md)
+    - [Higher-order functions](sql/higher-order-functions.md)
     - [Spark SQL functions](sql/spark-sql-functions.md)
     - [Metadata commands](sql/metadata.md)
     - [Prepared statements](sql/prepared-statements.md)

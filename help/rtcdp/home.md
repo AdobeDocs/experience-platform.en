@@ -3,6 +3,7 @@ title: Real-Time CDP product documentation
 description: Learn how to use Adobe Real-Time CDP.
 solution: Real-Time Customer Data Platform
 product: Real-Time Customer Data Platform
+exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
 ---
 # Adobe [!DNL Real-Time CDP] Documentation {#rtcdp-documentation}
 
@@ -14,17 +15,17 @@ Get a glimpse of the newest enhancements in Real-Time CDP product and documentat
 
 >[!BEGINTABS]
 
+>[!TAB Use Case Playbooks]
+
+The [!UICONTROL Use Case Playbooks] functionality is now generally available for all Real-Time CDP and Adobe Journey Optimizer customers. [!UICONTROL Use Case Playbooks] are designed to assist users in overcoming challenges when starting with Real-Time Customer Data Platform or Adobe Journey Optimizer. When you're unsure of where to begin or how to create the right assets for your desired use cases, Use Case Playbooks provide inspiration and create different assets for you to test and import to production environments when ready.
+
+[![image](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
+
 >[!TAB Sandbox tooling]
 
 Use the sandbox tooling feature to improve configuration accuracy across sandboxes and seamlessly export and import configurations between sandboxes. You can use the sandbox tooling feature to select different objects and export them into a package.
 
 [![image](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
-
->[!TAB (Limited GA) Activate account audiences] 
-
-Real-Time CDP B2B customers can now activate [account audiences](/help/segmentation/ui/account-audiences.md) to certain destinations. 
-
-[![image](assets/do-not-localize/learn-more-button.svg)](/help/destinations/ui/activate-account-audiences.md)
 
 >[!TAB Computed attributes] 
 
@@ -186,9 +187,11 @@ View these three introductory videos to get a deeper understanding of Real-Time 
 
 ## Additional resources {#additional-resources}
 
+Browse the links below to further your understanding of Real-Time CDP use cases, services, and much more.
+
 <table style="table-layout:fixed"><tr style="border: 0;">
 <td><strong>Real-Time CDP</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=en" target="_blank">Tutorials</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Product description Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B Edition</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">Security overview (PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html" target="_blank">Implementation Blueprints</a>
+<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=en" target="_blank">Tutorials</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Product description Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B Edition</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">Security overview (PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html" target="_blank">Implementation Blueprints</a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html" target="_blank">Glossary</a>
 </td>
 <td><strong>Adobe Experience Platform</strong><br/>
 <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html" target="_blank">Documentation</a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">API reference - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank">Course: Introduction to Experience Platform</a></a>

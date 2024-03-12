@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;list identities;list cluster
 solution: Experience Platform
 title: List All Identities in a Cluster
 description: Identities that are related in an identity graph, regardless of namespace, are considered to be part of the same "cluster" in that identity graph. The options below provide the means to access all cluster members.
+role: Developer
 exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
 ---
 # List all identities in a cluster
