@@ -60,7 +60,7 @@ If you select **[!UICONTROL Delete]**, the [!UICONTROL Delete dataset] confirmat
 
 >[!NOTE]
 >
->System datasets cannot be deleted.
+>You cannot delete system datasets.
 
 You can also delete a dataset or add a dataset for use with Real-Time Customer Profile from the inline actions found on the [!UICONTROL Browse] tab. See the [inline actions section](#inline-actions) for more information.
 
