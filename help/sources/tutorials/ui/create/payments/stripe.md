@@ -1,5 +1,5 @@
 ---
-title: 
+title: Bring payments data from your Stripe account to Experience Platform using the user interface.
 description: Learn how to bring payments data from your Stripe account to Experience Platform using the user interface.
 badge: Beta
 ---
@@ -46,12 +46,11 @@ To create a new account, select **[!UICONTROL New account]** and provide a name,
 
 When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![The new account creation interface of the sources workflow.]
+![The new account creation interface of the sources workflow.](../../../../images/tutorials/create/stripe/new.png)
 
 | Credential | Description |
 | --- | --- |
-| Username | Your [!DNL Stripe] account username. |
-| Password | Your [!DNL Stripe] account password. |
+| Access token | Your [!DNL Stripe] access token. For information on how to retrieve your access token, read the [[!DNL Stripe] authentication guide](../../../../connectors/payments/stripe.md). |
 
 >[!TAB Use an existing account]
 
@@ -59,7 +58,7 @@ To use an existing account, select **[!UICONTROL Existing account]** and then se
 
 Select **[!UICONTROL Next]** to proceed.
 
-![The existing account selection page of the sources catalog.]
+![The existing account selection page of the sources catalog.](../../../../images/tutorials/create/stripe/existing.png)
 
 >[!ENDTABS]
 
@@ -71,12 +70,14 @@ Now that you have access to your account, you must identify the appropriate path
 * Subscriptions
 * Refunds
 * Balance Transactions
+* Customers
+* Prices
 
-![The resource path dropdown window.]
+![The resource path dropdown window.](../../../../images/tutorials/create/stripe/select-resource-path.png)
 
 Once your endpoint is selected, the interface updates into a preview screen, displaying the data structure of the [!DNL Stripe] endpoint that you selected. Select **[!UICONTROL Next]** to proceed.
 
-![The preview window of your Stripe data.]
+![The preview window of your Stripe data.](../../../../images/tutorials/create/stripe/preview.png)
 
 ## Provide dataset and dataflow details {#provide-dataset-and-dataflow-details}
 
@@ -92,7 +93,7 @@ A dataset is a storage and management construct for a collection of data, typica
 
 To use a new dataset, select **[!UICONTROL New dataset]** and then provide a name, and an optional description for your dataset. You must also select an Experience Data Model (XDM) schema that your dataset adheres to.
 
-![The new dataset selection interface.]
+![The new dataset selection interface.](../../../../images/tutorials/create/stripe/new-dataset.png)
 
 | New dataset details | Description |
 | --- | --- |
@@ -104,20 +105,24 @@ To use a new dataset, select **[!UICONTROL New dataset]** and then provide a nam
 
 If you already have an existing dataset, select **[!UICONTROL Existing dataset]** and then usee the **[!UICONTROL Advanced search]** option to view a window of all datasets in your organization, including their respective details such as whether are enabled for ingestion to Real-Time Customer Profile or not.
 
-![The existing dataset selection interface.]
+![The existing dataset selection interface.](../../../../images/tutorials/create/stripe/existing-dataset.png)
 
 >[!ENDTABS]
+
++++Select for steps to enable Profile ingestion, error diagnostics, and partial ingestion.
 
 If your dataset is enabled for Real-Time Customer Profile, then during this step, you can toggle **[!UICONTROL Profile dataset]** to enable your data for Profile-ingestion. You can also use this step to enable **[!UICONTROL Error diagnostics]** and **[!UICONTROL Partial ingestion]**.
 
 * **[!UICONTROL Error diagnostics]**: Select **[!UICONTROL Error diagnostics]** to instruct the source to produce error diagnostics that you can later reference when monitoring your dataset activity and dataflow status.
 * **[!UICONTROL Partial ingestion]**: Partial batch ingestion is the ability to ingest data containing errors, up to a certain configurable threshold. This feature allows you to successfully ingest all of your accurate data into Experience Platform, while all of your incorrect data is batched separately with information on why it is invalid.
 
++++
+
 ### Dataflow details {#dataflow-details}
 
 Once your dataset is configured, you must then provide details on your dataflow, including a name, an optional description, and alert configurations.
 
-![The dataflow details configuration step.]
+![The dataflow details configuration step.](../../../../images/tutorials/create/stripe/dataflow-detail.png)
 
 | Dataflow configurations | Description |
 | --- | --- |
@@ -131,13 +136,13 @@ When finished, select **[!UICONTROL Next]** to proceed.
 
 The **[!UICONTROL Mapping]** step appears. Use the mapping interface to map your source data too the appropriate schema fields before ingesting that data to Experience Platform. For an extensive guide on how to use the mapping interface, read the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md) for more information.
 
-![The mapping interface of the sources workflow.]
+![The mapping interface of the sources workflow.](../../../../images/tutorials/create/stripe/mapping.png)
 
 ## Configure ingestion schedule {#scheduling}
 
 Next, use the scheduling interface to create an ingestion schedule for your dataflow.
 
-![The scheduling interface of the sources workflow.]
+![The scheduling interface of the sources workflow.](../../../../images/tutorials/create/stripe/scheduling.png)
 
 | Scheduling configuration | Description |
 | --- | --- |
@@ -156,15 +161,15 @@ The final step in the dataflow creation process is to review your dataflow befor
 
 Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
-![The Review step of the sources workflow.]
+![The Review step of the sources workflow.](../../../../images/tutorials/create/stripe/review.png)
 
 ## Next steps
 
-By following this tutorial, you have successfully created a dataflow to bring batch data from your [!DNL Acxiom] source to Experience Platform. For additional resources, visit the documentation outlined below.
+By following this tutorial, you have successfully created a dataflow to bring batch data from your [!DNL Stripe] source to Experience Platform. For additional resources, visit the documentation outlined below.
 
 ### Monitor your dataflow
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it to view information on ingestion rates, success, and errors. For more information on how to monitor dataflow, visit the tutorial on [monitoring accounts and dataflows in the UI](../../monitor.md).
+Once your dataflow has been created, you can monitor the data that is being ingested through it to view information on ingestion rates, success, and errors. For more information on how to monitor dataflow, visit the tutorial on [monitoring accounts and dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).
 
 ### Update your dataflow
 
