@@ -86,7 +86,7 @@ Batch audiences are automatically evaluated every 24 hours. If you want to evalu
 >abstract="Edge segmentation is the ability to evaluate segments in Platform instantaneously on the Edge Network, enabling same-page and next-page personalization use cases."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Edge segmentation UI guide"
 
-Edge segmentation is the ability to evaluate segments in Platform instantaneously [on the Edge Network](../edge/home.md), enabling same-page and next-page personalization use cases. 
+Edge segmentation is the ability to evaluate segments in Platform instantaneously [on the Edge Network](../web-sdk/home.md), enabling same-page and next-page personalization use cases. 
 
 To learn more about edge segmentation, please read either the [API documentation](./api/edge-segmentation.md) or the [UI documentation](./ui/edge-segmentation.md).
 

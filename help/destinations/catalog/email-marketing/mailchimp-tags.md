@@ -2,6 +2,7 @@
 title: Mailchimp Tags
 description: The Mailchimp Tags destination allows you to export your account data and activate it within Mailchimp to engage with contacts.
 last-substantial-update: 2024-02-20
+exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
 ---
 # [!DNL Mailchimp Tags] connection
 
