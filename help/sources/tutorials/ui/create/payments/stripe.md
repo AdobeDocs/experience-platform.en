@@ -36,7 +36,7 @@ Under the *Payments* category, select **[!DNL Stripe]**, and then select **[!UIC
 
 ![The sources catalog in the Experience Platform UI, with the Stripe source card selected.](../../../../images/tutorials/create/stripe/catalog.png)
 
-The **[!UICONTROL Connect Oracle NetSuite Activities account]** page appears. On this page, you can either use new credentials or existing credentials.
+The **[!UICONTROL Connect Stripe account]** page appears. On this page, you can either use new credentials or existing credentials.
 
 >[!BEGINTABS]
 

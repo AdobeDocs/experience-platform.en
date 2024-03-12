@@ -112,7 +112,7 @@ When performing GET requests to explore your source's file structure and content
 | `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. For this source the value would be `json`. |
 | `fileType=json` | The file type of the file you want to bring to Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
-| `{SOURCE_PARAMS}` |
+| `{SOURCE_PARAMS}` | A [!DNL Base64-]encoded string that points to the resource path you want to explore. Your resource path needs to be encoded in [!DNL Base64] in order to obtain the approved format for `{SOURCE_PARAMS}`. For example, `{"resourcePath":"charges"}` is encoded as `eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D`. |
 
 ```shell
 curl -X GET \
@@ -543,9 +543,9 @@ In order for the source data to be ingested into a target dataset, it must first
 POST /conversion/mappingSets
 ```
 
-**Request**
-
 The following request creates a mapping for [!DNL Stripe].
+
++++Select to view request example
 
 ```shell
 curl -X POST \
@@ -784,11 +784,13 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `xdmSchema` | |
-| `destinationXdmPath` | The ID of the [target XDM schema](#target-schema) generated in an earlier step. |
-| `sourceAttribute` | The source attribute type that is being mapped. |
-| `identity` | The source attribute that needs to be mapped to a destination XDM path. |
-| `version` | The destination XDM path where the source attribute is being mapped to. |
+| `xdmSchema` | The ID of the [target XDM schema](#target-schema) generated in an earlier step. |
+| `destinationXdmPath` | The XDM field that the source attribute is being mapped to. |
+| `sourceAttribute` | The source data field that is being mapped. |
+| `identity` | A boolean value that defines whether the field will be persisted in [Identity Service](../../../../../identity-service/home.md). |
+| `version` | The mapping version that you are using. |
+
++++
 
 **Response**
 
@@ -853,7 +855,7 @@ curl -X POST \
         }
     ],
     "scheduleParams": {
-        "startTime": "{{startTime}}",
+        "startTime": "1710267858",
         "frequency": "minute",
         "interval": {{interval}}
     }
@@ -868,7 +870,7 @@ curl -X POST \
 | `flowSpec.version` | The corresponding version of the flow specification ID. This value defaults to `1.0`. |
 | `sourceConnectionIds` | The [source connection ID](#source-connection) generated in an earlier step. |
 | `targetConnectionIds` | The [target connection ID](#target-connection) generated in an earlier step. |
-| `transformations` | This property contains the various transformations that are needed to be applied to your data. This property is required when bringing non-XDM-compliant data to Platform. |
+| `transformations` | This property contains the various transformations that are needed to be applied to your data. This property is required when bringing non-XDM-compliant data to Experience Platform. |
 | `transformations.name` | The name assigned to the transformation. |
 | `transformations.params.mappingId` | The [mapping ID](#mapping) generated in an earlier step. |
 | `transformations.params.mappingVersion` | The corresponding version of the mapping ID. This value defaults to `0`. |
