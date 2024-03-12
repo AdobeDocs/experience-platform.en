@@ -19,7 +19,9 @@ Updates to existing features in Experience Platform:
 ## Alerts {#alerts}
 
 Experience Platform allows you to subscribe to event-based alerts for various Platform activities. You can subscribe to different alert rules through the [!UICONTROL Alerts] tab in the Platform user interface, and can choose to receive alert messages within the UI itself or through email notifications.
+
 **New or updated features**
+
 | Feature | Description |
 | --- | --- |
 | Alerts history tab | As an Experience Platform administrator, you can use the the manage alert subscribers feature to assign an alert to an Adobe user ID, external email address, or an email group list. For more information, see the [alerts UI documentation](../../observability/alerts/ui.md) for more information about the history tab. |
