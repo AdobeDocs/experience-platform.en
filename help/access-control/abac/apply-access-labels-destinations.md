@@ -1,6 +1,6 @@
 ---
 title: Use access labels to manage user access to destination dataflows
-description: Learn how to use access labels to manage 
+description: Learn how to use access labels to manage user access to destination dataflows so only a subset of users in your organization get access to specific destination dataflows.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
