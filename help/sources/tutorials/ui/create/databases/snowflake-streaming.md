@@ -6,7 +6,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 ---
 # Stream data from your [!DNL Snowflake] database to Experience Platform using the UI
 
-Read the following tutorial to learn how to stream data from your [!DNL Snowflake] database to Adobe Experience Platform using the user interface.
+Learn how to use the user interface to stream data from your [!DNL Snowflake] database to Adobe Experience Platform by following this guide.
 
 ## Get started
 
@@ -30,11 +30,11 @@ Under the *Databases* category, select **[!DNL Snowflake Streaming]**, and then 
 
 >[!TIP]
 >
->Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
+>Sources that do not have an authenticated account in the sources catalog display the **[!UICONTROL Set up]** option. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
 
 ![The sources catalog in the Experience Platform UI, with the Snowflake Streaming source card selected.](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
 
-The **[!UICONTROL Connect Snowflake Streaming account]** page appears. On this page, you can either use new credentials or existing credentials.
+The **[!UICONTROL Connect Snowflake Streaming account]** page appears. On this page, you can either use new or existing credentials.
 
 >[!BEGINTABS]
 
@@ -49,7 +49,7 @@ When finished, select **[!UICONTROL Connect to source]** and then allow some tim
 | Credential | Description |
 | --- | --- |
 | Account | The name of your [!DNL Snowflake] account. |
-| Warehouse | The name of your [!DNL Snowflake] warehouse. In [!DNL Snowflake], warehouses manage query execution processes. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually to bring data to Experience Platform. |
+| Warehouse | The name of your [!DNL Snowflake] warehouse. Warehouses manage the execution of queries in [!DNL Snowflake]. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually to bring data to Experience Platform. |
 | Database | The name of your [!DNL Snowflake] database. The database contains the data that you want to bring to Experience Platform. |
 | Schema | (Optional) The database schema associated with your [!DNL Snowflake] account. |
 | Username | The username of your [!DNL Snowflake] account. |
@@ -59,7 +59,7 @@ When finished, select **[!UICONTROL Connect to source]** and then allow some tim
 
 >[!TAB Use an existing account]
 
-To use an existing account, select **[!UICONTROL Existing account]** and then select the account that you want to use from the existing account catalog.
+To use an existing account, select **[!UICONTROL Existing account]** and then select the desired account from the existing account catalog.
 
 Select **[!UICONTROL Next]** to proceed.
 
@@ -71,23 +71,23 @@ Select **[!UICONTROL Next]** to proceed.
 
 >[!IMPORTANT]
 >
->A timestamp column must exist in your source table in order for a streaming dataflow to be created. The timestamp is required for Experience Platform to know from when data will be ingested and when incremental data will be streamed. You can retroactively add a timestamp column for an existing connection and create a new dataflow.
+>A timestamp column must exist in your source table in order for a streaming dataflow to be created. The timestamp is required for Experience Platform to know when data will be ingested and when incremental data will be streamed. You can retroactively add a timestamp column for an existing connection and create a new dataflow.
 
-The [!UICONTROL Select data] step appears. In this step, you must select the data that you want to bring to Experience Platform, configure timestamp and timezones, as well as provide a sample source data file for raw data ingestion.
+The [!UICONTROL Select data] step appears. In this step, you must select the data you want to import into Experience Platform, configure timestamps and timezones, and provide a sample source data file for the ingestion of raw data.
 
-Use the database directory on the left of your screen and select the table that you want to bring to Experience Platform.
+Use the database directory on the left of your screen and select the table that you want to import to Experience Platform.
 
 ![The select data interface with a database table selected.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
 Next, select the timestamp column that you want to use. You can select between `TS_NTZ` and `TS_LTZ`. If you set your timestamp colum to `TS_NTZ`, then you must also provide a timezone. 
 
-You can also configure backfill settings during this step. Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If not, then only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested. 
+You can also configure backfill settings during this step. Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If not, then only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to the start time will not be ingested. 
 
 Select the **[!UICONTROL Backfill]** toggle to enable backfill.
 
 ![The timestamp, timezone, and backfill configuration steps.](../../../../images/tutorials/create/snowflake-streaming/timezone.png)
 
-Finally, select **[!UICONTROL Choose file]** to upload a sample source data to help create the mapping set that will be used in a later step to map your original data to Experience Data Model (XDM). 
+Finally, select **[!UICONTROL Choose file]** to upload a sample source data to help create the mapping set, which will be used in a later step to map your original data to Experience Data Model (XDM). 
 
 When finished, select **[!UICONTROL Next]** to proceed.
 
@@ -105,19 +105,19 @@ A dataset is a storage and management construct for a collection of data, typica
 
 >[!TAB Use a new dataset]
 
-To use a new dataset, select **[!UICONTROL New dataset]** and then provide a name, and an optional description for your dataset. You must also select an Experience Data Model (XDM) schema that your dataset adheres to.
+To use a new dataset, select **[!UICONTROL New dataset]**, then provide a name, and an optional description for your dataset. You must also select an Experience Data Model (XDM) schema that your dataset adheres to.
 
 ![The new dataset selection interface.](../../../../images/tutorials/create/snowflake-streaming/new-dataset.png)
 
 | New dataset details | Description |
 | --- | --- |
 | Output dataset name | The name of your new dataset. |
-| Description | (Optional) A brief explanation of the new dataset. |
+| Description | (Optional) A brief overview of the new dataset. |
 | Schema | A dropdown list of schemas that exist in your organization. You can also create your own schema prior to the source configuration process. For more information, read the guide on [creating an XDM schema in the UI](../../../../../xdm/tutorials/create-schema-ui.md). |
 
 >[!TAB Use an existing dataset]
 
-If you already have an existing dataset, select **[!UICONTROL Existing dataset]** and then usee the **[!UICONTROL Advanced search]** option to view a window of all datasets in your organization, including their respective details such as whether are enabled for ingestion to Real-Time Customer Profile or not.
+If you already have an existing dataset, select **[!UICONTROL Existing dataset]** and then use the **[!UICONTROL Advanced search]** option to view a window of all datasets in your organization, including their respective details, such as whether they are enabled for ingestion into Real-Time Customer Profile.
 
 ![The existing dataset selection interface.](../../../../images/tutorials/create/snowflake-streaming/existing-dataset.png)
 
@@ -142,13 +142,13 @@ Once your dataset is configured, you must then provide details on your dataflow,
 | --- | --- |
 | Dataflow name | The name of the dataflow.  By default, this will use the name of the file that is being imported. |
 | Description | (Optional) A brief description of your dataflow. |
-| Alerts | Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  For more information, read the [alerts overview](../../alerts.md) <ul><li>**Sources Dataflow Run Start**: Select this alert to receive a notification when your dataflow run begins.</li><li>**Sources Dataflow Run Success**: Select this alert to receive a notification if your dataflow ends without any errors.</li><li>**Sources Dataflow Run Failure**: Select this alert to receive a notification if your dataflow run ends with any errors.</li></ul> |
+| Alerts | Experience Platform can produce event-based alerts that users can subscribe to. These options require a running dataflow to trigger them. For more information, read the [alerts overview](../../alerts.md) <ul><li>**Sources Dataflow Run Start**: Select this alert to receive a notification when your dataflow run begins.</li><li>**Sources Dataflow Run Success**: Select this alert to receive a notification if your dataflow ends without any errors.</li><li>**Sources Dataflow Run Failure**: Select this alert to receive a notification if your dataflow run ends with any errors.</li></ul> |
 
 When finished, select **[!UICONTROL Next]** to proceed.
 
 ## Map fields to an XDM schema {#mapping}
 
-The **[!UICONTROL Mapping]** step appears. Use the mapping interface to map your source data too the appropriate schema fields before ingesting that data to Experience Platform. For an extensive guide on how to use the mapping interface, read the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md) for more information.
+The [!UICONTROL Mapping] step appears. Use the mapping interface to map your source data to the appropriate schema fields before ingesting that data into Experience Platform, then select **[!UICONTROL Next]**. For an extensive guide on how to use the mapping interface, read the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md) for more information.
 
 ![The mapping interface of the sources workflow.](../../../../images/tutorials/create/snowflake-streaming/mapping.png)
 
@@ -156,7 +156,7 @@ The **[!UICONTROL Mapping]** step appears. Use the mapping interface to map your
 
 The final step in the dataflow creation process is to review your dataflow before executing it. Use the **[!UICONTROL Review]** step to review the details of your new dataflow before it runs. Details are grouped in the following categories:
 
-* **Connection**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+* **Connection**: Shows the source type, the relevant path of the chosen source file, and the number of columns within that source file.
 * **Assign dataset & map fields**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
 
 Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
@@ -173,7 +173,7 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ### Update your dataflow
 
-To update configurations for your dataflows scheduling, mapping, and general information, visit the tutorial on [updating sources dataflows in the UI](../../update-dataflows.md)
+To update configurations for your dataflows scheduling, mapping, and general information, visit the tutorial on [updating sources dataflows in the UI](../../update-dataflows.md).
 
 ### Delete your dataflow
 
