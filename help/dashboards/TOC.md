@@ -35,7 +35,8 @@ role: Developer,User
 * Insights use cases {#insights-use-cases}
   * [Consent analysis](insights-use-cases/consent-analysis.md)
 * Available data models {#data-models}
-  * [Real-Time Customer Data Platform Insights data model B2C edition](cdp-insights-data-model-b2c.md)
+  * [Real-Time Customer Data Platform Insights data model B2B edition](data-models/cdp-insights-data-model-b2b.md)
+  * [Real-Time Customer Data Platform Insights data model B2C edition](data-models/cdp-insights-data-model-b2c.md)
 * Application integrations {#integrations}
   * [Power BI](integrations/power-bi.md)
 * [Query dashboard datasets](query.md)
