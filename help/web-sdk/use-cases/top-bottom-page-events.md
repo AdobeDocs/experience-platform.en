@@ -216,4 +216,4 @@ alloy("sendEvent", {
 
 ## GitHub sample {#github-sample}
 
-The sample found at [this address](https://github.com/adobe/alloy-samples/tree/main/top-and-bottom) demonstrates how to use Experience Platform and Web SDK to request personalization at the top of the page, and send analytics metrics at the bottom. You can download the sample and run it locally to understand how top and bottom of page events work.
+The sample found at [this address](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) demonstrates how to use Experience Platform and Web SDK to request personalization at the top of the page, and send analytics metrics at the bottom. You can download the sample and run it locally to understand how top and bottom of page events work.

@@ -9,6 +9,11 @@ exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
+## v0.20.3 (January 23, 2024)
+
+- Updated to support `at.js` 2.11.4
+- Fixed a bug to prevent invalid geo data from being sent to delivery API.
+
 ## v0.20.2 (November 29, 2023)
 
 - Updated to support `at.js` 2.11.3
@@ -60,7 +65,7 @@ exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
 
 ## v0.17.0 (January 7, 2022)
 
-- Updated to support `at.js` v2.8.0, which is now collecting feature usage and performance telemetry data.  Personal data is not collected. To opt out of this feature, set `telemetryEnabled` to `false` in `targetGlobalSettings`. 
+- Updated to support `at.js` v2.8.0, which is now collecting feature usage and performance telemetry data.  Personal data is not collected. To opt out of this feature, set `telemetryEnabled` to `false` in `targetGlobalSettings`.
 
 ## v0.16.0 (October 28, 2021)
 
@@ -103,7 +108,7 @@ exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
 ## v0.13.7 (March 25, 2021)
 
 - Fixed an issue with `targetPageParams` being included in mbox requests. `targetPageParams` should only be included in `pageLoad` requests.
-- Fixed an issue with document and window global objects in the tag extension by replacing global object dependencies with direct references to them. 
+- Fixed an issue with document and window global objects in the tag extension by replacing global object dependencies with direct references to them.
 - Updated `at.js` to 2.4.1.
 
 ## v0.13.6 (January 25, 2021)
