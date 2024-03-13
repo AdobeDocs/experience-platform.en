@@ -31,14 +31,14 @@ To follow along with this guide, you must be using a CMP, either commercial or y
 
 This guide also requires a working understanding of the following Platform services:
 
-* [Experience Data Model (XDM)](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-* [Adobe Experience Platform Identity Service](../../../../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
-* [Real-Time Customer Profile](../../../../profile/home.md): Uses [!DNL Identity Service] to create detailed customer profiles from your datasets in real time. [!DNL Real-Time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
-* [Adobe Experience Platform Web SDK](../../../../edge/home.md): A client-side JavaScript library that allows you to integrate various Platform services into your customer-facing website.
-    * [SDK consent commands](../../../../edge/consent/supporting-consent.md): A use-case overview of the consent-related SDK commands shown in this guide.
-* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md): Allows you to divide [!DNL Real-Time Customer Profile] data into groups of individuals that share similar traits and responds similarly to marketing strategies.
+* [Experience Data Model (XDM)](/help/xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+* [Adobe Experience Platform Identity Service](/help/identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
+* [Real-Time Customer Profile](/help/profile/home.md): Uses [!DNL Identity Service] to create detailed customer profiles from your datasets in real time. [!DNL Real-Time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
+* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): A client-side JavaScript library that allows you to integrate various Platform services into your customer-facing website.
+    * [SDK consent commands](/help/web-sdk/consent/supporting-consent.md): A use-case overview of the consent-related SDK commands shown in this guide.
+* [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md): Allows you to divide [!DNL Real-Time Customer Profile] data into groups of individuals that share similar traits and responds similarly to marketing strategies.
 
-In addition to the Platform services listed above, you should also be familiar with [destinations](../../../../data-governance/home.md) and their role in the Platform ecosystem.
+In addition to the Platform services listed above, you should also be familiar with [destinations](/help/data-governance/home.md) and their role in the Platform ecosystem.
 
 ## Customer consent flow summary {#summary}
 
@@ -96,7 +96,7 @@ Customer consent data must be sent to datasets whose schemas contain TCF consent
 
 Once you have created a [!DNL Profile]-enabled dataset for collecting consent data, you must ensure that your merge policies have been configured to always include TCF consent fields in your customer profiles. This involves setting dataset precedence so that your consent dataset is prioritized over other potentially conflicting datasets.
 
-For more information on how to work with merge policies, refer to the [merge policies overview](../../../../profile/merge-policies/overview.md). When setting up your merge policies, you must ensure that your segments include all the required consent attributes provided by the [XDM privacy schema field group](./dataset.md#privacy-field-group), as outlined in the guide on dataset preparation.
+For more information on how to work with merge policies, refer to the [merge policies overview](/help/profile/merge-policies/overview.md). When setting up your merge policies, you must ensure that your segments include all the required consent attributes provided by the [XDM privacy schema field group](./dataset.md#privacy-field-group), as outlined in the guide on dataset preparation.
 
 ## Integrate the Experience Platform Web SDK to collect customer consent data {#sdk}
 
@@ -112,15 +112,15 @@ Once you have configured your CMP to generate consent strings, you must integrat
 
 ### Create a datastream
 
-In order for the SDK to send data to Experience Platform, you must first create a datastream for Platform. Specific steps for how to create a datastream are provided in the [SDK documentation](../../../../datastreams/overview.md).
+In order for the SDK to send data to Experience Platform, you must first create a datastream for Platform. Specific steps for how to create a datastream are provided in the [SDK documentation](/help/datastreams/overview.md).
 
 After providing a unique name for the datastream, select the toggle button next to **[!UICONTROL Adobe Experience Platform]**. Next, use the following values to complete the rest of the form:
 
 | Datastream field | Value |
 | --- | --- |
-| [!UICONTROL Sandbox] | The name of the Platform [sandbox](../../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the datastream. |
-| [!UICONTROL Streaming Inlet] | A valid streaming connection for Experience Platform. See the tutorial on [creating a streaming connection](../../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
-| [!UICONTROL Event Dataset] | Select the [!DNL XDM ExperienceEvent] dataset created in the [previous step](#datasets). If you included the [[!UICONTROL IAB TCF 2.0 Consent] field group](../../../../xdm/field-groups/event/iab.md) in this dataset's schema, you can track consent-change events over time using the [`sendEvent`](#sendEvent) command, storing that data in this dataset. Keep in mind that the consent values stored in this dataset are **not** used in automatic enforcement workflows. |
+| [!UICONTROL Sandbox] | The name of the Platform [sandbox](/help/sandboxes/home.md) that contains the required streaming connection and datasets to set up the datastream. |
+| [!UICONTROL Streaming Inlet] | A valid streaming connection for Experience Platform. See the tutorial on [creating a streaming connection](/help/ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
+| [!UICONTROL Event Dataset] | Select the [!DNL XDM ExperienceEvent] dataset created in the [previous step](#datasets). If you included the [[!UICONTROL IAB TCF 2.0 Consent] field group](/help/xdm/field-groups/event/iab.md) in this dataset's schema, you can track consent-change events over time using the [`sendEvent`](#sendEvent) command, storing that data in this dataset. Keep in mind that the consent values stored in this dataset are **not** used in automatic enforcement workflows. |
 | [!UICONTROL Profile Dataset] | Select the [!DNL XDM Individual Profile] dataset created in the [previous step](#datasets). When responding to CMP consent-change hooks using the [`setConsent`](#setConsent) command, collected data is stored in this dataset. Since this dataset is Profile-enabled, the consent values stored in this dataset are honored during automatic enforcement workflows. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
@@ -131,13 +131,9 @@ When finished, select **[!UICONTROL Save]** at the bottom of the screen and cont
 
 Once you have created the datastream described in the previous section, you can start using SDK commands to send consent data to Platform. The sections below provide examples of how each SDK command can be used in different scenarios.
 
->[!NOTE]
->
->For an introduction to the common syntax for all Platform SDK commands, see the document on [executing commands](../../../../edge/fundamentals/executing-commands.md).
-
 #### Using CMP consent-change hooks {#setConsent}
 
-Many CMPs provide out-of-the-box hooks that listen to consent-change events. When these events occur, you can use the `setConsent` command to update that customer's consent data.
+Many CMPs provide out-of-the-box hooks that listen to consent-change events. When these events occur, you can use the [`setConsent`](/help/web-sdk/commands/setconsent.md) command to update that customer's consent data.
 
 The `setConsent` command expects two arguments: 
 
@@ -220,7 +216,7 @@ alloy("sendEvent", {
 
 ### Handling SDK responses
 
-All [!DNL Platform SDK] commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See the section on [handling success or failure](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) in the guide on executing SDK commands for specific examples.
+Many Web SDK commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See [Command responses](/help/web-sdk/commands/command-responses.md) for more information.
 
 ## Export segments {#export}
 

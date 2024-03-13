@@ -78,7 +78,7 @@ This section allows you to define the behavior of the Web SDK when it comes to h
 * **[!UICONTROL Use third-party cookies]**: When this option is enabled, Web SDK attempts to store a user identifier in a third-party cookie. If successful, the user is identified as a single user as they navigate across multiple domains, rather than being identified as a separate user on each domain. If this option is enabled, the SDK might still be unable to store the user identifier in a third-party cookie if the browser does not support third-party cookies or has been configured by the user to not allow third-party cookies. In this case, the SDK only stores the identifier in the first-party domain.
 
     >[!IMPORTANT]
-    >>Third-party cookies are not compatible with the [first-party device ID](../../../../edge/identity/first-party-device-ids.md) functionality in Web SDK.
+    >>Third-party cookies are not compatible with the [first-party device ID](../../../../web-sdk/identity/first-party-device-ids.md) functionality in Web SDK.
     >You can either use first-party device IDs, or you can use third-party cookies, but you cannot use both features simultaneously.
 
 ## Configure personalization settings {#personalization}
@@ -107,9 +107,9 @@ To use the prehiding snippet, copy and paste it inside the `<head>` element of y
 
 ![Image showing the data collection settings of the Web SDK tag extension in the Tags UI](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Callback function]**: The callback function provided in the extension is also called the [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html) in the library. This function allows you to modify events globally before they're sent to the Edge Network. More detailed information on how to use this function can be found [here](../../../../edge/fundamentals/tracking-events.md#modifying-events-globally). 
+* **[!UICONTROL Callback function]**: The callback function provided in the extension is also called the [`onBeforeEventSend` function](/help/web-sdk/commands/configure/onbeforeeventsend.md) in the library. This function allows you to modify events globally before they're sent to the Edge Network. 
 * **[!UICONTROL Enable click data collection]**: Web SDK can automatically collect link click information for you. By default, this feature is enabled but can be disabled using this option. Links are also labeled as download links if they contain one of the download expressions listed in the [!UICONTROL Download Link Qualifier] textbox. Adobe provides you with some default download link qualifiers. You can edit them according to your needs.
-* **[!UICONTROL Automatically collected context data]**: By default, Web SDK collects certain context data regarding device, web, environment, and place context. If you would like to see a list of the information Adobe collects, you can find it [here](../../../../edge/data-collection/automatic-information.md). If you don't want this data collected or you only want certain categories of data collected, select **[!UICONTROL Specific context information]** and select the data that you want to be collected.  
+* **[!UICONTROL Automatically collected context data]**: By default, Web SDK collects certain context data regarding device, web, environment, and place context. If you don't want this data collected or you only want certain categories of data collected, select **[!UICONTROL Specific context information]** and select the data that you want to be collected. See [`context`](/help/web-sdk/commands/configure/context.md) for more information.
 
 ## Configure datastream overrides {#datastream-overrides}
 
@@ -119,10 +119,10 @@ This helps you trigger different datastream behaviors than the default ones, wit
 
 Datastream configuration override is a two step process:
 
-1. First, you must define your datastream configuration overrides in the [datastream configuration page](../../../../datastreams/configure.md).
+1. First, you must define your datastream configuration overrides in the [datastream configuration page](/help/datastreams/configure.md).
 2. Then, you must send the overrides to the Edge Network either via a Web SDK command, or by using the Web SDK tag extension.
 
-See the datastream [configuration overrides documentation](../../../../datastreams/overrides.md) for detailed instructions on how to override datastream configurations.
+See the datastream [configuration overrides documentation](/help/datastreams/overrides.md) for detailed instructions on how to override datastream configurations.
 
 As an alternative to passing the overrides through a Web SDK command, you can configure the overrides in the tag extension screen shown below.
 
@@ -130,10 +130,10 @@ As an alternative to passing the overrides through a Web SDK command, you can co
 >
 > Datastream overrides must be configured on a per-environment basis. The development, staging, and production environments all have separate overrides. You can copy the settings between them using the dedicated options shown in the screen below.
 
-![Image showing the datastream configuration overrides in the Web SDK tag extension page.](assets/datastream-overrides.png)
+![Image showing the datastream configuration overrides using the Web SDK tag extension page.](assets/datastream-overrides.png)
 
 ## Configure advanced settings
 
 Use the **[!UICONTROL Edge base path]** field if you need to change the base path that is used to interact with the Edge Network. This shouldn't require updating, but in the case that you participate on a beta or alpha, Adobe might ask you to change this field.
 
-![Image showing the advanced settings in the Web SDK tag extension page.](assets/advanced-settings.png)
+![Image showing the advanced settings using the Web SDK tag extension page.](assets/advanced-settings.png)

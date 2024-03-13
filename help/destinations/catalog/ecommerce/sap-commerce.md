@@ -2,6 +2,7 @@
 title: SAP Commerce connection
 description: Use the SAP Commerce destination connector to update customer records in your SAP account.
 last-substantial-update: 2024-02-20
+exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
 ---
 # [!DNL SAP Commerce] connection
 

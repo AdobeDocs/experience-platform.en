@@ -113,8 +113,8 @@ The following tables list all supported mapping functions, including sample expr
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Retrieves the current time. | | now() | now() | `2021-10-26T10:10:24Z` |
 | timestamp | Retrieves the current Unix time. | | timestamp() | timestamp() | 1571850624571 |
-| format | Formats the input date according to a specified format. | <ul><li>DATE: **Required** The input date, as a ZonedDateTime object, that you want to format.</li><li>FORMAT: **Required** The format that you want the date to be changed to.</li></ul> | format(DATE, FORMAT)  | format(2019-10-23T11:24:00+00:00, "yyyy-MM-dd HH:mm:ss") | `2019-10-23 11:24:35` |
-| dformat | Converts a timestamp to a date string according to a specified format. | <ul><li>TIMESTAMP: **Required** The timestamp you want to format. This is written in milliseconds.</li><li>FORMAT: **Required** The format that you want the timestamp to become.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, "yyyy-MM-dd'T'HH:mm:ss.SSSX") | `2019-10-23T11:24:35.000Z` |
+| format | Formats the input date according to a specified format. | <ul><li>DATE: **Required** The input date, as a ZonedDateTime object, that you want to format.</li><li>FORMAT: **Required** The format that you want the date to be changed to.</li></ul> | format(DATE, FORMAT)  | format(2019-10-23T11:24:00+00:00, "`yyyy-MM-dd HH:mm:ss`") | `2019-10-23 11:24:35` |
+| dformat | Converts a timestamp to a date string according to a specified format. | <ul><li>TIMESTAMP: **Required** The timestamp you want to format. This is written in milliseconds.</li><li>FORMAT: **Required** The format that you want the timestamp to become.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, "`yyyy-MM-dd'T'HH:mm:ss.SSSX`") | `2019-10-23T11:24:35.000Z` |
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the source date.**Note:** This does **not** represent the format you want to convert the date string into. </li><li>DEFAULT_DATE: **Required** The default date returned, if the date provided is null.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date("2019-10-23 11:24", "yyyy-MM-dd HH:mm", now()) | `2019-10-23T11:24:00Z` |
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the source date.**Note:** This does **not** represent the format you want to convert the date string into. </li></ul> | date(DATE, FORMAT) | date("2019-10-23 11:24", "yyyy-MM-dd HH:mm") | `2019-10-23T11:24:00Z` |
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li></ul> | date(DATE) | date("2019-10-23 11:24") | "2019-10-23T11:24:00Z" |
@@ -279,11 +279,11 @@ For more information on device field values, please read the [list of device fie
 
 {style="table-layout:auto"}
 
-<!-- ### Analytics functions {#analytics}
+### Analytics functions {#analytics}
 
 >[!NOTE]
 >
->Please scroll left/right to view the full contents of the table.
+>You may only use the following analytics functions for streaming ingestion.
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -296,7 +296,7 @@ For more information on device field values, please read the [list of device fie
 | aa_get_product_event_values | Extracts values for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_values(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_values(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event1") | ["2.3", "3"] |
 | aa_get_product_evars | Extracts the evar values for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVAR_NAME: **Required** The eVar name to extract.</li></ul> | aa_get_product_evars(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_evars(";Example product;1;6.69;;eVar1=Merchandising value", "eVar1") | ["Merchandising value"] |
 
-{style="table-layout:auto"} -->
+{style="table-layout:auto"}
 
 <!-- | aa_get_product_events | Extracts a named event from the products string as an array of objects. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_events(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_events(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
 | aa_get_product_event_ids | Extracts the IDs for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_ids(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_ids(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | ["1", "2"] | -->

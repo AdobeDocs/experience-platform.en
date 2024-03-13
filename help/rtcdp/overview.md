@@ -73,3 +73,7 @@ The following documentation is recommended to help you get started with Real-Tim
 * [How to build audiences](segmentation/segmentation-overview.md)
 * [How to activate audiences to destinations](destinations/overview.md)
 * [How to define and enforce data governance policies](privacy/data-governance-overview.md)
+
+## Glossary
+
+Use the [**Glossary**](/help/landing/glossary.md) page to review Real-Time CDP and Adobe Experience Platform terminology.

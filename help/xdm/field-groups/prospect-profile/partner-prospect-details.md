@@ -1,6 +1,7 @@
 ---
 title: Partner Prospect Details (Sample) Field Group
 description: Learn about the Partner Prospect Details (Sample) field group (XDM) schema field group.
+exl-id: 2de1eb7a-2e44-4417-9bdd-7a8a4b2d3a7f
 ---
 # [!UICONTROL Partner Prospect Details (Sample)] field group
 
