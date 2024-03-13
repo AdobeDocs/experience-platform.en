@@ -118,12 +118,18 @@ You can select **[!UICONTROL Advanced search]** to view a window of all datasets
 
 >[!ENDTABS]
 
++++Select for steps to enable Profile ingestion, error diagnostics, and partial ingestion.
+
+If your dataset is enabled for Real-Time Customer Profile, then during this step, you can toggle **[!UICONTROL Profile dataset]** to enable your data for Profile-ingestion. You can also use this step to enable **[!UICONTROL Error diagnostics]** and **[!UICONTROL Partial ingestion]**.
+
+* **[!UICONTROL Error diagnostics]**: Select **[!UICONTROL Error diagnostics]** to instruct the source to produce error diagnostics that you can later reference when monitoring your dataset activity and dataflow status.
+* **[!UICONTROL Partial ingestion]**: Partial batch ingestion is the ability to ingest data containing errors, up to a certain configurable threshold. This feature allows you to successfully ingest all of your accurate data into Experience Platform, while all of your incorrect data is batched separately with information on why it is invalid.
+
++++
+
 ### Dataflow details
 
-During this step, if your dataset is enabled for Profile, then you can select the **[!UICONTROL Profile dataset]** toggle to enable your data for Profile ingestion. You can also enable [!UICONTROL Error diagnostics] and [!UICONTROL Partial ingestion].
-
-* **Error Diagnostics** - Select **Error diagnostics** to instruct the source to produce error diagnostics that you can later reference using APIs. For more information, read the [error diagnostics overview](../../../../../ingestion/quality/error-diagnostics.md)
-* **Enable Partial Ingestion** - Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. With this capability, users can successfully ingest all their correct data into Adobe Experience Platform while all their incorrect data is batched separately, along with details as to why it is invalid.  For more information, read the [Partial ingestion overview](../../../../../ingestion/batch-ingestion/partial.md)
+Once your dataset is configured, you must then provide details on your dataflow, including a name, an optional description, and alert configurations.
 
 ![The dataflow details configurations interface.](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-dataset-details.png)
 
@@ -141,20 +147,22 @@ Use the mapping interface to map your source data to the appropriate schema fiel
 
 ## Schedule your dataflow ingestion
 
-Use the scheduling interface to define the ingestion schedule of your dataflow.
-
-* **Frequency**: Configure frequency to indicate how often the dataflow should run. You can set your frequency to: once, minute, hour, day, or week.
-* **Interval**: Once you select a frequency, you can then configure the interval setting to establish the time frame between every ingestion. For example, if you set your frequency to day and configure the interval to 15, then your dataflow will run every 15 days. Interval cannot be set to zero and must be set to at least 15.
-* **Start Time** - The timestamp for the projected run, presented in UTC time zone.
-* **Backfill** - Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested.
+Next, use the scheduling interface to define the ingestion schedule of your dataflow.
 
 ![The scheduling configuration interface.](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-scheduling.png)
+
+| Scheduling configuration | Description |
+| --- | --- |
+| Frequency | Configure frequency to indicate how often the dataflow should run. You can set your frequency to: <ul><li>**Once**: Set your frequency to `once` to create a one-time ingestion. Configurations for interval and backfill are unavailable when creating a one-time ingestion dataflow. By default, the scheduling frequency is set to once.</li><li>**Minute**: Set your frequency to `minute` to schedule your dataflow to ingest data on a per-minute basis.</li><li>**Hour**:Set your frequency to `hour` to schedule your dataflow to ingest data on a per-hour basis.</li><li>**Day**: Set your frequency to `day` to schedule your dataflow to ingest data on a per-day basis.</li><li>**Week**: Set your frequency to `week` to schedule your dataflow to ingest data on a per-week basis.</li></ul> |
+| Interval |  Once you select a frequency, you can then configure the interval setting to establish the time frame between every ingestion. For example, if you set your frequency to day and configure the interval to 15, then your dataflow will run every 15 days. **Note**: You cannot set interval to zero. |
+| Start Time | The timestamp for the projected run, presented in UTC time zone. |
+| Backfill | Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested. |
 
 ## Review your dataflow
 
 Use the review page for a summary of your dataflow prior to ingestion. Details are grouped in the following categories:
 
-* **Connection** - Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+* **Connection** - Shows the source type, the relevant path of the chosen source file, and the number of columns within that source file.
 * **Assign dataset & map fields** - Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
 * **Scheduling** - Shows that active period, frequency, and interval of the ingestion schedule.
   Once you have reviewed your dataflow, click Finish and allow some time for the dataflow to be created.
@@ -167,11 +175,11 @@ By following this tutorial, you have successfully created a dataflow to bring ba
 
 ### Monitor your dataflow
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it to view information on ingestion rates, success, and errors. For more information on how to monitor dataflow, visit the tutorial on [monitoring accounts and dataflows in the UI](../../monitor.md).
+Once your dataflow has been created, you can monitor the data that is being ingested through it to view information on ingestion rates, success, and errors. For more information on how to monitor dataflow, visit the tutorial on [monitoring accounts and dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).
 
 ### Update your dataflow
 
-To update configurations for your dataflows scheduling, mapping, and general information, visit the tutorial on [updating sources dataflows in the UI](../../update-dataflows.md)
+To update configurations for your dataflows scheduling, mapping, and general information, visit the tutorial on [updating sources dataflows in the UI](../../update-dataflows.md).
 
 ### Delete your dataflow
 
@@ -179,4 +187,4 @@ You can delete dataflows that are no longer necessary or were incorrectly create
 
 ## Additional resources {#additional-resources}
 
-[!DNL Acxiom] Infobase: https://www.acxiom.com/wp-content/uploads/2022/02/fs-acxiom-infobase_AC-0268-22.pdf
+For more information, read the [[!DNL Acxiom] InfoBase](https://www.acxiom.com/wp-content/uploads/2022/02/fs-acxiom-infobase_AC-0268-22.pdf).
