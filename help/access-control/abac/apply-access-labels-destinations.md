@@ -47,7 +47,7 @@ While this release enables you to grant users object-level access to specific de
 * Datasets
 * Audiences
 
-### Use case example
+## Use case example
 
 With object-level access control for destinations, limit specific teams of marketers to have access only to their specific destinations. For example if your organization has customer data in several geographical locations, like the United States and the United Kingdom, you can limit a marketing team to view and edit the dataflows for the US location only, and another marketing team to view and edit the dataflows for the UK location.
 
