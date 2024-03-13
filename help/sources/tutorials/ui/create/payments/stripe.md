@@ -1,15 +1,15 @@
 ---
-title: Bring payments data from your Stripe account to Experience Platform using the user interface.
-description: Learn how to bring payments data from your Stripe account to Experience Platform using the user interface.
+title: Ingest payments data from your Stripe account to Experience Platform using the user interface.
+description: Learn how to ingest payments data from your Stripe account to Experience Platform using the user interface.
 badge: Beta
 ---
-# Bring payments data from your [!DNL Stripe] account to Experience Platform using the user interface
+# Ingest payments data from your [!DNL Stripe] account to Experience Platform using the user interface
 
 >[!NOTE]
 >
 >The [!DNL Stripe] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
-Read the following tutorial to learn how to bring payments data from your [!DNL Stripe] account to Adobe Experience Platform using the user interface.
+Read the following tutorial to learn how to ingest payments data from your [!DNL Stripe] account to Adobe Experience Platform using the user interface.
 
 ## Get started
 

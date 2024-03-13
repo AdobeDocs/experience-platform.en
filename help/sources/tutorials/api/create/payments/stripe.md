@@ -1,15 +1,15 @@
 ---
-title: Bring payments data from your [!DNL Stripe] account to Experience Platform using APIs
-description: Learn how to bring payments data from your Stripe account to Experience Platform using the Flow Service API
+title: Ingest payments data from your [!DNL Stripe] account to Experience Platform using APIs
+description: Learn how to ingest payments data from your Stripe account to Experience Platform using the Flow Service API
 badge: Beta
 ---
-# Bring payments data from your [!DNL Stripe] account to Experience Platform using APIs
+# Ingest payments data from your [!DNL Stripe] account to Experience Platform using APIs
 
 >[!NOTE]
 >
 >The [!DNL Stripe] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
-Read the following tutorial to learn how to bring your payments data from [!DNL Stripe] to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read the following tutorial to learn how to ingest your payments data from [!DNL Stripe] to Adobe Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Get started
 
@@ -62,7 +62,7 @@ curl -X POST \
           "version": "1.0"
       },
       "auth": {
-          "specName": "OAuth 2 Refresh Code",
+          "specName": "OAuth2 Refresh Code",
           "params": {
             "accessToken": "{ACCESS_TOKEN}",
           }
@@ -110,7 +110,7 @@ When performing GET requests to explore your source's file structure and content
 | `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. For this source the value would be `json`. |
 | `fileType=json` | The file type of the file you want to bring to Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
-| `{SOURCE_PARAMS}` | A [!DNL Base64-]encoded string that points to the resource path you want to explore. Your resource path needs to be encoded in [!DNL Base64] in order to obtain the approved format for `{SOURCE_PARAMS}`. For example, `{"resourcePath":"charges"}` is encoded as `eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D`. |
+| `{SOURCE_PARAMS}` | A [!DNL Base64-]encoded string that points to the resource path you want to explore. Your resource path needs to be encoded in [!DNL Base64] in order to obtain the approved format for `{SOURCE_PARAMS}`. For example, `{"resourcePath":"charges"}` is encoded as `eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D`. The list of available resource paths include: <ul><li>`charges`</li><li>`subscriptions`</li><li>`refunds`</li><li>`balance_transactions`</li><li>`customers`</li><li>`prices`</li></ul> |
 
 ```shell
 curl -X GET \
