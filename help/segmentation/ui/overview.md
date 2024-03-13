@@ -109,7 +109,7 @@ You can add additional fields to the [!UICONTROL Browse] page by selecting ![the
 | [!UICONTROL Name] | The name of the audience. |
 | [!UICONTROL Profile count] | The total number of profiles that qualify for the audience. | 
 | [!UICONTROL Origin] | The origin of the audience. This states where the audience comes from. Possible values include Segmentation Service, Custom upload, Audience composition, and Audience Manager. |
-| [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Published`, and `Archived`. |
+| [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Inactive`, `Published`, and `Archived`. |
 | [!UICONTROL Update frequency] | A value that states how often the audience's data is updated. Possible values for this field include [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge], and [!UICONTROL Not Scheduled]. |
 | [!UICONTROL Last updated by] | The name of the person who last updated the audience. |
 | [!UICONTROL Created] | The date and time, in UTC, that the audience was created. |
@@ -199,7 +199,7 @@ The list of available filters is displayed.
 | ------ | ----------- |
 | [!UICONTROL Origin] | Lets you filter based on the origin of the audience. Available options include Segmentation service, Custom upload, Audience composition, and Audience Manager. |
 | [!UICONTROL Has any tag] | Lets you filter by tags. You can select between **[!UICONTROL Has any tag]** and **[!UICONTROL Has all tags]**. When **[!UICONTROL Has any tag]** is selected, the filtered audiences will include **any** of the tags you've added. When **[!UICONTROL Has all tags]** is selected, the filtered audiences must include **all** of the tags you've added. |
-| [!UICONTROL Lifecycle status] | Lets you filter based on the audience's lifecycle status. Available options include [!UICONTROL Active], [!UICONTROL Archived], [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive], and [!UICONTROL Published]. |
+| [!UICONTROL Lifecycle status] | Lets you filter based on the audience's lifecycle status. Available options include [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive], and [!UICONTROL Published]. |
 | [!UICONTROL Update frequency] | Lets you filter based on the audience's update frequency. Available options include [!UICONTROL Scheduled], [!UICONTROL Continuous], and [!UICONTROL On Demand]. |
 | [!UICONTROL Created by] | Lets you filter based on the person who created the audience. |
 | [!UICONTROL Creation date] | Lets you filter based on the creation date of the audience. You can choose a date range to filter when the audience was created. |
@@ -390,7 +390,7 @@ A popover appears, listing all the fields that can be displayed within the table
 | Field | Description |
 | ----- | ----------- | 
 | [!UICONTROL Name] | The name of the audience. |
-| [!UICONTROL Status] | The status of the audience. Possible values for this field include `Draft`, `Published`, and `Archived`.  |
+| [!UICONTROL Status] | The status of the audience. Possible values for this field include `Draft`, `Inactive`, `Published`, and `Archived`.  |
 | [!UICONTROL Created] | The time and date the audience was created. | 
 | [!UICONTROL Created by] | The name of the person who created the audience. |
 | [!UICONTROL Updated] | The time and date the audience was last updated. |

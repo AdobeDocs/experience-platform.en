@@ -102,7 +102,6 @@ The following chart explains the different lifecycle statuses, what they represe
 | Published | An audience in the **Published** state is an audience that is ready for use across all downstream services. | Yes | Yes | Yes | Can be imported or updated. | Evaluated using batch, streaming, or edge segmentation. | Yes |
 | Inactive | An audience in the **Inactive** state is an audience that is currently not in use. It still exists within Platform, but it will **not** be useable until it's marked as draft or published. | No, but can be shown. | No | No | No longer updated. | No longer evaluated or updated by Platform. | Yes |
 | Deleted | An audience in the **Deleted** state is an audience that has been deleted. The actual deletion of the data may take up to a few minutes to execute. | No | No | No | Underlying data is deleted. | No data evaluation or execution occurs after the deletion is completed. | No |
-| Active | This status has been **deprecated** and is replaced by the **Published** status. | N/A | N/A | N/A | N/A | N/A | N/A |
 
 ### How will Audience Portal and Audience Composition interact with the release of Real-Time CDP Partner Data?
 
