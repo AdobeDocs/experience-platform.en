@@ -9,13 +9,13 @@ badge: Beta
 >
 >The [!DNL Stripe] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-Thousands of companies, of all sizes, use [!DNL Stripe] online and in person to accept payments, create new revenue sources, and grow globally using the Adobe Experience Platform, Adobe Commerce and [!DNL Magento Open Source].
+Thousands of companies of all sizes use [!DNL Stripe] online and in person to accept payments, create new revenue sources, and grow globally using the Adobe Experience Platform, Adobe Commerce, and [!DNL Magento Open Source].
 
 Use the [!DNL Stripe] source in Experience Platform to ingest data captured during the purchase flow by your customers. Once ingested, use this data to create personalized offers and unlock richer business insights.
 
 >[!TIP]
 >
->For questions about the [!DNL Stripe] source on Experience Platform, contact [!DNL Stripe] at adobe-partnership<span>@stripe.com
+>For questions about the [!DNL Stripe] source on Experience Platform, contact [!DNL Stripe] at adobe-partnership<span>@stripe.com.
 
 >[!BEGINSHADEBOX]
 
@@ -25,11 +25,11 @@ On your e-commerce site, your company offers **buy now** and **pay later** (thro
 
 >[!ENDSHADEBOX]
 
-Read the document below for information on how you can set up your [!DNL Stripe] source account, retrieve your necessary credentials, and information on how to create your schemas.
+Read the document below for information on how you can set up your [!DNL Stripe] source account, retrieve the necessary credentials, and information on how to create your schemas.
 
 ## Prerequisites {#prerequisites}
 
-The following sections provides information on prerequisite setup that you must complete before connecting your [!DNL Stripe] account to Experience Platform.
+The following sections provide information on prerequisite setup that you must complete before connecting your [!DNL Stripe] account to Experience Platform.
 
 ### Retrieve your access token
 
@@ -84,7 +84,7 @@ You must create an XDM schema to describe a dataset, which can store the possibl
 
 In [!DNL Stripe], **charges** represent attempts to move money into your [!DNL Stripe]. For information on specific charge attributes, visit the [[!DNL Stripe] API guide on charges](https://docs.stripe.com/api/charges).
 
-+++Select to view the Stripe charge object  
++++Select to view the Stripe Charge object  
 
 ```json
 {
@@ -179,7 +179,7 @@ In [!DNL Stripe], **charges** represent attempts to move money into your [!DNL S
 
 In [!DNL Stripe], you can use **subscriptions** to charge a customer on a recurring basis. For information on specific subscription attributes, visit the [[!DNL Stripe] API guide on subscriptions](https://docs.stripe.com/api/subscriptions).
 
-+++Select to view the Stripe subscription object
++++Select to view the Stripe Subscription object
 
 ```json
 {
@@ -321,7 +321,7 @@ In [!DNL Stripe], you can use **subscriptions** to charge a customer on a recurr
 
 In [!DNL Stripe], you can use **refunds** to refund a previously created charge. For information on specific subscription attributes, visit the [[!DNL Stripe] API guide on refunds](https://docs.stripe.com/api/refunds).
 
-+++Select to view the Stripe refund object
++++Select to view the Stripe Refund object
 
 ```json
 {
@@ -357,7 +357,7 @@ In [!DNL Stripe], you can use **refunds** to refund a previously created charge.
 
 In [!DNL Stripe], **balance transactions** represent the movement of funds between your [!DNL Stripe] accounts. For information on specific balance transaction attributes, visit the [[!DNL Stripe] API guide on balance transactions](https://docs.stripe.com/api/balance_transactions).
 
-+++Select to view the Stripe balance transaction object
++++Select to view the Stripe Balance Transaction object
 
 ```json
 {
@@ -385,7 +385,7 @@ In [!DNL Stripe], **balance transactions** represent the movement of funds betwe
 
 In [!DNL Stripe], **customers** represent a given customer of your business. For information on specific customer attributes, visit the [[!DNL Stripe] API guide on balance transactions](https://docs.stripe.com/api/customers). 
 
-+++Select to view the Stripe customer object
++++Select to view the Stripe Customer object
 
 ```json
 {
@@ -425,7 +425,7 @@ In [!DNL Stripe], **customers** represent a given customer of your business. For
 
 In [!DNL Stripe], **prices** represent the unit cost, currency, and the optional billing cycle for both recurring and one-time purchase of products. For information on specific price attributes, visit the [[!DNL Stripe] API guide on balance transactions](https://docs.stripe.com/api/prices). 
 
-+++Select to view the Stripe price object
++++Select to view the Stripe Price object
 
 ```json
 {
