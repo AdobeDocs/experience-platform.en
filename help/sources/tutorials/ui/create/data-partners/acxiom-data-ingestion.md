@@ -1,19 +1,18 @@
 ---
 title: Acxiom Data Ingestion
-description: Use this connector to ingest Acxiom data into Real-Time CDP and enrich first-party profiles. Use your Acxiom-enriched first-party profiles to improve audiences and activate across marketing channels.
+description: Use the Acxiom Data Ingestion to ingest Acxiom data into Real-Time CDP and enrich first-party profiles. Use your Acxiom-enriched first-party profiles to improve audiences and activate across marketing channels.
 last-substantial-update: 2024-03-19
 badge: Beta
 ---
-# Create an [!DNL Acxiom Data Ingestion] source connection and dataflow in the UI {#overview}
+# Create an [!DNL Acxiom Data Ingestion] source connection and dataflow in the UI
 
 >[!NOTE]
 >
->The [!DNL Acxiom Data Ingestion] source is in beta. Please read the [sources overview](../../../../home.md) for more information on using beta-labeled sources.
+>The [!DNL Acxiom Data Ingestion] source is in beta. Read the [terms and conditions](../../../../home.md#terms-and-conditions) in the sources overview for more information on using beta-labeled sources.
 
-Use Acxiom Data Ingestion connector to ingest Acxiom data into Real-Time CDP and enrich first-party profiles. Use your Acxiom-enriched first-party profiles to improve audiences and activate across marketing channels.
+Use the [!DNL Acxiom Data Ingestion] source to ingest [!DNL Acxiom] data into Real-Time Customer Data Platform and enrich first-party profiles. Then, you can use your [!DNL Acxiom]-enriched first-party profiles to improve audiences and activate across marketing channels.
 
-Read this tutorial to learn how to create an [!DNL Acxiom Data Ingestion] source connection and dataflow using the Adobe Experience Platform user interface.  This Connector is used to retrieve and map response from Acxiom enhancement service using Amazon S3 as a drop point.
-
+Read this tutorial to learn how to create an [!DNL Acxiom Data Ingestion] source connection and dataflow using the Adobe Experience Platform user interface. The [!DNL Acxiom Data Ingestion] source is used to retrieve and map response from [!DNL Acxiom] enhancement service using Amazon S3 as a drop point.
 
 ## Prerequisites {#prerequisites}
 
