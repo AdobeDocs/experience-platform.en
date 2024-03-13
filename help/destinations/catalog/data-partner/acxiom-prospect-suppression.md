@@ -1,6 +1,6 @@
 ---
 title: Acxiom Prospect-Suppression
-description: Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securely exports first party data from Real-Time CDP and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. This will be matched against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
+description: Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securely exports first party data from Real-Time CDP and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. This will be matched against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry's best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
 last-substantial-update: 2024-01-31
 badge: Beta
 ---
@@ -12,11 +12,11 @@ badge: Beta
 
 ## Overview {#overview}
 
-Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securely exports first party data from Real-Time Customer Data Platform and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. This will be matched against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry’s best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
+Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securely exports first party data from Real-Time Customer Data Platform and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. This will be matched against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry's best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
 
 This tutorial provides steps to create an [!DNL Acxiom Prospect-Suppression] destination connection and dataflow using the Adobe Experience Platform user interface.  This connector is used to deliver data to Acxiom prospect service using Amazon S3 as a drop point.
 
-![The destination catalog with the Acxiom destination selected.](../../assets/catalog/advertising/acxiom/image-destination-catalog.png)
+![The destination catalog with the Acxiom destination selected.](../../assets/catalog/data-partner/acxiom/image-destination-catalog.png)
 
 ## Use cases {#use-cases}
 
@@ -78,19 +78,19 @@ In order to access your bucket on Experience Platform, you need to provide valid
 
 Define a new Acxiom Managed S3 location
 
-![New Account](../../assets/catalog/advertising/acxiom/image-destination-new-account.png)
+![New Account](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
 
 ### Existing Account
 
 Accounts already defined using the Acxiom Prospect-Suppression card will appear in a list pop-up and when selected provides details on the account.  This is shown below in the example from the UI, when you navigate to **Destinations** > **Accounts**;
 
-![Existing Account](../../assets/catalog/advertising/acxiom/image-destination-account.png)
+![Existing Account](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
 
 ### Fill in destination details {#destination-details}
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Destination Detail](../../assets/catalog/advertising/acxiom/image-destination-details.png)
+![Destination Detail](../../assets/catalog/data-partner/acxiom/image-destination-details.png)
 
 * **Name (Required)** - The name the destination will be saved under
 * **Description** -  Short explanation of the destination's purpose
@@ -102,7 +102,7 @@ To configure details for the destination, fill in the required and optional fiel
 >
 >When selecting the CSV option, *Delimiter*, *Quote Character*, *Escape Character*, *Empty Value*, *Null Value*, *Compression format*, and *Include manifest file* options will be presented, the following document explains these settings in more detail [configure the formatting options](../../ui/batch-destinations-file-formatting-options.md).
 
-![CSV Options](../../assets/catalog/advertising/acxiom/image-destination-csv-options.png)
+![CSV Options](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png)
 
 ### Enable alerts {#enable-alerts}
 
@@ -142,7 +142,7 @@ Processing requires name and address elements, while not all elements are requir
 
 Use the review page for a summary of your dataflow prior to submission
 
-![Review](../../assets/catalog/advertising/acxiom/image-destination-review.png)
+![Review](../../assets/catalog/data-partner/acxiom/image-destination-review.png)
 
 ## Next steps
 
