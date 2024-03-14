@@ -79,5 +79,5 @@ role: Admin
   * Personalization, Insights, and Engagement {#personalization-insights-engagement}
     * [Intelligently re-engage your customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
     * [Intelligently re-engage your customers: Luma examples](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
-* [Experience Platform Release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Experience Platform Release notes](/help/release-notes/latest/latest.md)
 * [Experience Platform Glossary](https://www.adobe.com/go/platform-glossary-en)

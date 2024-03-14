@@ -222,4 +222,4 @@ role: Developer
   * [Create an ad hoc schema](tutorials/ad-hoc.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Platform release notes](/help/release-notes/latest/latest.md)

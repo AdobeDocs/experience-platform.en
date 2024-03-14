@@ -58,7 +58,7 @@ Discover [!DNL Experience Platform] APIs, including headers, parameters, sample 
 * [**Glossary**](glossary.md)  
 Review Adobe Experience Platform terminology.
 
-* [**Release notes**](https://www.adobe.com/go/platform-release-notes-en)  
+* [**Release notes**](/help/release-notes/latest/latest.md)  
 Find information about the most recent [!DNL Experience Platform] release and review past releases.
 
 * [**Troubleshooting guide**](troubleshooting.md)  
