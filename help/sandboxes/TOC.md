@@ -28,4 +28,4 @@ feature: Sandboxes
   * [Appendix](sandbox-tooling-api/appendix.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/sandbox)
-* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

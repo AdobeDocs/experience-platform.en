@@ -290,4 +290,4 @@ role: Admin,User
         * [Documentation self-service template](./destination-sdk/docs-framework/self-service-template.md)
         * [Authoring best practices](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Frequently asked questions](./destinations-faq.md)
-* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -19,4 +19,4 @@ role: Developer
   * [UI guide](./alerts/ui.md)
   * [Subscribe to I/O Event notifications](./alerts/subscribe.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
-* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
