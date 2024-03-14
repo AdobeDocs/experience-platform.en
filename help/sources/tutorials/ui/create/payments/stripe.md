@@ -142,7 +142,13 @@ The **[!UICONTROL Mapping]** step appears. Use the mapping interface to map your
 
 Next, use the scheduling interface to create an ingestion schedule for your dataflow.
 
-![The scheduling interface of the sources workflow.](../../../../images/tutorials/create/stripe/scheduling.png)
+Select the frequency dropdown to configure your dataflow's ingestion frequency.
+
+![The frequency dropdown menu.](../../../../images/tutorials/create/stripe/frequency.png)
+
+You can also select the calendar icon and use a pop-up calendar to configure your ingestion start time.
+
+![The configurable calendar for scheduling.](../../../../images/tutorials/create/stripe/calendar.png)
 
 | Scheduling configuration | Description |
 | --- | --- |
@@ -150,6 +156,11 @@ Next, use the scheduling interface to create an ingestion schedule for your data
 | Interval |  Once you select a frequency, you can then configure the interval setting to establish the time frame between every ingestion. For example, if you set your frequency to day and configure the interval to 15, then your dataflow will run every 15 days. **Note**: You cannot set interval to zero. |
 | Start Time | The timestamp for the projected run, presented in UTC time zone. |
 | Backfill | Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested. |
+
+Once you have configured your dataflow's ingestion schedule, select **[!UICONTROL Next]**.
+
+![The scheduling interface of the sources workflow.](../../../../images/tutorials/create/stripe/scheduling.png)
+
 
 ## Review your dataflow
 
