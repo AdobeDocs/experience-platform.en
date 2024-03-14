@@ -54,7 +54,7 @@ Below is a high level overview of the three example re-engagement scenarios.
 The abandoned product browse scenario targets abandoned product browsing on both the website and mobile app. This scenario is triggered when a product has been viewed but not purchased or added to the cart. In this example, brand engagement is triggered after three days if there are no list additions within the last 24 hours.<p>![Customer intelligent abandoned product browse scenario high level visual overview.](../intelligent-re-engagement/images/re-engagement-journey.png "Customer intelligent abandoned product browse scenario high level visual overview."){width="1920" zoomable="yes"}</p>
 
 1. You create schemas and datasets, then enable for [!UICONTROL Profile].
-2. You ingest data into Experience Platform via Web SDK, Mobile SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
+2. You ingest data into Experience Platform via Web SDK, Mobile SDK or API. Analytics Source Connector can also be utilized, but may result in journey latency.
 3. You ingest additional profile-enabled data, which can be linked to the authenticated web and mobile app visitor via identity graphs.
 4. You build focused audiences from the list of profiles to check if a **customer** has made an engagement in the last three days.
 5. You create a abandoned product browse journey in [!DNL Adobe Journey Optimizer].
@@ -66,7 +66,7 @@ The abandoned product browse scenario targets abandoned product browsing on both
 The abandoned cart scenario applies when products have been placed in the cart but have not yet been purchased on both the website and mobile app. Also, Paid Media campaigns are started and stopped using this method.<p>![Customer abandoned cart scenario high level visual overview.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Customer abandoned cart scenario high level visual overview."){width="1920" zoomable="yes"}</p> 
 
 1. You create schemas and datasets, the enable for [!UICONTROL Profile].
-2. You ingest data into Experience Platform via Web SDK, Mobile SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
+2. You ingest data into Experience Platform via Web SDK, Mobile SDK or API. Analytics Source Connector can also be utilized, but may result in journey latency.
 3. You ingest additional profile-enabled data, which can be linked to the authenticated web and mobile app visitor via identity graphs.
 4. You build focused audiences from the list of profiles to check if a **customer** has placed an item in their cart but has not completed the purchase. The **[!UICONTROL Add to cart]** event kicks off a timer that waits for 30 minutes, then checks for purchase. If no purchase has been made, then the **customer** is added to the **[!UICONTROL Abandon Cart]** audiences.
 5. You create an abandoned cart journey in [!DNL Adobe Journey Optimizer].
@@ -78,7 +78,7 @@ The abandoned cart scenario applies when products have been placed in the cart b
 The order confirmation scenario focuses on product purchases made through the website and mobile app.<p>![Customer order confirmation scenario high level visual overview.](../intelligent-re-engagement/images/order-confirmation-journey.png "Customer order confirmation scenario high level visual overview."){width="1920" zoomable="yes"}</p>
 
 1. You create schemas and datasets, then enable for [!UICONTROL Profile].
-2. You ingest data into Experience Platform via Web SDK, Mobile SDK or API. Analytics Data Connector can also be utilized, but may result in journey latency.
+2. You ingest data into Experience Platform via Web SDK, Mobile SDK or API. Analytics Source Connector can also be utilized, but may result in journey latency.
 3. You ingest additional profile-enabled data, which can be linked to the authenticated web and mobile app visitor via identity graphs.
 4. You create a confirmation journey in [!DNL Adobe Journey Optimizer].
 5. [!DNL Adobe Journey Optimizer] sends out an order confirmation message using the preferred channel.
