@@ -87,6 +87,7 @@ role: Developer
     - [Snowflake connector](connectors/databases/snowflake.md)
     - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
   - Data & identity partner {#data-partner}
+    - [Acxiom Data Ingestion](connectors/data-partners/acxiom-data-ingestion.md)
     - [Acxiom Prospecting Data Import](connectors/data-partners/acxiom-prospecting-data-import.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - eCommerce {#ecommerce}
@@ -292,8 +293,9 @@ role: Developer
       - [Snowflake](tutorials/ui/create/databases/snowflake.md)
       - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
     - Data & identity partner {#data-partner}
-      - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+      - [Acxiom Data Ingestion](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
       - [Acxiom Prospecting Data Import](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+      - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
     - eCommerce {#ecommerce}
       - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
