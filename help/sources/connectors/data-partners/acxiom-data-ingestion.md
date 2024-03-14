@@ -9,11 +9,15 @@ badge: Beta
 >
 >The [!DNL Acxiom Prospecting Data Import] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-INTRO
+Use the [!DNL Acxiom Data Ingestion] source to ingest [!DNL Acxiom] data into Real-Time Customer Data Platform and enrich first-party profiles. Then, you can use your [!DNL Acxiom]-enriched first-party profiles to improve audiences and activate across marketing channels.
+
+![acxiom-data-ingestion-workflow](../../images/tutorials/create/acxiom-data-enhancement-import/acxiom-data-ingestion.png)
+
+Read the document below for information on how you can set up your [!DNL Acxiom Data Ingestion] source account.
 
 ## Prerequisites {#prerequisites}
 
-In order to access your bucket on Experience Platform, you need to provide valid values for the following credentials:
+In order to connect your [!DNL Acxiom Data Ingestion] account to Experience Platform, you must provide values for the following authentication credentials:
 
 | Credential | Description |
 | --- | --- |
