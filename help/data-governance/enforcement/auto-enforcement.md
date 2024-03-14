@@ -7,15 +7,15 @@ exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 ---
 # Automatic policy enforcement
 
+Data usage labels and policies are available to all Adobe Experience Platform users. Define data usage policies and apply data usage labels to ensure that any sensitive, identifiable, or contractual data are handled accurately. These measures help enforce your organization's data governance rules on how data can be accessed, processed, stored, and shared. 
+
+To help safeguard your organization from potential risks and liabilities, Platform automatically enforces usage policies should any violations occur when activating audiences to destinations. 
+
 >[!IMPORTANT]
 >
->Automatic policy enforcement is only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
+>Consent policies and automatic consent policy enforcement is only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
 
-Once data is labeled and data usage policies are defined, you can enforce data usage compliance with policies. When activating audiences to destinations, Adobe Experience Platform automatically enforces usage policies should any violations occur.
-
->[!NOTE]
->
->This document focuses on the enforcement of data governance and consent policies. For information on access control policies, refer to the documentation on [attribute-based access control](../../access-control/abac/overview.md).
+This document focuses on the enforcement of data governance and consent policies. For information on access control policies, refer to the documentation on [attribute-based access control](../../access-control/abac/overview.md).
 
 ## Prerequisites
 
@@ -88,7 +88,7 @@ If a policy violation occurs from attempting to activate an audience (or [making
 
 Select a policy violation in the popover's left column to display details for that violation.
 
-![](../images/enforcement/violation-policy-select.png)
+![A dialog that indicates a policy violation has occurred with the policy name highlighted.](../images/enforcement/violation-policy-select.png)
 
 The violation message provides a summary of the policy that was violated, including the conditions the policy is configured to check for, the specific action that triggered the violation, and a list of possible resolutions for the issue.
 
@@ -109,6 +109,10 @@ Select **[!UICONTROL List view]** to display the data lineage as a list. To swit
 ### Consent policy evaluation {#consent-policy-evaluation}
 
 If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating an audience to a destination, you can see how your consent policies affect the percentage of profiles that are included in the activation.
+
+>[!NOTE]
+>
+>Consent policies are only available for organizations that have purchased Adobe Healthcare Shield or Adobe Privacy & Security Shield.
 
 #### Consent policy enhancement for paid media {#consent-policy-enhancement}
 
