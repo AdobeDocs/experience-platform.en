@@ -31,7 +31,7 @@ Contract "C" labels are used to categorize data that has contractual obligations
 | [C6](#c6) | Data cannot be used for on-site ad targeting. |
 | [C7](#c7) | Data cannot be used for on-site targeting of content. |
 | [C8](#c8) | Data cannot be used for measurement of your organization's websites or apps. |
-| [C9](#c9) | Data cannot be used in Data Science workflows. |
+| [C9](#c9) | Data cannot be used in data science workflows. |
 | [C10](#c10) | Data cannot be used for stitched identity activation. |
 | [C11](#c11) | Data cannot be shared with Segment Match partners. |
 | [C12](#c12) | Data cannot be exported in any way. |
