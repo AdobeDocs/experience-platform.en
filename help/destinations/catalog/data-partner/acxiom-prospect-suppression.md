@@ -1,7 +1,7 @@
 ---
 title: Acxiom Prospect-Suppression
 description: Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securely exports first party data from Real-Time CDP and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. This will be matched against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry's best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
-last-substantial-update: 2024-01-31
+last-substantial-update: 2024-03-14
 badge: Beta
 ---
 # [!DNL Acxiom Prospect-Suppression] destination connection
@@ -12,9 +12,14 @@ badge: Beta
 
 ## Overview {#overview}
 
-Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securely exports first party data from Real-Time Customer Data Platform and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. This will be matched against the Acxiom Global database which enables the prospect lists to be tailored for import. Acxiom offers the industry's best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
+Use Acxiom Prospect-Suppression to deliver the most productive prospect audiences possible. This connector securely exports first party data from Real-Time Customer Data Platform and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. This will be matched against the Acxiom Global database which enables the prospect lists to be tailored for import. Then, use the [Acxiom Prospecting Data Import](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) source connector to prospect lists from Acxiom back into Real-Time CDP, with your known or converted customers removed. 
 
-This tutorial provides steps to create an [!DNL Acxiom Prospect-Suppression] destination connection and dataflow using the Adobe Experience Platform user interface.  This connector is used to deliver data to Acxiom prospect service using Amazon S3 as a drop point.
+![Marketing diagram to export first-party data to Acxiom, then import prospect data back into Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow.png)
+
+
+Acxiom offers the industry's best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
+
+This tutorial provides steps to create an [!DNL Acxiom Prospect-Suppression] destination connection and dataflow using the Adobe Experience Platform user interface. This connector is used to deliver data to the Acxiom prospect service using Amazon S3 as a drop point. Contact your Acxiom account representative once you start exporting files to the Amazon S3 drop point.
 
 ![The destination catalog with the Acxiom destination selected.](../../assets/catalog/data-partner/acxiom/image-destination-catalog.png)
 
@@ -22,9 +27,17 @@ This tutorial provides steps to create an [!DNL Acxiom Prospect-Suppression] des
 
 To help you better understand how and when you should use the Acxiom Prospect-Suppression destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use case 1: Creating a Suppression List for Prospecting Datasets {#use-case-1}
+### Create a suppression list for prospecting datasets {#create-suppression-list}
 
 Marketing professionals aiming to enhance the effectiveness of their outreach strategies often employ the creation of a suppression list. This list includes existing customers and specific segments, ensuring their exclusion from prospecting activities during targeted campaigns. This strategic approach helps refine the audience, avoids redundant communication, and contributes to a more focused and efficient marketing effort.
+
+For example, as a marketer, you may want to broaden your campaign reach by adding targeted prospect profiles to your campaigns based on segmentation and suppression criteria that you have provided.
+
+The use case is executed through a combination of both destination and source connectors.
+
+You would initially start by exporting your existing customer profiles using this destination connector to be used as a suppression file. This ensures that no existing customer records are included.
+
+Acxiom's service would search for the file, retrieve it and use it alongside additional selection criteria and generate a prospect file. You would then use the corresponding [Acxiom Prospecting Data Import](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) source connector to ingest the prospect profiles into Adobe Real-Time CDP.
 
 ## Prerequisites {#prerequisites}
 
@@ -134,15 +147,22 @@ Processing requires name and address elements, while not all elements are requir
 | state        | The mailingAddress.state value in Experience Platform.      |
 | zip          | The mailingAddress.postalCode value in Experience Platform. |
 
+{style="table-layout:auto"}
+
 >[!NOTE]
 >
->Additional fields not listed above will be included on the export, but will be ignored by Acxiom processing. 
+>Additional fields not listed above will be included in the export, but will be ignored by Acxiom processing. 
 
 ## Review your dataflow
 
 Use the review page for a summary of your dataflow prior to submission
 
 ![Review](../../assets/catalog/data-partner/acxiom/image-destination-review.png)
+
+
+## Exported data / Validate data export {#exported-data}
+
+To verify if data has been exported successfully, check your [!DNL Amazon S3 Storage] bucket and make sure that the exported files contain the expected profile populations.
 
 ## Next steps
 
@@ -151,12 +171,6 @@ By following this tutorial, you have successfully created a dataflow to export b
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
-
-
-## Exported data / Validate data export {#exported-data}
-
-To verify if data has been exported successfully, check your [!DNL Amazon S3 Storage] bucket and make sure that the exported files contain the expected profile populations.
-
 
 ## Additional resources {#additional-resources}
 
