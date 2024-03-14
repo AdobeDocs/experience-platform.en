@@ -75,4 +75,4 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 * [Troubleshooting guide](troubleshooting.md)
 * [Gen2 data lake migration](adls2-gen2-migration.md)
 * [Glossary](glossary.md)
-* [Release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -30,4 +30,4 @@ role: Developer
   * [Enable a dataset for Profile updates (upsert)](datasets/enable-upsert.md)
 * [Privacy request processing in the Data Lake](privacy.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/catalog/)
-* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

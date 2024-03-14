@@ -11,4 +11,4 @@ role: Developer
 - [Developing ETL integrations](home.md)
 - [ETL transformation](transformations.md)
 - [ETL workflow](workflow.md)
-- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
