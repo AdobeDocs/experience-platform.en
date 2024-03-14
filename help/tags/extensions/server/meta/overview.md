@@ -11,8 +11,9 @@ Using the [!DNL Meta Conversions API] extension, you can leverage the API's capa
 
 ## Demo
 
->[!VIDEO](https://unlockmarketingdata.com/video-meta-conversions-api)
+The following video is intended to support your understanding of the [!DNL Meta Conversions API].
 
+>[!VIDEO](https://unlockmarketingdata.com/video-meta-conversions-api)
 
 ## Prerequisites
 

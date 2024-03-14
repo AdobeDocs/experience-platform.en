@@ -3,6 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Merge Policies API Endpoint
 type: Documentation
 description: Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create a unified view.
+role: Developer
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 ---
 # Merge policies endpoint

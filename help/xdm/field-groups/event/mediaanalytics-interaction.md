@@ -1,6 +1,7 @@
 ---
 title: MediaAnalytics Interaction Details Schema Field Group
 description: Learn about the MediaAnalytics Interaction Details schema field group.
+exl-id: 1096d28a-5796-49cc-bd45-b3f5188f699e
 ---
 # [!UICONTROL MediaAnalytics Interaction Details] schema field group
 

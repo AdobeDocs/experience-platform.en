@@ -20,7 +20,7 @@ This section describes the condition types available in the Core extension.  The
 
 ### Custom Code
 
-Specify any custom code that must exist as a condition of the event. Use the built-in code editor to enter the custom code. Event forwarding in Adobe Experience Platform supports ES6.  
+Specify any custom code that must exist as a condition of the event. Use the built-in code editor to enter the custom code. Event forwarding in Adobe Experience Platform supports ES13.  
 
 1. Select **[!UICONTROL Open Editor]**.
 1. Type the custom code.
@@ -149,7 +149,7 @@ This section describes the action types available in the Core extension.
 
 ### Custom Code
 
-Provide the code that runs after the event is triggered and conditions are evaluated. Event forwarding in Adobe Experience Platform supports ES6.
+Provide the code that runs after the event is triggered and conditions are evaluated. Event forwarding in Adobe Experience Platform supports ES13.
 
 1. Name the action code.
 1. Select **[!UICONTROL Open Editor]**.
