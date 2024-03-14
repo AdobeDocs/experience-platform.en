@@ -21,4 +21,4 @@ role: Developer
 - [Mapping sets](mapping-set.md)
 - [Stream upserts](upserts.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
-- [Platform release notes](/help/release-notes/latest/latest.md)
+- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

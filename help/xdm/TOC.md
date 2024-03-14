@@ -222,4 +222,4 @@ role: Developer
   * [Create an ad hoc schema](tutorials/ad-hoc.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Platform release notes](/help/release-notes/latest/latest.md)
+* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

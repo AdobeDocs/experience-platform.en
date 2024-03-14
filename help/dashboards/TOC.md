@@ -38,4 +38,4 @@ role: Developer,User
 * [Query dashboard datasets](query.md)
 * [Real-Time Customer Data Platform Insights Data Model](cdp-insights-data-model.md)
 * [View insight SQL](view-sql.md)
-* [Platform release notes](/help/release-notes/latest/latest.md)
+* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

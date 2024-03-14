@@ -315,5 +315,5 @@ role: Developer
 * [FAQ](./faq.md)
 * [Terminology updates](./term-updates.md)
 * [Deprecating support for Internet Explorer 10 and 11](./ie-deprecation.md)
-* [Platform release notes](/help/release-notes/latest/latest.md)
+* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

@@ -40,4 +40,4 @@ role: Admin
   * [View effective policies](api/effective-policies.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Platform release notes](/help/release-notes/latest/latest.md)
+* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -67,4 +67,4 @@ role: User
   - [Enforce data usage compliance for segments](tutorials/governance.md)
 - [Frequently asked questions](./faq.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Platform release notes](/help/release-notes/latest/latest.md)
+- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

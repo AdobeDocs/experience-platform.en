@@ -37,4 +37,4 @@ role: Admin,Developer
   - [Example scenarios](./identity-graph-linking-rules/example-scenarios.md)
 - [Privacy request processing](privacy.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
-- [Platform release notes](/help/release-notes/latest/latest.md)
+- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

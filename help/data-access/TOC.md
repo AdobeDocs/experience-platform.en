@@ -13,4 +13,4 @@ role: Developer
 - [Data Access API](api.md)
 - Tutorials {#tutorials}
   - [View dataset data](tutorials/dataset-data.md)
-- [Platform release notes](/help/release-notes/latest/latest.md)
+- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
