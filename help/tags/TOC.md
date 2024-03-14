@@ -174,7 +174,7 @@ role: Developer
       * [Overview](./extensions/client/marketo/overview.md)
       * [Release notes](./extensions/client/marketo/release-notes.md)
     * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
-    *[Merkury Tags Extensions](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
+    * [Merkury Tags Extensions](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
     * [!DNL Meta Pixel] {#meta}
       * [Overview](./extensions/client/meta/overview.md)
     * [Monita](https://exchange.adobe.com/apps/ec/106544)
