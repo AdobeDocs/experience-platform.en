@@ -28,7 +28,7 @@ Customer AI is built to:
 - Enhance customer profiles with influential factors for propensity scores.
 - Create segments of customers based on influential factors and propensity scores.
 
-Customer is not built to:
+Customer AI is not built to:
 
 - Customer AI should not be used to predict dynamic pricing, or the price point at which the customer is going to make a purchase.
 - Customer AI cannot determine whether giving an offer will make the customer more likely to purchase an item. While you might decide to send discount offers based on propensity scores, it's not necessarily the best way to convert those customers.
