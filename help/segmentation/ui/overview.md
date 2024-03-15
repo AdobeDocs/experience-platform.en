@@ -209,13 +209,13 @@ The list of available filters is displayed.
 
 **Bulk actions** {#bulk-actions}
 
-Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions include [moving to a folder](#folders), [creating a tag](#tags), [applying access labels](../../access-control/abac/ui/labels.md), and [deleting](#browse).
+Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions include [moving to a folder](#folders), [editing or applying a tag](#tags), [applying access labels](../../access-control/abac/ui/labels.md), and [deleting](#browse).
 
-IMAGE
+![The available options for bulk actions are highlighted.](../images/ui/overview/bulk-actions.png)
 
 When applying bulk actions to these audiences, the following conditions apply:
 
-- You can **only** select audiences from the same page. For example, you cannot select audiences from page 1 and page 2. You would only be able to select audiences from page 1 or page 2.
+- You **can** select audiences from different pages.
 - You **cannot** delete an audience which is being used in a destination activation.
 - If you select a filter, the selected audiences **will** reset.
 
