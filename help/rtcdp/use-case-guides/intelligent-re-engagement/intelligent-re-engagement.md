@@ -141,7 +141,7 @@ This field group allows you to test your journey before it is published, using t
 
 #### Customer digital transactions schema
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website or associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via [Web SDK](/help/web-sdk/home.md) and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced audience capabilities.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website or associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via [Web SDK](/help/web-sdk/home.md) and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, enhanced audience capabilities, and personalized messaging.
 
 The customer digital transactions schema is represented by an [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class. 
 
@@ -172,6 +172,25 @@ The [End User ID Details](/help/xdm/field-groups/event/enduserids.md) field grou
 
 +++
 
++++Commerce Details (Field Group)
+
+The [Commerce Details](/help/xdm/field-groups/event/commerce-details.md) field group is used to describe commerce data such as product information (SKU, name, quantity), and standard cart operations (order, checkout, abandon).
+
+| Fields | Description |
+| --- | --- |
+| `commerce.cart.cartID` | An ID for the shopping cart. |
+| `commerce.order.orderType` | An object that describes product order type. |
+| `commerce.order.payments.paymentAmount` | An object that describes product order payment amount. |
+| `commerce.order.payments.paymentType` | An object that describes product order payment type. |
+| `commerce.order.payments.transactionID` | An object product order transaction ID. |
+| `commerce.order.purchaseID` | An object product order purchase ID. |
+| `productListItems.name` | A list of item names representing the product(s) selected by a customer. |
+| `productListItems.priceTotal` | The total price of list of items representing the product(s) selected by a customer. |
+| `productListItems.product` | The product(s) selected. |
+| `productListItems.quantity` | The quantity of list of items representing the product(s) selected by a customer. |
+
++++
+
 +++External Source System Audit Details (Field Group)
 
 External Source System Audit Attributes is a standard Experience Data Model (XDM) data type that captures audit details about an external source system.
@@ -180,7 +199,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 #### Customer offline transactions schema
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on platforms outside of your website. This data is typically ingested into [!DNL Adobe Experience Platform] from a POS (or similar system) and most often streamed into Platform via an API connection. Its purpose is to reference the various offline conversion events that are used for triggering journeys, deep online and offline customer analysis, and enhanced audience capabilities.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on platforms outside of your website. This data is typically ingested into [!DNL Adobe Experience Platform] from a POS (or similar system) and most often streamed into Platform via an API connection. Its purpose is to reference the various offline conversion events that are used for triggering journeys, deep online and offline customer analysis, enhanced audience capabilities and personalized messaging.
 
 The customer offline transactions schema is represented by an [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) class.
 
@@ -340,7 +359,7 @@ The following event is used for the abandoned product browse scenario where user
 The following fields and conditions are required when setting up this audience:
 
 * `eventType: commerce.productViews`
-* And `THEN` (sequential event) exclude `eventType: commerce.productListAdds` or `application.launch` or `web.webpagedetails.pageViews` or `commerce.purchases` (this includes both online and offline)
+* And `THEN` (sequential event) exclude `eventType: commerce.productListAdds` AND `application.launch` AND `web.webpagedetails.pageViews` AND `commerce.purchases` (this includes both online and offline)
     * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 
@@ -353,7 +372,7 @@ The following event is used for the abandoned product browse scenario where user
 The following fields and conditions are required when setting up this audience:
 
 * `eventType: commerce.productViews`
-* And `THEN` (sequential event) include `eventType: commerce.productListAdds` or `application.launch` or `web.webpagedetails.pageViews` or `commerce.purchases` (this includes both online and offline)
+* And `THEN` (sequential event) include `eventType: commerce.productListAdds` OR `application.launch` OR `web.webpagedetails.pageViews` OR `commerce.purchases` (this includes both online and offline)
     * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 +++
@@ -364,7 +383,7 @@ The following event is used for the abandoned product browse scenario where user
 
 The following fields and conditions are required when setting up this audience:
 
-* `eventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `eventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
     * `Timestamp: in last 1 day` (Streaming)
 
 +++
@@ -375,7 +394,7 @@ The following event is used for the abandoned product browse scenario where user
 
 The following fields and conditions are required when setting up this audience:
 
-* `EventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `EventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
     * `Timestamp: in last 3 days` (Batch) 
 
 +++
@@ -389,7 +408,7 @@ The following events are used for the abandoned cart scenario where users added 
 The following fields and conditions are required when setting up this audience:
 
 * `eventType: commerce.productListAdds`
-    * `Timestamp: >= 1 days before now and <= 4 days before now `
+    * `Timestamp: >= 1 days before now AND <= 4 days before now `
 * `eventType: commerce.purchases`
     * `Timestamp: <= 4 days before now` 
 * `eventType: commerce.productListRemovals`
