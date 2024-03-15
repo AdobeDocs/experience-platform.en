@@ -1,42 +1,40 @@
 ---
-title: Acxiom Prospect-Suppression
-description: Export your first-party audiences to the Acxiom destination, to allow Acxiom to suppress known or converted customers. Then use the Acxiom source connector to ingest and activate prospect lists from Acxiom, with your known or converted customers removed.
+title: Acxiom Data Enhancement
+description: Use this connector to activate first-party Adobe profiles in Real-Time CDP to Acxiom for data enrichment and use across marketing channels. You can then use the Acxiom source to import the profiles with enhanced data and work with them in Real-Time CDP.
 last-substantial-update: 2024-03-14
 badge: Beta
 ---
-# [!DNL Acxiom Prospect-Suppression] destination connection
+# [!DNL Acxiom Data Enhancement] destination connection
 
 >[!NOTE]
 >
->The [!DNL Acxiom Prospect-Suppression] destination is in beta. This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, please contact them directly at acxiom-adobe-help@acxiom.com.
+>The [!DNL Acxiom Data Enhancement] destination is in beta.  This destination connector and documentation page are created and maintained by the Acxiom team. For any inquiries or update requests, please contact them directly at acxiom-adobe-help@acxiom.com.
 
 ## Overview {#overview}
 
-Use [!DNL Acxiom Prospect-Suppression] to deliver the most productive prospect audiences possible. This connector securely exports first party data from Real-Time Customer Data Platform and runs it through an award-winning hygiene and identity resolution which produces a data file to be used as a suppression list. This will be matched against the [!DNL Acxiom Global] database which enables the prospect lists to be tailored for import. Then, use the [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) source connector to prospect lists from Acxiom back into Real-Time CDP, with your known or converted customers removed. 
+Use the [!DNL Acxiom Data Enhancement] connector to supply additional descriptive data to your customer profiles, for use in analytics, segmentation, and targeting applications. With hundreds of elements available, this allows you to better segment and model data, resulting in more accurate targeting and predictive modeling.
 
-![Marketing diagram to export first-party data to Acxiom, then import prospect data back into Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow.png)
+![Marketing diagram to export first-party data to Acxiom, then import enriched data back into Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow-data-enhancement.png)
 
-Acxiom offers the industry's best-performing audiences with the largest catalog of over 12,000 global data attributes specifically focused on providing personalized experiences. Tap into limitless combinations of high-quality data to create and distribute audiences to meet specific campaign needs.
+This tutorial provides steps to create an [!DNL Acxiom Data Enhancement] destination connection and dataflow using the Adobe Experience Platform user interface. This connector is used to deliver data to Acxiom enhancement service using Amazon S3 as a drop point.
 
-This tutorial provides steps to create an [!DNL Acxiom Prospect-Suppression] destination connection and dataflow using the Adobe Experience Platform user interface. This connector is used to deliver data to the Acxiom prospect service using Amazon S3 as a drop point. Contact your Acxiom account representative once you start exporting files to the Amazon S3 drop point.
-
-![The destination catalog with the Acxiom destination selected.](../../assets/catalog/data-partner/acxiom/image-destination-catalog.png)
+![The destination catalog with the Acxiom destination selected.](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-catalog.png)
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the [!DNL Acxiom Prospect-Suppression] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Acxiom Data Enhancement] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Create a suppression list for prospecting datasets {#create-suppression-list}
+### Enhance Customer data {#enhance-customer-data}
 
-Marketing professionals aiming to enhance the effectiveness of their outreach strategies often employ the creation of a suppression list. This list includes existing customers and specific segments, ensuring their exclusion from prospecting activities during targeted campaigns. This strategic approach helps refine the audience, avoids redundant communication, and contributes to a more focused and efficient marketing effort.
+This connector should be used by marketing professionals aiming to enhance the effectiveness of their outreach strategies by appending selected descriptive elements to their customer profiles and use these to better target campaigns.
 
-For example, as a marketer, you may want to broaden your campaign reach by adding targeted prospect profiles to your campaigns based on segmentation and suppression criteria that you have provided.
+For example, as a marketer, you might want to deepen your understanding of your existing audiences by enriching their profiles with additional data. Doing so will improve your segmentation and targeting strategies, leading to a boost in campaign personalization and conversion.
 
 The use case is executed through a combination of both destination and source connectors.
 
-You would initially start by exporting your existing customer profiles using this destination connector to be used as a suppression file. This ensures that no existing customer records are included.
+You would start by exporting your existing customer records for enrichment using this destination connector. Acxiom's service would search for the file, retrieve it, enrich it with Acxiom's data and generate a file. 
 
-Acxiom's service would search for the file, retrieve it and use it alongside additional selection criteria and generate a prospect file. You would then use the corresponding [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) source connector to ingest the prospect profiles into Adobe Real-Time CDP.
+The customer would then use the corresponding [Acxiom Data Ingestion](/help/sources/connectors/data-partners/acxiom-data-ingestion.md) source card to ingest the hydrated customer profiles back into Adobe Real-Time CDP.
 
 ## Prerequisites {#prerequisites}
 
@@ -71,8 +69,8 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
-> 
->To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the destination configuration workflow, fill in the fields listed in the two sections below.
 
@@ -90,15 +88,15 @@ In order to access your bucket on Experience Platform, you need to provide valid
 
 ### New Account
 
-To Define a new Acxiom Managed S3 location:
+To define a new Acxiom Managed S3 location: 
 
 ![New Account](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
 
 ### Existing Account
 
-Accounts already defined using the [!DNL Acxiom Prospect Suppression] destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**:
+Accounts already defined using the [!DNL Acxiom Data Enhancement] destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**;
 
-![Existing Account](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
+![Existing Account](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-account.png)
 
 ### Fill in destination details {#destination-details}
 
@@ -110,7 +108,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **Description** -  Short explanation of the destination's purpose
 * **Bucket Name (Required)** - Name of the Amazon S3 bucket set up on S3
 * **Folder Path (Required)** - If subdirectories in a bucket are used a path must be defined, or '/' to reference the root path.
-* **File Type** - Select the format Experience Platform should use for the exported files. Currently, the only file type Acxiom processing will be expecting is CSV 
+* **File Type** - Select the format Experience Platform should use for the exported files. Currently, the only file type Acxiom processing will be expecting is CSV
 
 >[!IMPORTANT]
 >
@@ -135,7 +133,9 @@ Read [Activate audience data to batch profile export destinations](/help/destina
 
 ### Mapping suggestions
 
-Processing requires name and address elements, while not all elements are required providing as much as possible will aid in successful matching.  Mapping suggestions are provided in the table below listing attributes on your destination side that are used by Acxiom processing that customers can map profile attributes to.  This should be treated as suggestions as not all elements are required and the source values will depend on the needs of the account.
+The correct processing of files on the Acxiom side requires name and address elements. While not all elements are required, providing as much as possible will aid in successful matching.
+
+Mapping suggestions are provided in the table below listing attributes on your destination side that are used by Acxiom processing that customers can map profile attributes to. Treat these elements as suggestions as not all elements are required and the source values will depend on the needs of the account.
 
 | Target Field | Source Description                                          |
 |--------------|-------------------------------------------------------------|
@@ -148,17 +148,9 @@ Processing requires name and address elements, while not all elements are requir
 | state        | The `mailingAddress.state` value in Experience Platform.      |
 | zip          | The `mailingAddress.postalCode` value in Experience Platform. |
 
-{style="table-layout:auto"}
-
 >[!NOTE]
 >
->Additional fields not listed above will be included in the export, but will be ignored by Acxiom processing. 
-
-## Review your dataflow
-
-Use the review page for a summary of your dataflow prior to submission
-
-![Review](../../assets/catalog/data-partner/acxiom/image-destination-review.png)
+>If you map additional fields not listed above in the dataflow, these will be included in the data export, but will be ignored by Acxiom processing.
 
 ## Validate data export {#exported-data}
 
@@ -166,7 +158,7 @@ To verify if data has been exported successfully, check your [!DNL Amazon S3 Sto
 
 ## Next steps
 
-By following this tutorial, you have successfully created a dataflow to export batch data from Experience Platform to your [!DNL Acxiom] managed S3 location. You would need to contact your Acxiom representative with the name of the account, filename, and the bucket path so that processing can set up.
+By following this tutorial, you have successfully created a dataflow to export profile data from Experience Platform to your [!DNL Acxiom] managed S3 location. Next, you need to contact your Acxiom representative with the name of the account, file names, and the bucket path so that processing can set up.
 
 ## Data usage and governance {#data-usage-governance}
 
@@ -174,4 +166,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-*Acxiom Audience Data and Distribution:* https://www.acxiom.com/customer-data/audience-data-distribution/
+*Acxiom Infobase:* https://www.acxiom.com/wp-content/uploads/2022/02/fs-acxiom-infobase_AC-0268-22.pdf
