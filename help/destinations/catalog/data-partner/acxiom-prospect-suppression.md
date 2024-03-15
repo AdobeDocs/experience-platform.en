@@ -96,7 +96,7 @@ To Define a new Acxiom Managed S3 location:
 
 ### Existing Account
 
-Accounts already defined using the Acxiom Prospect-Suppression card will appear in a list pop-up and when selected provides details on the account.  This is shown below in the example from the UI, when you navigate to **Destinations** > **Accounts**;
+Accounts already defined using the [!DNL Acxiom Prospect Suppression] destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**:
 
 ![Existing Account](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
 
@@ -139,14 +139,14 @@ Processing requires name and address elements, while not all elements are requir
 
 | Target Field | Source Description                                          |
 |--------------|-------------------------------------------------------------|
-| name         | The person.name.fullName value in Experience Platform.      |
-| firstName    | The person.name.firstName value in Experience Platform.     |
-| lastName     | The person.name.lastName value in Experience Platform.      |
-| address1     | The mailingAddress.street1 value in Experience Platform.    |
-| address2     | The mailingAddress.street2 value in Experience Platform.    |
-| city         | The mailingAddress.city value in Experience Platform.       |
-| state        | The mailingAddress.state value in Experience Platform.      |
-| zip          | The mailingAddress.postalCode value in Experience Platform. |
+| name         | The `person.name.fullName` value in Experience Platform.      |
+| firstName    | The `person.name.firstName` value in Experience Platform.     |
+| lastName     | The `person.name.lastName` value in Experience Platform.      |
+| address1     | The `mailingAddress.street1` value in Experience Platform.    |
+| address2     | The `mailingAddress.street2` value in Experience Platform.    |
+| city         | The `mailingAddress.city` value in Experience Platform.       |
+| state        | The `mailingAddress.state` value in Experience Platform.      |
+| zip          | The `mailingAddress.postalCode` value in Experience Platform. |
 
 {style="table-layout:auto"}
 

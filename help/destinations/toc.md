@@ -136,6 +136,7 @@ role: Admin,User
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
     * Data & Identity Partner {#data-partner}
         * [Acxiom Prospect Suppression](./catalog/data-partner/acxiom-prospect-suppression.md)
+        * [Acxiom Data Enhancement](./catalog/data-partner/acxiom-data-enhancement.md)
     * eCommerce destinations {#ecommerce}
         * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
     * Email destinations {#email}

@@ -1,6 +1,6 @@
 ---
 title: Acxiom Data Enhancement
-description: Use this connector to activate first-party Adobe profiles in Real-Time CDP to Acxiom for enrichment and use across marketing channels.
+description: Use this connector to activate first-party Adobe profiles in Real-Time CDP to Acxiom for data enrichment and use across marketing channels. You can then use the Acxiom source to import the profiles with enhanced data and work with them in Real-Time CDP.
 last-substantial-update: 2024-03-14
 badge: Beta
 ---
@@ -12,30 +12,29 @@ badge: Beta
 
 ## Overview {#overview}
 
-Use the Acxiom Data Enhancement connector to supply additional descriptive data to your Adobe profiles, for use in analytic, segmentation, and targeting applications. With hundreds of elements available this allows users to better segment and model data, resulting in more accurate targeting and predictive modeling.
+Use the [!DNL Acxiom Data Enhancement] connector to supply additional descriptive data to your customer profiles, for use in analytics, segmentation, and targeting applications. With hundreds of elements available, this allows you to better segment and model data, resulting in more accurate targeting and predictive modeling.
 
 ![Marketing diagram to export first-party data to Acxiom, then import enriched data back into Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow-data-enhancement.png)
 
-This tutorial provides steps to create an [!DNL Acxiom Data Enhancement] destination connection and dataflow using the Adobe Experience Platform user interface.  This connector is used to deliver data to Acxiom enhancement service using Amazon S3 as a drop point.
+This tutorial provides steps to create an [!DNL Acxiom Data Enhancement] destination connection and dataflow using the Adobe Experience Platform user interface. This connector is used to deliver data to Acxiom enhancement service using Amazon S3 as a drop point.
 
 ![The destination catalog with the Acxiom destination selected.](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-catalog.png)
 
 ## Use cases {#use-cases}
 
-To help you better understand how and when you should use the Acxiom Data Enhancement destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+To help you better understand how and when you should use the [!DNL Acxiom Data Enhancement] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
 ### Enhance Customer data {#enhance-customer-data}
 
-This connector should be used by marketing professionals aiming to enhance the effectiveness of their outreach strategies by appending selected descriptive elements to their Adobe profiles and use these to better target campaigns.
+This connector should be used by marketing professionals aiming to enhance the effectiveness of their outreach strategies by appending selected descriptive elements to their customer profiles and use these to better target campaigns.
 
 For example, as a marketer, you might want to deepen your understanding of your existing audiences by enriching their profiles with additional data. Doing so will improve your segmentation and targeting strategies, leading to a boost in campaign personalization and conversion.
 
 The use case is executed through a combination of both destination and source connectors.
 
-
 You would start by exporting your existing customer records for enrichment using this destination connector. Acxiom's service would search for the file, retrieve it, enrich it with Acxiom's data and generate a file. 
 
-The customer would then use the corresponding Acxiom Data Ingestion source card to ingest the hydrated customer profiles back into Adobe Real-Time CDP.
+The customer would then use the corresponding [Acxiom Data Ingestion](/help/sources/connectors/data-partners/acxiom-data-ingestion.md) source card to ingest the hydrated customer profiles back into Adobe Real-Time CDP.
 
 ## Prerequisites {#prerequisites}
 
@@ -73,6 +72,8 @@ Refer to the table below for information about the destination export type and f
 >
 >To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the destination configuration workflow, fill in the fields listed in the two sections below.
+
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
@@ -87,13 +88,13 @@ In order to access your bucket on Experience Platform, you need to provide valid
 
 ### New Account
 
-To Define a new Acxiom Managed S3 location: 
+To define a new Acxiom Managed S3 location: 
 
 ![New Account](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
 
 ### Existing Account
 
-Accounts already defined using the Acxiom Data Enhancement card will appear in a list pop-up and when selected provides details on the account.  This is shown below in the example from the UI, when you navigate to **Destinations** > **Accounts**;
+Accounts already defined using the [!DNL Acxiom Data Enhancement] destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**;
 
 ![Existing Account](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-account.png)
 
@@ -138,14 +139,14 @@ Mapping suggestions are provided in the table below listing attributes on your d
 
 | Target Field | Source Description                                          |
 |--------------|-------------------------------------------------------------|
-| name         | The person.name.fullName value in Experience Platform.      |
-| firstName    | The person.name.firstName value in Experience Platform.     |
-| lastName     | The person.name.lastName value in Experience Platform.      |
-| address1     | The mailingAddress.street1 value in Experience Platform.    |
-| address2     | The mailingAddress.street2 value in Experience Platform.    |
-| city         | The mailingAddress.city value in Experience Platform.       |
-| state        | The mailingAddress.state value in Experience Platform.      |
-| zip          | The mailingAddress.postalCode value in Experience Platform. |
+| name         | The `person.name.fullName` value in Experience Platform.      |
+| firstName    | The `person.name.firstName` value in Experience Platform.     |
+| lastName     | The `person.name.lastName` value in Experience Platform.      |
+| address1     | The `mailingAddress.street1` value in Experience Platform.    |
+| address2     | The `mailingAddress.street2` value in Experience Platform.    |
+| city         | The `mailingAddress.city` value in Experience Platform.       |
+| state        | The `mailingAddress.state` value in Experience Platform.      |
+| zip          | The `mailingAddress.postalCode` value in Experience Platform. |
 
 >[!NOTE]
 >
