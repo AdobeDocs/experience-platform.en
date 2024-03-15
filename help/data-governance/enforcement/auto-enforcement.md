@@ -92,23 +92,23 @@ Select a policy violation in the popover's left column to display details for th
 
 The violation message provides a summary of the policy that was violated, including the conditions the policy is configured to check for, the specific action that triggered the violation, and a list of possible resolutions for the issue.
 
-![](../images/enforcement/violation-summary.png)
+![A policy violation dialog with the violation summary highlighted.](../images/enforcement/violation-summary.png)
 
 A data lineage graph is displayed below the violation summary, allowing you to visualize which datasets, merge policies, audiences, and destinations were involved in the policy violation. The entity that you are currently changing is highlighted in the graph, indicating which point in the flow is causing the violation to occur. You can select an entity name within the graph to open the details page for the entity in question.
 
-![](../images/enforcement/data-lineage.png)
+![A policy violation dialog with the data lineage graph highlighted.](../images/enforcement/data-lineage.png)
 
 You can also use the **[!UICONTROL Filter]** icon (![](../images/enforcement/filter.png)) to filter the displayed entities by category. At least two categories must be selected in order for data to be displayed.
 
-![](../images/enforcement/lineage-filter.png)
+![A policy violation dialog with the data lineage filter and drop-down menu highlighted.](../images/enforcement/lineage-filter.png)
 
 Select **[!UICONTROL List view]** to display the data lineage as a list. To switch back to the visual graph, select **[!UICONTROL Path view]**.
 
-![](../images/enforcement/list-view.png)
+![A policy violation dialog with the data lineage path view highlighted.](../images/enforcement/list-view.png)
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
-If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating an audience to a destination, you can see how your consent policies affect the percentage of profiles that are included in the activation.
+When activating an audience to a destination, you can see how your [consent policies](../policies/user-guide.md#consent-policy) affect different percentages of profiles included in the activation.
 
 >[!NOTE]
 >
