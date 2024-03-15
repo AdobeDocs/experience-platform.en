@@ -67,14 +67,15 @@ user-guide-description: Bring together known and anonymous data from multiple en
   * [Sources overview](sources/sources-overview.md)
   * [Sources in Real-Time CDP B2B Edition](sources/b2b.md)
 * Use cases {#use-cases}
-  * Personalization, Insights, and Engagement {#personalization-insights-engagement}
-    * [Evolve one-time customer value to lifetime value](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
-    * [Intelligently re-engage your customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+  * [Overview of sample use cases](/help/rtcdp/use-case-guides/overview.md)
   * Customer acquisition {#customer-acquisition}
     * [Engage and acquire new customers without dependency on third-party cookies](/help/rtcdp/partner-data/prospecting.md)  
     * [Personalize onsite experiences for unknown visitors using partner-aided visitor recognition](/help/rtcdp/partner-data/onsite-personalization.md)
     * [Offsite retargeting of unauthenticated users](./partner-data/offsite-retargeting.md)
   * Profile enrichment {#profile-enrichment}
     * [Supplement first-party profiles with partner-provided attributes](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+  * Personalization, Insights, and Engagement {#personalization-insights-engagement}
+    * [Intelligently re-engage your customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+    * [Intelligently re-engage your customers: Luma examples](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
 * [Experience Platform Release notes](https://www.adobe.com/go/platform-release-notes-en)
 * [Experience Platform Glossary](https://www.adobe.com/go/platform-glossary-en)
