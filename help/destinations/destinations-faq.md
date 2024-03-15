@@ -43,6 +43,15 @@ You re-activate the updated audience to the same destination, but since there is
 To ensure all the profiles are sent to your destination, you must create a new audience with the new configuration, and then activate it to your destination.
 
 +++
+
+### When an audience is removed from a destination, is there any signal that is sent to the destination indicating that the audience is removed?
+
++++Answer
+
+No, there is no dependency between the Experience Platform destination and the customer instance of the target system. On the receiving side, the only indication that the target system would see is that it stopped receiving that audience data.
+
++++
+
 <!--
 ## [!DNL Experience Cloud Audiences] {#eca-faq}
 
@@ -182,11 +191,11 @@ For detailed explanations on the ID matching requirements, see [ID matching requ
 ### Do I need to use the Experience Platform Web SDK to send audiences and attributes to Adobe Target?
 
 +++Answer
-No, [Web SDK](../edge/home.md) is not required to activate audiences to [Adobe Target](catalog/personalization/adobe-target-connection.md).
+No, [Web SDK](../web-sdk/home.md) is not required to activate audiences to [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
 However, if [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) is used instead of Web SDK, only next-session personalization is supported.
 
-For [same-page and next-page personalization](ui/activate-edge-personalization-destinations.md) use cases, you must use either [Web SDK](../edge/home.md) or the [Edge Network Server API](../server-api/overview.md). See the documentation on [activating audiences to edge destinations](ui/activate-edge-personalization-destinations.md) for more implementation details.
+For [same-page and next-page personalization](ui/activate-edge-personalization-destinations.md) use cases, you must use either [Web SDK](../web-sdk/home.md) or the [Edge Network Server API](../server-api/overview.md). See the documentation on [activating audiences to edge destinations](ui/activate-edge-personalization-destinations.md) for more implementation details.
 +++
 
 ### Is there a limit on the number of attributes that I can send from Real-time Customer Data Platform to Adobe Target or a Custom Personalization destination?
@@ -208,7 +217,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### After I create an audience in Experience Platform, how long will it take for that audience to be available for edge segmentation use cases?
 
 +++Answer
-Audience definitions are propagated to the [Edge Network](../edge/home.md) in up to one hour. However, if an audience is activated within this first hour, some visitors who would have qualified for the audience could be missed. 
+Audience definitions are propagated to the [Edge Network](../web-sdk/home.md) in up to one hour. However, if an audience is activated within this first hour, some visitors who would have qualified for the audience could be missed. 
 +++
 
 ### Where can I see the activated attributes in Adobe Target?

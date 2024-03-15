@@ -19,12 +19,12 @@ This document provides an overview of how to configure your Platform data operat
 
 This guide requires a working understanding of the various Experience Platform services involved in processing consent data:
 
-* [Experience Data Model (XDM)](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-* [Adobe Experience Platform Identity Service](../../../../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
-* [Real-Time Customer Profile](../../../../profile/home.md): Uses [!DNL Identity Service] capabilities to create detailed customer profiles from your datasets in real time. Real-Time Customer Profile pulls data from the Data Lake and persists customer profiles in its own separate data store.
-* [Adobe Experience Platform Web SDK](../../../../edge/home.md): A client-side JavaScript library that allows you to integrate various Platform services into your customer-facing website.
-    * [SDK consent commands](../../../../edge/consent/supporting-consent.md): A use-case overview of the consent-related SDK commands shown in this guide.
-* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md): Allows you to divide Real-Time Customer Profile data into groups of individuals that share similar traits and will respond similarly to marketing strategies.
+* [Experience Data Model (XDM)](/help/xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+* [Adobe Experience Platform Identity Service](/help/identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
+* [Real-Time Customer Profile](/help/profile/home.md): Uses [!DNL Identity Service] capabilities to create detailed customer profiles from your datasets in real time. Real-Time Customer Profile pulls data from the Data Lake and persists customer profiles in its own separate data store.
+* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): A client-side JavaScript library that allows you to integrate various Platform services into your customer-facing website.
+    * [SDK consent commands](/help/web-sdk/consent/supporting-consent.md): A use-case overview of the consent-related SDK commands shown in this guide.
+* [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md): Allows you to divide Real-Time Customer Profile data into groups of individuals that share similar traits and will respond similarly to marketing strategies.
 
 ## Consent processing flow summary {#summary}
 
@@ -43,7 +43,7 @@ In the current release of consent processing support in Platform, only the data 
 
 >[!NOTE]
 >
->For more information on the structure of the XDM consent fields mentioned above, refer to the guide on the [[!UICONTROL Consents and Preferences] data type](../../../../xdm/data-types/consents.md).
+>For more information on the structure of the XDM consent fields mentioned above, refer to the guide on the [[!UICONTROL Consents and Preferences] data type](/help/xdm/data-types/consents.md).
 
 Once the system has been configured, the Platform Web SDK interprets the data collection consent value for the current user to determine if the data should be sent to the Adobe Experience Platform Edge Network, dropped from the client, or persisted until the data collection permission is set to either yes or no.
 
@@ -87,7 +87,7 @@ Once you have configured your CMP to listen for consent-change events on your we
 
 If customer consent preferences are required in your mobile application, you can integrate the Experience Platform Mobile SDK to retrieve and update consent settings, sending them to Platform whenever the Consent API is called.
 
-See the Mobile SDK documentation for [configuring the Consent mobile extension](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) and [using the Consent API](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). For more details on how to handle privacy concerns using the Mobile SDK, please refer to the section [Privacy and GDPR](https://developer.adobe.com/client-sdks/documentation/resources/privacy-and-gdpr/).
+See the Mobile SDK documentation for [configuring the Consent mobile extension](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) and [using the Consent API](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). For more details on how to handle privacy concerns using the Mobile SDK, please refer to the section [Privacy and GDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/). 
 
 ### Ingest XDM-compliant consent data directly {#batch}
 

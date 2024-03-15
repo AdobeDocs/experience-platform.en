@@ -2,6 +2,7 @@
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile
 title: Real-Time Customer Profile API Guide
 description: The Real-Time Customer Profile API allows developers to explore and work with Profile data, including view profiles, create and update merge policies, export or sample Profile data, and delete Profile data that is no longer required or was added in error. Follow this guide to learn how to perform key operations using the API.
+role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
 ---
 # [!DNL Real-Time Customer Profile] API guide
@@ -25,10 +26,6 @@ Computed attributes are functions used to aggregate event-level data into profil
 Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. These computed attribute values can then be viewed in a profile, used to create an audience, or accessed through a number of different access patterns.
 
 You can create, view, edit, and delete computed attributes using the `ca/attributes/` endpoint. To learn how to use computed attributes, refer to the [computed attributes overview](../computed-attributes/overview.md). For API operations, visit the [computed attributes API endpoint guide](../computed-attributes/api.md).
-
-## Edge projections {#edge-projections}
-
-Adobe Experience Platform enables real-time personalization of customer experiences by making data easily accessible on strategically located servers called "edges." The [!DNL Real-Time Customer Profile] API provides endpoints for working with edges through components called "projections." This includes projection configurations to determine what data should be projected to each edge, as well as projection destinations to define where to route a projection. For detailed information on working with edge projections, please visit the [projection configurations and destinations endpoints guide](edge-projections.md).
 
 ## Entities ([!DNL Profile] access) {#entities}
 

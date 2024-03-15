@@ -30,7 +30,7 @@ Ensure that you have checked the **[!UICONTROL Require SSL]** box before trying 
     
 >[!IMPORTANT]
 >
->Nested data structures in third-party BI tools can be flattened to improve their usability and reduce the required workload to retrieve, analyze, transform and report data. See the documentation on the[`FLATTEN` feature](../essential-concepts/flatten-nested-data.md) for instructions on how to activate this setting when connecting to a database. 
+>Nested data structures in third-party BI tools can be flattened to improve their usability and reduce the required workload to retrieve, analyze, transform and report data. See the documentation on the[`FLATTEN` feature](../key-concepts/flatten-nested-data.md) for instructions on how to activate this setting when connecting to a database. 
 
 After filling in all your credentials, confirm your settings to continue. You have now connected with Adobe Experience Platform.
 

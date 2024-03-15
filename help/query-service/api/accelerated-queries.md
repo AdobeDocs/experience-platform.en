@@ -1,6 +1,7 @@
 ---
 title: Accelerated Queries Endpoint
 description: Learn how to access to query accelerated store in a stateless manner to quickly return results based on aggregated data. This document provides a sample HTTP request and response for the Query Service accelerated-queries endpoint.
+role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
 ---
 # Accelerated queries endpoint
@@ -34,7 +35,7 @@ POST /accelerated-queries
 The following request submits an SQL query in the request body to the accelerated store.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
  -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'
@@ -54,7 +55,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 This alternate request submits a template ID in the request body to the accelerated store. The SQL from the corresponding template is used to query the accelerated store.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
  -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'

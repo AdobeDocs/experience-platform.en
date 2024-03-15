@@ -9,7 +9,7 @@ exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
 
 [!DNL Observability Insights] allows you to subscribe to Adobe I/O Event notifications regarding Adobe Experience Platform activities. These events are sent to a configured webhook to facilitate efficient automation of activity monitoring.
 
-This document provides steps on how to subscribe to Adobe I/O event notifications for Adobe Experience Platform services. Reference information regarding available event types is also provided, along with links to further documentation on how to interpret returned event data for each applicable [!DNL Platform] service.
+This document provides steps on how you can subscribe to Adobe I/O event notifications for Adobe Experience Platform services. Reference information regarding available event types is also provided, along with links to further documentation on how you can interpret returned event data for each applicable [!DNL Platform] service.
 
 ## Getting started
 
@@ -32,6 +32,10 @@ During the initial validation process, [!DNL I/O Events] sends a `challenge` que
 Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) in the Adobe Developer Console documentation.
 
 ## Subscribe to events
+
+>[!NOTE]
+>
+>The data ingestion notification event has been deprecated in Adobe I/O. Instead, you should use the **Sources Flow Run Info** I/O event.
 
 Once you have created a new project, navigate to that project's overview screen. From here, select **[!UICONTROL Add event]**.
 

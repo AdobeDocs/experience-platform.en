@@ -1,6 +1,7 @@
 ---
 title: Engage and acquire new customers without dependency on third-party cookies
 description: Learn how to engage and acquire new customers through prospecting use cases, without relying on third-party cookies.
+feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 ---
 # Engage and acquire new customers without dependency on third-party cookies
@@ -58,7 +59,7 @@ Read through the sections below which include links to further documentation, to
 
 As you complete the steps to implement the use case, you will make use of the following Real-Time CDP functionality and UI elements (listed in the order in which you will use them). Make sure that you have the necessary attribute-based access control permissions for all these areas or ask your system administrator to grant you the necessary permissions. 
 
-* [Identities](/help/identity-service/namespaces.md)
+* [Identities](/help/identity-service/features/namespaces.md)
 * [Schemas](/help/xdm/home.md)
 * [Data usage labels](/help/data-governance/labels/overview.md)
 * [Datasets](/help/catalog/datasets/overview.md)
@@ -88,7 +89,7 @@ Begin by creating a new identity type for the profiles that you will be receivin
 
 ![Create a new Partner ID identity namespace.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
-* Read more about Partner ID namespaces in the [identity types section](/help/identity-service/namespaces.md).
+* Read more about Partner ID namespaces in the [identity types section](/help/identity-service/features/namespaces.md).
 * Read about [how to define identity fields](/help/xdm/ui/fields/identity.md) in the Experience Platform user interface.
 
 #### Create a new schema with the **[!UICONTROL XDM Individual Prospect Profile]** class

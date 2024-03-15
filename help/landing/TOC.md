@@ -41,6 +41,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+  * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
   * [Platform integrations with Experience Cloud (Video)](video/experience-cloud-integrations.md)
 * Governance, privacy, and security {#governance-privacy-security}
   * [Overview](./governance-privacy-security/overview.md)
@@ -68,7 +69,10 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 * License usage and guardrails {#license}
   * [Data management license entitlement best practices](./license-usage-and-guardrails/data-management-best-practices.md)    
   * [License usage dashboard](./license-usage-and-guardrails/license-usage-dashboard.md)
+  * [Adobe Journey Optimizer guardrails](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+  * [Customer Journey Analytics guardrails](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+  * [Real-Time CDP guardrails](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Troubleshooting guide](troubleshooting.md)
 * [Gen2 data lake migration](adls2-gen2-migration.md)
 * [Glossary](glossary.md)
-* [Release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

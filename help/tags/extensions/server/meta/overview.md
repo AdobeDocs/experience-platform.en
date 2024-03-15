@@ -9,6 +9,12 @@ The [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing
 
 Using the [!DNL Meta Conversions API] extension, you can leverage the API's capabilities in your [event forwarding](../../../ui/event-forwarding/overview.md) rules to send data to [!DNL Meta] from the Adobe Experience Platform Edge Network. This document covers how to install the extension and use its capabilities in an event forwarding [rule](../../../ui/managing-resources/rules.md).
 
+## Demo
+
+The following video is intended to support your understanding of the [!DNL Meta Conversions API].
+
+>[!VIDEO](https://unlockmarketingdata.com/video-meta-conversions-api)
+
 ## Prerequisites
 
 It is strongly recommended to use [!DNL Meta Pixel] and the [!DNL Conversions API] to share and send the same events from the client side and server side, respectively, since this may help recover events that were not picked up by [!DNL Meta Pixel]. Before installing the [!DNL Conversions API] extension, see the guide on the [[!DNL Meta Pixel] extension](../../client/meta/overview.md) for steps on how to integrate it in your client-side tag implementations.
@@ -108,6 +114,12 @@ When sending shared events, make sure that you are including an event ID and nam
 >
 >* The quick start feature is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. Please contact your Adobe representative for more information.
 >* This feature is for net new implementations and does not currently support auto installing extensions and configurations on existing tags and event forwarding properties. 
+
+>[!NOTE]
+>
+>Any existing client can use the quick start workflows to create a reference implementation that can be used for the following:
+>* Use it as the start of a brand new implementation. 
+>* Take advantage of it as a reference implementation that you can examine to see how it has been configured and then replicate in your current production implementations.
 
 The quick start feature helps you get set up with ease and efficiency with the Meta Conversions API and the Meta Pixel extensions. This tool automates multiple steps that are performed in Adobe tags and event forwarding, significantly reducing the set up time.
 

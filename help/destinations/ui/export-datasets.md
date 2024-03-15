@@ -48,6 +48,11 @@ Understand from the table below which dataset types you can export depending on 
     <td>Refer to the <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> documentation.</td>
   </tr>
   <tr>
+    <td>Customer Journey Analytics</td>
+    <td>All</td>
+    <td> Profile and Experience Event datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.  <br> <p> <b>Note on availability:</b> The ability to export datasets to the cloud is in the Limited Testing phase of release and might not be available yet in your environment. This note will be removed when the functionality is generally available. For information about the Customer Journey Analytics release process, see <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Customer Journey Analytics feature releases</a>. </p> </td>
+  </tr>
+  <tr>
     <td>Data Distiller</td>
     <td>Data Distiller (Add-on)</td>
     <td>Derived datasets created through Query Service.</td>
@@ -65,7 +70,7 @@ Watch the video below for an end-to-end explanation of the workflow described on
 
 Currently, you can export datasets to the cloud storage destinations highlighted in the screenshot and listed below. 
 
-![Destinations which support dataset exports](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+![Destinations catalog page showing which destinations support dataset exports.](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -130,11 +135,11 @@ Use the check boxes to the left of the dataset names to select the datasets that
 
 In the **[!UICONTROL Scheduling]** step, you can set a start date and an export cadence for your dataset exports.
 
-The **[!UICONTROL Export incremental files]** option is automatically selected. This triggers an export where the first file is a full snapshot of the dataset and subsequent files are incremental additions to the dataset since the previous export.
+The **[!UICONTROL Export incremental files]** option is automatically selected. This triggers an export of one or multiple files representing a full snapshot of the dataset. Subsequent files are incremental additions to the dataset since the previous export.
 
 >[!IMPORTANT]
 >
->The first exported incremental file includes all existing data in the dataset, functioning as a backfill.
+>The first incremental file export includes all existing data in the dataset, functioning as a backfill. The export can contain one or multiple files.
 
 ![Dataset export workflow showing the scheduling step.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
@@ -161,7 +166,7 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 ## Verify successful dataset export {#verify}
 
-When exporting datasets, Experience Platform creates a `.json` or `.parquet` file in the storage location that you provided. Expect a new file to be deposited in your storage location according to the export schedule you provided. 
+When exporting datasets, Experience Platform creates one or multiple `.json` or `.parquet` files in the storage location that you provided. Expect new files to be deposited in your storage location according to the export schedule you provided.
 
 Experience Platform creates a folder structure in the storage location you specified, where it deposits the exported dataset files. A new folder is created for each export time, following the pattern below:
 
@@ -184,9 +189,9 @@ Note the difference in file format between the two file types, when compressed:
 * When exporting compressed JSON files, the exported file format is `json.gz`
 * When exporting compressed parquet files, the exported file format is `gz.parquet`
 
-## Remove dataset from destination {#remove-dataset}
+## Remove datasets from destinations {#remove-dataset}
 
-To remove a dataset from an existing dataflow, follow the steps below:
+To remove datasets from an existing dataflow, follow the steps below:
 
 1. Log in to the [Experience Platform UI](https://experience.adobe.com/platform/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destination dataflows.
 
@@ -200,14 +205,19 @@ To remove a dataset from an existing dataflow, follow the steps below:
 
     ![The available datasets navigation option highlighted in the Activation data column.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. The **[!UICONTROL Activation data]** page for the destination appears. Select **[!UICONTROL Remove dataset]** in the right rail to trigger the remove dataset confirmation dialog. 
+1. The **[!UICONTROL Activation data]** page for the destination appears. Select the dataset which you want to remove, then select **[!UICONTROL Remove dataset]** in the right rail to trigger the dataset removal confirmation dialog.
 
     ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/remove-dataset-control.png)
+
+<!-- USE THIS FOR BULK REMOVE RELEASE
+
+1. The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog. 
+
+    ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/bulk-remove-datasets.png) -->
 
 1. In the confirmation dialog, select **[!UICONTROL Remove]** to immediately remove the dataset from exports to the destination. 
 
     ![Dialog showing the Confirm dataset removal option from the dataflow.](../assets/ui/export-datasets/remove-dataset-confirm.png)
-
 
 ## Dataset export entitlements {#licensing-entitlement}
 
@@ -215,7 +225,7 @@ Refer to the product description documents to understand how much data you are e
 
 Note that the data export entitlements for different applications are not additive. For example, this means that if you purchase Real-Time CDP Ultimate and Adobe Journey Optimizer Ultimate, the profile export entitlement will be the larger of the two entitlements, as per the product descriptions. Your volume entitlements are calculated by taking your total number of licensed profiles and multiplying by 500 KB for Real-Time CDP Prime or 700 KB for Real-Time CDP Ultimate to determine how much volume of data you are entitled to.
 
-On the other hand, if you purchase add-ons such as Data Distiller, the data export limit that you are entitled to represents the sum of the product tier and the add-on. 
+On the other hand, if you purchased add-ons such as Data Distiller, the data export limit that you are entitled to represents the sum of the product tier and the add-on. 
 
 You can view and track your profile exports against your contractual limits in the licensing dashboard. 
 
@@ -228,3 +238,4 @@ Keep in mind the following limitations for the general availability release of d
 * Datasets created via API are currently not available for export. 
 * The UI does not currently block you from deleting a dataset that is being exported to a destination. Do not delete any datasets that are being exported to destinations. [Remove the dataset](#remove-dataset) from a destination dataflow before deleting it.
 * Monitoring metrics for dataset exports are currently mixed with numbers for profile exports so they do not reflect the true export numbers.
+* Data with a timestamp older than 365 days is excluded from dataset exports. For more information, view the [guardrails for scheduled dataset exports](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)

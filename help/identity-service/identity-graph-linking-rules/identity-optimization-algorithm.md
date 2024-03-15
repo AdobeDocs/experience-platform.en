@@ -4,6 +4,7 @@ description: Learn about Identity Optimization Algorithm in Identity Service.
 hide: true
 hidefromtoc: true
 badge: Alpha
+exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 ---
 # Identity optimization algorithm
 
@@ -127,5 +128,5 @@ For more information on identity graph linking rules, read the following documen
 
 * [Identity graph linking rules overview](./overview.md)
 * [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
-* [Identity linking logic](./identity-linking-logic.md)
-* [Identity Service and Real-Time Customer Profile](identity-and-profile.md)
+* [Identity linking logic](../features/identity-linking-logic.md)
+* [Identity Service and Real-Time Customer Profile](../identity-and-profile.md)

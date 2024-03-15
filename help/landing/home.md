@@ -28,13 +28,18 @@ To begin learning more about a specific [!DNL Platform] service, return to the [
 
 ### Documentation for application services built on [!DNL Experience Platform]
 
-Adobe has built multiple application services on top of Experience Platform. You can find documentation for these services in their own guides, linked below:
+Adobe has built multiple application services on top of Experience Platform. You can find documentation for these applications in their own guides, linked below:
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html)
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html) 
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
+
+The video below describes the use cases of each application service built on top of Experience Platform.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
 
 ## [!DNL Experience Platform] tutorials
 
@@ -53,7 +58,7 @@ Discover [!DNL Experience Platform] APIs, including headers, parameters, sample 
 * [**Glossary**](glossary.md)  
 Review Adobe Experience Platform terminology.
 
-* [**Release notes**](https://www.adobe.com/go/platform-release-notes-en)  
+* [**Release notes**](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)  
 Find information about the most recent [!DNL Experience Platform] release and review past releases.
 
 * [**Troubleshooting guide**](troubleshooting.md)  

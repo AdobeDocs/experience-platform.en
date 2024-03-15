@@ -66,17 +66,17 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 
 | Action | Origins | Description |
 | ------ | ------- | ----------- |
-| [!UICONTROL Edit] | Segmentation Service | Lets you open Segment Builder to edit your audience. For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md). |
-| [!UICONTROL Open composition] | Audience composition | Lets you open Audience composition to see your audience. For more information on Audience composition, please read the [audience composition UI guide](./audience-composition.md). |
-| [!UICONTROL Activate to destination] | Segmentation Service | Lets you activate the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Share with partners] | Audience composition, Custom upload, Segmentation Service | Lets you share your audience with other Platform users. For more information on this feature, please read the [Segment Match overview](./segment-match/overview.md). |
-| [!UICONTROL Manage tags] | Audience composition, Custom upload, Segmentation Service | Lets you manage the user-defined tags that belong to the audience. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
-| [!UICONTROL Move to folder] | Audience composition, Custom upload, Segmentation Service |  Lets you manage which folder the audience belongs to. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
-| [!UICONTROL Copy] | Audience composition, Custom upload, Segmentation Service |  Duplicates the selected audience. |
-| [!UICONTROL Apply access labels] | Audience composition, Custom upload, Segmentation Service |  Lets you manage the access labels that belong to the audience. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Edit] | Segmentation Service | Opens the Segment Builder to edit your audience. Please note that if your audience was created through the API, you will **not** be able to edit it using Segment Builder. For more information on using the Segment Builder, please read the [Segment Builder UI guide](./segment-builder.md). |
+| [!UICONTROL Open composition] | Audience composition | Opens the Audience composition to see your audience. For more information on Audience composition, please read the [audience composition UI guide](./audience-composition.md). |
+| [!UICONTROL Activate to destination] | Segmentation Service | Activates the audience to a destination. For more detailed information on activating an audience to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL Share with partners] | Audience composition, Custom upload, Segmentation Service | Shares your audience with other Platform users. For more information on this feature, please read the [Segment Match overview](./segment-match/overview.md). |
+| [!UICONTROL Manage tags] | Audience composition, Custom upload, Segmentation Service | Manages the user-defined tags that belong to the audience. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
+| [!UICONTROL Move to folder] | Audience composition, Custom upload, Segmentation Service |  Manages which folder the audience belongs to. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
+| [!UICONTROL Copy] | Audience composition, Custom upload, Segmentation Service | Duplicates the selected audience. |
+| [!UICONTROL Apply access labels] | Audience composition, Custom upload, Segmentation Service | Manages the access labels that belong to the audience. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Archive] | Custom upload | Archives the selected audience. |
-| [!UICONTROL Delete] | Audience composition, Custom upload, Segmentation Service |  Deletes the selected audience. |
-| [!UICONTROL Add to package] | Audience composition, Custom upload, Segmentation Service | Lets you move the audience between sandboxes. For more information on this feature, please read the [sandbox tooling guide](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Delete] | Audience composition, Custom upload, Segmentation Service | Deletes the selected audience. |
+| [!UICONTROL Add to package] | Audience composition, Custom upload, Segmentation Service | Moves the audience between sandboxes. For more information on this feature, please read the [sandbox tooling guide](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!NOTE]
 >
@@ -325,7 +325,7 @@ The **[!UICONTROL Import audience CSV]** workflow appears. You can select a CSV 
 
 >[!NOTE]
 >
->The external generated audience **must** be in CSV format, have a **maximum** of 11 columns, and be less than 1GB.
+>The external generated audience **must** be in CSV format, have a **maximum** of 25 columns, and be less than 1GB.
 
 After selecting the CSV file to import, a list of sample data is shown for this externally generated audience. After confirming that the sample data is correct, select **[!UICONTROL Next]**.
 

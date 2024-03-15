@@ -150,6 +150,10 @@ When selecting a draft computed attribute, the **[!UICONTROL Edit computed attri
 
 After creating a computed attribute, you can use **published** computed attributes in other downstream services. Since computed attributes are profile attribute fields created on your profile union schema, you can look up computed attribute values for a Real-Time Customer Profile, use them in an audience, activate them to a destination, or use them for personalization in journeys in Adobe Journey Optimizer.
 
+>[!NOTE]
+>
+>Computed attributes **cannot** be used in audience **compositions**.
+
 ![The Segment Builder is displayed, showing a computed attribute as part of the segment definition composition.](./images/ui/use-ca.png)
 
 ## Next steps

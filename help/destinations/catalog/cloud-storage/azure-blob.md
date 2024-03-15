@@ -36,7 +36,7 @@ If you already have a valid [!DNL Blob] destination, you may skip the remainder 
 
 ## Supported audiences {#supported-audiences}
 
-This section describes which type of audiences you can export to this destination.
+This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
 ---------|----------|----------|
@@ -56,17 +56,24 @@ Refer to the table below for information about the destination export type and f
 
 {style="table-layout:auto"}
 
-## Supported file formats {#file-formats}
+## Export datasets {#export-datasets}
 
-[!DNL Experience Platform] supports the following file format to be exported to [!DNL Azure Blob]:
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
 
-* Comma-separated values (CSV): Support for exported data files is currently limited to comma-separated values.
+* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
+* How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
+
+## File format of the exported data {#file-format}
+
+When exporting *audience data*, Platform creates a `.csv`, `parquet`, or `.json` file in the storage location that you provided. For more information about the files, see the [supported file formats for export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) section in the audience activation tutorial.
+
+When exporting *datasets*, Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
 
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
 > 
->To connect to the destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>To connect to the destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md). In the destination configuration workflow, fill in the fields listed in the two sections below.
 
@@ -112,18 +119,11 @@ When you are finished providing details for your destination connection, select 
 
 >[!IMPORTANT]
 > 
->* To activate data, you need the **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To activate data, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 >* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
-## Export datasets {#export-datasets}
+## Validate successful data export {#exported-data}
 
-This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
-
-* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
-* How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
-
-## Exported data {#exported-data}
-
-For [!DNL Azure Blob Storage] destinations, [!DNL Platform] creates a `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the audience activation tutorial.
+To verify if data has been exported successfully, check your [!DNL Azure Blob] storage and make sure that the exported files contain the expected profile populations.

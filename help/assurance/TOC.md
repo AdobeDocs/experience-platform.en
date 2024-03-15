@@ -4,6 +4,7 @@ user-guide-title: Adobe Experience Platform Assurance
 breadcrumb-title: Assurance Guide
 user-guide-description: Adobe Experience Platform Assurance lets you inspect, proof, simulate, and validate how you collect data or serve experiences within your mobile applications.
 feature: Assurance
+role: Developer
 ---
 
 # Adobe Experience Platform Assurance {#assurance}
@@ -19,6 +20,7 @@ feature: Assurance
   - [Push Debug View](./views/push-debug-view.md)
   - [Validation Summary](./views/validation-summary.md)
   - [Adobe Analytics](./views/adobe-analytics.md)
+  - [Analytics Events 2.0 (Beta)](./views/adobe-analytics-edge.md)
   - [Adobe Analytics Streaming Media](./views/adobe-analytics-streaming-media.md)
 - Tutorials {#tutorials}
   - [Implement Assurance](./tutorials/implement-assurance.md)

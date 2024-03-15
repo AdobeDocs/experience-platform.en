@@ -1,5 +1,4 @@
 ---
-keywords: connect destination;destination connect;how to connect destination
 title: Create a new destination connection
 type: Tutorial
 description: Learn how to connect to a destination in Adobe Experience Platform, enable alerts, and set up marketing actions for your connected destination.
@@ -9,8 +8,8 @@ exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 
 >[!IMPORTANT]
 > 
->* To connect to a destination, you need the **[!UICONTROL Manage Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
->* To connect to a destination that supports dataset exports, you need the **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permission](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To connect to a destination, you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
+>* To connect to a destination that supports dataset exports,  you need the **[!UICONTROL View Destinations]** and **[!UICONTROL Manage and Activate Dataset Destinations]** [access control permissions](/help/access-control/home.md#permissions). Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 ## Overview {#overview}
 

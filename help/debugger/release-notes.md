@@ -7,6 +7,34 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ---
 # Adobe Experience Platform Debugger release notes
 
+## Version 1.5.4 - December 19, 2023
+
+### Fixes and improvements
+
+* Fixed an issue where settings were not being retained.
+* Fixed an issue that caused the Debugger to crash while viewing Analytics Post-Processed hits.
+
+## Version 1.5.3 - December 6, 2023
+
+### New features
+
+* Added a "lock to the active tab when opening the Debugger" setting.
+
+### Fixes and improvements
+
+* Fixed an issue where Analytics requests were missing on private domains.
+* Fixed an issue where Activity Map data would be missing from Analytics requests table.
+* Fixed an issue where viewing the Target Trace would cause a crash.
+* Added a warning when the Debugger fails to set up on-page infrastructure in Firefox.
+
+## Version 1.5.2 - November 10, 2023
+
+(Firefox Only)
+
+### Fixes and improvements
+
+* Updated the organization of files.
+
 ## Version 1.5.1 - November 2, 2023
 
 ### Fixes and improvements

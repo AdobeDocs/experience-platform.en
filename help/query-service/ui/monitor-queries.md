@@ -155,7 +155,7 @@ Queries that use anonymous blocks to comprise their SQL statements are separated
 >
 >The run details of an anonymous block that uses the DROP command will **not** be reported as a separate subquery. Separate run details are available for CTAS queries, ITAS queries, and COPY statements used as anonymous block subqueries. Run details for the DROP command are currently not supported.  
 
-Anonymous blocks are denoted through the use of a `$$` prefix before the query. To find out more about anonymous blocks in query service, see the [anonymous block document](../essential-concepts/anonymous-block.md).
+Anonymous blocks are denoted through the use of a `$$` prefix before the query. To find out more about anonymous blocks in query service, see the [anonymous block document](../key-concepts/anonymous-block.md).
 
 Anonymous block subqueries have tabs to the left of the run status. Select a tab to display the run details.
 
@@ -168,9 +168,3 @@ In the event an anonymous block query fails, you can find the error code for tha
 Select **[!UICONTROL Query]** to return to the schedule details screen, or **[!UICONTROL Scheduled Queries]** to return to the [!UICONTROL Scheduled Queries] tab.
 
 ![The run details screen with Query highlighted.](../images/ui/monitor-queries/return-navigation.png)
-
-<!-- Details required to complete this section below:
-### Run details for queries with parameterized queries {#parameterized-queries}
-
-Queries that use parameterized values to make up the SQL statement are ... 
--->
