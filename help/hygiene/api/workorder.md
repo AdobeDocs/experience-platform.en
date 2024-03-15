@@ -120,9 +120,9 @@ A successful response returns the details of the record delete.
 
 {style="table-layout:auto"}
 
-## Retrieve the status of a record delete (#lookup)
+## Retrieve the status of a record delete {#lookup}
 
-After [creating a record delete request](#create), you can check on its status using a GET request.
+After you [create a record delete request](#create), you can check on its status using a GET request.
 
 **API format**
 
