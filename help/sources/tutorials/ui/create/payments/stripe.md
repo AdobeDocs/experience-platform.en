@@ -36,7 +36,7 @@ Under the *Payments* category, select **[!DNL Stripe]**, and then select **[!UIC
 
 ![The sources catalog in the Experience Platform UI, with the Stripe source card selected.](../../../../images/tutorials/create/stripe/catalog.png)
 
-The **[!UICONTROL Connect Stripe account]** page appears. On this page, you can either use new credentials or existing credentials.
+The **[!UICONTROL Connect Stripe account]** page appears. On this page, you can either use new or existing credentials.
 
 >[!BEGINTABS]
 
@@ -85,7 +85,7 @@ Next, you must provide information on your dataset and your dataflow.
 
 ### Dataset details {#dataset-details}
 
-A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Data that is successfully ingested into Experience Platform is persisted within the data lake as datasets. During this step, you can create a new dataset or use an existing dataset.
+A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Data that is successfully ingested into Experience Platform is stored within the data lake as datasets. During this step, you can create a new dataset or use an existing dataset.
 
 >[!BEGINTABS]
 
@@ -103,7 +103,7 @@ To use a new dataset, select **[!UICONTROL New dataset]** and then provide a nam
 
 >[!TAB Use an existing dataset]
 
-If you already have an existing dataset, select **[!UICONTROL Existing dataset]** and then usee the **[!UICONTROL Advanced search]** option to view a window of all datasets in your organization, including their respective details such as whether are enabled for ingestion to Real-Time Customer Profile or not.
+If you already have an existing dataset, select **[!UICONTROL Existing dataset]** and then use the **[!UICONTROL Advanced search]** option to view a window of all datasets in your organization, including their respective details, such as whether they are enabled for ingestion to Real-Time Customer Profile or not.
 
 ![The existing dataset selection interface.](../../../../images/tutorials/create/stripe/existing-dataset.png)
 
@@ -128,13 +128,13 @@ Once your dataset is configured, you must then provide details on your dataflow,
 | --- | --- |
 | Dataflow name | The name of the dataflow.  By default, this will use the name of the file that is being imported. |
 | Description | (Optional) A brief description of your dataflow. |
-| Alerts | Experience Platform can produce event-based alerts which users can subscribe to, these options all a running dataflow to trigger these.  For more information, read the [alerts overview](../../alerts.md) <ul><li>**Sources Dataflow Run Start**: Select this alert to receive a notification when your dataflow run begins.</li><li>**Sources Dataflow Run Success**: Select this alert to receive a notification if your dataflow ends without any errors.</li><li>**Sources Dataflow Run Failure**: Select this alert to receive a notification if your dataflow run ends with any errors.</li></ul> |
+| Alerts | Experience Platform can produce event-based alerts that users can subscribe to. These options all require a running dataflow to trigger them.  For more information, read the [alerts overview](../../alerts.md) <ul><li>**Sources Dataflow Run Start**: Select this alert to receive a notification when your dataflow run begins.</li><li>**Sources Dataflow Run Success**: Select this alert to receive a notification if your dataflow ends without any errors.</li><li>**Sources Dataflow Run Failure**: Select this alert to receive a notification if your dataflow run ends with any errors.</li></ul> |
 
 When finished, select **[!UICONTROL Next]** to proceed.
 
 ## Map fields to an XDM schema {#mapping}
 
-The **[!UICONTROL Mapping]** step appears. Use the mapping interface to map your source data too the appropriate schema fields before ingesting that data to Experience Platform. For an extensive guide on how to use the mapping interface, read the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md) for more information.
+The **[!UICONTROL Mapping]** step appears. Use the mapping interface to map your source data to the appropriate schema fields before ingesting that data into Experience Platform. For an extensive guide on how to use the mapping interface, read the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md) for more information.
 
 ![The mapping interface of the sources workflow.](../../../../images/tutorials/create/stripe/mapping.png)
 
@@ -153,9 +153,9 @@ You can also select the calendar icon and use a pop-up calendar to configure you
 | Scheduling configuration | Description |
 | --- | --- |
 | Frequency | Configure frequency to indicate how often the dataflow should run. You can set your frequency to: <ul><li>**Once**: Set your frequency to `once` to create a one-time ingestion. Configurations for interval and backfill are unavailable when creating a one-time ingestion dataflow. By default, the scheduling frequency is set to once.</li><li>**Minute**: Set your frequency to `minute` to schedule your dataflow to ingest data on a per-minute basis.</li><li>**Hour**:Set your frequency to `hour` to schedule your dataflow to ingest data on a per-hour basis.</li><li>**Day**: Set your frequency to `day` to schedule your dataflow to ingest data on a per-day basis.</li><li>**Week**: Set your frequency to `week` to schedule your dataflow to ingest data on a per-week basis.</li></ul> |
-| Interval |  Once you select a frequency, you can then configure the interval setting to establish the time frame between every ingestion. For example, if you set your frequency to day and configure the interval to 15, then your dataflow will run every 15 days. **Note**: You cannot set interval to zero. |
+| Interval |  Once you select a frequency, you can then configure the interval setting to establish the time frame between every ingestion. For example, if you set your frequency to day and configure the interval to 15, then your dataflow will run every 15 days. **Note**: You cannot set the interval to zero. |
 | Start Time | The timestamp for the projected run, presented in UTC time zone. |
-| Backfill | Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested. |
+| Backfill | Backfill determines what data is initially ingested. If backfill is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If backfill is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to the start time will not be ingested. |
 
 Once you have configured your dataflow's ingestion schedule, select **[!UICONTROL Next]**.
 
@@ -166,9 +166,9 @@ Once you have configured your dataflow's ingestion schedule, select **[!UICONTRO
 
 The final step in the dataflow creation process is to review your dataflow before executing it. Use the **[!UICONTROL Review]** step to review the details of your new dataflow before it runs. Details are grouped in the following categories:
 
-* **Connection**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+* **Connection**: Shows the source type, the relevant path of the chosen source file, and the number of columns within that source file.
 * **Assign dataset & map fields**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
-* **Scheduling**: Shows that active period, frequency, and interval of the ingestion schedule.
+* **Scheduling**: Shows the active period, frequency, and interval of the ingestion schedule.
 
 Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
@@ -184,7 +184,7 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ### Update your dataflow
 
-To update configurations for your dataflows scheduling, mapping, and general information, visit the tutorial on [updating sources dataflows in the UI](../../update-dataflows.md)
+To update configurations for your dataflows scheduling, mapping, and general information, visit the tutorial on [updating sources dataflows in the UI](../../update-dataflows.md).
 
 ### Delete your dataflow
 

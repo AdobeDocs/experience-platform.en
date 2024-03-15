@@ -9,7 +9,7 @@ badge: Beta
 >
 >The [!DNL Stripe] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-Thousands of companies of all sizes use [!DNL Stripe] online and in person to accept payments, create new revenue sources, and grow globally using the Adobe Experience Platform, Adobe Commerce, and [!DNL Magento Open Source].
+Thousands of businesses of all sizes utilize [!DNL Stripe] both online and in person to accept payments, generate new sources of revenue, and expand globally with the help of Adobe Experience Platform, Adobe Commerce, and [!DNL Magento Open Source].
 
 Use the [!DNL Stripe] source in Experience Platform to ingest data captured during the purchase flow by your customers. Once ingested, use this data to create personalized offers and unlock richer business insights.
 
@@ -21,11 +21,13 @@ Use the [!DNL Stripe] source in Experience Platform to ingest data captured duri
 
 **Sample use case for the [!DNL Stripe] source**
 
-On your e-commerce site, your company offers **buy now** and **pay later** (through [!DNL Klarna], [!DNL Afterpay], [!DNL Affirm], or [!DNL Zip]) as payment options to consumers. Use the [!DNL Stripe] data source to analyze the use of **buy now** and **pay later** options and experiment with personalized offers to these customers, perhaps suggesting add-on purchases to expand the shopping cart before checkout.
+Your business allows customers to purchase items on your online store with the option to **buy now** and **pay later** (using [!DNL Klarna], [!DNL Afterpay], [!DNL Affirm], or [!DNL Zip]).
+
+Use the [!DNL Stripe] data source to analyze the use of **buy now** and **pay later** options and experiment with personalized offers to these customers. For example, consider recommending add-on items to expand the number of items in their shopping cart before checkout.
 
 >[!ENDSHADEBOX]
 
-Read the document below for information on how you can set up your [!DNL Stripe] source account, retrieve the necessary credentials, and information on how to create your schemas.
+Read the document below for information on how you can set up your [!DNL Stripe] source account, retrieve the necessary credentials, and create your schemas.
 
 ## Prerequisites {#prerequisites}
 
@@ -33,7 +35,7 @@ The following sections provide information on prerequisite setup that you must c
 
 ### Retrieve your access token
 
-* Log in to the [[!DNL Stripe] dashboard](https://dashboard.stripe.com/login) using your [!DNL Stripe] email and password credentials.
+* Log in to the [[!DNL Stripe] dashboard](https://dashboard.stripe.com/login) using your [!DNL Stripe] email address and password.
 * In the [!DNL Developers] dashboard, select **[!DNL API keys for developers]**.
 * Under the **API keys** tab, select **[!DNL Reveal test key]** to reveal your access token.
 * You can now use this token as your access token when connecting your [!DNL Stripe] account to Experience Platform, using either the [!DNL Flow Service] API or the Experience Platform UI.
@@ -76,13 +78,13 @@ The [!DNL Stripe] source supports ingestion of data from the following resource 
 * Customers
 * Prices
 
-You must create an XDM schema to describe a dataset, which can store the possible fields and data types that will be sent from [!DNL Stripe] to Experience Platform.
+You must create an XDM schema to describe a dataset, which can store the fields and data types that will be sent from [!DNL Stripe] to Experience Platform.
 
 >[!BEGINTABS]
 
 >[!TAB Charges]
 
-In [!DNL Stripe], **charges** represent attempts to move money into your [!DNL Stripe]. For information on specific charge attributes, visit the [[!DNL Stripe] API guide on charges](https://docs.stripe.com/api/charges).
+In [!DNL Stripe], **charges** represent attempts to move money into your [!DNL Stripe]. Read the [[!DNL Stripe] API guide on charges](https://docs.stripe.com/api/charges) for more information on specific charge attributes.
 
 +++Select to view the Stripe Charge object  
 
@@ -177,7 +179,7 @@ In [!DNL Stripe], **charges** represent attempts to move money into your [!DNL S
 
 >[!TAB Subscriptions]
 
-In [!DNL Stripe], you can use **subscriptions** to charge a customer on a recurring basis. For information on specific subscription attributes, visit the [[!DNL Stripe] API guide on subscriptions](https://docs.stripe.com/api/subscriptions).
+In [!DNL Stripe], you can use **subscriptions** to charge a customer on a recurring basis. Read the [[!DNL Stripe] API guide on subscriptions](https://docs.stripe.com/api/subscriptions) for more information on specific subscription attributes.
 
 +++Select to view the Stripe Subscription object
 
@@ -319,7 +321,7 @@ In [!DNL Stripe], you can use **subscriptions** to charge a customer on a recurr
 
 >[!TAB Refunds]
 
-In [!DNL Stripe], you can use **refunds** to refund a previously created charge. For information on specific subscription attributes, visit the [[!DNL Stripe] API guide on refunds](https://docs.stripe.com/api/refunds).
+In [!DNL Stripe], you can use **refunds** to refund a previously created charge. Read the [[!DNL Stripe] API guide on refunds](https://docs.stripe.com/api/refunds) for more information on specific refund attributes.
 
 +++Select to view the Stripe Refund object
 
@@ -355,7 +357,7 @@ In [!DNL Stripe], you can use **refunds** to refund a previously created charge.
 
 >[!TAB Balance Transactions]
 
-In [!DNL Stripe], **balance transactions** represent the movement of funds between your [!DNL Stripe] accounts. For information on specific balance transaction attributes, visit the [[!DNL Stripe] API guide on balance transactions](https://docs.stripe.com/api/balance_transactions).
+In [!DNL Stripe], **balance transactions** represent the movement of funds between your [!DNL Stripe] accounts. Read the [[!DNL Stripe] API guide on balance transactions](https://docs.stripe.com/api/balance_transactions) for more information on specific balance transaction attributes.
 
 +++Select to view the Stripe Balance Transaction object
 
@@ -383,7 +385,7 @@ In [!DNL Stripe], **balance transactions** represent the movement of funds betwe
 
 >[!TAB Customers]
 
-In [!DNL Stripe], **customers** represent a given customer of your business. For information on specific customer attributes, visit the [[!DNL Stripe] API guide on balance transactions](https://docs.stripe.com/api/customers). 
+In [!DNL Stripe], **customers** represent a given customer of your business. For information on specific customer attributes, Read the [[!DNL Stripe] API guide on customers](https://docs.stripe.com/api/customers) for more information on specific customer attributes.
 
 +++Select to view the Stripe Customer object
 
@@ -423,7 +425,7 @@ In [!DNL Stripe], **customers** represent a given customer of your business. For
 
 >[!TAB Prices]
 
-In [!DNL Stripe], **prices** represent the unit cost, currency, and the optional billing cycle for both recurring and one-time purchase of products. For information on specific price attributes, visit the [[!DNL Stripe] API guide on balance transactions](https://docs.stripe.com/api/prices). 
+In [!DNL Stripe], **prices** represent the unit cost, currency, and the optional billing cycle for both recurring and one-time purchase of products. Read the [[!DNL Stripe] API guide on prices](https://docs.stripe.com/api/prices) for more information on specific price attributes.
 
 +++Select to view the Stripe Price object
 
@@ -472,7 +474,7 @@ You must have both **[!UICONTROL View Sources]** and **[!UICONTROL Manage Source
 
 ## Next steps
 
-Once you have completed your prerequisite setup, you can proceed to the connect and bring your [!DNL Stripe] data to Experience Platform. Read the following guides to learn how to ingest [!DNL Stripe] payments data to Experience Platform using APIs or the user interface
+Once you have completed your prerequisite setup, you can proceed to connect and ingest your [!DNL Stripe] data to Experience Platform. Read the following guides to learn how to ingest [!DNL Stripe] payments data to Experience Platform using APIs or the user interface:
 
-* [Bring payments data from your Stripe account to Experience Platform using the Flow Service API](../../tutorials/api/create/payments/stripe.md).
-* [Bring payments data from your Stripe account to Experience Platform using the user interface](../../tutorials/ui/create/payments/stripe.md).
+* [Ingest payments data from your Stripe account to Experience Platform using the Flow Service API](../../tutorials/api/create/payments/stripe.md).
+* [Ingest payments data from your Stripe account to Experience Platform using the user interface](../../tutorials/ui/create/payments/stripe.md).

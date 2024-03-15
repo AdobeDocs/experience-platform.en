@@ -16,7 +16,7 @@ Read the following tutorial to learn how to ingest your payments data from [!DNL
 This guide requires a working understanding of the following components of Experience Platform:
 
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes that partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Authentication
 
@@ -32,7 +32,7 @@ Follow the guide below to learn how to authenticate your [!DNL Stripe] source, c
 
 ### Create a base connection {#base-connection}
 
-A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A base connection retains information between your source and Experience Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. You can explore and navigate files from within your source using the base connection ID. Additionally, you can identify the specific items you wish to ingest, including details on the data types and formats of those items.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Stripe] authentication credentials as part of the request body.
 
@@ -74,7 +74,7 @@ curl -X POST \
 | --- | --- |
 | `name` | The name of your base connection. Ensure that the name of your base connection is descriptive as you can use this to look up information on your base connection. |
 | `description` | An optional value that you can include to provide more information on your base connection. |
-| `connectionSpec.id` | The connection spec ID of your source. This ID is fixed. The connection spec ID for [!DNL Stripe] is: `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3`. |
+| `connectionSpec.id` | The source's connection spec ID. The connection spec ID for [!DNL Stripe] is `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3`, and this ID is fixed. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Experience Platform. |
 | `auth.params.accessToken` | The access token of your [!DNL Stripe] account. Read the [[!DNL Stripe] authentication guide](../../../../connectors/payments/stripe.md#prerequisites) for steps on how to retrieve your access token. |
 
@@ -106,7 +106,7 @@ When performing GET requests to explore your source's file structure and content
 | Parameter | Description |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | The base connection ID generated in the previous step. |
-| `objectType=rest` | The type of object that you wish to explore. Currently, this value is always set to `rest`. |
+| `objectType=rest` | The type of object you wish to explore. This value is always set to `rest`. |
 | `{OBJECT}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. For this source the value would be `json`. |
 | `fileType=json` | The file type of the file you want to bring to Platform. Currently, `json` is the only supported file type. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
@@ -439,10 +439,10 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
+| `name` | The name of your source connection. Ensure that the name of your source connection is descriptive, as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can include to provide more information on your source connection. |
 | `baseConnectionId` | The base connection ID of [!DNL Stripe]. This ID was generated in an earlier step. |
-| `connectionSpec.id` | The connection specification ID that corresponds to your source. |
+| `connectionSpec.id` | The connection spec ID that corresponds to your source. |
 | `data.format` | The format of the [!DNL Stripe] data that you want to ingest. Currently, the only supported data format is `json`. |
 
 A successful response returns the unique identifier (`id`) of the newly created source connection. This ID is required in a later step to create a dataflow.
@@ -533,7 +533,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 ### Create a mapping {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) with data mappings defined within the request payload.
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to the [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) with data mappings defined within the request payload.
 
 **API format**
 
@@ -872,9 +872,9 @@ curl -X POST \
 | `transformations.name` | The name assigned to the transformation. |
 | `transformations.params.mappingId` | The [mapping ID](#mapping) generated in an earlier step. |
 | `transformations.params.mappingVersion` | The corresponding version of the mapping ID. This value defaults to `0`. |
-| `scheduleParams.startTime` | The time in which your dataflow will begin. You must provide the start time value in the format of a unix timestamp.  |
+| `scheduleParams.startTime` | The time at which your dataflow will begin. You must provide the start time value in the format of a Unix timestamp.  |
 | `scheduleParams.frequency` | The frequency at which the dataflow will collect data. You can configure the ingestion frequency to:  <ul><li>**Once**: Set your frequency to `once` to create a one-time ingestion. Configurations for interval and backfill are unavailable when creating a one-time ingestion dataflow. By default, the scheduling frequency is set to once.</li><li>**Minute**: Set your frequency to `minute` to schedule your dataflow to ingest data on a per-minute basis.</li><li>**Hour**:Set your frequency to `hour` to schedule your dataflow to ingest data on a per-hour basis.</li><li>**Day**: Set your frequency to `day` to schedule your dataflow to ingest data on a per-day basis.</li><li>**Week**: Set your frequency to `week` to schedule your dataflow to ingest data on a per-week basis.</li></ul> |
-| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. For example, if you set your frequency to day and configure the interval to 15, then your dataflow will run every 15 days. The interval's value should be a non-zero integer.|
+| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. For example, if you set your frequency to day and configure the interval to 15, then your dataflow will run every 15 days. The interval value should be a non-zero integer.|
 
 **Response**
 
@@ -889,7 +889,7 @@ A successful response returns the ID (`id`) of the newly created dataflow. You c
 
 ## Appendix 
 
-The following section provides information on the steps you can to monitor, update, and delete your dataflow.
+The following section provides information on the steps you can take to monitor, update, and delete your dataflow.
 
 ### Monitor your dataflow
 
@@ -897,7 +897,7 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ### Update your dataflow
 
-Update the details of your dataflow, such as its name and description, as well as its run schedule and associated mapping sets by making a PATCH request to the `/flows` endpoint of [!DNL Flow Service] API, while providing the ID of your dataflow. When making a PATCH request, you must provide your dataflow's unique `etag` in the `If-Match` header. For complete API examples, read the guide on [updating sources dataflows using the API](../../update-dataflows.md).
+Update the details of your dataflow, such as its name and description, as well as its run schedule and associated mapping sets, by making a PATCH request to the /flows endpoint of the [!DNL Flow Service] API while providing the ID of your dataflow. When making a PATCH request, you must provide your dataflow's unique `etag` in the `If-Match` header. For complete API examples, read the guide on [updating sources dataflows using the API](../../update-dataflows.md).
 
 ### Update your account
 
