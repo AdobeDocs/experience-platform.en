@@ -86,7 +86,7 @@ The sections below outline the different policy enforcement messages that appear
 
 If a policy violation occurs from attempting to activate an audience (or [making edits to an already activated audience](#policy-enforcement-for-activated-audiences)) the action is prevented and a popover appears indicating that one or more policies have been violated. Once a violation has triggered, the **[!UICONTROL Save]** button is disabled for the entity you are modifying until the appropriate components are updated to comply with data usage policies.
 
-Select a policy violation name in the popover to display details for that violation.
+Select a policy violation name to display details for that violation.
 
 ![A dialog that indicates a policy violation has occurred with the policy name highlighted.](../images/enforcement/violation-policy-select.png)
 
