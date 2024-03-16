@@ -26,11 +26,11 @@ You can add labels directly to a schema or fields within that schema. Any fields
 
 >[!NOTE]
 >
->If your data usage policies have already been created before you label your field, you may experience a governance policy violation dialog as soon as you apply labels to your new schema.
+>If your data usage policies have already been created before you label your field, you may experience a governance policy violation dialog as soon as you apply labels to your new schema. This dialog indicates that there is already a usage policy in place that will be violated by the application of this label. Use the data lineage diagram to understand what other configurations you might need to change before being able to add the label to your schema field.
 >
 >![The data governance policy violation detected dialog with violation summary and data lineage diagram highlighted.](../images/labels/policy-violation-dialog.png)
 >
->This means there is already a usage in place that will be violated by the application of this label. So use the data lineage diagram to understand what other configurations you might need to change before being able to add the label
+>See the [data usage policy violation documentation](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation) for more information on partial policy violations.
 
 In order to manage data usage labels at the schema level, you must select an existing schema or create a new one. After logging into Adobe Experience Platform, select **[!UICONTROL Schemas]** on the left-navigation to open the **[!UICONTROL Schemas]** workspace. This page lists all created schemas belonging to your organization, along with useful details related to each schema. 
 
