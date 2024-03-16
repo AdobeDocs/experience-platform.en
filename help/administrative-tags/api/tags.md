@@ -39,7 +39,7 @@ GET /tagCategory
 +++A sample request to list all the tag categories in your organization
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedTags/tagCategory
+curl -X GET https://experience.adobe.io/unifiedtags/tagCategory
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -51,7 +51,7 @@ curl -X GET https://experience.adobe.io/unifiedTags/tagCategory
 
 **Response**
 
-A successful response returns HTTP status ??? with a list of all the tag categories for your organization.
+A successful response returns HTTP status 200 with a list of all the tag categories for your organization.
 
 +++A sample response that contains a list of all the tag categories in your organization.
 
@@ -102,7 +102,7 @@ POST /tagCategory
 +++A sample request to create a new tag category.
 
 ```shell
-curl -X POST https://experience.adobe.io/unifiedTags/tagCategory
+curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -116,12 +116,14 @@ curl -X POST https://experience.adobe.io/unifiedTags/tagCategory
 
 | Property | Description |
 | -------- | ----------- |
+| `name` | The name of the tag category you want to create. |
+| `description` | A description of the tag category you want to create. |
 
 +++
 
 **Response**
 
-A sample response returns HTTP status ??? with details of your newly created tag category.
+A sample response returns HTTP status 200 with details of your newly created tag category.
 
 +++A sample response that contains details of your newly created tag category.
 
@@ -160,7 +162,7 @@ GET /tagCategory/{TAG_CATEGORY_ID}
 +++A sample request to retrieve a specific tag category
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedTags/tagCategory/e2b7c656-067b-4413-a366-adde0401df50 \
+curl -X GET https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-4413-a366-adde0401df50 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -172,7 +174,7 @@ curl -X GET https://experience.adobe.io/unifiedTags/tagCategory/e2b7c656-067b-44
 
 **Response**
 
-A successful response returns HTTP status ??? with details of the specified tag category.
+A successful response returns HTTP status 200 with details of the specified tag category.
 
 +++A sample response that contains details of the specified tag category.
 
@@ -189,6 +191,17 @@ A successful response returns HTTP status ??? with details of the specified tag 
     "tagCount": 0
 }
 ```
+
+| Property | Description |
+| -------- | ----------- |
+| `id` | The ID of the requested tag category. |
+| `name` | The name of the requested tag category. |
+| `description` | The description of the requested tag category. |
+| `createdBy` | The ID of the user who created the tag category. |
+| `createdAt` | The timestamp of when the tag category was created. |
+| `modifiedBy` | The ID of the user who last updated the tag category. |
+| `modifiedAt` | The timestamp of when the tag category was last updated. |
+| `tagCount` | The number of tags that belong to the tag category. |
 
 +++
 
@@ -211,27 +224,32 @@ PATCH /tagCategory/{TAG_CATEGORY_ID}
 +++A sample request to update a specific tag category
 
 ```shell
-curl -X PATCH https://experience.adobe.io/unifiedTags/tagCategory/e2b7c656-067b-4413-a366-adde0401df50 \
+curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-4413-a366-adde0401df50 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
- -d '{
+ -d '[{
     "op": "replace",
     "path": "description",
-    "value": "Updated sample description"
- }'
+    "value": "Updated sample description",
+    "from": "Sample description"
+ }]'
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
+| `op` | The operation that needs to be done. In this use case, it'll always be set to`replace`. | 
+| `path` | The path of the field that will be updated. Supported values include `name` and `description`. |
+| `value` | The updated value of the field you want to update. |
+| `from` | The original value of the field you want to update. |
 
 +++
 
 **Response**
 
-A successful response HTTP status ??? with information about your newly updated tag category.
+A successful response HTTP status 200 with information about your newly updated tag category.
 
 +++A sample response containing details of your newly updated tag category.
 
@@ -274,7 +292,7 @@ DELETE /tagCategory/{TAG_CATEGORY_ID}
 +++A sample request to delete a specific tag category
 
 ```shell
-curl -X DELETE https://experience.adobe.io/unifiedTags/tagCategory/e2b7c656-067b-4413-a366-adde0401df50 \
+curl -X DELETE https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-4413-a366-adde0401df50 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -286,7 +304,7 @@ curl -X DELETE https://experience.adobe.io/unifiedTags/tagCategory/e2b7c656-067b
 
 **Response**
 
-A successful response returns HTTP status ??? along with an empty response.
+A successful response returns HTTP status 200 along with an empty response.
 
 ## Retrieve a list of tags {#get-tags}
 
@@ -295,16 +313,166 @@ You can retrieve a list of tags that belong to your organization by making a GET
 **API format**
 
 ```http
-GET /tags/{TAG_CATEGORY_ID}
+GET /tags/property=id={TAG_CATEGORY_ID}
 ```
 
 **Request**
 
-This request doesn't make sense at the moment.
++++A sample request to retrieve all tags belonging to a specific tag category
+
+```shell
+curl -X GET https://experience.adobe.io/unifiedtags/tags?property=id=e2b7c656-067b-4413-a366-adde0401df50
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
 
 **Response**
 
-No response as a result.
+A successful response returns HTTP status 200 with details of the tags belonging to that tag category.
+
++++ A sample response that contains details of the requested tags.
+
+```json
+{
+    "_page": {
+        "count": 166,
+        "limit": 10,
+        "next": "eyJjb21wb3NpdGVUb2tlbiI6IntcInRva2VuXCI6XCIrUklEOn52a0owQUp3WDRrVko1d0FBQUFBQUFBPT0jUlQ6MiNUUkM6MjAjUlREOnVDTmQyWlAvWjV6TGdvUGVGR1JHQk1KNVExVmR6Mnc9I0lTVjoyI0lFTzo2NTU2NyNRQ0Y6OCNGUEM6QWdFQ0J3TG1BQ1NmQnNBQ0JBb0FBQVFBQ0FBQUNJQVlnQWVBRElBTmdBWEFFTUJCUUVBQUFBQkFRQkdBSElBR2dBQ0FENEFId0FKUkRFQUNBZ2dBUUJnQUVBQUlIb0FaZ0FDQUJNQUFRVUFBUUFCQVFScUFBc0FTQUFBRUxvQU9nQWFBQmNBQVlBQUFHSUlCUUFDQU1vQUlnQWlBQk1DQUFRQUFnZ0FnQUM2QURZQTNnQWlBR1lBQWdCZUFBY0FCZ0JlQUM4QURBQUlBQWdBQVFBQ0FBRUZBQVFFQUFBRWdBQ0FBSjRCR2dBeUFCSUFPZ0F5QU13QVNRQ0FBQUVBdGdCRUFBR0FkZ0FuQUFDZ0NBQUFBQ0lCQUFDSkFnQUJBRUFDQUg0QUhnQWFBQllBVUFFQUNCQUFFQUFRQUF4QUFzUnJBQUlFQUFBYkxoQklIQVBBQUhnUUVBTEVxQUE4RkNBQVFtcUVBd0FBTWd3Y09BSFdIa1FBZ0JGT0FTNEN4QVE0QVwiLFwicmFuZ2VcIjp7XCJtaW5cIjpcIlwiLFwibWF4XCI6XCJGRlwifX0iLCJvcmRlckJ5SXRlbXMiOlt7Iml0ZW0iOjE2OTQ0ODg2MDMwMDB9XSwicmlkIjoidmtKMEFKd1g0a1hHV2dFQUFBQUFBQT09IiwiaW5jbHVzaXZlIjp0cnVlfQ==",
+        "property": [
+            "id=e2b7c656-067b-4413-a366-adde0401df50"
+        ]
+    },
+    "tags": [
+        {
+            "archived": false,
+            "createdAt": 1705624523000,
+            "createdBy": "{USER_ID}",
+            "id": "8af14b1e-f267-44ad-b94c-9ac70274e3d5",
+            "modifiedAt": 1705624523000,
+            "modifiedBy": "{USER_ID}",
+            "name": "xql-test-1705624481530",
+            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
+            "tagCategoryName": "Test Category"
+        },
+        {
+            "archived": false,
+            "createdAt": 1705624523000,
+            "createdBy": "{USER_ID}",
+            "id": "8b907a2c-0f15-4d2c-9672-bf545d5e47ab",
+            "modifiedAt": 1705624523000,
+            "modifiedBy": "{USER_ID}",
+            "name": "xql-test-1705624489131",
+            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
+            "tagCategoryName": "Test Category"
+        },
+        {
+            "archived": false,
+            "createdAt": 1705624523000,
+            "createdBy": "{USER_ID}",
+            "id": "e30bd956-afad-40a1-8f4a-7e4428855856",
+            "modifiedAt": 1705624523000,
+            "modifiedBy": "{USER_ID}",
+            "name": "xql-test-1705624494191",
+            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
+            "tagCategoryName": "Test Category"
+        },
+        {
+            "archived": false,
+            "createdAt": 1705451722000,
+            "createdBy": "{USER_ID}",
+            "id": "3bf6a6ba-0b11-4d83-8f35-db6e5b9652d8",
+            "modifiedAt": 1705451722000,
+            "modifiedBy": "{USER_ID}",
+            "name": "xql-test-1705451701640",
+            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
+            "tagCategoryName": "Test Category"
+        },
+        {
+            "archived": false,
+            "createdAt": 1705422929000,
+            "createdBy": "{USER_ID}",
+            "id": "0910dfc8-7924-473d-afc6-1aa68337b3b6",
+            "modifiedAt": 1705422929000,
+            "modifiedBy": "{USER_ID}",
+            "name": "xql-test-1705422890399",
+            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
+            "tagCategoryName": "Test Category"
+        },
+        {
+            "archived": false,
+            "createdAt": 1705394126000,
+            "createdBy": "{USER_ID}",
+            "id": "b426085e-580b-4147-9921-8ba77ffa77a9",
+            "modifiedAt": 1705394126000,
+            "modifiedBy": "{USER_ID}",
+            "name": "xql-test-1705394104556",
+            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
+            "tagCategoryName": "Test Category"
+        },
+        {
+            "archived": true,
+            "createdAt": 1705392795000,
+            "createdBy": "{USER_ID}",
+            "id": "92961035-e72b-45a0-9625-781380017585",
+            "modifiedAt": 1705392832000,
+            "modifiedBy": "{USER_ID}",
+            "name": "xql-test-1705392794917",
+            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
+            "tagCategoryName": "Test Category"
+        },
+        {
+            "archived": false,
+            "createdAt": 1705335274000,
+            "createdBy": "{USER_ID}",
+            "id": "436ce801-ef87-45fd-b34a-9ce938a447e1",
+            "modifiedAt": 1705335274000,
+            "modifiedBy": "{USER_ID}",
+            "name": "xql-test-1705335252944",
+            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
+            "tagCategoryName": "Test Category"
+        },
+        {
+            "archived": false,
+            "createdAt": 1694776514000,
+            "createdBy": "{USER_ID}",
+            "id": "1e6e9836-5e18-4340-a959-3206c9bc3a94",
+            "modifiedAt": 1694776514000,
+            "modifiedBy": "{USER_ID}",
+            "name": "xql-test-1694776510734",
+            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
+            "tagCategoryName": "Test Category"
+        },
+        {
+            "archived": false,
+            "createdAt": 1694488609000,
+            "createdBy": "{USER_ID}",
+            "id": "b8400673-2f90-48e9-b73b-cdfbba5ab361",
+            "modifiedAt": 1694488609000,
+            "modifiedBy": "{USER_ID}",
+            "name": "xql-test-1694488608301",
+            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
+            "tagCategoryName": "Test Category"
+        }
+    ]
+}
+```
+
++++
 
 ## Create a new tag {#create-tag}
 
@@ -325,7 +493,7 @@ POST /tags
 +++A sample request to create a new tag.
 
 ```shell
-curl -X POST https://experience.adobe.io/unifiedTags/tags
+curl -X POST https://experience.adobe.io/unifiedtags/tags
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -339,7 +507,7 @@ curl -X POST https://experience.adobe.io/unifiedTags/tags
 | Property | Description |
 | -------- | ----------- |
 | `name` | **Required**. The name of the tag you want to create. |
-| `tagCategoryId` | *Optional*. The ID of the tag category that you want the tag to belong to. If not specified, the tag will be created as part of the uncategorized category. |
+| `tagCategoryId` | *Optional*. The ID of the tag category that you want the tag to belong to. If not specified, the tag will be created as part of the Test Category category. |
 
 +++
 
@@ -358,8 +526,8 @@ A successful response returns HTTP status ??? with details of your newly created
     "createdBy": "{USER_ID}",
     "modifiedAt": "1661753717000",
     "modifiedBy": "{USER_ID}",
-    "tagCategoryId": "Uncategorized-{ORG_ID}",
-    "tagCategoryName": "Uncategorized",
+    "tagCategoryId": "Test Category-{ORG_ID}",
+    "tagCategoryName": "Test Category",
     "archived": false
 }
 ```
@@ -388,7 +556,7 @@ GET /tags/{TAG_ID}
 +++A sample request to retrieve a specific tag
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedTags/tags/2bd5ddd9-7284-4767-81d9-c75b122f2a6a \
+curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9-c75b122f2a6a \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -413,8 +581,8 @@ A successful response returns HTTP status ??? with details of the specified tag.
     "createdBy": "{USER_ID}",
     "modifiedAt": "1661753717000",
     "modifiedBy": "{USER_ID}",
-    "tagCategoryId": "Uncategorized-{ORG_ID}",
-    "tagCategoryName": "Uncategorized",
+    "tagCategoryId": "Test Category-{ORG_ID}",
+    "tagCategoryName": "Test Category",
     "archived": false
 }
 ```
@@ -439,7 +607,7 @@ POST /tags/validate
 +++A sample request to validate the provided tag IDs.
 
 ```shell
-curl -X POST https://experience.adobe.io/unifiedTags/tags/validate
+curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -502,7 +670,7 @@ PATCH /tags/{TAG_ID}
 +++A sample request to update a specific tag
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedTags/tags/2bd5ddd9-7284-4767-81d9-c75b122f2a6a \
+curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9-c75b122f2a6a \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -538,8 +706,8 @@ A successful response returns HTTP status ??? with details of the newly updated 
     "createdBy": "{USER_ID}",
     "modifiedAt": "1661753717000",
     "modifiedBy": "{USER_ID}",
-    "tagCategoryId": "Uncategorized-{ORG_ID}",
-    "tagCategoryName": "Uncategorized",
+    "tagCategoryId": "Test Category-{ORG_ID}",
+    "tagCategoryName": "Test Category",
     "archived": false
 }
 ```
@@ -569,7 +737,7 @@ DELETE /tags/{TAG_ID}
 +++A sample request to delete a specific tag
 
 ```shell
-curl -X DELETE https://experience.adobe.io/unifiedTags/tags/2bd5ddd9-7284-4767-81d9-c75b122f2a6a \
+curl -X DELETE https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9-c75b122f2a6a \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
