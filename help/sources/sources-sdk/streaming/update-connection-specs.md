@@ -1,8 +1,6 @@
 ---
 title: Update a connection specification for Streaming SDK using the Flow Service API
 description: The following document provides steps on how to a connection specification using the Flow Service API for Self-Serve Sources (Streaming SDK).
-hide: true
-hidefromtoc: true
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
 ---
 # Update a connection specification using the Flow Service API
