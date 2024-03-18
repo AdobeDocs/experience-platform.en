@@ -9,49 +9,46 @@ role: Developer, Admin, User
 
 # Use access labels to manage user access to destination dataflows
 
-As part of the Attribute-based access control functionality in Real-Time CDP, you can now apply access labels to destination dataflows. You can thereby ensure that only a subset of users in your organization get access to specific destination dataflows.
+As part of the [!UICONTROL Attribute-based access control] functionality in Real-Time CDP, you can now apply access labels to destination dataflows. You can thereby ensure that only a subset of users in your organization get access to specific destination dataflows.
 
 When you add an access label to a particular destination, only users who have access to a role that is assigned that label are able to see and edit that destination dataflow. If a destination dataflow is not marked with any labels, it is visible for all users belonging to your organization.
 
 Read this page to understand sample use cases, prerequisites before you can apply access labels to destination dataflows, and other important callouts when using this functionality.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
-Note the following prerequisites to complete before you start using this functionality. To familiarize yourself with Attribute-based access control functionality, Adobe also recommends that you read the following articles:
+Note the following prerequisites to complete before you start using this functionality. To familiarize yourself with [!UICONTROL Attribute-based access control] functionality, Adobe also recommends that you read the following articles:
 
 * [Attribute-based access control overview](/help/access-control/abac/overview.md)
 * [Attribute-based access control end-to-end guide](/help/access-control/abac/end-to-end-guide.md)
 
-### Access to the permissions UI
+### Access to the permissions UI {#access-permissions-ui}
 
 [!UICONTROL Permissions] is the area of Experience Cloud where administrators can define user roles and policies to manage permissions for features and objects within a product application. Read the [permissions section](/help/access-control/abac/end-to-end-guide.md#permissions) to get started.
 
-### Create roles, labels, and assign users
+### Create roles, labels, and assign users {#create-roles-labels-assign-users}
 
-After getting access to the permissions UI, you or a member of your team need to set up roles, and add the required labels to those roles. Finally, the users who should access resources labeled with the specific labels must be added to the role. Consult the following documentation sections:
+After getting access to the [!UICONTROL permissions] UI, you or a member of your team must set up roles, and add the required labels to those roles. Finally, the users who should access resources labeled with the specific labels must be added to the role. Consult the following documentation sections:
 
 * [Create a new role](/help/access-control/abac/ui/roles.md)
 * [Add labels to a role](/help/access-control/abac/end-to-end-guide.md#label-roles)
 * [Add users to a role](/help/access-control/ui/users.md)
 
-### Create destination dataflows
+### Create destination dataflows {#create-dataflow}
 
 You first need to connect to the desired destination and create a dataflow to export data, before you can apply access labels to the dataflow.
 
 Read the guides on [connecting to a destination](/help/destinations/ui/connect-destination.md), [activating data to the destination](/help/destinations/ui/activation-overview.md), and select the desired destination from the [catalog of available connectors](/help/destinations/catalog/overview.md).
 
-## Already available: Apply access labels to other Experience Platform resources
+## Already available: Apply access labels to other Experience Platform resources {#apply-labels-other-resources}
 
-While this release enables you to grant users object-level access to specific destination dataflows, the functionality to grant access control on an object level is already generally available for other Experience Platform resources, such as:
+While this release enables you to grant users object-level access to specific destination dataflows, the functionality to grant access control on an object level is already generally available for other Experience Platform resources, such as [audiences](/help/access-control/abac/end-to-end-guide.md#apply-labels-to-segments).
 
-* Datasets
-* Audiences
+## Use case example {#use-case-example}
 
-## Use case example
+With object-level access control for destinations, limit specific teams of marketers to get access to their specific destinations only. For example if your organization has customer data in several geographical locations, like the United States and the United Kingdom, you can limit a marketing team to view and edit the dataflows for the US location only, and another marketing team to view and edit the dataflows for the UK location.
 
-With object-level access control for destinations, limit specific teams of marketers to have access only to their specific destinations. For example if your organization has customer data in several geographical locations, like the United States and the United Kingdom, you can limit a marketing team to view and edit the dataflows for the US location only, and another marketing team to view and edit the dataflows for the UK location.
-
-## Apply access labels to destination dataflows
+## Apply access labels to destination dataflows {#apply-labels-to-destination-dataflow}
 
 To apply access labels to a certain dataflow: 
 
@@ -69,9 +66,9 @@ You can add standard and custom labels to destination dataflows. After you add a
 
 * Users who are assigned to roles with access to the same label can view the dataflow with the new label in the UI. They can view and edit the destination dataflow in the user interface or via APIs.
 
-* Users who are *not* assigned to roles with access to the same label cannot view or edit the destination dataflow in the user interface or via APIs.
+* Users who are *not* assigned to roles with access to the same label cannot do not have access to the destination dataflow to view or edit it in the user interface or via APIs.
 
-## Important callouts and items to know
+## Important callouts and items to know {#important-callouts}
 
 Currently, access labels can only be applied to existing dataflows. This means that someone needs to create the dataflow to the destination before access labels can be applied.
 
@@ -81,8 +78,8 @@ When adding multiple labels to a destination dataflow, users who should be able 
 
 ![Venn diagram showing how only certain users have access to destinations with multiple labels applied.](/help/access-control/images/olac/multiple-labels-venn.png)
 
-## Next steps
+## Next steps {#next-steps}
 
 By following the steps in this document, you now know how to apply access labels to destination dataflows so that only a subset of users in your organization get access to specific destination dataflows.
 
-Next, you can read more about other functionality supported by Attribute-based access control when activating data to destinations. For example, you can limit users' access to [view and activate specific fields only](/help/access-control/abac/overview.md#destinations).  
+Next, you can read more about other functionality supported by [!UICONTROL Attribute-based access control] when activating data to destinations. For example, you can limit users' access to [view and activate specific fields only](/help/access-control/abac/overview.md#destinations).  
