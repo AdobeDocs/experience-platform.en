@@ -48,3 +48,4 @@ The restrictions listed below must be taken into consideration when naming your 
 ## Next steps
 
 By reading this document, you have completed the prerequisite setup needed in order to bring data from your [!DNL Acxiom] account to Experience Platform. You can now proceed to the guide on [connecting [!DNL Acxiom Data Ingestion] to Experience Platform using the user interface](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
+ 
