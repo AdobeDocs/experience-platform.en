@@ -41,7 +41,6 @@ In order for [!DNL Flow Service] to connect with [!DNL Snowflake], you must prov
 | `role` | (Optional) A custom-defined role that can be provided for a user, for a given connection. If unprovided, this value defaults to `public`. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Snowflake] is `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
-For more information about authentication, refer to this [[!DNL Snowflake] document](<https://docs.snowflake.com/en/user-guide/key-pair-auth.html>).
 
 ### Configure role settings {#configure-role-settings}
 
