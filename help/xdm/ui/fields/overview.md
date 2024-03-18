@@ -21,7 +21,7 @@ To define new XDM fields in the UI, you must first open a schema within the [!DN
 
 Once you have the [!DNL Schema Editor] open, controls to add fields appear in the canvas. These controls appear next to the name of the schema, as well as any object-type fields that have been defined under the selected class or field group.
 
-![](../../images/ui/fields/overview/select-resource.png)
+![The Schema Editor with the add icons highlighted.](../../images/ui/fields/overview/select-resource.png)
 
 >[!WARNING]
 >
@@ -29,7 +29,7 @@ Once you have the [!DNL Schema Editor] open, controls to add fields appear in th
 
 To add a new field to the resource, select the **plus (+)** icon next to the schema's name in the canvas, or next to the object-type field that you want to define the field under.
 
-![](../../images/ui/fields/overview/plus-icon.png)
+![The Schema Editor with an add icon highlighted.](../../images/ui/fields/overview/plus-icon.png)
 
 Depending on whether you are adding a field directly to a schema or its constituent class and field groups, the required steps to add the field will vary. The remainder of this document focuses on how to configure a field's properties regardless of where that field appears in the schema. For more information on the different ways that fields can be added to a schema, refer to the following sections in the schemas UI guide:
 
@@ -40,7 +40,7 @@ Depending on whether you are adding a field directly to a schema or its constitu
 
 After selecting the **plus (+)** icon, an **[!UICONTROL Untitled field]** placeholder appears in in the canvas.
 
-![](../../images/ui/fields/overview/new-field.png)
+![The Schema Editor with a new untitled field highlighted.](../../images/ui/fields/overview/new-field.png)
 
 In the right rail under **[!UICONTROL Field properties]**, you can configure the details of the new field. The following information is required for each field:
 
@@ -48,11 +48,13 @@ In the right rail under **[!UICONTROL Field properties]**, you can configure the
 | --- | --- |
 | [!UICONTROL Field name] | A unique, descriptive name for the field. Note that the field's name cannot be changed once the schema has been saved. This value is used to identify and reference the field in code and in other downstream applications<br><br>The name should ideally be written in camelCase. It may contain alphanumeric, dash, or underscore characters, but it **may not** start with an underscore.<ul><li>**Correct**: `fieldName`</li><li>**Acceptable:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrect**: `_fieldName`</li></ul> |
 | [!UICONTROL Display name] | A display name for the field. This is the name that will be used to represent the field within the Schema Editor canvas. The field name can be changed to the display name using the [display name toggle](../resources/schemas.md#display-name-toggle). |
-| [!UICONTROL Type] | The type of data the field will contain. From this dropdown menu, you can select one of the [standard scalar types](../../schema/field-constraints.md) supported by XDM, or one of the multi-field [data types](../resources/data-types.md) that have been previously defined in the [!DNL Schema Registry].<br><br>You can also select **[!UICONTROL Advanced type search]** to search and filter existing data types and locate the desired type easier. |
+| [!UICONTROL Type] | The type of data the field will contain. From this dropdown menu, you can select one of the [standard scalar types](../../schema/field-constraints.md) supported by XDM, or one of the multi-field [data types](../resources/data-types.md) that have been previously defined in the [!DNL Schema Registry].<br>Note: If you select the Map data type, then [!UICONTROL Map value type] property appears.<br><br>You can also select **[!UICONTROL Advanced type search]** to search and filter existing data types and locate the desired type easier. |
+| [!UICONTROL Map value type] | This value is required if you select [!UICONTROL Map] as the data type for the field. Available values for the map are [!UICONTROL String] and [!UICONTROL Integer]. Select a value from the drop down list of available options.<br>To learn more about [type-specific field properties](#type-specific-properties), see the define fields overview.  |
 
 {style="table-layout:auto"}
 
-You can also provide an optional human-readable **[!UICONTROL Description]** to the field to provide more context as to the field's intended use case.
+You can also choose to provide a description and notes for each field. Use the **[!UICONTROL Description]** field to add context and describe the functionality of the map data type. This contributes to the maintainability and readability of the implementation. You can also add notes to complement the initial description. This should offer more granular and specific information to help developers in understanding, maintaining, and utilizing the map effectively within the context of the codebase. |
+
 
 >[!NOTE]
 >
@@ -62,11 +64,11 @@ You can also provide an optional human-readable **[!UICONTROL Description]** to 
 
 Once you have finished configuring the field, select **[!UICONTROL Apply]**.
 
-![](../../images/ui/fields/overview/field-details.png)
+![The [!UICONTROL Field properties] section of the Schema Editor is highlighted.](../../images/ui/fields/overview/field-details.png)
 
 The canvas updates to show the newly added field, located within an object that is namespaced to your unique tenant ID (shown as `_tenantId` in the example below). All custom fields that are added to a schema  are automatically placed within this namespace to prevent conflicts with other fields from Adobe-provided classes and field groups. The right rail now lists the field's path in addition to its other properties.
 
-![](../../images/ui/fields/overview/field-added.png)
+![A new field in the schema diagram and its corresponding path in the [!UICONTROL Field properties] section is highlighted.](../../images/ui/fields/overview/field-added.png)
 
 You can continue to follow the steps above to add more fields to the schema. Once the schema is saved, its base class and field groups are also saved if any changes have been made to them.
 
@@ -80,6 +82,7 @@ When defining a new field, additional configuration options may appear in the ri
 
 | Field property | Compatible types | Description |
 | --- | --- | --- |
+| [!UICONTROL Map value type] | [!UICONTROL Map] | The [!UICONTROL Map value type] property only appears in the UI if you select the Map value from the [!UICONTROL Type] dropdown options. You can select between String and Integer value types for the Map.<br>![The Schemas Editor with the Type and Map value type fields highlighted.](../../images/ui/fields/overview/map-type.png "The Schemas Editor with the Type and Map value type fields highlighted."){width="100" zoomable="yes"}<br>Note: Any map data types created through the API that are not either a String or an Integer type are displayed as a '[!UICONTROL Complex]' data type. You cannot create '[!UICONTROL Complex]' data types through the UI.   |
 | [!UICONTROL Default value] | [!UICONTROL String], [!UICONTROL Double], [!UICONTROL Long], [!UICONTROL Integer], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Boolean] | A default value that is assigned to this field if no other value is provided during ingestion. This value must conform to the field's selected type.<br><br>The default values are not saved in the dataset at the time of ingestion, as they can change over time. The default values set in the schema are inferred by downstream Platform services and applications when they read the data from the dataset. For example, when querying the data using Query Service, if the attribute has a NULL value, but the default is set to `5` at the schema level, it is expected that Query Service will return `5` instead of NULL. Please note, this behavior is not currently uniform across all AEP services.|
 | [!UICONTROL Pattern] | [!UICONTROL String] | A [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) that the value for this field must conform to in order to be accepted during ingestion. |
 | [!UICONTROL Format] | [!UICONTROL String] | Select from a list of pre-defined formats for strings that the value must conform to. Available formats include: <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
@@ -98,6 +101,7 @@ The right rail provides several checkboxes for designating special roles for the
 
 To learn more about these special types, refer to the following documentation:
 
+* [Map](./map.md)
 * [[!UICONTROL Required]](./required.md)
 * [[!UICONTROL Array]](./array.md)
 * [[!UICONTROL Enum]](./enum.md)
