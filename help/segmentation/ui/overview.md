@@ -213,7 +213,7 @@ Additionally, you can select up to 25 different audiences, and perform various a
 
 ![The available options for bulk actions are highlighted.](../images/ui/overview/bulk-actions.png)
 
-When applying bulk actions to these audiences, the following conditions apply:
+When you apply bulk actions to these audiences, the following conditions apply:
 
 - You **can** select audiences from different pages.
 - You **cannot** delete an audience which is being used in a destination activation.
