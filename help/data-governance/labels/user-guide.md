@@ -26,7 +26,7 @@ You can add labels directly to a schema or fields within that schema. Any fields
 
 >[!NOTE]
 >
->If your data usage policies have already been created before you label your field, you may experience a governance policy violation dialog as soon as you apply labels to your new schema. This dialog indicates that there is already a usage policy in place that will be violated by the application of this label. Use the data lineage diagram to understand what other configurations you might need to change before being able to add the label to your schema field.
+>If your data usage policies were created before you labeled your field, you may encounter a governance policy violation dialog when you apply labels to your new schema. This dialog indicates that applying this label will violate an existing usage policy. Use the data lineage diagram to understand what other configuration changes need to be made before you can add the label to your schema field.
 >
 >![The data governance policy violation detected dialog with violation summary and data lineage diagram highlighted.](../images/labels/policy-violation-dialog.png)
 >
