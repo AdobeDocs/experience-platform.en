@@ -109,6 +109,7 @@ role: Developer
   - Payments {#payments}
     - [PayPal connector](connectors/payments/paypal.md)
     - [Square connector](connectors/payments/square.md)
+    - [Stripe connector](connectors/payments/stripe.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
     - [Generic REST API connector](connectors/protocols/generic-rest.md)
@@ -189,6 +190,7 @@ role: Developer
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)
       - [Square](tutorials/api/create/payments/square.md)
+      - [Stripe](tutorials/api/create/payments/stripe.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/api/create/protocols/odata.md)
       - [Generic REST API](tutorials/api/create/protocols/generic-rest.md)
@@ -317,6 +319,7 @@ role: Developer
     - Payments {#payments}
       - [PayPal](tutorials/ui/create/payments/paypal.md)
       - [Square](tutorials/ui/create/payments/square.md)
+      - [Stripe](tutorials/ui/create/payments/stripe.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/ui/create/protocols/odata.md)
     - Streaming {#streaming}
