@@ -39,7 +39,7 @@ The extension is installed and you can now employ its capabilities in your event
 
 Once you have installed and configured the extension, you can start creating event forwarding rules that determine how and when you events will be sent to [!DNL The Trade Desk].
 
-You should consider configuring several rules in order to send all accepted [request properties](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties) via [!The Trade Desk] and [!DNL The Trade Desk] Real-Time Conversions API.
+You should consider configuring several rules in order to send all accepted [request properties](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties) via [!DNK The Trade Desk] and [!DNL The Trade Desk] Real-Time Conversions API.
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ After selection, additional controls appear to further configure the event data 
 
 The configuration options are divided into three main sections as outlined below:
 
-**[UICONTROL Basic Request Properties]**
+**[!UICONTROL Basic Request Properties]**
 
 | Input | Description | 
 | --- | --- |
