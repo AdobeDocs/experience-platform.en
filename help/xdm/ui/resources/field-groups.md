@@ -50,7 +50,7 @@ The list of available field groups is pre-filtered based on how they were create
 
 >[!NOTE]
 >
->Only custom field groups defined by your organization can be fully edited and customized. For core field groups defined by Adobe, only the display names for their fields can be edited within the context of individual schemas. See the section on [editing display names for schema fields](./schemas.md#display-names) for details.
+>Only custom field groups defined by your organization can be fully edited and customized. For core field groups defined by Adobe, only the display names for their fields can be edited within the context of individual schemas. They are indicated in the Schema Editor by a padlock icon (![A padlock icon.](../../images/ui/explore/padlock-icon.png)). See the section on [editing display names for schema fields](./schemas.md#display-names) for details.
 >
 >Once a custom field group has been saved and used in a schema for data ingestion, only additive changes can be made to the field group thereafter. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
 

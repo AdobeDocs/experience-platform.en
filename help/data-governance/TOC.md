@@ -32,4 +32,4 @@ role: User,Developer,Admin
   * [Marketing actions](api/marketing-actions.md)
   * [Evaluation](api/evaluation.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
