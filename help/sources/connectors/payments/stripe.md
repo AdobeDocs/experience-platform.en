@@ -1,8 +1,6 @@
 ---
 title: Stripe
 description: Learn how to ingest payments data from your Stripe account to Adobe Experience Platform
-hide: true
-hidefromtoc: true
 badge: Beta
 ---
 # [!DNL Stripe]
