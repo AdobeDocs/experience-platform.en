@@ -293,6 +293,7 @@ role: Developer
       - [Phoenix](tutorials/ui/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - [Snowflake](tutorials/ui/create/databases/snowflake.md)
+      - [Snowflake Streaming](tutorials/ui/create/databases/snowflake-streaming.md)
       - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
     - Data & identity partner {#data-partner}
       - [Acxiom Data Ingestion](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)

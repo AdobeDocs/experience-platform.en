@@ -35,12 +35,36 @@ This user guide requires a working understanding of the following components of 
 
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and status of the most recent ingestion run.
 
-![An image that highlights the Datasets item within the left navigation bar.](../images/datasets/user-guide/browse-datasets.png)
+![The Platform UI with the Datasets item highlighted in the left navigation bar.](../images/datasets/user-guide/browse-datasets.png)
 
 Select the name of a dataset from the [!UICONTROL Browse] tab to access its **[!UICONTROL Dataset activity]** screen and see details of the dataset you selected. The activity tab includes a graph visualizing the rate of messages being consumed as well as a list of successful and failed batches.
 
-![Details of your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-1.png)
-![Sample batches that belong to your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-2.png)
+![Metrics and visualizations of your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-1.png)
+![The sample batches that relate to your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-2.png)
+
+## More actions {#more-actions}
+
+You can [!UICONTROL Delete] or [!UICONTROL Enable a dataset for Profile] from the [!UICONTROL Dataset] details view. To see the available actions, select **[!UICONTROL ... More]** in the top right of the UI. The drop-down menu appears. 
+
+![The Datasets workspace with the [!UICONTROL ... More] dropdown menu highlighted.](../images/datasets/user-guide/more-actions.png)
+
+If you select **[!UICONTROL Enable a dataset for Profile]**, a confirmation dialog appears. Select **[!UICONTROL Enable]** to confirm your choice.
+
+>[!NOTE]
+>
+>To enable a dataset for Profile, the schema that the dataset adheres to must be compatible for use in Real-Time Customer Profile. See the [Enable a dataset for profile](#enable-profile) section for more information.
+
+![The Enable dataset confirmation dialog.](../images/datasets/user-guide/profile-enable-confirmation-dialog.png)
+
+If you select **[!UICONTROL Delete]**, the [!UICONTROL Delete dataset] confirmation dialog appears. Select **[!UICONTROL Delete]** to confirm your choice.
+
+>[!NOTE]
+>
+>You cannot delete system datasets.
+
+You can also delete a dataset or add a dataset for use with Real-Time Customer Profile from the inline actions found on the [!UICONTROL Browse] tab. See the [inline actions section](#inline-actions) for more information.
+
+![The Delete dataset confirmation dialog.](../images/datasets/user-guide/delete-confirmation-dialog.png)
 
 ## Inline dataset actions {#inline-actions}
 
