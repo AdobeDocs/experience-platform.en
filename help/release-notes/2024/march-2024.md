@@ -1,7 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes
-description: The January 2024 release notes for Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+title: Adobe Experience Platform Release Notes March 2024
+description: The March 2024 release notes for Adobe Experience Platform.
 ---
 # Adobe Experience Platform release notes 
 
@@ -111,3 +110,4 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 {style="table-layout:auto"}
 
 For more information on sources, read the [sources overview](../../sources/home.md).
+
