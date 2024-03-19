@@ -72,7 +72,7 @@ The configuration options are divided into three main sections as outlined below
 
 {style="table-layout:auto"}
 
-![The [!DNL Basic Request Properties] section showing example data input into the fields.](../../../images/extensions/server/linkedin/configure-extension-basic-request-properties.png)
+![The [!DNL Basic Request Properties] section showing example data input into the fields.](../../../images/extensions/server/tradedesk/configure-extension-basic-request-properties.png)
 
 Refer to the [!DNL The Trade Desk] developer documentation for more information on the [request properties](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties) accepted by the 
 [!DNL The Trade Desk] Real-Time Conversions API. 
@@ -81,7 +81,7 @@ Refer to the [!DNL The Trade Desk] developer documentation for more information 
 
 This section contains the JSON-formatted request parameters such as Items, Privacy, and Data Processing.
 
-![The [!DNL Object Request Parameters] section showing available fields.](../../../images/extensions/server/linkedin/configure-object-request-params.png)
+![The [!DNL Object Request Parameters] section showing available fields.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
 Refer to the [Real-Time Conversions Event](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items) documentation for more information on the [!UICONTROL Object Request Parameters] and their properties.
 
@@ -96,7 +96,7 @@ Refer to the [Real-Time Conversions Event](https://partner.thetradedesk.com/v3/p
 | Advertiser ID | The Advertiser ID that you would like to override the Advertiser ID supplied in the extension configuration. |
 | Merchant ID | The Merchant ID that you would like to override the Merchant ID supplied in the extension configuration.  |
 
-![The [!DNL Configuration Overrides] section showing available fields.](../../../images/extensions/server/linkedin/configure-overrides.png)
+![The [!DNL Configuration Overrides] section showing available fields.](../../../images/extensions/server/tradedesk/configure-overrides.png)
 
 When you are satisfied with the rule, select **[!UICONTROL Save to Library]**. Finally, publish a new event forwarding [build](../../../ui/publishing/builds.md) to enable the changes made to the library.
 
