@@ -10,7 +10,7 @@ exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 >
 >Edge segmentation is now generally available to all Platform users. If you created edge segment definitions during the beta, these segment definitions will continue to be operational.
 
-Edge segmentation is the ability to evaluate segments in Adobe Experience Platform instantaneously [on the edge](../../edge/home.md), enabling same page and next page personalization use cases. 
+Edge segmentation is the ability to evaluate segments in Adobe Experience Platform instantaneously [on the edge](../../web-sdk/home.md), enabling same page and next page personalization use cases. 
 
 >[!IMPORTANT]
 >

@@ -51,6 +51,19 @@ Refer to the table below for information about the destination export type and f
 
 ![SFTP profile-based export type highlighted in the destinations catalog.](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
+## Export datasets {#export-datasets}
+
+This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
+
+* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
+* How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
+
+## File format of the exported data {#file-format}
+
+When exporting *audience data*, Platform creates a `.csv`, `parquet`, or `.json` file in the storage location that you provided. For more information about the files, see the [supported file formats for export](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) section in the audience activation tutorial.
+
+When exporting *datasets*, Platform creates a `.parquet` or `.json` file in the storage location that you provided. For more information about the files, see the [verify successful dataset export](../../ui/export-datasets.md#verify) section in the export datasets tutorial.
+
 ## Connect to the destination {#connect}
 
 >[!IMPORTANT]
@@ -123,17 +136,10 @@ After establishing the authentication connection to the SFTP location, provide t
 
 See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audiences to this destination.
 
-## Export datasets {#export-datasets}
+## Validate successful data export {#exported-data}
 
-This destination supports dataset exports. For complete information on how to set up dataset exports, read the tutorials: 
-
-* How to [export datasets using the Platform user interface](/help/destinations/ui/export-datasets.md). 
-* How to [export datasets programmatically using the Flow Service API](/help/destinations/api/export-datasets.md).
-
-## Exported data {#exported-data}
-
-For [!DNL SFTP] destinations, Platform creates a `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the audience activation tutorial.
+To verify if data has been exported successfully, check your SFTP storage and make sure that the exported files contain the expected profile populations.
 
 ## IP address allowlist {#ip-address-allow-list}
 
-Refer to [IP address allowlist for SFTP destinations](ip-address-allow-list.md) if you need to add Adobe IPs to an allowlist.
+Refer to the [IP address allowlist](ip-address-allow-list.md) article if you need to add Adobe IPs to an allowlist.

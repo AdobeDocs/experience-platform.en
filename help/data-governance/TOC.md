@@ -4,6 +4,7 @@ user-guide-title: Adobe Experience Platform Data Governance Help
 breadcrumb-title: Data Governance Guide
 user-guide-description: Enforce data usage restrictions through the use of labels, marketing actions, and governance policies.
 feature: Data Governance
+role: User,Developer,Admin
 ---
 
 # Adobe Experience Platform Data Governance {#data-governance}
@@ -31,4 +32,4 @@ feature: Data Governance
   * [Marketing actions](api/marketing-actions.md)
   * [Evaluation](api/evaluation.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

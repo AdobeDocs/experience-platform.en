@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;identity service api;identity 
 solution: Experience Platform
 title: Identity Service API Guide
 description: The Identity Service API allows developers to manage the cross-device, cross-channel, and near real-time identification of your customers using identity graphs in Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
+role: Developer
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
 ---
 # [!DNL Identity Service] API guide

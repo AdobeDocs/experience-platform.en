@@ -22,7 +22,7 @@ Currently, Adobe Experience Platform supports the analytics destinations listed 
 * [Decibel extension](decibel.md)
 * [Demandbase extension](demandbase.md)
 * [Dialogtech extension](dialogtech.md)
-* [Gainsight PX](gainsight-px.md)
+* [Gainsight PX connection](gainsight-px.md)
 * [Google Global Site Tag analytics extension](gtag-analytics.md)
 * [Google Universal Analytics extension](google-universal-analytics.md)
 * [JW Player Analytics (Beta) extension](jw-player-analytics.md)

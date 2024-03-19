@@ -3,6 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Entities (Profile Access) API Endpoint
 type: Documentation
 description: Adobe Experience Platform enables you to access Real-Time Customer Profile data using RESTful APIs or the user interface. This guide outlines how to access entities, more commonly known as "profiles", using the Profile API.
+role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
 ---
 # Entities endpoint (Profile access)

@@ -4,6 +4,7 @@ description: Learn how to create a source connection and dataflow to bring Oracl
 hide: true
 hidefromtoc: true
 badge: Beta
+exl-id: ddbb413e-a6ca-49df-b68d-37c9d2aab61b
 ---
 # Create a source connection and dataflow for [!DNL Oracle NetSuite Entities] using the Flow Service API
 

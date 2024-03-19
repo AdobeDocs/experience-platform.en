@@ -18,6 +18,7 @@ Adobe Experience Platform supports the following email marketing destinations:
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
 * [Mailchimp Interest Categories](mailchimp-interest-categories.md)
+* [Mailchimp Tags](mailchimp-tags.md)
 * [(API) Oracle Eloqua](oracle-eloqua-api.md)
 * [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)  
 * [(Files) Oracle Eloqua](oracle-eloqua.md)

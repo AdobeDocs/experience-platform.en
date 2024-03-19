@@ -67,6 +67,10 @@ You can select from multiple types of audiences, depending on their origin:
 >
 >Selecting audiences originating from **[!UICONTROL Custom uploads]** automatically enables the [Select enrichment attributes](#select-enrichment-attributes) step.
 
+>[!TIP]
+>
+>You can remove audiences from existing activation flows from the **[!UICONTROL Activation data]** page. See the [dedicated documentation](../ui/destination-details-page.md#bulk-remove) for details.
+
 ## Schedule audience export {#scheduling}
 
 >[!CONTEXTUALHELP]
@@ -74,17 +78,21 @@ You can select from multiple types of audiences, depending on their origin:
 >title="Schedule"
 >abstract="Use the pencil icon to set the file export type (full files or incremental files) and the export frequency."
 
-[!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations as [different file types](#supported-file-formats-export). In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each audience you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
+[!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations as [different file types](#supported-file-formats-export). In the **[!UICONTROL Scheduling]** page, you can configure the schedule and the file names for each audience you are exporting.
+
+Experience Platform automatically sets a default schedule for each file export. You can modify the default schedule according to your needs, by selecting the pencil icon next to each schedule, and defining a custom schedule.
+
+![Edit schedule control highlighted in the Scheduling step.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
+
+>[!TIP]
+>
+>You can edit audience activation schedules for existing activation flows from the **[!UICONTROL Activation data]** page. See the documentation on [bulk editing activation schedules](../ui/destination-details-page.md#bulk-edit-schedule) for details.
 
 >[!IMPORTANT]
 >
 >[!DNL Adobe Experience Platform] automatically splits the export files at 5 million records (rows) per file. Each row represents one profile.
 >
 >Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
-
-Select the **[!UICONTROL Create schedule]** control corresponding to the audience that you want to send to your destination.
-
-![Create schedule control highlighted in the Scheduling step.](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Export full files {#export-full-files}
 
@@ -241,6 +249,14 @@ In this step, you must select the profile attributes that you want to add to the
 1. The field you selected for export now appears in the mapping view and shows the edited header in the exported file.
 
     ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. [!BADGE Beta]{type=Informative} (Optional) The order of the mapped fields in the UI reflects in the order of the columns in the exported CSV file, from top to bottom, with the top row being the leftmost column in the CSV file. You can reorder the mapped fields in any way you want, by dragging and dropping the mapping rows, as shown below. 
+
+    >[!NOTE]
+    >
+    >This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.
+    
+    ![Recording showing the mapping fields reordering by drag and drop.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
 1. (Optional) You can select your exported field to be a [mandatory key](#mandatory-keys) or a [deduplication key](#deduplication-keys).
 

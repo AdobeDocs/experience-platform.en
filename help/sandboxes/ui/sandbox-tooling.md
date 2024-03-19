@@ -24,10 +24,11 @@ The table below lists [!DNL Adobe Real-Time Customer Data Platform] objects that
 | Platform | Object | Details |
 | --- | --- | --- |
 | Customer Data Platform | Sources | The source account credentials are not replicated in the target sandbox for security reasons and will be required to be updated manually. The source dataflow is copied in a draft status by default. |
-| Customer Data Platform | Audiences | Only the **[!UICONTROL Customer Audience]** type **[!UICONTROL Segmentation service]** is supported. Existing labels for consent and governance will be copied over in the same import job. |
-| Customer Data Platform | Identities | The system will auto-deduplicate Adobe standard identity namespaces when creating in the target sandbox. Audiences can only be copied when all attributes in audience rules are enabled in the union schema. The necessary schemas must be moved and enabled for unified profile first.|
-| Customer Data Platform | Schemas | Existing labels for consent and governance will be copied over in the same import job. The schema unified profile status will be copied as is from the source sandbox. If the schema is enabled for unified profile in the source sandbox, all attributes are moved to the union schema. The schema relationships edge case are not included in the package.|
+| Customer Data Platform | Audiences | Only the **[!UICONTROL Customer Audience]** type **[!UICONTROL Segmentation service]** is supported. Existing labels for consent and governance will be copied over in the same import job. System will auto select default Merge Policy in target sandbox with same XDM class when checking merge policy dependencies. |
+| Customer Data Platform | Identities | The system will auto-deduplicate Adobe standard identity namespaces when creating in the target sandbox. Audiences can only be copied when all attributes in audience rules are enabled in the union schema. The necessary schemas must be moved and enabled for unified profile first. |
+| Customer Data Platform | Schemas | Existing labels for consent and governance will be copied over in the same import job. User has the flexibility to import schemas without Unified Profile option enabled. The schema relationships edge case are not included in the package. |
 | Customer Data Platform | Datasets | Datasets are copied with the unified profile setting disabled by default. |
+| Customer Data Platform | Consent and Governance Policies | Add custom policies created by a user to a package and move them across sandboxes. |
 
 The following objects are imported but are in a draft or disabled status:
 
@@ -46,6 +47,7 @@ The table below lists [!DNL Adobe Journey Optimizer] objects that are currently 
 | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer] | Audience | An audience can be copied as a dependent object of the journey object. You can select create a new audience or reuse an existing one in the target sandbox. |
 | [!DNL Adobe Journey Optimizer] | Schema | The schemas used in the journey can be copied as dependent objects. You can select create a new schema or reuse an existing one in the target sandbox. |
+| [!DNL Adobe Journey Optimizer] | Merge policy | The merge policies used in the journey can be copied as dependent objects. In the target sandbox, you **cannot** create a new merge policy, you can only utilize an already existing one. |
 | [!DNL Adobe Journey Optimizer] | Journey - canvas details | The representation of the journey on the canvas includes the objects in the journey, such as conditions, actions, events, read audiences, and so on, which are copied. The jump activity is excluded from the copy. |
 | [!DNL Adobe Journey Optimizer] | Event | The events and event details used in the journey are copied. It will always create a new version in the target sandbox. |
 | [!DNL Adobe Journey Optimizer] | Action | Email and push messages used in the journey can be copied as dependent objects. The channel action activities used in the journey fields, which are used for personalization in the message, are not checked for completeness. Content blocks are not copied.<br><br>The update profile action used in the journey can be copied. Custom actions and action details used in the journey are also copied. It will always create a new version in the target sandbox.|
@@ -129,19 +131,23 @@ To import the package into a target sandbox, navigate to the Sandboxes **[!UICON
 
 ![The sandboxes **[!UICONTROL Browse]** tab highlighting the import package selection.](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-Using the dropdown menu, select the **[!UICONTROL Package name]** you want to import to the targeted sandbox. Add an optional **[!UICONTROL Job name]**, which will be used for future monitoring, then select **[!UICONTROL Next]**.
+Using the dropdown menu, select the **[!UICONTROL Package name]** you want to import to the targeted sandbox. Add an optional **[!UICONTROL Job name]**, which will be used for future monitoring. By default, unified profile will be disabled when the package's schemas are imported. Toggle **Enable schemas for profile** to enable this, then select **[!UICONTROL Next]**.
 
 ![The import details page showing the [!UICONTROL Package name] dropdown selection](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-The [!UICONTROL Package object and dependencies] page provides a list of all assets included in this package. The system automatically detects dependent objects that are required for successfully importing selected parent objects.
+The [!UICONTROL Package object and dependencies] page provides a list of all assets included in this package. The system automatically detects dependent objects that are required for successfully importing selected parent objects. Any missing attributes are displayed at the top of the page. Select **[!UICONTROL View details]** for a more detailed breakdown.
 
-![The [!UICONTROL Package object and dependencies] page shows a list of assets included in the package.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![The [!UICONTROL Package object and dependencies] page shows missing attributes.](../images/ui/sandbox-tooling/missing-attributes.png)
 
 >[!NOTE]
 >
 >Dependent objects can be replaced with existing ones in the target sandbox, which allows you to reuse existing objects rather than creating a new version. For example, when you import a package including schemas, you can reuse existing custom field group and identity namespaces in the target sandbox. Alternatively, when you import a package including Journeys, you can reuse existing segments in the target sandbox.
 
-To use an existing object, select the pencil icon beside the dependent object. The options to create new or use existing are displayed. Select **[!UICONTROL Use existing]**.
+To use an existing object, select the pencil icon beside the dependent object.
+
+![The [!UICONTROL Package object and dependencies] page shows a list of assets included in the package.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+
+The options to create new or use existing are displayed. Select **[!UICONTROL Use existing]**.
 
 ![The [!UICONTROL Package object and dependencies] page showing dependent object options [!UICONTROL Create new] and [!UICONTROL Use existing].](../images/ui/sandbox-tooling/use-existing-object.png)
 
