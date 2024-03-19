@@ -6,6 +6,10 @@ description: The March 2024 release notes for Adobe Experience Platform.
 
 **Release date: March 19, 2024**
 
+>[!TIP]
+>
+>Use the [Adobe Experience Platform glossary](/help/landing/glossary.md) to get familiar with terminology used in Real-Time Customer Data Platform and Adobe Experience Platform. If you cannot find a specific term that you are looking for, use the feedback options on the page to request new terms be added to the glossary.
+
 Updates to existing features in Experience Platform:
 
 - [Catalog Service](#catalog-service)
@@ -85,7 +89,7 @@ For more information on XDM in Platform, see the [XDM System overview](../../xdm
 
 | Feature | Description |
 | ------- | ----------- |
-| Bulk actions | The audience inventory now supports bulk actions. Using bulk actions, you can quickly select multiple audiences to move them to a folder, apply tags, apply access labels, or delete. For more information about this feature, read the [Segmentation Service UI guide](../../segmentation/ui/overview.md#bulk-actions). |
+| Bulk actions | The audience inventory now supports bulk actions. Using bulk actions, you can quickly select multiple audiences to move them to a folder, apply tags, apply access labels, or delete. <br> ![Bulk actions in the Audiences UI workspace.](../2024/assets/march/bulk-actions.png "Bulk actions in the Audiences UI workspace."){width="100" zoomable="yes"} <br>For more information about this feature, read the [Segmentation Service UI guide](../../segmentation/ui/overview.md#bulk-actions). |
 
 {style="table-layout:auto"}
 
