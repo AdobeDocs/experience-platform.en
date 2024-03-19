@@ -1,6 +1,6 @@
 ---
 title: Tags endpoint
-description: Learn how to create, update, manage, and delete tags using the Adobe Experience Platform APIs.
+description: Learn how to create, update, manage, and delete tag categories and tags using the Adobe Experience Platform APIs.
 ---
 
 # Tags endpoint
@@ -507,13 +507,13 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags
 | Property | Description |
 | -------- | ----------- |
 | `name` | **Required**. The name of the tag you want to create. |
-| `tagCategoryId` | *Optional*. The ID of the tag category that you want the tag to belong to. If not specified, the tag will be created as part of the Test Category category. |
+| `tagCategoryId` | *Optional*. The ID of the tag category that you want the tag to belong to. If not specified, the tag will be created as part of the Uncategorized category. |
 
 +++
 
 **Response**
 
-A successful response returns HTTP status ??? with details of your newly created tag.
+A successful response returns HTTP status 201 with details of your newly created tag.
 
 +++A sample response that contains details of your newly created tag.
 
@@ -526,14 +526,23 @@ A successful response returns HTTP status ??? with details of your newly created
     "createdBy": "{USER_ID}",
     "modifiedAt": "1661753717000",
     "modifiedBy": "{USER_ID}",
-    "tagCategoryId": "Test Category-{ORG_ID}",
-    "tagCategoryName": "Test Category",
+    "tagCategoryId": "Uncategorized-{ORG_ID}",
+    "tagCategoryName": "Uncategorized",
     "archived": false
 }
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
+| `name` | The name of the newly created tag. |
+| `id` | The ID of the newly created tag. |
+| `org` | The ID of the organization the tag belongs to. |
+| `createdAt` | The timestamp of when the tag was created. |
+| `createdBy` | The ID of the user who created the tag. |
+| `modifiedAt` | The timestamp of when the tag was last updated. |
+| `modifiedBy` | The ID of the user who last updated the tag. |
+| `tagCategoryId` | The ID of the tag category that the tag belongs to. |
+| `tagCategoryName` | The name of the tag category that the tag belongs to. |
 
 +++
 
@@ -568,7 +577,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 **Response**
 
-A successful response returns HTTP status ??? with details of the specified tag.
+A successful response returns HTTP status 200 with details of the specified tag.
 
 +++A sample response that contains details of the specified tag. 
 
@@ -589,6 +598,16 @@ A successful response returns HTTP status ??? with details of the specified tag.
 
 | Parameter | Description |
 | --------- | ----------- |
+| `name` | The name of the tag you retrieved. |
+| `id` | The ID of the tag you retrieved. |
+| `org` | The ID of the organization the tag belongs to. |
+| `createdAt` | The timestamp of when the tag was created. |
+| `createdBy` | The ID of the user who created the tag. |
+| `modifiedAt` | The timestamp of when the tag was last updated. |
+| `modifiedBy` | The ID of the user who last updated the tag. |
+| `tagCategoryId` | The ID of the tag category that the tag belongs to. |
+| `tagCategoryName` | The name of the tag category that the tag belongs to. |
+| `archived` | The archival status of the tag. If set to `true`, it means that the tag is archived. |
 
 +++
 
@@ -624,7 +643,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
 
 **Response**
 
-A successful response returns HTTP status ??? with information about which tags are valid and invalid.
+A successful response returns HTTP status 200 with information about which tags are valid and invalid.
 
 +++A sample response displaying which tags are valid and invalid.
 
@@ -648,6 +667,8 @@ A successful response returns HTTP status ??? with information about which tags 
 
 | Property | Description |
 | -------- | ----------- |
+| `invalidTags` | An array that contains a list of the invalid tag IDs. |
+| `validTags` | An array that contains a list of the valid tag IDs. |
 
 +++
 
@@ -676,24 +697,26 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
- -d '{
+ -d '[{
     "op": "replace",
     "path": "name",
-    "value": "newSampleTag"
- }'
+    "value": "newSampleTag",
+    "from": "sampleTag"
+ }]'
 ```
 
 | Property | Description |
 | -------- | ----------- |
-| `op` | |
-| `path` | |
-| `value` | |
+| `op` | The operation that needs to be done. In this use case, it'll always be set to `replace`. |
+| `path` | The path of the field that will be updated. Supported values include `name`, `archived`, and `tagCategory`. |
+| `value` | The updated value of the field you want to update. |
+| `from` | The original value of the field you want to update. |
 
 +++
 
 **Response**
 
-A successful response returns HTTP status ??? with details of the newly updated tag.
+A successful response returns HTTP status 200 with details of the newly updated tag.
 
 +++A sample response that contains details of the updated tag.
 
@@ -719,6 +742,8 @@ A successful response returns HTTP status ??? with details of the newly updated 
 >[!IMPORTANT]
 >
 >Only the system administrator and product administrator can use this API call.
+>
+>Additionally, the tag **must** be archived before you can delete the tag.
 
 You can delete a specific tag by making a DELETE tag to the `/tags` endpoint and specifying the ID of the tag that you want to delete.
 
@@ -749,7 +774,7 @@ curl -X DELETE https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-8
 
 **Response**
 
-A successful response returns HTTP status ??? along with an empty response.
+A successful response returns HTTP status 200 along with an empty response.
 
 ## Next steps
 
