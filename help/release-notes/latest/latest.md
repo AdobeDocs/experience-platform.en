@@ -26,7 +26,7 @@ Catalog Service is the system of record for data location and lineage within Ado
 
 | Feature | Description |
 | --- | --- |
-| More actions | To make operations more flexible and help you manage your data, you can now use the "More actions" feature from the details view to perform additional tasks on a dataset. You can either delete the dataset or enable it for use with Real-Time Customer Profile from the details page of a chosen dataset.<br>**Note:** if you enable a dataset for Profile ingestion, the dataset's schema must be compatible with Real-Time Customer Profile.<br>![The Datasets workspace with the [!UICONTROL ... More] dropdown menu highlighted.](../2024/assets/march/more-actions.png "The Datasets workspace with the More dropdown menu highlighted."){width="100" zoomable="yes"}.<br>See the [more actions](./help/catalog/datasets/user-guide.md#more-actions) documentation for addition information. |
+| More actions | To make operations more flexible and help you manage your data, you can now use the "More actions" feature from the details view to perform additional tasks on a dataset. You can either delete the dataset or enable it for use with Real-Time Customer Profile from the details page of a chosen dataset.<br>**Note:** if you enable a dataset for Profile ingestion, the dataset's schema must be compatible with Real-Time Customer Profile.<br>![The Datasets workspace with the [!UICONTROL ... More] dropdown menu highlighted.](../2024/assets/march/more-actions.png "The Datasets workspace with the More dropdown menu highlighted."){width="100" zoomable="yes"}.<br>Read the [datasets user guide](../../catalog/datasets/user-guide.md) documentation for addition information. |
 
 {style="table-layout:auto"}
 
@@ -76,7 +76,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 | Feature | Description |
 | --- | --- |
-| Experience Platform UI map datatype support | Further customize your Experience Data Model (XDM) data structure by defining map fields in the Platform UI. You can now create map fields in the Schema Editor to model flexible data structures or efficiently store key-value pairs. Select "Map" from the Type dropdown when defining a new field to configure subfields and assign them to field groups. Supported map value types are string and integer.<br>![The Schemas Editor with the Type and Map value type fields highlighted.](../2024/assets/march/maps.png "The Schemas Editor with the Type and Map value type fields highlighted."){width="100" zoomable="yes"}<br> To learn how to [define map fields in the UI](./help/xdm/ui/fields/map.md), see the UI guide. |
+| Experience Platform UI map datatype support | Further customize your Experience Data Model (XDM) data structure by defining map fields in the Platform UI. You can now create map fields in the Schema Editor to model flexible data structures or efficiently store key-value pairs. Select "Map" from the Type dropdown when defining a new field to configure subfields and assign them to field groups. Supported map value types are string and integer.<br>![The Schemas Editor with the Type and Map value type fields highlighted.](../2024/assets/march/maps.png "The Schemas Editor with the Type and Map value type fields highlighted."){width="100" zoomable="yes"}<br> To learn how to [define map fields in the UI](../../xdm/ui/fields/map.md), see the UI guide. |
 
 {style="table-layout:auto"}
 
