@@ -1,15 +1,15 @@
 ---
-title: Tags endpoint
+title: Unified tags endpoint
 description: Learn how to create, update, manage, and delete tag categories and tags using the Adobe Experience Platform APIs.
 ---
 
-# Tags endpoint
+# Unified tags endpoint
 
 >[!IMPORTANT]
 >
 >The endpoint URL for this set of endpoints is `https://experience.adobe.io`.
 
-Blurb
+Tags are a capability that let you manage metadata taxonomies to classify business objects for easier discovery and categorization. You subsequently can organize these tags into further groups by adding them to tag categories.
 
 This guide provides information to help you better understand tags and tag categories and includes sample API calls for performing basic actions using the API.
 
