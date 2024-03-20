@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: The January 2024 release notes for Adobe Experience Platform.
+description: The March 2024 release notes for Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
@@ -14,6 +14,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 Updates to existing features in Experience Platform:
 
 - [Catalog Service](#catalog-service)
+- [Data collection](#data-collection)
 - [Data Prep](#data-prep)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
@@ -23,6 +24,10 @@ Updates to existing features in Experience Platform:
 ## Catalog Service {#catalog-service}
 
 Catalog Service is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the data lake as files and directories, Catalog holds the metadata and description of those files and directories for lookup and monitoring purposes.
+
+>[!NOTE]
+>
+>We are aware and working on fixing a display issue where unnecessary syntax is rendered next to images in tables.
 
 | Feature | Description |
 | --- | --- |
@@ -45,6 +50,20 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 {style="table-layout:auto"}
 
 For more information on Data Prep, read the [Data Prep overview](../../data-prep/home.md).
+
+## Data collection {#data-collection}
+
+Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New features**
+
+| Type | Feature | Description |
+| --- | --- | --- |
+| Extensions | [!DNL Merkury] Tag Extension | The [[!DNL Merkury] tag extension](https://exchange.adobe.com/apps/ec/600027/merkury-tag) provides industry leading match rates for anonymous website visitors to a [!DNL Merkury] ID. Brands can leverage the power of the [!DNL Merkury] tag and Adobe to deliver real-time personalized website experiences. Additionally, the [!DNL Merkury] tag enables the growth of first-party digital data along with connected online and offline customer profiles. |
+
+{style="table-layout:auto"}
+
+To learn more about data collection, please read the [data collection overview](../../tags/home.md).
 
 ## Destinations {#destinations}
 
