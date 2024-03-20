@@ -49,4 +49,4 @@ role: User
     - [Customer managed keys](customer-ai/cai-data-governance/customer-managed-keys.md)
     - [Data governance](customer-ai/cai-data-governance/data-governance.md)
     - [Governance policies](customer-ai/cai-data-governance/governance-policies.md)
-- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

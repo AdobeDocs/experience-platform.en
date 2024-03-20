@@ -1,8 +1,8 @@
 ---
 title: Datastream configuration overrides
 description: Learn how to configure datastream overrides via the Web SDK.
+exl-id: 8e327892-9520-43f5-abf4-d65a5ca34e6d
 ---
-
 # Configure datastream overrides
 
 The `edgeConfigOverrides` object allows you to override configuration settings for commands run on the current page. This override object is not a command, but rather an object that you can include in most Web SDK commands.

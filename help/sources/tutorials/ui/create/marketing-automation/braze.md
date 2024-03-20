@@ -3,6 +3,7 @@ title: Create a dataflow for Braze data in the UI
 description: Learn how to create a dataflow for your Braze account using the Adobe Experience Platform UI.
 last-substantial-update: 2024-01-30
 badge: Beta
+exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
 ---
 # Create a [!DNL Braze Currents] source connection in the UI
 

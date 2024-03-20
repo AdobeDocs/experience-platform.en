@@ -111,6 +111,12 @@ The schema canvas reappears. The **[!UICONTROL Field groups]** section now lists
 
 ![The Schema Editor with the Demographic Details field groups highlighted.](../images/tutorials/create-schema/demographic-details-structure.png)
 
+>[!NOTE] 
+>
+>Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](../images/ui/explore/padlock-icon.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
+>
+>![The Schema Editor with the padlock icon highlighted](../images/ui/explore/padlock-icon-highlight.png)
+
 This field group contributes several fields under the top-level name `person` with the data type "[!UICONTROL Person]". This group of fields describes information about an individual, including name, birth date, and gender. 
 
 >[!NOTE]

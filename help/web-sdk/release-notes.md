@@ -10,6 +10,12 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+>[!IMPORTANT]
+>
+>Google [has announced](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) plans to discontinue Chrome support for third-party cookies in the second half of 2024. Consequently, third-party cookies will no longer be supported in any of the major browsers.
+>
+>When this change is implemented, Adobe will discontinue support for the `demdex` cookie that is currently supported in the Web SDK.
+
 ## Version 2.19.2 - January 10, 2024
 
 **Fixes and improvements**
@@ -207,8 +213,8 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 ## Version 2.2.0 - October 2020
 
-* Bug Fix: The Opt-in object was blocking Alloy from making calls when `idMigrationEnabled` is `true`.
-* Bug Fix: Make Alloy aware of requests that should return personalization offers to prevent a flickering issue.
+* Bug Fix: The Opt-in object was blocking Web SDK from making calls when `idMigrationEnabled` is `true`.
+* Bug Fix: Make Web SDK aware of requests that should return personalization offers to prevent a flickering issue.
 
 ## Version 2.1.0 - August 2020
 
@@ -216,5 +222,5 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 * Support IAB 2.0 Consent Standard.
 * Support passing additional IDs in the `setConsent` command.
 * Support overriding the `datasetId` in the `sendEvent` command.
-* Support Alloy Monitors ([Read more](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
+* Support Monitoring Hooks ([Read more](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
 * Pass `environment: browser` in the implementation details context data.

@@ -1,8 +1,17 @@
 ---
 title: thirdPartyCookiesEnabled
 description: Allow the use of third-party cookies to identify visitors.
+exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
 ---
+
 # `thirdPartyCookiesEnabled`
+
+>[!IMPORTANT]
+>
+>Google [has announced](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) plans to discontinue Chrome support for third-party cookies in the second half of 2024. Consequently, third-party cookies will no longer be supported in any of the major browsers.
+>
+>When this change is implemented, Adobe will discontinue support for the `demdex` cookie that is currently supported in the Web SDK.
+
 
 The `thirdPartyCookiesEnabled` property is a boolean that determines if the Web SDK sets cookies in a third-party context. Enabling this option is useful if you want to identify visitors between subdomains or domains that your organization owns. However, many modern browsers limit the setting and expiration of third-party cookies.
 

@@ -3,6 +3,7 @@ title: Merkury Enterprise Identity Resolution Source Overview
 description: Learn how to connect Merkury Enterprise Identity Resolution to Adobe Experience Platform using the user interface.
 last-substantial-update: 2023-12-12
 badge: Beta
+exl-id: c5eaa561-d620-4c82-bce1-972d0a422c3f
 ---
 # [!DNL Merkury Enterprise Identity Resolution]
 

@@ -1,8 +1,8 @@
 ---
 title: Install the Web SDK using the tag extension
 description: Reference the Web SDK library using Adobe Experience Cloud Data Collection.
+exl-id: ba8348c9-f642-4230-9f7f-4496d4154d83
 ---
-
 # Install the Web SDK using the tag extension
 
 Adobe offers a dedicated tag extension to implement and configure the Web SDK. This implementation method is the primary method recommended by Adobe to deploy and maintain data collection code.
@@ -17,6 +17,8 @@ Once you meet the [prerequisites](overview.md), you can deploy the Web SDK tag e
 1. Navigate to **[!UICONTROL Extensions]**, then select the **[!UICONTROL Catalog]** tab.
 1. Locate and install the **[!UICONTROL Adobe Experience Platform Web SDK]** extension.
 1. Select the appropriate sandbox and datastream for each environment, then click **[!UICONTROL Save]**.
+
+See the documentation on how to [configure the Web SDK tag extension](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) for more information.
 
 ## Publish the tag code to development
 

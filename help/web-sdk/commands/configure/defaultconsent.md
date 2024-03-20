@@ -1,6 +1,7 @@
 ---
 title: defaultConsent
 description: Set the default consent collection method.
+exl-id: 2a22fa8b-a234-4d3e-9b55-c7482a928fe6
 ---
 # `defaultConsent`
 

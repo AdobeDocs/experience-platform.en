@@ -1,6 +1,7 @@
 ---
 title: orgId
 description: The orgId property is a string that tells Adobe which organization that data is sent to.
+exl-id: 0e04e85a-800c-4927-a165-80a5a578f4c2
 ---
 # `orgId`
 

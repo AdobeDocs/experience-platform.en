@@ -1,6 +1,7 @@
 ---
 title: Requisition List Data Type
 description: Learn about the Requisition List Experience Data Model (XDM) data type.
+exl-id: cbea6b08-9d4d-4cbe-b0c5-506bccc6df67
 ---
 # [!UICONTROL Requisition List] data type
 

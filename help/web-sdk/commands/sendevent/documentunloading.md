@@ -1,6 +1,7 @@
 ---
 title: documentUnloading
 description: Use the JavaScript sendBeacon API to send data to Adobe.
+exl-id: 7683c0c4-ae2e-46ec-8471-628a10e17afc
 ---
 # `documentUnloading`
 

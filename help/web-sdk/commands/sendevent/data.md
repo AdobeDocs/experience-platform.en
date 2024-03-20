@@ -1,6 +1,7 @@
 ---
 title: data
 description: Learn how to send non-XDM data to Adobe.
+exl-id: 537fc34e-3cda-4aa7-ae0d-0d3ef4b89848
 ---
 # data
 

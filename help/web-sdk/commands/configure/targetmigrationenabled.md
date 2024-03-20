@@ -1,6 +1,7 @@
 ---
 title: targetMigrationEnabled
 description: Allow the Web SDK to read and write Adobe Target cookies.
+exl-id: 4b9203c6-31b7-45af-a6a6-a206d7edac3f
 ---
 # `targetMigrationEnabled`
 

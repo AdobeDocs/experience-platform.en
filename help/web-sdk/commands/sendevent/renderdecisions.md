@@ -1,6 +1,7 @@
 ---
 title: renderDecisions
 description: Render personalized content that is eligible for automatic rendering.
+exl-id: 6f7a3531-c2b6-4e90-a7ad-9f0fe4dc39e9
 ---
 # `renderDecisions`
 

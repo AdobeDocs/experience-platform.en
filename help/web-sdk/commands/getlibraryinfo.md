@@ -1,6 +1,7 @@
 ---
 title: getLibraryInfo
 description: Retrieve information around the current Web SDK library version.
+exl-id: f2bc0185-71c9-4d77-b9d2-b777a41a20e5
 ---
 # `getLibraryInfo`
 

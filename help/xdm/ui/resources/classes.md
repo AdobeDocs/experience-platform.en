@@ -18,13 +18,13 @@ Adobe provides several standard ("core") Experience Data Model (XDM) classes, in
 
 This document provides an overview of how to create, edit, and manage custom classes in the Experience Platform UI.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) to learn how classes contribute to XDM schemas.
 
 While not required for this guide, it is recommended that you also follow the tutorial on [composing a schema in the UI](../../tutorials/create-schema-ui.md) to familiarize yourself with the various capabilities of the Schema Editor.
 
-## Getting started
+## Getting started {#getting-started}
 
 In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace, then select the **[!UICONTROL Classes]** tab. A list of available classes are displayed. 
 
@@ -115,7 +115,7 @@ If you have previously created schemas that employ this class, the newly added f
 You can change the class of the schema at any point during the initial creation process before it has been saved. This should be done with caution however, as field groups are only compatible with certain classes. Changing the class resets the canvas and any fields you have added.
 See the guide on [creating and editing schemas](./schemas.md#change-class) for more information.
 
-## Next steps
+## Next steps {#next-steps}
 
 This document covered how to create and edit classes using the Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
 

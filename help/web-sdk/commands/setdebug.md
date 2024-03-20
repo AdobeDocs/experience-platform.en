@@ -1,6 +1,7 @@
 ---
 title: setDebug
 description: Enable or disable the Web SDK debug setting.
+exl-id: 9faac147-b7c7-4732-8454-35102970dae0
 ---
 # `setDebug`
 

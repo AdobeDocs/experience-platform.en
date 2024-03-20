@@ -1,6 +1,7 @@
 ---
 title: getIdentity
 description: Obtain a visitor's identity without sending event data.
+exl-id: 28b99f62-14c4-4e52-a5c7-9f6fe9852a87
 ---
 # `getIdentity`
 
