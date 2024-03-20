@@ -1,8 +1,6 @@
 ---
 title: Test And Submit Your Source
 description: The following document provides steps on how to test and verify a new source using the Flow Service API and integrate a new source through Self-Serve Sources (Streaming SDK).
-hide: true
-hidefromtoc: true
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
 ---
 # Test and Submit your source
