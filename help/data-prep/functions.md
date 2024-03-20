@@ -283,7 +283,7 @@ For more information on device field values, please read the [list of device fie
 
 >[!NOTE]
 >
->You may only use the following analytics functions for streaming ingestion.
+>You may only use the following analytics functions for WebSDK and Adobe Analytics flows.
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
