@@ -1,6 +1,7 @@
 ---
 title: Folders endpoint
 description: Learn how to create, update, manage, and delete folders using the Adobe Experience Platform APIs.
+role: Developer
 ---
 
 # Folders endpoint
@@ -9,7 +10,7 @@ description: Learn how to create, update, manage, and delete folders using the A
 >
 >The endpoint URL for this set of endpoints is `https://experience.adobe.io`.
 
-Blurb
+Folders are a capability that let you better organize your business objects for easier navigability and categorization.
 
 This guide provides information to help you better understand folders and includes sample API calls for performing basic actions using the API.
 
@@ -29,7 +30,7 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segments` and `datasets`. |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segment` and `dataset`. |
 | `{PARENT_FOLDER_ID}` | The ID of the parent folder that you're retrieving the list of folders from. To view a list of all the parent folders, use the folder ID `root`. |
 
 **Request**
@@ -37,7 +38,7 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}
 +++A sample request to list all top-level dataset folders
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/root
+curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/root
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -49,16 +50,16 @@ curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/root
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of all top-level folders for datasets in your organization.
+A successful response returns HTTP status 200 with a list of all top-level folders for dataset in your organization.
 
-+++A sample response that contains a list of all top-level folders for datasets in your organization.
++++A sample response that contains a list of all top-level folders for dataset in your organization.
 
 ```json
 {
     "id": "c626b4f7-223b-4486-8900-00c266e31dd1",
     "name": "ParentFolder",
     "noun": "Dataset",
-    "parentId": "{ORG_ID}/{SANDBOX_ID}/Dataset",
+    "parentId": "{PARENT_ID}",
     "tags": null,
     "imsOrg": "{ORG_ID}",
     "sandboxId": "{SANDBOX_ID}",
@@ -119,14 +120,14 @@ POST /folder/{FOLDER_TYPE}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segments` and `datasets`. |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segment` and `dataset`. |
 
 **Request**
 
 +++A sample request to create a new folder.
 
 ```shell
-curl -X POST https://experience.adobe.io/unifiedFolders/folder/datasets
+curl -X POST https://experience.adobe.io/unifiedfolders/folder/dataset
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -135,7 +136,7 @@ curl -X POST https://experience.adobe.io/unifiedFolders/folder/datasets
  -d '{
     "name": "SampleFolder",
     "tags": ["SampleTag1"],
-    "parentId": "{ORG_ID}/{SANDBOX_ID}/datasets"
+    "parentId": "6a5e0927-1527-4abc-9993-376fd7067ca5"
  }'
 ```
 
@@ -143,7 +144,7 @@ curl -X POST https://experience.adobe.io/unifiedFolders/folder/datasets
 | -------- | ----------- |
 | `name` | The name of the folder you want to create. |
 | `tags` | An optional parameter that lets you add tags to the folder. |
-| `parentId` | The ID of the parent structure for the folder. |
+| `parentId` | The ID of the parent folder. |
 
 +++
 
@@ -157,8 +158,8 @@ A successful response returns HTTP status 200 with details of your newly created
 {
     "id": "83f8287c-767b-4106-b271-257282fd170e",
     "name": "SampleFolder",
-    "noun": "datasets",
-    "parentId": "{ORG_ID}/{SANDBOX_ID}/datasets",
+    "noun": "dataset",
+    "parentId": "6a5e0927-1527-4abc-9993-376fd7067ca5",
     "tags": [
         "SampleTag1"
     ],
@@ -169,6 +170,7 @@ A successful response returns HTTP status 200 with details of your newly created
     "createdAt": "2023-10-01T08:47:06.192+00:00",
     "modifiedBy": "{USER_ID}",
     "modifiedAt": "2023-10-01T08:47:06.192+00:00",
+    "status": "IN_USE",
     "_links": null
 }
 ```
@@ -178,6 +180,8 @@ A successful response returns HTTP status 200 with details of your newly created
 | `id` | The ID of the newly created folder. |
 | `createdBy` | The ID of the user who created the folder. |
 | `createdAt` | The timestamp of when the folder was created. |
+| `modifiedBy` | The ID of the user who last modified the folder. |
+| `modifiedAt` | The timestamp of when the folder was last updated. |
 
 +++
 
@@ -193,7 +197,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segments` and `datasets`. |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segment` and `dataset`. |
 | `{FOLDER_ID}` | The ID of the folder that you're retrieving. |
 
 **Request**
@@ -201,7 +205,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++A sample request to retrieve a specific folder
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/83f8287c-767b-4106-b271-257282fd170e
+curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -221,8 +225,8 @@ A successful response returns HTTP status 200 with details of the requested fold
 {
     "id": "83f8287c-767b-4106-b271-257282fd170e",
     "name": "SampleFolder",
-    "noun": "datasets",
-    "parentId": "{ORG_ID}/{SANDBOX_ID}/datasets",
+    "noun": "dataset",
+    "parentId": "{PARENT_ID}",
     "tags": [
         "SampleTag1"
     ],
@@ -233,7 +237,12 @@ A successful response returns HTTP status 200 with details of the requested fold
     "createdAt": "2023-10-01T08:47:06.192+00:00",
     "modifiedBy": "{USER_ID}",
     "modifiedAt": "2023-10-01T08:47:06.192+00:00",
-    "_links": null
+    "status": "IN_USE",
+    "_links": {
+        "self": {
+            "href": "/folders/dataset/83f8287c-767b-4106-b271-257282fd170e"
+        }
+    }
 }
 ```
 
@@ -262,7 +271,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segments` and `datasets`. |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segment` and `dataset`. |
 | `{FOLDER_ID}` | The ID of the folder that you're validating. |
 
 **Request**
@@ -270,7 +279,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
 +++A sample request to validate a specific folder
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/83f8287c-767b-4106-b271-257282fd170e/validate
+curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -290,8 +299,8 @@ A successful status returns HTTP status 200 with details of the folder you are v
 {
     "id": "83f8287c-767b-4106-b271-257282fd170e",
     "name": "SampleFolder",
-    "noun": "datasets",
-    "parentId": "{ORG_ID}/{SANDBOX_ID}/datasets",
+    "noun": "dataset",
+    "parentId": "{PARENT_ID}",
     "tags": [
         "SampleTag1"
     ],
@@ -302,7 +311,11 @@ A successful status returns HTTP status 200 with details of the folder you are v
     "createdAt": "2023-10-01T08:47:06.192+00:00",
     "modifiedBy": "{USER_ID}",
     "modifiedAt": "2023-10-01T08:47:06.192+00:00",
-    "_links": null
+    "_links": {
+        "self": {
+            "href": "/folders/dataset/83f8287c-767b-4106-b271-257282fd170e"
+        }
+    }
 }
 ```
 
@@ -320,7 +333,7 @@ PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segments` and `datasets`. |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segment` and `dataset`. |
 | `{FOLDER_ID}` | The ID of the folder that you're updating. |
 
 **Request**
@@ -328,17 +341,17 @@ PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++A sample request to update a specific folder
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/83f8287c-767b-4106-b271-257282fd170e
+curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
- -d '{
+ -d '[{
     "op": "replace",
     "path": "/name",
     "value": "RenamedSampleFolder"
- }'
+ }]'
 ```
 
 +++
@@ -363,7 +376,7 @@ A successful response returns HTTP status 200 with information about your newly 
     "status": "IN_USE",
     "_links": {
         "self": {
-            "href": "/folders/segment/eafab5bf-3457-4b7f-b366-3c5399bd98f1"
+            "href": "/folders/dataset/eafab5bf-3457-4b7f-b366-3c5399bd98f1"
         }
     },
     "namespace": null
@@ -385,7 +398,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/subfolders
 +++A sample request to retrieve the subfolders for a specific folder
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedFolders/folder/datasets/83f8287c-767b-4106-b271-257282fd170e/subfolders
+curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e/subfolders
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -402,38 +415,38 @@ A successful response returns HTTP status 200 with details of the requested fold
 +++A sample response that contains details of the requested folder's subfolders.
 
 ```json
-[
-    {
-        "id": "09d86b23-4819-471b-8a2a-05774ed268de",
-        "name": "ABCD.1",
-        "noun": "datasets",
-        "parentId": "83f8287c-767b-4106-b271-257282fd170e",
-        "tags": null,
-        "imsOrg": "{ORG_ID}",
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "prod",
-        "createdBy": "{USER_ID}",
-        "createdAt": "2023-01-12T12:51:39.284+00:00",
-        "modifiedBy": "{USER_ID}",
-        "modifiedAt": "2023-01-12T12:51:39.284+00:00",
-        "_links": null
-    },
-    {
-        "id": "fd2f6a68-ef65-470d-ab31-b02b7b2241ca",
-        "name": "ABCD.2",
-        "noun": "datasets",
-        "parentId": "83f8287c-767b-4106-b271-257282fd170e",
-        "tags": null,
-        "imsOrg": "{ORG_ID}",
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "prod",
-        "createdBy": "{USER_ID}",
-        "createdAt": "2023-01-13T03:38:40.006+00:00",
-        "modifiedBy": "{USER_ID}",
-        "modifiedAt": "2023-01-13T03:38:40.006+00:00",
-        "_links": null
+{
+    "folders": [
+        {
+            "id": "a603c72a-4271-4a96-b470-95d2e3fc68cc",
+            "name": "Sample child folder",
+            "noun": "dataset",
+            "parentFolderId": "83f8287c-767b-4106-b271-257282fd170e",
+            "imsOrg": "{ORG_ID}",
+            "sandboxId": "{SANDBOX_ID}",
+            "sandboxName": "prod",
+            "createdBy": "{USER_ID}",
+            "createdAt": "2024-03-20T18:01:08.943+00:00",
+            "modifiedBy": "{USER_ID}",
+            "modifiedAt": "2024-03-20T18:01:08.943+00:00",
+            "status": "IN_USE",
+            "_links": {
+                "self": {
+                    "href": "/folders/dataset/a603c72a-4271-4a96-b470-95d2e3fc68cc"
+                }
+            },
+            "namespace": null
+        }
+    ],
+    "_page": {
+        "start": 0,
+        "limit": 20,
+        "property": null,
+        "sortBy": "modifiedAt",
+        "sortOrder": "desc",
+        "count": 1
     }
-]
+}
 ```
 
 +++
@@ -450,7 +463,7 @@ DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segments` and `datasets`. |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segment` and `dataset`. |
 | `{FOLDER_ID}` | The ID of the folder that you're deleting. |
 
 **Request**
@@ -458,7 +471,7 @@ DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++A sample request to delete a specific folder
 
 ```shell
-curl -X DELETE https://experience.adobe.io/unifiedFolders/folder/datasets/83f8287c-767b-4106-b271-257282fd170e
+curl -X DELETE https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \

@@ -1,6 +1,7 @@
 ---
 title: Unified tags endpoint
 description: Learn how to create, update, manage, and delete tag categories and tags using the Adobe Experience Platform APIs.
+role: Developer
 ---
 
 # Unified tags endpoint
@@ -635,9 +636,15 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
  -d '{
     "ids": [
         "2bd5ddd9-7284-4767-81d9-c75b122f2a6a","d113f40c-0097-4626-8d5f-6d5017694453", "invalid-tag"
-    ]
+    ],
+    "entity": "{API_KEY}"
  }'
 ```
+
+| Property | Description |
+| -------- | ----------- |
+| `ids` | An array that contains a list of tag IDs you want to validate. |
+| `entity` | The entity that is requesting the validation. You can use the `{API_KEY}` value for this parameter. |
 
 +++
 
