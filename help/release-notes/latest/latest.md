@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: The January 2024 release notes for Adobe Experience Platform.
+description: The March 2024 release notes for Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
@@ -23,6 +23,10 @@ Updates to existing features in Experience Platform:
 ## Catalog Service {#catalog-service}
 
 Catalog Service is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the data lake as files and directories, Catalog holds the metadata and description of those files and directories for lookup and monitoring purposes.
+
+>[!NOTE]
+>
+>We are aware and working on fixing a display issue where unnecessary syntax is rendered next to images in tables.
 
 | Feature | Description |
 | --- | --- |
