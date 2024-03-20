@@ -33,7 +33,7 @@ Additionally, in order to implement the use case, you will make use of the follo
 - [Audiences](../../segmentation/home.md)
 - [Computed attributes](../../profile/computed-attributes/overview.md)
 - [Destinations](../../destinations/home.md)
-- [Web SDK](../../edge/home.md)
+- [Web SDK](../../web-sdk/home.md)
 
 ## Get partner data into Real-Time CDP {#get-data-in}
 

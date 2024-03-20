@@ -1,6 +1,7 @@
 ---
 title: Postal Address Data Type
 description: Learn about the Postal Address Experience Data Model (XDM) data type.
+exl-id: 92385cd8-60c8-4360-a8e7-e6224e85e4d4
 ---
 # [!UICONTROL Postal Address] data type
 

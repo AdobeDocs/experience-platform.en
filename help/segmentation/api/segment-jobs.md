@@ -2,6 +2,7 @@
 solution: Experience Platform
 title: Segment Jobs API Endpoint
 description: The segment jobs endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage segment jobs for your organization.
+role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
 ---
 # Segment jobs endpoint

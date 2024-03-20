@@ -32,7 +32,7 @@ For a brief overview on how to configure the Adobe Target connection in Experien
 
 ### Datastream ID {#datastream-id}
 
-When configuring the Adobe Target connection to [use a datastream ID](#parameters), you must have the [Adobe Experience Platform Web SDK](../../../edge/home.md) implemented.
+When configuring the Adobe Target connection to [use a datastream ID](#parameters), you must have the [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) implemented.
 
 Configuring the Adobe Target connection without using a datastream ID does not require you to implement the Web SDK.
 
@@ -100,7 +100,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * **Name**: Fill in the preferred name for this destination.
 * **Description**: Enter a description for your destination. For example, you can mention which campaign you are using this destination for. This field is optional.
 * **Datastream ID**: This determines in which Data Collection datastream the audiences will be included. The drop-down menu shows only datastreams that have the Target and Adobe Experience Platform services enabled. See [configuring a datastream](../../../datastreams/configure.md#aep) for detailed information on how to configure a datastream for Adobe Experience Platform and Adobe Target.
-    * **[!UICONTROL None]**: Select this option if you need to configure Adobe Target personalization but you cannot implement the [Experience Platform Web SDK](../../../edge/home.md). When using this option, audiences exported from Experience Platform to Target only support next-session personalization, and edge segmentation is disabled. See the table below for more information.
+    * **[!UICONTROL None]**: Select this option if you need to configure Adobe Target personalization but you cannot implement the [Experience Platform Web SDK](/help/web-sdk/home.md). When using this option, audiences exported from Experience Platform to Target only support next-session personalization, and edge segmentation is disabled. See the table below for more information.
 
     |Adobe Target implementation (without Web SDK)| Web SDK implementation |
     |---|---|

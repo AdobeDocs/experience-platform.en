@@ -3,6 +3,7 @@ keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;po
 solution: Experience Platform
 title: Experiments API Endpoint
 description: Model development and training occurs at the Experiment level, where an Experiment consists of an MLInstance, training runs, and scoring runs.
+role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
 ---
 # Experiments endpoint

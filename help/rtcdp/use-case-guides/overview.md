@@ -2,6 +2,7 @@
 title: Sample use cases in Real-Time CDP
 description: View sample cross-service use cases to make the most of your Real-Time CDP implementation.
 feature: Use Cases
+exl-id: 2d92a9d3-7648-4241-904e-48f5b2e16023
 ---
 # Sample use cases in Real-Time CDP
 

@@ -2,6 +2,7 @@
 title: Analytics Events 2.0 in Assurance
 description: This guide explains how to use Adobe Analytics and Analytics Edge view with Adobe Experience Platform Assurance.
 badgeBeta: label="Beta" type="Informative"
+exl-id: faaa2c1d-3471-4d86-9a25-03265b996e31
 ---
 # Analytics Events 2.0 in Assurance
 

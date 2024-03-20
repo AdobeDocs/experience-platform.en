@@ -2,6 +2,7 @@
 solution: Experience Platform
 title: Previews and Estimates API Endpoints
 description: As segment definition are developed, you can use the estimate and preview tools within Adobe Experience Platform to view summary-level information to help ensure you are isolating the expected audience.
+role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
 ---
 # Previews and estimates endpoints

@@ -1,10 +1,10 @@
 ---
 solution: Experience Platform
-title: Available Use Case Playbooks for Real-Time Customer Data Platform and Adobe Journey Optimizer. 
+title: Available Use Case Playbooks for Real-Time Customer Data Platform and Adobe Journey Optimizer.
 description: A list of all the playbooks in Real-Time Customer Data Platform and Adobe Journey Optimizer.
 role: User
+exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
 ---
-
 # Available Use Case Playbooks
 
 Read this page to get an overview of all the available playbooks that you can discover and use in Real-time Customer Data Platform and Adobe Journey Optimizer.

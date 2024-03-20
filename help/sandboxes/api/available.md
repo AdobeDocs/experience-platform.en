@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;list available sandboxes;list 
 solution: Experience Platform
 title: Available Sandboxes API Endpoint
 description: You can list the sandboxes that are available for the current user by making a GET request to the available sandboxes endpoint.
+role: Developer
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
 ---
 # Available sandboxes endpoint

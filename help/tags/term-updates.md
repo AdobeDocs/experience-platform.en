@@ -15,4 +15,4 @@ The following table outlines the terms that have been updated across the product
 |---|---|
 | Platform Launch (Client Side) | [Tags](./home.md) |
 | Platform Launch Server Side | [Event forwarding](./ui/event-forwarding/overview.md) |
-| Edge configurations  |  [Datastreams](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html) |
+| Edge configurations  |  [Datastreams](/help/datastreams/overview.md) |

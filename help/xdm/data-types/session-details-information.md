@@ -1,6 +1,7 @@
 ---
 title: Session Details Information Data Type
 description: Learn about the Session Details Information Experience Data Model (XDM) data type.
+exl-id: 92fac741-594d-466c-af56-0a144b39340c
 ---
 # [!UICONTROL Session Details Information] data type
 
