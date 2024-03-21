@@ -1,6 +1,7 @@
 ---
 title: appendIdentityToUrl
 description: Deliver personalized experiences more accurately between apps, web, and across domains.
+exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
 ---
 # `appendIdentityToUrl`
 

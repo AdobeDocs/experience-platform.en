@@ -2,8 +2,8 @@
 title: Gainsight PX Connection
 description: Use the Gainsight PX destination to send segmentation information to the Gainsight PX platform.
 last-substantial-update: 2024-02-20
+exl-id: 0ca0d34f-f866-4f59-80f8-60198fbb86be
 ---
-
 # Gainsight PX connection {#gainsight-px}
 
 ## Overview {#overview}

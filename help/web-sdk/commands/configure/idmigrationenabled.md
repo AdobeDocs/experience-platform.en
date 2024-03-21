@@ -1,6 +1,7 @@
 ---
 title: idMigrationEnabled
 description: Allows the Web SDK to read AMCV cookies.
+exl-id: 33b9d645-0fbe-4fe4-8847-e6f9e78557b6
 ---
 # `idMigrationEnabled`
 

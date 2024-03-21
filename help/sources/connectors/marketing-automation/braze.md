@@ -2,6 +2,7 @@
 title: Braze Currents Source Overview
 description: Learn how to stream data from Braze Currents to Experience Platform.
 badge: Beta
+exl-id: dd304e10-26e5-4586-ab39-8fe3294b19c9
 ---
 # [!DNL Braze Currents]
 

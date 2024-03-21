@@ -2,6 +2,7 @@
 title: Intelligent Re-engagement Luma examples
 description: Example videos for Intelligent Re-engagement use case.
 feature: Use Cases
+exl-id: 635ac7ce-2059-4fed-8a4a-e32b2cd7ceea
 ---
 # Intelligently re-engage your customers: Luma examples
 

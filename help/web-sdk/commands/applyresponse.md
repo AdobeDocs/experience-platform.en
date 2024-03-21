@@ -1,6 +1,7 @@
 ---
 title: applyResponse
 description: Use a response from the Edge Network to initialize the Web SDK.
+exl-id: 0653b8f7-33f0-43a1-97f5-59a51270f660
 ---
 # `applyResponse`
 

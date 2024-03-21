@@ -1,6 +1,7 @@
 ---
 title: xdm
 description: The schema-aligned object sent to Adobe.
+exl-id: 1d8ef191-aed6-4c8b-a1fd-614bd8ed73da
 ---
 # `xdm`
 

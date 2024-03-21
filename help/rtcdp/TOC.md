@@ -70,14 +70,14 @@ role: Admin
   * [Sources in Real-Time CDP B2B Edition](sources/b2b.md)
 * Use cases {#use-cases}
   * [Overview of sample use cases](/help/rtcdp/use-case-guides/overview.md)
-  * Personalization, Insights, and Engagement {#personalization-insights-engagement}
-    * [Intelligently re-engage your customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
-    * [Intelligently re-engage your customers: Luma examples](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
   * Customer acquisition {#customer-acquisition}
     * [Engage and acquire new customers without dependency on third-party cookies](/help/rtcdp/partner-data/prospecting.md)  
     * [Personalize onsite experiences for unknown visitors using partner-aided visitor recognition](/help/rtcdp/partner-data/onsite-personalization.md)
     * [Offsite retargeting of unauthenticated users](./partner-data/offsite-retargeting.md)
   * Profile enrichment {#profile-enrichment}
     * [Supplement first-party profiles with partner-provided attributes](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [Experience Platform Release notes](https://www.adobe.com/go/platform-release-notes-en)
+  * Personalization, Insights, and Engagement {#personalization-insights-engagement}
+    * [Intelligently re-engage your customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+    * [Intelligently re-engage your customers: Luma examples](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
+* [Experience Platform Release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 * [Experience Platform Glossary](https://www.adobe.com/go/platform-glossary-en)

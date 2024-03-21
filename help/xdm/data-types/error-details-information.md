@@ -1,6 +1,7 @@
 ---
 title: Error Details Information Data Type
 description: Learn about the Error Details Information Experience Data Model (XDM) data type.
+exl-id: d1eadf53-e430-4989-9b49-dc4afdc7754c
 ---
 # [!UICONTROL Error Details Information] data type
 

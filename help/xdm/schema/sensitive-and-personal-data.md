@@ -40,6 +40,10 @@ Platform allows you to define your own custom field groups and data types, givin
 * Deprecate fields post-ingestion
 -->
 
+>[!IMPORTANT]
+>
+>SPI and PII should only be saved into the [XDM Individual Profile](../classes/individual-profile.md) and [XDM ExperienceEvent](../classes/experienceevent.md) classes. As best practice for data deletion and privacy and governance purposes, do not save SPI and PII in any other custom or standard XDM classes.
+
 ## Next steps
 
 This document covered key considerations regarding sensitive and personal data in XDM. For more information on how to model your schemas to best meet your business use cases, refer to the guide on [best practices for data modeling](./best-practices.md).

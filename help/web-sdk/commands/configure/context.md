@@ -1,6 +1,7 @@
 ---
 title: context
 description: Automatically collect device, environment, or location data.
+exl-id: 911cabec-2afb-4216-b413-80533f826b0e
 ---
 # `context`
 
@@ -53,8 +54,34 @@ The `"placeContext"` keyword collects information about the user's location.
 | --- | --- | --- | --- |
 | Local time | Local timestamp for the end user in simplified extended [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format. | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
 | Local timezone offset | The number of minutes that the user is offset from GMT. | `xdm.placeContext.localTimezoneOffset` | `360` |
+| Country code | The country code of the end user. |`xdm.placeContext.geo.countryCode`| `US` |
+| State province | The state province code of the end user. |`xdm.placeContext.geo.stateProvince`| `CA` |
+| Latitude | The latitude of the end user location. |`xdm.placeContext.geo._schema.latitude`| `37.3307447` |
+| Longitude | The longitude of the end user location. |`xdm.placeContext.geo._schema.longitude`| `-121.8945965` |
 
 {style="table-layout:auto"}
+
+
+### Timestamp
+
+The `timestamp` keyword collects information about the timestamp of the event. This part of context cannot be removed.
+
+| Dimension | Description | XDM path | Example value |
+| --- | --- | --- | --- |
+| Timestamp of the event | UTC timestamp for the end user in simplified extended [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format. | `xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
+
+{style="table-layout:auto"}
+
+### Implementation details
+
+The `implementationDetails` keyword collects information about the SDK version used to collect the event.
+
+| Dimension | Description | XDM path | Example value |
+| --- | --- | --- | --- |
+| Name | The software development kit (SDK) identifier. This field uses a URI to improve uniqueness among identifiers provided by different software libraries. | `xdm.implementationDetails.name` | When the standalone library is used, the value is `https://ns.adobe.com/experience/alloy`. When the library is used as part of the tag extension, the value is `https://ns.adobe.com/experience/alloy+reactor`. |
+| Version | The software development kit (SDK) version. | `xdm.implementationDetails.version` | When the standalone library is used, the value is the library version. When the library is used as part of the tag extension, the value is the library version and the tag extension version joined with a `+`. For example, if the library version is `2.1.0` and the tag extension version is `2.1.3`, the value would be `2.1.0+2.1.3`. |
+| Environment | The environment where the data was collected. This is always set to `browser`. | `xdm.implementationDetails.environment` | `browser` |
+
 
 ### High entropy client hints
 

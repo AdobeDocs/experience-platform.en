@@ -1,6 +1,7 @@
 ---
 title: onBeforeEventSend
 description: Callback that runs just before data is sent.
+exl-id: 945f4fa1-380c-46aa-a92a-bbcfd6644751
 ---
 # `onBeforeEventSend`
 

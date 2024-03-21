@@ -1,6 +1,7 @@
 ---
 title: downloadLinkQualifier
 description: Helps determine how automatic link tracking qualifies download links.
+exl-id: ef4f0ed4-83fc-485f-866d-f9ca15447ac8
 ---
 # `downloadLinkQualifier`
 

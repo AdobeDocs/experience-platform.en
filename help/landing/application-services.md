@@ -12,3 +12,8 @@ Adobe has built several application services on top of Experience Platform. You 
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html)
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
+* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
+
+The video below describes the use cases of each application service built on top of Experience Platform.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
