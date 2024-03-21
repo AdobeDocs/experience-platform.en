@@ -576,11 +576,11 @@ POST /collection/{INLET_URL}
 
 >[!BEGINTABS]
 
->[!TAB XDM]
+>[!TAB Send XDM data]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec? \
-  -H 'Content-Type: application/json' 
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+  -H 'Content-Type: application/json' \
   -d '{
         "header": {
           "schemaRef": {
@@ -616,12 +616,37 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
       }'
 ```
 
->[!TAB Raw data]
+>[!TAB Send Raw data with flow ID as an HTTP header]
+
+When sending raw data, you can specify your flow ID as either a query parameter or as part of your HTTP header. The following example specifies flow ID as an HTTP header.
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec? \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
   -H 'Content-Type: application/json' 
   -H 'x-adobe-flow-id=f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!TAB Send Raw data with flow ID as a query parameter]
+
+When sending raw data, you can specify your flow ID as either a query parameter or as an HTTP header. The following example specifies flow ID as a query parameter.
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2 \
+  -H 'Content-Type: application/json' \
   -d '{
       "name": "Johnson Smith",
       "location": {
