@@ -6,13 +6,13 @@ description: Learn about the Media Reporting Details Experience Data Model (XDM)
 
 >[!NOTE]
 >
->These fields are not used to create requests. Rather, this combined set of fields sent to Adobe Experience Platform or Adobe Analytics are compiled from your request data and metrics added or processed by the server infrastructure.
+>Media Collection fields capture data and send it onto other Adobe services for further processing. Media Reporting fields are used by Adobe services to analyze the Media Collection fields sent by users. This data, alongside other specific user metrics, are computed and reported upon.
 
 [!UICONTROL Media Reporting Details] is a standard Experience Data Model (XDM) data type that captures essential details about media playback events. Use the [!UICONTROL Media Reporting Details] data type to capture details such as the playhead position within the content, unique session identifiers, and various nested properties related to session, among others. This data type provides a comprehensive overview of the playback experience, that enables the tracking and analysis of media consumption patterns and associated events during playback sessions.
 
 >[!NOTE]
 >
->Media Collection fields capture data and send it onto other Adobe services for further processing. Media Reporting fields are used by Adobe services to analyze the Media Collection fields sent by users. This data, alongside other specific user metrics, are computed and reported upon.
+>The fields mentioned below are not directly used to create requests. Instead, the collection of fields sent to Adobe Experience Platform or Adobe Analytics is assembled from your request data, and metrics are then incorporated or processed by the server infrastructure. While Platform collects various types of your user events, the reports returned to you focus on specific events, such as `media.sessionStart`, `media.adStart`, and `media.sessionComplete`. This means that although you transmit 12 types of events during collection, your reports will only present breakdowns based on the five events listed below.
 
 +++Select to display a diagram of the [!UICONTROL Media Reporting Details] data type.
 ![A diagram of the [!UICONTROL Media Reporting Details] data type.](../images/data-types/media-reporting-details.png)

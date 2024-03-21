@@ -10,13 +10,13 @@ description: Learn about the Advertising Details Reporting Experience Data Model
 ![A diagram of the Advertising Details Reporting data type.](../images/data-types/advertising-details-information.png)
 +++
 
-| Display name               | Property        | Data type | Description                                                                                   |
-|----------------------------|-----------------|-----------|-----------------------------------------------------------------------------------------------|
-| [!UICONTROL Ad Name]                   | `friendlyName`| string    | **Required** The human readable name of the ad. In reporting, "Ad Name" is the classification and "Ad Name (variable)" is the eVar. |
+| Display name                           | Property        | Data type | Description                                                                                   |
+|----------------------------------------|-----------------|-----------|-----------------------------------------------------------------------------------------------|
+| [!UICONTROL Ad Name]                   | `friendlyName`| string    | The human readable name of the ad. In reporting, "Ad Name" is the classification and "Ad Name (variable)" is the eVar. |
 | [!UICONTROL Ad ID]                      | `name`        | string    | The ID of the ad. Any integer and/or letter combination.                                           |
-| [!UICONTROL Ad Length Or Duration]      | `length`      | integer   | **Required** The length of video ad in seconds.                                                                 |
-| [!UICONTROL Ad In Pod Position (Ad Start)] | `podPosition` | integer   | **Required** The index of the ad inside the parent ad start, for example, the first ad has index 0 and the second ad has index 1. |
-| [!UICONTROL Ad Player Name]             | `playerName`  | string    | **Required** The name of the player responsible for rendering the ad.                                       |
+| [!UICONTROL Ad Length Or Duration]      | `length`      | integer   | The length of video ad in seconds.                                                                 |
+| [!UICONTROL Ad In Pod Position (Ad Start)] | `podPosition` | integer   | The index of the ad inside the parent ad start, for example, the first ad has index 0 and the second ad has index 1. |
+| [!UICONTROL Ad Player Name]             | `playerName`  | string    | The name of the player responsible for rendering the ad.                                       |
 | [!UICONTROL Ad Advertiser]              | `advertiser`  | string    | The company or brand whose product is featured in the ad.                                             |
 | [!UICONTROL Ad Campaign]                | `campaignID`  | string    | The ID of the ad campaign.                                                                         |
 | [!UICONTROL Ad Creative ID]             | `creativeID`  | string    | The ID of the ad creative.                                                                         |

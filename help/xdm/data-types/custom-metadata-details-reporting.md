@@ -4,7 +4,7 @@ description: Learn about the Custom Metadata Details Reporting Experience Data M
 ---
 # [!UICONTROL Custom Metadata Details] Reporting data type
 
-[!UICONTROL Custom Metadata Details] Reporting is a standard Experience Data Model (XDM) data type defines a structure for storing custom metadata. Use the [!UICONTROL Custom Metadata Details] Reporting data type to capture details such as the name and value of custom metadata associated with content or interactions.
+[!UICONTROL Custom Metadata Details] Reporting is a standard Experience Data Model (XDM) data type defines a structure for storing custom metadata. The [!UICONTROL Custom Metadata Details] Reporting data type captures details such as the name and value of custom metadata associated with content or interactions. Media reporting fields are used by Adobe services to analyze the media collection fields sent by users. This data, alongside other specific user metrics, are computed and reported upon.
 
 ![A diagram of the Custom Metadata Details Reporting data type.](../images/data-types/the-custom-metadata-reporting.png)
 
