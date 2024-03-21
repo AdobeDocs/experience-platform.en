@@ -138,7 +138,7 @@ These attributes can also be viewed as a JSON object by selecting to **[!UICONTR
 
 ![The Attributes tab is highlighted. The profile attributes are displayed.](../images/user-guide/attributes.png)
 
-You can also view the attributes that are available on Edge by selecting **[!UICONTROL Edge]** on the data location selector.
+To view the attributes that are available on the Edge, select **[!UICONTROL Edge]** on the data location selector.
 
 ![The data location selector within the attributes tab is highlighted.](../images/user-guide/attributes-select.png)
 
@@ -160,7 +160,7 @@ For more information about segmentation in Experience Platform, please refer to 
 
 ![The Audience membership tab is highlighted. The profile's audience membership details are displayed.](../images/user-guide/audience-membership.png)
 
-You can also view the audience membership of the profiles that are available on Edge by selecting **[!UICONTROL Edge]** in the data location selector. More information about Edge segmentation can be found in the [Edge segmentation guide](../../segmentation/ui/edge-segmentation.md).
+To view the audience membership of the profiles that are available on the Edge, select **[!UICONTROL Edge]** in the data location selector. More information about edge segmentation can be found in the [edge segmentation guide](../../segmentation/ui/edge-segmentation.md).
 
 ![The data location selector within the audience membership tab is highlighted.](../images/user-guide/audience-membership-select.png)
 
