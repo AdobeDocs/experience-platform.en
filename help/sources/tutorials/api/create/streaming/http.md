@@ -570,7 +570,7 @@ POST /collection/{INLET_URL}
 | Parameter | Description |
 | --------- | ----------- |
 | `{INLET_URL}` | Your streaming endpoint URL. You can retrieve this URL by making a GET request to the `/connections` endpoint while providing your base connection ID. |
-| `{FLOW_ID}` | The ID of your HTTP API streaming dataflow. This ID is required for both XDM and raw data. |
+| `{FLOW_ID}` | The ID of your HTTP API streaming dataflow. This ID is required for both XDM and RAW data. |
 
 **Request**
 
