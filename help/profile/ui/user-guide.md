@@ -184,9 +184,9 @@ For more information on union schemas, please visit the [union schema UI guide](
 
 From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Computed attributes]** tab to view a list of computed attributes that belong to your organization.
 
-For more information on computed attributes, please read the [computed attributes overview](../computed-attributes/overview.md). For more information on how to use computed attributes within the Platform UI, please read the [computed attributes UI guide](../computed-attributes/ui.md).
+![The Computed attributes tab is highlighted.](../images/user-guide/computed-attributes.png)
 
-IMAGE
+For more information on computed attributes, please read the [computed attributes overview](../computed-attributes/overview.md). For more information on how to use computed attributes within the Platform UI, please read the [computed attributes UI guide](../computed-attributes/ui.md).
 
 ## Next steps
 
