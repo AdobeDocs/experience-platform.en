@@ -32,7 +32,7 @@ This integration with Amazon DSP allows [!DNL Amazon Ads] advertisers to pass ad
 
 This integration with [!DNL Amazon Marketing Cloud] (AMC) allows [!DNL Amazon Ads] advertisers to pass CDP segments from Adobe Experience Platform form to AMC. Advertisers can then join the CDP inputs with [!DNL Amazon Ads] signals, and conduct custom analytics on topics such as media impact, audience segments, and customer journeys in privacy compliant format. For example, an advertiser may upload a list of their existing customers to understand the aggregate advertising campaign performance, or aggregated statistics of on-Amazon conversion events, such as viewing a product detail page, adding a product to a shopping cart, or purchase of a product.
 
-### Advertising optimization:
+### Advertising optimization
 
 This integration with [!DNL Amazon Marketing Cloud] (AMC) allows advertisers to upload their own customer lists, and using [!DNL Amazon Marketing Cloud] SQL, perform overlap analysis, suppressions, additions, or optimizations to audiences in a recurring basis before creating an activation-ready audience in Amazon DSP for targeting.
 
