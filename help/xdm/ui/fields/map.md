@@ -1,6 +1,7 @@
 ---
 title: Define Map Fields in the UI
 description: Learn how to define a map field in the Experience Platform user interface.
+exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
 ---
 # Define map fields in the UI
 

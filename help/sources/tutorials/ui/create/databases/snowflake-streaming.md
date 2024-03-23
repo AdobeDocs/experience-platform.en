@@ -3,6 +3,7 @@ title: Stream data from your Snowflake database to Experience Platform using the
 type: Tutorial
 description: Learn how to stream data from your Snwoflake database to Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
+exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
 ---
 # Stream data from your [!DNL Snowflake] database to Experience Platform using the UI
 
