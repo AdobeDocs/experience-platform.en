@@ -240,7 +240,7 @@ A successful response returns an HTTP 201 (CREATED) status and the new state of 
 
 To update an expiration date for a dataset, use a PUT request and the `ttlId`. You can update the `displayName`, `description`, and/or `expiry` information. 
 
-[!NOTE]
+>[!NOTE]
 >
 >If you change the expiration date and time, it must be at least 24 hours in the future. This enforced delay provides an opportunity for you to cancel or re-schedule the expiration and avoid any accidental loss of data.
 
