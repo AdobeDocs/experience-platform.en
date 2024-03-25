@@ -182,7 +182,7 @@ The following JSON represents a truncated response for a dataset's details from 
 
 ## Create a dataset expiration {#create}
 
-To ensures that data is removed from the system after a specified period, schedule an expiration for a specific dataset by providing the dataset ID and the expiry date and time in ISO 8601 format.
+To ensure that data is removed from the system after a specified period, schedule an expiration for a specific dataset by providing the dataset ID and the expiry date and time in ISO 8601 format.
 
 To create a dataset expiration, perform a POST request as shown below and provide the values mentioned below within the payload.
 
