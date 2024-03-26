@@ -124,8 +124,6 @@ curl -X GET \
 
 A successful response returns the details of the dataset expiration.
 
-<!-- Is there a different response from making a GET request to either '/ttl/{DATASET_ID}?include=history' or '/ttl/{TTL_ID}'? If so please can you provide the response for both (or just the ttl endpoint itf it differs from teh example) -->
-
 ```json
 {
     "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
@@ -196,7 +194,7 @@ POST /ttl
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/core/hygiene/ \
+  https://platform.adobe.io/data/core/hygiene/ttl \
   -H `Authorization: Bearer {ACCESS_TOKEN}`
   -H `x-gw-ims-org-id: {ORG_ID}`
   -H `x-api-key: {API_KEY}`
@@ -218,7 +216,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns an HTTP 201 (CREATED) status and the new state of the dataset expiration, if there was no pre-existing dataset expiration. A 400 (BAD REQUEST) HTTP status occurs if a dataset expiration already exists for the dataset. An unsuccessful response returns a 404 (NOT FOUND) HTTP status if no such dataset expiration exists (or you do not have access to it).
+A successful response returns an HTTP 201 (Created) status and the new state of the dataset expiration, if there was no pre-existing dataset expiration.
 
 ```json
 {
@@ -226,15 +224,31 @@ A successful response returns an HTTP 201 (CREATED) status and the new state of 
   "datasetId":   "5b020a27e7040801dedbf46e",
   "datasetName": "Acme licensed data",
   "sandboxName": "prod",
-  "imsOrg":      "865737D25BC460C50A49411B@AdobeOrg",
+  "imsOrg":      "{ORG_ID}",
   "status":      "pending",
   "expiry":      "2030-12-31T23:59:59Z",
   "updatedAt":   "2021-08-19T11:14:16Z",
-  "updatedBy":   "Jane Doe <jane.doe@example.com> A49410CB6623A50582ACB170@AdobeID",
+  "updatedBy":   "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
   "displayName": "Delete Acme Data before 2031",
   "description": "The Acme information in this dataset is licensed for our use through the end of 2030."
 }
 ```
+
+| Property | Description |
+| --- | --- |
+| `ttlId` | The ID of the dataset expiration. |
+| `datasetId` | The ID of the dataset that this expiration applies to. |
+| `datasetName` | The display name for the dataset this expiration applies to. |
+| `sandboxName` | The name of the sandbox that the target dataset is located under. |
+| `imsOrg` | Your organization's ID. |
+| `status` | The current status of the dataset expiration. |
+| `expiry` | The scheduled date and time when the dataset will be deleted. |
+| `updatedAt` | A timestamp of when the expiration was last updated. |
+| `updatedBy` | The user who last updated the expiration. |
+| `displayName` | A display name for the expiration request. |
+| `description` | An description for the expiration request. |
+
+A 400 (Bad Request) HTTP status occurs if a dataset expiration already exists for the dataset. An unsuccessful response returns a 404 (Not Found) HTTP status if no such dataset expiration exists (or you do not have access to it).
 
 ## Update a dataset expiration {#update}
 
@@ -249,6 +263,8 @@ To update an expiration date for a dataset, use a PUT request and the `ttlId`. Y
 ```http
 PUT /ttl/{TTL_ID}
 ```
+
+<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
 
 | Parameter | Description |
 | --- | --- |
@@ -283,7 +299,7 @@ curl -X PUT \
 
 **Response**
 
-A successful response returns the new state of the dataset expiration and an HTTP status 200 (OK) if a pre-existing expiration was updated. An unsuccessful response returns a 404 (NOT FOUND) HTTP status if no such dataset expiration exists.
+A successful response returns the new state of the dataset expiration and an HTTP status 200 (OK) if a pre-existing expiration was updated.
 
 ```json
 {
@@ -310,6 +326,8 @@ A successful response returns the new state of the dataset expiration and an HTT
 | `updatedBy` | The user who last updated the expiration. |
 
 {style="table-layout:auto"}
+
+An unsuccessful response returns a 404 (Not Found) HTTP status if no such dataset expiration exists.
 
 ## Cancel a dataset expiration {#delete}
 
