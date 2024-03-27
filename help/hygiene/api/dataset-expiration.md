@@ -124,8 +124,6 @@ curl -X GET \
 
 A successful response returns the details of the dataset expiration.
 
-<!-- Is there a different response from making a GET request to either '/ttl/{DATASET_ID}?include=history' or '/ttl/{TTL_ID}'? If so please can you provide the response for both (or just the ttl endpoint itf it differs from teh example) -->
-
 ```json
 {
     "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
@@ -180,29 +178,105 @@ The following JSON represents a truncated response for a dataset's details from 
 }
 ```
 
-## Create or update a dataset expiration {#create-or-update}
+## Create a dataset expiration {#create}
 
-Create or update an expiration date for a dataset through a PUT request. The PUT request uses either the `datasetId` or the `ttlId`. 
+To ensure that data is removed from the system after a specified period, schedule an expiration for a specific dataset by providing the dataset ID and the expiry date and time in ISO 8601 format.
+
+To create a dataset expiration, perform a POST request as shown below and provide the values mentioned below within the payload.
 
 **API format**
 
 ```http
-PUT /ttl/{DATASET_ID}
-PUT /ttl/{TTL_ID}
+POST /ttl
 ```
-
-| Parameter | Description |
-| --- | --- |
-| `{DATASET_ID}` | The ID of the dataset that you want to schedule an expiration for. |
-| `{TTL_ID}` | The ID of the dataset expiration. | 
 
 **Request**
 
-The following request schedules a dataset `5b020a27e7040801dedbf46e` for deletion at the end of 2022 (Greenwich Mean Time). If no existing expiration is found for the dataset, a new expiration is created. If the dataset already has a pending expiration, that expiration is updated with the new `expiry` value.
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/hygiene/ttl \
+  -H `Authorization: Bearer {ACCESS_TOKEN}`
+  -H `x-gw-ims-org-id: {ORG_ID}`
+  -H `x-api-key: {API_KEY}`
+  -H `Accept: application/json`
+  -d {
+      "datasetId": "5b020a27e7040801dedbf46e",
+      "expiry": "2030-12-31T23:59:59Z"
+      "displayName": "Delete Acme Data before 2025",
+      "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+      }
+```
+
+| Property | Description |
+| --- | --- |
+| `datasetId` | **Required** The ID of the target dataset that you want to schedule an expiration for. |
+| `expiry` | **Required** A date and time in ISO 8601 format. If the string has no explicit time zone offset, the time zone is assumed to be UTC. The lifespan of data within the system is set according to the provided expiry value.<br>Note:<ul><li>The request will fail if a dataset expiration already exists for the dataset.</li><li>This date and time must be at least **24 hours in the future**.</li></ul> |
+| `displayName` | An optional display name for the dataset expiration request. |
+| `description` | An optional description for the expiration request. |
+
+**Response**
+
+A successful response returns an HTTP 201 (Created) status and the new state of the dataset expiration, if there was no pre-existing dataset expiration.
+
+```json
+{
+  "ttlId":       "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
+  "datasetId":   "5b020a27e7040801dedbf46e",
+  "datasetName": "Acme licensed data",
+  "sandboxName": "prod",
+  "imsOrg":      "{ORG_ID}",
+  "status":      "pending",
+  "expiry":      "2030-12-31T23:59:59Z",
+  "updatedAt":   "2021-08-19T11:14:16Z",
+  "updatedBy":   "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
+  "displayName": "Delete Acme Data before 2031",
+  "description": "The Acme information in this dataset is licensed for our use through the end of 2030."
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `ttlId` | The ID of the dataset expiration. |
+| `datasetId` | The ID of the dataset that this expiration applies to. |
+| `datasetName` | The display name for the dataset this expiration applies to. |
+| `sandboxName` | The name of the sandbox that the target dataset is located under. |
+| `imsOrg` | Your organization's ID. |
+| `status` | The current status of the dataset expiration. |
+| `expiry` | The scheduled date and time when the dataset will be deleted. |
+| `updatedAt` | A timestamp of when the expiration was last updated. |
+| `updatedBy` | The user who last updated the expiration. |
+| `displayName` | A display name for the expiration request. |
+| `description` | An description for the expiration request. |
+
+A 400 (Bad Request) HTTP status occurs if a dataset expiration already exists for the dataset. An unsuccessful response returns a 404 (Not Found) HTTP status if no such dataset expiration exists (or you do not have access to it).
+
+## Update a dataset expiration {#update}
+
+To update an expiration date for a dataset, use a PUT request and the `ttlId`. You can update the `displayName`, `description`, and/or `expiry` information. 
+
+>[!NOTE]
+>
+>If you change the expiration date and time, it must be at least 24 hours in the future. This enforced delay provides an opportunity for you to cancel or re-schedule the expiration and avoid any accidental loss of data.
+
+**API format**
+
+```http
+PUT /ttl/{TTL_ID}
+```
+
+<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
+
+| Parameter | Description |
+| --- | --- |
+| `{TTL_ID}` | The ID of the dataset expiration that you want to change. | 
+
+**Request**
+
+The following request reschedules a dataset expiration `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` to occur at the end of 2024 (Greenwich Mean Time). If the existing dataset expiration is found, that expiration is updated with the new `expiry` value.
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -217,7 +291,7 @@ curl -X PUT \
 
 | Property | Description |
 | --- | --- |
-| `expiry` | A date and time in ISO 8601 format. If the string has no explicit time zone offset, the time zone is assumed to be UTC. The lifespan of data within the system is set according to the provided expiry value. Any previous expiration timestamp for the same dataset is be replaced by the new expiration value you have provided. |
+| `expiry` | **Required** A date and time in ISO 8601 format. If the string has no explicit time zone offset, the time zone is assumed to be UTC. The lifespan of data within the system is set according to the provided expiry value. Any previous expiration timestamp for the same dataset is be replaced by the new expiration value you have provided. This date and time must be at least **24 hours in the future**. |
 | `displayName` | A display name for the expiration request. |
 | `description` | An optional description for the expiration request. |
 
@@ -225,7 +299,7 @@ curl -X PUT \
 
 **Response**
 
-A successful response returns the details of the dataset expiration, with HTTP status 200 (OK) if a pre-existing expiration was updated, or 201 (Created) if there was no pre-existing expiration.
+A successful response returns the new state of the dataset expiration and an HTTP status 200 (OK) if a pre-existing expiration was updated.
 
 ```json
 {
@@ -252,6 +326,8 @@ A successful response returns the details of the dataset expiration, with HTTP s
 | `updatedBy` | The user who last updated the expiration. |
 
 {style="table-layout:auto"}
+
+An unsuccessful response returns a 404 (Not Found) HTTP status if no such dataset expiration exists.
 
 ## Cancel a dataset expiration {#delete}
 
@@ -407,3 +483,4 @@ The following table outlines the available query parameters when [listing datase
 | `updatedDate` / `updatedToDate` / `updatedFromDate` | Like `createdDate` / `createdFromDate` / `createdToDate`, but matches against a dataset expiration's update time instead of creation time.<br><br>An expiration is considered updated on every edit, including when it is created, cancelled, or executed. | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
+ 
