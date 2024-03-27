@@ -61,6 +61,10 @@ curl -X GET \
 
 A successful response lists the resulting dataset expirations. The following example has been truncated for space.
 
+>[!IMPORTANT]
+>
+>The `ttlId` in the response is also referred to as the `{DATASET_EXPIRATION_ID}`. They both refer to the unique identifier for the dataset expiration.
+
 ```json
 {
   "results": [
@@ -91,19 +95,23 @@ A successful response lists the resulting dataset expirations. The following exa
 
 ## Look up a dataset expiration {#lookup}
 
-To lookup a dataset expiration, make a GET request with either the `datasetId` or the `ttlId`. 
+To lookup a dataset expiration, make a GET request with either the `{DATASET_ID}` or the `{DATASET_EXPIRATION_ID}`. 
+
+>[!IMPORTANT]
+>
+>The `{DATASET_EXPIRATION_ID}` is referred to as the `ttlId` in the response. They both refer to the unique identifier for the dataset expiration.
 
 **API format**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}
 ```
 
 | Parameter | Description |
 | --- | --- |
 | `{DATASET_ID}` | The ID of the dataset whose expiration you want to look up. |
-| `{TTL_ID}` | The ID of the dataset expiration. |
+| `{DATASET_EXPIRATION_ID}` | The ID of the dataset expiration. |
 
 {style="table-layout:auto"}
 
@@ -216,7 +224,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns an HTTP 201 (Created) status and the new state of the dataset expiration, if there was no pre-existing dataset expiration.
+A successful response returns an HTTP 201 (Created) status and the new state of the dataset expiration.
 
 ```json
 {
@@ -248,7 +256,7 @@ A successful response returns an HTTP 201 (Created) status and the new state of 
 | `displayName` | A display name for the expiration request. |
 | `description` | An description for the expiration request. |
 
-A 400 (Bad Request) HTTP status occurs if a dataset expiration already exists for the dataset. An unsuccessful response returns a 404 (Not Found) HTTP status if no such dataset expiration exists (or you do not have access to it).
+A 400 (Bad Request) HTTP status occurs if a dataset expiration already exists for the dataset. An unsuccessful response returns a 404 (Not Found) HTTP status if no such dataset expiration exists (or you do not have access to the dataset).
 
 ## Update a dataset expiration {#update}
 
@@ -261,14 +269,12 @@ To update an expiration date for a dataset, use a PUT request and the `ttlId`. Y
 **API format**
 
 ```http
-PUT /ttl/{TTL_ID}
+PUT /ttl/{DATASET_EXPIRATION_ID}
 ```
-
-<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
 
 | Parameter | Description |
 | --- | --- |
-| `{TTL_ID}` | The ID of the dataset expiration that you want to change. | 
+| `{DATASET_EXPIRATION_ID}` | The ID of the dataset expiration that you want to change. Note: This is referred to as the `ttlId` in the response. | 
 
 **Request**
 
@@ -368,19 +374,19 @@ A successful response returns HTTP status 204 (No Content), and the expiration's
 
 ## Retrieve the expiration status history of a dataset {#retrieve-expiration-history}
 
-You can look up the expiration status history of a specific dataset by using the query parameter `include=history` in a lookup request. The result includes information about about the creation of the dataset expiration, any updates that have been applied, and its cancellation or execution (if applicable). You can also use the `ttlId` of the dataset expiration.
+To look up the expiration status history of a specific dataset, use the `{DATASET_ID}` and `include=history` query parameter in a lookup request. The result includes information about about the creation of the dataset expiration, any updates that have been applied, and its cancellation or execution (if applicable). You can also use the `{DATASET_EXPIRATION_ID}` to retrieve the dataset expiration status history.
 
 **API format**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}?include=history
 ```
 
 | Parameter | Description |
 | --- | --- |
 | `{DATASET_ID}` | The ID of the dataset whose expiration history you want to look up. |
-| `{TTL_ID}` | The ID of the dataset expiration. |
+| `{DATASET_EXPIRATION_ID}` | The ID of the dataset expiration. Note: This is referred to as the `ttlId` in the response. |
 
 {style="table-layout:auto"}
 
