@@ -36,6 +36,18 @@ GET /quota?quotaType={QUOTA_TYPE}
 | --- | --- |
 | `{QUOTA_TYPE}` | An optional query parameter that specifies the type of quota to retrieve. If no `quotaType` parameter is provided, all quota values are returned in the API response. Accepted type values include:<ul><li>`expirationDatasetQuota`: Dataset expirations</li><li>`deleteIdentityWorkOrderDatasetQuota`: Record deletes</li><li>`fieldUpdateWorkOrderDatasetQuota`: Record updates</li></ul> |
 
+<!-- 
+Q) What do these accepted values do?
+Q) are there any others?
+Relates to PLATIR-38112
+Accepted values are:
+datasetExpirationQuota
+dailyConsumerDeleteIdentitiesQuota
+monthlyConsumerDeleteIdentitiesQuota
+monthlyUpdatedFieldIdentitiesQuota
+
+ -->
+
 **Request**
 
 ```shell
@@ -55,16 +67,28 @@ A successful response returns the details of your data lifecycle quotas.
 {
   "quotas": [
     {
-      "name": "expirationDatasetQuota",
-      "description": "The number of concurrently active Expiration Dataset Delete Work Order requests for the organization.",
-      "consumed": 3154,
-      "quota": 10000
+      "name": "datasetExpirationQuota",
+      "description": "The number of concurrently active Expiration Dataset Delete in all workorder requests for the organization.",
+      "consumed": 12,
+      "quota": 50
     },
     {
-      "name": "deleteIdentityWorkOrderQuota",
-      "description": "The number of Record Delete Work Order requests for the organization for this month.",
-      "consumed": 390,
-      "quota": 10000
+      "name": "dailyConsumerDeleteIdentitiesQuota",
+      "description": "The consumed number of deleted identities in all workorder requests for the organization for today.",
+      "consumed": 0,
+      "quota": 600000
+    },
+    {
+      "name": "monthlyConsumerDeleteIdentitiesQuota",
+      "description": "The consumed number of deleted identities in all workorder requests for the organization for this month.",
+      "consumed": 841,
+      "quota": 600000
+    },
+    {
+      "name": "monthlyUpdatedFieldIdentitiesQuota",
+      "description": "The consumed number of updated identities in all workorder requests for the organization for this month.",
+      "consumed": 0,
+      "quota": 0
     }
   ]
 }
