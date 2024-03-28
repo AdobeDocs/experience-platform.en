@@ -2,8 +2,13 @@
 title: Test And Submit Your Source
 description: The following document provides steps on how to test and verify a new source using the Flow Service API and integrate a new source through Self-Serve Sources (Streaming SDK).
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
+badge: Beta
 ---
 # Test and Submit your source
+
+>[!NOTE]
+>
+>Self-Serve Sources Streaming SDK is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 The final steps to integrating your new source to Adobe Experience Platform using Self-Serve Sources (Streaming SDK) are to test and submit your new source. Once you have completed your connection specification and updated the streaming flow specification, you can start testing your source's functionality through either the API or the UI. When successful, you can then submit your new source by contacting your Adobe representative.
 
