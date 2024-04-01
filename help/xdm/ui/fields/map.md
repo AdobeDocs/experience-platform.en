@@ -31,7 +31,7 @@ XDM places the following restrictions on the use of this data type:
 
 Ensure that you are only using map-type fields when absolutely necessary, as they carry the following performance drawbacks:
 
-* Response time from [Adobe Experience Platform Query Service](../../query-service/home.md) degrades from three seconds to ten seconds for 100 million records.
+* Response time from [Adobe Experience Platform Query Service](../../../query-service/home.md) degrades from three seconds to ten seconds for 100 million records.
 * Maps must have fewer than 16 keys or else risk further degradation.
 
 >[!NOTE]
