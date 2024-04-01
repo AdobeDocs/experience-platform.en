@@ -26,16 +26,17 @@ To use the Media Collection feature, ensure that you have the following prerequi
 ## Configuration
 To configure the Media Collection feature in the Web SDK, follow these steps:
 1. **Configure Media Collection in the Web SDK**: To enable the Media Collection feature, add the `mediaCollection` object when calling `configure()` command.
-    ```javascript
-   alloy("configure", {
-      mediaCollection: {
-         channel: "video channel",
-         playerName: "test player",
-         appVersion: "alloy 2.16.0",
-         mainPingInterval: 10,
-         adPingInterval: 10
-      }});
-      ```
+```javascript
+alloy("configure", {
+  mediaCollection: {
+    channel: "video channel",
+    playerName: "test player",
+    appVersion: "alloy 2.16.0",
+    mainPingInterval: 10,
+    adPingInterval: 10
+  }
+});
+ ```
    
 |name| type    | required | description                                                                            |
 |----|---------|----------|----------------------------------------------------------------------------------------|
