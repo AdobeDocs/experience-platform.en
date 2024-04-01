@@ -166,6 +166,37 @@ For example, you can enforce the email address field to always be sent to the de
 >
 > Configuring a required source field only is currently *not* supported.
 
+
+### Required mappings example for real-time (streaming) destinations {#required-mappings-streaming}
+
+See below an example of a schema configuration with required mappings and what these look like in the mapping step of the [activate data to streaming destinations workflow](../../../ui/activate-segment-streaming-destinations.md). 
+
+>[!BEGINTABS]
+
+>[!TAB Required source and destination mappings for streaming destinations]
+
+The example below shows required source and destination identity namespace mappings. When both source and destination fields are specified as required mappings, users cannot select or edit any of the two fields, and can only view the predefined selection.
+
+```json
+"schemaConfig": {
+  "requiredMappingsOnly": true,
+  "requiredMappings": [
+    {
+      "sourceType": "text/x.schema-path",
+      "identity": true,
+      "primaryIdentity": true,
+      "functionVersion": 1,
+      "mandatoryRequired": true,
+      "primaryKeyRequired": true,
+      "sourceAttribute": "identityMap.blkElqContactId",
+      "destinationXdmPath": "identityMap.eloquaContactId"
+    }
+  ]
+}
+```
+
+### Required mappings example for batch destinations {#required-mappings-batch}
+
 See below two examples of a schema configuration with required mappings and what these look like in the mapping step of the [activate data to batch destinations workflow](../../../ui/activate-batch-profile-destinations.md). 
 
 
