@@ -3,7 +3,7 @@ product: adobe experience platform
 solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform Guide
-user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audience segments from those profiles, and activate those segments to third-party destinations.
+user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audiences from those profiles, and activate those audiences to third-party destinations.
 role: Admin
 ---
 
@@ -27,6 +27,11 @@ role: Admin
   * [Account profile UI guide](accounts/account-profile-ui-guide.md)
 * Administration {#admin}
   * [Administration overview](administration/admin-overview.md)
+* Audiences and segmentation {#segmentation}
+  * [Segmentation overview](segmentation/segmentation-overview.md)
+  * [Segment builder guide](segmentation/segment-builder-guide.md)
+  * [Segmentation in Real-Time CDP B2B Edition](segmentation/b2b.md)
+  * [Customer AI](segmentation/customer-ai.md)
 * Datasets {#datasets}
   * [Datasets](datasets/dataset.md)
   * [Data quality on Platform](datasets/data-quality.md)
@@ -60,11 +65,6 @@ role: Admin
 * Schemas {#schemas}
   * [Schemas overview](schemas/overview.md)
   * [Schemas in Real-Time CDP B2B Edition](schemas/b2b.md)
-* Segments {#segmentation}
-  * [Segmentation overview](segmentation/segmentation-overview.md)
-  * [Segment builder guide](segmentation/segment-builder-guide.md)
-  * [Segmentation in Real-Time CDP B2B Edition](segmentation/b2b.md)
-  * [Customer AI](segmentation/customer-ai.md)
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
   * [Sources in Real-Time CDP B2B Edition](sources/b2b.md)

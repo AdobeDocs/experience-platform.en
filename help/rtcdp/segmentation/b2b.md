@@ -18,9 +18,9 @@ This document provides examples of segment definitions in Adobe Real-Time Custom
 Before you can use the segmentation attributes for B2B classes, you must complete the following steps:
 
 1. Create schemas that use the B2B classes. The B2B Edition classes include Account, Campaign, Opportunity, Marketing List, and more. For information on [how to set up schemas for use with B2B classes](../schemas/b2b.md) please see the schema documentation.
-1. Create relationships between your Experience Data Model (XDM) B2B schemas. Segments based on B2B Edition attributes require relationships between the classes to fully use the extended B2B Segmentation functionality. See the documentation on [how to define a relationship between two B2B schemas](../../xdm/tutorials/relationship-b2b.md) for more information.
-1. Ingest data using datasets based on your B2B schemas. See the sources documentation for [information on how to ingest data](../../sources/connectors/adobe-applications/marketo/marketo.md).
-1. Read the [Segment builder user guide](../../segmentation/ui/segment-builder.md) for a more detailed guidance on how to build audiences.
+2. Create relationships between your Experience Data Model (XDM) B2B schemas. Audiences based on B2B Edition attributes require relationships between the classes to fully use the extended B2B Segmentation functionality. See the documentation on [how to define a relationship between two B2B schemas](../../xdm/tutorials/relationship-b2b.md) for more information.
+3. Ingest data using datasets based on your B2B schemas. See the sources documentation for [information on how to ingest data](../../sources/connectors/adobe-applications/marketo/marketo.md).
+4. Read the [Segment builder user guide](../../segmentation/ui/segment-builder.md) for a more detailed guidance on how to build audiences.
 
 Once these requirements have been met you are able to combine these attributes for common B2B use cases.
 
@@ -48,7 +48,7 @@ This relationship is reflected within the Segment Builder through the use of `Ke
 
 Please refer to the [schemas in Real-Time Customer Data Platform B2B Edition documentation](../schemas/b2b.md) for more information on the available B2B classes.
 
-The use cases below provide information on which classes are used to establish relationships between the different schemas to achieve these results. These examples can be used to help you create your own segments.
+The use cases below provide information on which classes are used to establish relationships between the different schemas to achieve these results. These examples can be used to help you create your own audiences.
 
 ## Examples of different segmentation use cases {#use-cases}
 
