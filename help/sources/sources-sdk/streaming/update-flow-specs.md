@@ -2,8 +2,13 @@
 title: Update flow specifications for Streaming SDK using the Flow Service API
 description: The following document provides steps on how to retrieve and update flow specifications using the Flow Service API for Self-Serve Sources (Streaming SDK).
 exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
+badge: Beta
 ---
 # Update flow specifications using the [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>Self-Serve Sources Streaming SDK is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 Once you have generated a new connection specification ID, you must add this ID to a flow specification in order to create a dataflow.
 
