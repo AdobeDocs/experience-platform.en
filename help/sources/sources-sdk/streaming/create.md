@@ -2,8 +2,13 @@
 title: Create a new connection specification for Streaming SDK using the Flow Service API
 description: The following document provides steps on how to create a connection specification using the Flow Service API and integrate a new source through Self-Serve Sources.
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
+badge: Beta
 ---
 # Create a new connection specification using the [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>Self-Serve Sources Streaming SDK is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 A connection specification represents the structure of a source. It contains information on a source's authentication requirements, defines how source data can be explored and inspected, and provides information on the attributes of a given source. The `/connectionSpecs` endpoint in the [!DNL Flow Service] API allows you to programmatically manage the connection specifications within your organization.
 

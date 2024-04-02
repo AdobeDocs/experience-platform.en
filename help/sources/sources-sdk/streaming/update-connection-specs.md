@@ -2,8 +2,13 @@
 title: Update a connection specification for Streaming SDK using the Flow Service API
 description: The following document provides steps on how to a connection specification using the Flow Service API for Self-Serve Sources (Streaming SDK).
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
+badge: Beta
 ---
 # Update a connection specification using the Flow Service API
+
+>[!NOTE]
+>
+>Self-Serve Sources Streaming SDK is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
 You can update the properties of a connection specification through a PUT operation. When updating a connection specification through a PUT request, the body must include all of the fields that would be required when creating a new connection specification in a POST request.
 
