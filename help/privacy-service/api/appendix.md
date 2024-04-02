@@ -68,7 +68,7 @@ The following table outlines the accepted values for specifying an Adobe product
 | Adobe Campaign | `campaign` |
 | Adobe Experience Platform (data lake) | `aepDataLake` |
 | Adobe Experience Platform (Real-Time Customer Profile) | `profileService` |
-| Adobe Primetime Authentication | `primetimeAuthentication` |
+| Adobe Pass Authentication | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Customer Attributes (CRS) | `CRS` |
 | Customer Journey Management | `cjm` |
