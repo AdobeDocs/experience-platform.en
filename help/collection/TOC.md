@@ -5,6 +5,7 @@ user-guide-title: Data Collection
 breadcrumb-title: Data Collection
 user-guide-description: Learn how to enable client-side data collection for Adobe Experience Platform Edge Network and find out more about the data collection technologies used.
 feature: Data Collection
+role: Developer
 ---
 
 # Data collection {#collection}

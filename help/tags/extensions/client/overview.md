@@ -21,7 +21,7 @@ The following is a list of documentation for client-side tag extensions. For a l
 * [Adform Website Tracking](https://exchange.adobe.com/apps/ec/103195)*
 * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)
-* [Adobe Analytics & Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)
+* [Adobe Analytics & Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
 * [Adobe Analytics & Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
 * [Adobe Analytics & Salesforce](https://exchange.adobe.com/apps/ec/101530)*
 * [Adobe Analytics Product String](./product-string/overview.md)
@@ -62,7 +62,7 @@ The following is a list of documentation for client-side tag extensions. For a l
 * [Common Web SDK Plugins](./web-sdk/web-sdk-plugins.md)
 * [Concat](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
-* [Cookie Consent Management by Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/*107037)
+* [Cookie Consent Management by Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/*107037)*
 * [Core](./core/overview.md)
 * [Custom Debug Logger](https://exchange.adobe.com/apps/ec/104698)*
 * [Customer Recognition](https://exchange.adobe.com/apps/ec/100688)*
@@ -78,12 +78,13 @@ The following is a list of documentation for client-side tag extensions. For a l
 * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)*
 * [Genesys Predictive Engagement](https://exchange.adobe.com/apps/ec/106148)*
 * [Google Data Layer](./google-data-layer/overview.md)
-* [Google Global Site Tag (gtag)](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)
+* [Google Global Site Tag (gtag)](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)*
 * [InMoment](https://exchange.adobe.com/apps/ec/100847)*
 * [JSON Helper](https://exchange.adobe.com/apps/ec/106449)*
-* [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)
+* [JW Player Analytics](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)*
 * [KickFire](https://exchange.adobe.com/apps/ec/101621)*
 * [Mapping Table](https://exchange.adobe.com/apps/ec/103136)*
+* [Merkury Tag](https://exchange.adobe.com/apps/ec/600027/merkury-tag)*
 * [[!DNL Marketo Munchkin]](./marketo/overview.md)
 * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)*
 * [Monita](https://exchange.adobe.com/apps/ec/106544)*
@@ -100,7 +101,7 @@ The following is a list of documentation for client-side tag extensions. For a l
 * [SDI Survey](https://exchange.adobe.com/apps/ec/102991)*
 * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)*
 * [SessionCam](https://exchange.adobe.com/apps/ec/100517)*
-* [SPA View Change Event](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
+<!-- * [SPA View Change Event](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html) -->
 * [Storage Spanner](https://exchange.adobe.com/apps/ec/102990)*
 * [TAGS by Loop Horizon](https://exchange.adobe.com/apps/ec/106092)*
 * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)*

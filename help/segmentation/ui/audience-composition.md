@@ -214,9 +214,9 @@ A list of profile attributes appears. On this popover, you can select the attrib
 
 After selecting the attribute, you can select the order to rank it by. This is either in ascending (from lowest to highest) or descending (from highest to lowest) order.
 
-Additionally, you can limit the number of audiences returned by enabling the **[!UICONTROL Add profile limit]** toggle. When this toggle is enabled, you can set the maximum number of audiences returned within the **[!UICONTROL Included profiles]** field.
+Additionally, you can limit the number of profiles returned by enabling the **[!UICONTROL Add profile limit]** toggle. When this toggle is enabled, you can set the maximum number of profiles returned within the **[!UICONTROL Included profiles]** field.
 
-![The Add profile limit toggle is highlighted, which lets you limit the number of audiences returned.](../images/ui/audience-composition/add-profile-limit.png)
+![The Add profile limit toggle is highlighted, which lets you limit the number of profiles returned.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Split] {#split-block}
 

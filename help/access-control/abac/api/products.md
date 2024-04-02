@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;api;Attribute-Based Access Con
 solution: Experience Platform
 title: Products API Endpoint
 description: The /products endpoint in the Attribute-Based Access Control API allows you to  programmatically manage products in Adobe Experience Platform.
+role: Developer
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
 ---
 # Products endpoint

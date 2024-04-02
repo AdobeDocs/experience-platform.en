@@ -31,7 +31,7 @@ In order for [!DNL Flow Service] to connect to [!DNL Salesforce], you must provi
 | `username` | The username for the [!DNL Salesforce] user account. |
 | `password` | The password for the [!DNL Salesforce] user account. |
 | `securityToken` | The security token for the [!DNL Salesforce] user account. |
-| `apiVersion` | (Optional) The REST API version of the [!DNL Salesforce] instance that you are using. If this field is left blank, then Experience Platform will automatically use the latest available version. |
+| `apiVersion` | Optional) The REST API version of the [!DNL Salesforce] instance that you are using. The value for API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0` If this field is left blank, then Experience Platform will automatically use the latest available version. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce] is: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 For more information on getting started, visit [this Salesforce document](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).

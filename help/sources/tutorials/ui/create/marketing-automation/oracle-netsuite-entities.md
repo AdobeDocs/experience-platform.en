@@ -4,6 +4,7 @@ description: Learn how to create a Oracle NetSuite Entities source connection us
 hide: true
 hidefromtoc: true
 badge: Beta
+exl-id: ce0ea37f-16e0-4aef-9809-72c0b11e0440
 ---
 # Create a [!DNL Oracle NetSuite Entities] source connection in the UI
 

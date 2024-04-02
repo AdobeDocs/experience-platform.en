@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;namespace list;list namespace
 solution: Experience Platform
 title: List Available Identity Namespaces
 description: List all available namespaces.
+role: Developer
 exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
 ---
 # List available identity namespaces

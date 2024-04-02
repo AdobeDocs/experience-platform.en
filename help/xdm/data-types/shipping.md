@@ -1,6 +1,7 @@
 ---
 title: Shipping Data Type
 description: Learn about the Shipping Experience Data Model (XDM) data type.
+exl-id: c3a58e46-c80e-4896-b21c-47dc5a6c869b
 ---
 # [!UICONTROL Shipping] data type
 

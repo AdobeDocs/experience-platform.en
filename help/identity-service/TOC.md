@@ -4,6 +4,7 @@ user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: Platform Identity Service Guide
 user-guide-description: Bridge customer identities across devices and systems to deliver personalized digital experiences.
 feature: Identities
+role: Admin,Developer
 ---
 
 # Adobe Experience Platform Identity Service {#identity}
@@ -36,4 +37,4 @@ feature: Identities
   - [Example scenarios](./identity-graph-linking-rules/example-scenarios.md)
 - [Privacy request processing](privacy.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
-- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

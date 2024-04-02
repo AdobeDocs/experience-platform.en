@@ -2,6 +2,7 @@
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile
 title: Real-Time Customer Profile API Guide
 description: The Real-Time Customer Profile API allows developers to explore and work with Profile data, including view profiles, create and update merge policies, export or sample Profile data, and delete Profile data that is no longer required or was added in error. Follow this guide to learn how to perform key operations using the API.
+role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
 ---
 # [!DNL Real-Time Customer Profile] API guide

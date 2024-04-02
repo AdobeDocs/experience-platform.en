@@ -5,6 +5,7 @@ user-guide-title: Adobe Experience Platform Datastreams Help
 breadcrumb-title: Datastreams Guide
 user-guide-description: Learn how to configure Datastreams in Adobe Experience Platform.
 feature: Datastreams
+role: Developer
 ---
 
 # Adobe Experience Platform Datastreams {#datastreams}
