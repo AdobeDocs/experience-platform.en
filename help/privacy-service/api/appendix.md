@@ -56,8 +56,30 @@ When specifying a `namespace` value in the [!DNL Privacy Service] API, a **names
 
 The following table outlines the accepted values for specifying an Adobe product in the `include` attribute of a job creation request.
 
+>[!NOTE]
+>
+>The values for the list of products are case-insensitive. Camel-case is recommended but not enforced.
+
 | Product | Value for use in the `include` attribute |
 | --- | --- |
+| Adobe Advertising Cloud | `adCloud` |
+| Adobe Analytics | `analytics` |
+| Adobe Audience Manager | `audienceManager` |
+| Adobe Campaign | `adobecampaign` |
+| Adobe Campaign | `campaign` |
+| Adobe Experience Platform (data lake) | `AdobeCloudPlatform` |
+| Adobe Experience Platform (Real-Time Customer Profile) | `profileService` |
+| Adobe Primetime Authentication | `primetimeAuthentication` |
+| Adobe Target | `target` |
+| Customer Attributes (CRS) | `CRS` |
+| Customer Journey Management | `cjm` |
+| Identity Service | `identity` |
+| Marketo Engage | `marketo` |
+| Marketo Measure | `marketomeasure` |
+
+{style="table-layout:auto"}
+
+<!-- Old stuff:
 | Adobe Advertising Cloud | `adCloud` |
 | Adobe Analytics | `analytics` |
 | Adobe Audience Manager | `AudienceManager` |
@@ -68,6 +90,5 @@ The following table outlines the accepted values for specifying an Adobe product
 | Adobe Target | `target` |
 | Customer Attributes (CRS) | `CRS` |
 | Identity Service | `identity` |
-| Marketo Engage | `marketo` |
-
-{style="table-layout:auto"}
+| Marketo Engage | `marketo` | 
+-->
