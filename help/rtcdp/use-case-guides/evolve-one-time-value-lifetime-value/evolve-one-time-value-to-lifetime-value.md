@@ -28,11 +28,13 @@ Consider these customers who visit your properties and sporadically purchase the
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
-Considering a business goal and objective that you might have defined internally that translated into executing a use case to drive customer engagement and loyalty, 
+Considering that internally you have defined a business goal and objective to increase brand loyalty. This can translate into executing a use case to drive customer engagement and loyalty.
 
 To achieve this, the technology required consists of the two Experience Platform apps [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html) and [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html). Listed below are various functionality and UI elements from the two apps that you will use when implementing the use case.
  
-Make sure that you have the necessary [attribute-based access control permissions](/help/access-control/abac/end-to-end-guide.md) for all these areas, or ask your system administrator to grant you the necessary permissions.
+>[!TIP]
+>
+>Make sure that you have the necessary [attribute-based access control permissions](/help/access-control/abac/end-to-end-guide.md) for all these areas, or ask your system administrator to grant you the necessary permissions.
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html): Integrate data across data sources to fuel the campaign. This data is then used to create the campaign audiences and surface personalized data elements used in the email and the web promo tiles (for example, name or account-related information). Finally, Real-Time CDP is also used to activate audiences to paid media destinations.
   * [Schemas](/help/xdm/home.md)
@@ -528,10 +530,15 @@ For more information about creating journeys in [!DNL Adobe Journey Optimizer], 
 
 Some users might not have purchased your subscription even after you message them about the new program. After waiting for a number of days, (seven in this example use case), you can decide to show paid media ads to those users, to try and nudge them into purchasing your subscription. 
 
-Use the destinations framework in Real-Time CDP for paid media ads. Select one of the many available destinations to display paid media ads to your customers and activate the Paid media audience that you [created earlier](#create-audiences) to a destination of your choice. See an overview of available [advertising](/help/destinations/catalog/advertising/overview.md) and [social](/help/destinations/catalog/social/overview.md) destinations. Browse all available destinations in the destinations catalog. 
+Use the destinations framework in Real-Time CDP for paid media ads. Select one of the many available advertising destinations to display paid media ads to your customers and activate the Paid media audience that you [created earlier](#create-audiences) to a destination of your choice. See an overview of available [advertising](/help/destinations/catalog/advertising/overview.md) and [social](/help/destinations/catalog/social/overview.md) destinations. 
+
+To learn how to activate data to destinations (for example The Trade Desk or Google), read the documentation below: 
+
+* [Create a new destination connection](/help/destinations/ui/connect-destination.md)
+* [Activate audience data to streaming audience export destinations](activate-segment-streaming-destinations.md)
 
 ## Next steps {#next-steps}
 
-By setting your low-frequency and high-value users on a journey and by displaying paid media ads to a subset of them, you have hopefully turned some of them from one-time value to lifetime value customers. 
+By setting your low-frequency and high-value users on a journey and by displaying paid media ads to a subset of them, you have hopefully turned some of them from one-time value to lifetime value customers, thereby improving your brand loyalty metrics. 
 
 Next, you can explore other use cases supported by Real-Time CDP, such as [intelligently re-engaging customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) or [displaying personalized content to unauthenticated users](/help/rtcdp/partner-data/onsite-personalization.md) on your web properties.
