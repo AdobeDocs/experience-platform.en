@@ -65,9 +65,8 @@ The following table outlines the accepted values for specifying an Adobe product
 | Adobe Advertising Cloud | `adCloud` |
 | Adobe Analytics | `analytics` |
 | Adobe Audience Manager | `audienceManager` |
-| Adobe Campaign | `adobecampaign` |
 | Adobe Campaign | `campaign` |
-| Adobe Experience Platform (data lake) | `AdobeCloudPlatform` |
+| Adobe Experience Platform (data lake) | `aepDataLake` |
 | Adobe Experience Platform (Real-Time Customer Profile) | `profileService` |
 | Adobe Primetime Authentication | `primetimeAuthentication` |
 | Adobe Target | `target` |
@@ -78,17 +77,3 @@ The following table outlines the accepted values for specifying an Adobe product
 | Marketo Measure | `marketomeasure` |
 
 {style="table-layout:auto"}
-
-<!-- Old stuff:
-| Adobe Advertising Cloud | `adCloud` |
-| Adobe Analytics | `analytics` |
-| Adobe Audience Manager | `AudienceManager` |
-| Adobe Campaign | `campaign` |
-| Adobe Experience Platform (Data Lake) | `aepDataLake` |
-| Adobe Experience Platform (Real-Time Customer Profile) | `profileService` |
-| Adobe Pass Authentication | `primetimeAuthentication` |
-| Adobe Target | `target` |
-| Customer Attributes (CRS) | `CRS` |
-| Identity Service | `identity` |
-| Marketo Engage | `marketo` | 
--->
