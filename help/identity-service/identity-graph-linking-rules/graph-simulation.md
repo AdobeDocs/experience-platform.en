@@ -23,6 +23,9 @@ The Graph Simulation interface can be divided into three sections:
 
 ## Add events
 
+* Select [!UICONTROL Add Events] to begin adding events.
+* Select an identity namespace or use the dropdown menu to select from a list of namespaces. Then, provide an identity value that corresponds with your namespace.
+
 ## Configure algorithm
 
 ## View simulated graph
