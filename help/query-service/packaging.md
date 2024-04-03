@@ -56,6 +56,8 @@ The following table outlines the effects of the [!DNL Manage Queries] permission
 |---|---|
 | [!DNL Manage Queries] (without write data permission)| Provides access to execute ad hoc queries |
 | [!DNL Manage Queries] (with write data permission) | Provides access to execute batch queries |
+| View Custom Dashboard | Provides read access to user-defined dashboards  |
+| Manage Custom Dashboard | Provides write access for user-defined dashboards |
 
 {style="table-layout:auto"}
 
