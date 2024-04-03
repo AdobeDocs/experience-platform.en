@@ -1,6 +1,7 @@
 ---
 title: Custom Metadata Details Reporting Data Type
 description: Learn about the Custom Metadata Details Reporting Experience Data Model (XDM) data type.
+exl-id: d82d42fb-c725-4a81-9b2a-f6434020ab49
 ---
 # [!UICONTROL Custom Metadata Details] Reporting data type
 

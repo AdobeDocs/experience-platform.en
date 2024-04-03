@@ -1,6 +1,7 @@
 ---
 title: Advertising Pod Details Collection Data Type
 description: Learn about the Advertising Pod Details Collection Experience Data Model (XDM) data type.
+exl-id: 401c393f-aeda-4ecd-89f4-458833190ced
 ---
 # [!UICONTROL Advertising Pod Details] Collection data type
 
