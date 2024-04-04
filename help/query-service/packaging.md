@@ -29,7 +29,7 @@ The following table outlines the key Query Service entitlements based on how the
 | Maximum Execution Time  | 10 minutes  | 24 hours |
 | License Metric | **Query User Concurrency**: <ul><li>1 concurrent user (Real-Time CDP, Adobe Journey Optimizer)​</li><li>5 concurrent users (Customer Journey Analytics)​</li></ul> **Query Concurrency**: <ul><li>1 concurrent running query (all applications)​</li></ul> **An additional ad hoc query users pack add-on** can be purchased to increase your authorized ad hoc query entitlement. <ul><li>+5 additional concurrent users per pack</li><li>+1 additional concurrent running query per pack</li></ul> | **Compute Hours**: <ul><li>Variable (scoped based on your application entitlement)</li></ul> **Compute Hours** is a measure of the amount of time taken by the Query Service engine to read, process, and write data back into the data lake when a batch query is executed. <br>With the Data Distiller SKU, you also get an additional user and query concurrency, which can be used towards the execution of ad hoc queries.  The Data Distiller SKU includes:<br><ul><li>+5 additional concurrent users</li><li>+1 additional concurrent running query</li></ul> |
 | Accelerated query and reporting usage | No | Yes - Concurrent accelerated queries allow you to read data from the accelerated store and display within your dashboards. A dedicated entitlement for storing reporting models and datasets in the accelerated store is also provided.|
-| Data lake storage capacity | Your total storage entitlement is dependant on your platform-based applications licenses. For example, Real-Time CDP, AJO, CJA, and so on. | Yes - An additional storage entitlement is provided to persist your raw and derived datasets for Data Distiller use cases beyond a seven-day data expiration date.<br>Your data lake storage capacity is measured in terabytes (TB) and depends on the quantity of Compute hours that you have bought. Please check the product description for more details. |
+| Data lake storage capacity | Your total storage entitlement is dependant on your platform-based applications licenses. For example, Real-Time CDP, AJO, CJA, and so on. | Yes - An additional storage entitlement is provided to persist your raw and derived datasets for Data Distiller use cases beyond a seven-day data expiration date.<br>Your data lake storage capacity is measured in terabytes (TB) and depends on the quantity of Compute hours that you have bought. Check the product description for more details. |
 | Data export allowance | Your total export entitlement is dependant on your platform-based applications licenses. For example, Real-Time CDP, AJO, CJA, and so on. | Yes - An additional export entitlement is provided to allow for the export of derived datasets created using Data Distiller.<br>Your annual data export allowance is measured in terabytes (TB) and depends on the quantity of Compute hours that you have bought. Please check product description for more details. |
 | Query Execution Interface | <ul><li>Query Service UI</li><li>Third-party client UI</li><li>[!DNL PostgresSQL] client UI</li></ul> | <ul><li>Query Service UI </li><li>Third-party client UI</li><li>[!DNL PostgresSQL] client UI</li><li>REST APIs</li></ul> |
 | Query Results Returned Via | Client UI | Derived dataset stored in data lake |
@@ -46,9 +46,11 @@ The following table outlines the key Query Service entitlements based on how the
 
 Access control for Experience Platform is administered through the [Adobe Admin Console](https://adminconsole.adobe.com/) where product profiles link users with permissions and sandboxes. See the [access control overview](../access-control/home.md) for more information. 
 
-In order to use Query Service, the [!DNL Manage Queries] permission must be enabled within Admin Console. This permission allows users to execute ad hoc and batch queries. Detailed instructions for requesting access to the product profile [!DNL Manage Queries] permission have been outlined in the [manage permissions for a product profile](../access-control/ui/permissions.md) and [manage users for a product profile](../access-control/ui/users.md) documents.
+See the [Manage permissions for a product profile](../access-control/ui/permissions.md) and [Manage users for a product profile](../access-control/ui/users.md) documents for detailed instructions on requesting access to the product profile permissions
 
-After purchasing the [!DNL Data Distiller] add-on, the [!DNL Write Dataset] permission must be granted. This permission allows [!DNL Data Distiller] users to execute batch queries.
+### Relevant Query Service permissions {#query-service-permissions}
+
+To use Query Service, the **[!DNL Manage Queries]** permission must be enabled within Admin Console. This permission allows users to execute ad hoc and batch queries. 
 
 The following table outlines the effects of the [!DNL Manage Queries] permission:
 
@@ -56,6 +58,17 @@ The following table outlines the effects of the [!DNL Manage Queries] permission
 |---|---|
 | [!DNL Manage Queries] (without write data permission)| Provides access to execute ad hoc queries |
 | [!DNL Manage Queries] (with write data permission) | Provides access to execute batch queries |
+
+{style="table-layout:auto"}
+
+### Relevant Customizable Insights permissions {#customizable-insights-permissions}
+
+To create Data Distiller [Customizable Insights](./data-distiller/customizable-insights/overview.md) within dashboards, the following permissions **must** be enabled within Admin Console.
+
+| Permission | Function |
+|---|---|
+| [!DNL View Custom Dashboard] | Provides view access to user-defined dashboards |
+| [!DNL Manage Custom Dashboard] | Provides manage access for user-defined dashboards |
 
 {style="table-layout:auto"}
 
