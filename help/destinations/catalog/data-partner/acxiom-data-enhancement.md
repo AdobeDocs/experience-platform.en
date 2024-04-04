@@ -3,6 +3,7 @@ title: Acxiom Data Enhancement
 description: Use this connector to activate first-party Adobe profiles in Real-Time CDP to Acxiom for data enrichment and use across marketing channels. You can then use the Acxiom source to import the profiles with enhanced data and work with them in Real-Time CDP.
 last-substantial-update: 2024-03-14
 badge: Beta
+exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
 ---
 # [!DNL Acxiom Data Enhancement] destination connection
 

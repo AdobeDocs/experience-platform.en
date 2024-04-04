@@ -3,6 +3,7 @@ title: Acxiom Prospect-Suppression
 description: Export your first-party audiences to the Acxiom destination, to allow Acxiom to suppress known or converted customers. Then use the Acxiom source connector to ingest and activate prospect lists from Acxiom, with your known or converted customers removed.
 last-substantial-update: 2024-03-14
 badge: Beta
+exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
 ---
 # [!DNL Acxiom Prospect-Suppression] destination connection
 

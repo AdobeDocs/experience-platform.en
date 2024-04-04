@@ -43,7 +43,7 @@ Using [!DNL Query Editor], you can write, execute, and save queries for customer
 
 >[!IMPORTANT]
 >
->The legacy editor will be retired on 01-April-2024, and will no longer be available for use.
+>The legacy editor will be retired on 30-April-2024, and will no longer be available for use.
 
 ## Enhanced Query Editor toggle {#enhanced-editor-toggle}
 

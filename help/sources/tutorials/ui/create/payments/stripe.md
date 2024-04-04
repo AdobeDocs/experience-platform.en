@@ -2,6 +2,7 @@
 title: Ingest payments data from your Stripe account to Experience Platform using the user interface.
 description: Learn how to ingest payments data from your Stripe account to Experience Platform using the user interface.
 badge: Beta
+exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
 ---
 # Ingest payments data from your [!DNL Stripe] account to Experience Platform using the user interface
 

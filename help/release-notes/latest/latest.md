@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: The January 2024 release notes for Adobe Experience Platform.
+description: The March 2024 release notes for Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
@@ -14,6 +14,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 Updates to existing features in Experience Platform:
 
 - [Catalog Service](#catalog-service)
+- [Data collection](#data-collection)
 - [Data Prep](#data-prep)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
@@ -23,6 +24,10 @@ Updates to existing features in Experience Platform:
 ## Catalog Service {#catalog-service}
 
 Catalog Service is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the data lake as files and directories, Catalog holds the metadata and description of those files and directories for lookup and monitoring purposes.
+
+>[!NOTE]
+>
+>We are aware and working on fixing a display issue where unnecessary syntax is rendered next to images in tables.
 
 | Feature | Description |
 | --- | --- |
@@ -46,6 +51,20 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 For more information on Data Prep, read the [Data Prep overview](../../data-prep/home.md).
 
+## Data collection {#data-collection}
+
+Adobe Experience Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+
+**New features**
+
+| Type | Feature | Description |
+| --- | --- | --- |
+| Extensions | [!DNL Merkury] Tag Extension | The [[!DNL Merkury] tag extension](https://exchange.adobe.com/apps/ec/600027/merkury-tag) provides industry leading match rates for anonymous website visitors to a [!DNL Merkury] ID. Brands can leverage the power of the [!DNL Merkury] tag and Adobe to deliver real-time personalized website experiences. Additionally, the [!DNL Merkury] tag enables the growth of first-party digital data along with connected online and offline customer profiles. |
+
+{style="table-layout:auto"}
+
+To learn more about data collection, please read the [data collection overview](../../tags/home.md).
+
 ## Destinations {#destinations}
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
@@ -57,6 +76,7 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 | [(Beta) Acxiom Data Enhancement connection](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | New | Use this connector to activate first-party profiles from Real-Time CDP to Acxiom for data enrichment and use across marketing channels. You can then use the Acxiom source to import the profiles with enhanced data and work with them in Real-Time CDP. |
 | [(Beta) Acxiom Prospect Suppression connection](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | New | Export your first-party audiences to the Acxiom destination, to allow Acxiom to suppress known or converted customers. Then, use the [Acxiom prospecting data import](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) source connector to ingest and activate prospect lists from Acxiom, with your known or converted customers removed. |
 | [Amazon Ads connection](../../destinations/catalog/advertising/amazon-ads.md) | Update | When exporting data to the Amazon Ads destination, you can now route the data to the Amazon DSP or the Amazon Marketing Cloud (new). |
+| [LiveRamp Onboarding connection](../../destinations/catalog/advertising/liveramp-onboarding.md) | Update | The LiveRamp Onboarding destination now has support for deliveries to Europe and Australia [!DNL LiveRamp] [!DNL SFTP] instances. The maximum exported file size was also increased to 10 million rows (from 5 million, previously). |
 
 {style="table-layout:auto"}
 

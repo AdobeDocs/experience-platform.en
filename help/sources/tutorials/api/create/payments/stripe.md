@@ -2,6 +2,7 @@
 title: Ingest payments data from your [!DNL Stripe] account to Experience Platform using APIs
 description: Learn how to ingest payments data from your Stripe account to Experience Platform using the Flow Service API
 badge: Beta
+exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
 ---
 # Ingest payments data from your [!DNL Stripe] account to Experience Platform using APIs
 
@@ -910,4 +911,3 @@ Delete your dataflow by performing a DELETE request to the [!DNL Flow Service] A
 ### Delete your account
 
 Delete your account by performing a DELETE request to the [!DNL Flow Service] API while providing the base connection ID of the account you want to delete. For complete API examples, read the guide on [deleting your source account using the API](../../delete.md).
-

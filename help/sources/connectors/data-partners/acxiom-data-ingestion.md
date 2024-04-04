@@ -2,6 +2,7 @@
 title: Acxiom Data Ingestion
 description: Learn how to ingest [!DNL Acxiom] data to Real-Time Customer Data Platform, enrich first-party profiles, and improve audiences and activate across marketing channels.
 badge: Beta
+exl-id: 3bbbe4e1-5e34-4104-bf39-2c452865b807
 ---
 # [!DNL Acxiom Data Ingestion]
 
@@ -48,4 +49,3 @@ The restrictions listed below must be taken into consideration when naming your 
 ## Next steps
 
 By reading this document, you have completed the prerequisite setup needed in order to bring data from your [!DNL Acxiom] account to Experience Platform. You can now proceed to the guide on [connecting [!DNL Acxiom Data Ingestion] to Experience Platform using the user interface](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
- 
