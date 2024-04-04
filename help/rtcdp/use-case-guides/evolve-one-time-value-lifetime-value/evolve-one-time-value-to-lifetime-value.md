@@ -535,7 +535,7 @@ Use the destinations framework in Real-Time CDP for paid media ads. Select one o
 To learn how to activate data to destinations (for example The Trade Desk or Google), read the documentation below: 
 
 * [Create a new destination connection](/help/destinations/ui/connect-destination.md)
-* [Activate audience data to streaming audience export destinations](activate-segment-streaming-destinations.md)
+* [Activate audience data to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md)
 
 ## Next steps {#next-steps}
 
