@@ -67,7 +67,6 @@ To create Data Distiller [Customizable Insights](./data-distiller/customizable-i
 
 | Permission | Function |
 |---|---|
-| [!DNL Write Dataset] | Allows users to add, update, or delete records within the dataset |
 | [!DNL View Custom Dashboard] | Provides view access to user-defined dashboards |
 | [!DNL Manage Custom Dashboard] | Provides manage access for user-defined dashboards |
 
