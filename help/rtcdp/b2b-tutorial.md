@@ -70,11 +70,11 @@ The Marketo Engage source connector provides an auto-mapping feature to make the
 
 The Bodea marketer checks that all field groups are appropriately mapped and continues the sources setup process by initializing a dataflow. By creating a dataflow to bring in Marketo data, incoming data can be used by downstream Platform services. During the initial ingestion process, data is brought into Experience Platform as a batch. After this, subsequent ingested data is then streamed into Profile with near-real-time updates.
 
-## Create an audiences to evaluate your data
+## Create an audience to evaluate your data
 
 The next task is to create an audience for Bodea's new email marketing campaign based on specific attributes from related entities in the source data. Within the Platform UI, the Bodea marketer first selects **[!UICONTROL Segments]** in the left navigation, then **[!UICONTROL Create segment]**.
 
-In this example, the audiences finds all the people who work in the sales department and are related to any account that has at least one open opportunity. This audiences requires a link between the XDM Individual Profile class, XDM Business Account class, and XDM Business Opportunity class.
+In this example, the audience finds all the people who work in the sales department and are related to any account that has at least one open opportunity. This audiences requires a link between the XDM Individual Profile class, XDM Business Account class, and XDM Business Opportunity class.
 
 ![Use case segment](./assets/b2b-tutorial/use-case-segment.png) 
 
@@ -86,7 +86,7 @@ The Segment Builder allows you to create a marketable audience from Real-Time Cu
 
 ## Activate your evaluated data to a destination
 
-After the audiences is successfully created, a summary is provided in the [!UICONTROL Details] section of the workspace. As no destinations are currently activated for the segment definition, the Bodea marketer needs to export the audience to a dataset where it can be accessed and acted upon.
+After the audience is successfully created, a summary is provided in the [!UICONTROL Details] section of the workspace. As no destinations are currently activated for the segment definition, the Bodea marketer needs to export the audience to a dataset where it can be accessed and acted upon.
 
 Within the [!UICONTROL Segments] workspace of the Platform UI, the Bodea marketer selects **[!UICONTROL Activate to destination]**.
 

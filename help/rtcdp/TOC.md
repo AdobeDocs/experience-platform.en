@@ -29,7 +29,7 @@ role: Admin
   * [Administration overview](administration/admin-overview.md)
 * Audiences and segmentation {#segmentation}
   * [Segmentation overview](segmentation/segmentation-overview.md)
-  * [Segment builder guide](segmentation/segment-builder-guide.md)
+  * [Segment Builder guide](segmentation/segment-builder-guide.md)
   * [Segmentation in Real-Time CDP B2B Edition](segmentation/b2b.md)
   * [Customer AI](segmentation/customer-ai.md)
 * Datasets {#datasets}
