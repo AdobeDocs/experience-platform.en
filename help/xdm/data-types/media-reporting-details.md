@@ -1,6 +1,7 @@
 ---
 title: Media Reporting Details Data Type
 description: Learn about the Media Reporting Details Experience Data Model (XDM) data type.
+exl-id: e8bf20a9-9ac0-4339-8200-5d6d9328ce3b
 ---
 # [!UICONTROL Media Reporting Details] data type 
 

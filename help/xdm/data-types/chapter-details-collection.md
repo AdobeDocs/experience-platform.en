@@ -1,6 +1,7 @@
 ---
 title: Chapter Details Collection Data Type
 description: Learn about the Chapter Details Collection Experience Data Model (XDM) data type.
+exl-id: 4f841f5a-3840-4da5-a3a4-ceecde87c684
 ---
 # [!UICONTROL Chapter Details] Collection data type
 

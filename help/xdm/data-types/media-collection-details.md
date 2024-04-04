@@ -1,6 +1,7 @@
 ---
 title: Media Collection Details Data Type
 description: Learn about the Media Collection Details Experience Data Model (XDM) data type.
+exl-id: 1faf60f7-6afb-4ce2-b50d-967776a57715
 ---
 # [!UICONTROL Media Collection Details] data type 
 

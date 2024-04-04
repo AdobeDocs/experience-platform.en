@@ -1,6 +1,7 @@
 ---
 title: Chapter Details Reporting Data Type
 description: Learn about the Chapter Details Reporting Experience Data Model (XDM) data type.
+exl-id: 73ebfbe3-66c3-4ef9-9944-d9cb5772127b
 ---
 # [!UICONTROL Chapter Details] Reporting data type
 
