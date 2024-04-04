@@ -48,7 +48,7 @@ Access control for Experience Platform is administered through the [Adobe Admin 
 
 See the [Manage permissions for a product profile](../access-control/ui/permissions.md) and [Manage users for a product profile](../access-control/ui/users.md) documents for detailed instructions on requesting access to the product profile permissions
 
-### Relevant Query Service permissions
+### Relevant Query Service permissions {#query-service-permissions}
 
 To use Query Service, the **[!DNL Manage Queries]** permission must be enabled within Admin Console. This permission allows users to execute ad hoc and batch queries. 
 
@@ -61,14 +61,13 @@ The following table outlines the effects of the [!DNL Manage Queries] permission
 
 {style="table-layout:auto"}
 
-### Relevant Data Distiller permissions
+### Relevant Customizable Insights permissions {#customizable-insights-permissions}
 
-To use the [!DNL Data Distiller] SKU - 1 & 2 add-ons, the **[!DNL Write Dataset]** permission must be enabled within Admin Console. This permission allows [!DNL Data Distiller] users to execute batch queries.
-
-The following table provides a breakdown of the permissions used by the [!DNL Data Distiller] SKU - 1 & 2 add-ons:
+To create Data Distiller [Customizable Insights](./data-distiller/customizable-insights/overview.md) within dashboards, the following permissions **must** be enabled within Admin Console.
 
 | Permission | Function |
 |---|---|
+| [!DNL Write Dataset] | Allows users to add, update, or delete records within the dataset |
 | [!DNL View Custom Dashboard] | Provides view access to user-defined dashboards |
 | [!DNL Manage Custom Dashboard] | Provides manage access for user-defined dashboards |
 
