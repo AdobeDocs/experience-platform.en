@@ -1,6 +1,7 @@
 ---
 title: Session Details Collection Data Type
 description: Learn about the Session Details Collection Experience Data Model (XDM) data type.
+exl-id: ffe6bcf7-61e1-4f7a-ba95-7fcb78683cc9
 ---
 # [!UICONTROL Session Details] Collection data type
 

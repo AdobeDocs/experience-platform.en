@@ -1,6 +1,7 @@
 ---
 title: Advertising Details Collection Data Type
 description: Learn about the Advertising Details Collection Experience Data Model (XDM) data type.
+exl-id: 3f6bf1f9-c728-46af-804a-cb41eb29951b
 ---
 # [!UICONTROL Advertising Details] Collection data type
 

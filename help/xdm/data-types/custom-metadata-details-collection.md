@@ -1,6 +1,7 @@
 ---
 title: Custom Metadata Details Collection Data Type
 description: Learn about the Custom Metadata Details Collection Experience Data Model (XDM) data type.
+exl-id: e2fa65ea-b738-43c6-90f1-1968dd83b963
 ---
 # [!UICONTROL Custom Metadata Details] Collection data type
 
