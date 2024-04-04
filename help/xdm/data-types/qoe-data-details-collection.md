@@ -1,6 +1,7 @@
 ---
 title: QoE (Quality of Experience) Data Details Collection Data Type
 description: Learn about the QoE (Quality of Experience) Data Details Data Collection Type Experience Data Model (XDM) data type.
+exl-id: d99816d9-e207-434a-9a40-ee9ded46c4d2
 ---
 # QoE (Quality of Experience) Data Details Collection data type
 

@@ -1,6 +1,7 @@
 ---
 title: List of States Start Collection Data Type
 description: Learn about the List of States Start Data Type Experience Data Model (XDM) data type.
+exl-id: adeb3e91-7266-41ce-b406-f7fd5dbb2236
 ---
 # [!UICONTROL List of States Start] data type
 

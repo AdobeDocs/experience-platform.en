@@ -1,6 +1,7 @@
 ---
 title: Player State Data Reporting Data Type
 description: Learn about the Player State Data Reporting Experience Data Model (XDM) data type.
+exl-id: b01e126d-2467-46b3-8da7-8ec4580595b3
 ---
 # [!UICONTROL Player State Data Reporting] data type
 
