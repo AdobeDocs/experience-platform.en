@@ -1,13 +1,13 @@
 ---
-title: Advertising Pod Details Information Data Type
-description: Learn about the Advertising Pod Details Information Experience Data Model (XDM) data type.
-exl-id: 19ca3ab3-0963-4983-ac88-4c0d52979873
+title: Advertising Pod Details Reporting Data Type
+description: Learn about the Advertising Pod Details Reporting Experience Data Model (XDM) data type.
+exl-id: 5164520f-8c48-4eb0-a0b0-66dc10b68356
 ---
-# [!UICONTROL Advertising Pod Details Information] data type
+# [!UICONTROL Advertising Pod Details Reporting] data type
 
-[!UICONTROL Advertising Pod Details Information] is a standard Experience Data Model (XDM) data type. It defines a sequence or group of ads typically played in succession during content breaks. Use the [!UICONTROL Advertising Pod Details Information] data type to capture details such as the ad break ID, a friendly name for the ad break, the index of ads within the break, and the offset of the ad break within the content's timeline in seconds.
+[!UICONTROL Advertising Pod Details Reporting] is a standard Experience Data Model (XDM) data type. It defines a sequence or group of ads typically played in succession during content breaks. Use the [!UICONTROL Advertising Pod Details Reporting] data type to capture details such as the ad break ID, a friendly name for the ad break, the index of ads within the break, and the offset of the ad break within the content's timeline in seconds.
 
-![A diagram of the Advertising Pod Details Information data type.](../images/data-types/advertising-pod-details-information.png)
+![A diagram of the Advertising Pod Details Reporting data type.](../images/data-types/advertising-pod-details-information.png)
 
 | Display name               | Property               | Data type | Description                                           |
 |----------------------------|------------------------|-----------|-------------------------------------------------------|
