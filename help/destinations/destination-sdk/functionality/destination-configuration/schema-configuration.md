@@ -193,7 +193,6 @@ The example below shows required source and destination identity namespace mappi
 }
 ```
 
-
 |Parameter | Type | Required/Optional |Description|
 |---|---|---|---|
 |`requiredMappingsOnly`| Boolean | Optional | When this is set to true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define in the `requiredMappings` array.|
@@ -202,10 +201,6 @@ The example below shows required source and destination identity namespace mappi
 |`requiredMappings.destination`| String | Required | Indicates the value of the target field. When both source and destination fields are specified as required mappings, users cannot select or edit any of the two fields and can only view the selection.|
 
 {style="table-layout:auto"}
-
-
-
-
 
 >[!TAB Attribute to identity namespace mapping]
 
@@ -217,17 +212,20 @@ The example below shows a required source attribute to destination identity name
   "requiredMappings": [
     {
       "sourceType": "text/x.schema-path",
-      "identity": true,
-      "primaryIdentity": true,
-      "functionVersion": 1,
-      "mandatoryRequired": true,
-      "primaryKeyRequired": true,
       "source": "personalEmail.address",
       "destination": "identityMap.PartnerExampleID"
     }
   ]
 }
 ```
+
+|Parameter | Type | Required/Optional |Description|
+|---|---|---|---|
+|`requiredMappingsOnly`| Boolean | Optional | When this is set to true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define in the `requiredMappings` array.|
+|`requiredMappings.sourceType`| String | Required | Indicates the type of the `source` field. Supported values: <ul><li>`text/x.schema-path`: Use this value when the `source` field is a profile attribute from an XDM schema.</li><li>`text/x.aep-xl`: Use this value when your `source` field is defined by a regular expression. Example: `iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")`</li><li>`text/plain`: Use this value when your `source` field is defined by a macro template. Currently, the only supported macro template is `metadata.segment.alias`.</li></ul> |
+|`requiredMappings.source`| String | Required| Indicates the value of the source field. Supported value types: <ul><li>XDM profile attributes. Example: `personalEmail.address`. When your source attribute is an XDM profile attribute, set the `sourceType` parameter to `text/x.schema-path`.</li><li>Regular expressions. Example: `iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")`. When your source attribute is a regular expression, set the `sourceType` parameter to `text/x.aep-xl`.</li><li>Macro templates. Example:`metadata.segment.alias`. When your source attribute is a macro template, set the `sourceType` parameter to `text/plain`. Currently, the only supported macro template is `metadata.segment.alias`.</li></ul>|
+|`requiredMappings.destination`| String | Required | Indicates the value of the target field. When both source and destination fields are specified as required mappings, users cannot select or edit any of the two fields and can only view the selection.|
+
 >[!ENDTABS]
 
 
