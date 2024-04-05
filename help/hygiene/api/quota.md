@@ -34,19 +34,11 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | Parameter | Description |
 | --- | --- |
-| `{QUOTA_TYPE}` | An optional query parameter that specifies the type of quota to retrieve. If no `quotaType` parameter is provided, all quota values are returned in the API response. Accepted type values include:<ul><li>`expirationDatasetQuota`: Dataset expirations</li><li>`deleteIdentityWorkOrderDatasetQuota`: Record deletes</li><li>`fieldUpdateWorkOrderDatasetQuota`: Record updates</li></ul> |
+| `{QUOTA_TYPE}` | An optional query parameter that specifies the type of quota to retrieve. If no `quotaType` parameter is provided, all quota values are returned in the API response. Accepted type values include:<ul><li>`datasetExpirationQuota`: The number of concurrently active dataset expirations for your organization</li><li>`dailyConsumerDeleteIdentitiesQuota`: The total number of record delete requests made by your organization today</li><li>`monthlyConsumerDeleteIdentitiesQuota`: The total number of record delete requests made by your organization this month.</li><li>`monthlyUpdatedFieldIdentitiesQuota`: The total number of record updates requests made by your organization this month</li></ul> |
 
 <!-- 
-Q) What do these accepted values do?
-Q) are there any others?
-Relates to PLATIR-38112
-Accepted values are:
-datasetExpirationQuota
-dailyConsumerDeleteIdentitiesQuota
-monthlyConsumerDeleteIdentitiesQuota
-monthlyUpdatedFieldIdentitiesQuota
-
- -->
+These updates were made for PLATIR-38112. Are the definitions of these accepted values accurate?
+-->
 
 **Request**
 
