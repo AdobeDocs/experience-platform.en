@@ -23,9 +23,39 @@ The Graph Simulation interface can be divided into three sections:
 
 ## Add events
 
-* Select [!UICONTROL Add Events] to begin adding events.
-* Select an identity namespace or use the dropdown menu to select from a list of namespaces. Then, provide an identity value that corresponds with your namespace.
+* To begin, select **[!UICONTROL Add Events]**.
+* Select an identity namespace or use the dropdown menu to select from a list of namespaces. Then, provide an identity value that corresponds with your namespace. **Note**: the identity value that you input for Graph Simulation purposes can be a simple placeholder and does not need to be a real identity value. In the example below, `{CRMID: Adam}` is added as the first identity.
+* After you input your first identity, select plus (`+`) to add a second identity. There must be a minimum of at least two fully qualified identities in order for a graph to be rendered. Once you have added your second identity, select **[!UICONTROL Save]**. In the example below, `{ECID: 111}` is added as the second identity. This creates the first event as `{CRMID: Adam}, {ECID: 111}`.
+* To add a second event, select **[!UICONTROL Add Events]** and repeat the steps above. This time, add `{CRMID: Eve}` as the first identity and `{ECID: 111}` as the second identity, thus creating a second event of: `{CRMID: Eve}, {ECID: 111}`.
+
+### Load example
+
+### Use text version
+
+### Edit event
+
+### Delete event
 
 ## Configure algorithm
+
+The algorithm that you configure will dictate how Identity Service treats the namespaces that you inputted in your events. To begin, select the plus (`+`) icon in the bottom corner of the algorithm configuration panel.
+
+* Update the display name to match the namespace in your events. You can type in your namespace or use the dropdown menu to search. 
+* Next, use the plus (`+`) icon to add another namespace configuration to match your second identity.
+* You can configure the priority rankings of your namespaces by dragging and dropping...
+* Select the checkbox under the [!UICONTROL Unique per graph] column to indicate your unique namespace(s).
+
+### On namespace priorities
+
+### On namespaces uniqueness 
+
+| Algorithm configuration | Description |
+| --- | --- |
+| Display name |
+| Identity symbol |
+| Identity type |
+| Unique per graph |
+
+When finished, select **[!UICONTROL Simulate]**.
 
 ## View simulated graph
