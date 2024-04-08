@@ -24,9 +24,9 @@ The Graph Simulation interface can be divided into three sections:
 ## Add events
 
 * To begin, select **[!UICONTROL Add Events]**.
-* Select an identity namespace or use the dropdown menu to select from a list of namespaces. Then, provide an identity value that corresponds with your namespace. **Note**: the identity value that you input for Graph Simulation purposes can be a simple placeholder and does not need to be a real identity value. In the example below, `{CRMID: Adam}` is added as the first identity.
-* After you input your first identity, select plus (`+`) to add a second identity. There must be a minimum of at least two fully qualified identities in order for a graph to be rendered. Once you have added your second identity, select **[!UICONTROL Save]**. In the example below, `{ECID: 111}` is added as the second identity. This creates the first event as `{CRMID: Adam}, {ECID: 111}`.
-* To add a second event, select **[!UICONTROL Add Events]** and repeat the steps above. This time, add `{CRMID: Eve}` as the first identity and `{ECID: 111}` as the second identity, thus creating a second event of: `{CRMID: Eve}, {ECID: 111}`.
+* Select an identity namespace or use the dropdown menu to select from a list of namespaces. Then, provide an identity value that corresponds with your namespace. **Note**: the identity value that you input for Graph Simulation purposes can be a simple placeholder and does not need to be a real identity value. In the example below, `{CRMID: Tom}` is added as the first identity.
+* After you input your first identity, select plus (`+`) to add a second identity. There must be a minimum of at least two fully qualified identities in order for a graph to be rendered. Once you have added your second identity, select **[!UICONTROL Save]**. In the example below, `{ECID: 111}` is added as the second identity. This creates the first event as `{CRMID: Tom}, {ECID: 111}`.
+* To add a second event, select **[!UICONTROL Add Events]** and repeat the steps above. This time, add `{CRMID: Summer}` as the first identity and `{ECID: 111}` as the second identity, thus creating a second event of: `{CRMID: Summer}, {ECID: 111}`.
 
 ### Load example
 
