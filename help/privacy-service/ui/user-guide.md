@@ -93,7 +93,7 @@ The Job Requests widget lists all available job requests in your organization, i
 >The data for previously created jobs is only accessible for 30 days after the completion date.
 
 You can filter the list by typing keywords into the search bar below the Job Requests title. The list automatically filters as you type, showing requests that contain values that match your search terms. You can also use the **[!UICONTROL Requested on]** dropdown menu to select a time range for the listed jobs.
-
+<!-- The Job Request dialog with the search field and filter dropdown highlighted. -->
 ![Job Request search options](../images/user-guide/job-search.png)
 
 To view the details of a particular job request, select the request's job ID from the list to open the **[!UICONTROL Job Details]** page.
