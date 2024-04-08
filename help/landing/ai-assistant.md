@@ -53,13 +53,14 @@ There are two classes of questions to consider before querying AI Assistant:
 
 You can use AI Assistant for objectives such as:
 
-| Objective | Description |
-| --- | --- |
-| Learning Experience Platform and Real-Time CDP concepts | You can ask AI Assistant conceptual questions so that you can onboard yourself onto Experience Platform and Real-Time CDP. You can also use AI Assistant to learn about objects and behaviors that you are unfamiliar with. |
-| Ensuring data cleanliness in your sandboxes | You can use AI Assistant to identify any duplicates or unused objects so you can efficiently maintain the cleanliness of your sandbox.|
-| Orchestrating value analysis | You can use AI Assistant to identify your most used objects and assess any performance indicators or find the most valuable data. |
-| Understanding impact analysis | You can use AI Assistant to identify objects that have been used in certain workflows so that you can assess the impact of any changes. |
-| Monitoring your data | You can use AI Assistant to monitor any dataflow, ingestion, or evaluation jobs so that you can view any discrepancies or report on progress. |
+| Objective | Description | Example |
+| --- | --- | --- |
+| Learning concepts and continuing workflows | <ul><li>As a novice user, you can use AI Assistant to learn Real-Time CDP and Adobe Journey Optimizer concepts and onboard yourself to products and features that you are unfamiliar with.</li><li>As an experienced user, you can use AI Assistant to solve an edge case that may be blocking your workflow. |<ul><li>How do I set up a dashboard in Journey Analytics?</li><li>Tell me some use-cases for Real-Time CDP.</li></ul> |
+| Troubleshooting | Use AI Assistant to learn how to debug basic errors that you may encounter in your workflow. | <ul><li>What does this error {ERROR_MESSAGE} mean?</li><li>Why am I not able to delete the segment named "Luma: Email Audience"?</li></ul> |
+| Sandbox hygiene | Use AI Assistant to identify any duplicates or unused objects so you can efficiently maintain sandbox hygiene. | <ul><li>Can you show me segments that are similar?</li><li>Are there any schemas which do not have an associated dataset?</li></ul> |
+| Value analysis | Use AI Assistant to identify your most used data objects and assess any performance indicators or find the most valuable data objects. | <ul><li>How many profiles are in our "Luma: Email Audience" segment?</li><li>When were segments activated to Experience Cloud Audiences destination?</li></ul> |
+| Search | Use AI Assistant to find supported Experience Platform objects such as datasets, destinations, schemas, segments, and sources. | <ul><li>List the segments containing "Luma" in the name that were created in the last quarter.</li><li>What attributes are in the "Luma: Custom Actions" XDM schema?</li></ul> |
+| Impact analysis | Use AI Assistant to identify data objects that have been used in certain workflows so that you can assess the impact of any changes. | <ul><li>Which segments use `homeAddress.city` in "Luma: PersonProfiles" schema?</li><li>Which datasets does the `consents.marketing.push.val` profile attribute live on?</li></ul> |
 
 ## Access AI Assistant in the Experience Platform UI
 
