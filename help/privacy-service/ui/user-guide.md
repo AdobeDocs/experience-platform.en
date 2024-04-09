@@ -101,7 +101,7 @@ You can filter the list by typing keywords into the search bar below the [!UICON
 <!-- Incorrect screenshot added so that it passes validation Delete job-search.png / update screenshots: -->
 ![The Privacy Console Job Request section with the search field highlighted.](../images/user-guide/job-search.png)
 
-Alternatively, use the search button to perform a privacy job query that spans a particular date range. This action returns all the privacy jobs submitted by your organization during the given time frame. Select the **[!UICONTROL Requested on]** dropdown menu to choose a start and finish date for the query. The search feature when used with the [!UICONTROL Requested on] option only displays job requests that were submitted between your chosen date ranges. 
+Alternatively, use the search button to perform a privacy job query that spans a particular date range. This action returns all the privacy jobs submitted by your organization during the given time frame. Select the **[!UICONTROL Requested on]** dropdown menu to choose a start and finish date for the query. The available options include [!UICONTROL Today], [!UICONTROL Last 7 Days], [!UICONTROL Last 2 Weeks], [!UICONTROL Last 30 Days], or [!UICONTROL Custom]. When used with the [!UICONTROL Requested on] option, the search feature only displays job requests that were submitted between your chosen date ranges. 
 
 <!-- Delete job-search.png / update screenshot below: -->
 
