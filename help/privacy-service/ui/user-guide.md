@@ -92,15 +92,20 @@ The [!UICONTROL Job Requests] workspace lists details about the recent job reque
 >
 >The data for previously created jobs is only accessible for 30 days after the completion date.
 
-You can filter the list by typing keywords into the search bar below the [!UICONTROL Job Requests] title. The list automatically filters as you type, showing requests that contain values that match your search terms. The search field performs a "quick" search that matches Privacy Job IDs to the currently rendered/loaded jobs in the UI. It is not a comprehensive search of all your submitted jobs. Rather. it is a filter applied to the loaded results. Use the Privacy Service API to [return jobs based on a specific regulation, date ranges, or a single job](../api/privacy-jobs.md#list).
+You can filter the list by typing keywords into the search bar below the [!UICONTROL Job Requests] title. The list automatically filters as you type, showing requests that contain values that match your search terms. The search field performs a "quick" search that matches Privacy Job IDs to the currently rendered/loaded jobs in the UI. It is not a comprehensive search of all your submitted jobs. Rather, it is a filter applied to the loaded results. Use the Privacy Service API to [return jobs based on a specific regulation, date ranges, or a single job](../api/privacy-jobs.md#list).
 
 >[!TIP]
 >
 >To load records into the UI from the past 30 days, you must scroll down the table and load more batches of records.
 
-You can also use the **[!UICONTROL Requested on]** dropdown menu to select a time range for the listed jobs.
+<!-- Incorrect screenshot added so that it passes validation Delete job-search.png / update screenshots: -->
+![The Privacy Console Job Request section with the search field highlighted.](../images/user-guide/job-search.png)
 
-![The Job Request section with the search field and filter dropdown highlighted.](../images/user-guide/job-search.png)
+Alternatively, use the search button to perform a privacy job query that spans a particular date range. This action returns all the privacy jobs submitted by your organization during the given time frame. Select the **[!UICONTROL Requested on]** dropdown menu to choose a start and finish date for the query. The search feature when used with the [!UICONTROL Requested on] option only displays job requests that were submitted between your chosen date ranges. 
+
+<!-- Delete job-search.png / update screenshot below: -->
+
+![The Job Request section with the search field and Requested on dropdown menu highlighted.](../images/user-guide/job-search.png)
 
 To view the details of a particular job request, select the request's job ID from the list to open the **[!UICONTROL Job Details]** page.
 
