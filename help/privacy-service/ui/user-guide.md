@@ -84,17 +84,23 @@ To view further details about a given data point, select the data point in quest
 >
 >When a filter has been applied to the Job Requests widget, you can remove the filter by selecting the **X** on the filter pill. Job Requests then return to the default tracking list.
 
-### Job Requests
+### Job Requests {#job-requests}
 
-The Job Requests widget lists all available job requests in your organization, including details such as the request type, current status, due date, and requestor email.
+The [!UICONTROL Job Requests] workspace lists details about the recent job requests in your organization. Details include the request type, current status, due date, requestor email, and so on. Sets of 100 records are loaded at a time. By default, the most recently created jobs are displayed at the top with more sets of records loaded as you scroll down to browse.
 
 >[!NOTE]
 >
 >The data for previously created jobs is only accessible for 30 days after the completion date.
 
-You can filter the list by typing keywords into the search bar below the Job Requests title. The list automatically filters as you type, showing requests that contain values that match your search terms. You can also use the **[!UICONTROL Requested on]** dropdown menu to select a time range for the listed jobs.
-<!-- The Job Request dialog with the search field and filter dropdown highlighted. -->
-![Job Request search options](../images/user-guide/job-search.png)
+You can filter the list by typing keywords into the search bar below the [!UICONTROL Job Requests] title. The list automatically filters as you type, showing requests that contain values that match your search terms. The search field performs a "quick" search that matches Privacy Job IDs to the currently rendered/loaded jobs in the UI. It is not a comprehensive search of all your submitted jobs. Rather. it is a filter applied to the loaded results. Use the Privacy Service API to [return jobs based on a specific regulation, date ranges, or a single job](../api/privacy-jobs.md#list).
+
+>[!TIP]
+>
+>To load records into the UI from the past 30 days, you must scroll down the table and load more batches of records.
+
+You can also use the **[!UICONTROL Requested on]** dropdown menu to select a time range for the listed jobs.
+
+![The Job Request section with the search field and filter dropdown highlighted.](../images/user-guide/job-search.png)
 
 To view the details of a particular job request, select the request's job ID from the list to open the **[!UICONTROL Job Details]** page.
 
