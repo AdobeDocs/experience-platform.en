@@ -30,11 +30,31 @@ The Graph Simulation interface can be divided into three sections:
 
 ### Load example
 
+To set up an example graph with a pre-configured algorithm, select **[!UICONTROL Load example]**. A pop-up window appears, providing you with available graph scenarios you can choose from:
+
+| Example graph | Description | Example |
+| --- | --- | --- |
+| Shared Device | Shared device refers to scenarios where two different users log in to the same single device.| A husband and wife share an iPad for internet browsing and e-commerce. |
+| Invalid (non-unique) phone | Invalid or non-unique phone refers to scenarios where two different users use the same phone number to create an account. | A mother and her daughter use their shared home phone number to sign up for any e-commerce accounts. |
+| "Bad" identity values | "Bad" identity values refer to scenarios where Identity Service generates non-unique IDFAs due to erroneous implementation. | A user signs up to your e-commerce website and provides invalid values for email or phone. |
+
+Select any of the options to load Graph Simulation with pre-configured events and algorithm. You can still make further configurations to any pre-loaded graph scenario examples.
+
+When finished, select **[!UICONTROL Simulate]**.
+
 ### Use text version
+
+You can also use text mode to configure events. To use text mode, select the gear (?) icon, and then select **[!UICONTROL Text (Advanced users)]**.
+
+You can manually input your identities with text mode. Use a colon (`:`) to distinguish the identity value that corresponds with the namespace that you input, and then use a comma (`,`) to separate your identities. To distinguish different events from one another, use a new line for each event.
 
 ### Edit event
 
+To edit an event, select the ellipses (`...`) beside a given event, and then select **[!UICONTROL Edit]**.
+
 ### Delete event
+
+To delete an event, select the ellipses (`...`) beside a given event, and then select **[!UICONTROL Delete]**.
 
 ## Configure algorithm
 
@@ -47,7 +67,9 @@ The algorithm that you configure will dictate how Identity Service treats the na
 
 ### On namespace priorities
 
-### On namespaces uniqueness 
+### On namespaces uniqueness
+
+If a namespace is marked as "unique per graph", then the identity graph may only have one identity that contains that namespace. 
 
 | Algorithm configuration | Description |
 | --- | --- |
