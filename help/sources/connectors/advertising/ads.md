@@ -6,6 +6,10 @@ exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
 ---
 # [!DNL Google Ads] source
 
+>[!WARNING]
+>
+>The [!DNL Google Ads] source is temporarily unavailable. We apologize for any inconvenience as we work towards resolving issues with the source.
+
 >[!NOTE]
 >
 >The [!DNL Google Ads] source is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.

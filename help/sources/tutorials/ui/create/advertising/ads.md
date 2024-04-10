@@ -5,6 +5,10 @@ exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
 ---
 # Create a Google Ads source connection in the UI
 
+>[!WARNING]
+>
+>The [!DNL Google Ads] source is temporarily unavailable. We apologize for any inconvenience as we work towards resolving issues with the source.
+
 >[!NOTE]
 >
 >The Google Ads source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
