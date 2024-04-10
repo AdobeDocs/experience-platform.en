@@ -10,21 +10,17 @@ feature: Use Cases
 >* This page presents a sample implementation of Real-Time CDP and Adobe Journey Optimizer to achieve the described use case. Use the figures, qualification criteria, and other fields given on the page as a guide, not as prescriptive figures.
 >* To complete this use case, you need to be licensed for Real-Time CDP and Adobe Journey Optimizer. Read more in the [prerequisites and planning section](#prerequisites-and-planning) further below.
 
-Learn how to create personalized campaigns to offer the best complementary products or services based on a specific customer's attributes, behavior, and past purchases.
-
-![Step by step Evolve one-time value to lifetime value high level visual overview.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="1000" zoomable="yes"}
-
-## Use case overview
-
-Implement the one-time customer value to lifetime value use case to drive brand engagement and brand loyalty. Build a connected customer experience on multiple channels or journey by using the power of Experience Platform, augmented by Real-Time CDP and Journey Optimizer. 
+Implement the one-time customer value to lifetime value use case to drive brand engagement and brand loyalty. Build a connected customer experience on multiple channels or journey by using the power of Experience Platform, augmented by [Real-Time CDP](/help/rtcdp/home.md) and [Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home). 
 
 The personas that you are targeting are the infrequent visitors to your properties.
 
 Consider these customers who visit your properties and sporadically purchase the products or services that you offer. You may want to create personalized campaigns to appeal to these customers so your brand can offer them longer-term value instead of one-time value. Learn how to:
 
 * Collect and manage data
-* Create audiences, 
-* Create journeys to action upon these audiences in Real-Time CDP and Adobe Journey Optimizer.
+* Create audiences
+* Create journeys to action upon these audiences in Adobe Journey Optimizer and activate them in Real-Time CDP.
+
+![Step by step Evolve one-time value to lifetime value high level visual overview.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="1000" zoomable="yes"}
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -61,7 +57,9 @@ In the sample workflow pictured below, you look for customers who meet a certain
 
 You start by sending your audience of high-valued and low-frequency customers a message. You then check if they received this message within the last thirty days. If they have not, then you can enter them into a journey about, for example, a new subscription program. You can then wait for a few days (seven days in this example). After this time, if they have not purchased the subscription that you messaged them about, you can deliver paid media ads via destinations. If they have purchased the subscription, you can have them enter an order confirmation journey, thereby completing the use case. 
 
-As described further below on this page, all the actions and workflows are implemented in a privacy and consent-first manner. 
+>[!IMPORTANT]
+>
+>As described further below on this page by having a [dedicated consent field group in your schema](#customer-attributes-schema) and by [implementing consent policies](#privacy-consent), all the actions and workflows are implemented in a privacy and consent-first manner. 
 
 >[!BEGINSHADEBOX]
 
@@ -106,25 +104,15 @@ Use this schema to structure and reference the profile data that makes up your c
 
 The customer attributes schema is represented by an [!UICONTROL XDM Individual Profile] class, which includes the following field groups:
 
-+++Personal Contact Details (Field Group)
-
-[Personal Contact Details](/help/xdm/field-groups/profile/personal-contact-details.md) is a standard schema field group for the XDM Individual Profile class which describes the contact information for an individual person.
-
-| Field | Requirement | Description |
-| --- | --- | --- |
-| `mobilePhone.number` | Required | The person's mobile phone number, which is used for SMS notifications. |
-| `personalEmail.address` | Required | The person's email address. |
-
-+++
-
 +++Demographic Details (Field Group)
 
 [Demographic Details](/help/xdm/field-groups/profile/demographic-details.md) is a standard schema field group for the XDM Individual Profile class. The field group provides a root-level person object, whose sub-fields describe information about an individual person.
 
-| Fields | Requirement |
-| --- | --- |
-| `person.name.firstName`| Suggested | 
-| `person.name.lastName` | Suggested |
++++
+
++++Personal Contact Details (Field Group)
+
+[Personal Contact Details](/help/xdm/field-groups/profile/personal-contact-details.md) is a standard schema field group for the XDM Individual Profile class which describes the contact information for an individual person.
 
 +++
 
@@ -136,16 +124,7 @@ The customer attributes schema is represented by an [!UICONTROL XDM Individual P
 
 +++Consent and Preference Field Groups (Field Group)
 
-[The Consents and Preferences](/help/xdm/field-groups//profile/consents.md) field group provides a single object-type field, consents, to capture consent and preference information.
-
-| Fields | Requirement |
-| --- | --- |
-| `consents.marketing.email.val` | Required |
-| `consents.marketing.preferred` | Required |
-| `consents.marketing.push.val` | Required |
-| `consents.marketing.sms.val` | Required |
-| `consents.personalize.content.val` | Required |
-| `consents.share.val` | Required |
+[The Consents and Preferences](/help/xdm/field-groups/profile/consents.md) field group provides a single object-type field, consents, to capture consent and preference information.
 
 +++
 
@@ -222,16 +201,7 @@ This field group includes various information about actions, such as purchase or
 
 +++End User ID Details (Field Group)
 
-This field group includes various information about your users, such as whether they are authenticated on your site when visiting, and information about their identity.
-
-| Fields | Requirement | Description |
-| --- | --- | --- |
-| `endUserIDs._experience.emailid.authenticatedState` | Required | End user email address ID authenticated state. |
-| `endUserIDs._experience.emailid.id` | Required | End user email address ID. |
-| `endUserIDs._experience.emailid.namespace.code` | Required | End user email address ID namespace code. |
-| `endUserIDs._experience.mcid.authenticatedState` | Required | [!DNL Adobe] Marketing Cloud ID (MCID) authenticated state. The MCID is now known as the Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.id` | Required | [!DNL Adobe] Marketing Cloud ID (MCID). The MCID is now known as the Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | Required | [!DNL Adobe] Marketing Cloud ID (MCID) namespace code. |
+The [End User ID Details](/help/xdm/field-groups/event/enduserids.md) field group includes various information about your users, such as whether they are authenticated on your site when visiting, and information about their identity.
 
 +++
 
@@ -532,13 +502,13 @@ Some users might not have purchased your subscription even after you message the
 
 Use the destinations framework in Real-Time CDP for paid media ads. Select one of the many available advertising destinations to display paid media ads to your customers and activate the Paid media audience that you [created earlier](#create-audiences) to a destination of your choice. See an overview of available [advertising](/help/destinations/catalog/advertising/overview.md) and [social](/help/destinations/catalog/social/overview.md) destinations. 
 
-To learn how to activate data to destinations (for example The Trade Desk or Google), read the documentation below: 
+To learn how to activate data to destinations (for example [The Trade Desk](/help/destinations/catalog/advertising/tradedesk.md) or [Google Customer Match](/help/destinations/catalog/advertising/google-customer-match.md)), read the documentation below: 
 
 * [Create a new destination connection](/help/destinations/ui/connect-destination.md)
 * [Activate audience data to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md)
 
 ## Next steps {#next-steps}
 
-By setting your low-frequency and high-value users on a journey and by displaying paid media ads to a subset of them, you have hopefully turned some of them from one-time value to lifetime value customers, thereby improving your brand loyalty metrics. 
+By setting your low-frequency and high-value users on a journey and by displaying paid media ads to a subset of them, you have hopefully turned some of them from one-time value to lifetime value customers, thereby improving your brand loyalty and customer engagement metrics. 
 
 Next, you can explore other use cases supported by Real-Time CDP, such as [intelligently re-engaging customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) or [displaying personalized content to unauthenticated users](/help/rtcdp/partner-data/onsite-personalization.md) on your web properties.
