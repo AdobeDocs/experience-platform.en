@@ -5,24 +5,34 @@ description: Learn how to use Expanded Activation to activate audiences from Aud
 
 # Audience Manager Expanded Activation
 
+This page describes the end-to-end workflow that you must follow if you want to activate audiences from Audience Manager to the destination platforms supported by Expanded Activation.
 
+## Before you begin {#before-you-begin}
 
+The steps described in this guide assume you have read the [Expanded Activation overview](overview.md) and you have confirmed that you meet the prerequisites for audience activation.
 
-
+>[!IMPORTANT]
+>
+>To activate audiences through [!DNL Expanded Activation], make sure your Audience Manager audiences are based on **hashed email addresses**. See the [prerequisites](overview.md#prerequisites) for more details.
 
 ## Step 1: Configure the Audience Manager source connection {#configure-source}
 
+The [Audience Manager source connector](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) sends audience data collected in Adobe Audience Manager for activation in the destination platforms supported by Expanded Activation.
 
+Follow the steps below to configure the Audience Manager source connector and bring your audiences from Audience Manager into Expanded Activation.
 
 1. Log in to [experience.adobe.com](https://experience.adobe.com) and select **[!UICONTROL Experience Platform]**.
 1. In the left sidebar, go to **[!UICONTROL Connections]** -> **[!UICONTROL Sources]**. In the [!UICONTROL Sources] page you can see the Adobe Audience Manager source connector.
 
-    ![Platform UI image showing the Sources tab with the Audience Manager source connection.](assets/sources-tab.png)
-
-    >[!NOTE]
+    >[!TIP]
     >
     >The Adobe Audience Manager source connector is the only source connector available in Expanded Activation.
+    >
+    >If you want to ingest audiences based on additional identifiers, you must purchase an edition of [Real-Time CDP](../rtcdp/overview.md). Contact your Adobe representative for more details.
 
+    ![Platform UI image showing the Sources tab with the Audience Manager source connection.](assets/sources-tab.png)
+
+1. Follow
 1. Select **[!UICONTROL Add data]** on the Adobe Audience Manager source connector.
 
     ![Platform UI image showing the Sources tab with the Audience Manager source connection.](assets/add-data.png)
@@ -30,7 +40,6 @@ description: Learn how to use Expanded Activation to activate audiences from Aud
 1. Select the traits and audiences that you want to activate, as described in the [Audience Manager source connection documentation](../sources/tutorials/ui/create/adobe-applications/audience-manager.md#select-traits-and-segments), then select **[!UICONTROL Next]**.
 1. In the [!UICONTROL Review] page, you can see a summary of your source connection and the data that you selected. Review the details and select **[!UICONTROL Finish]**.
     ![Platform UI image showing the Review step in the Audience Manager source connection workflow.](assets/add-data-finish.png)
-
 
 
 ## Step 2: Create a new destination connection {#create-destination-connection}
@@ -47,7 +56,7 @@ To create a new connection to a destination platform, follow the guide on [how t
 
 ## Step 3: Activate audiences to your destination {#activate-audiences}
 
-After you have successfully [ingested Audience Manager audiences](#configure-source) and [created a new destination connection](#create-destination-connection), you can now activate your audiences to the destination platform.
+After you have successfully [ingested Audience Manager audiences](#configure-source) and [created a new destination connection](#create-destination-connection), you can now activate your audiences to the destination platform of your choice.
 
 ![Platform UI image showing the destination catalog for Expanded Activation.](assets/activate-audiences.png)
 
@@ -57,3 +66,6 @@ To activate audiences to your destination, follow the guide on [how to activate 
 
 
 
+## Verify audience activation {#verify}
+
+Check the [destination monitoring documentation](../../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
