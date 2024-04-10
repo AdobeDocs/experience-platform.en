@@ -13,7 +13,8 @@ A dataflow is a scheduled task that retrieves and ingests data from a source to 
 >[!NOTE]
 >
 >* In order to create a dataflow, you must already have an authenticated account with a database source. A list of tutorials for creating different database source accounts in the UI can be found in the [sources overview](../../../home.md#database).
->* All table-based batch sources must have their UTC timezones set in order for data to be picked up by Experience Platform. For the [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md), only `TIMESTAMP_NTZ` with UTC time is supported.
+>
+>* For Experience Platform to ingest data, timezones for all table-based batch sources must be configured to UTC. The only time stamp that is supported for the [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) is TIMESTAMP_NTZ with UTC time.
 
 ## Getting started
 
