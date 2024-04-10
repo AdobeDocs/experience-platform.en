@@ -10,7 +10,7 @@ exl-id: 506991e8-701c-49b8-9d9d-265415779876
 
 Hybdrid personalization describes the process of retrieving personalization content server-side, using the [Edge Network Server API](../../server-api/overview.md), and rendering it client-side, using the [Web SDK](../home.md).
 
-You can use hybrid personalization with personalization solutions like Adobe Target or Offer Decisioning, the difference being the contents of the [!UICONTROL Server API] payload.
+You can use hybrid personalization with personalization solutions like Adobe Target, Adobe Journey Optimizer, or Offer Decisioning, the difference being the contents of the [!UICONTROL Server API] payload.
 
 ## Prerequisites {#prerequisites}
 
@@ -33,9 +33,9 @@ The flow diagram below describes the order of the steps taken to deliver hybrid 
 1. The Server API returns the personalization content to your application server.
 1. The application server returns an HTML response to the client browser, containing the [identity and cluster cookies](#cookies).
 1. On the client page, the [!DNL Web SDK] `applyResponse` command is called, passing in the headers and body of the [!UICONTROL Server API] response from the previous step.
-1. The [!DNL Web SDK] renders page load [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) offers automatically, because the `renderDecisions` flag is set to `true`.
-1. Form-based [!DNL JSON] offers are manually applied through the `applyPersonalization` method, to update the [!DNL DOM] based on the personalization offer.
-1. For form-based activities, display events must manually be sent, to indicate when the offer has been displayed. This is done via the `sendEvent` command.
+1. The [!DNL Web SDK] renders Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) offers and Journey Optimizer Web Channel items automatically, because the `renderDecisions` flag is set to `true`.
+1. Target form-based [!DNL HTML]/[!DNL JSON] offers and Journey Optimizer code-based experiences are manually applied through the `applyProposition` method, to update the [!DNL DOM] based on the personalization content in the proposition.
+1. For Target form-based [!DNL HTML]/[!DNL JSON] offers and Journey Optimizer code-based experiences, display events must manually be sent, to indicate when the returned content has been displayed. This is done via the `sendEvent` command.
 
 ## Cookies {#cookies}
 

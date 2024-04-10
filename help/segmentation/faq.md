@@ -263,3 +263,10 @@ Until the next batch segment evaluation job is run, the new merged profile will 
 If you use profile lookup to retrieve the newly created profile and look at its audience membership, it'll show that it's a member of **both** Audience A and Audience B, despite the fact that both of these audiences have contradictory definitions. Once the daily batch segmentation evaluation job runs, the audience membership will be updated to reflect this updated state of profile data.
 
 If you need more real-time audience resolution, use streaming or edge segmentation.
+
+### How long does it take for streaming data to be available in batch segmentation workflows?
+
+It may take up to three hours for streaming data to be available in batch segmentation workflows. 
+
+For example, if a batch segmentation job runs at 9PM, it is guaranteed to contain streaming ingested data **up until** 6PM. Streaming ingested data that was ingested after 6PM but before 9PM **may** be included.
+
