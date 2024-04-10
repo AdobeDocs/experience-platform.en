@@ -7,7 +7,7 @@ exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
 
 >[!WARNING]
 >
->The [!DNL Google Ads] source is temporarily unavailable. We apologize for any inconvenience as we work towards resolving issues with the source.
+>The [!DNL Google Ads] source is temporarily unavailable. Adobe is working to resolve issues with this source.
 
 >[!NOTE]
 >
