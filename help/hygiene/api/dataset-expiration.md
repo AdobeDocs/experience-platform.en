@@ -194,7 +194,7 @@ To create a dataset expiration, perform a POST request as shown below and provid
 
 >[!NOTE]
 >
->If you receive a 404 error, ensure the request has no additional forward slash. A trailing slash can break a POST request.
+>If you receive a 404 error, ensure that the request has no additional forward slashes. A trailing slash can cause a POST request to fail.
 
 **API format**
 
