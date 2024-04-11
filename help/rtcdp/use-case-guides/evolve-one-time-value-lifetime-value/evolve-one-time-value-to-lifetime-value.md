@@ -20,7 +20,7 @@ Consider these customers who visit your properties and sporadically purchase the
 * Create audiences
 * Create journeys to action upon these audiences in Adobe Journey Optimizer and activate them in Real-Time CDP.
 
-![Step by step Evolve one-time value to lifetime value high level visual overview.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="1000" zoomable="yes"}
+![Step by step Evolve one-time value to lifetime value high level visual overview.](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){width="500" zoomable="yes"}
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -130,7 +130,7 @@ The customer attributes schema is represented by an [!UICONTROL XDM Individual P
 
 #### Customer digital transactions schema {#customer-digital-transactions-schema}
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website or on other associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via Web SDK and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced segmentation capabilities.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website or on other associated digital platforms. This data is typically ingested into [!DNL Adobe Experience Platform] via [Web SDK](/help/web-sdk/home.md) and is necessary to reference the various browse and conversion events that are used for triggering journeys, detailed online customer analysis, and enhanced segmentation capabilities.
 
 ![Customer digital transactions schema with field groups highlighted](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
 
@@ -147,17 +147,7 @@ The customer digital transactions schema is represented by an [!UICONTROL XDM Ex
 
 +++Web Details (Field Group)
 
-Web Details is a standard schema field group for the XDM ExperienceEvent class, used to describe information regarding web details events such as interaction, page details, and referrer.
-
-| Fields | Requirement | Description |
-| --- | --- | --- |
-| `web.webInteraction.linkClicks.id` | Suggested | The ID for the web link or URL that corresponds to the interaction. |
-| `web.webInteraction.linkClicks.value` | Suggested | The number of clicks for the web link or URL that corresponds to the interaction. |
-| `web.webInteraction.name` | Suggested | The name of the web page. |
-| `web.webInteraction.URL` | Suggested | The URL for the web page. |
-| `web.webPageDetails.name` | Suggested | The name of the web page where the web interaction occurred. |
-| `web.webPageDetails.URL` | Suggested | The URL of the web page where the web interaction occurred. |
-| `web.webReferrer.URL` | Suggested | Describes the referrer of a web interaction, which is the URL a visitor came from immediately before the current web interaction was recorded. |
+[Web Details](/help/xdm/field-groups/event/web-details.md) is a standard schema field group for the XDM ExperienceEvent class, used to describe information regarding web details events such as interaction, page details, and referrer.
 
 +++
 
@@ -213,7 +203,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 
 #### Customer offline transactions schema {#customer-offline-transactions-schema}
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on platforms outside of your website. This data is typically ingested into [!DNL Adobe Experience Platform] from a POS (or similar system) and most often streamed into Platform via an API connection. Its purpose is to reference the various offline conversion events that are used for triggering journeys, deep online and offline customer analysis, and enhanced segmentation capabilities.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on platforms outside of your website. This data is typically ingested into [!DNL Adobe Experience Platform] from a POS (or similar system) and most often streamed into Platform via an API connection. Read about [batch ingestion](/help/ingestion/batch-ingestion/getting-started.md). Its purpose is to reference the various offline conversion events that are used for triggering journeys, deep online and offline customer analysis, and enhanced segmentation capabilities.
 
 ![Customer offline transactions schema with field groups highlighted](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-offline-transactions-schema.png)
 
@@ -221,27 +211,13 @@ The customer offline transactions schema is represented by an [!UICONTROL XDM Ex
 
 +++Commerce Details (Field Group)
 
-| Fields | Requirement | Description |
-| --- | --- | --- |
-| `commerce.cart.cartID` | Required | An ID for the shopping cart. |
-| `commerce.order.orderType` | Required | An object that describes product order type. |
-| `commerce.order.payments.paymentAmount` | Required | An object that describes product order payment amount. |
-| `commerce.order.payments.paymentType` | Required | An object that describes product order payment type. |
-| `commerce.order.payments.transactionID` | Required | An object product order transaction ID. |
-| `commerce.order.purchaseID` | Required | An object product order purchase ID. |
-| `productListItems.name` | Required | A list of item names representing the products selected by a customer. |
-| `productListItems.priceTotal` | Required | The total price of list of items representing the products selected by a customer. |
-| `productListItems.product` | Required | The products selected. |
-| `productListItems.quantity` | Required | The quantity of list of items representing the products selected by a customer. |
+[[!UICONTROL Commerce Details]](/help/xdm/field-groups/event/commerce-details.md) is a standard schema field group for the [!DNL XDM ExperienceEvent] class], used to describe commerce data such as product information (SKU, name, quantity), and standard cart operations (order, checkout, abandon).
 
 +++
 
 +++Personal Contact Details (Field Group)
 
-| Fields | Requirement | Description |
-| --- | --- | --- |
-| `mobilePhone.number` | Required | The person's mobile phone number, which will be used for SMS. |
-| `personalEmail.address` | Required | The person's email address. |
+[[!UICONTROL Personal Contact Details]](/help/xdm/field-groups/profile/personal-contact-details.md) is a standard schema field group for the [!DNL XDM Individual Profile] class which describes the contact information for an individual person.
 
 +++
 
@@ -265,50 +241,7 @@ The [!DNL Adobe] web connector schema is represented by a [!UICONTROL XDM Experi
 
 +++Adobe Analytics ExperienceEvent Template (Field Group)
 
-| Fields | Requirement | Description |
-| --- | --- | --- |
-| `web.webInteraction.linkClicks.id` | Suggested | The id for the web link or URL that corresponds to the interaction. |
-| `web.webInteraction.linkClicks.value` | Suggested | The number of clicks for the web link or URL that corresponds to the interaction. |
-| `web.webInteraction.name` | Suggested | The name of the web page. |
-| `web.webInteraction.URL` | Suggested | The URL for the web page. |
-| `web.webPageDetails.name` | Suggested | The name of the web page where the web interaction occurred. |
-| `web.webPageDetails.URL` | Suggested | The URL of the web page where the web interaction occurred. |
-| `web.webReferrer.URL` | Suggested | Describes the referrer of a web interaction, which is the URL a visitor came from immediately before the current web interaction was recorded. |
-| `commerce.cart.cartID` | Suggested | |
-| `commerce.cart.cartSource` | Suggested | |
-| `commerce.cartAbandons.id` | Suggested | |
-| `commerce.cartAbandons.value` | Suggested | |
-| `commerce.order.orderType` | Suggested | |
-| `commerce.order.payments.paymentAmount` | Suggested | |
-| `commerce.order.payments.paymentType` | Suggested | |
-| `commerce.order.payments.transactionID` | Suggested | |
-| `commerce.order.priceTotal` | Suggested | |
-| `commerce.order.purchaseID` | Suggested | |
-| `commerce.productListAdds.id` | Suggested | |
-| `commerce.productListAdds.value` | Suggested | |
-| `commerce.productListOpens.id` | Suggested | |
-| `commerce.productListOpens.value` | Suggested | |
-| `commerce.productListRemoval.id` | Suggested | |
-| `commerce.productListRemoval.value` | Suggested | |
-| `commerce.productListViews.id` | Suggested | |
-| `commerce.productListViews.value` | Suggested | |
-| `commerce.productViews.id` | Suggested | |
-| `commerce.productViews.value` | Suggested | |
-| `commerce.purchases.id` | Suggested | |
-| `commerce.purchases.value` | Suggested | |
-| `marketing.campaignGroup` | Suggested | |
-| `marketing.campaignName` | Suggested | |
-| `marketing.trackingCode` | Suggested | |
-| `productListItems.name` | Suggested | |
-| `productListItems.priceTotal` | Suggested | |
-| `productListItems.product` | Suggested | |
-| `productListItems.quantity` | Suggested | |
-| `endUserIDs._experience.emailid.authenticatedState` | Required | End user email address ID authenticated state. |
-| `endUserIDs._experience.emailid.id` | Required | End user email address ID. |
-| `endUserIDs._experience.emailid.namespace.code` | Required | End user email address ID namespace code. |
-| `endUserIDs._experience.mcid.authenticatedState` | Required | [!DNL Adobe] Marketing Cloud ID (MCID) authenticated state. The MCID is now known as the Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.id` | Required | [!DNL Adobe] Marketing Cloud ID (MCID). The MCID is now known as the Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | Required | [!DNL Adobe] Marketing Cloud ID (MCID) namespace code. |
+[[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](/help/xdm/field-groups/event/analytics-full-extension.md) is a standard schema field group which captures common metrics that are collected by Adobe Analytics.
 
 +++
 
@@ -356,13 +289,11 @@ There are no [marketing policies](/help/data-governance/policies/overview.md) re
 
 ### Create audiences {#create-audiences}
 
-This use case requires that you create two audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways in [!DNL Adobe Experience Platform].
+This use case requires that you create two audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways in [!DNL Adobe Experience Platform:
 
-For more information on how to create an audience, read the [Audience service UI guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
-
-For more information on how to directly compose [Audiences](/help/segmentation/home.md), read the [Audience Composition UI guide](/help/segmentation/ui/audience-composition.md).
-
-For more information on how to build audiences through Platform-derived segment definitions, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
+* For information on how to create an audience, read the [Audience service UI guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
+* For information on how to directly compose [Audiences](/help/segmentation/home.md), read the [Audience Composition UI guide](/help/segmentation/ui/audience-composition.md).
+* For information on how to build audiences through Platform-derived segment definitions, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
 
 Specifically, you must create and use two audiences at different steps of the use case, as shown in the image below.
 
@@ -372,7 +303,7 @@ Specifically, you must create and use two audiences at different steps of the us
 
 >[!TAB Adobe Journey Optimizer Qualifying Audience]
 
-This high-value and low-frequency audience includes the profiles that you want to reach out to via a journey, to let them know about a new subscription program.
+This high-value and low-frequency audience includes the profiles that you want to reach out to via a journey, to let them know about a new subscription program. The audience details are below:
 
 * Description: Profiles who have spent more than $250 in aggregate in the last 3 months
 * Fields and Conditions Needed in the audience:
@@ -384,7 +315,7 @@ This high-value and low-frequency audience includes the profiles that you want t
 
 >[!TAB Paid media audience]
 
-This audience is created to include profiles who have spent more than $250 in aggregate in the last 3 months, and have not had a purchase in the last 7 days. 
+This audience is created to include profiles who have spent more than $250 in aggregate in the last 3 months, and have not had a purchase in the last 7 days. The audience details are below:
 
 * Description: profiles who have spent more than $250 in aggregate in the last 3 months, and have not had a purchase in the last 7 days. 
 * Fields and Conditions Needed:
@@ -443,9 +374,13 @@ The journey shown above follows the following logic.
 
 >[!TAB Order Confirmation Journey]
 
-The order confirmation journey focuses on whether a purchase was made through the website or mobile app.<p>![Customer order confirmation journey high level visual overview.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Customer order confirmation journey high level visual overview."){width="2560" zoomable="yes"}</p>
+The order confirmation journey focuses on whether a purchase was made through the website or mobile app. After a customer successfully completed the purchase of, for example, a subscription with your company, you can set them on an order confirmation journey.
 
-+++Events
+![Customer order confirmation journey high level visual overview.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Customer order confirmation journey high level visual overview."){width="2560" zoomable="yes"}
+
++++Journey logic
+
+Use the suggested events, fields, and actions below in your confirmation journey:
 
 * Event 4: Online Purchases
     * Schema: Customer Digital Transactions
@@ -481,7 +416,7 @@ The order confirmation journey focuses on whether a purchase was made through th
     * Order Event
 
 * Conditions 
-    * Select Target Channel (Select one, or multiple channels for wider reach).
+    * Select Target Channel (you can select one or multiple channels for wider reach).
         * Order confirmation is considered serving in nature, so consent checking is usually unnecessary.
         * Email
         * Push
@@ -494,7 +429,7 @@ The order confirmation journey focuses on whether a purchase was made through th
 
 >[!ENDTABS]
 
-For more information about creating journeys in [!DNL Adobe Journey Optimizer], read the [Get started with journeys guide](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
+For more information about creating journeys in [!DNL Adobe Journey Optimizer], read the [get started with journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) guide.
 
 ### Set up destination to display paid media ads {#paid-media-ads}
 
