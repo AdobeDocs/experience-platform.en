@@ -43,7 +43,7 @@ Using [!DNL Query Editor], you can write, execute, and save queries for customer
 
 >[!IMPORTANT]
 >
->The legacy editor will be retired on 01-April-2024, and will no longer be available for use.
+>The legacy editor will be retired on 30-April-2024, and will no longer be available for use.
 
 ## Enhanced Query Editor toggle {#enhanced-editor-toggle}
 
@@ -249,6 +249,10 @@ The console provides information on the status and operation of [!DNL Query Serv
 After a query has been completed, the results are displayed in the **[!UICONTROL Results]** tab, next to the **[!UICONTROL Console]** tab. This view shows the tabular output of your query, displaying between 50 and 500 rows of results depending on your chosen [result count](#result-count). This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial](./create-datasets.md) for instructions on how to generate a dataset from query results in [!DNL Query Editor].
 
 ![The Results tab of the Query Editor console displaying the results of a query run.](../images/ui/query-editor/query-results.png)
+
+## Use cases {#use-cases}
+
+Query Service provides solutions to a variety of use cases across industries and business scenarios. These practical examples demonstrate the flexibility and impact of the service in addressing diverse needs. To [uncover how Query Service can bring value to your specific business needs](../use-cases/overview.md), explore the comprehensive collection of use case documents. Learn how to use Query Service to provide insights and solutions for enhanced operational efficiency and business success.
 
 ## Run queries with [!DNL Query Service] tutorial video {#query-tutorial-video}
 

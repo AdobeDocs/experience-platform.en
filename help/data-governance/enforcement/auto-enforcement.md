@@ -7,15 +7,15 @@ exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 ---
 # Automatic policy enforcement
 
+Data usage labels and policies are available to all Adobe Experience Platform users. Define data usage policies and apply data usage labels to ensure that any sensitive, identifiable, or contractual data are handled accurately. These measures help enforce your organization's data governance rules on how data can be accessed, processed, stored, and shared. 
+
+To help safeguard your organization from potential risks and liabilities, Platform automatically enforces usage policies should any violations occur when activating audiences to destinations. 
+
 >[!IMPORTANT]
 >
->Automatic policy enforcement is only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
+>Consent policies and automatic consent policy enforcement is only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
 
-Once data is labeled and data usage policies are defined, you can enforce data usage compliance with policies. When activating audiences to destinations, Adobe Experience Platform automatically enforces usage policies should any violations occur.
-
->[!NOTE]
->
->This document focuses on the enforcement of data governance and consent policies. For information on access control policies, refer to the documentation on [attribute-based access control](../../access-control/abac/overview.md).
+This document focuses on the enforcement of data governance and consent policies. For information on access control policies, refer to the documentation on [attribute-based access control](../../access-control/abac/overview.md).
 
 ## Prerequisites
 
@@ -86,29 +86,41 @@ The sections below outline the different policy enforcement messages that appear
 
 If a policy violation occurs from attempting to activate an audience (or [making edits to an already activated audience](#policy-enforcement-for-activated-audiences)) the action is prevented and a popover appears indicating that one or more policies have been violated. Once a violation has triggered, the **[!UICONTROL Save]** button is disabled for the entity you are modifying until the appropriate components are updated to comply with data usage policies.
 
-Select a policy violation in the popover's left column to display details for that violation.
+Select a policy name to display details for that violation.
 
-![](../images/enforcement/violation-policy-select.png)
+![A dialog that indicates a policy violation has occurred with the policy name highlighted.](../images/enforcement/violation-policy-select.png)
 
 The violation message provides a summary of the policy that was violated, including the conditions the policy is configured to check for, the specific action that triggered the violation, and a list of possible resolutions for the issue.
 
-![](../images/enforcement/violation-summary.png)
+![A policy violation dialog with the violation summary highlighted.](../images/enforcement/violation-summary.png)
 
 A data lineage graph is displayed below the violation summary, allowing you to visualize which datasets, merge policies, audiences, and destinations were involved in the policy violation. The entity that you are currently changing is highlighted in the graph, indicating which point in the flow is causing the violation to occur. You can select an entity name within the graph to open the details page for the entity in question.
 
-![](../images/enforcement/data-lineage.png)
+![A policy violation dialog with the data lineage graph highlighted.](../images/enforcement/data-lineage.png)
 
-You can also use the **[!UICONTROL Filter]** icon (![](../images/enforcement/filter.png)) to filter the displayed entities by category. At least two categories must be selected in order for data to be displayed.
+You can also use the **[!UICONTROL Filter]** icon (![A filter icon.](../images/enforcement/filter.png)) to filter the displayed entities by category. At least two categories must be selected in order for data to be displayed.
 
-![](../images/enforcement/lineage-filter.png)
+![A policy violation dialog with the data lineage filter and drop-down menu highlighted.](../images/enforcement/lineage-filter.png)
 
 Select **[!UICONTROL List view]** to display the data lineage as a list. To switch back to the visual graph, select **[!UICONTROL Path view]**.
 
-![](../images/enforcement/list-view.png)
+![A policy violation dialog with the data lineage path view highlighted.](../images/enforcement/list-view.png)
+
+#### Labels successfully applied {#labels-successfully-applied}
+
+If you create data usage policies before you label your schema fields, you may encounter a governance policy violation dialog as soon as you apply labels to your schema. In this case, you can successfully label part of your schema. The [!UICONTROL Labels successfully applied] tab indicates which labels were successfully applied, as there are no policy restrictions against that field.
+
+Use the data lineage diagram to understand what other configuration changes need to be made before you can add the label to your schema field.
+
+![A policy violation dialog with the [!UICONTROL Labels successfully applied] tab highlighted.](../images/enforcement/labels-successfully-applied.png)
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
-If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating an audience to a destination, you can see how your consent policies affect the percentage of profiles that are included in the activation.
+When activating an audience to a destination, you can see how your [consent policies](../policies/user-guide.md#consent-policy) affect different percentages of profiles included in the activation.
+
+>[!NOTE]
+>
+>Consent policies are only available for organizations that have purchased Adobe Healthcare Shield or Adobe Privacy & Security Shield.
 
 #### Consent policy enhancement for paid media {#consent-policy-enhancement}
 

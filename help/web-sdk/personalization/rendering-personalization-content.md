@@ -10,7 +10,7 @@ Adobe Experience Platform Web SDK supports retrieving personalized content from 
 
 Additionally, the Web SDK powers same-page and next-page personalization capabilities through Adobe Experience Platform personalization destinations, such as [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and the [custom personalization connection](../../destinations/catalog/personalization/custom-personalization.md). To learn how to configure Experience Platform for same-page and next-page personalization, see the [dedicated guide](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-Content created within Adobe Target's [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) and Adobe Journey Optimizer's [Web Campaign UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) can be retrieved and rendered automatically by the SDK. Content created within Adobe Target's [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) or Offer Decisioning cannot be rendered automatically by the SDK. Instead, you must request this content using the SDK and then manually render the content yourself.
+Content created within Adobe Target's [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) and Adobe Journey Optimizer's [Web Campaign UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) can be retrieved and rendered automatically by the SDK. Content created within Adobe Target's [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), Adobe Journey Optimizer's [Code-based Experience Channel](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) or Offer Decisioning cannot be rendered automatically by the SDK. Instead, you must request this content using the SDK and then manually render the content yourself.
 
 ## Automatically rendering content {#automatic}
 
@@ -293,7 +293,7 @@ The SDK provides facilities to [manage flicker](../personalization/manage-flicke
 
 ## Render propositions in single-page applications without incrementing metrics {#applypropositions}
 
-The `applyPropositions` command allows you to render or execute an array of propositions from [!DNL Target] into single-page applications, without incrementing the [!DNL Analytics] and [!DNL Target] metrics. This increases reporting accuracy.
+The `applyPropositions` command allows you to render or execute an array of propositions from [!DNL Target] or Adobe Journey Optimizer into single-page applications, without incrementing the [!DNL Analytics] and [!DNL Target] metrics. This increases reporting accuracy.
 
 >[!IMPORTANT]
 >
@@ -332,7 +332,7 @@ alloy("applyPropositions", {
 
 ### Use case 2: Render propositions that do not have a selector
 
-This use case applies to activity offers authored using the [!DNL Target Form-based Experience Composer].
+This use case applies to experiences authored using the [!DNL Target Form-based Experience Composer] or Adobe Journey Optimizer's [Code-based Experience Channel](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based).
 
 You must provide the selector, action, and scope in the `applyPropositions` call.
 
@@ -366,16 +366,31 @@ alloy("sendEvent", {
         var renderedPropositions = applyPropositionsResult.propositions;
 
         // Send the display notifications via sendEvent command
-        alloy("sendEvent", {
-            "xdm": {
-                "eventType": "decisioning.propositionDisplay",
-                "_experience": {
-                    "decisioning": {
-                        "propositions": renderedPropositions
-                    }
-                }
-            }
-        });
+        function sendDisplayEvent(proposition) {
+            const {
+                id,
+                scope,
+                scopeDetails = {}
+            } = proposition;
+
+            alloy("sendEvent", {
+                xdm: {
+                    eventType: "decisioning.propositionDisplay",
+                    _experience: {
+                        decisioning: {
+                            propositions: [{
+                                id: id,
+                                scope: scope,
+                                scopeDetails: scopeDetails,
+                            }, ],
+                            propositionEventType: {
+                                display: 1
+                            },
+                        },
+                    },
+                },
+            });
+        }
     });
 });
 ```

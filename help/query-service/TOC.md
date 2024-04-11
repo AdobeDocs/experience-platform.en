@@ -33,6 +33,7 @@ role: User,Developer
         - [Export data to ML environments](data-distiller/ml-feature-pipelines/export-data.md)
         - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Use cases {#use-cases}
+    - [Overview](use-cases/overview.md)
     - [Abandoned browse](use-cases/abandoned-browse.md)
     - [Attribution analysis](use-cases/attribution-analysis.md)
     - [Bot filtering](use-cases/bot-filtering.md)
@@ -108,4 +109,4 @@ role: User,Developer
 - [Frequently asked questions](troubleshooting-guide.md)
 - [IP address allowlist](ip-address-allowlist.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

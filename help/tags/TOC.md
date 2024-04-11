@@ -174,6 +174,7 @@ role: Developer
       * [Overview](./extensions/client/marketo/overview.md)
       * [Release notes](./extensions/client/marketo/release-notes.md)
     * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
+    * [Merkury Tag](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
     * [!DNL Meta Pixel] {#meta}
       * [Overview](./extensions/client/meta/overview.md)
     * [Monita](https://exchange.adobe.com/apps/ec/106544)
@@ -190,7 +191,6 @@ role: Developer
     * [SDI Survey](https://exchange.adobe.com/apps/ec/102991)
     * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
     * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
-    * [SPA View Change Event](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
     * [Storage Spanner](https://exchange.adobe.com/apps/ec/102990)
     * [TAGS by Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
     * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
@@ -216,7 +216,6 @@ role: Developer
     * [!DNL Braze] {#braze}
       * [Overview](./extensions/server/braze/overview.md)
     * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)
-    * [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
     * Core {#core}
       * [Overview](./extensions/server/core/overview.md)
     * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)
@@ -317,5 +316,5 @@ role: Developer
 * [FAQ](./faq.md)
 * [Terminology updates](./term-updates.md)
 * [Deprecating support for Internet Explorer 10 and 11](./ie-deprecation.md)
-* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

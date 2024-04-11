@@ -18,6 +18,8 @@ Once you meet the [prerequisites](overview.md), you can deploy the Web SDK tag e
 1. Locate and install the **[!UICONTROL Adobe Experience Platform Web SDK]** extension.
 1. Select the appropriate sandbox and datastream for each environment, then click **[!UICONTROL Save]**.
 
+See the documentation on how to [configure the Web SDK tag extension](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) for more information.
+
 ## Publish the tag code to development
 
 The Web SDK extension is now installed for this tag. You can now publish the tag code for use in a development environment.

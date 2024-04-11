@@ -113,8 +113,8 @@ The following tables list all supported mapping functions, including sample expr
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Retrieves the current time. | | now() | now() | `2021-10-26T10:10:24Z` |
 | timestamp | Retrieves the current Unix time. | | timestamp() | timestamp() | 1571850624571 |
-| format | Formats the input date according to a specified format. | <ul><li>DATE: **Required** The input date, as a ZonedDateTime object, that you want to format.</li><li>FORMAT: **Required** The format that you want the date to be changed to.</li></ul> | format(DATE, FORMAT)  | format(2019-10-23T11:24:00+00:00, "yyyy-MM-dd HH:mm:ss") | `2019-10-23 11:24:35` |
-| dformat | Converts a timestamp to a date string according to a specified format. | <ul><li>TIMESTAMP: **Required** The timestamp you want to format. This is written in milliseconds.</li><li>FORMAT: **Required** The format that you want the timestamp to become.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, "yyyy-MM-dd'T'HH:mm:ss.SSSX") | `2019-10-23T11:24:35.000Z` |
+| format | Formats the input date according to a specified format. | <ul><li>DATE: **Required** The input date, as a ZonedDateTime object, that you want to format.</li><li>FORMAT: **Required** The format that you want the date to be changed to.</li></ul> | format(DATE, FORMAT)  | format(2019-10-23T11:24:00+00:00, "`yyyy-MM-dd HH:mm:ss`") | `2019-10-23 11:24:35` |
+| dformat | Converts a timestamp to a date string according to a specified format. | <ul><li>TIMESTAMP: **Required** The timestamp you want to format. This is written in milliseconds.</li><li>FORMAT: **Required** The format that you want the timestamp to become.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875000, "`yyyy-MM-dd'T'HH:mm:ss.SSSX`") | `2019-10-23T11:24:35.000Z` |
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the source date.**Note:** This does **not** represent the format you want to convert the date string into. </li><li>DEFAULT_DATE: **Required** The default date returned, if the date provided is null.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date("2019-10-23 11:24", "yyyy-MM-dd HH:mm", now()) | `2019-10-23T11:24:00Z` |
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the source date.**Note:** This does **not** represent the format you want to convert the date string into. </li></ul> | date(DATE, FORMAT) | date("2019-10-23 11:24", "yyyy-MM-dd HH:mm") | `2019-10-23T11:24:00Z` |
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li></ul> | date(DATE) | date("2019-10-23 11:24") | "2019-10-23T11:24:00Z" |
@@ -283,7 +283,7 @@ For more information on device field values, please read the [list of device fie
 
 >[!NOTE]
 >
->You may only use the following analytics functions for streaming ingestion.
+>You may only use the following analytics functions for WebSDK and Adobe Analytics flows.
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
