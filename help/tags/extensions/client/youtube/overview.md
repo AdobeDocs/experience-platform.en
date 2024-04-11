@@ -108,4 +108,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-For more information on how to create and leverage data elements effectively within Platform, read the [Data elements](../../../ui/managing-resources/data-elements.md) documentation.
+For more information on how to create and leverage data elements effectively within Platform, read the [data elements](../../../ui/managing-resources/data-elements.md) documentation.
