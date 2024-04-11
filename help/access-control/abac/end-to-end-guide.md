@@ -126,6 +126,10 @@ The **[!UICONTROL Edit labels]** dialog appears, allowing you to choose the labe
 
 ## Apply labels to segments
 
+>[!NOTE]
+>
+>Any segment that utilizes a labeled attribute must likewise be labeled if you want the same access restrictions to apply to it.
+
 Once you have completed labeling your schema fields, you can now begin labeling your segments.
 
 Select **[!UICONTROL Segments]** from the left navigation. A list of segments available in your organization is displayed. In this example, the following two segments are to be labeled as they contain sensitive health data:
