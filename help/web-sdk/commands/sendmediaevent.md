@@ -21,7 +21,7 @@ Select the tabs below to see examples of event type handling for each event type
 
 ### Play {#play}
 
-The `media.play` event type is used to track when media playback starts. This event should be sent when the media starts playing.
+The `media.play` event type is used to track when media playback starts. This event should be sent when the player changes state to "playing" from another state. Other states from which the player moves to "playing" include "buffering", the user resuming from "paused", the player recovering from an error, or autoplay.
 
 >[!BEGINTABS]
 
@@ -57,7 +57,7 @@ sessionPromise.then(sessionID => {
 
 ### Pause {#pause}
 
-The `media.pauseStart` event type is used to track when a media playback is paused. This event should be sent when the media is paused.
+The `media.pauseStart` event type is used to track when a media playback is paused. This event should be sent when the user presses **[!UICONTROL Pause]**. There is no resume event type. A resume is inferred when you send a `media.play` event after a `media.pauseStart`.
 
 >[!BEGINTABS]
 
@@ -716,7 +716,7 @@ sessionPromise.then(sessionID => {
 
 ### Session complete {#session-complete}
 
-The `media.sessionComplete` event type is used to track when a media session completes. This event should be sent when the media session completes.
+The `media.sessionComplete` event type is used to track when a media session completes. This event should be sent when the end of the main content is reached.
 
 >[!BEGINTABS]
 

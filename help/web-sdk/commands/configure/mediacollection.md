@@ -52,5 +52,5 @@ alloy("configure", {
 | `channel` | String | Yes | The name of the channel where media collection occurs. Example: `Video channel`. |
 |`playerName`| String  | Yes | The name of the media player. |
 |`appVersion`| String  | No  | The version of the Web SDK used for media collection. |
-| `mainPingInterval` | Integer | No | Frequency of pings for main content. The default value is `10`. Values can range from `10` to `50`.  If no value is specified, the default value is used in automatic mode.|
-| `adPingInterval`| Integer | No | Frequency of pings for ad content. The default value is `10`. Values can range from `1` to `10`. If no value is specified, the default value is used in automatic mode. |
+| `mainPingInterval` | Integer | No | Frequency of pings for main content. The default value is `10`. Values can range from `10` to `50`.  If no value is specified, the default value is used when using [automatically-tracked sessions](../createmediasession.md#automatic).|
+| `adPingInterval`| Integer | No | Frequency of pings for ad content. The default value is `10`. Values can range from `1` to `10`. If no value is specified, the default value is used when using [automatically-tracked sessions](../createmediasession.md#automatic) |

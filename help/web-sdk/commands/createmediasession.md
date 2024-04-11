@@ -7,12 +7,12 @@ description: Learn how to configure Web SDK to manage media sessions automatical
 
 The `createMediaSession` command is part of the Web SDK `mediaCollection` component. You can use this component to collect data related to media sessions on your website. See the `mediaCollection` [documentation](configure/mediacollection.md) to learn how to configure this component.
 
-The collected data can include information about media playbacks, pauses, completions, and other related events. Once collected, you can send this data to Adobe Experience Platform and/or Adobe Analytics, to generate reports. This feature provides a comprehensive solution for tracking and understanding media consumption behavior on your website.
+The collected data can include information about media playbacks, pauses, completions, and other related events. Once collected, you can send this data to [Adobe Analytics for Streaming Media](https://experienceleague.adobe.com/en/docs/media-analytics/using/media-overview), to aggregate metrics. This feature provides a comprehensive solution for tracking and understanding media consumption behavior on your website.
 
 You can create media sessions in Web SDK in two ways:
 
-* [Automatically-tracked media sessions](#automatic) allow the Web SDK to manage the dispatch of media ping events to Adobe Experience Platform and/or Adobe Analytics. The frequency of these pings is determined by the configuration settings of the [mediaCollection](../configure/mediacollection.md) component.
-* [Manually-tracked media sessions](#manual) give you more control over the dispatch of session ping events to Adobe Experience Platform and/or Adobe Analytics. Additionally, you have the ability to store the `sessionID` for media sessions.
+* [Automatically-tracked media sessions](#automatic) allow the Web SDK to manage the dispatch of media ping events to [Adobe Analytics for Streaming Media](https://experienceleague.adobe.com/en/docs/media-analytics/using/media-overview). The frequency of these pings is determined by the configuration settings of the [mediaCollection](../configure/mediacollection.md) component.
+* [Manually-tracked media sessions](#manual) give you more control over the dispatch of session ping events to [Adobe Analytics for Streaming Media](https://experienceleague.adobe.com/en/docs/media-analytics/using/media-overview). Additionally, you have the ability to store the `sessionID` for media sessions.
 
 ## Create an automatically-tracked media session {#automatic}
 
