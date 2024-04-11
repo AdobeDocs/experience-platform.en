@@ -9,10 +9,10 @@ The `sendMediaEvent` command is part of the Web SDK `mediaCollection` component.
 
 Use the `sendMediaEvent` command to track media playbacks, pauses, completions, player state updates, and other related events.
 
-Web SDK can handle media events in two ways:
+Web SDK can handle media events based on the type of media session tracking:
 
-* **Automatic media event handling**. In this mode you don't need to pass the `sessionID` to the media event, or the playhead value. The Web SDK will handle this for you, based on the player ID provided and the `getPlayerDetails` callback function provided when starting the media session.
-* **Manual media event handling**. In this mode you need to pass the `sessionID` to the media event, along with the playhead value (integer value). You could also pass the Quality of Experience data details, if needed.
+* **Event handling for automatically-tracked sessions**. In this mode you don't need to pass the `sessionID` to the media event, or the playhead value. The Web SDK will handle this for you, based on the player ID provided and the `getPlayerDetails` callback function provided when starting the media session.
+* **Event handling for manually-tracked sessions**. In this mode you need to pass the `sessionID` to the media event, along with the playhead value (integer value). You could also pass the Quality of Experience data details, if needed.
 
 ## Handle media events by type {#handle-by-type}
 

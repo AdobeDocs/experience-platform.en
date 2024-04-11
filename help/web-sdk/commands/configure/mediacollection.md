@@ -3,7 +3,7 @@ title: mediaCollection
 description: Configure the Web SDK to collect data related to media usage on your web properties.
 ---
 
-# `mediacollection`
+# `mediaCollection`
 
 The `mediaCollection` component helps you collect data related to media sessions on your website. 
 
@@ -11,7 +11,7 @@ The collected data can include information about media playbacks, pauses, comple
 
 ## Prerequisites {#prerequisites}
 
-To use the `mediacollection` component of Web SDK, you must meet the following prerequisites:
+To use the `mediaCollection` component of Web SDK, you must meet the following prerequisites:
 
 * Make sure you have access to Adobe Experience Platform and/or Adobe Analytics.
 * You must use Web SDK version 2.20.0 or later. See the [Web SDK installation overview](../../install/overview.md) to learn how to install the latest version.
@@ -29,8 +29,6 @@ To configure media collection in the Web SDK tag extension, follow the steps bel
 1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
 1. Configure the **[!UICONTROL Media Collection]** settings as described in the [Web SDK tag extension configuration page](../../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#media-collection).
 
-
-
 ## Configure media collection using the Web SDK JavaScript library {#library}
 
 To configure media collection in Web SDK, use the properties described below.
@@ -42,7 +40,7 @@ alloy("configure", {
     mediaCollection: {
         channel: "video channel",
         playerName: "test player",
-        appVersion: "alloy 2.16.0",
+        appVersion: "Media Analytics with Web SDK 2.20.0",
         mainPingInterval: 10,
         adPingInterval: 10
     }
