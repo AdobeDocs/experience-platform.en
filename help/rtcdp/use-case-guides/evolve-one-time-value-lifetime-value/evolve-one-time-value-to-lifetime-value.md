@@ -211,7 +211,7 @@ The customer offline transactions schema is represented by an [!UICONTROL XDM Ex
 
 +++Commerce Details (Field Group)
 
-[Commerce Details](/help/xdm/field-groups/event/commerce-details.md) is a standard schema field group for the [!DNL XDM ExperienceEvent] class], used to describe commerce data such as product information (SKU, name, quantity), and standard cart operations (order, checkout, abandon).
+[Commerce Details](/help/xdm/field-groups/event/commerce-details.md) is a standard schema field group for the [!DNL XDM ExperienceEvent] class, used to describe commerce data such as product information (SKU, name, quantity), and standard cart operations (order, checkout, abandon).
 
 +++
 
