@@ -199,6 +199,24 @@ The count function is now added. You can now select the count function and the v
 
 ![A list of the count functions is displayed and highlighted.](../images/ui/segment-builder/select-count.png)
 
+### Time constraints {#time-constraints}
+
+Time constraints let you filter time-based attributes and events to specified timings.
+
+When you're applying a time constraint on a time-based attribute, the attribute **must** have a full timestamp.
+
+IMAGE
+
+When you're applying a time constraint on an event, you can either apply it on the canvas-level or on the card-level.
+
+#### Canvas-level constraint
+
+To apply a canvas-level time constraint, 
+
+#### Card-level constraint
+
+To apply a card-level constraint,
+
 ## Containers
 
 Segment rules are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
