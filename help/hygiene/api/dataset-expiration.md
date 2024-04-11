@@ -297,7 +297,7 @@ curl -X PUT \
 
 | Property | Description |
 | --- | --- |
-| `expiry` | **Required** A date and time in ISO 8601 format. If the string has no explicit time zone offset, the time zone is assumed to be UTC. The lifespan of data within the system is set according to the provided expiry value. Any previous expiration timestamp for the same dataset is be replaced by the new expiration value you have provided. This date and time must be at least **24 hours in the future**. |
+| `expiry` | **Required** A date and time in ISO 8601 format. If the string has no explicit time zone offset, the time zone is assumed to be UTC. The lifespan of data within the system is set according to the provided expiry value. Any previous expiration timestamp for the same dataset is to be replaced by the new expiration value you have provided. This date and time must be at least **24 hours in the future**. |
 | `displayName` | A display name for the expiration request. |
 | `description` | An optional description for the expiration request. |
 

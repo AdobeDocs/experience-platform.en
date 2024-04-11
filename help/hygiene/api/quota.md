@@ -34,11 +34,11 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | Parameter | Description |
 | --- | --- |
-| `{QUOTA_TYPE}` | An optional query parameter that specifies the type of quota to retrieve. If no `quotaType` parameter is provided, all quota values are returned in the API response. Accepted type values include:<ul><li>`datasetExpirationQuota`: The number of concurrently active dataset expirations for your organization</li><li>`dailyConsumerDeleteIdentitiesQuota`: The total number of record delete requests made by your organization today</li><li>`monthlyConsumerDeleteIdentitiesQuota`: The total number of record delete requests made by your organization this month.</li><li>`monthlyUpdatedFieldIdentitiesQuota`: The total number of record updates requests made by your organization this month</li></ul> |
+| `{QUOTA_TYPE}` | An optional query parameter that specifies the type of quota to retrieve. If no `quotaType` parameter is provided, all quota values are returned in the API response. Accepted type values include:<ul><li>`datasetExpirationQuota`: This object shows the number of concurrently active dataset expirations for your organization, and your total allowance of expirations. </li><li>`dailyConsumerDeleteIdentitiesQuota`: This object shows the total number of record delete requests made by your organization today and your total daily allowance.<br>Note: Only accepted requests are counted. If a workorder is rejected because it fails validation, those identity-deletions do not count against your quota.</li><li>`monthlyConsumerDeleteIdentitiesQuota`: This object shows the total number of record delete requests made by your organization this month and your total monthly allowance.</li><li>`monthlyUpdatedFieldIdentitiesQuota`: This object shows the total number of record updates requests made by your organization this month and your total monthly allowance.</li></ul> |
 
 <!-- 
-These updates were made for PLATIR-38112. Are the definitions of these accepted values accurate?
--->
+So, there is 'quota' and 'consumed' values. The quota is exactly that - how much the customer has allotted for a given time (monthly | daily). The consumed value - is the tracked usage/consumption of the each type. The endpoint response is also has an entry for each DH type of quota with their respective consumed and quota amounts for a given time.
+ -->
 
 **Request**
 
@@ -88,6 +88,6 @@ A successful response returns the details of your data lifecycle quotas.
 
 | Property | Description |
 | --- | --- |
-| `quotas` | Lists the quota information for each data lifecycle job type. Each quota object contains the following properties:<ul><li>`name`: The data lifecycle job type:<ul><li>`expirationDatasetQuota`: Dataset expirations</li><li>`deleteIdentityWorkOrderDatasetQuota`: Record deletes</li></ul></li><li>`description`: A description of the data lifecycle job type.</li><li>`consumed`: The number of jobs of this type run in the current monthly period.</li><li>`quota`: The quota limit for this job type. For record deletes and updates, this represents the number of jobs that can be run for each monthly period. For dataset expirations, this represents the number of jobs that can be concurrently active at any given time.</li></ul> |
+| `quotas` | Lists the quota information for each data lifecycle job type. Each quota object contains the following properties:<ul><li>`name`: The data lifecycle job type:<ul><li>`expirationDatasetQuota`: Dataset expirations</li><li>`deleteIdentityWorkOrderDatasetQuota`: Record deletes</li></ul></li><li>`description`: A description of the data lifecycle job type.</li><li>`consumed`: The number of jobs of this type run in the current period. The period is indicated by the object name.</li><li>`quota`: The allotment for this job type for your organization. For record deletes and updates, this represents the number of jobs that can be run for each monthly period. For dataset expirations, this represents the number of jobs that can be concurrently active at any given time.</li></ul> |
 
 {style="table-layout:auto"}
