@@ -21,7 +21,7 @@ A high-level workflow for gaining and assigning access permissions can be summar
 
 - After licensing Adobe Experience Platform, or an Application/App Service that uses Experience Platform, an email is sent to the administrator specified during licensing.
 - The administrator logs in to [Adobe Admin Console](#adobe-admin-console) and selects **Adobe Experience Platform** from the list of products on the overview page.
-- To grant access to Experience Platform, the administrator will need to add users to the default product profile: `AEP-Default-All-Users`. 
+- To grant access to Experience Platform, it is recommended that the administrator add users to the default product profile: `AEP-Default-All-Users`. 
 - In Experience Platform Permissions, the administrator can create new roles or edit the permissions and users for any existing roles.
 - When creating or editing a role, the administrator adds users to the role using the **[!UICONTROL users]** tab, and grants permissions to these users (such as "[!UICONTROL Read Datasets]" or "[!UICONTROL Manage Schemas]") by editing the role's permissions. Similarly, the administrator can assign access to sandboxes using the same editing option.
 - When users log in to the Experience Platform user interface, their access to Experience Platform capabilities is driven by the permissions that have been granted to them from the previous step. For example, if a user does not have the [!UICONTROL View Datasets] permission, the **[!UICONTROL Datasets]** tab in the side menu will not be visible to that user.

@@ -281,3 +281,9 @@ The table below explains the key elements of that portion of the response.
 | `items[].data.id` | The ID of the proposed offer. | `"id": "282484"`  |
 | `items[].data.format` | The format of the content associated with the proposed offer. | `"format: "application/json`| 
 | `items[].data.content` | Content associated with the proposed offer. This will be used for personalization of content of the calling application. | `"content": "<CONTENT CONFIGURED IN TARGET>"` |
+
+## Server-side personalization sample application {#sample}
+
+The sample application found at [this URL](https://github.com/adobe/alloy-samples/tree/main/target/personalization-server-side) demonstrates using Adobe Experience Platform to get personalization content from Adobe Target. The web page changes based on the personalization content returned.
+
+This sample does _not_ rely on client-side libraries like the [!DNL Web SDK] to get personalization content. Instead, it uses the Adobe Experience Platform APIs to fetch personalization content. Then the implementation generates the HTML server-side based on the personalization content returned.

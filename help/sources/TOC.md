@@ -87,6 +87,7 @@ role: Developer
     - [Snowflake connector](connectors/databases/snowflake.md)
     - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
   - Data & identity partner {#data-partner}
+    - [Acxiom Data Ingestion](connectors/data-partners/acxiom-data-ingestion.md)
     - [Acxiom Prospecting Data Import](connectors/data-partners/acxiom-prospecting-data-import.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - eCommerce {#ecommerce}
@@ -108,6 +109,7 @@ role: Developer
   - Payments {#payments}
     - [PayPal connector](connectors/payments/paypal.md)
     - [Square connector](connectors/payments/square.md)
+    - [Stripe connector](connectors/payments/stripe.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
     - [Generic REST API connector](connectors/protocols/generic-rest.md)
@@ -188,6 +190,7 @@ role: Developer
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)
       - [Square](tutorials/api/create/payments/square.md)
+      - [Stripe](tutorials/api/create/payments/stripe.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/api/create/protocols/odata.md)
       - [Generic REST API](tutorials/api/create/protocols/generic-rest.md)
@@ -290,10 +293,12 @@ role: Developer
       - [Phoenix](tutorials/ui/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - [Snowflake](tutorials/ui/create/databases/snowflake.md)
+      - [Snowflake Streaming](tutorials/ui/create/databases/snowflake-streaming.md)
       - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
     - Data & identity partner {#data-partner}
-      - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+      - [Acxiom Data Ingestion](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
       - [Acxiom Prospecting Data Import](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+      - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
     - eCommerce {#ecommerce}
       - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -315,6 +320,7 @@ role: Developer
     - Payments {#payments}
       - [PayPal](tutorials/ui/create/payments/paypal.md)
       - [Square](tutorials/ui/create/payments/square.md)
+      - [Stripe](tutorials/ui/create/payments/stripe.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/ui/create/protocols/odata.md)
     - Streaming {#streaming}
@@ -378,4 +384,4 @@ role: Developer
 - [IP address allow list](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
