@@ -1,5 +1,5 @@
 ---
-title: Manage media sessions automatically
+title: createMediaSession
 description: Learn how to configure Web SDK to manage media sessions automatically
 ---
 
