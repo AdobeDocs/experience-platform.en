@@ -211,7 +211,7 @@ The customer offline transactions schema is represented by an [!UICONTROL XDM Ex
 
 +++Commerce Details (Field Group)
 
-[[!UICONTROL Commerce Details]](/help/xdm/field-groups/event/commerce-details.md) is a standard schema field group for the [!DNL XDM ExperienceEvent] class], used to describe commerce data such as product information (SKU, name, quantity), and standard cart operations (order, checkout, abandon).
+[Commerce Details](/help/xdm/field-groups/event/commerce-details.md) is a standard schema field group for the [!DNL XDM ExperienceEvent] class], used to describe commerce data such as product information (SKU, name, quantity), and standard cart operations (order, checkout, abandon).
 
 +++
 
@@ -289,7 +289,7 @@ There are no [marketing policies](/help/data-governance/policies/overview.md) re
 
 ### Create audiences {#create-audiences}
 
-This use case requires that you create two audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways in [!DNL Adobe Experience Platform:
+This use case requires that you create two audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways in Adobe Experience Platform:
 
 * For information on how to create an audience, read the [Audience service UI guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 * For information on how to directly compose [Audiences](/help/segmentation/home.md), read the [Audience Composition UI guide](/help/segmentation/ui/audience-composition.md).
