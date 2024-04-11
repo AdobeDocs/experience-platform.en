@@ -36,10 +36,6 @@ GET /quota?quotaType={QUOTA_TYPE}
 | --- | --- |
 | `{QUOTA_TYPE}` | An optional query parameter that specifies the type of quota to retrieve. If no `quotaType` parameter is provided, all quota values are returned in the API response. Accepted type values include:<ul><li>`datasetExpirationQuota`: This object shows the number of concurrently active dataset expirations for your organization, and your total allowance of expirations. </li><li>`dailyConsumerDeleteIdentitiesQuota`: This object shows the total number of record delete requests made by your organization today and your total daily allowance.<br>Note: Only accepted requests are counted. If a workorder is rejected because it fails validation, those identity-deletions do not count against your quota.</li><li>`monthlyConsumerDeleteIdentitiesQuota`: This object shows the total number of record delete requests made by your organization this month and your total monthly allowance.</li><li>`monthlyUpdatedFieldIdentitiesQuota`: This object shows the total number of record updates requests made by your organization this month and your total monthly allowance.</li></ul> |
 
-<!-- 
-So, there is 'quota' and 'consumed' values. The quota is exactly that - how much the customer has allotted for a given time (monthly | daily). The consumed value - is the tracked usage/consumption of the each type. The endpoint response is also has an entry for each DH type of quota with their respective consumed and quota amounts for a given time.
- -->
-
 **Request**
 
 ```shell
