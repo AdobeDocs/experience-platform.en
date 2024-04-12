@@ -12,7 +12,8 @@ This tutorial covers the steps for retrieving data from a database source and br
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have a valid base connection ID with a database source. If you do not have this ID, then see the [sources overview](../../../home.md#database) for a list of database sources that you can create a base connection with.
+>* In order to create a dataflow, you must already have a valid base connection ID with a database source. If you do not have this ID, then see the [sources overview](../../../home.md#database) for a list of database sources that you can create a base connection with.
+>* For Experience Platform to ingest data, timezones for all table-based batch sources must be configured to UTC. The only time stamp that is supported for the [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) is TIMESTAMP_NTZ with UTC time.
 
 ## Getting started
 
