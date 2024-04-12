@@ -7,9 +7,9 @@ feature: Data Hygiene
 role: User, Developer, Admin
 ---
 
-# Advanced data lifecycle management {#data-lifecycle}
+# Advanced Data Lifecycle Management {#data-lifecycle}
 
-* [Advanced data lifecycle management overview](./home.md)
+* [Advanced Data Lifecycle Management overview](./home.md)
 * Data Lifecycle UI {#ui}
   * [Overview](./ui/overview.md)
   * [Automated dataset expirations](./ui/dataset-expiration.md)
