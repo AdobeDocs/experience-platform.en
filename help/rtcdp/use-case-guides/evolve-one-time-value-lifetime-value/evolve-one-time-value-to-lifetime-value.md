@@ -12,7 +12,7 @@ feature: Use Cases
 
 Implement the one-time customer value to lifetime value use case to drive brand engagement and brand loyalty. Build a connected customer experience on multiple channels or journey by using the power of Experience Platform, augmented by [Real-Time CDP](/help/rtcdp/home.md) and [Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home). 
 
-The personas that you are targeting are the infrequent visitors to your properties.
+The personas that you are targeting are the infrequent visitors to your properties who have made some purchases within the last three months.
 
 Consider these customers who visit your properties and sporadically purchase the products or services that you offer. You may want to create personalized campaigns to appeal to these customers so your brand can offer them longer-term value instead of one-time value. Learn how to:
 
