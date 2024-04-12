@@ -1,7 +1,7 @@
 ---
 keywords: metrics overview; rtcdp metrics overview
 title: Real-Time Customer Data Platform Home Page and Dashboards
-description: Dashboards, Home Page, and First-Time User Experience of Adobe Experience Platform
+description: Understand various dashboards, the home page, and the first-time user experience of Adobe Real-Time CDP.
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 ---
@@ -21,8 +21,8 @@ The [!UICONTROL Getting started with Real-Time Customer Profile] widget is divid
 
 * **Ingest data into Platform**: This widget directs you to the sources catalog. Use the sources catalog to select a source and ingest your data to Experience Platform. Select **[Configure sources]** to navigate to the sources catalog. For more information, read the [sources overview](../sources/home.md).
 * **Model data structures**: This widget directs you to the schemas overview. Use the schemas overview to browse for existing schemas or create a blueprint that describe the structure of your data. Select **[!UICONTROL Create schema]** to navigate to the schema creation interface. For more information, read the [schemas overview](../xdm/home.md).
-* **Build audiences**: This widget directs you to the egment Builder in the UI. Use the Segment Builder to interact with Profile data elements and define the criteria for your segment definition. Select **[!UICONTROL Create audience]** to navigate to the Segment Builder. For more information, read the [Segmentation Service overview](../segmentation/home.md).
-* **Send data to destinations**: This widget directs you to the destinations catalog. Use the destinations catalog to select a destination that you can then connect to and send segments to. Select **[!UICONTROL Set up destinations]** to navigate to the destinations catalog. For more information, read the [destinations overview](../destinations/home.md).
+* **Build audiences**: This widget directs you to the Segment Builder in the UI. Use the Segment Builder to interact with Profile data elements and define the criteria for your segment definition. Select **[!UICONTROL Create audience]** to navigate to the Segment Builder. For more information, read the [Segmentation Service overview](../segmentation/home.md).
+* **Send data to destinations**: This widget directs you to the destinations catalog. Use the destinations catalog to select a destination that you can then connect to and send audiences to. Select **[!UICONTROL Set up destinations]** to navigate to the destinations catalog. For more information, read the [destinations overview](../destinations/home.md).
 
 ![The Platform UI home page displaying the getting started widget](assets/platform-home/getting-started-widget.png)
 
@@ -38,7 +38,7 @@ The metrics dashboard displays up-to-date information on your Experience Platfor
 
 ### The leaderboard
 
-The leaderboard shows the current total number of schemas, datasets, profiles, and segments in your organization as well as their most recent update date.
+The leaderboard shows the current total number of schemas, datasets, profiles, and audiences in your organization as well as their most recent update date.
 
 ![The leaderboard section in the Platform UI home page.](assets/platform-home/leaderboard.png)
 
@@ -49,13 +49,13 @@ The leaderboard shows the current total number of schemas, datasets, profiles, a
 
 ### Recent items
 
-Recent items lists the most recent changes in your organization. In the example below, the most recent changes pertain to datasets, sources, segments, and destinations.
+Recent items lists the most recent changes in your organization. In the example below, the most recent changes pertain to datasets, sources, audiences, and destinations.
 
 ![The recent items section in the Platform UI home page.](assets/platform-home/recent-items.png)
 
 * **Recent datasets**: The **[!UICONTROL Recent datasets]** card shows the five most recent datasets created within the organization. This list is updated when a new dataset is created. Select a dataset to view the details for that item, or select **[!UICONTROL View all]** for a list of datasets. From there, you can select a specific source for details. For more information about datasets, see the [datasets overview](../catalog/datasets/overview.md).
 * **Recent sources**: The **[!UICONTROL Recent sources]** metric card shows the five most recent sources created within the organization. This list is updated when a new source is created. Select a source to view the details for that item, or select **[!UICONTROL View all]** for a list of sources. From there, you can select a specific source for details. For more information about sources, see [Sources overview](../sources/home.md).
-* **Recent segments**: The **[!UICONTROL Recent segments]** metric card shows the five most recent segments created within the organization. This list is updated when a new segment is created. Select a segment to view the details for that item, or select **[!UICONTROL View all]** for a list of segments. For more information about segments, see [Segmentation Service overview](../segmentation/home.md).
+* **Recent audiences**: The **[!UICONTROL Recent audiences]** metric card shows the five most recent audiences created within the organization. This list is updated when a new audience is created. Select an audience to view the details for that item, or select **[!UICONTROL View all]** for a list of audiences. For more information about audiences, see [Segmentation Service overview](../segmentation/home.md).
 * **Recent destinations**: The **[!UICONTROL Recent destinations]** metric card shows the five most recent destinations created within the organization. This list is updated when a new destination is created. Select a destination to view the details for that item, or select **[!UICONTROL View all]** for a list of destinations. For more information, read the [destinations overview](../destinations/home.md).
 
 ## Resources
