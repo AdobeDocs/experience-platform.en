@@ -12,7 +12,8 @@ This tutorial covers the steps for retrieving data from a third-party advertisin
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have a valid base connection ID with an advertising source. If you do not have this ID, then see the [sources overview](../../../home.md#advertising) for a list of advertising sources that you can create a base connection with.
+>* In order to create a dataflow, you must already have a valid base connection ID with an advertising source. If you do not have this ID, then see the [sources overview](../../../home.md#advertising) for a list of advertising sources that you can create a base connection with.
+>* For Experience Platform to ingest data, timezones for all table-based batch sources must be configured to UTC.
 
 ## Getting started
 
