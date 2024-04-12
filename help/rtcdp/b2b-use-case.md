@@ -11,7 +11,7 @@ exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 Real-Time Customer Data Platform B2B Edition expands the existing Real-Time CDP and Adobe Experience Platform offerings to support B2B data and workflows. This document provides an example use case that demonstrates the additional benefits provided by the B2B Edition. They include:
 
 - Combine person and account data from different siloed data sources to produce a comprehensive view that enables a better understanding of the customers and more accurate segmentation. See the documentation on [creating XDM schema relationships](./schemas/b2b.md) for use with varied B2B sources for more information. 
-- Segment an audience based on attributes of related entities. This includes Accounts, Opportunities, Campaigns, and Marketing Lists. Segments are no longer limited to just Person attributes and Experience Events. See the [B2B segmentation documentation](./segmentation/b2b.md) for more examples of creating B2B-specific audiences.
+- Segment an audience based on attributes of related entities. This includes Accounts, Opportunities, Campaigns, and Marketing Lists. Audiences are no longer limited to just Person attributes and Experience Events. See the [B2B segmentation documentation](./segmentation/b2b.md) for more examples of creating B2B-specific audiences.
 - Natively support the use case of one person related to multiple accounts.
 
 ## Use case
@@ -44,9 +44,9 @@ As the relevant Townsend information is recorded as Account 1 in Marketo 1 and A
 
 This prohibits Bodea's marketing team from efficiently targeting specific business contacts at these companies with this new opportunity. 
 
-To date, Townsend has spent more than a million dollars cumulatively on Bodea products across all of their accounts. However, a segment created using their old system would not include anyone from Townsend unless the total spent within a single sales system totaled more than 1 million dollars. This is because the revenue data is siloed in accounts under different sales systems.
+To date, Townsend has spent more than a million dollars cumulatively on Bodea products across all of their accounts. However, an audience created using their old system would not include anyone from Townsend unless the total spent within a single sales system totaled more than 1 million dollars. This is because the revenue data is siloed in accounts under different sales systems.
 
-As Townsend's spending is split across different sales systems and does not individually total more than one million, the segment would not find anyone qualified in either Marketo 1 or Marketo 2.
+As Townsend's spending is split across different sales systems and does not individually total more than one million, the segment definition would not find anyone qualified in either Marketo 1 or Marketo 2.
 
 ### How Real-Time CDP B2B Edition solves the problem
 
@@ -71,7 +71,7 @@ For simplicity's sake and the purpose of this example, people are being identifi
 | Opportunity 1, $200k  |
 | Opportunity 2, $900k  |
 
-- Create unique segments using this aggregate data for varied marketing initiatives. In this example, the segment finds all the people who:
+- Create unique audiences using this aggregate data for varied marketing initiatives. In this example, the segment definition finds all the people who:
 
   - Have associated opportunities (across ALL accounts) exceed $1 million in value
   - AND
