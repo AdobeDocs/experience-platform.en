@@ -31,11 +31,11 @@ description: Learn how to
 
 | Inline actions | Description |
 | --- | --- |
-| Edit schedule | |
+| Edit schedule | Select **[!UICONTROL Edit schedule]** to update the ingestion schedule of your dataflow. A dataflow that has been set to one-time ingestion cannot be edited. |
 | Disable dataflow | |
-| View in monitoring | |
-| Delete | |
-| Run on-demand | |
-| Subscribe to alerts | |
+| View in monitoring | Select **[!UICONTROL View in monitoring]** to view the metrics and status of your dataflow in the monitoring dashboard. |
+| Delete | Select **[!UICONTROL Delete]** to delete your dataflow. |
+| Run on-demand | Select **[!UICONTROL Run on-demand]** to trigger a single iteration of a dataflow run. |
+| Subscribe to alerts | Select **[!UICONTROL Subscribe to alerts]** to view a pop-up window of alerts that you can subscribe to: <ul><li>Sources Dataflow Run Start: Select this alert to receive a notification when your on-demand dataflow run begins.</li><li>Sources Dataflow Run Success: Select this alert to receive a notification when your on-demand dataflow run finishes successfully.</li><li>Sources Dataflow Run Failure: Select this alert when your on-demand dataflow run fails due to errors.</li></ul>  |
 | Add to package | |
 | Manage tags | |
