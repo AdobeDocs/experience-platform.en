@@ -1,6 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;Amazon Redshift;Amazon redshift;redshift;Redshift
-solution: Experience Platform
 title: Snowflake Source Connector Overview
 description: Learn how to connect Snowflake to Adobe Experience Platform using APIs or the user interface.
 badgeUltimate: label="Ultimate" type="Positive"
@@ -10,7 +8,9 @@ exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
 
 >[!IMPORTANT]
 >
->The [!DNL Snowflake] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
+>* The [!DNL Snowflake] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
+>* By default, the [!DNL Snowflake] source treats `null` as an empty string. Contact your Adobe representative to ensure that your `null` values are correctly written as `null` in Adobe Experience Platform.
+>* For Experience Platform to ingest data, timezones for all table-based batch sources must be configured to UTC. The only time stamp that is supported for the [!DNL Snowflake] source is TIMESTAMP_NTZ with UTC time.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
@@ -24,11 +24,11 @@ The documentation below provides information on how to connect [!DNL Snowflake] 
 
 ## Connect [!DNL Snowflake] to Platform using APIs
 
-- [Create an Snowflake base connection using the Flow Service API](../../tutorials/api/create/databases/snowflake.md)
-- [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
-- [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
+* [Create an Snowflake base connection using the Flow Service API](../../tutorials/api/create/databases/snowflake.md)
+* [Explore data tables using the Flow Service API](../../tutorials/api/explore/tabular.md)
+* [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Snowflake] to Platform using the UI
 
-- [Create a Snowflake source connection in the UI](../../tutorials/ui/create/databases/snowflake.md)
-- [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)
+* [Create a Snowflake source connection in the UI](../../tutorials/ui/create/databases/snowflake.md)
+* [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)
