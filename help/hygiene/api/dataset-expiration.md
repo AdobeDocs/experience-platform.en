@@ -16,7 +16,7 @@ A dataset expiration is only a timed-delayed delete operation. The dataset is no
 
 At any time before the dataset-delete is actually initiated, you can cancel the expiration or modify its trigger time. After cancelling a dataset expiration, you can reopen it by setting a new expiry.
 
-Once the dataset deletion is initiated, its expiration job will be marked as `executing`, and it may not be further altered. The dataset itself may be recoverable for up to seven days, but only through a manual process initiated through an Adobe service request. As the request executes, the data lake, Identity Service, and Real-Time Customer Profile begin separate processes to remove the dataset's contents from their respective services. Once the data is deleted from all three services, the expiration is marked as `executed`.
+Once the dataset deletion is initiated, its expiration job will be marked as `executing`, and it may not be further altered. The dataset itself may be recoverable for up to seven days, but only through a manual process initiated through an Adobe service request. As the request executes, the data lake, Identity Service, and Real-Time Customer Profile begin separate processes to remove the dataset's contents from their respective services. Once the data is deleted from all three services, the expiration is marked as `completed`.
 
 >[!WARNING]
 >
@@ -50,7 +50,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%Jane Doe%25 \
+  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%20%25Jane%20Doe%25 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -60,6 +60,10 @@ curl -X GET \
 **Response**
 
 A successful response lists the resulting dataset expirations. The following example has been truncated for space.
+
+>[!IMPORTANT]
+>
+>The `ttlId` in the response is also referred to as the `{DATASET_EXPIRATION_ID}`. They both refer to the unique identifier for the dataset expiration.
 
 ```json
 {
@@ -84,26 +88,30 @@ A successful response lists the resulting dataset expirations. The following exa
 
 | Property | Description |
 | --- | --- |
-| `totalRecords` | The count of dataset expirations that matched the listing call's parameters. |
-| `ttlDetails` | Contains the details of the returned dataset expirations. For more details on the properties of a dataset expiration, see the response section for making a [lookup call](#lookup). |
+| `total_count` | The count of dataset expirations that matched the listing call's parameters. |
+| `results` | Contains the details of the returned dataset expirations. For more details on the properties of a dataset expiration, see the response section for making a [lookup call](#lookup). |
 
 {style="table-layout:auto"}
 
 ## Look up a dataset expiration {#lookup}
 
-To lookup a dataset expiration, make a GET request with either the `datasetId` or the `ttlId`. 
+To lookup a dataset expiration, make a GET request with either the `{DATASET_ID}` or the `{DATASET_EXPIRATION_ID}`. 
+
+>[!IMPORTANT]
+>
+>The `{DATASET_EXPIRATION_ID}` is referred to as the `ttlId` in the response. They both refer to the unique identifier for the dataset expiration.
 
 **API format**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}
 ```
 
 | Parameter | Description |
 | --- | --- |
 | `{DATASET_ID}` | The ID of the dataset whose expiration you want to look up. |
-| `{TTL_ID}` | The ID of the dataset expiration. |
+| `{DATASET_EXPIRATION_ID}` | The ID of the dataset expiration. |
 
 {style="table-layout:auto"}
 
@@ -184,6 +192,10 @@ To ensure that data is removed from the system after a specified period, schedul
 
 To create a dataset expiration, perform a POST request as shown below and provide the values mentioned below within the payload.
 
+>[!NOTE]
+>
+>If you receive a 404 error, ensure that the request has no additional forward slashes. A trailing slash can cause a POST request to fail.
+
 **API format**
 
 ```http
@@ -216,7 +228,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns an HTTP 201 (Created) status and the new state of the dataset expiration, if there was no pre-existing dataset expiration.
+A successful response returns an HTTP 201 (Created) status and the new state of the dataset expiration.
 
 ```json
 {
@@ -248,7 +260,7 @@ A successful response returns an HTTP 201 (Created) status and the new state of 
 | `displayName` | A display name for the expiration request. |
 | `description` | An description for the expiration request. |
 
-A 400 (Bad Request) HTTP status occurs if a dataset expiration already exists for the dataset. An unsuccessful response returns a 404 (Not Found) HTTP status if no such dataset expiration exists (or you do not have access to it).
+A 400 (Bad Request) HTTP status occurs if a dataset expiration already exists for the dataset. An unsuccessful response returns a 404 (Not Found) HTTP status if no such dataset expiration exists (or you do not have access to the dataset).
 
 ## Update a dataset expiration {#update}
 
@@ -261,14 +273,12 @@ To update an expiration date for a dataset, use a PUT request and the `ttlId`. Y
 **API format**
 
 ```http
-PUT /ttl/{TTL_ID}
+PUT /ttl/{DATASET_EXPIRATION_ID}
 ```
-
-<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
 
 | Parameter | Description |
 | --- | --- |
-| `{TTL_ID}` | The ID of the dataset expiration that you want to change. | 
+| `{DATASET_EXPIRATION_ID}` | The ID of the dataset expiration that you want to change. Note: This is referred to as the `ttlId` in the response. | 
 
 **Request**
 
@@ -291,7 +301,7 @@ curl -X PUT \
 
 | Property | Description |
 | --- | --- |
-| `expiry` | **Required** A date and time in ISO 8601 format. If the string has no explicit time zone offset, the time zone is assumed to be UTC. The lifespan of data within the system is set according to the provided expiry value. Any previous expiration timestamp for the same dataset is be replaced by the new expiration value you have provided. This date and time must be at least **24 hours in the future**. |
+| `expiry` | **Required** A date and time in ISO 8601 format. If the string has no explicit time zone offset, the time zone is assumed to be UTC. The lifespan of data within the system is set according to the provided expiry value. Any previous expiration timestamp for the same dataset is to be replaced by the new expiration value you have provided. This date and time must be at least **24 hours in the future**. |
 | `displayName` | A display name for the expiration request. |
 | `description` | An optional description for the expiration request. |
 
@@ -368,19 +378,19 @@ A successful response returns HTTP status 204 (No Content), and the expiration's
 
 ## Retrieve the expiration status history of a dataset {#retrieve-expiration-history}
 
-You can look up the expiration status history of a specific dataset by using the query parameter `include=history` in a lookup request. The result includes information about about the creation of the dataset expiration, any updates that have been applied, and its cancellation or execution (if applicable). You can also use the `ttlId` of the dataset expiration.
+To look up the expiration status history of a specific dataset, use the `{DATASET_ID}` and `include=history` query parameter in a lookup request. The result includes information about about the creation of the dataset expiration, any updates that have been applied, and its cancellation or execution (if applicable). You can also use the `{DATASET_EXPIRATION_ID}` to retrieve the dataset expiration status history.
 
 **API format**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}?include=history
 ```
 
 | Parameter | Description |
 | --- | --- |
 | `{DATASET_ID}` | The ID of the dataset whose expiration history you want to look up. |
-| `{TTL_ID}` | The ID of the dataset expiration. |
+| `{DATASET_EXPIRATION_ID}` | The ID of the dataset expiration. Note: This is referred to as the `ttlId` in the response. |
 
 {style="table-layout:auto"}
 
