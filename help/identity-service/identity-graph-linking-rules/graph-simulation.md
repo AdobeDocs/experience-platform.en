@@ -5,8 +5,6 @@ badge: Beta
 ---
 # Graph Simulation
 
-## What is Graph Simulation?
-
 Graph Simulation is a tool in the Identity Service UI that you can use to simulate how an identity graph behaves given a particular combination of identities and how you configure the [identity optimization algorithm](./identity-optimization-algorithm.md).
 
 Read this document to learn how you can use Graph Simulation to better understand identity graph behavior and how the graph algorithm functions.
@@ -14,6 +12,8 @@ Read this document to learn how you can use Graph Simulation to better understan
 ## Get to know the Graph Simulation interface
 
 You can access Graph Simulation in the Adobe Experience Platform UI. Select **[!UICONTROL Identities]** from the left navigation and then select **[!UICONTROL Graph Simulation]** from the top header.
+
+![The Graph Simulation interface in the Adobe Experience Platform UI.]
 
 The Graph Simulation interface can be divided into three sections:
 
@@ -23,12 +23,33 @@ The Graph Simulation interface can be divided into three sections:
 
 ## Add events
 
-* To begin, select **[!UICONTROL Add Events]**.
-* Select an identity namespace or use the dropdown menu to select from a list of namespaces. Then, provide an identity value that corresponds with your namespace. **Note**: the identity value that you input for Graph Simulation purposes can be a simple placeholder and does not need to be a real identity value. In the example below, `{CRMID: Tom}` is added as the first identity.
-* After you input your first identity, select plus (`+`) to add a second identity. There must be a minimum of at least two fully qualified identities in order for a graph to be rendered. Once you have added your second identity, select **[!UICONTROL Save]**. In the example below, `{ECID: 111}` is added as the second identity. This creates the first event as `{CRMID: Tom}, {ECID: 111}`.
-* To add a second event, select **[!UICONTROL Add Events]** and repeat the steps above. This time, add `{CRMID: Summer}` as the first identity and `{ECID: 111}` as the second identity, thus creating a second event of: `{CRMID: Summer}, {ECID: 111}`.
+To begin, select **[!UICONTROL Add Events]**.
+
+![The Add Events button selected.](../images/graph-simulation/add-events/add-event.png)
+
+A pop-up window appears for [!UICONTROL Event #1]. From here, input your identity namespace and identity value combination. You can use the dropdown menu to select an identity namespace. Alternatively, you can type in the first few letters of a namespace and then select the options provided in the dropdown menu. Then, provide an identity value that corresponds with your namespace. When finished select add (`+`) to add a second identity.
+
+>[!TIP]
+>
+>The identity value that you input during Graph Simulation exercises do not have to be real identity values and can be simple placeholders.
+
+![The first fully qualified identity of {CRMID: Tom} is inputted in the Events panel of Graph Simulation.](../images/graph-simulation/add-events/first-identity.png)
+
+Next, repeat the same steps and add a second identity. Two fully qualified identities are required in order to generate an identity graph. In the example below, an ECID is added as a namespace and is provided with a value of `111`. When finished, select **[!UICONTROL Save]**.
+
+![A second identity of {ECID: 111} is added to Event #1.](../images/graph-simulation/add-events/second-identity.png)
+
+The [!UICONTROL Events] interface updates to display your first event, which in this case is: `{CRMID: Tom, ECID: 111}`.
+
+![The updated events interface with {CRMID: Tom, ECID: 111}.](../images/graph-simulation/add-events/one-event.png)
+
+Next, repeat the same steps to add a second event. For Event #2, add `{CRMID: Summer}` as your first identity and then add the same `{ECID: 111}` as the second identity, thus creating a second event of: `{CRMID: Summer}, {ECID: 111}`. When finished, you should have two events, one for `{CRMID: Tom, ECID: 111}` and one for `{CRMID: Summer}, {ECID: 111}`.
+
+![The updated events interface with two events.](../images/graph-simulation/add-events/two-events.png)
 
 ### Load example
+
++++Select to view steps on how to use pre-loaded graph examples
 
 To set up an example graph with a pre-configured algorithm, select **[!UICONTROL Load example]**. A pop-up window appears, providing you with available graph scenarios you can choose from:
 
@@ -42,11 +63,17 @@ Select any of the options to load Graph Simulation with pre-configured events an
 
 When finished, select **[!UICONTROL Simulate]**.
 
++++
+
 ### Use text version
+
++++Select to view steps on how to use text version
 
 You can also use text mode to configure events. To use text mode, select the gear (?) icon, and then select **[!UICONTROL Text (Advanced users)]**.
 
 You can manually input your identities with text mode. Use a colon (`:`) to distinguish the identity value that corresponds with the namespace that you input, and then use a comma (`,`) to separate your identities. To distinguish different events from one another, use a new line for each event.
+
++++
 
 ### Edit event
 
@@ -58,26 +85,36 @@ To delete an event, select the ellipses (`...`) beside a given event, and then s
 
 ## Configure algorithm
 
-The algorithm that you configure will dictate how Identity Service treats the namespaces that you inputted in your events. To begin, select the plus (`+`) icon in the bottom corner of the algorithm configuration panel.
+The algorithm that you configure will dictate how Identity Service treats the namespaces that you inputted in your events. To begin, select add (`+`) in the bottom corner of the algorithm configuration panel.
 
-* Update the display name to match the namespace in your events. You can type in your namespace or use the dropdown menu to search. 
-* Next, use the plus (`+`) icon to add another namespace configuration to match your second identity.
-* You can configure the priority rankings of your namespaces by dragging and dropping...
-* Select the checkbox under the [!UICONTROL Unique per graph] column to indicate your unique namespace(s).
+![The algorithm configuration panel.]
 
-### On namespace priorities
+An empty configuration row appears. First, input the same namespace that you used for your events. In this case, begin by inputting the CRMID. Once you enter your namespace, the columns for [!UICONTROL Identity Symbol] and [!UICONTROL Identity Type] auto-populates.
 
-### On namespaces uniqueness
+![The first configuration entry.]
 
-If a namespace is marked as "unique per graph", then the identity graph may only have one identity that contains that namespace. 
+Next, repeat the same steps and add your second namespace, which in this case is the ECID. Once all of your namespaces have been entered, you can begin configuring their priorities and uniqueness.
 
-| Algorithm configuration | Description |
-| --- | --- |
-| Display name |
-| Identity symbol |
-| Identity type |
-| Unique per graph |
+* Namespace priority: The priority of a namespace determines its relative importance compared to the other namespaces in a given identity graph. For example, if your identity graph has four different namespaces: CRMID, ECID, Email and Apple IDFA, you can configure priorities to determine an order of importance for the four namespace. (ADD WHY)
+* Unique namespace: If a namespace is designated as unique, then Identity Service will generate graphs with the caveat that only one identity with a given unique namespace can exist. For example, if CRMID is designated as a unique namespace, then a graph can only have one identity with CRMID. If there is more than one identity with the CRMID namespace, then the oldest link will be removed.
+
+To configure namespace priority, select and drag the namespace rows to the priority ordering that you want, with the top row representing higher priority and the bottom row representing lower priority. To designate a namespace as unique, select the **[!UICONTROL Unique Per Graph]** checkbox.
+
+![All namespaces configured.]
 
 When finished, select **[!UICONTROL Simulate]**.
 
 ## View simulated graph
+
+The [!UICONTROL Simulated Graph] section displays the identity graph(s) generated based on the events that you added and the algorithm that you configured.
+
+| Graph icons | Description |
+| --- | --- |
+| Solid line | A solid line represents an established link between two identities. |
+| Dotted line | A dotted line represents a removed link between two identities. |
+| Number on line | A number on a line represents the timestamp of when that given link was generated. The lowest number (1), represents the earliest established link. |
+
+In the example graph below, a dotted line exists between `{CRMID: Tom}` and `{ECID: 111}` because of the following reasons:
+
+* CRMID was designated as unique during the algorithm configuration step. Therefore, only one identity with a CRMID namespace may exist in a graph.
+* The link between `{CRMID: Tom}` and `{ECID: 111}` was the first established identity (Event #1). It is the oldest link and is therefore removed.
