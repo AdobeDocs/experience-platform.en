@@ -26,7 +26,7 @@ With related accounts, [!DNL Real-Time CDP B2B] now shows you a list of accounts
 
 ![Screen showing Related accounts in the Experience Platform UI.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
-Use this feature to view related account profiles for an account profile in the Experience Platform UI and then include the related accounts in your segment definitions to broaden your reach or apply wider criteria in your segments.
+Use this feature to view related account profiles for an account profile in the Experience Platform UI and then include the related accounts in your segment definitions to broaden your reach or apply wider criteria in your audiences.
 
 ## Enable the related accounts service {#enable}
 
