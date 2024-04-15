@@ -3,9 +3,9 @@ title: Activate Audience Manager Audiences through Expanded Activation
 description: Learn how to use Expanded Activation to activate audiences from Audience Manager to social and advertising destinations from Real-Time CDP.
 ---
 
-# Audience Manager Expanded Activation
+# Activate audiences through Audience Manager Expanded Activation
 
-This page describes the end-to-end workflow that you must follow if you want to activate audiences from Audience Manager to the destination platforms supported by Expanded Activation.
+This page describes the end-to-end workflow that you must follow to activate audiences from Audience Manager to the destination platforms supported by Expanded Activation.
 
 ## Before you begin {#before-you-begin}
 
@@ -17,30 +17,20 @@ The steps described in this guide assume you have read the [Expanded Activation 
 
 ## Step 1: Configure the Audience Manager source connection {#configure-source}
 
-The [Audience Manager source connector](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) sends audience data collected in Adobe Audience Manager for activation in the destination platforms supported by Expanded Activation.
+The [Audience Manager source connector](../sources/connectors/adobe-applications/audience-manager.md) sends audience data collected in Adobe Audience Manager for activation in the destination platforms supported by Expanded Activation.
 
-Follow the steps below to configure the Audience Manager source connector and bring your audiences from Audience Manager into Expanded Activation.
+Follow the guide on how to [create an Audience Manager source connection](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) to configure your source connector.
 
-1. Log in to [experience.adobe.com](https://experience.adobe.com) and select **[!UICONTROL Experience Platform]**.
-1. In the left sidebar, go to **[!UICONTROL Connections]** -> **[!UICONTROL Sources]**. In the [!UICONTROL Sources] page you can see the Adobe Audience Manager source connector.
 
-    >[!TIP]
-    >
-    >The Adobe Audience Manager source connector is the only source connector available in Expanded Activation.
-    >
-    >If you want to ingest audiences based on additional identifiers, you must purchase an edition of [Real-Time CDP](../rtcdp/overview.md). Contact your Adobe representative for more details.
+>[!TIP]
+>
+>The Adobe Audience Manager source connector is the only source connector available in Expanded Activation.
+>
+>If you want to ingest audiences based on additional identifiers, you must purchase an edition of [Real-Time CDP](../rtcdp/overview.md). Contact your Adobe representative for more details.
 
-    ![Platform UI image showing the Sources tab with the Audience Manager source connection.](assets/sources-tab.png)
+![Platform UI image showing the Sources tab with the Audience Manager source connection.](assets/sources-tab.png)
 
-1. Follow
-1. Select **[!UICONTROL Add data]** on the Adobe Audience Manager source connector.
-
-    ![Platform UI image showing the Sources tab with the Audience Manager source connection.](assets/add-data.png)
-
-1. Select the traits and audiences that you want to activate, as described in the [Audience Manager source connection documentation](../sources/tutorials/ui/create/adobe-applications/audience-manager.md#select-traits-and-segments), then select **[!UICONTROL Next]**.
-1. In the [!UICONTROL Review] page, you can see a summary of your source connection and the data that you selected. Review the details and select **[!UICONTROL Finish]**.
-    ![Platform UI image showing the Review step in the Audience Manager source connection workflow.](assets/add-data-finish.png)
-
+After you have configured your Audience Manager source connector, move to [step 2](#create-destination-connection).
 
 ## Step 2: Create a new destination connection {#create-destination-connection}
 
@@ -61,9 +51,6 @@ After you have successfully [ingested Audience Manager audiences](#configure-sou
 ![Platform UI image showing the destination catalog for Expanded Activation.](assets/activate-audiences.png)
 
 To activate audiences to your destination, follow the guide on [how to activate audiences to streaming destinations](../destinations/ui/activate-segment-streaming-destinations.md).
-
-
-
 
 
 ## Verify audience activation {#verify}
