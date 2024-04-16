@@ -12,7 +12,8 @@ A dataflow is a scheduled task that retrieves and ingests data from a source to 
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have an authenticated account with a CRM source. A list of tutorials for creating different CRM source accounts in the UI can be found in the [sources overview](../../../home.md#crm).
+>* In order to create a dataflow, you must already have an authenticated account with a CRM source. A list of tutorials for creating different CRM source accounts in the UI can be found in the [sources overview](../../../home.md#crm).
+>* For Experience Platform to ingest data, timezones for all table-based batch sources must be configured to UTC.
 
 ## Getting started
 

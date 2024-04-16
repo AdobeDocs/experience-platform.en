@@ -1,9 +1,9 @@
 ---
 title: Advanced Data Lifecycle Management Overview
-description: Advanced data lifecycle management allows you to manage the lifecycle of your data by updating or purging outdated or inaccurate records.
+description: Advanced Data Lifecycle Management allows you to manage the lifecycle of your data by updating or purging outdated or inaccurate records.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 ---
-# Advanced data lifecycle management in Adobe Experience Platform
+# Advanced Data Lifecycle Management in Adobe Experience Platform
 
 Adobe Experience Platform provides a robust set of tools to manage large, complicated data operations in order to orchestrate consumer experiences. As data is ingested into the system over time, it becomes increasingly important to manage your data stores so that data is used as expected, is updated when incorrect data needs correcting, and is deleted when organizational policies deem it necessary.
 
@@ -64,4 +64,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Next steps
 
-This document provided an overview of Platform's data lifecycle capabilities. To get started making data hygiene requests in the UI, refer to the [UI guide](./ui/overview.md). To learn how to create data lifecycle jobs programmatically, refer to the [Data Hygiene API guide](./api/overview.md)
+This document provided an overview of Platform's Data Lifecycle capabilities. To get started making data hygiene requests in the UI, refer to the [UI guide](./ui/overview.md). To learn how to create Data Lifecycle jobs programmatically, refer to the [Data Hygiene API guide](./api/overview.md)
