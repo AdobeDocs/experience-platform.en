@@ -192,6 +192,10 @@ To ensure that data is removed from the system after a specified period, schedul
 
 To create a dataset expiration, perform a POST request as shown below and provide the values mentioned below within the payload.
 
+>[!NOTE]
+>
+>If you receive a 404 error, ensure that the request has no additional forward slashes. A trailing slash can cause a POST request to fail.
+
 **API format**
 
 ```http
