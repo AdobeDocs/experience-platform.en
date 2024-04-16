@@ -95,8 +95,8 @@ An empty configuration row appears. First, input the same namespace that you use
 
 Next, repeat the same steps and add your second namespace, which in this case is the ECID. Once all of your namespaces have been entered, you can begin configuring their priorities and uniqueness.
 
-* Namespace priority: The priority of a namespace determines its relative importance compared to the other namespaces in a given identity graph. For example, if your identity graph has four different namespaces: CRMID, ECID, Email and Apple IDFA, you can configure priorities to determine an order of importance for the four namespace. (ADD WHY)
-* Unique namespace: If a namespace is designated as unique, then Identity Service will generate graphs with the caveat that only one identity with a given unique namespace can exist. For example, if CRMID is designated as a unique namespace, then a graph can only have one identity with CRMID. If there is more than one identity with the CRMID namespace, then the oldest link will be removed.
+* **Namespace priority**: The priority of a namespace determines its relative importance compared to the other namespaces in a given identity graph. For example, if your identity graph has four different namespaces: CRMID, ECID, Email and Apple IDFA, you can configure priorities to determine an order of importance for the four namespace. (ADD WHY)
+* **Unique namespace**: If a namespace is designated as unique, then Identity Service will generate graphs with the caveat that only one identity with a given unique namespace can exist. For example, if CRMID is designated as a unique namespace, then a graph can only have one identity with CRMID. If there is more than one identity with the CRMID namespace, then the oldest link will be removed.
 
 To configure namespace priority, select and drag the namespace rows to the priority ordering that you want, with the top row representing higher priority and the bottom row representing lower priority. To designate a namespace as unique, select the **[!UICONTROL Unique Per Graph]** checkbox.
 
@@ -118,3 +118,75 @@ In the example graph below, a dotted line exists between `{CRMID: Tom}` and `{EC
 
 * CRMID was designated as unique during the algorithm configuration step. Therefore, only one identity with a CRMID namespace may exist in a graph.
 * The link between `{CRMID: Tom}` and `{ECID: 111}` was the first established identity (Event #1). It is the oldest link and is therefore removed.
+
+## Example graph scenarios
+
+The following section examples of graph scenarios you might encounter with Graph Simulation.
+
+### CRMID only
+
+
+
+Events:
+
+* CRMID: Tom, ECID: 111
+
+Algorithm configuration:
+
+| Priority | Display name | Identity symbol | Identity type | Unique per graph |
+| ---| --- | --- | --- | --- |
+| 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
+| 2 | ECID | ECID | COOKIE | NO |
+
++++Select to view simulated graph
+
++++
+
+### CRMID with hashed email
+
+In this scenario, a CRMID is ingested and represents both online (experience event) and offline (profile record) data. This scenario also involves the ingestion of a hashed email, which represents another namespace sent in the CRM record dataset along with the CRMID.
+
+Events:
+
+* CRMID: Tom, Email_LC_SHA256: tom<span>@acme.com
+* CRMID: Tom, ECID: 111
+* CRMID: Summer, Email_LC_SHA256: summer<span>@acme.com
+* CRMID: Summer, ECID: 222
+
+Algorithm configuration:
+
+| Priority | Display name | Identity symbol | Identity type | Unique per graph |
+| ---| --- | --- | --- | --- |
+| 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
+| 2 | Emails (SHA256, lowercased) | Email_LC_SHA256 | Email | No |
+| 3 | ECID | ECID | COOKIE | NO |
+
++++Select to view simulated graph
+
++++
+
+### CRMID with hashed email, hashed phone, GAID, and IDFA
+
+Events:
+
+* CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+* CRMID: Tom, ECID: 111
+* CRMID: Tom, ECID: 222, IDFA: A-A-A
+* CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+* CRMID: Summer, ECID: 333
+* CRMID: Summer, ECID: 444, GAID:B-B-B
+
+Algorithm configuration: 
+
+| Priority | Display name | Identity symbol | Identity type | Unique per graph |
+| ---| --- | --- | --- | --- |
+| 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
+| 2 | Emails (SHA256, lowercased) | Email_LC_SHA256 | Email | No |
+| 3 | Phone (SHA256) | Phone_SHA256 | Phone | No |
+| 4 | Google Ad ID (GAID) | GAID | DEVICE | No |
+| 5 | Apple IDFA (ID for Apple) | IDFA | DEVICE | No |
+| 6 | ECID | ECID | COOKIE | NO |
+
++++Select to view simulated graph
+
++++
