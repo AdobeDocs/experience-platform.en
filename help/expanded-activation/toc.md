@@ -9,4 +9,7 @@ role: Admin,User
 
 # Audience Manager Expanded Activation {#expanded-activation}
 
-* [Expanded Activation overview](./overview.md)
+* [Overview](./overview.md)
+* [Account administration](./administration.md)
+* [Activate audiences](./activate-audiences.md)
+* [Frequently asked questions](./faq.md)
