@@ -21,7 +21,6 @@ The [Audience Manager source connector](../sources/connectors/adobe-applications
 
 Follow the guide on how to [create an Audience Manager source connection](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) to configure your source connector.
 
-
 >[!TIP]
 >
 >The Adobe Audience Manager source connector is the only source connector available in Expanded Activation.
@@ -51,7 +50,6 @@ After you have successfully [ingested Audience Manager audiences](#configure-sou
 ![Platform UI image showing the destination catalog for Expanded Activation.](assets/activate-audiences.png)
 
 To activate audiences to your destination, follow the guide on [how to activate audiences to streaming destinations](../destinations/ui/activate-segment-streaming-destinations.md).
-
 
 ## Verify audience activation {#verify}
 
