@@ -154,15 +154,21 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Connection parameters {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_gcmdv360_appendAudienceID"
+>title="Append audience ID to audience name"
+>abstract="Select this option to have the audience name in Google Customer Match and Display & Video 360 include the audience ID from Experience Platform, like this: `Audience Name (Audience ID)`"
+
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 * **[!UICONTROL Name]**: provide a name for this destination connection
 * **[!UICONTROL Description]**: provide a description for this destination connection
 * **[!UICONTROL Account ID]**: your [Google Ads customer ID](https://support.google.com/google-ads/answer/1704344?hl=en). The format of the ID is xxx-xxx-xxxx. If you are using the [!DNL Google Ads Manager Account (My Client Center)], do not use your Manager Account ID. Use the [Google Ads customer ID](https://support.google.com/google-ads/answer/1704344?hl=en) instead.
+* **[!UICONTROL Account type]**: your Google account type. Select an option, depending on your Google account:
+    * **[!UICONTROL Display Video Partner]**
+    * **[!UICONTROL Display Video Advertiser]**
 
->[!IMPORTANT]
->
-> * The **[!UICONTROL Combine with PII]** marketing action is selected by default for the [!DNL Google Customer Match] destination and cannot be removed.
+* **[!UICONTROL Append audience ID to audience name]**: select this option to have the audience name in Google Customer Match and Google Display & Video 360 include the audience ID from Experience Platform, like this: `Audience Name (Audience ID)`.
 
 ### Enable alerts {#enable-alerts}
 
@@ -179,11 +185,11 @@ When you are finished providing details for your destination connection, select 
 
 See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
-In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] audiences to [!DNL Google Customer Match].
+<!-- In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] audiences to [!DNL Google Customer Match].
 
 ![Google Customer Match App ID field highlighted in the Segment schedule step of the activation workflow.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative.
+For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative. -->
 
 ### Mapping example: activating audience data in [!DNL Google Customer Match] {#example-gcm}
 
