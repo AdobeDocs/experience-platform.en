@@ -80,7 +80,7 @@ If activated to a batch destination, the data from the externally generated audi
 
 ### Can I delete an externally generated audience?
 
-At this point in time, you can only deactivate an externally generated audience. In this state, profiles **will** remain active for use in downstream applications. Support for deleting externally generated audiences will be added in a subsequent release.
+Yes! Externally generated audiences can be deleted within Audience Portal.
 
 ### What should I do if I accidentally uploaded an externally generated audience?
 
