@@ -66,4 +66,4 @@ To activate audiences to your destination, follow the guide on [how to activate 
 
 ## Verify audience activation {#verify}
 
-Check the [destination monitoring documentation](../../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
+Check the [destination monitoring documentation](../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
