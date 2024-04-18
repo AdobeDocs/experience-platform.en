@@ -7,6 +7,7 @@ exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 
 Adobe Experience Platform Dashboards helps you to expedite insights and customize visualization through the user-defined dashboards feature. This feature enables you to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics relevant to your organization.
 
+
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
 ## Getting started
