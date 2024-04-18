@@ -171,7 +171,7 @@ To export an entire sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTRO
 
 ![The [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab highlighting [!UICONTROL Create package].](../images/ui/sandbox-tooling/create-sandbox-package.png)
 
-Select **[!UICONTROL Entire sandbox]** for the [UICONTROL Type of package] in the [!UICONTROL Create package] dialog. Provide a [!UICONTROL Package name] for your new package and select the **[!UICONTROL Sandbox]** from the dropdown. Finally, select **[!UICONTROL Create]** to confirm your entries.
+Select **[!UICONTROL Entire sandbox]** for the [!UICONTROL Type of package] in the [!UICONTROL Create package] dialog. Provide a [!UICONTROL Package name] for your new package and select the **[!UICONTROL Sandbox]** from the dropdown. Finally, select **[!UICONTROL Create]** to confirm your entries.
 
 ![The [!UICONTROL Create package] dialog showing completed fields and highlighting [!UICONTROL Create].](../images/ui/sandbox-tooling/create-package-dialog.png)
 
