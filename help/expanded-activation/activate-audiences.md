@@ -1,6 +1,6 @@
 ---
 title: Activate Audience Manager Audiences through Expanded Activation
-description: Learn how to use Expanded Activation to activate audiences from Audience Manager to social and advertising destinations from Real-Time CDP.
+description: Learn how to activate Audience Manager audiences to social and advertising destinations, through Audience Manager Expanded Activation.
 ---
 
 # Activate audiences through Audience Manager Expanded Activation
@@ -9,7 +9,7 @@ This page describes the end-to-end workflow that you must follow to activate aud
 
 ## Before you begin {#before-you-begin}
 
-The steps described in this guide assume you have read the [Expanded Activation overview](overview.md) and you have confirmed that you meet the prerequisites for audience activation.
+The steps described in this guide assume you have read the [Expanded Activation overview page](overview.md) and you have confirmed that you meet the prerequisites for audience activation.
 
 >[!IMPORTANT]
 >
@@ -21,13 +21,26 @@ The [Audience Manager source connector](../sources/connectors/adobe-applications
 
 Follow the guide on how to [create an Audience Manager source connection](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) to configure your source connector.
 
+![Platform UI image showing the Sources tab with the Audience Manager source connection.](assets/sources-tab.png)
+
 >[!TIP]
 >
 >The Adobe Audience Manager source connector is the only source connector available in Expanded Activation.
 >
 >If you want to ingest audiences based on additional identifiers, you must purchase an edition of [Real-Time CDP](../rtcdp/overview.md). Contact your Adobe representative for more details.
 
-![Platform UI image showing the Sources tab with the Audience Manager source connection.](assets/sources-tab.png)
+### View and monitor ingested audiences {#view-audiences}
+
+The audiences that you bring into Expanded Activation from Audience Manager are available for you to view in the **[!UICONTROL Audiences]** dashboard.
+
+To view your audiences, go to **[!UICONTROL Customer]** -> **[!UICONTROL Audiences]** -> **[!UICONTROL Browse]**.
+
+![Platform UI image showing the Audiences page.](assets/audiences-browse.png)
+
+>[!IMPORTANT]
+>
+>* Audiences can take up to 48 hours to fully populate in Expanded Activation. This also applies to updates to existing Audience Manager audiences.
+>* Newly created Audience Manager audiences do not automatically appear in Expanded Activation. You have to send them to Expanded Activation manually.
 
 After you have configured your Audience Manager source connector, move to [step 2](#create-destination-connection).
 
@@ -41,7 +54,7 @@ The available destination categories for [!DNL Expanded Activation] are [adverti
 
 ![Platform UI image showing the destination catalog for Expanded Activation.](assets/destination-catalog.png)
 
-To create a new connection to a destination platform, follow the guide on [how to create a new destination connection](../destinations/ui/connect-destination.md).
+To create a new connection to a destination platform, follow the guide on [how to create a new destination connection](../destinations/ui/connect-destination.md). Then, move to [step 3](#activate-audiences).
 
 ## Step 3: Activate audiences to your destination {#activate-audiences}
 

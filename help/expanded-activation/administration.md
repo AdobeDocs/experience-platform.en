@@ -5,6 +5,10 @@ description: Learn how to perform administrative tasks on your Expanded Activati
 
 # Account administration
 
+To ingest audiences from Audience Manager and activate them to social and advertising destinations, you must first create an Expanded Activation user account and assign the account to the correct permission role.
+
+This page explains how to creata a user account in the Admin Console and assing the correct permissions for Expanded Activation.
+
 ## Create user accounts {#create-users}
 
 Before you can use [!DNL Audience Manager Expanded Activation], you must create a user account.
