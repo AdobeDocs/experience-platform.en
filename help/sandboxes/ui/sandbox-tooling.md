@@ -159,6 +159,52 @@ You are returned to the [!UICONTROL Package object and dependencies] page. From 
 
 ![The [!UICONTROL Package object and dependencies] page shows a list of assets included in the package, highlighting [!UICONTROL Finish].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
+## Export and import an entire sandbox 
+
+>[!NOTE]
+>
+>Only real-time customer data platform objects are supported for a full sandbox export/import. Journey objects will not be included.
+
+### Export an entire sandbox {#export-entire-sandbox}
+
+To export an entire sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab and select **[!UICONTROL Create package]**.
+
+![The [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab highlighting [!UICONTROL Create package].](../images/ui/sandbox-tooling/create-sandbox-package.png)
+
+Select **[!UICONTROL Entire sandbox]** for the [UICONTROL Type of package] in the [!UICONTROL Create package] dialog. Provide a [!UICONTROL Package name] for your new package and select the **[!UICONTROL Sandbox]** from the dropdown. Finally, select **[!UICONTROL Create]** to confirm your entries.
+
+![The [!UICONTROL Create package] dialog showing completed fields and highlighting [!UICONTROL Create].](../images/ui/sandbox-tooling/create-package-dialog.png)
+
+The package is created successfully, select **[!UICONTROL Publish]** to publish the package.
+
+![List of sandbox packages highlighting the new published package.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
+
+You are returned to the **[!UICONTROL Packages]** tab in the [!UICONTROL Sandboxes] environment, where you can see the new published package.
+
+### Import the entire sandbox package {#import-entire-sandbox-package}
+
+>[!NOTE]
+>
+>All objects will be imported into the target sandbox as new objects. It is best practice to import a full sandbox package into an empty sandbox.
+
+To import the package into a target sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Browse]** tab and select the plus (+) option beside the sandbox name.
+
+![The sandboxes **[!UICONTROL Browse]** tab highlighting the import package selection.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+
+Using the dropdown menu, select the full sandbox using the **[!UICONTROL Package name]** dropdown. Add a **[!UICONTROL Job name]**, which will be used for future monitoring and an optional **[!UICONTROL Job description]**, then select **[!UICONTROL Next]**.
+
+![The import details page showing the [!UICONTROL Package name] dropdown selection](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+
+>[!NOTE]
+>
+>You must have full permissions to all of the objects included in the package. If you do not have permissions, the import operation will fail and error messages will appear.
+
+You are taken to the [!UICONTROL Package object and dependencies] page where you can see the number of objects and dependencies that are imported and excluded objects. From here, select **[!UICONTROL Import]** to complete the package import.
+
+ ![The [!UICONTROL Package object and dependencies] page shows the inline message of object types not supported, highlighting [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+
+Allow some time for the import to complete. The time to complete can vary depending on the number of objects in the package. You can monitor the import job from the [!UICONTROL Sandboxes] **[!UICONTROL Jobs]** tab.
+
 <!--
 ## Export and import an entire sandbox 
 
