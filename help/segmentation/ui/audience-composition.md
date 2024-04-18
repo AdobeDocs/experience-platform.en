@@ -48,7 +48,7 @@ To add audiences to the Audience block. select **[!UICONTROL Add Audience]**.
 
 >[!IMPORTANT]
 >
->Please note that **only** audiences defined using the default merge policy will appear. 
+>Please note that **only** published audiences defined using the default merge policy will appear. 
 
 A list of audiences appears. Select the audiences you want to include, followed by **[!UICONTROL Add]** to append them to your audience block.
 
@@ -95,6 +95,10 @@ The **[!UICONTROL Exclude]** block is added. When this block is selected, detail
 If you exclude by audience, you can select which audiences you want to exclude by selecting **[!UICONTROL Add Audience]**.
 
 ![The [!UICONTROL Add audience] button is selected, which lets you choose which audience you want to exclude.](../images/ui/audience-composition/add-excluded-audience.png)
+
+>[!NOTE]
+>
+>Only **published** audiences will be displayed. 
 
 A list of audiences appears. Select **[!UICONTROL Add]** to add the audiences you want to exclude to your exclude block.
 
