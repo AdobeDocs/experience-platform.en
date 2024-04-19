@@ -41,11 +41,11 @@ You can find this information by going to the **[!UICONTROL Administration]** ->
 
 ![Expanded Activation user interface image showing the license usage screen.](assets/license-usage.png)
 
-In this page you can find the following information:
+On this page you can find the following information:
 
-* **[!UICONTROL Product]**: the Adobe product that you are licensed for. This will always be **[!UICONTROL Audience Manager Expanded Activation]**.
-* **[!UICONTROL Primary metric]**: the name of the metric being tracked for usage. This will always be **[!UICONTROL Addressable audience]**.
-* **[!UICONTROL License amount]**: the maximum number of hashed emails that you are licensed to ingest.
+* **[!UICONTROL Product]**: The Adobe product that you are licensed for. This will always be **[!UICONTROL Audience Manager Expanded Activation]**.
+* **[!UICONTROL Primary metric]**: The name of the metric being tracked for usage. This will always be **[!UICONTROL Addressable audience]**.
+* **[!UICONTROL License amount]**: The maximum number of hashed emails that you are licensed to ingest.
 
     >[!TIP]
     >
@@ -53,6 +53,8 @@ In this page you can find the following information:
 
 * **[!UICONTROL Usage]**: the number of hashed emails that you have ingested.
 * **[!UICONTROL Usage %]**: the percentage of your license amount that you have used.
+
+To learn more about license usage in Experience Platform, see the [license usage documentation](../dashboards/guides/license-usage.md).
 
 ## Next steps {#next-steps}
 
