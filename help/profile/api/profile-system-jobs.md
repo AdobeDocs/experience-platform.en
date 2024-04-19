@@ -96,9 +96,9 @@ The response includes a "children" array with an object for each delete request 
 
 Initiating a new delete request is done through a POST request to the `/systems/jobs` endpoint, where the ID of the dataset or batch to be deleted is provided in the body of the request.
 
-### Delete a dataset
+### Delete a dataset and associated profile data 
 
-In order to delete a dataset from the Profile store, the dataset ID must be included in the body of the POST request. This action will delete ALL data for a given dataset. [!DNL Experience Platform] allows you to delete datasets based on both record and time series schemas.
+In order to delete a dataset and all profile data associated with the dataset from the Profile store, the dataset ID must be included in the body of the POST request. This action will delete ALL data for a given dataset. [!DNL Experience Platform] allows you to delete datasets based on both record and time series schemas.
 
 **API format**
 
