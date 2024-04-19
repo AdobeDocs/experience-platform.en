@@ -11,6 +11,10 @@ exl-id: 44bb8817-e32d-4806-ad4e-b1840313e768
 >title="Ignore year update"
 >abstract="The ignore year time constraint has been updated. Please re-save your audience."
 
+>[!IMPORTANT]
+>
+>You can only use the "ignore year" time constraint in a segment definition evaluated using **batch segmentation**. Adding the "ignore year" time constraint to your segment definition will make the resulting audience **ineligible** for streaming or edge segmentation.
+
 The February 2024 release for Adobe Experience Platform has introduced changes to Adobe Experience Platform Segmentation Service which resolves an issue with the "ignore year" option in audience creation and evaluation.
 
 The "ignore year" option is designed to disregard the year component of a date when performing audience evaluations. You can use this option in situations where the temporal relationship between different events is important but the specific year is unimportant, such as a birth date field. 
