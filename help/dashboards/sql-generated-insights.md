@@ -28,7 +28,7 @@ Select **[!UICONTROL SQL Query Editor]** followed by **[!UICONTROL Create]**.
 >
 >Once you make a selection, you cannot change this selection within that dashboard. Instead, create a new dashboard that uses a different insight creation method.
 
-![The [!UICONTROL Create dashboard] dialog with  SQL Query Editor and Create highlighted.]()
+![The [!UICONTROL Create dashboard] dialog with SQL Query Editor and Create highlighted. PLACEHOLDER](./images/user-defined-dashboards/sql-workflow/suggested-ui-experience.png)
 
 The **[!UICONTROL Enter SQL]** dialog appears. Select a database to query from the dropdown menu, and input a suitable query for your dataset in the Query Editor.
 
@@ -38,13 +38,15 @@ See the [Query Editor user guide](../query-service/ui/user-guide.md#query-author
 >
 >If your query uses query parameters, run the query once to pre-populate all the query parameter keys used. The UI automatically displays the Query parameters tab. Add the appropriate values for your keys.
 
-![The [!UICONTROL Enter SQL] dialog with the dataset dropdown menu highlighted, a populated SQL query, and the query parameters tab displayed.]()
+![The [!UICONTROL Enter SQL] dialog with the dataset dropdown menu and run icon highlighted, The dialog has a populated SQL query and the query parameters tab displayed.](./images/user-defined-dashboards/sql-workflow/enter-sql-database-dropdown.png)
 
-Select the run icon (![The run icon.]()). The Query editor displays the results tab. Next, select [!UICONTROL Select] to confirm your configuration.
+Select the run icon (![The run icon.](./images/user-defined-dashboards/sql-workflow/run-icon.png)). The Query editor displays the results tab. Next, select **[!UICONTROL Select]** to confirm your configuration.
 
-![The [!UICONTROL Enter SQL] dialog with SQL input, the results tab displayed, and Select highlighted.]()
+![The [!UICONTROL Enter SQL] dialog with SQL input, the results tab displayed, and Select highlighted.](./images/user-defined-dashboards/sql-workflow/enter-sql-select.png)
 
+The widget composer appears. The type of dashboard is indicated in the top left, in this case it is [!UICONTROL Manual SQL Entry]. Select the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png)) to edit the SQL at any point. 
 
+The attributes available to create your widget are listed in the [!UICONTROL Attributes] column. You can use the search bar to look for attributes or scroll the list.
 
 
 
