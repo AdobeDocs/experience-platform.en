@@ -12,7 +12,8 @@ role: Developer,User
 * [Dashboards overview](home.md)
 * [Dashboard access permissions](permissions.md)
 * [Dashboards inventory](inventory.md)
-* [User defined dashboards](user-defined-dashboards.md)
+* [User-defined dashboards](user-defined-dashboards.md)
+* [SQL generated insights](sql-generated-insights.md)
 * [Download dashboards to PDF](download.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)

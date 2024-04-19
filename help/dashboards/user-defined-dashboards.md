@@ -30,6 +30,8 @@ The [!UICONTROL Create dashboard] dialog appears. Enter a human-friendly, descri
 
 ![The Create dashboard dialog.](./images/user-defined-dashboards/create-dashboard-dialog.png)
 
+Users who have purchased the Data Distiller SKU have the option to use custom SQL queries to create their insights. See the [SQL insight creation guide](./sql-generated-insights.md) for instructions on this workflow.  
+
 The newly created blank dashboard appears with your chosen name in the top left corner of the view.
 
 ## Create a widget {#create-widget}
