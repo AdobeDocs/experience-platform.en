@@ -109,11 +109,15 @@ To remove all filters, select **[!UICONTROL Clear all]**.
 
 ![The clear all option selected.](../../images/tutorials/filter/clear-all.png)
 
+## Filter sources accounts
+
+In the Experience Platform UI, select [!UICONTROL Sources] in the left navigation and then select **[!UICONTROL Accounts]** from the top header. You can filter your sources accounts based on the source that they were created with or the user that created them.
+
 ## Search
 
-## Inline actions
+## Inline actions for sources dataflows
 
-Select the ellipses beside a dataflow name for a list of inline actions that you can use to make modifications to your dataflow.
+Select the ellipses (`...`) beside a dataflow name for a list of inline actions that you can use to make modifications to your dataflow.
 
 ![The selection of inline actions you can choose from for a given dataflow.](../../images/tutorials/filter/inline-actions.png)
 
@@ -127,3 +131,5 @@ Select the ellipses beside a dataflow name for a list of inline actions that you
 | Subscribe to alerts | Select **[!UICONTROL Subscribe to alerts]** to view a pop-up window of alerts that you can subscribe to: <ul><li>Sources Dataflow Run Start: Select this alert to receive a notification when your on-demand dataflow run begins.</li><li>Sources Dataflow Run Success: Select this alert to receive a notification when your on-demand dataflow run finishes successfully.</li><li>Sources Dataflow Run Failure: Select this alert when your on-demand dataflow run fails due to errors.</li></ul> For more information, read the guide on [subscribing to alerts for sources dataflows](../ui/alerts.md).  |
 | Add to package | Select **[!UICONTROL Add to package]** to add your dataflow to a package and export it for use in a different sandbox. During this step, you can either create a new package or add your dataflow to an existing package. For information, read the guide on [sandbox tooling](../../../sandboxes/ui/sandbox-tooling.md).|
 | Manage tags | Select **[!UICONTROL Manage tags]** to add or remove tags from your dataflow. Use tags to manage metadata taxonomies and classify business objects for easier discovery and categorization. For more information, read the guide on [managing tags](../../../administrative-tags/ui/managing-tags.md).|
+
+## Next steps
