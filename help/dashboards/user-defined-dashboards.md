@@ -147,7 +147,7 @@ Widgets can be re-arranged and resized while in this workspace. Select **[!UICON
 
 To ensure that each query for an Adobe Real-Time Customer Data Platform insights dashboard has enough resources to execute efficiently, the API tracks resource usage by assigning concurrency slots to each query. The system can process up to four concurrent queries, and therefore four concurrent query slots are available at any given time. Queries are put into a queue based on concurrency slots, then wait in the queue until enough concurrency slots are available.
 
-### Duplicate a widget
+### Duplicate a widget {#duplicate}
 
 Once you have created a widget, you can duplicate the entire widget and customize its attributes to create a unique widget without having to start from scratch. To duplicate a widget, first, navigate to the dashboard inventory. Then select the dashboard name from the inventory list. Your customized dashboard appears.
 
