@@ -35,6 +35,12 @@ This tutorial also requires a working understanding of [[!DNL Braze] Currents](h
 
 If you already have a [!DNL Braze] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/marketing-automation.md).
 
+## Create a Schema
+
+In the Platform UI, select **[!UICONTROL Schemas]** from the left navigation to access the [!UICONTROL Schemas] workspace.  Select the **[!UICONTROL Create schema]** button in the top right of the screen, and select *Experience Event* base class.  Once you have done this select **[!UICONTROL Next]** to move onto the next screen.
+
+On this screen select a name and description, and then continue on with **[!UICONTROL Finish]**, on the next screen you will be able to add additional attributes to the schema.  Under the *Composition* label on the left side under the *Structure* tab, locate *Field groups* and click the **[!UICONTROL Add]** button next to it.  In the search box, type "Braze Currents User Event" and select the checkbox next to it and select **[!UICONTROL Add field groups]**.  Finally, you can select **[!UICONTROL Save]** to save the changes to your new schema.
+
 ## Connect your [!DNL Braze] account to Experience Platform
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
@@ -47,12 +53,18 @@ Next, upload the provided [Braze Currents sample file](https://github.com/Appboy
 
 ![The "Add Data" screen.](../../../../images/tutorials/create/braze/select-data.png)
 
-Once your file is uploaded, you must provide your dataflow details, including information on your dataset and the schema that you are mapping to.
+Once your file is uploaded, you must provide your dataflow details, including information on your dataset and the schema that you are mapping to.  Use the schema that we created in the previous section.
 ![The "Dataflow Details" screen highlighting "Dataset details."](../../../../images/tutorials/create/braze/dataflow-detail.png)
 
 Then, configure mapping for your data using the mapping interface.
 
 ![The "Mapping" screen.](../../../../images/tutorials/create/braze/mapping.png)
+
+The mapping will have the following issues that need to be resolved.  
+
+*id* in the source data will be incorrectly mapped to *_braze.appID*.  Change this instead to map to the *_id* field at the root level of the schema.
+
+*properties.is_amp* should map to *_braze.messaging.email.isAMP*
 
 >[!IMPORTANT]
 >
