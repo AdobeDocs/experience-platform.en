@@ -37,9 +37,9 @@ If you already have a [!DNL Braze] connection, you may skip the remainder of thi
 
 ## Create a Schema
 
-In the Platform UI, select **[!UICONTROL Schemas]** from the left navigation to access the [!UICONTROL Schemas] workspace.  Select the **[!UICONTROL Create schema]** button in the top right of the screen, and select *Experience Event* base class.  Once you have done this select **[!UICONTROL Next]** to move onto the next screen.
+In the Platform UI, select **[!UICONTROL Schemas]** from the left navigation under Data Management to access the [!UICONTROL Schemas] workspace.  Select the **[!UICONTROL Create schema]** button in the top right of the screen, and select *Experience Event* base class.  Once you have done this select **[!UICONTROL Next]** to move onto the next screen.
 
-On this screen select a name and description, and then continue on with **[!UICONTROL Finish]**, on the next screen you will be able to add additional attributes to the schema.  Under the *Composition* label on the left side under the *Structure* tab, locate *Field groups* and click the **[!UICONTROL Add]** button next to it.  In the search box, type "Braze Currents User Event" and select the checkbox next to it and select **[!UICONTROL Add field groups]**.  Finally, you can select **[!UICONTROL Save]** to save the changes to your new schema.
+On this screen select a name and description, and then continue on with **[!UICONTROL Finish]**, on the next screen you will be able to add additional attributes to the schema.  Under the *Composition* label on the left side under the *Structure* tab, locate *Field groups* and click the **[!UICONTROL Add]** button next to it.  In the search box, type "Braze Currents Users Event" and select the checkbox next to it and select **[!UICONTROL Add field groups]**.  Finally, you can select **[!UICONTROL Save]** to save the changes to your new schema.
 
 ## Connect your [!DNL Braze] account to Experience Platform
 
@@ -53,7 +53,7 @@ Next, upload the provided [Braze Currents sample file](https://github.com/Appboy
 
 ![The "Add Data" screen.](../../../../images/tutorials/create/braze/select-data.png)
 
-Once your file is uploaded, you must provide your dataflow details, including information on your dataset and the schema that you are mapping to.  Use the schema that we created in the previous section.
+Once your file is uploaded, you must provide your dataflow details, including information on your dataset and the schema that you are mapping to.  If this is your first time connecting a Braze Currents source, then create a new dataset.  Otherwise you can use any existing dataset that references the Braze schema.  If creating a new dataset, use the schema that we created in the previous section.
 ![The "Dataflow Details" screen highlighting "Dataset details."](../../../../images/tutorials/create/braze/dataflow-detail.png)
 
 Then, configure mapping for your data using the mapping interface.
@@ -71,6 +71,7 @@ The mapping will have the following issues that need to be resolved.
 >Braze timestamps are not expressed in milliseconds, but rather in seconds. In order for the timestamps in Experience Platform to be accurately reflected, you need to create calculated fields in milliseconds. A calculation of "time * 1000" will properly convert to milliseconds, suitable for mapping to a timestamp field within Experience Platform.
 >
 >![Creating a calculated field for timestamp ](../../../../images/tutorials/create/braze/create-calculated-field.png)
+Delete the *time* to *timestamp* mapping, then click the **[!UICONTROL + New field type]** button and select *Add calculated field*.  In the provided box, type *time \* 1000* and click **[!UICONTROL Save]**.  Then select **[!UICONTROL Map target field]** next to the new source field and map it to *timestamp* at the root level of the schema.  You should then click **[!UICONTROL Validate]** and ensure you have no more errors.  Once this is done click **[!UICONTROL Next]**, and then **[!UICONTROL Finish]** on the next page once you have reviewed your new connection.
 
 ### Gather required credentials
 
