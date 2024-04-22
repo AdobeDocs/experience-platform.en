@@ -352,9 +352,13 @@ To set a field as conditional, use the `conditional` parameter as shown below:
 }
 ```
 
-In a wider context, you can see the `conditional` field being used in the destination configuration below, alongside the `fileType` string and the `csvOptions` object in which it is defined.
+In a wider context, you can see the `conditional` field being used in the destination configuration below, alongside the `fileType` string and the `csvOptions` object in which it is defined. The conditional fields are defined in the properties parameter.
 
-```json {line-numbers="true" highlight="3-15, 21-25"}
+>[!TIP]
+>
+>Starting with the April 2024 release, you can set an `isRequired` parameter on conditional fields. For example, in the configuration snippet below, the delimiter field is marked as required and customers cannot proceed unless they select a value for the field. [Read more](#supported-parameters) about required fields.
+
+```json {line-numbers="true" highlight="3-15, 21-25,32"}
 "customerDataFields":[
    {
       "name":"fileType",
@@ -386,7 +390,7 @@ In a wider context, you can see the `conditional` field being used in the destin
             "title":"Delimiter",
             "description":"Select your Delimiter",
             "type":"string",
-            "isRequired":false,
+            "isRequired":true,
             "default":",",
             "namedEnum":[
                {
