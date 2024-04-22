@@ -14,7 +14,7 @@ As part of the user-defined dashboards feature you can use custom SQL queries to
 
 To generate insights from SQL you must first create a dashboard.
 
-## Create a custom dashboard
+## Create a custom dashboard {#create-custom-dashboard}
 
 To create a custom dashboard, select **[!UICONTROL Dashboards]** from the left navigation panel to open the Dashboards workspace. Next, select **[!UICONTROL Create dashboard]**. The [!UICONTROL Create dashboard] dialog appears.
 
@@ -22,13 +22,13 @@ To create a custom dashboard, select **[!UICONTROL Dashboards]** from the left n
 
 There are two options to from which to choose your dashboard creation method. You can either use an existing data model or the SQL Query Editor to create your insights. Using an existing data model has the benefits of providing a structured, efficient, and scalable framework tailored to your specific business needs. Insights generated from SQL queries offer far greater flexibility and customization, however, they are likely to require more time and expertise to develop and maintain. Refer to the user-defined dashboards guide to learn how to [create insights from an existing data model](./user-defined-dashboards.md#create-widget).
 
-Select **[!UICONTROL SQL Query Editor]** followed by **[!UICONTROL Create]**.
+Select **[!UICONTROL Query pro mode]** followed by **[!UICONTROL Save]**.
 
 >[!NOTE]
 >
 >Once you make a selection, you cannot change this selection within that dashboard. Instead, create a new dashboard that uses a different insight creation method.
 
-![The [!UICONTROL Create dashboard] dialog with SQL Query Editor and Create highlighted. PLACEHOLDER](./images/user-defined-dashboards/sql-workflow/suggested-ui-experience.png)
+![The [!UICONTROL Create dashboard] dialog with Query pro mode and Save highlighted.](./images/user-defined-dashboards/sql-workflow/suggested-ui-experience.png)
 
 The **[!UICONTROL Enter SQL]** dialog appears. Select a database to query from the dropdown menu, and input a suitable query for your dataset in the Query Editor.
 
@@ -50,7 +50,7 @@ The widget composer is now populated with data from your chosen dataset. The typ
 
 Use the attributes listed in the [!UICONTROL Attributes] column to create your widget. You can use the search bar to look for attributes or scroll the list.
 
-![The widget composer with the creation method and attribute column highlighted.]()
+![The widget composer with the creation method and attribute column highlighted.](./images/user-defined-dashboards/sql-workflow/creation-method-and-attribute-column.png)
 
 ### Add attributes {#add-attributes}
 
@@ -60,7 +60,7 @@ Select the add icon (![An add icon.](./images/user-defined-dashboards/add-icon.p
 >
 >Select the up and down arrow icon (![The up and down arrow icon.](./images/user-defined-dashboards/switch-axis-icon.png)) to switch the arrangement of the X and Y axis.
 
-![The widget composer with the add-icon dropdown and switch arrows highlighted.]()
+![The widget composer with the add-icon dropdown and switch arrows highlighted.](./images/user-defined-dashboards/sql-workflow/add-icon-and-switch-arrows)
 
 To change the type of graph or chart of your widget, select from the available options of the [!UICONTROL Marks] dropdown. The options include [!UICONTROL Line], [!UICONTROL Donut], [!UICONTROL Big number], [!UICONTROL Table], and [!UICONTROL Bar]. Once selected, a preview visualization of your widget's current settings is generated.
 
@@ -76,17 +76,25 @@ Select the properties icon (![The properties icon.](./images/user-defined-dashbo
 
 Saving in the widget composer saves the widget locally to your dashboard. If you wish to save your work and resume at a later time, select **[!UICONTROL Save]**. A tick icon underneath the widget name indicates that the widget has been saved. Alternatively, when you are satisfied with your widget, select **[!UICONTROL Save and close]** to make the widget available to all other users with access to your dashboard. Select Cancel to abandon your work and return to your custom dashboard.
 
-![The widget composer with Save, Widget saved, and Save and close highlighted.]()
+![The widget composer with Save, Widget saved, and Save and close highlighted.](./images/user-defined-dashboards/sql-workflow/insight-saved.png)
 
-<!-- Add content on global filters -->
+### View more / View SQL {#view-more-view-sql}
 
-### View more / View SQL
+From your custom dashboard, select the ellipses (`...`) on any widget to access the [!UICONTROL View more] and [!UICONTROL View SQL] options.
 
-From your custom dashboard, select the ellipses on each widget to access the [!UICONTROL View more] and [!UICONTROL View SQL] options. 
+![A custom dashboard with an insight's ellipses dropdown menu and the View more and View SQL options highlighted.](./images/user-defined-dashboards/sql-workflow/ellipses-dropdown.png)
 
-## Edit your dashboard {#edit}
+To view the SQL behind your customized insights, select the [!UICONTROL View more] option. The dialog is titled with the name of the insight. From this view you can copy the SQL to your clipboard to use as a base in a future query. Select **[!UICONTROL Close]**  to close the dialog.
 
-Select **[!UICONTROL Edit]** to edit your entire dashboard and all your insights. From the edit mode, you can resize widgets, create and apply global and temporal filters. These filters constrain the data displayed in your dashboard widgets. It is a convenient way to quickly update and fine tune your insights for different use cases.
+![A dialog displaying the SQL of an insight with the SQL and close option highlighted.](./images/user-defined-dashboards/sql-workflow/view-sql.png)
+
+The [!UICONTROL View more] feature displays the specific data points for the chart in tabular form. From this dialog you can download the processed data in CSV format. Select **[!UICONTROL Download as CSV]** to download your data.
+
+![A dialog displaying a preview of your insight and the tabularized results of your SQL that generated teh insight.](./images/user-defined-dashboards/sql-workflow/view-more-download-csv.png)
+
+## Edit your dashboard and insights {#edit}
+
+Select **[!UICONTROL Edit]** to edit your entire dashboard or any of your insights. From the edit mode, you can resize widgets, edit your SQL, or create and apply global and temporal filters. These filters constrain the data displayed in your dashboard widgets. It is a convenient way to quickly update and fine tune your insights for different use cases.
 
 Select **[!UICONTROL Add filter]** to create either a [!UICONTROL Date filter] or a [!UICONTROL Global filter].
 
@@ -112,11 +120,11 @@ The final step of the workflow to create a global filter requires you to add a l
 
 ### Select a global filter {#select-global-filter}
 
-Select the filter icon (![A filter icon.](./images/user-defined-dashboards/sql-workflow/filter.png)) on the left of your dashboard to open the [!UICONTROL Filters] dialog that lists all of your custom filters. Choose an option from the dropdown menu of your global filter to apply the effects on your dashboard insights.
+To open the [!UICONTROL Filters] dialog that lists all of your custom filters, select the filter icon (![A filter icon.](./images/user-defined-dashboards/sql-workflow/filter.png)) on the left of your dashboard. Next, apply the effects on your dashboard insights. Choose an option from the dropdown menu of your global filter then select **[!UICONTROL Apply]**.
 
 ![A custom dashboard with the filter dialog highlighted.](./images/user-defined-dashboards/sql-workflow/custom-filters.png)
 
-## Duplicate a widget
+## Edit, duplicate, or delete an insight
 
-See the Custom Dashboard guide for instructions on how to [duplicate an existing widget](./user-defined-dashboards.md#duplicate).
+See the Custom Dashboard guide for instructions on how to [edit, duplicate, or delete an existing widget](./user-defined-dashboards.md#duplicate).
 
