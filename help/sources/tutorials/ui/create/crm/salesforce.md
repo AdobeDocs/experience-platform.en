@@ -28,7 +28,7 @@ In order to authenticate your [!DNL Salesforce] account against Experience Platf
 | `username` | The username for the [!DNL Salesforce] user account. |
 | `password` | The password for the [!DNL Salesforce] user account. |
 | `securityToken` | The security token for the [!DNL Salesforce] user account. |
-| `apiVersion` | (Optional) The REST API version of the [!DNL Salesforce] instance that you are using. If this field is left blank, then Experience Platform will automatically use the latest available version. |
+| `apiVersion` | (Optional) The REST API version of the [!DNL Salesforce] instance that you are using. The value for API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0` If this field is left blank, then Experience Platform will automatically use the latest available version. |
 
 For more information on authentication, refer to [this [!DNL Salesforce] authentication guide](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 

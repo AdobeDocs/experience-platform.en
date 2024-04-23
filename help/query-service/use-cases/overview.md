@@ -2,6 +2,7 @@
 title: Supported use cases with the Adobe Experience Platform Query Service
 description: Learn which use cases are supported with the Adobe Experience Platform Query Service.
 keywords: Query Service;use cases
+exl-id: eba8050d-be3a-41b6-8175-4f6b2b2ef7b0
 ---
 # Supported use cases
 
@@ -14,4 +15,3 @@ Each document in this section contains information on how to implement its respe
 - [Customer lifetime value](./customer-lifetime-value.md)
 - [Determine a propensity score](./propensity-score.md)
 - [Fuzzy Match](./fuzzy-match.md)
-

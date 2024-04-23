@@ -6,7 +6,7 @@ exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
 ---
 # Using [!DNL Adobe Journey Optimizer] with the [!DNL Platform Web SDK]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] can deliver and render personalized experiences managed in [!DNL Adobe Journey Optimizer] to the web channel. You can use a WYSIWYG editor, [!DNL Adobe Journey Optimizer] [Web Campaign UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), to create, activate, and deliver your [!DNL Journey Optimizer Web] campaigns and personalization experiences.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] can deliver and render personalized experiences managed in [!DNL Adobe Journey Optimizer] to the web channel. You can use a WYSIWYG editor, [!DNL Adobe Journey Optimizer] [Web Channel](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), or a non-visual interface, the [Code-based Experience Channel](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) to create, activate, and deliver your [!DNL Journey Optimizer Web] campaigns and personalization experiences.
 
 >[!IMPORTANT]
 >
@@ -14,7 +14,7 @@ exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
 
 ## Terminology {#terminology}
 
-**[!UICONTROL Surface]**: A web surface is a web property identified by a URL where the [!DNL Adobe Journey Optimizer] experience content will be delivered.
+**[!UICONTROL Surface]**: A web surface is a web page or location on a page identified by a URI where the [!DNL Adobe Journey Optimizer] experience content will be delivered.
 
 **[!UICONTROL Propositions]**: In [!DNL Adobe Journey Optimizer], propositions correlate to the experience selected from a [!DNL Journey Optimizer Campaign].
 
