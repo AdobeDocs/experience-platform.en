@@ -60,7 +60,7 @@ Once your file is uploaded, you must provide your dataflow details, including in
 
 Then, configure mapping for your data using the mapping interface.
 
-![The "Mapping" screen.](../../../../images/tutorials/create/braze/mapping.png)
+![The "Mapping" screen.](../../../../images/tutorials/create/braze/mapping_errors.png)
 
 The mapping will have the following issues that need to be resolved.  
 
