@@ -73,6 +73,7 @@ The mapping will have the following issues that need to be resolved.
 >Braze timestamps are not expressed in milliseconds, but rather in seconds. In order for the timestamps in Experience Platform to be accurately reflected, you need to create calculated fields in milliseconds. A calculation of "time * 1000" will properly convert to milliseconds, suitable for mapping to a timestamp field within Experience Platform.
 >
 >![Creating a calculated field for timestamp ](../../../../images/tutorials/create/braze/create-calculated-field.png)
+
 Delete the *time* to *timestamp* mapping, then click the **[!UICONTROL + New field type]** button and select *Add calculated field*.  In the provided box, type *time \* 1000* and click **[!UICONTROL Save]**.  Then select **[!UICONTROL Map target field]** next to the new source field and map it to *timestamp* at the root level of the schema.  You should then click **[!UICONTROL Validate]** and ensure you have no more errors.  Once this is done click **[!UICONTROL Next]**, and then **[!UICONTROL Finish]** on the next page once you have reviewed your new connection.
 
 ![The mapping with no errors.](../../../../images/tutorials/create/braze/completed_mapping.png)
