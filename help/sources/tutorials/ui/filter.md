@@ -1,6 +1,7 @@
 ---
 title: Filter sources objects in the UI
-description: Learn how to filter through your sources objects such as accounts and dataflows in the UI
+description: Learn how to navigate through your sources objects such as accounts and dataflows in the UI
+last-substantial-update: 2024-04-30
 ---
 # Filter sources objects in the UI
 
@@ -13,12 +14,12 @@ You can use tools in the Adobe Experience Platform user interface, such as filte
 
 It is helpful to have an understanding of the following Experience Platform features and concepts before working with the object navigation tools in the sources workspace:
 
-* Sources
-* Dataflows
-* Datasets
-* Alerts
-* Sandboxes
-* Administrative Tags
+* [Sources](../../home.md): Use sources in Experience Platform to ingest data from an Adobe Application or a third-party data source.
+* [Administrative Tags](../../../administrative-tags/overview.md): Use administrative tags to apply metadata keywords to your objects and enable search to find that object within the Experience Platform ecosystem.
+* [Alerts](../../../observability/home.md): Use alerts to receive notifications that provide an update on the status of objects such as your sources dataflows.
+* [Dataflows](../../../dataflows/home.md): Dataflows are representations of data jobs that move data across Experience Platform. You can use the sources workspace to create dataflows that ingest data from a given source to Experience Platform.
+* [Datasets](../../../catalog/datasets/user-guide.md): A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows).
+* [Sandboxes](../../../sandboxes/home.md): Use sandboxes in Experience Platform to create virtual partitions between your Experience Platform instances and create environments dedicated to development or production.
 
 ## Filter sources dataflows
 
@@ -113,7 +114,27 @@ To remove all filters, select **[!UICONTROL Clear all]**.
 
 In the Experience Platform UI, select [!UICONTROL Sources] in the left navigation and then select **[!UICONTROL Accounts]** from the top header. You can filter your sources accounts based on the source that they were created with or the user that created them.
 
+![The accounts page in the sources workspace](../../images/tutorials/filter/accounts.png)
+
 ## Search
+
+You can accelerate efficiency by using the search bar to immediately navigate to a particular account or dataflow.
+
+>[!BEGINTABS]
+
+>[!TAB Search for dataflows]
+
+Use the search bar in the [!UICONTROL Dataflows] page to find a specific dataflow. You can search for a dataflow using its name or description.
+
+![A search query for an ACME dataflow](../../images/tutorials/filter/search-dataflow.png)
+
+>[!TAB Search for accounts]
+
+Use the search bar in the [!UICONTROL Accounts] page to find a specific account. You can search for an account using its name or description.
+
+![A search query for an April account](../../images/tutorials/filter/search-account.png)
+
+>[!ENDTABS]
 
 ## Inline actions for sources dataflows
 
@@ -133,3 +154,5 @@ Select the ellipses (`...`) beside a dataflow name for a list of inline actions 
 | Manage tags | Select **[!UICONTROL Manage tags]** to add or remove tags from your dataflow. Use tags to manage metadata taxonomies and classify business objects for easier discovery and categorization. For more information, read the guide on [managing tags](../../../administrative-tags/ui/managing-tags.md).|
 
 ## Next steps
+
+By reading this document, you have learned how to navigate your way through the sources accounts and dataflows pages. For more information on sources, read the [sources overview](../../home.md).
