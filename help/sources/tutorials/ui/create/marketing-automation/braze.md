@@ -37,6 +37,8 @@ If you already have a [!DNL Braze] connection, you may skip the remainder of thi
 
 ## Create a Schema
 
+If this is the first time creating a Braze Currents Connection, you'll need to create a schema.  If you have already created a schema for Braze Currents, you may proceed with the next step, "Connect your Braze account to Experience Platform".
+
 In the Platform UI, select **[!UICONTROL Schemas]** from the left navigation under Data Management to access the [!UICONTROL Schemas] workspace.  Select the **[!UICONTROL Create schema]** button in the top right of the screen, and select *Experience Event* base class.  Once you have done this select **[!UICONTROL Next]** to move onto the next screen.
 
 ![A completed schema.](../../../../images/tutorials/create/braze/schema.png)
