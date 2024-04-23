@@ -1,7 +1,8 @@
 ---
 title: Create a PathFactory Base Connection Using the Flow Service API
 description: Learn how to authenticate your PathFactory account against Experience Platform using the Flow Service API.
-exl-id: 
+last-substantial-update: 2024-04-30
+badge: Beta 
 ---
 # Create a [!DNL PathFactory] base connection using the [!DNL Flow Service] API
 

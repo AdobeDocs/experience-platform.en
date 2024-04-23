@@ -1,9 +1,8 @@
 ---
 title: PathFacory Source Overview
 description: Learn how to connect PathFactory to Adobe Experience Platform using APIs or the user interface.
-last-substantial-update: 2024-04-20
-badge: Beta
-exl-id: 
+last-substantial-update: 2024-04-30
+badge: Beta 
 ---
 # [!DNL PathFactory]
 
@@ -13,9 +12,9 @@ exl-id:
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-Experience Platform provides support for ingesting data third-party marketing automation system. Support for marketing automation providers includes [!DNL PathFactory].
+Experience Platform provides support for ingesting data from third-party marketing automation system. Support for marketing automation providers includes [!DNL PathFactory].
 
-[[!DNL PathFactory]](https://www.pathfactory.com/) offers a cloud-based platform that helps businesses manage content journeys and drive engagement through intelligent content insights. This guide details how you can integrate data from PathFactory into your Experience Platform, utilizing PathFactory's connectors for optimal data ingestion.
+[[!DNL PathFactory]](https://www.pathfactory.com/) offers a cloud-based platform that helps businesses manage content journeys and drive engagement through intelligent content insights. This guide details how you can integrate data from PathFactory into Experience Platform, utilizing PathFactory's connectors for optimal data ingestion.
 
 You can ingest data from [[!DNL PathFactory]](https://www.pathfactory.com/) using three primary sources:
 
@@ -29,7 +28,7 @@ A list of IP addresses may require to be added to an allow list prior to working
 
 ## Prerequisites {#prerequisites}
 
-Before you begin integrating [[!DNL PathFactory]](https://www.pathfactory.com/) connectors with your Experience Platform, ensure you meet the following prerequisites:
+Before you begin integrating [[!DNL PathFactory]](https://www.pathfactory.com/) connectors with Experience Platform, ensure you meet the following prerequisites:
 
 * **A [PathFactory account]**.
   * Contact [PathFactory](https://www.pathfactory.com/portal/company/contactus.shtml) if you do not already have a valid account.
@@ -41,7 +40,7 @@ Before you begin integrating [[!DNL PathFactory]](https://www.pathfactory.com/) 
 
 ### How to Obtain Credentials and Access Tokens {#gather-credentials}
 
-To connect PathFactory to your Platform, you must provide the following credentials:
+To connect PathFactory to Experience Platform, you must provide the following credentials:
 
 | Credential | Description | Endpoint |
 | --- | --- | --- |

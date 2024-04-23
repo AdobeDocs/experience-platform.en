@@ -1,7 +1,8 @@
 ---
 title: Connect Your PathFactory Account To Experience Platform Through the UI
 description: Learn how to connect your PathFactory account to Experience Platform through the UI.
-exl-id: 
+last-substantial-update: 2024-04-30
+badge: Beta 
 ---
 # Connect your [!DNL PathFactory] account to Experience Platform through the UI
 
