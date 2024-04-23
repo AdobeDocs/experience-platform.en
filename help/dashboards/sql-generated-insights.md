@@ -54,7 +54,7 @@ Use the attributes listed in the [!UICONTROL Attributes] column to create your w
 
 Select the plus icon (![A plus icon.](./images/user-defined-dashboards/add-icon.png)) next to an attribute name to add an attribute to your widget. The dropdown menu that appears allows you to add an attribute as either the X axis, the Y axis, or as a color for your widget. The color attribute allows you to differentiate the results of the X and Y axis marks based on color. Add an attribute to the [!UICONTROL Color] field to split the results into different colors based on their composition of a third attribute.
 
-[!TIP>]
+>[!TIP]
 >
 >Select the up and down arrow icon (![The up and down arrow icon.](./images/user-defined-dashboards/switch-axis-icon.png)) to switch the arrangement of the X and Y axis.
 
