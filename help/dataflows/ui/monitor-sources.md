@@ -12,13 +12,15 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 >
 >Streaming sources, such as the [HTTP API source](../../sources/connectors/streaming/http.md) are not currently supported by the monitoring dashboard. At this moment, you can only use the dashboard to monitor batch sources.
 
-In Adobe Experience Platform, data is ingested from a wide variety of sources, analyzed within Experience Platform, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
+<!-- In Adobe Experience Platform, data is ingested from a wide variety of sources, analyzed within Experience Platform, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
 
 The monitoring dashboard provides you with a visual representation of the journey of a dataflow. You can use an aggregated monitoring view and navigate vertically from the source level, to a dataflow, and to a dataflow run, allowing you to view the corresponding metrics that contribute to a dataflow's success or failure. You can also use the monitoring dashboard's cross-service monitoring capacity to monitor a dataflow's journey from a source, to [!DNL Identity Service], and to [!DNL Profile].
 
-This tutorial provides steps to monitor your dataflow, using both aggregated monitoring view and cross-service monitoring.
+This tutorial provides steps to monitor your dataflow, using both aggregated monitoring view and cross-service monitoring. -->
 
-## Getting started {#getting-started}
+Read this document to learn how to use the monitoring dashboard to monitor your sources dataflows in the Experience Platform UI.
+
+## Get started {#get-started}
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -43,9 +45,11 @@ This tutorial requires a working understanding of the following components of Ad
 >abstract="Sources processing contains information on data activity status and metrics in data lake service, including records ingested and records failed. Review the metric definition guide to learn more about metrics and graphs."
 >text="Learn more in documentation"
 
-In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
+<!-- In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
 
-At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed.
+At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
+
+In the monitoring dashboard, select [!UICONTROL Sources] from the main header to update your dashboard with a display of your sources dataflow ingestion rate.
 
 ![monitoring-dashboard](../assets/ui/monitor-sources/monitoring-dashboard.png)
 
