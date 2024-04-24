@@ -12,7 +12,8 @@ This tutorial covers the steps for retrieving data from a marketing automation s
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have a valid base connection ID with a marketing automation source. If you do not have this ID, then see the [sources overview](../../../home.md#marketing-automation) for a list of marketing automation sources that you can create a base connection with.
+>* In order to create a dataflow, you must already have a valid base connection ID with a marketing automation source. If you do not have this ID, then see the [sources overview](../../../home.md#marketing-automation) for a list of marketing automation sources that you can create a base connection with.
+>* For Experience Platform to ingest data, timezones for all table-based batch sources must be configured to UTC.
 
 ## Getting started
 

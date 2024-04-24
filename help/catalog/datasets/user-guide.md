@@ -267,9 +267,9 @@ A confirmation box appears. Select **[!UICONTROL Delete]** to confirm the deleti
 
 ## Delete a Profile-enabled dataset
 
-If a dataset is enabled for Profile, deleting that dataset through the UI will delete it from data lake, Identity Service, and the Profile store within Platform.
+If a dataset is enabled for Profile, deleting that dataset through the UI will delete it from the data lake, Identity Service, and also any profile data associated with that dataset in the Profile store.
 
-You can delete a dataset from the [!DNL Profile] store only (leaving the data in the Data Lake) using the Real-Time Customer Profile API. For more information, see the [profile system jobs API endpoint guide](../../profile/api/profile-system-jobs.md).
+You can delete profile data associated with a dataset from the [!DNL Profile] store (leaving the data in the data lake) using the Real-Time Customer Profile API. For more information, see the [profile system jobs API endpoint guide](../../profile/api/profile-system-jobs.md).
 
 ## Monitor data ingestion
 

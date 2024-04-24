@@ -5,6 +5,10 @@ exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
 ---
 # Create a Google Ads base connection using the [!DNL Flow Service] API
 
+>[!WARNING]
+>
+>The [!DNL Google Ads] source is temporarily unavailable. Adobe is working to resolve issues with this source.
+
 >[!NOTE]
 >
 >The Google Ads source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
