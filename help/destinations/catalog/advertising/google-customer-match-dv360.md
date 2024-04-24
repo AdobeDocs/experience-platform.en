@@ -1,11 +1,26 @@
 ---
 title: Google Customer Match + Display & Video 360 connection
 description: Google Customer Match + Display & Video 360 lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, Gmail, and YouTube.
+badgeBeta: label="Beta" type="Informative"
 ---
 
 # [!DNL Google Customer Match + Display & Video 360] connection
 
+Use this destination to activate your first-party PII-based [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) lists directly to [!DNL Google Display & Video 360] properties such as [!DNL Search], [!DNL YouTube], [!DNL Gmail], and the [!DNL Google Display Network].
+
+Certain Google-integrated third parties, such as Adobe Real-Time CDP, can use the Google Audience Partner API to create Customer Match audiences directly in customers' Display & Video 360 account.
+
+With the newly introduced capability of being able to utilize Customer Matched audiences across Display & Video 360, you are now able to target audiences across an expanded roster of inventory sources. 
+
 >[!IMPORTANT]
+>
+>This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.
+
+![Google Customer Match destination in the Adobe Experience Platform UI.](../../assets/catalog/advertising/google-customer-match/catalog.png)
+
+## Important notice about changes to Google destinations related to updated consent requirements in the European Union
+
+ >[!IMPORTANT]
 >
 > Google is releasing changes to the [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), and the [Display & Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) in order to support the compliance and consent-related requirements defined under the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in the European Union ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). Enforcement of these changes to consent requirements is expected to go into effect starting March 6, 2024.
 ><br/>
@@ -15,14 +30,13 @@ description: Google Customer Match + Display & Video 360 lets you use your onlin
 ><br/>
 >Customers who have not purchased Adobe Privacy & Security Shield must use the [segment definition](../../../segmentation/home.md#segment-definitions) capabilities within [Segment Builder](../../../segmentation/ui/segment-builder.md) to filter out non-consented profiles, in order to continue using the existing Real-Time CDP Google Destinations without interruption.
 
-Use this destination to activate your first-party PII-based [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) lists directly to [!DNL Google Display & Video 360] properties such as [!DNL Search], [!DNL YouTube], [!DNL Gmail], and the [!DNL Google Display Network].
+## When to use this destination
 
->[!IMPORTANT]
->
->This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.
+With several integrations with Google available in the destinations catalog, it might be difficult to understand when to use each of the available Google destinations. Make sense of the different use cases by reading the information in the table below:
 
-
-![Google Customer Match destination in the Adobe Experience Platform UI.](../../assets/catalog/advertising/google-customer-match/catalog.png)
+| [Google Customer Match](/help/destinations/catalog/advertising/google-customer-match.md) | [Google Display & Video 360](/help/destinations/catalog/advertising/google-dv360.md) | Google Customer Match + Display & Video 360 (this connector) |
+|---------|----------|---------|
+| A1 | B1 | C1 |
 
 ## Use cases {#use-cases}
 
