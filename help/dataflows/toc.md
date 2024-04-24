@@ -13,6 +13,7 @@ role: Developer
   - [Monitor dataflows](./api/monitor.md)
   - [Sort and filter API responses](./api/sort-and-filter.md)
 - UI guides {#ui}
+  - [Monitoring dashboard](./ui/monitor.md)
   - [Monitor dataflows in sources](./ui/monitor-sources.md)
   - [Monitor dataflows in identities](./ui/monitor-identities.md)
   - [Monitor dataflows in Profiles](./ui/monitor-profiles.md)
