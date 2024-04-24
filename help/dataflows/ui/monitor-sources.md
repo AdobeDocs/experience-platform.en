@@ -31,7 +31,7 @@ This tutorial requires a working understanding of the following components of Ad
 * [Real-Time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Aggregated monitoring view {#aggregated-monitoring-view}
+## Monitor your sources data using the monitoring dashboard
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -51,81 +51,54 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 
 In the monitoring dashboard, select [!UICONTROL Sources] from the main header to update your dashboard with a display of your sources dataflow ingestion rate.
 
-![monitoring-dashboard](../assets/ui/monitor-sources/monitoring-dashboard.png)
+![The monitoring dashboard with the sources card selected.](../assets/ui/monitor-sources/sources.png)
 
-By default, the data displayed contains ingestion rates from the last 24 hours. Select **[!UICONTROL Last 24 hours]** to adjust the time frame of records displayed.
+The [!UICONTROL Ingestion rate] graph displays your data ingestion rate based on your configured time frame. By default, the monitoring dashboard displays ingestion rate from the last 24 hours. For steps on how to configure your time frame, read the guide on [configuring monitoring time frame](monitor.md#configure-monitoring-time-frame).
 
-![change-date](../assets/ui/monitor-sources/change-date.png)
+The graph is enabled to display by default. To hide the graph, select **[!UICONTROL Metrics and graphs]** to disable the toggle and hide the graph.
 
-A calendar pop-up window appears, providing you options for alternative ingestion time frames. Select **[!UICONTROL Last 30 days]** and then select **[!UICONTROL Apply]**
+![The ingestion rate metrics graph.](../assets/ui/monitor-sources/metrics-graph.png)
 
-![adjust-time-frame](../assets/ui/monitor-sources/adjust-timeframe.png)
+The lower part of the dashboard displays a table that outlines the current metrics report for all existing sources dataflows.
 
-The graphs are enabled by default and you can disable them to expand the list of sources below. Select the **[!UICONTROL Metrics and graphs]** toggle to disable the graphs.
+![The monitoring dashboard metrics table.](../assets/ui/monitor-sources/metrics-table.png)
 
-![metrics-and-graphs](../assets/ui/monitor-sources/metrics-graphs.png)
+| Metrics | Description |
+| --- | --- |
+| Source name |
+| Records received |
+| Records ingested |
+| Records skipped |
+| Records failed |
+| Ingested rate |
+| Total failed dataflows |
 
-| Source ingestion | Description |
-| ---------------- | ----------- |
-| [!UICONTROL Records ingested ]| The total number of records ingested. |
-| [!UICONTROL Records failed] | The total number of records that were not ingested due to errors in the data. |
-| [!UICONTROL Total failed dataflows] | The total number of dataflows with a `failed` status. |
+{style="table-layout:auto"}
 
-The source ingestion list displays all sources that contain at least one existing account. The list also includes information on each source's ingestion rate, number of failed records, and total number of failed dataflows based on the time frame that you applied.
+You can further filter your data using the options provided above the metrics table:
 
-![source-ingestion](../assets/ui/monitor-sources/source-ingestion.png)
+| Filtering options | Description |
+| --- | --- |
+| Search | Use the search bar to filter your view to a single source type. |
+| Sources | Select **[!UICONTROL Sources]** to filter your view and display metric data per source type. This is the default display that the monitoring dashboard uses. |
+| Dataflows | Select **[!UICONTROL Dataflows]** to filter your view and display metric data per dataflow. |
+| Show failures only | Select **[!UICONTROL Show failures only]** to filter your view and display only dataflows that reported ingestion failures. |
+| My sources | You can further filter your view by using the [!UICONTROL My sources] dropdown menu. Use the dropdown menu to filter your view by category. Alternatively, you can select **[!UICONTROL All sources]** to display metrics on all or sources, or select **[!UICONTROL My sources]** to display only the sources that you have a corresponding account with. |
 
-To sort through the list of sources, select **[!UICONTROL My sources]** and then select your category of choice from the dropdown menu. For example, to focus on cloud storages, select  **[!UICONTROL Cloud storage]**
+{style="table-layout:auto"}
 
-![sort-by-category](../assets/ui/monitor-sources/sort-by-category.png)
+To monitor the data that is being ingested in a specific dataflow, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside a source.
 
-To view all existing dataflows across all sources, select **[!UICONTROL Dataflows]**.
+![Monitor a specific dataflow by selecting the filter icon beside a given source.]()
 
-![view-all-dataflows](../assets/ui/monitor-sources/view-all-dataflows.png)
+The metrics table updates to a table of active dataflows that correspond to the source that you selected. During this step, you can view additional information on your dataflows, including their corresponding dataset and data type, as well as a time stamp on when they were last active. 
 
-Alternatively, you can enter a source into the search bar to isolate a single source. Once you have your source identified, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside it to see a list of its active dataflows.
+To further inspect a dataflow, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside a dataflow.
 
-![search](../assets/ui/monitor-sources/search.png)
+![The dataflows table in the monitoring dashboard.]()
 
-A list of dataflows appears. To narrow down the list and focus on dataflows with errors, select **[!UICONTROL Show failures only]**.
-
-![show-failures-only](../assets/ui/monitor-sources/show-failures-only.png)
-
-Locate the dataflow that you want to monitor and then select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside it, to see more information on its run status.
-
-![dataflow](../assets/ui/monitor-sources/dataflow.png)
-
-The dataflow run page displays information on your dataflow's run start date, size of data, status, as well as its processing time duration. Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside the dataflow run start time to see its dataflow run details.
-
-![dataflow-run-start](../assets/ui/monitor-sources/dataflow-run-start.png)
-
-The [!UICONTROL Dataflow run details] page displays information on the dataflow's metadata, partial ingestion status, and error summary. The error summary contains the specific top-level error that shows at which step the ingestion process encountered an error.
-
-Scroll down to see more specific information on the error that occurred.
-
-![dataflow-run-details](../assets/ui/monitor-sources/dataflow-run-details.png)
-
-The [!UICONTROL Dataflow run errors] panel displays the specific error and error code that resulted in the dataflow's ingestion failure. In this scenario, a mapper transformation error occurred, resulting in the failure of 24 records.
-
-Select **[!UICONTROL Files]** for more information.
-
-![dataflow-run-errors](../assets/ui/monitor-sources/dataflow-run-errors.png)
-
-The [!UICONTROL Files] panel contains information on the file's name and path.
-
-For a more granular representation of the error, select **[!UICONTROL Preview error diagnostics]**.
-
-![files](../assets/ui/monitor-sources/files.png)
-
-The [!UICONTROL Error diagnostics preview] window appears, displaying a preview of up to 100 errors in the dataflow. You can select **[!UICONTROL Download]** to retrieve a curl command, which then allows you to download the error diagnostics.
-
-When you are finished, select **[!UICONTROL Close]**
-
-![error-diagnostics](../assets/ui/monitor-sources/error-diagnostics.png)
-
-You can use the breadcrumb system at the top header to navigate your way back to the [!UICONTROL Monitoring] dashboard. Select **[!UICONTROL Run start: 2/14/2021, 9:47 PM]** to return to the previous page, and then select **[!UICONTROL Dataflow: Loyalty Data Ingestion Demo - Failed]** to return to the dataflows page.
-
-![breadcrumbs](../assets/ui/monitor-sources/breadcrumbs.png)
+* The dataflow run details page
+* The dataflow run errors section
 
 ## Next steps {#next-steps}
 

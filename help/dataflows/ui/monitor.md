@@ -96,7 +96,7 @@ Select **[!UICONTROL Destinations]** to view metrics on your [!UICONTROL Streami
 
 >[!ENDTABS]
 
-### Configure time frame
+### Configure monitoring time frame {#configure-monitoring-time-frame}
 
 By default, the monitoring dashboard displays metrics on data ingested within the last 24 hours. To update the time frame, select **[!UICONTROL Last 24 hours]**.
 
