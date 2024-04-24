@@ -11,7 +11,7 @@ Interactive data collection endpoints receive a single event and are used when t
 
 >[!IMPORTANT]
 >
->The `/interact` endpoint is designed primarily to be used by the SDKs. This endpoint is subject to change and its behavior can evolve without notice. For example, new items can be added to the response payload in the future. Customers should not make limiting assumptions in their implementations and build defensive implementations when adopting the endpoint.
+>The `/interact` endpoint is designed primarily to be used by the Experience Platform SDKs. This endpoint is subject to change and its behavior can evolve without notice. For example, new items may be added to the response payload in the future. You should not make limiting assumptions in your implementations and build defensive implementations when adopting the endpoint.
 
 The server response includes one or more `Handle` objects, as shown below.
 
