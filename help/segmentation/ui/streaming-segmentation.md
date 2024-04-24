@@ -42,6 +42,7 @@ A segment definition will **not** be enabled for streaming segmentation in the f
 - The segment definition includes multiple entities (multi-entity queries).
 - The segment definition includes a combination of a single event and an `inSegment` event.
   - However, if the segment definition contained in the `inSegment` event is profile only, the segment definition **will** be enabled for streaming segmentation.
+- The segment definition uses "Ignore year" as part of its time constraints.
 
 Please note the following guidelines apply when doing streaming segmentation:
 
@@ -113,3 +114,7 @@ As a result, if you see that the number under "Last X days" is zero, and the lin
 ### How long does it take for a segment definition to be available?
 
 It takes up to one hour for a segment definition to be available.
+
+### Are there any limitations to the data being streamed in?
+
+In order for streamed data to be used in streaming segmentation, there **must** be spacing between the events streamed in. If too many events are streamed in within the same second, Platform will treat these events as bot-generated data, and they will be discarded. As best practice, you should have **at least** five seconds between event data in order to ensure the data is properly used.
