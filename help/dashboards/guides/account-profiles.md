@@ -55,18 +55,17 @@ Adobe provides standard widgets that you can use to visualize different metrics 
 
 To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
-* [Total accounts by industry](#total-accounts-by-industry)
 * [Account profiles added](#account-profiles-added)
+* [Accounts by industry](#accounts-by-industry)
+* [Accounts by type](#accounts-by-type)
+* [Opportunities added](#opportunities-added)
+* [Opportunities by person role](#opportunities-by-person-role)
+* [Opportunities by revenue](#opportunities-by-revenue)
+* [Opportunities by status & stage](#opportunities-by-status-&-stage)
+* [Opportunities won](#opportunities-won)
 * [Predictive scoring distribution](#predictive-scoring-distribution)
 * [Predictive scoring top influential factors](#predictive-scoring-top-influential-factors)
-
-### Total accounts by industry {#total-accounts-by-industry}
-
-This widget displays the total number of accounts in a single metric and uses a donut chart to illustrate the proportional sizes of counts for the industries that make up the overall number. The key provides colour coding information for the different industries that make up the donut chart. 
-
-Individual counts for the different industries are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
-
-![The total accounts by industry widget.](../images/account-profiles/total-accounts-by-industry-widget.png)
+* [Total accounts by industry](#total-accounts-by-industry)
 
 ### Account profiles added {#account-profiles-added}
 
@@ -77,6 +76,48 @@ This widget uses a colour coded bar chart to illustrate the count of profiles ad
 >As profiles are only added to an account and never removed, the lowest possible number of profiles added over a period of time is zero. 
 
 ![The Account profiles added widget.](../images/account-profiles/accounts-profiles-added-widget.png)
+
+### Accounts by industry {#accounts-by-industry}
+
+Description
+
+![The Accounts by industry widget.](../images/account-profiles/accounts-by-industry.png)
+
+### Accounts by type {#accounts-by-type}
+
+Description
+
+![The  widget.](../images/account-profiles/accounts-by-type.png)
+
+### Opportunities added {#opportunities-added}
+
+Description
+
+![The Accounts by type widget.](../images/account-profiles/opportunities-added.png)
+
+### Opportunities by person role {#opportunities-by-person-role}
+
+Description
+
+![The Opportunities by person role widget.](../images/account-profiles/opportunities-by-person-role.png)
+
+### Opportunities by revenue {#opportunities-by-revenue}
+
+Description
+
+![The Opportunities by revenue widget.](../images/account-profiles/opportunities-by-revenue.png)
+
+### Opportunities by status & stage {#opportunities-by-status-&-stage}
+
+Description
+
+![The Opportunities by status & stage widget.](../images/account-profiles/opportunities-by-status-&-stage.png)
+
+### Opportunities won {#opportunities-won}
+
+Description
+
+![The Opportunities won widget.](../images/account-profiles/opportunities-won.png)
 
 ### Predictive scoring distribution {#predictive-scoring-distribution}
 
@@ -99,6 +140,14 @@ This widget shows the top influential factors for each of the high, medium, and 
 The dropdown menu within the widget allows you to select the account scoring model.
 
 ![The Predictive scoring top influential factors widget.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
+### Total accounts by industry {#total-accounts-by-industry}
+
+This widget displays the total number of accounts in a single metric and uses a donut chart to illustrate the proportional sizes of counts for the industries that make up the overall number. The key provides colour coding information for the different industries that make up the donut chart. 
+
+Individual counts for the different industries are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
+
+![The total accounts by industry widget.](../images/account-profiles/total-accounts-by-industry-widget.png)
 
 ## Next steps
 

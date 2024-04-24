@@ -773,7 +773,6 @@ See the [Unsegmented profiles widget documentation](../guides/profiles.md#unsegm
 
 By reading this document, you now understand the SQL that generates dashboard insights and what common questions this analysis solves. You can now edit and iterate on the SQL to generate your own insights.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+See the [View SQL documentation](../view-sql.md) for more information on how to adapt your insights' SQL directly through the PLatform UI.
 
-You can also read and understand the SQL that generates insights for the [Audiences](./audiences.md) and [Destinations](./destinations.md) dashboards.
+You can also read and understand the SQL that generates insights for the [Audiences](./audiences.md), [Account Profiles](./account-profiles.md), and [Destinations](./destinations.md) dashboards.
