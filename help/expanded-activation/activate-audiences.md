@@ -40,7 +40,7 @@ To view your audiences, go to **[!UICONTROL Customer]** -> **[!UICONTROL Audienc
 >[!IMPORTANT]
 >
 >* Audiences can take up to 48 hours to fully populate in Expanded Activation. This also applies to updates to existing Audience Manager audiences.
->* Newly created Audience Manager audiences do not automatically appear in Expanded Activation. You have to send them to Expanded Activation manually.
+>* Newly created Audience Manager audiences do not automatically appear in Expanded Activation. To ingest new segments in Expanded Activation, you must add them through the Audience Manager source connector.
 
 After you have configured your Audience Manager source connector, move to [step 2](#create-destination-connection).
 
