@@ -10,9 +10,35 @@ With access to the SQL that powers your insights, you can better understand your
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-The following insights are all available for you to use as part of the [Account Profiles dashboard](../guides/account-profiles.md) or a [custom dashboard](../user-defined-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../user-defined-dashboards.md#create-widget). 
+The following insights are all available for you to use as part of the [Account Profiles dashboard](../guides/account-profiles.md) or a [custom dashboard](../user-defined-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../user-defined-dashboards.md#create-widget).
 
-## Accounts by industry {#widget}
+## Account profiles added {#account-profiles-added}
+
+Questions answered by this insight:
+
+- How many account profiles have been added over a given period?
+
++++Select to reveal the SQL that generates this insight
+
+```sql
+WITH accounts_by_mm_dd AS
+(
+          SELECT    d.date_key,
+                    COALESCE(Sum(a.counts), 0) AS account_counts
+          FROM      adwh_b2b_date d
+          LEFT JOIN adwh_fact_account a
+          ON        d.date_key = a.accounts_created_date
+          WHERE     d.date_key BETWEEN Upper(COALESCE('$START_DATE', '')) AND       Upper(COALESCE('$END_DATE', ''))
+          GROUP BY  d.date_key)
+SELECT   date_key,
+         account_counts
+FROM     accounts_by_mm_dd
+ORDER BY date_key limit 5000;
+```
+
++++
+
+## Accounts by industry {#accounts-by-industry}
 
 Questions answered by this insight:
 
@@ -48,7 +74,7 @@ ORDER BY total_accounts DESC limit 5000;
 
 +++
 
-## Accounts by type {#widget}
+## Accounts by type {#accounts-by-type}
 
 Questions answered by this insight:
 
@@ -71,7 +97,52 @@ LIMIT  5000;
 
 +++
 
-## Opportunities by revenue {#widget}
+## Opportunities added {#opportunities-added}
+
+Questions answered by this insight:
+
+- How many opportunities have been added over a given period?
+
++++Select to reveal the SQL that generates this insight
+
+```sql
+SELECT d.date_key,
+       Coalesce(Sum(o.counts), 0) AS opportunity_counts
+FROM   adwh_b2b_date d
+       LEFT JOIN adwh_fact_opportunity o
+              ON d.date_key = o.opportunities_created_date
+WHERE  d.date_key BETWEEN Upper(Coalesce('$START_DATE', '')) AND
+                          Upper(Coalesce('$END_DATE', ''))
+GROUP  BY d.date_key
+ORDER  BY d.date_key
+LIMIT  5000; 
+```
+
++++
+
+## Opportunities by person role {#opportunities-by-person-role}
+
+Questions answered by this insight:
+
+- What is the relative size and count of the various roles in an opportunity?
+
++++Select to reveal the SQL that generates this insight
+
+```sql
+SELECT p.person_role,
+       Sum(f.counts) AS opportunity_counts
+FROM   adwh_fact_opportunity_person f
+       JOIN adwh_dim_person_role p
+         ON f.person_role_id = p.person_role_id
+WHERE  f.opportunity_person_created_date BETWEEN
+       Upper(Coalesce('$START_DATE', '')) AND Upper(Coalesce('$END_DATE', ''))
+GROUP  BY p.person_role
+LIMIT  5000; 
+```
+
++++
+
+## Opportunities by revenue {#opportunities-by-revenue}
 
 Questions answered by this insight:
 
@@ -111,7 +182,7 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 +++
 
-## Opportunities by status & stage {#widget}
+## Opportunities by status & stage {#opportunities-by-status-&-stage}
 
 Questions answered by this insight:
 
@@ -144,7 +215,7 @@ FROM   opportunities_by_isclosed limit 5000;
 
 +++
 
-## Opportunities won {#widget}
+## Opportunities won {#opportunities-won}
 
 Questions answered by this insight:
 
@@ -171,78 +242,9 @@ FROM   opportunities_by_iswon limit 5000;
 
 +++
 
-## Opportunities by person role {#widget}
+## Opportunities won (line graph) {#opportunities-won-line-graph}
 
-Questions answered by this insight:
-
-- What is the relative size and count of the various roles in an opportunity?
-
-+++Select to reveal the SQL that generates this insight
-
-```sql
-SELECT p.person_role,
-       Sum(f.counts) AS opportunity_counts
-FROM   adwh_fact_opportunity_person f
-       JOIN adwh_dim_person_role p
-         ON f.person_role_id = p.person_role_id
-WHERE  f.opportunity_person_created_date BETWEEN
-       Upper(Coalesce('$START_DATE', '')) AND Upper(Coalesce('$END_DATE', ''))
-GROUP  BY p.person_role
-LIMIT  5000; 
-```
-
-+++
-
-## Account profiles added {#widget}
-
-Questions answered by this insight:
-
-- How many account profiles have been added over a given period?
-
-+++Select to reveal the SQL that generates this insight
-
-```sql
-WITH accounts_by_mm_dd AS
-(
-          SELECT    d.date_key,
-                    COALESCE(Sum(a.counts), 0) AS account_counts
-          FROM      adwh_b2b_date d
-          LEFT JOIN adwh_fact_account a
-          ON        d.date_key = a.accounts_created_date
-          WHERE     d.date_key BETWEEN Upper(COALESCE('$START_DATE', '')) AND       Upper(COALESCE('$END_DATE', ''))
-          GROUP BY  d.date_key)
-SELECT   date_key,
-         account_counts
-FROM     accounts_by_mm_dd
-ORDER BY date_key limit 5000;
-```
-
-+++
-
-## Opportunities added {#widget}
-
-Questions answered by this insight:
-
-- How many opportunities have been added over a given period?
-
-+++Select to reveal the SQL that generates this insight
-
-```sql
-SELECT d.date_key,
-       Coalesce(Sum(o.counts), 0) AS opportunity_counts
-FROM   adwh_b2b_date d
-       LEFT JOIN adwh_fact_opportunity o
-              ON d.date_key = o.opportunities_created_date
-WHERE  d.date_key BETWEEN Upper(Coalesce('$START_DATE', '')) AND
-                          Upper(Coalesce('$END_DATE', ''))
-GROUP  BY d.date_key
-ORDER  BY d.date_key
-LIMIT  5000; 
-```
-
-+++
-
-## Opportunities won {#widget}
+<!-- Q) Can we change this name? -->
 
 Questions answered by this insight:
 
