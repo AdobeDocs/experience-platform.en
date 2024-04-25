@@ -1,6 +1,6 @@
 ---
 title: Google Customer Match + Display & Video 360 connection
-description: Google Customer Match + Display & Video 360 lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, Gmail, and YouTube.
+description: With the Google Customer Match + Display & Video 360 destination connector, you can use your online and offline data from Experience Platform to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, Gmail, and YouTube.
 badgeBeta: label="Beta" type="Informative"
 ---
 
@@ -20,9 +20,9 @@ With the newly introduced capability of being able to utilize Customer Matched a
 
 ## Important notice about changes to Google destinations related to updated consent requirements in the European Union
 
- >[!IMPORTANT]
+>[!IMPORTANT]
 >
-> Google is releasing changes to the [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), and the [Display & Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) in order to support the compliance and consent-related requirements defined under the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in the European Union ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). Enforcement of these changes to consent requirements is expected to go into effect starting March 6, 2024.
+> Google is releasing changes to the [Google Ads API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), and the [Display & Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) in order to support the compliance and consent-related requirements defined under the [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) in the European Union ([EU User Consent Policy](https://www.google.com/about/company/user-consent-policy/)). Enforcement of these changes to consent requirements is live as of March 6, 2024.
 ><br/>
 >To adhere to the EU user consent policy and continue creating audience lists for users in the European Economic Area (EEA), advertisers and partners must ensure they are passing end-user consent when uploading audience data. As a Google Partner, Adobe provides you with the necessary tools to comply with these consent requirements under the DMA in the European Union.
 ><br/>
@@ -36,7 +36,7 @@ With several integrations with Google available in the destinations catalog, it 
 
 | [Google Customer Match](/help/destinations/catalog/advertising/google-customer-match.md) | [Google Display & Video 360](/help/destinations/catalog/advertising/google-dv360.md) | Google Customer Match + Display & Video 360 (this connector) |
 |---------|----------|---------|
-| A1 | B1 | C1 |
+| Export your PII-based audiences and reach them on inventory available in Google Customer Match.| Reach cookie-based audiences across inventory available via Google Display & Video 360, on Google owned-and-operated properties like Youtube and Search, and beyond. | Create PII-based audiences in Google Customer Match and reach them on the inventory available in Google Display & Video 360, on Google owned-and-operated properties only. |
 
 ## Use cases {#use-cases}
 
@@ -51,10 +51,6 @@ An athletic apparel brand wants to reach existing customers through [!DNL Google
 A prominent technology company launched a new phone. To promote this new phone model, they are looking to drive awareness of the new features and functionality of the phone to customers who own previous models of their phones. 
 
 To promote the release, they upload email addresses from their CRM database into Experience Platform, using the email addresses as identifiers. Audiences are created based on customers who own older phone models. Then audiences get sent to [!DNL Google Customer Match], so the company can target current customers, customers who own older phone models, and similar customers on [!DNL Google Display & Video 360] properties such as [!DNL Search], [!DNL YouTube], [!DNL Gmail], and the [!DNL Google Display Network].
-
-## Data governance for [!DNL Google Customer Match] destinations {#data-governance}
-
-Some destinations in Experience Platform have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](../../../data-governance/labels/overview.md) about data governance tools and policies.
 
 ## Supported identities {#supported-identities}
 
@@ -110,7 +106,7 @@ Customers with compliant accounts are automatically allowlisted by Google.
 
 ## ID matching requirements {#id-matching-requirements}
 
-[!DNL Google] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL Google Customer Match] can be keyed off *hashed* identifiers, such as email addresses or phone numbers.
+[!DNL Google] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL Google Customer Match] must be keyed off *hashed* identifiers, such as hashed email addresses or phone numbers.
 
 Depending on the type of IDs that you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements.
 
@@ -123,7 +119,7 @@ There are two methods to activate phone numbers in [!DNL Google Customer Match]:
 
 >[!NOTE]
 >
->Phone numbers ingested into the `Phone` namespace cannot be activated in [!DNL Google Customer Match].
+>Phone numbers ingested into the `Phone` namespace cannot be activated to the [!DNL Google Customer Match + DV360] destination.
 
 ### Email hashing requirements {#hashing-requirements}
 
@@ -171,11 +167,9 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * **[!UICONTROL Name]**: provide a name for this destination connection
 * **[!UICONTROL Description]**: provide a description for this destination connection
 * **[!UICONTROL Account ID]**: your [Google Ads customer ID](https://support.google.com/google-ads/answer/1704344?hl=en). The format of the ID is xxx-xxx-xxxx. If you are using the [!DNL Google Ads Manager Account (My Client Center)], do not use your Manager Account ID. Use the [Google Ads customer ID](https://support.google.com/google-ads/answer/1704344?hl=en) instead.
-* **[!UICONTROL Account type]**: your Google account type. Select an option, depending on your Google account:
+* **[!UICONTROL Account type]**: your Google account type. Select an option, depending on your advertising account type with Google:
     * **[!UICONTROL Display Video Partner]**
     * **[!UICONTROL Display Video Advertiser]**
-
-* **[!UICONTROL Append audience ID to audience name]**: select this option to have the audience name in this destination include the audience ID from Experience Platform, like this: `Audience Name (Audience ID)`.
 
 ### Enable alerts {#enable-alerts}
 
@@ -225,6 +219,10 @@ Attribute source data is not automatically hashed. When your source field contai
 ## Verify that audience activation was successful {#verify-activation}
 
 After completing the activation flow, switch to your **[!UICONTROL Google Ads]** account. The activated audiences are shown in your Google account as customer lists. Depending on your audience size, some audiences do not populate unless there are over 100 active users to serve.
+
+## Data governance
+
+Some destinations in Experience Platform have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](../../../data-governance/labels/overview.md) about data governance tools and policies.
 
 ## Troubleshooting {#troubleshooting}
 
