@@ -1,10 +1,10 @@
 ---
-title: Real-Time Customer Data Platform Insights data model B2B Edition
+title: Real-Time Customer Data Platform Insights Data Model B2B Edition
 description: Learn how to use SQL queries with the Real-Time Customer Data Platform Insights Data Models (B2B Edition) to customize your own Real-Time CDP reports for your marketing and KPI use cases.
 ---
 # Real-time Customer Data Platform Insights data model B2B Edition
 
-The Real-Time Customer Data Platform Insights Data Model B2B Edition exposes the data models and SQL that power the insights for account profiles. You can customize these SQL query templates to create Real-Time CDP reports for your B2B marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your dashboards.
+The Real-Time Customer Data Platform Insights data model B2B Edition exposes the data models and SQL that power the insights for account profiles. You can customize these SQL query templates to create Real-Time CDP reports for your B2B marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your dashboards.
 
 <!-- 
 See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
