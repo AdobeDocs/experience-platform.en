@@ -1,11 +1,11 @@
 ---
-title: Filter sources objects in the UI
-description: Learn how to navigate through your sources objects such as accounts and dataflows in the UI
+title: Filter Sources Objects In The UI
+description: Learn how to navigate through your sources objects such as accounts and dataflows in the Experience Platform UI.
 last-substantial-update: 2024-04-30
 ---
 # Filter sources objects in the UI
 
-You can use tools in the Adobe Experience Platform user interface, such as filtering, search, and inline actions to streamline your workflow in the sources workspace. 
+Use the filtering, search, and inline action tools in the Adobe Experience Platform user interface to streamline your workflow in the [!UICONTROL Sources] workspace
 
 * Use filtering and search capabilities to navigate your way through sources accounts and dataflows in your organization.
 * Use inline actions to modify configuration settings applied to your dataflows and improve organizational workflows. You can use inline actions to apply tags, set up alerts, or create ingestion jobs on demand.
@@ -21,9 +21,9 @@ It is helpful to have an understanding of the following Experience Platform feat
 * [Datasets](../../../catalog/datasets/user-guide.md): A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows).
 * [Sandboxes](../../../sandboxes/home.md): Use sandboxes in Experience Platform to create virtual partitions between your Experience Platform instances and create environments dedicated to development or production.
 
-## Filter sources dataflows
+## Filter sources dataflows {#filter-sources-dataflows}
 
-In the Experience Platform UI, select [!UICONTROL Sources] in the left navigation and then select **[!UICONTROL Dataflows]** from the top header.
+In the Experience Platform UI, select **[!UICONTROL Sources]** in the left navigation and then select **[!UICONTROL Dataflows]** from the top header.
 
 ![The dataflows page in the sources workspace](../../images/tutorials/filter/dataflows-page.png)
 
@@ -52,11 +52,11 @@ Use the [!UICONTROL Source platform] panel to filter your dataflows by type of s
 
 Use the tags panel to filter your dataflows by their respective tags.
 
-Select **[!UICONTROL Has any tag]** and then select the tags that you want to filter by using the dropdown menu. Use this setting to filter for dataflows that has any of the tags that you selected.
+Select **[!UICONTROL Has any tag]** and then select the tags that you want to filter by using the dropdown menu. Use this setting to filter for dataflows that have any of the tags that you selected.
 
 ![A query to filter dataflows by any tag.](../../images/tutorials/filter/has-any-tag.png)
 
-Select **[!UICONTROL Has all tags]** and then select the tags that you want to filter by using the dropdown menu. Usee this setting to filter for dataflows that has all of the tags that you selected.
+Select **[!UICONTROL Has all tags]** and then select the tags that you want to filter by using the dropdown menu. Usee this setting to filter for dataflows that have all of the tags that you selected.
 
 ![A query to filter dataflows by all tags.](../../images/tutorials/filter/has-all-tags.png)
 
@@ -68,11 +68,11 @@ You can filter by status using the [!UICONTROL Status] panel.
 | --- | --- |
 | Enabled | Select **[!UICONTROL Enabled]** to filter your view and display only active dataflows. | 
 | Disabled | Select **[!UICONTROL Disabled]** to filter your view and display only deactivated dataflows. |
-| Draft | Select **[!UICONTROL Draft]** to filter your view and display only dataflows are in draft mode. |
+| Draft | Select **[!UICONTROL Draft]** to filter your view and display only dataflows that are in draft mode. |
 
 ### Filter dataflows by target dataset {#filter-dataflows-by-target-dataset}
 
-Select **[!UICONTROL Target dataset]** to  access a dropdown menu of all target datasets. Then, select a target dataset to filter your view and display only the dataflows that were created using your specified target datasets.
+Select **[!UICONTROL Target dataset]** to access a dropdown menu of all target datasets. Then, select a target dataset to filter your view and display only the dataflows that were created using your specified target datasets.
 
 ### Filter dataflows by account name {#filter-dataflows-by-account-name}
 
@@ -80,7 +80,7 @@ Select **[!UICONTROL Account name]** to access a dropdown menu of all accounts. 
 
 ### Filter dataflows by user {#filter-dataflows-by-user}
 
-Use the [!UICONTROL Created by] panel to filter dataflows by user. Select the dropdown and then select the username to filter your dataflows by.
+Use the [!UICONTROL Created by] panel to filter dataflows by the user who created or last updated the dataflows. Select the dropdown and then select the username to filter your dataflows by.
 
 ### Filter dataflows by creation date {#filter-dataflows-by-creation-date}
 
@@ -90,9 +90,9 @@ You can configure your time frame by inputting your start and end date. Alternat
 
 You can also follow the same steps, but filter dataflows by their last modification date, as opposed to their creation date.
 
-### Filter dataflows by modification date{#filter-dataflows-by-modification-date}
+### Filter dataflows by modification date {#filter-dataflows-by-modification-date}
 
-Similarly, you can apply same principles and filter your dataflow by their dates of modification. Use the **[!UICONTROL Modified date]** to configure a particular time frame and filter your view to display only dataflows that have been modified during that period.
+Similarly, you can apply the same principles and filter your dataflow by their dates of modification. Use the **[!UICONTROL Modified date]** to configure a particular time frame and filter your view to display only dataflows that have been modified during that period.
 
 ### Combine filters {#combine-filters}
 
@@ -110,13 +110,13 @@ To remove all filters, select **[!UICONTROL Clear all]**.
 
 ![The clear all option selected.](../../images/tutorials/filter/clear-all.png)
 
-## Filter sources accounts
+## Filter sources accounts {#filter-sources-accounts}
 
 In the Experience Platform UI, select [!UICONTROL Sources] in the left navigation and then select **[!UICONTROL Accounts]** from the top header. You can filter your sources accounts based on the source that they were created with or the user that created them.
 
 ![The accounts page in the sources workspace](../../images/tutorials/filter/accounts.png)
 
-## Search
+## Search for accounts and dataflows {#search-for-accounts-and-dataflows}
 
 You can accelerate efficiency by using the search bar to immediately navigate to a particular account or dataflow.
 
@@ -136,7 +136,7 @@ Use the search bar in the [!UICONTROL Accounts] page to find a specific account.
 
 >[!ENDTABS]
 
-## Inline actions for sources dataflows
+## Inline actions for sources dataflows {#inline-actions-for-sources-dataflows}
 
 Select the ellipses (`...`) beside a dataflow name for a list of inline actions that you can use to make modifications to your dataflow.
 
@@ -144,14 +144,14 @@ Select the ellipses (`...`) beside a dataflow name for a list of inline actions 
 
 | Inline actions | Description |
 | --- | --- |
-| Edit schedule | Select **[!UICONTROL Edit schedule]** to update the ingestion schedule of your dataflow. A dataflow that has been set to one-time ingestion cannot be edited. |
-| Disable dataflow | Select **[!UICONTROL Disable dataflow]** to deactivate a dataflow run. This option does not delete your dataflow. |
-| View in monitoring | Select **[!UICONTROL View in monitoring]** to view the metrics and status of your dataflow in the monitoring dashboard. For more information, read the guide on [monitoring sources dataflows](../../../dataflows/ui/monitor-sources.md). |
-| Delete | Select **[!UICONTROL Delete]** to delete your dataflow. |
-| Run on-demand | Select **[!UICONTROL Run on-demand]** to trigger a single iteration of a dataflow run. For more information, read the guide on [creating an on-demand dataflow run](../ui/on-demand-ingestion.md). |
-| Subscribe to alerts | Select **[!UICONTROL Subscribe to alerts]** to view a pop-up window of alerts that you can subscribe to: <ul><li>Sources Dataflow Run Start: Select this alert to receive a notification when your on-demand dataflow run begins.</li><li>Sources Dataflow Run Success: Select this alert to receive a notification when your on-demand dataflow run finishes successfully.</li><li>Sources Dataflow Run Failure: Select this alert when your on-demand dataflow run fails due to errors.</li></ul> For more information, read the guide on [subscribing to alerts for sources dataflows](../ui/alerts.md).  |
-| Add to package | Select **[!UICONTROL Add to package]** to add your dataflow to a package and export it for use in a different sandbox. During this step, you can either create a new package or add your dataflow to an existing package. For information, read the guide on [sandbox tooling](../../../sandboxes/ui/sandbox-tooling.md).|
-| Manage tags | Select **[!UICONTROL Manage tags]** to add or remove tags from your dataflow. Use tags to manage metadata taxonomies and classify business objects for easier discovery and categorization. For more information, read the guide on [managing tags](../../../administrative-tags/ui/managing-tags.md).|
+| [!UICONTROL Edit schedule] | Select **[!UICONTROL Edit schedule]** to update the ingestion schedule of your dataflow. A dataflow that has been set to one-time ingestion cannot be edited. |
+| [!UICONTROL Disable dataflow] | Select **[!UICONTROL Disable dataflow]** to deactivate a dataflow run. This option does not delete your dataflow. |
+| [!UICONTROL View in monitoring] | Select **[!UICONTROL View in monitoring]** to view the metrics and status of your dataflow in the monitoring dashboard. For more information, read the guide on [monitoring sources dataflows](../../../dataflows/ui/monitor-sources.md). |
+| [!UICONTROL Delete] | Select **[!UICONTROL Delete]** to delete your dataflow. |
+| [!UICONTROL Run on-demand] | Select **[!UICONTROL Run on-demand]** to trigger a single iteration of a dataflow run. For more information, read the guide on [creating an on-demand dataflow run](../ui/on-demand-ingestion.md). |
+| [!UICONTROL Subscribe to alerts] | Select **[!UICONTROL Subscribe to alerts]** to view a pop-up window of alerts that you can subscribe to: <ul><li>Sources Dataflow Run Start: Select this alert to receive a notification when your on-demand dataflow run begins.</li><li>Sources Dataflow Run Success: Select this alert to receive a notification when your on-demand dataflow run finishes successfully.</li><li>Sources Dataflow Run Failure: Select this alert when your on-demand dataflow run fails due to errors.</li></ul> For more information, read the guide on [subscribing to alerts for sources dataflows](../ui/alerts.md).  |
+| [!UICONTROL Add to package] | Select **[!UICONTROL Add to package]** to add your dataflow to a package and export it for use in a different sandbox. During this step, you can either create a new package or add your dataflow to an existing package. For information, read the guide on [sandbox tooling](../../../sandboxes/ui/sandbox-tooling.md).|
+| [!UICONTROL Manage tags] | Select **[!UICONTROL Manage tags]** to add or remove tags from your dataflow. Use tags to manage metadata taxonomies and classify business objects for easier discovery and categorization. For more information, read the guide on [managing tags](../../../administrative-tags/ui/managing-tags.md).|
 
 ## Next steps
 
