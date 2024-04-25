@@ -74,7 +74,8 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 | [!UICONTROL Move to folder] | Audience composition, Custom upload, Segmentation Service |  Manages which folder the audience belongs to. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
 | [!UICONTROL Copy] | Segmentation Service | Duplicates the selected audience. |
 | [!UICONTROL Apply access labels] | Audience composition, Custom upload, Segmentation Service | Manages the access labels that belong to the audience. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Archive] | Custom upload | Archives the selected audience. |
+| [!UICONTROL Publish] | Custom upload, Segmentation Service | Publishes the selected audience. For more information on lifecycle status management, please read the [lifecycle state section of the Segmentation FAQ](../faq.md#lifecycle-states). |
+| [!UICONTROL Deactivate] | Custom upload, Segmentation Service | Deactivates the selected audience. For more information on lifecycle status management, please read the [lifecycle state section of the Segmentation FAQ](../faq.md#lifecycle-states). |
 | [!UICONTROL Delete] | Audience composition, Custom upload, Segmentation Service | Deletes the selected audience. |
 | [!UICONTROL Add to package] | Audience composition, Custom upload, Segmentation Service | Moves the audience between sandboxes. For more information on this feature, please read the [sandbox tooling guide](../../sandboxes/ui/sandbox-tooling.md). |
 
@@ -109,7 +110,7 @@ You can add additional fields to the [!UICONTROL Browse] page by selecting ![the
 | [!UICONTROL Name] | The name of the audience. |
 | [!UICONTROL Profile count] | The total number of profiles that qualify for the audience. | 
 | [!UICONTROL Origin] | The origin of the audience. This states where the audience comes from. Possible values include Segmentation Service, Custom upload, Audience composition, and Audience Manager. |
-| [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Inactive`, `Published`, and `Archived`. |
+| [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Inactive`, `Published`, and `Archived`. More information about lifecycle statuses, including what the different states mean and how to move audiences to different lifecycle states, read the [lifecycle status section of the Segmentation FAQ](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | A value that states how often the audience's data is updated. Possible values for this field include [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge], and [!UICONTROL Not Scheduled]. |
 | [!UICONTROL Last updated by] | The name of the person who last updated the audience. |
 | [!UICONTROL Created] | The date and time, in UTC, that the audience was created. |

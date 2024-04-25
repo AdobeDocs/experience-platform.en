@@ -92,17 +92,6 @@ The current data expiration for externally generated audiences is **30 days**. T
 
 After the data expiration period passes, the associated dataset will still be visible within the dataset inventory, but you will **not** be able to activate the audience and the profile count will show as zero.
 
-### What do the different lifecycle states represent?
-
-The following chart explains the different lifecycle statuses, what they represent, where audiences with that status can be used, as well as impact on segmentation guardrails.
-
-| State | Definition | Visible in Audience Portal? | Visible in Destinations? | Affects segmentation limits? | Impact on file-based audiences | Impact on audience evaluation | Usable within other audiences? |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Draft | An audience in the **Draft** state is an audience that is still in development and is not yet ready to be used in other services. | Yes, but can be hidden. | No | Yes | Can be imported or updated during the refinement process. | Can be evaluated in order to get accurate publishing counts. | Yes, but not recommended to be used. |
-| Published | An audience in the **Published** state is an audience that is ready for use across all downstream services. | Yes | Yes | Yes | Can be imported or updated. | Evaluated using batch, streaming, or edge segmentation. | Yes |
-| Inactive | An audience in the **Inactive** state is an audience that is currently not in use. It still exists within Platform, but it will **not** be useable until it's marked as draft or published. | No, but can be shown. | No | No | No longer updated. | No longer evaluated or updated by Platform. | Yes |
-| Deleted | An audience in the **Deleted** state is an audience that has been deleted. The actual deletion of the data may take up to a few minutes to execute. | No | No | No | Underlying data is deleted. | No data evaluation or execution occurs after the deletion is completed. | No |
-
 ### How will Audience Portal and Audience Composition interact with the release of Real-Time CDP Partner Data?
 
 Audience Portal and Audience Composition will interact with Partner Data in two ways:
@@ -123,9 +112,40 @@ Enrichment attributes are attributes that come from a dataset and are joined wit
 | Real-Time CDP Destinations | Both the payload attributes and the audiences can be activated. | Only the audience can be activated. Enrichment attributes **cannot** be activated. |
 | Adobe Journey Optimizer Campaigns | Neither the audience nor the payload attributes can be activated. | Both the audience and the enrichment attributes can be activated. |
 
+## Lifecycle states {#lifecycle-states}
+
+The following section lists questions related to lifecycle states and lifecycle state management within the Audience Portal.
+
+### What do the different lifecycle states represent?
+
+The following chart explains the different lifecycle statuses, what they represent, where audiences with that status can be used, as well as impact on segmentation guardrails.
+
+| State | Definition | Visible in Audience Portal? | Visible in Destinations? | Affects segmentation limits? | Impact on file-based audiences | Impact on audience evaluation | Usable within other audiences? |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Draft | An audience in the **Draft** state is an audience that is still in development and is not yet ready to be used in other services. | Yes, but can be hidden. | No | Yes | Can be imported or updated during the refinement process. | Can be evaluated in order to get accurate publishing counts. | Yes, but not recommended to be used. |
+| Published | An audience in the **Published** state is an audience that is ready for use across all downstream services. | Yes | Yes | Yes | Can be imported or updated. | Evaluated using batch, streaming, or edge segmentation. | Yes |
+| Inactive | An audience in the **Inactive** state is an audience that is currently not in use. It still exists within Platform, but it will **not** be useable until it's marked as draft or published. | No, but can be shown. | No | No | No longer updated. | No longer evaluated or updated by Platform. | Yes |
+| Deleted | An audience in the **Deleted** state is an audience that has been deleted. The actual deletion of the data may take up to a few minutes to execute. | No | No | No | Underlying data is deleted. | No data evaluation or execution occurs after the deletion is completed. | No |
+
+### What lifecycle states can I move an audience to?
+
+The possible lifecycle states that an audience can be moved to depends on the current state of the audience.
+
+IMAGE
+
+For audiences in Draft, you can either publish them or delete them if the audience does not have any dependents.
+
+For audiences in Published, you can either deactivate them or delete them if the audience does not have any dependents.
+
+For audiences in Inactive, you can either re-publish them or delete them if the audience does not have any dependents.
+
+### Are there any caveats for audiences in certain lifecycle states?
+
+Audiences in 
+
 ## Audience inventory
 
-The following sections lists questions related to audience inventory within the Audience Portal.
+The following section lists questions related to audience inventory within the Audience Portal.
 
 ### Do I need additional permissions to use audience inventory features?
 
