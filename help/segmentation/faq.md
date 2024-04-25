@@ -131,17 +131,45 @@ The following chart explains the different lifecycle statuses, what they represe
 
 The possible lifecycle states that an audience can be moved to depends on the current state of the audience.
 
-IMAGE
+![](./images/faq/lifecycle-state-transition.png)
 
-For audiences in Draft, you can either publish them or delete them if the audience does not have any dependents.
+If your audience is in the draft state, you can either publish them or delete them if the audience does not have any dependents.
 
-For audiences in Published, you can either deactivate them or delete them if the audience does not have any dependents.
+If your audience is in the published state, you can either deactivate them or delete them if the audience does not have any dependents.
 
-For audiences in Inactive, you can either re-publish them or delete them if the audience does not have any dependents.
+If your audience is in the inactive state, you can either re-publish them or delete them if the audience does not have any dependents.
 
 ### Are there any caveats for audiences in certain lifecycle states?
 
-Audiences in 
+Audiences in the published state can only be moved to another state if the audience does **not** have any dependents. This means that if your audience is used in a downstream service, it cannot be deactivated or deleted.
+
+If an audience that is evaluated using batch segmentation is re-published, which is when an audience goes from inactive to published, the audience will refresh **after** the daily batch job. When it is first re-published, the profiles and data will be the **same** as when the audience was made inactive.
+
+### How do I put an audience in the draft state?
+
+The method to put an audience into the draft state depends on the origin of the audience.
+
+For audiences created using Segment Builder, you can set the audience to the draft state by selecting "[!UICONTROL Save as draft]" in Segment Builder.
+
+For audiences created in Audience Composition, audiences are automatically saved as a draft until published.
+
+For audiences that are externally created, audiences are automatically published. 
+
+Once an audience is in the published state, you **cannot** change the original audience back into the draft state. However, if you copy the audience, the newly copied audience will be in the draft state.
+
+### How do I put an audience in the published state?
+
+For audiences created using Segment Builder or Audience Composition, you can set the audience to the published state by selecting "[!UICONTROL Publish]".
+
+Audiences that are externally created are automatically set to published.
+
+### How do I put an audience in the inactive state?
+
+You can put a published audience into the inactive state by opening the quick actions menu and selecting "[!UICONTROL Deactivate]".
+
+### How do I re-publish an audience?
+
+
 
 ## Audience inventory
 
