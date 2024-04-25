@@ -7,13 +7,13 @@ exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your account profiles, as captured during a daily snapshot. This guide outlines how to access and work with the [!UICONTROL Account Profiles] dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.
 
-For an overview of the features within the account profile user interface, please visit the [account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md).
+This document provides an overview of the features within the [!UICONTROL Account Profiles] dashboard and details the available standard insights. See the [[!UICONTROL Account Profiles] UI guide](../../rtcdp/accounts/account-profile-ui-guide.md) for comprehensive details on its available features. 
 
 ## Getting started
 
-You must be entitled to [Adobe Real-Time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) in order to access the B2B [!UICONTROL Account Profiles] dashboard. 
+You must be entitled to [Adobe Real-Time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) to access the B2B [!UICONTROL Account Profiles] dashboard. 
 
-## Account profiles data
+## Account profiles data {#data}
 
 The [!UICONTROL Account Profiles] dashboard displays a snapshot of your unified account information. This account information comes from the multiple sources across your marketing channels and the diverse systems that your organization currently uses to store customer account information.
 
@@ -23,7 +23,7 @@ The profile data in the snapshot shows the data exactly as it appears at the spe
 >
 >Any changes or updates made to the data since the snapshot was taken will not be reflected in the dashboard until the next snapshot is taken.
 
-## Explore the [!UICONTROL Account Profiles] dashboard
+## Explore the [!UICONTROL Account Profiles] dashboard {#explore}
 
 To navigate to the [!UICONTROL Account Profiles] dashboard within the Platform UI, select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left navigation panel. 
 
@@ -31,9 +31,13 @@ To navigate to the [!UICONTROL Account Profiles] dashboard within the Platform U
 
 From the [!UICONTROL Account Profiles] dashboard, you can either [browse the account profiles ingested into your organization](#browse-account-profiles), or [view the entirety of your account profile data at a glance using widgets](#standard-widgets).
 
+Select **[!UICONTROL Settings]** to configure the lead to account matching service from the [!UICONTROL Account settings] dialog. For full details on how to configure your lead to account matching, see the [UI guide](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching). To learn more about lead to account matching, refer to the [lead to account matching in Real-Time CDP B2B documentation](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+
+![The Account Profiles dashboard with Settings highlighted.](../images/account-profiles/settings.png)
+
 ## Browse account profiles {#browse-account-profiles}
 
-From the [!UICONTROL Browse] tab you can search and view the read-only account profiles ingested into your organization. Use an account ID from a connected enterprise source or enter source details directly. From this workspace, you can see important information belonging to the account profile including, their name, industry, revenue, and audience among others.
+From the [!UICONTROL Browse] tab, you can search and view the read-only account profiles ingested into your organization. Use an account ID from a connected enterprise source or enter source details directly. From this workspace, you can see important information belonging to the account profile including, their name, industry, revenue, and audience among others.
 
 Select the [!UICONTROL Profile ID] from the results displayed on the [!UICONTROL Browse] tab to open the [!UICONTROL Details] tab for the account profile.
 
@@ -43,11 +47,9 @@ The account profile information displayed on the [!UICONTROL Details] tab has be
 
 ## The [!UICONTROL Account Profiles] [!UICONTROL Overview] {#overview}
 
-The [!UICONTROL Overview] tab is composed of widgets that provide read-only metrics to convey important information about your account profiles. Select **[!UICONTROL Modify dashboard]** to change the appearance of the [!UICONTROL Overview] tab by moving and resizing widgets. 
+The [!UICONTROL Overview] tab is composed of widgets that provide read-only metrics to convey important information about your account profiles. Select the calender icon or dates to change the global date filter for your widgets. The date range that you select in the dropdown calender affects all insights except the two predictive scoring widgets ([distribution](#predictive-scoring-distribution) and [top influential factors](#predictive-scoring-top-influential-factors)).
 
-![The Account Profiles overview tab with Modify dashboard highlighted.](../images/account-profiles/modify-dashboard.png)
-
-Please refer to the document on [modifying dashboards](../customize/modify.md) and the [Widget library overview](../customize/widget-library.md) to learn more.
+![The Account Profiles overview tab with the date selector and filter icon highlighted.](../images/account-profiles/date-filter.png)
 
 ## Standard widgets {#standard-widgets}
 
@@ -69,13 +71,9 @@ To learn more about each of the available standard widgets, select the name of a
 
 ### Account profiles added {#account-profiles-added}
 
-This widget uses a colour-coded bar chart to illustrate the count of profiles added to an account over a given period of time, and the proportion of different industries that constitute these added profiles. The industries are colour-coded, and a key provides the color coding information for the different industries that make up the bar chart. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over a 30 day, 90 day, and a 12 month period.
+The [!UICONTROL Account profiles added] widget uses a line graph to display the number of account profiles added each day over a period of time. Use the global date filter located at the top of your dashboard to determine the period of analysis. If no date filter is provided, the default behavior lists the account profiles added for the year prior to today. The results can be used to infer a trend in the number of account profiles added.
 
->[!NOTE]
->
->As profiles are only added to an account and never removed, the lowest possible number of profiles added over a period of time is zero. 
-
-![The Account profiles added widget.](../images/account-profiles/accounts-profiles-added-widget.png)
+![The Account profiles added widget.](../images/account-profiles/account-profiles-added.png)
 
 ### Accounts by industry {#accounts-by-industry}
 
@@ -92,8 +90,6 @@ The [!UICONTROL Accounts by type] widget displays the total number of accounts i
 ### Opportunities added {#opportunities-added}
 
 The [!UICONTROL Opportunities added] widget uses a line graph to display the number of opportunities added each day over a period of time. Use the global date filter located at the top of your dashboard to determine the period of analysis. If no date filter is provided, the default behavior lists the opportunities added for the year prior to today. The results can be used to infer a trend in the number of opportunities added.
-
-<!-- Q) What is the default behavior if no filter is provided? -->
 
 <!-- Link to date filter documentation from Annamalai -->
 

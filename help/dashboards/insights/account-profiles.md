@@ -182,7 +182,7 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 +++
 
-## Opportunities by status & stage {#opportunities-by-status-&-stage}
+## Opportunities by status & stage {#opportunities-by-status-and-stage}
 
 Questions answered by this insight:
 
@@ -248,7 +248,7 @@ FROM   opportunities_by_iswon limit 5000;
 
 Questions answered by this insight:
 
-- How many opportunities have been been successfully closed or finalized (won) over a given period?
+- How many opportunities have been successfully closed or finalized (won) over a given period?
 
 +++Select to reveal the SQL that generates this insight
 
