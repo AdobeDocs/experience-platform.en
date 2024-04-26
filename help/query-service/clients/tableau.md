@@ -28,7 +28,7 @@ For more information on finding your username, password, and login credentials, 
 
 >[!IMPORTANT]
 >
->Tableau and Power BI users can connect Customer Journey Analytics to your BI tools from the Query Service credentials tab. See the credentials documentation for instructions on how to [connect your BI tools to Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
+>As a Tableau or Power BI user, you can connect Customer Journey Analytics to your BI tools from the Query Service credentials tab. See the credentials documentation for instructions on how to [connect your BI tools to Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 Ensure that you have checked the **[!UICONTROL Require SSL]** box before trying to connect. See the [SSL modes documentation](./ssl-modes.md) to learn about SSL support for third-party connections to Adobe Experience Platform Query Service.
     

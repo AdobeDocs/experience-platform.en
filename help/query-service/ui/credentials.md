@@ -50,13 +50,13 @@ Use the Customer Journey Analytics BI extension with Power BI or Tableau to acce
 >
 >A Customer Journey Analytics workspace project and a data view are required to use this functionality.
 
-To access your Customer Journey Analytics data in either Power BI or Tableau, select the [!UICONTROL Database] dropdown menu then select `prod:cja` from the available options. Next, copy your [!DNL Postgres] credentials parameters (Host, Port, Database, Username, and others) for use in your Power BI or Tableau configuration. 
+To access your Customer Journey Analytics data in either Power BI or Tableau, select the [!UICONTROL Database] dropdown menu, then select `prod:cja` from the available options. Next, copy your [!DNL Postgres] credentials parameters (Host, Port, Database, Username, and others) for use in your Power BI or Tableau configuration. 
 
 ![The Query Service credentials tab with the database dropdown highlighted.](../images/ui/credentials/database-dropdown.png)
 
 >[!NOTE]
 >
->When you connect Power BI or Tableau to Customer Journey Analytics, the Query Service 'concurrent sessions' entitlement is consumed. If you need additional concurrent sessions and queries, please buy an additional ad hoc query users pack add-on to get five additional concurrent sessions and one additional concurrent query.
+>When you connect Power BI or Tableau to Customer Journey Analytics, the Query Service 'concurrent sessions' entitlement is consumed. If additional sessions and queries are required, an additional ad hoc query users pack add-on can be purchased to obtain five additional concurrent sessions and one additional concurrent query.
 
 You can also access your Customer Journey Analytics data directly from the Query Editor or Postgres CLI. To do this, reference the `cja` database when writing your query. See the Query Editor [query authoring guide](./user-guide.md#query-authoring) for more information on how to write, execute, and save queries. 
 

@@ -26,4 +26,4 @@ Instructions are provided for the following clients:
 
 >[!IMPORTANT]
 >
->Power BI and Tableau users can connect Customer Journey Analytics to your BI tools from the Query Service credentials tab. See the credentials documentation for instructions on how to [connect your BI tools to Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
+>As a Power BI and Tableau user, you can connect Customer Journey Analytics to your BI tools from the Query Service credentials tab. See the credentials documentation for instructions on how to [connect your BI tools to Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
