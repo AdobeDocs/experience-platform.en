@@ -133,11 +133,11 @@ The possible lifecycle states that an audience can be moved to depends on the cu
 
 ![A diagram outlining the possible lifecycle state transitions that are available for audiences.](./images/faq/lifecycle-state-transition.png)
 
-If your audience is in the draft state, you can either publish them or delete them if the audience does not have any dependents.
+If your audience is in the draft state, you can either publish or delete it if the audience does not have any dependents.
 
-If your audience is in the published state, you can either deactivate them or delete them if the audience does not have any dependents.
+If your audience is in the published state, you can either deactivate or delete it if the audience does not have any dependents.
 
-If your audience is in the inactive state, you can either re-publish them or delete them if the audience does not have any dependents.
+If your audience is in the inactive state, you can either re-publish or delete it if the audience does not have any dependents.
 
 ### Are there any caveats for audiences in certain lifecycle states?
 
