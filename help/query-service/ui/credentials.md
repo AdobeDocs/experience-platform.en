@@ -58,9 +58,9 @@ To access your Customer Journey Analytics data in either Power BI or Tableau, se
 >
 >The Query Service 'concurrent sessions' entitlement is consumed when you connect Power BI or Tableau to Customer Journey Analytics. If you need additional concurrent sessions and queries, please buy an additional ad hoc query users pack add-on to get five additional concurrent sessions and one additional concurrent query.
 
-You can also access your Customer Journey Analytics data directly from the Query Editor or Postgres CLI. To do this, reference the `cja` database when writing your query. 
+You can also access your Customer Journey Analytics data directly from the Query Editor or Postgres CLI. To do this, reference the `cja` database when writing your query. See the Query Editor [query authoring guide](./user-guide.md#query-authoring) for more information on how to write, execute, and save queries. 
 
-See the [BI extension guide](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) for complete instructions on accessing your data views from Customer Journey Analytics with SQL.
+See the [BI extension guide](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) for complete instructions on accessing your Customer Journey Analytics data views with SQL.
 
 ## Non-expiring credentials {#non-expiring-credentials}
 
