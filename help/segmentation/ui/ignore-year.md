@@ -2,14 +2,18 @@
 solution: Experience Platform
 title: Ignore Year Time Constraint Update
 description: Learn how to resolve an issue with the ignore year time constraint.
+exl-id: 44bb8817-e32d-4806-ad4e-b1840313e768
 ---
-
 # Ignore year time constraint update {#ignore-year}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_segmentBuilder_ignoreYear"
 >title="Ignore year update"
 >abstract="The ignore year time constraint has been updated. Please re-save your audience."
+
+>[!IMPORTANT]
+>
+>You can only use the "ignore year" time constraint in a segment definition evaluated using **batch segmentation**. Adding the "ignore year" time constraint to your segment definition will make the resulting audience **ineligible** for streaming or edge segmentation.
 
 The February 2024 release for Adobe Experience Platform has introduced changes to Adobe Experience Platform Segmentation Service which resolves an issue with the "ignore year" option in audience creation and evaluation.
 

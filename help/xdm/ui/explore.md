@@ -48,6 +48,14 @@ All object-type fields containing sub-properties are collapsed by default when t
 
 ![](../images/ui/explore/field-expand.png)
 
+### Standard class and field group indicator {#standard-class-and-field-group-indicator}
+
+Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](../images/ui/explore/padlock-icon.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
+
+![The Schema Editor with the padlock icon highlighted](../images/ui/explore/schema-editor-padlock-icon.png)
+
+See the [Add custom fields to standard field groups](./resources/schemas.md) documentation for guidance. You cannot edit a standard class.
+
 ### System-generated fields {#system-fields}
 
 Some field names are prepended with an underscore, such as `_repo` and `_id`. These represent placeholders for fields that the system will automatically generate and assign as data is ingested.

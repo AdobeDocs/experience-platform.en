@@ -1,6 +1,7 @@
 ---
 title: Customizable Insights
-description: Learn about the use cases, essential capabilities, and required steps to develop a customizable insights dashboard with Data Distiller. Discover how the Customizable Insights capability within Data Distiller can enhance transparency and gain operational insights across different dimensions such as profiles, audiences, campaigns, journeys, entitlements, and consent. 
+description: Learn about the use cases, essential capabilities, and required steps to develop a customizable insights dashboard with Data Distiller. Discover how the Customizable Insights capability within Data Distiller can enhance transparency and gain operational insights across different dimensions such as profiles, audiences, campaigns, journeys, entitlements, and consent.
+exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
 ---
 # Customizable Insights
 

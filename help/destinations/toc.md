@@ -4,6 +4,7 @@ user-guide-title: Destinations Guide
 user-guide-description: Activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and more.
 description: This document lists the table of contents for Adobe Experience Platform destinations
 feature: Destinations
+role: Admin,User
 ---
 
 # Destinations {#destinations}
@@ -37,7 +38,7 @@ feature: Destinations
         * [Activate audiences to edge personalization destinations](./ui/activate-edge-personalization-destinations.md)
         * [Activate audiences to curated destinations based on LiveRamp identifiers](./ui/activate-curated-destinations.md)
         * [Activate prospect audiences to destinations](./ui/activate-prospect-audiences.md)
-        * [(Limited availability) Activate account audiences to destinations](./ui/activate-account-audiences.md)
+        * [Activate account audiences to destinations](./ui/activate-account-audiences.md)
         * [(Beta) Export files on-demand to batch destinations using the Experience Platform UI](./ui/export-file-now.md)
         * [Export datasets using the Experience Platform UI](./ui/export-datasets.md)
         * [(Beta) Use the last qualification time XDM attribute in the new beta cloud storage destinations](./ui/activate-last-qualification-time.md)
@@ -133,6 +134,9 @@ feature: Destinations
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
+    * Data & Identity Partner {#data-partner}
+        * [Acxiom Prospect Suppression](./catalog/data-partner/acxiom-prospect-suppression.md)
+        * [Acxiom Data Enhancement](./catalog/data-partner/acxiom-data-enhancement.md)
     * eCommerce destinations {#ecommerce}
         * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
     * Email destinations {#email}
@@ -240,6 +244,7 @@ feature: Destinations
             * [Configure an Azure Data Lake Storage destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
             * [Configure an Data Landing Zone (DLZ) destination with custom file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
             * [Configure an SFTP destination with predefined file formatting options and custom file name configuration](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+            * [Configure a file-based destination to export prospect audiences](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
     * Destination authoring API reference {#authoring-api}
         * [Destination SDK (Destination Authoring) API reference](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
         * Destination server operations {#server-operations}
@@ -286,4 +291,4 @@ feature: Destinations
         * [Documentation self-service template](./destination-sdk/docs-framework/self-service-template.md)
         * [Authoring best practices](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Frequently asked questions](./destinations-faq.md)
-* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

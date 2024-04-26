@@ -72,7 +72,7 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 | [!UICONTROL Share with partners] | Audience composition, Custom upload, Segmentation Service | Shares your audience with other Platform users. For more information on this feature, please read the [Segment Match overview](./segment-match/overview.md). |
 | [!UICONTROL Manage tags] | Audience composition, Custom upload, Segmentation Service | Manages the user-defined tags that belong to the audience. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
 | [!UICONTROL Move to folder] | Audience composition, Custom upload, Segmentation Service |  Manages which folder the audience belongs to. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
-| [!UICONTROL Copy] | Audience composition, Custom upload, Segmentation Service | Duplicates the selected audience. |
+| [!UICONTROL Copy] | Segmentation Service | Duplicates the selected audience. |
 | [!UICONTROL Apply access labels] | Audience composition, Custom upload, Segmentation Service | Manages the access labels that belong to the audience. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Archive] | Custom upload | Archives the selected audience. |
 | [!UICONTROL Delete] | Audience composition, Custom upload, Segmentation Service | Deletes the selected audience. |
@@ -206,6 +206,18 @@ The list of available filters is displayed.
 | [!UICONTROL Modified date] | Lets you filter based on the last modified date of the audience. You can choose a date range to filter when the audience was last modified. |
 
 ![The available filters are displayed and highlighted on the browse audiences page.](../images/ui/overview/filter-audiences.png)
+
+**Bulk actions** {#bulk-actions}
+
+Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions include [moving to a folder](#folders), [editing or applying a tag](#tags), [applying access labels](../../access-control/abac/ui/labels.md), and [deleting](#browse).
+
+![The available options for bulk actions are highlighted.](../images/ui/overview/bulk-actions.png)
+
+When you apply bulk actions to these audiences, the following conditions apply:
+
+- You **can** select audiences from different pages.
+- You **cannot** delete an audience which is being used in a destination activation.
+- If you select a filter, the selected audiences **will** reset.
 
 ### Audience details {#audience-details}
 

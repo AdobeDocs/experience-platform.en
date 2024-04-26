@@ -1,6 +1,7 @@
 ---
 title: Implementation Guide for Identity Service
 description: Learn how data provided to Adobe Experience Platform is processed prior to being used by Identity Service to build identity graphs.
+exl-id: c961bbf6-6b46-470f-a671-93ff4173876c
 ---
 # Implementation guide for Identity Service
 

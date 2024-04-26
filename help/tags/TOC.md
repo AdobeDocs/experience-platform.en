@@ -5,6 +5,7 @@ breadcrumb-title: Tags
 user-guide-description: Learn to deploy and manage analytics, marketing, and advertising tags to power customer experiences.
 feature: Tags
 solution: Data Collection
+role: Developer
 ---
 
 # Tags {#tags}
@@ -47,6 +48,7 @@ solution: Data Collection
   * [Deploy JavaScript tags to manage customer consent](./ui/client-side/consent.md)
   * [Content Security Policy (CSP) support](./ui/client-side/content-security-policy.md)
   * [Subresource Integrity (SRI) support](./ui/client-side/sri.md)
+  * [Transport Layer Security](./ui/client-side/transport-layer-security.md)
 * Event forwarding {#event-forwarding}
   * [Overview](./ui/event-forwarding/overview.md)
   * [Getting started](./ui/event-forwarding/getting-started.md)
@@ -172,6 +174,7 @@ solution: Data Collection
       * [Overview](./extensions/client/marketo/overview.md)
       * [Release notes](./extensions/client/marketo/release-notes.md)
     * [Master Property Manager](https://exchange.adobe.com/apps/ec/102992)
+    * [Merkury Tag](https://exchange.adobe.com/apps/ec/600027/merkury-tag)
     * [!DNL Meta Pixel] {#meta}
       * [Overview](./extensions/client/meta/overview.md)
     * [Monita](https://exchange.adobe.com/apps/ec/106544)
@@ -188,7 +191,6 @@ solution: Data Collection
     * [SDI Survey](https://exchange.adobe.com/apps/ec/102991)
     * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
     * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
-    * [SPA View Change Event](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
     * [Storage Spanner](https://exchange.adobe.com/apps/ec/102990)
     * [TAGS by Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
     * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
@@ -214,7 +216,6 @@ solution: Data Collection
     * [!DNL Braze] {#braze}
       * [Overview](./extensions/server/braze/overview.md)
     * [Cloud Connector for Google Analytics](https://exchange.adobe.com/apps/ec/106542)
-    * [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
     * Core {#core}
       * [Overview](./extensions/server/core/overview.md)
     * [Epsilon Event API](https://exchange.adobe.com/apps/ec/109127)
@@ -315,5 +316,5 @@ solution: Data Collection
 * [FAQ](./faq.md)
 * [Terminology updates](./term-updates.md)
 * [Deprecating support for Internet Explorer 10 and 11](./ie-deprecation.md)
-* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 

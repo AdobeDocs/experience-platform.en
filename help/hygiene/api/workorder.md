@@ -1,9 +1,12 @@
 ---
 title: Work Order API Endpoint
 description: The /workorder endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for identities.
+badgeBeta: label="Beta" type="Informative"
+role: Developer
+badge: Beta
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 ---
-# [!BADGE Beta]{type=Informative} Work order endpoint {#work-order-endpoint}
+# Work order endpoint {#work-order-endpoint}
 
 The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage record delete requests in Adobe Experience Platform.
 
@@ -119,9 +122,9 @@ A successful response returns the details of the record delete.
 
 {style="table-layout:auto"}
 
-## Retrieve the status of a record delete (#lookup)
+## Retrieve the status of a record delete {#lookup}
 
-After [creating a record delete request](#create), you can check on its status using a GET request.
+After you [create a record delete request](#create), you can check on its status using a GET request.
 
 **API format**
 

@@ -97,7 +97,7 @@ Once the report suites have been mapped, you can use these newly mapped fields w
 >
 >For audiences created within Platform, only audiences that have the **same** merge policy will be displayed.
 
-The **[!UICONTROL Audiences]** tab lists all audiences imported from external sources, such as Adobe Audience Manager, as well as audiences created within [!DNL Experience Platform].
+The **[!UICONTROL Audiences]** tab lists all audiences imported from external sources, such as Adobe Audience Manager or Customer Journey Analytics, as well as audiences created within [!DNL Experience Platform].
 
 On the **[!UICONTROL Audiences]** tab, you can see all of the available sources as a group of folders. As you select the folders, available sub-folders and audiences can be seen. Additionally, you can select the folder icon (as shown in the far-right image) in order to view the folder structure (a check mark denotes the folder you are currently in) and easily navigate back through folders by selecting the name of a folder in the tree.
 
@@ -276,6 +276,8 @@ As you continue to build your segment definition, you can view a paginated previ
 You can also select your evaluation method. If you know what evaluation method you want to use, you can select the desired evaluation method either using the dropdown list. If you want to know what evaluation types this segment definition qualifies for, you can select the browse icon ![folder icon with a magnifying glass](../images/ui/segment-builder/segment-evaluation-select-icon.png) to see a list of the available segment definition evaluation methods.
 
 The [!UICONTROL Evaluation method eligibility] popover appears. This popover displays the available evaluation methods, which are batch, streaming, and edge. The popover shows which evaluation methods are eligible and ineligible. Depending on the parameters you used in your segment definition, it may not qualify for certain evaluation methods. For more information on the requirements for each evaluation method, please read the [streaming segmentation](./streaming-segmentation.md#query-types) or the [edge segmentation](./edge-segmentation.md#query-types) overviews.
+
+You can also change the evaluation method of the segment definition after you've finished creating it. If you change the evaluation method from Edge or Streaming to Batch, you will **not** be able to change it back to Edge or Streaming. The change to the evaluation method will **only** take effect once you select **[!UICONTROL Save]** in the popover. Cancelling the dialog will **maintain** the original evaluation method.
 
 ![The evaluation method eligibility pop up appears. This displays which methods of evaluation are eligible and ineligible for the segment definition.](../images/ui/segment-builder/select-evaluation-method.png)
 

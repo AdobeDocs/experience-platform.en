@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes January 2024
 description: The January 2024 release notes for Adobe Experience Platform.
+exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
 ---
 # Adobe Experience Platform release notes 
 

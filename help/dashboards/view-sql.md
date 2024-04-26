@@ -1,6 +1,7 @@
 ---
 title: View Insight SQL
 description: View the SQL behind your Profile, Audience, Destination, and customized insights and execute the query on demand through the Query Editor.
+exl-id: fd728926-c113-4593-92b1-916a02d09d41
 ---
 # View insight SQL
 

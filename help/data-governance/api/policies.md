@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Policy enforcement;API-based e
 solution: Experience Platform
 title: Data Governance Policies API Endpoint
 description: Data governance policies are rules your organization adopts that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform. The /policies endpoint is used for all API calls related to viewing, creating, updating, or deleting data governance policies.
+role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
 ---
 # Data governance policies endpoint

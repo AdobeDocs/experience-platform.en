@@ -4,6 +4,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Source Connectors Guide
 user-guide-description: Ingest data from a variety of sources. Learn how to structure, label, and enhance already ingested data.
 feature: Sources
+role: Developer
 ---
 
 # Sources {#sources}
@@ -85,7 +86,9 @@ feature: Sources
     - [Snowflake Streaming connector](connectors/databases/snowflake-streaming.md)
     - [Snowflake connector](connectors/databases/snowflake.md)
     - [Teradata Vantage connector](connectors/databases/teradata-vantage.md)
-  - Data partner {#data-partner}
+  - Data & identity partner {#data-partner}
+    - [Acxiom Data Ingestion](connectors/data-partners/acxiom-data-ingestion.md)
+    - [Acxiom Prospecting Data Import](connectors/data-partners/acxiom-prospecting-data-import.md)
     - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
   - eCommerce {#ecommerce}
     - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
@@ -94,6 +97,7 @@ feature: Sources
   - Local system {#local-system}
     - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Marketing automation {#marketing-automation}
+    - [Braze Currents](connectors/marketing-automation/braze.md)
     - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
     - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
@@ -101,10 +105,12 @@ feature: Sources
     - [Oracle Eloqua connector](connectors/marketing-automation/oracle-eloqua.md)
     - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
     - [Oracle Responsys connector](connectors/marketing-automation/oracle-responsys.md)
+    - [PathFactory](connectors/marketing-automation/pathfactory.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
   - Payments {#payments}
     - [PayPal connector](connectors/payments/paypal.md)
     - [Square connector](connectors/payments/square.md)
+    - [Stripe connector](connectors/payments/stripe.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
     - [Generic REST API connector](connectors/protocols/generic-rest.md)
@@ -181,10 +187,12 @@ feature: Sources
       - [Oracle NetSuite Activities](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
       - [Oracle NetSuite Entities](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
       - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
+      - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)
       - [Square](tutorials/api/create/payments/square.md)
+      - [Stripe](tutorials/api/create/payments/stripe.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/api/create/protocols/odata.md)
       - [Generic REST API](tutorials/api/create/protocols/generic-rest.md)
@@ -287,10 +295,12 @@ feature: Sources
       - [Phoenix](tutorials/ui/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - [Snowflake](tutorials/ui/create/databases/snowflake.md)
+      - [Snowflake Streaming](tutorials/ui/create/databases/snowflake-streaming.md)
       - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
-    - Data partner {#data-partner}
-      - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
+    - Data & identity partner {#data-partner}
+      - [Acxiom Data Ingestion](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
       - [Acxiom Prospecting Data Import](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+      - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
     - eCommerce {#ecommerce}
       - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -298,7 +308,7 @@ feature: Sources
     - Local system {#local-system}
       - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Marketing automation {#marketing-automation}
-      - [Braze](tutorials/ui/create/marketing-automation/braze.md)
+      - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
       - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
       - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
@@ -308,10 +318,12 @@ feature: Sources
       - [Oracle NetSuite Activities](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
       - [Oracle NetSuite Entities](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
       - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
+      - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/ui/create/payments/paypal.md)
       - [Square](tutorials/ui/create/payments/square.md)
+      - [Stripe](tutorials/ui/create/payments/stripe.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/ui/create/protocols/odata.md)
     - Streaming {#streaming}
@@ -375,4 +387,4 @@ feature: Sources
 - [IP address allow list](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)
 - [API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sc
 solution: Experience Platform
 title: Schedules Endpoint
 description: The following sections walks through the various API calls you can make for scheduled queries with the Query Service API.
+role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
 ---
 # Schedules endpoint

@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;access control;attribute-based access control;
 title: Attribute-Based Access Control End-to-End Guide
 description: This document provides an end-to-end guide on attribute-based access control in Adobe Experience Platform
+role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 ---
 # Attribute-based access control end-to-end guide
@@ -124,6 +125,10 @@ The **[!UICONTROL Edit labels]** dialog appears, allowing you to choose the labe
 >When a label is added to a field, that label is applied to the parent resource of that field (either a class or a field group). If the parent class or field group is employed by other schemas, those schemas will inherit the same label.
 
 ## Apply labels to segments
+
+>[!NOTE]
+>
+>Any segment that utilizes a labeled attribute must likewise be labeled if you want the same access restrictions to apply to it.
 
 Once you have completed labeling your schema fields, you can now begin labeling your segments.
 

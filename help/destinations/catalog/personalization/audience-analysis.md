@@ -2,6 +2,7 @@
 title: Audience Analysis destination
 description: View audiences that customers qualify for in Customer Journey Analytics.
 badgeLimitedAvailability: label="Limited availability" type="Informative"
+exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
 ---
 # Audience Analysis destination
 

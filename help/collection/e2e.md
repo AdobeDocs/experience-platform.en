@@ -107,8 +107,8 @@ Once you have created a schema and a datastream, the next step is to install and
 >
 >This section uses the Data Collection UI to configure the Web SDK tag extension, but you can also install and configure it using raw code instead. Refer to the following guides for more information:
 >
->* [Install the SDK](../edge/fundamentals/installing-the-sdk.md)
->* [Configure the SDK](../edge/fundamentals/configuring-the-sdk.md)
+>* [Install the SDK](/help/web-sdk/install/overview.md)
+>* [Configure the SDK](/help/web-sdk/commands/configure/overview.md)
 >
 >Also note that even if you only want to use event forwarding, you must still install and configure the SDK as described before configuring event forwarding at a [later step](#event-forwarding).
 

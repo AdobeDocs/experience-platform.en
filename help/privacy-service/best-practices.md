@@ -1,6 +1,7 @@
 ---
 title: Best practices for Privacy Service
 description: Learn how to reduce the processing time and the costs incurred to your organization when completing privacy requests by following these optimal use guidelines.
+exl-id: 1333d6c6-5ca0-41c1-9f9e-aa2a5a8b8a9c
 ---
 # Best practices for Privacy Service
 
