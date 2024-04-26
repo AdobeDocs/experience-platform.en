@@ -83,6 +83,12 @@ If you have written multiple queries but need to execute only one query, you can
 
 ![The Query Editor with the [!UICONTROL Run selected query] icon highlighted.](../images/ui/query-editor/run-selected-query.png)
 
+### Cancel Query Editor session {#cancel-query}
+
+Take control of query execution and improve your productivity by canceling long-running queries. This action clears the Query Editor during a query run but the query continues to execute in the background. To cancel the run in the editor and continue creating SQL, select ...   
+
+<!-- ![The Query Editor with xxx highlighted.](cancel-query-run.png) -->
+
 ### Result count {#result-count}
 
 The Query Editor has a maximum 50,000 row output. You can choose the number of rows are displayed at one time in the Query Editor console. To change the number of rows displayed in the console, select the **[!UICONTROL Result count]** dropdown and select from the 50, 100, 150, 300, and 500 options.
