@@ -89,6 +89,10 @@ Take control of query execution and improve your productivity by canceling long-
 
 ![The Query Editor with [!UICONTROL Cancel query] highlighted.](../images/ui/query-editor/cancel-query-run.png)
 
+A confirmation dialog appears. Select **[!UICONTROL Confirm]** to cancel the query run.
+
+![The Cancel query confirmation dialog with Confirm highlighted.](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
+
 ### Result count {#result-count}
 
 The Query Editor has a maximum 50,000 row output. You can choose the number of rows are displayed at one time in the Query Editor console. To change the number of rows displayed in the console, select the **[!UICONTROL Result count]** dropdown and select from the 50, 100, 150, 300, and 500 options.
