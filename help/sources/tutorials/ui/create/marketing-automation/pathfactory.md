@@ -2,6 +2,8 @@
 title: Connect Your PathFactory Account To Experience Platform Through the UI
 description: Learn how to connect your PathFactory account to Experience Platform through the UI.
 last-substantial-update: 2024-04-30
+hide: true
+hidefromtoc: true
 badge: Beta 
 ---
 # Connect your [!DNL PathFactory] account to Experience Platform through the UI
@@ -29,10 +31,7 @@ To access your PathFactory account on the Platform, you must provide the followi
 | Password | The password associated with your PathFactory account. Ensure this is kept secure to prevent unauthorized access. |
 | Domain | The domain associated with your PathFactory account. This typically refers to the unique identifier within your PathFactory URL. |
 | Access Token | A unique token used for API authentication to ensure secure communication between your systems and PathFactory. |
-| API Endpoints | Specific API endpoints for accessing data: Visitors, Sessions, and Page Views. Each endpoint corresponds to different data sets you can retrieve. **Note:** These are pre-defined by PathFactory and are specific to the data you intend to access:
-  - **Visitors Endpoint**: `/api/public/v3/data_lake_apis/visitors.json`
-  - **Sessions Endpoint**: `/api/public/v3/data_lake_apis/sessions.json`
-  - **Page Views Endpoint**: `/api/public/v3/data_lake_apis/page_views.json`
+| API Endpoints | Specific API endpoints for accessing data: Visitors, Sessions, and Page Views. Each endpoint corresponds to different data sets you can retrieve. **Note:** These are pre-defined by [!DNL PathFactory] and are specific to the data you intend to access: <ul><li>**Visitors Endpoint**: `/api/public/v3/data_lake_apis/visitors.json`</li><li>**Sessions Endpoint**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**Page Views Endpoint**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
 
 For detailed guidance on how to secure and use your credentials, and for information about obtaining and refreshing your access token, visit the [PathFactory Support Center](https://support.pathfactory.com/categories/adobe/). This resource offers comprehensive guides on managing your credentials and ensuring effective and secure API integration.
 

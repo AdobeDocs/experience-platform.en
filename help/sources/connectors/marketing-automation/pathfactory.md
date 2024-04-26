@@ -1,7 +1,9 @@
 ---
-title: PathFacory Source Overview
+title: PathFactory Source Overview
 description: Learn how to connect PathFactory to Adobe Experience Platform using APIs or the user interface.
 last-substantial-update: 2024-04-30
+hide: true
+hidefromtoc: true
 badge: Beta 
 ---
 # [!DNL PathFactory]
@@ -10,17 +12,15 @@ badge: Beta
 >
 >The [!DNL PathFactory] source is in beta. Please read the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
-
-Experience Platform provides support for ingesting data from third-party marketing automation system. Support for marketing automation providers includes [!DNL PathFactory].
-
 [[!DNL PathFactory]](https://www.pathfactory.com/) offers a cloud-based platform that helps businesses manage content journeys and drive engagement through intelligent content insights. This guide details how you can integrate data from PathFactory into Experience Platform, utilizing PathFactory's connectors for optimal data ingestion.
 
 You can ingest data from [[!DNL PathFactory]](https://www.pathfactory.com/) using three primary sources:
 
-1. [!DNL Visitors]: Ingest customer and contact data as records to better understand your audience.
-2. [!DNL Sessions]: Time series events that track individual user session activities on your platform.
-3. [!DNL Page Views]: Time series events that provide insights into which pages are being viewed, helping you analyze content performance.
+* **[!DNL Visitors]**: Ingest customer and contact data as records to better understand your audience.
+* **[!DNL Sessions]**: Time series events that track individual user session activities on your platform.
+* **[!DNL Page Views]**: Time series events that provide insights into which pages are being viewed, helping you analyze content performance.
+
+Read the document below for information on how you can set up your [!DNL PathFactory] source account.
 
 ## IP address allow list {#ip-allow-list}
 
@@ -31,32 +31,32 @@ A list of IP addresses may require to be added to an allow list prior to working
 Before you begin integrating [[!DNL PathFactory]](https://www.pathfactory.com/) connectors with Experience Platform, ensure you meet the following prerequisites:
 
 * **A [PathFactory account]**.
-  * Contact [PathFactory](https://www.pathfactory.com/portal/company/contactus.shtml) if you do not already have a valid account.
-* **An active subscription** to any PathFactory product.
-* **Username, password, domain**.
-  * These credentials are required to access your PathFactory account and its data.
+  * Contact [[!DNL PathFactory]](https://www.pathfactory.com/portal/company/contactus.shtml) if you do not already have a valid account.
+* **An active subscription** to any [!DNL PathFactory] product.
+* **Username, password, and domain**.
+  * These credentials are required to access your [!DNL PathFactory] account and its data.
 * **Access Token** and **API Endpoints**.
-  * These are necessary for authenticating and interfacing with PathFactory APIs. Detailed endpoint information is provided below.
+  * These are necessary for connecting with [!DNL PathFactory] APIs. 
 
 ### How to Obtain Credentials and Access Tokens {#gather-credentials}
 
-To connect PathFactory to Experience Platform, you must provide the following credentials:
+To connect [!DNL PathFactory] to Experience Platform, you must provide the following credentials:
 
 | Credential | Description | Endpoint |
 | --- | --- | --- |
-| Username | Your PathFactory account username. | Not applicable |
-| Password | Your PathFactory account password. | Not applicable |
-| Domain | The domain associated with your PathFactory account. | Not applicable |
+| Username | Your [!DNL PathFactory] account username. | Not applicable |
+| Password | Your [!DNL PathFactory] account password. | Not applicable |
+| Domain | The domain associated with your [!DNL PathFactory] account. | Not applicable |
 | Access Token | A unique token used for API authentication. | Not applicable |
-| Visitors Endpoint | API endpoint for visitor data. | `/api/public/v3/data_lake_apis/visitors.json` |
-| Sessions Endpoint | API endpoint for session data. | `/api/public/v3/data_lake_apis/sessions.json` |
-| Page Views Endpoint | API endpoint for page view data. | `/api/public/v3/data_lake_apis/page_views.json` |
+| Visitors Endpoint | The API endpoint for visitor data. | `/api/public/v3/data_lake_apis/visitors.json` |
+| Sessions Endpoint | The API endpoint for session data. | `/api/public/v3/data_lake_apis/sessions.json` |
+| Page Views Endpoint | The API endpoint for page view data. | `/api/public/v3/data_lake_apis/page_views.json` |
 
-For detailed instructions on how to obtain your username, password, domain, and access token, visit the [PathFactory Support Center](https://support.pathfactory.com/categories/adobe/). This resource provides comprehensive guides on retrieving and managing your credentials.
+For detailed instructions on how to obtain your username, password, domain, and access token, visit the [[!DNL PathFactory] Support Center](https://support.pathfactory.com/categories/adobe/). This resource provides comprehensive guides on retrieving and managing your credentials.
 
->[!IMPORTANT]
->
->Ensure that you have the necessary permissions to access and manage API credentials within your PathFactory account before attempting to connect to the Experience Platform.
+### Configure permissions on Experience Platform
+
+You must have both **[!UICONTROL View Sources]** and **[!UICONTROL Manage Sources]** permissions enabled for your account in order to connect your [!DNL PathFactory] account to Experience Platform. Contact your product administrator to obtain the necessary permissions. For more information, read the [access control UI guide](../../../access-control/ui/overview.md).
 
 ## Connect [!DNL PathFactory] to Platform {#pathfactory-connect}
 

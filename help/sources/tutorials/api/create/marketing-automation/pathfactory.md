@@ -2,17 +2,19 @@
 title: Create a PathFactory Base Connection Using the Flow Service API
 description: Learn how to authenticate your PathFactory account against Experience Platform using the Flow Service API.
 last-substantial-update: 2024-04-30
+hide: true
+hidefromtoc: true
 badge: Beta 
 ---
 # Create a [!DNL PathFactory] base connection using the [!DNL Flow Service] API
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL PathFactory] using the [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Read this document to learn how to create a base connection for [!DNL PathFactory] using the [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
-## Getting started
+## Get started
 
-This guide requires a working understanding of the following components of Adobe Experience Platform:
+This guide requires a working understanding of the following components of Experience Platform:
 
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
@@ -29,16 +31,13 @@ To access your PathFactory account on the Platform, you must provide the followi
 
 | Credential | Description |
 | ---------- | ----------- |
-| Username | Your PathFactory account username. This is essential for identifying your account in the system. |
-| Password | The password associated with your PathFactory account. Ensure this is kept secure to prevent unauthorized access. |
-| Domain | The domain associated with your PathFactory account. This typically refers to the unique identifier within your PathFactory URL. |
-| Access Token | A unique token used for API authentication to ensure secure communication between your systems and PathFactory. |
-| API Endpoints | Specific API endpoints for accessing data: Visitors, Sessions, and Page Views. Each endpoint corresponds to different data sets you can retrieve. **Note:** These are pre-defined by PathFactory and are specific to the data you intend to access:
-  - **Visitors Endpoint**: `/api/public/v3/data_lake_apis/visitors.json`
-  - **Sessions Endpoint**: `/api/public/v3/data_lake_apis/sessions.json`
-  - **Page Views Endpoint**: `/api/public/v3/data_lake_apis/page_views.json`
+| Username | Your [!DNL PathFactory] account username. This is essential for identifying your account in the system. |
+| Password | The password associated with your [!DNL PathFactory] account. Ensure this is kept secure to prevent unauthorized access. |
+| Domain | The domain associated with your [!DNL PathFactory] account. This typically refers to the unique identifier within your [!DNL PathFactory] URL. |
+| Access Token | A unique token used for API authentication to ensure secure communication between your systems and [!DNL PathFactory]. |
+| API Endpoints | Specific API endpoints for accessing data: Visitors, Sessions, and Page Views. Each endpoint corresponds to different data sets you can retrieve. **Note:** These are pre-defined by [!DNL PathFactory] and are specific to the data you intend to access: <ul><li>**Visitors Endpoint**: `/api/public/v3/data_lake_apis/visitors.json`</li><li>**Sessions Endpoint**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**Page Views Endpoint**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
 
-For detailed guidance on how to secure and use your credentials, and for information about obtaining and refreshing your access token, visit the [PathFactory Support Center](https://support.pathfactory.com/categories/adobe/). This resource offers comprehensive guides on managing your credentials and ensuring effective and secure API integration.
+For more information on how to secure and use your credentials, and how to obtain and refresh your access token, visit the [[!DNL PathFactory] Support Center](https://support.pathfactory.com/categories/adobe/). This resource offers comprehensive guides on managing your credentials and ensuring effective and secure API integration.
 
 ## Create a base connection
 
