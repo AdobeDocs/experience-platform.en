@@ -39,7 +39,7 @@ The schedules workspace appears. Select **[!UICONTROL Add Schedule]** to create 
 
 ### Edit the schedule details {#schedule-details}
 
-The schedule details page appears. On this page, you can edit a varity of details for the scheduled query. Details include the [frequency and weekday of the scheduled query](#scheduled-query-frequency) run, the start and end date, the dataset to export the results to, and [query status alerts]().
+The schedule details page appears. On this page, you can edit a variety of details for the scheduled query. Details include the [frequency and weekday of the scheduled query](#scheduled-query-frequency) run, the start and end date, the dataset to export the results to, and [query status alerts](#alerts-for-query-status).
 
 ![The Schedule details panel highlighted.](../images/ui/query-schedules/schedule-details.png)
 
@@ -79,13 +79,15 @@ If you are creating a scheduled query for a parameterized query, you must now se
 
 ![The Schedule details section of the schedule creation workflow with the Query parameters section highlighted.](../images/ui/query-schedules/scheduled-query-parameter.png)
 
-After confirming all these details, select **[!UICONTROL Save]** to create a schedule. You are returned to the schedules workspace that displays details of the newly created schedule, including the schedule ID, the schedule itself, and the schedule's output dataset. You can use the schedule ID to look up more information about the runs of the scheduled query itself. To learn more, please read the [scheduled query run endpoints guide](../api/runs-scheduled-queries.md).
-
-![The schedules workspace with the newly created schedule highlighted.](../images/ui/query-schedules/schedules-workspace.png)
+After confirming your schedule details, select **[!UICONTROL Save]** to create a schedule. You are returned to your template's schedules tab. This workspace displays details of the newly created schedule, including the schedule ID, the schedule itself, and the schedule's output dataset. 
 
 ## View scheduled query runs {#scheduled-query-runs}
 
-To view a list of a query template's scheduled runs, navigate to the [!UICONTROL Scheduled queries] tab and select a template name from the list available.
+From your template's [!UICONTROL Schedules] tab, select the schedule ID to navigate to the list of query runs for your newly scheduled query.
+
+![The schedules workspace with the newly created schedule highlighted.](../images/ui/query-schedules/schedules-workspace.png)
+
+Alternatively, to view a list of a query template's scheduled runs, navigate to the **[!UICONTROL Scheduled queries]** tab and select a template name from the list available.
 
 ![The Scheduled queries tab with a named template highlighted.](../images/ui/query-schedules/view-scheduled-runs.png)
 
@@ -93,7 +95,7 @@ The list of query runs for that scheduled query appears.
 
 ![The details section of the Scheduled Queries workspace with a list of query runs highlighted for a scheduled query.](../images/ui/query-schedules/list-of-scheduled-runs.png)
 
-See the [monitor scheduled queried guide](./monitor-queries.md#inline-actions) for complete information on how to monitor the status of all query jobs through the UI.
+See the [monitor scheduled queried guide](./monitor-queries.md#inline-actions) for complete information on how to monitor the status of all query jobs through the UI. To monitor scheduled queries using the Query Service API, see the [scheduled query run endpoints guide](../api/runs-scheduled-queries.md).
 
 ## Delete or disable a schedule {#delete-schedule}
 
@@ -101,14 +103,20 @@ You can delete or disable a schedule from the schedules workspace of a particula
 
 To access the [!UICONTROL Schedules] tab of your chosen query, you must select the name of a query template from either the [!UICONTROL Templates] tab or the [!UICONTROL Scheduled Queries] tab. This navigates to the Query Editor for that query. Form the Query Editor, select **[!UICONTROL Schedules]** to access the schedules workspace. 
 
-Select a schedule from the rows of available schedules. You can use the toggle to disable or enable the scheduled query.
+Select a schedule from the rows of available schedules to populate the details panel. Use the toggle to disable (or enable) the scheduled query.
 
 >[!IMPORTANT]
 >
 >You must disable the schedule before you can delete a schedule for a query.
 
-Select **[!UICONTROL Delete a schedule]** to delete the disabled schedule.
+![The list of a template's schedules with the details panel highlighted.](../images/ui/query-schedules/schedule-details-panel.png)
 
-![The schedules workspace with Disable schedule and Delete schedule highlighted.](../images/ui/query-schedules/delete-schedule.png)
+A confirmation dialog appears. Select **[!UICONTROL Disable]** to confirm the action.
+
+![The Disable schedule confirmation dialog.](../images/ui/query-schedules/disable-schedule-confirmation-dialog.png)
+
+Select **[!UICONTROL Delete a schedule]** to delete the disabled schedule. 
+
+![The schedules workspace with Delete schedule highlighted.](../images/ui/query-schedules/delete-schedule.png)
 
 Alternatively, the [!UICONTROL Scheduled Queries] tab offers a collection of inline actions for each scheduled query. The available inline actions include [!UICONTROL Disable schedule] or [!UICONTROL Enable schedule], [!UICONTROL Delete schedule], and [!UICONTROL Subscribe] to alerts for the scheduled query. For complete instructions on how to delete or disable a scheduled query through the scheduled Queries tab, please see the [monitor scheduled queried guide](./monitor-queries.md#inline-actions).
