@@ -131,7 +131,7 @@ The following chart explains the different lifecycle statuses, what they represe
 
 The possible lifecycle states that an audience can be moved to depends on the current state of the audience.
 
-![](./images/faq/lifecycle-state-transition.png)
+![A diagram outlining the possible lifecycle state transitions that are available for audiences.](./images/faq/lifecycle-state-transition.png)
 
 If your audience is in the draft state, you can either publish them or delete them if the audience does not have any dependents.
 
