@@ -97,7 +97,7 @@ You can select **[!UICONTROL Update frequency summary]** to display a pie chart 
 
 ![The Update frequency summary button is highlighted.](../images/ui/overview/browse-audience-update-frequency-summary.png)
 
-The pie chart appears, displaying a breakdown of the audiences by update frequency. The chart displays the total number of audiences in the middle. If you hover over the different parts of the audience, it will display the number of audiences that belong to each update frequency type.
+The pie chart appears, displaying a breakdown of the audiences by update frequency. The chart displays the total number of audiences in the middle, and the daily batch evaluation time in UTC at the bottom. If you hover over the different parts of the audience, it will display the number of audiences that belong to each update frequency type.
 
 ![The update frequency pie chart is displayed.](../images/ui/overview/update-frequency-chart.png)
 
