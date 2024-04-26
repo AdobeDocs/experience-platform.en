@@ -14,9 +14,9 @@ With the newly introduced capability of being able to utilize Customer Matched a
 
 >[!IMPORTANT]
 >
->This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.
+>This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
 
-![Google Customer Match destination in the Adobe Experience Platform UI.](../../assets/catalog/advertising/google-customer-match/catalog.png)
+![Google Customer Match + DV360 destination in the Adobe Experience Platform UI.](/help/destinations/assets/catalog/advertising/gcm-dv360/catalog.png)
 
 ## Important notice about changes to Google destinations related to updated consent requirements in the European Union
 
@@ -32,7 +32,7 @@ With the newly introduced capability of being able to utilize Customer Matched a
 
 ## When to use this destination
 
-With several integrations with Google available in the destinations catalog, it might be difficult to understand when to use each of the available Google destinations. Make sense of the different use cases by reading the information in the table below:
+Several integrations with Google are available in the destinations catalog and it might be difficult to understand when to use each of the available Google destinations. Make sense of the different use cases by reading the information in the table below:
 
 | [Google Customer Match](/help/destinations/catalog/advertising/google-customer-match.md) | [Google Display & Video 360](/help/destinations/catalog/advertising/google-dv360.md) | Google Customer Match + Display & Video 360 (this connector) |
 |---------|----------|---------|
