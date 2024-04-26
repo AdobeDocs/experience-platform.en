@@ -65,7 +65,6 @@ The lower part of the dashboard displays a table that outlines the current metri
 
 | Metrics | Description |
 | --- | --- |
-| Source name |
 | Records received |
 | Records ingested |
 | Records skipped |
@@ -89,16 +88,20 @@ You can further filter your data using the options provided above the metrics ta
 
 To monitor the data that is being ingested in a specific dataflow, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside a source.
 
-![Monitor a specific dataflow by selecting the filter icon beside a given source.]()
+![Monitor a specific dataflow by selecting the filter icon beside a given source.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 The metrics table updates to a table of active dataflows that correspond to the source that you selected. During this step, you can view additional information on your dataflows, including their corresponding dataset and data type, as well as a time stamp on when they were last active. 
 
 To further inspect a dataflow, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside a dataflow.
 
-![The dataflows table in the monitoring dashboard.]()
+![The dataflows table in the monitoring dashboard.](../assets/ui/monitor-sources/select-dataflow.png)
 
-* The dataflow run details page
-* The dataflow run errors section
+![](../assets/ui/monitor-sources/dataflow-page.png)
+
+![](../assets/ui/monitor-sources/dataflow-run-details.png)
+
+![](../assets/ui/monitor-sources/errors.png)
+
 
 ## Next steps {#next-steps}
 
