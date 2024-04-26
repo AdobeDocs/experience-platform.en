@@ -65,12 +65,12 @@ The lower part of the dashboard displays a table that outlines the current metri
 
 | Metrics | Description |
 | --- | --- |
-| Records received |
-| Records ingested |
-| Records skipped |
-| Records failed |
-| Ingested rate |
-| Total failed dataflows |
+| Records received | The total number of records received from the source. |
+| Records ingested | The total number of records ingested to data lake. |
+| Records skipped | The total number of records skipped. |
+| Records failed | The total number of records that could not be ingested due to errors. |
+| Ingested rate | The percentage of records that were ingested based on the total number of records received. |
+| Total failed dataflows | The total number of dataflows that failed. |
 
 {style="table-layout:auto"}
 
@@ -90,22 +90,56 @@ To monitor the data that is being ingested in a specific dataflow, select the fi
 
 ![Monitor a specific dataflow by selecting the filter icon beside a given source.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
-The metrics table updates to a table of active dataflows that correspond to the source that you selected. During this step, you can view additional information on your dataflows, including their corresponding dataset and data type, as well as a time stamp on when they were last active. 
+The metrics table updates to a table of active dataflows that correspond to the source that you selected. During this step, you can view additional information on your dataflows, including their corresponding dataset and data type, as well as a time stamp to indicate when they were last active. 
 
 To further inspect a dataflow, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside a dataflow.
 
 ![The dataflows table in the monitoring dashboard.](../assets/ui/monitor-sources/select-dataflow.png)
 
-![](../assets/ui/monitor-sources/dataflow-page.png)
+Next, you are taken to an interface that lists all dataflow run iterations of the dataflow that you selected.
 
-![](../assets/ui/monitor-sources/dataflow-run-details.png)
+Dataflow runs represent an instance of dataflow execution. For example, if a dataflow is scheduled to run hourly at 9:00 AM, 10:00 AM, and 11:00 AM, then you would have three instances of a flow run. Flow runs are specific to your particular organization.
 
-![](../assets/ui/monitor-sources/errors.png)
+To inspect metrics of a specific dataflow run iteration, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside your dataflow.
 
+![The dataflow run metric page.](../assets/ui/monitor-sources/dataflow-page.png)
+
+Use the dataflow run details page to view metrics and information of your selected run iteration.
+
+![The dataflow run details page.](../assets/ui/monitor-sources/dataflow-run-details.png)
+
+| Dataflow run details | Description |
+| --- | --- |
+| Records ingested | The total number of records that were ingested from the dataflow run. |
+| Records failed | The total number of records that were not ingested due to errors in the dataflow run. |
+| Total files | The total number of files in the dataflow run. |
+| Size of data | The total size of data contained in the dataflow run. |
+| Dataflow run ID | The ID of the dataflow run iteration. |
+| Org ID | The ID of the organization in which the dataflow run was created in. |
+| Status | The status of the dataflow run. |
+| Dataflow run start | A timestamp that indicates when the dataflow run started. |
+| Dataflow run end | A timestamp that indicates when the dataflow run ended. |
+| Dataset | The dataset used to create the dataflow. |
+| Data type | The type of the data that was in the dataflow. |
+| Partial ingestion | Partial batch ingestion is the ability to ingest data containing errors, up to a certain configurable threshold. This feature allows you to successfully ingest all of your accurate data into Experience Platform, while all of your incorrect data is batched separately with information on why it is invalid. You can enable partial ingestion during the dataflow creation process. |
+| Error diagnostics | Error diagnostics instructs the source to produce error diagnostics that you can later reference when monitoring your dataset activity and dataflow status. You can enable error diagnostics during the dataflow creation process. |
+| Error summary | Given a failed dataflow run, error summary displays an error code and description to summarize why the run iteration failed. |
+
+{style="table-layout:auto"}
+
+If your dataflow run reports errors, you can scroll down to the bottom of the page use the [!UICONTROL Dataflow run errors] interface.
+
+Use the [!UICONTROL Records failed] section to view metrics on records that were not ingested due to errors. To view a comprehensive error report, select **[!UICONTROL Preview error diagnostics]**. To download a copy of your error diagnostics and file manifest, select **[!UICONTROL Download]** and then copy the example API call to be used with the [!DNL Data Access] API.
+
+>[!NOTE]
+>
+>You may only use error diagnostics if the feature was enabled during the source connection creation process.
+
+![The dataflow run errors panel.](../assets/ui/monitor-sources/errors.png)
 
 ## Next steps {#next-steps}
 
 By following this tutorial, you have successfully monitored the ingestion dataflow from the source-level using the **[!UICONTROL Monitoring]** dashboard. You have also successfully identified errors that contributed to the failure of dataflows during the ingestion process. See the following documents for more details:
 
-* [Monitoring identities in dataflows](./monitor-identities.md)
-* [Monitoring profiles in dataflows](./monitor-profiles.md)
+* [Monitoring identity data](./monitor-identities.md).
+* [Monitoring profile data](./monitor-profiles.md).
