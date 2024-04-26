@@ -39,9 +39,11 @@ The schedules workspace appears. Select **[!UICONTROL Add Schedule]** to create 
 
 ### Edit the schedule details {#schedule-details}
 
-The schedule details page appears. On this page, you can choose the frequency of the scheduled query, the start and end date, the day of the week the scheduled query will run, as well as what dataset to export the query to.
+The schedule details page appears. On this page, you can edit a varity of details for the scheduled query. Details include the [frequency and weekday of the scheduled query](#scheduled-query-frequency) run, the start and end date, the dataset to export the results to, and [query status alerts]().
 
 ![The Schedule details panel highlighted.](../images/ui/query-schedules/schedule-details.png)
+
+#### Scheduled query frequency {#scheduled-query-frequency}
 
 You can choose the following options for **[!UICONTROL Frequency]**:
 
@@ -58,6 +60,14 @@ For the output dataset, you have the option to use either append into an existin
 > Since you are using either an existing or creating a new dataset, you do **not** need to include either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of the query, since the datasets are already set. Including either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of your scheduled queries will result in an error.
 
 If you do not have access to parameterized queries, continue on to the [delete or disable a schedule](#delete-schedule) section.
+
+### Set alerts for a scheduled query status {#alerts-for-query-status}
+
+You can also subscribe to query alerts as part of your scheduled query settings. This means that you receive notifications upon a change in status of your query. Alerts can be received as either as pop-up notifications or emails. The available query-state alert options include start, success, and failure. Select the check box to subscribe to alerts for that status of scheduled query. 
+
+![The Schedule details panel with the Alert options highlighted.](../images/ui/query-editor/alerts.png)
+
+For an overview of alerts in Adobe Experience Platform, including the structure of how alert rules are defined, see the [alerts overview](../../observability/alerts/overview.md). For guidance on managing alerts and alert rules within the Adobe Experience Platform UI, see the [Alerts UI guide](../../observability/alerts/ui.md).
 
 ### Set parameters for a scheduled parameterized query {#set-parameters}
 
