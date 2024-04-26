@@ -356,7 +356,7 @@ In a wider context, you can see the `conditional` field being used in the destin
 
 >[!TIP]
 >
->Starting with the April 2024 release, you can set an `isRequired` parameter on conditional fields. For example, in the configuration snippet below, the delimiter field is marked as required and customers cannot proceed unless they select a value for the field. [Read more](#supported-parameters) about required fields.
+>Starting with the April 2024 release, you can set an `isRequired` parameter on conditional fields. For example, in the configuration snippet below, the delimiter field is marked as required (highlighted line 32) and customers cannot proceed unless they select a value for the field. Read more about required fields in the [supported parameters](#supported-parameters) section.
 
 ```json {line-numbers="true" highlight="3-15, 21-25,32"}
 "customerDataFields":[
