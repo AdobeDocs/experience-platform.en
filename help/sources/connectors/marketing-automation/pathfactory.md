@@ -4,7 +4,8 @@ description: Learn how to connect PathFactory to Adobe Experience Platform using
 last-substantial-update: 2024-04-30
 hide: true
 hidefromtoc: true
-badge: Beta 
+badge: Beta
+exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
 ---
 # [!DNL PathFactory]
 
