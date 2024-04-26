@@ -95,7 +95,11 @@ The list of query runs for that scheduled query appears.
 
 ![The details section of the Scheduled Queries workspace with a list of query runs highlighted for a scheduled query.](../images/ui/query-schedules/list-of-scheduled-runs.png)
 
-See the [monitor scheduled queried guide](./monitor-queries.md#inline-actions) for complete information on how to monitor the status of all query jobs through the UI. To monitor scheduled queries using the Query Service API, see the [scheduled query run endpoints guide](../api/runs-scheduled-queries.md).
+See the [monitor scheduled queried guide](./monitor-queries.md#inline-actions) for complete information on how to monitor the status of all query jobs through the UI. 
+
+Select a **[!UICONTROL Query run ID]** from the list to navigate to the query run overview. For a full breakdown of the information available on the [query run overview](./monitor-queries.md#query-run-overview), see the monitor scheduled queries documentation.
+
+To monitor scheduled queries using the Query Service API, see the [scheduled query run endpoints guide](../api/runs-scheduled-queries.md).
 
 ## Delete or disable a schedule {#delete-schedule}
 
