@@ -23,3 +23,7 @@ Instructions are provided for the following clients:
 - [[!DNL PSQL]](./psql.md)
 - [[!DNL RStudio]](./rstudio.md)
 - [[!DNL Tableau]](./tableau.md)
+
+>[!IMPORTANT]
+>
+>Power BI and Tableau users can connect Customer Journey Analytics to your BI tools from the Query Service credentials tab. See the credentials documentation for instructions on how to [connect your BI tools to Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).

@@ -20,7 +20,7 @@ Adobe Experience Platform Query Service allows you to connect with external clie
 >title="Client's SSL mode"
 >abstract="SSL must be enabled in clients connected to Query Service. Ensure the SSL mode is set to 'require'."
 
-You can use expiring credentials to quickly set up a connection to an external client.
+You can use expiring credentials to quickly set up a connection to an external client. 
 
 ![The Queries dashboard Credentials tab with the Expiring credentials section highlighted.](../images/ui/credentials/expiring-credentials.png)
 
@@ -41,6 +41,26 @@ The **[!UICONTROL Expiring credentials]** section provides the following informa
 >![The Admin Console settings tab with Privacy and Security, Authentication settings, and Max session life highlighted.](../images/ui/credentials/max-session-life.png)
 >
 >See the Adobe Help documentation for more information on the [Advanced settings](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) offered by Admin console.
+
+### Connect to Customer Journey Analytics data within query sessions {#connect-to-customer-journey-analytics}
+
+Use the Customer Journey Analytics BI extension with Power BI or Tableau to access data views from Customer Journey Analytics with SQL. By integrating Adobe Experience Platform Query Service with the BI extension, you can access Customer Journey Analytics data views directly within Query Service sessions. This integration streamlines functionality for BI tools using Query Service as their PostgreSQL interface. It eliminates the need to duplicate data views in BI tools, ensures consistent reporting across platforms, and simplifies the integration of Customer Journey Analytics data with other sources in BI platforms.
+
+>[!IMPORTANT]
+>
+>A Customer Journey Analytics workspace project and a data view are required to use this functionality.
+
+To access your Customer Journey Analytics data in either Power BI or Tableau, select the [!UICONTROL Database] dropdown menu then select `prod:cja` from the available options. Next, copy your [!DNL Postgres] credentials parameters (Host, Port, Database, Username, and others) when needed in Power BI or Tableau. 
+
+![The Query Service credentials tab with the database dropdown highlighted.](../images/ui/credentials/database-dropdown.png)
+
+>[!NOTE]
+>
+>The Query Service 'concurrent sessions' entitlement is consumed when you connect Power BI or Tableau to Customer Journey Analytics. If you need additional concurrent sessions and queries, please buy an additional ad hoc query users pack add-on to get five additional concurrent sessions and one additional concurrent query.
+
+You can also access your Customer Journey Analytics data directly from the Query Editor or Postgres CLI. To do this, reference the `cja` database when writing your query. 
+
+See the [BI extension guide](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) for complete instructions on accessing your data views from Customer Journey Analytics with SQL.
 
 ## Non-expiring credentials {#non-expiring-credentials}
 
