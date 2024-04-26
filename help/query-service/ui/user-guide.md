@@ -85,9 +85,9 @@ If you have written multiple queries but need to execute only one query, you can
 
 ### Cancel Query Editor session {#cancel-query}
 
-Take control of query execution and improve your productivity by canceling long-running queries. This action clears the Query Editor during a query run but the query continues to execute in the background. To cancel the run in the editor and continue creating SQL, select ...   
+Take control of query execution and improve your productivity by canceling long-running queries. This action clears the Query Editor during a query run. Be aware, the query continues to execute in the background. If it is a CTAS query it will still generate an output dataset. To cancel the run in the editor and continue composing a SQL statement, select **[!UICONTROL Cancel query]** after executing a query.   
 
-<!-- ![The Query Editor with xxx highlighted.](cancel-query-run.png) -->
+![The Query Editor with [!UICONTROL Cancel query] highlighted.](../images/ui/query-editor/cancel-query-run.png)
 
 ### Result count {#result-count}
 
