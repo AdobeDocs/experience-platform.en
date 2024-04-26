@@ -44,7 +44,7 @@ The **[!UICONTROL Expiring credentials]** section provides the following informa
 
 ### Connect to Customer Journey Analytics data within query sessions {#connect-to-customer-journey-analytics}
 
-Use the Customer Journey Analytics BI extension with Power BI or Tableau to access [data views](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) from Customer Journey Analytics with SQL. By integrating Adobe Experience Platform Query Service with the BI extension, you can access Customer Journey Analytics data views directly within Query Service sessions. This integration streamlines functionality for BI tools using Query Service as their PostgreSQL interface. It eliminates the need to duplicate data views in BI tools, ensures consistent reporting across platforms, and simplifies the integration of Customer Journey Analytics data with other sources in BI platforms.
+Use the Customer Journey Analytics BI extension with Power BI or Tableau to access your Customer Journey Analytics [data views](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) with SQL. By integrating Query Service with the BI extension, you can access your data views directly within Query Service sessions. This integration streamlines functionality for BI tools that use Query Service as their PostgreSQL interface. This functionality eliminates the need to duplicate data views in BI tools, ensures consistent reporting across platforms, and simplifies the integration of Customer Journey Analytics data with other sources in BI platforms.
 
 >[!IMPORTANT]
 >
