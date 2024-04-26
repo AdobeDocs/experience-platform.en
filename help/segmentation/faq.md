@@ -159,17 +159,41 @@ Once an audience is in the published state, you **cannot** change the original a
 
 ### How do I put an audience in the published state?
 
-For audiences created using Segment Builder or Audience Composition, you can set the audience to the published state by selecting "[!UICONTROL Publish]".
+For audiences created using Segment Builder or Audience Composition, you can set the audience to the published state by selecting "[!UICONTROL Publish]" in their respective UIs.
 
 Audiences that are externally created are automatically set to published.
 
 ### How do I put an audience in the inactive state?
 
-You can put a published audience into the inactive state by opening the quick actions menu and selecting "[!UICONTROL Deactivate]".
+You can put a published audience into the inactive state by opening the quick actions menu in Audience Portal and selecting "[!UICONTROL Deactivate]".
 
 ### How do I re-publish an audience?
 
+>[!NOTE]
+>
+>The "re-published" state is the same as the published state for audience behavior.
 
+You can re-publish an audience by selecting an audience that is in the inactive state, opening the quick actions menu on Audience Portal and selecting [!UICONTROL Publish].
+
+### How do I put an audience in the deleted state?
+
+>[!IMPORTANT]
+>
+>You can only delete audiences that are **not** used in any downstream activations. Additionally, you cannot delete an audience that is referenced in another audience. If you can't delete your audience, please ensure you are **not** using it in any downstream services or as a building block of another audience. 
+
+You can put an audience into the delete state by opening the quick actions menu in Audience Portal and selecting [!UICONTROL Delete].
+
+### Does using an audience as a child audience affect lifecycle state transitions?
+
+Yes, using an audience as a child audience does affect what lifecycle states transitions the child and parent audience can undertake.
+
+In order for a child audience to be moved to the published state, all of its parent audience **must** be in the published state. Parent audiences can either be published before publishing the child audience or, if the user confirms, can be automatically published when the child audience is published.
+
+In order for the parent audience to be moved to the inactive or deleted state, all of its child audiences **must** be deactivated or deleted. 
+
+### Can I refer to an audience that is in a different lifecycle state?
+
+Yes! If your audience is currently in the draft state, you can refer to audiences in either the published or inactive state. However, in order to publish this audience, you **must** publish the other parent audiences.
 
 ## Audience inventory
 
