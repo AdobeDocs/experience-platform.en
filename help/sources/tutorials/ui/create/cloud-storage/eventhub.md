@@ -46,6 +46,25 @@ In order to authenticate your [!DNL Event Hubs] source connector, you must provi
 | Namespace | The namespace of the [!DNL Event Hubs] you are accessing. An [!DNL Event Hubs] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
 | Event Hub name | The name for your [!DNL Event Hubs] source. |
 
+>[!TAB Event Hub Azure Active Directory Auth]
+
+| Credential | Description |
+| --- | --- |
+| Tenant ID | |
+| Client ID | |
+| Client Secret Value | |
+| Namespace | The namespace of the [!DNL Event Hubs] you are accessing. An [!DNL Event Hubs] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
+
+>[!TAB Event Hub Scoped Azure Active Directory Auth]
+
+| Credential | Description |
+| --- | --- |
+| Tenant ID | |
+| Client ID | |
+| Client Secret Value | |
+| Namespace | The namespace of the [!DNL Event Hubs] you are accessing. An [!DNL Event Hubs] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
+| Event Hub name | The name for your [!DNL Event Hubs] source. |
+
 >[!ENDTABS]
 
 For more information about these values, refer to [this Event Hubs document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
@@ -84,7 +103,7 @@ To create a new account, select **[!UICONTROL New account]**, and then provide a
 
 >[!TAB Standard authentication]
 
-To create an [!DNL Event Hubs] account with standard authentication, select **[!UICONTROL Standard authentication]** and then provide values for your [!UICONTROL SAS key name], [!UICONTROL SAS key], and [!UICONTROL Namespace].
+To create an [!DNL Event Hubs] account with standard authentication, use the [!UICONTROL Account authentication] dropdown menu and then select **[!UICONTROL Standard authentication]**. Next, provide values for your [!UICONTROL SAS key name], [!UICONTROL SAS key], and [!UICONTROL Namespace].
 
 Once you have inputted your authentication credentials, select **[!UICONTROL Connect to source]**.
 
@@ -92,11 +111,19 @@ Once you have inputted your authentication credentials, select **[!UICONTROL Con
 
 >[!TAB SAS authentication]
 
-To create an [!DNL Event Hubs] account with SAS authentication, select **[!UICONTROL SAS authentication]** and then provide values for your [!UICONTROL SAS key name], [!UICONTROL SAS key], [!UICONTROL Namespace], and [!UICONTROL Event Hubs name].
+To create an [!DNL Event Hubs] account with SAS authentication, use the [!UICONTROL Account authentication] dropdown menu and then select **[!UICONTROL SAS authentication]**. Next, provide values for your [!UICONTROL SAS key name], [!UICONTROL SAS key], [!UICONTROL Namespace], and [!UICONTROL Event Hubs name].
 
 Once you have inputted your authentication credentials, select **[!UICONTROL Connect to source]**.
 
 ![The SAS authentication interface for Azure Event Hubs.](../../../../images/tutorials/create/eventhub/sas.png)
+
+>[!TAB Event Hub Azure Active Directory Auth]
+
+To create an [!DNL Event Hubs] account with Event Hub Azure Active Directory authentication, use the [!UICONTROL Account authentication] dropdown menu and then select **[!UICONTROL Event Hub Azure Active Directory]**. Next, provide values for your [!UICONTROL Tenant ID], [!UICONTROL Client ID], [!UICONTROL Client Secret Value], and [!UICONTROL Namespace].
+
+>[!TAB Event Hub Scoped Azure Active Directory Auth]
+
+To create an [!DNL Event Hubs] account with Event Hub Scoped Azure Active Directory authentication, use the [!UICONTROL Account authentication] dropdown menu and then select **[!UICONTROL Event Hub Scoped Azure Active Directory]**. Next, provide values for your [!UICONTROL Tenant ID], [!UICONTROL Client ID], [!UICONTROL Client Secret Value], [!UICONTROL Namespace], and [!UICONTROL Event Hub Name].
 
 >[!ENDTABS]
 
