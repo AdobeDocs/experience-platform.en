@@ -27,7 +27,7 @@ To configure streaming media in the Web SDK tag extension, follow the steps belo
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
 1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
-1. Configure the **[!UICONTROL Media Collection]** settings as described in the [Web SDK tag extension configuration page](../../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#media-collection).
+1. Configure the **[!UICONTROL Streaming Media]** settings as described in the [Web SDK tag extension configuration page](../../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#media-collection).
 
 ## Configure streaming media using the Web SDK JavaScript library {#library}
 
@@ -49,8 +49,8 @@ alloy("configure", {
 
 |Property | Type | Required | Description |
 |---------|----------|---------|---------|
-| `channel` | String | Yes | The name of the channel where media collection occurs. Example: `Video channel`. |
+| `channel` | String | Yes | The name of the channel where streaming media collection occurs. Example: `Video channel`. |
 | `playerName`| String  | Yes | The name of the media player. |
 | `appVersion`| String  | No  | The version of the media player application. |
 | `mainPingInterval` | Integer | No | Frequency of pings for main content, in seconds. The default value is `10`. Values can range from `10` to `50` seconds.  If no value is specified, the default value is used when using [automatically-tracked sessions](../createmediasession.md#automatic).|
-| `adPingInterval`| Integer | No | Frequency of pings for ad content, in seconds. The default value is `10`. Values can range from `1` to `10` seconds. If no value is specified, the default value is used when using [automatically-tracked sessions](../createmediasession.md#automatic) |
+| `adPingInterval`| Integer | No | Frequency of pings for ad content, in seconds. The default value is `10`. Values can range from `1` to `10` seconds. If no value is specified, the default value is used when using [automatically-tracked sessions](../createmediasession.md#automatic). |

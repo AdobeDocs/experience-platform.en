@@ -122,9 +122,9 @@ The collected data can include information about media playbacks, pauses, comple
 
 * **[!UICONTROL Channel]**: The name of the channel where media collection occurs. Example: `Video channel`.
 * **[!UICONTROL Player Name]**: The name of the media player.
-* **[!UICONTROL Application Version]**: The version of the Web SDK used for media collection.
-* **[!UICONTROL Main ping interval]**: Frequency of pings for main content. The default value is `10`. Values can range from `10` to `50`.  If no value is specified, the default value is used in automatic mode.
-* **[!UICONTROL Ad ping interval]**: Frequency of pings for ad content. The default value is `10`. Values can range from `1` to `10`. If no value is specified, the default value is used in automatic mode.
+* **[!UICONTROL Application Version]**: The version of the media player application.
+* **[!UICONTROL Main ping interval]**: Frequency of pings for main content, in seconds. The default value is `10`. Values can range from `10` to `50` seconds.  If no value is specified, the default value is used when using [automatically-tracked sessions](../../../../web-sdk/commands/createmediasession.md#automatic).
+* **[!UICONTROL Ad ping interval]**: Frequency of pings for ad content, in seconds. The default value is `10`. Values can range from `1` to `10` seconds. If no value is specified, the default value is used when using [automatically-tracked sessions](../../../../web-sdk/commands/createmediasession.md#automatic)
 
 ## Configure datastream overrides {#datastream-overrides}
 

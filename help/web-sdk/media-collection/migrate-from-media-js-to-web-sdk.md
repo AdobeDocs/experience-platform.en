@@ -1,0 +1,121 @@
+---
+title: Migrate your Analytics for Streaming Media implementation from Media JS to Web SDK
+description: Learn how to migrate your Analytics for Streaming Media implementation from Media JS to Web SDK.
+---
+
+# Migrate your Analytics for Streaming Media implementation from Media JS to Web SDK
+
+
+Starting with Web SDK version 2.20.0, includes support for a feature known as Media Collection. 
+This feature is designed to gather data related to media usage on your website. The collected data can include 
+information about media playbacks, pauses, completions, and other related events. Once collected, this data is then 
+sent to Adobe Experience Platform and/or Adobe Analytics to generate reports. 
+
+For customers who are using the Media JS SDK, Web SDK provides a migration path to move from Media JS SDK to Web SDK.
+Since the Media JS SDK provides an API to handle media events, the Web SDK provides a similar API to handle media events.
+The Web SDK provides a command to retrieve a Media Analytics Tracker. This command can be used to create an object instance and then using the same APIs as the ones provided by the [Media JS library](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html) track media events.
+
+## Migration steps
+To migrate from Media JS SDK to Web SDK, follow these steps:
+1. Instead of this:
+```javascript
+var mediaConfig = new ADB.MediaConfig();
+mediaConfig.trackingServer = "company.hb-api.omtrdc.net";
+mediaConfig.playerName = "player_name";
+mediaConfig.channel = "sample_channel";
+mediaConfig.appVersion = "app_version";
+mediaConfig.debugLogging = true;
+mediaConfig.ssl = true;
+
+ADB.Media.configure(mediaConfig, appMeasurement);
+```
+
+You'll configure the Media Collection component in the Web SDK like this:
+```javascript
+alloy("configure", {
+  mediaCollection: {
+    channel: "sample_channel",
+    playerName: "player_name",
+    appVersion: "app_version",
+    mainPingInterval: 10,
+    adPingInterval: 10
+  }
+});
+```
+2. Instead of this:
+```javascript
+var tracker = ADB.Media.getInstance();
+```
+
+Use the Web SDK command to get the tracker instance:
+```javascript
+// aquire Media Analytics APIs
+const Media = await window.alloy("getMediaAnalyticsTracker", {});
+// create a media tracker instance
+const trackerInstance = Media.getInstance();
+```
+
+3. Then all the helper methods will be available on the Media object but the tracker methods on the tracker instance, as bellow:
+```javascript
+const mediaInfo = Media.createMediaObject(
+  "video name",
+  "player video",
+  60,
+  Media.StreamType.VOD,
+  Media.MediaType.Video
+);
+
+const contextData = {
+  isUserLoggedIn: "false",
+  tvStation: "Sample TV station",
+  programmer: "Sample programmer",
+  assetID: "/uri-reference"
+};
+
+// Set standard Video Metadata
+contextData[Media.VideoMetadataKeys.Episode] = "Sample Episode";
+contextData[Media.VideoMetadataKeys.Show] = "Sample Show";
+
+trackerInstance.trackSessionStart(mediaInfo, contextData);
+```
+
+## `getMediaAnalyticsTracker`
+
+The `getMediaAnalyticsTracker` command returns the Legacy Media Analytics API.
+
+
+| Method name|Description| Syntax |
+|-----------------|---|----------------|
+| `getInstance` | Creates an instance of media to track the playback session. | `Media.getInstance()`|
+|`createMediaObject` | Creates an object containing media information. Returns empty object if invalid parameters are passed. | `Media.createMediaObject(name, id, length, streamType, mediaType)` |
+|`createAdBreakObject` | Creates an object containing adbreak information. Returns empty object if invalid parameters are passed.| `Media.createAdBreakObject(name, position, startTime)`|
+|`createAdObject`  | Creates an object containing ad information. Returns empty object if invalid parameters are passed. | `Media.createAdObject(name, id, position, length)`|
+|`createChapterObject` | Creates an object containing chapter information. Returns empty object if invalid parameters are passed. | `Media.createChapterObject(name, position, length, startTime)`|
+|`createStateObject` | Creates an object containing state information. Returns empty object if invalid parameters are passed. | `Media.createStateObject(name)`|
+|`createQoEObject` | Creates an object containing QoE information. Returns empty object if invalid parameters are passed.| `Media.createQoEObject(bitrate, startupTime, fps, droppedFrames)`|
+
+## Instance Methods
+
+| Method name|Description|Syntax|
+|---|---|----|
+|`trackSessionStart` | Track the intention to start playback. This starts a tracking session on the media tracker instance. | `trackerInstance.trackSessionStart(mediaInfo, contextData)`|
+|`trackPlay` | Track media play or resume after a previous pause. | `trackerInstance.trackPlay()`|
+|`trackPause` | Track media pause. | `trackerInstance.trackPause()`|
+|`trackComplete` | Track media complete. Call this method only when the media has been completely viewed.| `trackerInstance.trackComplete()` |
+| `trackSessionEnd` | Track the end of a viewing session. Call this method even if the user does not view the media to completion. | `trackerInstance.trackSessionEnd()`|
+| `trackError` | Track an error that occurred during media playback. | `trackerInstance.trackError("errorId")`|
+| `trackEvent` | Track a custom event. | `trackerInstance.trackEvent(event, info, contextData)`|
+|`updatePlayhead` | Update the playhead position. | `trackerInstance.updatePlayhead(playhead)`|
+|`updateQoEObject` | Update the quality of experience. |`trackerInstance.updateQoEObject(qoe)`|
+
+## Constants
+
+| Constant name|Description| Value |
+|-----------------|--|-----------------|
+|`MediaType`| Media type | `Video`, `Audio` |
+|`StreamType` | Stream type | `VOD`, `Live`, `Linear`, `Podcast`, `Audiobook`, `AOD` |
+|`VideoMetadataKeys` | This defines the standard metadata keys for video streams | `Show`, `Season`, `Episode`, `AssetId`, `Genre`, `FirstAirDate`, `FirstDigitalDate`, `Rating`, `Originator`, `Network`, `ShowType`, `AdLoad`, `MVPD`, `Authorized`, `DayPart`, `Feed`, `StreamFormat` |
+|`AudioMetadataKeys` | This defines the standard metadata keys for audio streams. | `Artist`, `Album`, `Label`, `Author`, `Station`, `Publisher` |
+| `AdMetadataKeys` |  This defines the standard metadata keys for ads. | `Advertiser`, `CampaignId`, `CreativeId`, `PlacementId`, `SiteId`, `CreativeUrl` |
+| `Event` | This defines the type of a tracking event.| `AdBreakStart`, `AdBreakComplete`, `AdStart`, `AdComplete`, `AdSkip`, `ChapterStart`, `ChapterComplete`, `ChapterSkip`, `SeekStart`, `SeekComplete`, `BufferStart`, `BufferComplete`, `BitrateChange`, `StateStart`, `StateEnd` |
+| `PlayerState` | This defines standard values for tracking player state. | `FullScreen`, `ClosedCaption`, `Mute`, `PictureInPicture`, `InFocus` |

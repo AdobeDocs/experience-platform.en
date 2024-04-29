@@ -5,7 +5,7 @@ description: Learn how to use the sendMediaEvent command to track media sessions
 
 # `sendMediaEvent`
 
-The `sendMediaEvent` command is part of the Web SDK `mediaCollection` component. You can use this component to collect data related to media sessions on your website. See the `mediaCollection` [documentation](configure/mediacollection.md) to learn how to configure this component.
+The `sendMediaEvent` command is part of the Web SDK `streamingMedia` component. You can use this component to collect data related to media sessions on your website. See the `streamingMedia` [documentation](configure/streamingMedia.md) to learn how to configure this component.
 
 Use the `sendMediaEvent` command to track media playbacks, pauses, completions, player state updates, and other related events.
 

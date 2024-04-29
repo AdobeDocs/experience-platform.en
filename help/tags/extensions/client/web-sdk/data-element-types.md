@@ -52,11 +52,11 @@ Another way to create XDM objects is using the **[!UICONTROL Variable]** data el
 
 Once you've created this data element you can use [Update variable](./action-types.md#update-variable) actions to modify the data element. Then within send event actions use use the variable data element for the XDM option.
 
-## Media: Quality of Experience data {#qoeDetailsData}
-A Quality of Experience data element is helpful when sending streaming media events to Adobe Experience Platform because it can be added when creating a media session and the following media events will contain updated Quality of Experience data.
+## Media: Quality of Experience data {#quality-experience-data}
+
+A **[!UICONTROL Quality of Experience]** data element is helpful when sending streaming media events to Adobe Experience Platform. You can add this element when creating a media session and the following media events will contain updated Quality of Experience data.
+
 ![UI image showing the Create Quality of Experience Data Element screen.](assets/qoe-data-element.png)
-
-
 
 ## Next steps {#next-steps}
 
