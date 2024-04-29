@@ -57,9 +57,9 @@ Toggle the relevant checkboxes to remove or add a table column. Next, select **[
 
 ## Manage scheduled queries with inline actions {#inline-actions}
 
-The [!UICONTROL Scheduled Queries] view offers various inline actions to manage all of your scheduled queries from one location. Inline actions are indicated in each row with ellipsis. Select the ellipsis of a scheduled query that you want to manage to see the available options in a pop-up menu. The available options include [[!UICONTROL Disable schedule]](#disable) or [!UICONTROL Enable schedule], [[!UICONTROL Delete schedule]](#delete), and [[!UICONTROL Subscribe]](#alert-subscription) to query alerts.
+The [!UICONTROL Scheduled Queries] view offers various inline actions to manage all of your scheduled queries from one location. Inline actions are indicated in each row with ellipsis. Select the ellipsis of a scheduled query that you want to manage to see the available options in a pop-up menu. The available options include [[!UICONTROL Disable schedule]](#disable) or [!UICONTROL Enable schedule], [[!UICONTROL Delete schedule]](#delete), [[!UICONTROL Subscribe]](#alert-subscription) to query alerts, and [Enable or [!UICONTROL Disable quarantine]](#quarantined-queries).
 
-![The Scheduled Queries tab with the inline action ellipses and popup menu highlighted.](../images/ui/monitor-queries/disable-inline.png)
+![The Scheduled Queries tab with the inline action ellipses and popup menu highlighted.](../images/ui/monitor-queries/inline-actions.png)
 
 ### Disable or enable a scheduled query {#disable}
 
@@ -89,6 +89,10 @@ The [!UICONTROL Alerts] dialog opens. The [!UICONTROL Alerts] dialog subscribes 
 
 ![The alert subscriptions dialog.](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
+>[!NOTE]
+>
+>To be notified of query runs becoming quarantined, you must first enroll the scheduled query runs in the [quarantine feature](#quarantined-queries).
+
 See the [alert subscriptions API documentation](../api/alert-subscriptions.md) for more information.
 
 ### View the query details {#query-details}
@@ -109,21 +113,15 @@ You can filter queries based on run frequency. From the [!UICONTROL Scheduled Qu
 
 ![The scheduled queries tab with the filter icon highlighted.](../images/ui/monitor-queries/filter-queries.png)
 
-Filter the list of queries based on a variety of options. 
-
 To filter the list of queries based on their run frequency, select either the **[!UICONTROL Scheduled]** or **[!UICONTROL Run once]** filter checkboxes.
 
 >[!NOTE]
 >
 >Any query that has been executed but not scheduled qualifies as [!UICONTROL Run once].
 
-<!-- Need to update image to include statuses - ned access to latest build first. -->
-
 ![The scheduled queries tab with the filter sidebar highlighted.](../images/ui/monitor-queries/filter-sidebar.png)
 
 Once you have enabled your filter criteria, select **[!UICONTROL Hide Filters]** to close the filter panel.
-
-<!-- ... more info on FIlters for AEP 24.2 release. -->
 
 ## Query runs schedule details {#query-runs}
 

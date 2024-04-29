@@ -93,9 +93,13 @@ To access the [!UICONTROL Schedules] tab of your chosen query, you must select t
 
 Select a schedule from the rows of available schedules. You can use the toggle to disable or enable the scheduled query.
 
-### Enable quarantined queries
+### Enable quarantined queries {#query-quarantine}
 
 Scheduled queries that fail ten consecutive runs are put in a [!UICONTROL Quarantined] status. A query with this status requires your intervention before any further executions can take place. If you chose to enable a quarantined query, a confirmation dialog will remind you to review the query template.
+
+<!-- 
+The business value of the quarantine feature lies in its ability to automatically identify and isolate queries that repeatedly fail, safeguarding system resources and preventing potential disruptions. Quarantining queries after ten consecutive failures ensures that users can intervene, review, and rectify issues before allowing further executions, thus maintaining data integrity and operational efficiency.
+ -->
 
 ![The Queries Schedules workspace with the activation toggle and the [!UICONTROL Enable schedule] dialog highlighted.]()
 
