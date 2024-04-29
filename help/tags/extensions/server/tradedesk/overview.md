@@ -5,17 +5,17 @@ last-substantial-update: 2024-03-19
 ---
 # [!DNL The Trade Desk Real-Time Conversions API] extension overview
 
-The [[!DNL Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) allows you to send events to [!DNL The Trade Desk] in order to leverage retargeting and attribution.
+[[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) allows you to send events to [!DNL The Trade Desk] in order to leverage retargeting and attribution.
 
-You can use the [!DNL Trade Desk Real-Time Conversions API] extension to send data from the Adobe Experience Platform Edge Network to [!DNL The Trade Desk] by utilizing the API's capabilities in your [event forwarding](../../../ui/event-forwarding/overview.md) rules. 
+You can use the [!DNL The Trade Desk Real-Time Conversions API] extension to send data from the Adobe Experience Platform Edge Network to [!DNL The Trade Desk] by utilizing the API's capabilities in your [event forwarding](../../../ui/event-forwarding/overview.md) rules. 
 
-Using the [!DNL Trade Desk Real-Time Conversions API] extension, you can leverage the API's capabilities in your [event forwarding](../../../ui/event-forwarding/overview.md) rules to send data to [!DNL The Trade Desk] from the Adobe Experience Platform Edge Network. 
+Using [!DNL The Trade Desk Real-Time Conversions API] extension, you can leverage the API's capabilities in your [event forwarding](../../../ui/event-forwarding/overview.md) rules to send data to [!DNL The Trade Desk] from the Adobe Experience Platform Edge Network. 
 
 This document covers how to install the extension and use its capabilities in an event forwarding [rule](../../../ui/managing-resources/rules.md).
 
 ## Prerequisites {#prerequisites}
 
-You must have a relevant Advertiser ID, UPixel ID, and Tracker ID are required from within your [!DNL The Trade Desk] account in order to configure the [!DNL The Trade Desk] Real-Time Conversions API.
+You must have a relevant Advertiser ID, UPixel ID, and Tracker ID are required from within your [!DNL The Trade Desk] account in order to configure the [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi).
 
 >[!INFO]
 >
@@ -74,8 +74,7 @@ The configuration options are divided into three main sections as outlined below
 
 ![The [!DNL Basic Request Properties] section showing example data input into the fields.](../../../images/extensions/server/tradedesk/configure-extension-basic-request-properties.png)
 
-Refer to the [!DNL The Trade Desk] developer documentation for more information on the [request properties](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties) accepted by the 
-[!DNL The Trade Desk] Real-Time Conversions API. 
+Refer to the [!DNL The Trade Desk] developer documentation for more information on the [request properties](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties) accepted by [!DNL The Trade Desk] Real-Time Conversions API. 
 
 **[!UICONTROL Object Request Parameters]**
 
@@ -102,7 +101,7 @@ When you are satisfied with the rule, select **[!UICONTROL Save to Library]**. F
 
 ## Next steps
 
-This guide covered how to send server-side event data to [!DNL The Trade Desk] using the [!DNL The Trade Desk] Real-Time Conversions API extension. From here, it is recommended to expand your integration by creating distinct rules that send specific conversion events as applicable. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], read the [event forwarding overview](../../../ui/event-forwarding/overview.md).
+This guide covered how to send server-side event data to [!DNL The Trade Desk] using the [!DNL The Trade Desk] Real-Time Conversions API extension. From here, it is recommended to expand your integration by creating distinct rules that send specific conversion events as applicable per campaign. For more information on event forwarding capabilities in [!DNL Adobe Experience Platform], read the [event forwarding overview](../../../ui/event-forwarding/overview.md).
 
 See the [!DNL The Trade Desk] documentation on [best practices for the [!DNL The Trade Desk] Real-Time Conversions API](https://www.facebook.com/business/help/308855623839366?id=818859032317965) for more guidance on how to effectively implement your integration.
 
