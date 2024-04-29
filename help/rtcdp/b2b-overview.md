@@ -80,6 +80,6 @@ To understand how Real-Time CDP B2B Edition can benefit your business-to-busines
 * [How to ingest data](./sources/b2b.md)
 * [How to access profiles](./profile/profile-overview.md)
 * [Schemas in Real-Time Customer Data Platform B2B Edition](./schemas/b2b.md)
-* [How to build segments](./segmentation/b2b.md)
-* [How to activate segments to destinations](./destinations/b2b.md)
+* [How to build audiences](./segmentation/b2b.md)
+* [How to activate audiences to destinations](./destinations/b2b.md)
 * [How to define and enforce data governance policies](./privacy/data-governance-overview.md)

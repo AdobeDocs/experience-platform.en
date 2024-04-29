@@ -175,6 +175,7 @@ Experience Platform provides support for ingesting data from a third-party payme
 
 - [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Square]](connectors/payments/square.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE Batch]{type=Informative}
 
 ### Streaming {#streaming}
 

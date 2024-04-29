@@ -5,11 +5,11 @@ exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
 ---
 # Personalization overview
 
-With the [!DNL Server API], you can retrieve personalized content from Adobe personalization solutions, including [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) and [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html).
+With the [!DNL Server API], you can retrieve personalized content from Adobe personalization solutions, including [Adobe Target](https://business.adobe.com/products/target/adobe-target.html), [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home), and [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html).
 
 Additionally, the [!DNL Server API] powers same-page and next-page personalization capabilities through Adobe Experience Platform personalization destinations, such as [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) and the [custom personalization connection](../destinations/catalog/personalization/custom-personalization.md). To learn how to configure Experience Platform for same-page and next-page personalization, see the [dedicated guide](../destinations/ui/activate-edge-personalization-destinations.md).
 
-When using the Server API, you must integrate the response provided by the personalization engine with the logic used to render content on your site. Unlike the [Web SDK](../web-sdk/home.md), the [!DNL Server API] does not have a mechanism to automatically apply content returned by [!DNL Adobe Target] and [!DNL Offer Decisioning].
+When using the Server API, you must integrate the response provided by the personalization engine with the logic used to render content on your site. Unlike the [Web SDK](../web-sdk/home.md), the [!DNL Server API] does not have a mechanism to automatically apply content returned by Adobe personalization solutions.
 
 ## Terminology {#terminology}
 
@@ -28,24 +28,30 @@ Retrieving personalized content requires an explicit request query object for a 
 
 ```json
 {
-   "query":{
-      "personalization":{
-         "schemas":[
-            "https://ns.adobe.com/personalization/html-content-item",
-            "https://ns.adobe.com/personalization/json-content-item",
-            "https://ns.adobe.com/personalization/redirect-item",
-            "https://ns.adobe.com/personalization/dom-action"
-         ],
-         "decisionScopes":[
-            "alloyStore",
-            "siteWide",
-            "__view__",
-            "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ"
-         ]
-      }
-   }
+  "query": {
+    "personalization": {
+      "schemas": [
+        "https://ns.adobe.com/personalization/html-content-item",
+        "https://ns.adobe.com/personalization/json-content-item",
+        "https://ns.adobe.com/personalization/redirect-item",
+        "https://ns.adobe.com/personalization/dom-action"
+      ],
+      "decisionScopes": [
+        "alloyStore",
+        "siteWide",
+        "__view__",
+        "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ"
+      ],
+      "surfaces": [
+        "web://mywebpage.html/",
+        "web://mywebpage.html/#sample-json-content"
+      ]
+    }
+  }
 }
 ```
+
+
 
 | Attribute | Type |Required / Optional| Description |
 | --- | --- | --- | ---|
