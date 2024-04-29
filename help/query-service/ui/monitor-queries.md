@@ -109,7 +109,7 @@ To enable a scheduled query for the quarantine feature, select the ellipses (`..
 
 ![The scheduled queries tab with the ellipses and Enable quarantine highlighted from the inline actions dropdown menu.](../images/ui/monitor-queries/inline-enable.png)
 
-queries can also be enrolled in the quarantine feature during the schedule creation process. See the [query schedules documentation](./query-schedules.md#quarantine) for more information.
+Queries can also be enrolled in the quarantine feature during the schedule creation process. See the [query schedules documentation](./query-schedules.md#quarantine) for more information.
 
 ## Filter queries {#filter}
 

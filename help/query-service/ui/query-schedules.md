@@ -75,9 +75,7 @@ The **[!UICONTROL Select output dataset]** dialog appears. Next, either browse t
 
 ### Quarantine queries if they continuously fail {#quarantine}
 
-When creating a schedule, you can enroll your query in the quarantine feature. The quarantine feature automatically identifies and isolates queries that repeatedly fail to safeguard system resources and prevent potential disruptions. By quarantining queries after ten consecutive failures, you can intervene, review, and rectify issues before allowing further executions. This feature helps maintain your operational efficiency and data integrity.
-
-<!-- If you enroll scheduled queries in the quarantine feature, scheduled queries that fail ten consecutive runs are put into a [!UICONTROL Quarantined] status. A query with this status is stopped from continuing to execute at its scheduled cadence and requires your intervention before any further executions can take place.  -->
+When creating a schedule, you can enroll your query in the quarantine feature to safeguard system resources and prevent potential disruptions. The quarantine feature automatically identifies and isolates queries that repeatedly fail by placing them in a [!UICONTROL Quarantined] state. By quarantining queries after ten consecutive failures, you can intervene, review, and rectify issues before allowing further executions. This helps to maintain your operational efficiency and data integrity.
 
 ![The Queries Schedules workspace with [!UICONTROL Query Quarantine] highlighted and Yes selected.](../images/ui/query-schedules/quarantine-enroll.png)
 
