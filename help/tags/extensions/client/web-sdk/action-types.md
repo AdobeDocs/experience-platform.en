@@ -43,6 +43,27 @@ The XDM schema that is used for the editor is the schema that is selected on the
 
 There are some differences between the editor in the update variable action versus the editor in the XDM object data element. First, the update variable action has a root level item labeled "xdm." If you click on this item, you can specify a data element to use to set the entire object. Second, the update variable action has checkboxes to clear the data from the xdm object. Click on one of the properties on the left, and then check the checkbox on the right to clear the value. This will clear out the current value before setting any values on the variable.
 
+## Send media event {#send-media-event}
+
+Use this action to send a media event to Adobe Experience Platform and/or Adobe Analytics. This action is useful when you are tracking media events on your website. The action requires a playerId to identify a media session, and a media event type to identify the type of media event that is being sent. The action also requires a Quality of Experience and playhead data element to be used to start a media session.
+
+![](assets/send-media-event.png)
+
+There are a few other fields in the Send media event action type that could also be useful depending on the media event you are tracking:
+- **Instance**
+- **Media Event Type** Media Event type that is being tracked.
+- **Player ID** This is the media session unique identifier.
+- **Playhead** This is the current position of the media playback in seconds.
+- **Media session details** When sending a media start event, the required media session details should be specified.
+- **Chapter details** In this section you can specify the chapter details when sending a chapter start media event.
+- **Advertising details** When sending an AdBreakStart event the required advertising details should be specified.
+- **Advertising pod details** Details about the advertising pod when sending an AdStart event.
+- **Error details** Details about the playback error that is tracked.
+- **State Update Details** The player state that is being updated.
+- **Custom Metadata** The custom metadata about the media event that is being tracked.
+- **Quality of Experience** The media quality of experience data that is being tracked.
+
+
 ## Next steps {#next-steps}
 
 After reading this article, you should have a better understanding of how to configure your actions. Next, read about how to [configure your data element types](data-element-types.md).
