@@ -352,7 +352,7 @@ To set a field as conditional, use the `conditional` parameter as shown below:
 }
 ```
 
-In a wider context, you can see the `conditional` field being used in the destination configuration below, alongside the `fileType` string and the `csvOptions` object in which it is defined. The conditional fields are defined in the properties parameter.
+In a wider context, you can see the `conditional` field being used in the destination configuration below, alongside the `fileType` string and the `csvOptions` object in which it is defined. The conditional fields are defined in the `properties` parameter.
 
 >[!TIP]
 >
