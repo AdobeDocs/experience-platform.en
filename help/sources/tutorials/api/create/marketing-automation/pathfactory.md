@@ -4,7 +4,8 @@ description: Learn how to authenticate your PathFactory account against Experien
 last-substantial-update: 2024-04-30
 hide: true
 hidefromtoc: true
-badge: Beta 
+badge: Beta
+exl-id: 2bdfe38b-d3f7-480f-87c6-0b98b9521be2
 ---
 # Create a [!DNL PathFactory] base connection using the [!DNL Flow Service] API
 

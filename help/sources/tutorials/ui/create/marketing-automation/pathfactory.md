@@ -4,7 +4,8 @@ description: Learn how to connect your PathFactory account to Experience Platfor
 last-substantial-update: 2024-04-30
 hide: true
 hidefromtoc: true
-badge: Beta 
+badge: Beta
+exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
 ---
 # Connect your [!DNL PathFactory] account to Experience Platform through the UI
 
