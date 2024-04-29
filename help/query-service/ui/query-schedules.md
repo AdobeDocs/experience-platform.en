@@ -53,13 +53,37 @@ You can choose the following options for **[!UICONTROL Frequency]**:
 - **[!UICONTROL Monthly]**: The selected query will run every month at the day, time, and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
 - **[!UICONTROL Yearly]**: The selected query will run every year at the day, month, time, and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
 
-For the output dataset, you have the option to use either append into an existing dataset or create and append into a new dataset. The second option means that if you execute a query for the first time and create a data set, any subsequent executions will keep inserting data into that data set.
+### Provide dataset details {#dataset-details}
+
+Manage the query results by either appending the data to an existing dataset or creating a new dataset and appending the data to it. 
+
+Select **[!UICONTROL Create and append into new dataset]** to create a data set when you execute a query for the first time. Subsequent executions continue to insert data into that data set. Lastly, provide a name and description for the dataset. 
 
 >[!IMPORTANT]
 >
 > Since you are using either an existing or creating a new dataset, you do **not** need to include either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of the query, since the datasets are already set. Including either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of your scheduled queries will result in an error.
 
-If you do not have access to parameterized queries, continue on to the [delete or disable a schedule](#delete-schedule) section.
+![The Schedule details panel with Dataset details and the Create and append into new dataset options highlighted.](../images/ui/query-schedules/dataset-details-create-and-append.png)
+
+Alternatively, select [Append into existing dataset] followed by the dataset icon (![The dataset icon.](../images/ui/query-schedules/dataset-icon.png)).
+
+![The Schedule details panel with Dataset details and Append into existing dataset highlighted.](../images/ui/query-schedules/dataset-details-existing.png)
+
+The **[!UICONTROL Select output dataset]** dialog appears. Next, either browse the existing datasets or use the search field to filter the options. Select the row of the dataset that you wish to use. The dataset details are displayed in the panel on the right. Select **[!UICONTROL Done]** to confirm your choice.
+
+![The Select output dataset dialog with the search field, a dataset row, and Done highlighted.](../images/ui/query-schedules/select-output-dataset-dialog.png)
+
+### Quarantine queries if they continuously fail {#quarantine}
+
+When creating a schedule, you can enroll your query in the quarantine feature. The quarantine feature automatically identifies and isolates queries that repeatedly fail to safeguard system resources and prevent potential disruptions. By quarantining queries after ten consecutive failures, you can intervene, review, and rectify issues before allowing further executions. This feature helps maintain your operational efficiency and data integrity.
+
+<!-- If you enroll scheduled queries in the quarantine feature, scheduled queries that fail ten consecutive runs are put into a [!UICONTROL Quarantined] status. A query with this status is stopped from continuing to execute at its scheduled cadence and requires your intervention before any further executions can take place.  -->
+
+![The Queries Schedules workspace with [!UICONTROL Query Quarantine] highlighted and Yes selected.](../images/ui/query-schedules/quarantine-enroll.png)
+
+Once a query is enrolled for the quarantine feature, you can subscribe to alerts for this query status change. If a scheduled query is not enrolled in quarantine, it does not appear as an option on [the Alerts dialog](./monitor-queries.md#alert-subscription).
+
+You can also enroll a scheduled query into the quarantine feature from the inline actions of the [!UICONTROL Scheduled Queries] tab. See the [monitor queries documentation](./monitor-queries.md#alert-subscription) for more details.
 
 ### Set alerts for a scheduled query status {#alerts-for-query-status}
 
@@ -73,7 +97,7 @@ For an overview of alerts in Adobe Experience Platform, including the structure 
 
 >[!IMPORTANT]
 >
->The parameterized query UI feature is currently available in a **limited release only** and is not available to all customers.
+>The parameterized query UI feature is currently available in a **limited release only** and is not available to all customers. If you do not have access to parameterized queries, continue on to the [delete or disable a schedule](#delete-schedule) section.
 
 If you are creating a scheduled query for a parameterized query, you must now set the parameter values for these query runs.
 
@@ -108,16 +132,6 @@ You can enable, disable, or delete a schedule from the schedules workspace of a 
 To access the [!UICONTROL Schedules] tab of your chosen query, you must select the name of a query template from either the [!UICONTROL Templates] tab or the [!UICONTROL Scheduled Queries] tab. This navigates to the Query Editor for that query. Form the Query Editor, select **[!UICONTROL Schedules]** to access the schedules workspace. 
 
 Select a schedule from the rows of available schedules to populate the details panel. Use the toggle to disable (or enable) the scheduled query.
-
-### Enable quarantined queries {#query-quarantine}
-
-Scheduled queries that fail ten consecutive runs are put in a [!UICONTROL Quarantined] status. A query with this status requires your intervention before any further executions can take place. If you chose to enable a quarantined query, a confirmation dialog will remind you to review the query template.
-
-<!-- 
-The business value of the quarantine feature lies in its ability to automatically identify and isolate queries that repeatedly fail, safeguarding system resources and preventing potential disruptions. Quarantining queries after ten consecutive failures ensures that users can intervene, review, and rectify issues before allowing further executions, thus maintaining data integrity and operational efficiency.
- -->
-
-![The Queries Schedules workspace with the activation toggle and the [!UICONTROL Enable schedule] dialog highlighted.]()
 
 ### Delete disabled queries
 

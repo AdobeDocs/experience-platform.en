@@ -103,9 +103,13 @@ Select the information icon (![An information icon.](../images/ui/monitor-querie
 
 ### Quarantined queries {#quarantined-queries}
 
-Any query that fails ten consecutive scheduled query runs is automatically placed in quarantine and made inactive. 
+When enrolled in the quarantine feature, any scheduled query that fail ten consecutive runs is automatically put into a [!UICONTROL Quarantined] status. A query with this status becomes inactive and does not execute at its scheduled cadence. It then requires your intervention before any further executions can take place. This safeguards system resources as you must review and correct the issues with your SQL before further executions occur.
 
-<!-- ... more description -->
+To enable a scheduled query for the quarantine feature, select the ellipses (`...`) followed by [!UICONTROL Enable quarantine] from the dropdown menu that appears.
+
+![The scheduled queries tab with the ellipses and Enable quarantine highlighted from the inline actions dropdown menu.](../images/ui/monitor-queries/inline-enable.png)
+
+queries can also be enrolled in the quarantine feature during the schedule creation process. See the [query schedules documentation](./query-schedules.md#quarantine) for more information.
 
 ## Filter queries {#filter}
 
