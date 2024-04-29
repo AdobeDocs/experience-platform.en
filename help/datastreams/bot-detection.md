@@ -1,8 +1,6 @@
 ---
 title: Configure bot detection for datastreams
 description: Learn how to configure bot detection for datastreams, to differentiate human and nonhuman traffic.
-hide: yes
-hidefromtoc: yes
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
 ---
 # Configure bot detection for datastreams
