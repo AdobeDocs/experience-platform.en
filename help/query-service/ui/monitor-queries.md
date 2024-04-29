@@ -26,12 +26,12 @@ The table below describes each available column.
 | **[!UICONTROL Name]** | The name field is either the template name or the first few characters of your SQL query. Any query created through the UI with the Query Editor is named at inception. If the query was created through the API, then its name becomes a snippet of the initial SQL used to create the query. To see a list of all runs associated with the query, select an item from the [!UICONTROL Name] column. For more information, see the [query runs schedule details](#query-runs) section. |
 | **[!UICONTROL Template]** | The template name of the query. Select a template name to navigate to the Query Editor. The query template is displayed in the Query Editor for convenience. If there is no template name, the row is marked with a hyphen and there is no ability to redirect to the Query Editor to view the query. |
 | **[!UICONTROL SQL]** | A snippet of the SQL query.  |
-| **[!UICONTROL Run frequency]** | The cadence at which your query is set to run. The available values are `Run once` and `Scheduled`. Queries can be filtered according to their run frequency. |
+| **[!UICONTROL Run frequency]** | The cadence at which your query is set to run. The available values are `Run once` and `Scheduled`. |
 | **[!UICONTROL Created by]** | The name of the user who created the query. |
 | **[!UICONTROL Created]** | The timestamp when the query was created, in UTC format.  |
 | **[!UICONTROL Last run timestamp]** | The most recent timestamp when the query was run. This column highlights whether a query has been executed according to its current schedule.  |
 | **[!UICONTROL Last run status]** | The status of the most recent query execution. The status values are: `Success`, `Failed`, `In progress`, and `No runs`. |
-| **[!UICONTROL Schedule Status]** | The current status of the scheduled query. There are six potential values, [!UICONTROL Registering], [!UICONTROL Active], [!UICONTROL Inactive], [!UICONTROL Deleted], a hyphen, and [!UICONTROL Quarantined]. <ul><li>The hyphen indicates the scheduled query is a one-time, non-recurring query.</li><li>The **[!UICONTROL Registering]** status indicates that the system is still processing the creation of the new schedule for the query. Note, you cannot disable or delete a scheduled query while it is registering.</li><li>The **[!UICONTROL Active]** status indicates that the scheduled query has **not yet passed** its completion date and time.</li><li>The **[!UICONTROL Inactive]** status indicates that the scheduled query has **passed** its completion date and time.</li><li>The **[!UICONTROL Deleted]** status indicates that the query schedule has been deleted.</li><li>The **[!UICONTROL Quarantined]** status indicates that the query has failed ten consecutive runs and requires your intervention before any further executions can take place.</li></ul> |
+| **[!UICONTROL Schedule Status]** | The current status of the scheduled query. There are six potential values, [!UICONTROL Registering], [!UICONTROL Active], [!UICONTROL Inactive], [!UICONTROL Deleted], a hyphen, and [!UICONTROL Quarantined]. <ul><li>The hyphen indicates the scheduled query is a one-time, non-recurring query.</li><li>The **[!UICONTROL Registering]** status indicates that the system is still processing the creation of the new schedule for the query. Note, you cannot disable or delete a scheduled query while it is registering.</li><li>The **[!UICONTROL Active]** status indicates that the scheduled query has **not yet passed** its completion date and time.</li><li>The **[!UICONTROL Inactive]** status indicates that the scheduled query has **passed** its completion date and time or has been marked by a user to be in a inactive state.</li><li>The **[!UICONTROL Deleted]** status indicates that the query schedule has been deleted.</li><li>The **[!UICONTROL Quarantined]** status indicates that the query has failed ten consecutive runs and requires your intervention before any further executions can take place.</li></ul> |
 
 >[!TIP]
 >
@@ -69,7 +69,7 @@ Once a scheduled query is disabled, you can enable the schedule through the same
 
 >[!NOTE]
 >
->If a query has been Quarantined, you are recommended to review the template's SQL before you enable its schedule. This prevents a waste of compute hours if the template is defective.
+>If a query has been Quarantined, you are recommended to review the template's SQL before you enable its schedule. This prevents a waste of compute hours if the template query still has issues.
 
 ### Delete a scheduled query {#delete}
 
