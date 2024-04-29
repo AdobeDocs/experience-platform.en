@@ -22,8 +22,8 @@ Read this document to learn how to use the monitoring dashboard to monitor the j
 
 This document requires a working understanding of the following components of Experience Platform:
 
-* [Dataflows](../../../dataflows/home.md): Dataflows are representations of data jobs that move data across Experience Platform. You can use the sources workspace to create dataflows that ingest data from a given source to Experience Platform.
-* [Sources](../../home.md): Use sources in Experience Platform to ingest data from an Adobe application or a third-party data source.
+* [Dataflows](../home.md): Dataflows are representations of data jobs that move data across Experience Platform. You can use the sources workspace to create dataflows that ingest data from a given source to Experience Platform.
+* [Sources](../../sources/home.md): Use sources in Experience Platform to ingest data from an Adobe application or a third-party data source.
 * [Identity Service](../../identity-service/home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
 * [Real-Time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Segmentation](../../segmentation/home.md): Use the Segmentation Service to create segments and audiences from your Real-Time Customer Profile data. 
