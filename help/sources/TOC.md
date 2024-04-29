@@ -105,6 +105,7 @@ role: Developer
     - [Oracle Eloqua connector](connectors/marketing-automation/oracle-eloqua.md)
     - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
     - [Oracle Responsys connector](connectors/marketing-automation/oracle-responsys.md)
+    - [PathFactory](connectors/marketing-automation/pathfactory.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
   - Payments {#payments}
     - [PayPal connector](connectors/payments/paypal.md)
@@ -186,6 +187,7 @@ role: Developer
       - [Oracle NetSuite Activities](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
       - [Oracle NetSuite Entities](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
       - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
+      - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -316,6 +318,7 @@ role: Developer
       - [Oracle NetSuite Activities](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
       - [Oracle NetSuite Entities](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
       - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
+      - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/ui/create/payments/paypal.md)
