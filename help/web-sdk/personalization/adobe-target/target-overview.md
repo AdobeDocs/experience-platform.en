@@ -29,17 +29,18 @@ The following features have been tested and are currently supported in [!DNL Tar
 
 The following diagram helps you understand the workflow of [!DNL Target] and [!DNL Web SDK] edge decisioning.
 
-![Diagram of Adobe Target edge decisioning with the Platform Web SDK](./assets/target-platform-web-sdk.png)
+![Diagram of Adobe Target edge decisioning with the Platform Web SDK](assets/target-platform-web-sdk-new.png)
 
 |Call|Details|
 | --- | --- |
-|1|The device loads the [!DNL Web SDK]. The [!DNL Web SDK] sends a request to the edge network with XDM data, the Datastreams Environment ID, passed-in parameters, and the Customer ID (optional). Page (or containers) is pre-hidden.|
-|2|The edge network sends the request to the edge services to enrich it with the Visitor ID, consent, and other visitor context info, such as geolocation and device-friendly names.|
-|3|The edge network sends the enriched personalization request to the [!DNL Target] edge with the Visitor ID and passed-in parameters.|
+|1|The device loads the [!DNL Web SDK]. The [!DNL Web SDK] sends a request to the Edge Network with XDM data, the Datastreams Environment ID, passed-in parameters, and the Customer ID (optional). Page (or containers) is pre-hidden.|
+|2|The Edge Network sends the request to the edge services to enrich it with the Visitor ID, consent, and other visitor context info, such as geolocation and device-friendly names.|
+|3|The Edge Network sends the enriched personalization request to the [!DNL Target] edge with the Visitor ID and passed-in parameters.|
 |4|Profile scripts execute and then feed into [!DNL Target] profile storage. Profile storage fetches segments from the [!UICONTROL Audience Library] (for example, segments shared from [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], the [!DNL Adobe Experience Platform]).|
-|5|Based on URL request parameters and profile data, [!DNL Target] determines which activities and experiences to display for the visitor for the current page view and for future prefetched views. [!DNL Target] then sends this back to the edge network.|
-|6|a. The edge network sends the personalization response back to the page, optionally including profile values for additional personalization. Personalized content on the current page is revealed as quickly as possible without flicker of default content.<br>b. Personalized content for views that are shown as a result of user actions in a Single Page Application (SPA) is cached so it can be instantly applied without an additional server call when the views are triggered. <br>. The Edge Network sends the Visitor ID and other values in cookies, such as consent, Session ID, identity, cookie check, personalization.|
-|7|The edge network forwards [!UICONTROL Analytics for Target] (A4T) details (activity, experience, and conversion metadata) to the [!DNL Analytics] edge.|
+|5|Based on URL request parameters and profile data, [!DNL Target] determines which activities and experiences to display for the visitor for the current page view and for future prefetched views. [!DNL Target] then sends this back to the Edge Network.|
+|6|a. The Edge Network sends the personalization response back to the page, optionally including profile values for additional personalization. Personalized content on the current page is revealed as quickly as possible without flicker of default content.<br>b. Personalized content for views that are shown as a result of user actions in a Single Page Application (SPA) is cached so it can be instantly applied without an additional server call when the views are triggered. <br>c. The Edge Network sends the Visitor ID and other values in cookies, such as consent, Session ID, identity, cookie check, personalization.|
+|7|The Web SDK sends the notification from the device to the Edge Network.|
+|8|The Edge Network forwards [!UICONTROL Analytics for Target] (A4T) details (activity, experience, and conversion metadata) to the [!DNL Analytics] edge.|
 
 ## Enabling [!DNL Adobe Target]
 

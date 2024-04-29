@@ -8,7 +8,7 @@ exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
 ---
 # Profile system jobs endpoint (Delete requests)
 
-Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake], and if the datasets have been enabled for Profile, that data is stored in the [!DNL Real-Time Customer Profile] data store as well. Occasionally it may be necessary to delete a dataset or batch from the Profile store in order to remove data that is no longer needed or was added in error. This requires using the [!DNL Real-Time Customer Profile] API to create a [!DNL Profile] system job, or `delete request`, that can also be modified, monitored, or removed if required.
+Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake], and if the datasets have been enabled for Profile, that data is stored in the [!DNL Real-Time Customer Profile] data store as well. Occasionally it may be necessary to delete profile data associated with a dataset from the Profile store in order to remove data that is no longer needed or was added in error. This requires using the [!DNL Real-Time Customer Profile] API to create a [!DNL Profile] system job, or `delete request`, that can also be modified, monitored, or removed if required.
 
 >[!NOTE]
 >
@@ -96,9 +96,9 @@ The response includes a "children" array with an object for each delete request 
 
 Initiating a new delete request is done through a POST request to the `/systems/jobs` endpoint, where the ID of the dataset or batch to be deleted is provided in the body of the request.
 
-### Delete a dataset
+### Delete a dataset and associated profile data 
 
-In order to delete a dataset from the Profile store, the dataset ID must be included in the body of the POST request. This action will delete ALL data for a given dataset. [!DNL Experience Platform] allows you to delete datasets based on both record and time series schemas.
+In order to delete a dataset and all profile data associated with the dataset from the Profile store, the dataset ID must be included in the body of the POST request. This action will delete ALL data for a given dataset. [!DNL Experience Platform] allows you to delete datasets based on both record and time series schemas.
 
 **API format**
 

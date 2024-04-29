@@ -49,6 +49,7 @@ A segment definition will **not** be enabled for edge segmentation in the follow
 
 - The segment definition includes a combination of a single event and an `inSegment` event.
   - However, if the segment definition contained in the `inSegment` event is profile only, the segment definition **will** be enabled for edge segmentation.
+- The segment definition uses "Ignore year" as part of its time constraints.
 
 ## Next steps
 
