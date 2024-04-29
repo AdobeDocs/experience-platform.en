@@ -11,7 +11,11 @@ You can use the [!DNL The Trade Desk Real-Time Conversions API] extension to sen
 
 Using [!DNL The Trade Desk Real-Time Conversions API] extension, you can leverage the API's capabilities in your [event forwarding](../../../ui/event-forwarding/overview.md) rules to send data to [!DNL The Trade Desk] from the Adobe Experience Platform Edge Network. 
 
-This document covers how to install the extension and use its capabilities in an event forwarding [rule](../../../ui/managing-resources/rules.md).
+Read this document to learn how to install the extension and use its capabilities in an event forwarding [rule](../../../ui/managing-resources/rules.md).
+
+>[!NOTE]
+>
+>This extension and documentation page are maintained by [!DNL The Trade Desk] team. For any inquiries or update requests, please contact them directly.
 
 ## Prerequisites {#prerequisites}
 
@@ -78,7 +82,7 @@ Refer to the [!DNL The Trade Desk] developer documentation for more information 
 
 **[!UICONTROL Object Request Parameters]**
 
-This section contains the JSON-formatted request parameters such as Items, Privacy, and Data Processing.
+Read the following section to learn about the JSON-formatted request parameters such as Items, Privacy, and Data Processing.
 
 ![The [!DNL Object Request Parameters] section showing available fields.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
