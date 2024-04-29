@@ -31,7 +31,7 @@ The table below describes each available column.
 | **[!UICONTROL Created]** | The timestamp when the query was created, in UTC format.  |
 | **[!UICONTROL Last run timestamp]** | The most recent timestamp when the query was run. This column highlights whether a query has been executed according to its current schedule.  |
 | **[!UICONTROL Last run status]** | The status of the most recent query execution. The status values are: `Success`, `Failed`, `In progress`, and `No runs`. |
-| **[!UICONTROL Schedule Status]** | The current status of the scheduled query. There are six potential values, [!UICONTROL Registering], [!UICONTROL Active], [!UICONTROL Inactive], [!UICONTROL Deleted], a hyphen, and [!UICONTROL Quarantined]. <ul><li>The hyphen indicates the scheduled query is a one-time, non-recurring query.</li><li>The **[!UICONTROL Registering]** status indicates that the system is still processing the creation of the new schedule for the query. Note, you cannot disable or delete a scheduled query while it is registering.</li><li>The **[!UICONTROL Active]** status indicates that the scheduled query has **not yet passed** its completion date and time.</li><li>The **[!UICONTROL Inactive]** status indicates that the scheduled query has **passed** its completion date and time.</li><li>The **[!UICONTROL Deleted]** status indicates that the query schedule has been deleted.</li><li>The **[!UICONTROL Quarantined]** status indicates that the query has failed three consecutive runs and requires your intervention before any further executions can take place.</li></ul> |
+| **[!UICONTROL Schedule Status]** | The current status of the scheduled query. There are six potential values, [!UICONTROL Registering], [!UICONTROL Active], [!UICONTROL Inactive], [!UICONTROL Deleted], a hyphen, and [!UICONTROL Quarantined]. <ul><li>The hyphen indicates the scheduled query is a one-time, non-recurring query.</li><li>The **[!UICONTROL Registering]** status indicates that the system is still processing the creation of the new schedule for the query. Note, you cannot disable or delete a scheduled query while it is registering.</li><li>The **[!UICONTROL Active]** status indicates that the scheduled query has **not yet passed** its completion date and time.</li><li>The **[!UICONTROL Inactive]** status indicates that the scheduled query has **passed** its completion date and time.</li><li>The **[!UICONTROL Deleted]** status indicates that the query schedule has been deleted.</li><li>The **[!UICONTROL Quarantined]** status indicates that the query has failed ten consecutive runs and requires your intervention before any further executions can take place.</li></ul> |
 
 >[!TIP]
 >
@@ -99,7 +99,7 @@ Select the information icon (![An information icon.](../images/ui/monitor-querie
 
 ### Quarantined queries {#quarantined-queries}
 
-Any query that fails three consecutive scheduled query runs is automatically placed in quarantine and made inactive. 
+Any query that fails ten consecutive scheduled query runs is automatically placed in quarantine and made inactive. 
 
 <!-- ... more description -->
 

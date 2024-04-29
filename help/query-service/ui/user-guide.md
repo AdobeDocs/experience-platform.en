@@ -217,7 +217,7 @@ Schedules are set in the Query Editor. When using the Query Editor, you can only
 
 >[!NOTE]
 >
->Scheduled queries that fail three consecutive runs are automatically put in a [!UICONTROL Quarantined] status. A query with this status requires your intervention before any further executions can take place. See the [quarantined queries](./monitor-queries.md#quarantined-queries) documentation for more details. 
+>Scheduled queries that fail ten consecutive runs are automatically put in a [!UICONTROL Quarantined] status. A query with this status requires your intervention before any further executions can take place. See the [quarantined queries](./monitor-queries.md#quarantined-queries) documentation for more details. 
 
 See the query schedules documentation to learn how to [create query schedules in the UI](./query-schedules.md). Alternatively, to learn how to add schedules using the API, read the [scheduled queries endpoint guide](../api/scheduled-queries.md).
 
