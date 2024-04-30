@@ -69,7 +69,9 @@ Alternatively, select **[!UICONTROL Append into existing dataset]** followed by 
 
 ![The Schedule details panel with Dataset details and Append into existing dataset highlighted.](../images/ui/query-schedules/dataset-details-existing.png)
 
-The **[!UICONTROL Select output dataset]** dialog appears. Next, either browse the existing datasets or use the search field to filter the options. Select the row of the dataset that you wish to use. The dataset details are displayed in the panel on the right. Select **[!UICONTROL Done]** to confirm your choice.
+The **[!UICONTROL Select output dataset]** dialog appears. 
+
+Next, either browse the existing datasets or use the search field to filter the options. Select the row of the dataset that you wish to use. The dataset details are displayed in the panel on the right. Select **[!UICONTROL Done]** to confirm your choice.
 
 ![The Select output dataset dialog with the search field, a dataset row, and Done highlighted.](../images/ui/query-schedules/select-output-dataset-dialog.png)
 
