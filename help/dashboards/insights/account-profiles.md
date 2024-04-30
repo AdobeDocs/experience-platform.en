@@ -1,10 +1,12 @@
 ---
 title: Account Profile Insights
 description: Discover the SQL that powers your Account Profile insights and use these queries to generate custom insights that further explore your customers and their consumer experiences.
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 ---
 # Account Profile insights
 
-Account profiles are used to consolidate account information from various sources, including multiple marketing channels and organizational systems. This unified view enables a comprehensive understanding of customer accounts, enhancing B2B marketing campaigns. The insights derived from the analysis of your data model make your Adobe Real-time Customer Data Platform B2B data more accessible, understandable, and impactful for decision-making.
+[Account profiles](../../rtcdp/accounts/account-profile-overview.md) are used to consolidate account information from various sources, including multiple marketing channels and organizational systems. This unified view enables a comprehensive understanding of customer accounts, enhancing B2B marketing campaigns. The insights derived from the analysis of your data model make your Adobe Real-time Customer Data Platform B2B data more accessible, understandable, and impactful for decision-making.
 
 With access to the SQL that powers your insights, you can better understand your B2B data and generate your own highly customized reusable insights to further explore your customer account information. Transform your raw data into new actionable insights by using the existing Real-Time CDP data model SQL as inspiration to create queries for your unique business needs. 
 

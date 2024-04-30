@@ -92,8 +92,6 @@ LIMIT 5000;
 
 The logic used for the [!UICONTROL Accounts By Type] insight returns the numerical breakdown of accounts by their type. This insight can help to guide business strategy and operations, including resource allocation or marketing strategies. See the [[!UICONTROL Accounts By Type] widget documentation](../guides/account-profiles.md#accounts-by-type) for more information. 
 
-<!-- This needs more information. The UI example is insufficient. What is the business value of this insight? - I made that up. -->
-
 The SQL that generates the [!UICONTROL Accounts By Type] insight is seen in the collapsible section below.
 
 +++SQL query
@@ -128,4 +126,3 @@ The Opportunity model is comprised of seven datasets:
 The diagram below displays the relevant data fields in each dataset.
 
 ![The entity relational diagram for the Opportunity model.](../images/data-models/opportunity-model.png)
-
