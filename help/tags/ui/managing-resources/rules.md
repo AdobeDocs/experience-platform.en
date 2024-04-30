@@ -45,15 +45,19 @@ Actions are the *Then* portion of a rule. They define what you want to happen wh
 
 Create a rule by specifying what actions occur if a condition is met.
 
+>[!TIP]
+>
+>You can view additional resources available to learn more about this feature by selecting ![about](../../images/ui/event-forwarding/overview/about.png) from the right panel.
+
 1. Open the [!UICONTROL Rules] tab, then select **[!UICONTROL Create New Rule]**.
 
-   ![](../../images/launch-rule-builder.jpg)
+   ![Rules tab highlighting the name field.](../../images/launch-rule-builder.png)
 
 1. Name the rule.
 1. Select the Events **[!UICONTROL Add]** icon.
-1. Choose your extension and one of the event types available for that extension, then configure the settings for the event.
+1. Select your extension and one of the event types available for that extension, then configure the settings for the event.
 
-   ![](../../images/rule-event-config.png)
+   ![Rules event configuration page.](../../images/rule-event-config.png)
 
    Available event types depend on the extension you've selected. Event settings will differ based on the event type. Some events don't have any settings that need to be configured.
 
@@ -81,9 +85,9 @@ Create a rule by specifying what actions occur if a condition is met.
 
      If you want it to run later, give it a number higher than 50. For more information about ordering, see [Rule ordering](rules.md#rule-ordering).
 
-1. Select the Conditions **[!UICONTROL Add]** icon, then choose a logic type, extension, condition type and configure the settings for your condition. Next, select **[!UICONTROL Keep Changes]**.
+1. Select the Conditions **[!UICONTROL Add]** icon, then select a logic type, extension, condition type and configure the settings for your condition. Next, select **[!UICONTROL Keep Changes]**.
 
-   ![](../../images/condition-settings.png)
+   ![Rules condition configuration page.](../../images/condition-settings.png)
 
    Available condition types depend on the extension you've selected. Condition settings will differ based on the condition type.
 
@@ -96,9 +100,9 @@ Create a rule by specifying what actions occur if a condition is met.
 
    You can add as many conditions as you'd like. Multiple conditions within the same rule are joined by AND.
 
-1. Select the Actions **[!UICONTROL Add]** icon, then choose your extension and one of the action types available for that extension, configure the settings for the action, then select **[!UICONTROL Keep Changes]**.
+1. Select the Actions **[!UICONTROL Add]** icon, then select your extension and one of the action types available for that extension, configure the settings for the action, then select **[!UICONTROL Keep Changes]**.
 
-   ![](../../images/action-settings.png)
+   ![Rules action configuration page.](../../images/action-settings.png)
 
    Available action types depend on the extension you've selected. Action settings will differ based on the action type.
 
