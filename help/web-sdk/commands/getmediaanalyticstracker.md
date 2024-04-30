@@ -1,5 +1,5 @@
 ---
-title: `getMediaAnalyticsTracker`
+title: getMediaAnalyticsTracker
 description: Learn how to create a Media Analytics Tracker object and use it to track media events.
 ---
 
