@@ -45,29 +45,30 @@ There are some differences between the editor in the update variable action vers
 
 ## Send media event {#send-media-event}
 
-Sends a media event to Adobe Experience Platform and/or Adobe Analytics. This action is useful when you are tracking media events on your website. Select an instance (if you have more than one). The action requires a `playerId` that represents a unique identifier for a tracked media session, it also requires a Quality of Experience and a `playhead` data element when starting a media session.
+Sends a media event to Adobe Experience Platform and/or Adobe Analytics. This action is useful when you are tracking media events on your website. Select an instance (if you have more than one). The action requires a `playerId` that represents a unique identifier for a tracked media session. It also requires a **[!UICONTROL Quality of Experience]** and a `playhead` data element when starting a media session.
 
-![](assets/send-media-event.png)
+![Platform UI image showing the send media event screen.](assets/send-media-event.png)
 
-There are a few other fields in the Send media event action type that could also be useful depending on the media event you are tracking:
-- **Instance** The Web SDK instance that is being used.
-- **Media Event Type** Media Event type that is being tracked.
-- **Player ID** This is the media session unique identifier.
-- **Playhead** This is the current position of the media playback in seconds.
-- **Media session details** When sending a media start event, the required media session details should be specified.
-- **Chapter details** In this section you can specify the chapter details when sending a chapter start media event.
-- **Advertising details** When sending an AdBreakStart event the required advertising details should be specified.
-- **Advertising pod details** Details about the advertising pod when sending an AdStart event.
-- **Error details** Details about the playback error that is tracked.
-- **State Update Details** The player state that is being updated.
-- **Custom Metadata** The custom metadata about the media event that is being tracked.
-- **Quality of Experience** The media quality of experience data that is being tracked.
+The **[!UICONTROL Send media event]** action type supports the following properties:
+
+- **[!UICONTROL Instance]**: The Web SDK instance that is being used.
+- **[!UICONTROL Media Event Type]**: The type of the media event being tracked.
+- **[!UICONTROL Player ID]**: The media session unique identifier.
+- **[!UICONTROL Playhead]**: The current position of the media playback, in seconds.
+- **[!UICONTROL Media session details]**: When sending a media start event, the required media session details should be specified.
+- **[!UICONTROL Chapter details]**: In this section you can specify the chapter details when sending a chapter start media event.
+- **[!UICONTROL Advertising details]**: When sending an `AdBreakStart` event, you must specify the required advertising details.
+- **[!UICONTROL Advertising pod details]**: Details about the advertising pod when sending an `AdStart` event.
+- **[!UICONTROL Error details]**: Details about the playback error that is being tracked.
+- **[!UICONTROL State Update Details]**: The player state that is being updated.
+- **[!UICONTROL Custom Metadata]**: The custom metadata about the media event that is being tracked.
+- **[!UICONTROL Quality of Experience]**: The media quality of experience data that is being tracked.
 
 ## Get Media Analytics Tracker {#get-media-analytics-tracker}
 
 This action is used to get the legacy Media Analytics API. When configuring the action and an object name is provided, then the legacy Media Analytics API will be exported to that window object. If none is provided it will be exported to `window.Media` as the current Media JS library does.
 
-![](assets/get-media-analytics-tracker.png)
+![Platform UI image showing the Get Media Analytics Tracker action type.](assets/get-media-analytics-tracker.png)
 
 ## Next steps {#next-steps}
 
