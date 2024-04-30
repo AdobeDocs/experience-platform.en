@@ -74,7 +74,8 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 | [!UICONTROL Move to folder] | Audience composition, Custom upload, Segmentation Service |  Manages which folder the audience belongs to. For more information on this feature, please read the section on [filtering and tagging](#manage-audiences). |
 | [!UICONTROL Copy] | Segmentation Service | Duplicates the selected audience. |
 | [!UICONTROL Apply access labels] | Audience composition, Custom upload, Segmentation Service | Manages the access labels that belong to the audience. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Archive] | Custom upload | Archives the selected audience. |
+| [!UICONTROL Publish] | Custom upload, Segmentation Service | Publishes the selected audience. For more information on lifecycle status management, please read the [lifecycle state section of the Segmentation FAQ](../faq.md#lifecycle-states). |
+| [!UICONTROL Deactivate] | Custom upload, Segmentation Service | Deactivates the selected audience. For more information on lifecycle status management, please read the [lifecycle state section of the Segmentation FAQ](../faq.md#lifecycle-states). |
 | [!UICONTROL Delete] | Audience composition, Custom upload, Segmentation Service | Deletes the selected audience. |
 | [!UICONTROL Add to package] | Audience composition, Custom upload, Segmentation Service | Moves the audience between sandboxes. For more information on this feature, please read the [sandbox tooling guide](../../sandboxes/ui/sandbox-tooling.md). |
 
@@ -96,9 +97,9 @@ You can select **[!UICONTROL Update frequency summary]** to display a pie chart 
 
 ![The Update frequency summary button is highlighted.](../images/ui/overview/browse-audience-update-frequency-summary.png)
 
-The pie chart appears, displaying a breakdown of the audiences by update frequency. The chart displays the total number of audiences in the middle. If you hover over the different parts of the audience, it will display the number of audiences that belong to each update frequency type.
+The pie chart appears, displaying a breakdown of the audiences by update frequency. The chart displays the total number of audiences in the middle, and the daily batch evaluation time in UTC at the bottom. If you hover over the different parts of the audience, it will display the number of audiences that belong to each update frequency type.
 
-![The update frequency pie chart is displayed.](../images/ui/overview/update-frequency-chart.png)
+![The update frequency pie chart is highlighted, with the batch segmentation evaluation time also displayed.](../images/ui/overview/update-frequency-chart.png)
 
 ### Customize {#customize}
 
@@ -109,7 +110,7 @@ You can add additional fields to the [!UICONTROL Browse] page by selecting ![the
 | [!UICONTROL Name] | The name of the audience. |
 | [!UICONTROL Profile count] | The total number of profiles that qualify for the audience. | 
 | [!UICONTROL Origin] | The origin of the audience. This states where the audience comes from. Possible values include Segmentation Service, Custom upload, Audience composition, and Audience Manager. |
-| [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Published`, and `Archived`. |
+| [!UICONTROL Lifecycle status] | The status of the audience. Possible values for this field include `Draft`, `Inactive`, `Published`, and `Archived`. More information about lifecycle statuses, including what the different states mean and how to move audiences to different lifecycle states, read the [lifecycle status section of the Segmentation FAQ](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | A value that states how often the audience's data is updated. Possible values for this field include [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge], and [!UICONTROL Not Scheduled]. |
 | [!UICONTROL Last updated by] | The name of the person who last updated the audience. |
 | [!UICONTROL Created] | The date and time, in UTC, that the audience was created. |
@@ -199,7 +200,7 @@ The list of available filters is displayed.
 | ------ | ----------- |
 | [!UICONTROL Origin] | Lets you filter based on the origin of the audience. Available options include Segmentation service, Custom upload, Audience composition, and Audience Manager. |
 | [!UICONTROL Has any tag] | Lets you filter by tags. You can select between **[!UICONTROL Has any tag]** and **[!UICONTROL Has all tags]**. When **[!UICONTROL Has any tag]** is selected, the filtered audiences will include **any** of the tags you've added. When **[!UICONTROL Has all tags]** is selected, the filtered audiences must include **all** of the tags you've added. |
-| [!UICONTROL Lifecycle status] | Lets you filter based on the audience's lifecycle status. Available options include [!UICONTROL Active], [!UICONTROL Archived], [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive], and [!UICONTROL Published]. |
+| [!UICONTROL Lifecycle status] | Lets you filter based on the audience's lifecycle status. Available options include [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive], and [!UICONTROL Published]. |
 | [!UICONTROL Update frequency] | Lets you filter based on the audience's update frequency. Available options include [!UICONTROL Scheduled], [!UICONTROL Continuous], and [!UICONTROL On Demand]. |
 | [!UICONTROL Created by] | Lets you filter based on the person who created the audience. |
 | [!UICONTROL Creation date] | Lets you filter based on the creation date of the audience. You can choose a date range to filter when the audience was created. |
@@ -402,7 +403,7 @@ A popover appears, listing all the fields that can be displayed within the table
 | Field | Description |
 | ----- | ----------- | 
 | [!UICONTROL Name] | The name of the audience. |
-| [!UICONTROL Status] | The status of the audience. Possible values for this field include `Draft`, `Published`, and `Archived`.  |
+| [!UICONTROL Status] | The status of the audience. Possible values for this field include `Draft`, `Inactive`, `Published`, and `Archived`.  |
 | [!UICONTROL Created] | The time and date the audience was created. | 
 | [!UICONTROL Created by] | The name of the person who created the audience. |
 | [!UICONTROL Updated] | The time and date the audience was last updated. |
