@@ -1,8 +1,8 @@
 ---
 title: Audience Manager Expanded Activation
 description: Learn how to activate Audience Manager audiences to social and advertising destinations, through Audience Manager Expanded Activation.
+exl-id: 1f209578-a688-40b8-8f13-dab0d4380b3b
 ---
-
 # Audience Manager Expanded Activation
 
 Built on Adobe Experience Platform, Audience Manager Expanded Activation helps existing [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home) users activate their audiences to [social](../destinations/catalog/social/overview.md) and [advertising](../destinations/catalog/advertising/overview.md) destination platforms from Real-Time CDP, such as [Facebook](../destinations/catalog/social/facebook.md), [Google Ads](../destinations/catalog/advertising/google-ads-destination.md), and more.
@@ -37,4 +37,3 @@ To activate audiences through [!DNL Expanded Activation], make sure that your Au
 ## Next steps {#next-steps}
 
 Now that you have a better understanding of the use cases and benefits of using [!DNL Expanded Activation], start [configuring your account](administration.md) and then [activate your audiences](activate-audiences.md).
-
