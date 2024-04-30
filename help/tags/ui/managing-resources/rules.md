@@ -46,8 +46,8 @@ Actions are the *Then* portion of a rule. They define what you want to happen wh
 Create a rule by specifying what actions occur if a condition is met.
 
 >[!TIP]
-   >
-   >You can view additional resources available to learn more about this feature by selecting ![about](../../images/ui/event-forwarding/overview/about.png) from the right panel.
+>
+>You can view additional resources available to learn more about this feature by selecting ![about](../../images/ui/event-forwarding/overview/about.png) from the right panel.
 
 1. Open the [!UICONTROL Rules] tab, then select **[!UICONTROL Create New Rule]**.
 
