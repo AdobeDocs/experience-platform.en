@@ -31,6 +31,18 @@ To navigate to the [!UICONTROL Account Profiles] dashboard within the Platform U
 
 From the [!UICONTROL Account Profiles] dashboard, you can either [browse the account profiles ingested into your organization](#browse-account-profiles), or [view the entirety of your account profile data at a glance using widgets](#standard-widgets).
 
+### Date filter {#date-filter}
+
+The [!UICONTROL Overview] tab is composed of widgets that provide read-only metrics to convey important information about your account profiles. Select the calendar icon or dates to change the global date filter for your widgets. 
+
+>[!IMPORTANT]
+>
+>The date range that you select in the dropdown calendar affects all insights except the two predictive scoring widgets ([distribution](#predictive-scoring-distribution) and [top influential factors](#predictive-scoring-top-influential-factors)).
+
+![The Account Profiles overview tab with the date selector and filter icon highlighted.](../images/account-profiles/date-filter.png)
+
+### Configure the lead to account matching service {#lead-to-account-matching-service}
+
 Select **[!UICONTROL Settings]** to configure the lead to account matching service from the [!UICONTROL Account settings] dialog. For full details on how to configure your lead to account matching, see the [UI guide](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching). To learn more about lead to account matching, refer to the [lead to account matching in Real-Time CDP B2B documentation](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ![The Account Profiles dashboard with Settings highlighted.](../images/account-profiles/settings.png)
@@ -44,18 +56,6 @@ Select the [!UICONTROL Profile ID] from the results displayed on the [!UICONTROL
 ![The Account Profiles browse tab with results displayed and the Profile ID highlighted.](../images/account-profiles/account-profiles-browse-tab.png)
 
 The account profile information displayed on the [!UICONTROL Details] tab has been merged together from multiple profile fragments to form a single view of the individual account. See the documentation on [browsing account profiles in Adobe Real-Time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) to learn more about account profile viewing capabilities in the Platform UI. 
-
-## The [!UICONTROL Account Profiles] [!UICONTROL Overview] {#overview}
-
-The [!UICONTROL Overview] tab is composed of widgets that provide read-only metrics to convey important information about your account profiles. Select the calendar icon or dates to change the global date filter for your widgets. The date range that you select in the dropdown calendar affects all insights except the two predictive scoring widgets ([distribution](#predictive-scoring-distribution) and [top influential factors](#predictive-scoring-top-influential-factors)).
-
-<!-- Need to more this note upo in the page make it more prominent :
->[!NOTE]
->
->The date range that you select in the dropdown calendar affects all insights except the two predictive scoring widgets ([distribution](#predictive-scoring-distribution) and [top influential factors](#predictive-scoring-top-influential-factors)).
- -->
-
-![The Account Profiles overview tab with the date selector and filter icon highlighted.](../images/account-profiles/date-filter.png)
 
 ## Standard widgets {#standard-widgets}
 
