@@ -68,7 +68,7 @@ To change the type of graph or chart of your widget, select from the available o
 
 ## Widget properties {#properties}
 
-Select the properties icon (![The properties icon.](./images/user-defined-dashboards/properties-icon.png)) in the right rail to open the properties panel. In the Properties panel, enter a name for the widget in the **[!UICONTROL Widget title]** text field. You can also rename the X or Y axis by entering a new name into the [!UICONTROL Axis label] text fields.
+Select the properties icon (![The properties icon.](./images/user-defined-dashboards/properties-icon.png)) in the right rail to open the properties panel. In the [!UICONTROL Properties] panel, enter a name for the widget in the **[!UICONTROL Widget title]** text field. You can also rename the X or Y axis by entering a new name into the [!UICONTROL Axis label] text fields.
 
 ![The widget composer with the properties icon and Widget title field highlighted.](./images/user-defined-dashboards/sql-workflow/widget-properties-title-text.png)
 
@@ -84,7 +84,7 @@ From your custom dashboard, select the ellipses (`...`) on any widget to access 
 
 ![A custom dashboard with an insight's ellipses dropdown menu and the View more and View SQL options highlighted.](./images/user-defined-dashboards/sql-workflow/ellipses-dropdown.png)
 
-To view the SQL behind your customized insights, select the [!UICONTROL View more] option. The dialog is titled with the name of the insight. From this view, you can copy the SQL to your clipboard to use as a base in a future query. Select **[!UICONTROL Close]** to close the dialog.
+To view the SQL behind your customized insights, select the **[!UICONTROL View more]** option. The dialog is titled with the name of the insight. From this view, you can copy the SQL to your clipboard to use as a base in a future query. Select **[!UICONTROL Close]** to close the dialog.
 
 ![A dialog displaying the SQL of an insight with the SQL and close option highlighted.](./images/user-defined-dashboards/sql-workflow/view-sql.png)
 
