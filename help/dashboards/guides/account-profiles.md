@@ -1,5 +1,5 @@
 ---
-title: Account Profiles Dashboard Guide
+title: Account Profiles Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's B2B account profiles.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 ---
@@ -47,7 +47,13 @@ The account profile information displayed on the [!UICONTROL Details] tab has be
 
 ## The [!UICONTROL Account Profiles] [!UICONTROL Overview] {#overview}
 
-The [!UICONTROL Overview] tab is composed of widgets that provide read-only metrics to convey important information about your account profiles. Select the calender icon or dates to change the global date filter for your widgets. The date range that you select in the dropdown calender affects all insights except the two predictive scoring widgets ([distribution](#predictive-scoring-distribution) and [top influential factors](#predictive-scoring-top-influential-factors)).
+The [!UICONTROL Overview] tab is composed of widgets that provide read-only metrics to convey important information about your account profiles. Select the calendar icon or dates to change the global date filter for your widgets. The date range that you select in the dropdown calendar affects all insights except the two predictive scoring widgets ([distribution](#predictive-scoring-distribution) and [top influential factors](#predictive-scoring-top-influential-factors)).
+
+<!-- Need to more this note upo in the page make it more prominent :
+>[!NOTE]
+>
+>The date range that you select in the dropdown calendar affects all insights except the two predictive scoring widgets ([distribution](#predictive-scoring-distribution) and [top influential factors](#predictive-scoring-top-influential-factors)).
+ -->
 
 ![The Account Profiles overview tab with the date selector and filter icon highlighted.](../images/account-profiles/date-filter.png)
 

@@ -1,10 +1,16 @@
 ---
 title: Real-Time Customer Data Platform Insights Data Model B2B Edition
 description: Learn how to use SQL queries with the Real-Time Customer Data Platform Insights Data Models (B2B Edition) to customize your own Real-Time CDP reports for your marketing and KPI use cases.
+badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 ---
 # Real-time Customer Data Platform Insights data model B2B Edition
 
-The Real-Time Customer Data Platform Insights data model B2B Edition exposes the data models and SQL that power the insights for account profiles. You can customize these SQL query templates to create Real-Time CDP reports for your B2B marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your dashboards.
+The Real-Time Customer Data Platform Insights data model for the B2B Edition exposes the data models and SQL that power the insights for [account profiles](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). You can customize these SQL query templates to create Real-Time CDP reports for your B2B marketing and key performance indicator (KPI) use cases. These insights can then be used as custom widgets for your dashboards. 
+
+>[!AVAILABILITY]
+>
+>This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package. See the documentation on available Real-Time CDP editions](../../rtcdp/overview.md#rtcdp-editions) for more information, or contact your Adobe representative. 
 
 <!-- 
 See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
@@ -33,13 +39,17 @@ The Account Profile model is comprised of eight datasets:
 - `adwh_fact_account`
 - `account_revenue_employee`
 
-The diagram below displays the relevant data fields in each dataset.
+The diagram below displays the relevant data fields in each dataset, their data type, and the foreign keys linking the datasets together.
 
 ![The entity relational diagram for the Account Profile model.](../images/data-models/account-profile-model.png)
 
 #### The Accounts By Industry use case {#accounts-by-industry}
 
 The logic used for the [!UICONTROL Accounts By Industry] insight returns the top five industries according to their number of account profiles and their relative size to each other. See the [[!UICONTROL Accounts By Industry] widget documentation](../guides/account-profiles.md#accounts-by-industry) for more information. 
+
+>[!TIP]
+>
+>You can customize this SQL query to return more or less than the top five industries.
 
 The SQL that generates the [!UICONTROL Accounts By Industry] insight is seen in the collapsible section below.
 

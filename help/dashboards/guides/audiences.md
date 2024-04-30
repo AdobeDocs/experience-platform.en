@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profile;audience;audiences;segmentation;user interface;UI;customization;audience dashboard;dashboard
-title: Audiences Dashboard Guide
+title: Audiences Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about audiences your organization has created. 
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
