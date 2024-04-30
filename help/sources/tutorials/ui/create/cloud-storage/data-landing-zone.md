@@ -54,23 +54,41 @@ When finished, select **[!UICONTROL Next]**.
 
 For a detailed, step-by-step guide on how to create a dataflow for a cloud storage source, see the tutorial on [creating a cloud storage dataflow to bring data to Platform](../../dataflow/batch/cloud-storage.md).
 
-## Retrieve and refresh your [!DNL Data Landing Zone] credentials
+## Retrieve your [!DNL Data Landing Zone] credentials
 
-[!DNL Data Landing Zone] is an out-of-the-box source that comes with your Adobe Experience Platform Sources license. [!DNL Data Landing Zone] uses an SAS URI and SAS Token-based authentication. You can retrieve and refresh your authentication credentials from the [!UICONTROL Sources catalog] page.
+[!DNL Data Landing Zone] is a source that comes with your Adobe Experience Platform Sources license. [!DNL Data Landing Zone] uses an SAS URI and SAS Token-based authentication. You can retrieve your authentication credentials from the [!UICONTROL Sources catalog] page.
 
-In the [!UICONTROL Sources catalog], under the [!UICONTROL Cloud storage] category, select the ellipses (**...**) from the **[!UICONTROL Data Landing Zone]** card. From the dropdown menu that appears, select **[!UICONTROL View credentials]**.
+To retrieve your credentials, select the **[!UICONTROL Data Landing Zone]** card and then copy your credentials from the right rail that appears.
 
-![A list of view options for Data Landing Zone.](../../../../images/tutorials/create/dlz/options.png)
+![A list of view options for Data Landing Zone.](../../../../images/tutorials/create/dlz/view-credentials.png)
 
 A popover appears, displaying your container name, SAS token, storage account name, SAS URI, and expiry date.
 
-Select **[!UICONTROL Refresh credentials]** and allow for a few seconds for your updated credentials to be processed.
+## Refresh your [!DNL Data Landing Zone] credentials
 
->[!TIP]
->
->Your [!DNL Data Landing Zone] credentials are set to auto-expire after 90 days and you must use new credentials to re-connect to [!DNL Data Landing Zone] after expiration. Your dataflows in Platform are not affected by expiring credentials and you can still continue working with new and existing dataflows with your new credentials.
+Your [!DNL Data Landing Zone] credentials are set to auto-expire after 90 days and you must use new credentials to re-connect to [!DNL Data Landing Zone] after expiration. Your dataflows in Experience Platform are not affected by expiring credentials and you can still continue working with new and existing dataflows with your new credentials.
 
-![The credentials associated with a given Data Landing Zone account.](../../../../images/tutorials/create/dlz/view-credentials.png)
+There are two ways to refresh your [!DNL Data Landing Zone] credentials:
+
+>[!BEGINTABS]
+
+>[!TAB Use the source card]
+
+To refresh your credentials from the sources catalog page, select the ellipses (**`...`**) in the [!DNL Data Landing Zone] card and then select **[!UICONTROL Refresh credentials]**.
+
+![Refresh credentials using the source card.](../../../../images/tutorials/create/dlz/refresh-with-card.png)
+
+A pop up window appears, prompting your confirmation before you can proceed. When you are ready, select **[!UICONTROL Refresh credentials]**.
+
+![The refresh credentials confirmation window.](../../../../images/tutorials/create/dlz/confirm.png)
+
+>[!TAB Use the right rail]
+
+To refresh your credentials using the right rail, select the **[!UICONTROL Data Landing Zone]** source card and then select **[!UICONTROL More actions]**. Next, select **[!UICONTROL Refresh Credentials]** and then confirm using the pop up window that appears.
+
+![Refresh credentials using the right rail.](../../../../images/tutorials/create/dlz/refresh-with-right-rail.png)
+
+>[!ENDTABS]
 
 ## Next steps
 
