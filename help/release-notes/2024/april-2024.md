@@ -14,6 +14,7 @@ Updates to existing features in Experience Platform:
 
 - [Dashboards](#dashboards)
 - [Data collection](#data-collection)
+- [Destinations](#destinations)
 - [Identity Service](#identity-service)
 - [Monitoring](#monitoring)
 - [Query Service](#query-service)
@@ -56,9 +57,21 @@ Adobe Experience Platform provides a suite of technologies that allow you to col
 
 To learn more about data collections, read the [data collection overview](../../collection/home.md).
 
-<!--## Destinations {#destinations}
+## Destinations {#destinations}
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| `isRequired` parameter now available for nested customer data fields in Destination SDK | When configuring a destination in Destination SDK, you can now [set nested customer data fields as required](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). This way, users setting up your destination cannot proceed with their activation flow until they select a value for that field.|
+
+{style="table-layout:auto"}
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
+<!--[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
 **New or updated functionality** {#destinations-new-updated-functionality}
 
