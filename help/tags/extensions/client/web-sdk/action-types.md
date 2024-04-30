@@ -45,12 +45,12 @@ There are some differences between the editor in the update variable action vers
 
 ## Send media event {#send-media-event}
 
-Use this action to send a media event to Adobe Experience Platform and/or Adobe Analytics. This action is useful when you are tracking media events on your website. The action requires a playerId to identify a media session, and a media event type to identify the type of media event that is being sent. The action also requires a Quality of Experience and playhead data element to be used to start a media session.
+Sends a media event to Adobe Experience Platform and/or Adobe Analytics. This action is useful when you are tracking media events on your website. Select an instance (if you have more than one). The action requires a `playerId` that represents a unique identifier for a tracked media session, it also requires a Quality of Experience and a `playhead` data element when starting a media session.
 
 ![](assets/send-media-event.png)
 
 There are a few other fields in the Send media event action type that could also be useful depending on the media event you are tracking:
-- **Instance**
+- **Instance** The Web SDK instance that is being used.
 - **Media Event Type** Media Event type that is being tracked.
 - **Player ID** This is the media session unique identifier.
 - **Playhead** This is the current position of the media playback in seconds.
@@ -63,6 +63,11 @@ There are a few other fields in the Send media event action type that could also
 - **Custom Metadata** The custom metadata about the media event that is being tracked.
 - **Quality of Experience** The media quality of experience data that is being tracked.
 
+## Get Media Analytics Tracker {#get-media-analytics-tracker}
+
+This action is used to get the legacy Media Analytics API. When configuring the action and an object name is provided, then the legacy Media Analytics API will be exported to that window object. If none is provided it will be exported to `window.Media` as the current Media JS library does.
+
+![](assets/get-media-analytics-tracker.png)
 
 ## Next steps {#next-steps}
 
