@@ -342,6 +342,7 @@ role: Developer
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
   - [Create a sources dataflow using templates in the UI](tutorials/ui/templates.md)
+  - [Filter sources objects](tutorials/ui/filter.md)
   - [On-demand ingestion](tutorials/ui/on-demand-ingestion.md)
   - [Monitor batch dataflows](tutorials/ui/monitor.md)
   - [Monitor streaming dataflows](tutorials/ui/monitor-streaming.md)
