@@ -29,7 +29,7 @@ role: Developer
     * [edgeConfigId](commands/configure/edgeconfigid.md)
     * [edgeDomain](commands/configure/edgedomain.md)
     * [idMigrationEnabled](commands/configure/idmigrationenabled.md)
-    * [streamingMedia](commands/configure/streamingMedia.md)
+    * [streamingMedia](commands/configure/streamingmedia.md)
     * [onBeforeEventSend](commands/configure/onbeforeeventsend.md)
     * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
     * [orgId](commands/configure/orgid.md)
