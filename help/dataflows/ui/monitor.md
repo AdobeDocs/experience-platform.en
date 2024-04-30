@@ -1,6 +1,7 @@
 ---
 title: Monitoring dashboard overview
 description: Learn how to use the monitoring dashboard in the Adobe Experience Platform UI
+exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
 ---
 # Monitoring dashboard overview
 
