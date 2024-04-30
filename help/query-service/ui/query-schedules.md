@@ -63,7 +63,7 @@ Select **[!UICONTROL Create and append into new dataset]** to create a data set 
 >
 > Since you are using either an existing or creating a new dataset, you do **not** need to include either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of the query, since the datasets are already set. Including either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of your scheduled queries will result in an error.
 
-![The Schedule details panel with Dataset details and the Create and append into new dataset options highlighted.](../images/ui/query-schedules/dataset-details-create-and-append.png)
+![The Schedule details panel with Dataset details and the [!UICONTROL Create and append into new dataset] options highlighted.](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
 Alternatively, select [Append into existing dataset] followed by the dataset icon (![The dataset icon.](../images/ui/query-schedules/dataset-icon.png)).
 
