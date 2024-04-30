@@ -1,8 +1,8 @@
 ---
 title: Activate Audience Manager Audiences through Expanded Activation
 description: Learn how to activate Audience Manager audiences to social and advertising destinations, through Audience Manager Expanded Activation.
+exl-id: 4105f5c5-db69-414f-9ee4-8630b0a86da7
 ---
-
 # Activate audiences through Audience Manager Expanded Activation
 
 This page describes the end-to-end workflow that you must follow to activate audiences from Audience Manager to the destination platforms supported by Expanded Activation.
