@@ -133,7 +133,7 @@ Audiences can be edited in the following lifecycle states:
 
 - **Draft**: If an audience is edited in the draft state, it will remain in the draft state unless it is explicitly published.
 - **Published**: If an audience is edited in the published state, it will remain published, and the audience will be automatically updated.
-- **Inactive**: If an audience is edited in the inactive state, it will remain inactive. If you need to update the audience, you'll need to publish the audience.
+- **Inactive**: If an audience is edited in the inactive state, it will remain inactive. This means that it will not be evaluated or updated. If you need to update the audience, you'll need to publish the audience.
 
 Once an audience is deleted, it **cannot** be edited.
 
@@ -194,6 +194,12 @@ You can re-publish an audience by selecting an audience that is in the inactive 
 You can put an audience into the delete state by opening the quick actions menu in Audience Portal and selecting [!UICONTROL Delete].
 
 ### Does using an audience as a child audience affect lifecycle state transitions?
+
+>[!NOTE]
+>
+>A parent audience is an audience that **uses** another audience as a dependency for the audience.
+>
+>A child audience is an audience that is **used as** a dependency for the audience.
 
 Yes, using an audience as a child audience does affect what lifecycle states transitions the child and parent audience can undertake.
 
