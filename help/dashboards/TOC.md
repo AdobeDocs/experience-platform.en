@@ -24,6 +24,7 @@ role: Developer,User
   * [Profiles](insights/profiles.md)
   * [Audiences](insights/audiences.md)
   * [Destinations](insights/destinations.md)
+  * [Account Profiles](insights/account-profiles.md)
 * Customize dashboards {#customize}  
   * [Customization overview](customize/overview.md)
   * [Modify dashboards](customize/modify.md)
@@ -33,9 +34,11 @@ role: Developer,User
   * [Edit schema](customize/edit-schema.md)
 * Insights use cases {#insights-use-cases}
   * [Consent analysis](insights-use-cases/consent-analysis.md)
+* Available data models {#data-models}
+  * [Real-Time Customer Data Platform Insights data model B2B edition](data-models/cdp-insights-data-model-b2b.md)
+  * [Real-Time Customer Data Platform Insights data model B2C edition](data-models/cdp-insights-data-model-b2c.md)
 * Application integrations {#integrations}
   * [Power BI](integrations/power-bi.md)
 * [Query dashboard datasets](query.md)
-* [Real-Time Customer Data Platform Insights Data Model](cdp-insights-data-model.md)
 * [View insight SQL](view-sql.md)
 * [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

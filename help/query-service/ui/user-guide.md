@@ -83,6 +83,16 @@ If you have written multiple queries but need to execute only one query, you can
 
 ![The Query Editor with the [!UICONTROL Run selected query] icon highlighted.](../images/ui/query-editor/run-selected-query.png)
 
+### Cancel Query Editor session {#cancel-query}
+
+Take control of query execution and improve your productivity by canceling long-running queries. This action clears the Query Editor during a query run. Be aware, the query continues to execute in the background. If it is a CTAS query it will still generate an output dataset. To cancel the run in the editor and continue composing a SQL statement, select **[!UICONTROL Cancel query]** after executing a query.   
+
+![The Query Editor with [!UICONTROL Cancel query] highlighted.](../images/ui/query-editor/cancel-query-run.png)
+
+A confirmation dialog appears. Select **[!UICONTROL Confirm]** to cancel the query run.
+
+![The Cancel query confirmation dialog with Confirm highlighted.](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
+
 ### Result count {#result-count}
 
 The Query Editor has a maximum 50,000 row output. You can choose the number of rows are displayed at one time in the Query Editor console. To change the number of rows displayed in the console, select the **[!UICONTROL Result count]** dropdown and select from the 50, 100, 150, 300, and 500 options.
@@ -213,7 +223,11 @@ When you save a query in the Query Editor, a confirmation message pops up to not
 
 Queries that have been saved as a template can be scheduled from the Query Editor. Scheduling queries allows you to automate query runs on a custom cadence. You can schedule queries based on frequency, date, and time, and also choose an output dataset for your results if necessary. Query schedules can also be disabled or deleted through the UI.
 
-Schedules are set in the Query Editor. When using the Query Editor, you can only add a schedule to a query that has already been created, saved, and run. The same limitation does not apply to the [!DNL Query Service] API:
+Schedules are set in the Query Editor. When using the Query Editor, you can only add a schedule to a query that has already been created, saved, and run. The same limitation does not apply to the [!DNL Query Service] API.
+
+>[!NOTE]
+>
+>Scheduled queries that fail ten consecutive runs are automatically put in a [!UICONTROL Quarantined] status. A query with this status requires your intervention before any further executions can take place. See the [quarantined queries](./monitor-queries.md#quarantined-queries) documentation for more details. 
 
 See the query schedules documentation to learn how to [create query schedules in the UI](./query-schedules.md). Alternatively, to learn how to add schedules using the API, read the [scheduled queries endpoint guide](../api/scheduled-queries.md).
 
