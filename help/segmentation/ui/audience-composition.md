@@ -50,7 +50,7 @@ To add audiences to the Audience block. select **[!UICONTROL Add Audience]**.
 >
 >Please note that **only** audiences defined using the default merge policy will appear. 
 >
->Additionally, only audiences created using Segment Builder can be used. Audiences created Audience Composition and externally generated audiences are **not** available.
+>Additionally, only audiences created using Segment Builder can be used. Audiences created using Audience Composition and externally generated audiences are **not** available.
 
 A list of audiences appears. Select the audiences you want to include, followed by **[!UICONTROL Add]** to append them to your audience block.
 
@@ -100,7 +100,7 @@ If you exclude by audience, you can select which audiences you want to exclude b
 
 >[!IMPORTANT]
 >
->Only audiences created using Segment Builder can be used. Audiences created Audience Composition and externally generated audiences are **not** available.
+>Only audiences created using Segment Builder can be used. Audiences created using Audience Composition and externally generated audiences are **not** available.
 
 A list of audiences appears. Select **[!UICONTROL Add]** to add the audiences you want to exclude to your exclude block.
 
