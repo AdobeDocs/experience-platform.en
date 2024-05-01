@@ -28,7 +28,7 @@ With Adobe Experience Platform Identity Service and Real-Time Customer Profile, 
 
 For more information on use case scenarios for identity graph linking rules, read the document on [example scenarios](./example-scenarios.md).
 
-## Identity graph linking rules objectives
+## Identity graph linking rules
 
 With Identity graph linking rules you can:
 
@@ -39,38 +39,48 @@ With Identity graph linking rules you can:
 
 | Terminology | Description |
 | --- | --- |
-| Unique namespace | A unique namespace is a singular namespace within an identity graph. You can configure a namespace to be unique using the UI. Once a namespace is defined as unique, then a graph can only have one identity that contains that namespace. You cannot link a second identity that contains that same namespace to a graph, once the graph contains an identity with a unique namespace. |
-| Limits | |
+| Unique namespace | A unique namespace is a singular namespace within an identity graph. You can configure a namespace to be unique using the UI. Once a namespace is defined as unique, a graph can only have one identity that contains that namespace. You cannot link a second identity that contains that same namespace to a graph, once the graph contains an identity with a unique namespace. |
 | Namespace priority | Namespace priority refers to the relative importance of namespaces compared to one another. Namespace priority is configurable through the UI. You can rank namespaces in a given identity graph. The lowest ranked namespace is prioritized for deletion, once an identity graph reaches 50 linked identities. |
 | Identity optimization algorithm | The identity optimization algorithm ensures that guidelines created by configuring a unique namespace and namespace priorities are enforced. The algorithm also determines the primary identity of experience events. |
 
-### Limits
+### Unique namespace
 
-A unique namespace is an identifier that represents an individual, such as CRM ID, login ID, and hashed email. If a namespace is designated as unique, then a graph can only have one identity with that namespace (`limit=1`). This will prevent the merging of two disparate person identifiers within the same graph. 
+You can configure a namespace to be unique using the identity settings UI workspace. Doing so, informs the [!DNL Identity Optimization Algorithm] that a given graph may only have one identity that contains that unique namespace. This prevents the merging of two disparate person identifiers within the same graph.
 
-* If a limit is not configured, this could result in unwanted graph merges, such as two identities with a CRM ID namespace in a graph.
-* If a limit is not configured, the graph can add as many namespaces as needed as long as the graph is within the guardrails (50 identities/graph).
-* If a limit is configured, then the identity optimization algorithm will ensure that the limit is enforced.
+Consider the following scenario:
 
-### Identity optimization algorithm
+* Scott uses a tablet and opens his Google Chrome browser to go to nike<span>.com, where he signs in and browses for new basketball shoes.
+  * Behind the scenes, this scenario logs the following identities:
+    * An ECID namespace and value to represent the use of the browser
+    * A CRM ID namespace and value to represent the authenticated user (Scott signed in with his username and password combination).
+* His son Peter then uses the same tablet and also uses Google Chrome to go to nike<span>.com, where he signs in with his own account to browse for football equipment.
+  * Behind the scenes, this scenario logs the following identities:
+    * The same ECID namespace and value to represent the browser.
+    * A new CRM ID namespace and value to represent the authenticated user.
 
-The identity optimization algorithm is a rule that ensures that the limits are enforced. The algorithm honors the most recent links and removes the oldest links to make sure that a given graph stays within the limits that you have defined.
+If CRM ID was configured as a unique namespace, then the [!DNL Identity Optimization Algorithm] splits the  CRM IDs apart into two separate identity graphs, instead of merging them together.
 
-The following is a list of implications of the algorithm on associating anonymous events to known identifiers:
+If you do not configure a unique namespace, you may end up with:
 
-* The ECID will be associated to the last authenticated user if the following conditions are met:
-  * If CRM IDs are merged by ECID (shared device).
-  * If limits are configured to just one CRM ID. 
+* Unwanted graph merges, such as two identities each with a different CRM ID namespace in a graph.
+* A graph with any number of identities as long as the graph doesn't exceed the limit of 50 identities.
 
-For more information, read the document on [identity optimization algorithm](./identity-optimization-algorithm.md).
+You must configure a unique namespace to inform the [!DNL Identity Optimization Algorithm] to enforce limitations on the identity data that are ingested into a given identity graph.
 
-### Priority
+### Namespace priority
 
->[!IMPORTANT]
->
->Namespace priorities are currently not available for alpha.
+Namespace priority refers to the relative importance of namespaces compared to one another. Namespace priority is configurable through the UI. You can rank namespaces in a given identity graph. 
 
-You can use namespace priority to define which namespaces are more important than others. The priority that you set for your namespaces are then used to define primary identities, which is the identity that stores profile fragments (attribute and event data) in Real-Time Customer Profile. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
+<!-- The lowest ranked namespace is prioritized for deletion, once an identity graph reaches 50 linked identities. -->
+
+The priority that you set for your namespaces are then used to define primary identities, which is the identity that stores profile fragments (attribute and event data) in Real-Time Customer Profile. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
+
+Unique namespaces and namespace priorities are both configurable in the identity settings UI workspace. However, the effects of their configurations are different:
+
+| | Identity Service | Real-Time Customer Profile |
+| --- | --- | --- |
+| Unique namespace | In Identity Service, the [!DNL Identity Optimization Algorithm] refers to unique namespaces to determine the identity data that is ingested to a given identity graph.|
+| Namespace priority | | When an experience event is ingested in Profile, the namespace with the highest priority becomes the primary identity of the profile fragment. |
 
 * Limits and priority are independent configurations and do **not** affect each other:
   * Limits is an identity graph configuration in Identity Service.
@@ -104,6 +114,18 @@ If the following experience events are ingested into Experience Platform, the pr
 
 * If the identity map contains an ECID, IDFA, and AAID, then the event information will be stored against the IDFA (primary identity).
   * IDFA represents an Apple hardware device (e.g. iPhone), ECID and AAID both represent a web browser (Safari).
+
+### [!DNL Identity Optimization Algorithm]
+
+The [!DNL Identity Optimization Algorithm] is a rule that ensures that the limits are enforced. The algorithm honors the most recent links and removes the oldest links to make sure that a given graph stays within the limits that you have defined.
+
+The following is a list of implications of the algorithm on associating anonymous events to known identifiers:
+
+* The ECID will be associated to the last authenticated user if the following conditions are met:
+  * If CRM IDs are merged by ECID (shared device).
+  * If limits are configured to just one CRM ID. 
+
+For more information, read the document on [[!DNL Identity Optimization Algorithm]](./identity-optimization-algorithm.md).
 
 ## Next steps
 
