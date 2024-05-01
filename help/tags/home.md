@@ -23,6 +23,10 @@ Tags are offered to [!DNL Adobe Experience Cloud] customers as an included value
 
 ## Key features {#key-features}
 
+Use the in product help in the right panel to learn more about tags and view additional available resources.
+
+![Tags properties in the Data Collection UI.](./images/ui/tags-overview/tags-properties.png)
+
 ### Extensions {#extensions}
 
 An extension is a package of code (JavaScript, HTML, and CSS) that extends the tags functionality. Build, manage, and update your integrations using a virtually self-service interface. You can think of extensions as apps you use to achieve your tasks.
