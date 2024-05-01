@@ -1,8 +1,8 @@
 ---
 title: Expanded Activation Account Administration
 description: Learn how to perform administrative tasks on your Expanded Activation account, such as monitoring license usage and assigning the correct permissions.
+exl-id: ee0ec4b9-a083-447b-b7a7-e1307e90c646
 ---
-
 # Account administration
 
 To ingest audiences from Audience Manager and activate them to social and advertising destinations, you must first create an Expanded Activation user account and assign the account to the correct permission role.
