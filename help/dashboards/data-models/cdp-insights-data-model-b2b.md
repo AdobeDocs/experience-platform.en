@@ -3,6 +3,7 @@ title: Real-Time Customer Data Platform Insights Data Model B2B Edition
 description: Learn how to use SQL queries with the Real-Time Customer Data Platform Insights Data Models (B2B Edition) to customize your own Real-Time CDP reports for your marketing and KPI use cases.
 badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
 ---
 # Real-time Customer Data Platform Insights data model B2B Edition
 
