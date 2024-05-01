@@ -156,7 +156,7 @@ The image below contains the relevant data fields in each dataset.
 
 #### Audience size use case {#audience-size}
 
-The logic used for the [!UICONTROL Audience size] widget returns the total number of merged profiles within the selected audience at the time of the most recent snapshot. See the [[!UICONTROL Audience size] widget documentation](../guides/audiences#audience-size) for more information.
+The logic used for the [!UICONTROL Audience size] widget returns the total number of merged profiles within the selected audience at the time of the most recent snapshot. See the [[!UICONTROL Audience size] widget documentation](../guides/audiences.md#audience-size) for more information.
 
 The SQL that generates the [!UICONTROL Audience size] widget is seen in the collapsible section below.
 
