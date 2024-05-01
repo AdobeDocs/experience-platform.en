@@ -32,8 +32,17 @@ For more information on use case scenarios for identity graph linking rules, rea
 
 With Identity graph linking rules you can:
 
-* Create a single identity graph / merged profile for each user by configuring unique namespaces (limits), which will prevent two disparate person identifiers from merging into one identity graph.
+* Create a single identity graph / merged profile for each user by configuring unique namespaces, which will prevent two disparate person identifiers from merging into one identity graph.
 * Associate online, authenticated events to the person by configuring priorities
+
+### Terminology guide
+
+| Terminology | Description |
+| --- | --- |
+| Unique namespace | A unique namespace is a singular namespace within an identity graph. You can configure a namespace to be unique using the UI. Once a namespace is defined as unique, then a graph can only have one identity that contains that namespace. You cannot link a second identity that contains that same namespace to a graph, once the graph contains an identity with a unique namespace. |
+| Limits | |
+| Namespace priority | Namespace priority refers to the relative importance of namespaces compared to one another. Namespace priority is configurable through the UI. You can rank namespaces in a given identity graph. The lowest ranked namespace is prioritized for deletion, once an identity graph reaches 50 linked identities. |
+| Identity optimization algorithm | The identity optimization algorithm ensures that guidelines created by configuring a unique namespace and namespace priorities are enforced. The algorithm also determines the primary identity of experience events. |
 
 ### Limits
 
@@ -72,8 +81,6 @@ You can use namespace priority to define which namespaces are more important tha
 * Namespace priority determines the primary identity for experience events.
   * For profile records, you can use the schemas workspace in the Experience Platform UI to define identity fields, including the primary identity. Read the guide on [defining identity fields in the UI](../../xdm/ui/fields/identity.md) for more information.
 
->[!BEGINSHADEBOX]
-
 **Namespace priority example**
 
 Suppose that you have configured the following priority for your namespaces:
@@ -97,8 +104,6 @@ If the following experience events are ingested into Experience Platform, the pr
 
 * If the identity map contains an ECID, IDFA, and AAID, then the event information will be stored against the IDFA (primary identity).
   * IDFA represents an Apple hardware device (e.g. iPhone), ECID and AAID both represent a web browser (Safari).
-
->[!ENDSHADEBOX]
 
 ## Next steps
 
