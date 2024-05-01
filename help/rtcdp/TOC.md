@@ -76,7 +76,7 @@ role: Admin
     * [Offsite retargeting of unauthenticated users](./partner-data/offsite-retargeting.md)
   * Profile enrichment {#profile-enrichment}
     * [Supplement first-party profiles with partner-provided attributes](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-  * Personalization, Insights, and Engagement {#personalization-insights-engagement}
+  * Personalized insights and engagement {#personalization-insights-engagement}
     * [Intelligently re-engage your customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
     * [Intelligently re-engage your customers: Luma examples](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
 * [Experience Platform Release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
