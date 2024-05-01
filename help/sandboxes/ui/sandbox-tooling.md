@@ -165,7 +165,10 @@ You are returned to the [!UICONTROL Package object and dependencies] page. From 
 >
 >Currently, only Real-time Customer Data Platform objects are supported when exporting or importing an entire sandbox. Adobe Journey Optimizer objects such as journeys are not supported at this time.
 
-You can export all supported object types into a full sandbox package, then import the package across various sandboxes to replicate object configurations. This allows a sandbox to be reimported to reproduce all of the object's configurations once the sandbox has been reset. Alternatively, you can import the package into other sandboxes and utilize it as a blueprint sandbox to accelerate the development process.
+You can export all supported object types into a full sandbox package, then import the package across various sandboxes to replicate object configurations. For example, this functionality allows you to:
+
+- Reimport a sandbox to reproduce all of the object's configurations if you need to reset the sandbox
+- Import the package into other sandboxes and utilize it as a blueprint sandbox to accelerate the development process.
 
 ### Export an entire sandbox {#export-entire-sandbox}
 
