@@ -41,7 +41,7 @@ ORDER BY date_key limit 5000;
 
 +++
 
-## Accounts by industry {#accounts-by-industry}
+## New accounts by industry {#accounts-by-industry}
 
 Questions answered by this insight:
 
@@ -77,7 +77,7 @@ ORDER BY total_accounts DESC limit 5000;
 
 +++
 
-## Accounts by type {#accounts-by-type}
+## New accounts by type {#accounts-by-type}
 
 Questions answered by this insight:
 
@@ -123,7 +123,7 @@ LIMIT  5000;
 
 +++
 
-## Opportunities by person role {#opportunities-by-person-role}
+## New opportunities by person role {#opportunities-by-person-role}
 
 Questions answered by this insight:
 
@@ -145,7 +145,7 @@ LIMIT  5000;
 
 +++
 
-## Opportunities by revenue {#opportunities-by-revenue}
+## New opportunities by revenue {#opportunities-by-revenue}
 
 Questions answered by this insight:
 
@@ -185,7 +185,7 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 +++
 
-## Opportunities by status & stage {#opportunities-by-status-and-stage}
+## New opportunities by status & stage {#opportunities-by-status-and-stage}
 
 Questions answered by this insight:
 
@@ -218,7 +218,7 @@ FROM   opportunities_by_isclosed limit 5000;
 
 +++
 
-## Opportunities won {#opportunities-won}
+## New opportunities won {#opportunities-won}
 
 Questions answered by this insight:
 

@@ -25,15 +25,15 @@ Updates to existing features in Experience Platform:
 
 ## Dashboards {#dashboards}
 
-Adobe Experience Platform provides multiple dashboards through which you can view important insights about your organization’s data, as captured during daily snapshots.
+Adobe Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots.
 
 **New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| Real-Time Customer Data Platform B2B insights | Explore pre-configured Real-Time CDP B2B data insights on accounts and opportunities to help you understand your data and inform your business decisions. You can also build your own insights using the Real-Time CDP B2B Data Model to visualize and explore your data and save your custom visualizations in your dashboard. |
+| Real-Time Customer Data Platform B2B insights | Explore pre-configured [Real-Time CDP B2B data insights on accounts and opportunities](../../dashboards/insights/account-profiles.md) to help you understand your data and inform your business decisions. You can also [build your own insights using the Real-Time CDP B2B Data Model](../../dashboards/data-models/cdp-insights-data-model-b2c.md) to visualize and explore your data and save your custom visualizations in your dashboard. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
 
@@ -111,14 +111,14 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 
 | Feature | Description |
 | --- | --- |
-| Query Quarantine | Automatically isolate failed query executions to prevent disruptions and maintain consistent performance. |
-| Cancel query | Take control of query execution and improve your productivity by canceling long-running queries. |
-| Scheduled query alerts | Stay informed with proactive notifications while scheduling queries, ensuring efficient and timely task management. You can subscribe to alerets either when creating a query or using the inline actions for existing scheduled queries. |
-| Improved scheduled query navigation | Easily navigate between query templates and scheduled runs for increased productivity.  |
-| Extended Query Output | Access up to 500 rows of query results within the console for deeper analysis of your data. |
-| Legacy Query Editor sunset | As of 30-April-2024 the Enhanced Query Editor has become the default editor for all users. The legacy editor will be deprecated on 30-May-2024 and no longer be available for use. |
+| Query Quarantine | Automatically isolate failed query executions to prevent disruptions and maintain consistent performance. See the [query quarantine](../../query-service/ui/query-schedules.md#quarantine) documentation for more information.|
+| Cancel query | Take control of query execution and improve your productivity by canceling long-running queries.See the [cancel query](../../query-service/ui/user-guide.md#cancel-query) documentation for more information. |
+| Scheduled query alerts | Stay informed with proactive notifications while scheduling queries, ensuring efficient and timely task management. You can [subscribe to alerts either when creating a query](../../query-service/ui/query-schedules.md#alerts-for-query-status) or using the inline actions for existing scheduled queries. See the [subscribe to alerts with inline actions](../../query-service/ui/monitor-queries.md#alert-subscription) documentation for more information.|
+| Improved scheduled query navigation | Easily navigate between query templates and scheduled runs for increased productivity. See the documentation on [viewing scheduled query runs](../../query-service/ui/query-schedules.md#scheduled-query-runs) for more information. |
+| Extended Query Output | Access up to 500 rows of query results within the console for deeper analysis of your data.See the [result count](../../query-service/ui/user-guide.md#result-count) documentation for more information. |
+| Legacy Query Editor sunset | As of 30-April-2024 the Enhanced Query Editor has become the default editor for all users. The legacy editor will be deprecated on 30-May-2024 and no longer be available for use. See the [Query Editor user guide](../../query-service/ui/user-guide.md) for more information. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 For more information on Query Services, refer to the [Query Service overview](../../query-service/home.md).
 
