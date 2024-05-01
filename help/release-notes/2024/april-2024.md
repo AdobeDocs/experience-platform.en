@@ -68,12 +68,12 @@ To learn more about data collections, read the [data collection overview](../../
 | Functionality | Description |
 | ----------- | ----------- |
 | `isRequired` parameter now available for nested customer data fields in Destination SDK | When configuring a destination in Destination SDK, you can now [set nested customer data fields as required](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). This way, users setting up your destination cannot proceed with their activation flow until they select a value for that field.|
+| Edge segmentation is not a mandatory requirement anymore when setting up an Adobe Target destination with Web SDK | Previously, when configuring an [Adobe Target destination](/help/destinations/catalog/personalization/adobe-target-connection.md) with Web SDK, the datastream had to be enabled for personalization and edge segmentation. The requirement that the datastream be enabled for edge segmentation [has now been removed](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Note that this integration pattern only allows you to benefit from a subset of personalization use cases when using Adobe Target with Real-Time CDP. Read more about the [use cases enabled by integration type](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters). |
+| [!BADGE Beta]{type=Informative} Remove multiple audiences and datasets from activation flows | You can now select and remove multiple audiences and datasets from destination activation flows. See the [destination details](../../destinations/ui/destination-details-page.md#bulk-remove) and [dataset export](../../destinations/ui/export-datasets.md) documentation for more details. |
 
 {style="table-layout:auto"}
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
-
-<!--| [!BADGE Beta]{type=Informative} Remove multiple audiences and datasets from activation flows | You can now select and remove multiple audiences and datasets from destination activation flows. See the [destination details](../../destinations/ui/destination-details-page.md#bulk-remove) and [dataset export](../../destinations/ui/export-datasets.md) documentation for more details. |-->
 
 ## Identity Service {#identity-service}
 
