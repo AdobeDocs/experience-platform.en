@@ -44,15 +44,15 @@ The diagram below displays the relevant data fields in each dataset, their data 
 
 ![The entity relational diagram for the Account Profile model.](../images/data-models/account-profile-model.png)
 
-#### The Accounts By Industry use case {#accounts-by-industry}
+#### The new accounts by industry use case {#accounts-by-industry}
 
-The logic used for the [!UICONTROL Accounts By Industry] insight returns the top five industries according to their number of account profiles and their relative size to each other. See the [[!UICONTROL Accounts By Industry] widget documentation](../guides/account-profiles.md#accounts-by-industry) for more information. 
+The logic used for the [!UICONTROL New accounts by industry] insight returns the top five industries according to their number of account profiles and their relative size to each other. See the [[!UICONTROL Accounts By Industry] widget documentation](../guides/account-profiles.md#accounts-by-industry) for more information. 
 
 >[!TIP]
 >
 >You can customize this SQL query to return more or less than the top five industries.
 
-The SQL that generates the [!UICONTROL Accounts By Industry] insight is seen in the collapsible section below.
+The SQL that generates the [!UICONTROL New accounts by industry] insight is seen in the collapsible section below.
 
 +++SQL query
 
@@ -89,11 +89,11 @@ LIMIT 5000;
 
 +++
 
-#### The Accounts By Type use case {#accounts-by-type}
+#### The New accounts by type use case {#accounts-by-type}
 
-The logic used for the [!UICONTROL Accounts By Type] insight returns the numerical breakdown of accounts by their type. This insight can help to guide business strategy and operations, including resource allocation or marketing strategies. See the [[!UICONTROL Accounts By Type] widget documentation](../guides/account-profiles.md#accounts-by-type) for more information. 
+The logic used for the [!UICONTROL New accounts by type] insight returns the numerical breakdown of accounts by their type. This insight can help to guide business strategy and operations, including resource allocation or marketing strategies. See the [[!UICONTROL New accounts by type] widget documentation](../guides/account-profiles.md#accounts-by-type) for more information. 
 
-The SQL that generates the [!UICONTROL Accounts By Type] insight is seen in the collapsible section below.
+The SQL that generates the [!UICONTROL New accounts by type] insight is seen in the collapsible section below.
 
 +++SQL query
 
