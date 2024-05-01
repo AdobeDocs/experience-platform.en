@@ -76,12 +76,8 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 | [!UICONTROL Apply access labels] | Audience composition, Custom upload, Segmentation Service | Manages the access labels that belong to the audience. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Publish] | Custom upload, Segmentation Service | Publishes the selected audience. For more information on lifecycle status management, please read the [lifecycle state section of the Segmentation FAQ](../faq.md#lifecycle-states). |
 | [!UICONTROL Deactivate] | Custom upload, Segmentation Service | Deactivates the selected audience. For more information on lifecycle status management, please read the [lifecycle state section of the Segmentation FAQ](../faq.md#lifecycle-states). |
-| [!UICONTROL Delete] | Audience composition, Custom upload, Segmentation Service | Deletes the selected audience. |
+| [!UICONTROL Delete] | Audience composition, Custom upload, Segmentation Service | Deletes the selected audience. Audiences that are used in downstream destinations or are dependents in other audiences **cannot** be deleted. For more information on audience deletion, please read the [segmentation FAQ](../faq.md#lifecycle-states). |
 | [!UICONTROL Add to package] | Audience composition, Custom upload, Segmentation Service | Moves the audience between sandboxes. For more information on this feature, please read the [sandbox tooling guide](../../sandboxes/ui/sandbox-tooling.md). |
-
->[!NOTE]
->
-> You will **not** be able to delete an audience that is used in a destination activation.
 
 On the top of the page are options to add all audiences to a schedule, import an audience, create a new audience, and view a breakdown of the update frequency. 
 
@@ -405,9 +401,9 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 
 | Action | Description |
 | ------ | ----------- |
-| Duplicate | A |
-| Manage access | A |
-| Delete | A |
+| Duplicate | Copies the selected audience. |
+| Manage access | Manages the access labels that belong to the audience. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
+| Delete | Deletes the selected audience. Audiences that are used in downstream destinations or are dependents in other audiences **cannot** be deleted. For more information on audience deletion, please read the [segmentation FAQ](../faq.md#lifecycle-states). |
 
 You can select the ![Customize table](../images/ui/overview/customize-table.png) icon to change which fields are displayed.
 
