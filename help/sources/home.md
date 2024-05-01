@@ -57,7 +57,7 @@ Experience Platform provides support for ingesting data from a third-party adver
 
 ### Analytics {#analytics}
 
-Experience Platform provides support for ingesting data from a third-party analytics platform. See the following related documents for more information:
+Experience Platform provides support for ingesting data from a third-party analytics platform. Read the following related documents for more information:
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE Streaming]{type=Positive}

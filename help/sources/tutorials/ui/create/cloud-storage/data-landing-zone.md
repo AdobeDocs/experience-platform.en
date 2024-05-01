@@ -1,5 +1,4 @@
 ---
-keywords: Experience Platform;home;popular topics;Data Landing Zone;data landing zone
 title: Connect Data Landing Zone to Platform using the UI
 description: Learn how to create a Data Landing Zone source connector using the Platform user interface.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
