@@ -350,6 +350,15 @@ When importing the externally generated audience, you must select one of the col
 
 ![The [!UICONTROL Audience details] page is displayed.](../images/ui/overview/import-audience-audience-details.png)
 
+You can also optionally add some extra details to your externally generated audience, including giving it an ID, defining its merge policy, or editing its column data type.
+
+>[!NOTE]
+>
+>If you use a custom external audience ID, it must adhere to the following guidelines:
+>
+> - It **must** start with a letter (a-z or A-Z), underscore (_), or a dollar sign ($).
+> - All subsequent characters can be alphanumeric (a-z, A-Z, 0-9), underscores (_), or dollar signs ($).
+
 After filling in your audience details, select **[!UICONTROL Next]**.
 
 ![The [!UICONTROL Next] button is highlighted on the [!UICONTROL Audience details] page.](../images/ui/overview/import-audience-filled-details.png)
@@ -391,6 +400,14 @@ Select the **[!UICONTROL Compositions]** tab to see a list of all the audiences 
 ![A list of audiences created in Audience Composition for your organization.](../images/ui/overview/compositions.png)
 
 By default, this view lists information about the audiences including the name, status, created date, created by, last updated date, and last updated by.
+
+Next to each audience is an ellipsis icon. Selecting this displays a list of available quick actions for the audience.
+
+| Action | Description |
+| ------ | ----------- |
+| Duplicate | A |
+| Manage access | A |
+| Delete | A |
 
 You can select the ![Customize table](../images/ui/overview/customize-table.png) icon to change which fields are displayed.
 
