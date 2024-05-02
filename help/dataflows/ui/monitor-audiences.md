@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor segments;monitor dataflows;dataflows;segmentation
-description: Segmentation allows you to create segments and audiences from your Real-Time Customer Profile data. This tutorial provides instructions on how you can monitor dataflows during segmentation using the Experience Platform user interface.
-title: Monitor Dataflows for Segments in the UI
+description: Learn how you can monitor dataflows during segmentation using the Experience Platform user interface.
+title: Monitor Dataflows for Audiences in the UI
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 ---
-# Monitor dataflows for segments in the UI
+# Monitor dataflows for audiences in the UI
 
-Segmentation Service allows you to create segments and audiences from your Real-Time Customer Profile data in Adobe Experience Platform. Platform provides dataflows to transparently track this flow of data from sources to destinations.
+Segmentation Service allows you to create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. Platform provides dataflows to transparently track this flow of data from sources to destinations.
 
-The monitoring dashboard provides you with a visual representation of the data's activity within a segment, including the status of your data's segmentation. This tutorial provides instructions on how you can use the monitoring dashboard to monitor your data's segmentation using the Experience Platform user interface, allowing you to track the status of segment activation, evaluation, and export jobs.
+The monitoring dashboard provides you with a visual representation of the data's activity within an audience, including the status of your data's segmentation. This tutorial provides instructions on how you can use the monitoring dashboard to monitor your data's segmentation using the Experience Platform user interface, allowing you to track the status of audience activation, evaluation, and export jobs.
 
 ## Getting started {#getting-started}
 
@@ -17,78 +16,80 @@ This guide requires a working understanding of the following components of Adobe
 
 - [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
   - [Dataflow runs](../../sources/notifications.md): Dataflow runs are the recurring scheduled jobs based on the frequency configuration of selected dataflows.
-- [Segmentation](../../segmentation/home.md): Segmentation allows you to create segments and audiences from your Real-Time Customer Profile data. 
-  - [Activation jobs](../../destinations/ui/activation-overview.md): An activation job is used to activate your segment to a specified destination.
-  - [Evaluation jobs](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): An evaluation job is an asynchronous process that runs creates an audience segment based on the specified segment.
-  - [Export jobs](../../segmentation/api/export-jobs.md): An export job is an asynchronous processes that are used to persist audience segment members to datasets.
+- [Segmentation](../../segmentation/home.md): Segmentation allows you to create audiences from your Real-Time Customer Profile data. 
+  - [Activation jobs](../../destinations/ui/activation-overview.md): An activation job is used to activate your audience to a specified destination.
+  - [Evaluation jobs](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): An evaluation job is an asynchronous process that evaluates the audience.
+  - [Export jobs](../../segmentation/api/export-jobs.md): An export job is an asynchronous processes that are used to persist audience members to datasets.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Monitoring segments dashboard {#monitoring-segments-dashboard}
+## Monitoring audiences dashboard {#monitoring-audiences-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
->title="Segments"
->abstract="The segments view contains information on all your organization's segments, with further information about their activation and evaluation jobs."
+>title="Audiences"
+>abstract="The audiences view contains information on all your organization's audiences, with further information about their activation and evaluation jobs."
 
-To access the **[!UICONTROL Segments]** dashboard, select **[!UICONTROL Monitoring]** in the left navigation. Once on the **[!UICONTROL Monitoring]** page, select the **[!UICONTROL Segments]** card. 
+To access the **[!UICONTROL Audiences]** dashboard, select **[!UICONTROL Monitoring]** in the left navigation. Once on the **[!UICONTROL Monitoring]** page, select the **[!UICONTROL Audiences]** card. 
 
-![The Segments card. Information about the last evaluation job and the last export job is shown.](../assets/ui/monitor-segments/segment-card-monitoring.png)
+![The Audiences card. Information about the last evaluation job and the last export job is shown.](../assets/ui/monitor-segments/segment-card-monitoring.png) UPDATE IMAGE
 
-On the main **[!UICONTROL Segments]** dashboard, the **[!UICONTROL Segments]** card shows the status and date of the last evaluation job and the last export job. 
+On the main **[!UICONTROL Audiences]** dashboard, the **[!UICONTROL Audiences]** card shows the status and date of the last evaluation job and the last export job. 
 
-The dashboard itself contains metrics for both segments and segment jobs. By default, the dashboard will show the segment metrics for the last 24 hours. To learn more about the segment jobs view, please read the [monitoring segment jobs](#monitoring-segment-jobs-dashboard) section.
+The dashboard itself contains metrics for both audiences and segmentation jobs. By default, the dashboard will show the audience metrics for the last 24 hours. To learn more about the segmentation jobs view, please read the [monitoring segmentation jobs](#monitoring-segmentation-jobs-dashboard) section.
 
 >[!IMPORTANT]
 >
->Currently, only segments that are activated to [batch (file-based) destinations](../../destinations/destination-types.md#file-based) are supported for the monitoring segments dashboard.
+>Currently, only audiences that are activated to [batch (file-based) destinations](../../destinations/destination-types.md#file-based) are supported for the monitoring audiences dashboard.
 
-![The segments dashboard. Information about the different segments in your organization and sandbox are displayed.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
-
-The following metrics are available for this dashboard view:
-
-| Metric | Description |
-| ------ | ----------- |
-| **[!UICONTROL Segment name]** | The name of the segment. |
-| **[!UICONTROL Last evaluation timestamp]** | The date and time that the segment's last evaluation job ran. |
-| **[!UICONTROL Last evaluation status]** | The status of the segment's last evaluation job. Possible values include **[!UICONTROL Success]**, **[!UICONTROL No runs]**, and **[!UICONTROL Failed]**.|
-| **[!UICONTROL Last evaluation profiles]** | The number of profiles that were evaluated in the segment's last evaluation job. |
-| **[!UICONTROL Last activation timestamp]** | The date and time that the segment's last activation job ran. |
-| **[!UICONTROL Last activation status]** | The status of the segment's last activation job. Possible values include **[!UICONTROL Success]**, **[!UICONTROL No runs]**, and **[!UICONTROL Failed]**. | 
-| **[!UICONTROL Last activation identities]** | The number of identities that were activated in the segment's last activation job. |
-| **[!UICONTROL Last activation destination]** | The name of the destination that the segment's last activation job activated to. |
-
-You can filter the results to a specific segment and view its segment jobs by selecting the filter icon (![The filter icon.](../assets/ui/monitor-segments/filter-icon.png)). The segment jobs are sorted in chronological order, with the most recent segment jobs appearing first.
-
-![The filter icon is highlighted. Selecting this allows you to view the segment jobs for the specified segment.](../assets/ui/monitor-segments/filter-segment.png)
-
-The filtered segment dashboard appears. The **[!UICONTROL Segments]** card shows the status and date of the last evaluation job and the last activation job. 
-
-![The Segments card. Information about the last evaluation job and the last activation job is shown.](../assets/ui/monitor-segments/specified-segment-card.png)
-
-The dashboard itself displays the time and status of the last evaluation and activation jobs, a graph showing the profile count of the segment evaluation, and metrics for the segment jobs that were run. By default, the dashboard shows segment job metrics for the last 24 hours.
-
-![The filtered segment dashboard. Information about the various segment jobs that have run for this segment is displayed.](../assets/ui/monitor-segments/filter-specified-segment.png)
+![The audiences dashboard. Information about the different audiences in your organization and sandbox are displayed.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png) UPDATE IMAGE
 
 The following metrics are available for this dashboard view:
 
 | Metric | Description |
 | ------ | ----------- |
-| **[!UICONTROL Job start]** | The date and time when the segment job started. |
-| **[!UICONTROL Type]** | Indicates the type of the segment job. The two supported job types are **activation** and **evaluation** jobs. |
-| **[!UICONTROL Job complete]** | The date and time when the segment job completed. |
-| **[!UICONTROL Processing time]** | The amount of time it took for the segment job to complete. |
-| **[!UICONTROL Job status]** | The status of the segment job. Supported values include **[!UICONTROL Success]**, **[!UICONTROL In Progress]**, and **[!UICONTROL Failed]**. |
-| **[!UICONTROL Profile count]** | The number of profiles that the segment job is evaluating. Each user should have a unique profile. |
-| **[!UICONTROL Identity count]** | The number of identities that the segment job is activating. Each profile can have multiple identities. For example, a profile could have an email, phone number, and a loyalty number as identities. |
-| **[!UICONTROL Destination name]** | The name of the destination that the segment job is being activated to. |
+| **[!UICONTROL Audiennce name]** | The name of the audience. |
+| **[!UICONTROL Data type]** | The type of audience. |
+| **[!UICONTROL Last evaluation timestamp]** | The date and time that the audience's last evaluation job ran. |
+| **[!UICONTROL Last evaluation status]** | The status of the audience's last evaluation job. Possible values include **[!UICONTROL Success]**, **[!UICONTROL No runs]**, and **[!UICONTROL Failed]**.|
+| Last evaluation method | The evaluation method of the audience. Possible values include batch, streaming, and edge. (NEED TO CONFIRM) |
+| **[!UICONTROL Last evaluation profiles]** | The number of profiles that were evaluated in the audience's last evaluation job. |
+| **[!UICONTROL Last activation timestamp]** | The date and time that the audience's last activation job ran. |
+| **[!UICONTROL Last activation status]** | The status of the audience's last activation job. Possible values include **[!UICONTROL Success]**, **[!UICONTROL No runs]**, and **[!UICONTROL Failed]**. | 
+| **[!UICONTROL Last activation identities]** | The number of identities that were activated in the audience's last activation job. |
+| **[!UICONTROL Last activation destination]** | The name of the destination that the audience's last activation job activated to. |
 
-You can further filter to a specific segment job and see its details by selecting the filter icon (![The filter icon.](../assets/ui/monitor-segments/filter-icon.png)). There are two different kinds of segment jobs that can be filtered: activation jobs and evaluation jobs.
+You can filter the results to a specific audience and view its segmentation jobs by selecting the filter icon (![The filter icon.](../assets/ui/monitor-segments/filter-icon.png)). The segmentation jobs are sorted in chronological order, with the most recent segmentation jobs appearing first.
+
+![The filter icon is highlighted. Selecting this allows you to view the segmentation jobs for the specified audience.](../assets/ui/monitor-segments/filter-segment.png) UPDATE IMAGE
+
+The filtered audience dashboard appears. The **[!UICONTROL Audiences]** card shows the status and date of the last evaluation job and the last activation job. 
+
+![The Audiences card. Information about the last evaluation job and the last activation job is shown.](../assets/ui/monitor-segments/specified-segment-card.png) UPDATE IMAGE
+
+The dashboard itself displays the time and status of the last evaluation and activation jobs, a graph showing the profile count of the audience evaluation, and metrics for the segmentation jobs that were run. By default, the dashboard shows segmentation job metrics for the last 24 hours.
+
+![The filtered audience dashboard. Information about the various segmentation jobs that have run for this audience is displayed.](../assets/ui/monitor-segments/filter-specified-segment.png) UPDATE IMAGE
+
+The following metrics are available for this dashboard view:
+
+| Metric | Description |
+| ------ | ----------- |
+| **[!UICONTROL Job start]** | The date and time when the segmentation job started. |
+| **[!UICONTROL Type]** | Indicates the type of the segmentation job. The two supported job types are **activation** and **evaluation** jobs. |
+| **[!UICONTROL Job complete]** | The date and time when the segmentation job completed. |
+| **[!UICONTROL Processing time]** | The amount of time it took for the segmentation job to complete. |
+| **[!UICONTROL Job status]** | The status of the segmentation job. Supported values include **[!UICONTROL Success]**, **[!UICONTROL In Progress]**, and **[!UICONTROL Failed]**. |
+| **[!UICONTROL Profile count]** | The number of profiles that the segmentation job is evaluating. Each user should have a unique profile. |
+| **[!UICONTROL Identity activated]** | The number of identities that the segmentation job is activating. Each profile can have multiple identities. For example, a profile could have an email, phone number, and a loyalty number as identities. |
+| **[!UICONTROL Destination name]** | The name of the destination that the segmentation job is being activated to. |
+
+You can further filter to a specific segmentation job and see its details by selecting the filter icon (![The filter icon.](../assets/ui/monitor-segments/filter-icon.png)). There are two different kinds of segmentation jobs that can be filtered: activation jobs and evaluation jobs.
 
 ### Activation job details {#activation-job-details}
 
-The activation job dataflow run details page shows information on the run's metrics, dataflow run errors, and segments that are related to the segment job. An activation job is used to activate your segment for a specified destination. By default, the details page shows the dataflow run errors.
+The activation job dataflow run details page shows information on the run's metrics, dataflow run errors, and audiences that are related to the segmentation job. An activation job is used to activate your audience for a specified destination. By default, the details page shows the dataflow run errors.
 
-![The filtered segment dashboard. Information about the various segment jobs that have run for this segment is displayed.](../assets/ui/monitor-segments/activation-job-details.png)
+![The filtered segment dashboard. Information about the various segment jobs that have run for this segment is displayed.](../assets/ui/monitor-segments/activation-job-details.png) UPDATE IMAGE
 
 The following metrics are available for this dashboard view:
 
