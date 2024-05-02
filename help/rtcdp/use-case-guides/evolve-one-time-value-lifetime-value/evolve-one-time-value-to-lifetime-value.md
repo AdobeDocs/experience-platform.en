@@ -382,7 +382,7 @@ The order confirmation journey focuses on whether a purchase was made through th
 
 Use the suggested events, fields, and actions below in your confirmation journey:
 
-* Event 4: Online Purchases
+* The journey is triggered by an online purchase event
     * Schema: Customer Digital Transactions
     * Fields:
         * `EventType`
