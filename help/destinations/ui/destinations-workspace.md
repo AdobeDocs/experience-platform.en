@@ -104,7 +104,7 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 |[!UICONTROL Created] | The date and UTC time when the activation flow to the destination was created. Select the up/down arrow symbol to sort the activation flows by newest first or oldest first.|
 | [!UICONTROL Status] | `Enabled` or `Disabled`. Indicates whether data is being activated to this destination.|
 
-Click on a destination row to bring up more information about the destination in the right rail.
+Click on a destination row to bring up more information about the destination in the right rail, such as destination ID, description, the number of activated audiences, and more.
 
 ![Click destination row](../assets/ui/workspace/click-destination-row.png)
 

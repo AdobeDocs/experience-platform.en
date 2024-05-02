@@ -9,6 +9,10 @@ exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
 
 Interactive data collection endpoints receive a single event and are used when the client expects a response to be returned by the Adobe Experience Platform Edge Network server. These endpoints can also return content from other Edge Network services, while performing data collection.
 
+>[!IMPORTANT]
+>
+>The `/interact` endpoint is designed primarily to be used by the Experience Platform SDKs. This endpoint is subject to additive changes and its behavior can evolve without notice. For example, new items might be added to the response payload in the future.
+
 The server response includes one or more `Handle` objects, as shown below.
 
 ## API call example

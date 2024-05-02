@@ -138,6 +138,12 @@ These attributes can also be viewed as a JSON object by selecting to **[!UICONTR
 
 ![The Attributes tab is highlighted. The profile attributes are displayed.](../images/user-guide/attributes.png)
 
+To view the attributes that are available on the Edge, select **[!UICONTROL Edge]** on the data location selector.
+
+![The data location selector within the attributes tab is highlighted.](../images/user-guide/attributes-select.png)
+
+For more information on edge profiles, please read the [edge profiles documentation](../edge-profiles.md).
+
 ### Events tab
 
 The **[!UICONTROL Events]** tab contains data from the 100 most recent ExperienceEvents associated with the customer. This data could include email opens, cart activities, and page views. Selecting **[!UICONTROL View all]** for any individual event provides additional fields and values captures as part of the event.
@@ -152,7 +158,11 @@ The **[!UICONTROL Audience membership]** tab displays a list with the name and d
 
 For more information about segmentation in Experience Platform, please refer to the [Adobes Experience Platform Segmentation Service documentation](../../segmentation/home.md).
 
-![The Audience membership tab is highlighted. The profile's audience membership details are displayed.](../images/user-guide/segment-membership.png)
+![The Audience membership tab is highlighted. The profile's audience membership details are displayed.](../images/user-guide/audience-membership.png)
+
+To view the audience membership of the profiles that are available on the Edge, select **[!UICONTROL Edge]** in the data location selector. More information about edge segmentation can be found in the [edge segmentation guide](../../segmentation/ui/edge-segmentation.md).
+
+![The data location selector within the audience membership tab is highlighted.](../images/user-guide/audience-membership-select.png)
 
 ## Merge policies
 
@@ -174,9 +184,9 @@ For more information on union schemas, please visit the [union schema UI guide](
 
 From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Computed attributes]** tab to view a list of computed attributes that belong to your organization.
 
-For more information on computed attributes, please read the [computed attributes overview](../computed-attributes/overview.md). For more information on how to use computed attributes within the Platform UI, please read the [computed attributes UI guide](../computed-attributes/ui.md).
+![The Computed attributes tab is highlighted.](../images/user-guide/computed-attributes.png)
 
-IMAGE
+For more information on computed attributes, please read the [computed attributes overview](../computed-attributes/overview.md). For more information on how to use computed attributes within the Platform UI, please read the [computed attributes UI guide](../computed-attributes/ui.md).
 
 ## Next steps
 
