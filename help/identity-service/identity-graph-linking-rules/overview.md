@@ -39,7 +39,7 @@ With Identity graph linking rules you can:
 
 | Terminology | Description |
 | --- | --- |
-| Unique namespace | A unique namespace is a singular namespace within an identity graph. You can configure a namespace to be unique using the UI. Once a namespace is defined as unique, a graph can only have one identity that contains that namespace. You cannot link a second identity that contains that same namespace to a graph, once the graph contains an identity with a unique namespace. |
+| Unique namespace | A unique namespace is an identity namespace that has been set up to be distinct within the context of an identity graph. You can configure a namespace to be unique using the UI. Once a namespace is defined as unique, a graph can only have one identity that contains that namespace. You cannot link a second identity that contains that same namespace to a graph, once the graph contains an identity with a unique namespace. |
 | Namespace priority | Namespace priority refers to the relative importance of namespaces compared to one another. Namespace priority is configurable through the UI. You can rank namespaces in a given identity graph. The lowest ranked namespace is prioritized for deletion, once an identity graph reaches 50 linked identities. |
 | Identity optimization algorithm | The identity optimization algorithm ensures that guidelines created by configuring a unique namespace and namespace priorities are enforced. The algorithm also determines the primary identity of experience events. |
 
@@ -82,8 +82,8 @@ Unique namespaces and namespace priorities are both configurable in the identity
 | Unique namespace | In Identity Service, the [!DNL Identity Optimization Algorithm] refers to unique namespaces to determine the identity data that is ingested to a given identity graph.|
 | Namespace priority | | When an experience event is ingested in Profile, the namespace with the highest priority becomes the primary identity of the profile fragment. |
 
-* Limits and priority are independent configurations and do **not** affect each other:
-  * Limits is an identity graph configuration in Identity Service.
+* Limits (Unique Namespace) and priority are independent configurations and do **not** affect each other:
+  * Limits (Unique Namespace) are an identity graph configuration in Identity Service.
   * Priority is a profile fragment configuration on Real-Time Customer Profile.
   * Priority does **not** affect identity graph system guardrails. 
 * **Namespace priority is a numerical value** assigned to a namespace indicating its relative importance. This is a property of a namespace.
@@ -114,6 +114,11 @@ If the following experience events are ingested into Experience Platform, the pr
 
 * If the identity map contains an ECID, IDFA, and AAID, then the event information will be stored against the IDFA (primary identity).
   * IDFA represents an Apple hardware device (e.g. iPhone), ECID and AAID both represent a web browser (Safari).
+
+| What you can do | What you cannot do |
+| --- | --- |
+| You can configure any number of namespaces to be unique | |
+| You can configure the priority ordering of person namespaces in any way you would like. (i.e. cross-device ID > Phone > Email in any order) | You cannot configure a device or cookie namespace to have a higher priority than any person namespace. |
 
 ### [!DNL Identity Optimization Algorithm]
 
