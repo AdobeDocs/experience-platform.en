@@ -180,14 +180,13 @@ To update a [!DNL Target] profile, ensure that the profile data is passed with t
 
 Typical [!DNL Web SDK] code using this command looks like the following:
 
-**Save Profile or entity parameters in prefetch mode**
+**Delay saving Profile or entity parameters until content has been displayed**
 
-To delay persisting attributes in the profile until the content has been displayed, set `data.adobe.target._save=false`. 
+To delay recording attributes in the profile until the content has been displayed, set `data.adobe.target._save=false`. 
 
-For example, your website prefetches three mboxes corresponding to three category links on the website (Men, Women and Kids) and you want to track the category the user eventually visited. Send these requests with the `__save` flag set to `false` to avoid persisting the category at the time the content is requested. After the content has been visualized, send the proper payload (including the `eventToken` and `stateToken`) for the proper attributes to be recorded.
+For example, your website contains three mboxes corresponding to three category links on the website (Men, Women and Kids) and you want to track the category the user eventually visited. Send these requests with the `__save` flag set to `false` to avoid persisting the category at the time the content is requested. After the content has been visualized, send the proper payload (including the `eventToken` and `stateToken`) for the proper attributes to be recorded.
 
-Save profile or entity attributes by default with:
-
+<!--Save profile or entity attributes by default with:
 ```js
 alloy ( "sendEvent" , {
   renderDecisions : true,
@@ -204,6 +203,7 @@ alloy ( "sendEvent" , {
   }
 } ) ; 
 ```
+-->
 
 The example below sends a trackEvent-style message, executes profile scripts, saves attributes, and immediately records the event.
 
