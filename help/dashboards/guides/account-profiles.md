@@ -61,16 +61,20 @@ The account profile information displayed on the [!UICONTROL Details] tab has be
 
 Adobe provides standard widgets that you can use to visualize different metrics related to your account profiles.
 
+>[!IMPORTANT]
+>
+>If you do not provide a date filter, the default behavior of insights analyzes data added from the previous year up to today.
+
 To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
 * [Account profiles added](#account-profiles-added)
-* [Accounts by industry](#accounts-by-industry)
-* [Accounts by type](#accounts-by-type)
+* [New accounts by industry](#accounts-by-industry)
+* [New accounts by type](#accounts-by-type)
 * [Opportunities added](#opportunities-added)
-* [Opportunities by person role](#opportunities-by-person-role)
-* [Opportunities by revenue](#opportunities-by-revenue)
-* [Opportunities by status & stage](#opportunities-by-status-&-stage)
-* [Opportunities won](#opportunities-won)
+* [New opportunities by person role](#opportunities-by-person-role)
+* [New opportunities by revenue](#opportunities-by-revenue)
+* [New opportunities by status & stage](#opportunities-by-status-&-stage)
+* [New opportunities won](#opportunities-won)
 * [Predictive scoring distribution](#predictive-scoring-distribution)
 * [Predictive scoring top influential factors](#predictive-scoring-top-influential-factors)
 * [Total accounts by industry](#total-accounts-by-industry)
@@ -81,17 +85,17 @@ The [!UICONTROL Account profiles added] widget uses a line graph to display the 
 
 ![The Account profiles added widget.](../images/account-profiles/account-profiles-added.png)
 
-### Accounts by industry {#accounts-by-industry}
+### New accounts by industry {#accounts-by-industry}
 
-The [!UICONTROL Accounts by industry] widget displays the total number of accounts in a single metric inside a donut chart. The donut chart illustrates the relative makeup of different industries that comprise this total. A color-coded key provides a breakdown of all the included industries. Individual counts for each industry are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
+The [!UICONTROL New accounts by industry] widget displays the total number of accounts in a single metric inside a donut chart. The donut chart illustrates the relative makeup of different industries that comprise this total. A color-coded key provides a breakdown of all the included industries. Individual counts for each industry are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
 
-![The Accounts by industry widget.](../images/account-profiles/accounts-by-industry.png)
+![The New accounts by industry widget.](../images/account-profiles/new-accounts-by-industry.png)
 
-### Accounts by type {#accounts-by-type}
+### New accounts by type {#accounts-by-type}
 
-The [!UICONTROL Accounts by type] widget displays the total number of accounts in a single metric inside a donut chart. The donut chart illustrates the relative makeup of different account types that comprise this total. A color-coded key provides a breakdown of all the included account types. Individual counts for each type of account are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
+The [!UICONTROL New accounts by type] widget displays the total number of accounts in a single metric inside a donut chart. The donut chart illustrates the relative makeup of different account types that comprise this total. A color-coded key provides a breakdown of all the included account types. Individual counts for each type of account are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
 
-![The Accounts by type widget.](../images/account-profiles/accounts-by-type.png)
+![The New accounts by type widget.](../images/account-profiles/new-accounts-by-type.png)
 
 ### Opportunities added {#opportunities-added}
 
@@ -101,35 +105,35 @@ The [!UICONTROL Opportunities added] widget uses a line graph to display the num
 
 ![The Opportunities added widget.](../images/account-profiles/opportunities-added.png)
 
-### Opportunities by person role {#opportunities-by-person-role}
+### New opportunities by person role {#opportunities-by-person-role}
 
-The [!UICONTROL Opportunities by person role] widget displays the total number of your opportunities in a single metric inside a donut chart. The donut chart illustrates the relative makeup of roles that comprise this total number of opportunities. A color-coded key provides a breakdown of all the included roles. Individual counts for each role are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
+The [!UICONTROL New opportunities by person role] widget displays the total number of your opportunities in a single metric inside a donut chart. The donut chart illustrates the relative makeup of roles that comprise this total number of opportunities. A color-coded key provides a breakdown of all the included roles. Individual counts for each role are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
 
 >[!NOTE]
 >
 >The [!UICONTROL No data found] or [!UICONTROL Unable to load] error is caused when the 'Opportunity-Person' bridge-table is not used in your schema. If your insight displays one of these errors, check your union schema and ensure that the 'Opportunity-Person' field group is ingesting data.   
 
-![The Opportunities by person role widget.](../images/account-profiles/opportunities-by-person-role.png)
+![The New opportunities by person role widget.](../images/account-profiles/new-opportunities-by-person-role.png)
 
-### Opportunities by revenue {#opportunities-by-revenue}
+### New opportunities by revenue {#opportunities-by-revenue}
 
-The [!UICONTROL Opportunities by revenue] widget uses a bar chart to illustrate the total estimated amount of revenue generated by your opportunities. The widget supports up to six opportunities.
+The [!UICONTROL New opportunities by revenue] widget uses a bar chart to illustrate the total estimated amount of revenue generated by your opportunities. The widget supports up to six opportunities.
 
 To see a dialog that contains the specific revenue total for an opportunity, use the cursor to hover over individual bars.
 
-![The Opportunities by revenue widget.](../images/account-profiles/opportunities-by-revenue.png)
+![The New opportunities by revenue widget.](../images/account-profiles/new-opportunities-by-revenue.png)
 
-### Opportunities by status & stage {#opportunities-by-status-&-stage}
+### New opportunities by status & stage {#opportunities-by-status-&-stage}
 
 This widget uses a bar chart to illustrate the number of opportunities that are either open or closed at all stages of the marketing/sales funnel. The widget uses colors to differentiate the stage of the opportunities. A color-coded key indicates the available stages for opportunities. 
 
-![The Opportunities by status & stage widget.](../images/account-profiles/opportunities-by-status-&-stage.png)
+![The New opportunities by status & stage widget.](../images/account-profiles/new-opportunities-by-status-&-stage.png)
 
-### Opportunities won {#opportunities-won}
+### New opportunities won {#opportunities-won}
 
-The [!UICONTROL Opportunities won] widget displays the total number of your opportunities that have been successfully finalized in a single metric inside a donut chart. The donut chart illustrates the relative makeup of opportunities that are either won or not. A color-coded key distinguishes between won and not-won opportunities. Individual counts for each role are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
+The [!UICONTROL New opportunities won] widget displays the total number of your opportunities that have been successfully finalized in a single metric inside a donut chart. The donut chart illustrates the relative makeup of opportunities that are either won or not. A color-coded key distinguishes between won and not-won opportunities. Individual counts for each role are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
 
-![The Opportunities won widget.](../images/account-profiles/opportunities-won.png)
+![The New opportunities won widget.](../images/account-profiles/new-opportunities-won.png)
 
 ### Predictive scoring distribution {#predictive-scoring-distribution}
 
@@ -164,6 +168,10 @@ The dropdown menu within the widget allows you to select the account scoring mod
 ### Total accounts by industry {#total-accounts-by-industry}
 
 This widget displays the total number of accounts in a single metric and uses a donut chart to illustrate the proportional sizes of counts for the industries that make up the overall number. The key provides color coding information for the different industries that make up the donut chart. 
+
+>[!NOTE]
+>
+>The information displayed by this insight is dependant on the date range specified by you. If you do not provide a date filter, the default behavior of the insight analyzes data added from the previous year up to today.
 
 Individual counts for the different industries are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
 

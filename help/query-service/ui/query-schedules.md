@@ -9,7 +9,7 @@ You can automate query runs by creating query schedules. Scheduled queries run o
 
 >[!IMPORTANT]
 >
->You can only add a schedule to a query that has already been created, saved, and run.
+>You can only add a schedule to a query that has already been created, and saved.
 
 Any scheduled queries are added to the list in the [!UICONTROL Scheduled queries] tab. From that workspace you can monitor the status of all scheduled query jobs through the UI. On the [!UICONTROL Scheduled queries] tab you can find important information about your query runs and subscribe to alerts. The available information includes the status, schedule details, and error messages/codes should a run fail. See the [Monitor scheduled queries document](./monitor-queries.md) for more information.
 
