@@ -107,33 +107,33 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL IMS org ID]** | The ID of the organization that the activation job belongs to. |
 | **[!UICONTROL Destination name]** | The name of the destination that the data is being activated to. |
 
-Underneath the metrics, a toggle to select between the dataflow run errors and the segments is displayed.
+Underneath the metrics, a toggle to select between the dataflow run errors and the audiences is displayed.
 
-![The filtered segments dashboard. The toggle used to switch between the dataflow run errors and the segments display is highlighted.](../assets/ui/monitor-segments/activation-job-details-toggle.png)
+![The activation job dashboard. The toggle used to switch between the dataflow run errors and the audiences display is highlighted.](../assets/ui/monitor-segments/activation-job-details-toggle.png) UPDATE IMAGE
 
 Under the dataflow run errors section, select the toggle to view the identities failed or the identities excluded fields. The errors section includes details about the error code and number of identities failed or excluded.
 
-![The filtered segment dashboard. Information about the identities that failed or were excluded is highlighted.](../assets/ui/monitor-segments/activation-job-details.png)
+![The activation job dashboard. Information about the identities that failed or were excluded is highlighted.](../assets/ui/monitor-segments/activation-job-details.png) UPDATE IMAGE
 
-Under the segments section, you can see a list of segments that were activated as part of the activation job. Use the search bar to filter the list of segments by name. 
+Under the audiences section, you can see a list of audiences that were activated as part of the activation job. Use the search bar to filter the list of audiences by name. 
 
-![The filtered segment dashboard. Information about the identities that failed or were excluded is highlighted.](../assets/ui/monitor-segments/activation-job-details-segments.png)
+![The activation job dashboard. Information about the identities that failed or were excluded is highlighted.](../assets/ui/monitor-segments/activation-job-details-segments.png) UPDATE IMAGE
 
-For the segments section, the following metrics are available:
+For the audiences section, the following metrics are available:
 
 | Metric | Description | 
 | ------ | ----------- |
-| **[!UICONTROL Name]** | The name of the segment that was activated. |
+| **[!UICONTROL Name]** | The name of the audience that was activated. |
 | **[!UICONTROL Identities activated]** | The total number of identities that were successfully activated to the destination, based on the profiles received.  |
 | **[!UICONTROL Identities excluded]** | The total number of identities that were excluded from being activated to the destination, based on the profiles received. These identities could be excluded because of missing attributes or consent violation.  |
-| **[!UICONTROL Last dataflow run status]** | The status of the last activation job that ran for that segment. |
-| **[!UICONTROL Last dataflow run date]** | The date and time of the last activation job that ran for that segment. |
+| **[!UICONTROL Last dataflow run status]** | The status of the last activation job that ran for that audience. |
+| **[!UICONTROL Last dataflow run date]** | The date and time of the last activation job that ran for that audience. |
 
 ### Evaluation job details {#evaluation-job-details}
 
-The evaluation job dataflow run details page shows information on the run's metrics and segments that are related to the segment job. An evaluation job is an asynchronous process that creates an audience segment based on the specified segment. To learn more about evaluation jobs, please read the tutorial on [evaluating a segment](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment).
+The evaluation job dataflow run details page shows information on the run's metrics and audiences that are related to the segmentation job. 
 
-![The evaluation job dashboard. Information about the segment evaluation job is displayed.](../assets/ui/monitor-segments/evaluation-job-details.png)
+![The evaluation job dashboard. Information about the audience's evaluation job is displayed.](../assets/ui/monitor-segments/evaluation-job-details.png) UPDATE IMAGE
 
 The following metrics are available for this dashboard view:
 
@@ -143,49 +143,49 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Status]** | The status of the evaluation job. Possible statuses for the evaluation job include **[!UICONTROL Success]** and **[!UICONTROL Failed]**.  |
 | **[!UICONTROL Job start]** | The date and time that the evaluation job started. |
 | **[!UICONTROL Job end]** | The date and time that the evaluation job ended. |
-| **[!UICONTROL Job type]** | The type of segment job. In this case, it will always be a segment evaluation job. |
+| **[!UICONTROL Job type]** | The type of segmentation job. In this case, it will always be a **[!UICONTROL Segment evaluation]** job. |
 | **[!UICONTROL Evaluation type]** | The type of evaluation that is being done. This can be either be **[!UICONTROL Batch]** or **[!UICONTROL Streaming]**. |
 | **[!UICONTROL Job ID]** | The ID of the evaluation job. |
 | **[!UICONTROL IMS org ID]** | The ID of the organization the evaluation job belongs to. |
-| **[!UICONTROL Segment name]** | The name of the segment that is being evaluated. |
-| **[!UICONTROL Segment ID]** | The ID of the segment that is being evaluated. |
+| **[!UICONTROL Audience name]** | The name of the audience that is being evaluated. |
+| **[!UICONTROL Audience ID]** | The ID of the audience that is being evaluated. |
 
-Under the segments section, you can see a list of segments that are being evaluated as part of the evaluation job. You can filter the list of segments by name by using the search bar. 
+Under the [!UICONTROL Audiences] section, you can see a list of audiences that are being evaluated as part of the evaluation job. You can filter the list of audiences by name by using the search bar. 
 
 >[!IMPORTANT]
 >
->This dashboard view currently supports up to 800 segment metrics.
+>This dashboard view currently supports up to 800 audience metrics.
 
-For the segments section, the following metrics are available:
+For the [!UICONTROL Audiences] section, the following metrics are available:
 
 | Metric | Description | 
 | ------ | ----------- |
-| **[!UICONTROL Name]** | The name of the segment that is being evaluated. |
+| **[!UICONTROL Name]** | The name of the audience that is being evaluated. |
 | **[!UICONTROL Profile count]** | The number of profiles that are being evaluated. |
 
-## Monitoring segment jobs dashboard {#monitoring-segment-jobs-dashboard}
+## Monitoring segmentation jobs dashboard {#monitoring-segmentation-jobs-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
->title="Segment Jobs"
->abstract="The segment jobs view contains information on the evaluation and export jobs for all your segments."
+>title="Segmentation Jobs"
+>abstract="The segmentation jobs view contains information on the evaluation and export jobs for all your audiences."
 
-To access the **[!UICONTROL Segment Jobs]** dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select **[!UICONTROL Segment Jobs]**. The [!UICONTROL Monitoring] dashboard contains metrics and information on the segment evaluation and export jobs.
+To access the **[!UICONTROL Segmentation Jobs]** dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select **[!UICONTROL Segmentation jobs]**. The [!UICONTROL Monitoring] dashboard contains metrics and information on the evaluation and export jobs.
 
 >[!NOTE]
 >
->Only **segment evaluation jobs** are supported for per-segment monitoring. Segment export jobs only support organization-level monitoring.
+>Only **segmentation evaluation jobs** are supported for per-audience monitoring. Segmentation export jobs only support organization-level monitoring.
 
-![Segment jobs monitoring dashboard](../assets/ui/monitor-segments/segment-jobs-dashboard.png)
+![Segmentation jobs monitoring dashboard](../assets/ui/monitor-segments/segment-jobs-dashboard.png) UPDATE IMAGE
 
-Use the [!UICONTROL Segment Jobs] dashboard to understand if profile evaluation and export occurs on time and without any exceptions, so the downstream services for destination activation can have the latest evaluated profile data.
+Use the [!UICONTROL Segmentation Jobs] dashboard to understand if profile evaluation and export occurs on time and without any exceptions, so the downstream services for destination activation can have the latest evaluated profile data.
 
-The following metrics are available for segment jobs:
+The following metrics are available for segmentation jobs:
 
 | Metric | Description |
----------|----------|
-| **[!UICONTROL Segment job]** | Indicates the name of the segment job. |
-| **[!UICONTROL Type]** | Indicates the type of segment job - export or evaluation. Note that in both cases, the segment job evaluates or exports **all** segments belonging to an organization. To learn more about export jobs, please read the guide on the [export jobs endpoint](../../segmentation/api/export-jobs.md). To learn more about evaluation jobs, please read the tutorial on [evaluating a segment](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). |
-| **[!UICONTROL Job start]** | The date and time when the segment job started. |
-| **[!UICONTROL Job end]** | The date and time when the segment job completed. |
-| **[!UICONTROL Status]** | The status of the completed job. Possible statuses for the segment job include success or failed. |
+| ------ | ----------- |
+| **[!UICONTROL Segmentation job]** | Indicates the name of the segmentation job. |
+| **[!UICONTROL Type]** | Indicates the type of segmentation job - export or evaluation. Note that in both cases, the segmentation job evaluates or exports **all** audiences belonging to an organization. To learn more about export jobs, please read the guide on the [export jobs endpoint](../../segmentation/api/export-jobs.md). To learn more about evaluation jobs, please read the tutorial on [evaluating a segment definition](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment). |
+| **[!UICONTROL Job start]** | The date and time when the segmentation job started. |
+| **[!UICONTROL Job end]** | The date and time when the segmentation job completed. |
+| **[!UICONTROL Status]** | The status of the completed job. Possible statuses for the segmentation job include success or failed. |
