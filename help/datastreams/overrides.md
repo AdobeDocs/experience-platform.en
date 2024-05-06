@@ -15,7 +15,7 @@ Datastream configuration override is a two-step process:
 2. Then, you must send the overrides to the Edge Network in one of the following ways:
     * Through the `sendEvent` or `configure` [Web SDK](#send-overrides) commands.
     * Through the Web SDK [tag extension](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
-    * Through the Mobile SDK [sendEvent](#send-overrides) command.
+    * Through the Mobile SDK [sendEvent](#send-overrides) API or by using [Rules](#send-overrides).
 
 This article explains the end-to-end datastream configuration override process for every type of supported override.
 
