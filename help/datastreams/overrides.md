@@ -1,11 +1,11 @@
 ---
 title: Configure datastream overrides
-description: Learn how to configure datastream overrides in the Datastreams UI and activate them via the Web SDK.
+description: Learn how to configure datastream overrides in the Datastreams UI and activate them via the Web SDK or Mobile SDK.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
 ---
 # Configure datastream overrides
 
-Datastream overrides allow you to define additional configurations for your datastreams, which get passed to the Edge Network via the Web SDK.
+Datastream overrides allow you to define additional configurations for your datastreams, which get passed to the Edge Network via the Web SDK or Mobile SDK.
 
 This helps you trigger different datastream behaviors than the default ones, without creating a  datastream or modifying your existing settings.
 
@@ -62,7 +62,7 @@ Once you have created the datastream, edit the [Adobe Target](configure.md#targe
 
 After you've added the desired overrides, save your datastream settings.
 
-You should now have the Adobe Target datastream overrides configured. Now you can [send the overrides to the Edge Network via the Web SDK](#send-overrides).
+You should now have the Adobe Target datastream overrides configured. Now you can [send the overrides to the Edge Network via the Web SDK or Mobile SDK](#send-overrides).
 
 ### Datastream overrides for Adobe Analytics {#analytics-overrides}
 
@@ -76,7 +76,7 @@ Select **[!UICONTROL Show Batch Mode]** to enable batch editing of the report su
 
 After you've added the desired overrides, save your datastream settings.
 
-You should now have the Adobe Analytics datastream overrides configured. Now you can [send the overrides to the Edge Network via the Web SDK](#send-overrides).
+You should now have the Adobe Analytics datastream overrides configured. Now you can [send the overrides to the Edge Network via the Web SDK or Mobile SDK](#send-overrides).
 
 ### Datastream overrides for Experience Platform event datasets {#event-dataset-overrides}
 
@@ -88,7 +88,7 @@ Once you have created the datastream, edit the [Adobe Experience Platform](confi
 
 After you've added the desired overrides, save your datastream settings.
 
-You should now have the Adobe Experience Platform datastream overrides configured. Now you can [send the overrides to the Edge Network via the Web SDK](#send-overrides).
+You should now have the Adobe Experience Platform datastream overrides configured. Now you can [send the overrides to the Edge Network via the Web SDK or Mobile SDK](#send-overrides).
 
 ### Datastream overrides for third party ID sync containers {#container-overrides}
 
@@ -106,9 +106,9 @@ Then, use the **[!UICONTROL Container ID Overrides]** section to add the contain
 
 After you've added the desired overrides, save your datastream settings.
 
-You should now have the ID sync container overrides configured. Now you can [send the overrides to the Edge Network via the Web SDK](#send-overrides).
+You should now have the ID sync container overrides configured. Now you can [send the overrides to the Edge Network via the Web SDK or Mobile SDK](#send-overrides).
 
-## Send the overrides to the Edge Network via the Web SDK {#send-overrides}
+## Send the overrides to the Edge Network {#send-overrides}
 
 After configuring datastream overrides in the Data Collection UI, you can send the overrides to the Edge Network through the Web SDK or Mobile SDK.
 
