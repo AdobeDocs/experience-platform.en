@@ -40,8 +40,8 @@ With Identity graph linking rules you can:
 | Terminology | Description |
 | --- | --- |
 | Unique namespace | A unique namespace is an identity namespace that has been set up to be distinct within the context of an identity graph. You can configure a namespace to be unique using the UI. Once a namespace is defined as unique, a graph can only have one identity that contains that namespace. You cannot link a second identity that contains that same namespace to a graph, once the graph contains an identity with a unique namespace. |
-| Namespace priority | Namespace priority refers to the relative importance of namespaces compared to one another. Namespace priority is configurable through the UI. You can rank namespaces in a given identity graph. The lowest ranked namespace is prioritized for deletion, once an identity graph reaches 50 linked identities. |
-| Identity optimization algorithm | The identity optimization algorithm ensures that guidelines created by configuring a unique namespace and namespace priorities are enforced. The algorithm also determines the primary identity of experience events. |
+| Namespace priority | Namespace priority refers to the relative importance of namespaces compared to one another. Namespace priority is configurable through the UI. You can rank namespaces in a given identity graph. Once enabled, namespace priorities determine the primary identity only for experience events in Real-Time Customer Profile. |
+| Identity optimization algorithm | The identity optimization algorithm ensures that guidelines created by configuring a unique namespace and namespace priorities are enforced in a given identity graph. |
 
 ### Unique namespace
 
@@ -62,7 +62,7 @@ If CRM ID was configured as a unique namespace, then the [!DNL Identity Optimiza
 
 If you do not configure a unique namespace, you may end up with:
 
-* Unwanted graph merges, such as two identities each with a different CRM ID namespace in a graph.
+* Unwanted graph merges, such as two identities with the same CRM ID namespace, but different identity values (scenarios like these often represent two different person entities in the same graph).
 * A graph with any number of identities as long as the graph doesn't exceed the limit of 50 identities.
 
 You must configure a unique namespace to inform the [!DNL Identity Optimization Algorithm] to enforce limitations on the identity data that are ingested into a given identity graph.
@@ -71,8 +71,6 @@ You must configure a unique namespace to inform the [!DNL Identity Optimization 
 
 Namespace priority refers to the relative importance of namespaces compared to one another. Namespace priority is configurable through the UI. You can rank namespaces in a given identity graph. 
 
-<!-- The lowest ranked namespace is prioritized for deletion, once an identity graph reaches 50 linked identities. -->
-
 The priority that you set for your namespaces are then used to define primary identities, which is the identity that stores profile fragments (attribute and event data) in Real-Time Customer Profile. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
 
 Unique namespaces and namespace priorities are both configurable in the identity settings UI workspace. However, the effects of their configurations are different:
@@ -80,12 +78,9 @@ Unique namespaces and namespace priorities are both configurable in the identity
 | | Identity Service | Real-Time Customer Profile |
 | --- | --- | --- |
 | Unique namespace | In Identity Service, the [!DNL Identity Optimization Algorithm] refers to unique namespaces to determine the identity data that is ingested to a given identity graph.|
-| Namespace priority | | When an experience event is ingested in Profile, the namespace with the highest priority becomes the primary identity of the profile fragment. |
+| Namespace priority | In Identity Service, for graphs that have multiple layers, namespace priority will determine that the appropriate links are removed. | When an experience event is ingested in Profile, the namespace with the highest priority becomes the primary identity of the profile fragment. |
 
-* Limits (Unique Namespace) and priority are independent configurations and do **not** affect each other:
-  * Limits (Unique Namespace) are an identity graph configuration in Identity Service.
-  * Priority is a profile fragment configuration on Real-Time Customer Profile.
-  * Priority does **not** affect identity graph system guardrails. 
+* Namespace priority does not affect graph behavior when the limit of 50 identities per graph is reached.
 * **Namespace priority is a numerical value** assigned to a namespace indicating its relative importance. This is a property of a namespace.
 * **Primary identity is the identity in which a profile fragment is stored against**. A profile fragment is a record of data that stores information about a certain user: attributes (usually ingested via CRM records) or events (usually ingested from experience events, or online data).
 * Namespace priority determines the primary identity for experience events.

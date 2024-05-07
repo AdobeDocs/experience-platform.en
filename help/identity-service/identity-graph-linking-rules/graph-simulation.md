@@ -57,7 +57,7 @@ To set up an example graph with a pre-configured algorithm, select **[!UICONTROL
 | --- | --- | --- |
 | Shared Device | Shared device refers to scenarios where two different users log in to the same single device.| A husband and wife share an iPad for internet browsing and e-commerce. |
 | Invalid (non-unique) phone | Invalid or non-unique phone refers to scenarios where two different users use the same phone number to create an account. | A mother and her daughter use their shared home phone number to sign up for any e-commerce accounts. |
-| "Bad" identity values | "Bad" identity values refer to scenarios where Identity Service generates non-unique IDFAs due to erroneous implementation. | A user signs up to your e-commerce website and provides invalid values for email or phone. |
+| "Bad" identity values | "Bad" identity values refer to scenarios where Identity Service generates non-unique IDFAs due to erroneous implementation. | WebSDK erroneously sends a `user_null` value for every event due too code implementation issues. |
 
 Select any of the options to load Graph Simulation with pre-configured events and algorithm. You can still make further configurations to any pre-loaded graph scenario examples.
 
@@ -85,7 +85,9 @@ To delete an event, select the ellipses (`...`) beside a given event, and then s
 
 ## Configure algorithm
 
-The algorithm that you configure will dictate how Identity Service treats the namespaces that you inputted in your events. To begin, select add (`+`) in the bottom corner of the algorithm configuration panel.
+The algorithm that you configure will dictate how Identity Service treats the namespaces that you inputted in your events. Any configuration that you put together in the Graph Simulation UI are not saved in identity settings.
+
+To begin, select add (`+`) in the bottom corner of the algorithm configuration panel.
 
 ![The algorithm configuration panel.]
 
@@ -121,11 +123,13 @@ In the example graph below, a dotted line exists between `{CRMID: Tom}` and `{EC
 
 ## Example graph scenarios
 
+>[!NOTE]
+>
+>"CRMID" is a custom namespace. Therefore, the examples below require you to create a custom namespace with a display name and identity symbol of "CRMID".
+
 The following section examples of graph scenarios you might encounter with Graph Simulation.
 
 ### CRMID only
-
-
 
 Events:
 
@@ -158,7 +162,7 @@ Algorithm configuration:
 | Priority | Display name | Identity symbol | Identity type | Unique per graph |
 | ---| --- | --- | --- | --- |
 | 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
-| 2 | Emails (SHA256, lowercased) | Email_LC_SHA256 | Email | No |
+| 2 | Emails (SHA256, lowercased) | Email_LC_SHA256 | Email | NO |
 | 3 | ECID | ECID | COOKIE | NO |
 
 +++Select to view simulated graph
@@ -181,10 +185,10 @@ Algorithm configuration:
 | Priority | Display name | Identity symbol | Identity type | Unique per graph |
 | ---| --- | --- | --- | --- |
 | 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
-| 2 | Emails (SHA256, lowercased) | Email_LC_SHA256 | Email | No |
-| 3 | Phone (SHA256) | Phone_SHA256 | Phone | No |
-| 4 | Google Ad ID (GAID) | GAID | DEVICE | No |
-| 5 | Apple IDFA (ID for Apple) | IDFA | DEVICE | No |
+| 2 | Emails (SHA256, lowercased) | Email_LC_SHA256 | Email | NO |
+| 3 | Phone (SHA256) | Phone_SHA256 | Phone | NO |
+| 4 | Google Ad ID (GAID) | GAID | DEVICE | NO |
+| 5 | Apple IDFA (ID for Apple) | IDFA | DEVICE | NO |
 | 6 | ECID | ECID | COOKIE | NO |
 
 +++Select to view simulated graph
