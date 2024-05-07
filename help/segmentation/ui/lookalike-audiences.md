@@ -191,7 +191,7 @@ Look-alike audiences can be configured to exclude data fields that are restricte
 
 The standard "C9" label can be used to label data that should not be used for data science and can be enforced by enabling the standard "Restrict data science" policy. You can also create additional policies to restrict data with other labels, including sensitive labels, from usage for data science. For more information on managing data usage policies, please read the [data usage policies UI guide](../../data-governance/policies/user-guide.md). For more information on managing data usage labels, please read the [data usage labels UI guide](../../data-governance/labels/user-guide.md).
 
-By default, the modeling process for Look-alike audiences will exclude **any** field, dataset, or audience based on the enabled privacy policy for your organization. If the base audience has no contract labels, the modeling process will exclude **any** field, dataset, or audience based on the enabled privacy policy for your organization. 
+By default, if a base audience has no contract labels, the modeling process for Look-alike audiences will exclude **any** field, dataset, or audience based on the enabled privacy policy for your organization. 
 
 ## Next steps
 

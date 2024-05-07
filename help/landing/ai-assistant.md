@@ -1,7 +1,7 @@
 ---
 title: AI Assistant for Adobe Experience Platform
 description: Learn how to use AI Assistant to navigate and understand Experience Platform and Real-Time Customer Data Platform concepts, and usage information about your objects.
-badge: Alpha
+badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
@@ -10,7 +10,7 @@ exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
 
 >[!NOTE]
 >
-> AI Assistant for Adobe Experience Platform is currently in Alpha. The feature and documentation are subject to change.
+>AI Assistant for Adobe Experience Platform is currently in Beta. The feature and documentation are subject to change.
 
 AI Assistant is a UI feature that you can use to navigate and understand Adobe Experience Platform and Real-Time Customer Data Platform concepts and usage information about your objects.
 
