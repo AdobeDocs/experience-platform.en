@@ -182,7 +182,7 @@ Typical [!DNL Web SDK] code using this command looks like the following:
 
 **Delay saving Profile or entity parameters until content has been displayed to the end user**
 
-To delay recording attributes in the profile until the content has been displayed, set `data.adobe.target._save=false`. 
+To delay recording attributes in the profile until the content has been displayed, set `data.adobe.target._save=false` in your request. 
 
 For example, your website contains three decision scopes corresponding to three category links on the website (Men, Women and Kids) and you want to track the category the user eventually visited. Send these requests with the `__save` flag set to `false` to avoid persisting the category at the time the content is requested. After the content has been visualized, send the proper payload (including the `eventToken` and `stateToken`) for the corresponding attributes to be recorded.
 
