@@ -187,6 +187,7 @@ To delay recording attributes in the profile until the content has been displaye
 For example, your website contains three decision scopes corresponding to three category links on the website (Men, Women and Kids) and you want to track the category the user eventually visited. Send these requests with the `__save` flag set to `false` to avoid persisting the category at the time the content is requested. After the content has been visualized, send the proper payload (including the `eventToken` and `stateToken`) for the corresponding attributes to be recorded.
 
 <!--Save profile or entity attributes by default with:
+
 ```js
 alloy ( "sendEvent" , {
   renderDecisions : true,
@@ -229,7 +230,7 @@ alloy ( "sendEvent" , {
 
 >[!NOTE]
 >
-If the `__save` directive is omitted, saving the profile and entity attributes happens immediately, as if the request has been executed, even if the remainder of the request is a prefetch of personalization. If the track object is present, the `__save` directive is ignored. Data is immediately saved and the notification is recorded.
+>If the `__save` directive is omitted, saving the profile and entity attributes happens immediately, as if the request has been executed, even if the remainder of the request is a prefetch of personalization. The `__save` directive is only relevant for profile and entity attributes. If the track object is present, the `__save` directive is ignored. Data is immediately saved and the notification is recorded.
 
 **`sendEvent` with profile data**
 
