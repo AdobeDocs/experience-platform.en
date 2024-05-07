@@ -229,7 +229,7 @@ alloy ( "sendEvent" , {
 
 >[!NOTE]
 >
-If the `__save` directive is omitted, saving the profile and entity attributes happens immediately, as if the request has been executed, even if the remainder of the request is a prefetch of personalization. The `__save` directive is only relevant for profile and entity attributes. If the track object is present, the `__save` directive is ignored. Data is immediately saved and the notification is recorded.
+If the `__save` directive is omitted, saving the profile and entity attributes happens immediately, as if the request has been executed, even if the remainder of the request is a prefetch of personalization. If the track object is present, the `__save` directive is ignored. Data is immediately saved and the notification is recorded.
 
 **`sendEvent` with profile data**
 
