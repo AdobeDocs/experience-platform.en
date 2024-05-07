@@ -178,7 +178,7 @@ To update a [!DNL Target] profile, ensure that the profile data is passed with t
 |`xdm`|Object|Data formatted in XDM that lands in Web SDK as an experience event|
 |`data`|Object|Arbitrary key/value pairs sent to [!DNL Target] solutions under the target class.|
 
-Typical [!DNL Web SDK] code using this command looks like the following:
+<!--Typical [!DNL Web SDK] code using this command looks like the following:-->
 
 **Delay saving Profile or entity parameters until content has been displayed to the end user**
 
