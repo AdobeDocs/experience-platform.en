@@ -180,7 +180,7 @@ To update a [!DNL Target] profile, ensure that the profile data is passed with t
 
 Typical [!DNL Web SDK] code using this command looks like the following:
 
-**Delay saving Profile or entity parameters until content has been displayed**
+**Delay saving Profile or entity parameters until content has been displayed to the end user**
 
 To delay recording attributes in the profile until the content has been displayed, set `data.adobe.target._save=false`. 
 
