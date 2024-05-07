@@ -109,13 +109,63 @@ A successful response returns your Base64-encoded public key, public key ID, and
 | `publicKeyId` | The public key ID is used to create a dataflow and ingest your encrypted cloud storage data to Experience Platform. |
 | `expiryTime` | The expiry time defines the expiration date of your encryption key pair. This date is automatically set to 180 days after the date of key generation and is displayed in unix timestamp format. |
 
-+++(Optional) Create sign verification key pair for signed data
+### Retrieve encryption keys
+
+**Request**
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
+**Response**
+
+```json
+[
+  {
+      "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+      "publicKeyId": "{PUBLIC_KEY_ID}",
+      "publicKey": "{PUBLIC_KEY}",
+      "expiryTime": "{EXPIRY_TIME}"
+  }
+]
+```
+
+### Retrieve encryption keys by ID
+
+**Request**
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
+**Response**
+
+```json
+[
+  {
+      "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+      "publicKeyId": "{PUBLIC_KEY_ID}",
+      "publicKey": "{PUBLIC_KEY}",
+      "expiryTime": "{EXPIRY_TIME}"
+  }
+]
+```
 
 ### Create customer managed key pair
 
 You can optionally create a sign verification key pair to sign and ingest your encrypted data.
 
 During this stage, you must generate your own private key and public key combination and then use your private key to sign your encrypted data. Next, you must encode your public key in Base64 and then share it to Experience Platform in order for Platform to verify your signature.
+
++++Select to view example of how to share your public key to Experience Platform
 
 ### Share your public key to Experience Platform
 
@@ -325,6 +375,56 @@ A successful response returns the ID (`id`) of the newly created dataflow for yo
 }
 ```
 
+### Delete encryption keys
+
+**Request**
+
+```shell
+curl -X DELETE \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
+**Response**
+
+### Validate encryption keys
+
+**Request**
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/validate/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
+**Response**
+
+>[!BEGINTABS]
+
+>[!TAB Valid]
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Active"
+}
+```
+
+>[!TAB Invalid]
+
+```
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Expired"
+}
+
+```
+
+>[!ENDTABS]
 
 >[!BEGINSHADEBOX]
 
