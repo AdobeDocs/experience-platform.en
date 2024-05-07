@@ -59,7 +59,7 @@ You start by sending your audience of high-valued and low-frequency customers a 
 
 >[!IMPORTANT]
 >
->As described further below on this page by having a [dedicated consent field group in your schema](#customer-attributes-schema) and by [implementing consent policies](#privacy-consent), all the actions and workflows are implemented in a privacy and consent-first manner. 
+>As described further below on this page, by having a [dedicated consent field group in your schema](#customer-attributes-schema) and by [implementing consent policies](#privacy-consent), all the actions and workflows are implemented in a privacy and consent-first manner. 
 
 >[!BEGINSHADEBOX]
 
@@ -368,7 +368,7 @@ The journey shown above follows the following logic.
 
 4. Condition - Purchased Subscription in last 7 days?: use a condition activity to listen for product purchases in the last seven days. 
 
-5. JourneyStepEventTracker - Subscription Not Purchased: Use a [custom action](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) for the visitors who have not yet purchased your subscription, despite receiving your message. As part of the custom condition at the end of journey, create a `journey.feedback` event. You will use this event to segment the audience that has not purchased the subscription and that you can target via paid media ads.
+5. JourneyStepEventTracker - Subscription Not Purchased: Use a [custom action](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) for the visitors who have not yet purchased your subscription, despite receiving your message. As part of the custom condition at the end of journey, create a `journey.feedback` event and add it to a dataset based on the [!UICONTROL Journey Step Event] schema. You will use this event to segment the audience that has not purchased the subscription and that you can target via paid media ads.
 
 +++
 
