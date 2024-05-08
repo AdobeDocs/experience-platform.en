@@ -151,13 +151,39 @@ Select **[!UICONTROL Add filter]** to create either a [[!UICONTROL Date filter]]
 
 ### Create a date filter {#create-date-filter}
 
-To allow your insights to be filtered by date, you must add parameters to your SQL queries that can accept time constraints. Query parameters allow you to work with dynamic data as they act as placeholders for the values you add at execution time. These placeholder values can be updated through the UI and enable less technical users to update the insights based on date ranges.   
+To filter your insights by date, you must add parameters to your SQL queries that can accept time constraints. This is done as part of the query pro-mode insight creation workflow. See the [query pro-mode documentation](#query-pro-mode) to learn how to enter SQL for your insights.
+
+Query parameters allow you to work with dynamic data as they act as placeholders for the values you add at execution time. These placeholder values can be updated through the UI and enable less technical users to update the insights based on date ranges.   
+
+If you are unfamiliar with query parameters, see the documentation for [guidance on how to implement parameterized queries](../query-service/ui/parameterized-queries.md).
+
+#### Apply a global date filter to your dashboard {#apply-global-date-filter}
+
+To apply a global date filter, first select **[!UICONTROL Add filter]** from your dashboard view, then **[!UICONTROL Date Filter]** from the dropdown menu. 
+
+![A custom dashboard with Add filter and its dropdown menu highlighted.](./images/user-defined-dashboards/sql-workflow/add-filter.png)
+
+The calander view appears. Next, select a start date and an end date to create a custom date filter.
+
+>[!IMPORTANT]
+>
+>Simply adding a date filter will not make the charts change. You must edit each of your insights to include your chosen start and end date.
+
+![A custom dashboard with the date filter calender highlighted.](./images/user-defined-dashboards/sql-workflow/date-filter.png)
+
+Once you have selected a date range from your dashboard, insights that have date parameters in their SQL will see the date filter options in the widget composer. 
+
+>[!NOTE]
+>
+>Selecting a date range on your dashboard displays the toggles for date filters as part of the insight creation workflow. 
+
+### Edit your SQL to include date parameters {#include-date-parameters} 
+
+If you have not yet incorporated date parameters in your SQL, edit you insights to include these parameters. See the documentation for instructions on how to [edit an insight](#edit).
 
 >[!TIP]
 >
 >You are reccommended to add `$START_DATE` and `$END_DATE` parameters to your SQL statement in each of the charts that you want to enable date filters.
-
-See the documentation on query parameters for [guidance on how to implement parameterized queries](../query-service/ui/parameterized-queries.md).
 
 The example SQL statement below demonstrates how to incorporate `$START_DATE` and `$END_DATE` parameters.
 
@@ -176,10 +202,18 @@ WHERE  f.date BETWEEN Upper(Coalesce(Cast('$START_DATE' AS date), '')) AND Upper
 LIMIT  0; 
 ```
 
+The screenshot below highlights the time constraints incorporated in the SQL statement and the query parameter key value pairs.
+
+>[!NOTE]
+>
+>A value must be included for each parameter on the first run of a query that uses parameters. The value can be NULL.
+
+![The [!UICONTROL Enter SQL] dialog with the date parameters highlighted in the SQL.](./images/user-defined-dashboards/sql-workflow/sql-date-parameters.png)
+
 #### Enable date parameters in each insight {#enable-date-parameters}
 
 Once you have incorporated the appropriate parameters to your insights' SQL, the `Start_date` and `End_date` variables are now available as a toggles in the widget composer. See the [query pro-mode widget population section](#populate-widget) for info on how to edit an insight. 
-
+<!-- ... -->
 From the widget composer, select toggles to enable the `Start_date` and `End_date` parameters.
 
 ![The widget composer with the Start_date and End_date toggles highlighted.](./images/user-defined-dashboards/sql-workflow/widget-composer-date-filter-toggles.png)
@@ -188,21 +222,7 @@ Next, select the appropriate parameters from the dropdown menus.
 
 ![The widget composer with the Start_date dropdown menu highlighted.](./images/user-defined-dashboards/sql-workflow/widget-composer-date-filter-dropdown.png)
 
-#### Apply a global date filter to your dashboard {#apply-global-date-filter}
-
-After you have enabled these parameters within each insight, from your dashboard view select either **[!UICONTROL Add filter]** then **[!UICONTROL Date Filter]** from the dropdown menu, or the calender icon. 
-
-![A custom dashboard with Add filter and its dropdown menu highlighted.](./images/user-defined-dashboards/sql-workflow/add-filter.png)
-
-The calander view appears. Next, select a start date and an end date to create a custom date filter.
-
-![A custom dashboard with the date filter calender highlighted.](./images/user-defined-dashboards/sql-workflow/date-filter.png)
-
->[!IMPORTANT]
->
->Simply adding a date filter will not make the charts change. You must edit each of your insights to include your chosen start and end date. 
-
-Once you have selected a date range from your dashboard, insights that have enabled date parameters provide insights based on the chosen time period. 
+Finally, select **[!UICONTROL Save and close]** to return to your dashboard. Date filters are now enabled for all insights that have start and end date parameters.
 
 #### Delete a date filter {#delete-date-filter}
 
@@ -216,9 +236,19 @@ To remove your date filter select the delete filter icon (![The delete filter ic
 
 ### Create a global filter {#create-global-filter}
 
+To apply a global filter, first select **[!UICONTROL Add filter]** from your dashboard view, then **[!UICONTROL Global filter]** from the dropdown menu. 
+
+![A custom dashboard with Add filter and its dropdown menu highlighted.](./images/user-defined-dashboards/sql-workflow/add-filter.png)
+
 Global filters affect the data of all widgets in your dashboard. You can quickly change the insights provided by your SQL with customized global filters.
 
-Select **[!UICONTROL Global Filter]** from the dropdown menu to open the [!UICONTROL Create a global filter] dialog. Creating a global filter follows the same process as creating an insight with SQL. First, select a dataset to query, then input your custom SQL in the Query Editor, and finally select the run icon (![A run icon.](./images/user-defined-dashboards/sql-workflow/run-icon.png)). After successfully running the query, the results tab displays the results. Select **[!UICONTROL Next]**.
+The [!UICONTROL Create a global filter] dialog opens. Creating a global filter follows the same process as creating an insight with SQL. First, select a database (insights data model) to query, then input your custom SQL in the Query Editor, and finally select the run icon (![A run icon.](./images/user-defined-dashboards/sql-workflow/run-icon.png)). 
+
+>[IMPORTANT]
+>
+>You must include an ID and a value when you create a global filter.
+
+After successfully running the query, the results tab displays the results. Select **[!UICONTROL Next]**.
 
 ![The [!UICONTROL Create a global filter dialog] with the dataset dropdown menu, the run icon and Next highlighted.](./images/user-defined-dashboards/sql-workflow/global-filter.png)
 
@@ -228,9 +258,19 @@ The final step of the global filter creation workflow requires you to add a labe
 >
 >The options available are dependent on the dataset and SQL that you use. 
 
-Finally, add an optional description to differentiate the filter. When you are satisfied with your configuration, select **[!UICONTROL Select]** to return to your dashboard view.
+Finally, select **[!UICONTROL Select]** to return to your dashboard view.
 
 ![The [!UICONTROL Create a global filter dialog] with Select and the Filter label text input highlighted.](./images/user-defined-dashboards/sql-workflow/global-filter-label.png)
+
+### Enable the global filter for each insight {#Enable-global-filter}
+
+After creating your global filter for your dashboard, the toggle for that global filter becomes available as part of the widget composer.
+
+![The widget composer with the Global Filter toggle highlighted.](./images/user-defined-dashboards/sql-workflow/global-filter-consent.png)
+
+>[!IMPORTANT]
+>
+>Ensure that the global filter parameter is included in the SQL of each insight.
 
 ### Select a global filter {#select-global-filter}
 
