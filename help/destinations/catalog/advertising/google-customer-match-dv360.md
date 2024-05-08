@@ -69,8 +69,6 @@ To promote the release, they upload email addresses from their CRM database into
 
 |user_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.| -->
 
-
-
 ## Supported audiences {#supported-audiences}
 
 This section describes which types of audiences you can export to this destination.
