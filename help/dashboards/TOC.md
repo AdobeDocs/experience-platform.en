@@ -15,6 +15,14 @@ role: Developer,User
 * [Dashboards](user-defined-dashboards.md)
 * [SQL generated insights](sql-generated-insights.md)
 * [Download dashboards to PDF](download.md)
+* Customizable Insights {#customizable-insights}
+  * [Overview](customizable-insights/overview.md)
+  * [Query Pro mode (SQL chart creation)](customizable-insights/query-pro-mode.md)
+  * Filters {#filters}
+    * [Date filter](customizable-insights/filters/date-filter.md)
+    * [Global filter](customizable-insights/filters/global-filter.md) 
+  * [View more](customizable-insights/view-more.md)
+  * [View SQL](customizable-insights/view-sql.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
   * [Account Profiles](guides/account-profiles.md)
