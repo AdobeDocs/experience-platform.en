@@ -151,9 +151,68 @@ Select **[!UICONTROL Add filter]** to create either a [[!UICONTROL Date filter]]
 
 ### Create a date filter {#create-date-filter}
 
-Select **[!UICONTROL Date Filter]** from the dropdown menu to open the calender view. Select a start date and an end date to create a custom date filter.
+To allow your insights to be filtered by date, you must add parameters to your SQL queries that can accept time constraints. Query parameters allow you to work with dynamic data as they act as placeholders for the values you add at execution time. These placeholder values can be updated through the UI and enable less technical users to update the insights based on date ranges.   
+
+>[!TIP]
+>
+>You are reccommended to add `$START_DATE` and `$END_DATE` parameters to your SQL statement in each of the charts that you want to enable date filters.
+
+See the documentation on query parameters for [guidance on how to implement parameterized queries](../query-service/ui/parameterized-queries.md).
+
+The example SQL statement below demonstrates how to incorporate `$START_DATE` and `$END_DATE` parameters.
+
+```sql
+SELECT Sum(personalization_consent_count) AS Personalization,
+       Sum(datacollection_consent_count)  AS Datacollection,
+       Sum(datasharing_consent_count)     AS Datasharing
+FROM   fact_daily_consent_aggregates f
+       INNER JOIN dim_consent_valued
+               ON f.consent_value_id = d.consent_value_id
+WHERE  f.date BETWEEN Upper(Coalesce(Cast('$START_DATE' AS date), '')) AND Upper
+                      (
+                             Coalesce(Cast('$END_DATE' AS date), ''))
+       AND ( ( Upper(Coalesce($consent_value_filter, '')) IN ( '', 'NULL' ) )
+              OR ( f.consent_value_id IN ( $consent_value_filter ) ) )
+LIMIT  0; 
+```
+
+#### Enable date parameters in each insight {#enable-date-parameters}
+
+Once you have incorporated the appropriate parameters to your insights' SQL, the `Start_date` and `End_date` variables are now available as a toggles in the widget composer. See the [query pro-mode widget population section](#populate-widget) for info on how to edit an insight. 
+
+From the widget composer, select toggles to enable the `Start_date` and `End_date` parameters.
+
+![The widget composer with the Start_date and End_date toggles highlighted.](./images/user-defined-dashboards/sql-workflow/widget-composer-date-filter-toggles.png)
+
+Next, select the appropriate parameters from the dropdown menus.
+
+![The widget composer with the Start_date dropdown menu highlighted.](./images/user-defined-dashboards/sql-workflow/widget-composer-date-filter-dropdown.png)
+
+#### Apply a global date filter to your dashboard {#apply-global-date-filter}
+
+After you have enabled these parameters within each insight, from your dashboard view select either **[!UICONTROL Add filter]** then **[!UICONTROL Date Filter]** from the dropdown menu, or the calender icon. 
+
+![A custom dashboard with Add filter and its dropdown menu highlighted.](./images/user-defined-dashboards/sql-workflow/add-filter.png)
+
+The calander view appears. Next, select a start date and an end date to create a custom date filter.
 
 ![A custom dashboard with the date filter calender highlighted.](./images/user-defined-dashboards/sql-workflow/date-filter.png)
+
+>[!IMPORTANT]
+>
+>Simply adding a date filter will not make the charts change. You must edit each of your insights to include your chosen start and end date. 
+
+Once you have selected a date range from your dashboard, insights that have enabled date parameters provide insights based on the chosen time period. 
+
+#### Delete a date filter {#delete-date-filter}
+
+To remove your date filter select the delete filter icon (![The delete filter icon.](./images/user-defined-dashboards/sql-workflow/delete-filter-icon.png)). 
+
+>[!NOTE]
+>
+>If no date filter is applied to your insight, the default system behaviour analyzes your data over the past year up to the current calendar day.
+
+![A custom dashboard with the filter delete icon highlighted.](./images/user-defined-dashboards/sql-workflow/delete-date-filter.png)
 
 ### Create a global filter {#create-global-filter}
 
