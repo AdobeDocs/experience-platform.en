@@ -1,7 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Microsoft SQL;microsoft sql;sql server;SQL server
-solution: Experience Platform
-title: Create a SQL Server Base Connection Using the Flow Service API
+title: Create a Microsoft SQL Server Base Connection Using the Flow Service API
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to a Microsoft SQL Server using the Flow Service API.
 exl-id: 00455a61-c8c1-42f4-a962-fc16f7370cbd
@@ -10,14 +8,14 @@ exl-id: 00455a61-c8c1-42f4-a962-fc16f7370cbd
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL Microsoft SQL Server] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Read this tutorial to learn how to create a base connection for [!DNL Microsoft SQL Server] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Microsoft SQL Server] using the [!DNL Flow Service] API.
 
@@ -26,11 +24,13 @@ The following sections provide additional information that you will need to know
 In order to connect to [!DNL Microsoft SQL Server], you must provide the following connection property:
 
 | Credential | Description |
-| ---------- | ----------- |
+| --- | --- |
 | `connectionString` | The connection string associated with your [!DNL Microsoft SQL Server] account. The [!DNL Microsoft SQL Server] connection string pattern is: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Microsoft SQL Server] is `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 For more information about obtaining a connection string, refer to this [[!DNL Microsoft SQL Server] document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
+
+Your connection string pattern will depend on whether you are using server name or instance name for your data source:<ul><li>Connection string using server name: `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Connection string using instance name:`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`
 
 ### Using Platform APIs
 
