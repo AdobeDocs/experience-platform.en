@@ -14,7 +14,7 @@ If you are unfamiliar with query parameters, see the documentation for [guidance
 
 First, apply a global date filter. From your dashboard view, select **[!UICONTROL Add filter]**, then **[!UICONTROL Date Filter]** from the dropdown menu. 
 
-![A custom dashboard with Add filter and its dropdown menu highlighted.](./images/user-defined-dashboards/sql-workflow/add-filter.png)
+![A custom dashboard with Add filter and its dropdown menu highlighted.](../../images/customizable-insights/add-filter.png)
 
 The calander view appears. Next, select a start date and an end date to create a custom date filter.
 
@@ -22,7 +22,7 @@ The calander view appears. Next, select a start date and an end date to create a
 >
 >Simply adding a date filter will not make the charts change. You must edit each of your insights to include your chosen start and end date.
 
-![A custom dashboard with the date filter calender highlighted.](./images/user-defined-dashboards/sql-workflow/date-filter.png)
+![A custom dashboard with the date filter calender highlighted.](../../images/customizable-insights/sql-workflow/date-filter.png)
 
 Once you have selected a date range from your dashboard, insights that have date parameters in their SQL will see the date filter options in the widget composer. 
 
@@ -61,7 +61,7 @@ The screenshot below highlights the time constraints incorporated in the SQL sta
 >
 >A value must be included for each parameter on the first run of a query that uses parameters. The value can be NULL.
 
-![The [!UICONTROL Enter SQL] dialog with the date parameters highlighted in the SQL.](./images/user-defined-dashboards/sql-workflow/sql-date-parameters.png)
+![The [!UICONTROL Enter SQL] dialog with the date parameters highlighted in the SQL.](../../images/customizable-insights/sql-workflow/sql-date-parameters.png)
 
 ## Enable date parameters in each insight {#enable-date-parameters}
 
@@ -69,20 +69,20 @@ Once you have incorporated the appropriate parameters to your insights' SQL, the
 
 From the widget composer, select toggles to enable the `Start_date` and `End_date` parameters.
 
-![The widget composer with the Start_date and End_date toggles highlighted.](./images/user-defined-dashboards/sql-workflow/widget-composer-date-filter-toggles.png)
+![The widget composer with the Start_date and End_date toggles highlighted.](../../images/customizable-insights/sql-workflow/widget-composer-date-filter-toggles.png)
 
 Next, select the appropriate parameters from the dropdown menus.
 
-![The widget composer with the Start_date dropdown menu highlighted.](./images/user-defined-dashboards/sql-workflow/widget-composer-date-filter-dropdown.png)
+![The widget composer with the Start_date dropdown menu highlighted.](../../images/customizable-insights/sql-workflow/widget-composer-date-filter-dropdown.png)
 
 Finally, select **[!UICONTROL Save and close]** to return to your dashboard. Date filters are now enabled for all insights that have start and end date parameters.
 
 ## Delete a date filter {#delete-date-filter}
 
-To remove your date filter select the delete filter icon (![The delete filter icon.](./images/user-defined-dashboards/sql-workflow/delete-filter-icon.png)). 
+To remove your date filter select the delete filter icon (![The delete filter icon.](../../images/customizable-insights/sql-workflow/delete-filter-icon.png)). 
 
 >[!NOTE]
 >
 >If no date filter is applied to your insight, the default system behaviour analyzes your data over the past year up to the current calendar day.
 
-![A custom dashboard with the filter delete icon highlighted.](./images/user-defined-dashboards/sql-workflow/delete-date-filter.png)
+![A custom dashboard with the filter delete icon highlighted.](../../images/customizable-insights/sql-workflow/delete-date-filter.png)
