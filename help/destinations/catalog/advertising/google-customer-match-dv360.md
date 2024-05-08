@@ -8,9 +8,9 @@ badgeBeta: label="Beta" type="Informative"
 
 Use this destination to activate your first-party PII-based [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) lists directly to [!DNL Google Display & Video 360] properties such as [!DNL Search], [!DNL YouTube], [!DNL Gmail], and the [!DNL Google Display Network].
 
-Certain Google-integrated third parties, such as Adobe Real-Time CDP, can use the Google Audience Partner API to create Customer Match audiences directly in customers' Display & Video 360 account.
+Certain Google-integrated third parties, such as Adobe Real-Time CDP, can use the [!DNL Google Audience Partner API] to create [!DNL Customer Match] audiences directly in customers' [!DNL Display & Video 360] account.
 
-With the newly introduced capability of being able to utilize Customer Matched audiences across Display & Video 360, you are now able to target audiences across an expanded roster of inventory sources. 
+With the newly introduced capability of being able to utilize [!DNL Customer Matched] audiences across [!DNL Display & Video 360], you are now able to target audiences across an expanded roster of inventory sources. 
 
 >[!IMPORTANT]
 >
@@ -34,9 +34,9 @@ With the newly introduced capability of being able to utilize Customer Matched a
 
 Several integrations with Google are available in the destinations catalog and it might be difficult to understand when to use each of the available Google destinations. Make sense of the different use cases by reading the information in the table below:
 
-| [Google Customer Match](/help/destinations/catalog/advertising/google-customer-match.md) | [Google Display & Video 360](/help/destinations/catalog/advertising/google-dv360.md) | Google Customer Match + Display & Video 360 (this connector) |
+| [Google Customer Match](/help/destinations/catalog/advertising/google-customer-match.md) | [Google Display & Video 360](/help/destinations/catalog/advertising/google-dv360.md) | [!DNL Google Customer Match] + [!DNL Display & Video 360] (this connector) |
 |---------|----------|---------|
-| Export your PII-based audiences and reach them on inventory available in Google Customer Match.| Reach cookie-based audiences across inventory available via Google Display & Video 360, on Google owned-and-operated properties like Youtube and Search, and beyond. | Create PII-based audiences in Google Customer Match and reach them on the inventory available in Google Display & Video 360, on Google owned-and-operated properties only. |
+| Export your PII-based audiences and reach them on inventory available in [!DNL Google Customer Match].| Reach cookie-based audiences across inventory available via [!DNL Google Display & Video 360], on Google owned-and-operated properties like Youtube and [!DNL Search], and beyond. | Create PII-based audiences in [!DNL Google Customer Match] and reach them on the inventory available in [!DNL Google Display & Video 360], on Google owned-and-operated properties only. |
 
 ## Use cases {#use-cases}
 
@@ -60,12 +60,13 @@ To promote the release, they upload email addresses from their CRM database into
 |---|---|---|
 |phone_sha256_e.164|Phone numbers in E164 format, hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
+|GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
+|IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|
 
 {style="table-layout:auto"}
 
 <!-- not supported in beta
-|GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|
+
 |user_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.| -->
 
 
