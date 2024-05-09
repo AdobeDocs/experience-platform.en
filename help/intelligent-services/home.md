@@ -8,7 +8,7 @@ exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
 # Intelligent Services overview {#intelligent-services-overview}
 
 >[!CONTEXTUALHELP]
->id="platform_intelligent-services_home"
+>id="platform_intelligentservices_home"
 >title="Intelligent Services Overview"
 >abstract=""
 

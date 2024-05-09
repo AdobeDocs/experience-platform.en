@@ -9,7 +9,7 @@ exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
 # Publish a model as a service in the Data Science Workspace UI {#publish-a-model-as-a-service}
 
 >[!CONTEXTUALHELP]
->id="platform_intelligent-services_publishmodel"
+>id="platform_intelligentservices_publishmodel"
 >title="Publish a Model as a Service"
 >abstract=""
 
