@@ -8,6 +8,15 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](/help/web-sdk/release-notes.md).
 
+## Version 2.22.0 - May 3, 2024
+
+**New features**
+
+* Extend variable data element to support data objects.
+* Update variable action now supports modifying pass-through Adobe Analytics, Adobe Audience Manager, and Adobe Target data.
+
+Contains version 2.19.2 of the Adobe Experience Platform Web SDK.
+
 ## Version 2.21.4 - January 10, 2024
 
 **Fixes and improvements**

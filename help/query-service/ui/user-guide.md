@@ -7,6 +7,10 @@ exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 ---
 # [!DNL Query Editor] UI guide
 
+>[!NOTE]
+>
+>As of 30-April-2024 the [Enhanced Query Editor](#enhanced-editor-toggle) has become the default editor for all users. The legacy editor will be deprecated on 30-May-2024 and no longer be available for use.
+
 [!DNL Query Editor] is an interactive tool provided by Adobe Experience Platform [!DNL Query Service], which allows you to write, validate, and run queries for customer experience data within the [!DNL Experience Platform] user interface. [!DNL Query Editor] supports developing queries for analysis and data exploration, and allows you to run interactive queries for development purposes as well as non-interactive queries to populate datasets in [!DNL Experience Platform].
 
 For more information about the concepts and features of [!DNL Query Service], see the [Query Service overview](../home.md). To learn more about how to navigate the Query Service user interface on [!DNL Platform], see the [Query Service UI overview](./overview.md).
@@ -223,7 +227,7 @@ When you save a query in the Query Editor, a confirmation message pops up to not
 
 Queries that have been saved as a template can be scheduled from the Query Editor. Scheduling queries allows you to automate query runs on a custom cadence. You can schedule queries based on frequency, date, and time, and also choose an output dataset for your results if necessary. Query schedules can also be disabled or deleted through the UI.
 
-Schedules are set in the Query Editor. When using the Query Editor, you can only add a schedule to a query that has already been created, saved, and run. The same limitation does not apply to the [!DNL Query Service] API.
+Schedules are set in the Query Editor. When using the Query Editor, you can only add a schedule to a query that has already been created, and saved. The same limitation does not apply to the [!DNL Query Service] API.
 
 >[!NOTE]
 >
