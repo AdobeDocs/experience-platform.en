@@ -10,7 +10,7 @@ A base connection represents the authenticated connection between a source and A
 
 Read this tutorial to learn how to create a base connection for [!DNL Microsoft SQL Server] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Getting started
+## Get started
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -19,18 +19,16 @@ This guide requires a working understanding of the following components of Adobe
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Microsoft SQL Server] using the [!DNL Flow Service] API.
 
-### Gather required credentials
+### Gather required credentials {#gather-required-credentials}
 
 In order to connect to [!DNL Microsoft SQL Server], you must provide the following connection property:
 
-| Credential | Description |
-| --- | --- |
-| `connectionString` | The connection string associated with your [!DNL Microsoft SQL Server] account. The [!DNL Microsoft SQL Server] connection string pattern is: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| Credential | Description | Example |
+| --- | --- | --- |
+| `connectionString` | The connection string associated with your [!DNL Microsoft SQL Server] account. Your connection string pattern will depend on whether you are using server name or instance name for your data source:<ul><li>Connection string using server name: `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Connection string using instance name:`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Microsoft SQL Server] is `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 For more information about obtaining a connection string, refer to this [[!DNL Microsoft SQL Server] document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
-
-Your connection string pattern will depend on whether you are using server name or instance name for your data source:<ul><li>Connection string using server name: `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Connection string using instance name:`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`
 
 ### Using Platform APIs
 
@@ -54,30 +52,30 @@ The following request creates a base connection for [!DNL Microsoft SQL Server]:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Base connection for sql-server",
-        "description": "Base connection for sql-server",
-        "auth": {
-            "specName": "Connection String Based Authentication",
-            "params": {
-                "connectionString": "Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};"
-            }
-        },
-        "connectionSpec": {
-            "id": "1f372ff9-38a4-4492-96f5-b9a4e4bd00ec",
-            "version": "1.0"
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Base connection for sql-server",
+      "description": "Base connection for sql-server",
+      "auth": {
+          "specName": "Connection String Based Authentication",
+          "params": {
+              "connectionString": "Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword"
+          }
+      },
+      "connectionSpec": {
+          "id": "1f372ff9-38a4-4492-96f5-b9a4e4bd00ec",
+          "version": "1.0"
+  }'
 ```
 
 | Property | Description |
-| --------- | ----------- |
-| `auth.params.connectionString` | The connection string associated with your [!DNL Microsoft SQL Server] account. The [!DNL Microsoft SQL Server] connection string pattern is: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| --- | --- |
+| `auth.params.connectionString` | The connection string associated with your [!DNL Microsoft SQL Server] account. Read the section on [gathering required credentials](#gather-required-credentials) for more information. |
 | `connectionSpec.id` | The [!DNL Microsoft SQL Server] connection specification ID is: `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 **Response**
