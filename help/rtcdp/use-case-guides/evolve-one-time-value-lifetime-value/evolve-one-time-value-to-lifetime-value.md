@@ -2,6 +2,7 @@
 title: Evolve one-time customer value to lifetime value
 description: Learn how to create personalized campaigns to offer the best complementary products or services based on a specific customer's attributes, behavior, and past purchases.
 feature: Use Cases
+exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
 ---
 # Evolve one-time customer value to lifetime value
 
