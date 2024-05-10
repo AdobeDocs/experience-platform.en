@@ -16,7 +16,7 @@ You can quickly change the insights provided by your SQL with customized global 
 
 The [!UICONTROL Create a global filter] dialog opens. Creating a global filter follows the same process as creating an insight with SQL. First, select a database (insights data model) to query, then input your custom SQL in the Query Editor, and finally select the run icon (![A run icon.](../../../images/customizable-insights/run-icon.png)). 
 
->[IMPORTANT]
+>[!IMPORTANT]
 >
 >You must include an ID and a value when you create a global filter. The sample values allow you to execute the SQL statement and build the chart. Note that the sample values you provide when composing your statement are replaced by the actual values you select for the date or global filter at runtime. 
 
