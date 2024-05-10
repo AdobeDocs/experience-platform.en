@@ -56,7 +56,7 @@ Any variables that are not automatically mapped are available as [Context data v
 }
 ```
 
-Then these would be the context data keys available to you in the Processing rules interface:
+Then these fields would be the context data keys available to you in the Processing rules interface:
 
 ```javascript
 a.x.key //value
