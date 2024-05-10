@@ -24,7 +24,7 @@ role: Developer,User
       * [Global filter](data-distiller/customizable-insights/filters/global-filter.md) 
     * [View more](data-distiller/customizable-insights/view-more.md)
     * [View SQL](data-distiller/customizable-insights/view-sql.md)
-    * [Download as CSV](data-distiller/customizable-insights/view-more.md)
+    * [Download as CSV](data-distiller/customizable-insights/download-csv.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
   * [Account Profiles](guides/account-profiles.md)
