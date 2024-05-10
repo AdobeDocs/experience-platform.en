@@ -18,7 +18,7 @@ Consider these customers who visit your properties and sporadically purchase the
 
 * Collect and manage data
 * Create audiences
-* Create journeys to action upon these audiences in Adobe Journey Optimizer and activate them in Real-Time CDP.
+* Create journeys to target these audiences in Adobe Journey Optimizer and activate them in Real-Time CDP.
 
 ![Step by step Evolve one-time value to lifetime value high level visual overview.](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){width="500" zoomable="yes"}
 
@@ -45,7 +45,7 @@ To achieve this, the technology required consists of the two Experience Platform
 
 ## Real-Time CDP and Journey Optimizer architecture
 
-Below is a high-level architecture view of the various components of Real-Time CDP and Journey Optimizer. This diagram shows how data flows through the two Experience Platform apps from data collection up to the point where it is activated through journeys or campaigns to destinations, in order to achieve the use case described on this page.
+Below is a high-level architecture view of the various components of Real-Time CDP and Journey Optimizer. This diagram shows how data flows through the two Experience Platform apps from data collection up to the point where it is activated through journeys or campaigns to destinations, to achieve the use case described on this page.
 
 ![Architecture high level visual overview.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){width="1000" zoomable="yes"}
 
@@ -53,7 +53,7 @@ Below is a high-level architecture view of the various components of Real-Time C
 
 Below is a high-level overview of the workflow, a combination of a journey workflow and an activation workflow.
 
-In the sample workflow pictured below, you look for customers who meet a certain criteria and you want to entice them to return to your website or app. You are looking to set them on a journey where instead of limited activity on your property, they return in a more recurrent manner. You are trying to get them back to your property and then once they are back, you have them enter the journey to recurringly make purchases on your site. The campaign set up here is capped at one engagement with customers per month. 
+In the sample workflow pictured below, you look for customers who meet a certain criteria and you want to entice them to return to your website or app. You are looking to set them on a journey where instead of limited activity on your property, they return in a more recurrent manner. You are trying to get them back to your property and then once they are back, you have them enter the journey to  make recurrent purchases on your site. The campaign set up here is capped at one engagement with customers per month. 
 
 You start by sending your audience of high-valued and low-frequency customers a message. You then check if they received this message within the last thirty days. If they have not, then you can enter them into a journey about, for example, a new subscription program. You can then wait for a few days (seven days in this example). After this time, if they have not purchased the subscription that you messaged them about, you can deliver paid media ads via destinations. If they have purchased the subscription, you can have them enter an order confirmation journey, thereby completing the use case. 
 
@@ -112,7 +112,7 @@ The customer attributes schema is represented by an [!UICONTROL XDM Individual P
 
 +++Personal Contact Details (Field Group)
 
-[Personal Contact Details](/help/xdm/field-groups/profile/personal-contact-details.md) is a standard schema field group for the XDM Individual Profile class which describes the contact information for an individual person.
+[Personal Contact Details](/help/xdm/field-groups/profile/personal-contact-details.md) is a standard schema field group for the XDM Individual Profile class, which describes the contact information for an individual person.
 
 +++
 
@@ -217,7 +217,7 @@ The customer offline transactions schema is represented by an [!UICONTROL XDM Ex
 
 +++Personal Contact Details (Field Group)
 
-[[!UICONTROL Personal Contact Details]](/help/xdm/field-groups/profile/personal-contact-details.md) is a standard schema field group for the [!DNL XDM Individual Profile] class which describes the contact information for an individual person.
+[[!UICONTROL Personal Contact Details]](/help/xdm/field-groups/profile/personal-contact-details.md) is a standard schema field group for the [!DNL XDM Individual Profile] class, which describes the contact information for an individual person.
 
 +++
 
@@ -233,7 +233,7 @@ External Source System Audit Attributes is a standard Experience Data Model (XDM
 >
 >This is an optional implementation if you are using the [!DNL Adobe Analytics Data Connector].
 
-This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website or on other associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it is intended to be used when Web SDK is not an option for data collection; thus, this schema is needed when you are utilizing the [!DNL Adobe Analytics Data Connector] to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
+This schema is used to structure and reference the event data that makes up your customer activity that occurs on your website or on other associated digital platforms. This schema is similar to the Customer Digital Transactions schema but differs in that it can when Web SDK is not an option for data collection. As such, you can use this schema when you are utilizing the [!DNL Adobe Analytics Data Connector] to send your online data into [!DNL Adobe Experience Platform] either as a primary or secondary datastream.
 
 ![Adobe web connector schema with field groups highlighted](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
 
@@ -241,7 +241,7 @@ The [!DNL Adobe] web connector schema is represented by a [!UICONTROL XDM Experi
 
 +++Adobe Analytics ExperienceEvent Template (Field Group)
 
-[[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](/help/xdm/field-groups/event/analytics-full-extension.md) is a standard schema field group which captures common metrics that are collected by Adobe Analytics.
+[[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](/help/xdm/field-groups/event/analytics-full-extension.md) is a standard schema field group, which captures common metrics that are collected by Adobe Analytics.
 
 +++
 
@@ -289,10 +289,10 @@ There are no [marketing policies](/help/data-governance/policies/overview.md) re
 
 ### Create audiences {#create-audiences}
 
-This use case requires that you create two audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways in Adobe Experience Platform:
+This use case requires that you create two audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people. Audiences can be created in multiple ways in Adobe Experience Platform:
 
 * For information on how to create an audience, read the [Audience service UI guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
-* For information on how to directly compose [Audiences](/help/segmentation/home.md), read the [Audience Composition UI guide](/help/segmentation/ui/audience-composition.md).
+* For information on how to compose [audiences](/help/segmentation/home.md), read the [Audience Composition UI guide](/help/segmentation/ui/audience-composition.md).
 * For information on how to build audiences through Platform-derived segment definitions, read the [Audience Builder UI guide](/help/segmentation/ui/segment-builder.md).
 
 Specifically, you must create and use two audiences at different steps of the use case, as shown in the image below.
@@ -431,9 +431,9 @@ Use the suggested events, fields, and actions below in your confirmation journey
 
 For more information about creating journeys in [!DNL Adobe Journey Optimizer], read the [get started with journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) guide.
 
-### Set up destination to display paid media ads {#paid-media-ads}
+### Set up a destination to display paid media ads {#paid-media-ads}
 
-Some users might not have purchased your subscription even after you message them about the new program. After waiting for a number of days, (seven in this example use case), you can decide to show paid media ads to those users, to try and nudge them into purchasing your subscription. 
+Some users might not have purchased your subscription even after you message them about the new program. After waiting for a number of days (seven in this example use case), you can decide to show paid media ads to those users, to encourage them to purchase your subscription. 
 
 Use the destinations framework in Real-Time CDP for paid media ads. Select one of the many available advertising destinations to display paid media ads to your customers and activate the Paid media audience that you [created earlier](#create-audiences) to a destination of your choice. See an overview of available [advertising](/help/destinations/catalog/advertising/overview.md) and [social](/help/destinations/catalog/social/overview.md) destinations. 
 
