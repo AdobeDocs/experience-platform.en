@@ -12,7 +12,7 @@ For every chart authored using the query pro mode through SQL, you can view the 
 
 From your custom dashboard, select the ellipses (`...`) on any widget to access the [!UICONTROL View more] and [!UICONTROL View SQL] options.
 
-![A custom dashboard with an insight's ellipses dropdown menu and the View more and View SQL options highlighted.](../images/customizable-insights/ellipses-dropdown.png)
+![A custom dashboard with an insight's ellipses dropdown menu and the View more and View SQL options highlighted.](../../images/customizable-insights/ellipses-dropdown.png)
 
 ## Download CSV {#download-csv}
 
@@ -22,7 +22,7 @@ The [!UICONTROL View more] feature displays the specific data points for the cha
 >
 >The CSV download is limited ot the first 500 records.
 
-![A dialog displaying a preview of your insight and the tabularized results of your SQL that generated the insight.](../images/customizable-insights/view-more-download-csv.png)
+![A dialog displaying a preview of your insight and the tabularized results of your SQL that generated the insight.](../../images/customizable-insights/view-more-download-csv.png)
 
 ## Next steps
 
