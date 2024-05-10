@@ -4,11 +4,11 @@ description: Learn about the different viewing options for you SQL analysed data
 ---
 # View more {#view-more}
 
-Once you have created a [custom insight](./overview.md) with [query pro mode](./query-pro-mode.md), you can view your chart data in differnt formats. You can view either a tabulated form of the results, or download the data as a CSV file to view in a spreadsheet.
+Once you have created a [custom insight](./overview.md) with [query pro mode](./query-pro-mode.md), you can view your chart data in different formats. You can view either a tabulated form of the results, or download the data as a CSV file to view in a spreadsheet. 
 
 ## Tabulated results {#tabulated-results}
 
-For every chart authored using the query Pro mode through SQL, you can view the tabulated results of your analysis within the Experience Platform UI. 
+For every chart authored using the query pro mode through SQL, you can view the tabulated results of your analysis within the Experience Platform UI. 
 
 From your custom dashboard, select the ellipses (`...`) on any widget to access the [!UICONTROL View more] and [!UICONTROL View SQL] options.
 
@@ -16,7 +16,7 @@ From your custom dashboard, select the ellipses (`...`) on any widget to access 
 
 ## Download CSV {#download-csv}
 
-The [!UICONTROL View more] feature displays the specific data points for the chart in tabular form. From this dialog, you can download the processed data in CSV format. Select **[!UICONTROL Download CSV]** to download your data.
+The [!UICONTROL View more] feature displays the specific data points for the chart in tabular form. To simplify the process of data sharing and manipulation, you can download the processed data in CSV format from this dialog. Select **[!UICONTROL Download CSV]** to download your data.
 
 >[!NOTE]
 >

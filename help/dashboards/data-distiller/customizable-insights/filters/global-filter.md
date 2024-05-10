@@ -4,17 +4,21 @@ description: Learn how to filter your data insights with a custom globally appli
 ---
 # Create a global filter {#create-global-filter}
 
-To apply a global filter, first select **[!UICONTROL Add filter]** from your dashboard view, then **[!UICONTROL Global filter]** from the dropdown menu. 
+To create a global filter, first select **[!UICONTROL Add filter]** from your dashboard view, then **[!UICONTROL Global filter]** from the dropdown menu. 
+
+>[!IMPORTANT]
+>
+>Ensure you map your global filters to all your charts. This is not an automatic process. To use a global filter, you must include a [query parameter](../../../../query-service/ui/parameterized-queries.md) in the SQL of your chart, [enable the global filter](#enable-global-filter) in the widget composer, and [select a runtime value](#select-global-filter) for the parameter in the global filter dialog. See the query pro guide to learn how to edit your SQL if you need to incorporate a query parameter.
 
 ![A custom dashboard with Add filter and its dropdown menu highlighted.](../../../images/customizable-insights/add-filter.png)
 
-Global filters affect the data of all widgets in your dashboard. You can quickly change the insights provided by your SQL with customized global filters.
+You can quickly change the insights provided by your SQL with customized global filters.
 
 The [!UICONTROL Create a global filter] dialog opens. Creating a global filter follows the same process as creating an insight with SQL. First, select a database (insights data model) to query, then input your custom SQL in the Query Editor, and finally select the run icon (![A run icon.](../../../images/customizable-insights/run-icon.png)). 
 
 >[IMPORTANT]
 >
->You must include an ID and a value when you create a global filter.
+>You must include an ID and a value when you create a global filter. The sample values allow you to execute the SQL statement and build the chart. Note that the sample values you provide when composing your statement are replaced by the actual values you select for the date or global filter at runtime. 
 
 After successfully running the query, the results tab displays the results. Select **[!UICONTROL Next]**.
 
@@ -24,13 +28,17 @@ The final step of the global filter creation workflow requires you to add a labe
 
 >[!NOTE]
 >
->The options available are dependent on the dataset and SQL that you use. 
+>Only the [!UICONTROL Combo box] filter type option is currently supported. 
 
 Finally, select **[!UICONTROL Select]** to return to your dashboard view.
 
 ![The [!UICONTROL Create a global filter dialog] with Select and the Filter label text input highlighted.](../../../images/customizable-insights/global-filter-label.png)
 
-## Enable the global filter for each insight {#Enable-global-filter}
+## Enable the global filter for each insight {#enable-global-filter}
+
+>[!TIP]
+>
+>Enable the global filters in every chart you create. This ensures that the values you choose as a global filter to reflect in all of your charts.
 
 After creating your global filter for your dashboard, the toggle for that global filter becomes available as part of the widget composer.
 
