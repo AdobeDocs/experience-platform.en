@@ -4,11 +4,7 @@ description: Learn how to use SQL queries to generate insights for your custom d
 ---
 # Customizable Insights for extended app reporting
 
-You can use custom SQL queries to effectively extract insights from diverse structured datasets. This method of insight creation is well-suited for tables with clear relationships. It allows for a greater degree of customization within your insights and filters that can suit niche use cases. You can also do complex analysis in SQL and then retain the output of that analysis as a chart for non-technical users.
-
-<!-- 
-Technical people can use 'query pro-mode' to perform complex analysis on SQL and then share this analysis with non-technical users through this dashboard capability.
- -->
+Use custom SQL queries to effectively extract insights from diverse structured datasets. Technical people can use 'query pro-mode' to perform complex analysis with SQL and then share this analysis with non-technical users through charts on your custom dashboard or export them in CSV files. This method of insight creation is well-suited for tables with clear relationships and allows for a greater degree of customization within your insights and filters that can suit niche use cases. 
 
 >[!IMPORTANT]
 >
@@ -32,6 +28,10 @@ Insights generated from SQL queries offer far greater flexibility and customizat
 
 >[!NOTE]
 >
->Once you make a selection, you cannot change this selection within that dashboard. Instead, create a new dashboard that uses a different insight creation method.
+>Once you make a selection, you cannot change this selection within that dashboard. Instead, you must create a new dashboard with a different dashboard creation method.
 
 ![The [!UICONTROL Create dashboard] dialog with Query pro mode and Save highlighted.](../images/customizable-insights/query-pro-mode.png)
+
+## Create a chart {#create-a-chart}
+
+See the [query pro mode guide](./query-pro-mode.md) for step-by-step instructions on creating a chart with SQL.

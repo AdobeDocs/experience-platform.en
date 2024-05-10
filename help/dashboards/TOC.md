@@ -13,16 +13,17 @@ role: Developer,User
 * [Dashboard access permissions](permissions.md)
 * [Dashboards inventory](inventory.md)
 * [Dashboards](user-defined-dashboards.md)
-* [SQL generated insights](sql-generated-insights.md)
 * [Download dashboards to PDF](download.md)
-* Customizable Insights {#customizable-insights}
-  * [Overview](customizable-insights/overview.md)
-  * [Query Pro mode (SQL chart creation)](customizable-insights/query-pro-mode.md)
-  * Filters {#filters}
-    * [Date filter](customizable-insights/filters/date-filter.md)
-    * [Global filter](customizable-insights/filters/global-filter.md) 
-  * [View more](customizable-insights/view-more.md)
-  * [View SQL](customizable-insights/view-sql.md)
+* Data Distiller {#data-distiller}
+  * Customizable Insights {#customizable-insights}
+    * [Overview](data-distiller/customizable-insights/overview.md)
+    * [Query Pro mode (SQL chart creation)](data-distiller/customizable-insights/query-pro-mode.md)
+    * Filters {#filters}
+      * [Date filter](data-distiller/customizable-insights/filters/date-filter.md)
+      * [Global filter](data-distiller/customizable-insights/filters/global-filter.md) 
+    * [View more](data-distiller/customizable-insights/view-more.md)
+    * [View SQL](data-distiller/customizable-insights/view-sql.md)
+    * [Download as CSV](data-distiller/customizable-insights/view-more.md#downlaod-csv)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
   * [Account Profiles](guides/account-profiles.md)

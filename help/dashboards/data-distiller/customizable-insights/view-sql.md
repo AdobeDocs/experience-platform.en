@@ -4,6 +4,8 @@ description: Learn how to view the SQL behind your custom insights.
 ---
 # View SQL {#view-sql}
 
+Once you have created a [custom insight](./overview.md) with [query pro mode](./query-pro-mode.md), you can view the SQL that populates your charts with the View SQL capability.
+
 From your custom dashboard, select the ellipses (`...`) on any widget to access the [!UICONTROL View more] and [!UICONTROL View SQL] options.
 
 ![A custom dashboard with an insight's ellipses dropdown menu and the View more and View SQL options highlighted.](./images/user-defined-dashboards/sql-workflow/ellipses-dropdown.png)
@@ -15,3 +17,9 @@ To view the SQL behind your customized insights, select the **[!UICONTROL View S
 Select **[!UICONTROL Close]** to close the dialog.
 
 ![A dialog displaying the SQL of an insight with the Close option highlighted.](./images/user-defined-dashboards/close-sql-dialog.png)
+
+## Next steps
+
+After reading this document, you now know how to view the SQL behind your custom insights. See the view more document to learn how to [compare your custom chart with the tabulated results of your SQL analysis](./view-more.md). 
+
+You can also learn how to generate charts from existing data models in the Adobe Experience Platform UI with the [guided design mode guide](../../user-defined-dashboards.md).

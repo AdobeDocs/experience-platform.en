@@ -1,5 +1,5 @@
 ---
-title: Create a date filter
+title: Create a Date Filter
 description: Learn how to filter your custom insights by date.
 ---
 # Create a date filter {#create-date-filter}

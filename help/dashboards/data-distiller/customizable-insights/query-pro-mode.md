@@ -1,14 +1,18 @@
 ---
 title: Query Pro Mode
-description: Learn how to use SQL queries to generate insights for your custom dashboards.
+description: Learn how to use SQL queries in the Adobe Experience Platform UI to generate charts for your custom dashboards.
 ---
 # Query pro-mode {#query-pro-mode}
+
+Query pro-mode is an SQL editor-based workflow that guides you through the process of generating insights with custom SQL queries in the Adobe Experience Platform UI. Before you can generate insights with custom SQL queries, you must first [create a dashboard](./overview.md#create-custom-dashboard). 
+
+## Compose SQL {#compose-sql}
+
+Once you have chosen to create a dashboard with query pro mode, the **[!UICONTROL Enter SQL]** dialog appears. Select a database (insights data model) to query from the dropdown menu, and input a suitable query for your dataset in the Query Editor.
 
 >[!NOTE]
 >
 >Query pro-mode is only available to users who have purchased the Data Distiller SKU. The [[!UICONTROL Guided design mode]](./user-defined-dashboards.md) is available to all users to create insights from an existing data model.
-
-The **[!UICONTROL Enter SQL]** dialog appears. Select a database (insights data model) to query from the dropdown menu, and input a suitable query for your dataset in the Query Editor.
 
 See the [Query Editor user guide](../query-service/ui/user-guide.md#query-authoring) for information on its UI elements.
 
@@ -19,8 +23,6 @@ See the [Query Editor user guide](../query-service/ui/user-guide.md#query-author
 ![The [!UICONTROL Enter SQL] dialog with the dataset dropdown menu and run icon highlighted, The dialog has a populated SQL query and the query parameters tab displayed.](../images/customizable-insights/enter-sql-database-dropdown.png)
 
 To execute your query, select the run icon (![The run icon.](../images/customizable-insights/run-icon.png)). The Query Editor displays the results tab. Next, to confirm your configuration and open the widget composer, select **[!UICONTROL Select]**. 
-
-<!-- Screenshot below was taken from a screengrab -->
 
 ![The [!UICONTROL Enter SQL] dialog with SQL input, the results tab displayed, and Select highlighted.](../images/customizable-insights/enter-sql-select.png)
 
@@ -82,3 +84,8 @@ Select **[!UICONTROL Add filter]** to create either a [[!UICONTROL Date filter]]
 
 See the Custom Dashboard guide for instructions on how to [edit, duplicate, or delete an existing widget](./user-defined-dashboards.md#duplicate).
 
+## Next steps
+
+After reading this document, you now know how write SQL queries in the Adobe Experience Platform UI to generate charts for your custom dashboards. Next, you should learn how to further enrich yourt data by [creating a date filter](./filters/date-filter.md), or [creating a global filter](./filters/global-filter.md).
+
+You can also learn more about other Customized Insights features including [the different viewing options for you SQL analysed data](./view-more.md) or how to [view the SQL behind your custom insights](./view-sql.md).
