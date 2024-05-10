@@ -16,7 +16,7 @@ To view the SQL behind your customized insights, select the **[!UICONTROL View S
 
 Select **[!UICONTROL Close]** to close the dialog.
 
-![A dialog displaying the SQL of an insight with the Close option highlighted.](../../images/user-defined-dashboards/close-sql-dialog.png)
+![A dialog displaying the SQL of an insight with the Close option highlighted.](../../images/customizable-insights/close-sql-dialog.png)
 
 ## Next steps
 
