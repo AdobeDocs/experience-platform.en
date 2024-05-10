@@ -46,11 +46,14 @@ Notice that when you open certain fields of your schema, such as `web.webPageDet
 
 ## Variable {#variable}
 
-Another way to create XDM objects is using the **[!UICONTROL Variable]** data element. While the XDM object data element is created when it is referenced, such as inside a `sendEvent` command, the **[!UICONTROL Variable]** data element can be updated via [!UICONTROL Update variable] actions. To use the data element, select the correct Adobe Experience Platform sandbox and schema.
+You can create payload objects using the **[!UICONTROL Variable]** data element. Both [!UICONTOL XDM] and [!UICONTROL Data] objects are supported.
 
-![UI image showing the Create Data Element screen.](assets/variable-data-element.png)
+* When [!UICONTROL XDM] is selected, select the desired [!UICONTROL Sandbox] and [!UICONTROL Schema].
+* When [!UICONTROL Data] is selected, select the desired solutions. Available solutions include [!UICONTROL Adobe Analytics] and [!UICONTROL Adobe Target].
 
-Once you've created this data element you can use [Update variable](./action-types.md#update-variable) actions to modify the data element. Then within send event actions use use the variable data element for the XDM option.
+![Data element UI](assets/variable-data-element.png)
+
+Once this data element is created, you can use [Update variable](./action-types.md#update-variable) actions to modify it. When ready, you can use this data element within send event actions to send data to a datastream.
 
 ## Next steps {#next-steps}
 
