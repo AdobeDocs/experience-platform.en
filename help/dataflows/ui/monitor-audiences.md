@@ -31,7 +31,7 @@ This guide requires a working understanding of the following components of Adobe
 
 To access the **[!UICONTROL Audiences]** dashboard, select **[!UICONTROL Monitoring]** in the left navigation. Once on the **[!UICONTROL Monitoring]** page, select the **[!UICONTROL Audiences]** card. 
 
-![The Audiences card. Information about the last evaluation job and the last export job is shown.](../assets/ui/monitor-segments/segment-card-monitoring.png) UPDATE IMAGE
+![The Audiences card. Information about the last evaluation job and the last export job is shown.](../assets/ui/monitor-audiences/audience-card.png)
 
 On the main **[!UICONTROL Audiences]** dashboard, the **[!UICONTROL Audiences]** card shows the status and date of the last evaluation job and the last export job. 
 
@@ -41,34 +41,34 @@ The dashboard itself contains metrics for both audiences and segmentation jobs. 
 >
 >Currently, only audiences that are activated to [batch (file-based) destinations](../../destinations/destination-types.md#file-based) are supported for the monitoring audiences dashboard.
 
-![The audiences dashboard. Information about the different audiences in your organization and sandbox are displayed.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png) UPDATE IMAGE
+![The audiences dashboard. Information about the different audiences in your organization and sandbox are displayed.](../assets/ui/monitor-audiences/audience-dashboard.png)
 
 The following metrics are available for this dashboard view:
 
 | Metric | Description |
 | ------ | ----------- |
-| **[!UICONTROL Audiennce name]** | The name of the audience. |
-| **[!UICONTROL Data type]** | The type of audience. |
+| **[!UICONTROL Audience name]** | The name of the audience. |
+| **[!UICONTROL Data type]** | The data type of audience. Possible values include **[!UICONTROL Customer]**, **[!UICONTROL Account]**, and **[!UICONTROL Prospect]**. |
 | **[!UICONTROL Last evaluation timestamp]** | The date and time that the audience's last evaluation job ran. |
 | **[!UICONTROL Last evaluation status]** | The status of the audience's last evaluation job. Possible values include **[!UICONTROL Success]**, **[!UICONTROL No runs]**, and **[!UICONTROL Failed]**.|
-| Last evaluation method | The evaluation method of the audience. Possible values include batch, streaming, and edge. (NEED TO CONFIRM) |
+| **[!UICONTROL Last evaluation method]** | The evaluation method of the audience. Since only batch segmentation is supported, the only possible value is **[!UICONTROL Batch]**. |
 | **[!UICONTROL Last evaluation profiles]** | The number of profiles that were evaluated in the audience's last evaluation job. |
 | **[!UICONTROL Last activation timestamp]** | The date and time that the audience's last activation job ran. |
 | **[!UICONTROL Last activation status]** | The status of the audience's last activation job. Possible values include **[!UICONTROL Success]**, **[!UICONTROL No runs]**, and **[!UICONTROL Failed]**. | 
 | **[!UICONTROL Last activation identities]** | The number of identities that were activated in the audience's last activation job. |
 | **[!UICONTROL Last activation destination]** | The name of the destination that the audience's last activation job activated to. |
 
-You can filter the results to a specific audience and view its segmentation jobs by selecting the filter icon (![The filter icon.](../assets/ui/monitor-segments/filter-icon.png)). The segmentation jobs are sorted in chronological order, with the most recent segmentation jobs appearing first.
+You can filter the results to a specific audience and view its segmentation jobs by selecting the filter icon (![The filter icon.](../assets/ui/monitor-audiences/filter-icon.png)). The segmentation jobs are sorted in chronological order, with the most recent segmentation jobs appearing first.
 
-![The filter icon is highlighted. Selecting this allows you to view the segmentation jobs for the specified audience.](../assets/ui/monitor-segments/filter-segment.png) UPDATE IMAGE
+![The filter icon is highlighted. Selecting this allows you to view the segmentation jobs for the specified audience.](../assets/ui/monitor-audiences/filter-audience.png)
 
 The filtered audience dashboard appears. The **[!UICONTROL Audiences]** card shows the status and date of the last evaluation job and the last activation job. 
 
-![The Audiences card. Information about the last evaluation job and the last activation job is shown.](../assets/ui/monitor-segments/specified-segment-card.png) UPDATE IMAGE
+![The Audiences card. Information about the last evaluation job and the last activation job is shown.](../assets/ui/monitor-audiences/specified-audience-card.png)
 
 The dashboard itself displays the time and status of the last evaluation and activation jobs, a graph showing the profile count of the audience evaluation, and metrics for the segmentation jobs that were run. By default, the dashboard shows segmentation job metrics for the last 24 hours.
 
-![The filtered audience dashboard. Information about the various segmentation jobs that have run for this audience is displayed.](../assets/ui/monitor-segments/filter-specified-segment.png) UPDATE IMAGE
+![The filtered audience dashboard. Information about the various segmentation jobs that have run for this audience is displayed.](../assets/ui/monitor-audiences/filter-audience.png)
 
 The following metrics are available for this dashboard view:
 
@@ -83,13 +83,13 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Identity activated]** | The number of identities that the segmentation job is activating. Each profile can have multiple identities. For example, a profile could have an email, phone number, and a loyalty number as identities. |
 | **[!UICONTROL Destination name]** | The name of the destination that the segmentation job is being activated to. |
 
-You can further filter to a specific segmentation job and see its details by selecting the filter icon (![The filter icon.](../assets/ui/monitor-segments/filter-icon.png)). There are two different kinds of segmentation jobs that can be filtered: activation jobs and evaluation jobs.
+You can further filter to a specific segmentation job and see its details by selecting the filter icon (![The filter icon.](../assets/ui/monitor-audiences/filter-icon.png)). There are two different kinds of segmentation jobs that can be filtered: activation jobs and evaluation jobs.
 
 ### Activation job details {#activation-job-details}
 
-The activation job dataflow run details page shows information on the run's metrics, dataflow run errors, and audiences that are related to the segmentation job. An activation job is used to activate your audience for a specified destination. By default, the details page shows the dataflow run errors.
+The activation job dataflow run details page shows information on the run's metrics, dataflow run errors, and audiences that are related to the segmentation job. An activation job is used to activate your audience for a specified destination.
 
-![The filtered segment dashboard. Information about the various segment jobs that have run for this segment is displayed.](../assets/ui/monitor-segments/activation-job-details.png) UPDATE IMAGE
+![The activation job dashboard. Information about the various segmentation jobs that have run for this audience is displayed.](../assets/ui/monitor-audiences/activation-job-dashboard.png)
 
 The following metrics are available for this dashboard view:
 
@@ -107,17 +107,9 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL IMS org ID]** | The ID of the organization that the activation job belongs to. |
 | **[!UICONTROL Destination name]** | The name of the destination that the data is being activated to. |
 
-Underneath the metrics, a toggle to select between the dataflow run errors and the audiences is displayed.
+Under the audiences section, you can see a list of audiences that were activated as part of the activation job.
 
-![The activation job dashboard. The toggle used to switch between the dataflow run errors and the audiences display is highlighted.](../assets/ui/monitor-segments/activation-job-details-toggle.png) UPDATE IMAGE
-
-Under the dataflow run errors section, select the toggle to view the identities failed or the identities excluded fields. The errors section includes details about the error code and number of identities failed or excluded.
-
-![The activation job dashboard. Information about the identities that failed or were excluded is highlighted.](../assets/ui/monitor-segments/activation-job-details.png) UPDATE IMAGE
-
-Under the audiences section, you can see a list of audiences that were activated as part of the activation job. Use the search bar to filter the list of audiences by name. 
-
-![The activation job dashboard. Information about the identities that failed or were excluded is highlighted.](../assets/ui/monitor-segments/activation-job-details-segments.png) UPDATE IMAGE
+![The activation job dashboard. Information about the identities that failed or were excluded is highlighted.](../assets/ui/monitor-audiences/activation-job-audiences.png)
 
 For the audiences section, the following metrics are available:
 
@@ -129,11 +121,15 @@ For the audiences section, the following metrics are available:
 | **[!UICONTROL Last dataflow run status]** | The status of the last activation job that ran for that audience. |
 | **[!UICONTROL Last dataflow run date]** | The date and time of the last activation job that ran for that audience. |
 
+Additionally, you can view details about the dataflow run errors. Under the dataflow run errors section, you can view both the identities that failed or the identities that were excluded. The errors section includes details about the error code and number of identities failed or excluded.
+
+![The activation job dashboard. Information about the identities that failed or were excluded is highlighted.](../assets/ui/monitor-audiences/activation-job-errors.png)
+
 ### Evaluation job details {#evaluation-job-details}
 
 The evaluation job dataflow run details page shows information on the run's metrics and audiences that are related to the segmentation job. 
 
-![The evaluation job dashboard. Information about the audience's evaluation job is displayed.](../assets/ui/monitor-segments/evaluation-job-details.png) UPDATE IMAGE
+![The evaluation job dashboard. Information about the audience's evaluation job is displayed.](../assets/ui/monitor-audiences/evaluation-job-details.png)
 
 The following metrics are available for this dashboard view:
 
@@ -170,13 +166,13 @@ For the [!UICONTROL Audiences] section, the following metrics are available:
 >title="Segmentation Jobs"
 >abstract="The segmentation jobs view contains information on the evaluation and export jobs for all your audiences."
 
-To access the **[!UICONTROL Segmentation Jobs]** dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select **[!UICONTROL Segmentation jobs]**. The [!UICONTROL Monitoring] dashboard contains metrics and information on the evaluation and export jobs.
+To access the **[!UICONTROL Segmentation Jobs]** dashboard, select select **[!UICONTROL Segmentation jobs]** in the [!UICONTROL Audiences] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on the evaluation and export jobs.
 
 >[!NOTE]
 >
 >Only **segmentation evaluation jobs** are supported for per-audience monitoring. Segmentation export jobs only support organization-level monitoring.
 
-![Segmentation jobs monitoring dashboard](../assets/ui/monitor-segments/segment-jobs-dashboard.png) UPDATE IMAGE
+![The segmentation jobs monitoring dashboard is displayed. The toggle to switch between Audiences and Segmentation jobs is highlighted.](../assets/ui/monitor-audiences/segmentation-jobs-dashboard.png)
 
 Use the [!UICONTROL Segmentation Jobs] dashboard to understand if profile evaluation and export occurs on time and without any exceptions, so the downstream services for destination activation can have the latest evaluated profile data.
 
