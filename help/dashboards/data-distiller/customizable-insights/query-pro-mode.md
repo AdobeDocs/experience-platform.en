@@ -12,9 +12,9 @@ Once you have chosen to create a dashboard with query pro mode, the **[!UICONTRO
 
 >[!NOTE]
 >
->Query pro mode is only available to users who have purchased the Data Distiller SKU. The [[!UICONTROL Guided design mode]](./user-defined-dashboards.md) is available to all users to create insights from an existing data model.
+>Query pro mode is only available to users who have purchased the Data Distiller SKU. The [[!UICONTROL Guided design mode]](../../user-defined-dashboards.md) is available to all users to create insights from an existing data model.
 
-See the [Query Editor user guide](../query-service/ui/user-guide.md#query-authoring) for information on its UI elements.
+See the [Query Editor user guide](../../../query-service/ui/user-guide.md#query-authoring) for information on its UI elements.
 
 ![The [!UICONTROL Enter SQL] dialog with the dataset dropdown menu and run icon highlighted, The dialog has a populated SQL query and the query parameters tab displayed.](../../images/customizable-insights/enter-sql-database-dropdown.png)
 
@@ -92,7 +92,7 @@ Select **[!UICONTROL Add filter]** to create either a [[!UICONTROL Date filter]]
 
 ## Edit, duplicate, or delete an insight
 
-See the Custom Dashboard guide for instructions on how to [edit, duplicate, or delete an existing widget](./user-defined-dashboards.md#duplicate).
+See the Custom Dashboard guide for instructions on how to [edit, duplicate, or delete an existing widget](../../user-defined-dashboards.md#duplicate).
 
 ## Next steps
 

@@ -8,7 +8,7 @@ To filter your insights by date, you must add parameters to your SQL queries tha
 
 Query parameters allow you to work with dynamic data as they act as placeholders for the values you add at execution time. These placeholder values can be updated through the UI and enable less technical users to update the insights based on date ranges.   
 
-If you are unfamiliar with query parameters, see the documentation for [guidance on how to implement parameterized queries](../query-service/ui/parameterized-queries.md).
+If you are unfamiliar with query parameters, see the documentation for [guidance on how to implement parameterized queries](../../../../query-service/ui/parameterized-queries.md).
 
 ## Apply a date filter to your dashboard {#apply-date-filter}
 
@@ -22,7 +22,7 @@ Next, ensure your SQL includes query parameters to allow for a date range. If yo
 
 >[!TIP]
 >
->You are reccommended to add `$START_DATE` and `$END_DATE` parameters to your SQL statement in each of the charts that you want to enable date filters.
+>You are reccommended to add `$START_DATE` and `$END_DATE` parameters to your SQL statement in each of the charts that you want to enable date filters for.
 
 >[!NOTE]
 >
