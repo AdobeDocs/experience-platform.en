@@ -1,6 +1,7 @@
 ---
 title: Create a Date Filter
 description: Learn how to filter your custom insights by date.
+exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
 ---
 # Create a date filter {#create-date-filter}
 

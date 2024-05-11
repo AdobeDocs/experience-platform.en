@@ -1,6 +1,7 @@
 ---
 title: Query Pro Mode
 description: Learn how to use SQL queries in the Adobe Experience Platform UI to generate charts for your custom dashboards.
+exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
 ---
 # Query pro mode {#query-pro-mode}
 

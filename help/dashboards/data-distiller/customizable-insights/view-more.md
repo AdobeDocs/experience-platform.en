@@ -1,6 +1,7 @@
 ---
 title: View More
 description: Learn about the different viewing options for you SQL analysed data. From your custom dashboard you can view the tabulated results of your analysis or download the processed data in CSV format.
+exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
 ---
 # View more {#view-more}
 

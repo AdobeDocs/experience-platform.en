@@ -1,6 +1,7 @@
 ---
 title: Customizable Insights for Extended App Reporting
 description: Learn how to use SQL queries to generate insights for your custom dashboards.
+exl-id: c60a9218-4ac0-4638-833b-bdbded36ddf5
 ---
 # Customizable Insights for extended app reporting
 

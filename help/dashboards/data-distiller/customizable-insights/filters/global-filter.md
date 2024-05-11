@@ -1,6 +1,7 @@
 ---
 title: Create a Global Filter
 description: Learn how to filter your data insights with a custom globally applied filter.
+exl-id: a0084039-8809-4883-9f68-c666dcac5881
 ---
 # Create a global filter {#create-global-filter}
 

@@ -1,6 +1,7 @@
 ---
 title: Data Distiller Overview
 description: Data Distiller includes a subset of the functionalities from Adobe Experience Platform to clean, shape, and manipulate.
+exl-id: cae301c8-b9de-44fa-808d-7e398afd88f9
 ---
 # Data Distiller overview
 

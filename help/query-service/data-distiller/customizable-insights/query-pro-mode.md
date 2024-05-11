@@ -1,6 +1,7 @@
 ---
 title: Query Pro Mode
 description: Use custom SQL queries to generate charts and insights for your custom dashboards.
+exl-id: 8c0ccc3c-dff1-47df-ab57-5bb8fbfa4abd
 ---
 # Query pro mode
 

@@ -1,6 +1,7 @@
 ---
 title: View SQL
 description: Learn how to view the SQL behind your custom insights.
+exl-id: 663f64aa-34a9-4b3a-bd00-7ad6e4f3b64a
 ---
 # View SQL {#view-sql}
 
