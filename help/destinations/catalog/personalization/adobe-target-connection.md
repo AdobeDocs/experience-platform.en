@@ -136,7 +136,7 @@ Read [Activate audiences to edge personalization destinations](../../ui/activate
 
 ## Removing audiences from this destination {#remove}
 
-Removing audiences from an existing Adobe Target connection is dependent on the usage of the audience in an Adobe Target activity. Trying to remove an audience from an Adobe Target connection result in an error if the audience is used by an Adobe Target activity.
+Removing audiences from an existing Adobe Target connection is dependent on the usage of the audience in an Adobe Target [activity](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Trying to remove an audience from an Adobe Target connection result in an error if the audience is used by an Adobe Target activity.
 
 ![Platform UI image showing an error caused by attempting to remove an audience that is used by a Target activity.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
 
