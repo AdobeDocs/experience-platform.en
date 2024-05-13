@@ -49,7 +49,7 @@ There are two classes of questions to consider before querying AI Assistant:
 
 >[!ENDSHADEBOX]
 
-## Objectives that you can accomplish with AI Assistant
+## Objectives that you can accomplish with AI Assistant {#objectives}
 
 You can use AI Assistant for objectives such as:
 
@@ -210,7 +210,8 @@ You can also ask AI Assistant questions about your data usage in the following d
 * Schemas _(Questions regarding field groups cannot be answered at this time.)_
 * Sources _(Questions regarding accounts cannot be answered at this time.)_
 
-For usage data queries, answers may not reflect the current state of the UI. The data backing these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You may need to format your questions as: "When was the audience with the title {TITLE} created?" instead of, "When was the {TITLE} audience created?"
+For usage data queries, answers may not reflect the current state of the UI. The data backing these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You may need to format your questions as: 
+`When was the audience with the title "ACME Audience" created?` instead of, `When was the "ACME AUdience" audience created?`.
 
 You will need to log into a sandbox to inquire about specific data related to objects like audiences, schemas, datasets, attributes, and destinations.
 
@@ -218,13 +219,44 @@ You will need to log into a sandbox to inquire about specific data related to ob
 
 +++Select to see a list of example data usage questions
 
-| Question type | Description | Examples |
+Read the table below for examples of data usage questions and their respective use cases:
+
+| Question type | Use case| Examples |
 | --- | --- | --- | 
-| Data lineage | Track usage of one or multiple objects across other Experience Platform objects | <ul><li>Which dataset(s) use {SCHEMA_NAME} schema?</li><li>How many datasets have been ingested using the same schema?</li><li>Which datasets have been used in activated audiences?</li><li>List the schemas which have attributes used in activated audiences.</li><li>Show me the audiences which are activated to {DESTINATION_ACCOUNT_NAME} and have more than 1000 profiles.</li><li>Show me the attributes which are used in the activated audiences which have been modified after Jan 2023.</li><li>What are the datasets ingested via {SOURCE_NAME}?</li><li>Which dataflows are associated with {DATAFLOW_NAME}</li><li>List the schemas that are related to activated audiences and were created in last 1 year.</li></ul> |
-| Distribution and aggregations | Summary-based questions about Experience Platform object usage | <ul><li>What is the percentage of activated audiences?</li><li>How many fields are used in segmentation?</li><li>Which audiences are activated to the most number of destinations?</li><li>List duplicate audiences.</li><li>Show me the audiences activated to {DESTINATION_ACCOUNT_NAME} and rank them by profile size.</li><li>What is the percentage of the audiences which have not been activated but have more than 100 profiles. Show me their names.</li><li>List the 3 source connectors ingesting data into my datasets.</li><li>List me the top 5 attributes used in activated audiences based on their occurrence.</li></ul> |
-| Object lookup | Retrieve or access an Experience Platform object or it's properties. | <ul><li>Which datasets do not have any schema associated with them</li><li>List the attributes used for {AUDIENCE_NAME}?</li><li>Give me the list of schemas which are profile enabled but have not been modified since their creation.</li><li>Which audiences have been modified in the last week?</li><li>List me the audiences which have the same segment definitions along with their creation date.</li><li>Which datasets are profile enabled and also include how many audiences have been created from each dataset.</li><li>Which source accounts are associated with dataset XYZ?</li><li>Show me the segment definition and modification date of {AUDIENCE_NAME}.</li></ul>|
+| Data lineage | Track usage of one or multiple objects across other Experience Platform objects | <ul><li>Which datasets use the "ACME schema" schema?</li><li>How many datasets have been ingested using the same schema?</li><li>Which datasets have been used in activated audiences?</li><li>List the schemas which have attributes used in activated audiences.</li><li>Show me the audiences that are activated to "ACME Destinations" and have more than 1000 profiles.</li><li>Show me the attributes which are used in the activated audiences which have been modified after Jan 2023.</li><li>What are the datasets ingested via "ACME Amazon S3" source?</li><li>Which dataflows are associated with "ACME Loyalty Dataflow"?</li><li>List the schemas that are related to activated audiences and were created in last 1 year.</li></ul> |
+| Distribution and aggregations | Summary-based questions about Experience Platform object usage | <ul><li>What is the percentage of activated audiences?</li><li>How many fields are used in segmentation?</li><li>Which audiences are activated to the most number of destinations?</li><li>List duplicate audiences.</li><li>Show me the audiences activated to "ACME Destinations" and rank them by profile size.</li><li>What is the percentage of the audiences which have not been activated but have more than 100 profiles. Show me their names.</li><li>List the 3 source connectors ingesting data into my datasets.</li><li>List me the top 5 attributes used in activated audiences based on their occurrence.</li></ul> |
+| Object lookup | Retrieve or access an Experience Platform object or it's properties. | <ul><li>Which datasets do not have any schema associated with them</li><li>List the attributes used for "ACME Audience"?</li><li>Give me the list of schemas which are profile enabled but have not been modified since their creation.</li><li>Which audiences have been modified in the last week?</li><li>List me the audiences which have the same segment definitions along with their creation date.</li><li>Which datasets are profile enabled and also include how many audiences have been created from each dataset.</li><li>Which source accounts are associated with dataset XYZ?</li><li>Show me the segment definition and modification date of "ACME Audience".</li></ul>|
+| Object comparison | Identify duplicate audiences. | <ul><li>Based on their segment definition, list the audiences that are duplicates.</li><li>Which duplicate audiences are activated to "ACME Destinations".</li></ul> |
 
 +++
+
+## Phrasing your questions {#phrasing-your-questions}
+
+You must phrase your questions to AI Assistant with clarity and context in order to get as accurate a response as a possible. Refer to the following list of tips for guidance on how to ask a clear question with context:
+
+* State your task and/or question in a concise manner.
+* Avoid ambiguous language or overly complex syntax to facilitate comprehension.
+* Provide relevant context regarding your task and/or question as context can help AI Assistant generate more relevant responses.
+
+Read the table below for further guidance on best practices to follow when asking questions to AI Assistant:
+
+| Do | Example |
+| --- | --- |
+| <ul><li>Be specific about the object or information that you want to retrieve or analyze.</li><li>Try placing your data object names in quotes. If you only know a part of the object name, you may also specify that in the question.</li><li>Use [object auto-complete](./ui-guide.md#use-auto-complete) to help AI Assistant better understand the context of your query.</li></ul> | <ul><li>Which datasets use the "Luma - Loyalty" schema?</li><li>Show me the activated segments which have "Luma" in their names. Rank them by profile count.</li></ul> |
+| <ul><li>Avoid ambiguity and use clear language</li><li>Use precise terminology to ensure better clarity in your query.</li><li>When asking questions regarding Adobe Experience Platform, try to use terminology specific to Experience Platform to improve relevance of responses.</li></ul> | <ul><li>How many profiles do I have in "ACME Audience".</li><li>Show me the top 5 XDM attributes used in activated audiences.</li></ul> |
+| <ul><li>Provide context or specify a criteria to filter your results.</li><li>Use a filter criteria in the questions to limit the volume of data in the response.</li></ul> | <ul><li>Show me audiences that have not been activated and were created more than 6 months ago and have never been modified.</li><li>Show me audiences activated to "ACME Destination" and have more than 10000 profiles.</li></ul> |
+
+{style="table-layout:auto"}
+
+| Don't | Example |
+| --- | --- |
+| Use vague or ambiguous language. | <ul><li>Give me information about datasets.</li><li>How many users do I have in "ACME Audience"?</li><li>Show segments.</li><li>List attributes.</li></ul>|
+| Make incomplete requests. | "Luma - Loyalty Dataset" |
+| Assume knowledge without contexts. | <ul><li>Audiences in the last 6 months.</li><li>Build a query for me.</li></ul>|
+| Formulate overly complex queries. | Provide a comprehensive analysis of data lineage across all objects and their dependencies. |
+| Omit criteria or parameters. | Show me datasets. |
+
+{style="table-layout:auto"}
 
 ## Provide feedback {#feedback}
 
