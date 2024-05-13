@@ -23,6 +23,7 @@ role: User,Developer
         - [Create decile-based derived datasets](data-distiller/derived-datasets/decile-based-derived-attributes.md)
     - Customizable Insights for extended app reporting {#customizable-insights}
         - [Overview](data-distiller/customizable-insights/overview.md)
+        - [Query pro mode](data-distiller/customizable-insights/query-pro-mode.md)
         - [Send accelerated queries](data-distiller/customizable-insights/send-accelerated-queries.md)
         - [Reporting insights data model guide](data-distiller/customizable-insights/reporting-insights-data-model.md)
     - AI/ML feature pipelines {#ml-feature-pipelines}
