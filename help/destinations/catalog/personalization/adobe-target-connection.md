@@ -134,6 +134,16 @@ When you are finished providing details for your destination connection, select 
 
 Read [Activate audiences to edge personalization destinations](../../ui/activate-edge-personalization-destinations.md) for instructions on activating audiences to this destination.
 
+## Remove audiences from a Target destination {#remove}
+
+There are extra steps required to remove an audience from an existing Adobe Target connection when that audience is already being used in an Adobe Target [activity](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Trying to remove an audience from an Adobe Target connection results in an error if the audience is used by an Adobe Target activity.
+
+![Platform UI image showing an error caused by attempting to remove an audience that is used by a Target activity.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+
+To remove an audience from a Target destination when the audience is being used in an activity, you must first either remove the audience from the Target activity which is using it, or delete the activity altogether. Then, you can remove the audience from your Target connection.
+
+If the audience is not being used in an activity, go to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** > **[!UICONTROL Select destination dataflow]** > **[!UICONTROL Activation data]**, select the audiences that you want to remove, then select **[!UICONTROL Remove audiences]**.
+
 ## Exported data {#exported-data}
 
 Adobe Target *reads* profile data from the Adobe Experience Platform Edge Network, so no data gets exported.
