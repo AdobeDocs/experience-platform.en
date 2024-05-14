@@ -1,6 +1,6 @@
 ---
 title: xdm
-description: The schema-aligned object sent to Adobe.
+description: Learn how to send data to Adobe through the XDM schema-aligned object.
 exl-id: 1d8ef191-aed6-4c8b-a1fd-614bd8ed73da
 ---
 # `xdm`

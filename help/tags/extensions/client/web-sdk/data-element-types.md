@@ -48,12 +48,12 @@ Notice that when you open certain fields of your schema, such as `web.webPageDet
 
 You can create payload objects using the **[!UICONTROL Variable]** data element. Both [!UICONTROL XDM] and [!UICONTROL Data] objects are supported.
 
-* When [!UICONTROL XDM] is selected, select the desired [!UICONTROL Sandbox] and [!UICONTROL Schema].
-* When [!UICONTROL Data] is selected, select the desired solutions. Available solutions include [!UICONTROL Adobe Analytics] and [!UICONTROL Adobe Target].
+* When you select [!UICONTROL XDM], select the desired [!UICONTROL Sandbox] and [!UICONTROL Schema].
+* When you select [!UICONTROL Data], select the desired solutions. Available solutions include [!UICONTROL Adobe Analytics] and [!UICONTROL Adobe Target].
 
-![Data element UI](assets/variable-data-element.png)
+![Image of Tags UI showing the data element options.](assets/variable-data-element.png)
 
-Once this data element is created, you can use the [Update variable](./action-types.md#update-variable) action to modify it. When ready, you can include this data element in the [Send event](./action-types.md#send-event) action to send data to a datastream.
+After you create this data element, you can use the [Update variable](./action-types.md#update-variable) action to modify it. When ready, you can include this data element in the [Send event](./action-types.md#send-event) action to send data to a datastream.
 
 ## Next steps {#next-steps}
 
