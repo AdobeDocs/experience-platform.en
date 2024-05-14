@@ -56,3 +56,23 @@ Namespace priority can be configured using [!UICONTROL Identity Settings]. In th
 
 ## Namespace priority usage
 
+Currently, namespace priority influences system behavior of Real-Time Customer Profile. The diagram below illustrates this concept. For more information, read the guide on [Adobe Experience Platform and applications architecture diagrams](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+
+### Identity Service: Identity optimization algorithm
+
+For relatively complex graph structures, namespace priority plays an important role in ensuring that the correct links are removed when graph collapse scenarios happen. For more information...
+
+### Real-Time Customer Profile: primary identity determination for experience events
+
+>[!TIP]
+>
+>The primary identity is the identity that stores profile fragments in Real-Time Customer Profile.
+
+* For experience events, the primary identity is determined by the namespace with the highest priority.
+  * This is because experience events are dynamic in nature. An identity map may contain three or more identities, and namespace priority ensures that the most important namespace is associated to the experience event.
+* As a result, the following configurations **will no longer be used by Real-Time Customer Profile**:
+  * "Primary" checkbox on data element type in WebSDK.
+  * Any fields marked as primary identity on an XDM ExperienceEvent Class schema.
+  * Default primary identity settings in the Adobe Analytics source connector (ECID or AAID).
+* On the other hand, **namespace priority does not determine primary identity for profile records**.
+  * For profile records, you may use the schemas workspace in the Experience Platform UI to define your identity fields, including the primary identity. Read the guide on [defining identity fields in the UI](../../xdm/ui/fields/identity.md) for more information.
