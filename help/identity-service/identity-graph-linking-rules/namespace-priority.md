@@ -64,10 +64,6 @@ For relatively complex graph structures, namespace priority plays an important r
 
 ### Real-Time Customer Profile: primary identity determination for experience events
 
->[!TIP]
->
->The primary identity is the identity that stores profile fragments in Real-Time Customer Profile.
-
 * For experience events, the primary identity is determined by the namespace with the highest priority.
   * This is because experience events are dynamic in nature. An identity map may contain three or more identities, and namespace priority ensures that the most important namespace is associated to the experience event.
 * As a result, the following configurations **will no longer be used by Real-Time Customer Profile**:
@@ -76,3 +72,53 @@ For relatively complex graph structures, namespace priority plays an important r
   * Default primary identity settings in the Adobe Analytics source connector (ECID or AAID).
 * On the other hand, **namespace priority does not determine primary identity for profile records**.
   * For profile records, you may use the schemas workspace in the Experience Platform UI to define your identity fields, including the primary identity. Read the guide on [defining identity fields in the UI](../../xdm/ui/fields/identity.md) for more information.
+
+>[!NOTE]
+>
+>* Namespace priority is **a property of a namespace**. It is a numerical value assigned to a namespace to indicate its relative importance.
+>
+>* Primary identity is the identity in which a profile fragment is stored against. A profile fragment is a record of data that stores information about a certain user: attributes (usually ingested via CRM records) or events (usually ingested from experience events or online data).
+
+### Examples
+
+| Namespace | Real-world application of the namespace | Priority |
+| --- | --- | --- |
+| CRMID | User | 1 |
+| IDFA | Apple hardware device (iPhone, IPad, etc.) | 2 |
+| GAID | Google hardware device (Google Pixel, Pixelbook, etc.)| 3 |
+| ECID | Web browser (Firefox, Safari, Google Chrome, etc.)| 4 |
+| AAID | Web browser | 5 |
+
+{style="table-layout:auto"}
+
+| User action (Experience event) | Authentication state | Data source | Identity map | Primary identity (primary key of profile fragment) |
+| --- | --- | --- | --- | --- |
+| View credit card offer page | Unauthenticated (anonymous) | Web SDK | {ECID} | ECID |
+| View help page | Unauthenticated | Mobile SDK | {ECID, IDFA} | IDFA |
+| View checking account balance | Authenticated | Web SDK | {CRMID, ECID} | CRM ID |
+| Sign up for home loan | Authenticated | Analytics source connector | {CRMID, ECID, AAID} | CRMID |
+| Transfer $1,000 from checking to savings | Authenticated | Mobile SDK | {CRMID, GAID, ECID} | CRMID |
+
+{style="table-layout:auto"}
+
+### Segmentation Service: segment membership metadata storage
+
+For a given merged profile, segment memberships will be stored against the identity with the highest priority namespace.
+
+For example, assume that there are two profiles:
+
+* The first profile represents John.
+* The second profile represents Jane.
+
+If the John and Jane share a device, then the ECID (web browser) transfers from one person to another. However, this does not influence the segment membership information stored against John and Jane.
+
+If the segment qualification criteria were solely based on anonymous events stored against the ECID, then Jane would qualify for that segment
+
+## Unaffected services
+
+The following components of Experience Platform for **not** affected by namespace priority:
+
+* Schemas
+* Data lake
+* Data Lifecycle
+* Privacy Service
