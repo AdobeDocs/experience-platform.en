@@ -8,6 +8,7 @@ description: Learn how to configure Experience Platform Web SDK to automatically
 The `autoTrackPropositionInteractionsEnabled` property is an optional configuration option that determines if the Web SDK automatically collects proposition interactions. The value is a map of decision providers, each with value that indicates how automatic proposition interactions should be handled.
 
 By default, automatic proposition interactions are always collected for Adobe Journey Optimizer (`AJO`), and never collected for Target (`TGT`).  The default value of `autoTrackPropositionInteractions` is:
+
 ```json
 {
   "AJO": "always",
