@@ -29,6 +29,7 @@ Possible configuration values for a decision provider are:
 When enabled, any clicks within a proposition element rendered to the DOM will be automatically collected.  This includes any experiences automatically rendered to the DOM by Web SDK and experiences rendered to the DOM using the `applyPropositions` command.
 
 ### Data attributes
+
 Data attributes can be used on elements to add specificity to an interaction.  
 
 | Name        | Data Attribute         | Detail                                                       |
