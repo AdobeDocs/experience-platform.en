@@ -8,7 +8,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 
 Segmentation Service allows you to create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. Platform provides dataflows to transparently track this flow of data from sources to destinations.
 
-The monitoring dashboard provides you with a visual representation of the data's activity within an audience, including the status of your data's segmentation. This tutorial provides instructions on how you can use the monitoring dashboard to monitor your data's segmentation using the Experience Platform user interface, allowing you to track the status of audience activation, evaluation, and export jobs.
+Use the monitoring dashboard to see a visual representation of the data's activity within an audience, including the status of your data's segmentation. Read the tutorial for instructions on how you can use the monitoring dashboard to monitor your data's segmentation using the Experience Platform user interface, allowing you to track the status of audience activation, evaluation, and export jobs.
 
 ## Getting started {#getting-started}
 
@@ -35,7 +35,7 @@ To access the **[!UICONTROL Audiences]** dashboard, select **[!UICONTROL Monitor
 
 On the main **[!UICONTROL Audiences]** dashboard, the **[!UICONTROL Audiences]** card shows the status and date of the last evaluation job and the last export job. 
 
-The dashboard itself contains metrics for both audiences and segmentation jobs. By default, the dashboard will show the audience metrics for the last 24 hours. To learn more about the segmentation jobs view, please read the [monitoring segmentation jobs](#monitoring-segmentation-jobs-dashboard) section.
+The dashboard itself contains metrics for both audiences and segmentation jobs. By default, the dashboard shows the audience metrics for the last 24 hours. To learn more about the segmentation jobs view, please read the [monitoring segmentation jobs](#monitoring-segmentation-jobs-dashboard) section.
 
 >[!IMPORTANT]
 >
@@ -48,7 +48,7 @@ The following metrics are available for this dashboard view:
 | Metric | Description |
 | ------ | ----------- |
 | **[!UICONTROL Audience name]** | The name of the audience. |
-| **[!UICONTROL Data type]** | The data type of audience. Possible values include **[!UICONTROL Customer]**, **[!UICONTROL Account]**, and **[!UICONTROL Prospect]**. |
+| **[!UICONTROL Data type]** | The data type of audience. Possible values include **[!UICONTROL Customer]**, **[!UICONTROL Account]**, and **[!UICONTROL Prospect]**. You can view for audiences of a specified data type by using the [!UICONTROL Data type] filter above the ribbon of cards. |
 | **[!UICONTROL Last evaluation timestamp]** | The date and time that the audience's last evaluation job ran. |
 | **[!UICONTROL Last evaluation status]** | The status of the audience's last evaluation job. Possible values include **[!UICONTROL Success]**, **[!UICONTROL No runs]**, and **[!UICONTROL Failed]**.|
 | **[!UICONTROL Last evaluation method]** | The evaluation method of the audience. Since only batch segmentation is supported, the only possible value is **[!UICONTROL Batch]**. |
@@ -166,7 +166,7 @@ For the [!UICONTROL Audiences] section, the following metrics are available:
 >title="Segmentation Jobs"
 >abstract="The segmentation jobs view contains information on the evaluation and export jobs for all your audiences."
 
-To access the **[!UICONTROL Segmentation Jobs]** dashboard, select select **[!UICONTROL Segmentation jobs]** in the [!UICONTROL Audiences] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on the evaluation and export jobs.
+To access the **[!UICONTROL Segmentation Jobs]** dashboard, select **[!UICONTROL Segmentation jobs]** in the [!UICONTROL Audiences] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on the evaluation and export jobs.
 
 >[!NOTE]
 >
