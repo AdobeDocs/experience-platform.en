@@ -11,7 +11,7 @@ exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
 
 This tutorial provides steps for creating a [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]") source connector in the UI to bring B2B data into Adobe Experience Platform.
 
-## Getting started
+## Get started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -25,10 +25,10 @@ This tutorial requires a working understanding of the following components of Ad
 
 ### Gather required credentials
 
-In order to access your [!DNL Marketo] account on Platform, you must provide the following values:
+In order to access your [!DNL Marketo] account on Experience Platform, you must provide the following values:
 
 | Credential | Description |
-| ---------- | ----------- |
+| ---- | ---- |
 | `munchkinId` |  The Munchkin ID is the unique identifier for a specific [!DNL Marketo] instance. |
 | `clientId` | The unique client ID of your [!DNL Marketo] instance. |
 | `clientSecret` | The unique client secret of your [!DNL Marketo] instance. |
@@ -51,17 +51,25 @@ Under the *Adobe applications* category, select **[!UICONTROL Marketo Engage]**,
 
 The **[!UICONTROL Connect Marketo Engage account]** page appears. On this page, you can either use a new account or access an existing account.
 
-### Existing account
+>[!BEGINTABS]
 
-To create a dataflow with an existing account, select **[!UICONTROL Existing account]** and then select the [!DNL Marketo] account you want to use. Select **[!UICONTROL Next]** to proceed.
+>[!TAB Create a new account]
 
-![existing](../../../../images/tutorials/create/marketo/existing.png)
+To create a new account, select **[!UICONTROL New account]** and provide a name, an optional description, and your credentials. 
 
-### New account
+When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-If you are creating a new account, select **[!UICONTROL New account]**. On the input form that appears, provide an account name, an optional description, and your [!DNL Marketo] authentication credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
+![The new account interface for authenticating a new Marketo account.](../../../../images/tutorials/create/marketo/new.png)
 
-![new](../../../../images/tutorials/create/marketo/new.png)
+>[!TAB Use an existing account]
+
+To use an existing account, select **[!UICONTROL Existing account]** and then select the account that you want to use from the existing account catalog.
+
+Select **[!UICONTROL Next]** to proceed.
+
+![The existing account interface where you can select an existing Marketo account.](../../../../images/tutorials/create/marketo/existing.png)
+
+>[!ENDTABS]
 
 ## Select a dataset
 
@@ -73,59 +81,54 @@ The left half of the interface is a directory browser, displaying the 10 [!DNL M
 >
 >For the purposes of brevity, the following tutorial uses [!UICONTROL Opportunities] as an example, but the steps outlined below apply to any of the 10 [!DNL Marketo] datasets.
 
-Select the dataset you wish to ingest first, then select **[!UICONTROL Next]**.
+Select the dataset that you want to ingest. This updates the interface to display a preview of your dataset. When finished, select **[!UICONTROL Next]**.
 
-![select-data](../../../../images/tutorials/create/marketo/select-data.png)
+![The preview interface](../../../../images/tutorials/create/marketo/preview.png)
 
-## Provide dataflow details {#provide-dataflow-details}
+## Provide dataset and dataflow details {#provide-dataset-and-dataflow-details}
 
-The [!UICONTROL Dataflow detail] page allows you to select whether you want to use an existing dataset or a new dataset. During this process, you can also configure settings for [!UICONTROL Profile dataset], [!UICONTROL Error diagnostics], [!UICONTROL Partial ingestion], and [!UICONTROL Alerts]. 
+Next, you must provide information on your dataset and your dataflow. 
 
-![dataflow-details](../../../../images/tutorials/create/marketo/dataflow-details.png)
+### Dataset details {#dataset-details}
+
+A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Data that is successfully ingested into Experience Platform is stored within the data lake as datasets. During this step, you can create a new dataset or use an existing dataset.
 
 >[!BEGINTABS]
 
->[!TAB Use an existing dataset]
-
-To ingest data into an existing dataset, select **[!UICONTROL Existing dataset]**. You can either retrieve an existing dataset using the [!UICONTROL Advanced search] option or by scrolling through the list of existing datasets in the dropdown menu. Once you have selected a dataset, provide a name and a description for your dataflow.
-
-![existing-dataset](../../../../images/tutorials/create/marketo/existing-dataset.png)
-
 >[!TAB Use a new dataset]
 
-To ingest into a new dataset, select **[!UICONTROL New dataset]** and then provide an output dataset name and an optional description. Next, select a schema to map to using the [!UICONTROL Advanced search] option or by scrolling through the list of existing schemas in the dropdown menu. Once you have selected a schema, provide a name and a description for your dataflow.
+To use a new dataset, select **[!UICONTROL New dataset]** and then provide a name, and an optional description for your dataset. You must also select an Experience Data Model (XDM) schema that your dataset adheres to.
 
-![new-dataset](../../../../images/tutorials/create/marketo/new-dataset.png)
+![The new dataset selection interface.](../../../../images/tutorials/create/marketo/new-dataset.png)
+
+>[!TAB Use an existing dataset]
+
+If you already have an existing dataset, select **[!UICONTROL Existing dataset]** and then use the **[!UICONTROL Advanced search]** option to view a window of all datasets in your organization, including their respective details, such as whether they are enabled for ingestion to Real-Time Customer Profile or not.
+
+![The existing dataset selection interface.](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
 >[!ENDTABS]
 
-### Enable [!DNL Profile] and error diagnostics
-
-Next, select the **[!UICONTROL Profile dataset]** toggle to enable your dataset for [!DNL Profile]. This allows you to create a holistic view of an entity's attributes and behaviors. Data from all [!DNL Profile]-enabled datasets will be included in [!DNL Profile] and changes are applied when you save your dataflow.
-
-[!UICONTROL Error diagnostics] enables detailed error message generation for any erroneous records that occur in your dataflow, while [!UICONTROL Partial ingestion] allows you to ingest data containing errors, up to a certain threshold that you manually define. See the [partial batch ingestion overview](../../../../../ingestion/batch-ingestion/partial.md) for more information.
+### Dataflow configurations {#dataflow-configurations}
 
 >[!IMPORTANT]
 >
 >The [!DNL Marketo] source uses batch ingestion to ingest all historical records and uses streaming ingestion for real-time updates. This allows the source to continue streaming while ingesting any erroneous records. Enable the **[!UICONTROL Partial ingestion]** toggle and then set the [!UICONTROL Error threshold %] to maximum to prevent the dataflow from failing.
 
-![profile-and-errors](../../../../images/tutorials/create/marketo/profile-and-errors.png)
+If your dataset is enabled for Real-Time Customer Profile, then during this step, you can toggle **[!UICONTROL Profile dataset]** to enable your data for Profile-ingestion. You can also use this step to enable **[!UICONTROL Error diagnostics]** and **[!UICONTROL Partial ingestion]**.
 
-### Enable alerts
+* **[!UICONTROL Error diagnostics]**: Select **[!UICONTROL Error diagnostics]** to instruct the source to produce error diagnostics that you can later reference when monitoring your dataset activity and dataflow status.
+* **[!UICONTROL Partial ingestion]**: [Partial batch ingestion](../../../../../ingestion/batch-ingestion/partial.md) is the ability to ingest data containing errors, up to a certain configurable threshold. This feature allows you to successfully ingest all of your accurate data into Experience Platform, while all of your incorrect data is batched separately with information on why it is invalid.
 
-You can enable alerts to receive notifications on the status of your dataflow. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to sources alerts using the UI](../../alerts.md).
+During this step, you can also enable **[!UICONTROL Sample dataflow]** to limit data ingestion of valid records of new batch data within the error threshold that you configure.
 
-When you are finished providing details to your dataflow, select **[!UICONTROL Next]**.
+![The dataflow configurations section of the dataflow details page.](../../../../images/tutorials/create/marketo/dataflow-configurations.png)
 
-![alerts](../../../../images/tutorials/create/marketo/alerts.png)
-
-### Skip unclaimed accounts when ingesting companies data
-
-When creating a dataflow to ingest data from the companies dataset, you can configure [!UICONTROL Exclude unclaimed accounts] to either exclude or include unclaimed accounts from ingestion.
+Additionally, if you are ingesting data from the companies dataset, you can enable **[!UICONTROL Exclude unclaimed accounts]** to exclude unclaimed accounts from ingestion.
 
 When individuals fill out a form, [!DNL Marketo] creates a phantom account record based on the Company Name that contains no other data. For new dataflows, the toggle to exclude unclaimed accounts is enabled by default. For existing dataflows, you can enable or disable the feature, with changes applying to newly ingested data and not existing data.
 
-![unclaimed accounts](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
+![Exclude unclaimed accounts](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
 
 ## Map your [!DNL Marketo] dataset source fields to target XDM fields
 
@@ -146,7 +149,7 @@ Each [!DNL Marketo] dataset has its own specific mapping rules to follow. See th
 
 Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For comprehensive steps on using the mapping interface, see the [Data Prep UI guide](../../../../../data-prep/ui/mapping.md).
 
-![mapping](../../../../images/tutorials/create/marketo/mapping.png)
+![The mapping interface for Marketo data.](../../../../images/tutorials/create/marketo/mapping.png)
 
 Once your mapping sets are ready, select **[!UICONTROL Next]** and allow for a few moments for the new dataflow to be created.
 
@@ -159,7 +162,7 @@ The **[!UICONTROL Review]** step appears, allowing you to review your new datafl
 
 Once you have reviewed your dataflow, select **[!UICONTROL Save & ingest]** and allow some time for the dataflow to be created.
 
-![review](../../../../images/tutorials/create/marketo/review.png)
+![The review page where you can confirm details of your dataflow before ingestion.](../../../../images/tutorials/create/marketo/review.png)
 
 ## Monitor your dataflow
 
