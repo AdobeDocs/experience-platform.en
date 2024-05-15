@@ -53,42 +53,25 @@ Refer to the code snippet below to see an example of using data attributes.
   <div class="col-md-4 movie" data-aep-click-token="wlpk/z/qyDGoFGF1E47O0w">
     <img src="/img/walle.jpg" class="poster" />
     <h2>WALL·E</h2>
-    <p class="description">
-      In a distant, but not so unrealistic, future where mankind has abandoned earth because it has become covered with trash from products sold by the powerful multi-national Buy N Large corporation, WALL-E, a garbage collecting robot has been left to clean up the mess.
-    </p>
+    <p class="description"> In a distant, but not so unrealistic, future where mankind has abandoned earth because it has become covered with trash from products sold by the powerful multi-national Buy N Large corporation, WALL-E, a garbage collecting robot has been left to clean up the mess. </p>
     <p>
-      <button class="btn btn-default" data-aep-click-label="view-movie-WALL·E">
-        View details »
-      </button>
+      <button class="btn btn-default" data-aep-click-label="view-movie-WALL·E"> View details >> </button>
     </p>
   </div>
-
   <div class="col-md-4 movie" data-aep-click-token="6ZUrou9BVKIsINIAqxylzw">
     <img src="/img/ratatouille.jpg" class="poster" />
     <h2>Ratatouille</h2>
-    <p class="description">
-      A rat named Remy dreams of becoming a great French chef despite his family's wishes and the obvious problem of being a rat in a decidedly rodent-phobic profession. When fate places Remy in the sewers of Paris, he finds himself ideally situated beneath a restaurant made famous by his culinary hero, Auguste Gusteau.
-    </p>
+    <p class="description"> A rat named Remy dreams of becoming a great French chef despite his family's wishes and the obvious problem of being a rat in a decidedly rodent-phobic profession. When fate places Remy in the sewers of Paris, he finds himself ideally situated beneath a restaurant made famous by his culinary hero, Auguste Gusteau. </p>
     <p>
-      <button
-        class="btn btn-default"
-        data-aep-click-label="view-movie-Ratatouille"
-      >
-        View details »
-      </button>
+      <button class="btn btn-default" data-aep-click-label="view-movie-Ratatouille"> View details >> </button>
     </p>
   </div>
-
   <div class="col-md-4 movie" data-aep-click-token="QuuXntMRGnCP/AsZHf4pnQ">
     <img src="/img/coco.jpg" class="poster" />
     <h2>Coco</h2>
-    <p class="description">
-      Despite his family's baffling generations-old ban on music, Miguel dreams of becoming an accomplished musician like his idol, Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead following a mysterious chain of events.
-    </p>
+    <p class="description"> Despite his family's baffling generations-old ban on music, Miguel dreams of becoming an accomplished musician like his idol, Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead following a mysterious chain of events. </p>
     <p>
-      <button class="btn btn-default" data-aep-click-label="view-movie-Coco">
-        View details »
-      </button>
+      <button class="btn btn-default" data-aep-click-label="view-movie-Coco"> View details >> </button>
     </p>
   </div>
 </div>
