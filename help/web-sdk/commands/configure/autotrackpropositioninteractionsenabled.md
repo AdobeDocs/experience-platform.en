@@ -44,7 +44,10 @@ You can use data attributes on elements to add specificity to an interaction.
 | [!DNL Token] | `data-aep-click-token` | Use this token when leveraging decision policies in [Adobe Journey Optimizer code-based campaigns](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based). You can use the token to distinguish which decision policy item was clicked. When the token data attribute is present on a clicked element, it is included with the interaction details sent to the Edge Network. The [!DNL Web SDK] looks for a token data attribute beginning with the element clicked and walking up the DOM tree. The [!DNL Web SDK] uses the first token it finds. |
 | [!DNL Interact ID] | `data-aep-interact-id` | The [!DNL Web SDK] automatically adds this unique ID to container elements when rendering propositions. The Web SDK uses this ID to correlate [!DNL DOM] elements with propositions. As this is an ID required by the [!DNL Web SDK], you should not alter it in any way. You can safely ignore it. |
 
+<!--
+Removing shade box
 >[!BEGINSHADEBOX "Example usage of data attributes"]
+-->
 
 Refer to the code snippet below to see an example of using data attributes.
 
@@ -77,7 +80,9 @@ Refer to the code snippet below to see an example of using data attributes.
 </div>
 ```
 
+<!--
 >[!ENDSHADEBOX]
+-->
 
 ### The `applyPropositions` command {#apply-propositions}
 
