@@ -178,10 +178,7 @@ You can delete dataflows that are no longer necessary or were incorrectly create
 
 ## Next steps
 
-By following this tutorial, you have successfully created a dataflow to bring in [!DNL Marketo] data. Incoming data can now be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
-
-* [[!DNL Real-Time Customer Profile] overview](/help/profile/home.md)
-* [[!DNL Data Science Workspace] overview](/help/data-science-workspace/home.md)
+By following this tutorial, you have successfully created a dataflow to ingest B2B data from your [!DNL Marketo Engage] source to Experience Platform.
 
 ## Appendix {#appendix}
 
