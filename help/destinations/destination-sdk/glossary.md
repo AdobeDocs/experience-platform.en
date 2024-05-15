@@ -2,7 +2,6 @@
 solution: Experience Platform
 title: Adobe Experience Platform Destination SDK glossary 
 description: Understand important terminology when authoring a destination using Experience Platform Destination SDK.
-exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 ---
 
 # Adobe Experience Platform Destination SDK glossary 
