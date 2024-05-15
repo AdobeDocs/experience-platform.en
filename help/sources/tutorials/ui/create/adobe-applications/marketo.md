@@ -39,13 +39,15 @@ Once you have gathered your required credentials, you can follow the steps in th
 
 ## Connect your [!DNL Marketo] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources with which you can create an account.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
+Under the *Adobe applications* category, select **[!UICONTROL Marketo Engage]**, and then select **[!UICONTROL Add data]**.
 
-Under the [!UICONTROL Adobe applications] category, select **[!UICONTROL Marketo Engage]**. Then, select **[!UICONTROL Add data]** to create a new [!DNL Marketo] dataflow.
+>[!TIP]
+>
+>Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
 
-![catalog](../../../../images/tutorials/create/marketo/catalog.png)
+![The sources catalog with the Marketo Engage source selected.](../../../../images/tutorials/create/marketo/catalog.png)
 
 The **[!UICONTROL Connect Marketo Engage account]** page appears. On this page, you can either use a new account or access an existing account.
 
