@@ -56,7 +56,81 @@ Review the documentation in the links below to quickly get started configuring a
   </tbody>
 </table>
 
+<table style="border: 0;">
+  <tbody>
+    <tr>
+        <th>Configuration pages</th>
+        <th>Guides</th>
+        <th>Other essential information</th>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/configuration-options">All configuration options explained</a></li>
+                <li><a href="https://example.com">Destination Server configuration</a></li>
+                <li><a href="https://example.com">Destination configuration</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Templatizing and macros</a></li>
+                <li><a href="https://example.com">Testing API</a></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li><a href="https://example.com">Configure a streaming destination</a></li>
+                <li><a href="https://example.com">Configure a file-based destination</a></li>
+                <li><a href="https://example.com">Configure a prospect destination</a></li>
+                <li><a href="https://example.com">Set up data transformation through Pebble templates</a></li>
+                <li><a href="https://example.com">Submit destination for publishing</a></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li><a href="https://example.com">Glossary of Destination SDK terms</a></li>
+                <li><a href="https://example.com">Live configuration examples</a></li>
+                <li><a href="https://example.com">Document your destination - self-service template</a></li>
+                <li><a href="https://example.com">Bullet Point 4</a></li>
+                <li><a href="https://example.com">Bullet Point 5</a></li>
+            </ul>
+        </td>
+    </tr>
+  </tbody>
+</table>
 
+<table style="border: 0;">
+  <tbody>
+    <tr>
+        <td>
+            <p>Configuration pages</p>
+            <ul>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/configuration-options">All configuration options explained</a></li>
+                <li><a href="https://example.com">Destination Server configuration</a></li>
+                <li><a href="https://example.com">Destination configuration</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Templatizing and macros</a></li>
+                <li><a href="https://example.com">Testing API</a></li>
+            </ul>
+        </td>
+        <td>
+            <p>Guides</p>
+            <ul>
+                <li><a href="https://example.com">Configure a streaming destination</a></li>
+                <li><a href="https://example.com">Configure a file-based destination</a></li>
+                <li><a href="https://example.com">Configure a prospect destination</a></li>
+                <li><a href="https://example.com">Set up data transformation through Pebble templates</a></li>
+                <li><a href="https://example.com">Submit destination for publishing</a></li>
+            </ul>
+        </td>
+        <td>
+            <p>Other essential information</p>
+            <ul>
+                <li><a href="https://example.com">Glossary of Destination SDK terms</a></li>
+                <li><a href="https://example.com">Live configuration examples</a></li>
+                <li><a href="https://example.com">Document your destination - self-service template</a></li>
+                <li><a href="https://example.com">Bullet Point 4</a></li>
+                <li><a href="https://example.com">Bullet Point 5</a></li>
+            </ul>
+        </td>
+    </tr>
+  </tbody>
+</table>
 
 
 >[!ENDSHADEBOX]
