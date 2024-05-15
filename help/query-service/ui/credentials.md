@@ -46,6 +46,8 @@ The **[!UICONTROL Expiring credentials]** section provides the following informa
 
 Use the Customer Journey Analytics BI extension with Power BI or Tableau to access your Customer Journey Analytics [data views](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) with SQL. By integrating Query Service with the BI extension, you can access your data views directly within Query Service sessions. This integration streamlines functionality for BI tools that use Query Service as their PostgreSQL interface. This functionality eliminates the need to duplicate data views in BI tools, ensures consistent reporting across platforms, and simplifies the integration of Customer Journey Analytics data with other sources in BI platforms.
 
+See the documentation to learn how to [connect Query Service to a variety of desktop client applications](../clients/overview.md) such as [Power BI](../clients/power-bi.md) or [Tableau](../clients/tableau.md)
+
 >[!IMPORTANT]
 >
 >A Customer Journey Analytics workspace project and a data view are required to use this functionality.
