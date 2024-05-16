@@ -324,6 +324,10 @@ Selecting **[!UICONTROL Build rule]** takes you to the Segment Builder. This wor
 
 ### Importing an audience {#import-audience}
 
+>[!IMPORTANT]
+>
+>In order to import an externally generated audience, you **must** have the following permissions: [!UICONTROL View segments], [!UICONTROL Manage segments], and [!UICONTROL Import audience]. For more information on these permission, read the [access control overview](../../access-control/home.md#permissions).
+
 You can select **[!UICONTROL Import audience]** to import an externally generated audience.
 
 ![On the Audience browse page, the Import audience button is highlighted.](../images/ui/overview/browse-import-audience.png)
