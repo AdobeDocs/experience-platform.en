@@ -5,47 +5,43 @@ title: Query Editor UI Guide
 description: The Query Editor is an interactive tool provided by Adobe Experience Platform Query Service, which allows you to write, validate, and run queries for customer experience data within the Experience Platform user interface. Query Editor supports developing queries for analysis and data exploration, and allows you to run interactive queries for development purposes as well as non-interactive queries to populate datasets in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 ---
-# [!DNL Query Editor] UI guide
+# Query Editor UI guide
 
 <!-- UPDATE this page inline with new ui changes WIP 191712 -->
 
 >[!NOTE]
 >
->As of 30-April-2024 the [Enhanced Query Editor](#enhanced-editor-toggle) has become the default editor for all users. The legacy editor will be deprecated on 30-May-2024 and no longer be available for use.
+>The legacy editor was deprecated on 30th May 2024. It is no longer accessible for use. You can now use the [Enhanced Query Editor](#enhanced-editor-toggle) to write, validate, and run your queries
 
-[!DNL Query Editor] is an interactive tool provided by Adobe Experience Platform [!DNL Query Service], which allows you to write, validate, and run queries for customer experience data within the [!DNL Experience Platform] user interface. [!DNL Query Editor] supports developing queries for analysis and data exploration, and allows you to run interactive queries for development purposes as well as non-interactive queries to populate datasets in [!DNL Experience Platform].
+Query Editor is an interactive tool provided by Adobe Experience Platform Query Service, which allows you to write, validate, and run queries for customer experience data within the [!DNL Experience Platform] user interface. Query Editor supports developing queries for analysis and data exploration, and allows you to run interactive queries for development purposes as well as non-interactive queries to populate datasets in [!DNL Experience Platform].
 
-For more information about the concepts and features of [!DNL Query Service], see the [Query Service overview](../home.md). To learn more about how to navigate the Query Service user interface on [!DNL Platform], see the [Query Service UI overview](./overview.md).
-
->[!NOTE]
->
->Certain Query Service functionality is not provided by the legacy version of the Query Editor. The screenshots used in this document are taken using the enhanced version of the Query Editor unless otherwise stated. See the section on the [enhanced Query Editor](#enhanced-editor-toggle) for more details.
+For more information about the concepts and features of Query Service, see the [Query Service overview](../home.md). To learn more about how to navigate the Query Service user interface on [!DNL Platform], see the [Query Service UI overview](./overview.md).
 
 ## Getting started {#getting-started}
 
-[!DNL Query Editor] provides flexible execution of queries by connecting to [!DNL Query Service], and queries only run while this connection is active.
+The Query Editor provides flexible execution of queries by connecting to Query Service, and queries only run while this connection is active.
 
-## Accessing [!DNL Query Editor] {#accessing-query-editor}
+## Accessing Query Editor {#accessing-query-editor}
 
-In the [!DNL Experience Platform] UI, select **[!UICONTROL Queries]** in the left navigation menu to open the [!DNL Query Service] workspace. Next, to start writing queries, select **[!UICONTROL Create Query]** at the top right of the screen. This link is available from any of the pages in the [!DNL Query Service] workspace. 
+In the [!DNL Experience Platform] UI, select **[!UICONTROL Queries]** in the left navigation menu to open the Query Service workspace. Next, to start writing queries, select **[!UICONTROL Create Query]** at the top right of the screen. This link is available from any of the pages in the Query Service workspace. 
 
 ![The Queries workspace overview tab with Create query highlighted.](../images/ui/query-editor/create-query.png)
 
-### Connecting to [!DNL Query Service] {#connecting-to-query-service}
+### Connecting to Query Service {#connecting-to-query-service}
 
 The Query Editor takes a few seconds to initialize and connect to Query Service when it is opened. The console tells you when it is connected, as shown below. If you attempt to run a query before the editor has connected, it delays execution until the connection is complete. 
 
 ![The console output of the Query Editor upon initial connection.](../images/ui/query-editor/connect.png)
 
-### How queries are run from [!DNL Query Editor] {#run-a-query}
+### How queries are run from Query Editor {#run-a-query}
 
-Queries executed from [!DNL Query Editor] run interactively which means that if you close the browser or navigate away, the query is cancelled. The same is true for queries made to generate datasets from query outputs.
+Queries executed from Query Editor run interactively which means that if you close the browser or navigate away, the query is cancelled. The same is true for queries made to generate datasets from query outputs.
 
 The Enhanced edition of the Query Editor allows you to write more than one query in the Query Editor and execute all queries sequentially. See the section on [executing multiple sequential queries](#execute-multiple-sequential-queries) for more information.
 
-## Query authoring using [!DNL Query Editor] {#query-authoring}
+## Query authoring using Query Editor {#query-authoring}
 
-Using [!DNL Query Editor], you can write, execute, and save queries for customer experience data. All queries executed, or saved in [!DNL Query Editor] are available to all users in your organization with access to [!DNL Query Service].
+Using Query Editor, you can write, execute, and save queries for customer experience data. All queries executed, or saved in Query Editor are available to all users in your organization with access to Query Service.
 
 >[!IMPORTANT]
 >
@@ -113,7 +109,7 @@ The Query Editor has a maximum 50,000 row output. You can choose the number of r
 
 To minimize your development time, you are recommended to develop your queries with limits on the number of rows returned. For example, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. After you have verified that your query produces the expected output, remove the limits and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output.
 
-## Writing tools in [!DNL Query Editor] {#writing-tools}
+## Writing tools in Query Editor {#writing-tools}
 
 - **Automatic syntax highlighting:** Makes reading and organizing SQL easier.
 
@@ -151,7 +147,7 @@ Select the copy icon to copy SQL form the Query Editor to your clipboard. This c
 
 ### Auto-complete UI configurational toggle {#auto-complete}
 
-The [!DNL Query Editor] automatically suggests potential SQL keywords along with table or column details for the query as you write it. The auto-complete feature is enabled by default and can be disabled or enabled at any point by selecting the [!UICONTROL Syntax auto-complete] toggle to the top right of the Query Editor.
+The Query Editor automatically suggests potential SQL keywords along with table or column details for the query as you write it. The auto-complete feature is enabled by default and can be disabled or enabled at any point by selecting the [!UICONTROL Syntax auto-complete] toggle to the top right of the Query Editor.
 
 The auto-complete configuration setting is per user and remembered for the consecutive logins for that user.
 
@@ -181,7 +177,7 @@ To disable the auto-complete feature, select the appropriate confirmation option
 
 ### Error detection {#error-detection}
 
-[!DNL Query Editor] automatically validates a query as you write it, providing generic SQL validation and specific execution validation. If a red underline appears below the query (as shown in the image below), it represents an error within the query.
+Query Editor automatically validates a query as you write it, providing generic SQL validation and specific execution validation. If a red underline appears below the query (as shown in the image below), it represents an error within the query.
 
 <!-- ... Image below needs updating couldn't replicate the effect -->
 
@@ -217,7 +213,7 @@ After you execute the **[!UICONTROL Run as CTAS]** action, a confirmation messag
 
 ### Saving queries {#saving-queries}
 
-The [!DNL Query Editor] provides a save function that allows you to save a query and work on it later. To save a query, select **[!UICONTROL Save]** in the top-right corner of [!DNL Query Editor]. Before a query can be saved, a name must be provided for the query using the **[!UICONTROL Query Details]** panel.
+The Query Editor provides a save function that allows you to save a query and work on it later. To save a query, select **[!UICONTROL Save]** in the top-right corner of Query Editor. Before a query can be saved, a name must be provided for the query using the **[!UICONTROL Query Details]** panel.
 
 >[!NOTE]
 >
@@ -229,7 +225,7 @@ When you save a query in the Query Editor, a confirmation message pops up to not
 
 Queries that have been saved as a template can be scheduled from the Query Editor. Scheduling queries allows you to automate query runs on a custom cadence. You can schedule queries based on frequency, date, and time, and also choose an output dataset for your results if necessary. Query schedules can also be disabled or deleted through the UI.
 
-Schedules are set in the Query Editor. When using the Query Editor, you can only add a schedule to a query that has already been created, and saved. The same limitation does not apply to the [!DNL Query Service] API.
+Schedules are set in the Query Editor. When using the Query Editor, you can only add a schedule to a query that has already been created, and saved. The same limitation does not apply to the Query Service API.
 
 >[!NOTE]
 >
@@ -242,21 +238,21 @@ Any scheduled queries are added to the list in the [!UICONTROL Scheduled queries
 
 ### How to find previous queries {#previous-queries}
 
-All queries executed from [!DNL Query Editor] are captured in the Log table. You can use the search functionality in the **[!UICONTROL Log]** tab to find query executions. Saved queries are listed in the **[!UICONTROL Templates]** tab. 
+All queries executed from Query Editor are captured in the Log table. You can use the search functionality in the **[!UICONTROL Log]** tab to find query executions. Saved queries are listed in the **[!UICONTROL Templates]** tab. 
 
 If a query was scheduled, then the [!UICONTROL Scheduled Queries] tab provides improved visibility through the UI for those query jobs. See the [query monitoring documentation](./monitor-queries.md) for more information. 
 
 >[!NOTE]
 >
->Queries that are not executed are not saved by the Log. In order for the query to be available in [!DNL Query Service], it must be run or saved in [!DNL Query Editor].
+>Queries that are not executed are not saved by the Log. In order for the query to be available in Query Service, it must be run or saved in Query Editor.
 
 ## Executing queries using Query Editor {#executing-queries}
 
-To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the **[!UICONTROL Log]** or **[!UICONTROL Templates]** tab, and select **Play**. The status of query execution is displayed in the **[!UICONTROL Console]** tab below, and output data is shown in the **[!UICONTROL Results]** tab.
+To run a query in Query Editor, you can enter SQL in the editor or load a previous query from the **[!UICONTROL Log]** or **[!UICONTROL Templates]** tab, and select **Play**. The status of query execution is displayed in the **[!UICONTROL Console]** tab below, and output data is shown in the **[!UICONTROL Results]** tab.
 
 ### Console {#console}
 
-The console provides information on the status and operation of [!DNL Query Service]. The console displays the connection status to [!DNL Query Service], query operations being executed, and any error messages that result from those queries.
+The console provides information on the status and operation of Query Service. The console displays the connection status to Query Service, query operations being executed, and any error messages that result from those queries.
 
 ![The Console tab of the Query Editor console.](../images/ui/query-editor/console.png)
 
@@ -266,7 +262,7 @@ The console provides information on the status and operation of [!DNL Query Serv
 
 ### Query results {#query-results}
 
-After a query has been completed, the results are displayed in the **[!UICONTROL Results]** tab, next to the **[!UICONTROL Console]** tab. This view shows the tabular output of your query, displaying between 50 and 500 rows of results depending on your chosen [result count](#result-count). This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial](./create-datasets.md) for instructions on how to generate a dataset from query results in [!DNL Query Editor].
+After a query has been completed, the results are displayed in the **[!UICONTROL Results]** tab, next to the **[!UICONTROL Console]** tab. This view shows the tabular output of your query, displaying between 50 and 500 rows of results depending on your chosen [result count](#result-count). This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial](./create-datasets.md) for instructions on how to generate a dataset from query results in Query Editor.
 
 ![The Results tab of the Query Editor console displaying the results of a query run.](../images/ui/query-editor/query-results.png)
 
@@ -274,7 +270,7 @@ After a query has been completed, the results are displayed in the **[!UICONTROL
 
 Query Service provides solutions to a variety of use cases across industries and business scenarios. These practical examples demonstrate the flexibility and impact of the service in addressing diverse needs. To [uncover how Query Service can bring value to your specific business needs](../use-cases/overview.md), explore the comprehensive collection of use case documents. Learn how to use Query Service to provide insights and solutions for enhanced operational efficiency and business success.
 
-## Run queries with [!DNL Query Service] tutorial video {#query-tutorial-video}
+## Run queries with Query Service tutorial video {#query-tutorial-video}
 
 The following video shows how to run queries in the Adobe Experience Platform interface and in a PSQL client. The video also demonstrates the use of individual properties in an XDM object, Adobe-defined functions, and how to use CREATE TABLE AS SELECT (CTAS) queries.
 
@@ -282,4 +278,4 @@ The following video shows how to run queries in the Adobe Experience Platform in
 
 ## Next steps
 
-Now that you know what features are available in [!DNL Query Editor] and how to navigate the application, you can start authoring your own queries directly in [!DNL Platform]. For more information about running SQL queries against datasets in [!DNL Data Lake], see the guide on [running queries](../best-practices/writing-queries.md). 
+Now that you know what features are available in Query Editor and how to navigate the application, you can start authoring your own queries directly in [!DNL Platform]. For more information about running SQL queries against datasets in [!DNL Data Lake], see the guide on [running queries](../best-practices/writing-queries.md). 
