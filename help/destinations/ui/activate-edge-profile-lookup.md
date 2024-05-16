@@ -16,18 +16,16 @@ Experience Platform stores all profile data in a central hub which can deliver p
 
 However, for use cases which depend on quick, real-time data retrieval, [!DNL Platform] uses edge profiles. These are lightweight profiles distributed throughout the [Edge Network](../../collection/home.md#edge). Since the Edge Network is a fast and globally distributed network of servers, you can use edge profiles for your real-time personalization use cases, where timing is critical.
 
-This page describes the steps that you must follow when you want to implement a personalization use case which needs quick profile data lookup to deliver personalization through downstream applications, in real-time.
+This page describes the steps that you must follow when you want to implement an edge profile lookup use case via the [Custom Personalization Destination](../catalog/personalization/custom-personalization.md), which requires quick retrieval of profile data to deliver personalization experiences and/or inform decisioning rules through downstream applications, in real-time.
 
-## Prerequisites {#prerequisites}
+## Terminology and prerequisites {#prerequisites}
 
-While you will configure the use case described in this page, you will use the following Platform components:
+When configuring the use case described in this page, you will use the following Platform components:
 
 * [Datastreams](../../datastreams/overview.md): You will configure a datastream which receives incoming event data and responds with edge profile data.
 * [Merge Policies](../../segmentation/ui/segment-builder.md#merge-policies): You will create an [!UICONTROL Active-On-Edge] merge policy to ensure that the edge profiles use the correct profile data.
 * [Custom Personalization connection](../catalog/personalization/custom-personalization.md): You will configure a new custom personalization connection to activate your audiences.
 * [Edge Network Server API](../../server-api/overview.md): You will use [interactive data collection](../../server-api/interactive-data-collection.md) to send event data to the Edge Network.
-
-
 
 
 >[!IMPORTANT]
@@ -121,7 +119,7 @@ You can select from multiple types of audiences, depending on their origin:
 >
 ><br>If you do not follow the requirements above, personalization will be based on audience membership only.
 
-Select the attributes which you want to be made available for the edge profiles.
+Select the attributes that you want to be made available for the edge profiles.
 
 
 ### Select source attributes {#select-source-attributes}
@@ -169,6 +167,8 @@ To send data to the data stream, you must use the [Edge Network Server API](../.
 
 Configure your server-side integration to use the [interactive data collection endpoint](../../server-api/interactive-data-collection.md) to send single event data.
 
+### Request {#request}
+
 You can send data to the datastream through authenticated or unauthenticated requests. Use the following endpoints depending on your type of request:
 
 >[!BEGINTABS]
@@ -206,4 +206,144 @@ If your use case requires access to an edge profile, you can send an empty event
 }
 ```
 
+### Response {#response}
 
+A successful response returns HTTP status `200 OK`, with a `Handle` object that includes information similar to the examples in the tabs below, depending on whether the profile is found on the edge or not.
+
+>[!BEGINTABS]
+
+>[!TAB Profile exists on the edge]
+
+If the profile exists on the edge, depending on the profile attributes and audiences activated to the edge, you can expect a response with attributes and audience memberships similar to the one below.
+
+
+```json
+{
+    "requestId": "3c600138-d785-42ca-a025-bb725f4b5da9",
+    "handle": [
+        {
+            "payload": [
+                {
+                    "type": "profileLookup",
+                    "destinationId": "9218b727-ec59-4a46-b8b9-05503f138c5d",
+                    "alias": "rk-demo-custom-personalization-XXXX",
+                    "attributes": {
+                        "zip": {
+                            "value": "19000"
+                        },
+                        "firstName": {
+                            "value": "Test"
+                        },
+                        "lastName": {
+                            "value": "User123"
+                        },
+                        "gender": {
+                            "value": "male"
+                        },
+                        "city": {
+                            "value": "Philadelphia"
+                        },
+                        "state": {
+                            "value": "PA"
+                        },
+                        "email": {
+                            "value": "test123@adobetest.com"
+                        }
+                    },
+                    "segments": [
+                        {
+                            "id": "85018bd8-7ad1-4e17-ae30-8389c04bd3c0",
+                            "namespace": "ups"
+                        },
+                        {
+                            "id": "d09a8159-8b30-4178-b2f2-7a8c5e3168d9",
+                            "namespace": "ups"
+                        }
+                    ]
+                }
+            ],
+            "type": "activation:pull",
+            "eventIndex": 0
+        },
+        {
+            "payload": [
+                {
+                    "scope": "Target",
+                    "hint": "35",
+                    "ttlSeconds": 1800
+                },
+                {
+                    "scope": "AAM",
+                    "hint": "9",
+                    "ttlSeconds": 1800
+                },
+                {
+                    "scope": "EdgeNetwork",
+                    "hint": "or2",
+                    "ttlSeconds": 1800
+                }
+            ],
+            "type": "locationHint:result"
+        },
+        {
+            "payload": [
+                {
+                    "key": "kndctr_D1E035DD5CEDB5090A495FCD_AdobeOrg_cluster",
+                    "value": "or2",
+                    "maxAge": 1800
+                }
+            ],
+            "type": "state:store"
+        }
+    ]
+}
+```
+
+>[!TAB Profile does not exist on the edge]
+
+If the profile does not exist on the edge, you can expect a response similar to the one below.
+
+```json
+{
+    "requestId": "531b541a-4541-419e-ac99-fd7e452f0c0f",
+    "handle": [
+        {
+            "payload": [],
+            "type": "activation:pull",
+            "eventIndex": 0
+        },
+        {
+            "payload": [
+                {
+                    "scope": "Target",
+                    "hint": "35",
+                    "ttlSeconds": 1800
+                },
+                {
+                    "scope": "AAM",
+                    "hint": "9",
+                    "ttlSeconds": 1800
+                },
+                {
+                    "scope": "EdgeNetwork",
+                    "hint": "or2",
+                    "ttlSeconds": 1800
+                }
+            ],
+            "type": "locationHint:result"
+        },
+        {
+            "payload": [
+                {
+                    "key": "kndctr_D1E035DD5CEDB5090A495FCD_AdobeOrg_cluster",
+                    "value": "or2",
+                    "maxAge": 1800
+                }
+            ],
+            "type": "state:store"
+        }
+    ]
+}
+```
+
+>[!ENDTABS]
