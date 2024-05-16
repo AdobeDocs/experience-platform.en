@@ -95,7 +95,7 @@ Select **[!UICONTROL Profiles]** to view the processing success rate of your pro
 
 >[!TAB Audiences]
 
-Select **[!UICONTROL Audiences]** to view metrics on your audiences and segmentation jobs. Read the guide on [monitoring audience data](monitor-segments.md) for more information.
+Select **[!UICONTROL Audiences]** to view metrics on your audiences and segmentation jobs. Read the guide on [monitoring audience data](monitor-audiences.md) for more information.
 
 ![The monitoring dashboard in the Ui with the audiences card selected.](../assets/ui/monitor-overview/audiences.png)
 
@@ -130,5 +130,5 @@ By reading this document, you can now navigate your way through the monitoring d
 * [Monitor sources data](monitor-sources.md).
 * [Monitor identity data](monitor-identities.md).
 * [Monitor profile data](monitor-profiles.md).
-* [Monitor audience data](monitor-segments.md).
+* [Monitor audience data](monitor-audiences.md).
 * [Monitor destinations data](monitor-destinations.md).
