@@ -10,13 +10,15 @@ Refer to this glossary for definitions of terms used in Destination SDK. For oth
 
 ## A
 
+**Aggregation policy**: When configuring how data should be exported to your real-time streaming destination, you can defines how profile data is aggregated before being sent to your destination platform. This helps optimize data delivery by grouping data records based on specific criteria, reducing the frequency of API calls, and improving overall efficiency. Different policies can be configured to meet various destination requirements, ensuring that data is packaged and delivered in the most effective manner.
+
 **Audience metadata configuration**: An audience metadata configuration refers to the structured setup and parameters defined within Adobe Experience Platform that enable the programmatic creation, updating, and deletion of audience segments in a specified destination. This configuration utilizes audience metadata templates to align with the specifications of the marketing API of the destination platform. 
 
 ## D
 
 **Destination configuration endpoint**: A destination configuration endpoint in Adobe Experience Platform, specifically the `/authoring/destinations` API endpoint, is used to create, retrieve, update, and delete configurations for destinations. These configurations define how data from Adobe Experience Platform is delivered to various external systems or destinations, such as marketing platforms, cloud storage services, or other data processing endpoints.
 
-**Destination Instance**: A specific setup of a destination configuration in Adobe Experience Platform, created and managed through the Experience Platform UI. It includes all necessary parameters and credentials for connecting and sending data to the destination.
+**Destination instance**: A specific setup of a destination configuration in Adobe Experience Platform, created and managed through the Experience Platform UI. It includes all necessary parameters and credentials for connecting and sending data to the destination.
 
 ## P
 
@@ -25,6 +27,10 @@ Refer to this glossary for definitions of terms used in Destination SDK. For oth
 **Private Destination**: Custom integrations created by individual Adobe Experience Platform customers. These are tailored to meet specific business needs and are only accessible within the customer's organization, offering flexibility in data export configurations. Private destinations are available to Real-Time CDP Ultimate customers only.
 
 **Public Destination**: A publicly available integration in the Adobe Experience Platform catalog. These destinations are standardized, branded, and simplify customer setup by providing pre-configured parameters. They are accessible to all customers using Adobe Experience Platform.
+
+## S
+
+**Self-service documentation template**: The self-service documentation template provides a structured format that you can use to document your destination. It includes sections for an overview, use cases, prerequisites, supported identities, audiences, export types, and frequency, as well as steps for connecting to the destination, activating audiences, and mapping attributes. Use this template to ensure comprehensive and consistent documentation, allowing customers to quickly get started using your destination and understand the provided use cases.
 
 ## T
 
