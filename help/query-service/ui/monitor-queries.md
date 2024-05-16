@@ -19,7 +19,7 @@ The table below describes each available column.
 
 >[!NOTE]
 >
->The alert subscriptions icon is contained in each row in an untitled column. See the [alert subscriptions](#alert-subscription) section for more information.
+>The alert subscriptions icon (![An alert subscriptions icon.]()) is contained in each row in an untitled column. See the [alert subscriptions](#alert-subscription) section for more information.
 
 | Column | Description  |
 |---|---|
@@ -75,9 +75,9 @@ Once a scheduled query is disabled, you can enable the schedule through the same
 
 To delete a scheduled query, select the ellipsis of a scheduled query you want to manage, then select **[!UICONTROL Delete schedule]** from the options in the pop-up menu. A dialog appears to confirm your action. Select **[!UICONTROL Delete]** to confirm your setting.
 
-Once a scheduled query is deleted, it is **not** removed from the list of scheduled queries. The inline actions provided by the ellipses are removed and replaced by the grayed out add alert icon. You cannot subscribe to alerts for the deleted schedule. The row remains in the UI to provide information on runs conducted as part of the scheduled query. 
+Once a scheduled query is deleted, it is **not** removed from the list of scheduled queries. The inline actions provided by the ellipses are removed and replaced by the grayed out add alert subscription icon. You cannot subscribe to alerts for the deleted schedule. The row remains in the UI to provide information on runs conducted as part of the scheduled query. 
 
-![The Scheduled Queries tab with a deleted scheduled query and greyed out alert icon highlighted.](../images/ui/monitor-queries/post-delete.png)
+![The Scheduled Queries tab with a deleted scheduled query and greyed out alert  subscription icon highlighted.](../images/ui/monitor-queries/post-delete.png)
 
 If you want to schedule runs for that query template, select the template name from the appropriate row to navigate to the Query Editor, then follow the [instructions to add a schedule to a query](./query-schedules.md#create-schedule) as described in the documentation. 
 
@@ -85,7 +85,9 @@ If you want to schedule runs for that query template, select the template name f
 
 <!-- ... 191712 -->
 
-To subscribe to alerts for scheduled query runs, select the ellipsis of a scheduled query you want to manage, then select **[!UICONTROL Subscribe]** from the options in the pop-up menu.
+To subscribe to alerts for scheduled query runs, select either the `...` (ellipsis) or alert subscription icon (![An alert subscription icon.](../images/ui/monitor-queries/alert-subscription-icon.png)) of a scheduled query you want to manage. The inline actions dropdown menu appears. Next, select **[!UICONTROL Subscribe]** from the available options.
+
+![The scheduled queries workspace with an ellipses, alert subscription icon, and the inline actions dropdown menu highlighted.](../images/ui/monitor-queries/subscribe.png)
 
 The [!UICONTROL Alerts] dialog opens. The [!UICONTROL Alerts] dialog subscribes you to both UI notifications and email alerts. There are several alert subscription options available: `start`, `success`, `failure`, `quarantine`, and `delay`. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe. You can subscribe to alerts as long as they don't have a [!UICONTROL Last Run Timestamp] value.
 
@@ -99,7 +101,7 @@ The table below explains the supported query alert types:
 | `success` | This alert informs you when a scheduled query run completes successfully, indicating that the query executed without any errors. |
 | `failed` | This alert triggers when a scheduled query run encounters an error or fails to execute successfully. It helps you identify and address issues promptly. |
 | `quarantine` | This alert is activated when a scheduled query run is put into a quarantined state. When queries are enrolled in the [quarantine feature](#quarantined-queries), any scheduled query that fails ten consecutive runs is automatically put into a [!UICONTROL Quarantined] state. They then require your intervention before any further executions can take place. |
-| `delay` | This alert notifies you if there is a delay in the outcome of a scheduled query execution beyond a specified threshold. You can set a custom time that trigger the alert when the query runs for that duration without either completing or failing. |
+| `delay` | This alert notifies you if there is a [delay in the outcome of a query execution](#query-run-delay) beyond a specified threshold. You can set a custom time that trigger the alert when the query runs for that duration without either completing or failing. |
 
 >[!NOTE]
 >
@@ -125,10 +127,22 @@ Queries can also be enrolled in the quarantine feature during the schedule creat
 
 ## Query run delay {#query-run-delay}
 
+<!-- Stay in control of your compute hours by setting alerts for delays to your query runs.   -->
+<!-- You can choose to receive alerts if a query status does not change state after a specific period of time. Just  to stay informed on your query progress. -->
+
 If a query runs for an extended period of time
 
-You can monitor query performance and identify any unexpected delays in processing with the '[!UICONTROL Query Run Delay]' alert. When you subscribe to alerts for scheduled query runs, one of the available alerts is the [!UICONTROL Query Run Delay]. This alert notifies you if the query continues processing for an extended peirod of time wiothout completing or failing to complete. You can choose a threshold to trigger the nofiication..
+You can monitor query performance and identify any unexpected delays in processing with the '[!UICONTROL Query Run Delay]' alert. When you [subscribe to alerts](#alert-subscription) for scheduled query runs, one of the available alerts is the [!UICONTROL Query Run Delay]. This alert notifies you if the query continues to process beyond a pre-determined period of time without completing or failing to complete. You can choose a threshold duration that triggers the notification.
 
+The the maximum observable period for a query run delay is 24 hours (1440 minutes). The threshold is set in minutes. The default time period for a run delay is 15 minutes. 
+
+>[!NOTE]
+>
+>A query run can only have one run delay time. If you change the delay threshold, it is changed for your entire organization and any user also subscribed to the alert.
+
+To set a [!UICONTROL Query Run Delay] alert, 
+
+<!-- The default behaviour sets an alert for 15 mins after the query begins processing. -->
 <!-- 
 the term "execution" typically refers to the process of running or processing a query.
 a query is considered "executing" once it has been initiated and the database engine begins processing it, regardless of whether the execution has completed or not. 

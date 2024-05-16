@@ -101,7 +101,11 @@ The table below explains the supported query alert types:
 | `success` | This alert informs you when a scheduled query run completes successfully, indicating that the query executed without any errors. |
 | `failed` | This alert triggers when a scheduled query run encounters an error or fails to execute successfully. It helps you identify and address issues promptly. |
 | `quarantine` | This alert is activated when a scheduled query run is put into a quarantined state. Once a query is [enrolled in the quarantine feature](#quarantine), any scheduled query that fails ten consecutive runs is automatically put into a [!UICONTROL Quarantined] state. A quarantined query then requires your intervention before any further executions can take place. Note: Queries must be enrolled for the quarantine feature for you to subscribe to quarantine alerts. |
-| `delay` | This alert notifies you if there is a [delay in the outcome of a scheduled query execution](./monitor-queries.md#query-run-delay) beyond a specified threshold. You can set a custom time that trigger the alert when the query runs for that duration without either completing or failing. |
+| `delay` | This alert notifies you if there is a [delay in the outcome of a scheduled query execution](./monitor-queries.md#query-run-delay) beyond a specified threshold. You can set a custom time that trigger the alert when the query runs for that duration without either completing or failing. The default behavior sets an alert for 15 mins after the query begins processing. |
+
+>[!NOTE]
+>
+>If you choose to set a [!UICONTROL Query Run Delay] alert, you must set your desired delay time in minutes the Platform UI. Enter the duration in minutes. The maximum delay is 24 hours (1440 minutes).
 
 For an overview of alerts in Adobe Experience Platform, including the structure of how alert rules are defined, see the [alerts overview](../../observability/alerts/overview.md). For guidance on managing alerts and alert rules within the Adobe Experience Platform UI, see the [Alerts UI guide](../../observability/alerts/ui.md).
 
