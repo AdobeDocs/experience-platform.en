@@ -22,7 +22,7 @@ Select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left-navigat
 
 ![Overview tab displaying widgets](images/b2b-account-profile-overview.png)
 
-See the documentation on the [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) dashboard to learn more. See the documentation on [Real-time Customer Data Platform Insights data model B2B Edition](../../dashboards/data-models/cdp-insights-data-model-b2b.md) for more information on how Insights can be used as custom widgets for your dashboards.
+See the documentation on the [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) dashboard to learn more. See the documentation on [Real-time Customer Data Platform Insights data model B2B Edition](../../dashboards/data-models/cdp-insights-data-model-b2b.md) for more information on how your insights data models can be used to create custom charts for your dashboards..
 
 ## Configure lead to account matching {#configure-lead-to-account-matching}
 
