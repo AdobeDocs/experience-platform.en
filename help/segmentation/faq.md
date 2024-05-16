@@ -193,9 +193,13 @@ You can re-publish an audience by selecting an audience that is in the inactive 
 
 You can put an audience into the delete state by opening the quick actions menu in Audience Portal and selecting [!UICONTROL Delete].
 
-### Are lifecycle state transitions the same for all types of audiences?
+### Are there any caveats for lifecycle state transitions?
 
-When you are using audiences in downstream services such as Adobe Journey Optimizer or non-customer 
+Yes, there are some caveats to be aware of when you are using audiences in downstream services such as Adobe Journey Optimizer or non-customer-based audiences such as account-based audiences.
+
+At this time, you **must** manually check if the audience is used downstream in Adobe Journey Optimizer, as this status is currently not automatically checked.
+
+Additionally, you **must** manually check if the audience is used as a component of an account-based audience, as this status is also not currently automatically checked.
 
 ### Does using an audience as a child audience affect lifecycle state transitions?
 
