@@ -24,7 +24,7 @@ In order to connect to [!DNL SQL Server] on [!DNL Platform], you must provide th
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string associated with your [!DNL SQL Server] account. The [!DNL SQL Server] connection string pattern is: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| Connection string | The connection string associated with your [!DNL Microsoft SQL Server] account. Your connection string pattern depends whether you are using server name or instance name for your data source:<ul><li>Connection string using server name: `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Connection string using instance name:`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword`  |
 
 For more information about getting started, refer to [this [!DNL SQL Server] document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
@@ -50,7 +50,7 @@ To create a new account, select **[!UICONTROL New account]** and provide a name,
 
 When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new connection to establish.
 
-![The new account interface.](../../../../images/tutorials/create/microsoft-sql-server/new.png)
+![The new account interface with the source connection details entered and highlighted.](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
 >[!TAB Use an existing account]
 
@@ -58,7 +58,7 @@ To use an existing account, select **[!UICONTROL Existing account]** and then se
 
 Select **[!UICONTROL Next]** to proceed.
 
-![The existing account interface.](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
+![The existing account interface that displays a list of the existing accounts.](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
 
 >[!ENDTABS]
 
