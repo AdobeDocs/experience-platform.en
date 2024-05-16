@@ -83,11 +83,23 @@ If you want to schedule runs for that query template, select the template name f
 
 ### Subscribe to alerts {#alert-subscription}
 
+<!-- ... 191712 -->
+
 To subscribe to alerts for scheduled query runs, select the ellipsis of a scheduled query you want to manage, then select **[!UICONTROL Subscribe]** from the options in the pop-up menu.
 
-The [!UICONTROL Alerts] dialog opens. The [!UICONTROL Alerts] dialog subscribes you to both UI notifications and email alerts. Alerts are based on the status of the query. There are three options available: `start`, `success`, and `failure`. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe. You can subscribe to alerts as long as they don't have a [!UICONTROL Last Run Timestamp] value.
+The [!UICONTROL Alerts] dialog opens. The [!UICONTROL Alerts] dialog subscribes you to both UI notifications and email alerts. There are several alert subscription options available: `start`, `success`, `failure`, `quarantine`, and `delay`. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe. You can subscribe to alerts as long as they don't have a [!UICONTROL Last Run Timestamp] value.
 
 ![The alert subscriptions dialog.](../images/ui/monitor-queries/alert-subscription-dialog.png)
+
+The table below explains the supported query alert types: 
+
+| Alert type | Description |
+|---|---|
+| `start` | This alert notifies you when a scheduled query run is initiated or starts processing. |
+| `success` | This alert informs you when a scheduled query run completes successfully, indicating that the query executed without any errors. |
+| `failed` | This alert triggers when a scheduled query run encounters an error or fails to execute successfully. It helps you identify and address issues promptly. |
+| `quarantine` | This alert is activated when a scheduled query run is put into a quarantined state. When queries are enrolled in the [quarantine feature](#quarantined-queries), any scheduled query that fails ten consecutive runs is automatically put into a [!UICONTROL Quarantined] state. They then require your intervention before any further executions can take place. |
+| `delay` | This alert notifies you if there is a delay in the outcome of a scheduled query execution beyond a specified threshold. You can set a custom time that trigger the alert when the query runs for that duration without either completing or failing. |
 
 >[!NOTE]
 >
@@ -101,7 +113,7 @@ Select the information icon (![An information icon.](../images/ui/monitor-querie
 
 ![The Scheduled Queries tab with the information icon and the details panel highlighted.](../images/ui/monitor-queries/details-panel.png)
 
-### Quarantined queries {#quarantined-queries}
+## Quarantined queries {#quarantined-queries}
 
 When enrolled in the quarantine feature, any scheduled query that fails ten consecutive runs is automatically put into a [!UICONTROL Quarantined] status. A query with this status becomes inactive and does not execute at its scheduled cadence. It then requires your intervention before any further executions can take place. This safeguards system resources as you must review and correct the issues with your SQL before further executions occur.
 
@@ -110,6 +122,17 @@ To enable a scheduled query for the quarantine feature, select the ellipses (`..
 ![The scheduled queries tab with the ellipses and Enable quarantine highlighted from the inline actions dropdown menu.](../images/ui/monitor-queries/inline-enable.png)
 
 Queries can also be enrolled in the quarantine feature during the schedule creation process. See the [query schedules documentation](./query-schedules.md#quarantine) for more information.
+
+## Query run delay {#query-run-delay}
+
+If a query runs for an extended period of time
+
+You can monitor query performance and identify any unexpected delays in processing with the '[!UICONTROL Query Run Delay]' alert. When you subscribe to alerts for scheduled query runs, one of the available alerts is the [!UICONTROL Query Run Delay]. This alert notifies you if the query continues processing for an extended peirod of time wiothout completing or failing to complete. You can choose a threshold to trigger the nofiication..
+
+<!-- 
+the term "execution" typically refers to the process of running or processing a query.
+a query is considered "executing" once it has been initiated and the database engine begins processing it, regardless of whether the execution has completed or not. 
+ -->
 
 ## Filter queries {#filter}
 
