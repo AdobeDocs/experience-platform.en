@@ -7,6 +7,8 @@ exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 ---
 # [!DNL Query Editor] UI guide
 
+<!-- UPDATE this page inline with new ui changes WIP 191712 -->
+
 >[!NOTE]
 >
 >As of 30-April-2024 the [Enhanced Query Editor](#enhanced-editor-toggle) has become the default editor for all users. The legacy editor will be deprecated on 30-May-2024 and no longer be available for use.
