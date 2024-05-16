@@ -13,6 +13,8 @@ The following process flow diagram illustrates how data is ingested, encrypted, 
 
 ## Data in transit {#in-transit}
 
+<!-- Initial commit -->
+
 All data in transit between Platform and any external component is conducted over secure, encrypted connections using HTTPS [TLS v1.2](https://datatracker.ietf.org/doc/html/rfc5246).
 
 In general, data is brought into Platform in three ways:
