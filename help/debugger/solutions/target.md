@@ -103,7 +103,7 @@ Select **[!DNL Configuration]** to enable or disable a selection of additional d
 | Debugging tool | Description |
 | --- | --- |
 | [!DNL Target Console Logging] | When enabled, allows you access at.js logs in the browser's console tab. This feature can also be enabled by adding an `mboxDebug` query param (with any value) to the browser URL. |
-| [!DNL Target Diable] | When enabled, all Target functionalities are disabled on the page. This can be used to determine if a Target-specific offer is what is causing the issue on the page. |
+| [!DNL Target Disable] | When enabled, all Target functionalities are disabled on the page. This can be used to determine if a Target-specific offer is what is causing the issue on the page. |
 | [!DNL Target Trace] | **Note**: You must be logged in to enable this feature.<br><br>When enabled, tracking tokens are sent with every quest, and a trace object is returned in each response. `at.js` parses the response `window.__targetTraces`. Each trace object contains the same information as the [[!DNL Network Requests] tab], with the following additions:<ul><li>A profile snapshot, allowing you to see attributes before and after requests.</li><li>Matched and unmatched [activities](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html), showing why the current profile did or did not qualify for specific activities.<ul><li>This can help identify which audiences a profile is qualifying for at a given point, and why.</li><li>Target docs contain more info on different activity types</li></ul></li></ul> |
 
 {style="table-layout:auto"}
