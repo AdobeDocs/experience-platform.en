@@ -44,10 +44,7 @@ You can use data attributes on elements to add specificity to an interaction.
 | [!DNL Token] | `data-aep-click-token` | Use this token when leveraging decision policies in [Adobe Journey Optimizer code-based campaigns](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based). You can use the token to distinguish which decision policy item was clicked. When the token data attribute is present on a clicked element, it is included with the interaction details sent to the Edge Network. The [!DNL Web SDK] looks for a token data attribute beginning with the element clicked and walking up the DOM tree. The [!DNL Web SDK] uses the first token it finds. |
 | [!DNL Interact ID] | `data-aep-interact-id` | The [!DNL Web SDK] automatically adds this unique ID to container elements when rendering propositions. The Web SDK uses this ID to correlate [!DNL DOM] elements with propositions. As this is an ID required by the [!DNL Web SDK], you should not alter it in any way. You can safely ignore it. |
 
-<!--
-Removing shade box
->[!BEGINSHADEBOX "Example usage of data attributes"]
--->
+**Example**
 
 Refer to the code snippet below to see an example of using data attributes.
 
@@ -80,19 +77,15 @@ Refer to the code snippet below to see an example of using data attributes.
 </div>
 ```
 
-<!--
->[!ENDSHADEBOX]
--->
-
 ### The `applyPropositions` command {#apply-propositions}
 
 Refer to the [`applyPropositions`](../applypropositions.md) documentation to learn how this command works.
 
-The `applyPropositions` command is a convenient way to render propositions to the [!DNL DOM]. However, in the case of code-based campaigns with `JSON`, you can use this command to correlate an existing [!DNL DOM] element (or one your application code rendered to the screen based on the `JSON` values) with a proposition.
+The `applyPropositions` command is a convenient way to render propositions to the [!DNL DOM]. However, in the case of code-based campaigns with `JSON`, you can use this command to correlate an existing [!DNL DOM] element (or the one your application code rendered to the screen based on the `JSON` values) with a proposition.
 
 This correlation activates automatic interaction tracking for that element and assigns that element the appropriate proposition. To achieve this, set the `actionType` to `track`.
 
->[!BEGINSHADEBOX "Example"]
+**Example**
 
 ```javascript
 alloy("sendEvent", {
@@ -120,8 +113,6 @@ alloy("sendEvent", {
     }
 });
 ```
-
->[!ENDSHADEBOX]
 
 ## Enable automatic propositions and interactions click tracking through the Web SDK tag extension {#tag-extension}
 
