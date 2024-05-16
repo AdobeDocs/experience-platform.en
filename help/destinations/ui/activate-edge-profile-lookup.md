@@ -46,9 +46,9 @@ Follow the steps in the [datastream configuration](../../datastreams/configure.m
 
     >[!NOTE]
     >
-    >If you enable **[!UICONTROL Edge Segmentation]**, the maximum number of requests per second (RPS) is lower. See the [guardrails documentation]() for details.
+    >If you enable **[!UICONTROL Edge Segmentation]**, the maximum number of requests per second (RPS) is lower. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for details.
 
-![](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+    ![Platform UI image showing the datastream configuration screen.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## Step 2: Create an [!DNL Active-On-Edge] merge policy {#create-merge-policy}
