@@ -120,7 +120,7 @@ If your dataset is enabled for Real-Time Customer Profile, then during this step
 * **[!UICONTROL Error diagnostics]**: Select **[!UICONTROL Error diagnostics]** to instruct the source to produce error diagnostics that you can later reference when monitoring your dataset activity and dataflow status.
 * **[!UICONTROL Partial ingestion]**: [Partial batch ingestion](../../../../../ingestion/batch-ingestion/partial.md) is the ability to ingest data containing errors, up to a certain configurable threshold. This feature allows you to successfully ingest all of your accurate data into Experience Platform, while all of your incorrect data is batched separately with information on why it is invalid.
 
-During this step, you can also enable **[!UICONTROL Sample dataflow]** to limit data ingestion of valid records of new batch data within the error threshold that you configure.
+During this step, you can enable **[!UICONTROL Sample dataflow]** to limit data ingestion and avoid additional costs that come with ingesting all historical data, including Person identities. You can configure [!UICONTROL Sample dataflow] for testing purposes as you can use it to limit your ingestion rate and then try out Experience Platform features without having to ingest large amounts of data.
 
 ![The dataflow configurations section of the dataflow details page.](../../../../images/tutorials/create/marketo/dataflow-configurations.png)
 
