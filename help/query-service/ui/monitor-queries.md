@@ -19,7 +19,7 @@ The table below describes each available column.
 
 >[!NOTE]
 >
->The alert subscriptions icon (![An alert subscriptions icon.]()) is contained in each row in an untitled column. See the [alert subscriptions](#alert-subscription) section for more information.
+>The alert subscriptions icon (![An alert subscriptions icon.](../images/ui/monitor-queries/alert-subscription-icon.png)) is contained in each row in an untitled column. See the [alert subscriptions](#alert-subscription) section for more information.
 
 | Column | Description  |
 |---|---|
@@ -63,7 +63,7 @@ The [!UICONTROL Scheduled Queries] view offers various inline actions to manage 
 
 ### Disable or enable a scheduled query {#disable}
 
-To disable a scheduled query, select the ellipsis of a scheduled query you want to manage, then select **[!UICONTROL Disable schedule]** from the options in the pop-up menu. A dialog appears to confirm your action. Select **[!UICONTROL Disable]** to confirm your setting.
+To disable a scheduled query, select the ellipsis for the scheduled query you want to manage, then select **[!UICONTROL Disable schedule]** from the options in the pop-up menu. A dialog appears to confirm your action. Select **[!UICONTROL Disable]** to confirm your setting.
 
 Once a scheduled query is disabled, you can enable the schedule through the same process. Select the ellipsis, then select **[!UICONTROL Enable schedule]** from the available options.
 
@@ -73,7 +73,7 @@ Once a scheduled query is disabled, you can enable the schedule through the same
 
 ### Delete a scheduled query {#delete}
 
-To delete a scheduled query, select the ellipsis of a scheduled query you want to manage, then select **[!UICONTROL Delete schedule]** from the options in the pop-up menu. A dialog appears to confirm your action. Select **[!UICONTROL Delete]** to confirm your setting.
+To delete a scheduled query, select the ellipsis for the scheduled query you want to manage, then select **[!UICONTROL Delete schedule]** from the options in the pop-up menu. A dialog appears to confirm your action. Select **[!UICONTROL Delete]** to confirm your setting.
 
 Once a scheduled query is deleted, it is **not** removed from the list of scheduled queries. The inline actions provided by the ellipses are removed and replaced by the grayed out add alert subscription icon. You cannot subscribe to alerts for the deleted schedule. The row remains in the UI to provide information on runs conducted as part of the scheduled query. 
 
@@ -85,7 +85,7 @@ If you want to schedule runs for that query template, select the template name f
 
 <!-- ... 191712 -->
 
-To subscribe to alerts for scheduled query runs, select either the `...` (ellipsis) or alert subscription icon (![An alert subscription icon.](../images/ui/monitor-queries/alert-subscription-icon.png)) of a scheduled query you want to manage. The inline actions dropdown menu appears. Next, select **[!UICONTROL Subscribe]** from the available options.
+To subscribe to alerts for scheduled query runs, select either the `...` (ellipsis) or alert subscription icon (![An alert subscription icon.](../images/ui/monitor-queries/alert-subscription-icon.png)) for the scheduled query you want to manage. The inline actions dropdown menu appears. Next, select **[!UICONTROL Subscribe]** from the available options.
 
 ![The scheduled queries workspace with an ellipses, alert subscription icon, and the inline actions dropdown menu highlighted.](../images/ui/monitor-queries/subscribe.png)
 

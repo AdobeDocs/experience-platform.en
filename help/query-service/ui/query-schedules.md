@@ -95,7 +95,7 @@ You can also subscribe to query alerts as part of your scheduled query settings.
 
 The table below explains the supported query alert types: 
 
-| Alert type | Descritpion |
+| Alert type | Description |
 |---|---|
 | `start` | This alert notifies you when a scheduled query run is initiated or starts processing. |
 | `success` | This alert informs you when a scheduled query run completes successfully, indicating that the query executed without any errors. |
