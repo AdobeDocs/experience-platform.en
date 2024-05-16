@@ -134,15 +134,15 @@ To view citations and validate AI Assistant's response, select **[!UICONTROL Sho
 
 +++
 
-### Data usage and visualization {#data-usage-and-visualization}
+### Usage data and visualization {#usage-data-and-visualization}
 
-+++Select to view an example of data usage questions and data visualization
++++Select to view an example of usage data questions and data visualization
 
-For AI Assistant to respond to a query about data usage within your organization, you have to be in an active sandbox.
+For AI Assistant to respond to a query about usage data within your organization, you have to be in an active sandbox.
 
 In the example below, AI Assistant is provided with the following query: **"Show me segment definitions with over 1000 profiles and include activation status."** AI Assistant then responds with a chart visualizing your segment and profile data.
 
-![Follow up question about data usage.](./images/ai-assistant/data-usage-question.png)
+![Follow up question about usage data.](./images/ai-assistant/data-usage-question.png)
 
 You can hover over an individual bar to view specific data. You can also select the expand icon for a larger view of the chart.
 
@@ -152,7 +152,7 @@ An expanded view of the visualization appears. You can use the expanded modal to
 
 ![Expanded chart.](./images/ai-assistant/chart-expanded.png)
 
-When prompted with a data usage question, AI Assistant provides an explanation of how it computed the answer. In the example below, AI Assistant outlines the steps it took in order to display segment definitions with over 1000 profiles and their respective activation statuses.
+When prompted with a usage data question, AI Assistant provides an explanation of how it computed the answer. In the example below, AI Assistant outlines the steps it took in order to display segment definitions with over 1000 profiles and their respective activation statuses.
 
 ![Follow up question about segment definitions illustrating how AI Assistant computed the answer.](./images/ai-assistant/results-explained.png)
 
@@ -198,9 +198,9 @@ Currently, the documentation index covers Adobe Experience Platform (Real-Time C
 
 The documentation retrieval model is trained on Experience Platform (Real-Time CDP and Audiences). Questions outside the scope of Adobe Experience Platform such as, questions about other Adobe products like Adobe Target and the Creative Cloud suite cannot be answered.
 
-## Data usage {#data-usage}
+## Usage data {#usage-date}
 
-You can also ask AI Assistant questions about your data usage in the following domains: 
+You can also ask AI Assistant questions about your usage data in the following domains: 
 
 * Attributes
 * Audiences
@@ -210,16 +210,13 @@ You can also ask AI Assistant questions about your data usage in the following d
 * Schemas _(Questions regarding field groups cannot be answered at this time.)_
 * Sources _(Questions regarding accounts cannot be answered at this time.)_
 
-For usage data queries, answers may not reflect the current state of the UI. The data backing these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You may need to format your questions as: 
-`When was the audience with the title "ACME Audience" created?` instead of, `When was the "ACME AUdience" audience created?`.
+For usage data queries, answers may not reflect the current state of the UI. The data backing these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. Additionally, you will need to log into a sandbox to inquire about specific data related to objects like audiences, schemas, datasets, attributes, and destinations.
 
-You will need to log into a sandbox to inquire about specific data related to objects like audiences, schemas, datasets, attributes, and destinations.
+### Example usage data questions {#example-usage-data-questions}
 
-### Example data usage questions {#example-data-usage-questions}
++++Select to see a list of example usage data questions
 
-+++Select to see a list of example data usage questions
-
-Read the table below for examples of data usage questions and their respective use cases:
+Read the table below for examples of usage data questions and their respective use cases:
 
 | Question type | Use case| Examples |
 | --- | --- | --- | 
@@ -252,7 +249,7 @@ Read the table below for further guidance on best practices to follow when askin
 | --- | --- |
 | Use vague or ambiguous language. | <ul><li>Give me information about datasets.</li><li>How many users do I have in "ACME Audience"?</li><li>Show segments.</li><li>List attributes.</li></ul>|
 | Make incomplete requests. | "Luma - Loyalty Dataset" |
-| Assume knowledge without contexts. | <ul><li>Audiences in the last 6 months.</li><li>Build a query for me.</li></ul>|
+| Assume knowledge without context. | <ul><li>Audiences in the last 6 months.</li><li>Build a query for me.</li></ul>|
 | Formulate overly complex queries. | Provide a comprehensive analysis of data lineage across all objects and their dependencies. |
 | Omit criteria or parameters. | Show me datasets. |
 
