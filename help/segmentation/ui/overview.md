@@ -93,13 +93,13 @@ Selecting **[!UICONTROL Create audience]** will let you create an audience. To l
 
 ![The top navigation bar on the audience browse page is highlighted. This bar contains a button to create an audience and a button to import an audience.](../images/ui/overview/browse-audiences-top.png)
 
-You can select **[!UICONTROL Update frequency summary]** to display a pie chart that shows the update frequency.
+You can select **[!UICONTROL Evaluation summary]** to display a pie chart that shows a summary of the audience evaluations.
 
-![The Update frequency summary button is highlighted.](../images/ui/overview/browse-audience-update-frequency-summary.png)
+![The Evaluation summary button is highlighted.](../images/ui/overview/browse-audience-evaluation-summary.png)
 
 The pie chart appears, displaying a breakdown of the audiences by update frequency. The chart displays the total number of audiences in the middle, and the daily batch evaluation time in UTC at the bottom. If you hover over the different parts of the audience, it will display the number of audiences that belong to each update frequency type.
 
-![The update frequency pie chart is highlighted, with the batch segmentation evaluation time also displayed.](../images/ui/overview/update-frequency-chart.png)
+![The update frequency pie chart is highlighted, with the batch segmentation evaluation time also displayed.](../images/ui/overview/evaluation-summary.png)
 
 ### Customize {#customize}
 
