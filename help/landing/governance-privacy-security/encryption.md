@@ -46,8 +46,8 @@ If you want to use mTLS with these Adobe Journey Optimizer and Experience Platfo
 
 If you want to check the CN or SAN to do additional third-party validation, can can download the relevant certificates here:
 
-- [The Adobe Journey Optimizer public certificate](../images/governance-privacy-security/encryption/ajo-public-certificate.zip) 
-- [The Destinations Service public certificate](../images/governance-privacy-security/encryption/destinations-public-certificate.zip).
+- [The Adobe Journey Optimizer public certificate](../images/governance-privacy-security/encryption/AJO-public-certificate.pem) 
+- [The Destinations Service public certificate](../images/governance-privacy-security/encryption/destinations-public-cert.pem).
 
 ## Data at rest {#at-rest}
 
