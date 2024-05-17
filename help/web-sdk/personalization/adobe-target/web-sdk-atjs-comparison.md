@@ -604,6 +604,27 @@ alloy("sendEvent", {
 
 [Learn more](../rendering-personalization-content.md#manually-rendering-content)
 
+**Example 3 - Track an event fired after performing an action**
+
+This example tracks an event which was fired after performing a specific action, such as clicking a button.
+You can add any additional custom parameters through the `__adobe.target` data object.
+
+```js
+//replicates an at.js trackEvent call
+alloy("sendEvent", {
+    "type": "decisioning.propositionDisplay",
+    "xdm": {
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "sumbitButtonClick" // Or any mbox/location name you want to use in Adobe Target
+                }]
+            }
+        }
+    }
+});
+```
+
 ## How to trigger a view change in a Single Page Application
 
 ### Using at.js
