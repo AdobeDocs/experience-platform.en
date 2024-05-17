@@ -130,17 +130,15 @@ Queries can also be enrolled in the quarantine feature during the schedule creat
 <!-- Stay in control of your compute hours by setting alerts for delays to your query runs.   -->
 <!-- You can choose to receive alerts if a query status does not change state after a specific period of time. Just  to stay informed on your query progress. -->
 
-If a query runs for an extended period of time
+You can monitor query performance and identify any unexpected delays in processing with the '[!UICONTROL Query Run Delay]' alert. When you [subscribe to alerts](#alert-subscription) for scheduled query runs, one of the available alerts is the [!UICONTROL Query Run Delay]. This alert notifies you if the query continues to process beyond a pre-determined period of time without completing or failing to complete. 
 
-You can monitor query performance and identify any unexpected delays in processing with the '[!UICONTROL Query Run Delay]' alert. When you [subscribe to alerts](#alert-subscription) for scheduled query runs, one of the available alerts is the [!UICONTROL Query Run Delay]. This alert notifies you if the query continues to process beyond a pre-determined period of time without completing or failing to complete. You can choose a threshold duration that triggers the notification.
-
-The the maximum observable period for a query run delay is 24 hours (1440 minutes). The threshold is set in minutes. The default time period for a run delay is 15 minutes. 
+To choose a threshold duration that triggers the notification, either enter a number in the text input filed or use the up and down arrows to increase in increments of one minute. As the threshold is set in minutes, the maximum observable period for a query run delay is 1440 minutes (24 hours). The default time period for a run delay is 15 minutes. 
 
 >[!NOTE]
 >
 >A query run can only have one run delay time. If you change the delay threshold, it is changed for your entire organization and any user also subscribed to the alert.
 
-To set a [!UICONTROL Query Run Delay] alert, 
+See the subscribe to alerts section to learn how to [subscribe to alerts](#alert-subscription).
 
 <!-- The default behaviour sets an alert for 15 mins after the query begins processing. -->
 <!-- 
