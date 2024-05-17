@@ -129,7 +129,6 @@ During this step, you can enable **[!UICONTROL Sample dataflow]** to limit data 
 Sample dataflow is a configuration that you can set for your [!DNL Marketo] dataflow to limit your ingestion rate and then try out Experience Platform features without having to ingest large amounts of data.
 
 * Enable sample dataflow to limit historical data by ingesting up to 100k (from the largest record ID) records or up to the last 10 days of activity during the backfill job.
-* You can then disable the dataflow once the backfill job is completed to stop the ingestion of new or updated data and manage the size of data in your development sandboxes.
 * When using the sample dataflow configuration for all B2B entities, you must consider that it is possible that some related records may be missing because the entire history of the source data does not get ingested.
 
 >[!ENDSHADEBOX]
