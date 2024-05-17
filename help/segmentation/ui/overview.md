@@ -83,7 +83,7 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 >
 >Before deleting your audience, please ensure that the audience is **not** used as a component in an account-based audience or used in Adobe Journey Optimizer.
 
-On the top of the page are options to add all audiences to a schedule, import an audience, create a new audience, and view a breakdown of the update frequency. 
+On the top of the page are options to add all audiences to a schedule, import an audience, create a new audience, and view a summary of the audience evaluation. 
 
 Toggling **[!UICONTROL Schedule all audiences]** will enable scheduled segmentation. More information on scheduled segmentation can be found in the [scheduled segmentation section of this user guide](#scheduled-segmentation).
 
@@ -97,9 +97,9 @@ You can select **[!UICONTROL Evaluation summary]** to display a pie chart that s
 
 ![The Evaluation summary button is highlighted.](../images/ui/overview/browse-audience-evaluation-summary.png)
 
-The pie chart appears, displaying a breakdown of the audiences by update frequency. The chart displays the total number of audiences in the middle, and the daily batch evaluation time in UTC at the bottom. If you hover over the different parts of the audience, it will display the number of audiences that belong to each update frequency type.
+The pie chart appears, displaying a breakdown of the audiences by audience evaluation. The chart displays the total number of audiences in the middle, and the daily batch evaluation time in UTC at the bottom. If you hover over the different parts of the audience, it will display the number of audiences that belong to each update frequency type.
 
-![The update frequency pie chart is highlighted, with the batch segmentation evaluation time also displayed.](../images/ui/overview/evaluation-summary.png)
+![The audience evaluation pie chart is highlighted, with the batch segmentation evaluation time also displayed.](../images/ui/overview/evaluation-summary.png)
 
 ### Customize {#customize}
 
@@ -201,7 +201,7 @@ The list of available filters is displayed.
 | [!UICONTROL Origin] | Lets you filter based on the origin of the audience. Available options include Segmentation service, Custom upload, Audience composition, and Audience Manager. |
 | [!UICONTROL Has any tag] | Lets you filter by tags. You can select between **[!UICONTROL Has any tag]** and **[!UICONTROL Has all tags]**. When **[!UICONTROL Has any tag]** is selected, the filtered audiences will include **any** of the tags you've added. When **[!UICONTROL Has all tags]** is selected, the filtered audiences must include **all** of the tags you've added. |
 | [!UICONTROL Lifecycle status] | Lets you filter based on the audience's lifecycle status. Available options include [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive], and [!UICONTROL Published]. |
-| [!UICONTROL Update frequency] | Lets you filter based on the audience's update frequency. Available options include [!UICONTROL Scheduled], [!UICONTROL Continuous], and [!UICONTROL On Demand]. |
+| [!UICONTROL Update frequency] | Lets you filter based on the audience's update frequency (evaluation method). Available options include [!UICONTROL Scheduled], [!UICONTROL Continuous], and [!UICONTROL On Demand]. |
 | [!UICONTROL Created by] | Lets you filter based on the person who created the audience. |
 | [!UICONTROL Creation date] | Lets you filter based on the creation date of the audience. You can choose a date range to filter when the audience was created. |
 | [!UICONTROL Modified date] | Lets you filter based on the last modified date of the audience. You can choose a date range to filter when the audience was last modified. |
