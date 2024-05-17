@@ -50,15 +50,13 @@ Queries executed from Query Editor run interactively which means that if you clo
 
 Using Query Editor, you can write, execute, and save queries for customer experience data. All queries executed, or saved in Query Editor are available to all users in your organization with access to Query Service.
 
-<!-- A UI toggle allows you to switch between the legacy and enhanced version of the Query Editor. The legacy version is enabled by default, although the enhanced version provides better accessibility and multi-theming support. Enable the enhanced version to access to the Query Editor settings.
+### Settings {#settings}
 
-![The Query Editor with the enhanced Query Editor toggle highlighted.](../images/ui/query-editor/enhanced-query-editor-toggle.png) -->
-
-Activating the toggle switches the editor to light theme and improves the legibility of your syntax. A settings icon also appears above the Query Editor input field that incorporates the auto-complete toggle. From the settings icon, you can enable dark theme or disable/enable auto-complete.
+A settings icon above the Query Editor input field includes an options to enable/disable dark theme or disable/enable auto-complete.
 
 >[!TIP]
 >
->With the enhanced Query Editor, you can [!UICONTROL Disable syntax auto complete] while authoring a query without losing your progress. Typically, if you disable the auto-complete feature while editing, all changes to the query are lost.
+>You can [!UICONTROL Disable syntax auto complete] while authoring a query without losing your progress.
 
 To enable dark or light themes, select the settings icon (![A settings icon.](../images/ui/query-editor/settings-icon.png)) followed by the option in the dropdown menu that appears.
 
@@ -66,9 +64,7 @@ To enable dark or light themes, select the settings icon (![A settings icon.](..
 
 ### Execute multiple sequential queries {#execute-multiple-sequential-queries}
 
-The Enhanced edition of the Query Editor allows you to write more than one query in the Query Editor and execute all queries in a sequential manner.
-
-The execution of multiple queries in a sequence each generate a log entry. However, only the results of the first query display in the Query Editor console. Check the query log if you need to troubleshoot or confirm the queries that were executed. See the [query logs documentation](./query-logs.md) for more information. 
+Use the Enhanced Query Editor to write more than one query and execute all queries in a sequential manner. The execution of multiple queries in a sequence each generate a log entry. However, only the results of the first query display in the Query Editor console. Check the query log if you need to troubleshoot or confirm the queries that were executed. See the [query logs documentation](./query-logs.md) for more information. 
 
 >[!NOTE]
 > 
