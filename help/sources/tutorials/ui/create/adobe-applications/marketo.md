@@ -120,7 +120,19 @@ If your dataset is enabled for Real-Time Customer Profile, then during this step
 * **[!UICONTROL Error diagnostics]**: Select **[!UICONTROL Error diagnostics]** to instruct the source to produce error diagnostics that you can later reference when monitoring your dataset activity and dataflow status.
 * **[!UICONTROL Partial ingestion]**: [Partial batch ingestion](../../../../../ingestion/batch-ingestion/partial.md) is the ability to ingest data containing errors, up to a certain configurable threshold. This feature allows you to successfully ingest all of your accurate data into Experience Platform, while all of your incorrect data is batched separately with information on why it is invalid.
 
-During this step, you can enable **[!UICONTROL Sample dataflow]** to limit data ingestion and avoid additional costs that come with ingesting all historical data, including Person identities. You can configure [!UICONTROL Sample dataflow] for testing purposes as you can use it to limit your ingestion rate and then try out Experience Platform features without having to ingest large amounts of data.
+During this step, you can enable **[!UICONTROL Sample dataflow]** to limit data ingestion and avoid additional costs that come with ingesting all historical data, including Person identities. 
+
+>[!BEGINSHADEBOX]
+
+**Quick guide on using sample dataflow**
+
+Sample dataflow is a configuration that you can set for your [!DNL Marketo] dataflow to limit your ingestion rate and then try out Experience Platform features without having to ingest large amounts of data.
+
+* Enable sample dataflow to limit historical data by ingesting up to 100k (from the largest record ID) records or up to the last 10 days of activity during the backfill job.
+* You can then disable the dataflow once the backfill job is completed to stop the ingestion of new or updated data and manage the size of data in your development sandboxes.
+* When using the sample dataflow configuration for all B2B entities, you must consider that it is possible that some related records may be missing because the entire history of the source data does not get ingested.
+
+>[!ENDSHADEBOX]
 
 ![The dataflow configurations section of the dataflow details page.](../../../../images/tutorials/create/marketo/dataflow-configurations.png)
 
