@@ -50,9 +50,9 @@ Queries executed from Query Editor run interactively which means that if you clo
 
 Using Query Editor, you can write, execute, and save queries for customer experience data. All queries executed, or saved in Query Editor are available to all users in your organization with access to Query Service.
 
-A UI toggle allows you to switch between the legacy and enhanced version of the Query Editor. The legacy version is enabled by default, although the enhanced version provides better accessibility and multi-theming support. Enable the enhanced version to access to the Query Editor settings.
+<!-- A UI toggle allows you to switch between the legacy and enhanced version of the Query Editor. The legacy version is enabled by default, although the enhanced version provides better accessibility and multi-theming support. Enable the enhanced version to access to the Query Editor settings.
 
-![The Query Editor with the enhanced Query Editor toggle highlighted.](../images/ui/query-editor/enhanced-query-editor-toggle.png)
+![The Query Editor with the enhanced Query Editor toggle highlighted.](../images/ui/query-editor/enhanced-query-editor-toggle.png) -->
 
 Activating the toggle switches the editor to light theme and improves the legibility of your syntax. A settings icon also appears above the Query Editor input field that incorporates the auto-complete toggle. From the settings icon, you can enable dark theme or disable/enable auto-complete.
 
