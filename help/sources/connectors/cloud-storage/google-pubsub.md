@@ -25,19 +25,28 @@ A **service account** is a type of account typically used by an application or c
 
 Follow the steps outlined below to create a service account:
 
-* Navigate to the [!DNL IAM] page of the [!DNL Google Developer Console] and then select **[!DNL Create Service Account]**.
-* Next, enter a a display name and an ID for your service account, and then select **[!DNL Create and Continue]**.
-* You can also use the [!DNL Service account details] window to grant this service account access to a project or grant users access to this service account.
+Navigate to the [!DNL IAM] page of the [!DNL Google Developer Console] and then select **[!DNL Create Service Account]**.
+
+
+![The create service account window in the Google Developer Console](../../images/tutorials/create/google-pubsub/create-service-account.png)
+
+Next, enter a a display name and an ID for your service account, and then select **[!DNL Create and Continue]**.
+
+![The service account details in the Google Developer Console](../../images/tutorials/create/google-pubsub/service-account-details.png)
 
 ### Generate keys for your Service Account
 
 To generate keys for your service account, select the keys header in the service accounts page. From there, select **[!DNL Add key]** and then select **[!DNL Create new key]** from the dropdown menu. You can also use this panel to upload an existing key. 
+
+![The add key window in the Google Developer Console](../../images/tutorials/create/google-pubsub/add-key.png)
 
 When successful, you will receive a message indicating that the private key has been saved your computer and that a file will be downloaded. You can then use the content of this file as credentials, when creating your [!DNL Google PubSub] account on Experience Platform.
 
 ### Grant Permissions at Topic and Subscription Level
 
 To grant permissions at the topic and subscription level, navigate to the topic console page and then select **[!DNL Show info panel]**. Next, under the [!DNL Permissions] tab, select [!DNL Add Principal] and then add the service account principal along with the permissions.
+
+![The pop up window in the Google Developer Console where you can grant permissions at the topic and subscription level](../../images/tutorials/create/google-pubsub/add-principal.png)
 
 ## Connect [!DNL Google PubSub] to Platform
 
