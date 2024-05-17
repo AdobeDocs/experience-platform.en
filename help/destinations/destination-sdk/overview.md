@@ -11,89 +11,11 @@ The Destination SDK documentation provides instructions for you to use the Adobe
 
 ![Screenshot from the Experience Platform UI, showing the destinations catalog.](assets/destinations-catalog-overview.png)
 
-## Explore essential information
+## Quick start - explore essential information
 
 Review the documentation in the links below to quickly get started configuring and submitting your destination via Destination SDK.
 
 >[!BEGINSHADEBOX]
-
-<table>
-  <tbody>
-    <tr  style="border: 0;">
-        <th>Configuration pages</th>
-        <th>Guides</th>
-        <th>Other essential information</th>
-    </tr>
-    <tr  style="border: 0;">
-        <td>
-            <ul>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/configuration-options">All configuration options explained</a></li>
-                <li><a href="https://example.com">Destination Server configuration</a></li>
-                <li><a href="https://example.com">Destination configuration</a></li>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Templatizing and macros</a></li>
-                <li><a href="https://example.com">Testing API</a></li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <li><a href="https://example.com">Configure a streaming destination</a></li>
-                <li><a href="https://example.com">Configure a file-based destination</a></li>
-                <li><a href="https://example.com">Configure a prospect destination</a></li>
-                <li><a href="https://example.com">Set up data transformation through Pebble templates</a></li>
-                <li><a href="https://example.com">Submit destination for publishing</a></li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <li><a href="https://example.com">Glossary of Destination SDK terms</a></li>
-                <li><a href="https://example.com">Live configuration examples</a></li>
-                <li><a href="https://example.com">Document your destination - self-service template</a></li>
-                <li><a href="https://example.com">Bullet Point 4</a></li>
-                <li><a href="https://example.com">Bullet Point 5</a></li>
-            </ul>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-<table style="border: 0;">
-  <tbody>
-    <tr>
-        <th>Configuration pages</th>
-        <th>Guides</th>
-        <th>Other essential information</th>
-    </tr>
-    <tr>
-        <td>
-            <ul>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/configuration-options">All configuration options explained</a></li>
-                <li><a href="https://example.com">Destination Server configuration</a></li>
-                <li><a href="https://example.com">Destination configuration</a></li>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Templatizing and macros</a></li>
-                <li><a href="https://example.com">Testing API</a></li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <li><a href="https://example.com">Configure a streaming destination</a></li>
-                <li><a href="https://example.com">Configure a file-based destination</a></li>
-                <li><a href="https://example.com">Configure a prospect destination</a></li>
-                <li><a href="https://example.com">Set up data transformation through Pebble templates</a></li>
-                <li><a href="https://example.com">Submit destination for publishing</a></li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <li><a href="https://example.com">Glossary of Destination SDK terms</a></li>
-                <li><a href="https://example.com">Live configuration examples</a></li>
-                <li><a href="https://example.com">Document your destination - self-service template</a></li>
-                <li><a href="https://example.com">Bullet Point 4</a></li>
-                <li><a href="https://example.com">Bullet Point 5</a></li>
-            </ul>
-        </td>
-    </tr>
-  </tbody>
-</table>
 
 <table style="border: 0;">
   <tbody>
@@ -101,9 +23,9 @@ Review the documentation in the links below to quickly get started configuring a
         <td>
             <p>Configuration pages</p>
             <ul>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/configuration-options">All configuration options explained</a></li>
-                <li><a href="https://example.com">Destination Server configuration</a></li>
-                <li><a href="https://example.com">Destination configuration</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">All configuration options explained</a></li>
+                <li> Destination server configuration - <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">server specs</a> and <a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">templating specs</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">Customer data fields and other destination configuration components</a></li>
                 <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Templatizing and macros</a></li>
                 <li><a href="https://example.com">Testing API</a></li>
             </ul>
@@ -113,19 +35,56 @@ Review the documentation in the links below to quickly get started configuring a
             <ul>
                 <li><a href="https://example.com">Configure a streaming destination</a></li>
                 <li><a href="https://example.com">Configure a file-based destination</a></li>
-                <li><a href="https://example.com">Configure a prospect destination</a></li>
+                <li><a href="https://example.com">Configure a destination to export prospect profiles</a></li>
                 <li><a href="https://example.com">Set up data transformation through Pebble templates</a></li>
                 <li><a href="https://example.com">Submit destination for publishing</a></li>
+            </ul>
+        </td>
+                <td>
+            <p>API references</p>
+            <ul>
+                <li><a href="https://example.com">Destination server endpoint API reference</a></li>
+                <li><a href="https://example.com">Destination endpoint API reference</a></li>
+                <li><a href="https://example.com">Audience Metadata API reference</a></li>
+                <li><a href="https://example.com">Testing API reference</a></li>
+                <li><a href="https://example.com">Destination publishing API reference</a></li>
+            </ul>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="border: 0;">
+  <tbody>
+    <tr>
+        <td>
+            <p>Configure a streaming destination - cheat sheet</p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">Configure a streaming destination end-to-end guide</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">Understand data transformation through Pebble templates</a> and <a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md">view supported templating functions</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md">Understand data aggregation policies</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Live configuration example</a></li>
+                <li><a href="/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md">Test your streaming destination</a></li>
+            </ul>
+        </td>
+        <td>
+            <p>Configure a file-based destination - cheat sheet</p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/guides/configure-file-based-destination-instructions.md">Configure a file-based destination end-to-end guide</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md">Configure file formats for the exported files</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md">Live configuration example for an Amazon S3 destination</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md">Batch configuration</a> for file export schedule and file naming</li>
+                <li><a href="/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md">Test your file-based destination</a></li>
             </ul>
         </td>
         <td>
             <p>Other essential information</p>
             <ul>
-                <li><a href="https://example.com">Glossary of Destination SDK terms</a></li>
-                <li><a href="https://example.com">Live configuration examples</a></li>
-                <li><a href="https://example.com">Document your destination - self-service template</a></li>
-                <li><a href="https://example.com">Bullet Point 4</a></li>
-                <li><a href="https://example.com">Bullet Point 5</a></li>
+                <li><a href="help/destinations/destination-sdk/getting-started.md#obtain-authentication-credentials">Obtain required authentication credentials to use the API</a></li>
+                <li><a href="/help/destinations/destination-sdk/integration-prerequisites.md">Integration prerequisites</a></li>
+                <li><a href="/help/destinations/destination-sdk/glossary.md">Glossary of Destination SDK terms</a></li>                
+                <li><a href="/help/destinations/destination-sdk/functionality/rate-limiting-retry-policy.md">Rate limits and retry policy</a></li>
+                <li><a href="/help/destinations/destination-sdk/docs-framework/self-service-template.md">Self-service template to document your destination</a></li>
             </ul>
         </td>
     </tr>
