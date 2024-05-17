@@ -7,6 +7,11 @@ exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 ---
 # Query Editor UI guide
 
+>[!CONTEXTUALHELP]
+>id="platform_queryService_queryEditor_enhancedEditorToggle"
+>title="Enhanced editor toggle"
+>abstract="Toggle between the legacy and enhanced version of the Query Editor. The legacy version is enabled by default, although the enhanced version provides better accessibility and multi-theming support. To learn more about these changes, see the documentation."
+
 <!-- UPDATE this page inline with new ui changes WIP 191712 -->
 
 >[!NOTE]
@@ -37,22 +42,13 @@ The Query Editor takes a few seconds to initialize and connect to Query Service 
 
 Queries executed from Query Editor run interactively which means that if you close the browser or navigate away, the query is cancelled. The same is true for queries made to generate datasets from query outputs.
 
-The Enhanced edition of the Query Editor allows you to write more than one query in the Query Editor and execute all queries sequentially. See the section on [executing multiple sequential queries](#execute-multiple-sequential-queries) for more information.
+## Query authoring using the Enhanced Query Editor {#query-authoring}
 
-## Query authoring using Query Editor {#query-authoring}
+>[!NOTE]
+>
+>The legacy editor was deprecated on 30th May 2024. It is no longer accessible for use. You can now use the Enhanced Query Editor to write, validate, and run your queries.
 
 Using Query Editor, you can write, execute, and save queries for customer experience data. All queries executed, or saved in Query Editor are available to all users in your organization with access to Query Service.
-
->[!IMPORTANT]
->
->On 30-April-2024 the Enhanced Query Editor will be the default editor for all users. The legacy editor will be deprecated on 30-May-2024 and no longer be available for use.
-
-## Enhanced Query Editor toggle {#enhanced-editor-toggle}
-
->[!CONTEXTUALHELP]
->id="platform_queryService_queryEditor_enhancedEditorToggle"
->title="Enhanced editor toggle"
->abstract="Toggle between the legacy and enhanced version of the Query Editor. The legacy version is enabled by default, although the enhanced version provides better accessibility and multi-theming support. To learn more about these changes, see the documentation."
 
 A UI toggle allows you to switch between the legacy and enhanced version of the Query Editor. The legacy version is enabled by default, although the enhanced version provides better accessibility and multi-theming support. Enable the enhanced version to access to the Query Editor settings.
 
