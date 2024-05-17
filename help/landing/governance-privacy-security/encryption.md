@@ -28,14 +28,6 @@ After data has been brought into the system and [encrypted at rest](#at-rest), P
 
 ### mTLS protocol support {#mtls-protocol-support}
 
-<!-- Release notes blurb below -->
-
-<!-- Build customer trust with the strengthened security measures of the Mutual Transport Layer Security (mTLS) protocol. Experience Platform HTTP API destination and Adobe Journey Optimizer custom actions now support the mTLS protocol when sending data to configured endpoints. No additional configuration is required in your custom action or HTTP API destination to activate mTLS; this process occurs automatically when an mTLS-enabled endpoint is detected.
-Although Adobe does not require the use of the Common Name (CN) or the Subject Alternative Name (SAN) for additional validation, you should validate the certificate within your environment or infrastructure if your endpoints require this additional information. You can [download the Adobe Journey Optimizer public certificate here](LINK_TBC) and the [Destinations Service public certificate here](LINK_TBC).
-See the [Experience Platform data encryption documentation](LINK_TBC) for more information on network connection protocols when exporting data to third-party systems.   -->
-
-<!-- ################ -->
-
 You can now use Mutual Transport Layer Security (mTLS) to ensure enhanced security in communication exchanges between Experience Platform, Adobe Journey Optimizer, and your third-party systems. mTLS is an end-to-end security method for mutual authentication that ensures that both parties sharing information are who they claim to be before data is shared. mTLS includes an additional step compared to TLS, in which the server also asks for the client's certificate and verifies it at their end. That extra step makes this protocol more secure than TLS.
 
 #### mTLS in Adobe Journey Optimizer {#mtls-in-adobe-journey-optimizer}
