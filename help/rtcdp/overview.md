@@ -1,7 +1,7 @@
 ---
 keywords: RTCDP;CDP;Real-Time Customer Data Platform;real time customer data platform;real time cdp;cdp;Customer AI
 title: Real-Time Customer Data Platform Overview
-description: Overview of Adobe Real-Time Customer Data Platform
+description: Learn how Adobe Real-Time Customer Data Platform can help you bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time.
 feature: Get Started
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
 ---

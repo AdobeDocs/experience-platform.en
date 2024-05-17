@@ -7,6 +7,10 @@ exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 ---
 # [!DNL Query Editor] UI guide
 
+>[!NOTE]
+>
+>As of 30-April-2024 the [Enhanced Query Editor](#enhanced-editor-toggle) has become the default editor for all users. The legacy editor will be deprecated on 30-May-2024 and no longer be available for use.
+
 [!DNL Query Editor] is an interactive tool provided by Adobe Experience Platform [!DNL Query Service], which allows you to write, validate, and run queries for customer experience data within the [!DNL Experience Platform] user interface. [!DNL Query Editor] supports developing queries for analysis and data exploration, and allows you to run interactive queries for development purposes as well as non-interactive queries to populate datasets in [!DNL Experience Platform].
 
 For more information about the concepts and features of [!DNL Query Service], see the [Query Service overview](../home.md). To learn more about how to navigate the Query Service user interface on [!DNL Platform], see the [Query Service UI overview](./overview.md).
@@ -43,7 +47,7 @@ Using [!DNL Query Editor], you can write, execute, and save queries for customer
 
 >[!IMPORTANT]
 >
->The legacy editor will be retired on 30-April-2024, and will no longer be available for use.
+>On 30-April-2024 the Enhanced Query Editor will be the default editor for all users. The legacy editor will be deprecated on 30-May-2024 and no longer be available for use.
 
 ## Enhanced Query Editor toggle {#enhanced-editor-toggle}
 
@@ -82,6 +86,16 @@ If you have written multiple queries but need to execute only one query, you can
 [!UICONTROL Run selected query] icon. This icon is disabled by default until you select query syntax within the editor.
 
 ![The Query Editor with the [!UICONTROL Run selected query] icon highlighted.](../images/ui/query-editor/run-selected-query.png)
+
+### Cancel Query Editor session {#cancel-query}
+
+Take control of query execution and improve your productivity by canceling long-running queries. This action clears the Query Editor during a query run. Be aware, the query continues to execute in the background. If it is a CTAS query it will still generate an output dataset. To cancel the run in the editor and continue composing a SQL statement, select **[!UICONTROL Cancel query]** after executing a query.   
+
+![The Query Editor with [!UICONTROL Cancel query] highlighted.](../images/ui/query-editor/cancel-query-run.png)
+
+A confirmation dialog appears. Select **[!UICONTROL Confirm]** to cancel the query run.
+
+![The Cancel query confirmation dialog with Confirm highlighted.](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
 
 ### Result count {#result-count}
 
@@ -213,7 +227,11 @@ When you save a query in the Query Editor, a confirmation message pops up to not
 
 Queries that have been saved as a template can be scheduled from the Query Editor. Scheduling queries allows you to automate query runs on a custom cadence. You can schedule queries based on frequency, date, and time, and also choose an output dataset for your results if necessary. Query schedules can also be disabled or deleted through the UI.
 
-Schedules are set in the Query Editor. When using the Query Editor, you can only add a schedule to a query that has already been created, saved, and run. The same limitation does not apply to the [!DNL Query Service] API:
+Schedules are set in the Query Editor. When using the Query Editor, you can only add a schedule to a query that has already been created, and saved. The same limitation does not apply to the [!DNL Query Service] API.
+
+>[!NOTE]
+>
+>Scheduled queries that fail ten consecutive runs are automatically put in a [!UICONTROL Quarantined] status. A query with this status requires your intervention before any further executions can take place. See the [quarantined queries](./monitor-queries.md#quarantined-queries) documentation for more details. 
 
 See the query schedules documentation to learn how to [create query schedules in the UI](./query-schedules.md). Alternatively, to learn how to add schedules using the API, read the [scheduled queries endpoint guide](../api/scheduled-queries.md).
 

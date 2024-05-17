@@ -297,7 +297,7 @@ First, check the logs to find out the details of the error. The FAQ section on [
 
 You should also check the documentation for guidance on how to perform [scheduled queries in the UI](./ui/user-guide.md#scheduled-queries) and through [the API](./api/scheduled-queries.md). 
 
-Be aware, when using the [!DNL Query Editor] you can only add a schedule to a query that has already been created, saved, and run. This does not apply to the [!DNL Query Service] API.
+Be aware, when using the [!DNL Query Editor] you can only add a schedule to a query that has already been created, and saved. This does not apply to the [!DNL Query Service] API.
 +++
 
 ### What does the "Session Limit Reached" error mean?
