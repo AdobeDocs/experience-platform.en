@@ -617,7 +617,7 @@ alloy("sendEvent", {
         "_experience": {
             "decisioning": {
                 "propositions": [{
-                    "scope": "dataCapture"
+                    "scope": "sumbitButtonClick" // Or any mbox/location name you want to use in Adobe Target
                 }]
             }
         }
