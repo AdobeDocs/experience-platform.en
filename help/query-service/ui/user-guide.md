@@ -62,6 +62,16 @@ To enable dark or light themes, select the settings icon (![A settings icon.](..
 
 ![The Query Editor with the settings icon and Enable dark theme dropdown menu option highlighted.](../images/ui/query-editor/query-editor-settings.png)
 
+#### Auto-complete {#auto-complete}
+
+The Query Editor automatically suggests potential SQL keywords along with table or column details for the query as you write it. The auto-complete feature is enabled by default and can be disabled or enabled at any point from the Query Editor settings.
+
+The auto-complete configuration setting is per user and remembered for the consecutive logins for that user. Disabling this feature stops several metadata commands from being processed and providing recommendations that typically benefit the speed of the author when editing queries.
+
+<!-- Currently editing the auto complete setting info. -->
+
+
+
 ### Execute multiple sequential queries {#execute-multiple-sequential-queries}
 
 Use the Enhanced Query Editor to write more than one query and execute all queries in a sequential manner. The execution of multiple queries in a sequence each generate a log entry. However, only the results of the first query display in the Query Editor console. Check the query log if you need to troubleshoot or confirm the queries that were executed. See the [query logs documentation](./query-logs.md) for more information. 
@@ -137,11 +147,10 @@ Select the copy icon to copy SQL form the Query Editor to your clipboard. This c
 
 ![The Queries workspace with an example query template with the copy icon highlighted.](../images/ui/query-editor/copy-sql.png)
 
-### Auto-complete UI configurational toggle {#auto-complete}
+<!-- ... -->
+### 
 
-The Query Editor automatically suggests potential SQL keywords along with table or column details for the query as you write it. The auto-complete feature is enabled by default and can be disabled or enabled at any point by selecting the [!UICONTROL Syntax auto-complete] toggle to the top right of the Query Editor.
 
-The auto-complete configuration setting is per user and remembered for the consecutive logins for that user.
 
 >[!NOTE]
 >
@@ -149,7 +158,7 @@ The auto-complete configuration setting is per user and remembered for the conse
 
 ![Query Editor with the syntax auto-complete toggle highlighted.](../images/ui/query-editor/auto-complete-toggle.png)
 
-Disabling this feature stops several metadata commands from being processed and providing recommendations that typically benefit the speed of the author when editing queries.
+
 
 When you use the toggle to enable the auto-complete feature, recommended suggestions for table and column names as well as SQL keywords become available after a short pause. A success message in the console beneath the Query Editor indicates that the feature is active. 
 
@@ -167,6 +176,7 @@ If you disable the auto-complete feature, a page refresh is required for the fea
 
 To disable the auto-complete feature, select the appropriate confirmation option.
 
+<!-- ... -->
 ### Error detection {#error-detection}
 
 Query Editor automatically validates a query as you write it, providing generic SQL validation and specific execution validation. If a red underline appears below the query (as shown in the image below), it represents an error within the query.
