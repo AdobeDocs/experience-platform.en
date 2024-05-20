@@ -4530,11 +4530,17 @@ The response from the Flow Service API returns the ID of the updated dataflow.
 
 ![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-To make any updates to your dataflow, use the `PATCH` operation.For example, you can update your dataflows to select fields as mandatory keys or deduplication keys. 
+To make any updates to your dataflow, use the `PATCH` operation. For example, you can add a marketing action to your dataflows. Or, you can update your dataflows to select fields as mandatory keys or deduplication keys.
 
-### Add a mandatory key {#add-mandatory-key}
+### Add a marketing action {#add-marketing-action}
 
-To add a [mandatory key](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes), see the request and response examples below
+To add a marketing action, see the request and response examples below.
+
+>[!IMPORTANT]
+>
+>The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the dataflow you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
+>
+> To get the latest version of the etag value, perform a GET request to the `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` endpoint, where `{ID}` is the dataflow ID that you are looking to update.
 
 >[!BEGINSHADEBOX]
 
@@ -4543,12 +4549,13 @@ To add a [mandatory key](/help/destinations/ui/activate-batch-profile-destinatio
 +++Add an identity as mandatory field - Request
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4566,12 +4573,90 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++Add an XDM attribute as mandatory field - Request
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '
+[
+  {
+    "op": "add",
+    "path": "/transformations/0/params/mandatoryFields",
+    "value": [
+      "GAID"
+    ]
+  }
+]'
+```
+
++++
+
+**Response**
+
++++Add a mandatory field - Response
+
+```json
+{
+    "id": "eb54b3b3-3949-4f12-89c8-64eafaba858f",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
+
+### Add a mandatory key {#add-mandatory-key}
+
+To add a [mandatory key](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes), see the request and response examples below.
+
+>[!IMPORTANT]
+>
+>The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the dataflow you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
+>
+> To get the latest version of the etag value, perform a GET request to the `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` endpoint, where `{ID}` is the dataflow ID that you are looking to update.
+
+>[!BEGINSHADEBOX]
+
+**Request** 
+
++++Add an identity as mandatory field - Request
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
+--header 'accept: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '
+[
+  {
+    "op": "add",
+    "path": "/transformations/0/params/mandatoryFields",
+    "value": [
+      "GAID"
+    ]
+  }
+]'
+```
+
++++
+
++++Add an XDM attribute as mandatory field - Request
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
+--header 'accept: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4605,6 +4690,12 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 To add a [deduplication key](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys), see the request and response examples below
 
+>[!IMPORTANT]
+>
+>The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the dataflow you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
+>
+> To get the latest version of the etag value, perform a GET request to the `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` endpoint, where `{ID}` is the dataflow ID that you are looking to update.
+
 >[!BEGINSHADEBOX]
 
 **Request** 
@@ -4612,12 +4703,13 @@ To add a [deduplication key](/help/destinations/ui/activate-batch-profile-destin
 +++Add an identity as deduplication key - Request
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4638,12 +4730,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++Add an XDM attribute as deduplication key - Request
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
