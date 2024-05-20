@@ -22,7 +22,7 @@ Add the following code block as high as possible in the `<head>` tag of your HTM
 <script>
   !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
   []).push(o),n[o]=function(){var u=arguments;return new Promise(
-  function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+  function(i,l){n.setTimeout(function(){n[o].q.push([i,l,u])})})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
 <script src="https://cdn1.adoberesources.net/alloy/2.19.1/alloy.min.js" async></script>

@@ -10,7 +10,7 @@ exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
 >
 >The [!DNL Azure Event Hubs] source is available in the sources catalog to users who have purchased Real-Time Customer Data Platform Ultimate.
 
-This tutorial provides steps to create an [!DNL Azure Event Hubs] account using the Adobe Experience Platform user interface.
+Read this tutorial to learn how to create an [!DNL Azure Event Hubs] account using the Adobe Experience Platform user interface.
 
 ## Getting started
 
