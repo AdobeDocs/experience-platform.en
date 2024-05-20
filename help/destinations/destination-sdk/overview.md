@@ -27,7 +27,6 @@ Review the documentation in the links below to quickly get started configuring a
                 <li> Destination server configuration - <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">server specs</a> and <a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">templating specs</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">Customer data fields and other destination configuration components</a></li>
                 <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Templatizing and macros</a></li>
-                <li><a href="https://example.com">Testing API</a></li>
             </ul>
         </td>
         <td>
@@ -80,7 +79,7 @@ Review the documentation in the links below to quickly get started configuring a
         <td>
             <p>Other essential information</p>
             <ul>
-                <li><a href="help/destinations/destination-sdk/getting-started.md#obtain-authentication-credentials">Obtain required authentication credentials to use the API</a></li>
+                <li><a href="/help/destinations/destination-sdk/getting-started.md#obtain-authentication-credentials">Obtain required authentication credentials to use the API</a></li>
                 <li><a href="/help/destinations/destination-sdk/integration-prerequisites.md">Integration prerequisites</a></li>
                 <li><a href="/help/destinations/destination-sdk/glossary.md">Glossary of Destination SDK terms</a></li>                
                 <li><a href="/help/destinations/destination-sdk/functionality/rate-limiting-retry-policy.md">Rate limits and retry policy</a></li>
