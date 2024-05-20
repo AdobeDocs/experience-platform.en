@@ -93,6 +93,8 @@ The [!UICONTROL Alerts] dialog opens. The [!UICONTROL Alerts] dialog subscribes 
 
 ![The alert subscriptions dialog.](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
+<!-- ... -->
+
 The table below explains the supported query alert types: 
 
 | Alert type | Description |
@@ -127,24 +129,19 @@ Queries can also be enrolled in the quarantine feature during the schedule creat
 
 ## Query run delay {#query-run-delay}
 
-<!-- Stay in control of your compute hours by setting alerts for delays to your query runs.   -->
-<!-- You can choose to receive alerts if a query status does not change state after a specific period of time. Just  to stay informed on your query progress. -->
+Stay in control of your compute hours by setting alerts for query delays. You can monitor query performance and receive notifications if a query's status remains unchanged after a specific period. Use the '[!UICONTROL Query Run Delay]' alert to be notified if a query processes beyond a predetermined time without completing.
 
-You can monitor query performance and identify any unexpected delays in processing with the '[!UICONTROL Query Run Delay]' alert. When you [subscribe to alerts](#alert-subscription) for scheduled query runs, one of the available alerts is the [!UICONTROL Query Run Delay]. This alert notifies you if the query continues to process beyond a pre-determined period of time without completing or failing to complete. 
+When you [subscribe to alerts](#alert-subscription) for scheduled query runs, one of the available alerts is the [!UICONTROL Query Run Delay]. This alert requires you to set a threshold for the time spent executing, at which point you are notified of the delay in processing.
 
-To choose a threshold duration that triggers the notification, either enter a number in the text input filed or use the up and down arrows to increase in increments of one minute. As the threshold is set in minutes, the maximum observable period for a query run delay is 1440 minutes (24 hours). The default time period for a run delay is 15 minutes. 
+To choose a threshold duration that triggers the notification, either enter a number in the text input filed or use the up and down arrows to increase in increments of one minute. As the threshold is set in minutes, the maximum observable period for a query run delay is 1440 minutes (24 hours). The default time period for a run delay is 150 minutes. 
 
 >[!NOTE]
 >
 >A query run can only have one run delay time. If you change the delay threshold, it is changed for your entire organization and any user also subscribed to the alert.
 
-See the subscribe to alerts section to learn how to [subscribe to alerts](#alert-subscription).
+![The Alerts dialog on the scheduled queries tab with the query run delay input field highlighted.](../images/ui/monitor-queries/query-run-delay-input.pngf)
 
-<!-- The default behaviour sets an alert for 15 mins after the query begins processing. -->
-<!-- 
-the term "execution" typically refers to the process of running or processing a query.
-a query is considered "executing" once it has been initiated and the database engine begins processing it, regardless of whether the execution has completed or not. 
- -->
+See the subscribe to alerts section to learn how to [subscribe to [!UICONTROL Query Run Delay] alerts](#alert-subscription).
 
 ## Filter queries {#filter}
 

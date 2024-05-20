@@ -147,50 +147,6 @@ Select the copy icon to copy SQL form the Query Editor to your clipboard. This c
 
 ![The Queries workspace with an example query template with the copy icon highlighted.](../images/ui/query-editor/copy-sql.png)
 
-<!-- ... -->
-### 
-
-
-
->[!NOTE]
->
->The syntax autocomplete toggle is only available for the legacy version of the Query Editor.
-
-![Query Editor with the syntax auto-complete toggle highlighted.](../images/ui/query-editor/auto-complete-toggle.png)
-
-
-
-When you use the toggle to enable the auto-complete feature, recommended suggestions for table and column names as well as SQL keywords become available after a short pause. A success message in the console beneath the Query Editor indicates that the feature is active. 
-
-If you disable the auto-complete feature, a page refresh is required for the feature to take effect. A confirmation dialog appears with three options when you disable the [!UICONTROL Syntax auto-complete] toggle :
-
-- [!UICONTROL Cancel]
-- [!UICONTROL Save changes and refresh]
-- [!UICONTROL Refresh without saving changes]
-
->[!IMPORTANT]
->
->If you are writing or editing a query when disabling this feature, you must save any changes to your query before refreshing the page or all of your progress will be lost.  
-
-![The confirmation dialog to disable the auto-complete feature.](../images/ui/query-editor/confirmation-dialog.png)
-
-To disable the auto-complete feature, select the appropriate confirmation option.
-
-<!-- ... -->
-### Error detection {#error-detection}
-
-Query Editor automatically validates a query as you write it, providing generic SQL validation and specific execution validation. If a red underline appears below the query (as shown in the image below), it represents an error within the query.
-
-<!-- ... Image below needs updating couldn't replicate the effect -->
-
-![The Query Editor input displaying SQL underlined in red to indicate an error.](../images/ui/query-editor/syntax-error-highlight.png)
-
-When errors are detected, you can view the specific error messages by hovering over the SQL code.
-
-<!-- ... Image below needs updating couldn't replicate the effect -->
-
-![A dialog with an error message.](../images/ui/query-editor/linting-error.png)
-
 ### Query details {#query-details}
 
 To view a query in the Query Editor, select any saved template from the [!UICONTROL Templates] tab. The query details panel provides more information and tools to manage the selected query. It also shows useful metadata such as the last time that the query was modified and who modified it, if applicable.
@@ -272,11 +228,13 @@ After a query has been completed, the results are displayed in the **[!UICONTROL
 
 Query Service provides solutions to a variety of use cases across industries and business scenarios. These practical examples demonstrate the flexibility and impact of the service in addressing diverse needs. To [uncover how Query Service can bring value to your specific business needs](../use-cases/overview.md), explore the comprehensive collection of use case documents. Learn how to use Query Service to provide insights and solutions for enhanced operational efficiency and business success.
 
+<!-- This video is from 2019. The logic is sounds but the workflow is too outdated. This can be enabled once the video has been updated
+
 ## Run queries with Query Service tutorial video {#query-tutorial-video}
 
 The following video shows how to run queries in the Adobe Experience Platform interface and in a PSQL client. The video also demonstrates the use of individual properties in an XDM object, Adobe-defined functions, and how to use CREATE TABLE AS SELECT (CTAS) queries.
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on) -->
 
 ## Next steps
 
