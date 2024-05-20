@@ -7,13 +7,6 @@ exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 ---
 # Query Editor UI guide
 
->[!CONTEXTUALHELP]
->id="platform_queryService_queryEditor_enhancedEditorToggle"
->title="Enhanced editor toggle"
->abstract="Toggle between the legacy and enhanced version of the Query Editor. The legacy version is enabled by default, although the enhanced version provides better accessibility and multi-theming support. To learn more about these changes, see the documentation."
-
-<!-- UPDATE this page inline with new ui changes WIP 191712 -->
-
 >[!NOTE]
 >
 >The legacy editor was deprecated on 30th May 2024. It is no longer accessible for use. You can now use the [Enhanced Query Editor](#enhanced-editor-toggle) to write, validate, and run your queries
