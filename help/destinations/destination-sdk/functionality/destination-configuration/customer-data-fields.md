@@ -346,7 +346,7 @@ To add a nested field, use the `properties` parameter as shown below. In the con
 >
 >Starting with the April 2024 release, you can set an `isRequired` parameter on nested fields. For example, in the configuration snippet below, the first two nested fields are marked as required (highlighted line xxx) and customers cannot proceed unless they select a value for the field. Read more about required fields in the [supported parameters](#supported-parameters) section.
 
-```json {line-numbers="true" highlight="10,19"}
+```json {line-numbers="true" highlight="11,20"}
 
     {
       "name": "yourdestination",

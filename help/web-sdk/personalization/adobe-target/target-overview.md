@@ -178,7 +178,59 @@ To update a [!DNL Target] profile, ensure that the profile data is passed with t
 |`xdm`|Object|Data formatted in XDM that lands in Web SDK as an experience event|
 |`data`|Object|Arbitrary key/value pairs sent to [!DNL Target] solutions under the target class.|
 
-Typical [!DNL Web SDK] code using this command looks like the following:
+<!--Typical [!DNL Web SDK] code using this command looks like the following:-->
+
+**Delay saving Profile or entity parameters until content has been displayed to the end user**
+
+To delay recording attributes in the profile until the content has been displayed, set `data.adobe.target._save=false` in your request. 
+
+For example, your website contains three decision scopes corresponding to three category links on the website (Men, Women and Kids) and you want to track the category the user eventually visited. Send these requests with the `__save` flag set to `false` to avoid persisting the category at the time the content is requested. After the content has been visualized, send the proper payload (including the `eventToken` and `stateToken`) for the corresponding attributes to be recorded.
+
+<!--Save profile or entity attributes by default with:
+
+```js
+alloy ( "sendEvent" , {
+  renderDecisions : true,
+  data : {
+    __adobe : {
+      target : {
+        "__save" : true // Optional. __save=true is the default 
+        "profile.gender" : "female",
+        "profile.age" : 30,
+        "entity.name" : "T-shirt",
+        "entity.id" : "1234",
+      }
+    }
+  }
+} ) ; 
+```
+-->
+
+The example below sends a trackEvent-style message, executes profile scripts, saves attributes, and immediately records the event.
+
+```js
+alloy ( "sendEvent" , {
+  renderDecisions : true,
+  data : {
+    __adobe : {
+      target : {
+        "profile.gender" : "female",
+        "profile.age" : 30,
+        "entity.name" : "T-shirt" ,
+        "entity.id" : "1234" ,
+        "track": {
+          "scopes": [ "mbox1", "mbox2"],
+          "type": "display|click|..."
+        }
+      }
+    }
+  }
+} ) ;
+```
+
+>[!NOTE]
+>
+>If the `__save` directive is omitted, saving the profile and entity attributes happens immediately, as if the request has been executed, even if the remainder of the request is a prefetch of personalization. The `__save` directive is only relevant for profile and entity attributes. If the track object is present, the `__save` directive is ignored. Data is immediately saved and the notification is recorded.
 
 **`sendEvent` with profile data**
 
