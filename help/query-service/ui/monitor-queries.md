@@ -135,7 +135,7 @@ To choose a threshold duration that triggers the notification, either enter a nu
 >
 >A query run can only have one run delay time. If you change the delay threshold, it is changed for user subscribed to the alert and for your entire organization.
 
-![The Alerts dialog on the scheduled queries tab with the query run delay input field highlighted.](../images/ui/monitor-queries/query-run-delay-input.pngf)
+![The Alerts dialog on the scheduled queries tab with the query run delay input field highlighted.](../images/ui/monitor-queries/query-run-delay-input.png)
 
 See the subscribe to alerts section to learn how to [subscribe to [!UICONTROL Query Run Delay] alerts](#alert-subscription).
 
