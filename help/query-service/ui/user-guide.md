@@ -228,13 +228,17 @@ After a query has been completed, the results are displayed in the **[!UICONTROL
 
 Query Service provides solutions to a variety of use cases across industries and business scenarios. These practical examples demonstrate the flexibility and impact of the service in addressing diverse needs. To [uncover how Query Service can bring value to your specific business needs](../use-cases/overview.md), explore the comprehensive collection of use case documents. Learn how to use Query Service to provide insights and solutions for enhanced operational efficiency and business success.
 
-<!-- This video is from 2019. The logic is sounds but the workflow is too outdated. This can be enabled once the video has been updated
+<!-- This video is from 2019. The logic is sounds but the workflow is too outdated. -->
 
 ## Run queries with Query Service tutorial video {#query-tutorial-video}
 
 The following video shows how to run queries in the Adobe Experience Platform interface and in a PSQL client. The video also demonstrates the use of individual properties in an XDM object, Adobe-defined functions, and how to use CREATE TABLE AS SELECT (CTAS) queries.
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on) -->
+>[!NOTE]
+>
+>The UI depicted in the video is outdated but the logic used in the workflow remains the same.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Next steps
 

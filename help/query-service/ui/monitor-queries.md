@@ -83,8 +83,6 @@ If you want to schedule runs for that query template, select the template name f
 
 ### Subscribe to alerts {#alert-subscription}
 
-<!-- ... 191712 -->
-
 To subscribe to alerts for scheduled query runs, select either the `...` (ellipsis) or alert subscription icon (![An alert subscription icon.](../images/ui/monitor-queries/alert-subscription-icon.png)) for the scheduled query you want to manage. The inline actions dropdown menu appears. Next, select **[!UICONTROL Subscribe]** from the available options.
 
 ![The scheduled queries workspace with an ellipses, alert subscription icon, and the inline actions dropdown menu highlighted.](../images/ui/monitor-queries/subscribe.png)
@@ -92,8 +90,6 @@ To subscribe to alerts for scheduled query runs, select either the `...` (ellips
 The [!UICONTROL Alerts] dialog opens. The [!UICONTROL Alerts] dialog subscribes you to both UI notifications and email alerts. There are several alert subscription options available: `start`, `success`, `failure`, `quarantine`, and `delay`. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe. You can subscribe to alerts as long as they don't have a [!UICONTROL Last Run Timestamp] value.
 
 ![The alert subscriptions dialog.](../images/ui/monitor-queries/alert-subscription-dialog.png)
-
-<!-- ... -->
 
 The table below explains the supported query alert types: 
 
