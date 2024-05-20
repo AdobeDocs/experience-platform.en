@@ -126,6 +126,12 @@ Similar to the filter for creation date, you can filter your datasets based on t
 
 You can filter datasets based on the schema that defines their structure. Either select the dropdown icon or input the schema name into the text field. A list of potential matches appears. Select the appropriate schema from the list.
 
+## Bulk actions {#bulk-actions}
+
+<!-- ..Description 
+
+With bulk actions you can perform various actions on dozens of different datasets simulataneously. Select individual datasets with the checkbox on each row, or select an entire page with the column header checkbox. Once selected, the actions you can take include Move to folder, Edit tags, and Delete.-->
+
 ## Sort datasets by created date {#sort}
 
 Datasets in the [!UICONTROL Browse] tab can be sorted by either ascending or descending dates. Select the [!UICONTROL Created] or [!UICONTROL Last updated] column headings to alternate between ascending and descending. Once selected, the column indicates this with either an up or down arrow to the side of the column header.
