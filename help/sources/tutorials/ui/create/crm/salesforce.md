@@ -20,17 +20,38 @@ If you already have an authenticated [!DNL Salesforce] account, you may skip the
 
 ### Gather required credentials {#gather-required-credentials}
 
-In order to authenticate your [!DNL Salesforce] account against Experience Platform, you must provide values that correspond to the following [!DNL Salesforce] credentials:
+The [!DNL Salesforce] source supports basic authentication and OAuth2 Client Credential.
+
+>[!BEGINTABS]
+
+>[!TAB Basic authentication]
+
+You must provide values for the following credentials to connect your [!DNL Salesforce] account using basic authentication.
 
 | Credential | Description |
 | --- | --- |
-| `environmentUrl` | The URL of the [!DNL Salesforce] source instance. |
-| `username` | The username for the [!DNL Salesforce] user account. |
-| `password` | The password for the [!DNL Salesforce] user account. |
-| `securityToken` | The security token for the [!DNL Salesforce] user account. |
-| `apiVersion` | (Optional) The REST API version of the [!DNL Salesforce] instance that you are using. The value for API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0` If this field is left blank, then Experience Platform will automatically use the latest available version. |
+| Environment URL | The URL of the [!DNL Salesforce] source instance. |
+| Username | The username for the [!DNL Salesforce] user account. |
+| Password | The password for the [!DNL Salesforce] user account. |
+| Security Token | The security token for the [!DNL Salesforce] user account. |
+| API version | (Optional) The REST API version of the [!DNL Salesforce] instance that you are using. The value for API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0` If this field is left blank, then Experience Platform will automatically use the latest available version. |
 
 For more information on authentication, refer to [this [!DNL Salesforce] authentication guide](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+
+>[!TAB OAuth2 Client Credential]
+
+You must provide values for the following credentials to connect your [!DNL Salesforce] account using OAuth2 Client Credential.
+
+| Credential | Description |
+| --- | --- |
+| Environment URL |  The URL of the [!DNL Salesforce] source instance. |
+| Client ID | The client ID is used in tandem with the client secret as part of OAuth2 authentication. Together, the client ID and client secret enables your application to operate on behalf of your account by identifying your application to [!DNL Salesforce]. |
+| Client secret | The client secret is used in tandem with the client ID as part of OAuth2 authentication. Together, the client ID and client secret enables your application to operate on behalf of your account by identifying your application to [!DNL Salesforce]. |
+| API version | (Optional) The REST API version of the [!DNL Salesforce] instance that you are using. The value for API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0` If this field is left blank, then Experience Platform will automatically use the latest available version. |
+
+For more information on using OAuth for [!DNL Salesforce], read the [[!DNL Salesforce] guide on OAuth Authorization Flows](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
+
+>[!ENDTABS]
 
 Once you have gathered your required credentials, you can follow the steps below to connect your [!DNL Salesforce] account to Experience Platform.
 
