@@ -34,7 +34,7 @@ To connect your [!DNL Salesforce] account to [!DNL Flow Service] using basic aut
 | `username` | The username for the [!DNL Salesforce] user account. |
 | `password` | The password for the [!DNL Salesforce] user account. |
 | `securityToken` | The security token for the [!DNL Salesforce] user account. |
-| `apiVersion` | Optional) The REST API version of the [!DNL Salesforce] instance that you are using. The value for API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0` If this field is left blank, then Experience Platform will automatically use the latest available version. |
+| `apiVersion` | Optional) The REST API version of the [!DNL Salesforce] instance that you are using. The value for the API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0`. If this field is left blank, then Experience Platform will automatically use the latest available version. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce] is: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 For more information on getting started, visit [this Salesforce document](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
@@ -45,10 +45,10 @@ To connect your [!DNL Salesforce] account to [!DNL Flow Service] using OAuth 2 C
 
 | Credential | Description |
 | --- | --- |
-| `environmentUrl` |  The URL of the [!DNL Salesforce] source instance. |
-| `clientId` | The client ID is used in tandem with the client secret as part of OAuth2 authentication. Together, the client ID and client secret enables your application to operate on behalf of your account by identifying your application to [!DNL Salesforce]. |
-| `clientSecret` | The client secret is used in tandem with the client ID as part of OAuth2 authentication. Together, the client ID and client secret enables your application to operate on behalf of your account by identifying your application to [!DNL Salesforce]. |
-| `apiVersion` | The REST API version of the [!DNL Salesforce] instance that you are using. The value for API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0` If this field is left blank, then Experience Platform will automatically use the latest available version. This value is mandatory for OAuth 2 Client Credential authentication. |
+| `environmentUrl` | The URL of the [!DNL Salesforce] source instance. |
+| `clientId` | The client ID is used in tandem with the client secret as part of OAuth2 authentication. Together, the client ID and client secret enable your application to operate on behalf of your account by identifying your application to [!DNL Salesforce]. |
+| `clientSecret` | The client secret is used in tandem with the client ID as part of OAuth2 authentication. Together, the client ID and client secret enable your application to operate on behalf of your account by identifying your application to [!DNL Salesforce]. |
+| `apiVersion` | The REST API version of the [!DNL Salesforce] instance that you are using. The value for the API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0`. If this field is left blank, then Experience Platform will automatically use the latest available version. This value is mandatory for OAuth2 Client Credential authentication. |
 | `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce] is: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 For more information on using OAuth for [!DNL Salesforce], read the [[!DNL Salesforce] guide on OAuth Authorization Flows](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
