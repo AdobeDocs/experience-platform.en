@@ -14,9 +14,11 @@ Adobe Experience Platform provides native connectivity for cloud providers like 
 
 Cloud storage sources can bring your data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the sources workflow. Platform allows you to bring in data from [!DNL Google PubSub] in real time.
 
-## Generate your [!DNL Google PubSub] OAuth 2.0 credentials {#credentials}
+## Prerequisites {#prerequisites}
 
-### Create a service account
+This section outlines prerequisite set up that you must complete before connecting your [!DNL Google PubSub] account to Experience Platform.
+
+### Create service account {#create-service-account}
 
 A **service account** is a type of account typically used by an application or compute workload, rather than a person. A service account is identified by its email address, which is unique to the account.
 
@@ -27,14 +29,13 @@ Follow the steps outlined below to create a service account:
 
 Navigate to the [!DNL IAM] page of the [!DNL Google Developer Console] and then select **[!DNL Create Service Account]**.
 
-
 ![The create service account window in the Google Developer Console](../../images/tutorials/create/google-pubsub/create-service-account.png)
 
 Next, enter a a display name and an ID for your service account, and then select **[!DNL Create and Continue]**.
 
 ![The service account details in the Google Developer Console](../../images/tutorials/create/google-pubsub/service-account-details.png)
 
-### Generate keys for your Service Account
+### Generate service account keys {#generate-service-account-keys}
 
 To generate keys for your service account, select the keys header in the service accounts page. From there, select **[!DNL Add key]** and then select **[!DNL Create new key]** from the dropdown menu. You can also use this panel to upload an existing key. 
 
@@ -42,13 +43,37 @@ To generate keys for your service account, select the keys header in the service
 
 When successful, you will receive a message indicating that the private key has been saved your computer and that a file will be downloaded. You can then use the content of this file as credentials, when creating your [!DNL Google PubSub] account on Experience Platform.
 
-### Grant Permissions at Topic and Subscription Level
+### Grant permissions at topic and subscription level {#grant-permissions}
 
 To grant permissions at the topic and subscription level, navigate to the topic console page and then select **[!DNL Show info panel]**. Next, under the [!DNL Permissions] tab, select [!DNL Add Principal] and then add the service account principal along with the permissions.
 
 ![The pop up window in the Google Developer Console where you can grant permissions at the topic and subscription level](../../images/tutorials/create/google-pubsub/add-principal.png)
 
-## Connect [!DNL Google PubSub] to Platform
+## Configurations for optimal [!DNL Google PubSub usage] {#optimal-configurations}
+
+This section outlines configurations you are recommended to make to optimize your usage of the [!DNL Google PubSub] source on Experience Platform.
+
+### Subscription properties {#subscription-properties}
+
+Use the [!DNL Google Developer Console] to **increase your acknowledgement deadline**. This allows the [!DNL Google Publisher] to wait according to the time that you configure before sending the message again. This delay helps in the reduction of unnecessary load at the subscriber level.
+
+![The acknowledgement deadline interface in the Google Developer Console.](../../images/tutorials/create/google-pubsub/acknowledgement-deadline.png)
+
+**Enable [!DNL exactly one delivery]**. This configuration informs the [!DNL Google Publisher] to guarantee that messages sent to the subscription do not get resent before the acknowledgement deadline expires. You can use this setting to ensure that acknowledgement messages do not get resent to the subscription.
+
+![The exactly one delivery configuration page in the Google Developer Console.](../../images/tutorials/create/google-pubsub/exactly-one-delivery.png)
+
+You can **enable [!DNL Retry after exponential backoff delay] to reduce the risk of further overwhelming the server**. You can enable this configuration in the [!DNL Google Developer Console] to better mitigate transient failures (temporary errors that typically resolve themselves), by providing the system with more time to recover before attempting another connection.
+
+![The Retry policy window in the Google Developer Console.](../../images/tutorials/create/google-pubsub/retry-policy.png)
+
+You must **set your subscription message retention duration to be 24 hours or more** to ensure that unacknowledged data does not get lost during peak loads. Additionally, **enable a dead letter topic** to ensure that data loss does not happen even during rare edge cases.
+
+>[!IMPORTANT]
+>
+>You can only create one source dataflow per [!DNL Google PubSub] subscription. Reusing a subscription, even across sandboxes, leads to loss of data.
+
+## Connect [!DNL Google PubSub] to Experience Platform
 
 The documentation below provides information on how to connect [!DNL Google PubSub] to Platform using APIs or the user interface:
 
