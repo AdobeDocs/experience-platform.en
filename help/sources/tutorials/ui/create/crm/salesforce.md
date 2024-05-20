@@ -57,29 +57,59 @@ Once you have gathered your required credentials, you can follow the steps below
 
 ## Connect your [!DNL Salesforce] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the sources workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources available in the Experience Platform sources catalog.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find a specific source using the search option.
+Under the *CRM* category, select **[!DNL Salesforce]**, and then select **[!UICONTROL Add data]**.
 
-Select **[!UICONTROL CRM]** from the list of sources categories and then select **[!UICONTROL Add data]** from the [!DNL Salesforce] card.
+>[!TIP]
+>
+>Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
 
 ![The sources catalog on the Experience Platform UI with the Salesforce source card selected.](../../../../images/tutorials/create/salesforce/catalog.png)
 
 The **[!UICONTROL Connect to Salesforce]** page appears. On this page, you can either use new credentials or existing credentials.
 
->[!BEGINTABS]
-
->[!TAB Use an existing Salesforce account]
+### Use an existing account
 
 To use an existing account, select **[!UICONTROL Existing account]** and then select the account that you want to use from the list that appears. When finished, select **[!UICONTROL Next]** to proceed.
 
 ![A list of authenticated Salesforce accounts that already exist in your organization.](../../../../images/tutorials/create/salesforce/existing.png)
 
->[!TAB Create a new Salesforce account]
+### Create a new account
 
-To use a new account, select **[!UICONTROL New account]** and provide a name, description, and your [!DNL Salesforce] authentication credentials. When finished, select **[!UICONTROL Connect to source]** and allow for a few seconds for the new connection to establish.
+To create a new account, select **[!UICONTROL New account]** and provide a name and a description for your new [!DNL Salesforce] account.
 
 ![The interface in which you can create a new Salesforce account by providing the appropriate authentication credentials.](../../../../images/tutorials/create/salesforce/new.png)
+
+Next, select the authentication type that you would like to use for your new account.
+
+>[!BEGINTABS]
+
+>[!TAB Basic authentication]
+
+For basic authentication, select **[!UICONTROL Basic authentication]** and then provide values for the following credentials:
+
+* Environment URL
+* Username
+* Password
+* API version (Optional)
+
+When finished, select **[!UICONTROL Connect to source]**.
+
+![The basic authentication interface for Salesforce account creation.](../../../../images/tutorials/create/salesforce/basic.png)
+
+>[!TAB OAuth2 Client Credential]
+
+For OAuth 2 Client Credential, select **[!UICONTROL OAuth2 Client Credential]** and then provide values for the following credentials:
+
+* Environment URL
+* Client ID
+* Client secret
+* API version
+
+When finished, select **[!UICONTROL Connect to source]**.
+
+![The OAuth interface for Salesforce account creation.](../../../../images/tutorials/create/salesforce/oauth2.png)
 
 >[!ENDTABS]
 
