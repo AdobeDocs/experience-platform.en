@@ -23,7 +23,7 @@ Yes, externally generated pre-built audiences are supported with Audience Portal
 
 ### What permissions do I need to have in order to upload externally generated audiences?
 
-In order to upload externally generated audiences, you need to have the "View audiences/segments", "Manage audiences/segments", "View datasets", "Manage datasets", "View sources", and "Manage sources" permissions. There are no specific role-based controls required to upload externally generated audiences.
+In order to upload externally generated audiences, you need to have the "View segments", "Manage segments", and "Import audiences" permissions. There are no specific role-based controls required to upload externally generated audiences.
 
 ### What happens when I upload an externally generated audience? 
 
@@ -192,6 +192,14 @@ You can re-publish an audience by selecting an audience that is in the inactive 
 >You can only delete audiences that are **not** used in any downstream activations. Additionally, you cannot delete an audience that is referenced in another audience. If you can't delete your audience, please ensure you are **not** using it in any downstream services or as a building block of another audience. 
 
 You can put an audience into the delete state by opening the quick actions menu in Audience Portal and selecting [!UICONTROL Delete].
+
+### Are there any caveats for lifecycle state transitions?
+
+Yes, there are some caveats to be aware of when you are using audiences in downstream services such as Adobe Journey Optimizer or non-customer-based audiences such as account-based audiences.
+
+At this time, you **must** manually check if the audience is used downstream in Adobe Journey Optimizer, as this status is currently not automatically checked.
+
+Additionally, you **must** manually check if the audience is used as a component of an account-based audience, as this status is also not currently automatically checked.
 
 ### Does using an audience as a child audience affect lifecycle state transitions?
 
