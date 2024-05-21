@@ -116,9 +116,9 @@ If the segment qualification criteria were solely based on anonymous events stor
 
 ## Unaffected services
 
-The following components of Experience Platform for **not** affected by namespace priority:
+The following components of Experience Platform are **not** affected by namespace priority:
 
-* Schemas
-* Data lake
+* Experience Data Model (XDM) Schemas: Any schema class that is not an XDM ExperienceEvent, such as XDM Individual Profiles, will continue to honor any fields that you mark as an identity.
+* Data lake: Data ingestion to data lake will continue to honor the primary identity settings configured on Web SDK.
 * Data Lifecycle
 * Privacy Service
