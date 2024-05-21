@@ -67,7 +67,7 @@ If you want to use [!DNL mTLS] with [!DNL HTTP API] destinations, the server add
 
 ### Download certificate {#certificate}
 
-If you want to check the [!DNL Common Name] (CN) and [!DNL Subject Alternative Names] (SAN) to do additional third-party validation, you can can download certificate below:
+If you want to check the [!DNL Common Name] (CN) and [!DNL Subject Alternative Names] (SAN) to do additional third-party validation, you can download the certificate below:
 
 * [HTTP API mTLS public certificate](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
 
