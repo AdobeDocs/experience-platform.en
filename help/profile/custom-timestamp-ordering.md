@@ -1,6 +1,6 @@
 ---
 title: Custom Timestamp Ordering
-description: Learn how ???
+description: Learn how to add custom timestamp ordering to your dataset to ensure consistency in your profile data.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
