@@ -87,7 +87,7 @@ To subscribe to alerts for scheduled query runs, select either the `...` (ellips
 
 ![The scheduled queries workspace with an ellipses, alert subscription icon, and the inline actions dropdown menu highlighted.](../images/ui/monitor-queries/subscribe.png)
 
-The [!UICONTROL Alerts] dialog opens. The [!UICONTROL Alerts] dialog subscribes you to both UI notifications and email alerts. There are several alert subscription options available: `start`, `success`, `failure`, `quarantine`, and `delay`. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe. You can subscribe to alerts as long as they don't have a [!UICONTROL Last Run Timestamp] value.
+The [!UICONTROL Alerts] dialog opens. The [!UICONTROL Alerts] dialog subscribes you to both UI notifications and email alerts. There are several alert subscription options available: `start`, `success`, `failure`, `quarantine`, and `delay`. Check the appropriate box or boxes and select **[!UICONTROL Save]** to subscribe.
 
 ![The alert subscriptions dialog.](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
@@ -95,7 +95,7 @@ The table below explains the supported query alert types:
 
 | Alert type | Description |
 |---|---|
-| `start` | This alert notifies you when a scheduled query run is initiated or starts processing. |
+| `start` | This alert notifies you when a scheduled query run is initiated or starts to process. |
 | `success` | This alert informs you when a scheduled query run completes successfully, indicating that the query executed without any errors. |
 | `failed` | This alert triggers when a scheduled query run encounters an error or fails to execute successfully. It helps you identify and address issues promptly. |
 | `quarantine` | This alert is activated when a scheduled query run is put into a quarantined state. When queries are enrolled in the [quarantine feature](#quarantined-queries), any scheduled query that fails ten consecutive runs is automatically put into a [!UICONTROL Quarantined] state. They then require your intervention before any further executions can take place. |
@@ -115,6 +115,10 @@ Select the information icon (![An information icon.](../images/ui/monitor-querie
 
 ## Quarantined queries {#quarantined-queries}
 
+>[!NOTE]
+>
+>The quarantine alert is not available for 'run-once' ad hoc queries. The quarantine alert is only applicable for scheduled batch (CTAS and ITAS) queries. 
+
 When enrolled in the quarantine feature, any scheduled query that fails ten consecutive runs is automatically put into a [!UICONTROL Quarantined] status. A query with this status becomes inactive and does not execute at its scheduled cadence. It then requires your intervention before any further executions can take place. This safeguards system resources as you must review and correct the issues with your SQL before further executions occur.
 
 To enable a scheduled query for the quarantine feature, select the ellipses (`...`) followed by [!UICONTROL Enable quarantine] from the dropdown menu that appears.
@@ -125,11 +129,11 @@ Queries can also be enrolled in the quarantine feature during the schedule creat
 
 ## Query run delay {#query-run-delay}
 
-Stay in control of your compute hours by setting alerts for query delays. You can monitor query performance and receive notifications if a query's status remains unchanged after a specific period. Use the '[!UICONTROL Query Run Delay]' alert to be notified if a query processes beyond a predetermined time without completing.
+Stay in control of your compute hours by setting alerts for query delays. You can monitor query performance and receive notifications if a query's status remains unchanged after a specific period. Use the '[!UICONTROL Query Run Delay]' alert to be notified if a query continues to process after a specific period of time without completing.
 
 When you [subscribe to alerts](#alert-subscription) for scheduled query runs, one of the available alerts is the [!UICONTROL Query Run Delay]. This alert requires you to set a threshold for the time spent executing, at which point you are notified of the delay in processing.
 
-To choose a threshold duration that triggers the notification, either enter a number in the text input filed or use the up and down arrows to increase in increments of one minute. As the threshold is set in minutes, the maximum observable period for a query run delay is 1440 minutes (24 hours). The default time period for a run delay is 150 minutes. 
+To choose a threshold duration that triggers the notification, either enter a number in the text input field or use the up and down arrows to increase in increments of one minute. Since the threshold is set in minutes, the maximum duration for observing a query run delay is 1440 minutes (24 hours). The default time period for a run delay is 150 minutes.  
 
 >[!NOTE]
 >

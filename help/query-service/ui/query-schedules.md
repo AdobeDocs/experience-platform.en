@@ -87,7 +87,7 @@ You can also enroll a scheduled query into the quarantine feature from the inlin
 
 ### Set alerts for a scheduled query status {#alerts-for-query-status}
 
-You can also subscribe to query alerts as part of your scheduled query settings. You can configure your settings to receive notifications for a variety of situations. Alerts can be set for a quarantined state, delays in query processing, or a change in status of your query. The available query-state alert options include start, success, and failure. Alerts can be received as either as pop-up notifications or emails. Select the check box to subscribe to alerts for that status of scheduled query. 
+You can also subscribe to query alerts as part of your scheduled query settings. You can configure your settings to receive notifications for a variety of situations. Alerts can be set for a quarantined state, delays in query processing, or a change in status of your query. The available query-state alert options include start, success, and failure. Alerts can be received either as pop-up notifications or emails. Select the check box to subscribe to alerts for that status of scheduled query. 
 
 ![The Schedule details panel with the Alert options highlighted.](../images/ui/query-editor/alerts.png)
 
@@ -95,15 +95,15 @@ The table below explains the supported query alert types:
 
 | Alert type | Description |
 |---|---|
-| `start` | This alert notifies you when a scheduled query run is initiated or starts processing. |
+| `start` | This alert notifies you when a scheduled query run is initiated or starts to process. |
 | `success` | This alert informs you when a scheduled query run completes successfully, indicating that the query executed without any errors. |
 | `failed` | This alert triggers when a scheduled query run encounters an error or fails to execute successfully. It helps you identify and address issues promptly. |
 | `quarantine` | This alert is activated when a scheduled query run is put into a quarantined state. Once a query is [enrolled in the quarantine feature](#quarantine), any scheduled query that fails ten consecutive runs is automatically put into a [!UICONTROL Quarantined] state. A quarantined query then requires your intervention before any further executions can take place. Note: Queries must be enrolled for the quarantine feature for you to subscribe to quarantine alerts. |
-| `delay` | This alert notifies you if there is a [delay in the outcome of a scheduled query execution](./monitor-queries.md#query-run-delay) beyond a specified threshold. You can set a custom time that trigger the alert when the query runs for that duration without either completing or failing. The default behavior sets an alert for 15 mins after the query begins processing. |
+| `delay` | This alert notifies you if there is a [delay in the outcome of a scheduled query execution](./monitor-queries.md#query-run-delay) beyond a specified threshold. You can set a custom time that triggers the alert when the query runs for that duration without either completing or failing. The default behavior sets an alert for 150 mins after the query begins processing. |
 
 >[!NOTE]
 >
->If you choose to set a [!UICONTROL Query Run Delay] alert, you must set your desired delay time in minutes the Platform UI. Enter the duration in minutes. The maximum delay is 24 hours (1440 minutes).
+>If you choose to set a [!UICONTROL Query Run Delay] alert, you must set your desired delay time in minutes in the Platform UI. Enter the duration in minutes. The maximum delay is 24 hours (1440 minutes).
 
 For an overview of alerts in Adobe Experience Platform, including the structure of how alert rules are defined, see the [alerts overview](../../observability/alerts/overview.md). For guidance on managing alerts and alert rules within the Adobe Experience Platform UI, see the [Alerts UI guide](../../observability/alerts/ui.md).
 
