@@ -1,6 +1,6 @@
 ---
 title: Namespace priority
-description: Learn about namespace priority in Identity Service
+description: Learn about namespace priority in Identity Service.
 badge: Beta
 ---
 # Namespace priority
@@ -16,7 +16,7 @@ Every customer implementation is unique and tailored to meet a particular organi
 
 You must make configurations in Identity Service that reflects the importance of your namespaces as this influences how profiles are formed and segmented.
 
-## Determine your priorities
+## Step 1: Determine your priorities
 
 Determination of namespace priority is based on the following factors:
 
@@ -38,15 +38,15 @@ An identity represents a real-world object. There are three objects that are rep
 * Hardware device
 * Web browser (Cookie)
 
-Person namespaces are relatively immutable compared to hardware devices (such as IDFA, GAID), which are relatively immutable compared to web browsers.
+Person namespaces are relatively immutable compared to hardware devices (such as IDFA, GAID), which are relatively immutable compared to web browsers. Basically, you (person) will always be a single entity, that can have multiple hardware devices (phone, laptop, tablet, etc.), which then have multiple browsers (Google Chrome, Safari, FireFox, etc.)
 
 Another way to approach this topic is through cardinality. For a given person entity, how many identities will be created? In most cases, a person will have one CRM ID, a handful of hardware device identifiers (IDFA/GAID resets should not happen often), and even more cookies (an individual could conceivably brows on multiple devices, use incognito mode, or reset cookies at any  given time). Generally, **lower cardinality indicates a namespace with a higher value**.
 
-### Validate your namespace priority settings
+## Step 2: Validate your namespace priority settings
 
 Once you have an idea of how you will prioritize your namespaces, you can use the Graph Simulation tool to test out various graph collapse scenarios and ensure that your priority configurations are returning the expected graph results. For more information, read the guide on using the [Graph Simulation tool](./graph-simulation.md).
 
-### Configure namespace priority
+## Step 3: Configure namespace priority
 
 Namespace priority can be configured using [!UICONTROL Identity Settings]. In the [!UICONTROL Identity Settings] interface, you maye drag and drop a namespace to determine its relative importance.
 
@@ -68,7 +68,7 @@ For relatively complex graph structures, namespace priority plays an important r
   * This is because experience events are dynamic in nature. An identity map may contain three or more identities, and namespace priority ensures that the most important namespace is associated to the experience event.
 * As a result, the following configurations **will no longer be used by Real-Time Customer Profile**:
   * "Primary" checkbox on data element type in WebSDK.
-  * Any fields marked as primary identity on an XDM ExperienceEvent Class schema.
+  * Any fields marked as primary identity on an XDM Experience Event Class schema.
   * Default primary identity settings in the Adobe Analytics source connector (ECID or AAID).
 * On the other hand, **namespace priority does not determine primary identity for profile records**.
   * For profile records, you may use the schemas workspace in the Experience Platform UI to define your identity fields, including the primary identity. Read the guide on [defining identity fields in the UI](../../xdm/ui/fields/identity.md) for more information.
