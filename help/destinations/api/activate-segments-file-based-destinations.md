@@ -739,7 +739,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-++[!DNL Amazon S3] - Base connection request with assumed role authentication
++++[!DNL Amazon S3] - Base connection request with assumed role authentication
 
 >[!TIP]
 >
