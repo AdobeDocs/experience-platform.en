@@ -12,8 +12,19 @@ role: Developer,User
 * [Dashboards overview](home.md)
 * [Dashboard access permissions](permissions.md)
 * [Dashboards inventory](inventory.md)
-* [User defined dashboards](user-defined-dashboards.md)
+* [Dashboards](user-defined-dashboards.md)
 * [Download dashboards to PDF](download.md)
+* Data Distiller {#data-distiller}
+  * [Overview](data-distiller/overview.md)
+  * Customizable Insights for extended app reporting {#customizable-insights}
+    * [Overview](data-distiller/customizable-insights/overview.md)
+    * [Query pro mode (SQL chart creation)](data-distiller/customizable-insights/query-pro-mode.md)
+    * Filters {#filters}
+      * [Date filter](data-distiller/customizable-insights/filters/date-filter.md)
+      * [Global filter](data-distiller/customizable-insights/filters/global-filter.md) 
+    * [View more](data-distiller/customizable-insights/view-more.md)
+    * [View SQL](data-distiller/customizable-insights/view-sql.md)
+    * [Download as CSV](data-distiller/customizable-insights/download-csv.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
   * [Account Profiles](guides/account-profiles.md)
