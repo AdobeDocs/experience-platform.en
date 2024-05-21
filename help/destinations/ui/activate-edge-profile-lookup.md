@@ -10,7 +10,7 @@ type: Tutorial
 
 Adobe Experience Platform uses the [Real-Time Customer Profile](../../profile/home.md) as the single source of truth for all profile data. 
 
-With Real-Time Customer Profile, you can see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party sources.
+With Real-Time Customer Profile, you can see a complete view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party sources.
 
 Experience Platform stores all profile data in a central hub which can deliver profile information for use cases that rely on the completeness and comprehensiveness of your profile data.
 
@@ -27,15 +27,6 @@ When configuring the use case described in this page, you will use the following
 * [Custom Personalization connection](../catalog/personalization/custom-personalization.md): You will configure a new custom personalization connection to activate your audiences.
 * [Edge Network Server API](../../server-api/overview.md): You will use [interactive data collection](../../server-api/interactive-data-collection.md) to send event data to the Edge Network.
 
-
->[!IMPORTANT]
-> 
-> * To activate data and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
-> * To activate data without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
->* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
-> 
-> Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
-
 ## Step 1: Create and configure a datastream {#create-datastream}
 
 Follow the steps in the [datastream configuration](../../datastreams/configure.md#create-a-datastream) documentation to create a new datastream with the following **[!UICONTROL Service]** settings:
@@ -49,7 +40,6 @@ Follow the steps in the [datastream configuration](../../datastreams/configure.m
     >If you enable **[!UICONTROL Edge Segmentation]**, the maximum number of requests per second (RPS) is lower. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for details.
 
     ![Platform UI image showing the datastream configuration screen.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
-
 
 ## Step 2: Create an [!DNL Active-On-Edge] merge policy {#create-merge-policy}
 
@@ -80,6 +70,14 @@ When configuring the new destination, select the datastream which you created in
 ## Step 5: Activate your audiences to the destination {#select-destination}
 
 Select the custom personalization destination that you configured at the previous step.
+
+>[!IMPORTANT]
+> 
+> * To activate data and enable the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+> * To activate data without going through the [mapping step](#mapping) of the workflow, you need the **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]**, and **[!UICONTROL View Segments]** [access control permissions](/help/access-control/home.md#permissions).
+>* To export *identities*, you need the **[!UICONTROL View Identity Graph]** [access control permission](/help/access-control/home.md#permissions). <br> ![Select identity namespace highlighted in the workflow to activate audiences to destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Select identity namespace highlighted in the workflow to activate audiences to destinations."){width="100" zoomable="yes"}
+> 
+> Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     
