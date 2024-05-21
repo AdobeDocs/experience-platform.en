@@ -231,13 +231,9 @@ You can filter datasets based on the schema that defines their structure. Either
 
 ## Bulk actions {#bulk-actions}
 
-Use bulk actions to enhance your operational efficiency and perform multiple actions on numerous datasets simultaneously. You can save time and maintain an organized data structure with bulk actions such as [Move to folder](), [Edit tags](), and [Delete]() datasets. 
+Use bulk actions to enhance your operational efficiency and perform multiple actions on numerous datasets simultaneously. You can save time and maintain an organized data structure with bulk actions such as [Move to folder](#move-to-folders), [Edit tags](#manage-tags), and [Delete](#delete) datasets. 
 
 To act on more than one dataset at a time, select individual datasets with the checkbox on each row, or select an entire page with the column header checkbox. Once selected, the bulk action bar appears. 
-
-<!-- Streamline your data management processes and ensure the efficient management of your datasets with bulk actions. You can use bulk actions to perform multiple actions on numerous datasets simultaneously. Save time and maintain an organized data structure with bulk actions such as [Move to folder](), [Edit tags](), and [Delete]() datasets.  -->
-
-<!-- Q) is there a limit o how many you can select?  -->
 
 ![The Datasets Browse tab with numerous datasets selected and the bulk action bar highlighted.](../images/datasets/user-guide/bulk-actions.png)
 
