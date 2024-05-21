@@ -114,11 +114,28 @@ If the John and Jane share a device, then the ECID (web browser) transfers from 
 
 If the segment qualification criteria were solely based on anonymous events stored against the ECID, then Jane would qualify for that segment
 
-## Unaffected services
+## Impact on other services
 
-The following components of Experience Platform are **not** affected by namespace priority:
+**Experience Data Model (XDM) Schemas**
 
-* Experience Data Model (XDM) Schemas: Any schema class that is not an XDM ExperienceEvent, such as XDM Individual Profiles, will continue to honor any fields that you mark as an identity.
-* Data lake: Data ingestion to data lake will continue to honor the primary identity settings configured on Web SDK.
-* Data Lifecycle
-* Privacy Service
+Any schema that is not an XDM Experience Event, such as XDM Individual Profiles, will continue to honor any [fields that you mark as an identity](../../xdm/ui/fields/identity.md).
+
+**Data lake**
+
+Data ingestion to data lake will continue to honor the primary identity settings configured on [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) and schemas. 
+
+* Data lake will not determine primary identity based on namespace priority. For example, Adobe Customer Journey Analytics will continue to use values in the identity map even after namespace priority is enabled (such as, adding a dataset to a new connection), because Customer Journey Analytics consumes their data from data lake.
+
+**Advanced data lifecycle management**
+
+Data hygiene record delete requests functions in the following manner, for a given identity:
+
+* Real-Time Customer Profile: Deletes any profile fragment with specified identity as primary identity. **The primary identity on Profile will now be determined based on namespace priority.**
+* Data lake: Deletes any record with the specified identity as primary identity.
+
+**Privacy Service**
+
+Privacy Service deletion requests function in the following manner, for a given identity:
+
+* Real-Time Customer Profile: Deletes any profile fragment with specified identity value as primary identity. **The primary identity on Profile will now be determined based on namespace priority.**
+* Data lake: Deletes any record with the specified identity as primary or secondary identity.
