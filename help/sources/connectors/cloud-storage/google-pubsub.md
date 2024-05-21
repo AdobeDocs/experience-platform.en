@@ -20,14 +20,16 @@ This section outlines prerequisite set up that you must complete before connecti
 
 ### Create service account {#create-service-account}
 
-A **service account** is a type of account typically used by an application or compute workload, rather than a person. A service account is identified by its email address, which is unique to the account. For more information on determining the right authentication type for your use case, read the [[!DNL Google] guide on authentication methods](https://cloud.google.com/docs/authentication).
+A **service account** is a type of account often used by an application or compute workload, rather than a person. A service account is identified by its email address, which is unique to the account.
 
 * On one hand, service accounts are **principals** - you can grant service accounts access to [!DNL Google Cloud] resources. For example, you could grant a service account the Compute Admin role `(roles/compute.admin)` on a given project. This then allows  the service account to be able to manage Compute Engine resources in that particular project.
 * On the other hand, service accounts are also resources - you can give other principals permission to access the service account. For example, you could grant a user the Service Account User role `(roles/iam.serviceAccountUser)` on a service account to let the user attach that service account to resources. Alternatively, you can grant a user the Service Account Admin role `(roles/iam.serviceAccountAdmin)` to let the user complete tasks such as view, edit, disable, and delete the service account.
 
+For more information on determining the right authentication type for your use case, read the [[!DNL Google] guide on authentication methods](https://cloud.google.com/docs/authentication).
+
 Follow the steps outlined below to create a service account:
 
-Navigate to the [!DNL IAM] page of the [!DNL Google Developer Console] and then select **[!DNL Create Service Account]**.
+First, navigate to the [!DNL IAM] page of the [!DNL Google Developer Console] and then select **[!DNL Create Service Account]**.
 
 ![The create service account window in the Google Developer Console](../../images/tutorials/create/google-pubsub/create-service-account.png)
 
@@ -59,11 +61,11 @@ Use the [!DNL Google Developer Console] to **increase your acknowledgement deadl
 
 ![The acknowledgement deadline interface in the Google Developer Console.](../../images/tutorials/create/google-pubsub/acknowledgement-deadline.png)
 
-**Enable [!DNL exactly one delivery]**. This configuration informs the [!DNL Google Publisher] to guarantee that messages sent to the subscription do not get resent before the acknowledgement deadline expires. You can use this setting to ensure that acknowledgement messages do not get resent to the subscription.
+Enable **[!DNL exactly one delivery]**. This configuration informs the [!DNL Google Publisher] to guarantee that messages sent to the subscription do not get resent before the acknowledgement deadline expires. You can use this setting to ensure that acknowledgement messages do not get resent to the subscription.
 
 ![The exactly one delivery configuration page in the Google Developer Console.](../../images/tutorials/create/google-pubsub/exactly-one-delivery.png)
 
-You can **enable [!DNL Retry after exponential backoff delay] to reduce the risk of further overwhelming the server**. You can enable this configuration in the [!DNL Google Developer Console] to better mitigate transient failures (temporary errors that typically resolve themselves), by providing the system with more time to recover before attempting another connection.
+You can enable **[!DNL Retry after exponential backoff delay]** to reduce the risk of further overwhelming the server. You can enable this configuration in the [!DNL Google Developer Console] to better mitigate transient failures (temporary errors that typically resolve themselves), by providing the system with more time to recover before attempting another connection.
 
 ![The Retry policy window in the Google Developer Console.](../../images/tutorials/create/google-pubsub/retry-policy.png)
 
