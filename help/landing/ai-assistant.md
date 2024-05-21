@@ -315,21 +315,26 @@ The AI Assistant may give an inaccurate impression of what it can do. It may ans
 | "Do you know **x** language?" | The AI Assistant currently only supports English, but may answer "yes" due to the underlying model being able to support it. |
 | "Can you do...?" | The AI Assistant may answer yes, even though it cannot. |
 
-### Tips {#tips}
+## FAQ {#faq}
 
-The following section outlines some tips and workarounds to consider when using AI Assistant.
+The following is a list of answers to frequently asked questions about AI Assistant.
 
-#### Questions may be answered with the wrong information source
+### Is AI Assistant's information provided in real-time?
 
-There are instances when your question about your usage data can result in an answer based on the documentation. This is because the AI Assistant can incorrectly route your question to the wrong information source. You can prevent this by:
+The data presented in AI Assistant responses is updated daily. This means that data in responses can be up to 24 hours older than the data that you may see on the Experience Platform user interface, at the time of the response.
 
-* Rephrasing your question to use more SQL-like language
-* Explicitly calling out the information source to use.
+### Which Adobe applications does AI Assistant support?
 
-Read the table below for examples:
+AI Assistant supports Adobe Experience Platform, Real-Time Customer Data Platform and Adobe Journey Optimizer concept questions. For data usage questions, AI Assistant currently only supports Real-Time CDP data objects.
 
-| Bad question | Good question | Notes |
-| --- | --- | --- |
-| What is my biggest audience? | What is my biggest audience? Using data. | Explicitly tell the AI Assistant that you want the answer to be based on data. |
-| What is my biggest audience? | List my biggest audience. | There are instances where a "what..." question can be mistaken for a documentation-based question. Using a command like "list" is a stronger indicator that you are asking a question with data in context. |
-| How many datasets do I have? | Count my datasets. | The original question works for audiences, but it may not work with datasets. |
+### What are the capabilities of AI Assistant?
+
+AI Assistant can address Adobe concept queries and can answer questions related to the usage of Experience Platform objects. (For example, "How many audiences are activated?").
+
+### Can AI Assistant provide information about profile data?
+
+No. AI Assistant does not have access to profile-level data.
+
+### Will my personal information be utilized in AI Assistant's training data?
+
+AI Assistant does not use personal information for training purposes. Do not provide any personal information about yourself (including your name or contact information) or any other parties to AI Assistant.
