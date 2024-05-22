@@ -74,7 +74,7 @@ The AI Assistant interface appears, immediately providing you with information t
 * [!UICONTROL What is a schema?]
 * [!UICONTROL Tell me some common use cases for Real-Time CDP]
 
-## Use case example: Use AI Assistant to expedite your schema creation process
+## AI Assistant UI guide
 
 >[!NOTE]
 >
@@ -94,6 +94,8 @@ After receiving a response from AI Assistant, you can select from a number of op
 
 ### AI Assistant features {#features}
 
+This section outlines the different features of AI Assistant that you can use during your workflows on Experience Platform.
+
 <!-- 
 ### Save your query {#save-your-query}
 
@@ -111,13 +113,15 @@ To access your saved queries, select the bookmark icon below the input box, then
 
 ### View data in your sandbox {#view-data-in-your-sandbox}
 
-Depending on your query, AI Assistant provides additional information pertaining to the data in your sandbox. To view how the response to your query applies to your sandbox, select **[!UICONTROL In your sandbox].** 
+Depending on your query, AI Assistant provides additional information pertaining to the data in your sandbox. To view how the response to your query applies to your particular sandbox, select **[!UICONTROL In your sandbox].** 
 
-During this step, AI Assistant may provide direct links to the UI pages of certain objects in question. In the example below, AI Assistant provides direct links to the [!UICONTROL Schemas] and [!UICONTROL Segments] UI pages.
+When viewing data pertaining to your sandbox, AI Assistant may provide direct links to specific UI pages that display your queried data.
 
 +++Select to view example
 
-![Screenshot of "In your sandbox" option.](./images/ai-assistant/in-your-sandbox.png)
+In this example, AI Assistant returns additional information regarding the existing XDM schemas in your sandbox, including their total count and the five most commonly used fields.
+
+![The "in your sandbox" dropdown window open, displaying additional information on your schemas.](./images/ai-assistant/in-your-sandbox.png)
 
 +++
 
@@ -129,37 +133,37 @@ You can verify responses returned to you by AI Assistant by reviewing citations 
 
 To view citations and validate AI Assistant's response, select **[!UICONTROL Show sources]**. 
 
-![Screenshot of "Show sources".](./images/ai-assistant/show-sources.png)
+![The AI Assistant response with "Show sources" selected.](./images/ai-assistant/show-sources.png)
 
-AI Assistant provides links to documentation that corroborates its response. 
+AI Assistant updates the interface and provides you with links to documentation that corroborate the initial response. Additionally, when citations are enabled, AI Assistant updates the response to include footnotes to indicate the specific parts of the answer that reference the provided documentation. 
 
-![A list of citations.](./images/ai-assistant/citations.png)
+![A dropdown menu of the citations that AI Assistant provides for concept questions.](./images/ai-assistant/citations.png)
 
-You can also use the queries that AI Assistant provides under [!UICONTROL Related suggestions] to further explore topics related to your original query.
+You can also use the queries that AI Assistant provides under **[!UICONTROL Related suggestions]** to further explore topics related to your original query.
 
-![Related suggestions.](./images/ai-assistant/related-suggestions.png)
+![A list of queries provided by AI Assistant as related suggestions.](./images/ai-assistant/related-suggestions.png)
 
 +++
 
 ### Usage data and visualization {#usage-data-and-visualization}
 
-For AI Assistant to respond to a query about usage data within your organization, you have to be in an active sandbox.
+You must be in an active sandbox in order for AI Assistant to sufficiently respond to a question about your usage data.
 
 +++Select to view an example of usage data questions and data visualization
 
-In the example below, AI Assistant is provided with the following query: **"Show me segment definitions with over 1000 profiles and include activation status."** AI Assistant then responds with a chart visualizing your segment and profile data.
+In the example below, AI Assistant is asked the following query: **"Show me dataflows that were created using the Amazon S3 source"**, AI Assistant then responds with a table listing your dataflows and their corresponding IDs. To view the whole table of data, select the expand icon on the top right.
 
 ![Follow up question about usage data.](./images/ai-assistant/usage-data-question.png)
 
-An expanded view of the visualization appears. You can use the expanded modal to further inspect your data and is especially useful when visualization returns with a large number of columns.
+An expanded view of the table appears, providing you with a more comprehensive list of dataflows based on the parameters of your query.
 
-![Expanded chart.](./images/ai-assistant/table.png)
+![A view of the expanded table.](./images/ai-assistant/table.png)
 
-When prompted with a usage data question, AI Assistant provides an explanation of how it computed the answer. In the example below, AI Assistant outlines the steps it took in order to display segment definitions with over 1000 profiles and their respective activation statuses.
+When prompted with a usage data question, AI Assistant provides an explanation of how it computed the answer. In the example below, AI Assistant outlines the steps it took in order to identify the dataflows that were created using the [!DNL Amazon S3] source.
 
 ![Follow up question about segment definitions illustrating how AI Assistant computed the answer.](./images/ai-assistant/answer-explained.png)
 
-You can also provide filters and modifications to your queries, and you can instruct AI Assistant to render its findings based on the filters that you include. For example, you can ask AI Assistant to show you a trend of the count segment definitions in the order of their created date, remove segment definitions with zero total profiles, and use month names instead of integers when displaying the data.
+You can also provide filters and modifications to your queries, and you can instruct AI Assistant to render its findings based on the filters that you include. For example, you can ask AI Assistant to show you a trend of the count of segment definitions in the order of their created date, remove segment definitions with zero total profiles, and use month names instead of integers when displaying the data.
 
 +++
 
@@ -171,11 +175,7 @@ You can use the autocomplete function to receive a list of data objects that exi
 
 You can use autocomplete by including the plus symbol (**`+`**) in your query. As an alternative, you can also select the plus sign (**`+`**) located at the bottom of the text input box. A window appears with a list of recommended data objects from your sandbox.
 
-![Example of auto-complete](./images/ai-assistant/auto-complete-one.png)
-
-Next, select the data object that you want to query to complete your question and then submit your question.
-
-![Example of auto-complete with question and answer](./images/ai-assistant/auto-complete-two.png)
+![Example of auto-complete](./images/ai-assistant/autocomplete.png)
 
 +++
 
@@ -185,13 +185,44 @@ You can use AI Assistant's multi-turn capabilities to have a more natural conver
 
 +++Select to view an example of multi-turn
 
-In the example below, AI Assistant is asked for the total number of dataflows in the current organization.
+In the example below, AI Assistant is first asked for the total number of dataflows and then is asked to list the 10 most recent dataflows.
 
-![Example of multi-turn](./images/ai-assistant/multi-turn-one.png)
+![Example of multi-turn](./images/ai-assistant/multi-turn.png)
 
-Next, AI Assistant receives another follow-up request. This time, AI Assistant responds by listing the dataflows that currently exist in your organization.
++++
 
-![Example of multi-turn with question and answer](./images/ai-assistant/multi-turn-two.png)
+## Provide feedback {#feedback}
+
+You can provide feedback of your experience with AI Assistant using the options provided with answer.
+
+To provide feedback, select either thumbs up, thumbs down, or a flag after receiving a response from the AI Assistant, and then input your feedback in the provided text box. 
+
+![The feedback option in AI Assistant.](./images/ai-assistant/provide-feedback.png)
+
+
++++Select to view more examples
+
+>[!BEGINTABS]
+
+>[!TAB Thumbs up]
+
+Select the thumbs up icon to provide feedback on what went well with your experience with the AI Assistant.
+
+![The positive feedback window.](./images/ai-assistant/thumbs-up.png)
+
+>[!TAB Thumbs down]
+
+Select the thumbs down icon to provide feedback on what could be improved upon based on your experience with the AI Assistant. During this step, you can also provide specific comments regarding your experience. Feedback provided in the comments is reviewed daily.
+
+![The negative feedback window.](./images/ai-assistant/thumbs-down.png)
+
+>[!TAB Flag]
+
+Select the flag icon to provide further reports on your experience using the AI Assistant.
+
+![The report results window.](./images/ai-assistant/flag.png)
+
+>[!ENDTABS]
 
 +++
 
@@ -257,44 +288,6 @@ Read the table below for further guidance on best practices to follow when askin
 | Omit criteria or parameters. | Show me datasets. |
 
 {style="table-layout:auto"}
-
-## Provide feedback {#feedback}
-
->[!BEGINSHADEBOX]
-
-**Your feedback is requested**
-
-During this Alpha stage, you are invited to provide feedback on the responses that you receive from the AI Assistant. All responses and submitted feedback are reviewed in order to continue to improve the AI Assistant experience.
-
-To provide feedback, select either thumbs up or thumbs down after receiving a response from the AI Assistant, and then input your feedback in the provided text box. Next, select **[!UICONTROL Submit feedback]** to submit.
-
->[!ENDSHADEBOX]
-
-+++Provide feedback
-
->[!BEGINTABS]
-
->[!TAB Thumbs up]
-
-Select the thumbs up icon to provide feedback on what went well with your experience with the AI Assistant.
-
-![The positive feedback window.](./images/ai-assistant/thumbs-up.png)
-
->[!TAB Thumbs down]
-
-Select the thumbs down icon to provide feedback on what could be improved upon based on your experience with the AI Assistant. During this step, you can also provide specific comments regarding your experience. Feedback provided in the comments is reviewed daily.
-
-![The negative feedback window.](./images/ai-assistant/thumbs-down.png)
-
->[!TAB Flag]
-
-Select the flag icon to provide further reports on your experience using the AI Assistant.
-
-![The report results window.](./images/ai-assistant/flag.png)
-
->[!ENDTABS]
-
-+++
 
 ## Additional information {#additional-information}
 
