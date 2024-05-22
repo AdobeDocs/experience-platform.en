@@ -32,21 +32,21 @@ Review the documentation in the links below to quickly get started configuring a
         <td>
             <p>**Guides**</p>
             <ul>
-                <li><a href="https://example.com">Configure a streaming destination</a></li>
-                <li><a href="https://example.com">Configure a file-based destination</a></li>
-                <li><a href="https://example.com">Configure a destination to export prospect profiles</a></li>
-                <li><a href="https://example.com">Set up data transformation through Pebble templates</a></li>
-                <li><a href="https://example.com">Submit destination for publishing</a></li>
+                <li><a href="/help/destinations/destination-sdk/overview.md#process">High-level integration process</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">Configure a streaming destination</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/configure-file-based-destination-instructions.md">Configure a file-based destination</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md">Configure a destination to export prospect profiles</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/submit-destination.md">Submit destination for publishing</a></li>
             </ul>
         </td>
                 <td>
             <p>**API references**</p>
             <ul>
-                <li><a href="https://example.com">Destination server endpoint API reference</a></li>
-                <li><a href="https://example.com">Destination endpoint API reference</a></li>
-                <li><a href="https://example.com">Audience Metadata API reference</a></li>
-                <li><a href="https://example.com">Testing API reference</a></li>
-                <li><a href="https://example.com">Destination publishing API reference</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Destination-servers-and-templates">Destination server endpoint API reference</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Destination-configurations">Destination endpoint API reference</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Audience-metadata-templates">Audience Metadata API reference</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Destination-testing">Testing API reference</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Destination-publishing">Destination publishing API reference</a></li>
             </ul>
         </td>
     </tr>
