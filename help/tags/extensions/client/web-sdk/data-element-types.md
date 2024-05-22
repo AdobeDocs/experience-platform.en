@@ -55,7 +55,7 @@ You can create payload objects using the **[!UICONTROL Variable]** data element.
 
 After you create this data element, you can use the [Update variable](./action-types.md#update-variable) action to modify it. When ready, you can include this data element in the [Send event](./action-types.md#send-event) action to send data to a datastream.
 
-## Media: Quality of Experience data {#quality-experience-data}
+## Media: Quality of Experience {#quality-experience}
 
 A **[!UICONTROL Quality of Experience]** data element is helpful when sending streaming media events to Adobe Experience Platform. You can add this element when creating a media session and the following media events will contain updated Quality of Experience data.
 
