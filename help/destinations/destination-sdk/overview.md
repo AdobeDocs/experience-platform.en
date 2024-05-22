@@ -11,7 +11,7 @@ The Destination SDK documentation provides instructions for you to use the Adobe
 
 ![Screenshot from the Experience Platform UI, showing the destinations catalog.](assets/destinations-catalog-overview.png)
 
-## Quick start - explore essential information
+## Quick start - explore essential information {#quick-start}
 
 Review the documentation in the links below to quickly get started configuring and submitting your destination via Destination SDK.
 
@@ -21,7 +21,7 @@ Review the documentation in the links below to quickly get started configuring a
   <tbody>
     <tr>
         <td>
-            <p>Configuration pages</p>
+            <p>**Configuration pages**</p>
             <ul>
                 <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">All configuration options explained</a></li>
                 <li> Destination server configuration - <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">server specs</a> and <a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">templating specs</a></li>
@@ -30,7 +30,7 @@ Review the documentation in the links below to quickly get started configuring a
             </ul>
         </td>
         <td>
-            <p>Guides</p>
+            <p>**Guides**</p>
             <ul>
                 <li><a href="https://example.com">Configure a streaming destination</a></li>
                 <li><a href="https://example.com">Configure a file-based destination</a></li>
@@ -40,7 +40,7 @@ Review the documentation in the links below to quickly get started configuring a
             </ul>
         </td>
                 <td>
-            <p>API references</p>
+            <p>**API references**</p>
             <ul>
                 <li><a href="https://example.com">Destination server endpoint API reference</a></li>
                 <li><a href="https://example.com">Destination endpoint API reference</a></li>
@@ -57,7 +57,7 @@ Review the documentation in the links below to quickly get started configuring a
   <tbody>
     <tr>
         <td>
-            <p>Configure a streaming destination - cheat sheet</p>
+            <p>**Configure a streaming destination - cheat sheet**</p>
             <ul>
                 <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">Configure a streaming destination end-to-end guide</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">Understand data transformation through Pebble templates</a> and <a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md">view supported templating functions</a></li>
@@ -67,7 +67,7 @@ Review the documentation in the links below to quickly get started configuring a
             </ul>
         </td>
         <td>
-            <p>Configure a file-based destination - cheat sheet</p>
+            <p>**Configure a file-based destination - cheat sheet**</p>
             <ul>
                 <li><a href="/help/destinations/destination-sdk/guides/configure-file-based-destination-instructions.md">Configure a file-based destination end-to-end guide</a></li>
                 <li><a href="/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md">Configure file formats for the exported files</a></li>
@@ -77,7 +77,7 @@ Review the documentation in the links below to quickly get started configuring a
             </ul>
         </td>
         <td>
-            <p>Other essential information</p>
+            <p>**Other essential information**</p>
             <ul>
                 <li><a href="/help/destinations/destination-sdk/getting-started.md#obtain-authentication-credentials">Obtain required authentication credentials to use the API</a></li>
                 <li><a href="/help/destinations/destination-sdk/integration-prerequisites.md">Integration prerequisites</a></li>
