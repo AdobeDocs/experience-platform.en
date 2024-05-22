@@ -1,22 +1,23 @@
 ---
 title: data
-description: Learn how to send non-XDM data to Adobe.
+description: Learn how to send non-XDM data to Adobe, through the data object.
 exl-id: 537fc34e-3cda-4aa7-ae0d-0d3ef4b89848
 ---
-# data
 
-The `data` property allows you to send data to Adobe that does not match an XDM schema. It is useful in non-XDM scenarios, such as updating an [Adobe Target profile](/help/web-sdk/personalization/adobe-target/target-overview.md). When data arrives at Adobe, you can use the datastream mapping tool to assign XDM fields to each field in the `data` property.
+# `data`
+
+The `data` object allows you to send a payload to Adobe that does not match an XDM schema. It is useful in non-XDM scenarios, such as sending data directly to Adobe Analytics, Adobe Target, or Adobe Audience Manager. When data arrives at the datastream, you can use [Data Prep mapping](/help/data-prep/ui/mapping.md) to assign XDM fields to each field in the `data` object.
 
 >[!IMPORTANT]
 >
->Data within this property must have at least one of the following actions:
+>Data within this object must have at least one of the following actions:
 >
->* A service in the datastream must be configured to retrieve data from a specific property in the `data` object
->* Each property must be mapped to an XDM field
+>* A service in the datastream must be configured to retrieve data from a given property in the `data` object.
+>* The given property must be mapped to an XDM field using data prep.
 >
->If a given field is not mapped to an XDM field or used by a configured service, that data is permanently lost.
+>If a given property is not mapped to an XDM field or used by a configured service, that data is permanently lost.
 
-## Use the data property using the Web SDK tag extension
+## Use the `data` object through the Web SDK tag extension {#tag-extension}
 
 Provide a data element in the **[!UICONTROL Data]** field within the actions of a tag rule.
 
@@ -29,12 +30,16 @@ Provide a data element in the **[!UICONTROL Data]** field within the actions of 
 1. Provide the data element containing the desired object in the **[!UICONTROL Data]** field.
 1. Click **[!UICONTROL Keep Changes]**, then run your publishing workflow.
 
-## Use the data property using the Web SDK JavaScript library
+## Use the `data` object through the Web SDK JavaScript library {#library}
 
-Set the `data` property as part of the JSON object within the parameter of the `sendEvent` command. For data that you plan to map in the datastream, you can structure this property however you'd like. For data used by certain services, make sure that the object hierarchy matches what the service expects. You can include both the `data` object and the [`xdm`](xdm.md) object in the same `sendEvent` command.
+Set the `data` object as part of the JSON object within the parameter of the `sendEvent` command. For data that you plan to map in the datastream, you can structure this object however you'd like. For data used by certain services, make sure that the object hierarchy matches what the service expects. You can include both the `data` object and the [`xdm`](xdm.md) object in the same `sendEvent` command.
 
 ```javascript
 alloy("sendEvent", {
   "data": dataObject
 });
 ```
+
+## Use the `data` object with Adobe Analytics {#analytics}
+
+You can use the `data` object with Adobe Analytics to send data to a report suite without an XDM schema. Variables are configured to use the same syntax as [!DNL AppMeasurement] variables, simplifying the upgrade process to the Web SDK. See [Data object variable mapping to Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) in the Adobe Analytics implementation guide for more information.

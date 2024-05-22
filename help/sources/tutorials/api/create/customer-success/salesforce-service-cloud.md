@@ -26,12 +26,13 @@ The following sections provide additional information that you will need to know
 In order for [!DNL Flow Service] to connect with [!DNL Salesforce Service Cloud], you must provide values for the following connection properties:
 
 | Credential | Description |
-| ---------- | ----------- |
+| --- | ---|
+| `environmentUrl` | The URL of the [!DNL Salesforce] source instance. |
 | `username` | The username for your [!DNL Salesforce Service Cloud] user account. |
 | `password` | The password for your [!DNL Salesforce Service Cloud] account. |
 | `securityToken` | The security token for your [!DNL Salesforce Service Cloud] account. |
 | `apiVersion` | (Optional) The REST API version of the [!DNL Salesforce Service Cloud] instance that you are using. If this field is left blank, then Experience Platform will automatically use the latest available version. |
-| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce Service Cloud] is: `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
+| `connectionSpec.id` | The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce Service Cloud] is: `cb66ab34-8619-49cb-96d1-39b37ede86ea`. |
 
 For more information about getting started refer to [this Salesforce Service Cloud document](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
 
@@ -69,24 +70,26 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "username": "{USERNAME}",
+              "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+              "username": "acme-salesforce-service-cloud",
               "password": "{PASSWORD}",
               "securityToken": "{SECURITY_TOKEN}"
           }
       },
       "connectionSpec": {
-          "id": "b66ab34-8619-49cb-96d1-39b37ede86ea",
+          "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
           "version": "1.0"
       }
   }'
 ```
 
 | Parameter | Description |
-| --------- | ----------- |
+| ---| --- |
+| `auth.params.environmentUrl` | The URL of your [!DNL Salesforce Service Cloud] instance. |
 | `auth.params.username` | The username associated with your [!DNL Salesforce Service Cloud] account. |
 | `auth.params.password` | The password associated with your [!DNL Salesforce Service Cloud] account. |
 | `auth.params.securityToken` | The security token associated with your [!DNL Salesforce Service Cloud] account. |
-| `connectionSpec.id` | The [!DNL Salesforce Service Cloud] connection specification ID: `b66ab34-8619-49cb-96d1-39b37ede86ea` |
+| `connectionSpec.id` | The [!DNL Salesforce Service Cloud] connection specification ID: `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
 
 **Response**
 
