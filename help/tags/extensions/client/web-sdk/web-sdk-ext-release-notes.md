@@ -8,6 +8,22 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](/help/web-sdk/release-notes.md).
 
+## Version 2.23.0 - May 22, 2024
+
+**New features**
+* Added `Streaming Media` section in extension configuration.
+* Added `Send Media Event` action to support Streaming Media.
+* Added `Media: Quality of Experience` data element to support Streaming Media.
+
+Contains version 2.20.2 of the Adobe Experience Platform Web SDK.
+
+**Fixes and improvements**
+
+* Fixed an error that occurred when searching for data elements in the update variable action.
+* Extracted Media event types from the event types suggested to be used in sendEvent action.
+* Fixed typo in audienceManager: Change `M` to `m`.
+* Use spectrum css typography and tokens.
+
 ## Version 2.22.0 - May 3, 2024
 
 **New features**
