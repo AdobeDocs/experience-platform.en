@@ -20,11 +20,11 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-* Added support for Streaming Media Collection.
+* Added support for [Streaming Media Collection](../web-sdk/commands/configure/streamingmedia.md).
 
 **Fixes and improvements**
 
-* Show personalization containers when consent is out.
+* Fixed a bug causing the default content to be hidden by the prehiding snippet when consent was opted out.
 
 ## Version 2.19.2 - January 10, 2024
 

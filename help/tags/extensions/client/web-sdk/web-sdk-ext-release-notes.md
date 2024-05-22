@@ -11,18 +11,17 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 ## Version 2.23.0 - May 22, 2024
 
 **New features**
-* Added `Streaming Media` section in extension configuration.
-* Added `Send Media Event` action to support Streaming Media.
-* Added `Media: Quality of Experience` data element to support Streaming Media.
+
+* Added support for the [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) component in the extension configuration.
+* Added the [`Send Media Event`](action-types.md#send-media-event) action for the [!DNL Streaming Media Collection] functionality.
+* Added the [`Media: Quality of Experience`](data-element-types.md#quality-experience) data element for the [!DNL Streaming Media Collection ]functionality.
 
 Contains version 2.20.2 of the Adobe Experience Platform Web SDK.
 
 **Fixes and improvements**
 
-* Fixed an error that occurred when searching for data elements in the update variable action.
-* Extracted Media event types from the event types suggested to be used in sendEvent action.
-* Fixed typo in audienceManager: Change `M` to `m`.
-* Use spectrum css typography and tokens.
+* Fixed an error that occurred when searching for data elements in the [Update variable](action-types.md#update-variable) action.
+* Removed [!UICONTROL Media] event types from the event types suggested to be used in the `sendEvent` action.
 
 ## Version 2.22.0 - May 3, 2024
 
