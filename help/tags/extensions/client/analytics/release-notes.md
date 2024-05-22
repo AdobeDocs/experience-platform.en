@@ -11,6 +11,14 @@ The following is a list of release notes for the Adobe Analytics tag extension.
 >
 >The Analytics tag extension if often updated in response to updates to the [AppMeasurement JavaScript library](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html). Refer to the [AppMeasurement release notes](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) for details on the specific versions mentioned below.
 
+## March 4, 2024
+
+**Adobe Analytics Extension 1.9.4**
+
+**Features**:
+
+* Upgraded to [AppMeasurement to v2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
+
 ## September 15, 2023
 
 **Adobe Analytics Extension 1.9.3**
@@ -30,6 +38,7 @@ The following is a list of release notes for the Adobe Analytics tag extension.
 * Added an optional configuration (`decodeLinkParameters` default `false`) that decodes link URL's that includes double byte encoded characters.
 
 **Bug fixes**:
+
 * Added additional error handling for browsers with faulty high-entropy [User-Agent client hints](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API's.
 * Changed [POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) Content-Type header to use `x-www-form-urlencoded` by default.
 
