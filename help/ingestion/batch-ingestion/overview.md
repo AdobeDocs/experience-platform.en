@@ -50,7 +50,7 @@ When ingesting data, it is important to understand how [!DNL Experience Data Mod
 
 There is some flexibility when ingesting data - if a type does not match what is in the target schema, the data will be converted to the expressed target type. If it cannot, it will fail the batch with a `TypeCompatibilityException`. 
 
-For example, neither JSON nor CSV has a `date` or `date-time` type. As a result, these values are expressed using [ISO 8061 formatted strings](https://www.iso.org/iso-8601-date-and-time-format.html) ("2018-07-10T15:05:59.000-08:00") or Unix Time formatted in milliseconds (1531263959000) and are converted at ingestion time to the target XDM type.
+For example, neither JSON nor CSV has a `date` or `date-time` type. As a result, these values are expressed using [ISO 8601 formatted strings](https://www.iso.org/iso-8601-date-and-time-format.html) ("2018-07-10T15:05:59.000-08:00") or Unix Time formatted in milliseconds (1531263959000) and are converted at ingestion time to the target XDM type.
 
 The table below shows the conversions supported when ingesting data.
 
