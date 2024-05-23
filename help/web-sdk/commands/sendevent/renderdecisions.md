@@ -24,6 +24,10 @@ Select the **[!UICONTROL Render visual personalization decisions]** checkbox wit
 
 Set the `renderDecisions` boolean when running the `sendEvent` command. If omitted, this property defaults to `false`. Set this property to `true` if you want to automatically render personalized content.
 
+>[!IMPORTANT]
+>
+>The `renderDecisions` property is incompatible with the [`documentUnloading`](documentunloading.md) property. You cannot set both properties to `true` simultaneously.
+
 ```js
 alloy("sendEvent", {
   "xdm": adobeDataLayer.getState(reference),

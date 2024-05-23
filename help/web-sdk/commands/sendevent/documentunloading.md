@@ -26,6 +26,10 @@ Enable the **[!UICONTROL Document will unload]** checkbox within the actions of 
 
 Set the `documentUnloading` boolean when running the `sendEvent` command. Its default value is `false`. Set this property to `true` if you want to use the `sendBeacon` method to send data to Adobe.
 
+>[!IMPORTANT]
+>
+>The `documentUnloading` property is incompatible with the [`renderDecisions`](renderdecisions.md) property. You cannot set both properties to `true` simultaneously.
+
 ```js
 alloy("sendEvent", {
   "xdm": adobeDataLayer.getState(reference),
