@@ -15,6 +15,7 @@ role: User
 * [Edge profiles](edge-profiles.md)
 * [Experience Event expirations](event-expirations.md)
 * [Pseudonymous Profile expirations](pseudonymous-profiles.md)
+* [Customer timestamp ordering](customer-timestamp-ordering.md)
 * [!DNL Profile] API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)

@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
-title: Destinations Dashboard Guide
+title: Destinations Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's active destinations.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
