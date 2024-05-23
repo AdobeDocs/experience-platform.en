@@ -22,13 +22,13 @@ Built on RESTful APIs, [!DNL Experience Platform] exposes the full functionality
 
 ## [!DNL Experience Platform] documentation
 
-[!DNL Experience Platform] documentation is provided in multiple formats for a variety of features and services. To learn more about the types of documentation that are available, please visit the [Platform documentation overview](documentation/overview.md). 
+[!DNL Experience Platform] documentation is provided in multiple formats for a variety of features and applications. To learn more about the types of documentation that are available, please visit the [Platform documentation overview](documentation/overview.md). 
 
 To begin learning more about a specific [!DNL Platform] service, return to the [documentation landing page](https://experienceleague.adobe.com/docs/experience-platform.html) and select the appropriate guide.
 
-### Documentation for application services built on [!DNL Experience Platform]
+### Documentation for applications built on [!DNL Experience Platform]
 
-Adobe has built multiple application services on top of Experience Platform. You can find documentation for these applications in their own guides, linked below:
+Adobe has built multiple applications on top of Experience Platform. You can find documentation for these applications in their own guides, linked below:
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
@@ -37,7 +37,7 @@ Adobe has built multiple application services on top of Experience Platform. You
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
 
-The video below describes the use cases of each application service built on top of Experience Platform.
+The video below describes the use cases of each application  built on top of Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
 
