@@ -26,7 +26,7 @@ Set the `renderDecisions` boolean when running the `sendEvent` command. If omitt
 
 >[!IMPORTANT]
 >
->The `renderDecisions` property is incompatible with the [`documentUnloading`](documentunloading.md) property. You cannot set both properties to `true` simultaneously.
+>The `renderDecisions` property is incompatible with the [`documentUnloading`](documentunloading.md) property. You should not set both properties to `true` simultaneously.
 
 ```js
 alloy("sendEvent", {
