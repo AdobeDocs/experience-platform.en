@@ -37,7 +37,7 @@ Adobe has built multiple applications on top of Experience Platform. You can fin
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
 
-The video below describes the use cases of each application  built on top of Experience Platform.
+The video below describes the use cases of each application built on top of Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
 
