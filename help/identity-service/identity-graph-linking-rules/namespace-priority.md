@@ -26,9 +26,11 @@ If your organization's graph structured is layered, then namespace priority shou
 
 >[!TIP]
 >
->* What is "Graph collapse"?
+>* What is "Graph collapse"? (Graph collapse is...)
 >
->* What is a "layered" graph?
+>* What is a "layered" graph? (A layered graph refers to identity graphs that have multiple degrees of links...)
+
+![A diagram of graph layers](../images/namespace-priority/graph-layers.png)
 
 ### Semantic meaning of the namespace
 
@@ -60,7 +62,9 @@ Currently, namespace priority influences system behavior of Real-Time Customer P
 
 ### Identity Service: Identity optimization algorithm
 
-For relatively complex graph structures, namespace priority plays an important role in ensuring that the correct links are removed when graph collapse scenarios happen. For more information...
+![A diagram of namespace priority application scope](../images/namespace-priority/application-scope.png)
+
+For relatively complex graph structures, namespace priority plays an important role in ensuring that the correct links are removed when graph collapse scenarios happen. For more information read the [[!DNL Identity Optimization Algorithm] overview](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
 ### Real-Time Customer Profile: primary identity determination for experience events
 
@@ -79,7 +83,11 @@ For relatively complex graph structures, namespace priority plays an important r
 >
 >* Primary identity is the identity in which a profile fragment is stored against. A profile fragment is a record of data that stores information about a certain user: attributes (usually ingested via CRM records) or events (usually ingested from experience events or online data).
 
-### Examples
+### Example graph scenario
+
+This section provides an example of how priority configuration can affect your data.
+
+Suppose that the following configurations are established for a given sandbox:
 
 | Namespace | Real-world application of the namespace | Priority |
 | --- | --- | --- |
@@ -90,6 +98,8 @@ For relatively complex graph structures, namespace priority plays an important r
 | AAID | Web browser | 5 |
 
 {style="table-layout:auto"}
+
+Given the configurations outlined above, user actions and determination of primary identity, will be resolved as such:
 
 | User action (Experience event) | Authentication state | Data source | Identity map | Primary identity (primary key of profile fragment) |
 | --- | --- | --- | --- | --- |
@@ -102,6 +112,8 @@ For relatively complex graph structures, namespace priority plays an important r
 {style="table-layout:auto"}
 
 ### Segmentation Service: segment membership metadata storage
+
+![A diagram of segment membership storage](../images/namespace-priority/segment-membership-storage.png)
 
 For a given merged profile, segment memberships will be stored against the identity with the highest priority namespace.
 
@@ -116,24 +128,24 @@ If the segment qualification criteria were solely based on anonymous events stor
 
 ## Impact on other services
 
-**Experience Data Model (XDM) Schemas**
+### Experience Data Model (XDM) Schemas
 
 Any schema that is not an XDM Experience Event, such as XDM Individual Profiles, will continue to honor any [fields that you mark as an identity](../../xdm/ui/fields/identity.md).
 
-**Data lake**
+### Data lake
 
 Data ingestion to data lake will continue to honor the primary identity settings configured on [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) and schemas. 
 
-* Data lake will not determine primary identity based on namespace priority. For example, Adobe Customer Journey Analytics will continue to use values in the identity map even after namespace priority is enabled (such as, adding a dataset to a new connection), because Customer Journey Analytics consumes their data from data lake.
+Data lake will not determine primary identity based on namespace priority. For example, Adobe Customer Journey Analytics will continue to use values in the identity map even after namespace priority is enabled (such as, adding a dataset to a new connection), because Customer Journey Analytics consumes their data from data lake.
 
-**Advanced data lifecycle management**
+### Advanced lifecycle management
 
 Data hygiene record delete requests functions in the following manner, for a given identity:
 
 * Real-Time Customer Profile: Deletes any profile fragment with specified identity as primary identity. **The primary identity on Profile will now be determined based on namespace priority.**
 * Data lake: Deletes any record with the specified identity as primary identity.
 
-**Privacy Service**
+### Privacy Service
 
 Privacy Service deletion requests function in the following manner, for a given identity:
 
