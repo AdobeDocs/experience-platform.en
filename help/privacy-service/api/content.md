@@ -14,7 +14,7 @@ hidefromtoc: yes
 
 <!-- Q) Should this be called 'access information' or 'customer content'? -->
 
-Enjoy enhanced security when retrieving 'access information' (the information that a privacy subject can rightfully request to access). The download URL provided in the response to a `/jobs/{JOB_ID}` GET request now points to an Adobe service endpoint. Customer data is now returned in JSON format by making a GET request to `/jobs/:JOB_ID/content`. This access method implements multiple layers of authentication and access control to enhance security.
+Enjoy enhanced security when retrieving 'access information' (the information that a privacy subject can rightfully request to access). The download URL provided in the response to a `/jobs/{JOB_ID}` GET request now points to an Adobe service endpoint. You can then make a GET request to `/jobs/:JOB_ID/content` to return your customer data in JSON format. This access method implements multiple layers of authentication and access control to enhance security.
 
 Before using this guide, please refer to the [getting started guide](./getting-started.md) for information on the required authentication headers presented in the example API call below.
 
@@ -59,7 +59,7 @@ A successful response returns the details of the specified job.
     "userKey":"1234",
     "action":"access",
     "status":"complete",
-    "submittedBy":"tboyer@adobe.com",
+    "submittedBy":"jsnow@adobe.com",
     "createdDate":"04/12/2024 04:08 PM GMT",
     "lastModifiedDate":"04/12/2024 04:08 PM GMT",
     "userIds":[{
@@ -91,17 +91,17 @@ A successful response returns the details of the specified job.
 | `createdDate`        | The date and time when the privacy job was created.                                                           |
 | `lastModifiedDate`   | The date and time when the privacy job was last modified.                                                     |
 | `userIds`            | An array containing user identifiers and related information.                                                 |
-| `namespace`          | The namespace used for the user identifier.                                                                   |
-| `value`              | The actual value of the user identifier.                                                                      |
-| `type`               | The type of identifier (for example `standard` or `custom`).                                                              |
-| `namespaceId`        | An identifier for the namespace used to categorize and manage user identities.                                |
-| `isDeletedClientSide`| A boolean indicating whether the identifier has been deleted on the client side.                              |
-| `productResponses`   | An array containing responses from different products or services related to the privacy job.                 |
-| `product`            | The name of the product or service that was used to acquire information on the data subject.                  |
-| `retryCount`         | The number of times the request has been retried.                                                             |
-| `processedDate`      | The date and time when the product response was processed.                                                    |
-| `productStatusResponse`| An object containing the status of the product response.                                                    |
-| `status`             | The status of the product response.                                                                           |
+| `userIds.namespace`          | The namespace used for the user identifier.                                                                   |
+| `userIds.value`              | The actual value of the user identifier.                                                                      |
+| `userIds.type`               | The type of identifier (for example `standard` or `custom`).                                                              |
+| `userIds.namespaceId`        | An identifier for the namespace used to categorize and manage user identities.                                |
+| `userIds.isDeletedClientSide`| A boolean indicating whether the identifier has been deleted on the client side.                              |
+| `productResponses`           | An array containing responses from different products or services related to the privacy job.                 |
+| `productResponses.product`            | The name of the product or service that was used to acquire information on the data subject.                  |
+| `productResponses.retryCount`         | The number of times the request has been retried.                                                             |
+| `productResponses.processedDate`      | The date and time when the product response was processed.                                                    |
+| `productResponses.productStatusResponse`| An object containing the status of the product response.                                                    |
+| `productResponses.productStatusResponse.status`             | The status of the product response.                                                                           |
 | `downloadURL`        | This attribute provides an endpoint which is available to call for 60 days after the job completes. The status of the job must be `complete`. |
 | `regulation`         | The regulatory framework under which the privacy request is being processed, such as GDPR, CCPA, and so on.         |
 
