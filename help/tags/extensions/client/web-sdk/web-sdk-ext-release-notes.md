@@ -16,7 +16,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 * Added the [`Send Media Event`](action-types.md#send-media-event) action for the [!DNL Streaming Media Collection] functionality.
 * Added the [`Media: Quality of Experience`](data-element-types.md#quality-experience) data element for the [!DNL Streaming Media Collection ]functionality.
 
-Contains version 2.20.2 of the Adobe Experience Platform Web SDK.
+Contains version 2.20.0 of the Adobe Experience Platform Web SDK.
 
 **Fixes and improvements**
 
