@@ -19,6 +19,7 @@ During this private beta, the following constraints apply when using customer ti
 - You can only use customer timestamp ordering with **profile attributes** ingested with **streaming ingestion**.
 - You can only use customer timestamp ordering on **non-production** sandboxes.
 - You can only apply customer timestamp ordering to **5** datasets per sandbox.
+- You **cannot** use streaming upserts to send partial row updates in coordination with customer timestamp ordering.
 - The `lastUpdatedDate` field must be in the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format.
 - All rows of data ingested **must** contain the `lastUpdatedDate` field. If this field is missing or is in an incorrect format, the ingestion will fail.
 - Any dataset enabled for customer timestamp ordering **must** be a new dataset without any previously ingested data.
