@@ -56,7 +56,7 @@ This section describes which types of audiences you can export to this destinati
 
 >[!IMPORTANT]
 >
->Audiences that you activate to this destination must use the [Active-on-Edge Merge Policy](../../../segmentation/ui/segment-builder.md#merge-policies). The [!DNL Active-On-Edge] merge policy ensures that audiences are constantly evaluated [on the edge](../../segmentation/ui/edge-segmentation.md) and are available for real-time and next-page personalization use case.
+>Audiences that you activate to this destination must use the [Active-on-Edge Merge Policy](../../../segmentation/ui/segment-builder.md#merge-policies). The [!DNL Active-On-Edge] merge policy ensures that audiences are constantly evaluated [on the edge](../../../segmentation/ui/edge-segmentation.md) and are available for real-time and next-page personalization use case.
 > If you map audiences which use a different merge policy to edge destinations, those audiences will not be evaluated.
 > Follow the instructions on [creating a merge policy](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy), and make sure to enable the **[!UICONTROL Active-On-Edge Merge Policy]** toggle.
 
