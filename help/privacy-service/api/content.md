@@ -84,7 +84,7 @@ A successful response returns the details of the specified job.
 |----------------------|---------------------------------------------------------------------------------------------------------------|
 | `jobId`              | A unique identifier for the privacy job.                                                                      |
 | `requestId`          | A unique identifier for the specific request made to the Privacy Service.                                     |
-| `userKey`            | `userKey` is the `key` value you provided when you submitted the privacy request. The `key` value is your opportunity to provide an identifier for the data subject that makes sense to you. It is typically a unique identifier that your system created for tracking that data subject. TIP: You can list all active privacy jobs and compare your `key` to each job.                 |
+| `userKey`            | `userKey` is the `key` value that you provided when you submitted the privacy request. The `key` value is your opportunity to provide an identifier for the data subject that makes sense to you. It is typically a unique identifier that your system created for tracking that data subject. TIP: You can list all active privacy jobs and compare your `key` to each job.                 |
 | `action`             | The type of action requested. The accepted values are `access` and `delete`.                                  |
 | `status`             | The current status of the privacy job.                                                                        |
 | `submittedBy`        | The email address of the person who submitted the privacy job.                                                |
@@ -102,14 +102,14 @@ A successful response returns the details of the specified job.
 | `productResponses.processedDate`      | The date and time when the product response was processed.                                                    |
 | `productResponses.productStatusResponse`| An object containing the status of the product response.                                                    |
 | `productResponses.productStatusResponse.status`             | The status of the product response.                                                                           |
-| `downloadURL`        | This attribute provides an endpoint which is available to call for 60 days after the job completes. The status of the job must be `complete` and the `action` must be `access`, else this field is absent. |
-| `regulation`         | The regulatory framework under which the privacy request is being processed, such as 'gdpr', 'ccpa', 'lgpd_bra', 'pdpa_tha', and so on.         |
+| `downloadURL`        | This attribute provides an endpoint, which is available to call for 60 days after the job completes. The status of the job must be `complete` and the `action` must be `access`. Otherwise, this field is absent. |
+| `regulation`         | The regulatory framework under which the privacy request is being processed, such as `gdpr`, `ccpa`, `lgpd_bra`, `pdpa_tha`, and so on.         |
 
 {style="table-layout:auto"}
 
 ## Retrieve customer access information {#retrieve-access-data}
 
-To get the 'access information' produced in response to your data subject's query, make a GET request to the `/jobs/{JOB_ID}/content` endpoint. The response is a zipfile (*.zip)that contains a folder with sub-folders for each product that holds data on teh data subject.
+To get the 'access information' produced in response to your data subject's query, make a GET request to the `/jobs/{JOB_ID}/content` endpoint. The response is a zip file (*.zip) that contains a folder with sub-folders for each product that holds data on the data subject.
 
 >[!TIP]
 >
@@ -136,5 +136,5 @@ curl -X GET \
 
 **Response**
 
-The response is a zip file (*.zip). THe information is typically returned in JSON format, although that cannot be guaranteed. Extracted data can be returned in any format.
+The response is a zip file (*.zip). The information is typically returned in JSON format, although that cannot be guaranteed. Extracted data can be returned in any format.
 
