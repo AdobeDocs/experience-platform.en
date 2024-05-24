@@ -178,6 +178,8 @@ To update components of a target connection, perform a PATCH request to the `/ta
 >The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the target connection you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
 >
 > To get the latest version of the etag value, perform a GET request to the `/targetConnections/{TARGET_CONNECTION_ID}` endpoint, where `{TARGET_CONNECTION_ID}` is the target connection ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the examples below when making PATCH requests.
 
 Below are a few examples of updating parameters in the target connection spec for different types of destinations. But the general rule to update parameters for any destination is as follows: 
 
@@ -335,6 +337,8 @@ Remember, you got your base connection ID in a [previous step](#look-up-dataflow
 >The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the base connection you want to update. The etag value updates with every successful update of a flow entity such as dataflow, base connection, and others.
 >
 > To get the latest version of the Etag value, perform a GET request to the `/connections/{BASE_CONNECTION_ID}` endpoint, where `{BASE_CONNECTION_ID}` is the base connection ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the examples below when making PATCH requests.
 
 Below are a few examples of updating parameters in the base connection spec for different types of destinations. But the general rule to update parameters for any destination is as follows: 
 

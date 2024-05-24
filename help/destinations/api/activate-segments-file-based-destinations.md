@@ -4541,6 +4541,8 @@ To add a marketing action, see the request and response examples below.
 >The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the dataflow you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
 >
 > To get the latest version of the etag value, perform a GET request to the `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` endpoint, where `{ID}` is the dataflow ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the examples below when making PATCH requests.
 
 >[!BEGINSHADEBOX]
 
@@ -4618,6 +4620,8 @@ To add a [mandatory key](/help/destinations/ui/activate-batch-profile-destinatio
 >The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the dataflow you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
 >
 > To get the latest version of the etag value, perform a GET request to the `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` endpoint, where `{ID}` is the dataflow ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the examples below when making PATCH requests.
 
 >[!BEGINSHADEBOX]
 
@@ -4695,6 +4699,8 @@ To add a [deduplication key](/help/destinations/ui/activate-batch-profile-destin
 >The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the dataflow you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
 >
 > To get the latest version of the etag value, perform a GET request to the `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` endpoint, where `{ID}` is the dataflow ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the examples below when making PATCH requests.
 
 >[!BEGINSHADEBOX]
 
