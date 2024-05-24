@@ -11,4 +11,5 @@ role: Admin,User,Developer,Leader
 
 * [AI Assistant overview](home.md)
 * [AI Assistant UI guide](ui-guide.md)
+* [Privacy, Security, and Governance](privacy.md)
 * [FAQ](faq.md)
