@@ -1,11 +1,12 @@
 ---
-title: User-defined Dashboards
+title: Custom Dashboards
 description: Learn how to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 ---
-# User-defined dashboards
+# Custom Dashboards
 
-Adobe Experience Platform Dashboards helps you to expedite insights and customize visualization through the user-defined dashboards feature. This feature enables you to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics relevant to your organization.
+Use Adobe Experience Platform Dashboards to expedite insights and customize visualization through the Dashboards feature. Use this feature to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics relevant to your organization.
+
 
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
@@ -19,15 +20,18 @@ To create a custom dashboard, first, navigate to the dashboard inventory. Select
 
 ![The dashboard inventory with Dashboards in the left navigation and "Create dashboard" highlighted.](./images/user-defined-dashboards/create-dashboard.png)
 
-Before adding a custom dashboard, the dashboards inventory is empty and displays a "No dashboards found." message. Once created, all of your user-defined dashboards are listed in the dashboard inventory. 
+Before adding a custom dashboard, the dashboards inventory is empty and displays a "No dashboards found." message. Once created, all of your dashboards are listed in the dashboard inventory. 
 
->[!NOTE]
+<!-- >[!NOTE]
 >
 >To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 The [!UICONTROL Create dashboard] dialog appears. Enter a human-friendly, descriptive name for the collection of widgets you intend to create, and select **[!UICONTROL Save]**.
 
 ![The Create dashboard dialog.](./images/user-defined-dashboards/create-dashboard-dialog.png)
+
+Users who have purchased the Data Distiller SKU have the option to use custom SQL queries to create their insights. See the [Customizable Insight creation guide](./data-distiller/customizable-insights/overview.md) for instructions on this workflow.  
 
 The newly created blank dashboard appears with your chosen name in the top left corner of the view.
 
@@ -36,13 +40,13 @@ The newly created blank dashboard appears with your chosen name in the top left 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="Maximum number of widgets"
->abstract="User-defined dashboards support up to ten widgets. After you have added ten widgets to your dashboard, the [!UICONTROL Add new widget] option is disabled and appears gray."
+>abstract="Dashboard Service supports up to ten widgets. After you have added ten widgets to your dashboard, the [!UICONTROL Add new widget] option is disabled and appears gray."
 
 From your new dashboard view, select **[!UICONTROL Add new widget]** to begin the widget creation process.
 
 >[!IMPORTANT]
 >
->User-defined dashboards support up to ten widgets. After you have added ten widgets to your dashboard, the [!UICONTROL Add new widget] option is disabled and appears gray.
+>Each dashboard supports up to ten widgets. After you have added ten widgets to your dashboard, the [!UICONTROL Add new widget] option is disabled and appears gray.
 
 ![The new empty dashboard with Add new widget highlighted.](./images/user-defined-dashboards/add-new-widget.png)
 
@@ -144,21 +148,25 @@ Widgets can be re-arranged and resized while in this workspace. Select **[!UICON
 
 To ensure that each query for an Adobe Real-Time Customer Data Platform insights dashboard has enough resources to execute efficiently, the API tracks resource usage by assigning concurrency slots to each query. The system can process up to four concurrent queries, and therefore four concurrent query slots are available at any given time. Queries are put into a queue based on concurrency slots, then wait in the queue until enough concurrency slots are available.
 
-### Duplicate a widget
+### Edit, duplicate, or delete a widget {#duplicate}
 
-Once you have created a widget, you can duplicate the entire widget and customize its attributes to create a unique widget without having to start from scratch. To duplicate a widget, first, navigate to the dashboard inventory. Then select the dashboard name from the inventory list. Your customized dashboard appears.
+Once you have created a widget, you can edit, duplicate, or delete entire widgets from your custom dashboard.
 
-![The Platform UI with dashboards and a custom dashboard name highlighted.](./images/user-defined-dashboards/dashbaord-inventory.png)
+>[!TIP]
+>
+>To switch between any of your existing custom dashboards, select Dashboards in the left navigation bar then select the dashboard name from the inventory list.
 
 Select the pencil icon  (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png)) from the top right of your custom dashboard to enter the editing mode.
 
 ![A custom dashboard with the pencil icon highlighted.](./images/user-defined-dashboards/edit-mode.png)
 
-Next, select the ellipses in the top right of the widget that you wish to copy, followed by **[!UICONTROL Duplicate]** from the list of available options.
+Next, select the ellipses in the top right of the widget that you wish to edit, copy or delete. Select the appropriate action from the dropdown menu.
 
-![A widget in a user-defined dashboard with the ellipses and Duplicate widget highlighted.](./images/user-defined-dashboards/duplicate.png)
+![A widget in a custom dashboard with the ellipses and Duplicate widget highlighted.](./images/user-defined-dashboards/duplicate.png)
 
-A duplicate widget appears in your user-defined dashboard. Select the ellipses of your new widget, followed by **[!UICONTROL Edit]**, to customize your new widget.
+>[!NOTE]
+>
+>Duplication allows you to customize the attributes of an insight to create a unique widget without having to start from scratch. If you duplicate a widget, it appears in your custom dashboard. You can then select the ellipses of your new widget, followed by **[!UICONTROL Edit]**, to customize your insight.
 
 ## Next steps and additional resources
 
@@ -166,6 +174,6 @@ By reading this document, you have a better understanding of how to create a cus
 
 To discover the available pre-configured metrics and visualizations for the [profiles](./guides/profiles.md#standard-widgets), [segments](./guides/audiences.md#standard-widgets), and [destinations](./guides/destinations.md#standard-widgets) dashboards, see the list of standard widgets in their respective documentation.
 
-To reinforce your understanding of user-defined dashboards in Experience Platform, watch the following video:
+To reinforce your understanding of dashboards in Experience Platform, watch the following video:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

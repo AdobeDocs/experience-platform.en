@@ -30,7 +30,7 @@ Run the `applyResponse` command when calling your configured instance of the Web
 * **`personalization.sendDisplayEvent`**: A boolean that operates identically to [`personalization.sendDisplayEvent`](sendevent/personalization.md) in the `sendEvent` command.
 
 ```js
-allow("applyResponse",{
+alloy("applyResponse",{
   "renderDecisions": true,
   "responseHeaders": {},
   "responseBody": {},

@@ -10,7 +10,7 @@ exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
 
 >[!NOTE]
 >
-> AI Assistant for Adobe Experience Platform is currently in Beta. The feature and documentation are subject to change.
+>AI Assistant for Adobe Experience Platform is currently in Beta. The feature and documentation are subject to change.
 
 AI Assistant is a UI feature that you can use to navigate and understand Adobe Experience Platform and Real-Time Customer Data Platform concepts and usage information about your objects.
 
@@ -49,7 +49,7 @@ There are two classes of questions to consider before querying AI Assistant:
 
 >[!ENDSHADEBOX]
 
-## Objectives that you can accomplish with AI Assistant
+## Objectives that you can accomplish with AI Assistant {#objectives}
 
 You can use AI Assistant for objectives such as:
 
@@ -74,13 +74,7 @@ The AI Assistant interface appears, immediately providing you with information t
 * [!UICONTROL What is a schema?]
 * [!UICONTROL Tell me some common use cases for Real-Time CDP]
 
-![The "ideas to get started" section of AI Assistant.](./images/ai-assistant/ideas-to-get-started.png)
-
-To interact with AI Assistant, use the input box to type in your queries or commands. You can also use the (**`+`**) symbol to utilize the auto-complete function and the bookmark icon to access your bookmarked queries and commands.
-
-![The AI Assistant input box highlighted.](./images/ai-assistant/interact.png)
-
-## Use case example: Use AI Assistant to expedite your schema creation process
+## AI Assistant UI guide
 
 >[!NOTE]
 >
@@ -98,6 +92,11 @@ AI Assistant then queries its knowledge base and computes an answer. After a few
 
 After receiving a response from AI Assistant, you can select from a number of options to decide how you want to proceed.
 
+### AI Assistant features {#features}
+
+This section outlines the different features of AI Assistant that you can use during your workflows on Experience Platform.
+
+<!-- 
 ### Save your query {#save-your-query}
 
 +++Select to view an example of how to save a query
@@ -110,135 +109,98 @@ To access your saved queries, select the bookmark icon below the input box, then
 
 ![Screenshot of bookmark icon and a list of saved queries.](./images/ai-assistant/bookmarks.png)
 
-+++
++++ -->
 
 ### View data in your sandbox {#view-data-in-your-sandbox}
 
+Depending on your query, AI Assistant provides additional information pertaining to the data in your sandbox. To view how the response to your query applies to your particular sandbox, select **[!UICONTROL In your sandbox].** 
+
+When viewing data pertaining to your sandbox, AI Assistant may provide direct links to specific UI pages that display your queried data.
+
 +++Select to view example
 
-Depending on your query, AI Assistant provides additional information pertaining to the data in your sandbox. To view how the response to your query applies to your sandbox, select **[!UICONTROL In your sandbox].** 
+In this example, AI Assistant returns additional information regarding the existing XDM schemas in your sandbox, including their total count and the five most commonly used fields.
 
-During this step, AI Assistant may provide direct links to the UI pages of certain objects in question. In the example below, AI Assistant provides direct links to the [!UICONTROL Schemas] and [!UICONTROL Segments] UI pages.
-
-![Screenshot of "In your sandbox" option.](./images/ai-assistant/in-your-sandbox.png)
+![The "in your sandbox" dropdown window open, displaying additional information on your schemas.](./images/ai-assistant/in-your-sandbox.png)
 
 +++
 
-### Verify the response {#verify-the-response}
+### View citations {#view-citations}
+
+You can verify responses returned to you by AI Assistant by reviewing citations available with every answer.
 
 +++Select to view an example of how to display sources
 
-To view citations and validate AI Assistant's response, select **[!UICONTROL Show sources]**. AI Assistant provides links to documentation that corroborates its response. You can also use the queries that AI Assistant provides under [!UICONTROL Related suggestions] to further explore topics related to your original query.
+To view citations and validate AI Assistant's response, select **[!UICONTROL Show sources]**. 
 
-![Screenshot of "Show sources".](./images/ai-assistant/show-sources.png)
+![The AI Assistant response with "Show sources" selected.](./images/ai-assistant/show-sources.png)
+
+AI Assistant updates the interface and provides you with links to documentation that corroborate the initial response. Additionally, when citations are enabled, AI Assistant updates the response to include footnotes to indicate the specific parts of the answer that reference the provided documentation. 
+
+![A dropdown menu of the citations that AI Assistant provides for concept questions.](./images/ai-assistant/citations.png)
+
+You can also use the queries that AI Assistant provides under **[!UICONTROL Related suggestions]** to further explore topics related to your original query.
+
+![A list of queries provided by AI Assistant as related suggestions.](./images/ai-assistant/related-suggestions.png)
 
 +++
 
-### Data usage and visualization {#data-usage-and-visualization}
+### Usage data and visualization {#usage-data-and-visualization}
 
-+++Select to view an example of data usage questions and data visualization
+You must be in an active sandbox in order for AI Assistant to sufficiently respond to a question about your usage data.
 
-For AI Assistant to respond to a query about data usage within your organization, you have to be in an active sandbox.
++++Select to view an example of usage data questions and data visualization
 
-In the example below, AI Assistant is provided with the following query: **"Show me segment definitions with over 1000 profiles and include activation status."** AI Assistant then responds with a chart visualizing your segment and profile data.
+In the example below, AI Assistant is asked the following query: **"Show me dataflows that were created using the Amazon S3 source"**, AI Assistant then responds with a table listing your dataflows and their corresponding IDs. To view the whole table of data, select the expand icon on the top right.
 
-![Follow up question about data usage.](./images/ai-assistant/data-usage-question.png)
+![Follow up question about usage data.](./images/ai-assistant/usage-data-question.png)
 
-You can hover over an individual bar to view specific data. You can also select the expand icon for a larger view of the chart.
+An expanded view of the table appears, providing you with a more comprehensive list of dataflows based on the parameters of your query.
 
-![Follow up question illustrating data visualization.](./images/ai-assistant/data-visualization.png)
+![A view of the expanded table.](./images/ai-assistant/table.png)
 
-An expanded view of the visualization appears. You can use the expanded modal to further inspect your data and is especially useful when visualization returns with a large number of columns.
+When prompted with a usage data question, AI Assistant provides an explanation of how it computed the answer. In the example below, AI Assistant outlines the steps it took in order to identify the dataflows that were created using the [!DNL Amazon S3] source.
 
-![Expanded chart.](./images/ai-assistant/chart-expanded.png)
+![Follow up question about segment definitions illustrating how AI Assistant computed the answer.](./images/ai-assistant/answer-explained.png)
 
-When prompted with a data usage question, AI Assistant provides an explanation of how it computed the answer. In the example below, AI Assistant outlines the steps it took in order to display segment definitions with over 1000 profiles and their respective activation statuses.
-
-![Follow up question about segment definitions illustrating how AI Assistant computed the answer.](./images/ai-assistant/results-explained.png)
-
-You can also provide filters and modifications to your queries, and you can instruct AI Assistant to render its findings based on the filters that you include. For example, you can ask AI Assistant to show you a trend of the count segment definitions in the order of their created date, remove segment definitions with zero total profiles, and use month names instead of integers when displaying the data.
+You can also provide filters and modifications to your queries, and you can instruct AI Assistant to render its findings based on the filters that you include. For example, you can ask AI Assistant to show you a trend of the count of segment definitions in the order of their created date, remove segment definitions with zero total profiles, and use month names instead of integers when displaying the data.
 
 +++
 
 ### Use auto-complete {#use-auto-complete}
 
-+++Select to view an example of auto-complete
-
 You can use the autocomplete function to receive a list of data objects that exist in your sandbox. Autocomplete recommendations are available for the following domains: audiences, schemas, datasets, sources, and destinations.
+
++++Select to view an example of auto-complete
 
 You can use autocomplete by including the plus symbol (**`+`**) in your query. As an alternative, you can also select the plus sign (**`+`**) located at the bottom of the text input box. A window appears with a list of recommended data objects from your sandbox.
 
-![Example of auto-complete](./images/ai-assistant/auto-complete-one.png)
-
-Next, select the data object that you want to query to complete your question and then submit your question.
-
-![Example of auto-complete with question and answer](./images/ai-assistant/auto-complete-two.png)
+![Example of auto-complete](./images/ai-assistant/autocomplete.png)
 
 +++
 
 ### Use multi-turn {#use-multi-turn}
 
-+++Select to view an example of multi-turn
-
 You can use AI Assistant's multi-turn capabilities to have a more natural conversation during your experience. AI Assistant is able to answer follow-up questions, given. that context can be inferred from an earlier interaction.
 
-In the example below, AI Assistant is asked for the total number of dataflows in the current organization.
++++Select to view an example of multi-turn
 
-![Example of multi-turn](./images/ai-assistant/multi-turn-one.png)
+In the example below, AI Assistant is first asked for the total number of dataflows and then is asked to list the 10 most recent dataflows.
 
-Next, AI Assistant receives another follow-up request. This time, AI Assistant responds by listing the dataflows that currently exist in your organization.
-
-![Example of multi-turn with question and answer](./images/ai-assistant/multi-turn-two.png)
-
-+++
-
-## Documentation {#documentation}
-
-Currently, the documentation index covers Adobe Experience Platform (Real-Time CDP and Audiences). The index is updated periodically.
-
-The documentation retrieval model is trained on Experience Platform (Real-Time CDP and Audiences). Questions outside the scope of Adobe Experience Platform such as, questions about other Adobe products like Adobe Target and the Creative Cloud suite cannot be answered.
-
-## Data usage {#data-usage}
-
-You can also ask AI Assistant questions about your data usage in the following domains: 
-
-* Attributes
-* Audiences
-* Dataflows
-* Datasets
-* Destinations _(Questions regarding accounts and some questions about dataflow cannot be answered at this time.)_
-* Schemas _(Questions regarding field groups cannot be answered at this time.)_
-* Sources _(Questions regarding accounts cannot be answered at this time.)_
-
-For usage data queries, answers may not reflect the current state of the UI. The data backing these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You may need to format your questions as: "When was the audience with the title {TITLE} created?" instead of, "When was the {TITLE} audience created?"
-
-You will need to log into a sandbox to inquire about specific data related to objects like audiences, schemas, datasets, attributes, and destinations.
-
-### Example data usage questions {#example-data-usage-questions}
-
-+++Select to see a list of example data usage questions
-
-| Question type | Description | Examples |
-| --- | --- | --- | 
-| Data lineage | Track usage of one or multiple objects across other Experience Platform objects | <ul><li>Which dataset(s) use {SCHEMA_NAME} schema?</li><li>How many datasets have been ingested using the same schema?</li><li>Which datasets have been used in activated audiences?</li><li>List the schemas which have attributes used in activated audiences.</li><li>Show me the audiences which are activated to {DESTINATION_ACCOUNT_NAME} and have more than 1000 profiles.</li><li>Show me the attributes which are used in the activated audiences which have been modified after Jan 2023.</li><li>What are the datasets ingested via {SOURCE_NAME}?</li><li>Which dataflows are associated with {DATAFLOW_NAME}</li><li>List the schemas that are related to activated audiences and were created in last 1 year.</li></ul> |
-| Distribution and aggregations | Summary-based questions about Experience Platform object usage | <ul><li>What is the percentage of activated audiences?</li><li>How many fields are used in segmentation?</li><li>Which audiences are activated to the most number of destinations?</li><li>List duplicate audiences.</li><li>Show me the audiences activated to {DESTINATION_ACCOUNT_NAME} and rank them by profile size.</li><li>What is the percentage of the audiences which have not been activated but have more than 100 profiles. Show me their names.</li><li>List the 3 source connectors ingesting data into my datasets.</li><li>List me the top 5 attributes used in activated audiences based on their occurrence.</li></ul> |
-| Object lookup | Retrieve or access an Experience Platform object or it's properties. | <ul><li>Which datasets do not have any schema associated with them</li><li>List the attributes used for {AUDIENCE_NAME}?</li><li>Give me the list of schemas which are profile enabled but have not been modified since their creation.</li><li>Which audiences have been modified in the last week?</li><li>List me the audiences which have the same segment definitions along with their creation date.</li><li>Which datasets are profile enabled and also include how many audiences have been created from each dataset.</li><li>Which source accounts are associated with dataset XYZ?</li><li>Show me the segment definition and modification date of {AUDIENCE_NAME}.</li></ul>|
+![Example of multi-turn](./images/ai-assistant/multi-turn.png)
 
 +++
 
 ## Provide feedback {#feedback}
 
->[!BEGINSHADEBOX]
+You can provide feedback of your experience with AI Assistant using the options provided with answer.
 
-**Your feedback is requested**
+To provide feedback, select either thumbs up, thumbs down, or a flag after receiving a response from the AI Assistant, and then input your feedback in the provided text box. 
 
-During this Alpha stage, you are invited to provide feedback on the responses that you receive from the AI Assistant. All responses and submitted feedback are reviewed in order to continue to improve the AI Assistant experience.
+![The feedback option in AI Assistant.](./images/ai-assistant/provide-feedback.png)
 
-To provide feedback, select either thumbs up or thumbs down after receiving a response from the AI Assistant, and then input your feedback in the provided text box. Next, select **[!UICONTROL Submit feedback]** to submit.
 
->[!ENDSHADEBOX]
-
-+++Provide feedback
++++Select to view more examples
 
 >[!BEGINTABS]
 
@@ -264,6 +226,69 @@ Select the flag icon to provide further reports on your experience using the AI 
 
 +++
 
+## Documentation {#documentation}
+
+Currently, the documentation index covers Adobe Experience Platform (Real-Time CDP and Audiences). The index is updated periodically.
+
+The documentation retrieval model is trained on Experience Platform (Real-Time CDP and Audiences). Questions outside the scope of Adobe Experience Platform such as, questions about other Adobe products like Adobe Target and the Creative Cloud suite cannot be answered.
+
+## Usage data {#usage-date}
+
+You can also ask AI Assistant questions about your usage data in the following domains: 
+
+* Attributes
+* Audiences
+* Dataflows
+* Datasets
+* Destinations _(Questions regarding accounts and some questions about dataflow cannot be answered at this time.)_
+* Schemas _(Questions regarding field groups cannot be answered at this time.)_
+* Sources _(Questions regarding accounts cannot be answered at this time.)_
+
+For usage data queries, answers may not reflect the current state of the UI. The data backing these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. Additionally, you will need to log into a sandbox to inquire about specific data related to objects like audiences, schemas, datasets, attributes, and destinations.
+
+### Example usage data questions {#example-usage-data-questions}
+
++++Select to see a list of example usage data questions
+
+Read the table below for examples of usage data questions and their respective use cases:
+
+| Question type | Use case| Examples |
+| --- | --- | --- | 
+| Data lineage | Track usage of one or multiple objects across other Experience Platform objects | <ul><li>Which datasets use the "ACME schema" schema?</li><li>How many datasets have been ingested using the same schema?</li><li>Which datasets have been used in activated audiences?</li><li>List the schemas which have attributes used in activated audiences.</li><li>Show me the audiences that are activated to "ACME Destinations" and have more than 1000 profiles.</li><li>Show me the attributes which are used in the activated audiences which have been modified after Jan 2023.</li><li>What are the datasets ingested via "ACME Amazon S3" source?</li><li>Which dataflows are associated with "ACME Loyalty Dataflow"?</li><li>List the schemas that are related to activated audiences and were created in last 1 year.</li></ul> |
+| Distribution and aggregations | Summary-based questions about Experience Platform object usage | <ul><li>What is the percentage of activated audiences?</li><li>How many fields are used in segmentation?</li><li>Which audiences are activated to the most number of destinations?</li><li>List duplicate audiences.</li><li>Show me the audiences activated to "ACME Destinations" and rank them by profile size.</li><li>What is the percentage of the audiences which have not been activated but have more than 100 profiles. Show me their names.</li><li>List the 3 source connectors ingesting data into my datasets.</li><li>List me the top 5 attributes used in activated audiences based on their occurrence.</li></ul> |
+| Object lookup | Retrieve or access an Experience Platform object or it's properties. | <ul><li>Which datasets do not have any schema associated with them</li><li>List the attributes used for "ACME Audience"?</li><li>Give me the list of schemas which are profile enabled but have not been modified since their creation.</li><li>Which audiences have been modified in the last week?</li><li>List me the audiences which have the same segment definitions along with their creation date.</li><li>Which datasets are profile enabled and also include how many audiences have been created from each dataset.</li><li>Which source accounts are associated with dataset XYZ?</li><li>Show me the segment definition and modification date of "ACME Audience".</li></ul>|
+| Object comparison | Identify duplicate audiences. | <ul><li>Based on their segment definition, list the audiences that are duplicates.</li><li>Which duplicate audiences are activated to "ACME Destinations".</li></ul> |
+
++++
+
+## Phrasing your questions {#phrasing-your-questions}
+
+You must phrase your questions to AI Assistant with clarity and context in order to get as accurate a response as a possible. Refer to the following list of tips for guidance on how to ask a clear question with context:
+
+* State your task and/or question in a concise manner.
+* Avoid ambiguous language or overly complex syntax to facilitate comprehension.
+* Provide relevant context regarding your task and/or question as context can help AI Assistant generate more relevant responses.
+
+Read the table below for further guidance on best practices to follow when asking questions to AI Assistant:
+
+| Do | Example |
+| --- | --- |
+| <ul><li>Be specific about the object or information that you want to retrieve or analyze.</li><li>Try placing your data object names in quotes. If you only know a part of the object name, you may also specify that in the question.</li><li>Use [object auto-complete](./ui-guide.md#use-auto-complete) to help AI Assistant better understand the context of your query.</li></ul> | <ul><li>Which datasets use the "Luma - Loyalty" schema?</li><li>Show me the activated segments which have "Luma" in their names. Rank them by profile count.</li></ul> |
+| <ul><li>Avoid ambiguity and use clear language</li><li>Use precise terminology to ensure better clarity in your query.</li><li>When asking questions regarding Adobe Experience Platform, try to use terminology specific to Experience Platform to improve relevance of responses.</li></ul> | <ul><li>How many profiles do I have in "ACME Audience".</li><li>Show me the top 5 XDM attributes used in activated audiences.</li></ul> |
+| <ul><li>Provide context or specify a criteria to filter your results.</li><li>Use a filter criteria in the questions to limit the volume of data in the response.</li></ul> | <ul><li>Show me audiences that have not been activated and were created more than 6 months ago and have never been modified.</li><li>Show me audiences activated to "ACME Destination" and have more than 10000 profiles.</li></ul> |
+
+{style="table-layout:auto"}
+
+| Don't | Example |
+| --- | --- |
+| Use vague or ambiguous language. | <ul><li>Give me information about datasets.</li><li>How many users do I have in "ACME Audience"?</li><li>Show segments.</li><li>List attributes.</li></ul>|
+| Make incomplete requests. | "Luma - Loyalty Dataset" |
+| Assume knowledge without context. | <ul><li>Audiences in the last 6 months.</li><li>Build a query for me.</li></ul>|
+| Formulate overly complex queries. | Provide a comprehensive analysis of data lineage across all objects and their dependencies. |
+| Omit criteria or parameters. | Show me datasets. |
+
+{style="table-layout:auto"}
+
 ## Additional information {#additional-information}
 
 Refer to this section for additional information on the AI Assistant for Experience Platform.
@@ -286,21 +311,26 @@ The AI Assistant may give an inaccurate impression of what it can do. It may ans
 | "Do you know **x** language?" | The AI Assistant currently only supports English, but may answer "yes" due to the underlying model being able to support it. |
 | "Can you do...?" | The AI Assistant may answer yes, even though it cannot. |
 
-### Tips {#tips}
+## FAQ {#faq}
 
-The following section outlines some tips and workarounds to consider when using AI Assistant.
+The following is a list of answers to frequently asked questions about AI Assistant.
 
-#### Questions may be answered with the wrong information source
+### Is AI Assistant's information provided in real-time?
 
-There are instances when your question about your usage data can result in an answer based on the documentation. This is because the AI Assistant can incorrectly route your question to the wrong information source. You can prevent this by:
+The data presented in AI Assistant responses is updated daily. This means that data in responses can be up to 24 hours older than the data that you may see on the Experience Platform user interface, at the time of the response.
 
-* Rephrasing your question to use more SQL-like language
-* Explicitly calling out the information source to use.
+### Which Adobe applications does AI Assistant support?
 
-Read the table below for examples:
+AI Assistant supports Adobe Experience Platform, Real-Time Customer Data Platform and Adobe Journey Optimizer concept questions. For data usage questions, AI Assistant currently only supports Real-Time CDP data objects.
 
-| Bad question | Good question | Notes |
-| --- | --- | --- |
-| What is my biggest audience? | What is my biggest audience? Using data. | Explicitly tell the AI Assistant that you want the answer to be based on data. |
-| What is my biggest audience? | List my biggest audience. | There are instances where a "what..." question can be mistaken for a documentation-based question. Using a command like "list" is a stronger indicator that you are asking a question with data in context. |
-| How many datasets do I have? | Count my datasets. | The original question works for audiences, but it may not work with datasets. |
+### What are the capabilities of AI Assistant?
+
+AI Assistant can address Adobe concept queries and can answer questions related to the usage of Experience Platform objects. (For example, "How many audiences are activated?").
+
+### Can AI Assistant provide information about profile data?
+
+No. AI Assistant does not have access to profile-level data.
+
+### Will my personal information be utilized in AI Assistant's training data?
+
+AI Assistant does not use personal information for training purposes. Do not provide any personal information about yourself (including your name or contact information) or any other parties to AI Assistant.

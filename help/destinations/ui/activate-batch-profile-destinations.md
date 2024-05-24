@@ -250,7 +250,7 @@ In this step, you must select the profile attributes that you want to add to the
 
     ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
 
-1. [!BADGE Beta]{type=Informative} (Optional) The order of the mapped fields in the UI reflects in the order of the columns in the exported CSV file, from top to bottom, with the top row being the leftmost column in the CSV file. You can reorder the mapped fields in any way you want, by dragging and dropping the mapping rows, as shown below. 
+1. (Optional) The order of the mapped fields in the UI reflects in the order of the columns in the exported CSV file, from top to bottom, with the top row being the leftmost column in the CSV file. You can reorder the mapped fields in any way you want, by dragging and dropping the mapping rows, as shown below. 
 
     >[!NOTE]
     >
