@@ -38,7 +38,7 @@ The following request retrieves the details of the job whose `jobId` is provided
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/privacy/jobs/32d429b1-f7f4-11ee-a365-574bcf5a525d \
+  https://platform.adobe.io/data/core/privacy/jobs/dbe3a6a6-f8e6-11ee-a365-8d1d6df81cc5 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}'
@@ -84,8 +84,8 @@ A successful response returns the details of the specified job.
 |----------------------|---------------------------------------------------------------------------------------------------------------|
 | `jobId`              | A unique identifier for the privacy job.                                                                      |
 | `requestId`          | A unique identifier for the specific request made to the Privacy Service.                                     |
-| `userKey`            | An identifier for the user related to the privacy job. This property is an internal system reference.               |
-| `action`             | The type of action requested, such as access, deletion, or rectification.                                     |
+| `userKey`            | `userKey` is the `key` value you provided when you submitted the privacy request. The `key` value is your opportunity to provide an identifier for the data subject that makes sense to you. It is typically a unique identifier that your system created for tracking that data subject. TIP: You can list all active privacy jobs and compare your `key` to each job.                 |
+| `action`             | The type of action requested. The accepted values are `access` and `delete`.                                  |
 | `status`             | The current status of the privacy job.                                                                        |
 | `submittedBy`        | The email address of the person who submitted the privacy job.                                                |
 | `createdDate`        | The date and time when the privacy job was created.                                                           |
@@ -102,14 +102,14 @@ A successful response returns the details of the specified job.
 | `productResponses.processedDate`      | The date and time when the product response was processed.                                                    |
 | `productResponses.productStatusResponse`| An object containing the status of the product response.                                                    |
 | `productResponses.productStatusResponse.status`             | The status of the product response.                                                                           |
-| `downloadURL`        | This attribute provides an endpoint which is available to call for 60 days after the job completes. The status of the job must be `complete`. |
-| `regulation`         | The regulatory framework under which the privacy request is being processed, such as GDPR, CCPA, and so on.         |
+| `downloadURL`        | This attribute provides an endpoint which is available to call for 60 days after the job completes. The status of the job must be `complete` and the `action` must be `access`, else this field is absent. |
+| `regulation`         | The regulatory framework under which the privacy request is being processed, such as 'gdpr', 'ccpa', 'lgpd_bra', 'pdpa_tha', and so on.         |
 
 {style="table-layout:auto"}
 
 ## Retrieve customer access information {#retrieve-access-data}
 
-To process a requests for your customer's 'access information', make a GET request to the `/jobs/{JOB_ID}/consent` endpoint. Customer data is returned in JSON format.
+To get the 'access information' produced in response to your data subject's query, make a GET request to the `/jobs/{JOB_ID}/content` endpoint. The response is a zipfile (*.zip)that contains a folder with sub-folders for each product that holds data on teh data subject.
 
 >[!TIP]
 >
@@ -134,4 +134,7 @@ curl -X GET \
   -H 'Accept: application/json`
 ```
 
+**Response**
+
+The response is a zip file (*.zip). THe information is typically returned in JSON format, although that cannot be guaranteed. Extracted data can be returned in any format.
 
