@@ -26,7 +26,7 @@ Run the `sendEvent` command when calling your configured instance of the Web SDK
 ```js
 alloy("sendEvent", {
   "data": dataObject,
-  "documentUnloading": true,
+  "documentUnloading": false,
   "edgeConfigOverrides": { "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287" },
   "renderDecisions": true,
   "type": "commerce.purchases",
