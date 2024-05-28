@@ -46,6 +46,14 @@ There are two classes of questions to consider before querying AI Assistant:
 
 >[!ENDSHADEBOX]
 
+## Feature access {#feature-access}
+
+Access to AI Assistant is governed by the following parameters:
+
+* **Access the application:** You can access AI Assistant in Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer, and [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
+* **Contractual access:** Your company must agree to certain [!DNL GenAI]-related legal terms before your organization can use AI Assistant. Contact your organization's administrator or your Adobe Account Team if you are not able to access AI Assistant. 
+* **Permissions:** Use the [Permissions UI](../access-control/abac/ui/permissions.md) to grant or revoke access to AI Assistant in your organization. In order to use AI Assistant, a given user must belong to a role that is provisioned with AI Assistant permissions.
+
 ## Objectives that you can accomplish with AI Assistant {#objectives}
 
 You can use AI Assistant for objectives such as:
@@ -61,9 +69,13 @@ You can use AI Assistant for objectives such as:
 
 {style="table-layout:auto"}
 
-## Data usage {#data-usage}
+## [!BADGE Beta]{type=Informative} Operational insights {#operational-insights}
 
-You can ask AI Assistant questions about your data usage in the following domains: 
+>[!IMPORTANT]
+>
+>Operational insights answers are in beta. Anyone that has access to the **view operational insights** permission will have access to operational insights answers.
+
+You can ask AI Assistant questions about your operational insights in the following domains: 
 
 * Attributes
 * Audiences
@@ -78,9 +90,9 @@ For usage data queries, answers may not reflect the current state of the UI. The
 
 You will need to log into a sandbox to inquire about specific data related to objects like audiences, schemas, datasets, attributes, and destinations.
 
-### Example data usage questions {#example-data-usage-questions}
+### Example questions {#example-questions}
 
-Read the table below for examples of data usage questions and their respective use cases:
+Read the table below for examples of operational insight questions and their respective use cases:
 
 | Question type | Use case| Examples |
 | --- | --- | --- | 
@@ -123,6 +135,7 @@ Read the table below for further guidance on best practices to follow when askin
 
 Now that you have a general understanding of AI Assistant, you can now proceed and use AI Assistant during your workflows. For more information, read the [AI Assistant UI guide](./ui-guide.md).
 
+<!-- 
 ## Additional information {#additional-information}
 
 Refer to this section for additional information on the AI Assistant for Experience Platform.
@@ -162,4 +175,4 @@ Read the table below for examples:
 | --- | --- | --- |
 | What is my biggest audience? | What is my biggest audience? Using data. | Explicitly tell the AI Assistant that you want the answer to be based on data. |
 | What is my biggest audience? | List my biggest audience. | There are instances where a "what..." question can be mistaken for a documentation-based question. Using a command like "list" is a stronger indicator that you are asking a question with data in context. |
-| How many datasets do I have? | Count my datasets. | The original question works for audiences, but it may not work with datasets. |
+| How many datasets do I have? | Count my datasets. | The original question works for audiences, but it may not work with datasets. | -->

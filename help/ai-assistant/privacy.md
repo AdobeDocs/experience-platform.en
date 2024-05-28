@@ -6,7 +6,9 @@ hidefromtoc: true
 ---
 # Privacy, Security, and Governance in AI Assistant
 
-AI Assistant in Adobe Experience Platform is built with privacy, security, and governance at the forefront. Read this document to learn about the customer trust-focused capabilities that you can expect from AI Assistant:
+AI Assistant in Adobe Experience Platform is built with privacy, security, and governance at the forefront.
+
+Read this document to learn about the customer trust-focused capabilities that you can expect from AI Assistant:
 
 * No personal data is being used by AI Assistant today, even for training purposes.
 * AI Assistant is unaware of consumer data.
