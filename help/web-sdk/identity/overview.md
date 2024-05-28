@@ -52,6 +52,11 @@ To account for the effects of cookie lifespans as outlined above, you can opt to
 
 ## Retrieve the ECID and region for the current user {#retrieve-ecid}
 
+Depending on your use case, there are two ways in which you can access the [!DNL ECID]:
+
+* [Retrieve the [!DNL ECID] through Data Prep for Data Collection](#retrieve-ecid-data-prep): This is the recommended method that you should use.
+* [Retrieve the [!DNL ECID] through the `getIdentity()` command](#retrieve-ecid-getidentity): Only use this metod when you require the [!DNL ECID] information on the client-side.
+
 ### Retrieve the [!DNL ECID] through Data Prep for Data Collection {#retrieve-ecid-data-prep}
 
 Use [Data Prep for Data Collection](../../datastreams/data-prep.md) to map the [!DNL ECID] to an [!DNL XDM] field. This is the recommended way to access the [!DNL ECID].
