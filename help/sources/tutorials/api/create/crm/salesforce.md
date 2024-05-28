@@ -157,7 +157,7 @@ curl -X POST \
 
 **Response**
 
-A successful request returns your newly created base connection along with its unique ID.
+A successful response returns your newly created base connection along with its unique ID.
 
 ```json
 {
