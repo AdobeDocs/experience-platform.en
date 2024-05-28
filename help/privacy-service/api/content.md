@@ -138,3 +138,10 @@ curl -X GET \
 
 The response is a zip file (*.zip). The information is typically returned in JSON format, although that cannot be guaranteed. Extracted data can be returned in any format.
 
+## Constraints {#constraints}
+
+During this private beta, the following constraints apply when using the `/content` endpoint:
+
+- The new `/content` download URL is only available in STAGE environments. It is not yet available in PROD environments
+- The `downloadUrl` should not be present in the JSON response unless the job has a `complete` status. Within the beta, the `downloadUrl` appears before a privacy job is complete.
+- The `downloadUrl` is also currently provided for `delete` jobs (which should never have a download URL).
