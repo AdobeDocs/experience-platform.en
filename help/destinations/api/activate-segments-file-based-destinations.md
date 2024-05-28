@@ -4548,6 +4548,10 @@ To add a [marketing action](/help/data-governance/api/marketing-actions.md), see
 
 **Request** 
 
+>[!TIP]
+>
+>Before adding a marketing action to a dataflow, you can look up your existing core and custom marketing actions. View [how to retrieve a list of existing marketing actions](/help/data-governance/api/marketing-actions.md#list).  
+
 +++Add a marketing action to a destination dataflow - Request
 
 ```shell
