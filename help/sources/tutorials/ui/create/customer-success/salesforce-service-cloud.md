@@ -34,7 +34,7 @@ You must provide values for the following credentials to connect your [!DNL Sale
 | Username | The username for the [!DNL Salesforce Service Cloud] user account. |
 | Password | The password for the [!DNL Salesforce Service Cloud] user account. |
 | Security Token | The security token for the [!DNL Salesforce Service Cloud] user account. |
-| API version | (Optional) The REST API version of the [!DNL Salesforce Service Cloud] instance that you are using. The value for the API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0`. If this field is left blank, then Experience Platform will automatically use the latest available version. |
+| API version | (Optional) The REST API version of the [!DNL Salesforce Service Cloud] instance that you are using. The value for the API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0`. If this field is left blank, Experience Platform will automatically use the latest available version. |
 
 For more information on authentication, refer to [this [!DNL Salesforce Service Cloud] authentication guide](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 
@@ -47,7 +47,7 @@ You must provide values for the following credentials to connect your [!DNL Sale
 | Environment URL |  The URL of the [!DNL Salesforce Service Cloud] source instance. |
 | Client ID | The client ID is used in tandem with the client secret as part of OAuth2 authentication. Together, the client ID and client secret enable your application to operate on behalf of your account by identifying your application to [!DNL Salesforce Service Cloud]. |
 | Client secret | The client secret is used in tandem with the client ID as part of OAuth2 authentication. Together, the client ID and client secret enable your application to operate on behalf of your account by identifying your application to [!DNL Salesforce Service Cloud]. |
-| API version | The REST API version of the [!DNL Salesforce Service Cloud] instance that you are using. The value for the API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0`. If this field is left blank, then Experience Platform will automatically use the latest available version. |
+| API version | The REST API version of the [!DNL Salesforce Service Cloud] instance that you are using. The value for the API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0`. If this field is left blank, Experience Platform will automatically use the latest available version. |
 
 For more information on using OAuth for [!DNL Salesforce Service Cloud], read the [[!DNL Salesforce Service Cloud] guide on OAuth Authorization Flows](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
@@ -59,7 +59,7 @@ Once you have gathered your required credentials, you can follow the steps below
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *Customer success* category, select **[!DNL Salesforce Service Cloud]**, and then select **[!UICONTROL Add data]**.
+Select **[!DNL Salesforce Service Cloud]** under the *[!UICONTROL Customer success]* category, and then select **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
@@ -71,7 +71,7 @@ The **[!UICONTROL Connect to Salesforce Service Cloud]** page appears. On this p
 
 ### Use an existing account
 
-To use an existing account, select **[!UICONTROL Existing account]** and then select the account that you want to use from the list that appears. When finished, select **[!UICONTROL Next]** to proceed.
+To use an existing account, select **[!UICONTROL Existing account]**, and then select the desired account from the list that appears. When finished, select **[!UICONTROL Next]** to proceed.
 
 ![A list of authenticated Salesforce Service Cloud accounts that already exist in your organization.](../../../../images/tutorials/create/salesforce-service-cloud/existing.png)
 
