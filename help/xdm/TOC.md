@@ -182,6 +182,7 @@ role: Developer
 * [!UICONTROL Schemas] UI {#ui}
   * [Overview](./ui/overview.md)
   * [Explore XDM resources](./ui/explore.md)
+  * [Field-based workflows in the Schema Editor](./ui/field-based-workflows.md)
   * Create and edit resources {#resources}
     * [Schemas](./ui/resources/schemas.md)
     * [Classes](./ui/resources/classes.md)
