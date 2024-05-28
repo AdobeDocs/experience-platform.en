@@ -52,7 +52,7 @@ The **[!UICONTROL Selected Attributes]** section on the right-hand side of the d
 
 You can select any of the available union schema fields to customize the attributes on the card that you are editing. When selecting the fields, you can choose to see either the file path name or the display name. To switch between these two displays, select the **[!UICONTROL Show display names]** toggle. 
 
-![](../images/profile-customization/show-display-names.png)
+![The [!UICONTROL Show display names] toggle is highlighted within the Profile details page.](../images/profile-customization/show-display-names.png)
 
 Selected fields are shown with a check mark next to them and are automatically added to the list of selected attributes. Once you have added all of the attributes that you would like to have displayed on the card, choose **[!UICONTROL Select]** to return to the **[!UICONTROL Edit widget]** screen.
 

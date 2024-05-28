@@ -128,7 +128,7 @@ The default fields shown can also be changed at an organizational-level to displ
 
 ![The Details tab is highlighted. The profile details are displayed.](../images/user-guide/profile-detail-row-name.png) 
 
-You can choose also toggle between viewing the attribute names as their display names and their field path names. To switch between these two displays, select the **[!UICONTROL Show display names]** toggle. 
+You can also choose to toggle between viewing the attribute names as their display names and their field path names. To switch between these two displays, select the **[!UICONTROL Show display names]** toggle. 
 
 ![The Show display names toggle is highlighted, and the display names are shown under the attributes.](../images/user-guide/profile-detail.png) 
 
