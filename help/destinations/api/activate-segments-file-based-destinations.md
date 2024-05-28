@@ -4534,7 +4534,7 @@ To make any updates to your dataflow, use the `PATCH` operation. For example, yo
 
 ### Add a marketing action {#add-marketing-action}
 
-To add a marketing action, see the request and response examples below.
+To add a [marketing action](/help/data-governance/api/marketing-actions.md), see the request and response examples below.
 
 >[!IMPORTANT]
 >
@@ -4548,57 +4548,43 @@ To add a marketing action, see the request and response examples below.
 
 **Request** 
 
-+++Add an identity as mandatory field - Request
++++Add a marketing action to a destination dataflow - Request
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
+--header 'Content-Type: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'If-Match: "{ETAG_HERE}"' \
---data-raw '
-[
-  {
-    "op": "add",
-    "path": "/transformations/0/params/mandatoryFields",
-    "value": [
-      "GAID"
-    ]
-  }
+--data-raw '[
+   {
+      "op":"add",
+      "path":"/policy",
+      "value":{
+         "enforcementRefs":[
+            
+         ]
+      }
+   },
+   {
+      "op":"add",
+      "path":"/policy/enforcementRefs/-",
+      "value":"/dulepolicy/marketingActions/custom/6b935bc8-bb9e-451b-a327-0ffddfb91e66/constraints"
+   }
 ]'
 ```
 
 +++
 
-+++Add an XDM attribute as mandatory field - Request
-
-```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
---header 'accept: application/json' \
---header 'x-api-key: {API_KEY}' \
---header 'x-gw-ims-org-id: {ORG_ID}' \
---header 'x-sandbox-name: {SANDBOX_NAME}' \
---header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'If-Match: "{ETAG_HERE}"' \
---data-raw '
-[
-  {
-    "op": "add",
-    "path": "/transformations/0/params/mandatoryFields",
-    "value": [
-      "GAID"
-    ]
-  }
-]'
-```
-
-+++
 
 **Response**
 
-+++Add a mandatory field - Response
++++Add a marketing action - Response
+
+A successful response returns response code `200` along with the ID of the updated dataflow and the updated eTag. 
 
 ```json
 {
