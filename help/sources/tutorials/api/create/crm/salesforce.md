@@ -93,11 +93,11 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params":
-              "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
-              "username": "acme-salesforce",
-              "password": "xxxx",
-              "securityToken": "xxxx"
-          }
+            "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+            "username": "acme-salesforce",
+            "password": "xxxx",
+            "securityToken": "xxxx"
+        }
       },
       "connectionSpec": {
           "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
@@ -157,7 +157,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns the newly created connection, including its unique identifier (`id`). This ID is required to explore your CRM system in the next step.
+A successful request returns your newly created base connection along with its unique ID.
 
 ```json
 {
