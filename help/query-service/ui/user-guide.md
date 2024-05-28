@@ -9,7 +9,7 @@ exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 
 >[!NOTE]
 >
->The legacy editor was deprecated on 30th May 2024. It is no longer accessible for use. You can now use the [Enhanced Query Editor](#enhanced-editor-toggle) to write, validate, and run your queries
+>The legacy editor was deprecated on 24th May 2024. It is no longer accessible for use. You can now use the [Enhanced Query Editor](#enhanced-editor-toggle) to write, validate, and run your queries
 
 Query Editor is an interactive tool provided by Adobe Experience Platform Query Service, which allows you to write, validate, and run queries for customer experience data within the [!DNL Experience Platform] user interface. Query Editor supports developing queries for analysis and data exploration, and allows you to run interactive queries for development purposes as well as non-interactive queries to populate datasets in [!DNL Experience Platform].
 
@@ -39,7 +39,7 @@ Queries executed from Query Editor run interactively which means that if you clo
 
 >[!NOTE]
 >
->The legacy editor was deprecated on 30th May 2024. It is no longer accessible for use. You can now use the Enhanced Query Editor to write, validate, and run your queries.
+>The legacy editor was deprecated on 24th May 2024. It is no longer accessible for use. You can now use the Enhanced Query Editor to write, validate, and run your queries.
 
 Using Query Editor, you can write, execute, and save queries for customer experience data. All queries executed, or saved in Query Editor are available to all users in your organization with access to Query Service.
 
