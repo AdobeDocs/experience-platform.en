@@ -46,6 +46,16 @@ Upon ingesting new identities, Identity Service checks if the new identities and
 * Ingest the most recent event, while taking namespace priority into account.
 * Remove the link that would merge two person entities from the appropriate graph layer. 
 
+## Identity optimization algorithm details
+
+When the unique namespace constraint is violated, the identity optimization algorithm will "re-play" the links and rebuild the graph from scratch.
+
+* Links are sorted by the following order:
+  * Latest event
+  * Timestamp by sum
+* The graph would re-establish based on the above order. If adding the link violates the limit constraint (e.g. the graph contains two or more identities with a unique namespace), then the links is removed.
+* The resulting graph will then be compliant with the unique namespace constraint that you configured.
+
 ## Example scenarios for identity optimization algorithm
 
 The following section outlines how the identity optimization algorithm behaves, under scenarios such as shared device or ingestion of data with the same timestamp.
