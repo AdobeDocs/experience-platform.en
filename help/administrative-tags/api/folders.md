@@ -25,7 +25,7 @@ You can retrieve a list of folders that belong to your organization by making a 
 **API format**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}
+GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 ```
 
 | Parameter | Description |
@@ -38,7 +38,7 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}
 +++A sample request to list all top-level dataset folders
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/root
+curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/root/subfolders
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -60,7 +60,6 @@ A successful response returns HTTP status 200 with a list of all top-level folde
     "name": "ParentFolder",
     "noun": "Dataset",
     "parentId": "{PARENT_ID}",
-    "tags": null,
     "imsOrg": "{ORG_ID}",
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "prod",
@@ -75,7 +74,6 @@ A successful response returns HTTP status 200 with a list of all top-level folde
             "name": "ChildFolder.1",
             "noun": "dataset",
             "parentId": "c626b4f7-223b-4486-8900-00c266e31dd1",
-            "tags": null,
             "imsOrg": "{ORG_ID}",
             "sandboxId": "{SANDBOX_ID}",
             "sandboxName": null,
@@ -91,7 +89,6 @@ A successful response returns HTTP status 200 with a list of all top-level folde
             "name": "ChildFolder.2",
             "noun": "dataset",
             "parentId": "c626b4f7-223b-4486-8900-00c266e31dd1",
-            "tags": null,
             "imsOrg": "{ORG_ID}",
             "sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
             "sandboxName": null,
@@ -135,7 +132,6 @@ curl -X POST https://experience.adobe.io/unifiedfolders/folder/dataset
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
     "name": "SampleFolder",
-    "tags": ["SampleTag1"],
     "parentId": "6a5e0927-1527-4abc-9993-376fd7067ca5"
  }'
 ```
@@ -143,7 +139,6 @@ curl -X POST https://experience.adobe.io/unifiedfolders/folder/dataset
 | Property | Description | 
 | -------- | ----------- |
 | `name` | The name of the folder you want to create. |
-| `tags` | An optional parameter that lets you add tags to the folder. |
 | `parentId` | The ID of the parent folder. |
 
 +++
@@ -160,9 +155,6 @@ A successful response returns HTTP status 200 with details of your newly created
     "name": "SampleFolder",
     "noun": "dataset",
     "parentId": "6a5e0927-1527-4abc-9993-376fd7067ca5",
-    "tags": [
-        "SampleTag1"
-    ],
     "imsOrg": "{ORG_ID}",
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "prod",
@@ -227,9 +219,6 @@ A successful response returns HTTP status 200 with details of the requested fold
     "name": "SampleFolder",
     "noun": "dataset",
     "parentId": "{PARENT_ID}",
-    "tags": [
-        "SampleTag1"
-    ],
     "imsOrg": "{ORG_ID}",
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "prod",
@@ -251,7 +240,6 @@ A successful response returns HTTP status 200 with details of the requested fold
 | `id` | The ID of the requested folder. |
 | `name` | The name of the requested folder. |
 | `parentId` | The ID of the parent folder. |
-| `tags` | An array that lists the IDs of the associated tags for the folder. |
 | `createdBy` | The ID of the user who created the folder. |
 | `createdAt` | The timestamp of when the folder was created. |
 | `modifiedBy` | The ID of the user who last updated the folder. |
@@ -301,9 +289,6 @@ A successful status returns HTTP status 200 with details of the folder you are v
     "name": "SampleFolder",
     "noun": "dataset",
     "parentId": "{PARENT_ID}",
-    "tags": [
-        "SampleTag1"
-    ],
     "imsOrg": "{ORG_ID}",
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "prod",

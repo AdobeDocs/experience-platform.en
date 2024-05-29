@@ -208,6 +208,10 @@ A successful response returns HTTP status 200 with details of the specified tag 
 
 ## Update a specific tag category {#update-tag-category}
 
+>[!IMPORTANT]
+>
+>Only the system administrator and product administrator can use this API call.
+
 You can update details of a specific tag category that belongs to your organization by making a PATCH request to the `/tagCategory` endpoint and specifying the tag category's ID.
 
 **API format**
@@ -314,7 +318,7 @@ You can retrieve a list of tags that belong to your organization by making a GET
 **API format**
 
 ```http
-GET /tags/property=id={TAG_CATEGORY_ID}
+GET /tags?property=id={TAG_CATEGORY_ID}
 ```
 
 **Request**
@@ -479,7 +483,9 @@ A successful response returns HTTP status 200 with details of the tags belonging
 
 >[!IMPORTANT]
 >
->Only the system administrator and product administrator can use this API call.
+>Only the system administrator and product administrator can use this API call to create a new tag in a specified tag category.
+>
+>If you are creating an un-categorized tag, you do **not** need administrator permissions. 
 
 You can create a new tag by making a POST request to the `/tags` endpoint.
 
