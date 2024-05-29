@@ -39,7 +39,7 @@ The image below contains the relevant data fields in each dataset.
 
 #### The profile count use case {#profile-count}
 
-The logic used for the [!UICONTROL Profile count] widget returns the total number of merged profiles within the Profile Store at the time the snapshot was taken. See the [[!UICONTROL Profile count] widget documentation](../guides/profiles.md#profile-count) for more information. 
+The logic used for the [!UICONTROL Profile count] widget returns the total number of merged profiles within the Profile store at the time the snapshot was taken. See the [[!UICONTROL Profile count] widget documentation](../guides/profiles.md#profile-count) for more information. 
 
 The SQL that generates the [!UICONTROL Profile count] widget is seen in the collapsible section below.
 
@@ -92,7 +92,7 @@ The image below contains the relevant data fields in each dataset.
 
 #### Profiles by identity use case {#profiles-by-identity}
 
-The [!UICONTROL Profiles by identity] widget displays the breakdown of identities across all of the merged profiles in your Profile Store. See the [[!UICONTROL Profiles by identity] widget documentation](../guides/profiles.md#profiles-by-identity) for more information.
+The [!UICONTROL Profiles by identity] widget displays the breakdown of identities across all of the merged profiles in your Profile store. See the [[!UICONTROL Profiles by identity] widget documentation](../guides/profiles.md#profiles-by-identity) for more information.
 
 The SQL that generates the [!UICONTROL Profiles by identity] widget is seen in the collapsible section below.
 
@@ -285,7 +285,7 @@ The image below contains the relevant data fields in each dataset.
 
 #### Profiles by identity for an audience use case {#audience-profiles-by-identity}
 
-The logic used in the [!UICONTROL Profiles by identity] widget provides a breakdown of identities across all of the merged profiles in your Profile Store for a given audience. See the [[!UICONTROL Profiles by identity] widget documentation](../guides/audiences.md#profiles-by-identity) for more information.
+The logic used in the [!UICONTROL Profiles by identity] widget provides a breakdown of identities across all of the merged profiles in your Profile store for a given audience. See the [[!UICONTROL Profiles by identity] widget documentation](../guides/audiences.md#profiles-by-identity) for more information.
 
 The SQL that generates the [!UICONTROL Profiles by identity] widget is seen in the collapsible section below.
 
@@ -321,7 +321,7 @@ The image below contains the relevant data fields in each dataset.
 
 #### Identity overlap (profiles) use case {#profiles-identity-overlap}
 
-The logic used in the [!UICONTROL Identity overlap] widget displays the overlap of profiles in your **Profile Store** that contain the two selected identities. For more information, see the [[!UICONTROL Identity overlap] widget section of the [!UICONTROL Profiles] dashboard documentation](../guides/profiles.md#identity-overlap).
+The logic used in the [!UICONTROL Identity overlap] widget displays the overlap of profiles in your **Profile store** that contain the two selected identities. For more information, see the [[!UICONTROL Identity overlap] widget section of the [!UICONTROL Profiles] dashboard documentation](../guides/profiles.md#identity-overlap).
 
 The SQL that generates the [!UICONTROL Identity overlap] widget is seen in the collapsible section below.
 

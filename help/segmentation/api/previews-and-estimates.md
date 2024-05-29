@@ -28,9 +28,9 @@ When the ingestion of records into the Profile store increases or decreases the 
 * **Batch ingestion:** For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count.
 * **Streaming ingestion:** For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the count.
 
-The sample size of the scan depends on the overall number of entities in your profile store. These sample sizes are represented in the following table:
+The sample size of the scan depends on the overall number of entities in your Profile store. These sample sizes are represented in the following table:
 
-| Entities in profile store | Sample size |
+| Entities in Profile store | Sample size |
 | ------------------------- | ----------- |
 | Less than 1 million | Full data set |
 | 1 to 20 million | 1 million |
