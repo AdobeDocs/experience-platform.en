@@ -54,8 +54,15 @@ Read more about granting permissions for [Target Premium](https://experienceleag
 
 This section describes which types of audiences you can export to this destination.
 
+>[!IMPORTANT]
+>
+>Audiences that you activate to this destination must use the [Active-on-Edge Merge Policy](../../../segmentation/ui/segment-builder.md#merge-policies). The [!DNL Active-On-Edge] merge policy ensures that audiences are constantly evaluated [on the edge](../../../segmentation/ui/edge-segmentation.md) and are available for real-time and next-page personalization use case.
+> If you map audiences which use a different merge policy to edge destinations, those audiences will not be evaluated.
+> Follow the instructions on [creating a merge policy](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy), and make sure to enable the **[!UICONTROL Active-On-Edge Merge Policy]** toggle.
+
+
 | Audience origin | Supported | Description | 
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
 | Custom uploads | X | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
 
@@ -66,7 +73,7 @@ This section describes which types of audiences you can export to this destinati
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!DNL Profile request]** | You are requesting all the audiences that are mapped in the Adobe Target destination for a single profile.|
 | Export frequency | **[!UICONTROL Streaming]** | Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).|
 

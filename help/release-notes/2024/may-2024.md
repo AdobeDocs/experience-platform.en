@@ -41,6 +41,7 @@ Catalog Service is the system of record for data location and lineage within Ado
 Adobe Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots.
 
 **New or updated features**
+
 | Feature | Description |
 | --- | --- |
 | Customizable Insights for extended app reporting  |  Seamlessly [transition the output of SQL analysis into comprehensible, business-friendly visual formats](../../dashboards/data-distiller/customizable-insights/overview.md). Use custom SQL queries for precise data manipulation and the creation of dynamic charts from diverse structured datasets. You can use query pro mode to perform complex analysis with SQL and then share this analysis with non-technical users through charts on your custom dashboard or export them in CSV files. |
@@ -67,9 +68,9 @@ Adobe Experience Platform Data Governance is a series of strategies and technolo
 
 | Functionality | Description |
 | ----------- | ----------- |
-| Reorder mapping fields for batch destinations | You can now change the order of the columns in your CSV exports by dragging and dropping the mapping fields in the [mapping step](../../destinations/ui/activate-batch-profile-destinations.md#mapping). The order of the mapped fields in the UI reflects in the order of the columns in the exported CSV file, from top to bottom, with the top row being the leftmost column in the CSV file.|
+| Reorder mapping fields for batch destinations | You can now change the order of the columns in your CSV exports by dragging and dropping the mapping fields in the [mapping step](../../destinations/ui/activate-batch-profile-destinations.md#mapping). The order of the mapped fields in the UI reflects in the order of the columns in the exported CSV file, from top to bottom, with the top row being the leftmost column in the CSV file. <br> ![View of how mappings can be reordered.](../2024/assets/may/reorder-mappings.gif "View of how mappings can be reordered."){width="100" zoomable="yes"}|
 | Preselected default export schedules for batch destinations | Experience Platform now automatically sets a default schedule for each file export. See the documentation on [scheduling audience exports](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) to learn how to modify the default schedule. |
-| Edit multiple audience activation schedules for batch destinations | You can now edit the activation schedule for multiple audiences from the [destination details page](../../destinations/ui/destination-details-page.md#bulk-edit-schedule).|
+| Edit multiple audience activation schedules for batch destinations | You can now edit the activation schedule for multiple audiences exported to batch (file-based) destination from the **[!UICONTROL Activation data]** tab of the [destination details page](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). <br> ![View of how to select multiple audiences and edit the file export schedule.](../2024/assets/may/bulk-edit-schedule.gif "View of how to select multiple audiences and edit the file export schedule."){width="100" zoomable="yes"}|
 | Export multiple audiences on-demand to batch destinations | You can now select and export multiple audiences to batch destinations, through the [export files on-demand](../../destinations/ui/export-file-now.md) functionality. |
 
 {style="table-layout:auto"}
