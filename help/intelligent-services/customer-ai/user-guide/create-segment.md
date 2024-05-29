@@ -16,7 +16,7 @@ When a prediction run completes, predicted propensity scores are automatically c
 
 In the Platform UI, click **[!UICONTROL Segments]** in the left navigation, and then click **[!UICONTROL Create segment]**. 
 
-![](../images/user-guide/segment_new_.png)
+![](../images/user-guide/segments_new_.png)
 
 The **Segment Builder** appears. From the left **[!UICONTROL Fields]** column and under the **[!UICONTROL Attributes]** tab, click the folder named **[!UICONTROL XDM Individual Profile]** and then click the folder with the namespace of your organization. The folder named **[!UICONTROL Customer AI]** contains the results of prediction runs and are named after the instance the scores belong to. Click an instance folder to access its results of the desired instance.
 
