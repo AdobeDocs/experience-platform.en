@@ -9,7 +9,7 @@ Data stored on Adobe Experience Platform is encrypted at rest using system-level
 
 >[!NOTE]
 >
->Data in Adobe Experience Platform data lake and Profile Store are encrypted using CMK. These are regarded as your primary data stores.
+>Data in Adobe Experience Platform data lake and Profile store are encrypted using CMK. These are regarded as your primary data stores.
 
 This document provides a high level overview of the process for enabling the customer-managed keys (CMK) feature in Platform, and the prerequisite information required to complete these steps.
 

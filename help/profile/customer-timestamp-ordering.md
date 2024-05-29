@@ -8,15 +8,15 @@ hidefromtoc: true
 
 # Customer timestamp ordering
 
-In Adobe Experience Platform, data order is not automatically guaranteed when ingesting data through streaming ingestion to the profile store. With customer timestamp ordering, you can guarantee that the latest message, as per the provided customer timestamp, will be retained on the profile store. All stale messages will then be dropped, and will **not** be available for use in downstream services that use profile data like segmentation and destinations. As a result, this lets your profile data be consistent, and lets your profile data remain in sync with your source systems.
+In Adobe Experience Platform, data order is not automatically guaranteed when ingesting data through streaming ingestion to the Profile store. With customer timestamp ordering, you can guarantee that the latest message, as per the provided customer timestamp, will be retained on the Profile store. All stale messages will then be dropped, and will **not** be available for use in downstream services that use profile data like segmentation and destinations. As a result, this lets your profile data be consistent, and lets your profile data remain in sync with your source systems.
 
-In order to enable customer timestamp ordering, you'll need to use the `extSourceSystemAudit.lastUpdatedDate` field within the [External Source System Audit Attributes data type](../xdm/data-types/external-source-system-audit-attributes.md) and contact your Adobe Technical Account Manager or Adobe Customer Care with your sandbox and dataset information.
+To enable customer timestamp ordering, use the `extSourceSystemAudit.lastUpdatedDate` field within the [External Source System Audit Attributes data type](../xdm/data-types/external-source-system-audit-attributes.md) and contact your Adobe Technical Account Manager or Adobe Customer Care with your sandbox and dataset information.
 
 ## Constraints
 
 During this private beta, the following constraints apply when using customer timestamp ordering:
 
-- You can only use customer timestamp ordering with **profile attributes** ingested with **streaming ingestion** on the profile store. 
+- You can only use customer timestamp ordering with **profile attributes** ingested with **streaming ingestion** on the Profile store. 
   - There are **no** ordering guarantees provided for data in the data lake or Identity Service.
 - You can only use customer timestamp ordering on **non-production** sandboxes.
 - You can only apply customer timestamp ordering to **5** datasets per sandbox.
@@ -30,5 +30,5 @@ During this private beta, the following constraints apply when using customer ti
 
 When implementing customer timestamp ordering, please keep the following considerations in mind:
 
-- You are responsible for syncing the clocks on all internal systems sending data into the profile store.
+- You are responsible for syncing the clocks on all internal systems sending data into the Profile store.
 - You should have millisecond level precision in your ISO 8061-formatted timestamps.

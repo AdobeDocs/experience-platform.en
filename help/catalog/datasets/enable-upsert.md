@@ -177,7 +177,7 @@ In order to configure a Profile-enabled dataset for updates, you must first disa
 
 >[!WARNING]
 >
->Data ingested into the dataset while it is disabled will not be ingested into the Profile Store. You should avoid ingesting data into the dataset until it has been re-enabled for Profile.
+>Data ingested into the dataset while it is disabled will not be ingested into the Profile store. You should avoid ingesting data into the dataset until it has been re-enabled for Profile.
 
 **API format**
 
