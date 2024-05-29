@@ -71,7 +71,7 @@ Adobe Experience Platform provides multiple [!DNL dashboards] through which you 
 
 ### Profile Dashboards
 
-The Profiles dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile Store in Experience Platform. 
+The Profiles dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile store in Experience Platform. 
 
 **Updated features**
 

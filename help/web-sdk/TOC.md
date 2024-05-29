@@ -29,6 +29,7 @@ role: Developer
     * [edgeConfigId](commands/configure/edgeconfigid.md)
     * [edgeDomain](commands/configure/edgedomain.md)
     * [idMigrationEnabled](commands/configure/idmigrationenabled.md)
+    * [streamingMedia](commands/configure/streamingmedia.md)
     * [onBeforeEventSend](commands/configure/onbeforeeventsend.md)
     * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
     * [orgId](commands/configure/orgid.md)
@@ -46,12 +47,15 @@ role: Developer
   * [appendIdentityToUrl](commands/appendidentitytourl.md)
   * [applyPropositions](commands/applypropositions.md)
   * [applyResponse](commands/applyresponse.md)
+  * [createMediaSession](commands/createmediasession.md)
   * [getIdentity](commands/getidentity.md)
   * [getLibraryInfo](commands/getlibraryinfo.md)
   * [setConsent](commands/setconsent.md)
   * [setDebug](commands/setdebug.md)
+  * [sendMediaEvent](commands/sendmediaevent.md)
   * [Configre datastream overrides](commands/datastream-overrides.md)
   * [Command responses](commands/command-responses.md)
+  * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
 
 * Identity {#identity}
   * [Overview](identity/overview.md)
