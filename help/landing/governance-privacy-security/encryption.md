@@ -28,21 +28,21 @@ After data has been brought into the system and [encrypted at rest](#at-rest), P
 
 ### mTLS protocol support {#mtls-protocol-support}
 
-You can now use Mutual Transport Layer Security (mTLS) to ensure enhanced security in outbound connections to HTTP API destinations and Adobe Journey Optimizer custom actions. mTLS is an end-to-end security method for mutual authentication that ensures that both parties sharing information are who they claim to be before data is shared. mTLS includes an additional step compared to TLS, in which the server also asks for the client's certificate and verifies it at their end.
+You can now use Mutual Transport Layer Security (mTLS) to ensure enhanced security in outbound connections to the [HTTP API destination](../../destinations/catalog/streaming/http-destination.md) and Adobe Journey Optimizer [custom actions](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions). mTLS is an end-to-end security method for mutual authentication that ensures that both parties sharing information are who they claim to be before data is shared. mTLS includes an additional step compared to TLS, in which the server also asks for the client's certificate and verifies it at their end.
 
-#### mTLS in Adobe Journey Optimizer {#mtls-in-adobe-journey-optimizer}
-
-In Adobe Journey Optimizer, mTLS is used in conjunction with [custom actions](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions). No additional [configuration for Adobe Journey Optimizer custom actions](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) is required on your part to enable mTLS. When the endpoint for a custom action is mTLS-enabled, the system fetches the certificate from the Adobe Experience Platform keystore and automatically provides it to the endpoint (as is required for mTLS connections). 
-
-If you want to use mTLS with these Adobe Journey Optimizer and Experience Platform HTTP API destination workflows, the server address you put into the Adobe Journey Optimizer customer action UI or the Destinations UI must have TLS protocols disabled and only mTLS enabled. If the TLS 1.2 protocol is still enabled on that endpoint, no certificate is sent for the client authentication. This means that to use mTLS with these workflows, your "receiving" server endpoint must be an mTLS **only** enabled connection endpoint.
+If you want to [use mTLS with Adobe Journey Optimizer custom actions](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) and Experience Platform HTTP API destination workflows, the server address you put into the Adobe Journey Optimizer customer action UI or the Destinations UI must have TLS protocols disabled and only mTLS enabled. If the TLS 1.2 protocol is still enabled on that endpoint, no certificate is sent for the client authentication. This means that to use mTLS with these workflows, your "receiving" server endpoint must be an mTLS **only** enabled connection endpoint.
 
 >[!IMPORTANT]
 >
->No additional configuration is required in your Adobe Journey Optimizer custom action or journey to activate mTLS; this process occurs automatically when an mTLS-enabled endpoint is detected. The Common Name (CN) and Subject Alternative Names (SAN) for each certificate are available in the documentation as part of the certificate and can be used as an additional layer of ownership validation if you wish to do so.
+>No additional configuration is required in your Adobe Journey Optimizer custom action or HTTP API destination to activate mTLS; this process occurs automatically when an mTLS-enabled endpoint is detected. The Common Name (CN) and Subject Alternative Names (SAN) for each certificate are available in the documentation as part of the certificate and can be used as an additional layer of ownership validation if you wish to do so.
 >
 >RFC 2818, published in May 2000, deprecates the use of the Common Name (CN) field in HTTPS certificates for subject name verification. Instead, it recommends using the "Subject Alternative Name" extension (SAN) of the "dns name" type.
 
 ### Download certificates {#download-certificates}
+
+>[!NOTE]
+>
+>It is your responsibility to keep the public certificate up-to-date. Please ensure that you regularly review the certificate, particularly as its expiration date approaches. You should bookmark this page in order to maintain the latest copy in your environment.
 
 If you want to check the CN or SAN to do additional third-party validation, can can download the relevant certificates here:
 
