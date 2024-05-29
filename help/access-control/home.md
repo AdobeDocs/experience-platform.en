@@ -21,7 +21,7 @@ A high-level workflow for gaining and assigning access permissions can be summar
 
 - After licensing Adobe Experience Platform, or an Application/App Service that uses Experience Platform, an email is sent to the administrator specified during licensing.
 - The administrator logs in to [Adobe Admin Console](#adobe-admin-console) and selects **Adobe Experience Platform** from the list of products on the overview page.
-- To grant access to Experience Platform, the administrator will need to add users to the default product profile: `AEP-Default-All-Users`. 
+- To grant access to Experience Platform, it is recommended that the administrator add users to the default product profile: `AEP-Default-All-Users`. 
 - In Experience Platform Permissions, the administrator can create new roles or edit the permissions and users for any existing roles.
 - When creating or editing a role, the administrator adds users to the role using the **[!UICONTROL users]** tab, and grants permissions to these users (such as "[!UICONTROL Read Datasets]" or "[!UICONTROL Manage Schemas]") by editing the role's permissions. Similarly, the administrator can assign access to sandboxes using the same editing option.
 - When users log in to the Experience Platform user interface, their access to Experience Platform capabilities is driven by the permissions that have been granted to them from the previous step. For example, if a user does not have the [!UICONTROL View Datasets] permission, the **[!UICONTROL Datasets]** tab in the side menu will not be visible to that user.
@@ -94,6 +94,7 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Profile Management] | [!UICONTROL View Segments] | Read-only access to available segments. |
 | [!DNL Profile Management] | [!UICONTROL Manage Merge Policies] | Access to read, create, edit, and delete merge policies. |
 | [!DNL Profile Management] | [!UICONTROL View Merge Policies] | Read-only access to available merge policies. |
+| [!DNL Profile Management] | [!UICONTROL Import Audiences] | Access to read, create, edit, and delete imported audiences. |
 | [!DNL Profile Management] | [!UICONTROL Export Audience for Segment] | Ability to export an evaluated audience segment to a dataset. |
 | [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | Ability to generate profiles for an audience by evaluating a segment definition. |
 | [!DNL Profile Management] | [!UICONTROL View B2B AI] | Read-only access to settings and configurations for all B2B AI/ML services. |

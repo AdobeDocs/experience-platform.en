@@ -5,8 +5,8 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
 role: Developer, Admin, User
+exl-id: 85944720-8551-491c-8991-dd9668beb0ca
 ---
-
 # Use access labels to manage user access to destination dataflows
 
 As part of the [!UICONTROL Attribute-based access control] functionality in Real-Time CDP, you can now apply access labels to destination dataflows. You can thereby ensure that only a subset of users in your organization get access to specific destination dataflows.
@@ -82,4 +82,4 @@ When adding multiple labels to a destination dataflow, users who should be able 
 
 By following the steps in this document, you now know how to apply access labels to destination dataflows so that only a subset of users in your organization get access to specific destination dataflows.
 
-Next, you can read more about other functionality supported by [!UICONTROL Attribute-based access control] when activating data to destinations. For example, you can limit users' access to [view and activate specific fields only](/help/access-control/abac/overview.md#destinations).  
+Next, you can read more about other functionality supported by [!UICONTROL Attribute-based access control] when activating data to destinations. For example, you can limit users' access to [view and activate specific fields only](/help/access-control/abac/overview.md#destinations).

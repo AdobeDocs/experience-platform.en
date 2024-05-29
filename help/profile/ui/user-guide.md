@@ -34,7 +34,7 @@ To learn more, visit the [profile dashboard guide](../../dashboards/guides/profi
 
 ## [!UICONTROL Browse] tab metrics
 
-Select the **[!UICONTROL Browse]** tab to display several metrics related to your organization's profile data. You can also use this tab to browse the profile store using a merge policy or an identity, as outlined in the next section of this guide.
+Select the **[!UICONTROL Browse]** tab to display several metrics related to your organization's profile data. You can also use this tab to browse the Profile store using a merge policy or an identity, as outlined in the next section of this guide.
 
 On the right-hand side of the **[!UICONTROL Browse]** tab is the [profile count](#profile-count) as well as a listing of [profiles by namespace](#profiles-by-namespace). 
 
@@ -58,7 +58,7 @@ When the ingestion of records into the [!DNL Profile] store increases or decreas
 
 ### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
 
-The **[!UICONTROL Profiles by namespace]** metric displays the total count and breakdown of namespaces across all of the merged profiles in your Profile Store. The total number of profiles by namespace (in other words, adding together the values shown for each namespace) will always be higher than the profile count metric because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.
+The **[!UICONTROL Profiles by namespace]** metric displays the total count and breakdown of namespaces across all of the merged profiles in your Profile store. The total number of profiles by namespace (in other words, adding together the values shown for each namespace) will always be higher than the profile count metric because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.
 
 #### Updating the [!UICONTROL Profiles by namespace] metric
 
@@ -84,7 +84,7 @@ To choose a merge policy from the **[!UICONTROL Select merge policy]** dialog, s
 
 ![A dialog where you can select the merge policy to filter by is displayed.](../images/user-guide/select-merge-policy.png)
 
-The profiles that are shown represent a sample of up to 20 profiles from your organization's profile store, after the selected merge policy has been applied. The sample profiles for the selected merge policy are refreshed when new data is added to your organization's profile store.
+The profiles that are shown represent a sample of up to 20 profiles from your organization's Profile store, after the selected merge policy has been applied. The sample profiles for the selected merge policy are refreshed when new data is added to your organization's Profile store.
 
 To view the details of one of the sample profiles, select the **[!UICONTROL Profile ID]**. For more information, see the section later in this guide on [viewing profile details](#profile-detail).
 
@@ -138,6 +138,12 @@ These attributes can also be viewed as a JSON object by selecting to **[!UICONTR
 
 ![The Attributes tab is highlighted. The profile attributes are displayed.](../images/user-guide/attributes.png)
 
+To view the attributes that are available on the Edge, select **[!UICONTROL Edge]** on the data location selector.
+
+![The data location selector within the attributes tab is highlighted.](../images/user-guide/attributes-select.png)
+
+For more information on edge profiles, please read the [edge profiles documentation](../edge-profiles.md).
+
 ### Events tab
 
 The **[!UICONTROL Events]** tab contains data from the 100 most recent ExperienceEvents associated with the customer. This data could include email opens, cart activities, and page views. Selecting **[!UICONTROL View all]** for any individual event provides additional fields and values captures as part of the event.
@@ -152,7 +158,11 @@ The **[!UICONTROL Audience membership]** tab displays a list with the name and d
 
 For more information about segmentation in Experience Platform, please refer to the [Adobes Experience Platform Segmentation Service documentation](../../segmentation/home.md).
 
-![The Audience membership tab is highlighted. The profile's audience membership details are displayed.](../images/user-guide/segment-membership.png)
+![The Audience membership tab is highlighted. The profile's audience membership details are displayed.](../images/user-guide/audience-membership.png)
+
+To view the audience membership of the profiles that are available on the Edge, select **[!UICONTROL Edge]** in the data location selector. More information about edge segmentation can be found in the [edge segmentation guide](../../segmentation/ui/edge-segmentation.md).
+
+![The data location selector within the audience membership tab is highlighted.](../images/user-guide/audience-membership-select.png)
 
 ## Merge policies
 
@@ -174,9 +184,9 @@ For more information on union schemas, please visit the [union schema UI guide](
 
 From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Computed attributes]** tab to view a list of computed attributes that belong to your organization.
 
-For more information on computed attributes, please read the [computed attributes overview](../computed-attributes/overview.md). For more information on how to use computed attributes within the Platform UI, please read the [computed attributes UI guide](../computed-attributes/ui.md).
+![The Computed attributes tab is highlighted.](../images/user-guide/computed-attributes.png)
 
-IMAGE
+For more information on computed attributes, please read the [computed attributes overview](../computed-attributes/overview.md). For more information on how to use computed attributes within the Platform UI, please read the [computed attributes UI guide](../computed-attributes/ui.md).
 
 ## Next steps
 

@@ -36,7 +36,7 @@ Finally, the default production sandbox is the first production sandbox that is 
 In summary, sandboxes provide the following benefits:
 
 * **Application lifecycle management**: Create separate virtual environments to develop and evolve digital experience applications.
-* **Project and brand management**: Allow multiple projects to run in parallel within the same organization, while providing isolation and access control. Future releases will provide support for deploying in multiple regions.
+* **Project and brand management**: Allow multiple projects to run in parallel within the same organization, while providing isolation and access control.
 * **Flexible development ecosystem**: Provide sandboxes in a seamless, scalable, and cost-effective way for exploration, enablement, and demonstration purposes.
 
 ## Access control for sandboxes

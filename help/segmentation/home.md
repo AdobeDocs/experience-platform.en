@@ -20,7 +20,7 @@ You should understand the following key terms used throughout this document:
 
 ## How segmentation works
 
-Segmentation is the process of defining specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. For example, in an email campaign called "Did you forget to buy your sneakers?", you may want an audience of all users who searched for running shoes within the last 30 days, but who did not complete a purchase. 
+Segmentation is the process of defining specific attributes or behaviors shared by a subset of profiles from your Profile store to distinguish a marketable group of people from your customer base. For example, in an email campaign called "Did you forget to buy your sneakers?", you may want an audience of all users who searched for running shoes within the last 30 days, but who did not complete a purchase. 
 
 Once an audience has been conceptually defined, it is built in [!DNL Experience Platform]. Typically, audiences are built by the marketer or audience specialist although some organizations prefer they be created by their marketing department, in collaboration with their data analysts. Upon reviewing the data being sent to [!DNL Platform], the data analyst can create the audience in two ways - either by creating a segment definition by selecting which fields and values will be used to build the rules or conditions of the audience, or by composing an audience using the Audience Composition.
 

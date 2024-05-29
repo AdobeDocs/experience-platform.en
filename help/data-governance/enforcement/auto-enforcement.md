@@ -86,7 +86,7 @@ The sections below outline the different policy enforcement messages that appear
 
 If a policy violation occurs from attempting to activate an audience (or [making edits to an already activated audience](#policy-enforcement-for-activated-audiences)) the action is prevented and a popover appears indicating that one or more policies have been violated. Once a violation has triggered, the **[!UICONTROL Save]** button is disabled for the entity you are modifying until the appropriate components are updated to comply with data usage policies.
 
-Select a policy violation in the popover's left column to display details for that violation.
+Select a policy name to display details for that violation.
 
 ![A dialog that indicates a policy violation has occurred with the policy name highlighted.](../images/enforcement/violation-policy-select.png)
 
@@ -98,13 +98,21 @@ A data lineage graph is displayed below the violation summary, allowing you to v
 
 ![A policy violation dialog with the data lineage graph highlighted.](../images/enforcement/data-lineage.png)
 
-You can also use the **[!UICONTROL Filter]** icon (![](../images/enforcement/filter.png)) to filter the displayed entities by category. At least two categories must be selected in order for data to be displayed.
+You can also use the **[!UICONTROL Filter]** icon (![A filter icon.](../images/enforcement/filter.png)) to filter the displayed entities by category. At least two categories must be selected in order for data to be displayed.
 
 ![A policy violation dialog with the data lineage filter and drop-down menu highlighted.](../images/enforcement/lineage-filter.png)
 
 Select **[!UICONTROL List view]** to display the data lineage as a list. To switch back to the visual graph, select **[!UICONTROL Path view]**.
 
 ![A policy violation dialog with the data lineage path view highlighted.](../images/enforcement/list-view.png)
+
+#### Labels successfully applied {#labels-successfully-applied}
+
+If you create data usage policies before you label your schema fields, you may encounter a governance policy violation dialog as soon as you apply labels to your schema. In this case, you can successfully label part of your schema. The [!UICONTROL Labels successfully applied] tab indicates which labels were successfully applied, as there are no policy restrictions against that field.
+
+Use the data lineage diagram to understand what other configuration changes need to be made before you can add the label to your schema field.
+
+![A policy violation dialog with the [!UICONTROL Labels successfully applied] tab highlighted.](../images/enforcement/labels-successfully-applied.png)
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
