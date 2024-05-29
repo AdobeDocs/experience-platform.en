@@ -13,7 +13,7 @@ Real-Time CDP is built on top of Adobe Experience Platform and utilizes many of 
 
 ## Segmentation
 
-Segmentation is the process of defining specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. For example, in an email campaign called "Did you forget to buy your sneakers?", you may want an audience of all users who searched for running shoes within the last 30 days, but who did not complete a purchase. Using different segment definitions, you can focus on your various audiences, delivering a more customized marketing experience.
+Segmentation is the process of defining specific attributes or behaviors shared by a subset of profiles from your Profile store to distinguish a marketable group of people from your customer base. For example, in an email campaign called "Did you forget to buy your sneakers?", you may want an audience of all users who searched for running shoes within the last 30 days, but who did not complete a purchase. Using different segment definitions, you can focus on your various audiences, delivering a more customized marketing experience.
 
 ## [!DNL Segment Builder]
 

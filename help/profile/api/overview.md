@@ -43,7 +43,7 @@ To learn more about merge policies, and their role within Platform, please begin
 
 ## Preview sample status ([!DNL Profile] preview) {#profile-preview}
 
-As data is ingested into Platform, a sample job is run to update the profile count and other Real-Time Customer Profile data-related metrics. The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-Time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate multiple reports in order to gain visibility into the composition of your organization's Profile Store.  To get started using the `/profilepreviewstatus` endpoint, refer to the [preview sample status endpoint guide](preview-sample-status.md).
+As data is ingested into Platform, a sample job is run to update the profile count and other Real-Time Customer Profile data-related metrics. The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-Time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate multiple reports in order to gain visibility into the composition of your organization's Profile store.  To get started using the `/profilepreviewstatus` endpoint, refer to the [preview sample status endpoint guide](preview-sample-status.md).
 
 ## Profile system jobs {#profile-system-jobs}
 
@@ -51,7 +51,7 @@ Profile-enabled data that is ingested into [!DNL Platform] is stored in the [!DN
 
 ## Update profiles attributes {#update-profile}
 
-Occasionally it may be necessary to update data in your organization's Profile Store. For example, you may need to correct records or change an attribute value. This can be done through batch ingestion and requires a Profile-enabled dataset configured with an upsert tag. For more information on how to configure a dataset for attribute updates, please refer to the tutorial for [enabling a dataset for Profile and upsert](../../catalog/datasets/enable-upsert.md).
+Occasionally it may be necessary to update data in your organization's Profile store. For example, you may need to correct records or change an attribute value. This can be done through batch ingestion and requires a Profile-enabled dataset configured with an upsert tag. For more information on how to configure a dataset for attribute updates, please refer to the tutorial for [enabling a dataset for Profile and upsert](../../catalog/datasets/enable-upsert.md).
 
 ## Next steps {#next-steps}
 
