@@ -290,7 +290,7 @@ There are no [marketing policies](/help/data-governance/policies/overview.md) re
 
 ### Create audiences {#create-audiences}
 
-This use case requires that you create two audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people. Audiences can be created in multiple ways in Adobe Experience Platform:
+This use case requires that you create two audiences to define specific attributes or behaviors shared by a subset of profiles from your Profile store to distinguish a marketable group of people. Audiences can be created in multiple ways in Adobe Experience Platform:
 
 * For information on how to create an audience, read the [Audience service UI guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 * For information on how to compose [audiences](/help/segmentation/home.md), read the [Audience Composition UI guide](/help/segmentation/ui/audience-composition.md).

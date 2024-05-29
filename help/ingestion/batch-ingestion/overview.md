@@ -140,7 +140,7 @@ You can upload files using the Small File Upload API. However, if your files are
 
 >[!NOTE]
 >
->Batch ingestion can be used to incrementally update data in the Profile Store. For more information, see the section on [updating a batch](#patch-a-batch) in the [batch ingestion developer guide](api-overview.md). 
+>Batch ingestion can be used to incrementally update data in the Profile store. For more information, see the section on [updating a batch](#patch-a-batch) in the [batch ingestion developer guide](api-overview.md). 
 
 >[!INFO]
 >

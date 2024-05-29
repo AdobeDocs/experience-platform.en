@@ -133,7 +133,7 @@ There are a number of reports available to help you understand the composition o
 
 #### Pseudonymous Profile data expirations {#pseudonymous-profile-expirations}
 
-This capability allows you to automatically remove stale Pseudonymous Profiles from the Profile Store. For more information on this feature, please read the [Pseudonymous Profile data expiration overview](../../profile/pseudonymous-profiles.md).
+This capability allows you to automatically remove stale Pseudonymous Profiles from the Profile store. For more information on this feature, please read the [Pseudonymous Profile data expiration overview](../../profile/pseudonymous-profiles.md).
 
 #### Experience Event expirations {#event-expirations}
 

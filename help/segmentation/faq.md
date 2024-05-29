@@ -327,7 +327,11 @@ Audience splitting lets you further subset your audience into smaller groups.
 
 When splitting by attribute, there is mutual exclusivity between the groups. This means that if a record meets the criteria of multiple split paths, it will be assigned the **first** path from the left and **not** assigned to any of the other paths.
 
-When splitting by percentage, splits are **randomly** done. This means that the profiles will be randomly assigned to each path. The split is **not** persistent, so the profile could be in a different sub-audience on each evaluation.
+When splitting by percentage, splits are **randomly** done. This means that the profiles will be randomly assigned to each path. The split **is** persistent, which means the profile will be in the same sub-audience on each evaluation.
+
+>[!NOTE]
+>
+>Previously, splits in Audience Composition were **not** persistent.
 
 For more information on the Split block, please read the [Audience Composition UI guide](./ui/audience-composition.md#split).
 
