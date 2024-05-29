@@ -8,13 +8,15 @@ exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 ---
 # Identity optimization algorithm
 
->[!IMPORTANT]
->
->The identity optimization algorithm is in Alpha. The feature and documentation are subject to change.
+The identity optimization algorithm is a graph algorithm on Identity Service that helps ensure that an identity graph is representative of a single person, and therefore, prevents the unwanted merging of identities on Real-Time Customer Profile.
 
-The identity optimization algorithm is a rule that helps ensure that an identity graph is representative of a single person, and therefore, prevents the unwanted merging of identities on Real-Time Customer Profile.
+## Input parameters {#input-parameters}
 
-## Input parameters
+This section outlines input parameters...
+
+### Unique namespace {#unique-namespace}
+
+**A unique namespace determines the links that get removed if graph collapse happens.** 
 
 A single merged profile and its corresponding identity graph should represent a single individual (person entity). A single individual is usually represented by CRM IDs and/or Login IDs. The expectation is that no two individuals (CRM IDs) are merged into a single profile or graph.
 
@@ -23,17 +25,26 @@ You must specify which namespaces represent a person entity in Identity Service 
 * CRM ID namespace = unique
 * Email namespace = unique
 
-A namespace that you declare to be unique will automatically be configured to have a maximum limit of one within a given identity graph. For example, if you declare a CRM ID namespace as unique, then an identity graph can only have one identity that contains a CRM ID namespace.
+A namespace that you declare to be unique will automatically be configured to have a maximum limit of one within a given identity graph. For example, if you declare a CRM ID namespace as unique, then an identity graph can only have one identity that contains a CRM ID namespace. If you do not declare a namespace to be unique, then the  graph can contain moore than one identity with that namespace.
 
 >[!NOTE]
 >
->* Currently, the algorithm only supports the use of a single login identifier (one login namespace). Multiple login identifiers (multiple identity namespaces used to login), household entity graphs, and hierarchical graph structures are not supported at this time.
+>* Household entity representation ("household graphs") are not supported at this time.
 >
 >* All namespaces that are person identifiers and that are used in the sandbox to generate identity graphs must be marked as a unique namespace. Otherwise, you may see undesirable linking results.
 
+<!-- ### Namespace priority {#namespace-priority}
+
+Namespace priority determines how the identity optimization algorithm removes links.
+
+Namespaces in Identity Service have an implicit relative order of importance. Consider a graph structured like a pyramid. There is one node on the top layer, two nodes on the middle layer, and four nodes on the bottom layer. Namespace priority must reflect this relative order to ensure that a person entity is accurately represented. -->
+
 ## Process
 
-Upon ingesting new identities, Identity Service checks if the new identities and their corresponding namespaces will result in exceeding the configured limits. If limits are not exceeded, then the ingestion of new identities will proceed and these identities will be linked to the graph. However, if limits are exceeded, the identity optimization algorithm will update the graph such that the most recent timestamp is honored, and oldest links with the lower priority namespaces are removed.
+Upon ingesting new identities, Identity Service checks if the new identities and their corresponding namespaces will result in exceeding the configured limits. If limits are not exceeded, then the ingestion of new identities will proceed and these identities will be linked to the graph. However, if limits are exceeded, the identity optimization algorithm will:
+
+* Ingest the most recent event, while taking namespace priority into account.
+* Remove the link that would merge two person entities from the appropriate graph layer. 
 
 ## Example scenarios for identity optimization algorithm
 
