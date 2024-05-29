@@ -70,14 +70,13 @@ To learn more about each of the available standard widgets, select the name of a
 * [Account profiles added](#account-profiles-added)
 * [New accounts by industry](#accounts-by-industry)
 * [New accounts by type](#accounts-by-type)
-* [Opportunities added](#opportunities-added)
 * [New opportunities by person role](#opportunities-by-person-role)
 * [New opportunities by revenue](#opportunities-by-revenue)
 * [New opportunities by status & stage](#opportunities-by-status-&-stage)
 * [New opportunities won](#opportunities-won)
+* [Opportunities added](#opportunities-added)
 * [Predictive scoring distribution](#predictive-scoring-distribution)
 * [Predictive scoring top influential factors](#predictive-scoring-top-influential-factors)
-* [Total accounts by industry](#total-accounts-by-industry)
 
 ### Account profiles added {#account-profiles-added}
 
@@ -96,14 +95,6 @@ The [!UICONTROL New accounts by industry] widget displays the total number of ac
 The [!UICONTROL New accounts by type] widget displays the total number of accounts in a single metric inside a donut chart. The donut chart illustrates the relative makeup of different account types that comprise this total. A color-coded key provides a breakdown of all the included account types. Individual counts for each type of account are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
 
 ![The New accounts by type widget.](../images/account-profiles/new-accounts-by-type.png)
-
-### Opportunities added {#opportunities-added}
-
-The [!UICONTROL Opportunities added] widget uses a line graph to display the number of opportunities added each day over a period of time. Use the global date filter located at the top of your dashboard to determine the period of analysis. If no date filter is provided, the default behavior lists the opportunities added for the year prior to today. The results can be used to infer a trend in the number of opportunities added.
-
-<!-- Link to date filter documentation from Annamalai -->
-
-![The Opportunities added widget.](../images/account-profiles/opportunities-added.png)
 
 ### New opportunities by person role {#opportunities-by-person-role}
 
@@ -135,6 +126,14 @@ The [!UICONTROL New opportunities won] widget displays the total number of your 
 
 ![The New opportunities won widget.](../images/account-profiles/new-opportunities-won.png)
 
+### Opportunities added {#opportunities-added}
+
+The [!UICONTROL Opportunities added] widget uses a line graph to display the number of opportunities added each day over a period of time. Use the global date filter located at the top of your dashboard to determine the period of analysis. If no date filter is provided, the default behavior lists the opportunities added for the year prior to today. The results can be used to infer a trend in the number of opportunities added.
+
+<!-- Link to date filter documentation from Annamalai -->
+
+![The Opportunities added widget.](../images/account-profiles/opportunities-added.png)
+
 ### Predictive scoring distribution {#predictive-scoring-distribution}
 
 The [!UICONTROL Predictive scoring distribution] widget shows the score distribution of all account profiles to help you understand the health of your sales pipeline at a glance. The scoring data is conveyed through a donut chart and a column chart.
@@ -164,18 +163,6 @@ The dropdown menu within the widget allows you to select the account scoring mod
 >Global date range filters do not apply to predictive scoring insights. Predictive scoring widgets analyze data based on the account scoring model selected in the dropdown.
 
 ![The Predictive scoring top influential factors widget.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
-
-### Total accounts by industry {#total-accounts-by-industry}
-
-This widget displays the total number of accounts in a single metric and uses a donut chart to illustrate the proportional sizes of counts for the industries that make up the overall number. The key provides color coding information for the different industries that make up the donut chart. 
-
->[!NOTE]
->
->The information displayed by this insight is dependant on the date range specified by you. If you do not provide a date filter, the default behavior of the insight analyzes data added from the previous year up to today.
-
-Individual counts for the different industries are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
-
-![The total accounts by industry widget.](../images/account-profiles/total-accounts-by-industry-widget.png)
 
 ## Next steps
 
