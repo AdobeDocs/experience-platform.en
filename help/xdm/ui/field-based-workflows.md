@@ -23,7 +23,7 @@ After you have added a standard field group to a schema, you can remove any stan
 >
 >Removing fields from a standard field group only affects the schema being worked on and does not affect the field group itself. If you remove standard fields in one schema, those fields are still available in all other schemas that employ the same field group.
 
-In the following example, the standard field group **[!UICONTROL Demographic Details]** has been added to a schema. To remove a single field such as `taxId`, select the field in the canvas and then select **[!UICONTROL Remove]** in the right rail.
+In the following example, the standard field group **[!UICONTROL Demographic Details]** has been added to a schema. To remove a single field such as `maritalStatus`, select the field in the canvas and then select **[!UICONTROL Remove]** in the right rail.
 
 ![Remove single field](../images/ui/field-based-workflows/remove-single-field.png)
 
