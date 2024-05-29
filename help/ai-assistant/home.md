@@ -56,28 +56,11 @@ Access to AI Assistant is governed by the following parameters:
   * As an administrator, you can add the **Enable AI Assistant** to a given role and add a user to that role, to allow them to access AI Assistant in your organization.
   * As an administrator, you can add the **View Operational Insights** to a given role and add a user to that role, to allow them to use AI Assistant's operational insights capabilities. Operational insights are currently in beta.
 
-## Objectives that you can accomplish with AI Assistant {#objectives}
-
-You can use AI Assistant for objectives such as:
-
-| Objective | Description | Example |
-| --- | --- | --- |
-| Learning concepts and continuing workflows | <ul><li>As a novice user, you can use AI Assistant to learn Real-Time CDP and Adobe Journey Optimizer concepts and onboard yourself to products and features that you are unfamiliar with.</li><li>As an experienced user, you can use AI Assistant to solve an edge case that may be blocking your workflow. |<ul><li>How do I set up a dashboard in Journey Analytics?</li><li>Tell me some use-cases for Real-Time CDP.</li></ul> |
-| Troubleshooting | Use AI Assistant to learn how to debug basic errors that you may encounter in your workflow. | <ul><li>What does this error {ERROR_MESSAGE} mean?</li><li>Why am I not able to delete the audience named "Luma: Email Audience"?</li></ul> |
-| Sandbox hygiene | Use AI Assistant to identify any duplicates or unused objects so you can efficiently maintain your sandbox. | <ul><li>Can you show me audiences that are similar?</li><li>Are there any schemas which do not have an associated dataset?</li></ul> |
-| Value analysis | Use AI Assistant to identify your most used data objects and assess any performance indicators or find the most valuable data objects. | <ul><li>How many profiles are in our "Luma: Email Audience" segment definition?</li><li>When were audiences activated to Experience Cloud Audiences destination?</li></ul> |
-| Search | Use AI Assistant to find supported Experience Platform objects such as audiences, datasets, destinations, schemas, and sources. | <ul><li>List the audiences containing "Luma" in the name that were created in the last quarter.</li><li>What attributes are in the "Luma: Custom Actions" XDM schema?</li></ul> |
-| Impact analysis | Use AI Assistant to identify data objects that have been used in certain workflows so that you can assess the impact of any changes. | <ul><li>Which audiences use `homeAddress.city` in "Luma: PersonProfiles" schema?</li><li>Which datasets are the `consents.marketing.push.val` profile attribute stored in?</li></ul> |
-
-{style="table-layout:auto"}
-
 ## [!BADGE Beta]{type=Informative} Operational insights {#operational-insights}
 
 >[!IMPORTANT]
 >
 >Operational insights answers are in beta. Anyone that has access to the **View Operational Insights** permission will have access to operational insights answers.
-
-Operational insights are 
 
 You can ask AI Assistant questions about your operational insights in the following domains: 
 
@@ -91,9 +74,13 @@ You can ask AI Assistant questions about your operational insights in the follow
 
 For operational insights queries, answers may not reflect the current state of the UI. The data backing these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You will need to log into a sandbox to inquire about specific data related to objects like audiences, schemas, datasets, attributes, and destinations.
 
+## User agreement and Beta terms {#terms}
+
+You must agree to [a user agreement](https://adobe.sharepoint.com/:w:/s/ExCUserExperience/EVzJv1jFBiZGnaFEufsfIqwBC_9ehv3KaXTkEMTGpQFRpg?e=qzwOo8) before you can use AI Assistant. The user agreement also contains the public beta agreement. This is so that you can use additional AI Assistant features as they roll out in a beta capacity.
+
 ### Example questions {#example-questions}
 
-Read the table below for examples of operational insight questions and their respective use cases:
++++Select to view examples of operational insight questions and their respective use cases:
 
 | Question type | Use case| Examples |
 | --- | --- | --- | 
@@ -104,6 +91,25 @@ Read the table below for examples of operational insight questions and their res
 
 {style="table-layout:auto"}
 
++++
+
+## Objectives that you can accomplish with AI Assistant {#objectives}
+
++++Select to view a list of objectives you can accomplish with AI Assistant
+
+| Objective | Description | Example |
+| --- | --- | --- |
+| Learning concepts and continuing workflows | <ul><li>As a novice user, you can use AI Assistant to learn Real-Time CDP and Adobe Journey Optimizer concepts and onboard yourself to products and features that you are unfamiliar with.</li><li>As an experienced user, you can use AI Assistant to solve an edge case that may be blocking your workflow. |<ul><li>How do I set up a dashboard in Journey Analytics?</li><li>Tell me some use-cases for Real-Time CDP.</li></ul> |
+| Troubleshooting | Use AI Assistant to learn how to debug basic errors that you may encounter in your workflow. | <ul><li>What does this error {ERROR_MESSAGE} mean?</li><li>Why am I not able to delete the audience named "Luma: Email Audience"?</li></ul> |
+| Sandbox hygiene | Use AI Assistant to identify any duplicates or unused objects so you can efficiently maintain your sandbox. | <ul><li>Can you show me audiences that are similar?</li><li>Are there any schemas which do not have an associated dataset?</li></ul> |
+| Value analysis | Use AI Assistant to identify your most used data objects and assess any performance indicators or find the most valuable data objects. | <ul><li>How many profiles are in our "Luma: Email Audience" segment definition?</li><li>When were audiences activated to Experience Cloud Audiences destination?</li></ul> |
+| Search | Use AI Assistant to find supported Experience Platform objects such as audiences, datasets, destinations, schemas, and sources. | <ul><li>List the audiences containing "Luma" in the name that were created in the last quarter.</li><li>What attributes are in the "Luma: Custom Actions" XDM schema?</li></ul> |
+| Impact analysis | Use AI Assistant to identify data objects that have been used in certain workflows so that you can assess the impact of any changes. | <ul><li>Which audiences use `homeAddress.city` in "Luma: PersonProfiles" schema?</li><li>Which datasets are the `consents.marketing.push.val` profile attribute stored in?</li></ul> |
+
+{style="table-layout:auto"}
+
++++
+
 ## Phrasing your questions {#phrasing-your-questions}
 
 You must phrase your questions to AI Assistant with clarity and context in order to get as accurate a response as a possible. Refer to the following list of tips for guidance on how to ask a clear question with context:
@@ -112,7 +118,9 @@ You must phrase your questions to AI Assistant with clarity and context in order
 * Avoid ambiguous language or overly complex syntax to facilitate comprehension.
 * Provide relevant context regarding your task and/or question as context can help AI Assistant generate more relevant responses.
 
-Read the table below for further guidance on best practices to follow when asking questions to AI Assistant:
+Read the tables below for further guidance on best practices to follow when asking questions to AI Assistant.
+
++++Select to view examples of best practices to follow when formulating your questions
 
 | Do | Example |
 | --- | --- |
@@ -131,6 +139,8 @@ Read the table below for further guidance on best practices to follow when askin
 | Omit criteria or parameters. | Show me datasets. |
 
 {style="table-layout:auto"}
+
++++
 
 ## Next steps
 
