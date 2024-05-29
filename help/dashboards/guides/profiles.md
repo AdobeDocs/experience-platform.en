@@ -13,7 +13,7 @@ Refer to the [Real-Time Customer Profile UI guide](../../profile/ui/user-guide.m
 
 ## Profile dashboard data
 
-The Profiles dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile Store in Experience Platform. The snapshot does not include any event (time series) data. 
+The Profiles dashboard displays a snapshot of the attribute (record) data that your organization has within the Profile store in Experience Platform. The snapshot does not include any event (time series) data. 
 
 The attribute data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the Profile dashboard is not updating in real-time.
 
@@ -275,9 +275,9 @@ To learn more about each of the available standard widgets, select the name of a
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilecount"
 >title="Profile count"
->abstract="This widget displays the total number of merged profiles within the Profile Store at the time the snapshot was taken. The number depends on the selected merge policy being applied to your Profile data."
+>abstract="This widget displays the total number of merged profiles within the Profile store at the time the snapshot was taken. The number depends on the selected merge policy being applied to your Profile data."
 
-The **[!UICONTROL Profile count]** widget displays the total number of merged profiles within the Profile Store at the time the snapshot was taken. This number is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
+The **[!UICONTROL Profile count]** widget displays the total number of merged profiles within the Profile store at the time the snapshot was taken. This number is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
 
 See the [section on merge policies earlier in this document](#merge-policies) to learn more.
 
@@ -300,13 +300,13 @@ The [!UICONTROL Profile count trend] widget uses a line graph to illustrate the 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescountchange"
 >title="Profile count change"
->abstract="This widget displays the total number of merged profiles **added** to the Profile Store at the time of the last snapshot. The number depends on the selected merge policy being applied to your Profile data."
+>abstract="This widget displays the total number of merged profiles **added** to the Profile store at the time of the last snapshot. The number depends on the selected merge policy being applied to your Profile data."
 
-The **[!UICONTROL Profile count change]** widget displays the number of merged profiles added to the Profile Store since the previous snapshot. This number is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. You can use the dropdown selector to view the number of profiles added over the last 30 days, 90 days, or 12 months.
+The **[!UICONTROL Profile count change]** widget displays the number of merged profiles added to the Profile store since the previous snapshot. This number is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. You can use the dropdown selector to view the number of profiles added over the last 30 days, 90 days, or 12 months.
 
 >[!NOTE]
 >
->The [!UICONTROL Profile count change] widget reflects the number of profiles added **after** the initial profile ingestion and Profile Store set-up. In other words, if your organization set up the Profile Store and ingested 4,000,000 on Day 1, within 24 hours the dashboard would be available, however the [!UICONTROL Profile count change] widget would be set to 0. This counting method is done to avoid a spike associated with the initial ingestion of profiles into the system. Over the next 30 days, your organization ingests an additional 1,000,000 profiles into the Profile Store. After the next snapshot is taken, the [!UICONTROL Profile count change] widget would show a total of 1,000,000 profiles added, while the [!UICONTROL Profile count] widget would display 5,000,000 total profiles.
+>The [!UICONTROL Profile count change] widget reflects the number of profiles added **after** the initial profile ingestion and Profile store set-up. In other words, if your organization set up the Profile store and ingested 4,000,000 on Day 1, within 24 hours the dashboard would be available, however the [!UICONTROL Profile count change] widget would be set to 0. This counting method is done to avoid a spike associated with the initial ingestion of profiles into the system. Over the next 30 days, your organization ingests an additional 1,000,000 profiles into the Profile store. After the next snapshot is taken, the [!UICONTROL Profile count change] widget would show a total of 1,000,000 profiles added, while the [!UICONTROL Profile count] widget would display 5,000,000 total profiles.
 
 ![The Platform UI Profiles dashboard with the Profile count change widget highlighted.](../images/profiles/profile-count-change.png)
 
@@ -315,9 +315,9 @@ The **[!UICONTROL Profile count change]** widget displays the number of merged p
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
 >title="Profiles count change trend"
->abstract="This widget displays the number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months. The number also depends on the selected merge policy being applied to your Profile data."
+>abstract="This widget displays the number of merged profiles that have been added to the Profile store daily over the last 30 days, 90 days, or 12 months. The number also depends on the selected merge policy being applied to your Profile data."
 
-The **[!UICONTROL Profiles count change trend]** widget displays the total number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months. This number is updated each day when the snapshot is taken, therefore if you were to ingest profiles into Platform, the number of profiles would not be reflected until the next snapshot is taken. The count of profiles added is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
+The **[!UICONTROL Profiles count change trend]** widget displays the total number of merged profiles that have been added to the Profile store daily over the last 30 days, 90 days, or 12 months. This number is updated each day when the snapshot is taken, therefore if you were to ingest profiles into Platform, the number of profiles would not be reflected until the next snapshot is taken. The count of profiles added is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
 
 To learn more, refer to the [section on merge policies earlier in this document](#merge-policies).
 
@@ -344,9 +344,9 @@ This widget helps you to manage your destination activation needs by demonstrati
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="Profiles by identity"
->abstract="This widget displays the breakdown of all the merged profiles in your Profile Store by identities."
+>abstract="This widget displays the breakdown of all the merged profiles in your Profile store by identities."
 
-The **[!UICONTROL Profiles by identity]** widget displays the breakdown of identities across all of the merged profiles in your Profile Store. The total number of profiles by identity (in other words, adding together the values shown for each namespace) may be higher than the total number of merged profiles because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces would be associated with that individual customer.
+The **[!UICONTROL Profiles by identity]** widget displays the breakdown of identities across all of the merged profiles in your Profile store. The total number of profiles by identity (in other words, adding together the values shown for each namespace) may be higher than the total number of merged profiles because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces would be associated with that individual customer.
 
 To learn more, refer to the [section on merge policies earlier in this document](#merge-policies).
 
@@ -365,9 +365,9 @@ To learn more about identities, refer to the [Adobe Experience Platform Identity
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_identityoverlap"
 >title="Identity overlap"
->abstract="This widget uses a Venn diagram to display the overlap of profiles in your Profile Store that contain the two selected identities."
+>abstract="This widget uses a Venn diagram to display the overlap of profiles in your Profile store that contain the two selected identities."
 
-The **[!UICONTROL Identity overlap]** widget uses a Venn diagram, or set diagram, to display the overlap of profiles in your Profile Store that contain the two selected identities.
+The **[!UICONTROL Identity overlap]** widget uses a Venn diagram, or set diagram, to display the overlap of profiles in your Profile store that contain the two selected identities.
 
 Use the widget dropdown menus to select the identities that you wish to compare. Circles display the relative total count of profiles that contain each identity. The number of profiles containing both identities is represented by the size of the overlap between the circles. If a customer interacts with your brand on more than one channel, multiple identities would be associated with that individual customer. In this situation it is likely that your organization has multiple profiles containing fragments from more than one identity.
 
