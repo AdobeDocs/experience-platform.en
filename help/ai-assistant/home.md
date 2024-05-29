@@ -32,7 +32,7 @@ The [!DNL Knowledge Graph] consists of sub-graphs that are referenced whenever q
 
 There are two classes of questions to consider before querying AI Assistant:
 
-**Documentation questions**: Documentation questions are about Adobe concepts related to data or audiences. Some examples of documentation questions include:
+**Product knowledge questions**: Product knowledge questions are about Adobe concepts related to data or audiences. Some examples of product knowledge questions include:
 
 * What is the difference between batch and streaming segmentation?
 * How do I build a segment?
