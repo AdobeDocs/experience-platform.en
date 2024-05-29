@@ -167,9 +167,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Property | Description |
 | --------- | ----------- |
-|`name`| Provide a name for the base connection to the Experience Platform [!DNL Profile Store]. |
+|`name`| Provide a name for the base connection to the Experience Platform [!DNL Profile store]. |
 |`description` | Optionally, you can provide a description for the base connection. |
-| `connectionSpec.id`| Use the connection spec ID for the [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.|
+| `connectionSpec.id`| Use the connection spec ID for the [Experience Platform Profile store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.|
 
 {style="table-layout:auto"}
 
@@ -201,7 +201,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Profile Store",
+            "name": "Connecting to Profile store",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -218,9 +218,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Property | Description |
 | --------- | ----------- |
-|`name`| Provide a name for the source connection to the Experience Platform [!DNL Profile Store]. |
+|`name`| Provide a name for the source connection to the Experience Platform [!DNL Profile store]. |
 |`description` | Optionally, you can provide a description for the source connection. |
-| `connectionSpec.id`| Use the connection spec ID for the [Experience Platform Profile Store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.|
+| `connectionSpec.id`| Use the connection spec ID for the [Experience Platform Profile store](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.|
 | `baseConnectionId`| Use the base connection ID you have obtained in the previous step.|
 | `data.format`| `CSV` is currently the only supported file export format.|
 
@@ -228,7 +228,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Response**
 
-A successful response returns the unique identifier (`id`) for the newly created source connection to [!DNL Profile Store]. This confirms that you have successfully connected to your [!DNL Experience Platform] data. Store this value as it is required in a later step.
+A successful response returns the unique identifier (`id`) for the newly created source connection to [!DNL Profile store]. This confirms that you have successfully connected to your [!DNL Experience Platform] data. Store this value as it is required in a later step.
 
 ```json
 {

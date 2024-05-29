@@ -307,7 +307,7 @@ If you wish to delete the batch, select **[!UICONTROL Delete batch]** near the t
 
 >[!NOTE]
 >
->If the ingested data has been enabled for Profile and processed, then deleting a batch does not delete that data from the Profile Store.
+>If the ingested data has been enabled for Profile and processed, then deleting a batch does not delete that data from the Profile store.
 
 ![The Delete batch button is highlighted on the dataset details page.](../images/datasets/user-guide/delete-batch.png)
 
