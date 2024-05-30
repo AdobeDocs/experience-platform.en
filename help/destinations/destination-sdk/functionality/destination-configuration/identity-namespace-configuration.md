@@ -15,7 +15,7 @@ Depending on the type of destination that you create (streaming or file-based), 
    >
    >When activating audiences to streaming destinations, users must also map _at least one target identity_, in addition to target profile attributes. Otherwise, the audiences will not be activated to the destination platform.
 
-* When creating file-based destination through Destination SDK, the configuration of identity namespaces is _optional_.
+* When creating file-based destinations through Destination SDK, the configuration of identity namespaces is _optional_.
 
 To learn more about identity namespaces in Experience Platform, see the [identity namespaces documentation](../../../../identity-service/features/namespaces.md).
 
