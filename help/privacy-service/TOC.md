@@ -19,6 +19,7 @@ role: User,Admin
   * [Authenticate and access the Privacy Service API](./api/getting-started.md)
   * [Privacy jobs](./api/privacy-jobs.md)
   * [Consent](./api/consent.md)
+  * [Content](./api/content.md)
   * [Appendix](./api/appendix.md)
 * Privacy Service UI {#ui}  
   * [Overview](./ui/overview.md)

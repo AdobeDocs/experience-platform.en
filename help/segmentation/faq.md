@@ -23,7 +23,7 @@ Yes, externally generated pre-built audiences are supported with Audience Portal
 
 ### What permissions do I need to have in order to upload externally generated audiences?
 
-In order to upload externally generated audiences, you need to have the "View audiences/segments", "Manage audiences/segments", "View datasets", "Manage datasets", "View sources", and "Manage sources" permissions. There are no specific role-based controls required to upload externally generated audiences.
+In order to upload externally generated audiences, you need to have the "View segments", "Manage segments", and "Import audiences" permissions. There are no specific role-based controls required to upload externally generated audiences.
 
 ### What happens when I upload an externally generated audience? 
 
@@ -193,6 +193,14 @@ You can re-publish an audience by selecting an audience that is in the inactive 
 
 You can put an audience into the delete state by opening the quick actions menu in Audience Portal and selecting [!UICONTROL Delete].
 
+### Are there any caveats for lifecycle state transitions?
+
+Yes, there are some caveats to be aware of when you are using audiences in downstream services such as Adobe Journey Optimizer or non-customer-based audiences such as account-based audiences.
+
+At this time, you **must** manually check if the audience is used downstream in Adobe Journey Optimizer, as this status is currently not automatically checked.
+
+Additionally, you **must** manually check if the audience is used as a component of an account-based audience, as this status is also not currently automatically checked.
+
 ### Does using an audience as a child audience affect lifecycle state transitions?
 
 >[!NOTE]
@@ -319,7 +327,11 @@ Audience splitting lets you further subset your audience into smaller groups.
 
 When splitting by attribute, there is mutual exclusivity between the groups. This means that if a record meets the criteria of multiple split paths, it will be assigned the **first** path from the left and **not** assigned to any of the other paths.
 
-When splitting by percentage, splits are **randomly** done. This means that the profiles will be randomly assigned to each path. The split is **not** persistent, so the profile could be in a different sub-audience on each evaluation.
+When splitting by percentage, splits are **randomly** done. This means that the profiles will be randomly assigned to each path. The split **is** persistent, which means the profile will be in the same sub-audience on each evaluation.
+
+>[!NOTE]
+>
+>Previously, splits in Audience Composition were **not** persistent.
 
 For more information on the Split block, please read the [Audience Composition UI guide](./ui/audience-composition.md#split).
 

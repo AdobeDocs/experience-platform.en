@@ -1,7 +1,6 @@
 ---
-title: Adobe Experience Platform Release Notes April 2024
+title: Adobe Experience Platform Release Notes
 description: The April 2024 release notes for Adobe Experience Platform.
-exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
 ---
 # Adobe Experience Platform release notes 
 
@@ -116,7 +115,7 @@ Query Service allows you to use standard SQL to query data in Adobe Experience P
 | Scheduled query alerts | Stay informed with proactive notifications while scheduling queries, ensuring efficient and timely task management. You can [subscribe to alerts either when creating a query](../../query-service/ui/query-schedules.md#alerts-for-query-status) or using the inline actions for existing scheduled queries. See the [subscribe to alerts with inline actions](../../query-service/ui/monitor-queries.md#alert-subscription) documentation for more information.|
 | Improved scheduled query navigation | Easily navigate between query templates and scheduled runs for increased productivity. See the documentation on [viewing scheduled query runs](../../query-service/ui/query-schedules.md#scheduled-query-runs) for more information. |
 | Extended Query Output | Access up to 500 rows of query results within the console for deeper analysis of your data.See the [result count](../../query-service/ui/user-guide.md#result-count) documentation for more information. |
-| Legacy Query Editor sunset | As of 30-April-2024 the Enhanced Query Editor has become the default editor for all users. The legacy editor will be deprecated on 30-May-2024 and no longer be available for use. See the [Query Editor user guide](../../query-service/ui/user-guide.md) for more information. |
+| Legacy Query Editor sunset | As of 30-April-2024 the Enhanced Query Editor has become the default editor for all users. The legacy editor will be deprecated on 24-May-2024 and no longer be available for use. See the [Query Editor user guide](../../query-service/ui/user-guide.md) for more information. |
 
 {style="table-layout:auto"}
 
