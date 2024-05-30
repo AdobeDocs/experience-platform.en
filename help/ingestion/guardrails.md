@@ -29,7 +29,7 @@ Read the [streaming ingestion overview](./streaming-ingestion/overview.md) for i
 
 >[!IMPORTANT]
 >
->Guardrails for streaming ingestion are calculated at the organization level and not the sandbox level. This means that your data usage per sandbox is bound to the total license usage entitlement that corresponds with your entire organization. Additionally, data usage in development sandboxes are limited to 10% of your total profiles.
+>Guardrails for streaming ingestion are calculated at the organization level and not the sandbox level. This means that your data usage per sandbox is bound to the total license usage entitlement that corresponds with your entire organization. Additionally, data usage in development sandboxes are limited to 10% of your total profiles. For more information about license usage entitlement, read the [data management best practices guide](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 The following table outlines guardrails to consider when using the streaming sources:
 
