@@ -18,9 +18,9 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 * [Identity optimization algorithm](./identity-optimization-algorithm.md)
 * [Example scenarios](./example-scenarios.md)
 
-With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRM ID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("profile collapse"). To prevent these unwanted merges, you can use configurations provided through identity graph linking rules and allow for accurate personalization for your users.
+With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRM ID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("graph collapse"). To prevent these unwanted merges, you can use configurations provided through identity graph linking rules and allow for accurate personalization for your users.
 
-## Example scenarios where profile collapse could happen
+## Example scenarios where graph collapse could happen
 
 * **Shared device**: Shared device refers to devices that are used by more than one individual. Examples of a shared device include tablets, library computers, and kiosks.
 * **Bad email and phone numbers**: Bad email and phone numbers refer to end-users registering invalid contact information, such as "test<span>@test.com" for email, and "+1-111-111-1111" for phone number.
@@ -115,9 +115,9 @@ If the following experience events are ingested into Experience Platform, the pr
 | You can configure any number of namespaces to be unique | |
 | You can configure the priority ordering of person namespaces in any way you would like. (i.e. cross-device ID > Phone > Email in any order) | You cannot configure a device or cookie namespace to have a higher priority than any person namespace. |
 
-### [!DNL Identity Optimization Algorithm]
+### Identity optimization algorithm
 
-The [!DNL Identity Optimization Algorithm] is a rule that ensures that the limits are enforced. The algorithm honors the most recent links and removes the oldest links to make sure that a given graph stays within the limits that you have defined.
+The identity optimization algorithm is a rule that ensures that the limits are enforced. The algorithm honors the most recent links and removes the oldest links to make sure that a given graph stays within the limits that you have defined.
 
 The following is a list of implications of the algorithm on associating anonymous events to known identifiers:
 
@@ -125,7 +125,7 @@ The following is a list of implications of the algorithm on associating anonymou
   * If CRM IDs are merged by ECID (shared device).
   * If limits are configured to just one CRM ID. 
 
-For more information, read the document on [[!DNL Identity Optimization Algorithm]](./identity-optimization-algorithm.md).
+For more information, read the document on [identity optimization algorithm](./identity-optimization-algorithm.md).
 
 ## Next steps
 
