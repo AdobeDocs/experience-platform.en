@@ -2,13 +2,12 @@
 keywords: Experience Platform;home;popular topics;destinations;connectors;destination connectors;destinations sdk;sdk;SDK
 title: Merkury Enterprise Connections Documentation self-service template for the UI
 description: Learn how to create a Merkury Enterprise Identity destionation connection using the Adobe Experience Platform UI.
-hide: false
-hidefromtoc: false
 ---
 
 # Merkury Enterprise Identity Destination
 
 ## Overview
+
 Clients of Adobe Experience Platform use the Merkury Enterprise Identity Destination to build more accurate, comprehensive, and insightful consumer profiles. With improved profile data, Marketers can power better insights, segments, and models resulting in more accurate targeting and predictive modeling.
 
 ![A diagram of a customer data platform Description automatically
@@ -16,8 +15,7 @@ generated](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
 
 Follow the steps in this documentation page to create a Merkury Connections destination connection and activate data using the Adobe Experience Platform user interface.
 
-![A screenshot of a computer Description automatically
-generated](../../assets/catalog/data-partners/merkury-identity/media/image2.png)
+![A diagram showing the interconnection between Merkury and Experience Platform, including ingestion and activation](../../assets/catalog/data-partners/merkury-identity/media/image2.png)
 
 
 ## Use Cases
@@ -33,10 +31,9 @@ These use cases are executed through a combination of both destination and sourc
 
 ## Prerequisites
 
-[!IMPORTANT]
-
--   To connect to the destination, you need the **View Destinations** and **Manage Destinations**, **Activate Destinations**, **View Profiles**, and **View Segments** [[access control permissions]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Read the [[access control overview]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) or contact your product administrator to obtain the required permissions.
--   To export *identities*, you need the **View Identity Graph** [[access control permission]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).\![Select identity namespace highlighted in the workflow to activate audiences to destinations.](../../assets/catalog/data-partners/merkury-identity/media/image3.png)
+>[!IMPORTANT]
+>- To connect to the destination, you need the **View Destinations** and **Manage Destinations**, **Activate Destinations**, **View Profiles**, and **View Segments** [[access control permissions]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Read the [[access control overview]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) or contact your product administrator to obtain the required permissions.
+>- To export *identities*, you need the **View Identity Graph** [[access control permission]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).\![Select identity namespace highlighted in the workflow to activate audiences to destinations.](../../assets/catalog/data-partners/merkury-identity/media/image3.png)
 
 ## Supported identities {#supported-identities}
 
@@ -74,9 +71,8 @@ Custom uploads|X|Audiences [[imported]{.underline}](https://experienceleague.ad
 
 ## Connect to the destination
 
-[!IMPORTANT]
-
-To connect to the destination, you need the **View Destinations** and **Manage and Activate Dataset Destinations** [[access control permissions]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Read the [[access control overview]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) or contact your product administrator to obtain the required permissions.
+>[!IMPORTANT]
+>To connect to the destination, you need the **View Destinations** and **Manage and Activate Dataset Destinations** [[access control permissions]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Read the [[access control overview]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [[destination configuration tutorial]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). In the destination configuration workflow, fill in the fields listed in the two sections below.
 
@@ -102,24 +98,25 @@ To access your bucket on Experience Platform, you need to provide valid values f
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![A screenshot of a computer Description automatically generated](../../assets/catalog/data-partners/merkury-identity/media/image6.png)
+![A screenshot of destination details](../../assets/catalog/data-partners/merkury-identity/media/image6.png)
 
 
 -   **Name (Required)** - The name the destination will be saved under
 -   **Description** - Short explanation of the destination's purpose
 -   **Bucket Name (Required)** - Name of the Amazon S3 bucket set up on S3
 -   **Folder Path (Required)** - If subdirectories in a bucket are used a path must be defined, or '/' to reference the root path.
--   **File Type** - Select the format Experience Platform should use for the exported files. Currently, the only file type Acxiom processing will be expecting is CSV
+-   **File Type** - Select the format Experience Platform should use for the exported files. Consult your Merkury team for the expected file type for your account.
 
-![A white background with black text Description automatically generated](../../assets/catalog/data-partners/merkury-identity/media/image7.png)
+[!NOTE]
+When selecting the CSV option, Delimiter, Quote Character, Escape Character, Empty Value, Null Value, Compression format, and Include manifest file options will be presented, consuly your Merkury team for the appropiate settings for your account.
 
-![A screenshot of a computer Description automatically generated](../../assets/catalog/data-partners/merkury-identity/media/image8.png)
+![image of csv option](../../assets/catalog/data-partners/merkury-identity/media/image8.png)
 
 ### Existing Account
 
 Accounts already defined using the Merkury Enterprise Identity destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **Destinations** \> **Accounts**;
 
-![A screenshot of a computer Description automatically generated](../../assets/catalog/data-partners/merkury-identity/media/image5.png)
+![A screenshot of destionation account in detaination accounts page](../../assets/catalog/data-partners/merkury-identity/media/image5.png)
 
 
 ### Enable alerts
@@ -131,7 +128,9 @@ When you are finished providing details for your destination connection, select�
 
 ## Activate audiences to this destination
 
-![A screenshot of a computer screen Description automatically generated](../../assets/catalog/data-partners/merkury-identity/media/image9.png)
+>[!IMPORTANT]
+>- To activate data, you need the View Destinations, Activate Destinations, View Profiles, and View Segments access control permissions. Read the access control overview or contact your product administrator to obtain the required permissions.
+>- To export identities, you need the View Identity Graph access control permission.
 
 Read [Activate audience data to batch profile export destinations](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) for instructions on activating audiences to this destination.
 
@@ -143,14 +142,14 @@ Mapping suggestions are provided in the table below listing attributes on your d
 
 |Target Field|Source Description|
 |---|---|
-|id|Identity field to be used to map merkury data to AEP through the Merkury Enterprise Identity Resolution Source connector|
-|Input_First_Name|The person. name. firstName value in Experience Platform.|
-|Input_Last_Name|The person. name. lastName value in Experience Platform.|
-|Input_Address_Line_1|The mailingAddress.streeti value in Experience Platform.|
-|Input_City|The mailingAddress. city value in Experience Platform.|
-|Input_State_Province_Code|The mailingAddress.state value in Experience Platform. Use if the state is in the two character code form.|
-|Input_State_Province_Name|The mailingAddress.state value in Experience Platform. Use if the state is the full state name|
-|Input_Postal_Code|The mailingAddress.postalCode value in Experience Platform.|
+|id|Identity field to be used to map merkury data to Experience Platform through the Merkury Enterprise Identity Resolution Source connector|
+|Input_First_Name|The `person.name.firstName` value in Experience Platform.|
+|Input_Last_Name|The `person.name.lastName` value in Experience Platform.|
+|Input_Address_Line_1|The `mailingAddress.street` value in Experience Platform.|
+|Input_City|The `mailingAddress.city` value in Experience Platform.|
+|Input_State_Province_Code|The `mailingAddress.state` value in Experience Platform. Use if the state is in the two character code form.|
+|Input_State_Province_Name|The `mailingAddress.state` value in Experience Platform. Use if the state is the full state name|
+|Input_Postal_Code|The `mailingAddress.postalCode` value in Experience Platform.|
 |Input_Email_Address|The value you want map as the profiles email address.|
 |Input_Phone|The value you want to map as the profiles phone number.|
 
