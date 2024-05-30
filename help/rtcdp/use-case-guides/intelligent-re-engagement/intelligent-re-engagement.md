@@ -338,7 +338,7 @@ There are no [data usage policies](/help/data-governance/policies/overview.md) r
 
 ### Create audiences {#create-audience}
 
-The re-engagement scenarios use audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways in [!DNL Adobe Experience Platform].
+The re-engagement scenarios use audiences to define specific attributes or behaviors shared by a subset of profiles from your Profile store to distinguish a marketable group of people from your customer base. Audiences can be created in multiple ways in [!DNL Adobe Experience Platform].
 
 For more information on how to create an audience, read the [audience service UI guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 

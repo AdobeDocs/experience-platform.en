@@ -12,7 +12,7 @@ exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
 
 This tutorial provides steps for creating a [!DNL Google PubSub] (hereinafter referred to as "[!DNL PubSub]") using the Platform user interface.
 
-## Getting started
+## Get started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -23,7 +23,8 @@ If you already have a valid [!DNL PubSub] connection, you may skip the remainder
 
 ### Gather required credentials
 
-In order to connect [!DNL PubSub] to Platform, you must provide a valid value for the following credentials:
+You must provide values for the connection properties outlined below in order to connect your [!DNL PubSub] account to Experience Platform. For more information on authentication and prerequisite setup, read the [[!DNL PubSub source] overview](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+
 
 >[!BEGINTABS]
 

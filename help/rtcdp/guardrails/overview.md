@@ -22,7 +22,6 @@ Start here and follow the links below to understand all guardrails across the va
 >
 >Additionally, visit [the digital experience blueprints](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) for further information such as [end-to-end latency diagrams](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) for various Experience Platform services.
 
-
 ## Guardrail types {#guardrail-types}
 
 Note that the two guardrail types across all Real-Time CDP areas and services are: 

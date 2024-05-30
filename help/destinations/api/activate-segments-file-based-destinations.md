@@ -320,7 +320,7 @@ Follow the steps below to set up an audience export dataflow to a cloud storage 
 
 ![Steps to activate audiences highlighting the current step that user is on](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-After deciding which destination you are exporting audiences to, you need to create a source connection. The [source connection](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) represents the connection to the internal [Experience Platform Profile Store](/help/profile/home.md#profile-data-store). 
+After deciding which destination you are exporting audiences to, you need to create a source connection. The [source connection](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) represents the connection to the internal [Experience Platform Profile store](/help/profile/home.md#profile-data-store). 
 
 >[!BEGINSHADEBOX]
 
@@ -338,7 +338,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-   "name":"Connect to Profile Store",
+   "name":"Connect to Profile store",
    "description":"Optional",
    "connectionSpec":{
       "id":"8a9c3494-9708-43d7-ae3f-cda01e5030e1", // this connection spec ID is always the same for Source Connections
@@ -739,7 +739,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-++[!DNL Amazon S3] - Base connection request with assumed role authentication
++++[!DNL Amazon S3] - Base connection request with assumed role authentication
 
 >[!TIP]
 >

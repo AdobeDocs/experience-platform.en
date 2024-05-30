@@ -20,45 +20,96 @@ If you already have an authenticated [!DNL Salesforce] account, you may skip the
 
 ### Gather required credentials {#gather-required-credentials}
 
-In order to authenticate your [!DNL Salesforce] account against Experience Platform, you must provide values that correspond to the following [!DNL Salesforce] credentials:
+The [!DNL Salesforce] source supports basic authentication and OAuth2 Client Credential.
+
+>[!BEGINTABS]
+
+>[!TAB Basic authentication]
+
+You must provide values for the following credentials to connect your [!DNL Salesforce] account using basic authentication.
 
 | Credential | Description |
 | --- | --- |
-| `environmentUrl` | The URL of the [!DNL Salesforce] source instance. |
-| `username` | The username for the [!DNL Salesforce] user account. |
-| `password` | The password for the [!DNL Salesforce] user account. |
-| `securityToken` | The security token for the [!DNL Salesforce] user account. |
-| `apiVersion` | (Optional) The REST API version of the [!DNL Salesforce] instance that you are using. The value for API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0` If this field is left blank, then Experience Platform will automatically use the latest available version. |
+| Environment URL | The URL of the [!DNL Salesforce] source instance. |
+| Username | The username for the [!DNL Salesforce] user account. |
+| Password | The password for the [!DNL Salesforce] user account. |
+| Security Token | The security token for the [!DNL Salesforce] user account. |
+| API version | (Optional) The REST API version of the [!DNL Salesforce] instance that you are using. The value for the API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0`. If this field is left blank, then Experience Platform will automatically use the latest available version. |
 
 For more information on authentication, refer to [this [!DNL Salesforce] authentication guide](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+
+>[!TAB OAuth2 Client Credential]
+
+You must provide values for the following credentials to connect your [!DNL Salesforce] account using OAuth2 Client Credential.
+
+| Credential | Description |
+| --- | --- |
+| Environment URL |  The URL of the [!DNL Salesforce] source instance. |
+| Client ID | The client ID is used in tandem with the client secret as part of OAuth2 authentication. Together, the client ID and client secret enable your application to operate on behalf of your account by identifying your application to [!DNL Salesforce]. |
+| Client secret | The client secret is used in tandem with the client ID as part of OAuth2 authentication. Together, the client ID and client secret enable your application to operate on behalf of your account by identifying your application to [!DNL Salesforce]. |
+| API version | The REST API version of the [!DNL Salesforce] instance that you are using. The value for the API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0`. If this field is left blank, then Experience Platform will automatically use the latest available version. |
+
+For more information on using OAuth for [!DNL Salesforce], read the [[!DNL Salesforce] guide on OAuth Authorization Flows](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
+
+>[!ENDTABS]
 
 Once you have gathered your required credentials, you can follow the steps below to connect your [!DNL Salesforce] account to Experience Platform.
 
 ## Connect your [!DNL Salesforce] account
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the sources workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources available in the Experience Platform sources catalog.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find a specific source using the search option.
+Select **[!DNL Salesforce]** under the *[!UICONTROL CRM]* category, and then select **[!UICONTROL Add data]**.
 
-Select **[!UICONTROL CRM]** from the list of sources categories and then select **[!UICONTROL Add data]** from the [!DNL Salesforce] card.
+>[!TIP]
+>
+>Sources in the sources catalog display the **[!UICONTROL Set up]** option when a given source does not yet have an authenticated account. Once an authenticated account exists, this option changes to **[!UICONTROL Add data]**.
 
 ![The sources catalog on the Experience Platform UI with the Salesforce source card selected.](../../../../images/tutorials/create/salesforce/catalog.png)
 
 The **[!UICONTROL Connect to Salesforce]** page appears. On this page, you can either use new credentials or existing credentials.
 
->[!BEGINTABS]
-
->[!TAB Use an existing Salesforce account]
+### Use an existing account
 
 To use an existing account, select **[!UICONTROL Existing account]** and then select the account that you want to use from the list that appears. When finished, select **[!UICONTROL Next]** to proceed.
 
 ![A list of authenticated Salesforce accounts that already exist in your organization.](../../../../images/tutorials/create/salesforce/existing.png)
 
->[!TAB Create a new Salesforce account]
+### Create a new account
 
-To use a new account, select **[!UICONTROL New account]** and provide a name, description, and your [!DNL Salesforce] authentication credentials. When finished, select **[!UICONTROL Connect to source]** and allow for a few seconds for the new connection to establish.
+To create a new account, select **[!UICONTROL New account]** and provide a name and a description for your new [!DNL Salesforce] account.
 
 ![The interface in which you can create a new Salesforce account by providing the appropriate authentication credentials.](../../../../images/tutorials/create/salesforce/new.png)
+
+Next, select the authentication type that you would like to use for your new account.
+
+>[!BEGINTABS]
+
+>[!TAB Basic authentication]
+
+For basic authentication, select **[!UICONTROL Basic authentication]** and then provide values for the following credentials:
+
+* Environment URL
+* Username
+* Password
+* API version (optional)
+
+When finished, select **[!UICONTROL Connect to source]**.
+
+![The basic authentication interface for Salesforce account creation.](../../../../images/tutorials/create/salesforce/basic.png)
+
+>[!TAB OAuth2 Client Credential]
+
+For OAuth 2 Client Credential, select **[!UICONTROL OAuth2 Client Credential]** and then provide values for the following credentials:
+
+* Environment URL
+* Client ID
+* Client secret
+* API version
+
+When finished, select **[!UICONTROL Connect to source]**.
+
+![The OAuth interface for Salesforce account creation.](../../../../images/tutorials/create/salesforce/oauth2.png)
 
 >[!ENDTABS]
 
