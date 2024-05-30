@@ -25,39 +25,39 @@ After you have added a standard field group to a schema, you can remove any stan
 
 In the following example, the standard field group **[!UICONTROL Demographic Details]** has been added to a schema. To remove a single field such as `maritalStatus`, select the field in the canvas and then select **[!UICONTROL Remove]** in the right rail.
 
-![Remove single field](../images/ui/field-based-workflows/remove-single-field.png)
+![The Schema Editor with the field group, Marital Status field, and Remove highlighted.](../images/ui/field-based-workflows/remove-single-field.png)
 
 If there are multiple fields you wish to remove, you can manage the field group as a whole. Select a field belonging to the group in the canvas, then select **[!UICONTROL Manage related fields]** in the right rail.
 
-![Manage related fields](../images/ui/field-based-workflows/manage-related-fields.png)
+![The Schema Editor with a field and Manage related fields highlighted.](../images/ui/field-based-workflows/manage-related-fields.png)
 
 A dialog appears showing the structure of the field group in question. From here you can use the provided checkboxes to select or deselect the fields that you require. When you are satisfied, select **[!UICONTROL Confirm]**.
 
-![Select fields from field group](../images/ui/field-based-workflows/select-fields.png)
+![The Manage related fields dialog with the field group diagram and Confirm highlighted.](../images/ui/field-based-workflows/select-fields.png)
 
 The canvas reappears with only the selected fields present in the schema structure.
 
-![Fields added](../images/ui/field-based-workflows/fields-added.png)
+![The SchemaEditor with the newly edited field group highlighted.](../images/ui/field-based-workflows/fields-added.png)
 
 ## Add standard fields directly to a schema
 
 You can add fields from standard field groups directly to a schema without needing to know their corresponding field group beforehand. To add a standard field to a schema, select the plus (**+**) icon next to the schema's name in the canvas. An **[!UICONTROL Untitled Field]** placeholder appears in the schema structure and the right rail updates to reveal controls to configure the field.
 
-![Field placeholder](../images/ui/field-based-workflows/root-custom-field.png)
+![The Schema Editor with a root field placeholder highlighted.](../images/ui/field-based-workflows/root-custom-field.png)
 
 Under **[!UICONTROL Field name]**, start typing the name of the field you wish to add. The system automatically searches for standard fields that match the query and lists them under **[!UICONTROL Recommended Standard Fields]**, including the field groups that they belong to.
 
-![Recommended Standard Fields](../images/ui/field-based-workflows/standard-field-search.png)
+![The Field name highlighted and a list of recommended standard fields displayed within the field properties of the Schema Editor.](../images/ui/field-based-workflows/standard-field-search.png)
 
 While some standard fields share the same name, their structure may vary depending on the field group they come from. If a standard field is nested within a parent object in the field group structure, the parent field will also be included in the schema if the child field is added.
 
 Select the preview icon (![Preview icon](../images/ui/field-based-workflows/preview-icon.png)) next to a standard field to view the structure of its field group and better understand how it might be nested. To add the standard field to the schema, select the plus icon (![Plus icon](../images/ui/field-based-workflows/add-icon.png)).
 
-![Add standard field](../images/ui/field-based-workflows/add-standard-field.png)
+![The add icon highlighted on an item of the suggested standard fields.](../images/ui/field-based-workflows/add-standard-field.png)
 
 The canvas updates to show the standard field added to the schema, including any parent fields that it is nested under within the field group structure. The name of the field group is also listed under **[!UICONTROL Field groups]** in the left rail. If you want to add more fields from the same field group, select **[!UICONTROL Manage related fields]** in the right rail.
 
-![Standard field added](../images/ui/field-based-workflows/standard-field-added.png)
+![The Schema Editor with the Field group, standard field, and Manage related fields highlighted.](../images/ui/field-based-workflows/standard-field-added.png)
 
 ## Add custom fields directly to a schema
 
@@ -65,15 +65,15 @@ Similar to the workflow for standard fields, you can also add your own custom fi
 
 To add fields to the root level of a schema, select the plus (**+**) icon next to the schema's name in the canvas. An **[!UICONTROL Untitled Field]** placeholder appears in the schema structure and the right rail updates to reveal controls to configure the field.
 
-![Root custom field](../images/ui/field-based-workflows/root-custom-field.png)
+![The Schema Editor with the add icon and an untitled root level field highlighted.](../images/ui/field-based-workflows/root-custom-field.png)
 
 Start typing in the name of the field you wish to add, and the system automatically starts searching for matching standard fields. To create a new custom field instead, select the top option appended with **([!UICONTROL New Field])**.
 
-![New field](../images/ui/field-based-workflows/custom-field-search.png)
+![The Field name and New Field suggestion highlighted within the field properties of the Schema Editor.](../images/ui/field-based-workflows/custom-field-search.png)
 
 From here, provide a display name and data type for the field. Under **[!UICONTROL Assign field group]**, you must select a field group for the new field to be associated with. Start typing in the name of the field group, and if you have previously [created custom field groups](./resources/field-groups.md#create) they will appear in the dropdown list. Alternatively, you can type a unique name into the field to create a new field group instead.
 
-![Select field group](../images/ui/field-based-workflows/select-field-group.png)
+![The Display name, Type, and Assign to field property settings highlighted in the Schema Editor.](../images/ui/field-based-workflows/select-field-group.png)
 
 >[!WARNING]
 >
@@ -81,11 +81,11 @@ From here, provide a display name and data type for the field. Under **[!UICONTR
 
 When finished, select **[!UICONTROL Apply]**.
 
-![Apply field](../images/ui/field-based-workflows/apply-field.png)
+![Apply is highlighted in the field properties of the Schema Editor.](../images/ui/field-based-workflows/apply-field.png)
 
 The new field is added to the canvas, and is namespaced under your [tenant ID](../api/getting-started.md#know-your-tenant_id) to avoid conflicts with standard XDM fields. The field group that you associated the new field with also appears under **[!UICONTROL Field groups]** in the left rail. 
 
-![Tenant ID](../images/ui/field-based-workflows/tenantId.png)
+![The Schema Editor with the new field added to the canvas, and namespaced under your tenant ID. The Field group and field are highlighted.](../images/ui/field-based-workflows/tenantId.png)
 
 >[!NOTE]
 >
