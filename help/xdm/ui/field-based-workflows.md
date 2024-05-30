@@ -37,7 +37,7 @@ A dialog appears showing the structure of the field group in question. From here
 
 The canvas reappears with only the selected fields present in the schema structure.
 
-![The SchemaEditor with the newly edited field group highlighted.](../images/ui/field-based-workflows/fields-added.png)
+![The Schema Editor with the newly edited field group highlighted.](../images/ui/field-based-workflows/fields-added.png)
 
 ## Add standard fields directly to a schema
 
