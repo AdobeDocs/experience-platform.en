@@ -93,13 +93,15 @@ The new field is added to the canvas, and is namespaced under your [tenant ID](.
 
 ### Add custom fields to the structure of standard field groups
 
-If the schema you are working on has an object-type field provided by a standard field group, you can add your own custom fields to that standard object. Select the plus (**+**) icon next to the root of the object and provide the details of the custom field in the right rail.
+If the schema you are working on has an object-type field provided by a standard field group, you can add your own custom fields to that standard object. Select the plus (**+**) icon next to the root of the object. 
 
-![Add field to standard object](../images/ui/field-based-workflows/add-field-to-standard-object.png)
+>[!IMPORTANT]
+>
+>Any fields added to a field group in one schema will also appear in all other schemas that employ that same field group.
 
-After applying your changes, the new field appears under your tenant ID namespace within the standard object. This nested namespace prevents field-name conflicts within the field group itself in order to avoid breaking changes in other schemas that use the same field group.
+![The Schema Editor with the plus icon next to a standard object highlighted.](../images/ui/field-based-workflows/add-field-to-standard-object.png)
 
-![Field added to standard object](../images/ui/field-based-workflows/added-to-standard-object.png)
+See the [Create and edit schemas in the UI guide](./resources/schemas.md#custom-fields-for-standard-groups) for more information on adding custom fields.
 
 ## Next steps
 
