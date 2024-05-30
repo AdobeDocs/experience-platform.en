@@ -145,7 +145,7 @@ When selecting the consent attribute, choose the values for the attribute that y
 
 ![](../images/policies/select-schema-field.png)
 
-After you have selected at least one consent attribute, the **[!UICONTROL Policy properties]** panel updates to show the estimated number of profiles that would be allowed under this policy, including the percentage of the total profile store. This estimation automatically updates as you adjust the policy configuration.
+After you have selected at least one consent attribute, the **[!UICONTROL Policy properties]** panel updates to show the estimated number of profiles that would be allowed under this policy, including the percentage of the total Profile store. This estimation automatically updates as you adjust the policy configuration.
 
 ![](../images/policies/audience-preview.png)
 

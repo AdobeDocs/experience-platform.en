@@ -104,7 +104,7 @@ The **[!UICONTROL XDM Individual Prospect Profile]** class comes pre-configured 
 
 ![Preconfigured fields for the XDM Individual Prospect Profile class.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
-Next, you must select the partnerID identity that you created earlier as the primary identity for the schema. Profile records must carry a primary identifier. This step is required to make sure that prospect data can be loaded into the profile store and made available for segmentation and activation.
+Next, you must select the partnerID identity that you created earlier as the primary identity for the schema. Profile records must carry a primary identifier. This step is required to make sure that prospect data can be loaded into the Profile store and made available for segmentation and activation.
 
 >[!AVAILABILITY]
 >

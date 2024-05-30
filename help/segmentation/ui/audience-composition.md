@@ -226,7 +226,7 @@ Additionally, you can limit the number of profiles returned by enabling the **[!
 
 ## [!UICONTROL Split] {#split-block}
 
-The **[!UICONTROL Split]** block type allows you to split your new audience into various sub-audiences. You can either split this audience based on percentage or by an attribute.
+The **[!UICONTROL Split]** block type allows you to split your new audience into various sub-audiences. You can either split this audience based on percentage or by an attribute. When splitting your audience into sub-audiences, this split is **persistent**. This means that the profile will be in the same sub-audience on each evaluation.
 
 To add a **[!UICONTROL Split]** block, select the **+** icon, followed by **[!UICONTROL Split]**.
 
