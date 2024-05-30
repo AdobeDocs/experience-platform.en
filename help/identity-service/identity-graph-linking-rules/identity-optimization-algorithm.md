@@ -12,8 +12,6 @@ The identity optimization algorithm is a graph algorithm on Identity Service tha
 
 ## Input parameters {#input-parameters}
 
-This section outlines input parameters...
-
 ### Unique namespace {#unique-namespace}
 
 **A unique namespace determines the links that get removed if graph collapse happens.** 
@@ -33,11 +31,11 @@ A namespace that you declare to be unique will automatically be configured to ha
 >
 >* All namespaces that are person identifiers and that are used in the sandbox to generate identity graphs must be marked as a unique namespace. Otherwise, you may see undesirable linking results.
 
-<!-- ### Namespace priority {#namespace-priority}
+### Namespace priority {#namespace-priority}
 
 Namespace priority determines how the identity optimization algorithm removes links.
 
-Namespaces in Identity Service have an implicit relative order of importance. Consider a graph structured like a pyramid. There is one node on the top layer, two nodes on the middle layer, and four nodes on the bottom layer. Namespace priority must reflect this relative order to ensure that a person entity is accurately represented. -->
+Namespaces in Identity Service have an implicit relative order of importance. Consider a graph structured like a pyramid. There is one node on the top layer, two nodes on the middle layer, and four nodes on the bottom layer. Namespace priority must reflect this relative order to ensure that a person entity is accurately represented.
 
 ## Process
 
