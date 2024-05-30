@@ -1,5 +1,5 @@
 ---
-title: mediaCollection
+title: streamingMedia
 description: Configure the Web SDK to collect data related to media usage on your web properties.
 ---
 
