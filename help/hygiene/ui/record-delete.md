@@ -37,13 +37,13 @@ The request creation workflow appears. By default, the **[!UICONTROL Delete reco
 
 >[!IMPORTANT] 
 > 
->As part of ongoing changes to improve efficiency and make dataset operations less expensive, organizations who have been moved to the Delta format can delete data from the Identity Service, Real-Time Customer Profile, and the data lake. This type of user is referred to as delta-migrated. Users from organizations who have been delta-migrated can choose to delete records from either a single or all datasets. Users from organizations who have not been delta-migrated cannot choose to delete records from either a single or all datasets as seen in the image below. In this case, continue to the [provide identities](#provide-identities) section of the guide.
+>To improve efficiency and make dataset operations less expensive, organizations who have been moved to the Delta format can delete data from the Identity Service, Real-Time Customer Profile, and the data lake. This type of user is referred to as delta-migrated. Users from organizations who have been delta-migrated can choose to delete records from either a single or all datasets. Users from organizations that have not undergone delta migration are unable to selectively delete records from either a single dataset or all datasets, as shown in the image below. In this case, continue to the [Provide identities](#provide-identities) section of the guide.
 
 ![The request creation workflow with the [!UICONTROL Delete record] option selected and highlighted.](../images/ui/record-delete/delete-record.png)
 
 ## Select datasets {#select-dataset}
 
-The next step is to determine whether you want to delete records from a single dataset or all datasets. If this option is not available to you, continue to the [provide identities](#provide-identities) section of the guide. 
+The next step is to determine whether you want to delete records from a single dataset or all datasets. If this option is not available to you, continue to the [Provide identities](#provide-identities) section of the guide. 
 
 Under the **[!UICONTROL Record Details]** section, use the radio button to select between a specific dataset and all datasets. If you choose **[!UICONTROL Select dataset]**, proceed to select the database icon (![The database icon](../images/ui/record-delete/database-icon.png)) to open a dialog that provides a list of available datasets. Select the desired dataset from the list followed by **[!UICONTROL Done]**.  
 
@@ -71,7 +71,7 @@ If you want to delete records from all datasets, select **[!UICONTROL All datase
 
 When deleting records, you must provide identity information so the system can determine which records are to be deleted. For any dataset in Platform, records are deleted based on the **identity namespace** field that is defined by the dataset's schema.
 
-Like all identity fields in Platform, a identity namespace is composed of two things: a **type** (sometimes referred to as an identity namespace) and a **value**. The identity type provides context as to how the field identifies a record (such as an email address), and the value represents a record's specific identity for that type (for example, `jdoe@example.com` for the `email` identity type). Common fields used as identities include account information, device IDs, and cookie IDs.
+Like all identity fields in Platform, an identity namespace is composed of two things: a **type** (sometimes referred to as an identity namespace) and a **value**. The identity type provides context as to how the field identifies a record (such as an email address). The value represents a record's specific identity for that type (for example, `jdoe@example.com` for the `email` identity type). Common fields used as identities include account information, device IDs, and cookie IDs.
 
 >[!TIP]
 >
