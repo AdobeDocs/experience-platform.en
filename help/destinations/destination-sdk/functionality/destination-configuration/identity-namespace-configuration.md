@@ -9,7 +9,7 @@ Experience Platform uses identity namespaces to describe the type of specific id
 
 Depending on the type of destination that you create (streaming or file-based), keep in mind the following identity namespace requirements:
 
-* When creating real-time (streaming) destinations through Destination SDK, in addition to [configuring a partner schema](schema-configuration.md) to which users can map profile attributes and identities, you must also define _at least one_ identity namespaces supported by your destination platform. For example, if your destination platform accepts hashed emails and [!DNL IDFA], you must define these two identities as [described further down in this document](#supported-parameters).
+* When creating real-time (streaming) destinations through Destination SDK, in addition to [configuring a partner schema](schema-configuration.md) to which users can map profile attributes and identities, you must also define *at least one* identity namespaces supported by your destination platform. For example, if your destination platform accepts hashed emails and [!DNL IDFA], you must define these two identities as [described further down in this document](#supported-parameters).
 
    >[!IMPORTANT]
    >
