@@ -1,29 +1,39 @@
 ---
 keywords: Experience Platform;home;popular topics;destinations;connectors;destination connectors;destinations sdk;sdk;SDK
-title: Merkury Enterprise Identity Resolution Documentation self-service template for the UI
-description: Learn how to create a Merkury Enterprise Identity Resolution destionation connection using the Adobe Experience Platform UI.
+title: Merkury Enterprise Connections Documentation self-service template for the UI
+description: Learn how to create a Merkury Enterprise Connections destionation connection using the Adobe Experience Platform UI.
 ---
 # Merkury Enterprise Connections Destination
 
+>[!NOTE]
+>
+>The destination connector and documentation page are created and maintained by the Merkury team. For any inquiries or update requests, please contact your Merkury account representitive.
+
 ## Overview
 
-Use the Merkury Enterprise Identity Destination to securely deliver media audiences to Merkury. Merkury provides marketers easy matching and delivery of person-based audiences to Merkury's 80+ premium addressable TV/CTV, publisher, and ad-tech connections. Merkury is powered by a comprehensive US adult consumer identity graph of 268+ million people.
+Use the Merkury Enterprise Connections destination to securely deliver audiences to Merkury. Merkury provides marketers easy matching and delivery of person-based audiences to Merkury's 80+ premium addressable TV/CTV, publisher, and ad-tech connections. Merkury is powered by a comprehensive US adult consumer identity graph of 268+ million people.
 
 ![A diagram showing the interconnection between Merkury and Experience Platform, including ingestion and activation](../../assets/catalog/data-partners/merkury-connections/media/image1.png)
 
-Follow the steps in this documentation page to create a Merkury Identity destination connection and activate data using the Adobe Experience Platform user interface.![The Merkury Enterprise Conections destination card highlighted in the Experience Platform destinations catalog.](../../assets/catalog/data-partners/merkury-connections/media/image2.png)
+Follow the steps in this documentation page to create a Merkury Connections destination connection and activate audiences using the Adobe Experience Platform user interface. 
 
+>[!NOTE]
+
+>If you are looking to activate audiences to media destinations with you Merkury Connect account, use our Merkury Connections destination instead.
+
+![The Merkury Enterprise Conections destination card highlighted in the Experience Platform destinations catalog.](../../assets/catalog/data-partners/merkury-connections/media/image2.png)
 
 ## Use Cases
 
-- *Digital Media Activation*: Easy matching and delivery of your audience profiles to Merkury’s 50+ premium addressable publishers and ad-tech connections.
-- *Improve Efficiencies*: Enhance your cookie-less, addressable media reach, improve targeting efficiencies and Return on Advertising Spend (ROAS).
+* **Digital Media Activation**: Easy matching and delivery of your audience profiles to Merkury’s 50+ premium addressable publishers and ad-tech connections.
+* **Improve Efficiencies**: Enhance your cookie-less, addressable media reach, improve targeting efficiencies and Return on Advertising Spend (ROAS).
 
 ## Prerequisites
 
 >[!IMPORTANT]
->-   To connect to the destination, you need the **View Destinations** and **Manage Destinations**, **Activate Destinations**, **View Profiles**, and **View Segments** [[access control permissions]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Read the [[access control overview]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) or contact your product administrator to obtain the required permissions.
->-   To export *identities*, you need the **View Identity Graph** [[access control permission]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).\![Select identity namespace highlighted in the workflow to activate audiences to destinations.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
+
+>* To connect to the destination, you need the **View Destinations** and **Manage Destinations**, **Activate Destinations**, **View Profiles**, and **View Segments** [[access control permissions]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Read the [[access control overview]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **View Identity Graph** [[access control permission]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).\![Select identity namespace highlighted in the workflow to activate audiences to destinations.](../../assets/catalog/data-partners/merkury-connections/media/image3.png)
 
 ## Supported identities {#supported-identities}
 
@@ -63,6 +73,7 @@ Refer to the table below for information about the destination export type and f
 ## Connect to the destination
 
 >[!IMPORTANT]
+
 >To connect to the destination, you need the **View Destinations** and **Manage and Activate Dataset Destinations** [[access control permissions]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Read the [[access control overview]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) or contact your product administrator to obtain the required permissions.
 
 To connect to this destination, follow the steps described in the [[destination configuration tutorial]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). In the destination configuration workflow, fill in the fields listed in the two sections below.
@@ -84,7 +95,7 @@ To access your bucket on Experience Platform, you need to provide valid values f
 
 {style="table-layout:auto"}
 
-![A screenshot of a computer Description automatically generated](../../assets/catalog/data-partners/merkury-connections/media/image4.png)
+![new destination creation screen](../../assets/catalog/data-partners/merkury-connections/media/image4.png)
 
 #### Fill in destination details
 
@@ -98,8 +109,9 @@ To configure details for the destination, fill in the required and optional fiel
 -   **Folder Path (Required)** - If subdirectories in a bucket are used a path must be defined, or '/' to reference the root path.
 -   **File Type** - Select the format Experience Platform should use for the exported files. Consult your Merkury team for the expected file type for your account.
 
-[!NOTE]
-When selecting the CSV option, Delimiter, Quote Character, Escape Character, Empty Value, Null Value, Compression format, and Include manifest file options will be presented, consuly your Merkury team for the appropiate settings for your account.
+>[!NOTE]
+
+>When selecting the CSV option, Delimiter, Quote Character, Escape Character, Empty Value, Null Value, Compression format, and Include manifest file options will be presented, consuly your Merkury team for the appropiate settings for your account.
 
 ![image of csv options](../../assets/catalog/data-partners/merkury-connections/media/image8.png)
 
@@ -107,7 +119,7 @@ When selecting the CSV option, Delimiter, Quote Character, Escape Character, Emp
 
 Accounts already defined using the Merkury Enterprise Connections destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **Destinations** \> **Accounts**;
 
-![A screenshot of destionation account in detaination accounts page](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
+![A screenshot of destination account in destination accounts page](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
 
 ## Enable alerts
 
@@ -118,8 +130,9 @@ When you are finished providing details for your destination connection, select�
 ## Activate audiences to this destination
 
 >[!IMPORTANT]
->- To activate data, you need the View Destinations, Activate Destinations, View Profiles, and View Segments access control permissions. Read the access control overview or contact your product administrator to obtain the required permissions.
->- To export identities, you need the View Identity Graph access control permission.
+
+>* To activate data, you need the View Destinations, Activate Destinations, View Profiles, and View Segments access control permissions. Read the access control overview or contact your product administrator to obtain the required permissions.
+>* To export identities, you need the View Identity Graph access control permission.
 
 
 Read [Activate audience data to batch profile export destinations](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) for instructions on activating audiences to this destination.
@@ -149,10 +162,10 @@ Mapping suggestions are provided in the table below listing attributes on your d
 
 To verify if data has been exported successfully, check your Amazon S3 Storage bucket, and make sure that the exported files contain the expected profile populations.
 
-## Next steps
-
-By following this tutorial, you have successfully created a dataflow to export profile data from Experience Platform to your Merkury managed S3 location. Next, you need to contact your Merkury representative with the name of the account, file names, and the bucket path so that processing can set up.
-
 ## Data usage and governance
 
 All Adobe Experience Platform destinations are compliant with data usage policies when handling your data. For detailed information on how Adobe Experience Platform enforces data governance, read the [Data Governance overview](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
+
+## Next steps
+
+By following this tutorial, you have successfully created a dataflow to export profile data from Experience Platform to your Merkury managed S3 location. Next, you need to contact your Merkury representative with the name of the account, file names, and the bucket path so that processing can set up.
