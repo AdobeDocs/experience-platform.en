@@ -57,7 +57,7 @@ To access your saved queries, select the bookmark icon below the input box, then
 
 +++ -->
 
-### View data in your sandbox {#view-data-in-your-sandbox}
+### View operational data objects {#view-operational-data-objects}
 
 Depending on your query, AI Assistant provides additional information pertaining to the data in your sandbox. To view how the response to your query applies to your particular sandbox, select **[!UICONTROL In your sandbox].** 
 
@@ -73,7 +73,7 @@ In this example, AI Assistant returns additional information regarding the exist
 
 ### View citations {#view-citations}
 
-You can verify responses returned to you by AI Assistant by reviewing citations available with every answer.
+You can verify responses returned to you by AI Assistant by reviewing citations available with every product knowledge answer.
 
 +++Select to view an example of how to display sources
 
@@ -85,31 +85,31 @@ AI Assistant updates the interface and provides you with links to documentation 
 
 ![A dropdown menu of the citations that AI Assistant provides for concept questions.](./images/citations.png)
 
-You can also use the queries that AI Assistant provides under **[!UICONTROL Related suggestions]** to further explore topics related to your original query.
+You can also use the suggestions that AI Assistant provides under **[!UICONTROL Related suggestions]** to further explore topics related to your original question.
 
-![A list of queries provided by AI Assistant as related suggestions.](./images/related-suggestions.png)
+![A list of suggestions provided by AI Assistant.](./images/related-suggestions.png)
 
 +++
 
-### Usage data and visualization {#usage-data-and-visualization}
+### Operational insights {#operational-insights}
 
-You must be in an active sandbox in order for AI Assistant to sufficiently respond to a question about your usage data.
+You must be in an active sandbox in order for AI Assistant to sufficiently respond to a question about your operational insights.
 
-+++Select to view an example of usage data questions and data visualization
++++Select to view an example of an operational insights question
 
 In the example below, AI Assistant is asked the following query: **"Show me dataflows that were created using the Amazon S3 source"**, AI Assistant then responds with a table listing your dataflows and their corresponding IDs. To view the whole table of data, select the expand icon on the top right.
 
-![Follow up question about usage data.](./images/usage-data-question.png)
+![Follow up question about operational insights.](./images/usage-data-question.png)
 
 An expanded view of the table appears, providing you with a more comprehensive list of dataflows based on the parameters of your query.
 
 ![A view of the expanded table.](./images/table.png)
 
-When prompted with a usage data question, AI Assistant provides an explanation of how it computed the answer. In the example below, AI Assistant outlines the steps it took in order to identify the dataflows that were created using the [!DNL Amazon S3] source.
+When prompted with an operational insights question, AI Assistant provides an explanation of how it computed the answer. In the example below, AI Assistant outlines the steps it took in order to identify the dataflows that were created using the [!DNL Amazon S3] source.
 
 ![Follow up question about segment definitions illustrating how AI Assistant computed the answer.](./images/answer-explained.png)
 
-You can also provide filters and modifications to your queries, and you can instruct AI Assistant to render its findings based on the filters that you include. For example, you can ask AI Assistant to show you a trend of the count of segment definitions in the order of their created date, remove segment definitions with zero total profiles, and use month names instead of integers when displaying the data.
+You can also provide filters and modifications to your questions, and you can instruct AI Assistant to render its findings based on the filters that you include. For example, you can ask AI Assistant to show you a trend of the count of segment definitions in the order of their created date, remove segment definitions with zero total profiles, and use month names instead of integers when displaying the data.
 
 +++
 
