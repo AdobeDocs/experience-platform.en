@@ -8,9 +8,9 @@ hidefromtoc: true
 
 # Customer timestamp ordering
 
-In Adobe Experience Platform, data order is not automatically guaranteed when ingesting data through streaming ingestion to the Profile store. With customer timestamp ordering, you can guarantee that the latest message, as per the provided customer timestamp, will be retained on the Profile store. All stale messages will then be dropped, and will **not** be available for use in downstream services that use profile data like segmentation and destinations. As a result, this lets your profile data be consistent, and lets your profile data remain in sync with your source systems.
+In Adobe Experience Platform, data order is not guaranteed by default when ingesting data through streaming ingestion to the Profile store. With customer timestamp ordering, you can guarantee that the latest message, as per the provided customer timestamp, will be retained on the Profile store. All stale messages will then be dropped, and will **not** be available for use in downstream services that use profile data like segmentation and destinations. As a result, this lets your profile data be consistent, and lets your profile data remain in sync with your source systems.
 
-To enable customer timestamp ordering, use the `extSourceSystemAudit.lastUpdatedDate` field within the [External Source System Audit Attributes data type](../xdm/data-types/external-source-system-audit-attributes.md) and contact your Adobe Technical Account Manager or Adobe Customer Care with your sandbox and dataset information.
+To enable customer timestamp ordering, use the `extSourceSystemAudit.lastUpdatedDate` field within the [External Source System Audit Attributes data type](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/external-source-system-audit-details.schema.md) and contact your Adobe Technical Account Manager or Adobe Customer Care with your sandbox and dataset information.
 
 ## Constraints
 
@@ -24,7 +24,7 @@ During this private beta, the following constraints apply when using customer ti
 - The `extSourceSystemAudit.lastUpdatedDate` field **must** be in the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format. When using the ISO 8601 format, it **must** be as a full datetime in the format `yyyy-MM-ddTHH:mm:ss.sssZ` (for example, `2028-11-13T15:06:49.001Z`). 
 - All rows of data ingested **must** contain the `extSourceSystemAudit.lastUpdatedDate` field as a top level field group. This means that this field **must** not be nested within the XDM schema. If this field is missing or is in an incorrect format, the malformed record will **not** be ingested, and an corresponding error message will be sent.
 - Any dataset enabled for customer timestamp ordering **must** be a new dataset without any previously ingested data.
-- For any given profile fragment, only rows that contain a more recent `extSourceSystemAudit.lastUpdatedDate` will be ingested. If the row doesn't contain a more recent `extSourceSystemAudit.lastUpdatedDate`, the row will be discarded.
+- For any given profile fragment, only rows that contain a more recent `extSourceSystemAudit.lastUpdatedDate` will be ingested. Rows that contain an `extSourceSystemAudit.lastUpdatedDate` that is either older or the same age will be discarded.
 
 ## Recommendations
 
