@@ -6,13 +6,18 @@ exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
 ---
 # Generate sample data for an XDM schema in the UI
 
+>[!CONTEXTUALHELP]
+>id="platform_xdm_downloadsamplefile"
+>title="Download sample file"
+>abstract="Generate a sample JSON object that conforms to your chosen schema's structure. This object can serve as a template to ensure your data is correctly formatted for ingestion into datasets that employ that schema. The sample JSON file will be downloaded by your browser."
+
 In order to ingest data into Adobe Experience Platform, the format and structure of the data must comply with an existing Experience Data Model (XDM) schema. Depending on the complexity of the schema for a particular dataset, it can be difficult to determine the exact shape of the data that the dataset expects upon ingestion.
 
 For any schema that you define in the Experience Platform UI, you can generate a sample JSON object that conforms to the schema's structure. This object can serve as a template for any data that is ingested into datasets that employ the schema in question.
 
 In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. Under the **[!UICONTROL Browse]** tab, locate the schema that you want to generate sample data for. Select it from the list, and the right rail updates to show details about the schema. From here, select **[!UICONTROL Download sample file]**.
 
-![](../images/ui/sample/sample-data.png)
+![The Browse tab of the Schemas workspace with a schema selected and download sample file highlighted.](../images/ui/sample/sample-data.png)
 
 A sample JSON file is downloaded by the browser. You can now use this file as a reference for how to structure your data when ingesting into datasets that employ this schema.
 

@@ -7,6 +7,11 @@ exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 ---
 # Export XDM schemas in the UI
 
+>[!CONTEXTUALHELP]
+>id="platform_xdm_copyjsonstructure"
+>title="Copy JSON structure"
+>abstract="Generate an export payload for your chosen schema by copying the JSON structure to your clipboard. Use this feature to export the details of any schema in the Schema Library. This exported JSON can then be used to import the schema, and any related resources, into a different sandbox or organization. This makes sharing and reusing schemas between different environments simple and efficient."
+
 All resources within the Schema Library are contained in a specific sandbox within an organization. In some cases, you may want to share Experience Data Model (XDM) resources between sandboxes and organizations.
 
 To address this need, the [!UICONTROL Schemas] workspace in the Adobe Experience Platform UI allows you to generate an export payload for any schema within in the Schema Library. This payload can then be used in a call to the Schema Registry API to import the schema (and all dependent resources) into a target sandbox and organization.
@@ -36,6 +41,8 @@ Next, select the **[!UICONTROL Copy JSON]** icon (![Copy Icon](../images/ui/expo
 ![The Schemas workspace with a schema row and [!UICONTROL Copy to JSON] highlighted.](../images/ui/export/copy-json.png)
 
 This copies a JSON payload to your clipboard, generated based on the schema structure. For the "[!DNL Loyalty Members]" schema shown above, the following JSON is generated:
+
++++Select to expand an example JSON payload
 
 ```json
 [
@@ -199,6 +206,8 @@ This copies a JSON payload to your clipboard, generated based on the schema stru
 ]
 ```
 
++++
+
 The Payload can also be copied by selecting [!UICONTROL More] in the top right of the Schema Editor. A dropdown menu provides two options, [!UICONTROL Copy JSON structure] and [!UICONTROL Delete schema].
 
 >[!NOTE]
@@ -211,7 +220,7 @@ The payload takes the form of an array, with each array item being an object tha
 
 Note that each instance of your organization's tenant ID appears as `<XDM_TENANTID_PLACEHOLDER>` in the payload. These placeholders will be automatically replaced with the appropriate tenant ID value depending on where you import the schema in the next step.
 
-## Import the resource using the API
+## Import the resource using the API {#import-resource-with-api}
 
 Once you have copied the export JSON for the schema, you can use it as the payload for a POST request to the `/rpc/import` endpoint in the Schema Registry API. See the [import endpoint guide](../api/import.md) for details on how to configure the call to send the schema to the desired organization and sandbox.
 
