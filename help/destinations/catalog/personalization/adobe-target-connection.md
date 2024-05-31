@@ -10,7 +10,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 
 |Release month|Update type|Description|
 |---|---|---|
-|April 2024| Functionality and documentation update | When connecting to the Target destination with using a datastream ID, you now *do not need* to necessarily enable the datastream for edge segmentation. This means that the Target destination will work with batch and streaming audiences, though the use cases that you can accomplish differ. View the table in the [connection parameters](#parameters) section for more information. |
+|April 2024| Functionality and documentation update | When connecting to the Target destination and using a datastream ID, you now *do not need* to necessarily enable the datastream for edge segmentation. This means that the Target destination will work with batch and streaming audiences, though the use cases that you can accomplish differ. View the table in the [connection parameters](#parameters) section for more information. |
 |January 2024|Functionality and documentation update| You can now share audiences and profile attributes to the Adobe Target connection for the default production sandbox and other non-default sandboxes.  |
 |June 2023|Functionality and documentation update| As of June 2023, you can select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) in Adobe Target for more information about workspaces.|
 |May 2023|Functionality and documentation update| As of May 2023, the **[!UICONTROL Adobe Target]** connection supports [attribute-based personalization](../../ui/activate-edge-personalization-destinations.md#map-attributes) and is generally available to all customers.|
@@ -54,9 +54,9 @@ Read more about granting permissions for [Target Premium](https://experienceleag
 
 This section describes which types of audiences you can export to this destination.
 
->[!IMPORTANT]
+>[!TIP]
 >
->Audiences that you activate to this destination must use the [Active-on-Edge Merge Policy](../../../segmentation/ui/segment-builder.md#merge-policies). The [!DNL Active-On-Edge] merge policy ensures that audiences are constantly evaluated [on the edge](../../../segmentation/ui/edge-segmentation.md) and are available for real-time and next-page personalization use case.
+>When activating edge audiences for same-page and next-page personalization use cases, the audiences *must* use an [active-on-edge merge policy](../../../segmentation/ui/segment-builder.md#merge-policies). The [!DNL active-on-edge] merge policy ensures that audiences are constantly evaluated [on the edge](../../../segmentation/ui/edge-segmentation.md) and are available for real-time and next-page personalization use case. Read about [all available use cases](#parameter), based on implementation type.
 > If you map audiences which use a different merge policy to edge destinations, those audiences will not be evaluated.
 > Follow the instructions on [creating a merge policy](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy), and make sure to enable the **[!UICONTROL Active-On-Edge Merge Policy]** toggle.
 
