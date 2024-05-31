@@ -72,7 +72,15 @@ Refer to the subsections below for steps on how to manage the relevant permissio
 
 ### Manage permissions under Adobe Experience Platform {#manage-platform}
 
-From the **[!UICONTROL Permissions]** area in Adobe Experience Platform select the role that you want to edit.
+>[!NOTE]
+>
+>To manage permissions for a role, you will require administrator rights. If you do not have administrator privileges, contact your system administrator.
+
+Experience Cloud's **[!UICONTROL Permissions]** section allows you to define user roles and policies to manage access for features and objects within a product application.
+
+Through [!UICONTROL Permissions], you can create and manage roles and assign the desired resource permissions for these roles. 
+
+![Adobe Experience Cloud highlighting the Permissions product.](./images/permissions/permissions-product.png)
 
 In order to access data collection features, you must enable all permissions in the **[!UICONTROL Sandboxes]**, **[!UICONTROL Data Modeling]**, **[!UICONTROL Identity Management]**, and **[!UICONTROL Data Collection]** categories.
 
