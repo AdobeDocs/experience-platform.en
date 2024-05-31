@@ -376,7 +376,7 @@ A schema can be deleted within the UI from the Schema Editor using [!UICONTROL M
 
 ### Copy JSON structure {#copy-json-structure}
 
-Select **[UICONTROL Copy JSON structure]** to generate an export payload for any schema in the Schema Library. This action copies the JSON structure to your clipboard. Your exported JSON can then be used to import the schema, and any related resources, into a different sandbox or organization. This makes sharing and reusing schemas between different environments simple and efficient.
+Select **[!UICONTROL Copy JSON structure]** to generate an export payload for any schema in the Schema Library. This action copies the JSON structure to your clipboard. Your exported JSON can then be used to import the schema, and any related resources, into a different sandbox or organization. This makes sharing and reusing schemas between different environments simple and efficient.
 
 ## Next steps and additional resources
 
