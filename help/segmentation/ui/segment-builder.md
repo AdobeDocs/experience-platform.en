@@ -216,12 +216,12 @@ The list of available time constraints are as follows:
 | From (to) | The attribute or event being compared **must** occur within the two calendar dates chosen. This period of time is **inclusive** of both dates. For example, if I had a time constraint of July 1st, 2024 to November 13th, 2024, the constraint would be between midnight on July 1st, 2024 to 11:59:59 PM on November 13th, 2024. | |
 | During | The attribute or event being compared **must** occur within the selected month or year. If a month is selected, you need to choose both the month and a year that the attribute or event took place in.  If a year is selected, you need to just choose the year that the attribute or event took place in. If you select a month, you can also enable the Ignore year checkbox. If the Ignore year checkbox is enabled, the year is not compared. Otherwise, the year will be compared. | |
 | Within (+/-) | The attribute or event being compared **must** occur within days, weeks, months, or years of the selected date. The selected date can be today, yesterday, or another custom date of your choosing. | |
-| Before | | |
-| After | | |
-| Rolling range | | |
-| In next | | |
-| Exists | | |
-| Does not exist | | |
+| Before | The attribute or event being compared **must** occur before the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | |
+| After | The attribute or event being compared **must** occur after the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago.  | |
+| Rolling range | The attribute or event being compared must occur between the two relative dates. The dates can be represented in seconds, minutes, hours, days, weeks, months, or years. | |
+| In next | The attribute or event being compared must occur within the next period of time selected. The selected periods of time include minutes, hours, days, weeks, months, and years. | |
+| Exists | The attribute exists. | |
+| Does not exist | The attribute does not exist. | |
 
 When you're applying a time constraint on a time-based attribute, the attribute **must** have a full timestamp.
 
