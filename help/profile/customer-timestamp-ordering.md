@@ -10,7 +10,7 @@ hidefromtoc: true
 
 In Adobe Experience Platform, data order is not guaranteed by default when ingesting data through streaming ingestion to the Profile store. With customer timestamp ordering, you can guarantee that the latest message, as per the provided customer timestamp, will be retained on the Profile store. All stale messages will then be dropped, and will **not** be available for use in downstream services that use profile data like segmentation and destinations. As a result, this lets your profile data be consistent, and lets your profile data remain in sync with your source systems.
 
-To enable customer timestamp ordering, use the `extSourceSystemAudit.lastUpdatedDate` field within the [External Source System Audit Attributes data type](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/external-source-system-audit-details.schema.md) and contact your Adobe Technical Account Manager or Adobe Customer Care with your sandbox and dataset information.
+To enable customer timestamp ordering, use the `extSourceSystemAudit.lastUpdatedDate` field within the [External Source System Audit Attributes field group](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.md) and contact your Adobe Technical Account Manager or Adobe Customer Care with your sandbox and dataset information.
 
 ## Constraints
 
