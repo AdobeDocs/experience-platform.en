@@ -46,6 +46,12 @@ There are two classes of questions to consider before querying AI Assistant:
 
 >[!ENDSHADEBOX]
 
+
+## User agreement and Beta terms {#terms}
+
+You must agree to [a user agreement](https://adobe.sharepoint.com/:w:/s/ExCUserExperience/EVzJv1jFBiZGnaFEufsfIqwBC_9ehv3KaXTkEMTGpQFRpg?e=qzwOo8) before you can use AI Assistant. The user agreement also contains the public beta agreement. This is so that you can use additional AI Assistant features as they roll out in a beta capacity.
+
+
 ## Feature access {#feature-access}
 
 Access to AI Assistant is governed by the following parameters:
@@ -74,11 +80,9 @@ You can ask AI Assistant questions about your operational insights in the follow
 
 For operational insights queries, answers may not reflect the current state of the UI. The data backing these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You will need to log into a sandbox to inquire about specific data related to objects like audiences, schemas, datasets, attributes, and destinations.
 
-## User agreement and Beta terms {#terms}
+## Example questions {#example-questions}
 
-You must agree to [a user agreement](https://adobe.sharepoint.com/:w:/s/ExCUserExperience/EVzJv1jFBiZGnaFEufsfIqwBC_9ehv3KaXTkEMTGpQFRpg?e=qzwOo8) before you can use AI Assistant. The user agreement also contains the public beta agreement. This is so that you can use additional AI Assistant features as they roll out in a beta capacity.
-
-### Example questions {#example-questions}
+### Operational insights questions {#operational-insights-questions}
 
 +++Select to view examples of operational insight questions and their respective use cases:
 
@@ -93,7 +97,7 @@ You must agree to [a user agreement](https://adobe.sharepoint.com/:w:/s/ExCUserE
 
 +++
 
-## Objectives that you can accomplish with AI Assistant {#objectives}
+### Example questions organized by objectives {#objectives}
 
 +++Select to view a list of objectives you can accomplish with AI Assistant
 
@@ -107,6 +111,20 @@ You must agree to [a user agreement](https://adobe.sharepoint.com/:w:/s/ExCUserE
 | Impact analysis | Use AI Assistant to identify data objects that have been used in certain workflows so that you can assess the impact of any changes. | <ul><li>Which audiences use `homeAddress.city` in "Luma: PersonProfiles" schema?</li><li>Which datasets are the `consents.marketing.push.val` profile attribute stored in?</li></ul> |
 
 {style="table-layout:auto"}
+
++++
+
+### Example questions organized by objects
+
++++Select to view list of example questions that AI Assistant can help you with
+
+* **Audiences - Operational insights**
+  * Which audiences use other audiences?
+  * What is the distribution of the number of profiles across audiences?
+  * Show me the audiences that were last modified before {RELATIVE_DATE}.
+  * Which audiences have 0 profiles?
+  * Is {USE_AUTOCOMPLETE_TO_FILL_AUDIENCE_NAME} used in any other audiences?"
+
 
 +++
 
