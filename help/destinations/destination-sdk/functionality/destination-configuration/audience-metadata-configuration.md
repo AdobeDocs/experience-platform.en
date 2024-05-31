@@ -51,7 +51,7 @@ When creating your audience metadata configuration, you can use the parameters d
 |`mapExperiencePlatformSegmentName` | Boolean | Indicates whether the [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) value in the destination activation workflow should be the Experience Platform audience name. |
 |`mapExperiencePlatformSegmentId` | Boolean | Indicates whether the [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) value in the destination activation workflow should be the Experience Platform audience ID. |
 |`mapUserInput` | Boolean | Enables or disables user input for the [[!UICONTROL Mapping ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) value in the destination activation workflow. If set to `true`, `audienceTemplateId` cannot be present. |
-|`audienceTemplateId` | Boolean | The `instanceId` of the [audience metadata template](../../metadata-api/create-audience-template.md) used for your destination. |
+|`audienceTemplateId` | String | The `instanceId` of the [audience metadata template](../../metadata-api/create-audience-template.md) used for your destination. |
 
 {style="table-layout:auto"}
 
