@@ -4,7 +4,7 @@ title: Generate Sample Data for an XDM Schema in the UI
 description: Learn how to generate sample JSON data based on an existing schema in the Adobe Experience Platform user interface.
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
 ---
-# Generate sample data for an XDM schema in the UI
+# Generate sample data for an XDM schema in the UI {#generate-sample-data-for-an-xdm-schema}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_downloadsamplefile"
