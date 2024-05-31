@@ -5,7 +5,7 @@ description: Learn how to export an existing schema to a different sandbox or or
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 ---
-# Export XDM schemas in the UI
+# Export XDM schemas in the UI {#export-xdm-schemas-in-the-UI}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_copyjsonstructure"

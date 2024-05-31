@@ -5,7 +5,7 @@ title: Create and Edit Schemas in the UI
 description: Learn the basics of how to create and edit schemas in the Experience Platform user interface.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 ---
-# Create and edit schemas in the UI
+# Create and edit schemas in the UI {#create-edit-schemas-in-ui}
 
 This guide provides an overview of how to create, edit, and manage Experience Data Model (XDM) schemas for your organization in the Adobe Experience Platform UI.
 
@@ -60,8 +60,6 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add field groups](#add-field-groups) to the schema (or [add individual fields](#add-individual-fields) from those groups), [edit field display names](#display-names), or [edit existing custom field groups](./field-groups.md#edit) if the schema employs any.
 
 ## More actions {#more}
-
-<!-- ... 192892 delete poss-->
 
 Within the Schema Editor you can also conduct quick actions to copy the JSON structure of the schema or delete the schema if it has not been enabled for Real-Time Customer Profile or has associated datasets. Select [!UICONTROL More] at the top of the view to display a drop down with quick actions. 
 
