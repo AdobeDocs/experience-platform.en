@@ -8,6 +8,10 @@ exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
 
 Guardrails are thresholds that provide guidance for data and system usage, performance optimization, and avoidance of errors or unexpected results in Adobe Experience Platform. Guardrails can refer to your usage or consumption of data and processing in relation to your licensing entitlements.
 
+>[!IMPORTANT]
+>
+>Check your license entitlements in your Sales Order and corresponding [Product Description](https://helpx.adobe.com/legal/product-descriptions.html) on actual usage limits in addition to this guardrails page.
+
 This document provides guidance on guardrails for data ingestion in Adobe Experience Platform.
 
 ## Guardrails for batch ingestion
