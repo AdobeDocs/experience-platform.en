@@ -78,9 +78,7 @@ Refer to the table below for information about the destination export type and f
 
 To connect to this destination, follow the steps described in the [[destination configuration tutorial]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). In the destination configuration workflow, fill in the fields listed in the two sections below.
 
-### New Account
-
-#### Authenticate to destination
+### Authenticate to destination
 
 To authenticate to the destination, fill in the required fields and select **Connect to destination**.
 
@@ -97,7 +95,7 @@ To access your bucket on Experience Platform, you need to provide valid values f
 
 ![new destination creation screen](../../assets/catalog/data-partners/merkury-connections/media/image4.png)
 
-#### Fill in destination details
+### Fill in destination details
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
