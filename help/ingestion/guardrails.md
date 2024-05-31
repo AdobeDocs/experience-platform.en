@@ -6,6 +6,10 @@ exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
 ---
 # Guardrails for Data Ingestion
 
+>[!IMPORTANT]
+>
+>Guardrails for batch and streaming ingestion are calculated at the organization level and not the sandbox level. This means that your data usage per sandbox is bound to the total license usage entitlement that corresponds with your entire organization. Additionally, data usage in development sandboxes are limited to 10% of your total profiles. For more information about license usage entitlement, read the [data management best practices guide](../landing/license-usage-and-guardrails/data-management-best-practices.md).
+
 Guardrails are thresholds that provide guidance for data and system usage, performance optimization, and avoidance of errors or unexpected results in Adobe Experience Platform. Guardrails can refer to your usage or consumption of data and processing in relation to your licensing entitlements.
 
 This document provides guidance on guardrails for data ingestion in Adobe Experience Platform.
@@ -26,10 +30,6 @@ The following table outlines guardrails to consider when using the [batch ingest
 Read the [streaming ingestion overview](./streaming-ingestion/overview.md) for information on guardrails for streaming ingestion.
 
 ## Guardrails for streaming sources
-
->[!IMPORTANT]
->
->Guardrails for streaming ingestion are calculated at the organization level and not the sandbox level. This means that your data usage per sandbox is bound to the total license usage entitlement that corresponds with your entire organization. Additionally, data usage in development sandboxes are limited to 10% of your total profiles. For more information about license usage entitlement, read the [data management best practices guide](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 The following table outlines guardrails to consider when using the streaming sources:
 
