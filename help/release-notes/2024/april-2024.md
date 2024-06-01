@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The April 2024 release notes for Adobe Experience Platform.
+exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
 ---
 # Adobe Experience Platform release notes 
 

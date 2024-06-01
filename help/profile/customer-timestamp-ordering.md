@@ -4,8 +4,8 @@ description: Learn how to add customer timestamp ordering to your datasets to en
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
+exl-id: 1cd9f0b5-6334-4815-860a-78596a9cea1a
 ---
-
 # Customer timestamp ordering
 
 In Adobe Experience Platform, data order is not guaranteed by default when ingesting data through streaming ingestion to the Profile store. With customer timestamp ordering, you can guarantee that the latest message, as per the provided customer timestamp, will be retained on the Profile store. All stale messages will then be dropped, and will **not** be available for use in downstream services that use profile data like segmentation and destinations. As a result, this lets your profile data be consistent, and lets your profile data remain in sync with your source systems.
