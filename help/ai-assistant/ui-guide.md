@@ -1,12 +1,12 @@
 ---
-title: AI Assistant for Adobe Experience Platform
+title: AI Assistant in Adobe Experience Platform
 description: Learn how to use AI Assistant to navigate and understand Experience Platform and Real-Time Customer Data Platform concepts, and usage information about your objects.
 hide: true
 hidefromtoc: true
 ---
 # AI Assistant UI Guide
 
-Read this guide to learn how you can use AI Assistant in the UI.
+Read this guide to learn how you can use AI Assistant in the Adobe Experience Platform UI.
 
 ## Access AI Assistant in the Experience Platform UI
 
@@ -41,21 +41,6 @@ After receiving a response from AI Assistant, you can select from a number of op
 ### AI Assistant features {#features}
 
 This section outlines the different features of AI Assistant that you can use during your workflows on Experience Platform.
-
-<!-- 
-### Save your query {#save-your-query}
-
-+++Select to view an example of how to save a query
-
-To save your query, select the bookmark icon beside your question.
-
-![Screenshot of a selected bookmark.](./images/save-your-query.png)
-
-To access your saved queries, select the bookmark icon below the input box, then select the query you would like to run.
-
-![Screenshot of bookmark icon and a list of saved queries.](./images/bookmarks.png)
-
-+++ -->
 
 ### View operational data objects {#view-operational-data-objects}
 
@@ -145,6 +130,7 @@ To provide feedback, select either thumbs up, thumbs down, or a flag after recei
 
 ![The feedback option in AI Assistant.](./images/provide-feedback.png)
 
+To reset, select the ellipses (**`...`**) on the AI Assistant interface and then select **[!UICONTROL Start new conversation]**. This informs AI Assistant that you intend on changing topics and can be particularly helpful when troubleshooting queries that are either failing or referencing incorrect information.
 
 +++Select to view more examples
 

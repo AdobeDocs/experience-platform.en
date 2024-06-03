@@ -1,28 +1,24 @@
 ---
-title: AI Assistant for Adobe Experience Platform Overview
+title: AI Assistant in Adobe Experience Platform Overview
 description: Learn about AI Assistant, its nuances and use cases, and how you can use it to expedite your workflow with Adobe Experience Platform and Real-Time Customer Data Platform.
 hide: true
 hidefromtoc: true
 ---
-# AI Assistant for Adobe Experience Platform
+# AI Assistant in Adobe Experience Platform
 
-Read this document to learn about AI Assistant for Adobe Experience Platform.
+Read this document to learn about AI Assistant in Adobe Experience Platform.
 
-AI Assistant is a UI feature that you can use to understand concepts, troubleshoot problems, and generate operational insights about your Adobe Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics data objects.
+AI Assistant in Adobe Experience Platform is a conversational experience that you can use to accelerate your workflows in Adobe applications. You can use AI Assistant to better understand product knowledge, troubleshoot problems, or search through information and find operational insights. AI Assistant supports Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer and Customer Journey Analytics.
 
-You can query AI Assistant for information such as:
+>[!IMPORTANT]
+>
+>* You must agree to [a user agreement](https://adobe.sharepoint.com/:w:/s/ExCUserExperience/EVzJv1jFBiZGnaFEufsfIqwBC_9ehv3KaXTkEMTGpQFRpg?e=qzwOo8) before you can use AI Assistant. The user agreement also contains the public beta agreement. This is so that you can use additional AI Assistant features as they roll out in a beta capacity.
 
-* Guidance on how to perform tasks pertaining to data and audiences.
-* Statuses and metrics of the existing data objects in your organization.
-* Use case examples and nuances to better understand your Experience Platform and Real-Time CDP data objects.
-
->[!BEGINSHADEBOX]
-
-**How does AI Assistant work?**
+## Understanding AI Assistant {#understanding-ai-assistant}
 
 AI Assistant responds to your submitted questions by querying a database and then translating data from the database into a human-readable answer.
 
-This internal representation of underlying data is also known as the [!DNL Knowledge Graph] - a comprehensive web of concepts, data, and metadata for a given answer. 
+This internal representation of underlying data is also known as the **[!DNL Knowledge Graph]** - a comprehensive web of concepts, data, and metadata for a given answer. 
 
 The [!DNL Knowledge Graph] consists of sub-graphs that are referenced whenever queries submitted:
 
@@ -32,25 +28,42 @@ The [!DNL Knowledge Graph] consists of sub-graphs that are referenced whenever q
 
 There are two classes of questions to consider before querying AI Assistant:
 
-**Product knowledge questions**: Product knowledge questions are about Adobe concepts related to data or audiences. Some examples of product knowledge questions include:
+### Product knowledge {#product-knowledge}
 
-* What is the difference between batch and streaming segmentation?
-* How do I build a segment?
-* What is an identity map?
+Product knowledge refers to concepts and topics grounded in Experience League documentation. Product knowledge questions can be further specified into the following sub-groups:
 
-**Operational insight questions**: Operational insight questions are about the data objects inside your organization's sandbox. Some examples of operational insight questions include:
+| Product knowledge | Examples |
+| --- | --- |
+| Pointed learning | <ul><li>What is the difference between an identity and a primary or foreign key?</li><li>How is profile richness calculated?</li></ul> |
+| Open discovery | <ul><li>How can I export this dataset?</li><li>Are there schemas for healthcare customers?</li></ul> |
+| Troubleshooting | <ul><li>Why can't I turn on a schema owned by Adobe for profile?</li><li>Why can't I delete a segment?</li></ul> |
+
+{style="table-layout:auto"}
+
+### Operational insights {#operational-insights}
+
+>[!IMPORTANT]
+>
+>Operational insights answers are in beta. Anyone that has access to the **View Operational Insights** permission will have access to operational insights answers.
+
+Operational insights refer to topics regarding data within your organization's sandboxes. Answers to operational insights questions are derived from the [!DNL Knowledge Graph]. Some examples of operational insight questions include:
 
 * How many datasets do I have?
 * How many schema attributes have never been used?
 * Which audiences have been activated?
 
->[!ENDSHADEBOX]
+You can ask AI Assistant questions about your operational insights in the following domains: 
 
+* Attributes
+* Audiences
+* Dataflows
+* Datasets
+* Destinations _(Questions regarding accounts and some questions about dataflow cannot be answered at this time.)_
+* Journeys
+* Schemas _(Questions regarding field groups cannot be answered at this time.)_
+* Sources _(Questions regarding accounts cannot be answered at this time.)_
 
-## User agreement and Beta terms {#terms}
-
-You must agree to [a user agreement](https://adobe.sharepoint.com/:w:/s/ExCUserExperience/EVzJv1jFBiZGnaFEufsfIqwBC_9ehv3KaXTkEMTGpQFRpg?e=qzwOo8) before you can use AI Assistant. The user agreement also contains the public beta agreement. This is so that you can use additional AI Assistant features as they roll out in a beta capacity.
-
+For operational insights questions, answers may not reflect the current state of the UI. The data that backs these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You will need to log into a sandbox to inquire about specific data related to objects.
 
 ## Feature access {#feature-access}
 
@@ -62,27 +75,13 @@ Access to AI Assistant is governed by the following parameters:
   * As an administrator, you can add the **Enable AI Assistant** to a given role and add a user to that role, to allow them to access AI Assistant in your organization.
   * As an administrator, you can add the **View Operational Insights** to a given role and add a user to that role, to allow them to use AI Assistant's operational insights capabilities. Operational insights are currently in beta.
 
-## [!BADGE Beta]{type=Informative} Operational insights {#operational-insights}
-
->[!IMPORTANT]
->
->Operational insights answers are in beta. Anyone that has access to the **View Operational Insights** permission will have access to operational insights answers.
-
-You can ask AI Assistant questions about your operational insights in the following domains: 
-
-* Attributes
-* Audiences
-* Dataflows
-* Datasets
-* Destinations _(Questions regarding accounts and some questions about dataflow cannot be answered at this time.)_
-* Schemas _(Questions regarding field groups cannot be answered at this time.)_
-* Sources _(Questions regarding accounts cannot be answered at this time.)_
-
-For operational insights queries, answers may not reflect the current state of the UI. The data backing these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You will need to log into a sandbox to inquire about specific data related to objects like audiences, schemas, datasets, attributes, and destinations.
+![The permissions UI page with the Enable AI Assistant and View Operational Insights permissions included in a given role.](./images/permissions.png)
 
 ## Example questions {#example-questions}
 
-### Operational insights questions {#operational-insights-questions}
+This section outlines example questions that you can refer to during your workflows. The questions are grouped into three sections: operational insights, objectives, and objects.
+
+### Example questions grouped by operational insights {#operational-insights-questions}
 
 +++Select to view examples of operational insight questions and their respective use cases:
 
@@ -97,7 +96,7 @@ For operational insights queries, answers may not reflect the current state of t
 
 +++
 
-### Example questions organized by objectives {#objectives}
+### Example questions grouped by objectives {#objectives-questions}
 
 +++Select to view a list of objectives you can accomplish with AI Assistant
 
@@ -114,7 +113,7 @@ For operational insights queries, answers may not reflect the current state of t
 
 +++
 
-### Example questions organized by objects
+### Example questions grouped by objects {#objects-questions}
 
 +++Select to view list of example questions that AI Assistant can help you with:
 
@@ -169,46 +168,8 @@ Read the tables below for further guidance on best practices to follow when aski
 
 ## Next steps
 
-Now that you have a general understanding of AI Assistant, you can now proceed and use AI Assistant during your workflows. For more information, read the [AI Assistant UI guide](./ui-guide.md).
+Now that you have a general understanding of AI Assistant, you can now proceed and use AI Assistant during your workflows. Refer to the following documentation for more information:
 
-<!-- 
-## Additional information {#additional-information}
-
-Refer to this section for additional information on the AI Assistant for Experience Platform.
-
-### Caveats and limitations {#caveats-and-limitations}
-
-The following section outlines current caveats and limitations to considers when using AI Assistant.
-
-#### Limited small talk
-
-You can engage in small talk with the AI Assistant, but this capacity is currently limited.
-
-#### Capability questions
-
-The AI Assistant may give an inaccurate impression of what it can do. It may answer the following types of questions incorrectly:
-
-| Example question | Note |
-| --- | --- |
-| Can you answer questions on {ENTITY}? | As long as the AI Assistant is able to find a single page referencing a given entity in its index, then it will respond yes. |
-| Do you know **x** language? | The AI Assistant currently only supports English, but may answer "yes" due to the underlying model being able to support it. |
-| Can you do...? | The AI Assistant may answer yes, even though it cannot. |
-
-### Tips {#tips}
-
-The following section outlines some tips and workarounds to consider when using AI Assistant.
-
-#### Questions may be answered with the wrong information source
-
-There are instances when your question about your usage data can result in an answer based on the documentation. This is because the AI Assistant can incorrectly route your question to the wrong information source. You can prevent this by:
-
-* Rephrasing your question to use more SQL-like language
-* Explicitly calling out the information source to use.
-
-Read the table below for examples:
-
-| Bad question | Good question | Notes |
-| --- | --- | --- |
-| What is my biggest audience? | What is my biggest audience? Using data. | Explicitly tell the AI Assistant that you want the answer to be based on data. |
-| What is my biggest audience? | List my biggest audience. | There are instances where a "what..." question can be mistaken for a documentation-based question. Using a command like "list" is a stronger indicator that you are asking a question with data in context. |
-| How many datasets do I have? | Count my datasets. | The original question works for audiences, but it may not work with datasets. | -->
+* [AI Assistant UI guide](./ui-guide.md)
+* [Privacy, Security, and Governance in AI Assistant](./privacy.md)
+* [FAQ](./faq.md)
