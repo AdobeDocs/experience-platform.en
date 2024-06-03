@@ -14,6 +14,8 @@ AI Assistant in Adobe Experience Platform is a conversational experience that yo
 >
 >* You must agree to [a user agreement](https://adobe.sharepoint.com/:w:/s/ExCUserExperience/EVzJv1jFBiZGnaFEufsfIqwBC_9ehv3KaXTkEMTGpQFRpg?e=qzwOo8) before you can use AI Assistant. The user agreement also contains the public beta agreement. This is so that you can use additional AI Assistant features as they roll out in a beta capacity.
 
+![The AI Assistant interface with the first-time user experience triggered.](./images/blank.png)
+
 ## Understanding AI Assistant {#understanding-ai-assistant}
 
 AI Assistant responds to your submitted questions by querying a database and then translating data from the database into a human-readable answer.
