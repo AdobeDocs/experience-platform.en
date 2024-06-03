@@ -48,7 +48,7 @@ Product knowledge refers to concepts and topics grounded in Experience League do
 >
 >Operational insights answers are in beta. Anyone that has access to the **View Operational Insights** permission will have access to operational insights answers.
 
-Operational insights refer to topics regarding data within your organization's sandboxes. Answers to operational insights questions are derived from the [!DNL Knowledge Graph]. Some examples of operational insight questions include:
+Operational insights refer to answers AI Assistant generates about your meta data objects (attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources), including counts, lookups, and lineage impact. It does not look at any data within the sandbox. 
 
 * How many datasets do I have?
 * How many schema attributes have never been used?
