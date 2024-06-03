@@ -116,15 +116,22 @@ For operational insights queries, answers may not reflect the current state of t
 
 ### Example questions organized by objects
 
-+++Select to view list of example questions that AI Assistant can help you with
++++Select to view list of example questions that AI Assistant can help you with:
 
-* **Audiences - Operational insights**
-  * Which audiences use other audiences?
-  * What is the distribution of the number of profiles across audiences?
-  * Show me the audiences that were last modified before {RELATIVE_DATE}.
-  * Which audiences have 0 profiles?
-  * Is {USE_AUTOCOMPLETE_TO_FILL_AUDIENCE_NAME} used in any other audiences?"
+| Object | Description |
+| --- | --- |
+| Audiences - Operational insights | <ul><li>Which audiences use other audiences?</li><li>What is the distribution of the number of profiles across audiences?</li><li>Show me the audiences that were last modified before {RELATIVE_DATE}.</li><li>Which audiences have 0 profiles?</li><li>Is {USE_AUTOCOMPLETE_TO_FILL_AUDIENCE_NAME} used in any other audiences?</li></ul> |
+| Attributes - Operational insights | <ul><li>Which audiences have XDM attribute {ATTRIBUTE_PATH} iin their segment definition?</li><li>How many XDM schema attributes are not used in any audiences?</li><li>Which schemas have XDM attribute {ATTRIBUTE_PATH} in them?</li><li>Which XDM attributes are activated?</li><li>Which XDM attributes are used in audiences with more than 10 profiles</li></ul> |
+| Dataflows - Operational insights |<ul><li>Which dataflows contribute to {DATASET_NAME} dataset?</li><li>Which source dataflows are not being used or do not have data coming in anymore?</li><li> |
+| Datasets - Operational insights | <ul><li>How many datasets have been ingested using the same schema?</li><li>Which source connector is associated with {DATASET_NAME} dataset></li><li>Which datasets are used in each audience?</li><li>Which schemas are not used in any datasets?</li><li>How many datasets do I have?</li></ul> |
+| Destinations - Operational insights | <ul><li>Which destinations are in an active state?</li><li>Which destination accounts have 0 audiences activated?</li><li> |
+| Journeys - Operational insights | <ul><li>How many journeys do I have?</li><li>Which journeys have been created in {RELATIVE_DATE} (e.g. last week) or {RELATIVE_DATE} (e.g. before/after/on specific date)?</li><li>Show me the list of journeys that were modified in {RELATIVE_DATE} (e.g. last week) or {RELATIVE_DATE} (e.g. before/after/on specific date)?</li><li>List the journeys that I have.</li><li>List the audiences which are used in live journeys.</li></ul> |
+| Schemas - Operational insights | <ul><li>Which schema's fields have contributed to the most audiences?</li><li>How many schemas are profile enabled?</li><li>List all schemas modified in the last week.</li><li>Which schemas are not used in any datasets?</li><li>List all schemas created in the last week.</li></ul> |
+| Sources - Operational insights | <ul><li>Which sources are in an active state?</li><li>Which source connector is associated with dataset {DATASET_NAME}?</li><li>Which source connector has the highest number of associated accounts?</li><li>Show me the dataflows and their associated source connectors.</li></ul> |
+| Pointed learning - Product knowledge (Real-Time CDP and Journey Optimizer) | <ul><li>What can AI Assistant help with?</li><li>What are lookalike audiences?</li><li>How are User Groups related to Roles?</li><li>When should I use a data type vs a field group?</li><li>What is the difference between an identity and a primary or foreign key?</li><li>How is profile richness calculated?</li></ul> |
+| Troubleshooting - Product knowledege (Real-Time CDP and Journey Optimizer) | <ul><li>What can AI Assistant help with?</li><li>Can I delete a profile-enabled schema after data is ingested?</li><li>Why can't I delete an audience?</li><li>How long does it take for audiences to be evaluated and for results to be available for targeting?</li></ul> |
 
+{style="table-layout:auto"}
 
 +++
 
