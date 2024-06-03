@@ -3,14 +3,14 @@ title: Identity graph linking rules overview
 description: Learn about Identity Graph Linking Rules in Identity Service.
 hide: true
 hidefromtoc: true
-badge: Alpha
+badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 ---
 # Identity graph linking rules overview
 
 >[!IMPORTANT]
 >
->Identity graph linking rules are currently in Alpha. The feature and documentation are subject to change.
+>Identity graph linking rules are currently in Beta. The feature and documentation are subject to change.
 
 ## Table of contents
 
@@ -28,14 +28,14 @@ With Adobe Experience Platform Identity Service and Real-Time Customer Profile, 
 
 For more information on use case scenarios for identity graph linking rules, read the document on [example scenarios](./example-scenarios.md).
 
-## Identity graph linking rules
+## Identity graph linking rules {#identity-graph-linking-rules}
 
 With Identity graph linking rules you can:
 
 * Create a single identity graph / merged profile for each user by configuring unique namespaces, which will prevent two disparate person identifiers from merging into one identity graph.
 * Associate online, authenticated events to the person by configuring priorities
 
-### Terminology guide
+### Terminology {#terminology}
 
 | Terminology | Description |
 | --- | --- |
@@ -43,7 +43,7 @@ With Identity graph linking rules you can:
 | Namespace priority | Namespace priority refers to the relative importance of namespaces compared to one another. Namespace priority is configurable through the UI. You can rank namespaces in a given identity graph. Once enabled, namespace priorities determine the primary identity only for experience events in Real-Time Customer Profile. |
 | Identity optimization algorithm | The identity optimization algorithm ensures that guidelines created by configuring a unique namespace and namespace priorities are enforced in a given identity graph. |
 
-### Unique namespace
+### Unique namespace {#unique-namespace}
 
 You can configure a namespace to be unique using the identity settings UI workspace. Doing so, informs the [!DNL Identity Optimization Algorithm] that a given graph may only have one identity that contains that unique namespace. This prevents the merging of two disparate person identifiers within the same graph.
 
@@ -67,9 +67,9 @@ If you do not configure a unique namespace, you may end up with:
 
 You must configure a unique namespace to inform the [!DNL Identity Optimization Algorithm] to enforce limitations on the identity data that are ingested into a given identity graph.
 
-### Namespace priority
+### Namespace priority {#namespace-priority}
 
-Namespace priority refers to the relative importance of namespaces compared to one another. Namespace priority is configurable through the UI. You can rank namespaces in a given identity graph. 
+Namespace priority refers to the relative importance of namespaces compared to one another. Namespace priority is configurable through the UI and you can rank namespaces in a given identity graph. 
 
 The priority that you set for your namespaces are then used to define primary identities, which is the identity that stores profile fragments (attribute and event data) in Real-Time Customer Profile. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
 
@@ -77,7 +77,7 @@ Unique namespaces and namespace priorities are both configurable in the identity
 
 | | Identity Service | Real-Time Customer Profile |
 | --- | --- | --- |
-| Unique namespace | In Identity Service, the [!DNL Identity Optimization Algorithm] refers to unique namespaces to determine the identity data that is ingested to a given identity graph.|
+| Unique namespace | In Identity Service, the [!DNL Identity Optimization Algorithm] refers to unique namespaces to determine the identity data that is ingested to a given identity graph.| Unique namespaces do not affect Real-Time Customer Profile. |
 | Namespace priority | In Identity Service, for graphs that have multiple layers, namespace priority will determine that the appropriate links are removed. | When an experience event is ingested in Profile, the namespace with the highest priority becomes the primary identity of the profile fragment. |
 
 * Namespace priority does not affect graph behavior when the limit of 50 identities per graph is reached.
@@ -86,7 +86,9 @@ Unique namespaces and namespace priorities are both configurable in the identity
 * Namespace priority determines the primary identity for experience events.
   * For profile records, you can use the schemas workspace in the Experience Platform UI to define identity fields, including the primary identity. Read the guide on [defining identity fields in the UI](../../xdm/ui/fields/identity.md) for more information.
 
-**Namespace priority example**
+For more information, read the guide on [namespace priority](./namespace-priority.md)
+
++++Select to view an example of how namespace priority works
 
 Suppose that you have configured the following priority for your namespaces:
 
@@ -110,12 +112,9 @@ If the following experience events are ingested into Experience Platform, the pr
 * If the identity map contains an ECID, IDFA, and AAID, then the event information will be stored against the IDFA (primary identity).
   * IDFA represents an Apple hardware device (e.g. iPhone), ECID and AAID both represent a web browser (Safari).
 
-| What you can do | What you cannot do |
-| --- | --- |
-| You can configure any number of namespaces to be unique | |
-| You can configure the priority ordering of person namespaces in any way you would like. (i.e. cross-device ID > Phone > Email in any order) | You cannot configure a device or cookie namespace to have a higher priority than any person namespace. |
++++
 
-### Identity optimization algorithm
+### Identity optimization algorithm {#identity-optimization-algorithm}
 
 The identity optimization algorithm is a rule that ensures that the limits are enforced. The algorithm honors the most recent links and removes the oldest links to make sure that a given graph stays within the limits that you have defined.
 
@@ -132,4 +131,5 @@ For more information, read the document on [identity optimization algorithm](./i
 For more information on identity graph linking rules, read the following documentation:
 
 * [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [Namespace priority](./namespace-priority.md)
 * [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
