@@ -1,8 +1,8 @@
 ---
-title: mediaCollection
+title: streamingMedia
 description: Configure the Web SDK to collect data related to media usage on your web properties.
+exl-id: f7733619-d35e-43eb-ac90-052717310c39
 ---
-
 # `streamingMedia`
 
 The `streamingMedia` component helps you collect data related to media sessions on your website. 
