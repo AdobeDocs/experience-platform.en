@@ -3,18 +3,24 @@ title: Identity optimization algorithm
 description: Learn about Identity Optimization Algorithm in Identity Service.
 hide: true
 hidefromtoc: true
-badge: Alpha
+badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 ---
 # Identity optimization algorithm
+
+>[!IMPORTANT]
+>
+>The identity optimization algorithm is currently in Beta. The feature and documentation are subject to change.
 
 The identity optimization algorithm is a graph algorithm on Identity Service that helps ensure that an identity graph is representative of a single person, and therefore, prevents the unwanted merging of identities on Real-Time Customer Profile.
 
 ## Input parameters {#input-parameters}
 
+Read this section for information on unique namespaces and namespace priority. These two concepts serve as input parameters required by the identity optimization algorithm.
+
 ### Unique namespace {#unique-namespace}
 
-**A unique namespace determines the links that get removed if graph collapse happens.** 
+A unique namespace determines the links that get removed if graph collapse happens
 
 A single merged profile and its corresponding identity graph should represent a single individual (person entity). A single individual is usually represented by CRM IDs and/or Login IDs. The expectation is that no two individuals (CRM IDs) are merged into a single profile or graph.
 
@@ -37,7 +43,11 @@ Namespace priority determines how the identity optimization algorithm removes li
 
 Namespaces in Identity Service have an implicit relative order of importance. Consider a graph structured like a pyramid. There is one node on the top layer, two nodes on the middle layer, and four nodes on the bottom layer. Namespace priority must reflect this relative order to ensure that a person entity is accurately represented.
 
-## Process
+For an in-depth look at namespace priority and its complete functionalities and uses, read the [namespace priority guide](./namespace-priority.md).
+
+![graph layers and namespace priority](../images/namespace-priority/graph-layers.png)
+
+## Process {#process}
 
 Upon ingesting new identities, Identity Service checks if the new identities and their corresponding namespaces will result in exceeding the configured limits. If limits are not exceeded, then the ingestion of new identities will proceed and these identities will be linked to the graph. However, if limits are exceeded, the identity optimization algorithm will:
 
@@ -53,6 +63,8 @@ When the unique namespace constraint is violated, the identity optimization algo
   * Timestamp by sum
 * The graph would re-establish based on the above order. If adding the link violates the limit constraint (e.g. the graph contains two or more identities with a unique namespace), then the links is removed.
 * The resulting graph will then be compliant with the unique namespace constraint that you configured.
+
+![A diagram that visualizes identity optimization algorithm.](../images/ido.png)
 
 ## Example scenarios for identity optimization algorithm
 

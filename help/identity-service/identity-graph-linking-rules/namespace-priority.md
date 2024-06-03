@@ -26,9 +26,9 @@ If your organization's graph structured is layered, then namespace priority shou
 
 >[!TIP]
 >
->* What is "Graph collapse"? (Graph collapse is...)
+>* "Graph collapse" refers to scenarios where multiple disparate profiles are inadvertently merged together into a single identity graph.
 >
->* What is a "layered" graph? (A layered graph refers to identity graphs that have multiple degrees of links...)
+>* A layered graph refers to identity graphs that have multiple levels of links. View the image below for an example of a graph with three layers.
 
 ![A diagram of graph layers](../images/namespace-priority/graph-layers.png)
 
@@ -126,11 +126,15 @@ If the John and Jane share a device, then the ECID (web browser) transfers from 
 
 If the segment qualification criteria were solely based on anonymous events stored against the ECID, then Jane would qualify for that segment
 
-## Impact on other services
+## Impact on other services {#impact}
+
+This section outlines how namespace priority can affect other Experience Platform services.
 
 ### Experience Data Model (XDM) Schemas
 
 Any schema that is not an XDM Experience Event, such as XDM Individual Profiles, will continue to honor any [fields that you mark as an identity](../../xdm/ui/fields/identity.md).
+
+For more information on XDM schemas, read the [schemas overview](../../xdm/home.md).
 
 ### Data lake
 
@@ -138,16 +142,20 @@ Data ingestion to data lake will continue to honor the primary identity settings
 
 Data lake will not determine primary identity based on namespace priority. For example, Adobe Customer Journey Analytics will continue to use values in the identity map even after namespace priority is enabled (such as, adding a dataset to a new connection), because Customer Journey Analytics consumes their data from data lake.
 
-### Advanced lifecycle management
+### Advanced data lifecycle management
 
 Data hygiene record delete requests functions in the following manner, for a given identity:
 
 * Real-Time Customer Profile: Deletes any profile fragment with specified identity as primary identity. **The primary identity on Profile will now be determined based on namespace priority.**
 * Data lake: Deletes any record with the specified identity as primary identity.
 
+For more information, read the [advanced lifecycle management overview](../../hygiene/home.md).
+
 ### Privacy Service
 
-Privacy Service deletion requests function in the following manner, for a given identity:
+[Privacy Service deletion requests](../privacy.md) function in the following manner, for a given identity:
 
 * Real-Time Customer Profile: Deletes any profile fragment with specified identity value as primary identity. **The primary identity on Profile will now be determined based on namespace priority.**
 * Data lake: Deletes any record with the specified identity as primary or secondary identity.
+
+For more information, read the [Privacy service overview](../../privacy-service/home.md).
