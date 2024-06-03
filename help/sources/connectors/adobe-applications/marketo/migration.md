@@ -1,10 +1,10 @@
 ---
-title: Migrate ECID mapping from person dataset to activity dataset
+title: Migrate ECID Mapping From Person to Activity Using The Marketo Engage source
 description: Learn how to migrate your ECID mapping from the person dataset to the activity dataset using the Marketo Engage source.
 ---
-# Migrate ECID mapping from person dataset to activity dataset
+# Migrate ECID mapping from [!DNL Person] dataset to [!DNL Activity] dataset
 
-You can migrate your ECID mapping from your [!DNL Marketo Engage] person dataset to activity dataset to provide a more stable behavior of data ingestion and identity management. Additionally, this migration addresses the following:
+You can migrate your ECID mapping from your [!DNL Marketo Engage Person] dataset to your [!DNL Activity] dataset to provide a more stable behavior of data ingestion and identity management. Additionally, this migration addresses the following:
 
 | Problem | Solution |
 | --- | --- |
@@ -46,3 +46,10 @@ Follow the steps below to update your [!DNL Marketo Person] dataflow:
 >[!NOTE]
 >
 >If your update to an existing [!DNL Marketo] dataflow consists of only adding or removing the ECID mapping field, then the dataflow automatically skips the historical backfill job. The timestamp of ECIDs that have been previously ingested will remain the same. They will only be updated when new data that corresponds to the existing ECIDs are ingested.
+
+## Next steps
+
+By reading this document, you now know how to migrate your ECID mapping from your [!DNL Marketo Person] dataset to [!DNL Marketo Activity] dataset. For more information, read the following [!DNL Marketo] documents:
+
+* [Create a dataflow to ingest [!DNL Marketo] data to Experience Platform](../../../tutorials/ui/create/adobe-applications/marketo.md).
+* [Field mapping guide](../mapping/marketo.md).

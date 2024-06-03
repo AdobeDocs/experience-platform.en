@@ -77,6 +77,7 @@ The following documentation provides further information on creating a [!DNL Mar
 
 * For information on how to connect your [!DNL Marketo Engage] data to Platform, read the tutorial on [creating a [!DNL Marketo Engage] source connection in the UI](../../../tutorials/ui/create/adobe-applications/marketo.md).
   * For information on how to set up your schemas and ingest custom activity data, read the tutorial on [creating a source connection and dataflow for [!DNL Marketo Engage] custom activity data](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+  * For information on how to migrate your ECID mapping from [!DNL Person] dataset to [!DNL Activity] dataset, read the [ECID mapping migration guide](./migration.md).
 * For information on the underlying setup for the B2B namespaces and schemas used with [!DNL Marketo Engage], read the documentation for [B2B namespaces and schemas](./marketo-namespaces.md).
 * For information on finding your [!DNL Marketo Engage] munchkin ID and generating your credentials, read the [[!DNL Marketo Engage] authentication guide](./marketo-auth.md).
 * For information on the specific mapping rules that apply to [!DNL Marketo Engage] datasets, read the documentation on [[!DNL Marketo Engage] field mappings](../mapping/marketo.md).

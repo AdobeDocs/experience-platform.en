@@ -21,7 +21,7 @@ Read the documentation on [XDM Experience Event class](../../../../xdm/classes/e
 
 >[!NOTE]
 >
->The `to_object('ECID',arrays_to_objects('id',explode(ecids)))` source field is a calculated field that must be added using the [!UICONTROL Add calculated field] option in the Experience Platform UI. Read the tutorial on [adding calculated fields](../../../../data-prep/ui/mapping.md#calculated-fields) for more information.
+>The `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` source field is a calculated field that must be added using the **[!UICONTROL Add calculated field]** option in the Experience Platform UI. Read the tutorial on [adding calculated fields](../../../../data-prep/ui/mapping.md#calculated-fields) for more information.
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
