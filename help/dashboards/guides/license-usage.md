@@ -153,6 +153,10 @@ The license usage dashboard reports on several unique metrics that are applicabl
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
+>[!TIP]
+>
+>You can check your license entitlements in your Sales Order to calculate metrics such as your 'Storage Allowance' or your 'Total storage'.<br>For example,<ul><li>Storage Allowance = Number of Profiles X Average Profile Richness in Contract</li><li>Total storage = License amount X Usage %</li></ul>
+
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased. For detailed definitions of each metric, refer to the appropriate Product Description documentation:
 
 |License|Product Description|
