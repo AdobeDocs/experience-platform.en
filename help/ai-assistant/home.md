@@ -86,5 +86,7 @@ Currently, the scope of AI Assistant is as follows:
 Now that you have a general understanding of AI Assistant, you can now proceed and use AI Assistant during your workflows. Refer to the following documentation for more information:
 
 * [AI Assistant UI guide](./ui-guide.md)
+* [Feature access](./access.md)
+* [Question guide](./questions.md)
 * [Privacy, Security, and Governance in AI Assistant](./privacy.md)
 * [FAQ](./faq.md)

@@ -1,14 +1,14 @@
 ---
-title: Example Questions for AI Assistant
+title: Question guide for AI Assistant
 description: Read this document to learn example questions that you can use when querying AI Assistant.
 ---
-# Example questions for AI Assistant
+# Question guide for AI Assistant
 
 Read this document to for a set of example questions that you can use when querying AI Assistant. 
 
 You can also use this document to learn tips on [how to phrase your questions](#phrasing-your-questions) to get optimal responses from AI Assistant.
 
-## Example questions grouped by objectives {#objectives-questions}
+## Objective-based questions {#objectives-questions}
 
 The following example questions are grouped by objectives that you can accomplish when using AI Assistant:
 
@@ -23,7 +23,7 @@ The following example questions are grouped by objectives that you can accomplis
 
 {style="table-layout:auto"}
 
-## Example questions grouped by operational objects and product knowledge {#objects-questions}
+## Operational insights by entity and product knowledge questions{#objects-questions}
 
 The following questions are grouped by data objects and are classified as either [operational insights](./home.md#operational-insights) or [product knowledge](./home.md#product-knowledge).
 
