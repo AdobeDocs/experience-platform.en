@@ -1,6 +1,7 @@
 ---
 title: AI Assistant in Adobe Experience Platform Overview
 description: Learn about AI Assistant, its nuances and use cases, and how you can use it to expedite your workflow with Adobe Experience Platform and Real-Time Customer Data Platform.
+exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
 ---
 # AI Assistant in Adobe Experience Platform
 
