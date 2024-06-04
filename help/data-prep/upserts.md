@@ -124,7 +124,7 @@ The following operations are supported by [!DNL Real-Time Customer Profile]:
 | --- | --- | 
 | `create` | The default operation. This generates an XDM entity create method for [!DNL Real-Time Customer Profile]. |
 | `merge` | This generates an XDM entity update method for [!DNL Real-Time Customer Profile]. |
-| `delete` | This generates an XDM entity delete method for [!DNL Real-Time Customer Profile] and permanently removes the data from the [!DNL Profile Store]. |
+| `delete` | This generates an XDM entity delete method for [!DNL Real-Time Customer Profile] and permanently removes the data from the [!DNL Profile store]. |
 
 The following operations are supported by [!DNL Identity Service]:
 

@@ -67,4 +67,4 @@ For edge profiles, data expiry determines how long the profile will stay on edge
 
 ### What data is stored on the edge profile?
 
-Edge profile stores the profile attributes, profile IDs, as well as qualified audience IDs. By default, the data expiration lasts for 14 days.
+Edge Profile stores the profile attributes, profile IDs, as well as qualified audience IDs. By default, the data expiration lasts for 14 days.

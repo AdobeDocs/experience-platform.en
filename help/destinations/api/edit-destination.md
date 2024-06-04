@@ -48,7 +48,7 @@ All resources in Experience Platform, including those belonging to [!DNL Flow Se
 >
 >If the `x-sandbox-name` header is not specified, requests are resolved under the `prod` sandbox.
 
-All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
+All requests that contain a payload (`POST`, `PUT`, `PATCH`) require an additional media type header:
 
 * `Content-Type: application/json`
 
@@ -171,17 +171,19 @@ A successful response returns the current details of your dataflow including its
 
 The components of a target connection differ by destination. For example, for [!DNL Amazon S3] destinations, you can update the bucket and path where files are exported. For [!DNL Pinterest] destinations, you can update your [!DNL Pinterest Advertiser ID] and for [!DNL Google Customer Match] you can update your [!DNL Pinterest Account ID].
 
-To update components of a target connection, perform a PATCH request to the `/targetConnections/{TARGET_CONNECTION_ID}` endpoint while providing your target connection ID, version, and the new values you want to use. Remember, you got your target connection ID in the previous step, when you inspected an existing dataflow to your desired destination.
+To update components of a target connection, perform a `PATCH` request to the `/targetConnections/{TARGET_CONNECTION_ID}` endpoint while providing your target connection ID, version, and the new values you want to use. Remember, you got your target connection ID in the previous step, when you inspected an existing dataflow to your desired destination.
 
 >[!IMPORTANT]
 >
->The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the target connection you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
+>The `If-Match` header is required when making a `PATCH` request. The value for this header is the unique version of the target connection you want to update. The etag value updates with every successful update of a flow entity such as dataflow, target connection, and others.
 >
 > To get the latest version of the etag value, perform a GET request to the `/targetConnections/{TARGET_CONNECTION_ID}` endpoint, where `{TARGET_CONNECTION_ID}` is the target connection ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the examples below when making `PATCH` requests.
 
 Below are a few examples of updating parameters in the target connection spec for different types of destinations. But the general rule to update parameters for any destination is as follows: 
 
-Get the dataflow ID of the connection > obtain the target connection ID > PATCH the target connection with updated values for the desired parameters.
+Get the dataflow ID of the connection > obtain the target connection ID > `PATCH` the target connection with updated values for the desired parameters.
 
 >[!BEGINSHADEBOX]
 
@@ -326,19 +328,21 @@ A successful response returns your target connection ID and an updated etag. You
 
 Edit the base connection when you want to update a destination's credentials. The components of a base connection differ by destination. For example, for [!DNL Amazon S3] destinations, you can update the access key and secret key to your [!DNL Amazon S3] location. 
 
-To update components of a base connection, perform a PATCH request to the `/connections` endpoint while providing your base connection ID, version, and the new values you want to use.
+To update components of a base connection, perform a `PATCH` request to the `/connections` endpoint while providing your base connection ID, version, and the new values you want to use.
 
 Remember, you got your base connection ID in a [previous step](#look-up-dataflow-details), when you inspected an existing dataflow to your desired destination for the parameter `baseConnection`.
 
 >[!IMPORTANT]
 >
->The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the base connection you want to update. The etag value updates with every successful update of a flow entity such as dataflow, base connection, and others.
+>The `If-Match` header is required when making a `PATCH` request. The value for this header is the unique version of the base connection you want to update. The etag value updates with every successful update of a flow entity such as dataflow, base connection, and others.
 >
 > To get the latest version of the Etag value, perform a GET request to the `/connections/{BASE_CONNECTION_ID}` endpoint, where `{BASE_CONNECTION_ID}` is the base connection ID that you are looking to update.
+>
+> Make sure to wrap the value of the `If-Match` header in double quotes like in the examples below when making `PATCH` requests.
 
 Below are a few examples of updating parameters in the base connection spec for different types of destinations. But the general rule to update parameters for any destination is as follows: 
 
-Get the dataflow ID of the connection > obtain the base connection ID > PATCH the base connection with updated values for the desired parameters.
+Get the dataflow ID of the connection > obtain the base connection ID > `PATCH` the base connection with updated values for the desired parameters.
 
 >[!BEGINSHADEBOX]
 

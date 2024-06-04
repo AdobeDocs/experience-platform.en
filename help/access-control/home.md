@@ -94,6 +94,7 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Profile Management] | [!UICONTROL View Segments] | Read-only access to available segments. |
 | [!DNL Profile Management] | [!UICONTROL Manage Merge Policies] | Access to read, create, edit, and delete merge policies. |
 | [!DNL Profile Management] | [!UICONTROL View Merge Policies] | Read-only access to available merge policies. |
+| [!DNL Profile Management] | [!UICONTROL Import Audiences] | Access to read, create, edit, and delete imported audiences. |
 | [!DNL Profile Management] | [!UICONTROL Export Audience for Segment] | Ability to export an evaluated audience segment to a dataset. |
 | [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | Ability to generate profiles for an audience by evaluating a segment definition. |
 | [!DNL Profile Management] | [!UICONTROL View B2B AI] | Read-only access to settings and configurations for all B2B AI/ML services. |

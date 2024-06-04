@@ -79,7 +79,11 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 | [!UICONTROL Delete] | Audience composition, Custom upload, Segmentation Service | Deletes the selected audience. Audiences that are used in downstream destinations or are dependents in other audiences **cannot** be deleted. For more information on audience deletion, please read the [segmentation FAQ](../faq.md#lifecycle-states). |
 | [!UICONTROL Add to package] | Audience composition, Custom upload, Segmentation Service | Moves the audience between sandboxes. For more information on this feature, please read the [sandbox tooling guide](../../sandboxes/ui/sandbox-tooling.md). |
 
-On the top of the page are options to add all audiences to a schedule, import an audience, create a new audience, and view a breakdown of the update frequency. 
+>[!IMPORTANT]
+>
+>Before deleting your audience, please ensure that the audience is **not** used as a component in an account-based audience or used in Adobe Journey Optimizer.
+
+On the top of the page are options to add all audiences to a schedule, import an audience, create a new audience, and view a summary of the audience evaluation. 
 
 Toggling **[!UICONTROL Schedule all audiences]** will enable scheduled segmentation. More information on scheduled segmentation can be found in the [scheduled segmentation section of this user guide](#scheduled-segmentation).
 
@@ -89,13 +93,13 @@ Selecting **[!UICONTROL Create audience]** will let you create an audience. To l
 
 ![The top navigation bar on the audience browse page is highlighted. This bar contains a button to create an audience and a button to import an audience.](../images/ui/overview/browse-audiences-top.png)
 
-You can select **[!UICONTROL Update frequency summary]** to display a pie chart that shows the update frequency.
+You can select **[!UICONTROL Evaluation summary]** to display a pie chart that shows a summary of the audience evaluations.
 
-![The Update frequency summary button is highlighted.](../images/ui/overview/browse-audience-update-frequency-summary.png)
+![The Evaluation summary button is highlighted.](../images/ui/overview/browse-audience-evaluation-summary.png)
 
-The pie chart appears, displaying a breakdown of the audiences by update frequency. The chart displays the total number of audiences in the middle, and the daily batch evaluation time in UTC at the bottom. If you hover over the different parts of the audience, it will display the number of audiences that belong to each update frequency type.
+The pie chart appears, displaying a breakdown of the audiences by audience evaluation. The chart displays the total number of audiences in the middle, and the daily batch evaluation time in UTC at the bottom. If you hover over the different parts of the audience, it will display the number of audiences that belong to each update frequency type.
 
-![The update frequency pie chart is highlighted, with the batch segmentation evaluation time also displayed.](../images/ui/overview/update-frequency-chart.png)
+![The audience evaluation pie chart is highlighted, with the batch segmentation evaluation time also displayed.](../images/ui/overview/evaluation-summary.png)
 
 ### Customize {#customize}
 
@@ -197,7 +201,7 @@ The list of available filters is displayed.
 | [!UICONTROL Origin] | Lets you filter based on the origin of the audience. Available options include Segmentation service, Custom upload, Audience composition, and Audience Manager. |
 | [!UICONTROL Has any tag] | Lets you filter by tags. You can select between **[!UICONTROL Has any tag]** and **[!UICONTROL Has all tags]**. When **[!UICONTROL Has any tag]** is selected, the filtered audiences will include **any** of the tags you've added. When **[!UICONTROL Has all tags]** is selected, the filtered audiences must include **all** of the tags you've added. |
 | [!UICONTROL Lifecycle status] | Lets you filter based on the audience's lifecycle status. Available options include [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive], and [!UICONTROL Published]. |
-| [!UICONTROL Update frequency] | Lets you filter based on the audience's update frequency. Available options include [!UICONTROL Scheduled], [!UICONTROL Continuous], and [!UICONTROL On Demand]. |
+| [!UICONTROL Update frequency] | Lets you filter based on the audience's update frequency (evaluation method). Available options include [!UICONTROL Scheduled], [!UICONTROL Continuous], and [!UICONTROL On Demand]. |
 | [!UICONTROL Created by] | Lets you filter based on the person who created the audience. |
 | [!UICONTROL Creation date] | Lets you filter based on the creation date of the audience. You can choose a date range to filter when the audience was created. |
 | [!UICONTROL Modified date] | Lets you filter based on the last modified date of the audience. You can choose a date range to filter when the audience was last modified. |
@@ -268,7 +272,7 @@ Selecting **[!UICONTROL Edit properties]** will let you edit the basic details o
 
 The **[!UICONTROL Audience total]** section shows the total number of profiles that qualify for the audience.
 
-Estimates are generated by using a sample size of that day's sample data. If there are less than 1 million entities in your profile store, the full data set is used; for between 1 and 20 million entities, 1 million entities are used; and for over 20 million entities, 5% of the total entities are used. More information about generating estimates can be found in the [estimate generation section](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) of the audience creation tutorial.
+Estimates are generated by using a sample size of that day's sample data. If there are less than 1 million entities in your Profile store, the full data set is used; for between 1 and 20 million entities, 1 million entities are used; and for over 20 million entities, 5% of the total entities are used. More information about generating estimates can be found in the [estimate generation section](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) of the audience creation tutorial.
 
 **Activated destinations** {#activated-destinations}
 
@@ -284,13 +288,13 @@ Underneath is a sampling of profiles that qualify for the segment, detailing inf
 
 The way data sampling gets triggered depends on the method of ingestion.
 
-For batch ingestion, the profile store is automatically scanned every fifteen minutes to see if a new batch was successfully ingested since the last sampling job was run. If that is the case, the profile store is subsequently scanned to see if there's been at least a 5% change in the number of records. If these conditions are met, a new sampling job is triggered.
+For batch ingestion, the Profile store is automatically scanned every fifteen minutes to see if a new batch was successfully ingested since the last sampling job was run. If that is the case, the Profile store is subsequently scanned to see if there's been at least a 5% change in the number of records. If these conditions are met, a new sampling job is triggered.
 
-For streaming ingestion, the profile store is automatically scanned every hour to see if there's been at least a 5% change in the number of records. If this condition is met, a new sampling job is triggered.
+For streaming ingestion, the Profile store is automatically scanned every hour to see if there's been at least a 5% change in the number of records. If this condition is met, a new sampling job is triggered.
 
-The sample size of the scan depends on the overall number of entities in your profile store. These sample sizes are represented in the following table:
+The sample size of the scan depends on the overall number of entities in your Profile store. These sample sizes are represented in the following table:
 
-| Entities in profile store | Sample size |
+| Entities in Profile store | Sample size |
 | ------------------------- | ----------- |
 | Less than 1 million | Full data set |
 | 1 to 20 million | 1 million |
@@ -323,6 +327,10 @@ Selecting **[!UICONTROL Build rule]** takes you to the Segment Builder. This wor
 ![The Segment Builder workspace is displayed.](../images/ui/overview/segment-builder.png)
 
 ### Importing an audience {#import-audience}
+
+>[!IMPORTANT]
+>
+>In order to import an externally generated audience, you **must** have the following permissions: [!UICONTROL View segments], [!UICONTROL Manage segments], and [!UICONTROL Import audience]. For more information on these permission, read the [access control overview](../../access-control/home.md#permissions).
 
 You can select **[!UICONTROL Import audience]** to import an externally generated audience.
 
