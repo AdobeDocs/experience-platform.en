@@ -1,8 +1,7 @@
 ---
 title: AI Assistant Frequently Asked Questions
 description: Learn about answers to frequently asked questions regarding AI Assistant
-hide: true
-hidefromtoc: true
+exl-id: 17a07c11-7bc6-4cba-be0a-d75fdb567053
 ---
 # FAQ
 
@@ -19,7 +18,7 @@ The same principles apply to access control. It may take AI Assistant up to 24 h
 Currently, the scope of AI Assistant is as follows:
 
 * [Product knowledge](./home.md#product-knowledge): AI Assistant can answer product knowledge questions for Experience Platform, Real-Time Customer Data Platform and Adobe Journey Optimizer. You can also delve into product knowledge topics for Customer Journey Analytics, but only through the Customer Journey Analytics UI.
-* [Operational insights](./home.md#operational-insights): You can ask AI Assistant with questions on operational insights on the following data objects: attributes, audiences, dataflows, datasets, destinations, journeys, schemaas, and sources.
+* [Operational insights](./home.md#operational-insights): You can ask AI Assistant with questions on operational insights on the following data objects: attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources.
 
 ## What are the capabilities of AI Assistant?
 

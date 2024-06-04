@@ -1,8 +1,7 @@
 ---
 title: Privacy, Security, and Governance in AI Assistant
 description: Learn about the privacy, security, and governance practices for AI Assistant.
-hide: true
-hidefromtoc: true
+exl-id: 371e065d-c2dd-4233-b78e-a42757fce853
 ---
 # Privacy, Security, and Governance in AI Assistant
 
@@ -13,7 +12,6 @@ Read this document to learn about the customer trust-focused capabilities that y
 * No personal data is being used by AI Assistant today, even for training purposes.
 * AI Assistant is unaware of consumer data.
 * All existing [access control](../access-control/home.md) policies will be honored by AI Assistant.
-  * Object-level access control is supported for objects. Support for object-level access control for attributes is coming soon.
   * Any new attribute-based access control policies are reflected in AI Assistant after a maximum of 24 hours*
 * You must be granted explicit permission to interact with AI Assistant.
   * You can set permissions differently for Experience Platform and Journey Optimizer using the [Permissions UI](../access-control/abac/ui/permissions.md) and you can use the [Admin Console](../access-control/ui/browse.md) to assign permissions for Customer Journey Analytics.
