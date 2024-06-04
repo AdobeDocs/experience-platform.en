@@ -272,7 +272,7 @@ You can select a merge policy that matches your marketing purpose for this audie
 
 To select a merge policy for your segment definition, select the gear icon on the **[!UICONTROL Fields]** tab, then use the **[!UICONTROL Merge Policy]** dropdown menu to select the merge policy that you wish to use.
 
-![The merge policy selector is highlighted. This lets you choose which  merge policy to select for your segment definition.](../images/ui/segment-builder/merge-policy-selector.png)
+![The merge policy selector is highlighted. This lets you choose which merge policy to select for your segment definition.](../images/ui/segment-builder/merge-policy-selector.png)
 
 ## Segment definition properties {#segment-properties}
 
