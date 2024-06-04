@@ -1,8 +1,8 @@
 ---
 title: getMediaAnalyticsTracker
 description: Learn how to create a Media Analytics Tracker object and use it to track media events.
+exl-id: ae968da8-7763-4b2a-a716-3014ba0d270d
 ---
-
 # `getMediaAnalyticsTracker`
 
 This Web SDK command retrieves a Media Analytics Tracker. You can use this command to create an object instance and then, using the same APIs as the ones provided by the [Media JS library](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html), track media events.

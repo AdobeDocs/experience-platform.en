@@ -12,6 +12,10 @@ Performance guardrails define usage limits related to your Server API use cases.
 
 Adobe is not responsible for performance degradation caused by exceeded usage limits. Customers who consistently exceed the performance guardrails can request additional processing capacity to avoid performance degradation.
 
+>[!IMPORTANT]
+>
+>Check your license entitlements in your Sales Order and corresponding [Product Description](https://helpx.adobe.com/legal/product-descriptions.html) on actual usage limits in addition to this guardrails page.
+
 ## Definitions
 
 * **Availability** is calculated for each five-minute interval as the percentage of requests processed by the Experience Platform Edge Network that do not fail with errors and relate solely to the provisioned Edge Network APIs. If a tenant did not make any requests in a given five-minute interval, that interval is considered to be 100% available.

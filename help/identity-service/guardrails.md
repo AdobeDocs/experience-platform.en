@@ -8,6 +8,10 @@ exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
 
 This document provides information on use and rate limits for [!DNL Identity Service] data to help you optimize your use of the identity graph. When reviewing the following guardrails, it is assumed that you have modeled the data correctly. If you have questions on how to model your data, please contact your customer service representative.
 
+>[!IMPORTANT]
+>
+>Check your license entitlements in your Sales Order and corresponding [Product Description](https://helpx.adobe.com/legal/product-descriptions.html) on actual usage limits in addition to this guardrails page.
+
 ## Get started
 
 The following Experience Platform services are involved with modeling Identity data: 
