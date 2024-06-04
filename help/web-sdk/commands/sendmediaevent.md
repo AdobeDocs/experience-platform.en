@@ -1,8 +1,8 @@
 ---
 title: sendMediaEvent
 description: Learn how to use the sendMediaEvent command to track media sessions in Web SDK.
+exl-id: a38626fd-4810-40a0-8893-e98136634fac
 ---
-
 # `sendMediaEvent`
 
 The `sendMediaEvent` command is part of the Web SDK `streamingMedia` component. You can use this component to collect data related to media sessions on your website. See the `streamingMedia` [documentation](configure/streamingmedia.md) to learn how to configure this component.
@@ -748,6 +748,3 @@ sessionPromise.then(sessionID => {
 ```
 
 >[!ENDTABS]
-
-
-
