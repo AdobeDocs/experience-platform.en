@@ -1,8 +1,6 @@
 ---
 title: Privacy, Security, and Governance in AI Assistant
 description: Learn about the privacy, security, and governance practices for AI Assistant.
-hide: true
-hidefromtoc: true
 ---
 # Privacy, Security, and Governance in AI Assistant
 

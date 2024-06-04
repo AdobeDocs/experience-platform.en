@@ -1,8 +1,6 @@
 ---
 title: AI Assistant in Adobe Experience Platform
 description: Learn how to use AI Assistant to navigate and understand Experience Platform and Real-Time Customer Data Platform concepts, and usage information about your objects.
-hide: true
-hidefromtoc: true
 ---
 # AI Assistant UI Guide
 
