@@ -1,8 +1,6 @@
 ---
 title: AI Assistant in Adobe Experience Platform Overview
 description: Learn about AI Assistant, its nuances and use cases, and how you can use it to expedite your workflow with Adobe Experience Platform and Real-Time Customer Data Platform.
-hide: true
-hidefromtoc: true
 ---
 # AI Assistant in Adobe Experience Platform
 
@@ -66,6 +64,13 @@ You can ask AI Assistant questions about your operational insights in the follow
 * Sources _(Questions regarding accounts cannot be answered at this time.)_
 
 For operational insights questions, answers may not reflect the current state of the UI. The data that backs these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You will need to log into a sandbox to inquire about specific data related to objects.
+
+### Feature scope {#feature-scope}
+
+Currently, the scope of AI Assistant is as follows:
+
+* [Product knowledge](./home.md#product-knowledge): AI Assistant can answer product knowledge questions for Experience Platform, Real-Time Customer Data Platform and Adobe Journey Optimizer. You can also delve into product knowledge topics for Customer Journey Analytics, but only through the Customer Journey Analytics UI.
+* [Operational insights](./home.md#operational-insights): You can ask AI Assistant with questions on operational insights on the following data objects: attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources.
 
 ## Feature access {#feature-access}
 
