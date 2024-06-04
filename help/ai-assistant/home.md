@@ -1,8 +1,7 @@
 ---
 title: AI Assistant in Adobe Experience Platform Overview
 description: Learn about AI Assistant, its nuances and use cases, and how you can use it to expedite your workflow with Adobe Experience Platform and Real-Time Customer Data Platform.
-hide: true
-hidefromtoc: true
+exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
 ---
 # AI Assistant in Adobe Experience Platform
 
@@ -67,6 +66,13 @@ You can ask AI Assistant questions about your operational insights in the follow
 
 For operational insights questions, answers may not reflect the current state of the UI. The data that backs these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You will need to log into a sandbox to inquire about specific data related to objects.
 
+### Feature scope {#feature-scope}
+
+Currently, the scope of AI Assistant is as follows:
+
+* [Product knowledge](./home.md#product-knowledge): AI Assistant can answer product knowledge questions for Experience Platform, Real-Time Customer Data Platform and Adobe Journey Optimizer. You can also delve into product knowledge topics for Customer Journey Analytics, but only through the Customer Journey Analytics UI.
+* [Operational insights](./home.md#operational-insights): You can ask AI Assistant with questions on operational insights on the following data objects: attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources.
+
 ## Feature access {#feature-access}
 
 Access to AI Assistant is governed by the following parameters:
@@ -130,7 +136,7 @@ This section outlines example questions that you can refer to during your workfl
 | Schemas - Operational insights | <ul><li>Which schema's fields have contributed to the most audiences?</li><li>How many schemas are profile enabled?</li><li>List all schemas modified in the last week.</li><li>Which schemas are not used in any datasets?</li><li>List all schemas created in the last week.</li></ul> |
 | Sources - Operational insights | <ul><li>Which sources are in an active state?</li><li>Which source connector is associated with dataset {DATASET_NAME}?</li><li>Which source connector has the highest number of associated accounts?</li><li>Show me the dataflows and their associated source connectors.</li></ul> |
 | Pointed learning - Product knowledge (Real-Time CDP and Journey Optimizer) | <ul><li>What can AI Assistant help with?</li><li>What are lookalike audiences?</li><li>How are User Groups related to Roles?</li><li>When should I use a data type vs a field group?</li><li>What is the difference between an identity and a primary or foreign key?</li><li>How is profile richness calculated?</li></ul> |
-| Troubleshooting - Product knowledege (Real-Time CDP and Journey Optimizer) | <ul><li>What can AI Assistant help with?</li><li>Can I delete a profile-enabled schema after data is ingested?</li><li>Why can't I delete an audience?</li><li>How long does it take for audiences to be evaluated and for results to be available for targeting?</li></ul> |
+| Troubleshooting - Product knowledge (Real-Time CDP and Journey Optimizer) | <ul><li>What can AI Assistant help with?</li><li>Can I delete a profile-enabled schema after data is ingested?</li><li>Why can't I delete an audience?</li><li>How long does it take for audiences to be evaluated and for results to be available for targeting?</li></ul> |
 
 {style="table-layout:auto"}
 
