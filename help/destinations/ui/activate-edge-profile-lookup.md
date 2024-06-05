@@ -197,6 +197,10 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 A successful response returns HTTP status `200 OK`, with a `Handle` object that includes information similar to the examples in the tabs below, depending on whether the profile is found on the edge or not.
 
+>[!NOTE]
+>
+>The API responses are modular and the `handle` object can include multiple `payload` objects of various types. The information related to edge profile lookup is grouped under the `payload` object with `"type": "activation:pull"`,
+
 >[!BEGINTABS]
 
 >[!TAB Profile exists on the edge]
@@ -251,36 +255,6 @@ If the profile exists on the edge, depending on the profile attributes and audie
       ],
       "type": "activation:pull",
       "eventIndex": 0
-    },
-    {
-      "payload": [
-        {
-          "scope": "Target",
-          "hint": "35",
-          "ttlSeconds": 1800
-        },
-        {
-          "scope": "AAM",
-          "hint": "9",
-          "ttlSeconds": 1800
-        },
-        {
-          "scope": "EdgeNetwork",
-          "hint": "or2",
-          "ttlSeconds": 1800
-        }
-      ],
-      "type": "locationHint:result"
-    },
-    {
-      "payload": [
-        {
-          "key": "kndctr_D1E035DD5CEDB5090A495FCD_AdobeOrg_cluster",
-          "value": "or2",
-          "maxAge": 1800
-        }
-      ],
-      "type": "state:store"
     }
   ]
 }
@@ -290,16 +264,14 @@ The `handle` object provides the information described in the table below.
 
 | Parameter | Description |
 |---------|----------|
+| `payload` | The `payload` object which includes the edge lookup information. The response may contain multiple additional `payload` objects, unrelated to edge lookup. |
+| `type` | Payloads are grouped in the response by their type. The payload type for the edge profile lookup is always set to `profileLookup`.|
 | `destinationId` | The ID of the **[!UICONTROL Custom Personalization]** connection instance that you created in [step 3](#configure-custom-personalization-connection). |
-| `alias` |  |
+| `alias` | The alias of the destination connection, configured by the user when they create the [Custom Personalization](../catalog/personalization/custom-personalization.md) destination connection. |
 | `attributes` | This array includes the edge profile attributes of the audiences that you activated in [step 3](#configure-custom-personalization-connection). |
 | `segments` | This array includes the audiences that you activated in [step 3](#configure-custom-personalization-connection). |
-| `type` |  |
-| `eventIndex` |  |
-| `payload` |  |
-
-
-
+| `type` | `handle` objects are grouped by type. For edge profile lookup use cases, the type of the `handle` object is always `activation:pull`.|
+| `eventIndex` | The Edge Network receives events from the client in the form of arrays. The order of the events in the array is preserved during their processing and reflected by this index. Event indexing starts with `0`. |
 
 >[!TAB Profile does not exist on the edge]
 
@@ -313,40 +285,18 @@ If the profile does not exist on the edge, you can expect a response similar to 
       "payload": [],
       "type": "activation:pull",
       "eventIndex": 0
-    },
-    {
-      "payload": [
-        {
-          "scope": "Target",
-          "hint": "35",
-          "ttlSeconds": 1800
-        },
-        {
-          "scope": "AAM",
-          "hint": "9",
-          "ttlSeconds": 1800
-        },
-        {
-          "scope": "EdgeNetwork",
-          "hint": "or2",
-          "ttlSeconds": 1800
-        }
-      ],
-      "type": "locationHint:result"
-    },
-    {
-      "payload": [
-        {
-          "key": "kndctr_D1E035DD5CEDB5090A495FCD_AdobeOrg_cluster",
-          "value": "or2",
-          "maxAge": 1800
-        }
-      ],
-      "type": "state:store"
     }
   ]
 }
 ```
+
+The `handle` object provides the information described in the table below.
+
+| Parameter | Description |
+|---------|----------|
+| `payload` | When the profile is not present on the edge, the `payload` object is empty. |
+| `type` | `payload` objects are grouped by type. For edge profile lookup use cases, the type of the `payload` object is always `activation:pull`.|
+| `eventIndex` | The Edge Network receives events from the client in the form of arrays. The order of the events in the array is preserved during their processing and reflected by this index. Event indexing starts with `0`. |
 
 >[!ENDTABS]
 
