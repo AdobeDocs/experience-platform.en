@@ -54,6 +54,8 @@ The class you have created is available and listed in the [!UICONTROL Classes] v
 
 ### Create or edit a class {#create-or-edit}
 
+<!-- 193518 Probs update below -->
+
 Alternatively, if you select **[!UICONTROL Create schema]**, the [!UICONTROL Create schema] workflow appears. In the [!UICONTROL Schema details] section, select **[!UICONTROL Other]**. A list of available classes appears. From here you can browse and filter pre-existing classes on which to base your new class.
 
 >[!NOTE]

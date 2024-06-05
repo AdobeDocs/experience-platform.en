@@ -33,6 +33,12 @@ Source connections can be configured to gather data from other Adobe application
 
 See the [Sources overview](../sources/home.md) for more information.
 
+### ML-Assisted schema creation {#ml-assisted-schema-creation}
+
+To quickly integrate new data sources, you can now use Machine Learning algorithms to generate a schema from sample CSV data. This automation simplifies the creation of accurate schemas, reduces errors, and speeds up the process from data collection to analysis and insights.
+
+See the [ML-Assisted schema creation guide]() for more information on this workflow.
+
 ## Next steps and additional resources
 
 This document provided a brief introduction to the different aspects of [!DNL Data Ingestion] in [!DNL Experience Platform]. Please continue to read the overview documentation for each ingestion method to familiarize yourself with their different capabilities, use cases, and best practices. You can also supplement your learning by watching the ingestion overview video below. For information on how [!DNL Experience Platform] tracks the metadata for ingested records, see the [Catalog Service overview](../catalog/home.md).

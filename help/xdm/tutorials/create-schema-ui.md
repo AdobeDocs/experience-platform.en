@@ -40,6 +40,8 @@ To begin composing a schema, select **[!UICONTROL Create schema]** in the top-ri
 
 ![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with [!UICONTROL Create schema] highlighted.](../images/tutorials/create-schema/create-schema-button.png)
 
+<!-- 193518 Probs update below -->
+
 The [!UICONTROL Create schema] workflow appears. Next, choose a base class for the schema. You can choose between the core classes of [!UICONTROL XDM Individual Profile] and [!UICONTROL XDM ExperienceEvent], or [!UICONTROL Other] if these classes do not suit your purposes. The [!UICONTROL Other] classes option allows you to either [create a new class](#create-new-class) or choose from other pre-existing classes.
 
 See the [XDM individual profile](../classes/individual-profile.md) and [XDM ExperienceEvent](../classes/experienceevent.md) documentation for more information on these classes. For the purposes of this tutorial, select **[!UICONTROL XDM Individual Profile]** followed by **[!UICONTROL Next]**.

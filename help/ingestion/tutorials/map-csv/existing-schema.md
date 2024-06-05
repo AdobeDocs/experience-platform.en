@@ -115,3 +115,7 @@ Once your CSV file is mapped and created, you can monitor the data that is being
 ## Next steps
 
 By following this tutorial, you have successfully mapped a flat CSV file to an XDM schema and ingested it into [!DNL Platform]. This data can now be used by downstream [!DNL Platform] services such as [!DNL Real-Time Customer Profile]. See the overview for [[!DNL Real-Time Customer Profile]](../../../profile/home.md) for more information.
+
+>[!TIP]
+>
+>You can also use Machine Learning (ML) algorithms to **generate a schema from sample CSV data**. This workflow automatically creates a new schema based on the structure and content of your CSV file. This newly created schema matches your data's format. See the [ML-Assisted schema creation guide]() for more information on this workflow.
