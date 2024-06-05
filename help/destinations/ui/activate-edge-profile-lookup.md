@@ -1,10 +1,10 @@
 ---
-title: Configure edge profile lookup for real-time personalization, using Custom Personalization With Attributes and Server API
-description: Learn how to use the Custom Personalization With Attributes destination together with the Edge Network Server API for audience activation in edge profile lookup use cases.
+title: Look up edge profile attributes in real-time
+description: Learn how to look up edge profile attributes in real-time, using the Custom Personalization destination and Edge Network Server API
 type: Tutorial
 ---
 
-# Configure edge profile lookup for real-time personalization, using Custom Personalization With Attributes and Server API
+# Look up edge profile attributes in real-time
 
 ## Overview {#overview}
 
@@ -16,15 +16,17 @@ However, for use cases which depend on quick, real-time data retrieval, [!DNL Pl
 
 One such use case could involve real-time personalization of a user's experience on your website, by quickly retrieving profile information from the edge profile and then passing the information over to a third-party personalization engine of your choice, in order to send the user an [!DNL SMS] based on their current activity on your website.
 
-This page describes the steps that you must follow to configure an edge profile lookup use case, which requires quick retrieval of profile data to deliver personalization experiences and/or inform decisioning rules through downstream applications, in real-time.
+Another use case could cover the need of quickly retrieving profile information in real-time, when a customer calls a support center agent.
+
+This page describes the steps that you must follow to look up edge profile data in real-time, to deliver personalization experiences or inform decisioning rules through downstream applications.
 
 ## Terminology and prerequisites {#prerequisites}
 
 When configuring the use case described in this page, you will use the following Platform components:
 
-* [Datastreams](../../datastreams/overview.md): You will configure a datastream which receives incoming event data and responds with edge profile data.
+* [Datastreams](../../datastreams/overview.md): A datastream receives incoming event data from Web SDK and responds with edge profile data.
 * [Merge Policies](../../segmentation/ui/segment-builder.md#merge-policies): You will create an [!UICONTROL Active-On-Edge] merge policy to ensure that the edge profiles use the correct profile data.
-* [Custom Personalization connection](../catalog/personalization/custom-personalization.md): You will configure a new custom personalization connection which will send the profile attributes to the edge network.
+* [Custom Personalization connection](../catalog/personalization/custom-personalization.md): You will configure a new custom personalization connection which will send the profile attributes to the Edge Network.
 * [Edge Network Server API](../../server-api/overview.md): You will use the Server API [interactive data collection](../../server-api/interactive-data-collection.md) functionality to quickly retrieve profile attributes from the edge profiles.
 
 ## Step 1: Create and configure a datastream {#create-datastream}
@@ -54,14 +56,13 @@ Follow the instructions on [creating a merge policy](../../profile/merge-policie
 >
 >If your audiences use a different merge policy, you will not be able to retrieve profile attributes from the edge and you will be unable to perform edge profile lookup.
 
-
 ## Step 3: Send profile attribute data to the Edge Network{#configure-custom-personalization-connection}
 
-Before you can perform profile lookup and retrieve attributes from the edge profiles, you must configure Experience Platform to update the edge profiles with the attribute information that you neeed in your personalization scenario.
+In order to look up edge profiles, including attributes and audience membership data, in real-time, the data needs to be made available on the Edge Network. For this purpose, you must create a connection to a **[!UICONTROL Custom Personalization With Attributes]** destination and activate the audiences, including the attributes that you would like to look up on the edge profiles.
 
 You will use the the [Custom Personalization With Attributes](../catalog/personalization/custom-personalization.md) connection to send profile attributes to the Edge Network.
 
-### Configure a Custom Personalization With Attributes connection {#configure-destination}
++++ Configure a Custom Personalization With Attributes connection
 
 Follow the [destination connection creation tutorial](../ui/connect-destination.md) for detailed instructions on how to create a new destination connection.
 
@@ -69,7 +70,9 @@ When configuring the new destination, select the datastream which you created in
 
 ![Experience Platform UI image showing the Custom Personalization With Attributes configuration screen.](../assets/ui/activate-edge-profile-lookup/destination-config.png)
 
-### Activate your audiences to the Custom Personalization With Attributes connection {#activate-audiences}
++++
+
++++Activate your audiences to the Custom Personalization With Attributes connection
 
 After you have created a **[!UICONTROL Custom Personalization With Attributes]** connection, you are now ready to send profile data to the Edge Network.
 
@@ -91,35 +94,27 @@ After you have created a **[!UICONTROL Custom Personalization With Attributes]**
 
     ![Select destination step in the activation workflow.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
-1. Move to the next section to [select your audiences](#select-audiences).
+1. Select your audiences. Use the check boxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
 
-### Select your audiences {#select-audiences}
+    You can select from multiple types of audiences, depending on their origin:
+    
+    * **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
+    * **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/overview.md#import-audience).
+    * Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
 
-Use the check boxes to the left of the audience names to select the audiences that you want to activate to the destination, then select **[!UICONTROL Next]**.
+        ![Select audiences step of the activation workflow with several audiences highlighted.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
-You can select from multiple types of audiences, depending on their origin:
+1. Select the profile attributes that you want to be made available for the edge profiles.
 
-* **[!UICONTROL Segmentation Service]**: Audiences generated within Experience Platform by the Segmentation Service. See the [segmentation documentation](../../segmentation/ui/overview.md) for more details.
-* **[!UICONTROL Custom upload]**: Audiences generated outside of Experience Platform, and uploaded into Platform as CSV files. To learn more about external audiences, see the documentation on [importing an audience](../../segmentation/ui/overview.md#import-audience).
-* Other types of audiences, originating from other Adobe solutions, such as [!DNL Audience Manager].
+    * **Select source attributes**. To add source attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Source field]** column and search or navigate to your desired XDM attribute field, as shown below.
+    
+        ![Screen recording showing how to select a target attribute in the mapping step.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
-![Select audiences step of the activation workflow with several audiences highlighted.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
+    * **Select target attributes**. To add target attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Target field]** column and type in the custom attribute name that you want to map the source attribute to.
+    
+        ![Screen recording showing how to select an XDM attribute in the mapping step](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
-### Map profile attributes {#mapping}
 
-Select the profile attributes that you want to be made available for the edge profiles.
-
-**Select source attributes**
-
-To add source attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Source field]** column and search or navigate to your desired XDM attribute field, as shown below.
-
-![Screen recording showing how to select a target attribute in the mapping step.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
-
-**Select target attributes**
-
-To add target attributes, select the **[!UICONTROL Add new field]** control on the **[!UICONTROL Target field]** column and type in the custom attribute name that you want to map the source attribute to.
-
-![Screen recording showing how to select an XDM attribute in the mapping step](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
 When you are finished mapping profile attributes, select **[!UICONTROL Next]**.
 
@@ -127,7 +122,9 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 ![Selection summary in the review step.](../assets/ui/activate-edge-personalization-destinations/review.png)
 
-**Consent policy evaluation**
++++
+
++++Consent policy evaluation
 
 If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**, select **[!UICONTROL View applicable consent policies]** to see which consent policies are applied and how many profiles are included in the activation as a result of them. Read about [consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
 
@@ -137,17 +134,21 @@ In the **[!UICONTROL Review]** step, Experience Platform also checks for any dat
  
 ![An example of a data policy violation.](../assets/common/data-policy-violation.png)
 
-**Filter audiences**
++++
 
-In this step you can use the available filters on the page to display only the audiences whose schedule or mapping has been updated as part of this workflow. You can also toggle which table columns you want to see. 
++++Filter audiences
+
+In the **[!UICONTROL Review]** step you can use the available filters on the page to display only the audiences whose schedule or mapping has been updated as part of this workflow. You can also toggle which table columns you want to see. 
 
 ![Screen recording showing the available audience filters in the review step.](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
+
++++
 
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection.
 
 ## Step 4: Configure Edge Profile Lookup {#configure-edge-profile-lookup}
 
-By now you should have finished [configuring your datastream](#create-datastream), you have [created a new Custom Personalization With Attributes destination connection](#configure-destination), and you have used this connection to [send the profile attributes](#activate-audiences) that will power your personalization to the Edge Network.
+By now you should have finished [configuring your datastream](#create-datastream), you have [created a new Custom Personalization With Attributes destination connection](#configure-destination), and you have used this connection to [send the profile attributes](#activate-audiences) that you will be able to look up to the Edge Network.
 
 The next step is to configure your personalization solution to retrieve profile attributes from the edge profiles.
 
@@ -205,85 +206,100 @@ If the profile exists on the edge, depending on the profile attributes and audie
 
 ```json
 {
-    "requestId": "3c600138-d785-42ca-a025-bb725f4b5da9",
-    "handle": [
+  "requestId": "3c600138-d785-42ca-a025-bb725f4b5da9",
+  "handle": [
+    {
+      "payload": [
         {
-            "payload": [
-                {
-                    "type": "profileLookup",
-                    "destinationId": "9218b727-ec59-4a46-b8b9-05503f138c5d",
-                    "alias": "rk-demo-custom-personalization-XXXX",
-                    "attributes": {
-                        "zip": {
-                            "value": "19000"
-                        },
-                        "firstName": {
-                            "value": "Test"
-                        },
-                        "lastName": {
-                            "value": "User123"
-                        },
-                        "gender": {
-                            "value": "male"
-                        },
-                        "city": {
-                            "value": "Philadelphia"
-                        },
-                        "state": {
-                            "value": "PA"
-                        },
-                        "email": {
-                            "value": "test123@adobetest.com"
-                        }
-                    },
-                    "segments": [
-                        {
-                            "id": "85018bd8-7ad1-4e17-ae30-8389c04bd3c0",
-                            "namespace": "ups"
-                        },
-                        {
-                            "id": "d09a8159-8b30-4178-b2f2-7a8c5e3168d9",
-                            "namespace": "ups"
-                        }
-                    ]
-                }
-            ],
-            "type": "activation:pull",
-            "eventIndex": 0
-        },
-        {
-            "payload": [
-                {
-                    "scope": "Target",
-                    "hint": "35",
-                    "ttlSeconds": 1800
-                },
-                {
-                    "scope": "AAM",
-                    "hint": "9",
-                    "ttlSeconds": 1800
-                },
-                {
-                    "scope": "EdgeNetwork",
-                    "hint": "or2",
-                    "ttlSeconds": 1800
-                }
-            ],
-            "type": "locationHint:result"
-        },
-        {
-            "payload": [
-                {
-                    "key": "kndctr_D1E035DD5CEDB5090A495FCD_AdobeOrg_cluster",
-                    "value": "or2",
-                    "maxAge": 1800
-                }
-            ],
-            "type": "state:store"
+          "type": "profileLookup",
+          "destinationId": "9218b727-ec59-4a46-b8b9-05503f138c5d",
+          "alias": "rk-demo-custom-personalization-XXXX",
+          "attributes": {
+            "zip": {
+              "value": "19000"
+            },
+            "firstName": {
+              "value": "Test"
+            },
+            "lastName": {
+              "value": "User123"
+            },
+            "gender": {
+              "value": "male"
+            },
+            "city": {
+              "value": "Philadelphia"
+            },
+            "state": {
+              "value": "PA"
+            },
+            "email": {
+              "value": "test123@adobetest.com"
+            }
+          },
+          "segments": [
+            {
+              "id": "85018bd8-7ad1-4e17-ae30-8389c04bd3c0",
+              "namespace": "ups"
+            },
+            {
+              "id": "d09a8159-8b30-4178-b2f2-7a8c5e3168d9",
+              "namespace": "ups"
+            }
+          ]
         }
-    ]
+      ],
+      "type": "activation:pull",
+      "eventIndex": 0
+    },
+    {
+      "payload": [
+        {
+          "scope": "Target",
+          "hint": "35",
+          "ttlSeconds": 1800
+        },
+        {
+          "scope": "AAM",
+          "hint": "9",
+          "ttlSeconds": 1800
+        },
+        {
+          "scope": "EdgeNetwork",
+          "hint": "or2",
+          "ttlSeconds": 1800
+        }
+      ],
+      "type": "locationHint:result"
+    },
+    {
+      "payload": [
+        {
+          "key": "kndctr_D1E035DD5CEDB5090A495FCD_AdobeOrg_cluster",
+          "value": "or2",
+          "maxAge": 1800
+        }
+      ],
+      "type": "state:store"
+    }
+  ]
 }
 ```
+
+The `handle` object provides the information described in the table below.
+
+| Parameter | Description |
+|---------|----------|
+| `destinationId` | The ID of the **[!UICONTROL Custom Personalization]** connection instance that you created in [step 3](#configure-custom-personalization-connection). |
+| `alias` |  |
+| `attributes` | This array includes the edge profile attributes of the audiences that you activated in [step 3](#configure-custom-personalization-connection). |
+| `segments` | This array includes the audiences that you activated in [step 3](#configure-custom-personalization-connection). |
+| `type` |  |
+| `eventIndex` |  |
+| `payload` |  |
+
+
+
 
 >[!TAB Profile does not exist on the edge]
 
@@ -291,44 +307,44 @@ If the profile does not exist on the edge, you can expect a response similar to 
 
 ```json
 {
-    "requestId": "531b541a-4541-419e-ac99-fd7e452f0c0f",
-    "handle": [
+  "requestId": "531b541a-4541-419e-ac99-fd7e452f0c0f",
+  "handle": [
+    {
+      "payload": [],
+      "type": "activation:pull",
+      "eventIndex": 0
+    },
+    {
+      "payload": [
         {
-            "payload": [],
-            "type": "activation:pull",
-            "eventIndex": 0
+          "scope": "Target",
+          "hint": "35",
+          "ttlSeconds": 1800
         },
         {
-            "payload": [
-                {
-                    "scope": "Target",
-                    "hint": "35",
-                    "ttlSeconds": 1800
-                },
-                {
-                    "scope": "AAM",
-                    "hint": "9",
-                    "ttlSeconds": 1800
-                },
-                {
-                    "scope": "EdgeNetwork",
-                    "hint": "or2",
-                    "ttlSeconds": 1800
-                }
-            ],
-            "type": "locationHint:result"
+          "scope": "AAM",
+          "hint": "9",
+          "ttlSeconds": 1800
         },
         {
-            "payload": [
-                {
-                    "key": "kndctr_D1E035DD5CEDB5090A495FCD_AdobeOrg_cluster",
-                    "value": "or2",
-                    "maxAge": 1800
-                }
-            ],
-            "type": "state:store"
+          "scope": "EdgeNetwork",
+          "hint": "or2",
+          "ttlSeconds": 1800
         }
-    ]
+      ],
+      "type": "locationHint:result"
+    },
+    {
+      "payload": [
+        {
+          "key": "kndctr_D1E035DD5CEDB5090A495FCD_AdobeOrg_cluster",
+          "value": "or2",
+          "maxAge": 1800
+        }
+      ],
+      "type": "state:store"
+    }
+  ]
 }
 ```
 
