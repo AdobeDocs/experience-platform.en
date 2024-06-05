@@ -197,6 +197,7 @@ role: Developer
     * [Relationship fields](./ui/fields/relationship.md)
     * [Required fields](./ui/fields/required.md)
   * [Field-based workflows](./ui/field-based-workflows.md)
+  * [Machine Learning assisted schema creation](./ui/ml-assisted-schema-creation.md)
   * [Generate sample XDM data](./ui/sample.md)
   * [Export XDM schemas](./ui/export.md)
 * Schema Registry API {#api}

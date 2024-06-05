@@ -12,4 +12,4 @@ In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must
 
 >[!TIP]
 >
->You can also use Machine Learning (ML) algorithms to **generate a schema from sample CSV data**. This workflow automatically creates a new schema based on the structure and content of your CSV file. This newly created schema matches your data's format. See the [ML-Assisted schema creation guide]() for more information on this workflow.
+>You can also use Machine Learning (ML) algorithms to **generate a schema from sample CSV data**. This workflow automatically creates a new schema based on the structure and content of your CSV file. This newly created schema matches your data's format to save you time and increase accuracy when defining the structure, fields, and data types for large complex datasets. See the [ML-Assisted schema creation guide](../../../xdm/ui/ml-assisted-schema-creation.md) for more information on this workflow.
