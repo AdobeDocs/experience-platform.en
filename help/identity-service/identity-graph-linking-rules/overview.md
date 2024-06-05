@@ -1,16 +1,14 @@
 ---
 title: Identity graph linking rules overview
 description: Learn about Identity Graph Linking Rules in Identity Service.
-hide: true
-hidefromtoc: true
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 ---
 # Identity graph linking rules overview
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Identity graph linking rules are currently in Beta. The feature and documentation are subject to change.
+>This feature is not yet available; the beta program for identity graph linking rules is expected to start in July on development sandboxes. Contact your Adobe account team for information on the participation criteria.
 
 ## Table of contents
 
@@ -40,7 +38,7 @@ With Identity graph linking rules you can:
 | Terminology | Description |
 | --- | --- |
 | Unique namespace | A unique namespace is an identity namespace that has been set up to be distinct within the context of an identity graph. You can configure a namespace to be unique using the UI. Once a namespace is defined as unique, a graph can only have one identity that contains that namespace. You cannot link a second identity that contains that same namespace to a graph, once the graph contains an identity with a unique namespace. |
-| Namespace priority | Namespace priority refers to the relative importance of namespaces compared to one another. Namespace priority is configurable through the UI. You can rank namespaces in a given identity graph. Once enabled, namespace priorities determine the primary identity only for experience events in Real-Time Customer Profile. |
+| Namespace priority | Namespace priority refers to the relative importance of namespaces compared to one another. Namespace priority is configurable through the UI. You can rank namespaces in a given identity graph. Once enabled, names priority will be used in various scenarios, such as input for identity optimization algorithm and determining primary identity for experience event fragments. |
 | Identity optimization algorithm | The identity optimization algorithm ensures that guidelines created by configuring a unique namespace and namespace priorities are enforced in a given identity graph. |
 
 ### Unique namespace {#unique-namespace}
@@ -71,7 +69,7 @@ You must configure a unique namespace to inform the [!DNL Identity Optimization 
 
 Namespace priority refers to the relative importance of namespaces compared to one another. Namespace priority is configurable through the UI and you can rank namespaces in a given identity graph. 
 
-The priority that you set for your namespaces are then used to define primary identities, which is the identity that stores profile fragments (attribute and event data) in Real-Time Customer Profile. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
+One way in which namespace priority is used is determining the primary identity of experience event fragments (user behavior) on Real-Time Customer Profile. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
 
 Unique namespaces and namespace priorities are both configurable in the identity settings UI workspace. However, the effects of their configurations are different:
 
@@ -83,48 +81,10 @@ Unique namespaces and namespace priorities are both configurable in the identity
 * Namespace priority does not affect graph behavior when the limit of 50 identities per graph is reached.
 * **Namespace priority is a numerical value** assigned to a namespace indicating its relative importance. This is a property of a namespace.
 * **Primary identity is the identity in which a profile fragment is stored against**. A profile fragment is a record of data that stores information about a certain user: attributes (usually ingested via CRM records) or events (usually ingested from experience events, or online data).
-* Namespace priority determines the primary identity for experience events.
+* Namespace priority determines the primary identity for experience event fragments.
   * For profile records, you can use the schemas workspace in the Experience Platform UI to define identity fields, including the primary identity. Read the guide on [defining identity fields in the UI](../../xdm/ui/fields/identity.md) for more information.
 
 For more information, read the guide on [namespace priority](./namespace-priority.md)
-
-+++Select to view an example of how namespace priority works
-
-Suppose that you have configured the following priority for your namespaces:
-
-1. CRM ID: Represents a user.
-2. IDFA: Represents an Apple hardware device, such as an iPhone and iPad.
-3. GAID: Represents a Google hardware device, such as Google Pixel.
-4. ECID: Represents a web browser, such as Firefox, Safari and Chrome.
-5. AAID: Represents a web browser.
-If ECID and AAID are sent simultaneously, both identities represent the same web browser (duplicate).
-
-If the following experience events are ingested into Experience Platform, the profile fragments are then stored against the namespace with the higher priority.
-
-**Authenticated events:**
-
-* If the identity map contains an ECID, a GAID, and a CRM ID, the event information will be stored against the CRM ID (primary identity).
-  * GAID represents a Google hardware device (e.g. Google Pixel), ECID represents a web browser (e.g. Google Chrome), and CRM ID represents an authenticated user.
-  * If the identity map contains a CRM ID, an ECID, and an AAID, the event information will be stored against the CRM ID (primary identity).
-
-**Unauthenticated events:**
-
-* If the identity map contains an ECID, IDFA, and AAID, then the event information will be stored against the IDFA (primary identity).
-  * IDFA represents an Apple hardware device (e.g. iPhone), ECID and AAID both represent a web browser (Safari).
-
-+++
-
-### Identity optimization algorithm {#identity-optimization-algorithm}
-
-The identity optimization algorithm is a rule that ensures that the limits are enforced. The algorithm honors the most recent links and removes the oldest links to make sure that a given graph stays within the limits that you have defined.
-
-The following is a list of implications of the algorithm on associating anonymous events to known identifiers:
-
-* The ECID will be associated to the last authenticated user if the following conditions are met:
-  * If CRM IDs are merged by ECID (shared device).
-  * If limits are configured to just one CRM ID. 
-
-For more information, read the document on [identity optimization algorithm](./identity-optimization-algorithm.md).
 
 ## Next steps
 

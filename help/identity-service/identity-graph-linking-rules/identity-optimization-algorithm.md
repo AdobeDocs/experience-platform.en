@@ -8,9 +8,9 @@ exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 ---
 # Identity optimization algorithm
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->The identity optimization algorithm is currently in Beta. The feature and documentation are subject to change.
+>This feature is not yet available; the beta program for identity graph linking rules is expected to start in July on development sandboxes. Contact your Adobe account team for information on the participation criteria.
 
 The identity optimization algorithm is a graph algorithm on Identity Service that helps ensure that an identity graph is representative of a single person, and therefore, prevents the unwanted merging of identities on Real-Time Customer Profile.
 
@@ -29,7 +29,7 @@ You must specify which namespaces represent a person entity in Identity Service 
 * CRM ID namespace = unique
 * Email namespace = unique
 
-A namespace that you declare to be unique will automatically be configured to have a maximum limit of one within a given identity graph. For example, if you declare a CRM ID namespace as unique, then an identity graph can only have one identity that contains a CRM ID namespace. If you do not declare a namespace to be unique, then the  graph can contain moore than one identity with that namespace.
+A namespace that you declare to be unique will automatically be configured to have a maximum limit of one within a given identity graph. For example, if you declare a CRM ID namespace as unique, then an identity graph can only have one identity that contains a CRM ID namespace. If you do not declare a namespace to be unique, then the  graph can contain more than one identity with that namespace.
 
 >[!NOTE]
 >
@@ -60,7 +60,7 @@ When the unique namespace constraint is violated, the identity optimization algo
 
 * Links are sorted by the following order:
   * Latest event
-  * Timestamp by sum
+  * Timestamp by sum of namespace priority (lower sum = higher order)
 * The graph would re-establish based on the above order. If adding the link violates the limit constraint (e.g. the graph contains two or more identities with a unique namespace), then the links is removed.
 * The resulting graph will then be compliant with the unique namespace constraint that you configured.
 

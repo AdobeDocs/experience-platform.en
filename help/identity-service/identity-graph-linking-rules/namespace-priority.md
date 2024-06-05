@@ -5,9 +5,9 @@ badge: Beta
 ---
 # Namespace priority
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Namespace priority is in beta. The feature and documentation are subject to change.
+>This feature is not yet available; the beta program for identity graph linking rules is expected to start in July on development sandboxes. Contact your Adobe account team for information on the participation criteria.
 
 Every customer implementation is unique and tailored to meet a particular organization's goals, and as such, the importance of a given namespace varies from customer to customer. Real-world examples include:
 
@@ -40,7 +40,7 @@ An identity represents a real-world object. There are three objects that are rep
 * Hardware device
 * Web browser (Cookie)
 
-Person namespaces are relatively immutable compared to hardware devices (such as IDFA, GAID), which are relatively immutable compared to web browsers. Basically, you (person) will always be a single entity, that can have multiple hardware devices (phone, laptop, tablet, etc.), which then have multiple browsers (Google Chrome, Safari, FireFox, etc.)
+Person namespaces are relatively immutable compared to hardware devices (such as IDFA, GAID), which are relatively immutable compared to web browsers. Basically, you (person) will always be a single entity, who can have multiple hardware devices (phone, laptop, tablet, etc.), and use multiple browsers (Google Chrome, Safari, FireFox, etc.)
 
 Another way to approach this topic is through cardinality. For a given person entity, how many identities will be created? In most cases, a person will have one CRM ID, a handful of hardware device identifiers (IDFA/GAID resets should not happen often), and even more cookies (an individual could conceivably brows on multiple devices, use incognito mode, or reset cookies at any  given time). Generally, **lower cardinality indicates a namespace with a higher value**.
 
@@ -60,15 +60,15 @@ Namespace priority can be configured using [!UICONTROL Identity Settings]. In th
 
 Currently, namespace priority influences system behavior of Real-Time Customer Profile. The diagram below illustrates this concept. For more information, read the guide on [Adobe Experience Platform and applications architecture diagrams](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
-### Identity Service: Identity optimization algorithm
-
 ![A diagram of namespace priority application scope](../images/namespace-priority/application-scope.png)
+
+### Identity Service: Identity optimization algorithm
 
 For relatively complex graph structures, namespace priority plays an important role in ensuring that the correct links are removed when graph collapse scenarios happen. For more information read the [[!DNL Identity Optimization Algorithm] overview](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
 ### Real-Time Customer Profile: primary identity determination for experience events
 
-* For experience events, the primary identity is determined by the namespace with the highest priority.
+* For experience events, once you have configured Identity Settings for a given sandbox, the primary identity will be determined by the highest namespace priority going forward.
   * This is because experience events are dynamic in nature. An identity map may contain three or more identities, and namespace priority ensures that the most important namespace is associated to the experience event.
 * As a result, the following configurations **will no longer be used by Real-Time Customer Profile**:
   * "Primary" checkbox on data element type in WebSDK.
@@ -126,7 +126,7 @@ If the John and Jane share a device, then the ECID (web browser) transfers from 
 
 If the segment qualification criteria were solely based on anonymous events stored against the ECID, then Jane would qualify for that segment
 
-## Impact on other services {#impact}
+## Implications on other Experience Platform services {#implications}
 
 This section outlines how namespace priority can affect other Experience Platform services.
 
