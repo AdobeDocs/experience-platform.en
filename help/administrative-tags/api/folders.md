@@ -1,5 +1,5 @@
 ---
-title: Folders endpoint
+title: Folders Endpoint
 description: Learn how to create, update, manage, and delete folders using the Adobe Experience Platform APIs.
 role: Developer
 ---
@@ -16,7 +16,7 @@ This guide provides information to help you better understand folders and includ
 
 ## Getting started
 
-The endpoints used in this guide are part of the Adobe Experience Platform APIs. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
 ## Retrieve a list of folders {#list}
 
@@ -30,7 +30,7 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segment` and `dataset`. |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. The supported values include `segment` and `dataset`. |
 | `{PARENT_FOLDER_ID}` | The ID of the parent folder that you're retrieving the list of folders from. To view a list of all the parent folders, use the folder ID `root`. |
 
 **Request**
@@ -117,7 +117,7 @@ POST /folder/{FOLDER_TYPE}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segment` and `dataset`. |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. The supported values include `segment` and `dataset`. |
 
 **Request**
 
@@ -189,7 +189,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segment` and `dataset`. |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. The supported values include `segment` and `dataset`. |
 | `{FOLDER_ID}` | The ID of the folder that you're retrieving. |
 
 **Request**
@@ -244,12 +244,13 @@ A successful response returns HTTP status 200 with details of the requested fold
 | `createdAt` | The timestamp of when the folder was created. |
 | `modifiedBy` | The ID of the user who last updated the folder. |
 | `modifiedAt` | The timestamp of when the folder was last updated. |
+| `status` | The status of the requested folder. Supported values include `IN_USE` and `ARCHIVED`. |
 
 +++
 
 ## Validate a specified folder {#validate}
 
-You can validate if a folder exists by making a GET request to the `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` endpoint, and provide both the folder type and ID.
+You can validate if a folder is eligible to have objects in it by making a GET request to the `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` endpoint, and provide both the folder type and ID.
 
 **API format**
 
@@ -259,7 +260,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segment` and `dataset`. |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. The supported values include `segment` and `dataset`. |
 | `{FOLDER_ID}` | The ID of the folder that you're validating. |
 
 **Request**
@@ -294,6 +295,7 @@ A successful status returns HTTP status 200 with details of the folder you are v
     "sandboxName": "prod",
     "createdBy": "{USER_ID}",
     "createdAt": "2023-10-01T08:47:06.192+00:00",
+    "status": "IN_USE",
     "modifiedBy": "{USER_ID}",
     "modifiedAt": "2023-10-01T08:47:06.192+00:00",
     "_links": {
@@ -318,7 +320,7 @@ PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segment` and `dataset`. |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. The supported values include `segment` and `dataset`. |
 | `{FOLDER_ID}` | The ID of the folder that you're updating. |
 
 **Request**
@@ -368,74 +370,6 @@ A successful response returns HTTP status 200 with information about your newly 
 }
 ```
 
-## Retrieve a specific folder's subfolders {#get-subfolders}
-
-You can retrieve the subfolders for a specific folder that belongs to your organization by making a GET request to the `/folder/{FOLDER_TYPE}/{FOLDER_ID}/subfolders` endpoint, and provide both the folder type and ID.
-
-**API format**
-
-```http
-GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/subfolders
-```
-
-**Request**
-
-+++A sample request to retrieve the subfolders for a specific folder
-
-```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e/subfolders
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-+++
-
-**Response**
-
-A successful response returns HTTP status 200 with details of the requested folder's subfolders.
-
-+++A sample response that contains details of the requested folder's subfolders.
-
-```json
-{
-    "folders": [
-        {
-            "id": "a603c72a-4271-4a96-b470-95d2e3fc68cc",
-            "name": "Sample child folder",
-            "noun": "dataset",
-            "parentFolderId": "83f8287c-767b-4106-b271-257282fd170e",
-            "imsOrg": "{ORG_ID}",
-            "sandboxId": "{SANDBOX_ID}",
-            "sandboxName": "prod",
-            "createdBy": "{USER_ID}",
-            "createdAt": "2024-03-20T18:01:08.943+00:00",
-            "modifiedBy": "{USER_ID}",
-            "modifiedAt": "2024-03-20T18:01:08.943+00:00",
-            "status": "IN_USE",
-            "_links": {
-                "self": {
-                    "href": "/folders/dataset/a603c72a-4271-4a96-b470-95d2e3fc68cc"
-                }
-            },
-            "namespace": null
-        }
-    ],
-    "_page": {
-        "start": 0,
-        "limit": 20,
-        "property": null,
-        "sortBy": "modifiedAt",
-        "sortOrder": "desc",
-        "count": 1
-    }
-}
-```
-
-+++
-
 ## Delete a specific folder {#delete}
 
 You can delete a specific folder that belongs to your organization by making a DELETE request to the `/folder` and specifying the folder type and folder's ID.
@@ -448,7 +382,7 @@ DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. Currently, the supported values include `segment` and `dataset`. |
+| `{FOLDER_TYPE}` | The type of objects that are contained within the folder. The supported values include `segment` and `dataset`. |
 | `{FOLDER_ID}` | The ID of the folder that you're deleting. |
 
 **Request**
