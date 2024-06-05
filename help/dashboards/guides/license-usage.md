@@ -155,7 +155,7 @@ The license usage dashboard reports on several unique metrics that are applicabl
 
 >[!TIP]
 >
->You can check your license entitlements in your Sales Order to calculate metrics such as your 'Storage Allowance' or your 'Total storage'.<br>For example,<ul><li>Storage Allowance = Number of Profiles X Average Profile Richness in Contract</li><li>Total storage = License amount X Usage %</li></ul>
+>You can check your license entitlements in your Sales Order to calculate metrics such as your 'Storage Allowance'.<br>For example,<ul><li>Storage Allowance = The number of "authorized profiles" in your contract X Average Profile Richness</li></ul>
 
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased. For detailed definitions of each metric, refer to the appropriate Product Description documentation:
 
