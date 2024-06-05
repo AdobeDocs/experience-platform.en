@@ -4,9 +4,7 @@ description: Learn how to look up edge profile attributes in real-time, using th
 type: Tutorial
 ---
 
-# Look up edge profile attributes in real-time
-
-## Overview {#overview}
+# Look up profile attributes on the edge in real-time
 
 Adobe Experience Platform uses the [Real-Time Customer Profile](../../profile/home.md) as the single source of truth for all profile data. 
 
@@ -142,9 +140,10 @@ In the **[!UICONTROL Review]** step you can use the available filters on the pag
 
 ![Screen recording showing the available audience filters in the review step.](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
 
-+++
+
 
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection.
++++
 
 ## Step 4: Configure Edge Profile Lookup {#configure-edge-profile-lookup}
 
