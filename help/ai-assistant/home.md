@@ -13,7 +13,7 @@ AI Assistant in Adobe Experience Platform is a conversational experience that yo
 
 >[!IMPORTANT]
 >
->You must agree to a user agreement before you can use AI Assistant. The user agreement also contains the public beta agreement. This is so that you can use additional AI Assistant features as they roll out in a beta capacity.
+>You must agree to a [user agreement](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) before you can use AI Assistant. The user agreement also contains the public beta agreement. This is so that you can use additional AI Assistant features as they roll out in a beta capacity.
 
 +++Select to view user agreement interface
 
