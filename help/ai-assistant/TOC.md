@@ -1,7 +1,7 @@
 ---
 audience: user
 user-guide-title: AI Assistant in Adobe Experience Platform Guide
-user-guide-description: AI Assistant in Adobe Experience Platform is a conversational experience that you can use to accelerate your workflows in Adobe applications. You can use AI Assistant to better understand product knowledge, troubleshoot problems, or search through information and find operational insights.
+user-guide-description: Learn about AI Assistant, its nuances and use cases, and how you can use it to expedite your workflow with Adobe Experience Platform and Real-Time Customer Data Platform.
 description: This document lists the table of contents for AI Assistant in Adobe Experience Platform.
 role: Admin,User,Developer,Leader
 ---
