@@ -190,7 +190,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 | Parameter | Type | Required | Description |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Yes. | The datastream ID of the datastream that you [created in step 1](#create-datastream). |
+| `dataStreamId` | `String` | Yes. | The datastream ID of the datastream that you created in [step 1](#create-datastream). |
 
 ### Response {#response}
 
