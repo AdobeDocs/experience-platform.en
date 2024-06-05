@@ -113,10 +113,6 @@ Real-Time Customer Profile provides a centralized consumer profile for targeted 
 
 Real-Time Customer Profile consumes schema-formatted data based on the [!UICONTROL XDM Individual Profile] and [!UICONTROL XDM ExperienceEvent] classes, and responds to queries based on that data. 
 
->[!NOTE]
->
->Real-Time Customer Profile does **not** support schemas based on classes other than the [!UICONTROL XDM ExperienceEvent] class.
-
 The system maintains an instance of each customer profile, merging data together to form a "single source of truth" for the individual. This unified data is represented using what is known as a "union schema" (sometimes referred to as a "union view"). A union schema aggregates the fields of all schemas that implement the same class into a single schema. When composing a schema using the UI or API, you can enable the schema for use with Real-Time Customer Profile and tag it for inclusion in the union. The tagged schema will then participate in the schema definition being fed to Profile.
 
 As [!UICONTROL XDM Individual Profile] and [!UICONTROL XDM ExperienceEvent] data is ingested into the data lake, Real-Time Customer Profile ingests any data that has been enabled for its use. The more interactions and details that are ingested, the more robust individual profiles become.

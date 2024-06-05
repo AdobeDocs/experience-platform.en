@@ -5,6 +5,7 @@ role: Developer
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
 ---
 # Content endpoint
 
