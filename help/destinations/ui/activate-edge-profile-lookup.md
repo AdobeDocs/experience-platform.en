@@ -206,7 +206,6 @@ A successful response returns HTTP status `200 OK`, with a `Handle` object that 
 
 If the profile exists on the edge, depending on the profile attributes and audiences activated to the edge, you can expect a response with attributes and audience memberships similar to the one below.
 
-
 ```json
 {
   "requestId": "3c600138-d785-42ca-a025-bb725f4b5da9",
