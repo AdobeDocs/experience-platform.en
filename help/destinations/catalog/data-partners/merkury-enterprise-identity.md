@@ -20,7 +20,7 @@ Use the Merkury Enterprise Identity destination to build more accurate, comprehe
 Follow the steps in this documentation page to create a Merkury Identity destination connection and activate audiences for identification and enrichment using the Adobe Experience Platform user interface.
 
 >[!NOTE]
-
+>
 >If you are looking to activate audiences to media destinations with your Merkury Connect account, use our Merkury Connections destination instead.
 
 ![The Merkury Enterprise Identity destination card highlighted in the Experience Platform destinations catalog.](../../assets/catalog/data-partners/merkury-identity/media/image2.png)
@@ -34,15 +34,15 @@ Merkury Enterprise Identity Destination provides the ability to securely transfe
 * **Enrichment**: Drive better insights and personalization with Merkury Data. Merkury Data includes over 10,000+ available data attributes ranging from demographic, lifestyle, financial, life events, and purchase data from the Merkury Data Suite.
 
 >[!NOTE]
-
+>
 >These use cases are executed through a combination of both destination and source connectors. The customer would start by exporting their existing customer records for enrichment using this destination connector. Merkury's service would search for the file, retrieve it, enrich it with Merkury's data and generate a file. The customer would then use the corresponding Merkury Source connector source card to ingest the hydrated customer profiles back into Adobe Real-Time CDP.
 
 ## Prerequisites
 
 >[!IMPORTANT]
-
->* To connect to the destination, you need the **View Destinations** and **Manage Destinations**, **Activate Destinations**, **View Profiles**, and **View Segments** [[access control permissions]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Read the [[access control overview]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) or contact your product administrator to obtain the required permissions.
->* To export *identities*, you need the **View Identity Graph** [[access control permission]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).\![Select identity namespace highlighted in the workflow to activate audiences to destinations.](../../assets/catalog/data-partners/merkury-identity/media/image3.png)
+>
+>* To connect to the destination, you need the **View Destinations** and **Manage Destinations**, **Activate Destinations**, **View Profiles**, and **View Segments** [[access control permissions]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Read the [[access control overview]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) or contact your product administrator to obtain the required permissions.
+>* To export *identities*, you need the **View Identity Graph** [[access control permission]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).\![Select identity namespace highlighted in the workflow to activate audiences to destinations.](../../assets/catalog/data-partners/merkury-identity/media/image3.png)
 
 ## Supported identities {#supported-identities}
 
@@ -63,8 +63,8 @@ This section describes which type of audiences you can export to this destinatio
 
 |**Audience**|**Supported**|**Description**|**origin**|                      
 |---|---|---|---|
-|Segmentation Service|✓|Audiences generated through the Experience Platform [[Segmentation Service]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
-|Custom uploads|x|Audiences [[imported]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) into Experience Platform from CSV files.|
+|Segmentation Service|✓|Audiences generated through the Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
+|Custom uploads|x|Audiences [[imported]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) into Experience Platform from CSV files.|
 
 {style="table-layout:auto"}
 
@@ -73,18 +73,18 @@ This section describes which type of audiences you can export to this destinatio
 Refer to the table below for information about the destination export type and frequency.
 |**Audience**|**Supported**|**Description origin**|            
 |---|---|---|      
-|Segmentation Service|✓|Audiences generated through the Experience Platform [[Segmentation Service]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
-Custom uploads|X|Audiences [[imported]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) into Experience Platform from CSV files.
+|Segmentation Service|✓|Audiences generated through the Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
+Custom uploads|X|Audiences [[imported]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) into Experience Platform from CSV files.
 
 {style="table-layout:auto"}
 
 ## Connect to the destination
 
 >[!IMPORTANT]
+>
+>To connect to the destination, you need the **View Destinations** and **Manage and Activate Dataset Destinations** [[access control permissions]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Read the [[access control overview]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) or contact your product administrator to obtain the required permissions.
 
->To connect to the destination, you need the **View Destinations** and **Manage and Activate Dataset Destinations** [[access control permissions]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Read the [[access control overview]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) or contact your product administrator to obtain the required permissions.
-
-To connect to this destination, follow the steps described in the [[destination configuration tutorial]{.underline}](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). In the destination configuration workflow, fill in the fields listed in the two sections below.
+To connect to this destination, follow the steps described in the [[destination configuration tutorial]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). In the destination configuration workflow, fill in the fields listed in the two sections below.
 
 ### Authenticate to destination
 
@@ -116,7 +116,7 @@ To configure details for the destination, fill in the required and optional fiel
 * **File Type** - Select the format Experience Platform should use for the exported files. Consult your Merkury team for the expected file type for your account.
 
 >[!NOTE]
-
+>
 >When selecting the CSV option, Delimiter, Quote Character, Escape Character, Empty Value, Null Value, Compression format, and Include manifest file options will be presented, consuly your Merkury team for the appropiate settings for your account.
 
 ![image of csv option](../../assets/catalog/data-partners/merkury-identity/media/image8.png)
@@ -138,7 +138,7 @@ When you are finished providing details for your destination connection, select�
 ## Activate audiences to this destination
 
 >[!IMPORTANT]
-
+>
 >* To activate data, you need the View Destinations, Activate Destinations, View Profiles, and View Segments access control permissions. Read the access control overview or contact your product administrator to obtain the required permissions.
 >* To export identities, you need the View Identity Graph access control permission.
 
