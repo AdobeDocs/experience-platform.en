@@ -1,6 +1,7 @@
 ---
 title: Access AI Assistant in Experience Platform
 description: Learn how you can access AI Assistant in the Experience Cloud UI.
+exl-id: c4cdff25-512c-4b4c-be91-ad9360067a0a
 ---
 # Access AI Assistant in Experience Platform
 

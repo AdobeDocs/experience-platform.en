@@ -1,6 +1,7 @@
 ---
 title: Question guide for AI Assistant
 description: Read this document to learn example questions that you can use when querying AI Assistant.
+exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
 ---
 # Question guide for AI Assistant
 
