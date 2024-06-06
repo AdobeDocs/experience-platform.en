@@ -98,22 +98,31 @@ This clause can be used to incrementally read data on a table based on snapshot 
 #### Example 
 
 ```sql
-SELECT * FROM Customers SNAPSHOT SINCE 123;
+SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT AS OF 345;
+SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN HEAD AND 123;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN 345 AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
 
-SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
 
-SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
+SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id;
 ```
 
-<!-- The table below explains the meaning of each syntax option within the SNAPSHOT clause. making it easier to utilize these features effectively in their SQL queries. -->
+The table below explains the meaning of each syntax option within the SNAPSHOT clause.
+
+| Syntax                                                            | Meaning                                                                                  |
+|-------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| `SINCE start_snapshot_id`                                | Reads data starting from the specified snapshot ID (inclusive).                          |
+| `AS OF end_snapshot_id`                                  | Reads data as it was at the specified snapshot ID.                                       |
+| `BETWEEN start_snapshot_id AND end_snapshot_id`          | Reads data between the specified start and end snapshot IDs (inclusive).                 |
+| `BETWEEN HEAD AND start_snapshot_id`                     | Reads data from the beginning (before the first snapshot) to the specified start snapshot ID (inclusive). |
+| `BETWEEN end_snapshot_id AND TAIL`                       | Reads data from the specified end snapshot ID to the end (after the last snapshot) (inclusive). |
+| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Reads data starting from the specified snapshot ID from `table_to_be_queried` and joins it with the data from `table_to_be_joined` as it was at `your_chosen_snapshot_id`, based on matching IDs. |
 
 A `SNAPSHOT` clause works with a table or table alias but not on top of a subquery or view. A `SNAPSHOT` clause works anywhere a `SELECT` query on a table can be applied.
 
@@ -125,20 +134,7 @@ Also, you can use `HEAD` and `TAIL` as special offset values for snapshot clause
 >
 >- If the optional fallback behavior flag is set, Query Service chooses the earliest available snapshot, set it as the start snapshot, and return the data between the earliest available snapshot and the specified end snapshot. This data is **inclusive** of the earliest available snapshot.
 >
->- If the optional fallback behavior flag is not set, an error is returned.
-
-Sure, here is the table in markdown format:
-
-## Syntax Explanation for SNAPSHOT Clause
-
-| Syntax                                | Meaning                                                                                  |
-|---------------------------------------|------------------------------------------------------------------------------------------|
-| `SINCE start_snapshot_id`             | Reads data starting from the specified snapshot ID (inclusive).                          |
-| `AS OF end_snapshot_id`               | Reads data as it was at the specified snapshot ID.                                        |
-| `BETWEEN start_snapshot_id AND end_snapshot_id` | Reads data between the specified start and end snapshot IDs (inclusive). |
-| `BETWEEN HEAD AND end_snapshot_id`    | Reads data from the beginning (before the first snapshot) to the specified end snapshot ID (inclusive). |
-| `BETWEEN start_snapshot_id AND TAIL`  | Reads data from the specified start snapshot ID to the end (after the last snapshot) (inclusive). |
-| `AS OF`                               | Another way to read data as it was at the specified snapshot ID.                          |
+>- If the optional fallback behavior flag is not set, an error is returned.|
 
 ### WHERE clause
 
