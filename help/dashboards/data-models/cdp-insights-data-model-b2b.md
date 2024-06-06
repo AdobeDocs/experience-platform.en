@@ -46,7 +46,7 @@ The diagram below displays the relevant data fields in each dataset, their data 
 
 #### The new accounts by industry use case {#accounts-by-industry}
 
-The logic used for the [!UICONTROL New accounts by industry] insight returns the top five industries according to their number of account profiles and their relative size to each other. See the [[!UICONTROL Accounts By Industry] widget documentation](../guides/account-profiles.md#accounts-by-industry) for more information. 
+The logic used for the [!UICONTROL New accounts by industry] insight returns the top five industries according to their number of account profiles and their relative size to each other. See the [[!UICONTROL New accounts By Industry] widget documentation](../guides/account-profiles.md#accounts-by-industry) for more information. 
 
 >[!TIP]
 >
