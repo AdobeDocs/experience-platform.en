@@ -135,7 +135,7 @@ Use the check boxes to the left of the dataset names to select the datasets that
 
 In the **[!UICONTROL Scheduling]** step, you can set a start date and an export cadence for your dataset exports.
 
-The **[!UICONTROL Export incremental files]** option is automatically selected. This triggers an export of one or multiple files representing a full snapshot of the dataset. Subsequent files are incremental additions to the dataset since the previous export.
+The **[!UICONTROL Export incremental files]** option is selected by default. This triggers an export of one or multiple files representing a full snapshot of the dataset. Subsequent files are incremental additions to the dataset since the previous export. You can also select **[!UICONTROL Export full files]**. In this case, select the frequency **[!UICONTROL Once]** for a one-time full export of the dataset.
 
 >[!IMPORTANT]
 >
@@ -158,6 +158,20 @@ The **[!UICONTROL Export incremental files]** option is automatically selected. 
 > 
 >For dataset exports, the file names have a preset, default format, which cannot be modified. See the section [Verify successful dataset export](#verify) for more information and examples of exported files.
 
+## Edit folder path {#edit-folder-path}
+
+Select **[!UICONTROL Edit folder path]** to customize the folder structure in your storage location where exported datasets are deposited. 
+
+![Edit folder path control highlighted in the scheduling step.](/help/destinations/assets/ui/export-datasets/edit-folder-path.png)
+
+You can use several available macros to customize a desired folder name.
+
+![Macros selection highlighted in custom folder modal window.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
+
+After selecting the desired macros, you can see a preview of the folder structure that will be created in your storage location. 
+
+![Preview of folder path highlighted in custom folder modal window.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
+
 ## Review {#review}
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start exporting datasets to the destination.
@@ -168,7 +182,7 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 When exporting datasets, Experience Platform creates one or multiple `.json` or `.parquet` files in the storage location that you provided. Expect new files to be deposited in your storage location according to the export schedule you provided.
 
-Experience Platform creates a folder structure in the storage location you specified, where it deposits the exported dataset files. A new folder is created for each export time, following the pattern below:
+Experience Platform creates a folder structure in the storage location you specified, where it deposits the exported dataset files. The default folder export pattern is shown below, but you can [customize the folder structure with your preferred macros](#edit-folder-path).
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
