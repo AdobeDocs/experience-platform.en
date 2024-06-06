@@ -135,6 +135,8 @@ To reset, select the ellipses (**`...`**) on the AI Assistant interface and then
 
 ### Use discoverability {#use-discoverability}
 
++++Select to view example of discoverability
+
 You can use AI Assistant's discoverability feature to view a list of the general subjects, grouped into entities, that AI Assistant supports. To view discoverability, select the lightbulb icon on the top header of the AI Assistant interface. 
 
 ![The AI Assistant discoverability feature.](./images/lightbulb.png)
@@ -142,6 +144,8 @@ You can use AI Assistant's discoverability feature to view a list of the general
 Next, select a category and then select a prompt from the list provided. You can use this feature to get a better idea of the types of questions that AI Assistant can answer. You can also update the pre-existing prompts with specific details that pertain to your sandbox using free text or [autocomplete](#use-auto-complete).
 
 ![The AI Assistant prompts in discoverability.](./images/prompt.png)
+
++++
 
 ## Provide feedback {#feedback}
 
