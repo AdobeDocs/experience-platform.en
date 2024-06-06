@@ -58,8 +58,6 @@ Follow the instructions on [creating a merge policy](../../profile/merge-policie
 
 In order to look up edge profiles, including attributes and audience membership data, in real-time, the data needs to be made available on the Edge Network. For this purpose, you must create a connection to a **[!UICONTROL Custom Personalization With Attributes]** destination and activate the audiences, including the attributes that you would like to look up on the edge profiles.
 
-You will use the the [Custom Personalization With Attributes](../catalog/personalization/custom-personalization.md) connection to send profile attributes to the Edge Network.
-
 +++ Configure a Custom Personalization With Attributes connection
 
 Follow the [destination connection creation tutorial](../ui/connect-destination.md) for detailed instructions on how to create a new destination connection.
@@ -141,11 +139,11 @@ In the **[!UICONTROL Review]** step you can use the available filters on the pag
 ![Screen recording showing the available audience filters in the review step.](../assets/ui/activate-edge-personalization-destinations/filter-audiences-review-step.gif)
 
 
-
 If you are satisfied with your selection and no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection.
+
 +++
 
-## Step 4: Configure Edge Profile Lookup {#configure-edge-profile-lookup}
+## Step 4: Look up the profile attributes on the edge {#configure-edge-profile-lookup}
 
 By now you should have finished [configuring your datastream](#create-datastream), you have [created a new Custom Personalization With Attributes destination connection](#configure-destination), and you have used this connection to [send the profile attributes](#activate-audiences) that you will be able to look up to the Edge Network.
 
@@ -298,4 +296,6 @@ The `handle` object provides the information described in the table below.
 
 >[!ENDTABS]
 
-If you have configured the integration correctly, you now have access to the edge profile data and you can use the attributes and audience membership of your edge profiles to trigger real-time personalization in your downstream personalization engine.
+>[!SUCCESS]
+>
+>If you have configured the integration correctly, you now have access to the edge profile data and you can use the attributes and audience membership of your edge profiles to trigger real-time personalization in your downstream personalization engine.
