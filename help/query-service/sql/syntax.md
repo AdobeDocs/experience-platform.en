@@ -122,7 +122,7 @@ The table below explains the meaning of each syntax option within the SNAPSHOT c
 | `BETWEEN start_snapshot_id AND end_snapshot_id`          | Reads data between the specified start and end snapshot IDs (inclusive).                 |
 | `BETWEEN HEAD AND start_snapshot_id`                     | Reads data from the beginning (before the first snapshot) to the specified start snapshot ID (inclusive). |
 | `BETWEEN end_snapshot_id AND TAIL`                       | Reads data from the specified end snapshot ID to the end (after the last snapshot) (inclusive). |
-| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Reads data starting from the specified snapshot ID from `table_to_be_queried` and joins it with the data from `table_to_be_joined` as it was at `your_chosen_snapshot_id`, based on matching IDs. |
+| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Reads data starting from the specified snapshot ID from `table_to_be_queried` and joins it with the data from `table_to_be_joined` as it was at `your_chosen_snapshot_id`. The join is based on matching IDs from the ID columns of the two tables being joined. |
 
 A `SNAPSHOT` clause works with a table or table alias but not on top of a subquery or view. A `SNAPSHOT` clause works anywhere a `SELECT` query on a table can be applied.
 
