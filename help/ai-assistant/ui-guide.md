@@ -135,9 +135,11 @@ To reset, select the ellipses (**`...`**) on the AI Assistant interface and then
 
 ### Use discoverability {#use-discoverability}
 
+You can use AI Assistant's discoverability feature to view a list of the general subjects, grouped into entities, that AI Assistant supports.
+
 +++Select to view example of discoverability
 
-You can use AI Assistant's discoverability feature to view a list of the general subjects, grouped into entities, that AI Assistant supports. To view discoverability, select the lightbulb icon on the top header of the AI Assistant interface. 
+To view discoverability, select the lightbulb icon on the top header of the AI Assistant interface. 
 
 ![The AI Assistant discoverability feature.](./images/lightbulb.png)
 
