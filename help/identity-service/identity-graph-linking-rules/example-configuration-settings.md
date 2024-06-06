@@ -5,3 +5,4 @@ hide: true
 hidefromtoc: true
 badge: Beta
 ---
+# Example configurations
