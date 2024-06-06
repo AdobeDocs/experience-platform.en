@@ -73,8 +73,8 @@ The following table outlines the available permissions for Experience Platform i
 
 | Category | Permission | Description |
 | --- | --- | --- |
-| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Ability to ask the AI assistant questions. |
-| [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | Access to obtain responses to operational insight queries. |
+| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Ability to ask the [AI assistant](../ai-assistant/access.md) questions. |
+| [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | Access to obtain responses to [operational insights](../ai-assistant/home.md##operational-insights) queries. |
 | [!DNL Alerts] | [!UICONTROL View Alerts History] | Read-only access for alerts history. |
 | [!DNL Alerts] | [!UICONTROL Resolve Alerts] | Access to read, edit, and delete alerts. |
 | [!DNL Alerts] | [!UICONTROL View Alerts] | Read-only access for alerts. |
