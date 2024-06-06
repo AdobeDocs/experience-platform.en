@@ -113,6 +113,8 @@ SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C
 SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
 ```
 
+<!-- The table below explains the meaning of each syntax option within the SNAPSHOT clause. making it easier to utilize these features effectively in their SQL queries. -->
+
 A `SNAPSHOT` clause works with a table or table alias but not on top of a subquery or view. A `SNAPSHOT` clause works anywhere a `SELECT` query on a table can be applied.
 
 Also, you can use `HEAD` and `TAIL` as special offset values for snapshot clauses. Using `HEAD` refers to an offset before the first snapshot, while `TAIL` refers to an offset after the last snapshot.
@@ -124,6 +126,19 @@ Also, you can use `HEAD` and `TAIL` as special offset values for snapshot clause
 >- If the optional fallback behavior flag is set, Query Service chooses the earliest available snapshot, set it as the start snapshot, and return the data between the earliest available snapshot and the specified end snapshot. This data is **inclusive** of the earliest available snapshot.
 >
 >- If the optional fallback behavior flag is not set, an error is returned.
+
+Sure, here is the table in markdown format:
+
+## Syntax Explanation for SNAPSHOT Clause
+
+| Syntax                                | Meaning                                                                                  |
+|---------------------------------------|------------------------------------------------------------------------------------------|
+| `SINCE start_snapshot_id`             | Reads data starting from the specified snapshot ID (inclusive).                          |
+| `AS OF end_snapshot_id`               | Reads data as it was at the specified snapshot ID.                                        |
+| `BETWEEN start_snapshot_id AND end_snapshot_id` | Reads data between the specified start and end snapshot IDs (inclusive). |
+| `BETWEEN HEAD AND end_snapshot_id`    | Reads data from the beginning (before the first snapshot) to the specified end snapshot ID (inclusive). |
+| `BETWEEN start_snapshot_id AND TAIL`  | Reads data from the specified start snapshot ID to the end (after the last snapshot) (inclusive). |
+| `AS OF`                               | Another way to read data as it was at the specified snapshot ID.                          |
 
 ### WHERE clause
 
