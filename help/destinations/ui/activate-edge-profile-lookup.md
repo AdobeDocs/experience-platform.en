@@ -37,7 +37,7 @@ Follow the steps in the [datastream configuration](../../datastreams/configure.m
 
     >[!IMPORTANT]
     >
-    >**[!UICONTROL Edge Segmentation]** directly affects the edge profile access API request limits. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information.
+    >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information.
 
     ![Platform UI image showing the datastream configuration screen.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 

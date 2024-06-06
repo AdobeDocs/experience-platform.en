@@ -51,6 +51,7 @@ The table below shows the default limit values. If you need higher request unit 
 | `/v2/interact` | 4000 |
 | `/v2/collect` | 6000 |
 
+### Request unit limits 
 
 ### HTTP Request size limit
 
