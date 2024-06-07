@@ -12,7 +12,7 @@ Read this guide to learn how you can ingest encrypted data to Adobe Experience P
 
 * Encrypt your data
 
-## Ingest encrypted data {#ingest-encrypted-datsa}
+## Ingest encrypted data {#ingest-encrypted-data}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_isFileEncrypted"
