@@ -15,7 +15,7 @@ This tutorial requires a working understanding of the following components of [!
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] is a generic lookup entity store, and is used to manage [!DNL Experience Data Model (XDM)] data within [!DNL Platform]. Profile merges data across various enterprise data assets and provides access to that data in a unified presentation.
     - [Merge policies](../../profile/api/merge-policies.md): Rules used by [!DNL Real-Time Customer Profile] to determine what data can be merged into a unified view under certain conditions. Merge policies can be configured for Data Governance purposes.
-- [[!DNL Segmentation]](../home.md): How [!DNL Real-Time Customer Profile] divides a large group of individuals contained in the profile store into smaller groups that share similar traits and will respond similarly to marketing strategies.
+- [[!DNL Segmentation]](../home.md): How [!DNL Real-Time Customer Profile] divides a large group of individuals contained in the Profile store into smaller groups that share similar traits and will respond similarly to marketing strategies.
 - [Data Governance](../../data-governance/home.md): Data Governance provides the infrastructure for data usage labeling and enforcement, using the following components:
     - [Data usage labels](../../data-governance/labels/user-guide.md): Labels used to describe datasets and fields in terms of the level of sensitivity with which to handle their respective data.
     - [Data usage policies](../../data-governance/policies/overview.md): Configurations indicating which marketing actions are allowed on data categorized by particular data usage labels.

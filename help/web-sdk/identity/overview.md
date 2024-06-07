@@ -50,9 +50,36 @@ If an end user visits three times in a week and then does not return to the site
 
 To account for the effects of cookie lifespans as outlined above, you can opt to set and manage your own device identifiers instead. See the guide on [first-party device IDs](./first-party-device-ids.md) for more information.
 
-## Retrieving the ECID and region for the current user
+## Retrieve the ECID and region for the current user {#retrieve-ecid}
 
-To retrieve the unique ECID for the current visitor, use the `getIdentity` command. For first-time visitors who don't have an ECID yet, this command generates a new ECID. `getIdentity` also returns the region ID for the visitor.
+Depending on your use case, there are two ways in which you can access the [!DNL ECID]:
+
+* [Retrieve the [!DNL ECID] through Data Prep for Data Collection](#retrieve-ecid-data-prep): This is the recommended method that you should use.
+* [Retrieve the [!DNL ECID] through the `getIdentity()` command](#retrieve-ecid-getidentity): Only use this metod when you require the [!DNL ECID] information on the client-side.
+
+### Retrieve the [!DNL ECID] through Data Prep for Data Collection {#retrieve-ecid-data-prep}
+
+Use [Data Prep for Data Collection](../../datastreams/data-prep.md) to map the [!DNL ECID] to an [!DNL XDM] field. This is the recommended way to access the [!DNL ECID].
+
+To do this, set the source field to the following path:
+
+```js
+xdm.identityMap.ECID[0].id
+```
+
+Then, set the target field to an XDM path where the field is of type `string`.
+
+![](../../tags/extensions/client/web-sdk/assets/access-ecid-data-prep.png)
+
+
+### Retrieve the [!DNL ECID] through the `getIdentity()` command {#retrieve-ecid-getidentity}
+
+
+>[!IMPORTANT]
+>
+>You should only retrieve the ECID through the `getIdentity()` command if you require the [!DNL ECID] on the client side. If you only want to map the ECID to an XDM field, use [Data Prep for Data Collection](#retrieve-ecid-data-prep) instead.
+
+To retrieve the unique ECID for the current visitor, use the `getIdentity` command. For first-time visitors who don't have an [!DNL ECID] yet, this command generates a new [!DNL ECID]. `getIdentity` also returns the region ID for the visitor.
 
 >[!NOTE]
 >

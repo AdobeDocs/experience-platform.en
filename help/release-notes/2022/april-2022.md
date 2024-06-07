@@ -30,7 +30,7 @@ The following widgets are available through the Widget library on their respecti
 
 | Widget | Dashboard | Description |
 | ------ | --------- | ----------- |
-| [!UICONTROL Profiles added trend] | Profiles | This widget uses a line graph to illustrate the total number of merged profiles that have been added to the Profile Store daily over the last 30 days, 90 days, or 12 months. |
+| [!UICONTROL Profiles added trend] | Profiles | This widget uses a line graph to illustrate the total number of merged profiles that have been added to the Profile store daily over the last 30 days, 90 days, or 12 months. |
 | [!UICONTROL Audiences mapped to destination status] | Profiles | This widget displays the total number of both mapped and unmapped audiences in a single metric and uses a doughnut chart to illustrate the proportional difference between their totals.|
 | [!UICONTROL Audiences size] | Profiles | This widget provides a two-column table that lists up to 20 segments and the total number of audiences contained in each segment. The list is dependent on the merge policy applied and ordered from high to low according to the total number of audiences. |
 | [!UICONTROL Profile count trend] | Profiles |  This widget uses a line graph to illustrate the trend in the total number of profiles contained in the system over time. The data can be visualized over 30 days, 90 days, and 12 month periods. |
@@ -63,7 +63,7 @@ Dataflows are a representation of jobs that move data across Platform. These dat
 
 | Feature | Description |
 | ------- | ----------- |
-| Segments dashboard | You can now use the monitoring dashboard to monitor dataflows for segments. To learn more, please read the guide on [monitoring segments in the UI](../../dataflows/ui/monitor-segments.md) |
+| Segments dashboard | You can now use the monitoring dashboard to monitor dataflows for segments. To learn more, please read the guide on [monitoring segments in the UI](../../dataflows/ui/monitor-audiences.md) |
 
 For more general information on dataflows, refer to the [dataflows overview](../../dataflows/home.md). To learn more about segmentation, refer to the [segmentation overview](../../segmentation/home.md).
 

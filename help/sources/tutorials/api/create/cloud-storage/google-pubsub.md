@@ -12,7 +12,7 @@ exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
 
 This tutorial walks you through the steps to connect [!DNL Google PubSub] (hereinafter referred to as "[!DNL PubSub]") to Experience Platform, using the [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
-## Getting started
+## Get started
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -23,7 +23,7 @@ The following sections provide additional information that you will need to know
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect to [!DNL PubSub], you must provide values for the following connection properties:
+You must provide values for the connection properties outlined below in order to connect your [!DNL PubSub] account to [!DNL Flow Service]. For more information on authentication and prerequisite setup, read the [[!DNL PubSub source] overview](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
 
 >[!BEGINTABS]
 
@@ -46,7 +46,7 @@ In order for [!DNL Flow Service] to connect to [!DNL PubSub], you must provide v
 
 >[!ENDTABS]
 
-For more information about these values, see this [[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication) document. To use service account-based authentication, see this [[!DNL PubSub] guide on creating service accounts](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
+For more information about these values, read this [[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication) document. To use service account-based authentication, read this [[!DNL PubSub] guide on creating service accounts](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
 
 >[!TIP]
 >

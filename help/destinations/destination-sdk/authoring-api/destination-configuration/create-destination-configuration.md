@@ -211,7 +211,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |`segmentMappingConfig.mapUserInput` | Boolean | Controls whether the audience mapping ID in the destination activation workflow is input by user. |
 |`segmentMappingConfig.mapExperiencePlatformSegmentId` | Boolean | Controls whether the audience mapping ID in the destination activation workflow is the Experience Platform audience ID. |
 |`segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolean | Controls whether the audience mapping ID in the destination activation workflow is the Experience Platform audience name. |
-|`segmentMappingConfig.audienceTemplateId` | Boolean | The `instanceId` of the [audience metadata template](../../metadata-api/create-audience-template.md) used for this destination. |
+|`segmentMappingConfig.audienceTemplateId` | String | The `instanceId` of the [audience metadata template](../../metadata-api/create-audience-template.md) used for this destination. |
 |`schemaConfig.profileFields` | Array | When you add predefined `profileFields` as shown in the configuration above, users will have the option of mapping Experience Platform attributes to the predefined attributes on your destination's side. |
 |`schemaConfig.profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above.|
 |`schemaConfig.segmentRequired` | Boolean | Always use `segmentRequired:true`. |
