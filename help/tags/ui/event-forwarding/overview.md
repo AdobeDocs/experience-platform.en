@@ -107,6 +107,12 @@ The [!UICONTROL Actions] section of an event forwarding rule is always executed 
 
 Event forwarding allows you to create, manage, and store secrets that can be used to authenticate to the servers that you are sending data to. See the guide on [secrets](./secrets.md) on the different kinds of available secret types and how they are implemented in the UI.
 
+## Video overview {#video}
+
+The following video is intended to help you better understand Event Forwarding and Real-Time CDP connections.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429308)
+
 ## Next steps
 
 This document provided a high-level introduction to event forwarding. For more information on how to set up this feature for your organization, see the [getting started guide](./getting-started.md).
