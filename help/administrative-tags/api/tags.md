@@ -1,5 +1,5 @@
 ---
-title: Unified tags endpoint
+title: Unified Tags Endpoint
 description: Learn how to create, update, manage, and delete tag categories and tags using the Adobe Experience Platform APIs.
 role: Developer
 ---
@@ -23,6 +23,7 @@ The endpoints used in this guide are part of the Adobe Experience Platform APIs.
 The following glossary highlights the difference between a **tag** and a **tag category**.
 
 - **Tag**: A tag allows you to manage the metadata taxonomy for business objects, allowing you to classify these objects for easier discovery and categorization.
+  - **Uncategorized tag**: An uncategorized tag is a tag that does not belong to a tag category. By default, created tags will be uncategorized.
 - **Tag category**: A tag category allows you to group your tags into meaningful sets, allowing you to provide more context to the tag's purpose.
 
 ## Retrieve a list of tag categories {#get-tag-categories}
@@ -78,9 +79,6 @@ A successful response returns HTTP status 200 with a list of all the tag categor
     ]
 }
 ```
-
-| Property | Description |
-| -------- | ----------- |
 
 +++
 
@@ -245,7 +243,7 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 
 | Parameter | Description |
 | --------- | ----------- |
-| `op` | The operation that needs to be done. In this use case, it'll always be set to`replace`. | 
+| `op` | The operation that is completed. To update a specific tag category, set this value to `replace`. | 
 | `path` | The path of the field that will be updated. Supported values include `name` and `description`. |
 | `value` | The updated value of the field you want to update. |
 | `from` | The original value of the field you want to update. |
@@ -756,7 +754,7 @@ A successful response returns HTTP status 200 with details of the newly updated 
 >
 >Only the system administrator and product administrator can use this API call.
 >
->Additionally, the tag **must** be archived before you can delete the tag.
+>Additionally, the tag **must** be archived before you can delete the tag. You can archive the tag by using the [update tag endpoint](#update-tag).
 
 You can delete a specific tag by making a DELETE tag to the `/tags` endpoint and specifying the ID of the tag that you want to delete.
 
