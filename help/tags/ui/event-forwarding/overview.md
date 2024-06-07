@@ -110,3 +110,7 @@ Event forwarding allows you to create, manage, and store secrets that can be use
 ## Next steps
 
 This document provided a high-level introduction to event forwarding. For more information on how to set up this feature for your organization, see the [getting started guide](./getting-started.md).
+
+The following video is intended to help you better understand Event Forwarding and Real-Time CDP connections.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429308)
