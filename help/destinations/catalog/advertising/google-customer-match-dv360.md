@@ -2,8 +2,8 @@
 title: Google Customer Match + Display & Video 360 connection
 description: With the Google Customer Match + Display & Video 360 destination connector, you can use your online and offline data from Experience Platform to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, Gmail, and YouTube.
 badgeBeta: label="Beta" type="Informative"
+exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
 ---
-
 # [!DNL Google Customer Match + Display & Video 360] connection
 
 Use this destination to activate your first-party PII-based [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) lists directly to [!DNL Google Display & Video 360] properties such as [!DNL Search], [!DNL YouTube], [!DNL Gmail], and the [!DNL Google Display Network].
