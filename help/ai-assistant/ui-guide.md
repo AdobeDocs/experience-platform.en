@@ -1,8 +1,7 @@
 ---
 title: AI Assistant in Adobe Experience Platform
 description: Learn how to use AI Assistant to navigate and understand Experience Platform and Real-Time Customer Data Platform concepts, and usage information about your objects.
-hide: true
-hidefromtoc: true
+exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
 ---
 # AI Assistant UI Guide
 
@@ -12,7 +11,7 @@ Read this guide to learn how you can use AI Assistant in the Adobe Experience Pl
 
 To launch AI Assistant, select the **[!UICONTROL AI Assistant icon]** from the top header of the Experience Platform UI.
 
-![The Experience Platform home page, with the AI Assistant icon selected and the AI Assistant interface open.](./images/ai-assistant.png)
+![The Experience Platform home page, with the AI Assistant icon selected and the AI Assistant interface open.](./images/ai-assistant-full-icon.png)
 
 The AI Assistant interface appears, immediately providing you with information to get started. You can use the options provided under [!UICONTROL Ideas to get started] to answer questions and commands such as:
 
@@ -82,9 +81,13 @@ You must be in an active sandbox in order for AI Assistant to sufficiently respo
 
 +++Select to view an example of an operational insights question
 
-In the example below, AI Assistant is asked the following query: **"Show me dataflows that were created using the Amazon S3 source"**, AI Assistant then responds with a table listing your dataflows and their corresponding IDs. To view the whole table of data, select the expand icon on the top right.
+In the example below, AI Assistant is asked the following query: **"Show me dataflows that were created using the Amazon S3 source"**.
 
-![Follow up question about operational insights.](./images/usage-data-question.png)
+![A question about operational insights.](./images/op-insights-question.png)
+
+AI Assistant then responds with a table listing your dataflows and their corresponding IDs. To view the whole table of data, select the expand icon on the top right.
+
+![An operational insights answer](./images/op-insights-answer.png)
 
 An expanded view of the table appears, providing you with a more comprehensive list of dataflows based on the parameters of your query.
 
@@ -92,9 +95,13 @@ An expanded view of the table appears, providing you with a more comprehensive l
 
 When prompted with an operational insights question, AI Assistant provides an explanation of how it computed the answer. In the example below, AI Assistant outlines the steps it took in order to identify the dataflows that were created using the [!DNL Amazon S3] source.
 
-![Follow up question about segment definitions illustrating how AI Assistant computed the answer.](./images/answer-explained.png)
+![AI Assistant providing an explanation on how it computed its answer.](./images/answer-explained.png)
 
 You can also provide filters and modifications to your questions, and you can instruct AI Assistant to render its findings based on the filters that you include. For example, you can ask AI Assistant to show you a trend of the count of segment definitions in the order of their created date, remove segment definitions with zero total profiles, and use month names instead of integers when displaying the data.
+
+**Note:** Operational insights answers are currently in beta. Select the tooltip icon in the AI Assistant user interface to view the Beta notice and for a link to the documentation.
+
+![AI Assistant tooltip icon selected.](./images/op-insights-beta-note.png)
 
 +++
 
@@ -118,7 +125,27 @@ You can use AI Assistant's multi-turn capabilities to have a more natural conver
 
 In the example below, AI Assistant is first asked for the total number of dataflows and then is asked to list the 10 most recent dataflows.
 
-![Example of multi-turn](./images/multi-turn.png)
+![Example of multi-turn](./images/multiturn.png)
+
+To reset, select the ellipses (**`...`**) on the AI Assistant interface and then select **[!UICONTROL Start new conversation]**. This informs AI Assistant that you intend on changing topics and can be particularly helpful when troubleshooting queries that are either failing or referencing incorrect information.
+
+![The ellipses selected and the start new conversation option selected.](./images/reset.png)
+
++++
+
+### Use discoverability {#use-discoverability}
+
+You can use AI Assistant's discoverability feature to view a list of the general subjects, grouped into entities, that AI Assistant supports.
+
++++Select to view example of discoverability
+
+To view discoverability, select the lightbulb icon on the top header of the AI Assistant interface. 
+
+![The AI Assistant discoverability feature.](./images/lightbulb.png)
+
+Next, select a category and then select a prompt from the list provided. You can use this feature to get a better idea of the types of questions that AI Assistant can answer. You can also update the pre-existing prompts with specific details that pertain to your sandbox using free text or [autocomplete](#use-auto-complete).
+
+![The AI Assistant prompts in discoverability.](./images/prompt.png)
 
 +++
 
@@ -129,8 +156,6 @@ You can provide feedback of your experience with AI Assistant using the options 
 To provide feedback, select either thumbs up, thumbs down, or a flag after receiving a response from the AI Assistant, and then input your feedback in the provided text box. 
 
 ![The feedback option in AI Assistant.](./images/provide-feedback.png)
-
-To reset, select the ellipses (**`...`**) on the AI Assistant interface and then select **[!UICONTROL Start new conversation]**. This informs AI Assistant that you intend on changing topics and can be particularly helpful when troubleshooting queries that are either failing or referencing incorrect information.
 
 +++Select to view more examples
 

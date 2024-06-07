@@ -344,6 +344,7 @@ role: Developer
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
   - [Create a sources dataflow using templates in the UI](tutorials/ui/templates.md)
   - [Filter sources objects](tutorials/ui/filter.md)
+  - [Ingest encrypted data](tutorials/ui/encryped-ingestion.md)
   - [On-demand ingestion](tutorials/ui/on-demand-ingestion.md)
   - [Monitor batch dataflows](tutorials/ui/monitor.md)
   - [Monitor streaming dataflows](tutorials/ui/monitor-streaming.md)
