@@ -22,7 +22,7 @@ If a field name does not follow this convention, the field name must be wrapped 
 If a field name is **any** of the following reserved keywords, it must be wrapped with `${}{}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors, do, function, empty
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors, do, function, empty, size
 ```
 
 Additionally, reserved keywords also include any of the mapper functions listed on this page.
