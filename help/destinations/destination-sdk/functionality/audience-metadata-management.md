@@ -519,7 +519,7 @@ Note that in some examples, macro fields like `{{authData.accessToken}}` or `{{s
 
 Find descriptions of all parameters in the template in the [Create an audience template](../metadata-api/create-audience-template.md) API reference.
 
-## Macros used in audience metadata templates
+## Macros used in audience metadata templates {#macros}
 
 To pass information such as audience IDs, access tokens, error messages, and more between Experience Platform and your API, the audience templates include macros that you can use. Read below a description of the macros that are used in the three configuration examples on this page:
 
