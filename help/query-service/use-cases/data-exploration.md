@@ -26,9 +26,13 @@ help/ingestion/batch-ingestion/overview.md-->
 4. **"Error Handling in Data Ingestion"**: Learn about the different types of errors that can occur during data ingestion and how to handle them.
 
 <!-- 
-../../ingestion/batch-ingestion/troubleshooting.md#what-if-a-batch-fails -->
+../../ingestion/batch-ingestion/troubleshooting.md#what-if-a-batch-fails 
+help/ingestion/quality/error-diagnostics.md#retrieve-errors
+-->
 
 5. **"Adobe Experience Platform Data Governance"**: Know about data governance practices to ensure data quality and compliance.
+
+<!-- ../../data-governance/home.md -->
 
 These articles will provide a strong foundation for understanding the concepts discussed in the guide on exploring ingested batches in a dataset.
 
