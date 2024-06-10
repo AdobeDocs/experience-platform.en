@@ -14,6 +14,7 @@ role: Developer
 - Views {#view}
   - [Event transactions](./views/event-transactions.md)
   - [Extension Versions](./views/extension-versions.md)
+  - [Edge Delivery](./views/edge-delivery.md)
   - [In-app Messaging](./views/in-app-messaging.md)
   - [On Device Views](./views/on-device-views.md)
   - [Places Service](./views/places-service.md)
