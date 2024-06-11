@@ -3,8 +3,6 @@ title: Content API Endpoint
 description: Learn how to retrieve your access data using the Privacy Service API.
 role: Developer
 badgePrivateBeta: label="Private Beta" type="Informative"
-hide: yes
-hidefromtoc: yes
 exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
 ---
 # Content endpoint
@@ -13,15 +11,13 @@ exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
 >
 >The `/content` endpoint is currently in beta and your organization may not yet have access to it yet. The functionality and documentation are subject to change.
 
-<!-- Q) Should this be called 'access information' or 'customer content'? -->
-
-Enjoy enhanced security when retrieving 'access information' (the information that a privacy subject can rightfully request to access). The download URL provided in the response to a `/jobs/{JOB_ID}` GET request now points to an Adobe service endpoint. You can then make a GET request to `/jobs/:JOB_ID/content` to return your customer data in JSON format. This access method implements multiple layers of authentication and access control to enhance security.
+Use the `/content` endpoint to securely retrieve *access information* (the information that a privacy subject can rightfully request to access) for your customers. The download URL provided in the response to a `/jobs/{JOB_ID}` GET request points to an Adobe service endpoint. You can then make a GET request to `/jobs/:JOB_ID/content` to return your customer data in JSON format. This access method implements multiple layers of authentication and access control to enhance security.
 
 Before using this guide, please refer to the [getting started guide](./getting-started.md) for information on the required authentication headers presented in the example API call below.
 
 >[!TIP]
 >
->If you do not currently know the job ID for the access information you require, make a call to the `/jobs`endpoint and use additional query parameters to filter the results. A complete list of the available query parameters can be found in the [privacy jobs endpoint guide](./privacy-jobs.md).
+>If you do not currently know the job ID for the access information you require, make a call to the `/jobs` endpoint and use additional query parameters to filter the results. A complete list of the available query parameters can be found in the [privacy jobs endpoint guide](./privacy-jobs.md).
 
 ## Retrieve privacy job information
 
@@ -76,7 +72,7 @@ A successful response returns the details of the specified job.
         "processedDate":"04/12/2024 04:08 PM GMT",
         "productStatusResponse":{"status":"submitted"
         }}],
-    "downloadUrl":"https://platform-stage.adobe.io/data/core/privacy/jobs/dbe3a6a6-f8e6-11ee-a365-8d1d6df81cc5/content",
+    "downloadUrl":"https://platform.adobe.io/data/core/privacy/jobs/dbe3a6a6-f8e6-11ee-a365-8d1d6df81cc5/content",
     "regulation":"gdpr"
 }
 ```
@@ -139,10 +135,3 @@ curl -X GET \
 
 The response is a zip file (*.zip). The information is typically returned in JSON format, although that cannot be guaranteed. Extracted data can be returned in any format.
 
-<!-- ## Constraints {#constraints}
-
-During this private beta, the following constraints apply when using the `/content` endpoint:
-
-- The new `/content` download URL is only available in STAGE environments. It is not yet available in PROD environments
-- The `downloadUrl` should not be present in the JSON response unless the job has a `complete` status. Within the beta, the `downloadUrl` appears before a privacy job is complete.
-- The `downloadUrl` is also currently provided for `delete` jobs (which should never have a download URL). -->

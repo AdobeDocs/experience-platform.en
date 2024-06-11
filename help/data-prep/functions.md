@@ -19,11 +19,13 @@ If a field name does not follow this convention, the field name must be wrapped 
 >
 >When interacting with hierarchies, if a child attribute has a period (`.`), you must use a backslash (`\`) to escape special characters. For more information, read the guide on [escaping special characters](home.md#escape-special-characters).
 
-Additionally, if a field name is **any** of the following reserved keywords, it must be wrapped with `${}`:
+If a field name is **any** of the following reserved keywords, it must be wrapped with `${}{}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors, do, function, empty, size
 ```
+
+Additionally, reserved keywords also include any of the mapper functions listed on this page.
 
 Data within sub-fields can be accessed by using the dot notation. For example, if there was a `name` object, to access the `firstName` field, use `name.firstName`.
 

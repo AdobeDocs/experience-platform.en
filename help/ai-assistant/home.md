@@ -9,7 +9,7 @@ Read this document to learn about AI Assistant in Adobe Experience Platform.
 
 AI Assistant in Adobe Experience Platform is a conversational experience that you can use to accelerate your workflows in Adobe applications. You can use AI Assistant to better understand product knowledge, troubleshoot problems, or search through information and find operational insights. AI Assistant supports Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer and Customer Journey Analytics.
 
-![The AI Assistant interface with the first-time user experience triggered.](./images/blank.png)
+![The AI Assistant interface with the first-time user experience triggered.](./images/ai-assistant-full.png)
 
 >[!IMPORTANT]
 >
