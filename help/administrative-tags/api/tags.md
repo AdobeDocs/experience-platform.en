@@ -34,7 +34,18 @@ You can retrieve a list of tag categories that belong to your organization by ma
 
 ```http
 GET /tagCategory
+GET /tagCategory?{QUERY_PARAMETERS}
 ```
+
+The following optional query parameters can be used when retrieving tag categories.
+
+| Query parameter | Description | Example |
+| --------------- | ----------- | ------- |
+| `start` | The location where the list of results starts from. You can use this to indicate the starting index for pagination of results. | `start=a` |
+| `limit` | The maximum number of tag categories you want retrieved per page. | `limit=20` |
+| `property` | The attribute you want to filter by when retrieving tag categories. Supported values include: <ul≥<li>`name`: The name of the tag category.</li></ul> | `property=name==category` |
+| `sortBy` | The order in which the tag categories are sorted by. Supported values include `name`, `createdAt`, and `modifiedAt`. | `sortBy=name` |
+| `sortOrder` | The direction in which the tag categories are sorted by. Supported values include `asc` and `desc`. | `sortOrder=asc` |
 
 **Request**
 
@@ -45,8 +56,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -H 'x-api-key: {API_KEY}'
 ```
 
 +++
@@ -105,8 +115,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -H 'x-api-key: {API_KEY}'
  -d '{
     "name": "Sample Test Category",
     "description": "Sample test category"
@@ -165,8 +174,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-44
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -H 'x-api-key: {API_KEY}'
 ```
 
 +++
@@ -231,8 +239,7 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -H 'x-api-key: {API_KEY}'
  -d '[{
     "op": "replace",
     "path": "description",
@@ -299,8 +306,7 @@ curl -X DELETE https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -H 'x-api-key: {API_KEY}'
 ```
 
 +++
@@ -316,20 +322,31 @@ You can retrieve a list of tags that belong to your organization by making a GET
 **API format**
 
 ```http
-GET /tags?property=id={TAG_CATEGORY_ID}
+GET /tags
+GET /tags?{QUERY_PARAMETERS}
 ```
+
+The following optional query parameters can be used when retrieving tags.
+
+| Query parameter | Description | Example |
+| --------------- | ----------- | ------- |
+| `start` | The location where the list of results starts from. You can use this to indicate the starting index for pagination of results. | `start=a` |
+| `limit` | The maximum number of tags you want retrieved per page. | `limit=20` |
+| `property` | The attribute you want to filter by when retrieving tags. Supported values include:<ul><li>`name`: The name of the tag.</li><li>`archived`: Whether or not the tags are archived or unarchived. You can set this value to either `true` or `false`.</li><li>`tagCategoryId`: The ID of the tag category the tag belongs to.</li></ul> | <ul><li>`property=name==TestTag`</li><li>`property=archived==false`</li><li>`property=tagCategoryId==e2b7c656-067b-4413-a366-adde0401df50`</li> |
+| `sortBy` | The order in which the tags are sorted by. Supported values include `name`, `createdAt`, and `modifiedAt`. | `sortBy=name` |
+| `sortOrder` | The direction in which the tag categories are sorted by. Supported values include `asc` and `desc`. | `sortOrder=asc` |
+
 
 **Request**
 
 +++A sample request to retrieve all tags belonging to a specific tag category
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedtags/tags?property=id=e2b7c656-067b-4413-a366-adde0401df50
+curl -X GET https://experience.adobe.io/unifiedtags/tags?property=tagCategoryId=e2b7c656-067b-4413-a366-adde0401df50
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -H 'x-api-key: {API_KEY}'
 ```
 
 +++
@@ -347,7 +364,7 @@ A successful response returns HTTP status 200 with details of the tags belonging
         "limit": 10,
         "next": "eyJjb21wb3NpdGVUb2tlbiI6IntcInRva2VuXCI6XCIrUklEOn52a0owQUp3WDRrVko1d0FBQUFBQUFBPT0jUlQ6MiNUUkM6MjAjUlREOnVDTmQyWlAvWjV6TGdvUGVGR1JHQk1KNVExVmR6Mnc9I0lTVjoyI0lFTzo2NTU2NyNRQ0Y6OCNGUEM6QWdFQ0J3TG1BQ1NmQnNBQ0JBb0FBQVFBQ0FBQUNJQVlnQWVBRElBTmdBWEFFTUJCUUVBQUFBQkFRQkdBSElBR2dBQ0FENEFId0FKUkRFQUNBZ2dBUUJnQUVBQUlIb0FaZ0FDQUJNQUFRVUFBUUFCQVFScUFBc0FTQUFBRUxvQU9nQWFBQmNBQVlBQUFHSUlCUUFDQU1vQUlnQWlBQk1DQUFRQUFnZ0FnQUM2QURZQTNnQWlBR1lBQWdCZUFBY0FCZ0JlQUM4QURBQUlBQWdBQVFBQ0FBRUZBQVFFQUFBRWdBQ0FBSjRCR2dBeUFCSUFPZ0F5QU13QVNRQ0FBQUVBdGdCRUFBR0FkZ0FuQUFDZ0NBQUFBQ0lCQUFDSkFnQUJBRUFDQUg0QUhnQWFBQllBVUFFQUNCQUFFQUFRQUF4QUFzUnJBQUlFQUFBYkxoQklIQVBBQUhnUUVBTEVxQUE4RkNBQVFtcUVBd0FBTWd3Y09BSFdIa1FBZ0JGT0FTNEN4QVE0QVwiLFwicmFuZ2VcIjp7XCJtaW5cIjpcIlwiLFwibWF4XCI6XCJGRlwifX0iLCJvcmRlckJ5SXRlbXMiOlt7Iml0ZW0iOjE2OTQ0ODg2MDMwMDB9XSwicmlkIjoidmtKMEFKd1g0a1hHV2dFQUFBQUFBQT09IiwiaW5jbHVzaXZlIjp0cnVlfQ==",
         "property": [
-            "id=e2b7c656-067b-4413-a366-adde0401df50"
+            "tagCategoryId=e2b7c656-067b-4413-a366-adde0401df50"
         ]
     },
     "tags": [
@@ -359,7 +376,7 @@ A successful response returns HTTP status 200 with details of the tags belonging
             "modifiedAt": 1705624523000,
             "modifiedBy": "{USER_ID}",
             "name": "xql-test-1705624481530",
-            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "org": "{ORG_ID}",
             "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
             "tagCategoryName": "Test Category"
         },
@@ -371,7 +388,7 @@ A successful response returns HTTP status 200 with details of the tags belonging
             "modifiedAt": 1705624523000,
             "modifiedBy": "{USER_ID}",
             "name": "xql-test-1705624489131",
-            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "org": "{ORG_ID}",
             "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
             "tagCategoryName": "Test Category"
         },
@@ -383,7 +400,7 @@ A successful response returns HTTP status 200 with details of the tags belonging
             "modifiedAt": 1705624523000,
             "modifiedBy": "{USER_ID}",
             "name": "xql-test-1705624494191",
-            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "org": "{ORG_ID}",
             "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
             "tagCategoryName": "Test Category"
         },
@@ -395,7 +412,7 @@ A successful response returns HTTP status 200 with details of the tags belonging
             "modifiedAt": 1705451722000,
             "modifiedBy": "{USER_ID}",
             "name": "xql-test-1705451701640",
-            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "org": "{ORG_ID}",
             "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
             "tagCategoryName": "Test Category"
         },
@@ -407,7 +424,7 @@ A successful response returns HTTP status 200 with details of the tags belonging
             "modifiedAt": 1705422929000,
             "modifiedBy": "{USER_ID}",
             "name": "xql-test-1705422890399",
-            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "org": "{ORG_ID}",
             "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
             "tagCategoryName": "Test Category"
         },
@@ -419,7 +436,7 @@ A successful response returns HTTP status 200 with details of the tags belonging
             "modifiedAt": 1705394126000,
             "modifiedBy": "{USER_ID}",
             "name": "xql-test-1705394104556",
-            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "org": "{ORG_ID}",
             "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
             "tagCategoryName": "Test Category"
         },
@@ -431,7 +448,7 @@ A successful response returns HTTP status 200 with details of the tags belonging
             "modifiedAt": 1705392832000,
             "modifiedBy": "{USER_ID}",
             "name": "xql-test-1705392794917",
-            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "org": "{ORG_ID}",
             "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
             "tagCategoryName": "Test Category"
         },
@@ -443,7 +460,7 @@ A successful response returns HTTP status 200 with details of the tags belonging
             "modifiedAt": 1705335274000,
             "modifiedBy": "{USER_ID}",
             "name": "xql-test-1705335252944",
-            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "org": "{ORG_ID}",
             "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
             "tagCategoryName": "Test Category"
         },
@@ -455,7 +472,7 @@ A successful response returns HTTP status 200 with details of the tags belonging
             "modifiedAt": 1694776514000,
             "modifiedBy": "{USER_ID}",
             "name": "xql-test-1694776510734",
-            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "org": "{ORG_ID}",
             "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
             "tagCategoryName": "Test Category"
         },
@@ -467,7 +484,7 @@ A successful response returns HTTP status 200 with details of the tags belonging
             "modifiedAt": 1694488609000,
             "modifiedBy": "{USER_ID}",
             "name": "xql-test-1694488608301",
-            "org": "4E5F3EB95C746F890A49400A@AdobeOrg",
+            "org": "{ORG_ID}",
             "tagCategoryId": "e2b7c656-067b-4413-a366-adde0401df50",
             "tagCategoryName": "Test Category"
         }
@@ -502,8 +519,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -H 'x-api-key: {API_KEY}'
  -d '{
     "name": "sampleTag"
  }'
@@ -574,8 +590,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -H 'x-api-key: {API_KEY}'
 ```
 
 +++
@@ -635,8 +650,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -H 'x-api-key: {API_KEY}'
  -d '{
     "ids": [
         "2bd5ddd9-7284-4767-81d9-c75b122f2a6a","d113f40c-0097-4626-8d5f-6d5017694453", "invalid-tag"
@@ -706,8 +720,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -H 'x-api-key: {API_KEY}'
  -d '[{
     "op": "replace",
     "path": "name",
@@ -719,7 +732,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 | Property | Description |
 | -------- | ----------- |
 | `op` | The operation that needs to be done. In this use case, it'll always be set to `replace`. |
-| `path` | The path of the field that will be updated. Supported values include `name`, `archived`, and `tagCategory`. |
+| `path` | The path of the field that will be updated. Supported values include `name`, `archived`, and `tagCategoryId`. |
 | `value` | The updated value of the field you want to update. |
 | `from` | The original value of the field you want to update. |
 
@@ -754,7 +767,7 @@ A successful response returns HTTP status 200 with details of the newly updated 
 >
 >Only the system administrator and product administrator can use this API call.
 >
->Additionally, the tag **must** be archived before you can delete the tag. You can archive the tag by using the [update tag endpoint](#update-tag).
+>Additionally, the tag **cannot** be associated with any business objects and **must** be archived before you can delete the tag. You can archive the tag by using the [update tag endpoint](#update-tag).
 
 You can delete a specific tag by making a DELETE tag to the `/tags` endpoint and specifying the ID of the tag that you want to delete.
 
@@ -777,8 +790,7 @@ curl -X DELETE https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-8
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -H 'x-api-key: {API_KEY}'
 ```
 
 +++
