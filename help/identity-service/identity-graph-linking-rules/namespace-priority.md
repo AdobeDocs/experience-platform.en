@@ -16,7 +16,7 @@ Every customer implementation is unique and tailored to meet a particular organi
 
 You must make configurations in Identity Service that reflects the importance of your namespaces as this influences how profiles are formed and segmented.
 
-## Step 1: Determine your priorities
+## Determine your priorities
 
 Determination of namespace priority is based on the following factors:
 
@@ -44,11 +44,11 @@ Person namespaces are relatively immutable compared to hardware devices (such as
 
 Another way to approach this topic is through cardinality. For a given person entity, how many identities will be created? In most cases, a person will have one CRM ID, a handful of hardware device identifiers (IDFA/GAID resets should not happen often), and even more cookies (an individual could conceivably brows on multiple devices, use incognito mode, or reset cookies at any  given time). Generally, **lower cardinality indicates a namespace with a higher value**.
 
-## Step 2: Validate your namespace priority settings
+<!-- ## Step 2: Validate your namespace priority settings
 
-Once you have an idea of how you will prioritize your namespaces, you can use the Graph Simulation tool to test out various graph collapse scenarios and ensure that your priority configurations are returning the expected graph results. For more information, read the guide on using the [Graph Simulation tool](./graph-simulation.md).
+Once you have an idea of how you will prioritize your namespaces, you can use the Graph Simulation tool to test out various graph collapse scenarios and ensure that your priority configurations are returning the expected graph results. For more information, read the guide on using the [Graph Simulation tool](./graph-simulation.md). -->
 
-## Step 3: Configure namespace priority
+## Configure namespace priority
 
 Namespace priority can be configured using [!UICONTROL Identity Settings]. In the [!UICONTROL Identity Settings] interface, you may drag and drop a namespace to determine its relative importance.
 
@@ -105,9 +105,9 @@ Given the configurations outlined above, user actions and determination of prima
 | --- | --- | --- | --- | --- |
 | View credit card offer page | Unauthenticated (anonymous) | Web SDK | {ECID} | ECID |
 | View help page | Unauthenticated | Mobile SDK | {ECID, IDFA} | IDFA |
-| View checking account balance | Authenticated | Web SDK | {CRMID, ECID} | CRM ID |
-| Sign up for home loan | Authenticated | Analytics source connector | {CRMID, ECID, AAID} | CRMID |
-| Transfer $1,000 from checking to savings | Authenticated | Mobile SDK | {CRMID, GAID, ECID} | CRMID |
+| View checking account balance | Authenticated | Web SDK | {CRM ID, ECID} | CRM ID |
+| Sign up for home loan | Authenticated | Analytics source connector | {CRM ID, ECID, AAID} | CRM ID |
+| Transfer $1,000 from checking to savings | Authenticated | Mobile SDK | {CRM ID, GAID, ECID} | CRM ID |
 
 {style="table-layout:auto"}
 
