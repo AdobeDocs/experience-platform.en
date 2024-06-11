@@ -170,7 +170,7 @@ If a widget displays *[!UICONTROL Unable to load. Try again.]* this is because t
 
 ![The Unable to load insight error.](../images/account-profiles/unable-to-load.png)
 
-To resolve the issue, you must ingest B2B entity data, such as opportunity data, into the sandbox. After 48 hours the data is reflected in the widgets.
+To resolve the issue, you must ingest B2B entity data, such as opportunity data, into the sandbox. After 48 hours, the data is reflected in the widgets.
 
 ## Next steps
 
