@@ -13,39 +13,52 @@ Read this document to learn how you can use Graph Simulation to better understan
 
 You can access Graph Simulation in the Adobe Experience Platform UI. Select **[!UICONTROL Identities]** from the left navigation and then select **[!UICONTROL Graph Simulation]** from the top header.
 
-![The Graph Simulation interface in the Adobe Experience Platform UI.]
+![The Graph Simulation interface in the Adobe Experience Platform UI.](../images/graph-simulation/graph-simulation.png)
 
 The Graph Simulation interface can be divided into three sections:
 
 * Events: Use the **[!UICONTROL Events]** panel to add identities to simulate a graph. A fully qualified identity must have an identity namespace and its corresponding identity value. You must add at least two identities in order to simulate a graph. You can also select **[!UICONTROL Load Example]** to input a pre-configured event and algorithm setup.
-* Algorithm Configuration: Use the **[!UICONTROL Algorithm Configuration]** panel to add and configure the optimization algorithm for your namespaces. You can drag and drop a namespace to modify their respective priority ranking. You can also select **[!UICONTROL Unique Per Graph]** to determine if a namespace is unique, which means...
+
+![The events panel of the Graph Simulation tool.](../images/graph-simulation/events.png)
+
+* Algorithm Configuration: Use the **[!UICONTROL Algorithm Configuration]** panel to add and configure the optimization algorithm for your namespaces. You can drag and drop a namespace to modify their respective priority ranking. You can also select **[!UICONTROL Unique Per Graph]** to determine if a namespace is unique.
+
+![The algorithm configuration of the Graph Simulation tool.](../images/graph-simulation/algorithm-configuration.png)
+
 * Simulated Graph Viewer: The simulated graph viewer displays the resulting graph based on the events you added and the algorithm that you configured. A straight line between two nodes means that a link is established. A dotted line indicates that a link has been removed.
+
+
+![The simulated graph viewer panel, with an example of a simulated graph.](../images/graph-simulation/simulated-graph.png)
 
 ## Add events
 
 To begin, select **[!UICONTROL Add Events]**.
 
-![The Add Events button selected.](../images/graph-simulation/add-events/add-event.png)
+![The Add Events button selected.](../images/graph-simulation/add-events.png)
 
-A pop-up window appears for [!UICONTROL Event #1]. From here, input your identity namespace and identity value combination. You can use the dropdown menu to select an identity namespace. Alternatively, you can type in the first few letters of a namespace and then select the options provided in the dropdown menu. Then, provide an identity value that corresponds with your namespace. When finished select add (`+`) to add a second identity.
+A pop-up window appears for [!UICONTROL Event #1]. From here, input your identity namespace and identity value combination. You can use the dropdown menu to select an identity namespace. Alternatively, you can type in the first few letters of a namespace and then select the options provided in the dropdown menu. Once you have selected your namespace, provide an identity value that corresponds with your namespace.
+
+![](../images/graph-simulation/event-one.png)
 
 >[!TIP]
 >
 >The identity value that you input during Graph Simulation exercises do not have to be real identity values and can be simple placeholders.
 
-![The first fully qualified identity of {CRMID: Tom} is inputted in the Events panel of Graph Simulation.](../images/graph-simulation/add-events/first-identity.png)
+Once your first identity is complete, select the add icon (**`+`**) to add a second identity. 
+
+![The first fully qualified identity of {Email: tom@acme.com} is inputted in the Events panel of Graph Simulation.](../images/graph-simulation/event-one-added.png)
 
 Next, repeat the same steps and add a second identity. Two fully qualified identities are required in order to generate an identity graph. In the example below, an ECID is added as a namespace and is provided with a value of `111`. When finished, select **[!UICONTROL Save]**.
 
-![A second identity of {ECID: 111} is added to Event #1.](../images/graph-simulation/add-events/second-identity.png)
+![A second identity of {ECID: 111} is added to Event #1.](../images/graph-simulation/first-event.png)
 
-The [!UICONTROL Events] interface updates to display your first event, which in this case is: `{CRMID: Tom, ECID: 111}`.
+The [!UICONTROL Events] interface updates to display your first event, which in this case is: `{Email: tom@acme.com, ECID: 111}`.
 
-![The updated events interface with {CRMID: Tom, ECID: 111}.](../images/graph-simulation/add-events/one-event.png)
+![The updated events interface with {Email: tom@acme.com, ECID: 111}.](../images/graph-simulation/add-second-event.png)
 
-Next, repeat the same steps to add a second event. For Event #2, add `{CRMID: Summer}` as your first identity and then add the same `{ECID: 111}` as the second identity, thus creating a second event of: `{CRMID: Summer}, {ECID: 111}`. When finished, you should have two events, one for `{CRMID: Tom, ECID: 111}` and one for `{CRMID: Summer}, {ECID: 111}`.
+Next, repeat the same steps to add a second event. For Event #2, add `{Email: summer@acme.com}` as your first identity and then add the same `{ECID: 111}` as the second identity, thus creating a second event of: `{Email: summer@acme.com}, {ECID: 111}`. When finished, you should have two events, one for `{Email: tom@acme.com, ECID: 111}` and one for `{Email: summer@acme.com}, {ECID: 111}`.
 
-![The updated events interface with two events.](../images/graph-simulation/add-events/two-events.png)
+![The updated events interface with two events.](../images/graph-simulation/two-events.png)
 
 ### Load example
 
