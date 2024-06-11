@@ -20,7 +20,7 @@ Read this section for information on unique namespaces and namespace priority. T
 
 ### Unique namespace {#unique-namespace}
 
-A unique namespace determines the links that get removed if graph collapse happens
+A unique namespace determines the links that get removed if graph collapse happens.
 
 A single merged profile and its corresponding identity graph should represent a single individual (person entity). A single individual is usually represented by CRM IDs and/or Login IDs. The expectation is that no two individuals (CRM IDs) are merged into a single profile or graph.
 
@@ -49,18 +49,20 @@ For an in-depth look at namespace priority and its complete functionalities and 
 
 ## Process {#process}
 
-Upon ingesting new identities, Identity Service checks if the new identities and their corresponding namespaces will result in exceeding the configured limits. If limits are not exceeded, then the ingestion of new identities will proceed and these identities will be linked to the graph. However, if limits are exceeded, the identity optimization algorithm will:
+
+Upon ingesting new identities, Identity Service checks if the new identities and their corresponding namespaces adheres to unique namespace configurations. If the configurations are followed, then ingestion proceeds and the new identities aer linked to the the graph. However, if configurations are not followed, then the identity optimization algorithm will:
+
 
 * Ingest the most recent event, while taking namespace priority into account.
-* Remove the link that would merge two person entities from the appropriate graph layer. 
+* Remove the link that would merge two person entities from the appropriate graph layer.  
 
 ## Identity optimization algorithm details
 
 When the unique namespace constraint is violated, the identity optimization algorithm will "re-play" the links and rebuild the graph from scratch.
 
 * Links are sorted by the following order:
-  * Latest event
-  * Timestamp by sum of namespace priority (lower sum = higher order)
+  * Latest event.
+  * Timestamp by sum of namespace priority (lower sum = higher order).
 * The graph would re-establish based on the above order. If adding the link violates the limit constraint (e.g. the graph contains two or more identities with a unique namespace), then the links is removed.
 * The resulting graph will then be compliant with the unique namespace constraint that you configured.
 
@@ -78,27 +80,27 @@ A shared device refers to a device that is used by more than one individual. For
 
 >[!TAB Example one]
 
-| Namespace | Limit |
+| Namespace | Unique namespace |
 | --- | --- |
-| CRM ID | 1 |
-| Email | 1 |
-| ECID | N/A |
+| CRM ID | Yes |
+| Email | Yes |
+| ECID | No |
 
-In this example, both CRM ID and Email are designated as unique namespaces. At `timestamp=0`, a CRM record dataset is ingested and creates two different graphs because of the limit configuration. Each graph contains a CRM ID and an Email namespace.
+In this example, both CRM ID and Email are designated as unique namespaces. At `timestamp=0`, a CRM record dataset is ingested and creates two different graphs because of the unique namespace configuration. Each graph contains a CRM ID and an Email namespace.
 
 * `timestamp=1`: Jane logs in to your e-commerce website using a laptop. Jane is represented by her CRM ID and Email, while the web browser on her laptop that she uses is represented by an ECID.
 * `timestamp=2`: John logs in to your e-commerce website using the same laptop. John is represented by his CRM ID and Email, while the web browser he used is already represented by an ECID. Due to the same ECID being linked to two different graphs, Identity Service is able to know that this device (laptop) is a shared device.
-* However, due to the limit configuration that sets a maximum of one CRM ID namespace and one Email namespace per graph, identity optimization algorithm then splits the graph into two.
+* However, due to the unique namespace configuration that sets a maximum of one CRM ID namespace and one Email namespace per graph, identity optimization algorithm then splits the graph into two.
   * Finally, because John is the last authenticated user, the ECID that represents the laptop, remains linked to his graph instead of Jane's.
 
 ![shared device case one](../images/identity-settings/shared-device-case-one.png)
 
 >[!TAB Example two]
 
-| Namespace | Limit |
+| Namespace | Unique namespace |
 | --- | --- |
-| CRM ID | 1 |
-| ECID | N/A |
+| CRM ID | Yes |
+| ECID | No |
 
 In this example, the CRM ID namespace is designated as a unique namespace.
 
@@ -116,11 +118,11 @@ In this example, the CRM ID namespace is designated as a unique namespace.
 
 There are instances where a user may input bad values for their email and/or phone numbers. 
 
-| Namespace | Limit |
+| Namespace | Unique namespace |
 | --- | --- |
-| CRM ID | 1 |
-| Email | 1 |
-| ECID | N/A |
+| CRM ID | Yes |
+| Email | Yes |
+| ECID | No |
 
 In this example, the CRM ID and Email namespaces are designated as unique. Consider the scenario that Jane and John have signed up to your e-commerce website using a bad email value (for example, test<span>@test.com).
 
@@ -128,7 +130,7 @@ In this example, the CRM ID and Email namespaces are designated as unique. Consi
 * `timestamp=2`: John logs in to your e-commerce website using Google Chrome on his iPhone, establishing his CRM ID (login information) and ECID (browser).
 * `timestamp=3`: Your data engineer ingests Jane's CRM record, which results in her CRM ID getting linked to the bad email.
 * `timestamp=4`: Your data engineer ingests John's CRM record, which results in his CRM ID getting linked to the bad email.
-  * This then becomes a violation of the configured limits as it creates a single graph with two CRM ID namespaces.
+  * This then becomes a violation of the unique namespace configuration as it creates a single graph with two CRM ID namespaces.
   * As a result, the identity optimization algorithm deletes the older link, which in this case is the link between Jane's identity with CRM ID namespace and the identity with test<span>@test.
 
 With identity optimization algorithm, bad identity values such as bogus emails or phone numbers do not get propagated across several different identity graphs.

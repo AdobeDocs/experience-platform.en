@@ -50,7 +50,7 @@ Once you have an idea of how you will prioritize your namespaces, you can use th
 
 ## Step 3: Configure namespace priority
 
-Namespace priority can be configured using [!UICONTROL Identity Settings]. In the [!UICONTROL Identity Settings] interface, you maye drag and drop a namespace to determine its relative importance.
+Namespace priority can be configured using [!UICONTROL Identity Settings]. In the [!UICONTROL Identity Settings] interface, you may drag and drop a namespace to determine its relative importance.
 
 >[!IMPORTANT]
 >
@@ -130,18 +130,6 @@ If the segment qualification criteria were solely based on anonymous events stor
 
 This section outlines how namespace priority can affect other Experience Platform services.
 
-### Experience Data Model (XDM) Schemas
-
-Any schema that is not an XDM Experience Event, such as XDM Individual Profiles, will continue to honor any [fields that you mark as an identity](../../xdm/ui/fields/identity.md).
-
-For more information on XDM schemas, read the [schemas overview](../../xdm/home.md).
-
-### Data lake
-
-Data ingestion to data lake will continue to honor the primary identity settings configured on [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) and schemas. 
-
-Data lake will not determine primary identity based on namespace priority. For example, Adobe Customer Journey Analytics will continue to use values in the identity map even after namespace priority is enabled (such as, adding a dataset to a new connection), because Customer Journey Analytics consumes their data from data lake.
-
 ### Advanced data lifecycle management
 
 Data hygiene record delete requests functions in the following manner, for a given identity:
@@ -150,6 +138,29 @@ Data hygiene record delete requests functions in the following manner, for a giv
 * Data lake: Deletes any record with the specified identity as primary identity.
 
 For more information, read the [advanced lifecycle management overview](../../hygiene/home.md).
+
+### Data lake
+
+Data ingestion to data lake will continue to honor the primary identity settings configured on [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) and schemas. 
+
+Data lake will not determine primary identity based on namespace priority. For example, Adobe Customer Journey Analytics will continue to use values in the identity map even after namespace priority is enabled (such as, adding a dataset to a new connection), because Customer Journey Analytics consumes their data from data lake.
+
+### Experience Data Model (XDM) Schemas
+
+Any schema that is not an XDM Experience Event, such as XDM Individual Profiles, will continue to honor any [fields that you mark as an identity](../../xdm/ui/fields/identity.md).
+
+For more information on XDM schemas, read the [schemas overview](../../xdm/home.md).
+
+### Intelligent services
+
+When selecting your data, you will need to specify a namespace, which will be used to determine the events that compute scores and the events that store the computed scores. You are recommended to select the namespace that represents a person.
+
+* If you are collecting web behavior data using WebSDk, you are recommended to choose the CRM ID namespace within the identity map.
+* If you are collecting web behavior data using the Analytics source connector, then you should select the identity descriptor (CRM ID).
+
+This configuration results in computing scores only using authenticated events.
+
+For more information on, read the documents on [Attribution AI](../../intelligent-services/attribution-ai/overview.md) and [Customer AI](../../intelligent-services/customer-ai/overview.md).
 
 ### Privacy Service
 
