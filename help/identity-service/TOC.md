@@ -34,6 +34,7 @@ role: Admin,Developer
 - [Identity graph linking rules] {#identity-graph-linking-rules}
   - [Feature overview](./identity-graph-linking-rules/overview.md)
   - [Identity optimization algorithm](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+  - [Namespace priority](./identity-graph-linking-rules/namespace-priority.md)
   - [Example scenarios](./identity-graph-linking-rules/example-scenarios.md)
 - [Privacy request processing](privacy.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
