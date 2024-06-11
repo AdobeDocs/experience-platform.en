@@ -105,6 +105,13 @@ Next, select the channel, platforms, and apps that you looked at in the app surf
 
 Read the documentation on [how to set up push channel surfaces](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
 
+## Set-up and discover playbooks
+
+In some instances, use case playbooks visibility is as the capability to experience the product is limited. You and other users may also face friction in the adoption process as you need to identify an empty development sandbox and setup the use case playbooks before using them. 
+
+
+You can now select the 
+
 ## Next steps {#next-steps}
 
 Now that you've followed all the steps in this document, you should have created a development sandbox with Use Case Playbooks available in the left navigation. You now also know how to grant your team members the required permissions to view and manage playbooks and generate assets. As a next step, read how to [discover the right playbook](/help/use-case-playbooks/playbooks/discover.md) for you and then [create instances from it](/help/use-case-playbooks/playbooks/create-share-reuse.md).
