@@ -210,6 +210,7 @@ role: Admin,User
     * [Overview](./destination-sdk/overview.md)
     * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)
     * [Getting started with Destination SDK](./destination-sdk/getting-started.md)
+    * [Glossary](/help/destinations/destination-sdk/glossary.md)
     * Functionality {#functionality}
         * [Configuration options](./destination-sdk/functionality/configuration-options.md)
         * Destination server components {#destination-server}
