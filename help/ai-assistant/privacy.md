@@ -16,7 +16,7 @@ Read this document to learn about the customer trust-focused capabilities that y
 * You must be granted explicit permission to interact with AI Assistant.
   * You can set permissions differently for Experience Platform and Journey Optimizer using the [Permissions UI](../access-control/abac/ui/permissions.md) and you can use the [Admin Console](../access-control/ui/browse.md) to assign permissions for Customer Journey Analytics.
   * Permissions are granular and your sandbox administrator can configure which of your users can ask different question categories (product knowledge-based questions with AI Assistant or questions on operational insights).
-* AI Assistant is a HIPAA-ready feature and meets HIPAA requirements around processing and usage of Protected Health Information (PHI).
+* AI Assistant is a HIPAA-ready feature when used in combination with Adobe Experience Platform Healthcare Shield.
 * You can view a log of your previous interactions with AI Assistant with a 30-day retention policy.
 * AI Assistant is grounded in sandbox-specific data and public Adobe documentation when answering to user prompts. Data is not shared across sandboxes.
 * Prompts that you provide to AI Assistant are not shared to other customers.
