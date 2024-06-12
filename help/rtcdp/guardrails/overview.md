@@ -8,6 +8,10 @@ exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
 
 Guardrails are thresholds that provide guidance for data and system usage, performance optimization, and avoidance of errors or unexpected results in Real-Time CDP. Guardrails can refer to your usage or consumption of data and processing in relation to your licensing entitlements.
 
+>[!IMPORTANT]
+>
+>Check your license entitlements in your Sales Order and corresponding [Product Description](https://helpx.adobe.com/legal/product-descriptions.html) on actual usage limits in addition to this guardrails page.
+
 Start here and follow the links below to understand all guardrails across the various services and areas of Real-Time CDP:
 
 * [Guardrails for data ingestion](/help/ingestion/guardrails.md)
