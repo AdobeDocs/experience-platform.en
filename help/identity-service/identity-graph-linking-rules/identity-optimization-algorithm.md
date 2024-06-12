@@ -1,8 +1,6 @@
 ---
 title: Identity optimization algorithm
 description: Learn about Identity Optimization Algorithm in Identity Service.
-hide: true
-hidefromtoc: true
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 ---
