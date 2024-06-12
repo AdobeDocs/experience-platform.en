@@ -56,6 +56,10 @@ You can select from multiple types of audiences, depending on their origin:
 >[!IMPORTANT]
 >
 >This step only applies to some audience streaming destinations. If your destination does not have a **[!UICONTROL Mapping]** step, skip to [audience scheduling](#scheduling).
+>
+>When activating audiences to streaming destinations, you must also map *at least one target identity namespace*, in addition to target profile attributes. Otherwise, the audiences will not be activated to the destination platform.
+> ![Image of mapping step showing a mandatory identity namespace mapping.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+
 
 Some audience streaming destinations require you to select source attributes or identity namespaces to map as target identities in the destination.
 

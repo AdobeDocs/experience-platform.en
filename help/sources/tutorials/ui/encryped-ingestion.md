@@ -3,6 +3,7 @@ title: Ingest Encrypted Data in the Sources UI Workspace
 description: Learn how to ingest encrypted data in the sources UI workspace.
 hide: true
 hidefromtoc: true
+exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
 ---
 # Ingest encrypted data in the sources UI
 
