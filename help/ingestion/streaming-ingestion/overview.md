@@ -29,7 +29,11 @@ Once you are confident that your data is clean, you can enable your datasets for
 
 For more information on enabling a dataset for [!DNL Profile] and [!DNL Identity Service], please read the [configure a dataset guide](../../profile/tutorials/dataset-configuration.md). 
 
-## What is the expected latency for streaming ingestion on [!DNL Platform]?
+## What is the expected latency for streaming ingestion on Experience Platform?
+
+>[!IMPORTANT]
+>
+>Guardrails for streaming ingestion are calculated at the organization level and not the sandbox level. This means that your data usage per sandbox is bound to the total license usage entitlement that corresponds with your entire organization. Additionally, data usage in development sandboxes are limited to 10% of your total profiles. For more information about license usage entitlement, read the [data management best practices guide](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 | Destination | Expected latency | 
 | --------- | ---------------- |

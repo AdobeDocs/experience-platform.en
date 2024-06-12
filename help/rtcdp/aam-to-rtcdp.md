@@ -1,6 +1,6 @@
 ---
 title: Evolution from Audience Manager to Real-Time CDP
-description: Understand the considerations before planning your migration from Audience Manager to Real-Time CDP.
+description: Understand the considerations before planning your migration from Audience Manager to Adobe Real-Time CDP.
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
 ---
 # Evolution from Audience Manager to Real-Time CDP

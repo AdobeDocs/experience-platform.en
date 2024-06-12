@@ -7,7 +7,7 @@ exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
 
 Adobe Experience Platform allows you to fully customize the structure of your custom Experience Data Model (XDM) classes, schema field groups, and data types. 
 
-You can also define map fields in the Schema Editor to model flexible and dynamic data structures or store a collection of key-value pairs. The map data structure allows for efficient and fast lookups, inserts, and deletes where information is organized and accessed based on unique identifiers.
+You can also define map fields in the Schema Editor to model flexible and dynamic data structures or store a collection of key-value pairs.
 
 When defining a new field in the Platform user interface (UI), use the **[!UICONTROL Type]** dropdown and select "**[!UICONTROL Map]**" from the list.
 
@@ -20,6 +20,21 @@ A [!UICONTROL Map value type] property appears. This value is required for [!UIC
 Once you have configured the subfield, you must assign it to a field group. Use the **[!UICONTROL Field Group]** drop down menu, or search field, and select **[!UICONTROL Apply]**. You can continue to add fields to the object using the same process, or select **[!UICONTROL Save]** to confirm your settings. 
 
 ![A recording of the field group selection and settings being applied.](../../images/ui/fields/special/assign-to-field-group.gif)
+
+## Usage restrictions {#restrictions}
+
+XDM places the following restrictions on the use of this data type:
+
+* Map types MUST be of type `object`.
+* Map types MUST NOT have properties defined (in other words, they define "empty" objects).
+* Map types MUST include an `additionalProperties.type` field that describes the values that may be placed within the map, either `string` or `integer`.
+* Multi-entity segmentation can only be defined based on the map keys and not the values.     
+* Maps are not supported for account audiences.
+
+Ensure that you are only using map-type fields when absolutely necessary, as they carry the following performance drawbacks:
+
+* Response time from [Adobe Experience Platform Query Service](../../../query-service/home.md) degrades from three seconds to ten seconds for 100 million records.
+* Maps must have fewer than 16 keys or else risk further degradation.
 
 >[!NOTE]
 >

@@ -1,16 +1,14 @@
 ---
 title: Example Scenarios For Configuring Identity Settings
 description: Learn about example scenarios for configuring Identity Settings.
-hide: true
-hidefromtoc: true
-badge: Alpha
+badge: Beta
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
 ---
 # Example scenarios for configuring identity graph linking rules
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Identity graph linking rules are currently in Alpha. The feature and documentation are subject to change.
+>This feature is not yet available; the beta program for identity graph linking rules is expected to start in July on development sandboxes. Contact your Adobe account team for information on the participation criteria.
 
 This document outlines example scenarios that you may consider when configuring identity graph linking rules.
 

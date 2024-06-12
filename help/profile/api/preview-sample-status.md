@@ -9,7 +9,7 @@ exl-id: a90a601e-629e-417b-ac27-3d69379bb274
 
 Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build a robust, unified profile for each of your individual customers. As data is ingested into Platform, a sample job is run to update the profile count and other Real-Time Customer Profile data-related metrics. 
 
-The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-Time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate multiple reports in order to gain visibility into the composition of your organization's Profile Store. This guide walks through the steps required to view these metrics using the `/previewsamplestatus` API endpoint.
+The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-Time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate multiple reports in order to gain visibility into the composition of your organization's Profile store. This guide walks through the steps required to view these metrics using the `/previewsamplestatus` API endpoint.
 
 >[!NOTE]
 >
@@ -31,10 +31,10 @@ To learn more about profiles and their role within Experience Platform, please b
 
 ## How the sample job is triggered
 
-As data enabled for Real-Time Customer Profile is ingested into [!DNL Platform], it is stored within the Profile data store. When the ingestion of records into the Profile Store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. The way in which the sample is triggered depends on the type of ingestion being used:
+As data enabled for Real-Time Customer Profile is ingested into [!DNL Platform], it is stored within the Profile data store. When the ingestion of records into the Profile store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. The way in which the sample is triggered depends on the type of ingestion being used:
 
 * For **streaming data workflows**, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a sample job is automatically triggered to update the count. 
-* For **batch ingestion**, within 15 minutes of successfully ingesting a batch into the Profile Store, if the 5% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
+* For **batch ingestion**, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
 
 The profile count and profiles by namespace metrics are also available within the [!UICONTROL Profiles] section of the Experience Platform UI. For information on how to access Profile data using the UI, please visit the [[!DNL Profile] UI guide](../ui/user-guide.md).
 
@@ -94,9 +94,9 @@ The response includes the details for the last successful sample job that was ru
 |Property|Description|
 |---|---|
 |`numRowsToRead`|The total number of merged profiles in the sample.|
-|`sampleJobRunning`| A boolean value that returns `true` when a sample job is in progress. Provides transparency into the latency that occurs from when a batch file is uploaded to when it is actually added to the Profile Store.|
+|`sampleJobRunning`| A boolean value that returns `true` when a sample job is in progress. Provides transparency into the latency that occurs from when a batch file is uploaded to when it is actually added to the Profile store.|
 |`cosmosDocCount`|Total document count in Cosmos.|
-|`totalFragmentCount`|Total number of profile fragments in the Profile Store.|
+|`totalFragmentCount`|Total number of profile fragments in the Profile store.|
 |`lastSuccessfulBatchTimestamp`|Last successful batch ingestion timestamp.|
 |`streamingDriven`| *This field has been deprecated and contains no significance to the response.*|
 |`totalRows`|Total number of merged profiles in Experience Platform, also know as the 'profile count.'|
@@ -201,7 +201,7 @@ The response includes a `data` array, containing a list of dataset objects. The 
 
 ## List profile distribution by identity namespace
 
-You can perform a GET request to the `/previewsamplestatus/report/namespace` endpoint to view the breakdown by identity namespace across all of the merged profiles in your Profile Store. This includes both the standard identities provided by Adobe, as well as the custom identities defined by your organization.
+You can perform a GET request to the `/previewsamplestatus/report/namespace` endpoint to view the breakdown by identity namespace across all of the merged profiles in your Profile store. This includes both the standard identities provided by Adobe, as well as the custom identities defined by your organization.
 
 Identity namespaces are an important component of Adobe Experience Platform Identity Service that serve as indicators of the context to which customer data relates. To learn more, begin by reading the [identity namespace overview](../../identity-service/features/namespaces.md).
 
@@ -298,7 +298,7 @@ The response includes a `data` array, with individual objects containing the det
 
 ## Generate the dataset overlap report
 
-The dataset overlap report provides visibility into the composition of your organization's Profile Store by exposing the datasets that contribute most to your addressable audience (merged profiles). In addition to providing insights into your data, this report can help you take actions to optimize license usage, such as setting expirations for certain datasets.
+The dataset overlap report provides visibility into the composition of your organization's Profile store by exposing the datasets that contribute most to your addressable audience (merged profiles). In addition to providing insights into your data, this report can help you take actions to optimize license usage, such as setting expirations for certain datasets.
 
 You can generate the dataset overlap report by performing a GET request to the `/previewsamplestatus/report/dataset/overlap` endpoint.
 
@@ -366,7 +366,7 @@ This report provides the following information:
 
 ## Generate the identity namespace overlap report {#identity-overlap-report}
 
-The identity namespace overlap report provides visibility into the composition of your organization's Profile Store by exposing the identity namespaces that contribute most to your addressable audience (merged profiles). This includes both the standard identity namespaces provided by Adobe, as well as the custom identity namespaces defined by your organization.
+The identity namespace overlap report provides visibility into the composition of your organization's Profile store by exposing the identity namespaces that contribute most to your addressable audience (merged profiles). This includes both the standard identity namespaces provided by Adobe, as well as the custom identity namespaces defined by your organization.
 
 You can generate the identity namespace overlap report by performing a GET request to the `/previewsamplestatus/report/namespace/overlap` endpoint.
 
@@ -462,7 +462,7 @@ This report provides the following information:
 
 ## Generate the unstitched profiles report
 
-You can gain further visibility into the composition of your organization's Profile Store through the unstitched profiles report. An "unstitched" profile is a profile that contains only one profile fragment. An "unknown" profile is a profile that is associated with pseudonymous identity namespaces such as `ECID` and `AAID`. Unknown profiles are inactive, which means they have not added new events for the specified time period. The unstitched profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, and 120 days.
+You can gain further visibility into the composition of your organization's Profile store through the unstitched profiles report. An "unstitched" profile is a profile that contains only one profile fragment. An "unknown" profile is a profile that is associated with pseudonymous identity namespaces such as `ECID` and `AAID`. Unknown profiles are inactive, which means they have not added new events for the specified time period. The unstitched profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, and 120 days.
 
 You can generate the unstitched profiles report by performing a GET request to the `/previewsamplestatus/report/unstitchedProfiles` endpoint.
 
@@ -543,8 +543,8 @@ A successful request returns HTTP Status 200 (OK) and the unstitched profiles re
 |Property|Description|
 |---|---|
 |`data`|The `data` object contains the information returned for the unstitched profiles report.|
-|`totalNumberOfProfiles`|The total count of unique profiles in the Profile Store. This is equivalent to the addressable audience count. It includes both known and unstitched profiles.|
-|`totalNumberOfEvents`|The total number of ExperienceEvents in the Profile Store.|
+|`totalNumberOfProfiles`|The total count of unique profiles in the Profile store. This is equivalent to the addressable audience count. It includes both known and unstitched profiles.|
+|`totalNumberOfEvents`|The total number of ExperienceEvents in the Profile store.|
 |`unstitchedProfiles`|An object containing a breakdown of unstitched profiles by time period. The unstitched profiles report provides a breakdown of profiles for 7, 30, 60, 90, and 120 day time periods.|
 |`countOfProfiles`|The count of unstitched profiles for the time period or the count of unstitched profiles for the namespace. |
 |`eventsAssociated`|The number of ExperienceEvents for the time range or the number of events for the namespace.|
@@ -553,7 +553,7 @@ A successful request returns HTTP Status 200 (OK) and the unstitched profiles re
 
 ### Interpreting the unstitched profiles report
 
-The results of the report can provide insight into how many unstitched and inactive profiles your organization has within its Profile Store.
+The results of the report can provide insight into how many unstitched and inactive profiles your organization has within its Profile store.
 
 Consider the following excerpt from the `data` object:
 
@@ -587,5 +587,5 @@ This report provides the following information:
 
 ## Next steps
 
-Now that you know how to preview sample data in the Profile Store and run multiple reports on the data, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating your expected audience. To learn more about working with previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
+Now that you know how to preview sample data in the Profile store and run multiple reports on the data, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating your expected audience. To learn more about working with previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
 

@@ -9,6 +9,10 @@ exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
 ---
 # Guardrails for data activation
 
+>[!IMPORTANT]
+>
+>Check your license entitlements in your Sales Order and corresponding [Product Description](https://helpx.adobe.com/legal/product-descriptions.html) on actual usage limits in addition to this guardrails page.
+
 This page provides default usage and rate limits with regard to activation behavior. When reviewing the following guardrails, it is assumed that you have correctly [connected to destinations](/help/destinations/ui/connect-destination.md).
 
 >[!NOTE]
