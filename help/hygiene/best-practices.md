@@ -6,13 +6,13 @@ description: Learn how to efficiently manage data hygiene requests in Adobe Expe
 
 Use the Advanced Data Lifecycle Management UI and Data Hygiene API to efficiently submit cleanup requests to remove data from Adobe Experience Platform services. Follow these best practices to streamline your request processing and optimize completion response times.
 
-## Getting Started
+## Prerequisites {#prerequisites}
 
-This guide requires a working understanding of the Data Lifecycle workspace and Data Hygiene API. and how it enables you to manage cleanup requests within AEP. Familiarize yourself with the guides on [Data Hygiene Service](./data-hygiene-service.md) and [submitting cleanup requests in the UI](./ui/user-guide.md#creating-workorders), or through the API.
+This guide requires a working understanding of the Data Lifecycle workspace and Data Hygiene API. and how it enables you to manage cleanup requests within AEP. Before continuing this Familiarize yourself with the guides on [Advanced Data Lifecycle Management](./data-hygiene-service.md) and [submitting cleanup requests in the UI](./ui/user-guide.md#creating-workorders), or through the API.
 
-## Prerequisites
+## Getting started {#getting-started}
 
-Access to Data Hygiene Service is managed through granular role-based permissions in Adobe Admin Console. Ensure you have the necessary permissions in your product profile to utilize specific features in the UI and API. Contact your system administrator for additional permissions. Administrators can refer to the guide on [managing permissions for Data Hygiene Service](./permissions.md) for more details.
+Access to Advanced Data Lifecycle Management is managed through granular role-based permissions in Adobe Admin Console. Ensure you have the necessary permissions in your product profile to utilize specific features in the UI and API. Contact your system administrator for additional permissions. Administrators can refer to the guide on [managing permissions for Advanced Data Lifecycle Management](./permissions.md) for more details.
 
 ## Workorder creation guidelines
 
@@ -25,7 +25,7 @@ Follow these guidelines to optimize your cleanup request submissions:
 
 ## Dataset expiration (TTL)
 
-Dataset ecxpirations are handled by the `/ttl` endpoint on the Data Hygiene API.
+Dataset expirations are handled by the `/ttl` endpoint on the Data Hygiene API.
 
 Setting up automatic dataset cleanup is recommended for short-lived data. Use TTL feature to trigger dataset cleanup based on specified time/date. Monitor progress efficiently through I/O Events.
 
@@ -45,4 +45,4 @@ ADLM provides methods to retrieve and monitor job status efficiently. Follow the
 - Retrieve product-specific responses and success messages.
 - Avoid using this method for regular polling activities.
 
-By adhering to these best practices, you can effectively manage cleanup requests and optimize response times within Data Hygiene Service.
+By adhering to these best practices, you can effectively manage cleanup requests and optimize response times within Advanced Data Lifecycle Management.
