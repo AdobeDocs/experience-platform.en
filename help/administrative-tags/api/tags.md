@@ -2,8 +2,8 @@
 title: Unified Tags Endpoint
 description: Learn how to create, update, manage, and delete tag categories and tags using the Adobe Experience Platform APIs.
 role: Developer
+exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
 ---
-
 # Unified tags endpoint
 
 >[!IMPORTANT]
