@@ -1,11 +1,10 @@
 ---
-title: Best practices for Privacy Service
-description: Learn how to reduce the processing time and the costs incurred to your organization when completing privacy requests by following these optimal use guidelines.
-exl-id: 1333d6c6-5ca0-41c1-9f9e-aa2a5a8b8a9c
+title: Best practices for Advanced Data Lifecycle Management
+description: Learn how to efficiently manage data hygiene requests in Adobe Experience Platform using the Advanced Data Lifecycle Management UI and Data Hygiene API. This guide covers best practices such as maximizing identities per request, specifying individual datasets, and being mindful of API throttling to prevent slowdowns. The document includes guidelines for setting up automatic dataset cleanup, how to monitor work order statuses, and detailed response retrieval methods. Follow these practices to streamline your request processing and optimize response times.
 ---
-# Best practices for advanced data lifecycle management
+# Best practices for Advanced Data Lifecycle Management
 
-Use the Data Lifecycle UI and Data Hygiene API to efficiently submit cleanup requests to remove data from Adobe Experience Platform services. Follow these best practices to streamline your request processing and optimize completion response times.
+Use the Advanced Data Lifecycle Management UI and Data Hygiene API to efficiently submit cleanup requests to remove data from Adobe Experience Platform services. Follow these best practices to streamline your request processing and optimize completion response times.
 
 ## Getting Started
 
