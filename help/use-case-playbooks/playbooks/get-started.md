@@ -115,7 +115,7 @@ Select any playbook to go to the details page and then select **[!UICONTROL Go t
 
 ![Go to inspirational sandbox](/help/use-case-playbooks/assets/playbooks/get-started/inspirational-sandbox.png)
 
-If you haven't already setup any inspirational sandboxes, select **[!UICONTROL Create an inspirational Sandbox]**. A modal appears. Enter the **Name** and **Title** in the required field boxes and select **Create**. Once you create the inspirational sandbox, ensure to [define permissions](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home) before you navigate back to the use case playbooks details page to create an instance.
+If you haven't already setup any inspirational sandboxes, select **[!UICONTROL Create an inspirational Sandbox]**. A modal appears. Enter the **Name** and **Title** in the required field boxes and select **Create**. Once you create the inspirational sandbox, ensure to [define permissions](/help/access-control/home.md) before you navigate back to the use case playbooks details page to create an instance.
 
 ![Create an inspirational sandbox](/help/use-case-playbooks/assets/playbooks/get-started/create-inspirational-sandbox.png)
 
