@@ -34,7 +34,7 @@ To learn more, visit the [profile dashboard guide](../../dashboards/guides/profi
 
 ## [!UICONTROL Browse] tab metrics
 
-Select the **[!UICONTROL Browse]** tab to display several metrics related to your organization's profile data. You can also use this tab to browse the profile store using a merge policy or an identity, as outlined in the next section of this guide.
+Select the **[!UICONTROL Browse]** tab to display several metrics related to your organization's profile data. You can also use this tab to browse the Profile store using a merge policy or an identity, as outlined in the next section of this guide.
 
 On the right-hand side of the **[!UICONTROL Browse]** tab is the [profile count](#profile-count) as well as a listing of [profiles by namespace](#profiles-by-namespace). 
 
@@ -58,7 +58,7 @@ When the ingestion of records into the [!DNL Profile] store increases or decreas
 
 ### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
 
-The **[!UICONTROL Profiles by namespace]** metric displays the total count and breakdown of namespaces across all of the merged profiles in your Profile Store. The total number of profiles by namespace (in other words, adding together the values shown for each namespace) will always be higher than the profile count metric because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.
+The **[!UICONTROL Profiles by namespace]** metric displays the total count and breakdown of namespaces across all of the merged profiles in your Profile store. The total number of profiles by namespace (in other words, adding together the values shown for each namespace) will always be higher than the profile count metric because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.
 
 #### Updating the [!UICONTROL Profiles by namespace] metric
 
@@ -84,7 +84,7 @@ To choose a merge policy from the **[!UICONTROL Select merge policy]** dialog, s
 
 ![A dialog where you can select the merge policy to filter by is displayed.](../images/user-guide/select-merge-policy.png)
 
-The profiles that are shown represent a sample of up to 20 profiles from your organization's profile store, after the selected merge policy has been applied. The sample profiles for the selected merge policy are refreshed when new data is added to your organization's profile store.
+The profiles that are shown represent a sample of up to 20 profiles from your organization's Profile store, after the selected merge policy has been applied. The sample profiles for the selected merge policy are refreshed when new data is added to your organization's Profile store.
 
 To view the details of one of the sample profiles, select the **[!UICONTROL Profile ID]**. For more information, see the section later in this guide on [viewing profile details](#profile-detail).
 

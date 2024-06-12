@@ -13,10 +13,11 @@ role: Developer
   - [Monitor dataflows](./api/monitor.md)
   - [Sort and filter API responses](./api/sort-and-filter.md)
 - UI guides {#ui}
+  - [Monitoring dashboard overview](./ui/monitor.md)
   - [Monitor dataflows in sources](./ui/monitor-sources.md)
   - [Monitor dataflows in identities](./ui/monitor-identities.md)
   - [Monitor dataflows in Profiles](./ui/monitor-profiles.md)
-  - [Monitor dataflows in segments](./ui/monitor-segments.md)
+  - [Monitor dataflows in audiences](./ui/monitor-audiences.md)
   - [Monitor dataflows in destinations](./ui/monitor-destinations.md)
   - B2B monitoring {#b2b}
     - [Monitor profile enrichment jobs](./ui/b2b/monitor-profile-enrichment.md)
