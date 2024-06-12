@@ -30,6 +30,7 @@ role: Developer
       - [Marketo Engage connector](connectors/adobe-applications/marketo/marketo.md)
       - [Marketo Engage authentication guide](connectors/adobe-applications/marketo/marketo-auth.md)
       - [B2B namespaces and schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
+      - [ECID mapping migration guide](connectors/adobe-applications/marketo/migration.md)
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
     - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
@@ -343,6 +344,7 @@ role: Developer
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
   - [Create a sources dataflow using templates in the UI](tutorials/ui/templates.md)
   - [Filter sources objects](tutorials/ui/filter.md)
+  - [Ingest encrypted data](tutorials/ui/encryped-ingestion.md)
   - [On-demand ingestion](tutorials/ui/on-demand-ingestion.md)
   - [Monitor batch dataflows](tutorials/ui/monitor.md)
   - [Monitor streaming dataflows](tutorials/ui/monitor-streaming.md)
