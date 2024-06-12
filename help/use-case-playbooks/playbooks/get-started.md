@@ -105,12 +105,33 @@ Next, select the channel, platforms, and apps that you looked at in the app surf
 
 Read the documentation on [how to set up push channel surfaces](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
 
-## Set-up and discover playbooks
+## Discover playbooks
 
-In some instances, use case playbooks visibility is as the capability to experience the product is limited. You and other users may also face friction in the adoption process as you need to identify an empty development sandbox and setup the use case playbooks before using them. 
+You can now select **[!UICONTROL Playbooks]** from the left navigation bar to directly access the use case playbooks gallery page.
 
+![Direct access to use case playbooks in the left navigation bar](/help/use-case-playbooks/assets/playbooks/get-started/left_nav_playbooks.png)
 
-You can now select the 
+Select any playbook to go to the details page and then select **[!UICONTROL Go to an inspirational sandbox]**. A confirmation modal appears. Select **Confirm** to go to the inspirational sandbox where you can explore and experiment with the different use cases. 
+
+![Go to inspirational sandbox](/help/use-case-playbooks/assets/playbooks/get-started/inspirational_sandbox.png)
+
+If you haven't already setup any inspirational sandboxes, select **[!UICONTROL Create an inspirational Sandbox]**. A modal appears. Enter the **Name** and **Title** in the required field boxes and select **Create**. Once you create the inspirational sandbox, ensure to [define permissions](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home) before you navigate back to the use case playbooks details page to create an instance.
+
+[screenshot]
+
+When you select a use case playbook while not within an inspirational sandbox, you won't be able to create an instance. On the details page, select **Go to inspirational sandbox** to go to an existing inspirational sandbox and then select **[!UICONTROL Create instance]**.
+
+If you do not have the permission to create sandboxes, please contact your administrator for assistance in creating an inspirational sandbox.
+
+[screenshot]
+
+If you have reached the limit on the number of sandboxes that have been allocated to you, a message appears asking you to contact your organization administrator to increase the limit or deactivate or remove some active sandboxes. Once the sandbox creation is within the limit, you can proceed to create the inspirational sandbox.
+
+[screenshot]
+
+Note that when you create an inspirational sandbox, channel surfaces for e-mail, push, and SMS notificationsare not are not automatically setup. Contact your IT administrator to manually configure them or the instance creation might fail. 
+
+[screenshot]
 
 ## Next steps {#next-steps}
 
