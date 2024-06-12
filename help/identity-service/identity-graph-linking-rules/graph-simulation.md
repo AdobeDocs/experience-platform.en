@@ -1,8 +1,6 @@
 ---
 title: Graph Simulation
 description: Learn how to use the Graph Simulation in the Identity Service UI.
-hide: true
-hidefromtoc: true
 badge: Beta
 ---
 # Graph Simulation
@@ -28,7 +26,6 @@ The Graph Simulation interface can be divided into three sections:
 ![The algorithm configuration of the Graph Simulation tool.](../images/graph-simulation/algorithm-configuration.png)
 
 * Simulated Graph Viewer: The simulated graph viewer displays the resulting graph based on the events you added and the algorithm that you configured. A straight line between two nodes means that a link is established. A dotted line indicates that a link has been removed.
-
 
 ![The simulated graph viewer panel, with an example of a simulated graph.](../images/graph-simulation/simulated-graph.png)
 
@@ -66,7 +63,11 @@ Next, repeat the same steps to add a second event. For Event #2, add `{Email: su
 
 +++Select to view steps on how to use pre-loaded graph examples
 
-To set up an example graph with a pre-configured algorithm, select **[!UICONTROL Load example]**. A pop-up window appears, providing you with available graph scenarios you can choose from:
+To set up an example graph with a pre-configured algorithm, select **[!UICONTROL Load example]**. 
+
+![load example](../images/graph-simulation/load-example.png)
+
+A pop-up window appears, providing you with available graph scenarios you can choose from:
 
 | Example graph | Description | Example |
 | --- | --- | --- |
@@ -74,9 +75,15 @@ To set up an example graph with a pre-configured algorithm, select **[!UICONTROL
 | Invalid (non-unique) phone | Invalid or non-unique phone refers to scenarios where two different users use the same phone number to create an account. | A mother and her daughter use their shared home phone number to sign up for any e-commerce accounts. |
 | "Bad" identity values | "Bad" identity values refer to scenarios where Identity Service generates non-unique IDFAs due to erroneous implementation. | WebSDK erroneously sends a `user_null` value for every event due too code implementation issues. |
 
+![example options](../images/graph-simulation/example-options.png)
+
 Select any of the options to load Graph Simulation with pre-configured events and algorithm. You can still make further configurations to any pre-loaded graph scenario examples.
 
+![example loaded](../images/graph-simulation/example-loaded.png)
+
 When finished, select **[!UICONTROL Simulate]**.
+
+![example simulated](../images/graph-simulation/example-simulated.png)
 
 +++
 
@@ -84,9 +91,13 @@ When finished, select **[!UICONTROL Simulate]**.
 
 +++Select to view steps on how to use text version
 
-You can also use text mode to configure events. To use text mode, select the gear (?) icon, and then select **[!UICONTROL Text (Advanced users)]**.
+You can also use text mode to configure events. To use text mode, select the settings icon, and then select **[!UICONTROL Text (Advanced users)]**.
+
+![settings](../images/graph-simulation/settings.png)
 
 You can manually input your identities with text mode. Use a colon (`:`) to distinguish the identity value that corresponds with the namespace that you input, and then use a comma (`,`) to separate your identities. To distinguish different events from one another, use a new line for each event.
+
+![text version](../images/graph-simulation/text-version.png)
 
 +++
 
@@ -94,21 +105,25 @@ You can manually input your identities with text mode. Use a colon (`:`) to dist
 
 To edit an event, select the ellipses (`...`) beside a given event, and then select **[!UICONTROL Edit]**.
 
+![edit event](../images/graph-simulation/edit.png)
+
 ### Delete event
 
 To delete an event, select the ellipses (`...`) beside a given event, and then select **[!UICONTROL Delete]**.
+
+![delete event](../images/graph-simulation/delete.png)
 
 ## Configure algorithm
 
 The algorithm that you configure will dictate how Identity Service treats the namespaces that you inputted in your events. Any configuration that you put together in the Graph Simulation UI are not saved in identity settings.
 
-To begin, select add (`+`) in the bottom corner of the algorithm configuration panel.
+To begin, select **[!UICONTROL Add config]**.
 
-![The algorithm configuration panel.]
+![The algorithm configuration panel.](../images/graph-simulation/add-config.png)
 
-An empty configuration row appears. First, input the same namespace that you used for your events. In this case, begin by inputting the CRM ID. Once you enter your namespace, the columns for [!UICONTROL Identity Symbol] and [!UICONTROL Identity Type] auto-populates.
+An empty configuration row appears. First, input the same namespace that you used for your events. In this case, begin by inputting Email. Once you enter your namespace, the columns for [!UICONTROL Identity Symbol] and [!UICONTROL Identity Type] auto-populates.
 
-![The first configuration entry.]
+![The first configuration entry.](../images/graph-simulation/add-namespace.png)
 
 Next, repeat the same steps and add your second namespace, which in this case is the ECID. Once all of your namespaces have been entered, you can begin configuring their priorities and uniqueness.
 
@@ -117,9 +132,9 @@ Next, repeat the same steps and add your second namespace, which in this case is
 
 To configure namespace priority, select and drag the namespace rows to the priority ordering that you want, with the top row representing higher priority and the bottom row representing lower priority. To designate a namespace as unique, select the **[!UICONTROL Unique Per Graph]** checkbox.
 
-![All namespaces configured.]
-
 When finished, select **[!UICONTROL Simulate]**.
+
+![All namespaces configured.](../images/graph-simulation/all-namespaces.png)
 
 ## View simulated graph
 
@@ -136,76 +151,6 @@ In the example graph below, a dotted line exists between `{CRM ID: Tom}` and `{E
 * CRM ID was designated as unique during the algorithm configuration step. Therefore, only one identity with a CRM ID namespace may exist in a graph.
 * The link between `{CRM ID: Tom}` and `{ECID: 111}` was the first established identity (Event #1). It is the oldest link and is therefore removed.
 
-## Example graph scenarios
+![The simulated graph viewer panel, with an example of a simulated graph.](../images/graph-simulation/simulated-graph.png)
 
->[!NOTE]
->
->"CRM ID" is a custom namespace. Therefore, the examples below require you to create a custom namespace with a display name and identity symbol of "CRM ID".
-
-The following section examples of graph scenarios you might encounter with Graph Simulation.
-
-### CRM ID only
-
-Events:
-
-* CRM ID: Tom, ECID: 111
-
-Algorithm configuration:
-
-| Priority | Display name | Identity symbol | Identity type | Unique per graph |
-| ---| --- | --- | --- | --- |
-| 1 | CRM ID | CRM ID | CROSS_DEVICE | Yes |
-| 2 | ECID | ECID | COOKIE | NO |
-
-+++Select to view simulated graph
-
-+++
-
-### CRM ID with hashed email
-
-In this scenario, a CRM ID is ingested and represents both online (experience event) and offline (profile record) data. This scenario also involves the ingestion of a hashed email, which represents another namespace sent in the CRM record dataset along with the CRM ID.
-
-Events:
-
-* CRM ID: Tom, Email_LC_SHA256: tom<span>@acme.com
-* CRM ID: Tom, ECID: 111
-* CRM ID: Summer, Email_LC_SHA256: summer<span>@acme.com
-* CRM ID: Summer, ECID: 222
-
-Algorithm configuration:
-
-| Priority | Display name | Identity symbol | Identity type | Unique per graph |
-| ---| --- | --- | --- | --- |
-| 1 | CRM ID | CRM ID | CROSS_DEVICE | Yes |
-| 2 | Emails (SHA256, lowercased) | Email_LC_SHA256 | Email | NO |
-| 3 | ECID | ECID | COOKIE | NO |
-
-+++Select to view simulated graph
-
-+++
-
-### CRM ID with hashed email, hashed phone, GAID, and IDFA
-
-Events:
-
-* CRM ID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-* CRM ID: Tom, ECID: 111
-* CRM ID: Tom, ECID: 222, IDFA: A-A-A
-* CRM ID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-* CRM ID: Summer, ECID: 333
-* CRM ID: Summer, ECID: 444, GAID:B-B-B
-
-Algorithm configuration: 
-
-| Priority | Display name | Identity symbol | Identity type | Unique per graph |
-| ---| --- | --- | --- | --- |
-| 1 | CRM ID | CRM ID | CROSS_DEVICE | Yes |
-| 2 | Emails (SHA256, lowercased) | Email_LC_SHA256 | Email | NO |
-| 3 | Phone (SHA256) | Phone_SHA256 | Phone | NO |
-| 4 | Google Ad ID (GAID) | GAID | DEVICE | NO |
-| 5 | Apple IDFA (ID for Apple) | IDFA | DEVICE | NO |
-| 6 | ECID | ECID | COOKIE | NO |
-
-+++Select to view simulated graph
-
-+++
+## Next steps
