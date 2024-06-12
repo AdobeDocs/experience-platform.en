@@ -17,17 +17,27 @@ You can access Graph Simulation in the Adobe Experience Platform UI. Select **[!
 
 The Graph Simulation interface can be divided into three sections:
 
-* Events: Use the **[!UICONTROL Events]** panel to add identities to simulate a graph. A fully qualified identity must have an identity namespace and its corresponding identity value. You must add at least two identities in order to simulate a graph. You can also select **[!UICONTROL Load Example]** to input a pre-configured event and algorithm setup.
+>[!BEGINTABS]
+
+>[!TAB Events]
+
+Events: Use the **[!UICONTROL Events]** panel to add identities to simulate a graph. A fully qualified identity must have an identity namespace and its corresponding identity value. You must add at least two identities in order to simulate a graph. You can also select **[!UICONTROL Load Example]** to input a pre-configured event and algorithm setup.
 
 ![The events panel of the Graph Simulation tool.](../images/graph-simulation/events.png)
 
-* Algorithm Configuration: Use the **[!UICONTROL Algorithm Configuration]** panel to add and configure the optimization algorithm for your namespaces. You can drag and drop a namespace to modify their respective priority ranking. You can also select **[!UICONTROL Unique Per Graph]** to determine if a namespace is unique.
+>[!TAB Algorithm configuration]
+
+Algorithm configuration: Use the **[!UICONTROL Algorithm configuration]** panel to add and configure the optimization algorithm for your namespaces. You can drag and drop a namespace to modify their respective priority ranking. You can also select **[!UICONTROL Unique Per Graph]** to determine if a namespace is unique.
 
 ![The algorithm configuration of the Graph Simulation tool.](../images/graph-simulation/algorithm-configuration.png)
 
-* Simulated Graph Viewer: The simulated graph viewer displays the resulting graph based on the events you added and the algorithm that you configured. A straight line between two nodes means that a link is established. A dotted line indicates that a link has been removed.
+>[!TAB Simulated graph viewer]
+
+Simulated Graph Viewer: The simulated graph viewer displays the resulting graph based on the events you added and the algorithm that you configured. A straight line between two nodes means that a link is established. A dotted line indicates that a link has been removed.
 
 ![The simulated graph viewer panel, with an example of a simulated graph.](../images/graph-simulation/simulated-graph.png)
+
+>[!ENDTABS]
 
 ## Add events
 
@@ -127,8 +137,8 @@ An empty configuration row appears. First, input the same namespace that you use
 
 Next, repeat the same steps and add your second namespace, which in this case is the ECID. Once all of your namespaces have been entered, you can begin configuring their priorities and uniqueness.
 
-* **Namespace priority**: The priority of a namespace determines its relative importance compared to the other namespaces in a given identity graph. For example, if your identity graph has four different namespaces: CRM ID, ECID, Email and Apple IDFA, you can configure priorities to determine an order of importance for the four namespace. (ADD WHY)
-* **Unique namespace**: If a namespace is designated as unique, then Identity Service will generate graphs with the caveat that only one identity with a given unique namespace can exist. For example, if CRM ID is designated as a unique namespace, then a graph can only have one identity with CRM ID. If there is more than one identity with the CRM ID namespace, then the oldest link will be removed.
+* **Namespace priority**: The priority of a namespace determines its relative importance compared to the other namespaces in a given identity graph. For example, if your identity graph has four different namespaces: CRM ID, ECID, Email and Apple IDFA, you can configure priorities to determine an order of importance for the four namespace.
+* **Unique namespace**: If a namespace is designated as unique, then Identity Service will generate graphs with the caveat that only one identity with a given unique namespace can exist. For example, if the Email namespace is designated as a unique namespace, then a graph can only have one identity with Email. If there is more than one identity with the Email namespace, then the oldest link will be removed.
 
 To configure namespace priority, select and drag the namespace rows to the priority ordering that you want, with the top row representing higher priority and the bottom row representing lower priority. To designate a namespace as unique, select the **[!UICONTROL Unique Per Graph]** checkbox.
 
@@ -146,10 +156,10 @@ The [!UICONTROL Simulated Graph] section displays the identity graph(s) generate
 | Dotted line | A dotted line represents a removed link between two identities. |
 | Number on line | A number on a line represents the timestamp of when that given link was generated. The lowest number (1), represents the earliest established link. |
 
-In the example graph below, a dotted line exists between `{CRM ID: Tom}` and `{ECID: 111}` because of the following reasons:
+In the example graph below, a dotted line exists between `{Email: tom@acme.com}` and `{ECID: 111}` because of the following reasons:
 
-* CRM ID was designated as unique during the algorithm configuration step. Therefore, only one identity with a CRM ID namespace may exist in a graph.
-* The link between `{CRM ID: Tom}` and `{ECID: 111}` was the first established identity (Event #1). It is the oldest link and is therefore removed.
+* Email was designated as unique during the algorithm configuration step. Therefore, only one identity with an Email namespace may exist in a graph.
+* The link between `{Email: tom@acme.com}` and `{ECID: 111}` was the first established identity (Event #1). It is the oldest link and is therefore removed.
 
 ![The simulated graph viewer panel, with an example of a simulated graph.](../images/graph-simulation/simulated-graph.png)
 
