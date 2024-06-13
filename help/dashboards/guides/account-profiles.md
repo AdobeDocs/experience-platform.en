@@ -164,6 +164,14 @@ The dropdown menu within the widget allows you to select the account scoring mod
 
 ![The Predictive scoring top influential factors widget.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
 
+### Unable to load data error {#errors}
+
+If a widget displays *[!UICONTROL Unable to load. Try again.]* this is because there is no available data for the B2B entity. For example, the widget displayed below [!UICONTROL New opportunities by person role], shows the message "[!UICONTROL Unable to load. Try again.]" since this sandbox does not have available opportunity data.
+
+![The Unable to load insight error.](../images/account-profiles/unable-to-load.png)
+
+To resolve the issue, you must ingest B2B entity data, such as *opportunity person* data, into the sandbox. After 48 hours, the data is reflected in the widgets.
+
 ## Next steps
 
 By following this document, you should now know how to locate the [!UICONTROL Account Profiles] dashboard and also understand the metrics displayed in the available widgets. To learn more about working with account profiles as part of your B2B data in the Experience Platform UI, please refer to the [account profiles overview](../../rtcdp/accounts/account-profile-overview.md) for Adobe Real-Time CDP, B2B Edition.
