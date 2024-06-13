@@ -4,11 +4,11 @@ description: Learn how to efficiently manage data hygiene requests in Adobe Expe
 ---
 # Best practices for Advanced Data Lifecycle Management
 
-Use the Advanced Data Lifecycle Management UI and Data Hygiene API to efficiently submit cleanup requests to remove data from Adobe Experience Platform services. Follow these best practices to streamline your request processing and optimize completion response times.
+Use the Advanced Data Lifecycle Management UI and Data Hygiene API to efficiently manage cleanup requests and remove data from Adobe Experience Platform services. Follow these best practices to streamline your request processing and optimize completion response times.
 
 ## Prerequisites {#prerequisites}
 
-This guide requires a working understanding of the Data Lifecycle workspace and Data Hygiene API. Before continuing this document, familiarize yourself with the guides on [Advanced Data Lifecycle Management](./data-hygiene-service.md) and [creating record delete requests](./ui/record-delete.md) or [dataset expirations in the UI](./ui/dataset-expiration.md), or through [the API](./api/overview.md).
+This guide requires a working understanding of the Data Lifecycle workspace and [Data Hygiene API](./api/overview.md). Before continuing this document, familiarize yourself with the guides on [Advanced Data Lifecycle Management](./data-hygiene-service.md) and [creating record delete requests](./ui/record-delete.md) or [dataset expirations in the UI](./ui/dataset-expiration.md), or through the API.
 
 >[!NOTE] 
 > 
@@ -20,7 +20,7 @@ Access to Advanced Data Lifecycle Management is managed through granular role-ba
 
 ## Work order creation guidelines {#work-order-creation-guidelines}
 
-You can use the `/workorder` endpoint in the Data Hygiene API to programmatically manage record delete requests in Experience Platform. With this endpoint you can create a delete request, check on its status, or update an existing request. See the [Work order endpoint document](help/hygiene/api/workorder.md) to learn how to perform these actions using the API.
+You can use the `/workorder` endpoint in the Data Hygiene API to programmatically manage record delete requests in Experience Platform. With this endpoint, you can create a delete request, check on its status, or update an existing request. See the [Work order endpoint document](help/hygiene/api/workorder.md) to learn how to perform these actions using the API.
 
 >[!TIP]
 >
@@ -28,14 +28,16 @@ You can use the `/workorder` endpoint in the Data Hygiene API to programmaticall
 
 Follow these guidelines to optimize your cleanup request submissions:
 
-1. **Maximize identities per request:** Include up to 100,000 identities per cleanup request to enhance efficiency.
+1. **Maximize identities per request:** Include up to 100,000 identities per cleanup request to enhance efficiency. Batching multiple identities into a single request helps reduce the frequency of API calls and minimizes the risk of performance issues due to excessive single-identity requests.
 2. **Specify individual datasets:** For maximum efficiency, specify the individual dataset to be processed.
 3. **Submit multiple requests:** Submit multiple requests with maximum identity counts to achieve quicker processing, as work orders are batched for efficiency.
-4. **API throttling considerations:** Be mindful of API throttling to prevent slow-downs. Smaller requests (< 100 IDs) at higher frequencies may result in 429 responses and require resubmission at acceptable rates.
+4. **API throttling considerations:** Be mindful of API throttling to prevent slow-downs. Smaller requests (< 100 IDs) at higher frequencies may result in 429 responses and require resubmission at acceptable rates. 
 
-### Manage 429 errors {#manage-429-errors}
+<!-- What information from the [AdobeIO throttling policies for Data Hygiene wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/AdobeIO+Throttling+Policies+-+Data+Hygiene+Services) can be made public? -->
 
-If you receive a 429 error, it indicates that you have exceeded the allowed number of requests within a given time period. Follow these best practices to effectively manage 429 errors:
+### Manage 429 Errors {#manage-429-errors}
+
+If you received a 429 error, it indicates that you have exceeded the allowed number of requests within a given time period. Follow these best practices to manage 429 errors effectively:
 
 - **Read the 'Retry-After' header**: When a 429 error is returned, check the 'Retry-After' response header. This header specifies the time to wait before retrying the request.
 - **Implement retry logic**: Use the 'Retry-After' value to implement retry logic in your application, ensuring that retries are attempted after the specified time to avoid subsequent 429 errors.
@@ -45,7 +47,7 @@ If you receive a 429 error, it indicates that you have exceeded the allowed numb
 
 Set up automatic dataset cleanup for short-lived data. Use the `/ttl` endpoint on the Data Hygiene API to schedule expiration dates for datasets. Use the `/ttl` endpoint to trigger a dataset cleanup based on a specified time or date. See the Dataset expiration endpoint guide to learn how to [create a dataset expiration](./api/dataset-expiration.md) and the [accepted query parameters](./api/dataset-expiration.md#query-params).
 
-## Monitor work order and dataset expiration status {#Monitor}
+## Monitor work order and dataset expiration status {#monitor}
 
 You can efficiently monitor the progress of your data lifecycle management through the use of **I/O Events**. An I/O Event is a mechanism for receiving real-time notifications about changes or updates in various services within Platform. 
 
@@ -59,7 +61,7 @@ Use the following Advanced Data Lifecycle Management methods and guidelines to e
 - Use notifications to monitor progress and updates upon completion.
 - Avoid implementing polling mechanisms to minimize API traffic.
 
-### Retrieve detailed responses for a single workorder {#retrieve-detailed-workorder-response}
+### Retrieve detailed responses for a single work order {#retrieve-detailed-workorder-response}
 
 - Make a GET request to the `/workorder{work_order_id}` endpoint for detailed response data.
 - Retrieve product-specific responses and success messages.
