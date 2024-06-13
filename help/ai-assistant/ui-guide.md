@@ -127,6 +127,14 @@ In the example below, AI Assistant is first asked for the total number of datafl
 
 ![Example of multi-turn](./images/multiturn.png)
 
++++
+
+### Start a new conversation
+
+You can change topics with AI Assistant by resetting and starting a new conversation.
+
++++Select to view an example of resetting your conversation
+
 To reset, select the ellipses (**`...`**) on the AI Assistant interface and then select **[!UICONTROL Start new conversation]**. This informs AI Assistant that you intend on changing topics and can be particularly helpful when troubleshooting queries that are either failing or referencing incorrect information.
 
 ![The ellipses selected and the start new conversation option selected.](./images/reset.png)
