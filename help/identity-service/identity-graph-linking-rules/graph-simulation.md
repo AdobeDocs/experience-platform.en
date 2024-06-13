@@ -3,19 +3,19 @@ title: Graph Simulation UI Guide
 description: Learn how to use the Graph Simulation in the Identity Service UI.
 badge: Beta
 ---
-# Graph Simulation UI Guide
+# [!DNL Graph Simulation] UI guide
 
-Graph Simulation is a tool in the Identity Service UI that you can use to simulate how an identity graph behaves given a particular combination of identities and how you configure the [identity optimization algorithm](./identity-optimization-algorithm.md).
+[!DNL Graph Simulation] is a tool in the Identity Service UI that you can use to simulate how an identity graph behaves given a particular combination of identities and how you configure the [identity optimization algorithm](./identity-optimization-algorithm.md).
 
-Read this document to learn how you can use Graph Simulation to better understand identity graph behavior and how the graph algorithm functions.
+Read this document to learn how you can use [!DNL Graph Simulation] to better understand identity graph behavior and how the graph algorithm functions.
 
-## Get to know the Graph Simulation interface
+## Get to know the [!DNL Graph Simulation] interface {#interface}
 
-You can access Graph Simulation in the Adobe Experience Platform UI. Select **[!UICONTROL Identities]** from the left navigation and then select **[!UICONTROL Graph Simulation]** from the top header.
+You can access [!DNL Graph Simulation] in the Adobe Experience Platform UI. Select **[!UICONTROL Identities]** from the left navigation and then select **[!UICONTROL Graph Simulation]** from the top header.
 
 ![The Graph Simulation interface in the Adobe Experience Platform UI.](../images/graph-simulation/graph-simulation.png)
 
-The Graph Simulation interface can be divided into three sections:
+The [!DNL Graph Simulation] interface can be divided into three sections:
 
 >[!BEGINTABS]
 
@@ -33,25 +33,25 @@ Algorithm configuration: Use the **[!UICONTROL Algorithm configuration]** panel 
 
 >[!TAB Simulated graph viewer]
 
-Simulated Graph Viewer: The simulated graph viewer displays the resulting graph based on the events you added and the algorithm that you configured. A straight line between two identities means that a link is established. A dotted line indicates that a link has been removed.
+Simulated graph viewer: The simulated graph viewer displays the resulting graph based on the events you added and the algorithm that you configured. A straight line between two identities means that a link is established. A dotted line indicates that a link has been removed.
 
 ![The simulated graph viewer panel, with an example of a simulated graph.](../images/graph-simulation/simulated-graph.png)
 
 >[!ENDTABS]
 
-## Add events
+## Add events {#add-events}
 
-To begin, select **[!UICONTROL Add Events]**.
+To begin, select **[!UICONTROL Add events]**.
 
-![The Add Events button selected.](../images/graph-simulation/add-events.png)
+![The Add events button selected.](../images/graph-simulation/add-events.png)
 
 A pop-up window appears for [!UICONTROL Event #1]. From here, input your identity namespace and identity value combination. You can use the dropdown menu to select an identity namespace. Alternatively, you can type in the first few letters of a namespace and then select the options provided in the dropdown menu. Once you have selected your namespace, provide an identity value that corresponds with your namespace.
 
-![](../images/graph-simulation/event-one.png)
+![The Event #1 window with an empty interface.](../images/graph-simulation/event-one.png)
 
 >[!TIP]
 >
->The identity value that you input during Graph Simulation exercises do not have to be real identity values and can be simple placeholders.
+>The identity value that you input during [!DNL Graph Simulation] exercises do not have to be real identity values and can be simple placeholders.
 
 Once your first identity is complete, select the add icon (**`+`**) to add a second identity. 
 
@@ -69,13 +69,11 @@ Next, repeat the same steps to add a second event. For Event #2, add `{Email: su
 
 ![The updated events interface with two events.](../images/graph-simulation/two-events.png)
 
-### Load example
+### Load example {#load-example}
 
-+++Select to view steps on how to use pre-loaded graph examples
+Select **[!UICONTROL Load example]** to set up an example graph with a pre-set algorithm and event configuration.  
 
-To set up an example graph with a pre-configured algorithm, select **[!UICONTROL Load example]**. 
-
-![load example](../images/graph-simulation/load-example.png)
+![The Load example option selected.](../images/graph-simulation/load-example.png)
 
 A pop-up window appears, providing you with available graph scenarios you can choose from:
 
@@ -85,49 +83,45 @@ A pop-up window appears, providing you with available graph scenarios you can ch
 | Invalid (non-unique) phone | Invalid or non-unique phone refers to scenarios where two different users use the same phone number to create an account. | A mother and her daughter use their shared home phone number to sign up for any e-commerce accounts. |
 | "Bad" identity values | "Bad" identity values refer to scenarios where Identity Service generates non-unique IDFAs due to erroneous implementation. | WebSDK erroneously sends a `user_null` value for every event due to code implementation issues. |
 
-![example options](../images/graph-simulation/example-options.png)
+![A window that displays the available pre-configured examples: shared device, invalid phone, and bad identity values.](../images/graph-simulation/example-options.png)
 
-Select any of the options to load Graph Simulation with pre-configured events and algorithm. You can still make further configurations to any pre-loaded graph scenario examples.
+Select any of the options to load [!DNL Graph Simulation] with pre-configured events and algorithm. You can still make further configurations to any pre-loaded graph scenario examples.
 
-![example loaded](../images/graph-simulation/example-loaded.png)
+![The events and algorithm configured for invalid phone.](../images/graph-simulation/example-loaded.png)
 
 When finished, select **[!UICONTROL Simulate]**.
 
-![example simulated](../images/graph-simulation/example-simulated.png)
+![An example graph simulated for invalid phone.](../images/graph-simulation/example-simulated.png)
 
-+++
-
-### Use text version
-
-+++Select to view steps on how to use text version
+### Use text version {#use-text-version}
 
 You can also use text mode to configure events. To use text mode, select the settings icon, and then select **[!UICONTROL Text (Advanced users)]**.
 
-![settings](../images/graph-simulation/settings.png)
+![The settings icon selected.](../images/graph-simulation/settings.png)
 
 You can manually input your identities with text mode. Use a colon (`:`) to distinguish the identity value that corresponds with the namespace that you input, and then use a comma (`,`) to separate your identities. To distinguish different events from one another, use a new line for each event.
 
-![text version](../images/graph-simulation/text-version.png)
+![The events panel using the text mode version.](../images/graph-simulation/text-version.png)
 
-+++
-
-### Edit event
+### Edit event {#edit-event}
 
 To edit an event, select the ellipses (`...`) beside a given event, and then select **[!UICONTROL Edit]**.
 
-![edit event](../images/graph-simulation/edit.png)
+![The edit event icon selected.](../images/graph-simulation/edit.png)
 
-### Delete event
+### Delete event {#delete-event}
 
 To delete an event, select the ellipses (`...`) beside a given event, and then select **[!UICONTROL Delete]**.
 
-![delete event](../images/graph-simulation/delete.png)
+![The delete event icon selected.](../images/graph-simulation/delete.png)
 
-## Configure algorithm
+## Configure algorithm {#configure-algorithm}
 
-The algorithm that you configure will dictate how Identity Service treats the namespaces that you inputted in your events. Any configuration that you put together in the Graph Simulation UI are not saved in identity settings.
+>[!IMPORTANT]
+>
+>The algorithm that you configure dictates how Identity Service treats the namespaces that you inputted in your events. Any configuration that you put together in the [!DNL Graph Simulation UI] are not saved in identity settings.
 
-To begin, select **[!UICONTROL Add config]**.
+Once you have added your events, you can now configure the algorithm that will be used to simulate your graph. To begin, select **[!UICONTROL Add config]**.
 
 ![The algorithm configuration panel.](../images/graph-simulation/add-config.png)
 
@@ -164,3 +158,9 @@ In the example graph below, a dotted line exists between `{Email: tom@acme.com}`
 ![The simulated graph viewer panel, with an example of a simulated graph.](../images/graph-simulation/simulated-graph.png)
 
 ## Next steps
+
+By reading this document, you now know how to use the [!DNL Graph Simulation] tool to better understand how your identity data is treated given a particular set of rules and configurations. For more information, read the following documents:
+
+* [Identity graph linking rules](overview.md)
+* [Identity optimization algorithm](identity-optimization-algorithm.md)
+* [Namespace priority](namespace-priority.md)
