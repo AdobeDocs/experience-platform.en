@@ -74,6 +74,17 @@ Refer to the [!DNL Marketing Cloud Account Engagement] [rate limits](https://dev
 
 {style="table-layout:auto"}
 
+## Supported audiences {#supported-audiences}
+
+This section describes which type of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
@@ -178,3 +189,18 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Additional resources {#additional-resources}
 
 * [!DNL Marketing Cloud Account Engagement] [API documentation](https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html).
+
+### Changelog
+
+This section captures the functionality and significant documentation updates made to this destination connector.
+
++++ View changelog
+
+|Release month|Update type|Description|
+|---|---|---|
+|November 2023|Functionality update|<ul><li>You can now activate external audiences originating from custom uploads to this destination. See the [supported audiences](#supported-audiences) section for more details.</li><li>The **[UICONTROL Mapping ID]** values in the [schedule audience export](#schedule-segment-export-example) step are now automatically converted to lowercase values to ensure compliance with [!DNL Marketing Cloud Account Engagement] field names.</li></ul>|
+|April 2023|Initial release|Initial destination release and documentation publish.|
+
+{style="table-layout:auto"}
+
++++
