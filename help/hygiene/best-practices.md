@@ -16,7 +16,7 @@ This guide requires a working understanding of the Data Lifecycle workspace and 
 
 ## Work order creation guidelines {#work-order-creation-guidelines}
 
-You can use the `/workorder` endpoint in the Data Hygiene API to programmatically manage record delete requests in Experience Platform. With this endpoint, you can create a delete request, check on its status, or update an existing request. See the [Work order endpoint document](help/hygiene/api/workorder.md) to learn how to perform these actions using the API.
+You can use the `/workorder` endpoint in the Data Hygiene API to programmatically manage record delete requests in Experience Platform. With this endpoint, you can create a delete request, check on its status, or update an existing request. See the [Work order endpoint document](./api/workorder.md) to learn how to perform these actions using the API.
 
 >[!TIP]
 >
