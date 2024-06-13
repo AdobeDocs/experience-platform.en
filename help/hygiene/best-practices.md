@@ -1,5 +1,5 @@
 ---
-title: Best practices for Advanced Data Lifecycle Management
+title: Best Practices for Advanced Data Lifecycle Management
 description: Learn how to efficiently manage data hygiene requests in Adobe Experience Platform using the Advanced Data Lifecycle Management UI and Data Hygiene API. This guide covers best practices such as maximizing identities per request, specifying individual datasets, and being mindful of API throttling to prevent slowdowns. The document includes guidelines for setting up automatic dataset cleanup, how to monitor work order statuses, and detailed response retrieval methods. Follow these practices to streamline your request processing and optimize response times.
 ---
 # Best practices for Advanced Data Lifecycle Management
@@ -8,15 +8,11 @@ Use the Advanced Data Lifecycle Management UI and Data Hygiene API to efficientl
 
 ## Prerequisites {#prerequisites}
 
-This guide requires a working understanding of the Data Lifecycle workspace and [Data Hygiene API](./api/overview.md). Before continuing this document, familiarize yourself with the guides on [Advanced Data Lifecycle Management](./data-hygiene-service.md) and [creating record delete requests](./ui/record-delete.md) or [dataset expirations in the UI](./ui/dataset-expiration.md), or through the API.
+This guide requires a working understanding of the Data Lifecycle workspace and [Data Hygiene API](./api/overview.md). Before continuing this document, familiarize yourself with the guides on [Advanced Data Lifecycle Management](./home.md) and [creating record delete requests](./ui/record-delete.md) or [dataset expirations in the UI](./ui/dataset-expiration.md), or through the API.
 
 >[!NOTE] 
 > 
 >The Record Delete feature is currently in beta and available only in a **limited release**. It is not available to all customers. Record delete requests are only available for organizations in the limited release.
-
-## Getting started {#getting-started}
-
-Access to Advanced Data Lifecycle Management is managed through granular role-based permissions in Adobe Admin Console. Ensure you have the necessary permissions in your product profile to use specific features in the UI and API. Contact your system administrator for additional permissions. Administrators can refer to the guide on [managing permissions for Advanced Data Lifecycle Management](./permissions.md) for more details.
 
 ## Work order creation guidelines {#work-order-creation-guidelines}
 
@@ -61,7 +57,7 @@ Use the following Advanced Data Lifecycle Management methods and guidelines to e
 - Use notifications to monitor progress and updates upon completion.
 - Avoid implementing polling mechanisms to minimize API traffic.
 
-### Retrieve detailed responses for a single work order {#retrieve-detailed-workorder-response}
+### Retrieve detailed responses for a single work order {#retrieve-detailed-work-order-response}
 
 - Make a GET request to the `/workorder{work_order_id}` endpoint for detailed response data.
 - Retrieve product-specific responses and success messages.
