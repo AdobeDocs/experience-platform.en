@@ -107,7 +107,7 @@ Read the documentation on [how to set up push channel surfaces](https://experien
 
 ## Discover playbooks
 
-You can now select **[!UICONTROL Playbooks]** from the left navigation bar to directly access the use case playbooks gallery page.
+You can now access use case playbooks in the Adobe Experience Platform UI. Select **[!UICONTROL Playbooks]** from the left navigation to directly land on the gallery page.
 
 ![Direct access to use case playbooks in the left navigation bar](/help/use-case-playbooks/assets/playbooks/get-started/left-nav-playbooks.png)
 
