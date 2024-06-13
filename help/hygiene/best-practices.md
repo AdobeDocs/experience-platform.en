@@ -33,6 +33,14 @@ Follow these guidelines to optimize your cleanup request submissions:
 3. **Submit multiple requests:** Submit multiple requests with maximum identity counts to achieve quicker processing, as work orders are batched for efficiency.
 4. **API throttling considerations:** Be mindful of API throttling to prevent slow-downs. Smaller requests (< 100 IDs) at higher frequencies may result in 429 responses and require resubmission at acceptable rates.
 
+### Manage 429 errors {#manage-429-errors}
+
+If you receive a 429 error, it indicates that you have exceeded the allowed number of requests within a given time period. Follow these best practices to effectively manage 429 errors:
+
+- **Read the 'Retry-After' header**: When a 429 error is returned, check the 'Retry-After' response header. This header specifies the time to wait before retrying the request.
+- **Implement retry logic**: Use the 'Retry-After' value to implement retry logic in your application, ensuring that retries are attempted after the specified time to avoid subsequent 429 errors.
+- **Batch your requests**: Avoid submitting numerous small requests in quick succession. Instead, batch multiple identities into a single request to reduce the frequency of calls and minimize the risk of hitting rate limits.
+
 ## Dataset expiration {#dataset-expiration} 
 
 Set up automatic dataset cleanup for short-lived data. Use the `/ttl` endpoint on the Data Hygiene API to schedule expiration dates for datasets. Use the `/ttl` endpoint to trigger a dataset cleanup based on a specified time or date. See the Dataset expiration endpoint guide to learn how to [create a dataset expiration](./api/dataset-expiration.md) and the [accepted query parameters](./api/dataset-expiration.md#query-params).
