@@ -1,9 +1,9 @@
 ---
-title: Graph Simulation
+title: Graph Simulation UI Guide
 description: Learn how to use the Graph Simulation in the Identity Service UI.
 badge: Beta
 ---
-# Graph Simulation
+# Graph Simulation UI Guide
 
 Graph Simulation is a tool in the Identity Service UI that you can use to simulate how an identity graph behaves given a particular combination of identities and how you configure the [identity optimization algorithm](./identity-optimization-algorithm.md).
 
@@ -33,7 +33,7 @@ Algorithm configuration: Use the **[!UICONTROL Algorithm configuration]** panel 
 
 >[!TAB Simulated graph viewer]
 
-Simulated Graph Viewer: The simulated graph viewer displays the resulting graph based on the events you added and the algorithm that you configured. A straight line between two nodes means that a link is established. A dotted line indicates that a link has been removed.
+Simulated Graph Viewer: The simulated graph viewer displays the resulting graph based on the events you added and the algorithm that you configured. A straight line between two identities means that a link is established. A dotted line indicates that a link has been removed.
 
 ![The simulated graph viewer panel, with an example of a simulated graph.](../images/graph-simulation/simulated-graph.png)
 
@@ -83,7 +83,7 @@ A pop-up window appears, providing you with available graph scenarios you can ch
 | --- | --- | --- |
 | Shared Device | Shared device refers to scenarios where two different users log in to the same single device.| A husband and wife share an iPad for internet browsing and e-commerce. |
 | Invalid (non-unique) phone | Invalid or non-unique phone refers to scenarios where two different users use the same phone number to create an account. | A mother and her daughter use their shared home phone number to sign up for any e-commerce accounts. |
-| "Bad" identity values | "Bad" identity values refer to scenarios where Identity Service generates non-unique IDFAs due to erroneous implementation. | WebSDK erroneously sends a `user_null` value for every event due too code implementation issues. |
+| "Bad" identity values | "Bad" identity values refer to scenarios where Identity Service generates non-unique IDFAs due to erroneous implementation. | WebSDK erroneously sends a `user_null` value for every event due to code implementation issues. |
 
 ![example options](../images/graph-simulation/example-options.png)
 
