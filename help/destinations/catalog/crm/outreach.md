@@ -71,6 +71,17 @@ Refer to the [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs
 |---|---|---|
 | `OutreachId` | <ul><li>[!DNL Outreach] identifier. This is a numeric value corresponding to the prospect profile.</li><li>The ID must match the ID within the [!DNL Outreach] URL for the prospect being updated.</li><li>Refer to the [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs#update-an-existing-resource) for further details.</li></ul>|Mandatory |
 
+## Supported audiences {#supported-audiences}
+
+This section describes which type of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
@@ -221,3 +232,18 @@ To fix this error, verify that the [!UICONTROL Mapping ID] you provided in Platf
 ## Additional resources {#additional-resources}
 
 The [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs/) has details on [Error Responses](https://api.outreach.io/api/v2/docs#error-responses) which you can use to debug any issues.
+
+### Changelog {#changelog}
+
+This section captures the functionality and significant documentation updates made to this destination connector.
+
++++ View changelog
+
+|Release month|Update type|Description|
+|---|---|---|
+|March 2024|Functionality update|You can now activate external audiences originating from custom uploads to this destination. See the [supported audiences](#supported-audiences) section for more details.|
+|August 2022|Initial release|Initial destination release and documentation publish.|
+
+{style="table-layout:auto"}
+
++++
