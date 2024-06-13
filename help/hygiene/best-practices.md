@@ -47,15 +47,19 @@ You can efficiently monitor the progress of your data lifecycle management throu
 
 I/O Event alerts can be sent to a configured webhook to enable the automation of activity monitoring. To receive alerts via webhook, you must register your webhook for Platform alerts in the Adobe Developer Console. See the guide on [subscribing to Adobe I/O Event notifications](../observability/alerts/subscribe.md) for the specific steps.
 
-Use the following Advanced Data Lifecycle Management methods and guidelines to effectively retrieve and monitor job statuses:
+Use the following data lifecycle methods and guidelines to effectively retrieve and monitor job statuses:
 
 ### I/O Events {#io-events}
+
+To effectively track the status of your data lifecycle tasks, follow these steps for setting up and using I/O Events:
 
 - Set up webhooks to receive push notifications for status changes.
 - Use notifications to monitor progress and updates upon completion.
 - Avoid implementing polling mechanisms to minimize API traffic.
 
 ### Retrieve detailed responses for a single work order {#retrieve-detailed-work-order-response}
+
+For in-depth information on individual work orders, use the following approach:
 
 - Make a GET request to the `/workorder{work_order_id}` endpoint for detailed response data.
 - Retrieve product-specific responses and success messages.
