@@ -9,8 +9,7 @@ The insights derived from the analysis of your data model make your Adobe Real-t
  
 Understand your destination insights by accessing the SQL that powers them, then generate your own insights to further explore the activation of data from Adobe Experience Platform to your destination platforms. Transform your raw data into new actionable insights by using the existing Real-Time CDP data model SQL as inspiration to create queries for your unique business needs. 
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+See the [View SQL documentation](../view-sql.md) for more information on how to adapt your insights' SQL directly through the PLatform UI. 
 
 The following insights are all available for you to use as part of the [Destinations dashboard](../guides/destinations.md) or a custom [user-defined dashboard](../user-defined-dashboards.md). See the [customization overview](../customize/overview.md) for instructions on how to customize your dashboard or [create and edit new widgets](../customize/custom-widgets.md) in the widget library and [user-defined dashboard](../user-defined-dashboards.md#create-widget).
 
@@ -506,13 +505,6 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 By reading this document, you now understand the SQL that generates dashboard insights and what common questions this analysis solves. You can now edit and iterate these SQL queries to generate your own insights.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+See the [View SQL documentation](../view-sql.md) for more information on how to adapt your insights' SQL directly through the PLatform UI.
 
-You can also read and understand the SQL that generates insights for the [Profiles](./profiles.md) and [Audiences](./audiences.md) dashboards.
-
-<!-- 
-SQL MISSING FROM WIKI:
-Unmapped audiences by identity
-Mapped audiences by identity 
--->
+You can also read and understand the SQL that generates insights for the [Profiles](./profiles.md), [Account Profiles](./account-profiles.md) and [Audiences](./audiences.md) dashboards.

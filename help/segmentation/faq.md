@@ -23,7 +23,7 @@ Yes, externally generated pre-built audiences are supported with Audience Portal
 
 ### What permissions do I need to have in order to upload externally generated audiences?
 
-In order to upload externally generated audiences, you need to have the "View audiences/segments", "Manage audiences/segments", "View datasets", "Manage datasets", "View sources", and "Manage sources" permissions. There are no specific role-based controls required to upload externally generated audiences.
+In order to upload externally generated audiences, you need to have the "View segments", "Manage segments", and "Import audiences" permissions. There are no specific role-based controls required to upload externally generated audiences.
 
 ### What happens when I upload an externally generated audience? 
 
@@ -92,18 +92,6 @@ The current data expiration for externally generated audiences is **30 days**. T
 
 After the data expiration period passes, the associated dataset will still be visible within the dataset inventory, but you will **not** be able to activate the audience and the profile count will show as zero.
 
-### What do the different lifecycle states represent?
-
-The following chart explains the different lifecycle statuses, what they represent, where audiences with that status can be used, as well as impact on segmentation guardrails.
-
-| State | Definition | Visible in Audience Portal? | Visible in Destinations? | Affects segmentation limits? | Impact on file-based audiences | Impact on audience evaluation | Usable within other audiences? |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Draft | An audience in the **Draft** state is an audience that is still in development and is not yet ready to be used in other services. | Yes, but can be hidden. | No | Yes | Can be imported or updated during the refinement process. | Can be evaluated in order to get accurate publishing counts. | Yes, but not recommended to be used. |
-| Published | An audience in the **Published** state is an audience that is ready for use across all downstream services. | Yes | Yes | Yes | Can be imported or updated. | Evaluated using batch, streaming, or edge segmentation. | Yes |
-| Inactive | An audience in the **Inactive** state is an audience that is currently not in use. It still exists within Platform, but it will **not** be useable until it's marked as draft or published. | No, but can be shown. | No | No | No longer updated. | No longer evaluated or updated by Platform. | Yes |
-| Deleted | An audience in the **Deleted** state is an audience that has been deleted. The actual deletion of the data may take up to a few minutes to execute. | No | No | No | Underlying data is deleted. | No data evaluation or execution occurs after the deletion is completed. | No |
-| Active | This status has been **deprecated** and is replaced by the **Published** status. | N/A | N/A | N/A | N/A | N/A | N/A |
-
 ### How will Audience Portal and Audience Composition interact with the release of Real-Time CDP Partner Data?
 
 Audience Portal and Audience Composition will interact with Partner Data in two ways:
@@ -124,9 +112,116 @@ Enrichment attributes are attributes that come from a dataset and are joined wit
 | Real-Time CDP Destinations | Both the payload attributes and the audiences can be activated. | Only the audience can be activated. Enrichment attributes **cannot** be activated. |
 | Adobe Journey Optimizer Campaigns | Neither the audience nor the payload attributes can be activated. | Both the audience and the enrichment attributes can be activated. |
 
+## Lifecycle states {#lifecycle-states}
+
+The following section lists questions related to lifecycle states and lifecycle state management within the Audience Portal.
+
+### What do the different lifecycle states represent?
+
+The following chart explains the different lifecycle statuses, what they represent, where audiences with that status can be used, as well as impact on segmentation guardrails.
+
+| State | Definition | Visible in Audience Portal? | Visible in Destinations? | Affects segmentation limits? | Impact on file-based audiences | Impact on audience evaluation | Usable within other audiences? | Editable |
+| --- | --- | --- | --- | --- | --- | --- | --- | -- |
+| Draft | An audience in the **Draft** state is an audience that is still in development and is not yet ready to be used in other services. | Yes, but can be hidden. | No | Yes | Can be imported or updated during the refinement process. | Evaluated to get accurate publishing counts. | Yes, but not recommended to be used. | Yes |
+| Published | An audience in the **Published** state is an audience that is ready for use across all downstream services. | Yes | Yes | Yes | Can be imported or updated. | Evaluated using batch, streaming, or edge segmentation. | Yes | Yes |
+| Inactive | An audience in the **Inactive** state is an audience that is currently not in use. It still exists within Platform, but it will **not** be useable until it's marked as draft or published. | No, but can be shown. | No | No | No longer updated. | No longer evaluated or updated by Platform. | No | Yes |
+| Deleted | An audience in the **Deleted** state is an audience that has been deleted. The actual deletion of the data may take up to a few minutes to execute. | No | No | No | Underlying data is deleted. | No data evaluation or execution occurs after the deletion is completed. | No | No |
+
+### In what states can I edit my audiences in?
+
+Audiences can be edited in the following lifecycle states:
+
+- **Draft**: If an audience is edited in the draft state, it will remain in the draft state unless it is explicitly published.
+- **Published**: If an audience is edited in the published state, it will remain published, and the audience will be automatically updated.
+- **Inactive**: If an audience is edited in the inactive state, it will remain inactive. This means that it will not be evaluated or updated. If you need to update the audience, you'll need to publish the audience.
+
+Once an audience is deleted, it **cannot** be edited.
+
+### What lifecycle states can I move an audience to?
+
+The possible lifecycle states that an audience can be moved to depends on the current state of the audience.
+
+![A diagram outlining the possible lifecycle state transitions that are available for audiences.](./images/faq/lifecycle-state-transition.png)
+
+If your audience is in the draft state, you can either publish or delete it if the audience does not have any dependents.
+
+If your audience is in the published state, you can either deactivate or delete it if the audience does not have any dependents.
+
+If your audience is in the inactive state, you can either re-publish or delete it if the audience does not have any dependents.
+
+### Are there any caveats for audiences in certain lifecycle states?
+
+Audiences in the published state can only be moved to another state if the audience does **not** have any dependents. This means that if your audience is used in a downstream service, it cannot be deactivated or deleted.
+
+If an audience that is evaluated using batch segmentation is re-published, which is when an audience goes from inactive to published, the audience will refresh **after** the daily batch job. When it is first re-published, the profiles and data will be the **same** as when the audience was made inactive.
+
+### How do I put an audience in the draft state?
+
+The method to put an audience into the draft state depends on the origin of the audience.
+
+For audiences created using Segment Builder, you can set the audience to the draft state by selecting "[!UICONTROL Save as draft]" in Segment Builder.
+
+For audiences created in Audience Composition, audiences are automatically saved as a draft until published.
+
+For audiences that are externally created, audiences are automatically published. 
+
+Once an audience is in the published state, you **cannot** change the original audience back into the draft state. However, if you copy the audience, the newly copied audience will be in the draft state.
+
+### How do I put an audience in the published state?
+
+For audiences created using Segment Builder or Audience Composition, you can set the audience to the published state by selecting "[!UICONTROL Publish]" in their respective UIs.
+
+Audiences that are externally created are automatically set to published.
+
+### How do I put an audience in the inactive state?
+
+You can put a published audience into the inactive state by opening the quick actions menu in Audience Portal and selecting "[!UICONTROL Deactivate]".
+
+### How do I re-publish an audience?
+
+>[!NOTE]
+>
+>The "re-published" state is the same as the published state for audience behavior.
+
+You can re-publish an audience by selecting an audience that is in the inactive state, opening the quick actions menu on Audience Portal and selecting [!UICONTROL Publish].
+
+### How do I put an audience in the deleted state?
+
+>[!IMPORTANT]
+>
+>You can only delete audiences that are **not** used in any downstream activations. Additionally, you cannot delete an audience that is referenced in another audience. If you can't delete your audience, please ensure you are **not** using it in any downstream services or as a building block of another audience. 
+
+You can put an audience into the delete state by opening the quick actions menu in Audience Portal and selecting [!UICONTROL Delete].
+
+### Are there any caveats for lifecycle state transitions?
+
+Yes, there are some caveats to be aware of when you are using audiences in downstream services such as Adobe Journey Optimizer or non-customer-based audiences such as account-based audiences.
+
+At this time, you **must** manually check if the audience is used downstream in Adobe Journey Optimizer, as this status is currently not automatically checked.
+
+Additionally, you **must** manually check if the audience is used as a component of an account-based audience, as this status is also not currently automatically checked.
+
+### Does using an audience as a child audience affect lifecycle state transitions?
+
+>[!NOTE]
+>
+>A parent audience is an audience that **uses** another audience as a dependency for the audience.
+>
+>A child audience is an audience that is **used as** a dependency for the audience.
+
+Yes, using an audience as a child audience does affect what lifecycle states transitions the child and parent audience can undertake.
+
+In order for a child audience to be moved to the published state, all of its parent audience **must** be in the published state. Parent audiences can either be published before publishing the child audience or, if the user confirms, can be automatically published when the child audience is published.
+
+In order for the parent audience to be moved to the inactive or deleted state, all of its child audiences **must** be deactivated or deleted. 
+
+### Can I refer to an audience that is in a different lifecycle state?
+
+Yes! If your audience is currently in the draft state, you can refer to audiences in either the draft or published state. However, in order to publish this audience, you **must** publish the other parent audiences.
+
 ## Audience inventory
 
-The following sections lists questions related to audience inventory within the Audience Portal.
+The following section lists questions related to audience inventory within the Audience Portal.
 
 ### Do I need additional permissions to use audience inventory features?
 
@@ -232,7 +327,11 @@ Audience splitting lets you further subset your audience into smaller groups.
 
 When splitting by attribute, there is mutual exclusivity between the groups. This means that if a record meets the criteria of multiple split paths, it will be assigned the **first** path from the left and **not** assigned to any of the other paths.
 
-When splitting by percentage, splits are **randomly** done. This means that the profiles will be randomly assigned to each path. The split is **not** persistent, so the profile could be in a different sub-audience on each evaluation.
+When splitting by percentage, splits are **randomly** done. This means that the profiles will be randomly assigned to each path. The split **is** persistent, which means the profile will be in the same sub-audience on each evaluation.
+
+>[!NOTE]
+>
+>Previously, splits in Audience Composition were **not** persistent.
 
 For more information on the Split block, please read the [Audience Composition UI guide](./ui/audience-composition.md#split).
 

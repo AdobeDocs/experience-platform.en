@@ -24,7 +24,6 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Workflows UI guide](workflows.md)
   * [Browser and language support](browser-language-support.md)
   * [Self-identification Survey](self-identification.md)
-  * [AI Assistant](ai-assistant.md)
 * Experience Platform APIs {#platform-apis}
   * [Getting started with Platform APIs](api-guide.md)
   * [Authenticate and access Platform APIs](api-authentication.md)
@@ -34,7 +33,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 * Platform documentation {#documentation}
   * [Overview](documentation/overview.md)
   * [Language support](documentation/language-support.md)
-* Application services built on Platform {#ecosystem}
+* Applications built on Platform {#ecosystem}
   * [Overview](application-services.md)
   * [Adobe Real-Time Customer Data Platform (all editions)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
   * [Application and Intelligent Services (Video)](video/application-intelligent-services.md)
