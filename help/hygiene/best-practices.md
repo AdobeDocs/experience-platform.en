@@ -29,8 +29,6 @@ Follow these guidelines to optimize your cleanup request submissions:
 3. **Submit multiple requests:** Submit multiple requests with maximum identity counts to achieve quicker processing, as work orders are batched for efficiency.
 4. **API throttling considerations:** Be mindful of API throttling to prevent slow-downs. Smaller requests (< 100 IDs) at higher frequencies may result in 429 responses and require resubmission at acceptable rates. 
 
-<!-- What information from the [AdobeIO throttling policies for Data Hygiene wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/AdobeIO+Throttling+Policies+-+Data+Hygiene+Services) can be made public? -->
-
 ### Manage 429 Errors {#manage-429-errors}
 
 If you received a 429 error, it indicates that you have exceeded the allowed number of requests within a given time period. Follow these best practices to manage 429 errors effectively:
