@@ -35,6 +35,8 @@ Select **[!UICONTROL Extensions]** in the left navigation. In the **[!UICONTROL 
 
 On the next screen, enter the [!UICONTROL Advertiser ID], and optionally a [!UICONTROL Merchant ID]. You can paste the ID's directly into these inputs, or you can use a data element instead. These will serve as the default values used when making an event call to [!DNL The Trade Desk] Real-Time Conversions API. Select **[!UICONTROL Save]** when finished.
 
+To learn how you can create data elements and make them available to extensions in your tag property, follow the [Create data elements](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements) tutorial.
+
 ![The [!DNL The Trade Desk] extension configuration page with the [!UICONTROL Advertiser ID] and [!UICONTROL Merchant ID] fields highlighted.](../../../images/extensions/server/tradedesk/configure-extension.png)
 
 The extension is installed and you can now employ its capabilities in your event forwarding rules.
