@@ -269,6 +269,11 @@ A successful response returns the details of the record delete.
         "productName": "Profile Service",
         "productStatus": "waiting",
         "createdAt": "2022-08-08T16:37:13.443481Z"
+    },
+    {
+        "productName": "Journey Optimizer",
+        "productStatus": "waiting",
+        "createdAt": "2022-08-08T16:24:26.223164Z"
     }
   ]
 }
