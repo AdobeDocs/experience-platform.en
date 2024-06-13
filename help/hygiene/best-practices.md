@@ -8,7 +8,7 @@ Use the Advanced Data Lifecycle Management UI and Data Hygiene API to efficientl
 
 ## Prerequisites {#prerequisites}
 
-This guide requires a working understanding of the Data Lifecycle workspace and [Data Hygiene API](./api/overview.md). Before continuing this document, familiarize yourself with the guides on [Advanced Data Lifecycle Management](./home.md) and [creating record delete requests](./ui/record-delete.md) or [dataset expirations in the UI](./ui/dataset-expiration.md), or through the API.
+This guide requires a working understanding of the Data Lifecycle workspace and the [Data Hygiene API](./api/overview.md). Before continuing this document, familiarize yourself with the guides on [Advanced Data Lifecycle Management](./home.md) and [creating record delete requests](./ui/record-delete.md) or [dataset expirations in the UI](./ui/dataset-expiration.md), or through the API.
 
 >[!NOTE] 
 > 
@@ -20,7 +20,7 @@ You can use the `/workorder` endpoint in the Data Hygiene API to programmaticall
 
 >[!TIP]
 >
->A work order is a structured request that performs specific data management operations, such as data cleanup or transformation to ensure efficient and systematic processing.
+>A work order is a structured request that performs specific data management operations, such as data cleanup or transformation, to ensure efficient and systematic processing.
 
 Follow these guidelines to optimize your cleanup request submissions:
 
@@ -31,7 +31,7 @@ Follow these guidelines to optimize your cleanup request submissions:
 
 ### Manage 429 Errors {#manage-429-errors}
 
-If you received a 429 error, it indicates that you have exceeded the allowed number of requests within a given time period. Follow these best practices to manage 429 errors effectively:
+If you receive a 429 error, it indicates that you have exceeded the allowed number of requests within a given time period. Follow these best practices to manage 429 errors effectively:
 
 - **Read the 'Retry-After' header**: When a 429 error is returned, check the 'Retry-After' response header. This header specifies the time to wait before retrying the request.
 - **Implement retry logic**: Use the 'Retry-After' value to implement retry logic in your application, ensuring that retries are attempted after the specified time to avoid subsequent 429 errors.
@@ -45,16 +45,16 @@ Set up automatic dataset cleanup for short-lived data. Use the `/ttl` endpoint o
 
 You can efficiently monitor the progress of your data lifecycle management through the use of **I/O Events**. An I/O Event is a mechanism for receiving real-time notifications about changes or updates in various services within Platform. 
 
-I/O Event alerts can be sent to a configured webhook to enable the automation of activity monitoring. To receive alerts via webhook, you must register your webhook for Platform alerts in the Adobe Developer Console. See the guide on [subscribing to Adobe I/O Event notifications](../observability/alerts/subscribe.md) for the specific steps.
+I/O Event alerts can be sent to a configured webhook to enable the automation of activity monitoring. To receive alerts via webhook, you must register your webhook for Platform alerts in the Adobe Developer Console. See the guide on [subscribing to Adobe I/O Event notifications](../observability/alerts/subscribe.md) for the detailed instructions.
 
 Use the following data lifecycle methods and guidelines to effectively retrieve and monitor job statuses:
 
 ### I/O Events {#io-events}
 
-To effectively track the status of your data lifecycle tasks, follow these steps for setting up and using I/O Events:
+To efficiently monitor the progress of your data lifecycle tasks, set up and use I/O Events by following these steps:
 
 - Set up webhooks to receive push notifications for status changes.
-- Use notifications to monitor progress and updates upon completion.
+- Use notifications to monitor progress and receive updates upon completion.
 - Avoid implementing polling mechanisms to minimize API traffic.
 
 ### Retrieve detailed responses for a single work order {#retrieve-detailed-work-order-response}
