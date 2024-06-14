@@ -29,25 +29,32 @@ See the table of contents of this user guide for detailed information about each
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "clickCollectionEnabled": false,
-  "context": ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"],
-  "debugEnabled": true,
-  "defaultConsent": "pending",
-  "downloadLinkQualifier": "\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$",
-  "edgeBasePath": "ee",
-  "edgeConfigOverrides": { "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287" },
-  "edgeDomain": "data.example.com",
-  "idMigrationEnabled": false,
-  "onBeforeEventSend": function(content) {
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  clickCollectionEnabled: true,
+  clickCollection: {
+    internalLinkEnabled: true,
+    downloadLinkEnabled: true,
+    externalLinkEnabled: true,
+    eventGroupingEnabled: true,
+    sessionStorageEnabled: true
+  }
+  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"],
+  debugEnabled: true,
+  defaultConsent: "pending",
+  downloadLinkQualifier: "\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$",
+  edgeBasePath: "ee",
+  edgeConfigOverrides: { "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287" },
+  edgeDomain: "data.example.com",
+  idMigrationEnabled: false,
+  onBeforeEventSend: function(content) {
     if(content.xdm.web?.webReferrer) delete content.xdm.web.webReferrer.URL;
   },
-  "onBeforeLinkClickSend": function(content) {
+  onBeforeLinkClickSend: function(content) {
     content.xdm.web.webPageDetails.URL = "https://example.com/current.html";
   },
-  "prehidingStyle": "#container { opacity: 0 !important }",
-  "targetMigrationEnabled": true,
-  "thirdPartyCookiesEnabled": false
+  prehidingStyle: "#container { opacity: 0 !important }",
+  targetMigrationEnabled: true,
+  thirdPartyCookiesEnabled: false
 });
 ```

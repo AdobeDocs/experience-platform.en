@@ -5,12 +5,18 @@ exl-id: 8c73cb25-2648-4cf7-b160-3d06aecde9b4
 ---
 # `onBeforeLinkClickSend`
 
+>[!IMPORTANT]
+>This callback is deprecated. Use [`filterClickProperties`](filterclickproperties.md) instead.
+
 The `onBeforeLinkClickSend` callback allows you to register a JavaScript function that can alter link tracking data you send just before that data is sent to Adobe. This callback allows you to manipulate the `xdm` or `data` object, including the ability to add, edit, or remove elements. You can also conditionally cancel the sending of data altogether, such as with detected client-side bot traffic. It is supported on Web SDK 2.15.0 or later.
 
-This callback only runs when [`clickCollectionEnabled`](clickcollectionenabled.md) is enabled. If `clickCollectionEnabled` is disabled, this callback does not execute. If both `onBeforeEventSend` and `onBeforeLinkClickSend` contain registered functions, the `onBeforeLinkClickSend` function executes first. Once the `onBeforeLinkClickSend` function finishes, the `onBeforeEventSend` function then executes.
+This callback only runs when [`clickCollectionEnabled`](clickcollectionenabled.md) is enabled. If `clickCollectionEnabled` is disabled, this callback does not execute. If `filterClickProperties`, `onBeforeEventSend`, and `onBeforeLinkClickSend` each contain registered functions, the callbacks are executed in the following order:
+
+* `filterClickProperties`
+* `onBeforeLinkClickSend`
+* `onBeforeEventSend`
 
 >[!WARNING]
->
 >This callback allows the use of custom code. If any code that you include in the callback throws an uncaught exception, processing for the event halts. Data is not sent to Adobe.
 
 ## On before link click send callback using the Web SDK tag extension
@@ -29,7 +35,6 @@ Select the **[!UICONTROL Provide on before link click event send callback code]*
 Within the code editor, you can add, edit, or remove elements within the `content` object. This object contains the payload sent to Adobe. You do not need to define the `content` object or wrap any code within a function. Any variables defined outside of `content` can be used, but are not included in the payload sent to Adobe.
 
 >[!TIP]
->
 >The objects `content.xdm`, `content.data`, and `content.clickedElement` are always defined in this context, so you do not need to check if they exist. Some variables within these objects depend on your implementation and data layer. Adobe recommends checking for undefined values within these objects to prevent JavaScript errors.
 
 For example, say you want to perform the following actions:
@@ -66,9 +71,9 @@ Register the `onBeforeLinkClickSend` callback when running the `configure` comma
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeLinkClickSend": function(content) {
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeLinkClickSend: function(content) {
     // Add, modify, or delete values
     content.xdm.web.webPageDetails.URL = "https://example.com/current.html";
     
@@ -94,8 +99,8 @@ function lastChanceLinkLogic(content) {
 }
 
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeLinkClickSend": lastChanceLinkLogic
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeLinkClickSend: lastChanceLinkLogic
 });    
 ```

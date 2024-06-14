@@ -21,6 +21,7 @@ role: Developer
   * configure {#configure}
     * [Overview](commands/configure/overview.md)
     * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
+    * [clickCollection](commands/configure/clickcollection.md)
     * [context](commands/configure/context.md)
     * [debugEnabled](commands/configure/debugenabled.md)
     * [defaultConsent](commands/configure/defaultconsent.md)
@@ -50,12 +51,12 @@ role: Developer
   * [createMediaSession](commands/createmediasession.md)
   * [getIdentity](commands/getidentity.md)
   * [getLibraryInfo](commands/getlibraryinfo.md)
+  * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
   * [setConsent](commands/setconsent.md)
   * [setDebug](commands/setdebug.md)
   * [sendMediaEvent](commands/sendmediaevent.md)
   * [Configre datastream overrides](commands/datastream-overrides.md)
   * [Command responses](commands/command-responses.md)
-  * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
 
 * Identity {#identity}
   * [Overview](identity/overview.md)
