@@ -23,21 +23,14 @@ Select the **[!UICONTROL Provide on before event send callback code]** button wh
 1. This button opens a modal window with a code editor. Insert the desired code, then click **[!UICONTROL Save]** to close the modal window.
 1. Click **[!UICONTROL Save]** under extension settings, then publish your changes.
 
-Within the code editor, you can add, edit, or remove elements within the `content` object. This object contains the payload sent to Adobe. You do not need to define the `content` object or wrap any code within a function. Any variables defined outside of `content` can be used, but are not included in the payload sent to Adobe.
+Within the code editor, you have access to the following variables:
 
->[!TIP]
->
->The objects `content.xdm` and `content.data` are always defined in this context, so you do not need to check if they exist. Some variables within these objects depend on your implementation and data layer. Adobe recommends checking for undefined values within these objects to prevent JavaScript errors.
+* **`content.xdm`**: The [XDM](../sendevent/xdm.md) payload for the event.
+* **`content.data`**: The [data](../sendevent/data.md) object payload for the event.
+* **`return true`**: Immediately exit the callback and send data to Adobe with the current values in the `content` object.
+* **`return false`**: Immediately exit the callback and abort sending data to Adobe.
 
-For example, if you wanted to:
-
-* Add the XDM element `xdm.commerce.order.purchaseID`
-* Force all characters in `xdm.marketing.trackingCode` to lower case
-* Delete `xdm.environment.operatingSystemVersion`
-* If an event type is a link click, immediately send data regardless of the code below it
-* Cancel sending data to Adobe if a bot is detected
-
-The equivalent code within the modal window would be the following:
+Any variables defined outside of `content` can be used, but are not included in the payload sent to Adobe.
 
 ```js
 // Use nullish coalescing assignments to add objects if they don't yet exist
@@ -64,8 +57,7 @@ if (myBotDetector.isABot()) {
 }
 ```
 
->[!NOTE]
->
+>[!TIP]
 >Avoid returning `false` on the first event on a page. Returning `false` on the first event can negatively impact personalization.
 
 ## On before event send callback using the Web SDK JavaScript library
