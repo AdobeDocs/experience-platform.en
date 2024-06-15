@@ -15,7 +15,7 @@ Follow the steps below to configure the Web SDK through the tag extension.
 1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
 1. Select the desired tag property.
 1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
-1. Go to the [Web SDK tag extension configuration page](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) for detialed information on all the configuration options.
+1. Go to the [Web SDK tag extension configuration page](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) for detailed information on all the configuration options.
 
 These configuration settings are set whenever you use the extension to send data to Adobe.
 

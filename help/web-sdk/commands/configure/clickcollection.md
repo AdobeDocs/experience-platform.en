@@ -34,7 +34,7 @@ Select the **[!UICONTROL Enable click data collection]** checkbox when [configur
 1. Select the desired click collection settings.
 1. Click **[!UICONTROL Save]**, then publish your changes.
 
-The [!UICONTROL Filter click properties] callback opens a custom code editor that lets you insert desired code. Within the code editor, you have access to the following variables:
+The [!UICONTROL Filter click properties] callback opens a custom code editor that lets you insert the desired code. Within the code editor, you have access to the following variables:
 
 * **`content.clickedElement`**: The DOM element that was clicked.
 * **`content.pageName`**: The page name when the click happened.
@@ -49,7 +49,7 @@ Any variables defined outside of `content` can be used, but are not included in 
 
 ## Click collection settings using the Web SDK JavaScript library
 
-Set the desired variables within the `clickCollection` object when running the `configure` command. If not set, default settings for this object depends on the value of [`clickCollectionEnabled`](clickcollectionenabled.md).
+Set the desired variables within the `clickCollection` object when running the `configure` command. If not set, default settings for this object depend on the value of [`clickCollectionEnabled`](clickcollectionenabled.md).
 
 * `internalLinkEnabled`: Matches `clickCollectionEnabled`
 * `downloadLinkEnabled`: Matches `clickCollectionEnabled`
@@ -57,6 +57,9 @@ Set the desired variables within the `clickCollection` object when running the `
 * `eventGroupingEnabled`: Defaults to `false`; must be explicitly enabled
 * `sessionStorageEnabled`: Defaults to `false`; must be explicitly enabled
 * `filterClickDetails`: Does not contain a function; must be explicitly registered
+
+>[!TIP]
+>Adobe recommends enabling `eventGroupingEnabled`, as it helps reduce the number of events that count towards contractual usage.
 
 ```js
 alloy("configure", {
