@@ -49,7 +49,7 @@ Any variables defined outside of `content` can be used, but are not included in 
 
 ## Click collection settings using the Web SDK JavaScript library
 
-Set the desired variables within the `clickCollection` object when running the `configure` command. If not set, default settings for this object depend on the value of [`clickCollectionEnabled`](clickcollectionenabled.md).
+Set the desired variables within the `clickCollection` object when running the [`configure`](overview.md) command. If not set, default settings for this object depend on the value of [`clickCollectionEnabled`](clickcollectionenabled.md).
 
 * `internalLinkEnabled`: Matches `clickCollectionEnabled`
 * `downloadLinkEnabled`: Matches `clickCollectionEnabled`
@@ -59,7 +59,7 @@ Set the desired variables within the `clickCollection` object when running the `
 * `filterClickDetails`: Does not contain a function; must be explicitly registered
 
 >[!TIP]
->Adobe recommends enabling `eventGroupingEnabled`, as it helps reduce the number of events that count towards contractual usage.
+>Adobe recommends enabling `eventGroupingEnabled`, as it helps reduce the number of events that count toward contractual usage.
 
 ```js
 alloy("configure", {

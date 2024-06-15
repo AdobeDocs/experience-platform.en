@@ -38,7 +38,7 @@ alloy("configure", {
     externalLinkEnabled: true,
     eventGroupingEnabled: true,
     sessionStorageEnabled: true
-  }
+  },
   context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"],
   debugEnabled: true,
   defaultConsent: "pending",

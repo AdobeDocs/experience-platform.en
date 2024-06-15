@@ -70,12 +70,12 @@ alloy("configure", {
     // Add, modify, or delete values
     content.xdm.web.webPageDetails.URL = "https://example.com/current.html";
     
-    // Return true to immediately complete the function
+    // Return true to complete the function immediately
     if (sendImmediate == true) {
       return true;
     }
     
-    // Return false to immediately cancel sending data
+    // Return false to cancel sending data immediately
     if(myBotDetector.isABot()){
       return false;
     }
