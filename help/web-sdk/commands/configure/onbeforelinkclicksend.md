@@ -56,7 +56,7 @@ content.xdm._experience.analytics.customDimensions.eVars.eVar1 = content.clicked
 if(content.xdm.web?.webInteraction?.type === "other") content.xdm.web.webInteraction.type = "download";
 ```
 
-Similarly to [`onBeforeEventSend`](onbeforeeventsend.md), you can `return true` to immediately complete the function, or `return false` to immediately cancel sending data. If you cancel the sending of data in `onBeforeLinkClickSend` when both `onBeforeEventSend` and `onBeforeLinkClickSend` contain registered functions, the `onBeforeEventSend` function does not run.
+Similarly to [`onBeforeEventSend`](onbeforeeventsend.md), you can `return true` to complete the function immediately, or `return false` to abort sending data to Adobe. If you abort the sending of data in `onBeforeLinkClickSend` when both `onBeforeEventSend` and `onBeforeLinkClickSend` contain registered functions, the `onBeforeEventSend` function does not run.
 
 ## On before link click send callback using the Web SDK JavaScript library
 

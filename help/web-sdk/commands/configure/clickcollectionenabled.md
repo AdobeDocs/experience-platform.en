@@ -5,7 +5,7 @@ exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
 ---
 # `clickCollectionEnabled`
 
-The `clickCollectionEnabled` property is a boolean that determines if the Web SDK automatically collects link data. This property is valuable in cases where you prefer to manually track link data.
+The `clickCollectionEnabled` property is a boolean that determines if the Web SDK automatically collects link data. This property is valuable in cases where you prefer to track link data manually.
 
 If not disabled, the following XDM elements automatically populate with data:
 
@@ -38,7 +38,7 @@ Select the **[!UICONTROL Enable click data collection]** checkbox when [configur
 
 ## Enable automatic link tracking using the Web SDK JavaScript library
 
-Set the `clickCollectionEnabled` boolean when running the `configure` command. If you omit this property when configuring the Web SDK, it defaults to `true`. Set this value to `false` if you prefer to manually set `xdm.web.webInteraction.type` and `xdm.web.webInteraction.value`.
+Set the `clickCollectionEnabled` boolean when running the `configure` command. If you omit this property when configuring the Web SDK, it defaults to `true`. Set this value to `false` if you prefer to set `xdm.web.webInteraction.type` and `xdm.web.webInteraction.value` manually.
 
 ```js
 alloy(configure, {
