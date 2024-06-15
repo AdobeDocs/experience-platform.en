@@ -201,6 +201,10 @@ At this time, you **must** manually check if the audience is used downstream in 
 
 Additionally, you **must** manually check if the audience is used as a component of an account-based audience, as this status is also not currently automatically checked.
 
+### What happens when I copy an audience? {#copy}
+
+When you copy an audience, the new audience will be in the draft state, and retain the same folders, tags, and labels that were applied to the original audience.
+
 ### Does using an audience as a child audience affect lifecycle state transitions?
 
 >[!NOTE]
