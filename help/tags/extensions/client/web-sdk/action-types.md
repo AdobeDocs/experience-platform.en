@@ -11,6 +11,22 @@ After you configure the [Adobe Experience Platform Web SDK tag extension](web-sd
 
 This page describes the action types supported by the [Adobe Experience Platform Web SDK tag extension](web-sdk-extension-configuration.md).
 
+
+## Apply response {#apply-response}
+
+Use the **[!UICONTROL Apply response]** action type when you want to perform various actions based on a response from the Edge Network. This action type is typically used in hybrid deployments where the server makes an initial call to the Edge Network, then this action type takes the response from that call and initializes the Web SDK in the browser.
+
+Using this action type may reduce client load times for hybrid personalization use cases.
+
+![Image of the Experience Platform user interface showing the Apply response action type.](assets/apply-response.png)
+
+This action type supports the following configuration options:
+
+* **[!UICONTROL Instance]**: Select the Web SDK instance that you are using.
+* **[!UICONTROL Response headers]**: Select the data element which returns an object containing the header keys and values returned from the Edge Network server call.
+* **[!UICONTROL Response body]**: Select the data element which returns the object containing the JSON payload provided by the Edge Network response.
+* **[!UICONTROL Render visual personalization decisions]**: Enable this option to automatically render the personalization content provided by the Edge Network and pre-hide the content to prevent flicker.
+
 ## Send event {#send-event}
 
 Sends an event to Adobe [!DNL Experience Platform] so that Adobe Experience Platform can collect the data you send and act on that information. Select an instance (if you have more than one). Any data that you want to send can be sent in the **[!UICONTROL XDM Data]** field. Use a JSON object that conforms to the structure of your XDM schema. This object can either be created on your page or through a **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
@@ -69,6 +85,10 @@ The **[!UICONTROL Send media event]** action type supports the following propert
 This action is used to get the legacy Media Analytics API. When configuring the action and an object name is provided, then the legacy Media Analytics API will be exported to that window object. If none is provided it will be exported to `window.Media` as the current Media JS library does.
 
 ![Platform UI image showing the Get Media Analytics Tracker action type.](assets/get-media-analytics-tracker.png)
+
+## Redirect with identity {#redirect-with-identity}
+
+Use this action type to share identities from the current page to other domains. This action is designed to be used with a **[!UICONTROL click]** event type and a value comparison condition. See [append identity to URL using the Web SDK extension](../../../../web-sdk/commands/appendidentitytourl.md#extension) for more information on how to use this action type.
 
 ## Next steps {#next-steps}
 
