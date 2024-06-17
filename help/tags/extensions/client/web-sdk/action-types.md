@@ -33,11 +33,11 @@ Sends an event to Adobe [!DNL Experience Platform] so that Adobe Experience Plat
 
 There are a few other fields in the Send Event action type that could also be useful depending on your implementation. Please note that these fields are all optional.
 
-- **Type:** This field allows you specify an event type that will be recorded in your XDM schema. See [`type`](/help/web-sdk/commands/sendevent/type.md) in the `sendEvent` command for more information.
-- **Data:** Data that does not match an XDM schema can be sent using this field. This field is useful if you are trying to update an Adobe Target profile or send Target Recommendations attributes. See [`data`](/help/web-sdk/commands/sendevent/data.md) in the `sendEvent` command for more information.<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
-- **Dataset ID:** If you need to send data to a dataset other than the one you specified in your datastream, you can specify that dataset ID here.
-- **Document will unload:** If you would like to make sure that the events reach the server even if the user navigates away from the page, check the **[!UICONTROL Document will unload]** checkbox. This allows events to reach the server but responses are ignored.
-- **Render visual personalization decisions:** If you want to render personalized content on your page, check the **[!UICONTROL Render visual personalization decisions]** checkbox. You can also specify decision scopes and/or surfaces if necessary. See the [personalization documentation](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) for more information on rendering personalized content.
+* **Type:** This field allows you specify an event type that will be recorded in your XDM schema. See [`type`](/help/web-sdk/commands/sendevent/type.md) in the `sendEvent` command for more information.
+* **Data:** Data that does not match an XDM schema can be sent using this field. This field is useful if you are trying to update an Adobe Target profile or send Target Recommendations attributes. See [`data`](/help/web-sdk/commands/sendevent/data.md) in the `sendEvent` command for more information.<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
+* **Dataset ID:** If you need to send data to a dataset other than the one you specified in your datastream, you can specify that dataset ID here.
+* **Document will unload:** If you would like to make sure that the events reach the server even if the user navigates away from the page, check the **[!UICONTROL Document will unload]** checkbox. This allows events to reach the server but responses are ignored.
+* **Render visual personalization decisions:** If you want to render personalized content on your page, check the **[!UICONTROL Render visual personalization decisions]** checkbox. You can also specify decision scopes and/or surfaces if necessary. See the [personalization documentation](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) for more information on rendering personalized content.
 
 ## Set consent {#set-consent}
 
@@ -67,18 +67,18 @@ Sends a media event to Adobe Experience Platform and/or Adobe Analytics. This ac
 
 The **[!UICONTROL Send media event]** action type supports the following properties:
 
-- **[!UICONTROL Instance]**: The Web SDK instance that is being used.
-- **[!UICONTROL Media Event Type]**: The type of the media event being tracked.
-- **[!UICONTROL Player ID]**: The media session unique identifier.
-- **[!UICONTROL Playhead]**: The current position of the media playback, in seconds.
-- **[!UICONTROL Media session details]**: When sending a media start event, the required media session details should be specified.
-- **[!UICONTROL Chapter details]**: In this section you can specify the chapter details when sending a chapter start media event.
-- **[!UICONTROL Advertising details]**: When sending an `AdBreakStart` event, you must specify the required advertising details.
-- **[!UICONTROL Advertising pod details]**: Details about the advertising pod when sending an `AdStart` event.
-- **[!UICONTROL Error details]**: Details about the playback error that is being tracked.
-- **[!UICONTROL State Update Details]**: The player state that is being updated.
-- **[!UICONTROL Custom Metadata]**: The custom metadata about the media event that is being tracked.
-- **[!UICONTROL Quality of Experience]**: The media quality of experience data that is being tracked.
+* **[!UICONTROL Instance]**: The Web SDK instance that is being used.
+* **[!UICONTROL Media Event Type]**: The type of the media event being tracked.
+* **[!UICONTROL Player ID]**: The media session unique identifier.
+* **[!UICONTROL Playhead]**: The current position of the media playback, in seconds.
+* **[!UICONTROL Media session details]**: When sending a media start event, the required media session details should be specified.
+* **[!UICONTROL Chapter details]**: In this section you can specify the chapter details when sending a chapter start media event.
+* **[!UICONTROL Advertising details]**: When sending an `AdBreakStart` event, you must specify the required advertising details.
+* **[!UICONTROL Advertising pod details]**: Details about the advertising pod when sending an `AdStart` event.
+* **[!UICONTROL Error details]**: Details about the playback error that is being tracked.
+* **[!UICONTROL State Update Details]**: The player state that is being updated.
+* **[!UICONTROL Custom Metadata]**: The custom metadata about the media event that is being tracked.
+* **[!UICONTROL Quality of Experience]**: The media quality of experience data that is being tracked.
 
 ## Get Media Analytics Tracker {#get-media-analytics-tracker}
 
