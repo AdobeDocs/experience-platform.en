@@ -3,12 +3,11 @@ title: The Trade Desk Real-Time Conversions API Extension Overview
 description: Learn about The Trade Desk Real-Time Conversions API extension for event forwarding in Adobe Experience Platform.
 hide: yes
 hidefromtoc: yes
+exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
 ---
 # [!DNL The Trade Desk Real-Time Conversions API] extension overview
 
-[[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) allows you to send events to [!DNL The Trade Desk] in order to leverage retargeting and attribution.
-
-You can use the [!DNL The Trade Desk Real-Time Conversions API] extension to send data from the Adobe Experience Platform Edge Network to [!DNL The Trade Desk] by utilizing the API's capabilities in your [event forwarding](../../../ui/event-forwarding/overview.md) rules. 
+You can use the [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) extension to send data from the Adobe Experience Platform Edge Network to [!DNL The Trade Desk] by utilizing the API's capabilities in your [event forwarding](../../../ui/event-forwarding/overview.md) rules. 
 
 Using [!DNL The Trade Desk Real-Time Conversions API] extension, you can leverage the API's capabilities in your [event forwarding](../../../ui/event-forwarding/overview.md) rules to send data to [!DNL The Trade Desk] from the Adobe Experience Platform Edge Network. 
 
@@ -85,7 +84,8 @@ Refer to the [!DNL The Trade Desk] developer documentation for more information 
 
 **[!UICONTROL Object Request Parameters]**
 
-Read the following section to learn about the JSON-formatted request parameters such as Items, Privacy, and Data Processing.
+A JSON object containing more information. You have the option to use a reduced set of key-value inputs or to supply raw JSON. Additionally, you can retrieve dynamic data from a data element by selecting the disks (![Disk Icon](../../../images/extensions/server/tradedesk/disk-icon.png)) on the right.
+
 
 ![The [!DNL Object Request Parameters] section showing available fields.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
@@ -93,14 +93,14 @@ Refer to the [Real-Time Conversions Event](https://partner.thetradedesk.com/v3/p
 
 **[!UICONTROL Configuration Overrides]**
 
->NOTE
+>[!NOTE]
 >
 >The [!UICONTROL Configuration Overrides] fields allow you to set a different [!DNL Advertiser ID] and/or [!DNL Merchant ID] on every rule.
 
 | Input | Description | 
 | --- | --- |
-| Advertiser ID | The Advertiser ID that you would like to override the Advertiser ID supplied in the extension configuration. |
-| Merchant ID | The Merchant ID that you would like to override the Merchant ID supplied in the extension configuration.  |
+| Advertiser ID | Unique identifier for the advertiser which this event is associated. A different Advertiser ID can be provided to override the ID you supplied in the extension configuration. |
+| Merchant ID | The unique identifier that each merchant is given by [!DNL The Trade Desk] throughout the onboarding procedure. A different Merchant ID can be provided to override the ID you supplied in the extension configuration. |
 
 ![The [!DNL Configuration Overrides] section showing available fields.](../../../images/extensions/server/tradedesk/configure-overrides.png)
 
