@@ -3,7 +3,8 @@ title: setConsent
 description: Used on each page to track the user's consent.
 exl-id: d01a6ef1-4fa7-4a60-a3a1-19568b4e0d23
 ---
-# setConsent
+
+# `setConsent`
 
 The `setConsent` command tells the Web SDK if it should send data (opt in), discard data (opt out), or use [`defaultConsent`](configure/defaultconsent.md) (consent unknown).
 
@@ -18,6 +19,25 @@ The Web SDK supports following standards:
 After using this command, the Web SDK writes the user's preferences to a cookie. The next time the user loads your website in the browser, the SDK retrieves these persisted preferences to determine if events can be sent to Adobe.
 
 Adobe recommends that you store any consent dialog preferences separately from Web SDK consent. The Web SDK does not offer a way to retrieve consent. To make sure that the user preferences stay in sync with the SDK, you can call the `setConsent` command on every page load. The Web SDK only makes a server call when consent changes.
+
+## Using `defaultConsent` together with `setConsent` {#using-consent}
+
+The Web SDK offers two complementary consent configuration options: [`defaultConsent`](configure/defaultconsent.md) and [`setConsent`](setconsent.md). When used together, these settings can lead to different data collection and cookie setting results, depending on their configured values.
+
+See the table below to understand when data collection occurs and when cookies are set, based on consent settings.
+
+|defaultConsent | setConsent | Data collection occurs | Web SDK sets browser cookies |
+|---------|----------|---------|---------|
+| `in` | `in` | Yes |  Yes |
+| `in` | `out` | No | Yes |
+| `in` | Not set | Yes | Yes |
+| `pending` | `in` | Yes | Yes |
+| `pending` | `out` | No | Yes |
+| `pending` | Not set | No | Yes |
+| `out` | `in` | Yes | Yes |
+| `out` | `out` | No | No |
+| `out` | Not set | No | No |
+
 
 ## Set consent using the Web SDK tag extension
 
@@ -38,7 +58,7 @@ You can include multiple consent objects within this action.
 
 Run the `setConsent` command when calling your configured instance of the Web SDK. You can include the following objects in this command:
 
-* **`consent[]`**: An array of `consent` objects. The consent object is formatted differently depending on the standard and version that you choose.
+* **`consent[]`**: An array of `consent` objects. The consent object is formatted differently depending on the standard and version that you choose. See the tabs below for examples of each consent object, depending on the consent standard.
 * **`identityMap`**: An object that controls how an ECID is generated and which IDs consent information is tied to. Adobe recommends including this object when `setConsent` is run before other commands, such as [`sendEvent`](sendevent/overview.md).
 * **`edgeConfigOverrides`**: An object that contains [datastream configuration overrides](datastream-overrides.md).
 
@@ -52,9 +72,10 @@ Run the `setConsent` command when calling your configured instance of the Web SD
 * **`version`**: A string representing the version of the consent standard. Set this property to `"2.0"` for the Adobe 2.0 standard.
 * **`value`**: An object containing consent values.
   * **`value.collect.val`**: The consent value. Valid values are `"y"` (opt in) and `"n"` (opt out).
-  * **`value.metadata.time`**: The timestamp that the user set the consent value.
+  * **`value.metadata.time`**: The timestamp when the user set the consent value.
 
 ```js
+// Set consent using the Adobe 2.0 standard
 alloy("setConsent", {
   "consent": [{
     "standard": "Adobe",
@@ -82,6 +103,7 @@ alloy("setConsent", {
 * **`gdprContainsPersonalData`**: A boolean that determines if the event data associated with this user contains personal data. Its default value is `false`.
 
 ```js
+// Set consent using the IAB TCF 2.0 standard
 alloy("setConsent", {
   consent: [{
     "standard": "IAB TCF",
