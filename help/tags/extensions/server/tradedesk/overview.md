@@ -3,6 +3,7 @@ title: The Trade Desk Real-Time Conversions API Extension Overview
 description: Learn about The Trade Desk Real-Time Conversions API extension for event forwarding in Adobe Experience Platform.
 hide: yes
 hidefromtoc: yes
+exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
 ---
 # [!DNL The Trade Desk Real-Time Conversions API] extension overview
 
