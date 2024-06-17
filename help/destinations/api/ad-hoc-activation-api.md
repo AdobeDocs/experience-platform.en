@@ -163,15 +163,19 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 | Property | Description |
 | -------- | ----------- |
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate audiences. You can get these IDs from the Platform UI, by navigating to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** tab, and clicking on the desired destination row to bring up the destination ID in the right rail. For more information, read the [destinations workspace documentation](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the audiences that you want to activate to the selected destination. |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the audiences that you want to activate to the selected destination. You can use the ad-hoc API to export Platform-generated audiences as well as external (custom upload) audiences. When activating external audiences, do not use the audience ID, and instead use the system-generated ID for the external audience, displayed in the audience summary view in the audiences UI. <br> ![View of the audience ID that should not be selected.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "View of the audience ID that should not be selected."){width="100" zoomable="yes"} <br> ![View of the system-generated audience ID that should be used.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "View of the system-generated audience ID that should be used."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
-### Request with export IDs (to be deprecated) {#request-deprecated}
+### Request with export IDs {#request-export-ids}
+
+<!--
 
 >[!IMPORTANT]
 >
 >**Deprecated request type**. This example type describes the request type for the API version 1. In the v2 of the ad-hoc activation API, you do not need to include the latest audience export job ID.
+
+-->
 
 ```shell
 
