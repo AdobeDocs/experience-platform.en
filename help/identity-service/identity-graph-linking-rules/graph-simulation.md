@@ -2,6 +2,7 @@
 title: Graph Simulation UI Guide
 description: Learn how to use the Graph Simulation in the Identity Service UI.
 badge: Beta
+exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 ---
 # [!DNL Graph Simulation] UI guide
 
