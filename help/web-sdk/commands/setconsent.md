@@ -68,11 +68,13 @@ Run the `setConsent` command when calling your configured instance of the Web SD
 
 ### Adobe 2.0 standard `consent` object
 
+If you are using Adobe Experience Platform, you will need include a privacy schema field group in your profile schema. See [Governance, privacy, and security in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) for more information on the Adobe 2.0 standard. You can add data inside the value object below corresponding to the schema of the `consents` field of the [!UICONTROL Consents and Preferences] profile field group.
+
 * **`standard`**: The consent standard that you choose. Set this property to `"Adobe"` for the Adobe 2.0 standard.
 * **`version`**: A string representing the version of the consent standard. Set this property to `"2.0"` for the Adobe 2.0 standard.
 * **`value`**: An object containing consent values.
-  * **`value.collect.val`**: The consent value. Valid values are `"y"` (opt in) and `"n"` (opt out).
-  * **`value.metadata.time`**: The timestamp when the user set the consent value.
+  * **`value.collect.val`**: The consent value. Set this to `"y"` when users opt in and to `"n"` when users opt out.
+  * **`value.metadata.time`**: The timestamp when users last updated their consent settings.
 
 ```js
 // Set consent using the Adobe 2.0 standard
@@ -95,6 +97,12 @@ alloy("setConsent", {
 >[!TAB IAB TCF 2.0]
 
 ### IAB TCF 2.0 standard `consent` object
+
+To record user consent preferences provided through the Interactive Advertising Bureau Europe (IAB) Transparency and Consent Framework (TCF) standard, set the consent string as shown below.
+
+When the consent is set in this way, the Real-Time Customer Profile is updated with the consent information. For this to work, the profile XDM schema needs to contain the [Profile Privacy schema field group](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). When sending events, the IAB consent information needs to be added manually to the event XDM object. The Web SDK does not automatically include the consent information in the events.
+
+To send the consent information in events, you must add the Experience Event Privacy field group to your [!DNL Profile]-enabled [!DNL XDM ExperienceEvent] schema. See the section on [updating the ExperienceEvent schema](../../landing/governance-privacy-security/consent/iab/dataset.md#event-schema) in the dataset preparation guide for steps on how to configure this.
 
 * **`standard`**: The consent standard that you choose. Set this property to `"IAB TCF"` for the IAB TCF 2.0 standard.
 * **`version`**: A string representing the version of the consent standard. Set this property to `"2.0"` for the IAB TCF 2.0 standard.
@@ -121,7 +129,7 @@ alloy("setConsent", {
 
 * **`standard`**: The consent standard that you choose. Set this property to `"Adobe"` for the Adobe 1.0 standard.
 * **`version`**: A string representing the version of the consent standard. Set this property to `"1.0"` for the Adobe 1.0 standard.
-* **`value.general`**: The consent value. Valid values are `"in"` (opt in) and `"out"` (opt out).
+* **`value.general`**: The consent value. Set this to `"in"` when users opt in and to `"out"` when users opt out.
 
 ```js
 // Set consent using the Adobe 1.0 standard
@@ -137,3 +145,40 @@ alloy("setConsent", {
 ```
 
 >[!ENDTABS]
+
+### Sending multiple standards in one request {#multiple-standards}
+
+The Web SDK also supports sending more than one consent object in a request, as shown in the example below.
+
+```js
+alloy("setConsent", {
+    consent: [{
+        standard: "Adobe",
+        version: "2.0",
+        value: {
+            collect: {
+                val: "y"
+            },
+            metadata: {
+                time: "2021-03-17T15:48:42-07:00"
+            }
+        }
+    }, {
+        standard: "IAB TCF",
+        version: "2.0",
+        value: "CO1Z4yuO1Z4yuAcABBENArCsAP_AAH_AACiQGCNX_T5eb2vj-3Zdt_tkaYwf55y3o-wzhhaIse8NwIeH7BoGP2MwvBX4JiQCGBAkkiKBAQdtHGhcCQABgIhRiTKMYk2MjzNKJLJAilsbe0NYCD9mnsHT3ZCY70--u__7P3fAwQgkwVLwCRIWwgJJs0ohTABCOICpBwCUEIQEClhoACAnYFAR6gAAAIDAACAAAAEEEBAIABAAAkIgAAAEBAKACIBAACAEaAhAARIEAsAJEgCAAVA0JACKIIQBCDgwCjlACAoAAAAA.YAAAAAAAAAAA",
+        gdprApplies: true
+    }]
+});
+```
+
+
+## Persistence of consent preferences {#persistence}
+
+After you have communicated user preferences to the Web SDK using the `setConsent` command, the SDK persists user preferences to a cookie. The next time the user loads your website in the browser, the Web SDK will retrieve and use these persisted preferences to determine whether or not events can be sent to Adobe.
+
+You will need to store the user preferences independently to be able to show the consent dialog with the current preferences. There is no way to retrieve the user preferences from the Web SDK. To make sure that the user preferences stay in sync with the SDK, you can call the `setConsent` command on every page load. The Web SDK will only make a server call if the preferences have changed.
+
+## Syncing identities while setting consent {#sync-identities}
+
+When the default consent (set through the [defaultConsent](configure/defaultconsent.md) parameter) is set to `pending` or `out`, the `setConsent` setting may be the first request that goes out and establishes identity. Because of this, it may be important to sync identities on the first request. You can add the identity map to the `setConsent` command just like on the `sendEvent` command. See [using identityMap](../identity/overview.md#using-identitymap) for an example of how to include the identity map on your command.
