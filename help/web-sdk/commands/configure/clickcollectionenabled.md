@@ -5,15 +5,15 @@ exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
 ---
 # `clickCollectionEnabled`
 
-The `clickCollectionEnabled` property is a boolean that determines if the Web SDK automatically collects link data. This property is valuable in cases where you prefer to track link data manually.
+The `clickCollectionEnabled` property is a boolean that determines if the Web SDK automatically collects link data. If you do not set this variable, its default value is `true` which means that link tracking data is automatically collected by default. Setting this property to `false` is valuable in cases where you prefer to track link data manually.
 
-If not disabled, the following XDM elements automatically populate with data:
+When `clickCollectionEnabled` is enabled, the following XDM elements automatically populate with data:
 
 * `xdm.web.webInteraction.name`
 * `xdm.web.webInteraction.type`
 * `xdm.web.webInteraction.URL`
 
-Internal links, download links, and exit links are all automatically tracked when this boolean is enabled. If you want more control over automatic link tracking, Adobe recommends using the [`clickCollection`](clickcollection.md) object.
+Internal links, download links, and exit links are all automatically tracked by default when this boolean is enabled. If you want more control over automatic link tracking, Adobe recommends using the [`clickCollection`](clickcollection.md) object.
 
 ## Automatic link tracking logic
 

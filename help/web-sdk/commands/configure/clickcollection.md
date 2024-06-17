@@ -11,8 +11,10 @@ The following variables are available in the `clickCollection` object:
 * **`clickCollection.internalLinkEnabled`**: A boolean that determines if links within the current domain are automatically tracked. For example, `https://example.com/index.html` to `https://example.com/product.html`.
 * **`clickCollection.downloadLinkEnabled`**: A boolean that determines if the library tracks links that qualify as downloads based on the [`downloadLinkQualifier`](downloadlinkqualifier.md) property.
 * **`clickCollection.externalLinkEnabled`**: A boolean that determines if links to external domains are automatically tracked. For example, `https://example.com` to `https://example.net`.
-* **`clickCollection.eventGroupingEnabled`**: A boolean that determines if the library waits until the next page to send link tracking data. When the next page loads, combine the link tracking data with the page load event. Enabling this option reduces the number of events that you send to Adobe. If `internalLinkEnabled` is disabled, this variable does nothing. 
-* **`clickCollection.sessionStorageEnabled`**: A boolean that determines if link tracking data is stored in session storage instead of a cookie. If `internalLinkEnabled` or `eventGroupingEnabled` are disabled, this variable does nothing.
+* **`clickCollection.eventGroupingEnabled`**: A boolean that determines if the library waits until the next page to send link tracking data. When the next page loads, combine the link tracking data with the page load event. Enabling this option reduces the number of events that you send to Adobe. If `internalLinkEnabled` is disabled, then this variable does nothing. 
+* **`clickCollection.sessionStorageEnabled`**: A boolean that determines if link tracking data is stored in session storage instead of local variables. If `internalLinkEnabled` or `eventGroupingEnabled` are disabled, then this variable does nothing.
+  
+  Adobe strongly recommends enabling this variable when using `eventGroupingEnabled`. If `eventGroupingEnabled` is enabled while `sessionStorageEnabled` is disabled, clicking to a new page results in loss of link tracking data, as it is not preserved in session storage. While it is acceptable to disable `sessionStorageEnabled` in single-page applications, it is not ideal for non-SPA pages.
 * **`filterClickDetails`**: A callback function that provides full controls over link tracking data that you collect. You can use this callback function to alter, obfuscate, or abort sending link tracking data. This callback is useful when you want to omit specific information, such as personally identifiable information within links.
 
 ## Click collection settings using the Web SDK tag extension
@@ -40,7 +42,7 @@ The [!UICONTROL Filter click properties] callback opens a custom code editor tha
 * **`content.pageName`**: The page name when the click happened.
 * **`content.linkName`**: The name of the clicked link.
 * **`content.linkRegion`**: The region of the clicked link.
-* **`content.linkType`**: The type of link (typically exit, download, or other).
+* **`content.linkType`**: The type of link (exit, download, or other).
 * **`content.linkURL`**: The destination URL of the clicked link.
 * **`return true`**: Immediately exit the callback with the current variable values.
 * **`return false`**: Immediately exit the callback and omit all link data. The `onBeforeEventSend` callback function is still executed if one is registered.
@@ -74,11 +76,11 @@ alloy("configure", {
     sessionStorageEnabled: true,
     filterClickDetails: function(content) {
       // If the link is a clickable telephone number, anonymize it
-      if(content.linkUrl.includes("tel:")) {
+      if(content.linkUrl?.includes("tel:")) {
         content.linkName = content.linkUrl = "Phone number";
       }
       // If the link is an email address, anonymize it
-      if(content.linkUrl.includes("mailto:")) {
+      if(content.linkUrl?.includes("mailto:")) {
         content.linkName = content.linkUrl = "Email address";
       }
     }
