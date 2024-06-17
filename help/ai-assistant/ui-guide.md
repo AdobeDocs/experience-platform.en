@@ -105,6 +105,22 @@ You can also provide filters and modifications to your questions, and you can in
 
 +++
 
+### Verify operational insights responses {#verify-responses}
+
+You can verify each response related to operational insights questions using an SQL query that AI Assistant provides.
+
++++Select to view example of verifying operational insights responses
+
+After receiving an answer for an operational insights question, select **[!UICONTROL Show sources]** and then select **[!UICONTROL View source query]**.
+
+![view source query](./images/view-source-query.png)
+
+When queried with an operational insights question, AI Assistant provides an SQL query that you can use to verify the process that it took to compute its answer. This source query is for verification purposes only and is not supported on Query Service.
+
+![example of source query](./images/source-query.png)
+
++++
+
 ### Use auto-complete {#use-auto-complete}
 
 You can use the autocomplete function to receive a list of data objects that exist in your sandbox. Autocomplete recommendations are available for the following domains: audiences, schemas, datasets, sources, and destinations.
