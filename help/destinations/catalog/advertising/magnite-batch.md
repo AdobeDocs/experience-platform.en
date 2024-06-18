@@ -27,6 +27,8 @@ Destinations](#setting-up-the-destinations)
 
 [Exported data / Validate data export](#exported-data--validate-data-export)
 
+[Account Access and Secrets](#account-access-and-secrets)
+
 ## Overview
 
 The Magnite-Adobe Experience Platform integration offers Magnite Streaming clients Real-Time and Daily Destinations to map and export audiences for targeting and activation on the Magnite Streaming platform. The following document provides sample use cases to help you better understand how and when the batch/daily destinations should be used, as well as step-by-step instructions for destination configuration.
@@ -37,7 +39,7 @@ If you are looking for the Real-time destination configuration, [look here](magn
 
 This destination allows Magnite clients to deliver Adobe CDP audiences in batch, at a daily cadence to Magnite Streaming to create segments used for advertising targeting and activation. Post-processing, segments are available for targeting deals created in Magnite.
 
-All Magnite integration require at least the Daily/Batch destination to be setup. If you want/need to setup a Realtime destination, see [this doc](magnite-streaming.md). Please reach out to your account manager for more info regarding the Realtime destination
+All Magnite integrations require at least the Daily/Batch destination to be setup. If you want/need to setup a Realtime destination, see [this doc](magnite-streaming.md). Please reach out to your account manager for more info regarding the Realtime destination
 
 ### 
 
@@ -67,7 +69,7 @@ To authenticate to the destination, fill in the required fields and select Conne
 
 ![destination configuration auth fields unfilled](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png)
 
-You will need to provide the Access and Secret keys for the magnite s3 bucket provided to you via your account manager. 
+You will need to provide the Access and Secret keys for the Magnite s3 bucket provided to you via your account manager. 
 
 If you have an existing account, you can locate it by changing the Account type option to Existing account.
 
@@ -115,8 +117,6 @@ Once the Destination has been created, you will be shown the audience activation
 
 - If you plan to send multiple ID types using the daily, file-based destination, you can only send one ID per-destination configuration. A new destination is required for each ID.
 - If you're device type is not avaliable, you may select 'device_type_CUSTOM'.
-  
-  
 
 In this example, we're mapping any rows that contain a generic deviceId source identifier to the Magnite device_id target field. When you're done, click Next.
 
