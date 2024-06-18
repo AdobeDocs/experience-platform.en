@@ -33,8 +33,6 @@ Note that when you create an inspirational sandbox, channel surfaces for e-mail,
 
 ![Configure channel presets](/help/use-case-playbooks/assets/playbooks/get-started/configure-channel-presets.png)
 
-
-
 ## Configure sandbox and channel surfaces in Journey Optimizer {#configure-channel-surfaces}
 
 If your organization is licensed for [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html), and you're looking to use the playbooks designed for Journey Optimizer, you'll need to configure the channel presets in your sandbox, which define the technical parameters required for your messages. [Learn how to set up channel surfaces in Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html).
@@ -54,3 +52,8 @@ Also configure channels for playbooks that contain transactional messages like o
 ### Push channel surface
 
 Confirm that the app surfaces are configured either from the Experience Platform or Data Collections interface. This is how app surfaces look like in the Data Collections environment. 
+
+## Next steps {#next-steps}
+
+Now that you've read this document, you should know how to setup an inspirational sandbox and be familiar with different ways of accessing use case playbooks within Platform. As a next step, read about how to [find](/help/use-case-playbooks/playbooks/find.md) the right playbook. 
+
