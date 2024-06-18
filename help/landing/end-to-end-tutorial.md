@@ -50,7 +50,7 @@ When uploading data to a new dataset for the first time, or when setting up a ne
 
 ## Evaluate your data
 
-Once you have successfully generated profiles from your ingested data, you can evaluate your data by using segmentation. Segmentation is the process of defining specific attributes or behaviors shared by a subset of individuals from your profile store, in order to distinguish a marketable group of people from your customer base. To learn more about segmentation, please read the [segmentation service overview](../segmentation/home.md).
+Once you have successfully generated profiles from your ingested data, you can evaluate your data by using segmentation. Segmentation is the process of defining specific attributes or behaviors shared by a subset of individuals from your Profile store, in order to distinguish a marketable group of people from your customer base. To learn more about segmentation, please read the [segmentation service overview](../segmentation/home.md).
 
 ### Create a segment definition
 

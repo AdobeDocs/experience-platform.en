@@ -38,7 +38,7 @@ Batch data ingestion has some constraints:
 - Maximum number of files per batch: 1500
 - Maximum batch size: 100 GB
 - Maximum number of properties or fields per row: 10000
-- Maximum number of batches on data lake per minute, per user: 138
+- Maximum number of batches on data lake per minute, per user: 2000
 
 >[!NOTE]
 >
@@ -140,7 +140,7 @@ You can upload files using the Small File Upload API. However, if your files are
 
 >[!NOTE]
 >
->Batch ingestion can be used to incrementally update data in the Profile Store. For more information, see the section on [updating a batch](#patch-a-batch) in the [batch ingestion developer guide](api-overview.md). 
+>Batch ingestion can be used to incrementally update data in the Profile store. For more information, see the section on [updating a batch](#patch-a-batch) in the [batch ingestion developer guide](api-overview.md). 
 
 >[!INFO]
 >
