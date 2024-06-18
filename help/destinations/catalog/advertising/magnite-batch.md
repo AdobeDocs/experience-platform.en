@@ -107,13 +107,18 @@ Once the Destination has been created, you will be shown the audience activation
 
 #### Step 3: The next step is mapping source identifiers to the Magnite device_id identifier.
 
+![select the appropriate device type](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png)
+
 ![map desired data fields to the device_id field](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
 **Daily Destination Note:**
 
 - If you plan to send multiple ID types using the daily, file-based destination, you can only send one ID per-destination configuration. A new destination is required for each ID.
+- If you're device type is not avaliable, you may select 'device_type_CUSTOM'.
+  
+  
 
-In this example, we're mapping any rows that contain a generic deviceId source identifier to the Magnite device_id target field. When you\'re done, click Next.
+In this example, we're mapping any rows that contain a generic deviceId source identifier to the Magnite device_id target field. When you're done, click Next.
 
 ![Be sure to set mapping ids to all activated audiences, or set NONE if no mapping id is present](../../assets/catalog/advertising/magnite/destination-batch-active-audience-mappingid.png)
 
