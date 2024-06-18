@@ -1,79 +1,56 @@
 ---
 solution: Experience Platform
-title: Discover the right playbook
-description: Learn how to discover the right playbook for your use case enable playbooks.
+title: Discover playbooks
+description: Explore various cases which can help you discover use case playbooks.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 ---
-# Discover the right playbook
+# Discover playbooks
 
-To use a playbook, navigate to **[!UICONTROL Use Case Playbooks] > [!UICONTROL Playbooks]**. Browse and use the various searching and filtering options on the page to select and get started with a specific playbook.
+You can now access use case playbooks in the Adobe Experience Platform UI. Select **[!UICONTROL Playbooks]** from the left navigation to directly land on the gallery page.
 
-## Search and filter {#search-and-filter}
+![Direct access to use case playbooks in the left navigation bar](/help/use-case-playbooks/assets/playbooks/get-started/left-nav-playbooks.png)
 
-Use the search window and filters available on the page to find the right playbook for your use case. 
+Select any playbook to go to the details page and then select **[!UICONTROL Go to an inspirational sandbox]**. A confirmation modal appears. Select **Confirm** to go to the inspirational sandbox where you can explore and experiment with the different use cases. 
 
-For example, you can filter playbooks that you can use based on the stage in the marketing funnel that you want to target - conversion, engagement, or retention. You could also filter the displayed playbooks by the industry that you are in or the product entitlement that you have access to - Adobe Journey Optimizer or Real-Time CDP. 
+![Go to inspirational sandbox](/help/use-case-playbooks/assets/playbooks/get-started/inspirational-sandbox.png)
 
-![Filter playbooks by marketing funnel, industry, or product](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
+If you haven't already setup any inspirational sandboxes, select **[!UICONTROL Create an inspirational Sandbox]**. A modal appears. Enter the **Name** and **Title** in the required field boxes and select **Create**. Once you create the inspirational sandbox, ensure to [define permissions](/help/access-control/home.md) before you navigate back to the use case playbooks details page to create an instance.
 
-You can also use the search functionality to find the right playbook for you. See below an example of how to find a playbook that helps you engage with users who might have abandoned their shopping cart.
+![Create an inspirational sandbox](/help/use-case-playbooks/assets/playbooks/get-started/create-inspirational-sandbox.png)
 
-![Engage with users who might have abandoned their cart.](/help/use-case-playbooks/assets/playbooks/ui-guide/engage-abandoned-cart.gif)
+If you select a use case playbook from outside an inspirational sandbox, you won't be able to create an instance. On the details page, select **Go to inspirational sandbox** to go to an existing inspirational sandbox and then select **[!UICONTROL Create instance]**.
 
-Or, you can filter the available playbooks by the channels that you plan to use to reach your customers, as you can see below:
+If you do not have the permission to create sandboxes, please contact your administrator for assistance in creating an inspirational sandbox.
 
-![Filter by channel](/help/use-case-playbooks/assets/playbooks/ui-guide/channel-select-filter.gif)
+![No permissions to create sandbox](/help/use-case-playbooks/assets/playbooks/get-started/no-permissions-to-create-sandbox.png)
 
-Experiment with the filters and search option and find the right playbook for you. 
+If you have reached the limit on the number of sandboxes that have been allocated to you, a message appears asking you to contact your organization administrator to increase the limit or deactivate or remove some active sandboxes. Once the sandbox creation is within the limit, you can proceed to create the inspirational sandbox.
 
-## View playbook and generate assets {#view-playbook-generate-assets}
+![Sandbox limit reached](/help/use-case-playbooks/assets/playbooks/get-started/sandbox-limit-reached.png)
 
-Before you settle on a playbook and create instances of it, you should inspect it to make sure it fits your needs. To help you better understand the use cases they cover, all playbooks contain the sections listed below. When you are ready to proceed and generate assets, select **[!UICONTROL Create Instance]**.
+Note that when you create an inspirational sandbox, channel surfaces for e-mail, push, and SMS notificationsare not are not automatically setup. Contact your IT administrator to manually configure them or the instance creation might fail. 
 
-### Mindmap {#mindmap}
+![Configure channel presets](/help/use-case-playbooks/assets/playbooks/get-started/configure-channel-presets.png)
 
-Use the mindmap section in a playbook to understand the steps of the workflow that the playbook can help you solve. Visualize the flow of how all the generated objects can help you achieve the use case, from the perspective of the persona targeted in the use case. 
 
-The mindmap starts with a definition of who is reached in the user journey and describes at every step if something is delivered by Adobe, like a new message or a reminder, or if it is something that the targeted persona did that triggers the next message or event. 
 
-![Playbook mindmap highlighted.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
+## Configure sandbox and channel surfaces in Journey Optimizer {#configure-channel-surfaces}
 
-### Summary {#summary}
+If your organization is licensed for [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html), and you're looking to use the playbooks designed for Journey Optimizer, you'll need to configure the channel presets in your sandbox, which define the technical parameters required for your messages. [Learn how to set up channel surfaces in Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html).
 
->[!CONTEXTUALHELP]
->id="platform_playbooks_assets"
->title="Assets"
->abstract="These are the assets that are generated by this playbook. After creating an instance of the playbook, you can see the assets in the inspirational sandbox, and promote them to other sandboxes, as desired."
+To create instances of playbooks in Journey Optimizer, you need to configure channel surfaces for e-mail, push, and SMS notifications. 
 
-Inspect the summary section to understand which assets are generated once you create instances from the playbook. The assets that get generated for each playbook are tailored to the use case that the playbook enables. Get more information below about all the items in the summary section.
+### E-mail channel surface
 
-| Item | Description |
----------|----------|
-| **[!UICONTROL Target audience]** | Describes the personas that you are looking to reach through this use case playbook. |
-| **[!UICONTROL Marketing Channels]** | Describes the channels used to reach the personas targeted in the playbook. |
-| **[!UICONTROL Technical assets]** | A list of the technical assets that are generated after you create instances of the playbook. The generated assets differ by playbook, depending on the use case. Some playbooks might generate schemas, segments, and journeys. Others may generate destinations. Refer to the [Understand the generated assets](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) section further in the guide on creating and reusing instances for more information about how you can use and reuse the generated assets.  |
+Go to `Channels` in the Journey Optimizer interface. Configure separate subdomains and IP pools for marketing emails and transactional messaging, if not already configured. These are best practices to ensure that transactional messages such as order confirmation e-mails, get through to your customers. Enter names, email addresses, and additional settings. Select **Submit** at the top-right of the page to create the marketing channel surface. Read the documentation on [how to set up e-mail channel surfaces](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
 
-{style="table-layout:auto"}
+### SMS channel surface
 
-![Playbook summary highlighted](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-summary.png)
+To create an SMS channel surface, first create an SMS API credential, and select the preferred vendor (for example, Sinch). Name the SMS channel surface (for example, SMS Marketing), select the configuration, and enter a sender number. Select **Submit** at the top-right of the page to save the SMS channel surface. Read the documentation on [how to set up SMS channel surfaces](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=en#message-preset-sms).
 
-### Instances {#instances}
+Also configure channels for playbooks that contain transactional messages like order confirmations.
 
-Scroll down to the instances section to get an overview of the instances of this playbook which you or members of your team have already created. You can use various controls to sort and filter the displayed instances, for example to only see the ones created by you. You can also see various information about each instance, as listed below.
+### Push channel surface
 
-|Item | Description |
-|---------|----------|
-| **[!UICONTROL Name]** | The name of the instance based on the playbook. You can customize the name and description of an instance. Read the section on [how to edit instance metadata](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata) for more information. |
-| **[!UICONTROL Status]** | Indicates the status of the instance. A **[!UICONTROL submitted]** instance is ready for use. |
-| **[!UICONTROL Created]** | Indicates when the instance was created. |
-| **[!UICONTROL Created By]** | Indicates who created the instance. |
-| **[!UICONTROL Last Modified]** | Indicates when the instance was last modified. |
-
-{style="table-layout:auto"}
-
-![Playbook instance highlighted.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-instances.png)
-
-## Next steps - Create a playbook instance {#next-steps-create-instance}
-
-When you are ready to proceed with a playbook and create an instance, select **[!UICONTROL Create Instance]** to proceed with the playbook and generate technical assets. Read the guide on [how to create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md) for further information.
+Confirm that the app surfaces are configured either from the Experience Platform or Data Collections interface. This is how app surfaces look like in the Data Collections environment. 
