@@ -2,7 +2,7 @@
 
 [Overview](#overview)
 
-[The Magnite-Streaming: Real-Time Destination](#the-magnite:-streaming-real-time-destination)
+[The Magnite-Streaming: Real-Time Destination](#the-magnite-streaming-real-time-destination)
 
 [Prerequisites](#prerequisites)
 
