@@ -2,7 +2,7 @@
 
 [Overview](#overview)
 
-[The Magnite-Streaming Real-Time Destination](#the-magnite-streaming-real-time-destination)
+[The Magnite-Streaming: Batch Destination](#the-magnite-streaming-batch-destination)
 
 [Prerequisites](#prerequisites)
 
@@ -35,11 +35,11 @@ The Magnite-Adobe Experience Platform integration offers Magnite Streaming clien
 
 If you are looking for the Real-time destination configuration, [look here](magnite-streaming.md)
 
-### **The Magnite-Streaming Daily Destination**
+### **The Magnite-Streaming: Batch Destination**
 
 This destination allows Magnite clients to deliver Adobe CDP audiences in batch, at a daily cadence to Magnite Streaming to create segments used for advertising targeting and activation. Post-processing, segments are available for targeting deals created in Magnite.
 
-All Magnite integrations require at least the Daily/Batch destination to be setup. If you want/need to setup a Realtime destination, see [this doc](magnite-streaming.md). Please reach out to your account manager for more info regarding the Realtime destination
+All Magnite integrations require at least the Daily/Batch destination to be setup. If you want/need to setup a Real-time destination, see [this doc](magnite-streaming.md). Please reach out to your account manager for more info regarding the Real-time destination
 
 ### 
 
