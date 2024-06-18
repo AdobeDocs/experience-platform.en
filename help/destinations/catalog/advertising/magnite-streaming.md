@@ -2,7 +2,7 @@
 
 [Overview](#overview)
 
-[The Magnite-Streaming Real-Time Destination](#the-magnite-streaming-real-time-destination)
+[The Magnite-Streaming: Real-Time Destination](#the-magnite:-streaming-real-time-destination)
 
 [Prerequisites](#prerequisites)
 
@@ -33,9 +33,9 @@ The Magnite-Adobe Experience Platform integration offers Magnite Streaming clien
 
 Be advised that in order to properly integrate with the Magnite platform, the Magnite Batch destiniation should be used in addition to the Real-time Destination. Only setting up the Real-time Destiniation will result in a failed integration.  This document only covers the Real-time destination setup. Batch destination can be found [via this link](magnite-batch.md)
 
-### **The Magnite-Streaming Real-Time Destination**
+### **The Magnite-Streaming: Real-Time Destination**
 
-This destination allows Magnite clients to deliver Adobe CDP audiences in real time to Magnite Streaming for advertising targeting. Post-processing, segments are available for targeting deals created in Magnite. **Please note:**
+This destination allows Magnite clients to deliver Adobe CDP audiences in real-time to Magnite Streaming for advertising targeting. Post-processing, segments are available for targeting deals created in Magnite. **Please note:**
 
 - The real-time destination system will attempt to send the events with a p95 of \<10 mins after a Profile segmentation/Update event. This means that 95% of the time, profile segment updates will be delivered to Magnite Streaming in under 10 min. The actual receipt and processing of the events within Magnite Streaming depends on the shared data volume.
 
