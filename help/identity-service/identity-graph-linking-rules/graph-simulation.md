@@ -2,8 +2,13 @@
 title: Graph Simulation UI Guide
 description: Learn how to use the Graph Simulation in the Identity Service UI.
 badge: Beta
+exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 ---
 # [!DNL Graph Simulation] UI guide
+
+>[!AVAILABILITY]
+>
+>This feature is not yet available; the beta program for identity graph linking rules is expected to start in July on development sandboxes. Contact your Adobe account team for information on the participation criteria.
 
 [!DNL Graph Simulation] is a tool in the Identity Service UI that you can use to simulate how an identity graph behaves given a particular combination of identities and how you configure the [identity optimization algorithm](./identity-optimization-algorithm.md).
 
