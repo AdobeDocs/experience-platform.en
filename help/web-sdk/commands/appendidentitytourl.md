@@ -13,7 +13,7 @@ The query string generated and appended to the URL is `adobe_mc`. If the Web SDK
 >
 >If consent has not been provided, the URL from this method is returned unchanged. This command runs immediately; it does not wait for a consent update.
 
-## Append identity to URL using the Web SDK extension
+## Append identity to URL using the Web SDK extension {#extension}
 
 Appending an identity to a URL is performed as an action within a rule in the Adobe Experience Platform Data Collection tags interface.
 

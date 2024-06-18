@@ -109,6 +109,14 @@ You can also search for audiences using the search bar, which utilizes [Lucene's
 
 ## Rule builder canvas {#rule-builder-canvas}
 
+>[!IMPORTANT]
+>
+>As of the June 2024 release, the "This month" and the "This year" time constraints represent "month-to-date" and "year-to-date" respectively. For example, if you created an audience on July 18th looking for "all customers whose birthday occurs this month", the audience would get all customers whose birthdays occurred from July 1st to July 31st. On August 1st, this audience would get all customers whose birthday occurs from August 1st to August 31st.
+>
+>Previously, "This month" and "this year" represented 30 days and 365 days respectively, which failed to account for months with 31 days and leap years.
+>
+>In order to update your audiences' logic, please re-save your previously created audiences.
+
 A segment definition is a collection of rules used to describe key characteristics or behavior of a target audience. These rules are created using the rule builder canvas, located in the center of [!DNL Segment Builder].
 
 To add a new rule to your segment definition, drag a tile from the **[!UICONTROL Fields]** tab and drop it onto the rule builder canvas. You will then be presented with context-specific options according to the type of data being added. Available data types include: strings, dates, [!DNL ExperienceEvents], "[!UICONTROL Event Types]", and audiences. 
