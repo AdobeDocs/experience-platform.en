@@ -1,6 +1,6 @@
 ---
 title: setConsent
-description: Used on each page to track the user's consent.
+description: Used on each page to track your users' consent preferences.
 exl-id: d01a6ef1-4fa7-4a60-a3a1-19568b4e0d23
 ---
 
@@ -22,7 +22,12 @@ Adobe recommends that you store any consent dialog preferences separately from W
 
 ## Using `defaultConsent` together with `setConsent` {#using-consent}
 
-The Web SDK offers two complementary consent configuration options: [`defaultConsent`](configure/defaultconsent.md) and [`setConsent`](setconsent.md). When used together, these settings can lead to different data collection and cookie setting results, depending on their configured values.
+The Web SDK offers two complementary consent configuration commands:
+
+* [`defaultConsent`](configure/defaultconsent.md): This command is meant to capture the consent preferences of Adobe customers using Web SDK.
+* [`setConsent`](setconsent.md): This command is meant to capture the consent preferences of your site visitors.
+
+When used together, these settings can lead to different data collection and cookie setting results, depending on their configured values.
 
 See the table below to understand when data collection occurs and when cookies are set, based on consent settings.
 
@@ -38,6 +43,16 @@ See the table below to understand when data collection occurs and when cookies a
 | `out` | `out` | No | No |
 | `out` | Not set | No | No |
 
+The following cookies are set when the consent configuration allows:
+
+| Name | Max age | Description |
+|---|---|---|
+| **AMCV_###@AdobeOrg** | 34128000 (395 days) | Present when [`idMigrationEnabled`](configure/idmigrationenabled.md) is enabled. It helps when transitioning to Web SDK while some parts of the site are still using `visitor.js`. |
+| **Demdex cookie** | 15552000 (180 days) | Present if ID synchronization is enabled. Audience Manager sets this cookie to assign a unique ID to a site visitor. The demdex cookie helps Audience Manger perform basic functions, such as visitor identification, ID synchronization, segmentation, modeling, reporting, and so on.|
+| **kndctr_orgid_cluster** | 1800 (30 minutes) | Stores the Edge Network region that serves the current user's requests. The region is used in the URL path so that the Edge Network can route the request to the correct region. If a user connects with a different IP address or in a different session, the request is again routed to the closest region. |
+| **kndct_orgid_identity** | 34128000 (395 days) | Stores the ECID, as well as other information related to the ECID. |
+| **kndctr_orgid_consent** | 15552000 (180 days) | Stores the users consent preference for the website. |
+|**s_ecid**|63115200 (2 years)|Contains a copy of the Experience Cloud ID ([!DNL ECID]) or MID. The MID is stored in a key-value pair that follows this syntax, `s_ecid=MCMID\|<ECID>`.|
 
 ## Set consent using the Web SDK tag extension
 
