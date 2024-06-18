@@ -31,7 +31,7 @@ Destinations](#setting-up-the-destinations)
 
 The Magnite-Adobe Experience Platform integration offers Magnite Streaming clients Real-Time and Daily Destinations to map and export audiences for targeting and activation on the Magnite Streaming platform. The following document provides sample use cases to help you better understand how and when the Real time destination should be used, as well as step-by-step instructions for destination configuration for the Real-time endpoint.
 
-Be advised that in order to properly integrate with the Magnite platform, the Magnite Batch destiniation in addition to the Real-time Destination. Only setting up the Real-time Destiniation will result in a failed integration.  This document only covers the Real-time destination setup. Batch destination can be found [via this link](magnite-batch.md)
+Be advised that in order to properly integrate with the Magnite platform, the Magnite Batch destiniation should be used in addition to the Real-time Destination. Only setting up the Real-time Destiniation will result in a failed integration.  This document only covers the Real-time destination setup. Batch destination can be found [via this link](magnite-batch.md)
 
 ### **The Magnite-Streaming Real-Time Destination**
 
@@ -43,7 +43,7 @@ This destination allows Magnite clients to deliver Adobe CDP audiences in real t
 
 - Audiences shared to Magnite Streaming using the real-time destination will also need to be shared using the Magnite [Streaming Daily destination](magnite-batch.md).
 
-For more information on whether this Real-time destination is right for you, please contact your Magnite Streaming account representative for more information.
+For more information on whether this Real-time destination is right for you, please contact your Magnite Streaming account representative.
 
 ## Prerequisites
 
