@@ -3,6 +3,7 @@ solution: Experience Platform
 title: Discover playbooks
 description: Learn how to discover a gallery of playbooks and get started with an inspirational sandbox.
 role: User
+exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 ---
 # Discover playbooks
 
@@ -64,5 +65,4 @@ Confirm that the app surfaces are configured either from the Experience Platform
 
 ## Next steps {#next-steps}
 
-Now that you've read this document, you should know how to setup an inspirational sandbox and be familiar with different ways of accessing use case playbooks within Platform. As a next step, read about how to [find](/help/use-case-playbooks/playbooks/find.md) the right playbook. 
-
+Now that you've read this document, you should know how to setup an inspirational sandbox and be familiar with different ways of accessing use case playbooks within Platform. As a next step, read about how to [find](/help/use-case-playbooks/playbooks/find.md) the right playbook.
