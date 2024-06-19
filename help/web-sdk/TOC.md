@@ -85,7 +85,6 @@ role: Developer
     * [Configure Web In-app Messaging support in Web SDK](personalization/web-in-app-messaging.md)
 
 * Consent {#consent}
-  * [Supporting consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
     * [Overview](consent/iab-tcf/overview.md)
     * [Integrate with tags](consent/iab-tcf/with-tags.md)
