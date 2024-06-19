@@ -10,10 +10,6 @@ Use the Advanced Data Lifecycle Management UI and Data Hygiene API to efficientl
 
 This guide requires a working understanding of the Data Lifecycle workspace and the [Data Hygiene API](./api/overview.md). Before continuing this document, familiarize yourself with the guides on [Advanced Data Lifecycle Management](./home.md) and [creating record delete requests](./ui/record-delete.md) or [dataset expirations in the UI](./ui/dataset-expiration.md), or through the API.
 
->[!NOTE] 
-> 
->The Record Delete feature is currently in beta and available only in a **limited release**. It is not available to all customers. Record delete requests are only available for organizations in the limited release.
-
 ## Work order creation guidelines {#work-order-creation-guidelines}
 
 You can use the `/workorder` endpoint in the Data Hygiene API to programmatically manage record delete requests in Experience Platform. With this endpoint, you can create a delete request, check on its status, or update an existing request. See the [Work order endpoint document](./api/workorder.md) to learn how to perform these actions using the API.
