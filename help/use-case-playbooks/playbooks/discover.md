@@ -3,6 +3,7 @@ solution: Experience Platform
 title: Discover playbooks
 description: Learn how to discover a gallery of playbooks and get started with an inspirational sandbox.
 role: User
+exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
 ---
 # Discover playbooks
 
