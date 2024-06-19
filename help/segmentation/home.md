@@ -20,7 +20,7 @@ You should understand the following key terms used throughout this document:
 
 ## How segmentation works
 
-Segmentation is the process of defining specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. For example, in an email campaign called "Did you forget to buy your sneakers?", you may want an audience of all users who searched for running shoes within the last 30 days, but who did not complete a purchase. 
+Segmentation is the process of defining specific attributes or behaviors shared by a subset of profiles from your Profile store to distinguish a marketable group of people from your customer base. For example, in an email campaign called "Did you forget to buy your sneakers?", you may want an audience of all users who searched for running shoes within the last 30 days, but who did not complete a purchase. 
 
 Once an audience has been conceptually defined, it is built in [!DNL Experience Platform]. Typically, audiences are built by the marketer or audience specialist although some organizations prefer they be created by their marketing department, in collaboration with their data analysts. Upon reviewing the data being sent to [!DNL Platform], the data analyst can create the audience in two ways - either by creating a segment definition by selecting which fields and values will be used to build the rules or conditions of the audience, or by composing an audience using the Audience Composition.
 
@@ -86,7 +86,7 @@ Batch audiences are automatically evaluated every 24 hours. If you want to evalu
 >abstract="Edge segmentation is the ability to evaluate segments in Platform instantaneously on the Edge Network, enabling same-page and next-page personalization use cases."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Edge segmentation UI guide"
 
-Edge segmentation is the ability to evaluate segments in Platform instantaneously [on the Edge Network](../edge/home.md), enabling same-page and next-page personalization use cases. 
+Edge segmentation is the ability to evaluate segments in Platform instantaneously [on the Edge Network](../web-sdk/home.md), enabling same-page and next-page personalization use cases. 
 
 To learn more about edge segmentation, please read either the [API documentation](./api/edge-segmentation.md) or the [UI documentation](./ui/edge-segmentation.md).
 

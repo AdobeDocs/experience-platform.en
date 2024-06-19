@@ -12,7 +12,8 @@ This tutorial covers the steps for retrieving data from a CRM source and bringin
 
 >[!NOTE]
 >
->In order to create a dataflow, you must already have a valid base connection ID with a CRM source. If you do not have this ID, then see the [sources overview](../../../home.md#customer-relationship-management) for a list of CRM sources that you can create a base connection with.
+>* In order to create a dataflow, you must already have a valid base connection ID with a CRM source. If you do not have this ID, then see the [sources overview](../../../home.md#customer-relationship-management) for a list of CRM sources that you can create a base connection with.
+>* For Experience Platform to ingest data, timezones for all table-based batch sources must be configured to UTC.
 
 ## Getting started
 

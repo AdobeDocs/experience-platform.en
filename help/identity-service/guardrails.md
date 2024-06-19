@@ -8,6 +8,10 @@ exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
 
 This document provides information on use and rate limits for [!DNL Identity Service] data to help you optimize your use of the identity graph. When reviewing the following guardrails, it is assumed that you have modeled the data correctly. If you have questions on how to model your data, please contact your customer service representative.
 
+>[!IMPORTANT]
+>
+>Check your license entitlements in your Sales Order and corresponding [Product Description](https://helpx.adobe.com/legal/product-descriptions.html) on actual usage limits in addition to this guardrails page.
+
 ## Get started
 
 The following Experience Platform services are involved with modeling Identity data: 
@@ -95,7 +99,7 @@ Deletion only happens to data in the Identity Service and not Real-Time Customer
 If you would like to preserve your authenticated events against the CRM ID, then it is recommended that you change your primary IDs from ECID to CRM ID. Read the following documents for steps on how to implement this change:
 
 * [Configure identity map for Experience Platform tags](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Identity data in the Experience Platform Web SDK](../edge/identity/overview.md#using-identitymap)
+* [Identity data in the Experience Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
 
 ### Example scenarios
 

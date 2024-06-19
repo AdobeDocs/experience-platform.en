@@ -4,6 +4,7 @@ user-guide-title: Adobe Experience Platform Assurance
 breadcrumb-title: Assurance Guide
 user-guide-description: Adobe Experience Platform Assurance lets you inspect, proof, simulate, and validate how you collect data or serve experiences within your mobile applications.
 feature: Assurance
+role: Developer
 ---
 
 # Adobe Experience Platform Assurance {#assurance}
@@ -13,6 +14,7 @@ feature: Assurance
 - Views {#view}
   - [Event transactions](./views/event-transactions.md)
   - [Extension Versions](./views/extension-versions.md)
+  - [Edge Delivery](./views/edge-delivery.md)
   - [In-app Messaging](./views/in-app-messaging.md)
   - [On Device Views](./views/on-device-views.md)
   - [Places Service](./views/places-service.md)

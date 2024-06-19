@@ -1,9 +1,12 @@
 ---
 title: Work Order API Endpoint
 description: The /workorder endpoint in the Data Hygiene API allows you to programmatically manage deletion tasks for identities.
+badgeBeta: label="Beta" type="Informative"
+role: Developer
+badge: Beta
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 ---
-# [!BADGE Beta]{type=Informative} Work order endpoint {#work-order-endpoint}
+# Work order endpoint {#work-order-endpoint}
 
 The `/workorder` endpoint in the Data Hygiene API allows you to programmatically manage record delete requests in Adobe Experience Platform.
 
@@ -119,9 +122,9 @@ A successful response returns the details of the record delete.
 
 {style="table-layout:auto"}
 
-## Retrieve the status of a record delete (#lookup)
+## Retrieve the status of a record delete {#lookup}
 
-After [creating a record delete request](#create), you can check on its status using a GET request.
+After you [create a record delete request](#create), you can check on its status using a GET request.
 
 **API format**
 
@@ -240,34 +243,41 @@ A successful response returns the details of the record delete.
 
 ```json
 {
-  "workorderId": "a15345b8-a2d6-4d6f-b33c-5b593e86439a",
-  "orgId": "{ORG_ID}",
-  "bundleId": "BN-35c1676c-3b4f-4195-8d6c-7cf5aa21efdd",
-  "action": "identity-delete",
-  "createdAt": "2022-07-21T18:05:28.316029Z",
-  "updatedAt": "2022-07-21T17:59:43.217801Z",
-  "status": "received",
-  "createdBy": "{USER_ID}",
-  "datasetId": "c48b51623ec641a2949d339bad69cb15",
-  "displayName" : "Update - displayName",
-  "description" : "Update - description",
-  "productStatusDetails": [
-    {
-        "productName": "Data Management",
-        "productStatus": "success",
-        "createdAt": "2022-08-08T16:51:31.535872Z"
-    },
-    {
-        "productName": "Identity Service",
-        "productStatus": "success",
-        "createdAt": "2022-08-08T16:43:46.331150Z"
-    },
-    {
-        "productName": "Profile Service",
-        "productStatus": "waiting",
-        "createdAt": "2022-08-08T16:37:13.443481Z"
-    }
-  ]
+    "workorderId": "DI-61828416-963a-463f-91c1-dbc4d0ddbd43",
+    "orgId": "{ORG_ID}",
+    "bundleId": "BN-aacacc09-d10c-48c5-a64c-2ced96a78fca",
+    "action": "identity-delete",
+    "createdAt": "2024-06-12T20:02:49.398448Z",
+    "updatedAt": "2024-06-13T21:35:01.944749Z",
+    "operationCount": 1,
+    "status": "ingested",
+    "createdBy": "{USER_ID}",
+    "datasetId": "666950e6b7e2022c9e7d7a33",
+    "datasetName": "Acme_Dataset_E2E_Identity_Map_Schema_5_1718178022379",
+    "displayName": "Updated Display Name",
+    "description": "Updated Description",
+    "productStatusDetails": [
+        {
+            "productName": "Data Management",
+            "productStatus": "waiting",
+            "createdAt": "2024-06-12T20:11:18.447747Z"
+        },
+        {
+            "productName": "Identity Service",
+            "productStatus": "success",
+            "createdAt": "2024-06-12T20:36:09.020832Z"
+        },
+        {
+            "productName": "Profile Service",
+            "productStatus": "waiting",
+            "createdAt": "2024-06-12T20:11:18.447747Z"
+        },
+        {
+            "productName": "Journey Orchestrator",
+            "productStatus": "success",
+            "createdAt": "2024-06-12T20:12:19.843199Z"
+        }
+    ]
 }
 ```
 

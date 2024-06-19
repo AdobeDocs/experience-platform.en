@@ -49,6 +49,8 @@ To add audiences to the Audience block. select **[!UICONTROL Add Audience]**.
 >[!IMPORTANT]
 >
 >Please note that **only** audiences defined using the default merge policy will appear. 
+>
+>Additionally, only **published** audiences created using Segment Builder can be used. Audiences created using Audience Composition and externally generated audiences are **not** available.
 
 A list of audiences appears. Select the audiences you want to include, followed by **[!UICONTROL Add]** to append them to your audience block.
 
@@ -95,6 +97,10 @@ The **[!UICONTROL Exclude]** block is added. When this block is selected, detail
 If you exclude by audience, you can select which audiences you want to exclude by selecting **[!UICONTROL Add Audience]**.
 
 ![The [!UICONTROL Add audience] button is selected, which lets you choose which audience you want to exclude.](../images/ui/audience-composition/add-excluded-audience.png)
+
+>[!IMPORTANT]
+>
+>Only **published** audiences created using Segment Builder can be used. Audiences created using Audience Composition and externally generated audiences are **not** available.
 
 A list of audiences appears. Select **[!UICONTROL Add]** to add the audiences you want to exclude to your exclude block.
 
@@ -214,13 +220,13 @@ A list of profile attributes appears. On this popover, you can select the attrib
 
 After selecting the attribute, you can select the order to rank it by. This is either in ascending (from lowest to highest) or descending (from highest to lowest) order.
 
-Additionally, you can limit the number of audiences returned by enabling the **[!UICONTROL Add profile limit]** toggle. When this toggle is enabled, you can set the maximum number of audiences returned within the **[!UICONTROL Included profiles]** field.
+Additionally, you can limit the number of profiles returned by enabling the **[!UICONTROL Add profile limit]** toggle. When this toggle is enabled, you can set the maximum number of profiles returned within the **[!UICONTROL Included profiles]** field.
 
-![The Add profile limit toggle is highlighted, which lets you limit the number of audiences returned.](../images/ui/audience-composition/add-profile-limit.png)
+![The Add profile limit toggle is highlighted, which lets you limit the number of profiles returned.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Split] {#split-block}
 
-The **[!UICONTROL Split]** block type allows you to split your new audience into various sub-audiences. You can either split this audience based on percentage or by an attribute.
+The **[!UICONTROL Split]** block type allows you to split your new audience into various sub-audiences. You can either split this audience based on percentage or by an attribute. When splitting your audience into sub-audiences, this split is **persistent**. This means that the profile will be in the same sub-audience on each evaluation.
 
 To add a **[!UICONTROL Split]** block, select the **+** icon, followed by **[!UICONTROL Split]**.
 

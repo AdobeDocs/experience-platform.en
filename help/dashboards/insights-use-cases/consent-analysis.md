@@ -16,13 +16,9 @@ The use cases covered in this guide are consent trending and consent overlap.
 - **Consent trending** tracks how user consent has trended over time. Analyzing consent preference changes helps marketers plan and executing campaigns that adapt to those user preference changes. For example, you may want to run targeted educational campaigns, transparency and trust campaigns, or incentive campaigns to drive consent choices. You could also correlate campaigns that might have been negatively impacting consent to proactively reduce the frequency of those campaigns.
 - **Consent overlap** uses the overlap among consent channels to deliver consistent personalized messaging on multiple channels for your customers who have consented to multiple channels. Marketers can prioritize and allocate resources to certain channels where a higher degree of consent and personalized messaging might resonate with customers and generating higher response rates.
 
-<!-- ## Build a consent dashboard {#build-a-consent-dashboard} -->
-
 ## Create consented audiences {#create-consent-audiences}
 
 To build a consent dashboard, you must first create an audience of all the profiles that have consented to contact. To navigate to the Real-Time Customer Data Platform Segment Builder, select **[!UICONTROL Audiences]** in the left navigation of the Platform UI. From the the [!UICONTROL Customer] tab of the [!UICONTROL Audiences] dashboard, select **[!UICONTROL Create audience]** in the top right of the view, then **[!UICONTROL Build rules]**.
-
-<!-- Update screenshot below to include Create audience -->s
 
 ![The [!UICONTROL Audiences] dashboard with [!UICONTROL Customer], [!UICONTROL Audiences], and [!UICONTROL Create segment] highlighted.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -141,7 +137,7 @@ After the widget composer is populated with data from your chosen table, perform
 >You can now resize or move the widget to the desired size and position before you save the dashboard.
 
 
-The image below demonstrates how your finished widget appears and other potential custom insights. For more details on the types of widgets that can be created, refer to the [data model documentation](../cdp-insights-data-model.md).
+The image below demonstrates how your finished widget appears and other potential custom insights. For more details on the types of widgets that can be created, refer to the [data model documentation](../data-models/cdp-insights-data-model-b2c.md).
 
 <!-- The diagram shows straight lines due to a lack of data, however in your environment the trends will reflect the actual changes over time. -->
 

@@ -26,7 +26,7 @@ Before diving into the details of Identity Service, please read the following ta
 | Term | Definition |
 | --- | --- |
 | Identity | An identity is data that is unique to an entity. Typically, this is a real-world object, such as an individual person, a hardware device, or a web browser (represented by a cookie). A fully qualified identity consists of two elements: an **identity namespace** and an **identity value**. |
-| Identity namespace | An identity namespace is the context of a given identity. For example, a namespace of `Email` could correspond with **julien<span>@acme.com**. Similarly, a namespace of `Phone` could correspond with `555-555-1234`. For more information, read the [identity namespace overview](./features/namespaces.md) |
+| Identity namespace | An identity namespace is the context of a given identity. For example, a namespace of `Email` could correspond with the identity value: **julien<span>@acme.com**. Similarly, a namespace of `Phone` could correspond with the identity value: `555-555-1234`. For more information, read the [identity namespace overview](./features/namespaces.md). |
 | Identity value | An identity value is a string that represents a real-world entity and is categorized within Identity Service through a namespace. For example, the identity value (string) **julien<span>@acme.com** could be categorized as an `Email` namespace. |
 | Identity type | An identity type is a component of an identity namespace. The identity type designates whether identity data is linked in an identity graph or not. |
 | Link | A link or a linkage, is a method to establish that two disparate identities represent the same entity. For example, a link between "`Email` = julien<span>@acme.com" and "`Phone` = 555-555-1234" means that both identities represent the same entity. This suggests that the customer who has interacted with your brand with both the email address of julien<span>@acme.com and the phone number of 555-555-1234 is the same. |
@@ -103,7 +103,7 @@ Identity Service plays a vital role within Experience Platform. Some of these ke
 
 * [Schemas](../xdm/home.md): Within a given schema, the schema fields that are marked as identity allow for identity graphs to be built.
 * [Datasets](../catalog/datasets/overview.md): When a dataset is enabled for ingestion into Real-Time Customer Profile, identity graphs are generated from the dataset, given that the dataset as at least two fields marked as identity.
-* [Web SDK](../edge/home.md): Web SDK sends experience events to Adobe Experience Platform, and Identity Service generates a graph when two or more identities exist in the event.
+* [Web SDK](../web-sdk/home.md): Web SDK sends experience events to Adobe Experience Platform, and Identity Service generates a graph when two or more identities exist in the event.
 * [Real-Time Customer Profile](../profile/home.md): Before attributes and events for a given profile are merged, Real-Time Customer Profile could reference the identity graph. For more information, read the guide on [understanding the relationship between Identity Service and Real-Time Customer Profile](./identity-and-profile.md).
 * [Destinations](../destinations/home.md): Destinations can send profile information to other systems based on an identity namespace, such as hashed email.
 * [Segment Match](../segmentation/ui/segment-match/overview.md): Segment Match matches two profiles across two different sandboxes that have the same identity namespace and identity value.

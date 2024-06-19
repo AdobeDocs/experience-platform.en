@@ -1,6 +1,7 @@
 ---
 title: View Insight SQL
 description: View the SQL behind your Profile, Audience, Destination, and customized insights and execute the query on demand through the Query Editor.
+exl-id: fd728926-c113-4593-92b1-916a02d09d41
 ---
 # View insight SQL
 
@@ -52,4 +53,4 @@ The Query Editor appears. You can now edit the statement and query your platform
 
 ## Next steps
 
-After reading this document, you now understand how to access the SQL for any insight within either the standard dashboards or a user-defined dashboard. If you have not already done so, you are recommended to read the [Real-Time Customer Data Platform Insights Data Model document](./cdp-insights-data-model.md). That document contains insights on customizing SQL templates for Real-Time CDP reports tailored to your marketing and KPI needs.
+After reading this document, you now understand how to access the SQL for any insight within either the standard dashboards or a user-defined dashboard. If you have not already done so, you are recommended to read the [Real-Time Customer Data Platform Insights Data Model document](./data-models/cdp-insights-data-model-b2c.md). That document contains insights on customizing SQL templates for Real-Time CDP reports tailored to your marketing and KPI needs.

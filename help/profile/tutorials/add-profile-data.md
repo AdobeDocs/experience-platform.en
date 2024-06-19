@@ -34,6 +34,6 @@ Using the [!DNL Real-Time Customer Profile] Access API, you can retrieve batch d
 
 For detailed instructions on how to access entities using the [!DNL Real-Time Customer Profile] API, please refer to the [entities endpoint guide](../api/entities.md), also known as the "[!DNL Profile Access] API".
 
-## Update Profile Store data
+## Update Profile store data
 
-Occasionally it may be necessary to update data in your organization's Profile Store. For example, you may need to correct records or change an attribute value. This can be done through batch ingestion and requires a Profile-enabled dataset configured with an upsert tag. For more information on how to configure a dataset for attribute updates, please refer to the tutorial for [enabling a dataset for Profile and upsert](../../catalog/datasets/enable-upsert.md).
+Occasionally it may be necessary to update data in your organization's Profile store. For example, you may need to correct records or change an attribute value. This can be done through batch ingestion and requires a Profile-enabled dataset configured with an upsert tag. For more information on how to configure a dataset for attribute updates, please refer to the tutorial for [enabling a dataset for Profile and upsert](../../catalog/datasets/enable-upsert.md).

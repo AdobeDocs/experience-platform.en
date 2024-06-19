@@ -44,10 +44,6 @@ The [!UICONTROL Create schema] workflow appears. Next, choose a base class for t
 
 See the [XDM individual profile](../classes/individual-profile.md) and [XDM ExperienceEvent](../classes/experienceevent.md) documentation for more information on these classes. For the purposes of this tutorial, select **[!UICONTROL XDM Individual Profile]** followed by **[!UICONTROL Next]**.
 
-
-
-<!--  -->
-
 <!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
 
 
@@ -110,6 +106,12 @@ For this tutorial, select the **[!UICONTROL Demographic Details]** field group, 
 The schema canvas reappears. The **[!UICONTROL Field groups]** section now lists "[!UICONTROL Demographic Details]" and the **[!UICONTROL Structure]** section includes the fields contributed by the field group. You can select the field group's name under the **[!UICONTROL Field groups]** section to highlight the specific fields it provides within the canvas.
 
 ![The Schema Editor with the Demographic Details field groups highlighted.](../images/tutorials/create-schema/demographic-details-structure.png)
+
+>[!NOTE] 
+>
+>Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](../images/ui/explore/padlock-icon.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
+>
+>![The Schema Editor with the padlock icon highlighted](../images/ui/explore/padlock-icon-highlight.png)
 
 This field group contributes several fields under the top-level name `person` with the data type "[!UICONTROL Person]". This group of fields describes information about an individual, including name, birth date, and gender. 
 
@@ -341,11 +343,36 @@ Select **[!UICONTROL Enable]** to confirm your choice. You can select the **[!UI
 
 ## More actions {#more}
 
-Within the Schema Editor you can also conduct quick actions to copy the JSON structure of the schema or delete the schema if it has not been enabled for Real-Time Customer Profile or has associated datasets. Select [!UICONTROL More] at the top of the view to display a drop down with quick actions. 
-
-The Copy JSON structure functionality allows you to see what a sample payload would look like while you are still building the schema and your data pipelines. It is especially helpful for situations where there are complex object map structures in the schema such as an identity map.
+Within the Schema Editor you can also conduct quick actions to copy the JSON structure of the schema or delete the schema. Select [!UICONTROL More] at the top of the view to display a drop down with quick actions. 
 
 ![The Schema Editor with the More button highlighted and the drop down options displayed.](../images/tutorials/create-schema/more-actions.png)
+
+### Delete a schema {#delete-a-schema}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenabledwithdatasets"
+>title="Cannot delete schema"
+>abstract="The schema cannot be deleted because it has been enabled for Profile and has associated datasets."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenablednodatasets"
+>title="Cannot delete schema"
+>abstract="The schema cannot be deleted because it has been enabled for Profile."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_withdatasetsnotprofileenabled"
+>title="Cannot delete schema"
+>abstract="The schema cannot be deleted because it has associated datasets."
+
+A schema can be deleted within the UI from the Schema Editor using [!UICONTROL More] actions and also from the schema details in the [!UICONTROL Browse] tab. There are certain conditions that prevent a schema from being deleted. A schema cannot be deleted if:
+
+* The schema is enabled for Profile.
+* The schema is enabled for Profile and has associated datasets.
+* The schema has associated datasets but is not enabled for Profile.
+
+### Copy JSON structure {#copy-json-structure}
+
+Select **[!UICONTROL Copy JSON structure]** to generate an export payload for any schema in the Schema Library. This action copies the JSON structure to your clipboard. Your exported JSON can then be used to import the schema, and any related resources, into a different sandbox or organization. This makes sharing and reusing schemas between different environments simple and efficient.
 
 ## Next steps and additional resources
 

@@ -56,6 +56,10 @@ After completing the authentication process, navigate back to your [!DNL Azure] 
 
 The next screen prompts you to choose a role for this assignment. Select **[!DNL Key Vault Crypto Service Encryption User]** before selecting **[!DNL Next]** to continue.
 
+>[!NOTE]
+>
+>If you have the [!DNL Managed-HSM Key Vault] tier, then you must select the **[!DNL Managed HSM Crypto Service Encryption User]** user role.
+
 ![The [!DNL Microsoft Azure] dashboard with the [!DNL Key Vault Crypto Service Encryption User] highlighted.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
 On the next screen, choose **[!DNL Select members]** to open a dialog in the right rail. Use the search bar to locate the service principal for the CMK application and select it from the list. When finished, select **[!DNL Save]**.

@@ -2,6 +2,7 @@
 solution: Experience Platform
 title: Previews and Estimates API Endpoints
 description: As segment definition are developed, you can use the estimate and preview tools within Adobe Experience Platform to view summary-level information to help ensure you are isolating the expected audience.
+role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
 ---
 # Previews and estimates endpoints
@@ -27,9 +28,9 @@ When the ingestion of records into the Profile store increases or decreases the 
 * **Batch ingestion:** For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count.
 * **Streaming ingestion:** For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the count.
 
-The sample size of the scan depends on the overall number of entities in your profile store. These sample sizes are represented in the following table:
+The sample size of the scan depends on the overall number of entities in your Profile store. These sample sizes are represented in the following table:
 
-| Entities in profile store | Sample size |
+| Entities in Profile store | Sample size |
 | ------------------------- | ----------- |
 | Less than 1 million | Full data set |
 | 1 to 20 million | 1 million |

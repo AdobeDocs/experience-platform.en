@@ -3,7 +3,8 @@ product: adobe experience platform
 solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform Guide
-user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audience segments from those profiles, and activate those segments to third-party destinations.
+user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audiences from those profiles, and activate those audiences to third-party destinations.
+role: Admin
 ---
 
 # Real-Time Customer Data Platform Help {#rtcdp}
@@ -26,6 +27,11 @@ user-guide-description: Bring together known and anonymous data from multiple en
   * [Account profile UI guide](accounts/account-profile-ui-guide.md)
 * Administration {#admin}
   * [Administration overview](administration/admin-overview.md)
+* Audiences and segmentation {#segmentation}
+  * [Segmentation overview](segmentation/segmentation-overview.md)
+  * [Segment Builder guide](segmentation/segment-builder-guide.md)
+  * [Segmentation in Real-Time CDP B2B Edition](segmentation/b2b.md)
+  * [Customer AI](segmentation/customer-ai.md)
 * Datasets {#datasets}
   * [Datasets](datasets/dataset.md)
   * [Data quality on Platform](datasets/data-quality.md)
@@ -59,23 +65,20 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Schemas {#schemas}
   * [Schemas overview](schemas/overview.md)
   * [Schemas in Real-Time CDP B2B Edition](schemas/b2b.md)
-* Segments {#segmentation}
-  * [Segmentation overview](segmentation/segmentation-overview.md)
-  * [Segment builder guide](segmentation/segment-builder-guide.md)
-  * [Segmentation in Real-Time CDP B2B Edition](segmentation/b2b.md)
-  * [Customer AI](segmentation/customer-ai.md)
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
   * [Sources in Real-Time CDP B2B Edition](sources/b2b.md)
 * Use cases {#use-cases}
   * [Overview of sample use cases](/help/rtcdp/use-case-guides/overview.md)
-  * Personalization, Insights, and Engagement {#personalization-insights-engagement}
-    * [Intelligently re-engage your customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
   * Customer acquisition {#customer-acquisition}
     * [Engage and acquire new customers without dependency on third-party cookies](/help/rtcdp/partner-data/prospecting.md)  
     * [Personalize onsite experiences for unknown visitors using partner-aided visitor recognition](/help/rtcdp/partner-data/onsite-personalization.md)
     * [Offsite retargeting of unauthenticated users](./partner-data/offsite-retargeting.md)
   * Profile enrichment {#profile-enrichment}
     * [Supplement first-party profiles with partner-provided attributes](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [Experience Platform Release notes](https://www.adobe.com/go/platform-release-notes-en)
+  * Personalized insights and engagement {#personalization-insights-engagement}
+    * [Evolve one-time customer value to lifetime value](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
+    * [Intelligently re-engage your customers](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+    * [Intelligently re-engage your customers: Luma examples](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
+* [Experience Platform Release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 * [Experience Platform Glossary](https://www.adobe.com/go/platform-glossary-en)

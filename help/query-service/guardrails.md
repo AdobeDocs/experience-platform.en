@@ -7,8 +7,11 @@ exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
 # Guardrails for Query Service
 
 Guardrails are thresholds that guide data and system usage, performance optimization, and avoidance of errors or unexpected results in Adobe Experience Platform.
-
 This document provides default usage limits for Query Service data to help you optimize system performance when querying data in relation to your licensing entitlements.
+
+>[!IMPORTANT]
+>
+>Check your license entitlements in your Sales Order and corresponding [Product Description](https://helpx.adobe.com/legal/product-descriptions.html) on actual usage limits in addition to this guardrails page.
 
 ## Prerequisites
 

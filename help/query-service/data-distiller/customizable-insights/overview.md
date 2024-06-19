@@ -1,10 +1,13 @@
 ---
 title: Customizable Insights
-description: Learn about the use cases, essential capabilities, and required steps to develop a customizable insights dashboard with Data Distiller. Discover how the Customizable Insights capability within Data Distiller can enhance transparency and gain operational insights across different dimensions such as profiles, audiences, campaigns, journeys, entitlements, and consent. 
+description: Learn about the use cases, essential capabilities, and required steps to develop a customizable insights dashboard with Data Distiller. Discover how the Customizable Insights capability within Data Distiller can enhance transparency and gain operational insights across different dimensions such as profiles, audiences, campaigns, journeys, entitlements, and consent.
+exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
 ---
 # Customizable Insights
 
 Create bespoke reporting data models to extract deeper insights, optimize strategies, and adapt analytics to meet specific business needs with Data Distiller's Customizable Insights. Use the Customizable Insights capability to enhance transparency and gain operational insights from your Adobe Experience Platform data across dimensions such as profiles, audiences, campaigns, journeys, entitlements, and consent. This capability provides a versatile, adaptive solution to tailor your organization's reporting data models to align with your specific business needs.
+
+To [visualize your Customizable Insights](../../../dashboards/data-distiller/overview.md) you can use [query pro mode](../../../dashboards/data-distiller/customizable-insights/query-pro-mode.md) to conduct complex analysis with custom SQL queries and transform your data into easily interpretable charts. Use query pro mode to create bespoke insights and visulaizations on your dashboards and cater to both technical and non-technical audiences by downloading your insights as CSV files. 
 
 This document covers the use cases, essential capabilities, and required steps to develop a customizable insights dashboard with Data Distiller.
 

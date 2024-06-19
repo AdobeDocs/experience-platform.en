@@ -57,7 +57,7 @@ Experience Platform provides support for ingesting data from a third-party adver
 
 ### Analytics {#analytics}
 
-Experience Platform provides support for ingesting data from a third-party analytics platform. See the following related documents for more information:
+Experience Platform provides support for ingesting data from a third-party analytics platform. Read the following related documents for more information:
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE Streaming]{type=Positive}
@@ -131,10 +131,12 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE Batch]{type=Informative}
 
-### Data partner {#data-partner}
+### Data & Identity Partners {#data-partner}
 
 Experience Platform provides support for ingesting data from a third-party database. See the following related documents for more information on specific source connectors:
 
+- [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE Batch]{type=Informative}
 
 ### eCommerce {#ecommerce}
@@ -155,13 +157,14 @@ Experience Platform provides support for ingesting data from your local system. 
 
 Experience Platform provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
 
-- [[!DNL Braze]](tutorials/ui/create/marketing-automation/braze.md) [!BADGE Streaming]{type=Positive}
+- [[!DNL Braze]](connectors/marketing-automation/braze.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE Batch]{type=Informative}
+- [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE Batch]{type=Informative}
 <!-- 
 - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
@@ -173,6 +176,7 @@ Experience Platform provides support for ingesting data from a third-party payme
 
 - [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Square]](connectors/payments/square.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE Batch]{type=Informative}
 
 ### Streaming {#streaming}
 

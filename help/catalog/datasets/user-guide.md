@@ -35,18 +35,99 @@ This user guide requires a working understanding of the following components of 
 
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and status of the most recent ingestion run.
 
-![An image that highlights the Datasets item within the left navigation bar.](../images/datasets/user-guide/browse-datasets.png)
+![The Platform UI with the Datasets item highlighted in the left navigation bar.](../images/datasets/user-guide/browse-datasets.png)
 
 Select the name of a dataset from the [!UICONTROL Browse] tab to access its **[!UICONTROL Dataset activity]** screen and see details of the dataset you selected. The activity tab includes a graph visualizing the rate of messages being consumed as well as a list of successful and failed batches.
 
-![Details of your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-1.png)
-![Sample batches that belong to your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-2.png)
+![Metrics and visualizations of your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-1.png)
+![The sample batches that relate to your selected dataset are highlighted.](../images/datasets/user-guide/dataset-activity-2.png)
+
+## More actions {#more-actions}
+
+You can [!UICONTROL Delete] or [!UICONTROL Enable a dataset for Profile] from the [!UICONTROL Dataset] details view. To see the available actions, select **[!UICONTROL ... More]** in the top right of the UI. The drop-down menu appears. 
+
+![The Datasets workspace with the [!UICONTROL ... More] dropdown menu highlighted.](../images/datasets/user-guide/more-actions.png)
+
+If you select **[!UICONTROL Enable a dataset for Profile]**, a confirmation dialog appears. Select **[!UICONTROL Enable]** to confirm your choice.
+
+>[!NOTE]
+>
+>To enable a dataset for Profile, the schema that the dataset adheres to must be compatible for use in Real-Time Customer Profile. See the [Enable a dataset for profile](#enable-profile) section for more information.
+
+![The Enable dataset confirmation dialog.](../images/datasets/user-guide/profile-enable-confirmation-dialog.png)
+
+If you select **[!UICONTROL Delete]**, the [!UICONTROL Delete dataset] confirmation dialog appears. Select **[!UICONTROL Delete]** to confirm your choice.
+
+>[!NOTE]
+>
+>You cannot delete system datasets.
+
+You can also delete a dataset or add a dataset for use with Real-Time Customer Profile from the inline actions found on the [!UICONTROL Browse] tab. See the [inline actions section](#inline-actions) for more information.
+
+![The Delete dataset confirmation dialog.](../images/datasets/user-guide/delete-confirmation-dialog.png)
 
 ## Inline dataset actions {#inline-actions}
 
-The datasets UI now offers a collections of inline actions for each available dataset. Select the ellipsis (...) of a dataset that you want to manage to see the available options in a pop-up menu. The available actions include; [[!UICONTROL Preview dataset]](#preview), [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance), [[!UICONTROL Enable unified profile]](#enable-profile), [[!UICONTROL Manage tags]](#add-tags), [[!UICONTROL Move to folders]](#move-to-folders), and [[!UICONTROL Delete]](#delete). More information on these available actions can be found in their respective sections.
+The datasets UI now offers a collections of inline actions for each available dataset. Select the ellipsis (...) of a dataset that you want to manage to see the available options in a pop-up menu. The available actions include; 
 
-### Add dataset tags {#add-tags}
+* [[!UICONTROL Preview dataset]](#preview), 
+* [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance)
+* [[!UICONTROL Enable unified profile]](#enable-profile)
+* [[!UICONTROL Manage tags]](#manage-tags)
+* [[!UICONTROL Move to folders]](#move-to-folders)
+* [[!UICONTROL Delete]](#delete). 
+
+More information on these available actions can be found in their respective sections. To learn how to manage large numbers of datasets simultaneously, refer to the [bulk actions](#bulk-actions) section.
+
+### Preview a dataset {#preview}
+
+You can preview dataset sample data from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] tab, select the ellipses (...) next to the dataset name you wish to preview. A menu list of options appears. Next, select **[!UICONTROL Preview dataset]** from the list of available options. If the dataset is empty, the preview link will be deactivated and will instead say that the preview is not available.
+
+![The Browse tab of the Datasets workspace with the ellipsis and Preview dataset option highlighted for the chosen dataset.](../images/datasets/user-guide/preview-dataset-option.png)
+
+This opens the preview window, where the hierarchical view of the schema for the dataset is shown on the right.
+
+![The dataset preview dialog with information about the structure, as well as sample values, for the dataset are shown.](../images/datasets/user-guide/preview-dataset.png)
+
+Alternatively, from the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. 
+
+![The Preview dataset button is highlighted.](../images/datasets/user-guide/select-preview.png)
+
+For more robust methods to access your data, [!DNL Experience Platform] provides downstream services such as [!DNL Query Service] and [!DNL JupyterLab] to explore and analyze data. See the following documents for more information:
+
+* [Query Service overview](../../query-service/home.md)
+* [JupyterLab user guide](../../data-science-workspace/jupyterlab/overview.md)
+
+### Manage and enforce data governance on a dataset {#manage-and-enforce-data-governance}
+
+You can manage the data governance labels for a dataset by selecting the inline options of the [!UICONTROL Browse] tab. Select the ellipses (...) next to the dataset name you wish to manage, followed by **[!UICONTROL Manage data and access labels]** from the dropdown menu.
+
+Data usage labels, applied at the schema level, allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to schemas for propagation to datasets.
+
+## Enable a dataset for Real-Time Customer Profile {#enable-profile}
+
+Every dataset has the ability to enrich customer profiles with its ingested data. To do so, the schema that the dataset adheres to must be compatible for use in [!DNL Real-Time Customer Profile]. A compatible schema satisfies the following requirements:
+
+* The schema has at least one attribute specified as an identity property.
+* The schema has an identity property defined as the primary identity.
+
+For more information on enabling a schema for [!DNL Profile], see the [Schema Editor user guide](../../xdm/tutorials/create-schema-ui.md).
+
+You can enable a dataset for Profile from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace, select the ellipsis of a dataset that you want to enable for Profile. A menu list of options appears. Next, select **[!UICONTROL Enable unified profile]** from the list of available options.
+
+![The Browse tab of the Datasets workspace with the ellipses and Enable unified profile highlighted.](../images/datasets/user-guide/enable-for-profile.png)
+
+Alternatively, from the dataset's **[!UICONTROL Dataset activity]** screen, select the **[!UICONTROL Profile]** toggle within the **[!UICONTROL Properties]** column. Once enabled, data that is ingested into the dataset will also be used to populate customer profiles.
+
+>[!NOTE]
+>
+>If a dataset already contains data and is then enabled for [!DNL Profile], the existing data is not automatically consumed by [!DNL Profile]. After a dataset is enabled for [!DNL Profile], it is recommended that you re-ingest any existing data to have it contribute to customer profiles.
+
+![The Profile toggle is highlighted within the dataset details page.](../images/datasets/user-guide/enable-dataset-profiles.png)
+
+Datasets that have been enabled for Profile can also be filtered on this criteria. See the section on how to [filter Profile enabled datasets](#filter-profile-enabled-datasets) for more information.
+
+### Manage dataset tags {#manage-tags}
 
 Add custom created tags to organize datasets and improve search, filtering, and sorting capabilities. From the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace, select the ellipsis of a dataset that you want to manage followed by **[!UICONTROL Manage tags]** from the dropdown menu.
 
@@ -61,6 +142,52 @@ The [!UICONTROL Manage tags] dialog can also remove existing tags from a dataset
 Once a tag has been aded to a dataset, the datasets can be filtered based on the corresponding tag. See the section on how to [filter datasets by tags](#enable-profile) for more information.
 
 For more information on how to classify business objects for easier discovery and categorization, see the guide on [managing metadata taxonomies](../../administrative-tags/ui/managing-tags.md). This guide details how a user with appropriate permissions can create pre-defined tags, assigning categories to tags, and perform all related CRUD operations on tags and tag categories in the Platform UI.
+
+### Move to folders {#move-to-folders}
+
+You can place datasets within folders for better dataset management. To move a dataset into a folder, select the ellipses (...) next to the dataset name you wish to manage, followed by **[!UICONTROL Move to folder]** from the dropdown menu.
+
+![The [!UICONTROL Datasets] dashboard with the ellipses and [!UICONTROL Move to folder] highlighted.](../images/datasets/user-guide/move-to-folder.png)
+
+The [!UICONTROL Move] dataset to folder dialog appears. Select the folder you want to move the audience to, then select **[!UICONTROL Move]**. A popup notification informs you that the dataset move has been successful.
+
+![The [!UICONTROL Move] dataset dialog with [!UICONTROL Move] highlighted.](../images/datasets/user-guide/move-dialog.png)
+
+>[!TIP]
+>
+>You can also create folders directly from the Move dataset dialog. To create a folder, select the create folder icon (![The create folder icon.](../images/datasets/user-guide/create-folder-icon.png)) in the top right of the dialog.
+>
+>![The [!UICONTROL Move] dataset dialog with the create folder icon highlighted.](/help/catalog/images/datasets/user-guide/create-folder.png)
+
+Once the dataset is in a folder, you can choose to only display datasets that belong to a specific folder. To open your folder structure, select the show folders icon (![The show folders icon](../images/datasets/user-guide/show-folders-icon.png)). Next, select your chosen folder to see all associated datasets.
+
+![The [!UICONTROL Datasets] dashboards with the datasets folder structure displayed, the show folders icon, and a selected folder highlighted.](../images/datasets/user-guide/folder-structure.png)
+
+### Delete a dataset {#delete}
+
+You can delete a dataset from either the dataset inline actions in the [!UICONTROL Browse] tab or the top right of the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] view, select the ellipses (...) next to the dataset name you wish to delete. A menu list of options appears. Next, select **[!UICONTROL Delete]** from the dropdown menu.
+
+![The Browse tab of the Datasets workspace with the ellipsis and the Delete option highlighted for the chosen dataset.](../images/datasets/user-guide/inline-delete-dataset.png)
+
+A confirmation dialog appears. Select **[!UICONTROL Delete]** to confirm.
+
+Alternatively, select **[!UICONTROL Delete dataset]** from the **[!UICONTROL Dataset activity]** screen. 
+
+>[!NOTE]
+>
+>Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Offer Decisioning]) cannot be deleted.
+
+![The Delete dataset button is highlighted within the dataset details page.](../images/datasets/user-guide/delete-dataset.png)
+
+A confirmation box appears. Select **[!UICONTROL Delete]** to confirm the deletion of the dataset.
+
+![The confirmation modal for deletion is displayed, with the Delete button highlighted.](../images/datasets/user-guide/confirm-delete.png)
+
+### Delete a Profile-enabled dataset
+
+If a dataset is enabled for Profile, deleting that dataset through the UI will delete it from the data lake, Identity Service, and also any profile data associated with that dataset in the Profile store.
+
+You can delete profile data associated with a dataset from the [!DNL Profile] store (leaving the data in the data lake) using the Real-Time Customer Profile API. For more information, see the [profile system jobs API endpoint guide](../../profile/api/profile-system-jobs.md).
 
 ## Search and filter datasets {#search-and-filter}
 
@@ -102,30 +229,24 @@ Similar to the filter for creation date, you can filter your datasets based on t
 
 You can filter datasets based on the schema that defines their structure. Either select the dropdown icon or input the schema name into the text field. A list of potential matches appears. Select the appropriate schema from the list.
 
+## Bulk actions {#bulk-actions}
+
+Use bulk actions to enhance your operational efficiency and perform multiple actions on numerous datasets simultaneously. You can save time and maintain an organized data structure with bulk actions such as [Move to folder](#move-to-folders), [Edit tags](#manage-tags), and [Delete](#delete) datasets. 
+
+To act on more than one dataset at a time, select individual datasets with the checkbox on each row, or select an entire page with the column header checkbox. Once selected, the bulk action bar appears. 
+
+![The Datasets Browse tab with numerous datasets selected and the bulk action bar highlighted.](../images/datasets/user-guide/bulk-actions.png)
+
+When you apply bulk actions to datasets, the following conditions apply:
+
+* You can select datasets from different pages of the UI.
+* If you select a filter, the selected datasets will reset.
+
 ## Sort datasets by created date {#sort}
 
 Datasets in the [!UICONTROL Browse] tab can be sorted by either ascending or descending dates. Select the [!UICONTROL Created] or [!UICONTROL Last updated] column headings to alternate between ascending and descending. Once selected, the column indicates this with either an up or down arrow to the side of the column header.
 
 ![The Browse tab of the Datasets workspace with the Created and Last updated column highlighted.](../images/datasets/user-guide/ascending-descending-columns.png)
-
-## Preview a dataset {#preview}
-
-You can preview dataset sample data from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] tab, select the ellipses (...) next to the dataset name you wish to preview. A menu list of options appears. Next, select **[!UICONTROL Preview dataset]** from the list of available options. If the dataset is empty, the preview link will be deactivated and will instead say that the preview is not available.
-
-![The Browse tab of the Datasets workspace with the ellipsis and Preview dataset option highlighted for the chosen dataset.](../images/datasets/user-guide/preview-dataset-option.png)
-
-This opens the preview window, where the hierarchical view of the schema for the dataset is shown on the right.
-
-![The dataset preview dialog with information about the structure, as well as sample values, for the dataset are shown.](../images/datasets/user-guide/preview-dataset.png)
-
-Alternatively, from the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. 
-
-![The Preview dataset button is highlighted.](../images/datasets/user-guide/select-preview.png)
-
-For more robust methods to access your data, [!DNL Experience Platform] provides downstream services such as [!DNL Query Service] and [!DNL JupyterLab] to explore and analyze data. See the following documents for more information:
-
-* [Query Service overview](../../query-service/home.md)
-* [JupyterLab user guide](../../data-science-workspace/jupyterlab/overview.md)
 
 ## Create a dataset {#create}
 
@@ -172,81 +293,6 @@ The **[!UICONTROL Add data]** step appears. Upload the CSV file by either draggi
 
 ![The Add data screen is displayed. The location where you can upload the CSV file for the dataset is highlighted.](../images/datasets/user-guide/add-csv-data.png)
 
-## Enable a dataset for Real-Time Customer Profile {#enable-profile}
-
-Every dataset has the ability to enrich customer profiles with its ingested data. To do so, the schema that the dataset adheres to must be compatible for use in [!DNL Real-Time Customer Profile]. A compatible schema satisfies the following requirements:
-
-* The schema has at least one attribute specified as an identity property.
-* The schema has an identity property defined as the primary identity.
-
-For more information on enabling a schema for [!DNL Profile], see the [Schema Editor user guide](../../xdm/tutorials/create-schema-ui.md).
-
-You can enable a dataset for Profile from both the inline options of the [!UICONTROL Browse] tab and also the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace, select the ellipsis of a dataset that you want to enable for Profile. A menu list of options appears. Next, select **[!UICONTROL Enable unified profile]** from the list of available options.
-
-![The Browse tab of the Datasets workspace with the ellipses and Enable unified profile highlighted.](../images/datasets/user-guide/enable-for-profile.png)
-
-Alternatively, from the dataset's **[!UICONTROL Dataset activity]** screen, select the **[!UICONTROL Profile]** toggle within the **[!UICONTROL Properties]** column. Once enabled, data that is ingested into the dataset will also be used to populate customer profiles.
-
->[!NOTE]
->
->If a dataset already contains data and is then enabled for [!DNL Profile], the existing data is not automatically consumed by [!DNL Profile]. After a dataset is enabled for [!DNL Profile], it is recommended that you re-ingest any existing data to have it contribute to customer profiles.
-
-![The Profile toggle is highlighted within the dataset details page.](../images/datasets/user-guide/enable-dataset-profiles.png)
-
-Datasets that have been enabled for Profile can also be filtered on this criteria. See the section on how to [filter Profile enabled datasets](#filter-profile-enabled-datasets) for more information.
-
-## Manage and enforce data governance on a dataset {#manage-and-enforce-data-governance}
-
-You can manage the data governance labels for a dataset by selecting the inline options of the [!UICONTROL Browse] tab. Select the ellipses (...) next to the dataset name you wish to manage, followed by **[!UICONTROL Manage data and access labels]** from the dropdown menu.
-
-Data usage labels, applied at the schema level, allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to schemas for propagation to datasets.
-
-## Move to folders {#move-to-folders}
-
-You can place datasets within folders for better dataset management. To move a dataset into a folder, select the ellipses (...) next to the dataset name you wish to manage, followed by **[!UICONTROL Move to folder]** from the dropdown menu.
-
-![The [!UICONTROL Datasets] dashboard with the ellipses and [!UICONTROL Move to folder] highlighted.](../images/datasets/user-guide/move-to-folder.png)
-
-The [!UICONTROL Move] dataset to folder dialog appears. Select the folder you want to move the audience to, then select **[!UICONTROL Move]**. A popup notification informs you that the dataset move has been successful.
-
-![The [!UICONTROL Move] dataset dialog with [!UICONTROL Move] highlighted.](../images/datasets/user-guide/move-dialog.png)
-
->[!TIP]
->
->You can also create folders directly from the Move dataset dialog. To create a folder, select the create folder icon (![The create folder icon.](../images/datasets/user-guide/create-folder-icon.png)) in the top right of the dialog.
->
->![The [!UICONTROL Move] dataset dialog with the create folder icon highlighted.](/help/catalog/images/datasets/user-guide/create-folder.png)
-
-Once the dataset is in a folder, you can choose to only display datasets that belong to a specific folder. To open your folder structure, select the show folders icon (![The show folders icon](../images/datasets/user-guide/show-folders-icon.png)). Next, select your chosen folder to see all associated datasets.
-
-![The [!UICONTROL Datasets] dashboards with the datasets folder structure displayed, the show folders icon, and a selected folder highlighted.](../images/datasets/user-guide/folder-structure.png)
-
-## Delete a dataset {#delete}
-
-You can delete a dataset from either the dataset inline actions in the [!UICONTROL Browse] tab or the top right of the [!UICONTROL Dataset activity] view. From the [!UICONTROL Browse] view, select the ellipses (...) next to the dataset name you wish to delete. A menu list of options appears. Next, select **[!UICONTROL Delete]** from the dropdown menu.
-
-![The Browse tab of the Datasets workspace with the ellipsis and the Delete option highlighted for the chosen dataset.](../images/datasets/user-guide/inline-delete-dataset.png)
-
-A confirmation dialog appears. Select **[!UICONTROL Delete]** to confirm.
-
-Alternatively, select **[!UICONTROL Delete dataset]** from the **[!UICONTROL Dataset activity]** screen. 
-
->[!NOTE]
->
->Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Offer Decisioning]) cannot be deleted.
-
-![The Delete dataset button is highlighted within the dataset details page.](../images/datasets/user-guide/delete-dataset.png)
-
-A confirmation box appears. Select **[!UICONTROL Delete]** to confirm the deletion of the dataset.
-
-![The confirmation modal for deletion is displayed, with the Delete button highlighted.](../images/datasets/user-guide/confirm-delete.png)
-
-## Delete a Profile-enabled dataset
-
-If a dataset is enabled for Profile, deleting that dataset through the UI will delete it from data lake, Identity Service, and the Profile store within Platform.
-
-You can delete a dataset from the [!DNL Profile] store only (leaving the data in the Data Lake) using the Real-Time Customer Profile API. For more information, see the [profile system jobs API endpoint guide](../../profile/api/profile-system-jobs.md).
-
 ## Monitor data ingestion
 
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Monitoring]** in the left-navigation. The **[!UICONTROL Monitoring]** dashboard lets you view the statuses of inbound data from either batch or streaming ingestion. To view the statuses of individual batches, select either **[!UICONTROL Batch end-to-end]** or **[!UICONTROL Streaming end-to-end]**. The dashboards list all batch or streaming ingestion runs, including those that are successful, failed, or still in progress. Each listing provides details of the batch, including the batch ID, the name of the target dataset, and the number of records ingested. If the target dataset is enabled for [!DNL Profile], the number of ingested identity and profile records is also displayed.
@@ -261,7 +307,7 @@ If you wish to delete the batch, select **[!UICONTROL Delete batch]** near the t
 
 >[!NOTE]
 >
->If the ingested data has been enabled for Profile and processed, then deleting a batch does not delete that data from the Profile Store.
+>If the ingested data has been enabled for Profile and processed, then deleting a batch does not delete that data from the Profile store.
 
 ![The Delete batch button is highlighted on the dataset details page.](../images/datasets/user-guide/delete-batch.png)
 

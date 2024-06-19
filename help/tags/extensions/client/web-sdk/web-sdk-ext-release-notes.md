@@ -6,7 +6,42 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 # Adobe Experience Platform Web SDK extension release notes
 
-This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](/help/web-sdk/release-notes.md).
+
+## Version 2.24.0 - June 5, 2024
+
+**Fixes and improvements**
+
+* Fixed an error that occurred when modifying the extension configuration when config overrides were defined.
+* Allow setting empty values for media collection ping intervals.
+* Fixed an error that occurred when modifying an update variable action.
+* Allow reset of ID sync container in config overrides.
+
+Contains version 2.20.0 of the Adobe Experience Platform Web SDK.
+
+## Version 2.23.1 - May 28, 2024
+
+**New features**
+
+* Added support for the [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) component in the extension configuration.
+* Added the [`Send Media Event`](action-types.md#send-media-event) action for the [!DNL Streaming Media Collection] functionality.
+* Added the [`Media: Quality of Experience`](data-element-types.md#quality-experience) data element for the [!DNL Streaming Media Collection] functionality.
+
+Contains version 2.20.0 of the Adobe Experience Platform Web SDK.
+
+**Fixes and improvements**
+
+* Fixed an error that occurred when searching for data elements in the [Update variable](action-types.md#update-variable) action.
+* Removed [!UICONTROL Media] event types from the event types suggested to be used in the `sendEvent` action.
+
+## Version 2.22.0 - May 3, 2024
+
+**New features**
+
+* Extend variable data element to support data objects.
+* Update variable action now supports modifying pass-through Adobe Analytics, Adobe Audience Manager, and Adobe Target data.
+
+Contains version 2.19.2 of the Adobe Experience Platform Web SDK.
 
 ## Version 2.21.4 - January 10, 2024
 
@@ -75,7 +110,7 @@ Contains version 2.19.1 of the Adobe Experience Platform Web SDK.
 **New features**
 
 * Contains version 2.16.0 of the Adobe Experience Platform Web SDK.
-* Added support for [datastream configuration overrides](../../../../datastreams/overrides.md).
+* Added support for [datastream configuration overrides](/help/datastreams/overrides.md).
 * Add deprecation notice to the `datasetId` option on the `sendEvent` command.
 
 
@@ -92,7 +127,7 @@ Contains version 2.19.1 of the Adobe Experience Platform Web SDK.
 **New features**
 
 * (Beta) Added **[!UICONTROL Update variable]** action and **[!UICONTROL Variable]** data element.
-* Added configuration for [`onBeforeLinkClickSend`](../../../../edge/fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) callback function.
+* Added configuration for [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) callback function.
 
 **Fixes and improvements**
 
@@ -170,7 +205,7 @@ Contains version 2.8.0 of the Adobe Experience Platform Web SDK library.
 
 Contains version 2.7.0 of the Adobe Experience Platform Web SDK library.
 
-* Additional information from the Edge Network are available in the Send Event Complete event, including `inferences` and `destinations`. The format of these properties may change as these features are currently rolling out as part of a Beta. For more information, see [Tracking Events.](../../../../edge/fundamentals/tracking-events.md)
+* Additional information from the Edge Network are available in the Send Event Complete event, including `inferences` and `destinations`. The format of these properties may change as these features are currently rolling out as part of a Beta.
 
 ## Version 2.7.3 - September 7, 2021
 
@@ -217,10 +252,10 @@ Contains version 2.5.0 of the Adobe Experience Platform Web SDK library.
 
 Contains version 2.4.0 of the Adobe Experience Platform Web SDK library.
 
-* Added ["document unloading"](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) checkbox to Send Event action UI.
-* Added support for an `out` option when [configuring default consent](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) which drops all events until consent is received (the existing `pending` option queues events and sends them once consent is received).
+* Added ["Document unloading"](/help/web-sdk/commands/sendevent/documentunloading.md) checkbox to Send Event action UI.
+* Added support for an `out` option when [configuring default consent](/help/web-sdk/commands/configure/defaultconsent.md) which drops all events until consent is received (the existing `pending` option queues events and sends them once consent is received).
 * Added a tooltip to the default consent field.
-* Added support for [Adobe's Consent 2.0 standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* Added support for Adobe's Consent 2.0 standard when using the [`setConsent`](/help/web-sdk/commands/setconsent.md) command.
 * A better error now displays in the XDM Object data element UI if the user's access token is invalid or improperly provisioned.
 * Fixed a cross-origin error (which does not affect the operation of the extension) that showed up on the browser developer console when viewing an XDM Object data element.
 
@@ -245,7 +280,7 @@ Contains version 2.3.0 of the Adobe Experience Platform Web SDK library.
 ## Version 2.1.0 - August 5, 2020
 
 * Breaking Change: Remove the `syncIdentity` action and support passing those IDs in the `sendEvent` action instead. Please disable any existing rule using this action before upgrading your extension.
-* Update to Alloy v. 2.1.0 ([Release Notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html))
+* Update to Alloy v. 2.1.0 ([Release Notes](/help/web-sdk/release-notes.md))
 * Support IAB 2.0 Consent Standard in the `setConsent` action.
 * Support overriding the dataset ID in the `sendEvent` action.
 * Add a new Data Element of type `IdentityMap` which can be used to populate the `identityMap` entry in the XDM Object Data Element which is now enabled, and in the `setConsent` action.

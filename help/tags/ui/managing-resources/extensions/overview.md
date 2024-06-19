@@ -53,10 +53,14 @@ See [Extensions Reference](../../../extensions/client/overview.md) for details a
 
 Tags are highly extendible. Extensions add core functionality to tags. A common use of extensions is to create integrations with other applications.
 
+>[!TIP]
+>
+>Use the in product help in the right panel to learn more about extensions and view additional available resources.
+
 1. From a property's overview page, open the **[!UICONTROL Extensions]** tab.
 1. Select an extension.
 
-   ![Core Extension](../../../images/extensions.png)
+   ![Catalog tab showing core extensions in the extensions tab.](../../../images/extensions.png)
 
    * If the extension exists, select it from the extensions catalog.
    * Mouse over an extension in your list to configure or disable it.

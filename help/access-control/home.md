@@ -21,7 +21,7 @@ A high-level workflow for gaining and assigning access permissions can be summar
 
 - After licensing Adobe Experience Platform, or an Application/App Service that uses Experience Platform, an email is sent to the administrator specified during licensing.
 - The administrator logs in to [Adobe Admin Console](#adobe-admin-console) and selects **Adobe Experience Platform** from the list of products on the overview page.
-- To grant access to Experience Platform, the administrator will need to add users to the default product profile: `AEP-Default-All-Users`. 
+- To grant access to Experience Platform, it is recommended that the administrator add users to the default product profile: `AEP-Default-All-Users`. 
 - In Experience Platform Permissions, the administrator can create new roles or edit the permissions and users for any existing roles.
 - When creating or editing a role, the administrator adds users to the role using the **[!UICONTROL users]** tab, and grants permissions to these users (such as "[!UICONTROL Read Datasets]" or "[!UICONTROL Manage Schemas]") by editing the role's permissions. Similarly, the administrator can assign access to sandboxes using the same editing option.
 - When users log in to the Experience Platform user interface, their access to Experience Platform capabilities is driven by the permissions that have been granted to them from the previous step. For example, if a user does not have the [!UICONTROL View Datasets] permission, the **[!UICONTROL Datasets]** tab in the side menu will not be visible to that user.
@@ -73,12 +73,24 @@ The following table outlines the available permissions for Experience Platform i
 
 | Category | Permission | Description |
 | --- | --- | --- |
+| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Ability to ask the [AI assistant](../ai-assistant/access.md) questions. |
+| [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | Access to obtain responses to [operational insights](../ai-assistant/home.md##operational-insights) queries. |
 | [!DNL Alerts] | [!UICONTROL View Alerts History] | Read-only access for alerts history. |
 | [!DNL Alerts] | [!UICONTROL Resolve Alerts] | Access to read, edit, and delete alerts. |
 | [!DNL Alerts] | [!UICONTROL View Alerts] | Read-only access for alerts. |
 | [!DNL Alerts] | [!UICONTROL Manage Alerts] | Access to read, create, edit, and delete alerts history. |
 | [!DNL Computed Attributes] | [!UICONTROL View Computed attributes] | Read-only access for computed attributes tab, inventory, and details. |
 | [!DNL Computed Attributes] | [!UICONTROL Manage Computed attributes] | Access to read, create, delete drafts, and deactivate computed attributes. |
+| [!DNL Dashboards] | [!UICONTROL View License Usage Dashboard] | Read-only access to view the license usage dashboard. |
+| [!DNL Dashboards] | [!UICONTROL Manage Standard Dashboards] | Add custom attributes that are not yet in the data warehouse. |
+| [!DNL Data Governance] | [!UICONTROL Manage Usage Labels] | Access to read, create, and delete usage labels. |
+| [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Access to read, create, edit, and delete data usage policies. |
+| [!DNL Data Governance] | [!UICONTROL View Data Usage Policies] | Read-only access for data usage policies belonging to your organization. |
+| [!DNL Data Governance] | [!UICONTROL View User Activity Log] | Read-only access to view recorded [audit logs](../landing/governance-privacy-security/audit-logs/overview.md) of Platform activities. |
+| [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Access to read, create, edit, and disable sources. |
+| [!DNL Data Ingestion] | [!UICONTROL View Sources] | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Access to create, accept, and decline partner handshakes to connect two organizations and enable [!DNL Segment Match] flows. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Access to read, create, edit, and publish [!DNL Segment Match] feeds with active partners. |
 | [!DNL Data Lifecycle] | [!UICONTROL View Data Lifecycle] | Read-only access for data lifecycle.|
 | [!DNL Data Lifecycle] | [!UICONTROL Manage Data Lifecycle] | Access to read, create, edit, and delete data lifecycle. |
 | [!DNL Data Modeling] | [!UICONTROL Manage Schemas] | Access to read, create, edit, and delete schemas and related resources. |
@@ -88,43 +100,34 @@ The following table outlines the available permissions for Experience Platform i
 | [!DNL Data Management] | [!UICONTROL Manage Datasets] | Access to read, create, edit, and delete datasets. Read-only access for schemas. |
 | [!DNL Data Management] | [!UICONTROL View Datasets] | Read-only access for datasets and schemas. |
 | [!DNL Data Management] | [!UICONTROL Data Monitoring] | Read-only access to monitoring datasets and streams. |
-| [!DNL Profile Management] | [!UICONTROL Manage Profiles] | Access to read, create, edit, and delete datasets that are used for customer profiles. Read-only access to available profiles. |
-| [!DNL Profile Management] | [!UICONTROL View Profiles] | Read-only access to available profiles. |
-| [!DNL Profile Management] | [!UICONTROL Manage Segments] | Access to read, create, edit, and delete segments. |
-| [!DNL Profile Management] | [!UICONTROL View Segments] | Read-only access to available segments. |
-| [!DNL Profile Management] | [!UICONTROL Manage Merge Policies] | Access to read, create, edit, and delete merge policies. |
-| [!DNL Profile Management] | [!UICONTROL View Merge Policies] | Read-only access to available merge policies. |
-| [!DNL Profile Management] | [!UICONTROL Export Audience for Segment] | Ability to export an evaluated audience segment to a dataset. |
-| [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | Ability to generate profiles for an audience by evaluating a segment definition. |
-| [!DNL Profile Management] | [!UICONTROL View B2B AI] | Read-only access to settings and configurations for all B2B AI/ML services. |
-| [!DNL Profile Management] | [!UICONTROL Manage B2B AI] | Access to read, create, edit, and delete settings and configurations for all B2B AI/ML services. |
-| [!DNL Profile Management] | [!UICONTROL View B2B Profile] | Read-only access to B2B entity profiles (such as Account, Opportunity, and so on), settings and configurations for all B2B AI/ML services, and B2B dashboard widgets. |
-| [!DNL Profile Management] | [!UICONTROL Manage B2B Profile] | Access to read, create, edit, and delete B2B entity profiles (such as Account, Opportunity, and so on). Read-only access for settings and configurations for all B2B AI/ML services, and B2B dashboard widgets. |
-| [!DNL Identity Management] | [!UICONTROL Manage Identity Namespaces] | Access to read, create, edit, and delete identity namespaces. |
-| [!DNL Identity Management] | [!UICONTROL View Identity Namespaces] | Read-only access for identity namespaces. |
-| [!DNL Identity Management] | [!UICONTROL View Identity Graph] | Read-only access for identity graphs. |
-| [!DNL Sandbox Administration] | [!UICONTROL Manage Sandboxes] | Access to read, create, edit, and delete sandboxes. |
-| [!DNL Sandbox Administration] | [!UICONTROL View Sandboxes] | Read-only access for sandboxes belonging to your organization. |
-| [!DNL Sandbox Administration] | [!UICONTROL Reset a Sandbox] | Ability to reset a sandbox. |
+| [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
 | [!DNL Destinations] | [!UICONTROL View Destinations] | Read-only access to view available destinations in the **[!UICONTROL Catalog]** tab and authenticated destinations in the **[!UICONTROL Browse]** tab. |
 | [!DNL Destinations] | [!UICONTROL Manage Destinations] | Access to read, create, and delete destination connections and destination accounts. |
 | [!DNL Destinations] | [!UICONTROL Activate Destinations] | Gives users the ability to activate segments to existing destinations. Enables the mapping step in the activation workflow. This permission also requires the [!UICONTROL View Destinations] permission to be granted to the user who will activate data to destinations. |
 | [!DNL Destinations] | [!UICONTROL Activate Segment without Mapping] | Gives users the ability to activate segments to existing destinations, without displaying the [mapping step](../destinations/ui/activate-batch-profile-destinations.md#mapping). Users can add and remove segments in activation workflows, but cannot add or remove mapped attributes or identities. This permission also requires the [!UICONTROL View Destinations] permission to be granted to the user who will activate data to destinations. |
 | [!DNL Destinations] | [!UICONTROL Manage and Activate Dataset Destinations] | Ability to read, create, edit, and disable dataset export flows. Ability to also activate data to active datasets that have been created. This permission also requires the [!UICONTROL View Destinations] permission to be granted to the user who will activate data to destinations. |
 | [!DNL Destinations] | [!UICONTROL Destination Authoring] | Ability to author destinations using [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
-| [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Access to read, create, edit, and disable sources. |
-| [!DNL Data Ingestion] | [!UICONTROL View Sources] | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab. |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Access to create, accept, and decline partner handshakes to connect two organizations and enable [!DNL Segment Match] flows. |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Access to read, create, edit, and publish [!DNL Segment Match] feeds with active partners. |
-| [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
-| Data Governance | [!UICONTROL Manage Usage Labels] | Access to read, create, and delete usage labels. |
-| Data Governance | [!UICONTROL Manage Data Usage Policies] | Access to read, create, edit, and delete data usage policies. |
-| Data Governance | [!UICONTROL View Data Usage Policies] | Read-only access for data usage policies belonging to your organization. |
-| Data Governance | [!UICONTROL View User Activity Log] | Read-only access to view recorded [audit logs](../landing/governance-privacy-security/audit-logs/overview.md) of Platform activities. |
-| [!DNL Dashboards] | [!UICONTROL View License Usage Dashboard] | Read-only access to view the license usage dashboard. |
-| [!DNL Dashboards] | [!UICONTROL Manage Standard Dashboards] | Add custom attributes that are not yet in the data warehouse. |
+| [!DNL Identity Management] | [!UICONTROL Manage Identity Namespaces] | Access to read, create, edit, and delete identity namespaces. |
+| [!DNL Identity Management] | [!UICONTROL View Identity Namespaces] | Read-only access for identity namespaces. |
+| [!DNL Identity Management] | [!UICONTROL View Identity Graph] | Read-only access for identity graphs. |
+| [!DNL Profile Management] | [!UICONTROL Manage Profiles] | Access to read, create, edit, and delete datasets that are used for customer profiles. Read-only access to available profiles. |
+| [!DNL Profile Management] | [!UICONTROL View Profiles] | Read-only access to available profiles. |
+| [!DNL Profile Management] | [!UICONTROL Manage Segments] | Access to read, create, edit, and delete segments. |
+| [!DNL Profile Management] | [!UICONTROL View Segments] | Read-only access to available segments. |
+| [!DNL Profile Management] | [!UICONTROL Manage Merge Policies] | Access to read, create, edit, and delete merge policies. |
+| [!DNL Profile Management] | [!UICONTROL View Merge Policies] | Read-only access to available merge policies. |
+| [!DNL Profile Management] | [!UICONTROL Import Audiences] | Access to read, create, edit, and delete imported audiences. |
+| [!DNL Profile Management] | [!UICONTROL Export Audience for Segment] | Ability to export an evaluated audience segment to a dataset. |
+| [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | Ability to generate profiles for an audience by evaluating a segment definition. |
+| [!DNL Profile Management] | [!UICONTROL View B2B AI] | Read-only access to settings and configurations for all B2B AI/ML services. |
+| [!DNL Profile Management] | [!UICONTROL Manage B2B AI] | Access to read, create, edit, and delete settings and configurations for all B2B AI/ML services. |
+| [!DNL Profile Management] | [!UICONTROL View B2B Profile] | Read-only access to B2B entity profiles (such as Account, Opportunity, and so on), settings and configurations for all B2B AI/ML services, and B2B dashboard widgets. |
+| [!DNL Profile Management] | [!UICONTROL Manage B2B Profile] | Access to read, create, edit, and delete B2B entity profiles (such as Account, Opportunity, and so on). Read-only access for settings and configurations for all B2B AI/ML services, and B2B dashboard widgets. |
 | [!DNL Query Service] | [!UICONTROL Manage Queries] | Access to read, create, edit, and delete structured SQL queries for Platform data. |
 | [!DNL Query Service] | [!UICONTROL Manage Query Service Integration] | Access to create, update, and delete non-expiring credentials for Query Service access. |
+| [!DNL Sandbox Administration] | [!UICONTROL Manage Sandboxes] | Access to read, create, edit, and delete sandboxes. |
+| [!DNL Sandbox Administration] | [!UICONTROL View Sandboxes] | Read-only access for sandboxes belonging to your organization. |
+| [!DNL Sandbox Administration] | [!UICONTROL Reset a Sandbox] | Ability to reset a sandbox. |
 
 ## Next steps
 

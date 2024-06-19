@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Getting Started with the Segmentation Service API
 description: The following documentation provides additional information that you need to know in order to successfully work with the Segmentation API.
+role: Developer
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
 ---
 # Getting started with the Segmentation Service API {#getting-started}
