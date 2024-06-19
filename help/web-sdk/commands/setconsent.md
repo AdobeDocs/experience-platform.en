@@ -38,9 +38,9 @@ See the table below to understand when data collection occurs and when cookies a
 | `in` | Not set | Yes | Yes |
 | `pending` | `in` | Yes | Yes |
 | `pending` | `out` | No | Yes |
-| `pending` | Not set | No | Yes |
+| `pending` | Not set | No | No |
 | `out` | `in` | Yes | Yes |
-| `out` | `out` | No | No |
+| `out` | `out` | No | Yes |
 | `out` | Not set | No | No |
 
 The following cookies are set when the consent configuration allows:
