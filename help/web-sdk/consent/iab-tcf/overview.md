@@ -72,7 +72,7 @@ Similar to Audience Manager's IAB TCF 2.0 integration, the Edge Network gives co
 - **Special Purpose 1:** Ensure security, prevent fraud, and debug. (Per IAB TCF regulations, this is always consented to)
 - **Adobe Vendor Permission:** Consent for Adobe (Vendor 565)
 
-For more information on the `setConsent` command, read the documentation on [Supporting Consent](../../consent/supporting-consent.md).
+For more information on the `setConsent` command, read the dedicated Web SDK documentation on [setConsent](../../../web-sdk/commands/setconsent.md).
 
 ### Adding Consent to Experience Events
 
