@@ -73,7 +73,9 @@ Some audience streaming destinations require you to select source attributes or 
 
 1. In the **[!UICONTROL Select source field]** page, use the **[!UICONTROL Select attributes]** or the **[!UICONTROL Select identity namespace]** options to switch between the two categories of available source fields. From the available [!DNL XDM] profile attributes and identity namespaces, select the ones that you want to map to the destination, then choose **[!UICONTROL Select]**.
 
-    ![Select source field page showing several available source fields.](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+    Use the **[!UICONTROL Show only fields with data]** toggle to only display schema fields populated with values. By default, only populated schema fields are shown.
+
+    ![Select source field page showing several available source fields.](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
 
 1. Select the button to the right of the **[!UICONTROL Target field]** entry.
 
