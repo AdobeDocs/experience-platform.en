@@ -17,6 +17,7 @@ New features in Adobe Experience Platform:
 - [Authentication to Experience Platform APIs](#authentication-platform-apis)
 - [Data Prep](#data-prep)
 - [Destinations](#destinations)
+- [Identity Service](#identity-service)
 - [Privacy Service](#privacy)
 - [Segmentation Service](#segmentation)
 - [Use Case Playbooks](#use-case-playbooks)
@@ -42,7 +43,7 @@ The JWT method to obtain access tokens is now deprecated for new integrations an
 
 While existing API integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Read the guide on [migrating from Service Account (JWT) credential to OAuth Server-to-Server credential](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
 
-## Data Prep (#data-prep)
+## Data Prep {#data-prep}
 
 Use data prep to map, transform, and validate data to and from Experience Data Model (XDM).
 
@@ -50,7 +51,7 @@ Use data prep to map, transform, and validate data to and from Experience Data M
 
 | Feature | Description |
 | --- | --- |
-| Additions to reserved keywords list | The following words have been added to the data prep reserved keywords list:<ul><li>`do`</li><li>`empty`</li><li>`function`</li><li>`size`</li></ul>. For more information, read the the [data prep functions guide](../../data-prep/functions.md). |
+| Additions to reserved keywords list | The following words have been added to the data prep reserved keywords list:<ul><li>`do`</li><li>`empty`</li><li>`function`</li><li>`size`</li></ul> For more information, read the the [data prep functions guide](../../data-prep/functions.md). |
 
 {style="table-layout:auto"}
 
@@ -71,6 +72,20 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 {style="table-layout:auto"}
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
+## Identity Service {#identity-service}
+
+Use Adobe Experience Platform Identity Service to create a comprehensive view of your customers and their behaviors by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
+
+**Upcoming features**
+
+| Feature | Description |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} Identity graph linking rules | Participants of the beta program can use identity graph linking rules to to ensure person entity representation in the system by preventing "shared device" and other graph collapse scenarios. To achieve, this goal, participants during the beta program will have access to three features in a development sandbox environment: <ul><li>The graph simulation tool to understand how the graph algorithm functions.</li><li>The identity settings screen to configure unique namespaces and namespace priorities.</li><li>An identity dashboard to gain insight into ingested graphs.</li></ul> In addition, the beta program will include improvements in profile behavior stability. For more information, read the [identity graph linking rules](../../identity-service/identity-graph-linking-rules/overview.md) documentation. |
+
+{style="table-layout:auto"}
+
+For more information on Identity Service, read the [Identity Service overview](../../identity-service/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 
