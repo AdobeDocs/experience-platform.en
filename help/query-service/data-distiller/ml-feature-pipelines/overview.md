@@ -9,8 +9,6 @@ exl-id: 3b452181-e254-4155-8bf5-0990533f202d
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
 
-<!--  -->
-
 Data Distiller enables data scientists and engineers to enrich their machine learning pipelines with high-value customer experience data that has been collected and curated in Adobe Experience Platform. From a [!DNL Python] notebook in any environment, you can interactively explore customer data in the Experience Platform, define and compute features from the data, and read the computed features into your machine learning environment for modeling.
 
 >[!IMPORTANT]

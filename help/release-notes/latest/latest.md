@@ -1,65 +1,60 @@
 ---
-title: Adobe Experience Platform Release Notes May 2024
-description: The May 2024 release notes for Adobe Experience Platform.
+title: Adobe Experience Platform Release Notes June 2024
+description: The June 2024 release notes for Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: May 21, 2024**
+**Release date: June 2024**
 
 >[!TIP]
 >
->The [Experience Platform API documentation](https://developer.adobe.com/experience-platform-apis/) is now interactive. Explore the API endpoints directly from the documentation pages to get immediate feedback and speed up your technical implementation. [Read more](#interactive-api-documentation) about the new functionality.
+>[AI Assistant in Experience Platform](https://platform.adobe.com) is now available. Use AI Assistant to accelerate your workflows in Adobe applications. [Read more](#ai-assistant) about the new functionality.
 
-Updates to existing features in Experience Platform:
+New features in Adobe Experience Platform:
 
-- [Catalog Service](#catalog-service)
-- [Dashboards](#dashboards)
-- [Data Governance](#governance)
+- [AI Assistant](#ai-assistant)
+- [Authentication to Experience Platform APIs](#authentication-platform-apis)
+- [Data Prep](#data-prep)
 - [Destinations](#destinations)
-- [Query Service](#query-service)
+- [Privacy Service](#privacy)
 - [Segmentation Service](#segmentation)
-- [Sources](#sources)
+- [Use Case Playbooks](#use-case-playbooks)
 
-Other updates in Adobe Experience Platform:
+## AI Assistant {#ai-assistant}
 
-- [Documentation Updates](#documentation-updates)
+AI Assistant in Adobe Experience Platform is a conversational experience that you can use to accelerate your workflows in Adobe applications. You can use AI Assistant to better understand product knowledge, troubleshoot problems, or search through information and find operational insights. AI Assistant supports Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer and Customer Journey Analytics.
 
-## Catalog Service {#catalog-service}
+**New feature**
 
-Catalog Service is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the data lake as files and directories, Catalog holds the metadata and description of those files and directories for lookup and monitoring purposes.
+| Feature | Description |
+| --- | --- |
+| AI Assistant in Experience Platform | You can now use AI Assistant in Experience Platform. AI Assistant supports Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics. <br> ![AI Assistant in Exprience Platform.](../2024/assets/june/ai-assistant-full.png "AI Assistant in Exprience Platform."){width="100" zoomable="yes"} <br> For more information about this feature, read the [AI Assistant UI guide](../../ai-assistant/ui-guide.md). |
+| Support for product knowledge questions | [Product knowledge](../../ai-assistant/home.md#product-knowledge) are concepts and topics grounded in Experience League documentation and can be used for pointed learning, open discovery, and troubleshooting. You can ask AI Assistant product knowledge questions like: <ul><li>What are lookalike audiences?</li><li>How is Profile richness calculated?</li><li> Can I delete a profile enabled schema after data is ingested?</li></ul> |
+| [!BADGE Beta]{type=Informative} Support for operational insights questions | [Operational insights](../../ai-assistant/home.md#operational-insights) are answers AI Assistant generates about your metadata objects including counts, lookups, and lineage impact. Operational insights does not look at any data within your sandbox. You can ask AI Assistant operational insights questions like: <ul><li>Which destinations are in an active state?</li><li>How many datasets do I have?</li><li>List the audiences which are used in live journeys.</li></ul> Operational insights are supported in the following domains: attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources. |
+| Access AI Assistant | To access AI Assistant for Experience Platform, Real-Time CDP, and Journey Optimizer, you must be added to a role that includes the **Enable AI Assistant** and **View Operational Insights** permissions. For more information, read the [feature access guide](../../ai-assistant/access.md). You must use the Admin Console for [access in Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant?lang=en#feature-access). |
+
+For more information about AI Assistant, read the [AI Assistant overview](../../ai-assistant/home.md).
+
+## Authentication to Experience Platform APIs {#authentication-platform-apis}
+
+The JWT method to obtain access tokens is now deprecated for new integrations and replaced by a simpler OAuth Server-to-Server authentication method.<p>![New OAuth authentication method to get access tokens highlighted.](/help/landing/images/api-authentication/oauth-authentication-method.png "New OAuth authentication method to get access tokens highlighted."){width="100" zoomable="yes"}</p> 
+
+While existing API integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Read the guide on [migrating from Service Account (JWT) credential to OAuth Server-to-Server credential](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+
+## Data Prep (#data-prep)
+
+Use data prep to map, transform, and validate data to and from Experience Data Model (XDM).
 
 **New or updated features**
 
 | Feature | Description |
 | --- | --- |
-| Bulk actions | The dataset inventory now supports bulk actions. Streamline your data management processes and ensure the efficient management of your datasets with bulk actions. Use bulk actions to save time by performing multiple actions on numerous datasets simultaneously.  Bulk actions include [Move to folder](../../catalog/datasets/user-guide.md#move-to-folders), [Edit tags](../../catalog/datasets/user-guide.md#manage-tags), and [Delete](../../catalog/datasets/user-guide.md#delete) datasets. <br> ![Bulk actions in the Datasets UI workspace.](../2024/assets/may/bulk-actions.png "Bulk actions in the Datasets UI workspace."){width="100" zoomable="yes"} <br> For more information about this feature, read the [Datasets UI guide](../../catalog/datasets/user-guide.md#bulk-actions). |
+| Additions to reserved keywords list | The following words have been added to the data prep reserved keywords list:<ul><li>`do`</li><li>`empty`</li><li>`function`</li><li>`size`</li></ul>. For more information, read the the [data prep functions guide](../../data-prep/functions.md). |
 
 {style="table-layout:auto"}
 
-## Dashboards {#dashboards}
-
-Adobe Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots.
-
-**New or updated features**
-
-| Feature | Description |
-| --- | --- |
-| Customizable Insights for extended app reporting  |  Seamlessly [transition the output of SQL analysis into comprehensible, business-friendly visual formats](../../dashboards/data-distiller/customizable-insights/overview.md). Use custom SQL queries for precise data manipulation and the creation of dynamic charts from diverse structured datasets. You can use query pro mode to perform complex analysis with SQL and then share this analysis with non-technical users through charts on your custom dashboard or export them in CSV files. |
-
-{style="table-layout:auto"}
-
-## Data Governance {#governance}
-
-Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
-
-**New features**
-
-| Feature | Description |
-| --- | --- |
-| mTLS support for HTTP API destinations and Adobe Journey Optimizer custom actions | Build customer trust with the strengthened security measures of the Mutual Transport Layer Security (mTLS) protocol. The [Experience Platform HTTP API destination](../../destinations/catalog/streaming/http-destination.md#mtls-protocol-support) and [Adobe Journey Optimizer custom actions](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions) now support the mTLS protocol when sending data to configured endpoints. No additional configuration is required in your custom action or HTTP API destination to activate mTLS; this process occurs automatically when an mTLS-enabled endpoint is detected. You can [download the Adobe Journey Optimizer public certificate here](../../landing/governance-privacy-security/encryption.md#download-certificates) and the [Destinations Service public certificate here](../../landing/governance-privacy-security/encryption.md#download-certificates).<br>See the [Experience Platform data encryption documentation](../../landing/governance-privacy-security/encryption.md#mtls-protocol-support) for more information on network connection protocols when exporting data to third-party systems. |
-
-{style="table-layout:auto"}
+For more information on Data Prep, read the [Data Prep overview](../../data-prep/home.md).
 
 ## Destinations {#destinations}
 
@@ -69,82 +64,52 @@ Adobe Experience Platform Data Governance is a series of strategies and technolo
 
 | Functionality | Description |
 | ----------- | ----------- |
-| Reorder mapping fields for batch destinations | You can now change the order of the columns in your CSV exports by dragging and dropping the mapping fields in the [mapping step](../../destinations/ui/activate-batch-profile-destinations.md#mapping). The order of the mapped fields in the UI reflects in the order of the columns in the exported CSV file, from top to bottom, with the top row being the leftmost column in the CSV file. <br> ![View of how mappings can be reordered.](../2024/assets/may/reorder-mappings.gif "View of how mappings can be reordered."){width="100" zoomable="yes"}|
-| Preselected default export schedules for batch destinations | Experience Platform now automatically sets a default schedule for each file export. See the documentation on [scheduling audience exports](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) to learn how to modify the default schedule. |
-| Edit multiple audience activation schedules for batch destinations | You can now edit the activation schedule for multiple audiences exported to batch (file-based) destination from the **[!UICONTROL Activation data]** tab of the [destination details page](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). <br> ![View of how to select multiple audiences and edit the file export schedule.](../2024/assets/may/bulk-edit-schedule.gif "View of how to select multiple audiences and edit the file export schedule."){width="100" zoomable="yes"}|
-| Export multiple audiences on-demand to batch destinations | You can now select and export multiple audiences to batch destinations, through the [export files on-demand](../../destinations/ui/export-file-now.md) functionality. |
+| Enhancement to ad-hoc export API to export external audiences | You can now use the ad-hoc export API to export external (custom upload) audiences. [Read more](/help/destinations/api/ad-hoc-activation-api.md) . |
+| (Beta) Additonal functions supported in beta phase of export array support | Previously, when activating audiences to file-based destinations and selecting Use calculated field, you were limited to using a subset of the audiences available through data prep. That limitation has now been lifted and customers have access to all functions available through data prep when exporting audiences to file-based destinations. [Read more](/help/destinations/ui/export-arrays-calculated-fields.md#supported-functions). |
+| Show only fields with data in the mapping step | When mapping profile attributes to your destinations, you can now toggle between all profile attributes or only those which contain data. By default, only the fields with data are shown. See the activation guides for [batch](../../destinations/ui/activate-batch-profile-destinations.md#mapping) and [streaming](../../destinations/ui/activate-segment-streaming-destinations.md#mapping) destinations for more details. |
 
 {style="table-layout:auto"}
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
-## Query Service {#query-service}
+## [!DNL Privacy Service] {#privacy}
 
-Query Service allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. You can join any datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-Time Customer Profile.
+Several legal and organizational regulations give users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
 
-**Updated features**
+**New features**
 
-| Feature | Description |
-| --- | --- |
-| Legacy Editor deprecated | The legacy editor has been deprecated and is no longer accessible for use. In its place, you can use the [enhanced features of the Query Editor](../../query-service/ui/user-guide.md#query-authoring) to write, validate, and run your queries. |
-| Query Run Delay  | Stay in control of your compute hours by setting alerts for delays to your query runs. You can choose to receive alerts if a query status does not change state after a specific period of time. Just set your desired delay time in the Platform UI to stay informed on your query progress. To learn how to set this alert in the UI, refer to the [query schedules documentation](../../query-service/ui/query-schedules.md#alerts-for-query-status) or the [guide to inline query actions](../../query-service/ui/monitor-queries.md#query-run-delay). |
-| Streamlined query log inventory  | You can now use an improved troubleshooting efficiency and task monitoring with a [streamlined query logs UI](../../query-service/ui/query-logs.md#filter-logs): <ul><li> The Platform UI now excludes all "System Queries" from logs tab by default. </li><li> View system queries by unchecking **Exclude system queries**. </li></ul> <br> ![Logs tab in the Queries UI workspace.](../2024/assets/may/query-log.png "Logs tab in the Queries UI workspace."){width="100" zoomable="yes"} <br> Use the streamlined query logs UI for a more focus view that helps you quickly identify and analyze the relevant logs.  |
-| Database selector  | Use the new database selector dropdown menu to [conveniently access Customer Journey Analytics data views from Power BI or Tableau](../../query-service/ui/credentials.md#connect-to-customer-journey-analytics). You can now select your desired database directly from the Platform UI for a more seamless integration of your BI tools. <br> ![Credentials tab in the Queries UI workspace.](../2024/assets/may/database-selector.png "Credentials tab in the Queries UI workspace."){width="100" zoomable="yes"} <br> |
+|Feature | Description|
+|--- | ---|
+| Privacy Service support for Adobe Journey Optimizer | Privacy Service capabilities are now compatible with the Adobe Journey Optimizer protocols for processing delete requests. See the [Adobe Journey Optimizer privacy requests documentation](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/requests) for more information, or the Experience Platform documentation for a list of [Experience Cloud applications that are integrated with Privacy Service](../../privacy-service/experience-cloud-apps.md). |
 
-{style="table-layout:auto"}
+See the [Privacy Service overview](../../privacy-service/home.md) for more information on the service.
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
-
-**Updated feature**
-
-| Feature | Description |
-| --- | --- |
-| Import externally generated audiences | Importing externally generated audiences now requires the "Import audience" permission. To learn more about permissions, read the [permissions UI guide](../../access-control/home.md#permissions). |
-
-{style="table-layout:auto"}
-
-## Sources {#sources}
-
-Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
-
-Use sources in Experience Platform to ingest data from an Adobe application or a third-party data source.
+[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
 
 **New or updated features**
 
 | Feature | Description |
-| --- | --- |
-| OAuth2 Client Credential authentication for [!DNL Salesforce] source | You can now use OAuth2 Client Credential to authenticate your [!DNL Salesforce] account on Experience Platform. Read the [!DNL Salesforce] source [API guide](../../sources/tutorials/api/create/crm/salesforce.md) and [UI guide](../../sources/tutorials/ui/create/crm/salesforce.md) for more information. |
-| Support for sample dataflow for the [!DNL Marketo Engage] source | The [!DNL Marketo Engage] source now supports sample dataflows. Enable the the sample dataflow configuration to limit your ingestion rate and then try out Experience Platform features without having to ingest large amounts of data. For more information, read the guide on [creating a dataflow for [!DNL Marketo Engage] in the UI](../../sources/tutorials/ui/create/adobe-applications/marketo.md).|
-| Updates to IP address allow list | Depending on your location, you must add a set of new IP addresses to your allow list in order to successfully use streaming sources. For a comprehensive list of the new IP addresses, read the [IP address allow list guide](../../sources/ip-address-allow-list.md). |
+| ------- | ----------- |
+| Time constraints update | The behavior for the "This month" and "This year" has been updated, and they now represent the "month-to-date" and "year-to-date" respectively. For more information on this change, read the [Segment Builder guide](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 
 {style="table-layout:auto"}
 
-**New or updated documentation**
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
 
-| Updated documentation | Description |
-| --- | --- |
-| Documentation updates for [!DNL Google PubSub]| The [!DNL Google PubSub] source documentation has been updated with a comprehensive prerequisite guide. Use the new prerequisites section to learn how to create your service account, grant permissions at the topic or subscription level, and set configurations to optimize your usage of the [!DNL Google PubSub] source. Read the [[!DNL Google PubSub] overview](../../sources/connectors/cloud-storage/google-pubsub.md) for more information. |
+## Use Case Playbooks {#use-case-playbooks}
 
-{style="table-layout:auto"}
+[!DNL Use Case Playbooks] are available at no extra cost to all Adobe Experience Platform customers. To access a rich gallery of use case playbooks in the Experience Platform UI, you can now select **[!UICONTROL Playbooks]** from the left navigation.
 
-For more information on sources, read the [sources overview](../../sources/home.md).
+[!DNL Use Case Playbooks] are designed to assist in overcoming challenges when starting with Real-Time Customer Data Platform or Adobe Journey Optimizer. They offer guidance and generate various assets that you can test and import into production environments when you're ready, even if you're not sure where to start or how to produce the correct assets for your intended use cases.
 
-## Documentation updates {#documentation-updates}
+To get started, read the [Use Case Playbooks overview](/help/use-case-playbooks/playbooks/overview.md), which provides an overview of the playbooks' functionality, their purpose, and an end-to-end demonstration, including how to create instances and import generated assets into other sandbox environments.
 
-### Interactive Experience Platform API documentation {#interactive-api-documentation}
+To learn how you can access and set up an inspirational sandbox to experiment and explore various use case playbooks, see the [Discover the correct playbook](/help/use-case-playbooks/playbooks/discover.md) document.
 
-The [Experience Platform API documentation](https://developer.adobe.com/experience-platform-apis/) is now interactive. All the API reference pages now have a **Try it** .functionality that you can use to test API calls directly on the documentation website page. [Get the required authentication credentials](/help/landing/api-authentication.md) and start using the functionality to explore the API endpoints. 
+To learn more about [!DNL Use Case Playbooks], read the following documentation pages:
 
-Use this new functionality to explore the requests to and the responses from API endpoints, to get immediate feedback and speed up your technical implementation. For example, visit the [Identity Service API](https://developer.adobe.com/experience-platform-apis/references/identity-service/) or the [Schema Registry API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) endpoints to explore the new **Try it** functionality in the right rail.
-
-![Screen recording showing an API call made directly from the documentation website.](../2024/assets/may/api-playground-demo.gif)
-
->[!CAUTION]
->
->Be aware that by using the interactive API functionality on the documentation pages, you are making real API calls to the endpoints. Keep this in mind when experimenting with production sandboxes.
-
-### Personalized insights and engagement {#personalized-insights-engagement}
-
-A new end-to-end use case documentation page for [evolving one-time value to lifetime value](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md) is now live. Read this documentation to understand how you can use Real-Time CDP and Adobe Journey Optimizer to convert sporadic visitors to your web properties to loyal customers.
+- Obtain a list of all [available playbooks](/help/use-case-playbooks/playbooks/playbooks-list.md), grouped by product (Real-Time CDP or Journey Optimizer).
+- Learn about what [permissions](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) are necessary for you ro use playbooks and the assets they create..
+- Understand the [data awareness functionality](/help/use-case-playbooks/playbooks/data-awareness.md) which allows you to duplicate generated assets to other sandbox environments.

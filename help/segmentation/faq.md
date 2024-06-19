@@ -122,9 +122,9 @@ The following chart explains the different lifecycle statuses, what they represe
 
 | State | Definition | Visible in Audience Portal? | Visible in Destinations? | Affects segmentation limits? | Impact on file-based audiences | Impact on audience evaluation | Usable within other audiences? | Editable |
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
-| Draft | An audience in the **Draft** state is an audience that is still in development and is not yet ready to be used in other services. | Yes, but can be hidden. | No | Yes | Can be imported or updated during the refinement process. | Can be evaluated in order to get accurate publishing counts. | Yes, but not recommended to be used. | Yes |
+| Draft | An audience in the **Draft** state is an audience that is still in development and is not yet ready to be used in other services. | Yes, but can be hidden. | No | Yes | Can be imported or updated during the refinement process. | Evaluated to get accurate publishing counts. | Yes, but not recommended to be used. | Yes |
 | Published | An audience in the **Published** state is an audience that is ready for use across all downstream services. | Yes | Yes | Yes | Can be imported or updated. | Evaluated using batch, streaming, or edge segmentation. | Yes | Yes |
-| Inactive | An audience in the **Inactive** state is an audience that is currently not in use. It still exists within Platform, but it will **not** be useable until it's marked as draft or published. | No, but can be shown. | No | No | No longer updated. | No longer evaluated or updated by Platform. | Yes | Yes |
+| Inactive | An audience in the **Inactive** state is an audience that is currently not in use. It still exists within Platform, but it will **not** be useable until it's marked as draft or published. | No, but can be shown. | No | No | No longer updated. | No longer evaluated or updated by Platform. | No | Yes |
 | Deleted | An audience in the **Deleted** state is an audience that has been deleted. The actual deletion of the data may take up to a few minutes to execute. | No | No | No | Underlying data is deleted. | No data evaluation or execution occurs after the deletion is completed. | No | No |
 
 ### In what states can I edit my audiences in?
@@ -201,6 +201,10 @@ At this time, you **must** manually check if the audience is used downstream in 
 
 Additionally, you **must** manually check if the audience is used as a component of an account-based audience, as this status is also not currently automatically checked.
 
+### What happens when I copy an audience? {#copy}
+
+When you copy an audience, the new audience will be in the draft state, and retain the same folders, tags, and labels that were applied to the original audience.
+
 ### Does using an audience as a child audience affect lifecycle state transitions?
 
 >[!NOTE]
@@ -217,7 +221,7 @@ In order for the parent audience to be moved to the inactive or deleted state, a
 
 ### Can I refer to an audience that is in a different lifecycle state?
 
-Yes! If your audience is currently in the draft state, you can refer to audiences in either the published or inactive state. However, in order to publish this audience, you **must** publish the other parent audiences.
+Yes! If your audience is currently in the draft state, you can refer to audiences in either the draft or published state. However, in order to publish this audience, you **must** publish the other parent audiences.
 
 ## Audience inventory
 

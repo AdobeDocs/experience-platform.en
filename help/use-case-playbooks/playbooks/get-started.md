@@ -8,7 +8,7 @@ exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
 
 # Get started
 
-Learn how to set up your account for Use Case Playbooks, designed for Real-Time Customer Data Platform and Adobe Journey Optimizer. The three main configuration steps are: 
+Learn how to set up your account for Use Case Playbooks, designed for Real-Time Customer Data Platform and Adobe Journey Optimizer if it's not automatically set up. The three main configuration steps are: 
 
 * Create a sandbox 
 * Configure user permissions

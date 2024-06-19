@@ -35,7 +35,7 @@ This guide also requires a working understanding of the following Platform servi
 * [Adobe Experience Platform Identity Service](/help/identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
 * [Real-Time Customer Profile](/help/profile/home.md): Uses [!DNL Identity Service] to create detailed customer profiles from your datasets in real time. [!DNL Real-Time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
 * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): A client-side JavaScript library that allows you to integrate various Platform services into your customer-facing website.
-    * [SDK consent commands](/help/web-sdk/consent/supporting-consent.md): A use-case overview of the consent-related SDK commands shown in this guide.
+    * [SDK consent commands](../../../../web-sdk/commands/setconsent.md): A use-case overview of the consent-related SDK commands shown in this guide.
 * [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md): Allows you to divide [!DNL Real-Time Customer Profile] data into groups of individuals that share similar traits and responds similarly to marketing strategies.
 
 In addition to the Platform services listed above, you should also be familiar with [destinations](/help/data-governance/home.md) and their role in the Platform ecosystem.

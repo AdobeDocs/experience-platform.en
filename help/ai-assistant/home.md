@@ -63,14 +63,18 @@ Operational insights refer to answers AI Assistant generates about your meta dat
 
 You can ask AI Assistant questions about your operational insights in the following domains: 
 
-* Attributes
-* Audiences
-* Dataflows
-* Datasets
-* Destinations _(Questions regarding accounts and some questions about dataflow cannot be answered at this time.)_
-* Journeys
-* Schemas _(Questions regarding field groups cannot be answered at this time.)_
-* Sources _(Questions regarding accounts cannot be answered at this time.)_
+| Domain | Supported metadata |
+| --- | --- |
+| Attributes | <ul><li>Attribute name look ups</li><li>Attribute - schema relationship</li><li>Attribute - dataset relationship</li><li>Attribute - audience relationship</li><li>Attribute - destination relationship</li><li>Unused attributes</li></ul> |
+| Audiences | <ul><li>Audience count</li><li>Audience type (streaming or batch)</li><li>Creation/modification dates</li><li>Activation status</li><li>Profile count</li><li>Duplicate audiences</li><li>Audience definition look ups</li><li>Audience - attribute relationship</li><li>Audience - dataset relationship</li><li>Audience - destination relationship</li><li>InSegment rules</li><li>Name look ups</li><li>Name and ID look ups |
+| Dataflows | <ul><li>Dataflow counts</li><li>Dataflow status</li><li>Dataflow - dataset relationship</li><li>Dataflow - source relationship</li></ul>|
+| Datasets | <ul><li>Dataset count</li><li>Profile enable status</li><li>Creation/modification date</li><li>Dataset - schema relationship</li><li>Dataset - audience relationship</li><li>Dataset - attribute relationship</li><li>Dataset - dataflow relationship</li><li>Name look ups </li><li>Name and ID look ups</li></ul> |
+| Destinations | <ul><li>Configured destination counts</li><li>Destination - audience relationship</li><li>Destination attribute relationship</li></ul> |
+| Journeys | <ul><li>Counts</li><li>Name look ups</li><li>Name and ID look ups</li><li>Journey status</li><li>Triggered status (audience vs. events)</li><li>Creation/modification dates</li><li>Recurring frequency</li></ul> |
+| Schemas | <ul><li>Schema counts</li><li>Creation/modification date</li><li>Schema class type</li><li>Schema - attribute relationship</li><li>Schema - dataset relationship</li><li>Schema - audience relationship</li><li>Profile enable status</li><li>Name look ups</li><li>Name and ID look ups</li></ul> |
+| Sources | <ul><li>Account counts</li><li>Account status</li><li>Active/inactive dataflows for each account</li><li>Source connector - dataflow relationship</li><li>Source account - dataflow relationship</li></ul> |
+
+{style="table-layout:auto"}
 
 For operational insights questions, answers may not reflect the current state of the UI. The data that backs these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You will need to log into a sandbox to inquire about specific data related to objects.
 
