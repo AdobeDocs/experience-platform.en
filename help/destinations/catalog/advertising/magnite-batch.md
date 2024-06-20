@@ -79,15 +79,15 @@ Locate the Magnite Streaming: Batch destination in the Adobe Experience catalog.
 
 If you already have an existing account, you can locate it by changing the Account type option to "Existing account". Otherwise, you will create an account below:
 
-To create a new account and authenticate it to the destination for the first time, fill in the required "S3 access key" and "S3 secret key" fields (provided to you via your account manager), and select **[!UICONTROL Connect to the destination]**
+To create a new account, and authenticate it to the destination for the first time, fill in the required "S3 access key" and "S3 secret key" fields (provided to you via your account manager), and select **[!UICONTROL Connect to destination]**
 
 ![destination configuration auth fields unfilled](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png)
 
-**Note:** Magnite Streaming's security policy requires a regular rotation of S3 keys. You should expect to have to update the account in the future with new S3 access and S3 secret keys. You only need to update the account itself - destinations using that account will automatically use the updated keys. Failure to upload the new keys will result in the data failing to send to this destination.
+**Note:** Magnite Streaming's security policy requires a regular rotation of S3 keys. You should expect to update your account in the future with new S3 access and S3 secret keys. You only need to update the account itself - destinations using that account will automatically use the updated keys. Failure to upload the new keys will result in the data failing to send to this destination.
 
 ### Fill in destination details {#destination-details}
 
-To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required. You can then proceed by selecting **[!UICONTROL Next]**
+To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination connection/instance in the
   future.
@@ -99,11 +99,13 @@ To configure details for the destination, fill in the required and optional fiel
 
 **Note:** If you plan to send multiple ID types (GAID, IDFA, etc.) using the Batch destination, a new destination connection/instance is required for each. Please contact your Magnite Account representative for more information.
 
-On the next screen, titled "Governance Policy and Enforcement Actions (Optional)," you can optionally select any relevant data governance policies. "Data Export" is generally selected for the Magnite Streaming Batch destination.
+You can then proceed by selecting **[!UICONTROL Next]**
 
-Once done, or if you wish to skip this optional screen, select **[!UICONTROL Create]**
+On the next screen, titled "Governance Policy and Enforcement Actions (Optional)", you can optionally select any relevant data governance policies. "Data Export" is generally selected for the Magnite Streaming Batch destination.
 
 ![Optional governance policy and enforcement actions](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
+
+Once selected, or if you wish to skip this optional screen, select **[!UICONTROL Create]**
 
 ### Enable Alerts {#enable-alerts}
 
