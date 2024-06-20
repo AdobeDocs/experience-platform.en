@@ -7,9 +7,9 @@ description: Magnite powers advertising that enables billions of people to stay 
 
 ## Overview {#overview}
 
-The Magnite-Adobe Experience Platform integration offers you Real-Time and Daily destinations to map and export audiences for targeting and activation on the Magnite Streaming platform. Activating audiences is a 2 step process
+The Magnite-Adobe Experience Platform integration offers you Real-Time and Daily destinations to map and export audiences for targeting and activation on the Magnite Streaming platform. Activating audiences is a 2 step process:
 
-- Activate the audience on the Magnite Streaming: Real-Time destination (defined in this doc)
+- Activate the audience on the Magnite Streaming: Real-Time destination (defined in this doc).
 - Activate the same audience on the Magnite Streaming: Daily destination.
   - The Magnite Streaming: Daily destination is a mandatory component. Failing to activate the audience on the Magnite Streaming Batch destination will result in failed integration.
   - Magnite Streaming: Daily destination configuration can be found [via this link](magnite-batch.md)
