@@ -1,6 +1,6 @@
 ---
 title: Magnite Streaming Batch Destination
-description: Use this destination to deliver Adobe CDP audiences to the Magnite Streaming Batch Destination.
+description: Use this destination to deliver Adobe CDP audiences to the Magnite Streaming platform in batch.
 ---
 
 # Magnite Streaming: Batch Destination connection {#magnite-streaming-batch-destination}
