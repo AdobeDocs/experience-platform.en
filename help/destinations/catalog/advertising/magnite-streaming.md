@@ -24,7 +24,7 @@ To help you better understand how and when you should use the [!DNL Magnite Stre
 
 ### Activation and targeting {#activation-and-targeting}
 
-This integration with Magnite allows customers to pass their CDP audiences from the Adobe Experience Platform to Magnite for advertising targeting. Audiences may be selected within Magnite for positive targeting as well as negative targeting (suppression). The Real-Time destination should be used if a segment is needed for Real-Time targeting in the Magnite Streaming Platform. If a Real-Time solution is not required, please use the Magnite Streaming: Daily destination.
+This integration with Magnite allows customers to pass their CDP audiences from the Adobe Experience Platform to Magnite for advertising targeting. Audiences may be selected within Magnite for positive targeting as well as negative targeting (suppression). The Real-Time destination should be used if a segment is needed for real-time targeting in the Magnite Streaming Platform. If a real-time solution is not required, please use the Magnite Streaming: Daily destination.
 
 ## Prerequisites {#prerequisites}
 
