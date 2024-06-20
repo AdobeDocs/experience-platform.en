@@ -85,9 +85,9 @@ The [!DNL Analytics] source passes these identities to Experience Platform in XD
 
 These fields are not marked as identities. Instead, the same identities are copied into XDM's `identityMap` as key-value pairs:
 
-* `{ "key": "AAID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
-* `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
-* `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
+* `{ "key": "AAID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`. On events where AAID exists, `endUserIDs._experience.mcid.namespace.code` is set to "AAID".
+* `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`. On events where ECID exists, `endUserIDs._experience.mcid.namespace.code` is set to "ECID".
+* `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`. On events where AACUSTOMID exists, `endUserIDs._experience.mcid.namespace.code` is set to "AACUSTOMID".
 
 In the identity map, if ECID is present, it is marked as the primary identity for the event. In this case, AAID may be based on ECID due to the [Identity Service grace period](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Otherwise, AAID is marked as the primary identity for the event. AACUSTOMID is never marked as the Primary ID for the event. However, if AACUSTOMID is present, then AAID is based on AACUSTOMID due to the Experience Cloud order of operations.
 
