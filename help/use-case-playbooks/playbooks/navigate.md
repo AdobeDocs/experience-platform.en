@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: Discover playbooks
-description: Learn how to discover a gallery of playbooks and get started with an inspirational sandbox.
+title: Navigate to Use Case Playbooks
+description: Learn how to navigate a gallery of playbooks and get started with an inspirational sandbox.
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
 ---
-# Discover playbooks
+# Navigate to Use Case Playbooks
 
 Use Case Playbooks are available at no extra cost to all Adobe Experience Platform customers. To access a rich gallery of use case playbooks in the Experience Platform UI, select **[!UICONTROL Playbooks]** from the left navigation. 
 

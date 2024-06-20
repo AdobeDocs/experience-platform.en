@@ -14,7 +14,7 @@ role: User
   * [Get started](/help/use-case-playbooks/playbooks/get-started.md)
   * [Discover playbooks](/help/use-case-playbooks/playbooks/discover.md)
   * [Available Use Case Playbooks](/help/use-case-playbooks/playbooks/playbooks-list.md)
-  * [Find the right playbook](/help/use-case-playbooks/playbooks/find.md)
+  * [Choose from a selection of playbooks](/help/use-case-playbooks/playbooks/choose.md)
   * [Create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md)
   * [Overview of data awareness in Use Case Playbooks](/help/use-case-playbooks/playbooks/data-awareness.md)
   * [Troubleshooting and known limitations](/help/use-case-playbooks/playbooks/troubleshooting.md)
