@@ -91,9 +91,9 @@ These fields are not marked as identities. Instead, the same identities (if pres
 
 When the identity or identities are copied into `identityMap`, `endUserIDs._experience.mcid.namespace.code` is also set on the same event:
 
-* If AAID is present, `endUserIDs._experience.mcid.namespace.code` is set to "AAID" on that event.
-* If ECID is present, `endUserIDs._experience.mcid.namespace.code` is set to "ECID" on that event.
-* If AACUSTOMID is present, `endUserIDs._experience.mcid.namespace.code` is set to "AACUSTOMID" on that event.
+* If AAID is present, `endUserIDs._experience.aaid.namespace.code` is set to "AAID".
+* If ECID is present, `endUserIDs._experience.mcid.namespace.code` is set to "ECID".
+* If AACUSTOMID is present, `endUserIDs._experience.aacustomid.namespace.code` is set to "AACUSTOMID".
 
 In the identity map, if ECID is present, it is marked as the primary identity for the event. In this case, AAID may be based on ECID due to the [Identity Service grace period](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Otherwise, AAID is marked as the primary identity for the event. AACUSTOMID is never marked as the Primary ID for the event. However, if AACUSTOMID is present, then AAID is based on AACUSTOMID due to the Experience Cloud order of operations.
 
