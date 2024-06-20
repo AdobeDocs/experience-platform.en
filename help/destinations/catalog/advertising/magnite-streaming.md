@@ -7,9 +7,12 @@ description: Magnite powers advertising that enables billions of people to stay 
 
 ## Overview {#overview}
 
-The Magnite-Adobe Experience Platform integration offers Magnite Streaming clients Real-Time and Daily destinations to map and export audiences for targeting and activation on the Magnite Streaming platform. The following document provides sample use cases to help you better understand how and when the Real-Time destination should be used, as well as step-by-step instructions for destination configuration for the Real-Time endpoint.
+The Magnite-Adobe Experience Platform integration offers you Real-Time and Daily destinations to map and export audiences for targeting and activation on the Magnite Streaming platform. Activating audiences is a 2 step process
 
-Be advised that in order to properly integrate with the Magnite platform, the Magnite Batch destiniation should be used in addition to the Real-Time destination. Only setting up the Real-Time Destiniation will result in a failed integration.  This document only covers the Real-Time destination setup. Batch destination can be found [via this link](magnite-batch.md)
+- Activate the audience on the Magnite Streaming Real-Time destination (defined in this doc)
+- Activate the same audience on the Magnite Streaming Batch destination.
+  - The Magnite Streaming Batch destination is a mandatory component. Failing to activate the audience on the Magnite Streaming Batch destination will result in failed integration.
+  - Magnite Streaming Batch destination configuration can be found [via this link](magnite-batch.md)
 
 >[!IMPORTANT]
 >
@@ -18,6 +21,11 @@ Be advised that in order to properly integrate with the Magnite platform, the Ma
 ## Use cases {#use-cases}
 
 To help you better understand how and when you should use the [!DNL Magnite Streaming: Real-Time] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this destination.
+
+* Real time segments. Add a segment to an id and have it available for targeting in the Magnite Streaming Platform in real time.
+* Need for intraday segment taxonomy/memberships
+
+Not all integrations may need a Magnite Streaming Real-Time destination.
 
 ### Activation and targeting {#activation-and-targeting}
 
