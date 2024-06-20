@@ -43,7 +43,7 @@ To use the Magnite destinations in the Adobe Experience Platform, you must first
 
 The Magnite Streaming: Batch destination can receive *any* identity sources from the Adobe CDP. Currently, this destination has three Target Identity fields for you to map to. Please note: *any* identity sources can map to any of the magnite_deviceId Target Identities:
 
-| Identity Source | Description | Consideration |
+| Target Identity | Description | Consideration |
 |:--------------------------- |:------------------------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------- |
 | magnite_deviceId_GAID | Google Advertising ID | Select this Target Identity when your source identity is a GAID |
 | magnite_deviceId_IDFA | Apple ID for Advertisers | Select this Target Identity when your source identity is an IDFA |
