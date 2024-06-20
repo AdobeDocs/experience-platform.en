@@ -48,6 +48,17 @@ The [Pricing and Rate Limits](https://developer.zendesk.com/api-reference/sales-
 |---|---|---|---|
 | `email` | `test@test.com` | Email address of the contact.| Yes |
 
+## Supported audiences {#supported-audiences}
+
+This section describes which type of audiences you can export to this destination.
+
+| Audience origin | Supported | Description | 
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+
+{style="table-layout:auto"}
+
 ## Export type and frequency {#export-type-frequency}
 
 Refer to the table below for information about the destination export type and frequency.
@@ -175,7 +186,8 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
-|April 2023|Documentation update| <ul><li>We updated the [use-cases](#use-cases) section with a clearer example of when customers would benefit from using this destination.</li> <li>We updated the [mapping](#mapping-considerations-example) section to reflect the correct required mappings. The `Attribute: last_name` and `Identity: email` target mappings are mandatory for this destination. If these mappings are missing, any other mappings are ignored and not sent to [!DNL Zendesk].</li> <li>We updated the [mapping](#mapping-considerations-example) section with clear examples of both mandatory and optional mappings.</li></ul> |
+|November 2023|Functionality update|You can now activate external audiences originating from custom uploads to this destination. See the [supported audiences](#supported-audiences) section for more details.|
+|April 2023|Documentation update| <ul><li>The [use-cases](#use-cases) section was updated. You can now find a clearer example of when customers would benefit from using this destination.</li> <li>The [mapping](#mapping-considerations-example) section was updated to reflect the correct required mappings. The `Attribute: last_name` and `Identity: email` target mappings are mandatory for this destination. If these mappings are missing, any other mappings are ignored and not sent to [!DNL Zendesk].</li><li>Added clear examples of both mandatory and optional mappings.</li></ul> |
 |March 2023|Initial release|Initial destination release and documentation publish.|
 
 {style="table-layout:auto"}
