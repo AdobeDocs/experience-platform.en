@@ -10,9 +10,9 @@ description: Magnite powers advertising that enables billions of people to stay 
 The Magnite-Adobe Experience Platform integration offers you Real-Time and Daily destinations to map and export audiences for targeting and activation on the Magnite Streaming platform. Activating audiences is a 2-step process:
 
 - Activate the audience on the Magnite Streaming: Real-Time destination (defined in this doc).
-- Activate the same audience on the Magnite Streaming: Daily destination.
-  - The Magnite Streaming: Daily destination is a mandatory component. Failing to activate the audience on the Magnite Streaming Batch destination will result in a failed integration.
-  - Magnite Streaming: Daily destination configuration can be found [via this link](magnite-batch.md)
+- Activate the same audience on the Magnite Streaming: Batch destination.
+  - The Magnite Streaming: Batch destination is a mandatory component. Failing to activate the audience on the Magnite Streaming Batch destination will result in a failed integration.
+  - Magnite Streaming: Batch destination configuration can be found [via this link](magnite-batch.md)
 
 >[!IMPORTANT]
 >
@@ -24,7 +24,7 @@ To help you better understand how and when you should use the [!DNL Magnite Stre
 
 ### Activation and targeting {#activation-and-targeting}
 
-This integration with Magnite allows customers to pass their CDP audiences from the Adobe Experience Platform to Magnite for advertising targeting. Audiences may be selected within Magnite for positive targeting as well as negative targeting (suppression). The Real-Time destination should be used if a segment is needed for real-time targeting in the Magnite Streaming Platform. If a real-time solution is not required, please use the Magnite Streaming: Daily destination.
+This integration with Magnite allows customers to pass their CDP audiences from the Adobe Experience Platform to Magnite for advertising targeting. Audiences may be selected within Magnite for positive targeting as well as negative targeting (suppression). The Real-Time destination should be used if a segment is needed for real-time targeting in the Magnite Streaming Platform. If a real-time solution is not required, please use the Magnite Streaming: Batch destination for daily delivery.
 
 ## Prerequisites {#prerequisites}
 
@@ -169,7 +169,7 @@ have been created and uploaded correctly using the following steps:
 
 - Post-ingest, segments are expected to appear in Magnite Streaming within a few minutes and can be applied to a deal. You can confirm this by looking up the segment ID that was shared during the activation steps in the Adobe Experience Platform.
 
-  - **Note:** Audiences shared with Magnite Streaming using the  Real-Time destination will also need to be shared using the Magnite Streaming: Daily destination. When configured correctly, segment names in the Magnite Streaming UI are updated to reflect those used in the Adobe Experience Platform post-daily update.
+  - **Note:** Audiences shared with Magnite Streaming using the  Real-Time destination will also need to be shared using the Magnite Streaming: Batch destination. When configured correctly, segment names in the Magnite Streaming UI are updated to reflect those used in the Adobe Experience Platform post-daily update.
 
 Finally, if a Batch destination has not been configured for your integration, set it up now via [this document](magnite-batch.md)
 
