@@ -1,6 +1,7 @@
 ---
 title: Best Practices for Advanced Data Lifecycle Management
 description: Learn how to efficiently manage data hygiene requests in Adobe Experience Platform using the Advanced Data Lifecycle Management UI and Data Hygiene API. This guide covers best practices such as maximizing identities per request, specifying individual datasets, and being mindful of API throttling to prevent slowdowns. The document includes guidelines for setting up automatic dataset cleanup, how to monitor work order statuses, and detailed response retrieval methods. Follow these practices to streamline your request processing and optimize response times.
+exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
 ---
 # Best practices for Advanced Data Lifecycle Management
 
