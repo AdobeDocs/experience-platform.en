@@ -8,7 +8,7 @@ exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
 
 # Get started
 
-Learn how to set up your account for Use Case Playbooks, designed for Real-Time Customer Data Platform and Adobe Journey Optimizer. The three main configuration steps are: 
+Learn how to set up your account for Use Case Playbooks, designed for Real-Time Customer Data Platform and Adobe Journey Optimizer if it's not automatically set up. The three main configuration steps are: 
 
 * Create a sandbox 
 * Configure user permissions
@@ -107,4 +107,4 @@ Read the documentation on [how to set up push channel surfaces](https://experien
 
 ## Next steps {#next-steps}
 
-Now that you've followed all the steps in this document, you should have created a development sandbox with Use Case Playbooks available in the left navigation. You now also know how to grant your team members the required permissions to view and manage playbooks and generate assets. As a next step, read how to [discover the right playbook](/help/use-case-playbooks/playbooks/discover.md) for you and then [create instances from it](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Now that you've followed all the steps in this document, you should have created a development sandbox with Use Case Playbooks available in the left navigation. You now also know how to grant your team members the required permissions to view and manage playbooks and generate assets. As a next step, read how to [choose the right playbook](/help/use-case-playbooks/playbooks/choose.md) for you and then [create instances from it](/help/use-case-playbooks/playbooks/create-share-reuse.md).
