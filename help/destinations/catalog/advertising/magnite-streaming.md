@@ -130,7 +130,7 @@ The next step is mapping source identifiers to the Magnite device_id identifier.
 
 ![map desired data fields to the device_id field](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
 
-**Real-Time destination Notes**:
+**Real-Time destination notes**:
 
 - You may have multiple source attributes/namespaces that could represent a Device ID, so map as many as you need.
 
@@ -145,7 +145,7 @@ device_id target field. When you\'re done, click Next.
 You must now configure a Start date (mandatory), End date (optional),
 and a Mapping ID for each audience.
 
-**Mapping ID Notes:**
+**Mapping ID notes:**
 
 - The Mapping ID field should be used when an audience has a pre-existing Segment ID previously known to Magnite.
 
