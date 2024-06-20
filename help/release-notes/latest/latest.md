@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
-**Release date: June 2024**
+**Release date: June 18, 2024**
 
 >[!TIP]
 >
