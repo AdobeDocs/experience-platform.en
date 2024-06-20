@@ -170,3 +170,11 @@ have been created and uploaded correctly using the following steps:
   - **Note:** Audiences shared with Magnite Streaming using the  real-time destination will also need to be shared using the Magnite Streaming Daily destination. When configured correctly, segment names in the Magnite Streaming UI are updated to reflect those used in the Adobe Experience Platform post-daily update.
 
 Finally, if a Batch destination has not been configured for your integration, set it up now via [this document](magnite-batch.md)
+
+## Data usage and governance {#data-usage-governance}
+
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, read the [Data Governance overview](/help/data-governance/home.md).
+
+## Additional resources {#additional-resources}
+
+For additional help documentation, visit the [Magnite Help Center](https://help.magnite.com/help).
