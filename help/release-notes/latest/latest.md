@@ -121,7 +121,7 @@ For more information on [!DNL Segmentation Service], please see the [Segmentatio
 
 To get started, read the [Use Case Playbooks overview](/help/use-case-playbooks/playbooks/overview.md), which provides an overview of the playbooks' functionality, their purpose, and an end-to-end demonstration, including how to create instances and import generated assets into other sandbox environments.
 
-To learn how you can access and set up an inspirational sandbox to experiment and explore various use case playbooks, see the [Discover the correct playbook](/help/use-case-playbooks/playbooks/discover.md) document.
+To learn how you can access and set up an inspirational sandbox to experiment and explore various use case playbooks, see the [Navigate to Use Case Playbooks](/help/use-case-playbooks/playbooks/navigate.md) document.
 
 To learn more about [!DNL Use Case Playbooks], read the following documentation pages:
 
