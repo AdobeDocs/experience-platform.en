@@ -1,17 +1,17 @@
 ---
 solution: Experience Platform
-title: Find the right playbook
-description: Learn how to find the right playbook for your use case enable playbooks.
+title: Choose from a selection of playbooks
+description: Learn how to choose right playbook for your use case enable playbooks.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 ---
-# Discover the right playbook
+# Choose from a selection of playbooks
 
 To use a playbook, navigate to **[!UICONTROL Use Case Playbooks] > [!UICONTROL Playbooks]**. Browse and use the various searching and filtering options on the page to select and get started with a specific playbook.
 
 ## Search and filter {#search-and-filter}
 
-Use the search window and filters available on the page to find the right playbook for your use case. 
+Use the search window and filters available on the page to find and choose the right playbook for your use case. 
 
 For example, you can filter playbooks that you can use based on the stage in the marketing funnel that you want to target - conversion, engagement, or retention. You could also filter the displayed playbooks by the industry that you are in or the product entitlement that you have access to - Adobe Journey Optimizer or Real-Time CDP. 
 
