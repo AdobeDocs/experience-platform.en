@@ -1,6 +1,6 @@
 ---
 title: Magnite Streaming Real-Time destination connection
-description: Magnite powers advertising that enables billions of people to stay informed, entertained, and connected via our DV+, Streaming, SpringServe, and ClearLine platforms.
+description: Use this destination to deliver Adobe CDP audiences to the Magnite Streaming platform in real-time.
 ---
 
 # Magnite Streaming: Real-Time destination connection
