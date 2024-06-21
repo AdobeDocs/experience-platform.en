@@ -71,4 +71,4 @@ Read this page to get an overview of all the available playbooks that you can di
 
 ## Next steps
 
-Now that you are aware of the available playbooks, read the [discover guide](/help/use-case-playbooks/playbooks/discover.md) to understand how to get started with the playbooks in the user interface.
+Now that you are aware of the available playbooks, read this [guide](/help/use-case-playbooks/playbooks/choose.md) to understand how to get started with the playbooks and choose the right one for you in the user interface.
