@@ -155,7 +155,7 @@ On the "Configure a filename and export schedule for each audience" screen, you 
 >[!IMPORTANT]
 >
 >- A Mapping ID or "NONE" is required for this destination.
->- A Mapping ID should be provided when an audience has a pre-existing Segment ID previously known to Magnite Streaming. Otherwise, "NONE" should be used as the Mapping ID
+>- A Mapping ID should be provided when an audience has a pre-existing Segment ID previously known to Magnite Streaming. Otherwise, "NONE" should be used as the Mapping ID.
 >- When configuring the filename for each audience, please include the Mapping ID via the "Custom Text" field to add. The Mapping ID will be appended as: "{previous_filename}\_\[MAPPING_ID\]." If this audience is new to Magnite Streaming, and you will not be providing a Mapping ID, "NONE" should be entered into the "Custom Text" field. The new filename in this case should be: "{previous_filename}\_\[NONE\]".
 
 ## Exported data / Validate data export {#exported-data}
