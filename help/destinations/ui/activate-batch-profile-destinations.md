@@ -235,6 +235,8 @@ In this step, you must select the profile attributes that you want to add to the
     > 
     >You can use the search field to narrow down your selection, as shown in the image below.
 
+    Use the **[!UICONTROL Show only fields with data]** toggle to only display schema fields populated with values. By default, only populated schema fields are shown.
+
     ![Modal window showing profile attributes that can be exported to the destination.](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
 
 
