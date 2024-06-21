@@ -294,7 +294,9 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 | `RESTRICT` | The default value for the mode. If specified, the schema only drops if it does **not** contain any tables. |
 | `CASCADE` | If specified, the schema is dropped along with all the tables present in the schema. |
 
-## CREATE VIEW
+## CREATE VIEW {#create-view}
+
+An SQL view is a virtual table based on the result-set of an SQL statement. Create a view with the `CREATE VIEW` statement and give it a name. You can then use that name to refer back to the results of the query. This makes it easier to reuse complex queries.
 
 The following syntax defines a `CREATE VIEW` query for a dataset. This dataset can be an ADLS or accelerated store dataset.
 
