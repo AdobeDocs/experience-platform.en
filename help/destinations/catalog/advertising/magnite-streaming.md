@@ -6,13 +6,14 @@ description: Use this destination to deliver Adobe CDP audiences to the Magnite 
 # Magnite Streaming: Real-Time destination connection
 
 ## Overview {#overview}
+The Magnite Streaming: Real-Time and the [Magnite Streaming: Batch](magnite-batch.md) destinations in Adobe Experience Platform help you map and export audiences for targeting and activation on the Magnite Streaming platform.
 
-The Magnite-Adobe Experience Platform integration offers you Real-Time and Daily destinations to map and export audiences for targeting and activation on the Magnite Streaming platform. Activating audiences is a 2-step process:
+Activating audiences to the Magnite Streaming platform is a two step process which requires you to use both the Magnite Streaming: Real-Time and the [Magnite Streaming: Batch](magnite-batch.md) destinations.
 
-- Activate the audience on the Magnite Streaming: Real-Time destination (defined in this doc).
-- Activate the same audience on the Magnite Streaming: Batch destination.
-  - The Magnite Streaming: Batch destination is a mandatory component. Failing to activate the audience on the Magnite Streaming Batch destination will result in a failed integration.
-  - Magnite Streaming: Batch destination configuration can be found [via this link](magnite-batch.md)
+To activate your audiences to Magnite Streaming, you must:
+
+- Activate the audiences on the Magnite Streaming: Real-Time destination, as shown in this page.
+- Activate the same audience on the [Magnite Streaming: Batch](magnite-batch.md) destination. The Magnite Streaming: Batch destination is a mandatory component. Failing to activate the audience on the Magnite Streaming Batch destination will result in a failed integration, and your audiences will not be activated.
 
 >[!IMPORTANT]
 >
@@ -24,14 +25,14 @@ To help you better understand how and when you should use the [!DNL Magnite Stre
 
 ### Activation and targeting {#activation-and-targeting}
 
-This integration with Magnite allows customers to pass their CDP audiences from the Adobe Experience Platform to Magnite for advertising targeting. Audiences may be selected within Magnite for positive targeting as well as negative targeting (suppression). The Real-Time destination should be used if a segment is needed for real-time targeting in the Magnite Streaming Platform. If a real-time solution is not required, please use the Magnite Streaming: Batch destination for daily delivery.
+This integration with Magnite allows customers to pass their CDP audiences from Adobe Experience Platform to Magnite for advertising targeting. Audiences may be selected within Magnite for positive targeting as well as negative targeting (suppression). 
 
 ## Prerequisites {#prerequisites}
 
-To use the Magnite destinations in the Adobe Experience Platform, you must first have a Magnite Streaming account. If you have a [!DNL Magnite Streaming] account, please reach out to your [!DNL Magnite] account manager to be provided credentials to access [!DNL Magnite's] destinations.
+To use the Magnite destinations in Adobe Experience Platform, you must first have a Magnite Streaming account. If you have a [!DNL Magnite Streaming] account, please reach out to your [!DNL Magnite] account manager to be provided credentials to access [!DNL Magnite's] destinations.
 If you do not have a [!DNL Magnite Streaming] account, please reach out to adobe-tech@magnite.com
 
-## Supported Identities
+## Supported identities {#supported-identities}
 
 The Magnite Streaming: Real-Time destination supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
@@ -73,13 +74,10 @@ To connect to this destination, follow the steps described in the [destination c
 
 ### Authenticate to destination {#authenticate}
 
-Locate the Magnite Streaming destinations in the Adobe Experience catalog. Click the additional options button (\...) and then configure the destination.
-
 To authenticate to the destination, fill in the required fields and select **[!UICONTROL Connect to destination]**.
 
 ![destination configuration auth fields unfilled](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-unfilled.png)
 
-If you have an existing account, you can locate it by changing the Account type option to Existing account.
 * **[!UICONTROL Username]**: The username supplied to you by [!DNL Magnite].
 * **[!UICONTROL Password]**: The password supplied to you by [!DNL Magnite].
 
@@ -89,11 +87,9 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Name of your source partner]**: Your customer/company name. Only supported partners will be available for selection.
+*  **[!UICONTROL Name of your source partner]**: Your customer/company name. Only supported Magnite Streaming clients will be available for selection.
 
 ![destination configuration auth fields filled](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
-
-You can optionally select any relevant data governance policies. Data Export is generally used for the Magnite destinations.
 
 Once done, click the Create button.
 
@@ -116,60 +112,41 @@ Read [Activate profiles and segments to streaming segment export destinations](/
 
 Once the destination has been created, you will be shown the audience activation flow. The following walks through how to activate audiences using the Real-Time destination.
 
-#### Step 1: Select your new destination and click Next.
-
-![select the destination to activate audiences too](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-select-destination.png)
-
-#### Step 2: Select any audiences you want to activate, then click Next.
-
-![select the audiences to activate](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-select-audience.png)
-
 ### Map attributes and identities {#map}
 
 The next step is mapping source identifiers to the Magnite device_id identifier.
 
+- You can add as many mappings as you need by selecting **[!UICONTROL Add new mapping]**.
+
+In this example using the Real-Time destination, we're mapping any rows that contain a generic deviceId source identifier to the Magnite device_id target field. When you\'re done, click Next.
+
 ![map desired data fields to the device_id field](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
-
-**Real-Time destination notes**:
-
-- You may have multiple source attributes/namespaces that could represent a Device ID, so map as many as you need.
-
-- A new mapping can be added using the Add new mapping button.
-
-In this example using the Real-Time destination, we're mapping any rows
-that contain a generic deviceId source identifier to the Magnite
-device_id target field. When you\'re done, click Next.
 
 ![Be sure to set mapping ids to all activated audiences, or set NONE if no mapping id is present](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)
 
-You must now configure a Start date (mandatory), End date (optional),
-and a Mapping ID for each audience.
+You must now configure a Start date (mandatory), an End date (optional), and a Mapping ID for each audience.
 
-**Mapping ID notes:**
+**Mapping ID**
 
-- The Mapping ID field should be used when an audience has a pre-existing Segment ID previously known to Magnite.
+- Use the **[!UICONTROL Mapping ID]** field when an audience has a pre-existing Segment ID previously known to Magnite.
 
-- To add a Mapping ID to an audience, click each audience row individually and enter data in the right-hand column (see image above). If you do not want to add a Mapping ID, please enter NONE into the Mapping ID field. This is because the Mapping ID is a mandatory field within the Adobe system, despite technically being optional for a customer.
+- To add a **[!UICONTROL Mapping ID]** to an audience, click each audience row individually, and enter data in the right-hand column (see image above). If you do not want to add a Mapping ID, please enter NONE into the Mapping ID field. 
 
-Once these configurations are applied, click Next.
+Select **[!UICONTROL Next]** and finalize the activation flow.
 
-#### Confirm the destination activation Configuration.
 
 `![](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)
 
-In this step, confirm the destination activation configuration and click
-Finish.
-
 ## Exported data / Validate data export {#exported-data}
 
-Once your audiences have been uploaded, you may validate your audiences
-have been created and uploaded correctly using the following steps:
+Once your audiences have been uploaded, you may validate your audiences have been created and uploaded correctly using the following steps:
 
-- The Real-Time destination system will attempt to send the events with a p95 of \<10 mins after a Profile segmentation/Update event. This means that 95% of the time, profile segment updates will be delivered to Magnite Streaming in under 10 min. The actual receipt and processing of the events within Magnite Streaming depends on the shared data volume.
+- In 95% of cases, audiences will be delivered to Magnite Streaming in under 10 minutes. The actual receipt and processing of the events within Magnite Streaming depends on the shared data volume.
 
 - Post-ingest, segments are expected to appear in Magnite Streaming within a few minutes and can be applied to a deal. You can confirm this by looking up the segment ID that was shared during the activation steps in the Adobe Experience Platform.
 
-  - **Note:** Audiences shared with Magnite Streaming using the  Real-Time destination will also need to be shared using the Magnite Streaming: Batch destination. When configured correctly, segment names in the Magnite Streaming UI are updated to reflect those used in the Adobe Experience Platform post-daily update.
+## Activate the same audiences through the Magnite Streaming: Batch destination
+Audiences shared with Magnite Streaming using the  Real-Time destination will also need to be shared using the [Magnite Streaming: Batch](magnite-batch.md) destination. When configured correctly, segment names in the Magnite Streaming UI are updated to reflect those used in the Adobe Experience Platform post-daily update.
 
 Finally, if a Batch destination has not been configured for your integration, set it up now via [this document](magnite-batch.md)
 
