@@ -31,15 +31,15 @@ To help you better understand how and when you should use the Magnite Streaming:
 
 ### Use case #1 {#use-case-1}
 
-*You have activated an audience on the Magnite Streaming: Real-Time destination.*
+You have activated an audience on the Magnite Streaming: Real-Time destination.
 
-*Any audiences activated via the Magnite Streaming: Real-Time destination must also use the Magnite Streaming: Batch destination, as the Batch delivery's data is meant to replace/persist the Real-Time delivery's data within the Magnite Streaming platform.*
+Any audiences activated via the Magnite Streaming: Real-Time destination must also use the Magnite Streaming: Batch destination, as the Batch delivery's data is meant to replace/persist the Real-Time delivery's data within the Magnite Streaming platform.
 
 ### Use case #2 {#use-case-2}
 
-*You want to activate an audience only in a batch/daily cadence to the Magnite Streaming platform.*
+You want to activate an audience only in a batch/daily cadence to the Magnite Streaming platform.
 
-*Any audience(s) activated via the Magnite Streaming: Batch destination will be delivered in a batch/daily cadence, and will then be targettable in the Magnite Streaming platform.*
+Any audience(s) activated via the Magnite Streaming: Batch destination will be delivered in a batch/daily cadence and will then be targettable in the Magnite Streaming platform.
 
 ## Prerequisites {#prerequisites}
 
