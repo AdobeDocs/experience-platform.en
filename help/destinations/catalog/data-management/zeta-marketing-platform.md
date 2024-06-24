@@ -39,7 +39,7 @@ An advertiser aims to target users within specific audiences through the Zeta De
     
 ## Supported identities {#supported-identities}
 
-[!DNL Zeta Marketing Platform] supports the activation of custom user IDs described in the table below. For more details, see [identities](/help/identity-service/namespaces.md).
+[!DNL Zeta Marketing Platform] supports the activation of custom user IDs described in the table below. For more details, see [identities](help/identity-service/features/namespaces.md).
 
 >[!IMPORTANT]
 > The Zeta Marketing Platform destination requires you to map a source identity namespace to the ZMP `uid` target identity. This helps the Zeta Marketing Platform uniquely differentiate each profile. 
