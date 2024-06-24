@@ -126,7 +126,7 @@ Manage data collection configuration settings. Similar settings in the JavaScrip
   * **[!UICONTROL High entropy user-agent hints]**: Collects more detailed information about the user's device.
 
 >[!TIP]
->The **[!UICONTROL On before link click send callback]** is a deprecated callback that is only available for properties that already have it configured. It is the tag equivalent to [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) in the JavaScript library.
+>The **[!UICONTROL On before link click send]** field is a deprecated callback that is only visible for properties that already have it configured. It is the tag equivalent to [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) in the JavaScript library. Use the [!UICONTROL Filter click properties] callback to filter or adjust click data, or use the [!UICONTROL On before event send callback] to filter or adjust the overall payload sent to Adobe.
 
 ## Configure media collection settings {#media-collection}
 
