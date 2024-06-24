@@ -1,7 +1,8 @@
 ---
 title: Zeta Marketing Platform
-description: The Zeta Marketing Platform (ZMP) is a cloud-based system which helps you acquire, grow, and retain customers more efficiently, powered by intelligence (proprietary data and AI). For more details, refer to [Zeta Global](https://zetaglobal.com/). 
-
+description: The Zeta Marketing Platform (ZMP) is a cloud-based system which helps you acquire, grow, and retain customers more efficiently, powered by intelligence (proprietary data and AI).
+hide: yes
+hidefromtoc: yes
 ---
 
 # Zeta Marketing Platform {#zeta-marketing-platform}
@@ -10,7 +11,8 @@ description: The Zeta Marketing Platform (ZMP) is a cloud-based system which hel
 
 The Zeta Marketing Platform (ZMP) is a cloud-based system which helps you acquire, grow, and retain customers more efficiently, powered by intelligence (proprietary data and AI). For more details, refer to [Zeta Global](https://zetaglobal.com/). 
 
-With the Zeta Marketing Platform connector available in Adobe Experience Platform, you can seamlessly synchronize your audiences from Experience Platform to the ZMP. 
+With the Zeta Marketing Platform connector available in Adobe Experience Platform, you can seamlessly synchronize your audiences from Experience Platform to the ZMP.
+
 >[!IMPORTANT]
 >
 >The destination connector and documentation page are created and maintained by the *Zeta Global* team. For any inquiries or update requests, please contact the team at [Contact Us](https://zetaglobal.com/about/contact-us/).
@@ -18,9 +20,11 @@ With the Zeta Marketing Platform connector available in Adobe Experience Platfor
 ## Use cases {#use-cases}
 
 ### Build audience segments {#use-case-build-audiences}
+
 A marketer wants to build unique audience profiles, identify their most valuable segments, and use them across any digital channels that the Zeta Marketing Platform supports. They want to create a true 360 view of a consumer profile, build and activate meaningful audiences. More details on which channels the Zeta Marketing Platform supports can be found [here](https://zetaglobal.com/platform/integrations/).
 
 ### Target users with advertisements {#use-case-target-users}
+
 An advertiser aims to target users within specific audiences through the Zeta Demand Side Platform (DSP), as these users interact with their brands. For more information on the Zeta DSP, click [here](https://knowledgebase.zetaglobal.com/programmatic-user-guide/).
 
 ## Prerequisites {#prerequisites}
