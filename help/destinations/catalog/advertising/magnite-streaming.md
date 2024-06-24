@@ -6,6 +6,7 @@ description: Use this destination to deliver Adobe CDP audiences to the Magnite 
 # Magnite Streaming: Real-Time destination connection
 
 ## Overview {#overview}
+
 The Magnite Streaming: Real-Time and the [Magnite Streaming: Batch](magnite-batch.md) destinations in Adobe Experience Platform help you map and export audiences for targeting and activation on the Magnite Streaming platform.
 
 Activating audiences to the Magnite Streaming platform is a two step process which requires you to use both the Magnite Streaming: Real-Time and the [Magnite Streaming: Batch](magnite-batch.md) destinations.
@@ -87,11 +88,11 @@ To configure details for the destination, fill in the required and optional fiel
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!UICONTROL Name of your source partner]**: Your customer/company name. Only supported Magnite Streaming clients will be available for selection.
+*  **[!UICONTROL Name of your source partner]**: Your customer/company name. Only supported Magnite Streaming clients are available for selection.
 
 ![destination configuration auth fields filled](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 
-Once done, click the Create button.
+Once done, select the **[!UICONTROL Create]** button.
 
 ![Optional governance policy and enforcement actions](../../assets/catalog/advertising/magnite/destination-realtime-config-grouping-policy.png)
 
@@ -110,7 +111,7 @@ When you are finished providing details for your destination connection, select 
 
 Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
-Once the destination has been created, you will be shown the audience activation flow. The following walks through how to activate audiences using the Real-Time destination.
+Once the destination connection has been created, you can proceed to the audience activation flow. The following section walks through how to activate audiences using the Real-Time destination.
 
 ### Map attributes and identities {#map}
 
@@ -118,11 +119,13 @@ The next step is mapping source identifiers to the Magnite device_id identifier.
 
 - You can add as many mappings as you need by selecting **[!UICONTROL Add new mapping]**.
 
-In this example using the Real-Time destination, we're mapping any rows that contain a generic deviceId source identifier to the Magnite device_id target field. When you\'re done, click Next.
+This example using the Real-Time destination shows a row that contains a generic deviceId source identifier mapped to the Magnite device_id target field. When you're with the mappings, select [!UICONTROL Next].
 
-![map desired data fields to the device_id field](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
+![Map desired data fields to the device_ID field](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
 
-![Be sure to set mapping ids to all activated audiences, or set NONE if no mapping id is present](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)
+Be sure to set Mapping IDs to all activated audiences, or set NONE if no Mapping ID is present.
+
+![Be sure to set Mapping IDs to all activated audiences, or set NONE if no Mapping ID is present](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)
 
 You must now configure a Start date (mandatory), an End date (optional), and a Mapping ID for each audience.
 
@@ -130,7 +133,7 @@ You must now configure a Start date (mandatory), an End date (optional), and a M
 
 - Use the **[!UICONTROL Mapping ID]** field when an audience has a pre-existing Segment ID previously known to Magnite.
 
-- To add a **[!UICONTROL Mapping ID]** to an audience, click each audience row individually, and enter data in the right-hand column (see image above). If you do not want to add a Mapping ID, please enter NONE into the Mapping ID field. 
+- To add a **[!UICONTROL Mapping ID]** to an audience, select each audience row individually, and enter data in the right-hand column (see image above). If you do not want to add a Mapping ID, please enter NONE into the Mapping ID field. 
 
 Select **[!UICONTROL Next]** and finalize the activation flow.
 
@@ -146,6 +149,7 @@ Once your audiences have been uploaded, you may validate your audiences have bee
 - Post-ingest, segments are expected to appear in Magnite Streaming within a few minutes and can be applied to a deal. You can confirm this by looking up the segment ID that was shared during the activation steps in the Adobe Experience Platform.
 
 ## Activate the same audiences through the Magnite Streaming: Batch destination
+
 Audiences shared with Magnite Streaming using the  Real-Time destination will also need to be shared using the [Magnite Streaming: Batch](magnite-batch.md) destination. When configured correctly, segment names in the Magnite Streaming UI are updated to reflect those used in the Adobe Experience Platform post-daily update.
 
 Finally, if a Batch destination has not been configured for your integration, set it up now via [this document](magnite-batch.md)
