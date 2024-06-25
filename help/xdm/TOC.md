@@ -48,6 +48,7 @@ role: Developer
   * XDM Individual Profile {#profile}
     * [Consents and Preferences](./field-groups/profile/consents.md)
     * [Demographic Details](./field-groups/profile/demographic-details.md)
+    * [External Source System Audit Details](./images/field-groups/shared/external-source-system-audit-details.md)
     * [IAB TCF 2.0 Consent](./field-groups/profile/iab.md)
     * [IdentityMap](./field-groups/profile/identitymap.md)
     * [Healthcare Member Details](./field-groups/profile/healthcare-member-details.md)
