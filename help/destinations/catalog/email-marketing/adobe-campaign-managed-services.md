@@ -19,15 +19,21 @@ Use Campaign to:
 * Integrate email, mobile, online and offline channels into the customer journey,
 * Automate the delivery of meaningful and timely messages and offers.
 
->[!IMPORTANT]
->
->Keep in mind the following guardrails when using the Adobe Campaign Managed Cloud Services connection:
->
->* A maximum of 50 segments can be [activated](#activate) for the destination,
->* For each segment, you can add up to 20 fields to [map](#map) to Adobe Campaign,
->* Data retention on Azure Blob storage Data Landing Zone (DLZ) : 7 day,
->* The activation frequency is 3 hours minimum.
->* The maximum file name length supported by this connection is 255 characters. When you [configure the exported file name](../../ui/activate-batch-profile-destinations.md#configure-file-names), make sure the file name does not exceed 255 characters. Exceeding the maximum file name length results in activation errors.
+## Guardrails {#guardrails}
+
+Keep in mind the following guardrails when using the Adobe Campaign Managed Cloud Services connection:
+
+* A maximum of 25 segments can be [activated](#activate) for the destination. 
+
+  This limit can be changed by updating the value of the **NmsCdp_Aep_Audience_List_Limit** option in the **[!UICONTROL Administration]** > **[!UICONTROL Platform]** > **[!UICONTROL Options]** folder of Campaign explorer.
+
+* For each segment, you can add up to 20 fields to [map](#map) to Adobe Campaign. 
+
+  This limit can be changed by updaing the value of the **NmsCdp_Aep_Destinations_Max_Columns** option in the **[!UICONTROL Administration]** > **[!UICONTROL Platform]** > **[!UICONTROL Options]** folder of Campaign explorer.
+
+* Data retention on Azure Blob storage Data Landing Zone (DLZ) : 7 day.
+* The activation frequency is 3 hours minimum.
+* The maximum file name length supported by this connection is 255 characters. When you [configure the exported file name](../../ui/activate-batch-profile-destinations.md#configure-file-names), make sure the file name does not exceed 255 characters. Exceeding the maximum file name length results in activation errors.
 
 ## Use cases {#use-cases}
 
