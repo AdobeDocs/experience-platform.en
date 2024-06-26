@@ -121,7 +121,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 ### Existing Account
 
-Accounts already defined using the Merkury Enterprise Identity destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **Destinations** \> **Accounts**;
+Accounts already defined using the Merkury Enterprise Identity destination appear in a list pop-up. When selected, you can see details on the account in the right rail. View the example from the UI, when you navigate to **Destinations** > **Accounts**;
 
 ![A screenshot of destination account in destination accounts page](../../assets/catalog/data-partners/merkury-identity/media/image5.png)
 
