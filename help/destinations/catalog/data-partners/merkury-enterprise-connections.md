@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;destinations;connectors;destination connectors;destinations sdk;sdk;SDK
-title: Merkury Enterprise Connections Documentation self-service template for the UI
-description: Learn how to create a Merkury Enterprise Connections destionation connection using the Adobe Experience Platform UI.
+title: Merkury Enterprise Connections Destination
+description: Learn how to create a Merkury Enterprise Connections destination connection using the Adobe Experience Platform UI.
 ---
 # Merkury Enterprise Connections Destination
 
 >[!NOTE]
 >
->The destination connector and documentation page are created and maintained by the Merkury team. For any inquiries or update requests, please contact your Merkury account representitive.
+>The destination connector and documentation page are created and maintained by the Merkury team. For any inquiries or update requests, please contact your Merkury account representative.
 
 ## Overview
 
@@ -25,7 +24,7 @@ Follow the steps in this documentation page to create a Merkury Connections dest
 
 ## Use Cases
 
-* **Digital Media Activation**: Easy matching and delivery of your audience profiles to Merkury’s 50+ premium addressable publishers and ad-tech connections.
+* **Digital Media Activation**: Easy matching and delivery of your audience profiles to Merkury's 50+ premium addressable publishers and ad-tech connections.
 * **Improve Efficiencies**: Enhance your cookie-less, addressable media reach, improve targeting efficiencies and Return on Advertising Spend (ROAS).
 
 ## Prerequisites

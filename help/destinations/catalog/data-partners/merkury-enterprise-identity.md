@@ -1,15 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;destinations;connectors;destination connectors;destinations sdk;sdk;SDK
-title: Merkury Enterprise Identity Documentation self-service template for the UI
-description: Learn how to create a Merkury Enterprise Identity destionation connection using the Adobe Experience Platform UI.
+title: Merkury Enterprise Identity Destination
+description: Learn how to create a Merkury Enterprise Identity destination connection using the Adobe Experience Platform UI.
 ---
 
 # Merkury Enterprise Identity Destination
 
 >[!NOTE]
 >
->The destination connector and documentation page are created and maintained by the Merkury team. For any inquiries or update requests, please contact your Merkury account representitive.
-
+>The destination connector and documentation page are created and maintained by the Merkury team. For any inquiries or update requests, please contact your Merkury account representative.
 
 ## Overview
 
