@@ -100,11 +100,11 @@ To configure details for the destination, fill in the required and optional fiel
 
 ![A screenshot of destination details](../../assets/catalog/data-partners/merkury-connections/media/image6.png)
 
--   **Name (Required)** - The name the destination will be saved under
--   **Description** - Short explanation of the destination's purpose
--   **Bucket Name (Required)** - Name of the Amazon S3 bucket set up on S3
--   **Folder Path (Required)** - If subdirectories in a bucket are used a path must be defined, or '/' to reference the root path.
--   **File Type** - Select the format Experience Platform should use for the exported files. Consult your Merkury team for the expected file type for your account.
+* **Name (Required)** - The name the destination will be saved under
+* **Description** - Short explanation of the destination's purpose
+* **Bucket Name (Required)** - Name of the Amazon S3 bucket set up on S3
+* **Folder Path (Required)** - If subdirectories in a bucket are used a path must be defined, or '/' to reference the root path.
+* **File Type** - Select the format Experience Platform should use for the exported files. Consult your Merkury team for the expected file type for your account.
 
 >[!NOTE]
 >

@@ -128,8 +128,7 @@ Accounts already defined using the Merkury Enterprise Identity destination appea
 
 ### Enable alerts
 
-You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the
-UI](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
+You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
 
 When you are finished providing details for your destination connection, select **Next**.
 
