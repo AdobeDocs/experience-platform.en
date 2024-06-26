@@ -10,7 +10,7 @@ description: Learn about the External Source System Audit Details Experience Dat
 
 | Display name                                     | Property                                 | Data type | Description                      | 
 | -------------------------------------------------| ---------------------------------------- | --------- | --- |
-| [UICONTROL External Source System Audit Details] |  `external-source-system-audit-details`  | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md)  |  The '[!UICONTROL External Source System Audit Details]' field group extends the core 'External Source System Audit Attributes' data type by referencing its properties and adding contextual metadata. This facilitates detailed audit tracking and flexible data integration for external sources, accommodating the asynchronous nature of profile ingestion.  |
+| [!UICONTROL External Source System Audit Details] |  `external-source-system-audit-details`  | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md)  |  The '[!UICONTROL External Source System Audit Details]' field group extends the core 'External Source System Audit Attributes' data type by referencing its properties and adding contextual metadata. This facilitates detailed audit tracking and flexible data integration for external sources, accommodating the asynchronous nature of profile ingestion.  |
 
 {style="table-layout:auto"}
 
