@@ -13,8 +13,8 @@ Activating audiences to the Magnite Streaming platform is a two step process whi
 
 To activate your audiences to Magnite Streaming, you must:
 
-- Activate the audiences on the Magnite Streaming: Real-Time destination, as shown in this page.
-- Activate the same audience on the [Magnite Streaming: Batch](magnite-batch.md) destination. The Magnite Streaming: Batch destination is a mandatory component. Failing to activate the audience on the Magnite Streaming Batch destination will result in a failed integration, and your audiences will not be activated.
+* Activate the audiences on the Magnite Streaming: Real-Time destination, as shown in this page.
+* Activate the same audience on the [Magnite Streaming: Batch](magnite-batch.md) destination. The Magnite Streaming: Batch destination is a mandatory component. Failing to activate the audience on the Magnite Streaming Batch destination will result in a failed integration, and your audiences will not be activated.
 
 Note: When using the Real-Time destination, Magnite: Streaming will receive audiences in real-time, but we can only store real-time audiences temporarily in our platform, and they will be removed from our system within a couple days. For this reason, if you want to use the Magnite: Streaming Real-Time destination, you will ALSO need to use the [Magnite Streaming: Batch](magnite-batch.md) destination - each audience that you activate to the Real-Time destination, you also need to activate to the Batch destination.
 
@@ -139,8 +139,7 @@ You must now configure a Start date (mandatory), an End date (optional), and a M
 
 Select **[!UICONTROL Next]** and finalize the activation flow.
 
-
-`![](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)
+![Select next and finalize activation flow.](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)
 
 ## Exported data / Validate data export {#exported-data}
 
