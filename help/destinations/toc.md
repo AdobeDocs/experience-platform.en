@@ -139,6 +139,8 @@ role: Admin,User
     * Data & Identity Partner {#data-partner}
         * [Acxiom Prospect Suppression](./catalog/data-partner/acxiom-prospect-suppression.md)
         * [Acxiom Data Enhancement](./catalog/data-partner/acxiom-data-enhancement.md)
+        * [Merkury Enterprise Connections](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
+        * [Merkury Enterprise Identity](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md)
     * eCommerce destinations {#ecommerce}
         * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
     * Email destinations {#email}
