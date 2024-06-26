@@ -43,9 +43,9 @@ Any audience(s) activated via the Magnite Streaming: Batch destination will be d
 
 ## Prerequisites {#prerequisites}
 
-To use the Magnite destinations in the Adobe Experience Platform, you must first have a Magnite Streaming account. If you have a [!DNL Magnite Streaming] account, please reach out to your [!DNL Magnite] account manager to be provided credentials to access [!DNL Magnite's] destinations. If you do not have a [!DNL Magnite Streaming] account, please reach out to adobe-tech@magnite.com
+To use the Magnite destinations in Adobe Experience Platform, you must first have a Magnite Streaming account. If you have a [!DNL Magnite Streaming] account, please reach out to your [!DNL Magnite] account manager to be provided credentials to access [!DNL Magnite's] destinations. If you do not have a [!DNL Magnite Streaming] account, please reach out to adobe-tech@magnite.com
 
-## Supported Identities {#supported-identities}
+## Supported identities {#supported-identities}
 
 The Magnite Streaming: Batch destination can receive *any* identity sources from the Adobe CDP. Currently, this destination has three Target Identity fields for you to map to.
 
@@ -53,15 +53,15 @@ The Magnite Streaming: Batch destination can receive *any* identity sources from
 >
 >*Any* identity sources can map to any of the magnite_deviceId Target Identities.
 
-| Target Identity | Description | Consideration |
+| Target Identity | Description | Considerations |
 |:--------------------------- |:------------------------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------- |
 | magnite_deviceId_GAID | Google Advertising ID | Select this Target Identity when your source identity is a GAID |
-| magnite_deviceId_IDFA | Apple ID for Advertisers | Select this Target Identity when your source identity is an IDFA |
-| magnite_deviceId_CUSTOM | Custom/user-defined ID | Select this Target Identity when your source identity is not a GAID or IDFA, or if it is a custom or user-defined ID |
+| magnite_deviceId_IDFA | Apple ID for Advertisers | Select this target identity when your source identity is an IDFA |
+| magnite_deviceId_CUSTOM | Custom/user-defined ID | Select this target identity when your source identity is not a GAID or IDFA, or if it is a custom or user-defined ID |
 
 {style="table-layout:auto"}
 
-## Supported Audiences {#supported-audiences}
+## Supported audiences {#supported-audiences}
 
 | Audience origin             | Supported | Description | 
 |-----------------------------|----------|----------|
@@ -70,7 +70,7 @@ The Magnite Streaming: Batch destination can receive *any* identity sources from
 
 {style="table-layout:auto"}
 
-## Export Type and Frequency {#export-type-frequency}
+## Export type and frequency {#export-type-frequency}
 
 | Item | Type | Notes | 
 |-----------------------------|----------|----------|
@@ -121,7 +121,7 @@ On the next screen, titled "Governance Policy and Enforcement Actions (Optional)
 
 Once selected, or if you wish to skip this optional screen, select **[!UICONTROL Create]**
 
-### Enable Alerts {#enable-alerts}
+### Enable alerts {#enable-alerts}
 
 You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
 
