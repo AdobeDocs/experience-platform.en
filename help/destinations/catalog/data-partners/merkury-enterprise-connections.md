@@ -1,6 +1,8 @@
 ---
 title: Merkury Enterprise Connections Destination
 description: Learn how to create a Merkury Enterprise Connections destination connection using the Adobe Experience Platform UI.
+hide: yes
+hidefromtoc: yes
 ---
 # Merkury Enterprise Connections Destination
 
@@ -18,7 +20,7 @@ Follow the steps in this documentation page to create a Merkury Connections dest
 
 >[!NOTE]
 >
->If you are looking to activate audiences to media destinations with you Merkury Connect account, use our Merkury Connections destination instead.
+>If you are looking to activate audiences to media destinations with your Merkury Connect account, use our Merkury Connections destination instead.
 
 ![The Merkury Enterprise Conections destination card highlighted in the Experience Platform destinations catalog.](../../assets/catalog/data-partners/merkury-connections/media/image2.png)
 

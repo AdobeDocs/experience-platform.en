@@ -1,6 +1,8 @@
 ---
 title: Merkury Enterprise Identity Destination
 description: Learn how to create a Merkury Enterprise Identity destination connection using the Adobe Experience Platform UI.
+hide: yes
+hidefromtoc: yes
 ---
 
 # Merkury Enterprise Identity Destination
