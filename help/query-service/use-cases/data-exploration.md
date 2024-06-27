@@ -34,19 +34,19 @@ To help your understanding of the concepts discussed in this document, you shoul
 
 Data ingestion involves the collection and materializing of records in batches into Adobe Experience Platform. A "batch" is a data ingestion concept where a collection of records contained in a file, or streamed directly from the source, are materialized as a unit on the data lake. A batch refers to a collection of records that are processed as a unit.
 
-When ingesting data into Platform, you must verify and validate the records within a batch that have been successfully ingested. You should be aware of the potential issues that can arise during the ingestion process as your data is copied into Platform. These issues are represented by error codes when you investigate a dataset. These issues can include rows being skipped, stored separetley, or data type values being inaccurately converted to NUll. This guide highlights the importance of monitoring and addressing these potential process errors and how to address them.
+When ingesting data into Platform, you must verify and validate the records within a batch that have been successfully ingested. You should be aware of the potential issues that can arise during the ingestion process as your data is copied into Platform. These issues are represented by error codes when you investigate a dataset. These issues can include rows being skipped, stored separately, or data type values being inaccurately converted to NUll. This guide highlights the importance of monitoring and addressing these potential process errors and how to address them.
 
 ## Investigate any failed batch dataset ingestions {#investigate-failed-ingestions}
 
-To investigate any failed batch dataset ingestion, first navigate to the [!UICONTROL Datasets] dashbaord. In the Experience Platform UI, select **[!UICONTROL Datasets]** in the left-navigation to open the [!UICONTROL Datasets] dashboard.
+To investigate any failed batch dataset ingestion, first navigate to the [!UICONTROL Datasets] dashbaord. In the Experience Platform UI, select **[!UICONTROL Datasets]** in the left-navigation to open the [!UICONTROL Datasets] dashboard. Next, select the name of a failed dataset from the [!UICONTROL Browse] tab to access the [!UICONTROL Dataset activity] screen.
 
 ![The Platform UI Datasets dashboard with Datasets highlighted in left navigation.](../images/use-cases/datasets-workspace.png)
 
-Select the name of a dataset from the Browse tab to access its Dataset activity screen and see details of the dataset you selected. 
+The [!UICONTROL Dataset activity] view appears. This view contains details of your selected dataset. Ingested batches are displayed in a table format. To open the [!UICONTROL Batch overview], select a batch ID of a failed batch ingestion.
 
 ![The Datasets browse tab with a failed batch ingestion highlighted.](../images/use-cases/failed-batch-ingestions.png)
 
-To open the [!UICONTROL Batch overview], select a batch ID 
+The [!UICONTROL Batch overview] appears with information on the failed batch ingestion. The error codes are available in this workspace.
 
 ![The Batch overview with error codes highlighted.](../images/use-cases/error-codes.png)
 
@@ -54,9 +54,9 @@ To open the [!UICONTROL Batch overview], select a batch ID
 
 When ingesting data into Experience Platform, you may encounter several common errors that can impact the success of your data batches. Understanding these errors is crucial for troubleshooting and ensuring data integrity. Here are the main types of ingestion errors you might face:
 
-- ERROR: Indicates severe issues like data corruption or format non-conformance, causing the entire batch to fail.
-- DCVS: Represents less serious issues like missing required fields. These rows are skipped and stored separately, accessible via error diagnostics tools.
-- MAPPER: These errors occur during data type conversion, resulting in NULL values. Such records make it to the final dataset but may need further exploration.
+- `ERROR`: This code indicates severe issues like data corruption or format non-conformance, causing the entire batch to fail.
+- `DCVS`: This code represents less serious issues like missing required fields. These rows are skipped and stored separately. THey are accessible via error diagnostics tools.
+- `MAPPER`: These errors occur during data type conversion and result in NULL values being recorded. These records can be included in the final dataset but may need further exploration.
 
 ## Access dataset batch metadata {#access-dataset-batch-metadata}
 
@@ -65,3 +65,59 @@ To ensure that system columns (metadata columns) are included in the query resul
 Next, to view the system fields of the dataset, execute a SELECT all statement to display the results from the dataset, for example `select * from movie_data`. The results include two new columns on the right-hand side `acp_system_metadata` and `_ACP_BATCHID`. The metadata columns `_acp_system_metadata` and `_ACP_BATCHID` help identify the logical and physical partitions of ingested data.
  
 ![The DBVisualizer UI with the movie_data table and its metadata columns displayed and highlighted.](../images/use-cases/movie_data-table-with-metadata-columns.png)
+
+When data is ingested into Platform, it is assigned a logical partition based on the incoming data. This logical partition is represented by `_acp_system_metadata.sourceBatchId`. This ID helps to group and identify the data batches logically before they are processed and stored.
+
+After the data is processed and ingested into the data lake, it is assigned a physical partition represented by `_ACP_BATCHID`. This ID reflects the actual storage partition in the data lake where the ingested data resides.
+
+To help understand how the data is grouped and distributed after ingestion, use the following query to count the number of distinct physical partitions (`_ACP_BATCHID`) for each logical partition (`_acp_system_metadata.sourceBatchId`).
+
+```SQL
+SELECT  _acp_system_metadata, COUNT(DISTINCT _ACP_BATCHID) FROM movie_data
+GROUP BY _acp_system_metadata
+```
+
+The results of this query are shown in the image below. 
+
+![The results of a query to show the number of distinct physical partitions for each logical partition.](../images/use-cases/logical-and-physical-partition-count.png)
+
+This means that the number of input batches does not necessarily match the number of output batches. The system determines the most efficient way to batch and store the data in the data lake. 
+
+The following example uses a different dataset to illustrate this. 
+
+>[!NOTE]
+>
+>If you want to try this out, you can ingest the provided sample file ([`Drug_checkout_data`](../images/use-cases/drug_checkout_data.zip)) into Platform and configure your schema mapping. 
+
+The Drug checkout data file is a deeply nested set of 35,000 records. Use the SQL statement `SELECT * FROM drug_orders;` to preview of the first set of records in the JSON-based drug_orders dataset. 
+
+The image below shows a preview of the file and its records.
+
+![A preview of the first set of records in the JSON-based drug_orders dataset.](../images/use-cases/drug-orders-preview.png)
+
+<!-- test title -->
+### Use SQL to generate insights on batch ingestion process
+
+Use the SQL statement below to provide insights into how the data ingestion process has grouped and processed the input records into batches.
+
+```sql
+SELECT _acp_system_metadata,
+       Count(DISTINCT _acp_batchid) AS numoutputbatches,
+       Count(_acp_batchid)          AS recordcount
+FROM   drug_orders
+GROUP  BY _acp_system_metadata 
+```
+
+The query results are seen in the image below.
+
+![A table showing the distribution of how input batches were mastered at a time with record counts.](../images/use-cases/distribution-of-input-batches.png)
+
+The results demonstrate the efficiency and behavior of the data ingestion process. Although three input batches were created -- each containing 2000, 24000, and 9000 records -- when the records were combined and deduplicated, only one unique batch remained.
+
+>[!NOTE]
+>
+>All the records that are visible within a dataset are the ones that were successfully ingested. This does not mean that all the records that were sent from the source input are present. You must check for data ingestion failures to find the batches/records that did not make it in. 
+
+## Querying a batch in a dataset
+
+<!-- Up to here -->
