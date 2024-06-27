@@ -173,32 +173,294 @@ A successful response return the details of the newly created extension package 
 }
 ```
 
+>[!NOTE]
+>
+>The authorization is currently in the `pending_approval` stage. Before using the extension package, the organization must approve the authorization. Users of the organization are able to browse the private extension package while authorization is pending approval, but they are unable to install it and cannot find it in their extensions catalog. 
 
-The initial state of the authorization is pending_approval. The authorized company will need to approve the authorization before they can use the ExtensionPackage. While an authorization is pending approval, the authorized company users are allowed to view the private extension package, but their extensions catalog does not contain it and cannot install it. The authorized company can approve or reject the authorization.
-In order to approve the authorization, an user with manage_properties rights from the authorized company would send a PATCH request to the ExtensionPackageUsageAuthorization with the id of the authorization and the state set to approved.
-curl --request PATCH \
-  --url https://reactor.adobe.io/extension_package_usage_authorizations/:extension_package_usage_authorization_id \
-  --header 'Accept: application/vnd.api+json;revision=1' \
-  --header 'Authorization: Bearer access_token' \
-  --header 'Content-Type: application/vnd.api+json' \
-  --header 'X-Api-Key: Activation-DTM' \
-  --header 'x-gw-ims-org-id: :authorized_org_id' \
-  --data '{
-  "data": {
-    "attributes": {
-	  "state": "approved"
-	},
-	"id": ":extension_package_usage_authorization_id",
-	"type": "extension_package_usage_authorizations"
+## Retrieve a list of extension package usage authorizations {#list_authorizations}
+
+You can retrieve a list of extension package usage authorizations by making a GET request.
+
+**API format**
+
+```http
+GET /extension_package_usage_authorizations
+```
+
+**Request**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/extension_package_usage_authorizations \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H "Content-Type: application/vnd.api+json" \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**Response**
+
+A successful response returns a list of extension packages.
+
+```json
+{
+  "data": [
+    {
+      "id": "EA35d0e731f73645e6972df9fcac101434",
+      "type": "extension_package_usage_authorizations",
+      "attributes": {
+        "created_at": "2024-06-05T23:17:30.308Z",
+        "updated_at": "2024-06-05T23:17:30.308Z",
+        "name": "Acme",
+        "platform": "web",
+        "owner_org_id": "{ORG_ID}",
+        "owner_org_name": "Reactor QE",
+        "authorized_org_id": "{ORG_ID}",
+        "authorized_org_name": "Platform UI - INT",
+        "state": "pending_approval",
+        "created_by_email": "Restricted",
+        "created_by_display_name": "Restricted",
+        "updated_by_email": "example@adobe.com",
+        "updated_by_display_name": "George Ciltaru"
+      },
+      "relationships": {
+        "extension_package": {
+          "links": {
+            "related": "https://reactor.adobe.io/extension_package_usage_authorizations/EA35d0e731f73645e6972df9fcac101434/extension_package"
+          },
+          "data": null
+        }
+      },
+      "links": {
+        "self": "https://reactor.adobe.io/extension_package_usage_authorizations/EA35d0e731f73645e6972df9fcac101434"
+      }
+    }
+  ],
+  "links": {
+    "self": "https://reactor.adobe.io/extension_package_usage_authorizations?page%5Bnumber%5D=1&page%5Bsize%5D=25",
+    "next": "https://reactor.adobe.io/extension_package_usage_authorizations?page%5Bnumber%5D=2&page%5Bsize%5D=25",
+    "last": "https://reactor.adobe.io/extension_package_usage_authorizations?page%5Bnumber%5D=3&page%5Bsize%5D=25"
+  },
+  "meta": {
+    "pagination": {
+      "current_page": 1,
+      "next_page": 2,
+      "prev_page": null,
+      "total_pages": 3,
+      "total_count": 57
+    }
   }
-}'
-Once the authorization is approved, the authorized company can install the ExtensionPackage on their properties. If the authorization is rejected, the authorized company will not be able to use the ExtensionPackage.
-The owner of the ExtensionPackage can revoke the authorization at any time by deleting the ExtensionPackageUsageAuthorization. This will prevent the authorized company from viewing the private versions of the ExtensionPackage in the catalog and from installing it on their properties, but already installed private versions will continue to work as expected.
-curl --request DELETE \
-  --url https://reactor.adobe.io/extension_package_usage_authorizations/:extension_package_usage_authorization_id \
-  --header 'Accept: application/vnd.api+json;revision=1' \
-  --header 'Authorization: Bearer access_token' \
-  --header 'Content-Type: application/vnd.api+json' \
-  --header 'X-Api-Key: Activation-DTM' \
-  --header 'x-gw-ims-org-id: :owner_org_id'
-}'
+}
+```
+
+## Delete an extension package usage authorization {#delete}
+
+You can delete an extension package usage authorization by including its `ID` in the path of a DELETE request. This will prevent the authorized organization from viewing the private versions of the extension package in the catalog and from installing it on their properties. 
+
+>[!NOTE]
+>
+>Any already installed private versions will continue to work as expected.
+
+**API format**
+
+```http
+DELETE /extension_package_usage_authorizations/{ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `ID` | The `ID` of the extension package usage authorization that you want to delete. |
+
+{style="table-layout:auto"}
+
+**Request**
+
+```shell
+curl -X DELETE \
+  https://reactor.adobe.io/extension_package_usage_authorizations/{ID} \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}'
+```
+
+**Response**
+
+A successful response returns HTTP status 204 (No Content) with no response body, indicating that the extension has been deleted.
+
+## Update an extension package usage authorization {#update}
+
+You can approve or reject an extension package usage authorization by including its `ID` in the path of a PATCH request.
+
+>[!NOTE]
+>
+>To approve or reject an extension package usage authorization for your company, you need to have `manage_properties` rights. 
+
+**API format**
+
+```http
+PATCH /extension_package_usage_authorizations/{ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `ID` | The `ID` of the extension package usage authorization that you want to delete. |
+
+{style="table-layout:auto"}
+
+**Request**
+
+```shell
+curl -X PATCH \
+  https://reactor.adobe.io/extension_package_usage_authorizations/{ID} \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H "Content-Type: application/vnd.api+json" \
+  -d '{
+        "data": {
+          "attributes": {
+            "state": "approved"
+          },
+          "type": "extension_package_usage_authorizations",
+          "id": "EA86f54b48dd7042a68686508e03be8ba9"
+        }
+      } 
+```
+
+| Property | Description |
+| --- | --- |
+| `attributes` | The attributes that you want to revise. For extension package usage authorizations you can revise their `state`. |
+
+**Response**
+
+A successful response returns the details of the revised extension package usage authorization.
+
+```json
+{
+  "data": {
+    "id": "EA86f54b48dd7042a68686508e03be8ba9",
+    "type": "extension_package_usage_authorizations",
+    "attributes": {
+      "created_at": "2024-06-05T23:17:59.480Z",
+      "updated_at": "2024-06-05T23:18:00.115Z",
+      "name": "Acme",
+      "platform": "web",
+      "owner_org_id": "{ORG_ID}",
+      "owner_org_name": "Reactor QE",
+      "authorized_org_id": "{ORG_ID}",
+      "authorized_org_name": "Platform UI - INT",
+      "state": "approved",
+      "created_by_email": "Restricted",
+      "created_by_display_name": "Restricted",
+      "updated_by_email": "example@adobe.com",
+      "updated_by_display_name": "George Ciltaru"
+    },
+    "relationships": {
+      "extension_package": {
+        "links": {
+          "related": "https://reactor.adobe.io/extension_package_usage_authorizations/EA86f54b48dd7042a68686508e03be8ba9/extension_package"
+        },
+        "data": {
+          "id": "EPb91d54cad9f749dba4e5566459f84c9c",
+          "type": "extension_packages"
+        }
+      }
+    },
+    "links": {
+      "self": "https://reactor.adobe.io/extension_package_usage_authorizations/EA86f54b48dd7042a68686508e03be8ba9"
+    }
+  }
+}
+```
+
+>[!NOTE]
+>
+>Once the authorization is approved, your organization can install the extension package on your properties.
+
+## Retrieve data for the extension package for an extension package usage authorization {#retrieve_data}
+
+You can retrieve data for the extension package for an extension package usage authorization by making a GET request.
+
+**API format**
+
+```http
+GET /extension_package_usage_authorizations/{ID}/extension_package
+```
+
+| Parameter | Description |
+| --- | --- |
+| `ID` | The `ID` of the extension package usage authorization that you want to retrieve. |
+
+{style="table-layout:auto"}
+
+**Request**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/extension_package_usage_authorizations/{ID}/extension_package \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H "Content-Type: application/vnd.api+json" \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**Response**
+
+A successful response returns data for extension package for an extension package authorization.
+
+```json
+{
+  "data": {
+    "id": "EP45ae063fd75c4c22936d3d456c858cfa",
+    "type": "extension_packages",
+    "attributes": {
+      "actions": [],
+      "author": {
+        "url": "http://adobe.com",
+        "name": "Acme",
+        "email": "acme@adobe.com"
+      },
+      "availability": "private",
+      "cdn_path": "https://assets.adobedtm.com/staging/extensions/EP45ae063fd75c4c22936d3d456c858cfa",
+      "conditions": [],
+      "configuration": null,
+      "created_at": "2024-06-05T23:17:48.607Z",
+      "data_elements": [],
+      "description": "Provides nothing.",
+      "discontinued": false,
+      "display_name": "Acme Template Test",
+      "ecma_version": null,
+      "events": [],
+      "exchange_url": null,
+      "hosted_lib_files": null,
+      "icon_path": "resources/icons/core.svg",
+      "main": "null",
+      "name": "Acme",
+      "owner_org_id": "{ORG_ID}",
+      "resources": null,
+      "shared_modules": null,
+      "status": "succeeded",
+      "platform": "web",
+      "updated_at": "2024-06-05T23:17:53.806Z",
+      "version": "1.0.0",
+      "view_base_path": "dist/",
+      "created_by_email": "example@adobe.com",
+      "created_by_display_name": "George Ciltaru",
+      "updated_by_email": "example@adobe.com",
+      "updated_by_display_name": "George Ciltaru"
+    },
+    "relationships": {
+      "extension_package": {
+        "links": {
+          "related": "https://reactor.adobe.io/extension_packages/EP45ae063fd75c4c22936d3d456c858cfa/extension_package_usage_authorizations"
+        }
+      }
+    },
+    "links": {
+      "self": "https://reactor.adobe.io/extension_packages/EP45ae063fd75c4c22936d3d456c858cfa"
+    }
+  }
+}
+```
