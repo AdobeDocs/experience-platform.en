@@ -18,7 +18,7 @@ You can retrieve a list of extension package usage authorizations for an extensi
 **API format**
 
 ```http
-GET extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authorizations
+GET /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authorizations
 ```
 
 | Parameter | Description |
@@ -31,7 +31,7 @@ GET extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authorizat
 
 ```shell
 curl -X GET \
-  https://reactor.adobe.io/properties/PRee071cb5b7794f42b74c913e1ad2e325/extensions \
+  https://reactor.adobe.io/extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authorizations \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -92,24 +92,88 @@ A successful response returns a list of extension packages.
 }
 ```
 
+## Create an extension package usage authorization {#create}
 
+Create an extension package usage authorization for each [extension package](./extension-packages.md) and `{ORG_ID}` of the organization you want to authorize. You can create a new extension package usage authorization by making a POST request.
 
-To accomplish this, they would create an ExtensionPackageUsageAuthorization for the ExtensionPackage and the org_id of the company they wish to authorize.
-curl --request POST \
-  --url https://reactor.adobe.io//extension_packages/:extension_package_id/extension_package_usage_authorizations \
-  --header 'Accept: application/vnd.api+json;revision=1' \
-  --header 'Authorization: Bearer access_token' \
-  --header 'Content-Type: application/vnd.api+json' \
-  --header 'X-Api-Key: Activation-DTM' \
-  --header 'x-gw-ims-org-id: owner_org_id' \
-  --data '{
+**API format**
+
+```http
+POST /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authorizations
+```
+
+| Parameter | Description |
+| --- | --- |
+| `EXTENSION_PACKAGE_ID` | The `ID` of the extension package for which you want to create an extension package usage authorization. |
+
+{style="table-layout:auto"}
+
+**Request**
+
+```shell
+curl -X POST \
+  https://reactor.adobe.io/extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authorizations \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H "Content-Type: application/vnd.api+json" \
+  -d '{
+        "data": {
+          "attributes": {
+            "authorized_org_id": "{ORG_ID}"
+          },
+          "type": "extension_package_usage_authorizations"
+        }
+      } 
+```
+
+| Property | Description |
+| --- | --- |
+| `attributes.authorized_org_id` | The `ID` of the organization you want to authorize. |
+
+**Response**
+
+A successful response return the details of the newly created extension package usage authorization.
+
+```json
+{
   "data": {
+    "id": "EA35d0e731f73645e6972df9fcac101434",
+    "type": "extension_package_usage_authorizations",
     "attributes": {
-	  "authorized_org_id": ":authorized_org_id"
-	},
-	"type": "extension_package_usage_authorizations"
+      "created_at": "2024-06-05T23:17:30.308Z",
+      "updated_at": "2024-06-05T23:17:30.308Z",
+      "name": "Acme",
+      "platform": "web",
+      "owner_org_id": "{ORG_ID}",
+      "owner_org_name": "Reactor QE",
+      "authorized_org_id": "{ORG_ID}",
+      "authorized_org_name": "Platform UI - INT",
+      "state": "pending_approval",
+      "created_by_email": "example@adobe.com",
+      "created_by_display_name": "George Ciltaru",
+      "updated_by_email": "Restricted",
+      "updated_by_display_name": "Restricted"
+    },
+    "relationships": {
+      "extension_package": {
+        "links": {
+          "related": "https://reactor.adobe.io/extension_package_usage_authorizations/EA35d0e731f73645e6972df9fcac101434/extension_package"
+        },
+        "data": {
+          "id": "EP43649cc8856d4f09a7c2a21a4b1e449d",
+          "type": "extension_packages"
+        }
+      }
+    },
+    "links": {
+      "self": "https://reactor.adobe.io/extension_package_usage_authorizations/EA35d0e731f73645e6972df9fcac101434"
+    }
   }
-}'
+}
+```
+
+
 The initial state of the authorization is pending_approval. The authorized company will need to approve the authorization before they can use the ExtensionPackage. While an authorization is pending approval, the authorized company users are allowed to view the private extension package, but their extensions catalog does not contain it and cannot install it. The authorized company can approve or reject the authorization.
 In order to approve the authorization, an user with manage_properties rights from the authorized company would send a PATCH request to the ExtensionPackageUsageAuthorization with the id of the authorization and the state set to approved.
 curl --request PATCH \
