@@ -16,6 +16,8 @@ exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
 >* If the Adobe team asks that you make any updates to your configurations following your initial submission, you must submit another destination publish request after you make the updates.
 >
 >* Even after your destination is live in the Experience Platform catalog, if you need to make any updates to your configurations, you must submit a new destination publish request for the updates to be reflected in the configurations.
+>
+>* The review timeline and required artifacts are the same for new destinations and existing destinations that you are updating.
 
 Before your destination can be published to the [Experience Platform destinations catalog](/help/destinations/catalog/overview.md), you must provide Adobe with certain information about the destination and the testing you performed, to ensure that users enjoy the best possible experience when activating data to your platform.
 
