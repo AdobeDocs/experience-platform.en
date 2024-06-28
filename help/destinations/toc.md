@@ -83,6 +83,8 @@ role: Admin,User
         * [LinkedIn Insight Tag extension](./catalog/advertising/linkedin.md)
         * [LiveRamp - Onboarding connection](./catalog/advertising/liveramp-onboarding.md)
         * [LiveRamp - Distribution connection](./catalog/advertising/liveramp-distribution.md)
+        * [(Beta) Magnite Batch](/help/destinations/catalog/advertising/magnite-batch.md)
+        * [(Beta) Magnite Streaming Real-time connection](/help/destinations/catalog/advertising/magnite-streaming.md)
         * [Microsoft Bing connection](./catalog/advertising/bing.md)
         * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
@@ -139,6 +141,8 @@ role: Admin,User
     * Data & Identity Partner {#data-partner}
         * [Acxiom Prospect Suppression](./catalog/data-partner/acxiom-prospect-suppression.md)
         * [Acxiom Data Enhancement](./catalog/data-partner/acxiom-data-enhancement.md)
+        * [Merkury Enterprise Connections](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
+        * [Merkury Enterprise Identity](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md)
     * eCommerce destinations {#ecommerce}
         * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
     * Email destinations {#email}
