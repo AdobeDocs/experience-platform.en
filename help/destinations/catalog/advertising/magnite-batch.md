@@ -1,6 +1,9 @@
 ---
 title: Magnite Streaming Batch Destination
 description: Use this destination to deliver Adobe CDP audiences to the Magnite Streaming platform in batch.
+badgeBeta: label="Beta" type="Informative"
+hide: yes
+hidefromtoc: yes
 ---
 
 # Magnite Streaming: Batch connection {#magnite-streaming-batch}
@@ -22,6 +25,8 @@ Continue reading below for more information about the Magnite: Streaming Batch d
 For more information about the Real-Time destination, See [this doc](magnite-streaming.md) instead.
 
 >[!IMPORTANT]
+>
+>This destination connector is in beta and only available to select customers. To request access, contact your Adobe representative.
 >
 >The destination connector and documentation page are created and maintained by the [!DNL Magnite] team. For any inquiries or update requests, please contact them directly at `adobe-tech@magnite.com`.
 
@@ -105,7 +110,7 @@ To configure details for the destination, fill in the required and optional fiel
   future.
 *  **[!UICONTROL Description]**: A description that will help you identify this
   destination connection/instance in the future.
-  *  **[!UICONTROL Name of your source partner]**: The name you would like to go by as a source in Magnite Streaming's platform
+*  **[!UICONTROL Name of your source partner]**: The name you would like to go by as a source in Magnite Streaming's platform
 
 ![destination configuration auth fields filled](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 
@@ -154,15 +159,17 @@ On the "Configure a filename and export schedule for each audience" screen, you 
 
 >[!IMPORTANT]
 >
->- A Mapping ID or "NONE" is required for this destination.
->- A Mapping ID should be provided when an audience has a pre-existing Segment ID previously known to Magnite Streaming. Otherwise, "NONE" should be used as the Mapping ID.
->- When configuring the filename for each audience, please include the Mapping ID via the "Custom Text" field to add. The Mapping ID will be appended as: "{previous_filename}\_\[MAPPING_ID\]." If this audience is new to Magnite Streaming, and you will not be providing a Mapping ID, "NONE" should be entered into the "Custom Text" field. The new filename in this case should be: "{previous_filename}\_\[NONE\]".
+> A Mapping ID or "NONE" is required for this destination.
+>
+> A Mapping ID should be provided when an audience has a pre-existing Segment ID previously known to Magnite Streaming. Otherwise, "NONE" should be used as the Mapping ID.
+>
+> When configuring the filename for each audience, please include the Mapping ID via the "Custom Text" field to add. The Mapping ID will be appended as: `{previous_filename}\_\[MAPPING_ID\].` If this audience is new to Magnite Streaming, and you will not be providing a Mapping ID, "NONE" should be entered into the "Custom Text" field. The new filename in this case should be: `{previous_filename}\_\[NONE\]`.
 
 ## Exported data / Validate data export {#exported-data}
 
 Once your audiences have been uploaded, you may validate your audiences have been created and uploaded correctly.
 
-- The Magnite Streaming Batch destination delivers S3 files to Magnite Streaming at a daily cadence. After delivery and ingestion, audiences/segments are expected to appear in Magnite Streaming, and can be applied to a deal. You can confirm this by looking-up the segment ID or segment name that was shared during the activation steps in the Adobe Experience Platform.
+* The Magnite Streaming Batch destination delivers S3 files to Magnite Streaming at a daily cadence. After delivery and ingestion, audiences/segments are expected to appear in Magnite Streaming, and can be applied to a deal. You can confirm this by looking-up the segment ID or segment name that was shared during the activation steps in the Adobe Experience Platform.
 
 >[!NOTE]
 >

@@ -83,6 +83,7 @@ role: Admin,User
         * [LinkedIn Insight Tag extension](./catalog/advertising/linkedin.md)
         * [LiveRamp - Onboarding connection](./catalog/advertising/liveramp-onboarding.md)
         * [LiveRamp - Distribution connection](./catalog/advertising/liveramp-distribution.md)
+        * [(Beta) Magnite Batch](/help/destinations/catalog/advertising/magnite-batch.md)
         * [Microsoft Bing connection](./catalog/advertising/bing.md)
         * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
