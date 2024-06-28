@@ -23,6 +23,7 @@ role: Admin,Developer
     - [Example scenarios](./identity-graph-linking-rules/example-scenarios.md)
     - [Graph Simulation UI](./identity-graph-linking-rules/graph-simulation.md)
     - [Identity graph linking rules configuration guide](./identity-graph-linking-rules/configuration.md)
+    - [Identity settings](./identity-graph-linking-rules/identity-settings-ui.md)
   - [ECID overview](./features/ecid.md)
 - [Implementation guide](implementation.md)
 - [Guardrails for Identity data](guardrails.md)
