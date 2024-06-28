@@ -84,6 +84,7 @@ role: Admin,User
         * [LiveRamp - Onboarding connection](./catalog/advertising/liveramp-onboarding.md)
         * [LiveRamp - Distribution connection](./catalog/advertising/liveramp-distribution.md)
         * [(Beta) Magnite Batch](/help/destinations/catalog/advertising/magnite-batch.md)
+        * [(Beta) Magnite Streaming Real-time connection](/help/destinations/catalog/advertising/magnite-streaming.md)
         * [Microsoft Bing connection](./catalog/advertising/bing.md)
         * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
