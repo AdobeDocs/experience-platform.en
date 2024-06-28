@@ -45,7 +45,7 @@ The [!UICONTROL Filter click properties] callback opens a custom code editor tha
 * **`content.linkType`**: The type of link (exit, download, or other).
 * **`content.linkURL`**: The destination URL of the clicked link.
 * **`return true`**: Immediately exit the callback with the current variable values.
-* **`return false`**: Immediately exit the callback and omit all link data. The `onBeforeEventSend` callback function is still executed if one is registered.
+* **`return false`**: Immediately exit the callback and abort collecting data.
 
 Any variables defined outside of `content` can be used, but are not included in the payload sent to Adobe.
 
