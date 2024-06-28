@@ -1,6 +1,6 @@
 ---
 title: Explore, Troubleshoot, and Verify Batch Ingestion with SQL
-description: Learn how to understand and manage the data ingestion process in Adobe Experience Platform. This document includes hoe to verify batches, handle errors, and query ingested data.
+description: Learn how to understand and manage the data ingestion process in Adobe Experience Platform. This document includes how to verify batches, handle errors, and query ingested data.
 ---
 # Explore, troubleshoot, and verify batch ingestion with SQL
 
@@ -18,10 +18,10 @@ This document explains the data ingestion process in Adobe Experience Platform a
 
 To help your understanding of the concepts discussed in this document, you should have knowledge of the following topics:
 
-- **Data Ingestion**: See the [data ingestion overview](../../ingestion/home.md) to learn the basics of how data is ingested into the Platform, including the different methods and processes involved.
-- **Batch Ingestion**: See the [batch ingestion API overview](../../ingestion/batch-ingestion/overview.md) to learn the basic concepts of batch ingestion. Specifically, what a "batch" is and how it functions within Platform's data ingestion process.
-- **Error Handling in Data Ingestion**: Learn about the [different types of errors that can occur](../../ingestion/quality/error-diagnostics.md#retrieve-errors) during data ingestion and [how to handle them](../../ingestion/batch-ingestion/troubleshooting.md#what-if-a-batch-fails).
-- **System Metadata in Datasets**: See the [Catalog Service overview](../../catalog/home.md) to learn how system metadata fields are used to track and query ingested data.
+- **Data ingestion**: See the [data ingestion overview](../../ingestion/home.md) to learn the basics of how data is ingested into the Platform, including the different methods and processes involved.
+- **Batch ingestion**: See the [batch ingestion API overview](../../ingestion/batch-ingestion/overview.md) to learn the basic concepts of batch ingestion. Specifically, what a "batch" is and how it functions within Platform's data ingestion process.
+- **Error handling in data ingestion**: Learn about the [different types of errors that can occur](../../ingestion/quality/error-diagnostics.md#retrieve-errors) during data ingestion and [how to handle them](../../ingestion/batch-ingestion/troubleshooting.md#what-if-a-batch-fails).
+- **System metadata in datasets**: See the [Catalog Service overview](../../catalog/home.md) to learn how system metadata fields are used to track and query ingested data.
 - **Experience Data Model (XDM)**: See the [schemas UI overview](../../xdm/ui/overview.md) and the ['basics of schema composition'](../../xdm/schema/composition.md) to learn about XDM schemas and how they represent and validate the structure and format of data ingested into Platform.
 
 ## Basic principles of data ingestion in Platform {#data-ingestion-principles}
