@@ -1,10 +1,10 @@
 ---
-title: Explore Ingested Batches in a Dataset
+title: Explore, Troubleshoot, and Verify Batch Ingestion with SQL
 description: Learn how to understand and manage the data ingestion process in Adobe Experience Platform. This document includes hoe to verify batches, handle errors, and query ingested data.
 ---
-# Explore Ingested Batches in a Dataset
+# Explore, troubleshoot, and verify batch ingestion with SQL
 
-This document explains the data ingestion process in Adobe Experience Platform and details how to verify and validate records in ingested batches. This document teaches you how to: 
+This document explains the data ingestion process in Adobe Experience Platform and details how to verify and validate records in ingested batches with SQL. This document teaches you how to: 
 
 - Handle errors that may arise during the ingestion process
 - Access dataset batch metadata
@@ -18,17 +18,17 @@ This document explains the data ingestion process in Adobe Experience Platform a
 
 To help your understanding of the concepts discussed in this document, you should have knowledge of the following topics:
 
-- **Data Ingestion**: See the [Data Ingestion overview](../../ingestion/home.md) to learn the basics of how data is ingested into the Platform, including the different methods and processes involved.
-- **Batch Ingestion**: See the [batch ingestion API overview](../../ingestion/batch-ingestion/overview.md) to learn the basic concepts of batch ingestion. Specifically, what a "batch" is and how it functions within the Platform data ingestion process.
-- **"Error Handling in Data Ingestion"**: Learn about the [different types of errors that can occur](../../ingestion/quality/error-diagnostics.md#retrieve-errors) during data ingestion and [how to handle them](../../ingestion/batch-ingestion/troubleshooting.md#what-if-a-batch-fails).
+- **Data Ingestion**: See the [data ingestion overview](../../ingestion/home.md) to learn the basics of how data is ingested into the Platform, including the different methods and processes involved.
+- **Batch Ingestion**: See the [batch ingestion API overview](../../ingestion/batch-ingestion/overview.md) to learn the basic concepts of batch ingestion. Specifically, what a "batch" is and how it functions within Platform's data ingestion process.
+- **Error Handling in Data Ingestion**: Learn about the [different types of errors that can occur](../../ingestion/quality/error-diagnostics.md#retrieve-errors) during data ingestion and [how to handle them](../../ingestion/batch-ingestion/troubleshooting.md#what-if-a-batch-fails).
 - **System Metadata in Datasets**: See the [Catalog Service overview](../../catalog/home.md) to learn how system metadata fields are used to track and query ingested data.
-- **Experience Data Model (XDM)**: See the [Schemas UI overview](../../xdm/ui/overview.md) and the ['basics of schema composition'](../../xdm/schema/composition.md) to learn about XDM schemas and how they represent and validate the structure and format of data ingested into Platform.
+- **Experience Data Model (XDM)**: See the [schemas UI overview](../../xdm/ui/overview.md) and the ['basics of schema composition'](../../xdm/schema/composition.md) to learn about XDM schemas and how they represent and validate the structure and format of data ingested into Platform.
 
 ## Basic principles of data ingestion in Platform {#data-ingestion-principles}
 
-Data ingestion involves the collection and materializing of records in batches into Adobe Experience Platform. A "batch" is a data ingestion concept where a collection of records contained in a file, or streamed directly from the source, are materialized as a unit on the data lake. A batch refers to a collection of records that are processed as a unit.
+Data ingestion involves the collection and materializing of records in batches into Experience Platform. A "batch" is a data ingestion concept where a collection of records contained in a file, or streamed directly from the source, are materialized as a unit on the data lake. Specifically, a batch refers to a collection of records that are processed as a unit.
 
-When ingesting data into Platform, you must verify and validate the records within a batch that have been successfully ingested. Additionally, you must be aware of the potential issues that can arise during the ingestion process. Error codes inform you of these issues when you investigate a dataset. Ingestion issues can include rows being skipped, stored separately, or data type values being inaccurately converted to NUll. This guide highlights the importance of monitoring and addressing these potential process errors and how to address them.
+When ingesting data into Platform, it is best practice to verify and validate the records within a batch that have been successfully ingested. Additionally, you must be aware of the potential issues that can arise during the ingestion process. Error codes inform you of these issues when you investigate a dataset. Ingestion issues can include rows being skipped, stored separately, or data type values being inaccurately converted to NULL. This guide highlights the importance of monitoring and addressing these potential process errors and how to address them.
 
 ## Investigate any failed batch dataset ingestions {#investigate-failed-ingestions}
 
@@ -49,7 +49,7 @@ The [!UICONTROL Batch overview] appears with information on the failed batch ing
 When ingesting data into Experience Platform, you may encounter several common errors that can impact the success of your data batches. Understanding these errors is crucial for troubleshooting and ensuring data integrity. Here are the main types of ingestion errors that you might face:
 
 - `ERROR`: This code indicates severe issues like data corruption or format non-conformance, causing the entire batch to fail.
-- `DCVS`: This code represents less serious issues like missing required fields. These rows are skipped and stored separately. THey are accessible via error diagnostics tools.
+- `DCVS`: This code represents less serious issues like missing required fields. These rows are skipped and stored separately. They are accessible via error diagnostics tools.
 - `MAPPER`: These errors occur during data type conversion and result in NULL values being recorded. These records can be included in the final dataset but may need further exploration.
 
 ## Access dataset batch metadata {#access-dataset-batch-metadata}
@@ -85,7 +85,7 @@ The following example uses a different dataset to illustrate this point.
 >
 >If you want to try this example out, you can ingest the provided sample file ([`Drug_checkout_data`](../images/use-cases/drug_checkout_data.zip)) into Platform and configure your schema mapping. 
 
-The Drug checkout data file is a deeply nested set of 35,000 records. Use the SQL statement `SELECT * FROM drug_orders;` to preview of the first set of records in the JSON-based drug_orders dataset. 
+The Drug_checkout_data file is a deeply nested set of 35,000 records. Use the SQL statement `SELECT * FROM drug_orders;` to preview of the first set of records in the JSON-based drug_orders dataset. 
 
 The image below shows a preview of the file and its records.
 
@@ -116,11 +116,11 @@ The results demonstrate the efficiency and behavior of the data ingestion proces
 
 ## Validate a batch with SQL {#validate-a-batch-with-SQL}
 
-In this next section, learn how to validate and verify the records that have been ingested into the dataset. 
+Next, validate and verify the records that have been ingested into the dataset with SQL. 
 
 >[!TIP]
 >
->The process requires the creation of a batch in Adobe Experience Platform in order to retrieve the batch ID and query records associated with that specific batch ID. If you wish to test the process yourself, you can ingest CSV data into Platform. Read the guide on how to [map a CSV file to an existing XDM schema using AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md). A [sample profile CSV file](../images/use-cases/sample-profiles.csv) is available for your convenience.
+>To retrieve the batch ID and query records associated with that batch ID, you must first  create a batch within Platform. If you want to test the process yourself, you can ingest CSV data into Platform. Read the guide on how to [map a CSV file to an existing XDM schema using AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md). A [sample profile CSV file](../images/use-cases/sample-profiles.csv) is available here for your convenience.
 
 Once you have ingested a batch, [navigate to the [!UICONTROL Datasets activity tab]](#investigate-failed-ingestions) for the dataset you ingested data into. In the [!UICONTROL Dataset activity] view, select a batch from the list of available batches and copy the [!UICONTROL Batch ID] from the details panel on the right.
 
@@ -129,21 +129,19 @@ Once you have ingested a batch, [navigate to the [!UICONTROL Datasets activity t
 Next, use the following query to retrieve all the records that were included in the dataset as part of that batch:
 
 ```sql
-SELECT * FROM   movie_data
+SELECT * FROM movie_data
 WHERE  _acp_batchid='01H00BKCTCADYRFACAAKJTVQ8P' 
 LIMIT 1;
 ```
 
 The `_ACP_BATCHID` keyword is used to filter the [!UICONTROL Batch ID]. The `LIMIT` clause is helpful if you want to restrict the number of rows displayed, but a filter condition is more desirable. 
 
-When you execute this query in the Query Editor, the results are truncated to 100 rows. The Query Editor is designed for quick previews and investigation. To retrieve up to 50,000 rows, use a third-party tool like DBVisualizer or DBeaver.
+When you execute this query in the Query Editor, the results are truncated to 100 rows. The Query Editor is designed for quick previews and investigation. To retrieve up to 50,000 rows, you can use a third-party tool like DBVisualizer or DBeaver.
 
 ## Next steps {#next-steps}
 
-By reading this document, you learned the essentials of verifying and validating records in ingested batches and handling common errors that result from the data ingestion process. You also gained insights into accessing dataset batch metadata, understanding logical and physical partitions, and querying specific batches using SQL commands. This knowledge helps ensure data integrity and optimize data storage on the platform.
+By reading this document, you learned the essentials of verifying and validating records in ingested batches and handling common errors that result from the data ingestion process. You also gained insights into accessing dataset batch metadata, understanding logical and physical partitions, and querying specific batches using SQL commands. This knowledge can help you ensure data integrity and optimize your data storage on Platform.
 
-Next, you should practice data ingestion to apply the concepts learned. Ingest a sample dataset into Adobe Experience Platform. You can use the provided sample files or your own data. If you have not done so already, read the tutorial on how to [ingest data into Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
+Next, you should practice data ingestion to apply the concepts learned. Ingest a sample dataset into Platform with either the provided sample files or your own data. If you have not done so already, read the tutorial on how to [ingest data into Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
 
-Alternatively, to enhance your data analysis capabilities, you could learn how to [connect and verify Query Service with a variety of desktop client applications](../clients/overview.md). 
-
-
+Alternatively, you could learn how to [connect and verify Query Service with a variety of desktop client applications](../clients/overview.md) to enhance your data analysis capabilities. 
