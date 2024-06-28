@@ -22,7 +22,7 @@ role: Admin,Developer
     - [Namespace priority](./identity-graph-linking-rules/namespace-priority.md)
     - [Example scenarios](./identity-graph-linking-rules/example-scenarios.md)
     - [Graph Simulation UI](./identity-graph-linking-rules/graph-simulation.md)
-    - [Identity graph linking rules configuration guide](./implementation.md)
+    - [Identity graph linking rules configuration guide](./configuration.md)
   - [ECID overview](./features/ecid.md)
 - [Implementation guide](implementation.md)
 - [Guardrails for Identity data](guardrails.md)
