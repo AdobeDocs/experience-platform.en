@@ -96,7 +96,7 @@ The image below shows a preview of the file and its records.
 ![A preview of the first set of records in the JSON-based drug_orders dataset.](../images/use-cases/drug-orders-preview.png)
 
 <!-- test title -->
-### Use SQL to generate insights on batch ingestion process
+### Use SQL to generate insights on batch ingestion process {#sql-insights-on-batch-ingestion}
 
 Use the SQL statement below to provide insights into how the data ingestion process has grouped and processed the input records into batches.
 
@@ -118,6 +118,36 @@ The results demonstrate the efficiency and behavior of the data ingestion proces
 >
 >All the records that are visible within a dataset are the ones that were successfully ingested. This does not mean that all the records that were sent from the source input are present. You must check for data ingestion failures to find the batches/records that did not make it in. 
 
-## Querying a batch in a dataset
+## Validate a batch with SQL {#validate-a-batch-with-SQL}
 
-<!-- Up to here -->
+In this next section, learn how to validate and verify the records that have been ingested into the dataset. 
+
+[!TIP]
+>
+>The process requires the creation of a batch in Adobe Experience Platform in order to retrieve the batch ID and query records associated with that specific batch ID. If you wish to test the process yourself, you can ingest CSV data into Platform. Read the guide on how to [map a CSV file to an existing XDM schema using AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md). A [sample profile CSV file](../images/use-cases/sample-profiles.csv) is available for your convenience.
+
+Once you have an ingested batch. [Navigate to the [!UICONTROL Datasets activity tab]](#investigate-failed-ingestions) for the dataset you ingested data into. In the [!UICONTROL Dataset activity] view, select a batch from the list of available batches and copy the batch ID from the details panel on the right.
+
+![The Experience Platform Datasets UI showing the ingested records with a batch ID highlighted.](../images/use-cases/batch-id.png)
+
+Next, use the following query to retrieve all the records that were included in the dataset as part of that batch:
+
+```sql
+SELECT * FROM   movie_data
+WHERE  _acp_batchid='01H00BKCTCADYRFACAAKJTVQ8P' 
+LIMIT 1;
+```
+
+The `_ACP_BATCHID` keyword is used to filter the Batch ID. The `LIMIT` clause is helpful if you want to restrict the number of rows displayed, but a filter condition is more desirable. 
+
+When you execute this query in the Query Editor, the results will be truncated at 100 rows. The editor is designed for quick previews. To retrieve up to 50,000 rows, use a third-party tool like DBVisualizer or DBeaver.
+
+## Next steps {#next-steps}
+
+By reading this document, you learned the essentials of the data ingestion process in Adobe Experience Platform, including verifying and validating records in ingested batches and handling common errors using error codes. You also gained insights into accessing dataset batch metadata, understanding logical and physical partitions, and querying specific batches using SQL commands. This knowledge helps ensure data integrity and optimize data storage on the platform.
+
+Next, you should practice data ingestion to apply the concepts learned. Ingest a sample dataset into Adobe Experience Platform. You can use the provided sample files or your own data. If you have not done so already, read the tutorial on how to [ingest data into Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
+
+Alternatively, to enhance your data analysis capabilities, you could learn how to [connect and verify Query Service with a variety of desktop client applications](../clients/overview.md). 
+
+
