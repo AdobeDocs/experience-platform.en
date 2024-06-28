@@ -74,7 +74,7 @@ Once you have all of the items listed above, then you can begin ingesting your d
 
 * [Batch and streaming ingestion](../../ingestion/home.md) 
 * [Data collection in Experience Platform](../../collection/home.md)
-* [Experience Platform sources](../../sources/)
+* [Experience Platform sources](../../sources/home.md)
 
 >[!TIP]
 >
