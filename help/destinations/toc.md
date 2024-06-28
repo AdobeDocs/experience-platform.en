@@ -135,9 +135,12 @@ role: Admin,User
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
+        * [Zeta Marketing Platform](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
     * Data & Identity Partner {#data-partner}
         * [Acxiom Prospect Suppression](./catalog/data-partner/acxiom-prospect-suppression.md)
         * [Acxiom Data Enhancement](./catalog/data-partner/acxiom-data-enhancement.md)
+        * [Merkury Enterprise Connections](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
+        * [Merkury Enterprise Identity](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md)
     * eCommerce destinations {#ecommerce}
         * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
     * Email destinations {#email}
@@ -210,6 +213,7 @@ role: Admin,User
     * [Overview](./destination-sdk/overview.md)
     * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)
     * [Getting started with Destination SDK](./destination-sdk/getting-started.md)
+    * [Glossary](/help/destinations/destination-sdk/glossary.md)
     * Functionality {#functionality}
         * [Configuration options](./destination-sdk/functionality/configuration-options.md)
         * Destination server components {#destination-server}

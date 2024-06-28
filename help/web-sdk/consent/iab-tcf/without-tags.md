@@ -71,7 +71,7 @@ window.__tcfapi('addEventListener', 2, function (tcData, success) {
 });
 ```
 
-This code block listens for the `useractioncomplete` event and then sets the consent, passing the consent string and the `gdprApplies` flag. If you have custom identities for your customers, be sure to fill in the `identityMap` variable. Refer to the guide on [supporting consent](../../consent/supporting-consent.md) for more information on calling `setConsent`.
+This code block listens for the `useractioncomplete` event and then sets the consent, passing the consent string and the `gdprApplies` flag. If you have custom identities for your customers, be sure to fill in the `identityMap` variable. Refer to the guide on [setConsent](../../../web-sdk/commands/setconsent.md) for more information.
 
 ## Including consent information in sendEvent
 

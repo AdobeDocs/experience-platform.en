@@ -7,6 +7,10 @@ exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
 
 Read this guide to learn how you can use AI Assistant in the Adobe Experience Platform UI.
 
+The following video is intended to support your understanding of AI Assistant.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
+
 ## Access AI Assistant in the Experience Platform UI
 
 To launch AI Assistant, select the **[!UICONTROL AI Assistant icon]** from the top header of the Experience Platform UI.
@@ -105,6 +109,22 @@ You can also provide filters and modifications to your questions, and you can in
 
 +++
 
+### Verify operational insights responses {#verify-responses}
+
+You can verify each response related to operational insights questions using an SQL query that AI Assistant provides.
+
++++Select to view example of verifying operational insights responses
+
+After receiving an answer for an operational insights question, select **[!UICONTROL Show sources]** and then select **[!UICONTROL View source query]**.
+
+![view source query](./images/view-source-query.png)
+
+When queried with an operational insights question, AI Assistant provides an SQL query that you can use to verify the process that it took to compute its answer. This source query is for verification purposes only and is not supported on Query Service.
+
+![example of source query](./images/source-query.png)
+
++++
+
 ### Use auto-complete {#use-auto-complete}
 
 You can use the autocomplete function to receive a list of data objects that exist in your sandbox. Autocomplete recommendations are available for the following domains: audiences, schemas, datasets, sources, and destinations.
@@ -126,6 +146,14 @@ You can use AI Assistant's multi-turn capabilities to have a more natural conver
 In the example below, AI Assistant is first asked for the total number of dataflows and then is asked to list the 10 most recent dataflows.
 
 ![Example of multi-turn](./images/multiturn.png)
+
++++
+
+### Start a new conversation
+
+You can change topics with AI Assistant by resetting and starting a new conversation.
+
++++Select to view an example of resetting your conversation
 
 To reset, select the ellipses (**`...`**) on the AI Assistant interface and then select **[!UICONTROL Start new conversation]**. This informs AI Assistant that you intend on changing topics and can be particularly helpful when troubleshooting queries that are either failing or referencing incorrect information.
 

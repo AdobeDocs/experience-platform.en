@@ -11,6 +11,11 @@ Read this page to get an overview of all the available playbooks that you can di
 
 ## Use Case Playbooks in Journey Optimizer {#optimizer-playbooks}
 
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_list"
+>title="Available playbooks"
+>abstract="A list of all the playbooks in Real-time Customer Data Platform and Adobe Journey Optimizer."
+
 | Playbook name |  Description |
 | ------------- |  ----------- |
 | Abandoned Browsing: Merchandise | Nudge fans to re-engage after they leave your website or app after browsing a product. |
@@ -66,4 +71,4 @@ Read this page to get an overview of all the available playbooks that you can di
 
 ## Next steps
 
-Now that you are aware of the available playbooks, read the [discover guide](/help/use-case-playbooks/playbooks/discover.md) to understand how to get started with the playbooks in the user interface.
+Now that you are aware of the available playbooks, read this [guide](/help/use-case-playbooks/playbooks/choose.md) to understand how to get started with the playbooks and choose the right one for you in the user interface.

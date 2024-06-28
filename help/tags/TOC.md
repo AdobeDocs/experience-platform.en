@@ -245,6 +245,8 @@ role: Developer
       * [Overview](./extensions/server/twitter/overview.md)
     * [!DNL Tiktok] Web Events API {#tiktok}
       * [Overview](./extensions/server/tiktok/overview.md)
+    * [!DNL The Trade Desk] {#thetradedesk}
+      * [Overview](./extensions/server/tradedesk/overview.md)
     * [!DNL Zendesk] Events API {#zendesk}
       * [Overview](./extensions/server/zendesk/overview.md)
 * Extension development {#extension-dev}
