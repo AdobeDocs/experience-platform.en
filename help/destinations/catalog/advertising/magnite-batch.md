@@ -80,7 +80,7 @@ The Magnite Streaming: Batch destination can receive *any* identity sources from
 | Item | Type | Notes | 
 |-----------------------------|----------|----------|
 | Export type | Audience export | You are exporting all members of an audience with the identifiers (name, phone number, or others) used in the Magnite Streaming: Batch destination. |
-| Export frequency | Batch | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about batch [file-based destinations](../../../destinations/destination-types#file-based). |
+| Export frequency | Batch | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about batch [file-based destinations](/help/destinations/destination-types.md). |
 
 {style="table-layout:auto"}
 
