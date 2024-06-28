@@ -1,11 +1,13 @@
 ---
-title: Extension package usage authorizations endpoint
+title: Extension Package Usage Authorizations Endpoint
 description: Learn how to make calls to the /extension_package_usage authorizations endpoint in the Reactor API.
 ---
 
 # Extension package usage authorizations endpoint
 
-Owners of extension packages can grant use authorizations to other businesses so that they can utilize their private versions of the packages. Each authorized firm is given a usage authorization for a single extension package, which is valid for all future and current private versions of the package.
+An extension package represents an [extension](./extensions.md) as authored by an extension developer. Additional functionalities that can be made available to tag users are defined by an extension package. These capabilities can include main modules and shared modules, although they are most frequently provided as [rule components](./rule-components.md) (events, conditions, and actions) and [data elements](./data-elements.md).
+
+An extension package is owned by the developer's [company](./companies.md). Owners of extension packages can authorize other businesses to use their private versions of the packages. Each authorized business is given a usage authorization for a single extension package, which is valid for all future and current private versions of the package.
 
 ## Getting started
 
@@ -13,7 +15,7 @@ The endpoint used in this guide is part of the [Reactor API](https://www.adobe.i
 
 ## Retrieve extension package usage authorizations for an extension package {#list}
 
-You can retrieve a list of extension package usage authorizations for an extension package by making a GET request.
+To retrieve a list of usage authorizations for an extension package, make a GET request to the following endpoint.
 
 **API format**
 
@@ -57,10 +59,10 @@ A successful response returns a list of extension packages.
         "owner_org_id": "{ORG_ID}",
         "owner_org_name": "Reactor QE",
         "authorized_org_id": "{ORG_ID}",
-        "authorized_org_name": "Platform UI - INT",
+        "authorized_org_name": "Acme Inc'",
         "state": "pending_approval",
         "created_by_email": "example@adobe.com",
-        "created_by_display_name": "George Ciltaru",
+        "created_by_display_name": "john snow",
         "updated_by_email": "Restricted",
         "updated_by_display_name": "Restricted"
       },
@@ -94,7 +96,7 @@ A successful response returns a list of extension packages.
 
 ## Create an extension package usage authorization {#create}
 
-Create an extension package usage authorization for each [extension package](./extension-packages.md) and `{ORG_ID}` of the organization you want to authorize. You can create a new extension package usage authorization by making a POST request.
+Create an extension package usage authorization for each [extension package](./extension-packages.md) and `{ORG_ID}` of the organization you want to authorize. To create a new extension package usage authorization, make a POST request to the endpoint below.
 
 **API format**
 
@@ -104,7 +106,7 @@ POST /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authoriz
 
 | Parameter | Description |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | The `ID` of the extension package for which you want to create an extension package usage authorization. |
+| `EXTENSION_PACKAGE_ID` | The `ID` of the extension package that you want to create an authorization for." |
 
 {style="table-layout:auto"}
 
@@ -148,10 +150,10 @@ A successful response return the details of the newly created extension package 
       "owner_org_id": "{ORG_ID}",
       "owner_org_name": "Reactor QE",
       "authorized_org_id": "{ORG_ID}",
-      "authorized_org_name": "Platform UI - INT",
+      "authorized_org_name": "Acme Inc'",
       "state": "pending_approval",
       "created_by_email": "example@adobe.com",
-      "created_by_display_name": "George Ciltaru",
+      "created_by_display_name": "john snow",
       "updated_by_email": "Restricted",
       "updated_by_display_name": "Restricted"
     },
@@ -175,7 +177,7 @@ A successful response return the details of the newly created extension package 
 
 >[!NOTE]
 >
->The authorization is currently in the `pending_approval` stage. Before using the extension package, the organization must approve the authorization. Users of the organization are able to browse the private extension package while authorization is pending approval, but they are unable to install it and cannot find it in their extensions catalog. 
+>In the example response above, the authorization is currently in the `pending_approval` stage. Before using the extension package, the organization must approve the authorization. Users of the organization are able to browse the private extension package while authorization is pending approval, but they are unable to install it and cannot find it in their extensions catalog. 
 
 ## Retrieve a list of extension package usage authorizations {#list_authorizations}
 
@@ -217,12 +219,12 @@ A successful response returns a list of extension packages.
         "owner_org_id": "{ORG_ID}",
         "owner_org_name": "Reactor QE",
         "authorized_org_id": "{ORG_ID}",
-        "authorized_org_name": "Platform UI - INT",
+        "authorized_org_name": "Acme Inc'",
         "state": "pending_approval",
         "created_by_email": "Restricted",
         "created_by_display_name": "Restricted",
         "updated_by_email": "example@adobe.com",
-        "updated_by_display_name": "George Ciltaru"
+        "updated_by_display_name": "john snow"
       },
       "relationships": {
         "extension_package": {
@@ -256,11 +258,11 @@ A successful response returns a list of extension packages.
 
 ## Delete an extension package usage authorization {#delete}
 
-You can delete an extension package usage authorization by including its `ID` in the path of a DELETE request. This will prevent the authorized organization from viewing the private versions of the extension package in the catalog and from installing it on their properties. 
+To delete an extension package usage authorization, include its `ID` in the path of a DELETE request. This prevents the authorized organization from viewing the private versions of the extension package in the catalog and from installing it on their properties. 
 
 >[!NOTE]
 >
->Any already installed private versions will continue to work as expected.
+>Any previously installed private versions will continue to work as expected.
 
 **API format**
 
@@ -286,15 +288,15 @@ curl -X DELETE \
 
 **Response**
 
-A successful response returns HTTP status 204 (No Content) with no response body, indicating that the extension has been deleted.
+A successful response returns HTTP status 204 (No Content) with no response body. This indicates that the extension has been deleted.
 
 ## Update an extension package usage authorization {#update}
 
-You can approve or reject an extension package usage authorization by including its `ID` in the path of a PATCH request.
+To approve or reject an extension package usage authorization, include its `ID` in the path of a PATCH request.
 
 >[!NOTE]
 >
->To approve or reject an extension package usage authorization for your company, you need to have `manage_properties` rights. 
+>To approve or reject an extension package usage authorization for your company, you must have `manage_properties` rights. 
 
 **API format**
 
@@ -349,12 +351,12 @@ A successful response returns the details of the revised extension package usage
       "owner_org_id": "{ORG_ID}",
       "owner_org_name": "Reactor QE",
       "authorized_org_id": "{ORG_ID}",
-      "authorized_org_name": "Platform UI - INT",
+      "authorized_org_name": "Acme Inc'",
       "state": "approved",
       "created_by_email": "Restricted",
       "created_by_display_name": "Restricted",
       "updated_by_email": "example@adobe.com",
-      "updated_by_display_name": "George Ciltaru"
+      "updated_by_display_name": "john snow"
     },
     "relationships": {
       "extension_package": {
@@ -447,9 +449,9 @@ A successful response returns data for extension package for an extension packag
       "version": "1.0.0",
       "view_base_path": "dist/",
       "created_by_email": "example@adobe.com",
-      "created_by_display_name": "George Ciltaru",
+      "created_by_display_name": "john snow",
       "updated_by_email": "example@adobe.com",
-      "updated_by_display_name": "George Ciltaru"
+      "updated_by_display_name": "john snow"
     },
     "relationships": {
       "extension_package": {
