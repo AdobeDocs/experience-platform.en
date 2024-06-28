@@ -4,8 +4,6 @@ description: Learn how to understand and manage the data ingestion process in Ad
 ---
 # Explore Ingested Batches in a Dataset
 
-<!-- This document explains how data is ingested in batches, how to verify and validate these batches, and how to handle errors that may arise during the ingestion process. -->
-
 This document explains the data ingestion process in Adobe Experience Platform and details how to verify and validate records in ingested batches. This document teaches you how to: 
 
 - Handle errors that may arise during the ingestion process
@@ -66,6 +64,8 @@ When data is ingested into Platform, it is assigned a logical partition based on
 
 After the data is processed and ingested into the data lake, it is assigned a physical partition represented by `_ACP_BATCHID`. This ID reflects the actual storage partition in the data lake where the ingested data resides.
 
+### Use SQL to understand logical and physical partitions {#understand-partitions}
+
 To help understand how the data is grouped and distributed after ingestion, use the following query to count the number of distinct physical partitions (`_ACP_BATCHID`) for each logical partition (`_acp_system_metadata.sourceBatchId`).
 
 ```SQL
@@ -77,7 +77,7 @@ The results of this query are shown in the image below.
 
 ![The results of a query to show the number of distinct physical partitions for each logical partition.](../images/use-cases/logical-and-physical-partition-count.png)
 
-This means that the number of input batches does not necessarily match the number of output batches. The system determines the most efficient way to batch and store the data in the data lake. 
+These results demonstrate that the number of input batches does not necessarily match the number of output batches, as the system determines the most efficient way to batch and store the data in the data lake. 
 
 The following example uses a different dataset to illustrate this point. 
 
@@ -91,7 +91,7 @@ The image below shows a preview of the file and its records.
 
 ![A preview of the first set of records in the JSON-based drug_orders dataset.](../images/use-cases/drug-orders-preview.png)
 
-<!-- test title -->
+
 ### Use SQL to generate insights on batch ingestion process {#sql-insights-on-batch-ingestion}
 
 Use the SQL statement below to provide insights into how the data ingestion process has grouped and processed the input records into batches.
@@ -118,7 +118,7 @@ The results demonstrate the efficiency and behavior of the data ingestion proces
 
 In this next section, learn how to validate and verify the records that have been ingested into the dataset. 
 
-[!TIP]
+>[!TIP]
 >
 >The process requires the creation of a batch in Adobe Experience Platform in order to retrieve the batch ID and query records associated with that specific batch ID. If you wish to test the process yourself, you can ingest CSV data into Platform. Read the guide on how to [map a CSV file to an existing XDM schema using AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md). A [sample profile CSV file](../images/use-cases/sample-profiles.csv) is available for your convenience.
 
