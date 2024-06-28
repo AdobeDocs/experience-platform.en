@@ -11,19 +11,18 @@ Read this document for a step-by-step by guide that you can follow when implemen
 
 Step-by-step outline:
 
-1. [Set permissions](#set-permissions)
-2. [Create the necessary identity namespaces](#namespace)
-3. [Use the graph simulation tool to familiarize yourself with the identity optimization algorithm](#graph-simulation)
-4. [Use the identity settings tool to designate your unique namespaces and configure priority rankings for your namespaces](#identity-settings)
-5. [Create an Experience Data Model (XDM) schema](#schema)
-6. [Create a dataset](#dataset)
-7. [Ingest your data to Experience Platform](#ingest)
+1. [Create the necessary identity namespaces](#namespace)
+2. [Use the graph simulation tool to familiarize yourself with the identity optimization algorithm](#graph-simulation)
+3. [Use the identity settings tool to designate your unique namespaces and configure priority rankings for your namespaces](#identity-settings)
+4. [Create an Experience Data Model (XDM) schema](#schema)
+5. [Create a dataset](#dataset)
+6. [Ingest your data to Experience Platform](#ingest)
 
 ## Pre-implementation prerequisites
 
 Before you can get started, you must first ensure that authenticated events in your system always contain a person identifier.
 
-## Set permissions {#set-permissions}
+<!-- ## Set permissions {#set-permissions}
 
 The first step in the implementation process for Identity Service is to ensure that your Experience Platform account is added to a role that is provisioned with the necessary permissions. Your administrator can configure permissions for your account by navigating to the Permissions UI in Adobe Experience Cloud. From there, your account must be added to a role with the following permissions:
 
@@ -31,11 +30,11 @@ The first step in the implementation process for Identity Service is to ensure t
 * view-identity-dashboard
 * view-identity-simulation
 
-For more information on permissions, read the [permissions guide](../../access-control/abac/ui/permissions.md).
+For more information on permissions, read the [permissions guide](../../access-control/abac/ui/permissions.md). -->
 
 ## Create your identity namespaces {#namespace}
 
-Once your permissions are configured and you have acquired access to Identity Service, you must then create the appropriate namespaces for  your data. For steps on how to create a custom namespace, read the guide on [creating a custom namespace in the UI](../features/namespaces.md#create-custom-namespaces).
+If your data requires it, you must first create the appropriate namespaces for your organization. For steps on how to create a custom namespace, read the guide on [creating a custom namespace in the UI](../features/namespaces.md#create-custom-namespaces).
 
 ## Use graph simulation tool {#graph-simulation}
 
