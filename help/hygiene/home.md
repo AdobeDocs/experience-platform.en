@@ -18,6 +18,10 @@ Adobe Experience Platform provides a robust set of tools to manage large, compli
 
 These activities can be performed using the [[!UICONTROL Data Lifecycle] UI workspace](#ui) or the [Data Hygiene API](#api). When a data lifecycle job executes, the system provides transparency updates at each step of process. See the section on [timelines and transparency](#timelines-and-transparency) for more information on how each job type is represented in the system.
 
+>[!NOTE]
+>
+>Advanced Data Lifecycle Management supports dataset deletions through the [[dataset expiration endpoint](./api/dataset-expiration.md) and ID deletions (row-level data) using primary identities via the [workorder endpoint](./api/workorder.md). You can also manage [dataset expirations](./ui/dataset-expiration.md) and [record deletions](../ui/record-delete.md) through the Platform UI. See the linked documentation for more information. Note that Data Lifecycle does not support batch deletion.
+
 ## [!UICONTROL Data Lifecycle] UI workspace {#ui}
 
 The [!UICONTROL Data Lifecycle] workspace in the Platform UI allows you to configure and schedule data lifecycle operations, helping to ensure that your records are being maintained as expected.
