@@ -30,7 +30,7 @@ To help your understanding of the concepts discussed in this document, you shoul
 
 Data ingestion involves the collection and materializing of records in batches into Adobe Experience Platform. A "batch" is a data ingestion concept where a collection of records contained in a file, or streamed directly from the source, are materialized as a unit on the data lake. A batch refers to a collection of records that are processed as a unit.
 
-When ingesting data into Platform, you must verify and validate the records within a batch that have been successfully ingested and be aware of the potential issues that can arise during the ingestion process. Error codes inform you of these issues when you investigate a dataset. Ingestion issues can include rows being skipped, stored separately, or data type values being inaccurately converted to NUll. This guide highlights the importance of monitoring and addressing these potential process errors and how to address them.
+When ingesting data into Platform, you must verify and validate the records within a batch that have been successfully ingested. Additionally, you must be aware of the potential issues that can arise during the ingestion process. Error codes inform you of these issues when you investigate a dataset. Ingestion issues can include rows being skipped, stored separately, or data type values being inaccurately converted to NUll. This guide highlights the importance of monitoring and addressing these potential process errors and how to address them.
 
 ## Investigate any failed batch dataset ingestions {#investigate-failed-ingestions}
 
@@ -48,7 +48,7 @@ The [!UICONTROL Batch overview] appears with information on the failed batch ing
 
 ### Common batch errors {#batch-errors}
 
-When ingesting data into Experience Platform, you may encounter several common errors that can impact the success of your data batches. Understanding these errors is crucial for troubleshooting and ensuring data integrity. Here are the main types of ingestion errors you might face:
+When ingesting data into Experience Platform, you may encounter several common errors that can impact the success of your data batches. Understanding these errors is crucial for troubleshooting and ensuring data integrity. Here are the main types of ingestion errors that you might face:
 
 - `ERROR`: This code indicates severe issues like data corruption or format non-conformance, causing the entire batch to fail.
 - `DCVS`: This code represents less serious issues like missing required fields. These rows are skipped and stored separately. THey are accessible via error diagnostics tools.
