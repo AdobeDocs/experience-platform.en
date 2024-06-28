@@ -1,11 +1,9 @@
 ---
-title: Implementation guide
-description: Learn the recommended steps to follow when implementing your data with Identity Service.
-hide: true
-hidefromtoc: true
+title: Identity graph linking rules configuration guide
+description: Learn the recommended steps to follow when implementing your data with identity graph linking rules configurations.
 badge: Beta
 ---
-# Implementation guide
+# Identity graph linking rules configuration guide
 
 Read this document for a step-by-step by guide that you can follow when implementing your data with Adobe Experience Platform Identity Service.
 
