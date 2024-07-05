@@ -173,7 +173,7 @@ To view details of a Look-alike audience, select the Look-alike audience in the 
 
 ![The Look-alike audiences section is highlighted.](../images/ui/lookalike-audiences/select-laa.png)
 
-The audience details page appears. For more information on this page, please read the [audience details section of the Segmentation Service UI guide](./overview.md#audience-details).
+The audience details page appears. For more information on this page, please read the [audience details section of the Audience Portal overview](./audience-portal.md#audience-details).
 
 ![Details of the Look-alike audience are displayed.](../images/ui/lookalike-audiences/laa-details.png)
 

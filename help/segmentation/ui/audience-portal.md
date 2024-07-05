@@ -23,7 +23,7 @@ Within Audience Portal, you can accomplish the following tasks:
 
 To open Audience Portal, select the **[!UICONTROL Browse]** tab within the Segmentation section. 
 
-## Audience list {#audience-portal}
+## Audience list {#list}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
@@ -385,3 +385,6 @@ After confirming the details are correct, select **[!UICONTROL Finish]** to impo
 
 ## Next steps
 
+After reading this overview, you should be able to use Audience Portal to effectively manage, create, and import audiences into Adobe Experience Platform.
+
+For more information on using the Segmentation Service UI, please read the [Segmentation Service UI overview](./ui/overview.md).
