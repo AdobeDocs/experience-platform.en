@@ -1,13 +1,29 @@
 ---
 title: Audience Portal Overview
-description: Learn 
+description: Learn how to use Audience Portal to view, manage, and create audiences within Adobe Experience Platform.
 ---
 
 # Audience Portal overview
 
-Audience Portal is (BLURB)
+Audience Portal is a central hub, within Adobe Experience Platform, that allows you to view, manage, and create audiences.
 
-## Audiences {#audiences}
+Within Audience Portal, you can accomplish the following tasks:
+
+- [View a list of your audiences](#audience-list)
+  - [Use quick actions on your audiences](#quick-actions)
+  - [Customize the properties displayed in your list of audiences](#customize)
+  - [Use filters, folders, and tags to organize your audiences](#manage-audiences)
+- [View details about your audience](#audience-details)
+  - [View a summary about your audience](#audience-summary)
+- [Enable your audiences for scheduled segmentation](#scheduled-segmentation)
+- [Create an audience](#create-audience)
+  - [Use Segment Builder to create an audience](#segment-builder)
+  - [Use Audience Composition to create an audience](#audience-composition)
+- [Import externally generated audiences](#import-audience)
+
+To open Audience Portal, select the **[!UICONTROL Browse]** tab within the Segmentation section. 
+
+## Audience list {#audience-portal}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
@@ -19,14 +35,11 @@ Audience Portal is (BLURB)
 >title="Evaluation method"
 >abstract="Evaluation methods for audiences include batch, streaming, and edge."
 
->[!CONTEXTUALHELP]
->id="platform_segments_browse_addallsegmentstoschedule"
->title="Add all audiences to schedule"
->abstract="Enable to include all audiences evaluated using batch segmentation in the daily scheduled update. Disable to remove all audiences from the scheduled update."
-
-To open Audience Portal, select the **[!UICONTROL Browse]** tab within the Segmentation section. This opens up a view that lists information about the audiences in your organization and sandbox including the profile count, origin, created date, last modified date, tags, and breakdown. 
+By default, Audience Portal displays a list of all the audiences in your organization and sandbox including the profile count, origin, created date, last modified date, tags, and breakdown. 
 
 ![The browse screen is displayed. A list of all the audiences belonging to the organization is shown.](../images/ui/audience-portal/audience-browse.png)
+
+### Quick actions {#quick-actions}
 
 Next to each audience is an ellipsis icon. Selecting this displays a list of available quick actions for the audience. This list of actions differs, based on the audience's origin.
 
@@ -71,7 +84,7 @@ The pie chart appears, displaying a breakdown of the audiences by audience evalu
 
 ### Customize {#customize}
 
-You can add additional fields to the [!UICONTROL Browse] page by selecting ![the filter attribute icon](../images/ui/audience-portal/filter-attribute.png). These additional fields include lifecycle status, update frequency, last updated by, description, created by, and access labels.
+You can add additional fields to Audience Portal by selecting ![the filter attribute icon](../images/ui/audience-portal/filter-attribute.png). These additional fields include lifecycle status, update frequency, last updated by, description, created by, and access labels.
 
 | Field | Description | 
 | ----- | ----------- |
@@ -105,7 +118,7 @@ After you selected the fields you want to display, you can also re-size the widt
 
 To improve your work efficiency, you can search for existing audiences, add user-defined tags to audiences, put audiences in folders, and filter the displayed audiences.
 
-**Search** {#search}
+#### Search {#search}
 
 You can search your existing audiences in up to 9 different languages with [!DNL Unified Search]. 
 
@@ -115,7 +128,7 @@ To use [!DNL Unified Search], add the term you want to search in the highlighted
 
 For more information about [!DNL Unified Search], including supported features, please read the [Unified Search documentation](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
 
-**Tags** {#tags}
+#### Tags {#tags}
 
 You can add user-defined tags to better describe, find, and manage your audiences.
 
@@ -138,7 +151,7 @@ After adding all the tags you want to attach to the audience, select **[!UICONTR
 
 For more information on creating and managing tags, please read the [Managing Tags guide](../../administrative-tags/ui/managing-tags.md).
 
-**Folders** {#folders}
+#### Folders {#folders}
 
 You can place audiences within folders for better audience management.
 
@@ -154,7 +167,7 @@ Once the audience is in a folder, you can choose to only display audiences that 
 
 ![Audiences that belong to a specific folder are displayed.](../images/ui/audience-portal/browse-folders.png)
 
-**Filter** {#filter}
+#### Filter {#filter}
 
 You can also filter your audiences, based on a variety of settings.
 
@@ -176,7 +189,7 @@ The list of available filters is displayed.
 
 ![The available filters are displayed and highlighted on the browse audiences page.](../images/ui/audience-portal/filter-audiences.png)
 
-**Bulk actions** {#bulk-actions}
+#### Bulk actions {#bulk-actions}
 
 Additionally, you can select up to 25 different audiences, and perform various actions on these audiences. These actions include [moving to a folder](#folders), [editing or applying a tag](#tags), [applying access labels](../../access-control/abac/ui/labels.md), and [deleting](#browse).
 
@@ -188,7 +201,7 @@ When you apply bulk actions to these audiences, the following conditions apply:
 - You **cannot** delete an audience which is being used in a destination activation.
 - If you select a filter, the selected audiences **will** reset.
 
-### Audience details {#audience-details}
+## Audience details {#audience-details}
 
 To see more details about a specific audience, select an audience's name within the **[!UICONTROL Browse]** tab.
 
@@ -196,7 +209,7 @@ The audience details page appears. On the top, there is a summary of the audienc
 
 ![The audience details page is displayed. The audience summary, audience total, and activated destinations cards are highlighted.](../images/ui/audience-portal/audience-details-summary.png)
 
-**Audience summary** {#segment-summary}
+### Audience summary {#audience-summary}
 
 The **[!UICONTROL Audience summary]** section provides information such as the ID, name, description, origin, and details of the attributes. 
 
@@ -236,13 +249,13 @@ Selecting **[!UICONTROL Edit properties]** will let you edit the basic details o
 
 ![](../images/ui/audience-portal/audience-details-edit-properties.png)
 
-**Audience total** {#audience-total}
+### Audience total {#audience-total}
 
 The **[!UICONTROL Audience total]** section shows the total number of profiles that qualify for the audience.
 
 Estimates are generated by using a sample size of that day's sample data. If there are less than 1 million entities in your Profile store, the full data set is used; for between 1 and 20 million entities, 1 million entities are used; and for over 20 million entities, 5% of the total entities are used. More information about generating estimates can be found in the [estimate generation section](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) of the audience creation tutorial.
 
-**Activated destinations** {#activated-destinations}
+### Activated destinations {#activated-destinations}
 
 The **[!UICONTROL Activated destinations]** section shows the destinations that this audience is activated for.
 
@@ -250,7 +263,7 @@ The **[!UICONTROL Activated destinations]** section shows the destinations that 
 >
 > Destinations are a feature available with [!DNL Adobe Real-Time Customer Data Platform], and allow you to export data to external platforms. For more information on destinations, please read the [destinations overview](../../destinations/home.md). To learn how to activate a segment to a destination, see [activation overview](../../destinations/ui/activation-overview.md).
 
-**Profile samples** {#profile-samples}
+### Profile samples {#profile-samples}
 
 Underneath is a sampling of profiles that qualify for the segment, detailing information including the [!DNL Profile] ID, first name, last name, and personal email. 
 
@@ -272,7 +285,30 @@ More detailed information about each [!DNL Profile] can be seen by selecting the
 
 ![The sample profiles for the audience are highlighted. Sample profile information includes the profile ID, the first name, the last name, and the person's email.](../images/ui/audience-portal/audience-details-profiles.png)
 
-### Creating an audience {#create-audience}
+## Scheduled segmentation {#scheduled-segmentation}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_addallsegmentstoschedule"
+>title="Add all audiences to schedule"
+>abstract="Enable to include all audiences evaluated using batch segmentation in the daily scheduled update. Disable to remove all audiences from the scheduled update."
+
+Once audiences have been created, you can then evaluate them through on-demand or scheduled (continuous) evaluation. Evaluation means moving [!DNL Real-Time Customer Profile] data through segment jobs in order to produce corresponding audiences. Once created, the audiences are saved and stored so that they can be exported using [!DNL Experience Platform] APIs. 
+
+On-demand evaluation involves using the API to perform evaluation and build audiences as needed, whereas scheduled evaluation (also known as 'scheduled segmentation') allows you to create a recurring schedule to evaluate audiences at a specific time (at a maximum, once daily).
+
+### Enable scheduled segmentation {#enable-scheduled-segmentation}
+
+Enabling your audiences for scheduled evaluation can be done using the UI or the API. In the UI, return to the **[!UICONTROL Browse]** tab within **[!UICONTROL Audiences]** and toggle on **[!UICONTROL Schedule all audiences]**. This will cause all audiences to be evaluated based on the schedule set by your organization.
+
+>[!NOTE]
+>
+>Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for [!DNL XDM Individual Profile]. If your organization has more than five merge policies for [!DNL XDM Individual Profile] within a single sandbox environment, you will not be able to use scheduled evaluation.
+
+Schedules can currently only be created using the API. For detailed steps on creating, editing, and working with schedules using the API, please follow the tutorial for evaluating and accessing segmentation results, specifically the section on [scheduled evaluation using the API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
+
+![The toggle to Schedule all audiences is highlighted on Audience Portal.](../images/ui/audience-portal/browse-audiences-scheduled.png)
+
+## Creating an audience {#create-audience}
 
 You can select **[!UICONTROL Create audience]** to create an audience. 
 
@@ -282,19 +318,19 @@ A popover appears, letting you choose between composing an audience or building 
 
 ![A popover that displays the two types of audiences you can create.](../images/ui/audience-portal/create-audience-type.png)
 
-**Audience Composition** {#audience-composition}
+### Audience Composition {#audience-composition}
 
 Selecting **[!UICONTROL Compose audiences]** takes you to Audience Composition. This workspace provides intuitive controls for building and editing audiences, such as drag-and-drop tiles used to represent different actions. To learn more about creating audiences, please read the [Audience Composition guide](./audience-composition.md).
 
 ![The Audience Composition workspace is displayed.](../images/ui/audience-portal/audience-composition.png)
 
-**Segment Builder** {#segment-builder}
+### Segment Builder {#segment-builder}
 
 Selecting **[!UICONTROL Build rule]** takes you to the Segment Builder. This workspace provides intuitive controls for building and editing segment definitions, such as drag-and-drop tiles used to represent data properties. To learn more about creating segment definitions, please read the [Segment Builder guide](./segment-builder.md)
 
 ![The Segment Builder workspace is displayed.](../images/ui/audience-portal/segment-builder.png)
 
-### Importing an audience {#import-audience}
+## Importing an audience {#import-audience}
 
 >[!IMPORTANT]
 >
@@ -346,3 +382,6 @@ After confirming the details are correct, select **[!UICONTROL Finish]** to impo
 >By default, externally generated audiences have a data expiration of 30 days. The data expiration is reset if the audience is updated or modified in any way.
 >
 >Additionally, if your externally generated audience contains sensitive and/or healthcare-related information, you **must** apply the necessary data usage labels before activating it to any destination. For more information on applying data usage labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md).
+
+## Next steps
+

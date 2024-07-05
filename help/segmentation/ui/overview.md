@@ -47,24 +47,6 @@ In addition, Audience Portal lets you create new audiences using Segment Builder
 
 For more information about Audience Portal, please read the [Audience Portal overview](./audience-portal.md).
 
-## Scheduled segmentation {#scheduled-segmentation}
-
-Once audiences have been created, you can then evaluate them through on-demand or scheduled (continuous) evaluation. Evaluation means moving [!DNL Real-Time Customer Profile] data through segment jobs in order to produce corresponding audiences. Once created, the audiences are saved and stored so that they can be exported using [!DNL Experience Platform] APIs. 
-
-On-demand evaluation involves using the API to perform evaluation and build audiences as needed, whereas scheduled evaluation (also known as 'scheduled segmentation') allows you to create a recurring schedule to evaluate audiences at a specific time (at a maximum, once daily).
-
-### Enable scheduled segmentation {#enable-scheduled-segmentation}
-
-Enabling your audiences for scheduled evaluation can be done using the UI or the API. In the UI, return to the **[!UICONTROL Browse]** tab within **[!UICONTROL Audiences]** and toggle on **[!UICONTROL Schedule all audiences]**. This will cause all audiences to be evaluated based on the schedule set by your organization.
-
->[!NOTE]
->
->Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for [!DNL XDM Individual Profile]. If your organization has more than five merge policies for [!DNL XDM Individual Profile] within a single sandbox environment, you will not be able to use scheduled evaluation.
-
-Schedules can currently only be created using the API. For detailed steps on creating, editing, and working with schedules using the API, please follow the tutorial for evaluating and accessing segmentation results, specifically the section on [scheduled evaluation using the API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
-
-![The toggle to Schedule all audiences is highlighted on the Audiences Browse page.](../images/ui/overview/browse-audiences-scheduled.png)
-
 ## Compositions {#compositions}
 
 Select the **[!UICONTROL Compositions]** tab to see a list of all the audiences generated through Audience Composition for your organization.
