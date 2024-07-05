@@ -36,7 +36,7 @@ When directly composing an audience on Platform, you can use Audience Compositio
 
 Whether created using the API or using the [!DNL Segment Builder], segment definitions are ultimately defined using [!DNL Profile Query Language] (PQL). This is where the conceptual segment definition gets described in the language built to retrieve profiles meeting the criteria. For more information, see the [PQL overview](./pql/overview.md).  
 
-To learn how to create and use segments in the [!DNL Segment Builder] (the UI implementation of [!DNL Segmentation Service]), see the [Segment Builder guide](./ui/overview.md). 
+To learn how to create and use segments in the [!DNL Segment Builder] (the UI implementation of [!DNL Segmentation Service]), see the [Segment Builder guide](./ui/segment-builder.md). 
 
 For information on building segment definitions using the API, see the tutorial on [creating segment definitions using the API](./tutorials/create-a-segment.md).
 
