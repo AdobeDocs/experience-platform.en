@@ -387,4 +387,6 @@ After confirming the details are correct, select **[!UICONTROL Finish]** to impo
 
 After reading this overview, you should be able to use Audience Portal to effectively manage, create, and import audiences into Adobe Experience Platform.
 
-For more information on using the Segmentation Service UI, please read the [Segmentation Service UI overview](./ui/overview.md).
+For more information on using the Segmentation Service UI, please read the [Segmentation Service UI overview](./overview.md).
+
+To find out frequently asked questions about Audience Portal, please read the [frequently asked questions](../faq.md).
