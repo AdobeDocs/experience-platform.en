@@ -22,6 +22,12 @@ Once the dataset deletion is initiated, its expiration job will be marked as `ex
 >
 >If a dataset is set to expire, you must manually change any dataflows that may be ingesting data into that dataset so that your downstream workflows are not negatively affected.
 
+Advanced Data Lifecycle Management supports dataset deletions through the dataset expiration endpoint and ID deletions (row-level data) using primary identities via the [workorder endpoint](./workorder.md). You can also manage [dataset expirations](../ui/dataset-expiration.md) and [record deletions](../ui/record-delete.md) through the Platform UI. See the linked documentation for more information. 
+
+>[!NOTE]
+>
+>Data Lifecycle does not support batch deletion.
+
 ## Getting started
 
 The endpoint used in this guide is part of the Data Hygiene API. Before continuing, please review the [API guide](./overview.md) for information on required headers for CRUD operations, error messages, Postman collections, and how to read sample API calls.
