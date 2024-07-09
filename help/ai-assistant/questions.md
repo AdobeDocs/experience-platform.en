@@ -109,6 +109,45 @@ The following tables outline best practices you can follow when using AI Assista
 
 {style="table-layout:auto"}
 
+## Unsupported questions {#unsupported-questions}
+
+### Operational insights
+
+* How many profiles in this sandbox [satisfy a specific criteria, for example, "live in California"]?
+* What are the segments this profile [profile info/attribute value] is in?
+* How many profiles in the dataset have an email?
+* Which dataset constitutes to maximum number of profiles in this sandbox ?
+* Which dataset has the highest number of records?
+* How many segments have been deleted in [relative date]?
+* Which of my datasets has the largest size?
+* Give me a profile in the [Segment Name]. 
+* What is the total number of profiles in my sandbox
+* How many identity namespaces are associated with the segment [Segment Name]?
+* Show me a report of all the audience segments that were evaluated today
+* How many segments have overlapping profiles?
+* How many batches are being loaded into [Dataset Name]
+* How many active offers do i have
+* How many active campaigns do i have
+* Where are my sources of data coming from?
+* What is the biggest dataset or data source?
+* Can I get the list of users who have created these schemas?
+
+### Troubleshooting
+
+* Why is this batch [Batch Name/Batch ID] still processing?
+* Why is no one qualifying for this Segment [Segment Name]?
+* I am not able to see Customer ai, why and how do I fix it?
+* I am not able to see Dataset preview, why and how do I fix it?
+* Why can't I delete [Segment/Dataset/Schema Name]?
+* Do I have access to Query Service?
+
+### Task and automation
+
+* Write a query that gives me one record from the [Dataset Name].
+* Write a sample API call to /schemas/{schemaId}/fields/{fieldPath}/values.
+* Set up s source/destination for me. 
+* Create an audience for me with criteria [user specific criteria].
+
 ## Next steps
 
 By reading this document, you now have an understanding on how to optimize your questions for AI Assistant. For information on how to use the feature during your workflows, read the [AI Assistant UI guide](ui-guide.md).

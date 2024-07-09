@@ -65,7 +65,7 @@ You can ask AI Assistant questions about your operational insights in the follow
 
 | Domain | Supported metadata |
 | --- | --- |
-| Attributes | <ul><li>Attribute name look ups</li><li>Attribute - schema relationship</li><li>Attribute - dataset relationship</li><li>Attribute - audience relationship</li><li>Attribute - destination relationship</li><li>Unused attributes</li></ul> |
+| Attributes | <ul><li>Attribute name look ups</li><li>Attribute - schema relationship</li><li>Attribute - dataset relationship</li><li>Attribute - audience relationship</li><li>Attribute - destination relationship</li></ul> |
 | Audiences | <ul><li>Audience count</li><li>Audience type (streaming or batch)</li><li>Creation/modification dates</li><li>Activation status</li><li>Profile count</li><li>Duplicate audiences</li><li>Audience definition look ups</li><li>Audience - attribute relationship</li><li>Audience - dataset relationship</li><li>Audience - destination relationship</li><li>InSegment rules</li><li>Name look ups</li><li>Name and ID look ups |
 | Dataflows | <ul><li>Dataflow counts</li><li>Dataflow status</li><li>Dataflow - dataset relationship</li><li>Dataflow - source relationship</li></ul>|
 | Datasets | <ul><li>Dataset count</li><li>Profile enable status</li><li>Creation/modification date</li><li>Dataset - schema relationship</li><li>Dataset - audience relationship</li><li>Dataset - attribute relationship</li><li>Dataset - dataflow relationship</li><li>Name look ups </li><li>Name and ID look ups</li></ul> |
