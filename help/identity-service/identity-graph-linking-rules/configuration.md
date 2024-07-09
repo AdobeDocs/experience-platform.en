@@ -20,15 +20,14 @@ Step-by-step outline:
 
 Before you can get started, you must first ensure that authenticated events in your system always contain a person identifier.
 
-<!-- ## Set permissions {#set-permissions}
+## Set permissions {#set-permissions}
 
 The first step in the implementation process for Identity Service is to ensure that your Experience Platform account is added to a role that is provisioned with the necessary permissions. Your administrator can configure permissions for your account by navigating to the Permissions UI in Adobe Experience Cloud. From there, your account must be added to a role with the following permissions:
 
-* manage-identity-settings
-* view-identity-dashboard
-* view-identity-simulation
+* [!UICONTROL View Identity Settings]: apply this permission to be able to view unique namespaces and namespace priority in the Identity Service UI workspace.
+* [!UICONTROL Edit Identity Settings]: apply this permission to be able to edit and save your identity settings
 
-For more information on permissions, read the [permissions guide](../../access-control/abac/ui/permissions.md). -->
+For more information on permissions, read the [permissions guide](../../access-control/abac/ui/permissions.md).
 
 ## Create your identity namespaces {#namespace}
 
