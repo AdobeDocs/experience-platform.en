@@ -21,10 +21,9 @@ You can use the `/workorder` endpoint in the Data Hygiene API to programmaticall
 
 Follow these guidelines to optimize your cleanup request submissions:
 
-1. **Maximize identities per request:** Include up to 100,000 identities per cleanup request to enhance efficiency. Batching multiple identities into a single request helps reduce the frequency of API calls and minimizes the risk of performance issues due to excessive single-identity requests.
+1. **Maximize identities per request:** Include up to 100,000 identities per cleanup request to enhance efficiency. Batching multiple identities into a single request helps reduce the frequency of API calls and minimizes the risk of performance issues due to excessive single-identity requests. Submit requests with maximum identity counts to achieve quicker processing, as work orders are batched for efficiency.
 2. **Specify individual datasets:** For maximum efficiency, specify the individual dataset to be processed.
-3. **Submit multiple requests:** Submit multiple requests with maximum identity counts to achieve quicker processing, as work orders are batched for efficiency.
-4. **API throttling considerations:** Be mindful of API throttling to prevent slow-downs. Smaller requests (< 100 IDs) at higher frequencies may result in 429 responses and require resubmission at acceptable rates. 
+3. **API throttling considerations:** Be mindful of API throttling to prevent slow-downs. Smaller requests (< 100 IDs) at higher frequencies may result in 429 responses and require resubmission at acceptable rates. 
 
 ### Manage 429 Errors {#manage-429-errors}
 
@@ -36,7 +35,7 @@ If you receive a 429 error, it indicates that you have exceeded the allowed numb
 
 ## Dataset expiration {#dataset-expiration} 
 
-Set up automatic dataset cleanup for short-lived data. Use the `/ttl` endpoint on the Data Hygiene API to schedule expiration dates for datasets. Use the `/ttl` endpoint to trigger a dataset cleanup based on a specified time or date. See the Dataset expiration endpoint guide to learn how to [create a dataset expiration](./api/dataset-expiration.md) and the [accepted query parameters](./api/dataset-expiration.md#query-params).
+Set up automatic dataset cleanup for short-lived data. Use the `/ttl` endpoint on the Data Hygiene API to schedule expiration dates for datasets for cleanup based on a specified time or date. See the Dataset expiration endpoint guide to learn how to [create a dataset expiration](./api/dataset-expiration.md) and the [accepted query parameters](./api/dataset-expiration.md#query-params).
 
 ## Monitor work order and dataset expiration status {#monitor}
 
@@ -58,7 +57,7 @@ To efficiently monitor the progress of your data lifecycle tasks, set up and use
 
 For in-depth information on individual work orders, use the following approach:
 
-- Make a GET request to the `/workorder{work_order_id}` endpoint for detailed response data.
+- Make a GET request to the `/workorder/{work_order_id}` endpoint for detailed response data.
 - Retrieve product-specific responses and success messages.
 - Avoid using this method for regular polling activities.
 

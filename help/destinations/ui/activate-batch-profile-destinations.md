@@ -436,13 +436,22 @@ The new **[!UICONTROL Mapping]** page has the following known limitations:
 
 #### Audience membership attribute cannot be selected through the mapping workflow
 
-Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.status` to your file exports. Instead, you need to manually paste the value `xdm: segmentMembership.status` into the schema field, as shown below.
+Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.seg_namespace.seg_id.status` to your file exports. Instead, you need to manually paste the value `xdm: segmentMembership.seg_namespace.seg_id.status` into the schema field, as shown below.
 
 ![Screen recording showing the audience membership workaround in the mapping step of the activation workflow.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
-File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
-* If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and newly **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
-* If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
+
+>[!NOTE]
+>
+>For cloud storage destinations, the following attributes are added to the mapping by default:
+>
+>* `segmentMembership.seg_namespace.seg_id.status`
+>* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+
+File exports will vary in the following ways, depending on whether `segmentMembership.seg_namespace.seg_id.status` is selected:
+
+* If the `segmentMembership.seg_namespace.seg_id.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and newly **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
+* If the `segmentMembership.seg_namespace.seg_id.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
 
 Read more about [profile export behavior for file-based destinations](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
@@ -482,19 +491,19 @@ For profile-based destinations, you must select the profile attributes that you 
 
 >[!NOTE] 
 >
-> Adobe Experience Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+> Adobe Experience Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![Image showing prefilled recommended attributes in the mapping step of the audience activation workflow.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png) 
 
 >[!IMPORTANT] 
 >
->Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.status` to your file exports. Instead, you must manually paste the value `xdm: segmentMembership.status` into the schema field, as shown below.
+>Due to a known limitation, you cannot currently use the **[!UICONTROL Select field]** window to add `segmentMembership.seg_namespace.seg_id.status` to your file exports. Instead, you must manually paste the value `xdm: segmentMembership.seg_namespace.seg_id.status` into the schema field, as shown below.
 >
 >![Screen recording showing the audience membership workaround in the mapping step of the activation workflow.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
-File exports vary in the following ways, depending on whether `segmentMembership.status` is selected:
-* If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
-* If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
+File exports vary in the following ways, depending on whether `segmentMembership.seg_namespace.seg_id.status` is selected:
+* If the `segmentMembership.seg_namespace.seg_id.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
+* If the `segmentMembership.seg_namespace.seg_id.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
 
 ## Select enrichment attributes {#select-enrichment-attributes}
 
