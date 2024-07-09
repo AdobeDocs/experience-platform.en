@@ -46,7 +46,7 @@ Follow the steps below to activate data to your destinations from the **[!UICONT
 
 ### Activate audiences from the audience details page {#activate-audience-details}
 
-You can activate audiences to destinations from the audience details page. See [Audience details](../../segmentation/ui/overview.md#audience-details) for more information.
+You can activate audiences to destinations from the audience details page. See [Audience details](../../segmentation/ui/audience-portal.md#audience-details) for more information.
 
 Depending on the selected destination, follow the steps described in the articles below to finish the activation workflow:
     

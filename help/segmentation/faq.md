@@ -233,11 +233,11 @@ No, you do not. So long as you have edit permissions for audiences, you'll be ab
 
 ### Is there a limit to the number of folders I can create?
 
-No, there is no limit to the number of folders you can create. For more information on folders, please read the [audience inventory section](./ui/overview.md#folders) of the Segmentation Service UI overview.
+No, there is no limit to the number of folders you can create. For more information on folders, please read the [audience inventory section](./ui/audience-portal.md#folders) of the Segmentation Service UI overview.
 
 ### Is there a limit to the number of tags that can be added to an audience?
 
-No, there is no limit to the number of tags that can be added to an audience. For more information on tags, please read the [audience inventory section](./ui/overview.md#tags) of the Segmentation Service UI overview.
+No, there is no limit to the number of tags that can be added to an audience. For more information on tags, please read the [audience inventory section](./ui/audience-portal.md#tags) of the Segmentation Service UI overview.
 
 ### Is there a limit to the number of tags I can create?
 
@@ -245,7 +245,7 @@ No, there is no limit to the number of tags that you can create. However, you ca
 
 ### When I search for an audience by name or tag in a parent folder, can I also search through the related child folders?
 
-No, this behavior is not supported. However, you can change the audience inventory view to look at **All Audiences**, then search across all the folders. For more information on using search in audience inventory, please read the [search section](./ui/overview.md#search) of the Segmentation Service UI overview.
+No, this behavior is not supported. However, you can change the audience inventory view to look at **All Audiences**, then search across all the folders. For more information on using search in audience inventory, please read the [search section](./ui/audience-portal.md#search) of the Segmentation Service UI overview.
 
 ### Can I automatically assign an audience into a folder at the time of creation?
 

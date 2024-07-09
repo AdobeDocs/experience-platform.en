@@ -133,4 +133,4 @@ To edit the existing activation schedule of multiple audiences at the same time,
 
 >[!NOTE]
 >
->For details on exploring the details page of a audience, refer to the [Segmentation UI overview](../../segmentation/ui/overview.md#segment-details).
+>For details on exploring the details page of a audience, refer to the [Audience Portal overview](../../segmentation/ui/audience-portal.md#segment-details).

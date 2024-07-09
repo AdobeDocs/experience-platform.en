@@ -500,7 +500,7 @@ To see comprehensive information on an audience, select an audience name from th
 
 ![The Audiences size widget with an audience name and the View all audiences text highlighted.](../images/profiles/audiences-size-view-all-audiences.png)
 
-See the documentation for more information on the [[!UICONTROL Audiences] [!UICONTROL  Browse] tab](../../segmentation/ui/overview.md#browse).
+More information about audience details can be found in the [Audience Portal documentation](../../segmentation/ui/audience-portal.md).
 
 ### [!UICONTROL Audience overlap by merge policy] {#audience-overlap-by-merge-policy}
 
