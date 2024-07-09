@@ -140,6 +140,12 @@ Data hygiene record delete requests functions in the following manner, for a giv
 
 For more information, read the [advanced lifecycle management overview](../../hygiene/home.md).
 
+### Computed attributes
+
+Computed attributes does not use namespace priority to compute values. If you are using computed attributes, you must ensure that the CRM ID is designated as your primary identity for WebSDK. This limitation is expected to be resolved in August 2024.
+
+For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
+
 ### Data lake
 
 Data ingestion to data lake will continue to honor the primary identity settings configured on [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) and schemas. 
