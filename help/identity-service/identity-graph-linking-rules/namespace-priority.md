@@ -65,7 +65,7 @@ Currently, namespace priority influences system behavior of Real-Time Customer P
 
 ### Identity Service: Identity optimization algorithm
 
-For relatively complex graph structures, namespace priority plays an important role in ensuring that the correct links are removed when graph collapse scenarios happen. For more information read the [[!DNL Identity Optimization Algorithm] overview](../identity-graph-linking-rules/identity-optimization-algorithm.md).
+For relatively complex graph structures, namespace priority plays an important role in ensuring that the correct links are removed when graph collapse scenarios happen. For more information read the [identity optimization algorithm overview](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
 ### Real-Time Customer Profile: primary identity determination for experience events
 

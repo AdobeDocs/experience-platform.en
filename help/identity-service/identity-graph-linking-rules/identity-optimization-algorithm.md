@@ -47,9 +47,7 @@ For an in-depth look at namespace priority and its complete functionalities and 
 
 ## Process {#process}
 
-
 Upon ingesting new identities, Identity Service checks if the new identities and their corresponding namespaces adheres to unique namespace configurations. If the configurations are followed, then ingestion proceeds and the new identities aer linked to the the graph. However, if configurations are not followed, then the identity optimization algorithm will:
-
 
 * Ingest the most recent event, while taking namespace priority into account.
 * Remove the link that would merge two person entities from the appropriate graph layer.  
