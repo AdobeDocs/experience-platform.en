@@ -35,7 +35,7 @@ The [!UICONTROL Browse] page is displayed, showing a list of all the account aud
 
 This view lists information about the audience, including name, profile count, origin, lifecycle status, created date, and last updated date.
 
-You can also use the search and filtering functionality to quickly search and sort for specific account audiences. More information about this feature can be found in the [segmentation UI guide](./overview.md#manage-audiences).
+You can also use the search and filtering functionality to quickly search and sort for specific account audiences. More information about this feature can be found in the [Audience Portal overview](./audience-portal.md#manage-audiences).
 
 ## Create audience {#create}
 

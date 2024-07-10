@@ -73,8 +73,8 @@ This destination supports the activation of all audiences generated through the 
 This destination also supports the activation of the audiences described in the table below.
 
 | Audience type | Description | 
----------|----------|
-| Custom uploads | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+|---------|----------|
+| Custom uploads | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
