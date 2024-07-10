@@ -293,6 +293,7 @@ role: Developer
     * [Rules](./api/endpoints/rules.md)
     * [Rule components](./api/endpoints/rule-components.md)
     * [Extension packages](./api/endpoints/extension-packages.md)
+    * [Extension package usage authroizations](./api/endpoints/extension-package-usage-authorizations.md)
     * [Extensions](./api/endpoints/extensions.md)
     * [Libraries](./api/endpoints/libraries.md)
     * [Builds](./api/endpoints/builds.md)
