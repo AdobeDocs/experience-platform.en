@@ -27,6 +27,7 @@ role: User
 - Segmentation UI {#ui}
     - [Overview](ui/overview.md)
     - [Audience dashboard](ui/audience-dashboard.md)
+    - [Audience Portal](ui/audience-portal.md)
     - [Audience Composition](ui/audience-composition.md)
     - [Segment Builder](ui/segment-builder.md)
     - [Account audiences](ui/account-audiences.md)
