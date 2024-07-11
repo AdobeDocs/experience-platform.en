@@ -105,11 +105,29 @@ To use the prehiding snippet, copy and paste it inside the `<head>` element of y
 
 ## Configure data collection settings {#data-collection}
 
-![Image showing the data collection settings of the Web SDK tag extension in the Tags UI](assets/web-sdk-ext-collection.png)
+Manage data collection configuration settings. Similar settings in the JavaScript library are available using the [`configure`](/help/web-sdk/commands/configure/overview.md) command.
 
-* **[!UICONTROL Callback function]**: The callback function provided in the extension is also called the [`onBeforeEventSend` function](/help/web-sdk/commands/configure/onbeforeeventsend.md) in the library. This function allows you to modify events globally before they're sent to the Edge Network. 
-* **[!UICONTROL Enable click data collection]**: Web SDK can automatically collect link click information for you. By default, this feature is enabled but can be disabled using this option. Links are also labeled as download links if they contain one of the download expressions listed in the [!UICONTROL Download Link Qualifier] textbox. Adobe provides you with some default download link qualifiers. You can edit them according to your needs.
-* **[!UICONTROL Automatically collected context data]**: By default, Web SDK collects certain context data regarding device, web, environment, and place context. If you don't want this data collected or you only want certain categories of data collected, select **[!UICONTROL Specific context information]** and select the data that you want to be collected. See [`context`](/help/web-sdk/commands/configure/context.md) for more information.
+![Image showing the data collection settings of the Web SDK tag extension in the Tags UI.](assets/web-sdk-ext-collection.png)
+
+* **[!UICONTROL On before event send callback]**: A callback function to evaluate and modify the payload sent to Adobe. Use the `content` variable within the callback function to modify the payload. This callback is the tag equivalent to [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) in the JavaScript library.
+* **[!UICONTROL Collect internal link clicks]**: A checkbox that enables the collection of link tracking data internal to your site or property. When you enable this checkbox, event grouping options appear:
+  * **[!UICONTROL No event grouping]**: Link tracking data is sent to Adobe in separate events. Link clicks sent in separate events can increase the contractual usage of data sent to Adobe Experience Platform.
+  * **[!UICONTROL Event grouping using session storage]**: Store link tracking data in session storage until the next page event. On the following page, the stored link tracking data and page view data is sent to Adobe at the same time. Adobe recommends enabling this setting when tracking internal links.
+  * **[!UICONTROL Event grouping using local object]**: Store link tracking data in a local object until the next page event. If a visitor navigates to a new page, link tracking data is lost. This setting is most beneficial in context of single-page applications.
+* **[!UICONTROL Collect external link clicks]**: A checkbox that enables the collection of external links.
+* **[!UICONTROL Collect download link clicks]**: A checkbox that enables the collection of download links.
+* **[!UICONTROL Download link qualifier]**: A regular expression that qualifies a link URL as a download link.
+* **[!UICONTROL Filter click properties]**: A callback function to evaluate and modify click-related properties before collection. This function runs before the [!UICONTROL On before event send callback].
+* **Context settings**: Automatically collect visitor information, which populates specific XDM fields for you. You can choose **[!UICONTROL All default context information]** or **[!UICONTROL Specific context information]**. It is the tag equivalent to [`context`](/help/web-sdk/commands/configure/context.md) in the JavaScript library.
+  * **[!UICONTROL Web]**: Collects information about the current page.
+  * **[!UICONTROL Device]**: Collects information about the user's device. 
+  * **[!UICONTROL Environment]**: Collects information about the user's browser.
+  * **[!UICONTROL Place context]**: Collects information about the user's location.
+  * **[!UICONTROL High entropy user-agent hints]**: Collects more detailed information about the user's device.
+
+>[!TIP]
+>
+>The **[!UICONTROL On before link click send]** field is a deprecated callback that is only visible for properties that already have it configured. It is the tag equivalent to [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) in the JavaScript library. Use the **[!UICONTROL Filter click properties]** callback to filter or adjust click data, or use the **[!UICONTROL On before event send callback]** to filter or adjust the overall payload sent to Adobe. If both the **[!UICONTROL Filter click properties]** callback and the **[!UICONTROL On before link click send]** callback are set, only the **[!UICONTROL Filter click properties]** callback runs.
 
 ## Configure media collection settings {#media-collection}
 

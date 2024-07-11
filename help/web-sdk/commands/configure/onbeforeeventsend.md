@@ -1,8 +1,8 @@
 ---
 title: onBeforeEventSend
-description: Callback that runs just before data is sent.
-exl-id: 945f4fa1-380c-46aa-a92a-bbcfd6644751
+description: Learn how to configure the Web SDK to register a JavaScript function that can alter the data you send just before that data is sent to Adobe.
 ---
+
 # `onBeforeEventSend`
 
 The `onBeforeEventSend` callback allows you to register a JavaScript function that can alter the data you send just before that data is sent to Adobe. This callback allows you to manipulate the `xdm` or `data` object, including the ability to add, edit, or remove elements. You can also conditionally cancel the sending of data altogether, such as with detected client-side bot traffic.
@@ -11,7 +11,7 @@ The `onBeforeEventSend` callback allows you to register a JavaScript function th
 >
 >This callback allows the use of custom code. If any code that you include in the callback throws an uncaught exception, processing for the event halts. Data is not sent to Adobe.
 
-## On before event send callback using the Web SDK tag extension
+## Configure on before event send callback using the Web SDK tag extension {#tag-extension}
 
 Select the **[!UICONTROL Provide on before event send callback code]** button when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). This button opens a modal window where you can insert the desired code.
 
@@ -23,21 +23,14 @@ Select the **[!UICONTROL Provide on before event send callback code]** button wh
 1. This button opens a modal window with a code editor. Insert the desired code, then click **[!UICONTROL Save]** to close the modal window.
 1. Click **[!UICONTROL Save]** under extension settings, then publish your changes.
 
-Within the code editor, you can add, edit, or remove elements within the `content` object. This object contains the payload sent to Adobe. You do not need to define the `content` object or wrap any code within a function. Any variables defined outside of `content` can be used, but are not included in the payload sent to Adobe.
+Within the code editor, you have access to the following variables:
 
->[!TIP]
->
->The objects `content.xdm` and `content.data` are always defined in this context, so you do not need to check if they exist. Some variables within these objects depend on your implementation and data layer. Adobe recommends checking for undefined values within these objects to prevent JavaScript errors.
+* **`content.xdm`**: The [XDM](../sendevent/xdm.md) payload for the event.
+* **`content.data`**: The [data](../sendevent/data.md) object payload for the event.
+* **`return true`**: Immediately exit the callback and send data to Adobe with the current values in the `content` object.
+* **`return false`**: Immediately exit the callback and abort sending data to Adobe.
 
-For example, if you wanted to:
-
-* Add the XDM element `xdm.commerce.order.purchaseID`
-* Force all characters in `xdm.marketing.trackingCode` to lower case
-* Delete `xdm.environment.operatingSystemVersion`
-* If an event type is a link click, immediately send data regardless of the code below it
-* Cancel sending data to Adobe if a bot is detected
-
-The equivalent code within the modal window would be the following:
+Any variables defined outside of `content` can be used, but are not included in the payload sent to Adobe.
 
 ```js
 // Use nullish coalescing assignments to add objects if they don't yet exist
@@ -64,19 +57,18 @@ if (myBotDetector.isABot()) {
 }
 ```
 
->[!NOTE]
->
+>[!TIP]
 >Avoid returning `false` on the first event on a page. Returning `false` on the first event can negatively impact personalization.
 
-## On before event send callback using the Web SDK JavaScript library
+## Configure on before event send callback using the Web SDK JavaScript library {#library}
 
 Register the `onBeforeEventSend` callback when running the `configure` command. You can change the `content` variable name to any value that you would like by changing the parameter variable inside the inline function.
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": function(content) {
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeEventSend: function(content) {
     // Use nullish coalescing assignments to add a new value
     content.xdm._experience ??= {};
     content.xdm._experience.analytics ??= {};
@@ -116,8 +108,8 @@ function lastChanceLogic(content) {
 }
 
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": lastChanceLogic
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeEventSend: lastChanceLogic
 });    
 ```
