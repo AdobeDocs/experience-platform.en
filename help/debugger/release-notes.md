@@ -7,6 +7,18 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ---
 # Adobe Experience Platform Debugger release notes
 
+## Version 1.6.0 - July 11, 2024
+
+### New features
+* Allow for users to opt-in/out of technical and personal data collection.
+
+### Fixes and improvements
+
+* Fix Firefox script injection and privacy policy link.
+* Capture missing Analytics requests.
+* Fix crashes on pages with lots of complex console messages.
+* Update the Adobe Experience Platform Debugger to a Manifest v3 extension.
+
 ## Version 1.5.4 - December 19, 2023
 
 ### Fixes and improvements
