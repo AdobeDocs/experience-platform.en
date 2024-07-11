@@ -10,6 +10,7 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 ## Version 1.6.0 - July 11, 2024
 
 ### New features
+
 * Allow for users to opt-in/out of technical and personal data collection.
 
 ### Fixes and improvements
