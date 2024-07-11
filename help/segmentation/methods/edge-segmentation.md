@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Edge Segmentation Guide
-description: Learn how to use edge segmentation to evaluate segment definitions in Platform instantaneously on the edge, enabling same page and next page personalization use cases.
+description: Learn how to use edge segmentation to evaluate audiences in Platform instantaneously on the edge, enabling same page and next page personalization use cases.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 ---
 # Edge segmentation guide
@@ -41,7 +41,7 @@ A query can be evaluated with edge segmentation if it meets any of the criteria 
 
 Additionally, the segment **must** be tied to a merge policy that is active on edge. For more information about merge policies, please read the [merge policies guide](../../profile/api/merge-policies.md).
 
-A segment definition will **not** be enabled for edge segmentation in the following scenario:
+A segment definition will **not** be eligible for edge segmentation in the following scenario:
 
 - The segment definition includes a combination of a single event and an `inSegment` event.
   - However, if the segment definition contained in the `inSegment` event is profile only, the segment definition **will** be enabled for edge segmentation.
@@ -177,9 +177,15 @@ More detailed information about the segment definition returned can be found in 
 
 >[!TAB Audience Portal]
 
-You can retrieve all the audiences that are enabled for edge segmentation within your organization by using filters within Audience Portal.
+You can retrieve all the audiences that are enabled for edge segmentation within your organization by using filters in Audience Portal.
 
-Within the **Update frequency**, 
+Within the available filters, go to **Update frequency** and select "Edge". 
+
+IMAGE
+
+Using this filter displays all audiences in your organization that are evaluated using edge segmentation.
+
+IMAGE
 
 To learn more about viewing audiences in Platform, please read the [Audience Portal guide](../ui/audience-portal.md).
 

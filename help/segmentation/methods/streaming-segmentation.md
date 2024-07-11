@@ -1,30 +1,22 @@
 ---
 solution: Experience Platform
-title: Streaming Segmentation UI Guide
-description: Streaming segmentation on Adobe Experience Platform allows you to do segmentation in near real-time while focusing on data richness. With streaming segmentation, segment qualification now happens as data lands into Platform, alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into Platform, meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
+title: Streaming Segmentation Guide
+description: Learn how to use streaming segmentation to evaluate audiences in near-real time while focusing on data richness.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 ---
-# Streaming segmentation
+# Streaming segmentation guide
 
->[!NOTE]
->
->The following document states how to use streaming segmentation using the UI. For information on using streaming segmentation using the API, please read the [streaming segmentation API guide](../api/streaming-segmentation.md).
+Streaming segmentation is the ability to evaluate audiences in Adobe Experience Platform in near real-time while focusing on data richness.
 
-Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to do segmentation in near real-time while focusing on data richness. With streaming segmentation, segment qualification now happens as streaming data lands into [!DNL Platform], alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
-
->[!NOTE]
->
->Streaming segmentation works on all data that was ingested using a streaming source. Data ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
->
->Additionally, segments evaluated with streaming segmentation may drift between ideal and actual membership if the segment definition is based off of another segment definition that is evaluated using batch segmentation. For example, if Segment A is based off of Segment B, and Segment B is evaluated using batch segmentation, since Segment B only updates every 24 hours, Segment A will move further away from the actual data until it re-syncs with the Segment B update.
+With streaming segmentation, audience qualification now happens as streaming data lands into Platform, alleviating the need to schedule and run segmentation jobs. This allows you to evaluate data as its passed into Platform, letting audience membership be automatically kept up-to-date.
 
 ## Streaming segmentation query types {#query-types}
+
+A query will be eligible for streaming segmentation if it meets any of the criteria outlined in the following table.
 
 >[!NOTE]
 >
 >In order for streaming segmentation to work, you will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the Audience Portal overview](./audience-portal.md#scheduled-segmentation).
-
-A query will be automatically evaluated with streaming segmentation if it meets any of the following criteria:
 
 | Query type | Details | Example |
 | ---------- | ------- | ------- |
@@ -36,7 +28,7 @@ A query will be automatically evaluated with streaming segmentation if it meets 
 | Segment of segments | Any segment definition that contains one or more batch or streaming segments. **Note:** If a segment of segments is used, profile disqualification will happen **every 24 hours**. | ![An example of a segment of segments is shown.](../images/ui/streaming-segmentation/two-batches.png) |
 | Multiple events with a profile attribute | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![An example of multiple events with a profile attribute is shown.](../images/ui/streaming-segmentation/event-history-success.png) |
 
-A segment definition will **not** be enabled for streaming segmentation in the following scenarios:
+A segment definition will **not** be eligible for streaming segmentation in the following scenarios:
 
 - The segment definition includes Adobe Audience Manager (AAM) segments or traits.
 - The segment definition includes multiple entities (multi-entity queries).
@@ -44,7 +36,7 @@ A segment definition will **not** be enabled for streaming segmentation in the f
   - However, if the segment definition contained in the `inSegment` event is profile only, the segment definition **will** be enabled for streaming segmentation.
 - The segment definition uses "Ignore year" as part of its time constraints.
 
-Please note the following guidelines apply when doing streaming segmentation:
+Please note the following guidelines that apply to streaming segmentation queries:
 
 | Query type | Guideline |
 | ---------- | -------- |
@@ -55,35 +47,17 @@ If a segment definition is modified so it no longer meets the criteria for strea
 
 Additionally, segment unqualification, similarly to segment qualification, happens in real-time. As a result, if an audience no longer qualifies for a segment, it will be immediately unqualified. For example, if the segment definition asks for "All users who bought red shoes in the last three hours", after three hours, all the profiles that initially qualified for the segment definition will be unqualified.
 
-## Streaming segmentation segment definition details
+## Retrieve audiences evaluated using streaming segmentation {#retrieve-audiences}
 
-After creating a streaming-enabled segment, you can view details of that segment. 
 
-![The segment definition details page is shown.](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
-
-Specifically, the **[!UICONTROL Total qualified]** metric is displayed, which shows the total number of qualified audiences, based on batch and streaming evaluations for this segment.
-
-Underneath is a line graph that shows the number of new audiences that were updated in the last 24 hours using the streaming evaluation method. The dropdown can be adjusted to show the last 24 hours, last week, or last 30 days. The **[!UICONTROL New audience updated]** metric is based on the change in audience size during the selected time range, as evaluated by streaming segmentation. This metric does not include the total qualified audience from the daily segment batch evaluation.
-
->[!NOTE]
->
->A segment definition is considered qualified if it goes from having no status to realized or if it goes from exited to realized. A segment definition is considered unqualified if it goes from realized to exited.
->
->More information about these statuses can be found in the status table within the [Audience Portal overview](./audience-portal.md#customize).
-
-![The Profiles over time card is highlighted, showing a line graph of the profiles over time.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
-
-Additional information about the last segment evaluation can be found by selecting the information bubble next to **[!UICONTROL Total qualified]**.
-
-![The information bubble for the Total qualified profiles is been selected. This displays information about the last segment evaluation time.](../images/ui/streaming-segmentation/info-bubble.png)
-
-For more information about segment definitions, please read the previous section on [segment definition details](#segment-details).
 
 ## Next steps
 
 This user guide explains how streaming-enabled segment definitions work on Adobe Experience Platform and how to monitor streaming-enabled segments. 
 
 To learn more about using the Adobe Experience Platform user interface, please read the [Segmentation user guide](./overview.md).
+
+For frequently asked questions about streaming segmentation, please read the [streaming segmentation section of the FAQ](../faq.md#streaming-segmentation).
 
 ## Appendix
 
@@ -118,3 +92,9 @@ It takes up to one hour for a segment definition to be available.
 ### Are there any limitations to the data being streamed in?
 
 In order for streamed data to be used in streaming segmentation, there **must** be spacing between the events streamed in. If too many events are streamed in within the same second, Platform will treat these events as bot-generated data, and they will be discarded. As best practice, you should have **at least** five seconds between event data in order to ensure the data is properly used.
+
+>[!NOTE]
+>
+>Streaming segmentation works on all data that was ingested using a streaming source. Data ingested using a batch-based source will be evaluated nightly, even if it qualifies for streaming segmentation.
+>
+>Additionally, segments evaluated with streaming segmentation may drift between ideal and actual membership if the segment definition is based off of another segment definition that is evaluated using batch segmentation. For example, if Segment A is based off of Segment B, and Segment B is evaluated using batch segmentation, since Segment B only updates every 24 hours, Segment A will move further away from the actual data until it re-syncs with the Segment B update.
