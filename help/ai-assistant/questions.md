@@ -79,6 +79,30 @@ The following questions are grouped by data objects and are classified as either
   * Why can't I delete an audience?
   * How long does it take for audiences to be evaluated and results to be available for targeting?
 
++++Select to view an additional list of suggested prompts
+
+* Can I delete a profile enabled schema after data is ingested?
+* How are User Groups related to Roles?
+* When should I use a data type vs a field group?'
+* What is the difference between an identity and a primary or foreign key?'
+* How long does it take for Segments to be evaluated and results to be available for targeting?
+* How is Profile richness calculated?'
+* Tell me some common use cases for Real-Time CDP.
+* Why can't I delete a segment?
+* What type of changes can I make after a schema has been enabled for profile?
+* Why can't I access Dashboards in AEP?
+* How many segments use xdm attribute {FIELD_PATH}
+* Do I have any segments that are used in other segments?
+* What fields in the {SCHEMA_NAME} schema contain {STRING}?
+* Which audiences have xdm attribute {FULL_ATTRIBUTE_PATH} in their segment definition?
+* Which schemas have xdm attribute {FULL_ATTRIBUTE_PATH} in them?
+* Which source dataflows are not being used or do not have data coming in anymore?
+* List the live journeys I have.
+* List the audiences which are used in live journeys.
+* Which sources are in an active state?
+
++++
+
 ## Phrasing your questions {#phrasing-your-questions}
 
 You must phrase your questions to AI Assistant with clarity and context in order to get as accurate a response as a possible. Refer to the following list of tips for guidance on how to ask a clear question with context:
@@ -109,44 +133,50 @@ The following tables outline best practices you can follow when using AI Assista
 
 {style="table-layout:auto"}
 
-## Unsupported questions {#unsupported-questions}
+## Examples of unsupported questions {#unsupported-questions}
+
+The following is a list of examples of questions that are currently not supported by AI Assistant.
+
++++Select to view examples of unsupported questions
 
 ### Operational insights
 
 * How many profiles in this sandbox [satisfy a specific criteria, for example, "live in California"]?
-* What are the segments this profile [profile info/attribute value] is in?
+* What are the segments this profile {PROFILE_INFO/ATTRIBUTE_VALUE} is in?
 * How many profiles in the dataset have an email?
 * Which dataset constitutes to maximum number of profiles in this sandbox ?
 * Which dataset has the highest number of records?
-* How many segments have been deleted in [relative date]?
+* How many segments have been deleted in {RELATIVE_DATE}?
 * Which of my datasets has the largest size?
-* Give me a profile in the [Segment Name]. 
+* Give me a profile in the {AUDIENCE_NAME}. 
 * What is the total number of profiles in my sandbox
-* How many identity namespaces are associated with the segment [Segment Name]?
+* How many identity namespaces are associated with the audience {AUDIENCE_NAME}?
 * Show me a report of all the audience segments that were evaluated today
 * How many segments have overlapping profiles?
-* How many batches are being loaded into [Dataset Name]
-* How many active offers do i have
-* How many active campaigns do i have
+* How many batches are being loaded into {DATASET_NAME}
+* How many active offers do I have?
+* How many active campaigns do I have?
 * Where are my sources of data coming from?
 * What is the biggest dataset or data source?
 * Can I get the list of users who have created these schemas?
 
 ### Troubleshooting
 
-* Why is this batch [Batch Name/Batch ID] still processing?
-* Why is no one qualifying for this Segment [Segment Name]?
-* I am not able to see Customer ai, why and how do I fix it?
+* Why is this batch {BATCH_NAME/BATCH_ID} still processing?
+* Why is no one qualifying for this audience {AUDIENCE_NAME}?
+* I am not able to see Customer AI, why and how do I fix it?
 * I am not able to see Dataset preview, why and how do I fix it?
-* Why can't I delete [Segment/Dataset/Schema Name]?
+* Why can't I delete {SEGMENT/DATASET/SCHEMA_NAME}?
 * Do I have access to Query Service?
 
 ### Task and automation
 
-* Write a query that gives me one record from the [Dataset Name].
+* Write a query that gives me one record from the {DATASET_NAME}.
 * Write a sample API call to /schemas/{schemaId}/fields/{fieldPath}/values.
-* Set up s source/destination for me. 
-* Create an audience for me with criteria [user specific criteria].
+* Set up a source/destination for me. 
+* Create an audience for me with criteria {USER_SPECIFIC_CRITERIA}.
+
++++
 
 ## Next steps
 
