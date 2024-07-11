@@ -1,8 +1,8 @@
 ---
 title: clickCollectionEnabled
-description: Determine if link click data is automatically collected.
-exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
+description: Learn how to configure Web SDK to tetermine if link click data is automatically collected.
 ---
+
 # `clickCollectionEnabled`
 
 The `clickCollectionEnabled` property is a boolean that determines if the Web SDK automatically collects link data. If you do not set this variable, its default value is `true` which means that link tracking data is automatically collected by default. Setting this property to `false` is valuable in cases where you prefer to track link data manually.
@@ -25,7 +25,7 @@ The Web SDK tracks all clicks on `<a>` and `<area>` HTML elements if it doesn't 
 
 In all cases, `xdm.web.webInteraction.name` is set to the link text label and `xdm.web.webInteraction.URL` is set to the link destination URL. If you want to set the link name to the URL as well, you can override this XDM field using the `filterClickDetails` callback in the `clickCollection` object.
 
-## Enable automatic link tracking using the Web SDK tag extension
+## Enable automatic link tracking using the Web SDK tag extension {#tag-extension}
 
 Select the **[!UICONTROL Enable click data collection]** checkbox when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
@@ -36,7 +36,7 @@ Select the **[!UICONTROL Enable click data collection]** checkbox when [configur
 1. Scroll down to the [!UICONTROL Data Collection] section, then select the checkbox **[!UICONTROL Enable click data collection]**.
 1. Click **[!UICONTROL Save]**, then publish your changes.
 
-## Enable automatic link tracking using the Web SDK JavaScript library
+## Enable automatic link tracking using the Web SDK JavaScript library {#library}
 
 Set the `clickCollectionEnabled` boolean when running the `configure` command. If you omit this property when configuring the Web SDK, it defaults to `true`. Set this value to `false` if you prefer to set `xdm.web.webInteraction.type` and `xdm.web.webInteraction.value` manually.
 

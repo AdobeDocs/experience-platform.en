@@ -2,9 +2,14 @@
 title: clickCollection
 description: Fine-tune click collection settings.
 ---
+
 # `clickCollection`
 
-The `clickCollection` property is an object that contains several variables that let you have more control around automatically collected link data. Use of these variables are helpful when you want to include or exclude types of links from data collection. It requires [`clickCollectionEnabled`](clickcollectionenabled.md) to be enabled. It is supported on Web SDK 2.25.0 or later.
+The `clickCollection` object contains several variables that help you control automatically collected link data. Use these variables when you want to include or exclude types of links from data collection.
+
+It requires [`clickCollectionEnabled`](clickcollectionenabled.md) to be enabled.
+
+It is supported on Web SDK 2.25.0 or later.
 
 The following variables are available in the `clickCollection` object:
 

@@ -107,7 +107,7 @@ To use the prehiding snippet, copy and paste it inside the `<head>` element of y
 
 Manage data collection configuration settings. Similar settings in the JavaScript library are available using the [`configure`](/help/web-sdk/commands/configure/overview.md) command.
 
-![Image showing the data collection settings of the Web SDK tag extension in the Tags UI](assets/web-sdk-ext-collection.png)
+![Image showing the data collection settings of the Web SDK tag extension in the Tags UI.](assets/web-sdk-ext-collection.png)
 
 * **[!UICONTROL On before event send callback]**: A callback function to evaluate and modify the payload sent to Adobe. Use the `content` variable within the callback function to modify the payload. This callback is the tag equivalent to [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) in the JavaScript library.
 * **[!UICONTROL Collect internal link clicks]**: A checkbox that enables the collection of link tracking data internal to your site or property. When you enable this checkbox, event grouping options appear:
@@ -126,7 +126,8 @@ Manage data collection configuration settings. Similar settings in the JavaScrip
   * **[!UICONTROL High entropy user-agent hints]**: Collects more detailed information about the user's device.
 
 >[!TIP]
->The **[!UICONTROL On before link click send]** field is a deprecated callback that is only visible for properties that already have it configured. It is the tag equivalent to [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) in the JavaScript library. Use the '[!UICONTROL Filter click properties]' callback to filter or adjust click data, or use the '[!UICONTROL On before event send callback]' to filter or adjust the overall payload sent to Adobe. If both the '[!UICONTROL Filter click properties]' callback and the '[!UICONTROL On before link click send]' callback are set, only the '[!UICONTROL Filter click properties]' callback runs.
+>
+>The **[!UICONTROL On before link click send]** field is a deprecated callback that is only visible for properties that already have it configured. It is the tag equivalent to [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) in the JavaScript library. Use the **[!UICONTROL Filter click properties]** callback to filter or adjust click data, or use the **[!UICONTROL On before event send callback]** to filter or adjust the overall payload sent to Adobe. If both the **[!UICONTROL Filter click properties]** callback and the **[!UICONTROL On before link click send]** callback are set, only the **[!UICONTROL Filter click properties]** callback runs.
 
 ## Configure media collection settings {#media-collection}
 

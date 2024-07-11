@@ -3,9 +3,11 @@ title: onBeforeLinkClickSend
 description: Callback that runs just before link tracking data is sent.
 exl-id: 8c73cb25-2648-4cf7-b160-3d06aecde9b4
 ---
+
 # `onBeforeLinkClickSend`
 
 >[!IMPORTANT]
+>
 >This callback is deprecated. Use [`filterClickDetails`](clickcollection.md) instead.
 
 The `onBeforeLinkClickSend` callback allows you to register a JavaScript function that can alter link tracking data you send just before that data is sent to Adobe. This callback allows you to manipulate the `xdm` or `data` object, including the ability to add, edit, or remove elements. You can also conditionally cancel the sending of data altogether, such as with detected client-side bot traffic. It is supported on Web SDK 2.15.0 or later.
@@ -13,9 +15,10 @@ The `onBeforeLinkClickSend` callback allows you to register a JavaScript functio
 This callback only runs when [`clickCollectionEnabled`](clickcollectionenabled.md) is enabled and [`filterClickDetails`](clickcollection.md) does not contain a registered function. If `clickCollectionEnabled` is disabled, or if `filterClickDetails` contains a registered function, then this callback does not execute. If `onBeforeEventSend` and `onBeforeLinkClickSend` both contain registered functions, `onBeforeLinkClickSend` is executed first.
 
 >[!WARNING]
+>
 >This callback allows the use of custom code. If any code that you include in the callback throws an uncaught exception, processing for the event halts. Data is not sent to Adobe.
 
-## On before link click send callback using the Web SDK tag extension
+## Configure on before link click send callback using the Web SDK tag extension {#tag-extension}
 
 Select the **[!UICONTROL Provide on before link click event send callback code]** button when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). This button opens a modal window where you can insert the desired code.
 
@@ -58,7 +61,7 @@ if(content.xdm.web?.webInteraction?.type === "other") content.xdm.web.webInterac
 
 Similarly to [`onBeforeEventSend`](onbeforeeventsend.md), you can `return true` to complete the function immediately, or `return false` to abort sending data to Adobe. If you abort the sending of data in `onBeforeLinkClickSend` when both `onBeforeEventSend` and `onBeforeLinkClickSend` contain registered functions, the `onBeforeEventSend` function does not run.
 
-## On before link click send callback using the Web SDK JavaScript library
+## Configure on before link click send callback using the Web SDK JavaScript library {#library}
 
 Register the `onBeforeLinkClickSend` callback when running the `configure` command. You can change the `content` variable name to any value that you would like by changing the parameter variable inside the inline function.
 

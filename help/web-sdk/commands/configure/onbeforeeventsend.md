@@ -1,8 +1,8 @@
 ---
 title: onBeforeEventSend
-description: Callback that runs just before data is sent.
-exl-id: 945f4fa1-380c-46aa-a92a-bbcfd6644751
+description: Learn how to configure the Web SDK to register a JavaScript function that can alter the data you send just before that data is sent to Adobe.
 ---
+
 # `onBeforeEventSend`
 
 The `onBeforeEventSend` callback allows you to register a JavaScript function that can alter the data you send just before that data is sent to Adobe. This callback allows you to manipulate the `xdm` or `data` object, including the ability to add, edit, or remove elements. You can also conditionally cancel the sending of data altogether, such as with detected client-side bot traffic.
@@ -11,7 +11,7 @@ The `onBeforeEventSend` callback allows you to register a JavaScript function th
 >
 >This callback allows the use of custom code. If any code that you include in the callback throws an uncaught exception, processing for the event halts. Data is not sent to Adobe.
 
-## On before event send callback using the Web SDK tag extension
+## Configure on before event send callback using the Web SDK tag extension {#tag-extension}
 
 Select the **[!UICONTROL Provide on before event send callback code]** button when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). This button opens a modal window where you can insert the desired code.
 
@@ -60,7 +60,7 @@ if (myBotDetector.isABot()) {
 >[!TIP]
 >Avoid returning `false` on the first event on a page. Returning `false` on the first event can negatively impact personalization.
 
-## On before event send callback using the Web SDK JavaScript library
+## Configure on before event send callback using the Web SDK JavaScript library {#library}
 
 Register the `onBeforeEventSend` callback when running the `configure` command. You can change the `content` variable name to any value that you would like by changing the parameter variable inside the inline function.
 
