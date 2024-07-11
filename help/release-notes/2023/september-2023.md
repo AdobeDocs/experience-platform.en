@@ -214,7 +214,7 @@ For more information on Query Services, refer to the [Query Service overview](..
 
 | Feature | Description |
 | ------- | ----------- |
-| Customizable columns | You can now customize the layout of Audience Portal with re-sizable columns. For more information on this feature, please read the [segmentation UI guide](../../segmentation/ui/overview.md#customize). |
+| Customizable columns | You can now customize the layout of Audience Portal with re-sizable columns. For more information on this feature, please read the [Audience Portal overview](../../segmentation/ui/audience-portal.md#customize). |
 | Update frequency breakdown | You can now view a breakdown of the update frequencies of the audiences in your organization. For more information on this feature, please read the [segmentation UI guide](../../segmentation/ui/overview.md#browse). |
 
 To learn more about Segmentation Service, please read the [Segmentation Service overview](../../segmentation/home.md).
