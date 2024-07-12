@@ -32,25 +32,25 @@ The identity settings page is divided into two sections: [!UICONTROL Person name
 
 ### Configure namespace priority
 
-To configure namespace priority, select a namespace in the identity settings menu and then drag and drop that namespace to the order of your liking. Place a namespace higher on the list to give it a higher priority and conversely, place a namespace lower on the list to give it a lower priority. The namespace with the highest priority should also be designated as a unique namespace.
+To configure namespace priority, select a namespace in the identity settings menu and then drag and drop that namespace to the order of your liking. Place a namespace higher on the list to give it a higher priority, and conversely, place a namespace lower on the list to give it a lower priority. The namespace with the highest priority should also be designated as a unique namespace.
 
-![Select and drag a namespace to configure priority ordering.](../images/rules/namespace-priority.png)
+![The identities settings workspace with a person namespace highlighted.](../images/rules/namespace-priority.png)
 
 ### Designate your unique namespace
 
 To designate a unique namespace, select the [!UICONTROL Unique per graph] checkbox that corresponds with that namespace. You can select more than one unique namespace for your identity settings configuration.
 
-![Two unique namespaces selected.](../images/rules/unique-namespace.png)
+![Two namespaces selected and defined as unique.](../images/rules/unique-namespace.png)
 
-Once your unique namespaces are established, graphs will no longer be able to have multiple identities that contain a unique namespace. For example, if you designated CRMID as a unique namespace, then a graph can only have one identity with the CRMID namespace. For more information, read the [identity optimization algorithm overview](./identity-optimization-algorithm.md#unique-namespace).
+Once your unique namespaces are established, graphs will no longer be able to have multiple identities that contain a unique namespace. For example, if you designated CRM ID as a unique namespace, then a graph can only have one identity with the CRM ID namespace. For more information, read the [identity optimization algorithm overview](./identity-optimization-algorithm.md#unique-namespace).
 
 When you are finished with your configurations, select **[!UICONTROL Next]**. A confirmation message appears, use this opportunity to verify that your configurations are correct and then select **[!UICONTROL Finish]**.
 
-![The validation page.](../images/rules/finish.png)
+![The validation page with Finish highlighted.](../images/rules/finish.png)
 
-A warning appears indicating that your new settings will not have any implications on existing links in an identity graph and experience event profile fragments that  have already been ingested. Additionally, you are notified that iit  will take up to 6 hours for your new settings to be reflected in the system. To confirm enter your sandbox name and then select **[!UICONTROL Confirm]**.
+A warning appears indicating that your new settings will not have any implications on existing links in an identity graph and experience event profile fragments that have already been ingested. Additionally, you are notified that it  will take up to six hours for your new settings to be reflected in the system. To confirm enter your sandbox name and then select **[!UICONTROL Confirm]**.
 
-![The confirmation window.](../images/rules/confirm-settings.png)
+![The confirmation window that displays a warning about a six-hour delay before configurations get processed.](../images/rules/confirm-settings.png)
 
 ## Next steps
 
