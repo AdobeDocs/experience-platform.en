@@ -49,17 +49,17 @@ A segment definition will **not** be eligible for edge segmentation in the follo
 
 ## Retrieve audiences evaluated using edge segmentation {#retrieve-audiences}
 
-You can retrieve all audiences that are enabled for edge segmentation using either the Segmentation Service API or through Audience Portal in the UI.
+You can retrieve all audiences that are evaluated using edge segmentation using either the Segmentation Service API or through Audience Portal in the UI.
 
 >[!BEGINTABS]
 
 >[!TAB Segmentation Service API]
 
-You can retrieve a list of all segment definitions that are enabled for edge segmentation within your organization by making a GET request to the `/segment/definitions` endpoint.
+Retrieve a list of all segment definitions that are evaluated using edge segmentation within your organization by making a GET request to the `/segment/definitions` endpoint.
 
 **API format**
 
-To retrieve segment definitions enabled for edge segmentation, you must include the query parameter `evaluationInfo.synchronous.enabled=true` in the request path.
+You must include the query parameter `evaluationInfo.synchronous.enabled=true` in the request path to retrieve segment definitions evaluated using edge segmentation.
 
 ```http
 GET /segment/definitions?evaluationInfo.synchronous.enabled=true
@@ -193,12 +193,9 @@ To learn more about viewing audiences in Platform, please read the [Audience Por
 
 ## Next steps
 
-This guide explains how to enable a segment definitions to be evaluated using edge segmentation on Adobe Experience Platform. To learn more about using the Experience Platform user interface, please read the [Segmentation user guide](./overview.md). To learn how to perform similar actions and work with segment definitions using Experience Platform APIs, please visit the [edge segmentation API guide](../api/edge-segmentation.md).
+This guide explains how to create a segment definition that can be evaluated using edge segmentation on Adobe Experience Platform. 
 
-## Appendix
+To learn more about using the Experience Platform user interface, please read the [Segmentation user guide](./overview.md). 
 
-The following section lists frequently asked questions regarding edge segmentation:
+For frequently asked questions about edge segmentation, please read the [edge segmentation section of the FAQ](../faq.md#streaming-segmentation).
 
-### How long does it take for a segment definition to be available on the Edge Network?
-
-It takes up to one hour for a segment definition to be available on the Edge Network.
