@@ -16,7 +16,7 @@ In the Adobe Experience Platform user interface, you can view and monitor the at
 
 ## View destination details {#view-details}
 
-Follow the steps below to view more details about an existing destination.
+Follow the steps below to view more details about an existing destination. You can find out the destination ID of a destination, the user who created the destination, when it was created, and other information.
 
 1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destinations.
 
@@ -34,13 +34,9 @@ Follow the steps below to view more details about an existing destination.
 
     ![Select destination](../assets/ui/details-page/destination-select.png)
 
-4. The details page for the destination appears in the right rail, showing its available controls. 
+1. The details page for the destination appears in the right rail, showing its available controls. 
 
     ![Destination details](../assets/ui/details-page/destination-details.png)
-
-## View destination ID {#view-destination ID}
-
-
 
 ## Right rail {#right-rail}
 
