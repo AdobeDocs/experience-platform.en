@@ -117,7 +117,7 @@ The following is a list of examples of questions that are currently not supporte
 
 ### Operational insights
 
-* How many profiles in this sandbox [satisfy a specific criteria, for example, "live in California"]?
+* How many profiles in this sandbox live in California? (**Note**: for similar questions, you must provide a specific criteria to give enough context for your request, in this case, the specific criteria is "live in California").
 * What are the segments this profile {PROFILE_INFO/ATTRIBUTE_VALUE} is in?
 * How many profiles in the dataset have an email?
 * Which dataset constitutes to maximum number of profiles in this sandbox ?
