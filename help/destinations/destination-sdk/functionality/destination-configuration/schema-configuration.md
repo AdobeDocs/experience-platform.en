@@ -235,7 +235,7 @@ As a result, the **[!UICONTROL Target field]** section in the Platform UI is gre
 
 ## Configure support for external audiences {#external-audiences}
 
-To configure your destination to support the activation of [externally generated audiences](../../../../segmentation/ui/audience-portal.md#import-audience), include the snippet below in the `schemaConfig`.
+To configure your destination to support the activation of [externally generated audiences](../../../../segmentation/ui/audience-portal.md#import-audience), include the snippet below in the `schemaConfig` section.
 
 ```json
 "schemaConfig": {
