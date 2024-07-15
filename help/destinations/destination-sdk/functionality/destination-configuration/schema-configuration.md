@@ -233,6 +233,18 @@ As a result, the **[!UICONTROL Target field]** section in the Platform UI is gre
 
 >[!ENDTABS]
 
+## Configure support for external audiences {#external-audiences}
+
+To configure your destination to support the activation of [externally generated audiences](../../../../segmentation/ui/audience-portal.md#import-audience), include the snippet below in the `schemaConfig`.
+
+```json
+"schemaConfig": {
+  "segmentNamespaceDenyList": [],
+  ...
+}
+```
+
+
 ## Next steps {#next-steps}
 
 After reading this article, you should have a better understanding of what schema types are supported by Destination SDK and how you can configure your schema.
