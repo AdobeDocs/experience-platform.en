@@ -244,7 +244,7 @@ To configure your destination to support the activation of [externally generated
 }
 ```
 
-See the property descriptions in the [table](#attributes-schema) further above in this page to learn more about the `segmentNamespaceDenyList` functionality.
+See the property descriptions in the [table](#attributes-schema) further above on this page to learn more about the `segmentNamespaceDenyList` functionality.
 
 ## Next steps {#next-steps}
 
