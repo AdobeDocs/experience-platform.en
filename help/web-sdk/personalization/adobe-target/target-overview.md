@@ -297,6 +297,34 @@ alloy("sendEvent", {
 });
 ```
 
+## Display mbox conversion metrics {#display-mbox-conversion-metrics}
+
+The sample below shows how you can track display mbox conversions and send profile parameters to Adobe Target, without requiring to qualify for any content or activity.
+
+```js
+alloy("sendEvent", {
+    "xdm": {
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "conversion-step-1" //example scope/mbox name
+                }],
+                "propositionEventType": {
+                    "display": 1
+                }
+            }
+        },
+        "eventType": "decisioning.propositionDisplay"
+    }
+});
+```
+
+
+|Property | Description |
+|---------|----------|
+| `xdm._experience.decisioning.propositions[x].scope` | The scope to associate the success metric with (which will attribute it to a specific activity on the Target side). |
+| `xdm._experience.decisioning.propositions[x].eventType` |  Any string. It is best to keep it set to `"decisioning.propositionDisplay"` for this use case. |
+
 ## Debugging
 
 mboxTrace and mboxDebug have been deprecated. Use a method of [Web SDK debugging](/help/web-sdk/use-cases/debugging.md) instead.

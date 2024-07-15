@@ -610,19 +610,21 @@ This example tracks an event which was fired after performing a specific action,
 You can add any additional custom parameters through the `__adobe.target` data object.
 
 ```js
-//replicates an at.js trackEvent call
 alloy("sendEvent", {
-    "type": "decisioning.propositionDisplay",
     "xdm": {
         "_experience": {
             "decisioning": {
                 "propositions": [{
-                    "scope": "sumbitButtonClick" // Or any mbox/location name you want to use in Adobe Target
-                }]
+                    "scope": "conversion-step-1" //example scope/mbox name
+                }],
+                "propositionEventType": {
+                    "display": 1
+                }
             }
-        }
+        },
+        "eventType": "decisioning.propositionDisplay"
     }
-});
+});  
 ```
 
 ## How to trigger a view change in a Single Page Application
