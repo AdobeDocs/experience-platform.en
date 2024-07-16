@@ -35,17 +35,21 @@ This tutorial also requires a working understanding of [[!DNL Braze] Currents](h
 
 If you already have a [!DNL Braze] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/marketing-automation.md).
 
-## Create a Schema
+## Create an XDM schema 
 
-If this is the first time creating a Braze Currents Connection, you'll need to create a schema.  If you have already created a schema for Braze Currents, you may proceed with the next step, "Connect your Braze account to Experience Platform".
+>[!TIP]
+>
+>You must create an Experience Data Model (XDM) schema if this is your first time creating a [!DNL Braze Currents] connection. If you have already created a schema for [!DNL Braze Currents], then you may skip this step and proceed to [connecting your account to Experience Platform](#connect).
 
-In the Platform UI, select **[!UICONTROL Schemas]** from the left navigation under Data Management to access the [!UICONTROL Schemas] workspace.  Select the **[!UICONTROL Create schema]** button in the top right of the screen, and select *Experience Event* base class.  Once you have done this select **[!UICONTROL Next]** to move onto the next screen.
+In the Platform UI, use the left navigation and then select **[!UICONTROL Schemas]** to access the [!UICONTROL Schemas] workspace. Next, select **[!UICONTROL Create schema]**, and then select **[!UICONTROL Experience Event]**. To proceed, select **[!UICONTROL Next]**.
 
 ![A completed schema.](../../../../images/tutorials/create/braze/schema.png)
 
-On this screen select a name and description, and then continue on with **[!UICONTROL Finish]**, on the next screen you will be able to add additional attributes to the schema.  Under the *Composition* label on the left side under the *Structure* tab, locate *Field groups* and click the **[!UICONTROL Add]** button next to it.  In the search box, type "Braze Currents Users Event" and select the checkbox next to it and select **[!UICONTROL Add field groups]**.  Finally, you can select **[!UICONTROL Save]** to save the changes to your new schema.
+Provide a name and description for your schema. Then, use the [!UICONTROL Composition] panel to configure your schema attributes. Under [!UICONTROL Field groups], select **[!UICONTROL Add]** and add the [!UICONTROL Braze Currents User Event] field group. When finished, select **[!UICONTROL Save]**. 
 
-## Connect your [!DNL Braze] account to Experience Platform
+For more information on schemas, read the guide to [creating schemas in the UI](../../../../../xdm/tutorials/create-schema-ui.md).
+
+## Connect your [!DNL Braze] account to Experience Platform {#connect}
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -64,11 +68,9 @@ Then, configure mapping for your data using the mapping interface.
 
 ![The "Mapping" screen.](../../../../images/tutorials/create/braze/mapping_errors.png)
 
-The mapping will have the following issues that need to be resolved.  
+The mapping will have the following issues that need to be resolved.
 
-*id* in the source data will be incorrectly mapped to *_braze.appID*.  Change this instead to map to the *_id* field at the root level of the schema.
-
-*properties.is_amp* should map to *_braze.messaging.email.isAMP*
+In the source data, *id* will be incorrectly mapped to *_braze.appID*. You must change the target mapping field to *_id* at the root level of the schema. Next, ensure that *properties.is_amp* is mapped to *_braze.messaging.email.isAMP*.
 
 >[!IMPORTANT]
 >
@@ -76,9 +78,13 @@ The mapping will have the following issues that need to be resolved.
 >
 >![Creating a calculated field for timestamp ](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
-Delete the *time* to *timestamp* mapping, then click the **[!UICONTROL + New field type]** button and select *Add calculated field*.  In the provided box, type *time \* 1000* and click **[!UICONTROL Save]**.  Then select **[!UICONTROL Map target field]** next to the new source field and map it to *timestamp* at the root level of the schema.  You should then click **[!UICONTROL Validate]** and ensure you have no more errors.  Once this is done click **[!UICONTROL Next]**, and then **[!UICONTROL Finish]** on the next page once you have reviewed your new connection.
+Next, delete the *time* to *timestamp* mapping, then select the add (`+`) icon and then select **[!UICONTROL Add calculated field]**. In the provided box, input *time \* 1000* and select **[!UICONTROL Save]**.  
+
+Once the new calculated field is added, select **[!UICONTROL Map target field]** next to the new source field and map it to *timestamp* at the root level of the schema. You should then select **[!UICONTROL Validate]** to ensure that you have no more errors.  
 
 ![The mapping with no errors.](../../../../images/tutorials/create/braze/completed_mapping.png)
+
+When finished, select **[!UICONTROL Next]**. Use the review page to confirm the details of your dataflow and then select **[!UICONTROL Finish]**.
 
 ### Gather required credentials
 
