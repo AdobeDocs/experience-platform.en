@@ -72,15 +72,15 @@ The mapping will have the following issues that need to be resolved.
 
 In the source data, *id* will be incorrectly mapped to *_braze.appID*. You must change the target mapping field to *_id* at the root level of the schema. Next, ensure that *properties.is_amp* is mapped to *_braze.messaging.email.isAMP*.
 
+Next, delete the *time* to *timestamp* mapping, then select the add (`+`) icon and then select **[!UICONTROL Add calculated field]**. In the provided box, input *time \* 1000* and select **[!UICONTROL Save]**.  
+
+Once the new calculated field is added, select **[!UICONTROL Map target field]** next to the new source field and map it to *timestamp* at the root level of the schema. You should then select **[!UICONTROL Validate]** to ensure that you have no more errors.  
+
 >[!IMPORTANT]
 >
 >Braze timestamps are not expressed in milliseconds, but rather in seconds. In order for the timestamps in Experience Platform to be accurately reflected, you need to create calculated fields in milliseconds. A calculation of "time * 1000" will properly convert to milliseconds, suitable for mapping to a timestamp field within Experience Platform.
 >
 >![Creating a calculated field for timestamp ](../../../../images/tutorials/create/braze/create-calculated-field.png)
-
-Next, delete the *time* to *timestamp* mapping, then select the add (`+`) icon and then select **[!UICONTROL Add calculated field]**. In the provided box, input *time \* 1000* and select **[!UICONTROL Save]**.  
-
-Once the new calculated field is added, select **[!UICONTROL Map target field]** next to the new source field and map it to *timestamp* at the root level of the schema. You should then select **[!UICONTROL Validate]** to ensure that you have no more errors.  
 
 ![The mapping with no errors.](../../../../images/tutorials/create/braze/completed_mapping.png)
 
