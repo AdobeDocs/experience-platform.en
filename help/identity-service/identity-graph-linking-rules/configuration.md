@@ -63,8 +63,8 @@ For instructions on how to create a dataset, read the [dataset UI guide](../../c
 
 >[!WARNING]
 >
->* During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a person identifier, such as CRM ID.
->* During implementation, you must ensure that the unique namespace with the highest priority is always present in every profile.
+>* During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a person identifier, such as CRMID.
+>* During implementation, you must ensure that the unique namespace with the highest priority is always present in every profile. View the examples page for a [good example] and [bad example]...
 
 By this point, you should have the following:
 
@@ -85,3 +85,6 @@ Once you have all of the items listed above, then you can begin ingesting your d
 >Once your data is ingested, the XDM raw data payload does not change. You may still see your primary identity configurations iin the UI. However, these configurations will be overridden by identity settings.
 
 For any feedback, use the **[!UICONTROL Beta feedback]** option in the Identity Service UI workspace.
+
+## Appendix
+
