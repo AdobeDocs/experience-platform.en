@@ -61,6 +61,11 @@ For instructions on how to create a dataset, read the [dataset UI guide](../../c
 
 ## Ingest your data {#ingest}
 
+>[!WARNING]
+>
+>* During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a person identifier, such as CRM ID.
+>* During implementation, you must ensure that the unique namespace with the highest priority is always present in every profile.
+
 By this point, you should have the following:
 
 * The necessary permissions to access Identity Service features.
