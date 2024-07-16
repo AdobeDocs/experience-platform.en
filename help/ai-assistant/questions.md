@@ -79,30 +79,6 @@ The following questions are grouped by data objects and are classified as either
   * Why can't I delete an audience?
   * How long does it take for audiences to be evaluated and results to be available for targeting?
 
-+++Select to view an additional list of suggested prompts
-
-* Can I delete a profile enabled schema after data is ingested?
-* How are User Groups related to Roles?
-* When should I use a data type vs a field group?'
-* What is the difference between an identity and a primary or foreign key?'
-* How long does it take for Segments to be evaluated and results to be available for targeting?
-* How is Profile richness calculated?'
-* Tell me some common use cases for Real-Time CDP.
-* Why can't I delete a segment?
-* What type of changes can I make after a schema has been enabled for profile?
-* Why can't I access Dashboards in AEP?
-* How many segments use xdm attribute {FIELD_PATH}
-* Do I have any segments that are used in other segments?
-* What fields in the {SCHEMA_NAME} schema contain {STRING}?
-* Which audiences have xdm attribute {FULL_ATTRIBUTE_PATH} in their segment definition?
-* Which schemas have xdm attribute {FULL_ATTRIBUTE_PATH} in them?
-* Which source dataflows are not being used or do not have data coming in anymore?
-* List the live journeys I have.
-* List the audiences which are used in live journeys.
-* Which sources are in an active state?
-
-+++
-
 ## Phrasing your questions {#phrasing-your-questions}
 
 You must phrase your questions to AI Assistant with clarity and context in order to get as accurate a response as a possible. Refer to the following list of tips for guidance on how to ask a clear question with context:
@@ -141,7 +117,7 @@ The following is a list of examples of questions that are currently not supporte
 
 ### Operational insights
 
-* How many profiles in this sandbox [satisfy a specific criteria, for example, "live in California"]?
+* How many profiles in this sandbox live in California? (**Note**: for similar questions, you must provide a specific criteria to give enough context for your request, in this case, the specific criteria is "live in California").
 * What are the segments this profile {PROFILE_INFO/ATTRIBUTE_VALUE} is in?
 * How many profiles in the dataset have an email?
 * Which dataset constitutes to maximum number of profiles in this sandbox ?
