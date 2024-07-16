@@ -21,7 +21,7 @@ See the [batch ingestion overview](./batch-ingestion/overview.md) for more infor
 
 >[!TIP]
 >
->Use single-line JSON instead of multi-line JSON as input for batch ingestion. Single-line JSON allows for better performance as the system can split one input file into multiple chunks and process them in parallel, whereas multi-line JSON cannot be split. This can significantly reduce costs of processing batches of data as well as improve the latency in processing the batches.
+>Use single-line JSON instead of multi-line JSON as input for batch ingestion. Single-line JSON allows for better performance as the system can divide one input file into multiple chunks and process them in parallel, whereas multi-line JSON cannot be split. This can significantly reduce data processing costs and improve batch processing latency.
 
 ## Streaming ingestion
 
