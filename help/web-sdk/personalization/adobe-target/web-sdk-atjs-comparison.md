@@ -609,22 +609,30 @@ alloy("sendEvent", {
 This example tracks an event which was fired after performing a specific action, such as clicking a button.
 You can add any additional custom parameters through the `__adobe.target` data object.
 
+You can also add the `commerce` XDM object.
+
 ```js
 alloy("sendEvent", {
     "xdm": {
-        "_experience": {
-            "decisioning": {
-                "propositions": [{
-                    "scope": "conversion-step-1" //example scope/mbox name
-                }],
-                "propositionEventType": {
-                    "display": 1
-                }
+        "commerce": {
+            "order": {
+                "purchaseID": "a8g784hjq1mnp3",
+                "purchaseOrderNumber": "VAU3123",
+                "currencyCode": "USD",
+                "priceTotal": 999.98
             }
-        },
-        "eventType": "decisioning.propositionDisplay"
+        }
+    },
+    "data": {
+        "__adobe": {
+            "target": {
+                "orderId": "ABC123",
+                "productPurchasedId": "SKU-00002,SKU-00003"
+                "orderTotal": 1337.89
+            }
+        }
     }
-});  
+})
 ```
 
 ## How to trigger a view change in a Single Page Application

@@ -307,7 +307,7 @@ alloy("sendEvent", {
         "_experience": {
             "decisioning": {
                 "propositions": [{
-                    "scope": "conversion-step-1" //example scope/mbox name
+                    "scope": "conversion-step-1" //example scope name
                 }],
                 "propositionEventType": {
                     "display": 1
@@ -323,7 +323,7 @@ alloy("sendEvent", {
 |Property | Description |
 |---------|----------|
 | `xdm._experience.decisioning.propositions[x].scope` | The scope to associate the success metric with (which will attribute it to a specific activity on the Target side). |
-| `xdm._experience.decisioning.propositions[x].eventType` |  Any string. It is best to keep it set to `"decisioning.propositionDisplay"` for this use case. |
+| `xdm._experience.decisioning.propositions[x].eventType` | A string describing the intended event type. Set this to `"decisioning.propositionDisplay"` for this use case. |
 
 ## Debugging
 
