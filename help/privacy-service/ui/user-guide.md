@@ -37,20 +37,25 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 | [!UICONTROL CCPA] | The [!DNL California Consumer Privacy Act] |
 | [!UICONTROL CPRA_USA] | The [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA] | The [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL FDBR_USA] | The [!DNL Florida Digital Bill of Rights] |
 | [!UICONTROL GDPR] | The European Union's [!DNL General Data Protection Regulation] |
 | [!UICONTROL HIPAA_AUS] | The [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | Brazil's [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL MHMDA] | The [!DNL Washington My Health My Data Act] |
 | [!UICONTROL NZPA_NZL] | The New Zealand [!DNL Privacy Act] |
+| [!UICONTROL OCPA_USA] | The [!DNL Oregon Consumer Privacy Act] |
 | [!UICONTROL PDPA_THA] | Thailand's [!DNL Personal Data Protection Act] |
+| [!UICONTROL TDPSA_USA] | The [!DNL Texas Data Privacy and Security Act] |
 | [!UICONTROL UCPA]  | The [!DNL Utah Consumer Privacy Act] |
 | [!UICONTROL VCDPA_USA] | The [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
 
-<!--Not released yet:
-| [!UICONTROL PDPA_VNM] | Vietnam's [!DNL Personal Data Protection Decree] |
- -->
+<!--  -->
+<!-- ocpa    [!UICONTROL OCPA_USA] ocpa_usa    The [!DNL Oregon Consumer Privacy Act] -->
+<!-- tdpsa    [!UICONTROL TDPSA_USA] tdpsa_usa    [!DNL Texas Data Privacy and Security Act] -->
+<!-- fdbr    [!UICONTROL FDBR_USA]fdbr_usa    [!DNL Florida Digital Bill of Rights] -->
+<!--  -->
 
 >[!NOTE]
 >
