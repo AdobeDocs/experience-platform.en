@@ -22,7 +22,7 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 
 >[!NOTE]
 >
->In order for streaming segmentation to work, you will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the streaming segmentation section in the Segmentation user guide](./overview.md#scheduled-segmentation).
+>In order for streaming segmentation to work, you will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the Audience Portal overview](./audience-portal.md#scheduled-segmentation).
 
 A query will be automatically evaluated with streaming segmentation if it meets any of the following criteria:
 
@@ -69,7 +69,7 @@ Underneath is a line graph that shows the number of new audiences that were upda
 >
 >A segment definition is considered qualified if it goes from having no status to realized or if it goes from exited to realized. A segment definition is considered unqualified if it goes from realized to exited.
 >
->More information about these statuses can be found in the status table within the [segmentation overview](./overview.md#browse).
+>More information about these statuses can be found in the status table within the [Audience Portal overview](./audience-portal.md#customize).
 
 ![The Profiles over time card is highlighted, showing a line graph of the profiles over time.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 

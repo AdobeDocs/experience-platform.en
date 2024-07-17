@@ -20,7 +20,7 @@ role: Admin,User
     * [Activate data to file-based destinations by using the Flow Service API](/help/destinations/api/activate-segments-file-based-destinations.md) 
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to file-based email marketing destinations and activate data using the Flow Service API](./api/connect-activate-batch-destinations.md)
-    * [(Beta) Activate audiences to batch destinations via the ad-hoc activation API](./api/ad-hoc-activation-api.md)
+    * [Activate audiences to batch destinations via the ad-hoc activation API](./api/ad-hoc-activation-api.md)
     * [Edit destination](./api/edit-destination.md)
     * [Update destination dataflows](./api/update-destination-dataflows.md)
     * [Delete destination accounts](./api/delete-destination-account.md)
@@ -77,11 +77,14 @@ role: Admin,User
         * [Google Ad Manager connection](./catalog/advertising/google-ad-manager.md)
         * [(Beta) Google Ad Manager 360 connection](./catalog/advertising/google-ad-manager-360-connection.md)
         * [Google Customer Match connection](./catalog/advertising/google-customer-match.md)
+        * [(Beta) Google Customer Match + DV360 connection](./catalog/advertising/google-customer-match-dv360.md)
         * [Google Display & Video 360 connection](./catalog/advertising/google-dv360.md)
         * [Google gtag extension](./catalog/advertising/gtag-advertising.md)
         * [LinkedIn Insight Tag extension](./catalog/advertising/linkedin.md)
         * [LiveRamp - Onboarding connection](./catalog/advertising/liveramp-onboarding.md)
         * [LiveRamp - Distribution connection](./catalog/advertising/liveramp-distribution.md)
+        * [(Beta) Magnite Batch](/help/destinations/catalog/advertising/magnite-batch.md)
+        * [(Beta) Magnite Streaming Real-time connection](/help/destinations/catalog/advertising/magnite-streaming.md)
         * [Microsoft Bing connection](./catalog/advertising/bing.md)
         * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
         * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
@@ -134,9 +137,12 @@ role: Admin,User
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
+        * [Zeta Marketing Platform](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
     * Data & Identity Partner {#data-partner}
         * [Acxiom Prospect Suppression](./catalog/data-partner/acxiom-prospect-suppression.md)
         * [Acxiom Data Enhancement](./catalog/data-partner/acxiom-data-enhancement.md)
+        * [Merkury Enterprise Connections](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
+        * [Merkury Enterprise Identity](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md)
     * eCommerce destinations {#ecommerce}
         * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
     * Email destinations {#email}
@@ -209,6 +215,7 @@ role: Admin,User
     * [Overview](./destination-sdk/overview.md)
     * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)
     * [Getting started with Destination SDK](./destination-sdk/getting-started.md)
+    * [Glossary](/help/destinations/destination-sdk/glossary.md)
     * Functionality {#functionality}
         * [Configuration options](./destination-sdk/functionality/configuration-options.md)
         * Destination server components {#destination-server}

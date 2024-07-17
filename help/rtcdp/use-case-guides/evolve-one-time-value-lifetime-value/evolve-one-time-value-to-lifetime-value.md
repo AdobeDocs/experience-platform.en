@@ -21,7 +21,7 @@ Consider these customers who visit your properties and sporadically purchase the
 * Create audiences
 * Create journeys to target these audiences in Adobe Journey Optimizer and activate them in Real-Time CDP.
 
-![Step by step Evolve one-time value to lifetime value high level visual overview.](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){width="500" zoomable="yes"}
+![Step by step Evolve one-time value to lifetime value high level visual overview.](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){zoomable="yes"}
 
 ## Prerequisites and planning {#prerequisites-and-planning}
 
@@ -48,7 +48,7 @@ To achieve this, the technology required consists of the two Experience Platform
 
 Below is a high-level architecture view of the various components of Real-Time CDP and Journey Optimizer. This diagram shows how data flows through the two Experience Platform apps from data collection up to the point where it is activated through journeys or campaigns to destinations, to achieve the use case described on this page.
 
-![Architecture high level visual overview.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){width="600" zoomable="yes"}
+![Architecture high level visual overview.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){zoomable="yes"}
 
 ## How to achieve the use case: high-level overview {#achieve-the-use-case-high-level}
 
@@ -64,7 +64,7 @@ You start by sending your audience of high-valued and low-frequency customers a 
 
 >[!BEGINSHADEBOX]
 
-![Step by step Evolve one-time value to lifetime value high level visual overview.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="600" zoomable="yes"}
+![Step by step Evolve one-time value to lifetime value high level visual overview.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
 1. You create schemas and datasets, then mark these for [!UICONTROL Profile].
 2. Data is collected and integrated into Experience Platform via Web SDK, Mobile Edge SDK, or API. Analytics Data Connector can also be utilized, but may result in journey latency.
@@ -290,7 +290,7 @@ There are no [marketing policies](/help/data-governance/policies/overview.md) re
 
 ### Create audiences {#create-audiences}
 
-This use case requires that you create two audiences to define specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people. Audiences can be created in multiple ways in Adobe Experience Platform:
+This use case requires that you create two audiences to define specific attributes or behaviors shared by a subset of profiles from your Profile store to distinguish a marketable group of people. Audiences can be created in multiple ways in Adobe Experience Platform:
 
 * For information on how to create an audience, read the [Audience service UI guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 * For information on how to compose [audiences](/help/segmentation/home.md), read the [Audience Composition UI guide](/help/segmentation/ui/audience-composition.md).
@@ -298,7 +298,7 @@ This use case requires that you create two audiences to define specific attribut
 
 Specifically, you must create and use two audiences at different steps of the use case, as shown in the image below.
 
-![Audiences highlighted.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){width="600" zoomable="yes"}
+![Audiences highlighted.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){zoomable="yes"}
 
 >[!BEGINTABS]
 
@@ -345,7 +345,7 @@ To accomplish this use case, you must create two separate journeys:
 * The lifetime journey, which includes the message that you send to your high-value, low-frequency customers
 * The order confirmation journey for the users who respond to your call and purchase a subscription. 
 
-![Journeys highlighted.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){width="600" zoomable="yes"}
+![Journeys highlighted.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){zoomable="yes"}
 
 Listed below is the precise data needed for each Journey branch.
 
@@ -355,7 +355,7 @@ Listed below is the precise data needed for each Journey branch.
 
 The lifetime journey addresses the audience of high-value and low-frequency customers who were not targeted within the last 30 days. A message is shown to these customers and then, if after 7 days they still do not purchase, you can include the non-purchasers in an audience that you can show paid media ads to. If they do purchase, you can set the purchasers on an order confirmation journey, detailed in the separate tab.
 
-![Lifetime journey high-level visual overview.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "One-time value to lifetime journey high-level visual overview."){width="600" zoomable="yes"}
+![Lifetime journey high-level visual overview.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "One-time value to lifetime journey high-level visual overview."){zoomable="yes"}
 
 +++Detailed Journey Logic
 
@@ -377,7 +377,7 @@ The journey shown above follows the following logic.
 
 The order confirmation journey focuses on whether a purchase was made through the website or mobile app. After a customer successfully completed the purchase of, for example, a subscription with your company, you can set them on an order confirmation journey.
 
-![Customer order confirmation journey high level visual overview.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Customer order confirmation journey high level visual overview."){width="600" zoomable="yes"}
+![Customer order confirmation journey high level visual overview.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Customer order confirmation journey high level visual overview."){zoomable="yes"}
 
 +++Journey logic
 

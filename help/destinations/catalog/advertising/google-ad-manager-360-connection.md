@@ -46,9 +46,9 @@ Note the following details that are specific to [!DNL Google Ad Manager 360] des
 This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -99,7 +99,7 @@ For more information about these values, see the [Google Cloud Storage HMAC keys
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
 >title="Append audience ID to audience name"
->abstract="Select this option to have the audience name in Google Ad Manager 360 include the audience ID from Experience Platform, like this: `Audience Name (Audience ID)`"
+>abstract="Select this option to have the audience name in this destination include the audience ID from Experience Platform, like this: `Audience Name (Audience ID)`"
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 

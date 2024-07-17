@@ -28,9 +28,9 @@ HTTP endpoints can be either customers' own systems or third-party solutions.
 This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,21 @@ To use the HTTP API destination to export data out of Experience Platform, you m
 
 >[!TIP]
 >
-> You can also use [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) to set up an integration and send Experience Platform profile data to an HTTP endpoint.
+> You can also use [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) to set up an integration and send Experience Platform profile data to an HTTP endpoint. 
+
+## mTLS protocol support and certificate {#mtls-protocol-support}
+
+You can use [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) to ensure enhanced security in outbound connections to your HTTP API destination connections.
+
+[!DNL mTLS] is an end-to-end security method for mutual authentication that ensures that both parties sharing information are who they claim to be before data is shared. [!DNL mTLS] includes an additional step compared to [!DNL TLS], in which the server also asks for the client's certificate and verifies it at their end.
+
+If you want to use [!DNL mTLS] with [!DNL HTTP API] destinations, the server address you put in the [destination details](#destination-details) page must have [!DNL TLS] protocols disabled and only [!DNL mTLS] enabled. If the [!DNL TLS] 1.2 protocol is still enabled on the endpoint, no certificate is sent for the client authentication. This means that to use [!DNL mTLS] with your [!DNL HTTP API] destination, your "receiving" server endpoint must be an [!DNL mTLS]-only enabled connection endpoint.
+
+### Download certificate {#certificate}
+
+If you want to check the [!DNL Common Name] (CN) and [!DNL Subject Alternative Names] (SAN) to do additional third-party validation, you can download the certificate below:
+
+* [HTTP API mTLS public certificate](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
 
 ## IP address allowlist {#ip-address-allowlist}
 

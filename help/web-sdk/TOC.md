@@ -22,6 +22,7 @@ role: Developer
     * [Overview](commands/configure/overview.md)
     * [autoTrackPropositionInteractionsEnabled](commands/configure/autotrackpropositioninteractionsenabled.md)
     * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
+    * [clickCollection](commands/configure/clickcollection.md)
     * [context](commands/configure/context.md)
     * [debugEnabled](commands/configure/debugenabled.md)
     * [defaultConsent](commands/configure/defaultconsent.md)
@@ -30,6 +31,7 @@ role: Developer
     * [edgeConfigId](commands/configure/edgeconfigid.md)
     * [edgeDomain](commands/configure/edgedomain.md)
     * [idMigrationEnabled](commands/configure/idmigrationenabled.md)
+    * [streamingMedia](commands/configure/streamingmedia.md)
     * [onBeforeEventSend](commands/configure/onbeforeeventsend.md)
     * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
     * [orgId](commands/configure/orgid.md)
@@ -47,10 +49,13 @@ role: Developer
   * [appendIdentityToUrl](commands/appendidentitytourl.md)
   * [applyPropositions](commands/applypropositions.md)
   * [applyResponse](commands/applyresponse.md)
+  * [createMediaSession](commands/createmediasession.md)
   * [getIdentity](commands/getidentity.md)
   * [getLibraryInfo](commands/getlibraryinfo.md)
+  * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
   * [setConsent](commands/setconsent.md)
   * [setDebug](commands/setdebug.md)
+  * [sendMediaEvent](commands/sendmediaevent.md)
   * [Configre datastream overrides](commands/datastream-overrides.md)
   * [Command responses](commands/command-responses.md)
 
@@ -82,7 +87,6 @@ role: Developer
     * [Configure Web In-app Messaging support in Web SDK](personalization/web-in-app-messaging.md)
 
 * Consent {#consent}
-  * [Supporting consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
     * [Overview](consent/iab-tcf/overview.md)
     * [Integrate with tags](consent/iab-tcf/with-tags.md)

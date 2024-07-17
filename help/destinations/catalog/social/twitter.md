@@ -32,9 +32,9 @@ Before you configure your [!DNL Twitter Custom Audiences] destination, make sure
 This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -85,6 +85,10 @@ To configure details for the destination, fill in the required and optional fiel
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 *  **[!UICONTROL Account ID]**: Your [!DNL Twitter Ads] account ID. This can be found in your [!DNL Twitter Ads] settings.
 
+>[!IMPORTANT]
+>
+>Do not use special characters (+ & , % : ; @ / = ? $ \n) in audience, description, and audience mapping names. If your Experience Platform audience name contains these characters, please remove them before mapping the audience to a Twitter destination.
+
 ### Enable alerts {#enable-alerts}
 
 You can enable alerts to receive notifications on the status of the dataflow to your destination. Select an alert from the list to subscribe to receive notifications on the status of your dataflow. For more information on alerts, see the guide on [subscribing to destinations alerts using the UI](../../ui/alerts.md).
@@ -100,15 +104,14 @@ When you are finished providing details for your destination connection, select 
 
 Read [Activate profiles and audiences to streaming audience export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
+### Mapping considerations {#mapping-considerations}
+
+When mapping audiences to Twitter, provide human-readable audience mapping names. We recommend using the same name that you used for the Experience Platform segments.
+
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [Data Governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## Additional resources {#additional-resources}
-
-When mapping audiences to Twitter, make sure to meet the following audience naming requirements:
-
-1. Provide human-readable audience mapping names. We recommend using the same name that you used for the Experience Platform segments.
-2. Do not use special characters (+ & , % : ; @ / = ? $) in audience and audience mapping names. If your Experience Platform audience name contains these characters, please remove them before mapping the audience to a Twitter destination.
 
 More information about [!DNL List Custom Audiences] in Twitter can be found in the [Twitter documentation](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).

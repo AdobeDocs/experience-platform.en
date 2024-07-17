@@ -15,7 +15,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="License usage dashboard"
->abstract="The license usage dashboard offers insight into the Adobe Experience Platform products that you've purchased. The dashboard overview displays the primary metrics for your products including your usage for each of the primary metrics and your contracted license amount. The details workspace displays a breakdown of your metrics for each product within specific sandboxes.<br><br>Usage predictions are refreshed on a monthly basis at the end of the month and forecast your usage for the coming six-month period. To reduce usage, configure dataset or Pseudonymous profiles data expirations for the sandboxes and datasets."
+>abstract="The license usage dashboard offers insight into the Adobe Experience Platform products that you've purchased. The dashboard overview displays the primary metrics for your products including your usage for each of the primary metrics and your contracted license amount. The details workspace displays a breakdown of your metrics for each product within specific sandboxes."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Dataset expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expirations"
 
@@ -145,6 +145,10 @@ The license usage dashboard reports on several unique metrics that are applicabl
 | [!UICONTROL Streaming Segmentation No of Packs] | The packs update segment membership for a person profile as new data enters the Segmentation Service through a streaming flow. Segment membership is evaluated based on the current person profile attributes and the value of the current event, without taking historical behavior into account. Streaming Segmentation is a shared feature. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
+
+>[!TIP]
+>
+>You can check your license entitlements in your Sales Order to calculate metrics such as your 'Storage Allowance'.<br>For example,<ul><li>Storage Allowance = The number of "authorized profiles" in your contract X Average Profile Richness</li></ul>
 
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased. For detailed definitions of each metric, refer to the appropriate Product Description documentation:
 
