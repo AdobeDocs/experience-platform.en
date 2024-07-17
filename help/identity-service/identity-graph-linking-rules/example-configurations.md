@@ -9,39 +9,66 @@ badge: Beta
 
 >[!NOTE]
 >
->"CRMID" is a custom namespace. Therefore, the examples below require you to create a custom namespace with a display name and identity symbol of "CRMID".
-
-The following section examples of graph scenarios you might encounter with Graph Simulation.
+>"CRMID" is a custom namespace. In this document, "CRMID" is treated as a generic namespace that represents a person identifier.
 
 ## CRMID only
 
-Events:
+This is an example of a simple implementation scenario where online events (CRMID and ECID) are ingested and offline events (profile records) are only stored against the CRMID.
+
+**Implementation:**
+
+| Namespaces used | Web behavior collection method |
+| --- | --- |
+| CRMID, ECID | Web SDK |
+
+**Events:**
 
 * CRMID: Tom, ECID: 111
 
-Algorithm configuration:
+**Algorithm configuration:**
 
 | Priority | Display name | Identity symbol | Identity type | Unique per graph |
 | ---| --- | --- | --- | --- |
 | 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
 | 2 | ECID | ECID | COOKIE | NO |
 
-+++Select to view simulated graph
+**Primary identity selection for Real-Time Customer Profile:**
 
-+++
+| Authentication status | identityMap | Primary identity |
+| --- | --- | --- |
+| Authenticated | {CRMID, ECID} | CRMID |
+| Unauthenticated | {ECID} | ECID | 
+
+>[!BEGINTABS]
+
+>[!TAB Ideal single-person graph scenario]
+
+![](../images/graph-examples/crmid_only_single.png)
+
+>[!TAB multi-person graph scenario]
+
+![](../images/graph-examples/crmid_only_multi.png)
+
+>[!ENDTABS]
 
 ## CRMID with hashed email
 
 In this scenario, a CRMID is ingested and represents both online (experience event) and offline (profile record) data. This scenario also involves the ingestion of a hashed email, which represents another namespace sent in the CRM record dataset along with the CRMID.
 
-Events:
+**Implementation:**
+
+| Namespaces used | Web behavior collection method |
+| --- | --- |
+| CRMID, Email_LC_SHA256, ECID | Web SDK |
+
+**Events:**
 
 * CRMID: Tom, Email_LC_SHA256: tom<span>@acme.com
 * CRMID: Tom, ECID: 111
 * CRMID: Summer, Email_LC_SHA256: summer<span>@acme.com
 * CRMID: Summer, ECID: 222
 
-Algorithm configuration:
+**Algorithm configuration:**
 
 | Priority | Display name | Identity symbol | Identity type | Unique per graph |
 | ---| --- | --- | --- | --- |
@@ -49,13 +76,41 @@ Algorithm configuration:
 | 2 | Emails (SHA256, lowercased) | Email_LC_SHA256 | Email | NO |
 | 3 | ECID | ECID | COOKIE | NO |
 
-+++Select to view simulated graph
+**Primary identity selection for Profile:**
 
-+++
+| Authentication status | identityMap | Primary identity |
+| --- | --- | --- |
+| Authenticated | {CRMID, ECID} | CRMID |
+| Unauthenticated | {ECID} | ECID | 
+
+>[!BEGINTABS]
+
+>[!TAB Ideal single-person graph scenario]
+
+![](../images/graph-examples/crmid_hashed_single.png)
+
+>[!TAB multi-person graph: shared device]
+
+![](../images/graph-examples/crmid_hashed_shared_device.png)
+
+>[!TAB multi-person graph: non-unique email]
+
+![](../images/graph-examples/crmid_hashed_nonunique_email.png)
+
+
+>[!ENDTABS]
 
 ## CRMID with hashed email, hashed phone, GAID, and IDFA
 
-Events:
+This scenario is similar to the previous one. However, in this scenario, hashed email and phone are being marked as identities to utilize in segment match.
+
+**Implementation:**
+
+| Namespaces used | Web behavior collection method |
+| --- | --- |
+| CRMID, Email_LC_SHA256, Phone_SHA256, GAID, IDFA, ECID | Web SDK |
+
+**Events:**
 
 * CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 * CRMID: Tom, ECID: 111
@@ -64,7 +119,7 @@ Events:
 * CRMID: Summer, ECID: 333
 * CRMID: Summer, ECID: 444, GAID:B-B-B
 
-Algorithm configuration: 
+**Algorithm configuration:**
 
 | Priority | Display name | Identity symbol | Identity type | Unique per graph |
 | ---| --- | --- | --- | --- |
@@ -74,6 +129,101 @@ Algorithm configuration:
 | 4 | Google Ad ID (GAID) | GAID | DEVICE | NO |
 | 5 | Apple IDFA (ID for Apple) | IDFA | DEVICE | NO |
 | 6 | ECID | ECID | COOKIE | NO |
+
+**Primary identity selection for Profile:**
+
+| Authentication status | identityMap | Primary identity |
+| --- | --- | --- |
+| Authenticated | {CRMID, IDFA, ECID} | CRMID |
+| Authenticated | {CRMID, GAID, ECID} | CRMID |
+| Authenticated | {CRMID, ECID} | CRMID |
+| Unauthenticated | {GAID, ECID} | GAID |
+| Unauthenticated | {IDFA, ECID} | IDFA |
+| Unauthenticated | {ECID} | ECID |
+
+>[!BEGINTABS]
+
+>[!TAB Ideal single-person graph scenario]
+
+![](../images/graph-examples/crmid_hashed_single_seg_match.png)
+
+>[!ENDTABS]
+
+
+## Single CRMID with multiple login IDs (simple)
+
+In this scenario, there is a single CRMID that represents a person entity. However, a person entity may have multiple login identifiers:
+
+* A given person entity can have different account account types (personal vs. business, account by state, account by brand, etc.)
+* A given person entity may use different email addresses for any number of accounts.
+
+Therefore, **it is crucial that the CRMID is always sent for every user**. Failure to do so may result in a "dangling" login ID scenario, where a single person entity is assumed to be sharing a device with another person.
+
+**Implementation:**
+
+| Namespaces used | Web behavior collection method |
+| --- | --- |
+| CRMID, LoginID, ECID | Web SDK |
+
+**Events:**
+
+* CRMID: John, LoginID: ID_A
+* CRMID: John, LoginID: ID_B
+* LoginID: ID_A, ECID: 111
+* CRMID: Jane, LoginID: ID_C
+* CRMID: Jane, LoginID: ID_D
+* LoginID: ID_C, ECID: 222
+
+**Algorithm configuration:**
+
+| Priority | Display name | Identity symbol | Identity type | Unique per graph |
+| ---| --- | --- | --- | --- |
+| 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
+| 2 | LoginID | LoginID | CROSS_DEVICE | NO |
+| 3 | ECID | ECID | COOKIE | NO |
+
++++Select to view simulated graph
+
++++
+
+## Single CRMID with multiple login IDs (complex)
+
+In this scenario, there is a single CRMID that represents a person entity. However, a person entity may have multiple login identifiers:
+
+* A given person entity can have different account account types (personal vs. business, account by state, account by brand, etc.)
+* A given person entity may use different email addresses for any number of accounts.
+
+The case of "dangling" LoginID also applies for this scenario.
+
+**Implementation:**
+
+| Namespaces used | Web behavior collection method |
+| --- | --- |
+| CRMID, Email_LC_SHA256, Phone_SHA256, LoginID, ECID, AAID | Adobe Analytics source connector |
+
+
+**Events:**
+
+* CRMID: John, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+* CRMID: John, LoginID: ID_A
+* CRMID: John, LoginID: ID_B
+* LoginID:ID_A, ECID: 111, AAID: AAA
+* CRMID: Jane, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+* CRMID: Jane, LoginID: ID_C
+* CRMID: Jane, LoginID: ID_D
+* LoginID: ID_C, ECID: 222, AAID: BBB
+
+**Algorithm configuration:**
+
+| Priority | Display name | Identity symbol | Identity type | Unique per graph |
+| ---| --- | --- | --- | --- |
+| 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
+| 2 | Email_LC_SHA256 | Email_LC_SHA256 | EMAIL | NO |
+| 3 | Phone_SHA256 | Phone_SHA256 | PHONE | NO |
+| 4 | LoginID | LoginID | CROSS_DEVICE | NO |
+| 5 | ECID | ECID | COOKIE | NO |
+| 6 | AAID | AAID | COOKIE | NO |
+
 
 +++Select to view simulated graph
 
