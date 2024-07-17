@@ -26,7 +26,7 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 ![UI dashboard](../images/user-guide/dashboard.png)
 
-### Regulation Type
+### Regulation Type 
 
 [!DNL Privacy Service] supports job requests for several privacy regulations. The following table lists the supported regulations and their corresponding label as represented in the UI: 
 

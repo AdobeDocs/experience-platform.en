@@ -46,9 +46,11 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 {style="table-layout:auto"}
 
-<!-- Not released yet:
-<li>`pdpd_vnm`</li> 
- -->
+<!--  -->
+<!-- ocpa    [!UICONTROL OCPA_USA] ocpa_usa    The [!DNL Oregon Consumer Privacy Act] -->
+<!-- tdpsa    [!UICONTROL TDPSA_USA] tdpsa_usa    [!DNL Texas Data Privacy and Security Act] -->
+<!-- fdbr    [!UICONTROL FDBR_USA]fdbr_usa    [!DNL Florida Digital Bill of Rights] -->
+<!--  -->
 
 **Request**
 
