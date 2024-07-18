@@ -199,9 +199,3 @@ This guide explains how streaming-enabled segment definitions work on Adobe Expe
 To learn more about using the Adobe Experience Platform user interface, please read the [Segmentation user guide](./overview.md).
 
 For frequently asked questions about streaming segmentation, please read the [streaming segmentation section of the FAQ](../faq.md#streaming-segmentation).
-
-## Appendix
-
->[!NOTE]
->
->Additionally, segments evaluated with streaming segmentation may drift between ideal and actual membership if the segment definition is based off of another segment definition that is evaluated using batch segmentation. For example, if Segment A is based off of Segment B, and Segment B is evaluated using batch segmentation, since Segment B only updates every 24 hours, Segment A will move further away from the actual data until it re-syncs with the Segment B update.

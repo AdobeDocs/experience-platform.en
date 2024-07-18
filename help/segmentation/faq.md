@@ -347,6 +347,12 @@ The following section lists questions related to audience membership.
 
 To confirm a profile's audience membership, visit the profile details page of the profile you want to confirm. Select **[!UICONTROL Attributes]**, followed by **[!UICONTROL View JSON]**, and you can confirm that the `segmentMembership` object contains the ID of the audience.
 
+### Can audience membership drift between ideal and actual membership?
+
+Yes, audience membership can drift between ideal and actual membership if an audience is evaluated using streaming segmentation **and** that audience is based off of an audience evaluated using batch segmentation. 
+
+For example, if Audience A is based off of Audience B, and Audience B is evaluated using batch segmentation, since Audience B only updates every 24 hours, Audience A will move further away from the actual data until it re-syncs with the Audience B updates.
+
 ## Batch segmentation {#batch-segmentation}
 
 The following section lists questions related to batch segmentation.
