@@ -51,12 +51,6 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 {style="table-layout:auto"}
 
-<!--  -->
-<!-- ocpa    [!UICONTROL OCPA_USA] ocpa_usa    The [!DNL Oregon Consumer Privacy Act] -->
-<!-- tdpsa    [!UICONTROL TDPSA_USA] tdpsa_usa    [!DNL Texas Data Privacy and Security Act] -->
-<!-- fdbr    [!UICONTROL FDBR_USA]fdbr_usa    [!DNL Florida Digital Bill of Rights] -->
-<!--  -->
-
 >[!NOTE]
 >
 >See the overview on [supported privacy regulations](../regulations/overview.md) for more information on the legal context of each regulation.

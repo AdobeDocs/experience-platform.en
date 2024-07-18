@@ -9,12 +9,6 @@ exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
 
 This document provides definitions for key terms related to privacy regulations supported by Adobe Experience Cloud.
 
-<!--  -->
-<!-- ocpa    [!UICONTROL OCPA_USA] ocpa_usa    The [!DNL Oregon Consumer Privacy Act] -->
-<!-- tdpsa    [!UICONTROL TDPSA_USA] tdpsa_usa    [!DNL Texas Data Privacy and Security Act] -->
-<!-- fdbr    [!UICONTROL FDBR_USA]fdbr_usa    [!DNL Florida Digital Bill of Rights] -->
-<!--  -->
-
 ## A
 
 **[!DNL Australia Privacy Act (Privacy Act)]**: An act that promotes and protects individuals' privacy and regulates how Australian Government agencies and organization handle personal information. The Privacy Act includes principles that apply to private sector organizations. For example, individuals are afforded the right to understand why the personal information is being collected and how it will be used, the ability to access, erase their data, and correct personal information.
@@ -114,10 +108,6 @@ This document provides definitions for key terms related to privacy regulations 
 ## P
 
 **PDPA**: The [!DNL Personal Data Protection Act] of Thailand (PDPA) was introduced to safeguard Thai data owners from the illegal collection, use, or disclosure of their personal data. Inspired by the European Union's GDPR, the regulation grants Thai citizens the right to request access to, or the deletion of, their stored personal data.
-
-<!-- Not yet released:
-**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
--->
 
 **Personal data**: Any information related to a natural person or 'Data Subject', that can be used to directly or indirectly identify the person.
 

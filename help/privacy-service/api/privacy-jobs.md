@@ -46,12 +46,6 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 {style="table-layout:auto"}
 
-<!--  -->
-<!-- ocpa    [!UICONTROL OCPA_USA] ocpa_usa    The [!DNL Oregon Consumer Privacy Act] -->
-<!-- tdpsa    [!UICONTROL TDPSA_USA] tdpsa_usa    [!DNL Texas Data Privacy and Security Act] -->
-<!-- fdbr    [!UICONTROL FDBR_USA]fdbr_usa    [!DNL Florida Digital Bill of Rights] -->
-<!--  -->
-
 **Request**
 
 The following request retrieves a paginated list of all jobs within an organization, starting from the third page with a page size of 50.
