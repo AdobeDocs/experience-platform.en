@@ -104,13 +104,13 @@ The details page also displays a list of identities that failed and identities t
 
 #### (Beta) Audience-level dataflow run monitoring for streaming destinations {#audience-level-dataflow-runs-for-streaming-destinations}
 
-Audience-level monitoring is available for the [!DNL Google Customer Match + Display & Video 360] streaming destination only for now. 
+You can view information about the activated, excluded, or failed identities broken down on an audience level, for each audience that is part of the dataflow. This can help you understand  Audience-level monitoring for streaming destinations is currently available for the [[!DNL Google Customer Match + Display & Video 360] destination](/help/destinations/catalog/advertising/google-customer-match-dv360.md) only. 
 
 ![Audience-level monitoring for streaming destinations.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
 >[!NOTE]
 >
->The **[!UICONTROL Profiles received]** number in the audiences may not always match with the number of profiles received for the dataflow run. This is because a given profile might be part of more than one audience being activated in the dataflow run. 
+>The **[!UICONTROL Profiles received]** number in the audiences tab may not always match with the number of profiles received for the dataflow run. This is because a given profile might be part of more than one audience being activated in the dataflow run. 
 
 ### Dataflow runs for batch destinations {#dataflow-runs-for-batch-destinations}
 
@@ -267,7 +267,7 @@ For example, you are activating an audience called "Loyalty Members in Californi
 >[!IMPORTANT]
 >
 >Note the current limitations related to audience-level metrics:
->- The audience-level view is currently only available for batch destinations and the Google Customer Match DV 360 streaming destination only. Rollout is planned for further streaming destinations
+>- The audience-level view is currently available for batch (file-based) destinations and the [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) streaming destination only. Rollout is planned for further streaming destinations.
 >- Audience-level metrics are currently recorded for successful dataflow runs only. They are not recorded for failed dataflow runs and excluded records.
 
 ![Audiences highlighted in the dataflow panel.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
