@@ -65,7 +65,7 @@ This document provides definitions for key terms related to privacy regulations 
 
 **Filing system**: Any specific set of personal data that is accessible according to specific criteria, or able to be queried.
 
-**FDBR**: The [!DNL Florida Digital Bill of Rights] (FDBR) is legislation thatß provides Florida residents with the rights to access, correct, delete, and copy their personal data. It mandates transparency in data practices, allows opt-outs for data sales or targeted advertising, and prohibits unauthorized surveillance. The Florida Department of Legal Affairs enforces these rights, requiring data controllers to respond to requests within 45 days.
+**FDBR**: The [!DNL Florida Digital Bill of Rights] (FDBR) is legislation that provides Florida residents with the rights to access, correct, delete, and copy their personal data. It mandates transparency in data practices, allows opt-outs for data sales or targeted advertising, and prohibits unauthorized surveillance. The Florida Department of Legal Affairs enforces these rights, requiring data controllers to respond to requests within 45 days.
 
 ## G
 
