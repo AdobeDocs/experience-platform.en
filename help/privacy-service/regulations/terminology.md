@@ -155,6 +155,8 @@ This document provides definitions for key terms related to privacy regulations 
 
 ## T
 
+**TDPSA**: The Texas Data Privacy and Security Act (TDPSA) is a comprehensive legislation that protects Texas residents' personal data rights. It grants individuals the right to access, correct, delete, and obtain copies of their data and to opt out of data sales and targeted advertising. Businesses violating this legislation can face financial penalties.
+
 **Trilogues**: Trilogues are informal negotiations between the European Commission, the European Parliament, and the Council of the European Union. These negotiations are usually held following the first readings of proposed legislation to more quickly agree to a compromise text to be adopted.
 agree on the adoption of a compromise text more quickly.
 
