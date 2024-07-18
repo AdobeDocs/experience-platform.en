@@ -319,7 +319,7 @@ For more details about using Audience Composition, please read the [Audience Com
 
 Audiences are automatically saved while creating them in Audience Composition. The audience's creation time will be the first time this automatic save occurs.
 
-After the audience has been created, it can take up to 24 hours to be evaluated.
+After the audience composition has been created, it can take up to 48 hours for it to be evaluated and activated for usage in downstream services such as a Real-Time CDP destination or Adobe Journey Optimizer channel.
 
 ### When can I use the audience I created?
 
@@ -339,11 +339,7 @@ Audience splitting lets you further subset your audience into smaller groups.
 
 When splitting by attribute, there is mutual exclusivity between the groups. This means that if a record meets the criteria of multiple split paths, it will be assigned the **first** path from the left and **not** assigned to any of the other paths.
 
-When splitting by percentage, splits are **randomly** done. This means that the profiles will be randomly assigned to each path. The split **is** persistent, which means the profile will be in the same sub-audience on each evaluation.
-
->[!NOTE]
->
->Previously, splits in Audience Composition were **not** persistent.
+When splitting by percentage, splits are **randomly** done. This means that the profiles will be randomly assigned to each path. 
 
 For more information on the Split block, please read the [Audience Composition UI guide](./ui/audience-composition.md#split).
 
