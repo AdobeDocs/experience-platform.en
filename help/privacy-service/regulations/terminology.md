@@ -109,6 +109,8 @@ This document provides definitions for key terms related to privacy regulations 
 
 ## O
 
+**OCPA**: The Oregon Consumer Privacy Act (OCPA) legislation grants Oregon residents key rights over their personal data, including the rights to know, correct, delete, and obtain a copy of their data. It imposes strict obligations on businesses, requiring them to provide detailed privacy notices, gain consent for certain data uses, and implement heightened protections for sensitive information. The legislation aims to balance consumer privacy with business interests.
+
 ## P
 
 **PDPA**: The [!DNL Personal Data Protection Act] of Thailand (PDPA) was introduced to safeguard Thai data owners from the illegal collection, use, or disclosure of their personal data. Inspired by the European Union's GDPR, the regulation grants Thai citizens the right to request access to, or the deletion of, their stored personal data.
