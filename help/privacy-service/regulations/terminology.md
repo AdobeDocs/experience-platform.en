@@ -71,6 +71,8 @@ This document provides definitions for key terms related to privacy regulations 
 
 **Filing system**: Any specific set of personal data that is accessible according to specific criteria, or able to be queried.
 
+**FDBR**: The [!DNL Florida Digital Bill of Rights] (FDBR) is legislation thatß provides Florida residents with the rights to access, correct, delete, and copy their personal data. It mandates transparency in data practices, allows opt-outs for data sales or targeted advertising, and prohibits unauthorized surveillance. The Florida Department of Legal Affairs enforces these rights, requiring data controllers to respond to requests within 45 days.
+
 ## G
 
 **GDPR**: The [!DNL General Data Protection Regulation] (GDPR) is a legal framework that sets guidelines for the collection and processing of personal information of individuals within the European Economic Area (EEA). The GDPR sets out the principles for data management and the rights of the individual, while also imposing fines that can be revenue-based. GDPR covers all companies that deal with the data of EEA citizens, so it is a critical regulation for corporate compliance officers at banks, insurers, and other financial companies.
