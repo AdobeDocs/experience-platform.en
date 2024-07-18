@@ -69,10 +69,11 @@ This section describes which type of audiences you can export to this destinatio
 ## Export type and frequency
 
 Refer to the table below for information about the destination export type and frequency.
+
 |**Audience**|**Supported**|**Description origin**|            
 |---|---|---|      
 |Segmentation Service|✓|Audiences generated through the Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
-Custom uploads|X|Audiences [[imported]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) into Experience Platform from CSV files.
+|Custom uploads|X|Audiences [[imported]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) into Experience Platform from CSV files.|
 
 {style="table-layout:auto"}
 
