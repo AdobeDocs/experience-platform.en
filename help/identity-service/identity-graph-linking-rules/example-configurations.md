@@ -9,7 +9,10 @@ badge: Beta
 
 >[!NOTE]
 >
->"CRMID" is a custom namespace. In this document, "CRMID" is treated as a generic namespace that represents a person identifier.
+>* "CRMID" and "loginID" are custom namespaces. In this document, "CRMID" and "loginID" are treated as generic namespaces that represent a person identifier.
+>* To simulate the example graph scenarios outlined in this document, you must first create two custom namespaces, one with the identity symbol "CRMID" and another with the identity symbol "loginID".
+
+This document outlines example graph configurations of common scenarios that you might encounter when working with identity data.
 
 ## CRMID only
 
@@ -43,11 +46,15 @@ This is an example of a simple implementation scenario where online events (CRMI
 
 >[!TAB Ideal single-person graph scenario]
 
-![](../images/graph-examples/crmid_only_single.png)
+The following is an example of an ideal single-person graph, where CRMID is unique and given the highest priority.
+
+![A simulated example of an ideal single-person graph, where CRMID is unique and given the highest priority.](../images/graph-examples/crmid_only_single.png)
 
 >[!TAB multi-person graph scenario]
 
-![](../images/graph-examples/crmid_only_multi.png)
+The following is an example of  a multi-person graph. This example displays a "shared device" scenario, where there are two CRMIDs and the one with the older established link gets removed.
+
+![A simulated example of a multi-person graph. This example displays a shared device scenario, where there are two CRMIDs and the older established link gets removed.](../images/graph-examples/crmid_only_multi.png)
 
 >[!ENDTABS]
 
@@ -87,15 +94,15 @@ In this scenario, a CRMID is ingested and represents both online (experience eve
 
 >[!TAB Ideal single-person graph scenario]
 
-![](../images/graph-examples/crmid_hashed_single.png)
+![In this example, two separate graphs are generated, each representing a single-person entity.](../images/graph-examples/crmid_hashed_single.png)
 
 >[!TAB multi-person graph: shared device]
 
-![](../images/graph-examples/crmid_hashed_shared_device.png)
+![In this example, the simulated graph displays a "shared device" scenario because both Tom and Summer are associated with the same ECID.](../images/graph-examples/crmid_hashed_shared_device.png)
 
 >[!TAB multi-person graph: non-unique email]
 
-![](../images/graph-examples/crmid_hashed_nonunique_email.png)
+![This scenario is similar to a "shared device" scenario. However, instead of having the person entities share ECID, they are instead associate with the same email account.](../images/graph-examples/crmid_hashed_nonunique_email.png)
 
 
 >[!ENDTABS]
@@ -163,23 +170,23 @@ Therefore, **it is crucial that the CRMID is always sent for every user**. Failu
 
 | Namespaces used | Web behavior collection method |
 | --- | --- |
-| CRMID, LoginID, ECID | Web SDK |
+| CRMID, loginID, ECID | Web SDK |
 
 **Events:**
 
-* CRMID: John, LoginID: ID_A
-* CRMID: John, LoginID: ID_B
-* LoginID: ID_A, ECID: 111
-* CRMID: Jane, LoginID: ID_C
-* CRMID: Jane, LoginID: ID_D
-* LoginID: ID_C, ECID: 222
+* CRMID: John, loginID: ID_A
+* CRMID: John, loginID: ID_B
+* loginID: ID_A, ECID: 111
+* CRMID: Jane, loginID: ID_C
+* CRMID: Jane, loginID: ID_D
+* loginID: ID_C, ECID: 222
 
 **Algorithm configuration:**
 
 | Priority | Display name | Identity symbol | Identity type | Unique per graph |
 | ---| --- | --- | --- | --- |
 | 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
-| 2 | LoginID | LoginID | CROSS_DEVICE | NO |
+| 2 | loginID | loginID | CROSS_DEVICE | NO |
 | 3 | ECID | ECID | COOKIE | NO |
 
 +++Select to view simulated graph
@@ -193,25 +200,25 @@ In this scenario, there is a single CRMID that represents a person entity. Howev
 * A given person entity can have different account account types (personal vs. business, account by state, account by brand, etc.)
 * A given person entity may use different email addresses for any number of accounts.
 
-The case of "dangling" LoginID also applies for this scenario.
+The case of "dangling" loginID also applies for this scenario.
 
 **Implementation:**
 
 | Namespaces used | Web behavior collection method |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, LoginID, ECID, AAID | Adobe Analytics source connector |
+| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID, AAID | Adobe Analytics source connector |
 
 
 **Events:**
 
 * CRMID: John, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-* CRMID: John, LoginID: ID_A
-* CRMID: John, LoginID: ID_B
-* LoginID:ID_A, ECID: 111, AAID: AAA
+* CRMID: John, loginID: ID_A
+* CRMID: John, loginID: ID_B
+* loginID:ID_A, ECID: 111, AAID: AAA
 * CRMID: Jane, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-* CRMID: Jane, LoginID: ID_C
-* CRMID: Jane, LoginID: ID_D
-* LoginID: ID_C, ECID: 222, AAID: BBB
+* CRMID: Jane, loginID: ID_C
+* CRMID: Jane, loginID: ID_D
+* loginID: ID_C, ECID: 222, AAID: BBB
 
 **Algorithm configuration:**
 
@@ -220,7 +227,7 @@ The case of "dangling" LoginID also applies for this scenario.
 | 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
 | 2 | Email_LC_SHA256 | Email_LC_SHA256 | EMAIL | NO |
 | 3 | Phone_SHA256 | Phone_SHA256 | PHONE | NO |
-| 4 | LoginID | LoginID | CROSS_DEVICE | NO |
+| 4 | loginID | loginID | CROSS_DEVICE | NO |
 | 5 | ECID | ECID | COOKIE | NO |
 | 6 | AAID | AAID | COOKIE | NO |
 
