@@ -56,7 +56,7 @@ Yes, any externally generated audience will appear within the audience inventory
 
 ### How often are externally generated audiences evaluated?
 
-Externally generated audiences are **only** evaluated during the time of import. Since the associated attributes to these import audiences are non-durable, the only time an externally generated audience will be updated is if the existing audience is manually updated.
+Externally generated audiences are **only** evaluated during the time of import. Since the associated attributes to these import audiences are non-durable and are **not** part of the Profile store, the only time an externally generated audience will be updated is if the existing audience is manually updated.
 
 ### Can I use externally uploaded attributes as part of segmentation?
 
