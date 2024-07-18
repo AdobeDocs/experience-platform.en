@@ -64,7 +64,7 @@ For instructions on how to create a dataset, read the [dataset UI guide](../../c
 >[!WARNING]
 >
 >* During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a person identifier, such as CRMID.
->* During implementation, you must ensure that the unique namespace with the highest priority is always present in every profile. View the examples page for a [good example] and [bad example]...
+>* During implementation, you must ensure that the unique namespace with the highest priority is always present in every profile. See the appendix for an example of a graph with [ideal configurations](#ideal-graph-example) and a graph with [poor configurations](#bad-graph-example).
 
 By this point, you should have the following:
 
@@ -88,3 +88,30 @@ For any feedback, use the **[!UICONTROL Beta feedback]** option in the Identity 
 
 ## Appendix
 
+Read this section for additional information that you can refer to when implementing your identity settings and unique namespaces.
+
+### Ideal graph example {#ideal-graph-example}
+
+You must ensure that a single namespace is used across all profiles that represents a person. Doing so, allows Identity Service to detect the appropriate person identifier in a given graph. 
+
+>[!BEGINTABS]
+
+>[!TAB Without a singular person identifier namespace]
+
+Without a unique namespace to represent your person identifiers, you may end up with a graph that links to disparate person identifiers to the same ECID. In this example, both B2BCRM and B2CCRM are linked to the same ECID at the same time.
+
+![A graph scenario where two person identifiers are linked to the same ECID.](../images/graph-examples/multi_namespaces.png)
+
+>[!TAB With a singular person identifier namespace]
+
+Given a unique namespace, (in this case, a CRMID instead of two disparate namespaces), Identity Service is able to discern the person identifier that was last associated with the ECID. In this example, because a unique CRMID exists, Identity Service is able to recognize a "shared device" scenario, where two entities are sharing the same device.
+
+![A shared device graph scenario, where two person identifiers are linked to the same ECID, but the older link is removed.](../images/graph-examples/crmid_only_multi.png)
+
+>[!ENDTABS]
+
+### Bad graph example {#bad-graph-example}
+
+The following graph simulates a "dangling" loginID scenario. In this example, two different loginIDs are bound to the same ECID. However, `{loginID: ID_C}` is not linked to the CRMID. Therefore, there is no way for Identity Service to detect that these two loginIDs represent two different entities. 
+
+![An example of a graph with a "dangling" loginID scenario.](../images/graph-examples/dangling_example.png)

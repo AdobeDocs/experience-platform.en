@@ -26,16 +26,22 @@ This is an example of a simple implementation scenario where online events (CRMI
 
 **Events:**
 
+You can create this scenario in graph simulation by entering the following events:
+
 * CRMID: Tom, ECID: 111
 
 **Algorithm configuration:**
 
-| Priority | Display name | Identity symbol | Identity type | Unique per graph |
-| ---| --- | --- | --- | --- |
-| 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
-| 2 | ECID | ECID | COOKIE | NO |
+You can create this scenario in graph simulation by configuring the following setup for your algorithm configuration:
+
+| Priority | Display name | Identity type | Unique per graph |
+| ---| --- | --- | --- |
+| 1 | CRMID | CROSS_DEVICE | Yes |
+| 2 | ECID | COOKIE | No |
 
 **Primary identity selection for Real-Time Customer Profile:**
+
+Within the context of this configuration, the primary identity will be defined like this:
 
 | Authentication status | identityMap | Primary identity |
 | --- | --- | --- |
@@ -70,6 +76,8 @@ In this scenario, a CRMID is ingested and represents both online (experience eve
 
 **Events:**
 
+You can create this scenario in graph simulation by entering the following events:
+
 * CRMID: Tom, Email_LC_SHA256: tom<span>@acme.com
 * CRMID: Tom, ECID: 111
 * CRMID: Summer, Email_LC_SHA256: summer<span>@acme.com
@@ -77,13 +85,17 @@ In this scenario, a CRMID is ingested and represents both online (experience eve
 
 **Algorithm configuration:**
 
-| Priority | Display name | Identity symbol | Identity type | Unique per graph |
-| ---| --- | --- | --- | --- |
-| 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
-| 2 | Emails (SHA256, lowercased) | Email_LC_SHA256 | Email | NO |
-| 3 | ECID | ECID | COOKIE | NO |
+You can create this scenario in graph simulation by configuring the following setup for your algorithm configuration:
+
+| Priority | Display name | Identity type | Unique per graph |
+| ---| --- | --- | --- |
+| 1 | CRMID | CROSS_DEVICE | Yes |
+| 2 | Emails (SHA256, lowercased) | Email | No |
+| 3 | ECID | COOKIE | No |
 
 **Primary identity selection for Profile:**
+
+Within the context of this configuration, the primary identity will be defined like this:
 
 | Authentication status | identityMap | Primary identity |
 | --- | --- | --- |
@@ -119,6 +131,8 @@ This scenario is similar to the previous one. However, in this scenario, hashed 
 
 **Events:**
 
+You can create this scenario in graph simulation by entering the following events:
+
 * CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 * CRMID: Tom, ECID: 111
 * CRMID: Tom, ECID: 222, IDFA: A-A-A
@@ -128,16 +142,20 @@ This scenario is similar to the previous one. However, in this scenario, hashed 
 
 **Algorithm configuration:**
 
-| Priority | Display name | Identity symbol | Identity type | Unique per graph |
-| ---| --- | --- | --- | --- |
-| 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
-| 2 | Emails (SHA256, lowercased) | Email_LC_SHA256 | Email | NO |
-| 3 | Phone (SHA256) | Phone_SHA256 | Phone | NO |
-| 4 | Google Ad ID (GAID) | GAID | DEVICE | NO |
-| 5 | Apple IDFA (ID for Apple) | IDFA | DEVICE | NO |
-| 6 | ECID | ECID | COOKIE | NO |
+You can create this scenario in graph simulation by configuring the following setup for your algorithm configuration:
+
+| Priority | Display name | Identity type | Unique per graph |
+| ---| --- | --- | --- |
+| 1 | CRMID | CROSS_DEVICE | Yes |
+| 2 | Emails (SHA256, lowercased) | Email | No |
+| 3 | Phone (SHA256) | Phone | No |
+| 4 | Google Ad ID (GAID) | DEVICE | No |
+| 5 | Apple IDFA (ID for Apple) | DEVICE | No |
+| 6 | ECID | COOKIE | No |
 
 **Primary identity selection for Profile:**
+
+Within the context of this configuration, the primary identity will be defined like this:
 
 | Authentication status | identityMap | Primary identity |
 | --- | --- | --- |
@@ -156,7 +174,7 @@ This scenario is similar to the previous one. However, in this scenario, hashed 
 
 >[!ENDTABS]
 
-
+<!-- 
 ## Single CRMID with multiple login IDs (simple)
 
 In this scenario, there is a single CRMID that represents a person entity. However, a person entity may have multiple login identifiers:
@@ -174,6 +192,8 @@ Therefore, **it is crucial that the CRMID is always sent for every user**. Failu
 
 **Events:**
 
+You can create this scenario in graph simulation by entering the following events:
+
 * CRMID: John, loginID: ID_A
 * CRMID: John, loginID: ID_B
 * loginID: ID_A, ECID: 111
@@ -183,15 +203,13 @@ Therefore, **it is crucial that the CRMID is always sent for every user**. Failu
 
 **Algorithm configuration:**
 
+You can create this scenario in graph simulation by configuring the following setup for your algorithm configuration:
+
 | Priority | Display name | Identity symbol | Identity type | Unique per graph |
 | ---| --- | --- | --- | --- |
 | 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
-| 2 | loginID | loginID | CROSS_DEVICE | NO |
-| 3 | ECID | ECID | COOKIE | NO |
-
-+++Select to view simulated graph
-
-+++
+| 2 | loginID | loginID | CROSS_DEVICE | No |
+| 3 | ECID | ECID | COOKIE | No |
 
 ## Single CRMID with multiple login IDs (complex)
 
@@ -211,6 +229,8 @@ The case of "dangling" loginID also applies for this scenario.
 
 **Events:**
 
+You can create this scenario in graph simulation by entering the following events:
+
 * CRMID: John, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 * CRMID: John, loginID: ID_A
 * CRMID: John, loginID: ID_B
@@ -222,16 +242,14 @@ The case of "dangling" loginID also applies for this scenario.
 
 **Algorithm configuration:**
 
+You can create this scenario in graph simulation by configuring the following setup for your algorithm configuration:
+
 | Priority | Display name | Identity symbol | Identity type | Unique per graph |
 | ---| --- | --- | --- | --- |
 | 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
-| 2 | Email_LC_SHA256 | Email_LC_SHA256 | EMAIL | NO |
-| 3 | Phone_SHA256 | Phone_SHA256 | PHONE | NO |
-| 4 | loginID | loginID | CROSS_DEVICE | NO |
-| 5 | ECID | ECID | COOKIE | NO |
-| 6 | AAID | AAID | COOKIE | NO |
-
-
-+++Select to view simulated graph
-
-+++
+| 2 | Email_LC_SHA256 | Email_LC_SHA256 | EMAIL | No |
+| 3 | Phone_SHA256 | Phone_SHA256 | PHONE | No |
+| 4 | loginID | loginID | CROSS_DEVICE | No |
+| 5 | ECID | ECID | COOKIE | No |
+| 6 | AAID | AAID | COOKIE | No |
+ -->
