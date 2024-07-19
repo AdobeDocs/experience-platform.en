@@ -8,6 +8,22 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](/help/web-sdk/release-notes.md).
 
+## Version 2.25.0 - July 18, 2024
+
+**New features**
+
+* Added support for auto-tracking personalization in Adobe Journey Optimizer.
+* Added TGT configuration for `autoCollectPropositionInteractions` using a picker interface.
+* Introduced new settings to manage improved click collection.
+
+**Fixes and improvements**
+
+* Updated dependencies.
+* Fixed a bug related to `filterClickDetails`.
+* Made schema more strict.
+
+Contains version 2.21.1 of the Adobe Experience Platform Web SDK.
+
 ## Version 2.24.0 - June 5, 2024
 
 **Fixes and improvements**
