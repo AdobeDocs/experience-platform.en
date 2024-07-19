@@ -115,6 +115,7 @@ The following table outlines the accepted values for `eventType`, along with the
 |`commerce.saveForLaters` | This event tracks when a product list has been saved for future use, such a product wishlist. |
 |`decisioning.propositionDisplay` | This event tracks when a decisioning proposition was displayed to a person. |
 |`decisioning.propositionDismiss` | This event tracks when a decision has been made not to engage with the presented offer. |
+|`decisioning.propositionFetch` | This special event type tells Adobe Analytics to drop this event. When using Customer Journey Analytics, you can also set up a filter to drop these events. |
 |`decisioning.propositionInteract` | This event tracks when a person interacted with a decisioning proposition. |
 |`decisioning.propositionSend` | This event tracks when it has been decided to send to a prospective customer a recommendation or offer for consideration. |
 |`decisioning.propositionTrigger` | This event tracks the activation of a proposition process. A certain condition or action has occurred to prompt the presentation of an offer. |
