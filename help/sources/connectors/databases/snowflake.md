@@ -30,7 +30,7 @@ To retrieve your account identifier:
 * In the left navigation, select **[!DNL Accounts]**, and then select **[!DNL Active Accounts]** from the header.
 * Next, select the information icon and then select and copy the domain name of the current URL.
 
-![The Snowflake UI dashboard with the domain name selected.](../../images/tutorials/create/snowflake/snowflake_ui.png)
+![The Snowflake UI dashboard with the domain name selected.](../../images/tutorials/create/snowflake/snowflake-dashboard.png)
 
 ### Retrieve your private key {#retrieve-your-private-key}
 
