@@ -40,7 +40,7 @@ When you upload an externally generated audience, the following items are create
 
 During the import external audience workflow, you must specify which column in the CSV file corresponds with the **Primary Identity**. An example of a primary identity includes email address, ECID, or an organization-specific custom identity namespace. 
 
-The data associated with this primary identity columnis the **only** data that is attached to the profile. If there are no existing profiles that match the data in the primary identity column, a new profile is created. However, this profile is essentially an orphaned profile since **no** attributes or experience events are associated with this profile.
+The data associated with this primary identity column is the **only** data that is attached to the profile. If there are no existing profiles that match the data in the primary identity column, a new profile is created. However, this profile is essentially an orphaned profile since **no** attributes or experience events are associated with this profile.
 
 All the other data within the externally generated audience are considered **payload attributes**. These attributes can **only** be used for personalization and enrichment during activation, and are **not** attached to a profile. These attributes are, however, stored in the data lake.
 
@@ -53,6 +53,10 @@ Yes, the externally generated audience will be merged with the existing profile 
 ### Can I use an externally generated audience to build other audiences?
 
 Yes, any externally generated audience will appear within the audience inventory and can be used when building audiences within the [Segment Builder](./ui/segment-builder.md).
+
+### How often are externally generated audiences evaluated?
+
+Externally generated audiences are **only** evaluated during the time of import. Since the associated attributes to these import audiences are non-durable and are **not** part of the Profile store, the only time an externally generated audience will be updated is if the existing audience is manually updated.
 
 ### Can I use externally uploaded attributes as part of segmentation?
 
@@ -91,6 +95,10 @@ If you have accidentally uploaded an externally generated audience and you want 
 The current data expiration for externally generated audiences is **30 days**. This data expiration was chosen to reduce the amount of excess data stored within your organization. 
 
 After the data expiration period passes, the associated dataset will still be visible within the dataset inventory, but you will **not** be able to activate the audience and the profile count will show as zero.
+
+### Is there a maximum number of externally generated audiences I can import?
+
+There is no limit to the number of externally generated audiences you can import. However, please note that the imported audiences **do** count against the overall audience limit.
 
 ### How will Audience Portal and Audience Composition interact with the release of Real-Time CDP Partner Data?
 
