@@ -16,7 +16,52 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 Experience Platform provides support for ingesting data from a third-party database. Platform can connect to different types of databases such as relational, NoSQL, or data warehouses. Support for database providers include [!DNL Snowflake].
 
-## Prerequisites
+## Prerequisites {#prerequisites}
+
+This section outlines the setup tasks that you need to complete before you can connect your [!DNL Snowflake] source to Experience Platform.
+
+### Retrieve your account identifier {#retrieve-your-account-identifier}
+
+You must retrieve your account identifier from the [!DNL Snowflake] UI dashboard because you will be using the account identifier to authenticate your [!DNL Snowflake] instance on Experience Platform.
+
+To retrieve your account identifier:
+
+* Navigate to your account on the [[!DNL Snowflake] application UI dashboard](https://app.snowflake.com/).
+* In the left navigation, select **[!DNL Accounts]**, and then select **[!DNL Active Accounts]** from the header.
+* Next, select the information icon and then select and copy the domain name of the current URL.
+
+![The Snowflake UI dashboard with the domain name selected.](../../images/tutorials/create/snowflake/snowflake_ui.png)
+
+### Retrieve your private key {#retrieve-your-private-key}
+
+If you are using key-pair authentication for your [!DNL Snowflake] connection, then you must also generate your private key before connecting to Experience Platform.
+
+To generate your encrypted [!DNL Snowflake] private key, run the following command on your terminal:
+
+```shell
+openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8
+```
+
+If successful, you should receive your private key in PEM format.
+
+```json
+-----BEGIN ENCRYPTED PRIVATE KEY-----
+MIIE6T...
+-----END ENCRYPTED PRIVATE KEY-----
+```
+
+Next, take your encrypted private key and encode it in [!DNL Base64]. Ensure that you do not do any transformations or format conversions on your [!DNL Snowflake] private key. Additionally, you must ensure that there are no trailing newline characters at the end of your private key, before encoding it in [!DNL Base64].
+
+Once successfully encoded, you may then used that [!DNL Base64]-encoded private key on Experience Platform to authenticate your [!DNL Snowflake] account.
+
+>[!IMPORTANT]
+>
+>Ensure that your warehouse and roles configurations in [!DNL Snowflake] are properly set up, before connecting to Experience Platform.
+>
+>* The default warehouse assigned to a given user must be the same as the warehouse that you input when authenticating to Experience Platform.
+>
+>* The default role assigned to a given user must have access to the same database that you input when authenticating to Experience Platform.
+
 
 ## IP address allow list
 
