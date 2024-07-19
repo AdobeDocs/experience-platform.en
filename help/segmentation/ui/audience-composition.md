@@ -262,14 +262,18 @@ Additionally, you can enable the **[!UICONTROL Other profiles]** toggle to creat
 
 ## Publishing your audience
 
-After composing your audience, you can save and publish it by selecting **[!UICONTROL Publish]**. 
+>[!IMPORTANT]
+>
+>When publishing your audience composition, please note that it may take up to 48 hours for it to be evaluated and activated for usage in downstream services such as a Real-Time CDP destination or Adobe Journey Optimizer channel.
 
-![The Publish button is highlighted, showing you how to save and publish your audience.](../images/ui/audience-composition/publish.png)
+After creating your composition, you can save and publish it by selecting **[!UICONTROL Publish]**. 
+
+![The Publish button is highlighted, showing you how to save and publish your composition.](../images/ui/audience-composition/publish.png)
 
 If there are any errors in creating the audience, an alert appears, letting you know how to resolve the issue.
 
-![The Publish button is highlighted, showing you how to save and publish your audience.](../images/ui/audience-composition/audience-alert.png)
+![The Publish button is highlighted, showing you how to save and publish your composition.](../images/ui/audience-composition/audience-alert.png)
 
 ## Next steps
 
-Audience Composition provides a rich workflow allowing you to create audiences from the different block types. To learn more about other parts of the Segmentation Service UI, please read the [Segmentation Service user guide](./overview.md).
+Audience Composition provides a rich workflow allowing you to create compositions from the different block types. To learn more about other parts of the Segmentation Service UI, please read the [Segmentation Service user guide](./overview.md).
