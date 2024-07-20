@@ -10,7 +10,7 @@ exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
 
 Adobe Experience Platform [!DNL Data Science Workspace] provides the tools and resources to create, evaluate, and utilize machine learning models to generate data predictions and insights. When machine learning insights are ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records which can then be segmented using [!DNL Adobe Experience Platform Segmentation Service]. 
 
-The segmentation process depends on the evaluation method for the segment. If a segment is configured as **streaming**, it will process all the new updates written by the model into the profile in real-time. However, if a segment is configured for **batch** evaluation, the new values will be evaluated in the next batch.
+The segmentation process depends on the evaluation method for the audience. If an audience is configured as **streaming**, it will process all the new updates written by the model into the profile in real-time. However, if an audience is configured for **batch** evaluation, the new values will be evaluated in the next batch.
 
 This document provides links to tutorials that enable you to enrich [!DNL Real-Time Customer Profile] with your machine learning insights.
 
