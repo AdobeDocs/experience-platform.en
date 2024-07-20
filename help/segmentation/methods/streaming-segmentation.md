@@ -10,7 +10,7 @@ Streaming segmentation is the ability to evaluate audiences in Adobe Experience 
 
 With streaming segmentation, audience qualification now happens as streaming data lands into Platform, alleviating the need to schedule and run segmentation jobs. This allows you to evaluate data as its passed into Platform, letting audience membership be automatically kept up-to-date.
 
-## Streaming segmentation query types {#query-types}
+## Eligible query types {#query-types}
 
 A query will be eligible for streaming segmentation if it meets any of the criteria outlined in the following table.
 
@@ -47,7 +47,7 @@ If a segment definition is modified so it no longer meets the criteria for strea
 
 Additionally, segment unqualification, similarly to segment qualification, happens in real-time. As a result, if an audience no longer qualifies for a segment, it will be immediately unqualified. For example, if the segment definition asks for "All users who bought red shoes in the last three hours", after three hours, all the profiles that initially qualified for the segment definition will be unqualified.
 
-## Retrieve audiences evaluated using streaming segmentation {#retrieve-audiences}
+## Retrieve audiences {#retrieve-audiences}
 
 You can retrieve all audiences that are evaluated using streaming segmentation using either the Segmentation Service API or through Audience Portal in the UI.
 

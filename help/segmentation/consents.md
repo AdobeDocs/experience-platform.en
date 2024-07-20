@@ -1,10 +1,10 @@
 ---
 solution: Experience Platform
-title: Honoring Consent in Segments
+title: Honoring Consent in Segment Definitions
 description: Learn how to honor customer consent preferences for personal data collection and sharing in segment operations.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 ---
-# Honoring consent in segments
+# Honoring consent in segment definitions
 
 >[!NOTE]
 >
