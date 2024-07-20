@@ -43,11 +43,11 @@ After you have generated and ingested your scoring data insights to your [!DNL P
 
 The [!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. Follow the [[!DNL Segment Builder] user guide](../../segmentation/ui/segment-builder.md) to learn about:
 
-- Creating audience definitions using a combination of attributes, events, and existing audiences as building blocks.  
+- Creating segment definitions using a combination of attributes, events, and existing audiences as building blocks.  
 - Using the rule builder canvas and containers to control the order in which audience rules are executed.
 - Viewing estimates of your prospective audience, allowing you to adjust your segment definitions as required.
-- Enabling all audience definitions for scheduled segmentation.
-- Enabling specified audience definitions for streaming segmentation.
+- Enabling all segment definitions for scheduled segmentation.
+- Enabling specified segment definitions for streaming segmentation.
 
 ## Next steps {#next-steps}
 
