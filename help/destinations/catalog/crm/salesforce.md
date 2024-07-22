@@ -128,7 +128,7 @@ If your [!DNL Salesforce] account administrator has enforced IP restrictions, yo
 Refer to the table below for information about the destination export type and frequency.
 
 | Item | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Export type | **[!UICONTROL Profile-based]** | <ul><li>You are exporting all members of a segment, together with the desired schema fields *(for example: email address, phone number, last name)*, according to your field mapping.</li><li> Each audience status in [!DNL Salesforce CRM] gets updated with the corresponding audience status from Platform, based on the **[!UICONTROL Mapping ID]** value provided during the [audience scheduling](#schedule-segment-export-example) step.</li></ul> |
 | Export frequency | **[!UICONTROL Streaming]** | <ul><li>Streaming destinations are "always on" API-based connections. As soon as a profile is updated in Experience Platform based on audience evaluation, the connector sends the update downstream to the destination platform. Read more about [streaming destinations](/help/destinations/destination-types.md#streaming-destinations).</li></ul>|
 
@@ -147,6 +147,7 @@ Within **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** search for [!DNL
 ### Authenticate to destination {#authenticate}
 
 To authenticate to the destination, fill in the required fields below and select **[!UICONTROL Connect to destination]**. Refer to the [Gather [!DNL Salesforce CRM] credentials](#gather-credentials) section for any guidance.
+
 | Credential | Description |
 | --- | --- |
 | **[!UICONTROL Username]** | Your [!DNL Salesforce] account username. |
@@ -206,12 +207,13 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce CRM] destination 
     * If you are working with *Contacts* within your segment, refer to the Object Reference in Salesforce for [Contact](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) to define mappings for the fields to be updated.
     * You can identify mandatory fields by searching for the word *Required*, which is mentioned in field descriptions in the link above.
     * Depending on the fields you want to export or update, add mappings between your XDM profile schema and [!DNL (API) Salesforce CRM]:
-        |Source Field|Target Field| Notes |
-        | --- | --- | --- |
-        |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
-        |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Last name of the contact up to 80 characters. |    
-        |`xdm: person.name.firstName`|`Attribute: FirstName`| The contact's first name up to 40 characters. |
-        |`xdm: personalEmail.address`|`Attribute: Email`| The contact's email address. |
+
+       |Source Field|Target Field| Notes |
+       | --- | --- | --- |
+       |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
+       |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Last name of the contact up to 80 characters. |    
+       |`xdm: person.name.firstName`|`Attribute: FirstName`| The contact's first name up to 40 characters. |
+       |`xdm: personalEmail.address`|`Attribute: Email`| The contact's email address. |
 
     * An example using these mappings is shown below:
     ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
@@ -221,12 +223,13 @@ To correctly map your XDM fields to the [!DNL (API) Salesforce CRM] destination 
     * If you are working with *Leads* within your segment, refer to the Object Reference in Salesforce for [Lead](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) to define mappings for the fields to be updated.
     * You can identify mandatory fields by searching for the word *Required*, which is mentioned in field descriptions in the link above.
     * Depending on the fields you want to export or update, add mappings between your XDM profile schema and [!DNL (API) Salesforce CRM]:
-        |Source Field|Target Field| Notes |
-        | --- | --- | --- |
-        |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
-        |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Last name of the lead up to 80 characters. |    
-        |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. The lead's company. |
-        |`xdm: personalEmail.address`|`Attribute: Email`| The lead's email address. |
+
+       |Source Field|Target Field| Notes |
+       | --- | --- | --- |
+       |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
+       |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. Last name of the lead up to 80 characters. |    
+       |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. The lead's company. |
+       |`xdm: personalEmail.address`|`Attribute: Email`| The lead's email address. |
 
     * An example using these mappings is shown below:
     ![Platform UI screenshot example showing Target mappings.](../../assets/catalog/crm/salesforce/mappings-leads.png)    
@@ -250,6 +253,7 @@ An example indicating the location of the [!DNL Salesforce CRM] **[!UICONTROL Ma
 As shown above the [!DNL Salesforce] **[!UICONTROL Field Name]** exactly matches the value specified within [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]**.
 
 Depending on your use case, all activated audiences can be mapped to the same [!DNL Salesforce] custom field or to different **[!UICONTROL Field Name]** in [!DNL Salesforce CRM]. A typical example based on the image shown above could be.
+
 | [!DNL Salesforce CRM] segment name | [!DNL Salesforce] **[!UICONTROL Field Name]** | [!DNL Salesforce CRM] **[!UICONTROL Mapping ID]** | 
 | --- | --- | --- |
 | crm_1_seg | `crm_1_seg` | `crm_1_seg` |

@@ -66,7 +66,7 @@ You must configure a unique namespace to inform the identity optimization algori
 
 Namespace priority refers to the relative importance of namespaces compared to one another. Namespace priority is configurable through the UI and you can rank namespaces in a given identity graph. 
 
-One way in which namespace priority is used is determining the primary identity of experience event fragments (user behavior) on Real-Time Customer Profile. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
+One way in which namespace priority is used is in determining the primary identity of experience event fragments (user behavior) in Real-Time Customer Profile. If priority settings are configured, then the primary identity setting on Web SDK will no longer be used to determine which profile fragments are stored.
 
 Unique namespaces and namespace priorities are both configurable in the identity settings UI workspace. However, the effects of their configurations are different:
 
@@ -80,6 +80,7 @@ Unique namespaces and namespace priorities are both configurable in the identity
 * **Primary identity is the identity in which a profile fragment is stored against**. A profile fragment is a record of data that stores information about a certain user: attributes (usually ingested via CRM records) or events (usually ingested from experience events, or online data).
 * Namespace priority determines the primary identity for experience event fragments.
   * For profile records, you can use the schemas workspace in the Experience Platform UI to define identity fields, including the primary identity. Read the guide on [defining identity fields in the UI](../../xdm/ui/fields/identity.md) for more information.
+* If an experience event has two or more identities of the highest namespace priority in the identityMap, it will be rejected from ingestion because it will be deemed as "bad data". For example, if the identityMap contains `{ECID: 111, CRMID: John, CRMID: Jane}`, the entire event will be rejected as bad data because it implies that the event is associated to both `CRMID: John` and `CRMID: Jane` simultaneously.
 
 For more information, read the guide on [namespace priority](./namespace-priority.md).
 
