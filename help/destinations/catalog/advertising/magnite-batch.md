@@ -1,5 +1,5 @@
 ---
-title: Magnite: Batch Destination
+title: Magnite Batch Destination
 description: Use this destination to deliver Adobe CDP audiences to the Magnite Streaming platform in batch.
 badgeBeta: label="Beta" type="Informative"
 hide: yes
