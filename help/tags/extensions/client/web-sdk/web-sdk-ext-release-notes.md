@@ -13,14 +13,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 **New features**
 
 * Added support for auto-tracking personalization in Adobe Journey Optimizer.
-* Added TGT configuration for `autoCollectPropositionInteractions` using a picker interface.
 * Introduced new settings to manage improved click collection.
-
-**Fixes and improvements**
-
-* Updated dependencies.
-* Fixed a bug related to `filterClickDetails`.
-* Made schema more strict.
 
 Contains version 2.21.1 of the Adobe Experience Platform Web SDK.
 
