@@ -24,7 +24,7 @@ role: Developer
     * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
     * [clickCollection](commands/configure/clickcollection.md)
     * [context](commands/configure/context.md)
-    * [datastreamId](commands/configure/datastreamId.md)
+    * [datastreamId](commands/configure/datastreamid.md)
     * [debugEnabled](commands/configure/debugenabled.md)
     * [defaultConsent](commands/configure/defaultconsent.md)
     * [downloadLinkQualifier](commands/configure/downloadlinkqualifier.md)
