@@ -50,7 +50,7 @@ To successfully implement this use case, you must use multiple areas of Real-Tim
   * [Data usage labels](/help/data-governance/labels/overview.md)
   * [Datasets](/help/catalog/datasets/overview.md)
 * Web property personalization
-  * [Edge segmentation](/help/segmentation/ui/edge-segmentation.md)
+  * [Edge segmentation](/help/segmentation/methods/edge-segmentation.md)
   * [Edge Personalization destinations](/help/destinations/destination-types.md#edge-personalization-destinations)
   * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (or a personalization platform of your choice. This use case tutorial highlights Adobe Target as personalization engine)
 
@@ -257,7 +257,7 @@ In the Platform UI, navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audien
 
 ![View of how to navigate to audiences.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-You must set up your audience with [edge segmentation](/help/segmentation/ui/edge-segmentation.md) so the audience membership of your visitors is evaluated in real-time, as they visit your web property.  
+You must set up your audience with [edge segmentation](/help/segmentation/methods/edge-segmentation.md) so the audience membership of your visitors is evaluated in real-time, as they visit your web property.  
 
 Make sure to also set up an [active-on-edge merge policy](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) for the edge audiences.
 

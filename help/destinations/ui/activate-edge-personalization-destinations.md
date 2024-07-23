@@ -9,7 +9,7 @@ exl-id: cd7132eb-4047-4faa-a224-47366846cb56
 
 ## Overview {#overview}
 
-Adobe Experience Platform uses [edge segmentation](../../segmentation/ui/edge-segmentation.md) together with [edge destinations](/help/destinations/destination-types.md#edge-personalization-destinations) to enable customers to create and target audiences at high scale, in real time. This capability helps you configure same-page and next-page personalization use cases.
+Adobe Experience Platform uses [edge segmentation](../../segmentation/methods/edge-segmentation.md) together with [edge destinations](/help/destinations/destination-types.md#edge-personalization-destinations) to enable customers to create and target audiences at high scale, in real time. This capability helps you configure same-page and next-page personalization use cases.
 
 Examples of edge destinations are the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) connections.
 
@@ -25,7 +25,7 @@ Examples of edge destinations are the [Adobe Target](../../destinations/catalog/
 > 
 > Read the [access control overview](/help/access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
-This article explains the workflow required to activate audiences to Adobe Experience Platform edge destinations. When used together with [edge segmentation](../../segmentation/ui/edge-segmentation.md) and the optional [profile attributes mapping](#mapping), these destinations enable same-page and next-page personalization use cases on your web and mobile properties. 
+This article explains the workflow required to activate audiences to Adobe Experience Platform edge destinations. When used together with [edge segmentation](../../segmentation/methods/edge-segmentation.md) and the optional [profile attributes mapping](#mapping), these destinations enable same-page and next-page personalization use cases on your web and mobile properties. 
 
 For a brief overview on how to configure the Adobe Target connection for edge personalization, watch the video below.
 
@@ -83,7 +83,7 @@ For more details on how to set up a datastream, follow the instructions describe
 
 ### Create an [!DNL Active-On-Edge] merge policy {#create-merge-policy}
 
-After you have created your destination connection, you must create an [!DNL Active-On-Edge] merge policy. The [!DNL Active-On-Edge] merge policy ensures that audiences are constantly evaluated [on the edge](../../segmentation/ui/edge-segmentation.md) and are available for real-time and next-page personalization use case.
+After you have created your destination connection, you must create an [!DNL Active-On-Edge] merge policy. The [!DNL Active-On-Edge] merge policy ensures that audiences are constantly evaluated [on the edge](../../segmentation/methods/edge-segmentation.md) and are available for real-time and next-page personalization use case.
 
 >[!IMPORTANT]
 >

@@ -65,7 +65,7 @@ Platform currently supports three methods of evaluating audiences: streaming seg
 
 Streaming segmentation is an ongoing data selection process that updates your audiences in response to user activity. Once an audience has been built and saved, the segment definition is applied against incoming data to [!DNL Real-Time Customer Profile]. Additions and removals to the audience are processed regularly, ensuring your target audience remains relevant. 
 
-To learn more about streaming segmentation, please read the [streaming segmentation documentation](./api/streaming-segmentation.md).
+To learn more about streaming segmentation, please read the [streaming segmentation documentation](./methods/streaming-segmentation.md).
 
 ### Batch segmentation {#batch}
 
@@ -88,7 +88,7 @@ Batch audiences are automatically evaluated every 24 hours. If you want to evalu
 
 Edge segmentation is the ability to evaluate segments in Platform instantaneously [on the Edge Network](../web-sdk/home.md), enabling same-page and next-page personalization use cases. 
 
-To learn more about edge segmentation, please read either the [API documentation](./api/edge-segmentation.md) or the [UI documentation](./ui/edge-segmentation.md).
+To learn more about edge segmentation, please read either the [API documentation](./methods/edge-segmentation.md) or the [UI documentation](./methods/edge-segmentation.md).
 
 ## Access segmentation results
 

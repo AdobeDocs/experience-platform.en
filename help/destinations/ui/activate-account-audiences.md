@@ -12,7 +12,7 @@ exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
 >
 >The functionality to activate account audiences to destinations is available for companies purchasing the [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) and [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) editions of Real-Time Customer Data Platform.
 
-This article explains the workflow required to export [account audiences](/help/segmentation/ui/account-audiences.md) from Adobe Experience Platform to your preferred destination. 
+This article explains the workflow required to export [account audiences](/help/segmentation/types/account-audiences.md) from Adobe Experience Platform to your preferred destination. 
 
 ## Supported destinations {#supported-destinations}
 
@@ -28,7 +28,7 @@ View the video below for an overview of creating and activating account audience
 
 ## Prerequisites {#prerequisites}
 
-* You must first ingest [account profiles](/help/rtcdp/accounts/account-profile-overview.md) and create [account audiences](/help/segmentation/ui/account-audiences.md) before you can activate them to downstream destinations.
+* You must first ingest [account profiles](/help/rtcdp/accounts/account-profile-overview.md) and create [account audiences](/help/segmentation/types/account-audiences.md) before you can activate them to downstream destinations.
 * To activate account audiences to destinations, you must have successfully connected to a destination. If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use. Read the UI tutorial on [connecting to destinations](./connect-destination.md) for more information.
 
 ### Required permissions {#permissions}
