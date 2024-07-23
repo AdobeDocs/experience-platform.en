@@ -13,7 +13,7 @@ Owners of extension packages can grant permission for other companies to utilize
 
 This guide provides a high-level overview of how to configure extension package usage authorizations. For more detailed guidance on how to manage authorizations in the Reactor API, including example JSON of a authorization's structure, refer to the [extension package usage authorization endpoint guide](../endpoints/extension-package-usage-authorizations.md).
 
-## Create an authorization {#create_authorization}
+## Create an authorization {#create-authorization}
 
 To create a new authorization, you must have the `develop_extensions` right. The following example demonstrates how you can create an extension package usage authorization for an extension package using the `authorized_org_id` of the company you wish to authorize.
 
@@ -58,7 +58,7 @@ curl -X POST \
 
 The initial state of the authorization is in the `pending_approval` stage. Before using the extension package, the company must approve the authorization. Users of the company are able to browse the private extension package while authorization is pending approval, but they are unable to install it and cannot find it in their extensions catalog. 
 
-## Approve an authorization {#approve_authorization}
+## Approve an authorization {#approve-authorization}
 
 To approve an authorization, you must have the `manage_properties` rights. As the authorized company, you will need to send a PATCH request to the extension package usage authorization, including the `ID` of the authorization and set the state set to `approved`.
 
@@ -101,7 +101,7 @@ Once the authorization is approved, as the authorized company, you can now insta
 >
 >If the authorization is rejected, the authorized company will not be able to use the extension package.
 
-## Delete an authorization {#delete_authorization}
+## Delete an authorization {#delete-authorization}
 
 As the owner of an extension package, you can revoke the authorization at any time by deleting the extension package usage authorization. This will prevent the authorized company from viewing private versions of the extension package in the catalog and installing it on their properties. However, already installed private versions will continue to work as expected after deletion.
 
