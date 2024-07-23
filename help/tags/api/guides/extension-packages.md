@@ -95,6 +95,7 @@ curl -X PATCH \
         }
       }
 ```
+
 Once the authorization is approved, as the authorized company, you can now install the extension package on your properties.
 
 >[!NOTE]
