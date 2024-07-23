@@ -3,8 +3,8 @@ title: Zeta Marketing Platform
 description: The Zeta Marketing Platform (ZMP) is a cloud-based system which helps you acquire, grow, and retain customers more efficiently, powered by intelligence (proprietary data and AI).
 hide: yes
 hidefromtoc: yes
+exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
 ---
-
 # Zeta Marketing Platform {#zeta-marketing-platform}
 
 ## Overview {#overview}
@@ -56,9 +56,9 @@ An advertiser aims to target users within specific audiences through the Zeta De
 This section describes which type of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | X | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads | X | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 

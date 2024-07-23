@@ -7,13 +7,17 @@ exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
 ---
 # Data Access API guide
 
+>[!IMPORTANT]
+>
+>The Data Access API is now **deprecated**. You are advised to use Destinations for exporting data from Adobe Experience Platform. For more information, please refer to the [dataset export destinations documentation](../destinations/destination-types.md#dataset-export-destinations).
+
 The Data Access API supports Adobe Experience Platform by providing users with a RESTful interface focused on the discoverability and accessibility of ingested datasets within [!DNL Experience Platform].
 
 ![An diagram of how Data Access facilitates the discoverability and accessibility of ingested datasets within Experience Platform.](images/Data_Access_Experience_Platform.png)
 
 ## API specification reference
 
-The Swagger API reference documentation can be found [here](https://developer.adobe.com/experience-platform-apis/references/data-access/).
+The OpenAPI reference documentation can be found [here](https://developer.adobe.com/experience-platform-apis/references/data-access/).
 
 ## Terminology {#terminology}
 
