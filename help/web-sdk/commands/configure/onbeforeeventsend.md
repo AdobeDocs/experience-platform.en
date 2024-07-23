@@ -1,8 +1,8 @@
 ---
 title: onBeforeEventSend
 description: Learn how to configure the Web SDK to register a JavaScript function that can alter the data you send just before that data is sent to Adobe.
+exl-id: 945f4fa1-380c-46aa-a92a-bbcfd6644751
 ---
-
 # `onBeforeEventSend`
 
 The `onBeforeEventSend` callback allows you to register a JavaScript function that can alter the data you send just before that data is sent to Adobe. This callback allows you to manipulate the `xdm` or `data` object, including the ability to add, edit, or remove elements. You can also conditionally cancel the sending of data altogether, such as with detected client-side bot traffic.
@@ -66,7 +66,7 @@ Register the `onBeforeEventSend` callback when running the `configure` command. 
 
 ```js
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   onBeforeEventSend: function(content) {
     // Use nullish coalescing assignments to add a new value
@@ -108,7 +108,7 @@ function lastChanceLogic(content) {
 }
 
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   onBeforeEventSend: lastChanceLogic
 });    

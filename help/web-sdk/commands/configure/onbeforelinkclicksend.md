@@ -67,7 +67,7 @@ Register the `onBeforeLinkClickSend` callback when running the `configure` comma
 
 ```js
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   onBeforeLinkClickSend: function(content) {
     // Add, modify, or delete values
@@ -95,7 +95,7 @@ function lastChanceLinkLogic(content) {
 }
 
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   onBeforeLinkClickSend: lastChanceLinkLogic
 });    
