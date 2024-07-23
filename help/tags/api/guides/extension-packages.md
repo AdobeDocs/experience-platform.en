@@ -7,7 +7,7 @@ description: Learn how to authorize other businesses to share private extentsion
 
 >[!NOTE]
 >
->Users with the `develop_extensions` right in the extension package owner organization are only allowed to create, list, and delete extension package usage authorizations for that extension package. Users in authorized organization who possess the `manage_properties` permission are only allowed to list the extension package usage authorizations for their organization and update their state to `accepted` if they want to use that extension package, or to `rejected` if they don't want to use it.
+>Users with the `develop_extensions` permission in the extension package owner organization are able to create, list, and delete extension package usage authorizations for that extension package. Users in an authorized organization who possess the `manage_properties` permission are only allowed to list the extension package usage authorizations for their organization and update their state to `accepted` if they want to use that extension package, or to `rejected` if they don't want to use it.
 
 Owners of extension packages can grant permission for other companies to utilize their private versions through the Reactor API. A usage license for one extension package is granted to each approved business, and this authorization is good for all current and future private versions of the package.
 
