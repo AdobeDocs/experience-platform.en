@@ -751,7 +751,7 @@ Using Web SDK the customer can set up their pre-hiding style in the configure co
 
 ```javascript
 alloy("configure", {
-  edgeConfigId: "configurationId",
+  datastreamId: "configurationId",
   orgId: "orgId@AdobeOrg",
   debugEnabled: true,
   prehidingStyle: "body { opacity: 0 !important }"

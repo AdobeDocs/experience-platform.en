@@ -27,14 +27,13 @@ In all cases, `xdm.web.webInteraction.name` is set to the link text label and `x
 
 ## Enable automatic link tracking using the Web SDK tag extension {#tag-extension}
 
-Select the **[!UICONTROL Enable click data collection]** checkbox when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+This variable is automatically managed by the tag extension; you do not need to explicitly set it. If any of the following are selected when [configuring the tag extension](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md), the applicable link tracking data is collected:
 
-1. Log in to [experience.adobe.com](https://experience.adobe.com) using your Adobe ID credentials.
-1. Navigate to **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.
-1. Select the desired tag property.
-1. Navigate to **[!UICONTROL Extensions]**, then click **[!UICONTROL Configure]** on the [!UICONTROL Adobe Experience Platform Web SDK] card.
-1. Scroll down to the [!UICONTROL Data Collection] section, then select the checkbox **[!UICONTROL Enable click data collection]**.
-1. Click **[!UICONTROL Save]**, then publish your changes.
+* [!UICONTROL Collect internal link clicks]
+* [!UICONTROL Collect external link clicks]
+* [!UICONTROL Collect download link clicks]
+
+See [`clickCollection`](clickcollection.md) for more information.
 
 ## Enable automatic link tracking using the Web SDK JavaScript library {#library}
 
@@ -42,7 +41,7 @@ Set the `clickCollectionEnabled` boolean when running the `configure` command. I
 
 ```js
 alloy(configure, {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: false
 });
