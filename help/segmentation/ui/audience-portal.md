@@ -1,8 +1,8 @@
 ---
 title: Audience Portal Overview
 description: Learn how to use Audience Portal to view, manage, and create audiences within Adobe Experience Platform.
+exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
 ---
-
 # Audience Portal overview
 
 Audience Portal is a central hub, within Adobe Experience Platform, that allows you to view, manage, and create audiences.
