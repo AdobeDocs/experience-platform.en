@@ -4,8 +4,8 @@ description: Use this destination to deliver Adobe CDP audiences to the Magnite 
 badgeBeta: label="Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
 ---
-
 # Magnite: Batch connection {#magnite-streaming-batch}
 
 ## Overview {#overview}

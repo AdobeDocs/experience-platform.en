@@ -1,8 +1,8 @@
 ---
 title: Extension Package Usage Authorizations Endpoint
 description: Learn how to make calls to the /extension_package_usage authorizations endpoint in the Reactor API.
+exl-id: ad3fb704-7d2f-45ec-b80b-ea4d327f2205
 ---
-
 # Extension package usage authorizations endpoint
 
 An extension package represents an [extension](./extensions.md) as authored by an extension developer. Additional functionalities that can be made available to tag users are defined by an extension package. These capabilities can include main modules and shared modules, although they are most frequently provided as [rule components](./rule-components.md) (events, conditions, and actions) and [data elements](./data-elements.md).
