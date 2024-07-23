@@ -9,8 +9,8 @@ badge: Beta
 
 >[!NOTE]
 >
->* "CRMID" and "loginID" are custom namespaces. In this document, "CRMID" and "loginID" are treated as generic namespaces that represent a person identifier.
->* To simulate the example graph scenarios outlined in this document, you must first create two custom namespaces, one with the identity symbol "CRMID" and another with the identity symbol "loginID".
+>* "CRMID" and "loginID" are custom namespaces. In this document, "CRMID" is a person identifier and "loginID" is a login identifier associated with a given person.
+>* To simulate the example graph scenarios outlined in this document, you must first create two custom namespaces, one with the identity symbol "CRMID" and another with the identity symbol "loginID". Identity symbols are case sensitive.
 
 This document outlines example graph configurations of common scenarios that you might encounter when working with identity data.
 
@@ -43,10 +43,10 @@ You can create this scenario in graph simulation by configuring the following se
 
 Within the context of this configuration, the primary identity will be defined like this:
 
-| Authentication status | identityMap | Primary identity |
+| Authentication status | Namespace(s) in events | Primary identity |
 | --- | --- | --- |
-| Authenticated | {CRMID, ECID} | CRMID |
-| Unauthenticated | {ECID} | ECID | 
+| Authenticated | CRMID, ECID | CRMID |
+| Unauthenticated | ECID | ECID | 
 
 >[!BEGINTABS]
 
@@ -97,10 +97,10 @@ You can create this scenario in graph simulation by configuring the following se
 
 Within the context of this configuration, the primary identity will be defined like this:
 
-| Authentication status | identityMap | Primary identity |
+| Authentication status | Namespace(s) in events | Primary identity |
 | --- | --- | --- |
-| Authenticated | {CRMID, ECID} | CRMID |
-| Unauthenticated | {ECID} | ECID | 
+| Authenticated | CRMID, ECID | CRMID |
+| Unauthenticated | ECID | ECID | 
 
 >[!BEGINTABS]
 
@@ -115,7 +115,6 @@ Within the context of this configuration, the primary identity will be defined l
 >[!TAB multi-person graph: non-unique email]
 
 ![This scenario is similar to a "shared device" scenario. However, instead of having the person entities share ECID, they are instead associate with the same email account.](../images/graph-examples/crmid_hashed_nonunique_email.png)
-
 
 >[!ENDTABS]
 
@@ -157,14 +156,14 @@ You can create this scenario in graph simulation by configuring the following se
 
 Within the context of this configuration, the primary identity will be defined like this:
 
-| Authentication status | identityMap | Primary identity |
+| Authentication status | Namespace(s) in events| Primary identity |
 | --- | --- | --- |
-| Authenticated | {CRMID, IDFA, ECID} | CRMID |
-| Authenticated | {CRMID, GAID, ECID} | CRMID |
-| Authenticated | {CRMID, ECID} | CRMID |
-| Unauthenticated | {GAID, ECID} | GAID |
-| Unauthenticated | {IDFA, ECID} | IDFA |
-| Unauthenticated | {ECID} | ECID |
+| Authenticated | CRMID, IDFA, ECID | CRMID |
+| Authenticated | CRMID, GAID, ECID | CRMID |
+| Authenticated | CRMID, ECID | CRMID |
+| Unauthenticated | GAID, ECID | GAID |
+| Unauthenticated | IDFA, ECID | IDFA |
+| Unauthenticated | ECID | ECID |
 
 >[!BEGINTABS]
 
