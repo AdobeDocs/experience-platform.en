@@ -1,8 +1,8 @@
 ---
 title: clickCollectionEnabled
 description: Learn how to configure Web SDK to tetermine if link click data is automatically collected.
+exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
 ---
-
 # `clickCollectionEnabled`
 
 The `clickCollectionEnabled` property is a boolean that determines if the Web SDK automatically collects link data. If you do not set this variable, its default value is `true` which means that link tracking data is automatically collected by default. Setting this property to `false` is valuable in cases where you prefer to track link data manually.

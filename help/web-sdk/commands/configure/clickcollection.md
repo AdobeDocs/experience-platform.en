@@ -1,8 +1,8 @@
 ---
 title: clickCollection
 description: Fine-tune click collection settings.
+exl-id: 5a128b4a-4727-4415-87b4-4ae87a7e1750
 ---
-
 # `clickCollection`
 
 The `clickCollection` object contains several variables that help you control automatically collected link data. Use these variables when you want to include or exclude types of links from data collection.
