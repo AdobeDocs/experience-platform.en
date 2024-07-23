@@ -80,7 +80,7 @@ A list of individual runs and their particular metrics is displayed, along with 
 
 Each individual dataflow run shows the following details:
 
-- **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at. For streaming dataflow runs, Experience Platform captures metrics based on the start of the dataflow run, in the form of hourly metrics. For streaming dataflow runs, if a dataflow run started, for example,  at 10:30PM, the metric shows the start time as 10:00 PM in the UI.
+- **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at. For streaming dataflow runs, Experience Platform captures metrics based on the start of the dataflow run, in the form of hourly metrics. This means that for streaming dataflow runs, if a dataflow run started for example at 10:30PM, the metric shows the start time as 10:00 PM in the UI.
 - **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow run to process.
   - For **[!UICONTROL completed]** runs, the processing time metric always shows one hour.
   - For dataflow runs which are still in a **[!UICONTROL processing]** state, the window to capture all the metrics stays open for more than an hour, to process all metrics that correspond to the dataflow run. For example, a dataflow run that started at 9:30 AM might stay in a processing state for one hour and thirty minutes to capture and process all the metrics. Then, once the processing window closes and the status of the dataflow run updates to **completed**, the displayed processing time is changed to one hour.
@@ -170,6 +170,20 @@ The details page also displays a list of identities that failed and identities t
 
 ![Dataflow records for batch destinations with an error message highlighted.](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
+### View in monitoring {#view-in-monitoring}
+
+You can also select to view rich information about a certain dataflow and its dataflow runs in the monitoring dashboard. To view information about a dataflow in the monitoring dashboard:
+
+1. Navigate to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** tab
+2. Navigate to the dataflow that you want to inspect.
+3. Select the ellipsis symbol and ![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png) **[!UICONTROL View in monitoring]**.
+
+![Select View in monitoring in the destinations workflow to get more information about a dataflow.](/help/dataflows/assets/ui/monitor-destinations/view-in-monitoring.png)
+
+>[!SUCCESS]
+>
+>You can now view information about the dataflow and its associated dataflow runs in the monitoring dashboard. Read the section below for further information. 
+
 ## Monitoring Destinations dashboard {#monitoring-destinations-dashboard}
 
 >[!NOTE]
@@ -212,17 +226,18 @@ Use the arrow icon (![arrow icon](/help/dataflows/assets/ui/monitor-destinations
 
 The **[!UICONTROL Activation]** graph is displayed by default and you can disable it to expand the list of destinations below. Select the **[!UICONTROL Metrics and graphs]** toggle to disable the graphs.
 
-The **[!UICONTROL Activation]** panel displays a list of destinations that contain at least one existing account. This list also includes information on the profiles received, identities activated, identities failed, identities excluded, activation rate, total failed dataflows, and the last updated date for these destinations. Not all metrics are available for all destination types. The table below outlines the metrics and information available per destination type, streaming or batch.
+The **[!UICONTROL Activation]** panel displays a list of destinations that contain at least one existing account. This list also includes information on the profiles received, identities activated, identities failed, identities excluded, activation rate, total failed dataflows, and the last updated date for these destinations. Not all metrics are available for all destination types. The table below outlines the metrics and information available per destination type, streaming or batch, as well as definitions for the metrics.
 
-| Metric | Destination type |
----------|----------|
-| **[!UICONTROL Profiles received]** | Streaming and batch |
-| **[!UICONTROL Identities activated]** | Streaming and batch |
-| **[!UICONTROL Identities failed]** | Streaming |
-| **[!UICONTROL Identities excluded]** | Streaming and batch |
-| **[!UICONTROL Activation rate]** | Streaming |
-| **[!UICONTROL Total failed dataflows]** | Batch |
-| **[!UICONTROL Last updated]** | Streaming and batch |
+| Metric |  Description | Destination type |
+|---------|----------|----------|
+| **[!UICONTROL Records received]** | | Streaming and batch |
+| **[!UICONTROL Records activated]**|  | Streaming and batch |
+| **[!UICONTROL Records failed]** | | Streaming |
+| **[!UICONTROL Records skipped]** | | Streaming and batch |
+| **[!UICONTROL Data type]** | | Streaming and batch |
+| **[!UICONTROL Activation rate]** | | Streaming |
+| **[!UICONTROL Total failed dataflows]** | | Batch |
+| **[!UICONTROL Last updated]** | | Streaming and batch |
 
 ![Monitoring dashboard with all activated destinations highlighted.](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
