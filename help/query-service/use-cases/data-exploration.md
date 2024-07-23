@@ -55,14 +55,13 @@ The following example uses a different dataset to illustrate this point.
 
 >[!NOTE]
 >
->If you want to try this example out, you can ingest the provided sample file ([`Drug_checkout_data`](../images/use-cases/drug_checkout_data.zip)) into Platform and configure your schema mapping. 
+>If you want to try this example out, you can ingest the provided sample file ([`drug_checkout_data`](../images/use-cases/drug_checkout_data.zip)) into Platform and configure your schema mapping. 
 
-The Drug_checkout_data file is a deeply nested set of 35,000 records. Use the SQL statement `SELECT * FROM drug_orders;` to preview of the first set of records in the JSON-based drug_orders dataset. 
+The `drug_checkout_data` file is a deeply nested set of 35,000 records. Use the SQL statement `SELECT * FROM drug_orders;` to preview of the first set of records in the JSON-based `drug_orders` dataset. 
 
 The image below shows a preview of the file and its records.
 
 ![A preview of the first set of records in the JSON-based drug_orders dataset.](../images/use-cases/drug-orders-preview.png)
-
 
 ### Use SQL to generate insights on batch ingestion process {#sql-insights-on-batch-ingestion}
 
@@ -124,7 +123,7 @@ When you execute this query in the Query Editor, the results are truncated to 10
 
 ## Next steps {#next-steps}
 
-By reading this document, you learned the essentials of verifying and validating records in ingested batches and handling common errors that result from the data ingestion process. You also gained insights into accessing dataset batch metadata, understanding logical and physical partitions, and querying specific batches using SQL commands. This knowledge can help you ensure data integrity and optimize your data storage on Platform.
+By reading this document, you learned the essentials of verifying and validating records in ingested batches as part of the data ingestion process. You also gained insights into accessing dataset batch metadata, understanding logical and physical partitions, and querying specific batches using SQL commands. This knowledge can help you ensure data integrity and optimize your data storage on Platform.
 
 Next, you should practice data ingestion to apply the concepts learned. Ingest a sample dataset into Platform with either the provided sample files or your own data. If you have not done so already, read the tutorial on how to [ingest data into Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
 
