@@ -16,7 +16,7 @@ In the Adobe Experience Platform user interface, you can view and monitor the at
 
 ## View destination details {#view-details}
 
-Follow the steps below to view more details about an existing destination.
+Follow the steps below to view more details about an existing destination. You can find out the destination ID of a destination, the user who created the destination, when it was created, and other information.
 
 1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destinations.
 
@@ -26,11 +26,15 @@ Follow the steps below to view more details about an existing destination.
 
     ![Filter destinations](../assets/ui/details-page/filter-destinations.png)
 
-1. Select the name of the destination that you want to view.
+1. Select the row of the destination for which you'd like to bring up more information. This brings up a right rail with information about the destination, including the destination ID, the user who created the destination connection, and other information.
+
+    ![Destination ID in right rail](../assets/ui/details-page/right-rail-info-including-destination-id.png)
+
+1. Alternatively, you can bring up other information about the destination by selecting *the name of the destination* that you want to view.
 
     ![Select destination](../assets/ui/details-page/destination-select.png)
 
-1. The details page for the destination appears, showing its available controls. 
+1. The details page for the destination appears in the right rail, showing its available controls. 
 
     ![Destination details](../assets/ui/details-page/destination-details.png)
 
@@ -133,4 +137,4 @@ To edit the existing activation schedule of multiple audiences at the same time,
 
 >[!NOTE]
 >
->For details on exploring the details page of a audience, refer to the [Segmentation UI overview](../../segmentation/ui/overview.md#segment-details).
+>For details on exploring the details page of a audience, refer to the [Audience Portal overview](../../segmentation/ui/audience-portal.md#segment-details).

@@ -65,7 +65,7 @@ Currently, namespace priority influences system behavior of Real-Time Customer P
 
 ### Identity Service: Identity optimization algorithm
 
-For relatively complex graph structures, namespace priority plays an important role in ensuring that the correct links are removed when graph collapse scenarios happen. For more information read the [[!DNL Identity Optimization Algorithm] overview](../identity-graph-linking-rules/identity-optimization-algorithm.md).
+For relatively complex graph structures, namespace priority plays an important role in ensuring that the correct links are removed when graph collapse scenarios happen. For more information read the [identity optimization algorithm overview](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
 ### Real-Time Customer Profile: primary identity determination for experience events
 
@@ -139,6 +139,12 @@ Data hygiene record delete requests functions in the following manner, for a giv
 * Data lake: Deletes any record with the specified identity as primary identity.
 
 For more information, read the [advanced lifecycle management overview](../../hygiene/home.md).
+
+### Computed attributes
+
+Computed attributes does not use namespace priority to compute values. If you are using computed attributes, you must ensure that the CRM ID is designated as your primary identity for WebSDK. This limitation is expected to be resolved in August 2024.
+
+For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
 
 ### Data lake
 
