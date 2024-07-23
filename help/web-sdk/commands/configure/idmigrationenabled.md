@@ -26,8 +26,8 @@ Set the `idMigrationEnabled` boolean when running the `configure` command. If yo
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "idMigrationEnabled": false
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  idMigrationEnabled: false
 });
 ```
