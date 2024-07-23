@@ -614,21 +614,33 @@ You can also add the `commerce` XDM object.
 ```js
 alloy("sendEvent", {
     "xdm": {
-        "commerce": {
-            "order": {
-                "purchaseID": "a8g784hjq1mnp3",
-                "purchaseOrderNumber": "VAU3123",
-                "currencyCode": "USD",
-                "priceTotal": 999.98
+        "_experience": {
+            "decisioning": {
+                "propositions": [
+                    {
+                        "scope": "orderConfirm" //example scope name
+                    }
+                ],
+                "propositionEventType": {
+                    "display": 1
+                }
             }
+        },
+        "eventType": "decisioning.propositionDisplay"
+    },
+    "commerce": {
+        "order": {
+            "purchaseID": "a8g784hjq1mnp3",
+            "purchaseOrderNumber": "VAU3123",
+            "currencyCode": "USD",
+            "priceTotal": 999.98
         }
     },
     "data": {
         "__adobe": {
             "target": {
-                "orderId": "ABC123",
-                "productPurchasedId": "SKU-00002,SKU-00003"
-                "orderTotal": 1337.89
+                "pageType": "Order Confirmation",
+                "user.categoryId": "Insurance"
             }
         }
     }
