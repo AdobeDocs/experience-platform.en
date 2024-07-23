@@ -1,6 +1,7 @@
 ---
 title: Explore, Troubleshoot, and Verify Batch Ingestion with SQL
 description: Learn how to understand and manage the data ingestion process in Adobe Experience Platform. This document includes how to verify batches, handle errors, and query ingested data.
+exl-id: 8f49680c-42ec-488e-8586-50182d50e900
 ---
 # Explore, troubleshoot, and verify batch ingestion with SQL
 
@@ -127,4 +128,4 @@ By reading this document, you learned the essentials of verifying and validating
 
 Next, you should practice data ingestion to apply the concepts learned. Ingest a sample dataset into Platform with either the provided sample files or your own data. If you have not done so already, read the tutorial on how to [ingest data into Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
 
-Alternatively, you could learn how to [connect and verify Query Service with a variety of desktop client applications](../clients/overview.md) to enhance your data analysis capabilities. 
+Alternatively, you could learn how to [connect and verify Query Service with a variety of desktop client applications](../clients/overview.md) to enhance your data analysis capabilities.
