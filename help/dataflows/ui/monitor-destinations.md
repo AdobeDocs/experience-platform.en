@@ -275,9 +275,9 @@ Use the **[!UICONTROL Show failures only]** toggle to display only the failed ru
 
 ### Audience-level view {#segment-level-view}
 
-When **[!UICONTROL Audiences]** is selected, you see a list of the audiences which were activated to the selected dataflow, within the selected time range. This screen includes audience-level information about the identities activated, identities excluded, as well as the status and the time of the last dataflow run. By reviewing the metrics for identities excluded and activated, you can verify if an audience has been successfully activated or not.
+When **[!UICONTROL Audiences]** is selected, you see a list of the audiences which were activated to the selected dataflow, within the selected time range. This screen includes audience-level information about the records activated, records excluded, as well as the status and the time of the last dataflow run. By reviewing the metrics for records excluded and activated, you can verify if an audience has been successfully activated or not.
 
-For example, you are activating an audience called "Loyalty Members in California" to an Amazon S3 destination "Loyalty Members California December". Let's assume that there are 100 profiles in the selected audience but only 80 out of 100 profiles contain Loyalty ID attributes and you have defined the export mapping rules as `loyalty.id` is required. In this case, on an audience level, you will see 80 identities activated, and 20 identities excluded.
+For example, you are activating an audience called "Loyalty Members in California" to an Amazon S3 destination "Loyalty Members California December". Let's assume that there are 100 profiles in the selected audience but only 80 out of 100 records contain Loyalty ID attributes and you have defined the export mapping rules as `loyalty.id` is required. In this case, on an audience level, you will see 80 records activated, and 20 records excluded.
 
 >[!IMPORTANT]
 >
@@ -296,9 +296,9 @@ The dataflow runs page displays information on your dataflow runs, including the
 
 When you drill down into the dataflow runs page from the [audience-level view](#segment-level-view), you have the option of filtering the dataflow runs by the following options:
 
-- **[!UICONTROL Dataflow runs with failed identities]**: For the selected audience, this option lists all the dataflow runs that failed for activation. To inspect why identities in a certain dataflow run failed, see the [dataflow run details page](#dataflow-run-details-page) for that dataflow run.
-- **[!UICONTROL Dataflow runs with skipped identities]**: For the selected audience, this option lists all the dataflow runs where some of the identities were not fully activated and some profiles were skipped. To inspect why identities in a certain dataflow run were skipped, see the [dataflow run details page](#dataflow-run-details-page) for that dataflow run.
-- **[!UICONTROL Dataflow runs with activated identities]**: For the selected audience, this option lists all the dataflow runs that have identities which were successfully activated.
+- **[!UICONTROL Dataflow runs with failed records]**: For the selected audience, this option lists all the dataflow runs that failed for activation. To inspect why records in a certain dataflow run failed, see the [dataflow run details page](#dataflow-run-details-page) for that dataflow run.
+- **[!UICONTROL Dataflow runs with excluded records]**: For the selected audience, this option lists all the dataflow runs where some of the records were not fully activated and some profiles were skipped. To inspect why records in a certain dataflow run were skipped, see the [dataflow run details page](#dataflow-run-details-page) for that dataflow run.
+- **[!UICONTROL Dataflow runs with activated records]**: For the selected audience, this option lists all the dataflow runs that have records which were successfully activated.
 
 ![Radio buttons showing how to filter dataflow runs for audiences.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
@@ -314,13 +314,13 @@ The dataflow run details page, in addition to the details shown on the dataflow 
 - **[!UICONTROL IMS org ID]**: The organization the dataflow belongs to.
 - **[!UICONTROL Last updated]**: The time the dataflow run was last updated.
 
-The details page also has a toggle to switch between dataflow run errors and audiences. This option is only available for dataflow runs in batch destinations.
+The details page also has a toggle to switch between dataflow run errors and audiences. This option is only available for dataflow runs in batch destinations and for the [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) streaming destination.
 
-The dataflow run errors view displays a list of identities that failed and identities that were excluded. Information for both the failed and excluded identities is displayed, including the error code, identity count, and description. By default, the list displays the failed identities. To show skipped identities, select the **[!UICONTROL Identities excluded]** toggle.
+The dataflow run errors view displays a list of records that failed and records that were skipped. Information for both the failed and skipped records is displayed, including the error code, identity count, and description. By default, the list displays the failed records. To show skipped records, select the **[!UICONTROL Records skipped]** toggle.
 
 ![Identities excluded toggle highlighted in the monitoring view](../assets/ui/monitor-destinations/identities-excluded.png)
 
-When **[!UICONTROL Audiences]** is selected, you see a list of the audiences which were activated in the selected dataflow run. This screen includes audience-level information about the identities activated, identities excluded, as well as the status and the time of the last dataflow run.
+When **[!UICONTROL Audiences]** is selected, you see a list of the audiences which were activated in the selected dataflow run. This screen includes audience-level information about the records activated, records excluded, as well as the status and the time of the last dataflow run.
 
 ![Audiences view in the dataflow run details screen.](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 
