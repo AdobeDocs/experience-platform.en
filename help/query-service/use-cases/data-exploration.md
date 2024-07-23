@@ -4,7 +4,7 @@ description: Learn how to understand and manage the data ingestion process in Ad
 ---
 # Explore, troubleshoot, and verify batch ingestion with SQL
 
-This document explains the data ingestion process in Adobe Experience Platform and details how to verify and validate records in ingested batches with SQL. This document teaches you how to: 
+This document explains how to verify and validate records in ingested batches with SQL. This document teaches you how to: 
 
 - Handle errors that may arise during the ingestion process
 - Access dataset batch metadata
@@ -24,39 +24,11 @@ To help your understanding of the concepts discussed in this document, you shoul
 - **System metadata in datasets**: See the [Catalog Service overview](../../catalog/home.md) to learn how system metadata fields are used to track and query ingested data.
 - **Experience Data Model (XDM)**: See the [schemas UI overview](../../xdm/ui/overview.md) and the ['basics of schema composition'](../../xdm/schema/composition.md) to learn about XDM schemas and how they represent and validate the structure and format of data ingested into Platform.
 
-## Basic principles of data ingestion in Platform {#data-ingestion-principles}
-
-Data ingestion involves the collection and materializing of records in batches into Experience Platform. A "batch" is a data ingestion concept where a collection of records contained in a file, or streamed directly from the source, are materialized as a unit on the data lake. Specifically, a batch refers to a collection of records that are processed as a unit.
-
-When ingesting data into Platform, it is best practice to verify and validate the records within a batch that have been successfully ingested. Additionally, you must be aware of the potential issues that can arise during the ingestion process. Error codes inform you of these issues when you investigate a dataset. Ingestion issues can include rows being skipped, stored separately, or data type values being inaccurately converted to NULL. This guide highlights the importance of monitoring and addressing these potential process errors and how to address them.
-
-## Investigate any failed batch dataset ingestions {#investigate-failed-ingestions}
-
-To investigate any failed batch dataset ingestion, first navigate to the [!UICONTROL Datasets] dashboard. In the Experience Platform UI, select **[!UICONTROL Datasets]** in the left-navigation to open the [!UICONTROL Datasets] dashboard. Next, select the name of a failed dataset from the [!UICONTROL Browse] tab to access the [!UICONTROL Dataset activity] screen.
-
-![The Platform UI Datasets dashboard with Datasets highlighted in left navigation.](../images/use-cases/datasets-workspace.png)
-
-The [!UICONTROL Dataset activity] view appears. This view contains details of your selected dataset. Ingested batches are displayed in a table format. To open the [!UICONTROL Batch overview], select a [!UICONTROL Batch ID] of a failed batch ingestion.
-
-![The Datasets browse tab with a failed batch ingestion highlighted.](../images/use-cases/failed-batch-ingestions.png)
-
-The [!UICONTROL Batch overview] appears with information on the failed batch ingestion. The error codes are available in this workspace.
-
-![The Batch overview with error codes highlighted.](../images/use-cases/error-codes.png)
-
-### Common batch errors {#batch-errors}
-
-When ingesting data into Experience Platform, you may encounter several common errors that can impact the success of your data batches. Understanding these errors is crucial for troubleshooting and ensuring data integrity. Here are the main types of ingestion errors that you might face:
-
-- `ERROR`: This code indicates severe issues like data corruption or format non-conformance, causing the entire batch to fail.
-- `DCVS`: This code represents less serious issues like missing required fields. These rows are skipped and stored separately. They are accessible via error diagnostics tools.
-- `MAPPER`: These errors occur during data type conversion and result in NULL values being recorded. These records can be included in the final dataset but may need further exploration.
-
 ## Access dataset batch metadata {#access-dataset-batch-metadata}
 
 To ensure that system columns (metadata columns) are included in the query results, use the SQL command `set drop_system_columns=false` in your Query Editor. This configures the behavior of your SQL query session. This input must be repeated if you start a new session.
 
-Next, to view the system fields of the dataset, execute a SELECT all statement to display the results from the dataset, for example `select * from movie_data`. The results include two new columns on the right-hand side `acp_system_metadata` and `_ACP_BATCHID`. The metadata columns `_acp_system_metadata` and `_ACP_BATCHID` help identify the logical and physical partitions of ingested data.
+Next, to view the system fields of the dataset, execute a SELECT all statement to display the results from the dataset, for example `select * from movie_data`. The results include two new columns on the right-hand side `_acp_system_metadata` and `_ACP_BATCHID`. The metadata columns `_acp_system_metadata` and `_ACP_BATCHID` help identify the logical and physical partitions of ingested data.
  
 ![The DBVisualizer UI with the movie_data table and its metadata columns displayed and highlighted.](../images/use-cases/movie_data-table-with-metadata-columns.png)
 
@@ -122,7 +94,15 @@ Next, validate and verify the records that have been ingested into the dataset w
 >
 >To retrieve the batch ID and query records associated with that batch ID, you must first  create a batch within Platform. If you want to test the process yourself, you can ingest CSV data into Platform. Read the guide on how to [map a CSV file to an existing XDM schema using AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md). A [sample profile CSV file](../images/use-cases/sample-profiles.csv) is available here for your convenience.
 
-Once you have ingested a batch, [navigate to the [!UICONTROL Datasets activity tab]](#investigate-failed-ingestions) for the dataset you ingested data into. In the [!UICONTROL Dataset activity] view, select a batch from the list of available batches and copy the [!UICONTROL Batch ID] from the details panel on the right.
+Once you have ingested a batch, you must navigate to the [!UICONTROL Datasets activity tab] for the dataset you ingested data into. 
+
+In the Experience Platform UI, select **[!UICONTROL Datasets]** in the left-navigation to open the [!UICONTROL Datasets] dashboard. Next, select the name of the dataset from the [!UICONTROL Browse] tab to access the [!UICONTROL Dataset activity] screen.
+
+![The Platform UI Datasets dashboard with Datasets highlighted in left navigation.](../images/use-cases/datasets-workspace.png)
+
+The [!UICONTROL Dataset activity] view appears. This view contains details of your selected dataset. It includes any ingested batches which are displayed in a table format. 
+
+Select a batch from the list of available batches and copy the [!UICONTROL Batch ID] from the details panel on the right.
 
 ![The Experience Platform Datasets UI showing the ingested records with a batch ID highlighted.](../images/use-cases/batch-id.png)
 
@@ -134,7 +114,11 @@ WHERE  _acp_batchid='01H00BKCTCADYRFACAAKJTVQ8P'
 LIMIT 1;
 ```
 
-The `_ACP_BATCHID` keyword is used to filter the [!UICONTROL Batch ID]. The `LIMIT` clause is helpful if you want to restrict the number of rows displayed, but a filter condition is more desirable. 
+The `_ACP_BATCHID` keyword is used to filter the [!UICONTROL Batch ID]. 
+
+>[!TIP]
+>
+>The `LIMIT` clause is helpful if you want to restrict the number of rows displayed, but a filter condition is more desirable. 
 
 When you execute this query in the Query Editor, the results are truncated to 100 rows. The Query Editor is designed for quick previews and investigation. To retrieve up to 50,000 rows, you can use a third-party tool like DBVisualizer or DBeaver.
 
