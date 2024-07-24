@@ -8,7 +8,7 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 
 >[!AVAILABILITY]
 >
->This feature is not yet available; the beta program for identity graph linking rules is expected to start in July on development sandboxes. Contact your Adobe account team for information on the participation criteria.
+>Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
 
 ## Table of contents
 

@@ -6,6 +6,10 @@ exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 ---
 # Identity graph linking rules configuration guide
 
+>[!AVAILABILITY]
+>
+>Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
+
 Read this document for a step-by-step by guide that you can follow when implementing your data with Adobe Experience Platform Identity Service.
 
 Step-by-step outline:

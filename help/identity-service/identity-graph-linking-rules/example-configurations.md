@@ -1,11 +1,13 @@
 ---
 title: Example Configurations 
 description: Learn about example configurations with using the graph simulation tool.
-hide: true
-hidefromtoc: true
 badge: Beta
 ---
 # Example graph configurations
+
+>[!AVAILABILITY]
+>
+>Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
 
 >[!NOTE]
 >
