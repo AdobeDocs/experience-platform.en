@@ -320,7 +320,7 @@ Let's consider the following two profiles.
         "id": "johndoe_1@example.com"
       },
       {
-        "id": "johndoe_2@example.com"
+        "id": "doejohn_1@example.com"
       }
     ]
   },
@@ -351,10 +351,10 @@ Let's consider the following two profiles.
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_1@example.com"
+        "id": "johndoe_2@example.com"
       },
       {
-        "id": "johndoe_2@example.com"
+        "id": "doejohn_2@example.com"
       }
     ]
   },
@@ -394,8 +394,8 @@ Assuming deduplication by the [!DNL Email] namespace, the export file would cont
 
 |Email*|personalEmail|firstName|lastName|
 |---|---|---|---|
-|johndoe_1@example.com|johndoe@example.com|John|D|
 |johndoe_2@example.com|johndoe@example.com|John|D|
+|doejohn_2@example.com|johndoe@example.com|John|D|
 
 ### Deduplication use case 3: deduplication based on a single profile attribute {#deduplication-use-case-3}
 
