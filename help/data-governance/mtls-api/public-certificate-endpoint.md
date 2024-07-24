@@ -40,7 +40,9 @@ The following optional query parameters can be used when retrieving your public 
 
 **Request**
 
-+++A sample request to return the public certificate associated with your organization
+<!--  -->
+
+A sample request to return the public certificate associated with your organization
 
 ```shell
 curl -X GET https://experience.adobe.io/data/core/mtls/v1/certificate/public-certificate
@@ -50,11 +52,13 @@ curl -X GET https://experience.adobe.io/data/core/mtls/v1/certificate/public-cer
  -H 'x-api-key: {API_KEY}' 
 ```
 
-+++
+<!--  -->
 
 **Response**
 
 A successful response returns HTTP status 200 with the public certificate for your organization.
+
+<!--  -->
 
 A sample response that contains the public certificate for your organization.
 
@@ -94,7 +98,7 @@ A sample response that contains the public certificate for your organization.
 
 {style="table-layout:auto"}
 
-
+<!--  -->
 
 ## Next steps
 
