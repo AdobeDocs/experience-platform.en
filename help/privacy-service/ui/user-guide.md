@@ -26,7 +26,7 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 ![UI dashboard](../images/user-guide/dashboard.png)
 
-### Regulation Type
+### Regulation Type 
 
 [!DNL Privacy Service] supports job requests for several privacy regulations. The following table lists the supported regulations and their corresponding label as represented in the UI: 
 
@@ -37,20 +37,19 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 | [!UICONTROL CCPA] | The [!DNL California Consumer Privacy Act] |
 | [!UICONTROL CPRA_USA] | The [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA] | The [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL FDBR_USA] | The [!DNL Florida Digital Bill of Rights] |
 | [!UICONTROL GDPR] | The European Union's [!DNL General Data Protection Regulation] |
 | [!UICONTROL HIPAA_AUS] | The [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | Brazil's [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL MHMDA] | The [!DNL Washington My Health My Data Act] |
 | [!UICONTROL NZPA_NZL] | The New Zealand [!DNL Privacy Act] |
+| [!UICONTROL OCPA_USA] | The [!DNL Oregon Consumer Privacy Act] |
 | [!UICONTROL PDPA_THA] | Thailand's [!DNL Personal Data Protection Act] |
+| [!UICONTROL TDPSA_USA] | The [!DNL Texas Data Privacy and Security Act] |
 | [!UICONTROL UCPA]  | The [!DNL Utah Consumer Privacy Act] |
 | [!UICONTROL VCDPA_USA] | The [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
-
-<!--Not released yet:
-| [!UICONTROL PDPA_VNM] | Vietnam's [!DNL Personal Data Protection Decree] |
- -->
 
 >[!NOTE]
 >
