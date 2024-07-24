@@ -188,8 +188,7 @@ You can also select to view rich information about a certain dataflow and its da
 
 >[!NOTE]
 >
->- Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
->- For the [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [HTTP API](/help/destinations/catalog/streaming/http-destination.md) destinations, the metrics related to identities excluded, failed, and activated are estimated. Higher volumes of activation data lead to higher accuracy of the metrics.
+>Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
@@ -292,7 +291,7 @@ Use the filter button ![filter](../assets/ui/monitor-destinations/filter-add.png
 
 ### Dataflow runs page {#dataflow-runs-page}
 
-The dataflow runs page displays information on your dataflow runs, including the dataflow run start time, processing time, profiles received, identities activated, identities excluded, identities failed, activation rate, and status.
+The dataflow runs page displays information on your dataflow runs, including the dataflow run start time, processing time, records received, records activated, records excluded, records failed, activation rate, and status.
 
 When you drill down into the dataflow runs page from the [audience-level view](#segment-level-view), you have the option of filtering the dataflow runs by the following options:
 
@@ -314,7 +313,7 @@ The dataflow run details page, in addition to the details shown on the dataflow 
 - **[!UICONTROL IMS org ID]**: The organization the dataflow belongs to.
 - **[!UICONTROL Last updated]**: The time the dataflow run was last updated.
 
-The details page also has a toggle to switch between dataflow run errors and audiences. This option is only available for dataflow runs in batch destinations and for the [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) streaming destination.
+The details page also has a toggle to switch between dataflow run errors and audiences. This option is only available for dataflow runs in batch destinations and for the [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) streaming destination. 
 
 The dataflow run errors view displays a list of records that failed and records that were skipped. Information for both the failed and skipped records is displayed, including the error code, identity count, and description. By default, the list displays the failed records. To show skipped records, select the **[!UICONTROL Records skipped]** toggle.
 
