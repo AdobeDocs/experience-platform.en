@@ -7,7 +7,7 @@ exl-id: e5cc72b0-d6d6-430b-9321-4835c1f77581
 
 >[!IMPORTANT]
 >
-> The Analytics Events View is consolidated into the **Analytics Events 2.0 (Beta) plugin**.  It will be removed from the Assurance in the coming future. We recommend to use the **Analytics Events 2.0 (Beta) plugin** for your Analytics debugging for the Assurance sessions.
+>The Analytics Events View is consolidated into the **Analytics Events 2.0 (Beta) plugin**.  It will be removed from the Assurance in the coming future. We recommend to use the **Analytics Events 2.0 (Beta) plugin** for your Analytics debugging for the Assurance sessions.
 
 The Adobe Experience Platform Assurance integration with Adobe Analytics provides a richer view of SDK events to users debugging and validating their Adobe Analytics implementation. The view now shows lifecycle and action/state events sent to Adobe Analytics from the [Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/adobe-analytics/). The view also features "response" detail that provides information on how the events were processed after the application of each respective report suite's processing rules.
 
