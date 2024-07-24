@@ -62,29 +62,29 @@ A successful response returns HTTP status 200 with the public certificate for yo
 
 ```json
 {
-  "results": [
-    {
-      "certCommonName": "Adobe Experience Platform",
-      "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIDQTCCAimgAwIBAgITBmyfACAfma......KJY5u89CjAwj\n-----END CERTIFICATE-----",
-      "expiryDate": "2024-07-17T21:27:57.434Z"
-    }
-  ],
-  "total": 0,
-  "count": 0,
-  "_links": {
-    "next": {
-      "href": "string",
-      "templated": true
-    },
-    "prev": {
-      "href": "string",
-      "templated": true
-    },
-    "page": {
-      "href": "string",
-      "templated": true
-    }
-  }
+   "results":[
+      {
+         "certCommonName":"Adobe Experience Platform",
+         "publicCertificate":"-----BEGIN CERTIFICATE-----\nMIIDQTCCAimgAwIBAgITBmyfACAfma......KJY5u89CjAwj\n-----END CERTIFICATE-----",
+         "expiryDate":"2024-07-17T21:27:57.434Z"
+      }
+   ],
+   "total":0,
+   "count":0,
+   "_links":{
+      "next":{
+         "href":"string",
+         "templated":true
+      },
+      "prev":{
+         "href":"string",
+         "templated":true
+      },
+      "page":{
+         "href":"string",
+         "templated":true
+      }
+   }
 }
 ```
 
