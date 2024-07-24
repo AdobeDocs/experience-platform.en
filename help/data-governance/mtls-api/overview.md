@@ -9,8 +9,8 @@ Use the MTLS Service API to securely retrieve public certificates issued by Adob
 
 ## Public certificate
 
-A public certificate is a digital document used to authenticate the identity of a server or client in secure communications. In the context of the mTLS Service API, these certificates ensure that data exchanges with Adobe Experience Platform are authenticated and encrypted. Retrieving and verifying these certificates through the API confirms their genuineness, enhancing the security and trustworthiness of your data transactions and protecting sensitive information.
+A public certificate is a digital document used to authenticate the identity of a server or client in secure communications. In the context of the mTLS Service API, these certificates ensure that data exchanges with Adobe Experience Platform are authenticated and encrypted. Retrieving and verifying these certificates through the API confirms their genuineness, enhancing the security and trustworthiness of your data transactions and protecting sensitive information. To learn how to retrieve your public certificate, see the [endpoint guide](./public-certificate-endpoint.md) to learn how to make calls.
 
 ## Next steps
 
-To begin making calls using the MTLS Service API, read the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more. Following that, see the [endpoint guide](./public-certificate-endpoint.md) to learn how to make calls.
+To begin making calls using the MTLS Service API, read the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.

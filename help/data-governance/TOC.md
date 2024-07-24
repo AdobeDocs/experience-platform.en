@@ -27,6 +27,7 @@ role: User,Developer,Admin
 * MTLS Service API {#mtls-api}
   * [Overview](mtls-api/overview.md)
   * [Getting started](mtls-api/getting-started.md)
+  * [Public Certificate endpoint](mtls-api/public-certificate-endpoint.md)
 * Policy Service API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
