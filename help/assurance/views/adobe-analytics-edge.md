@@ -60,7 +60,7 @@ The Analytics Edge validation view allows you to easily view the results on vali
 
 Use the Analytics Event View if you are using the **Adobe Analytics** mobile extension. This view allows you to easily view Analytics Events sent from your connected client, including Track Action, Track State, and Lifecycle events. This view is active while the "Analytics Edge (Beta)" toggle on the top right is disabled.
 
-![An image that shows toggle which switched to Analytics View.](./images/adobe-analytics-edge/direct-analytics-view-toggle.png)
+![An image that shows toggle which switched to Analytics View.](./images/adobe-analytics-edge/direct-analytics-view-toggle-button.png)
 
 By selecting one of the Analytics events in the event table, details of how the event were processed can be viewed on the right panel.
 
