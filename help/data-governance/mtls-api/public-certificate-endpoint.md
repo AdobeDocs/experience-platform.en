@@ -63,7 +63,7 @@ A successful response returns HTTP status 200 with the public certificate for yo
   "results": [
     {
       "certCommonName": "Adobe Experience Platform",
-      "publicCertificate": "-----BEGIN CERTIFICATE-----MIIDQTCCAimgAwIBAgITBmyfACAfma......KJY5u89CjAwj-----END CERTIFICATE-----",
+      "publicCertificate": "-----BEGIN CERTIFICATE-----\nMIIDQTCCAimgAwIBAgITBmyfACAfma......KJY5u89CjAwj\n-----END CERTIFICATE-----",
       "expiryDate": "2024-07-17T21:27:57.434Z"
     }
   ],
@@ -83,7 +83,7 @@ A successful response returns HTTP status 200 with the public certificate for yo
       "templated": true
     }
   }
-} 
+}
 ```
 
 +++
