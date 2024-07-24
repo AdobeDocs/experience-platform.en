@@ -14,6 +14,10 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 
 * [Overview](./overview.md)
 * [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [Namespace priority](./namespace-priority.md)
+* [Graph simulation UI](./graph-simulation.md)
+* [Identity settings UI](./identity-settings-ui.md)
+* [Example graph configurations](./configuration.md)
 * [Example scenarios](./example-scenarios.md)
 
 With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRM ID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("graph collapse"). To prevent these unwanted merges, you can use configurations provided through identity graph linking rules and allow for accurate personalization for your users.

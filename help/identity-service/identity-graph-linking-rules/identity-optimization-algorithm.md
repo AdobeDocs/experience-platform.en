@@ -156,6 +156,7 @@ View the diagram below to better understand how anonymous event association work
 For more information on identity graph linking rules, read the following documentation:
 
 * [Identity graph linking rules overview](./overview.md)
+* [Namespace priority](./namespace-priority.md)
 * [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
 * [Identity linking logic](../features/identity-linking-logic.md)
 * [Identity Service and Real-Time Customer Profile](../identity-and-profile.md)
