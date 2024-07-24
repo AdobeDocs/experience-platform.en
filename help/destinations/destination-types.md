@@ -14,7 +14,11 @@ In Adobe Experience Platform, we distinguish between different destination types
 
 Finally, connections can also be distinguished between public destinations available across all organizations in the destinations catalog, and private destinations which Real-Time CDP Ultimate customers can create to satisfy their specific export use cases.
 
+>[!BEGINSHADEBOX]
+
 ![Types of destinations diagram.](./assets/destination-types/types-of-destinations-no-highlight.png "Types of destinations diagram."){zoomable="yes"}
+
+>[!ENDSHADEBOX]
 
 ## Connections {#connections}
 
@@ -24,8 +28,8 @@ Finally, connections can also be distinguished between public destinations avail
 
 Profile export destinations receive raw data, often with email address as the primary key. Experience Platform currently supports two types of profile export destinations:
 
-* [Streaming profile export destinations (enterprise destinations)](#streaming-profile-export)
 * [Batch (file-based) destinations](#file-based)
+* [Advanced enterprise destinations (streaming profile export destinations) ](#streaming-profile-export)
 
 ### Advanced enterprise destinations (streaming profile export destinations) {#streaming-profile-export}
 

@@ -24,8 +24,8 @@ Set the `targetMigrationEnabled` boolean when running the `configure` command. I
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "targetMigrationEnabled": true
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  targetMigrationEnabled: true
 });
 ```
