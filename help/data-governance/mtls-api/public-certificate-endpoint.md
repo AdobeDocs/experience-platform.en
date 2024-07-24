@@ -86,8 +86,6 @@ A successful response returns HTTP status 200 with the public certificate for yo
 }
 ```
 
-+++
-
 | Property  |  Description |
 | --- | --- |
 | `certCommonName` | The common name (CN) of the certificate, which typically represents the name or identity of the server or entity the certificate is issued to.|
@@ -95,6 +93,8 @@ A successful response returns HTTP status 200 with the public certificate for yo
 | `expiryDate` | The date and time when the public certificate will expire, formatted in ISO 8601 (UTC).|
 
 {style="table-layout:auto"}
+
++++
 
 ## Next steps
 
