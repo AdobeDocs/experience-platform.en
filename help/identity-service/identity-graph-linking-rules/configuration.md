@@ -2,6 +2,7 @@
 title: Identity graph linking rules configuration guide
 description: Learn the recommended steps to follow when implementing your data with identity graph linking rules configurations.
 badge: Beta
+exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 ---
 # Identity graph linking rules configuration guide
 
