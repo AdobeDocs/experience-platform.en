@@ -87,9 +87,9 @@ Please note that in order to retrieve post-processing information, the logged-in
 
 For an Analytics track event, the detailed view contains the following parts:
 
-- An originating SDK Analytics request event.
-- Meta and context data from the request, such as report suite ID, SDK extension versions, and context data.
-- Post-processed information on the Analytics event that contains the mapping of revars, evars, and props.
+* An originating SDK Analytics request event.
+* Meta and context data from the request, such as report suite ID, SDK extension versions, and context data.
+* Post-processed information on the Analytics event that contains the mapping of revars, evars, and props.
 
 ### Analytics View Validation
 
