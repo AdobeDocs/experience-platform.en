@@ -1,8 +1,8 @@
 ---
 title: Sharing Private Extension Packages in the Reactor API
 description: Learn how to authorize other businesses to share private extentsion packages in the Reactor API.
+exl-id: 3300a630-6d22-46e1-8b1b-b5d12a3ea44c
 ---
-
 # Sharing private extension packages
 
 >[!NOTE]
