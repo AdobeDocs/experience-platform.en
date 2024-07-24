@@ -1,13 +1,12 @@
 ---
 title: Explore, Troubleshoot, and Verify Batch Ingestion with SQL
-description: Learn how to understand and manage the data ingestion process in Adobe Experience Platform. This document includes how to verify batches, handle errors, and query ingested data.
+description: Learn how to understand and manage the data ingestion process in Adobe Experience Platform. This document includes how to verify batches and query ingested data.
 exl-id: 8f49680c-42ec-488e-8586-50182d50e900
 ---
 # Explore, troubleshoot, and verify batch ingestion with SQL
 
 This document explains how to verify and validate records in ingested batches with SQL. This document teaches you how to: 
 
-- Handle errors that may arise during the ingestion process
 - Access dataset batch metadata
 - Troubleshoot and ensure data integrity by querying batches
 
@@ -21,7 +20,6 @@ To help your understanding of the concepts discussed in this document, you shoul
 
 - **Data ingestion**: See the [data ingestion overview](../../ingestion/home.md) to learn the basics of how data is ingested into the Platform, including the different methods and processes involved.
 - **Batch ingestion**: See the [batch ingestion API overview](../../ingestion/batch-ingestion/overview.md) to learn the basic concepts of batch ingestion. Specifically, what a "batch" is and how it functions within Platform's data ingestion process.
-- **Error handling in data ingestion**: Learn about the [different types of errors that can occur](../../ingestion/quality/error-diagnostics.md#retrieve-errors) during data ingestion and [how to handle them](../../ingestion/batch-ingestion/troubleshooting.md#what-if-a-batch-fails).
 - **System metadata in datasets**: See the [Catalog Service overview](../../catalog/home.md) to learn how system metadata fields are used to track and query ingested data.
 - **Experience Data Model (XDM)**: See the [schemas UI overview](../../xdm/ui/overview.md) and the ['basics of schema composition'](../../xdm/schema/composition.md) to learn about XDM schemas and how they represent and validate the structure and format of data ingested into Platform.
 
@@ -92,7 +90,7 @@ Next, validate and verify the records that have been ingested into the dataset w
 
 >[!TIP]
 >
->To retrieve the batch ID and query records associated with that batch ID, you must first  create a batch within Platform. If you want to test the process yourself, you can ingest CSV data into Platform. Read the guide on how to [map a CSV file to an existing XDM schema using AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md). A [sample profile CSV file](../images/use-cases/sample-profiles.csv) is available here for your convenience.
+>To retrieve the batch ID and query records associated with that batch ID, you must first  create a batch within Platform. If you want to test the process yourself, you can ingest CSV data into Platform. Read the guide on how to [map a CSV file to an existing XDM schema using AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md).
 
 Once you have ingested a batch, you must navigate to the [!UICONTROL Datasets activity tab] for the dataset you ingested data into. 
 
