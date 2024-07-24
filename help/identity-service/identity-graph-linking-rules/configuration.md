@@ -99,7 +99,7 @@ You must ensure that a single namespace is used across all profiles that represe
 
 >[!TAB Without a singular person identifier namespace]
 
-Without a unique namespace to represent your person identifiers, you may end up with a graph that links to disparate person identifiers to the same ECID. In this example, both B2BCRM and B2CCRM are linked to the same ECID at the same time.
+Without a unique namespace to represent your person identifiers, you may end up with a graph that links to disparate person identifiers to the same ECID. In this example, both B2BCRM and B2CCRM are linked to the same ECID at the same time. This graph suggests that Tom, using his B2C login account, shared a device with Summer, using her B2B login account. However, the system will recognize that this is one profile (graph collapse).
 
 ![A graph scenario where two person identifiers are linked to the same ECID.](../images/graph-examples/multi_namespaces.png)
 

@@ -26,7 +26,7 @@ This is an example of a simple implementation scenario where online events (CRMI
 
 **Events:**
 
-You can create this scenario in graph simulation by entering the following events:
+You can create this scenario in graph simulation by copying the following events to text mode:
 
 * CRMID: Tom, ECID: 111
 
@@ -76,7 +76,7 @@ In this scenario, a CRMID is ingested and represents both online (experience eve
 
 **Events:**
 
-You can create this scenario in graph simulation by entering the following events:
+You can create this scenario in graph simulation by copying the following events to text mode:
 
 * CRMID: Tom, Email_LC_SHA256: tom<span>@acme.com
 * CRMID: Tom, ECID: 111
@@ -130,7 +130,7 @@ This scenario is similar to the previous one. However, in this scenario, hashed 
 
 **Events:**
 
-You can create this scenario in graph simulation by entering the following events:
+You can create this scenario in graph simulation by copying the following events to text mode:
 
 * CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 * CRMID: Tom, ECID: 111
@@ -191,7 +191,7 @@ Therefore, **it is crucial that the CRMID is always sent for every user**. Failu
 
 **Events:**
 
-You can create this scenario in graph simulation by entering the following events:
+You can create this scenario in graph simulation by copying the following events to text mode:
 
 * CRMID: John, loginID: ID_A
 * CRMID: John, loginID: ID_B
@@ -228,7 +228,7 @@ The case of "dangling" loginID also applies for this scenario.
 
 **Events:**
 
-You can create this scenario in graph simulation by entering the following events:
+You can create this scenario in graph simulation by copying the following events to text mode:
 
 * CRMID: John, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 * CRMID: John, loginID: ID_A
