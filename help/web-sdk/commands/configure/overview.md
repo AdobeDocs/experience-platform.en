@@ -23,13 +23,13 @@ These configuration settings are set whenever you use the extension to send data
 
 Run the `configure` command. This command is required before you can call any other Web SDK commands, such as [`sendEvent`](../sendevent/overview.md).
 
-The [`edgeConfigId`](edgeconfigid.md) and [`orgId`](orgid.md) properties are required. All other properties are optional, depending on your organization's implementation requirements.
+The [`datastreamId`](datastreamid.md) and [`orgId`](orgid.md) properties are required. All other properties are optional, depending on your organization's implementation requirements.
 
 See the table of contents of this user guide for detailed information about each of the supported commands.
 
 ```js
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: true,
   clickCollection: {

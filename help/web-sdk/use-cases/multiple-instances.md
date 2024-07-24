@@ -1,7 +1,7 @@
 ---
 title: Use multiple Web SDK instances
 description: Learn how to interact with multiple Experience Platform Web SDK properties.
-keywords: multiple properties;configure;sendEvent;edgeConfigId;orgId;
+keywords: multiple properties
 exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
 ---
 # Use multiple Web SDK instances
@@ -32,24 +32,24 @@ Following the above example, you can execute commands using each instance:
 
 ```javascript
 titanium("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
 titanium("sendEvent", {
-  "data": {
-    "key": "value"
+  data: {
+    key: "value"
   }
 });
 
 copper("configure", {
-  "edgeConfigId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
-  "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
+  datastreamId: "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
+  orgId: "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
 copper("sendEvent", {
-  "data": {
-    "key": "value"
+  data: {
+    key: "value"
   }
 });
 ```
@@ -58,4 +58,4 @@ Be sure to execute the `configure` command for each instance before executing ot
 
 >[!IMPORTANT]
 >
->To avoid conflicts with cookies, each Web SDK instance must have its own unique `edgeConfigId` and its own unique `orgId`.
+>To avoid conflicts with cookies, each Web SDK instance must have its own unique `datastreamId` and its own unique `orgId`.
