@@ -56,7 +56,7 @@ curl -X GET https://experience.adobe.io/data/core/mtls/v1/certificate/public-cer
 
 A successful response returns HTTP status 200 with the public certificate for your organization.
 
-+++A sample response that contains the public certificate for your organization.
+A sample response that contains the public certificate for your organization.
 
 ```json
 {
@@ -94,7 +94,7 @@ A successful response returns HTTP status 200 with the public certificate for yo
 
 {style="table-layout:auto"}
 
-+++
+
 
 ## Next steps
 
