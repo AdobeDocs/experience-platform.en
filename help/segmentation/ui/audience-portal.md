@@ -19,6 +19,7 @@ Within Audience Portal, you can accomplish the following tasks:
 - [Create an audience](#create-audience)
   - [Use Segment Builder to create an audience](#segment-builder)
   - [Use Audience Composition to create an audience](#audience-composition)
+  - [Use Federated Data Composition to create an audience using data from your existing data warehouse](#fac) (Limited availability)
 - [Import externally generated audiences](#import-audience)
 
 To open Audience Portal, select the **[!UICONTROL Browse]** tab within the Segmentation section. 
@@ -333,6 +334,16 @@ Selecting **[!UICONTROL Compose audiences]** takes you to Audience Composition. 
 Selecting **[!UICONTROL Build rule]** takes you to the Segment Builder. This workspace provides intuitive controls for building and editing segment definitions, such as drag-and-drop tiles used to represent data properties. To learn more about creating segment definitions, please read the [Segment Builder guide](./segment-builder.md)
 
 ![The Segment Builder workspace is displayed.](../images/ui/audience-portal/segment-builder.png)
+
+### Federated Audience Composition {#fac}
+
+In addition to Audience Composition and Segment definitions, you can use Adobe Federated Audience Composition to federate datasets directly from your existing data warehouse to build and enrich Adobe Experience Platform audiences and attributes all in one system. Please read the guide on [Federated Data Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
+
+>[!AVAILABILITY]
+>
+>Federated Audience Composition is currently only available for a set of organizations (Limited Availability). For more information, contact your Adobe representative.
+
+![A list of audiences created in Federated Audience Composition for your organization.](../images/ui/overview/federated-audience-composition.png)
 
 ## Importing an audience {#import-audience}
 

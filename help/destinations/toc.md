@@ -59,6 +59,7 @@ role: Admin,User
         * [Marketo Engage connection](./catalog/adobe/marketo-engage.md)
         * [Marketo Measure Ultimate connection](./catalog/adobe/marketo-measure-ultimate.md)
         * [Experience Platform audience sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+        * [Federated Data Composition connection](https://www.adobe.com/go/destinations-federated-audience-composition){target="_blank"} (Limited availability)
     * Advertising destinations{#advertising}
         * [Advertising destinations overview](./catalog/advertising/overview.md)
         * [Adobe Advertising Cloud connection](./catalog/advertising/adobe-advertising-cloud-connection.md)

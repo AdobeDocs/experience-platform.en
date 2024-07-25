@@ -151,6 +151,20 @@ The **[!UICONTROL Queries]** section lets you create and manage queries, log SQL
 
 The **[!UICONTROL Monitoring]** section lets you monitor batch and streaming ingestion. More information about monitoring can be found in the [monitoring data ingestion user guide](../ingestion/quality/monitor-data-ingestion.md).
 
+### [!UICONTROL Federated data] (Limited availability)
+
+The **[!UICONTROL Models]** section lets you design and create data models and schemas that define the structure, relationships, and constraints of your data. 
+
+The **[!UICONTROL Audit trail]** section provides a detailed and chronological record of all actions and events that have been made to your environment in real-time.
+
+The **[!UICONTROL Federated databases]** section lets you connect Adobe Experience Platform to your enterprise data warehouse.
+
+More information about Federated Data Composition can be found in the [Federated Data Composition user guide](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
+
+>[!AVAILABILITY]
+>
+>Federated Audience Composition is currently only available for a set of organizations (Limited Availability). For more information, contact your Adobe representative.
+
 ### [!UICONTROL Decisioning]
 
 Adobe Journey Optimizer is an application service built on top of Experience Platform. It allows you to use powerful decisioning technologies to deliver the best offer and experience to your customers across all touch points at the right time. To learn more about Journey Optimizer, including working with [!UICONTROL Offers] and [!UICONTROL Activities] visit the [Journey Optimizer documentation](https://experienceleague.adobe.com/docs/journey-optimizer.html).

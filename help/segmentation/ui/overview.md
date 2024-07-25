@@ -84,6 +84,16 @@ To see how the audience is composed, select an audience's name within the [!UICO
 
 The Audience Composition page appears with the building blocks that compose your audience. For more details about how to use Audience Composition, please read the [Audience Composition UI guide](./audience-composition.md).
 
+## Federated Audience Composition {#fac}
+
+In addition to Audience Composition and Segment definitions, you can use Adobe Federated Audience Composition to federate datasets directly from your existing data warehouse to build and enrich Adobe Experience Platform audiences and attributes all in one system. Please read the guide on [Federated Data Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
+
+>[!AVAILABILITY]
+>
+>Federated Audience Composition is currently only available for a set of organizations (Limited Availability). For more information, contact your Adobe representative.
+
+![A list of audiences created in Federated Audience Composition for your organization.](../images/ui/overview/federated-audience-composition.png)
+
 ## Streaming segmentation {#streaming-segmentation}
 
 Streaming segmentation is the ability to do segmentation on [!DNL Platform] in near real-time, while focusing on data richness. With streaming segmentation, qualification for segmentation now happens as data lands into [!DNL Platform], alleviating the need to schedule and run segmentation jobs.
