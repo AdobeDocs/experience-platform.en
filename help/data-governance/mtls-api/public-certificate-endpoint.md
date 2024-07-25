@@ -1,6 +1,6 @@
 ---
 title: Public Certificate Endpoint
-description: Learn how to retrieve your public certificate using the Adobe Experience Platform API.
+description: Learn how to retrieve your public certificates using the Adobe Experience Platform API.
 role: Developer
 ---
 # Public Certificate endpoint
