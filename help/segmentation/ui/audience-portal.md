@@ -85,7 +85,7 @@ The pie chart appears, displaying a breakdown of the audiences by audience evalu
 
 ### Customize {#customize}
 
-You can add additional fields to Audience Portal by selecting ![the filter attribute icon](../images/ui/audience-portal/filter-attribute.png). These additional fields include lifecycle status, update frequency, last updated by, description, created by, and access labels.
+You can add additional fields to Audience Portal by selecting ![the filter attribute icon](/help/images/icons/column-settings.png). These additional fields include lifecycle status, update frequency, last updated by, description, created by, and access labels.
 
 | Field | Description | 
 | ----- | ----------- |
@@ -111,7 +111,7 @@ If breakdown is selected, the display shows a bar graph outlining the percentage
 | [!UICONTROL Existing] | The count of profiles which **remained** in the segment in the last 24 hours since the last batch segment job ran. |
 | [!UICONTROL Exiting] | The count of profiles which **exited** the segment in the last 24 hours since the last batch segment job ran. |
 
-After you select the fields you want to display, you can also re-size the width of the displayed columns. You can either do this by dragging the area between the columns or by selecting the ![arrow icon](../images/ui/audience-portal/arrow-icon.png) of the column you want to re-size, followed by **[!UICONTROL Resize column]**.
+After you select the fields you want to display, you can also re-size the width of the displayed columns. You can either do this by dragging the area between the columns or by selecting the ![arrow icon](/help/images/icons/chevron-down.png) of the column you want to re-size, followed by **[!UICONTROL Resize column]**.
 
 ![The Resize column button is highlighted.](../images/ui/audience-portal/browse-audience-resize-column.png)
 
@@ -172,7 +172,7 @@ Once the audience is in a folder, you can choose to only display audiences that 
 
 You can also filter your audiences, based on a variety of settings.
 
-To filter the available audiences, select the ![filter icon](../images/ui/audience-portal/filter-icon.png). 
+To filter the available audiences, select the ![filter icon](/help/images/icons/filter.png). 
 
 ![The browse audiences page is displayed, with the filter icon highlighted.](../images/ui/audience-portal/browse-select-filter.png)
 

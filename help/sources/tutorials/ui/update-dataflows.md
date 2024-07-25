@@ -30,7 +30,7 @@ In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to 
 
 The [!UICONTROL Dataflows] page contains a list of all existing dataflows, including information about their corresponding target dataset, source, and account name.
 
-To sort through the list, select the filter icon ![filter](../../images/tutorials/update/filter.png) on the top left to use the sort panel.
+To sort through the list, select the filter icon ![filter](/help/images/icons/filter.png) on the top left to use the sort panel.
 
 ![filter-dataflows](../../images/tutorials/update-dataflows/filter-dataflows.png)
 

@@ -95,7 +95,7 @@ To see **a particular usage metric from a specific sandbox**, navigate to the [!
 
 ![The Details tab of the License usage dashboard.](../images/license-usage/details-tab.png)
 
-From this view, you can select ![The inspect icon.](../images/license-usage/inspect-icon.png) next to a sandbox name to view the visualization for that metric. A dialog opens with a visualization for that metric. 
+From this view, you can select ![The inspect icon.](/help/images/icons/inspect.png) next to a sandbox name to view the visualization for that metric. A dialog opens with a visualization for that metric. 
 
 ### Visualizations {#visualizations}
 
