@@ -23,13 +23,13 @@ The metrics dashboard provides cards that give you information about datasets, p
 
 ![](images/user-guide/homepage-dashboard.png)
 
-The **[!UICONTROL Datasets]** section shows the number of datasets within your organization. This number is updated when a new dataset is created. More information about datasets can be found in the [datasets overview](../catalog/datasets/overview.md).
+The **[!UICONTROL Datasets]** section shows the number of datasets within your organization. This number is updated when a new dataset is created. You can find more information about datasets in the [datasets overview](../catalog/datasets/overview.md).
 
-The **[!UICONTROL Profiles]** section shows the total number of people with profiles within your organization, excluding profile fragments. This total number of people represents the total addressable audience, and is updated once every 24 hours. More information about profiles can be found in the [Real-Time Customer Profile overview](../profile/home.md).
+The **[!UICONTROL Profiles]** section shows the total number of people with profiles within your organization, excluding profile fragments. This total number of people represents the total addressable audience, and is updated once every 24 hours. You can find more information about profiles in the [Real-Time Customer Profile overview](../profile/home.md).
 
-The **[!UICONTROL Segments]** section shows the total number of segments created within your organization. This number is updated when a new segment is created. More information about segments can be found in the [Segmentation Service overview](../segmentation/home.md).
+The **[!UICONTROL Segments]** section shows the total number of segments created within your organization. This number is updated when a new segment is created. You can find more information about segments in the [Segmentation Service overview](../segmentation/home.md).
 
-The **[!UICONTROL Destinations]** section shows the total number of destinations created for the organization. This number is updated when a new destination is created. More information about destinations can be found in the [destinations overview](../destinations/home.md).
+The **[!UICONTROL Destinations]** section shows the total number of destinations created for the organization. This number is updated when a new destination is created. You can find more information about destinations in the [destinations overview](../destinations/home.md).
 
 ### Recent data
 
@@ -37,13 +37,13 @@ The recent data dashboard provides information about recently created datasets, 
 
 ![](images/user-guide/homepage-recent.png)
 
-The **[!UICONTROL Recent datasets]** section lists the five most recently created datasets within your organization. This list is updated every time a new dataset is created. You can select a dataset from the list to view more information about the specified dataset or select **[!UICONTROL View all]** to see a list of all created datasets. More information about datasets can be found in the [datasets overview](../catalog/datasets/overview.md).
+The **[!UICONTROL Recent datasets]** section lists the five most recently created datasets within your organization. This list is updated every time a new dataset is created. You can select a dataset from the list to view You can find more information about the specified dataset or select **[!UICONTROL View all]** to see a list of all created datasets. You can find more information about datasets in the [datasets overview](../catalog/datasets/overview.md).
 
-The **[!UICONTROL Recent sources]** section lists the five most recently created source connectors within your organization. This list is updated every time a new source connector is created. You can select a source connection from the list to view more information about the specified connector or select **[!UICONTROL View all]** to see a list of all created source connections. More information about sources can be found in the [sources overview](../sources/home.md).
+The **[!UICONTROL Recent sources]** section lists the five most recently created source connectors within your organization. This list is updated every time a new source connector is created. You can select a source connection from the list to view You can find more information about the specified connector or select **[!UICONTROL View all]** to see a list of all created source connections. You can find more information about sources in the [sources overview](../sources/home.md).
 
-The **[!UICONTROL Recent segments]** section lists the five most recently created segment definitions within your organization. This list is updated every time a new segment definition is created. You can select a segment definition from the list to view more information about the specified segment definition or select **[!UICONTROL View all]** to see a list of all created segment definitions. More information about segments can be found in the [Segmentation Service overview](../segmentation/home.md).
+The **[!UICONTROL Recent segments]** section lists the five most recently created segment definitions within your organization. This list is updated every time a new segment definition is created. You can select a segment definition from the list to view You can find more information about the specified segment definition or select **[!UICONTROL View all]** to see a list of all created segment definitions. You can find more information about segments in the [Segmentation Service overview](../segmentation/home.md).
 
-The **[!UICONTROL Recent destinations]** section lists the five most recently created destinations within your organization. This list is updated every time a new destination is created. You can select a destination from the list to view more information about the specified destination or select **[!UICONTROL View all]** to see a list of all created destinations. More information about destinations can be found in the [destinations overview](../destinations/home.md).
+The **[!UICONTROL Recent destinations]** section lists the five most recently created destinations within your organization. This list is updated every time a new destination is created. You can select a destination from the list to view You can find more information about the specified destination or select **[!UICONTROL View all]** to see a list of all created destinations. You can find more information about destinations in the [destinations overview](../destinations/home.md).
 
 ### Recommended learning
 
@@ -91,7 +91,7 @@ You can toggle between the light and dark theme for the Platform interface with 
 
 ### Sandboxes
 
-Immediately below the top navigation bar is the sandbox bar. This bar shows which sandbox you are currently using for Platform. More information about sandboxes can be found in the [sandboxes overview](../sandboxes/home.md).
+Immediately below the top navigation bar is the sandbox bar. This bar shows which sandbox you are currently using for Platform. You can find more information about sandboxes in the [sandboxes overview](../sandboxes/home.md).
 
 ## Left navigation {#left-nav}
 
@@ -111,55 +111,54 @@ You can lock the navigation in the open position by clicking again after showing
 
 The **[!UICONTROL Home]** section lets you return to the Platform UI homepage.
 
-The **[!UICONTROL Workflows]** section shows a list of multi-step workflows for performing operations within Platform. More information about workflows can be found in the [workflows overview](./workflows.md).
+The **[!UICONTROL Workflows]** section shows a list of multi-step workflows for performing operations within Platform. You can find more information about workflows in the [workflows overview](./workflows.md).
 
 ### [!UICONTROL Connections]
 
-The **[!UICONTROL Sources]** section lets you create, update, and delete source connections, allowing you to ingest data from external sources into Platform. More information about sources can be found in the [sources overview](../sources/home.md).
+The **[!UICONTROL Sources]** section lets you create, update, and delete source connections, allowing you to ingest data from external sources into Platform. You can find more information about sources in the [sources overview](../sources/home.md).
 
-The **[!UICONTROL Destinations]** section lets you create, update, and delete destinations, allowing you to export data from Platform to many external destinations. More information about destinations can be found in the [destinations overview](../destinations/home.md).
+The **[!UICONTROL Destinations]** section lets you create, update, and delete destinations, allowing you to export data from Platform to many external destinations. You can find more information about destinations in the [destinations overview](../destinations/home.md).
 
 ### [!UICONTROL Customer]
 
-The **[!UICONTROL Profiles]** section lets you browse customer profiles, view profile metrics, create and manage merge policies, and view union schemas. To learn more about using the [!UICONTROL Profiles] section, please read the [[!DNL Profile] user guide](../profile/ui/user-guide.md). More information about Real-Time Customer Profile can be found in the [Real-Time Customer Profile overview](../profile/home.md).
+The **[!UICONTROL Profiles]** section lets you browse customer profiles, view profile metrics, create and manage merge policies, and view union schemas. To learn more about using the [!UICONTROL Profiles] section, please read the [[!DNL Profile] user guide](../profile/ui/user-guide.md). You can find more information about Real-Time Customer Profile in the [Real-Time Customer Profile overview](../profile/home.md).
 
-The **[!UICONTROL Audiences]** section lets you create and manage segment definitions. To learn more about using the [!UICONTROL Audiences] section, please read the [segmentation user guide](../segmentation/ui/overview.md). More information about Segmentation Service can be found in the [Segmentation Service overview](../segmentation/home.md).
+The **[!UICONTROL Audiences]** section lets you create and manage segment definitions. To learn more about using the [!UICONTROL Audiences] section, please read the [segmentation user guide](../segmentation/ui/overview.md). You can find more information about Segmentation Service in the [Segmentation Service overview](../segmentation/home.md).
 
 The **[!UICONTROL Identities]** section lets you create and manage identity namespaces. For more information about the [!UICONTROL Identities] section, including information about identity namespaces and how to use identities in the Platform UI, please refer to the [identity namespace overview](../identity-service/features/namespaces.md).
 
 ### [!UICONTROL Privacy]
 
-The **[!UICONTROL Policies]** section lets you create and manage data usage policies. To learn more about using the Policies section, please read the [data usage policies user guide](../data-governance/policies/user-guide.md). More information about data usage policies can be found in the [data usage policies overview](../data-governance/policies/overview.md).
+The **[!UICONTROL Policies]** section lets you create and manage data usage policies. To learn more about using the Policies section, please read the [data usage policies user guide](../data-governance/policies/user-guide.md). You can find more information about data usage policies in the [data usage policies overview](../data-governance/policies/overview.md).
 
-The **[!UICONTROL Requests]** section lets you create and manage privacy requests. Please note that you must be allowlisted in order to have access to the Privacy Service UI. To learn more about using the Requests section, please read the [Privacy Service user guide](../privacy-service/ui/user-guide.md). More information about Privacy Service can be found in the [Privacy Service overview](../privacy-service/home.md). 
+The **[!UICONTROL Requests]** section lets you create and manage privacy requests. Please note that you must be allowlisted in order to have access to the Privacy Service UI. To learn more about using the Requests section, please read the [Privacy Service user guide](../privacy-service/ui/user-guide.md). You can find more information about Privacy Service in the [Privacy Service overview](../privacy-service/home.md). 
 
 ### [!UICONTROL Data Science]
 
-The **[!UICONTROL Notebooks]** section provides access to JupyterLab, an interactive development environment that lets you explore, analyze, and model your data. To learn more about using the Notebooks section, please read the [JupyterLab user guide](../data-science-workspace/jupyterlab/overview.md). More information about Data Science Workspace can be found in the [Data Science Workspace overview](../data-science-workspace/home.md)
+The **[!UICONTROL Notebooks]** section provides access to JupyterLab, an interactive development environment that lets you explore, analyze, and model your data. To learn more about using the Notebooks section, please read the [JupyterLab user guide](../data-science-workspace/jupyterlab/overview.md). You can find more information about Data Science Workspace in the [Data Science Workspace overview](../data-science-workspace/home.md)
 
-The **[!UICONTROL Models]** section lets you use machine learning and artificial intelligence to create, develop, train, and tune models to make predictions. More information about the Models section can be found in the tutorial on [training and evaluate a model](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
+The **[!UICONTROL Models]** section lets you use machine learning and artificial intelligence to create, develop, train, and tune models to make predictions. You can find more information about the Models section in the tutorial on [training and evaluate a model](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 
-The **[!UICONTROL Services]** section lets you manage your published models for scheduled training and scoring, or use Adobe's Intelligent Services, a set of AI services that deliver real-time, personalized customer experiences. More information about the Services section can be found in the [Publishing a Model as a Service tutorial](../data-science-workspace/models-recipes/publish-model-service-ui.md).
+The **[!UICONTROL Services]** section lets you manage your published models for scheduled training and scoring, or use Adobe's Intelligent Services, a set of AI services that deliver real-time, personalized customer experiences. You can find more information about the Services section in the [Publishing a Model as a Service tutorial](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
 ### [!UICONTROL Data management]
 
-The **[!UICONTROL Schemas]** section lets you create and manage Experience Data Model (XDM) schemas. To learn more about schemas, please read the tutorial on [creating a schema](../xdm/tutorials/create-schema-ui.md). More information about XDM can be found in the [XDM System overview](../xdm/home.md).
+The **[!UICONTROL Schemas]** section lets you create and manage Experience Data Model (XDM) schemas. To learn more about schemas, please read the tutorial on [creating a schema](../xdm/tutorials/create-schema-ui.md). You can find more information about XDM in the [XDM System overview](../xdm/home.md).
 
-The **[!UICONTROL Datasets]** section lets you create and manage datasets. More information about datasets can be found in the [datasets user guide](../catalog/datasets/user-guide.md).
+The **[!UICONTROL Datasets]** section lets you create and manage datasets. You can find more information about datasets in the [datasets user guide](../catalog/datasets/user-guide.md).
 
-The **[!UICONTROL Queries]** section lets you create and manage queries, log SQL queries made by Adobe Experience Platform Query Service, and view your [!DNL PostgreSQL] credentials. More information about queries can be found in the [Query Service user guide](../query-service/ui/overview.md).
+The **[!UICONTROL Queries]** section lets you create and manage queries, log SQL queries made by Adobe Experience Platform Query Service, and view your [!DNL PostgreSQL] credentials. You can find more information about queries in the [Query Service user guide](../query-service/ui/overview.md).
 
-The **[!UICONTROL Monitoring]** section lets you monitor batch and streaming ingestion. More information about monitoring can be found in the [monitoring data ingestion user guide](../ingestion/quality/monitor-data-ingestion.md).
+The **[!UICONTROL Monitoring]** section lets you monitor batch and streaming ingestion. You can find more information about monitoring in the [monitoring data ingestion user guide](../ingestion/quality/monitor-data-ingestion.md).
 
 ### [!UICONTROL Federated data] (Limited availability)
 
-The **[!UICONTROL Models]** section lets you design and create data models and schemas that define the structure, relationships, and constraints of your data. 
+The **[!UICONTROL Models]** section lets you design and create data models and schemas that define the structure, relationships, and constraints of your data. You can find more information about the data models and schemas in the [Federated Audience Composition user guide](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas).
 
-The **[!UICONTROL Audit trail]** section provides a detailed and chronological record of all actions and events that have been made to your environment in real-time.
+The **[!UICONTROL Audit trail]** section provides a detailed and chronological record of all actions and events that have been made to your environment in real-time. You can find more information about the audit trail in the [Federated Audience Composition user guide](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/audit-trail/audit-trail).
 
-The **[!UICONTROL Federated databases]** section lets you connect Adobe Experience Platform to your enterprise data warehouse.
 
-More information about Federated Data Composition can be found in the [Federated Data Composition user guide](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
+The **[!UICONTROL Federated databases]** section lets you connect Adobe Experience Platform to your enterprise data warehouse. You can find more information about connection to federated databases in the [Federated Audience Composition user guide](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db).
 
 >[!AVAILABILITY]
 >

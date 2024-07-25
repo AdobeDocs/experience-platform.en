@@ -30,7 +30,7 @@ role: User
     - [Audience Portal](ui/audience-portal.md)
     - [Audience Composition](ui/audience-composition.md)
     - [Segment Builder](ui/segment-builder.md)
-    - [Federated Data Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home){target="_blank"} (Limited availability)
+    - [Federated Audience Composition (Limited availability)](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
     - [Account audiences](ui/account-audiences.md)
     - [Look-alike audiences](ui/lookalike-audiences.md)
     - [Prospect audiences](ui/prospect-audience.md)

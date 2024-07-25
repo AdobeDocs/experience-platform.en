@@ -48,7 +48,7 @@ For information on building segment definitions using the API, see the tutorial 
 
 ### Federated Audience Composition {#fac}
 
-In addition to Audience Composition and Segment definitions, you can use Adobe Federated Audience Composition to federate datasets directly from your existing data warehouse to build and enrich Adobe Experience Platform audiences and attributes all in one system. Please read the guide on [Federated Data Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
+In addition to audience compositions and segment definitions, you can use Adobe Federated Audience Composition to build new audiences from enterprise datasets without copying underlying data and store those audiences in Adobe Experience Platform Audience Portal. You can also enrich existing audiences in Adobe Experience Platform by utilizing composed audience data that has been federated from the enterprise data warehouse. Please read the guide on [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
 
 >[!AVAILABILITY]
 >
