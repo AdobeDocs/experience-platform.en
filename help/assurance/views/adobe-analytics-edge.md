@@ -6,7 +6,7 @@ exl-id: faaa2c1d-3471-4d86-9a25-03265b996e31
 ---
 # Analytics Events 2.0 in Assurance
 
-The Analytics Events 2.0 provide a richer view of SDK events to users debugging and validating their Adobe Analytics implementation. The view shows events sent to Adobe Analytics from the [Adobe Experience Platform Edge Network SDK](https://developer.adobe.com/client-sdks/edge/edge-network/) as well as the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/solution/adobe-analytics/). The view also features a details panel, which provides context on how the event was processed by the client SDK, as well as by the upstream services after it left the device.
+The Analytics Events 2.0 provide a richer view of SDK events to users debugging and validating their Adobe Analytics implementation. The view shows events sent to Adobe Analytics from the [Adobe Experience Platform Edge Network SDK](https://developer.adobe.com/client-sdks/edge/edge-network/) as well as the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/solution/adobe-analytics/). The view also features a details panel, which provides context on how the event was processed by the client SDK and by the upstream services after it left the device.
 
 ## Getting started
 
@@ -22,7 +22,7 @@ Use the Analytics Edge view if you are using **Edge Network** or **Edge Bridge**
 
 ![An image that shows toggle which switched to Analytics Edge View.](./images/adobe-analytics-edge/edge-analytics-view-toggle.png)
 
-The Analytics Edge view contains information on Analytics-related Edge events and Lifecycle events dispatched by the client. By choosing an event in the list, the event detail view panel on the right displays the events that were processed by the client SDK, as well as by the upstream service after they left the device, so you can easily view the chain of events that resulted from a call.
+The Analytics Edge view contains information on Analytics-related Edge events and Lifecycle events dispatched by the client. By choosing an event in the list, the event detail view panel on the right displays the events that were processed by the client SDK and by the upstream service after they left the device. This allows you to easily view the chain of events that resulted from a call.
 
 ![An image demonstrating different components in the Analytics Edge View for the Edge Bridge scenario.](./images/adobe-analytics-edge/edgebridge-analytics-events.png)
 
@@ -32,33 +32,25 @@ The **Post-Processed Data** event in the list confirms that the data has been su
 
 For an Edge request event or an Analytics track event, the detailed view contains the following parts:
 
-* Event Details - An originating SDK edge request event.
-
-* Edge Bridge Request - An event exclusively for the Edge Bridge Extension workflow.
-
-* Datastream - An event represented for datastream for this session.
-
-* Edge Hit Received - Represent the hit received from Edge.
-
-* Edge Hit Processed - Represent the hit processed in Edge.
-
-* Analytics Hit - Represent the hit received from Analytics.
-
-* Analytics Mapping - Represent the data mapping status in Analytics.
-
-* Analytics Responsed - The response status from Analytics 
-
-* Post-process status - Information on the event that contains the mapping of revars, evars, and props.
+* Event Details: An originating SDK edge request event.
+* Edge Bridge Request: An event exclusively for the Edge Bridge Extension workflow.
+* Datastream: An event represented for datastream for this session.
+* Edge Hit Received: Represent the hit received from Edge.
+* Edge Hit Processed: Represent the hit processed in Edge.
+* Analytics Hit: Represent the hit received from Analytics.
+* Analytics Mapping: Represent the data mapping status in Analytics.
+* Analytics Responsed: The response status from Analytics. 
+* Post-process Data: Information on the event that contains the mapping of revars, evars, and props.
 
 ### Analytics Edge Validation
 
-The Analytics Edge validation view allows you to easily view the results on validation scripts related to Analytics Edge. Errors displayed by validators may contain links to where they should be fixed or display events that are in an error state.
+The Analytics Edge validation view allows you to easily see the results on validation scripts related to Analytics Edge. Errors displayed by validators may contain links to where they should be fixed or display events that are in an error state.
 
 ![An image that shows the validators tab in the Analytics Edge view.](./images/adobe-analytics-edge/edge-analytics-validation-view.png)
 
 ## Analytics Events View
 
-Use the Analytics Event View if you are using the **Adobe Analytics** mobile extension. This view allows you to easily view Analytics Events sent from your connected client, including Track Action, Track State, and Lifecycle events. This view is active while the "Analytics Edge (Beta)" toggle on the top right is disabled.
+Use the Analytics Event View if you are using the **Adobe Analytics** mobile extension. This view allows you to easily see Analytics Events sent from your connected client, including Track Action, Track State, and Lifecycle events. This view is active while the "Analytics Edge (Beta)" toggle on the top right is disabled.
 
 ![An image that shows toggle which switched to Analytics View.](./images/adobe-analytics-edge/direct-analytics-view-toggle-button.png)
 
@@ -93,6 +85,6 @@ For an Analytics track event, the detailed view contains the following parts:
 
 ### Analytics View Validation
 
-The validation view allows you to easily view the results on validation scripts related to Analytics. Errors displayed by validators may contain links to where they should be fixed or display events that are in an error state.
+The validation view allows you to easily see the results on validation scripts related to Analytics. Errors displayed by validators may contain links to where they should be fixed or display events that are in an error state.
 
 ![An image that shows the validators tab in the Analytics view.](./images/adobe-analytics-edge/analytics-validation-view.png)
