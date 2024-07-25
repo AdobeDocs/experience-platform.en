@@ -108,7 +108,7 @@ A list of audiences appears. Select **[!UICONTROL Add]** to add the audiences yo
 
 ### Exclude by attribute {#exclude-attribute}
 
-If you exclude by attribute, you can select which attributes you want to exclude by selecting the ![filter](../images/ui/audience-composition/filter-attribute.png) icon within the **[!UICONTROL Exclusion rule]** section.
+If you exclude by attribute, you can select which attributes you want to exclude by selecting the ![filter](/help/images/icons/project-edit.png) icon within the **[!UICONTROL Exclusion rule]** section.
 
 ![The attribute section is highlighted, showing you where to select to choose the attribute to exclude.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -134,7 +134,7 @@ To add an **[!UICONTROL Enrich]** block, select the **+** icon, followed by **[!
 
 The **[!UICONTROL Enrich]** block is added. When this block is selected, details about the enrichment appear in the right rail. This includes the block's label and the enrichment dataset.
 
-To select the dataset to enrich the audience with, select the ![filter](../images/ui/audience-composition/filter-attribute.png) icon. 
+To select the dataset to enrich the audience with, select the ![filter](/help/images/icons/project-edit.png) icon. 
 
 ![The filter button is highlighted. Selecting this leads you to the [!UICONTROL Select dataset] popover.](../images/ui/audience-composition/enrich-select-dataset.png)
 
@@ -154,7 +154,7 @@ The **[!UICONTROL Enrichment criteria]** section now appears on the right rail. 
 
 ![The [!UICONTROL Enrichment criteria] area is highlighted.](../images/ui/audience-composition/enrichment-criteria.png)
 
-To select the **[!UICONTROL Source join key]**, select the ![filter](../images/ui/audience-composition/filter-attribute.png) icon. 
+To select the **[!UICONTROL Source join key]**, select the ![filter](/help/images/icons/project-edit.png) icon. 
 
 ![The filter icon for the [!UICONTROL Source join key] is highlighted.](../images/ui/audience-composition/enrich-select-source-join-key.png)
 
@@ -162,7 +162,7 @@ The **[!UICONTROL Select a profile attribute]** popover appears. Select the prof
 
 ![The attribute you want to use as the source join key is highlighted.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
 
-To select the **[!UICONTROL Enrichment dataset join key]**, select the ![filter](../images/ui/audience-composition/filter-attribute.png) icon.
+To select the **[!UICONTROL Enrichment dataset join key]**, select the ![filter](/help/images/icons/project-edit.png) icon.
 
 ![The filter icon for the [!UICONTROL Enrichment dataset join key] is highlighted.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
 
@@ -210,7 +210,7 @@ When you select the block, details about the ranking are shown in the right rail
 
 ![The rank block is highlighted, as well as the details of the rank block.](../images/ui/audience-composition/rank.png)
 
-To select which attribute to rank the audiences by, select the ![filter](../images/ui/audience-composition/filter-attribute.png) icon.
+To select which attribute to rank the audiences by, select the ![filter](/help/images/icons/project-edit.png) icon.
 
 ![The filter icon is highlighted, showing you what to select to access the profile attribute selection screen.](../images/ui/audience-composition/select-rank-attribute.png)
 
@@ -244,7 +244,7 @@ For example, you could have three paths, each with a differing percentage of pro
 
 ### Split by attribute {#split-attribute}
 
-When splitting by attribute, the audiences will be split based on the provided attributes. To select the attribute to split by, select the **[!UICONTROL Split]** block, followed by the ![filter](../images/ui/audience-composition/filter-attribute.png) icon. 
+When splitting by attribute, the audiences will be split based on the provided attributes. To select the attribute to split by, select the **[!UICONTROL Split]** block, followed by the ![filter](/help/images/icons/project-edit.png) icon. 
 
 ![The filter button is selected, showing how to filter by attribute.](../images/ui/audience-composition/select-split-attribute.png)
 

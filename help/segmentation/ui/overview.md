@@ -63,7 +63,7 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 | Manage access | Manages the access labels that belong to the audience. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
 | Delete | Deletes the selected audience. Audiences that are used in downstream destinations or are dependents in other audiences **cannot** be deleted. For more information on audience deletion, please read the [segmentation FAQ](../faq.md#lifecycle-states). |
 
-You can select the ![Customize table](../images/ui/overview/customize-table.png) icon to change which fields are displayed.
+You can select the ![Customize table](/help/images/icons/column-settings.png) icon to change which fields are displayed.
 
 ![The customize table button is highlighted. Selecting this button allows you to customize the fields that are displayed on the Audiences compositions page.](../images/ui/overview/compositions-select-customize-table.png)
 

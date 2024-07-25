@@ -111,7 +111,7 @@ Select the checkbox next to the name of the field group that you wish to add to 
 
 >[!TIP]
 >
->For any listed field group, you can hover or focus on the information icon (![](../../images/ui/resources/schemas/info-icon.png)) to view a brief description of the kind of data the field group captures. You can also select the preview icon (![](../../images/ui/resources/schemas/preview-icon.png)) to view the structure of the fields that the field group provides before you decide to add it to the schema.
+>For any listed field group, you can hover or focus on the information icon (![info icon](/help/images/icons/info.png)) to view a brief description of the kind of data the field group captures. You can also select the preview icon (![preview icon](/help/images/icons/preview.png)) to view the structure of the fields that the field group provides before you decide to add it to the schema.
 
 Once you have chosen your field groups, select **[!UICONTROL Add field groups]** to add them to the schema.
 
@@ -123,7 +123,7 @@ The [!DNL Schema Editor] reappears with the field-group-provided fields represen
 
 >[!NOTE] 
 >
->Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](../../images/ui/explore/padlock-icon.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
+>Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](/help/images/icons/lock-closed.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
 >
 >![The Schema Editor with the padlock icon highlighted](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -183,7 +183,7 @@ Under **[!UICONTROL Field name]**, start typing the name of the field you wish t
 
 While some standard fields share the same name, their structure may vary depending on the field group they come from. If a standard field is nested within a parent object in the field group structure, the parent field will also be included in the schema if the child field is added.
 
-Select the preview icon (![Preview icon](../../images/ui/resources/schemas/preview-icon.png)) next to a standard field to view the structure of its field group and better understand how it might be nested. To add the standard field to the schema, select the plus icon (![Plus icon](../../images/ui/resources/schemas/add-icon.png)).
+Select the preview icon (![Preview icon](/help/images/icons/preview.png)) next to a standard field to view the structure of its field group and better understand how it might be nested. To add the standard field to the schema, select the plus icon (![Plus icon](/help/images/icons/circle-add.png)).
 
 ![Add standard field](../../images/ui/resources/schemas/add-standard-field.png)
 

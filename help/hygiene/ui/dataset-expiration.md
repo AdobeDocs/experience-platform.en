@@ -49,11 +49,11 @@ The request creation workflow appears. Under the [!UICONTROL Requested Action] s
 
 ### Select a date and a dataset {#select-date-and-dataset}
 
-Under the **[!UICONTROL Requested Action]** section, select a date that you want the dataset to be deleted by. You can enter the date manually (in the format `mm/dd/yyyy`) or select the calendar icon (![A calendar icon.](../images/ui/ttl/calendar-icon.png)) to select the date from a dialog.
+Under the **[!UICONTROL Requested Action]** section, select a date that you want the dataset to be deleted by. You can enter the date manually (in the format `mm/dd/yyyy`) or select the calendar icon (![A calendar icon.](/help/images/icons/calendar.png)) to select the date from a dialog.
 
 ![A calendar dialog with an expiration date selected and highlighted for the dataset.](../images/ui/ttl/select-date.png)
 
-Next, under **[!UICONTROL Dataset Details]**, select the database icon (![The database icon.](../images/ui/ttl/database-icon.png)) to open a dataset selection dialog. Choose a dataset from the list to apply the expiration to, then select **[!UICONTROL Done]**.
+Next, under **[!UICONTROL Dataset Details]**, select the database icon (![The database icon.](/help/images/icons/database.png)) to open a dataset selection dialog. Choose a dataset from the list to apply the expiration to, then select **[!UICONTROL Done]**.
 
 ![The [!UICONTROL Select dataset] dialog with a dataset selected and [!UICONTROL Done] highlighted.](../images/ui/ttl/select-dataset.png)
 
