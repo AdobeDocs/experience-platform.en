@@ -69,17 +69,17 @@ Selecting the switcher opens a dropdown menu of organizations you have access to
 
 ### Switch applications
 
-The next item on the right side of the top navigation is the **application switcher**, represented by the ![application switcher](./images/user-guide/app-switcher-icon.png) icon. When you select this icon, you can switch between Adobe applications that your organization has access to, such as Experience Platform, Analytics, Assets, and others.
+The next item on the right side of the top navigation is the **application switcher**, represented by the ![application switcher](/help/images/icons/apps.png) icon. When you select this icon, you can switch between Adobe applications that your organization has access to, such as Experience Platform, Analytics, Assets, and others.
 
 ### Help
 
-To the right of the application switcher is the **help and support menu**, which is represented by the ![question mark/help](./images/user-guide/help-icon.png) icon. When you select this icon, a popover menu appears, containing several help and support resources. The **[!UICONTROL Help]** tab shows a list of relevant documentation for the page you're currently on. The **[!UICONTROL Support]** tab allows you to create a support ticket with the Adobe support team. The **[!UICONTROL Feedback]** tab allows you to submit feedback about Platform to Adobe.
+To the right of the application switcher is the **help and support menu**, which is represented by the ![question mark/help](/help/images/icons/help.png) icon. When you select this icon, a popover menu appears, containing several help and support resources. The **[!UICONTROL Help]** tab shows a list of relevant documentation for the page you're currently on. The **[!UICONTROL Support]** tab allows you to create a support ticket with the Adobe support team. The **[!UICONTROL Feedback]** tab allows you to submit feedback about Platform to Adobe.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
 ### Notifications and announcements
 
-In the **notifications section**, which is represented by the ![bell/Notifications and Announcements](images/user-guide/notification-icon.png) icon. The **[!UICONTROL Notifications]** tab shows important information about the product and other relevant updates, while the **[!UICONTROL Announcements]** tab shows information about service maintenance.
+In the **notifications section**, which is represented by the ![bell/Notifications and Announcements](/help/images/icons/bell.png) icon. The **[!UICONTROL Notifications]** tab shows important information about the product and other relevant updates, while the **[!UICONTROL Announcements]** tab shows information about service maintenance.
 
 ### User profile
 
