@@ -1,6 +1,6 @@
 ---
 title: Public Certificate Endpoint
-description: Learn how to retrieve your public certificates using the Adobe Experience Platform API.
+description: Learn how to retrieve your public certificates using the /public-certificate endpoint of the MTLS Service API.
 role: Developer
 ---
 # Public certificate endpoint
@@ -100,7 +100,7 @@ A successful response returns HTTP status 200 and lists the public certificates 
 
 ## Next steps
 
-After reading this guide, you now understand how to retrieve your public certificates using the Adobe Experience Platform API. 
+After reading this guide, you now understand how to retrieve your public certificates using the Adobe Experience Platform API. To learn more about managing customer data to ensure compliance with regulations and organizational policies, see the [Data Governance overview](../home.md).
 
 <!-- To test this API call, navigate to the [MTLS API reference page]() to interact with the Experience Platform API endpoints. -->
 
