@@ -50,11 +50,7 @@ The results of this query are shown in the image below.
 
 These results demonstrate that the number of input batches does not necessarily match the number of output batches, as the system determines the most efficient way to batch and store the data in the data lake. 
 
-The following example uses a different dataset to illustrate this point. 
-
->[!NOTE]
->
->If you want to try this example out, you can ingest the provided sample file ([`drug_checkout_data`](../images/use-cases/drug_checkout_data.zip)) into Platform and configure your schema mapping. 
+For the purpose of this example, it is assumed that you have ingested a CSV file into Platform and created a dataset called `drug_checkout_data`.
 
 The `drug_checkout_data` file is a deeply nested set of 35,000 records. Use the SQL statement `SELECT * FROM drug_orders;` to preview of the first set of records in the JSON-based `drug_orders` dataset. 
 
