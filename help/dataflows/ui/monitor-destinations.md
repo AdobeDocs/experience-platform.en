@@ -263,7 +263,7 @@ For example, you are activating an audience called "Loyalty Members in Californi
 ![Audiences highlighted in the dataflow panel.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 In the audience-level view, the metrics are aggregated across multiple dataflow runs within the selected time range. If there are multiple dataflow runs, you can drill down from the audience level to see the breakdown for each dataflow run, filtered by the selected audience.
-Use the filter button ![filter](../assets/ui/monitor-destinations/filter-add.png) to drill down into the dataflow runs view for each audience in the dataflow.
+Use the filter button ![filter](/help/images/icons/filter-add.png) to drill down into the dataflow runs view for each audience in the dataflow.
 
 ### Dataflow runs page {#dataflow-runs-page}
 
