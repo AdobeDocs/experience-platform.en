@@ -14,7 +14,7 @@ Audience Composition provides a workspace to build and edit audiences, using blo
 
 ![The Audience Composition UI.](../images/ui/audience-composition/audience-composition.png)
 
-To change the details of the composition, including the title and description, select the ![sliders](../images/ui/audience-composition/sliders.png) button.
+To change the details of the composition, including the title and description, select the ![sliders](/help/images/icons/properties.png) button.
 
 The **[!UICONTROL Composition properties]** popover appears. You can insert details of your composition, including the title and description here. 
 
