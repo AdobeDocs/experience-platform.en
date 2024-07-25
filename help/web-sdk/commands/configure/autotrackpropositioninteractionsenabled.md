@@ -1,8 +1,8 @@
 ---
 title: autoTrackPropositionInteractionsEnabled
 description: Learn how to configure Experience Platform Web SDK to automatically collect link data.
+exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
 ---
-
 # `autoTrackPropositionInteractionsEnabled`
 
 The `autoTrackPropositionInteractionsEnabled` property is an optional setting that determines if the Web SDK should automatically collect proposition interactions.
