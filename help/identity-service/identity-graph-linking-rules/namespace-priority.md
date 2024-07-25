@@ -8,7 +8,7 @@ exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 
 >[!AVAILABILITY]
 >
->This feature is not yet available; the beta program for identity graph linking rules is expected to start in July on development sandboxes. Contact your Adobe account team for information on the participation criteria.
+>Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
 
 Every customer implementation is unique and tailored to meet a particular organization's goals, and as such, the importance of a given namespace varies from customer to customer. Real-world examples include:
 

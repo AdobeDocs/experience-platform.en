@@ -1,8 +1,8 @@
 ---
 title: Extension Package Usage Authorizations Endpoint
 description: Learn how to make calls to the /extension_package_usage authorizations endpoint in the Reactor API.
+exl-id: ad3fb704-7d2f-45ec-b80b-ea4d327f2205
 ---
-
 # Extension package usage authorizations endpoint
 
 An extension package represents an [extension](./extensions.md) as authored by an extension developer. Additional functionalities that can be made available to tag users are defined by an extension package. These capabilities can include main modules and shared modules, although they are most frequently provided as [rule components](./rule-components.md) (events, conditions, and actions) and [data elements](./data-elements.md).
@@ -179,7 +179,7 @@ A successful response return the details of the newly created extension package 
 >
 >In the example response above, the authorization is currently in the `pending_approval` stage. Before using the extension package, the organization must approve the authorization. Users of the organization are able to browse the private extension package while authorization is pending approval, but they are unable to install it and cannot find it in their extensions catalog. 
 
-## Retrieve a list of extension package usage authorizations {#list_authorizations}
+## Retrieve a list of extension package usage authorizations {#list-authorizations}
 
 You can retrieve a list of extension package usage authorizations by making a GET request.
 
@@ -380,7 +380,7 @@ A successful response returns the details of the revised extension package usage
 >
 >Once the authorization is approved, your organization can install the extension package on your properties.
 
-## Retrieve data for the extension package for an extension package usage authorization {#retrieve_data}
+## Retrieve data for the extension package for an extension package usage authorization {#retrieve-data}
 
 You can retrieve data for the extension package for an extension package usage authorization by making a GET request.
 

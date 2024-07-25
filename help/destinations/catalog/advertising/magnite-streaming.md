@@ -4,8 +4,8 @@ description: Use this destination to deliver Adobe CDP audiences to the Magnite 
 badgeBeta: label="Beta" type="Informative"
 hide: yes
 hidefromtoc: yes
+exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
 ---
-
 # (Beta) Magnite: Real-Time destination connection
 
 ## Overview {#overview}
