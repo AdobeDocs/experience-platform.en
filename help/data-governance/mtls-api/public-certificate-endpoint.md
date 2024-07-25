@@ -3,15 +3,15 @@ title: Public Certificate Endpoint
 description: Learn how to retrieve your public certificates using the Adobe Experience Platform API.
 role: Developer
 ---
-# Public Certificate endpoint
+# Public certificate endpoint
 
-This guide explains how to use the public certificate endpoint in the Adobe Experience Platform API to securely retrieve public certificates for your organization. It includes a sample API call and detailed instructions to help developers authenticate and verify data exchanges.
+This guide explains how to use the public certificate endpoint to securely retrieve public certificates for your organization's Adobe applications. It includes a sample API call and detailed instructions to help developers authenticate and verify data exchanges.
 
 ## Getting started
 
 Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
-## API paths
+## API paths {#paths}
 
 The following information are the essential API paths you will need to use the mTLS Service API. These include the platform gateway URL, the base path for the API, and an example of a complete path for retrieving a public certificate.
 
@@ -19,9 +19,9 @@ The following information are the essential API paths you will need to use the m
 - Base path for this API: `/data/core/mtls`
 - Example of a complete path: `https://platform.adobe.io/data/core/mtls/v1/certificate/public-certificate`
 
-## Retrieve your public certificate {#list}
+## Retrieve your public certificates {#list}
 
-You can retrieve the public certificate associated with your organization by making a GET request to the `/v1/certificate/public-certificate` endpoint.
+You can retrieve the public certificates for any of your organization's Adobe applications by making a GET request to the `/v1/certificate/public-certificate` endpoint.
 
 **API format**
 
@@ -29,18 +29,18 @@ You can retrieve the public certificate associated with your organization by mak
 GET /v1/certificate/public-certificate
 ```
 
-<!-- 
-The following optional query parameters can be used when retrieving your public certificate.
+The following optional query parameters can be used when retrieving your public certificates.
 
 | Query parameter | Description | Example |
 | --------------- | ----------- | ------- |
-| `page` | **Required** Specifies which page the results of your public certificate request will start from. | `page=5` |
-| `limit` | **Required** The maximum number of public certificates you want retrieved per page. | `limit=20` |
- -->
+| `page` | Specifies which page the results of your request will start from. | `page=5` |
+| `limit` | The maximum number of public certificates you want retrieved per page. | `limit=20` |
+
+{style="table-layout:auto"}
 
 **Request**
 
-A sample request to return the public certificate associated with your organization is seen in the collapsible section below.
+A sample request to return the public certificates associated with your organization is seen in the collapsible section below.
 
 +++Sample request
 
@@ -56,7 +56,7 @@ curl -X GET https://experience.adobe.io/data/core/mtls/v1/certificate/public-cer
 
 **Response**
 
-A successful response returns HTTP status 200 with the public certificate for your organization.
+A successful response returns HTTP status 200 and lists the public certificates for your organization.
 
 +++A sample successful response
 
@@ -100,7 +100,7 @@ A successful response returns HTTP status 200 with the public certificate for yo
 
 ## Next steps
 
-After reading this guide, you now understand how to retrieve your public certificate using the Adobe Experience Platform API. 
+After reading this guide, you now understand how to retrieve your public certificates using the Adobe Experience Platform API. 
 
 <!-- To test this API call, navigate to the [MTLS API reference page]() to interact with the Experience Platform API endpoints. -->
 

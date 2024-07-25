@@ -5,7 +5,7 @@ role: Developer
 ---
 # MTLS Service API overview
 
-Use the MTLS Service API to securely retrieve public certificates issued by Adobe for your organization. This API ensures that data exchanges between your customers and Adobe Experience Platform are authenticated and encrypted, providing an additional layer of security. By externally verifying the authenticity of the certificates, you can enhance trust and safeguard sensitive information.
+Use the MTLS Service API to securely retrieve public certificates issued by Adobe for your organization's applications. This API ensures that data exchanges between your customers and Adobe Experience Platform are authenticated and encrypted, providing an additional layer of security. By externally verifying the authenticity of the certificates, you can enhance trust and safeguard sensitive information.
 
 ## Public certificate
 
