@@ -36,7 +36,7 @@ To add a data label, navigate to [!UICONTROL Schemas] dashboard browse tab by se
 
 ## Discover ad hoc schemas in the schema inventory of the Platform UI {#discover-ad-hoc-schemas}
 
-To enable the display of ad hoc schemas in the Platform UI, select the filter icon (![A filter icon.](../images/data-governance/filter.png)) to the left of the search field, and then select **[!UICONTROL Show adhoc schemas] in the left-rail that appears.
+To enable the display of ad hoc schemas in the Platform UI, select the filter icon (![A filter icon.](/help/images/icons/filter.png)) to the left of the search field, and then select **[!UICONTROL Show adhoc schemas] in the left-rail that appears.
 
 ![The Schema dashboard filter options left rail with 'Show adhoc schema' toggle enabled.](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -50,7 +50,7 @@ To edit data labels for your ad hoc schema, select the [!UICONTROL Labels] tab. 
 
 ## Edit labels for the schema or field
 
-To edit the labels for the entire schema, select the pencil icon (![A pencil icon.](../images/data-governance/edit-icon.png)) to the side of the schema's name under the [!UICONTROL Labels] tab.
+To edit the labels for the entire schema, select the pencil icon (![A pencil icon.](/help/images/icons/edit.png)) to the side of the schema's name under the [!UICONTROL Labels] tab.
 
 ![The labels view in the schemas workspace with the pencil icon highlighted.](../images/data-governance/edit-entire-schema-labels.png)
 

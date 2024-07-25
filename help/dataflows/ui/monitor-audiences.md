@@ -58,7 +58,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Last activation identities]** | The number of identities that were activated in the audience's last activation job. |
 | **[!UICONTROL Last activation destination]** | The name of the destination that the audience's last activation job activated to. |
 
-You can filter the results to a specific audience and view its segmentation jobs by selecting the filter icon (![The filter icon.](../assets/ui/monitor-audiences/filter-icon.png)). The segmentation jobs are sorted in chronological order, with the most recent segmentation jobs appearing first.
+You can filter the results to a specific audience and view its segmentation jobs by selecting the filter icon (![The filter icon.](/help/images/icons/filter-add.png)). The segmentation jobs are sorted in chronological order, with the most recent segmentation jobs appearing first.
 
 ![The filter icon is highlighted. Selecting this allows you to view the segmentation jobs for the specified audience.](../assets/ui/monitor-audiences/filter-audience.png)
 
@@ -83,7 +83,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Identity activated]** | The number of identities that the segmentation job is activating. Each profile can have multiple identities. For example, a profile could have an email, phone number, and a loyalty number as identities. |
 | **[!UICONTROL Destination name]** | The name of the destination that the segmentation job is being activated to. |
 
-You can further filter to a specific segmentation job and see its details by selecting the filter icon (![The filter icon.](../assets/ui/monitor-audiences/filter-icon.png)). There are two different kinds of segmentation jobs that can be filtered: activation jobs and evaluation jobs.
+You can further filter to a specific segmentation job and see its details by selecting the filter icon (![The filter icon.](/help/images/icons/filter.png)). There are two different kinds of segmentation jobs that can be filtered: activation jobs and evaluation jobs.
 
 ### Activation job details {#activation-job-details}
 

@@ -25,7 +25,7 @@ The list only shows work orders for one category at a time. Select **[!UICONTROL
 
 ![Image showing the [!UICONTROL Dataset] tab](../images/ui/browse/dataset-tab.png)
 
-Select the funnel icon (![Image of the funnel icon](../images/ui/browse/funnel-icon.png)) to view a list of filters for the displayed work orders.
+Select the funnel icon (![Image of the funnel icon](/help/images/icons/filter.png)) to view a list of filters for the displayed work orders.
 
 ![Image of the work order filters displayed](../images/ui/browse/filters.png)
 

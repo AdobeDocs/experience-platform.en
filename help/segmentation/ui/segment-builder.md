@@ -135,7 +135,7 @@ If selecting a value from this list of enums, the value will be outlined with a 
 
 ![A warning that is displayed if you are inserting a value that is not part of the enum list.](../images/ui/segment-builder/enum-warning.png)
 
-If you are creating multiple values, you can add all of them at once by using the bulk upload. Select the ![plus icon](../images/ui/segment-builder/plus-icon.png) to show the **[!UICONTROL Add values in bulk]** popover.
+If you are creating multiple values, you can add all of them at once by using the bulk upload. Select the ![plus icon](/help/images/icons/add-circle.png) to show the **[!UICONTROL Add values in bulk]** popover.
 
 ![The plus icon is highlighted, showing the button that you can select to access the bulk upload popover.](../images/ui/segment-builder/add-bulk-values.png)
 
@@ -281,7 +281,7 @@ As you continue to build your segment definition, you can view a paginated previ
 >
 >More information about generating estimates for segment definitions can be found in the [estimate generation section](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) of the segment definition creation tutorial.
 
-You can also select your evaluation method. If you know what evaluation method you want to use, you can select the desired evaluation method either using the dropdown list. If you want to know what evaluation types this segment definition qualifies for, you can select the browse icon ![folder icon with a magnifying glass](../images/ui/segment-builder/segment-evaluation-select-icon.png) to see a list of the available segment definition evaluation methods.
+You can also select your evaluation method. If you know what evaluation method you want to use, you can select the desired evaluation method either using the dropdown list. If you want to know what evaluation types this segment definition qualifies for, you can select the browse icon ![folder icon with a magnifying glass](/help/images/icons/folder-search.png) to see a list of the available segment definition evaluation methods.
 
 The [!UICONTROL Evaluation method eligibility] popover appears. This popover displays the available evaluation methods, which are batch, streaming, and edge. The popover shows which evaluation methods are eligible and ineligible. Depending on the parameters you used in your segment definition, it may not qualify for certain evaluation methods. For more information on the requirements for each evaluation method, please read the [streaming segmentation](./streaming-segmentation.md#query-types) or the [edge segmentation](./edge-segmentation.md#query-types) overviews.
 

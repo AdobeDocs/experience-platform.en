@@ -17,7 +17,7 @@ Follow the steps below to edit existing activation dataflows:
 
     ![Browse destinations](../assets/ui/edit-activation/browse-destinations.png)
 
-2. Select the filter icon ![Filter-icon](../assets/ui/edit-activation/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
+2. Select the filter icon ![Filter-icon](/help/images/icons/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
 
     ![Filter destinations](../assets/ui/edit-activation/filter-destinations.png)
 
