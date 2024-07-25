@@ -41,7 +41,7 @@ SELECT
 
 To create your parameterized query in the UI, navigate to the Query Editor. See the section on [accessing the Query Editor](./user-guide.md#accessing-query-editor) for more instructions.
 
-Use the `'$'` preface to enter a query parameter into your query in the text editor. Next, select the **[!UICONTROL Query parameters]** tab next to the [!UICONTROL Console] add the missing value for the key. The query cannot be executed if you neglect to add a value to any of the required keys. An alert icon (![An alert icon.](../images/ui/parameterized-queries/alert-icon.png)) appears in the Query Parameters section next to any empty [!UICONTROL Value] input fields.
+Use the `'$'` preface to enter a query parameter into your query in the text editor. Next, select the **[!UICONTROL Query parameters]** tab next to the [!UICONTROL Console] add the missing value for the key. The query cannot be executed if you neglect to add a value to any of the required keys. An alert icon (![An alert icon.](/help/images/icons/alert.png)) appears in the Query Parameters section next to any empty [!UICONTROL Value] input fields.
 
 >[!NOTE]
 >

@@ -57,7 +57,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Total Profile fragments]** | The total number of records written into [!DNL Profile], including all existing [!DNL Profile] fragments updated and new [!DNL Profile] fragments created. |
 | **[!UICONTROL Total failed dataflows]** | The number of dataflow runs that failed. |
 
-You can select the filter icon ![Filter icon](../assets/ui/monitor-profiles/filter.png) beside the source name to see Profile processing information for that selected source's dataflows.
+You can select the filter icon ![Filter icon](/help/images/icons/filter.png) beside the source name to see Profile processing information for that selected source's dataflows.
 
 ![The filter icon is highlighted. Selecting this icon allows you to view the selected source's dataflows.](../assets/ui/monitor-profiles/sources-filter.png)
 
@@ -80,7 +80,7 @@ The following metrics are available for this dashboard view:
 | **[!UICONTROL Total failed flow runs]** | The number of dataflow runs that failed. |
 | **[!UICONTROL Last active]** | The timestamp which the dataflow was last run. |
 
-Select the filter icon ![filter](../assets/ui/monitor-profiles/filter.png) beside the dataflow run start time to see more information on your [!DNL Profile] dataflow run.
+Select the filter icon ![filter](/help/images/icons/filter.png) beside the dataflow run start time to see more information on your [!DNL Profile] dataflow run.
 
 ![The filter icon is highlighted. Selecting this icon allows you to view details about the selected dataflow.](../assets/ui/monitor-profiles/dataflows-filter.png)
 

@@ -154,7 +154,7 @@ Allow a few minutes for the initial setup process to complete, then select **[!U
 
 ![Initial setup complete confirmation screen](../../../images/extensions/server/meta/setup-complete.png)
 
-From the **[!UICONTROL Add Code on Your Site]** dialog copy the code provided using the copy ![Copy](../../../images/extensions/server/meta/copy-icon.png) function and paste this into the `<head>` of your source website. Once implemented, select **[!UICONTROL Start Validation]**
+From the **[!UICONTROL Add Code on Your Site]** dialog copy the code provided using the copy ![Copy](/help/images/icons/copy.png) function and paste this into the `<head>` of your source website. Once implemented, select **[!UICONTROL Start Validation]**
 
 ![Add code on your site dialog](../../../images/extensions/server/meta/add-code-on-your-site.png)
 

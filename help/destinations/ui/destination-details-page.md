@@ -22,19 +22,19 @@ Follow the steps below to view more details about an existing destination. You c
 
     ![Browse destinations](../assets/ui/details-page/browse-destinations.png)
 
-1. Select the filter icon ![Filter-icon](../assets/ui/details-page/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
+2. Select the filter icon ![Filter-icon](/help/images/icons/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
 
     ![Filter destinations](../assets/ui/details-page/filter-destinations.png)
 
-1. Select the row of the destination for which you'd like to bring up more information. This brings up a right rail with information about the destination, including the destination ID, the user who created the destination connection, and other information.
+3. Select the row of the destination for which you'd like to bring up more information. This brings up a right rail with information about the destination, including the destination ID, the user who created the destination connection, and other information.
 
     ![Destination ID in right rail](../assets/ui/details-page/right-rail-info-including-destination-id.png)
 
-1. Alternatively, you can bring up other information about the destination by selecting *the name of the destination* that you want to view.
+4. Alternatively, you can bring up other information about the destination by selecting *the name of the destination* that you want to view.
 
     ![Select destination](../assets/ui/details-page/destination-select.png)
 
-1. The details page for the destination appears in the right rail, showing its available controls. 
+5. The details page for the destination appears in the right rail, showing its available controls. 
 
     ![Destination details](../assets/ui/details-page/destination-details.png)
 
