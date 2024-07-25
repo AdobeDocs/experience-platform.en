@@ -2,8 +2,13 @@
 title: Identity graph linking rules configuration guide
 description: Learn the recommended steps to follow when implementing your data with identity graph linking rules configurations.
 badge: Beta
+exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 ---
 # Identity graph linking rules configuration guide
+
+>[!AVAILABILITY]
+>
+>Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
 
 Read this document for a step-by-step by guide that you can follow when implementing your data with Adobe Experience Platform Identity Service.
 
@@ -61,6 +66,11 @@ For instructions on how to create a dataset, read the [dataset UI guide](../../c
 
 ## Ingest your data {#ingest}
 
+>[!WARNING]
+>
+>* During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a person identifier, such as CRMID.
+>* During implementation, you must ensure that the unique namespace with the highest priority is always present in every profile. See the [appendix](#appendix) for examples of graph scenarios that are solved by ensuring that every profile contains the unique namespace with the highest priority.
+
 By this point, you should have the following:
 
 * The necessary permissions to access Identity Service features.
@@ -80,3 +90,55 @@ Once you have all of the items listed above, then you can begin ingesting your d
 >Once your data is ingested, the XDM raw data payload does not change. You may still see your primary identity configurations iin the UI. However, these configurations will be overridden by identity settings.
 
 For any feedback, use the **[!UICONTROL Beta feedback]** option in the Identity Service UI workspace.
+
+## Appendix {#appendix}
+
+Read this section for additional information that you can refer to when implementing your identity settings and unique namespaces.
+
+### Shared device scenario {#shared-device-scenario}
+
+You must ensure that a single namespace is used across all profiles that represents a person. Doing so, allows Identity Service to detect the appropriate person identifier in a given graph. 
+
+>[!BEGINTABS]
+
+>[!TAB Without a singular person identifier namespace]
+
+Without a unique namespace to represent your person identifiers, you may end up with a graph that links to disparate person identifiers to the same ECID. In this example, both B2BCRM and B2CCRM are linked to the same ECID at the same time. This graph suggests that Tom, using his B2C login account, shared a device with Summer, using her B2B login account. However, the system will recognize that this is one profile (graph collapse).
+
+![A graph scenario where two person identifiers are linked to the same ECID.](../images/graph-examples/multi_namespaces.png)
+
+>[!TAB With a singular person identifier namespace]
+
+Given a unique namespace, (in this case, a CRMID instead of two disparate namespaces), Identity Service is able to discern the person identifier that was last associated with the ECID. In this example, because a unique CRMID exists, Identity Service is able to recognize a "shared device" scenario, where two entities are sharing the same device.
+
+![A shared device graph scenario, where two person identifiers are linked to the same ECID, but the older link is removed.](../images/graph-examples/crmid_only_multi.png)
+
+>[!ENDTABS]
+
+### Dangling loginID scenario {#dangling-loginid-scenario}
+
+The following graph simulates a "dangling" loginID scenario. In this example, two different loginIDs are bound to the same ECID. However, `{loginID: ID_C}` is not linked to the CRMID. Therefore, there is no way for Identity Service to detect that these two loginIDs represent two different entities. 
+
+>[!BEGINTABS]
+
+>[!TAB Ambiguous loginID]
+
+In this example, `{loginID: ID_C}` is left dangling and unlinked to a CRMID. Thus, the person entity that this loginID should be associated with is left ambiguous.
+
+![An example of a graph with a "dangling" loginID scenario.](../images/graph-examples/dangling_example.png)
+
+>[!TAB loginID is linked to a CRMID]
+
+In this example, `{loginID: ID_C}` is linked to `{CRMID: Tom}`. Therfore, the system is able to discern that this loginID is associated with Tom.
+
+![LoginID is linked to a CRMID.](../images/graph-examples/id_c_tom.png)
+
+>[!TAB loginID is linked to another CRMID]
+
+In this example, `{loginID: ID_C}` is linked to `{CRMID: Summer}`. Therefore, the system is able to discern that this loginID is associated with another person entity, in this case, Summer. 
+
+This example also shows that Tom and Summer are to disparate person entities that are sharing a device, which is represented by `{ECID: 111}`.
+
+![LoginID is linked to another CRMID.](../images/graph-examples/id_c_summer.png)
+
+>[!ENDTABS]

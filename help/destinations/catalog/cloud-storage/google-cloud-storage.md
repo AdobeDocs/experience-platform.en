@@ -113,15 +113,15 @@ When you are finished providing details for your destination connection, select 
 
 To successfully connect and export data to your [!DNL Google Cloud Storage] storage location, you need the following [!DNL Google Cloud Storage] permissions for your buckets:
 
-*`orgpolicy.policy.get`
-*`resourcemanager.projects.get`
-*`resourcemanager.projects.list`
-*`storage.managedFolders.create`
-*`storage.multipartUploads.abort`
-*`storage.multipartUploads.create`
-*`storage.multipartUploads.listParts`
-*`storage.objects.create`
-*`storage.objects.list`
+* `orgpolicy.policy.get`
+* `resourcemanager.projects.get`
+* `resourcemanager.projects.list`
+* `storage.managedFolders.create`
+* `storage.multipartUploads.abort`
+* `storage.multipartUploads.create`
+* `storage.multipartUploads.listParts`
+* `storage.objects.create`
+* `storage.objects.list`
 
 Read more about [access control and permissions](https://cloud.google.com/storage/docs/access-control/iam-permissions) in [!DNL Google Cloud Storage].
 

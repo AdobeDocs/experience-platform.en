@@ -513,7 +513,7 @@ The following is an example of how `onBeforeEventSent` can be configured to trig
 
 ```javascript
 alloy("configure", {
-  edgeConfigId: "datastream configuration ID",
+  datastreamId: "datastream configuration ID",
   orgId: "adobe ORG ID",
   onBeforeEventSend: function(options) {
     const xdm = options.xdm;
