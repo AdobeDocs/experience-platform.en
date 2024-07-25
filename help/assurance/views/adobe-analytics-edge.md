@@ -6,7 +6,7 @@ exl-id: faaa2c1d-3471-4d86-9a25-03265b996e31
 ---
 # Analytics Events 2.0 in Assurance
 
-The Analytics Events 2.0 provide a richer view of SDK events to users debugging and validating their Adobe Analytics implementation. The view shows events sent to Adobe Analytics from the [Adobe Experience Platform Edge Network SDK](https://developer.adobe.com/client-sdks/edge/edge-network/) as well as the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/solution/adobe-analytics/) . The view also features a details panel, which provides context on how the event was processed by the client SDK, as well as by the upstream services after it left the device.
+The Analytics Events 2.0 provide a richer view of SDK events to users debugging and validating their Adobe Analytics implementation. The view shows events sent to Adobe Analytics from the [Adobe Experience Platform Edge Network SDK](https://developer.adobe.com/client-sdks/edge/edge-network/) as well as the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/solution/adobe-analytics/). The view also features a details panel, which provides context on how the event was processed by the client SDK, as well as by the upstream services after it left the device.
 
 ## Getting started
 
@@ -18,11 +18,11 @@ To use this view, complete the following steps:
 
 ## Analytics Edge view
 
-Use the Analytics Edge view if you are using **Edge Network** or **Edge Bridge** mobile extensions. This view is enabled when the "Analytics Edge (Beta)" toggle switch in the top right corner is activated, displaying the Analytics events sent via Edge network in your current session. This includes all events that have been fired by Lifecycle extension, Edge requests, and/or Edge Bridge events based of Track Action and Track State.  
+Use the Analytics Edge view if you are using **Edge Network** or **Edge Bridge** mobile extensions. This view is enabled when the "Analytics Edge (Beta)" toggle switch in the top right corner is activated, displaying the Analytics events sent via Edge network in your current session. This includes all events that have been fired by Lifecycle extension, Edge extension, and/or Edge Bridge extension.
 
 ![An image that shows toggle which switched to Analytics Edge View.](./images/adobe-analytics-edge/edge-analytics-view-toggle.png)
 
-The Analytics Edge view contains information on Analytics-related Edge requests and Lifecycle methods dispatched by the client. By choosing an event in the list, the event detail view panel on the right displays the events that were processed by the client SDK, as well as by the upstream service after they left the device, so you can easily view the chain of events that resulted from a call.
+The Analytics Edge view contains information on Analytics-related Edge events and Lifecycle events dispatched by the client. By choosing an event in the list, the event detail view panel on the right displays the events that were processed by the client SDK, as well as by the upstream service after they left the device, so you can easily view the chain of events that resulted from a call.
 
 ![An image demonstrating different components in the Analytics Edge View for the Edge Bridge scenario.](./images/adobe-analytics-edge/edgebridge-analytics-events.png)
 
@@ -30,7 +30,7 @@ The **Post-Processed Data** event in the list confirms that the data has been su
 
 ### Analytics Edge Event details view
 
-For an Edge request or an track event, the detailed view contains the following parts:
+For an Edge request event or an Analytics track event, the detailed view contains the following parts:
 
 * Event Details - An originating SDK edge request event.
 
