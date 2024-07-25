@@ -183,7 +183,7 @@ Under **[!UICONTROL Field name]**, start typing the name of the field you wish t
 
 While some standard fields share the same name, their structure may vary depending on the field group they come from. If a standard field is nested within a parent object in the field group structure, the parent field will also be included in the schema if the child field is added.
 
-Select the preview icon (![Preview icon](/help/images/icons/preview.png)) next to a standard field to view the structure of its field group and better understand how it might be nested. To add the standard field to the schema, select the plus icon (![Plus icon](/help/images/icons/circle-add.png)).
+Select the preview icon (![Preview icon](/help/images/icons/preview.png)) next to a standard field to view the structure of its field group and better understand how it might be nested. To add the standard field to the schema, select the plus icon (![Plus icon](/help/images/icons/add-circle.png)).
 
 ![Add standard field](../../images/ui/resources/schemas/add-standard-field.png)
 

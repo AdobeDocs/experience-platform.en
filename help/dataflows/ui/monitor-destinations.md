@@ -220,13 +220,13 @@ You can also filter your list of destinations to only display the selected categ
 
 ![Filter destinations using dropdown selector](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
-Additionally, you can enter a destination into the search bar to isolate to a single destination. If you want to see the destination's dataflows you can select the filter ![filter](../assets/ui/monitor-destinations/filter-add.png) beside it to see a list of its active dataflows.
+Additionally, you can enter a destination into the search bar to isolate to a single destination. If you want to see the destination's dataflows you can select the filter ![filter](/help/images/icons/filter-add.png) beside it to see a list of its active dataflows.
 
 ![Filter destinations using the search bar highlighted in the monitoring view.](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 If you want to view all existing dataflows across all destinations, select **[!UICONTROL Dataflows]**.
 
-A list of dataflows appears, sorted by the last dataflow run. You can see additional details for a specific dataflow by locating the destination you want to monitor, selecting the filter ![filter](../assets/ui/monitor-destinations/filter-add.png) beside it, and then subsequently selecting the filter ![filter](../assets/ui/monitor-destinations/filter-add.png) beside the dataflow you want more information about.
+A list of dataflows appears, sorted by the last dataflow run. You can see additional details for a specific dataflow by locating the destination you want to monitor, selecting the filter ![filter](/help/images/icons/filter-add.png) beside it, and then subsequently selecting the filter ![filter](/help/images/icons/filter-add.png) beside the dataflow you want more information about.
 
 ![All dataflows highlighted in the monitoring dashboard.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
@@ -277,7 +277,7 @@ When you drill down into the dataflow runs page from the [audience-level view](#
 
 ![Radio buttons showing how to filter dataflow runs for audiences.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
-To see more details about a specific dataflow run, select the filter ![filter](../assets/ui/monitor-destinations/filter-add.png) beside the dataflow run start time to see the dataflow run details page.
+To see more details about a specific dataflow run, select the filter ![filter](/help/images/icons/filter-add.png) beside the dataflow run start time to see the dataflow run details page.
 
 ![Dataflow runs filter in monitoring dashboard to drill into more information for a certain dataflow run.](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 
