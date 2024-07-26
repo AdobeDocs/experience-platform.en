@@ -50,6 +50,16 @@ While the externally generated audience can be referenced when creating audience
 
 Yes, the externally generated audience will be merged with the existing profile in Platform if the primary identifiers match.This data can take up to 24 hours to be reconciled. If profile data does not already exist, a new profile will be created as the data is ingested.
 
+### How are customer consent preferences honored for externally generated audiences that are imported into Audience Portal?{#consent}
+
+As customer data is captured from multiple channels, identity stitching and merge policies allow this data to be consolidated in a single Real-Time Customer Profile. Information on the customers' consent preferences are stored and evaluated at the profile level.
+
+Downstream destinations check each Profile for consent information prior to activation. Each Profile's consent information is compared against consent requirements for a particular Destination. If the Profile does not satisfy the requirements, that Profile is not sent to a destination.
+
+When an external audience is ingested into Audience Portal, they are joined with existing profiles using a primary ID such as email or ECID. As a result, the existing consent policies will remain in force throughout activation.
+
+Please note you should **not** include consent information with an externally generated audiences, since the payload variables are **not** stored in the profile store but in the data lake. Instead, you **must** use an Adobe Experience Platform ingestion channels where profile data is imported.
+
 ### Can I use an externally generated audience to build other audiences?
 
 Yes, any externally generated audience will appear within the audience inventory and can be used when building audiences within the [Segment Builder](./ui/segment-builder.md).
@@ -74,7 +84,7 @@ The organization-specific default merge policy is automatically applied when upl
 
 ### Where can I activate externally generated audiences to? 
 
-An externally generated audience can be mapped to any RTCDP destination and can be used in Adobe Journey Optimizer campaigns.
+An externally generated audience can be mapped to any destination and can be used in Adobe Journey Optimizer campaigns.
 
 ### How soon are externally generated audiences ready for activation?
 
