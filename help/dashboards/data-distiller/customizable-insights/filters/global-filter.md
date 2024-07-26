@@ -15,7 +15,7 @@ To create a global filter, first select **[!UICONTROL Add filter]** from your da
 
 You can quickly change the insights provided by your SQL with customized global filters.
 
-The [!UICONTROL Create a global filter] dialog opens. Creating a global filter follows the same process as creating an insight with SQL. First, select a database (insights data model) to query, then input your custom SQL in the Query Editor, and finally select the run icon (![A run icon.](../../../images/customizable-insights/run-icon.png)). 
+The [!UICONTROL Create a global filter] dialog opens. Creating a global filter follows the same process as creating an insight with SQL. First, select a database (insights data model) to query, then input your custom SQL in the Query Editor, and finally select the run icon (![A run icon.](/help/images/icons/play.png)). 
 
 >[!IMPORTANT]
 >
@@ -51,6 +51,6 @@ After creating your global filter for your dashboard, the toggle for that global
 
 ## Select a global filter {#select-global-filter}
 
-To open the [!UICONTROL Filters] dialog that lists all of your custom filters, select the filter icon (![A filter icon.](../../../images/customizable-insights/filter.png)) on the left of your dashboard. Next, to apply the effects on your dashboard insights, choose an option from the dropdown menu of your global filter then select **[!UICONTROL Apply]**.
+To open the [!UICONTROL Filters] dialog that lists all of your custom filters, select the filter icon (![A filter icon.](/help/images/icons/filter.png)) on the left of your dashboard. Next, to apply the effects on your dashboard insights, choose an option from the dropdown menu of your global filter then select **[!UICONTROL Apply]**.
 
 ![A custom dashboard with the filter dialog highlighted.](../../../images/customizable-insights/custom-filters.png)

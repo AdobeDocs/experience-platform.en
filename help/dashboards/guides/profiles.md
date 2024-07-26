@@ -464,7 +464,7 @@ Select **[!UICONTROL View more]** to open a full-screen dialog that contains mor
 
 ![The Audience overlap report widget with View more highlighted .](../images/profiles/profiles-audience-overlap-report.png)
 
-The [!UICONTROL Audience overlap report] dialog appears. This dialog can contain up to 50 rows of audience overlap analyses broken down into six columns. To remove or add columns from the table, select the settings icon (![The settings icon.](../images/profiles/settings-icon.png)).
+The [!UICONTROL Audience overlap report] dialog appears. This dialog can contain up to 50 rows of audience overlap analyses broken down into six columns. To remove or add columns from the table, select the settings icon (![The settings icon.](/help/images/icons/settings.png)).
 
 ![The Audience overlap report dialog.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 

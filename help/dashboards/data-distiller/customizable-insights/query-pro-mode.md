@@ -29,7 +29,7 @@ To include [global](./filters/global-filter.md) or [date filters](./filters/date
 >
 >If you want to use a global filter, you must place a query parameter in your SQL and then link that query parameter to the global filter in the widget composer. In the screenshot below, `CONSENT_VALUE_FILTER` is used in the SQL as a query parameter for a global filter. See the [global filter documentation](./filters/global-filter.md#enable-global-filter) for more information on how to do this. 
 
-To execute your query, select the run icon (![The run icon.](../../images/customizable-insights/run-icon.png)). The Query Editor displays the results tab. Next, to confirm your configuration and open the widget composer, select **[!UICONTROL Select]**. 
+To execute your query, select the run icon (![The run icon.](/help/images/icons/play.png)). The Query Editor displays the results tab. Next, to confirm your configuration and open the widget composer, select **[!UICONTROL Select]**. 
 
 >[!TIP]
 >
@@ -39,7 +39,7 @@ To execute your query, select the run icon (![The run icon.](../../images/custom
 
 ## Populate widget {#populate-widget}
  
-The widget composer is now populated with the columns from the executed SQL. The type of dashboard is indicated in the top left, in this case it is [!UICONTROL Manual SQL Entry]. Select the pencil icon (![A pencil icon.](../../images/customizable-insights/edit-icon.png)) to edit the SQL at any point. 
+The widget composer is now populated with the columns from the executed SQL. The type of dashboard is indicated in the top left, in this case it is [!UICONTROL Manual SQL Entry]. Select the pencil icon (![A pencil icon.](/help/images/icons/edit.png)) to edit the SQL at any point. 
 
 >[!TIP]
 >
@@ -51,13 +51,13 @@ To create your widget, use the attributes listed in the [!UICONTROL Attributes] 
 
 ### Add attributes {#add-attributes}
 
-To add an attribute to your widget, select the plus icon (![A plus icon.](../../images/customizable-insights/add-icon.png)) next to an attribute name. The dropdown menu that appears allows you to add an attribute to the chart from the options determined by your SQL. Different chart types have different options, such as an X and Y axis dropdown.
+To add an attribute to your widget, select the plus icon (![A plus icon.](/help/images/icons/add-circle.png)) next to an attribute name. The dropdown menu that appears allows you to add an attribute to the chart from the options determined by your SQL. Different chart types have different options, such as an X and Y axis dropdown.
 
 In this donut chart example, the options are size and color. Color breaks down the donut chart results, and the size is the actual metric used. Add an attribute to the [!UICONTROL Color] field to split the results into different colors based on their composition of that attribute.
 
 >[!TIP]
 >
->Select the up and down arrow icon (![The up and down arrow icon.](../../images/customizable-insights/switch-axis-icon.png)) to switch the arrangement of the X and Y axis on bar or line charts.
+>Select the up and down arrow icon (![The up and down arrow icon.](/help/images/icons/switch.png)) to switch the arrangement of the X and Y axis on bar or line charts.
 
 ![The widget composer with the add-icon dropdown and switch arrows highlighted.](../../images/customizable-insights/add-icon-and-switch-arrows.png)
 
@@ -67,7 +67,7 @@ To change the type of graph or chart of your widget, select from the available o
 
 ## Widget properties {#properties}
 
-Select the properties icon (![The properties icon.](../../images/customizable-insights/properties-icon.png)) in the right rail to open the properties panel. In the [!UICONTROL Properties] panel, enter a name for the widget in the **[!UICONTROL Widget title]** text field. You can also rename various aspects of your chart. 
+Select the properties icon (![The properties icon.](/help/images/icons/properties.png)) in the right rail to open the properties panel. In the [!UICONTROL Properties] panel, enter a name for the widget in the **[!UICONTROL Widget title]** text field. You can also rename various aspects of your chart. 
 
 >[!NOTE]
 >
@@ -87,7 +87,7 @@ Select **[!UICONTROL Edit]** to edit your entire dashboard or any of your insigh
 
 ![A custom dashboard with Edit highlighted.](../../images/customizable-insights/edit-dashboard.png)
 
-Select **[!UICONTROL Add filter]** to create either a [[!UICONTROL Date filter]](#create-date-filter) or a [[!UICONTROL Global filter]](#create-global-filter). Once created, all global and date filters are available from [the filter icon](#select-global-filter) (![A filter icon.](../../images/customizable-insights/filter.png)) of your dashboard.
+Select **[!UICONTROL Add filter]** to create either a [[!UICONTROL Date filter]](#create-date-filter) or a [[!UICONTROL Global filter]](#create-global-filter). Once created, all global and date filters are available from [the filter icon](#select-global-filter) (![A filter icon.](/help/images/icons/filter.png)) of your dashboard.
 
 ![A custom dashboard with the Add filter dropdown menu highlighted.](../../images/customizable-insights/add-filter.png)
 

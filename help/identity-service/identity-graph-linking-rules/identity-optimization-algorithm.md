@@ -8,7 +8,7 @@ exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 
 >[!AVAILABILITY]
 >
->This feature is not yet available; the beta program for identity graph linking rules is expected to start in July on development sandboxes. Contact your Adobe account team for information on the participation criteria.
+>Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
 
 The identity optimization algorithm is a graph algorithm on Identity Service that helps ensure that an identity graph is representative of a single person, and therefore, prevents the unwanted merging of identities on Real-Time Customer Profile.
 
@@ -156,6 +156,7 @@ View the diagram below to better understand how anonymous event association work
 For more information on identity graph linking rules, read the following documentation:
 
 * [Identity graph linking rules overview](./overview.md)
+* [Namespace priority](./namespace-priority.md)
 * [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
 * [Identity linking logic](../features/identity-linking-logic.md)
 * [Identity Service and Real-Time Customer Profile](../identity-and-profile.md)

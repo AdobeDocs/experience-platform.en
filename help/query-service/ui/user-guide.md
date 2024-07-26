@@ -51,7 +51,7 @@ A settings icon above the Query Editor input field includes an options to enable
 >
 >You can [!UICONTROL Disable syntax auto complete] while authoring a query without losing your progress.
 
-To enable dark or light themes, select the settings icon (![A settings icon.](../images/ui/query-editor/settings-icon.png)) followed by the option in the dropdown menu that appears.
+To enable dark or light themes, select the settings icon (![A settings icon.](/help/images/icons/settings.png)) followed by the option in the dropdown menu that appears.
 
 ![The Query Editor with the settings icon and Enable dark theme dropdown menu option highlighted.](../images/ui/query-editor/query-editor-settings.png)
 

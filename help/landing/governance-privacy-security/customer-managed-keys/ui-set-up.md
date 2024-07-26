@@ -36,7 +36,7 @@ Select **[!UICONTROL Configure]** to open the [!UICONTROL Customer Managed Keys 
 
 To start the registration process, copy the application authentication URL for your organization from the [!UICONTROL Customer Managed Keys configuration] view and paste it into your [!DNL Azure] environment **[!DNL Key Vault Crypto Service Encryption User]**. Details on how to [assign a role](#assign-to-role) are provided in the next section. 
 
-Select the copy icon (![The copy icon.](../../images/governance-privacy-security/customer-managed-keys/copy-icon.png)) by the [!UICONTROL Application authentication url].
+Select the copy icon (![The copy icon.](/help/images/icons/copy.png)) by the [!UICONTROL Application authentication url].
 
 ![The [!UICONTROL Customer Managed Keys configuration] view with the Application authentication url section highlighted.](../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 

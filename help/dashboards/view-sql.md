@@ -37,7 +37,7 @@ A dialog appears that contains the title of the insight and the SQL that generat
 
 >[!TIP]
 >
->You can copy the entire SQL statement to your clipboard by selecting the copy icon (![The copy icon.](./images/view-sql/copy-icon.png)) in the top right of the dialog.
+>You can copy the entire SQL statement to your clipboard by selecting the copy icon (![The copy icon.](/help/images/icons/copy.png)) in the top right of the dialog.
 
 ![An insight dialog with the SQL statement highlighted highlighted.](./images/view-sql/sql-dialog.png)
 

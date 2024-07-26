@@ -20,7 +20,7 @@ The Browse page is displayed. A list of all the prospect audiences for the organ
 
 This view lists information about the audience including the name, profile count, origin, lifecycle status, created date, last updated date, and breakdown.
 
-You can add additional fields to this display by selecting ![the filter attribute icon](../images/ui/prospect-audience/filter-attribute.png). These additional fields include update frequency and the last updated by.
+You can add additional fields to this display by selecting ![the filter attribute icon](/help/images/icons/column-settings.png). These additional fields include update frequency and the last updated by.
 
 More information about the browse page, including detailed information about the listed fields, can be found in the [Audience Portal overview](./audience-portal.md#list).
 
