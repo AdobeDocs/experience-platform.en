@@ -18,7 +18,7 @@ In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. The 
 
 ![](../images/ui/explore/tabs.png)
 
-The filter icon (![Filter Icon Image](../images/ui/explore/icon.png)) reveals controls in the left rail to narrow down listed results. The displayed controls differ depending on the type of resource being listed.
+The filter icon (![Filter Icon Image](/help/images/icons/filter.png)) reveals controls in the left rail to narrow down listed results. The displayed controls differ depending on the type of resource being listed.
 
 For example, to filter the list to only show standard data types provided by Adobe, select **[!UICONTROL Datatype]** and **[!UICONTROL Adobe]** under the **[!UICONTROL Type]** and **[!UICONTROL Owner]** sections, respectively.
 
@@ -50,7 +50,7 @@ All object-type fields containing sub-properties are collapsed by default when t
 
 ### Standard class and field group indicator {#standard-class-and-field-group-indicator}
 
-Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](../images/ui/explore/padlock-icon.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
+Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](/help/images/icons/lock-closed.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
 
 ![The Schema Editor with the padlock icon highlighted](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -88,7 +88,7 @@ If the field you are inspecting is an enum field, the right rail will also displ
 
 When inspecting schemas that contain identity fields, these fields are listed in the left rail under the class or field group that provides them to the schema. Select the identity field name in the left rail to reveal the field in the canvas, regardless of how deeply it is nested.
 
-Identity fields are highlighted in the canvas with a fingerprint icon (![Fingerprint Icon Image](../images/ui/explore/identity-symbol.png)). If you select the identity field's name, you can view additional information such as the [identity namespace](../../identity-service/features/namespaces.md) and whether or not the field is the primary identity for the schema.
+Identity fields are highlighted in the canvas with a fingerprint icon (![Fingerprint Icon Image](/help/images/icons/identity-service.png)). If you select the identity field's name, you can view additional information such as the [identity namespace](../../identity-service/features/namespaces.md) and whether or not the field is the primary identity for the schema.
 
 ![](../images/ui/explore/identity-field.png)
 

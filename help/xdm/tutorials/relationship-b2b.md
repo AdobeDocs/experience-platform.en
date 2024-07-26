@@ -91,7 +91,7 @@ In order to define a relationship between two schemas, the source schema must ha
 >
 >Currently, only many-to-one and one-to-one relationships can be defined from a source schema to a reference schema. For one-to-many relationships, you must define the relationship field in the schema that represents the "many".
 
-To set a relationship field, select the arrow icon (![Arrow Icon](../images/tutorials/relationship-b2b/arrow.png)) next to the field in question within the canvas. In the case of the [!DNL Opportunities] schema, this is the `accountKey.sourceKey` field since the goal is to establish a many-to-one relationship with an account.
+To set a relationship field, select the arrow icon (![Arrow Icon](/help/images/icons/alias.png)) next to the field in question within the canvas. In the case of the [!DNL Opportunities] schema, this is the `accountKey.sourceKey` field since the goal is to establish a many-to-one relationship with an account.
 
 ![Relationship Button](../images/tutorials/relationship-b2b/relationship-button.png)
 
