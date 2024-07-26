@@ -71,6 +71,8 @@ If you want to check the [!DNL Common Name] (CN) and [!DNL Subject Alternative N
 
 * [HTTP API mTLS public certificate](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
 
+You can also securely retrieve public certificates by making a GET request to the MTLS endpoint. See the [public certificate endpoint documentation](../../../data-governance/mtls-api/public-certificate-endpoint.md) for more information. 
+
 ## IP address allowlist {#ip-address-allowlist}
 
 To meet customers' security and compliance requirements, Experience Platform provides a list of static IPs that you can allowlist for the HTTP API destination. Refer to [IP address allowlist for streaming destinations](/help/destinations/catalog/streaming/ip-address-allow-list.md) for the complete list of IPs to allowlist.
