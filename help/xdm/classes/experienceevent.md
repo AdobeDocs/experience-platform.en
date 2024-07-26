@@ -169,8 +169,8 @@ The following table outlines the accepted values for `eventType`, along with the
 |`pushTracking.applicationOpened` | This event tracks when a person opened an application from a push notification. |
 |`pushTracking.customAction` | This event tracks when a person selected a custom action in a push notification. |
 |`web.formFilledOut` | This event tracks when a person filled out a form on a web page. |
-|`web.webinteraction.linkClicks` | This event tracks when Web SDK automatically tracks link clicks. |
-|`web.webpagedetails.pageViews` | This event type is the standard method for marking this hit as a page view. |
+|`web.webinteraction.linkClicks` | The event signals that a link click has been automatically recorded by the Web SDK. |
+|`web.webpagedetails.pageViews` | This event type is the standard method for marking the hit as a page view." |
 |`location.entry` | This event tracks the entry of a person or device at a specific location. |
 |`location.exit` | This event tracks the exit of a person or device from a specific location. |
 
