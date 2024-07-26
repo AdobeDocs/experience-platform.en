@@ -6,7 +6,7 @@ exl-id: faaa2c1d-3471-4d86-9a25-03265b996e31
 ---
 # Analytics Events 2.0 in Assurance
 
-The Analytics Events 2.0 provide a richer view of SDK events to users debugging and validating their Adobe Analytics implementation. The view shows events sent to Adobe Analytics from the [Adobe Experience Platform Edge Network SDK](https://developer.adobe.com/client-sdks/edge/edge-network/) as well as the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/solution/adobe-analytics/). The view also features a details panel, which provides context on how the event was processed by the client SDK and by the upstream services after it left the device.
+The Analytics Events 2.0 provides a richer view of SDK events to users debugging and validating their Adobe Analytics implementation. The view shows events sent to Adobe Analytics from the [Adobe Experience Platform Edge Network SDK](https://developer.adobe.com/client-sdks/edge/edge-network/) as well as the [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/solution/adobe-analytics/). The view also features a details panel, which provides context on how the event was processed by the client SDK and by the upstream services after it left the device.
 
 ## Getting started
 
