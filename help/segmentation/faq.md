@@ -54,11 +54,11 @@ Yes, the externally generated audience will be merged with the existing profile 
 
 As customer data is captured from multiple channels, identity stitching and merge policies allow this data to be consolidated in a single Real-Time Customer Profile. Information on the customers' consent preferences are stored and evaluated at the profile level.
 
-Downstream destinations check each Profile for consent information prior to activation. Each Profile's consent information is compared against consent requirements for a particular Destination. If the Profile does not satisfy the requirements, that Profile is not sent to a destination.
+Downstream destinations check each profile for consent information prior to activation. Each profile's consent information is compared against consent requirements for a particular destination. If the profile does not satisfy the requirements, that profile is not sent to a destination.
 
 When an external audience is ingested into Audience Portal, they are joined with existing profiles using a primary ID such as email or ECID. As a result, the existing consent policies will remain in force throughout activation.
 
-Please note you should **not** include consent information with an externally generated audiences, since the payload variables are **not** stored in the profile store but in the data lake. Instead, you **must** use an Adobe Experience Platform ingestion channels where profile data is imported.
+Please note you should **not** include consent information with an externally generated audiences, since the payload variables are **not** stored in the Profile store but in the data lake. Instead, you **must** use an Adobe Experience Platform ingestion channels where profile data is imported.
 
 ### Can I use an externally generated audience to build other audiences?
 
