@@ -99,7 +99,7 @@ The following table outlines the accepted values for `eventType`, along with the
 |`advertising.timePlayed` | This event tracks the amount of time spent by a user on a specific timed media asset. |
 |`application.close` | This event tracks when an application was closed or sent into the background. |
 |`application.launch` | This event tracks when an application was launched or brought into the foreground. |
-| `click` | **Deprecated**, but still active in XDM translator. Instead use `decisioning.propositionInteract`. |
+| `click` | **Deprecated** Instead use `decisioning.propositionInteract`. |
 |`commerce.backofficeCreditMemoIssued` | This event tracks when a notice of credit has been issued to a customer. |
 |`commerce.backofficeOrderCancelled` | This event tracks when a previously initiated purchase process has been terminated before completion. |
 |`commerce.backofficeOrderItemsShipped` | This event tracks when the purchased items have been physically shipped to the customer. |
@@ -128,7 +128,7 @@ The following table outlines the accepted values for `eventType`, along with the
 |`directMarketing.emailOpened` | This event tracks when a person opened a marketing email. |
 |`directMarketing.emailSent` | This event tracks when a marketing email has been sent to a person. |
 |`directMarketing.emailUnsubscribed` | This event tracks when a person unsubscribed from a marketing email. |
-| `display` | **Deprecated**, but still active in XDM translator. Instead use `decisioning.propositionDisplay`. |
+| `display` | **Deprecated** Instead use `decisioning.propositionDisplay`. |
 |`inappmessageTracking.dismiss` | This event tracks when an in-app message was dismissed. |
 |`inappmessageTracking.display` | This event tracks when an in-app message was displayed. |
 |`inappmessageTracking.interact` | This event tracks when an in-app message was interacted with. |
@@ -165,12 +165,12 @@ The following table outlines the accepted values for `eventType`, along with the
 |`opportunityEvent.addToOpportunity` | This event tracks when a person was added to an opportunity. |
 |`opportunityEvent.opportunityUpdated` | This event tracks when an opportunity was updated. |
 |`opportunityEvent.removeFromOpportunity` | This event tracks when a person was removed from an opportunity. |
-| `personalization.request` | **Deprecated**, but still active in XDM translator. Instead use `decisioning.propositionFetch`. |
+| `personalization.request` | **Deprecated** Instead use `decisioning.propositionFetch`. |
 |`pushTracking.applicationOpened` | This event tracks when a person opened an application from a push notification. |
 |`pushTracking.customAction` | This event tracks when a person selected a custom action in a push notification. |
 |`web.formFilledOut` | This event tracks when a person filled out a form on a web page. |
 |`web.webinteraction.linkClicks` | The event signals that a link click has been automatically recorded by the Web SDK. |
-|`web.webpagedetails.pageViews` | This event type is the standard method for marking the hit as a page view." |
+|`web.webpagedetails.pageViews` | This event type is the standard method for marking the hit as a page view. |
 |`location.entry` | This event tracks the entry of a person or device at a specific location. |
 |`location.exit` | This event tracks the exit of a person or device from a specific location. |
 
