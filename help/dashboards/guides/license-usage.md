@@ -76,7 +76,7 @@ Use the predicted usage capability to proactively manage and optimize your licen
 
 >[!IMPORTANT]
 >
->Predictions are refreshed on a monthly basis. The date of refresh is included in the column title.
+>Predictions are refreshed on a monthly basis. The date of refresh is included in an info icon (![]()) above the column title.
 
 ![The [!UICONTROL License usage] [!UICONTROL Overview] with the predicted usage column highlighted.](../images/license-usage/product-predicted-usage.png)
 
