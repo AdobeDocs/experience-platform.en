@@ -70,7 +70,7 @@ The table indicates the primary metric for each product, as each product can tra
 
 >[!AVAILABILITY]
 >
->The functionality to predicts future license usage is currently in Beta. The documentation and the functionality are subject to change.
+>The functionality to predict future license usage is currently in beta. The documentation and the functionality are subject to change.
 
 Use the predicted usage capability to proactively manage and optimize your licensing resources based on insightful predictions. The [!UICONTROL Predicted Usage] column accurately predicts future license usage at various levels (organization-level, sandbox-level, or dataset-level). This alerting capability provides a forecast of license usage for six months in the future, based on your usage up to that month.
 
