@@ -47,7 +47,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
   "metadataTemplate": {
     "name": "Test Webhook Audience Template",
     "create": {
-      "url": "https://webhook.site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/segments",
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/segments",
       "httpMethod": "POST",
       "headers": [
         {
@@ -87,7 +87,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
       ]
     },
     "update": {
-      "url": "https://webhook.site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/segments/{{segment.alias}}",
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/segments/{{segment.alias}}",
       "httpMethod": "PUT",
       "headers": [
         {
@@ -127,7 +127,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
       ]
     },
     "delete": {
-      "url": "https://webhook.site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/segments/{{segment.alias}}",
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/segments/{{segment.alias}}",
       "httpMethod": "DELETE",
       "headers": [
         {
@@ -143,7 +143,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
       ]
     },
     "createDestination": {
-      "url": "https://webhook.site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/createDestination",
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/createDestination",
       "httpMethod": "POST",
       "headers": [
         {
@@ -183,7 +183,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
       ]
     },
     "updateDestination": {
-      "url": "https://webhook.site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/updateDestination",
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/updateDestination",
       "httpMethod": "POST",
       "headers": [
         {
@@ -223,7 +223,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
       ]
     },
     "deleteDestination": {
-      "url": "https://webhook.site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/deleteDestination",
+      "url": "https://your-webhook-site/0bd222fa-8ae2-433b-8f0e-f2ce137b0ee4/{{customerData.customerID}}/deleteDestination",
       "httpMethod": "DELETE",
       "headers": [
         {
