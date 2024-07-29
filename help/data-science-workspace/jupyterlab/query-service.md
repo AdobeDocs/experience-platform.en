@@ -92,7 +92,7 @@ Before starting this tutorial, you must have the following prerequisites:
 
 Enter the following SQL queries in individual notebook cells. Execute a query by selecting on its cell followed by selecting the **[!UICONTROL play]** button. Successful query results or error logs are displayed below the executed cell.
 
-When a notebook is inactive for an extended period of time, the connection between the notebook and [!DNL Query Service] may break. In such cases, restart [!DNL JupyterLab] by selecting the **Restart** button ![restart button](../images/jupyterlab/user-guide/restart_button.png) located in the top-right corner next to the power button. 
+When a notebook is inactive for an extended period of time, the connection between the notebook and [!DNL Query Service] may break. In such cases, restart [!DNL JupyterLab] by selecting the **Restart** button ![restart button](/help/images/icons/restart.png) located in the top-right corner next to the power button. 
 
 The notebook kernel resets but the cells will remain, re-run all the cells to continue where you had left off.
 
