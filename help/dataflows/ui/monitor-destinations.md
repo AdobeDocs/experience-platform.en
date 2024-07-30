@@ -176,7 +176,7 @@ You can also select to view rich information about a certain dataflow and its da
 
 1. Navigate to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** tab
 2. Navigate to the dataflow that you want to inspect.
-3. Select the ellipsis symbol and ![monitoring icon](/help/dataflows/assets/ui/monitor-destinations/monitoring-icon.png) **[!UICONTROL View in monitoring]**.
+3. Select the ellipsis symbol and ![monitoring icon](/help/images/icons/monitoring.png) **[!UICONTROL View in monitoring]**.
 
 ![Select View in monitoring in the destinations workflow to get more information about a dataflow.](/help/dataflows/assets/ui/monitor-destinations/view-in-monitoring.png)
 
