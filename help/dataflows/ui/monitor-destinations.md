@@ -225,18 +225,20 @@ Use the arrow icon (![arrow icon](/help/dataflows/assets/ui/monitor-destinations
 
 The **[!UICONTROL Activation]** graph is displayed by default and you can disable it to expand the list of destinations below. Select the **[!UICONTROL Metrics and graphs]** toggle to disable the graphs.
 
-The **[!UICONTROL Activation]** panel displays a list of destinations that contain at least one existing account. This list also includes information on the profiles received, identities activated, identities failed, identities excluded, activation rate, total failed dataflows, and the last updated date for these destinations. Not all metrics are available for all destination types. The table below outlines the metrics and information available per destination type, streaming or batch, as well as definitions for the metrics.
+The **[!UICONTROL Activation]** panel displays a list of destinations that contain at least one existing account. This list also includes information on the profiles received, identities activated, identities failed, identities excluded, activation rate, total failed dataflows, and the last updated date for these destinations. Not all metrics are available for all destination types. The table below outlines the metrics and information available per destination type.
 
-| Metric |  Description | Destination type |
-|---------|----------|----------|
-| **[!UICONTROL Records received]** | | Streaming and batch |
-| **[!UICONTROL Records activated]**|  | Streaming and batch |
-| **[!UICONTROL Records failed]** | | Streaming |
-| **[!UICONTROL Records skipped]** | | Streaming and batch |
-| **[!UICONTROL Data type]** | | Streaming and batch |
-| **[!UICONTROL Activation rate]** | | Streaming |
-| **[!UICONTROL Total failed dataflows]** | | Batch |
-| **[!UICONTROL Last updated]** | | Streaming and batch |
+| Metric                               | Destination type      |
+|--------------------------------------|-----------------------|
+| **[!UICONTROL Records received]**    | Streaming and batch   |
+| **[!UICONTROL Records activated]**   | Streaming and batch   |
+| **[!UICONTROL Records failed]**      | Streaming             |
+| **[!UICONTROL Records skipped]**     | Streaming and batch   |
+| **[!UICONTROL Data type]**           | Streaming and batch   |
+| **[!UICONTROL Activation rate]**     | Streaming             |
+| **[!UICONTROL Total failed dataflows]** | Batch              |
+| **[!UICONTROL Last updated]**        | Streaming and batch   |
+
+{style="table-layout:auto"}
 
 ![Monitoring dashboard with all activated destinations highlighted.](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
@@ -282,7 +284,7 @@ For example, you are activating an audience called "Loyalty Members in Californi
 >
 >Note the current limitations related to audience-level metrics:
 >- The audience-level view is currently available for batch (file-based) destinations and the [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) streaming destination only. Rollout is planned for further streaming destinations.
->- Audience-level metrics are currently recorded for successful dataflow runs only. They are not recorded for failed dataflow runs and excluded records.
+>- For batch destinations, audience-level metrics are currently recorded for successful dataflow runs only. They are not recorded for failed dataflow runs and excluded records. For dataflow runs to streaming destinations, metrics are captured and displayed for activated and excluded records. 
 
 ![Audiences highlighted in the dataflow panel.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
