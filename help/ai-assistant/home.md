@@ -43,7 +43,7 @@ Product knowledge refers to concepts and topics grounded in Experience League do
 
 | Product knowledge | Examples |
 | --- | --- |
-| Pointed learning | <ul><li>What is the difference between an identity and a primary or foreign key?</li><li>How is profile richness calculated?</li></ul> |
+| Pointed learning | <ul><li>What is the difference between an identity and a primary or foreign key?</li><li>What are lookalike audiences?</li></ul> |
 | Open discovery | <ul><li>How can I export this dataset?</li><li>Are there schemas for healthcare customers?</li></ul> |
 | Troubleshooting | <ul><li>Why can't I turn on a schema owned by Adobe for profile?</li><li>Why can't I delete a segment?</li></ul> |
 
