@@ -72,39 +72,29 @@ The table indicates the primary metric for each product, as each product can tra
 >
 >The functionality to predict future license usage is currently in beta. The documentation and the functionality are subject to change.
 
-Proactively manage and optimize your licensing resources based on insightful usage predictions. The [!UICONTROL Predicted Usage] column accurately predicts future license usage at various levels (organization-level, sandbox-level, or dataset-level) for all of your purchased products. This alerting capability provides a forecast of license usage for six weeks in the future, based on your usage up to the 15th of this calendar month. Predictions are provided with a lower & an upper bound.
+Proactively manage and optimize your licensing resources based on insightful usage predictions. The [!UICONTROL Predicted Usage] column accurately predicts future license usage at various levels (organization-level, sandbox-level, or dataset-level) for all of your purchased products. This alerting capability provides a forecast of license usage for six weeks in the future, based on your usage up to the 15th of this calendar month. Predictions are provided with a lower & an upper bound. 
+
+<!-- Usage predictions are available for your product, sandbox, and the individual metrics used at the sandbox level. -->
 
 >[!IMPORTANT]
 >
 >Predictions are refreshed on a monthly basis. The date of refresh is included in an info icon (![This info icon.](../images/license-usage/info-icon.png)) above the column title.
 
-![The [!UICONTROL License usage] [!UICONTROL Overview] with the predicted usage column highlighted.](../images/license-usage/product-predicted-usage.png)
+To see a summary of a products entitlement usage, select a product from the [!UICONTROL Overview] list. 
 
-Use the granular predictions available on the Overview, Summary, and Details dashboards to ensure informed decision-making for efficient license utilization. Usage predictions are available for your product, sandbox, and the individual metrics used at the sandbox level.
+![The [!UICONTROL License usage] [!UICONTROL Overview] with a product and the predicted usage column highlighted.](../images/license-usage/product-predicted-usage.png)
 
-#### Sandbox level predictions {#sandbox-predictions} 
+The summary tab appears. You can use the granular predictions available on the [!UICONTROL Summary], and [!UICONTROL Details] tabs to ensure informed decision-making for efficient license use.
 
-<!-- Q) I have not yet seen this in QA environment. Is it included in the beta? -->
-
-The [!UICONTROL Details] tab displays sandbox level predictions as a separate column). If you use sandboxes to indicate business units, brands, market segments, and so on, you can use sandbox level prediction to understand which unit or group will use more of the licenses.
-
-![The [!UICONTROL License usage] [!UICONTROL Details] view with the predicted usage column highlighted. MOCK IMAGE.](../images/license-usage/sandbox-predicted-usage.png)
-
-<!-- Q) There is no predicted usage in this org on the Details View for sandboxes. Is this coming? -->
+![The summary view of a Platform Product with the predicted usage column highlighted.](../images/license-usage/summary-predicted-usage.png)
 
 The predicted usage feature supports for the following metrics:
 
-- Addressable audience
-- Average profile richness
-- Total storage
-- Audience activation size
-- Data export size
-- Data scanned
-- Count of emails in the last 30 days
-- Lookalike audiences
-- Rows available
-- Compute hours
-- Computed attributes
+- [!UICONTROL Addressable audience]
+- [!UICONTROL Average profile richness]
+- [!UICONTROL Compute hours]
+- [!UICONTROL Customer Journey Audience number of rows]
+- [!UICONTROL Total storage]
 
 ## [!UICONTROL Summary] tab {#summary-tab}
 
