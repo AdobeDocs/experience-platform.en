@@ -58,7 +58,7 @@ This dashboard displays all of your licensed Adobe Experience Platform products,
 | **[!UICONTROL License Amount]**  | The contracted value for the maximum amount of the Primary Metric as agreed in your product license agreement.  |
 | **[!UICONTROL Usage]**  | The amount of your primary metric used. This value provides the total usage of that metric across all sandboxes, either production or development. |
 | **[!UICONTROL Usage %]**  | The percentage of your primary metric used according to your license amount. |
-| **[!UICONTROL Prediction %]**  | The predictied usage percentage of your primary metric according to your license amount. |
+| **[!UICONTROL Prediction Usage]**  | (**Beta**) The predicted usage percentage of your primary metric according to your license amount. |
 
 >[!NOTE]
 >
@@ -72,19 +72,15 @@ The table indicates the primary metric for each product, as each product can tra
 >
 >The functionality to predict future license usage is currently in beta. The documentation and the functionality are subject to change.
 
-Use the predicted usage capability to proactively manage and optimize your licensing resources based on insightful predictions. The [!UICONTROL Predicted Usage] column accurately predicts future license usage at various levels (organization-level, sandbox-level, or dataset-level). This alerting capability provides a forecast of license usage for six months in the future, based on your usage up to that month.
+Proactively manage and optimize your licensing resources based on insightful usage predictions. The [!UICONTROL Predicted Usage] column accurately predicts future license usage at various levels (organization-level, sandbox-level, or dataset-level) for all of your purchased products. This alerting capability provides a forecast of license usage for six weeks in the future, based on your usage up to the 15th of this calendar month. Predictions are provided with a lower & an upper bound.
 
 >[!IMPORTANT]
 >
->Predictions are refreshed on a monthly basis. The date of refresh is included in an info icon (![]()) above the column title.
+>Predictions are refreshed on a monthly basis. The date of refresh is included in an info icon (![This info icon.](../images/license-usage/info-icon.png)) above the column title.
 
 ![The [!UICONTROL License usage] [!UICONTROL Overview] with the predicted usage column highlighted.](../images/license-usage/product-predicted-usage.png)
 
 Use the granular predictions available on the Overview, Summary, and Details dashboards to ensure informed decision-making for efficient license utilization. Usage predictions are available for your product, sandbox, and the individual metrics used at the sandbox level.
-
-<!--
-Each prediction has a lower & an upper bound. 
-Q) Is this accurate? This does not seem to be true.  -->
 
 #### Sandbox level predictions {#sandbox-predictions} 
 
