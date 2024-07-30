@@ -8,7 +8,7 @@ exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 
 >[!AVAILABILITY]
 >
->This feature is not yet available; the beta program for identity graph linking rules is expected to start in July on development sandboxes. Contact your Adobe account team for information on the participation criteria.
+>Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
 
 Every customer implementation is unique and tailored to meet a particular organization's goals, and as such, the importance of a given namespace varies from customer to customer. Real-world examples include:
 
@@ -45,9 +45,9 @@ Person namespaces are relatively immutable compared to hardware devices (such as
 
 Another way to approach this topic is through cardinality. For a given person entity, how many identities will be created? In most cases, a person will have one CRM ID, a handful of hardware device identifiers (IDFA/GAID resets should not happen often), and even more cookies (an individual could conceivably brows on multiple devices, use incognito mode, or reset cookies at any  given time). Generally, **lower cardinality indicates a namespace with a higher value**.
 
-<!-- ## Step 2: Validate your namespace priority settings
+## Validate your namespace priority settings
 
-Once you have an idea of how you will prioritize your namespaces, you can use the Graph Simulation tool to test out various graph collapse scenarios and ensure that your priority configurations are returning the expected graph results. For more information, read the guide on using the [Graph Simulation tool](./graph-simulation.md). -->
+Once you have an idea of how you will prioritize your namespaces, you can use the Graph Simulation tool to test out various graph collapse scenarios and ensure that your priority configurations are returning the expected graph results. For more information, read the guide on using the [Graph Simulation tool](./graph-simulation.md).
 
 ## Configure namespace priority
 
@@ -65,7 +65,7 @@ Currently, namespace priority influences system behavior of Real-Time Customer P
 
 ### Identity Service: Identity optimization algorithm
 
-For relatively complex graph structures, namespace priority plays an important role in ensuring that the correct links are removed when graph collapse scenarios happen. For more information read the [[!DNL Identity Optimization Algorithm] overview](../identity-graph-linking-rules/identity-optimization-algorithm.md).
+For relatively complex graph structures, namespace priority plays an important role in ensuring that the correct links are removed when graph collapse scenarios happen. For more information read the [identity optimization algorithm overview](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
 ### Real-Time Customer Profile: primary identity determination for experience events
 
@@ -139,6 +139,12 @@ Data hygiene record delete requests functions in the following manner, for a giv
 * Data lake: Deletes any record with the specified identity as primary identity.
 
 For more information, read the [advanced lifecycle management overview](../../hygiene/home.md).
+
+### Computed attributes
+
+Computed attributes does not use namespace priority to compute values. If you are using computed attributes, you must ensure that the CRM ID is designated as your primary identity for WebSDK. This limitation is expected to be resolved in August 2024.
+
+For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
 
 ### Data lake
 

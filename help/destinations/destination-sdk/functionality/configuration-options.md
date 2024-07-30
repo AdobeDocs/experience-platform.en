@@ -11,7 +11,11 @@ Combined, these components allow Experience Platform to connect to destination p
 
 The diagram below shows a high-level overview of the components that you can configure through Destination SDK to build your own destination. These components are described further below.
 
-![Diagram showing the Destination SDK components, configuration endpoints, and the operations supported by them.](../assets/functionality/destination-sdk-components-diagram.png)
+>[!BEGINSHADEBOX]
+
+![Diagram showing the Destination SDK components, configuration endpoints, and the operations supported by them.](../assets/functionality/destination-sdk-components-diagram.png){zoomable="yes"}
+
+>[!ENDSHADEBOX]
 
 ## Server configuration {#server-configuration}
 

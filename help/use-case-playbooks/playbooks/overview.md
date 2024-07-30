@@ -14,7 +14,7 @@ What you'll find in this documentation guide:
 * **[Overview of use case playbooks](#overview)**
 * [Get started with the required configurations and permissions](/help/use-case-playbooks/playbooks/get-started.md)
 * [Available Use Case Playbooks](/help/use-case-playbooks/playbooks/playbooks-list.md)
-* [Discover the right playbook](/help/use-case-playbooks/playbooks/discover.md)
+* [Choose from a selection of playbooks](/help/use-case-playbooks/playbooks/choose.md)
 * [Create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Copy playbook-generated assets to other environments by using data awareness functionality](/help/use-case-playbooks/playbooks/data-awareness.md)
 * [Troubleshooting and known limitations](troubleshooting.md)
@@ -48,7 +48,7 @@ Some [!UICONTROL Use Case Playbooks] are tailored to Real-Time CDP use cases whi
 
 ## UI guides {#ui-guides}
 
-After you decide on the playbook that you want to use, select it from the UI and get started with it. Read the UI guides on [how to discover the right playbook](/help/use-case-playbooks/playbooks/discover.md) for you and [how to create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md) for complete information on how to create instances and make the most of a playbook. To learn how to promote various assets from the inspirational sandbox to other development sandboxes, and then to production, read the documentation on [data awareness](/help/use-case-playbooks/playbooks/data-awareness.md).
+After you decide on the playbook that you want to use, select it from the UI and get started with it. Read the UI guides on [how to choose the right playbook from a selection](/help/use-case-playbooks/playbooks/choose.md) for you and [how to create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md) for complete information on how to create instances and make the most of a playbook. To learn how to promote various assets from the inspirational sandbox to other development sandboxes, and then to production, read the documentation on [data awareness](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Troubleshooting and known limitations {#trouble-shooting-known-limitations}
 

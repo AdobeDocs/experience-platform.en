@@ -41,6 +41,10 @@ The schedules workspace appears. The UI displays a list of any scheduled runs th
 
 The schedule details page appears. On this page, you can edit a variety of details for the scheduled query. Details include the [frequency and weekday of the scheduled query](#scheduled-query-frequency) run, the start and end date, the dataset to export the results to, and [query status alerts](#alerts-for-query-status).
 
+>[!IMPORTANT]
+>
+>The queries scheduler UI does not support indefinite or perpetual scheduling. An end date must be specified. There is no upper limit for the end date.
+
 ![The Schedule details panel highlighted.](../images/ui/query-schedules/schedule-details.png)
 
 #### Scheduled query frequency {#scheduled-query-frequency}
@@ -65,7 +69,7 @@ Select **[!UICONTROL Create and append into new dataset]** to create a data set 
 
 ![The Schedule details panel with Dataset details and the [!UICONTROL Create and append into new dataset] options highlighted.](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
-Alternatively, select **[!UICONTROL Append into existing dataset]** followed by the dataset icon (![The dataset icon.](../images/ui/query-schedules/dataset-icon.png)).
+Alternatively, select **[!UICONTROL Append into existing dataset]** followed by the dataset icon (![The dataset icon.](/help/images/icons/database.png)).
 
 ![The Schedule details panel with Dataset details and Append into existing dataset highlighted.](../images/ui/query-schedules/dataset-details-existing.png)
 

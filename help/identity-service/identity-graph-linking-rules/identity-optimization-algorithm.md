@@ -8,7 +8,7 @@ exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 
 >[!AVAILABILITY]
 >
->This feature is not yet available; the beta program for identity graph linking rules is expected to start in July on development sandboxes. Contact your Adobe account team for information on the participation criteria.
+>Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
 
 The identity optimization algorithm is a graph algorithm on Identity Service that helps ensure that an identity graph is representative of a single person, and therefore, prevents the unwanted merging of identities on Real-Time Customer Profile.
 
@@ -47,9 +47,7 @@ For an in-depth look at namespace priority and its complete functionalities and 
 
 ## Process {#process}
 
-
 Upon ingesting new identities, Identity Service checks if the new identities and their corresponding namespaces adheres to unique namespace configurations. If the configurations are followed, then ingestion proceeds and the new identities aer linked to the the graph. However, if configurations are not followed, then the identity optimization algorithm will:
-
 
 * Ingest the most recent event, while taking namespace priority into account.
 * Remove the link that would merge two person entities from the appropriate graph layer.  
@@ -158,6 +156,7 @@ View the diagram below to better understand how anonymous event association work
 For more information on identity graph linking rules, read the following documentation:
 
 * [Identity graph linking rules overview](./overview.md)
+* [Namespace priority](./namespace-priority.md)
 * [Example scenarios for configuring identity graph linking rules](./example-scenarios.md)
 * [Identity linking logic](../features/identity-linking-logic.md)
 * [Identity Service and Real-Time Customer Profile](../identity-and-profile.md)

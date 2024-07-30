@@ -172,7 +172,7 @@ The details page also displays a list of identities that failed and identities t
 >title="Activation"
 >abstract="The destination activation view contains information on the activation status of an audience and metrics taken from Real-Time Customer Profile to generate unique identities."
 
-To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Destinations]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the destination run jobs.
+To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](/help/images/icons/monitoring.png)) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Destinations]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the destination run jobs.
 
 Use the [!UICONTROL Destinations] dashboard to get an overall idea of the health of your activation flows. Start by getting insights on an aggregated level for all batch and streaming destinations and then drill down into detailed views for dataflows, dataflow runs, and activated audiences for an in-depth look at your activation data. The screens in the [!UICONTROL Monitoring] dashboard provide actionable insights through metrics and error descriptions to help you troubleshoot any problems that might arise in your activation scenarios.
 
@@ -193,7 +193,7 @@ By default, the data displayed contains the activation information from the last
 
 ![Change lookback date range control highlighted for activated destinations](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
-Use the arrow icon (![arrow icon](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) to expand or dismiss the cards at the top of the screen, which show at-a-glance information about the activation details, based on the destination type - streaming or batch:
+Use the arrow icon (![arrow icon](/help/images/icons/chevron-up.png)) to expand or dismiss the cards at the top of the screen, which show at-a-glance information about the activation details, based on the destination type - streaming or batch:
 
 - **[!UICONTROL Streaming activation rate]**: Represents the percentage of received identities that have either been successfully activated or skipped. The formula used to calculate this percentage is described further above on this page, in the [Dataflow runs for streaming destinations](#dataflow-runs-for-streaming-destinations) section.
 - **[!UICONTROL Batch failed dataflow runs]**: Represents the number of failed dataflow runs in the selected time interval.
@@ -220,13 +220,13 @@ You can also filter your list of destinations to only display the selected categ
 
 ![Filter destinations using dropdown selector](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
-Additionally, you can enter a destination into the search bar to isolate to a single destination. If you want to see the destination's dataflows you can select the filter ![filter](../assets/ui/monitor-destinations/filter-add.png) beside it to see a list of its active dataflows.
+Additionally, you can enter a destination into the search bar to isolate to a single destination. If you want to see the destination's dataflows you can select the filter ![filter](/help/images/icons/filter-add.png) beside it to see a list of its active dataflows.
 
 ![Filter destinations using the search bar highlighted in the monitoring view.](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 If you want to view all existing dataflows across all destinations, select **[!UICONTROL Dataflows]**.
 
-A list of dataflows appears, sorted by the last dataflow run. You can see additional details for a specific dataflow by locating the destination you want to monitor, selecting the filter ![filter](../assets/ui/monitor-destinations/filter-add.png) beside it, and then subsequently selecting the filter ![filter](../assets/ui/monitor-destinations/filter-add.png) beside the dataflow you want more information about.
+A list of dataflows appears, sorted by the last dataflow run. You can see additional details for a specific dataflow by locating the destination you want to monitor, selecting the filter ![filter](/help/images/icons/filter-add.png) beside it, and then subsequently selecting the filter ![filter](/help/images/icons/filter-add.png) beside the dataflow you want more information about.
 
 ![All dataflows highlighted in the monitoring dashboard.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
@@ -263,7 +263,7 @@ For example, you are activating an audience called "Loyalty Members in Californi
 ![Audiences highlighted in the dataflow panel.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 In the audience-level view, the metrics are aggregated across multiple dataflow runs within the selected time range. If there are multiple dataflow runs, you can drill down from the audience level to see the breakdown for each dataflow run, filtered by the selected audience.
-Use the filter button ![filter](../assets/ui/monitor-destinations/filter-add.png) to drill down into the dataflow runs view for each audience in the dataflow.
+Use the filter button ![filter](/help/images/icons/filter-add.png) to drill down into the dataflow runs view for each audience in the dataflow.
 
 ### Dataflow runs page {#dataflow-runs-page}
 
@@ -277,7 +277,7 @@ When you drill down into the dataflow runs page from the [audience-level view](#
 
 ![Radio buttons showing how to filter dataflow runs for audiences.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
-To see more details about a specific dataflow run, select the filter ![filter](../assets/ui/monitor-destinations/filter-add.png) beside the dataflow run start time to see the dataflow run details page.
+To see more details about a specific dataflow run, select the filter ![filter](/help/images/icons/filter-add.png) beside the dataflow run start time to see the dataflow run details page.
 
 ![Dataflow runs filter in monitoring dashboard to drill into more information for a certain dataflow run.](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 

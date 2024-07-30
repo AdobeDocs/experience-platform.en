@@ -35,7 +35,21 @@ This tutorial also requires a working understanding of [[!DNL Braze] Currents](h
 
 If you already have a [!DNL Braze] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/marketing-automation.md).
 
-## Connect your [!DNL Braze] account to Experience Platform
+## Create an XDM schema 
+
+>[!TIP]
+>
+>You must create an Experience Data Model (XDM) schema if this is your first time creating a [!DNL Braze Currents] connection. If you have already created a schema for [!DNL Braze Currents], then you may skip this step and proceed to [connecting your account to Experience Platform](#connect).
+
+In the Platform UI, use the left navigation and then select **[!UICONTROL Schemas]** to access the [!UICONTROL Schemas] workspace. Next, select **[!UICONTROL Create schema]**, and then select **[!UICONTROL Experience Event]**. To proceed, select **[!UICONTROL Next]**.
+
+![A completed schema.](../../../../images/tutorials/create/braze/schema.png)
+
+Provide a name and description for your schema. Then, use the [!UICONTROL Composition] panel to configure your schema attributes. Under [!UICONTROL Field groups], select **[!UICONTROL Add]** and add the [!UICONTROL Braze Currents User Event] field group. When finished, select **[!UICONTROL Save]**. 
+
+For more information on schemas, read the guide to [creating schemas in the UI](../../../../../xdm/tutorials/create-schema-ui.md).
+
+## Connect your [!DNL Braze] account to Experience Platform {#connect}
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -47,18 +61,30 @@ Next, upload the provided [Braze Currents sample file](https://github.com/Appboy
 
 ![The "Add Data" screen.](../../../../images/tutorials/create/braze/select-data.png)
 
-Once your file is uploaded, you must provide your dataflow details, including information on your dataset and the schema that you are mapping to.
+Once your file is uploaded, you must provide your dataflow details, including information on your dataset and the schema that you are mapping to.  If this is your first time connecting a Braze Currents source, then create a new dataset.  Otherwise you can use any existing dataset that references the Braze schema.  If creating a new dataset, use the schema that we created in the previous section.
 ![The "Dataflow Details" screen highlighting "Dataset details."](../../../../images/tutorials/create/braze/dataflow-detail.png)
 
 Then, configure mapping for your data using the mapping interface.
 
-![The "Mapping" screen.](../../../../images/tutorials/create/braze/mapping.png)
+![The "Mapping" screen.](../../../../images/tutorials/create/braze/mapping_errors.png)
+
+The mapping will have the following issues that need to be resolved.
+
+In the source data, *id* will be incorrectly mapped to *_braze.appID*. You must change the target mapping field to *_id* at the root level of the schema. Next, ensure that *properties.is_amp* is mapped to *_braze.messaging.email.isAMP*.
+
+Next, delete the *time* to *timestamp* mapping, then select the add (`+`) icon and then select **[!UICONTROL Add calculated field]**. In the provided box, input *time \* 1000* and select **[!UICONTROL Save]**.  
+
+Once the new calculated field is added, select **[!UICONTROL Map target field]** next to the new source field and map it to *timestamp* at the root level of the schema. You should then select **[!UICONTROL Validate]** to ensure that you have no more errors.  
 
 >[!IMPORTANT]
 >
 >Braze timestamps are not expressed in milliseconds, but rather in seconds. In order for the timestamps in Experience Platform to be accurately reflected, you need to create calculated fields in milliseconds. A calculation of "time * 1000" will properly convert to milliseconds, suitable for mapping to a timestamp field within Experience Platform.
 >
 >![Creating a calculated field for timestamp ](../../../../images/tutorials/create/braze/create-calculated-field.png)
+
+![The mapping with no errors.](../../../../images/tutorials/create/braze/completed_mapping.png)
+
+When finished, select **[!UICONTROL Next]**. Use the review page to confirm the details of your dataflow and then select **[!UICONTROL Finish]**.
 
 ### Gather required credentials
 

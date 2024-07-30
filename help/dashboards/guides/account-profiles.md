@@ -164,7 +164,7 @@ The dropdown menu within the widget allows you to select the account scoring mod
 
 ![The Predictive scoring top influential factors widget.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
 
-### Unable to load data error {#errors}
+## Unable to load data error {#errors}
 
 If a widget displays *[!UICONTROL Unable to load. Try again.]* this is because there is no available data for the B2B entity. For example, the widget displayed below [!UICONTROL New opportunities by person role], shows the message "[!UICONTROL Unable to load. Try again.]" since this sandbox does not have available opportunity data.
 

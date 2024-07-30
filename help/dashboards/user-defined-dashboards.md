@@ -24,7 +24,7 @@ Before adding a custom dashboard, the dashboards inventory is empty and displays
 
 <!-- >[!NOTE]
 >
->To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](/help/images/icons/edit.png))
 >![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 The [!UICONTROL Create dashboard] dialog appears. Enter a human-friendly, descriptive name for the collection of widgets you intend to create, and select **[!UICONTROL Save]**.
@@ -62,7 +62,7 @@ The [!UICONTROL Select data model] dialog appears. Select a data model from the 
 
 >[!TIP]
 >
->Select the information icon (![An information icon.](./images/user-defined-dashboards/info-icon.png)) to see the full data model name if it is too long to display in the data rail.
+>Select the information icon (![An information icon.](/help/images/icons/info.png)) to see the full data model name if it is too long to display in the data rail.
 
 ![The Select data dialog.](./images/user-defined-dashboards/select-data-model-dialog.png)
 
@@ -88,17 +88,17 @@ Select a table from the list available in the left rail to provide data for your
 
 The widget composer is now populated with data from your chosen table.
 
-The data model and currently selected table are displayed at the top of the left rail, and the attributes available to create your widget are listed in the [!UICONTROL Attributes] column. You can use the search bar to look for attributes instead of scrolling the list, or change the chosen data model by selecting the pencil icon (![Pencil icon.](./images/user-defined-dashboards/edit-icon.png)) in the left rail.
+The data model and currently selected table are displayed at the top of the left rail, and the attributes available to create your widget are listed in the [!UICONTROL Attributes] column. You can use the search bar to look for attributes instead of scrolling the list, or change the chosen data model by selecting the pencil icon (![Pencil icon.](/help/images/icons/edit.png)) in the left rail.
 
 ![A widget populated with data within the widget composer.](./images/user-defined-dashboards/populated-widget-composer.png)
 
 #### Add and filter attributes {#add-and-filter-attributes}
 
-Select the add icon (![An add icon.](./images/user-defined-dashboards/add-icon.png)) next to an attribute name to add an attribute to your widget. The dropdown menu that appears allows you to add an attribute as either the X axis, the Y axis, a color, or a filter for your widget. The [!UICONTROL Color] attribute allows you to differentiate the results of the X and Y axis marks based on colour. It does this by splitting the results into different colours based on their composition of a third attribute. 
+Select the add icon (![An add icon.](/help/images/icons/add-circle.png)) next to an attribute name to add an attribute to your widget. The dropdown menu that appears allows you to add an attribute as either the X axis, the Y axis, a color, or a filter for your widget. The [!UICONTROL Color] attribute allows you to differentiate the results of the X and Y axis marks based on colour. It does this by splitting the results into different colours based on their composition of a third attribute. 
 
 >[!TIP]
 >
->If you want to flip the arrangement of X and Y axis, select the up and down arrow icon (![The up and down arrow icon.](./images/user-defined-dashboards/switch-axis-icon.png)) to switch their arrangement.
+>If you want to flip the arrangement of X and Y axis, select the up and down arrow icon (![The up and down arrow icon.](/help/images/icons/switch.png)) to switch their arrangement.
 
 ![The widget composer with the add-icon dropdown highlighted.](./images/user-defined-dashboards/attributes-dropdown.png)
 
@@ -126,7 +126,7 @@ Alternatively, you can create a custom period to filter your data by. Select **[
 
 ### Widget properties
 
-Select the properties icon (![The properties icon.](./images/user-defined-dashboards/properties-icon.png)) in the right rail to open the properties panel. In the [!UICONTROL Properties] panel, enter a name for the widget in the [!UICONTROL Widget title] text field. 
+Select the properties icon (![The properties icon.](/help/images/icons/properties.png)) in the right rail to open the properties panel. In the [!UICONTROL Properties] panel, enter a name for the widget in the [!UICONTROL Widget title] text field. 
 
 ![The properties panel with the properties icon and the Widget title field highlighted.](./images/user-defined-dashboards/properties-panel.png)
 
@@ -140,7 +140,7 @@ Saving in the widget composer saves the widget locally to your dashboard. If you
 
 >[!TIP]
 >
->Select the properties icon (![The properties icon.](./images/user-defined-dashboards/properties-icon.png)) next to the dashboard name to see details about its creation. You can change the name of your dashboard in the dialog that appears.
+>Select the properties icon (![The properties icon.](/help/images/icons/properties.png)) next to the dashboard name to see details about its creation. You can change the name of your dashboard in the dialog that appears.
 
 Widgets can be re-arranged and resized while in this workspace. Select **[!UICONTROL Save]** to preserve your dashboard name and configured layout.
 
@@ -156,7 +156,7 @@ Once you have created a widget, you can edit, duplicate, or delete entire widget
 >
 >To switch between any of your existing custom dashboards, select Dashboards in the left navigation bar then select the dashboard name from the inventory list.
 
-Select the pencil icon  (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png)) from the top right of your custom dashboard to enter the editing mode.
+Select the pencil icon  (![A pencil icon.](/help/images/icons/edit.png)) from the top right of your custom dashboard to enter the editing mode.
 
 ![A custom dashboard with the pencil icon highlighted.](./images/user-defined-dashboards/edit-mode.png)
 
