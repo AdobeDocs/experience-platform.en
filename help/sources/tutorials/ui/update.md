@@ -27,7 +27,7 @@ Log in to the [Experience Platform UI](https://platform.adobe.com) and then sele
 
 The **[!UICONTROL Accounts]** page appears. On this page is a list of viewable accounts, including information about their source, username, number of dataflows, and date of creation.
 
-Select the filter icon ![filter](../../images/tutorials/update/filter.png) on the top left to launch the sort panel.
+Select the filter icon ![filter](/help/images/icons/filter.png) on the top left to launch the sort panel.
 
 ![accounts-list](../../images/tutorials/update/accounts-list.png)
 

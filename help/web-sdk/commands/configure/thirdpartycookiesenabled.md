@@ -34,8 +34,8 @@ Set the `thirdPartyCookiesEnabled` boolean when running the `configure` command.
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "thirdPartyCookiesEnabled": false
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  thirdPartyCookiesEnabled: false
 });
 ```

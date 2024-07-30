@@ -1,7 +1,7 @@
 ---
 title: Debugging methods
 description: Learn how to toggle debugging capabilities in the Web SDK.
-keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
+keywords: debugging web sdk;debugging;debug command;setDebug;debugEnabled;debug
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
 ---
 # Debugging methods
@@ -16,9 +16,9 @@ Set the `debugEnabled` boolean to true when configuring the extension. This opti
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "debugEnabled": true
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  debugEnabled: true
 });
 ```
 
