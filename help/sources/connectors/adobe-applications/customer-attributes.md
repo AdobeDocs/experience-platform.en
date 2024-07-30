@@ -25,7 +25,7 @@ You cannot select an existing namespace for the identity when using [!DNL Custom
 
 For [!DNL Customer Attributes] data to tie to other [!DNL Profile] datasets, its data and identities must be able to be matched to an Experience Cloud ID.
 
-You can establish the `CORE` namespace by setting the Experience Cloud ID for the visitor using [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/), or the [Experience Cloud ID Service API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html).
+You can establish the `CORE` namespace by setting the Experience Cloud ID for the visitor using [Web SDK](/help/web-sdk/identity/overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/), or the [Experience Cloud ID Service API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html).
 
 The [!DNL Customer Attributes] file does not further populate any other identity relationships. For example, if a [!DNL Customer Attributes] source dataset contains an **Email** and a **Loyalty ID** field, then those fields must be labelled as identity fields in the schema in order to be processed into [!DNL Identity Service].
 

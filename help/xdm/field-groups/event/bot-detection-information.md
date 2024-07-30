@@ -1,6 +1,7 @@
 ---
 title: Bot Detection Field Group
 description: Learn about the Bot Detection field group (XDM) schema field group.
+exl-id: 8ade14a8-9a34-4060-95b2-812d1a21deeb
 ---
 # [!UICONTROL Bot Detection] field group
 
@@ -19,4 +20,3 @@ For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-bot-detection.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-bot-detection.schema.json)
- 

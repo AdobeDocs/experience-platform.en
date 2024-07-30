@@ -41,7 +41,7 @@ When planning to use partner-provided attributes to deliver personalized experie
 To successfully implement this use case, you must use multiple areas of Real-Time Customer Data Platform and other Experience Cloud solutions. Make sure that you have the necessary [attribute-based access control permissions](/help/access-control/abac/overview.md) for all these areas, or ask your system administrator to grant you the necessary permissions. 
 
 * Data Collection
-  * [Adobe Experience Platform Web SDK](/help/edge/home.md)
+  * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)
   * [Tags](/help/tags/home.md)
   * [Datastreams](/help/datastreams/overview.md)
 * Data Management in Real-Time CDP

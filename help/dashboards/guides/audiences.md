@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profile;audience;audiences;segmentation;user interface;UI;customization;audience dashboard;dashboard
-title: Audiences Dashboard Guide
+title: Audiences Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about audiences your organization has created. 
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
@@ -44,6 +44,10 @@ Select **[!UICONTROL Add widget]** to navigate to the widget library and see a l
 ![The [!UICONTROL Audiences] dashboard overview with [!UICONTROL Add widget] highlighted.](../images/audiences/audiences-overview-add-widget.png)
 
 From the widget library, you can browse the selection of standard and custom audience widgets. For information on how to add widgets, please see the widget library documentation on how to [add a widget](../customize/widget-library.md#add-widgets). 
+
+### View SQL {#view-sql}
+
+You can view the SQL that generates the insights visualized on your dashboard with a toggle on the [!UICONTROL Overview] workspace. You can take inspiration from the SQL of your existing insights to create new queries that derive unique insights from Platform data based on your business needs. To learn more about this feature, see the [View SQL UI guide](../view-sql.md).
 
 ## Select a audience {#select-audience}
 
@@ -225,7 +229,7 @@ Select **[!UICONTROL View more]** to open a full-screen dialog that contains mor
 
 ![The Audience overlap report widget with View more highlighted .](../images/audiences/audience-overlap-report.png)
 
-The [!UICONTROL Audience overlap report] dialog appears. This dialog can contain up to 50 rows of audience overlap analyses broken down into six columns. Select the settings icon (![The settings icon.](../images/audiences/settings-icon.png)) to remove or add columns from the table.
+The [!UICONTROL Audience overlap report] dialog appears. This dialog can contain up to 50 rows of audience overlap analyses broken down into six columns. Select the settings icon (![The settings icon.](/help/images/icons/settings.png)) to remove or add columns from the table.
 
 ![The Audience overlap report dialog.](../images/audiences/audience-overlap-report-dialog.png)
 

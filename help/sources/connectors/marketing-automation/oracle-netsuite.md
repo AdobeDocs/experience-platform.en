@@ -1,9 +1,9 @@
 ---
 title: Oracle NetSuite Source Overview
 description: Learn how to connect Oracle NetSuite to Adobe Experience Platform using APIs or the user interface.
-hide: true
-hidefromtoc: true
+last-substantial-update: 2024-01-30
 badge: Beta
+exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
 ---
 # [!DNL Oracle NetSuite]
 

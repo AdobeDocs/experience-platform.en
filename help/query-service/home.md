@@ -15,7 +15,16 @@ You can use Query Service to connect the online-to-offline customer journey and 
 
 ## Using Query Service {#usage}
 
-To analyze your data, you can use the Query Service user interface and a RESTful API, from which you can create SQL queries. With the user interface, you can write and execute queries, view previously executed queries, and access queries saved by users within your organization. You can use the Query Editor like a sandbox to test out your queries before executing them on your wider dataset. See the [Query Service user interface guide](ui/overview.md) for more information on using the UI. The RESTful API provides a similar experience. You can use the Query Service API to programmatically write and execute queries, schedule queries for future use and repetition, as well as create templates for queries you wish to write. More information on using the Query Service API can be found in the [Query Service developer guide](api/getting-started.md).
+To analyze your data, create and execute SQL queries with either the Query Service user interface or the RESTful API. 
+With the Query Service UI you can write, execute, and schedule queries, view previously executed queries, and access queries saved by users within your organization. You can also test out your queries before executing them on your wider dataset with the Query Editor. See the [Query Service UI guide](ui/overview.md) for an overview of the UI functionality. 
+
+The RESTful API provides a similar experience. You can use the Query Service API to programmatically write and execute queries, create and save templates for queries that you wish to adapt, or schedule queries for automated execution. See the [Query Service developer guide](api/getting-started.md) for more information on using the Query Service API.
+
+To quickly get started using Query Service features, you are recommended to read the following documents:
+
+- [General guidance for query execution](./best-practices/writing-queries.md)
+- [SQL syntax in Query Service](./sql/syntax.md)
+- [Create derived datasets with SQL](./data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
 ## Query Service and Experience Platform services {#experience-platform-services}
 
@@ -39,7 +48,7 @@ This [browse abandonment example centers on using Adobe [!DNL Analytics]](./use-
 
 ## Generate insights with custom dashboards {#custom-dashboards} 
 
-With Adobe Experience Platform, you can ingest, store, structure, and pull all stored datasets — including behavioral, CRM, and point-of-sale data. Using [!DNL Experience Platform's Query Service], you can query on these datasets and answer specific questions about the business and then start generating impactful insights. Learn how to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics with [user-defined dashbaords](../dashboards/user-defined-dashboards.md). You can even [customize your own Real-Time CDP reports](../dashboards/cdp-insights-data-model.md) for your marketing and KPI use cases by using SQL queries with the Real-Time Customer Data Platform Insights Data Models.
+With Adobe Experience Platform, you can ingest, store, structure, and pull all stored datasets — including behavioral, CRM, and point-of-sale data. Using [!DNL Experience Platform's Query Service], you can query on these datasets and answer specific questions about the business and then start generating impactful insights. Learn how to build and manage custom dashboards where you can create, add, and edit bespoke widgets to visualize key metrics with [user-defined dashbaords](../dashboards/user-defined-dashboards.md). You can even [customize your own Real-Time CDP reports](../dashboards/data-models/cdp-insights-data-model-b2c.md) for your marketing and KPI use cases by using SQL queries with the Real-Time Customer Data Platform Insights Data Models.
 
 ## Next steps and additional resources
 

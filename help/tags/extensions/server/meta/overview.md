@@ -9,6 +9,12 @@ The [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing
 
 Using the [!DNL Meta Conversions API] extension, you can leverage the API's capabilities in your [event forwarding](../../../ui/event-forwarding/overview.md) rules to send data to [!DNL Meta] from the Adobe Experience Platform Edge Network. This document covers how to install the extension and use its capabilities in an event forwarding [rule](../../../ui/managing-resources/rules.md).
 
+## Demo
+
+The following video is intended to support your understanding of the [!DNL Meta Conversions API].
+
+>[!VIDEO](https://unlockmarketingdata.com/video-meta-conversions-api)
+
 ## Prerequisites
 
 It is strongly recommended to use [!DNL Meta Pixel] and the [!DNL Conversions API] to share and send the same events from the client side and server side, respectively, since this may help recover events that were not picked up by [!DNL Meta Pixel]. Before installing the [!DNL Conversions API] extension, see the guide on the [[!DNL Meta Pixel] extension](../../client/meta/overview.md) for steps on how to integrate it in your client-side tag implementations.
@@ -41,15 +47,15 @@ When finished, select **[!UICONTROL Save]**
 
 The extension is installed and you can now employ its capabilities in your event forwarding rules.
 
-## Integration with Meta Business Extension (MBE) {#mbe}
+## Integration with the Facebook and Instagram extension {#facebook}
 
-The integration with Meta Business Extensions (MBE) enhancement allows you to quickly authenticate into your Meta Business Account. This then auto-populates your [!UICONTROL Pixel ID] and the Meta Conversions API [!UICONTROL Access Token], making it easier to install and configure the Meta Conversions API.
+The integration using the Facebook and Instagram extension allows you to quickly authenticate into your Meta Business Account. This then auto-populates your [!UICONTROL Pixel ID] and the Meta Conversions API [!UICONTROL Access Token], making it easier to install and configure the Meta Conversions API.
 
-A dialogue prompt to authenticate in MBE appears when installing the [!UICONTROL Meta Conversions API] extension.
+A dialogue prompt to authenticate in Facebook and Instagram appears when installing the [!UICONTROL Meta Conversions API] extension.
 
 ![The [!UICONTROL Meta Conversions API Extension] installation page highlighting [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
 
-A dialogue prompt to authenticate in MBE also appears in the quick start workflow UI within event forwarding. 
+A dialogue prompt to authenticate in Facebook and Instagram also appears in the quick start workflow UI within event forwarding. 
 
 ![The quick start workflow UI highlighting [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
 
@@ -148,7 +154,7 @@ Allow a few minutes for the initial setup process to complete, then select **[!U
 
 ![Initial setup complete confirmation screen](../../../images/extensions/server/meta/setup-complete.png)
 
-From the **[!UICONTROL Add Code on Your Site]** dialog copy the code provided using the copy ![Copy](../../../images/extensions/server/meta/copy-icon.png) function and paste this into the `<head>` of your source website. Once implemented, select **[!UICONTROL Start Validation]**
+From the **[!UICONTROL Add Code on Your Site]** dialog copy the code provided using the copy ![Copy](/help/images/icons/copy.png) function and paste this into the `<head>` of your source website. Once implemented, select **[!UICONTROL Start Validation]**
 
 ![Add code on your site dialog](../../../images/extensions/server/meta/add-code-on-your-site.png)
 

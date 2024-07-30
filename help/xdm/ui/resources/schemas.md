@@ -5,7 +5,7 @@ title: Create and Edit Schemas in the UI
 description: Learn the basics of how to create and edit schemas in the Experience Platform user interface.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 ---
-# Create and edit schemas in the UI
+# Create and edit schemas in the UI {#create-edit-schemas-in-ui}
 
 This guide provides an overview of how to create, edit, and manage Experience Data Model (XDM) schemas for your organization in the Adobe Experience Platform UI.
 
@@ -15,7 +15,7 @@ This guide provides an overview of how to create, edit, and manage Experience Da
 >
 >For a full tour of the schema creation process, follow along with the [schema creation tutorial](../../tutorials/create-schema-ui.md) to create a complete example schema and familiarize yourself with the many capabilities of the [!DNL Schema Editor].
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for an overview of how schemas are constructed.
 
@@ -111,7 +111,7 @@ Select the checkbox next to the name of the field group that you wish to add to 
 
 >[!TIP]
 >
->For any listed field group, you can hover or focus on the information icon (![](../../images/ui/resources/schemas/info-icon.png)) to view a brief description of the kind of data the field group captures. You can also select the preview icon (![](../../images/ui/resources/schemas/preview-icon.png)) to view the structure of the fields that the field group provides before you decide to add it to the schema.
+>For any listed field group, you can hover or focus on the information icon (![info icon](/help/images/icons/info.png)) to view a brief description of the kind of data the field group captures. You can also select the preview icon (![preview icon](/help/images/icons/preview.png)) to view the structure of the fields that the field group provides before you decide to add it to the schema.
 
 Once you have chosen your field groups, select **[!UICONTROL Add field groups]** to add them to the schema.
 
@@ -120,6 +120,12 @@ Once you have chosen your field groups, select **[!UICONTROL Add field groups]**
 The [!DNL Schema Editor] reappears with the field-group-provided fields represented in the canvas.
 
 ![The [!DNL Schema Editor] with an example schema displayed.](../../images/ui/resources/schemas/field-groups-added.png)
+
+>[!NOTE] 
+>
+>Within the Schema Editor, standard (Adobe-generated) classes and field groups are indicated with the padlock icon (![A padlock icon.](/help/images/icons/lock-closed.png). The padlock appears in the left rail next to the class or field group name, as well as next to any field in the schema diagram that is a part of a system-generated resource.
+>
+>![The Schema Editor with the padlock icon highlighted](../../images/ui/explore/schema-editor-padlock-icon.png)
 
 After adding a field group to a schema, you can optionally [remove existing fields](#remove-fields) or [add new custom fields](#add-fields) to those groups, depending on your needs.
 
@@ -177,7 +183,7 @@ Under **[!UICONTROL Field name]**, start typing the name of the field you wish t
 
 While some standard fields share the same name, their structure may vary depending on the field group they come from. If a standard field is nested within a parent object in the field group structure, the parent field will also be included in the schema if the child field is added.
 
-Select the preview icon (![Preview icon](../../images/ui/resources/schemas/preview-icon.png)) next to a standard field to view the structure of its field group and better understand how it might be nested. To add the standard field to the schema, select the plus icon (![Plus icon](../../images/ui/resources/schemas/add-icon.png)).
+Select the preview icon (![Preview icon](/help/images/icons/preview.png)) next to a standard field to view the structure of its field group and better understand how it might be nested. To add the standard field to the schema, select the plus icon (![Plus icon](/help/images/icons/add-circle.png)).
 
 ![Add standard field](../../images/ui/resources/schemas/add-standard-field.png)
 
@@ -344,7 +350,7 @@ A new dialog opens, asking you to confirm that you wish to assign a new class. S
 
 After confirming the class change, the canvas will be reset and all composition progress will be lost.
 
-## Next steps
+## Next steps {#next-steps}
 
 This document covered the basics of creating and editing schemas in the Platform UI. It is strongly recommended that you review the [schema creation tutorial](../../tutorials/create-schema-ui.md) for a comprehensive workflow for building a complete schema in the UI, including creating custom field groups and data types for unique use cases.
 

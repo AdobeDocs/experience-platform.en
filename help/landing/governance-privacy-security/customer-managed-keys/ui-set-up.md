@@ -36,7 +36,7 @@ Select **[!UICONTROL Configure]** to open the [!UICONTROL Customer Managed Keys 
 
 To start the registration process, copy the application authentication URL for your organization from the [!UICONTROL Customer Managed Keys configuration] view and paste it into your [!DNL Azure] environment **[!DNL Key Vault Crypto Service Encryption User]**. Details on how to [assign a role](#assign-to-role) are provided in the next section. 
 
-Select the copy icon (![The copy icon.](../../images/governance-privacy-security/customer-managed-keys/copy-icon.png)) by the [!UICONTROL Application authentication url].
+Select the copy icon (![The copy icon.](/help/images/icons/copy.png)) by the [!UICONTROL Application authentication url].
 
 ![The [!UICONTROL Customer Managed Keys configuration] view with the Application authentication url section highlighted.](../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 
@@ -55,6 +55,10 @@ After completing the authentication process, navigate back to your [!DNL Azure] 
 ![The [!DNL Microsoft Azure] dashboard with [!DNL Add] and [!DNL Add role assignment] highlighted.](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 The next screen prompts you to choose a role for this assignment. Select **[!DNL Key Vault Crypto Service Encryption User]** before selecting **[!DNL Next]** to continue.
+
+>[!NOTE]
+>
+>If you have the [!DNL Managed-HSM Key Vault] tier, then you must select the **[!DNL Managed HSM Crypto Service Encryption User]** user role.
 
 ![The [!DNL Microsoft Azure] dashboard with the [!DNL Key Vault Crypto Service Encryption User] highlighted.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 

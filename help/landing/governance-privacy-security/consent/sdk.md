@@ -18,15 +18,15 @@ This tutorial assumes that you have already determined how to generate consent d
 
 This guide follows the workflow for setting up the SDK using the tag extension in the UI. If you do not want to use the extension and would prefer to directly embed the standalone version of the SDK on your site, please refer to the following docs instead of this guide:
 
-* [Configure a datastream](../../../datastreams/overview.md)
-* [Install the SDK](../../../edge/fundamentals/installing-the-sdk.md)
-* [Configure the SDK for consent commands](../../../edge/consent/supporting-consent.md)
+* [Configure a datastream](/help/datastreams/overview.md)
+* [Install the SDK](/help/web-sdk/install/overview.md)
+* [Configure the SDK for consent commands](/help/web-sdk/commands/configure/defaultconsent.md)
 
 The installation steps in this guide require a working understanding of tag extensions and how they are installed in web applications. Refer to the following documentation for more information:
 
-* [Tags overview](../../../tags/home.md)
-* [Quickstart guide](../../../tags/quick-start/quick-start.md)
-* [Publishing overview](../../../tags/ui/publishing/overview.md)
+* [Tags overview](/help/tags/home.md)
+* [Quickstart guide](/help/tags/quick-start/quick-start.md)
+* [Publishing overview](/help/tags/ui/publishing/overview.md)
 
 ## Set up a datastream
 
@@ -104,14 +104,7 @@ There are two scenarios where `setConsent` should be called on your site:
 
 ### `setConsent` syntax
 
->[!NOTE]
->
->For an introduction to the common syntax for Platform SDK commands, see the document on [executing commands](../../../edge/fundamentals/executing-commands.md).
-
-The `setConsent` command expects two arguments:
-
-1. A string that indicates the command type (in this case, `"setConsent"`)
-1. A payload object that contains a single array-type property: `consent`. The `consent` array must contain at least one object that provides the required consent fields for the Adobe standard.
+The [`setConsent`](/help/web-sdk/commands/setconsent.md) command expects a payload object that contains a single array-type property: `consent`. The `consent` array must contain at least one object that provides the required consent fields for the Adobe standard.
 
 The required consent fields for the Adobe standard are shown in the following example `setConsent` call:
 
@@ -133,7 +126,7 @@ alloy("setConsent", {
         }
       },
       metadata: {
-        time: "2020-10-12T15:52:25+00:00"
+        time: "YYYY-10-12T15:52:25+00:00"
       }
     }
   }]
@@ -194,7 +187,7 @@ var setConsent = function () {
 
 ## Handling SDK responses
 
-All [!DNL Platform SDK] commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See the section on [handling success or failure](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) in the guide on executing SDK commands for specific examples.
+All [!DNL Platform SDK] commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See [Command responses](/help/web-sdk/commands/command-responses.md) for more information.
 
 Once you have successfully made `setConsent` calls with the SDK, you can use the profile viewer in the Platform UI to verify whether data is landing in the Profile store. See the section on [browsing profiles by identity](../../../profile/ui/user-guide.md#browse-identity) for more information.
 

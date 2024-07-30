@@ -32,7 +32,7 @@ Select fields are directly mapped from Adobe Analytics to Experience Data Model 
 | `m_keywords` | `search.keywords` | string  | The variable used in the Keyword dimension. |
 | `m_os` | `_experience.analytics.environment.`<br/>`operatingSystemID` | integer | The numeric ID representing the operating system of the visitor. This is based on the user_agent column. |
 | `m_page_url` | `web.webPageDetails.URL` | string | The URL of the page hit. |
-| `m_pagename_no_url` | `web.webPageDetails.name` | string  | A variable used to populate the Pages dimension. |
+| `m_pagename` | `web.webPageDetails.pageViews.value` | string  | Equals 1 on hits that have a page name. This is similar to the Adobe Analytics Page Views metric. |
 | `m_referrer` | `web.webReferrer.URL` | string  | The Page URL of the previous page. |
 | `m_search_page_num` | `search.pageDepth` | integer | Used by the All Search Page Rank dimension. Indicates which page of search results your site appeared on before the user clicked through to your site. |
 | `m_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | string | State variable. |
@@ -146,7 +146,7 @@ Select fields coming from ADC must be transformed, requiring logic beyond a dire
 | `m_page_event_var1` | `web.webInteraction.URL` | string | A variable that is only used in link tracking image requests. This variable contains the URL of the download link, exit link, or custom link clicked. |
 | `m_page_event_var2` | `web.webInteraction.name` | string | A variable that is only used in link tracking image requests. This lists the custom name of the link, if it is specified. |
 | `m_page_type` | `web.webPageDetails.isErrorPage` | boolean | A variable that is used to populate the Pages Not Found dimension. This variable should either be empty, or contain "ErrorPage". |
-| `m_pagename_no_url` | `web.webPageDetails.pageViews.value` | number | The name of the page (if set). If no page is specified, this value is left empty. |
+| `m_pagename_no_url` | `web.webPageDetails.name` | number | The name of the page (if set). If no page is specified, this value is left empty. |
 | `m_paid_search` | `search.isPaid` | boolean | A flag that is set if the hit matches paid search detection. |
 | `m_product_list` | `productListItems[].items` | array | The product list, as passed in through the products variable. | {SKU (string), quantity (integer), priceTotal (number)} |
 | `m_ref_type` | `web.webReferrer.type` | string | A numeric ID representing the type of referral for the hit.<br/>`1`: Inside your site<br/>`2`: Other websites<br/>`3`: Search engines<br/>`4`: Hard drive<br/>`5`: USENET<br/>`6`: Typed/Bookmarked (no referrer)<br/>`7`: email<br/>`8`: No JavaScript<br/>`9`: Social Networks |
@@ -197,7 +197,7 @@ To learn more about performing these transformations using Query Service, see [A
 | `post_first_hit_pagename` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.name` | string | A variable used in the Entry Page Original dimension. The page name of the entry page of the visitor. |
 | `post_keywords` | `search.keywords` | string | The keywords that were collected for the hit. |
 | `post_page_url` | `web.webPageDetails.URL` | string | The URL of the page hit. |
-| `post_pagename_no_url` | `web.webPageDetails.name` | string | A variable used to populate the Pages dimension. |
+| `post_pagename` | `web.webPageDetails.pageViews.value` | string | Equals 1 on hits that have a page name. This is similar to the Adobe Analytics Page Views metric. |
 | `post_purchaseid` | `commerce.order.purchaseID` | string | Variable that is used to uniquely identify purchases. |
 | `post_referrer` | `web.webReferrer.URL` | string | The URL of the previous page. |
 | `post_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | string |  State variable. |
@@ -227,11 +227,11 @@ To learn more about performing these transformations using Query Service, see [A
 | `post_latitude` | `placeContext.geo._schema.latitude` | number |   <!-- MISSING --> |
 | `post_longitude` | `placeContext.geo._schema.longitude` | number |   <!-- MISSING --> | 
 | `post_page_event` | `web.webInteraction.type` | string | The type of hit that is sent in the image request (standard hit, download link, exit link, or custom link clicked). |
-| `post_page_event` | `web.webInteraction.linkClicks.value` | number | The type of hit that is sent in the image request (standard hit, download link, exit link, or custom link clicked). |
+| `post_page_event` | `web.webInteraction.linkClicks.value` | number | Equals 1 if the hit is a link click. This is similar to the Page Events metric in Adobe Analytics. |
 | `post_page_event_var1` | `web.webInteraction.URL` | string | This variable is only used in link tracking image requests. It is the URL of the download link, exit link, or custom link clicked. |
 | `post_page_event_var2` | `web.webInteraction.name` | string | This variable is only used in link tracking image requests. It is the custom name of the link. |
 | `post_page_type` | `web.webPageDetails.isErrorPage` | boolean | This is used to populate the Pages Not Found dimension. This variable should either be empty or contain "ErrorPage" |
-| `post_pagename_no_url` | `web.webPageDetails.pageViews.value` | number | The name of the page (if set). If no page is specified, this value is left empty. |
+| `post_pagename_no_url` | `web.webPageDetails.name` | number | The name of the page (if set). If no page is specified, this value is left empty. |
 | `post_product_list` | `productListItems[].items` | array | The product list, as passed in through the products variable. | {SKU (string), quantity (integer), priceTotal (number)} |
 | `post_search_engine` | `search.searchEngine` | string | The numeric ID representing the search engine that referred the visitor to your site. |
 | `mvvar1_instances` | `.list.items[]` | Object | List of variable values. Contains a delimited list of custom values, depending on implementation. |

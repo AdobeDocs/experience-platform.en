@@ -1,6 +1,7 @@
 ---
 title: Audiences API Endpoint
 description: Use the audiences endpoint in the Adobe Experience Platform Segmentation Service API to programmatically create, manage, and update audiences for your organization.
+role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 ---
 # Audiences endpoint
@@ -42,7 +43,7 @@ The following request retrieves the last two audiences created in your organizat
 +++A sample request to retrieve a list of audiences.
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=2 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \

@@ -14,7 +14,7 @@ Audience Composition provides a workspace to build and edit audiences, using blo
 
 ![The Audience Composition UI.](../images/ui/audience-composition/audience-composition.png)
 
-To change the details of the composition, including the title and description, select the ![sliders](../images/ui/audience-composition/sliders.png) button.
+To change the details of the composition, including the title and description, select the ![sliders](/help/images/icons/properties.png) button.
 
 The **[!UICONTROL Composition properties]** popover appears. You can insert details of your composition, including the title and description here. 
 
@@ -49,6 +49,8 @@ To add audiences to the Audience block. select **[!UICONTROL Add Audience]**.
 >[!IMPORTANT]
 >
 >Please note that **only** audiences defined using the default merge policy will appear. 
+>
+>Additionally, only **published** audiences created using Segment Builder can be used. Audiences created using Audience Composition and externally generated audiences are **not** available.
 
 A list of audiences appears. Select the audiences you want to include, followed by **[!UICONTROL Add]** to append them to your audience block.
 
@@ -96,13 +98,17 @@ If you exclude by audience, you can select which audiences you want to exclude b
 
 ![The [!UICONTROL Add audience] button is selected, which lets you choose which audience you want to exclude.](../images/ui/audience-composition/add-excluded-audience.png)
 
+>[!IMPORTANT]
+>
+>Only **published** audiences created using Segment Builder can be used. Audiences created using Audience Composition and externally generated audiences are **not** available.
+
 A list of audiences appears. Select **[!UICONTROL Add]** to add the audiences you want to exclude to your exclude block.
 
 ![A list of audiences appears. You can select which audience you want to add from this dialog.](../images/ui/audience-composition/select-audience.png)
 
 ### Exclude by attribute {#exclude-attribute}
 
-If you exclude by attribute, you can select which attributes you want to exclude by selecting the ![filter](../images/ui/audience-composition/filter-attribute.png) icon within the **[!UICONTROL Exclusion rule]** section.
+If you exclude by attribute, you can select which attributes you want to exclude by selecting the ![filter](/help/images/icons/project-edit.png) icon within the **[!UICONTROL Exclusion rule]** section.
 
 ![The attribute section is highlighted, showing you where to select to choose the attribute to exclude.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -128,7 +134,7 @@ To add an **[!UICONTROL Enrich]** block, select the **+** icon, followed by **[!
 
 The **[!UICONTROL Enrich]** block is added. When this block is selected, details about the enrichment appear in the right rail. This includes the block's label and the enrichment dataset.
 
-To select the dataset to enrich the audience with, select the ![filter](../images/ui/audience-composition/filter-attribute.png) icon. 
+To select the dataset to enrich the audience with, select the ![filter](/help/images/icons/project-edit.png) icon. 
 
 ![The filter button is highlighted. Selecting this leads you to the [!UICONTROL Select dataset] popover.](../images/ui/audience-composition/enrich-select-dataset.png)
 
@@ -148,7 +154,7 @@ The **[!UICONTROL Enrichment criteria]** section now appears on the right rail. 
 
 ![The [!UICONTROL Enrichment criteria] area is highlighted.](../images/ui/audience-composition/enrichment-criteria.png)
 
-To select the **[!UICONTROL Source join key]**, select the ![filter](../images/ui/audience-composition/filter-attribute.png) icon. 
+To select the **[!UICONTROL Source join key]**, select the ![filter](/help/images/icons/project-edit.png) icon. 
 
 ![The filter icon for the [!UICONTROL Source join key] is highlighted.](../images/ui/audience-composition/enrich-select-source-join-key.png)
 
@@ -156,7 +162,7 @@ The **[!UICONTROL Select a profile attribute]** popover appears. Select the prof
 
 ![The attribute you want to use as the source join key is highlighted.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
 
-To select the **[!UICONTROL Enrichment dataset join key]**, select the ![filter](../images/ui/audience-composition/filter-attribute.png) icon.
+To select the **[!UICONTROL Enrichment dataset join key]**, select the ![filter](/help/images/icons/project-edit.png) icon.
 
 ![The filter icon for the [!UICONTROL Enrichment dataset join key] is highlighted.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
 
@@ -204,7 +210,7 @@ When you select the block, details about the ranking are shown in the right rail
 
 ![The rank block is highlighted, as well as the details of the rank block.](../images/ui/audience-composition/rank.png)
 
-To select which attribute to rank the audiences by, select the ![filter](../images/ui/audience-composition/filter-attribute.png) icon.
+To select which attribute to rank the audiences by, select the ![filter](/help/images/icons/project-edit.png) icon.
 
 ![The filter icon is highlighted, showing you what to select to access the profile attribute selection screen.](../images/ui/audience-composition/select-rank-attribute.png)
 
@@ -214,13 +220,13 @@ A list of profile attributes appears. On this popover, you can select the attrib
 
 After selecting the attribute, you can select the order to rank it by. This is either in ascending (from lowest to highest) or descending (from highest to lowest) order.
 
-Additionally, you can limit the number of audiences returned by enabling the **[!UICONTROL Add profile limit]** toggle. When this toggle is enabled, you can set the maximum number of audiences returned within the **[!UICONTROL Included profiles]** field.
+Additionally, you can limit the number of profiles returned by enabling the **[!UICONTROL Add profile limit]** toggle. When this toggle is enabled, you can set the maximum number of profiles returned within the **[!UICONTROL Included profiles]** field.
 
-![The Add profile limit toggle is highlighted, which lets you limit the number of audiences returned.](../images/ui/audience-composition/add-profile-limit.png)
+![The Add profile limit toggle is highlighted, which lets you limit the number of profiles returned.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Split] {#split-block}
 
-The **[!UICONTROL Split]** block type allows you to split your new audience into various sub-audiences. You can either split this audience based on percentage or by an attribute.
+The **[!UICONTROL Split]** block type allows you to split your new audience into various sub-audiences. You can either split this audience based on percentage or by an attribute. When splitting your audience into sub-audiences, this split is **persistent**. This means that the profile will be in the same sub-audience on each evaluation.
 
 To add a **[!UICONTROL Split]** block, select the **+** icon, followed by **[!UICONTROL Split]**.
 
@@ -238,7 +244,7 @@ For example, you could have three paths, each with a differing percentage of pro
 
 ### Split by attribute {#split-attribute}
 
-When splitting by attribute, the audiences will be split based on the provided attributes. To select the attribute to split by, select the **[!UICONTROL Split]** block, followed by the ![filter](../images/ui/audience-composition/filter-attribute.png) icon. 
+When splitting by attribute, the audiences will be split based on the provided attributes. To select the attribute to split by, select the **[!UICONTROL Split]** block, followed by the ![filter](/help/images/icons/project-edit.png) icon. 
 
 ![The filter button is selected, showing how to filter by attribute.](../images/ui/audience-composition/select-split-attribute.png)
 
@@ -256,14 +262,18 @@ Additionally, you can enable the **[!UICONTROL Other profiles]** toggle to creat
 
 ## Publishing your audience
 
-After composing your audience, you can save and publish it by selecting **[!UICONTROL Publish]**. 
+>[!IMPORTANT]
+>
+>When publishing your audience composition, please note that it may take up to 48 hours for it to be evaluated and activated for usage in downstream services such as a Real-Time CDP destination or Adobe Journey Optimizer channel.
 
-![The Publish button is highlighted, showing you how to save and publish your audience.](../images/ui/audience-composition/publish.png)
+After creating your composition, you can save and publish it by selecting **[!UICONTROL Publish]**. 
+
+![The Publish button is highlighted, showing you how to save and publish your composition.](../images/ui/audience-composition/publish.png)
 
 If there are any errors in creating the audience, an alert appears, letting you know how to resolve the issue.
 
-![The Publish button is highlighted, showing you how to save and publish your audience.](../images/ui/audience-composition/audience-alert.png)
+![The Publish button is highlighted, showing you how to save and publish your composition.](../images/ui/audience-composition/audience-alert.png)
 
 ## Next steps
 
-Audience Composition provides a rich workflow allowing you to create audiences from the different block types. To learn more about other parts of the Segmentation Service UI, please read the [Segmentation Service user guide](./overview.md).
+Audience Composition provides a rich workflow allowing you to create compositions from the different block types. To learn more about other parts of the Segmentation Service UI, please read the [Segmentation Service user guide](./overview.md).

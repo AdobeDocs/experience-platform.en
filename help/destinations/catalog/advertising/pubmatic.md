@@ -2,8 +2,8 @@
 title: PubMatic Connect
 description: PubMatic maximizes customer value by delivering the programmatic digital marketing supply chain of the future. PubMatic Connect combines platform technology and dedicated service to enhance how inventory and data are packaged and transacted.
 last-substantial-update: 2023-12-14
+exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
 ---
-
 # PubMatic Connect destination {#pubmatic-connect}
 
 ## Overview {#overview}
@@ -47,7 +47,7 @@ This section describes which type of audiences you can export to this destinatio
 | Audience origin| Supported | Description|
 | --- | --------- | ------ |
 | [!DNL Segmentation Service] | ✓         | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).          |
-| Custom uploads              | ✓         | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads              | ✓         | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 

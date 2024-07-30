@@ -31,9 +31,9 @@ In the [mapping step](#map) of the activation workflow, you must define the targ
 This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -64,6 +64,9 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 ![Sample screenshot showing how to authenticate to the destination using SFTP with password](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 
+* **[!UICONTROL Port]**: The port used for your [!DNL LiveRamp - Onboarding] storage location.  Use the port that corresponds to your geographical location, as described below:
+  * **[!UICONTROL NA]**: Use port `22`
+  * **[!UICONTROL AU]**: Use port `2222`    
 * **[!UICONTROL Username]**: The username for your [!DNL LiveRamp - Onboarding] storage location.
 * **[!UICONTROL Password]**: The password for your [!DNL LiveRamp - Onboarding] storage location.
 * **[!UICONTROL PGP/GPG encryption key]**: Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. View an example of a correctly formatted encryption key in the image below.
@@ -74,6 +77,8 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 ![Sample screenshot showing how to authenticate to the destination using SSH key](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
 
+* **[!UICONTROL Port]**: The port used for your [!DNL LiveRamp - Onboarding] storage location.  Use the port that corresponds to your geographical location, as described below:
+  * **[!UICONTROL EU]**: Use port `4222` 
 * **[!UICONTROL Username]**: The username for your [!DNL LiveRamp - Onboarding] storage location.
 * **[!UICONTROL SSH Key]**: The private [!DNL SSH] key used to log in to your [!DNL LiveRamp - Onboarding] storage location. The private key must be formatted as a [!DNL Base64]-encoded string and must not be password protected.
 
@@ -93,10 +98,11 @@ To authenticate to the destination, fill in the required fields and select **[!U
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 
-![Platform UI screenshot showing how to fill in details for your destination](../../assets/catalog/advertising/liveramp-onboarding/liveramp-connection-details.png)
+![Platform UI screenshot showing how to fill in details for your destination](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+*  **[!UICONTROL Region]**: Geographic region for your instance of the LiveRamp SFTP storage.
 *  **[!UICONTROL Folder path]**: The path to the [!DNL LiveRamp] `uploads` subfolder that will host the exported files. The `uploads` prefix is automatically added to the folder path. [!DNL LiveRamp] recommends creating a dedicated subfolder for deliveries from Adobe Real-Time CDP to keep the files separate from any other existing feeds and to ensure all automation runs smoothly. 
     *  For example, if you want to export your files to `uploads/my_export_folder`, type in `my_export_folder` in the **[!UICONTROL Folder path]** field.
 *  **[!UICONTROL Compression format]**: Select the compression type that Experience Platform should use for the exported files. Available options are **[!UICONTROL GZIP]** or **[!UICONTROL None]**.
@@ -173,6 +179,8 @@ Once you've added all your desired mappings, select **[!UICONTROL Next]** and fi
 
 Your data is exported to the [!DNL LiveRamp - Onboarding] storage location that you configured, as CSV files.
 
+Exported files have a maximum size of 10 million rows. Experience Platform generates multiple files per delivery if the selected audiences exceed 10 million rows. If you expect to exceed the single file limit, contact your [!DNL LiveRamp] representative and ask them to configure batch ingestion for you.
+
 When exporting files to the [!DNL LiveRamp - Onboarding] destination, Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md).
 
 For example, let's consider the following audiences:
@@ -197,7 +205,7 @@ The profiles included in the exported files can match one the following audience
 * `Expired`: The profile is no longer qualified for the audience, but has qualified in the past.
 * `""`(empty string): The profile never qualfied for the audience.
 
-For instance, an exported CSV file with one `email` attribute, two audiences originating from the Experience Platform [Segmentation Service](../../../segmentation/home.md), and one [imported](../../../segmentation/ui/overview.md#importing-an-audience) external audience, could look like this:
+For instance, an exported CSV file with one `email` attribute, two audiences originating from the Experience Platform [Segmentation Service](../../../segmentation/home.md), and one [imported](../../../segmentation/ui/audience-portal.md#import-audience) external audience, could look like this:
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -209,7 +217,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-In the example above, the `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` and `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` sections describe audiences originating from the Segmentation Service, while `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` describes an audience imported into Platform as a [custom upload](../../../segmentation/ui/overview.md#importing-an-audience).
+In the example above, the `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` and `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` sections describe audiences originating from the Segmentation Service, while `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` describes an audience imported into Platform as a [custom upload](../../../segmentation/ui/audience-portal.md#import-audience).
 
 Since Platform generates one CSV file for each [merge policy ID](../../../profile/merge-policies/overview.md), it also generates a separate dataflow run for each merge policy ID.
 
@@ -232,3 +240,18 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 ## Additional resources {#additional-resources}
 
 For more details on how to configure your [!DNL LiveRamp - Onboarding] storage, see the [official documentation](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
+
+## Changelog {#changelog}
+
+This section captures the functionality and significant documentation updates made to this destination connector.
+
++++ View changelog
+
+|Release month|Update type|Description|
+|---|---|---|
+|March 2024|Functionality and documentation update|<ul><li>Added support for deliveries to Europe and Australia [!DNL LiveRamp] [!DNL SFTP] instances.</li><li>Updated documentation to describe specific configurations for newly supported regions.</li><li>Increased maximum file size to 10 million rows (from 5 million, previously).</li><li>Updated documentation to reflect increased file sizes.</li></ul>|
+|July 2023|Initial release|Initial destination release and documentation published.|
+
+{style="table-layout:auto"}
+
++++

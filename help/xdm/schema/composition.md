@@ -166,6 +166,11 @@ Schemas are composed using the following formula:
 >title="Class"
 >abstract="Every schema is based on a single class. The class defines the schema's behavior and the common properties that all schemas based on that class must contain. See the documentation to learn more about how classes are involved in schema composition."
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class_industries"
+>title="Industry type"
+>abstract="If you select a relevant industry for your business, the machine learning model can provide better data organization by more accurately mapping the source fields with standard field groups that align with industry standards. This ensures that the data integration is tailored to your industry-specific needs, and results in more precise and relevant data insights."
+
 Composing a schema begins by assigning a class. Classes define the behavioral aspects of the data that the schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged. 
 
 A schema's class determines which field groups are eligible for use in that schema. This is discussed in more detail in the [next section](#field-group). 
@@ -255,7 +260,7 @@ The valid ranges of these scalar types can be further constrained to certain pat
 
 >[!NOTE]
 >
->The "map" field type allows for key-value pair data, including multiple values for a single key. Maps can be found in standard XDM classes and field groups, but you can also define custom maps using the Schema Registry API. See the tutorial on [defining custom fields](../tutorials/custom-fields-api.md#custom-maps) for more information.
+>The "map" field type allows for key-value pair data, including multiple values for a single key. Maps can be found in standard XDM classes and field groups, but you can also define custom maps. See the API tutorial on [defining custom map fields](../tutorials/custom-fields-api.md#custom-maps) or the guide on [defining map fields in the UI](../ui/fields/map.md) for more information.
 
 ## Composition example {#composition-example}
 

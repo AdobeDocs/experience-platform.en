@@ -117,18 +117,6 @@ This error occurs when an invalid payload is provided for a delete system job. E
 
 This error occurs when a valid batch could not be found when attempting to create a delete request for Profile data. Check that you have entered the correct ID for a Profile-enabled dataset before trying again.
 
-### The projection destination has not yet been created
-
-```json
-{
-  "status":404,
-  "title":"The projection destination has not yet been created.",
-  "type":"http://ns.adobe.com/adobecloud/problem/missing-entity"
-}
-```
-
-This error occurs when the `destinationId` provided in a `POST /config/projections` request is invalid. Double-check that you have provided a valid destination ID before trying again. To create a new destination, follow the steps outlined in the [Profile developer guide](./api/edge-projections.md#create-a-destination).
-
 ### Unsupported media type
 
 ```json

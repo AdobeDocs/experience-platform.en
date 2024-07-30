@@ -4,6 +4,7 @@ user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: Platform Identity Service Guide
 user-guide-description: Bridge customer identities across devices and systems to deliver personalized digital experiences.
 feature: Identities
+role: Admin,Developer
 ---
 
 # Adobe Experience Platform Identity Service {#identity}
@@ -15,6 +16,15 @@ feature: Identities
   - [Identity linking logic](./features/identity-linking-logic.md)
   - [Identity graph viewer](./features/identity-graph-viewer.md)
   - [Deletions in Identity Service](./features/deletion.md)
+  - Identity graph linking rules {#identity-graph-linking-rules}
+    - [Feature overview](./identity-graph-linking-rules/overview.md)
+    - [Configuration guide](./identity-graph-linking-rules/configuration.md)
+    - [Identity optimization algorithm](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+    - [Namespace priority](./identity-graph-linking-rules/namespace-priority.md)
+    - [Graph Simulation UI](./identity-graph-linking-rules/graph-simulation.md)
+    - [Identity settings](./identity-graph-linking-rules/identity-settings-ui.md)
+    - [Example customer scenarios](./identity-graph-linking-rules/example-scenarios.md)
+    - [Example graph configurations](./identity-graph-linking-rules/example-configurations.md)
   - [ECID overview](./features/ecid.md)
 - [Implementation guide](implementation.md)
 - [Guardrails for Identity data](guardrails.md)
@@ -30,10 +40,6 @@ feature: Identities
   - [API reference](https://www.adobe.io/experience-platform-apis/references/identity-service)
 - [Shared device detection](shared-device-detection.md)
 - [Define identity fields in the UI](label-identities.md)
-- [Identity graph linking rules] {#identity-graph-linking-rules}
-  - [Feature overview](./identity-graph-linking-rules/overview.md)
-  - [Identity optimization algorithm](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-  - [Example scenarios](./identity-graph-linking-rules/example-scenarios.md)
 - [Privacy request processing](privacy.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
-- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+- [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

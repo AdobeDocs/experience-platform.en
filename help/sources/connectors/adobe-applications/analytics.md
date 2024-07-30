@@ -46,7 +46,11 @@ The expected latency for Analytics Data on Platform is outlined in the table bel
 | New data to [!DNL Real-Time Customer Profile] (A4T **not** enabled) | < 2 minutes |
 | New data to [!DNL Real-Time Customer Profile] (A4T **is** enabled) | up to 30 minutes |
 | New data to Data Lake | < 2.25 hours |
+| New data to Customer Journey Analytics without [stitching](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en)| < 3.75 hours |
+| New data to Customer Journey Analytics with stitching| < 7 hours |
 | Backfill of less than 10 billion events | < 4 weeks |
+
+For more information about Customer Journey Analytics latencies, see: [Customer Journey Analytics Guardrails](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
 
 The Analytics backfill for production sandboxes defaults to 13 months. For Analytics data in non-production sandboxes, backfill is set to three months. The limit of 10 billion events mentioned in the table above is strictly with respect to expected latency. 
 
@@ -79,11 +83,17 @@ The [!DNL Analytics] source passes these identities to Experience Platform in XD
 * `endUserIDs._experience.mcid.id`
 * `endUserIDs._experience.aacustomid.id`
 
-These fields are not marked as identities. Instead, the same identities are copied into XDM's `identityMap` as key-value pairs:
+These fields are not marked as identities. Instead, the same identities (if present in the event) are copied into XDM's `identityMap` as key-value pairs:
 
 * `{ "key": "AAID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
 * `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
 * `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
+
+When the identity or identities are copied into `identityMap`, `endUserIDs._experience.mcid.namespace.code` is also set on the same event:
+
+* If AAID is present, `endUserIDs._experience.aaid.namespace.code` is set to "AAID".
+* If ECID is present, `endUserIDs._experience.mcid.namespace.code` is set to "ECID".
+* If AACUSTOMID is present, `endUserIDs._experience.aacustomid.namespace.code` is set to "AACUSTOMID".
 
 In the identity map, if ECID is present, it is marked as the primary identity for the event. In this case, AAID may be based on ECID due to the [Identity Service grace period](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Otherwise, AAID is marked as the primary identity for the event. AACUSTOMID is never marked as the Primary ID for the event. However, if AACUSTOMID is present, then AAID is based on AACUSTOMID due to the Experience Cloud order of operations.
 

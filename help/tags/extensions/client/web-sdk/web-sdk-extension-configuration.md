@@ -78,7 +78,7 @@ This section allows you to define the behavior of the Web SDK when it comes to h
 * **[!UICONTROL Use third-party cookies]**: When this option is enabled, Web SDK attempts to store a user identifier in a third-party cookie. If successful, the user is identified as a single user as they navigate across multiple domains, rather than being identified as a separate user on each domain. If this option is enabled, the SDK might still be unable to store the user identifier in a third-party cookie if the browser does not support third-party cookies or has been configured by the user to not allow third-party cookies. In this case, the SDK only stores the identifier in the first-party domain.
 
     >[!IMPORTANT]
-    >>Third-party cookies are not compatible with the [first-party device ID](../../../../edge/identity/first-party-device-ids.md) functionality in Web SDK.
+    >>Third-party cookies are not compatible with the [first-party device ID](../../../../web-sdk/identity/first-party-device-ids.md) functionality in Web SDK.
     >You can either use first-party device IDs, or you can use third-party cookies, but you cannot use both features simultaneously.
 
 ## Configure personalization settings {#personalization}
@@ -105,11 +105,44 @@ To use the prehiding snippet, copy and paste it inside the `<head>` element of y
 
 ## Configure data collection settings {#data-collection}
 
-![Image showing the data collection settings of the Web SDK tag extension in the Tags UI](assets/web-sdk-ext-collection.png)
+Manage data collection configuration settings. Similar settings in the JavaScript library are available using the [`configure`](/help/web-sdk/commands/configure/overview.md) command.
 
-* **[!UICONTROL Callback function]**: The callback function provided in the extension is also called the [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html) in the library. This function allows you to modify events globally before they're sent to the Edge Network. More detailed information on how to use this function can be found [here](../../../../edge/fundamentals/tracking-events.md#modifying-events-globally). 
-* **[!UICONTROL Enable click data collection]**: Web SDK can automatically collect link click information for you. By default, this feature is enabled but can be disabled using this option. Links are also labeled as download links if they contain one of the download expressions listed in the [!UICONTROL Download Link Qualifier] textbox. Adobe provides you with some default download link qualifiers. You can edit them according to your needs.
-* **[!UICONTROL Automatically collected context data]**: By default, Web SDK collects certain context data regarding device, web, environment, and place context. If you would like to see a list of the information Adobe collects, you can find it [here](../../../../edge/data-collection/automatic-information.md). If you don't want this data collected or you only want certain categories of data collected, select **[!UICONTROL Specific context information]** and select the data that you want to be collected.  
+![Image showing the data collection settings of the Web SDK tag extension in the Tags UI.](assets/web-sdk-ext-collection.png)
+
+* **[!UICONTROL On before event send callback]**: A callback function to evaluate and modify the payload sent to Adobe. Use the `content` variable within the callback function to modify the payload. This callback is the tag equivalent to [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) in the JavaScript library.
+* **[!UICONTROL Collect internal link clicks]**: A checkbox that enables the collection of link tracking data internal to your site or property. When you enable this checkbox, event grouping options appear:
+  * **[!UICONTROL No event grouping]**: Link tracking data is sent to Adobe in separate events. Link clicks sent in separate events can increase the contractual usage of data sent to Adobe Experience Platform.
+  * **[!UICONTROL Event grouping using session storage]**: Store link tracking data in session storage until the next page event. On the following page, the stored link tracking data and page view data is sent to Adobe at the same time. Adobe recommends enabling this setting when tracking internal links.
+  * **[!UICONTROL Event grouping using local object]**: Store link tracking data in a local object until the next page event. If a visitor navigates to a new page, link tracking data is lost. This setting is most beneficial in context of single-page applications.
+* **[!UICONTROL Collect external link clicks]**: A checkbox that enables the collection of external links.
+* **[!UICONTROL Collect download link clicks]**: A checkbox that enables the collection of download links.
+* **[!UICONTROL Download link qualifier]**: A regular expression that qualifies a link URL as a download link.
+* **[!UICONTROL Filter click properties]**: A callback function to evaluate and modify click-related properties before collection. This function runs before the [!UICONTROL On before event send callback].
+* **Context settings**: Automatically collect visitor information, which populates specific XDM fields for you. You can choose **[!UICONTROL All default context information]** or **[!UICONTROL Specific context information]**. It is the tag equivalent to [`context`](/help/web-sdk/commands/configure/context.md) in the JavaScript library.
+  * **[!UICONTROL Web]**: Collects information about the current page.
+  * **[!UICONTROL Device]**: Collects information about the user's device. 
+  * **[!UICONTROL Environment]**: Collects information about the user's browser.
+  * **[!UICONTROL Place context]**: Collects information about the user's location.
+  * **[!UICONTROL High entropy user-agent hints]**: Collects more detailed information about the user's device.
+
+>[!TIP]
+>
+>The **[!UICONTROL On before link click send]** field is a deprecated callback that is only visible for properties that already have it configured. It is the tag equivalent to [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) in the JavaScript library. Use the **[!UICONTROL Filter click properties]** callback to filter or adjust click data, or use the **[!UICONTROL On before event send callback]** to filter or adjust the overall payload sent to Adobe. If both the **[!UICONTROL Filter click properties]** callback and the **[!UICONTROL On before link click send]** callback are set, only the **[!UICONTROL Filter click properties]** callback runs.
+
+## Configure media collection settings {#media-collection}
+
+The media collection feature helps you collect data related to media sessions on your website. 
+
+The collected data can include information about media playbacks, pauses, completions, and other related events. Once collected, you can send this data to Adobe Experience Platform and/or Adobe Analytics, to generate reports. This feature provides a comprehensive solution for tracking and understanding media consumption behavior on your website.
+
+![Image showing the media collection settings of the Web SDK tag extension in the Tags UI](assets/media-collection.png)
+
+
+* **[!UICONTROL Channel]**: The name of the channel where media collection occurs. Example: `Video channel`.
+* **[!UICONTROL Player Name]**: The name of the media player.
+* **[!UICONTROL Application Version]**: The version of the media player application.
+* **[!UICONTROL Main ping interval]**: Frequency of pings for main content, in seconds. The default value is `10`. Values can range from `10` to `50` seconds.  If no value is specified, the default value is used when using [automatically-tracked sessions](../../../../web-sdk/commands/createmediasession.md#automatic).
+* **[!UICONTROL Ad ping interval]**: Frequency of pings for ad content, in seconds. The default value is `10`. Values can range from `1` to `10` seconds. If no value is specified, the default value is used when using [automatically-tracked sessions](../../../../web-sdk/commands/createmediasession.md#automatic)
 
 ## Configure datastream overrides {#datastream-overrides}
 
@@ -119,10 +152,10 @@ This helps you trigger different datastream behaviors than the default ones, wit
 
 Datastream configuration override is a two step process:
 
-1. First, you must define your datastream configuration overrides in the [datastream configuration page](../../../../datastreams/configure.md).
+1. First, you must define your datastream configuration overrides in the [datastream configuration page](/help/datastreams/configure.md).
 2. Then, you must send the overrides to the Edge Network either via a Web SDK command, or by using the Web SDK tag extension.
 
-See the datastream [configuration overrides documentation](../../../../datastreams/overrides.md) for detailed instructions on how to override datastream configurations.
+See the datastream [configuration overrides documentation](/help/datastreams/overrides.md) for detailed instructions on how to override datastream configurations.
 
 As an alternative to passing the overrides through a Web SDK command, you can configure the overrides in the tag extension screen shown below.
 
@@ -130,10 +163,10 @@ As an alternative to passing the overrides through a Web SDK command, you can co
 >
 > Datastream overrides must be configured on a per-environment basis. The development, staging, and production environments all have separate overrides. You can copy the settings between them using the dedicated options shown in the screen below.
 
-![Image showing the datastream configuration overrides in the Web SDK tag extension page.](assets/datastream-overrides.png)
+![Image showing the datastream configuration overrides using the Web SDK tag extension page.](assets/datastream-overrides.png)
 
 ## Configure advanced settings
 
 Use the **[!UICONTROL Edge base path]** field if you need to change the base path that is used to interact with the Edge Network. This shouldn't require updating, but in the case that you participate on a beta or alpha, Adobe might ask you to change this field.
 
-![Image showing the advanced settings in the Web SDK tag extension page.](assets/advanced-settings.png)
+![Image showing the advanced settings using the Web SDK tag extension page.](assets/advanced-settings.png)

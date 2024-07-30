@@ -18,7 +18,7 @@ Immediately after [creating a new role](#create-a-new-role), you are returned to
 
 ## Filter roles
 
-Select the funnel icon (![Filter icon](../../images/icon.png)) to display a list of filter controls to help narrow results.
+Select the funnel icon (![Filter icon](/help/images/icons/filter.png)) to display a list of filter controls to help narrow results.
 
 ![flac-filters](../../images/flac-ui/flac-filters.png)
 
@@ -149,9 +149,9 @@ The **[!UICONTROL Remove user group]** dialogue appears, prompting you to confir
 
 You will be returned to the **[!UICONTROL User groups]** tab.
 
-## Adding users to Experience Platform through a product profile
+## Adding users to Experience Platform through a role
 
-To add a user to a product profile, log into the Admin Console and select **[!UICONTROL Add users]**
+To add a user to a role, log into the Admin Console and select **[!UICONTROL Add users]**
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 

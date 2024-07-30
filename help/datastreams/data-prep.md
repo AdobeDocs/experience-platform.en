@@ -24,9 +24,9 @@ There are two uses cases where Data Prep for Data Collection is useful:
 
 ## Send an existing data layer to the Edge Network via WebSDK {#send-datalayer-via-websdk}
 
-The existing data layer must be sent using the `data` option of the `sendEvent` command as described in the [Web SDK documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+The existing data layer must be sent using the [`data`](/help/web-sdk/commands/sendevent/data.md) object within the `sendEvent` command.
 
-If you are using Tags, you must use the **[!UICONTROL Data]** field of the **[!UICONTROL Send Event]** action type, as described in the [Web SDK tag extension documentation](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+If you are using Tags, you must use the **[!UICONTROL Data]** field of the **[!UICONTROL Send Event]** action type, as described in the [Web SDK tag extension documentation](/help/tags/extensions/client/web-sdk/action-types.md).
 
 The rest of this guide will focus on how to map the data layer to XDM standards after it has been sent by the WebSDK. 
 
@@ -167,11 +167,11 @@ To create a mapping rule, select **[!UICONTROL Add new mapping]**.
 
 ![Adding a new mapping.](assets/data-prep/add-new-mapping.png)
 
-Select the source icon (![Source icon](assets/data-prep/source-icon.png)), and in the dialog that appears select the source field that you want to map in the provided canvas. Once you have chosen a field, use the **[!UICONTROL Select]** button to continue.
+Select the source icon (![Source icon](/help/images/icons/source.png)), and in the dialog that appears select the source field that you want to map in the provided canvas. Once you have chosen a field, use the **[!UICONTROL Select]** button to continue.
 
 ![Selecting the field to be mapped in the source schema.](assets/data-prep/source-mapping.png)
 
-Next, select the schema icon (![Schema icon](assets/data-prep/schema-icon.png)) to open a similar dialog for the target event schema. Choose the field that you want to map the data to before confirming with **[!UICONTROL Select]**.
+Next, select the schema icon (![Schema icon](/help/images/icons/schema.png)) to open a similar dialog for the target event schema. Choose the field that you want to map the data to before confirming with **[!UICONTROL Select]**.
 
 ![Selecting the field to be mapped in the target schema.](assets/data-prep/target-mapping.png)
 

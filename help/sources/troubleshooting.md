@@ -41,7 +41,7 @@ The following is a list of constraints you must account for files in sources.
 - The following file names are not allowed: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, dot character (.), and two dot characters (..).
 - The maximum number of files per batch is 1500, with a maximum batch size being 100 GB.
 - The maximum number of properties or fields per row is 10,000.
-- The maximum number of batches that can be sent per user, per minute is 138.
+- The maximum number of batches that can be sent per user, per minute is 2000.
 
 ### What data types are supported?
 

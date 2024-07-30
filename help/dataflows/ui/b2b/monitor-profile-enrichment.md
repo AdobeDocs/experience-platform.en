@@ -71,7 +71,7 @@ The following metrics are available for predictive lead and account scoring prof
 
 This section describes various user interface (UI) options in the monitoring interface, which allow you to filter the metrics that are displayed on the page.
 
-Use the arrow icon (![arrow icon](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) to expand or dismiss the card at the top of the screen, which shows at-a-glance information about the profile enrichment jobs.
+Use the arrow icon (![arrow icon](/help/images/icons/chevron-up.png)) to expand or dismiss the card at the top of the screen, which shows at-a-glance information about the profile enrichment jobs.
 
 ![Screen recording that shows the arrow icon UI control.](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
 

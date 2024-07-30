@@ -124,7 +124,7 @@ The following operations are supported by [!DNL Real-Time Customer Profile]:
 | --- | --- | 
 | `create` | The default operation. This generates an XDM entity create method for [!DNL Real-Time Customer Profile]. |
 | `merge` | This generates an XDM entity update method for [!DNL Real-Time Customer Profile]. |
-| `delete` | This generates an XDM entity delete method for [!DNL Real-Time Customer Profile] and permanently removes the data from the [!DNL Profile Store]. |
+| `delete` | This generates an XDM entity delete method for [!DNL Real-Time Customer Profile] and permanently removes the data from the [!DNL Profile store]. |
 
 The following operations are supported by [!DNL Identity Service]:
 
@@ -260,7 +260,7 @@ The following outlines a list of known limitations to consider when streaming up
 
 * The streaming upserts method should only be used when sending partial row updates to [!DNL Real-Time Customer Profile]. Partial row updates are **not** consumed by data lake.
 * The streaming upserts method does not support updating, replacing, and removing identities. New identities are created if they do not exist. Hence the `identity` operation must always be set to create. If an identity already exists, the operation is a no-op.
-* The streaming upserts method currently does not support [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html) and [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* The streaming upserts method currently does not support [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) and [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Next steps
 

@@ -1,5 +1,5 @@
 ---
-title: Account Profiles Dashboard Guide
+title: Account Profiles Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's B2B account profiles.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 ---
@@ -7,15 +7,15 @@ exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your account profiles, as captured during a daily snapshot. This guide outlines how to access and work with the [!UICONTROL Account Profiles] dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.
 
-For an overview of all of the features within the account profile user interface, please visit the [account profile UI guide](../../rtcdp/accounts/account-profile-ui-guide.md).
+This document provides an overview of the features within the [!UICONTROL Account Profiles] dashboard and details the available standard insights. See the [[!UICONTROL Account Profiles] UI guide](../../rtcdp/accounts/account-profile-ui-guide.md) for comprehensive details on its available features. 
 
 ## Getting started
 
-You must be entitled to [Adobe Real-Time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) in order to access the B2B [!UICONTROL Account Profiles] dashboard. 
+You must be entitled to [Adobe Real-Time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md) to access the B2B [!UICONTROL Account Profiles] dashboard. 
 
-## Account profiles data
+## Account profiles data {#data}
 
-The [!UICONTROL Account Profiles] dashboard displays a snapshot of unified account information from the multiple sources across your marketing channels and the diverse systems that your organization currently uses to store customer account information.
+The [!UICONTROL Account Profiles] dashboard displays a snapshot of your unified account information. This account information comes from the multiple sources across your marketing channels and the diverse systems that your organization currently uses to store customer account information.
 
 The profile data in the snapshot shows the data exactly as it appears at the specific point in time when the snapshot was taken. In other words, the snapshot is not an approximation or sample of the data, and the [!UICONTROL Account Profiles] dashboard does not update in real-time.
 
@@ -23,17 +23,33 @@ The profile data in the snapshot shows the data exactly as it appears at the spe
 >
 >Any changes or updates made to the data since the snapshot was taken will not be reflected in the dashboard until the next snapshot is taken.
 
-## Explore the [!UICONTROL Account Profiles] dashboard
+## Explore the [!UICONTROL Account Profiles] dashboard {#explore}
 
 To navigate to the [!UICONTROL Account Profiles] dashboard within the Platform UI, select **[!UICONTROL Profiles]** under [!UICONTROL Accounts] in the left navigation panel. 
 
 ![The Platform UI with Account Profiles in the left navigation highlighted and the overview tab displayed.](../images/account-profiles/account-profiles-dashboard.png)
 
-From the [!UICONTROL Account Profiles] dashboard you can either [browse the account profiles ingested into your organization](#browse-account-profiles), or [view the entirety of your account profile data at a glance using widgets](#standard-widgets) that visualize aspects of the data.  
+From the [!UICONTROL Account Profiles] dashboard, you can either [browse the account profiles ingested into your organization](#browse-account-profiles), or [view the entirety of your account profile data at a glance using widgets](#standard-widgets).
+
+### Date filter {#date-filter}
+
+The [!UICONTROL Overview] tab is composed of widgets that provide read-only metrics to convey important information about your account profiles. Select the calendar icon or dates to change the global date filter for your widgets. 
+
+>[!IMPORTANT]
+>
+>The date range that you select in the dropdown calendar affects all insights except the two predictive scoring widgets ([distribution](#predictive-scoring-distribution) and [top influential factors](#predictive-scoring-top-influential-factors)).
+
+![The Account Profiles overview tab with the date selector and filter icon highlighted.](../images/account-profiles/date-filter.png)
+
+### Configure the lead to account matching service {#lead-to-account-matching-service}
+
+Select **[!UICONTROL Settings]** to configure the lead to account matching service from the [!UICONTROL Account settings] dialog. For full details on how to configure your lead to account matching, see the [UI guide](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching). To learn more about lead to account matching, refer to the [lead to account matching in Real-Time CDP B2B documentation](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+
+![The Account Profiles dashboard with Settings highlighted.](../images/account-profiles/settings.png)
 
 ## Browse account profiles {#browse-account-profiles}
 
-The [!UICONTROL Browse] tab allows you to search and view the read-only account profiles ingested into your organization using an account ID from a connected enterprise source or by entering source details directly. From here you can see important information belonging to the account profile including, their name, industry, revenue, and audience among others.
+From the [!UICONTROL Browse] tab, you can search and view the read-only account profiles ingested into your organization. Use an account ID from a connected enterprise source or enter source details directly. From this workspace, you can see important information belonging to the account profile including, their name, industry, revenue, and audience among others.
 
 Select the [!UICONTROL Profile ID] from the results displayed on the [!UICONTROL Browse] tab to open the [!UICONTROL Details] tab for the account profile.
 
@@ -41,42 +57,82 @@ Select the [!UICONTROL Profile ID] from the results displayed on the [!UICONTROL
 
 The account profile information displayed on the [!UICONTROL Details] tab has been merged together from multiple profile fragments to form a single view of the individual account. See the documentation on [browsing account profiles in Adobe Real-Time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) to learn more about account profile viewing capabilities in the Platform UI. 
 
-## The [!UICONTROL Account Profiles] [!UICONTROL Overview] {#overview}
-
-The [!UICONTROL Overview] tab is composed of widgets that provide read-only metrics to convey important information about your account profiles. Select **[!UICONTROL Modify dashboard]** to change the appearance of the [!UICONTROL Overview] tab by moving and resizing widgets. 
-
-![The Account Profiles overview tab with Modify dashboard highlighted.](../images/account-profiles/modify-dashboard.png)
-
-Please refer to the document on [modifying dashboards](../customize/modify.md) and the [Widget library overview](../customize/widget-library.md) to learn more.
-
 ## Standard widgets {#standard-widgets}
 
 Adobe provides standard widgets that you can use to visualize different metrics related to your account profiles.
 
+>[!IMPORTANT]
+>
+>If you do not provide a date filter, the default behavior of insights analyzes data added from the previous year up to today.
+
 To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
-* [Total accounts by industry](#total-accounts-by-industry)
 * [Account profiles added](#account-profiles-added)
+* [New accounts by industry](#accounts-by-industry)
+* [New accounts by type](#accounts-by-type)
+* [New opportunities by person role](#opportunities-by-person-role)
+* [New opportunities by revenue](#opportunities-by-revenue)
+* [New opportunities by status & stage](#opportunities-by-status-&-stage)
+* [New opportunities won](#opportunities-won)
+* [Opportunities added](#opportunities-added)
 * [Predictive scoring distribution](#predictive-scoring-distribution)
 * [Predictive scoring top influential factors](#predictive-scoring-top-influential-factors)
 
-### Total accounts by industry {#total-accounts-by-industry}
-
-This widget displays the total number of accounts in a single metric and uses a donut chart to illustrate the proportional sizes of counts for the industries that make up the overall number. The key provides colour coding information for the different industries that make up the donut chart. 
-
-Individual counts for the different industries are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
-
-![The total accounts by industry widget.](../images/account-profiles/total-accounts-by-industry-widget.png)
-
 ### Account profiles added {#account-profiles-added}
 
-This widget uses a colour coded bar chart to illustrate the count of profiles added to an account over a given period of time, and the proportion of different industries that constitute these added profiles. The industries are colour coded, and a key provides the colour coding information for the different industries that make up the bar chart. The period of analysis is selected from the widget dropdown menu. The bar chart can be visualized over a 30 day, 90 day, and a 12 month period.
+The [!UICONTROL Account profiles added] widget uses a line graph to display the number of account profiles added each day over a period of time. Use the global date filter located at the top of your dashboard to determine the period of analysis. If no date filter is provided, the default behavior lists the account profiles added for the year prior to today. The results can be used to infer a trend in the number of account profiles added.
+
+![The Account profiles added widget.](../images/account-profiles/account-profiles-added.png)
+
+### New accounts by industry {#accounts-by-industry}
+
+The [!UICONTROL New accounts by industry] widget displays the total number of accounts in a single metric inside a donut chart. The donut chart illustrates the relative makeup of different industries that comprise this total. A color-coded key provides a breakdown of all the included industries. Individual counts for each industry are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
+
+![The New accounts by industry widget.](../images/account-profiles/new-accounts-by-industry.png)
+
+### New accounts by type {#accounts-by-type}
+
+The [!UICONTROL New accounts by type] widget displays the total number of accounts in a single metric inside a donut chart. The donut chart illustrates the relative makeup of different account types that comprise this total. A color-coded key provides a breakdown of all the included account types. Individual counts for each type of account are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
+
+![The New accounts by type widget.](../images/account-profiles/new-accounts-by-type.png)
+
+### New opportunities by person role {#opportunities-by-person-role}
+
+The [!UICONTROL New opportunities by person role] widget displays the total number of your opportunities in a single metric inside a donut chart. The donut chart illustrates the relative makeup of roles that comprise this total number of opportunities. A color-coded key provides a breakdown of all the included roles. Individual counts for each role are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
 
 >[!NOTE]
 >
->As profiles are only added to an account and never removed, the lowest possible number of profiles added over a period of time is zero. 
+>The [!UICONTROL No data found] or [!UICONTROL Unable to load] error is caused when the 'Opportunity-Person' bridge-table is not used in your schema. If your insight displays one of these errors, check your union schema and ensure that the 'Opportunity-Person' field group is ingesting data.   
 
-![The Account profiles added widget.](../images/account-profiles/accounts-profiles-added-widget.png)
+![The New opportunities by person role widget.](../images/account-profiles/new-opportunities-by-person-role.png)
+
+### New opportunities by revenue {#opportunities-by-revenue}
+
+The [!UICONTROL New opportunities by revenue] widget uses a bar chart to illustrate the total estimated amount of revenue generated by your opportunities. The widget supports up to six opportunities.
+
+To see a dialog that contains the specific revenue total for an opportunity, use the cursor to hover over individual bars.
+
+![The New opportunities by revenue widget.](../images/account-profiles/new-opportunities-by-revenue.png)
+
+### New opportunities by status & stage {#opportunities-by-status-&-stage}
+
+This widget uses a bar chart to illustrate the number of opportunities that are either open or closed at all stages of the marketing/sales funnel. The widget uses colors to differentiate the stage of the opportunities. A color-coded key indicates the available stages for opportunities. 
+
+![The New opportunities by status & stage widget.](../images/account-profiles/new-opportunities-by-status-&-stage.png)
+
+### New opportunities won {#opportunities-won}
+
+The [!UICONTROL New opportunities won] widget displays the total number of your opportunities that have been successfully finalized in a single metric inside a donut chart. The donut chart illustrates the relative makeup of opportunities that are either won or not. A color-coded key distinguishes between won and not-won opportunities. Individual counts for each role are displayed in a dialog when the cursor hovers over the respective section of the donut chart.
+
+![The New opportunities won widget.](../images/account-profiles/new-opportunities-won.png)
+
+### Opportunities added {#opportunities-added}
+
+The [!UICONTROL Opportunities added] widget uses a line graph to display the number of opportunities added each day over a period of time. Use the global date filter located at the top of your dashboard to determine the period of analysis. If no date filter is provided, the default behavior lists the opportunities added for the year prior to today. The results can be used to infer a trend in the number of opportunities added.
+
+<!-- Link to date filter documentation from Annamalai -->
+
+![The Opportunities added widget.](../images/account-profiles/opportunities-added.png)
 
 ### Predictive scoring distribution {#predictive-scoring-distribution}
 
@@ -88,6 +144,10 @@ The column chart provides a more granular scoring breakdown. Each column shows t
 
 The dropdown menu within the widget allows you to select the account scoring model.
 
+>[!NOTE]
+>
+>Global date range filters do not apply to predictive scoring insights. Predictive scoring widgets analyze data based on the account scoring model selected in the dropdown.
+
 ![The Predictive scoring distribution widget.](../images/account-profiles/predictive-scoring-distribution.png)
 
 ### Predictive scoring top influential factors {#predictive-scoring-top-influential-factors}
@@ -98,8 +158,20 @@ This widget shows the top influential factors for each of the high, medium, and 
 
 The dropdown menu within the widget allows you to select the account scoring model.
 
+>[!NOTE]
+>
+>Global date range filters do not apply to predictive scoring insights. Predictive scoring widgets analyze data based on the account scoring model selected in the dropdown.
+
 ![The Predictive scoring top influential factors widget.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
+## Unable to load data error {#errors}
+
+If a widget displays *[!UICONTROL Unable to load. Try again.]* this is because there is no available data for the B2B entity. For example, the widget displayed below [!UICONTROL New opportunities by person role], shows the message "[!UICONTROL Unable to load. Try again.]" since this sandbox does not have available opportunity data.
+
+![The Unable to load insight error.](../images/account-profiles/unable-to-load.png)
+
+To resolve the issue, you must ingest B2B entity data, such as *opportunity person* data, into the sandbox. After 48 hours, the data is reflected in the widgets.
 
 ## Next steps
 
-By following this document, you should now know how to locate the [!UICONTROL Account Profiles] dashboard. You should also understand the metrics displayed in the available widgets. To learn more about working with account profiles as part of your B2B data in the Experience Platform UI, please refer to the [account profiles overview](../../rtcdp/accounts/account-profile-overview.md) for Adobe Real-Time CDP, B2B Edition.
+By following this document, you should now know how to locate the [!UICONTROL Account Profiles] dashboard and also understand the metrics displayed in the available widgets. To learn more about working with account profiles as part of your B2B data in the Experience Platform UI, please refer to the [account profiles overview](../../rtcdp/accounts/account-profile-overview.md) for Adobe Real-Time CDP, B2B Edition.
