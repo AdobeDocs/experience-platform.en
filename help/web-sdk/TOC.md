@@ -20,14 +20,15 @@ role: Developer
 * Commands {#commands}
   * configure {#configure}
     * [Overview](commands/configure/overview.md)
+    * [autoTrackPropositionInteractionsEnabled](commands/configure/autotrackpropositioninteractionsenabled.md)
     * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
     * [clickCollection](commands/configure/clickcollection.md)
     * [context](commands/configure/context.md)
+    * [datastreamId](commands/configure/datastreamid.md)
     * [debugEnabled](commands/configure/debugenabled.md)
     * [defaultConsent](commands/configure/defaultconsent.md)
     * [downloadLinkQualifier](commands/configure/downloadlinkqualifier.md)
     * [edgeBasePath](commands/configure/edgebasepath.md)
-    * [edgeConfigId](commands/configure/edgeconfigid.md)
     * [edgeDomain](commands/configure/edgedomain.md)
     * [idMigrationEnabled](commands/configure/idmigrationenabled.md)
     * [streamingMedia](commands/configure/streamingmedia.md)

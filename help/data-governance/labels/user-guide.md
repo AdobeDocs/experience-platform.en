@@ -65,7 +65,7 @@ Labels can be applied to the entire dataset from the **[!UICONTROL Data Governan
 
 ![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with Data Governance highlighted.](../images/labels/dataset-governance.png)
 
-To edit data usage labels at the dataset level, start by selecting the pencil icon (![A pencil icon.](../images/labels/edit-icon.png)) in the row of the dataset name.
+To edit data usage labels at the dataset level, start by selecting the pencil icon (![A pencil icon.](/help/images/icons/edit.png)) in the row of the dataset name.
 
 ![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with the edit pencil icon highlighted.](../images/labels/dataset-level-edit.png)
 

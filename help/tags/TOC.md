@@ -310,6 +310,7 @@ role: Developer
     * [Delegate descriptor IDs](./api/guides/delegate-descriptor-ids.md)
     * [Encrypting values](./api/guides/encrypting-values.md)
     * [Error handling](./api/guides/error-handling.md)
+    * [Sharing private extension packages](./api/guides/extension-packages.md)
     * [Filtering responses](./api/guides/filtering.md)
     * [Paginating responses](./api/guides/pagination.md)
     * [Sorting responses](./api/guides/sorting.md)

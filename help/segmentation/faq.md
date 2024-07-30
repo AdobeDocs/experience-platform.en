@@ -40,7 +40,7 @@ When you upload an externally generated audience, the following items are create
 
 During the import external audience workflow, you must specify which column in the CSV file corresponds with the **Primary Identity**. An example of a primary identity includes email address, ECID, or an organization-specific custom identity namespace. 
 
-The data associated with this primary identity columnis the **only** data that is attached to the profile. If there are no existing profiles that match the data in the primary identity column, a new profile is created. However, this profile is essentially an orphaned profile since **no** attributes or experience events are associated with this profile.
+The data associated with this primary identity column is the **only** data that is attached to the profile. If there are no existing profiles that match the data in the primary identity column, a new profile is created. However, this profile is essentially an orphaned profile since **no** attributes or experience events are associated with this profile.
 
 All the other data within the externally generated audience are considered **payload attributes**. These attributes can **only** be used for personalization and enrichment during activation, and are **not** attached to a profile. These attributes are, however, stored in the data lake.
 
@@ -50,9 +50,23 @@ While the externally generated audience can be referenced when creating audience
 
 Yes, the externally generated audience will be merged with the existing profile in Platform if the primary identifiers match.This data can take up to 24 hours to be reconciled. If profile data does not already exist, a new profile will be created as the data is ingested.
 
+### How are customer consent preferences honored for externally generated audiences that are imported into Audience Portal?{#consent}
+
+As customer data is captured from multiple channels, identity stitching and merge policies allow this data to be consolidated in a single Real-Time Customer Profile. Information on the customers' consent preferences are stored and evaluated at the profile level.
+
+Downstream destinations check each profile for consent information prior to activation. Each profile's consent information is compared against consent requirements for a particular destination. If the profile does not satisfy the requirements, that profile is not sent to a destination.
+
+When an external audience is ingested into Audience Portal, they are joined with existing profiles using a primary ID such as email or ECID. As a result, the existing consent policies will remain in force throughout activation.
+
+Please note you should **not** include consent information with an externally generated audiences, since the payload variables are **not** stored in the Profile store but in the data lake. Instead, you **must** use an Adobe Experience Platform ingestion channels where profile data is imported.
+
 ### Can I use an externally generated audience to build other audiences?
 
 Yes, any externally generated audience will appear within the audience inventory and can be used when building audiences within the [Segment Builder](./ui/segment-builder.md).
+
+### How often are externally generated audiences evaluated?
+
+Externally generated audiences are **only** evaluated during the time of import. Since the associated attributes to these import audiences are non-durable and are **not** part of the Profile store, the only time an externally generated audience will be updated is if the existing audience is manually updated.
 
 ### Can I use externally uploaded attributes as part of segmentation?
 
@@ -70,7 +84,7 @@ The organization-specific default merge policy is automatically applied when upl
 
 ### Where can I activate externally generated audiences to? 
 
-An externally generated audience can be mapped to any RTCDP destination and can be used in Adobe Journey Optimizer campaigns.
+An externally generated audience can be mapped to any destination and can be used in Adobe Journey Optimizer campaigns.
 
 ### How soon are externally generated audiences ready for activation?
 
@@ -91,6 +105,10 @@ If you have accidentally uploaded an externally generated audience and you want 
 The current data expiration for externally generated audiences is **30 days**. This data expiration was chosen to reduce the amount of excess data stored within your organization. 
 
 After the data expiration period passes, the associated dataset will still be visible within the dataset inventory, but you will **not** be able to activate the audience and the profile count will show as zero.
+
+### Is there a maximum number of externally generated audiences I can import?
+
+There is no limit to the number of externally generated audiences you can import. However, please note that the imported audiences **do** count against the overall audience limit.
 
 ### How will Audience Portal and Audience Composition interact with the release of Real-Time CDP Partner Data?
 
@@ -311,7 +329,7 @@ For more details about using Audience Composition, please read the [Audience Com
 
 Audiences are automatically saved while creating them in Audience Composition. The audience's creation time will be the first time this automatic save occurs.
 
-After the audience has been created, it can take up to 24 hours to be evaluated.
+After the audience composition has been created, it can take up to 48 hours for it to be evaluated and activated for usage in downstream services such as a Real-Time CDP destination or Adobe Journey Optimizer channel.
 
 ### When can I use the audience I created?
 
@@ -331,11 +349,7 @@ Audience splitting lets you further subset your audience into smaller groups.
 
 When splitting by attribute, there is mutual exclusivity between the groups. This means that if a record meets the criteria of multiple split paths, it will be assigned the **first** path from the left and **not** assigned to any of the other paths.
 
-When splitting by percentage, splits are **randomly** done. This means that the profiles will be randomly assigned to each path. The split **is** persistent, which means the profile will be in the same sub-audience on each evaluation.
-
->[!NOTE]
->
->Previously, splits in Audience Composition were **not** persistent.
+When splitting by percentage, splits are **randomly** done. This means that the profiles will be randomly assigned to each path. 
 
 For more information on the Split block, please read the [Audience Composition UI guide](./ui/audience-composition.md#split).
 

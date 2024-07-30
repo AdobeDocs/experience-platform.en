@@ -8,7 +8,7 @@ exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 
 >[!AVAILABILITY]
 >
->This feature is not yet available; the beta program for identity graph linking rules is expected to start in July on development sandboxes. Contact your Adobe account team for information on the participation criteria.
+>Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
 
 [!DNL Graph Simulation] is a tool in the Identity Service UI that you can use to simulate how an identity graph behaves given a particular combination of identities and how you configure the [identity optimization algorithm](./identity-optimization-algorithm.md).
 
@@ -166,6 +166,8 @@ In the example graph below, a dotted line exists between `{Email: tom@acme.com}`
 
 By reading this document, you now know how to use the [!DNL Graph Simulation] tool to better understand how your identity data is treated given a particular set of rules and configurations. For more information, read the following documents:
 
-* [Identity graph linking rules](overview.md)
-* [Identity optimization algorithm](identity-optimization-algorithm.md)
-* [Namespace priority](namespace-priority.md)
+* [Identity graph linking rules](./overview.md)
+* [Configuration guide](./configuration.md)
+* [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [Namespace priority](./namespace-priority.md)
+* [Example graph configurations](./example-configurations.md)

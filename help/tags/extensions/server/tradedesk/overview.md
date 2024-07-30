@@ -84,7 +84,7 @@ Refer to the [!DNL The Trade Desk] developer documentation for more information 
 
 **[!UICONTROL Object Request Parameters]**
 
-A JSON object containing more information. You have the option to use a reduced set of key-value inputs or to supply raw JSON. Additionally, you can retrieve dynamic data from a data element by selecting the disks (![Disk Icon](../../../images/extensions/server/tradedesk/disk-icon.png)) on the right.
+A JSON object containing more information. You have the option to use a reduced set of key-value inputs or to supply raw JSON. Additionally, you can retrieve dynamic data from a data element by selecting the disks (![Disk Icon](/help/images/icons/database.png)) on the right.
 
 
 ![The [!DNL Object Request Parameters] section showing available fields.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
