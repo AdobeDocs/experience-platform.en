@@ -74,8 +74,6 @@ The table indicates the primary metric for each product, as each product can tra
 
 Proactively manage and optimize your licensing resources based on insightful usage predictions. The [!UICONTROL Predicted Usage] column accurately predicts future license usage at various levels (organization-level, sandbox-level, or dataset-level) for all of your purchased products. This alerting capability provides a forecast of license usage for six weeks in the future, based on your usage up to the 15th of this calendar month. Predictions are provided with a lower & an upper bound. 
 
-<!-- Usage predictions are available for your product, sandbox, and the individual metrics used at the sandbox level. -->
-
 >[!IMPORTANT]
 >
 >Predictions are refreshed on a monthly basis. The date of refresh is included in an info icon (![This info icon.](../images/license-usage/info-icon.png)) above the column title.
