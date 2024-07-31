@@ -66,7 +66,7 @@ This dashboard displays all of your licensed Adobe Experience Platform products,
 
 The table indicates the primary metric for each product, as each product can track numerous metrics.
 
-### (Beta) Predicted usage {#predicted-usage}
+### [!BADGE Beta]{type=Informative} Predicted usage {#predicted-usage}
 
 >[!AVAILABILITY]
 >
