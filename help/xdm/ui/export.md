@@ -34,7 +34,7 @@ To generate an export payload, select **[!UICONTROL Schemas]** in the left navig
 >
 >See the guide on [exploring XDM resources](./explore.md) for details on how to find the XDM resource you are looking for.
 
-Next, select the **[!UICONTROL Copy JSON]** icon (![Copy Icon](../images/ui/export/icon.png)) from the available options.
+Next, select the **[!UICONTROL Copy JSON]** icon (![Copy Icon](/help/images/icons/copy.png)) from the available options.
 
 ![The Schemas workspace with a schema row and [!UICONTROL Copy to JSON] highlighted.](../images/ui/export/copy-json.png)
 

@@ -30,7 +30,7 @@ The **[!UICONTROL Expiring credentials]** section provides the following informa
 - **[!UICONTROL Port]**: The port number of the host to connect to.
 - **[!UICONTROL Database]**: The name of the database to connect a client to.
 - **[!UICONTROL Username]**: The username used to connect to Query Service.
-- **[!UICONTROL Password]**: The password used to connect to Query Service. Passwords in the UI have been hashed for security. Select the copy icon (![The copy icon.](../images/ui/credentials/copy-icon.png)) to copy your complete, un-hashed credentials to the clipboard.
+- **[!UICONTROL Password]**: The password used to connect to Query Service. Passwords in the UI have been hashed for security. Select the copy icon (![The copy icon.](/help/images/icons/copy.png)) to copy your complete, un-hashed credentials to the clipboard.
 - **[!UICONTROL PSQL command]**: A command that automatically has inserted all the relevant information for you to connect to Query Service using PSQL on the command line.
 - **[!UICONTROL Expires]**: The expiry date and time for the expiring credentials. The default validity duration of the token is 24 hours but it can be changed in the advanced settings of the Admin Console.
 
@@ -120,7 +120,7 @@ After you have saved your generated credentials, select **[!UICONTROL Close]**. 
 
 ![The Queries dashboard Credentials tab with the Non-expiring Credentials section highlighted.](../images/ui/credentials/list-credentials.png)
 
-You can either edit or delete your non-expiring credentials. To edit a non-expiring credential, select the pencil icon (![A pencil icon.](../images/ui/credentials/edit-icon.png)). To delete a non-expiring credential, select the delete icon (![A trash can icon.](../images/ui/credentials/delete-icon.png)).
+You can either edit or delete your non-expiring credentials. To edit a non-expiring credential, select the pencil icon (![A pencil icon.](/help/images/icons/edit.png)). To delete a non-expiring credential, select the delete icon (![A trash can icon.](/help/images/icons/delete.png)).
 
 When editing a non-expiring credential, a modal appears. You can provide the following details to update:
 

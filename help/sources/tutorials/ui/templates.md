@@ -168,7 +168,7 @@ The following table outlines the B2C templates available for the [!DNL Microsoft
 
 +++
 
-Depending on the business type that you selected, a list of templates appears. Select the preview icon ![preview icon](../../images/tutorials/templates/preview-icon.png) beside a template name to preview sample data from the template.
+Depending on the business type that you selected, a list of templates appears. Select the preview icon ![preview icon](/help/images/icons/preview.png) beside a template name to preview sample data from the template.
 
 ![A list of templates with the preview icon highlighted.](../../images/tutorials/templates/templates.png)
 
