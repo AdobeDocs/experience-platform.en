@@ -217,6 +217,12 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ![Apply transformation control highlighted in the Mapping step of the activation workflow.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
 
+## Monitor destination {#monitor-destination}
+
+After connecting to the destination and establishing a destination dataflow, you can use the [monitoring functionality](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP to get extensive information about the profile records activated to your destination in each dataflow run. 
+
+The monitoring information for the [!DNL Google Customer Match + Display & Video 360] connection includes audience-level information related to activated, excluded, and failed identities in each dataflow and dataflow run. [Read more](/help/dataflows/ui/monitor-destinations.md#segment-level-view) about the functionality. 
+
 ## Verify that audience activation was successful {#verify-activation}
 
 After completing the activation flow, switch to your **[!UICONTROL Google Ads]** account. The activated audiences are shown in your Google account as customer lists. Depending on your audience size, some audiences do not populate unless there are over 1000 active users to serve. Find further information in the [Google Audience Partner documentation](https://developers.google.com/audience-partner/api/docs/customer-match/get-started#verify-list). Note that you need to ask Google for access to the documentation in the link.

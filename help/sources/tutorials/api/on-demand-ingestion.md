@@ -98,6 +98,7 @@ A successful response returns the details of the newly created flow run, includi
 | --- | --- |
 | `id` | The ID of the newly created flow run. See the guide on [retrieving flow specifications](../api/collect/database-nosql.md#specs) for more information on table-based run specifications. |
 | `etag` | The resource version of the flow run. |
+
 <!-- 
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
 | `updatedAt` | The unix timestamp that designates when the flow run was last updated. |
