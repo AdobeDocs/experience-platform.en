@@ -11,6 +11,22 @@ After you configure the [Adobe Experience Platform Web SDK tag extension](web-sd
 
 This page describes the action types supported by the [Adobe Experience Platform Web SDK tag extension](web-sdk-extension-configuration.md).
 
+## Apply propositions {#apply-propositions}
+
+The **[!UICONTROL Apply propositions]** action type allows you to re-render propositions that were already rendered using the **[[!UICONTROL Send event]](#send-event)** action type.
+
+This action type is useful when working with single-page applications where portions of the page get re-rendered, potentially overwriting any personalizations already applied to the page.
+
+![Platform Tags UI showing the Apply Propositions action type.](assets/apply-propositions.png)
+
+This action type supports the following fields:
+
+* **[!UICONTROL Propositions]**: An array of proposition objects that you want to re-render.
+* **[!UICONTROL View name]**: The name of the view to render.
+* **[!UICONTROL Proposition metadata]**: An object that determines how HTML offers can be applied. You can provide this information either through the form or through a data element. It contains the following properties:
+  * **[!UICONTROL Scope]**
+  * **[!UICONTROL Selector]**
+  * **[!UICONTROL Action type]**
 
 ## Apply response {#apply-response}
 
@@ -27,37 +43,72 @@ This action type supports the following configuration options:
 * **[!UICONTROL Response body]**: Select the data element which returns the object containing the JSON payload provided by the Edge Network response.
 * **[!UICONTROL Render visual personalization decisions]**: Enable this option to automatically render the personalization content provided by the Edge Network and pre-hide the content to prevent flicker.
 
+## Get Media Analytics Tracker {#get-media-analytics-tracker}
+
+This action is used to get the legacy Media Analytics API. When configuring the action and an object name is provided, then the legacy Media Analytics API will be exported to that window object. If none is provided it will be exported to `window.Media` as the current Media JS library does.
+
+![Platform UI image showing the Get Media Analytics Tracker action type.](assets/get-media-analytics-tracker.png)
+
+## Redirect with identity {#redirect-with-identity}
+
+Use this action type to share identities from the current page to other domains. This action is designed to be used with a **[!UICONTROL click]** event type and a value comparison condition. See [append identity to URL using the Web SDK extension](../../../../web-sdk/commands/appendidentitytourl.md#extension) for more information on how to use this action type.
+
 ## Send event {#send-event}
 
-Sends an event to Adobe [!DNL Experience Platform] so that Adobe Experience Platform can collect the data you send and act on that information. Select an instance (if you have more than one). Any data that you want to send can be sent in the **[!UICONTROL XDM Data]** field. Use a JSON object that conforms to the structure of your XDM schema. This object can either be created on your page or through a **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
+Sends an event to Experience Platform so that Platform can collect the data you send and act on that information. Any data that you want to send can be sent in the **[!UICONTROL XDM Data]** field. Use a [!DNL JSON] object that conforms to the structure of your [!DNL XDM] schema. This object can either be created on your page or through a **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
 
-There are a few other fields in the Send Event action type that could also be useful depending on your implementation. Please note that these fields are all optional.
+The **[!UICONTROL Send Event]** action type supports the fields and settings described below. These fields are all optional.
 
-* **Type:** This field allows you specify an event type that will be recorded in your XDM schema. See [`type`](/help/web-sdk/commands/sendevent/type.md) in the `sendEvent` command for more information.
-* **Data:** Data that does not match an XDM schema can be sent using this field. This field is useful if you are trying to update an Adobe Target profile or send Target Recommendations attributes. See [`data`](/help/web-sdk/commands/sendevent/data.md) in the `sendEvent` command for more information.<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
-* **Dataset ID:** If you need to send data to a dataset other than the one you specified in your datastream, you can specify that dataset ID here.
-* **Document will unload:** If you would like to make sure that the events reach the server even if the user navigates away from the page, check the **[!UICONTROL Document will unload]** checkbox. This allows events to reach the server but responses are ignored.
+### Instance settings {#instance}
+
+Use the **[!UICONTROL Instance]** selector to choose your Web SDK instance that you want to configure. If you have only one instance, it is preselected.
+
+![Platform Tags UI image showing the instance settings for the Send Event action type.](assets/instance-settings.png)
+
+* **[!UICONTROL Instance]**: Select the Web SDK instance that you want to configure. If you only have one instance, it will be preselected.
+* **[!UICONTROL Use guided events]**: Enable this option to automatically fill in or hide certain fields to enable a particular use case. Enabling this option triggers the display of the following settings.
+
+    >[!NOTE]
+    >
+    >The guided events shown below are related to [top and bottom of page events](../../../../web-sdk/use-cases/top-bottom-page-events.md).
+    * **[!UICONTROL Request personalization]**: This event is intended to be called at the top of page. When selected, this event sets the following fields:
+        * **[!UICONTROL Type]**: **[!UICONTROL Decisioning Proposition Fetch]**
+        * **[!UICONTROL Automatically send a display event]**: **[!UICONTROL false]**
+        * To automatically render personalization in this case, enable the **[!UICONTROL Render visual personalization decisions]** option.
+    * **[!UICONTROL Collect analytics]**: This event is intended to be called at the bottom of the page. When selected, this event sets the following fields:
+        * **[!UICONTROL Include rendered propositions]**: **[!UICONTROL true]**
+        * The **[!UICONTROL Personalization]** settings are hidden
+
+
+### Data {#data}
+
+![Platform Tags UI image showing the Data element settings for the Send Event action type.](assets/data.png)
+
+* **[!UICONTROL Type]**: This field allows you specify an event type that will be recorded in your XDM schema. See [`type`](/help/web-sdk/commands/sendevent/type.md) in the `sendEvent` command for more information.
+* **[!UICONTROL XDM]**:
+* **[!UICONTROL Data]**: Use this field to send data that does not match an XDM schema. This field is useful if you are trying to update an Adobe Target profile or send Target Recommendations attributes. See [`data`](/help/web-sdk/commands/sendevent/data.md) in the `sendEvent` command for more information.
+* **[!UICONTROL Include rendered propositions]**: Enable this option to include all the propositions that have been rendered, but a display event has not been sent. Use this in tandem with **[!UICONTROL Automatically send a display event]** disabled. This setting updates the `_experience.decisioning` XDM field with information about the rendered propositions.
+* **[!UICONTROL Document will unload]**: Enable this option to make sure that the events reach the server even if the user navigates away from the page. This allows events to reach the server, but responses are ignored.
+* **[!UICONTROL Merge ID]**: **This field is deprecated**. This will populate the `eventMergeId` XDM field.
+
+### Personalization {#personalization}
+
+![Platform Tags UI image showing the Personalization settings for the Send Event action type.](assets/personalization-settings.png)
+
+* **[!UICONTROL Scopes]**: Select the scopes (Adobe Target [!DNL mboxes]) you would like to explicitly request from personalization. You can enter the scopes manually, or by providing a data element.
+* **[!UICONTROL Surfaces]**: Set the web surfaces that are available on the page for personalization. See the [Adobe Journey Optimizer documentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) for more details.
 * **Render visual personalization decisions:** If you want to render personalized content on your page, check the **[!UICONTROL Render visual personalization decisions]** checkbox. You can also specify decision scopes and/or surfaces if necessary. See the [personalization documentation](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) for more information on rendering personalized content.
+* **[!UICONTROL Request default personalization]**: Use this section to control whether the page-wide scope (global mbox) and default surface (web surface based on current URL) is requested. By default, this is requested automatically during the first `sendEvent` call of the page load. You can choose from the following options:
+    * **[!UICONTROL Automatic]**: This is the default behavior. Only request default personalization when it has not yet been requested. This corresponds to `requestDefaultPersonalization` not set in the Web SDK command.
+    * **[!UICONTROL Enabled]**: Explicitly request the page scope and default surface. This updates the SPA view cache. This corresponds to `requestDefaultPersonalization` set to `true`.
+    * **[!UICONTROL Disabled]**: Explicitly suppress the request for the page scope and default surface. This corresponds to `requestDefaultPersonalization` set to `false`.
+* **[!UICONTROL Decision context]**: This is a key-value map that is used when evaluating Adobe Journey Optimizer rulesets for on-device decisioning. You can provide the decision context manually or through a data element.
 
-## Set consent {#set-consent}
+### Datastream configuration overrides {#datastream-overrides}
 
-After you have received consent from your user, this consent must be communicated to the Adobe Experience Platform Web SDK by using the "Set Consent" action type. Currently, two types of standards are supported: "Adobe" and "IAB TCF." See [Supporting Customer Consent Preferences](../../../../web-sdk/commands/setconsent.md). When using Adobe version 2.0, only a data element value is supported. You will need to create a data element that resolves to the consent object.
+Datastream overrides allow you to define additional configurations for your datastreams, which get passed to the Edge Network via the Web SDK.
 
-In this action, you are also provided with an optional field to include an Identity Map so that identities can be synced once consent is received. Syncing is useful when the consent is configured as "Pending" or "Out" because the consent call is likely the first call to fire.
-
-## Update variable {#update-variable}
-
-Use this action to modify an XDM object as a result of an event. This action is intended to build up an object that can later be referenced from a **[!UICONTROL Send event]** action, to record the event XDM object.
-
-In order to use this action type you must have defined a [variable](data-element-types.md#variable) data element. Once you choose a variable data element to modify, an editor appears, similar to the editor for the [XDM object](data-element-types.md#xdm-object) data element.
-
-![](assets/update-variable.png)
-
-The XDM schema that is used for the editor is the schema that is selected on the [!UICONTROL variable] data element. You can set one or more properties of the object by clicking on one of the properties in the tree on the left, and then modifying the value on the right.For example, in the screenshot below, the producedBy property is getting set to the data element "Produced by data element."
-
-![](assets/update-variable-set-property.png)
-
-There are some differences between the editor in the update variable action versus the editor in the XDM object data element. First, the update variable action has a root level item labeled "xdm." If you click on this item, you can specify a data element to use to set the entire object. Second, the update variable action has checkboxes to clear the data from the xdm object. Click on one of the properties on the left, and then check the checkbox on the right to clear the value. This will clear out the current value before setting any values on the variable.
+This helps you trigger different datastream behaviors than the default ones, without creating a new datastream or modifying your existing settings. See the documentation on [configuring datastream overrides](web-sdk-extension-configuration.md#datastream-overrides) for more details.
 
 ## Send media event {#send-media-event}
 
@@ -80,15 +131,25 @@ The **[!UICONTROL Send media event]** action type supports the following propert
 * **[!UICONTROL Custom Metadata]**: The custom metadata about the media event that is being tracked.
 * **[!UICONTROL Quality of Experience]**: The media quality of experience data that is being tracked.
 
-## Get Media Analytics Tracker {#get-media-analytics-tracker}
+## Set consent {#set-consent}
 
-This action is used to get the legacy Media Analytics API. When configuring the action and an object name is provided, then the legacy Media Analytics API will be exported to that window object. If none is provided it will be exported to `window.Media` as the current Media JS library does.
+After you have received consent from your user, this consent must be communicated to the Adobe Experience Platform Web SDK by using the "Set Consent" action type. Currently, two types of standards are supported: "Adobe" and "IAB TCF." See [Supporting Customer Consent Preferences](../../../../web-sdk/commands/setconsent.md). When using Adobe version 2.0, only a data element value is supported. You will need to create a data element that resolves to the consent object.
 
-![Platform UI image showing the Get Media Analytics Tracker action type.](assets/get-media-analytics-tracker.png)
+In this action, you are also provided with an optional field to include an Identity Map so that identities can be synced once consent is received. Syncing is useful when the consent is configured as "Pending" or "Out" because the consent call is likely the first call to fire.
 
-## Redirect with identity {#redirect-with-identity}
+## Update variable {#update-variable}
 
-Use this action type to share identities from the current page to other domains. This action is designed to be used with a **[!UICONTROL click]** event type and a value comparison condition. See [append identity to URL using the Web SDK extension](../../../../web-sdk/commands/appendidentitytourl.md#extension) for more information on how to use this action type.
+Use this action to modify an XDM object as a result of an event. This action is intended to build up an object that can later be referenced from a **[!UICONTROL Send event]** action, to record the event XDM object.
+
+In order to use this action type you must have defined a [variable](data-element-types.md#variable) data element. Once you choose a variable data element to modify, an editor appears, similar to the editor for the [XDM object](data-element-types.md#xdm-object) data element.
+
+![](assets/update-variable.png)
+
+The XDM schema that is used for the editor is the schema that is selected on the [!UICONTROL variable] data element. You can set one or more properties of the object by clicking on one of the properties in the tree on the left, and then modifying the value on the right.For example, in the screenshot below, the producedBy property is getting set to the data element "Produced by data element."
+
+![](assets/update-variable-set-property.png)
+
+There are some differences between the editor in the update variable action versus the editor in the XDM object data element. First, the update variable action has a root level item labeled "xdm." If you click on this item, you can specify a data element to use to set the entire object. Second, the update variable action has checkboxes to clear the data from the xdm object. Click on one of the properties on the left, and then check the checkbox on the right to clear the value. This will clear out the current value before setting any values on the variable.
 
 ## Next steps {#next-steps}
 
