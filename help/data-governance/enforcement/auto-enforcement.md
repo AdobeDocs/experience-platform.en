@@ -98,7 +98,7 @@ A data lineage graph is displayed below the violation summary, allowing you to v
 
 ![A policy violation dialog with the data lineage graph highlighted.](../images/enforcement/data-lineage.png)
 
-You can also use the **[!UICONTROL Filter]** icon (![A filter icon.](../images/enforcement/filter.png)) to filter the displayed entities by category. At least two categories must be selected in order for data to be displayed.
+You can also use the **[!UICONTROL Filter]** icon (![A filter icon.](/help/images/icons/filter.png)) to filter the displayed entities by category. At least two categories must be selected in order for data to be displayed.
 
 ![A policy violation dialog with the data lineage filter and drop-down menu highlighted.](../images/enforcement/lineage-filter.png)
 
