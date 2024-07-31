@@ -347,6 +347,10 @@ A successful response returns the labels that have been added to the dataset.
 
 ## Remove labels from a dataset {#remove-dataset-labels}
 
+<!-- Why is this method not listed on the Policy Service API developer docs? Is this still accurate? 
+https://developer.adobe.com/experience-platform-apis/references/policy-service/#operation/createUpdateCustomLabel
+-->
+
 You can remove the labels applied to a dataset by making a DELETE request to the [!DNL Dataset Service] API.
 
 **API format**
