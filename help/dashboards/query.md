@@ -27,7 +27,7 @@ You can use [!DNL Query Service] to query raw datasets for profile, audience, an
 >
 >System-generated datasets are hidden by default. By default, the [!UICONTROL Browse] tab only shows datasets that you have ingested data into.
 
-To view system-generated datasets, select the filter icon (![A filter icon.](./images/query/filter.png)) located to the left of the search bar.
+To view system-generated datasets, select the filter icon (![A filter icon.](/help/images/icons/filter.png)) located to the left of the search bar.
 
 ![The Datasets Browse tab with the filter icon highlighted.](./images/query/filter-datasets.png)
 

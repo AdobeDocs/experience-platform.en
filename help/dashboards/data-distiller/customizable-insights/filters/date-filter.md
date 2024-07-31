@@ -88,6 +88,6 @@ Once you have selected a date range from your dashboard, insights that have date
 
 ## Delete a date filter {#delete-date-filter}
 
-To remove your date filter select the delete filter icon (![The delete filter icon.](../../../images/customizable-insights/delete-filter-icon.png)). 
+To remove your date filter select the delete filter icon (![The delete filter icon.](/help/images/icons/filter-delete.png)). 
 
 ![A custom dashboard with the filter delete icon highlighted.](../../../images/customizable-insights/delete-date-filter.png)

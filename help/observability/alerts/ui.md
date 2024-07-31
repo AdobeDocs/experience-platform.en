@@ -65,7 +65,7 @@ You have added users successfully to your alert notification list. The submitted
 
 Alert notifications can be delivered direct to your email. 
 
-Select the bell icon (![bell icon](../images/alerts/ui/bell-icon.png)) located in the top ribbon on the right to display notifications and announcements. In the dropdown that appears, select the cog icon (![cog icon](../images/alerts/ui/cog-icon.png)) to access the Experience Cloud preferences page.
+Select the bell icon (![bell icon](/help/images/icons/bell.png)) located in the top ribbon on the right to display notifications and announcements. In the dropdown that appears, select the cog icon (![cog icon](/help/images/icons/settings.png)) to access the Experience Cloud preferences page.
 
 ![A list of alerts shown highlighting the bell icon and the cog icon.](../images/alerts/ui/edit-preferences.png)
 

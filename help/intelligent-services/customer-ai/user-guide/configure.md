@@ -66,7 +66,7 @@ After selecting the datasets you wish to use, select the **[!UICONTROL Add]** bu
 
 ![Select datasets](../images/user-guide/select-datasets.png)
 
-Selecting the info icon ![info icon](../images/user-guide/info-icon.png) next to the dataset opens the dataset preview popover.
+Selecting the info icon ![info icon](/help/images/icons/info.png) next to the dataset opens the dataset preview popover.
 
 ![Select and search for dataset](../images/user-guide/dataset-info.png)
 

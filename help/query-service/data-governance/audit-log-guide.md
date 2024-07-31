@@ -25,7 +25,7 @@ The audit log categories provided by [!DNL Query Service] are as follows.
 
 ## Perform a [!DNL Query Service] audit log {#perform-an-audit-log}
 
-To perform an audit for [!DNL Query Service] activities, select **[!UICONTROL Audits]** from the left navigation, followed by the funnel icon (![A filter icon.](../images/audit-log/filter.png)) to display a list of filter controls to help narrow results.
+To perform an audit for [!DNL Query Service] activities, select **[!UICONTROL Audits]** from the left navigation, followed by the funnel icon (![A filter icon.](/help/images/icons/filter.png)) to display a list of filter controls to help narrow results.
 
 ![The Platform UI audit log dashboard with "Audits" in the left navigation and filter controls highlighted.](../images/audit-log/filter-controls.png)
 

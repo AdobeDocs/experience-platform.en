@@ -63,7 +63,7 @@ Next to each audience is an ellipsis icon. Selecting this displays a list of ava
 | Manage access | Manages the access labels that belong to the audience. For more information on access labels, please read the documentation on [managing labels](../../access-control/abac/ui/labels.md). |
 | Delete | Deletes the selected audience. Audiences that are used in downstream destinations or are dependents in other audiences **cannot** be deleted. For more information on audience deletion, please read the [segmentation FAQ](../faq.md#lifecycle-states). |
 
-You can select the ![Customize table](../images/ui/overview/customize-table.png) icon to change which fields are displayed.
+You can select the ![Customize table](/help/images/icons/column-settings.png) icon to change which fields are displayed.
 
 ![The customize table button is highlighted. Selecting this button allows you to customize the fields that are displayed on the Audiences compositions page.](../images/ui/overview/compositions-select-customize-table.png)
 
@@ -83,6 +83,12 @@ A popover appears, listing all the fields that can be displayed within the table
 To see how the audience is composed, select an audience's name within the [!UICONTROL Audiences] tab.
 
 The Audience Composition page appears with the building blocks that compose your audience. For more details about how to use Audience Composition, please read the [Audience Composition UI guide](./audience-composition.md).
+
+## Federated Audience Composition {#fac}
+
+In addition to audience compositions and segment definitions, you can use Adobe Federated Audience Composition to build new audiences from enterprise datasets without copying underlying data and store those audiences in Adobe Experience Platform Audience Portal. You can also enrich existing audiences in Adobe Experience Platform by utilizing composed audience data that has been federated from the enterprise data warehouse. Please read the guide on [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+![A list of audiences created in Federated Audience Composition for your organization.](../images/ui/overview/federated-audience-composition.png)
 
 ## Streaming segmentation {#streaming-segmentation}
 

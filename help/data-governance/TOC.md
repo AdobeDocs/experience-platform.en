@@ -24,6 +24,10 @@ role: User,Developer,Admin
   * [Overview](enforcement/overview.md)
   * [Automatic enforcement](enforcement/auto-enforcement.md)
   * [API-based enforcement](enforcement/api-enforcement.md)
+* MTLS Service API {#mtls-api}
+  * [Overview](mtls-api/overview.md)
+  * [Getting started](mtls-api/getting-started.md)
+  * [Public Certificate endpoint](mtls-api/public-certificate-endpoint.md)
 * Policy Service API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)

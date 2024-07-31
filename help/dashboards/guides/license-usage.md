@@ -58,12 +58,41 @@ This dashboard displays all of your licensed Adobe Experience Platform products,
 | **[!UICONTROL License Amount]**  | The contracted value for the maximum amount of the Primary Metric as agreed in your product license agreement.  |
 | **[!UICONTROL Usage]**  | The amount of your primary metric used. This value provides the total usage of that metric across all sandboxes, either production or development. |
 | **[!UICONTROL Usage %]**  | The percentage of your primary metric used according to your license amount. |
+| **[!UICONTROL Prediction Usage]**  | (**Beta**) The predicted usage percentage of your primary metric according to your license amount. |
 
 >[!NOTE]
 >
 >Additions to the [!UICONTROL License Amount] as a result of add-ons are added on top of the [!UICONTROL License Amount] for the base products such as Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics. The usage of that licensed amount (after the add-ons) is tracked through the base products. For example, if you buy one pack of five sandboxes, the quantity of five is added to that of the base product's. In this case, the add-on shows a [!UICONTROL License Amount] of one, and the usage for that add-on is "blank" as the usage is tracked through the base product.
 
 The table indicates the primary metric for each product, as each product can track numerous metrics.
+
+### [!BADGE Beta]{type=Informative} Predicted usage {#predicted-usage}
+
+>[!AVAILABILITY]
+>
+>The functionality to predict future license usage is currently in beta. The documentation and the functionality are subject to change.
+
+Proactively manage and optimize your licensing resources based on insightful usage predictions. The [!UICONTROL Predicted Usage] column accurately predicts future license usage at the sandbox level, across all production and development sandboxes, for all of your purchased products. This alerting capability provides a forecast of license usage for six weeks in the future, based on your usage up to the 15th of this calendar month. Predictions are provided with a lower & an upper bound. 
+
+>[!IMPORTANT]
+>
+>Predictions are refreshed on a monthly basis. The date of refresh is included in an info icon (![This info icon.](../images/license-usage/info-icon.png)) above the column title.
+
+To see a summary of a products entitlement usage, select a product from the [!UICONTROL Overview] list. 
+
+![The [!UICONTROL License usage] [!UICONTROL Overview] with a product and the predicted usage column highlighted.](../images/license-usage/product-predicted-usage.png)
+
+The summary tab appears. You can use the granular predictions available on the [!UICONTROL Summary], and [!UICONTROL Details] tabs to ensure informed decision-making for efficient license use.
+
+![The summary view of a Platform Product with the predicted usage column highlighted.](../images/license-usage/summary-predicted-usage.png)
+
+The predicted usage feature supports for the following metrics:
+
+- [!UICONTROL Addressable audience]
+- [!UICONTROL Average profile richness]
+- [!UICONTROL Compute hours]
+- [!UICONTROL Customer Journey Audience number of rows]
+- [!UICONTROL Total storage]
 
 ## [!UICONTROL Summary] tab {#summary-tab}
 
@@ -95,7 +124,7 @@ To see **a particular usage metric from a specific sandbox**, navigate to the [!
 
 ![The Details tab of the License usage dashboard.](../images/license-usage/details-tab.png)
 
-From this view, you can select ![The inspect icon.](../images/license-usage/inspect-icon.png) next to a sandbox name to view the visualization for that metric. A dialog opens with a visualization for that metric. 
+From this view, you can select ![The inspect icon.](/help/images/icons/inspect.png) next to a sandbox name to view the visualization for that metric. A dialog opens with a visualization for that metric. 
 
 ### Visualizations {#visualizations}
 

@@ -523,14 +523,14 @@ Enrichment attributes correspond to custom uploaded audiences ingested in Experi
 
 Follow the steps below to select enrichment attributes for each external audience:
 
-1. In the **[!UICONTROL Enrichment attributes]** column, select the ![Edit button](../assets/ui/activate-batch-profile-destinations/edit-button.svg) (Edit) button.
-2. Select **[!UICONTROL Add enrichment attribute]**. A new empty schema field is shown.
+1. In the **[!UICONTROL Enrichment attributes]** column, select the ![Edit button](/help/images/icons/edit.png) (Edit) button.
+1. Select **[!UICONTROL Add enrichment attribute]**. A new empty schema field is shown.
   ![UI image showing the enrichment attributes modal screen.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
-3. Select the button to the right of the empty field to open the field selection screen.
-4. Select the attributes that you want to export for the audience.
+1. Select the button to the right of the empty field to open the field selection screen.
+1. Select the attributes that you want to export for the audience.
   ![UI image showing the enrichment attributes list.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png)
-5. After you have added all the attributes that you want to export, select **[!UICONTROL Save and close]**.
-6. Repeat these steps for each external audience.
+1. After you have added all the attributes that you want to export, select **[!UICONTROL Save and close]**.
+1. Repeat these steps for each external audience.
 
 If you want to activate external audiences to your destinations without exporting any attribute, enable the **[!UICONTROL Exclude enrichment attributes]** toggle. This option exports the profiles from the external audiences, but none of their corresponding attributes are sent to your destination.
 
