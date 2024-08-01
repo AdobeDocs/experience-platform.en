@@ -132,8 +132,23 @@ curl -X PUT \
 | --- | --- | --- | --- |
 | `id` | The id of the package to be updated. | String | Yes |
 | `action` | To add artifacts into the package, the action value should be **ADD**. This action is supported for only **PARTIAL** package types. | String | Yes |
-| `artifacts` | A list of artifacts to be added in the package. There would be no change to the package if the list is **null** or **empty**. Artifacts are de-duplicated before they are added to the package. The following artifact types are currently supported: <ul><li> JOURNEY </li><li> INLINE_MESSAGE </li><li> PRESET </li><li> ID_NAMESPACE </li><li>REGISTRY_DATATYPE </li><li> REGISTRY_CLASS </li><li> REGISTRY_MIXIN </li><li> REGISTRY_SCHEMA </li><li> REGISTRY_DESCRIPTOR </li><li> PROFILE_MERGE </li><li> CATALOG_DATASET </li><li> DULE_MARKETING_ACTION </li><li> DULE_CUSTOM_POLICY </li><li> DULE_CONSENT_POLICY </li><li> PROFILE_SEGMENT </li><li> FLOW_BASE </li><li> FLOW_SOURCE </li><li> FLOW_TARGET </li><li> MAPPING_SET </li><li> FLOW </li></ul> | Array | No |
+| `artifacts` | A list of artifacts to be added in the package. There would be no change to the package if the list is **null** or **empty**. Artifacts are de-duplicated before they are added to the package. See table below for a full list of supported artifacts. | Array | No |
 | `expiry` | The timestamp that defines the expiration date for package. The default value is 90 days from the time PUT API is called if expiry is not specified in the payload. The response expiry field will be epoch UTC time. | String (UTC Timestamp format) | No |
+
+The following artifact types are currently supported.
+
+| Artifact | Platform | Object | Partial Flow | Full Sandbox |
+| --- | --- | --- | --- |
+| JOURNEY | Adobe Journey Optimizer |  | Yes | No |
+| ID_NAMESPACE | Customer Data Platform | Identities | Yes | Yes |
+| REGISTRY_DATATYPE | Customer Data Platform | Identities | Yes | Yes |
+| REGISTRY_CLASS | Customer Data Platform | Audiences | Yes | Yes |
+| REGISTRY_MIXIN | Customer Data Platform | Schemas | Yes | Yes |
+| REGISTRY_SCHEMA | Customer Data Platform | Schemas | Yes | Yes |
+| CATALOG_DATASET | Customer Data Platform | Datasets | Yes | Yes |
+| DULE_CONSENT_POLICY | Customer Data Platform | Consent and Governance Policies | Yes | Yes |
+| PROFILE_SEGMENT | Customer Data Platform | Audiences | Yes | Yes |
+| FLOW | Customer Data Platform | Sources | Yes | Yes |
 
 **Response**
 
