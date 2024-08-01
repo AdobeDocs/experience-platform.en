@@ -138,7 +138,7 @@ curl -X PUT \
 The following artifact types are currently supported.
 
 | Artifact | Platform | Object | Partial Flow | Full Sandbox |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | JOURNEY | Adobe Journey Optimizer |  | Yes | No |
 | ID_NAMESPACE | Customer Data Platform | Identities | Yes | Yes |
 | REGISTRY_DATATYPE | Customer Data Platform | Identities | Yes | Yes |
