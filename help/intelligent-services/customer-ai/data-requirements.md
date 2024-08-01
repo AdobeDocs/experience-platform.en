@@ -153,7 +153,7 @@ By default, Customer AI looks for a user to have had activity in the last 45 day
 
 The following examples demonstrate the use of a simple formula which helps you determine the minimum amount of data required. If you have more data than the minimum requirement, your model is likely to provide more accurate results. If you have less than the minimum amount required, the model will fail, as there is not enough data for model training. 
 
-In Customer AI, we employ a survival model to estimate the probability of an event occurring at a given time and identify influencing factors, alongside supervised learning which defines positive and negative populations, and decision-based trees like `lightgbm` to generate a probability score.
+Customer AI employs a survival model to estimate the probability of an event occurring at a given time and identify influencing factors, alongside supervised learning which defines positive and negative populations, and decision-based trees like `lightgbm` to generate a probability score.
 
 **Formula**: 
 
