@@ -77,7 +77,7 @@ Scroll to the **Emails** section at the bottom of the page and select **[!UICONT
 
 ![The Emails section highlighted in the Profile page.](../images/alerts/ui/notifications.png)
 
-Any alerts that you are subscribed to will now be delivered to the email address that is connected to your Adobe ID account.
+Any alerts that you are subscribed to will now be delivered to the email address that is connected to your Adobe ID account. 
 
 ## View alert history
 

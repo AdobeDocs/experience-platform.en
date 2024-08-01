@@ -188,6 +188,7 @@ To correctly send your audience data from Adobe Experience Platform to the [!DNL
 #### Map the `customerNumberSAP` identity
 
 The `customerNumberSAP` identity is a mandatory mapping for this destination. Follow the steps below to map it:
+
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
 ![Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select identity namespace]** and select `customerNumberSAP`.
@@ -205,6 +206,7 @@ An example with the identity mapping is shown below:
 #### Mapping attributes
 
 To add any other attributes you want to update between your XDM profile schema and your [!DNL SAP Subscription Billing] account, repeat the steps below:
+
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You can now see a new mapping row on the screen.
 ![Platform UI screenshot with add new mapping button highlighted.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute.
@@ -296,6 +298,7 @@ As shown the value within the **[!UICONTROL Mapping ID]** field should exactly m
 Repeat this section for each activated Platform audience.
 
 Based on the image shown above where you have selected two audiences, the mapping would be as below:
+
 | [!DNL SAP Commerce] audience name | [!DNL SAP Subscription Billing] **[!UICONTROL Reference Type]** | [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** value |
 | --- | --- | --- |
 | sap_audience1 | `SAP_1` | `SAP_1` |
