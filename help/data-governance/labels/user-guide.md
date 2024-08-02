@@ -16,7 +16,7 @@ This user guide covers steps for working with data usage labels within the [!DNL
 
 ## Manage labels {#manage-labels}
 
-To apply labels to your data, you need the **[!UICONTROL Manage Usage Labels]** permission for use on the default production sandbox called "prod". To create a custom label, you must also have administrative rights on the product profile. Each organization only has one list of applicable labels, and currently, deleting labels is not supported.
+To apply labels to your data, you need the **[!UICONTROL Manage Usage Labels]** permission for use on the default production sandbox called "prod". To create a custom label, you must also have administrative rights on the product profile. Each organization only has one list of applicable labels. You **cannot** delete labels. Instead you can remove them from the datasets or fields to which they are applied.
 
 See the guide on how to [configure permissions](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) or the [access control overview](../../access-control/home.md) for more information on how to assign a permission. If you do not have access to the Admin Console for your organization, please contact your organization admin.
 
