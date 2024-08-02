@@ -134,11 +134,11 @@ These improvements allow for greater trust in your marketing strategy as it remo
 
 #### Pre-activation evaluation
 
-Once you reach at the **[!UICONTROL Review]** step when [activating a destination](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
+Once you reach the **[!UICONTROL Review]** step when [activating a destination](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
 
 ![View applied policies button in the activate destination workflow](../images/enforcement/view-applied-policies.png)
 
-A policy check dialog appears, showing you a preview of how your consent policies affect the consented audience of the activated audiences.
+A policy check dialog appears, showing you a preview of how your consent policies affect the consented audience of the audiences to be activated.
 
 ![Consent policy check dialog in the Platform UI](../images/enforcement/consent-policy-check.png)
 
