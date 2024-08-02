@@ -80,7 +80,7 @@ A list of individual runs and their particular metrics is displayed, along with 
 
 Each individual dataflow run shows the following details:
 
-- **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at. For streaming dataflow runs, Experience Platform captures metrics based on the start of the dataflow run, in the form of hourly metrics. This means that for streaming dataflow runs, if a dataflow run started for example at 10:30PM, the metric shows the start time as 10:00 PM in the UI.
+- **[!UICONTROL Dataflow run start]**: The time when the dataflow run started. For streaming dataflow runs, Experience Platform captures metrics based on the start of the dataflow run, in the form of hourly metrics. This means that for streaming dataflow runs, if a dataflow run started for example at 10:30PM, the metric shows the start time as 10:00 PM in the UI.
 - **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow run to process.
   - For **[!UICONTROL completed]** runs, the processing time metric always shows one hour.
   - For dataflow runs which are still in a **[!UICONTROL processing]** state, the window to capture all the metrics stays open for more than an hour, to process all metrics that correspond to the dataflow run. For example, a dataflow run that started at 9:30 AM might stay in a processing state for one hour and thirty minutes to capture and process all the metrics. Then, once the processing window closes and the status of the dataflow run updates to **completed**, the displayed processing time is changed to one hour.
@@ -104,13 +104,13 @@ The details page also displays a list of identities that failed and identities t
 
 #### (Beta) Audience-level dataflow run monitoring for streaming destinations {#audience-level-dataflow-runs-for-streaming-destinations}
 
-You can view information about the activated, excluded, or failed identities broken down on an audience level, for each audience that is part of the dataflow. This can help you understand  Audience-level monitoring for streaming destinations is currently available for the [[!DNL Google Customer Match + Display & Video 360] destination](/help/destinations/catalog/advertising/google-customer-match-dv360.md) only. 
+You can view information about the activated, excluded, or failed identities broken down on an audience level, for each audience that is part of the dataflow. Audience-level monitoring for streaming destinations is currently available for the [[!DNL Google Customer Match + Display & Video 360] destination](/help/destinations/catalog/advertising/google-customer-match-dv360.md) only. 
 
 ![Audience-level monitoring for streaming destinations.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
 >[!NOTE]
 >
->The **[!UICONTROL Profiles received]** number in the audiences tab may not always match with the number of profiles received for the dataflow run. This is because a given profile might be part of more than one audience being activated in the dataflow run. 
+>The **[!UICONTROL Profiles received]** number in the **[!UICONTROL Audiences]** tab may not always match with the number of profiles received for the dataflow run. This is because a given profile might be part of more than one audience being activated in the dataflow run. 
 
 ### Dataflow runs for batch destinations {#dataflow-runs-for-batch-destinations}
 
@@ -144,7 +144,7 @@ For batch destinations, the [!UICONTROL Dataflow runs] tab provides metric data 
 
 Each individual dataflow run shows the following details:
 
-- **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
+- **[!UICONTROL Dataflow run start]**: The time when the dataflow run started.
 - **[!UICONTROL Audience]**: The name of the audience associated with each dataflow run.
 - **[!UICONTROL Processing time]**: The amount of time it took for the dataflow run to be processed.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow. This value is updated every 60 minutes.
