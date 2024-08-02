@@ -116,7 +116,7 @@ Use the data lineage diagram to understand what other configuration changes need
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
-When activating an audience to a destination, you can see how your [consent policies](../policies/user-guide.md) affect your audience's reach from the **[[!UICONTROL Audience Portal]](../../segmentation/ui/audience-portal.md)**. 
+When activating an audience to a destination, you can see how your [consent policies](../policies/user-guide.md) affect your audience's reach during the [review stage of the [!UICONTROL Activate Destinations] workflow](#pre-activation-evaluation). 
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ These improvements allow for greater trust in your marketing strategy as it remo
 >
 >There are no UI changes as a result of this enhancement.
 
-#### Pre-activation evaluation
+#### Pre-activation evaluation {#pre-activation-evaluation}
 
 Once you reach the **[!UICONTROL Review]** step when [activating a destination](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
 
