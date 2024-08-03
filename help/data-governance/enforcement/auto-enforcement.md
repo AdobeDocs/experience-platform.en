@@ -7,13 +7,13 @@ exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 ---
 # Automatic policy enforcement
 
-Data usage labels and policies are available to all Adobe Experience Platform users. Define data usage policies and apply data usage labels to ensure that any sensitive, identifiable, or contractual data are handled accurately. These measures help enforce your organization's data governance rules on how data can be accessed, processed, stored, and shared. 
+Data usage labels and policies are available to all Adobe Experience Platform users. Define data usage policies and apply data usage labels to ensure that any sensitive, identifiable, or contractual data are handled accurately. These measures help enforce your organization's data governance rules on how data can be accessed, processed, stored, and shared.
 
-To help safeguard your organization from potential risks and liabilities, Platform automatically enforces usage policies should any violations occur when activating audiences to destinations. 
+To help safeguard your organization from potential risks and liabilities, Platform automatically enforces usage policies should any violations occur when activating audiences to destinations.
 
 >[!IMPORTANT]
 >
->Consent policies and automatic consent policy enforcement is only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
+>Consent policies and automatic consent policy enforcement are only available for organizations that have purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**.
 
 This document focuses on the enforcement of data governance and consent policies. For information on access control policies, refer to the documentation on [attribute-based access control](../../access-control/abac/overview.md).
 
@@ -64,8 +64,8 @@ Each stage in the above timeline represents an entity that may contribute to pol
 | --- | --- |
 | Dataset | Datasets contain data usage labels (applied at the schema field level or entire dataset level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to consent policies, any profiles that do not meet the consent attribute requirements of your policies will be excluded from audiences that are activated to a destination. |
 | Merge policy | Merge policies are the rules that Platform uses to determine how data will be prioritized when merging together fragments from multiple datasets. Policy violations will occur if your merge policies are configured so that datasets with restricted labels are activated to a destination. See the [merge policies overview](../../profile/merge-policies/overview.md) for more information. |
-| Audience | Segmentation rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the audience will inherit any applied usage labels for those fields. Policy violations will occur if you activate an audience whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. |
-| Destination | When setting up a destination, a marketing action (sometimes called a marketing use case) can be defined. This use case correlates to a marketing action as defined in a policy. In other words, the marketing action you define for a destination determines which data usage policies and consent policies are applicable to that destination.<br><br>Data usage policy violations occur if you activate an audience whose usage labels are restricted for the target destination's marketing action.<br><br>(Beta) When an audience is activated, any profiles that do not contain the required consent attributes for the marketing action (as defined by your consent policies) are excluded from the activated audience. |
+| Audience | Segmentation rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the audience will inherit any applied usage labels for those fields. Policy violations will occur if you attempt to activate an audience whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. |
+| Destination | When setting up a destination, a marketing action (sometimes called a marketing use case) can be defined. This use case correlates to a marketing action as defined in a policy. In other words, the marketing action you define for a destination determines which data usage policies and consent policies are applicable to that destination.<br><br>Data usage policy violations occur if you attempt to activate an audience whose usage labels are restricted for the target destination's marketing action.<br><br>(Beta) When an audience is activated, any profiles that do not contain the required consent attributes for the marketing action (as defined by your consent policies) are excluded from the activated audience. |
 
 >[!IMPORTANT]
 >
@@ -116,7 +116,7 @@ Use the data lineage diagram to understand what other configuration changes need
 
 ### Consent policy evaluation {#consent-policy-evaluation}
 
-When activating an audience to a destination, you can see how your [consent policies](../policies/user-guide.md#consent-policy) affect different percentages of profiles included in the activation.
+When activating an audience to a destination, you can see how your [consent policies](../policies/user-guide.md) affect your audience's reach during the [review stage of the [!UICONTROL Activate Destinations] workflow](#pre-activation-evaluation). 
 
 >[!NOTE]
 >
@@ -132,13 +132,13 @@ These improvements allow for greater trust in your marketing strategy as it remo
 >
 >There are no UI changes as a result of this enhancement.
 
-#### Pre-activation evaluation
+#### Pre-activation evaluation {#pre-activation-evaluation}
 
-Once you reach at the **[!UICONTROL Review]** step when [activating a destination](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
+Once you reach the **[!UICONTROL Review]** step when [activating a destination](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
 
 ![View applied policies button in the activate destination workflow](../images/enforcement/view-applied-policies.png)
 
-A policy check dialog appears, showing you a preview of how your consent policies affect the consented audience of the activated audiences.
+A policy check dialog appears, showing you a preview of how your consent policies affect the consented audience of the audiences to be activated.
 
 ![Consent policy check dialog in the Platform UI](../images/enforcement/consent-policy-check.png)
 
