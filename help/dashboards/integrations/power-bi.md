@@ -138,7 +138,7 @@ Once your dashboard has the appropriate metrics and attributes contained within 
 
 ## Delete the Power BI application integration
 
-To delete the dashboard, navigate to the dashboard inventory and select the delete icon (![](../images/power-bi/delete-icon.png)) next to the dashboard name. 
+To delete the dashboard, navigate to the dashboard inventory and select the delete icon (![delete icon](/help/images/icons/delete.png)) next to the dashboard name. 
 
 >[!NOTE]
 >

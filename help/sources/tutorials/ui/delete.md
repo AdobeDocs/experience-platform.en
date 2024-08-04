@@ -27,7 +27,7 @@ In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTRO
 
 The **[!UICONTROL Dataflows]** page appears. On this page is a list of viewable dataflows, including information about their target dataset, source, account name, and date of creation.
 
-Select the filter icon (![filter-icon](../../images/tutorials/delete/filter.png)) on the top left to launch the sort panel.
+Select the filter icon (![filter-icon](/help/images/icons/filter.png)) on the top left to launch the sort panel.
 
 ![dataflows](../../images/tutorials/delete/dataflows.png)
 

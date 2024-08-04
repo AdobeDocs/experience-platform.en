@@ -155,11 +155,11 @@ The [!UICONTROL Move] dataset to folder dialog appears. Select the folder you wa
 
 >[!TIP]
 >
->You can also create folders directly from the Move dataset dialog. To create a folder, select the create folder icon (![The create folder icon.](../images/datasets/user-guide/create-folder-icon.png)) in the top right of the dialog.
+>You can also create folders directly from the Move dataset dialog. To create a folder, select the create folder icon (![The create folder icon.](/help/images/icons/folder-add.png)) in the top right of the dialog.
 >
 >![The [!UICONTROL Move] dataset dialog with the create folder icon highlighted.](/help/catalog/images/datasets/user-guide/create-folder.png)
 
-Once the dataset is in a folder, you can choose to only display datasets that belong to a specific folder. To open your folder structure, select the show folders icon (![The show folders icon](../images/datasets/user-guide/show-folders-icon.png)). Next, select your chosen folder to see all associated datasets.
+Once the dataset is in a folder, you can choose to only display datasets that belong to a specific folder. To open your folder structure, select the show folders icon (![The show folders icon](/help/images/icons/rail-left.png)). Next, select your chosen folder to see all associated datasets.
 
 ![The [!UICONTROL Datasets] dashboards with the datasets folder structure displayed, the show folders icon, and a selected folder highlighted.](../images/datasets/user-guide/folder-structure.png)
 
@@ -191,7 +191,7 @@ You can delete profile data associated with a dataset from the [!DNL Profile] st
 
 ## Search and filter datasets {#search-and-filter}
 
-To search or filter the list of available datasets, select the filter icon (![The filter icon.](../images/datasets/user-guide/icon.png)) at the top left of the workspace. A set of filter options in the left rail appears. There are several methods to filter your available datasets. These include: [[!UICONTROL Show System Datasets]](#show-system-datasets), [[!UICONTROL Included in profile]](#filter-profile-enabled-datasets), [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Creation date]](#filter-by-creation-date), [[!UICONTROL Modified date], [!UICONTROL Created by]](#filter-by-creation-date), and [[!UICONTROL Schema]](#filter-by-schema).
+To search or filter the list of available datasets, select the filter icon (![The filter icon.](/help/images/icons/filter.png)) at the top left of the workspace. A set of filter options in the left rail appears. There are several methods to filter your available datasets. These include: [[!UICONTROL Show System Datasets]](#show-system-datasets), [[!UICONTROL Included in profile]](#filter-profile-enabled-datasets), [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Creation date]](#filter-by-creation-date), [[!UICONTROL Modified date], [!UICONTROL Created by]](#filter-by-creation-date), and [[!UICONTROL Schema]](#filter-by-schema).
 
 The list of applied filters is displayed above the filtered results.
 
