@@ -7,6 +7,12 @@ exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
 ---
 # Data access in [!DNL Jupyterlab] notebooks
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+
 Each supported kernel provides built-in functionalities that allow you to read Platform data from a dataset within a notebook. Currently JupyterLab in Adobe Experience Platform Data Science Workspace supports notebooks for [!DNL Python], R, PySpark, and Scala. However, support for paginating data is limited to [!DNL Python] and R notebooks. This guide focuses on how to use JupyterLab notebooks to access your data.
 
 ## Getting started

@@ -8,6 +8,12 @@ exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
 ---
 # Publish a model as a service in the Data Science Workspace UI {#publish-a-model-as-a-service}
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+
 >[!CONTEXTUALHELP]
 >id="platform_intelligentservices_publishmodel"
 >title="Publish a Model as a Service"

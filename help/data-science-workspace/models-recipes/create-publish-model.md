@@ -9,6 +9,12 @@ exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
 
 # Create and publish a machine learning model
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+
 The following guide describes the steps required to create and publish a machine learning model. Each section contains a description of what you will do and a link to the UI and API documentation to preform the described step.
 
 ## Getting started

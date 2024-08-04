@@ -8,6 +8,11 @@ exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 ---
 # Train and evaluate a model using the [!DNL Sensei Machine Learning] API
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
 
 This tutorial will show you how to create, train, and evaluate a Model using API calls. Refer to [this document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) for a detailed list of API documentation.
 

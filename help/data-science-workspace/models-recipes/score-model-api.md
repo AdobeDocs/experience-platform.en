@@ -8,6 +8,12 @@ exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
 ---
 # Score a model using the [!DNL Sensei Machine Learning API]
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+
 This tutorial will show you how to leverage the APIs to create an Experiment and an Experiment Run. For a list of all the endpoints in the Sensei Machine Learning API, please refer to [this document](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Create a scheduled Experiment for scoring

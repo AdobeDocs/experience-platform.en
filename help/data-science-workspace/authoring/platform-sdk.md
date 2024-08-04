@@ -7,6 +7,12 @@ exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 ---
 # Model authoring using the Adobe Experience Platform [!DNL Platform] SDK
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+
 This tutorial provides you with information on converting `data_access_sdk_python` to the new Python `platform_sdk` in both Python and R. This tutorial provides information on the following operations:
 
 - [Build authentication](#build-authentication)

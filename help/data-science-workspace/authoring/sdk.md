@@ -7,6 +7,12 @@ exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
 ---
 # Model Authoring SDK
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+
 The Model Authoring SDK enables you to develop custom machine learning Recipes and Feature Pipelines which can be used in [!DNL Adobe Experience Platform] Data Science Workspace, providing implementable templates in [!DNL PySpark] and [!DNL Spark (Scala)].
 
 This document provides information regarding the various classes found within the Model Authoring SDK.

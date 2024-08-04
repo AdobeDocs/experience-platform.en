@@ -7,6 +7,12 @@ exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 ---
 # Create a feature pipeline using the Model Authoring SDK
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+
 >[!IMPORTANT]
 >
 > Feature Pipelines are currently only available via API. 
