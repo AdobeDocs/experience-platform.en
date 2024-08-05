@@ -12,7 +12,7 @@ exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
 >
 >Data Science Workspace is no longer available for purchase.
 >
->This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
 This tutorial will show you how to leverage the APIs to create an Experiment and an Experiment Run. For a list of all the endpoints in the Sensei Machine Learning API, please refer to [this document](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 

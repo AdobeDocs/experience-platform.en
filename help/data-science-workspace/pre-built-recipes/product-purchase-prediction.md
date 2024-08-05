@@ -11,7 +11,7 @@ exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 >
 >Data Science Workspace is no longer available for purchase.
 >
->This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
 The Product Purchase Prediction recipe enables you to predict the likelihood of a certain type of customer purchase event - a product purchase, for instance.
 

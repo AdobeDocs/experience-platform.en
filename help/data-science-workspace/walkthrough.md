@@ -12,7 +12,7 @@ exl-id: d814846e-52a9-46c6-831a-3399241959f2
 >
 >Data Science Workspace is no longer available for purchase.
 >
->This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
 This document provides a description of the expected learning outcomes in the Adobe Experience Platform Data Science Workspace course. In order to view the course, you must login to Experience League using your Adobe ID.
 

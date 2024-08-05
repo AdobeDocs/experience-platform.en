@@ -12,7 +12,7 @@ exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
 >
 >Data Science Workspace is no longer available for purchase.
 >
->This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
 This tutorial walks you through the required steps to create a model using the JupyterLab notebooks recipe builder template.
 

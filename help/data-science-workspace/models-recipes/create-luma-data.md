@@ -12,7 +12,7 @@ exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
 >
 >Data Science Workspace is no longer available for purchase.
 >
->This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
 This tutorial provides you with the prerequisites and assets required for all other [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutorials. Once complete, the following schemas and datasets will be available to you and your organization.
 

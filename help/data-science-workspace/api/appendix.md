@@ -12,7 +12,7 @@ exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
 >
 >Data Science Workspace is no longer available for purchase.
 >
->This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
 The following sections provide reference information for various features of the [!DNL Sensei Machine Learning] API.
 

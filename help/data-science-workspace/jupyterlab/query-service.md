@@ -12,7 +12,7 @@ exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
 >
 >Data Science Workspace is no longer available for purchase.
 >
->This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
 [!DNL Adobe Experience Platform] allows you to use Structured Query Language (SQL) in [!DNL Data Science Workspace] by integrating [!DNL Query Service] into [!DNL JupyterLab] as a standard feature. 
 

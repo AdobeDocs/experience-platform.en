@@ -12,7 +12,7 @@ exl-id: d7b766f7-b97d-4007-bc53-b83742425047
 >
 >Data Science Workspace is no longer available for purchase.
 >
->This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
 [!DNL Git] is a distributed version-control system for tracking changes in source code during software development. Git is pre-installed within the [!DNL Data Science Workspace JupyterLab] environment.
 
