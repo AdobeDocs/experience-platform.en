@@ -169,6 +169,7 @@ To correctly map your XDM fields to the [!DNL Mailchimp Tags] destination fields
     ![Platform UI screenshot with Target field as Email from the identity namespace.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
     The mappings between your XDM profile schema and [!DNL Mailchimp Tags] will be as below:
+    
     | Source Field | Target Field | Mandatory |
     | --- | --- | --- |
     |`IdentityMap: Email`|`Identity: Email`| Yes |
