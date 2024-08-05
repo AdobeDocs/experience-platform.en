@@ -12,7 +12,7 @@ exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
 >
 >Data Science Workspace is no longer available for purchase.
 >
->This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
 Adobe Experience Platform [!DNL Data Science Workspace] provides the tools and resources to create, evaluate, and utilize machine learning models to generate data predictions and insights. When machine learning insights are ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records which can then be segmented using [!DNL Adobe Experience Platform Segmentation Service]. 
 

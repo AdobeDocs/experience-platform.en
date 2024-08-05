@@ -11,7 +11,7 @@ exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 >
 >Data Science Workspace is no longer available for purchase.
 >
->This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
 The Product Recommendations recipe enables you to provide personalized product recommendations that are tailored to your customer's needs and interests. With an accurate prediction model, a customer's purchase history can provide you with insight on what products they may be interested in.
 
