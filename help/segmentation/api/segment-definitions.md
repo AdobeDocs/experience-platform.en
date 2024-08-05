@@ -62,7 +62,6 @@ A successful response returns HTTP status 200 with a list of segment definitions
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 30,
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
@@ -102,7 +101,6 @@ A successful response returns HTTP status 200 with a list of segment definitions
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 30,
             "imsOrgId": "{ORG_ID}",
             "name": "test segment",
             "description": "",
@@ -190,8 +188,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
         "schema": {
             "name": "_xdm.context.profile"
         },
-        "payloadSchema": "string",
-        "ttlInDays": 60
+        "payloadSchema": "string"
     }'
 ```
 
@@ -222,7 +219,6 @@ A successful response returns HTTP status 200 with details of your newly created
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -297,7 +293,6 @@ A successful response returns HTTP status 200 with detailed information about th
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -388,7 +383,6 @@ A successful response returns HTTP status 207 with the requested segment definit
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 60,
             "profileInstanceId": "ups",
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
@@ -427,7 +421,6 @@ A successful response returns HTTP status 207 with the requested segment definit
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 60,
             "profileInstanceId": "ups",
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
@@ -550,7 +543,6 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
         "name": "_xdm.context.profile"
     },
     "payloadSchema": "string",
-    "ttlInDays": 60,
     "creationTime": 0,
     "updateTime": 0,
     "updateEpoch": 0
@@ -567,7 +559,6 @@ A successful response returns HTTP status 200 with details of your newly updated
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -636,8 +627,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
         "schema": {
             "name": "_xdm.context.profile"
         },
-        "payloadSchema": "string",
-        "ttlInDays": 60
+        "payloadSchema": "string"
     }'
 ```
 
@@ -647,7 +637,6 @@ A successful response returns HTTP status 200 with details of your newly convert
 
 ```json
 {
-    "ttlInDays": 60,
     "imsOrgId": "6A29340459CA8D350A49413A@AdobeOrg",
     "sandbox": {
         "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
