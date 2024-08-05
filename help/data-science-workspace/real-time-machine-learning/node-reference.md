@@ -11,7 +11,7 @@ exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
 >
 >Data Science Workspace is no longer available for purchase.
 >
->This documentation is provided only for existing customers who have access to Data Science Workspace through a previously purchased entitlement.
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
 
 >[!IMPORTANT]
 >
