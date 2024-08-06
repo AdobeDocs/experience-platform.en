@@ -21,38 +21,6 @@ The following list of answers to frequently asked questions is divided into the 
 - [PostgreSQL API errors](#postgresql-api-errors)
 - [REST API errors](#rest-api-errors)
 
-## Dataset Samples
-
-### Can I create samples on a system dataset?
-
-+++Answer
-No, users cannot create samples on system datasets as they do not have write permission.
-+++
-
-## Queries UI
-
-### The "Create query" is stuck "Initializing connection..." when trying to connect to Query Service. How do i fix the issue?
-
-+++Answer
-If the "Create query" is stuck on "Initializing connection...", this is liekly to be a connection or session issue. Refresh the browser if you are using the Platform UI and try again.
-+++
-
-## ITAS Queries
-
-### What are ITAS queries?
-
-+++Answer
-INSERT INTO queries are called ITAS queries. Note that CREATE TABLE queries are referred to as CTAS queries.
-+++
-
-## SQL Syntax
-
-### Is MERGE INTO supported by Data Distiller or Query Service?
-
-+++Answer
-The MERGE INTO SQL construct is not supported by Data Distiller or Query Service.
-+++
-
 ## General Query Service questions {#general}
 
 This section includes information on performance, limits, and processes.
@@ -633,6 +601,22 @@ Yes, you can use `CREATE VIEW` command without Data Distiller access. This comma
 Yes. Although, certain third-party clients, such as DbVisualizer, may require a separate identifier before and after an SQL block to indicate that a part of a script should be handled as a single statement. More details can be found in the [anonymous block documentation](./key-concepts/anonymous-block.md) or in [the official DbVisualizer documentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect). 
 +++
 
+## Queries UI
+
+### The "Create query" is stuck "Initializing connection..." when trying to connect to Query Service. How do i fix the issue?
+
++++Answer
+If the "Create query" is stuck on "Initializing connection...", this is liekly to be a connection or session issue. Refresh the browser if you are using the Platform UI and try again.
++++
+
+## Dataset Samples
+
+### Can I create samples on a system dataset?
+
++++Answer
+No, users cannot create samples on system datasets as they do not have write permission.
++++
+
 ## Exporting data {#exporting-data}
 
 This section provides information on exporting data and limits.
@@ -677,6 +661,22 @@ timestamp >= to_timestamp('2022-07-22')
 and timestamp < to_timestamp('2022-07-23');
 ```
 
++++
+
+## SQL Syntax
+
+### Is MERGE INTO supported by Data Distiller or Query Service?
+
++++Answer
+The MERGE INTO SQL construct is not supported by Data Distiller or Query Service.
++++
+
+## ITAS Queries
+
+### What are ITAS queries?
+
++++Answer
+INSERT INTO queries are called ITAS queries. Note that CREATE TABLE queries are referred to as CTAS queries.
 +++
 
 ## Third-party tools {#third-party-tools}
