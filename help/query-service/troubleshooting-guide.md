@@ -31,10 +31,10 @@ No, users cannot create samples on system datasets as they do not have write per
 
 ## Queries UI
 
-### The "Create query" is stuck "Initializing connection..." when trying to connect to Query Service. What's the issue?
+### The "Create query" is stuck "Initializing connection..." when trying to connect to Query Service. How do i fix the issue?
 
 +++Answer
-If the "Create query" is stuck on "Initializing connection...", this could be a connection or session issue or a problem with cached data or scripts. Refresh the browser if you are using the Platform UI.
+If the "Create query" is stuck on "Initializing connection...", this is liekly to be a connection or session issue. Refresh the browser if you are using the Platform UI and try again.
 +++
 
 ## ITAS Queries
@@ -52,36 +52,6 @@ INSERT INTO queries are called ITAS queries. Note that CREATE TABLE queries are 
 +++Answer
 The MERGE INTO SQL construct is not supported by Data Distiller or Query Service.
 +++
-
-## Dataset Samples
-
-A: User cannot create samples on system dataset as user does not have write permission.
-
-## Queries UI
-
-### The "Create query" is stuck in Initializing connection... when trying to connect in query service, whats the issue?
-
-+++Answer
-The main information to address the question i.e., how to deal with Query Service Initialization Delay? Response should say: try refreshing the browser if you are on AEP UI.
-+++
-
-
-## ITAS Queries
-
-INSERT INTO are called as ITAS queries. 
-Issue: There is no mention of INSERT INTO queries as ITAS queries. But, CREATE TABLE queries are called as CTAS queries.
-
-
-
-## SQL Syntax
-
-### Is MERGE INTO supported by Data Distiller or Query Service or Queries?
-
-+++Answer
-MERGE INTO sql construct is not exposed to customers.
-+++
-
-<!--  -->
 
 ## General Query Service questions {#general}
 
