@@ -57,9 +57,9 @@ The following table outlines some common terminology used in this document:
 | Term | Definition |
 | --- | --- |
 | [Experience Data Model (XDM)](../../xdm/home.md) | XDM is the foundational framework that allows Adobe Experience Cloud, powered by Adobe Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. Platform uses XDM System to organize data in a certain way that makes it easier to use for Platform services. |
-| [XDM Schema](../../xdm/schema/composition.md) | Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data. Before data can be ingested into Platform, a schema must be composed to describe the data’s structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base XDM class and zero or more schema field groups. |
-| [XDM class](../../xdm/schema/field-constraints.md) | All XDM schemas describe data that can be categorized as `Experience Event`. The data behavior of a schema is defined by the schema’s class, which is assigned to a schema when it is first created. XDM classes describe the smallest number of properties a schema must contain in order to represent a particular data behavior. |
-| [Field groups](../../xdm/schema/composition.md) | A component that defines one or more fields in a schema. Field groups enforce how their fields appear in the schema’s hierarchy, and therefore exhibit the same structure in every schema that they are included in. Field groups are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. |
+| [XDM Schema](../../xdm/schema/composition.md) | Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data. Before data can be ingested into Platform, a schema must be composed to describe the data's structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base XDM class and zero or more schema field groups. |
+| [XDM class](../../xdm/schema/field-constraints.md) | All XDM schemas describe data that can be categorized as `Experience Event`. The data behavior of a schema is defined by the schema's class, which is assigned to a schema when it is first created. XDM classes describe the smallest number of properties a schema must contain in order to represent a particular data behavior. |
+| [Field groups](../../xdm/schema/composition.md) | A component that defines one or more fields in a schema. Field groups enforce how their fields appear in the schema's hierarchy, and therefore exhibit the same structure in every schema that they are included in. Field groups are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. |
 | [Data type](../../xdm/schema/composition.md) | A component that can also provide one or more fields for a schema. However, unlike field groups, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes. The data types outlined in this document are supported by both the CEE and Adobe Analytics schemas. |
 | [Real-time Customer Profile](../../profile/home.md) | Real-time Customer Profile provides a centralized consumer profile for targeted and personalized experience management. Each profile contains data that is aggregated across all systems, as well as actionable timestamped accounts of events involving the individual that have taken place in any of the systems you use with Experience Platform. |
 
@@ -77,7 +77,7 @@ You can use Experience Event or Consumer Experience Event XDM schemas for input 
 
 ### Standard field groups used by Customer AI {#standard-events}
 
-Experience Events are used for determining various customer behaviors. Depending on how your data is structured, the event types listed below may not encompass all of your customer’s behaviors. It is up to you to determine what fields have the necessary data that is needed to identify web or other channel-specific user activity clearly and unambiguously. Depending on your prediction goal, the required fields that are needed can change. 
+Experience Events are used for determining various customer behaviors. Depending on how your data is structured, the event types listed below may not encompass all of your customer's behaviors. It is up to you to determine what fields have the necessary data that is needed to identify web or other channel-specific user activity clearly and unambiguously. Depending on your prediction goal, the required fields that are needed can change. 
 
 >[!NOTE] 
 >
@@ -153,6 +153,8 @@ By default, Customer AI looks for a user to have had activity in the last 45 day
 
 The following examples demonstrate the use of a simple formula which helps you determine the minimum amount of data required. If you have more data than the minimum requirement, your model is likely to provide more accurate results. If you have less than the minimum amount required, the model will fail, as there is not enough data for model training. 
 
+Customer AI employs a survival model to estimate the probability of an event occurring at a given time and identify influencing factors, alongside supervised learning which defines positive and negative populations, and decision-based trees like `lightgbm` to generate a probability score.
+
 **Formula**: 
 
 To decide the minimum required duration of data existing within the system: 
@@ -179,7 +181,7 @@ To decide the minimum required duration of data existing within the system:
 
     - Data required = 60 days + 30 days = 90 days 
 
-- You want to predict whether the user is likely to purchase a watch in the next 7 days **without** providing an explicit eligible population. In this case, the eligible population defaults to “those who have had activity in the last 45 days” and the outcome window is 7 days.  
+- You want to predict whether the user is likely to purchase a watch in the next 7 days **without** providing an explicit eligible population. In this case, the eligible population defaults to "those who have had activity in the last 45 days" and the outcome window is 7 days.  
 
     - Eligibility lookback window = 45 days 
 
