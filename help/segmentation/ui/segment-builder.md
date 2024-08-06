@@ -23,6 +23,12 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 
 The basic building blocks of segment definitions are attributes and events. In addition, the attributes and events contained in existing audiences can be used as components for new definitions. 
 
+>[!NOTE]
+>
+>If you select the information bubble of an attribute, you can view the distribution of values, also known as the summary data, of the field. These are **only** available in the attributes tab, and are not available for use in the events or audiences tab.
+>
+>Additionally, an attribute will not have summary data if it is multi-entity data linked to the profile through a relationship. An example of this would be `-product-color`.
+
 You can see these building blocks in the **[!UICONTROL Fields]** section on the left side of the [!DNL Segment Builder] workspace. **[!UICONTROL Fields]** contains a tab for each of the main building blocks: "[!UICONTROL Attributes]", "[!UICONTROL Events]", and "[!UICONTROL Audiences]".
 
 ![The fields section of the Segment Builder is highlighted.](../images/ui/segment-builder/segment-fields.png)
