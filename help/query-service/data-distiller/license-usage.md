@@ -19,7 +19,7 @@ The [!UICONTROL Compute hours] metric is only applicable to customers with the D
 
 >[!NOTE]
 >
->**The [!UICONTROL Compute hours] data is available with limitations**: The data begins from Oct 1 2023 with no trends.
+>**The [!UICONTROL Compute hours] data is available with limitations**: Displayed data for compute hours usage begins from September 15, 2023.
 
 ![The license usage dashboard with the compute hours metric highlighted.](../images/data-distiller/compute-hours.png)
 
