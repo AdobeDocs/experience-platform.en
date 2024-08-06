@@ -9,6 +9,12 @@ exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
 
 # Create the retail sales schema and dataset
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 This tutorial provides you with the prerequisites and assets required for all other [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your organization on [!DNL Experience Platform].
 
 ## Getting started
