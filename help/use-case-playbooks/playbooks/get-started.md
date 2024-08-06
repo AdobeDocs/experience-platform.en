@@ -14,7 +14,7 @@ Learn how to set up your account for Use Case Playbooks, designed for Real-Time 
 * Configure user permissions
 * Configure Journey Optimizer channel surfaces for e-mail, push, and SMS notifications (if you plan on using Journey Optimizer playbooks)
 
- To access a rich gallery of use case playbooks in the Experience Platform UI, select **[!UICONTROL Playbooks]** from the left navigation. Read the documentation on how to [navigate Use Case Playbooks](../playbooks/navigate.md)and get started with an [inspirational sandbox](../playbooks/navigate.md).
+ To access a rich gallery of use case playbooks in the Experience Platform UI, select **[!UICONTROL Playbooks]** from the left navigation. Read the documentation on how to [navigate Use Case Playbooks](../playbooks/navigate.md) and get started with an [inspirational sandbox](../playbooks/navigate.md).
 
 ## Configure Use Case Playbooks - Video walkthrough {#video}
 
