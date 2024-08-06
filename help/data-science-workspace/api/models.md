@@ -8,6 +8,12 @@ exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
 ---
 # Models endpoint
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 A model is an instance of a machine learning recipe that is trained using historical data and configurations to solve for a business use case.
 
 ## Retrieve a list of Models
