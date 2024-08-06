@@ -203,6 +203,8 @@ Note the difference in file format between the two file types, when compressed:
 * When exporting compressed JSON files, the exported file format is `json.gz`
 * When exporting compressed parquet files, the exported file format is `gz.parquet`
 
+Exports to JSON files are supported in a compressed mode only. Exports to Parquet files are supported in a compressed and uncompressed mode.
+
 ## Remove datasets from destinations {#remove-dataset}
 
 To remove datasets from an existing dataflow, follow the steps below:
@@ -245,9 +247,63 @@ You can view and track your profile exports against your contractual limits in t
 
 Keep in mind the following limitations for the general availability release of dataset exports:
 
-* Currently, you can only export incremental files and an end date cannot be selected for your dataset exports. 
-* Exported filenames are currently not customizable.
 * Datasets created via API are currently not available for export. 
 * The UI does not currently block you from deleting a dataset that is being exported to a destination. Do not delete any datasets that are being exported to destinations. [Remove the dataset](#remove-dataset) from a destination dataflow before deleting it.
 * Monitoring metrics for dataset exports are currently mixed with numbers for profile exports so they do not reflect the true export numbers.
 * Data with a timestamp older than 365 days is excluded from dataset exports. For more information, view the [guardrails for scheduled dataset exports](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
+
+## Frequently Asked Questions
+
+**Can we generate a file without a folder if we just save at `/` as the folder path? Also, if we don't require a folder path, how will files with duplicate names be generated in a folder or location?**
+
++++
+Starting with the August 2024 release, it is possible to customize the folder name and even use `/` for exporting files for all datasets in the same folder. Adobe does not recommend this for destinations exporting multiple datasets, as system-generated filenames belonging to different datasets will be mixed in the same folder.
++++
+
+**Can you route the manifest file to one folder and data files into another folder?**
+
++++
+No, there is no capability to copy the manifest file to a different location.
++++
+
+**Can we control the sequencing/timing of file delivery?**
+
++++
+There are options for scheduling the export. There are no options for delaying or sequencing the copy of the files. They are copied as soon as they are generated.
++++
+
+**What formats are available for the manifest file?**
+
++++
+The manifest file is in .json format.
++++
+
+**Is there API availability for the manifest file?**
+
++++
+No API is available for the manifest file, but it includes a list of files comprising the export.
++++
+
+**Can we add additional details to the manifest file (i.e., record count)? If so, how?**
+
++++
+There is no possibility to add additional info to the manifest file. The record count is available via the `flowRun` entity (queryable via API). Read more in destinations monitoring.
++++
+
+**How are data files split? How many records per file?**
+
++++
+Data files are split per the default partitioning in the AEP data lake. Larger datasets will have a higher number of partitions. The default partitioning is not configurable by the user as it is optimized for reading.
++++
+
+**Can we set a threshold (number of records per file)?**
+
++++
+No, it is not possible.
++++
+
+**How do we resend a data set in the event that the initial send is bad?*
+
++++
+Retries are in place automatically for most types of system errors.
++++

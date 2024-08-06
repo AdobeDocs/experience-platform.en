@@ -42,8 +42,8 @@ Currently, you can export datasets to the cloud storage destinations highlighted
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): All data that is successfully ingested into Adobe Experience Platform is persisted within the [!DNL Data Lake] as datasets. A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Datasets also contain metadata that describes various aspects of the data they store. 
-*   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): All data that is successfully ingested into Adobe Experience Platform is persisted within the [!DNL Data Lake] as datasets. A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Datasets also contain metadata that describes various aspects of the data they store. 
+  * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you must know in order to export datasets to cloud storage destinations in Platform.
 
@@ -1949,12 +1949,30 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
         "interval": 3, // also supports 6, 9, 12 hour increments
-        "timeUnit": "hour", // also supports "day" for daily increments. Use "interval": 1 when you select "timeUnit": "day"
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1 when you select "timeUnit": "day"
         "startTime": 1675901210 // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210,
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
+
     }
 }'
 ```
+
+The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+
+| Parameter | Description |
+|---------|----------|
+| `exportMode` | Mandatory. Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. |
+| `timeUnit` | Select `day` or `hour` depending on the frequency with which you want to export dataset files. |
+| `interval` | Select `1` when the `timeUnit` is day and `3`,`6`,`9`,`12` when the time unit is `hour`. |
+| `startTime` | The date and time in UNIX seconds when dataset exports should start. |
+| `endTime` | The date and time in UNIX seconds when dataset exports should end. |
+| `foldernameTemplate` | Specify the expected folder name structure in your storage location where the exported files will be deposited. <ul><li><code>DATASET_ID</code> = <span>A unique identifier for the dataset.</span></li><li><code>DATASET_NAME</code> = <span>The name of the dataset.</span></li><li><code>DESTINATION</code> = <span>The target location for data export.</span></li><li><code>DESTINATION_NAME</code> = <span>The name of the destination.</span></li><li><code>DATETIME</code> = <span>The date and time formatted as yyyyMMdd_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>The scheduled time for data export formatted as YYYYMMDDHHMM.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>The name of the specific instance of the destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>A unique identifier for the destination instance.</span></li><li><code>SANDBOX_NAME</code> = <span>The name of the sandbox environment.</span></li><li><code>ORGANIZATION_NAME</code> = <span>The name of the organization.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2339,6 +2357,7 @@ Note the difference in file format between the two file types, when compressed:
 
 * When exporting compressed JSON files, the exported file format is `json.gz`
 * When exporting compressed parquet files, the exported file format is `gz.parquet`
+* JSON files can be exported in a compressed mode only.
 
 ## API error handling {#api-error-handling}
 
