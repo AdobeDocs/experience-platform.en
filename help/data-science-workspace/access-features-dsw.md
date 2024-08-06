@@ -7,6 +7,12 @@ exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
 ---
 # Data Science Workspace access and features
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 The following document outlines Data Science Workspace permissions and access to features. 
 
 ![DSW tabs](./images/access/platform-tabs.png)
