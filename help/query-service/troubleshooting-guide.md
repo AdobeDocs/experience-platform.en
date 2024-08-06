@@ -603,10 +603,10 @@ Yes. Although, certain third-party clients, such as DbVisualizer, may require a 
 
 ## Queries UI
 
-### The "Create query" is stuck "Initializing connection..." when trying to connect to Query Service. How do i fix the issue?
+### The "Create query" is stuck "Initializing connection..." when trying to connect to Query Service. How do I fix the issue?
 
 +++Answer
-If the "Create query" is stuck on "Initializing connection...", this is liekly to be a connection or session issue. Refresh the browser if you are using the Platform UI and try again.
+If the "Create query" is stuck on "Initializing connection...", this is likely to be a connection or session issue. Refresh the browser if you are using the Platform UI and try again.
 +++
 
 ## Dataset Samples
@@ -614,7 +614,7 @@ If the "Create query" is stuck on "Initializing connection...", this is liekly t
 ### Can I create samples on a system dataset?
 
 +++Answer
-No, users cannot create samples on system datasets as they do not have write permission.
+No. Write permissions are restricted on system datasets so you cannot create samples.
 +++
 
 ## Exporting data {#exporting-data}
