@@ -38,7 +38,7 @@ The aggregation policy is configurable, and destination developers can decide ho
 >
 > Enterprise destinations are available only to [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) customers.
 
-The [enterprise destinations](/help/destinations/destination-types.md#streaming-profile-export) in Experience Platform are Amazon Kinesis, Azure Event Hubs, and HTTP API.
+The [enterprise destinations](/help/destinations/destination-types.md#advanced-enterprise-destinations) in Experience Platform are Amazon Kinesis, Azure Event Hubs, and HTTP API.
 
 Experience Platform optimizes the profile export behavior to your enterprise destination, to only export data to your API endpoint when relevant updates to a profile have occurred following audience qualification or other significant events. Profiles are exported to your destination in the following situations:
 

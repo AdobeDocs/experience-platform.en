@@ -17,7 +17,7 @@ exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
 
 ## Overview {#overview}
 
-This article explains the workflow required to activate audience data in Adobe Experience Platform to streaming profile-based destinations (also referred to as [enterprise destinations](/help/destinations/destination-types.md#streaming-profile-export)).
+This article explains the workflow required to activate audience data in Adobe Experience Platform to streaming profile-based destinations (also referred to as [enterprise destinations](/help/destinations/destination-types.md#advanced-enterprise-destinations)).
 
 This article applies to the following three destinations:
 
