@@ -6,9 +6,13 @@ exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
 ---
 # Send partial row updates to [!DNL Real-Time Customer Profile] using [!DNL Data Prep]
 
->[!WARNING]
+>[!IMPORTANT]
 >
->Ingestion on Experience Data Model (XDM) Entity Update messages (with JSON PATCH operations) for Profile updates via the DCS inlet has been deprecated. As an alternative, you can [ingest raw data into the DCS inlet](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) and specify the necessary data mappings to transform your data into XDM-compliant messages for Profile updates.
+>* Ingestion on Experience Data Model (XDM) Entity Update messages (with JSON PATCH operations) for Profile updates via the DCS inlet has been deprecated. Follow the steps outlined in this guide as an alternative.
+>
+>* You can also use the HTTP API source to [ingest raw data into the DCS inlet](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) and specify the necessary data mappings to transform your data into XDM-compliant messages for Profile updates. 
+>
+>* When using arrays in streaming upserts, you must explicitly use `upsert_array_append` or `upsert_array_replace` to define clear intent of the operation. You may receive errors if these functions are missing.
 
 Use streaming upserts in [!DNL Data Prep] to send partial row updates to [!DNL Real-Time Customer Profile] data while also creating and establishing new identity links with a single API request.
 
