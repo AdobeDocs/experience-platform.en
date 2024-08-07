@@ -8,7 +8,7 @@ exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
 
 >[!IMPORTANT]
 >
->* Ingestion on Experience Data Model (XDM) Entity Update messages (with JSON PATCH operations) for Profile updates via the DCS inlet has been deprecated. Follow the steps outlined in this guide as an alternative.
+>* Ingestion of Experience Data Model (XDM) Entity Update messages (with JSON PATCH operations) for Profile updates via the DCS inlet has been deprecated. Follow the steps outlined in this guide as an alternative.
 >
 >* You can also use the HTTP API source to [ingest raw data into the DCS inlet](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) and specify the necessary data mappings to transform your data into XDM-compliant messages for Profile updates. 
 >
