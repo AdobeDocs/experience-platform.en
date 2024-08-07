@@ -87,10 +87,6 @@ Use the **[!UICONTROL Instance]** selector to choose your Web SDK instance that 
 
 * **[!UICONTROL Instance]**: Select the Web SDK instance that you want to configure. If you only have one instance, it will be preselected.
 * **[!UICONTROL Use guided events]**: Enable this option to automatically fill in or hide certain fields to enable a particular use case. Enabling this option triggers the display of the following settings.
-
-    >[!NOTE]
-    >
-    >The guided events shown below are related to [top and bottom of page events](../../../../web-sdk/use-cases/top-bottom-page-events.md).
     * **[!UICONTROL Request personalization]**: This event is intended to be called at the top of page. When selected, this event sets the following fields:
         * **[!UICONTROL Type]**: **[!UICONTROL Decisioning Proposition Fetch]**
         * **[!UICONTROL Automatically send a display event]**: **[!UICONTROL false]**
@@ -99,6 +95,10 @@ Use the **[!UICONTROL Instance]** selector to choose your Web SDK instance that 
         * **[!UICONTROL Include rendered propositions]**: **[!UICONTROL true]**
         * The **[!UICONTROL Personalization]** settings are hidden
 
+    >[!NOTE]
+    >
+    >The guided events are related to [top and bottom of page events](../../../../web-sdk/use-cases/top-bottom-page-events.md).
+    
 
 ### Data {#data}
 
