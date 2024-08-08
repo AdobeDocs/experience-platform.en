@@ -91,7 +91,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 >[!NOTE]
 >
->After saving the destination configuration, you will not be able to change the [!DNL Amazon Ads] Advertiser ID, even if you reauthenticate through your Amazon account. To use a different [!DNL Amazon Ads] Advertiser ID, you must create a new destination connection.
+>After saving the destination configuration, you will not be able to change the [!DNL Amazon Ads] Advertiser ID, even if you reauthenticate through your Amazon account. To use a different [!DNL Amazon Ads] Advertiser ID, you must create a new destination connection. Advertisers who are already set up on an integration with ADSP to must create a new destination flow if they want their audiences to be delivered to AMC or to a different ADSP account.
 
 *  **[!UICONTROL Advertiser Region]**: Select the appropriate region in which your Advertiser is hosted. For more information on the marketplaces supported by each region, visit the [Amazon Ads documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
@@ -123,6 +123,7 @@ The [!DNL Amazon Ads] connection supports hashed email address and hashed phone 
 * To map hashed email addresses, select the `Email_LC_SHA256` identity namespace as a source field.
 * To map hashed phone numbers, select the `Phone_SHA256` identity namespace as a source field.
 * To map unhashed email addresses or phone numbers, select the corresponding identity namespaces as source fields, and check the `Apply Transformation` option to have Platform hash the identities on activation.
+* We require mapping of to a field containing countryCode value in the 2-character ISO format in order to facilitate the Identity resolution process.  (e.g., US, GB, MX, CA, etc.) Connections without countryCode mappings will result in negative impact to identity match rates
 
 You only select a given target field one time in a destination configuration of the [!DNL Amazon Ads] connector.  For example, if you submit business email, you cannot also map personal email in the same destination configuration.
 
@@ -142,7 +143,7 @@ Navigate to your **[!UICONTROL Advertiser ID]** > **[!UICONTROL Audiences]** > *
 
 In the left-hand schema browser, find your audience under **[!UICONTROL Advertiser Uploaded]** > **[!UICONTROL aep_audiences]**. You may then query your audience in the AMC SQL editor with the following clause:
 
-`select count(user_id) from aep_audiences where audienceId = '1234567'`
+`select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
 ![Amazon Marketing Cloud audience creation validation](../../assets/catalog/advertising/amazon_ads_image_5.png)
 
@@ -165,6 +166,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
+|May 2024|Functionality and documentation update| Added the mapping option to export countryCode parameter into Amazon Ads.|
 |March 2024|Functionality and documentation update| Added the option to export audiences to be used in [!DNL Amazon Marketing Cloud] (AMC).|
 |May 2023|Functionality and documentation update| <ul><li>Added support for Advertiser Region selection in the [destination connection workflow](#destination-details).</li><li>Updated documentation to reflect the addition of Advertiser Region selection. For more information on selecting the correct Advertiser Region, see the [Amazon documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 |March 2023|Initial release|Initial destination release and documentation published.|
