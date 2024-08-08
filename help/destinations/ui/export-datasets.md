@@ -133,7 +133,7 @@ Use the check boxes to the left of the dataset names to select the datasets that
 >title="File export options for datasets"
 >abstract="Select **Export incremental files** to export only the data which was added to the dataset since the last export. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. Future incremental files include only the data which was added to the dataset since the first export."
 
-In the **[!UICONTROL Scheduling]** step, you can set a start date and an export cadence for your dataset exports.
+In the **[!UICONTROL Scheduling]** step, you can set a start date and an end date, as well as an export cadence for your dataset exports. 
 
 The **[!UICONTROL Export incremental files]** option is selected by default. This triggers an export of one or multiple files representing a full snapshot of the dataset. Subsequent files are incremental additions to the dataset since the previous export. You can also select **[!UICONTROL Export full files]**. In this case, select the frequency **[!UICONTROL Once]** for a one-time full export of the dataset.
 
@@ -150,7 +150,7 @@ The **[!UICONTROL Export incremental files]** option is selected by default. Thi
 
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
 
-3. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place. Note that you currently cannot set an end date for the exports. For more information, view the [known limitations](#known-limitations) section. 
+3. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place.
 
 4. Select **[!UICONTROL Next]** to save the schedule and proceed to the **[!UICONTROL Review]** step.
 
@@ -241,7 +241,7 @@ Note that the data export entitlements for different applications are not additi
 
 On the other hand, if you purchased add-ons such as Data Distiller, the data export limit that you are entitled to represents the sum of the product tier and the add-on. 
 
-You can view and track your profile exports against your contractual limits in the licensing dashboard. 
+You can view and track your profile exports against your contractual limits in the [license usage dashboard](/help/landing/license-usage-and-guardrails/license-usage-dashboard.md). 
 
 ## Known limitations {#known-limitations}
 
@@ -252,7 +252,7 @@ Keep in mind the following limitations for the general availability release of d
 * Monitoring metrics for dataset exports are currently mixed with numbers for profile exports so they do not reflect the true export numbers.
 * Data with a timestamp older than 365 days is excluded from dataset exports. For more information, view the [guardrails for scheduled dataset exports](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
 
-## Frequently Asked Questions
+## Frequently Asked Questions {#faq}
 
 **Can we generate a file without a folder if we just save at `/` as the folder path? Also, if we don't require a folder path, how will files with duplicate names be generated in a folder or location?**
 

@@ -2370,3 +2370,7 @@ By following this tutorial, you have successfully connected Platform to one of y
 * [Destinations overview](../home.md)
 * [Destinations Catalog overview](../catalog/overview.md)
 * [Update destination dataflows using the Flow Service API](../api/update-destination-dataflows.md)
+
+## Frequently Asked Questions {#faq}
+
+View a [list of frequently asked questions](/help/destinations/ui/export-datasets.md#faq) about dataset export.
