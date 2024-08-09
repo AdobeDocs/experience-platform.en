@@ -81,9 +81,9 @@ Refer to the [!DNL Mailchimp] [rate limits](https://mailchimp.com/developer/mark
 This section describes which type of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -169,6 +169,7 @@ To correctly map your XDM fields to the [!DNL Mailchimp Tags] destination fields
     ![Platform UI screenshot with Target field as Email from the identity namespace.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
     The mappings between your XDM profile schema and [!DNL Mailchimp Tags] will be as below:
+    
     | Source Field | Target Field | Mandatory |
     | --- | --- | --- |
     |`IdentityMap: Email`|`Identity: Email`| Yes |

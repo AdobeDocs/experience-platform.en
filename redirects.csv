@@ -1,4 +1,5 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/landing/platform-ui/ai-assistant.html,https://experienceleague.adobe.com/docs/experience-platform/ai-assistant/home.html
 https://experienceleague.adobe.com/docs/experience-platform/dashboards/cdp-insights-data-model.html,https://experienceleague.adobe.com/docs/experience-platform/dashboards/data-models/cdp-insights-data-model-b2c.html
 https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-datasets/seamless-sql-flow.html,https://experienceleague.adobe.com/docs/experience-platform/query/data-distiller/derived-datasets/create-derived-datasets-with-sql.html
 https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html,https://experienceleague.adobe.com/docs/experience-platform/identity/features/ecid.html
@@ -526,3 +527,4 @@ https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-
 https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/getting-started.html, https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started
 https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/troubleshooting.html, https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/troubleshooting
 https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/media-edge-apis/swagger.html, https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/swagger
+docs/experience-platform/web-sdk/commands/configure/edgeconfigid,docs/experience-platform/web-sdk/commands/configure/datastreamid

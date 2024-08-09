@@ -92,7 +92,7 @@ As an administrator, you can use attribute-based access control functionalities 
 >
 >In summary, keep in mind the following implications when working with destinations and attribute-based access control:
 >
->* You can only activate segments that you have permission to access and view in the [segment browse view](/help/segmentation/ui/overview.md#browse) and [select segment step](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) of the activation workflow.
+>* You can only activate audiences that you have permission to access and view in [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) and [select segment step](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) of the activation workflow.
 >* In the [mapping step of the activation workflow](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), you can only view and select for activation the fields that you have access permission to.
 >* When you are looking to activate additional segments to an existing destination where you do not have access to all the fields that are mapped for export, the activation workflow will be blocked for you. 
 

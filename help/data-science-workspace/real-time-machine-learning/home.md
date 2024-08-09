@@ -7,6 +7,12 @@ exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 ---
 # Real-time Machine Learning overview (Alpha)
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 >[!IMPORTANT]
 >
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.

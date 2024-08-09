@@ -47,15 +47,15 @@ When finished, select **[!UICONTROL Save]**
 
 The extension is installed and you can now employ its capabilities in your event forwarding rules.
 
-## Integration with Meta Business Extension (MBE) {#mbe}
+## Integration with the Facebook and Instagram extension {#facebook}
 
-The integration with Meta Business Extensions (MBE) enhancement allows you to quickly authenticate into your Meta Business Account. This then auto-populates your [!UICONTROL Pixel ID] and the Meta Conversions API [!UICONTROL Access Token], making it easier to install and configure the Meta Conversions API.
+The integration using the Facebook and Instagram extension allows you to quickly authenticate into your Meta Business Account. This then auto-populates your [!UICONTROL Pixel ID] and the Meta Conversions API [!UICONTROL Access Token], making it easier to install and configure the Meta Conversions API.
 
-A dialogue prompt to authenticate in MBE appears when installing the [!UICONTROL Meta Conversions API] extension.
+A dialogue prompt to authenticate in Facebook and Instagram appears when installing the [!UICONTROL Meta Conversions API] extension.
 
 ![The [!UICONTROL Meta Conversions API Extension] installation page highlighting [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
 
-A dialogue prompt to authenticate in MBE also appears in the quick start workflow UI within event forwarding. 
+A dialogue prompt to authenticate in Facebook and Instagram also appears in the quick start workflow UI within event forwarding. 
 
 ![The quick start workflow UI highlighting [!UICONTROL Connect to Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
 
@@ -154,7 +154,7 @@ Allow a few minutes for the initial setup process to complete, then select **[!U
 
 ![Initial setup complete confirmation screen](../../../images/extensions/server/meta/setup-complete.png)
 
-From the **[!UICONTROL Add Code on Your Site]** dialog copy the code provided using the copy ![Copy](../../../images/extensions/server/meta/copy-icon.png) function and paste this into the `<head>` of your source website. Once implemented, select **[!UICONTROL Start Validation]**
+From the **[!UICONTROL Add Code on Your Site]** dialog copy the code provided using the copy ![Copy](/help/images/icons/copy.png) function and paste this into the `<head>` of your source website. Once implemented, select **[!UICONTROL Start Validation]**
 
 ![Add code on your site dialog](../../../images/extensions/server/meta/add-code-on-your-site.png)
 

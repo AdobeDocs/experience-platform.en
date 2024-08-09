@@ -9,11 +9,11 @@ Read this document to learn about AI Assistant in Adobe Experience Platform.
 
 AI Assistant in Adobe Experience Platform is a conversational experience that you can use to accelerate your workflows in Adobe applications. You can use AI Assistant to better understand product knowledge, troubleshoot problems, or search through information and find operational insights. AI Assistant supports Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer and Customer Journey Analytics.
 
-![The AI Assistant interface with the first-time user experience triggered.](./images/blank.png)
+![The AI Assistant interface with the first-time user experience triggered.](./images/ai-assistant-full.png)
 
 >[!IMPORTANT]
 >
->You must agree to a user agreement before you can use AI Assistant. The user agreement also contains the public beta agreement. This is so that you can use additional AI Assistant features as they roll out in a beta capacity.
+>You must agree to a [user agreement](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) before you can use AI Assistant. The user agreement also contains the public beta agreement. This is so that you can use additional AI Assistant features as they roll out in a beta capacity.
 
 +++Select to view user agreement interface
 
@@ -63,14 +63,18 @@ Operational insights refer to answers AI Assistant generates about your meta dat
 
 You can ask AI Assistant questions about your operational insights in the following domains: 
 
-* Attributes
-* Audiences
-* Dataflows
-* Datasets
-* Destinations _(Questions regarding accounts and some questions about dataflow cannot be answered at this time.)_
-* Journeys
-* Schemas _(Questions regarding field groups cannot be answered at this time.)_
-* Sources _(Questions regarding accounts cannot be answered at this time.)_
+| Domain | Supported metadata | Unsupported metadata |
+| --- | --- | --- |
+| Attributes | <ul><li>Attribute name look ups</li><li>Attribute - schema relationship</li><li>Attribute - dataset relationship</li><li>Attribute - audience relationship</li><li>Attribute - destination relationship</li></ul> | <ul><li>Attribute class</li><li>Audit</li><li>Deprecation status</li><li>Labels</li><li>Value stored in attributes</li></ul> |
+| Audiences | <ul><li>Audience count</li><li>Audience type (streaming or batch)</li><li>Creation/modification dates</li><li>Activation status</li><li>Profile count</li><li>Duplicate audiences</li><li>Audience definition look ups</li><li>Audience - attribute relationship</li><li>Audience - dataset relationship</li><li>Audience - destination relationship</li><li>InSegment rules</li><li>Name look ups</li><li>Name and ID look ups | <ul><li>Audience overlaps</li><li>Audience activation</li><li>Audience - campaign relationships</li><li>Audit</li><li>Create/modification</li><li>Labels</li><li>Profile qualification trends</li></ul> |
+| Dataflows | <ul><li>Dataflow counts</li><li>Dataflow status</li><li>Dataflow - dataset relationship</li><li>Dataflow - source relationship</li></ul>| <ul><li>Creation/modification</li><li>Dataflow-batch relationships</li><li>Ingest profile count</li></ul> |
+| Datasets | <ul><li>Dataset count</li><li>Profile enable status</li><li>Creation/modification date</li><li>Dataset - schema relationship</li><li>Dataset - audience relationship</li><li>Dataset - attribute relationship</li><li>Dataset - dataflow relationship</li><li>Name look ups </li><li>Name and ID look ups</li></ul> | <ul><li>Audit</li><li>Created by</li><li>Dataset - batch relationship</li><li>Dataset creation/modification</li><li>Dataset size</li><li>Number of profiles</li><li>Number of rows</li><li>Value look ups</li></ul> |
+| Destinations | <ul><li>Configured destination counts</li><li>Destination - audience relationship</li><li>Destination attribute relationship</li></ul> | <ul><li>Account set up</li><li>Account credential information</li><li>Unique profiles activated</li></ul> |
+| Journeys | <ul><li>Counts</li><li>Name look ups</li><li>Name and ID look ups</li><li>Journey status</li><li>Triggered status (audience vs. events)</li><li>Creation/modification dates</li><li>Recurring frequency</li></ul> | <ul><li>Attributes - journey relationships</li><li>Audit</li><li>Creation/modification</li><li>Created by</li><li>Events</li><li>Journey - dataset</li><li>Journey - schema</li><li>Offers</li><li>Profile qualification trends</li><li>Step events</li></ul> |
+| Schemas | <ul><li>Schema counts</li><li>Creation/modification date</li><li>Schema - attribute relationship</li><li>Schema - dataset relationship</li><li>Schema - audience relationship</li><li>Profile enable status</li><li>Name look ups</li><li>Name and ID look ups</li></ul> | <ul><li>Audit</li><li>Creation/modification</li><li>Created by</li><li>Field groups</li><li>Identities</li><li>Identity namespaces</li><li>Labels</li><li>Number of profiles</li></ul> |
+| Sources | <ul><li>Account counts</li><li>Account status</li><li>Active/inactive dataflows for each account</li><li>Source connector - dataflow relationship</li><li>Source account - dataflow relationship</li></ul> | <ul><li>Account credentials information</li><li>Account set up</li><li>Data ingestion metrics</li><li>Number of profiles</li><li>Source - batch relationships</li></ul> |
+
+{style="table-layout:auto"}
 
 For operational insights questions, answers may not reflect the current state of the UI. The data that backs these questions is updated once every 24 hours. For example, changes that users make in Real-Time CDP during the daytime are synced with the data stores at night, and then they become available for user questions in the morning. You will need to log into a sandbox to inquire about specific data related to objects.
 

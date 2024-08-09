@@ -196,13 +196,3 @@ This tag loads a script that ensures that `window.Promise` is a valid Promise im
 >[!NOTE]
 >
 >If you choose to load a different Promise implementation, be sure it supports `Promise.prototype.finally`.
-
-### Supporting Internet Explorer
-
-The Adobe Experience Platform SDK uses promises, which are a method of communicating the completion of asynchronous tasks. The [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementation used by the SDK is natively supported by all target browsers except [!DNL Internet Explorer]. To use the SDK on [!DNL Internet Explorer], you must have `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill).
-
-One library you could use to polyfill promise is promise-polyfill. See the [promise-polyfill documentation](https://www.npmjs.com/package/promise-polyfill) for more information on how to install with NPM.
-
->[!NOTE]
->
->If you choose to load a different Promise implementation, be sure it supports `Promise.prototype.finally`.

@@ -19,13 +19,6 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Dataset expirations"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expirations"
 
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseUsage_reduction"
->title="How to reduce usage"
->abstract="To reduce usage, you can configure dataset or Pseudonymous profile data expirations for sandboxes and datasets."
->additional-url="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/data-hygiene/pseudonymous-profile-and-event-expiration" text="Pseudonymous profiles data expirations video"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Pseudonymous profiles data expirations documentation"
-
 You can view important information about your organization's license usage through the Adobe Experience Platform [!UICONTROL License usage] dashboard. Information displayed here is captured during a daily snapshot of your Platform instance. 
 
 License usage reports provide a high degree of granularity over your license usage metrics. The dashboard provides usage metrics for each purchased product, the consolidated usage of metrics in all production or development sandboxes, and the usage metric from a specific sandbox. The following Experience Platform applications can be tracked with usage metrics: Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics.
@@ -65,12 +58,41 @@ This dashboard displays all of your licensed Adobe Experience Platform products,
 | **[!UICONTROL License Amount]**  | The contracted value for the maximum amount of the Primary Metric as agreed in your product license agreement.  |
 | **[!UICONTROL Usage]**  | The amount of your primary metric used. This value provides the total usage of that metric across all sandboxes, either production or development. |
 | **[!UICONTROL Usage %]**  | The percentage of your primary metric used according to your license amount. |
+| **[!UICONTROL Prediction Usage]**  | (**Beta**) The predicted usage percentage of your primary metric according to your license amount. |
 
 >[!NOTE]
 >
 >Additions to the [!UICONTROL License Amount] as a result of add-ons are added on top of the [!UICONTROL License Amount] for the base products such as Real-Time Customer Data Platform, Adobe Journey Optimizer, and Customer Journey Analytics. The usage of that licensed amount (after the add-ons) is tracked through the base products. For example, if you buy one pack of five sandboxes, the quantity of five is added to that of the base product's. In this case, the add-on shows a [!UICONTROL License Amount] of one, and the usage for that add-on is "blank" as the usage is tracked through the base product.
 
 The table indicates the primary metric for each product, as each product can track numerous metrics.
+
+### [!BADGE Beta]{type=Informative} Predicted usage {#predicted-usage}
+
+>[!AVAILABILITY]
+>
+>The functionality to predict future license usage is currently in beta. The documentation and the functionality are subject to change.
+
+Proactively manage and optimize your licensing resources based on insightful usage predictions. The [!UICONTROL Predicted Usage] column accurately predicts future license usage at the sandbox level, across all production and development sandboxes, for all of your purchased products. This alerting capability provides a forecast of license usage for six weeks in the future, based on your usage up to the 15th of this calendar month. Predictions are provided with a lower & an upper bound. 
+
+>[!IMPORTANT]
+>
+>Predictions are refreshed on a monthly basis. The date of refresh is included in an info icon (![This info icon.](../images/license-usage/info-icon.png)) above the column title.
+
+To see a summary of a products entitlement usage, select a product from the [!UICONTROL Overview] list. 
+
+![The [!UICONTROL License usage] [!UICONTROL Overview] with a product and the predicted usage column highlighted.](../images/license-usage/product-predicted-usage.png)
+
+The summary tab appears. You can use the granular predictions available on the [!UICONTROL Summary], and [!UICONTROL Details] tabs to ensure informed decision-making for efficient license use.
+
+![The summary view of a Platform Product with the predicted usage column highlighted.](../images/license-usage/summary-predicted-usage.png)
+
+The predicted usage feature supports for the following metrics:
+
+- [!UICONTROL Addressable audience]
+- [!UICONTROL Average profile richness]
+- [!UICONTROL Compute hours]
+- [!UICONTROL Customer Journey Audience number of rows]
+- [!UICONTROL Total storage]
 
 ## [!UICONTROL Summary] tab {#summary-tab}
 
@@ -102,7 +124,7 @@ To see **a particular usage metric from a specific sandbox**, navigate to the [!
 
 ![The Details tab of the License usage dashboard.](../images/license-usage/details-tab.png)
 
-From this view, you can select ![The inspect icon.](../images/license-usage/inspect-icon.png) next to a sandbox name to view the visualization for that metric. A dialog opens with a visualization for that metric. 
+From this view, you can select ![The inspect icon.](/help/images/icons/inspect.png) next to a sandbox name to view the visualization for that metric. A dialog opens with a visualization for that metric. 
 
 ### Visualizations {#visualizations}
 
@@ -152,6 +174,10 @@ The license usage dashboard reports on several unique metrics that are applicabl
 | [!UICONTROL Streaming Segmentation No of Packs] | The packs update segment membership for a person profile as new data enters the Segmentation Service through a streaming flow. Segment membership is evaluated based on the current person profile attributes and the value of the current event, without taking historical behavior into account. Streaming Segmentation is a shared feature. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
+
+>[!TIP]
+>
+>You can check your license entitlements in your Sales Order to calculate metrics such as your 'Storage Allowance'.<br>For example,<ul><li>Storage Allowance = The number of "authorized profiles" in your contract X Average Profile Richness</li></ul>
 
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased. For detailed definitions of each metric, refer to the appropriate Product Description documentation:
 

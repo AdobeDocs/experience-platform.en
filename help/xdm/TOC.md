@@ -100,6 +100,8 @@ role: Developer
     * [Product Category](./field-groups/product/product-category.md)
   * Provider {#provider}
     * [Healthcare Provider](./field-groups/provider/healthcare-provider.md)
+  * Shared {#shared}
+    * [External Source System Audit Details](./field-groups/shared/external-source-system-audit-details.md)
   * [Field group name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
   * [Account Details](./data-types/account-details.md)

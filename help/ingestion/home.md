@@ -7,9 +7,9 @@ exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
 ---
 # Data Ingestion overview
 
-Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe Experience Platform Data Ingestion represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream [!DNL Platform] services.
+Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe Experience Platform Data Ingestion represents the multiple methods by which Experience Platform ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream Experience Platform services.
 
-This document introduces the three main ways in which data is ingested into [!DNL Platform], with links to their respective overview documentation for more detailed information.
+This document introduces the three main ways in which data is ingested into Experience Platform, with links to their respective overview documentation for more detailed information.
 
 ## Batch ingestion
 
@@ -19,9 +19,13 @@ Manually uploaded datafiles such as flat CSV files (mapped to XDM schemas) and P
 
 See the [batch ingestion overview](./batch-ingestion/overview.md) for more information.
 
+>[!TIP]
+>
+>Use single-line JSON instead of multi-line JSON as input for batch ingestion. Single-line JSON allows for better performance as the system can divide one input file into multiple chunks and process them in parallel, whereas multi-line JSON cannot be split. This can significantly reduce data processing costs and improve batch processing latency.
+
 ## Streaming ingestion
 
-Streaming ingestion allows you to send data from client- and server-side devices to [!DNL Experience Platform] in real time. [!DNL Platform] supports the use of data inlets to stream incoming experience data, which is persisted in streaming-enabled datasets within the Data Lake. Data inlets can be configured to automatically authenticate the data they collect, ensuring that the data is coming from a trusted source. 
+Streaming ingestion allows you to send data from client- and server-side devices to [!DNL Experience Platform] in real time. Experience Platform supports the use of data inlets to stream incoming experience data, which is persisted in streaming-enabled datasets within the Data Lake. Data inlets can be configured to automatically authenticate the data they collect, ensuring that the data is coming from a trusted source. 
 
 See the [streaming ingestion overview](./streaming-ingestion/overview.md) for more information.
 

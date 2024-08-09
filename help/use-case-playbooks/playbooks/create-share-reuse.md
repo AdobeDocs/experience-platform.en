@@ -16,7 +16,7 @@ To use a playbook, navigate to **[!UICONTROL Use Case Playbooks] > [!UICONTROL P
 >title="Create instance"
 >abstract="Generate a list of assets like journeys, audiences, schemas or destinations to use in journey or activation scenarios."
 
-Before creating a playbook instance, explore the available playbooks to [discover the right playbook for you](/help/use-case-playbooks/playbooks/discover.md). When you are ready to proceed with a playbook and create an instance, select **[!UICONTROL Create Instance]** to proceed with the playbook and generate technical assets.
+Before creating a playbook instance, explore the available playbooks to [choose the right playbook](/help/use-case-playbooks/playbooks/choose.md). When you are ready to proceed with a playbook and create an instance, select **[!UICONTROL Create Instance]** to proceed with the playbook and generate technical assets.
 
 ![Create an instance of a playbook.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 

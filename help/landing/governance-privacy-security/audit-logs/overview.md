@@ -88,7 +88,7 @@ Select an event from the list to view its details in the right rail.
 >Since this a new feature, the data displayed only goes back to March 2022. Depending on the resource selected, earlier data may be available from January 2022.
 
 
-Select the funnel icon (![Filter icon](../../images/audit-logs/icon.png)) to display a list of filter controls to help narrow results. Only the last 1000 records are displayed irrespective of the various filters selected.
+Select the funnel icon (![Filter icon](/help/images/icons/filter.png)) to display a list of filter controls to help narrow results. Only the last 1000 records are displayed irrespective of the various filters selected.
 
 ![The Audits dashboard with the filtered activity log highlighted.](../../images/audit-logs/filters.png)
 

@@ -70,7 +70,7 @@ Select a radio button to filter the classes based on whether they are custom or 
 
 ![The [!UICONTROL Create schema] workflow with the search bar, [!UICONTROL Custom], and [!UICONTROL Industries] highlighted.](../../images/ui/resources/classes/filter-and-search.png)
 
-To help you decide on the appropriate class, there are info (![An info icon.](../../images/ui/resources/classes/info.png)) and preview (![An preview icon.](../../images/ui/resources/classes/preview.png)) icons for each class. The info icon opens a dialog that provides a description of the class and the industry that it is associated with. The preview icon opens a preview dialog for the class that contains a schema diagram and its properties.
+To help you decide on the appropriate class, there are info (![An info icon.](/help/images/icons/info.png)) and preview (![An preview icon.](/help/images/icons/preview.png)) icons for each class. The info icon opens a dialog that provides a description of the class and the industry that it is associated with. The preview icon opens a preview dialog for the class that contains a schema diagram and its properties.
 
 ![A preview of the selected class with the schema diagram and class properties highlighted.](../../images/ui/resources/classes/class-preview.png)
 

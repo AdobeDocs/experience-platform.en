@@ -43,7 +43,7 @@ The following request retrieves the last two audiences created in your organizat
 +++A sample request to retrieve a list of audiences.
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=2 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -67,7 +67,6 @@ A successful response returns HTTP status 200 with a list of audiences that were
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 60,
             "profileInstanceId": "ups",
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
@@ -230,8 +229,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
         },
         "labels": [
           "core/C1"
-        ],
-        "ttlInDays": 60
+        ]
     }'
 ```
 
@@ -243,7 +241,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | `expression` | The Profile Query Language (PQL) expression of the audience. More information about PQL expressions can be found in the [PQL expressions guide](../pql/overview.md). |
 | `schema` | The Experience Data Model (XDM) schema of the audience. |
 | `labels` | Object-level data usage and attribute-based access control labels that are relevant to the audience. |
-| `ttlInDays` | Represents the data expiration value for the audience, in days. |
 
 +++
 
@@ -311,7 +308,6 @@ A successful response returns HTTP status 200 with information about your newly 
      "schema": {
       "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -456,7 +452,6 @@ A successful response returns HTTP status 200 with information about the specifi
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -613,7 +608,6 @@ A successful response returns HTTP status 200 with information about your newly 
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -839,7 +833,6 @@ A successful response returns HTTP status 207 with information with your request
          "schema": {
             "name": "_xdm.context.profile"
          },
-         "ttlInDays": 30,
          "imsOrgId": "{ORG_ID}",
          "sandbox": {
             "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",

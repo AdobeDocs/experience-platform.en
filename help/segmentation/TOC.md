@@ -27,8 +27,10 @@ role: User
 - Segmentation UI {#ui}
     - [Overview](ui/overview.md)
     - [Audience dashboard](ui/audience-dashboard.md)
+    - [Audience Portal](ui/audience-portal.md)
     - [Audience Composition](ui/audience-composition.md)
     - [Segment Builder](ui/segment-builder.md)
+    - [Federated Audience Composition (Limited availability)](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
     - [Account audiences](ui/account-audiences.md)
     - [Look-alike audiences](ui/lookalike-audiences.md)
     - [Prospect audiences](ui/prospect-audience.md)

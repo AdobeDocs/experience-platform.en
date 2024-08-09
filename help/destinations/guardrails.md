@@ -86,7 +86,7 @@ The guardrails below apply to the [ad-hoc activation](/help/destinations/api/ad-
 
 ### Edge personalization destinations activation {#edge-destinations-activation}
 
-The guardrails below apply to activation through [edge personalization destinations](/help/destinations/destination-types.md#streaming-profile-export).
+The guardrails below apply to activation through [edge personalization destinations](/help/destinations/destination-types.md#advanced-enterprise-destinations).
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |

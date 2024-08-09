@@ -19,15 +19,21 @@ Use Campaign to:
 * Integrate email, mobile, online and offline channels into the customer journey,
 * Automate the delivery of meaningful and timely messages and offers.
 
->[!IMPORTANT]
->
->Keep in mind the following guardrails when using the Adobe Campaign Managed Cloud Services connection:
->
->* A maximum of 50 segments can be [activated](#activate) for the destination,
->* For each segment, you can add up to 20 fields to [map](#map) to Adobe Campaign,
->* Data retention on Azure Blob storage Data Landing Zone (DLZ) : 7 day,
->* The activation frequency is 3 hours minimum.
->* The maximum file name length supported by this connection is 255 characters. When you [configure the exported file name](../../ui/activate-batch-profile-destinations.md#configure-file-names), make sure the file name does not exceed 255 characters. Exceeding the maximum file name length results in activation errors.
+## Guardrails {#guardrails}
+
+Keep in mind the following guardrails when using the Adobe Campaign Managed Cloud Services connection:
+
+* You can [activate](#activate) a maximum of 25 audiences to this destination. 
+
+  You can change this limit by updating the value of the **NmsCdp_Aep_Audience_List_Limit** option in the **[!UICONTROL Administration]** > **[!UICONTROL Platform]** > **[!UICONTROL Options]** folder of Campaign explorer.
+
+* For each audience, you can add up to 20 fields to [map](#map) to Adobe Campaign. 
+
+  You can change this limit by updating the value of the **NmsCdp_Aep_Destinations_Max_Columns** option in the **[!UICONTROL Administration]** > **[!UICONTROL Platform]** > **[!UICONTROL Options]** folder of Campaign explorer.
+
+* Data retention on Azure Blob storage Data Landing Zone (DLZ) : 7 day.
+* The activation frequency is 3 hours minimum.
+* The maximum file name length supported by this connection is 255 characters. When you [configure the exported file name](../../ui/activate-batch-profile-destinations.md#configure-file-names), make sure the file name does not exceed 255 characters. Exceeding the maximum file name length results in activation errors.
 
 ## Use cases {#use-cases}
 
@@ -35,12 +41,12 @@ To help you better understand how and when you should use the Adobe Campaign Man
 
 * Adobe Experience Platform creates a customer profile that incorporates information like the identity graph, behavioral data from analytics, merges offline and online data etc. With this integration, you can augment the segmentation capabilities that are already existing within Adobe Campaign with those Adobe Experience Platform powered audiences, and you can hence activate that data in Campaign.
 
-  For example, a sports attire company wants to leverage the Adobe Experience Platform powered smart segments and activate them using Adobe Campaign to reach out to their customer base across the different channels supported by Adobe Campaign. Once the messages are sent, they want to enhance the customer profile in Adobe Experience platform with experience data from Adobe Campaign such as sends, open and clicks.
+  For example, a sports attire company wants to leverage the Adobe Experience Platform powered audiences and activate them using Adobe Campaign to reach out to their customer base across the different channels supported by Adobe Campaign. Once the messages are sent, they want to enhance the customer profile in Adobe Experience platform with experience data from Adobe Campaign such as sends, open and clicks.
 
   The result is cross channel campaigns that are more consistent across the Adobe Experience cloud ecosystem and a rich customer profile that is quickly adapting and learning.
 
 
-* In addition to segment activation in Campaign, you can leverage the Adobe Campaign Managed Services destination to bring in additional profile attributes which are tied to a profile on Adobe Experience Platform and have a sync process in place so that they are updated in the Adobe Campaign database. 
+* In addition to audience activation in Campaign, you can leverage the Adobe Campaign Managed Services destination to bring in additional profile attributes which are tied to a profile on Adobe Experience Platform and have a sync process in place so that they are updated in the Adobe Campaign database. 
 
   For example, let's say you are capturing opt-in and opt-out values in Adobe Experience Platform. With this connection, you can bring over these values into Adobe Campaign and have a sync process in place so that they are updated on a regular basis.
 
@@ -71,7 +77,7 @@ Refer to the table below for information about the destination export type and f
 
 | Item | Type | Notes |
 ---------|----------|---------|
-| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
+| Export type | **[!UICONTROL Profile-based]** | You are exporting all members of an audience, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the select profile attributes screen of the [destination activation workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes).|
 | Export frequency | **[!UICONTROL Batch]** | Batch destinations export files to downstream platforms in increments of three, six, eight, twelve, or twenty-four hours. Read more about [batch file-based destinations](/help/destinations/destination-types.md#file-based).|
 
 {style="table-layout:auto"}
@@ -111,7 +117,7 @@ Select the marketing actions applicable to the data that you want to export to t
 
 For more information about marketing actions, see the [data usage policies overview](/help/data-governance/policies/overview.md) page.
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
 >[!IMPORTANT]
 > 
@@ -166,7 +172,7 @@ For **[!UICONTROL Audience sync]**, you can check the exported audience by navig
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 
-For **[!UICONTROL Profile sync (Update only)]**, data is automatically updated into the Campaign database for each profile targeted by the segment activated in the destination.
+For **[!UICONTROL Profile sync (Update only)]**, data is automatically updated into the Campaign database for each profile targeted by the audience activated in the destination.
 
 ## Data usage and governance {#data-usage-governance}
 

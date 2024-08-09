@@ -52,6 +52,10 @@ The following table outlines existing rules you must follow to ensure a successf
 
 Starting March 31, 2023, Identity Service will block the ingestion of Adobe Analytics ID (AAID) for new customers. This identity is typically ingested through the [Adobe Analytics source](../sources/connectors/adobe-applications/analytics.md) and the [Adobe Audience Manager source](../sources//connectors/adobe-applications/audience-manager.md) and is redundant because the ECID represents the same web browser. If you would like to change this default configuration, please contact your Adobe account team.
 
+## Performance guardrails {#performance-guardrails}
+
+Identity Service continuously monitors incoming data to ensure high performance and reliability at scale. However, an influx of experience event data in a short period may lead to performance degradation and latency. Adobe is not responsible for such performance degradation.
+
 ## Understanding the deletion logic when an identity graph at capacity is updated {#deletion-logic}
 
 When a full identity graph is updated, Identity Service deletes the oldest identity in the graph before adding the latest identity. This is to maintain accuracy and relevance of identity data. This process of deletion follows two primary rules:

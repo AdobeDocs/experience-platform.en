@@ -68,7 +68,7 @@ The ML models are run to generate a new schema based on your dataflow configurat
 
 >[!NOTE]
 >
->You can filter all fields in your schema based on a variety of criteria during the source-to-target field mapping workflow. The default behavior is to display all mapped fields. To change the displayed fields, select the filter icon next to the search input field and choose from the dropdown options.<br> ![The mapping stage fo the CSV to XDM schema creation workflow with teh filter icon and dropdown menu highlighted.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "The mapping stage fo the CSV to XDM schema creation workflow with teh filter icon and dropdown menu highlighted."){width="100" zoomable="yes"}
+>You can filter all fields in your schema based on a variety of criteria during the source-to-target field mapping workflow. The default behavior is to display all mapped fields. To change the displayed fields, select the filter icon next to the search input field and choose from the dropdown options.<br> ![The mapping stage fo the CSV to XDM schema creation workflow with the filter icon and dropdown menu highlighted.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "The mapping stage fo the CSV to XDM schema creation workflow with the filter icon and dropdown menu highlighted."){width="100" zoomable="yes"}
 
 From here, you can optionally [edit the field mappings](#edit-mappings) or [alter the field groups they are associated with](#edit-schema) according to your needs. When satisfied, select **[!UICONTROL Finish]** to complete the mapping and initiate the dataflow you configured earlier. The CSV data is ingested into the system and populates a dataset based on the generated schema structure, ready to be consumed by downstream Platform services.
 
@@ -84,7 +84,7 @@ The CSV fields are automatically mapped to existing XDM field groups using ML mo
 
 ![The [!UICONTROL Edit] button being selected next to the schema tree.](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
-A dialog appears, allowing you to edit the display name, data type, and field group for any field in the mapping. Select the edit icon (![Edit icon](../../images/tutorials/map-csv-recommendations/edit-icon.png)) next to a source field to edit its details in the right column before selecting **[!UICONTROL Apply]**.
+A dialog appears, allowing you to edit the display name, data type, and field group for any field in the mapping. Select the edit icon (![Edit icon](/help/images/icons/edit.png)) next to a source field to edit its details in the right column before selecting **[!UICONTROL Apply]**.
 
 ![The recommended field group for a source field being changed.](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 
