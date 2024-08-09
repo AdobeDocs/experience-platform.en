@@ -173,6 +173,30 @@ Within the context of this configuration, the primary identity will be defined l
 
 ![](../images/graph-examples/crmid_hashed_single_seg_match.png)
 
+>[!TAB multi-person graph: shared device, shared computer]
+
+* CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+* CRMID: Tom, ECID: 111
+* CRMID: Tom, ECID: 222, IDFA: A-A-A
+* CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+* CRMID: Summer, ECID: 333
+* CRMID: Summer, ECID: 444, GAID:B-B-B
+* CRMID: Summer, ECID: 111
+
+>[!TAB multi-person graph: shared device, android mobile device]
+
+* CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+* CRMID: Tom, ECID: 111
+* CRMID: Tom, ECID: 222, IDFA: A-A-A
+* CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+* CRMID: Summer, ECID: 333
+* CRMID: Summer, ECID: 444, GAID: B-B-B
+* CRMID: Tom, ECID: 444, GAID: B-B-B
+
+>[!TAB multi-person graph: shared device, apple mobile device, no ECID reset]
+
+>[!TAB multi-person graph: shared device, apple, ECID resets]
+
 >[!ENDTABS]
 
 <!-- 
