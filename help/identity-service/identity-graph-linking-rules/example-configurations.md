@@ -50,6 +50,8 @@ Within the context of this configuration, the primary identity will be defined l
 | Authenticated | CRMID, ECID | CRMID |
 | Unauthenticated | ECID | ECID | 
 
+**Graph examples**
+
 >[!BEGINTABS]
 
 >[!TAB Ideal single-person graph scenario]
@@ -103,6 +105,8 @@ Within the context of this configuration, the primary identity will be defined l
 | --- | --- | --- |
 | Authenticated | CRMID, ECID | CRMID |
 | Unauthenticated | ECID | ECID | 
+
+**Graph examples**
 
 >[!BEGINTABS]
 
@@ -167,13 +171,17 @@ Within the context of this configuration, the primary identity will be defined l
 | Unauthenticated | IDFA, ECID | IDFA |
 | Unauthenticated | ECID | ECID |
 
+**Graph examples**
+
 >[!BEGINTABS]
 
 >[!TAB Ideal single-person graph scenario]
 
-![](../images/graph-examples/crmid_hashed_single_seg_match.png)
+![An ideal single-person graph scenario.](../images/graph-examples/crmid_hashed_single_seg_match.png)
 
 >[!TAB multi-person graph: shared device, shared computer]
+
+![A multi-person graph scenario where two users are sharing a computer.](../images/graph-examples/shared_device_shared_computer.png)
 
 * CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 * CRMID: Tom, ECID: 111
@@ -185,6 +193,8 @@ Within the context of this configuration, the primary identity will be defined l
 
 >[!TAB multi-person graph: shared device, android mobile device]
 
+![A multi-person graph scenario where two users are sharing an android mobile device.](../images/graph-examples/shared_device_android.png)
+
 * CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 * CRMID: Tom, ECID: 111
 * CRMID: Tom, ECID: 222, IDFA: A-A-A
@@ -194,6 +204,8 @@ Within the context of this configuration, the primary identity will be defined l
 * CRMID: Tom, ECID: 444, GAID: B-B-B
 
 >[!TAB multi-person graph: shared device, apple mobile device, no ECID reset]
+
+![A multi-person graph scenario where two users are sharing an Apple mobile device.](../images/graph-examples/shared_device_apple_no_reset.png)
 
 * CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 * CRMID: Tom, ECID: 111
@@ -205,6 +217,8 @@ Within the context of this configuration, the primary identity will be defined l
 
 >[!TAB multi-person graph: shared device, apple, ECID resets]
 
+![A multi-person graph scenario where two users are sharing an Apple mobile device, but the ECID is reset.](../images/graph-examples/shared_device_apple_with_reset.png)
+
 * CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 * CRMID: Tom, ECID: 111
 * CRMID: Tom, ECID: 222, IDFA: A-A-A
@@ -215,6 +229,8 @@ Within the context of this configuration, the primary identity will be defined l
 
 >[!TAB Non-unique phone]
 
+![A multi-person graph scenario where the phone namespace is not unique.](../images/graph-examples/non_unique_phone.png)
+
 * CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 * CRMID: Tom, ECID: 111
 * CRMID: Tom, ECID: 222, IDFA: A-A-A
@@ -223,7 +239,11 @@ Within the context of this configuration, the primary identity will be defined l
 * CRMID: Summer, ECID: 444, GAID: B-B-B
 * CRMID: Summer, Phone_SHA256: 123-4567
 
+![A multi-person graph scenario where Phone_SHA256 is unique.](../images/graph-examples/unique_phone.png)
+
 >[!TAB Non-unique email]
+
+![A multi-person graph scenario where email is not unique](../images/graph-examples/non_unique_email.png)
 
 * CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 * CRMID: Tom, ECID: 111
@@ -235,7 +255,6 @@ Within the context of this configuration, the primary identity will be defined l
 
 >[!ENDTABS]
 
-<!-- 
 ## Single CRMID with multiple login IDs (simple)
 
 In this scenario, there is a single CRMID that represents a person entity. However, a person entity may have multiple login identifiers:
@@ -255,11 +274,11 @@ Therefore, **it is crucial that the CRMID is always sent for every user**. Failu
 
 You can create this scenario in graph simulation by copying the following events to text mode:
 
-* CRMID: John, loginID: ID_A
-* CRMID: John, loginID: ID_B
+* CRMID: Tom, loginID: ID_A
+* CRMID: Tom, loginID: ID_B
 * loginID: ID_A, ECID: 111
-* CRMID: Jane, loginID: ID_C
-* CRMID: Jane, loginID: ID_D
+* CRMID: Summer, loginID: ID_C
+* CRMID: Summer, loginID: ID_D
 * loginID: ID_C, ECID: 222
 
 **Algorithm configuration:**
@@ -271,6 +290,61 @@ You can create this scenario in graph simulation by configuring the following se
 | 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
 | 2 | loginID | loginID | CROSS_DEVICE | No |
 | 3 | ECID | ECID | COOKIE | No |
+
+**Primary identity selection for Profile:**
+
+Within the context of this configuration, the primary identity will be defined like this:
+
+| Authentication status | Namespace(s) in events| Primary identity |
+| --- | --- | --- |
+| Authenticated | loginID, ECID | loginID |
+| Authenticated | loginID, ECID | loginID |
+| Authenticated | CRMID, loginID, ECID | CRMID |
+| Authenticated | CRMID, ECID | CRMID |
+| Unauthenticated | ECID | ECID |
+
+**Graph examples**
+
+>[!BEGINTABS]
+
+>[!TAB Ideal single-person scenario]
+
+![A graph scenario that includes a single CRMID and multiple loginIDs.](../images/graph-examples/single_crmid.png)
+
+>[!TAB Multi-person graph scenario: shared device]
+
+![A multi-person shared device scenario.](../images/graph-examples/single_crmid_shared_device.png)
+
+CRMID: Tom, loginID:ID_A
+CRMID: Tom, loginID:ID_B
+loginID:ID_A, ECID:111
+CRMID: Summer, loginID:ID_C
+CRMID: Summer, loginID:ID_D
+loginID:ID_C, ECID:222
+loginID:ID_C, ECID:111
+
+>[!TAB Multi-person graph scenario: bad data]
+
+![A multi-person graph scenario with bad data.](../images/graph-examples/single_crmid_bad_data.png)
+
+CRMID: Tom, loginID:ID_A
+CRMID: Tom, loginID:ID_B
+loginID:ID_A, ECID:111
+CRMID: Summer, loginID:ID_C
+CRMID: Summer, loginID:ID_D
+loginID:ID_C, ECID:222
+CRMID: Tom, loginID:ID_D
+
+>[!TAB 'Dangling' loginID]
+
+![A dangling loginID scenario.](../images/graph-examples/dangling_example.png)
+
+CRMID: Tom, loginID:ID_A
+CRMID: Tom, loginID:ID_B
+loginID:ID_A, ECID:111
+loginID:ID_C, ECID:111
+
+>[!ENDTABS]
 
 ## Single CRMID with multiple login IDs (complex)
 
@@ -286,7 +360,6 @@ The case of "dangling" loginID also applies for this scenario.
 | Namespaces used | Web behavior collection method |
 | --- | --- |
 | CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID, AAID | Adobe Analytics source connector |
-
 
 **Events:**
 
@@ -313,4 +386,15 @@ You can create this scenario in graph simulation by configuring the following se
 | 4 | loginID | loginID | CROSS_DEVICE | No |
 | 5 | ECID | ECID | COOKIE | No |
 | 6 | AAID | AAID | COOKIE | No |
- -->
+
+**Primary identity selection for Profile:**
+
+Within the context of this configuration, the primary identity will be defined like this:
+
+| Authentication status | Namespace(s) in events| Primary identity |
+| --- | --- | --- |
+| Authenticated | loginID, ECID | loginID |
+| Authenticated | loginID, ECID, AAID | loginID |
+| Authenticated | CRMID, loginID, ECID, AAID | CRMID |
+| Authenticated | CRMID, ECID | CRMID |
+| Unauthenticated | ECID | ECID |
