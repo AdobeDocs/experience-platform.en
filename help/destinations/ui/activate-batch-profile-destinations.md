@@ -28,7 +28,7 @@ To activate audiences to destinations, you must have successfully [connected to 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"
 >title="Update the end date for this dataflow"
->abstract="Because of recent updates to this destination, the dataflow now requires an end date. Adobe has set a default end date to March 1st 2025. Please update to your desired end date otherwise the data exports will stop on the default date."
+>abstract="Update the end date for this dataflow"
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
