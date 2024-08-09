@@ -195,7 +195,43 @@ Within the context of this configuration, the primary identity will be defined l
 
 >[!TAB multi-person graph: shared device, apple mobile device, no ECID reset]
 
+* CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+* CRMID: Tom, ECID: 111
+* CRMID: Tom, ECID: 222, IDFA: A-A-A
+* CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+* CRMID: Summer, ECID: 333
+* CRMID: Summer, ECID: 444, GAID: B-B-B
+* CRMID: Summer, ECID: 222, IDFA: A-A-A
+
 >[!TAB multi-person graph: shared device, apple, ECID resets]
+
+* CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+* CRMID: Tom, ECID: 111
+* CRMID: Tom, ECID: 222, IDFA: A-A-A
+* CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+* CRMID: Summer, ECID: 333
+* CRMID: Summer, ECID: 444, GAID: B-B-B
+* CRMID: Summer, ECID: 555, IDFA: A-A-A
+
+>[!TAB Non-unique phone]
+
+* CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+* CRMID: Tom, ECID: 111
+* CRMID: Tom, ECID: 222, IDFA: A-A-A
+* CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+* CRMID: Summer, ECID: 333
+* CRMID: Summer, ECID: 444, GAID: B-B-B
+* CRMID: Summer, Phone_SHA256: 123-4567
+
+>[!TAB Non-unique email]
+
+* CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+* CRMID: Tom, ECID: 111
+* CRMID: Tom, ECID: 222, IDFA: A-A-A
+* CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+* CRMID: Summer, ECID: 333
+* CRMID: Summer, ECID: 444, GAID: B-B-B
+* CRMID: Summer, Email_LC_SHA256: aabbcc
 
 >[!ENDTABS]
 
