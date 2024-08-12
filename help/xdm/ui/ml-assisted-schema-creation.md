@@ -61,7 +61,7 @@ The **[!UICONTROL Review and edit]** stage of the creation workflow now appears,
 | Data Type        | The type of data stored in the field (for example, `String`, `Date`). |
 | Field Group      | A categorization of the field based on its use or context (for example, Demographic Details, Commerce Details).  |
 
-![The Review and Edit stage of the schema creation workflow.](schema-recommendation.png)
+![The Review and Edit stage of the schema creation workflow.](../images/ui/ml-schema-creation/schema-recommendation.png)
 
 #### Add a field {#add-field}
 
