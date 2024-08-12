@@ -285,11 +285,11 @@ You can create this scenario in graph simulation by copying the following events
 
 You can create this scenario in graph simulation by configuring the following setup for your algorithm configuration:
 
-| Priority | Display name | Identity symbol | Identity type | Unique per graph |
-| ---| --- | --- | --- | --- |
-| 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
-| 2 | loginID | loginID | CROSS_DEVICE | No |
-| 3 | ECID | ECID | COOKIE | No |
+| Priority | Display name | Identity type | Unique per graph |
+| ---| --- | --- | --- |
+| 1 | CRMID | CROSS_DEVICE | Yes |
+| 2 | loginID | CROSS_DEVICE | No |
+| 3 | ECID | COOKIE | No |
 
 **Primary identity selection for Profile:**
 
@@ -365,27 +365,27 @@ The case of "dangling" loginID also applies for this scenario.
 
 You can create this scenario in graph simulation by copying the following events to text mode:
 
-* CRMID: John, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-* CRMID: John, loginID: ID_A
-* CRMID: John, loginID: ID_B
-* loginID:ID_A, ECID: 111, AAID: AAA
-* CRMID: Jane, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-* CRMID: Jane, loginID: ID_C
-* CRMID: Jane, loginID: ID_D
-* loginID: ID_C, ECID: 222, AAID: BBB
+CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+CRMID: Tom, loginID:ID_A
+CRMID: Tom, loginID:ID_B
+loginID:ID_A, ECID:111, AAID:AAA
+CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+CRMID: Summer, loginID:ID_C
+CRMID: Summer, loginID:ID_D
+loginID:ID_C, ECID:222, AAID:BBB
 
 **Algorithm configuration:**
 
 You can create this scenario in graph simulation by configuring the following setup for your algorithm configuration:
 
-| Priority | Display name | Identity symbol | Identity type | Unique per graph |
-| ---| --- | --- | --- | --- |
-| 1 | CRMID | CRMID | CROSS_DEVICE | Yes |
-| 2 | Email_LC_SHA256 | Email_LC_SHA256 | EMAIL | No |
-| 3 | Phone_SHA256 | Phone_SHA256 | PHONE | No |
-| 4 | loginID | loginID | CROSS_DEVICE | No |
-| 5 | ECID | ECID | COOKIE | No |
-| 6 | AAID | AAID | COOKIE | No |
+| Priority | Display name | Identity type | Unique per graph |
+| ---| --- | --- | --- | 
+| 1 | CRMID | CROSS_DEVICE | Yes |
+| 2 | Email_LC_SHA256 | Email | No |
+| 3 | Phone_SHA256 | Phone | No |
+| 4 | loginID | CROSS_DEVICE | No |
+| 5 | ECID | COOKIE | No |
+| 6 | AAID | COOKIE | No |
 
 **Primary identity selection for Profile:**
 
@@ -398,3 +398,85 @@ Within the context of this configuration, the primary identity will be defined l
 | Authenticated | CRMID, loginID, ECID, AAID | CRMID |
 | Authenticated | CRMID, ECID | CRMID |
 | Unauthenticated | ECID | ECID |
+
+**Graph examples**
+
+>[!BEGINTABS]
+
+>[!TAB Ideal single-person graph]
+
+![A single-person graph that involves one CRMID and multiple loginIDs](../images/graph-examples/complex_single_person.png)
+
+>[!TAB Multi-person graph: shared device 1]
+
+![A multi-person shared device graph scenario.](../images/graph-examples/complex_shared_device_one.png)
+
+CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+CRMID: Tom, loginID:ID_A
+CRMID: Tom, loginID:ID_B
+loginID:ID_A, ECID:111, AAID:AAA
+CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+CRMID: Summer, loginID:ID_C
+CRMID: Summer, loginID:ID_D
+loginID:ID_C, ECID:222, AAID:BBB
+loginID:ID_C, ECID:111, AAID:AAA
+
+>[!TAB Multi-person graph: shared device 2]
+
+![A multi-person shared device graph scenario where both loginID and CRMID are sent as experience events.](../images/graph-examples/complex_shared_device_two.png)
+
+CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+CRMID: Tom, loginID:ID_A
+CRMID: Tom, loginID:ID_B
+loginID:ID_A, ECID:111, AAID:AAA
+CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+CRMID: Summer, loginID:ID_C
+CRMID: Summer, loginID:ID_D
+loginID:ID_C, ECID:222, AAID:BBB
+CRMID: Summer, loginID:ID_C, ECID:111, AAID:AAA
+loginID:ID_A, ECID:111, AAID:AAA
+
+>[!TAB Multi-person graph: bad loginID data]
+
+![A multi-person graph scenario that involves bad login data.](../images/graph-examples/complex_bad_data.png)
+
+CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+CRMID: Tom, loginID:ID_A
+CRMID: Tom, loginID:ID_B
+loginID:ID_A, ECID:111, AAID:AAA
+CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+CRMID: Summer, loginID:ID_C
+CRMID: Summer, loginID:ID_D
+loginID:ID_C, ECID:222, AAID:BBB
+CRMID: Tom, loginID:ID_C
+
+>[!TAB Multi-person graph: non-unique email]
+
+![A multi-person graph scenario that involves a non-unique email.](../images/graph-examples/complex_non_unique_email.png)
+
+CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+CRMID: Tom, loginID:ID_A
+CRMID: Tom, loginID:ID_B
+loginID:ID_A, ECID:111, AAID:AAA
+CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+CRMID: Summer, loginID:ID_C
+CRMID: Summer, loginID:ID_D
+loginID:ID_C, ECID:222, AAID:BBB
+CRMID: Summer, Email_LC_SHA256: aabbcc
+
+>[!TAB Multi-person graph: non-unique phone]
+
+![A multi-person graph scenario that involves a non-unique phone number.](../images/graph-examples/complex_non_unique_phone.png)
+
+CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+CRMID: Tom, loginID:ID_A
+CRMID: Tom, loginID:ID_B
+loginID:ID_A, ECID:111, AAID:AAA
+CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+CRMID: Summer, loginID:ID_C
+CRMID: Summer, loginID:ID_D
+loginID:ID_C, ECID:222, AAID:BBB
+CRMID: Tom, Phone_SHA256: 111-1111
+CRMID: Summer, Phone_SHA256: 111-1111
+
+>[!ENDTABS]
