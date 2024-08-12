@@ -42,14 +42,23 @@ To begin composing a schema, select **[!UICONTROL Create schema]** in the top-ri
 
 <!-- 193518 Probs update below -->
 
+The [!UICONTROL Create a schema] dialog appears. When creating a schema, you can choose to either manually create a schema by adding fields and field groups, or you can upload a csv file and use ML algorithms to generate a schema. Select a schema creation workflow from the dialog.
+
+![The Create a schema dialog with the workflow options and select highlighted.](../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### Manual or ML-assisted schema creation {#manual-or-assisted}
+
+To learn how you can use a ML algorithm to recommend a schema structure based on a csv file, see the [Machine Learning assisted schema creation guide](../ui/ml-assisted-schema-creation.md). This UI guide focusses on the manual creation workflow. 
+
+### Choose a base class {#choose-a-class}
+
 The [!UICONTROL Create schema] workflow appears. Next, choose a base class for the schema. You can choose between the core classes of [!UICONTROL XDM Individual Profile] and [!UICONTROL XDM ExperienceEvent], or [!UICONTROL Other] if these classes do not suit your purposes. The [!UICONTROL Other] classes option allows you to either [create a new class](#create-new-class) or choose from other pre-existing classes.
 
 See the [XDM individual profile](../classes/individual-profile.md) and [XDM ExperienceEvent](../classes/experienceevent.md) documentation for more information on these classes. For the purposes of this tutorial, select **[!UICONTROL XDM Individual Profile]** followed by **[!UICONTROL Next]**.
 
-<!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
-
-
 ![The [!UICONTROL Create schema] workflow with the [!UICONTROL XDM individual profile] options and [!UICONTROL Next] highlighted.](../images/tutorials/create-schema/individual-profile-base-class.png)
+
+### Name and review {#name-and-review}
 
 After you have selected a class, the [!UICONTROL Name and review] section appears. In this section, you provide a name and description to identify your schema. There are several important considerations to make when deciding on a name for your schema:
 
@@ -64,6 +73,8 @@ This tutorial composes a schema to ingest data related to the members of a loyal
 Enter a human-friendly [!UICONTROL Schema display name] in the text field. Next, enter a suitable description to help identify your schema. When you have reviewed your schema structure and are happy with your settings, select **[!UICONTROL Finish]** to create your schema. 
 
 ![The [!UICONTROL Name and review] section of the [!UICONTROL Create schema] workflow with the [!UICONTROL Schema display name], [!UICONTROL Description], and [!UICONTROL Finish] highlighted.](../images/ui/resources/schemas/name-and-review.png)
+
+### Compose your schema {#compose-your-schema}
 
 The [!DNL Schema Editor] appears. This is the canvas upon which you will compose your schema. The self-titled schema is automatically created in the **[!UICONTROL Structure]** section of the canvas when you arrive in the editor, along with the standard fields included in the base class that you selected. The assigned class for the schema is also listed under **[!UICONTROL Class]** in **[!UICONTROL Composition]** section. 
 

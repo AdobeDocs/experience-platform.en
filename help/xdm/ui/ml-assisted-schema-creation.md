@@ -70,7 +70,7 @@ To add a field to the schema, select **[Add new field]**.
 ![The Review and Edit stage of the schema creation workflow with Add new field highlighted.](../images/ui/ml-schema-creation/add-new-field.png)
 
 The [!UICONTROL Select field] dialog appears. The dialog contains a diagram of the schema as it currently exists. Select the desired field and select **[Select]** to add a new field to the schema. Select **[Cancel]** to close the dialog if needed.
-<!-- ... ../images/ui/ml-schema-creation/ -->
+
 ![The Select field dialog with a field selected and Select highlighted.](../images/ui/ml-schema-creation/select-field-dialog.png)
 
 A new row appears on your recommended schema. You can now edit the field.
