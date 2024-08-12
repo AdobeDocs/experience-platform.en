@@ -18,85 +18,99 @@ This guide explains how to create schemas using machine learning (ML) algorithms
 >
 >You can also compose a schema using the [!DNL Schema Registry] API. To manually create a schema using the API, first read the [[!DNL Schema Registry] developer guide](../api/getting-started.md) before attempting the tutorial on [creating a schema using the API](create-schema-api.md).
 
-
 ## Navigate to the Create schema workflow {#navigate-to-schema-creation-workflow}
 
-From the left navigation of the Platform UI, select the **[!UICONTROL Schemas]** workspace.
+From the left navigation of the Platform UI, select the **[!UICONTROL Schemas]** workspace. The **[!UICONTROL Schemas]** workspace appears. Select **[!UICONTROL Create schema]** to add a new schema to start a schema creation workflow.
 
-![The Platform UI with Schemas highlighted.](../images/ui/schema-workspace/schemas-workspace.png)
-
-The **[!UICONTROL Schemas]** workspace appears. Select **[!UICONTROL Create schema]** to add a new schema to start a schema creation workflow.
-
-![The Schemas workspace with Create schema highlighted.](../images/ui/schema-workspace/create-schema.png)
+![The Schemas workspace with Schema in the left navigation and Create schema highlighted.](../images/ui/ml-schema-creation/schemas-workspace-create-schema.png)
 
 ## Create a Schema
 
-The [!UICONTROL Create a schema] dialog appears. Select the **[Use sample CSV]** schema creation option, followed by **[!UICONTROL Select]** to confirm your choice.
+The [!UICONTROL Create a schema] dialog appears. Select the **[ML- Assisted]** schema creation option, followed by **[!UICONTROL Select]** to confirm your choice.
 
-![The [!UICONTROL Create a schema] dialog with [!UICONTROL Use Sample CSV] highlighted.](../images/ui/schema-workspace/use-sample-csv.png)
+![The [!UICONTROL Create a schema] dialog with [!UICONTROL ML- Assisted] highlighted.](../images/ui/ml-schema-creation/use-sample-csv.png)
 
 ### Select a base class
 
-The [!UICONTROL Create schema] workflow appears. Select a base class for your schema followed by **[UICONTROL Next]**
+The [!UICONTROL Create schema] workflow appears. Select a base class for your schema followed by **[!UICONTROL Next]**.
 
-![Select Base Class](../images/ui/schema-workspace/select-base-class.png)
+![The Schema details workspace with a class and next highlighted.](../images/ui/ml-schema-creation/select-base-class.png)
 
-5. **Upload CSV File**
-   - The **[UICONTROL Select data]** stage of the creation workflow appears. From the **[Upload files]** section, select **[Choose files]**. Select a .csv file from your computer to generate a schema.
-   ![Upload CSV File](../images/ui/schema-workspace/upload-files.png)
+### Upload a CSV File
 
-6. **Preview Data**
-   - The **[UICONTROL Preview]** section displays sample data from the file you uploaded. Select **[Next]** to continue the workflow.
-   ![Preview Data](../images/ui/schema-workspace/preview-data.png)
+The **[!UICONTROL Select data]** stage of the creation workflow appears. From the **[!UICONTROL Upload files]** section, select **[!UICONTROL Choose files]** or the **[!UICONTROL Drag and Drop files]** section. Select a .csv file from your computer to generate a schema.
 
-7. **Review and Edit Schema**
-   - The **[UICONTROL Review and edit]** stage of the creation workflow appears. This view displays the **[UICONTROL Schema recommendation]**. This recommended schema is generated using a machine learning model. You can edit, add, or remove fields as needed.
-     1. **Remove a Field**
-        - Select the minus icon next to the field you wish to remove. (A confirmation dialog appears to confirm the removal.)
-        ![Remove Field](../images/ui/schema-workspace/remove-field.png)
-     2. **Edit a Field**
-        - Select the pencil icon next to the field you wish to edit. A details panel appears to the right where you can edit the custom field mapping. The details panel contains the Target field, Display Name, Data Type, and Field Group. Make any necessary changes and select **[Apply]** to confirm.
-        ![Edit Field](../images/ui/schema-workspace/edit-field.png)
-     3. **Add a Field**
-        - Select **[Add new field]**. The select field dialog appears, containing a diagram of the schema as it currently exists. Select the desired field and **[Add]** it to the schema. Select **[Cancel]** to close the dialog if needed.
-        ![Add New Field](../images/ui/schema-workspace/add-new-field.png)
-     4. **Proceed to the Next Step**
-        - Select **[Next]** to continue the **[UICONTROL Create schema]** workflow.
-        ![Next Button](../images/ui/schema-workspace/next-button.png)
+![The Select data stage of the Create Schema workflow with the Upload files section highlighted.](../images/ui/ml-schema-creation/upload-files.png)
 
-8. **Name and Save Schema**
-   - The **[UICONTROL Name and save]** stage of the creation workflow appears.
-     1. The **[Schema generated]** section provides a diagram of the ML-generated schema. Enter a **[Schema display name]**. Then select **[Finish]** to complete the schema creation workflow.
-     ![Name and Save Schema](../images/ui/schema-workspace/name-and-save.png)
+### Preview Data
 
-9. **View Schema in Editor**
-   - The Schema Editor appears with your newly created schema displayed in the canvas.
-   ![Schema Editor](../images/ui/schema-workspace/schema-editor.png)
+The [!UICONTROL Uplaod file] section displays the name of the CSV file you have imported and the **[!UICONTROL Preview]** section displays rows of sample data from the file you uploaded. Select **[Next]** to continue the workflow.
+
+![Rows of sample data highlighted in the preview section, and Next highlighted.](../images/ui/ml-schema-creation/preview-data.png)
+
+### Review and Edit Schema
+
+The **[!UICONTROL Review and edit]** stage of the creation workflow now appears, displaying the machine learning-assisted **[!UICONTROL Schema recommendation]** in a tabularized view. This recommended schema is generated by a machine learning model and you can edit, add, or remove fields as needed. The table contains the following fields:
+
+| Field Name       | Description  |
+|------------------|---------------------------------------------------------|
+| Data table       | The dataset or database where the field originates. |
+| Source Field     | The original field name from the source system.      |
+| Target Field     | The field name in the target system where the data will be mapped.   |
+| Display Name     | The name used to display the field in the user interface. This should be more user-friendly or descriptive.  |
+| Data Type        | The type of data stored in the field (for example, `String`, `Date`). |
+| Field Group      | A categorization of the field based on its use or context (for example, Demographic Details, Commerce Details).  |
+
+![The Review and Edit stage of the schema creation workflow.](schema-recommendation.png)
+
+#### Add a field {#add-field}
+
+To add a field to the schema, select **[Add new field]**. 
+
+![The Review and Edit stage of the schema creation workflow with Add new field highlighted.](../images/ui/ml-schema-creation/add-new-field.png)
+
+The [!UICONTROL Select field] dialog appears. The dialog contains a diagram of the schema as it currently exists. Select the desired field and select **[Select]** to add a new field to the schema. Select **[Cancel]** to close the dialog if needed.
+<!-- ... ../images/ui/ml-schema-creation/ -->
+![The Select field dialog with a field selected and Select highlighted.](../images/ui/ml-schema-creation/select-field-dialog.png)
+
+A new row appears on your recommended schema. You can now edit the field.
+
+#### Edit a Field {#edit-field}
+   
+To edit a field, select the pencil icon of the row you wish to edit. A details panel appears to the right where you can edit the custom field mapping. The details panel contains the [!UICONTROL Target field], [!UICONTROL Display Name], [!UICONTROL Data Type], and [!UICONTROL Field Group]. Make any necessary changes and select **[Apply]** to confirm. Select the pencil icon again to close the details panel.
+
+![The Review and Edit stage of the schema creation workflow with the pencil icon and details panel highlighted.](../images/ui/ml-schema-creation/edit-field.png)
+
+#### Remove a field {#remove-field}
+
+To remove a field, select the minus icon on a row you want to delete. 
+
+>[!CAUTION]
+>
+>No confirmation dialog appears when removing this item.
+
+![The Review and Edit stage of the schema creation workflow with the minus icon highlighted.](../images/ui/ml-schema-creation/remove-field.png)
+
+#### Approve your recommended schema {#approve}
+
+To approve your recommended schema and continue the **[!UICONTROL Create schema]** workflow, select **[Next]**.
+
+![The Review and Edit stage of the schema creation workflow with Next highlighted.](../images/ui/ml-schema-creation/next.png)
+
+### Name and save schema {#name-and-save}
+
+The **[!UICONTROL Name and save]** stage of the creation workflow appears. Enter a **[Schema display name]** nd optional description. The **[Schema generated]** section provides a diagram of the ML-generated schema. Select **[Finish]** to complete the schema creation workflow.
+
+![The Name and Save Schema stage of the schema creation workflow with Finish highlighted.](../images/ui/ml-schema-creation/name-and-save.png)
+
+### View in the Schema Editor
+
+The Schema Editor appears with your newly created schema displayed in the canvas. Select **[!UICONTROL Save]** to return to the [!UICONTROL Schemas] workspace.
+
+![The Schema Editor displaying your named ML-generated schema.](../images/ui/ml-schema-creation/schema-editor.png)
 
 ## Next Steps
 
 After creating your schema, you can use the Schema Editor to make further modifications, if necessary. Your new schema is now ready to be integrated with your data sources and used for data analysis.
 
-For more information on managing schemas and integrating data sources, please refer to the [Schema Management Guide](./schema-management.md).
-
-<!-- 
-
-1. Select the "Schemas" workspace from the left navigation menu.
-2. Select the "Add Schema" button.
-
-## Use sample CSV {#use-sample-CSV}
-
-3. Select the "Create schema" option.
-    1. The Create a schema dialog appears. Select the **[Use sample CSV]** schema creation option, followed by **[Select]** to confirm your choice.
-    2. The [UICONTROL Create schema] workflow appears. Select a base class for your schema followed by **[UICONTROL Next]**
-4. The  [UICONTROL Select data] stage of the creation workflow appears. From the [UICONTROL Upload files] select **[Choose files]**. Select a .csv file from your computer to generate a schema.
-5. The [UICONTROL Preview] section displays sample data from the file you uploaded. Select [UICONTROL Next] to continue the workflow.  
-6. The  [UICONTROL Review and edit] stage of the creation workflow appears. This view displays the   [UICONTROL Schema recommendation]. This recommended schema is generated using a machine learning model. You can edit, add, or remove fields as you need.
-    1. To remove a field select the minus icon. [NEEDS MORE INFO ON HOW IT WORKS. MISSING FROM DEMO]. (- I assume a confirmation dialog appears?)
-    2. To edit a field select the pencil icon. A details panel  appears to the right where you can edit the custom field mapping. The details panel contains the Target field, Display Name, Data Type, and Field Group. Make any necessary changes and select **[!UICONTROL Apply]** to confirm.
-    3. To add a field select [!UICONTROL Add new field]. The select field dialog appears. This dialog contains a diagram of the schema as it currently exits. [NEEDS MORE INFO ON HOW IT WORKS. MISSING FROM DEMO]. Select **[!UICONTROL Cancel]** to close the dialog.
-    4. Select **[!UICONTROL Next]** to continue the  [UICONTROL Create schema] workflow. 
-7. The  [UICONTROL Name and save] stage of the creation workflow appears. 
-    1. The [!UICOTROL Schema generated] section provides a diagram of the ML generated schema. Enter a [!UICONTROL Schema display name]. Then select [!UICONTROL Finish] to complete the schema creation workflow.
-8. The Schema Editor appears with your newly created schema displayed in the canvas. -->
-
+See the [Edit an existing schema guide](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#edit) for more information on using the Schema Editor.
