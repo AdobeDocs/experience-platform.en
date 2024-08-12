@@ -29,7 +29,15 @@ In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in 
 
 ![The Schemas workspace with [!UICONTROL Create Schema] highlighted.](../../images/ui/resources/schemas/create-schema.png)
 
-<!-- 193518 Probs update below -->
+The [!UICONTROL Create a schema] dialog appears. When creating a schema, you can choose to either manually create a schema by adding fields and field groups, or you can upload a csv file and use ML algorithms to generate a schema. Select a schema creation workflow from the dialog.
+
+![The Create a schema dialog with the workflow options and select highlighted.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### Manual or ML-assisted schema creation {#manual-or-assisted}
+
+To learn how you can use a ML algorithm to recommend a schema structure based on a csv file, see the [Machine Learning assisted schema creation guide](../ml-assisted-schema-creation.md). This UI guide focusses on the manual creation workflow. 
+
+### Manual schema creation {#manual-creation}
 
 The [!UICONTROL Create schema] workflow appears. You can choose a base class for the schema by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice. See the [XDM individual profile](../../classes/individual-profile.md) and [XDM ExperienceEvent](../../classes/experienceevent.md) documentation for more information on these classes.
 
