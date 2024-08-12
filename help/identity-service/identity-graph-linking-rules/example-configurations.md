@@ -60,7 +60,7 @@ The following is an example of an ideal single-person graph, where CRMID is uniq
 
 ![A simulated example of an ideal single-person graph, where CRMID is unique and given the highest priority.](../images/graph-examples/crmid_only_single.png)
 
->[!TAB multi-person graph scenario]
+>[!TAB Multi-person graph scenario]
 
 The following is an example of  a multi-person graph. This example displays a "shared device" scenario, where there are two CRMIDs and the one with the older established link gets removed.
 
@@ -110,15 +110,21 @@ Within the context of this configuration, the primary identity will be defined l
 
 >[!BEGINTABS]
 
->[!TAB Ideal single-person graph scenario]
+>[!TAB Ideal single-person graph]
+
+The following is an example of two single-person graphs, where each CRMID is associated with their respective hashed email namespace and ECID.
 
 ![In this example, two separate graphs are generated, each representing a single-person entity.](../images/graph-examples/crmid_hashed_single.png)
 
->[!TAB multi-person graph: shared device]
+>[!TAB Multi-person graph: shared device]
+
+The following is an example of a multi-person graph scenario where a device  is shared by two people.
 
 ![In this example, the simulated graph displays a "shared device" scenario because both Tom and Summer are associated with the same ECID.](../images/graph-examples/crmid_hashed_shared_device.png)
 
->[!TAB multi-person graph: non-unique email]
+>[!TAB Multi-person graph: non-unique email]
+
+The following is an example of a multi-person graph scenario where email is not unique and is being associated with two different CRMIDs.
 
 ![This scenario is similar to a "shared device" scenario. However, instead of having the person entities share ECID, they are instead associate with the same email account.](../images/graph-examples/crmid_hashed_nonunique_email.png)
 
@@ -126,7 +132,7 @@ Within the context of this configuration, the primary identity will be defined l
 
 ## CRMID with hashed email, hashed phone, GAID, and IDFA
 
-This scenario is similar to the previous one. However, in this scenario, hashed email and phone are being marked as identities to utilize in segment match.
+This scenario is similar to the previous one. However, in this scenario, hashed email and phone are being marked as identities to utilize in [!DNL Segment Match].
 
 **Implementation:**
 
@@ -138,12 +144,14 @@ This scenario is similar to the previous one. However, in this scenario, hashed 
 
 You can create this scenario in graph simulation by copying the following events to text mode:
 
-* CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-* CRMID: Tom, ECID: 111
-* CRMID: Tom, ECID: 222, IDFA: A-A-A
-* CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-* CRMID: Summer, ECID: 333
-* CRMID: Summer, ECID: 444, GAID:B-B-B
+```shell
+CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+CRMID: Tom, ECID: 111
+CRMID: Tom, ECID: 222, IDFA: A-A-A
+CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+CRMID: Summer, ECID: 333
+CRMID: Summer, ECID: 444, GAID:B-B-B
+```
 
 **Algorithm configuration:**
 
@@ -175,83 +183,123 @@ Within the context of this configuration, the primary identity will be defined l
 
 >[!BEGINTABS]
 
->[!TAB Ideal single-person graph scenario]
+>[!TAB Ideal single-person graph]
+
+The following is an ideal single-person graph scenario where hashed email and hashed phone are marked as identities for use in [!DNL Segment Match]. In this scenario, the graphs are split into two, to represent to disparate person entities.
 
 ![An ideal single-person graph scenario.](../images/graph-examples/crmid_hashed_single_seg_match.png)
 
->[!TAB multi-person graph: shared device, shared computer]
+>[!TAB Multi-person graph: shared device, shared computer]
+
+The following is a multi-person graph scenario where a device (computer) is shared by two people. In this scenario, the shared computer is represented by `{ECID: 111}` and is linked to `{CRMID: Summer}` because that link is the most recently established link. `{CRMID: Tom}` is removed because the link between `{CRMID: Tom}` and `{ECID: 111}` is older and because CRMID is the designated unique namespace in this configuration.
 
 ![A multi-person graph scenario where two users are sharing a computer.](../images/graph-examples/shared_device_shared_computer.png)
 
-* CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-* CRMID: Tom, ECID: 111
-* CRMID: Tom, ECID: 222, IDFA: A-A-A
-* CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-* CRMID: Summer, ECID: 333
-* CRMID: Summer, ECID: 444, GAID:B-B-B
-* CRMID: Summer, ECID: 111
+**Graph simulation events input**
 
->[!TAB multi-person graph: shared device, android mobile device]
+```shell
+CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+CRMID: Tom, ECID: 111
+CRMID: Tom, ECID: 222, IDFA: A-A-A
+CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+CRMID: Summer, ECID: 333
+CRMID: Summer, ECID: 444, GAID:B-B-B
+CRMID: Summer, ECID: 111
+```
+
+>[!TAB Multi-person graph: shared device, android mobile device]
+
+The following is a multi-person graph scenario where an android device is shared by two people. In this scenario, CRMID is configured as a unique namespace, and therefore, the newer link of `{CRMID: Tom, GAID: B-B-B, ECID:444}` supersedes the older `{CRMID: Summer, GAID: B-B-B, ECID:444}`.
 
 ![A multi-person graph scenario where two users are sharing an android mobile device.](../images/graph-examples/shared_device_android.png)
 
-* CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-* CRMID: Tom, ECID: 111
-* CRMID: Tom, ECID: 222, IDFA: A-A-A
-* CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-* CRMID: Summer, ECID: 333
-* CRMID: Summer, ECID: 444, GAID: B-B-B
-* CRMID: Tom, ECID: 444, GAID: B-B-B
+**Graph simulation events input**
 
->[!TAB multi-person graph: shared device, apple mobile device, no ECID reset]
+```shell
+CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+CRMID: Tom, ECID: 111
+CRMID: Tom, ECID: 222, IDFA: A-A-A
+CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+CRMID: Summer, ECID: 333
+CRMID: Summer, ECID: 444, GAID: B-B-B
+CRMID: Tom, ECID: 444, GAID: B-B-B
+```
+
+>[!TAB Multi-person graph: shared device, apple mobile device, no ECID reset]
+
+The following is a multi-person graph scenario where an Apple device is shared by two people. In this scenario the IDFA is shared, but the ECID does not reset.
 
 ![A multi-person graph scenario where two users are sharing an Apple mobile device.](../images/graph-examples/shared_device_apple_no_reset.png)
 
-* CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-* CRMID: Tom, ECID: 111
-* CRMID: Tom, ECID: 222, IDFA: A-A-A
-* CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-* CRMID: Summer, ECID: 333
-* CRMID: Summer, ECID: 444, GAID: B-B-B
-* CRMID: Summer, ECID: 222, IDFA: A-A-A
+**Graph simulation events input**
 
->[!TAB multi-person graph: shared device, apple, ECID resets]
+```shell
+CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+CRMID: Tom, ECID: 111
+CRMID: Tom, ECID: 222, IDFA: A-A-A
+CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+CRMID: Summer, ECID: 333
+CRMID: Summer, ECID: 444, GAID: B-B-B
+CRMID: Summer, ECID: 222, IDFA: A-A-A
+```
+
+>[!TAB Multi-person graph: shared device, apple, ECID resets]
+
+The following is a multi-person graph scenario where an Apple device is shared by two people. In this scenario, the ECID resets, but the IDFA remains the same.
 
 ![A multi-person graph scenario where two users are sharing an Apple mobile device, but the ECID is reset.](../images/graph-examples/shared_device_apple_with_reset.png)
 
-* CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-* CRMID: Tom, ECID: 111
-* CRMID: Tom, ECID: 222, IDFA: A-A-A
-* CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-* CRMID: Summer, ECID: 333
-* CRMID: Summer, ECID: 444, GAID: B-B-B
-* CRMID: Summer, ECID: 555, IDFA: A-A-A
+**Graph simulation events input**
 
->[!TAB Non-unique phone]
+```shell
+CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+CRMID: Tom, ECID: 111
+CRMID: Tom, ECID: 222, IDFA: A-A-A
+CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+CRMID: Summer, ECID: 333
+CRMID: Summer, ECID: 444, GAID: B-B-B
+CRMID: Summer, ECID: 555, IDFA: A-A-A
+```
+
+>[!TAB Multi-person graph: Non-unique phone]
+
+The following is a multi-person graph scenario where the same phone number is being shared by two people.
 
 ![A multi-person graph scenario where the phone namespace is not unique.](../images/graph-examples/non_unique_phone.png)
 
-* CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-* CRMID: Tom, ECID: 111
-* CRMID: Tom, ECID: 222, IDFA: A-A-A
-* CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-* CRMID: Summer, ECID: 333
-* CRMID: Summer, ECID: 444, GAID: B-B-B
-* CRMID: Summer, Phone_SHA256: 123-4567
+**Graph simulation events input**
+
+```shell
+CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+CRMID: Tom, ECID: 111
+CRMID: Tom, ECID: 222, IDFA: A-A-A
+CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+CRMID: Summer, ECID: 333
+CRMID: Summer, ECID: 444, GAID: B-B-B
+CRMID: Summer, Phone_SHA256: 123-4567
+```
+
+In this example, `{Phone_SHA256}` is also marked as a unique namespace. Therefore, a graph cannot have more than one identity with the `{Phone_SHA256}` namespace. In this scenario, `{Phone_SHA256: 765-4321}` is unlinked from `{CRMID: Summer}` and `{Email_LC_SHA256: ddeeff}` because it is the older link,
 
 ![A multi-person graph scenario where Phone_SHA256 is unique.](../images/graph-examples/unique_phone.png)
 
->[!TAB Non-unique email]
+>[!TAB Multi-person graph: Non-unique email]
+
+The following is a multi-person graph scenario where email is shared by two people.
 
 ![A multi-person graph scenario where email is not unique](../images/graph-examples/non_unique_email.png)
 
-* CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-* CRMID: Tom, ECID: 111
-* CRMID: Tom, ECID: 222, IDFA: A-A-A
-* CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-* CRMID: Summer, ECID: 333
-* CRMID: Summer, ECID: 444, GAID: B-B-B
-* CRMID: Summer, Email_LC_SHA256: aabbcc
+**Graph simulation events input**
+
+```shell
+CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
+CRMID: Tom, ECID: 111
+CRMID: Tom, ECID: 222, IDFA: A-A-A
+CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
+CRMID: Summer, ECID: 333
+CRMID: Summer, ECID: 444, GAID: B-B-B
+CRMID: Summer, Email_LC_SHA256: aabbcc
+```
 
 >[!ENDTABS]
 
@@ -315,6 +363,9 @@ Within the context of this configuration, the primary identity will be defined l
 
 ![A multi-person shared device scenario.](../images/graph-examples/single_crmid_shared_device.png)
 
+**Graph simulation events input**
+
+```shell
 CRMID: Tom, loginID:ID_A
 CRMID: Tom, loginID:ID_B
 loginID:ID_A, ECID:111
@@ -322,11 +373,16 @@ CRMID: Summer, loginID:ID_C
 CRMID: Summer, loginID:ID_D
 loginID:ID_C, ECID:222
 loginID:ID_C, ECID:111
+```
 
 >[!TAB Multi-person graph scenario: bad data]
 
 ![A multi-person graph scenario with bad data.](../images/graph-examples/single_crmid_bad_data.png)
 
+**Graph simulation events input**
+
+
+```shell
 CRMID: Tom, loginID:ID_A
 CRMID: Tom, loginID:ID_B
 loginID:ID_A, ECID:111
@@ -334,15 +390,20 @@ CRMID: Summer, loginID:ID_C
 CRMID: Summer, loginID:ID_D
 loginID:ID_C, ECID:222
 CRMID: Tom, loginID:ID_D
+```
 
 >[!TAB 'Dangling' loginID]
 
 ![A dangling loginID scenario.](../images/graph-examples/dangling_example.png)
 
+**Graph simulation events input**
+
+```shell
 CRMID: Tom, loginID:ID_A
 CRMID: Tom, loginID:ID_B
 loginID:ID_A, ECID:111
 loginID:ID_C, ECID:111
+```
 
 >[!ENDTABS]
 
@@ -411,6 +472,9 @@ Within the context of this configuration, the primary identity will be defined l
 
 ![A multi-person shared device graph scenario.](../images/graph-examples/complex_shared_device_one.png)
 
+**Graph simulation events input**
+
+```shell
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID:ID_A
 CRMID: Tom, loginID:ID_B
@@ -420,11 +484,15 @@ CRMID: Summer, loginID:ID_C
 CRMID: Summer, loginID:ID_D
 loginID:ID_C, ECID:222, AAID:BBB
 loginID:ID_C, ECID:111, AAID:AAA
+```
 
 >[!TAB Multi-person graph: shared device 2]
 
 ![A multi-person shared device graph scenario where both loginID and CRMID are sent as experience events.](../images/graph-examples/complex_shared_device_two.png)
 
+**Graph simulation events input**
+
+```shell
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID:ID_A
 CRMID: Tom, loginID:ID_B
@@ -435,11 +503,15 @@ CRMID: Summer, loginID:ID_D
 loginID:ID_C, ECID:222, AAID:BBB
 CRMID: Summer, loginID:ID_C, ECID:111, AAID:AAA
 loginID:ID_A, ECID:111, AAID:AAA
+```
 
 >[!TAB Multi-person graph: bad loginID data]
 
 ![A multi-person graph scenario that involves bad login data.](../images/graph-examples/complex_bad_data.png)
 
+**Graph simulation events input**
+
+```shell
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID:ID_A
 CRMID: Tom, loginID:ID_B
@@ -449,11 +521,15 @@ CRMID: Summer, loginID:ID_C
 CRMID: Summer, loginID:ID_D
 loginID:ID_C, ECID:222, AAID:BBB
 CRMID: Tom, loginID:ID_C
+```
 
 >[!TAB Multi-person graph: non-unique email]
 
 ![A multi-person graph scenario that involves a non-unique email.](../images/graph-examples/complex_non_unique_email.png)
 
+**Graph simulation events input**
+
+```shell
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID:ID_A
 CRMID: Tom, loginID:ID_B
@@ -463,11 +539,15 @@ CRMID: Summer, loginID:ID_C
 CRMID: Summer, loginID:ID_D
 loginID:ID_C, ECID:222, AAID:BBB
 CRMID: Summer, Email_LC_SHA256: aabbcc
+```
 
 >[!TAB Multi-person graph: non-unique phone]
 
 ![A multi-person graph scenario that involves a non-unique phone number.](../images/graph-examples/complex_non_unique_phone.png)
 
+**Graph simulation events input**
+
+```shell
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID:ID_A
 CRMID: Tom, loginID:ID_B
@@ -478,5 +558,6 @@ CRMID: Summer, loginID:ID_D
 loginID:ID_C, ECID:222, AAID:BBB
 CRMID: Tom, Phone_SHA256: 111-1111
 CRMID: Summer, Phone_SHA256: 111-1111
+```
 
 >[!ENDTABS]
