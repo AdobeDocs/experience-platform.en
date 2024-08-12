@@ -54,9 +54,15 @@ The class you have created is available and listed in the [!UICONTROL Classes] v
 
 ### Create or edit a class {#create-or-edit}
 
-<!-- 193518 Probs update below -->
+Alternatively, if you choose to manually create a schema, you can create or edit an existing class as part of that workflow. Select **[!UICONTROL Create schema]** followed by **[!UICONTROL Manual]** in the [!UICONTROL Create a schema] dialog that appears.
 
-Alternatively, if you select **[!UICONTROL Create schema]**, the [!UICONTROL Create schema] workflow appears. In the [!UICONTROL Schema details] section, select **[!UICONTROL Other]**. A list of available classes appears. From here you can browse and filter pre-existing classes on which to base your new class.
+>[!NOTE]
+>
+>If you use the ML-assisted schema creation workflow, you can upload a csv file and use ML algorithms to generate a recommended schema, In that schema creation workflow, you do not need to specify the base class for your schema. To learn how ML can recommend a schema structure based on a csv file, see the [Machine Learning assisted schema creation guide](../ml-assisted-schema-creation.md).
+
+![The Create a schema dialog with the workflow options and select highlighted.](../../images/ui/resources/classes/manually-create-a-schema.png)
+
+The schema creation workflow appears. In the [!UICONTROL Schema details] section, select **[!UICONTROL Other]**. A list of available classes appears. From here you can browse and filter pre-existing classes on which to base your new class.
 
 >[!NOTE]
 >
