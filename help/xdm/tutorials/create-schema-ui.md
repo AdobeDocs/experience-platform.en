@@ -40,8 +40,6 @@ To begin composing a schema, select **[!UICONTROL Create schema]** in the top-ri
 
 ![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with [!UICONTROL Create schema] highlighted.](../images/tutorials/create-schema/create-schema-button.png)
 
-<!-- 193518 Probs update below -->
-
 The [!UICONTROL Create a schema] dialog appears. When creating a schema, you can choose to either manually create a schema by adding fields and field groups, or you can upload a csv file and use ML algorithms to generate a schema. Select a schema creation workflow from the dialog.
 
 ![The Create a schema dialog with the workflow options and select highlighted.](../images/tutorials/create-schema/create-a-schema-dialog.png)
