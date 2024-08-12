@@ -50,7 +50,7 @@ Understand from the table below which dataset types you can export depending on 
   <tr>
     <td>Customer Journey Analytics</td>
     <td>All</td>
-    <td> Profile and Experience Event datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.  <br> <p> <b>Note on availability:</b> The ability to export datasets to the cloud is in the Limited Testing phase of release and might not be available yet in your environment. This note will be removed when the functionality is generally available. For information about the Customer Journey Analytics release process, see <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Customer Journey Analytics feature releases</a>. </p> </td>
+    <td> Profile and Experience Event datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager. </td>
   </tr>
   <tr>
     <td>Data Distiller</td>
@@ -131,9 +131,17 @@ Use the check boxes to the left of the dataset names to select the datasets that
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="File export options for datasets"
->abstract="Select **Export incremental files** to export only the data which was added to the dataset since the last export. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. Future incremental files include only the data which was added to the dataset since the first export."
+>abstract="Select **Export incremental files** to export only the data which was added to the dataset since the last export. <br> The first incremental file export includes all the data in the dataset, acting as a backfill. Future incremental files include only the data which was added to the dataset since the first export. <br> Select **Export full files** to export the complete membership of each dataset on each export. "
 
-In the **[!UICONTROL Scheduling]** step, you can set a start date and an end date, as well as an export cadence for your dataset exports. 
+Use the **[!UICONTROL Scheduling]** step to: 
+
+* Set a start date and an end date, as well as an export cadence for your dataset exports.
+* Configure if the exported dataset files should export the complete membership of the dataset or just incremental changes to the membership on each export occurrence.  
+* Customize the folder path in your storage location where datasets should be exported. Read more about how to [edit the folder path](#edit-folder-path).
+
+Use the **[!UICONTROL Edit schedule]** control on the page to edit the export cadence of exports, as well as to select whether to export full or incremental files.
+
+![Edit schedule control highlighted in the Scheduling step.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
 
 The **[!UICONTROL Export incremental files]** option is selected by default. This triggers an export of one or multiple files representing a full snapshot of the dataset. Subsequent files are incremental additions to the dataset since the previous export. You can also select **[!UICONTROL Export full files]**. In this case, select the frequency **[!UICONTROL Once]** for a one-time full export of the dataset.
 
@@ -152,7 +160,7 @@ The **[!UICONTROL Export incremental files]** option is selected by default. Thi
 
 3. Use the **[!UICONTROL Date]** selector to choose the interval when the export should take place.
 
-4. Select **[!UICONTROL Next]** to save the schedule and proceed to the **[!UICONTROL Review]** step.
+4. Select **[!UICONTROL Save]** to save the schedule and proceed to the **[!UICONTROL Review]** step.
 
 >[!NOTE] 
 > 
@@ -221,15 +229,11 @@ To remove datasets from an existing dataflow, follow the steps below:
 
     ![The available datasets navigation option highlighted in the Activation data column.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. [!BADGE Beta] The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog.
-
-    >[!NOTE]
-    >
-    >This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.
+2. The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog.
 
     ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/bulk-remove-datasets.png) 
 
-1. In the confirmation dialog, select **[!UICONTROL Remove]** to immediately remove the dataset from exports to the destination. 
+3. In the confirmation dialog, select **[!UICONTROL Remove]** to immediately remove the dataset from exports to the destination. 
 
     ![Dialog showing the Confirm dataset removal option from the dataflow.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
@@ -266,10 +270,10 @@ Starting with the August 2024 release, it is possible to customize the folder na
 No, there is no capability to copy the manifest file to a different location.
 +++
 
-**Can we control the sequencing/timing of file delivery?**
+**Can we control the sequencing or timing of file delivery?**
 
 +++
-There are options for scheduling the export. There are no options for delaying or sequencing the copy of the files. They are copied as soon as they are generated.
+There are options for scheduling the export. There are no options for delaying or sequencing the copy of the files. They are copied to your storage location as soon as they are generated.
 +++
 
 **What formats are available for the manifest file?**
@@ -293,7 +297,7 @@ There is no possibility to add additional info to the manifest file. The record 
 **How are data files split? How many records per file?**
 
 +++
-Data files are split per the default partitioning in the AEP data lake. Larger datasets will have a higher number of partitions. The default partitioning is not configurable by the user as it is optimized for reading.
+Data files are split per the default partitioning in the Experience Platform data lake. Larger datasets have a higher number of partitions. The default partitioning is not configurable by the user as it is optimized for reading.
 +++
 
 **Can we set a threshold (number of records per file)?**
@@ -302,7 +306,7 @@ Data files are split per the default partitioning in the AEP data lake. Larger d
 No, it is not possible.
 +++
 
-**How do we resend a data set in the event that the initial send is bad?*
+**How do we resend a data set in the event that the initial send is bad?**
 
 +++
 Retries are in place automatically for most types of system errors.
