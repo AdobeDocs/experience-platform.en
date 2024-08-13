@@ -229,11 +229,11 @@ To remove datasets from an existing dataflow, follow the steps below:
 
     ![The available datasets navigation option highlighted in the Activation data column.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-2. The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog.
+1. The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog.
 
     ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/bulk-remove-datasets.png) 
 
-3. In the confirmation dialog, select **[!UICONTROL Remove]** to immediately remove the dataset from exports to the destination. 
+1. In the confirmation dialog, select **[!UICONTROL Remove]** to immediately remove the dataset from exports to the destination. 
 
     ![Dialog showing the Confirm dataset removal option from the dataflow.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
