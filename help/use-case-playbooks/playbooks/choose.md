@@ -7,7 +7,7 @@ exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 ---
 # Choose from a selection of playbooks
 
-To use a playbook, navigate to **[!UICONTROL Use Case Playbooks] > [!UICONTROL Playbooks]**. Browse and use the various searching and filtering options on the page to select and get started with a specific playbook.
+To use a playbook, select **[!UICONTROL Playbooks]** from the left navigation. Browse and use the various searching and filtering options on the page to select and get started with a specific playbook.
 
 ## Search and filter {#search-and-filter}
 

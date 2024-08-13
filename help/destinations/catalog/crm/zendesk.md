@@ -115,12 +115,14 @@ To correctly map your XDM fields to the [!DNL Zendesk] destination fields, follo
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
 1. In the **[!UICONTROL Select target field]** window, choose the **[!UICONTROL Select identity namespace]** category and select a target identity, or choose the **[!UICONTROL Select attributes]** category and select one of the supported schema attributes.
+
     * Repeat these steps to add the following mandatory mappings, you can also add any other attributes you want to update between your XDM profile schema and your [!DNL Zendesk] instance:
-        |Source Field|Target Field| Mandatory|
-        |---|---|---|
-        |`xdm: person.name.lastName`|`xdm: last_name`| Yes |
-        |`IdentityMap: Email`|`Identity: email`| Yes |
-        |`xdm: person.name.firstName`|`xdm: first_name`| |
+
+      |Source Field|Target Field| Mandatory|
+      |---|---|---|
+      |`xdm: person.name.lastName`|`xdm: last_name`| Yes |
+      |`IdentityMap: Email`|`Identity: email`| Yes |
+      |`xdm: person.name.firstName`|`xdm: first_name`| |
 
     * An example using these mappings is shown below:
     ![Platform UI screenshot example with attribute mappings.](../../assets/catalog/crm/zendesk/mappings.png)

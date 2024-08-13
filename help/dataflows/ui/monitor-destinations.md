@@ -80,7 +80,7 @@ A list of individual runs and their particular metrics is displayed, along with 
 
 Each individual dataflow run shows the following details:
 
-- **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at. For streaming dataflow runs, Experience Platform captures metrics based on the start of the dataflow run, in the form of hourly metrics. For streaming dataflow runs, if a dataflow run started, for example,  at 10:30PM, the metric shows the start time as 10:00 PM in the UI.
+- **[!UICONTROL Dataflow run start]**: The time when the dataflow run started. For streaming dataflow runs, Experience Platform captures metrics based on the start of the dataflow run, in the form of hourly metrics. This means that for streaming dataflow runs, if a dataflow run started for example at 10:30PM, the metric shows the start time as 10:00 PM in the UI.
 - **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow run to process.
   - For **[!UICONTROL completed]** runs, the processing time metric always shows one hour.
   - For dataflow runs which are still in a **[!UICONTROL processing]** state, the window to capture all the metrics stays open for more than an hour, to process all metrics that correspond to the dataflow run. For example, a dataflow run that started at 9:30 AM might stay in a processing state for one hour and thirty minutes to capture and process all the metrics. Then, once the processing window closes and the status of the dataflow run updates to **completed**, the displayed processing time is changed to one hour.
@@ -101,6 +101,16 @@ The details page for a dataflow run contains additional information such as the 
 The details page also displays a list of identities that failed and identities that were excluded. Information for both the failed and excluded identities is displayed, including the error code, identity count, and description. By default, the list displays the failed identities. To show skipped identities, select the **[!UICONTROL Identities excluded]** toggle.
 
 ![Dataflow records for streaming destinations with an error message highlighted.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
+
+#### (Beta) Audience-level dataflow run monitoring for streaming destinations {#audience-level-dataflow-runs-for-streaming-destinations}
+
+You can view information about the activated, excluded, or failed identities broken down on an audience level, for each audience that is part of the dataflow. Audience-level monitoring for streaming destinations is currently available for the [[!DNL Google Customer Match + Display & Video 360] destination](/help/destinations/catalog/advertising/google-customer-match-dv360.md) only. 
+
+![Audience-level monitoring for streaming destinations.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
+
+>[!NOTE]
+>
+>The **[!UICONTROL Profiles received]** number in the **[!UICONTROL Audiences]** tab may not always match with the number of profiles received for the dataflow run. This is because a given profile might be part of more than one audience being activated in the dataflow run. 
 
 ### Dataflow runs for batch destinations {#dataflow-runs-for-batch-destinations}
 
@@ -134,7 +144,7 @@ For batch destinations, the [!UICONTROL Dataflow runs] tab provides metric data 
 
 Each individual dataflow run shows the following details:
 
-- **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
+- **[!UICONTROL Dataflow run start]**: The time when the dataflow run started.
 - **[!UICONTROL Audience]**: The name of the audience associated with each dataflow run.
 - **[!UICONTROL Processing time]**: The amount of time it took for the dataflow run to be processed.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow. This value is updated every 60 minutes.
@@ -160,12 +170,25 @@ The details page also displays a list of identities that failed and identities t
 
 ![Dataflow records for batch destinations with an error message highlighted.](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
+### View in monitoring {#view-in-monitoring}
+
+You can also select to view rich information about a certain dataflow and its dataflow runs in the monitoring dashboard. To view information about a dataflow in the monitoring dashboard:
+
+1. Navigate to **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** tab
+2. Navigate to the dataflow that you want to inspect.
+3. Select the ellipsis symbol and ![monitoring icon](/help/images/icons/monitoring.png) **[!UICONTROL View in monitoring]**.
+
+![Select View in monitoring in the destinations workflow to get more information about a dataflow.](/help/dataflows/assets/ui/monitor-destinations/view-in-monitoring.png)
+
+>[!SUCCESS]
+>
+>You can now view information about the dataflow and its associated dataflow runs in the monitoring dashboard. Read the section below for further information. 
+
 ## Monitoring Destinations dashboard {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >
->- Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
->- For the [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), and [HTTP API](/help/destinations/catalog/streaming/http-destination.md) destinations, the metrics related to identities excluded, failed, and activated are estimated. Higher volumes of activation data lead to higher accuracy of the metrics.
+>Destinations monitoring functionality is currently supported for all destinations in Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
@@ -202,17 +225,20 @@ Use the arrow icon (![arrow icon](/help/images/icons/chevron-up.png)) to expand 
 
 The **[!UICONTROL Activation]** graph is displayed by default and you can disable it to expand the list of destinations below. Select the **[!UICONTROL Metrics and graphs]** toggle to disable the graphs.
 
-The **[!UICONTROL Activation]** panel displays a list of destinations that contain at least one existing account. This list also includes information on the profiles received, identities activated, identities failed, identities excluded, activation rate, total failed dataflows, and the last updated date for these destinations. Not all metrics are available for all destination types. The table below outlines the metrics and information available per destination type, streaming or batch.
+The **[!UICONTROL Activation]** panel displays a list of destinations that contain at least one existing account. This list also includes information on the profiles received, identities activated, identities failed, identities excluded, activation rate, total failed dataflows, and the last updated date for these destinations. Not all metrics are available for all destination types. The table below outlines the metrics and information available per destination type.
 
-| Metric | Destination type |
----------|----------|
-| **[!UICONTROL Profiles received]** | Streaming and batch |
-| **[!UICONTROL Identities activated]** | Streaming and batch |
-| **[!UICONTROL Identities failed]** | Streaming |
-| **[!UICONTROL Identities excluded]** | Streaming and batch |
-| **[!UICONTROL Activation rate]** | Streaming |
-| **[!UICONTROL Total failed dataflows]** | Batch |
-| **[!UICONTROL Last updated]** | Streaming and batch |
+| Metric                               | Destination type      |
+|--------------------------------------|-----------------------|
+| **[!UICONTROL Records received]**    | Streaming and batch   |
+| **[!UICONTROL Records activated]**   | Streaming and batch   |
+| **[!UICONTROL Records failed]**      | Streaming             |
+| **[!UICONTROL Records skipped]**     | Streaming and batch   |
+| **[!UICONTROL Data type]**           | Streaming and batch   |
+| **[!UICONTROL Activation rate]**     | Streaming             |
+| **[!UICONTROL Total failed dataflows]** | Batch              |
+| **[!UICONTROL Last updated]**        | Streaming and batch   |
+
+{style="table-layout:auto"}
 
 ![Monitoring dashboard with all activated destinations highlighted.](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
@@ -250,15 +276,15 @@ Use the **[!UICONTROL Show failures only]** toggle to display only the failed ru
 
 ### Audience-level view {#segment-level-view}
 
-When **[!UICONTROL Audiences]** is selected, you see a list of the audiences which were activated to the selected dataflow, within the selected time range. This screen includes audience-level information about the identities activated, identities excluded, as well as the status and the time of the last dataflow run. By reviewing the metrics for identities excluded and activated, you can verify if an audience has been successfully activated or not.
+When **[!UICONTROL Audiences]** is selected, you see a list of the audiences which were activated to the selected dataflow, within the selected time range. This screen includes audience-level information about the records activated, records excluded, as well as the status and the time of the last dataflow run. By reviewing the metrics for records excluded and activated, you can verify if an audience has been successfully activated or not.
 
-For example, you are activating an audience called "Loyalty Members in California" to an Amazon S3 destination "Loyalty Members California December". Let's assume that there are 100 profiles in the selected audience but only 80 out of 100 profiles contain Loyalty ID attributes and you have defined the export mapping rules as `loyalty.id` is required. In this case, on an audience level, you will see 80 identities activated, and 20 identities excluded.
+For example, you are activating an audience called "Loyalty Members in California" to an Amazon S3 destination "Loyalty Members California December". Let's assume that there are 100 profiles in the selected audience but only 80 out of 100 records contain Loyalty ID attributes and you have defined the export mapping rules as `loyalty.id` is required. In this case, on an audience level, you will see 80 records activated, and 20 records excluded.
 
 >[!IMPORTANT]
 >
 >Note the current limitations related to audience-level metrics:
->- The audience-level view is currently only available for batch destinations.
->- Audience-level metrics are currently recorded for successful dataflow runs only. They are not recorded for failed dataflow runs and excluded records.
+>- The audience-level view is currently available for batch (file-based) destinations and the [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) streaming destination only. Rollout is planned for further streaming destinations.
+>- For batch destinations, audience-level metrics are currently recorded for successful dataflow runs only. They are not recorded for failed dataflow runs and excluded records. For dataflow runs to streaming destinations, metrics are captured and displayed for activated and excluded records. 
 
 ![Audiences highlighted in the dataflow panel.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
@@ -267,13 +293,13 @@ Use the filter button ![filter](/help/images/icons/filter-add.png) to drill down
 
 ### Dataflow runs page {#dataflow-runs-page}
 
-The dataflow runs page displays information on your dataflow runs, including the dataflow run start time, processing time, profiles received, identities activated, identities excluded, identities failed, activation rate, and status.
+The dataflow runs page displays information on your dataflow runs, including the dataflow run start time, processing time, records received, records activated, records excluded, records failed, activation rate, and status.
 
 When you drill down into the dataflow runs page from the [audience-level view](#segment-level-view), you have the option of filtering the dataflow runs by the following options:
 
-- **[!UICONTROL Dataflow runs with failed identities]**: For the selected audience, this option lists all the dataflow runs that failed for activation. To inspect why identities in a certain dataflow run failed, see the [dataflow run details page](#dataflow-run-details-page) for that dataflow run.
-- **[!UICONTROL Dataflow runs with skipped identities]**: For the selected audience, this option lists all the dataflow runs where some of the identities were not fully activated and some profiles were skipped. To inspect why identities in a certain dataflow run were skipped, see the [dataflow run details page](#dataflow-run-details-page) for that dataflow run.
-- **[!UICONTROL Dataflow runs with activated identities]**: For the selected audience, this option lists all the dataflow runs that have identities which were successfully activated.
+- **[!UICONTROL Dataflow runs with failed records]**: For the selected audience, this option lists all the dataflow runs that failed for activation. To inspect why records in a certain dataflow run failed, see the [dataflow run details page](#dataflow-run-details-page) for that dataflow run.
+- **[!UICONTROL Dataflow runs with excluded records]**: For the selected audience, this option lists all the dataflow runs where some of the records were not fully activated and some profiles were skipped. To inspect why records in a certain dataflow run were skipped, see the [dataflow run details page](#dataflow-run-details-page) for that dataflow run.
+- **[!UICONTROL Dataflow runs with activated records]**: For the selected audience, this option lists all the dataflow runs that have records which were successfully activated.
 
 ![Radio buttons showing how to filter dataflow runs for audiences.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
@@ -289,13 +315,13 @@ The dataflow run details page, in addition to the details shown on the dataflow 
 - **[!UICONTROL IMS org ID]**: The organization the dataflow belongs to.
 - **[!UICONTROL Last updated]**: The time the dataflow run was last updated.
 
-The details page also has a toggle to switch between dataflow run errors and audiences. This option is only available for dataflow runs in batch destinations.
+The details page also has a toggle to switch between dataflow run errors and audiences. This option is only available for dataflow runs in batch destinations and for the [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) streaming destination. 
 
-The dataflow run errors view displays a list of identities that failed and identities that were excluded. Information for both the failed and excluded identities is displayed, including the error code, identity count, and description. By default, the list displays the failed identities. To show skipped identities, select the **[!UICONTROL Identities excluded]** toggle.
+The dataflow run errors view displays a list of records that failed and records that were skipped. Information for both the failed and skipped records is displayed, including the error code, identity count, and description. By default, the list displays the failed records. To show skipped records, select the **[!UICONTROL Records skipped]** toggle.
 
 ![Identities excluded toggle highlighted in the monitoring view](../assets/ui/monitor-destinations/identities-excluded.png)
 
-When **[!UICONTROL Audiences]** is selected, you see a list of the audiences which were activated in the selected dataflow run. This screen includes audience-level information about the identities activated, identities excluded, as well as the status and the time of the last dataflow run.
+When **[!UICONTROL Audiences]** is selected, you see a list of the audiences which were activated in the selected dataflow run. This screen includes audience-level information about the records activated, records excluded, as well as the status and the time of the last dataflow run.
 
 ![Audiences view in the dataflow run details screen.](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 
