@@ -16,7 +16,7 @@ This guide explains how to create schemas using machine learning (ML) algorithms
 
 >[!NOTE]
 >
->You can also compose a schema using the [!DNL Schema Registry] API. To manually create a schema using the API, first read the [[!DNL Schema Registry] developer guide](../api/getting-started.md) before attempting the tutorial on [creating a schema using the API](create-schema-api.md).
+>You can also compose a schema using the [!DNL Schema Registry] API. To manually create a schema using the API, first read the [[!DNL Schema Registry] developer guide](../api/getting-started.md) before attempting the tutorial on [creating a schema using the API](../tutorials/create-schema-api.md).
 
 ## Navigate to the Create schema workflow {#navigate-to-schema-creation-workflow}
 
