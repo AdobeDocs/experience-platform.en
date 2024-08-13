@@ -25,14 +25,14 @@ If you need to evaluate a segment definition using streaming or edge segmentatio
 
 For example, if you needed to activate an audience with all profiles that viewed a webpage in last 3 days using streaming segmentation, you could create the following queries:
 
-- Q1 (Streaming): All profiles who viewed a web page in last 24 hrs
+- Q1 (Streaming): All profiles who viewed a web page in last 24 hours
 - Q2 (Batch): All profiles who viewed a web page in the last 3 days
 
 Then, you could combine them by referring to Q1 or Q2.
 
 Similarly, if you needed to activate an audience with all profiles that viewed a webpage, you could create the following queries:
 
-- Q3 (Streaming): All profiles who viewed a web page in last 24 hrs
+- Q3 (Streaming): All profiles who viewed a web page in last 24 hours
 - Q4 (Batch): All profiles who viewed a web page.
  
 Then, you could combine them by referring to Q3 or Q4.
@@ -41,7 +41,7 @@ Then, you could combine them by referring to Q3 or Q4.
 >
 >All existing segment definitions that match the query types will remain evaluated using streaming or edge segmentation until they are edited.
 >
->Additionally, all existing segment definitions that currently  meet the other streaming or edge segmentation evaluation criteria will remain evaluated with streaming or edge segmentation.
+>Additionally, all existing segment definitions that currently meet the other streaming or edge segmentation evaluation criteria will remain evaluated with streaming or edge segmentation.
 
 ## Merge policy
 
