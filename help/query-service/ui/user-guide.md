@@ -217,9 +217,9 @@ After a query has been completed, the results are displayed in the **[!UICONTROL
 
 ![The Results tab of the Query Editor console displaying the results of a query run.](../images/ui/query-editor/query-results.png)
 
-## Use cases {#use-cases}
+## Examples {#examples}
 
-Query Service provides solutions to a variety of use cases across industries and business scenarios. These practical examples demonstrate the flexibility and impact of the service in addressing diverse needs. To [uncover how Query Service can bring value to your specific business needs](../use-cases/overview.md), explore the comprehensive collection of use case documents. Learn how to use Query Service to provide insights and solutions for enhanced operational efficiency and business success.
+Query Service provides solutions to a variety of use cases across industries and business scenarios. These examples demonstrate the flexibility and impact of the service in addressing diverse needs. To [uncover how Query Service can bring value to your specific business needs](../use-cases/overview.md), explore the comprehensive collection of use case documents. Learn how to use Query Service to provide insights and solutions for enhanced operational efficiency and business success.
 
 <!-- This video is from 2019. The logic is sounds but the workflow is too outdated. -->
 
