@@ -15,6 +15,12 @@ This document provides answers to frequently asked questions about [!DNL Experie
 
 The following is a list of answers to frequently asked questions about XDM System and use of the [!DNL Schema Registry] API.
 
+## Schema basics
+
+In this section, you can find answers to fundamental questions about schema structure, field usage, and identification in the XDM System.
+
+<!-- ... -->
+
 ### How do I add fields to a schema?
 
 You can add fields to a schema by using a schema field group. Each field group is compatible with one or more classes, allowing the field group to be used in any schema that implements one of those compatible classes. While Adobe Experience Platform provides several industry field groups with their own pre-defined fields, you can add your own fields to a schema by creating custom field groups using the API or the user interface.
@@ -33,15 +39,45 @@ All [!DNL Schema Registry] resources (schemas, field groups, data types, classes
 
 For more information, see the [resource identification](api/getting-started.md#resource-identification) section in the [!DNL Schema Registry] API guide.
 
-### When does a schema start preventing breaking changes?
-
-Breaking changes can be made to a schema as long as it has never been used in the creation of a dataset or enabled for use in [[!DNL Real-Time Customer Profile]](../profile/home.md). Once a schema has been used in dataset creation or enabled for use with [!DNL Real-Time Customer Profile], the rules of [Schema Evolution](schema/composition.md#evolution) become strictly enforced by the system.
-
 ### What is the maximum size of a long field type?
 
 A long field type is an integer with a maximum size of 53(+1) bits, giving it a potential range between -9007199254740992 and 9007199254740992. This is due to a limitation of how JavaScript implementations of JSON represent long integers.
 
 For more information on field types, see the document on [XDM field type constraints](./schema/field-constraints.md).
+
+### What is meta:AltId, and how can I retrieve it?
+
+`meta:altId` is a unique identifier for a schema. The `meta:altId` provides an easy to reference ID for use in API calls. This ID avoids the need to be encoded/decoded each time it is used as with the JSON URI format.
+<!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
+
+### How can I generate a sample payload for a schema?
+
+No Answer available. 
+<!-- INCOMPLETE ... -->
+
+### Can I obtain a sample JSON representation to create a data type?
+
+You can use both the Schema Registry API and Platform UI to create a data type. See the documentation for instructions on how to: 
+
+- [create a data type using the API](./api/data-types#create)
+- [create a data type using the UI](./ui/resources/data-types#create)
+
+### How do I create a complex map object using the Schema UI?
+
+You cannot create a complex map object. However, you can define map fields in the Schema Editor. See the guide on [defining map fields in the UI](./ui/fields/map) for more information.
+
+### How do I create a complex map object using APIs?
+
+You cannot create a complex map object. See the [usage restrictions for map objects](./ui/fields/map#restrictions) for more details.
+
+### How can I manage schema inheritance in Adobe Experience Platform?
+
+No Answer available. 
+<!-- INCOMPLETE ... -->
+
+## Schema Identity Management
+
+This section contains answers to common questions about defining and managing identities within your schemas.
 
 ### How do I define identities for my schema?
 
@@ -49,7 +85,7 @@ In [!DNL Experience Platform], identities are used to identify a subject (typica
 
 Fields can be marked as identities using either the API or user interface.
 
-#### Defining identities in the API
+### Defining identities in the API
 
 In the API, identities are established by creating identity descriptors. Identity descriptors signal that a particular property for a schema is a unique identifier.
 
@@ -57,7 +93,7 @@ Identity descriptors are created by a POST request to the /descriptors endpoint.
 
 For more details on creating identity descriptors in the API, see the document on [descriptors](api/descriptors.md) section in the [!DNL Schema Registry] developer guide.
 
-#### Defining identities in the UI
+### Defining identities in the UI
 
 With your schema open in the Schema Editor, select the field in the **[!UICONTROL Structure]** section of the editor that you wish to mark as an identity. Under **[!UICONTROL Field Properties]** on the right-hand side, select the **[!UICONTROL Identity]** checkbox. 
 
@@ -67,22 +103,49 @@ For more details on managing identities in the UI, see the section on [defining 
 
 Primary identities are optional, since schemas may have either zero or one of them. However, a schema must have a primary identity in order for the schema to be enabled for use in [!DNL Real-Time Customer Profile]. See the [identity](./tutorials/create-schema-ui.md#identity-field) section of the Schema Editor tutorial for more information. 
 
+## Schema Profile Enablement
+
+This section provides guidance on enabling schemas for use with Real-Time Customer Profile.
+
 ### How do I enable a schema for use in [!DNL Real-Time Customer Profile]?
 
 Schemas are enabled for use in [[!DNL Real-Time Customer Profile]](../profile/home.md) through the addition of a "union" tag within the `meta:immutableTags` attribute of the schema. Enabling a schema for use with [!DNL Profile] can be done using the API or the user interface.
 
-#### Enabling an existing schema for [!DNL Profile] using the API
+### Enabling an existing schema for [!DNL Profile] using the API
 
 Make a PATCH request to update the schema and add the `meta:immutableTags` attribute as an array containing the value "union". If the update is successful, the response will show the updated schema which now contains the union tag.
 
 For more information on using the API to enable a schema for use in [!DNL Real-Time Customer Profile], see the [unions](./api/unions.md) document of the [!DNL Schema Registry] developer guide. 
 
-#### Enabling an existing schema for [!DNL Profile] using the UI
+### Enabling an existing schema for [!DNL Profile] using the UI
 
 In [!DNL Experience Platform], select **[!UICONTROL Schemas]** in the left-navigation, and select the name of the schema you wish to enable from the list of schemas. Then, on the right-hand side of the editor under **[!UICONTROL Schema Properties]**, select **[!UICONTROL Profile]** to toggle it on.
 
-
 For more information, see the section on [use in Real-Time Customer Profile](./tutorials/create-schema-ui.md#profile) in the [!UICONTROL Schema Editor] tutorial.
+
+### When Adobe Analytics data is imported as a source, is the automatically created schema enabled for Profile?
+
+The schema is not automatically enabled for for Real-Time Customer Profile. You need to explicitly enable the dataset for Profile based on which schema is enabled for Profile. See the documentation to learn the [steps and requirements needed to enable a dataset for use in Real-Time Customer Profile](../catalog/datasets/user-guide#enable-profile).
+
+### Is it possible to delete schemas that are enabled for Profile?
+
+You cannot delete a Profile-enabled schema after it has been enabled for Real-Time Customer Profile. Once a schema is enabled for Profile, it cannot be disabled or deleted, and fields cannot be removed from the schema. Therefore, it is crucial to carefully plan and verify the schema configuration before enabling it for Profile. You can however, delete a Profile-enabled dataset. Information is found here: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset> 
+
+### Can I delete Profile-enabled schemas?
+
+No, you cannot delete a Profile-enabled schema. To remove a Profile-enabled schema you will need the help of the XDM Platform Support Team and must follow these steps:
+
+1. Delete all the datasets associated with the schema (which is enabled for Profile)
+2. Delete the Profile export snapshot from the sandbox (this requires the help of XDM Platform Support Team)
+3. Force delete schema from the sandbox (this can only be done by the XDM Platform Support Team)
+
+## Schema Modification and Restrictions
+
+This section provides clarifications on schema modification rules and the prevention of breaking changes.
+
+### When does a schema start preventing breaking changes?
+
+Breaking changes can be made to a schema as long as it has never been used in the creation of a dataset or enabled for use in [[!DNL Real-Time Customer Profile]](../profile/home.md). Once a schema has been used in dataset creation or enabled for use with [!DNL Real-Time Customer Profile], the rules of [Schema Evolution](schema/composition.md#evolution) become strictly enforced by the system.
 
 ### Can I edit a union schema directly?
 
@@ -93,6 +156,10 @@ For more information on unions in XDM, see the [unions](./api/unions.md) section
 ### How should I format my datafile to ingest data into my schema?
 
 [!DNL Experience Platform] accepts datafiles in either [!DNL Parquet] or JSON format. The contents of these files must conform to the schema referenced by the dataset. For details about best practices for datafile ingestion, see the [batch ingestion overview](../ingestion/home.md).
+
+### How can I convert a schema into a read-only schema?
+
+You cannot currently convert a schema to read-only.
 
 ## Errors and troubleshooting
 
