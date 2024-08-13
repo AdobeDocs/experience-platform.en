@@ -5,14 +5,35 @@ description: Subscribe to content cards for a specific surface using the subscri
 
 # `subscribeRulesetItems`
 
-The `subscribeRulesetItems` command allows you to subscribe to content cards for a surface. Any time the rulesets are evaluated, the callback provided to this command receives a result object with propositions that hold the content card data.
+The `subscribeRulesetItems` command allows you to subscribe to propositions that are the result of satisfied rulesets.  This is done by specifying which surfaces and schemas to filter by, and providing a callback function.  Any time rulesets are evaluated, the callback function receives a `result` object with an array of propositions within it.  
 
-This command supports the following properties:
+💡 The `subscribeRulesetItems` command is the only way to get propositions that come from rulesets; they are not returned alongside `sendEvent` results.
 
-* `surfaces`: An array of surfaces for which you want to subscribe to content cards.
-* `schemas`: 
-* `callback`:
+## Comand Options
 
+This command takes an `options` object with the following properties:
+
+| Property | Type          | Description                                                  |
+| -------- | ------------- | ------------------------------------------------------------ |
+| surfaces | Array<String> | A list of surfaces.  Propositions will only be received by the callback if they match one of the surfaces provided here. |
+| schemas  | Array<String> | A list of schemas.  Propositions will only be received by the callback if they match one of the schemas provided here. |
+| callback | Function      | A callback function that will be invoked when propositions are the result of satisfied rulesets.  The callback receives two parameters when invoked: `result` and `collectEvent`. |
+
+### Callback parameters
+
+| Parameter    | Type     | Description                                                  |
+| ------------ | -------- | ------------------------------------------------------------ |
+| result       | Object   | This object contains a `propositions` array within it.  These propositions are the direct result of satisfied rulesets.  The `result` object is structured the same as the [result object](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/command-responses) returned by `sendEvent` using a `then` clause. |
+| collectEvent | Function | A convenience function that can be used to send experience edge events to track interactions, displays and other events. |
+
+### collectEvent function
+
+The `collectEvent` function is a convenience function that can be used to send experience edge events to track interactions, displays and other events.  It accepts two parameters.
+
+| Parameter    | Type               | Description                                                  |
+| ------------ | ------------------ | ------------------------------------------------------------ |
+| event type   | String             | A string indicating which proposition event type to emit.  Can be `display`, `interact`, or `dismiss` |
+| propositions | Array<Proposition> | An array of propositions corresponding to the event.         |
 
 ## Subscribe to content cards using the Web SDK tag extension {#tag-extension}
 
@@ -29,15 +50,16 @@ Follow the steps below to subscribe to content cards through the Tags user inter
 
 ## Subscribe to content cards using the Web SDK JavaScript library {#library}
 
-Run the `subscribeRulesetItems` command and provide the surfaces and schemas for which you want to subscribe to content cards.
+The following sample code subscribes to the `web://mywebsite.com/#welcome` surface for content cards and uses the `collectEvent` convenience method to emit `display` events for all propositions.
 
 ```js
 alloy("subscribeRulesetItems", {
-  surfaces: ["web://alloy-samples.adobe.com/#content-cards-sample"],
+  surfaces: ["web://mywebsite.com/#welcome"],
   schemas: ["https://ns.adobe.com/personalization/message/content-card"],
   callback: (result, collectEvent) => {
     const { propositions = [] } = result;
-    contentCardManager.refresh(propositions, collectEvent);
+    renderMyPropositions(propositions);
+    collectEvent("display", propositions);    
   },
 });
 ```
