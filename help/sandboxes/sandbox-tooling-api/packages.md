@@ -139,16 +139,16 @@ The following artifact types are currently supported.
 
 | Artifact | Platform | Object | Partial Flow | Full Sandbox |
 | --- | --- | --- | --- | --- |
-| JOURNEY | Adobe Journey Optimizer | Journeys | Yes | No |
-| ID_NAMESPACE | Customer Data Platform | Identities | Yes | Yes |
-| REGISTRY_DATATYPE | Customer Data Platform | Data type | Yes | Yes |
-| REGISTRY_CLASS | Customer Data Platform | Class | Yes | Yes |
-| REGISTRY_MIXIN | Customer Data Platform | Field group | Yes | Yes |
-| REGISTRY_SCHEMA | Customer Data Platform | Schemas | Yes | Yes |
-| CATALOG_DATASET | Customer Data Platform | Datasets | Yes | Yes |
-| DULE_CONSENT_POLICY | Customer Data Platform | Consent and Governance Policies | Yes | Yes |
-| PROFILE_SEGMENT | Customer Data Platform | Audiences | Yes | Yes |
-| FLOW | Customer Data Platform | Sources dataflow | Yes | Yes |
+| `JOURNEY` | Adobe Journey Optimizer | Journeys | Yes | No |
+| `ID_NAMESPACE` | Customer Data Platform | Identities | Yes | Yes |
+| `REGISTRY_DATATYPE` | Customer Data Platform | Data type | Yes | Yes |
+| `REGISTRY_CLASS` | Customer Data Platform | Class | Yes | Yes |
+| `REGISTRY_MIXIN` | Customer Data Platform | Field group | Yes | Yes |
+| `REGISTRY_SCHEMA` | Customer Data Platform | Schemas | Yes | Yes |
+| `CATALOG_DATASET` | Customer Data Platform | Datasets | Yes | Yes |
+| `DULE_CONSENT_POLICY` | Customer Data Platform | Consent and Governance Policies | Yes | Yes |
+| `PROFILE_SEGMENT` | Customer Data Platform | Audiences | Yes | Yes |
+| `FLOW` | Customer Data Platform | Sources dataflow | Yes | Yes |
 
 **Response**
 
