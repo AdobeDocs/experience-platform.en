@@ -52,7 +52,7 @@ To learn how you can use a ML algorithm to recommend a schema structure based on
 
 The [!UICONTROL Create schema] workflow appears. Next, choose a base class for the schema. You can choose between the core classes of [!UICONTROL XDM Individual Profile] and [!UICONTROL XDM ExperienceEvent], or [!UICONTROL Other] if these classes do not suit your purposes. The [!UICONTROL Other] classes option allows you to either [create a new class](#create-new-class) or choose from other pre-existing classes.
 
-See the [XDM individual profile](../classes/individual-profile.md) and [XDM ExperienceEvent](../classes/experienceevent.md) documentation for more information on these classes. For the purposes of this tutorial, select **[!UICONTROL XDM Individual Profile]** followed by **[!UICONTROL Next]**.
+See the [[!UICONTROL XDM individual profile]](../classes/individual-profile.md) and [[!UICONTROL XDM ExperienceEvent]](../classes/experienceevent.md) documentation for more information on these classes. For the purposes of this tutorial, select **[!UICONTROL XDM Individual Profile]** followed by **[!UICONTROL Next]**.
 
 ![The [!UICONTROL Create schema] workflow with the [!UICONTROL XDM individual profile] options and [!UICONTROL Next] highlighted.](../images/tutorials/create-schema/individual-profile-base-class.png)
 
