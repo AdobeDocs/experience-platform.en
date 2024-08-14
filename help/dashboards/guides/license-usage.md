@@ -88,13 +88,13 @@ The summary tab appears. You can use the granular predictions available on the [
 
 The percentage of predicted usage is determined as follows:
 
-- If the lower and upper bounds are numerically different, they are displayed as a range (for example, 32% - 35%).
-- If the lower and upper bounds are numerically identical and not zero, they are displayed as an approximated value (for example, ~34%).
-- If the lower and upper bounds are numerically identical and zero, they are displayed as exactly 0%.
+- If the lower and upper bounds are significantly different, they are displayed as a range (for example, 32% - 35%).
+- If the lower and upper bounds are nearly identical and not zero, they are displayed as an approximated value (for example, ~34%).
+- If the lower and upper bounds are nearly identical and zero, they are displayed as exactly 0%.
 
 >[!NOTE]
 >
->"Numerically identical" in this situation means that the values are statistically significant to two decimal places (for example, a lower bound of 0.342 and an upper bound of 0.344 are both rounded to 34%).
+>"Nearly identical" in this context means that the values are statistically significant to two decimal places (for example, a lower bound of 0.342 and an upper bound of 0.344 are both rounded to 34%).
 
 The predicted usage feature supports for the following metrics:
 
