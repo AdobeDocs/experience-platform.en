@@ -57,16 +57,16 @@ For more information on field types, see the document on [XDM field type constra
 
 You can use both the Schema Registry API and Platform UI to create a data type. See the documentation for instructions on how to: 
 
-- [Create a data type using the API](./api/data-types#create)
-- [Create a data type using the UI](./ui/resources/data-types#create)
+- [Create a data type using the API](./api/data-types.md#create)
+- [Create a data type using the UI](./ui/resources/data-types.md#create)
 
 ### How do I create a complex map object using the Schema UI?
 
-You cannot create a complex map object. However, you can define map fields in the Schema Editor. See the guide on [defining map fields in the UI](./ui/fields/map) for more information.
+You cannot create a complex map object. However, you can define map fields in the Schema Editor. See the guide on [defining map fields in the UI](./ui/fields/map.md) for more information.
 
 ### How do I create a complex map object using APIs?
 
-You cannot create a complex map object. See the [usage restrictions for map objects](./ui/fields/map#restrictions) for more details.
+You cannot create a complex map object. See the [usage restrictions for map objects](./ui/fields/map.md#restrictions) for more details.
 
 <!-- ### How can I manage schema inheritance in Adobe Experience Platform? -->
 
@@ -123,7 +123,7 @@ For more information, see the section on [use in Real-Time Customer Profile](./t
 
 ### When Adobe Analytics data is imported as a source, is the automatically created schema enabled for Profile?
 
-The schema is not automatically enabled for for Real-Time Customer Profile. You need to explicitly enable the dataset for Profile based on which schema is enabled for Profile. See the documentation to learn the [steps and requirements needed to enable a dataset for use in Real-Time Customer Profile](../catalog/datasets/user-guide#enable-profile).
+The schema is not automatically enabled for for Real-Time Customer Profile. You need to explicitly enable the dataset for Profile based on which schema is enabled for Profile. See the documentation to learn the [steps and requirements needed to enable a dataset for use in Real-Time Customer Profile](../catalog/datasets/user-guide.md#enable-profile).
 
 ### Can I delete Profile-enabled schemas?
 
