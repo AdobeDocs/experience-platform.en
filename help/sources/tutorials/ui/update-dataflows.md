@@ -1,16 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;update dataflows;edit schedule
-description: This tutorial covers the steps for updating a dataflow schedule, including its ingestion frequency and interval rate, using the Sources workspace.
-solution: Experience Platform
+description: Learn how to update an existing sources dataflow in the Experience Platform UI.
 title: Update a Source Connection Dataflow in the UI
-type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 ---
 # Update dataflows in the UI
 
-This tutorial provides you with steps on how to update an existing dataflow, including its schedule and mapping, using the sources workspace.
+Read this tutorial for steps now to update an existing dataflow, including its schedule and mapping configurations, using the sources workspace in the Adobe Experience Platform user interface.
 
-## Getting started
+## Geing started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -24,43 +21,19 @@ This tutorial requires a working understanding of the following components of Ad
 >title="Dataset expiration"
 >abstract="This column indicates the number of days that the target dataset has left before it automatically expires.<br>A dataflow will fail if the target dataset is expired. To prevent a dataflow from failing, ensure that a target dataset is set to expire on the correct date. See the documentation to learn how to update expiration dates."
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. Select **[!UICONTROL Dataflows]** from the top header to view a list of existing dataflows.
+In the Experience Platform UI, select **[!UICONTROL Sources]** from the left navigation and then select **[!UICONTROL Dataflows]** from the top header.
 
-![catalog](../../images/tutorials/update-dataflows/catalog.png)
+![The sources catalog with the dataflows header tab selected.](../../images/tutorials/update-dataflows/catalog.png)
 
-The [!UICONTROL Dataflows] page contains a list of all existing dataflows, including information about their corresponding target dataset, source, and account name.
+>[!TIP]
+>
+>You can sort and filter through your dataflows using filtering capabilities. Read the guide on [filtering sources objects in the UI](./filter.md) for more information.
 
-To sort through the list, select the filter icon ![filter](/help/images/icons/filter.png) on the top left to use the sort panel.
+The [!UICONTROL Dataflows] page displays a list of all existing dataflows in your organization. Locate the dataflow that you want to update and then select the ellipses (`...`) beside it. A dropdown menu appears, displaying a list of options that you can choose from, to make additional configurations to your existing dataflow.
 
-![filter-dataflows](../../images/tutorials/update-dataflows/filter-dataflows.png)
+To update your dataflow, select **[!UICONTROL Update dataflow]**.
 
-The sort panel provides a list of all available sources. You can select more than one source from the list to access a filtered selection of dataflows belonging to different sources.
-
-Select the source you wish to work with to see a list of its existing dataflows. Once you have identified the dataflow you want to update, select the ellipses (`...`) beside the dataflow name.
-
-![edit-source](../../images/tutorials/update-dataflows/edit-source.png)
-
-A dropdown menu appears, providing you with options to update the dataflow you selected. From here, you can choose to update a dataflow's mapping sets and ingestion schedule. You can also select options to inspect the dataflow in the monitoring dashboard, subscribe to alerts, as well as disable or delete the dataflow.
-
-To update your dataflow's information, select **[!UICONTROL Update dataflow]**.
-
-![update-dataflow](../../images/tutorials/update-dataflows/update-dataflow.png)
-
-### Add data
-
-The [!UICONTROL Add data] step appears. Select the appropriate data format to review the contents of your selected data and then select **[!UICONTROL Next]** to proceed.
-
-![add-data](../../images/tutorials/update-dataflows/add-data.png)
-
-### Dataflow detail
-
-In the [!UICONTROL Dataflow detail] page, you can provide an updated name and description for your dataflow as well as reconfigure your dataflow's error threshold. During this step, you can also configure or modify settings for your alert subscription.
-
-Once you have provided your updated values, select **[!UICONTROL Next]**.
-
-![dataflow-detail](../../images/tutorials/update-dataflows/dataflow-detail.png)
-
-### Mapping
+### Update mapping
 
 >[!NOTE]
 >
@@ -74,7 +47,7 @@ From here, you can use the mapping interface to modify the mapping sets applied 
 
 ![mapping](../../images/tutorials/update-dataflows/mapping.png)
 
-### Scheduling
+### Update schedule
 
 The [!UICONTROL Scheduling] step appears, allowing you to update your dataflow's ingestion schedule and automatically ingest the selected source data with the updated mappings.
 
@@ -94,13 +67,8 @@ The **[!UICONTROL Edit schedule]** dialog box provides you with options to updat
 
 ![schedule-pop-up](../../images/tutorials/update-dataflows/schedule-pop-up.png)
 
-### Review
+### Disable dataflow
 
-The **[!UICONTROL Review]** step appears, allowing you to review your dataflow before it is updated.
-
-Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow with the new mapping sets to be created.
-
-![review](../../images/tutorials/update-dataflows/review.png)
 
 ## Next steps
 
