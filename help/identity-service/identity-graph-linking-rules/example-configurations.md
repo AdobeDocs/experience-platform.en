@@ -118,7 +118,7 @@ The following is an example of two single-person graphs, where each CRMID is ass
 
 >[!TAB Multi-person graph: shared device]
 
-The following is an example of a multi-person graph scenario where a device  is shared by two people.
+The following is an example of a multi-person graph scenario where a device is shared by two people.
 
 ![In this example, the simulated graph displays a "shared device" scenario because both Tom and Summer are associated with the same ECID.](../images/graph-examples/crmid_hashed_shared_device.png)
 
@@ -322,12 +322,14 @@ Therefore, **it is crucial that the CRMID is always sent for every user**. Failu
 
 You can create this scenario in graph simulation by copying the following events to text mode:
 
-* CRMID: Tom, loginID: ID_A
-* CRMID: Tom, loginID: ID_B
-* loginID: ID_A, ECID: 111
-* CRMID: Summer, loginID: ID_C
-* CRMID: Summer, loginID: ID_D
-* loginID: ID_C, ECID: 222
+```shell
+CRMID: Tom, loginID: ID_A
+CRMID: Tom, loginID: ID_B
+loginID: ID_A, ECID: 111
+CRMID: Summer, loginID: ID_C
+CRMID: Summer, loginID: ID_D
+loginID: ID_C, ECID: 222
+```
 
 **Algorithm configuration:**
 
@@ -357,9 +359,13 @@ Within the context of this configuration, the primary identity will be defined l
 
 >[!TAB Ideal single-person scenario]
 
+The following is a single-person graph scenario with a single CRMID and multiple loginIDs.
+
 ![A graph scenario that includes a single CRMID and multiple loginIDs.](../images/graph-examples/single_crmid.png)
 
 >[!TAB Multi-person graph scenario: shared device]
+
+The following is a multi-person graph scenario where a device is shared by two people. In this scenario, `{ECID:111}` is linked with both `{loginID:ID_A}` and `{loginID:ID_C}` and the older established link of `{ECID:111, loginID:ID_A}` gets removed.
 
 ![A multi-person shared device scenario.](../images/graph-examples/single_crmid_shared_device.png)
 
@@ -377,10 +383,11 @@ loginID:ID_C, ECID:111
 
 >[!TAB Multi-person graph scenario: bad data]
 
+The following is a multi-person graph scenario that involves bad data. In this scenario, `{loginID:ID_D}` is wrongly linked to two disparate users and the link with the older timestamp is deleted, in favor of the more recently established link.
+
 ![A multi-person graph scenario with bad data.](../images/graph-examples/single_crmid_bad_data.png)
 
 **Graph simulation events input**
-
 
 ```shell
 CRMID: Tom, loginID:ID_A
@@ -395,6 +402,8 @@ CRMID: Tom, loginID:ID_D
 >[!TAB 'Dangling' loginID]
 
 ![A dangling loginID scenario.](../images/graph-examples/dangling_example.png)
+
+The following graph simulates a "dangling" loginID scenario. In this example, two different loginIDs are bound to the same ECID. However, `{loginID:ID_C}` is not linked to the CRMID. Therefore, there is no way for Identity Service to detect that these two loginIDs represent two different entities. 
 
 **Graph simulation events input**
 
@@ -426,14 +435,16 @@ The case of "dangling" loginID also applies for this scenario.
 
 You can create this scenario in graph simulation by copying the following events to text mode:
 
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID:ID_A
-CRMID: Tom, loginID:ID_B
+```shell
+CRMID:Tom, Email_LC_SHA256:aabbcc, Phone_SHA256:123-4567
+CRMID:Tom, loginID:ID_A
+CRMID:Tom, loginID:ID_B
 loginID:ID_A, ECID:111, AAID:AAA
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID:ID_C
-CRMID: Summer, loginID:ID_D
+CRMID:Summer, Email_LC_SHA256:ddeeff, Phone_SHA256:765-4321
+CRMID:Summer, loginID:ID_C
+CRMID:Summer, loginID:ID_D
 loginID:ID_C, ECID:222, AAID:BBB
+```
 
 **Algorithm configuration:**
 
@@ -466,22 +477,26 @@ Within the context of this configuration, the primary identity will be defined l
 
 >[!TAB Ideal single-person graph]
 
+The following is an example of two single-person graphs that each have one CRMID and multiple loginIDs.
+
 ![A single-person graph that involves one CRMID and multiple loginIDs](../images/graph-examples/complex_single_person.png)
 
 >[!TAB Multi-person graph: shared device 1]
+
+The following is a multi-person shared device scenario where `{ECID:111, AAID:AAA}` are both linked to `{loginID:ID_A}` and `{loginID:ID_C}`. In this case, the older established links get removed in favor of the more recently established links.
 
 ![A multi-person shared device graph scenario.](../images/graph-examples/complex_shared_device_one.png)
 
 **Graph simulation events input**
 
 ```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID:ID_A
-CRMID: Tom, loginID:ID_B
+CRMID:Tom, Email_LC_SHA256:aabbcc, Phone_SHA256:123-4567
+CRMID:Tom, loginID:ID_A
+CRMID:Tom, loginID:ID_B
 loginID:ID_A, ECID:111, AAID:AAA
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID:ID_C
-CRMID: Summer, loginID:ID_D
+CRMID:Summer, Email_LC_SHA256:ddeeff, Phone_SHA256:765-4321
+CRMID:Summer, loginID:ID_C
+CRMID:Summer, loginID:ID_D
 loginID:ID_C, ECID:222, AAID:BBB
 loginID:ID_C, ECID:111, AAID:AAA
 ```
@@ -507,20 +522,22 @@ loginID:ID_A, ECID:111, AAID:AAA
 
 >[!TAB Multi-person graph: bad loginID data]
 
+In this scenario, `{loginID:ID_C}` is linked to both `{CRMID:Tom}` and `{CRMID:Summer}`, and is therefore deemed to be bad data because ideal graph scenarios should not linked the same loginIDs to two disparate users. In this case, the older established links are removed in favor of the more recently established links.
+
 ![A multi-person graph scenario that involves bad login data.](../images/graph-examples/complex_bad_data.png)
 
 **Graph simulation events input**
 
 ```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID:ID_A
-CRMID: Tom, loginID:ID_B
+CRMID:Tom, Email_LC_SHA256:aabbcc, Phone_SHA256:123-4567
+CRMID:Tom, loginID:ID_A
+CRMID:Tom, loginID:ID_B
 loginID:ID_A, ECID:111, AAID:AAA
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID:ID_C
-CRMID: Summer, loginID:ID_D
+CRMID:Summer, Email_LC_SHA256:ddeeff, Phone_SHA256:765-4321
+CRMID:Summer, loginID:ID_C
+CRMID:Summer, loginID:ID_D
 loginID:ID_C, ECID:222, AAID:BBB
-CRMID: Tom, loginID:ID_C
+CRMID:Tom, loginID:ID_C
 ```
 
 >[!TAB Multi-person graph: non-unique email]
