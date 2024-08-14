@@ -48,17 +48,17 @@ For more information on field types, see the document on [XDM field type constra
 `meta:altId` is a unique identifier for a schema. The `meta:altId` provides an easy to reference ID for use in API calls. This ID avoids the need to be encoded/decoded each time it is used as with the JSON URI format.
 <!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
 
-### How can I generate a sample payload for a schema?
+<!-- ### How can I generate a sample payload for a schema? -->
 
-No Answer available. 
+<!-- No Answer available.  -->
 <!-- INCOMPLETE ... -->
 
 ### Can I obtain a sample JSON representation to create a data type?
 
 You can use both the Schema Registry API and Platform UI to create a data type. See the documentation for instructions on how to: 
 
-- [create a data type using the API](./api/data-types#create)
-- [create a data type using the UI](./ui/resources/data-types#create)
+- [Create a data type using the API](./api/data-types#create)
+- [Create a data type using the UI](./ui/resources/data-types#create)
 
 ### How do I create a complex map object using the Schema UI?
 
@@ -68,9 +68,9 @@ You cannot create a complex map object. However, you can define map fields in th
 
 You cannot create a complex map object. See the [usage restrictions for map objects](./ui/fields/map#restrictions) for more details.
 
-### How can I manage schema inheritance in Adobe Experience Platform?
+<!-- ### How can I manage schema inheritance in Adobe Experience Platform? -->
 
-No Answer available. 
+<!-- No Answer available.  -->
 <!-- INCOMPLETE ... -->
 
 ## Schema Identity Management
@@ -125,17 +125,17 @@ For more information, see the section on [use in Real-Time Customer Profile](./t
 
 The schema is not automatically enabled for for Real-Time Customer Profile. You need to explicitly enable the dataset for Profile based on which schema is enabled for Profile. See the documentation to learn the [steps and requirements needed to enable a dataset for use in Real-Time Customer Profile](../catalog/datasets/user-guide#enable-profile).
 
-### Is it possible to delete schemas that are enabled for Profile?
-
-You cannot delete a Profile-enabled schema after it has been enabled for Real-Time Customer Profile. Once a schema is enabled for Profile, it cannot be disabled or deleted, and fields cannot be removed from the schema. Therefore, it is crucial to carefully plan and verify the schema configuration before enabling it for Profile. You can however, delete a Profile-enabled dataset. Information is found here: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset> 
-
 ### Can I delete Profile-enabled schemas?
 
-No, you cannot delete a Profile-enabled schema. To remove a Profile-enabled schema you will need the help of the XDM Platform Support Team and must follow these steps:
+You cannot delete a schema after it has been enabled for Real-Time Customer Profile. Once a schema is enabled for Profile, it cannot be disabled or deleted, and fields cannot be removed from the schema. Therefore, it is crucial to carefully plan and verify the schema configuration before enabling it for Profile. You can however, delete a Profile-enabled dataset. Information is found here: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset> 
 
-1. Delete all the datasets associated with the schema (which is enabled for Profile)
-2. Delete the Profile export snapshot from the sandbox (this requires the help of XDM Platform Support Team)
-3. Force delete schema from the sandbox (this can only be done by the XDM Platform Support Team)
+>[!IMPORTANT]
+>
+>To remove a Profile-enabled schema you would need the help of the XDM Platform Support Team and must follow these steps:
+>
+> 1. Delete all the datasets associated with the schema (which is enabled for Profile)
+> 2. Delete the Profile export snapshot from the sandbox (this requires the help of XDM Platform Support Team)
+> 3. Force delete schema from the sandbox (this can only be done by the XDM Platform Support Team)
 
 ## Schema Modification and Restrictions
 
