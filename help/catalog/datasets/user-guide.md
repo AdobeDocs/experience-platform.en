@@ -87,6 +87,10 @@ You can preview dataset sample data from both the inline options of the [!UICONT
 
 This opens the preview window, where the hierarchical view of the schema for the dataset is shown on the right.
 
+>[!NOTE]
+>
+>The schema diagram on the left side of the view only displays fields that contain data. Fields without data are automatically hidden to streamline the UI and focus on relevant information.
+
 ![The dataset preview dialog with information about the structure, as well as sample values, for the dataset are shown.](../images/datasets/user-guide/preview-dataset.png)
 
 Alternatively, from the **[!UICONTROL Dataset activity]** screen, select **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. 
