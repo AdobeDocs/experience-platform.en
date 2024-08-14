@@ -103,21 +103,36 @@ For more information, read about [dataflow runs to batch (file-based) destinatio
 
 ## [!UICONTROL Activation data] {#activation-data}
 
-The [!UICONTROL Activation data] tab displays a list of audiences that have been mapped to the destination, including their start date and end date (if applicable), and other relevant information for the data export, such as export type, schedule, and frequency. To view the details about a particular audience, select its name from the list.
+The **[!UICONTROL Activation data]** tab displays a list of audiences that have been mapped to the destination, including their start date and end date (if applicable), and other relevant information for the data export, such as export type, schedule, and frequency. To view the details about a particular audience, select its name from the list.
 
 >[!TIP]
 >
 >To view and edit details about the attributes and identities mapped to a destination, select **[!UICONTROL Activate audiences]** in the [right rail](#right-rail).
 
+>[!BEGINSHADEBOX]
+
+The **[!UICONTROL Activation data]** tab for a file-based destination.
+
 ![Activation data view batch destination](../assets/ui/details-page/activation-data-batch.png)
+
+>[!ENDSHADEBOX]
+
+
+>[!BEGINSHADEBOX]
+
+The **[!UICONTROL Activation data]** tab for a streaming destination.
 
 ![Activation data view streaming destination](../assets/ui/details-page/activation-data-streaming.png)
 
-### [!BADGE Beta]{type=Informative} Remove multiple audiences from activation flows {#bulk-remove}
+>[!ENDSHADEBOX]
 
->[!NOTE]
->
->This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.
+### Filter activated audiences {#filter-audiences}
+
+To filter through the list of audiences activate to a destination, enter an audience name in the search box. The list of audiences automatically updates with the search results.
+
+![Search box for filtering audiences.](../assets/ui/details-page/filter-audiences.png)
+
+### Remove multiple audiences from activation flows {#bulk-remove}
 
 To remove multiple audiences from existing activation flows, select the audiences and then select **[!UICONTROL Remove audiences]**.
 
@@ -138,3 +153,10 @@ To edit the existing activation schedule of multiple audiences at the same time,
 >[!NOTE]
 >
 >For details on exploring the details page of a audience, refer to the [Audience Portal overview](../../segmentation/ui/audience-portal.md#segment-details).
+
+
+### Edit file names for multiple audiences exported to batch destinations {#bulk-edit-file-names}
+
+To edit the exported file names of multiple audiences at the same time, select the desired audiences and then select **[!UICONTROL Edit file name]**. For detailed information on how to define or edit a file name, read the section on how to [configure file names](../ui/activate-batch-profile-destinations.md#configure-file-names) section.
+
+![Activation data screen highlighting the option to edit file names for multiple audiences.](../assets/ui/details-page/bulk-edit-file-name.png)

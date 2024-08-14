@@ -1,15 +1,10 @@
 ---
-title: (Beta) Export files on-demand to batch destinations using the Experience Platform UI
+title: Export files on-demand to batch destinations using the Experience Platform UI
 type: Tutorial
 description: Learn how to export files on-demand to batch destinations using the Experience Platform UI.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 ---
-# (Beta) Export files on-demand to batch destinations using the Experience Platform UI
-
->[!IMPORTANT]
->
->The **[!UICONTROL Export file now]** option in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
->Contact your Adobe representative for access to this functionality.
+# Export files on-demand to batch destinations using the Experience Platform UI
 
 >[!IMPORTANT]
 > 
