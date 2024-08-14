@@ -89,10 +89,12 @@ The summary tab appears. You can use the granular predictions available on the [
 The predicted usage feature supports for the following metrics:
 
 - [!UICONTROL Addressable audience]
-- [!UICONTROL Average profile richness]
 - [!UICONTROL Compute hours]
 - [!UICONTROL Customer Journey Audience number of rows]
-- [!UICONTROL Total storage]
+- [!UICONTROL Total Data Volume]
+
+<!-- - [!UICONTROL Average profile richness]
+- [!UICONTROL Total storage] -->
 
 ## [!UICONTROL Summary] tab {#summary-tab}
 
@@ -151,6 +153,10 @@ You can also select **[!UICONTROL Custom date]** to choose the time period that 
 
 ## Available metrics {#available-metrics}
 
+>[!IMPORTANT]
+>
+>Starting August 20th, customers licensed for products with '[!UICONTROL Average Profile Richness]' and '[!UICONTROL Total Storage]' as entitlements will instead see 'Total Data Volume' in the License Usage Dashboard. There is no change to customer entitlements, only a simplification of tracking metrics. Total Data Volume refers to the total data available in Adobe Experience Platform Profile Service for engagement and personalization workflows. This simplified metric allows for improved management and measurement of your Profile Service use. Please contact your Adobe representative if you need further clarification on this change"
+
 The license usage dashboard reports on several unique metrics that are applicable to multiple products in the organization. The available metrics are:
 
 | Metric | Description |
@@ -158,7 +164,7 @@ The license usage dashboard reports on several unique metrics that are applicabl
 | [!UICONTROL Audience Activation Size] | The total size of profiles activated to any file-based destination in a year. Note: This does not include profiles sent through streaming destinations. |
 | [!UICONTROL Addressable Audience] | The sum of your business audience entitlement and the consumer audience entitlement. A consumer audience is defined as the number of person profiles identified as a "Consumer Audience" on the sales order. A business audience is defined as the number of business person profiles identified as the "Business Audience" on the sales order. |
 | [!UICONTROL Adhoc Query Service Users Packs]  | An add-on to increase your authorized concurrent Query Service Users entitlement by five additional concurrent Query Service users and one additional concurrently running ad hoc query per pack. Multiple additional Ad Hoc Query User packs may be licensed. |
-| [!UICONTROL Average profile richness] | The sum of all production data stored within the Hub Profile Service at any point in time, divided by five times the number of authorized business person profiles. [!UICONTROL Average profile richness] is a shared feature. |
+| [!UICONTROL Average profile richness] | **Deprecated** - The sum of all production data stored within the Hub Profile Service at any point in time, divided by five times the number of authorized business person profiles. [!UICONTROL Average profile richness] is a shared feature. |
 | [!UICONTROL CJA Rows Available] | The daily average rows of data available for analysis within Customer Journey Analytics.  |
 | [!UICONTROL Computed Attributes] | The total count of aggregated profile behavioral data. Aggregated profile behavioral data is based on experience events that are converted into a profile attribute and can be included in a person profile or business person profile. |
 | [!UICONTROL Consumer Audience] | The number of person profiles identified as "Consumer Audience" on the sales order. |
@@ -172,6 +178,7 @@ The license usage dashboard reports on several unique metrics that are applicabl
 | [!UICONTROL Profile Richness No of Packs] | An increase in your authorized Average Profile Richness by 25 KB per profile for each Additional Profile Richness pack. |
 | [!UICONTROL Query Service Compute Hours] | A measure of the amount of time taken by the Query Service engines to read, process, and write data back into the data lake when a batch query is executed.  |
 | [!UICONTROL Streaming Segmentation No of Packs] | The packs update segment membership for a person profile as new data enters the Segmentation Service through a streaming flow. Segment membership is evaluated based on the current person profile attributes and the value of the current event, without taking historical behavior into account. Streaming Segmentation is a shared feature. |
+| [!UICONTROL Total Data Volume] | The total data available in Adobe Experience Platform Profile Service for engagement and personalization workflows.  |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
