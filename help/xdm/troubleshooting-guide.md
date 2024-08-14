@@ -60,7 +60,7 @@ You can use both the Schema Registry API and Platform UI to create a data type. 
 - [Create a data type using the API](./api/data-types.md#create)
 - [Create a data type using the UI](./ui/resources/data-types.md#create)
 
-### How do I create a complex map object using the Schema UI?
+### What are the usage restrictions for map data type?
 
 You cannot create a complex map object. However, you can define map fields in the Schema Editor. See the guide on [defining map fields in the UI](./ui/fields/map.md) for more information.
 
