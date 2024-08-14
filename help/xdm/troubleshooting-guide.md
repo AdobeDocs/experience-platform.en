@@ -249,9 +249,9 @@ Resources that are defined by your organization must namespace their fields unde
 
 Detailed examples of proper data structures for XDM resources can be found in the Schema Registry API guide:
 
-* [Create a custom class](./api/classes.md#create)
-* [Create a custom field group](./api/field-groups.md#create)
-* [Create a custom data type](./api/data-types.md#create)
+- [Create a custom class](./api/classes.md#create)
+- [Create a custom field group](./api/field-groups.md#create)
+- [Create a custom data type](./api/data-types.md#create)
 
 ### Accept header invalid
 
