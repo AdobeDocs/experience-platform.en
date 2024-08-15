@@ -24,7 +24,7 @@ role: Admin
     * [Users](abac/ui/users.md)
   * Permissions Manager {#permissions-ui}
     * [Overvuew](abac/permissions-manager/overview.md)
-    * [Permissions](abac/permissions-manager/permissions.md)
+    * [Permissions](abac/permissions-manager/permission-manager.md)
   * Attribute-based access control API {#abac-api}
     * [Overview](abac/api/overview.md)
     * [Getting started](abac/api/getting-started.md)
