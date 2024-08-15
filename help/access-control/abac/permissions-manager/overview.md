@@ -1,6 +1,6 @@
 ---
 title: Permission Manager Overview
-description: This document provides information on permissions manager in Adobe Experience Platform
+description: Learn how Permission Manager in Adobe Experience Platform can help you generate reports across multiple workflows.
 ---
 # Permission manager overview {#attribute-based-access-control-overview}
 

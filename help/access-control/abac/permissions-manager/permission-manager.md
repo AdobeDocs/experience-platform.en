@@ -1,6 +1,6 @@
 ---
 title: Attribute-based Access Control Permission Manager
-description: This document provides information on reporting for users and roles through the Permissions Manager in Adobe Experience Platform
+description: Learn how to use Permissions Manager in Adobe Experience Platform for generating reports and validating acceess permissions.
 ---
 # Permission manager
 
@@ -72,3 +72,7 @@ The following information is displayed for each role matching you criteria:
 | Created by | Details of the creator of the role.  |
 
 ![The generated report based on the attributes selected highlighted](../../images/permission-manager/roles-report.png)
+
+## Next steps
+
+You have now learnt how to generate reports for users and roles. To learn more about attribute-based access control, see the [attribute-based access control overview](../overview.md).
