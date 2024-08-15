@@ -12,67 +12,51 @@ Using simple queries in the [!UICONTROL Permission Manager], you can create conc
 
 ## Perform a search for users within a specified user group
 
-Using the dropdown, select the attribute **[!UICONTROL Users]**, followed by the **[!UICONTROL User Group]** you want to search for.
+Using the dropdown, select the attribute **[!UICONTROL Users]**.
 
-![Add image here]()
+![The attribute drop down highlighting Users.](../../images/permission-manager/users-select.png)
 
-For a more granular report, you can specify the resource with actions in a particular sandbox. Select the **[!UICONTROL Resource]** using the drop down. 
-
->[!INFO]
->
->[!UICONTROL Resource] is not a mandatory field. Only one [!UICONTROL Resource] can be selected for each report.
-
-![Add image here]()
-
-Next, select the **[!UICONTROL Actions]** using the drop down. You can select multiple actions, which will be listed beneath this drop down once selected.
+Next, select the **[!UICONTROL User Group]** you want to search for using the drop down.
 
 >[!INFO]
 >
->[!UICONTROL Actions] is not a mandatory field. An action can be removed once added by selecting the **'x'** beside the action.
+>[!UICONTROL User Group] is not a mandatory field. You can only select one user group for each report.
 
-![Add image here]()
+![The User group drop down highlighted.](../../images/permission-manager/user-group-select.png)
 
-Finally, select the **[!UICONTROL Sandboxes]** using the drop down. You can select numerous sandboxes, which will be listed beneath this drop down once selected, then select **[!UICONTROL Show Results]**.
+For a more granular report, you can specify the resource with actions in a particular sandbox. Select the **[!UICONTROL Resource]**, **[!UICONTROL Actions]**, and **[!UICONTROL Sandboxes]** using the drop down, then select **[!UICONTROL Show Results]**.
 
 >[!INFO]
 >
->[!UICONTROL Sandboxes] is not a mandatory field. A sandbox can be removed once added by selecting the **'x'** beside the sandbox you would like to remove.
+>[!UICONTROL Resource], [!UICONTROL Actions], and [!UICONTROL Sandboxes] are not mandatory fields. Only one [!UICONTROL Resource] can be selected for each report. An action or sandbox can be removed once added by selecting the **'x'** beside the selection you would like to remove.
+
+![The Resource, Actions, Sandboxes drop downs, and Show Results highlighted](../../images/permission-manager/users-additional-attributes-select.png)
 
 A list of users and their email address are reported based on the criteria selected. Use the filter menu on the left to update the attributes and results. For more information on a specific user, select the user name from the list.
 
-![Add image here]()
+![The generated report based on the attributes selected highlighted](../../images/permission-manager/users-report.png)
 
 ## Search for roles with specific labels
 
-Using the dropdown, select the attribute **[!UICONTROL Roles]**, followed by the **[!UICONTROL Labels]** you want to search for. 
+Using the dropdown, select the attribute **[!UICONTROL Roles]**.
 
 >[!INFO]
 >
 >[!UICONTROL Labels] is not a mandatory field. You can select multiple labels, which will be listed beneath this drop down once selected. A label can be removed once added by selecting the **'x'** beside the action.
 
-![Add image here]()
+![The attribute drop down highlighting Roles.](../../images/permission-manager/roles-select.png)
 
-For a more granular report, you can specify the resource with actions in a particular sandbox. Select the **[!UICONTROL Resource]** using the drop down. 
+Next, select the **[!UICONTROL Labels]** you want to search for using the drop down. 
 
->[!INFO]
->
->[!UICONTROL Resource] is not a mandatory field. Only one [!UICONTROL Resource] can be selected for each report.
+![The Labels drop down highlighted.](../../images/permission-manager/roles-labels-select.png)
 
-![Add image here]()
-
-Next, select the **[!UICONTROL Actions]** using the drop down. You can select multiple actions, which will be listed beneath this drop down once selected.
+For a more granular report, you can specify the resource with actions in a particular sandbox. Select the **[!UICONTROL Resource]**, **[!UICONTROL Actions]**, and **[!UICONTROL Sandboxes]** using the drop down, then select **[!UICONTROL Show Results]**.
 
 >[!INFO]
 >
->[!UICONTROL Actions] is not a mandatory field. An action can be removed once added by selecting the **'x'** beside the action.
+>[!UICONTROL Resource], [!UICONTROL Actions], and [!UICONTROL Sandboxes] are not mandatory fields. Only one [!UICONTROL Resource] can be selected for each report. An action or sandbox can be removed once added by selecting the **'x'** beside the selection you would like to remove.
 
-![Add image here]()
-
-Finally, select the **[!UICONTROL Sandboxes]** using the drop down. You can select numerous sandboxes, which will be listed beneath this drop down once selected, then select **[!UICONTROL Show Results]**.
-
->[!INFO]
->
->[!UICONTROL Sandboxes] is not a mandatory field. A sandbox can be removed once added by selecting the **'x'** beside the sandbox you would like to remove.
+![The Resource, Actions, Sandboxes drop downs, and Show Results highlighted](../../images/permission-manager/roles-additional-attributes-select.png)
 
 A list of roles is reported based on the criteria selected. Use the filter menu on the left to update the attributes and results. For more information on a specific role, select the role from the list.
 
@@ -86,3 +70,5 @@ The following information is displayed for each role matching you criteria:
 | Modified at | The date and timestamp of when the role was last updated. |
 | Created at | The date and timestamp of when the role was created. |
 | Created by | Details of the creator of the role.  |
+
+![The generated report based on the attributes selected highlighted](../../images/permission-manager/roles-report.png)

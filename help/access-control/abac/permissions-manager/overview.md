@@ -27,7 +27,7 @@ The attribute-based access control workspace for Platform appears, opening on th
 
 Select **[!UICONTROL Permission Manager]** from the left navigation.
 
-![Permission Manager search screen showing available filters.]()
+![The Permission Manager search screen showing available filters.](../../images/permission-manager/permission-manager.png)
 
 ## Next steps
 
