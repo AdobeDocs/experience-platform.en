@@ -7,7 +7,7 @@ exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 
 Read this tutorial for steps now to update an existing dataflow, including its schedule and mapping configurations, using the sources workspace in the Adobe Experience Platform user interface.
 
-## Geing started
+## Get started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
