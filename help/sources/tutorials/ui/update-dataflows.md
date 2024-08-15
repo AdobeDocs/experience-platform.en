@@ -33,7 +33,7 @@ The [!UICONTROL Dataflows] page displays a list of all existing dataflows in you
 
 To update your dataflow, select **[!UICONTROL Update dataflow]**.
 
-### Update mapping
+### Update mapping {#update-mapping}
 
 >[!NOTE]
 >
