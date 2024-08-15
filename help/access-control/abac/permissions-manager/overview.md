@@ -12,8 +12,8 @@ The [!UICONTROL Permission Manager] feature provides reporting and enables you 
 
 With [!UICONTROL Permission Manager], you can search based on:
 
-* [Users and user group](./permssions.md)
-* [Roles and labels](./permissions.md)
+* [Users and user group](./permission-manager.md)
+* [Roles and labels](./permission-manager.md)
 
 You can narrow down your search by selecting specific resources, actions, and sandboxes.
 
@@ -31,5 +31,5 @@ Select **[!UICONTROL Permission Manager]** from the left navigation.
 
 ## Next steps
 
-Once you have navigated the [!UICONTROL Permission Manager] workspace, proceed to the next step to learn more about how you can [search users and roles](./permissions.md).
+Once you have navigated the [!UICONTROL Permission Manager] workspace, proceed to the next step to learn more about how you can [search users and roles](./permission-manager.md).
 
