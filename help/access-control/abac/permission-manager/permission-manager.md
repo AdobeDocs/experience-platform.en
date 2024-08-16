@@ -8,11 +8,16 @@ description: Learn how to use Permissions Manager in Adobe Experience Platform f
 >
 >To access [!UICONTROL Permission Manager], you must be a product administrator. If you do not have admin privileges, contact your system administrator to gain access.
 
-Using simple queries in the [!UICONTROL Permission Manager], you can create concise reports that will help you understand access management and save time validating access permissions across many workflows and granularity levels.
+Use simple queries in the [!UICONTROL Permission Manager], to create concise reports that will help you understand access management and save time validating access permissions across many workflows and granularity levels. You can utilize [!UICONTROL Permission Manager] to find users that belong to a user group and have specified access privileges, as well as roles that have specific labels.
 
 ## Perform a search for users within a specified user group
 
-Using the dropdown, select the attribute **[!UICONTROL Users]**.
+>[!CONTEXTUALHELP]
+>id="platform_permission_manager"
+>title="Permission manager"
+>abstract="Select the attributes for the permission elements you would like to find using the drop downs."
+
+Using the drop down, select the attribute **[!UICONTROL Users]**.
 
 ![The attribute drop down highlighting Users.](../../images/permission-manager/users-select.png)
 
@@ -38,7 +43,7 @@ A list of users and their email address are reported based on the criteria selec
 
 ## Search for roles with specific labels
 
-Using the dropdown, select the attribute **[!UICONTROL Roles]**.
+Using the drop down, select the attribute **[!UICONTROL Roles]**.
 
 >[!INFO]
 >
@@ -60,7 +65,7 @@ For a more granular report, you can specify the resource with actions in a parti
 
 A list of roles is reported based on the criteria selected. Use the filter menu on the left to update the attributes and results. For more information on a specific role, select the role from the list.
 
-The following information is displayed for each role matching you criteria:
+The following information is displayed for each role matching your criteria:
 
 | Attribute | Description |
 | --- | --- |
