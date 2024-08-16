@@ -72,7 +72,7 @@ For relatively complex graph structures, namespace priority plays an important r
 * For experience events, once you have configured Identity Settings for a given sandbox, the primary identity will be determined by the highest namespace priority going forward.
   * This is because experience events are dynamic in nature. An identity map may contain three or more identities, and namespace priority ensures that the most important namespace is associated to the experience event.
 * As a result, the following configurations **will no longer be used by Real-Time Customer Profile**:
-  * The `Primary=true/false` checkbox on data element type in WebSDK. **Note**: Identity namespace and identity value will continue to be used in Profile. Additionally, you must still configure `Primary=true/false` settings because services outside of Real-Time Customer Profile will continue to refer to this configuartion.
+  * The "Primary" checkbox on data element type in WebSDK (which translates to `primary=true` in XDM). **Note**: Identity namespace and identity value will continue to be used in Profile. Additionally, you must still configure your "Primary" checkbox settings because services outside of Real-Time Customer Profile will continue to refer to this configuration.
   * Any fields marked as primary identity on an XDM Experience Event Class schema.
   * Default primary identity settings in the Adobe Analytics source connector (ECID or AAID).
 * On the other hand, **namespace priority does not determine primary identity for profile records**.
@@ -180,4 +180,4 @@ For more information, read the [Privacy service overview](../../privacy-service/
 
 ### Adobe Target and edge personalization
 
-[Edge personalization](../../server-api/personalization-target.md) will continue to to refer to how you configured your `Primary=true/false` setting.
+[Edge personalization](../../server-api/personalization-target.md) will continue to to refer to how you configured your "Primary" checkbox on data element type in WebSDK (which translates to `primary=true` in XDM).
