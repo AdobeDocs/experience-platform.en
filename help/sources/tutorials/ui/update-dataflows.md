@@ -33,42 +33,47 @@ The [!UICONTROL Dataflows] page displays a list of all existing dataflows in you
 
 To update your dataflow, select **[!UICONTROL Update dataflow]**.
 
+![The dropdown menu where options to update dataflows are listed.](../../images/tutorials/update-dataflows/dropdown_update.png)
+
+You are taken to the sources workflow where you can proceed to update aspects of your dataflow, including its details in the [!UICONTROL Provide dataflow details] step.
+
 ### Update mapping {#update-mapping}
 
 >[!NOTE]
 >
 >The edit mapping feature is currently not supported for the following sources: Adobe Analytics, Adobe Audience Manager, HTTP API, and [!DNL Marketo Engage].
 
-The [!UICONTROL Mapping] page provides you with an interface where you can add and remove mapping sets associated with your dataflow.
+During this process, you can also update the mapping sets associated with your dataflow.  The mapping interface displays your dataflow's existing mapping and not a new recommended mapping set. Mapping updates are only applied to dataflow runs scheduled in the future. A dataflow that was scheduled for one-time ingestion cannot have its mapping sets updated.
 
-The mapping interface displays your dataflow's existing mapping set and not a new recommended mapping set. Mapping updates are only applied to dataflow runs scheduled in the future. A dataflow that was scheduled for one-time ingestion cannot have its mapping sets updated.
+Use the mapping interface to modify the mapping sets applied to your dataflow. For comprehensive steps on how to use the mapping interface, see the [data prep UI guide](../../../data-prep/ui/mapping.md) for more information.
 
-From here, you can use the mapping interface to modify the mapping sets applied to your dataflow. For comprehensive steps on how to use the mapping interface, see the [data prep UI guide](../../../data-prep/ui/mapping.md) for more information.
-
-![mapping](../../images/tutorials/update-dataflows/mapping.png)
+![The mapping step of the sources workflow. Use this step to update the mappings associated with your dataflow.](../../images/tutorials/update-dataflows/mapping.png)
 
 ### Update schedule
 
-The [!UICONTROL Scheduling] step appears, allowing you to update your dataflow's ingestion schedule and automatically ingest the selected source data with the updated mappings.
-
->[!NOTE]
->
->You cannot reschedule a dataflow that was scheduled for one-time ingestion.
-
-![new-schedule](../../images/tutorials/update-dataflows/new-schedule.png)
+Once you have updated your dataflow's mappings, you can then proceed to update your ingestion schedule to ingest your dataflow with its new mapping data. You can only update the ingestion schedule of dataflows that were configured to ingestion on a recurring schedule. You cannot reschedule a dataflow that was configured for one-time ingestion.
 
 You can also update the ingestion schedule of your dataflow using the in-line update option provided in the dataflows page.
 
 From the dataflows page, select the ellipses (`...`) beside the dataflow name and then select **[!UICONTROL Edit schedule]** from the dropdown menu that appears.
 
-![edit-schedule](../../images/tutorials/update-dataflows/edit-schedule.png)
+![The scheduling step of the sources workflow. Use this step to update your dataflow's schedule.](../../images/tutorials/update-dataflows/dropdown_edit.png)
 
 The **[!UICONTROL Edit schedule]** dialog box provides you with options to update your dataflow's ingestion frequency and interval rate. Once you set your updated frequency and interval values, select **[!UICONTROL Save]**.
 
-![schedule-pop-up](../../images/tutorials/update-dataflows/schedule-pop-up.png)
+![A pop-up window that you can use to edit your dataflow's ingestion schedule.](../../images/tutorials/update-dataflows/edit_schedule.png)
 
 ### Disable dataflow
 
+You can disable your dataflow by using the same dropdown menu. To disable your dataflow, select **[!UICONTROL Disable dataflow]**. 
+
+![The dropdown menu with the option to disable dataflow.](../../images/tutorials/update-dataflows/dropdown_disable.png)
+
+Next, select [!UICONTROL Disable] from the pop-up window that appears.
+
+![The pop-up window where you must confirm that you want to disable your dataflow.](../../images/tutorials/update-dataflows/disable_dataflow.png)
+
+If and when you later re-enable this dataflow, Experience Platform will automatically schedule backfill runs to cover the period during which the dataflow was disabled. For example, if the dataflow was configured to run hourly and was disabled for 48 hours, upon re-enabling this dataflow, Experience Platform will create 48 backfill runs to processed the missed intervals.
 
 ## Next steps
 
