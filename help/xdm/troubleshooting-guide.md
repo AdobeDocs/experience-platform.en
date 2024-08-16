@@ -60,13 +60,27 @@ You can use both the Schema Registry API and Platform UI to create a data type. 
 - [Create a data type using the API](./api/data-types.md#create)
 - [Create a data type using the UI](./ui/resources/data-types.md#create)
 
-### What are the usage restrictions for map data type?
+### What are the usage restrictions for a map data type?
 
-You cannot create a complex map object. However, you can define map fields in the Schema Editor. See the guide on [defining map fields in the UI](./ui/fields/map.md) for more information.
+XDM places the following restrictions on the use of this data type:
 
-### How do I create a complex map object using APIs?
+- Map types MUST be of type object.
+- Map types MUST NOT have properties defined (in other words, they define "empty" objects).
+- Map types MUST include an additionalProperties.type field that describes the values that may be placed within the map, either string or integer.
+- Multi-entity segmentation can only be defined based on the map keys and not the values.
+- Maps are not supported for account audiences.
 
-You cannot create a complex map object. See the [usage restrictions for map objects](./ui/fields/map.md#restrictions) for more details.
+See the [usage restrictions for map objects](./ui/fields/map.md#restrictions) for more details.
+
+>[!NOTE]
+>
+>Multilevel maps or maps of maps are not supported.
+
+<!-- You cannot create a complex map object. However, you can define map fields in the Schema Editor. See the guide on [defining map fields in the UI](./ui/fields/map.md) for more information. -->
+
+<!-- ### How do I create a complex map object using APIs? -->
+
+<!-- You cannot create a complex map object. -->
 
 <!-- ### How can I manage schema inheritance in Adobe Experience Platform? -->
 
