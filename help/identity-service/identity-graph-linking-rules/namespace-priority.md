@@ -177,3 +177,7 @@ For more information on, read the documents on [Attribution AI](../../intelligen
 * Data lake: Deletes any record with the specified identity as primary or secondary identity.
 
 For more information, read the [Privacy service overview](../../privacy-service/home.md).
+
+### Adobe Target and edge personalization
+
+Edge personalization will continue to use `primary=true`.
