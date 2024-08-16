@@ -180,4 +180,4 @@ For more information, read the [Privacy service overview](../../privacy-service/
 
 ### Adobe Target and edge personalization
 
-Edge personalization will continue to to refer to how you configured your `Primary=true/false` setting.
+[Edge personalization](../../server-api/personalization-target.md) will continue to to refer to how you configured your `Primary=true/false` setting.
