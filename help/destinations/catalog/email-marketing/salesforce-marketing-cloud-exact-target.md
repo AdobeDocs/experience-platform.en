@@ -236,6 +236,7 @@ An example attribute from [!DNL Salesforce Marketing Cloud] is shown below:
 ![Salesforce Marketing Cloud UI screenshot showing an attribute.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
 An example indicating the location of the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** is shown below:
+
 ![Platform UI screenshot example showing Schedule audience export.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
 
 As shown the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** should exactly match the value specified within [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]**.
@@ -243,6 +244,7 @@ As shown the [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]**
 Repeat this section for each activated Platform segment.
 
 A typical example based on the image shown above could be.
+
 | [!DNL (API) Salesforce Marketing Cloud] segment name | [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** | 
 | --- | --- | --- |
 | salesforce mc audience 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |

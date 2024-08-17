@@ -7,6 +7,12 @@ exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
 ---
 # [!DNL JupyterLab] UI overview
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 [!DNL JupyterLab] is a web-based user interface for [Project Jupyter](https://jupyter.org/) and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter Notebooks, code, and data.
 
 This document provides an overview of [!DNL JupyterLab] and its features as well as instructions to perform common actions.

@@ -8,6 +8,12 @@ exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
 ---
 # Package source files into a recipe
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 This tutorial provides instructions on how you can package the provided Retail Sales sample source files into an archive file, which can be used to create a recipe in Adobe Experience Platform [!DNL Data Science Workspace] by following the recipe import workflow either in the UI or using the API.
 
 Concepts to understand:

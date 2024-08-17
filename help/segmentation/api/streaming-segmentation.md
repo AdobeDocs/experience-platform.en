@@ -130,7 +130,6 @@ A successful response returns an array of segment definitions in your organizati
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 30,
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
@@ -164,7 +163,6 @@ A successful response returns an array of segment definitions in your organizati
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 30,
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
@@ -231,7 +229,6 @@ curl -X POST \
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 30,
     "name": "Homepage_continuous",
     "description": "People who are on their homepage - continuous",
     "expression": {
@@ -267,7 +264,6 @@ A successful response returns the details of the newly created streaming-enabled
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 30,
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",
