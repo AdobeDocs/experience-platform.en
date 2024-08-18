@@ -11,11 +11,4 @@ Note: This is only for Data Distiller customers
 
 <!-- this feature would provide the users with machine learning capabilities by writing SQL queries from within query service -->
 
-<!-- 
-You would: 
-create a model
-add constructs
-Train the model
-evaluate and 
-predict
- -->
+
