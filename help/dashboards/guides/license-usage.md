@@ -84,6 +84,10 @@ To see a summary of a products entitlement usage, select a product from the [!UI
 
 The summary tab appears. You can use the granular predictions available on the [!UICONTROL Summary], and [!UICONTROL Details] tabs to ensure informed decision-making for efficient license use.
 
+>[!NOTE]
+>
+>Predicted usage forecasts are based on past usage and should be considered as approximations rather than precise figures.
+
 ![The summary view of a Platform Product with the predicted usage column highlighted.](../images/license-usage/summary-predicted-usage.png)
 
 The percentage of predicted usage is determined as follows:
