@@ -10,7 +10,7 @@ description: Learn how to use Permissions Manager in Adobe Experience Platform f
 
 Use simple queries in the [!UICONTROL Permission Manager], to create concise reports that will help you understand access management and save time validating access permissions across many workflows and granularity levels. You can utilize [!UICONTROL Permission Manager] to find users that belong to a user group and have specified access privileges, as well as roles that have specific labels.
 
-## Perform a search for users within a specified user group
+## Perform a search for users within a specified user group {#search-users}
 
 >[!CONTEXTUALHELP]
 >id="platform_permission_manager"
@@ -41,7 +41,7 @@ A list of users and their email address are reported based on the criteria selec
 
 ![The generated report based on the attributes selected highlighted](../../images/permission-manager/users-report.png)
 
-## Search for roles with specific labels
+## Search for roles with specific labels {#search-roles}
 
 Using the drop down, select the attribute **[!UICONTROL Roles]**.
 
