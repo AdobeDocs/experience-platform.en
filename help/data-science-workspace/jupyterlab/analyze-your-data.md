@@ -8,6 +8,12 @@ exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
 ---
 # Analyze your data using notebooks
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 This tutorial focuses on how to use Jupyter Notebooks, built within Data Science Workspace, to access, explore, and visualize your data. By the end of this tutorial, you should have a understanding of some of the features Jupyter Notebooks offer to better understand your data.
 
 The following concepts are introduced:

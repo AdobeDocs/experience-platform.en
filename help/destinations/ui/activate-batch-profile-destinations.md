@@ -25,6 +25,26 @@ To activate audiences to destinations, you must have successfully [connected to 
 
 ## Supported file formats for export {#supported-file-formats-export}
 
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_header"
+>title="Update the end date for this dataflow"
+>abstract="Update the end date for this dataflow"
+
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_body"
+>title="Update the end date for this dataflow body"
+>abstract="Because of recent updates to this destination, the dataflow now requires an end date. Adobe has set a default end date to March 1st 2025. Please update to your desired end date otherwise the data exports will stop on the default date."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template"
+>title="Edit folder path"
+>abstract="Use several provided macros to customize the folder path where dataset are exported."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template_preview"
+>title="Dataset folder path preview"
+>abstract="Get a preview of the folder structure that gets created in your storage location based on the macros you added in this window."
+
 The following file formats are supported when exporting audiences:
 
 * CSV
@@ -511,7 +531,6 @@ File exports vary in the following ways, depending on whether `segmentMembership
 >id="platform_destinations_activate_exclude_enrichment_attributes"
 >title="Exclude enrichment attributes"
 >abstract="Enable this option to export the profiles from the selected custom uploaded audiences to your destination, while excluding all of their attributes."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="Learn more in documentation"
 
 >[!IMPORTANT]
 >
