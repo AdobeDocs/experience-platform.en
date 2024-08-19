@@ -159,7 +159,11 @@ A successful response returns the updated set of labels for the dataset.
 
 ## Remove labels from a dataset {#remove}
 
-You can remove any previously applied field labels by either updating the existing `optionalLabels` value(s) with a subset of the existing field labels, or an empty list to remove them entirely. Make a PUT request to the [!DNL Dataset Service] API to update or remove previously applied labels. 
+You can remove any previously applied field labels by either updating the existing `optionalLabels` value(s) with a subset of the existing field labels, or an empty list to remove them entirely. Make a PUT request to the [!DNL Dataset Service] API to update or remove previously applied labels.
+
+>[!NOTE]
+>
+>You can entirely remove a dataset's labels by providing an empty list for the `labels` parameter. It is not mandatory for a dataset to retain any labels.
 
 **API format**
 

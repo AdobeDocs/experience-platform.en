@@ -86,7 +86,7 @@ When configuring a datastream as described in the documentation linked above, yo
 
 ## Enterprise destinations {#enterprise-destinations}
 
-[Enterprise destinations](/help/destinations/destination-types.md#streaming-profile-export) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], HTTP API) do not require specific IDs in the data export, as these are designed for enterprise integration use cases. However, you can export identities as XDM attributes or from the identity map, if you wish. View an [example of exported data to the HTTP destination](/help/destinations/catalog/streaming/http-destination.md#exported-data), which includes both the `personalEmail.address` XDM attribute, and the identities `ECID` and `email_lc_sha256` (hashed email address) from the identity map.
+[Enterprise destinations](/help/destinations/destination-types.md#advanced-enterprise-destinations) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], HTTP API) do not require specific IDs in the data export, as these are designed for enterprise integration use cases. However, you can export identities as XDM attributes or from the identity map, if you wish. View an [example of exported data to the HTTP destination](/help/destinations/catalog/streaming/http-destination.md#exported-data), which includes both the `personalEmail.address` XDM attribute, and the identities `ECID` and `email_lc_sha256` (hashed email address) from the identity map.
 
 ## Personalization destinations {#personalization-destinations}
 
