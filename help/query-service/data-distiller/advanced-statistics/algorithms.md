@@ -45,7 +45,7 @@ There are 19 available transformations. These are split into [General transforma
 
 >[!NOTE]
 >
->The input datatype refers to the column on which the imputation is applied. The output datatype refers the column which is produced as an output.
+>The input datatype refers to the column on which the imputation is applied. The output datatype refers the column which is produced as an output after the transformation has taken effect.
 
 #### Numeric imputer {#numeric-imputer}
 
@@ -336,7 +336,43 @@ This example transforms a set of features, rescaling them to the specified range
 ```sql
 TRANSFORM(binarizer(time_spent, 5.0) as binary, bucketizer(course_duration, array(-440.5, 0.0, 150.0, 1000.7)) as buck_features, vector_assembler(array(buck_features, users_count, binary)) as vec_assembler, max_abs_scaler(vec_assembler) as maxScaling, min_max_scaler(maxScaling) as features)
 ```
+
+#### MaxAbsScaler {#maxabsscaler}
+
+<!-- Reword below and remove repetition ... -->
+The `MaxAbsScaler` transformer rescales each feature in a dataset of Vector rows to the range [-1, 1] by dividing by the maximum absolute value of each feature. This transformation is particularly useful for data that contains both positive and negative values and is ideal for preserving sparsity in datasets since it does not shift or center the data.
+
+This transformation ensures that each feature is rescaled without altering the sparsity of the dataset, making it suitable for models sensitive to the scale of input features, such as those involving distance calculations.
+
+More information and examples can be found on the [Spark algorithm documentation](https://spark.apache.org/docs/2.2.0/ml-features.html#maxabsscaler).
+
+**Data types**
+
+- Input datatype: `Array[Double]`
+- Output datatype: `Array[Double]`
+
+**Definition**
+
+```sql
+TRANSFORM(binarizer(time_spent, 5.0) as binary, bucketizer(course_duration, array(-440.5, 0.0, 150.0, 1000.7)) as buck_features, vector_assembler(array(buck_features, users_count, binary)) as vec_assembler, max_abs_scaler(vec_assembler) as maxScaling)
+```
+
+**Parameters**
+
+| Parameter | Description                                                                                             | Type | Default | Optional |
+|-----------|---------------------------------------------------------------------------------------------------------|------|---------|----------|
+| NA        | MaxAbsScaler does not require any additional parameters for its operation.                              | NA   | NA      | NA       |
+
+**Example Transformation**
+
+This example applies several transformations, including `MaxAbsScaler`, to rescale features into the range [-1, 1].
+
+```sql
+TRANSFORM(binarizer(time_spent, 5.0) as binary, bucketizer(course_duration, array(-440.5, 0.0, 150.0, 1000.7)) as buck_features, vector_assembler(array(buck_features, users_count, binary)) as vec_assembler, max_abs_scaler(vec_assembler) as maxScaling)
+```
+
 <!--  -->
+
 <!-- done UP to here -->
 ### Categorical transformations {#categorical-transformations}
 
