@@ -83,21 +83,25 @@ The `implementationDetails` keyword collects information about the SDK version u
 | Environment | The environment where the data was collected. This is always set to `browser`. | `xdm.implementationDetails.environment` | `browser` |
 
 
-### High entropy client hints
+### High entropy client hints {#high-entropy-client-hints}
+
+>[!TIP]
+>
+>See the documentation on [user agent client hints](../../use-cases/client-hints.md) for detailed information on how to configure them.
 
 The `"highEntropyUserAgentHints"` keyword collects detailed information about the user's device. This data is included in the HTTP header of the request sent to Adobe. After the data has arrived within the Edge network, the XDM object populates its respective XDM path. If you set the respective XDM path in your `sendEvent` call, it takes precedence over the HTTP header value.
 
 If you use device lookups when [configuring your datastream](/help/datastreams/configure.md), data can be cleared out in favor of device lookup values. Some client hint fields and device lookup fields cannot exist in the same hit.
 
-| Dimension | Description | HTTP header | XDM path | Example value |
+| Property | Description | HTTP header | XDM path | Example |
 | --- | --- | --- | --- | --- |
-| Operating system version | The version of the operating system. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | |
-| Architecture | The underlying CPU architecture. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | |
-| Device model | The name of the device used. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | |
-| Bitness | The number of bits that the underlying CPU architecture supports. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | |
-| Browser vendor | The company that created the browser. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-CH-UA-Full-Version-List` | | |
-| Browser name | The browser used. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | |
-| Browser version | The significant version of the browser. The low entropy hint `Sec-CH-UA` also collects this element. Exact browser version is not automatically collected. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | |
+| Operating system version | The version of the operating system. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` |
+| Architecture | The underlying CPU architecture. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` |
+| Device model | The name of the device used. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` |
+| Bitness | The number of bits that the underlying CPU architecture supports. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` |
+| Browser vendor | The company that created the browser. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor`  | `Google` |
+| Browser name | The browser used. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
+| Browser version | The significant version of the browser. The low entropy hint `Sec-CH-UA` also collects this element. Exact browser version is not automatically collected. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
 {style="table-layout:auto"}
 
