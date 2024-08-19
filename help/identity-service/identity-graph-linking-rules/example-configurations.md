@@ -1,9 +1,9 @@
 ---
-title: Example Configurations 
-description: Learn about example configurations with using the graph simulation tool.
+title: Graph Configurations Guide
+description: Learn about common graph scenarios that you might encounter when working with identity graph linking rules and identity data.
 badge: Beta
 ---
-# Example graph configurations
+# Graph configurations guide
 
 >[!AVAILABILITY]
 >
@@ -14,7 +14,7 @@ badge: Beta
 >* "CRMID" and "loginID" are custom namespaces. In this document, "CRMID" is a person identifier and "loginID" is a login identifier associated with a given person.
 >* To simulate the example graph scenarios outlined in this document, you must first create two custom namespaces, one with the identity symbol "CRMID" and another with the identity symbol "loginID". Identity symbols are case sensitive.
 
-This document outlines example graph configurations of common scenarios that you might encounter when working with identity graph linking rules and identity data.
+This document outlines graph configuration examples of common scenarios that you might encounter when working with identity graph linking rules and identity data.
 
 ## CRMID only
 
