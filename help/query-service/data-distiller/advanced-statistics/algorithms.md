@@ -21,11 +21,11 @@ The machine learning model cannot accept string values or null values, so it's n
 
 Machine learning models can only process numeric data. For instance, in a movie dataset with review comments, the model will not understand the text data directly. Transformations, such as encoding or vectorization, help convert English sentences into numeric arrays or numbers, enabling the machine learning model to interpret and learn from the data.
 
-### Automatic feature transformation
+### Automatic feature transformation {#automatic-transformations}
 
 Null replacement transformation is automatic if you do not specify speicify transformations.
 
-### Custom defined transformations
+### Manual feature transformations {#manual-transformations}
 
 You can add any number of the available transformations to your SQL statement with the `transformation()` keyword.
 

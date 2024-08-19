@@ -73,6 +73,10 @@ FROM   test -dataset)
 
 The `model_evaluate` function takes `model-alias` as its first argument and a flexible `SELECT` statement as its second argument. Query Service first executes the `SELECT` statement and maps the results to the `model_evaluate` Adobe Defined Function (ADF). The system expects the column names and data types in the `SELECT` statement's result to match those used in the training step. These column names and data types are treated as test data and label data for evaluation.
 
+>[!IMPORTANT]
+>
+>When evaluating (`model_evaluate`) and predicting (`model_predict`), the transformation(s) conducted at the time of training are used.
+
 ## Predict {#predict}
 
 Next, use the `model_predict` keyword to apply the specified model and version to a dataset and generate predictions for the selected columns. The SQL below demonstrates this process, showing how to forecast outcomes using the model's alias and version.
@@ -87,11 +91,13 @@ FROM   dataset)
 
 `model_predict` accepts the model alias as the first argument and a flexible `SELECT` statement as the second argument. Query Service first executes the `SELECT` statement and maps the results to the `model_predict` ADF. The system expects that the column names and data types in the `SELECT` statement's result to match those from the training step. This data is then used for scoring and generating predictions.
 
+>[!IMPORTANT]
+>
+>When evaluating (`model_evaluate`) and predicting (`model_predict`), the transformation(s) conducted at the time of training are used.
+
 ## Evaluate and manage your models
 
-The `SHOW MODELS` command is used to list all the available machine learning models in the database. Use it to view the models that have been trained and are available for testing, evaluation, or prediction.
-<!-- Working on this bit -->
-This information is fetched from the model repository which is saved at the time of model creation. The details are: `model id`, `model name`, `version`, `source dataset`, `algorithm details`, `options/parameters`, `created/updated` time. 
+The `SHOW MODELS` command is used to list all the available machine learning models in the database. Use it to view the models that have been trained and are available for testing, evaluation, or prediction. When queried, the information is fetched from the model repository which is saved at the time of model creation. The details returned are: model id, model name, version, source dataset, algorithm details, options/parameters, created/updated time, and the user who created the model. 
 
 ```sql
 SHOW MODELS;
@@ -103,16 +109,15 @@ The results appear in a table similar to the one seen below:
 |--------------------|---------------|---------|------------------|-----------------------|------------------------------|---------------------------------------------------------------------------|----------------------|---------------------|---------------------|------------|
 |`model-84362-mdunj` | `SalesModel`  | 1.0     | `sales_data_2023`| `LogisticRegression`  | `{"label": "label-field"}`   | `one_hot_encoder(name)`, `ohe_name`, `string_indexer(gender)`, `genderSI` | \["name", "gender"\] | 2024-08-14 10:30 AM | 2024-08-14 11:00 AM | `JohnSnow@adobe.com` |
 
-<!-- WIP above -->
-
 ## Cleanup and maintain your models
 
-Use the `DROP MODELS` command to delete specified machine learning models from the database. You can use it to remove outdated, unused, or unwanted models. This frees up resources and ensuring that only relevant models are maintained.
+Use the `DROP MODELS` command to delete specified machine learning models from the database. You can use it to remove outdated, unused, or unwanted models. This frees up resources and ensuring that only relevant models are maintained. You can also include an optional model name for improved specificity. This This only drops model with the provided model version.
+
+```sql
+DROP MODEL IF EXISTS modelName
+DROP MODEL IF EXISTS modelName modelVersion ;
+```
 
 ## Next steps
 
-After reading this document, you now understand the base SQL syntax required for the core processes of building and deploying a machine learning model. You should now read the document that describes the transformations and options that are available. 
-
-By converting or scaling data into a format or structure that is more suitable for model training and analysis you can improve model performance and accuracy by ensuring that the data aligns with the model's assumptions and optimizes its ability to learn patterns.
-<!-- "transformation" refers to the process of converting or scaling data into a format or structure that is more suitable for model training and analysis.
- -->
+After reading this document, you now understand the base SQL syntax required for the core processes of building and deploying a machine learning model. You should now read the document that describes the [transformations, options, and algorithms that are available](./algorithms.md). 
