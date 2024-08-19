@@ -15,7 +15,7 @@ Use simple queries in the [!UICONTROL Permission Manager], to create concise rep
 >[!CONTEXTUALHELP]
 >id="platform_permission_manager"
 >title="Permission manager"
->abstract="Select the attributes for the permission elements you would like to find using the drop downs."
+>abstract="Use the dropdown selectors on the page to get access level reports of different granularity levels for users and roles."
 
 Using the drop down, select the attribute **[!UICONTROL Users]**.
 
