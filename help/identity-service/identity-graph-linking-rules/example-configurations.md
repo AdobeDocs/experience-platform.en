@@ -81,6 +81,10 @@ CRMID: Summer, ECID: 111
 
 In this scenario, a CRMID is ingested and represents both online (experience event) and offline (profile record) data. This scenario also involves the ingestion of a hashed email, which represents another namespace sent in the CRM record dataset along with the CRMID.
 
+>[!IMPORTANT]
+>
+>**It is crucial that the CRMID is always sent for every user**. Failure to do so may result in a "dangling" login ID scenario, where a single person entity is assumed to be sharing a device with another person.
+
 **Implementation:**
 
 | Namespaces used | Web behavior collection method |
@@ -164,6 +168,10 @@ CRMID: Summer, Email_LC_SHA256: aabbcc
 ## CRMID with hashed email, hashed phone, GAID, and IDFA
 
 This scenario is similar to the previous one. However, in this scenario, hashed email and phone are being marked as identities to utilize in [[!DNL Segment Match]](../../segmentation/ui/segment-match/overview.md).
+
+>[!IMPORTANT]
+>
+>**It is crucial that the CRMID is always sent for every user**. Failure to do so may result in a "dangling" login ID scenario, where a single person entity is assumed to be sharing a device with another person.
 
 **Implementation:**
 
@@ -625,6 +633,10 @@ The graph configuration examples in this section outlines use cases for Real-Tim
 
 * Registered user (users that created an account)
 * Guest users (users that only have an email address)
+
+>[!IMPORTANT]
+>
+>**It is crucial that the CRMID is always sent for every user**. Failure to do so may result in a "dangling" login ID scenario, where a single person entity is assumed to be sharing a device with another person.
 
 **Implementation:**
 
