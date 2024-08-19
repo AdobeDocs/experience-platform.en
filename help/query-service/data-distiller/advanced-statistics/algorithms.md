@@ -371,6 +371,39 @@ This example applies several transformations, including `MaxAbsScaler`, to resca
 TRANSFORM(binarizer(time_spent, 5.0) as binary, bucketizer(course_duration, array(-440.5, 0.0, 150.0, 1000.7)) as buck_features, vector_assembler(array(buck_features, users_count, binary)) as vec_assembler, max_abs_scaler(vec_assembler) as maxScaling)
 ```
 
+#### Normalizer {#normalizer}
+
+The `Normalizer` is a `Transformer` that normalizes each `Vector` in a dataset of `Vector` rows to have a unit norm. This transformation is useful for scaling the input vectors without changing their direction, making it particularly relevant in tasks where the magnitude of vectors may vary significantly.
+
+This transformation ensures that all input vectors have a consistent scale, which is particularly useful in machine learning models that rely on distance measures or other vector-based calculations.
+
+More information and examples can be found on the [Spark algorithm documentation](https://spark.apache.org/docs/2.2.0/ml-features.html#normalizer)
+
+**Data types**
+
+- Input datatype: `array[double]` / `vector[double]`
+- Output datatype: `vector[double]`
+
+**Definition**
+
+```sql
+TRANSFORM(binarizer(time_spent, 5.0) as binary, bucketizer(course_duration, array(-440.5, 0.0, 150.0, 1000.7)) as buck_features, vector_assembler(array(buck_features, users_count, binary)) as vec_assembler, normalizer(vec_assembler, 3) as normalized)
+```
+
+**Parameters**
+
+| Parameter | Description                                                                            | Type    | Default | Optional |
+|-----------|----------------------------------------------------------------------------------------|---------|---------|----------|
+| `p`       | Specifies the `p-norm` used for normalization (for example, `1-norm`, `2-norm`, etc.). | integer | 2       | optional |
+
+**Example Transformation**
+
+This example demonstrates how to apply several transformations, including the `Normalizer`, to normalize a set of features using the specified `p-norm`.
+
+```sql
+TRANSFORM(binarizer(time_spent, 5.0) as binary, bucketizer(course_duration, array(-440.5, 0.0, 150.0, 1000.7)) as buck_features, vector_assembler(array(buck_features, users_count, binary)) as vec_assembler, normalizer(vec_assembler, 3) as normalized)
+```
+
 <!--  -->
 
 <!-- done UP to here -->
