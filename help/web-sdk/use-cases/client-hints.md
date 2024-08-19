@@ -92,13 +92,16 @@ Low entropy client hints are enabled by default in Web SDK, and are passed on ev
 
 High entropy client hints are more detailed information about the client device, such as platform version, architecture, model, bitness (64 bit or 32 bit platforms), or full operating system version. This information could potentially be used in fingerprinting.
 
-|HTTP header|JavaScript|Included in user agent by default| Included in client hints by default|
-|---|---|---|---|
-|`Sec-CH-UA-Platform-Version`|`platformVersion`|Yes|No|
-|`Sec-CH-UA-Arc`|`architecture`|Yes|No|
-|`Sec-CH-UA-Model`|`model`|Yes|No|
-|`Sec-CH-UA-Bitness`|`Bitness`|Yes|No|
-|`Sec-CH-UA-Full-Version-List`|`fullVersionList`|Yes|No|
+| Property | Description | HTTP header | XDM path | Example |Included in user agent by default| Included in client hints by default|
+| --- | --- | --- | --- | --- |---|---|
+| Operating system version | The version of the operating system. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` | Yes | No |
+| Architecture | The underlying CPU architecture. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | Yes | No|
+| Device model | The name of the device used. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` | Yes | No|
+| Bitness | The number of bits that the underlying CPU architecture supports. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | Yes | No |
+| Browser vendor | The company that created the browser. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor`  | `Google` | Yes|No|
+| Browser name | The browser used. The low entropy hint `Sec-CH-UA` also collects this element. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` | Yes|No|
+| Browser version | The significant version of the browser. The low entropy hint `Sec-CH-UA` also collects this element. Exact browser version is not automatically collected. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | Yes|No|
+
 
 High entropy client hints are disabled by default in Web SDK. To enable them you must manually configure the Web SDK to request high entropy client hints.
 
