@@ -45,23 +45,65 @@ To help you understand the key components and configurations in the model creati
 
 ## Update a model {#update}
 
+Learn how to update an existing machine learning model by applying new feature engineering transformations and configuring options like the type of algorithm and label column. The SQL below demonstrates how to increase the model's version number with each update, and ensure that changes are tracked so the model can be reused in future evaluation or prediction steps.
 
+```sql
+UPDATE model <model_alias> transform( one_hot_encoder(NAME) ohe_name, string_indexer(gender) gendersi) options ( type = 'LogisticRegression', label = <label-COLUMN>, ) ASSELECT col1,
+       col2,
+       col3
+FROM   training-dataset.
+```
 
-`Update Model <model_alias>`
+To help you understand how to manage model versions and apply transformations effectively, the following notes explain the key components and options in the model update workflow.
 
-
+- `UPDATE model <model_alias>`: The update command handles versioning and increases the model's version number with each update.
+- `version`: An optional keyword used only during updates to create a new version of the model.
 
 ## Test {#test}
 
-The SQL takes the model alias version number and the the data which will be result of this select query.
+To ensure reliable results, assess the accuracy and effectiveness of the model before deploying it for predictions with the `model_evaluate` keyword. The SQL statement below specifies a test dataset, specific columns, and the model's version to test the model by evaluating its performance.
+
+```sql
+SELECT *
+FROM   model_evaluate(model-alias, version-number,SELECT col1,
+       col2,
+       label-COLUMN
+FROM   test -dataset)
+```
+
+The `model_evaluate` function takes `model-alias` as its first argument and a flexible `SELECT` statement as its second argument. Query Service first executes the `SELECT` statement and maps the results to the `model_evaluate` Adobe Defined Function (ADF). The system expects the column names and data types in the `SELECT` statement's result to match those used in the training step. These column names and data types are treated as test data and label data for evaluation.
 
 ## Predict {#predict}
 
-`model_predict`
+Next, use the `model_predict` keyword to apply the specified model and version to a dataset and generate predictions for the selected columns. The SQL below demonstrates this process, showing how to forecast outcomes using the model's alias and version.
+
+```sql
+SELECT *
+FROM   model_predict(model-alias, version-number,SELECT col1,
+       col2,
+       label-COLUMN
+FROM   dataset)
+```
+
+`model_predict` accepts the model alias as the first argument and a flexible `SELECT` statement as the second argument. Query Service first executes the `SELECT` statement and maps the results to the `model_predict` ADF. The system expects that the column names and data types in the `SELECT` statement's result to match those from the training step. This data is then used for scoring and generating predictions.
 
 ## Evaluate and manage your models
 
-The `SHOW MODELS` command is used to list all the available machine learning models in the database. use it to view the models that have been trained and are available for testing, evaluation, or prediction.
+The `SHOW MODELS` command is used to list all the available machine learning models in the database. Use it to view the models that have been trained and are available for testing, evaluation, or prediction.
+<!-- Working on this bit -->
+This information is fetched from the model repository which is saved at the time of model creation. The details are: `model id`, `model name`, `version`, `source dataset`, `algorithm details`, `options/parameters`, `created/updated` time. 
+
+```sql
+SHOW MODELS;
+```
+
+The results appear in a table similar to the one seen below:
+
+| model-id           |     model-name | version | source-dataset  | type                  | options                      | transform                                                                 | fields              | created             | updated             | created BY |
+|--------------------|---------------|---------|------------------|-----------------------|------------------------------|---------------------------------------------------------------------------|----------------------|---------------------|---------------------|------------|
+|`model-84362-mdunj` | `SalesModel`  | 1.0     | `sales_data_2023`| `LogisticRegression`  | `{"label": "label-field"}`   | `one_hot_encoder(name)`, `ohe_name`, `string_indexer(gender)`, `genderSI` | \["name", "gender"\] | 2024-08-14 10:30 AM | 2024-08-14 11:00 AM | `JohnSnow@adobe.com` |
+
+<!-- WIP above -->
 
 ## Cleanup and maintain your models
 
