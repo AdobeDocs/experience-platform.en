@@ -373,7 +373,7 @@ TRANSFORM(binarizer(time_spent, 5.0) as binary, bucketizer(course_duration, arra
 
 #### Normalizer {#normalizer}
 
-The `Normalizer` is a `Transformer` that normalizes each `Vector` in a dataset of `Vector` rows to have a unit norm. This transformation is useful for scaling the input vectors without changing their direction, making it particularly relevant in tasks where the magnitude of vectors may vary significantly.
+The `Normalizer` is a transformer that normalizes each vector in a dataset of vector rows to have a unit norm. This transformation is useful for scaling the input vectors without changing their direction, making it particularly relevant in tasks where the magnitude of vectors may vary significantly.
 
 This transformation ensures that all input vectors have a consistent scale, which is particularly useful in machine learning models that rely on distance measures or other vector-based calculations.
 
@@ -403,6 +403,48 @@ This example demonstrates how to apply several transformations, including the `N
 ```sql
 TRANSFORM(binarizer(time_spent, 5.0) as binary, bucketizer(course_duration, array(-440.5, 0.0, 150.0, 1000.7)) as buck_features, vector_assembler(array(buck_features, users_count, binary)) as vec_assembler, normalizer(vec_assembler, 3) as normalized)
 ```
+
+#### QuantileDiscretizer {#quantilediscretizer}
+
+The `QuantileDiscretizer` is a transformer that takes a column with continuous features and outputs a column with binned categorical features. The number of bins is determined by the `numBuckets` parameter. Note that in some cases, the actual number of buckets used may be smaller than the specified value if there are too few distinct values in the input to create enough distinct quantiles.
+
+This transformation is useful for converting continuous features into discrete categories, which can be particularly helpful in scenarios where you want to simplify the representation of continuous data or prepare it for algorithms that work better with categorical input.
+
+**Data types**
+
+- Input datatype: Numeric column
+- Output datatype: Numeric column (categorical)
+
+**Definition**
+
+```sql
+TRANSFORM(quantile_discretizer(hour, 3) as result)
+```
+
+**Parameters**
+
+| Parameter    | Description                                                                                                              | Type    | Default | Optional |
+|--------------|--------------------------------------------------------------------------------------------------------------------------|---------|---------|----------|
+| `NUM_BUCKETS`| The number of buckets (quantiles, or categories) into which data points are grouped. This number must be greater than or equal to two.      | integer | 2       | optional |
+
+**Example Transformation**
+
+This example demonstrates how the `QuantileDiscretizer` bins a column of continuous features (`hour`) into three categorical buckets.
+
+```sql
+TRANSFORM(quantile_discretizer(hour, 3) as result)
+```
+
+**Example before and after discretization**
+
+|id | hour | result |
+|---|------|--------|
+|0  | 18.0 | 2.0    |
+|1  | 19.0 | 2.0    |
+|2  | 8.0  | 1.0    |
+|3  | 5.0  | 1.0    |
+|4  | 2.2  | 0.0    |
+
 
 <!--  -->
 
