@@ -191,17 +191,16 @@ The example below sends a trackEvent-style message, executes profile scripts, sa
 ```js
 alloy("sendEvent", {
     "renderDecisions": true,
+    "xdm": { /* Experience Event XDM data */ },
     "data": {
-        "xdm": { // Experience Event XDM data },
-            "__adobe": {
-                "target": {
-                    " __save": true|false,
-                    //defaults to true if omitted 
-                    "profile.gender": "female",
-                    "profile.age": 30,
-                    "entity.name": "T-shirt",
-                    "entity.id": "1234"
-                }
+        "__adobe": {
+            "target": {
+                " __save": true|false,
+                //defaults to true if omitted
+                "profile.gender": "female",
+                "profile.age": 30,
+                "entity.name": "T-shirt",
+                "entity.id": "1234"
             }
         }
     }
