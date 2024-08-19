@@ -86,7 +86,7 @@ The summary tab appears. You can use the granular predictions available on the [
 
 >[!NOTE]
 >
->Predicted usage forecasts are based on past usage and should be considered as approximations rather than precise figures.
+>Please note that license usage predictions are approximations based on past usage. You are responsible for understanding your organization's actual usage and ensuring that usage does not go beyond the scope of your organization's license with Adobe.
 
 ![The summary view of a Platform Product with the predicted usage column highlighted.](../images/license-usage/summary-predicted-usage.png)
 
