@@ -341,7 +341,9 @@ In this scenario, there is a single CRMID that represents a person entity. Howev
 * A given person entity can have different account account types (personal vs. business, account by state, account by brand, etc.)
 * A given person entity may use different email addresses for any number of accounts.
 
-Therefore, **it is crucial that the CRMID is always sent for every user**. Failure to do so may result in a "dangling" login ID scenario, where a single person entity is assumed to be sharing a device with another person.
+>[!IMPORTANT]
+>
+>**It is crucial that the CRMID is always sent for every user**. Failure to do so may result in a "dangling" login ID scenario, where a single person entity is assumed to be sharing a device with another person.
 
 **Implementation:**
 
@@ -454,13 +456,15 @@ In this scenario, there is a single CRMID that represents a person entity. Howev
 * A given person entity can have different account account types (personal vs. business, account by state, account by brand, etc.)
 * A given person entity may use different email addresses for any number of accounts.
 
-The case of "dangling" loginID also applies for this scenario.
+>[!IMPORTANT]
+>
+>**It is crucial that the CRMID is always sent for every user**. Failure to do so may result in a "dangling" login ID scenario, where a single person entity is assumed to be sharing a device with another person.
 
 **Implementation:**
 
 | Namespaces used | Web behavior collection method |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID, AAID | Adobe Analytics source connector |
+| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics source connector **Note:** By default, AAIDs are blocked in Identity Service |
 
 **Events:**
 
@@ -488,7 +492,6 @@ You can create this scenario in graph simulation by configuring the following se
 | 3 | Phone_SHA256 | Phone | No |
 | 4 | loginID | CROSS_DEVICE | No |
 | 5 | ECID | COOKIE | No |
-| 6 | AAID | COOKIE | No |
 
 **Primary identity selection for Profile:**
 
@@ -497,8 +500,8 @@ Within the context of this configuration, the primary identity will be defined l
 | Authentication status | Namespace(s) in events| Primary identity |
 | --- | --- | --- |
 | Authenticated | loginID, ECID | loginID |
-| Authenticated | loginID, ECID, AAID | loginID |
-| Authenticated | CRMID, loginID, ECID, AAID | CRMID |
+| Authenticated | loginID, ECID | loginID |
+| Authenticated | CRMID, loginID, ECID | CRMID |
 | Authenticated | CRMID, ECID | CRMID |
 | Unauthenticated | ECID | ECID |
 
@@ -524,12 +527,12 @@ The following is a multi-person shared device scenario where `{ECID:111, AAID:AA
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID: ID_A
 CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111, AAID: AAA
+loginID: ID_A, ECID: 111
 CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
 CRMID: Summer, loginID: ID_C
 CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222, AAID: BBB
-loginID: ID_C, ECID: 111, AAID: AAA
+loginID: ID_C, ECID: 222
+loginID: ID_C, ECID: 111
 ```
 
 >[!TAB Multi-person graph: shared device 2]
@@ -544,13 +547,13 @@ In this scenario, instead of sending only the loginID, both loginID and CRMID ar
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID: ID_A
 CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111, AAID: AAA
+loginID: ID_A, ECID: 111
 CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
 CRMID: Summer, loginID: ID_C
 CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222, AAID: BBB
-CRMID: Summer, loginID: ID_C, ECID: 111, AAID: AAA
-loginID: ID_A, ECID: 111, AAID: AAA
+loginID: ID_C, ECID: 222
+CRMID: Summer, loginID: ID_C, ECID: 111
+loginID: ID_A, ECID: 111
 ```
 
 >[!TAB Multi-person graph: bad loginID data]
@@ -565,11 +568,11 @@ In this scenario, `{loginID:ID_C}` is linked to both `{CRMID:Tom}` and `{CRMID:S
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID: ID_A
 CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111, AAID: AAA
+loginID: ID_A, ECID: 111
 CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
 CRMID: Summer, loginID: ID_C
 CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222, AAID: BBB
+loginID: ID_C, ECID: 222
 CRMID: Tom, loginID: ID_C
 ```
 
@@ -585,11 +588,11 @@ In this scenario, a non-unique email is being linked with two different CRMIDs, 
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID: ID_A
 CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111, AAID: AAA
+loginID: ID_A, ECID: 111
 CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
 CRMID: Summer, loginID: ID_C
 CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222, AAID: BBB
+loginID: ID_C, ECID: 222
 CRMID: Summer, Email_LC_SHA256: aabbcc
 ```
 
@@ -605,11 +608,11 @@ In this scenario, a non-unique phone number is being linked with two different C
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID: ID_A
 CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111, AAID: AAA
+loginID: ID_A, ECID: 111
 CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
 CRMID: Summer, loginID: ID_C
 CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222, AAID: BBB
+loginID: ID_C, ECID: 222
 CRMID: Tom, Phone_SHA256: 111-1111
 CRMID: Summer, Phone_SHA256: 111-1111
 ```
@@ -618,12 +621,10 @@ CRMID: Summer, Phone_SHA256: 111-1111
 
 ## Usage in other Adobe applications
 
-In this scenario, there is a single CRMID that represents a person entity. However, a person entity may have multiple login identifiers:
+The graph configuration examples in this section outlines use cases for Real-Time Customer Data Platform, Adobe Journey Optimizer, and Adobe Commerce. The examples below are focused on retail customers with two user types:
 
-* A given person entity can have different account account types (personal vs. business, account by state, account by brand, etc.)
-* A given person entity may use different email addresses for any number of accounts.
-
-The case of "dangling" loginID also applies for this scenario.
+* Registered user (users that created an account)
+* Guest users (users that only have an email address)
 
 **Implementation:**
 
