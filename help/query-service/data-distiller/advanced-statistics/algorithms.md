@@ -9,6 +9,11 @@ Machine learning algorithms are the core components that drive model creation an
 
 This document provides an overview of clustering algorithms available for generating models with SQL, along with guidance on how to implement clustering and transformations within SQL statements to streamline your machine learning workflows.
 
+<!-- 
+A "transformation" refers to the process of converting or scaling data into a format or structure that is more suitable for model training and analysis.
+By converting or scaling data into a format or structure that is more suitable for model training and analysis you can improve model performance and accuracy by ensuring that the data aligns with the model's assumptions and optimizes its ability to learn patterns.
+ -->
+
 ## Clustering algorithms
 
 Clustering algorithms group data points into distinct clusters based on their similarities. In this section, we explore how clustering works, with a focus on K-Means, a popular clustering algorithm used for unsupervised learning tasks.
@@ -37,7 +42,11 @@ There are 19 available transformations. These are split into [General transforma
 
 Below are the available general transforaions. General transformation do x ...
 
-#### Numeric imputer {#imputer}
+>[!NOTE]
+>
+>The input datatype refers to the column on which the imputation is applied. The output datatype refers the column which is produced as an output.
+
+#### Numeric imputer {#numeric-imputer}
 
 The **Numeric imputer** transformer completes missing values in a dataset. This uses either the mean, median, or mode of the columns in which the missing values are located. The input columns should be either `DoubleType` or `FloatType`. More information and examples can be found on the [Spark algorithm documentation](https://spark.apache.org/docs/2.2.0/ml-features.html#imputer). 
 
@@ -47,8 +56,10 @@ The **Numeric imputer** transformer completes missing values in a dataset. This 
 
 **Data types**
 
-- Input datatype (of the column on which the imputation is applied): Numeric
-- Output datatype ( of the column which is produced as an output ) : Numeric
+- Input datatype: Numeric
+- Output datatype: Numeric
+
+**Definition**
 
 ```sql
 transformer(numeric_imputer(hour, 'mean') hour_imputed)
@@ -75,6 +86,88 @@ transformer(numeric_imputer(hour, 'mean') hour_imputed)
 |Parameter |  Description |  Type |  Default | Optional |
 | -------- | ------------ | ----- | -------- | -------- |
 | `STRATEGY` | An imputation strategy. The available values are: [`mean`, `median`, `mode`]. |  string |  mean | optional |
+
+#### String imputer {#string-imputer}
+
+The **String imputer** transformer completes missing values in a dataset using a string provided by the user as a function argument. The input and output columns should be the `string` data type. 
+
+>[!NOTE]
+>
+>All null values in input columns are treated as missing and are replaced by the specified string.
+
+**Data types**
+
+- Input datatype: String
+- Output datatype: String
+
+**Definition**
+
+```sql
+transform(string_imputer(name, 'unknown_name') as name_imputed)
+```
+
+**Example before imputation**
+
+|id |  name |
+|---|---|
+|0 |  John |
+|1 |  null |
+|2 |  Alice |
+
+**Example after imputation (using 'ml_unknown' as the replacement)**
+
+|id | name |
+|---|---|
+|0 | John |
+|1 | ml_unknown |
+|2 | Alice |
+
+**Parameters**
+
+|Parameter |  Description |  Type |  Default | Optional |
+| -------- | ------------ | ----- | -------- | -------- |
+| `NULL_REPLACEMENT` | The value that will replace nulls. |  string |  ml_unknown | optional |
+
+#### Boolean imputer {#imputer}
+
+The **Boolean imputer** transformer completes missing values in a dataset for a boolean column. The input and output columns should be of `Boolean` type.
+
+>[!NOTE]
+>
+>All null values in input columns are treated as missing and are replaced by the specified boolean value.
+
+**Data types**
+
+- Input datatype: Boolean
+- Output datatype: Boolean
+
+**Definition**
+
+```sql
+transform(boolean_imputer(name, true) as name_imputed)
+```
+
+**Example before imputation**
+
+|id |  flag |
+|---|---|
+|0 |  true |
+|1 |  null |
+|2 |  false |
+
+**Example after imputation (using 'true' as the replacement)**
+
+|id | flag |
+|---|---|
+|0 | true |
+|1 | true |
+|2 | false |
+
+**Parameters**
+
+|Parameter |  Description |  Type |  Default | Optional |
+| -------- | ------------ | ----- | -------- | -------- |
+| `NULL_REPLACEMENT` | Boolean imputer. Allowed values: [`true`, `false`]. |  boolean |  false | optional |
 
 ### Numeric transformations {#numeric-transformations}
 
