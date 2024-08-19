@@ -472,7 +472,7 @@ In this scenario, there is a single CRMID that represents a person entity. Howev
 
 | Namespaces used | Web behavior collection method |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics source connector **Note:** By default, AAIDs are blocked in Identity Service |
+| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics source connector **Note:** By default, AAIDs are blocked in Identity Service, therefore, you must place a higher priority on your ECIDs over AAID, when using the Analytics source. Read the [implementation guide](configuration.md#ingest-your-data) for more information. |
 
 **Events:**
 
@@ -500,6 +500,7 @@ You can create this scenario in graph simulation by configuring the following se
 | 3 | Phone_SHA256 | Phone | No |
 | 4 | loginID | CROSS_DEVICE | No |
 | 5 | ECID | COOKIE | No |
+| 6 | AAID | COOKIE | No |
 
 **Primary identity selection for Profile:**
 
