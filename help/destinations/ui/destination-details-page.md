@@ -22,7 +22,7 @@ Follow the steps below to view more details about an existing destination. You c
 
     ![Browse destinations](../assets/ui/details-page/browse-destinations.png)
 
-2. Select the filter icon ![Filter-icon](/help/images/icons/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
+2. Select the filter icon ![Filter-icon](../../images/icons/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
 
     ![Filter destinations](../assets/ui/details-page/filter-destinations.png)
 
@@ -97,7 +97,7 @@ For more information, read about [dataflow runs to streaming destinations](/help
 
 For dataflow runs to file-based destinations, the **[!UICONTROL Processing duration]** depends on the size of the data being exported and the system load. Notice also that the dataflow runs to file-based destinations are broken down per audience.
 
-![Image of the Dataflow runs page with the Processing time column highlighted for a file-based destination.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+![Image of the Dataflow runs page with the Processing time column highlighted for a file-based destination.](../assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
 For more information, read about [dataflow runs to batch (file-based) destinations](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) in the monitoring documentation.
 
@@ -128,7 +128,7 @@ The **[!UICONTROL Activation data]** tab for a streaming destination.
 
 ### Filter activated audiences {#filter-audiences}
 
-To filter through the list of audiences activate to a destination, enter an audience name in the search box. The list of audiences automatically updates with the search results.
+To filter through the list of audiences activated to a destination, enter an audience name in the search box. The list of audiences automatically updates with the search results.
 
 ![Search box for filtering audiences.](../assets/ui/details-page/filter-audiences.png)
 
@@ -153,7 +153,6 @@ To edit the existing activation schedule of multiple audiences at the same time,
 >[!NOTE]
 >
 >For details on exploring the details page of a audience, refer to the [Audience Portal overview](../../segmentation/ui/audience-portal.md#segment-details).
-
 
 ### Edit file names for multiple audiences exported to batch destinations {#bulk-edit-file-names}
 
