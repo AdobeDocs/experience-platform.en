@@ -147,7 +147,7 @@ As with other identity types, you can include the FPID with other identities wit
       {
         "id": "123e4567-e89b-42d3-9456-426614174000",
         "authenticatedState": "ambiguous",
-        "primary": true
+        "primary": false
       }
     ],
     "EMAIL": [
