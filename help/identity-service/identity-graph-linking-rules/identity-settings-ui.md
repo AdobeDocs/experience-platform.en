@@ -43,7 +43,7 @@ To designate a unique namespace, select the [!UICONTROL Unique per graph] checkb
 
 ![Two namespaces selected and defined as unique.](../images/rules/unique-namespace.png)
 
-Once your unique namespaces are established, graphs will no longer be able to have multiple identities that contain a unique namespace. For example, if you designated CRM ID as a unique namespace, then a graph can only have one identity with the CRM ID namespace. For more information, read the [identity optimization algorithm overview](./identity-optimization-algorithm.md#unique-namespace).
+Once your unique namespaces are established, graphs will no longer be able to have multiple identities that contain a unique namespace. For example, if you designated CRMID as a unique namespace, then a graph can only have one identity with the CRMID namespace. For more information, read the [identity optimization algorithm overview](./identity-optimization-algorithm.md#unique-namespace).
 
 When you are finished with your configurations, select **[!UICONTROL Next]**. A confirmation message appears, use this opportunity to verify that your configurations are correct and then select **[!UICONTROL Finish]**.
 
