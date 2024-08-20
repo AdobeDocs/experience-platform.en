@@ -1,11 +1,11 @@
 ---
-title: (Beta) Export files on-demand to batch destinations using the Experience Platform UI
+title: Export files on-demand to batch destinations using the Experience Platform UI
 type: Tutorial
 description: Learn how to export files on-demand to batch destinations using the Experience Platform UI.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 ---
 
-# [!BADGE Beta]{type=Informative} Export files on-demand to batch destinations using the Experience Platform UI
+# Export files on-demand to batch destinations using the Experience Platform UI
 
 >[!IMPORTANT]
 >
