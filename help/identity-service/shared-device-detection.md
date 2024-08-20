@@ -54,7 +54,7 @@ It is important to understand the following terminology when working with
 [!DNL Shared Device Detection] works by establishing two namespaces: the **Shared Identity Namespace** and the **User Identity Namespace**.
 
 * The Shared Identity Namespace represents the  device that could be used by multiple users. Adobe recommends that customers use ECID as the shared device identifier. 
-* The User Identity Namespace is mapped to the identity namespace that corresponds to a user's login ID, this can be a user's CRM ID, email address, hashed email, or phone number. 
+* The User Identity Namespace is mapped to the identity namespace that corresponds to a user's login ID, this can be a user's CRMID, email address, hashed email, or phone number. 
 
 A shared device, like a tablet, has a single **Shared Identity Namespace**. On the other hand, each user of a shared device has their own designated **User Identity Namespace** that corresponds with their respective login IDs. For example, a tablet that Kevin and Nora share for e-commerce use has its own ECID of `1234`, while Kevin has his own User Identity Namespace that is mapped to his `kevin@email.com` account and Nora has her own User Identity Namespace mapped to her `nora@email.com` account.
 
@@ -66,17 +66,17 @@ Consider the following example to help your understanding of how [!DNL Shared De
 
 >[!NOTE]
 >
->In this diagram, the Shared Identity Namespace is configured to ECID and the User Identity Namespace is configured to CRM ID.
+>In this diagram, the Shared Identity Namespace is configured to ECID and the User Identity Namespace is configured to CRMID.
 
 ![diagram](./images/shared-device/diagram.png)
 
 * Kevin and Nora share a tablet to visit an e-commerce website. However, they both have their own independent accounts that they each use to browse and shop online;
   * As a shared device, the tablet has a corresponding ECID, which represents the tablet's web browser cookie ID;
-* Suppose that Kevin uses the tablet and **logs in** to his e-commerce account to browse for headphones, this then means that Kevin's CRM ID (**User Identity Namespace**) is now linked with the tablet's ECID (**Shared Identity Namespace**). The tablet's browsing data are now incorporated with Kevin's identity graph.
-  * If Kevin **logs out** and Nora uses the tablet and **logs in** to her own account and buys a camera, then her CRM ID is now linked to the tablet's ECID. Therefore, the tablet's browsing data are now incorporated with Nora's identity graph.
-  * If Nora **does not log out** and Kevin uses the tablet, but **does not log in**, then the tablet's browsing data are still incorporated with Nora, because she remains as the authenticated user and her CRM ID is still linked to the tablet's ECID.
-  * If Nora **does log out** and Kevin uses the tablet, but **does not log in**, then the tablet's browsing data are still incorporated with Nora's identity graph, because as the **last authenticated user**, her CRM ID remains linked with the tablet's ECID.
-  * If Kevin **logs in** again, then his CRM ID now gets linked to the tablet's ECID, because he is now the last authenticated user and the tablet's browsing data are now incorporated with his identity graph.
+* Suppose that Kevin uses the tablet and **logs in** to his e-commerce account to browse for headphones, this then means that Kevin's CRMID (**User Identity Namespace**) is now linked with the tablet's ECID (**Shared Identity Namespace**). The tablet's browsing data are now incorporated with Kevin's identity graph.
+  * If Kevin **logs out** and Nora uses the tablet and **logs in** to her own account and buys a camera, then her CRMID is now linked to the tablet's ECID. Therefore, the tablet's browsing data are now incorporated with Nora's identity graph.
+  * If Nora **does not log out** and Kevin uses the tablet, but **does not log in**, then the tablet's browsing data are still incorporated with Nora, because she remains as the authenticated user and her CRMID is still linked to the tablet's ECID.
+  * If Nora **does log out** and Kevin uses the tablet, but **does not log in**, then the tablet's browsing data are still incorporated with Nora's identity graph, because as the **last authenticated user**, her CRMID remains linked with the tablet's ECID.
+  * If Kevin **logs in** again, then his CRMID now gets linked to the tablet's ECID, because he is now the last authenticated user and the tablet's browsing data are now incorporated with his identity graph.
 
 ### How [!DNL Profile Service] merges profile fragments with [!DNL Shared Device Detection] enabled
 
