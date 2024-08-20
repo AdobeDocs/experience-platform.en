@@ -481,6 +481,8 @@ TRANSFORM(standard_scaler(feature) as ss_features)
 
 ### Categorical transformations {#categorical-transformations}
 
+<!-- Needs introduction ... -->
+
 #### StringIndexer {#stringindexer}
 
 The `StringIndexer` is a transformer that encodes a string column of labels into a column of label indices. The indices are in the range (0, numLabels), ordered by label frequency, with the most frequent label assigned an index of 0. If the input column is numeric, it will be cast to a string and then indexed. Unseen labels can be assigned to index `numLabels` if the user chooses to keep them.
@@ -512,6 +514,39 @@ This example demonstrates how to apply the `StringIndexer` to a categorical feat
 
 ```sql
 TRANSFORM(string_indexer(category) as si_category)
+```
+
+#### OneHotEncoder {#onehotencoder}
+
+The **OneHotEncoder** is a Transformer that maps a column of label indices to a column of binary vectors, where each vector has at most a single one-value. This encoding is particularly useful for allowing algorithms that expect continuous features, such as Logistic Regression, to incorporate categorical data.
+
+This transformation enables the use of categorical data in models that require numeric input by converting label indices into a sparse binary vector format.
+
+More information and examples can be found on the [Spark algorithm documentation](https://spark.apache.org/docs/2.2.0/ml-features.html#onehotencoder). 
+
+**Data types**
+
+- Input datatype: Numeric
+- Output datatype: Vector[Int]
+
+**Definition**
+
+```sql
+TRANSFORM(string_indexer(category) as si_category, one_hot_encoder(si_category) as ohe_category)
+```
+
+**Parameters**
+
+| Parameter | Description | Type | Default | Optional |
+|-----------|-------------|------|---------|----------|
+| NA        | OneHotEncoder does not require any additional parameters for its operation. | NA   | NA      | NA       |
+
+**Example Transformation**
+
+This example demonstrates how to first apply the StringIndexer to a categorical feature and then use the OneHotEncoder to convert the indexed values into a binary vector.
+
+```sql
+TRANSFORM(string_indexer(category) as si_category, one_hot_encoder(si_category) as ohe_category)
 ```
 
 <!--  -->
