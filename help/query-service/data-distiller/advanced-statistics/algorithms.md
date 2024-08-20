@@ -28,7 +28,37 @@ Machine learning models can only process numeric data. For instance, in a movie 
 
 ### Automatic feature transformation {#automatic-transformations}
 
-Null replacement transformation is automatic if you do not specify speicify transformations.
+If you do not have good machine learning knowledge, you can skip the `TRANSFORM` clause in your `CREATE MODEL` command in favour of automatic feature transformation. If you do not include the `TRANSFORM` clause in your SQL statement, your data is automatically preprocessed. Null replacement and standard feature transformations, based on the datatype, occur. This automatic preprocessing imputes numeric and text columns followed by feature transformations into a format that can be used by machine learning model for training. This includes missing data imputation and categorical, numeric, and boolean transformations as part of this process.
+
+The following tables explain how different data types are handled when the `TRANSFORM` clause is omitted during the `CREATE MODEL` command. 
+
+#### Null replacement
+
+| Data Type       | Null Replacement                                    |
+|-----------------|-----------------------------------------------------|
+| Numeric         | Nulls are replaced with the mean value of the column. |
+| Categorical     | Nulls are replaced with the `ml_unknown` keyword      |
+| Boolean         | Nulls are replaced with a `FALSE` value.              |
+| Timestamp       | This is expected to be a continuous field.            |
+| Nested/STRUCT   | The replacement depends on the datatype of the leaf node.|
+
+#### Feature transformation
+
+| Data Type       | Feature Transformation                              |
+|-----------------|-----------------------------------------------------|
+| Numeric         | NOT REQUIRED - As this data type is understood by machine learning algorithms. |
+| String          | String indexing occurs.                                                        |
+| Boolean         | String indexing occurs.                                                        |
+| Timestamp       | No operation occurs.                                                           |
+| STRUCT          | The value is expanded to its leaf node. Transformation occurs based on the datatype of the leaf node. |
+
+**example**
+
+```sql
+Create model modelname OPTIONS(MODEL_TYPE='logistic_reg', LABEL='rating') as select * from movie_rating
+```
+
+<!-- The feature transformation used to time of training will be utilised for feature transformation at the time prediction and evaluation. -->
 
 ### Manual feature transformations {#manual-transformations}
 
@@ -40,8 +70,7 @@ There are 19 available transformations. These are split into [General transforma
 
 ### General transformations {#general-transformations}
 
-<!-- Needs description ... -->
-<!-- Below are the available general transforaions. General transformation do x ... -->
+This section provides details on transformers used for a wide range of data types. This information is essential if you need to apply transformations that aren't specific to categorical or textual data.
 
 >[!NOTE]
 >
@@ -209,7 +238,7 @@ transform(vector_assembler(id, hour, mobile, userFeatures) as features)
 
 ### Numeric transformations {#numeric-transformations}
 
-<!-- Description needed ... -->
+This section covers the available transformers for processing and scaling numerical data. These transformers are necessary to handle and optimize numeric features in your datasets.
 
 #### Binarizer {#binarizer}
 
@@ -481,7 +510,7 @@ TRANSFORM(standard_scaler(feature) as ss_features)
 
 ### Categorical transformations {#categorical-transformations}
 
-<!-- Needs introduction ... -->
+This section provides an overview of the available transformers designed to convert and preprocess categorical data for machine learning models. These transformations are designed for data points that represent distinct categories or labels, rather than numerical values.
 
 #### StringIndexer {#stringindexer}
 
@@ -551,7 +580,7 @@ TRANSFORM(string_indexer(category) as si_category, one_hot_encoder(si_category) 
 
 ### Textual transformations {#textual-transformations}
 
-<!-- Needs Intro ... -->
+This section provides details on the transformers available for processing and converting text data into formats that can be used by machine learning models. This section is crucial for developers working with natural language data and text analysis.
 
 #### CountVectorizer {#countvectorizer}
 
