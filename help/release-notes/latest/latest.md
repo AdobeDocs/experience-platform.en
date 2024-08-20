@@ -51,7 +51,7 @@ XDM is an open-source specification that provides common structures and definiti
 
 {style="table-layout:auto"}
 
-<!-- To learn more, read the [ML-assisted schema creation overview](../../xdm/ui/ml-assisted-schema-creation.md)  -->
+To learn more, read the [ML-assisted schema creation overview](../../xdm/ui/ml-assisted-schema-creation.md) 
 
 For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
 
