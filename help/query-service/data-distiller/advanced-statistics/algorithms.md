@@ -598,7 +598,7 @@ TRANSFORM(count_vectorizer(texts) as cv_output)
 
 #### NGram {#ngram}
 
-The **NGram** is a transformer that generates a sequence of n-grams, where an n-gram is a sequence of \(n\) tokens (typically words) for some integer \(n\). The `NGram` class can be used to transform input features into n-grams, with the output consisting of a sequence of n-grams where each n-gram is represented by a space-delimited string of \(n\) consecutive words.
+The `NGram` is a transformer that generates a sequence of n-grams, where an n-gram is a sequence of \(n\) tokens (typically words) for some integer \(n\). The `NGram` class can be used to transform input features into n-grams, with the output consisting of a sequence of n-grams where each n-gram is represented by a space-delimited string of \(n\) consecutive words.
 
 This transformation is useful for extracting sequences of words (n-grams) from text data, which can then be used as features in machine learning models, particularly those focused on natural language processing.
 
@@ -634,6 +634,94 @@ TRANSFORM(tokenizer(review_comments) as token_comments, ngram(token_comments, 3)
 |----|-------------------------------------------------------|-------------------------------------------------------|
 | 0  | ["this", "was", "an", "entertaining", "movie"]        | ["this was an", "was an entertaining", "an entertaining movie"] |
 
+#### StopWordsRemover {#stopwordsremover}
+
+The `StopWordsRemover` is a transformer that removes stop words from a sequence of strings, typically because these words appear frequently and don't carry significant meaning. The `StopWordsRemover` takes as input a sequence of strings (for example, the output of a tokenizer) and filters out all stop words specified by the `stopWords` parameter.
+
+This transformation is useful for preprocessing text data by removing common words that do not contribute much to the meaning, thereby improving the effectiveness of downstream machine learning models.
+
+More information and examples can be found on the [Spark algorithm documentation](https://spark.apache.org/docs/2.2.0/ml-features.html#stopwordsremover)
+
+**Data types**
+
+- Input datatype: Array[String]
+- Output datatype: Array[String]
+
+**Definition**
+
+```sql
+TRANSFORM(stop_words_remover(raw) as filtered)
+```
+
+**Parameters**
+
+| Parameter          | Description                                                                                      | Type          | Default                 | Optional |
+|--------------------|--------------------------------------------------------------------------------------------------|---------------|-------------------------|----------|
+| `CUSTOM_STOP_WORDS`| The words to be filtered out.                                                                    | array[string] | Default: English stop words | optional |
+
+**Example Transformation**
+
+This example shows how the `StopWordsRemover` filters out common English stop words from a list of tokens.
+
+```sql
+TRANSFORM(stop_words_remover(raw) as filtered)
+```
+
+**Example before and after stop words removal**
+
+| id | raw                          | filtered                 |
+|----|------------------------------|--------------------------|
+| 0  | [I, saw, the, red, baloon]    | [saw, red, baloon]       |
+| 1  | [Mary, had, a, little, lamb]  | [Mary, little, lamb]     |
+
+**Example with custom stop words**
+
+This example demonstrates how to use a custom list of stop words to filter out specific words from the input sequences.
+
+```sql
+TRANSFORM(stop_words_remover(raw, array("red", "I", "had")) as filtered)
+```
+
+**Example before and after custom stop words removal**
+
+| id | raw                          | filtered                 |
+|----|------------------------------|--------------------------|
+| 0  | [I, saw, the, red, baloon]    | [saw, the, baloon]       |
+| 1  | [Mary, had, a, little, lamb]  | [Mary, a, little, lamb]  |
+
+#### TF-IDF {#tf-idf}
+
+The `TF-IDF` (Term Frequency-Inverse Document Frequency) is a transformer that measures how important a word is to a document within a corpus. It is widely used in text mining to evaluate the significance of words. The term frequency (TF) refers to the number of times a term \(t\) appears in a document \(d\), while document frequency (DF) measures the number of documents in the corpus \(D\) that contain the term \(t\). TF-IDF helps mitigate the over-emphasis of commonly occurring words that carry little unique information, such as "a", "the", and "of".
+
+This transformation is particularly useful for text mining and natural language processing tasks, as it assigns a numerical value to each word's importance in relation to a specific document and the entire corpus.
+
+More information and examples can be found on the [Spark algorithm documentation](https://spark.apache.org/docs/2.2.0/ml-features.html#tf-idf)
+
+**Data types**
+
+- Input datatype: Array[String]
+- Output datatype: Vector[Int]
+
+**Definition**
+
+```sql
+create table td_idf_model transform(tokenizer(sentence) as token_sentence, tf_idf(token_sentence) as tf_sentence, vector_assembler(array(tf_sentence)) as feature) OPTIONS()
+```
+
+**Parameters**
+
+| Parameter       | Description                                                                            | Type | Default | Optional |
+|-----------------|----------------------------------------------------------------------------------------|------|---------|----------|
+| `NUM_FEATURES`  | The number of features to generate. Must be greater than 0.                             | Int  | 262144  | optional |
+| `MIN_DOC_FREQ`  | The minimum number of documents in which a term must appear to be included in the model. | Int  | 0       | optional |
+
+**Example Transformation**
+
+This example demonstrates how to use TF-IDF to transform tokenized sentences into a feature vector that represents the importance of each term in the context of the entire corpus.
+
+```sql
+create table td_idf_model transform(tokenizer(sentence) as token_sentence, tf_idf(token_sentence) as tf_sentence, vector_assembler(array(tf_sentence)) as feature) OPTIONS()
+```
 
 <!--  -->
 
