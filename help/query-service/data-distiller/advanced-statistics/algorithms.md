@@ -756,6 +756,43 @@ This example demonstrates how the `Tokenizer` breaks down sentences into individ
 create table td_idf_model transform(tokenizer(sentence) as token_sentence, tf_idf(token_sentence) as tf_sentence, vector_assembler(array(tf_sentence)) as feature) OPTIONS()
 ```
 
-<!--  -->
+#### Word2Vec {#word2vec}
 
-<!-- done UP to here -->
+The `Word2Vec` is an estimator that processes sequences of words representing documents and trains a `Word2VecModel`. This model maps each word to a unique fixed-size vector, and transforms each document into a vector by averaging the vectors of all words in the document. `Word2Vec` is widely used in natural language processing tasks to create word embeddings that capture semantic meaning.
+
+This transformation is valuable for converting text data into numerical vectors that capture the semantic relationships between words, enabling more effective text analysis and machine learning models.
+
+More information and examples can be found on the [Spark algorithm documentation](https://spark.apache.org/docs/2.2.0/ml-features.html#word2vec)
+
+**Data types**
+
+- Input datatype: Array[String]
+- Output datatype: Vector[Double]
+
+**Definition**
+
+```sql
+TRANSFORM(tokenizer(review) as tokenized, word2Vec(tokenized, 10, 1) as word2Vec)
+```
+
+**Parameters**
+
+| Parameter    | Description                                                                                         | Type    | Default | Optional |
+|--------------|-----------------------------------------------------------------------------------------------------|---------|---------|----------|
+| `VECTOR_SIZE`| The dimension of the vector that each word is transformed into.                                      | Integer | 100     | optional |
+| `MIN_COUNT`  | The minimum number of times a token must appear to be included in the `Word2Vec` model's vocabulary.   | Integer | 5       | optional |
+
+**Example transformation**
+
+This example shows how `Word2Vec` converts a tokenized review into a fixed-size vector representing the average of the word vectors in the document.
+
+```sql
+TRANSFORM(tokenizer(review) as tokenized, word2Vec(tokenized, 10, 1) as word2Vec)
+```
+
+**Example before and after Word2Vec transformation**
+
+| review                        | tokenized                           | word2Vec                        |
+|-------------------------------|--------------------------------------|---------------------------------|
+| this was an entertaining movie | [this, was, an, entertaining, movie] | [-0.025713888928294182,0.00818799751577899,0.0092235435731709,-0.01515385233797133,0.012175946310162545,3.1129065901041035E-4,0.0025145105042611252,0.005757019785232843,-0.021328244300093502,0.009335877187550069] |
+
