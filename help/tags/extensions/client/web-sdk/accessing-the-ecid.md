@@ -12,6 +12,10 @@ You can access the ECID either via [Data Prep for Data Collection](../../../../d
 
 ## Accessing the ECID via Data Prep (preferred method) {#accessing-ecid-data-prep}
 
+This method uses [Data Prep for Data Collection](../../../../datastreams/data-prep.md) to configure a custom mapping for the `ECID`.
+
+See the [Data Prep for Data Collection](../../../../datastreams/data-prep.md) documentation to learn how to use this feature.
+
 If you are looking to set the ECID in a custom XDM field, in addition to having it in the identity map, you can do this by setting the `source` to the following path:
 
 ```js
