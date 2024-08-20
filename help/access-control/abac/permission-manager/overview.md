@@ -31,4 +31,4 @@ Select **[!UICONTROL Permission Manager]** from the left navigation.
 
 ## Next steps
 
-Once you have navigated to the [!UICONTROL Permission Manager] workspace, proceed to the next step to learn more about how you can [search users and roles](./permission-manager.md).
+Once you have navigated to the [!UICONTROL Permission Manager] workspace, proceed to the next step to learn more about how you can [search users and roles](./permissions.md).
