@@ -16,7 +16,7 @@ Use simple queries in the [!UICONTROL Permission Manager], to create concise rep
 >id="platform_permission_manager"
 >title="Permission manager"
 >abstract="Use the dropdown selectors on the page to get access level reports of different granularity levels for users and roles."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager"
+<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
 
 Using the drop down, select the attribute **[!UICONTROL Users]**.
 
