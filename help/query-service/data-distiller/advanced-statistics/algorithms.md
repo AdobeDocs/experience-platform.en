@@ -292,7 +292,7 @@ TRANSFORM(binarizer(time_spent, 5.0) as binary, bucketizer(course_duration, arra
 
 Splits should cover the entire range of Double values; otherwise, values outside the specified splits will be treated as errors. 
 
-**Example Transformation**
+**Example transformation**
 
 This example takes a column of continuous features (`course_duration`), bins it according to the provided `splits`, and then assembles the resulting buckets with other features.
 
@@ -329,7 +329,7 @@ TRANSFORM(binarizer(time_spent, 5.0) as binary, bucketizer(course_duration, arra
 
 This transformation rescales the input data into a normalized range, which is particularly useful in models that are sensitive to feature scaling, such as gradient descent-based algorithms.
 
-**Example Transformation**
+**Example transformation**
 
 This example transforms a set of features, rescaling them to the specified range using MinMaxScaler after applying several other transformations.
 
@@ -363,7 +363,7 @@ TRANSFORM(binarizer(time_spent, 5.0) as binary, bucketizer(course_duration, arra
 |-----------|---------------------------------------------------------------------------------------------------------|------|---------|----------|
 | NA        | MaxAbsScaler does not require any additional parameters for its operation.                              | NA   | NA      | NA       |
 
-**Example Transformation**
+**Example transformation**
 
 This example applies several transformations, including `MaxAbsScaler`, to rescale features into the range [-1, 1].
 
@@ -396,7 +396,7 @@ TRANSFORM(binarizer(time_spent, 5.0) as binary, bucketizer(course_duration, arra
 |-----------|----------------------------------------------------------------------------------------|---------|---------|----------|
 | `p`       | Specifies the `p-norm` used for normalization (for example, `1-norm`, `2-norm`, etc.). | integer | 2       | optional |
 
-**Example Transformation**
+**Example transformation**
 
 This example demonstrates how to apply several transformations, including the `Normalizer`, to normalize a set of features using the specified `p-norm`.
 
@@ -471,7 +471,7 @@ TRANSFORM(standard_scaler(feature) as ss_features)
 | `withStd`  | Scales the data to have unit standard deviation.                                                      | boolean | True    | optional |
 | `withMean` | Centers the data with the mean before scaling. This option will produce dense output, so use caution with sparse input. | boolean | False   | optional |
 
-**Example Transformation**
+**Example transformation**
 
 This example demonstrates how to apply the StandardScaler to a set of features, normalizing them with unit standard deviation and zero mean.
 
@@ -508,7 +508,7 @@ TRANSFORM(string_indexer(category) as si_category)
 |-----------|-------------|------|---------|----------|
 | NA        | `StringIndexer` does not require any additional parameters for its operation. | NA   | NA      | NA       |
 
-**Example Transformation**
+**Example transformation**
 
 This example demonstrates how to apply the `StringIndexer` to a categorical feature, converting it into a numeric index.
 
@@ -541,7 +541,7 @@ TRANSFORM(string_indexer(category) as si_category, one_hot_encoder(si_category) 
 |-----------|-------------|------|---------|----------|
 | NA        | OneHotEncoder does not require any additional parameters for its operation. | NA   | NA      | NA       |
 
-**Example Transformation**
+**Example transformation**
 
 This example demonstrates how to first apply the `StringIndexer` to a categorical feature and then use the `OneHotEncoder` to convert the indexed values into a binary vector.
 
@@ -581,7 +581,7 @@ TRANSFORM(count_vectorizer(texts) as cv_output)
 | `MAX_DOC_FREQ`  | Specifies the maximum number of different documents a term could appear in to be included in the vocabulary. Can be an absolute number or a fraction of documents (if a double).     | Double | (263)-1 | optional |
 | `MIN_TERM_FREQ` | Filters out rare words in a document. Terms with frequency/count less than the given threshold are ignored. Can be an absolute number or a fraction of the document's token count.  | Double | 1.0     | optional |
 
-**Example Transformation**
+**Example transformation**
 
 This example demonstrates how the CountVectorizer converts a collection of text arrays into vectors of token counts, producing a sparse representation.
 
@@ -620,7 +620,7 @@ TRANSFORM(tokenizer(review_comments) as token_comments, ngram(token_comments, 3)
 |-----------|-----------------------------------------------------------------------------------------------|---------|-------------------|----------|
 | `N`       | Minimum n-gram length, must be greater than or equal to 1.                                     | integer | 2 (bigram features) | optional |
 
-**Example Transformation**
+**Example transformation**
 
 This example demonstrates how the NGram transformer creates a sequence of 3-grams from a list of tokens derived from text data.
 
@@ -659,7 +659,7 @@ TRANSFORM(stop_words_remover(raw) as filtered)
 |--------------------|--------------------------------------------------------------------------------------------------|---------------|-------------------------|----------|
 | `CUSTOM_STOP_WORDS`| The words to be filtered out.                                                                    | array[string] | Default: English stop words | optional |
 
-**Example Transformation**
+**Example transformation**
 
 This example shows how the `StopWordsRemover` filters out common English stop words from a list of tokens.
 
@@ -715,9 +715,42 @@ create table td_idf_model transform(tokenizer(sentence) as token_sentence, tf_id
 | `NUM_FEATURES`  | The number of features to generate. Must be greater than 0.                             | Int  | 262144  | optional |
 | `MIN_DOC_FREQ`  | The minimum number of documents in which a term must appear to be included in the model. | Int  | 0       | optional |
 
-**Example Transformation**
+**Example transformation**
 
 This example demonstrates how to use TF-IDF to transform tokenized sentences into a feature vector that represents the importance of each term in the context of the entire corpus.
+
+```sql
+create table td_idf_model transform(tokenizer(sentence) as token_sentence, tf_idf(token_sentence) as tf_sentence, vector_assembler(array(tf_sentence)) as feature) OPTIONS()
+```
+
+#### Tokenizer {#tokenizer}
+
+The `Tokenizer` is a transformer that performs tokenization, the process of taking text (such as a sentence) and breaking it down into individual terms, usually words. The `Tokenizer` class provides this basic functionality, converting sentences into arrays of tokens (words).
+
+This transformation is a fundamental step in text preprocessing, allowing sentences to be converted into arrays of words, which can then be used in further text analysis or modeling processes.
+
+More information and examples can be found on the [Spark algorithm documentation](https://spark.apache.org/docs/2.2.0/ml-features.html#tokenizer)
+
+**Data types**
+
+- Input datatype: Textual sentence
+- Output datatype: Array[String]
+
+**Definition**
+
+```sql
+create table td_idf_model transform(tokenizer(sentence) as token_sentence, tf_idf(token_sentence) as tf_sentence, vector_assembler(array(tf_sentence)) as feature) OPTIONS()
+```
+
+**Parameters**
+
+| Parameter | Description | Type | Default | Optional |
+|-----------|-------------|------|---------|----------|
+| NA        | The `Tokenizer` does not require any additional parameters for its operation. | NA   | NA      | NA       |
+
+**Example transformation**
+
+This example demonstrates how the `Tokenizer` breaks down sentences into individual words (tokens) as part of a text processing pipeline.
 
 ```sql
 create table td_idf_model transform(tokenizer(sentence) as token_sentence, tf_idf(token_sentence) as tf_sentence, vector_assembler(array(tf_sentence)) as feature) OPTIONS()
