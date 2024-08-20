@@ -25,7 +25,7 @@ Labeling certain data fields as identities in your record and time series data a
 
 ## What are known and anonymous identities?
 
-A known identity refers to an identity value that can be used on its own or with other information to identify, contact, or locate an individual person. Examples of known identities may include email addresses, phone numbers, and CRM IDs.
+A known identity refers to an identity value that can be used on its own or with other information to identify, contact, or locate an individual person. Examples of known identities may include email addresses, phone numbers, and CRMIDs.
 
 An anonymous identity refers to an identity value that cannot be used on its own or with other information to identify, contact, or locate an individual person (such as a cookie ID).
 
