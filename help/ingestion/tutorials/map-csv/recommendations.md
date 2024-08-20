@@ -95,3 +95,5 @@ When you are finished adjusting the schema recommendations for your source field
 This guide covered how to map a CSV file to an XDM schema using AI-generated recommendations, allowing you to bring that data into Platform through batch ingestion.
 
 For steps on mapping a CSV file to an existing schema, refer to the [existing schema mapping workflow](./existing-schema.md). For information on streaming data to Platform in real time through prebuilt source connections, refer to the [sources overview](../../../sources/home.md).
+
+You can also use Machine Learning (ML) algorithms to **generate a schema from sample CSV data**. This workflow automatically creates a new schema based on the structure and content of your CSV file. This newly created schema matches your data's format to save you time and increase accuracy when defining the structure, fields, and data types for large complex datasets. See the [ML-Assisted schema creation guide](../../../xdm/ui/ml-assisted-schema-creation.md) for more information on this workflow.
