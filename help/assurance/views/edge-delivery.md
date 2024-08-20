@@ -1,6 +1,7 @@
 ---
 title: Edge Delivery View
 description: This guide details information about the Edge Delivery view in Adobe Experience Platform Assurance.
+exl-id: 570c1bcb-ec6d-465e-84ff-ed910d4f7e8a
 ---
 # Edge Delivery View in Assurance
 

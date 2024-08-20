@@ -54,7 +54,15 @@ The class you have created is available and listed in the [!UICONTROL Classes] v
 
 ### Create or edit a class {#create-or-edit}
 
-Alternatively, if you select **[!UICONTROL Create schema]**, the [!UICONTROL Create schema] workflow appears. In the [!UICONTROL Schema details] section, select **[!UICONTROL Other]**. A list of available classes appears. From here you can browse and filter pre-existing classes on which to base your new class.
+Alternatively, if you choose to manually create a schema, you can create or edit an existing class as part of that workflow. Select **[!UICONTROL Create schema]** followed by **[!UICONTROL Manual]** in the [!UICONTROL Create a schema] dialog that appears.
+
+>[!NOTE]
+>
+>If you use the ML-assisted schema creation workflow, you can upload a file and use ML algorithms to generate a recommended schema. In that schema creation workflow, you do not need to specify the base class for your schema. To learn how ML can recommend a schema structure based on a csv file, see the [machine learning-assisted schema creation guide](../ml-assisted-schema-creation.md).
+
+![The Create a schema dialog with the workflow options and select highlighted.](../../images/ui/resources/classes/manually-create-a-schema.png)
+
+The schema creation workflow appears. In the [!UICONTROL Schema details] section, select **[!UICONTROL Other]**. A list of available classes appears. From here you can browse and filter pre-existing classes on which to base your new class.
 
 >[!NOTE]
 >
@@ -68,7 +76,7 @@ Select a radio button to filter the classes based on whether they are custom or 
 
 ![The [!UICONTROL Create schema] workflow with the search bar, [!UICONTROL Custom], and [!UICONTROL Industries] highlighted.](../../images/ui/resources/classes/filter-and-search.png)
 
-To help you decide on the appropriate class, there are info (![An info icon.](../../images/ui/resources/classes/info.png)) and preview (![An preview icon.](../../images/ui/resources/classes/preview.png)) icons for each class. The info icon opens a dialog that provides a description of the class and the industry that it is associated with. The preview icon opens a preview dialog for the class that contains a schema diagram and its properties.
+To help you decide on the appropriate class, there are info (![An info icon.](/help/images/icons/info.png)) and preview (![An preview icon.](/help/images/icons/preview.png)) icons for each class. The info icon opens a dialog that provides a description of the class and the industry that it is associated with. The preview icon opens a preview dialog for the class that contains a schema diagram and its properties.
 
 ![A preview of the selected class with the schema diagram and class properties highlighted.](../../images/ui/resources/classes/class-preview.png)
 

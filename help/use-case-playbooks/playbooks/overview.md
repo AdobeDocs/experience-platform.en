@@ -14,7 +14,7 @@ What you'll find in this documentation guide:
 * **[Overview of use case playbooks](#overview)**
 * [Get started with the required configurations and permissions](/help/use-case-playbooks/playbooks/get-started.md)
 * [Available Use Case Playbooks](/help/use-case-playbooks/playbooks/playbooks-list.md)
-* [Discover the right playbook](/help/use-case-playbooks/playbooks/discover.md)
+* [Choose from a selection of playbooks](/help/use-case-playbooks/playbooks/choose.md)
 * [Create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Copy playbook-generated assets to other environments by using data awareness functionality](/help/use-case-playbooks/playbooks/data-awareness.md)
 * [Troubleshooting and known limitations](troubleshooting.md)
@@ -23,10 +23,12 @@ What you'll find in this documentation guide:
 
 ## Overview {#overview}
 
-[!UICONTROL Use Case Playbooks] can help you overcome the problem when getting started with Real-Time CDP or Adobe Journey Optimizer when you might not know exactly what to begin with or how to create the right assets in order to achieve your desired use cases. Use Case Playbooks can help you here by:
+[!UICONTROL Use Case Playbooks] can help you overcome the problem when getting started with Real-Time CDP or Adobe Journey Optimizer when you might not know exactly what to begin with or how to create the right assets in order to achieve your desired use cases. 
 
-* Showing you use cases for inspiration
-* Creating different assets for you to use, test, and promote to production when ready.
+Use Case Playbooks can help you here by:
+
+* [Introducing a catalog of available Playbooks to get started faster on use cases](../playbooks/playbooks-list.md)
+* [Creating different assets](../playbooks/create-share-reuse.md)
 
 ![View of all playbooks](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 
@@ -48,7 +50,7 @@ Some [!UICONTROL Use Case Playbooks] are tailored to Real-Time CDP use cases whi
 
 ## UI guides {#ui-guides}
 
-After you decide on the playbook that you want to use, select it from the UI and get started with it. Read the UI guides on [how to discover the right playbook](/help/use-case-playbooks/playbooks/discover.md) for you and [how to create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md) for complete information on how to create instances and make the most of a playbook. To learn how to promote various assets from the inspirational sandbox to other development sandboxes, and then to production, read the documentation on [data awareness](/help/use-case-playbooks/playbooks/data-awareness.md).
+After you decide on the playbook that you want to use, select it from the UI and get started with it. Read the UI guides on [how to choose the right playbook from a selection](/help/use-case-playbooks/playbooks/choose.md) for you and [how to create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md) for complete information on how to create instances and make the most of a playbook. To learn how to promote various assets from the inspirational sandbox to other development sandboxes, and then to production, read the documentation on [data awareness](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Troubleshooting and known limitations {#trouble-shooting-known-limitations}
 

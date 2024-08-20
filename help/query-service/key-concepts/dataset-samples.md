@@ -94,7 +94,7 @@ SELECT * FROM example_dataset_name WITHAPPROXIMATE;
 The delete operation allows you to create new samples once the maximum limit of five dataset samples has been reached.
 
 ```sql
-DROP TABLE SAMPLE x5e5cd8ea0a83c418a8ef0928_uniform_2_0_percent_bnhmc;
+DROP TABLESAMPLE x5e5cd8ea0a83c418a8ef0928_uniform_2_0_percent_bnhmc;
 ```
 
 >[!NOTE]

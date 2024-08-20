@@ -25,9 +25,13 @@ Get extensive information about calculated fields - what these are and why they 
 * [UI guide and overview](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Data Prep functions](/help/data-prep/functions.md)
 
+<!--
+
 >[!IMPORTANT]
 >
 >Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
+
+-->
 
 ## Arrays and other object types in Platform {#arrays-strings-other-objects}
 
@@ -80,7 +84,9 @@ When ready, select **[!UICONTROL Next]** to proceed to the next step of the acti
 
 ## Supported functions {#supported-functions}
 
-Note that only the following functions are supported in the beta release of calculated fields and array support for destinations: 
+All the documented [Data Prep functions](/help/data-prep/functions.md) are supported when activating data to file-based destinations. 
+
+Note, however, that extensive use case descriptions and sample output information is currently provided for the following functions only in the beta release of calculated fields and array support for destinations: 
 
 * `join`
 * `coalesce`
