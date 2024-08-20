@@ -132,7 +132,11 @@ To filter through the list of audiences activated to a destination, enter an aud
 
 ![Search box for filtering audiences.](../assets/ui/details-page/filter-audiences.png)
 
-### Remove multiple audiences from activation flows {#bulk-remove}
+### [!BADGE Beta]{type=Informative} Remove multiple audiences from activation flows {#bulk-remove}
+
+>[!NOTE]
+>
+>This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.
 
 To remove multiple audiences from existing activation flows, select the audiences and then select **[!UICONTROL Remove audiences]**.
 
