@@ -20,14 +20,14 @@ Read this section for information on unique namespaces and namespace priority. T
 
 A unique namespace determines the links that get removed if graph collapse happens.
 
-A single merged profile and its corresponding identity graph should represent a single individual (person entity). A single individual is usually represented by CRM IDs and/or Login IDs. The expectation is that no two individuals (CRM IDs) are merged into a single profile or graph.
+A single merged profile and its corresponding identity graph should represent a single individual (person entity). A single individual is usually represented by CRMIDs and/or Login IDs. The expectation is that no two individuals (CRMIDs) are merged into a single profile or graph.
 
-You must specify which namespaces represent a person entity in Identity Service using the identity optimization algorithm. For example, if a CRM database defines a user account to be associated with a single CRM ID and a single email address, then the identity settings for this sandbox would look like:
+You must specify which namespaces represent a person entity in Identity Service using the identity optimization algorithm. For example, if a CRM database defines a user account to be associated with a single CRMID and a single email address, then the identity settings for this sandbox would look like:
 
-* CRM ID namespace = unique
+* CRMID namespace = unique
 * Email namespace = unique
 
-A namespace that you declare to be unique will automatically be configured to have a maximum limit of one within a given identity graph. For example, if you declare a CRM ID namespace as unique, then an identity graph can only have one identity that contains a CRM ID namespace. If you do not declare a namespace to be unique, then the  graph can contain more than one identity with that namespace.
+A namespace that you declare to be unique will automatically be configured to have a maximum limit of one within a given identity graph. For example, if you declare a CRMID namespace as unique, then an identity graph can only have one identity that contains a CRMID namespace. If you do not declare a namespace to be unique, then the  graph can contain more than one identity with that namespace.
 
 >[!NOTE]
 >
@@ -78,15 +78,15 @@ A shared device refers to a device that is used by more than one individual. For
 
 | Namespace | Unique namespace |
 | --- | --- |
-| CRM ID | Yes |
+| CRMID | Yes |
 | Email | Yes |
 | ECID | No |
 
-In this example, both CRM ID and Email are designated as unique namespaces. At `timestamp=0`, a CRM record dataset is ingested and creates two different graphs because of the unique namespace configuration. Each graph contains a CRM ID and an Email namespace.
+In this example, both CRMID and Email are designated as unique namespaces. At `timestamp=0`, a CRM record dataset is ingested and creates two different graphs because of the unique namespace configuration. Each graph contains a CRMID and an Email namespace.
 
-* `timestamp=1`: Jane logs in to your e-commerce website using a laptop. Jane is represented by her CRM ID and Email, while the web browser on her laptop that she uses is represented by an ECID.
-* `timestamp=2`: John logs in to your e-commerce website using the same laptop. John is represented by his CRM ID and Email, while the web browser he used is already represented by an ECID. Due to the same ECID being linked to two different graphs, Identity Service is able to know that this device (laptop) is a shared device.
-* However, due to the unique namespace configuration that sets a maximum of one CRM ID namespace and one Email namespace per graph, identity optimization algorithm then splits the graph into two.
+* `timestamp=1`: Jane logs in to your e-commerce website using a laptop. Jane is represented by her CRMID and Email, while the web browser on her laptop that she uses is represented by an ECID.
+* `timestamp=2`: John logs in to your e-commerce website using the same laptop. John is represented by his CRMID and Email, while the web browser he used is already represented by an ECID. Due to the same ECID being linked to two different graphs, Identity Service is able to know that this device (laptop) is a shared device.
+* However, due to the unique namespace configuration that sets a maximum of one CRMID namespace and one Email namespace per graph, identity optimization algorithm then splits the graph into two.
   * Finally, because John is the last authenticated user, the ECID that represents the laptop, remains linked to his graph instead of Jane's.
 
 ![shared device case one](../images/identity-settings/shared-device-case-one.png)
@@ -95,16 +95,16 @@ In this example, both CRM ID and Email are designated as unique namespaces. At `
 
 | Namespace | Unique namespace |
 | --- | --- |
-| CRM ID | Yes |
+| CRMID | Yes |
 | ECID | No |
 
-In this example, the CRM ID namespace is designated as a unique namespace.
+In this example, the CRMID namespace is designated as a unique namespace.
 
-* `timestamp=1`: Jane logs in to your e-commerce website using a laptop. She is represented by her CRM ID, and the web browser on the laptop is represented by the ECID.
-* `timestamp=2`: John logs in to your e-commerce website using the same laptop. He is represented by his CRM ID and the web browser he uses is represented by the same ECID.
-  * This event links two independent CRM IDs to the same ECID, which exceeds the configured limit of one CRM ID.
-  * As a result, identity optimization algorithm removes the older link, which in this case is Jane's CRM ID that was linked at `timestamp=1`.
-  * However, while Jane's CRM ID will no longer exist as a graph on Identity Service, it will still persist as a profile on Real-Time Customer Profile. This is because an identity graph must contain at least two linked identities, and as a result of removing the links, Jane's CRM ID no longer has another identity to link to.
+* `timestamp=1`: Jane logs in to your e-commerce website using a laptop. She is represented by her CRMID, and the web browser on the laptop is represented by the ECID.
+* `timestamp=2`: John logs in to your e-commerce website using the same laptop. He is represented by his CRMID and the web browser he uses is represented by the same ECID.
+  * This event links two independent CRMIDs to the same ECID, which exceeds the configured limit of one CRMID.
+  * As a result, identity optimization algorithm removes the older link, which in this case is Jane's CRMID that was linked at `timestamp=1`.
+  * However, while Jane's CRMID will no longer exist as a graph on Identity Service, it will still persist as a profile on Real-Time Customer Profile. This is because an identity graph must contain at least two linked identities, and as a result of removing the links, Jane's CRMID no longer has another identity to link to.
 
 ![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
 
@@ -116,18 +116,18 @@ There are instances where a user may input bad values for their email and/or pho
 
 | Namespace | Unique namespace |
 | --- | --- |
-| CRM ID | Yes |
+| CRMID | Yes |
 | Email | Yes |
 | ECID | No |
 
-In this example, the CRM ID and Email namespaces are designated as unique. Consider the scenario that Jane and John have signed up to your e-commerce website using a bad email value (for example, test<span>@test.com).
+In this example, the CRMID and Email namespaces are designated as unique. Consider the scenario that Jane and John have signed up to your e-commerce website using a bad email value (for example, test<span>@test.com).
 
-* `timestamp=1`: Jane logs in to your e-commerce website using Safari on her iPhone, establishing her CRM ID (login information) and her ECID (browser). 
-* `timestamp=2`: John logs in to your e-commerce website using Google Chrome on his iPhone, establishing his CRM ID (login information) and ECID (browser).
-* `timestamp=3`: Your data engineer ingests Jane's CRM record, which results in her CRM ID getting linked to the bad email.
-* `timestamp=4`: Your data engineer ingests John's CRM record, which results in his CRM ID getting linked to the bad email.
-  * This then becomes a violation of the unique namespace configuration as it creates a single graph with two CRM ID namespaces.
-  * As a result, the identity optimization algorithm deletes the older link, which in this case is the link between Jane's identity with CRM ID namespace and the identity with test<span>@test.
+* `timestamp=1`: Jane logs in to your e-commerce website using Safari on her iPhone, establishing her CRMID (login information) and her ECID (browser). 
+* `timestamp=2`: John logs in to your e-commerce website using Google Chrome on his iPhone, establishing his CRMID (login information) and ECID (browser).
+* `timestamp=3`: Your data engineer ingests Jane's CRM record, which results in her CRMID getting linked to the bad email.
+* `timestamp=4`: Your data engineer ingests John's CRM record, which results in his CRMID getting linked to the bad email.
+  * This then becomes a violation of the unique namespace configuration as it creates a single graph with two CRMID namespaces.
+  * As a result, the identity optimization algorithm deletes the older link, which in this case is the link between Jane's identity with CRMID namespace and the identity with test<span>@test.
 
 With identity optimization algorithm, bad identity values such as bogus emails or phone numbers do not get propagated across several different identity graphs.
 
@@ -135,13 +135,13 @@ With identity optimization algorithm, bad identity values such as bogus emails o
 
 ### Anonymous event association
 
-ECIDs store unauthenticated (anonymous) events, while CRM ID stores authenticated events. In the case of shared devices, the ECID (bearer of unauthenticated events) gets associated with the **last authenticated user**.
+ECIDs store unauthenticated (anonymous) events, while CRMID stores authenticated events. In the case of shared devices, the ECID (bearer of unauthenticated events) gets associated with the **last authenticated user**.
 
 View the diagram below to better understand how anonymous event association works:
 
 * Kevin and Nora share a tablet.
-  * `timestamp=1`: Kevin logs in to an e-commerce website using his account, thereby establishing his CRM ID (login information) and an ECID (browser). At time of login, Kevin is now considered the last authenticated user.
-  * `timestamp=2`: Nora logs in to an e-commerce website using her account, thereby establishing her CRM ID (login information) and the same ECID. At time of login, Nora is now considered the last authenticated user.
+  * `timestamp=1`: Kevin logs in to an e-commerce website using his account, thereby establishing his CRMID (login information) and an ECID (browser). At time of login, Kevin is now considered the last authenticated user.
+  * `timestamp=2`: Nora logs in to an e-commerce website using her account, thereby establishing her CRMID (login information) and the same ECID. At time of login, Nora is now considered the last authenticated user.
   * `timestamp=3`: Kevin uses the tablet to browse the e-commerce website, but does not log in with his account. Kevin's browsing activity are then stored in the ECID, which in turn is associated with Nora because she is the last authenticated user. At this point, Nora owns the anonymous events.
     * Until Kevin logs in again, Nora's merged profile will be associated to all the unauthenticated events stored against the ECID (with events being where ECID is the primary identity).
   * `timestamp=4`: Kevin logs in for a second time. At this point, he once again becomes the last authenticated user, and also now owns the unauthenticated events:

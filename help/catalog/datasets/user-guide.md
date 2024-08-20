@@ -33,6 +33,22 @@ This user guide requires a working understanding of the following components of 
 >title="Dataset expiration"
 >abstract="This column indicates the number of days that the target dataset has left before it automatically expires."
 
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_datalakeretention"
+>title="Datalake retention"
+>abstract="Shows the current retention policy for each dataset. This value can be modified in each dataset's retention settings. You can only set retention time for ExperienceEvent dataset."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_profileretention"
+>title="Profile retention"
+>abstract="Shows the current retention policy for each dataset. This value can be modified in each dataset's retention settings. You can only set retention time for an ExperienceEvent dataset."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_datalakesettings_datasetretention"
+>title="Dataset retention"
+>abstract="Datalake retention sets rules for how long data is stored and when it should be deleted in different services. This ensures compliance with regulations, managing storage costs, and maintaining data quality."
+
+
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and status of the most recent ingestion run.
 
 ![The Platform UI with the Datasets item highlighted in the left navigation bar.](../images/datasets/user-guide/browse-datasets.png)
@@ -86,6 +102,10 @@ You can preview dataset sample data from both the inline options of the [!UICONT
 ![The Browse tab of the Datasets workspace with the ellipsis and Preview dataset option highlighted for the chosen dataset.](../images/datasets/user-guide/preview-dataset-option.png)
 
 This opens the preview window, where the hierarchical view of the schema for the dataset is shown on the right.
+
+>[!NOTE]
+>
+>The schema diagram on the left side of the view only displays fields that contain data. Fields without data are automatically hidden to streamline the UI and focus on relevant information.
 
 ![The dataset preview dialog with information about the structure, as well as sample values, for the dataset are shown.](../images/datasets/user-guide/preview-dataset.png)
 
