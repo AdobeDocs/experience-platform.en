@@ -596,7 +596,6 @@ TRANSFORM(count_vectorizer(texts) as cv_output)
 | 0  | Array("a", "b", "c")            | (3,[0,1,2],[1.0,1.0,1.0])         |
 | 1  | Array("a", "b", "b", "c", "a")  | (3,[0,1,2],[2.0,2.0,1.0])         |
 
-<!--  -->
 #### NGram {#ngram}
 
 The **NGram** is a transformer that generates a sequence of n-grams, where an n-gram is a sequence of \(n\) tokens (typically words) for some integer \(n\). The `NGram` class can be used to transform input features into n-grams, with the output consisting of a sequence of n-grams where each n-gram is represented by a space-delimited string of \(n\) consecutive words.
@@ -634,5 +633,8 @@ TRANSFORM(tokenizer(review_comments) as token_comments, ngram(token_comments, 3)
 | id | texts                                                 | n_tokens                                              |
 |----|-------------------------------------------------------|-------------------------------------------------------|
 | 0  | ["this", "was", "an", "entertaining", "movie"]        | ["this was an", "was an entertaining", "an entertaining movie"] |
+
+
+<!--  -->
 
 <!-- done UP to here -->
