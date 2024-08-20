@@ -518,7 +518,7 @@ TRANSFORM(string_indexer(category) as si_category)
 
 #### OneHotEncoder {#onehotencoder}
 
-The **OneHotEncoder** is a Transformer that maps a column of label indices to a column of binary vectors, where each vector has at most a single one-value. This encoding is particularly useful for allowing algorithms that expect continuous features, such as Logistic Regression, to incorporate categorical data.
+The **OneHotEncoder** is a transformer that maps a column of label indices to a column of binary vectors, where each vector has at most a single one-value. This encoding is particularly useful for allowing algorithms that expect continuous features, such as Logistic Regression, to incorporate categorical data.
 
 This transformation enables the use of categorical data in models that require numeric input by converting label indices into a sparse binary vector format.
 
@@ -559,6 +559,8 @@ The `CountVectorizer` is a transformer that converts a collection of text docume
 
 This transformation is essential for converting text data into a format that can be used by machine learning algorithms, particularly those that require numeric input, by representing the frequency of tokens (words) within each document.
 
+More information and examples can be found on the [Spark algorithm documentation](https://spark.apache.org/docs/2.2.0/ml-features.html#countvectorizer).
+
 **Data types**
 
 - Input datatype: Array[String]
@@ -595,5 +597,42 @@ TRANSFORM(count_vectorizer(texts) as cv_output)
 | 1  | Array("a", "b", "b", "c", "a")  | (3,[0,1,2],[2.0,2.0,1.0])         |
 
 <!--  -->
+#### NGram {#ngram}
+
+The **NGram** is a transformer that generates a sequence of n-grams, where an n-gram is a sequence of \(n\) tokens (typically words) for some integer \(n\). The `NGram` class can be used to transform input features into n-grams, with the output consisting of a sequence of n-grams where each n-gram is represented by a space-delimited string of \(n\) consecutive words.
+
+This transformation is useful for extracting sequences of words (n-grams) from text data, which can then be used as features in machine learning models, particularly those focused on natural language processing.
+
+More information and examples can be found on the [Spark algorithm documentation](https://spark.apache.org/docs/2.2.0/ml-features.html#n-gram).
+**Data types**
+
+- Input datatype: Array[String]
+- Output datatype: Array[String]
+
+**Definition**
+
+```sql
+TRANSFORM(tokenizer(review_comments) as token_comments, ngram(token_comments, 3) as n_tokens)
+```
+
+**Parameters**
+
+| Parameter | Description                                                                                   | Type    | Default           | Optional |
+|-----------|-----------------------------------------------------------------------------------------------|---------|-------------------|----------|
+| `N`       | Minimum n-gram length, must be greater than or equal to 1.                                     | integer | 2 (bigram features) | optional |
+
+**Example Transformation**
+
+This example demonstrates how the NGram transformer creates a sequence of 3-grams from a list of tokens derived from text data.
+
+```sql
+TRANSFORM(tokenizer(review_comments) as token_comments, ngram(token_comments, 3) as n_tokens)
+```
+
+**Example before and after n-gram transformation**
+
+| id | texts                                                 | n_tokens                                              |
+|----|-------------------------------------------------------|-------------------------------------------------------|
+| 0  | ["this", "was", "an", "entertaining", "movie"]        | ["this was an", "was an entertaining", "an entertaining movie"] |
 
 <!-- done UP to here -->
