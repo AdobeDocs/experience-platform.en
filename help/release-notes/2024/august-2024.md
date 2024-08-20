@@ -24,7 +24,7 @@ Updates to existing features and documentation in Experience Platform:
 
 **New or updated functionality** {#destinations-new-updated-functionality}
 
-| Functionality | Description |
+| Feature | Description |
 | ----------- | ----------- |
 | Edit export schedules for multiple exported audiences in the [scheduling step](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | The option to edit the export schedules for multiple exported audiences directly from the scheduling step of the audience activation workflow is now available to all customers. ![Image of the Experience Platform user interface highlighting the Edit schedule option in the scheduling step.](assets/august/edit-schedule.png) {width="250" align="center" zoomable="yes"}|
 | Edit file names for multiple exported audiences in the [scheduling step](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | The option to edit the names of multiple exported files directly from the scheduling step of the audience activation workflow is now available to all customers. ![Image of the Experience Platform user interface highlighting the Edit file name option in the scheduling step.](assets/august/edit-file-name.png) {width="250" align="center" zoomable="yes"}|
