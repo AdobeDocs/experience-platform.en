@@ -6,10 +6,52 @@ description: The August 2024 release notes for Adobe Experience Platform.
 
 **Release date: August 20, 2024**
 
+>[!TIP]
+>
+>View an [overview of sample use cases documentation](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/overview) to learn about various use cases such as prospecting, acquisition, and more that your organization can achieve with Real-Time CDP.
+
 Updates to existing features and documentation in Experience Platform:
 
+- [Destinations](#destinations)
+- [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
+- [Segmentation Service](#segmentation)
 - [Sources](#sources)
+
+## Destinations {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| Edit export schedules for multiple exported audiences in the [scheduling step](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | The option to edit the export schedules for multiple exported audiences directly from the scheduling step of the audience activation workflow is now available to all customers. ![Image of the Experience Platform user interface highlighting the Edit schedule option in the scheduling step.](assets/august/edit-schedule.png) {width="250" align="center" zoomable="yes"}|
+| Edit file names for multiple exported audiences in the [scheduling step](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | The option to edit the names of multiple exported files directly from the scheduling step of the audience activation workflow is now available to all customers. ![Image of the Experience Platform user interface highlighting the Edit file name option in the scheduling step.](assets/august/edit-file-name.png) {width="250" align="center" zoomable="yes"}|
+| Remove multiple audiences from a dataflow from the [Destination Details](../../destinations/ui/destination-details-page.md#bulk-remove) page.  | The option to remove multiple audiences from existing dataflows from the **[!UICONTROL Destination Details]** page is now available to all customers. ![Image of the Experience Platform user interface highlighting the Remove audiences option in the Destination Details page.](assets/august/bulk-remove-audiences.png) {width="250" align="center" zoomable="yes"} |
+| Export multiple files on-demand to batch destinations from the [Destination Details](../../destinations/ui/destination-details-page.md#bulk-export) page. | The option to export multiple files on-demand to batch destinations from the **[!UICONTROL Destination Details]** page is now available to all customers. ![Image of the Experience Platform user interface highlighting the Export file now option in the Destination Details page.](assets/august/bulk-export-file-now.png) {width="250" align="center" zoomable="yes"} |
+| Edit file names for multiple exported audiences from the [Destination Details](../../destinations/ui/destination-details-page.md#bulk-edit-file-names) page. | You can now edit the names of multiple exported files directly from the **[!UICONTROL Destination Details]** page. ![Image of the Experience Platform user interface highlighting the edit file name option in the destination details page.](assets/august/edit-file-name-destination-details.png) {width="250" align="center" zoomable="yes"} |
+| Remove multiple datasets from a dataflow from the [Destination Details](../../destinations/ui/export-datasets.md#remove-dataset) page. | The option to remove multiple datasets from a dataflow is now available to all customers. ![Image of the Experience Platform user interface highlighting the Remove datasets option in the destination details page.](assets/august/bulk-remove-datasets.png) {width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+For more information, read the [destinations overview](../../destinations/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| ML-assisted schema creation flow |  Use advanced machine-learning algorithms to analyze your sample CSV data files and automatically create optimized schemas using standard and custom fields.<br>Key Features:<br><ul><li>Faster Schema Creation: Generate schemas directly from sample data files using ML-recommended and generated XDM fields.</li><li>Flexible Schema Evolution: Easily add or update fields in the generated schema.</li><li>Seamless Integration: Fully integrated with the core schema creation flow in the Schema Ul, ensuring a smooth and cohesive user experience.</li><li>Efficient Review & Editing: Quickly view and update your schema using the Flat View editor, making the creation process more efficient and user-friendly.</li></ul> |
+
+{style="table-layout:auto"}
+
+To learn more, read the [ML-assisted schema creation overview](../../xdm/ui/ml-assisted-schema-creation.md) 
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md).
 
 ## Identity Service {#identity-service}
 
@@ -24,6 +66,20 @@ Use Adobe Experience Platform Identity Service to create a comprehensive view of
 {style="table-layout:auto"}
 
 For more information on Identity Service, read the [Identity Service overview](../../identity-service/home.md).
+
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] allows you to segment data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into audiences. You can create audiences through segment definitions or other sources from your [!DNL Real-Time Customer Profile] data. These audiences are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
+
+**Updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Ingestion details | For audiences with the Custom upload origin, you can more comprehensively view details of the audience's ingestion within the audience details page. Additionally, you can apply labels to the payload attributes by selecting the schema and selecting the desired attributes for labelling. More information about the ingestion details section can be found in the [Audience Portal guide](../../segmentation/ui/audience-portal.md#ingestion-details). |
+
+{style="table-layout:auto"}
+
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
 
 ## Sources
 
