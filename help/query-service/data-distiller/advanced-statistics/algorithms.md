@@ -543,14 +543,57 @@ TRANSFORM(string_indexer(category) as si_category, one_hot_encoder(si_category) 
 
 **Example Transformation**
 
-This example demonstrates how to first apply the StringIndexer to a categorical feature and then use the OneHotEncoder to convert the indexed values into a binary vector.
+This example demonstrates how to first apply the `StringIndexer` to a categorical feature and then use the `OneHotEncoder` to convert the indexed values into a binary vector.
 
 ```sql
 TRANSFORM(string_indexer(category) as si_category, one_hot_encoder(si_category) as ohe_category)
 ```
 
+### Textual transformations {#textual-transformations}
+
+<!-- Needs Intro ... -->
+
+#### CountVectorizer {#countvectorizer}
+
+The `CountVectorizer` is a transformer that converts a collection of text documents into vectors of token counts. This transformation produces sparse representations of the documents based on the vocabulary extracted from the corpus, which can then be passed to other algorithms such as LDA (Latent Dirichlet Allocation).
+
+This transformation is essential for converting text data into a format that can be used by machine learning algorithms, particularly those that require numeric input, by representing the frequency of tokens (words) within each document.
+
+**Data types**
+
+- Input datatype: Array[String]
+- Output datatype: Dense Vector
+
+**Definition**
+
+```sql
+TRANSFORM(count_vectorizer(texts) as cv_output)
+```
+
+**Parameters**
+
+| Parameter       | Description                                                                                                                                                                        | Type   | Default | Optional |
+|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|---------|----------|
+| `VOCAB_SIZE`    | Max size of the vocabulary. CountVectorizer will build a vocabulary that only considers the top `vocabSize` terms ordered by term frequency across the corpus.                       | Int    | 218     | optional |
+| `MIN_DOC_FREQ`  | Specifies the minimum number of different documents a term must appear in to be included in the vocabulary. Can be an absolute number or a fraction of documents (if a double).     | Double | 1.0     | optional |
+| `MAX_DOC_FREQ`  | Specifies the maximum number of different documents a term could appear in to be included in the vocabulary. Can be an absolute number or a fraction of documents (if a double).     | Double | (263)-1 | optional |
+| `MIN_TERM_FREQ` | Filters out rare words in a document. Terms with frequency/count less than the given threshold are ignored. Can be an absolute number or a fraction of the document's token count.  | Double | 1.0     | optional |
+
+**Example Transformation**
+
+This example demonstrates how the CountVectorizer converts a collection of text arrays into vectors of token counts, producing a sparse representation.
+
+```sql
+TRANSFORM(count_vectorizer(texts) as cv_output)
+```
+
+**Example before and after vectorization**
+
+| id | texts                           | cv_output                         |
+|----|---------------------------------|-----------------------------------|
+| 0  | Array("a", "b", "c")            | (3,[0,1,2],[1.0,1.0,1.0])         |
+| 1  | Array("a", "b", "b", "c", "a")  | (3,[0,1,2],[2.0,2.0,1.0])         |
+
 <!--  -->
 
 <!-- done UP to here -->
-
-### Textual transformations {#textual-transformations}
