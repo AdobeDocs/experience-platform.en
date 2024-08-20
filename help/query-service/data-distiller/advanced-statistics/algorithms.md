@@ -299,7 +299,7 @@ This example takes a column of continuous features (`course_duration`), bins it 
 ```sql
 TRANSFORM(binarizer(time_spent, 5.0) as binary, bucketizer(course_duration, array(-440.5, 0.0, 150.0, 1000.7)) as buck_features, vector_assembler(array(buck_features, users_count, binary)) as vec_assembler, max_abs_scaler(vec_assembler) as maxScaling, min_max_scaler(maxScaling) as features)
 ```
-<!--  -->
+
 #### MinMaxScaler {#minmaxscaler}
 
 The **MinMaxScaler** transformer rescales each feature in a dataset of Vector rows to a specified range, typically [0, 1]. This transformation is useful for normalizing data, ensuring that all features contribute equally to the model. The MinMaxScaler operates on the following parameters:
@@ -427,7 +427,7 @@ TRANSFORM(quantile_discretizer(hour, 3) as result)
 |--------------|--------------------------------------------------------------------------------------------------------------------------|---------|---------|----------|
 | `NUM_BUCKETS`| The number of buckets (quantiles, or categories) into which data points are grouped. This number must be greater than or equal to two.      | integer | 2       | optional |
 
-**Example Transformation**
+**Example transformation**
 
 This example demonstrates how the `QuantileDiscretizer` bins a column of continuous features (`hour`) into three categorical buckets.
 
@@ -445,11 +445,77 @@ TRANSFORM(quantile_discretizer(hour, 3) as result)
 |3  | 5.0  | 1.0    |
 |4  | 2.2  | 0.0    |
 
+#### StandardScaler {#standardscaler}
+
+The `StandardScaler` is a transformer that normalizes each feature in a dataset of vector rows so that they have a unit standard deviation and/or zero mean. This transformation is commonly used in machine learning pipelines to standardize the features, making them more suitable for certain algorithms that assume data to be centered around zero with a consistent scale.
+
+This transformation ensures that features are standardized, which is particularly important for algorithms like SVM, logistic regression, and neural networks, where unstandardized data might lead to convergence issues or less accurate models.
+
+More information and examples can be found on the [Spark algorithm documentation](https://spark.apache.org/docs/2.2.0/ml-features.html#standardscaler). 
+
+**Data types**
+
+- Input datatype: Vector
+- Output datatype: Vector
+
+**Definition**
+
+```sql
+TRANSFORM(standard_scaler(feature) as ss_features)
+```
+
+**Parameters**
+
+| Parameter  | Description                                                                                          | Type    | Default | Optional |
+|------------|------------------------------------------------------------------------------------------------------|---------|---------|----------|
+| `withStd`  | Scales the data to have unit standard deviation.                                                      | boolean | True    | optional |
+| `withMean` | Centers the data with the mean before scaling. This option will produce dense output, so use caution with sparse input. | boolean | False   | optional |
+
+**Example Transformation**
+
+This example demonstrates how to apply the StandardScaler to a set of features, normalizing them with unit standard deviation and zero mean.
+
+```sql
+TRANSFORM(standard_scaler(feature) as ss_features)
+```
+
+### Categorical transformations {#categorical-transformations}
+
+#### StringIndexer {#stringindexer}
+
+The `StringIndexer` is a transformer that encodes a string column of labels into a column of label indices. The indices are in the range (0, numLabels), ordered by label frequency, with the most frequent label assigned an index of 0. If the input column is numeric, it will be cast to a string and then indexed. Unseen labels can be assigned to index `numLabels` if the user chooses to keep them.
+
+This transformation is useful for converting categorical string data into numeric indices, which are more suitable for machine learning models that require numerical input.
+
+More information and examples can be found on the [Spark algorithm documentation](https://spark.apache.org/docs/2.2.0/ml-features.html#stringindexer)
+
+**Data types**
+
+- Input datatype: String
+- Output datatype: Numeric
+
+**Definition**
+
+```sql
+TRANSFORM(string_indexer(category) as si_category)
+```
+
+**Parameters**
+
+| Parameter | Description | Type | Default | Optional |
+|-----------|-------------|------|---------|----------|
+| NA        | `StringIndexer` does not require any additional parameters for its operation. | NA   | NA      | NA       |
+
+**Example Transformation**
+
+This example demonstrates how to apply the `StringIndexer` to a categorical feature, converting it into a numeric index.
+
+```sql
+TRANSFORM(string_indexer(category) as si_category)
+```
 
 <!--  -->
 
 <!-- done UP to here -->
-### Categorical transformations {#categorical-transformations}
-
 
 ### Textual transformations {#textual-transformations}
