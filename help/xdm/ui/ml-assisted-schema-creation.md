@@ -1,10 +1,10 @@
 ---
-title: Machine Learning Assisted Schema Creation
+title: Machine Learning-Assisted Schema Creation
 description: Learn how to create a schemas in the Experience Platform user interface.
 ---
-# Machine Learning assisted schema creation
+# Machine learning-assisted schema creation
 
-Use ML algorithms to generate a schema from sample CSV data. This process saves time and increases accuracy when defining the structure, fields, and data types for large complex datasets.
+Use ML algorithms to generate a schema from sample data. This process saves time and increases accuracy when defining the structure, fields, and data types for large complex datasets.
 
 With ML schema generation, you can quickly integrate new data sources and reduce the mistakes from manual creation. Non-technical users can use it to generate schemas or manage large and complex datasets without any extra effort. This assistance speeds up the process from getting data to gaining insights, as makes it easier to combine new data sources and perform data analysis.
 
@@ -12,7 +12,7 @@ With ML schema generation, you can quickly integrate new data sources and reduce
 
 This tutorial requires a working understanding of the requirements for schema creation. Before continuing with this guide, you should read the [UI guide to creating and editing schemas](./resources/schemas.md). 
 
-This guide explains how to create schemas using machine learning (ML) algorithms to generate a schema from sample CSV data. See the [manual schema creation workflow guide](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) for information on creating schemas or the document on [field-based workflows in the Schema Editor](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/field-based-workflows) to enhance your understanding of the schema creation process.
+This guide explains how to create schemas using machine learning (ML) algorithms to generate a schema from sample data. See the [manual schema creation workflow guide](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) for information on creating schemas or the document on [field-based workflows in the Schema Editor](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/field-based-workflows) to enhance your understanding of the schema creation process.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ The **[!UICONTROL Select data]** stage of the creation workflow appears. From th
 
 ### Preview data {#preview-data}
 
-The [!UICONTROL Upload file] section displays the name of the CSV file that you imported and the **[!UICONTROL Preview]** section displays rows of sample data from the file you uploaded. Select **[Next]** to continue the workflow.
+The [!UICONTROL Upload file] section displays the name of the CSV file that you imported and the **[!UICONTROL Preview]** section displays rows of sample data from the file you uploaded. Select **[!UICONTROL Next]** to continue the workflow.
 
 ![Rows of sample data highlighted in the preview section, and Next highlighted.](../images/ui/ml-schema-creation/preview-data.png)
 
@@ -77,7 +77,7 @@ A new row appears on your recommended schema. You can now edit the field.
 
 #### Edit a Field {#edit-field}
    
-To edit a field, select the pencil icon of the row you wish to edit. A details panel appears to the right where you can edit the custom field mapping. The details panel contains the [!UICONTROL Target field], [!UICONTROL Display Name], [!UICONTROL Data Type], and [!UICONTROL Field Group]. Make any necessary changes and select **[Apply]** to confirm. Select the pencil icon again to close the details panel.
+To edit a field, select the pencil icon of the row you wish to edit. A details panel appears to the right where you can edit the custom field mapping. The details panel contains the [!UICONTROL Target field], [!UICONTROL Display Name], [!UICONTROL Data Type], and [!UICONTROL Field Group]. Make any necessary changes and select **[!UICONTROL Apply]** to confirm. Select the pencil icon again to close the details panel.
 
 ![The Review and Edit stage of the schema creation workflow with the pencil icon and details panel highlighted.](../images/ui/ml-schema-creation/edit-field.png)
 
@@ -99,7 +99,7 @@ To approve your recommended schema and continue the **[!UICONTROL Create schema]
 
 ### Name and save schema {#name-and-save}
 
-The **[!UICONTROL Name and save]** stage of the creation workflow appears. Enter a **[Schema display name]** nd optional description. The **[Schema generated]** section provides a diagram of the ML-generated schema. Select **[Finish]** to complete the schema creation workflow.
+The **[!UICONTROL Name and save]** stage of the creation workflow appears. Enter a **[Schema display name]** and an optional description. The **[Schema generated]** section provides a diagram of the ML-generated schema. Select **[Finish]** to complete the schema creation workflow.
 
 ![The Name and Save Schema stage of the schema creation workflow with Finish highlighted.](../images/ui/ml-schema-creation/name-and-save.png)
 

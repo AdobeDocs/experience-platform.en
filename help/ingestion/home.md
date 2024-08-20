@@ -39,9 +39,9 @@ See the [Sources overview](../sources/home.md) for more information.
 
 ### ML-Assisted schema creation {#ml-assisted-schema-creation}
 
-To quickly integrate new data sources, you can now use Machine Learning algorithms to generate a schema from sample CSV data. This automation simplifies the creation of accurate schemas, reduces errors, and speeds up the process from data collection to analysis and insights.
+To quickly integrate new data sources, you can now use machine learning algorithms to generate a schema from sample data. This automation simplifies the creation of accurate schemas, reduces errors, and speeds up the process from data collection to analysis and insights.
 
-See the [ML-Assisted schema creation guide](../xdm/ui/ml-assisted-schema-creation.md) for more information on this workflow.
+See the [ML-assisted schema creation guide](../xdm/ui/ml-assisted-schema-creation.md) for more information on this workflow.
 
 ## Next steps and additional resources
 

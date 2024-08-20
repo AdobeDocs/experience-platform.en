@@ -58,7 +58,7 @@ Alternatively, if you choose to manually create a schema, you can create or edit
 
 >[!NOTE]
 >
->If you use the ML-assisted schema creation workflow, you can upload a csv file and use ML algorithms to generate a recommended schema, In that schema creation workflow, you do not need to specify the base class for your schema. To learn how ML can recommend a schema structure based on a csv file, see the [Machine Learning assisted schema creation guide](../ml-assisted-schema-creation.md).
+>If you use the ML-assisted schema creation workflow, you can upload a file and use ML algorithms to generate a recommended schema. In that schema creation workflow, you do not need to specify the base class for your schema. To learn how ML can recommend a schema structure based on a csv file, see the [machine learning-assisted schema creation guide](../ml-assisted-schema-creation.md).
 
 ![The Create a schema dialog with the workflow options and select highlighted.](../../images/ui/resources/classes/manually-create-a-schema.png)
 

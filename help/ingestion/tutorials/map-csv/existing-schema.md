@@ -118,4 +118,4 @@ By following this tutorial, you have successfully mapped a flat CSV file to an X
 
 >[!TIP]
 >
->You can also use Machine Learning (ML) algorithms to **generate a schema from sample CSV data**. This workflow automatically creates a new schema based on the structure and content of your CSV file. This newly created schema matches your data's format to save you time and increase accuracy when defining the structure, fields, and data types for large complex datasets. See the [ML-Assisted schema creation guide](../../../xdm/ui/ml-assisted-schema-creation.md) for more information on this workflow.
+>You can also use machine learning (ML) algorithms to **generate a schema from sample data** from the Schema workspace. This workflow automatically creates a new schema based on the structure and content of your file, ensuring that the schema matches your data's format. This saves you time and increases accuracy when defining the structure, fields, and data types for large complex datasets. See the [ML-Assisted schema creation guide](../../../xdm/ui/ml-assisted-schema-creation.md) for more information on this workflow.
