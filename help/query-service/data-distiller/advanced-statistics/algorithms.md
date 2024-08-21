@@ -122,6 +122,12 @@ The **Numeric imputer** transformer completes missing values in a dataset. This 
 transformer(numeric_imputer(hour, 'mean') hour_imputed)
 ```
 
+**Parameters**
+
+|Parameter |  Description |  Type |  Default | Optional |
+| -------- | ------------ | ----- | -------- | -------- |
+| `STRATEGY` | An imputation strategy. The available values are: [`mean`, `median`, `mode`]. |  string |  mean | optional |
+
 **Example before imputation**
 
 |id |  hour |
@@ -137,12 +143,6 @@ transformer(numeric_imputer(hour, 'mean') hour_imputed)
 |0 |  18.0 |
 |1 |  13.0 |
 |2 |  8.0 |
-
-**Parameters**
-
-|Parameter |  Description |  Type |  Default | Optional |
-| -------- | ------------ | ----- | -------- | -------- |
-| `STRATEGY` | An imputation strategy. The available values are: [`mean`, `median`, `mode`]. |  string |  mean | optional |
 
 #### String imputer {#string-imputer}
 
@@ -163,6 +163,12 @@ The **String imputer** transformer completes missing values in a dataset using a
 transform(string_imputer(name, 'unknown_name') as name_imputed)
 ```
 
+**Parameters**
+
+|Parameter |  Description |  Type |  Default | Optional |
+| -------- | ------------ | ----- | -------- | -------- |
+| `NULL_REPLACEMENT` | The value that will replace nulls. |  string |  ml_unknown | optional |
+
 **Example before imputation**
 
 |id |  name |
@@ -178,12 +184,6 @@ transform(string_imputer(name, 'unknown_name') as name_imputed)
 |0 | John |
 |1 | ml_unknown |
 |2 | Alice |
-
-**Parameters**
-
-|Parameter |  Description |  Type |  Default | Optional |
-| -------- | ------------ | ----- | -------- | -------- |
-| `NULL_REPLACEMENT` | The value that will replace nulls. |  string |  ml_unknown | optional |
 
 #### Boolean imputer {#imputer}
 
@@ -204,6 +204,12 @@ The **Boolean imputer** transformer completes missing values in a dataset for a 
 transform(boolean_imputer(name, true) as name_imputed)
 ```
 
+**Parameters**
+
+|Parameter |  Description |  Type |  Default | Optional |
+| -------- | ------------ | ----- | -------- | -------- |
+| `NULL_REPLACEMENT` | Boolean imputer. Allowed values: [`true`, `false`]. |  boolean |  false | optional |
+
 **Example before imputation**
 
 |id |  flag |
@@ -219,12 +225,6 @@ transform(boolean_imputer(name, true) as name_imputed)
 |0 | true |
 |1 | true |
 |2 | false |
-
-**Parameters**
-
-|Parameter |  Description |  Type |  Default | Optional |
-| -------- | ------------ | ----- | -------- | -------- |
-| `NULL_REPLACEMENT` | Boolean imputer. Allowed values: [`true`, `false`]. |  boolean |  false | optional |
 
 #### Vector assembler {#vector-assembler}
 
@@ -243,6 +243,12 @@ More information and examples can be found on the [Spark algorithm documentation
 transform(vector_assembler(id, hour, mobile, userFeatures) as features)
 ```
 
+**Parameters**
+
+|Parameter |  Description |  Type |  Default | Optional |
+| -------- | ------------ | ----- | -------- | -------- |
+| NA       |  No additional parameters are required for this transformer. |  NA    |  NA     | NA       |
+
 **Example before transformation**
 
 |id |  hour | mobile | userFeatures     | clicked |
@@ -254,12 +260,6 @@ transform(vector_assembler(id, hour, mobile, userFeatures) as features)
 |id | hour | mobile | userFeatures     | clicked | features                      |
 |---|------|--------|------------------|---------|-------------------------------|
 |0  | 18   | 1.0    | [0.0, 10.0, 0.5] | 1.0     | [18.0, 1.0, 0.0, 10.0, 0.5]   |
-
-**Parameters**
-
-|Parameter |  Description |  Type |  Default | Optional |
-| -------- | ------------ | ----- | -------- | -------- |
-| NA       |  No additional parameters are required for this transformer. |  NA    |  NA     | NA       |
 
 
 ### Numeric transformations {#numeric-transformations}
@@ -283,6 +283,12 @@ More information and examples can be found on the [Spark algorithm documentation
 transform(numeric_imputer(rating, 'mode') rating_imp, binarizer(rating_imp) rating_binarizer)
 ```
 
+**Parameters**
+
+|Parameter   |  Description                                                                                             |  Type    |  Default | Optional |
+|------------|----------------------------------------------------------------------------------------------------------|----------|----------|----------|
+| `THRESHOLD`| Param for the threshold used to binarize continuous features. Features greater than the threshold are binarized to 1.0, while features equal to or less than the threshold are binarized to 0.0. | int/double | 0.0      | optional |
+
 **Example input before binarization**
 
 |id |  rating |
@@ -304,12 +310,6 @@ transform(numeric_imputer(rating, 'mode') rating_imp, binarizer(rating_imp) rati
 ```sql
 transform(numeric_imputer(age, 'mode') age_imp, binarizer(age_imp, 14.0) age_binarizer)
 ```
-
-**Parameters**
-
-|Parameter   |  Description                                                                                             |  Type    |  Default | Optional |
-|------------|----------------------------------------------------------------------------------------------------------|----------|----------|----------|
-| `THRESHOLD`| Param for the threshold used to binarize continuous features. Features greater than the threshold are binarized to 1.0, while features equal to or less than the threshold are binarized to 0.0. | int/double | 0.0      | optional |
 
 **Example output after binarization (with a threshold of 14.0)**
 
