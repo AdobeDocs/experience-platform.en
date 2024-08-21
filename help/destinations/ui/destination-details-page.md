@@ -22,7 +22,7 @@ Follow the steps below to view more details about an existing destination. You c
 
     ![Browse destinations](../assets/ui/details-page/browse-destinations.png)
 
-2. Select the filter icon ![Filter-icon](/help/images/icons/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
+2. Select the filter icon ![Filter-icon](../../images/icons/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
 
     ![Filter destinations](../assets/ui/details-page/filter-destinations.png)
 
@@ -97,33 +97,52 @@ For more information, read about [dataflow runs to streaming destinations](/help
 
 For dataflow runs to file-based destinations, the **[!UICONTROL Processing duration]** depends on the size of the data being exported and the system load. Notice also that the dataflow runs to file-based destinations are broken down per audience.
 
-![Image of the Dataflow runs page with the Processing time column highlighted for a file-based destination.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+![Image of the Dataflow runs page with the Processing time column highlighted for a file-based destination.](../assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
 For more information, read about [dataflow runs to batch (file-based) destinations](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) in the monitoring documentation.
 
 ## [!UICONTROL Activation data] {#activation-data}
 
-The [!UICONTROL Activation data] tab displays a list of audiences that have been mapped to the destination, including their start date and end date (if applicable), and other relevant information for the data export, such as export type, schedule, and frequency. To view the details about a particular audience, select its name from the list.
+The **[!UICONTROL Activation data]** tab displays a list of audiences that have been mapped to the destination, including their start date and end date (if applicable), and other relevant information for the data export, such as export type, schedule, and frequency. To view the details about a particular audience, select its name from the list.
 
 >[!TIP]
 >
 >To view and edit details about the attributes and identities mapped to a destination, select **[!UICONTROL Activate audiences]** in the [right rail](#right-rail).
 
+>[!BEGINSHADEBOX]
+
+The **[!UICONTROL Activation data]** tab for a file-based destination.
+
 ![Activation data view batch destination](../assets/ui/details-page/activation-data-batch.png)
+
+>[!ENDSHADEBOX]
+
+
+>[!BEGINSHADEBOX]
+
+The **[!UICONTROL Activation data]** tab for a streaming destination.
 
 ![Activation data view streaming destination](../assets/ui/details-page/activation-data-streaming.png)
 
-### [!BADGE Beta]{type=Informative} Remove multiple audiences from activation flows {#bulk-remove}
+>[!ENDSHADEBOX]
 
->[!NOTE]
->
->This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.
+### Filter activated audiences {#filter-audiences}
+
+To filter through the list of audiences activated to a destination, enter an audience name in the search box. The list of audiences automatically updates with the search results.
+
+![Search box for filtering audiences.](../assets/ui/details-page/filter-audiences.png)
+
+### Remove multiple audiences from activation flows {#bulk-remove}
 
 To remove multiple audiences from existing activation flows, select the audiences and then select **[!UICONTROL Remove audiences]**.
 
 ![Activation data screen highlighting the Remove audiences option.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### Export multiple files on-demand to batch destinations {#bulk-export}
+### [!BADGE Beta]{type=Informative} Export multiple files on-demand to batch destinations {#bulk-export}
+
+>[!NOTE]
+>
+>This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.
 
 You can [export multiple files on-demand](../ui/export-file-now.md) from the **[!UICONTROL Activation data]** page. To do this, select the audiences for which you want to export files on-demand and select the **[!UICONTROL Export file now]** control to trigger a one-time export which will deliver a file for each selected audience to your batch destination.
 
@@ -138,3 +157,9 @@ To edit the existing activation schedule of multiple audiences at the same time,
 >[!NOTE]
 >
 >For details on exploring the details page of a audience, refer to the [Audience Portal overview](../../segmentation/ui/audience-portal.md#segment-details).
+
+### Edit file names for multiple audiences exported to batch destinations {#bulk-edit-file-names}
+
+To edit the exported file names of multiple audiences at the same time, select the desired audiences and then select **[!UICONTROL Edit file name]**. For detailed information on how to define or edit a file name, read the section on how to [configure file names](../ui/activate-batch-profile-destinations.md#configure-file-names) section.
+
+![Activation data screen highlighting the option to edit file names for multiple audiences.](../assets/ui/details-page/bulk-edit-file-name.png)

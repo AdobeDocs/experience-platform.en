@@ -43,7 +43,7 @@ A long field type is an integer with a maximum size of 53(+1) bits, giving it a 
 
 For more information on field types, see the document on [XDM field type constraints](./schema/field-constraints.md).
 
-### What is meta:AltId, and how can I retrieve it?
+### What is meta:AltId?
 
 `meta:altId` is a unique identifier for a schema. The `meta:altId` provides an easy to reference ID for use in API calls. This ID avoids the need to be encoded/decoded each time it is used as with the JSON URI format.
 <!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
@@ -52,13 +52,6 @@ For more information on field types, see the document on [XDM field type constra
 
 <!-- No Answer available.  -->
 <!-- INCOMPLETE ... -->
-
-### Can I obtain a sample JSON representation to create a data type?
-
-You can use both the Schema Registry API and Platform UI to create a data type. See the documentation for instructions on how to: 
-
-- [Create a data type using the API](./api/data-types.md#create)
-- [Create a data type using the UI](./ui/resources/data-types.md#create)
 
 ### What are the usage restrictions for a map data type?
 
