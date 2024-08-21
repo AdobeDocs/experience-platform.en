@@ -1,6 +1,7 @@
 ---
 title: Machine Learning-Assisted Schema Creation
 description: Learn how to create a schemas in the Experience Platform user interface.
+badgeBeta: label="Beta" type="Informative"
 ---
 # Machine learning-assisted schema creation
 
