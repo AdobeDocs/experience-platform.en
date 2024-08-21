@@ -34,6 +34,8 @@ Updates to existing features and documentation in Experience Platform:
 | Edit file names for multiple exported audiences from the [Destination Details](../../destinations/ui/destination-details-page.md#bulk-edit-file-names) page. | You can now edit the names of multiple exported files directly from the **[!UICONTROL Destination Details]** page. ![Image of the Experience Platform user interface highlighting the edit file name option in the destination details page.](assets/august/edit-file-name-destination-details.png){width="250" align="center" zoomable="yes"} |
 | Remove multiple datasets from a dataflow from the [Destination Details](../../destinations/ui/export-datasets.md#remove-dataset) page. | The option to remove multiple datasets from a dataflow is now available to all customers. ![Image of the Experience Platform user interface highlighting the Remove datasets option in the destination details page.](assets/august/bulk-remove-datasets.png){width="250" align="center" zoomable="yes"} |
 
+Image of the Experience Platform user interface highlighting the Remove datasets option in the destination details page.
+
 {style="table-layout:auto"}
 
 For more information, read the [destinations overview](../../destinations/home.md).
