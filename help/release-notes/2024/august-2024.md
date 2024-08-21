@@ -21,15 +21,15 @@ Updates to existing features and documentation in Experience Platform:
 
 ## Attribute-based access control {#abac}
 
-Attribute-based access control is a capability of Adobe Experience Platform that gives privacy conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
+Attribute-based access control is a capability of Adobe Experience Platform that gives privacy-conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
 
-Through attribute-based access control, administrators of your organization can control users' access to, sensitive personal data (SPD), personally identifiable information (PII) and other customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+Through attribute-based access control, administrators of your organization can control users' access to sensitive personal data (SPD), personally identifiable information (PII), and other customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
 
-**New or updated documentation**
+**New feature**
 
-| Documentation update | Description |
+| Feature update | Description |
 | --- | --- |
-| New Permission Manager feature | You can now utilize [Permission Manager](../../access-control/abac/permission-manager/overview.md) to generate reports using simple queries, which will help you understand access management and save time verifying access permissions across several workflows and granularity levels. For more information on creating reports for users and roles, see the [Permission Manager user guide](../../access-control/abac/permission-manager/permissions.md). ![Image Experience Platform user interface highlightin Permission Manager in the left nav.](assets/august/permission-manager-rn.png){width="250" align="center" zoomable="yes"} |
+| New Permission Manager feature | You can now utilize [Permission Manager](../../access-control/abac/permission-manager/overview.md) to generate reports using simple queries, which will help you understand access management and save time verifying access permissions across several workflows and granularity levels. For more information on creating reports for users and roles, see the [Permission Manager user guide](../../access-control/abac/permission-manager/permissions.md). ![Image Experience Platform user interface highlighting Permission Manager in the left nav.](assets/august/permission-manager-rn.png){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
