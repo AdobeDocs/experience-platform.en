@@ -34,15 +34,15 @@ When using `K-Means`, the following parameters can be set in the `OPTIONS` claus
 
 | Parameter           | Description                                                                                                     | Default Value   | Possible Values                 |
 |---------------------|-----------------------------------------------------------------------------------------------------------------|-----------------|----------------------------------|
-| **MAX_ITERATIONS**  | The number of iterations the algorithm should run.                                                              | `20`            | `>= 0`                           |
-| **TOL**             | The convergence tolerance level.                                                                                | `0.0001`        | `>= 0`                           |
-| **NUM_CLUSTERS**    | The number of clusters to create (`k`).                                                                         | `2`             | `>1`                             |
-| **DISTANCE_TYPE**   | The algorithm used to compute the distance between two points.                                                  | `euclidean`     | `euclidean`, `cosine`            |
-| **KMEANS_INIT_METHOD** | The initialization algorithm for the cluster centers.                                                        | `k-means\|\|`   | `random`, `k-means\|\|`          |
-| **INIT_STEPS**      | The number of steps for the `k-means\|\|` initialization mode.                                                  | `2`             | `>0`                             |
-| **PREDICTION_COL**  | The name of the column where predictions will be stored.                                                        | `prediction`    | Any String                       |
-| **SEED**            | A random seed for reproducibility.                                                                              | `-1689246527`   | Any 64-bit number                |
-| **WEIGHT_COL**      | The name of the column used for instance weights. If not set, all instances are weighted equally.               | `not set`       | N/A                              |
+| `MAX_ITERATIONS`  | The number of iterations the algorithm should run.                                                              | `20`            | `>= 0`                           |
+| `TOL`             | The convergence tolerance level.                                                                                | `0.0001`        | `>= 0`                           |
+| `NUM_CLUSTERS`    | The number of clusters to create (`k`).                                                                         | `2`             | `>1`                             |
+| `DISTANCE_TYPE`   | The algorithm used to compute the distance between two points.                                                  | `euclidean`     | `euclidean`, `cosine`            |
+| `KMEANS_INIT_METHOD` | The initialization algorithm for the cluster centers.                                                        | `k-means\|\|`   | `random`, `k-means\|\|`          |
+| `INIT_STEPS`      | The number of steps for the `k-means\|\|` initialization mode.                                                  | `2`             | `>0`                             |
+| `PREDICTION_COL`  | The name of the column where predictions will be stored.                                                        | `prediction`    | Any String                       |
+| `SEED`            | A random seed for reproducibility.                                                                              | `-1689246527`   | Any 64-bit number                |
+| `WEIGHT_COL`      | The name of the column used for instance weights. If not set, all instances are weighted equally.               | `not set`       | N/A                              |
 
 **Example**
 
