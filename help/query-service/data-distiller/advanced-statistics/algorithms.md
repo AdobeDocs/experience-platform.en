@@ -28,11 +28,15 @@ Machine learning models can only process numeric data. For instance, in a movie 
 
 ### Automatic feature transformation {#automatic-transformations}
 
-If you do not have good machine learning knowledge, you can skip the `TRANSFORM` clause in your `CREATE MODEL` command in favour of automatic feature transformation. If you do not include the `TRANSFORM` clause in your SQL statement, your data is automatically preprocessed. Null replacement and standard feature transformations, based on the datatype, occur. This automatic preprocessing imputes numeric and text columns followed by feature transformations into a format that can be used by machine learning model for training. This includes missing data imputation and categorical, numeric, and boolean transformations as part of this process.
+If you choose to skip the `TRANSFORM` clause in your `CREATE MODEL` command, feature transformation occurs automatically. Automatic data preprocessing includes null replacement and standard feature transformations (based on the datatype). Numeric and text columns are automatically imputed, then feature transformations are conducted to ensure that the data is in a suitable format for machine learning model training. This process includes missing data imputation and categorical, numeric, and boolean transformations.
+
+>[!IMPORTANT]
+>
+>The feature transformation used at the time of training will also be used for feature transformation at the time of prediction and evaluation.
 
 The following tables explain how different data types are handled when the `TRANSFORM` clause is omitted during the `CREATE MODEL` command. 
 
-#### Null replacement
+#### Null replacement {#automatic-null-replacement}
 
 | Data Type       | Null Replacement                                    |
 |-----------------|-----------------------------------------------------|
@@ -42,7 +46,7 @@ The following tables explain how different data types are handled when the `TRAN
 | Timestamp       | This is expected to be a continuous field.            |
 | Nested/STRUCT   | The replacement depends on the datatype of the leaf node.|
 
-#### Feature transformation
+#### Feature transformation {#automatic-feature-transformation}
 
 | Data Type       | Feature Transformation                              |
 |-----------------|-----------------------------------------------------|
@@ -55,16 +59,39 @@ The following tables explain how different data types are handled when the `TRAN
 **example**
 
 ```sql
-Create model modelname OPTIONS(MODEL_TYPE='logistic_reg', LABEL='rating') as select * from movie_rating
+CREATE model modelname options(model_type='logistic_reg', label='rating') AS SELECT * FROM movie_rating;
 ```
-
-<!-- The feature transformation used to time of training will be utilised for feature transformation at the time prediction and evaluation. -->
 
 ### Manual feature transformations {#manual-transformations}
 
-You can add any number of the available transformations to your SQL statement with the `transformation()` keyword.
+To define custom data preprocessing in your `CREATE MODEL` statement, use the `TRANSFORM` clause in combination with any number of the available transformation functions. These manual preprocessing functions can also be used outside of the `TRANSFORM` clause. All the transformations discussed in the [transformer section below](#available-transformations), can be used to preprocess the data manually.
 
-## Available transformations 
+#### Key Characteristics
+
+- **Syntax**: `TRANSFORM(functionName(colName, parameters) <aliasNAME>)`
+  - The alias name is mandatory in the syntax. You must provide an alias name or the query will fail.
+  
+- **Parameters**: The parameters are positional arguments. This means that each parameter can only take certain values. Refer to the relevant documentation for details on which function takes what argument.
+
+- **Chaining transformers**: The output of one transformer can become the input to another transformer.
+
+- **Feature usage**: The last feature transformation will be used as a feature of the machine learning model.
+
+**Example**
+
+```sql
+CREATE MODEL modelname 
+TRANSFORM(
+  string_imputer(language, 'adding_null') AS imp_language, 
+  numeric_imputer(users_count, 'mode') AS imp_users_count, 
+  string_indexer(imp_language) AS si_lang,  
+  vector_assembler(array(imp_users_count, si_lang, watch_minutes)) AS features
+)  
+OPTIONS(MODEL_TYPE='logistic_reg', LABEL='rating') 
+AS SELECT * FROM df;
+```
+
+## Available transformations {#available-transformations}
 
 There are 19 available transformations. These are split into [General transformations](#general-transformations), [Numeric transformations](#numeric-transformations), [Categorical transformations](#categorical-transformations), and [Textual transformations](#textual-transformations). 
 
@@ -824,4 +851,3 @@ TRANSFORM(tokenizer(review) as tokenized, word2Vec(tokenized, 10, 1) as word2Vec
 | review                        | tokenized                           | word2Vec                        |
 |-------------------------------|--------------------------------------|---------------------------------|
 | this was an entertaining movie | [this, was, an, entertaining, movie] | [-0.025713888928294182,0.00818799751577899,0.0092235435731709,-0.01515385233797133,0.012175946310162545,3.1129065901041035E-4,0.0025145105042611252,0.005757019785232843,-0.021328244300093502,0.009335877187550069] |
-
