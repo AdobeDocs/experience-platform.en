@@ -104,6 +104,10 @@ Experience Platform automatically sets a default schedule for each file export. 
 
 ![Edit schedule control highlighted in the Scheduling step.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
+To edit multiple schedules at the same time, select the audiences by using the check boxes on the left side of the screen, then select **[!UICONTROL Edit schedule]**. The schedule you configure will then be applied to all the exported files for the selected audiences.
+
+![Image of the Experience Platform user interface showing the edit schedule option for multiple selected audiences.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+
 >[!TIP]
 >
 >You can edit audience activation schedules for existing activation flows from the **[!UICONTROL Activation data]** page. See the documentation on [bulk editing activation schedules](../ui/destination-details-page.md#bulk-edit-schedule) for details.
@@ -194,7 +198,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 
 4. Select **[!UICONTROL Create]** to save the schedule.
 
-### Configure file names
+### Configure file names {#configure-file-names}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
@@ -228,6 +232,10 @@ The destination name and audience ID cannot be removed from file names. In addit
 | **[!UICONTROL Sandbox name]** | The ID of the sandbox you use to export the audience. |
 
 {style="table-layout:auto"}
+
+To edit multiple file names at the same time, select the audiences by using the check boxes on the left side of the screen, then select **[!UICONTROL Edit file name]**. The file name options you configure will then be applied to all the exported files for the selected audiences.
+
+![Image of the Experience Platform user interface showing the edit file name option for multiple selected audiences.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 Select **[!UICONTROL Apply changes]** to confirm your selection.
 
