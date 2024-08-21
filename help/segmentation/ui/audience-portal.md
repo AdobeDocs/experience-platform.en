@@ -156,6 +156,18 @@ For more information on creating and managing tags, please read the [Managing Ta
 
 You can place audiences within folders for better audience management.
 
+To create a folder to hold your audiences, select **[!UICONTROL Create folder]**.
+
+![The Create folder button is highlighted.](../images/ui/audience-portal/create-folder.png)
+
+>[!NOTE]
+>
+>You can only create a folder when you're within another folder.
+
+A popover appears, letting you name your newly created folder. Select **[!UICONTROL Save]** after naming your folder to finish creating the folder. Please note that names **must** be unique to the parent folder.
+
+![The Save button on the create folder dialog is highlighted.](../images/ui/audience-portal/create-folder-dialog.png)
+
 To move an audience into a folder, select **[!UICONTROL Move to folder]** on the audience you want to move.
 
 ![The [!UICONTROL Move to folder] button is selected for a specific audience.](../images/ui/audience-portal/browse-move-to-folder.png)
