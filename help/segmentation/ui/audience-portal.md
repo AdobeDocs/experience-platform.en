@@ -380,6 +380,10 @@ The **[!UICONTROL Import audience CSV]** workflow appears. You can select a CSV 
 >[!NOTE]
 >
 >The external generated audience **must** be in CSV format, have a **maximum** of 25 columns, and be less than 1GB.
+>
+>Additionally, you **cannot** use spaces or dashes in the first row or the associated columns of the CSV.
+>
+>For example, the first row's value can be "FirstName" or "First_Name", but it cannot be "First Name" or "First-Name".
 
 After selecting the CSV file to import, a list of sample data is shown for this externally generated audience. After confirming that the sample data is correct, select **[!UICONTROL Next]**.
 
