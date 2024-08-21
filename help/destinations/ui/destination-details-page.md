@@ -138,11 +138,7 @@ To remove multiple audiences from existing activation flows, select the audience
 
 ![Activation data screen highlighting the Remove audiences option.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### [!BADGE Beta]{type=Informative} Export multiple files on-demand to batch destinations {#bulk-export}
-
->[!NOTE]
->
->This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.
+### Export multiple files on-demand to batch destinations {#bulk-export}
 
 You can [export multiple files on-demand](../ui/export-file-now.md) from the **[!UICONTROL Activation data]** page. To do this, select the audiences for which you want to export files on-demand and select the **[!UICONTROL Export file now]** control to trigger a one-time export which will deliver a file for each selected audience to your batch destination.
 
