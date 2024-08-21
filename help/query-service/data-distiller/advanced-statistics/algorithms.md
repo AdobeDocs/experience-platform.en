@@ -16,9 +16,20 @@ By converting or scaling data into a format or structure that is more suitable f
 
 ## Clustering algorithms
 
-Clustering algorithms group data points into distinct clusters based on their similarities. In this section, we explore how clustering works, with a focus on K-Means, a popular clustering algorithm used for unsupervised learning tasks.
+Clustering algorithms group data points into distinct clusters based on their similarities. This section explores how clustering works, with a focus on `K-Means`, a popular clustering algorithm used for unsupervised learning tasks.
 
 In the `OPTIONS` clause, it denotes what type of algorithm is getting trained.
+
+First, you must specify the algorithm. Use the `type` parameter in the `OPTIONS` clause to specify the algorithm you want to use for model training.
+
+Next, define the algorithm parameters. After setting the `type`, include other relevant parameters for that algorithm within the `OPTIONS` clause as key-value pairs.
+
+>[!NOTE]
+>
+>You must understand the parameter requirements for the algorithm you decide to use. Some parameters are positional and require all preceding parameters to be specified if you choose to provide custom values. Equally, you can also use default values when appropriate. If you don't want to customize certain parameters, you can skip them, and the system will use the default settings. Refer to the relevant documentation to learn about the necessary parameters and their functionality.
+
+
+
 <!-- ...  -->
 
 ## Feature transformation techniques
