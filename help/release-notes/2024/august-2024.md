@@ -29,12 +29,11 @@ Through attribute-based access control, administrators of your organization can 
 
 | Documentation update | Description |
 | --- | --- |
-| New Permission Manager feature | You can now utilize [Permission Manager](../../access-control/abac/permission-manager/overview.md) to generate reports using simple queries, which will help you understand access management and save time verifying access permissions across several workflows and granularity levels. For more information on creating reports for users and roles, see the [Permission Manager user guide](../../access-control/abac/permission-manager/permissions.md). ![Image Experience Platform user interface highlightin Permission Manager in the left nav.](assets/august/permission-manager.png){width="250" align="center" zoomable="yes"} |
+| New Permission Manager feature | You can now utilize [Permission Manager](../../access-control/abac/permission-manager/overview.md) to generate reports using simple queries, which will help you understand access management and save time verifying access permissions across several workflows and granularity levels. For more information on creating reports for users and roles, see the [Permission Manager user guide](../../access-control/abac/permission-manager/permissions.md). ![Image Experience Platform user interface highlightin Permission Manager in the left nav.](assets/august/permission-manager-rn.png){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
 For more information on attribute-based access control, see the [attribute-based access control overview](../../access-control/abac/overview.md). For a comprehensive guide on the attribute-based access control workflow, read the [attribute-based access control end-to-end guide](../../access-control/abac/end-to-end-guide.md).
-
 
 ## Destinations {#destinations}
 
