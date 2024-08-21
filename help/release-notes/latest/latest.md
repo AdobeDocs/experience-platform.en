@@ -1,7 +1,6 @@
 ---
 title: Adobe Experience Platform Release Notes August 2024
 description: The August 2024 release notes for Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 ---
 # Adobe Experience Platform release notes 
 
@@ -13,27 +12,44 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 
 Updates to existing features and documentation in Experience Platform:
 
+- [Attribute-based access control](#abac)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
+## Attribute-based access control {#abac}
+
+Attribute-based access control is a capability of Adobe Experience Platform that gives privacy-conscious brands greater flexibility to manage user access. Individual objects such as schema fields and segments can be assigned to user roles. This feature lets you grant or revoke access to individual objects for specific Platform users in your organization.
+
+Through attribute-based access control, administrators of your organization can control users' access to sensitive personal data (SPD), personally identifiable information (PII), and other customized type of data across all Platform workflows and resources. Administrators can define user roles that have access only to specific fields and data that correspond to those fields.
+
+**New feature**
+
+| Feature update | Description |
+| --- | --- |
+| New Permission Manager feature | You can now utilize [Permission Manager](../../access-control/abac/permission-manager/overview.md) to generate reports using simple queries, which will help you understand access management and save time verifying access permissions across several workflows and granularity levels. For more information on creating reports for users and roles, see the [Permission Manager user guide](../../access-control/abac/permission-manager/permissions.md). ![Image Experience Platform user interface highlighting Permission Manager in the left nav.](../2024/assets/august/permission-manager-rn.png "Permission Manager in the user interface."){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+For more information on attribute-based access control, see the [attribute-based access control overview](../../access-control/abac/overview.md). For a comprehensive guide on the attribute-based access control workflow, read the [attribute-based access control end-to-end guide](../../access-control/abac/end-to-end-guide.md).
+
 ## Destinations {#destinations}
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
-**New or updated functionality** {#destinations-new-updated-functionality}
+**New or updated functionality**
 
 | Feature | Description |
 | ----------- | ----------- |
 | Exporting files on-demand to batch destinations is now generally available. | The option to export files on-demand to batch destinations is now available to all customers. See the [dedicated documentation](../../destinations/ui/export-file-now.md) for more details.|
-| Edit export schedules for multiple exported audiences in the [scheduling step](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | The option to edit the export schedules for multiple exported audiences directly from the scheduling step of the audience activation workflow is now available to all customers. ![Image of the Experience Platform user interface highlighting the Edit schedule option in the scheduling step.](../2024/assets/august/edit-schedule.png){width="250" align="center" zoomable="yes"}|
-| Edit file names for multiple exported audiences in the [scheduling step](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | The option to edit the names of multiple exported files directly from the scheduling step of the audience activation workflow is now available to all customers. ![Image of the Experience Platform user interface highlighting the Edit file name option in the scheduling step.](../2024/assets/august/edit-file-name.png){width="250" align="center" zoomable="yes"}|
-| Remove multiple audiences from a dataflow from the [Destination Details](../../destinations/ui/destination-details-page.md#bulk-remove) page.  | The option to remove multiple audiences from existing dataflows from the **[!UICONTROL Destination Details]** page is now available to all customers. ![Image of the Experience Platform user interface highlighting the Remove audiences option in the Destination Details page.](../2024/assets/august/bulk-remove-audiences.png){width="250" align="center" zoomable="yes"} |
-| Export multiple files on-demand to batch destinations from the [Destination Details](../../destinations/ui/destination-details-page.md#bulk-export) page. | The option to export multiple files on-demand to batch destinations from the **[!UICONTROL Destination Details]** page is now available to all customers. ![Image of the Experience Platform user interface highlighting the Export file now option in the Destination Details page.](../2024/assets/august/bulk-export-file-now.png){width="250" align="center" zoomable="yes"} |
-| Edit file names for multiple exported audiences from the [Destination Details](../../destinations/ui/destination-details-page.md#bulk-edit-file-names) page. | You can now edit the names of multiple exported files directly from the **[!UICONTROL Destination Details]** page. ![Image of the Experience Platform user interface highlighting the edit file name option in the destination details page.](../2024/assets/august/edit-file-name-destination-details.png){width="250" align="center" zoomable="yes"} |
-| Remove multiple datasets from a dataflow from the [Destination Details](../../destinations/ui/export-datasets.md#remove-dataset) page. | The option to remove multiple datasets from a dataflow is now available to all customers. ![Image of the Experience Platform user interface highlighting the Remove datasets option in the destination details page.](../2024/assets/august/bulk-remove-datasets.png){width="250" align="center" zoomable="yes"} |
+| Edit export schedules for multiple exported audiences in the [scheduling step](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | The option to edit the export schedules for multiple exported audiences directly from the scheduling step of the audience activation workflow is now available to all customers. ![Image of the Experience Platform user interface highlighting the Edit schedule option in the scheduling step.](../2024/assets/august/edit-schedule.png "Edit schedule option in the scheduling step."){width="250" align="center" zoomable="yes"}|
+| Edit file names for multiple exported audiences in the [scheduling step](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | The option to edit the names of multiple exported files directly from the scheduling step of the audience activation workflow is now available to all customers. ![Image of the Experience Platform user interface highlighting the Edit file name option in the scheduling step.](../2024/assets/august/edit-file-name.png "Edit file name option in the scheduling step."){width="250" align="center" zoomable="yes"}|
+| Remove multiple audiences from a dataflow from the [Destination Details](../../destinations/ui/destination-details-page.md#bulk-remove) page.  | The option to remove multiple audiences from existing dataflows from the **[!UICONTROL Destination Details]** page is now available to all customers. ![Image of the Experience Platform user interface highlighting the Remove audiences option in the Destination Details page.](../2024/assets/august/bulk-remove-audiences.png "Remove audiences option in the Destination Details page."){width="250" align="center" zoomable="yes"} |
+| Export multiple files on-demand to batch destinations from the [Destination Details](../../destinations/ui/destination-details-page.md#bulk-export) page. | The option to export multiple files on-demand to batch destinations from the **[!UICONTROL Destination Details]** page is now available to all customers. ![Image of the Experience Platform user interface highlighting the Export file now option in the Destination Details page.](../2024/assets/august/bulk-export-file-now.png "Export file now option in the Destination Details page."){width="250" align="center" zoomable="yes"} |
+| Edit file names for multiple exported audiences from the [Destination Details](../../destinations/ui/destination-details-page.md#bulk-edit-file-names) page. | You can now edit the names of multiple exported files directly from the **[!UICONTROL Destination Details]** page. ![Image of the Experience Platform user interface highlighting the Edit file name option in the destination details page.](../2024/assets/august/edit-file-name-destination-details.png "Edit file name option in the destination details page."){width="250" align="center" zoomable="yes"} |
+| Remove multiple datasets from a dataflow from the [Destination Details](../../destinations/ui/export-datasets.md#remove-dataset) page. | The option to remove multiple datasets from a dataflow is now available to all customers. ![Image of the Experience Platform user interface highlighting the Remove datasets option in the destination details page.](../2024/assets/august/bulk-remove-datasets.png "Remove datasets option in the destination details page."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
