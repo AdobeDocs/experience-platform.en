@@ -18,6 +18,9 @@ By converting or scaling data into a format or structure that is more suitable f
 
 Clustering algorithms group data points into distinct clusters based on their similarities. In this section, we explore how clustering works, with a focus on K-Means, a popular clustering algorithm used for unsupervised learning tasks.
 
+In the `OPTIONS` clause, it denotes what type of algorithm is getting trained.
+<!-- ...  -->
+
 ## Feature transformation techniques
 
 Transformations are essential preprocessing steps that prepare data for modeling. Specifically, they convert raw data into features which can be used in the machine learning model. This section covers common transformation techniques like one-hot encoding and feature scaling, explaining their role in improving algorithm performance.
