@@ -5,6 +5,10 @@ badgeBeta: label="Beta" type="Informative"
 ---
 # Machine learning-assisted schema creation
 
+>[!AVAILABILITY]
+>
+>* Machine learning-assisted schema creation is currently in beta. The documentation and the functionality are subject to change.
+
 Use ML algorithms to generate a schema from sample data. This process saves time and increases accuracy when defining the structure, fields, and data types for large complex datasets.
 
 With ML schema generation, you can quickly integrate new data sources and reduce the mistakes from manual creation. Non-technical users can use it to generate schemas or manage large and complex datasets without any extra effort. This assistance speeds up the process from getting data to gaining insights, as makes it easier to combine new data sources and perform data analysis.
