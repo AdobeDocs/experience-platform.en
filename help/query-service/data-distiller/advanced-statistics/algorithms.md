@@ -1,20 +1,18 @@
 ---
 title: Algorithms
-description: PLACEHOLDER
+description: Learn about the different machine learning methods available in Data Distiller, including clustering, classification, and regression. This document provides detailed guidance on how to configure and implement these algorithms within SQL workflows, to build and optimize models tailored to your specific data analysis needs.
 role: Developer
 ---
 # Algorithms
 
 Machine learning algorithms are the core components that drive model creation and predictions. The combination of SQL with these algorithms provides a powerful tool for data manipulation and seamless model generation.
 
-This document provides an overview of clustering algorithms available for generating models with SQL, along with guidance on how to implement clustering and transformations within SQL statements to streamline your machine learning workflows.
+This document provides detailed guidance on how to configure and implement these algorithms within SQL workflows, to build and optimize models tailored to your specific data analysis needs.
 
 <!-- 
 A "transformation" refers to the process of converting or scaling data into a format or structure that is more suitable for model training and analysis.
 By converting or scaling data into a format or structure that is more suitable for model training and analysis you can improve model performance and accuracy by ensuring that the data aligns with the model's assumptions and optimizes its ability to learn patterns.
  -->
-
-Clustering algorithms group data points into distinct clusters based on their similarities. This section explores how clustering works, with a focus on `K-Means`, a popular clustering algorithm used for unsupervised learning tasks.
 
 ## Clustering algorithms {#clustering-algorithms}
 
@@ -58,7 +56,9 @@ AS SELECT col1, col2, col3 FROM training-dataset;
 
 ## Feature transformation techniques
 
-Transformations are essential preprocessing steps that prepare data for modeling. Specifically, they convert raw data into features which can be used in the machine learning model. This section covers common transformation techniques like one-hot encoding and feature scaling, explaining their role in improving algorithm performance.
+Transformations are essential preprocessing steps that convert or scale data into a format or structure that is more suitable for model training and analysis. Transform your data into a format or structure that better suits model training and analysis to improve performance and accuracy. This ensures your data aligns with the model's assumptions and optimizes its ability to learn patterns effectively.
+
+This section covers common transformation techniques like one-hot encoding and feature scaling, explaining their role in improving algorithm performance.
 
 The machine learning model cannot accept string values or null values, so it's necessary to impute the null values. For example, if a numeric column contains an empty cell, that cell must be replaced with a suitable value. This value could be something logical, like the mean or median, or simply a placeholder number. If the column contains string values, they must also be converted to a numeric format through a process called imputation.
 
