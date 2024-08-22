@@ -48,7 +48,7 @@ When finished, select **[!UICONTROL Connect to source]** and then allow some tim
 
 | Credential | Description |
 | --- | --- |
-| Account | The name of your [!DNL Snowflake] account. |
+| Account | The name of your [!DNL Snowflake] account. For conventions on account names, read the [[!DNL Snowflake Streaming] authentication guide](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials). |
 | Warehouse | The name of your [!DNL Snowflake] warehouse. Warehouses manage the execution of queries in [!DNL Snowflake]. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually to bring data to Experience Platform. |
 | Database | The name of your [!DNL Snowflake] database. The database contains the data that you want to bring to Experience Platform. |
 | Schema | (Optional) The database schema associated with your [!DNL Snowflake] account. |
