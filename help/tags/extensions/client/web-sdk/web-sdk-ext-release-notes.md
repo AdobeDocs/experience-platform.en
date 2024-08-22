@@ -13,7 +13,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 **New features**
 
 - Added monitoring hook `triggered` event.
-- Added support for [Adobe Journey Optimizer Content Cards](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-card/content-card-configuration#content-card) to the [subscribeRulesetItems](event-types.md#subscribe-ruleset-items) event type.
+- Added support for Adobe Journey Optimizer Content Cards to the [subscribeRulesetItems](event-types.md#subscribe-ruleset-items) event type.
 - [Guided events](action-types.md#instance), [Request default personalization](action-types.md#personalization), [Subscribe ruleset items](event-types.md#subscribe-ruleset-items), and [evaluate rulesets](action-types.md#evaluate-rulesets) are now generally available. 
 
 **Fixes and improvements**
