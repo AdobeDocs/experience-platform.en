@@ -19,8 +19,8 @@ role: User,Developer
     - [License usage](data-distiller/license-usage.md)
     - Advanced statistics {#advanced-statistics}
         - [Overview](data-distiller/advanced-statistics/overview.md)
-        - [Models](data-distiller/advanced-statistics/models.md)
         - [Feature engineering](data-distiller/advanced-statistics/feature-engineering.md)
+        - [Models](data-distiller/advanced-statistics/models.md)
         - [Algorithms](data-distiller/advanced-statistics/algorithms.md)
     - Derived datasets {#derived-datasets}
         - [Overview](data-distiller/derived-datasets/overview.md)
