@@ -70,7 +70,7 @@ For instructions on how to create a dataset, read the [dataset UI guide](../../c
 >
 >* During your pre-implementation process, you must ensure that the authenticated events that your system will send to Experience Platform always contain a person identifier, such as CRMID.
 >* During implementation, you must ensure that the unique namespace with the highest priority is always present in every profile. See the [appendix](#appendix) for examples of graph scenarios that are solved by ensuring that every profile contains the unique namespace with the highest priority.
->* If you are using the [Adobe Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md) to ingest data, then you must give your ECIDs a higher priority than AAID because Identity Service blocks AAID. By prioritizing ECID, you can instruct Identity Service to store unauthenticated events to ECID instead of AAID.
+>* If you are using the [Adobe Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md) to ingest data, then you must give your ECIDs a higher priority than AAID because Identity Service blocks AAID. By prioritizing ECID, you can instruct Real-Time Customer Profile to store unauthenticated events to ECID instead of AAID.
 
 By this point, you should have the following:
 
