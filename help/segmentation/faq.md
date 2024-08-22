@@ -27,14 +27,7 @@ In order to upload externally generated audiences, you need to have the "View se
 
 ### What happens when I upload an externally generated audience? 
 
-When you upload an externally generated audience, the following items are created:
-
-- Dataset
-  - The dataset will be visible within the dataset inventory, and the name of the dataset will be the **same** as the name of the externally generated audience you uploaded.
-- Batch job
-  - A batch job will **automatically** run when you upload an externally generated audience. This means that you do **not** need to wait for the daily segmentation job to run in order to activate the externally generated audience.
-- Ad hoc schema
-  - A **new** XDM schema will be created for use with the externally generated audience. The fields in this XDM schema are namespaced for usage with the dataset that was also created.
+When you upload an externally generated audience, a dataset will be created and be visible within the dataset inventory. The name of the dataset will be the **same** as the name of the externally generated audience you uploaded.
 
 ### What is an externally generated audience comprised of, and what happens to this data when it's imported to Platform?
 
@@ -85,12 +78,6 @@ The organization-specific default merge policy is automatically applied when upl
 ### Where can I activate externally generated audiences to? 
 
 An externally generated audience can be mapped to any destination and can be used in Adobe Journey Optimizer campaigns.
-
-### How soon are externally generated audiences ready for activation?
-
-If activated to a streaming destination, the data from the externally generated audience will be available within two hours.
-
-If activated to a batch destination, the data from the externally generated audience will sync with the next 24 hour segmentation job.
 
 ### Can I delete an externally generated audience?
 

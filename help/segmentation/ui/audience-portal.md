@@ -156,6 +156,18 @@ For more information on creating and managing tags, please read the [Managing Ta
 
 You can place audiences within folders for better audience management.
 
+To create a folder to hold your audiences, select **[!UICONTROL Create folder]**.
+
+![The Create folder button is highlighted.](../images/ui/audience-portal/create-folder.png)
+
+>[!NOTE]
+>
+>You can only create a folder if you're within another folder. This means you **cannot** create a folder if you have **[!UICONTROL All Audiences]** selected on the left navigation bar.
+
+A popover appears, letting you name your newly created folder. Select **[!UICONTROL Save]** after naming your folder to finish creating the folder. Please note that names **must** be unique to the parent folder.
+
+![The Save button on the create folder dialog is highlighted.](../images/ui/audience-portal/create-folder-dialog.png)
+
 To move an audience into a folder, select **[!UICONTROL Move to folder]** on the audience you want to move.
 
 ![The [!UICONTROL Move to folder] button is selected for a specific audience.](../images/ui/audience-portal/browse-move-to-folder.png)
@@ -380,6 +392,10 @@ The **[!UICONTROL Import audience CSV]** workflow appears. You can select a CSV 
 >[!NOTE]
 >
 >The external generated audience **must** be in CSV format, have a **maximum** of 25 columns, and be less than 1GB.
+>
+>Additionally, you **cannot** use spaces or dashes in the first row or the associated columns of the CSV.
+>
+>For example, the first row's value can be "FirstName" or "First_Name", but it cannot be "First Name" or "First-Name".
 
 After selecting the CSV file to import, a list of sample data is shown for this externally generated audience. After confirming that the sample data is correct, select **[!UICONTROL Next]**.
 
