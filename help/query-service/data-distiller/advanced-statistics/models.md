@@ -1,6 +1,6 @@
 ---
 title: Models
-description: PLACEHOLDER
+description: Learn how to create, train, and manage machine learning models using SQL, including key processes like model versioning, evaluation, and prediction, to derive actionable insights from your data.
 role: Developer
 ---
 # Models
