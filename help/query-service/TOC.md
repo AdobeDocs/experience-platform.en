@@ -66,6 +66,7 @@ role: User,Developer
     - [SSL modes](./clients/ssl-modes.md)
     - [Aqua Data Studio](clients/aqua-data-studio.md)
     - [DbVisualizer](./clients/dbvisulaizer.md)
+    - [GitHub Co-pilot](./clients/github-co-pilot.md)
     - [Jupyter Notebook](clients//jupyter-notebook.md)
     - [Looker](clients/looker.md)
     - [Postico](clients/postico.md)
