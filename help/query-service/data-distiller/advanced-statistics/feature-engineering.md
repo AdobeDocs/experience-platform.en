@@ -43,8 +43,6 @@ Below is a list of tools for processing a wide range of data types to enhance yo
 
 #### Numeric transformers
 
-<!-- I could add links to all these if that is suitable? -->
-
 Apply these techniques to effectively process and scale numerical data for improved model performance.
 
 - **Binarizer**: Convert continuous features into binary values based on a threshold.
