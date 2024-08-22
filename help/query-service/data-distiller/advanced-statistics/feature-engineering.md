@@ -80,3 +80,7 @@ Use a clustering algorithm to group data points into distinct clusters based on 
 ## Implement the OPTIONS clause
 
 When you define your model, use the `OPTIONS` clause to specify the algorithm and its parameters. Begin by setting the `type` parameter to indicate the algorithm you are using, such as `K-Means`. Then, define the relevant parameters in the `OPTIONS` clause as key-value pairs to fine-tune your model. Understand that some parameters may be positional and require all preceding parameters to be specified if custom values are provided. If you choose not to customize certain parameters, the system applies default settings. Refer to the relevant documentation to understand each parameter's function and default values.
+
+### Next Steps
+
+After learning the feature engineering techniques outlined in this document, progress onto the [Models](./models.md) document. It guides you through the process of creating, training, and managing machine learning models using the features you've engineered. Once you've built your models, explore the [Algorithms](./algorithms.md) document to gain insights into the various machine learning methods available and learn how to implement them effectively within your SQL workflows. These combined documents equip you to perform advanced machine learning tasks with Data Distiller.
