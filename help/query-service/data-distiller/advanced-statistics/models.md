@@ -5,6 +5,10 @@ role: Developer
 ---
 # Models
 
+>[!AVAILABILITY]
+>
+>This functionality is available to customers who have purchased the Data Distiller add on. For more information contact your Adobe representative.
+
 Query Service now supports the core processes of building and deploying a machine learning model. You can use SQL to teach the model using your data, verify its accuracy, and then apply that knowledge to make predictions on new data. You can then use the model to generalize from your past data to make informed decisions about real-world scenarios.
 
 The three steps in machine learning to generate actionable insights are:
@@ -14,8 +18,6 @@ The three steps in machine learning to generate actionable insights are:
 3. **Prediction**: The trained model is used to make predictions on new, unseen data.
 
 Custom keywords have been introduced to allow for the core processes of a machine learning model while maintaining the familiarity of the syntax and keeping it as close as possible to existing SQL grammar. This document covers the SQL necessary to create a model, add constructs, train the model, and evaluate and predict insights.
-
-<!-- A model is an algorithm plus a transformation. -->
 
 ## Model creation and training {#create-and-train}
 
