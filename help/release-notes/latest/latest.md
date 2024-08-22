@@ -39,7 +39,16 @@ For more information on attribute-based access control, see the [attribute-based
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
-**New or updated functionality**
+**New or updated destinations** {#new-updated-destinations}
+
+| Destination | Description |
+| ----------- | ----------- |
+| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] manages a number of different instances for their dashboard and REST endpoints. [!UICONTROL Braze] customers should use the correct REST Endpoint based on which instance you are provisioned to. This release adds a new US-07 endpoint that you can select when connecting to [!UICONTROL Braze]. |
+
+{style="table-layout:auto"}
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
 
 | Feature | Description |
 | ----------- | ----------- |
