@@ -12,7 +12,7 @@ role: User
 * Playbooks {#playbooks}
   * [Overview](/help/use-case-playbooks/playbooks/overview.md)
   * [Navigate to Use Case Playbooks](/help/use-case-playbooks/playbooks/navigate.md)
-  * [Alternate way to get started](/help/use-case-playbooks/playbooks/get-started.md)
+  * [Get started](/help/use-case-playbooks/playbooks/get-started.md)
   * [Available Use Case Playbooks](/help/use-case-playbooks/playbooks/playbooks-list.md)
   * [Choose from a selection of playbooks](/help/use-case-playbooks/playbooks/choose.md)
   * [Create, share, and reuse playbook instances](/help/use-case-playbooks/playbooks/create-share-reuse.md)
