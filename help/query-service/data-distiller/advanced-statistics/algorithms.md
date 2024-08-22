@@ -97,6 +97,8 @@ To define custom data preprocessing in your `CREATE MODEL` statement, use the `T
 
 #### Key Characteristics
 
+The following are key characteristics of feature transformation to consider when you define your preprocessing functions:
+
 - **Syntax**: `TRANSFORM(functionName(colName, parameters) <aliasNAME>)`
   - The alias name is mandatory in the syntax. You must provide an alias name or the query will fail.
   
