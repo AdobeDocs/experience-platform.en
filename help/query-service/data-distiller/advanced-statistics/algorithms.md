@@ -9,11 +9,6 @@ Machine learning algorithms are the core components that drive model creation an
 
 This document provides detailed guidance on how to configure and implement these algorithms within SQL workflows, to build and optimize models tailored to your specific data analysis needs.
 
-<!-- 
-A "transformation" refers to the process of converting or scaling data into a format or structure that is more suitable for model training and analysis.
-By converting or scaling data into a format or structure that is more suitable for model training and analysis you can improve model performance and accuracy by ensuring that the data aligns with the model's assumptions and optimizes its ability to learn patterns.
- -->
-
 ## Clustering algorithms {#clustering-algorithms}
 
 Clustering algorithms group data points into distinct clusters based on their similarities, enabling unsupervised learning to uncover patterns within the data. To create a clustering algorithm, use the `type` parameter in the `OPTIONS` clause to specify the algorithm you want to use for model training. Next, define the relevant parameters as key-value pairs to fine-tune the model.
@@ -56,13 +51,9 @@ AS SELECT col1, col2, col3 FROM training-dataset;
 
 ## Feature transformation techniques
 
-Transformations are essential preprocessing steps that convert or scale data into a format or structure that is more suitable for model training and analysis. Transform your data into a format or structure that better suits model training and analysis to improve performance and accuracy. This ensures your data aligns with the model's assumptions and optimizes its ability to learn patterns effectively.
+Transformations are crucial preprocessing steps that convert or scale data into a format suitable for model training and analysis, to ensure optimal performance and accuracy. 
 
-This section covers common transformation techniques like one-hot encoding and feature scaling, explaining their role in improving algorithm performance.
-
-The machine learning model cannot accept string values or null values, so it's necessary to impute the null values. For example, if a numeric column contains an empty cell, that cell must be replaced with a suitable value. This value could be something logical, like the mean or median, or simply a placeholder number. If the column contains string values, they must also be converted to a numeric format through a process called imputation.
-
-Machine learning models can only process numeric data. For instance, in a movie dataset with review comments, the model will not understand the text data directly. Transformations, such as encoding or vectorization, help convert English sentences into numeric arrays or numbers, enabling the machine learning model to interpret and learn from the data.
+Machine learning models cannot process string values or null values directly. Therefore, you must impute missing values, such as replacing empty cells in numeric columns with the mean or median. Similarly, convert string data into numeric formats through processes like encoding or vectorization, which allow the model to interpret and learn from textual data effectively. This section explains common techniques, such as one-hot encoding and feature scaling, and their role in improving algorithm performance.
 
 ### Automatic feature transformation {#automatic-transformations}
 
