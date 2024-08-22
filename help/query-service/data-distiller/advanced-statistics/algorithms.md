@@ -15,7 +15,7 @@ Clustering algorithms group data points into distinct clusters based on their si
 
 >[!NOTE]
 >
->Ensure you understand the parameter requirements for the chosen algorithm. Some parameters may be positional and require all preceding parameters to be specified if custom values are provided. If you choose not to customize certain parameters, the system will apply default settings. Consult the relevant documentation to understand each parameter's function and default values.
+>Ensure you understand the parameter requirements for the chosen algorithm. Some parameters may be positional and require all preceding parameters to be specified if custom values are provided. If you choose not to customize certain parameters, the system applies default settings. Consult the relevant documentation to understand each parameter's function and default values.
 
 ### K-Means {#kmeans}
 
@@ -196,7 +196,7 @@ transform(string_imputer(name, 'unknown_name') as name_imputed)
 
 |Parameter |  Description |  Type |  Default | Optional |
 | -------- | ------------ | ----- | -------- | -------- |
-| `NULL_REPLACEMENT` | The value that will replace nulls. |  string |  ml_unknown | optional |
+| `NULL_REPLACEMENT` | The value that replaces nulls. |  string |  ml_unknown | optional |
 
 **Example before imputation**
 
@@ -543,7 +543,7 @@ TRANSFORM(standard_scaler(feature) as ss_features)
 | Parameter  | Description                                                                                          | Type    | Default | Optional |
 |------------|------------------------------------------------------------------------------------------------------|---------|---------|----------|
 | `withStd`  | Scales the data to have unit standard deviation.                                                      | boolean | True    | optional |
-| `withMean` | Centers the data with the mean before scaling. This option will produce dense output, so use caution with sparse input. | boolean | False   | optional |
+| `withMean` | Centers the data with the mean before scaling. This option produces dense output, so use caution with sparse input. | boolean | False   | optional |
 
 **Example transformation**
 
@@ -646,7 +646,7 @@ TRANSFORM(count_vectorizer(texts) as cv_output)
 
 | Parameter       | Description                                                                                                                                                                        | Type   | Default | Optional |
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|---------|----------|
-| `VOCAB_SIZE`    | Max size of the vocabulary. CountVectorizer will build a vocabulary that only considers the top `vocabSize` terms ordered by term frequency across the corpus.                       | Int    | 218     | optional |
+| `VOCAB_SIZE`    | Max size of the vocabulary. CountVectorizer builds a vocabulary that only considers the top `vocabSize` terms ordered by term frequency across the corpus.                       | Int    | 218     | optional |
 | `MIN_DOC_FREQ`  | Specifies the minimum number of different documents a term must appear in to be included in the vocabulary. Can be an absolute number or a fraction of documents (if a double).     | Double | 1.0     | optional |
 | `MAX_DOC_FREQ`  | Specifies the maximum number of different documents a term could appear in to be included in the vocabulary. Can be an absolute number or a fraction of documents (if a double).     | Double | (263)-1 | optional |
 | `MIN_TERM_FREQ` | Filters out rare words in a document. Terms with frequency/count less than the given threshold are ignored. Can be an absolute number or a fraction of the document's token count.  | Double | 1.0     | optional |
