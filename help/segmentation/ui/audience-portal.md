@@ -162,7 +162,7 @@ To create a folder to hold your audiences, select **[!UICONTROL Create folder]**
 
 >[!NOTE]
 >
->You can only create a folder when you're within another folder.
+>You can only create a folder if you're within another folder. This means you **cannot** create a folder if you have **[!UICONTROL All Audiences]** selected on the left navigation bar.
 
 A popover appears, letting you name your newly created folder. Select **[!UICONTROL Save]** after naming your folder to finish creating the folder. Please note that names **must** be unique to the parent folder.
 
