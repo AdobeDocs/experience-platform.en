@@ -12,14 +12,14 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 **New features**
 
-- Added monitoring hook triggered event.
-- Added support for Content Cards in Subscribe ruleset items.
+- Added monitoring hook `triggered` event.
+- Added support for [Adobe Journey Optimizer Content Cards](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-card/content-card-configuration#content-card) to the [subscribeRulesetItems](event-types.md#subscribe-ruleset-items) event type.
+- [Guided events](action-types.md#instance), [Request default personalization](action-types.md#personalization), [Subscribe ruleset items](event-types.md#subscribe-ruleset-items), and [evaluate rulesets](action-types.md#evaluate-rulesets) are now generally available. 
 
 **Fixes and improvements**
 
 - Fixed an issue where duplicated variable data elements could overwrite each other.
-- Removed beta labels for guided events, requesting default personalization, subscribe ruleset items, and evaluate rulesets.
-- Automatically enable render visual personalization decisions when using the request personalization guided event.
+- When using the [Request default personalization](action-types.md#personalization) guided event, visual personalization decisions are now automatically enabled.
 
 Contains version 2.22.0 of the Adobe Experience Platform Web SDK.
 

@@ -15,15 +15,15 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **New features**
 
 - Added personalization monitors.
-- Added support for Adobe Journey Optimizer content cards in subscribeRulesetItems.
+- Added support for [Adobe Journey Optimizer Content Cards](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-card/content-card-configuration#content-card) to the [subscribeRulesetItems](commands/subscriberulesetitems.md) command.
 
 **Fixes and improvements**
 
-- Removed support for Internet Explorer making the gzipped size 9% smaller
-- Fixed an issue where activity map link details were not initialized when the onInstanceConfigured monitor hook was called.
+- Removed support for Internet Explorer, reducing the library gzip size by 9%.
+- Fixed an issue where activity map link details were not initialized when the `onInstanceConfigured` monitor hook was called.
 - Fixed an issue where cookies destinations were not set to the correct path.
 - Fixed customer issue with call to has.
-- Fixed an issue where an invalid url encoding in the adobe_mc parameter caused send event to fail.
+- Fixed an issue where an invalid url encoding in the `adobe_mc` parameter caused [sendEvent](commands/sendevent/overview.md) calls to fail.
 
 ## Version 2.21.1 - July 18, 2024
 
