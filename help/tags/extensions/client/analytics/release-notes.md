@@ -11,6 +11,14 @@ The following is a list of release notes for the Adobe Analytics tag extension.
 >
 >The Analytics tag extension if often updated in response to updates to the [AppMeasurement JavaScript library](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html). Refer to the [AppMeasurement release notes](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) for details on the specific versions mentioned below.
 
+## August 12, 2024
+
+**Adobe Analytics Extension 1.9.5**
+
+**Features**:
+
+* Upgraded to [AppMeasurement to v2.27.0](https://github.com/adobe/appmeasurement/releases/tag/v2.27.0).
+
 ## March 4, 2024
 
 **Adobe Analytics Extension 1.9.4**
