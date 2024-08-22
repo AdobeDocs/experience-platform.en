@@ -29,7 +29,7 @@ The following section outlines prerequisite steps to complete before you can str
 
 ### Update your IP address allow list
 
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources) page for more information.
 
 The documentation below provides information on how to connect [!DNL Amazon Redshift] to Platform using APIs or the user interface:
 
