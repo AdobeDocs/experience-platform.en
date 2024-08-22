@@ -33,7 +33,7 @@ The [!UICONTROL Create a schema] dialog appears. In this dialog, you can choose 
 
 ![The Create a schema dialog with the workflow options and select highlighted.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
 
-### Manual or ML-assisted schema creation {#manual-or-assisted}
+### [!BADGE Beta]{type=Informative} Manual or ML-assisted schema creation {#manual-or-assisted}
 
 To learn how you can use a ML algorithm to recommend a schema structure based on a csv file, see the [machine learning-assisted schema creation guide](../ml-assisted-schema-creation.md). This UI guide focusses on the manual creation workflow. 
 
