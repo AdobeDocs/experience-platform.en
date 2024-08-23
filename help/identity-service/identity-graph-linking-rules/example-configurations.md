@@ -472,7 +472,7 @@ In this scenario, there is a single CRMID that represents a person entity. Howev
 
 | Namespaces used | Web behavior collection method |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics source connector. <br> **Note:** By default, AAIDs are blocked in Identity Service, therefore, you must place a higher priority on your ECIDs over AAID, when using the Analytics source. Read the [implementation guide](configuration.md#ingest-your-data) for more information.</br> |
+| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics source connector. <br> **Note:** By default, AAIDs are blocked in Identity Service, therefore, you must place a higher priority on your ECIDs than AAIDs, when using the Analytics source. Read the [implementation guide](configuration.md#ingest-your-data) for more information.</br> |
 
 **Events:**
 
@@ -630,7 +630,7 @@ CRMID: Summer, Phone_SHA256: 111-1111
 
 ## Usage in other Adobe Commerce
 
-The graph configuration examples in this section outlines use cases for Adobe Commerce. The examples below are focused on retail customers with two user types:
+The graph configuration examples in this section outline use cases for Adobe Commerce. The examples below are focused on retail customers with two user types:
 
 * Registered user (users that created an account)
 * Guest users (users that only have an email address)
