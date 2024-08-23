@@ -1,7 +1,6 @@
 ---
 title: Adobe Experience Platform Web SDK Extension Release Notes
 description: Adobe Experience Platform Web SDK Tag Extension
-exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 ---
 
 # Adobe Experience Platform Web SDK extension release notes
