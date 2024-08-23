@@ -15,7 +15,6 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 **New features**
 
 - Added personalization monitors.
-- Added support for Adobe Journey Optimizer Content Cards to the [subscribeRulesetItems](commands/subscriberulesetitems.md) command.
 
 **Fixes and improvements**
 
