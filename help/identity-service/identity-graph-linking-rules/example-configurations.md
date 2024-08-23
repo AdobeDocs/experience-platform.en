@@ -472,7 +472,7 @@ In this scenario, there is a single CRMID that represents a person entity. Howev
 
 | Namespaces used | Web behavior collection method |
 | --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics source connector **Note:** By default, AAIDs are blocked in Identity Service, therefore, you must place a higher priority on your ECIDs over AAID, when using the Analytics source. Read the [implementation guide](configuration.md#ingest-your-data) for more information. |
+| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics source connector. <br> **Note:** By default, AAIDs are blocked in Identity Service, therefore, you must place a higher priority on your ECIDs over AAID, when using the Analytics source. Read the [implementation guide](configuration.md#ingest-your-data) for more information.</br> |
 
 **Events:**
 
@@ -482,11 +482,11 @@ You can create this scenario in graph simulation by copying the following events
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID: ID_A
 CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111, AAID: AAA
+loginID: ID_A, ECID: 111
 CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
 CRMID: Summer, loginID: ID_C
 CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222, AAID: BBB
+loginID: ID_C, ECID: 222
 ```
 
 **Algorithm configuration:**
@@ -526,7 +526,7 @@ The following is an example of two single-person graphs that each have one CRMID
 
 >[!TAB Multi-person graph: shared device 1]
 
-The following is a multi-person shared device scenario where `{ECID:111, AAID:AAA}` are both linked to `{loginID:ID_A}` and `{loginID:ID_C}`. In this case, the older established links get removed in favor of the more recently established links.
+The following is a multi-person shared device scenario where `{ECID:111}` is linked to both `{loginID:ID_A}` and `{loginID:ID_C}`. In this case, the older established links get removed in favor of the more recently established links.
 
 ![A multi-person shared device graph scenario.](../images/graph-examples/complex_shared_device_one.png)
 
@@ -628,9 +628,9 @@ CRMID: Summer, Phone_SHA256: 111-1111
 
 >[!ENDTABS]
 
-## Usage in other Adobe applications
+## Usage in other Adobe Commerce
 
-The graph configuration examples in this section outlines use cases for Real-Time Customer Data Platform, Adobe Journey Optimizer, and Adobe Commerce. The examples below are focused on retail customers with two user types:
+The graph configuration examples in this section outlines use cases for Adobe Commerce. The examples below are focused on retail customers with two user types:
 
 * Registered user (users that created an account)
 * Guest users (users that only have an email address)
