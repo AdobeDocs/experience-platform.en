@@ -1,7 +1,6 @@
 ---
 title: Adobe Experience Platform Web SDK FAQ
 description: Get answers to frequently asked questions about the Adobe Experience Platform Web SDK.
-exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
 ---
 
 # Frequently asked questions
