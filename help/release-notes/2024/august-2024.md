@@ -13,6 +13,7 @@ description: The August 2024 release notes for Adobe Experience Platform.
 Updates to existing features and documentation in Experience Platform:
 
 - [Attribute-based access control](#abac)
+- [Data Ingestion](#data-ingestion)
 - [Destinations](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
@@ -34,6 +35,19 @@ Through attribute-based access control, administrators of your organization can 
 {style="table-layout:auto"}
 
 For more information on attribute-based access control, see the [attribute-based access control overview](../../access-control/abac/overview.md). For a comprehensive guide on the attribute-based access control workflow, read the [attribute-based access control end-to-end guide](../../access-control/abac/end-to-end-guide.md).
+
+## Data Ingestion (updated August 23rd) {#data-ingestion}
+
+Adobe Experience Platform provides a rich set of features to ingest any type and any latency of data. You can ingest using Batch or Streaming APIs, using Adobe-built sources, data integration partners or the Adobe Experience Platform UI.
+
+**Update to date format handling in batch data ingestion**
+
+This release addresses an issue with the *date format handling* in batch data ingestion. Previously, the system transformed date fields inserted by clients as `Date` into `DateTime` format. This meant that the timezone was automatically added to fields and it caused difficulties for users who preferred or required the `Date` format. Going forward, the timezone will not automatically be added to `Date`-type fields. This update ensures that the exported format of data matches the format represented on the profile for that field as requested by customers.
+
+`Date` fields before the release : `"birthDate": "2018-01-12T00:00:00Z"`
+`Date` fields after the release: `"birthDate": "2018-01-12"`
+
+Read more about [batch ingestion](/help/ingestion/batch-ingestion/overview.md).
 
 ## Destinations {#destinations}
 
