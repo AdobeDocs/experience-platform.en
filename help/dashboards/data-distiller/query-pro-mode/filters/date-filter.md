@@ -78,7 +78,7 @@ To use a custom date filter, select the calendar icon and choose a start and end
 >
 >Simply adding a date filter will not make the charts change. You must edit each of your insights to include your chosen start and end date.
 
-![A custom dashboard with the date filter calender highlighted.](../../../images/customizable-insights/date-filter.png)
+![A custom dashboard with the date filter calender highlighted.](../../../images/query-pro-mode/date-filter.png)
 
 Once you have selected a date range from your dashboard, insights that have date parameters in their SQL will see the date filter options in the widget composer. 
 
@@ -90,4 +90,4 @@ Once you have selected a date range from your dashboard, insights that have date
 
 To remove your date filter select the delete filter icon (![The delete filter icon.](/help/images/icons/filter-delete.png)). 
 
-![A custom dashboard with the filter delete icon highlighted.](../../../images/customizable-insights/delete-date-filter.png)
+![A custom dashboard with the filter delete icon highlighted.](../../../images/query-pro-mode/delete-date-filter.png)

@@ -1,9 +1,9 @@
 ---
-title: Query Pro Mode
+title: Query Pro Mode Overview
 description: Learn how to use SQL queries in the Adobe Experience Platform UI to generate charts for your custom dashboards.
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
 ---
-# Query pro mode {#query-pro-mode}
+# Query pro mode overview {#query-pro-mode}
 
 Query pro mode is an SQL editor-based workflow that guides you through the process of generating insights with custom SQL queries in the Adobe Experience Platform UI. Before you can generate insights with custom SQL queries, you must first [create a dashboard](./overview.md#create-custom-dashboard). 
 
@@ -22,8 +22,6 @@ See the [Query Editor user guide](../../../query-service/ui/user-guide.md#query-
 ### Query parameters {#query-parameters}
 
 To include [global](./filters/global-filter.md) or [date filters](./filters/date-filter.md) your query **must** use query parameters. When composing your statement in query pro mode, you must provide sample values if your query uses query parameters. The sample values allow you to execute the SQL statement and build the chart. Note that the sample values you provide when composing your statement are replaced by the actual values you select for the date or global filter at runtime. 
-
-
 
 >[!IMPORTANT]
 >

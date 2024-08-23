@@ -23,7 +23,7 @@ The [!UICONTROL View more] feature displays the specific data points for the cha
 >
 >The CSV download is limited ot the first 500 records.
 
-![A dialog displaying a preview of your insight and the tabularized results of your SQL that generated the insight.](../../images/customizable-insights/view-more-download-csv.png)
+![A dialog displaying a preview of your insight and the tabularized results of your SQL that generated the insight.](../../images/query-pro-mode/view-more-download-csv.png)
 
 ## Next steps
 
