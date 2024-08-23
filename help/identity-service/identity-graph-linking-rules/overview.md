@@ -20,13 +20,13 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 * [Example graph configurations](./configuration.md)
 * [Example scenarios](./example-scenarios.md)
 
-With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRM ID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("graph collapse"). To prevent these unwanted merges, you can use configurations provided through identity graph linking rules and allow for accurate personalization for your users.
+With Adobe Experience Platform Identity Service and Real-Time Customer Profile, it is easy to assume that your data is ingested perfectly and that all merged profiles represent a single individual person through a person identifier, such as a CRMID. However, there are possible scenarios where certain data could try to merge multiple disparate profiles into a single profile ("graph collapse"). To prevent these unwanted merges, you can use configurations provided through identity graph linking rules and allow for accurate personalization for your users.
 
 ## Example scenarios where graph collapse could happen
 
 * **Shared device**: Shared device refers to devices that are used by more than one individual. Examples of a shared device include tablets, library computers, and kiosks.
 * **Bad email and phone numbers**: Bad email and phone numbers refer to end-users registering invalid contact information, such as "test<span>@test.com" for email, and "+1-111-111-1111" for phone number.
-* **Erroneous or bad identity values**: Erroneous or bad identity values refer to non-unique identity values that could merge CRM IDs. For example, while IDFA's are required to have 36 characters (32 alphanumeric characters and four hyphens), there are scenarios where an IDFA with an identity value of "user_null" can get ingested. Similarly, phone numbers only support numerical characters, but a phone namespace with an identity value of "not-specified" may get ingested.
+* **Erroneous or bad identity values**: Erroneous or bad identity values refer to non-unique identity values that could merge CRMIDs. For example, while IDFA's are required to have 36 characters (32 alphanumeric characters and four hyphens), there are scenarios where an IDFA with an identity value of "user_null" can get ingested. Similarly, phone numbers only support numerical characters, but a phone namespace with an identity value of "not-specified" may get ingested.
 
 For more information on use case scenarios for identity graph linking rules, read the document on [example scenarios](./example-scenarios.md).
 
@@ -54,15 +54,15 @@ Consider the following scenario:
 * Scott uses a tablet and opens his Google Chrome browser to go to nike<span>.com, where he signs in and browses for new basketball shoes.
   * Behind the scenes, this scenario logs the following identities:
     * An ECID namespace and value to represent the use of the browser
-    * A CRM ID namespace and value to represent the authenticated user (Scott signed in with his username and password combination).
+    * A CRMID namespace and value to represent the authenticated user (Scott signed in with his username and password combination).
 * His son Peter then uses the same tablet and also uses Google Chrome to go to nike<span>.com, where he signs in with his own account to browse for football equipment.
   * Behind the scenes, this scenario logs the following identities:
     * The same ECID namespace and value to represent the browser.
-    * A new CRM ID namespace and value to represent the authenticated user.
+    * A new CRMID namespace and value to represent the authenticated user.
 
-If CRM ID was configured as a unique namespace, then the identity optimization algorithm splits the CRM IDs apart into two separate identity graphs, instead of merging them together.
+If CRMID was configured as a unique namespace, then the identity optimization algorithm splits the CRMIDs apart into two separate identity graphs, instead of merging them together.
 
-If you do not configure a unique namespace, you may end up with unwanted graph merges, such as two identities with the same CRM ID namespace, but different identity values (scenarios like these often represent two different person entities in the same graph).
+If you do not configure a unique namespace, you may end up with unwanted graph merges, such as two identities with the same CRMID namespace, but different identity values (scenarios like these often represent two different person entities in the same graph).
 
 You must configure a unique namespace to inform the identity optimization algorithm to enforce limitations on the identity data that are ingested into a given identity graph.
 
