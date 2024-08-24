@@ -211,29 +211,37 @@ The count function is now added. You can now select the count function and the v
 
 Time constraints let you apply time restrictions on time-based attributes, events, and the sequence between the events.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->When you're applying a time constraint on a time-based attribute, the attribute **must** have a full timestamp. This means that it has to contain a day, month, and a year.
+>If you created a segment definition with the "This month" or "This year" time constraints prior to June 2024, you will need to re-save your segment definitions. Prior to June 2024, "this month" was based off of 30 days and "this year" was based off of 365 days.
 
 The list of available time constraints are as follows:
 
-| Time constraint | Description | Example |
-| --------------- | ----------- | ------- |
-| Today | The attribute or event being compared **must** occur today. If the Ignore year checkbox is enabled, the year is not compared. Otherwise, the year will be compared. | ![today](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
-| Yesterday | The attribute or event being compared **must** occur yesterday. If the Ignore year checkbox is enabled, the year is not compared. Otherwise, the year will be compared. | ![yesterday](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
-| This month | The attribute or event being compared **must** occur this month. If the Ignore year checkbox is enabled, the year is not compared. Otherwise, the year will be compared. | ![this month](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
-| This year | The attribute or event being compared **must** occur this year. | ![this year](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
-| Custom date | The attribute or event being compared **must** occur on the date given. If the Ignore year checkbox is enabled, the year is not compared. Otherwise, the year will be compared. | ![custom date](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
-| In last | The attribute or event being compared **must** occur within the last period of time chosen. This period of time is **inclusive** until the evaluation time. | ![in last](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
-| From (to) | The attribute or event being compared **must** occur within the two calendar dates chosen. This period of time is **inclusive** of both dates. For example, if I had a time constraint of July 1st, 2024 to November 13th, 2024, the constraint would be between midnight on July 1st, 2024 to 11:59:59 PM on November 13th, 2024. | ![from to](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
-| During | The attribute or event being compared **must** occur within the selected month or year. If a month is selected, you need to choose both the month and a year that the attribute or event took place in.  If a year is selected, you need to just choose the year that the attribute or event took place in. If you select a month, you can also enable the Ignore year checkbox. If the Ignore year checkbox is enabled, the year is not compared. Otherwise, the year will be compared. | ![during](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
-| Within (+/-) | The attribute or event being compared **must** occur within days, weeks, months, or years of the selected date. The selected date can be today, yesterday, or another custom date of your choosing. | ![within](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
-| Before | The attribute or event being compared **must** occur before the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | ![before](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
-| After | The attribute or event being compared **must** occur after the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | ![after](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
-| Rolling range | The attribute or event being compared must occur between the two relative dates. The dates can be represented in seconds, minutes, hours, days, weeks, months, or years. | ![rolling range](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
-| In next | The attribute or event being compared must occur within the next period of time selected. The selected periods of time include minutes, hours, days, weeks, months, and years. | ![in next](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
-| Exists | The attribute exists. | ![exists](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
-| Does not exist | The attribute does not exist. | ![does not exist](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
++++ Available time constraints
+
+>[!NOTE]
+>
+>If the [!UICONTROL Ignore year] checkbox is enabled, the year will **not** be compared as part of the segment definition evaluation.
+
+| Time constraint | Description | Can enable ignore year | Example |
+| --------------- | ----------- | ------------------- | ------- |
+| Today | The attribute or event being compared **must** occur today. | Yes | ![An example of the "Today" time constraint being used.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Yesterday | The attribute or event being compared **must** occur yesterday. | Yes | ![An example of the "Yesterday" time constraint being used.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| This month | The attribute or event being compared **must** occur this calendar month. | Yes | ![An example of the "This month" time constraint being used.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| This year | The attribute or event being compared **must** occur this calendar year. | No | ![An example of the "This year" time constraint being used.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| Custom date | The attribute or event being compared **must** occur on the date given. | Yes | ![An example of the "Custom date" time constraint being used.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| In last | The attribute or event being compared **must** occur within the last period of time chosen. This period of time is **inclusive** until the evaluation time. | No | ![An example of the "In last" time constraint being used.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| From (to) | The attribute or event being compared **must** occur within the two calendar dates chosen. This period of time is **inclusive** of both dates. | Yes, if custom date | ![An example of the "From to" being used.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| During | The attribute or event being compared **must** occur within the selected month or year. If a month is selected, you need to choose both the month and a year that the attribute or event took place in.  If a year is selected, you need to just choose the year that the attribute or event took place in. If you select a month, you can also enable the Ignore year checkbox. | Yes | ![An example of the "During" time constraint being used.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| Within (+/-) | The attribute or event being compared **must** occur within days, weeks, months, or years of the selected date. This period of time is **inclusive** of both dates. The selected date can be today, yesterday, or another custom date of your choosing. | Yes | ![An example of the "Within" time constraint being used.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| Before | The attribute or event being compared **must** occur before the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | Yes | ![An example of the "Before" time constraint being used.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| After | The attribute or event being compared **must** occur after the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | Yes | ![An example of the "After" time constraint being used.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| Rolling range | The attribute or event being compared must occur between the two relative dates. The dates can be represented in seconds, minutes, hours, days, weeks, months, or years. | No | ![An example of the "Rolling range" time constraint being used.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| In next | The attribute or event being compared must occur within the next period of time selected. The selected periods of time include minutes, hours, days, weeks, months, and years. | No | ![An example of the "In next" time constraint being used.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| Exists | The attribute exists. | No | ![An example of the "Exists" time constraint being used.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| Does not exist | The attribute does not exist. | No | ![An example of the "Does not exist" time constraint being used.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+
++++
 
 When you're applying a time constraint on an event, you can either apply it on the canvas-level, the card-level, or between events.
 
