@@ -139,7 +139,9 @@ In any of the export situations above, the exported files include the profiles t
 
 ### Incremental file exports {#incremental-file-exports}
 
-Not all updates on a profile qualify a profile to be included in incremental file exports. For example, if an attribute was added to or removed from a profile, that does not include the profile in the export. Only profiles for which the `segmentMembership` attribute has changed will be included in exported files. In other words, only if the profile becomes part of the audience or is removed from the audience is it included in incremental file exports.
+Not all updates on a profile qualify a profile to be included in incremental file exports. For example, if an attribute was added to or removed from a profile, that does not include the profile in the export. 
+
+However, when the `segmentMembership` attribute on a profile changes, the profile will be included in exported files. In other words, if the profile becomes part of the audience or is removed from the audience, it is included in incremental file exports.
 
 Similarly, if a new identity (new email address, phone number, ECID, and so on) is added to a profile in the [identity graph](/help/identity-service/features/identity-graph-viewer.md), that will trigger the profile to be included in a new incremental file export. 
 
