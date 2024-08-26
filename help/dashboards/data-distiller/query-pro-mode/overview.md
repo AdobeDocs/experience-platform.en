@@ -87,7 +87,7 @@ Select **[!UICONTROL Edit]** to edit your entire dashboard or any of your insigh
 
 Select **[!UICONTROL Add filter]** to create either a [[!UICONTROL Date filter]](#create-date-filter) or a [[!UICONTROL Global filter]](#create-global-filter). Once created, all global and date filters are available from [the filter icon](#select-global-filter) (![A filter icon.](/help/images/icons/filter.png)) of your dashboard.
 
-![A custom dashboard with the Add filter dropdown menu highlighted.](../../images/customizable-insights/add-filter.png)
+![A custom dashboard with the Add filter dropdown menu highlighted.](../../images/query-pro-mode/add-filter.png)
 
 ## Edit, duplicate, or delete an insight
 

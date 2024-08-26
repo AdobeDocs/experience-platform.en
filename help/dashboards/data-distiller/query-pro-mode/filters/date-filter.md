@@ -15,7 +15,7 @@ If you are unfamiliar with query parameters, see the documentation for [guidance
 
 To apply a date filter, select **[!UICONTROL Add filter]**, then **[!UICONTROL Date Filter]** from the dropdown menu of your dashboard view. 
 
-![A custom dashboard with Add filter and its dropdown menu highlighted.](../../../images/customizable-insights/add-filter.png)
+![A custom dashboard with Add filter and its dropdown menu highlighted.](../../../images/query-pro-mode/add-filter.png)
 
 ## Edit your SQL to include date query parameters {#include-date-parameters} 
 
