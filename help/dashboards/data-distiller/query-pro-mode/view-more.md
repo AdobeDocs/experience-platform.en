@@ -5,7 +5,7 @@ exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
 ---
 # View more {#view-more}
 
-Once you have created a [custom insight](./overview.md) with [query pro mode](./query-pro-mode.md), you can view your chart data in different formats. You can view either a tabulated form of the results, or download the data as a CSV file to view in a spreadsheet. 
+Once you have created a [custom insight](../customizable-insights/overview.md) with [query pro mode](./overview.md), you can view your chart data in different formats. You can view either a tabulated form of the results, or download the data as a CSV file to view in a spreadsheet. 
 
 ## Tabulated results {#tabulated-results}
 

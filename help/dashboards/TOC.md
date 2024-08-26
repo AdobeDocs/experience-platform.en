@@ -19,7 +19,7 @@ role: Developer,User
   * Customizable Insights for extended app reporting {#customizable-insights}
     * [Overview](data-distiller/customizable-insights/overview.md)
   * Query pro mode {#query-pro-mode}  
-    * [Overview](data-distiller/query-pro-mode/query-pro-mode.md)
+    * [Overview](data-distiller/query-pro-mode/overview.md)
     * Filters {#filters}
       * [Date filter](data-distiller/query-pro-mode/filters/date-filter.md)
       * [Global filter](data-distiller/query-pro-mode/filters/global-filter.md) 
