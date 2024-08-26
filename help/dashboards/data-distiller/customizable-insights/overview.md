@@ -35,4 +35,4 @@ Insights generated from SQL queries offer far greater flexibility and customizat
 
 ## Create a chart {#create-a-chart}
 
-See the [query pro mode guide](./query-pro-mode.md) for step-by-step instructions on creating a chart with SQL.
+See the [query pro mode guide](../query-pro-mode/overview.md) for step-by-step instructions on creating a chart with SQL.
