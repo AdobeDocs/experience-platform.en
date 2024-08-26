@@ -5,11 +5,11 @@ role: Developer
 ---
 # Advanced Statistics Overview
 
-Write SQL queries that leverage machine learning capabilities to gain access to advanced statistics from your data analysis. Use this series of documents to learn how to use SQL to leverage ML models and transform raw data into actionable insights with improved accuracy. Then enjoy simplified and automated data preprocessing on large datasets in a timely, parallel, and scalable manner with Data Distiller Feature Engineering SQL extension functions.
-
 >[!AVAILABILITY]
 >
 >This functionality is available to customers who have purchased the Data Distiller add on. For more information contact your Adobe representative.
+
+Write SQL queries that leverage machine learning capabilities to gain access to advanced statistics from your data analysis. Use this series of documents to learn how to use SQL to leverage ML models and transform raw data into actionable insights with improved accuracy. Then enjoy simplified and automated data preprocessing on large datasets in a timely, parallel, and scalable manner with Data Distiller Feature Engineering SQL extension functions.
 
 The advanced statistics section provides a comprehensive guide on using the Data Distiller SQL extension to perform sophisticated machine learning tasks. This set of documents is designed to help you effectively implement and leverage feature engineering, model creation, and algorithmic processing using SQL. The documentation guides you through the critical aspects necessary to seamlessly integrate advanced statistical techniques into your data workflows.
 

@@ -1,15 +1,15 @@
 ---
 title: Feature Engineering SQL Extension
-description: This document provides an overview of the Data Distiller feature engineering SQL extension that preprocesses data for machine learning. It covers the available feature extraction, transformation, and selection techniques, along with possible algorithm configurations.
+description: Learn about the Data Distiller feature engineering SQL extension that preprocesses data for machine learning. It covers the available feature extraction, transformation, and selection techniques, along with possible algorithm configurations.
 role: Developer
 ---
 # Feature engineering SQL extension
 
-Use the Data Distiller feature engineering SQL extension to transform raw data into meaningful features that improve machine learning model accuracy. 
-
 >[!AVAILABILITY]
 >
 >This functionality is available to customers who have purchased the Data Distiller add on. For more information contact your Adobe representative.
+
+Use the Data Distiller feature engineering SQL extension to transform raw data into meaningful features that improve machine learning model accuracy. 
 
 Use this SQL extension to simplify and automate your data preprocessing and enable seamless experimentation with different feature engineering techniques. Designed for distributed computing, you can perform feature engineering on large datasets in a parallel and scalable manner, significantly reducing the time required for data preprocessing with the Data Distiller feature engineering SQL extension.
 
@@ -45,20 +45,20 @@ Below is a list of tools for processing a wide range of data types to enhance yo
 
 Apply these techniques to effectively process and scale numerical data for improved model performance.
 
-- **Binarizer**: Convert continuous features into binary values based on a threshold.
-- **Bucketizer**: Map continuous features into discrete buckets.
-- **Min-Max Scaler**: Rescale features to a specified range, typically [0, 1].
-- **Max Abs Scaler**: Rescale features to the range [-1, 1] without altering sparsity.
-- **Normalizer**: Normalize vectors to have unit norm.
-- **Quantile Discretizer**: Convert continuous features into categorical features by binning them into quantiles.
-- **Standard Scaler**: Normalize features to have a unit standard deviation and/or zero mean.
+- **[Binarizer](./algorithms.md#binarizer)**: Convert continuous features into binary values based on a threshold.
+- **[Bucketizer](./algorithms.md#bucketizer)**: Map continuous features into discrete buckets.
+- **[Min-Max Scaler](./algorithms.md#minmaxscaler)**: Rescale features to a specified range, typically [0, 1].
+- **[Max Abs Scaler](./algorithms.md#maxabsscaler)**: Rescale features to the range [-1, 1] without altering sparsity.
+- **[Normalizer](./algorithms.md#normalizer)**: Normalize vectors to have unit norm.
+- **[Quantile Discretizer](./algorithms.md#quantilediscretizer)**: Convert continuous features into categorical features by binning them into quantiles.
+- **[Standard Scaler](./algorithms.md#standardscaler)**: Normalize features to have a unit standard deviation and/or zero mean.
 
 #### Categorical transformers
 
 Use these transformers to convert and encode categorical data into formats suitable for machine learning models.
 
-- **String Indexer**: Convert categorical string data into numeric indices.
-- **One Hot Encoder**: Map categorical data into binary vectors.
+- **[String Indexer](./algorithms.md#stringindexer)**: Convert categorical string data into numeric indices.
+- **[One Hot Encoder](./algorithms.md#onehotencoder)**: Map categorical data into binary vectors.
 
 ### Feature selection {#feature-selection}
 
@@ -79,7 +79,7 @@ Use logical regression to predict categorical outcomes and linear regression to 
 
 Use a clustering algorithm to group data points into distinct clusters based on their similarities.
 
-- **`K-Means`**: Use `K-Means` for unsupervised learning tasks to partition data into a specified number of clusters, with each data point assigned to the cluster with the nearest mean.
+- **[`K-Means`](./algorithms.md#kmeans)**: Use `K-Means` for unsupervised learning tasks to partition data into a specified number of clusters, with each data point assigned to the cluster with the nearest mean.
 
 ## Implement the OPTIONS clause {#options-clause}
 

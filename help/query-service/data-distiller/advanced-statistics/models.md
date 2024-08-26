@@ -17,7 +17,7 @@ The three steps in machine learning to generate actionable insights are:
 2. **Testing/Evaluation**: The model's performance is assessed using a separate dataset. (`model_evaluate`)
 3. **Prediction**: The trained model is used to make predictions on new, unseen data.
 
-Custom keywords have been introduced to allow for the core processes of a machine learning model while maintaining the familiarity of the syntax and keeping it as close as possible to existing SQL grammar. This document covers the SQL necessary to create a model, add constructs, train the model, and evaluate and predict insights.
+Use custom keywords to streamline the core processes of a machine learning model while maintaining familiar syntax and closely adhering to existing SQL grammar. This document covers the SQL necessary to create a model, add constructs, train the model, and evaluate and predict insights.
 
 ## Model creation and training {#create-and-train}
 

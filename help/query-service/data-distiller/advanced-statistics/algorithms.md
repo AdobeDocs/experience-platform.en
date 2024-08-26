@@ -1,9 +1,9 @@
 ---
-title: Algorithms
+title: Implement Machine Learning Algorithms
 description: Learn about the different machine learning methods available in Data Distiller, including clustering, classification, and regression. This document provides detailed guidance on how to configure and implement these algorithms within SQL workflows, to build and optimize models tailored to your specific data analysis needs.
 role: Developer
 ---
-# Algorithms
+# Implement machine learning algorithms
 
 Machine learning algorithms are the core components that drive model creation and predictions. The combination of SQL with these algorithms provides a powerful tool for data manipulation and seamless model generation.
 
@@ -36,6 +36,8 @@ When using `K-Means`, the following parameters can be set in the `OPTIONS` claus
 | `PREDICTION_COL`  | The name of the column where predictions will be stored.                                                        | `prediction`    | Any String                       |
 | `SEED`            | A random seed for reproducibility.                                                                              | `-1689246527`   | Any 64-bit number                |
 | `WEIGHT_COL`      | The name of the column used for instance weights. If not set, all instances are weighted equally.               | `not set`       | N/A                              |
+
+{style="table-layout:auto"}
 
 **Example**
 
@@ -70,7 +72,7 @@ The following tables explain how different data types are handled when the `TRAN
 | Data Type       | Null Replacement                                    |
 |-----------------|-----------------------------------------------------|
 | Numeric         | Nulls are replaced with the mean value of the column. |
-| Categorical     | Nulls are replaced with the `ml_unknown` keyword      |
+| Categorical     | Nulls are replaced with the `ml_unknown` keyword.      |
 | Boolean         | Nulls are replaced with a `FALSE` value.              |
 | Timestamp       | This is expected to be a continuous field.            |
 | Nested/STRUCT   | The replacement depends on the datatype of the leaf node.|
@@ -128,11 +130,11 @@ There are 19 available transformations. These are split into [General transforma
 
 ### General transformations {#general-transformations}
 
-This section provides details on transformers used for a wide range of data types. This information is essential if you need to apply transformations that aren't specific to categorical or textual data.
+Read this section for details on the transformers used for a wide range of data types. This information is essential if you need to apply transformations that aren't specific to categorical or textual data.
 
 >[!NOTE]
 >
->The input datatype refers to the column on which the imputation is applied. The output datatype refers the column which is produced as an output after the transformation has taken effect.
+>The input datatype refers to the column on which the imputation is applied. The output datatype refers to the column which is produced as an output after the transformation has taken effect.
 
 #### Numeric imputer {#numeric-imputer}
 
@@ -158,6 +160,8 @@ transformer(numeric_imputer(hour, 'mean') hour_imputed)
 |Parameter |  Description |  Type |  Default | Optional |
 | -------- | ------------ | ----- | -------- | -------- |
 | `STRATEGY` | An imputation strategy. The available values are: [`mean`, `median`, `mode`]. |  string |  mean | optional |
+
+{style="table-layout:auto"}
 
 **Example before imputation**
 
@@ -199,6 +203,8 @@ transform(string_imputer(name, 'unknown_name') as name_imputed)
 |Parameter |  Description |  Type |  Default | Optional |
 | -------- | ------------ | ----- | -------- | -------- |
 | `NULL_REPLACEMENT` | The value that replaces nulls. |  string |  ml_unknown | optional |
+
+{style="table-layout:auto"}
 
 **Example before imputation**
 
@@ -280,11 +286,15 @@ transform(vector_assembler(id, hour, mobile, userFeatures) as features)
 | -------- | ------------ | ----- | -------- | -------- |
 | NA       |  No additional parameters are required for this transformer. |  NA    |  NA     | NA       |
 
+{style="table-layout:auto"}
+
 **Example before transformation**
 
 |id |  hour | mobile | userFeatures     | clicked |
 |---|-------|--------|------------------|---------|
 |0  |  18   | 1.0    | [0.0, 10.0, 0.5] | 1.0     |
+
+{style="table-layout:auto"}
 
 **Example after transformation**
 
@@ -292,9 +302,11 @@ transform(vector_assembler(id, hour, mobile, userFeatures) as features)
 |---|------|--------|------------------|---------|-------------------------------|
 |0  | 18   | 1.0    | [0.0, 10.0, 0.5] | 1.0     | [18.0, 1.0, 0.0, 10.0, 0.5]   |
 
+{style="table-layout:auto"}
+
 ### Numeric transformations {#numeric-transformations}
 
-This section covers the available transformers for processing and scaling numerical data. These transformers are necessary to handle and optimize numeric features in your datasets.
+Read this section to learn about the available transformers for processing and scaling numerical data. These transformers are necessary to handle and optimize numeric features in your datasets.
 
 #### Binarizer {#binarizer}
 
@@ -318,6 +330,8 @@ transform(numeric_imputer(rating, 'mode') rating_imp, binarizer(rating_imp) rati
 |Parameter   |  Description                                                                                             |  Type    |  Default | Optional |
 |------------|----------------------------------------------------------------------------------------------------------|----------|----------|----------|
 | `THRESHOLD`| Param for the threshold used to binarize continuous features. Features greater than the threshold are binarized to 1.0, while features equal to or less than the threshold are binarized to 0.0. | int/double | 0.0      | optional |
+
+{style="table-layout:auto"}
 
 **Example input before binarization**
 
@@ -369,6 +383,8 @@ TRANSFORM(binarizer(time_spent, 5.0) as binary, bucketizer(course_duration, arra
 |Parameter |  Description                                                                                                                                                                                                 |  Type           |  Default | Optional |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|----------|----------|
 | `splits` | A parameter for mapping continuous features into buckets. With `n+1` splits, there are `n` buckets. Splits must be in strictly increasing order, and the range (x,y) is used for each bucket except the last, which includes y. | array(double)   | N/A      | optional |
+
+{style="table-layout:auto"}
 
 **Examples of splits**
 
@@ -557,7 +573,7 @@ TRANSFORM(standard_scaler(feature) as ss_features)
 
 ### Categorical transformations {#categorical-transformations}
 
-This section provides an overview of the available transformers designed to convert and preprocess categorical data for machine learning models. These transformations are designed for data points that represent distinct categories or labels, rather than numerical values.
+Read this section for an overview of the available transformers designed to convert and preprocess categorical data for machine learning models. These transformations are designed for data points that represent distinct categories or labels, rather than numerical values.
 
 #### StringIndexer {#stringindexer}
 
@@ -653,6 +669,8 @@ TRANSFORM(count_vectorizer(texts) as cv_output)
 | `MAX_DOC_FREQ`  | Specifies the maximum number of different documents a term could appear in to be included in the vocabulary. Can be an absolute number or a fraction of documents (if a double).     | Double | (263)-1 | optional |
 | `MIN_TERM_FREQ` | Filters out rare words in a document. Terms with frequency/count less than the given threshold are ignored. Can be an absolute number or a fraction of the document's token count.  | Double | 1.0     | optional |
 
+{style="table-layout:auto"}
+
 **Example transformation**
 
 This example demonstrates how the CountVectorizer converts a collection of text arrays into vectors of token counts, producing a sparse representation.
@@ -667,6 +685,8 @@ TRANSFORM(count_vectorizer(texts) as cv_output)
 |----|---------------------------------|-----------------------------------|
 | 0  | Array("a", "b", "c")            | (3,[0,1,2],[1.0,1.0,1.0])         |
 | 1  | Array("a", "b", "b", "c", "a")  | (3,[0,1,2],[2.0,2.0,1.0])         |
+
+{style="table-layout:auto"}
 
 #### NGram {#ngram}
 
@@ -691,6 +711,8 @@ TRANSFORM(tokenizer(review_comments) as token_comments, ngram(token_comments, 3)
 |-----------|-----------------------------------------------------------------------------------------------|---------|-------------------|----------|
 | `N`       | Minimum n-gram length, must be greater than or equal to 1.                                     | integer | 2 (bigram features) | optional |
 
+{style="table-layout:auto"}
+
 **Example transformation**
 
 This example demonstrates how the NGram transformer creates a sequence of 3-grams from a list of tokens derived from text data.
@@ -704,6 +726,8 @@ TRANSFORM(tokenizer(review_comments) as token_comments, ngram(token_comments, 3)
 | id | texts                                                 | n_tokens                                              |
 |----|-------------------------------------------------------|-------------------------------------------------------|
 | 0  | ["this", "was", "an", "entertaining", "movie"]        | ["this was an", "was an entertaining", "an entertaining movie"] |
+
+{style="table-layout:auto"}
 
 #### StopWordsRemover {#stopwordsremover}
 
@@ -729,6 +753,8 @@ TRANSFORM(stop_words_remover(raw) as filtered)
 | Parameter          | Description                                                                                      | Type          | Default                 | Optional |
 |--------------------|--------------------------------------------------------------------------------------------------|---------------|-------------------------|----------|
 | `stopWords`        | The words to be filtered out.                                                                    | array[string] | Default: English stop words | optional |
+
+{style="table-layout:auto"}
 
 <!-- Q) should this be the `CUSTOM_STOP_WORDS` parameter or the `stopWords` parameter?  -->
 
@@ -787,6 +813,8 @@ create table td_idf_model transform(tokenizer(sentence) as token_sentence, tf_id
 |-----------------|----------------------------------------------------------------------------------------|------|---------|----------|
 | `NUM_FEATURES`  | The number of features to generate. Must be greater than 0.                             | Int  | 262144  | optional |
 | `MIN_DOC_FREQ`  | The minimum number of documents in which a term must appear to be included in the model. | Int  | 0       | optional |
+
+{style="table-layout:auto"}
 
 **Example transformation**
 
@@ -851,6 +879,8 @@ TRANSFORM(tokenizer(review) as tokenized, word2Vec(tokenized, 10, 1) as word2Vec
 | `VECTOR_SIZE`| The dimension of the vector that each word is transformed into.                                      | Integer | 100     | optional |
 | `MIN_COUNT`  | The minimum number of times a token must appear to be included in the `Word2Vec` model's vocabulary.   | Integer | 5       | optional |
 
+{style="table-layout:auto"}
+
 **Example transformation**
 
 This example shows how `Word2Vec` converts a tokenized review into a fixed-size vector representing the average of the word vectors in the document.
@@ -864,3 +894,5 @@ TRANSFORM(tokenizer(review) as tokenized, word2Vec(tokenized, 10, 1) as word2Vec
 | review                        | tokenized                           | word2Vec                        |
 |-------------------------------|--------------------------------------|---------------------------------|
 | this was an entertaining movie | [this, was, an, entertaining, movie] | [-0.025713888928294182,0.00818799751577899,0.0092235435731709,-0.01515385233797133,0.012175946310162545,3.1129065901041035E-4,0.0025145105042611252,0.005757019785232843,-0.021328244300093502,0.009335877187550069] |
+
+{style="table-layout:auto"}
