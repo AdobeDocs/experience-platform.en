@@ -26,6 +26,7 @@ role: Developer,User
     * [View more](data-distiller/query-pro-mode/view-more.md)
     * [View SQL](data-distiller/query-pro-mode/view-sql.md)
     * [Download as CSV](data-distiller/query-pro-mode/download-csv.md)
+    * [Export as PDF](data-distiller/query-pro-mode/export-pdf.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
   * [Account Profiles](guides/account-profiles.md)
