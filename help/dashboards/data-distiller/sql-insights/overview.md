@@ -1,9 +1,9 @@
 ---
-title: Customizable Insights for Extended App Reporting
+title: SQL Insights for Extended App Reporting
 description: Learn how to use SQL queries to generate insights for your custom dashboards.
 exl-id: c60a9218-4ac0-4638-833b-bdbded36ddf5
 ---
-# Customizable Insights for extended app reporting
+# SQL Insights for extended app reporting
 
 Use custom SQL queries to effectively extract insights from diverse structured datasets. Technical people can use query pro mode to perform complex analysis with SQL and then share this analysis with non-technical users through charts on your custom dashboard or export them in CSV files. This method of insight creation is well-suited for tables with clear relationships and allows for a greater degree of customization within your insights and filters that can suit niche use cases. 
 
