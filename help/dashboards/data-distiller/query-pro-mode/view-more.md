@@ -5,7 +5,7 @@ exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
 ---
 # View more {#view-more}
 
-Once you have created a [custom insight](./overview.md) with [query pro mode](./query-pro-mode.md), you can view your chart data in different formats. You can view either a tabulated form of the results, or download the data as a CSV file to view in a spreadsheet. 
+Once you have created a [custom insight](../sql-insights/overview.md) with [query pro mode](./overview.md), you can view your chart data in different formats. You can view either a tabulated form of the results, or download the data as a CSV file to view in a spreadsheet. 
 
 ## Tabulated results {#tabulated-results}
 
@@ -13,7 +13,7 @@ For every chart authored using the query pro mode through SQL, you can view the 
 
 From your custom dashboard, select the ellipses (`...`) on any widget to access the [!UICONTROL View more] and [!UICONTROL View SQL] options.
 
-![A custom dashboard with an insight's ellipses dropdown menu and the View more and View SQL options highlighted.](../../images/customizable-insights/ellipses-dropdown.png)
+![A custom dashboard with an insight's ellipses dropdown menu and the View more and View SQL options highlighted.](../../images/sql-insights/ellipses-dropdown.png)
 
 ## Download CSV {#download-csv}
 
@@ -23,7 +23,7 @@ The [!UICONTROL View more] feature displays the specific data points for the cha
 >
 >The CSV download is limited ot the first 500 records.
 
-![A dialog displaying a preview of your insight and the tabularized results of your SQL that generated the insight.](../../images/customizable-insights/view-more-download-csv.png)
+![A dialog displaying a preview of your insight and the tabularized results of your SQL that generated the insight.](../../images/query-pro-mode/view-more-download-csv.png)
 
 ## Next steps
 
