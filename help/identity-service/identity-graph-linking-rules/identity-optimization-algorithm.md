@@ -62,7 +62,7 @@ When the unique namespace constraint is violated, the identity optimization algo
 * The graph would re-establish based on the above order. If adding the link violates the limit constraint (e.g. the graph contains two or more identities with a unique namespace), then the links is removed.
 * The resulting graph will then be compliant with the unique namespace constraint that you configured.
 
-![A diagram that visualizes identity optimization algorithm.](../images/ido.png)
+![A diagram that visualizes identity optimization algorithm.](../images/ido_algorithm.png)
 
 ## Example scenarios for identity optimization algorithm
 
