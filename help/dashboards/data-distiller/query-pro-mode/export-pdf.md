@@ -4,7 +4,7 @@ description: Learn how to download the processed data from your custom dashboard
 ---
 # Export PDF {#export-pdf}
 
-Once you have created a [custom insight](../customizable-insights/overview.md) with [query pro mode](./overview.md), you can export your chart data in PDF format. This action is taken from your custom dashboard overview. 
+Once you have created a [custom insight](../sql-insights/overview.md) with [query pro mode](./overview.md), you can export your chart data in PDF format. This action is taken from your custom dashboard overview. 
 
 From the dashboards workspace, select a custom dashboard from the inventory listed in the [!UICONTROL Browse] tab.
 

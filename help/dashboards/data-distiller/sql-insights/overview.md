@@ -17,7 +17,7 @@ To generate insights from SQL, you must first create a dashboard.
 
 To create a custom dashboard, select **[!UICONTROL Dashboards]** from the left navigation panel to open the Dashboards workspace. Next, select **[!UICONTROL Create dashboard]**.
 
-![The Dashboard inventory with Create dashboard highlighted.](../../images/customizable-insights/create-dashboard.png)
+![The Dashboard inventory with Create dashboard highlighted.](../../images/sql-insights/create-dashboard.png)
 
 The **[!UICONTROL Create dashboard]** dialog appears. There are two options from which to choose your dashboard creation method. To create your insights you can either use an existing data model with the [[!UICONTROL Guided design mode]](../../user-defined-dashboards.md) or your own SQL with the [!UICONTROL Query pro mode]. 
 
@@ -31,7 +31,7 @@ Insights generated from SQL queries offer far greater flexibility and customizat
 >
 >Once you make a selection, you cannot change this selection within that dashboard. Instead, you must create a new dashboard with a different dashboard creation method.
 
-![The [!UICONTROL Create dashboard] dialog with Query pro mode and Save highlighted.](../../images/customizable-insights/query-pro-mode.png)
+![The [!UICONTROL Create dashboard] dialog with Query pro mode and Save highlighted.](../../images/sql-insights/query-pro-mode.png)
 
 ## Create a chart {#create-a-chart}
 

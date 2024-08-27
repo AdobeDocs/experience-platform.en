@@ -16,8 +16,8 @@ role: Developer,User
 * [Download dashboards to PDF](download.md)
 * Data Distiller {#data-distiller}
   * [Overview](data-distiller/overview.md)
-  * Customizable Insights for extended app reporting {#customizable-insights}
-    * [Overview](data-distiller/customizable-insights/overview.md)
+  * SQl Insights for extended app reporting {#sql-insights}
+    * [Overview](data-distiller/sql-insights/overview.md)
   * Query pro mode {#query-pro-mode}  
     * [Overview](data-distiller/query-pro-mode/overview.md)
     * Filters {#filters}

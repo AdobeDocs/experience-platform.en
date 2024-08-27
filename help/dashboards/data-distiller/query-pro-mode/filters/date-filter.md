@@ -54,7 +54,7 @@ The screenshot below highlights the date constraints incorporated in the SQL sta
 >
 >When composing your statement in query pro mode, you must provide sample values for each parameter in order to execute the SQL statement and build the chart. The sample values you provide when composing your statement are replaced by the actual values you select for the date (or global) filter at runtime.
 
-![The [!UICONTROL Enter SQL] dialog with the date parameters highlighted in the SQL.](../../../images/customizable-insights/sql-date-parameters.png)
+![The [!UICONTROL Enter SQL] dialog with the date parameters highlighted in the SQL.](../../../images/sql-insights/sql-date-parameters.png)
 
 ## Enable date parameters in each insight {#enable-date-parameters}
 
@@ -62,11 +62,11 @@ Once you have incorporated the appropriate parameters to your insights' SQL, the
 
 From the widget composer, select toggles to enable the `Start_date` and `End_date` parameters.
 
-![The widget composer with the Start_date and End_date toggles highlighted.](../../../images/customizable-insights/widget-composer-date-filter-toggles.png)
+![The widget composer with the Start_date and End_date toggles highlighted.](../../../images/sql-insights/widget-composer-date-filter-toggles.png)
 
 Next, select the appropriate query parameters from the dropdown menus.
 
-![The widget composer with the Start_date dropdown menu highlighted.](../../../images/customizable-insights/widget-composer-date-filter-dropdown.png)
+![The widget composer with the Start_date dropdown menu highlighted.](../../../images/sql-insights/widget-composer-date-filter-dropdown.png)
 
 Finally, select **[!UICONTROL Save and close]** to return to your dashboard. Date filters are now enabled for all insights that have start and end date parameters.
 
