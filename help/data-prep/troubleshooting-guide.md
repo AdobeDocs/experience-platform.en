@@ -38,11 +38,11 @@ If the Data Prep functions are being used, then ensure that transformation resul
 
 ### How can I remove bad data values from streaming or batch ingestion records?
 
-You can use Data Prep mapping screen to perform column level filtering by not mapping the columns that have data not required and also use calculated fields to transform the data using the support functions
+You can use the Data Prep mapping interface to perform column-level filtering by not mapping the columns that have data that is not required. You can also use calculated fields to transform the data using the support functions
 
-Row level filtering is currently available only for Adobe Analytics connector.
+Row-level filtering is currently available only for Adobe Analytics source connector.
 
-Post ingestion you can use data distiller to clean, shape, and manipulate the data using SQL.
+After ingestion, you can use data distiller to clean, shape, and manipulate the data using SQL.
 
 ### What are he best practice for using calculated fields in GIF data?
 
