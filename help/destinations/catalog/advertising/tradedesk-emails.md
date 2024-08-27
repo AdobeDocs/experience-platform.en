@@ -20,6 +20,8 @@ exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 
 This document is designed to help you activate profiles to your [!DNL Trade Desk] account for audience targeting and suppression based on CRM data.
 
+This connector sends data to the [!DNL The Trade Desk] first-party endpoint. The integration between Adobe Experience Platform and [!DNL The Trade Desk] does not support exporting data to the [!DNL The Trade Desk] third-party endpoint.
+
 [!DNL The Trade Desk(TTD)] does not directly handle the upload file of email addresses at any time nor does [!DNL The Trade Desk] store your raw (unhashed) emails.
 
 >[!TIP]
@@ -32,7 +34,7 @@ Before you can activate audiences to [!DNL The Trade Desk], you must contact you
 
 ## ID Matching Requirements {#id-matching-requirements}
 
-Depending on the type of IDs you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements. Please read the [Identity Namespace overview](/help/identity-service/features/namespaces.md) for more information.  
+Depending on the type of IDs that you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements. Please read the [Identity Namespace overview](/help/identity-service/features/namespaces.md) for more information.  
 
 ## Supported identities {#supported-identities}
 
@@ -134,7 +136,7 @@ Selecting target fields:
 
 To validate that data is correctly exported out of Experience Platform and into [!DNL The Trade Desk], please find the audiences under the Adobe 1PD data tile within [!DNL The Trade Desk] Data Management Platform (DMP). Here are the steps to finding the corresponding ID within the [!DNL Trade Desk] UI: 
 
-1. First, click on the **[!UICONTROL Data]** Tab, and review **[!UICONTROL First-Party]**.
+1. First, select the **[!UICONTROL Data]** tab, and review the **[!UICONTROL First-Party]** section.
 2. Scroll down the page, under **[!UICONTROL Imported Data]**, you will find the **[!UICONTROL Adobe 1PD Tile]**.
 3. Click on the**[!UICONTROL Adobe 1PD]** tile, and it will list out all audiences activated to the [!DNL Trade Desk] destination for your advertiser. You may also use the search function.
 4. The Segment ID # from Experience Platform will appear as the Segment Name in the [!DNL Trade Desk] UI. 

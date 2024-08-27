@@ -9,7 +9,7 @@ exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 
 In order to deliver relevant digital experiences, you need a comprehensive and accurate representation of the real-world entities that make up your customer base.
 
-Organizations and businesses today face a large volume of disparate datasets: your individual customers are represented by a variety of different identifiers. Your customer can be linked to different web browsers (Safari, Google Chrome), hardware devices (Phones, Laptops), and other person identifiers (CRM IDs, Email accounts). This creates a disjointed view of your customer.
+Organizations and businesses today face a large volume of disparate datasets: your individual customers are represented by a variety of different identifiers. Your customer can be linked to different web browsers (Safari, Google Chrome), hardware devices (Phones, Laptops), and other person identifiers (CRMIDs, Email accounts). This creates a disjointed view of your customer.
 
 You can solve these challenges with Adobe Experience Platform Identity Service and its capabilities to:
 
@@ -72,20 +72,20 @@ A link between two identities is established when the identity namespace and the
 
 A typical login event **sends two identities** into Experience Platform:
 
-* The person identifier (such as a CRM ID) that represents an authenticated user.
+* The person identifier (such as a CRMID) that represents an authenticated user.
 * The browser identifier (such as an ECID) that represents the web browser.
 
 Consider the following example:
 
-* You log in with your username and password combination to an e-commerce website using your laptop. This event qualifies you as an authenticated user, thus Identity Service recognizes your CRM ID.
+* You log in with your username and password combination to an e-commerce website using your laptop. This event qualifies you as an authenticated user, thus Identity Service recognizes your CRMID.
 * Your use of a browser to access the e-commerce website is also recognized by Identity Service as an event. This event is represented in Identity Service through an ECID.
 * Behind the scenes, Identity Service processes the two events as: `CRM_ID:ABC, ECID:123`.
-  * CRM ID: ABC is the namespace and value that represents you, as an authenticated user.
+  * CRMID: ABC is the namespace and value that represents you, as an authenticated user.
   * ECID: 123 is the namespace and value that represents your web browser usage on your laptop.
 * Next, if you log in with the same credentials to the same e-commerce website, but use the web browser on your phone instead of the web browser on your laptop, then a new ECID is registered in Identity Service.
 * Behind the scenes, Identity Service processes this new event as `{CRM_ID:ABC, ECID:456}`, where CRM_ID: ABC represents your authenticated customer ID and ECID:456 represents the web browser on your mobile device.
 
-Considering the scenarios above, Identity Service establishes a link between `{CRM_ID:ABC, ECID:123}`, as well as `{CRM_ID:ABC, ECID:456}`. This results in an identity graph where you "own" three identities: one for person identifier (CRM ID) and two for cookie identifiers (ECIDs).
+Considering the scenarios above, Identity Service establishes a link between `{CRM_ID:ABC, ECID:123}`, as well as `{CRM_ID:ABC, ECID:456}`. This results in an identity graph where you "own" three identities: one for person identifier (CRMID) and two for cookie identifiers (ECIDs).
 
 For more information, read the the guide on [how Identity Service links identities](./features/identity-linking-logic.md).
 

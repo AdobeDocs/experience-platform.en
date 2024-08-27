@@ -22,6 +22,9 @@ role: Admin
     * [Roles](abac/ui/roles.md)
     * [Sandboxes](abac/ui/sandboxes.md)
     * [Users](abac/ui/users.md)
+  * Permission Manager {#permissions-manager}
+    * [Overview](abac/permission-manager/overview.md)
+    * [Permissions](abac/permission-manager/permissions.md)
   * Attribute-based access control API {#abac-api}
     * [Overview](abac/api/overview.md)
     * [Getting started](abac/api/getting-started.md)
