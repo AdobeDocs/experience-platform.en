@@ -27,3 +27,94 @@ You can escape special characters in a field by using `${...}`. However, JSON fi
 ### What is the maximum length of calculated fields?
 
 Calculated fields have a maximum length of 4096 characters.
+
+### My ingestion failed due to validation on an attribute, but I have that attribute correctly in my file. What exactly is wrong?
+
+Ensure that the data type for each field matches the type defined in the schema. Additionally, constraints such as "Required", "enum", and "format" must be adhered to.
+
+The data being ingested must conform to the Experience Data Model (XDM) schema defined in Experience Platform. If the attribute does not match the expected type or format specified in the schema, the ingestion will fail.
+
+If the Data Prep functions are being used, then ensure that transformation results in the right attributes. You can review the attributes during the setup process of the sources workflow. During the mapping step, select **[!UICONTROL New field type]** and then select **[!UICONTROL Add calculated field]**. Next, use the calculated field interface to preview each function.
+
+### How can I remove bad data values from streaming or batch ingestion records?
+
+You can use Data Prep mapping screen to perform column level filtering by not mapping the columns that have data not required and also use calculated fields to transform the data using the support functions
+
+Row level filtering is currently available only for Adobe Analytics connector.
+
+Post ingestion you can use data distiller to clean, shape, and manipulate the data using SQL.
+
+### What are he best practice for using calculated fields in GIF data?
+
+During mapping of source data to XDM schema, the Data Prep mapping functions can be used to create a new calculated field. 
+
+### When you bring in Adobe Analytics data as a source, does the schema created automatically enabled for profile?
+
+When you create an Analytics source dataflow in a production sandbox, two dataflows are created:
+
+* A dataflow that does a 13-month backfill of historical report suite data into data lake. This dataflow ends when the backfill is complete.
+* A dataflow that sends live data to data lake and to Real-Time Customer Profile. This dataflow runs continuously.
+
+### How can I lowercase one value inside a map object using Data Prep functions?
+
+You can retrieve the value using the `map_get_values` function and then make is lowercase using the lower function:
+
+```shell
+lower(map_get_values(mapObject, 'keyName'))
+111
+```
+
+### How can I lowercase a map object using Data Prep functions?
+
+You can retrieve the value using the map_get_values function and then make is lowercase using the lower function
+
+```shell
+lower(map_get_values(mapObject, 'keyName'))
+```
+
+If you want to loop through the entire map and make every item lower then that is not supported.
+
+### Can I use Data Prep functions in a nested fashion?
+
+Yes, you can use one Data Prep function within another function to solve for complex Data Preparation capabilities during data ingestion.
+
+For example, if you want to make a field null based on a specific condition then you can use the "iif" function to check for that field and then when true use the "nullify()" function and when false used the respective filed.
+
+If marketing_type was the field then you can used ".equals" to check the value in marketing_type field and this can be nested within a "iff" and when true used the "nullify()" function as shown below
+
+```shell
+iif(marketing_type.equals("phyMail"), nullify(), marketing_type)
+```
+
+### Is there an example of the various ways that nested Data Prep functions can work?
+
+| Function | Description | Parameters | Syntax | Expression | Sample output |
+| --- | --- | --- | --- | --- | --- |
+| iif | Evaluates a given boolean expression and returns the specified value based on the result. | <ul><li>EXPRESSION: **Required** The boolean expression that is being evaluated.</li><li>TRUE_VALUE: **Required** The value that is returned if the expression evaluates to true.</li><li>FALSE_VALUE: **Required** The value that is returned if the expression evaluates to false.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif("s".equalsIgnoreCase("S"), "True", "False") | "True" |
+| equals | Compares two strings to confirm if they are equal. This function is case sensitive. | <ul><li>STRING1: **Required** The first string you want to compare.</li><li>STRING2: **Required** The second string you want to compare. | STRING1.​equals(​STRING2) | "string1".​equals​("STRING1") | false |
+| nullify | Sets the value of the attribute to null. This should be used when you do not want to copy the field to the target schema. | | nullify() | nullify() | null |
+
+{style="table-layout:auto"}
+
+An example of how these could be nested is as follows, assuming that the field being evaluated is "marketing_type".
+
+```shell
+iif(marketing_type.equals("phyMail"), nullify(), marketing_type)
+```
+
+For example, if you have the following fields:
+
+* marketing_type: (email, phyMail, push, sms, phone)
+* total_consents: number range from 4000 to 5500
+* date: from feb to march of 2024
+
+You can then use and nest the three functions listed above to manipulate the three fields:
+
+* iif(marketing_type.equals("email"), nullify(), iif(marketing_type.equals("push"), "push-notification", marketing_type))
+* iif(marketing_type.equals("phyMail"), nullify(), iif(marketing_type.equals("sms"), "text-message", marketing_type))
+* iif(total_consents > 5000, iif(marketing_type.equals("phone"), nullify(), marketing_type), "insufficient-consents")
+* iif(date.equals("3/21/24"), iif(marketing_type.equals("push"), nullify(), marketing_type), "not-March")
+* iif(total_consents < 4500, iif(marketing_type.equals("sms"), "low-consent-sms", marketing_type), "high-consents")
+* iif(marketing_type.equals("email"), iif(total_consents > 5000, nullify(), "email-low-consents"), marketing_type)
+* iif(marketing_type.equals("push"), iif(total_consents < 4500, "low-consent-push", nullify()), marketing_type)
+* iif(total_consents >= 5500, iif(marketing_type.equals("phyMail"), nullify(), "high-consents"), marketing_type)
