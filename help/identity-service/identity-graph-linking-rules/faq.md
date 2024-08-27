@@ -132,3 +132,7 @@ AAIDs are blocked by default. Therefore, if you are using the [Adobe Analytics s
 
 * To validated that authenticated events contain both the person and cookie namespace, read the troubleshooting steps outlined in the guide above on [troubleshooting errors regarding data not being ingested to Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
 * To validate that authenticated events have the primary identity of the person namespace (e.g. CRMID), search the person namespace on profile viewer using no-stitch merge policy (this is the merge policy that does not use private graph). This search will only return events associated to the person namespace. 
+
+## Graph behavior related issues {#graph-behavior-related-issues}
+
+This section outlines common issues you may encounter regarding how the identity graph behaves.
