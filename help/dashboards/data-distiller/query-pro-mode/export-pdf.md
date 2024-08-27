@@ -18,6 +18,6 @@ The **[!UICONTROL Export file]** dialog appears. Finally, select **[!UICONTROL D
 
 ![The Export file dialog with download.](../../images/query-pro-mode/export-dialog.png)
 
-The PDF preview appears. Select **[!UICONTROL Save]** to complete the process
+The PDF preview appears. Select **[!UICONTROL Save]** to complete the process.
 
 ![The print preview dialog with Save highlighted.](../../images/query-pro-mode/print-preview.png)

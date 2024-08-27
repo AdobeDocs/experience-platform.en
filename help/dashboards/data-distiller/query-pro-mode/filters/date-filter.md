@@ -19,7 +19,7 @@ To apply a date filter, select **[!UICONTROL Add filter]**, then **[!UICONTROL D
 
 ## Edit your SQL to include date query parameters {#include-date-parameters} 
 
-Next, ensure your SQL includes query parameters to allow for a date range. If you have not yet incorporated query parameters in your SQL, edit you insights to include these parameters. See the documentation for instructions on how to [edit an insight](../overview.md#edit).
+Next, ensure your SQL includes query parameters to allow for a date range. If you have not yet incorporated query parameters in your SQL, edit your insights to include these parameters. See the documentation for instructions on how to [edit an insight](../overview.md#edit).
 
 >[!TIP]
 >
