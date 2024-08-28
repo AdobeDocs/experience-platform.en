@@ -12,9 +12,9 @@ This document covers the steps required to connect GitHub Copilot and VS Code wi
 
 This guide requires that you already have access to a GitHub account and have signed up for GitHub Copilot. You can [sign up from the GitHub website](https://github.com/github-copilot/signup). You also need VS Code. You can [download VS Code from their official website](https://code.visualstudio.com/download). 
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Refer to GitHub Copilot's security documentation to understand what contextual data about the code and files being edited ("prompts") and information about the user's actions ("user engagement data") may be shared with GitHub Copilot. Before using the integrated tool, consider third-party security implications. It is the user's responsibility to ensure compliance with your organization's data governance policies; consult the vendor's documentation for further details.
+>To understand what data is shared with GitHub, review GitHub Copilot's security documentation. Shared data includes contextual information about the code and files being edited ("prompts") and details about user actions ("user engagement data"). Before using this integrated tool, consider the security implications of involving third-party services. You are responsible for ensuring compliance with your organization's data governance policies. Consult the GitHub's documentation for more information.
 
 Once you have installed VS Code and activated your Copilot subscription, acquire your connection credentials for Experience Platform. These credentials are located in the [!UICONTROL Credentials] tab of the [!UICONTROL Queries] workspace in the Platform UI. Read the credentials guide to [learn how to find these values in the Platform UI](../ui/credentials.md). Please contact your organization administrator if you do not currently have access to the [!UICONTROL Queries] workspace.
 
