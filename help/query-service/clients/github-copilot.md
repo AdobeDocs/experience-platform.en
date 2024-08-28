@@ -23,7 +23,7 @@ The following Visual Studio Code extensions are required to effectively manage a
 
 ## Create connection {#create-connection}
 
-Select the cylinder icon in the left navigation of VS Code, followed by **[!DNL Add New Connection]** or the cylinder plus icon (![The cylinder plus icon.]()).
+Select the cylinder icon (![The cylinder icon.](../images/clients/github-copilot/cylinder-icon.png)) in the left navigation of VS Code, followed by **[!DNL Add New Connection]** or the cylinder plus icon (![The cylinder plus icon.](../images/clients/github-copilot/cylinder-plus-icon.png)).
 
 ![The Visual Studio Code UI with the SQL Tool extension and Add new connection highlighted.](../images/clients/github-copilot/add-new-connection.png)
 
