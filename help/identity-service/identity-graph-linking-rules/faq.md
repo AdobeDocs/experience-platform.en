@@ -136,3 +136,76 @@ AAIDs are blocked by default. Therefore, if you are using the [Adobe Analytics s
 ## Graph behavior related issues {#graph-behavior-related-issues}
 
 This section outlines common issues you may encounter regarding how the identity graph behaves.
+
+### The identity is getting linked to the 'wrong' person
+
+The identity optimization algorithm will honour [the most recently established links and remove the oldest links](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). Therefore, it is possible that once this feature is enabled, ECIDs could be reassigned (re-linked) from one person to another. To understand the history of how an identity gets linked over time, follow the steps below:
+
+**Troubleshooting steps**
+
+>[!NOTE]
+>
+>The following steps will retrieve information under the following assumptions:
+>
+>* A single dataset is in use (this will not query multiple datasets).
+>
+>*The data is not deleted from data lake due to dataset TTL, privacy delete, delete record, etc.
+
+First, you must collect the following information:
+
+* The identity symbol (namespaceCode) of the cookie namespace (e.g. ECID) and the person namespace (e.g. CRMID) that were sent.
+  * For Web SDK implementations, these are usually the namespaces included in the identityMap.
+  * For Analytics source connector implementations, these are the cookie identifier included in the identityMap. The person identifier is an eVar field marked as an identity.
+* The dataset in which the event was sent in (dataset_name).
+* The identity value of the cookie namespace to look up (identity_value).
+
+If you do not know the identity value of your cookie identifier and you would like to search for a cookie ID that would have been linked to multiple person identifiers, then you must run the following query. This query assumes ECID as the cookie namespace and CRMID as the person namespace.
+
+>[!BEGINTABS]
+
+>[!TAB Web SDK implementation]
+
+```sql
+  SELECT identityMap['ECID'][0]['id'], count(distinct identityMap['CRMID'][0]['id']) as crmidCount FROM dataset_name GROUP BY identityMap['ECID'][0]['id'] ORDER BY crmidCount desc 
+```
+
+>[!TAB Analytics source connector implementation]
+
+```sql
+  SELECT identityMap['ECID'][0]['id'], count(distinct personID) as crmidCount FROM dataset_name group by identityMap['ECID'][0]['id'] ORDER BY crmidCount desc 
+```
+
+**Note:** personID refers to the path of the descriptor. You can find this information under schemas.
+ 
+>[!ENDTABS]
+
+Next, examine the association of the cookie namespace in order of timestamp by running the following query:
+
+```sql
+  SELECT identityMap['CRMID'][0]['id'] as personEntity, * 
+  FROM dataset_name 
+  WHERE identitymap['ECID'][0].id ='identity_value' 
+  ORDER BY timestamp desc 
+```
+
+### The identity optimization algorithm is not 'working' as expected
+
+**Troubleshooting steps**
+
+Refer to the documentation on [identity optimization algorithm](./identity-optimization-algorithm.md), as well as the types of graph structures that are support.
+
+  * Read the [graph configuration guide](./example-configurations.md) for examples of supported graph structures.
+  * You can also read the [implementation guide](./configuration.md#appendix) for examples of unsupported graph structures. There are two scenarios that could happen:
+    * No single namespace across all your profiles.
+    * A ["dangling ID"](./configuration.md#dangling-loginid-scenario) scenario occurs. In this scenario, Identity Service is unable to determine if the dangling ID is associated to any of the person entities in the graphs.
+
+You can also use the [graph simulation tool in the UI](./graph-simulation.md) to simulate events and configure your own unique namespace and namespace priority settings. Doing so can help give you a baseline understanding of how the identity optimization algorithm should behave. 
+
+If your simulation results match your graph behavior expectations, then you can check and see if your [identity settings](./identity-settings-ui.md) matches the settings that you have configured in your simulation.
+
+### I still see collapsed graphs in my sandbox even after configuring identity settings
+
+Identity graphs will adhere to your configured unique namespace and namespace priority _after_ the settings have been configured. Any "collapsed" graphs _before_ enabling the feature will not be subject to the settings you save.
+
+**Troubleshooting steps**
+
