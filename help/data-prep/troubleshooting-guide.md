@@ -87,7 +87,7 @@ If marketing_type was the field then you can use ".equals" to check the value in
 iif(marketing_type.equals("phyMail"), nullify(), marketing_type)
 ```
 
-### Is there an example of the various ways that nested Data Prep functions can work?
+The following outlines examples of how you can nest Data Prep functions using iif, equals, and nullify:
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | --- | --- | --- | --- | --- | --- |
