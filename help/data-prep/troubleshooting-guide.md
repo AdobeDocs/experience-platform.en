@@ -38,22 +38,32 @@ If the Data Prep functions are being used, then ensure that transformation resul
 
 ### How can I remove bad data values from streaming or batch ingestion records?
 
-You can use the Data Prep mapping interface to perform column-level filtering by not mapping the columns that have data that is not required. You can also use calculated fields to transform the data using the support functions
+You can use the Data Prep mapping interface to perform column-level filtering by only mapping columns that have required data. You can also use calculated fields to transform the data using the support functions.
 
-Row-level filtering is currently available only for Adobe Analytics source connector.
+Row-level filtering is currently available only for the [Adobe Analytics source connector](../sources/tutorials/ui/create/adobe-applications/analytics.md#row-level-filtering).
 
-After ingestion, you can use data distiller to clean, shape, and manipulate the data using SQL.
+After ingestion, you can use data distiller to clean, shape, and manipulate the data using SQL. However, this process will require the deletion of the batch with the bad records, and re-ingesting a new batch created from the result of the SQL.
 
-### What are he best practice for using calculated fields in GIF data?
+>[!IMPORTANT]
+>
+>* Data lake: You can only remove records that have already been ingested by deleting and re-ingesting the batch that the record is in.
+>
+>* Real-Time Customer Profile: You can overwrite attribute-based records by ingesting new records, but experience event records cannot be removed.
+>
+>* Identity Service: You cannot remove records outright in Identity Service. You will have to delete the entire profile and the re-upload the profile with the correct records using the Profile delete API.
+
+### What are the best practice for using calculated fields in GIF data?
 
 You can use the Data Prep mapping functions during the mapping step of source data to XDM schema to create a new calculated field.
 
-### When you bring in Adobe Analytics data as a source, does the schema created automatically enabled for profile?
+### When you bring in Adobe Analytics data as a source, is the schema created automatically enabled for profile?
+
+Analytics data is not automatically configured for Profile. After configuring the source connector, you must go into the dataset and the schema and enable them for Profile ingestion.
 
 When you create an Analytics source dataflow in a production sandbox, two dataflows are created:
 
 * A dataflow that does a 13-month backfill of historical report suite data into data lake. This dataflow ends when the backfill is complete.
-* A dataflow that sends live data to data lake and to Real-Time Customer Profile. This dataflow runs continuously.
+* A dataflow that sends live data to data lake and to Profile. This dataflow runs continuously.
 
 ### How can I lowercase one value inside a map object using Data Prep functions?
 
@@ -61,18 +71,9 @@ You can retrieve the value using the `map_get_values` function and then make it 
 
 ```shell
 lower(map_get_values(mapObject, 'keyName'))
-111
 ```
 
-### How can I lowercase a map object using Data Prep functions?
-
-You can retrieve the value using the `map_get_values` function and then make it lowercase using the lower function:
-
-```shell
-lower(map_get_values(mapObject, 'keyName'))
-```
-
-You cannot loop through the entire map and make every item lowercase.
+You may use the same function to lowercase a map object. However, you cannot loop through an entire map and make every item lowercase.
 
 ### Can I use Data Prep functions in a nested fashion?
 
@@ -80,7 +81,7 @@ Yes, you can use one Data Prep function within another function to solve for com
 
 For example, if you want to define a field as null based on a specific condition then you can use the "iif" function to check for that field. If the function returns `true` then you may use "nullify()", and if it returns `false`, then you may use the respective field.
 
-If marketing_type was the field then you can use ".equals" to check the value in the marketing_type field and this can be nested within an "iff" function. If it returns `true`, then you may use the "nullify()" function as shown below:
+If marketing_type was the field then you can use ".equals" to check the value in the marketing_type field and this can be nested within an "iif" function. If it returns `true`, then you may use the "nullify()" function as shown below:
 
 ```shell
 iif(marketing_type.equals("phyMail"), nullify(), marketing_type)
