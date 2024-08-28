@@ -46,7 +46,7 @@ After ingestion, you can use data distiller to clean, shape, and manipulate the 
 
 ### What are he best practice for using calculated fields in GIF data?
 
-During mapping of source data to XDM schema, the Data Prep mapping functions can be used to create a new calculated field. 
+You can use the Data Prep mapping functions during the mapping step of source data to XDM schema to create a new calculated field.
 
 ### When you bring in Adobe Analytics data as a source, does the schema created automatically enabled for profile?
 
@@ -57,7 +57,7 @@ When you create an Analytics source dataflow in a production sandbox, two datafl
 
 ### How can I lowercase one value inside a map object using Data Prep functions?
 
-You can retrieve the value using the `map_get_values` function and then make is lowercase using the lower function:
+You can retrieve the value using the `map_get_values` function and then make it lowercase using the lower function:
 
 ```shell
 lower(map_get_values(mapObject, 'keyName'))
@@ -66,21 +66,21 @@ lower(map_get_values(mapObject, 'keyName'))
 
 ### How can I lowercase a map object using Data Prep functions?
 
-You can retrieve the value using the map_get_values function and then make is lowercase using the lower function
+You can retrieve the value using the `map_get_values` function and then make it lowercase using the lower function:
 
 ```shell
 lower(map_get_values(mapObject, 'keyName'))
 ```
 
-If you want to loop through the entire map and make every item lower then that is not supported.
+You cannot loop through the entire map and make every item lowercase.
 
 ### Can I use Data Prep functions in a nested fashion?
 
-Yes, you can use one Data Prep function within another function to solve for complex Data Preparation capabilities during data ingestion.
+Yes, you can use one Data Prep function within another function to solve for complex data preparation capabilities during data ingestion.
 
-For example, if you want to make a field null based on a specific condition then you can use the "iif" function to check for that field and then when true use the "nullify()" function and when false used the respective filed.
+For example, if you want to define a field as null based on a specific condition then you can use the "iif" function to check for that field. If the function returns `true` then you may use "nullify()", and if it returns `false`, then you may use the respective field.
 
-If marketing_type was the field then you can used ".equals" to check the value in marketing_type field and this can be nested within a "iff" and when true used the "nullify()" function as shown below
+If marketing_type was the field then you can use ".equals" to check the value in the marketing_type field and this can be nested within an "iff" function. If it returns `true`, then you may use the "nullify()" function as shown below:
 
 ```shell
 iif(marketing_type.equals("phyMail"), nullify(), marketing_type)
@@ -96,19 +96,19 @@ iif(marketing_type.equals("phyMail"), nullify(), marketing_type)
 
 {style="table-layout:auto"}
 
-An example of how these could be nested is as follows, assuming that the field being evaluated is "marketing_type".
+The following is an example of how the functions can be nested, assuming that the field being evaluated is "marketing_type".
 
 ```shell
 iif(marketing_type.equals("phyMail"), nullify(), marketing_type)
 ```
 
-For example, if you have the following fields:
+Next, given that you have the following three fields:
 
 * marketing_type: (email, phyMail, push, sms, phone)
 * total_consents: number range from 4000 to 5500
 * date: from feb to march of 2024
 
-You can then use and nest the three functions listed above to manipulate the three fields:
+You can use and nest the three functions listed above to manipulate the three fields:
 
 * iif(marketing_type.equals("email"), nullify(), iif(marketing_type.equals("push"), "push-notification", marketing_type))
 * iif(marketing_type.equals("phyMail"), nullify(), iif(marketing_type.equals("sms"), "text-message", marketing_type))
