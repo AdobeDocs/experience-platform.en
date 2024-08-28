@@ -209,3 +209,12 @@ Identity graphs will adhere to your configured unique namespace and namespace pr
 
 **Troubleshooting steps**
 
+You can use the [identity graph viewer](../features/identity-graph-viewer.md) to check whether your graph was ingested before or after your settings. Examine the last updated timestamp under [!UICONTROL Link properties] to see when Identity Service ingested the graph. If the timestamp is before configuration, then that suggests that the "collapsed" graph was created before enabling the feature.
+
+![]
+
+### I want to know how many "collapsed" graphs exist in my sandbox
+
+Use the identity dashboard for insights on the state of your identity graph, such as the count of identities and graphs. Refer to the metric, "Graph count with multiple namespaces" for a count of graphs that have collapsed - these are graphs that contain two or more identities with the same namespace. Assuming that the sandbox has no data, and you have configured a namespace (e.g. CRMID) to be unique, the expectation is that there should be zero graphs that have two or more CRMIDs. In the example below, there are ~90000 graphs that contain two or more ECIDs.
+
+![]
