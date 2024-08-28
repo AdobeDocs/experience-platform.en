@@ -58,8 +58,8 @@ Finally, to enable SSL, select the [!DNL SSL] input field and choose [!DNL Enabl
 >[!TIP]
 >
 >Once you have entered all your credentials, you can test your connection before saving the connection. Scroll down to the bottom of the workspace and select **[!DNL Test Connection]**.
-
-![The Connection Assistant workspace with Test Connection highlighted.](../images/clients/github-copilot/test-connection.png)
+>
+>![The Connection Assistant workspace with Test Connection highlighted.](../images/clients/github-copilot/test-connection.png "The Connection Assistant workspace with Test Connection highlighted."){width="100" zoomable="yes"}
 
 Once you have correctly input your connection details, select **[!DNL Save Connection]** to confirm your settings.
 
