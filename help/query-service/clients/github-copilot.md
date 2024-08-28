@@ -73,4 +73,6 @@ Your visual Code workspace appears with a suggestion from GitHub Copilot.
 
 ![A connected SQL session in the ](../images/clients/github-copilot/connected.png)
 
-You are now ready to efficiently query your Platform databases directly from your code editor, and use GitHub Copilot's AI-powered code suggestions to streamline writing and optimizing SQL queries.
+## Next steps
+
+You are now ready to efficiently query your Platform databases directly from your code editor, and use GitHub Copilot's AI-powered code suggestions to streamline writing and optimizing SQL queries. For more information on how to write and run queries, refer to the [guidance for query execution](../best-practices/writing-queries.md).
