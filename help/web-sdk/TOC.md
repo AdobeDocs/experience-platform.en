@@ -56,7 +56,8 @@ role: Developer
   * [setConsent](commands/setconsent.md)
   * [setDebug](commands/setdebug.md)
   * [sendMediaEvent](commands/sendmediaevent.md)
-  * [Configre datastream overrides](commands/datastream-overrides.md)
+  * [subscribeRulesetItems](commands/subscriberulesetitems.md)
+  * [Configure datastream overrides](commands/datastream-overrides.md)
   * [Command responses](commands/command-responses.md)
 
 * Identity {#identity}
