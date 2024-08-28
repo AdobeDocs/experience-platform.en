@@ -1,6 +1,7 @@
 ---
 title: Attribute-based Access Control Permission Manager
 description: Learn how to use Permissions Manager in Adobe Experience Platform for generating reports and validating acceess permissions.
+exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
 ---
 # Permission manager
 
