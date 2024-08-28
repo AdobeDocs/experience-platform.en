@@ -10,9 +10,13 @@ This document covers the steps required to connect GitHub Copilot and VS Code wi
 
 ## Get started {#get-started}
 
-This guide requires that you already have access to a GitHub account and have signed up to GitHub Copilot. You can [sign up from the GitHub website](https://github.com/github-copilot/signup). You also need VS Code. You can [download VS Code from their official website](https://code.visualstudio.com/download). 
+This guide requires that you already have access to a GitHub account and have signed up for GitHub Copilot. You can [sign up from the GitHub website](https://github.com/github-copilot/signup). You also need VS Code. You can [download VS Code from their official website](https://code.visualstudio.com/download). 
 
-Once you have installed and VS Code and have an active Copilot subscription, acquire your connection credentials for Experience Platform. Your connection credentials are held in the [!UICONTROL Credentials] tab of the [!UICONTROL Queries] workspace in the Platform UI. Read the credentials guide to [learn how to find these values in the Platform UI](../ui/credentials.md). Please contact your organization administrator if you do not currently have access to the [!UICONTROL Queries] workspace.
+>[!NOTE]
+>
+>Refer to GitHub Copilot's security documentation to understand what contextual data about the code and files being edited ("prompts") and information about the user's actions ("user engagement data") may be shared with GitHub Copilot. Before using the integrated tool, consider third-party security implications. It is the user's responsibility to ensure compliance with your organization's data governance policies; consult the vendor's documentation for further details.
+
+Once you have installed VS Code and activated your Copilot subscription, acquire your connection credentials for Experience Platform. These credentials are located in the [!UICONTROL Credentials] tab of the [!UICONTROL Queries] workspace in the Platform UI. Read the credentials guide to [learn how to find these values in the Platform UI](../ui/credentials.md). Please contact your organization administrator if you do not currently have access to the [!UICONTROL Queries] workspace.
 
 ### Required Visual Studio Code extensions {#required-extensions}
 
@@ -69,7 +73,7 @@ The [!DNL Review connection details] view appears and displays your connection c
 
 ![The Review connection details view with Connect Now highlighted.](../images/clients/github-copilot/review-and-connect.png)
 
-Your visual Code workspace appears with a suggestion from GitHub Copilot.
+Your Visual Code workspace appears with a suggestion from GitHub Copilot.
 
 ![A connected SQL session in the ](../images/clients/github-copilot/connected.png)
 
