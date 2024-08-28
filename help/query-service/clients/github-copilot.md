@@ -42,7 +42,7 @@ The [!DNL Connection Settings] view appears. Enter your Platform connection cred
 |  [!DNL Server address]  | Enter the **[!UICONTROL Host]** value provided in your Platform Postgres credentials, such as `acmeprod.platform-query.adobe.io`. |
 |  [!DNL Port]   | This value is typically `80` for Platform services.   |
 |  [!DNL Database]   | Enter the **[!UICONTROL Database]** value provided in your Platform Postgres credentials, such as `prod:all`.  |
-|  [!DNL Username]   | This property refers your organization ID. Enter the **[!UICONTROL Username]** value provided in your Platform Postgres credentials, such as `EF34D5678F9CE01D2E3456FF@AdobeOrg`  |
+|  [!DNL Username]   | This property refers to your organization ID. Enter the **[!UICONTROL Username]** value provided in your Platform Postgres credentials, such as `EF34D5678F9CE01D2E3456FF@AdobeOrg`  |
 |  [!DNL Password]   | This property is your access token. Enter the **[!UICONTROL Password]** value provided in your Platform Postgres credentials. |
 
 ![The Connection Assistant workspace with several settings highlighted.](../images/clients/github-copilot/connection-settings.png)
