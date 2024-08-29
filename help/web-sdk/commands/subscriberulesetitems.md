@@ -1,8 +1,8 @@
 ---
 title: subscribeRulesetItems
 description: Subscribe to content cards for a specific surface using the subscribeRulesetItems command.
+exl-id: bc932ba5-a810-4fa6-82cc-998af39fdd34
 ---
-
 # `subscribeRulesetItems`
 
 The `subscribeRulesetItems` command allows you to subscribe to propositions that are the result of satisfied rulesets. You can do this by specifying which surfaces and schemas to filter by, and providing a callback function.
