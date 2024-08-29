@@ -30,3 +30,15 @@ Read this guide to learn how you can ingest encrypted data to Adobe Experience P
 >id="platform_sources_encrypted_createCustomKey"
 >title="Create custom key"
 >abstract="You can optionally create a sign verification key pair and create a custom key for your encrypted data."
+
+
+## Outline
+
+* Select [!UICONTROL Key Pairs] from the header in the sources UI workspace.
+  * You are taken to the [!UICONTROL Key Pairs] page:
+    * Select **[!UICONTROL Encryption key]** for list of key pairs that you have created and managed.
+    * Select **[!UICONTROL Customer key]** for a list of key pairs that your customers have created and managed.
+* Key Pair functions:
+  * Select **[!UICONTROL Key details]** to view key details.
+  * Select **[!UICONTROL Delete]** to delete.
+* Select [!UICONTROL Create key] to create either an encryption key or a customer key
