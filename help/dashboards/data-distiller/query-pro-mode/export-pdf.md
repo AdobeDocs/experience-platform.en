@@ -1,6 +1,7 @@
 ---
 title: Export PDF
 description: Learn how to download the processed data from your custom dashboard insights in PDF format.
+exl-id: b8878198-1f69-4cef-9819-886a309a9c70
 ---
 # Export PDF {#export-pdf}
 

@@ -3,8 +3,8 @@ title: Segmentation Eligibility Criteria Update
 description: Learn about the segmentation eligibility criteria updates that affect the types of audiences that can be evaluated using streaming and edge segmentation.
 hide: yes
 hidefromtoc: yes
+exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
 ---
-
 # Segmentation eligibility criteria update
 
 Starting on September 24, 2024, two updates will be made that affect segmentation eligibility.
