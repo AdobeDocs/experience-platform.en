@@ -11,6 +11,12 @@ exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 >
 >* This functionality is available to customers who have purchased the Real-Time CDP Prime and Ultimate package, Adobe Journey Optimizer, or Customer Journey Analytics. Contact your Adobe representative for more information.
 
+>[!IMPORTANT]
+>
+>**Action item**: The [September 2024 release of Experience Platform](/help/release-notes/latest/latest.md#destinations) introduces the option to set an `endTime` date for export dataset dataflows. Adobe is also introducing a default end date of May 1st 2025 for all dataset export dataflows created prior to the September release. For any of those dataflows, you need to update the end date in the dataflow manually before the end date, otherwise your exports for stop on that date.
+>
+>You can retrieve a list of such dataflows by performing the following API call: `https://platform.adobe.io/data/foundation/flowservice/flows?property=scheduleParams.endTime==UNIXTIMESTAMPTHATWEWILLUSE`
+
 This article explains the workflow required to use the [!DNL Flow Service API] to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage].
 
 >[!TIP]
@@ -1952,9 +1958,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
         "interval": 3, // also supports 6, 9, 12 hour increments
         "timeUnit": "hour", // also supports "day" for daily increments. 
-        "interval": 1 when you select "timeUnit": "day"
-        "startTime": 1675901210 // UNIX timestamp start time (in seconds)
-        "endTime": 1975901210,
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
         "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
 
     }
@@ -2363,14 +2369,14 @@ Note the difference in file format between the two file types, when compressed:
 
 The API endpoints in this tutorial follow the general Experience Platform API error message principles. Refer to [API status codes](/help/landing/troubleshooting.md#api-status-codes) and [request header errors](/help/landing/troubleshooting.md#request-header-errors) in the Platform troubleshooting guide for more information on interpreting error responses.
 
+## Frequently Asked Questions {#faq}
+
+View a [list of frequently asked questions](/help/destinations/ui/export-datasets.md#faq) about dataset exports.
+
 ## Next steps {#next-steps}
 
 By following this tutorial, you have successfully connected Platform to one of your preferred batch cloud storage destinations and set up a dataflow to the respective destination to export datasets. See the following pages for more details, such as how to edit existing dataflows using the Flow Service API:
 
 * [Destinations overview](../home.md)
-* [Destinations Catalog overview](../catalog/overview.md)
+* [Destinations catalog overview](../catalog/overview.md)
 * [Update destination dataflows using the Flow Service API](../api/update-destination-dataflows.md)
-
-## Frequently Asked Questions {#faq}
-
-View a [list of frequently asked questions](/help/destinations/ui/export-datasets.md#faq) about dataset export.
