@@ -21,11 +21,11 @@ role: User,Developer
         - [Overview](data-distiller/derived-datasets/overview.md)
         - [Create derived datasets with SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
         - [Create decile-based derived datasets](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-    - Customizable Insights for extended app reporting {#customizable-insights}
-        - [Overview](data-distiller/customizable-insights/overview.md)
-        - [Query pro mode](data-distiller/customizable-insights/query-pro-mode.md)
-        - [Send accelerated queries](data-distiller/customizable-insights/send-accelerated-queries.md)
-        - [Reporting insights data model guide](data-distiller/customizable-insights/reporting-insights-data-model.md)
+    - SQL Insights for extended app reporting {#sql-insights}
+        - [Overview](data-distiller/sql-insights/overview.md)
+        - [Query pro mode](data-distiller/sql-insights/query-pro-mode.md)
+        - [Send accelerated queries](data-distiller/sql-insights/send-accelerated-queries.md)
+        - [Reporting insights data model guide](data-distiller/sql-insights/reporting-insights-data-model.md)
     - AI/ML feature pipelines {#ml-feature-pipelines}
         - [Overview](data-distiller/ml-feature-pipelines/overview.md)
         - [Connect to Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)

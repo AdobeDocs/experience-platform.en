@@ -1,8 +1,14 @@
 ---
 title: Machine Learning-Assisted Schema Creation
 description: Learn how to create a schemas in the Experience Platform user interface.
+badgeBeta: label="Beta" type="Informative"
+exl-id: 6b14caed-a3ad-4834-8fa8-8d67dce6290e
 ---
 # Machine learning-assisted schema creation
+
+>[!AVAILABILITY]
+>
+>* Machine learning-assisted schema creation is currently in beta. The documentation and the functionality are subject to change.
 
 Use ML algorithms to generate a schema from sample data. This process saves time and increases accuracy when defining the structure, fields, and data types for large complex datasets.
 
