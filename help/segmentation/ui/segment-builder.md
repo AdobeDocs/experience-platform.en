@@ -221,7 +221,9 @@ The list of available time constraints are as follows:
 
 >[!NOTE]
 >
->If the [!UICONTROL Ignore year] checkbox is enabled, the year will **not** be compared as part of the segment definition evaluation.
+>All time constraints are based off of UTC.
+>
+>Additionally, if the [!UICONTROL Ignore year] checkbox is enabled, the year will **not** be compared as part of the segment definition evaluation.
 
 | Time constraint | Description | Can enable ignore year | Example |
 | --------------- | ----------- | ------------------- | ------- |
@@ -232,7 +234,7 @@ The list of available time constraints are as follows:
 | Custom date | The attribute or event being compared **must** occur on the date given. | Yes | ![An example of the "Custom date" time constraint being used.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
 | In last | The attribute or event being compared **must** occur within the last period of time chosen. This period of time is **inclusive** until the evaluation time. | No | ![An example of the "In last" time constraint being used.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
 | From (to) | The attribute or event being compared **must** occur within the two calendar dates chosen. This period of time is **inclusive** of both dates. | Yes, if custom date | ![An example of the "From to" being used.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
-| During | The attribute or event being compared **must** occur within the selected month or year. If a month is selected, you need to choose both the month and a year that the attribute or event took place in.  If a year is selected, you need to just choose the year that the attribute or event took place in. If you select a month, you can also enable the Ignore year checkbox. | Yes | ![An example of the "During" time constraint being used.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| During | The attribute or event being compared **must** occur within the selected month or year. If a month is selected, you need to choose both the month and a year that the attribute or event took place in.  If a year is selected, you need to just choose the year that the attribute or event took place in. If you select a month, you can also enable the [!UICONTROL Ignore year] checkbox. | Yes | ![An example of the "During" time constraint being used.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
 | Within (+/-) | The attribute or event being compared **must** occur within days, weeks, months, or years of the selected date. This period of time is **inclusive** of both dates. The selected date can be today, yesterday, or another custom date of your choosing. | Yes | ![An example of the "Within" time constraint being used.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
 | Before | The attribute or event being compared **must** occur before the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | Yes | ![An example of the "Before" time constraint being used.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
 | After | The attribute or event being compared **must** occur after the selected date. The selected date can be a custom date of your choosing, or a selection between days, weeks, months, or years ago. | Yes | ![An example of the "After" time constraint being used.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
@@ -265,13 +267,29 @@ When you apply a time constraint on the card-level, this applies the time constr
 
 To apply a time constraint between events, select the clock icon between the two events you want to apply the time constraint on.
 
-![The between events time constraint selector is highlighted.](../images/ui/segment-builder/time-constraints/canvas-level.png)
+![The between events time constraint selector is highlighted.](../images/ui/segment-builder/time-constraints/between-event.png)
 
 When you apply a time constraint between the event, this applies the time constraint to the time **between** the events. 
 
+The list of available time constraints for this operation differs from the main list of time constraints, and are as follows:
+
++++ Available time constraints
+
+| Time constraint | Description |
+| --------------- | ----------- |
+| After | The latter event **must at least** take place after the prior event. |
+| Within | The two events **must** take place during the time period listed within the time constraint. | 
+
 >[!NOTE]
 >
->Only the "After" and "Within" time constraints are supported when using time constraints between events.
+>When using the After time constraint, the latter event can take place more than amount of time listed within the time constraint. >
+>For example, if you have a Page View event and a Checkout event, and you put the "After 1 hour" time constraint between these two events, a segment definition with a Checkout event 2 hours after the Page View event would qualify.
+>
+>Additionally, these two time constraints can be used in coordination with each other.
+>
+>For example, if you have a Page View event and a Checkout event, and you put both the "After 1 hour" and "Within 24 hours" time constraints, a segment definition with a Checkout event 12 hours after the Page View event would qualify, but a segment definition with a Checkout event 36 hours after the Page View event would not qualify.
+
++++
 
 ## Containers
 
