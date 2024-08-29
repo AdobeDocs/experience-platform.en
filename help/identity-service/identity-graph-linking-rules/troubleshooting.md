@@ -218,3 +218,30 @@ You can use the [identity graph viewer](../features/identity-graph-viewer.md) to
 Use the identity dashboard for insights on the state of your identity graph, such as the count of identities and graphs. Refer to the metric, "Graph count with multiple namespaces" for a count of graphs that have collapsed - these are graphs that contain two or more identities with the same namespace. Assuming that the sandbox has no data, and you have configured a namespace (e.g. CRMID) to be unique, the expectation is that there should be zero graphs that have two or more CRMIDs. In the example below, there are ~90000 graphs that contain two or more ECIDs.
 
 ![]
+
+You can find a detailed breakdown in the [profile snapshot export dataset](../../dashboards/query.md) in data lake by running the query below:
+
+>[!NOTE]
+>
+>* Replace `dataset_name` with the actual name of your dataset.
+>
+>* The counts may not exactly match. The identity dashboard is based on the identity graph count and the following query is based on profile count with two or more identities. The data is independently processed and updated by the service.
+
+```sql
+  SELECT key, identityCountInGraph, count(identityCountInGraph) as graphCount 
+  FROM (SELECT key, cardinality(value) as identityCountInGraph 
+  FROM (SELECT explode(identityMap) 
+  FROM dataset_name 
+  WHERE cardinality(identityMap) > 1)) /* by definition, graphs have 2 or more identities */ 
+  WHERE key not in ('ecid', 'aaid', 'idfa', 'gaid') /* filter out common device/cookie namespaces */ 
+  GROUP BY 1, 2 
+  ORDER BY 1, 2 asc 
+```
+
+You can use the following query in profile snapshot export dataset to obtain sample identities from "collapsed" graphs.
+
+```sql
+  SELECT identityMap 
+  FROM dataset_name 
+  WHERE cardinality(identityMap['CRMID'])>1 /* any graphs with 2+ CRMID. Change CRMID namespace if needed */ 
+```
