@@ -16,6 +16,8 @@ exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 >**Action item**: The [September 2024 release of Experience Platform](/help/release-notes/latest/latest.md#destinations) introduces the option to set an `endTime` date for export dataset dataflows. Adobe is also introducing a default end date of May 1st 2025 for all dataset export dataflows created prior to the September release. For any of those dataflows, you need to update the end date in the dataflow manually before the end date, otherwise your exports for stop on that date.
 >
 >You can retrieve a list of such dataflows by performing the following API call: `https://platform.adobe.io/data/foundation/flowservice/flows?property=scheduleParams.endTime==UNIXTIMESTAMPTHATWEWILLUSE`
+>
+>Similarly, for any dataflows that you create without specifying an `endTime` date, these will default to an end time six months from the time they are created.
 
 This article explains the workflow required to use the [!DNL Flow Service API] to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage].
 
