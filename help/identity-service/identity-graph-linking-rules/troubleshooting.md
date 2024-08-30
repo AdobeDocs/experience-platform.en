@@ -1,9 +1,13 @@
 ---
 title: Troubleshooting Guide For Identity Graph Linking Rules
-description: Learn how to troubleshoot common issues in identity graph linking rules
+description: Learn how to troubleshoot common issues in identity graph linking rules.
 badge: Beta
 ---
 # Troubleshooting guide for identity graph linking rules
+
+>[!AVAILABILITY]
+>
+>Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
 
 As you test and validate identity graph linking rules, you may run into some issues related to data ingestion and graph behavior. Read this document to learn how to troubleshoot some common issues that you might encounter when working with identity graph linking rules.
 
