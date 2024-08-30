@@ -34,6 +34,15 @@ Read this guide to learn how you can ingest encrypted data to Adobe Experience P
 
 ## Outline
 
+Sections:
+
+* Create public key
+* Create customer key
+* Create sources flow to ingest encrypted data
+  * File ingestion
+  * Folder ingestion
+* Updated encrypted flow
+
 * Select [!UICONTROL Key Pairs] from the header in the sources UI workspace.
   * You are taken to the [!UICONTROL Key Pairs] page:
     * Select **[!UICONTROL Encryption key]** for list of key pairs that you have created and managed.
@@ -42,3 +51,8 @@ Read this guide to learn how you can ingest encrypted data to Adobe Experience P
   * Select **[!UICONTROL Key details]** to view key details.
   * Select **[!UICONTROL Delete]** to delete.
 * Select [!UICONTROL Create key] to create either an encryption key or a customer key
+
+## Questions and clarifications
+
+* Public key vs. customer key
+* 
