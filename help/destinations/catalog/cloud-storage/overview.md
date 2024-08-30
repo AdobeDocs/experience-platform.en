@@ -57,6 +57,13 @@ Folder path in your storage location: `acme/campaigns/2021/25768be6-ebd5-45cc-89
 Input: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
 Folder path in your storage location: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
 
+**Further macros**
+
+Similar to the examples above, you can use further macros to create a custom folder structure in your folder location:
+
+* `%DATETIME%` or `%TIMESTAMP%` to add a custom folder name based on the export time of the files. The format for the first macro is `MMDDYYYY_HHMMSS` and a UNIX 10-digit format for the second macro.
+* `%DESTINATION_NAME%` to add a custom folder based on the name of the destination dataflow.  
+
 ## Data export type {#export-type}
 
 Cloud storage destinations support the following export types: 
