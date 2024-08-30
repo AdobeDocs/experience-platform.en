@@ -5,15 +5,17 @@ badge: Beta
 ---
 # Troubleshooting guide for identity graph linking rules
 
-As you test and validate identity graph linking rules, you may tun into some issues related to data ingestion and graph behavior. Read this document to learn how to troubleshoot some common issues that you might encounter when working with identity graph linking rules.
+As you test and validate identity graph linking rules, you may run into some issues related to data ingestion and graph behavior. Read this document to learn how to troubleshoot some common issues that you might encounter when working with identity graph linking rules.
 
 ## Data ingestion flow overview {#data-ingestion-flow-overview}
 
 The following diagram is a simplified representation of how data flows into Adobe Experience Platform and Applications. Use this diagram as reference to help you get a better understanding of the contents of this page.
 
+![A diagram of how data ingestion flows in Identity Service.](../images/troubleshooting/dataflow_in_identity.png)
+
 It is important to note the following factors:
 
-* For streaming data, all three stores (Real-Time Customer Profile, Identity Service, and data lake) will start processing the data when the data is sent. However, the latency to complete the processing of the data is dependant on the service. Usually, data lake will take a longer time to process, compared to Profile and Identity.
+* For streaming data, Real-Time Customer Profile, Identity Service, and data lake will start processing the data when the data is sent. However, the latency to complete the processing of the data is dependant on the service. Usually, data lake will take a longer time to process, compared to Profile and Identity.
   * If the data does not appear when running a query against a dataset even after a couple of hours, then it is likely that the data did not get ingested into Experience Platform.
 * For batch data, all data will flow into data lake first, then the data will be propagated to Profile and Identity if the dataset is enabled for Profile and Identity.
 
@@ -21,7 +23,7 @@ It is important to note the following factors:
 
 >[!NOTE]
 >
->In this section, the assumption is that data is successfully ingested into data lake and that there are no syntax or other errors that would reject the data from being ingested into Experience Platform in the first place.
+>This section assumes that data has been successfully ingested into data lake and that there were no syntax or other errors that would prevent the data from being ingested into Experience Platform in the first place.
 
 ### My identities are not getting ingested into Identity Service{#my-identities-are-not-getting-ingested-into-identity-service}
 
@@ -34,7 +36,7 @@ There are various reasons for why this could happen, including, but not limited 
 * By default, [AAIDs are blocked from ingestion](../guardrails.md#identity-namespace-ingestion).
 * The identity is removed because of [system guardrails](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated).
 
-Within the context of identity graph linking rules, a record may be rejected from Identity Service because the incoming event has two or more identities with the same unique namespace but different identity value, usually due to implementation errors.
+Within the context of identity graph linking rules, a record may be rejected from Identity Service because the incoming event has two or more identities with the same unique namespace but different identity value. This scenario usually happens due to implementation errors.
 
 Consider the following event with two assumptions:
 
@@ -76,10 +78,10 @@ The following event will return an error message indicating that ingestion has f
 
 To resolve this error, you must first collect the following information:
 
-* The identity value (`identity_value`)you expected to be ingested in the identity graph.
+* The identity value (`identity_value`) you expected to be ingested in the identity graph.
 * The dataset (`dataset_name`) in which the event was sent in.
 
-Next, use Adobe Experience Platform Query Service and run the following query:
+Next, use [Adobe Experience Platform Query Service](../../query-service/home.md) and run the following query:
 
 >[!TIP]
 >
@@ -94,7 +96,7 @@ Next, use Adobe Experience Platform Query Service and run the following query:
 
 After running your query, find the event record that you expected to generate a graph, and then validate that the identity values are different in the same row. View the following image for an example:
 
-![]
+![An untitled query that resulted in duplicated namespaces.](../images/troubleshooting/duplicated_unique_namespace.png)
 
 >[!NOTE]
 >
@@ -102,14 +104,14 @@ After running your query, find the event record that you expected to generate a 
 
 ### My experience event fragments are not getting ingested into Profile {#my-experience-event-fragments-are-not-getting-ingested-into-profile}
 
-There are various reasons that contribute as to why your experience fragments are not getting ingested into Profile, including but not limited to:
+There are various reasons that contribute as to why your experience event fragments are not getting ingested into Profile, including but not limited to:
 
 * [The dataset is not enabled for Profile](../../catalog/datasets/enable-for-profile.md).
 * [A validation failure may have occurred on Profile](../../xdm/classes/experienceevent.md).
   * For example, an experience event must contain both an `_id` and a `timestamp`.
   * Additionally, the `_id` must be unique for each event (record).
 
-In the context of namespace priority, Profile will reject any event that contains two or more identities with the highest namespace priority. For example, if GAID is not marked as a unique namespace and two identities each with a GAID namespace and different identity values came in, then Profile will not store any of the events.
+In the context of namespace priority, Profile will reject any event that contains two or more identities with the highest namespace priority. For example, if GAID is not marked as a unique namespace and two identities both with a GAID namespace and different identity values came in, then Profile will not store any of the events.
 
 **Troubleshooting steps**
 
@@ -120,7 +122,7 @@ To resolve this error, read the troubleshooting steps outlined in the guide abov
 It is important to understand how namespace priority functions to determine how event fragments determine its primary identity.
 
 * Once you have configured and saved your [identity settings](./identity-settings-ui.md) for a given sandbox, Profile will then use [namespace priority](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) to determine the primary identity. In the case of identityMap, Profile will then no longer use the `primary=true` flag.
-* It is important to note that while Profile will no longer refer to this flag, other services on Experience Platform may continue to use the `primary=true` flag.
+* While Profile will no longer refer to this flag, other services on Experience Platform may continue to use the `primary=true` flag.
 
 In order for [authenticated user events](configuration.md#ingest-your-data) to be tied to the person namespace, all authenticated events must contain the person namespace (CRMID). This means that even after a user logs in, the person namespace must still be present on every authenticated event.
 
@@ -130,7 +132,7 @@ AAIDs are blocked by default. Therefore, if you are using the [Adobe Analytics s
 
 **Troubleshooting steps**
 
-* To validated that authenticated events contain both the person and cookie namespace, read the troubleshooting steps outlined in the guide above on [troubleshooting errors regarding data not being ingested to Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
+* To validate that authenticated events contain both the person and cookie namespace, read the steps outlined in the section on [troubleshooting errors regarding data not being ingested to Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
 * To validate that authenticated events have the primary identity of the person namespace (e.g. CRMID), search the person namespace on profile viewer using no-stitch merge policy (this is the merge policy that does not use private graph). This search will only return events associated to the person namespace. 
 
 ## Graph behavior related issues {#graph-behavior-related-issues}
@@ -211,13 +213,13 @@ Identity graphs will adhere to your configured unique namespace and namespace pr
 
 You can use the [identity graph viewer](../features/identity-graph-viewer.md) to check whether your graph was ingested before or after your settings. Examine the last updated timestamp under [!UICONTROL Link properties] to see when Identity Service ingested the graph. If the timestamp is before configuration, then that suggests that the "collapsed" graph was created before enabling the feature.
 
-![]
+![The identity graph viewer with an example graph.](../images/troubleshooting/graph_viewer.png)
 
 ### I want to know how many "collapsed" graphs exist in my sandbox
 
 Use the identity dashboard for insights on the state of your identity graph, such as the count of identities and graphs. Refer to the metric, "Graph count with multiple namespaces" for a count of graphs that have collapsed - these are graphs that contain two or more identities with the same namespace. Assuming that the sandbox has no data, and you have configured a namespace (e.g. CRMID) to be unique, the expectation is that there should be zero graphs that have two or more CRMIDs. In the example below, there are ~90000 graphs that contain two or more ECIDs.
 
-![]
+![The identity dashboard with metrics on identity count, graph count, count by namespace, graph count by size and graph count of graphs more than two namespaces.](../images/troubleshooting/identity_dashboard.png)
 
 You can find a detailed breakdown in the [profile snapshot export dataset](../../dashboards/query.md) in data lake by running the query below:
 
