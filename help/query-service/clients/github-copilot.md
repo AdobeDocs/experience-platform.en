@@ -2,7 +2,11 @@
 title: Connect GitHub Copilot and VS Code to Query Service
 description: Learn how to connect GitHub Copilot and VS Code with Adobe Experience Platform Query Service.
 ---
-# Connect GitHub Copilot and VS Code to Query Service
+# Connect GitHub Copilot and Visual Studio Code to Query Service
+
+>[!IMPORTANT]
+>
+>Before using this integrated tool, you must understand what data is shared with GitHub. Shared data includes contextual information about the code and files being edited ("prompts") and details about user actions ("user engagement data").  Please review [GitHub Copilot's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement) to  learn about the data they collect. You must also consider the security implications of involving third-party services, as you are responsible for ensuring compliance with your organization's data governance policies. Adobe is not responsible for any data-related concerns or issues that may arise from the use of this tool. Consult the GitHub's documentation for more information.
 
 GitHub Copilot, powered by OpenAI Codex, is an AI-driven tool that enhances your coding experience by suggesting code snippets and entire functions directly within your editor. Integrated with Visual Studio Code (VS Code), Copilot can significantly accelerate your workflow, especially when working with complex queries. Follow this guide to learn how to connect GitHub Copilot and VS Code to the Query Service to write and manage your queries with greater efficiency. For more information on Copilot, visit [GitHub's Copilot product page](https://github.com/pricing) and the [official Copilot documentation](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot).
 
@@ -11,10 +15,6 @@ This document covers the steps required to connect GitHub Copilot and VS Code wi
 ## Get started {#get-started}
 
 This guide requires that you already have access to a GitHub account and have signed up for GitHub Copilot. You can [sign up from the GitHub website](https://github.com/github-copilot/signup). You also need VS Code. You can [download VS Code from their official website](https://code.visualstudio.com/download). 
-
->[!IMPORTANT]
->
->Before using this integrated tool, you must understand what data is shared with GitHub. Shared data includes contextual information about the code and files being edited ("prompts") and details about user actions ("user engagement data").  Please review [GitHub Copilot's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement) to  learn about the data they collect. You must also consider the security implications of involving third-party services, as you are responsible for ensuring compliance with your organization's data governance policies. Adobe is not responsible for any data-related concerns or issues that may arise from the use of this tool. Consult the GitHub's documentation for more information.
 
 Once you have installed VS Code and activated your Copilot subscription, acquire your connection credentials for Experience Platform. These credentials are located in the [!UICONTROL Credentials] tab of the [!UICONTROL Queries] workspace in the Platform UI. Read the credentials guide to [learn how to find these values in the Platform UI](../ui/credentials.md). Please contact your organization administrator if you do not currently have access to the [!UICONTROL Queries] workspace.
 
