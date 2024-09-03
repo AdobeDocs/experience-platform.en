@@ -72,14 +72,14 @@ The table indicates the primary metric for each product, as each product can tra
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
->title="Predicted usage (beta)"
+>title="Predicted usage"
 >abstract="Predictions are based on the usage during the past 6-7 months and are generated on the 15th of every month. Please note that license usage predictions are approximations based on past usage. You are responsible for understanding your organization's actual usage and ensuring that usage does not go beyond the scope of your organization's license with Adobe. To reduce usage, you can configure dataset or pseudonymous profile data expirations for sandboxes and datasets."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automated dataset expirations"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Pseudonymous profiles data expiration"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
->title=""Predicted usage (beta)"
+>title=""Predicted usage"
 >abstract="Predictions are based on the usage during the past 6-7 months and are generated on the 15th of every month. Please note that license usage predictions are approximations based on past usage. You are responsible for understanding your organization's actual usage and ensuring that usage does not go beyond the scope of your organization's license with Adobe. To reduce usage, you can configure dataset or pseudonymous profile data expirations for sandboxes and datasets."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Automated dataset expirations"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Pseudonymous profiles data expiration"
