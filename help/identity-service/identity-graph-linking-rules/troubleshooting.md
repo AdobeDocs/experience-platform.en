@@ -155,7 +155,7 @@ The identity optimization algorithm will honour [the most recently established l
 >
 >* A single dataset is in use (this will not query multiple datasets).
 >
->*The data is not deleted from data lake due to dataset TTL, privacy delete, delete record, etc.
+>* The data is not deleted from data lake due to deletion by [Advanced Data Lifecycle Management](../../hygiene/home.md), [Privacy Service](../../privacy-service/home.md), or other services conducting deletion.
 
 First, you must collect the following information:
 
@@ -211,7 +211,7 @@ If your simulation results match your graph behavior expectations, then you can 
 
 ### I still see collapsed graphs in my sandbox even after configuring identity settings
 
-Identity graphs will adhere to your configured unique namespace and namespace priority _after_ the settings have been configured. Any "collapsed" graphs _before_ enabling the feature will not be subject to the settings you save.
+Identity graphs will adhere to your configured unique namespace and namespace priority _after_ the settings have been saved. Any "collapsed" graphs that exist _before_ you save your new settings will not be affected, until new data is ingested such that the collapsed graph is updated. The primary identity of event fragments on Real-Time Customer Profile will not be updated even after namespace priority changes. 
 
 **Troubleshooting steps**
 
@@ -221,7 +221,7 @@ You can use the [identity graph viewer](../features/identity-graph-viewer.md) to
 
 ### I want to know how many "collapsed" graphs exist in my sandbox
 
-Use the identity dashboard for insights on the state of your identity graph, such as the count of identities and graphs. Refer to the metric, "Graph count with multiple namespaces" for a count of graphs that have collapsed - these are graphs that contain two or more identities with the same namespace. Assuming that the sandbox has no data, and you have configured a namespace (e.g. CRMID) to be unique, the expectation is that there should be zero graphs that have two or more CRMIDs. In the example below, there are ~90000 graphs that contain two or more ECIDs.
+Use the identity dashboard for insights on the state of your identity graph, such as the count of identities and graphs. Refer to the metric, "Graph count with multiple namespaces" for a count of graphs that have collapsed - these are graphs that contain two or more identities with the same namespace. Assuming that the sandbox has no data, and you have configured a namespace (e.g. CRMID) to be unique, the expectation is that there should be zero graphs that have two or more CRMIDs. In the example below, there are two graphs that contain two or more email addresses.
 
 ![The identity dashboard with metrics on identity count, graph count, count by namespace, graph count by size and graph count of graphs more than two namespaces.](../images/troubleshooting/identity_dashboard.png)
 
