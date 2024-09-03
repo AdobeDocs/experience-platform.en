@@ -1,6 +1,7 @@
 ---
 title: Adobe Experience Platform Release Notes August 2024
 description: The August 2024 release notes for Adobe Experience Platform.
+exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
 ---
 # Adobe Experience Platform release notes 
 
