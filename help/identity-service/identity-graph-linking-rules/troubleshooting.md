@@ -22,12 +22,21 @@ It is important to note the following factors:
 * For streaming data, Real-Time Customer Profile, Identity Service, and data lake will start processing the data when the data is sent. However, the latency to complete the processing of the data is dependant on the service. Usually, data lake will take a longer time to process, compared to Profile and Identity.
   * If the data does not appear when running a query against a dataset even after a couple of hours, then it is likely that the data did not get ingested into Experience Platform.
 * For batch data, all data will flow into data lake first, then the data will be propagated to Profile and Identity if the dataset is enabled for Profile and Identity.
+* For ingestion-related issues, it is important that the issue is isolated at a service-level for accurate debugging and troubleshooting. There are three potential issue types to consider:
+
+| Ingestion issue type | Does the data get ingested in data lake? | Does the data get ingested in Profile? | Does the data get ingested in Identity Service? |
+| --- | --- | --- | --- |
+| General ingestion issue | No | No | No |
+| Graph issue | Yes | Yes | No |
+| Profile fragment issue | Yes | No | Yes |
 
 ## Data ingestion issues {#data-ingestion-issues}
 
 >[!NOTE]
 >
->This section assumes that data has been successfully ingested into data lake and that there were no syntax or other errors that would prevent the data from being ingested into Experience Platform in the first place.
+>* This section assumes that data has been successfully ingested into data lake and that there were no syntax or other errors that would prevent the data from being ingested into Experience Platform in the first place.
+>
+>* The examples use ECID as the cookie namespace and CRMID as the person namespace.
 
 ### My identities are not getting ingested into Identity Service{#my-identities-are-not-getting-ingested-into-identity-service}
 
@@ -47,7 +56,9 @@ Consider the following event with two assumptions:
 * The field name CRMID is marked as an identity with the namespace CRMID.
 * The namespace CRMID is defined as a unique namespace.
 
-The following event will return an error message indicating that ingestion has failed because the ingestion of this erroneous event would have resulted in graph collapse. In the following event, two entities (Alice and Bob) are both associated with the same namespace (CRMID).
+The following event will return an error message indicating that ingestion has failed. 
+
+<!-- because the ingestion of this erroneous event would have resulted in graph collapse. In the following event, two entities (Alice and Bob) are both associated with the same namespace (CRMID). -->
 
 ```json
 { 
@@ -164,6 +175,12 @@ First, you must collect the following information:
   * For Analytics source connector implementations, these are the cookie identifier included in the identityMap. The person identifier is an eVar field marked as an identity.
 * The dataset in which the event was sent in (dataset_name).
 * The identity value of the cookie namespace to look up (identity_value).
+
+Identity symbols (namespaceCode) are case sensitive. To retrieve all identity symbols for a given dataset in the identityMap, run the following query:
+
+```sql
+SELECT distinct explode(*)FROM (SELECT map_keys(identityMap) FROM dataset_name)
+```
 
 If you do not know the identity value of your cookie identifier and you would like to search for a cookie ID that would have been linked to multiple person identifiers, then you must run the following query. This query assumes ECID as the cookie namespace and CRMID as the person namespace.
 
