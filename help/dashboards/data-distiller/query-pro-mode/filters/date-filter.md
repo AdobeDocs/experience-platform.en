@@ -15,11 +15,11 @@ If you are unfamiliar with query parameters, see the documentation for [guidance
 
 To apply a date filter, select **[!UICONTROL Add filter]**, then **[!UICONTROL Date Filter]** from the dropdown menu of your dashboard view. 
 
-![A custom dashboard with Add filter and its dropdown menu highlighted.](../../../images/customizable-insights/add-filter.png)
+![A custom dashboard with Add filter and its dropdown menu highlighted.](../../../images/query-pro-mode/add-filter.png)
 
 ## Edit your SQL to include date query parameters {#include-date-parameters} 
 
-Next, ensure your SQL includes query parameters to allow for a date range. If you have not yet incorporated query parameters in your SQL, edit you insights to include these parameters. See the documentation for instructions on how to [edit an insight](../query-pro-mode.md#edit).
+Next, ensure your SQL includes query parameters to allow for a date range. If you have not yet incorporated query parameters in your SQL, edit your insights to include these parameters. See the documentation for instructions on how to [edit an insight](../overview.md#edit).
 
 >[!TIP]
 >
@@ -54,7 +54,7 @@ The screenshot below highlights the date constraints incorporated in the SQL sta
 >
 >When composing your statement in query pro mode, you must provide sample values for each parameter in order to execute the SQL statement and build the chart. The sample values you provide when composing your statement are replaced by the actual values you select for the date (or global) filter at runtime.
 
-![The [!UICONTROL Enter SQL] dialog with the date parameters highlighted in the SQL.](../../../images/customizable-insights/sql-date-parameters.png)
+![The [!UICONTROL Enter SQL] dialog with the date parameters highlighted in the SQL.](../../../images/sql-insights/sql-date-parameters.png)
 
 ## Enable date parameters in each insight {#enable-date-parameters}
 
@@ -62,11 +62,11 @@ Once you have incorporated the appropriate parameters to your insights' SQL, the
 
 From the widget composer, select toggles to enable the `Start_date` and `End_date` parameters.
 
-![The widget composer with the Start_date and End_date toggles highlighted.](../../../images/customizable-insights/widget-composer-date-filter-toggles.png)
+![The widget composer with the Start_date and End_date toggles highlighted.](../../../images/sql-insights/widget-composer-date-filter-toggles.png)
 
 Next, select the appropriate query parameters from the dropdown menus.
 
-![The widget composer with the Start_date dropdown menu highlighted.](../../../images/customizable-insights/widget-composer-date-filter-dropdown.png)
+![The widget composer with the Start_date dropdown menu highlighted.](../../../images/sql-insights/widget-composer-date-filter-dropdown.png)
 
 Finally, select **[!UICONTROL Save and close]** to return to your dashboard. Date filters are now enabled for all insights that have start and end date parameters.
 
@@ -78,7 +78,7 @@ To use a custom date filter, select the calendar icon and choose a start and end
 >
 >Simply adding a date filter will not make the charts change. You must edit each of your insights to include your chosen start and end date.
 
-![A custom dashboard with the date filter calender highlighted.](../../../images/customizable-insights/date-filter.png)
+![A custom dashboard with the date filter calender highlighted.](../../../images/query-pro-mode/date-filter.png)
 
 Once you have selected a date range from your dashboard, insights that have date parameters in their SQL will see the date filter options in the widget composer. 
 
@@ -90,4 +90,4 @@ Once you have selected a date range from your dashboard, insights that have date
 
 To remove your date filter select the delete filter icon (![The delete filter icon.](/help/images/icons/filter-delete.png)). 
 
-![A custom dashboard with the filter delete icon highlighted.](../../../images/customizable-insights/delete-date-filter.png)
+![A custom dashboard with the filter delete icon highlighted.](../../../images/query-pro-mode/delete-date-filter.png)
