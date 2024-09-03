@@ -22,7 +22,6 @@ role: Developer
     - Field mappings {#mapping}
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
-      - [Target field mappings](connectors/adobe-applications/mapping/target.md)
       - [Marketo Engage field mappings](connectors/adobe-applications/mapping/marketo.md)
       - [Microsoft Dynamics field mappings](connectors/adobe-applications/mapping/dynamics.md)
       - [Salesforce field mappings](connectors/adobe-applications/mapping/salesforce.md)

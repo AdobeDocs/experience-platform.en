@@ -1,9 +1,9 @@
 ---
-title: Customizable Insights for Extended App Reporting
+title: SQL Insights for Extended App Reporting
 description: Learn how to use SQL queries to generate insights for your custom dashboards.
 exl-id: c60a9218-4ac0-4638-833b-bdbded36ddf5
 ---
-# Customizable Insights for extended app reporting
+# SQL Insights for extended app reporting
 
 Use custom SQL queries to effectively extract insights from diverse structured datasets. Technical people can use query pro mode to perform complex analysis with SQL and then share this analysis with non-technical users through charts on your custom dashboard or export them in CSV files. This method of insight creation is well-suited for tables with clear relationships and allows for a greater degree of customization within your insights and filters that can suit niche use cases. 
 
@@ -17,7 +17,7 @@ To generate insights from SQL, you must first create a dashboard.
 
 To create a custom dashboard, select **[!UICONTROL Dashboards]** from the left navigation panel to open the Dashboards workspace. Next, select **[!UICONTROL Create dashboard]**.
 
-![The Dashboard inventory with Create dashboard highlighted.](../../images/customizable-insights/create-dashboard.png)
+![The Dashboard inventory with Create dashboard highlighted.](../../images/sql-insights/create-dashboard.png)
 
 The **[!UICONTROL Create dashboard]** dialog appears. There are two options from which to choose your dashboard creation method. To create your insights you can either use an existing data model with the [[!UICONTROL Guided design mode]](../../user-defined-dashboards.md) or your own SQL with the [!UICONTROL Query pro mode]. 
 
@@ -31,8 +31,8 @@ Insights generated from SQL queries offer far greater flexibility and customizat
 >
 >Once you make a selection, you cannot change this selection within that dashboard. Instead, you must create a new dashboard with a different dashboard creation method.
 
-![The [!UICONTROL Create dashboard] dialog with Query pro mode and Save highlighted.](../../images/customizable-insights/query-pro-mode.png)
+![The [!UICONTROL Create dashboard] dialog with Query pro mode and Save highlighted.](../../images/sql-insights/query-pro-mode.png)
 
 ## Create a chart {#create-a-chart}
 
-See the [query pro mode guide](./query-pro-mode.md) for step-by-step instructions on creating a chart with SQL.
+See the [query pro mode guide](../query-pro-mode/overview.md) for step-by-step instructions on creating a chart with SQL.

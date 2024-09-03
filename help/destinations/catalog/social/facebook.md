@@ -74,7 +74,7 @@ Before you can send your audiences to [!DNL Facebook], make sure you meet the fo
     >[!IMPORTANT]
     >
     > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. The permission is required for the [!DNL Adobe Experience Platform] integration.
-* Read and sign the [!DNL Facebook Custom Audiences] Terms of Service. To do so, go to `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, where `accountID` is your [!DNL Facebook Ad Account ID].
+* Read and sign the [!DNL Facebook Custom Audiences] Terms of Service. To do so, go to `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`, where `accountID` is your [!DNL Facebook Ad Account ID]. Make sure the `business_id=206617933627973` section is present in the URL when you sign the Terms of Service.
   >[!IMPORTANT]
   >
   >When signing the [!DNL Facebook Custom Audiences] Terms of Service, make sure to use the same user account that you used to authenticate in the Facebook API.
@@ -245,4 +245,10 @@ When configuring this destination, you may receive the following error:
 
 This error occurs when customers are using newly created accounts, and the [!DNL Facebook] permissions are not yet active.
 
+>[!IMPORTANT]
+>
+>Make sure you accept the [!DNL Facebook Custom Audience Terms of Service] under `business ID 206617933627973`, as shown in the URL template in the [account prerequisites](#facebook-account-prerequisites) section.
+
 If you receive the `400 Bad Request` error message after following the steps in [Facebook account prerequisites](#facebook-account-prerequisites), allow a few days for the [!DNL Facebook] permissions to come into effect.
+
+
