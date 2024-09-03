@@ -55,4 +55,14 @@ Sections:
 ## Questions and clarifications
 
 * Public key vs. customer key
-* 
+* Verify E2E:
+  * Create keys (encryption key or customer key)
+  * Use these keys to encrypt your data
+  * Place your encrypted data in your cloud storage (Amazon S3 or Google Cloud Storage)
+  * Ingest that encrypted data to Experience Platform by creating a source connection
+    * Select the encrypted source data
+    * Enable "Is the file encrypted"
+    * Select/upload sample file for mapping
+    * Use the encryption key name that corresponds with the key used to encrypt the source data
+      * If the data was encrypted using customer key, provide the sign verification key.
+  * Proceed with source connection creation flow
