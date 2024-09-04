@@ -20,18 +20,22 @@ Read this guide to learn how you can ingest encrypted data to Adobe Experience P
 >title="Is the file encrypted?"
 >abstract="Select this toggle if you are ingesting file that is already encrypted."
 
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_sampleFile"
 >title="Select sample file"
 >abstract="You must ingest a sample file when ingesting encrypted data in order to create a mapping."
 
 >[!CONTEXTUALHELP]
->id="platform_sources_encrypted_createCustomKey"
->title="Create custom key"
->abstract="You can optionally create a sign verification key pair and create a custom key for your encrypted data."
+>id="platform_sources_encrypted_encryptionKeyId"
+>title="Encryption Key ID"
+>abstract="Provide the encryption key ID that corresponds with your encryption key that was used to encrypt your source data."
 
+>[!CONTEXTUALHELP]
+>id="platform_sources_encrypted_signVerificationKeyId"
+>title="Sign Verification Key ID"
+>abstract="Provide the sign verification key ID that corresponds with your signed, encrypted source data."
 
+<!-- 
 ## Outline
 
 Sections:
@@ -65,4 +69,4 @@ Sections:
     * Select/upload sample file for mapping
     * Use the encryption key name that corresponds with the key used to encrypt the source data
       * If the data was encrypted using customer key, provide the sign verification key.
-  * Proceed with source connection creation flow
+  * Proceed with source connection creation flow -->
