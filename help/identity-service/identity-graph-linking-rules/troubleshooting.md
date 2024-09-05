@@ -204,12 +204,29 @@ If you do not know the identity value of your cookie identifier and you would li
 
 Next, examine the association of the cookie namespace in order of timestamp by running the following query:
 
+>[!BEGINTABS]
+
+>[!TAB Web SDK implementation]
+
 ```sql
   SELECT identityMap['CRMID'][0]['id'] as personEntity, * 
   FROM dataset_name 
   WHERE identitymap['ECID'][0].id ='identity_value' 
   ORDER BY timestamp desc 
 ```
+
+>[!TAB Analytics source connector implementation]
+
+```sql
+SELECT _experience.analytics.customDimensions.eVars.eVar10 as personEntity, * 
+FROM dataset_name 
+WHERE identitymap['ECID'][0].id ='identity_value' 
+ORDER BY timestamp desc 
+```
+
+**Note**: This example assumes that `eVar10` is marked as an identity. For your configurations, you must change the eVar based on your own organization's implementation.
+
+>[!ENDTABS]
 
 ### The identity optimization algorithm is not 'working' as expected
 
@@ -268,3 +285,7 @@ You can use the following query in profile snapshot export dataset to obtain sam
   FROM dataset_name 
   WHERE cardinality(identityMap['CRMID'])>1 /* any graphs with 2+ CRMID. Change CRMID namespace if needed */ 
 ```
+
+>[!TIP]
+>
+>The two queries listed above will yield expected results if the sandbox is not enabled for the shared device interim approach and will behave differently from identity graph linking rules.
