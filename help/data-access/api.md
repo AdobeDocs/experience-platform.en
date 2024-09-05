@@ -237,4 +237,4 @@ For additional samples, refer to the [data access tutorial](tutorials/dataset-da
 
 ## Subscribe to data ingestion events {#subscribe-to-data-ingestion-events}
 
-You can subscribe to specific high-value events through the [Adobe Developer Console](https://developer.adobe.com/console/). For instance, you can subscribe to data ingestion events to be notified of potential delays and failures. See the tutorial on [subscribing to data ingestion notifications](../ingestion/quality/subscribe-events.md) for more information.
+You can subscribe to specific high-value events through the [Adobe Developer Console](https://developer.adobe.com/console/). For instance, you can subscribe to data ingestion events to be notified of potential delays and failures. See the tutorial on [subscribing to Adobe event notifications](../observability/alerts/subscribe.md) for more information.
