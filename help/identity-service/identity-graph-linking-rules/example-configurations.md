@@ -2,6 +2,7 @@
 title: Graph Configurations Guide
 description: Learn about common graph scenarios that you might encounter when working with identity graph linking rules and identity data.
 badge: Beta
+exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
 ---
 # Graph configurations guide
 
