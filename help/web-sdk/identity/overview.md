@@ -140,7 +140,7 @@ Each identity object in the identities array contains the following properties:
 | Property | Data type | Description |
 | --- | --- | --- |
 | `id` | String | **(Required)** The ID that you want to set for the given namespace. |
-| `authenticationState` | String | **(Required)** The authentication state of the ID. Possible values are `ambiguous`, `authenticated`, and `loggedOut`. |
+| `authenticatedState` | String | **(Required)** The authentication state of the ID. Possible values are `ambiguous`, `authenticated`, and `loggedOut`. |
 | `primary` | Boolean | Determines whether this identity should be used as a primary fragment in the profile. By default, the ECID is set as the primary identifier for the user. If omitted, this value defaults to `false`. |
 
 Using the `identityMap` field to identify devices or users leads to the same result as using the [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) method from the [!DNL ID Service API]. See the [ID Service API documentation](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) for more details.
