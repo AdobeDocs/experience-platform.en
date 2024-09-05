@@ -134,7 +134,7 @@ To resolve this error, read the troubleshooting steps outlined in the guide abov
 
 ### My experience event fragments are ingested, but have the "wrong" primary identity in Profile
 
-It is important to understand how namespace priority functions to determine how event fragments determine its primary identity.
+Namespace priority plays an important role in how event fragments determine primary identity.
 
 * Once you have configured and saved your [identity settings](./identity-settings-ui.md) for a given sandbox, Profile will then use [namespace priority](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) to determine the primary identity. In the case of identityMap, Profile will then no longer use the `primary=true` flag.
 * While Profile will no longer refer to this flag, other services on Experience Platform may continue to use the `primary=true` flag.
@@ -156,7 +156,7 @@ This section outlines common issues you may encounter regarding how the identity
 
 ### The identity is getting linked to the 'wrong' person
 
-The identity optimization algorithm will honour [the most recently established links and remove the oldest links](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). Therefore, it is possible that once this feature is enabled, ECIDs could be reassigned (re-linked) from one person to another. To understand the history of how an identity gets linked over time, follow the steps below:
+The identity optimization algorithm will honor [the most recently established links and remove the oldest links](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). Therefore, it is possible that once this feature is enabled, ECIDs could be reassigned (re-linked) from one person to another. To understand the history of how an identity gets linked over time, follow the steps below:
 
 **Troubleshooting steps**
 
