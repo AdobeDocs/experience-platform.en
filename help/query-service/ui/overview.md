@@ -17,6 +17,8 @@ The [!DNL Query Editor] enables you to write and execute queries without using a
 
 [!DNL Query Editor] provides editing space where you can begin typing a query. As you type, the editor automatically completes SQL reserved words, tables, and field names within tables. When finished writing your query, select the **Play** button to run the query. The **[!UICONTROL Console]** tab below the editor shows what [!DNL Query Service] is currently doing, indicating when a query has been returned. The **[!UICONTROL Result]** tab, next to the Console, displays query results. See the [Query Editor guide](./user-guide.md) for more information on using the [!DNL Query Editor].
 
+<!-- 199823 image needs update -->
+
 ![A zoomed in view of the [!DNL Query Editor].](../images/ui/overview/query-editor.png)
 
 ## Scheduled queries {#scheduled-queries}
