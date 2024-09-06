@@ -111,17 +111,7 @@ To minimize your development time, you are recommended to develop your queries w
 
 ## Writing tools in Query Editor {#writing-tools}
 
-- **Automatic syntax highlighting:** Makes reading and organizing SQL easier.
-
-![An SQL statement in the Query Editor demonstrating syntax colour highlighting.](../images/ui/query-editor/syntax-highlight.png)
-
-- **SQL keyword auto-complete:** Start typing your query then use the arrow keys to navigate to the desired term and press **Enter**.
-
-![A few characters of SQL with the auto complete dropdown menu providing options from the Query Editor.](../images/ui/query-editor/syntax-auto.png)
-
-- **Table and field auto-complete:** Start typing the table name you want to `SELECT` from, then use the arrow keys to navigate to the table you are looking for, and press **Enter**. Once a table is selected, autocomplete recognizes fields in that table. 
-
-![The Query Editor input displaying drop down table name suggestions.](../images/ui/query-editor/tables-auto.png)
+Use the Query Editor's writing tools to enhance your query authoring process. Features include options to format text, copy SQL, manage query details, and save or schedule your work as you progress.
 
 ### Format text {#format-text}
 
@@ -203,11 +193,14 @@ If a query was scheduled, then the [!UICONTROL Scheduled Queries] tab provides i
 >Queries that are not executed are not saved by the Log. In order for the query to be available in Query Service, it must be run or saved in Query Editor.
 
 <!-- 
-### Searching and Filtering Tables {#searching-filtering-tables}
+### Object Browser {#object-browser}
 
 >[!AVAILABILITY]
 >
 >The dataset navigation rail is only available for Data Distiller customers. Your Platform UI might not contain the left dataset navigation rail.  Other images in this document might not reflect the dataset navigation rail.
+
+Use the object browser to easily search and filter datasets 
+
 
 Use the dataset navigation rail to enhance productivity by reducing the time spent searching for tables and datasets. This is especially relevant in large environments with numerous datasets. With streamlined access to relevant data and metadata, you can focus more on query authoring and less on navigation.
 
