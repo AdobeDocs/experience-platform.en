@@ -14,19 +14,6 @@ exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
 
 You can ingested encrypted data files and folders to Adobe Experience Platform using cloud storage batch sources. With encrypted data ingestion, you can leverage asymmetric encryption mechanisms to securely transfer batch data into Experience Platform. Currently, the supported asymmetric encryption mechanisms are PGP and GPG.
 
-This feature is available to the following sources:
-
-* [Amazon S3]
-* [Azure Blob]
-* [Azure Data Lake Storage Gen2]
-* [Azure File Storage]
-* [Data Landing Zone]
-* [FTP]
-* [Google Cloud Storage]
-* [HDFS]
-* [Oracle Object Storage]
-* [SFTP]
-
 Read this guide to learn how you can ingest encrypted data with cloud storage batch sources using the UI.
 
 ## Get started
@@ -43,7 +30,7 @@ It is helpful to have an understanding of the following Experience Platform feat
 2. Use the public key to encrypt your data.
 3. Place your encrypted data in your cloud storage provider. During this step, you must also ensure that you have a sample file that can be used as a reference to map your source data to an Experience Data Model (XDM) schema.
 4. Ingest your encrypted data to Experience Platform by creating a source connection.
-5. While creating your source connection, provide the key ID that corresponds with the public key that you used to encrypt your data. If you also used the sign verification key pair mechanism, then you must also provide the sign verification key ID that corresponds to your encrypted data.
+5. During the source connection creation process, provide the key ID that corresponds with the public key that you used to encrypt your data. If you also used the sign verification key pair mechanism, then you must also provide the sign verification key ID that corresponds to your encrypted data.
 6. Proceed to the dataflow creation steps.
 
 ## Create an encryption key pair {#create-an-encryption-key-pair}
@@ -53,11 +40,35 @@ It is helpful to have an understanding of the following Experience Platform feat
 >title="Encryption Key ID"
 >abstract="Provide the encryption key ID that corresponds with your encryption key that was used to encrypt your source data."
 
-* In the Platform UI, navigate to the sources workspace and then select [!UICONTROL Key Pairs] from the top header.
-* You are taken to a page that displays a list of existing encryption key pairs in your organization. This page provides information on a given key's title, ID, type, encryption algorithm, expiry, and status. To create a new key pair, select **[!UICONTROL Create Key]**.
-* Next, choose the key type that you want to make. To create an encryption key, select **[!UICONTROL Encryption Key]** and then provide a title and a passphrase for your encryption key. The passphrase is an additional layer of protection for your encryption keys. Upon creation, Experience Platform stores the passphrase in a different secure vault from the public key. You must provide a non-empty string as a passphrase.
+What is an encryption key pair?
+
+In the Platform UI, navigate to the sources workspace and then select [!UICONTROL Key Pairs] from the top header.
+
+![]
+
+You are taken to a page that displays a list of existing encryption key pairs in your organization. This page provides information on a given key's title, ID, type, encryption algorithm, expiry, and status. To create a new key pair, select **[!UICONTROL Create Key]**.
+
+![]
+
+Next, choose the key type that you want to make. To create an encryption key, select **[!UICONTROL Encryption Key]** and then select **[!UICONTROL Continue]**. 
+
+![]
+
+Provide a title and a passphrase for your encryption key. The passphrase is an additional layer of protection for your encryption keys. Upon creation, Experience Platform stores the passphrase in a different secure vault from the public key. You must provide a non-empty string as a passphrase. When finished, select **[!UICONTROL Create]**.
+
+![]
 
 ### Create a sign verification key {#create-a-sign-verification-key}
+
+What is a sign verification key?
+
+To create a sign verification key, select **[!UICONTROL Customer Key]** from the key type selection window and then select **[!UICONTROL Continue]**.
+
+![]
+
+Next, provide a title and a public key, and then select **[!UICONTROL Create]**.
+
+![]
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_signVerificationKeyId"
@@ -76,6 +87,38 @@ It is helpful to have an understanding of the following Experience Platform feat
 >title="Select sample file"
 >abstract="You must ingest a sample file when ingesting encrypted data in order to create a mapping."
 
+You can ingest encrypted data using the following cloud storage batch sources:
+
+* [[!DNL Amazon S3]](../ui/create/cloud-storage/s3.md)
+* [[!DNL Azure Blob]](../ui/create/cloud-storage/blob.md)
+* [[!DNL Azure Data Lake Storage Gen2]](../ui/create/cloud-storage/adls-gen2.md)
+* [[!DNL Azure File Storage]](../ui/create/cloud-storage/azure-file-storage.md)
+* [[!DNL Data Landing Zone]](../ui/create/cloud-storage/data-landing-zone.md)
+* [[!DNL FTP]](../ui/create/cloud-storage/ftp.md)
+* [[!DNL Google Cloud Storage]](../ui/create/cloud-storage/google-cloud-storage.md)
+* [[!DNL HDFS]](../ui/create/cloud-storage/hdfs.md)
+* [[!DNL Oracle Object Storage]](../ui/create/cloud-storage/oracle-object-storage.md)
+* [[!DNL SFTP]](../ui/create/cloud-storage/sftp.md)
+
+Authenticate with the cloud storage source of your choice. During the data selection step of the workflow, select the encrypted file or folder that you want to ingest and then enable the **[!UICONTROL Is the file encrypted]** toggle.
+
+![]
+
+Next, select a sample file from your source data. Since your data is encrypted, Experience Platform will require a sample file in order to create an XDM schema that can be mapped to your source data.
+
+Once you have selected your sample file, configure settings of your data, such as its corresponding data format, delimiter, and compression type. Allow some time for the preview interface to fully render, and then select **[!UICONTROL Save]**.
+
+![]
+
+From here, use the dropdown menu to select the public key ID that corresponds with the public key that you used to encrypt your data.
+
+![]
+
+If you also used the sign verification key pair to provide and additional layer of encryption, then enable the sign verification key toggle and then similarly, use the dropdown to select the sign verification jey ID that corresponds with the key that you used to encrypt your data.
+
+![]
+
+When finished select **[!UICONTROL Next]**.
 
 <!-- 
 ## Outline
