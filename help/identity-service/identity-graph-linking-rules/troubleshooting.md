@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting Guide For Identity Graph Linking Rules
+title: Troubleshooting Guide for Identity Graph Linking Rules
 description: Learn how to troubleshoot common issues in identity graph linking rules.
 badge: Beta
 ---
@@ -7,7 +7,7 @@ badge: Beta
 
 >[!AVAILABILITY]
 >
->Identity graph linking rules is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
+>The Identity graph linking rules feature is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
 
 As you test and validate identity graph linking rules, you may run into some issues related to data ingestion and graph behavior. Read this document to learn how to troubleshoot some common issues that you might encounter when working with identity graph linking rules.
 
@@ -19,7 +19,7 @@ The following diagram is a simplified representation of how data flows into Adob
 
 It is important to note the following factors:
 
-* For streaming data, Real-Time Customer Profile, Identity Service, and data lake will start processing the data when the data is sent. However, the latency to complete the processing of the data is dependant on the service. Usually, data lake will take a longer time to process, compared to Profile and Identity.
+* For streaming data, Real-Time Customer Profile, Identity Service, and data lake will start processing the data when the data is sent. However, the latency to complete the processing of the data is dependent on the service. Usually, data lake will take a longer time to process, compared to Profile and Identity.
   * If the data does not appear when running a query against a dataset even after a couple of hours, then it is likely that the data did not get ingested into Experience Platform.
 * For batch data, all data will flow into data lake first, then the data will be propagated to Profile and Identity if the dataset is enabled for Profile and Identity.
 * For ingestion-related issues, it is important that the issue is isolated at a service-level for accurate debugging and troubleshooting. There are three potential issue types to consider:
@@ -34,7 +34,7 @@ It is important to note the following factors:
 
 >[!NOTE]
 >
->* This section assumes that data has been successfully ingested into data lake and that there were no syntax or other errors that would prevent the data from being ingested into Experience Platform in the first place.
+>* This section assumes that the data has been successfully ingested into data lake and that there were no syntax or other errors that would prevent the data from being ingested into Experience Platform in the first place.
 >
 >* The examples use ECID as the cookie namespace and CRMID as the person namespace.
 
@@ -232,12 +232,12 @@ ORDER BY timestamp desc
 
 **Troubleshooting steps**
 
-Refer to the documentation on [identity optimization algorithm](./identity-optimization-algorithm.md), as well as the types of graph structures that are support.
+Refer to the documentation on [identity optimization algorithm](./identity-optimization-algorithm.md), as well as the types of graph structures that are supported.
 
   * Read the [graph configuration guide](./example-configurations.md) for examples of supported graph structures.
   * You can also read the [implementation guide](./configuration.md#appendix) for examples of unsupported graph structures. There are two scenarios that could happen:
     * No single namespace across all your profiles.
-    * A ["dangling ID"](./configuration.md#dangling-loginid-scenario) scenario occurs. In this scenario, Identity Service is unable to determine if the dangling ID is associated to any of the person entities in the graphs.
+    * A ["dangling ID"](./configuration.md#dangling-loginid-scenario) scenario occurs. In this scenario, Identity Service is unable to determine if the dangling ID is associated with any of the person entities in the graphs.
 
 You can also use the [graph simulation tool in the UI](./graph-simulation.md) to simulate events and configure your own unique namespace and namespace priority settings. Doing so can help give you a baseline understanding of how the identity optimization algorithm should behave. 
 
