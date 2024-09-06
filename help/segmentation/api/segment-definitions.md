@@ -170,6 +170,12 @@ POST /segment/definitions
 
 **Request**
 
+When creating a new segment definition, you can create it in either the `pql/text` or `pql/json` format.
+
+>[!BEGINTABS]
+
+>[!TAB Using pql/text]
+
 +++ A sample request to create a segment definition.
 
 ```shell 
@@ -214,10 +220,63 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `schema` | The schema associated with the entities in the segment. Consists of either an `id` or `name` field. |
 | `expression` | An entity that contains fields information about the segment definition. |
 | `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
-| `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.format` | Indicates the structure of the expression in value. Supported values include `pql/text` and `pql/json`. |
 | `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
 
 +++
+
+>[!TAB Using pql/json]
+
++++ A sample request to create a segment definition.
+
+```shell 
+curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "People who ordered in the last 30 days",
+        "profileInstanceId": "ups",
+        "description": "Last 30 days",
+        "expression": {
+            "type": "PQL",
+            "format": "pql/json",
+            "value": "{\"nodeType\":\"fnApply\",\"fnName\":\"=\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"a\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}},{\"nodeType\":\"fieldLookup\",\"fieldName\":\"b\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}}]}"
+        },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
+        "schema": {
+            "name": "_xdm.context.profile"
+        },
+        "payloadSchema": "string"
+    }'
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `name` | A unique name by which to refer to the segment definition. |
+| `description` | (Optional.) A description of the segment definition you are creating. |
+| `evaluationInfo` | (Optional.) The type of segment definition you are creating. If you want to create a batch segment, set `evaluationInfo.batch.enabled` to be true. If you want to create a streaming segment, set `evaluationInfo.continuous.enabled` to be true. If you want to create an edge segment, set `evaluationInfo.synchronous.enabled` to be true. If left empty, the segment definition will be created as a **batch** segment. |
+| `schema` | The schema associated with the entities in the segment. Consists of either an `id` or `name` field. |
+| `expression` | An entity that contains fields information about the segment definition. |
+| `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
+| `expression.format` | Indicates the structure of the expression in value. |
+| `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
+
++++
+
+>[!ENDTABS]
 
 **Response**
 
