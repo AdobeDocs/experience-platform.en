@@ -25,6 +25,7 @@ role: Admin,Developer
     - [Identity settings](./identity-graph-linking-rules/identity-settings-ui.md)
     - [Example customer scenarios](./identity-graph-linking-rules/example-scenarios.md)
     - [Example graph configurations](./identity-graph-linking-rules/example-configurations.md)
+    - [Troubleshooting for identity graph linking rules](./identity-graph-linking-rules/troubleshooting.md)
   - [ECID overview](./features/ecid.md)
 - [Implementation guide](implementation.md)
 - [Guardrails for Identity data](guardrails.md)
