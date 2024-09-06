@@ -215,8 +215,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | Property | Description |
 | -------- | ----------- |
 | `name` | A unique name by which to refer to the segment definition. |
-| `description` | (Optional.) A description of the segment definition you are creating. |
-| `evaluationInfo` | (Optional.) The type of segment definition you are creating. If you want to create a batch segment, set `evaluationInfo.batch.enabled` to be true. If you want to create a streaming segment, set `evaluationInfo.continuous.enabled` to be true. If you want to create an edge segment, set `evaluationInfo.synchronous.enabled` to be true. If left empty, the segment definition will be created as a **batch** segment. |
+| `description` | (Optional) A description of the segment definition you are creating. |
+| `evaluationInfo` | (Optional) The type of segment definition you are creating. If you want to create a batch segment, set `evaluationInfo.batch.enabled` to be true. If you want to create a streaming segment, set `evaluationInfo.continuous.enabled` to be true. If you want to create an edge segment, set `evaluationInfo.synchronous.enabled` to be true. If left empty, the segment definition will be created as a **batch** segment. |
 | `schema` | The schema associated with the entities in the segment. Consists of either an `id` or `name` field. |
 | `expression` | An entity that contains fields information about the segment definition. |
 | `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
@@ -266,8 +266,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | Property | Description |
 | -------- | ----------- |
 | `name` | A unique name by which to refer to the segment definition. |
-| `description` | (Optional.) A description of the segment definition you are creating. |
-| `evaluationInfo` | (Optional.) The type of segment definition you are creating. If you want to create a batch segment, set `evaluationInfo.batch.enabled` to be true. If you want to create a streaming segment, set `evaluationInfo.continuous.enabled` to be true. If you want to create an edge segment, set `evaluationInfo.synchronous.enabled` to be true. If left empty, the segment definition will be created as a **batch** segment. |
+| `description` | (Optional) A description of the segment definition you are creating. |
+| `evaluationInfo` | (Optional) The type of segment definition you are creating. If you want to create a batch segment, set `evaluationInfo.batch.enabled` to be true. If you want to create a streaming segment, set `evaluationInfo.continuous.enabled` to be true. If you want to create an edge segment, set `evaluationInfo.synchronous.enabled` to be true. If left empty, the segment definition will be created as a **batch** segment. |
 | `schema` | The schema associated with the entities in the segment. Consists of either an `id` or `name` field. |
 | `expression` | An entity that contains fields information about the segment definition. |
 | `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
