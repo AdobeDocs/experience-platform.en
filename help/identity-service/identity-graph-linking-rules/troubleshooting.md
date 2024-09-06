@@ -2,6 +2,7 @@
 title: Troubleshooting Guide for Identity Graph Linking Rules
 description: Learn how to troubleshoot common issues in identity graph linking rules.
 badge: Beta
+exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
 ---
 # Troubleshooting guide for identity graph linking rules
 
