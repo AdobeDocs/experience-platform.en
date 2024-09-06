@@ -46,6 +46,24 @@ It is helpful to have an understanding of the following Experience Platform feat
 5. While creating your source connection, provide the key ID that corresponds with the public key that you used to encrypt your data. If you also used the sign verification key pair mechanism, then you must also provide the sign verification key ID that corresponds to your encrypted data.
 6. Proceed to the dataflow creation steps.
 
+## Create an encryption key pair {#create-an-encryption-key-pair}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_encrypted_encryptionKeyId"
+>title="Encryption Key ID"
+>abstract="Provide the encryption key ID that corresponds with your encryption key that was used to encrypt your source data."
+
+* In the Platform UI, navigate to the sources workspace and then select [!UICONTROL Key Pairs] from the top header.
+* You are taken to a page that displays a list of existing encryption key pairs in your organization. This page provides information on a given key's title, ID, type, encryption algorithm, expiry, and status. To create a new key pair, select **[!UICONTROL Create Key]**.
+* Next, choose the key type that you want to make. To create an encryption key, select **[!UICONTROL Encryption Key]** and then provide a title and a passphrase for your encryption key. The passphrase is an additional layer of protection for your encryption keys. Upon creation, Experience Platform stores the passphrase in a different secure vault from the public key. You must provide a non-empty string as a passphrase.
+
+### Create a sign verification key {#create-a-sign-verification-key}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_encrypted_signVerificationKeyId"
+>title="Sign Verification Key ID"
+>abstract="Provide the sign verification key ID that corresponds with your signed, encrypted source data."
+
 ## Ingest encrypted data {#ingest-encrypted-data}
 
 >[!CONTEXTUALHELP]
@@ -57,23 +75,6 @@ It is helpful to have an understanding of the following Experience Platform feat
 >id="platform_sources_encrypted_sampleFile"
 >title="Select sample file"
 >abstract="You must ingest a sample file when ingesting encrypted data in order to create a mapping."
-
->[!CONTEXTUALHELP]
->id="platform_sources_encrypted_encryptionKeyId"
->title="Encryption Key ID"
->abstract="Provide the encryption key ID that corresponds with your encryption key that was used to encrypt your source data."
-
->[!CONTEXTUALHELP]
->id="platform_sources_encrypted_signVerificationKeyId"
->title="Sign Verification Key ID"
->abstract="Provide the sign verification key ID that corresponds with your signed, encrypted source data."
-
-## Create an encryption key pair
-
-* In the Platform UI, navigate to the sources workspace and then select [!UICONTROL Key Pairs] from the top header.
-* You are taken to a page that displays a list of existing encryption key pairs in your organization. This page provides information on a given key's title, ID, type, encryption algorithm, expiry, and status. To create a new key pair, select **[!UICONTROL Create Key]**.
-* Next, choose the key type that you want to make. To create an encryption key, select **[!UICONTROL Encryption Key]** and then provide a title and a passphrase for your encryption key. The passphrase is an additional layer of protection for your encryption keys. Upon creation, Experience Platform stores the passphrase in a different secure vault from the public key. You must provide a non-empty string as a passphrase.
-
 
 
 <!-- 
