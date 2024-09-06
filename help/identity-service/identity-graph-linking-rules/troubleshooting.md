@@ -1,0 +1,291 @@
+---
+title: Troubleshooting Guide for Identity Graph Linking Rules
+description: Learn how to troubleshoot common issues in identity graph linking rules.
+badge: Beta
+---
+# Troubleshooting guide for identity graph linking rules
+
+>[!AVAILABILITY]
+>
+>The Identity graph linking rules feature is currently in beta. Contact your Adobe account team for information on the participation criteria. The feature and documentation are subject to change.
+
+As you test and validate identity graph linking rules, you may run into some issues related to data ingestion and graph behavior. Read this document to learn how to troubleshoot some common issues that you might encounter when working with identity graph linking rules.
+
+## Data ingestion flow overview {#data-ingestion-flow-overview}
+
+The following diagram is a simplified representation of how data flows into Adobe Experience Platform and Applications. Use this diagram as reference to help you get a better understanding of the contents of this page.
+
+![A diagram of how data ingestion flows in Identity Service.](../images/troubleshooting/dataflow_in_identity.png)
+
+It is important to note the following factors:
+
+* For streaming data, Real-Time Customer Profile, Identity Service, and data lake will start processing the data when the data is sent. However, the latency to complete the processing of the data is dependent on the service. Usually, data lake will take a longer time to process, compared to Profile and Identity.
+  * If the data does not appear when running a query against a dataset even after a couple of hours, then it is likely that the data did not get ingested into Experience Platform.
+* For batch data, all data will flow into data lake first, then the data will be propagated to Profile and Identity if the dataset is enabled for Profile and Identity.
+* For ingestion-related issues, it is important that the issue is isolated at a service-level for accurate debugging and troubleshooting. There are three potential issue types to consider:
+
+| Ingestion issue type | Does the data get ingested in data lake? | Does the data get ingested in Profile? | Does the data get ingested in Identity Service? |
+| --- | --- | --- | --- |
+| General ingestion issue | No | No | No |
+| Graph issue | Yes | Yes | No |
+| Profile fragment issue | Yes | No | Yes |
+
+## Data ingestion issues {#data-ingestion-issues}
+
+>[!NOTE]
+>
+>* This section assumes that the data has been successfully ingested into data lake and that there were no syntax or other errors that would prevent the data from being ingested into Experience Platform in the first place.
+>
+>* The examples use ECID as the cookie namespace and CRMID as the person namespace.
+
+### My identities are not getting ingested into Identity Service{#my-identities-are-not-getting-ingested-into-identity-service}
+
+There are various reasons for why this could happen, including, but not limited to the following:
+
+* [The dataset is not enabled for Profile](../../catalog/datasets/enable-for-profile.md).
+* The record is skipped because there is only one identity in the event.
+* [A validation failure occurred in Identity Service](../guardrails.md#identity-value-validation).
+  * For example, an ECID could have exceeded the maximum length of 38 characters.
+* By default, [AAIDs are blocked from ingestion](../guardrails.md#identity-namespace-ingestion).
+* The identity is removed because of [system guardrails](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated).
+
+Within the context of identity graph linking rules, a record may be rejected from Identity Service because the incoming event has two or more identities with the same unique namespace but different identity value. This scenario usually happens due to implementation errors.
+
+Consider the following event with two assumptions:
+
+* The field name CRMID is marked as an identity with the namespace CRMID.
+* The namespace CRMID is defined as a unique namespace.
+
+The following event will return an error message indicating that ingestion has failed. 
+
+<!-- because the ingestion of this erroneous event would have resulted in graph collapse. In the following event, two entities (Alice and Bob) are both associated with the same namespace (CRMID). -->
+
+```json
+{ 
+  "_id": "random_string", 
+  "eventType": "web browsing event", 
+  "identityMap": { 
+    "ECID": [ 
+      { 
+        "id": "11111111111111111111111111111111111111", 
+        "primary": false 
+      } 
+    ], 
+    "CRMID": [ 
+      { 
+        "id": "Alice", 
+        "primary": true 
+      } 
+    ] 
+  }, 
+  "CRMID": "Bob", 
+  "timestamp": "2024-08-17T15:22:51+00:00", 
+  "web": { 
+    "webPageDetails": { 
+      "URL": "https://www.adobe.com/acrobat.html", 
+      "name": "Adobe Acrobat" 
+    } 
+  } 
+} 
+```
+
+**Troubleshooting steps**
+
+To resolve this error, you must first collect the following information:
+
+* The identity value (`identity_value`) you expected to be ingested in the identity graph.
+* The dataset (`dataset_name`) in which the event was sent in.
+
+Next, use [Adobe Experience Platform Query Service](../../query-service/home.md) and run the following query:
+
+>[!TIP]
+>
+>Replace `dataset_name` and `identity_value` with the information that you collected.
+
+```sql
+  SELECT key, col.id as identityValue, timestamp, _id, identityMap, * 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE col.id = 'identity_value' 
+```
+
+After running your query, find the event record that you expected to generate a graph, and then validate that the identity values are different in the same row. View the following image for an example:
+
+![An untitled query that resulted in duplicated namespaces.](../images/troubleshooting/duplicated_unique_namespace.png)
+
+>[!NOTE]
+>
+>If the two identities are exactly the same, and if the event is ingested via streaming, then both Identity and Profile will deduplicate the identity.
+
+### My experience event fragments are not getting ingested into Profile {#my-experience-event-fragments-are-not-getting-ingested-into-profile}
+
+There are various reasons that contribute as to why your experience event fragments are not getting ingested into Profile, including but not limited to:
+
+* [The dataset is not enabled for Profile](../../catalog/datasets/enable-for-profile.md).
+* [A validation failure may have occurred on Profile](../../xdm/classes/experienceevent.md).
+  * For example, an experience event must contain both an `_id` and a `timestamp`.
+  * Additionally, the `_id` must be unique for each event (record).
+
+In the context of namespace priority, Profile will reject any event that contains two or more identities with the highest namespace priority. For example, if GAID is not marked as a unique namespace and two identities both with a GAID namespace and different identity values came in, then Profile will not store any of the events.
+
+**Troubleshooting steps**
+
+To resolve this error, read the troubleshooting steps outlined in the guide above on [troubleshooting errors regarding data not being ingested to Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
+
+### My experience event fragments are ingested, but have the "wrong" primary identity in Profile
+
+Namespace priority plays an important role in how event fragments determine primary identity.
+
+* Once you have configured and saved your [identity settings](./identity-settings-ui.md) for a given sandbox, Profile will then use [namespace priority](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) to determine the primary identity. In the case of identityMap, Profile will then no longer use the `primary=true` flag.
+* While Profile will no longer refer to this flag, other services on Experience Platform may continue to use the `primary=true` flag.
+
+In order for [authenticated user events](configuration.md#ingest-your-data) to be tied to the person namespace, all authenticated events must contain the person namespace (CRMID). This means that even after a user logs in, the person namespace must still be present on every authenticated event.
+
+You may continue to see `primary=true` 'events' flag when looking up a profile in profile viewer. However, this is ignored and will not be used by Profile.
+
+AAIDs are blocked by default. Therefore, if you are using the [Adobe Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md), you must ensure that the ECID is prioritized higher than the ECID so that the unauthenticated events will have a primary identity of ECID.
+
+**Troubleshooting steps**
+
+* To validate that authenticated events contain both the person and cookie namespace, read the steps outlined in the section on [troubleshooting errors regarding data not being ingested to Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
+* To validate that authenticated events have the primary identity of the person namespace (e.g. CRMID), search the person namespace on profile viewer using no-stitch merge policy (this is the merge policy that does not use private graph). This search will only return events associated to the person namespace. 
+
+## Graph behavior related issues {#graph-behavior-related-issues}
+
+This section outlines common issues you may encounter regarding how the identity graph behaves.
+
+### The identity is getting linked to the 'wrong' person
+
+The identity optimization algorithm will honor [the most recently established links and remove the oldest links](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). Therefore, it is possible that once this feature is enabled, ECIDs could be reassigned (re-linked) from one person to another. To understand the history of how an identity gets linked over time, follow the steps below:
+
+**Troubleshooting steps**
+
+>[!NOTE]
+>
+>The following steps will retrieve information under the following assumptions:
+>
+>* A single dataset is in use (this will not query multiple datasets).
+>
+>* The data is not deleted from data lake due to deletion by [Advanced Data Lifecycle Management](../../hygiene/home.md), [Privacy Service](../../privacy-service/home.md), or other services conducting deletion.
+
+First, you must collect the following information:
+
+* The identity symbol (namespaceCode) of the cookie namespace (e.g. ECID) and the person namespace (e.g. CRMID) that were sent.
+  * For Web SDK implementations, these are usually the namespaces included in the identityMap.
+  * For Analytics source connector implementations, these are the cookie identifier included in the identityMap. The person identifier is an eVar field marked as an identity.
+* The dataset in which the event was sent in (dataset_name).
+* The identity value of the cookie namespace to look up (identity_value).
+
+Identity symbols (namespaceCode) are case sensitive. To retrieve all identity symbols for a given dataset in the identityMap, run the following query:
+
+```sql
+SELECT distinct explode(*)FROM (SELECT map_keys(identityMap) FROM dataset_name)
+```
+
+If you do not know the identity value of your cookie identifier and you would like to search for a cookie ID that would have been linked to multiple person identifiers, then you must run the following query. This query assumes ECID as the cookie namespace and CRMID as the person namespace.
+
+>[!BEGINTABS]
+
+>[!TAB Web SDK implementation]
+
+```sql
+  SELECT identityMap['ECID'][0]['id'], count(distinct identityMap['CRMID'][0]['id']) as crmidCount FROM dataset_name GROUP BY identityMap['ECID'][0]['id'] ORDER BY crmidCount desc 
+```
+
+>[!TAB Analytics source connector implementation]
+
+```sql
+  SELECT identityMap['ECID'][0]['id'], count(distinct personID) as crmidCount FROM dataset_name group by identityMap['ECID'][0]['id'] ORDER BY crmidCount desc 
+```
+
+**Note:** personID refers to the path of the descriptor. You can find this information under schemas.
+ 
+>[!ENDTABS]
+
+Next, examine the association of the cookie namespace in order of timestamp by running the following query:
+
+>[!BEGINTABS]
+
+>[!TAB Web SDK implementation]
+
+```sql
+  SELECT identityMap['CRMID'][0]['id'] as personEntity, * 
+  FROM dataset_name 
+  WHERE identitymap['ECID'][0].id ='identity_value' 
+  ORDER BY timestamp desc 
+```
+
+>[!TAB Analytics source connector implementation]
+
+```sql
+SELECT _experience.analytics.customDimensions.eVars.eVar10 as personEntity, * 
+FROM dataset_name 
+WHERE identitymap['ECID'][0].id ='identity_value' 
+ORDER BY timestamp desc 
+```
+
+**Note**: This example assumes that `eVar10` is marked as an identity. For your configurations, you must change the eVar based on your own organization's implementation.
+
+>[!ENDTABS]
+
+### The identity optimization algorithm is not 'working' as expected
+
+**Troubleshooting steps**
+
+Refer to the documentation on [identity optimization algorithm](./identity-optimization-algorithm.md), as well as the types of graph structures that are supported.
+
+  * Read the [graph configuration guide](./example-configurations.md) for examples of supported graph structures.
+  * You can also read the [implementation guide](./configuration.md#appendix) for examples of unsupported graph structures. There are two scenarios that could happen:
+    * No single namespace across all your profiles.
+    * A ["dangling ID"](./configuration.md#dangling-loginid-scenario) scenario occurs. In this scenario, Identity Service is unable to determine if the dangling ID is associated with any of the person entities in the graphs.
+
+You can also use the [graph simulation tool in the UI](./graph-simulation.md) to simulate events and configure your own unique namespace and namespace priority settings. Doing so can help give you a baseline understanding of how the identity optimization algorithm should behave. 
+
+If your simulation results match your graph behavior expectations, then you can check and see if your [identity settings](./identity-settings-ui.md) matches the settings that you have configured in your simulation.
+
+### I still see collapsed graphs in my sandbox even after configuring identity settings
+
+Identity graphs will adhere to your configured unique namespace and namespace priority _after_ the settings have been saved. Any "collapsed" graphs that exist _before_ you save your new settings will not be affected, until new data is ingested such that the collapsed graph is updated. The primary identity of event fragments on Real-Time Customer Profile will not be updated even after namespace priority changes. 
+
+**Troubleshooting steps**
+
+You can use the [identity graph viewer](../features/identity-graph-viewer.md) to check whether your graph was ingested before or after your settings. Examine the last updated timestamp under [!UICONTROL Link properties] to see when Identity Service ingested the graph. If the timestamp is before configuration, then that suggests that the "collapsed" graph was created before enabling the feature.
+
+![The identity graph viewer with an example graph.](../images/troubleshooting/graph_viewer.png)
+
+### I want to know how many "collapsed" graphs exist in my sandbox
+
+Use the identity dashboard for insights on the state of your identity graph, such as the count of identities and graphs. Refer to the metric, "Graph count with multiple namespaces" for a count of graphs that have collapsed - these are graphs that contain two or more identities with the same namespace. Assuming that the sandbox has no data, and you have configured a namespace (e.g. CRMID) to be unique, the expectation is that there should be zero graphs that have two or more CRMIDs. In the example below, there are two graphs that contain two or more email addresses.
+
+![The identity dashboard with metrics on identity count, graph count, count by namespace, graph count by size and graph count of graphs more than two namespaces.](../images/troubleshooting/identity_dashboard.png)
+
+You can find a detailed breakdown in the [profile snapshot export dataset](../../dashboards/query.md) in data lake by running the query below:
+
+>[!NOTE]
+>
+>* Replace `dataset_name` with the actual name of your dataset.
+>
+>* The counts may not exactly match. The identity dashboard is based on the identity graph count and the following query is based on profile count with two or more identities. The data is independently processed and updated by the service.
+
+```sql
+  SELECT key, identityCountInGraph, count(identityCountInGraph) as graphCount 
+  FROM (SELECT key, cardinality(value) as identityCountInGraph 
+  FROM (SELECT explode(identityMap) 
+  FROM dataset_name 
+  WHERE cardinality(identityMap) > 1)) /* by definition, graphs have 2 or more identities */ 
+  WHERE key not in ('ecid', 'aaid', 'idfa', 'gaid') /* filter out common device/cookie namespaces */ 
+  GROUP BY 1, 2 
+  ORDER BY 1, 2 asc 
+```
+
+You can use the following query in profile snapshot export dataset to obtain sample identities from "collapsed" graphs.
+
+```sql
+  SELECT identityMap 
+  FROM dataset_name 
+  WHERE cardinality(identityMap['CRMID'])>1 /* any graphs with 2+ CRMID. Change CRMID namespace if needed */ 
+```
+
+>[!TIP]
+>
+>The two queries listed above will yield expected results if the sandbox is not enabled for the shared device interim approach and will behave differently from identity graph linking rules.
