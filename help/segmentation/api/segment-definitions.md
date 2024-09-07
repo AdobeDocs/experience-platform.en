@@ -452,6 +452,10 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
     }'
 ```
 
+| Property | Description |
+| -------- | ----------- |
+| `ids` | An array that contains objects that state the IDs of the segment definitions you want to retrieve. |
+
 +++
 
 **Response**
@@ -611,6 +615,10 @@ PATCH /segment/definitions/{SEGMENT_ID}
 **Request**
 
 The following request will update the work address country from the USA to Canada.
+
+>[!NOTE]
+>
+>Since this API call **replaces** the content of the segment definition, please ensure **all** the fields you want to keep are included as part of the request body.
 
 +++ A sample request to update a segment definition.
 
