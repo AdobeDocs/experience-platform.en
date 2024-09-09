@@ -21,11 +21,11 @@ role: User,Developer
         - [Overview](data-distiller/derived-datasets/overview.md)
         - [Create derived datasets with SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
         - [Create decile-based derived datasets](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-    - Customizable Insights for extended app reporting {#customizable-insights}
-        - [Overview](data-distiller/customizable-insights/overview.md)
-        - [Query pro mode](data-distiller/customizable-insights/query-pro-mode.md)
-        - [Send accelerated queries](data-distiller/customizable-insights/send-accelerated-queries.md)
-        - [Reporting insights data model guide](data-distiller/customizable-insights/reporting-insights-data-model.md)
+    - SQL Insights for extended app reporting {#sql-insights}
+        - [Overview](data-distiller/sql-insights/overview.md)
+        - [Query pro mode](data-distiller/sql-insights/query-pro-mode.md)
+        - [Send accelerated queries](data-distiller/sql-insights/send-accelerated-queries.md)
+        - [Reporting insights data model guide](data-distiller/sql-insights/reporting-insights-data-model.md)
     - AI/ML feature pipelines {#ml-feature-pipelines}
         - [Overview](data-distiller/ml-feature-pipelines/overview.md)
         - [Connect to Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
@@ -33,7 +33,7 @@ role: User,Developer
         - [Engineer features for ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
         - [Export data to ML environments](data-distiller/ml-feature-pipelines/export-data.md)
         - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- Use cases {#use-cases}
+- Examples {#use-cases}
     - [Overview](use-cases/overview.md)
     - [Abandoned browse](use-cases/abandoned-browse.md)
     - [Attribution analysis](use-cases/attribution-analysis.md)
@@ -41,6 +41,7 @@ role: User,Developer
     - [Create a trended report of events](use-cases/trended-report-of-events.md)
     - [Consent analysis](use-cases/consent-analysis.md)
     - [Customer lifetime value](use-cases/customer-lifetime-value.md)
+    - [Data exploration](./use-cases/data-exploration.md)
     - [Decile-based derived datasets](use-cases/deciles-use-case.md)
     - [Fuzzy match](use-cases/fuzzy-match.md)
     - [List the page views of a user](use-cases/list-visitor-sessions.md)

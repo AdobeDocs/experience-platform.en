@@ -33,6 +33,22 @@ This user guide requires a working understanding of the following components of 
 >title="Dataset expiration"
 >abstract="This column indicates the number of days that the target dataset has left before it automatically expires."
 
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_datalakeretention"
+>title="Datalake retention"
+>abstract="Shows the current retention policy for each dataset. This value can be modified in each dataset's retention settings. You can only set retention time for ExperienceEvent dataset."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_profileretention"
+>title="Profile retention"
+>abstract="Shows the current retention policy for each dataset. This value can be modified in each dataset's retention settings. You can only set retention time for an ExperienceEvent dataset."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_datalakesettings_datasetretention"
+>title="Dataset retention"
+>abstract="Datalake retention sets rules for how long data is stored and when it should be deleted in different services. This ensures compliance with regulations, managing storage costs, and maintaining data quality."
+
+
 In the [!DNL Experience Platform] UI, select **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and status of the most recent ingestion run.
 
 ![The Platform UI with the Datasets item highlighted in the left navigation bar.](../images/datasets/user-guide/browse-datasets.png)
@@ -86,6 +102,10 @@ You can preview dataset sample data from both the inline options of the [!UICONT
 ![The Browse tab of the Datasets workspace with the ellipsis and Preview dataset option highlighted for the chosen dataset.](../images/datasets/user-guide/preview-dataset-option.png)
 
 This opens the preview window, where the hierarchical view of the schema for the dataset is shown on the right.
+
+>[!NOTE]
+>
+>The schema diagram on the left side of the view only displays fields that contain data. Fields without data are automatically hidden to streamline the UI and focus on relevant information.
 
 ![The dataset preview dialog with information about the structure, as well as sample values, for the dataset are shown.](../images/datasets/user-guide/preview-dataset.png)
 
@@ -155,11 +175,11 @@ The [!UICONTROL Move] dataset to folder dialog appears. Select the folder you wa
 
 >[!TIP]
 >
->You can also create folders directly from the Move dataset dialog. To create a folder, select the create folder icon (![The create folder icon.](../images/datasets/user-guide/create-folder-icon.png)) in the top right of the dialog.
+>You can also create folders directly from the Move dataset dialog. To create a folder, select the create folder icon (![The create folder icon.](/help/images/icons/folder-add.png)) in the top right of the dialog.
 >
 >![The [!UICONTROL Move] dataset dialog with the create folder icon highlighted.](/help/catalog/images/datasets/user-guide/create-folder.png)
 
-Once the dataset is in a folder, you can choose to only display datasets that belong to a specific folder. To open your folder structure, select the show folders icon (![The show folders icon](../images/datasets/user-guide/show-folders-icon.png)). Next, select your chosen folder to see all associated datasets.
+Once the dataset is in a folder, you can choose to only display datasets that belong to a specific folder. To open your folder structure, select the show folders icon (![The show folders icon](/help/images/icons/rail-left.png)). Next, select your chosen folder to see all associated datasets.
 
 ![The [!UICONTROL Datasets] dashboards with the datasets folder structure displayed, the show folders icon, and a selected folder highlighted.](../images/datasets/user-guide/folder-structure.png)
 
@@ -191,7 +211,7 @@ You can delete profile data associated with a dataset from the [!DNL Profile] st
 
 ## Search and filter datasets {#search-and-filter}
 
-To search or filter the list of available datasets, select the filter icon (![The filter icon.](../images/datasets/user-guide/icon.png)) at the top left of the workspace. A set of filter options in the left rail appears. There are several methods to filter your available datasets. These include: [[!UICONTROL Show System Datasets]](#show-system-datasets), [[!UICONTROL Included in profile]](#filter-profile-enabled-datasets), [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Creation date]](#filter-by-creation-date), [[!UICONTROL Modified date], [!UICONTROL Created by]](#filter-by-creation-date), and [[!UICONTROL Schema]](#filter-by-schema).
+To search or filter the list of available datasets, select the filter icon (![The filter icon.](/help/images/icons/filter.png)) at the top left of the workspace. A set of filter options in the left rail appears. There are several methods to filter your available datasets. These include: [[!UICONTROL Show System Datasets]](#show-system-datasets), [[!UICONTROL Included in profile]](#filter-profile-enabled-datasets), [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Creation date]](#filter-by-creation-date), [[!UICONTROL Modified date], [!UICONTROL Created by]](#filter-by-creation-date), and [[!UICONTROL Schema]](#filter-by-schema).
 
 The list of applied filters is displayed above the filtered results.
 

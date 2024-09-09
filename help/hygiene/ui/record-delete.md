@@ -17,7 +17,7 @@ Use the [[!UICONTROL Data Lifecycle] workspace](./overview.md) to delete records
 
 ## Prerequisites {#prerequisites}
 
-Deleting records requires a working understanding of how identity fields function in Experience Platform. Specifically, you must know the primary identity values of the entities whose records you want to delete, depending on the dataset (or datasets) you are deleting them from.
+Deleting records requires a working understanding of how identity fields function in Experience Platform. Specifically, you must know the identity namespace values of the entities whose records you want to delete, depending on the dataset (or datasets) you are deleting them from.
 
 Refer to the following documentation for more information on identities in Platform:
 
@@ -37,15 +37,15 @@ The request creation workflow appears. By default, the **[!UICONTROL Delete reco
 
 >[!IMPORTANT] 
 > 
->As part of ongoing changes to improve efficiency and make dataset operations less expensive, organizations who have been moved to the Delta format can delete data from the Identity Service, Real-Time Customer Profile, and the data lake. This type of user is referred to as delta-migrated. Users from organizations who have been delta-migrated can choose to delete records from either a single or all datasets. Users from organizations who have not been delta-migrated cannot choose to delete records from either a single or all datasets as seen in the image below. In this case, continue to the [provide identities](#provide-identities) section of the guide.
+>To improve efficiency and make dataset operations less expensive, organizations who have been moved to the Delta format can delete data from the Identity Service, Real-Time Customer Profile, and the data lake. This type of user is referred to as delta-migrated. Users from organizations who have been delta-migrated can choose to delete records from either a single or all datasets. Users from organizations that have not undergone delta migration are unable to selectively delete records from either a single dataset or all datasets, as shown in the image below. In this case, continue to the [Provide identities](#provide-identities) section of the guide.
 
 ![The request creation workflow with the [!UICONTROL Delete record] option selected and highlighted.](../images/ui/record-delete/delete-record.png)
 
 ## Select datasets {#select-dataset}
 
-The next step is to determine whether you want to delete records from a single dataset or all datasets. If this option is not available to you, continue to the [provide identities](#provide-identities) section of the guide. 
+The next step is to determine whether you want to delete records from a single dataset or all datasets. If this option is not available to you, continue to the [Provide identities](#provide-identities) section of the guide. 
 
-Under the **[!UICONTROL Record Details]** section, use the radio button to select between a specific dataset and all datasets. If you choose **[!UICONTROL Select dataset]**, proceed to select the database icon (![The database icon](../images/ui/record-delete/database-icon.png)) to open a dialog that provides a list of available datasets. Select the desired dataset from the list followed by **[!UICONTROL Done]**.  
+Under the **[!UICONTROL Record Details]** section, use the radio button to select between a specific dataset and all datasets. If you choose **[!UICONTROL Select dataset]**, proceed to select the database icon (![The database icon](/help/images/icons/database.png)) to open a dialog that provides a list of available datasets. Select the desired dataset from the list followed by **[!UICONTROL Done]**.  
 
 ![The [!UICONTROL Select dataset] dialog with a dataset selected and [!UICONTROL Done] highlighted.](../images/ui/record-delete/select-dataset.png)  
 
@@ -61,30 +61,30 @@ If you want to delete records from all datasets, select **[!UICONTROL All datase
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="Primary identity"
->abstract="A primary identity is an attribute that ties a record to a consumer's profile in Experience Platform. The primary identity field for a dataset is defined by the schema that the dataset is based on. In this column, you must provide the type (or namespace) for the record's primary identity, such as `email` for email addresses and `ecid` for Experience Cloud IDs. To learn more, see the Data lifecycle UI guide."
+>title="Identity namespace"
+>abstract="A identity namespace is an attribute that ties a record to a consumer's profile in Experience Platform. The identity namespace field for a dataset is defined by the schema that the dataset is based on. In this column, you must provide the type (or namespace) for the record's identity namespace, such as `email` for email addresses and `ecid` for Experience Cloud IDs. To learn more, see the Data lifecycle UI guide."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
->title="Identity value"
->abstract="In this column, you must provide the value for the record's primary identity, which must correspond with the identity type provided in the left column. If the primary identity type is `email`, the value should be the record's email address. To learn more, see the data lifecycle UI guide."
+>title="Primary identity value"
+>abstract="In this column, you must provide the value for the record's identity namespace, which must correspond with the identity type provided in the left column. If the identity namespace type is `email`, the value should be the record's email address. To learn more, see the data lifecycle UI guide."
 
-When deleting records, you must provide identity information so the system can determine which records are to be deleted. For any dataset in Platform, records are deleted based on the **primary identity** field that is defined by the dataset's schema.
+When deleting records, you must provide identity information so the system can determine which records are to be deleted. For any dataset in Platform, records are deleted based on the **identity namespace** field that is defined by the dataset's schema.
 
-Like all identity fields in Platform, a primary identity is composed of two things: a **type** (sometimes referred to as an identity namespace) and a **value**. The identity type provides context as to how the field identifies a record (such as an email address), and the value represents a record's specific identity for that type (for example, `jdoe@example.com` for the `email` identity type). Common fields used as identities include account information, device IDs, and cookie IDs.
+Like all identity fields in Platform, an identity namespace is composed of two things: a **type** (sometimes referred to as an identity namespace) and a **value**. The identity type provides context as to how the field identifies a record (such as an email address). The value represents a record's specific identity for that type (for example, `jdoe@example.com` for the `email` identity type). Common fields used as identities include account information, device IDs, and cookie IDs.
 
 >[!TIP]
 >
->If you don't know the primary identity for a particular dataset, you can find it in the Platform UI. In the **[!UICONTROL Datasets]** workspace, select the dataset in question from the list. On the details page for the dataset, hover over the name of the dataset's schema in the right rail. The primary identity is displayed along with the schema name and description.
+>If you don't know the identity namespace for a particular dataset, you can find it in the Platform UI. In the **[!UICONTROL Datasets]** workspace, select the dataset in question from the list. On the details page for the dataset, hover over the name of the dataset's schema in the right rail. The identity namespace is displayed along with the schema name and description.
 >
 >![The Datasets dashboard with a dataset selected, and a schema dialog opened from the dataset details panel. The primary ID of the dataset is highlighted.](../images/ui/record-delete/dataset-primary-identity.png)
 
-If you are deleting records from a single dataset, all the identities you provide must have the same type, since a dataset can only have one primary identity. If you are deleting from all datasets, you can include multiple identity types since different datasets may have different primary identities.
+If you are deleting records from a single dataset, all the identities you provide must have the same type, since a dataset can only have one identity namespace. If you are deleting from all datasets, you can include multiple identity types since different datasets may have different primary identities.
 
 There are two options to provide identities when deleting records:
 
 * [Upload a JSON file](#upload-json)
-* [Enter identity values manually](#manual-identity)
+* [Enter primary identity values manually](#manual-identity)
 
 ### Upload a JSON file {#upload-json}
 
@@ -110,7 +110,7 @@ The JSON file must be formatted as an array of objects, each object representing
 | Property | Description |
 | --- | --- |
 | `namespaceCode` | The identity type. |
-| `value` | The identity value as denoted by the type. |
+| `value` | The primary identity value as denoted by the type. |
 
 Once the file is uploaded, you can continue to [submit the request](#submit).
 
@@ -120,11 +120,11 @@ To enter identities manually, select **[!UICONTROL Add identity]**.
 
 ![The request creation workflow with the [!UICONTROL Add identity] option highlighted.](../images/ui/record-delete/add-identity.png)
 
-Controls appear that allow you to enter identities one at a time. Under **[!UICONTROL Primary Identity]**, use the dropdown menu to select the identity type. Under **[!UICONTROL Identity Value]**, provide the primary identity value for the record.
+Controls appear that allow you to enter identities one at a time. Under **[!UICONTROL identity namespace]**, use the dropdown menu to select the identity type. Under **[!UICONTROL Primary Identity Value]**, provide the identity namespace value for the record.
 
 ![The request creation workflow with an identity field manually added.](../images/ui/record-delete/identity-added.png)
 
-To add more identities, select the plus icon (![A plus icon.](../images/ui/record-delete/plus-icon.png)) next to one of the rows, or select **[!UICONTROL Add identity]**.
+To add more identities, select the plus icon (![A plus icon.](/help/images/icons/tree-expand-all.png)) next to one of the rows, or select **[!UICONTROL Add identity]**.
 
 ![The request creation workflow with the plus icon and the add identity icon highlighted.](../images/ui/record-delete/more-identities.png)
 

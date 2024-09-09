@@ -223,17 +223,17 @@ To remove datasets from an existing dataflow, follow the steps below:
 
     >[!TIP] 
     > 
-    >Select the filter icon ![Filter-icon](../assets/ui/edit-activation/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
+    >Select the filter icon ![Filter-icon](/help/images/icons/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
 
-1. From the **[!UICONTROL Activation data]** column, select the datasets control to view all datasets mapped to this export dataflow.
+2. From the **[!UICONTROL Activation data]** column, select the datasets control to view all datasets mapped to this export dataflow.
 
     ![The available datasets navigation option highlighted in the Activation data column.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog.
+3. The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog.
 
     ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/bulk-remove-datasets.png) 
 
-1. In the confirmation dialog, select **[!UICONTROL Remove]** to immediately remove the dataset from exports to the destination. 
+4. In the confirmation dialog, select **[!UICONTROL Remove]** to immediately remove the dataset from exports to the destination. 
 
     ![Dialog showing the Confirm dataset removal option from the dataflow.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
@@ -251,6 +251,9 @@ You can view and track your profile exports against your contractual limits in t
 
 Keep in mind the following limitations for the general availability release of dataset exports:
 
+* Currently, you can only export incremental files and an end date cannot be selected for your dataset exports.
+* Experience Platform may export multiple files even for small datasets. Dataset export is designed for system-to-system integration and optimized for performance, hence the number of exported files is not customizable.
+* Exported file names are currently not customizable.
 * Datasets created via API are currently not available for export. 
 * The UI does not currently block you from deleting a dataset that is being exported to a destination. Do not delete any datasets that are being exported to destinations. [Remove the dataset](#remove-dataset) from a destination dataflow before deleting it.
 * Monitoring metrics for dataset exports are currently mixed with numbers for profile exports so they do not reflect the true export numbers.

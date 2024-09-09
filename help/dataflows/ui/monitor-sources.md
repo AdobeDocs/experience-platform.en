@@ -56,9 +56,9 @@ The lower part of the dashboard displays a table that outlines the current metri
 
 | Metrics | Description |
 | --- | --- |
-| Records received | The total number of records received from the source. |
+| Records received | The total number of records received from a given source. |
 | Records ingested | The total number of records ingested to data lake. |
-| Records skipped | The total number of records skipped. |
+| Records skipped | The total number of records skipped. A skipped record refers to fields that were skipped because they were not required for ingestion. For example, if you create a sources dataflow with partial ingestion enabled, you can configure an acceptable error rate threshold. During the ingestion process, ingestion will skip records of fields that are not required, such as identity fields, so long as they are within the error threshold. |
 | Records failed | The total number of records that could not be ingested due to errors. |
 | Ingested rate | The percentage of records that were ingested based on the total number of records received. |
 | Total failed dataflows | The total number of dataflows that failed. |
@@ -77,13 +77,13 @@ You can further filter your data using the options provided above the metrics ta
 
 {style="table-layout:auto"}
 
-To monitor the data that is being ingested in a specific dataflow, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside a source.
+To monitor the data that is being ingested in a specific dataflow, select the filter icon ![filter](/help/images/icons/filter-add.png) beside a source.
 
 ![Monitor a specific dataflow by selecting the filter icon beside a given source.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 The metrics table updates to a table of active dataflows that correspond to the source that you selected. During this step, you can view additional information on your dataflows, including their corresponding dataset and data type, as well as a time stamp to indicate when they were last active. 
 
-To further inspect a dataflow, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside a dataflow.
+To further inspect a dataflow, select the filter icon ![filter](/help/images/icons/filter-add.png) beside a dataflow.
 
 ![The dataflows table in the monitoring dashboard.](../assets/ui/monitor-sources/select-dataflow.png)
 
@@ -91,7 +91,7 @@ Next, you are taken to an interface that lists all dataflow run iterations of th
 
 Dataflow runs represent an instance of dataflow execution. For example, if a dataflow is scheduled to run hourly at 9:00 AM, 10:00 AM, and 11:00 AM, then you would have three instances of a flow run. Flow runs are specific to your particular organization.
 
-To inspect metrics of a specific dataflow run iteration, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside your dataflow.
+To inspect metrics of a specific dataflow run iteration, select the filter icon ![filter](/help/images/icons/filter-add.png) beside your dataflow.
 
 ![The dataflow run metric page.](../assets/ui/monitor-sources/dataflow-page.png)
 

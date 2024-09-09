@@ -14,3 +14,5 @@ role: Admin,User,Developer,Leader
 * [AI Assistant UI guide](ui-guide.md)
 * [Privacy, Security, and Governance](privacy.md)
 * [FAQ](faq.md)
+* [Platform release notes](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+

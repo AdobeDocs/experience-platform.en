@@ -30,7 +30,7 @@ The **[!UICONTROL Expiring credentials]** section provides the following informa
 - **[!UICONTROL Port]**: The port number of the host to connect to.
 - **[!UICONTROL Database]**: The name of the database to connect a client to.
 - **[!UICONTROL Username]**: The username used to connect to Query Service.
-- **[!UICONTROL Password]**: The password used to connect to Query Service. Passwords in the UI have been hashed for security. Select the copy icon (![The copy icon.](../images/ui/credentials/copy-icon.png)) to copy your complete, un-hashed credentials to the clipboard.
+- **[!UICONTROL Password]**: The password used to connect to Query Service. Passwords in the UI have been hashed for security. Select the copy icon (![The copy icon.](/help/images/icons/copy.png)) to copy your complete, un-hashed credentials to the clipboard.
 - **[!UICONTROL PSQL command]**: A command that automatically has inserted all the relevant information for you to connect to Query Service using PSQL on the command line.
 - **[!UICONTROL Expires]**: The expiry date and time for the expiring credentials. The default validity duration of the token is 24 hours but it can be changed in the advanced settings of the Admin Console.
 
@@ -70,7 +70,11 @@ You can use non-expiring credentials to set up a more permanent connection to an
 
 >[!NOTE]
 >
->Non-expiring credentials have the following limitations:<br><ul><li>Users must log in with their username and password comprised of `{technicalAccountId}:{credential}`. More information can be found in the [Generate credentials](#generate-credentials) section.</li><li>Upon the creation of expiring credentials, a new role with a set of basic permissions is created that allows users to view schemas and datasets. The 'manage queries' permission is also assigned to this role for use with Query Service.</li><li>Third-party clients may perform differently than expected when listing out query objects. For example, some third-party clients such as [!DNL DB Visualizer] will not display the view name in the left panel. However, the view name is accessible if called within a SELECT query. Similarly, [!DNL PowerUI] might not list the temporary views created through the SQL to be selected for dashboard creation.</li></ul>
+>Non-expiring credentials have the following limitations:
+>
+>- Users must log in with their username and password in the format of `{technicalAccountId}:{credential}`. More information can be found in the [Generate credentials](#generate-credentials) section.
+>- By default, non-expiring credentials are granted permissions to execute only `SELECT` queries. To run `CTAS` or `ITAS` queries, manually add the "Manage Dataset" and "Manage Schemas" permissions to the role associated with the non-expiring credential. The "Manage Schemas" permission can be found under the "Data Modeling" section, and the "Manage Datasets" permission is located under the "Data Management" section of the [Adobe Developer Console](<https://developer.adobe.com/console/>).
+>- Third-party clients may perform differently than expected when listing out query objects. For example, some third-party clients such as [!DNL DB Visualizer] will not display the view name in the left panel. However, the view name is accessible if called within a `SELECT` query. Similarly, [!DNL PowerUI] might not list the temporary views created through SQL for selection in dashboard creation.
 
 ### Prerequisites
 
@@ -120,7 +124,7 @@ After you have saved your generated credentials, select **[!UICONTROL Close]**. 
 
 ![The Queries dashboard Credentials tab with the Non-expiring Credentials section highlighted.](../images/ui/credentials/list-credentials.png)
 
-You can either edit or delete your non-expiring credentials. To edit a non-expiring credential, select the pencil icon (![A pencil icon.](../images/ui/credentials/edit-icon.png)). To delete a non-expiring credential, select the delete icon (![A trash can icon.](../images/ui/credentials/delete-icon.png)).
+You can either edit or delete your non-expiring credentials. To edit a non-expiring credential, select the pencil icon (![A pencil icon.](/help/images/icons/edit.png)). To delete a non-expiring credential, select the delete icon (![A trash can icon.](/help/images/icons/delete.png)).
 
 When editing a non-expiring credential, a modal appears. You can provide the following details to update:
 

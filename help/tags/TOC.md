@@ -245,6 +245,8 @@ role: Developer
       * [Overview](./extensions/server/twitter/overview.md)
     * [!DNL Tiktok] Web Events API {#tiktok}
       * [Overview](./extensions/server/tiktok/overview.md)
+    * [!DNL The Trade Desk] {#thetradedesk}
+      * [Overview](./extensions/server/tradedesk/overview.md)
     * [!DNL Zendesk] Events API {#zendesk}
       * [Overview](./extensions/server/zendesk/overview.md)
 * Extension development {#extension-dev}
@@ -291,6 +293,7 @@ role: Developer
     * [Rules](./api/endpoints/rules.md)
     * [Rule components](./api/endpoints/rule-components.md)
     * [Extension packages](./api/endpoints/extension-packages.md)
+    * [Extension package usage authroizations](./api/endpoints/extension-package-usage-authorizations.md)
     * [Extensions](./api/endpoints/extensions.md)
     * [Libraries](./api/endpoints/libraries.md)
     * [Builds](./api/endpoints/builds.md)
@@ -307,6 +310,7 @@ role: Developer
     * [Delegate descriptor IDs](./api/guides/delegate-descriptor-ids.md)
     * [Encrypting values](./api/guides/encrypting-values.md)
     * [Error handling](./api/guides/error-handling.md)
+    * [Sharing private extension packages](./api/guides/extension-packages.md)
     * [Filtering responses](./api/guides/filtering.md)
     * [Paginating responses](./api/guides/pagination.md)
     * [Sorting responses](./api/guides/sorting.md)

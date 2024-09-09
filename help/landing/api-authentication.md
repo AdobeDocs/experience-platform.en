@@ -82,15 +82,15 @@ The **[!UICONTROL Add an API]** screen appears. Select the product icon for Adob
 >
 >Select the **[!UICONTROL View docs]** option to navigate in a separate browser window to the complete [Experience Platform API reference documentation](https://developer.adobe.com/experience-platform-apis/).
 
-### Select the OAuth Server-to-Server authentication type {#select-oauth-server-to-server}
+### Select the [!UICONTROL OAuth Server-to-Server] authentication type {#select-oauth-server-to-server}
 
-Next, select the authentication type to generate access tokens and access the Experience Platform API.
+Next, select the [!UICONTROL OAuth Server-to-Server] authentication type to generate access tokens and access the Experience Platform API.
 
 >[!IMPORTANT]
 >
->Select the **[!UICONTROL OAuth Server-to-Server]** method as this will be the only method supported moving forward. The **[!UICONTROL Service Account (JWT)]** method is deprecated. While integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new OAuth Server-to-Server method before that date. Get more information in the section [!BADGE Deprecated]{type=negative} [Generate a JSON Web Token (JWT)](#jwt).
+>The **[!UICONTROL OAuth Server-to-Server]** method is the only token generation method supported moving forward. The formerly supported **[!UICONTROL Service Account (JWT)]** method is deprecated and cannot be selected for new integrations. While existing integrations using the JWT authentication method will continue to work until January 1st, 2025, Adobe strongly recommends that you migrate existing integrations to the new [!UICONTROL OAuth Server-to-Server] method before that date. Get more information in the section [!BADGE Deprecated]{type=negative} [Generate a JSON Web Token (JWT)](#jwt).
 
-![Select Experience Platform API.](./images/api-authentication/oauth-authentication-method.png)
+![Select the OAuth Server-to-Server authentication method for the Experience Platform API.](./images/api-authentication/oauth-authentication-method.png)
 
 ### Select the product profiles for your integration {#select-product-profiles}
 
@@ -148,7 +148,7 @@ The next step is to generate an `{ACCESS_TOKEN}` credential for use in Platform 
 
 >[!WARNING]
 >
->The JWT method to generate access tokens has been deprecated. All new integrations must be created using the [OAuth Server-to-Server authentication method](#select-oauth-server-to-server). Adobe also recommends that you migrate your existing integrations to the OAuth method. Read the following important documentation:
+>The JWT method to generate access tokens has been deprecated. All new integrations must be created using the [OAuth Server-to-Server authentication method](#select-oauth-server-to-server). Adobe also requires that you migrate your existing integrations to the OAuth method by January 1st, 2025 for your integrations to continue to work. Read the following important documentation:
 > 
 > * [Migration guide for your applications from JWT to OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 >* [Implementation guide for new and old applications with OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
