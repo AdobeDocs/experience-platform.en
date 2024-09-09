@@ -213,7 +213,7 @@ Time constraints let you apply time restrictions on time-based attributes, event
 
 >[!IMPORTANT]
 >
->If you created a segment definition with the "This month" or "This year" time constraints prior to June 2024, you will need to re-save your segment definitions. Prior to June 2024, "this month" was based off of 30 days and "this year" was based off of 365 days.
+>If you created a segment definition with the "This month" or "This year" time constraints prior to June 2024, you will need to re-save your segment definitions. Prior to June 2024, "This month" was based off of 30 days and "This year" was based off of 365 days.
 
 The list of available time constraints are as follows:
 
@@ -282,7 +282,7 @@ The list of available time constraints for this operation differs from the main 
 
 >[!NOTE]
 >
->When using the After time constraint, the latter event can take place more than amount of time listed within the time constraint. >
+>When using the "After" time constraint, the latter event can take place more than the amount of time listed within the time constraint. >
 >For example, if you have a Page View event and a Checkout event, and you put the "After 1 hour" time constraint between these two events, a segment definition with a Checkout event 2 hours after the Page View event would qualify.
 >
 >Additionally, these two time constraints can be used in coordination with each other.
