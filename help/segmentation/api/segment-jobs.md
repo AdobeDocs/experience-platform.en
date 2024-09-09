@@ -916,18 +916,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
 
 **Response**
 
-A successful response returns HTTP status 204 with the following information.
-
-+++ A sample response when deleting a segment job.
-
-```json
-{
-    "status": true,
-    "message": "Segment job with id 'd3b4a50d-dfea-43eb-9fca-557ea53771fd' has been marked for cancelling"
-}
-```
-
-+++
+A successful response returns HTTP status 204 with an empty response body.
 
 ## Next steps
 

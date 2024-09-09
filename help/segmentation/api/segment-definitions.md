@@ -170,6 +170,61 @@ POST /segment/definitions
 
 **Request**
 
+When creating a new segment definition, you can create it in either the `pql/text` or `pql/json` format.
+
+>[!BEGINTABS]
+
+>[!TAB Using pql/text]
+
++++ A sample request to create a segment definition.
+
+```shell 
+curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "People who ordered in the last 30 days",
+        "description": "Last 30 days",
+        "expression": {
+            "type": "PQL",
+            "format": "pql/text",
+            "value": "workAddress.country = \"US\""
+        },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
+        "schema": {
+            "name": "_xdm.context.profile"
+        }
+    }'
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `name` | A unique name by which to refer to the segment definition. |
+| `description` | (Optional) A description of the segment definition you are creating. |
+| `expression` | An entity that contains fields information about the segment definition. |
+| `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
+| `expression.format` | Indicates the structure of the expression in value. Supported values include `pql/text` and `pql/json`. |
+| `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
+| `evaluationInfo` | (Optional) The type of segment definition you are creating. If you want to create a batch segment, set `evaluationInfo.batch.enabled` to be true. If you want to create a streaming segment, set `evaluationInfo.continuous.enabled` to be true. If you want to create an edge segment, set `evaluationInfo.synchronous.enabled` to be true. If left empty, the segment definition will be created as a **batch** segment. |
+| `schema` | The schema associated with the entities in the segment. Consists of either an `id` or `name` field. |
+
++++
+
+>[!TAB Using pql/json]
+
 +++ A sample request to create a segment definition.
 
 ```shell 
@@ -185,8 +240,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
         "description": "Last 30 days",
         "expression": {
             "type": "PQL",
-            "format": "pql/text",
-            "value": "workAddress.country = \"US\""
+            "format": "pql/json",
+            "value": "{\"nodeType\":\"fnApply\",\"fnName\":\"=\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"a\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}},{\"nodeType\":\"fieldLookup\",\"fieldName\":\"b\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}}]}"
         },
         "evaluationInfo": {
             "batch": {
@@ -209,15 +264,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | Property | Description |
 | -------- | ----------- |
 | `name` | A unique name by which to refer to the segment definition. |
-| `description` | (Optional.) A description of the segment definition you are creating. |
-| `evaluationInfo` | (Optional.) The type of segment definition you are creating. If you want to create a batch segment, set `evaluationInfo.batch.enabled` to be true. If you want to create a streaming segment, set `evaluationInfo.continuous.enabled` to be true. If you want to create an edge segment, set `evaluationInfo.synchronous.enabled` to be true. If left empty, the segment definition will be created as a **batch** segment. |
+| `description` | (Optional) A description of the segment definition you are creating. |
+| `evaluationInfo` | (Optional) The type of segment definition you are creating. If you want to create a batch segment, set `evaluationInfo.batch.enabled` to be true. If you want to create a streaming segment, set `evaluationInfo.continuous.enabled` to be true. If you want to create an edge segment, set `evaluationInfo.synchronous.enabled` to be true. If left empty, the segment definition will be created as a **batch** segment. |
 | `schema` | The schema associated with the entities in the segment. Consists of either an `id` or `name` field. |
 | `expression` | An entity that contains fields information about the segment definition. |
 | `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
-| `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.format` | Indicates the structure of the expression in value. |
 | `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
 
 +++
+
+>[!ENDTABS]
 
 **Response**
 
@@ -395,6 +452,10 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
     }'
 ```
 
+| Property | Description |
+| -------- | ----------- |
+| `ids` | An array that contains objects that state the IDs of the segment definitions you want to retrieve. |
+
 +++
 
 **Response**
@@ -554,6 +615,10 @@ PATCH /segment/definitions/{SEGMENT_ID}
 **Request**
 
 The following request will update the work address country from the USA to Canada.
+
+>[!NOTE]
+>
+>Since this API call **replaces** the content of the segment definition, please ensure **all** the fields you want to keep are included as part of the request body.
 
 +++ A sample request to update a segment definition.
 
