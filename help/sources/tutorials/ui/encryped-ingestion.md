@@ -114,11 +114,18 @@ From here, use the dropdown menu to select the public key ID that corresponds wi
 
 ![]
 
-If you also used the sign verification key pair to provide and additional layer of encryption, then enable the sign verification key toggle and then similarly, use the dropdown to select the sign verification jey ID that corresponds with the key that you used to encrypt your data.
+If you also used the sign verification key pair to provide and additional layer of encryption, then enable the sign verification key toggle and then similarly, use the dropdown to select the sign verification key ID that corresponds with the key that you used to encrypt your data.
 
 ![]
 
 When finished select **[!UICONTROL Next]**.
+
+Complete the remaining steps in the sources workflow to finish creating your dataflow.
+
+* Provide dataflow and dataset details
+* Map your source data to an XDM schema
+* Configure an ingestion schedule for your dataflow
+* Review your dataflow
 
 <!-- 
 ## Outline
