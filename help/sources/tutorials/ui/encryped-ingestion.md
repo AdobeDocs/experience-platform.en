@@ -40,27 +40,52 @@ It is helpful to have an understanding of the following Experience Platform feat
 >title="Encryption Key ID"
 >abstract="Provide the encryption key ID that corresponds with your encryption key that was used to encrypt your source data."
 
-What is an encryption key pair?
+>[!BEGINSHADEBOX]
+
+**What is an encryption key pair?**
+
+An encryption key pair is an asymmetric cryptography mechanism that consists of a public key and a private key. The public key is used to encrypt data and the private key is then used to decrypt said data. 
+
+You can create your encryption key pair through the Experience Platform UI. When generated, you will receive a public key and a corresponding key ID. Use the public key to encrypt your data and then use the key ID to confirm your identity, when you are in the process of ingesting your encrypted data. The private key automatically goes to Experience Platform, where it is stored in a secure vault, and will only be used once your data is ready for decryption.
+
+>[!ENDSHADEBOX]
 
 In the Platform UI, navigate to the sources workspace and then select [!UICONTROL Key Pairs] from the top header.
 
-![]
+![The sources catalog with the "Key Pairs" header selected.]
 
 You are taken to a page that displays a list of existing encryption key pairs in your organization. This page provides information on a given key's title, ID, type, encryption algorithm, expiry, and status. To create a new key pair, select **[!UICONTROL Create Key]**.
 
-![]
+![The Key Pairs page, with "encryption key" selected as the key type and the "create key" button selected.]
 
 Next, choose the key type that you want to make. To create an encryption key, select **[!UICONTROL Encryption Key]** and then select **[!UICONTROL Continue]**. 
 
-![]
+![The key creation window, with encryption key selected.]
 
 Provide a title and a passphrase for your encryption key. The passphrase is an additional layer of protection for your encryption keys. Upon creation, Experience Platform stores the passphrase in a different secure vault from the public key. You must provide a non-empty string as a passphrase. When finished, select **[!UICONTROL Create]**.
 
-![]
+![The encryption key creation window, where a title and a passphrase is provided.]
+
+If successful, a new window appears, displaying your new encryption key, including its title, public key, and key ID. Use the public key value to encrypt your data. You will use the key ID in a later step to prove your identity when ingesting your encrypted data during the dataflow creation process.
+
+![The window that displays information on your newly created encryption key pair.]
+
+To view information on an existing encryption key, select the ellipses (`...`) beside the key title. Select **[!UICONTROL Key details]** to view the public key and key ID. Alternatively, if you want to delete your encryption key, select **[!UICONTROL Delete]**.
+
+![The key pairs page, where a list of encryption keys are displayed. The ellipses beside "acme-encryption-key" is selected and the dropdown displays options to view key details or delete the keys.]
 
 ### Create a sign verification key {#create-a-sign-verification-key}
 
-What is a sign verification key?
+>[!CONTEXTUALHELP]
+>id="platform_sources_encrypted_signVerificationKeyId"
+>title="Sign Verification Key ID"
+>abstract="Provide the sign verification key ID that corresponds with your signed, encrypted source data."
+
+>[!BEGINSHADEBOX]
+
+**What is a sign verification key?**
+
+>[!ENDSHADEBOX]
 
 To create a sign verification key, select **[!UICONTROL Customer Key]** from the key type selection window and then select **[!UICONTROL Continue]**.
 
@@ -70,10 +95,6 @@ Next, provide a title and a public key, and then select **[!UICONTROL Create]**.
 
 ![]
 
->[!CONTEXTUALHELP]
->id="platform_sources_encrypted_signVerificationKeyId"
->title="Sign Verification Key ID"
->abstract="Provide the sign verification key ID that corresponds with your signed, encrypted source data."
 
 ## Ingest encrypted data {#ingest-encrypted-data}
 
