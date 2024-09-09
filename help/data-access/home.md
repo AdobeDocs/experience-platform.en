@@ -23,4 +23,4 @@ For more information about [!DNL Data Science Workspace], start by reading the [
 
 ## Subscribe to data ingestion events
 
-[!DNL Platform] makes specific high-value events available for subscription through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). For instance, you can subscribe to data ingestion events to be notified of potential delays and failures. See the tutorial on [subscribing to data ingestion notifications](../ingestion/quality/subscribe-events.md) for more information.
+[!DNL Platform] makes specific high-value events available for subscription through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). For instance, you can subscribe to data ingestion events to be notified of potential delays and failures. See the tutorial on [subscribing to Adobe event notifications](../observability/alerts/subscribe.md) for more information.
