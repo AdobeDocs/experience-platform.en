@@ -18,7 +18,7 @@ You can also use the Experience Platform APIs to export datasets. Read the [expo
 
 The datasets that you can export vary based on the Experience Platform application (Real-Time CDP, Adobe Journey Optimizer), the tier (Prime or Ultimate), and any add-ons that you purchased (for example: Data Distiller).
 
-Understand from the table below which dataset types you can export depending on your application, product tier, and any add-ons purchased:
+Use the table below to understand which dataset types you can export depending on your application, product tier, and any add-ons purchased:
 
 <table>
 <thead>
@@ -50,7 +50,7 @@ Understand from the table below which dataset types you can export depending on 
   <tr>
     <td>Customer Journey Analytics</td>
     <td>All</td>
-    <td> Profile and Experience Event datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager. </td>
+    <td> Profile and Experience Event datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
@@ -137,7 +137,7 @@ Use the **[!UICONTROL Scheduling]** step to:
 
 * Set a start date and an end date, as well as an export cadence for your dataset exports.
 * Configure if the exported dataset files should export the complete membership of the dataset or just incremental changes to the membership on each export occurrence.  
-* Customize the folder path in your storage location where datasets should be exported. Read more about how to [edit the folder path](#edit-folder-path).
+* Customize the folder path in your storage location where datasets should be exported. Read more about how to [edit the export folder path](#edit-folder-path).
 
 Use the **[!UICONTROL Edit schedule]** control on the page to edit the export cadence of exports, as well as to select whether to export full or incremental files.
 
@@ -211,7 +211,7 @@ Note the difference in file format between the two file types, when compressed:
 * When exporting compressed JSON files, the exported file format is `json.gz`
 * When exporting compressed parquet files, the exported file format is `gz.parquet`
 
-Exports to JSON files are supported in a compressed mode only. Exports to Parquet files are supported in a compressed and uncompressed mode.
+Exports to JSON files are supported *in a compressed mode only*. Exports to Parquet files are supported in a compressed and uncompressed mode.
 
 ## Remove datasets from destinations {#remove-dataset}
 
