@@ -25,6 +25,10 @@ GET /audiences
 GET /audiences?{QUERY_PARAMETERS}
 ```
 
+>[!NOTE]
+>
+>If you use this endpoint without any query parameters, only **published** audiences will be returned.
+
 The following query parameters can be used when retrieving a list of audiences:
 
 | Query parameter | Description | Example |
