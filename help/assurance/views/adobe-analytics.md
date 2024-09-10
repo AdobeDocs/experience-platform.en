@@ -17,7 +17,7 @@ To use this view, complete the following steps:
 
 ## Analytics Edge view
 
-The Analytics Edge view will be used if you are utilizing **Edge Network** or **Edge Bridge** mobile extensions. This view is enabled when the "Analytics Edge View" toggle switch in the top right corner is activated, displaying the Analytics events sent via Edge network in your current session. This includes all events that have been fired by Lifecycle extension, Edge extension, and/or Edge Bridge extension.
+Use the Analytics Edge view if you are using **Edge Network** or **Edge Bridge** mobile extensions. This view is enabled when the "Analytics Edge View" toggle switch in the top right corner is activated, displaying the Analytics events sent via Edge network in your current session. This includes all events that have been fired by Lifecycle extension, Edge extension, and/or Edge Bridge extension.
 
 ![An image that shows toggle which switched to Analytics Edge View.](./images/adobe-analytics/edge-analytics-view-toggle.png)
 
@@ -29,15 +29,15 @@ The **Post-Processed Data** event in the list confirms that the data has been su
 
 ### Analytics Edge Event details view
 
-For an Edge request event or an Analytics track event, the detailed view contains the following parts:
+For an Edge request event or an Analytics track event, the detailed view contains the following information:
 
 * Event Details: An originating SDK edge request event.
 * Edge Bridge Request: An event exclusively for the Edge Bridge Extension workflow.
 * Datastream: An event represented for datastream for this session.
-* Edge Hit Received: Represent the hit received from Edge.
-* Edge Hit Processed: Represent the hit processed in Edge.
-* Analytics Hit: Represent the hit received from Analytics.
-* Analytics Mapping: Represent the data mapping status in Analytics.
+* Edge Hit Received: Represents the hit received from Edge.
+* Edge Hit Processed: Represents the hit processed in Edge.
+* Analytics Hit: Represents the hit received from Analytics.
+* Analytics Mapping: Represents the data mapping status in Analytics.
 * Analytics Responsed: The response status from Analytics. 
 * Post-process Data: Information on the event that contains the mapping of revars, evars, and props.
 
@@ -49,11 +49,11 @@ The Analytics Edge validation view allows you to easily see the results on valid
 
 ## Analytics Events View
 
-The Analytics Event View will be used if you are utilizing the **Adobe Analytics** mobile extension. This view allows you to easily see Analytics Events sent from your connected client, including Track Action, Track State, and Lifecycle events. This view is active while the "Analytics Edge View" toggle on the top right is disabled.
+Use the Analytics Event View if you are using the **Adobe Analytics** mobile extension. This view allows you to easily see Analytics Events sent from your connected client, including Track Action, Track State, and Lifecycle events. This view is active when the "Analytics Edge View" toggle on the top right is disabled.
 
 ![An image that shows toggle which switched to Analytics View.](./images/adobe-analytics/direct-analytics-view-toggle-button.png)
 
-By selecting one of the Analytics events in the event table, details of how the event were processed can be viewed on the right panel.
+By selecting one of the Analytics events in the event table, details of how the event was processed can be viewed on the right panel.
 
 ![An image demonstrating different components in the Analytics Events View.](./images/adobe-analytics/analytics-events.png)
 
