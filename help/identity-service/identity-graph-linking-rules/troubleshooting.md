@@ -290,3 +290,80 @@ You can use the following query in profile snapshot export dataset to obtain sam
 >[!TIP]
 >
 >The two queries listed above will yield expected results if the sandbox is not enabled for the shared device interim approach and will behave differently from identity graph linking rules.
+
+## Frequently asked questions {#faq}
+
+This section outlines a list of answers to frequently asked questions about identity graph linking rules.
+
+### Identity optimization algorithm {#identity-optimization-algorithm}
+
+#### I have a CRMID for each of my business unites (B2C CRMID, B2B CRMID), but I don't have a unique namespace across all of my profiles. What will happen if I mark B2C CRID and B2B CRMID as unique, and enable my identity settings?
+
+This scenario is unsupported. Therefore, you may see graphs collapse in cases where a user uses their B2C CRMID to login, and another user uses their B2B CRMID to login. For more information, read the [shared device scenario](./configuration.md#shared-device-scenario) in the implementation page.
+
+#### Does identity optimization algorithm 'fix' existing collapsed graphs?
+
+Existing collapsed graphs will be affected ('fixed') by the graph algorithm only if these graphs get updated after you save your new settings.
+
+#### If two people log in and out using the same device, what happens to the events? Will all events transfer over to the last authenticated user?
+
+* Anonymous events (events with ECID as primary identity on Real-Time Customer Profile) will transfer to the last authenticated user. This is because the ECID will be linked to the CRMID of the last authenticated user (on Identity Service).
+* All authenticated events (events with CRMID defined as primary identity) will remain with the person.
+
+For more information, read the guide on [determining the primary identity for experience events](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events).
+
+#### How will journeys in Adobe Journey Optimizer be impacted when the ECID is transferring from one person to another? 
+
+As explained above, the CRMID of the last authenticated user will be linked to the ECID (shared device). ECIDs can be reassigned from one person to another based on user behavior. The impact will depend on how the journey is constructed, so it is important that customers test out the journey in a development sandbox environment to validate the behavior. 
+
+The key points to highlight are as follows: 
+
+* Once a profile enters a journey, ECID re-assignment does not result in the profile existing in the middle of a journey.
+  * Journey exits are not triggered by graph changes.
+* If a profile is no longer associated with an ECID, then this may result in changing the journey path if there is a condition that uses audience qualification. 
+  * ECID removal may change events associated to a profile, which could result in changes in audience qualification.
+* Re-entry of a journey is dependent on journey properties.
+  * If you disable re-entry of a journey, once a profile exits from that journey, the same profile will not re-enter for 91 days (based on global journey timeout).
+* If a journey starts with an ECID namespace, the profile that enters and the profile that receives the action (ex. Email, offer) may be different depending on how the journey is designed.
+  * For example, if there is a wait condition between actions, and the ECID transfers during the waiting period, a different profile may be targeted.
+  * With this feature, ECID are no longer always associated with one profile.
+  * The recommendation is to start journeys with person namespaces (CRMID).
+
+### Namespace priority
+
+#### I've enabled my identity settings. What happens to my settings if I want to add a custom namespace after the settings has been enabled? 
+
+There are two 'buckets' of namespaces: person namespaces and device/cookie namespaces. The newly created custom namespace will have the lowest priority in each 'bucket' so that this new custom namespace does not impact existing data ingestion.
+
+#### If Real-Time Customer Profile is no longer using the 'primary' flag on identityMap, does this value still need to be sent? 
+
+Yes, the 'primary' flag on identityMap is used by other services. For more information, read the guide on [the implications of namespace priority on other Experience Platform services](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
+
+#### Will namespace priority apply to Profile record datasets in Real-Time Customer Profile?
+
+No. Namespace priority will only apply to Experience Event datasets using the Experience Data Model (XDM) ExperienceEvent Class.
+
+#### How does this feature work in tandem with the identity graph guardrails of 50 identities per graph? Does namespace priority affect this system defined guardrail? 
+
+The identity optimization algorithm will be applied first to ensure person entity representation. Afterwards, if the graph tries to exceed the [identity graph guardrail](../guardrails.md) (50 identities per graph), then this logic will be applied. Namespace priority does not affect the deletion logic of the 50 identity/graph guardrail. 
+
+
+### Testing
+
+#### What are some of the scenarios I should be testing in a development sandbox environment? 
+
+Generally speaking, testing on a development sandbox should mimic the use cases you intend to execute on your production sandbox. Refer to the following table for some key areas to validate, when conducting comprehensive testing: 
+
+| Test case | Test steps | Expected outcome |
+| --- | --- | --- |
+| Accurate person entity representation | <ul><li>Mimic anonymous browsing</li><li>Mimic two people (John, Jane) logging in using the same device</li></ul> | <ul><li>Both John and Jane should be associated to their attributes and authenticated events.</li><li>The last authenticated user should be associated to the anonymous browsing events.</li></ul> |
+| Segmentation | Create four segments (**NOTE**: each segment should have one batch and one streaming). <ul><li>Segment A: Segment qualification based on John's authenticated events.</li><li>Segment B: Segment qualification based on Jane's authenticated events.</li></ul> | Regardless of shared device scenarios, John and Jane should always qualify for their respective segments. |
+| Audience qualification / unitary journeys on Adobe Journey Optimizer | <ul><li>Create a journey starting with an audience qualification activity (such as the streaming segmentation created above).</li><li>Create a journey starting with a unitary event. This unitary event should be an authenticated event.</li><li>You must disable re-entry when creating these journeys.</li></ul> | <ul><li>Regardless of shared device scenarios, John and Jane should trigger the respective journeys that they should enter.</li><li>John and Jane should not re-enter the journey when the ECID is transferred back to them.</li></ul> |
+
+{style="table-layout:auto"}
+
+#### How do I validate that this feature is working as expected?
+
+Use the [graph simulation tool](./graph-simulation.md) to validate that the feature is working at an individual graph level.
+
+To validate the feature at a sandbox level, refer to the [!UICONTROL Graph count with multiple namespaces] section in the identity dashboard.
