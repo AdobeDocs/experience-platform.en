@@ -15,17 +15,14 @@ This tutorial covers the steps for exploring existing schemas, classes, field gr
 ## Look up a schema resource {#lookup}
 
 In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. The [!UICONTROL Schemas] workspace provides a **[!UICONTROL Browse]** tab to explore all schemas in your organization, along with additional dedicated tabs for exploring **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, **[!UICONTROL Data types]**, and **[!UICONTROL Relationships]** respectively.
-<!-- Update image below -->
-![](../images/ui/explore/tabs.png)
+
+![The Schemas workspace with several tabs highlighted.](../images/ui/explore/tabs.png)
 
 The filter icon (![Filter Icon Image](/help/images/icons/filter.png)) reveals controls in the left rail to narrow down listed results. Resource filters are only available for the **[!UICONTROL Browse]** and **[!UICONTROL Relationships]** tabs. The filter controls are different for schemas and relationships.
 
-<!-- OBSOLETE
-For example, to filter the list to only show standard data types provided by Adobe, select **[!UICONTROL Datatype]** and **[!UICONTROL Adobe]** under the **[!UICONTROL Type]** and **[!UICONTROL Owner]** sections, respectively. -->
+On the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, you can filter your schema inventory. Use the **[!UICONTROL Included in Profile]** toggle to only show schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md). Use the **[!UICONTROL Show adhoc schemas]** toggle to filter the list of schemas that were created with fields that are namespaced for use only by a single dataset.
 
-On the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, you can filter your schema inventory, use the **[!UICONTROL Included in Profile]** toggle to only show schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md). Use the **[!UICONTROL Show adhoc schemas]** toggle to filter the list of schemas that were created with fields that are namespaced for use only by a single dataset.
-
-![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with the filters panel highlighted.](../images/ui/explore/filter.png)
+![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with the filters panel highlighted.](../images/ui/explore/filters.png)
 
 On the [!UICONTROL Relationship] tab of the [!UICONTROL Schemas] workspace, you can filter the list of relationships based on four criteria. The filters include [!UICONTROL Source schema], [!UICONTROL Destination schema], [!UICONTROL Source class], and the [!UICONTROL Destination class]. The filters are described in the table below.
 
@@ -36,16 +33,13 @@ On the [!UICONTROL Relationship] tab of the [!UICONTROL Schemas] workspace, you 
 | [!UICONTROL Source class]         | To filter relationships based on the class of the initiating schema, select a class from the [!UICONTROL Source class] dropdown menu. |
 | [!UICONTROL Destination class]    | To display relationships that end with schemas of a specific class, select a class from the [!UICONTROL Destination class] dropdown menu. |
 
+{style="table-layout:auto"}
 
-<!-- OBSOLETE
-When listing resources on the **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, or **[!UICONTROL Data types]** tabs, you can select **[!UICONTROL Adobe]** to only show standard resources or **[!UICONTROL Customer]** to only show resources created by your organization. -->
-
-<!-- OBSOLETE
- ![](../images/ui/explore/filter-data-type.png) -->
+![The Relationships tab with the filters section highlighted.](../images/ui/explore/relationships-filter.png)
 
 You can also use the search bar to narrow down results further.
 
-![](../images/ui/explore/search.png)
+![The Browse tab of the Schemas workspace with the search field highlighted.](../images/ui/explore/search.png)
 
 The resources displayed in search results are ordered first by title matches, then by description matches. In turn, the more word matches in either of these categories, the higher the resource appears in the list.
 
@@ -55,11 +49,11 @@ When you have found the resource you want to explore, select its name from the l
 
 Once you select a resource, its structure opens in the canvas.
 
-![](../images/ui/explore/canvas.png)
+![The Datatype workspace canvas displaying the Commerce datatype.](../images/ui/explore/canvas.png)
 
 All object-type fields containing sub-properties are collapsed by default when they first appear in the canvas. To show the sub-properties of any field, select the icon next to its name.
 
-![](../images/ui/explore/field-expand.png)
+![The Datatype workspace canvas with expanded fields and sub-properties highlighted.](../images/ui/explore/field-expand.png)
 
 ### Standard class and field group indicator {#standard-class-and-field-group-indicator}
 
@@ -116,8 +110,8 @@ If you are inspecting a schema that contains a relationship field, the field wil
 ![The Schema Editor with the relationship field and Edit relationship highlighted.](../images/ui/explore/relationship-field.png)
 
 To view the identity namespace of the reference schema's primary identity, select the relationship field, then **[!UICONTROL Edit relationship]** in the [!UICONTROL Field properties] sidebar. The parameters for the relationship are displayed in the [!UICONTROL Edit relationship] dialog that appears.
-<!-- WIP  -->
-![]()
+
+![The Edit relationship dialog with the relationship parameters displayed.](../images/ui/explore/edit-relationship-dialog.png)
 
 See the tutorial on [creating a relationship in the UI](../tutorials/relationship-ui.md) for more information on the use of relationships in XDM schemas.
 
