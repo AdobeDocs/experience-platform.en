@@ -14,7 +14,7 @@ This tutorial covers the steps for exploring existing schemas, classes, field gr
 
 ## Look up a schema resource {#lookup}
 
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. The [!UICONTROL Schemas] workspace provides a **[!UICONTROL Browse]** tab to explore all schemas in your organization, along with additional dedicated tabs for exploring **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, and **[!UICONTROL Data types]** respectively.
+In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. The [!UICONTROL Schemas] workspace provides a **[!UICONTROL Browse]** tab to explore all schemas in your organization, along with additional dedicated tabs for exploring **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, **[!UICONTROL Data types]**, and **[!UICONTROL Relationships]** respectively.
 
 ![](../images/ui/explore/tabs.png)
 
@@ -98,17 +98,15 @@ Identity fields are highlighted in the canvas with a fingerprint icon (![Fingerp
 
 ### Relationship fields {#relationship}
 
-<!-- PLAT-203414 Minor edits to page -->
+If you are inspecting a schema that contains a relationship field, the field will be listed in the left rail under **[!UICONTROL Relationships]**. Select the relationship field name in the left rail to reveal the field in the canvas, regardless of how deeply it is nested. Relationship fields are also uniquely highlighted in the canvas, showing the name of the reference schema that the field links to.
 
-If you are inspecting a schema that contains a relationship field, the field will be listed in the left rail under **[!UICONTROL Relationships]**. Select the relationship field name in the left rail to reveal the field in the canvas, regardless of how deeply it is nested.
+![The Schema Editor with the relationship field and Edit relationship highlighted.](../images/ui/explore/relationship-field.png)
 
-Relationship fields are also uniquely highlighted in the canvas, showing the name of the reference schema that the field links to. If you select the relationship field's name, you can view the identity namespace of the reference schema's primary identity in the right rail.
+To view the identity namespace of the reference schema's primary identity, select the relationship field, then **[!UICONTROL Edit relationship]** in the [!UICONTROL Field properties] sidebar. The parameters for the relationship are displayed in the [!UICONTROL Edit relationship] dialog that appears.
+<!-- WIP  -->
+![]()
 
-![](../images/ui/explore/relationship-field.png)
-
->[!NOTE]
->
->See the tutorial on [creating a relationship in the UI](../tutorials/relationship-ui.md) for more information on the use of relationships in XDM schemas.
+See the tutorial on [creating a relationship in the UI](../tutorials/relationship-ui.md) for more information on the use of relationships in XDM schemas.
 
 ## Next steps
 
