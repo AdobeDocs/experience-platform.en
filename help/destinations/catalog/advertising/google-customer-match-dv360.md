@@ -76,9 +76,9 @@ To promote the release, they upload email addresses from their CRM database into
 This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -216,6 +216,12 @@ Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon ac
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 
 ![Apply transformation control highlighted in the Mapping step of the activation workflow.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
+
+## Monitor destination {#monitor-destination}
+
+After connecting to the destination and establishing a destination dataflow, you can use the [monitoring functionality](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP to get extensive information about the profile records activated to your destination in each dataflow run. 
+
+The monitoring information for the [!DNL Google Customer Match + Display & Video 360] connection includes audience-level information related to activated, excluded, and failed identities in each dataflow and dataflow run. [Read more](/help/dataflows/ui/monitor-destinations.md#segment-level-view) about the functionality. 
 
 ## Verify that audience activation was successful {#verify-activation}
 

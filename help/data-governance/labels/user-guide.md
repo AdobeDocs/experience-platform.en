@@ -16,7 +16,7 @@ This user guide covers steps for working with data usage labels within the [!DNL
 
 ## Manage labels {#manage-labels}
 
-To apply labels to your data, you need the **[!UICONTROL Manage Usage Labels]** permission for use on the default production sandbox called "prod". To create a custom label, you must also have administrative rights on the product profile. Each organization only has one list of applicable labels, and currently, deleting labels is not supported.
+To apply labels to your data, you need the **[!UICONTROL Manage Usage Labels]** permission for use on the default production sandbox called "prod". To create a custom label, you must also have administrative rights on the product profile. Each organization only has one list of applicable labels. You **cannot** delete labels. Instead you can remove them from the datasets or fields to which they are applied.
 
 See the guide on how to [configure permissions](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) or the [access control overview](../../access-control/home.md) for more information on how to assign a permission. If you do not have access to the Admin Console for your organization, please contact your organization admin.
 
@@ -30,7 +30,7 @@ You can add labels directly to a schema or fields within that schema. Any fields
 >
 >![The data governance policy violation detected dialog with violation summary and data lineage diagram highlighted.](../images/labels/policy-violation-dialog.png)
 >
->See the [data usage policy violation documentation](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation) for more information on partial policy violations.
+>See the [data usage policy violation documentation](../enforcement/auto-enforcement.md#data-usage-violation) for more information on policy violations.
 
 In order to manage data usage labels at the schema level, you must select an existing schema or create a new one. After logging into Adobe Experience Platform, select **[!UICONTROL Schemas]** on the left-navigation to open the **[!UICONTROL Schemas]** workspace. This page lists all created schemas belonging to your organization, along with useful details related to each schema. 
 
@@ -65,7 +65,7 @@ Labels can be applied to the entire dataset from the **[!UICONTROL Data Governan
 
 ![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with Data Governance highlighted.](../images/labels/dataset-governance.png)
 
-To edit data usage labels at the dataset level, start by selecting the pencil icon (![A pencil icon.](../images/labels/edit-icon.png)) in the row of the dataset name.
+To edit data usage labels at the dataset level, start by selecting the pencil icon (![A pencil icon.](/help/images/icons/edit.png)) in the row of the dataset name.
 
 ![The [!UICONTROL Data Governance] tab of the [!UICONTROL Datasets] workspace with the edit pencil icon highlighted.](../images/labels/dataset-level-edit.png)
 

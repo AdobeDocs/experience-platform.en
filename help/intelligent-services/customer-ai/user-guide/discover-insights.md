@@ -174,7 +174,7 @@ Hovering over the lines displays the date and actual/expected rate for that day 
 
 ![Bucket example](../images/insights/churn_tab.png)
 
-You can filter the timeframe for the expected and actual rates being displayed. Select the **calendar icon** ![icon](../images/insights/calendar_icon.png)then select a new date range. The results in each of the buckets are updated to display within the new date range.
+You can filter the timeframe for the expected and actual rates being displayed. Select the **calendar icon** ![icon](/help/images/icons/calendar.png)then select a new date range. The results in each of the buckets are updated to display within the new date range.
 
 ![Date selector](../images/insights/date_selector.png)
 

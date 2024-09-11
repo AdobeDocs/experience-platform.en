@@ -464,7 +464,7 @@ Select **[!UICONTROL View more]** to open a full-screen dialog that contains mor
 
 ![The Audience overlap report widget with View more highlighted .](../images/profiles/profiles-audience-overlap-report.png)
 
-The [!UICONTROL Audience overlap report] dialog appears. This dialog can contain up to 50 rows of audience overlap analyses broken down into six columns. To remove or add columns from the table, select the settings icon (![The settings icon.](../images/profiles/settings-icon.png)).
+The [!UICONTROL Audience overlap report] dialog appears. This dialog can contain up to 50 rows of audience overlap analyses broken down into six columns. To remove or add columns from the table, select the settings icon (![The settings icon.](/help/images/icons/settings.png)).
 
 ![The Audience overlap report dialog.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
@@ -500,7 +500,7 @@ To see comprehensive information on an audience, select an audience name from th
 
 ![The Audiences size widget with an audience name and the View all audiences text highlighted.](../images/profiles/audiences-size-view-all-audiences.png)
 
-See the documentation for more information on the [[!UICONTROL Audiences] [!UICONTROL  Browse] tab](../../segmentation/ui/overview.md#browse).
+More information about audience details can be found in the [Audience Portal documentation](../../segmentation/ui/audience-portal.md).
 
 ### [!UICONTROL Audience overlap by merge policy] {#audience-overlap-by-merge-policy}
 

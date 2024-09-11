@@ -35,18 +35,16 @@ In order to authenticate your [!DNL Event Hubs] source connector, you must provi
 | --- | --- |
 | SAS key name | The name of the authorization rule, which is also known as the SAS key name. |
 | SAS key | The primary key of the [!DNL Event Hubs] namespace. The `sasPolicy` that the `sasKey` corresponds to must have `manage` rights configured in order for the [!DNL Event Hubs] list to be populated. |
-| Namespace | The namespace of the [!DNL Event Hubs] you are accessing. An [!DNL Event Hubs] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
+| Namespace | The namespace of the [!DNL Event Hub] you are accessing. An [!DNL Event Hub] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
 
 >[!TAB SAS authentication]
 
 | Credential | Description |
 | --- | --- |
 | SAS key name | The name of the authorization rule, which is also known as the SAS key name. |
-| SAS key | The primary key of the [!DNL Event Hubs] namespace. The `sasPolicy` that the `sasKey` corresponds to must have `manage` rights configured in order for the [!DNL Event Hubs] list to be populated. |
-| Namespace | The namespace of the [!DNL Event Hubs] you are accessing. An [!DNL Event Hubs] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
-| Event Hub name | The name for your [!DNL Event Hubs] source. |
-
-For more information on shared access signatures (SAS) authentication for [!DNL Event Hubs], read the [[!DNL Azure] guide on using SAS](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+| SAS key | The primary key of the [!DNL Event Hub] namespace. The `sasPolicy` that the `sasKey` corresponds to must have `manage` rights configured in order for the [!DNL Event Hubs] list to be populated. |
+| Namespace | The namespace of the [!DNL Event Hub] you are accessing. An [!DNL Event Hub] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
+| Event Hub name | Fill in your [!DNL Azure Event Hub] name. Read the [Microsoft documentation](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) for more information on [!DNL Event Hub] names. |
 
 >[!TAB Event Hub Azure Active Directory Auth]
 
@@ -55,7 +53,7 @@ For more information on shared access signatures (SAS) authentication for [!DNL 
 | Tenant ID | The tenant ID that you want to request permission from. Your tenant ID can be formatted as a GUID or as a friendly name. **Note**: The tenant ID is referred to as the "Directory ID" in the [!DNL Microsoft Azure] interface. |
 | Client ID | The application ID assigned to your app. You can retrieve this ID from the [!DNL Microsoft Entra ID] portal where you registered your [!DNL Azure Active Directory]. |
 | Client Secret Value | The client secret that is used alongside the client ID to authenticate your app. You can retrieve your client secret from the [!DNL Microsoft Entra ID] portal where you registered your [!DNL Azure Active Directory]. |
-| Namespace | The namespace of the [!DNL Event Hubs] you are accessing. An [!DNL Event Hubs] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
+| Namespace | The namespace of the [!DNL Event Hub] you are accessing. An [!DNL Event Hub] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
 
 For more information on [!DNL Azure Active Directory], read the [Azure guide on using Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
 
@@ -66,8 +64,8 @@ For more information on [!DNL Azure Active Directory], read the [Azure guide on 
 | Tenant ID | The tenant ID that you want to request permission from. Your tenant ID can be formatted as a GUID or as a friendly name. **Note**: The tenant ID is referred to as the "Directory ID" in the [!DNL Microsoft Azure] interface. |
 | Client ID | The application ID assigned to your app. You can retrieve this ID from the [!DNL Microsoft Entra ID] portal where you registered your [!DNL Azure Active Directory]. |
 | Client Secret Value | The client secret that is used alongside the client ID to authenticate your app. You can retrieve your client secret from the [!DNL Microsoft Entra ID] portal where you registered your [!DNL Azure Active Directory]. |
-| Namespace | The namespace of the [!DNL Event Hubs] you are accessing. An [!DNL Event Hubs] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
-| Event Hub name | The name for your [!DNL Event Hubs] source. |
+| Namespace | The namespace of the [!DNL Event Hub] you are accessing. An [!DNL Event Hub] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
+| Event Hub name  | Fill in your [!DNL Azure Event Hub] name. Read the [Microsoft documentation](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) for more information on [!DNL Event Hub] names. |
 
 For more information on [!DNL Azure Active Directory], read the [Azure guide on using Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
 

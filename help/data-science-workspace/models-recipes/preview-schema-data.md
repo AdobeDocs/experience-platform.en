@@ -8,6 +8,12 @@ exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
 ---
 # Preview the retail sales schema and dataset
 
+>[!NOTE]
+>
+>Data Science Workspace is no longer available for purchase.
+>
+>This documentation is intended for existing customers with prior entitlements to Data Science Workspace.
+
 Upon successful completion of the bootstrap script from the [retail sales schema and dataset](./create-retails-sales-dataset.md) tutorial. Output schemas and datasets can be viewed on [!DNL Experience Platform]. To view the schemas and datasets follow the steps below:
 
 Select the **[!UICONTROL Schemas]** tab located in the left-navigation and find the input schema created by the bootstrap script. The name of the schema will correspond to what was defined in `config.yaml` from the previous step. View the schema details and it's composition by clicking into it.

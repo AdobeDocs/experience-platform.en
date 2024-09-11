@@ -28,9 +28,9 @@ HTTP endpoints can be either customers' own systems or third-party solutions.
 This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -70,6 +70,8 @@ If you want to use [!DNL mTLS] with [!DNL HTTP API] destinations, the server add
 If you want to check the [!DNL Common Name] (CN) and [!DNL Subject Alternative Names] (SAN) to do additional third-party validation, you can download the certificate below:
 
 * [HTTP API mTLS public certificate](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
+
+You can also securely retrieve public certificates by making a GET request to the MTLS endpoint. See the [public certificate endpoint documentation](../../../data-governance/mtls-api/public-certificate-endpoint.md) for more information. 
 
 ## IP address allowlist {#ip-address-allowlist}
 

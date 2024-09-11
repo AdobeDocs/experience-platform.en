@@ -8,15 +8,15 @@ exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 
 ## Overview {#overview}
 
-[!DNL The Trade Desk] destination helps you send profile data to [!DNL The Trade Desk].
+Use this destination connector to send profile data to [!DNL The Trade Desk]. This connector sends data to the [!DNL The Trade Desk] first-party endpoint. The integration between Adobe Experience Platform and [!DNL The Trade Desk] does not support exporting data to the [!DNL The Trade Desk] third-party endpoint.
 
-[!DNL The Trade Desk] is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video, and mobile inventory sources.
+[!DNL The Trade Desk] is a self-service platform for ad buyers to execute retargeting and audience-targeted digital campaigns across display, video, and mobile inventory sources.
 
-To send profile data to [!DNL Trade Desk], you must first connect to the destination.
+To send profile data to [!DNL Trade Desk], you must first connect to the destination, as described in the following sections of this page.
 
 ## Use cases {#use-cases}
 
-As a marketer, I want to be able to use audiences built off of [!DNL Trade Desk IDs] or device IDs to create retargeting or audience targeted digital campaigns.
+As a marketer, I want to be able to use audiences built off of [!DNL Trade Desk IDs] or device IDs to create retargeting or audience-targeted digital campaigns.
 
 ## Supported identities {#supported-identities}
 
@@ -35,9 +35,9 @@ As a marketer, I want to be able to use audiences built off of [!DNL Trade Desk 
 This section describes which types of audiences you can export to this destination.
 
 | Audience origin | Supported | Description | 
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).|
-| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads | ✓ | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 
@@ -56,7 +56,7 @@ Refer to the table below for information about the destination export type and f
 
 >[!IMPORTANT]
 >
->If you are looking to create your first destination with [!DNL The Trade Desk] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL The Trade Desk] integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
+>If you are looking to create your first destination with [!DNL The Trade Desk] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL The Trade Desk] integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
 
 ## Connect to the destination {#connect}
 
@@ -73,7 +73,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
 * **[!UICONTROL Account ID]**: Your [!DNL Trade Desk] [!UICONTROL Account ID].
-* **[!UICONTROL Server Location]**: Ask your [!DNL Trade Desk] representative which regional server you should use. These are the available regional servers you can choose from:
+* **[!UICONTROL Server Location]**: Ask your [!DNL Trade Desk] representative which regional server you should use. Below are the available regional servers that you can choose from:
   * **[!UICONTROL Europe]**
   * **[!UICONTROL Singapore]**
   * **[!UICONTROL Tokyo]**
@@ -98,7 +98,7 @@ See [Activate audience data to streaming audience export destinations](../../ui/
 
 In the [Audience schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map your audiences to their corresponding ID or friendly name in the destination platform.
 
-When mapping segments, we recommend you use the Platform audience name or a shorter form of it, for ease of use. However, the audience ID or name in your destination does not need to match the one in your Platform account. Any value you insert in the mapping field will be reflected by the destination.
+When mapping audiences, Adobe recommends that you use the Platform audience name or a shorter form of it, for ease of use. However, the audience ID or name in your destination does not need to match the one in your Platform account. Any value you insert in the mapping field will be reflected by the destination.
 
 If you are using multiple device mappings (cookie IDs, [!DNL IDFA], [!DNL GAID]), make sure to use the same mapping value for all three mappings. [!DNL The Trade Desk] will aggregate all of them into a single segment, with a device-level breakdown.
 
@@ -106,4 +106,4 @@ If you are using multiple device mappings (cookie IDs, [!DNL IDFA], [!DNL GAID])
 
 ## Exported data {#exported-data}
 
-To verify if data has been exported successfully to [!DNL The Trade Desk] destination, check your [!DNL Trade Desk] account. If activation was successful, audiences are populated in your account.
+To verify if data has been exported successfully to the [!DNL The Trade Desk] destination, check your [!DNL Trade Desk] account. If activation was successful, audiences are populated in your account.

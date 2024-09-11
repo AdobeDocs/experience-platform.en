@@ -13,7 +13,7 @@ However, in certain cases, you may have already set up your own schemas, fields,
 
 ## Prerequisites {#prerequisites}
 
-Before reading this tutorial, browse the [available use case playbook templates](/help/use-case-playbooks/playbooks/discover.md#search-and-filter) and [create an instance](/help/use-case-playbooks/playbooks/create-share-reuse.md) of a preferred playbook.
+Before reading this tutorial, browse the [available use case playbook templates](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) and [create an instance](/help/use-case-playbooks/playbooks/create-share-reuse.md) of a preferred playbook.
 
 Creating an instance generates a set of assets such as journeys, segments, schemas, and messages in the inspirational sandbox. Read on to learn how you can copy these assets into other sandboxes.
 

@@ -222,7 +222,7 @@ The action configuration page appears. To get the rule to send data to the Edge 
 
 ![Action type](./images/e2e/action-type.png)
 
-The screen updates to show additional options to configure the send event action. Under **[!UICONTROL Type]**, you can provide a custom type value to populate the `eventType` XDM field. Under **[!UICONTROL XDM data]**, provide the name of the XDM data type you created earlier (surrounded by percent signs), or select the database icon (![Database icon](./images/e2e/database-symbol.png)) to select it from a list. This is the data that will ultimately be sent to the Edge Network.
+The screen updates to show additional options to configure the send event action. Under **[!UICONTROL Type]**, you can provide a custom type value to populate the `eventType` XDM field. Under **[!UICONTROL XDM data]**, provide the name of the XDM data type you created earlier (surrounded by percent signs), or select the database icon (![Database icon](/help/images/icons/database.png)) to select it from a list. This is the data that will ultimately be sent to the Edge Network.
 
 Select **[!UICONTROL Keep Changes]** when finished.
 

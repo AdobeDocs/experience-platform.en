@@ -97,7 +97,7 @@ Find the [!UICONTROL Google Ads Enhanced Conversions] extension in the event for
 To configure the extension, you must populate the two required fields:
 
 1. **[!UICONTROL Customer ID]**: The ID that uniquely identifies your [!DNL Google Ads] account. To find this value, log into [!DNL Google Ads] and navigate to **[!DNL Help]** > **[!DNL Customer ID]**.
-1. **[!UICONTROL Access Token Data Element]**: Select the data element icon (![Data element icon](../../../images/extensions/server/google-ads-enhanced-conversions/data-element-icon.png)) and choose the Google OAuth 2 secret data element that you [configured in the previous step](#create-secret-data-element) from the menu.
+2. **[!UICONTROL Access Token Data Element]**: Select the data element icon (![Data element icon](/help/images/icons/database.png)) and choose the Google OAuth 2 secret data element that you [configured in the previous step](#create-secret-data-element) from the menu.
 
 When finished, select **[!UICONTROL Save]** to install the extension.
 

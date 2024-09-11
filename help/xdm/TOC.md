@@ -100,6 +100,8 @@ role: Developer
     * [Product Category](./field-groups/product/product-category.md)
   * Provider {#provider}
     * [Healthcare Provider](./field-groups/provider/healthcare-provider.md)
+  * Shared {#shared}
+    * [External Source System Audit Details](./field-groups/shared/external-source-system-audit-details.md)
   * [Field group name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
   * [Account Details](./data-types/account-details.md)
@@ -197,6 +199,7 @@ role: Developer
     * [Relationship fields](./ui/fields/relationship.md)
     * [Required fields](./ui/fields/required.md)
   * [Field-based workflows](./ui/field-based-workflows.md)
+  * [Machine learning-assisted schema creation](./ui/ml-assisted-schema-creation.md)
   * [Generate sample XDM data](./ui/sample.md)
   * [Export XDM schemas](./ui/export.md)
 * Schema Registry API {#api}
