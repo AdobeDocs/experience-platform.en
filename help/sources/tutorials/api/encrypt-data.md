@@ -81,6 +81,7 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-encryption",
       "encryptionAlgorithm": "PGP",
       "params": {
           "passPhrase": "{{PASSPHRASE}}"
@@ -90,6 +91,7 @@ curl -X POST \
 
 | Parameter | Description |
 | --- | --- |
+| `name` | The name of your encryption key pair. |
 | `encryptionAlgorithm` | The type of encryption algorithm that you are using. The supported encryption types are `PGP` and `GPG`. |
 | `params.passPhrase` | The passphrase provides an additional layer of protection for your encryption keys. Upon creation, Experience Platform stores the passphrase in a different secure vault from the public key. You must provide a non-empty string as a passphrase. |
 
@@ -152,8 +154,10 @@ A successful response returns your encryption algorithm, public key, public key 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -193,8 +197,10 @@ A successful response returns your encryption algorithm, public key, public key 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -230,8 +236,12 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-sign-verification-keys"
       "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
-      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}},
+      "params": {
+          "passPhrase": {{PASS_PHRASE}}
+      }
     }'
 ```
 
@@ -255,6 +265,48 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `publicKeyId` | This public key ID is returned in response to sharing your customer managed key with Experience Platform. You can provide this public key ID as the sign verification key ID when creating a dataflow for signed and encrypted data. |
+
++++
+
+### Retrieve customer managed key pair
+
+To retrieve your customer managed keys, make a GET request to the `/customer-keys` endpoint.
+
+**API format**
+
+```http
+GET /data/foundation/connectors/encryption/customer-keys
+```
+
+**Request**
+
++++View example request
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Response**
+
++++View example response
+
+```json
+[
+    {
+        "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+        "name": "{NAME}",
+        "publicKeyId": "{PUBLIC_KEY_ID}",
+        "publicKey": "{PUBLIC_KEY}",
+        "keyType": "{KEY_TYPE}",
+    }
+]
+```
 
 +++
 
