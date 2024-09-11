@@ -7,11 +7,15 @@ exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
 
 Experience Platform uses identity namespaces to describe the type of specific identities. For example, an identity namespace called `Email` identifies a value like `name@email.com` as an email address.
 
-When creating real-time (streaming) destinations through Destination SDK, in addition to [configuring a partner schema](schema-configuration.md) that users can map profile attributes and identities to, you must also define identity namespaces supported by your destination platform. For example, if your destination platform accepts hashed emails and [!DNL IDFA], you must define these two identities as [described further down in this docment](#supported-parameters).
+Depending on the type of destination that you create (streaming or file-based), keep in mind the following identity namespace requirements:
 
-When activating audiences to streaming destinations, users must also map target identities, in addition to target profile attributes. Otherwise, the audiences will not be activated to the destination platform.
+* When creating real-time (streaming) destinations through Destination SDK, in addition to [configuring a partner schema](schema-configuration.md) to which users can map profile attributes and identities, you must also define *at least one* identity namespaces supported by your destination platform. For example, if your destination platform accepts hashed emails and [!DNL IDFA], you must define these two identities as [described further down in this document](#supported-parameters).
 
-When creating file-based destination through Destination SDK, the configuration of identity namespaces is optional.
+   >[!IMPORTANT]
+   >
+   >When activating audiences to streaming destinations, users must also map _at least one target identity_, in addition to target profile attributes. Otherwise, the audiences will not be activated to the destination platform.
+
+* When creating file-based destinations through Destination SDK, the configuration of identity namespaces is _optional_.
 
 To learn more about identity namespaces in Experience Platform, see the [identity namespaces documentation](../../../../identity-service/features/namespaces.md).
 

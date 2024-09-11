@@ -53,7 +53,7 @@ This section describes which type of audiences you can export to this destinatio
 | Audience origin             | Supported | Description                                                                                                         | 
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | [!DNL Segmentation Service] | ✓         | Audiences generated through the Experience Platform [Segmentation Service](../../../segmentation/home.md).          |
-| Custom uploads              | x         | Audiences [imported](../../../segmentation/ui/overview.md#import-audience) into Experience Platform from CSV files. |
+| Custom uploads              | x         | Audiences [imported](../../../segmentation/ui/audience-portal.md#import-audience) into Experience Platform from CSV files. |
 
 {style="table-layout:auto"}
 

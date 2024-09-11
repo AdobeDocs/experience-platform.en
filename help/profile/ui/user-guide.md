@@ -126,9 +126,13 @@ After selecting a **[!UICONTROL Profile ID]**, the **[!UICONTROL Detail]** tab o
 
 The default fields shown can also be changed at an organizational-level to display preferred Profile attributes. To learn more about customizing these fields, including step-by-step instructions for adding and removing attributes and resizing dashboard panels, please read the [profile detail customization guide](profile-customization.md).
 
-![The Details tab is highlighted. The profile details are displayed.](../images/user-guide/profile-detail.png)
+![The Details tab is highlighted. The profile details are displayed.](../images/user-guide/profile-detail-row-name.png) 
 
-You can view additional information related to the individual customer profile by selecting another of the available tabs. These tabs include attributes, events, and the audience membership tab that shows the audiences for which the profile is currently qualified.
+You can also choose to toggle between viewing the attribute names as their display names and their field path names. To switch between these two displays, select the **[!UICONTROL Show display names]** toggle. 
+
+![The Show display names toggle is highlighted, and the display names are shown under the attributes.](../images/user-guide/profile-detail.png) 
+
+To view additional information related to the individual customer profile, select one of the other available tabs. These tabs include attributes, events, and the audience membership tab that shows the audiences for which the profile is currently qualified.
 
 ### Attributes tab
 

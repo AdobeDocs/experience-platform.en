@@ -1,5 +1,5 @@
 ---
-title: Sandboxes Tooling
+title: Sandbox Tooling
 description: Seamlessly export and import Sandbox configurations between sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
 ---

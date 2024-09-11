@@ -274,7 +274,7 @@ Read the [XDM Business Account overview](../../../../xdm/classes/b2b/business-ac
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | The value for `"${MUNCHKIN_ID}"` will be automatically replaced. |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
 | `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Primary identity. The value for `"${MUNCHKIN_ID}"` will be automatically replaced. |
-| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | The `extSourceSystemAudit.externalKey` is the secondary identity. The values for `{CRM_ORG_ID}` and `{CRM_TYPE}` will be automatically replaced. |
+| `iif(externalSourceId != null && externalSourceId != "", to_object("sourceType", externalSourceType, "sourceInstanceID", externalSourceInstanceId, "sourceID", externalSourceId, "sourceKey", externalSourceKey), iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null))` | `extSourceSystemAudit.externalKey` | The `extSourceSystemAudit.externalKey` is the secondary identity. The values for `{CRM_ORG_ID}` and `{CRM_TYPE}` will be automatically replaced. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |

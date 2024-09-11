@@ -9,7 +9,7 @@ Data stored on Adobe Experience Platform is encrypted at rest using system-level
 
 >[!NOTE]
 >
->Data in Adobe Experience Platform data lake and Profile store are encrypted using CMK. These are regarded as your primary data stores.
+>Customer profile data stored in Platform's [!DNL Azure Data Lake] and the [!DNL Azure Cosmos DB] Profile store are encrypted exclusively using CMK, once enabled. Key revocation in your primary data stores can take anywhere from **a few minutes to 24 hours**, and may take longer, **up to 7 days** for transient or secondary data stores. For additional details, refer to the [implications of revoking key access section](#revoke-access).
 
 This document provides a high level overview of the process for enabling the customer-managed keys (CMK) feature in Platform, and the prerequisite information required to complete these steps.
 
@@ -48,15 +48,22 @@ The process is as follows:
 
 Once the setup process is complete, all data onboarded into Platform across all sandboxes will be encrypted using your [!DNL Azure] key setup. To use CMK, you will leverage [!DNL Microsoft Azure] functionality that may be part of their [public preview program](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
-## Revoke access {#revoke-access}
+## Implications of revoking key access {#revoke-access}
 
-If you want to revoke Platform access to your data, you can remove the user role associated with the application from the key vault within [!DNL Azure].
+Revoking or disabling access to the Key Vault, key, or CMK app can result in significant disruptions, that include breaking changes to your Platform's operations. Once these keys are disabled, data in Platform may become inaccessible, and any downstream operations that rely on this data will cease to function. It is crucial to fully understand the downstream impacts before making any changes to your key configurations.
 
->[!WARNING]
->
->Disabling the key vault, Key, or CMK app can result in a breaking change. Once the key vault, Key, or CMK app is disabled and data is no longer accessible in Platform, any downstream operations related to that data will no longer be possible. Ensure that you understand the downstream impacts of revoking Platform access to your key before you make any changes to your configuration.
+If you decide to revoke Platform access to your data, you can do so by removing the user role associated with the application from the Key Vault within [!DNL Azure].
 
-After removing key access or disabling/deleting the key from your [!DNL Azure] key vault, it may take anywhere from a few minutes, to 24 hours for this configuration to propagate to primary data stores. Platform workflows also include cached and transient data stores required for performance and core application functionality. The propagation of CMK revocation through such cached and transient stores may take up to seven days as determined by their data processing workflows. For example, this means that the Profile dashboard would retain and display data from its cache data store and take seven days to expire the data held in cache data stores as part of the refresh cycle. The same time delay applies for data to become available again when re-enabling access to the application.
+### Propagation timelines {#propagation-timelines}
+
+After key access is revoked from your [!DNL Azure] Key Vault, the changes will propagate as follows:
+
+| **Store Type**  | **Description**  | **Timeline** |
+|---|---|---|
+| Primary Data Stores | These stores include Azure Data Lake and Azure Cosmos DB Profile stores. Once key access is revoked, data becomes inaccessible.   | A **few minutes to 24 hours**.  |
+| Cached/Transient Data Stores | Includes data stores used for performance and core application functionality. The impact of key revocation is delayed. | **Up to 7 days**. |
+
+For example, the Profile dashboard will continue to display data from its cache for up to seven days before the data expires and is refreshed. Similarly, re-enabling access to the application takes the same amount of time to restore data availability across these stores.
 
 >[!NOTE]
 >

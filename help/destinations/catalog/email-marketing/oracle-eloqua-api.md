@@ -108,7 +108,8 @@ If the details provided are valid, the UI displays a **[!UICONTROL Connected]** 
 >id="platform_destinations_apioracleeloqua_pod"
 >title="Pod"
 >abstract="To find your pod number, log into Oracle Eloqua. Note the URL in your browser after you have logged in successfully. "
->additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number"
+
+<!-- >additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number" -->
 
 To configure details for the destination, fill in the required and optional fields below. An asterisk next to a field in the UI indicates that the field is required.
 ![Platform UI screenshot showing the destination details.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
@@ -141,7 +142,9 @@ To map your XDM fields to the [!DNL Oracle Eloqua] destination fields, follow th
 1. In the **[!UICONTROL Mapping]** step, select **[!UICONTROL Add new mapping]**. You will see a new mapping row on the screen.
 1. In the **[!UICONTROL Select source field]** window, choose the **[!UICONTROL Select attributes]** category and select the XDM attribute or choose the **[!UICONTROL Select identity namespace]** and select an identity.
 1. In the **[!UICONTROL Select target field]** window, choose **[!UICONTROL Select identity namespace]** and select an identity, or choose **[!UICONTROL Select custom attributes]** and type in the desired attribute name in the **[!UICONTROL Attribute name]** field. The attribute name that you provide should match an existing contact attribute in [!DNL Oracle Eloqua]. See [[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html) for the exact attribute names that you can use in [!DNL Oracle Eloqua].
+
     * Repeat these steps to add both the required and any desired attribute mappings between your XDM profile schema and [!DNL Oracle Eloqua]:
+
         | Source Field | Target Field | Mandatory |
         |---|---|---|
         |`IdentityMap: Eid`|`Identity: EloquaId`| Yes |

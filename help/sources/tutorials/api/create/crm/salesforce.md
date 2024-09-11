@@ -30,7 +30,7 @@ To connect your [!DNL Salesforce] account to [!DNL Flow Service] using basic aut
 
 | Credential | Description |
 | --- | --- |
-| `environmentUrl` | The URL of the [!DNL Salesforce] source instance. |
+| `environmentUrl` | The URL of the [!DNL Salesforce] source instance. The format for `environmentUrl` is `https://[domain].my.salesforce.com`. |
 | `username` | The username for the [!DNL Salesforce] user account. |
 | `password` | The password for the [!DNL Salesforce] user account. |
 | `securityToken` | The security token for the [!DNL Salesforce] user account. |
@@ -45,7 +45,7 @@ To connect your [!DNL Salesforce] account to [!DNL Flow Service] using OAuth 2 C
 
 | Credential | Description |
 | --- | --- |
-| `environmentUrl` | The URL of the [!DNL Salesforce] source instance. |
+| `environmentUrl` | The URL of the [!DNL Salesforce] source instance. The format for `environmentUrl` is `https://[domain].my.salesforce.com` |
 | `clientId` | The client ID is used in tandem with the client secret as part of OAuth2 authentication. Together, the client ID and client secret enable your application to operate on behalf of your account by identifying your application to [!DNL Salesforce]. |
 | `clientSecret` | The client secret is used in tandem with the client ID as part of OAuth2 authentication. Together, the client ID and client secret enable your application to operate on behalf of your account by identifying your application to [!DNL Salesforce]. |
 | `apiVersion` | The REST API version of the [!DNL Salesforce] instance that you are using. The value for the API version must be formatted with a decimal. For example, if you are using API version `52`, then you must input the value as `52.0`. If this field is left blank, then Experience Platform will automatically use the latest available version. This value is mandatory for OAuth2 Client Credential authentication. |

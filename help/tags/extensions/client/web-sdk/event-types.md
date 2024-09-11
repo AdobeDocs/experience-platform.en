@@ -254,3 +254,14 @@ if (propositions) {
   // them in some other way.
 }
 ```
+
+## [!UICONTROL Subscribe ruleset items] {#subscribe-ruleset-items}
+
+The **[!UICONTROL Subscribe ruleset items]** event type allows you to subscribe to Adobe Journey Optimizer content cards for a surface. Any time the rulesets are evaluated, the callback provided to this command receives a result object with propositions that hold the content card data.
+
+![Image of the Experience Platform tags user interface showing the Subscribe ruleset items event type.](assets/subscribe-ruleset-items.png)
+
+This event type supports the following configurable properties:
+
+* **[!UICONTROL Schemas]**: An array of schemas for which you want to subscribe to content cards. You can enter the schemas manually or by providing a data element.
+* **[!UICONTROL Surfaces]**: An array of surfaces for which you want to subscribe to content cards. You can enter the surfaces manually or by providing a data element.

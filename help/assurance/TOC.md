@@ -14,13 +14,13 @@ role: Developer
 - Views {#view}
   - [Event transactions](./views/event-transactions.md)
   - [Extension Versions](./views/extension-versions.md)
+  - [Edge Delivery](./views/edge-delivery.md)
   - [In-app Messaging](./views/in-app-messaging.md)
   - [On Device Views](./views/on-device-views.md)
   - [Places Service](./views/places-service.md)
   - [Push Debug View](./views/push-debug-view.md)
   - [Validation Summary](./views/validation-summary.md)
   - [Adobe Analytics](./views/adobe-analytics.md)
-  - [Analytics Events 2.0 (Beta)](./views/adobe-analytics-edge.md)
   - [Adobe Analytics Streaming Media](./views/adobe-analytics-streaming-media.md)
 - Tutorials {#tutorials}
   - [Implement Assurance](./tutorials/implement-assurance.md)
