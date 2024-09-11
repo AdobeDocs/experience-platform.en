@@ -8,6 +8,8 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 ---
 # Define a one-to-one relationship between two schemas using the [!DNL Schema Editor] {#relationship-ui}
 
+<!-- PLAT-203414 Read and asses page for updates -->
+
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
 >title="Schema relationships"

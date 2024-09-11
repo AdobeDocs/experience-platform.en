@@ -5,6 +5,8 @@ exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 ---
 # Define a many-to-one relationship between two schemas in Real-Time Customer Data Platform B2B Edition {#relationship-b2b}
 
+<!-- PLAT-203414 Read and asses page for updates -->
+
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
 >title="Reference schema"
