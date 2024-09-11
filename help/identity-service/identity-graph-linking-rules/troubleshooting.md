@@ -126,12 +126,42 @@ There are various reasons that contribute as to why your experience event fragme
 * [A validation failure may have occurred on Profile](../../xdm/classes/experienceevent.md).
   * For example, an experience event must contain both an `_id` and a `timestamp`.
   * Additionally, the `_id` must be unique for each event (record).
+* The namespace with the highest priority is an empty string.
 
-In the context of namespace priority, Profile will reject any event that contains two or more identities with the highest namespace priority. For example, if GAID is not marked as a unique namespace and two identities both with a GAID namespace and different identity values came in, then Profile will not store any of the events.
+In the context of namespace priority, Profile will reject: 
+
+* Any event that contains two or more identities with the highest namespace priority. For example, if GAID is not marked as a unique namespace and two identities both with a GAID namespace and different identity values came in, then Profile will not store any of the events.
+* Any event where the namespace with the highest priority is an empty string.
 
 **Troubleshooting steps**
 
-To resolve this error, read the troubleshooting steps outlined in the guide above on [troubleshooting errors regarding data not being ingested to Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
+If your data is sent to data lake, but not Profile, and you believe that this is due to sending two or more identities with the highest namespace priority in a single event, then you may run the following query to validate that there are two different identity values sent against the same namespace:
+
+>[!TIP]
+>
+>In the following queries, you must:
+>
+>* Replace `_testimsorg.identification.core.email` with the path sending the identity.
+>* Replace `Email` with the namespace with the highest priority. This is the same namespace that is not being ingested.
+>* Replace `dataset_name` with the dataset that you wish to query.
+
+```sql
+  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
+```
+
+You can also run the following query to check if ingestion to Profile is not happening due to the highest namespace having an empty string:
+
+```sql
+  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
+```
+
+These two queries assume that one identity is sent from the identityMap and another identity is sent from an identity descriptor. **NOTE**: In Experience Data Model (XDM) schemas, the identity descriptor is the field marked as an identity.
 
 ### My experience event fragments are ingested, but have the "wrong" primary identity in Profile
 
@@ -341,7 +371,7 @@ Yes, the 'primary' flag on identityMap is used by other services. For more infor
 
 #### Will namespace priority apply to Profile record datasets in Real-Time Customer Profile?
 
-No. Namespace priority will only apply to Experience Event datasets using the Experience Data Model (XDM) ExperienceEvent Class.
+No. Namespace priority will only apply to Experience Event datasets using the XDM ExperienceEvent Class.
 
 #### How does this feature work in tandem with the identity graph guardrails of 50 identities per graph? Does namespace priority affect this system defined guardrail? 
 
