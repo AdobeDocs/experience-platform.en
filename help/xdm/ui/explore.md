@@ -73,23 +73,23 @@ As such, most of these fields should be excluded from the structure of your data
 
 For each field shown in the canvas, its corresponding data type is shown next to its name, indicating at a glance the type of data that field expects for ingestion.
 
-![](../images/ui/explore/data-types.png)
+![The Postal Address datatype displayed on the canvas with its associated data types highlighted.](../images/ui/explore/data-types.png)
 
 Any data type that is appended with square brackets (`[]`) represents an array of that particular data type. For example, a data type of **[!UICONTROL String]\[]** indicates that the field expects an array of string values. A data type of **[!UICONTROL Payment Item]\[]** indicates an array of objects that conform to the [!UICONTROL Payment Item] data type.
 
 If an array field is based on an object type, you can select its icon in the canvas to show the expected attributes for each array item.
 
-![](../images/ui/explore/array-type.png)
+![An object in the canvas with an array field highlighted and the expected attributes for each array item displayed.](../images/ui/explore/array-type.png)
 
 ### [!UICONTROL Field properties] {#field-properties}
 
 When you select the name of any field in the canvas, the right rail updates to show details about that field under **[!UICONTROL Field properties]**. This can include a description of the field's intended use case, default values, patterns, formats, whether or not the field is required, and more.
 
-![](../images/ui/explore/field-properties.png)
+![A field selected from the Commerce data type with the field properties highlighted.](../images/ui/explore/field-properties.png)
 
 If the field you are inspecting is an enum field, the right rail will also display the acceptable values the field expects to receive.
 
-![](../images/ui/explore/enum-field.png)
+![The Schema Editor with a field selected and enum values and display names highlighted in the field properties rail.](../images/ui/explore/enum-field.png)
 
 ### Identity fields {#identity}
 
@@ -97,7 +97,8 @@ When inspecting schemas that contain identity fields, these fields are listed in
 
 Identity fields are highlighted in the canvas with a fingerprint icon (![Fingerprint Icon Image](/help/images/icons/identity-service.png)). If you select the identity field's name, you can view additional information such as the [identity namespace](../../identity-service/features/namespaces.md) and whether or not the field is the primary identity for the schema.
 
-![](../images/ui/explore/identity-field.png)
+<!-- Update image so it doesnt have relationship in the properties rail. -->
+![The Schema Editor with the schema's identity highlighted in the left rail, the field highlighted in the schema diagram, and the identity namespace highlighted in the field properties.](../images/ui/explore/identity-field.png)
 
 >[!NOTE]
 >
