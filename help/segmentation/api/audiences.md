@@ -27,7 +27,7 @@ GET /audiences?{QUERY_PARAMETERS}
 
 >[!NOTE]
 >
->If you use this endpoint without any query parameters, only **published** audiences will be returned.
+>If you use this endpoint without any query parameters, inactive audiences will **not** be returned.
 
 The following query parameters can be used when retrieving a list of audiences:
 
@@ -317,6 +317,10 @@ A successful response returns HTTP status 200 with information about your newly 
 +++
 
 ## Look up a specified audience {#get}
+
+>[!NOTE]
+>
+>When using this endpoint, inactive audiences will **not** be returned.
 
 You can look up detailed information about a specific audience by making a GET request to the `/audiences` endpoint and providing the ID of the audience you wish to retrieve in the request path.
 
