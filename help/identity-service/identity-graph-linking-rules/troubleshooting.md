@@ -297,9 +297,9 @@ This section outlines a list of answers to frequently asked questions about iden
 
 ### Identity optimization algorithm {#identity-optimization-algorithm}
 
-#### I have a CRMID for each of my business unites (B2C CRMID, B2B CRMID), but I don't have a unique namespace across all of my profiles. What will happen if I mark B2C CRID and B2B CRMID as unique, and enable my identity settings?
+#### I have a CRMID for each of my business unites (B2C CRMID, B2B CRMID), but I don't have a unique namespace across all of my profiles. What will happen if I mark B2C CRMID and B2B CRMID as unique, and enable my identity settings?
 
-This scenario is unsupported. Therefore, you may see graphs collapse in cases where a user uses their B2C CRMID to login, and another user uses their B2B CRMID to login. For more information, read the [shared device scenario](./configuration.md#shared-device-scenario) in the implementation page.
+This scenario is unsupported. Therefore, you may see graphs collapse in cases where a user uses their B2C CRMID to login, and another user uses their B2B CRMID to login. For more information, read the section on [single person namespace requirement](./configuration.md#single-person-namespace-requirement) in the implementation page.
 
 #### Does identity optimization algorithm 'fix' existing collapsed graphs?
 
