@@ -101,23 +101,26 @@ The updated `preferredHotel` field appears in the canvas, located under a `_tena
 
 ## Define a relationship field for the source schema {#relationship-field}
 
-Once your source schema has a dedicated reference field defined, you can designate it as a relationship field.
+Once your source schema has a dedicated reference field defined, you can designate it as a relationship field. Select the `preferredHotel` field in the canvas, then select **[!UICONTROL Add relationship]** in the **[!UICONTROL Field properties]** sidebar. 
+
+![The Schema Editor with Add relationship highlighted in the Field properties sidebar.](../images/tutorials/relationship/add-relationship.png)
+
+The [!UICONTROL Add relationship] dialog appears. From this dialog you can set required parameters for configuring a relationship field. For Real-Time CDP B2C users, you can **only** set a one-to-one relationship between the source and reference schema.
 
 >[!NOTE]
 >
->The steps below cover how to define a relationship field using the right-rail controls in the canvas. If you have access to Real-Time CDP B2B Edition, you can also define a one-to-one relationship using the [same dialog](./relationship-b2b.md#relationship-field) as when creating many-to-one relationships.
+>If you have access to Real-Time CDP B2B Edition, when you define a relationship field using the right-rail controls in the canvas, you can also define a many-to-one relationship using the [same dialog](./relationship-b2b.md#relationship-field).
 
-Select the `preferredHotel` field in the canvas, then scroll down under **[!UICONTROL Field properties]** until the **[!UICONTROL Relationship]** checkbox appears. Select the checkbox to reveal the required parameters for configuring a relationship field.
+![The Add relationship dialog.](../images/tutorials/relationship/add-relationship-dialog.png)
 
-![](../images/tutorials/relationship/relationship-checkbox.png)
-
+<!-- Q) does the Reference identity namespace auto-populate? -->
 Select the dropdown for **[!UICONTROL Reference schema]** and select the reference schema for the relationship ("[!DNL Hotels]" in this example). Under **[!UICONTROL Reference identity namespace]**, select the namespace of the reference schema's identity field (in this case, "[!DNL Hotel ID]"). Select **[!UICONTROL Apply]** when finished.
 
-![](../images/tutorials/relationship/reference-schema-id-namespace.png)
+![The Add relationship dialog with the relationship parameters configured and Apply highlighted.](../images/tutorials/relationship/apply-relationship.png)
 
 The `preferredHotel` field is now highlighted as a relationship in the canvas, displaying the name of the reference schema. Select **[!UICONTROL Save]** to save your changes and complete the workflow.
 
-![](../images/tutorials/relationship/relationship-save.png)
+![The Schema Editor with the relationship references and SAve highlighted.](../images/tutorials/relationship/relationship-save.png)
 
 ## Next steps
 
