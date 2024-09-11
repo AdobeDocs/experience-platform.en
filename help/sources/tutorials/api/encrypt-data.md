@@ -9,7 +9,7 @@ You can ingest encrypted data files to Adobe Experience Platform using cloud sto
 
 The encrypted data ingestion process is as follows:
 
-1. [Create an encryption key pair using Experience Platform APIs](#create-encryption-key-pair). The encryption key pair consists of a private key and a public key. Once created, you can copy or download the public key, alongside its corresponding public key ID and Expiry Time. During this process, the private key will be stored by Experience Platform in a secure vault. **NOTE:** The public key in the response is Base64-encoded and must be decrypted prior to using.
+1. [Create an encryption key pair using Experience Platform APIs](#create-encryption-key-pair). The encryption key pair consists of a private key and a public key. Once created, you can copy or download the public key, alongside its corresponding public key ID and Expiry Time. During this process, the private key will be stored by Experience Platform in a secure vault. **NOTE:** The public key in the response is Base64-encoded and must be decoded prior to using.
 2. Use the public key to encrypt the data file that you want to ingest.
 3. Place your encrypted file in your cloud storage.
 4. Once the encrypted file is ready, [create a source connection and a dataflow for your cloud storage source](#create-a-dataflow-for-encrypted-data). During the flow creation step, you must provide an `encryption` parameter and include your public key ID. 
@@ -57,6 +57,10 @@ The list of supported file extensions for encrypted files are:
 >Encrypted file ingestion in Adobe Experience Platform Sources supports openPGP and not any specific proprietary version of PGP.
 
 ## Create encryption key pair {#create-encryption-key-pair}
+
+>[!IMPORTANT]
+>
+>Encryption keys are specific to a given sandbox. Therefore, you must create new encryption keys if you want to ingest encrypted data in a different sandbox, within your organization.
 
 The first step in ingesting encrypted data to Experience Platform is to create your encryption key pair by making a POST request to the `/encryption/keys` endpoint of the [!DNL Connectors] API.
 
