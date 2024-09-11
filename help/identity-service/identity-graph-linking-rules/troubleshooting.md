@@ -348,13 +348,13 @@ As explained above, the CRMID of the last authenticated user will be linked to t
 
 The key points to highlight are as follows: 
 
-* Once a profile enters a journey, ECID re-assignment does not result in the profile existing in the middle of a journey.
+* Once a profile enters a journey, ECID re-assignment does not result in the profile exiting in the middle of a journey.
   * Journey exits are not triggered by graph changes.
 * If a profile is no longer associated with an ECID, then this may result in changing the journey path if there is a condition that uses audience qualification. 
   * ECID removal may change events associated to a profile, which could result in changes in audience qualification.
 * Re-entry of a journey is dependent on journey properties.
   * If you disable re-entry of a journey, once a profile exits from that journey, the same profile will not re-enter for 91 days (based on global journey timeout).
-* If a journey starts with an ECID namespace, the profile that enters and the profile that receives the action (ex. Email, offer) may be different depending on how the journey is designed.
+* If a journey starts with an ECID namespace, the profile that enters and the profile that receives the action (ex. email, offer) may be different depending on how the journey is designed.
   * For example, if there is a wait condition between actions, and the ECID transfers during the waiting period, a different profile may be targeted.
   * With this feature, ECID are no longer always associated with one profile.
   * The recommendation is to start journeys with person namespaces (CRMID).
@@ -377,7 +377,6 @@ No. Namespace priority will only apply to Experience Event datasets using the XD
 
 The identity optimization algorithm will be applied first to ensure person entity representation. Afterwards, if the graph tries to exceed the [identity graph guardrail](../guardrails.md) (50 identities per graph), then this logic will be applied. Namespace priority does not affect the deletion logic of the 50 identity/graph guardrail. 
 
-
 ### Testing
 
 #### What are some of the scenarios I should be testing in a development sandbox environment? 
@@ -387,7 +386,7 @@ Generally speaking, testing on a development sandbox should mimic the use cases 
 | Test case | Test steps | Expected outcome |
 | --- | --- | --- |
 | Accurate person entity representation | <ul><li>Mimic anonymous browsing</li><li>Mimic two people (John, Jane) logging in using the same device</li></ul> | <ul><li>Both John and Jane should be associated to their attributes and authenticated events.</li><li>The last authenticated user should be associated to the anonymous browsing events.</li></ul> |
-| Segmentation | Create four segments (**NOTE**: each segment should have one batch and one streaming). <ul><li>Segment A: Segment qualification based on John's authenticated events.</li><li>Segment B: Segment qualification based on Jane's authenticated events.</li></ul> | Regardless of shared device scenarios, John and Jane should always qualify for their respective segments. |
+| Segmentation | Create four segment definitions (**NOTE**: Each pair of segment definition should have one evaluated using batch and the other streaming.) <ul><li>Segment definition A: Segment qualification based on John's authenticated events.</li><li>Segment definition B: Segment qualification based on Jane's authenticated events.</li></ul> | Regardless of shared device scenarios, John and Jane should always qualify for their respective segments. |
 | Audience qualification / unitary journeys on Adobe Journey Optimizer | <ul><li>Create a journey starting with an audience qualification activity (such as the streaming segmentation created above).</li><li>Create a journey starting with a unitary event. This unitary event should be an authenticated event.</li><li>You must disable re-entry when creating these journeys.</li></ul> | <ul><li>Regardless of shared device scenarios, John and Jane should trigger the respective journeys that they should enter.</li><li>John and Jane should not re-enter the journey when the ECID is transferred back to them.</li></ul> |
 
 {style="table-layout:auto"}
