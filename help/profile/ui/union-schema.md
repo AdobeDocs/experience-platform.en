@@ -85,13 +85,9 @@ If relationships have been established for the selected class, selecting **[!UIC
 
 To learn more about schema relationships, including how to define them using the UI, visit [this document on schema relationships](../../xdm/tutorials/relationship-ui.md).
 
-<!-- 203414 Update image below -->
-
 ![The relationships that belong to the union schema are highlighted.](../images/union-schema/relationships.png)
 
 Selecting a relationship field from the list causes the displayed schema to update as needed to display the highlighted relationship field. This could include expanding multiple fields if the relationship field is nested.
-
-<!-- 203414 Update image below -->
 
 ![The selected relationship is highlighted. The corresponding field for the relationship is also highlighted.](../images/union-schema/select-relationship.png)
 
