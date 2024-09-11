@@ -13,11 +13,16 @@ exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 
 >[!IMPORTANT]
 >
->**Action item**: The [September 2024 release of Experience Platform](/help/release-notes/latest/latest.md#destinations) introduces the option to set an `endTime` date for export dataset dataflows. Adobe is also introducing a default end date of May 1st 2025 for all dataset export dataflows created prior to the September release. For any of those dataflows, you need to update the end date in the dataflow manually before the end date, otherwise your exports for stop on that date.
->
->You can retrieve a list of such dataflows by performing the following API call: `https://platform.adobe.io/data/foundation/flowservice/flows?property=scheduleParams.endTime==UNIXTIMESTAMPTHATWEWILLUSE`
+>**Action item**: The [September 2024 release of Experience Platform](/help/release-notes/latest/latest.md#destinations) introduces the option to set an `endTime` date for export dataset dataflows. Adobe is also introducing a default end date of May 1st 2025 for all dataset export dataflows created *prior to the September release*. For any of those dataflows, you need to update the end date in the dataflow manually before the end date, otherwise your exports for stop on that date. Use the Experience Platform UI to view which dataflows will be set to stop on May 1st.
 >
 >Similarly, for any dataflows that you create without specifying an `endTime` date, these will default to an end time six months from the time they are created.
+
+<!--
+
+>You can retrieve a list of such dataflows by performing the following API call: `https://platform.adobe.io/data/foundation/flowservice/flows?property=scheduleParams.endTime==UNIXTIMESTAMPTHATWEWILLUSE`
+>
+
+-->
 
 This article explains the workflow required to use the [!DNL Flow Service API] to export [datasets](/help/catalog/datasets/overview.md) from Adobe Experience Platform to your preferred cloud storage location, such as [!DNL Amazon S3], SFTP locations, or [!DNL Google Cloud Storage].
 
@@ -2042,12 +2047,12 @@ The table below provides descriptions of all parameters in the `scheduleParams` 
 
 | Parameter | Description |
 |---------|----------|
-| `exportMode` | Mandatory. Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. |
+| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. <be> **Note**: `"FIRST_FULL_THEN_INCREMENTAL"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. |
 | `timeUnit` | Select `day` or `hour` depending on the frequency with which you want to export dataset files. |
 | `interval` | Select `1` when the `timeUnit` is day and `3`,`6`,`9`,`12` when the time unit is `hour`. |
 | `startTime` | The date and time in UNIX seconds when dataset exports should start. |
 | `endTime` | The date and time in UNIX seconds when dataset exports should end. |
-| `foldernameTemplate` | Specify the expected folder name structure in your storage location where the exported files will be deposited. <ul><li><code>DATASET_ID</code> = <span>A unique identifier for the dataset.</span></li><li><code>DATASET_NAME</code> = <span>The name of the dataset.</span></li><li><code>DESTINATION</code> = <span>The target location for data export.</span></li><li><code>DESTINATION_NAME</code> = <span>The name of the destination.</span></li><li><code>DATETIME</code> = <span>The date and time formatted as yyyyMMdd_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>The scheduled time for data export formatted as YYYYMMDDHHMM.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>The name of the specific instance of the destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>A unique identifier for the destination instance.</span></li><li><code>SANDBOX_NAME</code> = <span>The name of the sandbox environment.</span></li><li><code>ORGANIZATION_NAME</code> = <span>The name of the organization.</span></li></ul> |
+| `foldernameTemplate` | Specify the expected folder name structure in your storage location where the exported files will be deposited. <ul><li><code>DATASET_ID</code> = <span>A unique identifier for the dataset.</span></li><li><code>DESTINATION</code> = <span>The target location for data export.</span></li><li><code>DESTINATION_NAME</code> = <span>The name of the destination.</span></li><li><code>DATETIME</code> = <span>The date and time formatted as yyyyMMdd_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>The scheduled time for data export formatted as YYYYMMDDHHMM.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>The name of the specific instance of the destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>A unique identifier for the destination instance.</span></li><li><code>SANDBOX_NAME</code> = <span>The name of the sandbox environment.</span></li><li><code>ORGANIZATION_NAME</code> = <span>The name of the organization.</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2097,12 +2102,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+
+| Parameter | Description |
+|---------|----------|
+| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. <be> **Note**: `"FIRST_FULL_THEN_INCREMENTAL"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. |
+| `timeUnit` | Select `day` or `hour` depending on the frequency with which you want to export dataset files. |
+| `interval` | Select `1` when the `timeUnit` is day and `3`,`6`,`9`,`12` when the time unit is `hour`. |
+| `startTime` | The date and time in UNIX seconds when dataset exports should start. |
+| `endTime` | The date and time in UNIX seconds when dataset exports should end. |
+| `foldernameTemplate` | Specify the expected folder name structure in your storage location where the exported files will be deposited. <ul><li><code>DATASET_ID</code> = <span>A unique identifier for the dataset.</span></li><li><code>DESTINATION</code> = <span>The target location for data export.</span></li><li><code>DESTINATION_NAME</code> = <span>The name of the destination.</span></li><li><code>DATETIME</code> = <span>The date and time formatted as yyyyMMdd_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>The scheduled time for data export formatted as YYYYMMDDHHMM.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>The name of the specific instance of the destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>A unique identifier for the destination instance.</span></li><li><code>SANDBOX_NAME</code> = <span>The name of the sandbox environment.</span></li><li><code>ORGANIZATION_NAME</code> = <span>The name of the organization.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2150,12 +2172,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+
+| Parameter | Description |
+|---------|----------|
+| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. <be> **Note**: `"FIRST_FULL_THEN_INCREMENTAL"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. |
+| `timeUnit` | Select `day` or `hour` depending on the frequency with which you want to export dataset files. |
+| `interval` | Select `1` when the `timeUnit` is day and `3`,`6`,`9`,`12` when the time unit is `hour`. |
+| `startTime` | The date and time in UNIX seconds when dataset exports should start. |
+| `endTime` | The date and time in UNIX seconds when dataset exports should end. |
+| `foldernameTemplate` | Specify the expected folder name structure in your storage location where the exported files will be deposited. <ul><li><code>DATASET_ID</code> = <span>A unique identifier for the dataset.</span></li><li><code>DESTINATION</code> = <span>The target location for data export.</span></li><li><code>DESTINATION_NAME</code> = <span>The name of the destination.</span></li><li><code>DATETIME</code> = <span>The date and time formatted as yyyyMMdd_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>The scheduled time for data export formatted as YYYYMMDDHHMM.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>The name of the specific instance of the destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>A unique identifier for the destination instance.</span></li><li><code>SANDBOX_NAME</code> = <span>The name of the sandbox environment.</span></li><li><code>ORGANIZATION_NAME</code> = <span>The name of the organization.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2203,12 +2242,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+
+| Parameter | Description |
+|---------|----------|
+| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. <be> **Note**: `"FIRST_FULL_THEN_INCREMENTAL"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. |
+| `timeUnit` | Select `day` or `hour` depending on the frequency with which you want to export dataset files. |
+| `interval` | Select `1` when the `timeUnit` is day and `3`,`6`,`9`,`12` when the time unit is `hour`. |
+| `startTime` | The date and time in UNIX seconds when dataset exports should start. |
+| `endTime` | The date and time in UNIX seconds when dataset exports should end. |
+| `foldernameTemplate` | Specify the expected folder name structure in your storage location where the exported files will be deposited. <ul><li><code>DATASET_ID</code> = <span>A unique identifier for the dataset.</span></li><li><code>DESTINATION</code> = <span>The target location for data export.</span></li><li><code>DESTINATION_NAME</code> = <span>The name of the destination.</span></li><li><code>DATETIME</code> = <span>The date and time formatted as yyyyMMdd_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>The scheduled time for data export formatted as YYYYMMDDHHMM.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>The name of the specific instance of the destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>A unique identifier for the destination instance.</span></li><li><code>SANDBOX_NAME</code> = <span>The name of the sandbox environment.</span></li><li><code>ORGANIZATION_NAME</code> = <span>The name of the organization.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2256,12 +2312,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+The table below provides descriptions of all parameters in the `scheduleParams` section, which allows you to customize export times, frequency, location, and more for your dataset exports.
+
+| Parameter | Description |
+|---------|----------|
+| `exportMode` | Select `"DAILY_FULL_EXPORT"` or `"FIRST_FULL_THEN_INCREMENTAL"`. For more information about the two options, refer to [export full files](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) and [export incremental files](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in the batch destinations activation tutorial. <be> **Note**: `"FIRST_FULL_THEN_INCREMENTAL"` can only be used in combination with `timeUnit`:`day` and `interval`:`0` for a one-time full export of the dataset. |
+| `timeUnit` | Select `day` or `hour` depending on the frequency with which you want to export dataset files. |
+| `interval` | Select `1` when the `timeUnit` is day and `3`,`6`,`9`,`12` when the time unit is `hour`. |
+| `startTime` | The date and time in UNIX seconds when dataset exports should start. |
+| `endTime` | The date and time in UNIX seconds when dataset exports should end. |
+| `foldernameTemplate` | Specify the expected folder name structure in your storage location where the exported files will be deposited. <ul><li><code>DATASET_ID</code> = <span>A unique identifier for the dataset.</span></li><li><code>DESTINATION</code> = <span>The target location for data export.</span></li><li><code>DESTINATION_NAME</code> = <span>The name of the destination.</span></li><li><code>DATETIME</code> = <span>The date and time formatted as yyyyMMdd_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>The scheduled time for data export formatted as YYYYMMDDHHMM.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>The name of the specific instance of the destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>A unique identifier for the destination instance.</span></li><li><code>SANDBOX_NAME</code> = <span>The name of the sandbox environment.</span></li><li><code>ORGANIZATION_NAME</code> = <span>The name of the organization.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
