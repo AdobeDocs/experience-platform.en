@@ -123,7 +123,7 @@ The [!DNL Amazon Ads] connection supports hashed email address and hashed phone 
 * To map hashed email addresses, select the `Email_LC_SHA256` identity namespace as a source field.
 * To map hashed phone numbers, select the `Phone_SHA256` identity namespace as a source field.
 * To map unhashed email addresses or phone numbers, select the corresponding identity namespaces as source fields, and check the `Apply Transformation` option to have Platform hash the identities on activation.
-* We require mapping of to a field containing countryCode value in the 2-character ISO format in order to facilitate the Identity resolution process.  (e.g., US, GB, MX, CA, etc.) Connections without countryCode mappings will result in negative impact to identity match rates
+* *NEW starting with the September 2024 release*: Amazon Ads requires you to map a field containing a `countryCode` value in the 2-character ISO format in order to facilitate the identity resolution process (for example: US, GB, MX, CA, and so on). Connections without `countryCode` mappings will result in negative impact to identity match rates.
 
 You only select a given target field one time in a destination configuration of the [!DNL Amazon Ads] connector.  For example, if you submit business email, you cannot also map personal email in the same destination configuration.
 
@@ -166,7 +166,7 @@ This section captures the functionality and significant documentation updates ma
 
 |Release month|Update type|Description|
 |---|---|---|
-|May 2024|Functionality and documentation update| Added the mapping option to export countryCode parameter into Amazon Ads.|
+|May 2024|Functionality and documentation update| Added the mapping option to export `countryCode` parameter into Amazon Ads. Use `countryCode` in the [mapping step](#map) to improve your identity match rates with Amazon. |
 |March 2024|Functionality and documentation update| Added the option to export audiences to be used in [!DNL Amazon Marketing Cloud] (AMC).|
 |May 2023|Functionality and documentation update| <ul><li>Added support for Advertiser Region selection in the [destination connection workflow](#destination-details).</li><li>Updated documentation to reflect the addition of Advertiser Region selection. For more information on selecting the correct Advertiser Region, see the [Amazon documentation](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 |March 2023|Initial release|Initial destination release and documentation published.|
