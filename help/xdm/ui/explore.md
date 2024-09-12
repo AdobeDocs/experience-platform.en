@@ -97,7 +97,6 @@ When inspecting schemas that contain identity fields, these fields are listed in
 
 Identity fields are highlighted in the canvas with a fingerprint icon (![Fingerprint Icon Image](/help/images/icons/identity-service.png)). If you select the identity field's name, you can view additional information such as the [identity namespace](../../identity-service/features/namespaces.md) and whether or not the field is the primary identity for the schema.
 
-<!-- Update image so it doesnt have relationship in the properties rail. -->
 ![The Schema Editor with the schema's identity highlighted in the left rail, the field highlighted in the schema diagram, and the identity namespace highlighted in the field properties.](../images/ui/explore/identity-field.png)
 
 >[!NOTE]

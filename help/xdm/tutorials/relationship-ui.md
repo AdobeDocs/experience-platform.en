@@ -123,7 +123,7 @@ Select the dropdown for **[!UICONTROL Reference schema]** and select the referen
 >
 >Only schemas that contain a primary identity are included in the reference schema dropdown menu. This safeguard prevents you from accidentally creating a relationship with a schema that isn't properly configured yet.
 
-The reference schema's identity field (in this case, "[!DNL Hotel ID]") is automatically populated under **[!UICONTROL Reference identity namespace]**. Select **[!UICONTROL Apply]** when finished.
+The reference schema's identity's namespace (in this case, "[!DNL Hotel ID]") is automatically populated under **[!UICONTROL Reference identity namespace]**. Select **[!UICONTROL Apply]** when finished.
 
 ![The Add relationship dialog with the relationship parameters configured and Apply highlighted.](../images/tutorials/relationship/apply-relationship.png)
 
@@ -137,7 +137,7 @@ To change the reference schema, select a field with an existing relationship the
 
 ![The Schema Editor with Edit relationship highlighted.](../images/tutorials/relationship/edit-relationship.png)
 
-The [!UICONTROL Add relationship] dialog appears. From here you can follow the process outlined in [defining a relationship field](#relationship-field) or delete the relationship. Select **[!UICONTROL Delete relationship]** to remove the reference schema. 
+The [!UICONTROL Add relationship] dialog appears. From here you can follow the process outlined in [defining a relationship field](#relationship-field) or delete the relationship. Select **[!UICONTROL Delete relationship]** to remove the relationship to the reference schema. 
 
 ![The Edit relationship dialog.](../images/tutorials/relationship/edit-relationship-dialog.png)
 
