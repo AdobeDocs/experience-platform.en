@@ -327,6 +327,8 @@ This section outlines a list of answers to frequently asked questions about iden
 
 ### Identity optimization algorithm {#identity-optimization-algorithm}
 
+Read this section for answers to frequently asked questions about the [identity optimization algorithm](./identity-optimization-algorithm.md).
+
 #### I have a CRMID for each of my business unites (B2C CRMID, B2B CRMID), but I don't have a unique namespace across all of my profiles. What will happen if I mark B2C CRMID and B2B CRMID as unique, and enable my identity settings?
 
 This scenario is unsupported. Therefore, you may see graphs collapse in cases where a user uses their B2C CRMID to login, and another user uses their B2B CRMID to login. For more information, read the section on [single person namespace requirement](./configuration.md#single-person-namespace-requirement) in the implementation page.
@@ -361,6 +363,8 @@ The key points to highlight are as follows:
 
 ### Namespace priority
 
+Read this section for answers to frequently asked questions about [namespace priority](./namespace-priority.md).
+
 #### I've enabled my identity settings. What happens to my settings if I want to add a custom namespace after the settings has been enabled? 
 
 There are two 'buckets' of namespaces: person namespaces and device/cookie namespaces. The newly created custom namespace will have the lowest priority in each 'bucket' so that this new custom namespace does not impact existing data ingestion.
@@ -378,6 +382,8 @@ No. Namespace priority will only apply to Experience Event datasets using the XD
 The identity optimization algorithm will be applied first to ensure person entity representation. Afterwards, if the graph tries to exceed the [identity graph guardrail](../guardrails.md) (50 identities per graph), then this logic will be applied. Namespace priority does not affect the deletion logic of the 50 identity/graph guardrail. 
 
 ### Testing
+
+Read this section for answers to frequently asked questions about testing and debugging features in identity graph linking rules.
 
 #### What are some of the scenarios I should be testing in a development sandbox environment? 
 
