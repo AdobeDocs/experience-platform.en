@@ -11,7 +11,7 @@ Adobe Experience Platform provides several predefined alert rules that you can e
 
 When [viewing alert rules in the Platform UI](./ui.md), you can subscribe to each rule individually. When subscribing to alerts through [I/O Event notifications](./subscribe.md), however, alert rules are organized into different subscription packages. In the tables below, each rule is shown with its corresponding I/O Event subscription name.
 
-## Sources
+## Sources {#sources}
 
 The following alert rules are specific to [Data Ingestion](../../ingestion/home.md) and  [sources](../../sources/home.md):
 
@@ -34,7 +34,7 @@ If you have previously subscribed to the following alert type, you will no longe
 
 {style="table-layout:auto"}
 
-## Identity
+## Identity {#identity}
 
 The following alert rules are specific to [Identity Service](../../identity-service/home.md):
 
@@ -47,7 +47,7 @@ The following alert rules are specific to [Identity Service](../../identity-serv
 
 {style="table-layout:auto"}
 
-## Profile
+## Profile {#profile}
 
 The following alert rules are specific to [Real-Time Customer Profile](../../profile/home.md):
 
@@ -60,7 +60,7 @@ The following alert rules are specific to [Real-Time Customer Profile](../../pro
 
 {style="table-layout:auto"}
 
-## Segmentation
+## Segmentation {#segmentation}
 
 The following alert rules are specific to [Segmentation Service](../../segmentation/home.md):
 
@@ -74,7 +74,7 @@ The following alert rules are specific to [Segmentation Service](../../segmentat
 
 {style="table-layout:auto"}
 
-## Destinations
+## Destinations {#destinations}
 
 The following alert rules are specific to [destinations](../../destinations/home.md):
 
@@ -89,7 +89,7 @@ The following alert rules are specific to [destinations](../../destinations/home
 
 {style="table-layout:auto"}
 
-## Query Service
+## Query Service {#query-services}
 
 The following alert rules are specific to [Query Service](../../query-service/home.md):
 
@@ -99,16 +99,32 @@ The following alert rules are specific to [Query Service](../../query-service/ho
 | Query Service scheduled query Success | Query Service scheduled query success | This alert triggers when a scheduled query job completes successfully. | <pre>{<br>   "id": "df37b14a-3548-4074-8594-c27db3bea482",<br>   "createdAt": 1694526412235,<br>   "updatedAt": 1694526775732,<br>   "createdBy": "acme@AdobeID",<br>   "updatedBy": "acme@AdobeID",<br>   "createdClient": "acp_foundation_queryService",<br>   "updatedClient": "acme_client",<br>   "sandboxId": "dbc5c132-bc2a-4625-85c1-32bc2a262558",<br>   "sandboxName": "prod",<br>   "imsOrgId": "5C1328435BF324E90A49402A@AdobeOrg",<br>   "flowId": "d0ca84f8-caec-4a86-a7f9-52de5476c541",<br>   "providerRefId": "913d3a31-581a-4c1a-8c1c-ff87595ebefa",<br>   "etag": "\"c8008567-0000-0200-0000-65006d370000\"",<br>   "metrics": {<br>      "durationSummary": {<br>         "startedAtUTC": 1694526412265,<br>         "completedAtUTC": 1694526743223<br>      },<br>      "sizeSummary": {<br>         "outputBytes": 6054425<br>      },<br>      "recordSummary": {<br>         "inputRecordCount": 45563,<br>         "createdRecordCount": 45563,<br>         "outputRecordCount": 45563,<br>         "failedRecordCount": 0<br>      },<br>      "fileSummary": {<br>         "outputFileCount": 12,<br>         "manifest": {<br>            "fileInfo": [{<br>               "path": "https://platform.adobe.io/data/foundation/export/batches/01HA4TA7H10XR7GSY7Q5ZFKXT5/meta?path=input_files"<br>            }]<br>         },<br>         "activityRefs": ["37b34f84-1ada-11eb-adc1-0242ac120002"]<br>      },<br>      "statusSummary": {<br>         "status": "success"<br>      }<br>   },<br>   "activities": [{<br>      "id": "8816f6a2-2533-4dff-9026-c23a27b38691",<br>      "name": "Query Activity",<br>      "contextId": "913d3a31-581a-4c1a-8c1c-ff87595ebefa",<br>      "updatedAtUTC": 0,<br>      "durationSummary": {<br>         "startedAtUTC": 1694526412265,<br>         "completedAtUTC": 1694526732395<br>      },<br>      "latencySummary": {},<br>      "sizeSummary": {},<br>      "recordSummary": {<br>         "inputRecordCount": 45563<br>      },<br>      "fileSummary": {},<br>      "statusSummary": {<br>         "status": "success",<br>         "extensions": {<br>            "scheduleRunId": "c2NoZWR1bGVkX18yMDIzLTA5LTExVDEzOjM1OjAwKzAwOjAw",<br>            "jobRunId": "8b61c0d9-92ca-4346-a478-0f02b78ce18e",<br>            "queryId": "913d3a31-581a-4c1a-8c1c-ff87595ebefa"<br>         }<br>      }<br>   }, {<br>      "id": "37b34f84-1ada-11eb-adc1-0242ac120002",<br>      "name": "Promotion Activity",<br>      "contextId": "913d3a31-581a-4c1a-8c1c-ff87595ebefa",<br>      "updatedAtUTC": 0,<br>      "durationSummary": {<br>         "startedAtUTC": 1694526414513,<br>         "completedAtUTC": 1694526743223<br>      },<br>      "latencySummary": {},<br>      "sizeSummary": {<br>         "inputBytes": 4323887,<br>         "outputBytes": 6054425<br>      },<br>      "recordSummary": {<br>         "inputRecordCount": 45563,<br>         "createdRecordCount": 45563,<br>         "outputRecordCount": 45563,<br>         "failedRecordCount": 0<br>      },<br>      "fileSummary": {<br>         "inputFileCount": 16,<br>         "outputFileCount": 12,<br>         "extensions": {<br>            "manifest": {<br>               "fileInfo": "https://platform.adobe.io/data/foundation/export/batches/01HA4TA7H10XR7GSY7Q5ZFKXT5/meta?path=input_files"<br>            }<br>         }<br>      },<br>      "statusSummary": {<br>         "status": "success",<br>         "extensions": {}<br>      }<br>   }],<br>   "flowName": "DSG_Price_Drop___v3PDXMOXJlFC"<br>}</pre> |
 | Query Run Failure | Query service scheduled query failure | This alert triggers when a scheduled query job fails. | <pre>{<br>   "id": "d0b98201-0abd-44ec-9890-41700a5a4b05",<br>   "createdAt": 1694423273648,<br>   "updatedAt": 1694423282108,<br>   "createdBy": "acme@AdobeID",<br>   "updatedBy": "acme@AdobeID",<br>   "createdClient": "acp_foundation_queryService",<br>   "updatedClient": "acme_client",<br>   "sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",<br>   "sandboxName": "prod",<br>   "imsOrgId": "5C1328435BF324E90A49402A@AdobeOrg",<br>   "flowId": "dbc5c132-bc2a-4625-85c1-32bc2a262558",<br>   "providerRefId": "de64c288-cc61-4ff8-8efe-af09f4294629",<br>   "etag": "\"9900a795-0000-0200-0000-64fed8f20000\"",<br>   "metrics": {<br>      "durationSummary": {<br>         "startedAtUTC": 1694423273685,<br>         "completedAtUTC": 1694423274439<br>      },<br>      "statusSummary": {<br>         "status": "failed",<br>         "errors": [{<br>            "code": "42602",<br>            "message": "Analysis error encountered. Reason: [{sessionId: ca06fd1a-5dfc-4ac3-a592-da801b6a2a72 queryId: de64c288-cc61-4ff8-8efe-af09f4294629 Unknown error encountered. Reason: [Reference '_trowepriceassociatesinc.pidetails.trpaudittraildates.trploaddate' is ambiguous, could be: global_prod_midvalues._trowepriceassociatesinc, trp_pi_recipient._trowepriceassociatesinc.; line 25 pos 14]}]"<br>         }],<br>         "activityRefs": ["8816f6a2-2533-4dff-9026-c23a27b38691"]<br>      }<br>   },<br>   "activities": [{<br>      "id": "8816f6a2-2533-4dff-9026-c23a27b38691",<br>      "name": "Query Activity",<br>      "contextId": "de64c288-cc61-4ff8-8efe-af09f4294629",<br>      "updatedAtUTC": 0,<br>      "durationSummary": {<br>         "startedAtUTC": 1694423273685,<br>         "completedAtUTC": 1694423274439<br>      },<br>      "latencySummary": {},<br>      "sizeSummary": {},<br>      "recordSummary": {},<br>      "fileSummary": {},<br>      "statusSummary": {<br>         "status": "failed",<br>         "errors": [{<br>            "code": "42602",<br>            "message": "Analysis error encountered. Reason: [{sessionId: ca06fd1a-5dfc-4ac3-a592-da801b6a2a72 queryId: de64c288-cc61-4ff8-8efe-af09f4294629 Unknown error encountered. Reason: [Reference '_trowepriceassociatesinc.pidetails.trpaudittraildates.trploaddate' is ambiguous, could be: global_prod_midvalues._trowepriceassociatesinc, trp_pi_recipient._trowepriceassociatesinc.; line 25 pos 14]}]"<br>         }],<br>         "extensions": {<br>            "scheduleRunId": "c2NoZWR1bGVkX18yMDIzLTA5LTEwVDA4OjMwOjAwKzAwOjAw",<br>            "jobRunId": "5faed6b2-9fce-4787-9dff-a809439a8b3a",<br>            "queryId": "de64c288-cc61-4ff8-8efe-af09f4294629"<br>         }<br>      }<br>   }],<br>   "flowName": "SELECT \nSTRUCT\n(\n     STRUCT (uberId AS uberId) AS identities,\n "<br>}</pre> |
 
-<!-- (Definitions to be added once available)
-| Segment Job Delay | This alert triggers when a segment job takes longer than 150 minutes to complete. | N/A | 30 seconds | 3 hours |
-| No Ingestion Activity in Past 24 Hours | This alert triggers when no new data has been ingested in the last 24-hour period. | N/A | 1 day | 1 day |
-| Ingestion Error Rate Exceeded | This alert triggers when the error rate for data ingestion exceeds the allotted threshold. | 20% | 30 seconds | 30 seconds |
-| Entitlement Threshold Exceeded | This alert triggers when the number of created profiles exceeds 80% of your organization's entitlement. | 30 seconds | N/A |
-| SFTP source has not ingested data | This alert triggers when an [SFTP source](../../sources/connectors/cloud-storage/sftp.md) has not ingested any data within a certain time period. | 1 day | 1 day |
-| Feed Message | This alert when an identity sharing feed message has been sent to a user using [Segment Match](../../segmentation/ui/segment-match.md). | N/A | N/A |
-| Feed Access Revoked | This alert triggers when another Platform user revokes access to an identity sharing feed using [Segment Match](../../segmentation/ui/segment-match.md). | N/A | N/A |
-| Feed Modified | This alert triggers when an identity sharing feed is modified by a user using [Segment Match](../../segmentation/ui/segment-match.md). | N/A | N/A |
-| Feed Shared | This alert triggers when a user shares a new feed in [Segment Match](../../segmentation/ui/segment-match.md). | N/A | N/A |
-| Link Request | This alert triggers when a user requests to connect for partner sharing. | N/A | N/A |
-| Link Action | This alert triggers when a user accepts a request to connect for partner sharing. | N/A | N/A |
--->
+## Audience {#audience}
+
+The following alert rules are specific to [Audience](../../segmentation/ui/overview.md):
+
+| I/O Event subscription | Alert rule | Description | Payload Schema |
+| --- | --- | --- | --- |
+| Audience create | Audience create | This alert triggers when an audience is created. |   |
+| Audience update | Audience update | This alert triggers when an audience is updated. |   |
+| Audience delete | Audience delete | This alert triggers when an audience is deleted. |   |
+
+## Dataset {#dataset}
+
+The following alert rules are specific to [Dataset](../../catalog/datasets/overview.md):
+
+| I/O Event subscription | Alert rule | Description | Payload Schema |
+| --- | --- | --- | --- |
+| Dataset create | Dataset create | This alert triggers when a dataset is created. |   |
+| Dataset update | Dataset update | This alert triggers when a dataset is updated. |   |
+| Dataset delete | Dataset delete | This alert triggers when a dataset is deleted. |   |
+
+## Schema {#schema}
+
+The following alert rules are specific to [Schema](../../xdm/schema/composition.md):
+
+| I/O Event subscription | Alert rule | Description | Payload Schema |
+| --- | --- | --- | --- |
+| Schema create | Schema create | This alert triggers when a schema is created. |   |
+| Schema update | Schema update | This alert triggers when a schema is updated. |   |
+| Schema delete | Schema delete | This alert triggers when a schema is deleted. |   |
