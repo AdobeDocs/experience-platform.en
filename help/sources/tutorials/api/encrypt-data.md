@@ -153,7 +153,7 @@ curl -X GET \
 
 +++View example response
 
-A successful response returns your encryption algorithm, public key, public key ID, and the corresponding expiry time of your keys.
+A successful response returns your encryption algorithm, name, public key, public key ID, key type, and the corresponding expiry time of your keys.
 
 ```json
 {
@@ -196,7 +196,7 @@ curl -X GET \
 
 +++View example response
 
-A successful response returns your encryption algorithm, public key, public key ID, and the corresponding expiry time of your keys.
+A successful response returns your encryption algorithm, name, public key, public key ID, key type, and the corresponding expiry time of your keys.
 
 ```json
 {
