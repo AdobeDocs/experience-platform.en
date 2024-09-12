@@ -105,8 +105,6 @@ You can hover over the &#9432; next to an audience to view information about the
 
 ![An image demonstrating how the folder hierarchy works for audiences.](../images/ui/segment-builder/audience-folder-structure.png)
 
-You can also search for audiences using the search bar, which utilizes [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). On the **[!UICONTROL Audiences]** tab, selecting a top-level folder causes the search bar to appear, allowing you to search within that folder. Search results only begin to populate once entire words are entered. For example, to find an audience named `Online Shoppers`, start typing "Online" in the search bar. Once the word "Online" has been typed in full, search results containing the word "Online" appear.
-
 ## Rule builder canvas {#rule-builder-canvas}
 
 >[!IMPORTANT]
