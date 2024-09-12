@@ -25,6 +25,10 @@ GET /audiences
 GET /audiences?{QUERY_PARAMETERS}
 ```
 
+>[!NOTE]
+>
+>If you use this endpoint without any query parameters, inactive audiences will **not** be returned. However, if you use this endpoint in conjunction with the `property=audienceId` query parameter, inactive audiences **will** be returned.
+
 The following query parameters can be used when retrieving a list of audiences:
 
 | Query parameter | Description | Example |

@@ -235,10 +235,10 @@ ORDER BY timestamp desc
 
 Refer to the documentation on [identity optimization algorithm](./identity-optimization-algorithm.md), as well as the types of graph structures that are supported.
 
-  * Read the [graph configuration guide](./example-configurations.md) for examples of supported graph structures.
-  * You can also read the [implementation guide](./configuration.md#appendix) for examples of unsupported graph structures. There are two scenarios that could happen:
-    * No single namespace across all your profiles.
-    * A ["dangling ID"](./configuration.md#dangling-loginid-scenario) scenario occurs. In this scenario, Identity Service is unable to determine if the dangling ID is associated with any of the person entities in the graphs.
+* Read the [graph configuration guide](./example-configurations.md) for examples of supported graph structures.
+* You can also read the [implementation guide](./configuration.md#appendix) for examples of unsupported graph structures. There are two scenarios that could happen:
+  * No single namespace across all your profiles.
+  * A ["dangling ID"](./configuration.md#dangling-loginid-scenario) scenario occurs. In this scenario, Identity Service is unable to determine if the dangling ID is associated with any of the person entities in the graphs.
 
 You can also use the [graph simulation tool in the UI](./graph-simulation.md) to simulate events and configure your own unique namespace and namespace priority settings. Doing so can help give you a baseline understanding of how the identity optimization algorithm should behave. 
 
