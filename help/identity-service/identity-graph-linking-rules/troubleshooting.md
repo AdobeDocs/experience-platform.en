@@ -344,7 +344,7 @@ For more information, read the guide on [determining the primary identity for ex
 
 #### How will journeys in Adobe Journey Optimizer be impacted when the ECID is transferring from one person to another? 
 
-As explained above, the CRMID of the last authenticated user will be linked to the ECID (shared device). ECIDs can be reassigned from one person to another based on user behavior. The impact will depend on how the journey is constructed, so it is important that customers test out the journey in a development sandbox environment to validate the behavior. 
+The CRMID of the last authenticated user will be linked to the ECID (shared device). ECIDs can be reassigned from one person to another based on user behavior. The impact will depend on how the journey is constructed, so it is important that customers test out the journey in a development sandbox environment to validate the behavior. 
 
 The key points to highlight are as follows: 
 
