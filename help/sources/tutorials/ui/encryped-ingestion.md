@@ -52,15 +52,15 @@ You can create your encryption key pair through the Experience Platform UI. When
 
 In the Platform UI, navigate to the sources workspace and then select [!UICONTROL Key Pairs] from the top header.
 
-![The sources catalog with the "Key Pairs" header selected.]
+![The sources catalog with the "Key Pairs" header selected.]()
 
 You are taken to a page that displays a list of existing encryption key pairs in your organization. This page provides information on a given key's title, ID, type, encryption algorithm, expiry, and status. To create a new key pair, select **[!UICONTROL Create Key]**.
 
-![The Key Pairs page, with "encryption key" selected as the key type and the "create key" button selected.]
+![The Key Pairs page, with "encryption key" selected as the key type and the "create key" button selected.]()
 
 Next, choose the key type that you want to make. To create an encryption key, select **[!UICONTROL Encryption Key]** and then select **[!UICONTROL Continue]**. 
 
-![The key creation window, with encryption key selected.]
+![The key creation window, with encryption key selected.]()
 
 Provide a title and a passphrase for your encryption key. The passphrase is an additional layer of protection for your encryption keys. Upon creation, Experience Platform stores the passphrase in a different secure vault from the public key. You must provide a non-empty string as a passphrase. When finished, select **[!UICONTROL Create]**.
 
