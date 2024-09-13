@@ -67,13 +67,13 @@ The source schema "[!DNL Opportunities]" is based on the [!UICONTROL XDM Busines
 
 As seen under **[!UICONTROL Schema Properties]**, this schema has been enabled for use in [!DNL Real-Time Customer Profile].
 
-![Opportunities Schema](../images/tutorials/relationship-b2b/opportunities.png)
+![The Opportunities schema in the Schema Editor with the opportunityKey object and the Enable for profile toggle highlighted.](../images/tutorials/relationship-b2b/opportunities.png)
 
 ### [!DNL Accounts] schema
 
 The reference schema "[!DNL Accounts]" is based on the [!UICONTROL XDM Account] class. The root-level `accountKey` field contains the `sourceKey` that acts as its primary identity under a custom namespace called [!DNL B2B Account]. This schema has also been enabled for use in Profile.
 
-![Accounts Schema](../images/tutorials/relationship-b2b/accounts.png)
+![The Accounts schema in the Schema Editor with the accountKey object and the Enable for profile toggle highlighted.](../images/tutorials/relationship-b2b/accounts.png)
 
 ## Define a relationship field for the source schema {#relationship-field}
 
