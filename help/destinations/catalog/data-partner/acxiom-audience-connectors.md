@@ -83,9 +83,6 @@ To configure details for the destination, fill in the fields below.
 >
 >- To activate data, you need the [!UICONTROL View Destinations], [!UICONTROL Activate Destinations], [!UICONTROL View Profiles], and [!UICONTROL View Segments] [access control permissions](../../../access-control/home.md#permissions). Read the [access control overview](../../../access-control/ui/overview.md) or contact your product administrator to obtain the required permissions.
 
->- To export identities, you need the [!UICONTROL View Identity Graph] access control permission. 
-
-Read Activate audience data to batch profile export destinations for instructions on activating audiences to this destination.
 
 **Scheduling**
 1. Define the campaign schedule for your audience. <br>
