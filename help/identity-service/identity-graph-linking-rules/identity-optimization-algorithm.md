@@ -157,7 +157,7 @@ For more information on identity graph linking rules, read the following documen
 
 * [Identity graph linking rules overview](./overview.md)
 * [Implementation guide](./implementation-guide.md)
-* [Examples of graph configurations](./configuration.md)
+* [Examples of graph configurations](./example-configurations.md)
 * [Troubleshooting and FAQ](./troubleshooting.md)
 * [Namespace priority](./namespace-priority.md)
 * [Graph simulation UI](./graph-simulation.md)
