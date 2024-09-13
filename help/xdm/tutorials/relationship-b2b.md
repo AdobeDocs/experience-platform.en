@@ -61,7 +61,7 @@ To account for this, all standard B2B classes contain "key" fields that conform 
 
 For reference purposes, the following sections describe the structure of each schema used in this tutorial before a relationship has been defined. Take note of where the primary identities have been defined in the schema structure and the custom namespaces they use.
 
-### [!DNL Opportunities] schema
+### Opportunities schema
 
 The source schema "[!DNL Opportunities]" is based on the [!UICONTROL XDM Business Opportunity] class. One of the fields provided by the class, `opportunityKey`, serves as the identifier for the schema. Specifically, the `sourceKey` field under the `opportunityKey` object is set as the schema's primary identity under a custom namespace called [!DNL B2B Opportunity]. 
 
@@ -87,35 +87,58 @@ The reference schema "[!DNL Accounts]" is based on the [!UICONTROL XDM Account] 
 >title="Relationship name from reference schema"
 >abstract="A label that describes the relationship from the reference schema to the current schema (for example, 'Related Opportunities'). This label is used in Profile and Segmentation to give context to data from related B2B entities. See the documentation to learn more about building B2B schema relationships."
 
+<!-- NOTE Many-to-one relationships can only go to B2B class or Profile class. 
+
+
+
+Note If a schema has an associated dataset, you can delete the relationship but you are not reccommended to do so. Instead, you should delete the associated dataset before deleting a relationship as this will negatively impact segmentation.
+
+if you want to edit the relationship of an existing B2B schema, ...
+
+For a schema with dataset, you can't change the reference schema. You would have to delete the relationship first, but you shouldn't delete it if it has an associated dataset.
+
+Conversely adding a relationship to a schema that already has associated datasets will not work as intended. 
+-->
+
 In order to define a relationship between two schemas, the source schema must have a dedicated field that indicates the primary identity of the reference schema. Standard B2B classes include dedicated source key fields for commonly related business entities. For example, the [!UICONTROL XDM Business Opportunity] class contains source key fields for a related account (`accountKey`) and a related campaign (`campaignKey`). However, you can also add other [!UICONTROL B2B Source] fields to the schema by using custom field groups if you require more than the default components.
 
 >[!NOTE]
 >
 >Currently, only many-to-one and one-to-one relationships can be defined from a source schema to a reference schema. For one-to-many relationships, you must define the relationship field in the schema that represents the "many".
 
-To set a relationship field, select the arrow icon (![Arrow Icon](/help/images/icons/alias.png)) next to the field in question within the canvas. In the case of the [!DNL Opportunities] schema, this is the `accountKey.sourceKey` field since the goal is to establish a many-to-one relationship with an account.
+To set a relationship field, select the field in question within the canvas, followed by **[!UICONTROL Add relationship]** in the [!UICONTROL Schema properties] sidebar. In the case of the [!DNL Opportunities] schema, this is the `accountKey.sourceKey` field since the goal is to establish a many-to-one relationship with an account.
 
-![Relationship Button](../images/tutorials/relationship-b2b/relationship-button.png)
+![The Schema Editor with the sourceKey field and Add relationship highlighted.](../images/tutorials/relationship-b2b/add-relationship.png)
 
-A dialog appears that allows you to specify the details about the relationship. The relationship type is automatically set to **[!UICONTROL Many-to-one]**.
+The [!UICONTROL Add relationship] dialog appears. Use this dialog to specify details about the relationship. The relationship type is automatically set to **[!UICONTROL Many-to-one]**.
 
-![Relationship Dialog](../images/tutorials/relationship-b2b/relationship-dialog.png)
+![The Add relationship dialog with Many to one schema relationship highlighted.](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-Under **[!UICONTROL Reference Schema]**, use the search bar to find the name of the reference schema. When you highlight the reference schema's name, the **[!UICONTROL Reference Identity Namespace]** field automatically updates to the namespace of the schema's primary identity.
+Under **[!UICONTROL Reference Schema]**, use the search bar, or dropdown menu, to find the name of the reference schema. When you highlight the reference schema's name, the **[!UICONTROL Reference Identity Namespace]** field automatically updates to the namespace of the schema's primary identity.
 
-![Reference Schema](../images/tutorials/relationship-b2b/reference-schema.png)
+>[!NOTE]
+>
+>The list of available reference schemas is filtered to only contain suitable schemas. Schemas **must** have an assigned primary identity and be either a B2B class or the Individual Profile class. Prospect class schemas are not able to have relationships.
+
+<!-- Q) Do i have that correct? What is the issue with Prospect class schemas? -->
+
+![The Add relationship dialog with the Reference Schema and Reference Identity namespace fields highlighted.](../images/tutorials/relationship-b2b/reference-schema.png)
 
 Under **[!UICONTROL Relationship Name From Current Schema]** and **[!UICONTROL Relationship Name From Reference Schema]**, provide friendly names for the relationship in the context of the source and reference schemas, respectively. When finished, select **[!UICONTROL Save]** to apply the changes and save the schema.
 
-![Relationship Name](../images/tutorials/relationship-b2b/relationship-name.png)
+>[!NOTE]
+>
+>Relationship names must be 35 characters or less.
+
+![The Add relationship dialog with the Relationship Name fields highlighted.](../images/tutorials/relationship-b2b/relationship-name.png)
 
 The canvas reappears, with the relationship field now marked with the friendly name you provided earlier. The relationship name is also listed under the left rail for easy reference.
 
-![Relationship Applied](../images/tutorials/relationship-b2b/relationship-applied.png)
+![The Schema Editor with the new relationship name applied.](../images/tutorials/relationship-b2b/relationship-applied.png)
 
 If you view the structure of the reference schema, the relationship marker appears next to the schema's primary identity field and in the left rail.
 
-![Destination Schema Relationship Marker](../images/tutorials/relationship-b2b/destination-relationship.png)
+![The destination schema in the Schema Editor with the new relationship marker highlighted.](../images/tutorials/relationship-b2b/destination-relationship.png)
 
 ## Next steps
 
