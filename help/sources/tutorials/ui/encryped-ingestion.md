@@ -52,23 +52,23 @@ You can create your encryption key pair through the Experience Platform UI. When
 
 In the Platform UI, navigate to the sources workspace and then select [!UICONTROL Key Pairs] from the top header.
 
-![The sources catalog with the "Key Pairs" header selected.]()
+![The sources catalog with the "Key Pairs" header selected.](../../images/tutorials/edi/catalog.png)
 
 You are taken to a page that displays a list of existing encryption key pairs in your organization. This page provides information on a given key's title, ID, type, encryption algorithm, expiry, and status. To create a new key pair, select **[!UICONTROL Create Key]**.
 
-![The Key Pairs page, with "encryption key" selected as the key type and the "create key" button selected.]()
+![The Key Pairs page, with "encryption key" selected as the key type and the "create key" button selected.](../../images/tutorials/edi/encryption_key_page.png)
 
 Next, choose the key type that you want to make. To create an encryption key, select **[!UICONTROL Encryption Key]** and then select **[!UICONTROL Continue]**. 
 
-![The key creation window, with encryption key selected.]()
+![The key creation window, with encryption key selected.](../../images/tutorials/edi/choose_encryption_key_type.png)
 
 Provide a title and a passphrase for your encryption key. The passphrase is an additional layer of protection for your encryption keys. Upon creation, Experience Platform stores the passphrase in a different secure vault from the public key. You must provide a non-empty string as a passphrase. When finished, select **[!UICONTROL Create]**.
 
-![The encryption key creation window, where a title and a passphrase is provided.]
+![The encryption key creation window, where a title and a passphrase is provided.](../../images/tutorials/edi/create_encryption_key.png)
 
 If successful, a new window appears, displaying your new encryption key, including its title, public key, and key ID. Use the public key value to encrypt your data. You will use the key ID in a later step to prove your identity when ingesting your encrypted data during the dataflow creation process.
 
-![The window that displays information on your newly created encryption key pair.]
+![The window that displays information on your newly created encryption key pair.](../../images/tutorials/edi/encryption_key_details.png)
 
 To view information on an existing encryption key, select the ellipses (`...`) beside the key title. Select **[!UICONTROL Key details]** to view the public key and key ID. Alternatively, if you want to delete your encryption key, select **[!UICONTROL Delete]**.
 
@@ -89,11 +89,11 @@ To view information on an existing encryption key, select the ellipses (`...`) b
 
 To create a sign verification key, select **[!UICONTROL Customer Key]** from the key type selection window and then select **[!UICONTROL Continue]**.
 
-![]
+![](../../images/tutorials/edi/choose_sign_verification_key_type.png)
 
 Next, provide a title and a public key, and then select **[!UICONTROL Create]**.
 
-![]
+![](../../images/tutorials/edi/create_sign_verification_key.png)
 
 
 ## Ingest encrypted data {#ingest-encrypted-data}
