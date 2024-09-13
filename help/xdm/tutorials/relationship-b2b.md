@@ -140,6 +140,16 @@ If you view the structure of the reference schema, the relationship marker appea
 
 ![The destination schema in the Schema Editor with the new relationship marker highlighted.](../images/tutorials/relationship-b2b/destination-relationship.png)
 
+## Edit a B2B schema relationship
+
+<!-- WIP -->
+
+Once a schema relationship is established, seelct the filed in the schema UI followed by [!UICONTROL Edit relationship].
+
+![The Schema Editor with a relationship filed and Edit relationship highlighted.]()
+
+The Edit realtionship dilaog appears. 
+
 ## Next steps
 
 By following this tutorial, you have successfully created a many-to-one relationship between two schemas using the [!DNL Schema Editor]. Once data has been ingested using datasets based on these schemas and that data has been activated in the Profile data store, you can use attributes from both schemas for [multi-class segmentation use cases](../../rtcdp/segmentation/b2b.md).
