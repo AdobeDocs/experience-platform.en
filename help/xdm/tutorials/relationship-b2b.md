@@ -88,16 +88,6 @@ The reference schema "[!DNL Accounts]" is based on the [!UICONTROL XDM Account] 
 >abstract="A label that describes the relationship from the reference schema to the current schema (for example, 'Related Opportunities'). This label is used in Profile and Segmentation to give context to data from related B2B entities. See the documentation to learn more about building B2B schema relationships."
 
 <!-- NOTE Many-to-one relationships can only go to B2B class or Profile class. 
-
-
-
-Note If a schema has an associated dataset, you can delete the relationship but you are not reccommended to do so. Instead, you should delete the associated dataset before deleting a relationship as this will negatively impact segmentation.
-
-if you want to edit the relationship of an existing B2B schema, ...
-
-For a schema with dataset, you can't change the reference schema. You would have to delete the relationship first, but you shouldn't delete it if it has an associated dataset.
-
-Conversely adding a relationship to a schema that already has associated datasets will not work as intended. 
 -->
 
 In order to define a relationship between two schemas, the source schema must have a dedicated field that indicates the primary identity of the reference schema. Standard B2B classes include dedicated source key fields for commonly related business entities. For example, the [!UICONTROL XDM Business Opportunity] class contains source key fields for a related account (`accountKey`) and a related campaign (`campaignKey`). However, you can also add other [!UICONTROL B2B Source] fields to the schema by using custom field groups if you require more than the default components.
@@ -142,13 +132,25 @@ If you view the structure of the reference schema, the relationship marker appea
 
 ## Edit a B2B schema relationship
 
-<!-- WIP -->
+Once a schema relationship is established, select the relationship field in the source schema followed by **[!UICONTROL Edit relationship]**.
 
-Once a schema relationship is established, seelct the filed in the schema UI followed by [!UICONTROL Edit relationship].
+>[!NOTE]
+>
+>Select the relationship field in the reference schema to view all associated relationships
 
 ![The Schema Editor with a relationship filed and Edit relationship highlighted.]()
 
-The Edit realtionship dilaog appears. 
+The Edit relationship dialog appears. From this dialog you can change the relationship schema and reference names. The many to one relationship cannot be changed.
+
+To ensure the integrity of your data and avoid unintended disruptions to segmentation and other processes, consider the following important guidelines when managing relationships of schemas with linked datasets.
+
+* If a schema has an associated dataset, you can delete the relationship between them. However, you are not recommended to do so as this will negatively impact segmentation. Instead, you should delete any associated datasets before deleting a relationship. 
+* Once a schema is linked to a dataset, you cannot change the reference schema without first deleting the existing relationship. However, it's important to avoid deleting the relationship if the dataset is still associated with it.
+* Additionally, adding a new relationship to a schema that already has associated datasets may not work as intended, leading to potential issues.
+
+## Filter and search for relationships 
+
+
 
 ## Next steps
 
