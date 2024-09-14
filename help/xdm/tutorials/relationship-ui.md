@@ -141,6 +141,12 @@ The [!UICONTROL Add relationship] dialog appears. From here you can follow the p
 
 ![The Edit relationship dialog.](../images/tutorials/relationship/edit-relationship-dialog.png)
 
+## Filter and search for relationships {#filter-and-search} 
+
+You can filter and search for specific relationships within your schemas from the [!UICONTROL Relationships] tab of the [!UICONTROL Schemas] workspace. You can use this view to quickly locate and manage your relationships. Read the document on [exploring schema resources](../ui/explore.md#lookup) for detailed instructions on the filtering options. 
+
+![The Relationships tab in the Schemas workspace.](../images/tutorials/relationship-b2b/relationship-tab.png)
+
 ## Next steps
 
 By following this tutorial, you have successfully created a one-to-one relationship between two schemas using the [!DNL Schema Editor]. For steps on how to define relationships using the API, see the tutorial on [defining a relationship using the Schema Registry API](relationship-api.md).
