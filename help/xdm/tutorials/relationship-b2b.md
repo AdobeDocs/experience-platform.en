@@ -140,13 +140,13 @@ Once a schema relationship is established, select the relationship field in the 
 
 ![The Schema Editor with a relationship filed and Edit relationship highlighted.]()
 
-The Edit relationship dialog appears. From this dialog you can change the relationship schema and reference names. The many to one relationship cannot be changed.
+The Edit relationship dialog appears. From this dialog you can change the relationship schema and reference names. The many-to-one relationship type cannot be changed.
 
-To ensure the integrity of your data and avoid unintended disruptions to segmentation and other processes, consider the following important guidelines when managing relationships of schemas with linked datasets.
+To maintain data integrity and avoid disruptions in segmentation and other processes, consider the following guidelines when managing schema relationships with linked datasets:
 
-* If a schema has an associated dataset, you can delete the relationship between them. However, you are not recommended to do so as this will negatively impact segmentation. Instead, you should delete any associated datasets before deleting a relationship. 
-* Once a schema is linked to a dataset, you cannot change the reference schema without first deleting the existing relationship. However, it's important to avoid deleting the relationship if the dataset is still associated with it.
-* Additionally, adding a new relationship to a schema that already has associated datasets may not work as intended, leading to potential issues.
+* Avoid directly deleting relationships if a schema is associated with a dataset, as this can negatively impact segmentation. Instead, delete the associated dataset before removing the relationship.
+* You cannot change the reference schema without first deleting the existing relationship. However, this should be done with caution, as deleting a relationship with an associated dataset can cause unintended consequences.
+* Adding new relationships to a schema with existing linked datasets may not work as intended and could lead to potential conflicts.
 
 ## Filter and search for relationships 
 
