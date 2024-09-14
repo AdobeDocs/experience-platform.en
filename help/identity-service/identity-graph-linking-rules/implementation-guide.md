@@ -1,10 +1,10 @@
 ---
-title: Identity graph linking rules configuration guide
+title: Implementation guide for identity graph linking rules
 description: Learn the recommended steps to follow when implementing your data with identity graph linking rules configurations.
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 ---
-# Identity graph linking rules configuration guide
+# Implementation guide for identity graph linking rules
 
 >[!AVAILABILITY]
 >
@@ -96,7 +96,7 @@ For any feedback, use the **[!UICONTROL Beta feedback]** option in the Identity 
 
 Read this section for additional information that you can refer to when implementing your identity settings and unique namespaces.
 
-### Shared device scenario {#shared-device-scenario}
+### Single person namespace requirement {#single-person-namespace-requirement}
 
 You must ensure that a single namespace is used across all profiles that represents a person. Doing so, allows Identity Service to detect the appropriate person identifier in a given graph. 
 
@@ -143,3 +143,15 @@ This example also shows that Tom and Summer are to disparate person entities tha
 ![LoginID is linked to another CRMID.](../images/graph-examples/id_c_summer.png)
 
 >[!ENDTABS]
+
+## Next steps
+
+For more information on identity graph linking rules, read the following documentation:
+
+* [Identity graph linking rules overview](./overview.md)
+* [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [Examples of graph configurations](./example-configurations.md)
+* [Troubleshooting and FAQ](./troubleshooting.md)
+* [Namespace priority](./namespace-priority.md)
+* [Graph simulation UI](./graph-simulation.md)
+* [Identity settings UI](./identity-settings-ui.md)
