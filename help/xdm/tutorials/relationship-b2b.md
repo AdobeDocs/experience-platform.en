@@ -150,9 +150,9 @@ To maintain data integrity and avoid disruptions in segmentation and other proce
 * You cannot change the reference schema without first deleting the existing relationship. However, this should be done with caution, as deleting a relationship with an associated dataset can cause unintended consequences.
 * Adding new relationships to a schema with existing linked datasets may not work as intended and could lead to potential conflicts.
 
-## Filter and search for relationships 
+## Filter and search for relationships {#filter-and-search} 
 
-You can filter and search for specific relationships within your schemas from the Relationships tab of the Schemas workspace. You can use this view to quickly locate and manage your relationships. Read the document on [exploring schema resources](../ui/explore.md#lookup) for detailed instructions on the filtering options. 
+You can filter and search for specific relationships within your schemas from the [!UICONTROL Relationships] tab of the [!UICONTROL Schemas] workspace. You can use this view to quickly locate and manage your relationships. Read the document on [exploring schema resources](../ui/explore.md#lookup) for detailed instructions on the filtering options. 
 
 ![The Relationships tab in the Schemas workspace.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
