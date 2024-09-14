@@ -130,7 +130,7 @@ If you view the structure of the reference schema, the relationship marker appea
 
 ![The destination schema in the Schema Editor with the new relationship marker highlighted.](../images/tutorials/relationship-b2b/destination-relationship.png)
 
-## Edit a B2B schema relationship
+## Edit a B2B schema relationship {#edit-schema-relationship}
 
 Once a schema relationship is established, select the relationship field in the source schema followed by **[!UICONTROL Edit relationship]**.
 
@@ -138,9 +138,11 @@ Once a schema relationship is established, select the relationship field in the 
 >
 >Select the relationship field in the reference schema to view all associated relationships
 
-![The Schema Editor with a relationship filed and Edit relationship highlighted.]()
+![The Schema Editor with a relationship field and Edit relationship highlighted.](../images/tutorials/relationship-b2b/edit-b2b-relationship.png)
 
-The Edit relationship dialog appears. From this dialog you can change the relationship schema and reference names. The many-to-one relationship type cannot be changed.
+The Edit relationship dialog appears. From this dialog you can change the relationship schema and reference names, or delete the relationship. The many-to-one relationship type cannot be changed.
+
+![The Edit relationship dialog.](../images/tutorials/relationship-b2b/edit-b2b-relationship-dialog.png)
 
 To maintain data integrity and avoid disruptions in segmentation and other processes, consider the following guidelines when managing schema relationships with linked datasets:
 
@@ -150,7 +152,9 @@ To maintain data integrity and avoid disruptions in segmentation and other proce
 
 ## Filter and search for relationships 
 
+You can filter and search for specific relationships within your schemas from the Relationships tab of the Schemas workspace. You can use this view to quickly locate and manage your relationships. Read the document on [exploring schema resources](../ui/explore.md#lookup) for detailed instructions on the filtering options. 
 
+![The Relationships tab in the Schemas workspace.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## Next steps
 
