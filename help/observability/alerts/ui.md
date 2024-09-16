@@ -94,15 +94,15 @@ Alert thresholds can be customized for the following alert types:
 
 Select the ellipsis (**...**) next to a rule's name, a dropdown displays controls. Select **[!UICONTROL Edit]**.
 
-![The [!UICONTROL Edit] option is highlighted for the selected rule.](../images/alerts/ui/INSERT)
+![The [!UICONTROL Edit] option is highlighted for the selected rule.](../images/alerts/ui/threshold-edit.png)
 
 The **[!UICONTROL Customize alert]** page appears. Update the threshold to your desired minutes, then select **[!UICONTROL Confirm]**.
 
-![The Customize alert page highlighting [!UICONTROL Threshold] and [!UICONTROL Confirm] options.](../images/alerts/ui/INSERT)
+![The Customize alert page highlighting [!UICONTROL Threshold] and [!UICONTROL Confirm] options.](../images/alerts/ui/threshold-update.png)
 
 You are returned to the **[!UICONTROL Alerts]** page. To view the threshold settings for the alert, select the rule from the list. You can see the threshold settings for the alert in the right rail, including details such as the status and severity.
 
-![An alert highlighted showing details in the right rail and highglighting [!UICONTROL Threshold].](../images/alerts/ui/INSERT.png)
+![An alert highlighted showing details in the right rail and highglighting [!UICONTROL Threshold].](../images/alerts/ui/threshold-view.png)
 
 ## View alert history {#alert-history}
 
