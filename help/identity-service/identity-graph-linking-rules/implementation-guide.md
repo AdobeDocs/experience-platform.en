@@ -143,3 +143,15 @@ This example also shows that Tom and Summer are to disparate person entities tha
 ![LoginID is linked to another CRMID.](../images/graph-examples/id_c_summer.png)
 
 >[!ENDTABS]
+
+## Next steps
+
+For more information on identity graph linking rules, read the following documentation:
+
+* [Identity graph linking rules overview](./overview.md)
+* [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [Examples of graph configurations](./example-configurations.md)
+* [Troubleshooting and FAQ](./troubleshooting.md)
+* [Namespace priority](./namespace-priority.md)
+* [Graph simulation UI](./graph-simulation.md)
+* [Identity settings UI](./identity-settings-ui.md)
