@@ -17,7 +17,7 @@ To get started, select **[!UICONTROL Alerts]** in the left navigation.
 
 ![Alerts page highlighting [!UICONTROL Alerts] in the left navigation.](../images/alerts/ui/workspace.png)
 
-## Manage alert rules
+## Manage alert rules {#manage-rules}
 
 The **[!UICONTROL Browse]** tab lists the available rules that may trigger an alert.
 
@@ -31,7 +31,7 @@ Select the ellipsis (**...**) next to a rule's name, and a dropdown displays con
 
 ![The selected ellipses reveal the drop-down menu.](../images/alerts/ui/disable-subscribe.png)
 
-## Manage alert subscribers
+## Manage alert subscribers {#manage-subscribers}
 
 >[!NOTE]
 >
@@ -61,7 +61,7 @@ You have added users successfully to your alert notification list. The submitted
 
 ![An email example of the alert notification that is received.](../images/alerts/ui/manage-alert-subscribers-email.png)
 
-## Enable email alerts
+## Enable email alerts {#enable-email}
 
 Alert notifications can be delivered direct to your email. 
 
@@ -79,7 +79,7 @@ Scroll to the **Emails** section at the bottom of the page and select **[!UICONT
 
 Any alerts that you are subscribed to will now be delivered to the email address that is connected to your Adobe ID account. 
 
-## Customize alert threshold
+## Customize alert threshold {#alert-threshold}
 
 Alert thresholds can be customized for the following alert types:
 
@@ -104,7 +104,7 @@ You are returned to the **[!UICONTROL Alerts]** page. To view the threshold sett
 
 ![An alert highlighted showing details in the right rail and highglighting [!UICONTROL Threshold].](../images/alerts/ui/INSERT.png)
 
-## View alert history
+## View alert history {#alert-history}
 
 The **[!UICONTROL History]** tab shows the history of received alerts for your organization, including the rule that triggered the alert, triggered date, and resolved date (if applicable).
 
