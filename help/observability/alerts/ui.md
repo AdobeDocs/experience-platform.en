@@ -86,9 +86,12 @@ Alert thresholds can be customized for the following alert types:
 | Alert type | Customized parameter |
 |---|---|
 | Segment Job Delay | Delay threshold |
+| Segment Export Delay | Delay threshold |
 | Destiation Flow Run Delay | Delay threshold |
+| Identity Service Flow Run Delay | Delay threshold |
 | Profile Flow Run Delay | Delay threshold |
 | Sources Flow Run Delay | Delay threshold |
+| Query Run Delay | Delay threshold |
 | Activation Skip Rate Exceeded | Error threshold |
 | Sources Ingestion Error Rate Exceeded | Error threshold |
 
