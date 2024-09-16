@@ -79,6 +79,31 @@ Scroll to the **Emails** section at the bottom of the page and select **[!UICONT
 
 Any alerts that you are subscribed to will now be delivered to the email address that is connected to your Adobe ID account. 
 
+## Customize alert threshold
+
+Alert thresholds can be customized for the following alert types:
+
+| Alert type | Customized parameter |
+|---|---|
+| Segment Job Delay | Delay threshold |
+| Destiation Flow Run Delay | Delay threshold |
+| Profile Flow Run Delay | Delay threshold |
+| Sources Flow Run Delay | Delay threshold |
+| Activation Skip Rate Exceeded | Error threshold |
+| Sources Ingestion Error Rate Exceeded | Error threshold |
+
+Select the ellipsis (**...**) next to a rule's name, a dropdown displays controls. Select **[!UICONTROL Edit]**.
+
+![The [!UICONTROL Edit] option is highlighted for the selected rule.](../images/alerts/ui/INSERT)
+
+The **[!UICONTROL Customize alert]** page appears. Update the threshold to your desired minutes, then select **[!UICONTROL Confirm]**.
+
+![The Customize alert page highlighting [!UICONTROL Threshold] and [!UICONTROL Confirm] options.](../images/alerts/ui/INSERT)
+
+You are returned to the **[!UICONTROL Alerts]** page. To view the threshold settings for the alert, select the rule from the list. You can see the threshold settings for the alert in the right rail, including details such as the status and severity.
+
+![An alert highlighted showing details in the right rail and highglighting [!UICONTROL Threshold].](../images/alerts/ui/INSERT.png)
+
 ## View alert history
 
 The **[!UICONTROL History]** tab shows the history of received alerts for your organization, including the rule that triggered the alert, triggered date, and resolved date (if applicable).
