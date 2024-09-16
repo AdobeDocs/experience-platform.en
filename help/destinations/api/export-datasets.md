@@ -1984,7 +1984,6 @@ The table below provides descriptions of all parameters in the `scheduleParams` 
 | `endTime` | The date and time in UNIX seconds when dataset exports should end. |
 | `foldernameTemplate` | Specify the expected folder name structure in your storage location where the exported files will be deposited. <ul><li><code>DATASET_ID</code> = <span>A unique identifier for the dataset.</span></li><li><code>DESTINATION</code> = <span>The name of the destination.</span></li><li><code>DATETIME</code> = <span>The date and time formatted as yyyyMMdd_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>The scheduled time for data export formatted as YYYYMMDDHHMM.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>The name of the specific instance of the destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>A unique identifier for the destination instance.</span></li><li><code>SANDBOX_NAME</code> = <span>The name of the sandbox environment.</span></li><li><code>ORGANIZATION_NAME</code> = <span>The name of the organization.</span></li></ul> |
 
-
 {style="table-layout:auto"}
 
 +++
@@ -2054,7 +2053,6 @@ The table below provides descriptions of all parameters in the `scheduleParams` 
 | `startTime` | The date and time in UNIX seconds when dataset exports should start. |
 | `endTime` | The date and time in UNIX seconds when dataset exports should end. |
 | `foldernameTemplate` | Specify the expected folder name structure in your storage location where the exported files will be deposited. <ul><li><code>DATASET_ID</code> = <span>A unique identifier for the dataset.</span></li><li><code>DESTINATION</code> = <span>The name of the destination.</span></li><li><code>DATETIME</code> = <span>The date and time formatted as yyyyMMdd_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>The scheduled time for data export formatted as YYYYMMDDHHMM.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>The name of the specific instance of the destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>A unique identifier for the destination instance.</span></li><li><code>SANDBOX_NAME</code> = <span>The name of the sandbox environment.</span></li><li><code>ORGANIZATION_NAME</code> = <span>The name of the organization.</span></li></ul> |
-
 
 {style="table-layout:auto"}
 
@@ -2126,7 +2124,6 @@ The table below provides descriptions of all parameters in the `scheduleParams` 
 | `endTime` | The date and time in UNIX seconds when dataset exports should end. |
 | `foldernameTemplate` | Specify the expected folder name structure in your storage location where the exported files will be deposited. <ul><li><code>DATASET_ID</code> = <span>A unique identifier for the dataset.</span></li><li><code>DESTINATION</code> = <span>The name of the destination.</span></li><li><code>DATETIME</code> = <span>The date and time formatted as yyyyMMdd_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>The scheduled time for data export formatted as YYYYMMDDHHMM.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>The name of the specific instance of the destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>A unique identifier for the destination instance.</span></li><li><code>SANDBOX_NAME</code> = <span>The name of the sandbox environment.</span></li><li><code>ORGANIZATION_NAME</code> = <span>The name of the organization.</span></li></ul> |
 
-
 {style="table-layout:auto"}
 
 +++
@@ -2196,7 +2193,6 @@ The table below provides descriptions of all parameters in the `scheduleParams` 
 | `startTime` | The date and time in UNIX seconds when dataset exports should start. |
 | `endTime` | The date and time in UNIX seconds when dataset exports should end. |
 | `foldernameTemplate` | Specify the expected folder name structure in your storage location where the exported files will be deposited. <ul><li><code>DATASET_ID</code> = <span>A unique identifier for the dataset.</span></li><li><code>DESTINATION</code> = <span>The name of the destination.</span></li><li><code>DATETIME</code> = <span>The date and time formatted as yyyyMMdd_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>The scheduled time for data export formatted as YYYYMMDDHHMM.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>The name of the specific instance of the destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>A unique identifier for the destination instance.</span></li><li><code>SANDBOX_NAME</code> = <span>The name of the sandbox environment.</span></li><li><code>ORGANIZATION_NAME</code> = <span>The name of the organization.</span></li></ul> |
-
 
 {style="table-layout:auto"}
 
@@ -2337,7 +2333,6 @@ The table below provides descriptions of all parameters in the `scheduleParams` 
 | `startTime` | The date and time in UNIX seconds when dataset exports should start. |
 | `endTime` | The date and time in UNIX seconds when dataset exports should end. |
 | `foldernameTemplate` | Specify the expected folder name structure in your storage location where the exported files will be deposited. <ul><li><code>DATASET_ID</code> = <span>A unique identifier for the dataset.</span></li><li><code>DESTINATION</code> = <span>The name of the destination.</span></li><li><code>DATETIME</code> = <span>The date and time formatted as yyyyMMdd_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>The scheduled time for data export formatted as YYYYMMDDHHMM.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>The name of the specific instance of the destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>A unique identifier for the destination instance.</span></li><li><code>SANDBOX_NAME</code> = <span>The name of the sandbox environment.</span></li><li><code>ORGANIZATION_NAME</code> = <span>The name of the organization.</span></li></ul> |
-
 
 {style="table-layout:auto"}
 
