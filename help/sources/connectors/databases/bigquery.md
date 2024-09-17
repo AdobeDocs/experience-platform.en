@@ -50,9 +50,11 @@ To authenticate using service authentication, provide the appropriate values for
 
 | Credential | Description |
 | --- | --- |
-| `projectId` |
-| `keyFileContent` |
+| `projectId` | The ID of the [!DNL Google BigQuery] that you want to query against. |
+| `keyFileContent` | The key file that is used to authenticate the service account. This value must be in JSON format. |
 | `largeResultsDataSetId` | (Optional) The pre-created  [!DNL Google BigQuery] dataset ID that is required in order to enable support for large result sets. |
+
+For more information on using service accounts in [!DNL Google BigQuery], read the guide on [using service accounts in [!DNL Google BigQuery]](https://cloud.google.com/bigquery/docs/use-service-accounts).
 
 >[!ENDTABS]
 
