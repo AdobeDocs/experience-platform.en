@@ -69,7 +69,7 @@ If you create a new merge policy and set it as the default, the previous default
 
 >[!WARNING]
 >
->Profile counts and audiences with an existing associated default merge policy may be affected. Additionally, audiences will **not** be automatically updated to use the new default merge policy. 
+>Profile counts and audiences with an existing associated default merge policy may be affected. Additionally, audiences will **not** be automatically updated to use the new default merge policy, and will continue to use the previous merge policy.
 
 ## Next steps
 
