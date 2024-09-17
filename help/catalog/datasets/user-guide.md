@@ -90,6 +90,7 @@ The datasets UI now offers a collections of inline actions for each available da
 * [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance)
 * [[!UICONTROL Enable unified profile]](#enable-profile)
 * [[!UICONTROL Manage tags]](#manage-tags)
+* [(Beta) [!UICONTROL Set data retention policy]](#data-retention-policy)
 * [[!UICONTROL Move to folders]](#move-to-folders)
 * [[!UICONTROL Delete]](#delete). 
 
@@ -162,6 +163,38 @@ The [!UICONTROL Manage tags] dialog can also remove existing tags from a dataset
 Once a tag has been aded to a dataset, the datasets can be filtered based on the corresponding tag. See the section on how to [filter datasets by tags](#enable-profile) for more information.
 
 For more information on how to classify business objects for easier discovery and categorization, see the guide on [managing metadata taxonomies](../../administrative-tags/ui/managing-tags.md). This guide details how a user with appropriate permissions can create pre-defined tags, assigning categories to tags, and perform all related CRUD operations on tags and tag categories in the Platform UI.
+
+### (Beta) Set data retention policy {#data-retention-policy}
+
+>[!AVAILABILITY] 
+> 
+>Data retention settings are currently in Beta and available only in a **limited release**. It is not available to all customers. The ability to set your data retention policy is only available for organizations in the limited release. Your UI might not reflect the feature described below.
+
+Manage dataset expiration and retention policies at the dataset level from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure retention policies for your data lake data retrospectively. The expiration date defined by your retention policy is based on the date your data was ingested into the Platform. 
+
+To open the [!UICONTROL Set data retention] dialog, select the ellipsis of a dataset that you want to manage followed by **[!UICONTROL Set data retention policy]** from the dropdown menu.
+
+![The Browse tab of the Datasets workspace with the ellipsis and Set data retention policy option highlighted.]()
+
+The [!UICONTROL Set data retention] dialog appears. The dialog shows the sandbox level license usage metrics , dataset-level details, and data lake settings. These metrics indicate your current usage against your entitlements.
+The dataset details include, the dataset name, the type of dataset, whether the dataset is enabled for Profile, and the current Data Lake storage. 
+
+Note: the data lake storage metric is still in development for the beta..
+
+![The Set data retention dialog.]()
+
+If the dataset retention policy is not yet configured, the dialog shows a recommended retention policy. One month is the default recommendation. To overwrite the standard retention policy, select and update the number and use the dropdown menu to update the time period (days, months, years). 
+
+>[!NOTE] 
+> 
+>The minimum (data retention duration) value cannot be smaller than 30 days.
+
+The possible expiration date range can vary and depends on your entitlements and the types of data set it is applied to.
+
+<!-- Personal note: Ask Adam for a link to wiki that states what the rules are or how we define the the range of the allowed TTL. -->
+
+![The Set data retention dialog with the duration dropdown and Apply highlighted.]()
+
 
 ### Move to folders {#move-to-folders}
 
