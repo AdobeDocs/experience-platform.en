@@ -10,11 +10,22 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 This document covers the release notes for the Adobe Experience Platform Web SDK.
 For the latest release notes on the Web SDK tag extension, see the [Web SDK tag extension release notes](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.23.0 - September 17, 2024
+
+**New features**
+
+- Added support for requesting the CORE id in the getIdentity command.
+
+**Fixes and improvements**
+
+- Fixed an issue where cookies were not written correctly when running on localhost.
+
 ## Version 2.22.0 - August 22, 2024
 
 **New features**
 
 - Added personalization monitors.
+- Added support for Adobe Journey Optimizer Content Cards to the [subscribeRulesetItems](commands/subscriberulesetitems.md) command.
 
 **Fixes and improvements**
 
