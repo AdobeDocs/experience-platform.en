@@ -170,7 +170,7 @@ Namespace priority plays an important role in how event fragments determine prim
 * Once you have configured and saved your [identity settings](./identity-settings-ui.md) for a given sandbox, Profile will then use [namespace priority](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) to determine the primary identity. In the case of identityMap, Profile will then no longer use the `primary=true` flag.
 * While Profile will no longer refer to this flag, other services on Experience Platform may continue to use the `primary=true` flag.
 
-In order for [authenticated user events](configuration.md#ingest-your-data) to be tied to the person namespace, all authenticated events must contain the person namespace (CRMID). This means that even after a user logs in, the person namespace must still be present on every authenticated event.
+In order for [authenticated user events](implementation-guide.md#ingest-your-data) to be tied to the person namespace, all authenticated events must contain the person namespace (CRMID). This means that even after a user logs in, the person namespace must still be present on every authenticated event.
 
 You may continue to see `primary=true` 'events' flag when looking up a profile in profile viewer. However, this is ignored and will not be used by Profile.
 
@@ -266,9 +266,9 @@ ORDER BY timestamp desc
 Refer to the documentation on [identity optimization algorithm](./identity-optimization-algorithm.md), as well as the types of graph structures that are supported.
 
 * Read the [graph configuration guide](./example-configurations.md) for examples of supported graph structures.
-* You can also read the [implementation guide](./configuration.md#appendix) for examples of unsupported graph structures. There are two scenarios that could happen:
+* You can also read the [implementation guide](./implementation-guide.md#appendix) for examples of unsupported graph structures. There are two scenarios that could happen:
   * No single namespace across all your profiles.
-  * A ["dangling ID"](./configuration.md#dangling-loginid-scenario) scenario occurs. In this scenario, Identity Service is unable to determine if the dangling ID is associated with any of the person entities in the graphs.
+  * A ["dangling ID"](./implementation-guide.md#dangling-loginid-scenario) scenario occurs. In this scenario, Identity Service is unable to determine if the dangling ID is associated with any of the person entities in the graphs.
 
 You can also use the [graph simulation tool in the UI](./graph-simulation.md) to simulate events and configure your own unique namespace and namespace priority settings. Doing so can help give you a baseline understanding of how the identity optimization algorithm should behave. 
 
@@ -325,24 +325,26 @@ You can use the following query in profile snapshot export dataset to obtain sam
 
 This section outlines a list of answers to frequently asked questions about identity graph linking rules.
 
-### Identity optimization algorithm {#identity-optimization-algorithm}
+## Identity optimization algorithm {#identity-optimization-algorithm}
 
-#### I have a CRMID for each of my business unites (B2C CRMID, B2B CRMID), but I don't have a unique namespace across all of my profiles. What will happen if I mark B2C CRMID and B2B CRMID as unique, and enable my identity settings?
+Read this section for answers to frequently asked questions about the [identity optimization algorithm](./identity-optimization-algorithm.md).
 
-This scenario is unsupported. Therefore, you may see graphs collapse in cases where a user uses their B2C CRMID to login, and another user uses their B2B CRMID to login. For more information, read the section on [single person namespace requirement](./configuration.md#single-person-namespace-requirement) in the implementation page.
+### I have a CRMID for each of my business unites (B2C CRMID, B2B CRMID), but I don't have a unique namespace across all of my profiles. What will happen if I mark B2C CRMID and B2B CRMID as unique, and enable my identity settings?
 
-#### Does identity optimization algorithm 'fix' existing collapsed graphs?
+This scenario is unsupported. Therefore, you may see graphs collapse in cases where a user uses their B2C CRMID to login, and another user uses their B2B CRMID to login. For more information, read the section on [single person namespace requirement](./implementation-guide.md#single-person-namespace-requirement) in the implementation page.
+
+### Does identity optimization algorithm 'fix' existing collapsed graphs?
 
 Existing collapsed graphs will be affected ('fixed') by the graph algorithm only if these graphs get updated after you save your new settings.
 
-#### If two people log in and out using the same device, what happens to the events? Will all events transfer over to the last authenticated user?
+### If two people log in and out using the same device, what happens to the events? Will all events transfer over to the last authenticated user?
 
 * Anonymous events (events with ECID as primary identity on Real-Time Customer Profile) will transfer to the last authenticated user. This is because the ECID will be linked to the CRMID of the last authenticated user (on Identity Service).
 * All authenticated events (events with CRMID defined as primary identity) will remain with the person.
 
 For more information, read the guide on [determining the primary identity for experience events](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events).
 
-#### How will journeys in Adobe Journey Optimizer be impacted when the ECID is transferring from one person to another? 
+### How will journeys in Adobe Journey Optimizer be impacted when the ECID is transferring from one person to another? 
 
 The CRMID of the last authenticated user will be linked to the ECID (shared device). ECIDs can be reassigned from one person to another based on user behavior. The impact will depend on how the journey is constructed, so it is important that customers test out the journey in a development sandbox environment to validate the behavior. 
 
@@ -359,27 +361,31 @@ The key points to highlight are as follows:
   * With this feature, ECID are no longer always associated with one profile.
   * The recommendation is to start journeys with person namespaces (CRMID).
 
-### Namespace priority
+## Namespace priority
 
-#### I've enabled my identity settings. What happens to my settings if I want to add a custom namespace after the settings has been enabled? 
+Read this section for answers to frequently asked questions about [namespace priority](./namespace-priority.md).
+
+### I've enabled my identity settings. What happens to my settings if I want to add a custom namespace after the settings has been enabled? 
 
 There are two 'buckets' of namespaces: person namespaces and device/cookie namespaces. The newly created custom namespace will have the lowest priority in each 'bucket' so that this new custom namespace does not impact existing data ingestion.
 
-#### If Real-Time Customer Profile is no longer using the 'primary' flag on identityMap, does this value still need to be sent? 
+### If Real-Time Customer Profile is no longer using the 'primary' flag on identityMap, does this value still need to be sent? 
 
 Yes, the 'primary' flag on identityMap is used by other services. For more information, read the guide on [the implications of namespace priority on other Experience Platform services](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
 
-#### Will namespace priority apply to Profile record datasets in Real-Time Customer Profile?
+### Will namespace priority apply to Profile record datasets in Real-Time Customer Profile?
 
 No. Namespace priority will only apply to Experience Event datasets using the XDM ExperienceEvent Class.
 
-#### How does this feature work in tandem with the identity graph guardrails of 50 identities per graph? Does namespace priority affect this system defined guardrail? 
+### How does this feature work in tandem with the identity graph guardrails of 50 identities per graph? Does namespace priority affect this system defined guardrail? 
 
 The identity optimization algorithm will be applied first to ensure person entity representation. Afterwards, if the graph tries to exceed the [identity graph guardrail](../guardrails.md) (50 identities per graph), then this logic will be applied. Namespace priority does not affect the deletion logic of the 50 identity/graph guardrail. 
 
-### Testing
+## Testing
 
-#### What are some of the scenarios I should be testing in a development sandbox environment? 
+Read this section for answers to frequently asked questions about testing and debugging features in identity graph linking rules.
+
+### What are some of the scenarios I should be testing in a development sandbox environment? 
 
 Generally speaking, testing on a development sandbox should mimic the use cases you intend to execute on your production sandbox. Refer to the following table for some key areas to validate, when conducting comprehensive testing: 
 
@@ -391,7 +397,7 @@ Generally speaking, testing on a development sandbox should mimic the use cases 
 
 {style="table-layout:auto"}
 
-#### How do I validate that this feature is working as expected?
+### How do I validate that this feature is working as expected?
 
 Use the [graph simulation tool](./graph-simulation.md) to validate that the feature is working at an individual graph level.
 
