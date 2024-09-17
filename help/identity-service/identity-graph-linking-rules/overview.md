@@ -24,13 +24,55 @@ The following documents are essential in understanding identity graph linking ru
 * [Graph simulation UI](./graph-simulation.md)
 * [Identity settings UI](./identity-settings-ui.md)
 
-## Example scenarios where graph collapse could happen
 
-* **Shared device**: Shared device refers to devices that are used by more than one individual. Examples of a shared device include tablets, library computers, and kiosks.
-* **Bad email and phone numbers**: Bad email and phone numbers refer to end-users registering invalid contact information, such as "test<span>@test.com" for email, and "+1-111-111-1111" for phone number.
-* **Erroneous or bad identity values**: Erroneous or bad identity values refer to non-unique identity values that could merge CRMIDs. For example, while IDFA's are required to have 36 characters (32 alphanumeric characters and four hyphens), there are scenarios where an IDFA with an identity value of "user_null" can get ingested. Similarly, phone numbers only support numerical characters, but a phone namespace with an identity value of "not-specified" may get ingested.
+## Example customer scenarios solved by identity graph linking rules {#example-scenarios}
 
-For more information on use case scenarios for identity graph linking rules, read the section on [example scenarios](#example-scenarios).
+This section outlines example scenarios that you may consider when configuring identity graph linking rules.
+
+### Shared device
+
+There are instances where multiple logins can occur on a single device:
+
+| Shared device | Description |
+| --- | --- |
+| Family computers and tablets | Husband and wife both login to their respective bank accounts. |
+| Public kiosk | Travelers at an airport logging on using their loyalty ID to check in bags and print boarding passes. |
+| Call center | Call center personnel log in on a single device on behalf of customers calling customer support to resolve issues. |
+
+![A diagram of some common shared devices.](../images/identity-settings/shared-devices.png)
+
+In these cases, from a graph standpoint, with no limits enabled, a single ECID will be linked to multiple CRMIDs. 
+
+With identity graph linking rules, you can:
+
+* Configure the ID used for login as unique identifier. For example, you can limit a graph to store just one identity with a CRMID namespace, and thus define that CRMID as the unique identifier of a shared device.
+  * By doing this, you can ensure that CRMIDs do not get merged by the ECID.
+
+### Invalid email/phone scenarios
+
+There are also instances of users who provide fake values as phone numbers and/or email addresses when registering. In these cases, if limits are not enabled, then phone/email related identities will end up being linked to multiple different CRMIDs.
+
+![A diagram that represents invalid email or phone scenarios.](../images/identity-settings/invalid-email-phone.png)
+
+With identity graph linking rules, you can:
+
+* Configure either the CRMID, phone number, or email address as the unique identifier and thus limit one person to just one CRMID, phone number, and/or email address associated with their account.
+
+### Erroneous or bad identity values
+
+There are cases where non-unique, erroneous identity values are ingested in the system, irrespective of namespace. Examples include:
+
+* IDFA namespace with the identity value of "user_null".
+  * IDFA identity values should have 36 characters: 32 alphanumeric characters and four hyphens.
+* Phone number namespace with the identity value of "not-specified".
+  * Phone numbers should not have any alphabet characters.
+
+These identities could result in the following graphs, where multiple CRMIDs are merged together with the 'bad' identity:
+
+![A graph example of identity data with erroneous or bad identity values.](../images/identity-settings/bad-data.png)
+
+With identity graph linking rules you can configure the CRMID as the unique identifier to prevent unwanted profile collapsing due to this type of data.
+
 
 ## Identity graph linking rules {#identity-graph-linking-rules}
 
@@ -89,55 +131,6 @@ Unique namespaces and namespace priorities are both configurable in the identity
 * If an experience event has two or more identities of the highest namespace priority in the identityMap, it will be rejected from ingestion because it will be deemed as "bad data". For example, if the identityMap contains `{ECID: 111, CRMID: John, CRMID: Jane}`, the entire event will be rejected as bad data because it implies that the event is associated to both `CRMID: John` and `CRMID: Jane` simultaneously.
 
 For more information, read the guide on [namespace priority](./namespace-priority.md).
-
-## Example customer scenarios solved by identity graph linking rules {#example-scenarios}
-
-This section outlines example scenarios that you may consider when configuring identity graph linking rules.
-
-### Shared device
-
-There are instances where multiple logins can occur on a single device:
-
-| Shared device | Description |
-| --- | --- |
-| Family computers and tablets | Husband and wife both login to their respective bank accounts. |
-| Public kiosk | Travelers at an airport logging on using their loyalty ID to check in bags and print boarding passes. |
-| Call center | Call center personnel log in on a single device on behalf of customers calling customer support to resolve issues. |
-
-![A diagram of some common shared devices.](../images/identity-settings/shared-devices.png)
-
-In these cases, from a graph standpoint, with no limits enabled, a single ECID will be linked to multiple CRMIDs. 
-
-With identity graph linking rules, you can:
-
-* Configure the ID used for login as unique identifier. For example, you can limit a graph to store just one identity with a CRMID namespace, and thus define that CRMID as the unique identifier of a shared device.
-  * By doing this, you can ensure that CRMIDs do not get merged by the ECID.
-
-### Invalid email/phone scenarios
-
-There are also instances of users who provide fake values as phone numbers and/or email addresses when registering. In these cases, if limits are not enabled, then phone/email related identities will end up being linked to multiple different CRMIDs.
-
-![A diagram that represents invalid email or phone scenarios.](../images/identity-settings/invalid-email-phone.png)
-
-With identity graph linking rules, you can:
-
-* Configure either the CRMID, phone number, or email address as the unique identifier and thus limit one person to just one CRMID, phone number, and/or email address associated with their account.
-
-### Erroneous or bad identity values
-
-There are cases where non-unique, erroneous identity values are ingested in the system, irrespective of namespace. Examples include:
-
-* IDFA namespace with the identity value of "user_null".
-  * IDFA identity values should have 36 characters: 32 alphanumeric characters and four hyphens.
-* Phone number namespace with the identity value of "not-specified".
-  * Phone numbers should not have any alphabet characters.
-
-These identities could result in the following graphs, where multiple CRMIDs are merged together with the 'bad' identity:
-
-![A graph example of identity data with erroneous or bad identity values.](../images/identity-settings/bad-data.png)
-
-With identity graph linking rules you can configure the CRMID as the unique identifier to prevent unwanted profile collapsing due to this type of data.
-
 
 ## Next steps
 

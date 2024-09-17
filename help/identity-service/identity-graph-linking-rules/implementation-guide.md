@@ -49,8 +49,6 @@ Given a unique namespace, (in this case, a CRMID instead of two disparate namesp
 
 +++
 
-See the [appendix](#appendix) for examples of graph scenarios that are solved by ensuring that every profile contains the unique namespace with the highest priority.
-
 ### Namespace priority configuration
 
 If you are using the [Adobe Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md) to ingest data, then you must give your ECIDs a higher priority than Adobe Analytics ID (AAID) because Identity Service blocks AAID. By prioritizing ECID, you can instruct Real-Time Customer Profile to store unauthenticated events to ECID instead of AAID.
