@@ -35,7 +35,7 @@ Adobe recommends that you add the following IP ranges to an allowlist depending 
 
 * 4.172.1.139
 
-## GBR9: United Kingdon customers {#gbr9}
+## GBR9: United Kingdom customers {#gbr9}
 
 * 20.108.200.9
 
