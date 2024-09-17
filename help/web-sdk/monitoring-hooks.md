@@ -7,6 +7,10 @@ description: Learn how to use the monitoring hooks provided by the Adobe Experie
 
 The Adobe Experience Platform Web SDK includes monitoring hooks which you can use to monitor various system events. These tools are useful for developing your own debugging tools and to capture Web SDK logs.
 
+You can also use these monitoring hooks to read Adobe Target response tokens when personalization is rendered.
+
+These monitoring hooks are a programmatic way to handle events that are logged when debugging is enabled.
+
 ## `onInstanceCreated` {#onInstanceCreated}
 
 This callback function is triggered when you have successfully created a new Web SDK instance. See the sample below for details about what this function returns.
@@ -250,7 +254,16 @@ The Web SDK looks for an array of objects in a global variable called `__alloyMo
 
 To capture all Web SDK events, you must define your monitoring hooks before the Web SDK code is loaded on your page. Each monitoring method captures a Web SDK event.
 
-See below an example page with all the monitoring hooks implemented.
+You may define monitoring hooks *after* Web SDK code loads on your page, but any hooks that have triggered before page load will *not* be captured.
+
+When you define your monitoring hook object, you only need to define the methods that you would like to define special logic for.
+For example, if you only care about `onContentRendering`, you can just define that method. You do not need to use all monitoring hooks at once.
+
+You can define multiple monitoring hook objects. All the objects with the given method will be called when the corresponding event is triggered.
+
+>[!TIP]
+>
+>See below an example page with all the monitoring hooks implemented.
 
 ```html
 <!DOCTYPE html>
