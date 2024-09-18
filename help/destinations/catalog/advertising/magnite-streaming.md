@@ -94,8 +94,7 @@ To configure details for the destination, fill in the required and optional fiel
 
 >[!NOTE]
 >
->This source partner name needs to be a string of all lowercase characters, and should not contain any characters except 'a-z', '0-9', '-'(dash), or '_'(underscore). The UI should enforce these requirements, and throw an error if you try to enter a string that does not meet them. 
->This string also needs to exactly match the name of the S3 delivery bucket you have configured with Magnite, and set-up in the 'Authenticate to Destination' step (above).
+>The source partner name must be an all-lowercase string which matches the name of the Amazon S3 delivery bucket you have configured with Magnite and set up in the [authenticate to destination](#authenticate) step. The supported characters include 'a-z', '0-9', '-'(dash), or '_'(underscore).
 
 ![destination configuration auth fields filled](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 
