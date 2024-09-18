@@ -13,6 +13,11 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 >abstract="The object {name} is being viewed on {date}."
 
 >[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_core"
+>title="Core products table"
+>abstract="The core products listed in the table have their own metrics, usage tracking, and drill-through views at the sandbox level. These core products provide the key metrics for tracking, and any add-ons are included in these metrics."
+
+>[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_addons"
 >title="Add-ons table"
 >abstract="The Add-ons table lists products whose license amounts are combined with the metrics supported by core products. These add-ons do not have separate metrics but enhance the usage tracking of the core products they are associated with."
