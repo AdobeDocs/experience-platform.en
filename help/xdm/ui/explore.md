@@ -18,13 +18,13 @@ In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. The 
 
 ![The Schemas workspace with several tabs highlighted.](../images/ui/explore/tabs.png)
 
-The filter icon (![Filter Icon Image](/help/images/icons/filter.png)) reveals controls in the left rail to narrow down listed results. Resource filters are only available for the **[!UICONTROL Browse]** and **[!UICONTROL Relationships]** tabs. The filter controls are different for schemas and relationships.
+The filter icon (![Filter Icon Image](/help/images/icons/filter.png)) reveals controls in the left rail to narrow down listed results. Resource filters are available for schemas and relationships on the **[!UICONTROL Browse]** and **[!UICONTROL Relationships]** tabs respectively.
 
-On the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, you can filter your schema inventory. Use the **[!UICONTROL Included in Profile]** toggle to only show schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md). Use the **[!UICONTROL Show adhoc schemas]** toggle to filter the list of schemas that were created with fields that are namespaced for use only by a single dataset.
+On the [!UICONTROL Browse] tab of the [!UICONTROL Schemas] workspace, you can filter your schema inventory. Use the **[!UICONTROL Included in Profile]** toggle to only show schemas that have been enabled for use in [Real-Time Customer Profile](../../profile/home.md). Use the **[!UICONTROL Show adhoc schemas]** toggle to filter the list of schemas created with fields namespaced for use only by a single dataset.
 
 ![The [!UICONTROL Schemas] workspace [!UICONTROL Browse] tab with the filters panel highlighted.](../images/ui/explore/filters.png)
 
-On the [!UICONTROL Relationship] tab of the [!UICONTROL Schemas] workspace, you can filter the list of relationships based on four criteria. The filters include [!UICONTROL Source schema], [!UICONTROL Destination schema], [!UICONTROL Source class], and the [!UICONTROL Destination class]. The filters are described in the table below.
+On the [!UICONTROL Relationship] tab of the [!UICONTROL Schemas] workspace, you can filter the list of relationships based on four criteria. The filters include [!UICONTROL Source schema], [!UICONTROL Destination schema], [!UICONTROL Source class], and the [!UICONTROL Destination class]. The table below provides a description of the filters.
 
 | Filter                            |Description |
 |-----------------------------------|------------|
@@ -105,7 +105,7 @@ Identity fields are highlighted in the canvas with a fingerprint icon (![Fingerp
 
 ### Relationship fields {#relationship}
 
-If you are inspecting a schema that contains a relationship field, the field will be listed in the left rail under **[!UICONTROL Relationships]**. Select the relationship field name in the left rail to reveal the field in the canvas, regardless of how deeply it is nested. Relationship fields are also uniquely highlighted in the canvas, showing the name of the reference schema that the field links to.
+If you are inspecting a schema that contains a relationship field, the field will be listed in the left rail under **[!UICONTROL Relationships]**. Select the relationship field name in the left rail to reveal the field in the canvas, regardless of how deeply it is nested. Relationship fields are also uniquely highlighted in the canvas, showing the name of the reference schema that the field links to. For organizations with B2B capabilities, custom relationship names can be written and will be displayed on the canvas in these cases.
 
 ![The Schema Editor with the relationship field and Edit relationship highlighted.](../images/ui/explore/relationship-field.png)
 

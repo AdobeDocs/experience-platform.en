@@ -98,11 +98,11 @@ To set a relationship field, select the field in question within the canvas, fol
 
 ![The Schema Editor with the sourceKey field and Add relationship highlighted.](../images/tutorials/relationship-b2b/add-relationship.png)
 
-The [!UICONTROL Add relationship] dialog appears. Use this dialog to specify details about the relationship. The relationship type is set to **[!UICONTROL Many-to-one]** by default.
+The [!UICONTROL Add relationship] dialog appears. Use this dialog to specify relationship details. The relationship type is set to **[!UICONTROL Many-to-one]** by default.
 
-![The Add relationship dialog with Many to one schema relationship highlighted.](../images/tutorials/relationship-b2b/relationship-dialog.png)
+![The Add relationship dialog with Many-to-one schema relationship highlighted.](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-Under **[!UICONTROL Reference Schema]**, use the search bar, or dropdown menu, to find the name of the reference schema. When you highlight the reference schema's name, the **[!UICONTROL Reference Identity Namespace]** field automatically updates to the namespace of the schema's primary identity.
+Under **[!UICONTROL Reference Schema]**, use the search bar, or dropdown menu, to find the name of the reference schema. When you highlight the reference schema's name, the **[!UICONTROL Reference Identity Namespace]** field automatically updates to the namespace of the reference schema's primary identity.
 
 >[!NOTE]
 >
@@ -120,7 +120,7 @@ Under **[!UICONTROL Relationship Name From Current Schema]** and **[!UICONTROL R
 
 ![The Add relationship dialog with the Relationship Name fields highlighted.](../images/tutorials/relationship-b2b/relationship-name.png)
 
-The canvas reappears, with the relationship field now marked with the friendly name you provided earlier. The relationship name is also listed under the left rail for easy reference.
+The canvas reappears, with the relationship field now marked with the friendly name you provided earlier. The relationship name is also listed on the left rail for easy reference.
 
 ![The Schema Editor with the new relationship name applied.](../images/tutorials/relationship-b2b/relationship-applied.png)
 
@@ -134,12 +134,12 @@ Once a schema relationship is established, select the relationship field in the 
 
 >[!NOTE]
 >
->To view all associated relationships, select the relationship field in the reference schema followed by [!UICONTROL View relationships] .
+>To view all associated relationships, select the primary identity field in the reference schema followed by [!UICONTROL View relationships].
 >![The Schema Editor with a relationship field selected and View relationship highlighted.](../images/tutorials/relationship-b2b/view-relationships.png "The Schema Editor with a relationship field selected and View relationship highlighted."){width="100" zoomable="yes"}
 
 ![The Schema Editor with a relationship field and Edit relationship highlighted.](../images/tutorials/relationship-b2b/edit-b2b-relationship.png)
 
-The [!UICONTROL Edit relationship] dialog appears. From this dialog you can change the relationship schema and reference names, or delete the relationship. The many-to-one relationship type cannot be changed.
+The [!UICONTROL Edit relationship] dialog appears. From this dialog, you can change the reference schema and relationship names, or delete the relationship. The many-to-one relationship type cannot be changed.
 
 ![The Edit relationship dialog.](../images/tutorials/relationship-b2b/edit-b2b-relationship-dialog.png)
 

@@ -103,7 +103,7 @@ Once your source schema has a dedicated reference field defined, you can designa
 
 >[!NOTE]
 >
->Only string or string array fields can support relationships. 
+>Relationships can only be supported on string or string array fields.
 
 Select the `preferredHotel` field in the canvas, then select **[!UICONTROL Add relationship]** in the **[!UICONTROL Field properties]** sidebar. 
 
@@ -113,17 +113,17 @@ The [!UICONTROL Add relationship] dialog appears. From this dialog you can set r
 
 >[!NOTE]
 >
->If you have access to Real-Time CDP B2B Edition, when you define a relationship field using the right-rail controls in the canvas, you can also define a many-to-one relationship using the [same dialog](./relationship-b2b.md#relationship-field).
+>If you have access to Real-Time CDP B2B Edition, you can use the canvas's right-rail controls to define a relationship field, as well as build a many-to-one relationship using the [same dialog](./relationship-b2b.md#relationship-field).
 
 ![The Add relationship dialog.](../images/tutorials/relationship/add-relationship-dialog.png)
 
-Select the dropdown for **[!UICONTROL Reference schema]** and select the reference schema for the relationship ("[!DNL Hotels]" in this example). 
+Use the dropdown for **[!UICONTROL Reference schema]** and select the reference schema for the relationship ("[!DNL Hotels]" in this example). 
 
 >[!NOTE]
 >
 >Only schemas that contain a primary identity are included in the reference schema dropdown menu. This safeguard prevents you from accidentally creating a relationship with a schema that isn't properly configured yet.
 
-The reference schema's identity's namespace (in this case, "[!DNL Hotel ID]") is automatically populated under **[!UICONTROL Reference identity namespace]**. Select **[!UICONTROL Apply]** when finished.
+The reference schema's identity namespace (in this case, "[!DNL Hotel ID]") is automatically populated under **[!UICONTROL Reference identity namespace]**. Select **[!UICONTROL Apply]** when finished.
 
 ![The Add relationship dialog with the relationship parameters configured and Apply highlighted.](../images/tutorials/relationship/apply-relationship.png)
 
@@ -133,11 +133,11 @@ The `preferredHotel` field is now highlighted as a relationship in the canvas, d
 
 ### Edit an existing relationship field {#edit-relationship}
 
-To change the reference schema, select a field with an existing relationship then select **[!UICONTROL Edit relationship]** in the **[!UICONTROL Field properties]** sidebar. 
+To change the reference schema, select a field with an existing relationship, then select **[!UICONTROL Edit relationship]** in the **[!UICONTROL Field properties]** sidebar. 
 
 ![The Schema Editor with Edit relationship highlighted.](../images/tutorials/relationship/edit-relationship.png)
 
-The [!UICONTROL Add relationship] dialog appears. From here you can follow the process outlined in [defining a relationship field](#relationship-field) or delete the relationship. Select **[!UICONTROL Delete relationship]** to remove the relationship to the reference schema. 
+The [!UICONTROL Edit relationship] dialog appears. From here, you can follow the process outlined in [defining a relationship field](#relationship-field) or delete the relationship. Select **[!UICONTROL Delete relationship]** to remove the relationship to the reference schema. 
 
 ![The Edit relationship dialog.](../images/tutorials/relationship/edit-relationship-dialog.png)
 
