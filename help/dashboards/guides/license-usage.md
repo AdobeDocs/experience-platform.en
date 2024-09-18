@@ -13,6 +13,11 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 >abstract="The object {name} is being viewed on {date}."
 
 >[!CONTEXTUALHELP]
+>id="platform_dashboards_addons"
+>title="Add-ons table"
+>abstract="The Add-ons table lists products whose license amounts are combined with the metrics supported by core products. These add-ons do not have separate metrics but enhance the usage tracking of the core products they are associated with."
+
+>[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="License usage dashboard"
 >abstract="The license usage dashboard offers insight into the Adobe Experience Platform products that you've purchased. The dashboard overview displays the primary metrics for your products including your usage for each of the primary metrics and your contracted license amount. The details workspace displays a breakdown of your metrics for each product within specific sandboxes."
