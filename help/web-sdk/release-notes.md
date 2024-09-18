@@ -14,18 +14,18 @@ For the latest release notes on the Web SDK tag extension, see the [Web SDK tag 
 
 **New features**
 
-- Added support for requesting the CORE id in the getIdentity command.
+- Added support for requesting the [CORE ID](identity/overview.md#tracking-coreid-web-sdk) in the [getIdentity](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library) command.
 
 **Fixes and improvements**
 
-- Fixed an issue where cookies were not written correctly when running on localhost.
+- Fixed an issue where cookies were not written correctly when running the Web SDK locally.
 
 ## Version 2.22.0 - August 22, 2024
 
 **New features**
 
-- Added personalization monitors.
-- Added support for Adobe Journey Optimizer Content Cards to the [subscribeRulesetItems](commands/subscriberulesetitems.md) command.
+- Added support for personalization monitoring hooks.
+<!-- - Added support for Adobe Journey Optimizer Content Cards to the [subscribeRulesetItems](commands/subscriberulesetitems.md) command. -->
 
 **Fixes and improvements**
 

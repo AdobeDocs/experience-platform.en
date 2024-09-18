@@ -11,7 +11,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 **Fixes and improvements**
 
-- Fixed an issue where cookies were not written correctly when running on localhost.
+- Fixed an issue where cookies were not written correctly when running the Web SDK locally.
 
 Contains version 2.23.0 of the Adobe Experience Platform Web SDK.
 
@@ -20,7 +20,7 @@ Contains version 2.23.0 of the Adobe Experience Platform Web SDK.
 **New features**
 
 - Added monitoring hook `triggered` event.
-- Added support for Adobe Journey Optimizer Content Cards to the [subscribeRulesetItems](event-types.md#subscribe-ruleset-items) event type.
+<!-- - Added support for Adobe Journey Optimizer Content Cards to the [subscribeRulesetItems](event-types.md#subscribe-ruleset-items) event type. -->
 - [Guided events](action-types.md#instance), [Request default personalization](action-types.md#personalization), [Subscribe ruleset items](event-types.md#subscribe-ruleset-items), and [evaluate rulesets](action-types.md#evaluate-rulesets) are now generally available.
 
 **Fixes and improvements**
