@@ -13,7 +13,7 @@ exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems.
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from an FTP or an SFTP server through batches.
+Cloud storage sources can bring your own data into Experience Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. Experience Platform allows you to bring in data from an FTP or an SFTP server through batches.
 
 ## Prerequisites {#prerequisites}
 
@@ -148,15 +148,53 @@ more ~/.ssh/authorized_keys
 
 >[!ENDTABS]
 
+### Gather required credentials {#credentials}
 
+You must provide values for the following credentials in order to connect your [!DNL SFTP] server to Experience Platform.
 
-## Connect SFTP to [!DNL Platform]
+>[!BEGINTABS]
+
+>[!TAB Basic authentication]
+
+Provide the appropriate values for the following credentials to authenticate your [!DNL SFTP] server using basic authentication.
+
+| Credential | Description |
+| ---------- | ----------- |
+| `host` | The name or IP address associated with your [!DNL SFTP] server. |
+| `port` | The [!DNL SFTP] server port you're connecting to. If unprovided, the value defaults to `22`. |
+| `username` | The username with access to your [!DNL SFTP] server. |
+| `password` | The password for your [!DNL SFTP] server. |
+| `maxConcurrentConnections` | This parameter allows you to specify a maximum limit for the number of concurrent connections Platform will create when connecting to your SFTP server. You must set this value to be less than the limit set by SFTP. **Note**: When this setting is enabled for an existing SFTP account, it will only affect future dataflows and not existing dataflows. |
+| `folderPath` | The path to the folder that you want to provide access to. [!DNL SFTP] source, you can provide the folder path to specify user access to the sub folder of your choice. |
+| `disableChunking` | During data ingestion, the [!DNL SFTP] source can retrieve the file length first, divide the file into multiple parts, and then read them in parallel. You can enable or disable this value to specify whether your [!DNL SFTP] server can retrieve file lengths or read data from a specific offset. |
+| `connectionSpec.id` | (API-only) The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
+
+>[!TAB SSH public key authentication]
+
+Provide the appropriate values for the following credentials to authenticate your [!DNL SFTP] server using SSH public key authentication.
+
+| Credential | Description |
+| ---------- | ----------- |
+| `host` | The name or IP address associated with your [!DNL SFTP] server. |
+| `port` | The [!DNL SFTP] server port you're connecting to. If unprovided, the value defaults to `22`. |
+| `username` | The username with access to your [!DNL SFTP] server. |
+| `password` | The password for your [!DNL SFTP] server. |
+| `privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
+| `passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
+| `maxConcurrentConnections` | This parameter allows you to specify a maximum limit for the number of concurrent connections Platform will create when connecting to your SFTP server. You must set this value to be less than the limit set by SFTP. **Note**: When this setting is enabled for an existing SFTP account, it will only affect future dataflows and not existing dataflows. |
+| `folderPath` | The path to the folder that you want to provide access to. [!DNL SFTP] source, you can provide the folder path to specify user access to the sub folder of your choice. |
+| `disableChunking` | During data ingestion, the [!DNL SFTP] source can retrieve the file length first, divide the file into multiple parts, and then read them in parallel. You can enable or disable this value to specify whether your [!DNL SFTP] server can retrieve file lengths or read data from a specific offset. |
+| `connectionSpec.id` | (API-only) The connection specification returns a source's connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
+
+>[!ENDTABS]
+
+## Connect SFTP to Experience Platform
 
 >[!IMPORTANT]
 >
 >Users are required to disable Keyboard Interactive Authentication in the SFTP server configuration prior to connecting. Disabling the setting will allow passwords to be entered manually, as opposed to inputting through a service or a program. See the [Component Pro document](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) for more information on Keyboard Interactive Authentication.
 
-The documentation below provides information on how to connect an an SFTP server to [!DNL Platform] using APIs or the user interface:
+The documentation below provides information on how to connect an an SFTP server to Experience Platform using APIs or the user interface:
 
 ### Using the APIs
 
