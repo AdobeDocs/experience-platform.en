@@ -85,9 +85,6 @@ The reference schema "[!DNL Accounts]" is based on the [!UICONTROL XDM Account] 
 >title="Relationship name from reference schema"
 >abstract="A label that describes the relationship from the reference schema to the current schema (for example, 'Related Opportunities'). This label is used in Profile and Segmentation to give context to data from related B2B entities. See the documentation to learn more about building B2B schema relationships."
 
-<!-- NOTE Many-to-one relationships can only go to B2B class or Profile class. 
--->
-
 In order to define a relationship between two schemas, the source schema must have a dedicated field that indicates the primary identity of the reference schema. Standard B2B classes include dedicated source key fields for commonly related business entities. For example, the [!UICONTROL XDM Business Opportunity] class contains source key fields for a related account (`accountKey`) and a related campaign (`campaignKey`). However, you can also add other [!UICONTROL B2B Source] fields to the schema by using custom field groups if you require more than the default components.
 
 >[!NOTE]
