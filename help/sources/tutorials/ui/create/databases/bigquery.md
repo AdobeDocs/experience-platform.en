@@ -57,13 +57,13 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 >[!TAB Use basic authentication]
 
-To use basic authentication, provide values for your your project, client ID, client secret, refresh token, and (optional) large results dataset ID. When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for the connection to establish.
+To use basic authentication, provide values for your your [project, client ID, client secret, refresh token, and (optional) large results dataset ID](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials). When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for the connection to establish.
 
 ![The new account interface where basic authentication is selected.](../../../../images/tutorials/create/google-big-query/basic_auth.png)
 
 >[!TAB Use service authentication]
 
-To use service authentication, provide values for your project ID, key file content, and large results dataset ID.
+To use service authentication, provide values for your [project ID, key file content, and (optional) large results dataset ID](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials). When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for the connection to establish.
 
 ![The new account interface where service authentication is selected.](../../../../images/tutorials/create/google-big-query/service_auth.png)
 
