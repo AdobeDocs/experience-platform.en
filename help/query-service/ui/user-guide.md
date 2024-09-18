@@ -192,43 +192,42 @@ If a query was scheduled, then the [!UICONTROL Scheduled Queries] tab provides i
 >
 >Queries that are not executed are not saved by the Log. In order for the query to be available in Query Service, it must be run or saved in Query Editor.
 
-<!-- 
 ### Object Browser {#object-browser}
 
 >[!AVAILABILITY]
 >
 >The dataset navigation rail is only available for Data Distiller customers. Your Platform UI might not contain the left dataset navigation rail.  Other images in this document might not reflect the dataset navigation rail.
 
-Use the object browser to easily search and filter datasets 
+Use the object browser to easily search and filter datasets. The object browser reduces the time spent searching for tables and datasets in large environments with numerous datasets. With streamlined access to relevant data and metadata, you can focus more on query authoring and less on navigation.
 
+To navigate your database with the Object browser, enter a table name into the search field, or select [!UICONTROL Tables] to expand the list of available datasets and tables. When using the search field, the list of available tables are dynamically filtered based on your input.
 
-Use the dataset navigation rail to enhance productivity by reducing the time spent searching for tables and datasets. This is especially relevant in large environments with numerous datasets. With streamlined access to relevant data and metadata, you can focus more on query authoring and less on navigation.
-
-Every dataset contained in [your selected database](#database-dropdown) is listed in a navigation rail to the left of the Query Editor. You can now quickly locate any dataset or table by name through a text search within the left rail. The search functionality is case-insensitive.
+>[!NOTE]
+>
+>Every dataset contained in [your selected database](#database-dropdown) is listed in a navigation rail to the left of the Query Editor. 
 
 ![The Query Editor dataset navigation rail with the search input highlighted.](../images/ui/query-editor/search-tables.png)
 
+The schema displayed in the object browser is an observable schema. This means that you can use it to monitor changes and updates in real time as changes are immediately vizibile. The observable schemas help to ensure data synchronization and assists with debugging or analytics tasks.
 
+#### Current limitations {#current-limitations}
 
-Type your table name into the search input field. The list of available tables are dynamically filtered based on your input. The filtering is further refined by the database you select from the dropdown menu in the top-right corner of the UI. This dual filtering mechanism ensures you can easily navigate large datasets and find the precise table you need without scrolling through lengthy lists.
+The following is a list of current limitations:
 
-#### Accessing Table Metadata
+- Sequential query execution: Only one query can be executed at a time. While a query is in progress, no additional tables can be opened in the left navigation, as queries are processed sequentially.
+- Noise in query logs: You may encounter extraneous queries labeled as "SHOW TABLES" in the logs. These will be removed in future releases.
+
+#### Access table metadata {#table-metadata}
 
 In addition to quick searches, you can now easily access metadata for any table by selecting the 'i' icon next to the table name. This will provide you with detailed information about the selected table, helping you make informed decisions while writing queries.
 
-#### Exploring Child Tables
+![The Query Editor dataset navigation rail with the search input highlighted.](../images/ui/query-editor/table-metadata.png)
+
+#### Explore child tables
 
 To explore child or linked tables, simply click the dropdown arrow next to a table name in the list. This will expand the table to show any associated child tables, giving you a clear view of the data structure and allowing for more complex query constructions.
 
-#### Why It's Useful
-
-
-
-
-
-![The Query Editor with the filtered table list displayed.](../images/ui/query-editor/filtered-table-list.png)
-
- -->
+![The Query Editor with the filtered table list displayed.](../images/ui/query-editor/child-table-list.png)
 
 ## Executing queries using Query Editor {#executing-queries}
 
