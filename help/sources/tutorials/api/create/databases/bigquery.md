@@ -135,7 +135,7 @@ curl -X POST \
 | Property | Description |
 | --------- | ----------- |
 | `auth.params.projectId` | The project ID of the default [!DNL Google BigQuery] project to query. against. |
-| `auth.params.keyFileContent` | The key file that is used to authenticate the service account. This value must be in JSON format. |
+| `auth.params.keyFileContent` | The key file that is used to authenticate the service account. You must encode the key file content in [!DNL Base64]. |
 | `auth.params.largeResultsDataSetId` | (Optional) The pre-created  [!DNL Google BigQuery] dataset ID that is required in order to enable support for large result sets. |
 
 **Response**
