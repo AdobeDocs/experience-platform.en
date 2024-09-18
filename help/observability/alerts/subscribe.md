@@ -92,7 +92,6 @@ The details page for the newly created event registration appears, where you can
 By following this tutorial, you have registered a webhook to receive [!DNL I/O Event] notifications for [!DNL Experience Platform] and/or [!DNL Privacy Service]. For details on available events and how to interpret notification payloads for each service, refer to the following documentation:
 
 * [[!DNL Privacy Service] notifications](../../privacy-service/privacy-events.md)
-* [[!DNL Data Ingestion] notifications](../../ingestion/quality/subscribe-events.md)
 * [[!DNL Flow Service] (sources) notifications](../../sources/notifications.md)
 
 See the [[!DNL Observability Insights] overview](../home.md) for more information on how you can monitor your activities on [!DNL Experience Platform] and [!DNL Privacy Service].
