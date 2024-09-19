@@ -7,7 +7,7 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](/help/web-sdk/release-notes.md).
 
-## Version 2.26.1 - September 17, 2024
+## Version 2.26.1 - September 19, 2024
 
 **Fixes and improvements**
 
@@ -20,7 +20,6 @@ Contains version 2.23.0 of the Adobe Experience Platform Web SDK.
 **New features**
 
 - Added monitoring hook `triggered` event.
-<!-- - Added support for Adobe Journey Optimizer Content Cards to the [subscribeRulesetItems](event-types.md#subscribe-ruleset-items) event type. -->
 - [Guided events](action-types.md#instance), [Request default personalization](action-types.md#personalization), [Subscribe ruleset items](event-types.md#subscribe-ruleset-items), and [evaluate rulesets](action-types.md#evaluate-rulesets) are now generally available.
 
 **Fixes and improvements**
