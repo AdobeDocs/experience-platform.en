@@ -217,13 +217,13 @@ The following is a list of current limitations:
 
 #### Access table metadata {#table-metadata}
 
-In addition to quick searches, you can now easily access metadata for any table by selecting the 'i' icon next to the table name. This will provide you with detailed information about the selected table, helping you make informed decisions while writing queries.
+In addition to quick searches, you can now easily access metadata for any table by selecting the 'i' icon next to the table name. This provides you with detailed information about the selected table, that helps you to make informed decisions when writing queries.
 
 ![The Query Editor dataset navigation rail with the search input highlighted.](../images/ui/query-editor/table-metadata.png)
 
 #### Explore child tables
 
-To explore child or linked tables, select the dropdown arrow next to a table name in the list. This expands the table to show any associated child tables, and gives a clear view of the data structure and allowing for more complex query constructions.
+To explore child or linked tables, select the dropdown arrow next to a table name in the list. This expands the table to show any associated child tables, and gives a clear view of the data structure and allows for more complex query constructions.
 
 ![The Query Editor with the filtered table list displayed.](../images/ui/query-editor/child-table-list.png)
 
