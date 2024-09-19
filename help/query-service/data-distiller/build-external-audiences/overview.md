@@ -10,15 +10,13 @@ Use the SQL audience extension to build audiences with data from the data lake, 
 
 ![Infographic showing the SQL audience extension workflow. The stages include; building audiences with the Query Service using SQL commands, managing them in the Platform UI, to activating them in file-based destinations.](../../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
-<!-- Up to here -->
-
 ## Audience creation lifecycle in Data Distiller {#audience-creation-lifecycle}
 
 Follow these steps to effectively manage your audiences. Created audiences integrate seamlessly into the audience flow, allowing you to build segments from these base audiences and target file-based destinations for customer targeting. Use the following SQL commands to [create](#create-audience), [modify](#add-profiles-to-audience), and [delete](#delete-audience) audiences within Adobe Experience Platform.
 
 ### Create an audience {#create-audience}
 
-Use the `CREATE AUDIENCE AS SELECT` command to define a new audience. The created audience is saved in a dataset and registered in the Audience workspace under Data Distiller.
+Use the `CREATE AUDIENCE AS SELECT` command to define a new audience. The created audience is saved in a dataset and registered in the [!UICONTROL Audiences] workspace under Data Distiller.
 
 ```sql
 CREATE AUDIENCE table_name  
@@ -26,15 +24,19 @@ WITH (primary_identity='IdentitycolName', identity_namespace='Namespace for the 
 AS (select_query)
 ```
 
-**Parameters:**
+Use these parameters to define your SQL audience creation query:
 
-- `schema`: Optional. Defines the XDM schema for the dataset created by the query.
-- `table_name`: Name of the table and audience.
-- `primary_identity`: Specifies the primary identity column for the audience.
-- `identity_namespace`: Namespace of the identities.
-- `select_query`: A SELECT statement defining the audience.
+| Parameter          | Description                                                      |
+|--------------------|------------------------------------------------------------------|
+| `schema`           | Optional. Defines the XDM schema for the dataset created by the query. |
+| `table_name`       | Name of the table and audience.                                  |
+| `primary_identity` | Specifies the primary identity column for the audience.          |
+| `identity_namespace` | Namespace of the identities.                                   |
+| `select_query`     | A SELECT statement defining the audience.                        |
 
 **Example:**
+
+The following example demonstrates how to structure your SQL audience creation query:
 
 ```sql
 CREATE Audience aud_test 
@@ -44,9 +46,14 @@ AS SELECT month FROM profile_dim_date LIMIT 5;
 
 **Limitations:**
 
-- Primary identity column must be at the root level.
+Be aware of the following limitations when using SQL for audience creation:
+
+- The primary identity column **must** be at the root level.
 - New batches overwrite existing datasets; append functionality is currently unsupported.
 - Nested attributes are not supported yet.
+
+<!-- Up to here -->
+
 
 ### Add Profiles to an existing audience {#add-profiles-to-audience}
 
