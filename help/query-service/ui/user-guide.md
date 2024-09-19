@@ -43,13 +43,11 @@ Queries executed from Query Editor run interactively which means that if you clo
 
 Using Query Editor, you can write, execute, and save queries for customer experience data. All queries executed, or saved in Query Editor are available to all users in your organization with access to Query Service.
 
-<!-- 
 ### Database selector {#database-selector}
 
 You can choose the database to query from the dropdown menu in the top right of the Query Editor. Select the database dropdown menu, and choose a database to query. The current selection is displayed in the dropdown section.
 
-![The Query Editor with the database dropdown menu highlighted.]()
- -->
+![The Query Editor with the database dropdown menu highlighted.](../images/ui/query-editor/database-dropdown.png)
 
 ### Settings {#settings}
 
