@@ -77,7 +77,8 @@ curl -X POST \
               "userName": "{USERNAME}",
               "password": "{PASSWORD}",
               "maxConcurrentConnections": 5,
-              "folderPath": "acme/business/customers/holidaySales"
+              "folderPath": "acme/business/customers/holidaySales",
+              "disableChunking": "true"
           }
       },
       "connectionSpec": {
@@ -95,6 +96,7 @@ curl -X POST \
 | `auth.params.password` | The password associated with your SFTP server. |
 | `auth.params.maxConcurrentConnections` | The maximum number of concurrent connections specified when connecting Platform to SFTP. When enabled, this value must be set to at least 1. |
 | `auth.params.folderPath` | The path to the folder that you want to provide access to. |
+| `auth.params.disableChunking` | A boolean value used to determine whether or not your SFTP server supports chunking. |
 | `connectionSpec.id` | The SFTP server connection specification ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 +++
@@ -136,7 +138,8 @@ curl -X POST \
               "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
               "passPhrase": "{PASSPHRASE}",
               "maxConcurrentConnections": 5,
-              "folderPath": "acme/business/customers/holidaySales"
+              "folderPath": "acme/business/customers/holidaySales",
+              "disableChunking": "true"
           }
       },
       "connectionSpec": {
@@ -155,6 +158,7 @@ curl -X POST \
 | `auth.params.passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 | `auth.params.maxConcurrentConnections` | The maximum number of concurrent connections specified when connecting Platform to SFTP. When enabled, this value must be set to at least 1. |
 | `auth.params.folderPath` | The path to the folder that you want to provide access to. |
+| `auth.params.disableChunking` | A boolean value used to determine whether or not your SFTP server supports chunking. |
 | `connectionSpec.id` | The [!DNL SFTP] server connection specification ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 +++
