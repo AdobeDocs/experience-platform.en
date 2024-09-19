@@ -18,7 +18,7 @@ Read this guide to learn how you can ingest encrypted data with cloud storage ba
 
 ## Get started
 
-It is helpful to have an understanding of the following Experience Platform features and concepts before ingesting encrypted data in the UI:
+Before continuing with this tutorial, please read the following documents to better understand the following Experience Platform features and concepts.
 
 * [Sources](../../home.md): Use sources in Experience Platform to ingest data from an Adobe Application or a third-party data source.
 * [Dataflows](../../../dataflows/home.md): Dataflows are representations of data jobs that move data across Experience Platform. You can use the sources workspace to create dataflows that ingest data from a given source to Experience Platform.
@@ -156,3 +156,9 @@ Complete the remaining steps in the sources workflow to finish creating your dat
 * [Map your source data to an XDM schema](../ui/dataflow/batch/cloud-storage.md#map-data-fields-to-an-xdm-schema)
 * [Configure an ingestion schedule for your dataflow](../ui/dataflow/batch/cloud-storage.md#schedule-ingestion-runs)
 * [Review your dataflow](../ui/dataflow/batch/cloud-storage.md#review-your-dataflow)
+
+You can continue to [make updates to your dataflow](../ui/update-dataflows.md) once it has been successfully created. 
+
+## Next steps
+
+By reading this document, you can now ingest encrypted data from your cloud storage batch source to Experience Platform. For information on how to ingest encrypted data using the APIs, read the guide on [ingesting encrypted data using the [!DNL Flow Service] API](../api/encrypt-data.md). For general information about sources on Experience Platform, read the [sources overview](../../home.md).
