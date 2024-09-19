@@ -9,6 +9,8 @@ role: User,Developer
 
 # Adobe Experience Platform Query Service {#query}
 
+<!-- PLAT-205222 DD Hyper Cubes -->
+
 - [Query Service overview](home.md)
 - [Query Service packaging](packaging.md)
 - [Query Service guardrails](guardrails.md)
