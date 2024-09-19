@@ -14,7 +14,7 @@ Use the SQL audience extension to build audiences with data from the data lake, 
 
 ## Audience creation lifecycle in Data Distiller {#audience-creation-lifecycle}
 
-Use SQL commands to create, modify, and delete audiences within Adobe Experience Platform. Follow these steps to effectively manage your audiences:
+Follow these steps to effectively manage your audiences. Created audiences integrate seamlessly into the audience flow, allowing you to build segments from these base audiences and target file-based destinations for customer targeting. Use the following SQL commands to [create](#create-audience), [modify](#add-profiles-to-audience), and [delete](#delete-audience) audiences within Adobe Experience Platform.
 
 ### Create an audience {#create-audience}
 
