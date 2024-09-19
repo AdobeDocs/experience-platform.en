@@ -24,6 +24,8 @@ WITH (primary_identity='IdentitycolName', identity_namespace='Namespace for the 
 AS (select_query)
 ```
 
+**Parameters**
+
 Use these parameters to define your SQL audience creation query:
 
 | Parameter          | Description                                                      |
@@ -32,7 +34,9 @@ Use these parameters to define your SQL audience creation query:
 | `table_name`       | Name of the table and audience.                                  |
 | `primary_identity` | Specifies the primary identity column for the audience.          |
 | `identity_namespace` | Namespace of the identities.                                   |
-| `select_query`     | A SELECT statement defining the audience.                        |
+| `select_query`     | A SELECT statement defining the audience. The syntax of the SELECT query can be found in the [SELECT queries](../../sql/syntax.md#select-queries) section. |
+
+{style="table-layout:auto"}
 
 **Example:**
 
@@ -61,6 +65,17 @@ INSERT INTO table_name
 SELECT select_query
 ```
 
+**Parameters**
+
+The table below explains the parameters required for the `INSERT INTO` command:
+
+| Parameter      | Description                                                                    |
+|----------------|--------------------------------------------------------------------------------|
+| `table_name`   | The name of the table that was created as part of the create audience command. |
+| `select_query` | A SELECT statement. The syntax of the SELECT query can be found in the SELECT queries section. |
+
+{style="table-layout:auto"}
+
 **Example:**
 
 The following example demonstrates how to add profiles to an existing audience with the INSERT INTO command:
@@ -70,13 +85,25 @@ INSERT INTO Audience aud_test
 SELECT month FROM profile_dim_date LIMIT 10;
 ```
 
-### Delete an audience {#delete-audience}
+### Delete an audience (DROP AUDIENCE) {#delete-audience}
 
 Use the `DROP AUDIENCE` command to delete an existing audience. If the audience does not exist, an exception occurs unless `IF EXISTS` is specified.
 
 ```sql
 DROP AUDIENCE [IF EXISTS] [db_name.]table_name
 ```
+
+**Parameters**
+
+The table contains the parameters required for the `DROP AUDIENCE` command:
+
+| Parameter      | Description                                                                            |
+|----------------|----------------------------------------------------------------------------------------|
+| `IF EXISTS`    | Optional. If specified, no exception is thrown if the table does not exist.            |
+| `db_name`      | Specifies the datagroup used to qualify the audience dataset.                         |
+| `table_name`   | The name of the table that was created as part of the create audience command.         |
+
+{style="table-layout:auto"}
 
 **Example:**
 
