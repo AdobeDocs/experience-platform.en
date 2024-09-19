@@ -223,7 +223,7 @@ In addition to quick searches, you can now easily access metadata for any table 
 
 #### Explore child tables
 
-To explore child or linked tables, simply click the dropdown arrow next to a table name in the list. This will expand the table to show any associated child tables, giving you a clear view of the data structure and allowing for more complex query constructions.
+To explore child or linked tables, select the dropdown arrow next to a table name in the list. This expands the table to show any associated child tables, and gives a clear view of the data structure and allowing for more complex query constructions.
 
 ![The Query Editor with the filtered table list displayed.](../images/ui/query-editor/child-table-list.png)
 
