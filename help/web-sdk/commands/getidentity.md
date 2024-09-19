@@ -17,13 +17,12 @@ The Web SDK tag extension does not offer this command through the tag extension 
 
 Run the `getIdentity` command when calling your configured instance of the Web SDK. The following options are available when configuring this command:
 
-* **`namespaces`**: An array of namespaces. The default value is `["ECID"]`.
-  * Supported values: `["ECID"]`, `["CORE"]`, `null`, `undefined`.
+* **`namespaces`**: An array of namespaces. The default value is `["ECID"]`. Other supported values include: `["CORE"]`, `null`, `undefined`. You can request [!DNL ECID] and [!DNL CORE ID] at the same time. Example: `"namespaces": ["ECID","CORE"]`.
 * **`edgeConfigOverrides`**: An [datastream configuration override object](datastream-overrides.md).
 
 ```js
 alloy("getIdentity",{
-  "namespaces": ["ECID"]
+  "namespaces": ["ECID","CORE"] //this command retrieves both ECID and CORE IDs.
 });
 ```
 
