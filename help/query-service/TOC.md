@@ -18,7 +18,7 @@ role: User,Developer
     - [Overview](data-distiller/overview.md)
     - [License usage](data-distiller/license-usage.md)
     - Build external audiences using SQL {#external-audiences}
-      - [Build external audiences using SQL](data-distiller/overview.md)
+      - [Build external audiences using SQL](external-audiences/overview.md)
     - Derived datasets {#derived-datasets}
         - [Overview](data-distiller/derived-datasets/overview.md)
         - [Create derived datasets with SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
