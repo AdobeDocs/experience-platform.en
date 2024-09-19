@@ -52,9 +52,6 @@ Be aware of the following limitations when using SQL for audience creation:
 - New batches overwrite existing datasets; append functionality is currently unsupported.
 - Nested attributes are not supported yet.
 
-<!-- Up to here -->
-
-
 ### Add Profiles to an existing audience {#add-profiles-to-audience}
 
 Use the `INSERT INTO` command to add profiles to an existing audience.
@@ -65,6 +62,8 @@ SELECT select_query
 ```
 
 **Example:**
+
+The following example demonstrates how to add profiles to an existing audience with the INSERT INTO command:
 
 ```sql
 INSERT INTO Audience aud_test 
@@ -81,9 +80,13 @@ DROP AUDIENCE [IF EXISTS] [db_name.]table_name
 
 **Example:**
 
+The following example demonstrates how to delete an audience using the DROP AUDIENCE command:
+
 ```sql
 DROP AUDIENCE IF EXISTS aud_test;
 ```
+
+<!-- Up to here -->
 
 ### Auto-Publish audiences
 
