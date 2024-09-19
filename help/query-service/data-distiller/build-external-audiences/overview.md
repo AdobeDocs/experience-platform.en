@@ -100,7 +100,7 @@ The table contains the parameters required for the `DROP AUDIENCE` command:
 | Parameter      | Description                                                                            |
 |----------------|----------------------------------------------------------------------------------------|
 | `IF EXISTS`    | Optional. If specified, no exception is thrown if the table does not exist.            |
-| `db_name`      | Specifies the datagroup used to qualify the audience dataset.                         |
+| `db_name`      | Specifies the data group used to qualify the audience dataset.                         |
 | `table_name`   | The name of the table that was created as part of the create audience command.         |
 
 {style="table-layout:auto"}
@@ -155,7 +155,7 @@ N/A
 - Do these audiences appear in Adobe Journey Optimizer? If not, what happens when I create a new audience in the rule builder that includes all members of this audience? 
 N/A
 
-- How should I create two Data Distiller audiences with different schedules? How many datasets will be created, and will they be marked for Profile? 
+- How should I create two Data Distiller audiences with different schedules? How many datasets are created, and are they marked for Profile? 
 N/A
 
 - How do I delete an audience?                                                                                         
@@ -187,6 +187,6 @@ After reading this document, you have learned how to use the SQL audience extens
 
 Next, you could read the following documentation to further develop and optimize your Platform audience management strategies:
 
-- **Explore Audience Evaluation**: Learn about the [audience evaluation methods in Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home#evaluate-segments): streaming segmentation for real-time updates, batch segmentation for scheduled or on-demand processing, and edge segmentation for instant evaluation on the Edge Network.
-- **Integrate with Destinations**: Read the guide on how to [export files on-demand to batch destinations](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/export-file-now) using the Platform Destinations UI.
-- **Review Audience Performance**: Analyze how your SQL-defined audiences perform across different channels. Use data insights to adjust and improve your audience definitions and targeting strategies. Read the document on [Audience insights](https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/insights/audiences) to learn how to access and adapt the SQL queries behind audience insights in Adobe Real-time Customer Data Platform. You can then create your own insights and transform raw data into actionable information by customizing the Audiences dashboard to effectively visualize and use these insights for better decision-making.
+- **Explore Audience Evaluation**: Learn about the [audience evaluation methods in Adobe Experience Platform](../../../segmentation/home.md#evaluate-segments): streaming segmentation for real-time updates, batch segmentation for scheduled or on-demand processing, and edge segmentation for instant evaluation on the Edge Network.
+- **Integrate with Destinations**: Read the guide on how to [export files on-demand to batch destinations](../../../destinations/ui/export-file-now.md) using the Platform Destinations UI.
+- **Review Audience Performance**: Analyze how your SQL-defined audiences perform across different channels. Use data insights to adjust and improve your audience definitions and targeting strategies. Read the document on [Audience insights](../../../dashboards/insights/audiences.md) to learn how to access and adapt the SQL queries for audience insights in Adobe Real-time Customer Data Platform. You can then create your own insights and transform raw data into actionable information by customizing the Audiences dashboard to effectively visualize and use these insights for better decision-making.
