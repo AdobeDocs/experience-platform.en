@@ -113,8 +113,6 @@ The following example demonstrates how to delete an audience using the DROP AUDI
 DROP AUDIENCE IF EXISTS aud_test;
 ```
 
-<!-- Up to here -->
-
 ### Auto-Publish audiences
 
 Audiences created using the SQL extension automatically register under Data Distiller in the Audience workspace. Once registered, these audiences are available for targeting and can be used in file-based destinations, enhancing your segmentation and targeting strategies.
@@ -123,7 +121,7 @@ Audiences created using the SQL extension automatically register under Data Dist
 
 ## Use Data Distiller Audiences in Destinations
 
-Activate your audiences by targeting them to any file-based destination, such as Amazon S3, SFTP, or Azure Blob. The enriched audience attributes are available for further refinement and filtering as needed.
+Activate your audiences by targeting them to any file-based destination, such as [!DNL Amazon S3], [!DNL SFTP], or [!DNL Azure Blob]. The enriched audience attributes are available for further refinement and filtering as needed.
 
 ![Flowchart of Adobe Experience Platform destination types, showing public and private/custom destinations, including batch and streaming options.](../../images/data-distiller/sql-audiences/destination-types.png)
 
@@ -131,5 +129,8 @@ Activate your audiences by targeting them to any file-based destination, such as
 
 After reading this document, you have learned how to use the SQL audience extension in Data Distiller to effectively create, manage, and publish audiences using SQL commands. You can now customize audience definitions based on your unique business requirements and activate them across various destinations, optimizing your marketing strategies and data-driven decisions.
 
-<!-- Add next step -->
+Next, you could read the following documentation to further develop and optimize your Platform audience management strategies:
 
+- **Explore Audience Evaluation**: Learn about the [audience evaluation methods in Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home#evaluate-segments): streaming segmentation for real-time updates, batch segmentation for scheduled or on-demand processing, and edge segmentation for instant evaluation on the Edge Network.
+- **Integrate with Destinations**: Read the guide on how to [export files on-demand to batch destinations](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/export-file-now) using the Platform Destinations UI.
+- **Review Audience Performance**: Analyze how your SQL-defined audiences perform across different channels. Use data insights to adjust and improve your audience definitions and targeting strategies. Read the document on [Audience insights](https://experienceleague.adobe.com/en/docs/experience-platform/dashboards/insights/audiences) to learn how to access and adapt the SQL queries behind audience insights in Adobe Real-time Customer Data Platform. You can then create your own insights and transform raw data into actionable information by customizing the Audiences dashboard to effectively visualize and use these insights for better decision-making.
