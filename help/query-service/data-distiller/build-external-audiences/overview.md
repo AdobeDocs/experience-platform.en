@@ -125,6 +125,62 @@ Activate your audiences by targeting them to any file-based destination, such as
 
 ![Flowchart of Adobe Experience Platform destination types, showing public and private/custom destinations, including batch and streaming options.](../../images/data-distiller/sql-audiences/destination-types.png)
 
+## Feature Clarifications: External Audience via SQL
+
+This section addresses frequently asked questions about creating and managing external audiences using SQL in Data Distiller.
+
++++Select to reveal questions 
+
+- Are only flat datasets supported for audience creation?
+N/A
+
+- Does audience creation result in a single dataset, multiple datasets, or does it vary depending on the configuration?
+N/A
+
+- Is the dataset created during audience creation marked for Profile?
+N/A
+
+- Is the dataset created on the data lake?                                                                               
+N/A
+
+- Can attributes in the audience be used in segmentation within the rule builder? (Yes or No)                               
+N/A
+
+- Are attributes in the audience restricted to use only in enterprise batch file-based destinations? (Yes or No)             
+N/A
+
+- Can I create an audience of audiences that uses a Data Distiller audience?                                         
+N/A
+
+- Do these audiences appear in Adobe Journey Optimizer? If not, what happens when I create a new audience in the rule builder that includes all members of this audience? 
+N/A
+
+- How should I create two Data Distiller audiences with different schedules? How many datasets will be created, and will they be marked for Profile? 
+N/A
+
+- How do I delete an audience?                                                                                         
+N/A
+
+- When I publish an audience to Profile, how soon is it available in the segment builder UI, and when does it become available in Destinations? 
+N/A
+
+- Are Data Distiller audiences processed in batch segmentation by Profile Store? Or are they ad hoc?                 
+N/A
+
+- Are Data Distiller audiences deleted every 30 days since they are external audiences?                              
+N/A
+
+- Can I apply data usage labels to segment attributes in the Data Governance tab within Segment Browse for Data Distiller audiences?
+N/A
+
+- Do Data Distiller Audiences appear in Segment Browse?                                                              
+N/A
+
+- Does the segment dashboard display charts for these new audiences?
+N/A
+
++++
+
 ## Next steps
 
 After reading this document, you have learned how to use the SQL audience extension in Data Distiller to effectively create, manage, and publish audiences using SQL commands. You can now customize audience definitions based on your unique business requirements and activate them across various destinations, optimizing your marketing strategies and data-driven decisions.
