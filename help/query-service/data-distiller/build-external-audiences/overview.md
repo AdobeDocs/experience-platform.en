@@ -113,19 +113,19 @@ The following example demonstrates how to delete an audience using the DROP AUDI
 DROP AUDIENCE IF EXISTS aud_test;
 ```
 
-### Auto-Publish audiences
+### Auto-publish audiences {#auto-publish-audiences}
 
 Audiences created using the SQL extension automatically register under Data Distiller in the Audience workspace. Once registered, these audiences are available for targeting and can be used in file-based destinations, enhancing your segmentation and targeting strategies.
 
 ![The Audience workspace in Adobe Experience Platform, showing Data Distiller audiences automatically published and ready for use.](../../images/data-distiller/sql-audiences/audiences.png)
 
-## Use Data Distiller Audiences in Destinations
+## Activate audiences to destinations {#activate-audiences}
 
 Activate your audiences by targeting them to any file-based destination, such as [!DNL Amazon S3], [!DNL SFTP], or [!DNL Azure Blob]. The enriched audience attributes are available for further refinement and filtering as needed.
 
 ![Flowchart of Adobe Experience Platform destination types, showing public and private/custom destinations, including batch and streaming options.](../../images/data-distiller/sql-audiences/destination-types.png)
 
-## Feature Clarifications: External Audience via SQL
+## Feature clarifications {#faqs}
 
 This section addresses frequently asked questions about creating and managing external audiences using SQL in Data Distiller.
 
