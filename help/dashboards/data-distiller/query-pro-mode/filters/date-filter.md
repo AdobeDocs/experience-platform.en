@@ -17,6 +17,60 @@ To apply a date filter, select **[!UICONTROL Add filter]**, then **[!UICONTROL D
 
 ![A custom dashboard with Add filter and its dropdown menu highlighted.](../../../images/query-pro-mode/add-filter.png)
 
+You are presented with the following date filtering options.
+
+| Filter | Description |
+| --- | --- |
+| No custom date | Select one or more custom dates from multiple preset values. |
+| Custom date range | Select one or more custom dates from multiple preset values, or specify a custom date range. |
+| Custom date | Set the start date that will appear on the dashboard, or select from the two preset values.|
+
+![The create date filter dialog with the three custom date picker options highlighted.](../../../images/query-pro-mode/create-date-filter.png)
+
+### Create a no custom date filter
+
+To apply a no custom date filter, select **[!UICONTROL No custom date]**, then select the predefined date options you want to include. Finally, use the dropdown to select the default date range, then select **[!UICONTROL Save]**.
+
+![The create date filter dialog with the no custom date filter and save highlighted.](../../../images/query-pro-mode/no-custom-date-filter.png)
+
+You are returned to the dashboard, which shows the default data range you previously selected. Use the dropdown menu to select another preset date range.
+
+![A custom dashboard showing the default date range with the dropdown highlighted.](../../../images/query-pro-mode/no-custom-date-filter-results.png)
+
+### Create a custom date range filter
+
+To apply a custom date range filter, select **[!UICONTROL Custom date range]**, then select the predefined date options you want to include. Finally, select **[!UICONTROL Custom]** to set the default date range. Use the calendar to specify a date range, then select **[!UICONTROL Save]**.
+
+>[!NOTE]
+>
+>It is not necessary to select predefined date options.
+
+![The create date filter dialog with the custom date range filter, custom, and save highlighted.](../../../images/query-pro-mode/custom-date-range-filter.png)
+
+You are returned to the dashboard, which shows the custom data range you previously specified. Use the dropdown menu to select another preset date range.
+
+![A custom dashboard showing the default date range with the custom date highlighted.](../../../images/query-pro-mode/custom-date-range-filter-results.png)
+
+### Create a custom date filter
+
+To apply a custom date filter, select **[!UICONTROL Custom date]**, and select the predefined date options you want to include. Finally, select **[!UICONTROL Custom]**, then use the calendar to select a start date. Finally, select **[!UICONTROL Save]**.
+
+>[!NOTE]
+>
+>It is not necessary to select predefined date options.
+
+![The create date filter dialog with the custom date filter, custom, and save highlighted.](../../../images/query-pro-mode/custom-date-filter.png)
+
+You are returned to the dashboard, which shows the custom data you previously specified. Use the dropdown menu to select another date.
+
+![A custom dashboard showing the default date range with the custom date highlighted.](../../../images/query-pro-mode/custom-date-filter-results.png)
+
+## Delete a date filter {#delete-date-filter}
+
+To remove your date filter select the delete filter icon (![The delete filter icon.](/help/images/icons/filter-delete.png)). 
+
+![A custom dashboard with the filter delete icon highlighted.](../../../images/query-pro-mode/delete-date-filter.png)
+
 ## Edit your SQL to include date query parameters {#include-date-parameters} 
 
 Next, ensure your SQL includes query parameters to allow for a date range. If you have not yet incorporated query parameters in your SQL, edit your insights to include these parameters. See the documentation for instructions on how to [edit an insight](../overview.md#edit).
@@ -69,25 +123,3 @@ Next, select the appropriate query parameters from the dropdown menus.
 ![The widget composer with the Start_date dropdown menu highlighted.](../../../images/sql-insights/widget-composer-date-filter-dropdown.png)
 
 Finally, select **[!UICONTROL Save and close]** to return to your dashboard. Date filters are now enabled for all insights that have start and end date parameters.
-
-## Use the date filter
-
-To use a custom date filter, select the calendar icon and choose a start and end from the calender view.
-
->[!IMPORTANT]
->
->Simply adding a date filter will not make the charts change. You must edit each of your insights to include your chosen start and end date.
-
-![A custom dashboard with the date filter calender highlighted.](../../../images/query-pro-mode/date-filter.png)
-
-Once you have selected a date range from your dashboard, insights that have date parameters in their SQL will see the date filter options in the widget composer. 
-
->[!NOTE]
->
->Selecting a date range on your dashboard displays the toggles for date filters as part of the insight creation workflow. 
-
-## Delete a date filter {#delete-date-filter}
-
-To remove your date filter select the delete filter icon (![The delete filter icon.](/help/images/icons/filter-delete.png)). 
-
-![A custom dashboard with the filter delete icon highlighted.](../../../images/query-pro-mode/delete-date-filter.png)
