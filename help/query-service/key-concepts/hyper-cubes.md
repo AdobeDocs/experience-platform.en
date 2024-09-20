@@ -206,6 +206,92 @@ FROM
 | CZ      | 1.00                          |
 | BR      | 1.00                          |
 
+### Merge multiple HLL sketches with `hll_merge_agg`
+
+`hll_merge_agg` is an aggregate function that merges multiple HLL sketches within a group, producing a new sketch as the output. It allows the combination of sketches across partitions or dimensions, enhancing data analysis flexibility. If `allowDifferentLgConfigK` is set to false and the sketches have different `lgConfigK` values, an exception will be thrown.
+
+#### Function Definition
+
+```sql
+hll_merge_agg(sketch_col [, allowDifferentLgConfigK])
+```
+
+**Usage:**
+
+The following example demonstrates how the function can be structured within a query.
+
+```sql
+SELECT
+   [dim1, dim2 ... ,] hll_merge_agg(sketch_column.sketch) AS estimate
+FROM fact_sketch_table
+  [GROUP BY dimension1, dimension2 ...]
+```
+
+#### Parameters
+
+| Parameter                 | Description                                                                                       |
+|---------------------------|---------------------------------------------------------------------------------------------------|
+| `sketch_column`           | Column containing the stringified HLL Sketch.                                                     |
+| `allowDifferentLgConfigK` | *Boolean* (Optional) If set to true, allows merging of sketches with different `lgConfigK` values. Default is false. Throws an exception if false and sketches have different `lgConfigK` values. |
+
+>[!IMPORTANT]
+>
+>If `allowDifferentLgConfigK` is set to false, merging sketches with different `lgConfigK` values will result in an `UnsupportedOperationException`.
+
+#### Output
+
+| Output Column  | Description                                                                                         |
+|----------------|-----------------------------------------------------------------------------------------------------|
+| `sketch_res`   | A column of type HLL Sketch containing the stringified merged HLL Sketch.                          |
+
+#### SQL Example
+
+The following example merges multiple HLL sketches on the `customer_id` column:
+
+```sql
+SELECT
+   hll_merge_agg(hll_sketch) AS uniq_customers_with_invoice
+FROM
+  (
+    SELECT
+      country,
+      hll_build_agg(customer_id) AS hll_sketch
+    FROM
+      EXPLODE(
+        ARRAY<STRUCT<country STRING, customer_id STRING, invoice_id STRING>>[
+          ('UA', 'customer_id_1', 'invoice_id_11'),
+          ('BR', 'customer_id_3', 'invoice_id_31'),
+          ('CZ', 'customer_id_2', 'invoice_id_22'),
+          ('CZ', 'customer_id_2', 'invoice_id_23'),
+          ('BR', 'customer_id_3', 'invoice_id_31'),
+          ('UA', 'customer_id_2', 'invoice_id_24')
+        ])
+    GROUP BY country
+    UNION
+    SELECT
+      country,
+      hll_build_agg(customer_id) AS hll_sketch
+    FROM
+      EXPLODE(
+        ARRAY<STRUCT<country STRING, customer_id STRING, invoice_id STRING>>[
+          ('UA', 'customer_id_1', 'invoice_id_21'),
+          ('MX', 'customer_id_3', 'invoice_id_31'),
+          ('MX', 'customer_id_2', 'invoice_id_21')
+        ])
+    GROUP BY country
+  )
+GROUP BY customer_id;
+```
+
+**SQL Example Output:**
+
+| Country | hll_merge_agg(sketch, true)                |
+|---------|--------------------------------------------|
+| UA      | AgEHDAMAAwiR9mUEulKKCQAAAAAAAAAAAAAAAA==   |
+| CZ      | AgEHDAMAAQi6UooJAAAAAAAAAAAAAAAAAAAAAAAA== |
+| BR      | AgEHDAMAAQicmH0HAAAAAAAAAAAAAAAAAAAAAAAA== |
+| MX      | AgEHFQMAAgiGL/kNdAAAAAAAAAAAAAAAAAAAAAAA== |
+
 <!-- ........................... -->
 
 
