@@ -63,6 +63,24 @@ To change the type of graph or chart of your widget, select from the available o
 
 ![The widget composer with the widget preview highlighted.](../../images/sql-insights/widget-preview.png)
 
+## Advanced table attributes {#advanced-attributes}
+
+To apply automatic sorting capabilities for any or all columns in your tables, select **[!UICONTROL Edit]** to edit your entire dashboard.
+
+![A custom dashboard with Edit highlighted.](../../images/query-pro-mode/advanced-edit-dashboard.png)
+
+Select the ellipsis in the table that you want to add sorting, then select **[!UICONTROL Edit]**.
+
+![A table showing the ellipsis menu with Edit highlighted.](../../images/query-pro-mode/advanced-table-edit.png)
+
+Use the **[!UICONTROL Sortable]** check boxes to grant sorting capabilities to any column.
+
+![Table edit page with sortable check boxes highlighted.](../../images/query-pro-mode/advanced-table-sortable.png)
+
+Select the properties icon (![The properties icon.](/help/images/icons/properties.png)) in the right rail to open the properties panel. In the **[!UICONTROL Properties]** panel, use the drop down to select the **[!UICONTROL Default sort]** column, then use the drop down to select the **[!UICONTROL Sort direction]**. Finally select **[!Save and close]**.
+
+![The widget composer with the properties icon, default sort, sort direction and save and close highlighted.](../../images/query-pro-mode/advanced-table-properties.png)
+
 ## Widget properties {#properties}
 
 Select the properties icon (![The properties icon.](/help/images/icons/properties.png)) in the right rail to open the properties panel. In the [!UICONTROL Properties] panel, enter a name for the widget in the **[!UICONTROL Widget title]** text field. You can also rename various aspects of your chart. 
