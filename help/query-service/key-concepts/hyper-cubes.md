@@ -41,11 +41,19 @@ Use hypercubes to efficiently generate distinct counts for various user interact
 
 ## Benefits of using hypercubes
 
-In these situations, you can calculate some basic information ahead of time for specific categories. However, when you need to analyze data across different categories and times, you have two options: redo the calculations from scratch or use a hypercube in EQS. Hypercubes let you combine and organize data efficiently, allowing you to slice and analyze it in multiple ways without reprocessing everything. They use special functions to estimate final results quickly and accurately. Hypercubes provide significant benefits for complex analytical tasks. These benefits include enhancing data processing efficiency, scalability, and flexibility. 
+In these situations, you can pre-calculate basic information for specific categories. However, when analyzing data across multiple dimensions and time periods, you have to either recalculate everything from raw data or use a Query Service hypercube. Hypercubes streamline the process by organizing data efficiently which allows flexible slicing and multi-dimensional analysis without reprocessing. They use advanced functions to estimate results quickly and accurately to offer key benefits such as improved processing efficiency, scalability, and adaptability for complex analytical tasks.
 
-- **Size Efficiency**: Query Service compresses millions or billions of data points into compact sketches, significantly reducing data size for query processing while maintaining scalability.
-- **Mergeability**: Sketches are mergeable across dimensions and partitions, allowing you to union data without recalculating, thus boosting performance and simplifying the overall system design.
-- **Cost-Effective**: By reducing the need for reprocessing historical raw data, Query Service saves on compute resources, making real-time and interactive queries more feasible and cost-effective.
+### Size Efficiency
+
+Query Service compresses millions or billions of data points into compact sketches, significantly reducing data size for query processing while maintaining scalability.
+
+### Mergeability
+
+Sketches are mergeable across dimensions and partitions, allowing you to union data without recalculating, thus boosting performance and simplifying the overall system design.
+
+### Cost-Effective
+
+By reducing the need for reprocessing historical raw data, Query Service saves on compute resources, making real-time and interactive queries more feasible and cost-effective.
 
 
 <!--  -->
