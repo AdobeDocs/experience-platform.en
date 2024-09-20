@@ -113,6 +113,10 @@ When finished, select **[!UICONTROL Connect to source]**.
 
 >[!ENDTABS]
 
+>[!TIP]
+>
+>During the data selection step, you may encounter a timeout when ingesting large tables or files of data. You can skip data preview to circumvent the timeout and still view your schema, albeit without sample data. The rest of the workflow will remain the same. The only caveat is that skipping data preview may prevent calculated and required fields from being auto-validated during the mapping step and you will then have to manually validate those fields during mapping.
+
 ## Next steps
 
 By following this tutorial, you have established a connection to your [!DNL Salesforce] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/crm.md).
