@@ -307,6 +307,18 @@ For more information on backfill, live data, and their respective latencies, rea
 >
 >The dataset activity page does not display information about batches since the Analytics source connector is entirely managed by Adobe. You can monitor that data is flowing by looking at the metrics around ingested records.
 
+## Delete your dataflow {#delete-dataflow}
+
+To delete your Analytics dataflow, select **[!UICONTROL Dataflows]** from the top header of the sources workspace. Use the dataflows page to locate the Analytics dataflow that you want to delete and then select the ellipses (`...`) beside it. Next, use the dropdown menu and select **[!UICONTROL Delete]**.
+
+A pop up window appears, informing you that deletion of the selected dataflow will stop the scheduled data backfill for the associated report suite. Additionally, you are informed that data that has already been ingested can still be viewed through the dataset. When ready, select **[!UICONTROL Delete]**.
+
+![The confirmation window with "delete" selected.](../../../../images/tutorials/create/analytics/analytics-delete-dataflow.png)
+
+### Delete your dataset {#delete-dataset}
+
+You can use the [datasets UI](../../../../../catalog/datasets/user-guide.md#delete-a-dataset) to delete your Analytics dataset. Note that doing so, will also delete the underlying dataset.
+
 ## Next steps and additional resources
 
 Once the connection is created, the dataflow is automatically created to contain the incoming data and populate a dataset with your selected schema. Furthermore, data back-filling occurs and ingests up to 13 months of historical data. When the initial ingestion completes, [!DNL Analytics] data and be used by downstream Platform services such as [!DNL Real-Time Customer Profile] and Segmentation Service. See the following documents for more details:
