@@ -9,7 +9,10 @@ exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
 
 >[!IMPORTANT]
 >
->The [!DNL SFTP] server that Adobe Experience Platform connects to must be able to support chunking, which means multiple connections to a single file. If your [!DNL SFTP] server does not support chunking, then you may receive an error preventing file ingestion.
+>* The [!DNL SFTP] server that Adobe Experience Platform connects to must be able to support chunking, which means multiple connections to a single file. If your [!DNL SFTP] server does not support chunking, then you may receive an error preventing file ingestion.
+>
+>* Users are required to disable Keyboard Interactive Authentication in the SFTP server configuration prior to connecting. Disabling the setting will allow passwords to be entered manually, as opposed to inputting through a service or a program. See the [Component Pro document](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) for more information on Keyboard Interactive Authentication.
+
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems.
 
@@ -189,10 +192,6 @@ Provide the appropriate values for the following credentials to authenticate you
 >[!ENDTABS]
 
 ## Connect SFTP to Experience Platform
-
->[!IMPORTANT]
->
->Users are required to disable Keyboard Interactive Authentication in the SFTP server configuration prior to connecting. Disabling the setting will allow passwords to be entered manually, as opposed to inputting through a service or a program. See the [Component Pro document](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) for more information on Keyboard Interactive Authentication.
 
 The documentation below provides information on how to connect an an SFTP server to Experience Platform using APIs or the user interface:
 

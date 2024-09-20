@@ -62,13 +62,32 @@ The [!DNL SFTP] source supports both basic authentication and authentication via
 
 >[!TAB Basic authentication]
 
-To use basic authentication, select **[!UICONTROL Password]** and then provide the host and port values to connect to, alongside your username and password. During this step, you can also designate the path to the sub folder that you want to provide access to. When finished, select **[!UICONTROL Connect to source]**.
+To use basic authentication, select **[!UICONTROL Password]** and then provide the appropriate values for the following credentials:
+
+* host
+* port
+* username
+* password
+
+During this step, you can also configure your max concurrent connections, define your folder path, and enable or disable chunking for your [!DNL SFTP] server. When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for the connection to establish.
+
+For more information on authentication, read the guide on [gathering required credentials for [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials).
 
 ![The new account screen for the SFTP source using basic authentication](../../../../images/tutorials/create/sftp/password.png)
 
 >[!TAB SSH public key authentication]
 
-To use SSH public key-based credentials, select **[!UICONTROL SSH public key]**  and then provide your host and port values, as well as your private key content and passphrase combination. During this step, you can also designate the path to the sub folder that you want to provide access to. When finished, select **[!UICONTROL Connect to source]**.
+To use SSH public key-based credentials, select **[!UICONTROL SSH public key]**  and then provide the appropriate values for the following credentials:
+
+* host
+* port
+* username
+* private key content
+* passphrase
+
+During this step, you can also configure your max concurrent connections, define your folder path, and enable or disable chunking for your [!DNL SFTP] server. When finished, select **[!UICONTROL Connect to source]** and allow for a few moments for the connection to establish.
+
+For more information on authentication, read the guide on [gathering required credentials for [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials).
 
 ![The new account screen for the SFTP source using SSH public key.](../../../../images/tutorials/create/sftp/ssh.png)
 
