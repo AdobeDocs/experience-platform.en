@@ -123,7 +123,7 @@ Once a value has been entered, select **[!UICONTROL View]** and a single profile
 ## View profile details {#profile-detail}
 
 >[!CONTEXTUALHELP]
->id="platform_profile_errors_uplib_201001_404"
+>id="platform_errors_uplib_201001_404"
 >title="Entity not found"
 >abstract="This means that Platform could not find the requested entity. To resolve this error, please try one of the following solutions:<ul><li>Ensure the correct profile ID is listed in the URL of the entity you're trying to access.</li><li>Ensure you have the correct Organization and sandbox combination for the entity you're trying to access.</li></ul>"
 
