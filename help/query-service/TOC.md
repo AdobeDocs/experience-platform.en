@@ -61,6 +61,7 @@ role: User,Developer
     - [Inline template](key-concepts/inline-templates.md)
     - [Incremental loading](key-concepts/incremental-load.md)
     - [Data deduplication](key-concepts/deduplication.md)
+    - [Hyper cubes](key-concepts/hyper-cubes.md)
     - [Dataset samples](key-concepts/dataset-samples.md)
     - [Dataset statistics computation](key-concepts/dataset-statistics.md)
 - Connect clients to Query Service {#clients}
