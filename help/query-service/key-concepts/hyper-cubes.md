@@ -136,8 +136,6 @@ GROUP BY country;
 | CZ      | AgEHBAMAAQC6UooJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==   |
 | BR      | AgEHBAMAAQCcmH0HAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==   |
 
-<!-- ........................... -->
-
 ### Estimate distinct counts with HLL sketches
 
 `hll_estimate` is a scalar function that provides an estimation of the distinct count within each row of a dataset. Unlike aggregate functions, `hll_estimate` operates row-wise and is used for estimating the distinct count from a sketch within individual rows. 
@@ -153,6 +151,8 @@ hll_estimate(sketch_col)
 ```
 
 **Usage:**
+
+The following example demonstrates how the function can be structured within a query.
 
 ```sql
 SELECT
@@ -205,6 +205,9 @@ FROM
 | UA      | 2.00                          |
 | CZ      | 1.00                          |
 | BR      | 1.00                          |
+
+<!-- ........................... -->
+
 
 
 <!-- ........................... -->
