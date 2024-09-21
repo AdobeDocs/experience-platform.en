@@ -5,7 +5,7 @@ description: Answers to the most frequently asked questions about Adobe Experien
 ---
 # Frequently asked questions {#faq}
 
-This document provides answers to frequently asked questions about Adobe Experience Platform Catalog Service and datasets. For questions and troubleshooting related to other Platform services, including those encountered across all Platform APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about Adobe Experience Platform Catalog Service and datasets. For questions and troubleshooting related to other Platform services, including issues encountered across all Platform APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
 ## Retention policies and rules {#retention-policies-and-rules}
 
@@ -55,7 +55,7 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 
 +++Answer
 
-You can view the latest dataset-level storage size in data lake and Profile as separate metrics on the [!UICONTROL Datasets] inventory page. You can also sort the columns to identify the largest datasets and ensure retention policies are applied. Sandbox-level usage is available in the License Usage dashboard. Please refer to the [License Usage documentation](../dashboards/guides/license-usage.md) for details.
+You can view the latest dataset-level storage size in data lake and Profile as separate metrics on the [!UICONTROL Datasets] inventory page. You can also sort the columns to identify the largest datasets and ensure that retention policies are applied. Sandbox-level usage is available in the License Usage dashboard. Please refer to the [License Usage documentation](../dashboards/guides/license-usage.md) for details.
 
 +++
 
@@ -63,7 +63,7 @@ You can view the latest dataset-level storage size in data lake and Profile as s
 
 +++Answer
 
-You can check the timestamp of the last data retention job in the [Dataset retention configuration UI](./datasets/user-guide.md#data-retention-policy) and on the [!UICONTROL Datasets] inventory page. Reports for historical dataset usage is currently unavailable but is planned for future releases.
+You can check the timestamp of the last data retention job in the [Dataset retention configuration UI](./datasets/user-guide.md#data-retention-policy) and on the [!UICONTROL Datasets] inventory page. Reports for historical dataset usage are currently unavailable but is planned for future releases.
 
 +++
 
