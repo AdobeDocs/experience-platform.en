@@ -168,7 +168,7 @@ For more information on how to classify business objects for easier discovery an
 
 >[!AVAILABILITY] 
 > 
->Data retention settings are currently in Beta and available only in a **limited release**. It is not available to all customers. The ability to set your data retention policy is only available for organizations in the limited release. Your UI might not reflect the feature described below.
+>Data retention settings are currently in beta and available only in a **limited release**. It is not available to all customers. The ability to set your data retention policy is only available for organizations in the limited release. Your UI might not reflect the feature described below.
 
 Manage dataset expiration and retention policies at the dataset level from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure retention policies for your data lake data retrospectively. The expiration date defined by your retention policy is based on the date your data was ingested into the Platform. 
 
@@ -177,24 +177,25 @@ To open the [!UICONTROL Set data retention] dialog, select the ellipsis of a dat
 ![The Browse tab of the Datasets workspace with the ellipsis and Set data retention policy option highlighted.]()
 
 The [!UICONTROL Set data retention] dialog appears. The dialog shows the sandbox level license usage metrics , dataset-level details, and data lake settings. These metrics indicate your current usage against your entitlements.
-The dataset details include, the dataset name, the type of dataset, whether the dataset is enabled for Profile, and the current Data Lake storage. 
+The dataset details include, the dataset name, the type of dataset, whether the dataset is enabled for Profile, and the current data lake storage usage. 
 
-Note: the data lake storage metric is still in development for the beta..
+>[!NOTE]
+>
+>The data lake storage metric is still in beta development. The metric might not be available.
 
 ![The Set data retention dialog.]()
 
-If the dataset retention policy is not yet configured, the dialog shows a recommended retention policy. One month is the default recommendation. To overwrite the standard retention policy, select and update the number and use the dropdown menu to update the time period (days, months, years). 
+Before you configure your the dataset retention policy, the dialog shows recommended retention settings. One month is the default recommended retention period. To overwrite the standard retention policy, select and update the number and use the dropdown menu to update the time period (days, months, years). 
 
 >[!NOTE] 
 > 
->The minimum (data retention duration) value cannot be smaller than 30 days.
-
-The possible expiration date range can vary and depends on your entitlements and the types of data set it is applied to.
-
-<!-- Personal note: Ask Adam for a link to wiki that states what the rules are or how we define the the range of the allowed TTL. -->
+>The minimum (data retention duration) value cannot be smaller than 30 days. The allowed expiration date range can vary and depends on your entitlements and the types of dataset it is applied to.
 
 ![The Set data retention dialog with the duration dropdown and Apply highlighted.]()
 
+<!-- Adam, is there a wiki that specifically states what the rules are or how we define the the range of the allowed TTL? -->
+
+See the [frequently asked questions page](../catalog-faq.md) for more information on the rules that define dataset expirations date ranges and best practices for configuring your data retention policy.
 
 ### Move to folders {#move-to-folders}
 
