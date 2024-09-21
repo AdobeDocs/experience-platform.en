@@ -25,6 +25,42 @@ The [!UICONTROL View more] feature displays the specific data points for the cha
 
 ![A dialog displaying a preview of your insight and the tabularized results of your SQL that generated the insight.](../../images/query-pro-mode/view-more-download-csv.png)
 
+## Sort by column {#sort-column}
+
+When viewing tabulated results, you can use the sort functionality to sort by column in ascending or descending order.
+
+From your custom dashboard, select the ellipses (`...`) on any table to access the [!UICONTROL View more] option.
+
+![A custom dashboard with a tables's ellipses dropdown menu and the View more option highlighted.](../../images/query-pro-mode/advanced-ellipses-dropdown.png)
+
+You can sort columns by selecting the drop down menu beside the column name and then selecting **[!UICONTROL Sort Ascending]** or **[!UICONTROL Sort Descending]**.
+
+>[!NOTE]
+>
+>The [!UICONTROL Sort Ascending] and [!UICONTROL Sort Descending] options will only appear for columns that have been configured with sorting functionality.
+
+![A table column dropdown showing the Sort Ascending and Sort Descending options highlighted.](../../images/query-pro-mode/advanced-sort-dropdown.png)
+
+## Resize a column {#resize-column}
+
+You can resize columns in tabulated results to improve data readability. From your custom dashboard, select the ellipses (`...`) for your table to access the [!UICONTROL View more] option.
+
+Use the drop down menu beside the column name to resize it, then select **[!UICONTROL Resize column]**.
+
+![A table column dropdown showing the Resize column option highlighted.](../../images/query-pro-mode/advanced-resize-dropdown.png)
+
+Select the blue bar and drag to the left or right to adjust the column size as required.
+
+![A table showing the column resize bar highlighted.](../../images/query-pro-mode/advanced-resize-column.png)
+
+## Table pagination {#table-pagination}
+
+Pagination is automatically applied to your tables in the [!UICONTROL View more] feature, eliminating the need for you to manually modify your SQL queries. This feature ensures that your data is presented in a more manageable format, which facilitates the process of navigating through large datasets.
+
+You can see up to 500 records per page. To navigate through the records, use the **[!UIONTROL >]** located at the bottom of the page.
+
+![Tabulated results with results and pagination highlighted.](../../images/query-pro-mode/advanced-table-pagination.png)
+
 ## Next steps
 
 After reading this document, you now know how to view the tabulated results of your custom chart's SQL analysis and download the data as a CSV file. See the view SQL document to learn how to [view the SQL behind your custom insights](./view-more.md). 

@@ -69,17 +69,19 @@ To apply automatic sorting capabilities for any or all columns in your tables, s
 
 ![A custom dashboard with Edit highlighted.](../../images/query-pro-mode/advanced-edit-dashboard.png)
 
-Select the ellipsis in the table that you want to add sorting, then select **[!UICONTROL Edit]**.
+Select the ellipsis (`...`) in the table to which you want to add sorting, then select **[!UICONTROL Edit]**.
 
 ![A table showing the ellipsis menu with Edit highlighted.](../../images/query-pro-mode/advanced-table-edit.png)
 
-Use the **[!UICONTROL Sortable]** check boxes to grant sorting capabilities to any column.
+To enable sorting for any column, use the **[!UICONTROL Sortable]** check boxes.
 
 ![Table edit page with sortable check boxes highlighted.](../../images/query-pro-mode/advanced-table-sortable.png)
 
-Select the properties icon (![The properties icon.](/help/images/icons/properties.png)) in the right rail to open the properties panel. In the **[!UICONTROL Properties]** panel, use the drop down to select the **[!UICONTROL Default sort]** column, then use the drop down to select the **[!UICONTROL Sort direction]**. Finally select **[!Save and close]**.
+Select the properties icon (![The properties icon.](/help/images/icons/properties.png)) in the right rail to open the properties panel. In the **[!UICONTROL Properties]** panel, use the drop down to select the **[!UICONTROL Default sort]** column, then use the drop down to select the **[!UICONTROL Sort direction]**. Finally, select **[!Save and close]**.
 
 ![The widget composer with the properties icon, default sort, sort direction and save and close highlighted.](../../images/query-pro-mode/advanced-table-properties.png)
+
+To learn more about using the sort, resizing columns, and pagination features, refer to [View more](./view-more.md).
 
 ## Widget properties {#properties}
 
