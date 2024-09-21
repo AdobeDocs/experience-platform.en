@@ -2,40 +2,31 @@
 title: Efficient Big Data Analysis with Hypercubes in Experience Query Service
 description: Learn how to use hypercubes in Adobe Experience Platform Query Service to optimize big data analysis with approximate unique counting, reducing the need for full data reprocessing.
 ---
-
-<!-- 
-keywords: Experience Platform;query service;Query service;hyper cubes;
-title: Hyper Cubes
-description: Learn how to use Query Service to count unique events efficiently without reprocessing all historical data each time. Use sketches (small summaries of large data—that can be updated and merged), to make complex counting tasks faster and resource-efficient. This approach simplifies big data analysis by allowing incremental updates, reducing computation, and speeding up query responses.
- -->
-
 # Efficient big data analysis with hypercubes
 
 >[!AVAILABILITY]
 >
 >This functionality is only available to users who have purchased the [Data Distiller SKU](../data-distiller/overview.md).
 
-Learn how to use hypercubes in Adobe Experience Platform's Experience Query Service to perform advanced data analysis with enhanced efficiency. This document covers how to use advanced functions from the [[!DNL Apache Datasketches] library](https://datasketches.apache.org/) to handle distinct counts and other complex calculations incrementally without reprocessing historical data each time.
+Learn how to use hypercubes in Adobe Experience Platform's Experience Query Service to perform advanced data analysis with enhanced efficiency. This document covers how to use advanced functions from the [[!DNL Apache Datasketches] library](https://datasketches.apache.org/) to handle distinct counts and complex calculations incrementally, without reprocessing historical data each time.
 
-In big data analysis, generating metrics such as distinct counts, quantiles, most-frequent items, joins, and graph analysis often involves non-additive counting (where results can't simply be summed up from subgroups). Traditional methods require reprocessing all historical data, which can be resource-intensive and time-consuming. Use sketches (compact probabilistic summaries of large data), and advanced Query Service functions to streamline this process by reducing the need for reprocessing.
+In big data analysis, generating metrics such as distinct counts, quantiles, most-frequent items, joins, and graph analysis often involves non-additive counting (where results can't simply be summed up from subgroups). Traditional methods require reprocessing all historical data, which can be resource-intensive and time-consuming. Use sketches, which are compact summaries that use probabilities to represent large datasets, and advanced Query Service functions to streamline this process by reducing the need for recalculating.
 
 ## Key functions of hypercubes {#key-functions}
 
-<!-- Is Key purposes a better title? -->
-
 Hypercubes offer several powerful functions to enhance data analysis efficiency and flexibility. 
 
-1. **Count unique users or distinct queries**: Use SQL capabilities to generate unique counts of users interacting with various dimensions of data, such as product views, site visits, or commerce activity, without repeatedly reprocessing raw data.
-2. **Incremental processing**: Query Service supports incremental updates, allowing you to fold and merge data points across dimensions and time without recalculating everything from scratch.
+1. **Count unique users or distinct queries**: Use SQL capabilities to generate unique counts of users interacting with various dimensions of data, such as product views, site visits, or commerce activity, without repeatedly reanalyzing raw data.
+2. **Incremental processing**: Perform incremental updates to fold and merge data points across dimensions and time without recalculating everything from scratch.
 3. **Multi-dimensional analysis**: Hypercubes enable multi-dimensional filtering and rearranging of data to create summary rows that represent combinations of dimensions. These summaries can then be used to generate insights with minimal computation overhead.
 
 ## Use cases for hypercubes {#use-cases}
 
-Use hypercubes to efficiently generate distinct counts for various user interactions without fully reprocessing data each time. The following are some practical scenarios for their use:
+Use hypercubes to efficiently generate distinct counts for various user interactions without fully recalculating data each time. The following are some practical scenarios for their use:
 
 - Analyze unique visitors that view specific products during a defined time period.
-- Identify users who interacted with multiple specified products during a defined time period, to aid in cross-sell analysis.
-- Discover patterns in user preferences by distinguishing users who engaged with one product but not another over a set time period.
+- Identify users who interact with multiple products in a given period to enhance cross-sell analysis
+- Distinguish users engaging with one product but not another over time to uncover preference patterns.
 - Combine online and offline interaction data to get a comprehensive view of user behavior over a given period.
 - Track user movement across different activities within an event to optimize layout and services.
 
@@ -45,7 +36,7 @@ In these situations, you can pre-calculate basic information for specific catego
 
 ### Data size efficiency for query processing
 
-Query Service can compress millions or billions of data points into a compact form called a sketch. This sketch has a significantly reduced data size for query processing, which maintains scalability and makes it much easier and faster to work with. No matter how large the original data gets, the size of the sketch stays small, which makes analyzing big data much more manageable and efficient.
+Query Service can compress millions or billions of data points (for example, user IDs) into a compact form called a sketch. This sketch has a significantly reduced data size for query processing, which maintains scalability and makes it much easier and faster to work with. No matter how large the original data gets, the size of the sketch stays small, which makes analyzing big data much more manageable and efficient.
 
 The diagram below illustrates how Commerce, Product Info, and Web dimension ExperienceEvents are processed into sketches, which are then used to approximate unique counts.
 
@@ -53,15 +44,9 @@ The diagram below illustrates how Commerce, Product Info, and Web dimension Expe
 
 ### Merge sketches to make data analysis faster and easier
 
-<!-- 
-The ability to merge sketches allows you to efficiently combine data across dimensions and partitions without recalculating, simplifying data management and design while enhancing performance.
- -->
+To avoid recalculating and enhance processing speed, you can merge sketches from different categories or groups. Query Service also simplifies the design by organizing your data into a hypercube, where each row becomes a summary of its partition (a collection of dimensions) alongside the sketch column. Each row of the hyper-cube contains the dimension combination but does not have any raw data. When executing a query, specify the dimensional columns you want to use for building additive metrics and merge the sketches for those rows.
 
-<!-- Sketches created using Query Service can be merged across different dimensions or partitions. Merging sketches boosts performance and removes the need for recalculation. -->
-
-To avoid recalculating and enhance processing speed, you can merge sketches from different categories or groups. Query Service also simplifies the design by organizing your data into a hypercube, where each row becomes a summary of its partition (a collection of dimensions) alongside the sketch column. Each row of the hyper-cube contains the dimension combination but does not have any raw data. When executing a query, you need to specify the dimensional columns you want to use for building additive metrics and then merge the sketches for those rows.
-
-![The diagram shows multiple sketches from ExperienceEvents being merged into a single sketch to create approximate unique counts across various dimensions.](../images/key-concepts/merge-sketches.png)
+![The diagram shows how sketches from different ExperienceEvents are merged to create approximate unique counts across various dimensions.](../images/key-concepts/merge-sketches.png)
 
 ### Cost-effectiveness {#cost-effectiveness}
 
