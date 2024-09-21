@@ -252,8 +252,6 @@ The list of applied filters is displayed above the filtered results.
 
 ### Show system datasets {#show-system-datasets}
 
-<!-- Update this image and wording ... PLAT-187472 -->
-
 By default, only datasets that you have ingested data into are shown. If you want to see the system-generated datasets, select the **[!UICONTROL Yes]** checkbox in the [!UICONTROL Show system datasets] section. System-generated datasets are only used to process other components. For example, the system-generated profile export dataset is used to process the profile dashboard.
 
 ![The filter options of the Datasets workspace with the [!UICONTROL Show system datasets] section highlighted.](../images/datasets/user-guide/show-system-datasets.png)

@@ -25,7 +25,6 @@ role: Developer
 * Datasets {#datasets}
   * [Datasets overview](datasets/overview.md)
   * [Datasets user guide](datasets/user-guide.md)
-  * [Dataset retention best practices](datasets/best-practices.md)
   * [Create and populate a dataset using APIs](datasets/create.md)
   * [Enable a dataset for Profile and Identity](datasets/enable-for-profile.md)
   * [Enable a dataset for Profile updates (upsert)](datasets/enable-upsert.md)
