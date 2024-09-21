@@ -47,8 +47,6 @@ This panel validates that the app ID and the messaging platform that was saved i
 
 If valid, the profile will display the name of the channel configuration, the app ID, and the name of the messaging service.
 
-Finally, at the bottom of the panel is a link that will open this specific channel configuration in a new tab.
-
 ## Send test push
 
 The **[!UICONTROL Send Test Push]** tab can be used to send a test message to your device.
