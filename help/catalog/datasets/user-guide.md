@@ -168,16 +168,15 @@ For more information on how to classify business objects for easier discovery an
 
 >[!AVAILABILITY] 
 > 
->Data retention settings are currently in beta and available only in a **limited release**. It is not available to all customers. The ability to set your data retention policy is only available for organizations in the limited release. Your UI might not reflect the feature described below.
+>Data retention settings are currently in beta and available only in a **limited release** for select organizations. Your UI might not reflect the feature described below.
 
-Manage dataset expiration and retention policies at the dataset level from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure retention policies for your data lake data retrospectively. The expiration date defined by your retention policy is based on the date your data was ingested into the Platform. 
+Manage dataset expiration and retention policies at the dataset level from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure retention policies for data already ingested into your data lake. The expiration date is based on when your data was ingested into the Platform.
 
-To open the [!UICONTROL Set data retention] dialog, select the ellipsis of a dataset that you want to manage followed by **[!UICONTROL Set data retention policy]** from the dropdown menu.
+To open the [!UICONTROL Set data retention] dialog, select the ellipsis next to the dataset followed by **[!UICONTROL Set data retention policy]** from the dropdown menu.
 
 ![The Browse tab of the Datasets workspace with the ellipsis and Set data retention policy option highlighted.](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
 
-The [!UICONTROL Set data retention] dialog appears. The dialog shows the sandbox level license usage metrics , dataset-level details, and data lake settings. These metrics indicate your current usage against your entitlements.
-The dataset details include, the dataset name, the type of dataset, whether the dataset is enabled for Profile, and the current data lake storage usage. 
+The [!UICONTROL Set data retention] dialog appears. The dialog shows the sandbox level license usage metrics , dataset-level details, and data lake settings. These metrics show your usage compared to your entitlements. The dataset details include the dataset name, type, Profile enablement status, and current data lake storage usage.
 
 >[!NOTE]
 >
@@ -185,13 +184,11 @@ The dataset details include, the dataset name, the type of dataset, whether the 
 
 ![The Set data retention dialog.](../images/datasets/user-guide/set-data-retention-dialog.png)
 
-Before you configure your the dataset retention policy, the dialog shows recommended retention settings. One month is the default recommended retention period. To overwrite the standard retention policy, select and update the number and use the dropdown menu to update the time period (days, months, years). 
-
-You can configure your retention settings for the data lake and Profile Service independently. However, the expiration value for Profile Service **must not** be shorter than the one set for the data lake.
+Before you configure the dataset retention policy, the dialog shows recommended retention settings. One month is the default recommended retention period. To adjust the standard retention policy, select and update the number, then choose the desired time period (days, months, years). You can configure your retention settings for the data lake and Profile Service independently. 
 
 >[!NOTE] 
 > 
->The minimum (data retention duration) value cannot be smaller than 30 days. The allowed expiration date range can vary and depends on your entitlements and the types of dataset it is applied to.
+>Profile Service expiration **must always** be equal to or longer than the data lake retention period. The minimum data retention duration is 30 days. The allowed expiration date range can vary and depends on your entitlements and the types of datasets they are applied to.
 
 ![The Set data retention dialog with the duration dropdown and Save highlighted.](../images/datasets/user-guide/time-unit-dropdown.png)
 
