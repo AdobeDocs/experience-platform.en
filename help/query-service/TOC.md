@@ -35,6 +35,7 @@ role: User,Developer
         - [Engineer features for ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
         - [Export data to ML environments](data-distiller/ml-feature-pipelines/export-data.md)
         - [AI/ML data pipeline enrichment end-to-end workflow](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- [Data Distiller Hypercubes](hypercubes.md)
 - Examples {#use-cases}
     - [Overview](use-cases/overview.md)
     - [Abandoned browse](use-cases/abandoned-browse.md)
@@ -61,7 +62,6 @@ role: User,Developer
     - [Inline template](key-concepts/inline-templates.md)
     - [Incremental loading](key-concepts/incremental-load.md)
     - [Data deduplication](key-concepts/deduplication.md)
-    - [Hyper cubes](key-concepts/hyper-cubes.md)
     - [Dataset samples](key-concepts/dataset-samples.md)
     - [Dataset statistics computation](key-concepts/dataset-statistics.md)
 - Connect clients to Query Service {#clients}

@@ -40,13 +40,13 @@ Query Service can compress millions or billions of data points (for example, use
 
 The diagram below illustrates how Commerce, Product Info, and Web dimension ExperienceEvents are processed into sketches, which are then used to approximate unique counts.
 
-![Infographic showing the creation of sketches using Query Service. The diagram illustrates how ExperienceEvents with Commerce, Product Info, and Web dimensions are processed into sketches, which are then used to approximate unique counts.](../images/key-concepts/hypercube-overview.png)
+![Infographic showing the creation of sketches using Query Service. The diagram illustrates how ExperienceEvents with Commerce, Product Info, and Web dimensions are processed into sketches, which are then used to approximate unique counts.](./images/hypercubes/hypercube-overview.png)
 
 ### Merge sketches to make data analysis faster and easier
 
 To avoid recalculating and enhance processing speed, you can merge sketches from different categories or groups. Query Service also simplifies the design by organizing your data into a hypercube, where each row becomes a summary of its partition (a collection of dimensions) alongside the sketch column. Each row of the hyper-cube contains the dimension combination but does not have any raw data. When executing a query, specify the dimensional columns you want to use for building additive metrics and merge the sketches for those rows.
 
-![The diagram shows how sketches from different ExperienceEvents are merged to create approximate unique counts across various dimensions.](../images/key-concepts/merge-sketches.png)
+![The diagram shows how sketches from different ExperienceEvents are merged to create approximate unique counts across various dimensions.](./images/hypercubes/merge-sketches.png)
 
 ### Cost-effectiveness {#cost-effectiveness}
 
