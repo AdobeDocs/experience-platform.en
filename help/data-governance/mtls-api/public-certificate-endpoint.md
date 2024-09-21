@@ -46,7 +46,7 @@ A sample request to return the public certificates associated with your organiza
 +++Sample request
 
 ```shell
-curl -X GET https://experience.adobe.io/data/core/mtls/v1/certificate/public-certificate
+curl -X GET https://platform.adobe.io/data/core/mtls/v1/certificate/public-certificate
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
