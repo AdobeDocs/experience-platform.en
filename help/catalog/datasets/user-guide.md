@@ -174,7 +174,7 @@ Manage dataset expiration and retention policies at the dataset level from the [
 
 To open the [!UICONTROL Set data retention] dialog, select the ellipsis of a dataset that you want to manage followed by **[!UICONTROL Set data retention policy]** from the dropdown menu.
 
-![The Browse tab of the Datasets workspace with the ellipsis and Set data retention policy option highlighted.]()
+![The Browse tab of the Datasets workspace with the ellipsis and Set data retention policy option highlighted.](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
 
 The [!UICONTROL Set data retention] dialog appears. The dialog shows the sandbox level license usage metrics , dataset-level details, and data lake settings. These metrics indicate your current usage against your entitlements.
 The dataset details include, the dataset name, the type of dataset, whether the dataset is enabled for Profile, and the current data lake storage usage. 
@@ -183,15 +183,17 @@ The dataset details include, the dataset name, the type of dataset, whether the 
 >
 >The data lake storage metric is still in beta development. The metric might not be available.
 
-![The Set data retention dialog.]()
+![The Set data retention dialog.](../images/datasets/user-guide/set-data-retention-dialog.png)
 
 Before you configure your the dataset retention policy, the dialog shows recommended retention settings. One month is the default recommended retention period. To overwrite the standard retention policy, select and update the number and use the dropdown menu to update the time period (days, months, years). 
+
+You can configure your retention settings for the data lake and Profile Service independently. However, the expiration value for Profile Service **must not** be shorter than the one set for the data lake.
 
 >[!NOTE] 
 > 
 >The minimum (data retention duration) value cannot be smaller than 30 days. The allowed expiration date range can vary and depends on your entitlements and the types of dataset it is applied to.
 
-![The Set data retention dialog with the duration dropdown and Apply highlighted.]()
+![The Set data retention dialog with the duration dropdown and Save highlighted.](../images/datasets/user-guide/time-unit-dropdown.png)
 
 <!-- Adam, is there a wiki that specifically states what the rules are or how we define the the range of the allowed TTL? -->
 
