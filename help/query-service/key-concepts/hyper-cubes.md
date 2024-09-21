@@ -27,7 +27,7 @@ Hypercubes offer several powerful functions to enhance data analysis efficiency 
 
 1. **Count unique users or distinct queries**: Use SQL capabilities to generate unique counts of users interacting with various dimensions of data, such as product views, site visits, or commerce activity, without repeatedly reprocessing raw data.
 2. **Incremental processing**: Query Service supports incremental updates, allowing you to fold and merge data points across dimensions and time without recalculating everything from scratch.
-3. **Multi-dimensional analysis**: Hypercubes enable multi-dimensional filtering and rearranging of data to create summary rows that represent combinations of dimensions. these summaries can then be used to generate insights with minimal computation overhead.
+3. **Multi-dimensional analysis**: Hypercubes enable multi-dimensional filtering and rearranging of data to create summary rows that represent combinations of dimensions. These summaries can then be used to generate insights with minimal computation overhead.
 
 ## Use cases for hypercubes {#use-cases}
 
@@ -41,15 +41,15 @@ Use hypercubes to efficiently generate distinct counts for various user interact
 
 ## Benefits of using hypercubes
 
-In these situations, you can pre-calculate basic information for specific categories. However, when analyzing data across multiple dimensions and time periods, you have to either recalculate everything from raw data or use a Query Service hypercube. Hypercubes streamline the process by organizing data efficiently, which allows flexible slicing and multi-dimensional analysis without reprocessing. They use advanced functions to estimate results quickly and accurately to offer key benefits such as improved processing efficiency, scalability, and adaptability for complex analytical tasks.
+In these situations, you can pre-calculate basic information for specific categories. However, when analyzing data across multiple dimensions and time periods, you have to either recalculate everything from raw data or use a Query Service hypercube. Hypercubes streamline the process by organizing data efficiently, which allows flexible filtering and multi-dimensional analysis without reprocessing. They use advanced functions to estimate results quickly and accurately to offer key benefits such as improved processing efficiency, scalability, and adaptability for complex analytical tasks.
 
 ### Data size efficiency for query processing
 
-Query Service can compress millions or billions of data points into a compact form called a sketch. This sketch has a significantly reducing data size for query processing, which makes it much easier and faster to work with and maintains scalability. No matter how large the original data gets, the size of the sketch stays small, which makes analyzing big data much more manageable and efficient.
+Query Service can compress millions or billions of data points into a compact form called a sketch. This sketch has a significantly reduced data size for query processing, which maintains scalability and makes it much easier and faster to work with. No matter how large the original data gets, the size of the sketch stays small, which makes analyzing big data much more manageable and efficient.
 
 The diagram below illustrates how Commerce, Product Info, and Web dimension ExperienceEvents are processed into sketches, which are then used to approximate unique counts.
 
-![Infographic showing the creation of sketches using Query Service. The diagram illustrates how ExperienceEvents with Commerce, Product Info, and Web dimensions are processed into sketches, which are then used to approximate unique counts.](../../images/data-distiller/hypercube-overview.png)
+![Infographic showing the creation of sketches using Query Service. The diagram illustrates how ExperienceEvents with Commerce, Product Info, and Web dimensions are processed into sketches, which are then used to approximate unique counts.](../images/key-concepts/hypercube-overview.png)
 
 ### Merge sketches to make data analysis faster and easier
 
@@ -61,7 +61,7 @@ The ability to merge sketches allows you to efficiently combine data across dime
 
 To avoid recalculating and enhance processing speed, you can merge sketches from different categories or groups. Query Service also simplifies the design by organizing your data into a hypercube, where each row becomes a summary of its partition (a collection of dimensions) alongside the sketch column. Each row of the hyper-cube contains the dimension combination but does not have any raw data. When executing a query, you need to specify the dimensional columns you want to use for building additive metrics and then merge the sketches for those rows.
 
-![The diagram shows multiple sketches from ExperienceEvents being merged into a single sketch to create approximate unique counts across various dimensions.](../../images/data-distiller/merge-sketches.png)
+![The diagram shows multiple sketches from ExperienceEvents being merged into a single sketch to create approximate unique counts across various dimensions.](../images/key-concepts/merge-sketches.png)
 
 ### Cost-effectiveness {#cost-effectiveness}
 
@@ -94,16 +94,16 @@ FROM fact_sketch_table
 
 #### Parameters
 
-| Parameter   | Description                                                                                         |
-|-------------|-----------------------------------------------------------------------------------------------------|
+| Parameter   | Description                          |
+|---------------------------|---------------------------------------|
 | `column`    | The column or column name on which to create a sketch.                                              |
 | `lgConfigK` | *Int* (Optional) The log-base-2 of K, where K is the number of buckets or slots for the HLL Sketch. Min value: 4. Max value: 12. Default value: 12. |
 
 #### Output
 
-| Output Column   | Description                                                                                         |
-|-----------------|-----------------------------------------------------------------------------------------------------|
-| `sketch_res`    |  A column of type String containing the stringified HLL Sketch. |
+| Output Column   | Description                           |
+|---------------------------|---------------------------------------|
+| `sketch_res`    |  A column of type string containing the stringified HLL sketch. |
 
 #### SQL example
 
@@ -159,15 +159,15 @@ FROM fact_sketch_table
 
 #### Parameters
 
-| Parameter       | Description                                                                                      |
-|-----------------|--------------------------------------------------------------------------------------------------|
-| `sketch_column` | Column containing a stringified HLL Sketch. It estimates the distinct count for the sketch in each row. |
+| Parameter       | Description            |
+|---------------------------|---------------------------------------|
+| `sketch_column` | Column containing a stringified HLL sketch. It estimates the distinct count for the sketch in each row. |
 
 #### Output
 
-| Output Column   | Description                                                                                      |
-|-----------------|--------------------------------------------------------------------------------------------------|
-| `estimate`      | A column of type Double providing the estimation of the sketch, rounded to two decimal places.   |
+| Output Column   | Description       |
+|---------------------------|---------------------------------------|
+| `estimate`      | A column of type double that provides the estimation of the sketch, rounded to two decimal places.   |
 
 #### SQL Example
 
@@ -205,7 +205,7 @@ FROM
 
 ### Merge multiple HLL sketches with `hll_merge_agg`
 
-`hll_merge_agg` is an aggregate function that merges multiple HLL sketches within a group, producing a new sketch as the output. It allows the combination of sketches across partitions or dimensions, enhancing data analysis flexibility. If `allowDifferentLgConfigK` is set to false and the sketches have different `lgConfigK` values, an exception is thrown.
+`hll_merge_agg` is an aggregate function that merges multiple HLL sketches within a group, producing a new sketch as the output. It allows the combination of sketches across partitions or dimensions, enhancing data analysis flexibility. 
 
 #### Function Definition
 
@@ -226,20 +226,20 @@ FROM fact_sketch_table
 
 #### Parameters
 
-| Parameter                 | Description                                                                                       |
-|---------------------------|---------------------------------------------------------------------------------------------------|
-| `sketch_column`           | Column containing the stringified HLL Sketch.                                                     |
-| `allowDifferentLgConfigK` | *Boolean* (Optional) If set to true, allows merging of sketches with different `lgConfigK` values. Default is false. Throws an exception if false and sketches have different `lgConfigK` values. |
+| Parameter                 | Description              |
+|---------------------------|---------------------------------------|
+| `sketch_column`           | Column containing the stringified HLL sketch. |
+| `allowDifferentLgConfigK` | *Boolean* (Optional) If set to true, allows merging of sketches with different `lgConfigK` values. The default value is false. An exception is thrown if the value is false and sketches have different `lgConfigK` values. |
 
->[!IMPORTANT]
+>[!NOTE]
 >
 >If `allowDifferentLgConfigK` is set to false, merging sketches with different `lgConfigK` values results in an `UnsupportedOperationException`.
 
 #### Output
 
-| Output Column  | Description                                                                                         |
-|----------------|-----------------------------------------------------------------------------------------------------|
-| `sketch_res`   | A column of type HLL Sketch containing the stringified merged HLL Sketch.                          |
+| Output Column  | Description     |
+|----------------|-------------------------------------------------|
+| `sketch_res`   | A column of type HLL sketch containing the stringified merged HLL Sketch.                          |
 
 #### SQL Example
 
@@ -291,7 +291,7 @@ GROUP BY customer_id;
 
 ### Estimate cardinality with `hll_merge_count_agg`
 
-`hll_merge_count_agg` is an aggregate function that estimates the cardinality (number of unique elements) from one or more sketches within a column. It returns a single estimate for all sketches encountered within the grouping. This function is used for aggregating sketches and cannot be used as a row-wise transformation; for row-wise estimates, use `sketch_estimate`.
+`hll_merge_count_agg` is an aggregate function that estimates the cardinality (number of unique elements) from one or more sketches within a column. It returns a single estimate for all sketches encountered within the grouping. This function is used for aggregating sketches and cannot be used as a row-wise transformation. For row-wise estimates, use `sketch_estimate`.
 
 #### Function Definition
 
@@ -312,16 +312,16 @@ FROM fact_sketch_table
 
 #### Parameters
 
-| Parameter               | Description                                                                                       |
-|-------------------------|---------------------------------------------------------------------------------------------------|
-| `sketch_column`         | Column containing the stringified HLL Sketch.                                                     |
-| `allowDifferentLgConfigK` | *Boolean* (Optional) Default is false. If set to true, allows merging of sketches with different `lgConfigK` values. Otherwise, an `UnsupportedOperationException` is thrown. |
+| Parameter               | Description            |
+|-------------------------|----------------------------------------------|
+| `sketch_column`         | A column containing the stringified HLL sketch. |
+| `allowDifferentLgConfigK` | *Boolean* (Optional) The default value is false. If set to true, it allows the merging of sketches with different `lgConfigK` values. Otherwise, an `UnsupportedOperationException` is thrown. |
 
 #### Output
 
-| Output Column | Description                                                                                         |
-|---------------|-----------------------------------------------------------------------------------------------------|
-| `estimate`    | A column of type Double providing the estimation of the sketch.                                     |
+| Output Column | Description          |
+|---------------|----------------------------------------------------------|
+| `estimate`    | A column of type Double providing the estimation of the sketch. |
 
 #### SQL Example
 
@@ -373,12 +373,12 @@ GROUP BY customer_id;
 
 ## Limitations
 
-Currently, sketches cannot be updated once created. Future updates will introduce the capability to update sketches, allowing you to handle missed runs and late-arriving data more effectively.
+Currently, sketches cannot be updated once created. Future updates will introduce the capability to update sketches. With this functionality you can handle missed runs and late-arriving data more effectively.
 
 ## Next steps
 
 By reading this document, you now know how to use hypercubes and associated sketch functions to perform efficient data processing for complex, multi-dimensional analyses without the need to reprocess historical data. This approach saves time, reduces costs, and offers the flexibility required for real-time, interactive queries, making it a valuable tool for big data analysis in Adobe Experience Platform.
 
-Next, explore further documentation to deepen your understanding of how to use these functions effectively for your specific data needs.
+Next, explore other key concepts such as [incremental loading](./incremental-load.md) and [data dedupliction](/help/query-service/key-concepts/deduplication.md.md) to deepen your understanding of how to use these functions effectively for your specific data needs.
 
 
