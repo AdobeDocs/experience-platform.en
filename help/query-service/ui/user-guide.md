@@ -206,14 +206,14 @@ To navigate your database with the Object browser, enter a table name into the s
 
 ![The Query Editor dataset navigation rail with the search input highlighted.](../images/ui/query-editor/search-tables.png)
 
-The schema displayed in the object browser is an observable schema. This means that you can use it to monitor changes and updates in real time as changes are immediately vizibile. The observable schemas help to ensure data synchronization and assists with debugging or analytics tasks.
+The schema displayed in the object browser is an observable schema. This means that you can use it to monitor changes and updates in real time as changes are immediately visible. The observable schemas help to ensure data synchronization and assists with debugging or analytics tasks.
 
 #### Current limitations {#current-limitations}
 
 The following is a list of current limitations:
 
 - Sequential query execution: Only one query can be executed at a time. While a query is in progress, no additional tables can be opened in the left navigation, as queries are processed sequentially.
-- Noise in query logs: You may encounter extraneous queries labeled as "SHOW TABLES" in the logs. These will be removed in future releases.
+- Extra rows in query logs: You may encounter extraneous queries labeled as "SHOW TABLES" in the logs. These will be removed in future releases.
 
 #### Access table metadata {#table-metadata}
 
@@ -223,7 +223,7 @@ In addition to quick searches, you can now easily access metadata for any table 
 
 #### Explore child tables
 
-To explore child or linked tables, select the dropdown arrow next to a table name in the list. This expands the table to show any associated child tables, and gives a clear view of the data structure and allows for more complex query constructions.
+To explore child or linked tables, select the dropdown arrow next to a table name in the list. This expands the table to show any associated child tables, and gives a clear view of the data structure and allows for more complex query constructions. The icon next to the field name indicates the column's data type, to help you identify it during complex queries.
 
 ![The Query Editor with the filtered table list displayed.](../images/ui/query-editor/child-table-list.png)
 
