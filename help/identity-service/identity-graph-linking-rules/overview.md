@@ -24,8 +24,7 @@ The following documents are essential in understanding identity graph linking ru
 * [Graph simulation UI](./graph-simulation.md)
 * [Identity settings UI](./identity-settings-ui.md)
 
-
-## Example customer scenarios solved by identity graph linking rules {#example-scenarios}
+## Example scenarios where graph collapse could happen {#example-scenarios}
 
 This section outlines example scenarios that you may consider when configuring identity graph linking rules.
 
@@ -72,7 +71,6 @@ These identities could result in the following graphs, where multiple CRMIDs are
 ![A graph example of identity data with erroneous or bad identity values.](../images/identity-settings/bad-data.png)
 
 With identity graph linking rules you can configure the CRMID as the unique identifier to prevent unwanted profile collapsing due to this type of data.
-
 
 ## Identity graph linking rules {#identity-graph-linking-rules}
 
