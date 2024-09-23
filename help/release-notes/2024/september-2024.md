@@ -52,9 +52,9 @@ Use sources in Experience Platform to ingest data from an Adobe application or a
 
 | Feature | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Support for encrypted data ingestion in the UI |
-| General availability of [!DNL Snowflake Streaming] source |
-| Support for service account authentication in [!DNL Google BigQuery] |
+| [!BADGE Beta]{type=Informative} Support for encrypted data ingestion in the UI | You can now ingest encrypted data from a cloud storage batch source using the sources workspace in the Experience Platform user interface. Read the tutorial on [ingesting encrypted data in the UI](../../sources/tutorials/ui/encryped-ingestion.md) for more information. |
+| General availability of [!DNL Snowflake Streaming] source | The [!DNL Snowflake Streaming] source is now in GA. Use this source to stream data from your [!DNL Snowflake] account to Experience Platform. Read the [[!DNL Snowflake Streaming] overview](../../sources/connectors/databases/snowflake-streaming.md)for more information. |
+| Support for service account authentication in [!DNL Google BigQuery] | You can now connect your [!DNL Google BigQuery] account to Experience Platform using service account authentication. Read the [[!DNL Google BigQuery] overview](../../sources/connectors/databases/bigquery.md) for more information. |
 | Support for skipping sample data preview |
 | Support for disabling chunking in [!DNL SFTP] |
 
