@@ -23,17 +23,17 @@ You are presented with the following date filtering options.
 | --- | --- |
 | No custom date | Select one or more custom dates from multiple preset values. |
 | Custom date range | Select one or more custom dates from multiple preset values, or specify a custom date range. |
-| Custom date | Set the start date that will appear on the dashboard, or select from the two preset values.|
+| Custom date | Select from the prest values or specify the start date for your dashboard.|
 
 ![The create date filter dialog with the three custom date picker options highlighted.](../../../images/query-pro-mode/create-date-filter.png)
 
 ### Create a no custom date filter
 
-To apply a no custom date filter, select **[!UICONTROL No custom date]**, then select the predefined date options you want to include. Finally, use the dropdown to select the default date range, then select **[!UICONTROL Save]**.
+To apply a predefined date filter, select **[!UICONTROL No custom date]**, then select the predefined date options you want to include. Finally, use the dropdown to select the default date range, then select **[!UICONTROL Save]**.
 
 ![The create date filter dialog with the no custom date filter and save highlighted.](../../../images/query-pro-mode/no-custom-date-filter.png)
 
-You are returned to the dashboard, which shows the default data range you previously selected. Use the dropdown menu to select another preset date range.
+You are returned to the dashboard, which shows the default date range you previously selected. Use the dropdown menu to select another preset date range.
 
 ![A custom dashboard showing the default date range with the dropdown highlighted.](../../../images/query-pro-mode/no-custom-date-filter-results.png)
 
