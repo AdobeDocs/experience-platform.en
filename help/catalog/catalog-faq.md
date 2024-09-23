@@ -31,7 +31,7 @@ Yes, you can apply different retention policies for the data lake and Profile Se
 
 +++Answer
 
-Dataset expirations are evaluated and processed weekly, deleting all records that have expired. An event is considered expired if it has been ingested in Platform for more than 30 days (ingestion date > 30 days) and its event date exceeds the defined retention period.
+Dataset expirations are evaluated and processed weekly, deleting all records that have expired. An event is considered expired if it has been ingested into Platform for more than 30 days (ingestion date > 30 days) and its event date exceeds the defined retention period.
 
 +++
 
@@ -43,9 +43,9 @@ Once a retention policy is set, existing events are immediately deleted from Pla
 
 For example, if you apply a 30-day expiration policy on May 15th, the following occurs:
 
-1. New events receive a 30-day expiration as they are ingested.
-1. Existing events with a timestamp older than April 15th are immediately deleted.
-1. Existing events with a timestamp after April 15th are set to expire 30 days after their timestamp. For instance, an event from April 18th would be deleted on May 18th.
+- New events receive a 30-day expiration as they are ingested.
+- Existing events with a timestamp older than April 15th are immediately deleted.
+- Existing events with a timestamp after April 15th are set to expire 30 days after their timestamp. For instance, an event from April 18th would be deleted on May 18th.
 
 +++
 
@@ -63,7 +63,7 @@ You can view the latest dataset-level storage size in data lake and Profile as s
 
 +++Answer
 
-You can check the timestamp of the last data retention job in the [Dataset retention configuration UI](./datasets/user-guide.md#data-retention-policy) and on the [!UICONTROL Datasets] inventory page. Reports for historical dataset usage are currently unavailable but is planned for future releases.
+You can check the timestamp of the last data retention job in the [Dataset retention configuration UI](./datasets/user-guide.md#data-retention-policy) and on the [!UICONTROL Datasets] inventory page. Reports for historical dataset usage are currently unavailable but are planned for future releases.
 
 +++
 
