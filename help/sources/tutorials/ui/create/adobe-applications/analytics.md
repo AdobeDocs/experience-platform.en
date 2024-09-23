@@ -311,13 +311,8 @@ For more information on backfill, live data, and their respective latencies, rea
 
 To delete your Analytics dataflow, select **[!UICONTROL Dataflows]** from the top header of the sources workspace. Use the dataflows page to locate the Analytics dataflow that you want to delete and then select the ellipses (`...`) beside it. Next, use the dropdown menu and select **[!UICONTROL Delete]**.
 
-A pop up window appears, informing you that deletion of the selected dataflow will stop the scheduled data backfill for the associated report suite. Additionally, you are informed that data that has already been ingested can still be viewed through the dataset. When ready, select **[!UICONTROL Delete]**.
-
-![The confirmation window with "delete" selected.](../../../../images/tutorials/create/analytics/analytics-delete-dataflow.png)
-
-### Delete your dataset {#delete-dataset}
-
-You can use the [datasets UI](../../../../../catalog/datasets/user-guide.md#delete-a-dataset) to delete your Analytics dataset. Note that doing so, will also delete the underlying dataset.
+* Deleting the live Analytics dataflow will also delete its underlying dataset.
+* Deleting the backfill Analytics dataflow does not delete the underlying dataset, but will stop the backfill process for its corresponding report suite. If you delete the backfill dataflow, ingested data may still be viewed through the dataset.
 
 ## Next steps and additional resources
 
