@@ -261,7 +261,7 @@ alloy("sendEvent", {
         break;  
       }
     }
-      // Send a "display" event 
+    // Send a "display" event 
     alloy("sendEvent", {
       "xdm": {
         "eventType": "decisioning.propositionDisplay",
@@ -273,7 +273,10 @@ alloy("sendEvent", {
                 "scope": discountProposition.scope,
                 "scopeDetails": discountProposition.scopeDetails
               }
-            ]
+            ],
+            "propositionEventType": {
+              "display": 1
+            }
           }
         }
       }
@@ -374,21 +377,21 @@ alloy("sendEvent", {
             } = proposition;
 
             alloy("sendEvent", {
-                xdm: {
-                    eventType: "decisioning.propositionDisplay",
-                    _experience: {
-                        decisioning: {
-                            propositions: [{
-                                id: id,
-                                scope: scope,
-                                scopeDetails: scopeDetails,
-                            }, ],
-                            propositionEventType: {
-                                display: 1
-                            },
-                        },
-                    },
-                },
+                "xdm": {
+                    "eventType": "decisioning.propositionDisplay",
+                    "_experience": {
+                        "decisioning": {
+                            "propositions": [{
+                              	"id": id,
+                                "scope": scope,
+                              	"scopeDetails": scopeDetails
+                            }],
+                            "propositionEventType": {
+                                "display": 1
+                            }
+                        }
+                    }
+                }
             });
         }
     });

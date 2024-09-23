@@ -12,8 +12,8 @@ exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 
 Every customer implementation is unique and tailored to meet a particular organization's goals, and as such, the importance of a given namespace varies from customer to customer. Real-world examples include:
 
-* On one hand, you might deem the Email namespace to represent a person entity and thus be unique per person. On the other hand, another customer might consider the Email namespace as an unreliable identifier and therefore, they may allow a single CRM ID to be associated to multiple identities with the Email namespace.
-* You might collect online behavior using a "Login ID" namespace. This Login ID could have a 1:1 relationship with the CRM ID, which then stores attributes from a CRM system and may be considered the most important namespace. In this case, you are then determining that the CRM ID namespace is a more accurate representation of a person, while the Login ID namespace is the second most important.
+* On one hand, you might deem the Email namespace to represent a person entity and thus be unique per person. On the other hand, another customer might consider the Email namespace as an unreliable identifier and therefore, they may allow a single CRMID to be associated to multiple identities with the Email namespace.
+* You might collect online behavior using a "Login ID" namespace. This Login ID could have a 1:1 relationship with the CRMID, which then stores attributes from a CRM system and may be considered the most important namespace. In this case, you are then determining that the CRMID namespace is a more accurate representation of a person, while the Login ID namespace is the second most important.
 
 You must make configurations in Identity Service that reflects the importance of your namespaces as this influences how profiles are formed and segmented.
 
@@ -43,7 +43,7 @@ An identity represents a real-world object. There are three objects that are rep
 
 Person namespaces are relatively immutable compared to hardware devices (such as IDFA, GAID), which are relatively immutable compared to web browsers. Basically, you (person) will always be a single entity, who can have multiple hardware devices (phone, laptop, tablet, etc.), and use multiple browsers (Google Chrome, Safari, FireFox, etc.)
 
-Another way to approach this topic is through cardinality. For a given person entity, how many identities will be created? In most cases, a person will have one CRM ID, a handful of hardware device identifiers (IDFA/GAID resets should not happen often), and even more cookies (an individual could conceivably brows on multiple devices, use incognito mode, or reset cookies at any  given time). Generally, **lower cardinality indicates a namespace with a higher value**.
+Another way to approach this topic is through cardinality. For a given person entity, how many identities will be created? In most cases, a person will have one CRMID, a handful of hardware device identifiers (IDFA/GAID resets should not happen often), and even more cookies (an individual could conceivably brows on multiple devices, use incognito mode, or reset cookies at any  given time). Generally, **lower cardinality indicates a namespace with a higher value**.
 
 ## Validate your namespace priority settings
 
@@ -72,13 +72,13 @@ For relatively complex graph structures, namespace priority plays an important r
 * For experience events, once you have configured Identity Settings for a given sandbox, the primary identity will be determined by the highest namespace priority going forward.
   * This is because experience events are dynamic in nature. An identity map may contain three or more identities, and namespace priority ensures that the most important namespace is associated to the experience event.
 * As a result, the following configurations **will no longer be used by Real-Time Customer Profile**:
-  * "Primary" checkbox on data element type in WebSDK.
+  * The "Primary" checkbox on data element type in WebSDK (which translates to `primary=true` in identityMap). **Note**: Identity namespace and identity value will continue to be used in Profile. Additionally, you must still configure your "Primary" checkbox settings because services outside of Real-Time Customer Profile will continue to refer to this configuration.
   * Any fields marked as primary identity on an XDM Experience Event Class schema.
   * Default primary identity settings in the Adobe Analytics source connector (ECID or AAID).
 * On the other hand, **namespace priority does not determine primary identity for profile records**.
   * For profile records, you may use the schemas workspace in the Experience Platform UI to define your identity fields, including the primary identity. Read the guide on [defining identity fields in the UI](../../xdm/ui/fields/identity.md) for more information.
 
->[!NOTE]
+>[!TIP]
 >
 >* Namespace priority is **a property of a namespace**. It is a numerical value assigned to a namespace to indicate its relative importance.
 >
@@ -106,9 +106,9 @@ Given the configurations outlined above, user actions and determination of prima
 | --- | --- | --- | --- | --- |
 | View credit card offer page | Unauthenticated (anonymous) | Web SDK | {ECID} | ECID |
 | View help page | Unauthenticated | Mobile SDK | {ECID, IDFA} | IDFA |
-| View checking account balance | Authenticated | Web SDK | {CRM ID, ECID} | CRM ID |
-| Sign up for home loan | Authenticated | Analytics source connector | {CRM ID, ECID, AAID} | CRM ID |
-| Transfer $1,000 from checking to savings | Authenticated | Mobile SDK | {CRM ID, GAID, ECID} | CRM ID |
+| View checking account balance | Authenticated | Web SDK | {CRMID, ECID} | CRMID |
+| Sign up for home loan | Authenticated | Analytics source connector | {CRMID, ECID, AAID} | CRMID |
+| Transfer $1,000 from checking to savings | Authenticated | Mobile SDK | {CRMID, GAID, ECID} | CRMID |
 
 {style="table-layout:auto"}
 
@@ -142,7 +142,7 @@ For more information, read the [advanced lifecycle management overview](../../hy
 
 ### Computed attributes
 
-Computed attributes does not use namespace priority to compute values. If you are using computed attributes, you must ensure that the CRM ID is designated as your primary identity for WebSDK. This limitation is expected to be resolved in August 2024.
+Computed attributes does not use namespace priority to compute values. If you are using computed attributes, you must ensure that the CRMID is designated as your primary identity for WebSDK. This limitation is expected to be resolved in August 2024.
 
 For more information, read the [computed attributes UI guide](../../profile/computed-attributes/ui.md).
 
@@ -162,8 +162,8 @@ For more information on XDM schemas, read the [schemas overview](../../xdm/home.
 
 When selecting your data, you will need to specify a namespace, which will be used to determine the events that compute scores and the events that store the computed scores. You are recommended to select the namespace that represents a person.
 
-* If you are collecting web behavior data using WebSDk, you are recommended to choose the CRM ID namespace within the identity map.
-* If you are collecting web behavior data using the Analytics source connector, then you should select the identity descriptor (CRM ID).
+* If you are collecting web behavior data using WebSDk, you are recommended to choose the CRMID namespace within the identity map.
+* If you are collecting web behavior data using the Analytics source connector, then you should select the identity descriptor (CRMID).
 
 This configuration results in computing scores only using authenticated events.
 
@@ -177,3 +177,7 @@ For more information on, read the documents on [Attribution AI](../../intelligen
 * Data lake: Deletes any record with the specified identity as primary or secondary identity.
 
 For more information, read the [Privacy service overview](../../privacy-service/home.md).
+
+### Adobe Target and edge personalization
+
+[Edge personalization](../../server-api/personalization-target.md) will continue to to refer to how you configured your "Primary" checkbox on data element type in WebSDK (which translates to `primary=true` in identityMap).

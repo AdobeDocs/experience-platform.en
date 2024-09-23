@@ -50,7 +50,7 @@ Understand from the table below which dataset types you can export depending on 
   <tr>
     <td>Customer Journey Analytics</td>
     <td>All</td>
-    <td> Profile and Experience Event datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.  <br> <p> <b>Note on availability:</b> The ability to export datasets to the cloud is in the Limited Testing phase of release and might not be available yet in your environment. This note will be removed when the functionality is generally available. For information about the Customer Journey Analytics release process, see <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Customer Journey Analytics feature releases</a>. </p> </td>
+    <td> Profile and Experience Event datasets created in the Experience Platform UI after ingesting or collecting data through Sources, Web SDK, Mobile SDK, Analytics Data Connector, and Audience Manager.</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
@@ -205,11 +205,7 @@ To remove datasets from an existing dataflow, follow the steps below:
 
     ![The available datasets navigation option highlighted in the Activation data column.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-3. [!BADGE Beta] The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog.
-
-    >[!NOTE]
-    >
-    >This feature is in beta and only available to select customers. To request access to this feature, contact your Adobe representative.
+3. The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog.
 
     ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/bulk-remove-datasets.png) 
 
@@ -231,8 +227,9 @@ You can view and track your profile exports against your contractual limits in t
 
 Keep in mind the following limitations for the general availability release of dataset exports:
 
-* Currently, you can only export incremental files and an end date cannot be selected for your dataset exports. 
-* Exported filenames are currently not customizable.
+* Currently, you can only export incremental files and an end date cannot be selected for your dataset exports.
+* Experience Platform may export multiple files even for small datasets. Dataset export is designed for system-to-system integration and optimized for performance, hence the number of exported files is not customizable.
+* Exported file names are currently not customizable.
 * Datasets created via API are currently not available for export. 
 * The UI does not currently block you from deleting a dataset that is being exported to a destination. Do not delete any datasets that are being exported to destinations. [Remove the dataset](#remove-dataset) from a destination dataflow before deleting it.
 * Monitoring metrics for dataset exports are currently mixed with numbers for profile exports so they do not reflect the true export numbers.
