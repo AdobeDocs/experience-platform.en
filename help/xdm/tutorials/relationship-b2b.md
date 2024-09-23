@@ -105,8 +105,6 @@ Under **[!UICONTROL Reference Schema]**, use the search bar, or dropdown menu, t
 >
 >The list of available reference schemas is filtered to only contain suitable schemas. Schemas **must** have an assigned primary identity and be either a B2B class or the Individual Profile class. Prospect class schemas are not able to have relationships.
 
-<!-- Q) Do i have that correct? What is the issue with Prospect class schemas? -->
-
 ![The Add relationship dialog with the Reference Schema and Reference Identity namespace fields highlighted.](../images/tutorials/relationship-b2b/reference-schema.png)
 
 Under **[!UICONTROL Relationship Name From Current Schema]** and **[!UICONTROL Relationship Name From Reference Schema]**, provide friendly names for the relationship in the context of the source and reference schemas, respectively. When finished, select **[!UICONTROL Apply]** to confirm the changes and save the relationship.
