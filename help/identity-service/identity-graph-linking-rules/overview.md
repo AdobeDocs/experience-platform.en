@@ -24,7 +24,7 @@ The following documents are essential in understanding identity graph linking ru
 * [Graph simulation UI](./graph-simulation.md)
 * [Identity settings UI](./identity-settings-ui.md)
 
-## Example scenarios where graph collapse could happen {#example-scenarios}
+## Example scenarios where graph collapse could happen {#example-scenarios-where-graph-collapse-could-happen}
 
 This section outlines example scenarios that you may consider when configuring identity graph linking rules.
 
