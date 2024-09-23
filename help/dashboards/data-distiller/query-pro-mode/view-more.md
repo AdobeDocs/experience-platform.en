@@ -27,9 +27,7 @@ The [!UICONTROL View more] feature displays the specific data points for the cha
 
 ## Sort by column {#sort-column}
 
-When viewing tabulated results, you can use the sort functionality to sort by column in ascending or descending order.
-
-From your custom dashboard, select the ellipses (`...`) on any table to access the [!UICONTROL View more] option.
+When viewing tabulated results, you can use the sort functionality to sort by column in ascending or descending order. From your custom dashboard, select the ellipses (`...`) on any table to access the [!UICONTROL View more] option.
 
 ![A custom dashboard with a tables's ellipses dropdown menu and the View more option highlighted.](../../images/query-pro-mode/advanced-ellipses-dropdown.png)
 
@@ -37,19 +35,17 @@ You can sort columns by selecting the drop down menu beside the column name and 
 
 >[!NOTE]
 >
->The [!UICONTROL Sort Ascending] and [!UICONTROL Sort Descending] options will only appear for columns that have been configured with sorting functionality.
+>The [!UICONTROL Sort Ascending] and [!UICONTROL Sort Descending] options will only appear for columns that have been configured with [sorting functionality](../overview.md/#advanced-attributes).
 
 ![A table column dropdown showing the Sort Ascending and Sort Descending options highlighted.](../../images/query-pro-mode/advanced-sort-dropdown.png)
 
 ## Resize a column {#resize-column}
 
-You can resize columns in tabulated results to improve data readability. From your custom dashboard, select the ellipses (`...`) for your table to access the [!UICONTROL View more] option.
-
-Use the drop down menu beside the column name to resize it, then select **[!UICONTROL Resize column]**.
+You can resize columns in tabulated results to improve data readability. From your custom dashboard, select the ellipses (`...`) for your table to access the [!UICONTROL View more] option. Use the drop down menu beside the column name to resize it, then select **[!UICONTROL Resize column]**.
 
 ![A table column dropdown showing the Resize column option highlighted.](../../images/query-pro-mode/advanced-resize-dropdown.png)
 
-Select the blue bar and drag to the left or right to adjust the column size as required.
+Select the sllider and drag to the left or right to adjust the column size as required.
 
 ![A table showing the column resize bar highlighted.](../../images/query-pro-mode/advanced-resize-column.png)
 
