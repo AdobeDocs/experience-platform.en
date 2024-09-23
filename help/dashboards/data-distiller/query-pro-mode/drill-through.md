@@ -1,6 +1,6 @@
 ---
 title: Query Pro Mode Drill Through
-description: Learn how you can navigate from any chart to a new dashboard to explore your data using drill through.
+description: Learn how to navigate from any chart to a new dashboard to explore your data using drill through.
 ---
 # Drill through {#drill-through}
 
@@ -18,7 +18,7 @@ Select the ellipsis in the chart that you want to drill through, then select **[
 
 ![A chart showing the ellipsis menu with Edit highlighted.](../../images/query-pro-mode/drill-through-chart-edit.png)
 
-In the propertoes panel use the toggle to enable **[!UICONTROL Enable drill through]**, then use the drop down to select the **[!UICONTROL Target dashboard]**. Ensure the toggle for **[!UICONTROL Filter pass-through]** is enabled, then select **[!UICONTROL Save and close]**.
+In the [!UICONTROL Properties] panel use the toggle to enable **[!UICONTROL Enable drill through]**, then use the drop down to select the **[!UICONTROL Target dashboard]**. Ensure the toggle for **[!UICONTROL Filter pass-through]** is enabled, then select **[!UICONTROL Save and close]**.
 
 ![Chart properties panel with Enable drill through, Target dashboard, and Filter pass-through highlighted.](../../images/query-pro-mode/drill-through-chart-properties.png)
 
@@ -38,7 +38,7 @@ The drill through target dashboard is displayed. You can repeat this step if you
 
 >[!NOTE]
 >
->The date filter and global filters will be disabled on the drill through. However, any filters applied in the source dashboard will be passed to the target dashboard.
+>Any filters applied in the source dashboard are passed to the target dashboard. However, date filters and global filters are disabled on child dashboards.
 
 ## Remove a drill through {#remove-drill-through}
 
@@ -50,7 +50,7 @@ Select the ellipsis in the chart that you want to remove a drill through, then s
 
 ![A chart showing the ellipsis menu with Edit highlighted.](../../images/query-pro-mode/drill-through-chart-edit.png)
 
-In the properties panel, select the toggle to disable **[!UICONTROL Enable drill through]**, then select **[!UICONTROL Save and close]**.
+In the [!UICONTROL Properties] panel, select the toggle to disable **[!UICONTROL Enable drill through]**, then select **[!UICONTROL Save and close]**.
 
 ![Chart properties panel with the toggle disabled for [!UICONTROL Enable drill through] highlighted.](../../images/query-pro-mode/drill-through-disable.png)
 
