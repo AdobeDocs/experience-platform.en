@@ -19,16 +19,6 @@ This guide requires that you already have access to the [!DNL Power BI] desktop 
 
 To acquire the necessary credentials for connecting [!DNL Power BI] to Experience Platform, you must have access to the Queries workspace in the Platform UI. Please contact your organization administrator if you do not currently have access to the queries workspace. 
 
-After installing [!DNL Power BI], you will need to install `Npgsql`, a .NET driver package for PostgreSQL. More information about Npgsql can be found in the [Npgsql documentation](https://www.npgsql.org/doc/index.html).
-
->[!IMPORTANT]
->
->You must download v4.0.10 or lower, as newer versions result in errors.
-
-Under "[!DNL Npgsql GAC Installation]" on the custom setup screen, select **[!DNL Will be installed on local hard drive]**. 
-
-To ensure that Npgsql has been properly installed, please restart your computer before proceeding to the next steps.
-
 ## Connect [!DNL Power BI] to Query Service {#connect-power-bi}
 
 To connect [!DNL Power BI] to Query Service, open [!DNL Power BI] and select **[!DNL Get Data]** in the top menu ribbon. Next, enter "[!DNL PostgreSQL]" in the search bar to narrow the list of data sources. From the results that appear, select **[!DNL PostgreSQL database]**, followed by **[!DNL Connect]**.
