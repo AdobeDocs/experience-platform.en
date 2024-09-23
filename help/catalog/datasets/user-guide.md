@@ -196,7 +196,7 @@ See the [frequently asked questions page](../catalog-faq.md) for more informatio
 
 #### (Beta) Enhanced visibility of retention periods and storage metrics {#retention-and-storage-metrics}
 
-Four new columns are available to beta users that provide greater visibility into your data management: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]**, and **[!UICONTROL Profile Retention]**.These metrics show how much storage your data consumes and its retention duration in both data lake and Profile services. These details help you optimize retention policies, track usage against entitlements, and ensure compliance with organizational and regulatory standards. This increased visibility empowers you to make informed decisions, manage costs, streamline governance, and clearly understand your data landscape.
+Four new columns are available to beta users that provide greater visibility into your data management: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]**, and **[!UICONTROL Profile Retention]**. These metrics show how much storage your data consumes and its retention duration in both data lake and Profile services. These details help you optimize retention policies, track usage against entitlements, and ensure compliance with organizational and regulatory standards. This increased visibility empowers you to make informed decisions, manage costs, streamline governance, and clearly understand your data landscape.
 
 ![The Browse tab of the Datasets workspace with The four new storage and retention columns highlighted.](../images/datasets/user-guide/storage-and-retention-columns.png)
 
