@@ -170,7 +170,7 @@ For more information on how to classify business objects for easier discovery an
 > 
 >Data retention settings are currently in beta and available only in a **limited release** for select organizations. Your UI might not reflect the feature described below.
 
-Manage dataset expiration and retention policies at the dataset level from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure retention policies for data already ingested into your data lake. The expiration date is based on when your data was ingested into the Platform.
+Manage dataset expiration and retention policies at the dataset level from the [!UICONTROL Browse] tab of the [!UICONTROL Datasets] workspace. You can use this feature to configure retention policies for data already ingested into data lake and Profile services. The expiration date is based on when data was ingested into Platform and your retention rules.
 
 To open the [!UICONTROL Set data retention] dialog, select the ellipsis next to the dataset followed by **[!UICONTROL Set data retention policy]** from the dropdown menu.
 
@@ -180,7 +180,7 @@ The [!UICONTROL Set data retention] dialog appears. The dialog shows the sandbox
 
 >[!NOTE]
 >
->The data lake storage metric is still in beta development. The metric might not be available.
+>The sandbox-level licensed data lake storage metrics is still in development and not available.
 
 ![The Set data retention dialog.](../images/datasets/user-guide/set-data-retention-dialog.png)
 
@@ -192,9 +192,24 @@ Before you configure the dataset retention policy, the dialog shows recommended 
 
 ![The Set data retention dialog with the duration dropdown and Save highlighted.](../images/datasets/user-guide/time-unit-dropdown.png)
 
-<!-- Adam, is there a wiki that specifically states what the rules are or how we define the the range of the allowed TTL? -->
-
 See the [frequently asked questions page](../catalog-faq.md) for more information on the rules that define dataset expirations date ranges and best practices for configuring your data retention policy.
+
+#### (Beta) Enhanced visibility of retention periods and storage metrics {#retention-and-storage-metrics}
+
+Four new columns are available to beta users that provide greater visibility into your data management: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]**, and **[!UICONTROL Profile Retention]**.These metrics show how much storage your data consumes and its retention duration in both data lake and Profile services. These details help you optimize retention policies, track usage against entitlements, and ensure compliance with organizational and regulatory standards. This increased visibility empowers you to make informed decisions, manage costs, streamline governance, and clearly understand your data landscape.
+
+![The Browse tab of the Datasets workspace with The four new storage and retention columns highlighted.](../images/datasets/user-guide/storage-and-retention-columns.png)
+
+The following table provides an overview of the new retention and storage metrics available in the beta release. It details each column's purpose and how it aids in managing data retention and storage within the Platform UI.
+
+| Column title  | Description |
+|---|---|
+| [!UICONTROL Data lake retention] | Shows the current retention duration for each dataset. This value can be modified in each dataset's retention settings. The data lake retention policy sets rules for how long data is stored and when it should be deleted in different services. |
+| [!UICONTROL Data Lake Storage] | Displays the current storage usage for each dataset in the data lake. This metric helps track how much space each dataset occupies, aiding in managing storage limits and optimizing usage. |
+| [!UICONTROL Profile Storage] | Shows the current storage usage for each dataset within Profile services. Use this information to monitor storage consumption and ensure it aligns with your data management goals. |
+| [!UICONTROL Profile Retention] | Indicates the retention duration for each Profile dataset. This value can be adjusted in the dataset's retention settings, helping you control how long Profile data is stored before deletion. |
+
+{style="table-layout:auto"}
 
 ### Move to folders {#move-to-folders}
 
