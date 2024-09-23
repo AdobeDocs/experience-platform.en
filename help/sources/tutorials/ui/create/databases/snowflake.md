@@ -99,6 +99,12 @@ To use key-pair authentication, provide values for your account, username, priva
 
 >[!ENDTABS]
 
+### Skip preview of sample data {#skip-preview-of-sample-data}
+
+During the data selection step, you may encounter a timeout when ingesting large tables or files of data. You can skip data preview to circumvent the timeout and still view your schema, albeit without sample data. To skip data preview, enable the **[!UICONTROL Skip previewing sample data]** toggle.
+
+The rest of the workflow will remain the same. The only caveat is that skipping data preview may prevent calculated and required fields from being auto-validated during the mapping step, and you will then have to manually validate those fields during mapping.
+
 ## Next steps
 
 By following this tutorial, you have established a connection to your Snowflake account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
