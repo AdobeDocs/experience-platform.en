@@ -6,9 +6,9 @@ description: Learn how to use hypercubes in Adobe Experience Platform Query Serv
 
 >[!AVAILABILITY]
 >
->This functionality is only available to users who have purchased the [Data Distiller SKU](../data-distiller/overview.md).
+>This functionality is only available to users who have purchased the [Data Distiller SKU](../data-distiller/overview.md). Contact your Adobe representative for more information.
 
-Learn how to use hypercubes in Adobe Experience Platform's Experience Query Service to perform advanced data analysis with enhanced efficiency. This document covers how to use advanced functions from the [[!DNL Apache Datasketches] library](https://datasketches.apache.org/) to handle distinct counts and complex calculations incrementally, without reprocessing historical data each time.
+Learn how to use hypercubes in Adobe Experience Platform's Experience Query Service to perform advanced data analysis with enhanced efficiency. This document covers how to use advanced functions from the [[!DNL Apache Datasketches] library](https://datasketches.apache.org/) to handle distinct counts and complex calculations incrementally, without having to reprocess historical data each time.
 
 In big data analysis, generating metrics such as distinct counts, quantiles, most-frequent items, joins, and graph analysis often involves non-additive counting (where results can't simply be summed up from subgroups). Traditional methods require reprocessing all historical data, which can be resource-intensive and time-consuming. Use sketches, which are compact summaries that use probabilities to represent large datasets, and advanced Query Service functions to streamline this process by reducing the need for recalculating.
 
