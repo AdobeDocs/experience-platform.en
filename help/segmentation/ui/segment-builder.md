@@ -151,6 +151,11 @@ Please note that there is a maximum of 250 values allowed. If you exceed this am
 
 ### Adding audiences
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_addaudiences"
+>title="Search updates"
+>abstract="The existing search system has been updated to use Unified Search. Unified Search allows you to more easily and robustly search your audiences for segment membership."
+
 You can drag and drop an audience from the **[!UICONTROL Audience]** tab onto the rule builder canvas to reference audience membership in the new segment definition. This allows you to include or exclude audience membership as an attribute in the new segment definition rules.
 
 For [!DNL Platform] audiences created using [!DNL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition. Make sure that you have saved any recent changes to your segment definition before converting it to rule logic.
