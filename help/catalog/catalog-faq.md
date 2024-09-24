@@ -21,7 +21,7 @@ You can set up retention policies on datasets created using the ExperienceEvent 
 
 +++Answer
 
-Yes, you can apply different retention policies for the data lake and Profile Service. However, the expiration value for Profile Service **must not** be shorter than the one set for the data lake.
+Yes, you can apply different retention policies for the data lake and Profile Service.
 
 +++
 

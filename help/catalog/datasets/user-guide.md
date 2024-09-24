@@ -186,9 +186,9 @@ The [!UICONTROL Set data retention] dialog appears. The dialog shows the sandbox
 
 Before you configure the dataset retention policy, the dialog shows recommended retention settings. One month is the default recommended retention period. To adjust the standard retention policy, select and update the number, then choose the desired time period (days, months, years). You can configure your retention settings for the data lake and Profile Service independently. 
 
-<!-- >[!NOTE] 
+>[!NOTE] 
 > 
->Profile Service expiration **must always** be equal to or longer than the data lake retention period. The minimum data retention duration is 30 days. The allowed expiration date range can vary and depends on your entitlements and the types of datasets they are applied to. -->
+>The minimum data retention duration for data lake is 30 days. The minimum data retention duration for Profile Service is one day.
 
 ![The Set data retention dialog with the duration dropdown and Save highlighted.](../images/datasets/user-guide/time-unit-dropdown.png)
 
