@@ -61,7 +61,7 @@ Also configure channels for playbooks that contain transactional messages like o
 
 ### Push channel surface
 
-Confirm that the app surfaces are configured either from the Experience Platform or Data Collections interface. This is how app surfaces look like in the Data Collections environment. 
+Confirm that the channel configurations are configured either from the Experience Platform or Data Collections interface. This is how channel configurations look like in the Data Collections environment. 
 
 ## Next steps {#next-steps}
 
