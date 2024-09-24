@@ -8,9 +8,9 @@ exl-id: 03060cdb-becc-430a-b527-60c055c2a906
 
 The Adobe Experience Platform Web SDK uses [Adobe Experience Cloud IDs (ECIDs)](../../identity-service/features/ecid.md) to track visitor behavior. Using [!DNL ECIDs], you can ensure that each device has a unique identifier that can persist across multiple sessions, tying all the hits that occur during and across web sessions to a specific device.
 
-This document provides an overview of how to manage [!DNL ECIDs] using the Web SDK.
+This document provides an overview of how to manage [!DNL ECIDs] and [!DNL CORE IDs] using the Web SDK.
 
-## Tracking ECIDs using Web SDK {#tracking-ecids-we-sdk}
+## Tracking ECIDs using Web SDK {#tracking-ecids-web-sdk}
 
 The Web SDK assigns and tracks [!DNL ECIDs] by using cookies, with multiple available methods for configuring how these cookies are generated.
 
@@ -27,6 +27,12 @@ When using cookies for device identification, you have two ways of interacting w
 1. Send data directly to the Edge Network domain `adobedc.net`. This method is referred to as [third-party data collection](#third-party).
 
 As explained in the sections below, the data collection method that you choose to use has a direct impact on cookie lifetime across browsers.
+
+## Tracking CORE IDs using Web SDK {#tracking-coreid-web-sdk}
+
+When using Google Chrome with third-party cookies enabled and there is no `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie set, the first Edge Network request goes through a `demdex.net` domain, which sets a demdex cookie. This cookie contains a [!DNL CORE ID]. This is a unique user ID, different from the [!DNL ECID].
+
+Depending on your implementation, you might want to [access the [!DNL CORE ID]](#retrieve-coreid).
 
 ### First-party data collection {#first-party}
 
@@ -78,7 +84,6 @@ Then, set the target field to an XDM path where the field is of type `string`.
 
 ### Retrieve the [!DNL ECID] through the `getIdentity()` command {#retrieve-ecid-getidentity}
 
-
 >[!IMPORTANT]
 >
 >You should only retrieve the ECID through the `getIdentity()` command if you require the [!DNL ECID] on the client side. If you only want to map the ECID to an XDM field, use [Data Prep for Data Collection](#retrieve-ecid-data-prep) instead.
@@ -101,6 +106,17 @@ alloy("getIdentity")
     // "error" will be an error object with additional information.
   });
 ```
+
+## Retrieve the CORE ID for the current user {#retrieve-coreid}
+
+To retrieve the CORE ID for a user, you can use the [`getIdentity()`](../commands/getidentity.md) command, as shown below.
+
+```js
+alloy("getIdentity",{
+  "namespaces": ["CORE"]
+});
+```
+
 
 ## Using `identityMap` {#using-identitymap}
 

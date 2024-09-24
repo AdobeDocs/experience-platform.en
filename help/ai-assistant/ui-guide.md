@@ -7,10 +7,6 @@ exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
 
 Read this guide to learn how you can use AI Assistant in the Adobe Experience Platform UI.
 
-The following video is intended to support your understanding of AI Assistant.
-
->[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
-
 ## Access AI Assistant in the Experience Platform UI
 
 To launch AI Assistant, select the **[!UICONTROL AI Assistant icon]** from the top header of the Experience Platform UI.

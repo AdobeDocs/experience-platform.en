@@ -166,8 +166,10 @@ In the example graph below, a dotted line exists between `{Email: tom@acme.com}`
 
 By reading this document, you now know how to use the [!DNL Graph Simulation] tool to better understand how your identity data is treated given a particular set of rules and configurations. For more information, read the following documents:
 
-* [Identity graph linking rules](./overview.md)
-* [Configuration guide](./configuration.md)
+* [Identity graph linking rules overview](./overview.md)
 * [Identity optimization algorithm](./identity-optimization-algorithm.md)
+* [Implementation guide](./implementation-guide.md)
+* [Troubleshooting and FAQ](./troubleshooting.md)
+* [Examples of graph configurations](./example-configurations.md)
 * [Namespace priority](./namespace-priority.md)
-* [Example graph configurations](./example-configurations.md)
+* [Identity settings UI](./identity-settings-ui.md)
