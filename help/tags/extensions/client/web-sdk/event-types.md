@@ -8,6 +8,31 @@ exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
 
 This page describes the Adobe Experience Platform event types provided by the Adobe Experience Platform Web SDK tag extension. These are used to [build rules](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) and should not be confused with the `eventType` field in the [`xdm` object](/help/web-sdk/commands/sendevent/xdm.md).
 
+## Monitoring hook triggered {#monitoring-hook-triggered}
+
+The Adobe Experience Platform Web SDK includes monitoring hooks which you can use to monitor various system events. These tools are useful for developing your own debugging tools and to capture Web SDK logs.
+
+These monitoring hooks are a programmatic way to handle events that are logged when debugging is enabled.
+
+For complete details about what parameters each monitoring hook callback function contains, see the [Web SDK monitoring hooks documentation](../../../../web-sdk/monitoring-hooks.md).
+
+![Tags user interface image showing the monitoring hook event type](assets/monitoring-hook-triggered.png)
+
+The Web SDK tag extension supports the following monitoring hooks:
+
+* **[!UICONTROL onInstanceCreated]**: This callback function is triggered when you have successfully created a new Web SDK instance.
+* **[!UICONTROL onInstanceConfigured]**: This callback function is triggered by the Web SDK when the [`configure`](../../../../web-sdk/commands/configure/overview.md) command is successfully resolved
+* **[!UICONTROL onBeforeCommand]**: This callback function is triggered by Web SDK before any other command is executed. You can use this monitoring hook to retrieve the configuration options of a specific command. See the sample below for details about what this function returns.
+* **[!UICONTROL onCommandResolved]**: This callback function is triggered before resolving command promise. You can use this function to see the command options and result.
+* **[!UICONTROL onCommandRejected]**: This callback function is triggered before a command promise is rejected and it contains information about the cause of the error.
+* **[!UICONTROL onBeforeNetworkRequest]**: This callback function is triggered before a network request is executed.
+* **[!UICONTROL onNetworkResponse]**: This callback function is triggered when the browser receives a response.
+* **[!UICONTROL onNetworkError]**: This callback function is triggered when the network request failed.
+* **[!UICONTROL onBeforeLog]**: This callback function is triggered before the Web SDK logs anything to the console.
+* **[!UICONTROL onContentRendering]**: This callback function is triggered by the `personalization` component, depending on the `status` parameter.
+* **[!UICONTROL onContentHiding]**: This callback function is triggered before a prehiding style is applied or removed.
+
+
 ## [!UICONTROL Send event complete]
 
 Typically, your property would have one or more rules using the [[!UICONTROL Send event] action](action-types.md#send-event) to send events to Adobe Experience Platform Edge Network. Each time an event is sent to Edge Network, a response is returned to the browser with useful data. Without the [!UICONTROL Send event complete] event type, you wouldn't have access to this returned data.
