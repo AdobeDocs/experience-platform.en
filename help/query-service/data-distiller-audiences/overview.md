@@ -1,6 +1,6 @@
 ---
 title: Build Audiences using SQL
-description: Learn how to use the SQL audience extension in Adobe Experience Platform's Data Distiller to create, manage, and publish audiences using SQL commands. This guide covers the entire audience lifecycle from creation, profile additions and deletions, to targeting file-based destinations with data-driven audience definitions.
+description: Learn how to use the SQL audience extension in Adobe Experience Platform's Data Distiller to create, manage, and publish audiences using SQL commands. This guide covers all aspects of the audience lifecycle, including creation, updating and deleting profiles, and using data-driven audience definitions to target file-based destinations.
 ---
 # Build Audiences using SQL
 
@@ -8,7 +8,7 @@ This document covers how to use the SQL audience extension in Adobe Experience P
 
 Use the SQL audience extension to build audiences with data from the data lake, including any existing dimension entities. This extension allows you to define audience segments directly using SQL, offering flexibility without needing raw data in your profiles. Audiences created using this method are automatically registered in the Audience workspace, where you can further target them to file-based destinations.
 
-![Infographic showing the SQL audience extension workflow. The stages include; building audiences with the Query Service using SQL commands, managing them in the Platform UI, to activating them in file-based destinations.](../../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
+![Infographic showing the SQL audience extension workflow. The stages include; building audiences with the Query Service using SQL commands, managing them in the Platform UI, to activating them in file-based destinations.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
 ## Audience creation lifecycle in Data Distiller {#audience-creation-lifecycle}
 
@@ -33,7 +33,7 @@ Use these parameters to define your SQL audience creation query:
 | `schema`           | Optional. Defines the XDM schema for the dataset created by the query. |
 | `table_name`       | Name of the table and audience.                                  |
 | `primary_identity` | Specifies the primary identity column for the audience.          |
-| `identity_namespace` | Namespace of the identities.                                   |
+| `identity_namespace` | Namespace of the identity.                                   |
 | `select_query`     | A SELECT statement defining the audience. The syntax of the SELECT query can be found in the [SELECT queries](../../sql/syntax.md#select-queries) section. |
 
 {style="table-layout:auto"}
@@ -54,7 +54,7 @@ Be aware of the following limitations when using SQL for audience creation:
 
 - The primary identity column **must** be at the root level.
 - New batches overwrite existing datasets; append functionality is currently unsupported.
-- Nested attributes are not supported yet.
+- Nested attributes are not currently supported.
 
 ### Add Profiles to an existing audience {#add-profiles-to-audience}
 
@@ -78,7 +78,7 @@ The table below explains the parameters required for the `INSERT INTO` command:
 
 **Example:**
 
-The following example demonstrates how to add profiles to an existing audience with the INSERT INTO command:
+The following example demonstrates how to add profiles to an existing audience with the `INSERT INTO` command:
 
 ```sql
 INSERT INTO Audience aud_test 
@@ -99,7 +99,7 @@ The table contains the parameters required for the `DROP AUDIENCE` command:
 
 | Parameter      | Description                                                                            |
 |----------------|----------------------------------------------------------------------------------------|
-| `IF EXISTS`    | Optional. If specified, no exception is thrown if the table does not exist.            |
+| `IF EXISTS`    | Optional. If specified, in the event that the table is not found, no exception is raised. |
 | `db_name`      | Specifies the data group used to qualify the audience dataset.                         |
 | `table_name`   | The name of the table that was created as part of the create audience command.         |
 
@@ -117,13 +117,13 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 Audiences created using the SQL extension automatically register under Data Distiller in the Audience workspace. Once registered, these audiences are available for targeting and can be used in file-based destinations, enhancing your segmentation and targeting strategies.
 
-![The Audience workspace in Adobe Experience Platform, showing Data Distiller audiences automatically published and ready for use.](../../images/data-distiller/sql-audiences/audiences.png)
+![The Audience workspace in Adobe Experience Platform, showing Data Distiller audiences automatically published and ready for use.](../images/data-distiller/sql-audiences/audiences.png)
 
 ## Activate audiences to destinations {#activate-audiences}
 
 Activate your audiences by targeting them to any file-based destination, such as [!DNL Amazon S3], [!DNL SFTP], or [!DNL Azure Blob]. The enriched audience attributes are available for further refinement and filtering as needed.
 
-![Flowchart of Adobe Experience Platform destination types, showing public and private/custom destinations, including batch and streaming options.](../../images/data-distiller/sql-audiences/destination-types.png)
+![Flowchart of Adobe Experience Platform destination types, showing public and private/custom destinations, including batch and streaming options.](../images/data-distiller/sql-audiences/destination-types.png)
 
 ## Feature clarifications {#faqs}
 
@@ -134,7 +134,7 @@ This section addresses frequently asked questions about creating and managing ex
 - Is audience creation supported only for flat datasets?
 - Nested datasets are also supported, but only flat attributes are available in the audience.
 
-- Does audience creation result in a single dataset, multiple datasets, or does it vary depending on the configuration?
+- Does audience creation result in a single dataset or multiple datasets, or does it vary depending on the configuration?
 - There is a one-to-one mapping between an audience and a dataset.
 
 - Is the dataset created during audience creation marked for Profile?
@@ -150,13 +150,13 @@ This section addresses frequently asked questions about creating and managing ex
 - Yes, you can create an audience of audiences that uses a Data Distiller audience.
 
 - Do these audiences appear in Adobe Journey Optimizer? If not, what happens when I create a new audience in the rule builder that includes all members of this audience? 
-- Data distiller audiences are not available in Adobe Journey Optimizer currently. You must create a new audience in Adobe Journey Optimizer rule builder for it to be available in Adobe Journey Optimizer.
+- Data distiller audiences are not currently available in Adobe Journey Optimizer. You must create a new audience in Adobe Journey Optimizer rule builder for it to be available in Adobe Journey Optimizer.
 
 - How should I create two Data Distiller audiences with different schedules? How many datasets are created, and are they marked for Profile? 
 - Two datasets will be created as each audience has an underlying dataset. However, these datasets are not marked for Profile. The two datasets are managed on their own individual schedules.
 
 - How do I delete an audience?                                                                                         
-- To delete an audience you can use the [`DROP AUDIENCE` command](#delete-audience) in the command line interface, or use the [Audiences workspace quick actions](../../segmentation/ui/audience-portal.md#quick-actions). NOTE: Audiences that are used in downstream destinations or are dependents in other audiences cannot be deleted.
+- To delete an audience, you can use the [`DROP AUDIENCE` command](#delete-audience) in the command line interface or use the [Audiences workspace quick actions](../../segmentation/ui/audience-portal.md#quick-actions). NOTE: Audiences that are used in downstream destinations or are dependents in other audiences cannot be deleted.
 
 - When I publish an audience to Profile, how soon is it available in the segment builder UI, and when does it become available in Destinations? 
 - Once the profile snapshot export is complete, profiles can be seen in the audience.
