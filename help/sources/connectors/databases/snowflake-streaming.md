@@ -1,17 +1,15 @@
 ---
 title: Snowflake Streaming Source Connector Overview
 description: Learn how to create a source connection and dataflow to ingest streaming data from your Snowflake instance to Adobe Experience Platform
-badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-last-substantial-update: 2023-05-25
+last-substantial-update: 2023-09-24
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
 ---
 # [!DNL Snowflake] streaming source
 
 >[!IMPORTANT]
 >
->* The [!DNL Snowflake] streaming source is in beta. Please read the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled sources.
->* The [!DNL Snowflake] streaming source is available in the API to users who have purchased Real-Time Customer Data Platform Ultimate.
+> The [!DNL Snowflake] streaming source is available in the API to users who have purchased Real-Time Customer Data Platform Ultimate.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
