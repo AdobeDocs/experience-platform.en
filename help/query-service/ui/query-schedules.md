@@ -141,7 +141,7 @@ Track compute hours consumed at the query execution level for your CTAS/ITAS bat
 
 >[!AVAILABILITY]
 >
->Compute Hours functionality is exclusive to users who have purchased the [Data Distiller SKU](../data-distiller/overview.md). Contact your Adobe representative for more information.
+>The Compute Hours functionality is exclusive to users who have purchased the [Data Distiller SKU](../data-distiller/overview.md). Contact your Adobe representative for more information.
 
 ![The details section of the Scheduled Queries workspace with a list of query runs highlighted for a scheduled query.](../images/ui/query-schedules/list-of-scheduled-runs.png)
 
