@@ -5,6 +5,10 @@ exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
 ---
 # AI Assistant in Adobe Experience Platform
 
+The following video is intended to support your understanding of AI Assistant.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
+
 Read this document to learn about AI Assistant in Adobe Experience Platform.
 
 AI Assistant in Adobe Experience Platform is a conversational experience that you can use to accelerate your workflows in Adobe applications. You can use AI Assistant to better understand product knowledge, troubleshoot problems, or search through information and find operational insights. AI Assistant supports Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer and Customer Journey Analytics.
@@ -43,7 +47,7 @@ Product knowledge refers to concepts and topics grounded in Experience League do
 
 | Product knowledge | Examples |
 | --- | --- |
-| Pointed learning | <ul><li>What is the difference between an identity and a primary or foreign key?</li><li>How is profile richness calculated?</li></ul> |
+| Pointed learning | <ul><li>What is the difference between an identity and a primary or foreign key?</li><li>What are lookalike audiences?</li></ul> |
 | Open discovery | <ul><li>How can I export this dataset?</li><li>Are there schemas for healthcare customers?</li></ul> |
 | Troubleshooting | <ul><li>Why can't I turn on a schema owned by Adobe for profile?</li><li>Why can't I delete a segment?</li></ul> |
 
