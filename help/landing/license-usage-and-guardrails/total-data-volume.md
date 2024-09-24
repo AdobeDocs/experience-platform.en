@@ -7,11 +7,9 @@ hidefromtoc: yes
 
 # Total Data Volume metric
 
-Starting on August 15, 2024, the Total Data Volume metric will replace the previous metric of Average Profile Richness.
+Starting on September 24, 2024, the Total Data Volume metric will replace the previous metric of Average Profile Richness.
 
 Total Data Volume represents the total amount of data available for Adobe Experience Platform Profile Service to use in engagement workflows. This value is equivalent to the Addressable Audience metric multiplied by the Average Profile Richness.
-
-For example, (do we have an example we can give?)
 
 ## Frequently asked questions {#faq}
 
