@@ -7,95 +7,78 @@ badge: Beta
 
 >[!NOTE]
 >
->Sharing packages across organization is currently in beta and only available to select beta customers.
+>Sharing packages across organizations is currently in beta and only available to select beta customers.
 
 This document covers how to use sandbox tooling in Adobe Experience Platform to share packages across different organizations.
 
-Improve configuration accuracy across sandboxes and seamlessly export and import sandbox configurations between sandboxes across different organizations with the sandbox tooling feature. There are two types of packages that can be shared:
+Improve configuration accuracy across sandboxes and seamlessly export and import sandbox configurations between sandboxes across different organizations with the sandbox tooling feature. There are two types of shared packages::
 
 **Private package**
 
-Private packages can only be shared to different organizations that have approved the sharing request from the source organization via an opt-in allow list.
+Private packages can only be shared with organizations that have approved the sharing request from the source organization via an opt-in allow list.
 
 **Public package**
 
-Public packages are available to import without any additional approval. These pacakages can be published in a partner website, blogs, or Platform. Packages can be copied and pasted from these channels into the target organization using the package payload.
+Public packages are available to import without any additional approval. These packages can be shared on a partner's website, blog, or platform. The package payload allows packages to be copied and pasted from these channels to the target organization.
 
-## Share a private Package
+## Private packages
 
+>[!NOTE]
+>
+>To initiate and approve a sharing request and share packages across organizations, you will need to have **package-share** role-based access control permission.
 
+The sandbox tooling feature provides you with the ability to create organization partnerships, track the stats of a partnership request, manage existing partnerships, and share packages with partner organizations.
 
+### Create an organization partnership request
 
-To allow sharing the packages to partner orgs.
+To create an organization partnership request, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Partner orgs]** tab. Next, select **[!UICONTROL Manage partner orgs]**.
 
-Sandbox Tooling Sharing across orgs
+![The sandboxes UI, with the Partner orgs tab and Manage partner orgs highlighted.](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
-Major UI functionalities
-- Orgs partnership management
-    - Start the partnership request from Source org by providing the orgId of Target orgs
-    - Track the status of partnership requests on Source  org
-    - Show the incoming partnership requests on Target orgs - allow them to Accept or Decline
-    - Manage existing partnership - e.g. Cancel partnership
-- Sharing Packages to the partner orgs
-    - Provide a sharing action on package inventory and details page
-    - Allowing users to pick multiple partner orgs from a picker
-    - Package sharing is async, so the sharing status should be shown in a table
+In the [!UICONTROL Package partner management] dialog, enter the organization ID into **[!UICONTROL Enter Org ID]** and press enter. The organization ID is shown in the **[!UICONTROL Selected Org IDs]** section below. After adding the IDs, select **[!UICONTROL Confirm]**.
 
-Package Sharing
+>[!TIP]
+>
+>Multiple organization IDs can be entered at a time using comma-separated lists or by entering each organization ID followed by enter.
 
-- On the “Packages” tab we will have inline action “Share”, which opens a popup.
-- The "Share" button is shown only when following conditions are met
-    - User has permissions
-    - Private and Published package
-    - The package belongs to current sandbox
-- We show few details about package, and a multi-select dropdown of partner orgs (Approved one only) with auto suggest feature.
-- User can select multiple orgs and then click the confirm button on dialog
-- We redirect the user on “Sharing status” tab,
-- Here we show the inventory of all shared packages, with a live sharing status (polling will be applied here)
-- On click on any row, will open the right rail, which show the details about package + sharing orgs etc, along with error details (if any)
+![The Package Partner orgs dialog with Enter Org ID, Selected Org IDs, and Confirm highlighted.](../images/ui/sandbox-tooling/private-enter-org-id.png)
 
-Tech spec:
+The sharing request is successfully sent to the partner organization, and you are returned to the [!UICONTROL Sandboxes] **[!UICONTROL Partner orgs]** tab, which displays the **[!UICONTROL Outgoing request]**.
 
-- Fetch approved orgs
-    - Args: none
-    - Returns: the list of all approved orgs, would be used in multi select dropdown
-- Start package sharing
-    - Args: packageId: string,  orgIds[]: list
-    - Returns: as this is async behavior so no use of returned value, any upfront error can be returned
-- Fetch Package Sharing status
-    - Args: a list of package sharing request with status.
-        - This can be a long list as many packages can be shared across many orgs, so pagination, sorting, searching, filtering etc need to be supported at API level.
-    - Returns: the list of package sharing packageSharingJobId, packageId, packageName, targetOrgs, status, other metadata line createdBy, modifiedTime etc.
-- Fetch details of a single package sharing
-    - Args: packageSharingJobId
-    - Returns: all details of that package sharing along with error details etc. (to be shown in right rail)
+![The Partner orgs tab with Outgoing request highlighted.](../images/ui/sandbox-tooling/private-outgoing-request.png)
 
-Phase3
+### Authorize a partnership request
 
-Package availability - public or private
+To authorize an organization partnership request, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Partner orgs]** tab. Next, select **[!UICONTROL Incoming request]**.
 
-- On the “Packages” tab we will have 2 radio button to select “Private” or “Public” packages
-- On selecting any mode we will show the respective inventory
-- User would have the inline action to change the privacy of package any time means user can change from “Public -> Private” OR “Private to Public” anytime.
-- All existing packages are by default “Private”
-- For Private packages only we will the Share inline action - which starts the Package sharing feature
-- Public packages are not allowed for package sharing. There would be another inline action called Copy package payload, using which we can copy the package JSON.
-- Which can be shared and further used by any other org to create the package with this copied JSON payload.
+![The sandboxes UI with the Partner orgs tab and Incoming request highlighted.](../images/ui/sandbox-tooling/private-authorise-partner-org.png)
 
-Tech spec:
+The current **[!UICONTROL Status]** for the request is **Pending**. To approve the request, select the ellipsis (`...`) next to the selected request, then select **[!UICONTROL Approve]** from the dropdown.
 
-- package inventory based on availability -> public or private filter
-    - Args: additional  public or private filter
-    - Returns: same package listing with additional availability property
-- Package details
-    - Args: same as today
-    - Returns: same package detail with additional availability property
-- changeAvailablity
-    - Args: packageId + availability
-    - Returns: status code
-- Copy package payload for public packages
-    - Args: packageId
-    - Returns: JSON payload of package
-- Create package with JSON Payload
-    - Args: JSON Payload
-    - Returns: same as existing createPackage
+![List of incoming requests showing the dropdown menu with Approve highlighted.](../images/ui/sandbox-tooling/private-approve-partner-org.png)
+
+The **[!UICONTROL Review partner org request]** dialog displays details about the organization partnership request. Enter a [!UICONTROL Reason] for approval, then select **[!UICONTROL Approve]**.
+
+![Review partner org request dialog with Reason and Approve highlighted.](../images/ui/sandbox-tooling/private-approval-partner-org.png)
+
+You are returned to the [!UICONTROL Incoming request] page, and the request's status has been updated to **[!UICONTROL Approved]**.
+
+![List of incoming requests with Approved highlighted.](../images/ui/sandbox-tooling/private-approved-partner-org.png)
+
+You now have the ability to share packages between your organization and the source organization.
+
+### Share packages to partner organizations
+
+To share a package to an approved partner organization, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab. Next, select the ellipsis (`...`) next to the package, and select **[!UICONTROL Share package]** from the dropdown.
+
+![List of packages showing the dropdown menu with Share package highlighted.](../images/ui/sandbox-tooling/private-share-package.png)
+
+In the **[!UICONTROL Share package]** dialog, use the **[!UICONTROL Share settings]** dropdown to select the package you want to share, then select **[!UICONTROL Confirm]**.
+
+![Share package dialog with Share settings and Confirm highlighted.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+## Next steps
+
+This document demonstrated how to use the sandbox tooling feature to share packages across different organizations. See the [sandbox tooling guide](../ui/sandbox-tooling.md) for more information.
+
+For steps on performing different operations using the Sandbox API, see the [sandbox developer guide](../api/getting-started.md). For a high-level overview of sandboxes in Experience Platform, refer to the [overview documentation](../home.md).
