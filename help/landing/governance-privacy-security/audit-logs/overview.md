@@ -128,6 +128,22 @@ In the dialog that appears, select your preferred format (either **[!UICONTROL C
 
 ![The file format selection dialog with [!UICONTROL Download] highlighted.](../../images/audit-logs/select-download-format.png)
 
+## Enable alerts {#enable-alerts}
+
+You can enable audit alerts to receive notifications for the following rules:
+
+* Audience create
+* Audience update
+* Audience delete
+* Dataset create
+* Dataset update
+* Dataset delete
+* Schema create
+* Schema update
+* Schema delete
+
+Select the desired alert from the list to subscribe to receive notifications. For more information on alerts, see the guide on [subscribing to alerts using the UI](../../../observability/alerts/ui.md).
+
 ## Managing audit logs in the API
 
 All actions that you can perform in the UI can also be done using API calls. See the [API reference document](https://www.adobe.io/experience-platform-apis/references/audit-query/) for more information.
